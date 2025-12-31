@@ -5,138 +5,6 @@ Ví dụ: Piracetam + Vinpocetine, Citicoline + Piracetam, Ginkgo + Vinpocetine,
 """
 
 NEUROLOGICAL_COMBINATIONS_DRUGS = {
-    "Piracetam/Vinpocetine": {
-        "group": "Neurology - Combination (Nootropic + Cerebral vasodilator)",
-        "vietnamese_name": "Piracetam/Vinpocetine (phối hợp tuần hoàn não)",
-        "administration": ["PO"],
-        "indications": [
-            "Thiếu máu não mạn, chóng mặt, suy giảm trí nhớ nhẹ (dùng phổ biến tại VN, bằng chứng hạn chế)",
-        ],
-        "contraindications": [
-            "Suy thận nặng (do thành phần piracetam)",
-            "Xuất huyết não cấp",
-            "Thai kỳ (do thành phần vinpocetine)",
-        ],
-        "dosage": {
-            "adult_po": "Ví dụ: Piracetam 800mg + Vinpocetine 5mg x 2-3 lần/ngày (tùy chế phẩm cụ thể)",
-            "notes": "Liều cụ thể phụ thuộc từng biệt dược; nguyên tắc giống khi dùng riêng lẻ hai thuốc.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh (nếu chức năng thận bình thường)",
-            "30_60": "Giảm liều theo thành phần piracetam (giảm 1/2 liều)",
-            "under_30": "Tránh dùng (piracetam thải trừ thận)",
-        },
-        "side_effects": [
-            "Nhức đầu, mất ngủ nhẹ (do piracetam)",
-            "Đỏ mặt, đánh trống ngực, hạ huyết áp nhẹ (do vinpocetine)",
-            "Rối loạn tiêu hóa nhẹ",
-        ],
-        "interactions": [
-            "Thuốc chống đông/kháng tiểu cầu: lý thuyết tăng nguy cơ chảy máu",
-        ],
-        "pregnancy": "Contraindicated (đặc biệt do vinpocetine)",
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {},
-            "icu_critical_care_only": False,
-            "look_alike_sound_alike": []
-        },
-        "guideline_tags": [],
-        "mechanism_of_action": "Kết hợp nootropic (piracetam – cải thiện chuyển hóa thần kinh/vi tuần hoàn) và giãn mạch não (vinpocetine). Bằng chứng lâm sàng về cải thiện kết cục dài hạn còn hạn chế, chủ yếu dùng hỗ trợ.",
-        "monitoring": [
-            "Huyết áp, nhịp tim ở bệnh nhân lớn tuổi",
-            "Chức năng thận (piracetam)",
-        ],
-        "precautions": [
-            "Không thay thế điều trị chuẩn cho đột quỵ hoặc bệnh mạch máu não.",
-            "Tránh dùng ở phụ nữ có thai, cho con bú.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "Piracetam: 4-5 giờ; Vinpocetine: 1-2 giờ",
-            "onset": "Vài giờ sau khi uống",
-            "duration": "Tác dụng kéo dài nhờ piracetam",
-            "protein_binding": "Piracetam: <10%; Vinpocetine: ~66%",
-            "clearance": "Piracetam: thải trừ chủ yếu qua thận (dạng nguyên dạng); Vinpocetine: chuyển hóa gan, thải qua thận"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
-        "black_box_warnings": None,
-             "drug_interactions": {
-             "major": [
-                 {
-                     "drug": "Thuốc chống đông/kháng tiểu cầu: lý thuyết tăng nguy cơ chảy máu",
-                     "mechanism": "Tăng nguy cơ chảy máu"
-                 }
-             ],
-             "moderate": [],
-             "minor": []
-         },
-         "pregnancy_lactation": {
-             "fda_category": "Contraindicated (đặc biệt do vinpocetine)",
-             "pregnancy_details": "Category Contraindicated (đặc biệt do vinpocetine) - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
-             "lactation": {
-                 "safety": "Use with caution",
-                 "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
-                 "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
-             }
-         },
-         "hepatic_adjustment": {
-             "mild": "Không đổi",
-             "moderate": "Thận trọng",
-             "severe": "Thận trọng, có thể giảm liều",
-             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
-         },
-         "overdose_management": {
-             "symptoms": [
-                 "Cần tra cứu thêm thông tin về triệu chứng quá liều"
-             ],
-             "antidote": "Không có antidote đặc hiệu",
-             "treatment": [
-                 "Ngừng ngay thuốc",
-                 "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
-                 "Than hoạt tính",
-                 "Điều trị hỗ trợ và điều trị triệu chứng",
-                 "Theo dõi dấu hiệu sinh tồn"
-             ],
-             "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
-         },
-         "reversal_agents": {
-             "available": False,
-             "agents": []
-         },
-         "administration_instructions": {
-             "oral": {
-                 "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
-                 "timing": "Theo chỉ định của bác sĩ",
-                 "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
-             }
-         },
-         "references": {
-             "primary_sources": [
-                 "FDA Drug Label - Piracetam/Vinpocetine",
-                 "UpToDate - Cần cập nhật"
-             ],
-             "last_updated": "2025-12-28",
-             "evidence_level": "C - Cần tra cứu và cập nhật"
-         },
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": "Không có",
-},
     "Citicoline/Piracetam": {
         "group": "Neurology - Combination (Neuroprotective + Nootropic)",
         "vietnamese_name": "Citicoline/Piracetam (phối hợp tuần hoàn não)",
@@ -523,6 +391,138 @@ NEUROLOGICAL_COMBINATIONS_DRUGS = {
              "last_updated": "2025-12-28",
              "evidence_level": "C - Cần tra cứu và cập nhật"
          },
+},
+    "Piracetam/Vinpocetine": {
+        "group": "Neurology - Combination (Nootropic + Cerebral vasodilator)",
+        "vietnamese_name": "Piracetam/Vinpocetine (phối hợp tuần hoàn não)",
+        "administration": ["PO"],
+        "indications": [
+            "Thiếu máu não mạn, chóng mặt, suy giảm trí nhớ nhẹ (dùng phổ biến tại VN, bằng chứng hạn chế)",
+        ],
+        "contraindications": [
+            "Suy thận nặng (do thành phần piracetam)",
+            "Xuất huyết não cấp",
+            "Thai kỳ (do thành phần vinpocetine)",
+        ],
+        "dosage": {
+            "adult_po": "Ví dụ: Piracetam 800mg + Vinpocetine 5mg x 2-3 lần/ngày (tùy chế phẩm cụ thể)",
+            "notes": "Liều cụ thể phụ thuộc từng biệt dược; nguyên tắc giống khi dùng riêng lẻ hai thuốc.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh (nếu chức năng thận bình thường)",
+            "30_60": "Giảm liều theo thành phần piracetam (giảm 1/2 liều)",
+            "under_30": "Tránh dùng (piracetam thải trừ thận)",
+        },
+        "side_effects": [
+            "Nhức đầu, mất ngủ nhẹ (do piracetam)",
+            "Đỏ mặt, đánh trống ngực, hạ huyết áp nhẹ (do vinpocetine)",
+            "Rối loạn tiêu hóa nhẹ",
+        ],
+        "interactions": [
+            "Thuốc chống đông/kháng tiểu cầu: lý thuyết tăng nguy cơ chảy máu",
+        ],
+        "pregnancy": "Contraindicated (đặc biệt do vinpocetine)",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [],
+        "mechanism_of_action": "Kết hợp nootropic (piracetam – cải thiện chuyển hóa thần kinh/vi tuần hoàn) và giãn mạch não (vinpocetine). Bằng chứng lâm sàng về cải thiện kết cục dài hạn còn hạn chế, chủ yếu dùng hỗ trợ.",
+        "monitoring": [
+            "Huyết áp, nhịp tim ở bệnh nhân lớn tuổi",
+            "Chức năng thận (piracetam)",
+        ],
+        "precautions": [
+            "Không thay thế điều trị chuẩn cho đột quỵ hoặc bệnh mạch máu não.",
+            "Tránh dùng ở phụ nữ có thai, cho con bú.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Piracetam: 4-5 giờ; Vinpocetine: 1-2 giờ",
+            "onset": "Vài giờ sau khi uống",
+            "duration": "Tác dụng kéo dài nhờ piracetam",
+            "protein_binding": "Piracetam: <10%; Vinpocetine: ~66%",
+            "clearance": "Piracetam: thải trừ chủ yếu qua thận (dạng nguyên dạng); Vinpocetine: chuyển hóa gan, thải qua thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": None,
+             "drug_interactions": {
+             "major": [
+                 {
+                     "drug": "Thuốc chống đông/kháng tiểu cầu: lý thuyết tăng nguy cơ chảy máu",
+                     "mechanism": "Tăng nguy cơ chảy máu"
+                 }
+             ],
+             "moderate": [],
+             "minor": []
+         },
+         "pregnancy_lactation": {
+             "fda_category": "Contraindicated (đặc biệt do vinpocetine)",
+             "pregnancy_details": "Category Contraindicated (đặc biệt do vinpocetine) - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+             "lactation": {
+                 "safety": "Use with caution",
+                 "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                 "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+             }
+         },
+         "hepatic_adjustment": {
+             "mild": "Không đổi",
+             "moderate": "Thận trọng",
+             "severe": "Thận trọng, có thể giảm liều",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+         },
+         "overdose_management": {
+             "symptoms": [
+                 "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+             ],
+             "antidote": "Không có antidote đặc hiệu",
+             "treatment": [
+                 "Ngừng ngay thuốc",
+                 "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                 "Than hoạt tính",
+                 "Điều trị hỗ trợ và điều trị triệu chứng",
+                 "Theo dõi dấu hiệu sinh tồn"
+             ],
+             "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+         },
+         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+         "administration_instructions": {
+             "oral": {
+                 "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                 "timing": "Theo chỉ định của bác sĩ",
+                 "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+             }
+         },
+         "references": {
+             "primary_sources": [
+                 "FDA Drug Label - Piracetam/Vinpocetine",
+                 "UpToDate - Cần cập nhật"
+             ],
+             "last_updated": "2025-12-28",
+             "evidence_level": "C - Cần tra cứu và cập nhật"
+         },
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": None,
+         "black_box_warnings": "Không có",
 },
 }
 

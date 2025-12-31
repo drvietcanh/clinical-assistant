@@ -181,6 +181,653 @@ ELECTROLYTES_DRUGS = {
         }
     },
     
+    "Calcium chloride": {
+        "group": "Emergency - Electrolyte",
+        "vietnamese_name": "Calcium chloride, CaCl2",
+        "administration": ["IV"],
+        "indications": [
+            "Hạ calci máu cấp tính có triệu chứng",
+            "Tăng kali máu nặng (bảo vệ tim)",
+            "Ngộ độc calcium channel blocker",
+            "Ngộ độc magnesium sulfate",
+            "Ngộ độc hydrofluoric acid"
+        ],
+        "contraindications": [
+            "Tăng calci máu",
+            "Suy thận nặng với tăng calci máu",
+            "Sỏi thận calci",
+            "Digitalis toxicity (tăng nguy cơ rối loạn nhịp)"
+        ],
+        "dosage": {
+            "adult_hypocalcemia": "1g (10ml 10% solution) IV chậm trong 5-10 phút, có thể lặp lại",
+            "adult_hyperkalemia": "1g IV chậm trong 5-10 phút",
+            "adult_max": "3g trong 24 giờ",
+            "notes": "Chứa nhiều calci hơn calcium gluconate (3x). Chỉ dùng IV, không dùng IM/SC (gây hoại tử)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng",
+            "under_30": "Thận trọng (tăng nguy cơ tăng calci máu)"
+        },
+        "side_effects": [
+            "Kích ứng mạch máu (phổ biến, có thể gây viêm tĩnh mạch)",
+            "Hoại tử mô (nếu tiêm ngoài mạch)",
+            "Tăng calci máu (nếu dùng quá liều)",
+            "Rối loạn nhịp tim (nếu dùng với digitalis)",
+            "Hạ huyết áp (hiếm)"
+        ],
+        "interactions": [
+            "Digitalis: tăng nguy cơ rối loạn nhịp tim",
+            "Sodium bicarbonate: kết tủa (CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI)",
+            "Phosphate: kết tủa"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Calcium chloride cung cấp calci ion hóa (Ca2+). Calci cần thiết cho: (1) Co bóp cơ tim (tăng lực co bóp), (2) Dẫn truyền thần kinh, (3) Đông máu, (4) Chức năng cơ. Trong hạ calci máu: bổ sung calci. Trong tăng kali máu: bảo vệ tim khỏi tác dụng độc của kali (ổn định màng tế bào). Trong ngộ độc calcium channel blocker: đối kháng tác dụng. Đặc điểm: chứa nhiều calci hơn calcium gluconate (3x), chỉ dùng IV, kích ứng mạch máu mạnh hơn calcium gluconate.",
+        "monitoring": [
+            "Calci máu (ionized calcium) - quan trọng",
+            "Kali máu (nếu dùng cho tăng kali máu)",
+            "ECG (rối loạn nhịp tim, đặc biệt nếu dùng với digitalis)",
+            "Dấu hiệu kích ứng mạch máu (đỏ, đau tại chỗ tiêm)",
+            "Dấu hiệu tăng calci máu: mệt mỏi, buồn nôn, táo bón"
+        ],
+        "precautions": [
+            "Kích ứng mạch máu - phổ biến, có thể gây viêm tĩnh mạch",
+            "Chỉ dùng IV, không dùng IM/SC (gây hoại tử mô)",
+            "Truyền CHẬM (5-10 phút) để giảm kích ứng",
+            "Thận trọng với digitalis (tăng nguy cơ rối loạn nhịp)",
+            "KHÔNG trộn với sodium bicarbonate (kết tủa tử vong)",
+            "Chứa nhiều calci hơn calcium gluconate (3x)",
+            "Theo dõi calci máu chặt chẽ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (electrolyte)",
+            "onset": "Ngay lập tức sau khi tiêm IV",
+            "duration": "Phụ thuộc liều và tình trạng bệnh nhân",
+            "protein_binding": "50% (ionized calcium)",
+            "clearance": "Thận (thải trừ qua nước tiểu), xương (lắng đọng)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "KHÔNG trộn với sodium bicarbonate - kết tủa tử vong. Chỉ dùng IV, không dùng IM/SC - gây hoại tử mô.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Sodium bicarbonate",
+                    "mechanism": "Kết tủa calcium carbonate",
+                    "effect": "Kết tủa tử vong, tắc mạch",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không trộn hoặc truyền cùng."
+                },
+                {
+                    "drug": "Digitalis (digoxin, digitoxin)",
+                    "mechanism": "Calci tăng tác dụng của digitalis trên tim",
+                    "effect": "Tăng nguy cơ rối loạn nhịp tim nghiêm trọng",
+                    "management": "Thận trọng. Theo dõi ECG sát. Tránh dùng cùng nếu có thể."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Phosphate",
+                    "mechanism": "Kết tủa calcium phosphate",
+                    "effect": "Kết tủa, giảm hiệu quả cả hai",
+                    "management": "Tránh trộn hoặc truyền cùng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Tăng calci máu",
+                "Suy thận nặng với tăng calci máu",
+                "Sỏi thận calci",
+                "Digitalis toxicity",
+                "Dùng với sodium bicarbonate (kết tủa tử vong)"
+            ],
+            "tương_đối": [
+                "Suy thận nhẹ đến trung bình - tăng nguy cơ tăng calci máu",
+                "Dùng với digitalis - tăng nguy cơ rối loạn nhịp"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Calci cần thiết cho thai nhi.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Calci bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Calci không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng calci máu: mệt mỏi, buồn nôn, táo bón, nhịp tim chậm",
+                "Rối loạn nhịp tim",
+                "Kích ứng mạch máu nặng",
+                "Hoại tử mô (nếu tiêm ngoài mạch)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị tăng calci máu.",
+            "treatment": [
+                "Ngừng ngay calcium chloride",
+                "Truyền dịch muối đẳng trương",
+                "Furosemide để tăng bài tiết calci",
+                "Calcitonin nếu tăng calci máu nặng",
+                "Theo dõi calci máu, ECG liên tục"
+            ],
+            "monitoring": "Calci máu (ionized calcium), ECG, dấu hiệu lâm sàng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Dùng trực tiếp dung dịch 10% (1g/10ml).",
+                "infusion_rate": "Truyền CHẬM trong 5-10 phút. Không truyền nhanh hơn.",
+                "compatibility": ["D5W", "Normal saline (0.9% NaCl)"],
+                "incompatibility": [
+                    "Sodium bicarbonate - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (kết tủa tử vong)",
+                    "Phosphate - kết tủa",
+                    "Catecholamines - bất hoạt"
+                ],
+                "notes": "QUAN TRỌNG: 1) Chỉ dùng IV, không dùng IM/SC (gây hoại tử mô), 2) Truyền CHẬM (5-10 phút), 3) KHÔNG trộn với sodium bicarbonate (kết tủa tử vong), 4) Chứa nhiều calci hơn calcium gluconate (3x)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Calcium Chloride Injection",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "UpToDate - Calcium: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên ACLS guidelines và dữ liệu lâm sàng"
+        }
+    },
+    
+    "Calcium gluconate": {
+        "group": "Emergency - Electrolyte",
+        "vietnamese_name": "Calcium gluconate, Ca gluconate",
+        "administration": ["IV"],
+        "indications": [
+            "Hạ calci máu cấp tính có triệu chứng",
+            "Tăng kali máu nặng (bảo vệ tim)",
+            "Ngộ độc calcium channel blocker",
+            "Ngộ độc magnesium sulfate",
+            "Ngộ độc hydrofluoric acid"
+        ],
+        "contraindications": [
+            "Tăng calci máu",
+            "Suy thận nặng với tăng calci máu",
+            "Sỏi thận calci",
+            "Dùng với digoxin (tăng nguy cơ loạn nhịp)"
+        ],
+        "dosage": {
+            "adult_hypocalcemia": "1-3g (10-30ml 10%) IV chậm trong 10-20 phút, có thể lặp lại",
+            "adult_hyperkalemia": "1-3g (10-30ml 10%) IV chậm trong 2-5 phút để bảo vệ tim",
+            "adult_ccb_overdose": "1-3g IV chậm, có thể lặp lại",
+            "pediatric_hypocalcemia": "30-100mg/kg (0.3-1ml/kg 10%) IV chậm",
+            "pediatric_hyperkalemia": "30-100mg/kg (0.3-1ml/kg 10%) IV chậm trong 2-5 phút",
+            "notes": "1g Ca gluconate = 4.65 mEq Ca2+ (ít hơn CaCl2: 13.6 mEq). Có thể truyền vào tĩnh mạch ngoại vi (ít gây nóng bỏng hơn CaCl2). Truyền CHẬM, theo dõi ECG. Không trộn với bicarbonate hoặc phosphate."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Thận trọng, giảm liều, theo dõi calci máu"
+        },
+        "side_effects": [
+            "Nóng bỏng tại chỗ tiêm (ít hơn CaCl2, có thể truyền vào tĩnh mạch ngoại vi)",
+            "Hoại tử nếu tiêm ngoài mạch",
+            "Tăng calci máu (quá liều)",
+            "Loạn nhịp tim (đặc biệt với digoxin)",
+            "Buồn nôn, nôn",
+            "Sỏi thận (dùng kéo dài)"
+        ],
+        "interactions": [
+            "Digoxin: tăng nguy cơ loạn nhịp tim nghiêm trọng",
+            "Thiazide diuretics: tăng nguy cơ tăng calci máu",
+            "Bicarbonate, Phosphate: tạo kết tủa - không trộn",
+            "Ceftriaxone: tạo kết tủa (đặc biệt ở trẻ sơ sinh)"
+        ],
+        "pregnancy": "C - An toàn trong cấp cứu",
+        "mechanism_of_action": "Calcium gluconate cung cấp calcium ion (Ca2+) trực tiếp vào máu. Ca2+ tham gia vào nhiều chức năng sinh học: đông máu (cần thiết cho cascade đông máu), co cơ (bao gồm cơ tim và cơ trơn), dẫn truyền thần kinh, và giải phóng hormone. Trong hạ calci máu: bổ sung Ca2+ thiếu hụt. Trong tăng kali máu: Ca2+ ổn định màng tế bào tim, giảm nguy cơ loạn nhịp tim do tăng kali máu. Trong ngộ độc calcium channel blocker: Ca2+ đối kháng tác dụng chẹn kênh calci, có thể đảo ngược tác dụng. Calcium gluconate có hàm lượng Ca2+ thấp hơn calcium chloride (1g Ca gluconate = 4.65 mEq vs 1g CaCl2 = 13.6 mEq), nhưng ít gây nóng bỏng tại chỗ tiêm hơn, có thể truyền vào tĩnh mạch ngoại vi.",
+        "monitoring": [
+            "ECG liên tục (theo dõi loạn nhịp tim, đặc biệt với digoxin)",
+            "Nồng độ calcium trong máu (ionized calcium) - theo dõi tăng calci máu",
+            "Dấu hiệu tại chỗ tiêm (nóng bỏng, hoại tử nếu tiêm ngoài mạch)",
+            "Nhịp tim, huyết áp",
+            "Dấu hiệu tăng calci máu: buồn nôn, nôn, táo bón, yếu cơ"
+        ],
+        "precautions": [
+            "Có thể truyền vào tĩnh mạch ngoại vi (ít gây nóng bỏng hơn CaCl2), nhưng vẫn ưu tiên tĩnh mạch lớn",
+            "Truyền CHẬM (10-20 phút cho 1-3g) - không truyền nhanh (tăng nguy cơ loạn nhịp tim)",
+            "KHÔNG trộn với bicarbonate hoặc phosphate (tạo kết tủa)",
+            "KHÔNG trộn với ceftriaxone (tạo kết tủa, đặc biệt nguy hiểm ở trẻ sơ sinh)",
+            "Theo dõi ECG liên tục (nguy cơ loạn nhịp tim, đặc biệt với digoxin)",
+            "Thận trọng với digoxin (tăng nguy cơ loạn nhịp tim nghiêm trọng)",
+            "Theo dõi nồng độ calcium trong máu (tránh tăng calci máu)",
+            "Dùng ngắn hạn (không dùng kéo dài - tăng nguy cơ sỏi thận)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (calcium là ion, không có half-life như thuốc)",
+            "onset": "Ngay lập tức sau khi truyền IV",
+            "duration": "2-3 giờ (tác dụng lâm sàng)",
+            "protein_binding": "Khoảng 40-50% gắn với albumin",
+            "clearance": "Thận: bài tiết qua nước tiểu. Xương: lưu trữ dài hạn."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Kiểm tra hạn sử dụng.",
+        "black_box_warnings": "KHÔNG trộn với ceftriaxone - có thể tạo kết tủa tử vong, đặc biệt ở trẻ sơ sinh. Truyền CHẬM - truyền nhanh có thể gây loạn nhịp tim, đặc biệt với digoxin.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Calcium tăng tác dụng của digoxin trên tim, tăng nguy cơ loạn nhịp tim nghiêm trọng.",
+                    "effect": "Tăng nguy cơ loạn nhịp tim nghiêm trọng, có thể tử vong",
+                    "management": "TRÁNH DÙNG nếu có thể. Nếu bắt buộc, theo dõi ECG liên tục, theo dõi nồng độ digoxin. Dùng liều thấp nhất có thể."
+                },
+                {
+                    "drug": "Ceftriaxone",
+                    "mechanism": "Calcium gluconate tạo phức hợp không hòa tan với ceftriaxone, gây kết tủa.",
+                    "effect": "Kết tủa trong phổi, thận, có thể tử vong (đặc biệt ở trẻ sơ sinh)",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI: Không trộn hoặc truyền cùng. Cách ít nhất 48 giờ giữa ceftriaxone và calcium gluconate."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thiazide diuretics",
+                    "mechanism": "Thiazide giảm bài tiết calcium, kết hợp với bổ sung calcium, dẫn đến tăng calci máu.",
+                    "effect": "Tăng nguy cơ tăng calci máu, sỏi thận",
+                    "management": "Theo dõi nồng độ calcium trong máu chặt chẽ. Có thể cần giảm liều calcium."
+                },
+                {
+                    "drug": "Bicarbonate, Phosphate",
+                    "mechanism": "Tạo phức hợp không hòa tan, gây kết tủa.",
+                    "effect": "Kết tủa, tắc nghẽn mạch máu",
+                    "management": "KHÔNG trộn. Truyền riêng biệt, cách thời gian."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Tăng calci máu (hypercalcemia)",
+                "Dùng với digoxin (tăng nguy cơ loạn nhịp tim nghiêm trọng) - tránh nếu có thể",
+                "Trộn với ceftriaxone (kết tủa tử vong)"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - tăng nguy cơ tăng calci máu",
+                "Sỏi thận calci - tăng nguy cơ tái phát",
+                "Bệnh sarcoidosis - tăng nhạy cảm với calcium"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Calcium gluconate có thể được dùng trong cấp cứu khi cần thiết. Hạ calci máu trong thai kỳ có thể nguy hiểm cho cả mẹ và thai nhi. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Calcium gluconate bài tiết vào sữa mẹ ở nồng độ thấp. An toàn khi cho con bú với liều điều trị.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Không cần điều chỉnh liều",
+            "notes": "Calcium không chuyển hóa ở gan. Suy gan không ảnh hưởng đáng kể."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng calci máu: buồn nôn, nôn, táo bón, yếu cơ, rối loạn tâm thần",
+                "Loạn nhịp tim (đặc biệt với digoxin)",
+                "Sỏi thận",
+                "Suy thận cấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và giảm calci máu.",
+            "treatment": [
+                "Ngừng calcium gluconate ngay lập tức",
+                "Truyền dịch muối đẳng trương (0.9% NaCl) để tăng bài tiết calcium",
+                "Furosemide (lợi tiểu) để tăng bài tiết calcium (sau khi đã bù dịch)",
+                "Calcitonin nếu tăng calci máu nặng",
+                "Bisphosphonates (pamidronate, zoledronate) nếu tăng calci máu nặng",
+                "Theo dõi ECG liên tục (loạn nhịp tim)",
+                "Hemodialysis nếu tăng calci máu rất nặng"
+            ],
+            "monitoring": "ECG, nồng độ calcium trong máu, creatinine, dấu hiệu lâm sàng."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Dùng trực tiếp từ lọ 10% (10ml = 1g). Không cần pha.",
+                "infusion_rate": "Truyền CHẬM trong 10-20 phút cho 1-3g. Không truyền nhanh hơn.",
+                "compatibility": ["Normal saline (0.9% NaCl)", "D5W"],
+                "incompatibility": [
+                    "Ceftriaxone - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (kết tủa tử vong)",
+                    "Bicarbonate - tạo kết tủa",
+                    "Phosphate - tạo kết tủa"
+                ],
+                "notes": "Có thể truyền vào tĩnh mạch ngoại vi (ít gây nóng bỏng hơn CaCl2), nhưng vẫn ưu tiên tĩnh mạch lớn. Truyền CHẬM (10-20 phút). Theo dõi ECG liên tục. KHÔNG trộn với ceftriaxone, bicarbonate, hoặc phosphate."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "ACLS Guidelines - Hyperkalemia Management",
+                "UpToDate - Calcium gluconate drug information",
+                "FDA Drug Label - Calcium gluconate",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên ACLS guidelines và dữ liệu lâm sàng"
+        }
+    },
+    
+    "Demeclocycline": {
+        "group": "Emergency - Electrolyte (Tetracycline Antibiotic)",
+        "vietnamese_name": "Demeclocycline, Declomycin",
+        "administration": ["PO"],
+        "indications": [
+            "SIADH (Syndrome of Inappropriate Antidiuretic Hormone) - off-label",
+            "Nhiễm khuẩn do vi khuẩn nhạy cảm (ít dùng)",
+            "Mụn trứng cá (ít dùng)"
+        ],
+        "contraindications": [
+            "Dị ứng demeclocycline hoặc tetracyclines",
+            "Mang thai (category D)",
+            "Trẻ em <8 tuổi (nguy cơ răng vàng, xương)",
+            "Suy thận nặng"
+        ],
+        "dosage": {
+            "adult_siadh": "300-600mg PO 2-4 lần/ngày",
+            "adult_infection": "150mg PO 4 lần/ngày hoặc 300mg PO 2 lần/ngày",
+            "notes": "Tetracycline antibiotic. Dùng cho SIADH (gây diabetes insipidus nephrogenic). Ít dùng cho nhiễm khuẩn (có thuốc tốt hơn)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "CHỐNG CHỈ ĐỊNH (tăng nguy cơ độc tính thận)"
+        },
+        "side_effects": [
+            "Nhạy cảm với ánh nắng (phổ biến)",
+            "Răng vàng (nếu dùng khi <8 tuổi hoặc mang thai)",
+            "Xương vàng (nếu dùng khi <8 tuổi hoặc mang thai)",
+            "Buồn nôn, nôn",
+            "Tiêu chảy",
+            "Độc tính thận (nếu suy thận)",
+            "Tăng BUN (do tác dụng antianabolic)"
+        ],
+        "interactions": [
+            "Calcium, magnesium, aluminum, iron: giảm hấp thu demeclocycline",
+            "Warfarin: tăng INR",
+            "Oral contraceptives: giảm hiệu quả"
+        ],
+        "pregnancy": "D - CHỐNG CHỈ ĐỊNH",
+        "mechanism_of_action": "Demeclocycline là tetracycline antibiotic, ức chế tổng hợp protein vi khuẩn bằng cách gắn với 30S ribosomal subunit. Tác dụng với nhiều vi khuẩn Gram-dương và Gram-âm. Đặc điểm: gây diabetes insipidus nephrogenic (do ức chế tác dụng của ADH trên thận) → dùng cho SIADH (off-label). Ít dùng cho nhiễm khuẩn (có thuốc tốt hơn). Nguy cơ răng vàng, xương vàng nếu dùng khi <8 tuổi hoặc mang thai.",
+        "monitoring": [
+            "Natri máu (nếu dùng cho SIADH) - quan trọng",
+            "Osmolality máu (nếu dùng cho SIADH)",
+            "Chức năng thận (creatinine, BUN) - quan trọng",
+            "Dấu hiệu nhạy cảm với ánh nắng",
+            "Dấu hiệu độc tính thận (nếu suy thận)"
+        ],
+        "precautions": [
+            "SIADH - dùng off-label, gây diabetes insipidus nephrogenic",
+            "Nhạy cảm với ánh nắng - TRÁNH ánh nắng mặt trời, dùng kem chống nắng",
+            "Răng vàng, xương vàng - CHỐNG CHỈ ĐỊNH khi <8 tuổi hoặc mang thai",
+            "Độc tính thận - CHỐNG CHỈ ĐỊNH ở suy thận nặng",
+            "Cách thời gian ít nhất 2 giờ với calcium, magnesium, aluminum, iron (giảm hấp thu)",
+            "Thận trọng với warfarin (tăng INR)",
+            "Giảm hiệu quả oral contraceptives"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10-17 giờ",
+            "onset": "Vài ngày (SIADH)",
+            "duration": "6-12 giờ (dùng 2-4 lần/ngày)",
+            "protein_binding": "41-50%",
+            "clearance": "Gan (chuyển hóa một phần), thận (thải trừ một phần). Tích lũy ở suy thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH khi <8 tuổi (nguy cơ răng vàng, xương vàng). CHỐNG CHỈ ĐỊNH khi mang thai (category D). Độc tính thận ở suy thận nặng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Calcium, Magnesium, Aluminum, Iron",
+                    "mechanism": "Tạo phức hợp không hòa tan",
+                    "effect": "Giảm hấp thu demeclocycline đáng kể (50-90%)",
+                    "management": "Cách thời gian ít nhất 2 giờ."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Có thể ức chế chuyển hóa warfarin",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Thận trọng. Theo dõi INR thường xuyên."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Oral contraceptives",
+                    "mechanism": "Giảm hấp thu hoặc chuyển hóa",
+                    "effect": "Giảm hiệu quả oral contraceptives",
+                    "management": "Sử dụng biện pháp tránh thai bổ sung."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng demeclocycline hoặc tetracyclines",
+                "Mang thai (category D)",
+                "Trẻ em <8 tuổi (nguy cơ răng vàng, xương vàng)",
+                "Suy thận nặng (CrCl <30)"
+            ],
+            "tương_đối": [
+                "Suy thận nhẹ đến trung bình - thận trọng, giảm liều",
+                "Dùng với calcium, magnesium, aluminum, iron - cách thời gian ít nhất 2 giờ"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Category D - CHỐNG CHỈ ĐỊNH trong thai kỳ. Có nguy cơ răng vàng, xương vàng ở thai nhi.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Demeclocycline bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng, có thể giảm liều",
+            "notes": "Demeclocycline chuyển hóa một phần qua gan. Suy gan có thể làm giảm chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn nặng",
+                "Tiêu chảy nặng",
+                "Độc tính thận (nếu suy thận)",
+                "Nhạy cảm với ánh nắng nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay demeclocycline",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Điều trị độc tính thận nếu có",
+                "Theo dõi chức năng thận, natri máu"
+            ],
+            "monitoring": "Chức năng thận, natri máu, dấu hiệu lâm sàng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Uống với thức ăn có thể giảm buồn nôn.",
+                "timing": "Dùng 2-4 lần/ngày. Cách thời gian ít nhất 2 giờ với calcium, magnesium, aluminum, iron. QUAN TRỌNG: TRÁNH ánh nắng mặt trời, dùng kem chống nắng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Declomycin (demeclocycline)",
+                "UpToDate - Demeclocycline: Drug information",
+                "UpToDate - Treatment of SIADH"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
+    "Magnesium oxide": {
+        "group": "Emergency - Electrolyte (Magnesium Supplement)",
+        "vietnamese_name": "Magnesium oxide, MgO",
+        "administration": ["PO"],
+        "indications": [
+            "Hạ magnesi máu nhẹ đến trung bình",
+            "Táo bón",
+            "Khó tiêu (antacid)"
+        ],
+        "contraindications": [
+            "Tăng magnesi máu",
+            "Suy thận nặng",
+            "Block nhĩ thất",
+            "Tắc ruột"
+        ],
+        "dosage": {
+            "adult_hypomagnesemia": "400-800mg PO 1-3 lần/ngày",
+            "adult_constipation": "400-800mg PO 1-2 lần/ngày",
+            "adult_antacid": "400-800mg PO khi cần",
+            "notes": "Bổ sung magnesi. Dạng PO, hấp thu kém (chỉ 4%). Tác dụng nhuận tràng (do không hấp thu)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng (tăng nguy cơ tăng magnesi máu)",
+            "under_30": "CHỐNG CHỈ ĐỊNH (nguy cơ tăng magnesi máu)"
+        },
+        "side_effects": [
+            "Tiêu chảy (phổ biến, do không hấp thu)",
+            "Tăng magnesi máu (nếu dùng quá liều hoặc suy thận)",
+            "Buồn nôn",
+            "Đau bụng"
+        ],
+        "interactions": [
+            "Tetracyclines: giảm hấp thu tetracyclines",
+            "Quinolones: giảm hấp thu quinolones",
+            "Bisphosphonates: giảm hấp thu bisphosphonates"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Magnesium oxide cung cấp magnesi (Mg²⁺). Magnesi cần thiết cho: (1) Hoạt động enzyme (ATP, DNA, RNA synthesis), (2) Dẫn truyền thần kinh, (3) Co bóp cơ, (4) Điều hòa calci. Trong hạ magnesi máu: bổ sung magnesi. Đặc điểm: dạng PO, hấp thu kém (chỉ 4%), tác dụng nhuận tràng (do không hấp thu, giữ nước trong ruột), ít hiệu quả hơn magnesium sulfate IV cho hạ magnesi máu nặng.",
+        "monitoring": [
+            "Magnesi máu - quan trọng",
+            "Dấu hiệu tiêu chảy (phổ biến)",
+            "Dấu hiệu tăng magnesi máu (nếu dùng quá liều hoặc suy thận): yếu cơ, buồn nôn, block nhĩ thất"
+        ],
+        "precautions": [
+            "TIÊU CHẢY - phổ biến do không hấp thu, giữ nước trong ruột",
+            "Hấp thu kém (chỉ 4%) - ít hiệu quả hơn magnesium sulfate IV cho hạ magnesi máu nặng",
+            "Thận trọng ở suy thận (tăng nguy cơ tăng magnesi máu)",
+            "Cách thời gian ít nhất 2 giờ với tetracyclines, quinolones, bisphosphonates (giảm hấp thu)",
+            "Theo dõi magnesi máu nếu dùng lâu dài"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (electrolyte)",
+            "onset": "Vài giờ (tiêu chảy), vài ngày (bổ sung magnesi)",
+            "duration": "Phụ thuộc liều",
+            "protein_binding": "Không áp dụng",
+            "clearance": "Hấp thu kém (chỉ 4%), phần lớn thải qua phân. Nếu hấp thu: thận (thải trừ qua nước tiểu)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Tăng magnesi máu nếu dùng quá liều hoặc suy thận - nguy hiểm. Tiêu chảy - phổ biến.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Tetracyclines (doxycycline, minocycline)",
+                    "mechanism": "Tạo phức hợp không hòa tan",
+                    "effect": "Giảm hấp thu tetracyclines",
+                    "management": "Cách thời gian ít nhất 2 giờ."
+                },
+                {
+                    "drug": "Quinolones (ciprofloxacin, levofloxacin)",
+                    "mechanism": "Tạo phức hợp không hòa tan",
+                    "effect": "Giảm hấp thu quinolones",
+                    "management": "Cách thời gian ít nhất 2 giờ."
+                },
+                {
+                    "drug": "Bisphosphonates (alendronate, risedronate)",
+                    "mechanism": "Tạo phức hợp không hòa tan",
+                    "effect": "Giảm hấp thu bisphosphonates",
+                    "management": "Cách thời gian ít nhất 2 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Tăng magnesi máu",
+                "Suy thận nặng (CrCl <30)",
+                "Block nhĩ thất",
+                "Tắc ruột"
+            ],
+            "tương_đối": [
+                "Suy thận nhẹ đến trung bình - tăng nguy cơ tăng magnesi máu",
+                "Tiêu chảy - có thể làm nặng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Category B - an toàn hơn category C. Magnesi cần thiết cho thai nhi.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Magnesi bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Magnesi không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nặng",
+                "Tăng magnesi máu: yếu cơ, buồn nôn, block nhĩ thất, suy hô hấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị tăng magnesi máu: calcium gluconate IV.",
+            "treatment": [
+                "Ngừng ngay magnesium oxide",
+                "Nếu tăng magnesi máu: Calcium gluconate IV (đối kháng magnesi)",
+                "Nếu block nhĩ thất: Atropine, pacemaker nếu cần",
+                "Nếu suy hô hấp: Hỗ trợ hô hấp",
+                "Theo dõi magnesi máu, ECG liên tục"
+            ],
+            "monitoring": "Magnesi máu, ECG, dấu hiệu lâm sàng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "preparation": "Dạng viên nén hoặc bột.",
+                "dosing": "400-800mg PO 1-3 lần/ngày. Cách thời gian ít nhất 2 giờ với tetracyclines, quinolones, bisphosphonates.",
+                "notes": "Bổ sung magnesi. Tiêu chảy phổ biến (do không hấp thu). Hấp thu kém (chỉ 4%)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Magnesium Oxide",
+                "UpToDate - Magnesium: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
     "Magnesium sulfate": {
         "group": "Emergency - Electrolyte",
         "vietnamese_name": "Magnesium sulfate, MgSO4",
@@ -378,182 +1025,333 @@ ELECTROLYTES_DRUGS = {
         }
     },
     
-    "Calcium gluconate": {
-        "group": "Emergency - Electrolyte",
-        "vietnamese_name": "Calcium gluconate, Ca gluconate",
+    "Pamidronate": {
+        "group": "Emergency - Electrolyte (Bisphosphonate)",
+        "vietnamese_name": "Pamidronate, Aredia",
         "administration": ["IV"],
         "indications": [
-            "Hạ calci máu cấp tính có triệu chứng",
-            "Tăng kali máu nặng (bảo vệ tim)",
-            "Ngộ độc calcium channel blocker",
-            "Ngộ độc magnesium sulfate",
-            "Ngộ độc hydrofluoric acid"
+            "Tăng calci máu do ung thư",
+            "Ung thư xương (metastatic bone disease)",
+            "Bệnh Paget xương"
         ],
         "contraindications": [
-            "Tăng calci máu",
-            "Suy thận nặng với tăng calci máu",
-            "Sỏi thận calci",
-            "Dùng với digoxin (tăng nguy cơ loạn nhịp)"
+            "Hạ calci máu",
+            "Suy thận nặng (CrCl <30)",
+            "Dị ứng pamidronate hoặc bisphosphonates",
+            "Mang thai"
         ],
         "dosage": {
-            "adult_hypocalcemia": "1-3g (10-30ml 10%) IV chậm trong 10-20 phút, có thể lặp lại",
-            "adult_hyperkalemia": "1-3g (10-30ml 10%) IV chậm trong 2-5 phút để bảo vệ tim",
-            "adult_ccb_overdose": "1-3g IV chậm, có thể lặp lại",
-            "pediatric_hypocalcemia": "30-100mg/kg (0.3-1ml/kg 10%) IV chậm",
-            "pediatric_hyperkalemia": "30-100mg/kg (0.3-1ml/kg 10%) IV chậm trong 2-5 phút",
-            "notes": "1g Ca gluconate = 4.65 mEq Ca2+ (ít hơn CaCl2: 13.6 mEq). Có thể truyền vào tĩnh mạch ngoại vi (ít gây nóng bỏng hơn CaCl2). Truyền CHẬM, theo dõi ECG. Không trộn với bicarbonate hoặc phosphate."
+            "adult_hypercalcemia": "60-90mg IV truyền trong 2-4 giờ",
+            "adult_bone_metastases": "90mg IV truyền trong 2-4 giờ mỗi 3-4 tuần",
+            "adult_paget": "30mg IV truyền trong 2-4 giờ mỗi ngày x 3 ngày",
+            "notes": "Bisphosphonate thế hệ 1, ức chế hủy xương. Truyền CHẬM trong 2-4 giờ. Cần bổ sung calci và vitamin D."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
-            "30_60": "Thận trọng, giảm liều",
-            "under_30": "Thận trọng, giảm liều, theo dõi calci máu"
+            "30_60": "Thận trọng, có thể giảm liều",
+            "under_30": "CHỐNG CHỈ ĐỊNH (CrCl <30)"
         },
         "side_effects": [
-            "Nóng bỏng tại chỗ tiêm (ít hơn CaCl2, có thể truyền vào tĩnh mạch ngoại vi)",
-            "Hoại tử nếu tiêm ngoài mạch",
-            "Tăng calci máu (quá liều)",
-            "Loạn nhịp tim (đặc biệt với digoxin)",
-            "Buồn nôn, nôn",
-            "Sỏi thận (dùng kéo dài)"
+            "Sốt, ớn lạnh (phổ biến trong 24-48 giờ đầu)",
+            "Đau cơ, đau xương",
+            "Hạ calci máu (phổ biến, cần bổ sung calci và vitamin D)",
+            "Hạ phospho máu",
+            "Suy thận cấp (hiếm nhưng nguy hiểm)",
+            "Hoại tử xương hàm (ONJ) - hiếm nhưng nguy hiểm",
+            "Rối loạn nhịp tim (hiếm)"
         ],
         "interactions": [
-            "Digoxin: tăng nguy cơ loạn nhịp tim nghiêm trọng",
-            "Thiazide diuretics: tăng nguy cơ tăng calci máu",
-            "Bicarbonate, Phosphate: tạo kết tủa - không trộn",
-            "Ceftriaxone: tạo kết tủa (đặc biệt ở trẻ sơ sinh)"
+            "Aminoglycosides: tăng nguy cơ hạ calci máu",
+            "Loop diuretics: tăng nguy cơ hạ calci máu",
+            "Nephrotoxic drugs: tăng nguy cơ suy thận"
         ],
-        "pregnancy": "C - An toàn trong cấp cứu",
-        "mechanism_of_action": "Calcium gluconate cung cấp calcium ion (Ca2+) trực tiếp vào máu. Ca2+ tham gia vào nhiều chức năng sinh học: đông máu (cần thiết cho cascade đông máu), co cơ (bao gồm cơ tim và cơ trơn), dẫn truyền thần kinh, và giải phóng hormone. Trong hạ calci máu: bổ sung Ca2+ thiếu hụt. Trong tăng kali máu: Ca2+ ổn định màng tế bào tim, giảm nguy cơ loạn nhịp tim do tăng kali máu. Trong ngộ độc calcium channel blocker: Ca2+ đối kháng tác dụng chẹn kênh calci, có thể đảo ngược tác dụng. Calcium gluconate có hàm lượng Ca2+ thấp hơn calcium chloride (1g Ca gluconate = 4.65 mEq vs 1g CaCl2 = 13.6 mEq), nhưng ít gây nóng bỏng tại chỗ tiêm hơn, có thể truyền vào tĩnh mạch ngoại vi.",
+        "pregnancy": "D - CHỐNG CHỈ ĐỊNH",
+        "mechanism_of_action": "Pamidronate là bisphosphonate thế hệ 1, ức chế hủy xương bằng cách: (1) Ức chế enzyme farnesyl pyrophosphate synthase trong tế bào hủy xương (osteoclasts), (2) Gây apoptosis tế bào hủy xương, (3) Giảm hoạt động hủy xương. Kết quả: giảm hủy xương, tăng mật độ xương, giảm calci máu. Được dùng cho tăng calci máu do ung thư, ung thư xương, bệnh Paget xương. Đặc điểm: bisphosphonate thế hệ 1 (yếu hơn zoledronic acid), tác dụng kéo dài (3-4 tuần), nguy cơ suy thận và hoại tử xương hàm.",
         "monitoring": [
-            "ECG liên tục (theo dõi loạn nhịp tim, đặc biệt với digoxin)",
-            "Nồng độ calcium trong máu (ionized calcium) - theo dõi tăng calci máu",
-            "Dấu hiệu tại chỗ tiêm (nóng bỏng, hoại tử nếu tiêm ngoài mạch)",
-            "Nhịp tim, huyết áp",
-            "Dấu hiệu tăng calci máu: buồn nôn, nôn, táo bón, yếu cơ"
+            "Calci máu - quan trọng (hạ calci máu phổ biến)",
+            "Phospho máu (hạ phospho máu)",
+            "Chức năng thận (creatinine, eGFR) - quan trọng (nguy cơ suy thận)",
+            "Dấu hiệu sốt, ớn lạnh (phổ biến trong 24-48 giờ đầu)",
+            "Dấu hiệu hoại tử xương hàm (đau hàm, sưng, chảy mủ) - hiếm nhưng nguy hiểm",
+            "ECG (rối loạn nhịp tim, hiếm)"
         ],
         "precautions": [
-            "Có thể truyền vào tĩnh mạch ngoại vi (ít gây nóng bỏng hơn CaCl2), nhưng vẫn ưu tiên tĩnh mạch lớn",
-            "Truyền CHẬM (10-20 phút cho 1-3g) - không truyền nhanh (tăng nguy cơ loạn nhịp tim)",
-            "KHÔNG trộn với bicarbonate hoặc phosphate (tạo kết tủa)",
-            "KHÔNG trộn với ceftriaxone (tạo kết tủa, đặc biệt nguy hiểm ở trẻ sơ sinh)",
-            "Theo dõi ECG liên tục (nguy cơ loạn nhịp tim, đặc biệt với digoxin)",
-            "Thận trọng với digoxin (tăng nguy cơ loạn nhịp tim nghiêm trọng)",
-            "Theo dõi nồng độ calcium trong máu (tránh tăng calci máu)",
-            "Dùng ngắn hạn (không dùng kéo dài - tăng nguy cơ sỏi thận)"
+            "HẠ CALCI MÁU - phổ biến, cần bổ sung calci và vitamin D",
+            "Suy thận cấp - hiếm nhưng nguy hiểm, theo dõi chức năng thận",
+            "Hoại tử xương hàm (ONJ) - hiếm nhưng nguy hiểm, đặc biệt ở bệnh nhân ung thư, dùng steroid",
+            "Truyền CHẬM trong 2-4 giờ (không nhanh hơn)",
+            "Bổ sung calci và vitamin D trước và sau khi dùng",
+            "Thận trọng với aminoglycosides, loop diuretics (tăng nguy cơ hạ calci máu)",
+            "Thận trọng với nephrotoxic drugs (tăng nguy cơ suy thận)",
+            "Không dùng khi mang thai (category D)"
         ],
         "pharmacokinetics": {
-            "half_life": "Không áp dụng (calcium là ion, không có half-life như thuốc)",
-            "onset": "Ngay lập tức sau khi truyền IV",
-            "duration": "2-3 giờ (tác dụng lâm sàng)",
-            "protein_binding": "Khoảng 40-50% gắn với albumin",
-            "clearance": "Thận: bài tiết qua nước tiểu. Xương: lưu trữ dài hạn."
+            "half_life": "27 giờ (ngắn hơn zoledronic acid)",
+            "onset": "24-48 giờ (giảm calci máu)",
+            "duration": "3-4 tuần",
+            "protein_binding": "54%",
+            "clearance": "Thận (chủ yếu, bài tiết nguyên dạng), xương (gắn với xương, thải trừ chậm)"
         },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Kiểm tra hạn sử dụng.",
-        "black_box_warnings": "KHÔNG trộn với ceftriaxone - có thể tạo kết tủa tử vong, đặc biệt ở trẻ sơ sinh. Truyền CHẬM - truyền nhanh có thể gây loạn nhịp tim, đặc biệt với digoxin.",
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Suy thận cấp - hiếm nhưng nguy hiểm. Hoại tử xương hàm (ONJ) - hiếm nhưng nguy hiểm. Hạ calci máu - phổ biến, cần bổ sung calci và vitamin D. Không dùng khi mang thai (category D).",
         "drug_interactions": {
             "major": [
                 {
-                    "drug": "Digoxin",
-                    "mechanism": "Calcium tăng tác dụng của digoxin trên tim, tăng nguy cơ loạn nhịp tim nghiêm trọng.",
-                    "effect": "Tăng nguy cơ loạn nhịp tim nghiêm trọng, có thể tử vong",
-                    "management": "TRÁNH DÙNG nếu có thể. Nếu bắt buộc, theo dõi ECG liên tục, theo dõi nồng độ digoxin. Dùng liều thấp nhất có thể."
+                    "drug": "Aminoglycosides (gentamicin, tobramycin, amikacin)",
+                    "mechanism": "Cả hai đều gây hạ calci máu",
+                    "effect": "Tăng nguy cơ hạ calci máu nghiêm trọng",
+                    "management": "Thận trọng. Theo dõi calci máu chặt chẽ. Bổ sung calci nếu cần."
                 },
                 {
-                    "drug": "Ceftriaxone",
-                    "mechanism": "Calcium gluconate tạo phức hợp không hòa tan với ceftriaxone, gây kết tủa.",
-                    "effect": "Kết tủa trong phổi, thận, có thể tử vong (đặc biệt ở trẻ sơ sinh)",
-                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI: Không trộn hoặc truyền cùng. Cách ít nhất 48 giờ giữa ceftriaxone và calcium gluconate."
+                    "drug": "Loop diuretics (furosemide, bumetanide)",
+                    "mechanism": "Tăng bài tiết calci qua thận",
+                    "effect": "Tăng nguy cơ hạ calci máu",
+                    "management": "Thận trọng. Theo dõi calci máu. Bổ sung calci nếu cần."
                 }
             ],
             "moderate": [
                 {
-                    "drug": "Thiazide diuretics",
-                    "mechanism": "Thiazide giảm bài tiết calcium, kết hợp với bổ sung calcium, dẫn đến tăng calci máu.",
-                    "effect": "Tăng nguy cơ tăng calci máu, sỏi thận",
-                    "management": "Theo dõi nồng độ calcium trong máu chặt chẽ. Có thể cần giảm liều calcium."
-                },
-                {
-                    "drug": "Bicarbonate, Phosphate",
-                    "mechanism": "Tạo phức hợp không hòa tan, gây kết tủa.",
-                    "effect": "Kết tủa, tắc nghẽn mạch máu",
-                    "management": "KHÔNG trộn. Truyền riêng biệt, cách thời gian."
+                    "drug": "Nephrotoxic drugs (aminoglycosides, vancomycin, NSAIDs)",
+                    "mechanism": "Tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ suy thận cấp",
+                    "management": "Thận trọng. Theo dõi chức năng thận chặt chẽ."
                 }
             ],
             "minor": []
         },
         "contraindications": {
             "tuyệt_đối": [
-                "Tăng calci máu (hypercalcemia)",
-                "Dùng với digoxin (tăng nguy cơ loạn nhịp tim nghiêm trọng) - tránh nếu có thể",
-                "Trộn với ceftriaxone (kết tủa tử vong)"
+                "Hạ calci máu",
+                "Suy thận nặng (CrCl <30)",
+                "Dị ứng pamidronate hoặc bisphosphonates",
+                "Mang thai (category D)"
             ],
             "tương_đối": [
-                "Suy thận nặng - tăng nguy cơ tăng calci máu",
-                "Sỏi thận calci - tăng nguy cơ tái phát",
-                "Bệnh sarcoidosis - tăng nhạy cảm với calcium"
+                "Suy thận nhẹ đến trung bình (CrCl 30-60) - thận trọng, có thể giảm liều",
+                "Dùng với aminoglycosides, loop diuretics - tăng nguy cơ hạ calci máu",
+                "Dùng với nephrotoxic drugs - tăng nguy cơ suy thận"
             ]
         },
         "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Calcium gluconate có thể được dùng trong cấp cứu khi cần thiết. Hạ calci máu trong thai kỳ có thể nguy hiểm cho cả mẹ và thai nhi. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "fda_category": "D",
+            "pregnancy_details": "Category D - CHỐNG CHỈ ĐỊNH trong thai kỳ. Có nguy cơ dị tật thai nhi và ảnh hưởng đến sự phát triển xương của thai nhi.",
             "lactation": {
-                "safety": "Compatible",
-                "details": "Calcium gluconate bài tiết vào sữa mẹ ở nồng độ thấp. An toàn khi cho con bú với liều điều trị.",
-                "recommendation": "Có thể dùng khi cho con bú."
+                "safety": "Compatible with monitoring",
+                "details": "Pamidronate bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
             }
         },
         "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Không cần điều chỉnh liều",
-            "severe": "Không cần điều chỉnh liều",
-            "notes": "Calcium không chuyển hóa ở gan. Suy gan không ảnh hưởng đáng kể."
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Pamidronate không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
         },
         "overdose_management": {
             "symptoms": [
-                "Tăng calci máu: buồn nôn, nôn, táo bón, yếu cơ, rối loạn tâm thần",
-                "Loạn nhịp tim (đặc biệt với digoxin)",
-                "Sỏi thận",
-                "Suy thận cấp"
+                "Hạ calci máu nặng: co giật, tetany, rối loạn nhịp tim",
+                "Hạ phospho máu nặng",
+                "Suy thận cấp",
+                "Sốt, ớn lạnh nặng"
             ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và giảm calci máu.",
+            "antidote": "Không có antidote đặc hiệu. Điều trị hạ calci máu.",
             "treatment": [
-                "Ngừng calcium gluconate ngay lập tức",
-                "Truyền dịch muối đẳng trương (0.9% NaCl) để tăng bài tiết calcium",
-                "Furosemide (lợi tiểu) để tăng bài tiết calcium (sau khi đã bù dịch)",
-                "Calcitonin nếu tăng calci máu nặng",
-                "Bisphosphonates (pamidronate, zoledronate) nếu tăng calci máu nặng",
-                "Theo dõi ECG liên tục (loạn nhịp tim)",
-                "Hemodialysis nếu tăng calci máu rất nặng"
+                "Điều trị hạ calci máu: Calcium gluconate hoặc calcium chloride IV",
+                "Điều trị hạ phospho máu: Bổ sung phosphate",
+                "Điều trị suy thận cấp: Truyền dịch, có thể cần lọc máu",
+                "Điều trị sốt: Acetaminophen, NSAIDs",
+                "Theo dõi calci, phospho máu, chức năng thận liên tục"
             ],
-            "monitoring": "ECG, nồng độ calcium trong máu, creatinine, dấu hiệu lâm sàng."
+            "monitoring": "Calci máu, phospho máu, chức năng thận, ECG, dấu hiệu lâm sàng"
         },
         "reversal_agents": {
             "available": False,
             "agents": []
         },
         "administration_instructions": {
-            "oral": None,
             "iv": {
-                "reconstitution": "Dùng trực tiếp từ lọ 10% (10ml = 1g). Không cần pha.",
-                "infusion_rate": "Truyền CHẬM trong 10-20 phút cho 1-3g. Không truyền nhanh hơn.",
+                "reconstitution": "Pha 60-90mg trong 250-500ml Normal saline hoặc D5W.",
+                "infusion_rate": "Truyền CHẬM trong 2-4 giờ. Không nhanh hơn.",
                 "compatibility": ["Normal saline (0.9% NaCl)", "D5W"],
                 "incompatibility": [
-                    "Ceftriaxone - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (kết tủa tử vong)",
-                    "Bicarbonate - tạo kết tủa",
-                    "Phosphate - tạo kết tủa"
+                    "Calcium (calcium gluconate, calcium chloride) - không trộn",
+                    "Các cation khác - không trộn"
                 ],
-                "notes": "Có thể truyền vào tĩnh mạch ngoại vi (ít gây nóng bỏng hơn CaCl2), nhưng vẫn ưu tiên tĩnh mạch lớn. Truyền CHẬM (10-20 phút). Theo dõi ECG liên tục. KHÔNG trộn với ceftriaxone, bicarbonate, hoặc phosphate."
+                "notes": "QUAN TRỌNG: 1) Truyền CHẬM trong 2-4 giờ (không nhanh hơn), 2) Bổ sung calci và vitamin D trước và sau khi dùng, 3) Theo dõi chức năng thận chặt chẽ, 4) Theo dõi calci máu chặt chẽ."
             }
         },
         "references": {
             "primary_sources": [
-                "ACLS Guidelines - Hyperkalemia Management",
-                "UpToDate - Calcium gluconate drug information",
-                "FDA Drug Label - Calcium gluconate",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+                "FDA Drug Label - Aredia (pamidronate)",
+                "UpToDate - Pamidronate: Drug information",
+                "ASCO Guidelines - Hypercalcemia of malignancy"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A - Dựa trên ACLS guidelines và dữ liệu lâm sàng"
+            "evidence_level": "A"
+        }
+    },
+    "Potassium phosphate": {
+        "group": "Emergency - Electrolyte (Phosphate Supplement)",
+        "vietnamese_name": "Potassium phosphate, K2HPO4, KH2PO4",
+        "administration": ["IV"],
+        "indications": [
+            "Hạ phospho máu",
+            "Hạ phospho máu nặng",
+            "Hạ kali máu kèm hạ phospho máu"
+        ],
+        "contraindications": [
+            "Tăng phospho máu",
+            "Tăng kali máu",
+            "Suy thận nặng",
+            "Tăng calci máu",
+            "Dùng với calcium"
+        ],
+        "dosage": {
+            "adult_iv": "0.16-0.32 mmol/kg IV truyền trong 2-6 giờ",
+            "notes": "Bổ sung phosphate và kali. Dùng cho hạ phospho máu kèm hạ kali máu. Truyền CHẬM (2-6 giờ) để tránh hạ calci máu và tăng kali máu."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng (tăng nguy cơ tăng phospho và kali máu)",
+            "under_30": "CHỐNG CHỈ ĐỊNH (nguy cơ tăng phospho và kali máu)"
+        },
+        "side_effects": [
+            "Hạ calci máu (phổ biến, do kết tủa với calci)",
+            "Tăng kali máu (nếu dùng quá liều)",
+            "Tăng phospho máu (nếu dùng quá liều)",
+            "Rối loạn nhịp tim (nếu hạ calci máu hoặc tăng kali máu)",
+            "Co giật (nếu hạ calci máu nặng)"
+        ],
+        "interactions": [
+            "Calcium: kết tủa (CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI)",
+            "Magnesium: kết tủa",
+            "ACE inhibitors, ARBs: tăng nguy cơ tăng kali máu"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Potassium phosphate cung cấp phosphate (PO4³⁻) và kali (K⁺). Phosphate cần thiết cho tổng hợp ATP, cấu trúc xương, đệm pH. Kali cần thiết cho dẫn truyền thần kinh, co bóp cơ. Trong hạ phospho máu kèm hạ kali máu: bổ sung cả hai. Đặc điểm: kết tủa với calci (gây hạ calci máu), tăng kali máu nếu dùng quá liều, cần truyền CHẬM (2-6 giờ), thận trọng ở suy thận.",
+        "monitoring": [
+            "Phospho máu - quan trọng",
+            "Kali máu - quan trọng (tăng kali máu nếu dùng quá liều)",
+            "Calci máu - quan trọng (hạ calci máu phổ biến do kết tủa)",
+            "ECG (rối loạn nhịp tim nếu hạ calci máu hoặc tăng kali máu)",
+            "Chức năng thận (creatinine, eGFR) - quan trọng",
+            "Dấu hiệu hạ calci máu: tetany, co giật",
+            "Dấu hiệu tăng kali máu: yếu cơ, rối loạn nhịp tim"
+        ],
+        "precautions": [
+            "HẠ CALCI MÁU - phổ biến do kết tủa với calci, theo dõi calci máu chặt chẽ",
+            "TĂNG KALI MÁU - nếu dùng quá liều, theo dõi kali máu chặt chẽ",
+            "KHÔNG trộn với calcium (kết tủa tử vong)",
+            "Truyền CHẬM (2-6 giờ) để giảm hạ calci máu và tăng kali máu",
+            "Thận trọng ở suy thận (tăng nguy cơ tăng phospho và kali máu)",
+            "Theo dõi calci, kali, và phospho máu chặt chẽ",
+            "Bổ sung calci nếu hạ calci máu",
+            "Thận trọng với ACE inhibitors, ARBs (tăng nguy cơ tăng kali máu)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (electrolyte)",
+            "onset": "Ngay lập tức sau khi truyền IV",
+            "duration": "Phụ thuộc liều và tình trạng bệnh nhân",
+            "protein_binding": "Không áp dụng",
+            "clearance": "Thận (thải trừ qua nước tiểu), xương (lắng đọng)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "KHÔNG trộn với calcium - kết tủa tử vong. Hạ calci máu - phổ biến, theo dõi calci máu chặt chẽ. Tăng kali máu - nếu dùng quá liều, theo dõi kali máu chặt chẽ.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Calcium (calcium gluconate, calcium chloride)",
+                    "mechanism": "Kết tủa calcium phosphate",
+                    "effect": "Kết tủa tử vong, tắc mạch, hạ calci máu",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không trộn hoặc truyền cùng."
+                },
+                {
+                    "drug": "ACE inhibitors, ARBs (lisinopril, losartan)",
+                    "mechanism": "Giảm bài tiết kali qua thận",
+                    "effect": "Tăng nguy cơ tăng kali máu",
+                    "management": "Thận trọng. Theo dõi kali máu chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Magnesium",
+                    "mechanism": "Kết tủa magnesium phosphate",
+                    "effect": "Kết tủa, giảm hiệu quả cả hai",
+                    "management": "Tránh trộn hoặc truyền cùng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Tăng phospho máu",
+                "Tăng kali máu",
+                "Suy thận nặng (CrCl <30)",
+                "Tăng calci máu",
+                "Dùng với calcium (kết tủa tử vong)"
+            ],
+            "tương_đối": [
+                "Suy thận nhẹ đến trung bình - tăng nguy cơ tăng phospho và kali máu",
+                "Dùng với ACE inhibitors, ARBs - tăng nguy cơ tăng kali máu"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Phosphate và kali cần thiết cho thai nhi.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Phosphate và kali bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Phosphate và kali không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng phospho máu: mệt mỏi, buồn nôn, ngứa",
+                "Tăng kali máu: yếu cơ, rối loạn nhịp tim",
+                "Hạ calci máu nặng: tetany, co giật, rối loạn nhịp tim",
+                "Kết tủa (nếu trộn với calcium)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hạ calci máu: calcium gluconate IV. Điều trị tăng kali máu: calcium gluconate, insulin+glucose, kayexalate.",
+            "treatment": [
+                "Ngừng ngay potassium phosphate",
+                "Nếu hạ calci máu: Calcium gluconate hoặc calcium chloride IV",
+                "Nếu tăng kali máu: Calcium gluconate (bảo vệ tim), insulin+glucose, kayexalate",
+                "Nếu tăng phospho máu: Truyền dịch, có thể cần lọc máu",
+                "Điều trị co giật: Benzodiazepines",
+                "Theo dõi calci, kali, phospho máu, ECG liên tục"
+            ],
+            "monitoring": "Calci máu, kali máu, phospho máu, ECG, dấu hiệu lâm sàng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha 0.16-0.32 mmol/kg trong 250-500ml Normal saline hoặc D5W.",
+                "infusion_rate": "Truyền CHẬM trong 2-6 giờ. Không nhanh hơn.",
+                "compatibility": ["Normal saline (0.9% NaCl)", "D5W"],
+                "incompatibility": [
+                    "Calcium (calcium gluconate, calcium chloride) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (kết tủa tử vong)",
+                    "Magnesium - kết tủa",
+                    "Aluminum - kết tủa"
+                ],
+                "notes": "QUAN TRỌNG: 1) Truyền CHẬM trong 2-6 giờ (không nhanh hơn), 2) KHÔNG trộn với calcium (kết tủa tử vong), 3) Theo dõi calci, kali, và phospho máu chặt chẽ, 4) Bổ sung calci nếu hạ calci máu."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Potassium Phosphate Injection",
+                "UpToDate - Phosphate: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
         }
     },
     
@@ -741,92 +1539,88 @@ ELECTROLYTES_DRUGS = {
         }
     },
     
-    "Calcium chloride": {
-        "group": "Emergency - Electrolyte",
-        "vietnamese_name": "Calcium chloride, CaCl2",
-        "administration": ["IV"],
+    "Sodium phosphate": {
+        "group": "Emergency - Electrolyte (Phosphate Supplement)",
+        "vietnamese_name": "Sodium phosphate, Na2HPO4, NaH2PO4",
+        "administration": ["IV", "PO"],
         "indications": [
-            "Hạ calci máu cấp tính có triệu chứng",
-            "Tăng kali máu nặng (bảo vệ tim)",
-            "Ngộ độc calcium channel blocker",
-            "Ngộ độc magnesium sulfate",
-            "Ngộ độc hydrofluoric acid"
+            "Hạ phospho máu",
+            "Hạ phospho máu nặng",
+            "Chuẩn bị đại tràng (bowel preparation) - dạng PO"
         ],
         "contraindications": [
+            "Tăng phospho máu",
+            "Suy thận nặng",
             "Tăng calci máu",
-            "Suy thận nặng với tăng calci máu",
-            "Sỏi thận calci",
-            "Digitalis toxicity (tăng nguy cơ rối loạn nhịp)"
+            "Tắc ruột (dạng PO)"
         ],
         "dosage": {
-            "adult_hypocalcemia": "1g (10ml 10% solution) IV chậm trong 5-10 phút, có thể lặp lại",
-            "adult_hyperkalemia": "1g IV chậm trong 5-10 phút",
-            "adult_max": "3g trong 24 giờ",
-            "notes": "Chứa nhiều calci hơn calcium gluconate (3x). Chỉ dùng IV, không dùng IM/SC (gây hoại tử)."
+            "adult_iv": "0.16-0.32 mmol/kg IV truyền trong 2-6 giờ",
+            "adult_po": "1-2 gói PO với nước (cho chuẩn bị đại tràng)",
+            "notes": "Bổ sung phosphate. Dạng IV cho hạ phospho máu. Dạng PO cho chuẩn bị đại tràng. Truyền CHẬM (2-6 giờ) để tránh hạ calci máu."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
-            "30_60": "Thận trọng",
-            "under_30": "Thận trọng (tăng nguy cơ tăng calci máu)"
+            "30_60": "Thận trọng (tăng nguy cơ tăng phospho máu)",
+            "under_30": "CHỐNG CHỈ ĐỊNH (nguy cơ tăng phospho máu)"
         },
         "side_effects": [
-            "Kích ứng mạch máu (phổ biến, có thể gây viêm tĩnh mạch)",
-            "Hoại tử mô (nếu tiêm ngoài mạch)",
-            "Tăng calci máu (nếu dùng quá liều)",
-            "Rối loạn nhịp tim (nếu dùng với digitalis)",
-            "Hạ huyết áp (hiếm)"
+            "Hạ calci máu (phổ biến, do kết tủa với calci)",
+            "Tăng phospho máu (nếu dùng quá liều)",
+            "Rối loạn nhịp tim (nếu hạ calci máu nặng)",
+            "Co giật (nếu hạ calci máu nặng)",
+            "Tiêu chảy (dạng PO)"
         ],
         "interactions": [
-            "Digitalis: tăng nguy cơ rối loạn nhịp tim",
-            "Sodium bicarbonate: kết tủa (CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI)",
-            "Phosphate: kết tủa"
+            "Calcium: kết tủa (CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI)",
+            "Magnesium: kết tủa",
+            "Aluminum: kết tủa"
         ],
         "pregnancy": "C",
-        "mechanism_of_action": "Calcium chloride cung cấp calci ion hóa (Ca2+). Calci cần thiết cho: (1) Co bóp cơ tim (tăng lực co bóp), (2) Dẫn truyền thần kinh, (3) Đông máu, (4) Chức năng cơ. Trong hạ calci máu: bổ sung calci. Trong tăng kali máu: bảo vệ tim khỏi tác dụng độc của kali (ổn định màng tế bào). Trong ngộ độc calcium channel blocker: đối kháng tác dụng. Đặc điểm: chứa nhiều calci hơn calcium gluconate (3x), chỉ dùng IV, kích ứng mạch máu mạnh hơn calcium gluconate.",
+        "mechanism_of_action": "Sodium phosphate cung cấp phosphate (PO4³⁻). Phosphate cần thiết cho: (1) Tổng hợp ATP (năng lượng tế bào), (2) Cấu trúc xương và răng, (3) Đệm pH máu, (4) Chức năng tế bào. Trong hạ phospho máu: bổ sung phosphate. Đặc điểm: kết tủa với calci (gây hạ calci máu), cần truyền CHẬM (2-6 giờ), thận trọng ở suy thận (tăng nguy cơ tăng phospho máu).",
         "monitoring": [
-            "Calci máu (ionized calcium) - quan trọng",
-            "Kali máu (nếu dùng cho tăng kali máu)",
-            "ECG (rối loạn nhịp tim, đặc biệt nếu dùng với digitalis)",
-            "Dấu hiệu kích ứng mạch máu (đỏ, đau tại chỗ tiêm)",
-            "Dấu hiệu tăng calci máu: mệt mỏi, buồn nôn, táo bón"
+            "Phospho máu - quan trọng",
+            "Calci máu - quan trọng (hạ calci máu phổ biến do kết tủa)",
+            "ECG (rối loạn nhịp tim nếu hạ calci máu)",
+            "Chức năng thận (creatinine, eGFR) - quan trọng",
+            "Dấu hiệu hạ calci máu: tetany, co giật, rối loạn nhịp tim"
         ],
         "precautions": [
-            "Kích ứng mạch máu - phổ biến, có thể gây viêm tĩnh mạch",
-            "Chỉ dùng IV, không dùng IM/SC (gây hoại tử mô)",
-            "Truyền CHẬM (5-10 phút) để giảm kích ứng",
-            "Thận trọng với digitalis (tăng nguy cơ rối loạn nhịp)",
-            "KHÔNG trộn với sodium bicarbonate (kết tủa tử vong)",
-            "Chứa nhiều calci hơn calcium gluconate (3x)",
-            "Theo dõi calci máu chặt chẽ"
+            "HẠ CALCI MÁU - phổ biến do kết tủa với calci, theo dõi calci máu chặt chẽ",
+            "KHÔNG trộn với calcium (kết tủa tử vong)",
+            "Truyền CHẬM (2-6 giờ) để giảm hạ calci máu",
+            "Thận trọng ở suy thận (tăng nguy cơ tăng phospho máu)",
+            "Theo dõi calci và phospho máu chặt chẽ",
+            "Bổ sung calci nếu hạ calci máu"
         ],
         "pharmacokinetics": {
             "half_life": "Không áp dụng (electrolyte)",
-            "onset": "Ngay lập tức sau khi tiêm IV",
+            "onset": "Ngay lập tức sau khi truyền IV",
             "duration": "Phụ thuộc liều và tình trạng bệnh nhân",
-            "protein_binding": "50% (ionized calcium)",
+            "protein_binding": "Không áp dụng",
             "clearance": "Thận (thải trừ qua nước tiểu), xương (lắng đọng)"
         },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "KHÔNG trộn với sodium bicarbonate - kết tủa tử vong. Chỉ dùng IV, không dùng IM/SC - gây hoại tử mô.",
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "KHÔNG trộn với calcium - kết tủa tử vong. Hạ calci máu - phổ biến, theo dõi calci máu chặt chẽ.",
         "drug_interactions": {
             "major": [
                 {
-                    "drug": "Sodium bicarbonate",
-                    "mechanism": "Kết tủa calcium carbonate",
-                    "effect": "Kết tủa tử vong, tắc mạch",
+                    "drug": "Calcium (calcium gluconate, calcium chloride)",
+                    "mechanism": "Kết tủa calcium phosphate",
+                    "effect": "Kết tủa tử vong, tắc mạch, hạ calci máu",
                     "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không trộn hoặc truyền cùng."
                 },
                 {
-                    "drug": "Digitalis (digoxin, digitoxin)",
-                    "mechanism": "Calci tăng tác dụng của digitalis trên tim",
-                    "effect": "Tăng nguy cơ rối loạn nhịp tim nghiêm trọng",
-                    "management": "Thận trọng. Theo dõi ECG sát. Tránh dùng cùng nếu có thể."
+                    "drug": "Magnesium",
+                    "mechanism": "Kết tủa magnesium phosphate",
+                    "effect": "Kết tủa, giảm hiệu quả cả hai",
+                    "management": "Tránh trộn hoặc truyền cùng."
                 }
             ],
             "moderate": [
                 {
-                    "drug": "Phosphate",
-                    "mechanism": "Kết tủa calcium phosphate",
+                    "drug": "Aluminum",
+                    "mechanism": "Kết tủa aluminum phosphate",
                     "effect": "Kết tủa, giảm hiệu quả cả hai",
                     "management": "Tránh trộn hoặc truyền cùng."
                 }
@@ -835,23 +1629,23 @@ ELECTROLYTES_DRUGS = {
         },
         "contraindications": {
             "tuyệt_đối": [
+                "Tăng phospho máu",
+                "Suy thận nặng (CrCl <30)",
                 "Tăng calci máu",
-                "Suy thận nặng với tăng calci máu",
-                "Sỏi thận calci",
-                "Digitalis toxicity",
-                "Dùng với sodium bicarbonate (kết tủa tử vong)"
+                "Dùng với calcium (kết tủa tử vong)",
+                "Tắc ruột (dạng PO)"
             ],
             "tương_đối": [
-                "Suy thận nhẹ đến trung bình - tăng nguy cơ tăng calci máu",
-                "Dùng với digitalis - tăng nguy cơ rối loạn nhịp"
+                "Suy thận nhẹ đến trung bình - tăng nguy cơ tăng phospho máu",
+                "Dùng với magnesium, aluminum - tránh"
             ]
         },
         "pregnancy_lactation": {
             "fda_category": "C",
-            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Calci cần thiết cho thai nhi.",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Phosphate cần thiết cho thai nhi.",
             "lactation": {
                 "safety": "Compatible",
-                "details": "Calci bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "details": "Phosphate bài tiết vào sữa mẹ ở nồng độ thấp.",
                 "recommendation": "Có thể dùng khi cho con bú."
             }
         },
@@ -859,24 +1653,23 @@ ELECTROLYTES_DRUGS = {
             "mild": "Không đổi",
             "moderate": "Không đổi",
             "severe": "Không đổi",
-            "notes": "Calci không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
+            "notes": "Phosphate không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
         },
         "overdose_management": {
             "symptoms": [
-                "Tăng calci máu: mệt mỏi, buồn nôn, táo bón, nhịp tim chậm",
-                "Rối loạn nhịp tim",
-                "Kích ứng mạch máu nặng",
-                "Hoại tử mô (nếu tiêm ngoài mạch)"
+                "Tăng phospho máu: mệt mỏi, buồn nôn, ngứa",
+                "Hạ calci máu nặng: tetany, co giật, rối loạn nhịp tim",
+                "Kết tủa (nếu trộn với calcium)"
             ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị tăng calci máu.",
+            "antidote": "Không có antidote đặc hiệu. Điều trị hạ calci máu: calcium gluconate IV.",
             "treatment": [
-                "Ngừng ngay calcium chloride",
-                "Truyền dịch muối đẳng trương",
-                "Furosemide để tăng bài tiết calci",
-                "Calcitonin nếu tăng calci máu nặng",
-                "Theo dõi calci máu, ECG liên tục"
+                "Ngừng ngay sodium phosphate",
+                "Nếu hạ calci máu: Calcium gluconate hoặc calcium chloride IV",
+                "Nếu tăng phospho máu: Truyền dịch, có thể cần lọc máu",
+                "Điều trị co giật: Benzodiazepines",
+                "Theo dõi calci, phospho máu, ECG liên tục"
             ],
-            "monitoring": "Calci máu (ionized calcium), ECG, dấu hiệu lâm sàng"
+            "monitoring": "Calci máu, phospho máu, ECG, dấu hiệu lâm sàng"
         },
         "reversal_agents": {
             "available": False,
@@ -884,25 +1677,29 @@ ELECTROLYTES_DRUGS = {
         },
         "administration_instructions": {
             "iv": {
-                "reconstitution": "Dùng trực tiếp dung dịch 10% (1g/10ml).",
-                "infusion_rate": "Truyền CHẬM trong 5-10 phút. Không truyền nhanh hơn.",
-                "compatibility": ["D5W", "Normal saline (0.9% NaCl)"],
+                "reconstitution": "Pha 0.16-0.32 mmol/kg trong 250-500ml Normal saline hoặc D5W.",
+                "infusion_rate": "Truyền CHẬM trong 2-6 giờ. Không nhanh hơn.",
+                "compatibility": ["Normal saline (0.9% NaCl)", "D5W"],
                 "incompatibility": [
-                    "Sodium bicarbonate - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (kết tủa tử vong)",
-                    "Phosphate - kết tủa",
-                    "Catecholamines - bất hoạt"
+                    "Calcium (calcium gluconate, calcium chloride) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (kết tủa tử vong)",
+                    "Magnesium - kết tủa",
+                    "Aluminum - kết tủa"
                 ],
-                "notes": "QUAN TRỌNG: 1) Chỉ dùng IV, không dùng IM/SC (gây hoại tử mô), 2) Truyền CHẬM (5-10 phút), 3) KHÔNG trộn với sodium bicarbonate (kết tủa tử vong), 4) Chứa nhiều calci hơn calcium gluconate (3x)."
+                "notes": "QUAN TRỌNG: 1) Truyền CHẬM trong 2-6 giờ (không nhanh hơn), 2) KHÔNG trộn với calcium (kết tủa tử vong), 3) Theo dõi calci và phospho máu chặt chẽ, 4) Bổ sung calci nếu hạ calci máu."
+            },
+            "oral": {
+                "preparation": "Pha 1-2 gói trong nước.",
+                "dosing": "1-2 gói PO với nước (cho chuẩn bị đại tràng).",
+                "notes": "Dùng cho chuẩn bị đại tràng. Uống với nhiều nước."
             }
         },
         "references": {
             "primary_sources": [
-                "FDA Drug Label - Calcium Chloride Injection",
-                "ACLS Guidelines 2020 - American Heart Association",
-                "UpToDate - Calcium: Drug information"
+                "FDA Drug Label - Sodium Phosphate Injection",
+                "UpToDate - Phosphate: Drug information"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A - Dựa trên ACLS guidelines và dữ liệu lâm sàng"
+            "evidence_level": "A"
         }
     },
     
@@ -1228,803 +2025,6 @@ ELECTROLYTES_DRUGS = {
         }
     },
     
-    "Sodium phosphate": {
-        "group": "Emergency - Electrolyte (Phosphate Supplement)",
-        "vietnamese_name": "Sodium phosphate, Na2HPO4, NaH2PO4",
-        "administration": ["IV", "PO"],
-        "indications": [
-            "Hạ phospho máu",
-            "Hạ phospho máu nặng",
-            "Chuẩn bị đại tràng (bowel preparation) - dạng PO"
-        ],
-        "contraindications": [
-            "Tăng phospho máu",
-            "Suy thận nặng",
-            "Tăng calci máu",
-            "Tắc ruột (dạng PO)"
-        ],
-        "dosage": {
-            "adult_iv": "0.16-0.32 mmol/kg IV truyền trong 2-6 giờ",
-            "adult_po": "1-2 gói PO với nước (cho chuẩn bị đại tràng)",
-            "notes": "Bổ sung phosphate. Dạng IV cho hạ phospho máu. Dạng PO cho chuẩn bị đại tràng. Truyền CHẬM (2-6 giờ) để tránh hạ calci máu."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Thận trọng (tăng nguy cơ tăng phospho máu)",
-            "under_30": "CHỐNG CHỈ ĐỊNH (nguy cơ tăng phospho máu)"
-        },
-        "side_effects": [
-            "Hạ calci máu (phổ biến, do kết tủa với calci)",
-            "Tăng phospho máu (nếu dùng quá liều)",
-            "Rối loạn nhịp tim (nếu hạ calci máu nặng)",
-            "Co giật (nếu hạ calci máu nặng)",
-            "Tiêu chảy (dạng PO)"
-        ],
-        "interactions": [
-            "Calcium: kết tủa (CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI)",
-            "Magnesium: kết tủa",
-            "Aluminum: kết tủa"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Sodium phosphate cung cấp phosphate (PO4³⁻). Phosphate cần thiết cho: (1) Tổng hợp ATP (năng lượng tế bào), (2) Cấu trúc xương và răng, (3) Đệm pH máu, (4) Chức năng tế bào. Trong hạ phospho máu: bổ sung phosphate. Đặc điểm: kết tủa với calci (gây hạ calci máu), cần truyền CHẬM (2-6 giờ), thận trọng ở suy thận (tăng nguy cơ tăng phospho máu).",
-        "monitoring": [
-            "Phospho máu - quan trọng",
-            "Calci máu - quan trọng (hạ calci máu phổ biến do kết tủa)",
-            "ECG (rối loạn nhịp tim nếu hạ calci máu)",
-            "Chức năng thận (creatinine, eGFR) - quan trọng",
-            "Dấu hiệu hạ calci máu: tetany, co giật, rối loạn nhịp tim"
-        ],
-        "precautions": [
-            "HẠ CALCI MÁU - phổ biến do kết tủa với calci, theo dõi calci máu chặt chẽ",
-            "KHÔNG trộn với calcium (kết tủa tử vong)",
-            "Truyền CHẬM (2-6 giờ) để giảm hạ calci máu",
-            "Thận trọng ở suy thận (tăng nguy cơ tăng phospho máu)",
-            "Theo dõi calci và phospho máu chặt chẽ",
-            "Bổ sung calci nếu hạ calci máu"
-        ],
-        "pharmacokinetics": {
-            "half_life": "Không áp dụng (electrolyte)",
-            "onset": "Ngay lập tức sau khi truyền IV",
-            "duration": "Phụ thuộc liều và tình trạng bệnh nhân",
-            "protein_binding": "Không áp dụng",
-            "clearance": "Thận (thải trừ qua nước tiểu), xương (lắng đọng)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "KHÔNG trộn với calcium - kết tủa tử vong. Hạ calci máu - phổ biến, theo dõi calci máu chặt chẽ.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Calcium (calcium gluconate, calcium chloride)",
-                    "mechanism": "Kết tủa calcium phosphate",
-                    "effect": "Kết tủa tử vong, tắc mạch, hạ calci máu",
-                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không trộn hoặc truyền cùng."
-                },
-                {
-                    "drug": "Magnesium",
-                    "mechanism": "Kết tủa magnesium phosphate",
-                    "effect": "Kết tủa, giảm hiệu quả cả hai",
-                    "management": "Tránh trộn hoặc truyền cùng."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Aluminum",
-                    "mechanism": "Kết tủa aluminum phosphate",
-                    "effect": "Kết tủa, giảm hiệu quả cả hai",
-                    "management": "Tránh trộn hoặc truyền cùng."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Tăng phospho máu",
-                "Suy thận nặng (CrCl <30)",
-                "Tăng calci máu",
-                "Dùng với calcium (kết tủa tử vong)",
-                "Tắc ruột (dạng PO)"
-            ],
-            "tương_đối": [
-                "Suy thận nhẹ đến trung bình - tăng nguy cơ tăng phospho máu",
-                "Dùng với magnesium, aluminum - tránh"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Phosphate cần thiết cho thai nhi.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Phosphate bài tiết vào sữa mẹ ở nồng độ thấp.",
-                "recommendation": "Có thể dùng khi cho con bú."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Không đổi",
-            "severe": "Không đổi",
-            "notes": "Phosphate không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Tăng phospho máu: mệt mỏi, buồn nôn, ngứa",
-                "Hạ calci máu nặng: tetany, co giật, rối loạn nhịp tim",
-                "Kết tủa (nếu trộn với calcium)"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hạ calci máu: calcium gluconate IV.",
-            "treatment": [
-                "Ngừng ngay sodium phosphate",
-                "Nếu hạ calci máu: Calcium gluconate hoặc calcium chloride IV",
-                "Nếu tăng phospho máu: Truyền dịch, có thể cần lọc máu",
-                "Điều trị co giật: Benzodiazepines",
-                "Theo dõi calci, phospho máu, ECG liên tục"
-            ],
-            "monitoring": "Calci máu, phospho máu, ECG, dấu hiệu lâm sàng"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "iv": {
-                "reconstitution": "Pha 0.16-0.32 mmol/kg trong 250-500ml Normal saline hoặc D5W.",
-                "infusion_rate": "Truyền CHẬM trong 2-6 giờ. Không nhanh hơn.",
-                "compatibility": ["Normal saline (0.9% NaCl)", "D5W"],
-                "incompatibility": [
-                    "Calcium (calcium gluconate, calcium chloride) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (kết tủa tử vong)",
-                    "Magnesium - kết tủa",
-                    "Aluminum - kết tủa"
-                ],
-                "notes": "QUAN TRỌNG: 1) Truyền CHẬM trong 2-6 giờ (không nhanh hơn), 2) KHÔNG trộn với calcium (kết tủa tử vong), 3) Theo dõi calci và phospho máu chặt chẽ, 4) Bổ sung calci nếu hạ calci máu."
-            },
-            "oral": {
-                "preparation": "Pha 1-2 gói trong nước.",
-                "dosing": "1-2 gói PO với nước (cho chuẩn bị đại tràng).",
-                "notes": "Dùng cho chuẩn bị đại tràng. Uống với nhiều nước."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Sodium Phosphate Injection",
-                "UpToDate - Phosphate: Drug information"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A"
-        }
-    },
-    
-    "Potassium phosphate": {
-        "group": "Emergency - Electrolyte (Phosphate Supplement)",
-        "vietnamese_name": "Potassium phosphate, K2HPO4, KH2PO4",
-        "administration": ["IV"],
-        "indications": [
-            "Hạ phospho máu",
-            "Hạ phospho máu nặng",
-            "Hạ kali máu kèm hạ phospho máu"
-        ],
-        "contraindications": [
-            "Tăng phospho máu",
-            "Tăng kali máu",
-            "Suy thận nặng",
-            "Tăng calci máu",
-            "Dùng với calcium"
-        ],
-        "dosage": {
-            "adult_iv": "0.16-0.32 mmol/kg IV truyền trong 2-6 giờ",
-            "notes": "Bổ sung phosphate và kali. Dùng cho hạ phospho máu kèm hạ kali máu. Truyền CHẬM (2-6 giờ) để tránh hạ calci máu và tăng kali máu."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Thận trọng (tăng nguy cơ tăng phospho và kali máu)",
-            "under_30": "CHỐNG CHỈ ĐỊNH (nguy cơ tăng phospho và kali máu)"
-        },
-        "side_effects": [
-            "Hạ calci máu (phổ biến, do kết tủa với calci)",
-            "Tăng kali máu (nếu dùng quá liều)",
-            "Tăng phospho máu (nếu dùng quá liều)",
-            "Rối loạn nhịp tim (nếu hạ calci máu hoặc tăng kali máu)",
-            "Co giật (nếu hạ calci máu nặng)"
-        ],
-        "interactions": [
-            "Calcium: kết tủa (CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI)",
-            "Magnesium: kết tủa",
-            "ACE inhibitors, ARBs: tăng nguy cơ tăng kali máu"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Potassium phosphate cung cấp phosphate (PO4³⁻) và kali (K⁺). Phosphate cần thiết cho tổng hợp ATP, cấu trúc xương, đệm pH. Kali cần thiết cho dẫn truyền thần kinh, co bóp cơ. Trong hạ phospho máu kèm hạ kali máu: bổ sung cả hai. Đặc điểm: kết tủa với calci (gây hạ calci máu), tăng kali máu nếu dùng quá liều, cần truyền CHẬM (2-6 giờ), thận trọng ở suy thận.",
-        "monitoring": [
-            "Phospho máu - quan trọng",
-            "Kali máu - quan trọng (tăng kali máu nếu dùng quá liều)",
-            "Calci máu - quan trọng (hạ calci máu phổ biến do kết tủa)",
-            "ECG (rối loạn nhịp tim nếu hạ calci máu hoặc tăng kali máu)",
-            "Chức năng thận (creatinine, eGFR) - quan trọng",
-            "Dấu hiệu hạ calci máu: tetany, co giật",
-            "Dấu hiệu tăng kali máu: yếu cơ, rối loạn nhịp tim"
-        ],
-        "precautions": [
-            "HẠ CALCI MÁU - phổ biến do kết tủa với calci, theo dõi calci máu chặt chẽ",
-            "TĂNG KALI MÁU - nếu dùng quá liều, theo dõi kali máu chặt chẽ",
-            "KHÔNG trộn với calcium (kết tủa tử vong)",
-            "Truyền CHẬM (2-6 giờ) để giảm hạ calci máu và tăng kali máu",
-            "Thận trọng ở suy thận (tăng nguy cơ tăng phospho và kali máu)",
-            "Theo dõi calci, kali, và phospho máu chặt chẽ",
-            "Bổ sung calci nếu hạ calci máu",
-            "Thận trọng với ACE inhibitors, ARBs (tăng nguy cơ tăng kali máu)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "Không áp dụng (electrolyte)",
-            "onset": "Ngay lập tức sau khi truyền IV",
-            "duration": "Phụ thuộc liều và tình trạng bệnh nhân",
-            "protein_binding": "Không áp dụng",
-            "clearance": "Thận (thải trừ qua nước tiểu), xương (lắng đọng)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "KHÔNG trộn với calcium - kết tủa tử vong. Hạ calci máu - phổ biến, theo dõi calci máu chặt chẽ. Tăng kali máu - nếu dùng quá liều, theo dõi kali máu chặt chẽ.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Calcium (calcium gluconate, calcium chloride)",
-                    "mechanism": "Kết tủa calcium phosphate",
-                    "effect": "Kết tủa tử vong, tắc mạch, hạ calci máu",
-                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không trộn hoặc truyền cùng."
-                },
-                {
-                    "drug": "ACE inhibitors, ARBs (lisinopril, losartan)",
-                    "mechanism": "Giảm bài tiết kali qua thận",
-                    "effect": "Tăng nguy cơ tăng kali máu",
-                    "management": "Thận trọng. Theo dõi kali máu chặt chẽ."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Magnesium",
-                    "mechanism": "Kết tủa magnesium phosphate",
-                    "effect": "Kết tủa, giảm hiệu quả cả hai",
-                    "management": "Tránh trộn hoặc truyền cùng."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Tăng phospho máu",
-                "Tăng kali máu",
-                "Suy thận nặng (CrCl <30)",
-                "Tăng calci máu",
-                "Dùng với calcium (kết tủa tử vong)"
-            ],
-            "tương_đối": [
-                "Suy thận nhẹ đến trung bình - tăng nguy cơ tăng phospho và kali máu",
-                "Dùng với ACE inhibitors, ARBs - tăng nguy cơ tăng kali máu"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Phosphate và kali cần thiết cho thai nhi.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Phosphate và kali bài tiết vào sữa mẹ ở nồng độ thấp.",
-                "recommendation": "Có thể dùng khi cho con bú."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Không đổi",
-            "severe": "Không đổi",
-            "notes": "Phosphate và kali không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Tăng phospho máu: mệt mỏi, buồn nôn, ngứa",
-                "Tăng kali máu: yếu cơ, rối loạn nhịp tim",
-                "Hạ calci máu nặng: tetany, co giật, rối loạn nhịp tim",
-                "Kết tủa (nếu trộn với calcium)"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hạ calci máu: calcium gluconate IV. Điều trị tăng kali máu: calcium gluconate, insulin+glucose, kayexalate.",
-            "treatment": [
-                "Ngừng ngay potassium phosphate",
-                "Nếu hạ calci máu: Calcium gluconate hoặc calcium chloride IV",
-                "Nếu tăng kali máu: Calcium gluconate (bảo vệ tim), insulin+glucose, kayexalate",
-                "Nếu tăng phospho máu: Truyền dịch, có thể cần lọc máu",
-                "Điều trị co giật: Benzodiazepines",
-                "Theo dõi calci, kali, phospho máu, ECG liên tục"
-            ],
-            "monitoring": "Calci máu, kali máu, phospho máu, ECG, dấu hiệu lâm sàng"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "iv": {
-                "reconstitution": "Pha 0.16-0.32 mmol/kg trong 250-500ml Normal saline hoặc D5W.",
-                "infusion_rate": "Truyền CHẬM trong 2-6 giờ. Không nhanh hơn.",
-                "compatibility": ["Normal saline (0.9% NaCl)", "D5W"],
-                "incompatibility": [
-                    "Calcium (calcium gluconate, calcium chloride) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (kết tủa tử vong)",
-                    "Magnesium - kết tủa",
-                    "Aluminum - kết tủa"
-                ],
-                "notes": "QUAN TRỌNG: 1) Truyền CHẬM trong 2-6 giờ (không nhanh hơn), 2) KHÔNG trộn với calcium (kết tủa tử vong), 3) Theo dõi calci, kali, và phospho máu chặt chẽ, 4) Bổ sung calci nếu hạ calci máu."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Potassium Phosphate Injection",
-                "UpToDate - Phosphate: Drug information"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A"
-        }
-    },
-    
-    "Magnesium oxide": {
-        "group": "Emergency - Electrolyte (Magnesium Supplement)",
-        "vietnamese_name": "Magnesium oxide, MgO",
-        "administration": ["PO"],
-        "indications": [
-            "Hạ magnesi máu nhẹ đến trung bình",
-            "Táo bón",
-            "Khó tiêu (antacid)"
-        ],
-        "contraindications": [
-            "Tăng magnesi máu",
-            "Suy thận nặng",
-            "Block nhĩ thất",
-            "Tắc ruột"
-        ],
-        "dosage": {
-            "adult_hypomagnesemia": "400-800mg PO 1-3 lần/ngày",
-            "adult_constipation": "400-800mg PO 1-2 lần/ngày",
-            "adult_antacid": "400-800mg PO khi cần",
-            "notes": "Bổ sung magnesi. Dạng PO, hấp thu kém (chỉ 4%). Tác dụng nhuận tràng (do không hấp thu)."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Thận trọng (tăng nguy cơ tăng magnesi máu)",
-            "under_30": "CHỐNG CHỈ ĐỊNH (nguy cơ tăng magnesi máu)"
-        },
-        "side_effects": [
-            "Tiêu chảy (phổ biến, do không hấp thu)",
-            "Tăng magnesi máu (nếu dùng quá liều hoặc suy thận)",
-            "Buồn nôn",
-            "Đau bụng"
-        ],
-        "interactions": [
-            "Tetracyclines: giảm hấp thu tetracyclines",
-            "Quinolones: giảm hấp thu quinolones",
-            "Bisphosphonates: giảm hấp thu bisphosphonates"
-        ],
-        "pregnancy": "B",
-        "mechanism_of_action": "Magnesium oxide cung cấp magnesi (Mg²⁺). Magnesi cần thiết cho: (1) Hoạt động enzyme (ATP, DNA, RNA synthesis), (2) Dẫn truyền thần kinh, (3) Co bóp cơ, (4) Điều hòa calci. Trong hạ magnesi máu: bổ sung magnesi. Đặc điểm: dạng PO, hấp thu kém (chỉ 4%), tác dụng nhuận tràng (do không hấp thu, giữ nước trong ruột), ít hiệu quả hơn magnesium sulfate IV cho hạ magnesi máu nặng.",
-        "monitoring": [
-            "Magnesi máu - quan trọng",
-            "Dấu hiệu tiêu chảy (phổ biến)",
-            "Dấu hiệu tăng magnesi máu (nếu dùng quá liều hoặc suy thận): yếu cơ, buồn nôn, block nhĩ thất"
-        ],
-        "precautions": [
-            "TIÊU CHẢY - phổ biến do không hấp thu, giữ nước trong ruột",
-            "Hấp thu kém (chỉ 4%) - ít hiệu quả hơn magnesium sulfate IV cho hạ magnesi máu nặng",
-            "Thận trọng ở suy thận (tăng nguy cơ tăng magnesi máu)",
-            "Cách thời gian ít nhất 2 giờ với tetracyclines, quinolones, bisphosphonates (giảm hấp thu)",
-            "Theo dõi magnesi máu nếu dùng lâu dài"
-        ],
-        "pharmacokinetics": {
-            "half_life": "Không áp dụng (electrolyte)",
-            "onset": "Vài giờ (tiêu chảy), vài ngày (bổ sung magnesi)",
-            "duration": "Phụ thuộc liều",
-            "protein_binding": "Không áp dụng",
-            "clearance": "Hấp thu kém (chỉ 4%), phần lớn thải qua phân. Nếu hấp thu: thận (thải trừ qua nước tiểu)."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Tăng magnesi máu nếu dùng quá liều hoặc suy thận - nguy hiểm. Tiêu chảy - phổ biến.",
-        "drug_interactions": {
-            "major": [],
-            "moderate": [
-                {
-                    "drug": "Tetracyclines (doxycycline, minocycline)",
-                    "mechanism": "Tạo phức hợp không hòa tan",
-                    "effect": "Giảm hấp thu tetracyclines",
-                    "management": "Cách thời gian ít nhất 2 giờ."
-                },
-                {
-                    "drug": "Quinolones (ciprofloxacin, levofloxacin)",
-                    "mechanism": "Tạo phức hợp không hòa tan",
-                    "effect": "Giảm hấp thu quinolones",
-                    "management": "Cách thời gian ít nhất 2 giờ."
-                },
-                {
-                    "drug": "Bisphosphonates (alendronate, risedronate)",
-                    "mechanism": "Tạo phức hợp không hòa tan",
-                    "effect": "Giảm hấp thu bisphosphonates",
-                    "management": "Cách thời gian ít nhất 2 giờ."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Tăng magnesi máu",
-                "Suy thận nặng (CrCl <30)",
-                "Block nhĩ thất",
-                "Tắc ruột"
-            ],
-            "tương_đối": [
-                "Suy thận nhẹ đến trung bình - tăng nguy cơ tăng magnesi máu",
-                "Tiêu chảy - có thể làm nặng"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Category B - an toàn hơn category C. Magnesi cần thiết cho thai nhi.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Magnesi bài tiết vào sữa mẹ ở nồng độ thấp.",
-                "recommendation": "Có thể dùng khi cho con bú."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Không đổi",
-            "severe": "Không đổi",
-            "notes": "Magnesi không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Tiêu chảy nặng",
-                "Tăng magnesi máu: yếu cơ, buồn nôn, block nhĩ thất, suy hô hấp"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị tăng magnesi máu: calcium gluconate IV.",
-            "treatment": [
-                "Ngừng ngay magnesium oxide",
-                "Nếu tăng magnesi máu: Calcium gluconate IV (đối kháng magnesi)",
-                "Nếu block nhĩ thất: Atropine, pacemaker nếu cần",
-                "Nếu suy hô hấp: Hỗ trợ hô hấp",
-                "Theo dõi magnesi máu, ECG liên tục"
-            ],
-            "monitoring": "Magnesi máu, ECG, dấu hiệu lâm sàng"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "preparation": "Dạng viên nén hoặc bột.",
-                "dosing": "400-800mg PO 1-3 lần/ngày. Cách thời gian ít nhất 2 giờ với tetracyclines, quinolones, bisphosphonates.",
-                "notes": "Bổ sung magnesi. Tiêu chảy phổ biến (do không hấp thu). Hấp thu kém (chỉ 4%)."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Magnesium Oxide",
-                "UpToDate - Magnesium: Drug information"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A"
-        }
-    },
-    
-    "Demeclocycline": {
-        "group": "Emergency - Electrolyte (Tetracycline Antibiotic)",
-        "vietnamese_name": "Demeclocycline, Declomycin",
-        "administration": ["PO"],
-        "indications": [
-            "SIADH (Syndrome of Inappropriate Antidiuretic Hormone) - off-label",
-            "Nhiễm khuẩn do vi khuẩn nhạy cảm (ít dùng)",
-            "Mụn trứng cá (ít dùng)"
-        ],
-        "contraindications": [
-            "Dị ứng demeclocycline hoặc tetracyclines",
-            "Mang thai (category D)",
-            "Trẻ em <8 tuổi (nguy cơ răng vàng, xương)",
-            "Suy thận nặng"
-        ],
-        "dosage": {
-            "adult_siadh": "300-600mg PO 2-4 lần/ngày",
-            "adult_infection": "150mg PO 4 lần/ngày hoặc 300mg PO 2 lần/ngày",
-            "notes": "Tetracycline antibiotic. Dùng cho SIADH (gây diabetes insipidus nephrogenic). Ít dùng cho nhiễm khuẩn (có thuốc tốt hơn)."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Thận trọng, giảm liều",
-            "under_30": "CHỐNG CHỈ ĐỊNH (tăng nguy cơ độc tính thận)"
-        },
-        "side_effects": [
-            "Nhạy cảm với ánh nắng (phổ biến)",
-            "Răng vàng (nếu dùng khi <8 tuổi hoặc mang thai)",
-            "Xương vàng (nếu dùng khi <8 tuổi hoặc mang thai)",
-            "Buồn nôn, nôn",
-            "Tiêu chảy",
-            "Độc tính thận (nếu suy thận)",
-            "Tăng BUN (do tác dụng antianabolic)"
-        ],
-        "interactions": [
-            "Calcium, magnesium, aluminum, iron: giảm hấp thu demeclocycline",
-            "Warfarin: tăng INR",
-            "Oral contraceptives: giảm hiệu quả"
-        ],
-        "pregnancy": "D - CHỐNG CHỈ ĐỊNH",
-        "mechanism_of_action": "Demeclocycline là tetracycline antibiotic, ức chế tổng hợp protein vi khuẩn bằng cách gắn với 30S ribosomal subunit. Tác dụng với nhiều vi khuẩn Gram-dương và Gram-âm. Đặc điểm: gây diabetes insipidus nephrogenic (do ức chế tác dụng của ADH trên thận) → dùng cho SIADH (off-label). Ít dùng cho nhiễm khuẩn (có thuốc tốt hơn). Nguy cơ răng vàng, xương vàng nếu dùng khi <8 tuổi hoặc mang thai.",
-        "monitoring": [
-            "Natri máu (nếu dùng cho SIADH) - quan trọng",
-            "Osmolality máu (nếu dùng cho SIADH)",
-            "Chức năng thận (creatinine, BUN) - quan trọng",
-            "Dấu hiệu nhạy cảm với ánh nắng",
-            "Dấu hiệu độc tính thận (nếu suy thận)"
-        ],
-        "precautions": [
-            "SIADH - dùng off-label, gây diabetes insipidus nephrogenic",
-            "Nhạy cảm với ánh nắng - TRÁNH ánh nắng mặt trời, dùng kem chống nắng",
-            "Răng vàng, xương vàng - CHỐNG CHỈ ĐỊNH khi <8 tuổi hoặc mang thai",
-            "Độc tính thận - CHỐNG CHỈ ĐỊNH ở suy thận nặng",
-            "Cách thời gian ít nhất 2 giờ với calcium, magnesium, aluminum, iron (giảm hấp thu)",
-            "Thận trọng với warfarin (tăng INR)",
-            "Giảm hiệu quả oral contraceptives"
-        ],
-        "pharmacokinetics": {
-            "half_life": "10-17 giờ",
-            "onset": "Vài ngày (SIADH)",
-            "duration": "6-12 giờ (dùng 2-4 lần/ngày)",
-            "protein_binding": "41-50%",
-            "clearance": "Gan (chuyển hóa một phần), thận (thải trừ một phần). Tích lũy ở suy thận."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "CHỐNG CHỈ ĐỊNH khi <8 tuổi (nguy cơ răng vàng, xương vàng). CHỐNG CHỈ ĐỊNH khi mang thai (category D). Độc tính thận ở suy thận nặng.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Calcium, Magnesium, Aluminum, Iron",
-                    "mechanism": "Tạo phức hợp không hòa tan",
-                    "effect": "Giảm hấp thu demeclocycline đáng kể (50-90%)",
-                    "management": "Cách thời gian ít nhất 2 giờ."
-                },
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Có thể ức chế chuyển hóa warfarin",
-                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Thận trọng. Theo dõi INR thường xuyên."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Oral contraceptives",
-                    "mechanism": "Giảm hấp thu hoặc chuyển hóa",
-                    "effect": "Giảm hiệu quả oral contraceptives",
-                    "management": "Sử dụng biện pháp tránh thai bổ sung."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng demeclocycline hoặc tetracyclines",
-                "Mang thai (category D)",
-                "Trẻ em <8 tuổi (nguy cơ răng vàng, xương vàng)",
-                "Suy thận nặng (CrCl <30)"
-            ],
-            "tương_đối": [
-                "Suy thận nhẹ đến trung bình - thận trọng, giảm liều",
-                "Dùng với calcium, magnesium, aluminum, iron - cách thời gian ít nhất 2 giờ"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "D",
-            "pregnancy_details": "Category D - CHỐNG CHỈ ĐỊNH trong thai kỳ. Có nguy cơ răng vàng, xương vàng ở thai nhi.",
-            "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Demeclocycline bài tiết vào sữa mẹ ở nồng độ thấp.",
-                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng",
-            "severe": "Thận trọng, có thể giảm liều",
-            "notes": "Demeclocycline chuyển hóa một phần qua gan. Suy gan có thể làm giảm chuyển hóa."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Buồn nôn, nôn nặng",
-                "Tiêu chảy nặng",
-                "Độc tính thận (nếu suy thận)",
-                "Nhạy cảm với ánh nắng nặng"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Ngừng ngay demeclocycline",
-                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
-                "Than hoạt tính",
-                "Điều trị độc tính thận nếu có",
-                "Theo dõi chức năng thận, natri máu"
-            ],
-            "monitoring": "Chức năng thận, natri máu, dấu hiệu lâm sàng"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không có thức ăn. Uống với thức ăn có thể giảm buồn nôn.",
-                "timing": "Dùng 2-4 lần/ngày. Cách thời gian ít nhất 2 giờ với calcium, magnesium, aluminum, iron. QUAN TRỌNG: TRÁNH ánh nắng mặt trời, dùng kem chống nắng."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Declomycin (demeclocycline)",
-                "UpToDate - Demeclocycline: Drug information",
-                "UpToDate - Treatment of SIADH"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A"
-        }
-    },
-    
-    "Pamidronate": {
-        "group": "Emergency - Electrolyte (Bisphosphonate)",
-        "vietnamese_name": "Pamidronate, Aredia",
-        "administration": ["IV"],
-        "indications": [
-            "Tăng calci máu do ung thư",
-            "Ung thư xương (metastatic bone disease)",
-            "Bệnh Paget xương"
-        ],
-        "contraindications": [
-            "Hạ calci máu",
-            "Suy thận nặng (CrCl <30)",
-            "Dị ứng pamidronate hoặc bisphosphonates",
-            "Mang thai"
-        ],
-        "dosage": {
-            "adult_hypercalcemia": "60-90mg IV truyền trong 2-4 giờ",
-            "adult_bone_metastases": "90mg IV truyền trong 2-4 giờ mỗi 3-4 tuần",
-            "adult_paget": "30mg IV truyền trong 2-4 giờ mỗi ngày x 3 ngày",
-            "notes": "Bisphosphonate thế hệ 1, ức chế hủy xương. Truyền CHẬM trong 2-4 giờ. Cần bổ sung calci và vitamin D."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Thận trọng, có thể giảm liều",
-            "under_30": "CHỐNG CHỈ ĐỊNH (CrCl <30)"
-        },
-        "side_effects": [
-            "Sốt, ớn lạnh (phổ biến trong 24-48 giờ đầu)",
-            "Đau cơ, đau xương",
-            "Hạ calci máu (phổ biến, cần bổ sung calci và vitamin D)",
-            "Hạ phospho máu",
-            "Suy thận cấp (hiếm nhưng nguy hiểm)",
-            "Hoại tử xương hàm (ONJ) - hiếm nhưng nguy hiểm",
-            "Rối loạn nhịp tim (hiếm)"
-        ],
-        "interactions": [
-            "Aminoglycosides: tăng nguy cơ hạ calci máu",
-            "Loop diuretics: tăng nguy cơ hạ calci máu",
-            "Nephrotoxic drugs: tăng nguy cơ suy thận"
-        ],
-        "pregnancy": "D - CHỐNG CHỈ ĐỊNH",
-        "mechanism_of_action": "Pamidronate là bisphosphonate thế hệ 1, ức chế hủy xương bằng cách: (1) Ức chế enzyme farnesyl pyrophosphate synthase trong tế bào hủy xương (osteoclasts), (2) Gây apoptosis tế bào hủy xương, (3) Giảm hoạt động hủy xương. Kết quả: giảm hủy xương, tăng mật độ xương, giảm calci máu. Được dùng cho tăng calci máu do ung thư, ung thư xương, bệnh Paget xương. Đặc điểm: bisphosphonate thế hệ 1 (yếu hơn zoledronic acid), tác dụng kéo dài (3-4 tuần), nguy cơ suy thận và hoại tử xương hàm.",
-        "monitoring": [
-            "Calci máu - quan trọng (hạ calci máu phổ biến)",
-            "Phospho máu (hạ phospho máu)",
-            "Chức năng thận (creatinine, eGFR) - quan trọng (nguy cơ suy thận)",
-            "Dấu hiệu sốt, ớn lạnh (phổ biến trong 24-48 giờ đầu)",
-            "Dấu hiệu hoại tử xương hàm (đau hàm, sưng, chảy mủ) - hiếm nhưng nguy hiểm",
-            "ECG (rối loạn nhịp tim, hiếm)"
-        ],
-        "precautions": [
-            "HẠ CALCI MÁU - phổ biến, cần bổ sung calci và vitamin D",
-            "Suy thận cấp - hiếm nhưng nguy hiểm, theo dõi chức năng thận",
-            "Hoại tử xương hàm (ONJ) - hiếm nhưng nguy hiểm, đặc biệt ở bệnh nhân ung thư, dùng steroid",
-            "Truyền CHẬM trong 2-4 giờ (không nhanh hơn)",
-            "Bổ sung calci và vitamin D trước và sau khi dùng",
-            "Thận trọng với aminoglycosides, loop diuretics (tăng nguy cơ hạ calci máu)",
-            "Thận trọng với nephrotoxic drugs (tăng nguy cơ suy thận)",
-            "Không dùng khi mang thai (category D)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "27 giờ (ngắn hơn zoledronic acid)",
-            "onset": "24-48 giờ (giảm calci máu)",
-            "duration": "3-4 tuần",
-            "protein_binding": "54%",
-            "clearance": "Thận (chủ yếu, bài tiết nguyên dạng), xương (gắn với xương, thải trừ chậm)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Suy thận cấp - hiếm nhưng nguy hiểm. Hoại tử xương hàm (ONJ) - hiếm nhưng nguy hiểm. Hạ calci máu - phổ biến, cần bổ sung calci và vitamin D. Không dùng khi mang thai (category D).",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Aminoglycosides (gentamicin, tobramycin, amikacin)",
-                    "mechanism": "Cả hai đều gây hạ calci máu",
-                    "effect": "Tăng nguy cơ hạ calci máu nghiêm trọng",
-                    "management": "Thận trọng. Theo dõi calci máu chặt chẽ. Bổ sung calci nếu cần."
-                },
-                {
-                    "drug": "Loop diuretics (furosemide, bumetanide)",
-                    "mechanism": "Tăng bài tiết calci qua thận",
-                    "effect": "Tăng nguy cơ hạ calci máu",
-                    "management": "Thận trọng. Theo dõi calci máu. Bổ sung calci nếu cần."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Nephrotoxic drugs (aminoglycosides, vancomycin, NSAIDs)",
-                    "mechanism": "Tác dụng cộng dồn",
-                    "effect": "Tăng nguy cơ suy thận cấp",
-                    "management": "Thận trọng. Theo dõi chức năng thận chặt chẽ."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Hạ calci máu",
-                "Suy thận nặng (CrCl <30)",
-                "Dị ứng pamidronate hoặc bisphosphonates",
-                "Mang thai (category D)"
-            ],
-            "tương_đối": [
-                "Suy thận nhẹ đến trung bình (CrCl 30-60) - thận trọng, có thể giảm liều",
-                "Dùng với aminoglycosides, loop diuretics - tăng nguy cơ hạ calci máu",
-                "Dùng với nephrotoxic drugs - tăng nguy cơ suy thận"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "D",
-            "pregnancy_details": "Category D - CHỐNG CHỈ ĐỊNH trong thai kỳ. Có nguy cơ dị tật thai nhi và ảnh hưởng đến sự phát triển xương của thai nhi.",
-            "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Pamidronate bài tiết vào sữa mẹ ở nồng độ thấp.",
-                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Không đổi",
-            "severe": "Không đổi",
-            "notes": "Pamidronate không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Hạ calci máu nặng: co giật, tetany, rối loạn nhịp tim",
-                "Hạ phospho máu nặng",
-                "Suy thận cấp",
-                "Sốt, ớn lạnh nặng"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hạ calci máu.",
-            "treatment": [
-                "Điều trị hạ calci máu: Calcium gluconate hoặc calcium chloride IV",
-                "Điều trị hạ phospho máu: Bổ sung phosphate",
-                "Điều trị suy thận cấp: Truyền dịch, có thể cần lọc máu",
-                "Điều trị sốt: Acetaminophen, NSAIDs",
-                "Theo dõi calci, phospho máu, chức năng thận liên tục"
-            ],
-            "monitoring": "Calci máu, phospho máu, chức năng thận, ECG, dấu hiệu lâm sàng"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "iv": {
-                "reconstitution": "Pha 60-90mg trong 250-500ml Normal saline hoặc D5W.",
-                "infusion_rate": "Truyền CHẬM trong 2-4 giờ. Không nhanh hơn.",
-                "compatibility": ["Normal saline (0.9% NaCl)", "D5W"],
-                "incompatibility": [
-                    "Calcium (calcium gluconate, calcium chloride) - không trộn",
-                    "Các cation khác - không trộn"
-                ],
-                "notes": "QUAN TRỌNG: 1) Truyền CHẬM trong 2-4 giờ (không nhanh hơn), 2) Bổ sung calci và vitamin D trước và sau khi dùng, 3) Theo dõi chức năng thận chặt chẽ, 4) Theo dõi calci máu chặt chẽ."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Aredia (pamidronate)",
-                "UpToDate - Pamidronate: Drug information",
-                "ASCO Guidelines - Hypercalcemia of malignancy"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A"
-        }
-    }
 }
 
 __all__ = ['ELECTROLYTES_DRUGS']

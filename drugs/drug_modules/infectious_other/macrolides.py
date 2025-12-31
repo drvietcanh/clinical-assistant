@@ -562,7 +562,7 @@ MACROLIDES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, extensive clinical experience"
-        }
+        },
     }}
 
 __all__ = ['MACROLIDES_DRUGS']

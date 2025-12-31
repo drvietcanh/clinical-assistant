@@ -3,6 +3,182 @@ ACE Inhibitors - Angiotensin Converting Enzyme Inhibitors
 """
 
 ACE_INHIBITORS = {
+    "Benazepril": {
+        "group": "Cardiovascular - ACE Inhibitor",
+        "vietnamese_name": "Benazepril, Lotensin",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp (đơn trị hoặc phối hợp)",
+            "Suy tim (off-label, khi không dung nạp ACE khác)",
+            "Bảo vệ thận trong đái tháo đường (off-label)"
+        ],
+        "contraindications": [
+            "Dị ứng ACE inhibitor hoặc benazepril",
+            "Có thai",
+            "Hẹp động mạch thận 2 bên hoặc hẹp đơn thận còn lại",
+            "Tiền sử phù mạch do ACE inhibitor"
+        ],
+        "dosage": {
+            "adult_htn": "10-40mg x 1-2 lần/ngày",
+            "adult_htn_initial": "10mg x 1 lần/ngày (không dùng lợi tiểu) hoặc 5mg nếu đang dùng lợi tiểu",
+            "adult_heart_failure_off_label": "2.5-5mg x 1-2 lần/ngày, tăng dần đến 20-40mg/ngày",
+            "notes": "Có thể dùng 1 hoặc 2 lần/ngày. Điều chỉnh liều theo đáp ứng huyết áp và chức năng thận."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Liều khởi đầu 5mg/ngày",
+            "under_30": "Liều khởi đầu 2.5-5mg/ngày, theo dõi sát creatinine và kali"
+        },
+        "side_effects": [
+            "Ho khan",
+            "Tăng kali máu",
+            "Hạ huyết áp (đặc biệt liều đầu hoặc khi có lợi tiểu)",
+            "Suy thận cấp (hẹp động mạch thận, mất nước)",
+            "Phù mạch (hiếm nhưng đe dọa tính mạng)",
+            "Đau đầu, chóng mặt"
+        ],
+        "interactions": [
+            "Kali bổ sung và lợi tiểu giữ kali (spironolactone, eplerenone, amiloride, triamterene): tăng nguy cơ tăng kali máu",
+            "NSAID: giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận",
+            "Lithium: tăng nồng độ lithium",
+            "Diuretics: hiệp đồng hạ huyết áp, tăng nguy cơ tụt huyết áp liều đầu"
+        ],
+        "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "mechanism_of_action": "Benazepril là prodrug, chuyển hóa tại gan thành benazeprilat (hoạt chất). Ức chế men chuyển angiotensin (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm tiết aldosterone → giãn mạch, giảm hậu tải và tiền tải, giảm huyết áp và bảo vệ thận. Giống ACE khác, làm tăng bradykinin nên gây ho khan/phù mạch.",
+        "monitoring": [
+            "Huyết áp (đặc biệt 2-4 giờ sau liều đầu/ tăng liều)",
+            "Creatinine, BUN trước điều trị và 1-2 tuần sau khi bắt đầu/tăng liều",
+            "Kali máu định kỳ",
+            "Dấu hiệu ho khan kéo dài",
+            "Dấu hiệu phù mạch (sưng mặt, môi, lưỡi, khó thở) – cấp cứu"
+        ],
+        "precautions": [
+            "Khởi đầu liều thấp ở bệnh nhân đang dùng lợi tiểu, suy tim, người già, hạ thể tích tuần hoàn.",
+            "Tránh dùng đồng thời với aliskiren ở bệnh nhân đái tháo đường (tăng biến cố thận, tăng kali, hạ HA).",
+            "Ngừng ngay nếu có phù mạch hoặc nghi ngờ phù mạch.",
+            "Thận trọng khi phối hợp với NSAID (giảm hiệu quả, tăng nguy cơ suy thận).",
+            "Không dùng chung với sacubitril-valsartan trong vòng 36 giờ (nguy cơ phù mạch tăng cao)."
+        ],
+        "pharmacokinetics": {
+            "half_life": "Benazepril: ~2 giờ; Benazeprilat: 10-12 giờ",
+            "onset": "1 giờ",
+            "duration": "24 giờ (cho phép dùng 1 lần/ngày)",
+            "protein_binding": "~96%",
+            "clearance": "Thận (chủ yếu) và mật (một phần) dưới dạng benazeprilat"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ. ACE inhibitor (bao gồm benazepril) có thể gây dị tật và tử vong thai nhi (thiểu ối, thiểu sản sọ, suy thận thai, tử vong sơ sinh). Ngừng ngay khi phát hiện có thai. Phù mạch có thể đe dọa tính mạng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Lợi tiểu giữ kali (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Giảm thải trừ kali do ức chế aldosterone + cung cấp thêm kali",
+                    "effect": "Tăng kali máu nặng, nguy cơ loạn nhịp",
+                    "management": "Tránh phối hợp nếu có thể, hoặc theo dõi kali chặt chẽ, chỉnh liều."
+                },
+                {
+                    "drug": "NSAIDs",
+                    "mechanism": "Ức chế prostaglandin thận, giảm dòng máu thận",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp (đặc biệt ở người cao tuổi, mất nước).",
+                    "management": "Hạn chế dùng lâu dài, theo dõi creatinine/kali khi bắt đầu hoặc thay đổi liều."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "Giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, nguy cơ độc tính thần kinh",
+                    "management": "Theo dõi nồng độ lithium, cân nhắc giảm liều hoặc tránh phối hợp."
+                },
+                {
+                    "drug": "Diuretics",
+                    "mechanism": "Hiệp đồng giảm thể tích và giãn mạch",
+                    "effect": "Tụt huyết áp liều đầu, chóng mặt, ngất",
+                    "management": "Giảm/ ngừng tạm lợi tiểu trước khi khởi đầu benazepril, tăng liều từ từ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với benazepril hoặc ACE inhibitor",
+                "Có thai hoặc dự định có thai",
+                "Hẹp động mạch thận 2 bên hoặc hẹp động mạch thận của thận độc nhất",
+                "Tiền sử phù mạch do ACE inhibitor hoặc phù mạch di truyền/vô căn"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình-nặng",
+                "Tăng kali máu",
+                "Mất nước, hạ thể tích tuần hoàn",
+                "Hẹp van động mạch chủ nặng",
+                "Phối hợp ARB hoặc aliskiren (triple blockade RAAS)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH tuyệt đối trong thai kỳ. Nguy cơ dị tật và tử vong thai nhi, đặc biệt ở tam cá nguyệt 2-3.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Benazepril/benazeprilat bài tiết một phần vào sữa; dữ liệu còn hạn chế.",
+                "recommendation": "Ưu tiên ACE khác đã có dữ liệu hơn (captopril/enalapril) ở mẹ cho con bú; nếu dùng benazepril, theo dõi trẻ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thường không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể cần liều khởi đầu thấp hơn (5mg/ngày)",
+            "severe": "Thận trọng, cân nhắc ACE khác; dữ liệu hạn chế",
+            "notes": "Benazepril là prodrug chuyển hóa ở gan thành benazeprilat; suy gan có thể làm chậm chuyển hóa, nhưng thuốc vẫn chủ yếu thải trừ qua thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nặng",
+                "Chóng mặt, ngất",
+                "Suy thận cấp",
+                "Tăng kali máu"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Đặt bệnh nhân tư thế nằm, nâng chân, truyền dịch (NaCl 0.9%)",
+                "Vasopressor (norepinephrine) nếu tụt HA dai dẳng",
+                "Điều trị tăng kali máu nếu có (calcium gluconate, insulin + glucose, bicarbonate)",
+                "Theo dõi huyết áp, nhịp tim, chức năng thận, điện giải"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, creatinine, kali, ý thức."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không cùng thức ăn.",
+                "timing": "Uống 1-2 lần/ngày, cùng giờ mỗi ngày. Khởi đầu liều thấp, tăng dần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lotensin (benazepril)",
+                "UpToDate - Benazepril: Drug information",
+                "ACC/AHA Hypertension Guidelines 2024"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved, sử dụng rộng rãi trong tăng huyết áp"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
+    },
+
     "Captopril": {
         "group": "Cardiovascular - ACE Inhibitor",
         "vietnamese_name": "Captopril, Capoten",
@@ -466,182 +642,6 @@ ACE_INHIBITORS = {
         "last_updated": "2025-02-18",
     },
 
-    "Benazepril": {
-        "group": "Cardiovascular - ACE Inhibitor",
-        "vietnamese_name": "Benazepril, Lotensin",
-        "administration": ["PO"],
-        "indications": [
-            "Tăng huyết áp (đơn trị hoặc phối hợp)",
-            "Suy tim (off-label, khi không dung nạp ACE khác)",
-            "Bảo vệ thận trong đái tháo đường (off-label)"
-        ],
-        "contraindications": [
-            "Dị ứng ACE inhibitor hoặc benazepril",
-            "Có thai",
-            "Hẹp động mạch thận 2 bên hoặc hẹp đơn thận còn lại",
-            "Tiền sử phù mạch do ACE inhibitor"
-        ],
-        "dosage": {
-            "adult_htn": "10-40mg x 1-2 lần/ngày",
-            "adult_htn_initial": "10mg x 1 lần/ngày (không dùng lợi tiểu) hoặc 5mg nếu đang dùng lợi tiểu",
-            "adult_heart_failure_off_label": "2.5-5mg x 1-2 lần/ngày, tăng dần đến 20-40mg/ngày",
-            "notes": "Có thể dùng 1 hoặc 2 lần/ngày. Điều chỉnh liều theo đáp ứng huyết áp và chức năng thận."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Liều khởi đầu 5mg/ngày",
-            "under_30": "Liều khởi đầu 2.5-5mg/ngày, theo dõi sát creatinine và kali"
-        },
-        "side_effects": [
-            "Ho khan",
-            "Tăng kali máu",
-            "Hạ huyết áp (đặc biệt liều đầu hoặc khi có lợi tiểu)",
-            "Suy thận cấp (hẹp động mạch thận, mất nước)",
-            "Phù mạch (hiếm nhưng đe dọa tính mạng)",
-            "Đau đầu, chóng mặt"
-        ],
-        "interactions": [
-            "Kali bổ sung và lợi tiểu giữ kali (spironolactone, eplerenone, amiloride, triamterene): tăng nguy cơ tăng kali máu",
-            "NSAID: giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận",
-            "Lithium: tăng nồng độ lithium",
-            "Diuretics: hiệp đồng hạ huyết áp, tăng nguy cơ tụt huyết áp liều đầu"
-        ],
-        "pregnancy": "D - Chống chỉ định trong thai kỳ",
-        "mechanism_of_action": "Benazepril là prodrug, chuyển hóa tại gan thành benazeprilat (hoạt chất). Ức chế men chuyển angiotensin (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm tiết aldosterone → giãn mạch, giảm hậu tải và tiền tải, giảm huyết áp và bảo vệ thận. Giống ACE khác, làm tăng bradykinin nên gây ho khan/phù mạch.",
-        "monitoring": [
-            "Huyết áp (đặc biệt 2-4 giờ sau liều đầu/ tăng liều)",
-            "Creatinine, BUN trước điều trị và 1-2 tuần sau khi bắt đầu/tăng liều",
-            "Kali máu định kỳ",
-            "Dấu hiệu ho khan kéo dài",
-            "Dấu hiệu phù mạch (sưng mặt, môi, lưỡi, khó thở) – cấp cứu"
-        ],
-        "precautions": [
-            "Khởi đầu liều thấp ở bệnh nhân đang dùng lợi tiểu, suy tim, người già, hạ thể tích tuần hoàn.",
-            "Tránh dùng đồng thời với aliskiren ở bệnh nhân đái tháo đường (tăng biến cố thận, tăng kali, hạ HA).",
-            "Ngừng ngay nếu có phù mạch hoặc nghi ngờ phù mạch.",
-            "Thận trọng khi phối hợp với NSAID (giảm hiệu quả, tăng nguy cơ suy thận).",
-            "Không dùng chung với sacubitril-valsartan trong vòng 36 giờ (nguy cơ phù mạch tăng cao)."
-        ],
-        "pharmacokinetics": {
-            "half_life": "Benazepril: ~2 giờ; Benazeprilat: 10-12 giờ",
-            "onset": "1 giờ",
-            "duration": "24 giờ (cho phép dùng 1 lần/ngày)",
-            "protein_binding": "~96%",
-            "clearance": "Thận (chủ yếu) và mật (một phần) dưới dạng benazeprilat"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
-        "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ. ACE inhibitor (bao gồm benazepril) có thể gây dị tật và tử vong thai nhi (thiểu ối, thiểu sản sọ, suy thận thai, tử vong sơ sinh). Ngừng ngay khi phát hiện có thai. Phù mạch có thể đe dọa tính mạng.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Kali bổ sung, Lợi tiểu giữ kali (spironolactone, eplerenone, amiloride, triamterene)",
-                    "mechanism": "Giảm thải trừ kali do ức chế aldosterone + cung cấp thêm kali",
-                    "effect": "Tăng kali máu nặng, nguy cơ loạn nhịp",
-                    "management": "Tránh phối hợp nếu có thể, hoặc theo dõi kali chặt chẽ, chỉnh liều."
-                },
-                {
-                    "drug": "NSAIDs",
-                    "mechanism": "Ức chế prostaglandin thận, giảm dòng máu thận",
-                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp (đặc biệt ở người cao tuổi, mất nước).",
-                    "management": "Hạn chế dùng lâu dài, theo dõi creatinine/kali khi bắt đầu hoặc thay đổi liều."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Lithium",
-                    "mechanism": "Giảm thải trừ lithium qua thận",
-                    "effect": "Tăng nồng độ lithium, nguy cơ độc tính thần kinh",
-                    "management": "Theo dõi nồng độ lithium, cân nhắc giảm liều hoặc tránh phối hợp."
-                },
-                {
-                    "drug": "Diuretics",
-                    "mechanism": "Hiệp đồng giảm thể tích và giãn mạch",
-                    "effect": "Tụt huyết áp liều đầu, chóng mặt, ngất",
-                    "management": "Giảm/ ngừng tạm lợi tiểu trước khi khởi đầu benazepril, tăng liều từ từ."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng với benazepril hoặc ACE inhibitor",
-                "Có thai hoặc dự định có thai",
-                "Hẹp động mạch thận 2 bên hoặc hẹp động mạch thận của thận độc nhất",
-                "Tiền sử phù mạch do ACE inhibitor hoặc phù mạch di truyền/vô căn"
-            ],
-            "tương_đối": [
-                "Suy thận trung bình-nặng",
-                "Tăng kali máu",
-                "Mất nước, hạ thể tích tuần hoàn",
-                "Hẹp van động mạch chủ nặng",
-                "Phối hợp ARB hoặc aliskiren (triple blockade RAAS)"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "D",
-            "pregnancy_details": "CHỐNG CHỈ ĐỊNH tuyệt đối trong thai kỳ. Nguy cơ dị tật và tử vong thai nhi, đặc biệt ở tam cá nguyệt 2-3.",
-            "lactation": {
-                "safety": "Caution",
-                "details": "Benazepril/benazeprilat bài tiết một phần vào sữa; dữ liệu còn hạn chế.",
-                "recommendation": "Ưu tiên ACE khác đã có dữ liệu hơn (captopril/enalapril) ở mẹ cho con bú; nếu dùng benazepril, theo dõi trẻ."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Thường không cần chỉnh liều",
-            "moderate": "Thận trọng, có thể cần liều khởi đầu thấp hơn (5mg/ngày)",
-            "severe": "Thận trọng, cân nhắc ACE khác; dữ liệu hạn chế",
-            "notes": "Benazepril là prodrug chuyển hóa ở gan thành benazeprilat; suy gan có thể làm chậm chuyển hóa, nhưng thuốc vẫn chủ yếu thải trừ qua thận."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Hạ huyết áp nặng",
-                "Chóng mặt, ngất",
-                "Suy thận cấp",
-                "Tăng kali máu"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Đặt bệnh nhân tư thế nằm, nâng chân, truyền dịch (NaCl 0.9%)",
-                "Vasopressor (norepinephrine) nếu tụt HA dai dẳng",
-                "Điều trị tăng kali máu nếu có (calcium gluconate, insulin + glucose, bicarbonate)",
-                "Theo dõi huyết áp, nhịp tim, chức năng thận, điện giải"
-            ],
-            "monitoring": "Huyết áp, nhịp tim, creatinine, kali, ý thức."
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không cùng thức ăn.",
-                "timing": "Uống 1-2 lần/ngày, cùng giờ mỗi ngày. Khởi đầu liều thấp, tăng dần."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Lotensin (benazepril)",
-                "UpToDate - Benazepril: Drug information",
-                "ACC/AHA Hypertension Guidelines 2024"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High – FDA-approved, sử dụng rộng rãi trong tăng huyết áp"
-        },
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
-        },
-        "guideline_tags": [
-            "ACC/AHA Guidelines - Hypertension",
-            "KDIGO Guidelines - Chronic Kidney Disease",
-            "WHO Essential Medicines List"
-        ],
-        "last_updated": "2025-02-18",
-    },
-
     "Lisinopril": {
         "group": "Cardiovascular - ACE Inhibitor",
         "vietnamese_name": "Lisinopril, Zestril",
@@ -869,6 +869,193 @@ ACE_INHIBITORS = {
         "last_updated": "2025-02-18",
     },
     
+    "Perindopril": {
+        "group": "Cardiovascular - ACE Inhibitor",
+        "vietnamese_name": "Perindopril, Coversyl, Aceon",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Suy tim",
+            "Dự phòng biến cố tim mạch sau nhồi máu cơ tim",
+            "Dự phòng đột quỵ ở bệnh nhân nguy cơ cao"
+        ],
+        "contraindications": [
+            "Dị ứng ACE inhibitor",
+            "Có thai",
+            "Hẹp động mạch thận 2 bên",
+            "Phù mạch trước đây với ACE inhibitor"
+        ],
+        "dosage": {
+            "adult_htn": "4-8mg x 1 lần/ngày",
+            "adult_heart_failure": "2mg x 1 lần/ngày, tăng dần đến 8mg x 1 lần/ngày",
+            "adult_post_mi": "4mg x 1 lần/ngày, tăng đến 8mg x 1 lần/ngày",
+            "adult_cvd_prevention": "8mg x 1 lần/ngày",
+            "notes": "Khởi đầu với liều thấp, tăng dần. Uống với hoặc không có thức ăn"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Khởi đầu 2mg/ngày, tối đa 4mg/ngày"
+        },
+        "side_effects": [
+            "Ho khan (phổ biến)",
+            "Tăng kali máu",
+            "Hạ huyết áp",
+            "Phù mạch (hiếm nhưng nguy hiểm)",
+            "Suy thận cấp (hẹp ĐM thận)",
+            "Tăng creatinine nhẹ"
+        ],
+        "interactions": [
+            "Kali bổ sung: tăng nguy cơ tăng kali máu",
+            "Spironolactone: tăng kali máu",
+            "NSAID: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Lithium: tăng nồng độ lithium",
+            "Diuretics: tăng nguy cơ hạ huyết áp"
+        ],
+        "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "mechanism_of_action": "Perindopril là prodrug, được chuyển hóa thành perindoprilat (hoạt chất). Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp. Perindopril có half-life dài, cho phép dùng 1 lần/ngày. Có bằng chứng mạnh về bảo vệ tim mạch và thận (PROGRESS study, EUROPA study).",
+        "monitoring": [
+            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
+            "Kali máu định kỳ",
+            "Huyết áp",
+            "Ho khan (tác dụng phụ thường gặp)",
+            "Dấu hiệu phù mạch (sưng mặt, lưỡi, họng - cấp cứu)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều thấp, tăng dần",
+            "Theo dõi sát creatinine khi bắt đầu (có thể tăng nhẹ)",
+            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Ngừng ngay nếu có phù mạch (có thể nguy hiểm tính mạng)",
+            "Ho khan có thể kéo dài, thường tự hết khi ngừng thuốc",
+            "Thận trọng với kali bổ sung và kali-sparing diuretics"
+        ],
+        "pharmacokinetics": {
+            "half_life": "17 giờ (perindoprilat - metabolite hoạt động)",
+            "onset": "1-2 giờ",
+            "duration": "24 giờ (cho phép dùng 1 lần/ngày)",
+            "protein_binding": "20% (perindoprilat)",
+            "clearance": "Thận (75% bài tiết qua nước tiểu)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac, etc.)",
+                    "mechanism": "NSAIDs ức chế prostaglandin, làm giảm lưu lượng máu thận, giảm hiệu quả ACE inhibitor.",
+                    "effect": "Giảm hiệu quả hạ huyết áp của perindopril, tăng nguy cơ suy thận cấp",
+                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ huyết áp, chức năng thận."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ACE inhibitors làm giảm thải trừ lithium qua thận, tăng nồng độ lithium.",
+                    "effect": "Tăng nồng độ lithium, tăng độc tính",
+                    "management": "Theo dõi nồng độ lithium thường xuyên. Giảm liều lithium khi bắt đầu perindopril."
+                },
+                {
+                    "drug": "Diuretics (thiazide, loop diuretics)",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
+                    "effect": "Hạ huyết áp quá mức",
+                    "management": "Giảm liều diuretic hoặc ngừng tạm thời khi bắt đầu perindopril."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng perindopril hoặc các ACE inhibitor khác",
+                "Có thai (tất cả các tam cá nguyệt)",
+                "Hẹp động mạch thận 2 bên",
+                "Phù mạch trước đây với ACE inhibitor"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - cần giảm liều",
+                "Suy gan - thận trọng",
+                "Tăng kali máu",
+                "Dùng với kali-sparing diuretics"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Perindopril bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều nhẹ",
+            "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+            "notes": "Perindopril chuyển hóa một phần ở gan thành perindoprilat. Suy gan có thể giảm chuyển hóa nhưng không đáng kể."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Chóng mặt, ngất",
+                "Tăng kali máu",
+                "Suy thận cấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay perindopril",
+                "Nằm đầu thấp, nâng chân",
+                "Truyền dịch nếu hạ huyết áp",
+                "Theo dõi huyết áp, nhịp tim, điện giải",
+                "Điều trị tăng kali máu nếu có"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, kali máu, chức năng thận trong ít nhất 24 giờ"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp.",
+                "timing": "Uống 1 lần/ngày (do half-life dài). Có thể uống buổi sáng hoặc tối."
+            },
+            "iv": {
+                "reconstitution": "N/A - Chỉ có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Perindopril chỉ có dạng uống. Nếu cần dạng IV, dùng enalaprilat."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Aceon (perindopril)",
+                "UpToDate - Perindopril: Drug information",
+                "PROGRESS Study - The Lancet",
+                "EUROPA Study - The Lancet",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - PROGRESS and EUROPA studies (large RCTs) and extensive clinical experience"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ESC Guidelines - Cardiovascular Disease Prevention",
+            "PROGRESS Study - Stroke Prevention",
+            "EUROPA Study - Cardiovascular Risk Reduction",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
+    },
     "Ramipril": {
         "group": "Cardiovascular - ACE Inhibitor",
         "vietnamese_name": "Ramipril, Altace, Tritace",
@@ -1070,194 +1257,6 @@ ACE_INHIBITORS = {
         "last_updated": "2025-02-18",
     },
     
-    "Perindopril": {
-        "group": "Cardiovascular - ACE Inhibitor",
-        "vietnamese_name": "Perindopril, Coversyl, Aceon",
-        "administration": ["PO"],
-        "indications": [
-            "Tăng huyết áp",
-            "Suy tim",
-            "Dự phòng biến cố tim mạch sau nhồi máu cơ tim",
-            "Dự phòng đột quỵ ở bệnh nhân nguy cơ cao"
-        ],
-        "contraindications": [
-            "Dị ứng ACE inhibitor",
-            "Có thai",
-            "Hẹp động mạch thận 2 bên",
-            "Phù mạch trước đây với ACE inhibitor"
-        ],
-        "dosage": {
-            "adult_htn": "4-8mg x 1 lần/ngày",
-            "adult_heart_failure": "2mg x 1 lần/ngày, tăng dần đến 8mg x 1 lần/ngày",
-            "adult_post_mi": "4mg x 1 lần/ngày, tăng đến 8mg x 1 lần/ngày",
-            "adult_cvd_prevention": "8mg x 1 lần/ngày",
-            "notes": "Khởi đầu với liều thấp, tăng dần. Uống với hoặc không có thức ăn"
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Giảm liều 25-50%",
-            "under_30": "Khởi đầu 2mg/ngày, tối đa 4mg/ngày"
-        },
-        "side_effects": [
-            "Ho khan (phổ biến)",
-            "Tăng kali máu",
-            "Hạ huyết áp",
-            "Phù mạch (hiếm nhưng nguy hiểm)",
-            "Suy thận cấp (hẹp ĐM thận)",
-            "Tăng creatinine nhẹ"
-        ],
-        "interactions": [
-            "Kali bổ sung: tăng nguy cơ tăng kali máu",
-            "Spironolactone: tăng kali máu",
-            "NSAID: giảm hiệu quả, tăng nguy cơ suy thận",
-            "Lithium: tăng nồng độ lithium",
-            "Diuretics: tăng nguy cơ hạ huyết áp"
-        ],
-        "pregnancy": "D - Chống chỉ định trong thai kỳ",
-        "mechanism_of_action": "Perindopril là prodrug, được chuyển hóa thành perindoprilat (hoạt chất). Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp. Perindopril có half-life dài, cho phép dùng 1 lần/ngày. Có bằng chứng mạnh về bảo vệ tim mạch và thận (PROGRESS study, EUROPA study).",
-        "monitoring": [
-            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
-            "Kali máu định kỳ",
-            "Huyết áp",
-            "Ho khan (tác dụng phụ thường gặp)",
-            "Dấu hiệu phù mạch (sưng mặt, lưỡi, họng - cấp cứu)"
-        ],
-        "precautions": [
-            "Khởi đầu với liều thấp, tăng dần",
-            "Theo dõi sát creatinine khi bắt đầu (có thể tăng nhẹ)",
-            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
-            "Ngừng ngay nếu có phù mạch (có thể nguy hiểm tính mạng)",
-            "Ho khan có thể kéo dài, thường tự hết khi ngừng thuốc",
-            "Thận trọng với kali bổ sung và kali-sparing diuretics"
-        ],
-        "pharmacokinetics": {
-            "half_life": "17 giờ (perindoprilat - metabolite hoạt động)",
-            "onset": "1-2 giờ",
-            "duration": "24 giờ (cho phép dùng 1 lần/ngày)",
-            "protein_binding": "20% (perindoprilat)",
-            "clearance": "Thận (75% bài tiết qua nước tiểu)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
-                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
-                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
-                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
-                },
-                {
-                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac, etc.)",
-                    "mechanism": "NSAIDs ức chế prostaglandin, làm giảm lưu lượng máu thận, giảm hiệu quả ACE inhibitor.",
-                    "effect": "Giảm hiệu quả hạ huyết áp của perindopril, tăng nguy cơ suy thận cấp",
-                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ huyết áp, chức năng thận."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Lithium",
-                    "mechanism": "ACE inhibitors làm giảm thải trừ lithium qua thận, tăng nồng độ lithium.",
-                    "effect": "Tăng nồng độ lithium, tăng độc tính",
-                    "management": "Theo dõi nồng độ lithium thường xuyên. Giảm liều lithium khi bắt đầu perindopril."
-                },
-                {
-                    "drug": "Diuretics (thiazide, loop diuretics)",
-                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
-                    "effect": "Hạ huyết áp quá mức",
-                    "management": "Giảm liều diuretic hoặc ngừng tạm thời khi bắt đầu perindopril."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng perindopril hoặc các ACE inhibitor khác",
-                "Có thai (tất cả các tam cá nguyệt)",
-                "Hẹp động mạch thận 2 bên",
-                "Phù mạch trước đây với ACE inhibitor"
-            ],
-            "tương_đối": [
-                "Suy thận nặng (CrCl <30) - cần giảm liều",
-                "Suy gan - thận trọng",
-                "Tăng kali máu",
-                "Dùng với kali-sparing diuretics"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "D",
-            "pregnancy_details": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Perindopril bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.",
-                "recommendation": "Có thể dùng khi cho con bú."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Thận trọng, có thể cần giảm liều nhẹ",
-            "severe": "Thận trọng, giảm liều hoặc tránh dùng",
-            "notes": "Perindopril chuyển hóa một phần ở gan thành perindoprilat. Suy gan có thể giảm chuyển hóa nhưng không đáng kể."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Hạ huyết áp nghiêm trọng",
-                "Chóng mặt, ngất",
-                "Tăng kali máu",
-                "Suy thận cấp"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng ngay perindopril",
-                "Nằm đầu thấp, nâng chân",
-                "Truyền dịch nếu hạ huyết áp",
-                "Theo dõi huyết áp, nhịp tim, điện giải",
-                "Điều trị tăng kali máu nếu có"
-            ],
-            "monitoring": "Huyết áp, nhịp tim, kali máu, chức năng thận trong ít nhất 24 giờ"
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp.",
-                "timing": "Uống 1 lần/ngày (do half-life dài). Có thể uống buổi sáng hoặc tối."
-            },
-            "iv": {
-                "reconstitution": "N/A - Chỉ có dạng uống",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Perindopril chỉ có dạng uống. Nếu cần dạng IV, dùng enalaprilat."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Aceon (perindopril)",
-                "UpToDate - Perindopril: Drug information",
-                "PROGRESS Study - The Lancet",
-                "EUROPA Study - The Lancet",
-                "American Heart Association/American College of Cardiology guidelines"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High - PROGRESS and EUROPA studies (large RCTs) and extensive clinical experience"
-        },
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
-        },
-        "guideline_tags": [
-            "ACC/AHA Guidelines - Hypertension",
-            "ESC Guidelines - Cardiovascular Disease Prevention",
-            "PROGRESS Study - Stroke Prevention",
-            "EUROPA Study - Cardiovascular Risk Reduction",
-            "WHO Essential Medicines List"
-        ],
-        "last_updated": "2025-02-18",
-    }
-
 }
 
 __all__ = ['ACE_INHIBITORS']

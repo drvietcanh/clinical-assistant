@@ -5,6 +5,252 @@ Romosozumab (Sclerostin inhibitor), Raloxifene (SERM)
 """
 
 OSTEOPOROSIS_OTHER_DRUGS = {
+    "Abaloparatide": {
+        "group": "Endocrinology - PTHrP Analog (Osteoporosis - Anabolic)",
+        "vietnamese_name": "Abaloparatide, Tymlos",
+        "administration": ["SC"],
+        "indications": [
+            "Loãng xương sau mãn kinh ở phụ nữ có nguy cơ gãy xương cao.",
+        ],
+        "contraindications": [
+            "Dị ứng với abaloparatide.",
+            "Tăng calci máu.",
+            "Ung thư xương hoặc di căn xương.",
+            "Bệnh Paget xương.",
+            "Tiền sử xạ trị xương.",
+        ],
+        "dosage": {
+            "adult_sc": "80mcg SC mỗi ngày, tiêm dưới da bụng.",
+            "notes": "Dùng tối đa 24 tháng trong đời. Luân phiên vị trí tiêm. Bổ sung calcium và vitamin D.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Thận trọng.",
+            "under_30": "Không khuyến cáo nếu CrCl <30 ml/min.",
+        },
+        "side_effects": [
+            "Chóng mặt, đau đầu.",
+            "Buồn nôn, nôn.",
+            "Đau cơ, đau xương.",
+            "Tăng calci máu - theo dõi.",
+            "Tăng nguy cơ ung thư xương ở động vật thí nghiệm (osteosarcoma) - chưa rõ ở người.",
+        ],
+        "interactions": [],
+        "pregnancy": "C: tránh dùng trong thai kỳ.",
+        "mechanism_of_action": (
+            "Abaloparatide là peptide tổng hợp tương tự PTHrP (Parathyroid Hormone-related Protein), "
+            "kích thích tạo xương tương tự teriparatide nhưng có cấu trúc khác. "
+            "Kích thích tế bào tạo xương (osteoblasts) và tăng hình thành xương mới, "
+            "dẫn đến tăng mật độ xương và giảm nguy cơ gãy xương. "
+            "Chỉ được dùng tối đa 24 tháng trong đời do nguy cơ ung thư xương ở động vật thí nghiệm."
+        ),
+        "monitoring": [
+            "Mật độ xương (DEXA scan) trước điều trị và sau 12-24 tháng.",
+            "Calci máu trước và trong điều trị.",
+            "Creatinine, eGFR trước điều trị.",
+            "Dấu hiệu tăng calci máu.",
+        ],
+        "precautions": [
+            "Dùng tối đa 24 tháng trong đời.",
+            "Bổ sung calcium và vitamin D.",
+            "Nguy cơ tăng calci máu - theo dõi calci máu chặt chẽ.",
+            "Không dùng ở bệnh nhân ung thư xương hoặc di căn xương.",
+            "SC: tiêm dưới da bụng. Luân phiên vị trí tiêm.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "~1.7 giờ.",
+            "onset": "Tăng mật độ xương trong 3-6 tháng.",
+            "duration": "24 giờ (tiêm 1 lần/ngày).",
+            "protein_binding": "N/A (peptide).",
+            "clearance": "Chuyển hóa ở gan và thận.",
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), không đông lạnh. Sau khi mở, có thể bảo quản ở nhiệt độ phòng tối đa 30 ngày.",
+        "black_box_warnings": (
+            "Ung thư xương (osteosarcoma): tăng nguy cơ ở động vật thí nghiệm. "
+            "Chưa rõ nguy cơ ở người. Không dùng ở bệnh nhân ung thư xương hoặc di căn xương. "
+            "Dùng tối đa 24 tháng trong đời."
+        ),
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với abaloparatide.",
+                "Tăng calci máu.",
+                "Ung thư xương hoặc di căn xương.",
+                "Bệnh Paget xương.",
+                "Tiền sử xạ trị xương.",
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-60) - thận trọng.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Tránh dùng trong thai kỳ.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Không khuyến cáo dùng khi cho con bú.",
+                "recommendation": "Ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Thận trọng.",
+            "severe": "Không khuyến cáo.",
+            "notes": "Abaloparatide chuyển hóa một phần qua gan.",
+        },
+        "overdose_management": {
+            "symptoms": ["Tăng calci máu nặng.", "Buồn nôn, nôn nặng."],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Điều trị tăng calci máu: bù dịch, calcitonin, bisphosphonate nếu cần.",
+                "Ngừng abaloparatide.",
+            ],
+            "monitoring": "Calci máu, ECG, dấu hiệu sinh tồn.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "sc": {
+                "reconstitution": "Bút tiêm sẵn dùng.",
+                "injection_site": "Tiêm dưới da bụng. Luân phiên vị trí tiêm.",
+                "timing": "Tiêm 1 lần/ngày, cùng giờ mỗi ngày. Dùng tối đa 24 tháng trong đời.",
+                "notes": "Bảo quản trong tủ lạnh (2-8°C). Sau khi mở, có thể bảo quản ở nhiệt độ phòng tối đa 30 ngày.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Tymlos (abaloparatide)",
+                "NOF Guidelines 2024",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved",
+        },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
+
+    "Calcitonin": {
+        "group": "Endocrinology - Calcitonin (Osteoporosis, Hypercalcemia)",
+        "vietnamese_name": "Calcitonin, Calcitonin cá hồi (salmon calcitonin)",
+        "administration": ["SC", "IM", "IN"],
+        "indications": [
+            "Tăng calci máu cấp do ác tính (hỗ trợ ngắn hạn)",
+            "Loãng xương sau mãn kinh khi các lựa chọn khác không phù hợp (vai trò hạn chế hiện nay)",
+            "Đau do gãy xương lún đốt sống cấp (giảm đau ngắn hạn)",
+        ],
+        "contraindications": [
+            "Dị ứng với calcitonin, đặc biệt calcitonin cá hồi",
+        ],
+        "dosage": {
+            "hypercalcemia_sc_im": "4 IU/kg SC/IM mỗi 12 giờ (có thể tăng đến 8 IU/kg mỗi 6 giờ nếu cần)",
+            "osteoporosis_in": "200 IU xịt mũi 1 lần/ngày, luân phiên bên mũi",
+            "notes": "Hiệu quả loãng xương yếu hơn nhiều so với bisphosphonate/denosumab/PTH analog; chủ yếu dùng giảm đau gãy lún đốt sống cấp.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều",
+            "under_30": "Không cần chỉnh liều, nhưng dữ liệu hạn chế",
+        },
+        "side_effects": [
+            "Buồn nôn, nôn (SC/IM)",
+            "Đỏ bừng mặt, cảm giác nóng bừng",
+            "Kích ứng, chảy máu, khô mũi (dạng xịt mũi)",
+            "Dị ứng, phản vệ (hiếm)",
+            "Có báo cáo tăng nhẹ nguy cơ ung thư với dùng kéo dài dạng xịt mũi",
+        ],
+        "interactions": [],
+        "pregnancy": "C – tránh dùng trừ khi lợi ích vượt trội nguy cơ",
+        "mechanism_of_action": (
+            "Calcitonin là hormone do tế bào C tuyến giáp tiết, làm giảm calci máu bằng cách ức chế hoạt động tế bào hủy xương "
+            "và tăng thải calci qua thận. Trong tăng calci máu cấp, calcitonin cho tác dụng nhanh nhưng dung nạp giảm sau vài ngày. "
+            "Trong loãng xương, hiệu quả tăng mật độ xương yếu, nên hiện ít được khuyến cáo như lựa chọn hàng đầu."
+        ),
+        "monitoring": [
+            "Calci máu (đặc biệt trong điều trị tăng calci máu)",
+            "Triệu chứng dị ứng, phản vệ (mề đay, khó thở)",
+            "Đau xương/gãy lún đốt sống (đánh giá giảm đau)",
+        ],
+        "precautions": [
+            "Không dùng kéo dài dạng xịt mũi cho loãng xương nếu có lựa chọn tốt hơn do lo ngại tăng nhẹ nguy cơ ung thư.",
+            "Có thể cân nhắc test dị ứng trước khi dùng SC/IM nếu nghi ngờ cơ địa dị ứng.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 1 giờ (SC/IM); dạng xịt mũi hấp thu biến thiên",
+            "onset": "Vài giờ cho tác dụng hạ calci",
+            "duration": "Hiệu quả hạ calci kéo dài khoảng 6–8 giờ; xuất hiện hiện tượng nhờn thuốc sau vài ngày",
+            "protein_binding": "N/A (peptide)",
+            "clearance": "Chuyển hóa nhanh tại thận và mô; thải qua thận",
+        },
+        "storage": "Bảo quản trong tủ lạnh (2–8°C) theo hướng dẫn; một số chế phẩm có thể để nhiệt độ phòng trong thời gian giới hạn.",
+        "black_box_warnings": (
+            "Một số nghiên cứu cho thấy tăng nhẹ nguy cơ ung thư khi dùng calcitonin đường mũi kéo dài; "
+            "chỉ dùng khi lợi ích vượt trội nguy cơ và không có lựa chọn tốt hơn."
+        ),
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với calcitonin cá hồi hoặc thành phần chế phẩm",
+            ],
+            "tương_đối": [
+                "Tiền sử ung thư – cân nhắc kỹ nếu dùng kéo dài dạng xịt mũi",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dùng khi thật cần thiết (tăng calci máu cấp) dưới giám sát chuyên khoa.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ bài tiết vào sữa; nguy cơ lý thuyết thấp do peptide bị phân hủy trong tiêu hóa.",
+                "recommendation": "Cân nhắc lợi ích–nguy cơ, ưu tiên điều trị thay thế nếu có.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều",
+            "notes": "Không chuyển hóa qua gan đáng kể.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ calci máu (hiếm do thời gian bán thải ngắn)",
+                "Buồn nôn, nôn nặng, hạ huyết áp",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng calcitonin",
+                "Điều trị hạ calci máu nếu có (calcium IV/PO)",
+                "Hỗ trợ tuần hoàn nếu tụt huyết áp",
+            ],
+            "monitoring": "Calci máu, huyết áp, triệu chứng dị ứng.",
+        },
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng hoặc tăng calci máu nặng."},
+        "administration_instructions": {
+            "sc": {
+                "injection_site": "Tiêm dưới da vùng đùi, bụng hoặc cánh tay, luân phiên vị trí tiêm.",
+                "timing": "Mỗi 12–24 giờ tùy chỉ định.",
+            },
+            "in": {
+                "notes": "Xịt mũi, luân phiên bên mũi, không hít sâu khi xịt.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "Endocrine Society guideline on osteoporosis",
+                "UpToDate – Calcitonin in hypercalcemia and osteoporosis",
+            ],
+            "last_updated": "2025-02-23",
+            "evidence_level": "B – vai trò hạn chế, dùng chọn lọc",
+        },
+    },
     "Denosumab": {
         "group": "Endocrinology - RANKL Inhibitor (Osteoporosis)",
         "vietnamese_name": "Denosumab, Prolia, Xgeva",
@@ -156,424 +402,6 @@ OSTEOPOROSIS_OTHER_DRUGS = {
              "available": False,
              "agents": []
          },
-},
-
-    "Teriparatide": {
-        "group": "Endocrinology - PTH Analog (Osteoporosis - Anabolic)",
-        "vietnamese_name": "Teriparatide, Forteo",
-        "administration": ["SC"],
-        "indications": [
-            "Loãng xương sau mãn kinh ở phụ nữ có nguy cơ gãy xương cao.",
-            "Loãng xương ở nam giới có nguy cơ gãy xương cao.",
-            "Loãng xương do corticosteroid.",
-        ],
-        "contraindications": [
-            "Dị ứng với teriparatide.",
-            "Tăng calci máu.",
-            "Ung thư xương hoặc di căn xương.",
-            "Bệnh Paget xương.",
-            "Trẻ em và thanh thiếu niên (chưa đóng sụn tăng trưởng).",
-            "Tiền sử xạ trị xương.",
-        ],
-        "dosage": {
-            "adult_sc": "20mcg SC mỗi ngày, tiêm dưới da đùi hoặc bụng.",
-            "notes": "Dùng tối đa 24 tháng trong đời. Luân phiên vị trí tiêm. Bổ sung calcium và vitamin D.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều.",
-            "30_60": "Thận trọng, cân nhắc giảm liều.",
-            "under_30": "Không khuyến cáo nếu CrCl <30 ml/min.",
-        },
-        "side_effects": [
-            "Đau cơ, đau xương, đau khớp.",
-            "Chóng mặt, đau đầu.",
-            "Tăng calci máu - theo dõi.",
-            "Tăng acid uric máu, bệnh gút.",
-            "Buồn nôn.",
-            "Tăng nguy cơ ung thư xương ở động vật thí nghiệm (osteosarcoma) - chưa rõ ở người.",
-        ],
-        "interactions": [
-            "Digoxin: tăng nguy cơ tăng calci máu.",
-        ],
-        "pregnancy": "C: tránh dùng trong thai kỳ.",
-        "mechanism_of_action": (
-            "Teriparatide là peptide tổng hợp chứa 34 amino acid đầu tiên của hormone tuyến cận giáp (PTH 1-34). "
-            "Khác với bisphosphonates và denosumab (ức chế hủy xương), teriparatide là thuốc đồng hóa (anabolic), "
-            "kích thích tạo xương. Teriparatide kích thích tế bào tạo xương (osteoblasts) và tăng hình thành xương mới, "
-            "dẫn đến tăng mật độ xương và giảm nguy cơ gãy xương. Teriparatide có tác dụng mạnh hơn bisphosphonates "
-            "trong việc tăng mật độ xương, đặc biệt ở cột sống, nhưng chỉ được dùng tối đa 24 tháng trong đời "
-            "do nguy cơ ung thư xương ở động vật thí nghiệm."
-        ),
-        "monitoring": [
-            "Mật độ xương (DEXA scan) trước điều trị và sau 12-24 tháng.",
-            "Calci máu trước và trong điều trị (sau 1 tháng, sau đó mỗi 3-6 tháng).",
-            "Acid uric máu nếu có triệu chứng gút.",
-            "Creatinine, eGFR trước điều trị.",
-            "Dấu hiệu tăng calci máu (buồn nôn, nôn, yếu cơ, rối loạn nhịp tim).",
-        ],
-        "precautions": [
-            "Dùng tối đa 24 tháng trong đời (do nguy cơ ung thư xương ở động vật thí nghiệm).",
-            "Bổ sung calcium (1000-1200mg/ngày) và vitamin D (800-1000 IU/ngày).",
-            "Nguy cơ tăng calci máu - theo dõi calci máu chặt chẽ.",
-            "Nguy cơ tăng acid uric máu, bệnh gút - theo dõi nếu có triệu chứng.",
-            "Không dùng ở bệnh nhân ung thư xương hoặc di căn xương.",
-            "SC: tiêm dưới da đùi hoặc bụng. Luân phiên vị trí tiêm.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "~1 giờ.",
-            "onset": "Tăng markers tạo xương trong vài tuần, tăng mật độ xương trong 3-6 tháng.",
-            "duration": "24 giờ (tiêm 1 lần/ngày), nhưng tác dụng kéo dài sau khi ngừng.",
-            "protein_binding": "N/A (peptide).",
-            "clearance": "Chuyển hóa ở gan và thận.",
-        },
-        "storage": "Bảo quản trong tủ lạnh (2-8°C), không đông lạnh. Sau khi mở, có thể bảo quản ở nhiệt độ phòng tối đa 28 ngày.",
-        "black_box_warnings": (
-            "Ung thư xương (osteosarcoma): tăng nguy cơ ở động vật thí nghiệm. "
-            "Chưa rõ nguy cơ ở người. Không dùng ở bệnh nhân ung thư xương hoặc di căn xương. "
-            "Dùng tối đa 24 tháng trong đời."
-        ),
-        "drug_interactions": {
-            "major": [],
-            "moderate": [
-                {
-                    "drug": "Digoxin",
-                    "mechanism": "Teriparatide tăng calci máu, digoxin nhạy cảm với calci.",
-                    "effect": "Tăng nguy cơ độc tính digoxin.",
-                    "management": "Thận trọng. Theo dõi calci máu và nồng độ digoxin.",
-                },
-            ],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng với teriparatide.",
-                "Tăng calci máu.",
-                "Ung thư xương hoặc di căn xương.",
-                "Bệnh Paget xương.",
-                "Trẻ em và thanh thiếu niên.",
-                "Tiền sử xạ trị xương.",
-            ],
-            "tương_đối": [
-                "Suy thận trung bình (CrCl 30-60) - thận trọng.",
-                "Tiền sử bệnh gút - tăng nguy cơ tái phát.",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Tránh dùng trong thai kỳ. Có thể ảnh hưởng đến phát triển xương thai nhi.",
-            "lactation": {
-                "safety": "Incompatible",
-                "details": "Không khuyến cáo dùng khi cho con bú.",
-                "recommendation": "Ngừng cho con bú hoặc ngừng thuốc.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh liều.",
-            "moderate": "Thận trọng.",
-            "severe": "Không khuyến cáo.",
-            "notes": "Teriparatide chuyển hóa một phần qua gan.",
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Tăng calci máu nặng (buồn nôn, nôn, yếu cơ, rối loạn nhịp tim).",
-                "Đau cơ, đau xương nặng.",
-            ],
-            "antidote": "Không có antidote đặc hiệu.",
-            "treatment": [
-                "Điều trị tăng calci máu: bù dịch, calcitonin, bisphosphonate nếu cần.",
-                "Ngừng teriparatide.",
-                "Theo dõi tại bệnh viện.",
-            ],
-            "monitoring": "Calci máu, ECG, dấu hiệu sinh tồn.",
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "sc": {
-                "reconstitution": "Bút tiêm sẵn dùng.",
-                "injection_site": "Tiêm dưới da đùi hoặc bụng. Luân phiên vị trí tiêm.",
-                "timing": "Tiêm 1 lần/ngày, cùng giờ mỗi ngày. Dùng tối đa 24 tháng trong đời.",
-                "notes": "Bảo quản trong tủ lạnh (2-8°C). Sau khi mở, có thể bảo quản ở nhiệt độ phòng tối đa 28 ngày.",
-            },
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Forteo (teriparatide)",
-                "NOF Guidelines 2024",
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High – FDA-approved",
-        },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-},
-
-    "Abaloparatide": {
-        "group": "Endocrinology - PTHrP Analog (Osteoporosis - Anabolic)",
-        "vietnamese_name": "Abaloparatide, Tymlos",
-        "administration": ["SC"],
-        "indications": [
-            "Loãng xương sau mãn kinh ở phụ nữ có nguy cơ gãy xương cao.",
-        ],
-        "contraindications": [
-            "Dị ứng với abaloparatide.",
-            "Tăng calci máu.",
-            "Ung thư xương hoặc di căn xương.",
-            "Bệnh Paget xương.",
-            "Tiền sử xạ trị xương.",
-        ],
-        "dosage": {
-            "adult_sc": "80mcg SC mỗi ngày, tiêm dưới da bụng.",
-            "notes": "Dùng tối đa 24 tháng trong đời. Luân phiên vị trí tiêm. Bổ sung calcium và vitamin D.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều.",
-            "30_60": "Thận trọng.",
-            "under_30": "Không khuyến cáo nếu CrCl <30 ml/min.",
-        },
-        "side_effects": [
-            "Chóng mặt, đau đầu.",
-            "Buồn nôn, nôn.",
-            "Đau cơ, đau xương.",
-            "Tăng calci máu - theo dõi.",
-            "Tăng nguy cơ ung thư xương ở động vật thí nghiệm (osteosarcoma) - chưa rõ ở người.",
-        ],
-        "interactions": [],
-        "pregnancy": "C: tránh dùng trong thai kỳ.",
-        "mechanism_of_action": (
-            "Abaloparatide là peptide tổng hợp tương tự PTHrP (Parathyroid Hormone-related Protein), "
-            "kích thích tạo xương tương tự teriparatide nhưng có cấu trúc khác. "
-            "Kích thích tế bào tạo xương (osteoblasts) và tăng hình thành xương mới, "
-            "dẫn đến tăng mật độ xương và giảm nguy cơ gãy xương. "
-            "Chỉ được dùng tối đa 24 tháng trong đời do nguy cơ ung thư xương ở động vật thí nghiệm."
-        ),
-        "monitoring": [
-            "Mật độ xương (DEXA scan) trước điều trị và sau 12-24 tháng.",
-            "Calci máu trước và trong điều trị.",
-            "Creatinine, eGFR trước điều trị.",
-            "Dấu hiệu tăng calci máu.",
-        ],
-        "precautions": [
-            "Dùng tối đa 24 tháng trong đời.",
-            "Bổ sung calcium và vitamin D.",
-            "Nguy cơ tăng calci máu - theo dõi calci máu chặt chẽ.",
-            "Không dùng ở bệnh nhân ung thư xương hoặc di căn xương.",
-            "SC: tiêm dưới da bụng. Luân phiên vị trí tiêm.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "~1.7 giờ.",
-            "onset": "Tăng mật độ xương trong 3-6 tháng.",
-            "duration": "24 giờ (tiêm 1 lần/ngày).",
-            "protein_binding": "N/A (peptide).",
-            "clearance": "Chuyển hóa ở gan và thận.",
-        },
-        "storage": "Bảo quản trong tủ lạnh (2-8°C), không đông lạnh. Sau khi mở, có thể bảo quản ở nhiệt độ phòng tối đa 30 ngày.",
-        "black_box_warnings": (
-            "Ung thư xương (osteosarcoma): tăng nguy cơ ở động vật thí nghiệm. "
-            "Chưa rõ nguy cơ ở người. Không dùng ở bệnh nhân ung thư xương hoặc di căn xương. "
-            "Dùng tối đa 24 tháng trong đời."
-        ),
-        "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng với abaloparatide.",
-                "Tăng calci máu.",
-                "Ung thư xương hoặc di căn xương.",
-                "Bệnh Paget xương.",
-                "Tiền sử xạ trị xương.",
-            ],
-            "tương_đối": [
-                "Suy thận trung bình (CrCl 30-60) - thận trọng.",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Tránh dùng trong thai kỳ.",
-            "lactation": {
-                "safety": "Incompatible",
-                "details": "Không khuyến cáo dùng khi cho con bú.",
-                "recommendation": "Ngừng cho con bú hoặc ngừng thuốc.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh liều.",
-            "moderate": "Thận trọng.",
-            "severe": "Không khuyến cáo.",
-            "notes": "Abaloparatide chuyển hóa một phần qua gan.",
-        },
-        "overdose_management": {
-            "symptoms": ["Tăng calci máu nặng.", "Buồn nôn, nôn nặng."],
-            "antidote": "Không có antidote đặc hiệu.",
-            "treatment": [
-                "Điều trị tăng calci máu: bù dịch, calcitonin, bisphosphonate nếu cần.",
-                "Ngừng abaloparatide.",
-            ],
-            "monitoring": "Calci máu, ECG, dấu hiệu sinh tồn.",
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "sc": {
-                "reconstitution": "Bút tiêm sẵn dùng.",
-                "injection_site": "Tiêm dưới da bụng. Luân phiên vị trí tiêm.",
-                "timing": "Tiêm 1 lần/ngày, cùng giờ mỗi ngày. Dùng tối đa 24 tháng trong đời.",
-                "notes": "Bảo quản trong tủ lạnh (2-8°C). Sau khi mở, có thể bảo quản ở nhiệt độ phòng tối đa 30 ngày.",
-            },
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Tymlos (abaloparatide)",
-                "NOF Guidelines 2024",
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High – FDA-approved",
-        },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-},
-
-    "Romosozumab": {
-        "group": "Endocrinology - Sclerostin Inhibitor (Osteoporosis - Anabolic)",
-        "vietnamese_name": "Romosozumab, Evenity",
-        "administration": ["SC"],
-        "indications": [
-            "Loãng xương sau mãn kinh ở phụ nữ có nguy cơ gãy xương cao.",
-        ],
-        "contraindications": [
-            "Dị ứng với romosozumab.",
-            "Tăng calci máu.",
-            "Đang mang thai.",
-            "Tiền sử đột quỵ hoặc cơn thiếu máu não thoáng qua (TIA) trong 1 năm qua.",
-            "Nhồi máu cơ tim trong 1 năm qua.",
-        ],
-        "dosage": {
-            "adult_sc": "210mg SC mỗi tháng (2 mũi tiêm 105mg mỗi mũi), dùng trong 12 tháng.",
-            "notes": "Tiêm dưới da bụng, đùi hoặc cánh tay. Luân phiên vị trí tiêm. Bổ sung calcium và vitamin D.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều.",
-            "30_60": "Không cần chỉnh liều.",
-            "under_30": "Thận trọng, dữ liệu hạn chế.",
-        },
-        "side_effects": [
-            "Đau cơ, đau khớp, đau lưng.",
-            "Đau đầu.",
-            "Tăng nguy cơ đột quỵ, nhồi máu cơ tim, tử vong tim mạch.",
-            "Hoại tử xương hàm (ONJ) - hiếm.",
-            "Gãy xương đùi không điển hình - hiếm.",
-        ],
-        "interactions": [],
-        "pregnancy": "X: chống chỉ định trong thai kỳ.",
-        "mechanism_of_action": (
-            "Romosozumab là kháng thể đơn dòng kháng sclerostin. Sclerostin là protein được sản xuất bởi tế bào xương, "
-            "ức chế con đường Wnt/β-catenin, làm giảm hoạt động của tế bào tạo xương (osteoblasts). "
-            "Bằng cách ức chế sclerostin, romosozumab kích thích con đường Wnt/β-catenin, "
-            "tăng hoạt động của tế bào tạo xương và giảm hoạt động của tế bào hủy xương, "
-            "dẫn đến tăng mật độ xương nhanh và mạnh. Romosozumab có tác dụng kép: vừa kích thích tạo xương "
-            "(anabolic) vừa ức chế hủy xương (anti-resorptive)."
-        ),
-        "monitoring": [
-            "Mật độ xương (DEXA scan) trước điều trị và sau 12 tháng.",
-            "Calci máu, phospho máu trước và trong điều trị.",
-            "Dấu hiệu đột quỵ, nhồi máu cơ tim (đau ngực, khó thở, yếu liệt, rối loạn ngôn ngữ).",
-            "Dấu hiệu hoại tử xương hàm.",
-            "Dấu hiệu gãy xương đùi không điển hình.",
-        ],
-        "precautions": [
-            "QUAN TRỌNG: Tăng nguy cơ đột quỵ, nhồi máu cơ tim, tử vong tim mạch - không dùng ở bệnh nhân có tiền sử đột quỵ/TIA hoặc nhồi máu cơ tim trong 1 năm qua.",
-            "Dùng trong 12 tháng, sau đó chuyển sang bisphosphonate hoặc denosumab để duy trì.",
-            "Bổ sung calcium và vitamin D.",
-            "Nguy cơ hoại tử xương hàm: đánh giá răng miệng trước điều trị.",
-            "SC: tiêm dưới da bụng, đùi hoặc cánh tay. Luân phiên vị trí tiêm.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "~5-6 ngày.",
-            "onset": "Tăng mật độ xương nhanh trong 3-6 tháng.",
-            "duration": "1 tháng (tiêm mỗi tháng), dùng trong 12 tháng.",
-            "protein_binding": "N/A (monoclonal antibody).",
-            "clearance": "Phân hủy bởi hệ thống reticuloendothelial.",
-        },
-        "storage": "Bảo quản trong tủ lạnh (2-8°C), không đông lạnh. Có thể bảo quản ở nhiệt độ phòng (≤25°C) tối đa 30 ngày.",
-        "black_box_warnings": (
-            "Tăng nguy cơ đột quỵ, nhồi máu cơ tim, tử vong tim mạch: "
-            "không dùng ở bệnh nhân có tiền sử đột quỵ hoặc cơn thiếu máu não thoáng qua (TIA) trong 1 năm qua, "
-            "hoặc nhồi máu cơ tim trong 1 năm qua. Hoại tử xương hàm (ONJ): có thể xảy ra. "
-            "Gãy xương đùi không điển hình: tăng nguy cơ."
-        ),
-        "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng với romosozumab.",
-                "Tăng calci máu.",
-                "Đang mang thai.",
-                "Tiền sử đột quỵ hoặc TIA trong 1 năm qua.",
-                "Nhồi máu cơ tim trong 1 năm qua.",
-            ],
-            "tương_đối": [
-                "Bệnh tim mạch - tăng nguy cơ biến cố tim mạch.",
-                "Suy thận nặng (CrCl <30) - thận trọng.",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "X",
-            "pregnancy_details": "Chống chỉ định trong thai kỳ. Có thể gây hại cho thai nhi.",
-            "lactation": {
-                "safety": "Incompatible",
-                "details": "Không khuyến cáo dùng khi cho con bú.",
-                "recommendation": "Ngừng cho con bú hoặc ngừng thuốc.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh liều.",
-            "moderate": "Không cần chỉnh liều.",
-            "severe": "Không cần chỉnh liều.",
-            "notes": "Romosozumab là monoclonal antibody, không chuyển hóa qua gan.",
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Tăng calci máu.",
-                "Đau cơ, đau xương nặng.",
-            ],
-            "antidote": "Không có antidote đặc hiệu.",
-            "treatment": [
-                "Điều trị tăng calci máu nếu cần.",
-                "Ngừng romosozumab.",
-                "Theo dõi tại bệnh viện.",
-            ],
-            "monitoring": "Calci máu, ECG, dấu hiệu sinh tồn, dấu hiệu biến cố tim mạch.",
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "sc": {
-                "reconstitution": "Dung dịch tiêm sẵn dùng (2 mũi tiêm 105mg mỗi mũi).",
-                "injection_site": "Tiêm dưới da bụng, đùi hoặc cánh tay. Luân phiên vị trí tiêm.",
-                "timing": "Tiêm mỗi tháng, dùng trong 12 tháng. Sau đó chuyển sang bisphosphonate hoặc denosumab.",
-                "notes": "Bảo quản trong tủ lạnh (2-8°C). Đảm bảo bổ sung đủ calcium và vitamin D.",
-            },
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Evenity (romosozumab)",
-                "FRAME Study - Romosozumab for osteoporosis",
-                "NOF Guidelines 2024",
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High – FDA-approved, large RCTs (FRAME)",
-        },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
 },
 
     "Raloxifene": {
@@ -729,62 +557,73 @@ OSTEOPOROSIS_OTHER_DRUGS = {
           },
 },
 
-    "Calcitonin": {
-        "group": "Endocrinology - Calcitonin (Osteoporosis, Hypercalcemia)",
-        "vietnamese_name": "Calcitonin, Calcitonin cá hồi (salmon calcitonin)",
-        "administration": ["SC", "IM", "IN"],
+    "Romosozumab": {
+        "group": "Endocrinology - Sclerostin Inhibitor (Osteoporosis - Anabolic)",
+        "vietnamese_name": "Romosozumab, Evenity",
+        "administration": ["SC"],
         "indications": [
-            "Tăng calci máu cấp do ác tính (hỗ trợ ngắn hạn)",
-            "Loãng xương sau mãn kinh khi các lựa chọn khác không phù hợp (vai trò hạn chế hiện nay)",
-            "Đau do gãy xương lún đốt sống cấp (giảm đau ngắn hạn)",
+            "Loãng xương sau mãn kinh ở phụ nữ có nguy cơ gãy xương cao.",
         ],
         "contraindications": [
-            "Dị ứng với calcitonin, đặc biệt calcitonin cá hồi",
+            "Dị ứng với romosozumab.",
+            "Tăng calci máu.",
+            "Đang mang thai.",
+            "Tiền sử đột quỵ hoặc cơn thiếu máu não thoáng qua (TIA) trong 1 năm qua.",
+            "Nhồi máu cơ tim trong 1 năm qua.",
         ],
         "dosage": {
-            "hypercalcemia_sc_im": "4 IU/kg SC/IM mỗi 12 giờ (có thể tăng đến 8 IU/kg mỗi 6 giờ nếu cần)",
-            "osteoporosis_in": "200 IU xịt mũi 1 lần/ngày, luân phiên bên mũi",
-            "notes": "Hiệu quả loãng xương yếu hơn nhiều so với bisphosphonate/denosumab/PTH analog; chủ yếu dùng giảm đau gãy lún đốt sống cấp.",
+            "adult_sc": "210mg SC mỗi tháng (2 mũi tiêm 105mg mỗi mũi), dùng trong 12 tháng.",
+            "notes": "Tiêm dưới da bụng, đùi hoặc cánh tay. Luân phiên vị trí tiêm. Bổ sung calcium và vitamin D.",
         },
         "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Không cần chỉnh liều",
-            "under_30": "Không cần chỉnh liều, nhưng dữ liệu hạn chế",
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều.",
+            "under_30": "Thận trọng, dữ liệu hạn chế.",
         },
         "side_effects": [
-            "Buồn nôn, nôn (SC/IM)",
-            "Đỏ bừng mặt, cảm giác nóng bừng",
-            "Kích ứng, chảy máu, khô mũi (dạng xịt mũi)",
-            "Dị ứng, phản vệ (hiếm)",
-            "Có báo cáo tăng nhẹ nguy cơ ung thư với dùng kéo dài dạng xịt mũi",
+            "Đau cơ, đau khớp, đau lưng.",
+            "Đau đầu.",
+            "Tăng nguy cơ đột quỵ, nhồi máu cơ tim, tử vong tim mạch.",
+            "Hoại tử xương hàm (ONJ) - hiếm.",
+            "Gãy xương đùi không điển hình - hiếm.",
         ],
         "interactions": [],
-        "pregnancy": "C – tránh dùng trừ khi lợi ích vượt trội nguy cơ",
+        "pregnancy": "X: chống chỉ định trong thai kỳ.",
         "mechanism_of_action": (
-            "Calcitonin là hormone do tế bào C tuyến giáp tiết, làm giảm calci máu bằng cách ức chế hoạt động tế bào hủy xương "
-            "và tăng thải calci qua thận. Trong tăng calci máu cấp, calcitonin cho tác dụng nhanh nhưng dung nạp giảm sau vài ngày. "
-            "Trong loãng xương, hiệu quả tăng mật độ xương yếu, nên hiện ít được khuyến cáo như lựa chọn hàng đầu."
+            "Romosozumab là kháng thể đơn dòng kháng sclerostin. Sclerostin là protein được sản xuất bởi tế bào xương, "
+            "ức chế con đường Wnt/β-catenin, làm giảm hoạt động của tế bào tạo xương (osteoblasts). "
+            "Bằng cách ức chế sclerostin, romosozumab kích thích con đường Wnt/β-catenin, "
+            "tăng hoạt động của tế bào tạo xương và giảm hoạt động của tế bào hủy xương, "
+            "dẫn đến tăng mật độ xương nhanh và mạnh. Romosozumab có tác dụng kép: vừa kích thích tạo xương "
+            "(anabolic) vừa ức chế hủy xương (anti-resorptive)."
         ),
         "monitoring": [
-            "Calci máu (đặc biệt trong điều trị tăng calci máu)",
-            "Triệu chứng dị ứng, phản vệ (mề đay, khó thở)",
-            "Đau xương/gãy lún đốt sống (đánh giá giảm đau)",
+            "Mật độ xương (DEXA scan) trước điều trị và sau 12 tháng.",
+            "Calci máu, phospho máu trước và trong điều trị.",
+            "Dấu hiệu đột quỵ, nhồi máu cơ tim (đau ngực, khó thở, yếu liệt, rối loạn ngôn ngữ).",
+            "Dấu hiệu hoại tử xương hàm.",
+            "Dấu hiệu gãy xương đùi không điển hình.",
         ],
         "precautions": [
-            "Không dùng kéo dài dạng xịt mũi cho loãng xương nếu có lựa chọn tốt hơn do lo ngại tăng nhẹ nguy cơ ung thư.",
-            "Có thể cân nhắc test dị ứng trước khi dùng SC/IM nếu nghi ngờ cơ địa dị ứng.",
+            "QUAN TRỌNG: Tăng nguy cơ đột quỵ, nhồi máu cơ tim, tử vong tim mạch - không dùng ở bệnh nhân có tiền sử đột quỵ/TIA hoặc nhồi máu cơ tim trong 1 năm qua.",
+            "Dùng trong 12 tháng, sau đó chuyển sang bisphosphonate hoặc denosumab để duy trì.",
+            "Bổ sung calcium và vitamin D.",
+            "Nguy cơ hoại tử xương hàm: đánh giá răng miệng trước điều trị.",
+            "SC: tiêm dưới da bụng, đùi hoặc cánh tay. Luân phiên vị trí tiêm.",
         ],
         "pharmacokinetics": {
-            "half_life": "Khoảng 1 giờ (SC/IM); dạng xịt mũi hấp thu biến thiên",
-            "onset": "Vài giờ cho tác dụng hạ calci",
-            "duration": "Hiệu quả hạ calci kéo dài khoảng 6–8 giờ; xuất hiện hiện tượng nhờn thuốc sau vài ngày",
-            "protein_binding": "N/A (peptide)",
-            "clearance": "Chuyển hóa nhanh tại thận và mô; thải qua thận",
+            "half_life": "~5-6 ngày.",
+            "onset": "Tăng mật độ xương nhanh trong 3-6 tháng.",
+            "duration": "1 tháng (tiêm mỗi tháng), dùng trong 12 tháng.",
+            "protein_binding": "N/A (monoclonal antibody).",
+            "clearance": "Phân hủy bởi hệ thống reticuloendothelial.",
         },
-        "storage": "Bảo quản trong tủ lạnh (2–8°C) theo hướng dẫn; một số chế phẩm có thể để nhiệt độ phòng trong thời gian giới hạn.",
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), không đông lạnh. Có thể bảo quản ở nhiệt độ phòng (≤25°C) tối đa 30 ngày.",
         "black_box_warnings": (
-            "Một số nghiên cứu cho thấy tăng nhẹ nguy cơ ung thư khi dùng calcitonin đường mũi kéo dài; "
-            "chỉ dùng khi lợi ích vượt trội nguy cơ và không có lựa chọn tốt hơn."
+            "Tăng nguy cơ đột quỵ, nhồi máu cơ tim, tử vong tim mạch: "
+            "không dùng ở bệnh nhân có tiền sử đột quỵ hoặc cơn thiếu máu não thoáng qua (TIA) trong 1 năm qua, "
+            "hoặc nhồi máu cơ tim trong 1 năm qua. Hoại tử xương hàm (ONJ): có thể xảy ra. "
+            "Gãy xương đùi không điển hình: tăng nguy cơ."
         ),
         "drug_interactions": {
             "major": [],
@@ -793,59 +632,220 @@ OSTEOPOROSIS_OTHER_DRUGS = {
         },
         "contraindications_detail": {
             "tuyệt_đối": [
-                "Dị ứng với calcitonin cá hồi hoặc thành phần chế phẩm",
+                "Dị ứng với romosozumab.",
+                "Tăng calci máu.",
+                "Đang mang thai.",
+                "Tiền sử đột quỵ hoặc TIA trong 1 năm qua.",
+                "Nhồi máu cơ tim trong 1 năm qua.",
             ],
             "tương_đối": [
-                "Tiền sử ung thư – cân nhắc kỹ nếu dùng kéo dài dạng xịt mũi",
+                "Bệnh tim mạch - tăng nguy cơ biến cố tim mạch.",
+                "Suy thận nặng (CrCl <30) - thận trọng.",
             ],
         },
         "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Dùng khi thật cần thiết (tăng calci máu cấp) dưới giám sát chuyên khoa.",
+            "fda_category": "X",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Có thể gây hại cho thai nhi.",
             "lactation": {
-                "safety": "Caution",
-                "details": "Chưa rõ bài tiết vào sữa; nguy cơ lý thuyết thấp do peptide bị phân hủy trong tiêu hóa.",
-                "recommendation": "Cân nhắc lợi ích–nguy cơ, ưu tiên điều trị thay thế nếu có.",
+                "safety": "Incompatible",
+                "details": "Không khuyến cáo dùng khi cho con bú.",
+                "recommendation": "Ngừng cho con bú hoặc ngừng thuốc.",
             },
         },
         "hepatic_adjustment": {
-            "mild": "Không cần chỉnh liều",
-            "moderate": "Không cần chỉnh liều",
-            "severe": "Không cần chỉnh liều",
-            "notes": "Không chuyển hóa qua gan đáng kể.",
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Không cần chỉnh liều.",
+            "severe": "Không cần chỉnh liều.",
+            "notes": "Romosozumab là monoclonal antibody, không chuyển hóa qua gan.",
         },
         "overdose_management": {
             "symptoms": [
-                "Hạ calci máu (hiếm do thời gian bán thải ngắn)",
-                "Buồn nôn, nôn nặng, hạ huyết áp",
+                "Tăng calci máu.",
+                "Đau cơ, đau xương nặng.",
             ],
             "antidote": "Không có antidote đặc hiệu.",
             "treatment": [
-                "Ngừng calcitonin",
-                "Điều trị hạ calci máu nếu có (calcium IV/PO)",
-                "Hỗ trợ tuần hoàn nếu tụt huyết áp",
+                "Điều trị tăng calci máu nếu cần.",
+                "Ngừng romosozumab.",
+                "Theo dõi tại bệnh viện.",
             ],
-            "monitoring": "Calci máu, huyết áp, triệu chứng dị ứng.",
+            "monitoring": "Calci máu, ECG, dấu hiệu sinh tồn, dấu hiệu biến cố tim mạch.",
         },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng hoặc tăng calci máu nặng."},
+        "reversal_agents": None,
         "administration_instructions": {
             "sc": {
-                "injection_site": "Tiêm dưới da vùng đùi, bụng hoặc cánh tay, luân phiên vị trí tiêm.",
-                "timing": "Mỗi 12–24 giờ tùy chỉ định.",
-            },
-            "in": {
-                "notes": "Xịt mũi, luân phiên bên mũi, không hít sâu khi xịt.",
+                "reconstitution": "Dung dịch tiêm sẵn dùng (2 mũi tiêm 105mg mỗi mũi).",
+                "injection_site": "Tiêm dưới da bụng, đùi hoặc cánh tay. Luân phiên vị trí tiêm.",
+                "timing": "Tiêm mỗi tháng, dùng trong 12 tháng. Sau đó chuyển sang bisphosphonate hoặc denosumab.",
+                "notes": "Bảo quản trong tủ lạnh (2-8°C). Đảm bảo bổ sung đủ calcium và vitamin D.",
             },
         },
         "references": {
             "primary_sources": [
-                "Endocrine Society guideline on osteoporosis",
-                "UpToDate – Calcitonin in hypercalcemia and osteoporosis",
+                "FDA Drug Label - Evenity (romosozumab)",
+                "FRAME Study - Romosozumab for osteoporosis",
+                "NOF Guidelines 2024",
             ],
-            "last_updated": "2025-02-23",
-            "evidence_level": "B – vai trò hạn chế, dùng chọn lọc",
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved, large RCTs (FRAME)",
         },
-    },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
+
+    "Teriparatide": {
+        "group": "Endocrinology - PTH Analog (Osteoporosis - Anabolic)",
+        "vietnamese_name": "Teriparatide, Forteo",
+        "administration": ["SC"],
+        "indications": [
+            "Loãng xương sau mãn kinh ở phụ nữ có nguy cơ gãy xương cao.",
+            "Loãng xương ở nam giới có nguy cơ gãy xương cao.",
+            "Loãng xương do corticosteroid.",
+        ],
+        "contraindications": [
+            "Dị ứng với teriparatide.",
+            "Tăng calci máu.",
+            "Ung thư xương hoặc di căn xương.",
+            "Bệnh Paget xương.",
+            "Trẻ em và thanh thiếu niên (chưa đóng sụn tăng trưởng).",
+            "Tiền sử xạ trị xương.",
+        ],
+        "dosage": {
+            "adult_sc": "20mcg SC mỗi ngày, tiêm dưới da đùi hoặc bụng.",
+            "notes": "Dùng tối đa 24 tháng trong đời. Luân phiên vị trí tiêm. Bổ sung calcium và vitamin D.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Thận trọng, cân nhắc giảm liều.",
+            "under_30": "Không khuyến cáo nếu CrCl <30 ml/min.",
+        },
+        "side_effects": [
+            "Đau cơ, đau xương, đau khớp.",
+            "Chóng mặt, đau đầu.",
+            "Tăng calci máu - theo dõi.",
+            "Tăng acid uric máu, bệnh gút.",
+            "Buồn nôn.",
+            "Tăng nguy cơ ung thư xương ở động vật thí nghiệm (osteosarcoma) - chưa rõ ở người.",
+        ],
+        "interactions": [
+            "Digoxin: tăng nguy cơ tăng calci máu.",
+        ],
+        "pregnancy": "C: tránh dùng trong thai kỳ.",
+        "mechanism_of_action": (
+            "Teriparatide là peptide tổng hợp chứa 34 amino acid đầu tiên của hormone tuyến cận giáp (PTH 1-34). "
+            "Khác với bisphosphonates và denosumab (ức chế hủy xương), teriparatide là thuốc đồng hóa (anabolic), "
+            "kích thích tạo xương. Teriparatide kích thích tế bào tạo xương (osteoblasts) và tăng hình thành xương mới, "
+            "dẫn đến tăng mật độ xương và giảm nguy cơ gãy xương. Teriparatide có tác dụng mạnh hơn bisphosphonates "
+            "trong việc tăng mật độ xương, đặc biệt ở cột sống, nhưng chỉ được dùng tối đa 24 tháng trong đời "
+            "do nguy cơ ung thư xương ở động vật thí nghiệm."
+        ),
+        "monitoring": [
+            "Mật độ xương (DEXA scan) trước điều trị và sau 12-24 tháng.",
+            "Calci máu trước và trong điều trị (sau 1 tháng, sau đó mỗi 3-6 tháng).",
+            "Acid uric máu nếu có triệu chứng gút.",
+            "Creatinine, eGFR trước điều trị.",
+            "Dấu hiệu tăng calci máu (buồn nôn, nôn, yếu cơ, rối loạn nhịp tim).",
+        ],
+        "precautions": [
+            "Dùng tối đa 24 tháng trong đời (do nguy cơ ung thư xương ở động vật thí nghiệm).",
+            "Bổ sung calcium (1000-1200mg/ngày) và vitamin D (800-1000 IU/ngày).",
+            "Nguy cơ tăng calci máu - theo dõi calci máu chặt chẽ.",
+            "Nguy cơ tăng acid uric máu, bệnh gút - theo dõi nếu có triệu chứng.",
+            "Không dùng ở bệnh nhân ung thư xương hoặc di căn xương.",
+            "SC: tiêm dưới da đùi hoặc bụng. Luân phiên vị trí tiêm.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "~1 giờ.",
+            "onset": "Tăng markers tạo xương trong vài tuần, tăng mật độ xương trong 3-6 tháng.",
+            "duration": "24 giờ (tiêm 1 lần/ngày), nhưng tác dụng kéo dài sau khi ngừng.",
+            "protein_binding": "N/A (peptide).",
+            "clearance": "Chuyển hóa ở gan và thận.",
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), không đông lạnh. Sau khi mở, có thể bảo quản ở nhiệt độ phòng tối đa 28 ngày.",
+        "black_box_warnings": (
+            "Ung thư xương (osteosarcoma): tăng nguy cơ ở động vật thí nghiệm. "
+            "Chưa rõ nguy cơ ở người. Không dùng ở bệnh nhân ung thư xương hoặc di căn xương. "
+            "Dùng tối đa 24 tháng trong đời."
+        ),
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Teriparatide tăng calci máu, digoxin nhạy cảm với calci.",
+                    "effect": "Tăng nguy cơ độc tính digoxin.",
+                    "management": "Thận trọng. Theo dõi calci máu và nồng độ digoxin.",
+                },
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với teriparatide.",
+                "Tăng calci máu.",
+                "Ung thư xương hoặc di căn xương.",
+                "Bệnh Paget xương.",
+                "Trẻ em và thanh thiếu niên.",
+                "Tiền sử xạ trị xương.",
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-60) - thận trọng.",
+                "Tiền sử bệnh gút - tăng nguy cơ tái phát.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Tránh dùng trong thai kỳ. Có thể ảnh hưởng đến phát triển xương thai nhi.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Không khuyến cáo dùng khi cho con bú.",
+                "recommendation": "Ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Thận trọng.",
+            "severe": "Không khuyến cáo.",
+            "notes": "Teriparatide chuyển hóa một phần qua gan.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng calci máu nặng (buồn nôn, nôn, yếu cơ, rối loạn nhịp tim).",
+                "Đau cơ, đau xương nặng.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Điều trị tăng calci máu: bù dịch, calcitonin, bisphosphonate nếu cần.",
+                "Ngừng teriparatide.",
+                "Theo dõi tại bệnh viện.",
+            ],
+            "monitoring": "Calci máu, ECG, dấu hiệu sinh tồn.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "sc": {
+                "reconstitution": "Bút tiêm sẵn dùng.",
+                "injection_site": "Tiêm dưới da đùi hoặc bụng. Luân phiên vị trí tiêm.",
+                "timing": "Tiêm 1 lần/ngày, cùng giờ mỗi ngày. Dùng tối đa 24 tháng trong đời.",
+                "notes": "Bảo quản trong tủ lạnh (2-8°C). Sau khi mở, có thể bảo quản ở nhiệt độ phòng tối đa 28 ngày.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Forteo (teriparatide)",
+                "NOF Guidelines 2024",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved",
+        },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
+
 }
 
 __all__ = ["OSTEOPOROSIS_OTHER_DRUGS"]

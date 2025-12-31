@@ -3,499 +3,6 @@ Sedatives and Anesthetics commonly used in ICU and procedural sedation
 """
 
 SEDATIVES_ANESTHETICS_ICU_DRUGS = {
-    "Propofol": {
-        "group": "Supportive - Sedative/Anesthetic (ICU)",
-        "vietnamese_name": "Propofol (Diprivan)",
-        "administration": ["IV"],
-        "indications": [
-            "Gây mê khởi đầu và duy trì trong phẫu thuật.",
-            "An thần cho bệnh nhân thở máy trong ICU.",
-            "An thần ngắn hạn trong các thủ thuật (nội soi, can thiệp).",
-        ],
-        "contraindications": [
-            "Dị ứng với propofol hoặc bất kỳ thành phần nào của thuốc (bao gồm lecithin trứng, dầu đậu nành tùy chế phẩm).",
-            "Huyết áp rất thấp hoặc sốc không kiểm soát được.",
-        ],
-        "dosage": {
-            "induction_of_anesthesia": "1–2.5mg/kg IV bolus chậm (người lớn khỏe).",
-            "maintenance_of_anesthesia": "4–12mg/kg/giờ truyền tĩnh mạch, chỉnh liều theo đáp ứng.",
-            "icu_sedation": "5–50mcg/kg/phút (0.3–3mg/kg/giờ), chỉnh theo mức an thần mong muốn.",
-            "procedural_sedation": "0.5–1mg/kg IV bolus, sau đó truyền 25–75mcg/kg/phút nếu cần.",
-            "notes": "Người cao tuổi, suy tim, giảm thể tích: dùng liều thấp hơn và tăng từ từ.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần điều chỉnh.",
-            "30_60": "Không cần điều chỉnh đáng kể; chỉnh liều theo huyết động và đáp ứng lâm sàng.",
-            "under_30": "Không cần chỉnh liều riêng; vẫn theo dõi tác dụng kéo dài nếu có suy đa cơ quan.",
-        },
-        "side_effects": [
-            "Hạ huyết áp, tụt huyết áp khi bolus nhanh hoặc liều cao.",
-            "Ức chế hô hấp, ngừng thở nếu tiêm nhanh/ liều cao.",
-            "Đau tại chỗ tiêm.",
-            "Propofol infusion syndrome (hiếm, thường khi truyền liều cao kéo dài): toan chuyển hóa, tăng CK, suy tim, suy thận.",
-        ],
-        "interactions": [
-            "Thuốc an thần khác (benzodiazepine, opioid): tăng tác dụng ức chế TKTW và ức chế hô hấp.",
-            "Thuốc hạ huyết áp, thuốc lợi tiểu: tăng nguy cơ tụt huyết áp.",
-        ],
-        "pregnancy": "B–C: thường dùng trong gây mê ngắn hạn; tránh trong an thần kéo dài thai kỳ nếu có lựa chọn khác.",
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {"cardiac": True, "metabolic": True},
-            "icu_critical_care_only": True,
-            "look_alike_sound_alike": []
-        },
-        "guideline_tags": [
-            "SCCM ICU Sedation Guidelines",
-            "ASA Practice Guidelines for Sedation and Analgesia",
-            "PADIS Guidelines"
-        ],
-        # === 6 ENHANCED FIELDS CƠ BẢN ===
-        "mechanism_of_action": (
-            "Propofol là thuốc gây mê đường tĩnh mạch, tăng cường hoạt tính của GABA tại thụ thể GABA_A, "
-            "làm tăng dòng chloride vào tế bào thần kinh, gây ưu phân cực màng và ức chế dẫn truyền thần kinh. "
-            "Thuốc có khởi phát nhanh và hồi phục nhanh nhờ phân bố và chuyển hóa nhanh tại gan và mô ngoài gan."
-        ),
-        "monitoring": [
-            "Huyết áp, nhịp tim, SpO2, tần số thở liên tục trong khi dùng.",
-            "Mức độ an thần (RASS, Ramsay hoặc công cụ tương tự).",
-            "Dấu hiệu propofol infusion syndrome nếu truyền liều cao kéo dài: toan chuyển hóa, tăng CK, suy tim, suy thận, tiêu cơ vân.",
-        ],
-        "precautions": [
-            "Chỉ sử dụng khi có khả năng hỗ trợ hô hấp và hồi sức tim phổi đầy đủ.",
-            "Giảm liều và titrate chậm ở bệnh nhân giảm thể tích, suy tim, người cao tuổi.",
-            "Hạn chế truyền liều cao kéo dài (>4mg/kg/giờ >48 giờ) để giảm nguy cơ propofol infusion syndrome.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "Phân bố nhanh (2–4 phút), thải trừ pha cuối 3–12 giờ nhưng hồi phục lâm sàng nhanh.",
-            "onset": "30–60 giây sau tiêm tĩnh mạch.",
-            "duration": "5–10 phút sau một liều bolus; hồi phục nhanh khi ngừng truyền.",
-            "protein_binding": "Khoảng 95–99%.",
-            "clearance": "Chủ yếu chuyển hóa ở gan và mô ngoài gan thành chất không hoạt tính, thải qua thận.",
-        },
-        "storage": "Nhũ dịch propofol cần bảo quản ở 2–25°C, lắc nhẹ trước khi dùng; hủy bỏ phần còn lại sau 6–12 giờ tùy quy định để tránh nhiễm khuẩn.",
-        "black_box_warnings": (
-            "Chỉ dùng bởi bác sĩ có kinh nghiệm về gây mê/an thần và quản lý đường thở. "
-            "Nguy cơ suy hô hấp, tụt huyết áp nặng, và hội chứng truyền propofol khi dùng liều cao kéo dài."
-        ),
-        # === 8 ENHANCED FIELDS TÙY CHỌN ===
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Các thuốc an thần khác (benzodiazepine, opioid mạnh)",
-                    "mechanism": "Tác dụng hiệp đồng trên GABA và ức chế TKTW.",
-                    "effect": "Tăng nguy cơ suy hô hấp và tụt huyết áp.",
-                    "management": "Giảm liều từng thuốc, theo dõi sát hô hấp và huyết áp; chuẩn bị phương tiện hỗ trợ hô hấp.",
-                }
-            ],
-            "moderate": [],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng với propofol hoặc các thành phần trong tá dược.",
-            ],
-            "tương_đối": [
-                "Suy tim nặng, giảm thể tích tuần hoàn chưa bù.",
-                "Rối loạn chuyển hóa acid béo, thiếu hụt carnitine (nguy cơ propofol infusion syndrome).",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "Chưa phân loại rõ (thường xếp C)",
-            "pregnancy_details": (
-                "Thường dùng trong gây mê ngắn hạn ở thai phụ khi cần phẫu thuật; tránh an thần kéo dài nếu có lựa chọn khác."
-            ),
-            "lactation": {
-                "safety": "Compatible/Caution",
-                "details": "Propofol vào sữa rất ít; có thể cho bú lại vài giờ sau khi tỉnh hoàn toàn.",
-                "recommendation": "Thường không cần ngừng cho bú sau gây mê ngắn bằng propofol.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Thường không cần chỉnh liều rõ; chỉnh theo đáp ứng lâm sàng.",
-            "moderate": "Thận trọng, có thể kéo dài thời gian tác dụng.",
-            "severe": "Theo dõi sát thời gian hồi tỉnh và huyết động; cân nhắc liều thấp hơn.",
-            "notes": "Propofol chuyển hóa chủ yếu qua gan nhưng còn chuyển hóa ngoài gan; suy gan không nhất thiết làm tích lũy quá mức.",
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Suy hô hấp, ngừng thở.",
-                "Tụt huyết áp sâu, trụy mạch.",
-            ],
-            "antidote": "Không có antidote đặc hiệu.",
-            "treatment": [
-                "Ngừng truyền thuốc ngay lập tức.",
-                "Hỗ trợ hô hấp (mask, đặt nội khí quản, thở máy nếu cần).",
-                "Truyền dịch, thuốc vận mạch để nâng huyết áp.",
-            ],
-            "monitoring": "Theo dõi huyết động, hô hấp và toan kiềm.",
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "iv": {
-                "reconstitution": "Thuốc có dạng nhũ dịch sẵn dùng, không pha loãng quá mức; tuân thủ hướng dẫn vô khuẩn.",
-                "infusion_rate": "Bolus chậm 20–40mg mỗi 10 giây đến khi đạt hiệu quả; truyền duy trì bằng bơm tiêm điện.",
-                "compatibility": [],
-                "incompatibility": [
-                    "Không trộn chung trong cùng đường truyền với máu hoặc nhũ dịch khác.",
-                ],
-                "notes": "Thay dây truyền và lọ thuốc theo khuyến cáo (thường không quá 12 giờ) để tránh nhiễm khuẩn.",
-            },
-        },
-        "references": {
-            "primary_sources": [
-                "Society of Critical Care Medicine (SCCM) guidelines for ICU sedation and analgesia",
-                "ASA Practice Guidelines for Sedation and Anesthesia",
-                "Goodman & Gilman's Pharmacological Basis of Therapeutics",
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High – guideline-based",
-        },
-             "reversal_agents": {
-             "available": False,
-             "agents": []
-         },
-},
-
-    "Midazolam (IV/ICU)": {
-        "group": "Supportive - Benzodiazepine (IV Sedation/ICU)",
-        "vietnamese_name": "Midazolam tiêm tĩnh mạch",
-        "administration": ["IV"],
-        "indications": [
-            "An thần cho bệnh nhân thở máy trong ICU.",
-            "Tiền mê và an thần trước thủ thuật/phẫu thuật.",
-            "Kiểm soát cơn co giật trong một số trường hợp (khi không có đường khác).",
-        ],
-        "contraindications": [
-            "Dị ứng với midazolam hoặc các benzodiazepine khác.",
-            "Suy hô hấp nặng không được hỗ trợ.",
-            "Sốc, tụt huyết áp nặng chưa kiểm soát.",
-        ],
-        "dosage": {
-            "icu_sedation_loading": "0.01–0.05mg/kg IV bolus chậm, lặp lại nếu cần.",
-            "icu_sedation_maintenance": "0.02–0.1mg/kg/giờ truyền tĩnh mạch, chỉnh theo thang điểm an thần.",
-            "procedural_sedation": "0.02–0.07mg/kg IV chậm (thường 1–2mg), tiêm nhắc lại theo đáp ứng.",
-            "notes": "Người cao tuổi, suy gan, suy hô hấp: dùng liều thấp hơn và tiêm thật chậm.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều ban đầu.",
-            "30_60": "Có thể kéo dài thời gian tác dụng; chỉnh tốc độ truyền thấp hơn.",
-            "under_30": "Thận trọng, giảm liều duy trì; theo dõi tích lũy chất chuyển hóa gây an thần kéo dài.",
-        },
-        "side_effects": [
-            "Ức chế hô hấp, ngừng thở (đặc biệt khi dùng nhanh hoặc phối hợp opioid).",
-            "Tụt huyết áp, đặc biệt ở bệnh nhân giảm thể tích hoặc dùng liều cao.",
-            "Lú lẫn, mê sảng, đặc biệt khi dùng kéo dài trong ICU.",
-            "Phản ứng nghịch đảo (kích động, bứt rứt) hiếm gặp.",
-        ],
-        "interactions": [
-            "Opioid (fentanyl, morphine): tăng tác dụng ức chế TKTW và ức chế hô hấp.",
-            "Thuốc ức chế CYP3A4 (azole, macrolid): tăng nồng độ midazolam, kéo dài an thần.",
-            "Thuốc cảm ứng CYP3A4 (rifampin, phenytoin): giảm hiệu quả an thần.",
-        ],
-        "pregnancy": "D khi dùng kéo dài; có thể dùng liều đơn trong tiền mê khi cần thiết.",
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {"respiratory": True, "neurologic": True},
-            "icu_critical_care_only": True,
-            "look_alike_sound_alike": []
-        },
-        "guideline_tags": [
-            "SCCM ICU Sedation Guidelines",
-            "ASA Practice Guidelines for Sedation and Analgesia",
-            "PADIS Guidelines"
-        ],
-        "mechanism_of_action": (
-            "Midazolam là benzodiazepine, gắn vào vị trí đặc hiệu trên thụ thể GABA_A, "
-            "tăng tần suất mở kênh chloride khi GABA gắn, làm tăng ức chế sau synap. "
-            "Tác dụng: an thần, giải lo âu, gây ngủ, chống co giật, giãn cơ trung ương."
-        ),
-        "monitoring": [
-            "Huyết áp, nhịp tim, SpO2, tần số thở liên tục.",
-            "Mức độ an thần (RASS, Ramsay).",
-            "Dấu hiệu mê sảng, đặc biệt khi dùng kéo dài.",
-        ],
-        "precautions": [
-            "Luôn chuẩn bị sẵn phương tiện hỗ trợ hô hấp và thuốc đảo ngược (flumazenil) trong môi trường thủ thuật.",
-            "Giảm liều ở người cao tuổi, suy gan, suy hô hấp, suy thận.",
-            "Hạn chế dùng kéo dài liều cao trong ICU do nguy cơ mê sảng và tích lũy.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "2–6 giờ (kéo dài ở người cao tuổi, suy gan, suy thận).",
-            "onset": "1–5 phút sau tiêm IV.",
-            "duration": "15–60 phút sau liều đơn; có thể kéo dài khi truyền liên tục.",
-            "protein_binding": "Khoảng 95%.",
-            "clearance": "Chuyển hóa qua CYP3A4 ở gan thành chất chuyển hóa có hoạt tính, thải qua thận.",
-        },
-        "storage": "Bảo quản ở 20–25°C, tránh ánh sáng; không trộn chung với dung dịch kiềm mạnh.",
-        "black_box_warnings": (
-            "Nguy cơ ức chế hô hấp, tụt huyết áp, đặc biệt khi phối hợp với opioid và các thuốc an thần khác; "
-            "chỉ dùng ở nơi có sẵn phương tiện hồi sức."
-        ),
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Opioid mạnh (fentanyl, morphine, hydromorphone)",
-                    "mechanism": "Hiệp đồng ức chế TKTW và trung tâm hô hấp.",
-                    "effect": "Tăng nguy cơ suy hô hấp, ngừng thở.",
-                    "management": "Dùng liều thấp từng thuốc, tăng dần; theo dõi sát và chuẩn bị hỗ trợ hô hấp.",
-                },
-                {
-                    "drug": "Azole (fluconazole, voriconazole), macrolid (erythromycin, clarithromycin)",
-                    "mechanism": "Ức chế CYP3A4, làm giảm chuyển hóa midazolam.",
-                    "effect": "Kéo dài và tăng mức độ an thần.",
-                    "management": "Giảm liều midazolam và theo dõi tác dụng kéo dài.",
-                },
-            ],
-            "moderate": [
-                {
-                    "drug": "Rifampin, phenytoin, carbamazepine",
-                    "mechanism": "Cảm ứng CYP3A4.",
-                    "effect": "Giảm hiệu lực an thần của midazolam.",
-                    "management": "Có thể cần liều cao hơn; theo dõi đáp ứng.",
-                }
-            ],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Quá mẫn với benzodiazepine.",
-            ],
-            "tương_đối": [
-                "Suy hô hấp mạn (COPD nặng) khi không có hỗ trợ hô hấp.",
-                "Suy gan, suy thận nặng.",
-                "Người cao tuổi, nguy cơ mê sảng cao.",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "D (khi dùng kéo dài); C cho liều đơn.",
-            "pregnancy_details": (
-                "Có thể sử dụng liều đơn trong tiền mê khi lợi ích vượt trội nguy cơ; tránh dùng kéo dài trong thai kỳ."
-            ),
-            "lactation": {
-                "safety": "Compatible/Caution",
-                "details": "Midazolam bài tiết vào sữa ở lượng nhỏ; có thể cho bú lại sau vài giờ khi mẹ tỉnh táo.",
-                "recommendation": "Thường không cần ngừng cho bú sau liều đơn; thận trọng nếu dùng kéo dài.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Giảm liều và tăng khoảng cách; theo dõi thời gian tỉnh.",
-            "moderate": "Thận trọng, có thể tích lũy; ưu tiên thuốc khác nếu được.",
-            "severe": "Tránh dùng kéo dài; nếu bắt buộc, dùng liều rất thấp và theo dõi sát.",
-            "notes": "Suy gan làm giảm chuyển hóa midazolam và kéo dài an thần.",
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Ức chế hô hấp, ngừng thở.",
-                "Hạ huyết áp, ngủ gà sâu.",
-            ],
-            "antidote": "Flumazenil – thuốc đối kháng benzodiazepine đặc hiệu.",
-            "treatment": [
-                "Đảm bảo đường thở, hỗ trợ hô hấp.",
-                "Dùng flumazenil liều khởi đầu 0.2mg IV trong 15 giây, có thể nhắc lại 0.2mg mỗi phút (tối đa 1mg) tùy đáp ứng.",
-                "Theo dõi tái an thần do thời gian bán thải midazolam dài hơn flumazenil.",
-            ],
-            "monitoring": "Theo dõi nhịp thở, SpO2, huyết áp, ý thức.",
-        },
-        "reversal_agents": {
-            "available": True,
-            "agents": [
-                {
-                    "name": "Flumazenil",
-                    "indication": "Đảo ngược tác dụng benzodiazepine quá mức (bao gồm midazolam).",
-                    "dose": "0.2mg IV trong 15 giây, nhắc lại 0.2mg mỗi phút đến tối đa 1mg; có thể truyền duy trì nếu cần.",
-                    "mechanism": "Đối kháng cạnh tranh tại vị trí gắn benzodiazepine trên thụ thể GABA_A.",
-                    "notes": "Thận trọng ở bệnh nhân lệ thuộc benzodiazepine mạn tính (nguy cơ co giật).",
-                }
-            ],
-        },
-        "administration_instructions": {
-            "iv": {
-                "reconstitution": "Dung dịch tiêm sẵn dùng hoặc pha loãng trong NaCl 0.9%/D5W theo hướng dẫn.",
-                "infusion_rate": "Truyền bằng bơm tiêm điện; tăng giảm tốc độ theo thang điểm an thần.",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Tiêm bolus chậm trong ít nhất 2 phút để giảm nguy cơ tụt huyết áp và ức chế hô hấp.",
-            },
-        },
-        "references": {
-            "primary_sources": [
-                "SCCM guidelines for ICU sedation and analgesia",
-                "ASA Practice Guidelines for Sedation and Anesthesia",
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High – guideline-based",
-        },
-    },
-
-    "Ketamine": {
-        "group": "Supportive - Dissociative anesthetic/analgesic (ICU/Procedural)",
-        "vietnamese_name": "Ketamine",
-        "administration": ["IV", "IM"],
-        "indications": [
-            "Khởi mê nhanh trong gây mê/tình huống cấp cứu (RSI) khi cần duy trì huyết động.",
-            "An thần/giảm đau liều thấp cho thủ thuật ngắn hoặc giảm đau trong ICU.",
-            "Hỗ trợ giảm đau khi đau khó kiểm soát hoặc giảm opioid, đặc biệt trong đau thần kinh.",
-            "Khởi mê hoặc an thần ở bệnh nhân hen co thắt/phản vệ do tác dụng giãn phế quản.",
-        ],
-        "contraindications": [
-            "Dị ứng với ketamine.",
-            "Tăng huyết áp nặng, phình tách động mạch chủ hoặc bệnh mạch vành không ổn định.",
-            "Tăng áp lực nội sọ/nhãn cầu rõ rệt (thận trọng, không phải chống chỉ định tuyệt đối).",
-        ],
-        "dosage": {
-            "induction_iv": "1–2mg/kg IV bolus chậm trong 30–60 giây (người lớn).",
-            "induction_im": "4–10mg/kg IM khi không có đường IV.",
-            "procedural_sedation_analgesia_iv": "0.25–0.5mg/kg IV bolus, có thể nhắc lại; truyền duy trì 0.1–0.5mg/kg/giờ nếu cần.",
-            "analgesia_low_dose": "Bolus 0.1–0.3mg/kg IV, sau đó truyền 0.1–0.3mg/kg/giờ để giảm đau/tiết giảm opioid.",
-            "status_asthmaticus_adjunct": "0.5–1mg/kg IV bolus, có thể truyền 0.5–2mcg/kg/phút (0.03–0.12mg/kg/giờ) nếu cần.",
-            "notes": "Tiêm bolus chậm để hạn chế nhịp tim/huyết áp tăng mạnh; cân nhắc phối hợp benzodiazepine liều thấp để giảm ảo giác.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều.",
-            "30_60": "Thường không cần chỉnh liều đáng kể; theo dõi kéo dài tác dụng.",
-            "under_30": "Không cần chỉnh liều riêng; theo dõi tích lũy nếu suy đa cơ quan.",
-        },
-        "side_effects": [
-            "Tăng huyết áp, nhịp tim nhanh.",
-            "Tăng tiết nước bọt, tăng trương lực cơ/giật rung cơ nhẹ.",
-            "Ảo giác, mê sảng khi hồi tỉnh (emergence reactions).",
-            "Buồn nôn/nôn, chóng mặt.",
-        ],
-        "interactions": [
-            "Thuốc cường giao cảm (epinephrine, ephedrine): tăng tác dụng tim mạch.",
-            "Benzodiazepine/propofol/opioid: có thể giảm ảo giác và cải thiện an thần nhưng tăng nguy cơ ức chế hô hấp.",
-        ],
-        "pregnancy": "B–C: có thể dùng khi lợi ích vượt trội, tránh lạm dụng; thận trọng ở quý 1.",
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {"cardiac": True, "neurologic": True},
-            "icu_critical_care_only": False,
-            "look_alike_sound_alike": []
-        },
-        "guideline_tags": [
-            "SCCM ICU Sedation Guidelines",
-            "ASA Practice Guidelines for Sedation and Anesthesia",
-            "ACEP Clinical Policy for Procedural Sedation"
-        ],
-        "mechanism_of_action": (
-            "Ketamine là thuốc gây mê phân ly, đối kháng thụ thể NMDA, giảm dẫn truyền glutamate "
-            "và hoạt hóa nhẹ thụ thể opioid/monoamine, tạo tác dụng gây mê, giảm đau và amnestic. "
-            "Bảo tồn phản xạ đường thở và thường duy trì huyết áp/nhịp tim do kích thích giao cảm."
-        ),
-        "monitoring": [
-            "Huyết áp, nhịp tim, SpO2, nhịp thở trong quá trình dùng.",
-            "Mức độ an thần và dấu hiệu ảo giác/agitation khi hồi tỉnh.",
-            "Tiết dịch đường hô hấp; chuẩn bị hút đờm nếu cần.",
-        ],
-        "precautions": [
-            "Thận trọng ở bệnh nhân bệnh mạch vành, tăng huyết áp nặng, tăng ICP/IOP.",
-            "Dùng thêm benzodiazepine liều thấp có thể giảm phản ứng mê sảng khi hồi tỉnh.",
-            "Chuẩn bị chống tăng tiết (atropine/glycopyrrolate) nếu tiết nhiều.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "2–3 giờ; tác dụng lâm sàng ngắn do tái phân bố nhanh.",
-            "onset": "30–60 giây IV; 3–5 phút IM.",
-            "duration": "5–15 phút sau bolus IV; lâu hơn với IM hoặc truyền.",
-            "protein_binding": "Khoảng 20–50%.",
-            "clearance": "Chuyển hóa ở gan qua CYP2B6/3A4/2C9 thành norketamine, thải qua thận.",
-        },
-        "storage": "Bảo quản ở 20–25°C, tránh ánh sáng; dung dịch dùng trực tiếp không cần bảo quản lạnh.",
-        "black_box_warnings": (
-            "Nguy cơ tăng huyết áp/nhịp tim và phản ứng mê sảng khi hồi tỉnh; "
-            "chỉ dùng ở nơi có khả năng hồi sức và giám sát thích hợp."
-        ),
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Thuốc cường giao cảm (epinephrine, ephedrine)",
-                    "mechanism": "Hiệp đồng kích thích giao cảm.",
-                    "effect": "Tăng huyết áp/nhịp tim quá mức.",
-                    "management": "Theo dõi huyết động; giảm liều hoặc tránh phối hợp liều cao.",
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Benzodiazepine hoặc propofol",
-                    "mechanism": "Tăng an thần/ức chế TKTW; có thể giảm ảo giác.",
-                    "effect": "Có thể ức chế hô hấp khi phối hợp; giảm nhu cầu ketamine.",
-                    "management": "Giảm liều từng thuốc, theo dõi hô hấp/huyết động.",
-                }
-            ],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Quá mẫn với ketamine.",
-            ],
-            "tương_đối": [
-                "Tăng huyết áp nặng hoặc bệnh mạch vành không ổn định.",
-                "Tăng áp lực nội sọ/nhãn cầu.",
-                "Tiền sử phản ứng mê sảng nặng.",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B–C",
-            "pregnancy_details": (
-                "Có thể cân nhắc khi cần gây mê nhanh, ưu tiên tránh lạm dụng trong thai kỳ sớm."
-            ),
-            "lactation": {
-                "safety": "Compatible/Caution",
-                "details": "Dữ liệu hạn chế, bài tiết vào sữa ít; có thể cho bú lại khi mẹ tỉnh táo.",
-                "recommendation": "Theo dõi trẻ nếu dùng liều cao/lặp lại.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Thường không cần chỉnh liều đáng kể.",
-            "moderate": "Thận trọng, có thể kéo dài tác dụng; giảm liều truyền.",
-            "severe": "Giảm liều và theo dõi sát do nguy cơ tích lũy.",
-            "notes": "Chuyển hóa ở gan; suy gan có thể kéo dài thời gian bán thải.",
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Ức chế hô hấp (hiếm, thường khi phối hợp thuốc khác).",
-                "Tăng huyết áp/nhịp tim quá mức hoặc loạn nhịp.",
-                "Kích động, ảo giác mạnh.",
-            ],
-            "antidote": "Không có antidote đặc hiệu.",
-            "treatment": [
-                "Đảm bảo đường thở, hỗ trợ hô hấp nếu cần.",
-                "Kiểm soát huyết áp/tim mạch; dùng benzodiazepine nếu kích động/ảo giác.",
-                "Theo dõi ECG, huyết áp liên tục.",
-            ],
-            "monitoring": "Giám sát huyết động và hô hấp cho đến khi hồi phục.",
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "iv": {
-                "reconstitution": "Dung dịch có sẵn; có thể pha loãng trong NaCl 0.9%/D5W để truyền.",
-                "infusion_rate": "Truyền bằng bơm tiêm điện 0.1–0.5mg/kg/giờ cho giảm đau/an thần nhẹ.",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Tiêm bolus chậm; hút đờm/anticholinergic nếu tăng tiết nhiều.",
-            },
-            "im": {
-                "reconstitution": "Dung dịch sẵn dùng; tiêm bắp sâu.",
-                "notes": "Khởi phát chậm hơn IV; phù hợp khi khó thiết lập đường IV.",
-            },
-        },
-        "references": {
-            "primary_sources": [
-                "SCCM guidelines for ICU sedation and analgesia",
-                "ACEP clinical policy for procedural sedation",
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High – guideline-based",
-        },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-},
-
     "Dexmedetomidine": {
         "group": "Supportive - Alpha-2 agonist sedative (ICU/Procedural)",
         "vietnamese_name": "Dexmedetomidine",
@@ -796,6 +303,499 @@ SEDATIVES_ANESTHETICS_ICU_DRUGS = {
           },
 },
     
+    "Ketamine": {
+        "group": "Supportive - Dissociative anesthetic/analgesic (ICU/Procedural)",
+        "vietnamese_name": "Ketamine",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Khởi mê nhanh trong gây mê/tình huống cấp cứu (RSI) khi cần duy trì huyết động.",
+            "An thần/giảm đau liều thấp cho thủ thuật ngắn hoặc giảm đau trong ICU.",
+            "Hỗ trợ giảm đau khi đau khó kiểm soát hoặc giảm opioid, đặc biệt trong đau thần kinh.",
+            "Khởi mê hoặc an thần ở bệnh nhân hen co thắt/phản vệ do tác dụng giãn phế quản.",
+        ],
+        "contraindications": [
+            "Dị ứng với ketamine.",
+            "Tăng huyết áp nặng, phình tách động mạch chủ hoặc bệnh mạch vành không ổn định.",
+            "Tăng áp lực nội sọ/nhãn cầu rõ rệt (thận trọng, không phải chống chỉ định tuyệt đối).",
+        ],
+        "dosage": {
+            "induction_iv": "1–2mg/kg IV bolus chậm trong 30–60 giây (người lớn).",
+            "induction_im": "4–10mg/kg IM khi không có đường IV.",
+            "procedural_sedation_analgesia_iv": "0.25–0.5mg/kg IV bolus, có thể nhắc lại; truyền duy trì 0.1–0.5mg/kg/giờ nếu cần.",
+            "analgesia_low_dose": "Bolus 0.1–0.3mg/kg IV, sau đó truyền 0.1–0.3mg/kg/giờ để giảm đau/tiết giảm opioid.",
+            "status_asthmaticus_adjunct": "0.5–1mg/kg IV bolus, có thể truyền 0.5–2mcg/kg/phút (0.03–0.12mg/kg/giờ) nếu cần.",
+            "notes": "Tiêm bolus chậm để hạn chế nhịp tim/huyết áp tăng mạnh; cân nhắc phối hợp benzodiazepine liều thấp để giảm ảo giác.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Thường không cần chỉnh liều đáng kể; theo dõi kéo dài tác dụng.",
+            "under_30": "Không cần chỉnh liều riêng; theo dõi tích lũy nếu suy đa cơ quan.",
+        },
+        "side_effects": [
+            "Tăng huyết áp, nhịp tim nhanh.",
+            "Tăng tiết nước bọt, tăng trương lực cơ/giật rung cơ nhẹ.",
+            "Ảo giác, mê sảng khi hồi tỉnh (emergence reactions).",
+            "Buồn nôn/nôn, chóng mặt.",
+        ],
+        "interactions": [
+            "Thuốc cường giao cảm (epinephrine, ephedrine): tăng tác dụng tim mạch.",
+            "Benzodiazepine/propofol/opioid: có thể giảm ảo giác và cải thiện an thần nhưng tăng nguy cơ ức chế hô hấp.",
+        ],
+        "pregnancy": "B–C: có thể dùng khi lợi ích vượt trội, tránh lạm dụng; thận trọng ở quý 1.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True, "neurologic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "SCCM ICU Sedation Guidelines",
+            "ASA Practice Guidelines for Sedation and Anesthesia",
+            "ACEP Clinical Policy for Procedural Sedation"
+        ],
+        "mechanism_of_action": (
+            "Ketamine là thuốc gây mê phân ly, đối kháng thụ thể NMDA, giảm dẫn truyền glutamate "
+            "và hoạt hóa nhẹ thụ thể opioid/monoamine, tạo tác dụng gây mê, giảm đau và amnestic. "
+            "Bảo tồn phản xạ đường thở và thường duy trì huyết áp/nhịp tim do kích thích giao cảm."
+        ),
+        "monitoring": [
+            "Huyết áp, nhịp tim, SpO2, nhịp thở trong quá trình dùng.",
+            "Mức độ an thần và dấu hiệu ảo giác/agitation khi hồi tỉnh.",
+            "Tiết dịch đường hô hấp; chuẩn bị hút đờm nếu cần.",
+        ],
+        "precautions": [
+            "Thận trọng ở bệnh nhân bệnh mạch vành, tăng huyết áp nặng, tăng ICP/IOP.",
+            "Dùng thêm benzodiazepine liều thấp có thể giảm phản ứng mê sảng khi hồi tỉnh.",
+            "Chuẩn bị chống tăng tiết (atropine/glycopyrrolate) nếu tiết nhiều.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "2–3 giờ; tác dụng lâm sàng ngắn do tái phân bố nhanh.",
+            "onset": "30–60 giây IV; 3–5 phút IM.",
+            "duration": "5–15 phút sau bolus IV; lâu hơn với IM hoặc truyền.",
+            "protein_binding": "Khoảng 20–50%.",
+            "clearance": "Chuyển hóa ở gan qua CYP2B6/3A4/2C9 thành norketamine, thải qua thận.",
+        },
+        "storage": "Bảo quản ở 20–25°C, tránh ánh sáng; dung dịch dùng trực tiếp không cần bảo quản lạnh.",
+        "black_box_warnings": (
+            "Nguy cơ tăng huyết áp/nhịp tim và phản ứng mê sảng khi hồi tỉnh; "
+            "chỉ dùng ở nơi có khả năng hồi sức và giám sát thích hợp."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc cường giao cảm (epinephrine, ephedrine)",
+                    "mechanism": "Hiệp đồng kích thích giao cảm.",
+                    "effect": "Tăng huyết áp/nhịp tim quá mức.",
+                    "management": "Theo dõi huyết động; giảm liều hoặc tránh phối hợp liều cao.",
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Benzodiazepine hoặc propofol",
+                    "mechanism": "Tăng an thần/ức chế TKTW; có thể giảm ảo giác.",
+                    "effect": "Có thể ức chế hô hấp khi phối hợp; giảm nhu cầu ketamine.",
+                    "management": "Giảm liều từng thuốc, theo dõi hô hấp/huyết động.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Quá mẫn với ketamine.",
+            ],
+            "tương_đối": [
+                "Tăng huyết áp nặng hoặc bệnh mạch vành không ổn định.",
+                "Tăng áp lực nội sọ/nhãn cầu.",
+                "Tiền sử phản ứng mê sảng nặng.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B–C",
+            "pregnancy_details": (
+                "Có thể cân nhắc khi cần gây mê nhanh, ưu tiên tránh lạm dụng trong thai kỳ sớm."
+            ),
+            "lactation": {
+                "safety": "Compatible/Caution",
+                "details": "Dữ liệu hạn chế, bài tiết vào sữa ít; có thể cho bú lại khi mẹ tỉnh táo.",
+                "recommendation": "Theo dõi trẻ nếu dùng liều cao/lặp lại.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thường không cần chỉnh liều đáng kể.",
+            "moderate": "Thận trọng, có thể kéo dài tác dụng; giảm liều truyền.",
+            "severe": "Giảm liều và theo dõi sát do nguy cơ tích lũy.",
+            "notes": "Chuyển hóa ở gan; suy gan có thể kéo dài thời gian bán thải.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp (hiếm, thường khi phối hợp thuốc khác).",
+                "Tăng huyết áp/nhịp tim quá mức hoặc loạn nhịp.",
+                "Kích động, ảo giác mạnh.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Đảm bảo đường thở, hỗ trợ hô hấp nếu cần.",
+                "Kiểm soát huyết áp/tim mạch; dùng benzodiazepine nếu kích động/ảo giác.",
+                "Theo dõi ECG, huyết áp liên tục.",
+            ],
+            "monitoring": "Giám sát huyết động và hô hấp cho đến khi hồi phục.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Dung dịch có sẵn; có thể pha loãng trong NaCl 0.9%/D5W để truyền.",
+                "infusion_rate": "Truyền bằng bơm tiêm điện 0.1–0.5mg/kg/giờ cho giảm đau/an thần nhẹ.",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Tiêm bolus chậm; hút đờm/anticholinergic nếu tăng tiết nhiều.",
+            },
+            "im": {
+                "reconstitution": "Dung dịch sẵn dùng; tiêm bắp sâu.",
+                "notes": "Khởi phát chậm hơn IV; phù hợp khi khó thiết lập đường IV.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "SCCM guidelines for ICU sedation and analgesia",
+                "ACEP clinical policy for procedural sedation",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – guideline-based",
+        },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
+
+    "Midazolam (IV/ICU)": {
+        "group": "Supportive - Benzodiazepine (IV Sedation/ICU)",
+        "vietnamese_name": "Midazolam tiêm tĩnh mạch",
+        "administration": ["IV"],
+        "indications": [
+            "An thần cho bệnh nhân thở máy trong ICU.",
+            "Tiền mê và an thần trước thủ thuật/phẫu thuật.",
+            "Kiểm soát cơn co giật trong một số trường hợp (khi không có đường khác).",
+        ],
+        "contraindications": [
+            "Dị ứng với midazolam hoặc các benzodiazepine khác.",
+            "Suy hô hấp nặng không được hỗ trợ.",
+            "Sốc, tụt huyết áp nặng chưa kiểm soát.",
+        ],
+        "dosage": {
+            "icu_sedation_loading": "0.01–0.05mg/kg IV bolus chậm, lặp lại nếu cần.",
+            "icu_sedation_maintenance": "0.02–0.1mg/kg/giờ truyền tĩnh mạch, chỉnh theo thang điểm an thần.",
+            "procedural_sedation": "0.02–0.07mg/kg IV chậm (thường 1–2mg), tiêm nhắc lại theo đáp ứng.",
+            "notes": "Người cao tuổi, suy gan, suy hô hấp: dùng liều thấp hơn và tiêm thật chậm.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều ban đầu.",
+            "30_60": "Có thể kéo dài thời gian tác dụng; chỉnh tốc độ truyền thấp hơn.",
+            "under_30": "Thận trọng, giảm liều duy trì; theo dõi tích lũy chất chuyển hóa gây an thần kéo dài.",
+        },
+        "side_effects": [
+            "Ức chế hô hấp, ngừng thở (đặc biệt khi dùng nhanh hoặc phối hợp opioid).",
+            "Tụt huyết áp, đặc biệt ở bệnh nhân giảm thể tích hoặc dùng liều cao.",
+            "Lú lẫn, mê sảng, đặc biệt khi dùng kéo dài trong ICU.",
+            "Phản ứng nghịch đảo (kích động, bứt rứt) hiếm gặp.",
+        ],
+        "interactions": [
+            "Opioid (fentanyl, morphine): tăng tác dụng ức chế TKTW và ức chế hô hấp.",
+            "Thuốc ức chế CYP3A4 (azole, macrolid): tăng nồng độ midazolam, kéo dài an thần.",
+            "Thuốc cảm ứng CYP3A4 (rifampin, phenytoin): giảm hiệu quả an thần.",
+        ],
+        "pregnancy": "D khi dùng kéo dài; có thể dùng liều đơn trong tiền mê khi cần thiết.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"respiratory": True, "neurologic": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "SCCM ICU Sedation Guidelines",
+            "ASA Practice Guidelines for Sedation and Analgesia",
+            "PADIS Guidelines"
+        ],
+        "mechanism_of_action": (
+            "Midazolam là benzodiazepine, gắn vào vị trí đặc hiệu trên thụ thể GABA_A, "
+            "tăng tần suất mở kênh chloride khi GABA gắn, làm tăng ức chế sau synap. "
+            "Tác dụng: an thần, giải lo âu, gây ngủ, chống co giật, giãn cơ trung ương."
+        ),
+        "monitoring": [
+            "Huyết áp, nhịp tim, SpO2, tần số thở liên tục.",
+            "Mức độ an thần (RASS, Ramsay).",
+            "Dấu hiệu mê sảng, đặc biệt khi dùng kéo dài.",
+        ],
+        "precautions": [
+            "Luôn chuẩn bị sẵn phương tiện hỗ trợ hô hấp và thuốc đảo ngược (flumazenil) trong môi trường thủ thuật.",
+            "Giảm liều ở người cao tuổi, suy gan, suy hô hấp, suy thận.",
+            "Hạn chế dùng kéo dài liều cao trong ICU do nguy cơ mê sảng và tích lũy.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "2–6 giờ (kéo dài ở người cao tuổi, suy gan, suy thận).",
+            "onset": "1–5 phút sau tiêm IV.",
+            "duration": "15–60 phút sau liều đơn; có thể kéo dài khi truyền liên tục.",
+            "protein_binding": "Khoảng 95%.",
+            "clearance": "Chuyển hóa qua CYP3A4 ở gan thành chất chuyển hóa có hoạt tính, thải qua thận.",
+        },
+        "storage": "Bảo quản ở 20–25°C, tránh ánh sáng; không trộn chung với dung dịch kiềm mạnh.",
+        "black_box_warnings": (
+            "Nguy cơ ức chế hô hấp, tụt huyết áp, đặc biệt khi phối hợp với opioid và các thuốc an thần khác; "
+            "chỉ dùng ở nơi có sẵn phương tiện hồi sức."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Opioid mạnh (fentanyl, morphine, hydromorphone)",
+                    "mechanism": "Hiệp đồng ức chế TKTW và trung tâm hô hấp.",
+                    "effect": "Tăng nguy cơ suy hô hấp, ngừng thở.",
+                    "management": "Dùng liều thấp từng thuốc, tăng dần; theo dõi sát và chuẩn bị hỗ trợ hô hấp.",
+                },
+                {
+                    "drug": "Azole (fluconazole, voriconazole), macrolid (erythromycin, clarithromycin)",
+                    "mechanism": "Ức chế CYP3A4, làm giảm chuyển hóa midazolam.",
+                    "effect": "Kéo dài và tăng mức độ an thần.",
+                    "management": "Giảm liều midazolam và theo dõi tác dụng kéo dài.",
+                },
+            ],
+            "moderate": [
+                {
+                    "drug": "Rifampin, phenytoin, carbamazepine",
+                    "mechanism": "Cảm ứng CYP3A4.",
+                    "effect": "Giảm hiệu lực an thần của midazolam.",
+                    "management": "Có thể cần liều cao hơn; theo dõi đáp ứng.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Quá mẫn với benzodiazepine.",
+            ],
+            "tương_đối": [
+                "Suy hô hấp mạn (COPD nặng) khi không có hỗ trợ hô hấp.",
+                "Suy gan, suy thận nặng.",
+                "Người cao tuổi, nguy cơ mê sảng cao.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D (khi dùng kéo dài); C cho liều đơn.",
+            "pregnancy_details": (
+                "Có thể sử dụng liều đơn trong tiền mê khi lợi ích vượt trội nguy cơ; tránh dùng kéo dài trong thai kỳ."
+            ),
+            "lactation": {
+                "safety": "Compatible/Caution",
+                "details": "Midazolam bài tiết vào sữa ở lượng nhỏ; có thể cho bú lại sau vài giờ khi mẹ tỉnh táo.",
+                "recommendation": "Thường không cần ngừng cho bú sau liều đơn; thận trọng nếu dùng kéo dài.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Giảm liều và tăng khoảng cách; theo dõi thời gian tỉnh.",
+            "moderate": "Thận trọng, có thể tích lũy; ưu tiên thuốc khác nếu được.",
+            "severe": "Tránh dùng kéo dài; nếu bắt buộc, dùng liều rất thấp và theo dõi sát.",
+            "notes": "Suy gan làm giảm chuyển hóa midazolam và kéo dài an thần.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp, ngừng thở.",
+                "Hạ huyết áp, ngủ gà sâu.",
+            ],
+            "antidote": "Flumazenil – thuốc đối kháng benzodiazepine đặc hiệu.",
+            "treatment": [
+                "Đảm bảo đường thở, hỗ trợ hô hấp.",
+                "Dùng flumazenil liều khởi đầu 0.2mg IV trong 15 giây, có thể nhắc lại 0.2mg mỗi phút (tối đa 1mg) tùy đáp ứng.",
+                "Theo dõi tái an thần do thời gian bán thải midazolam dài hơn flumazenil.",
+            ],
+            "monitoring": "Theo dõi nhịp thở, SpO2, huyết áp, ý thức.",
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Flumazenil",
+                    "indication": "Đảo ngược tác dụng benzodiazepine quá mức (bao gồm midazolam).",
+                    "dose": "0.2mg IV trong 15 giây, nhắc lại 0.2mg mỗi phút đến tối đa 1mg; có thể truyền duy trì nếu cần.",
+                    "mechanism": "Đối kháng cạnh tranh tại vị trí gắn benzodiazepine trên thụ thể GABA_A.",
+                    "notes": "Thận trọng ở bệnh nhân lệ thuộc benzodiazepine mạn tính (nguy cơ co giật).",
+                }
+            ],
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Dung dịch tiêm sẵn dùng hoặc pha loãng trong NaCl 0.9%/D5W theo hướng dẫn.",
+                "infusion_rate": "Truyền bằng bơm tiêm điện; tăng giảm tốc độ theo thang điểm an thần.",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Tiêm bolus chậm trong ít nhất 2 phút để giảm nguy cơ tụt huyết áp và ức chế hô hấp.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "SCCM guidelines for ICU sedation and analgesia",
+                "ASA Practice Guidelines for Sedation and Anesthesia",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – guideline-based",
+        },
+    },
+
+    "Propofol": {
+        "group": "Supportive - Sedative/Anesthetic (ICU)",
+        "vietnamese_name": "Propofol (Diprivan)",
+        "administration": ["IV"],
+        "indications": [
+            "Gây mê khởi đầu và duy trì trong phẫu thuật.",
+            "An thần cho bệnh nhân thở máy trong ICU.",
+            "An thần ngắn hạn trong các thủ thuật (nội soi, can thiệp).",
+        ],
+        "contraindications": [
+            "Dị ứng với propofol hoặc bất kỳ thành phần nào của thuốc (bao gồm lecithin trứng, dầu đậu nành tùy chế phẩm).",
+            "Huyết áp rất thấp hoặc sốc không kiểm soát được.",
+        ],
+        "dosage": {
+            "induction_of_anesthesia": "1–2.5mg/kg IV bolus chậm (người lớn khỏe).",
+            "maintenance_of_anesthesia": "4–12mg/kg/giờ truyền tĩnh mạch, chỉnh liều theo đáp ứng.",
+            "icu_sedation": "5–50mcg/kg/phút (0.3–3mg/kg/giờ), chỉnh theo mức an thần mong muốn.",
+            "procedural_sedation": "0.5–1mg/kg IV bolus, sau đó truyền 25–75mcg/kg/phút nếu cần.",
+            "notes": "Người cao tuổi, suy tim, giảm thể tích: dùng liều thấp hơn và tăng từ từ.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần điều chỉnh.",
+            "30_60": "Không cần điều chỉnh đáng kể; chỉnh liều theo huyết động và đáp ứng lâm sàng.",
+            "under_30": "Không cần chỉnh liều riêng; vẫn theo dõi tác dụng kéo dài nếu có suy đa cơ quan.",
+        },
+        "side_effects": [
+            "Hạ huyết áp, tụt huyết áp khi bolus nhanh hoặc liều cao.",
+            "Ức chế hô hấp, ngừng thở nếu tiêm nhanh/ liều cao.",
+            "Đau tại chỗ tiêm.",
+            "Propofol infusion syndrome (hiếm, thường khi truyền liều cao kéo dài): toan chuyển hóa, tăng CK, suy tim, suy thận.",
+        ],
+        "interactions": [
+            "Thuốc an thần khác (benzodiazepine, opioid): tăng tác dụng ức chế TKTW và ức chế hô hấp.",
+            "Thuốc hạ huyết áp, thuốc lợi tiểu: tăng nguy cơ tụt huyết áp.",
+        ],
+        "pregnancy": "B–C: thường dùng trong gây mê ngắn hạn; tránh trong an thần kéo dài thai kỳ nếu có lựa chọn khác.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"cardiac": True, "metabolic": True},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "SCCM ICU Sedation Guidelines",
+            "ASA Practice Guidelines for Sedation and Analgesia",
+            "PADIS Guidelines"
+        ],
+        # === 6 ENHANCED FIELDS CƠ BẢN ===
+        "mechanism_of_action": (
+            "Propofol là thuốc gây mê đường tĩnh mạch, tăng cường hoạt tính của GABA tại thụ thể GABA_A, "
+            "làm tăng dòng chloride vào tế bào thần kinh, gây ưu phân cực màng và ức chế dẫn truyền thần kinh. "
+            "Thuốc có khởi phát nhanh và hồi phục nhanh nhờ phân bố và chuyển hóa nhanh tại gan và mô ngoài gan."
+        ),
+        "monitoring": [
+            "Huyết áp, nhịp tim, SpO2, tần số thở liên tục trong khi dùng.",
+            "Mức độ an thần (RASS, Ramsay hoặc công cụ tương tự).",
+            "Dấu hiệu propofol infusion syndrome nếu truyền liều cao kéo dài: toan chuyển hóa, tăng CK, suy tim, suy thận, tiêu cơ vân.",
+        ],
+        "precautions": [
+            "Chỉ sử dụng khi có khả năng hỗ trợ hô hấp và hồi sức tim phổi đầy đủ.",
+            "Giảm liều và titrate chậm ở bệnh nhân giảm thể tích, suy tim, người cao tuổi.",
+            "Hạn chế truyền liều cao kéo dài (>4mg/kg/giờ >48 giờ) để giảm nguy cơ propofol infusion syndrome.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Phân bố nhanh (2–4 phút), thải trừ pha cuối 3–12 giờ nhưng hồi phục lâm sàng nhanh.",
+            "onset": "30–60 giây sau tiêm tĩnh mạch.",
+            "duration": "5–10 phút sau một liều bolus; hồi phục nhanh khi ngừng truyền.",
+            "protein_binding": "Khoảng 95–99%.",
+            "clearance": "Chủ yếu chuyển hóa ở gan và mô ngoài gan thành chất không hoạt tính, thải qua thận.",
+        },
+        "storage": "Nhũ dịch propofol cần bảo quản ở 2–25°C, lắc nhẹ trước khi dùng; hủy bỏ phần còn lại sau 6–12 giờ tùy quy định để tránh nhiễm khuẩn.",
+        "black_box_warnings": (
+            "Chỉ dùng bởi bác sĩ có kinh nghiệm về gây mê/an thần và quản lý đường thở. "
+            "Nguy cơ suy hô hấp, tụt huyết áp nặng, và hội chứng truyền propofol khi dùng liều cao kéo dài."
+        ),
+        # === 8 ENHANCED FIELDS TÙY CHỌN ===
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Các thuốc an thần khác (benzodiazepine, opioid mạnh)",
+                    "mechanism": "Tác dụng hiệp đồng trên GABA và ức chế TKTW.",
+                    "effect": "Tăng nguy cơ suy hô hấp và tụt huyết áp.",
+                    "management": "Giảm liều từng thuốc, theo dõi sát hô hấp và huyết áp; chuẩn bị phương tiện hỗ trợ hô hấp.",
+                }
+            ],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với propofol hoặc các thành phần trong tá dược.",
+            ],
+            "tương_đối": [
+                "Suy tim nặng, giảm thể tích tuần hoàn chưa bù.",
+                "Rối loạn chuyển hóa acid béo, thiếu hụt carnitine (nguy cơ propofol infusion syndrome).",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "Chưa phân loại rõ (thường xếp C)",
+            "pregnancy_details": (
+                "Thường dùng trong gây mê ngắn hạn ở thai phụ khi cần phẫu thuật; tránh an thần kéo dài nếu có lựa chọn khác."
+            ),
+            "lactation": {
+                "safety": "Compatible/Caution",
+                "details": "Propofol vào sữa rất ít; có thể cho bú lại vài giờ sau khi tỉnh hoàn toàn.",
+                "recommendation": "Thường không cần ngừng cho bú sau gây mê ngắn bằng propofol.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thường không cần chỉnh liều rõ; chỉnh theo đáp ứng lâm sàng.",
+            "moderate": "Thận trọng, có thể kéo dài thời gian tác dụng.",
+            "severe": "Theo dõi sát thời gian hồi tỉnh và huyết động; cân nhắc liều thấp hơn.",
+            "notes": "Propofol chuyển hóa chủ yếu qua gan nhưng còn chuyển hóa ngoài gan; suy gan không nhất thiết làm tích lũy quá mức.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Suy hô hấp, ngừng thở.",
+                "Tụt huyết áp sâu, trụy mạch.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng truyền thuốc ngay lập tức.",
+                "Hỗ trợ hô hấp (mask, đặt nội khí quản, thở máy nếu cần).",
+                "Truyền dịch, thuốc vận mạch để nâng huyết áp.",
+            ],
+            "monitoring": "Theo dõi huyết động, hô hấp và toan kiềm.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Thuốc có dạng nhũ dịch sẵn dùng, không pha loãng quá mức; tuân thủ hướng dẫn vô khuẩn.",
+                "infusion_rate": "Bolus chậm 20–40mg mỗi 10 giây đến khi đạt hiệu quả; truyền duy trì bằng bơm tiêm điện.",
+                "compatibility": [],
+                "incompatibility": [
+                    "Không trộn chung trong cùng đường truyền với máu hoặc nhũ dịch khác.",
+                ],
+                "notes": "Thay dây truyền và lọ thuốc theo khuyến cáo (thường không quá 12 giờ) để tránh nhiễm khuẩn.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "Society of Critical Care Medicine (SCCM) guidelines for ICU sedation and analgesia",
+                "ASA Practice Guidelines for Sedation and Anesthesia",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – guideline-based",
+        },
+             "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+},
+
     "Thiopental": {
         "group": "Supportive - Barbiturate Anesthetic (ICU)",
         "vietnamese_name": "Thiopental, Thiopentone, Pentothal",

@@ -170,6 +170,139 @@ BISPHOSPHONATES_DRUGS = {
          },
 },
 
+    "Ibandronate": {
+        "group": "Endocrinology - Bisphosphonate (Osteoporosis)",
+        "vietnamese_name": "Ibandronate, Boniva",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Loãng xương sau mãn kinh (PO hoặc IV).",
+        ],
+        "contraindications": [
+            "Dị ứng với ibandronate.",
+            "Hẹp thực quản, rối loạn vận động thực quản (PO).",
+            "Suy thận nặng (CrCl <30 ml/min).",
+            "Hạ calci máu.",
+        ],
+        "dosage": {
+            "adult_po_monthly": "150mg PO mỗi tháng.",
+            "adult_iv_quarterly": "3mg IV mỗi 3 tháng.",
+            "notes": "PO: uống lúc đói, ít nhất 60 phút trước ăn. Uống với nước lọc (≥200ml). Đứng hoặc ngồi thẳng ít nhất 60 phút sau khi uống. IV: truyền tĩnh mạch trong 15-30 giây.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Thận trọng.",
+            "under_30": "Không dùng nếu CrCl <30 ml/min.",
+        },
+        "side_effects": [
+            "Kích ứng thực quản (PO).",
+            "Đau cơ, đau xương, đau khớp.",
+            "Sốt, ớn lạnh, đau cơ sau tiêm IV (phản ứng giống cúm).",
+            "Hoại tử xương hàm (ONJ) - hiếm.",
+            "Gãy xương đùi không điển hình - hiếm.",
+        ],
+        "interactions": [
+            "Calcium, sắt, antacids: giảm hấp thu (PO) - dùng cách xa ít nhất 60 phút.",
+        ],
+        "pregnancy": "C: tránh dùng trong thai kỳ.",
+        "mechanism_of_action": (
+            "Ibandronate là bisphosphonate thế hệ 2, ức chế hủy xương bằng cách gắn vào hydroxyapatite "
+            "trong xương và ức chế enzyme farnesyl pyrophosphate synthase (FPPS) trong tế bào hủy xương. "
+            "Giảm hoạt động và gây apoptosis của tế bào hủy xương, dẫn đến giảm hủy xương và tăng mật độ xương."
+        ),
+        "monitoring": [
+            "Mật độ xương (DEXA scan) trước điều trị và sau 1-2 năm.",
+            "Calci máu, phospho máu trước và trong điều trị.",
+            "Creatinine, eGFR (CrCl) trước điều trị.",
+            "Dấu hiệu hoại tử xương hàm.",
+            "Dấu hiệu gãy xương đùi không điển hình.",
+        ],
+        "precautions": [
+            "PO: uống lúc đói, ít nhất 60 phút trước ăn. Đứng hoặc ngồi thẳng ít nhất 60 phút sau khi uống.",
+            "IV: có thể gây phản ứng giống cúm sau tiêm (sốt, ớn lạnh, đau cơ) - thường tự hết trong 24-48 giờ.",
+            "Dùng cách xa calcium, sắt, antacids ít nhất 60 phút (PO).",
+            "Nguy cơ hoại tử xương hàm: đánh giá răng miệng trước điều trị.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Hơn 10 năm (trong xương), ~10-60 giờ (trong máu).",
+            "onset": "Giảm markers hủy xương trong 1-3 tháng.",
+            "duration": "Tác dụng kéo dài nhiều năm sau khi ngừng.",
+            "protein_binding": "~86-99% (gắn với xương).",
+            "clearance": "Gắn vào xương, thải qua thận.",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": (
+            "Hoại tử xương hàm (ONJ): có thể xảy ra. Đánh giá răng miệng trước điều trị. "
+            "Gãy xương đùi không điển hình: tăng nguy cơ."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Calcium, Sắt, Antacids (PO)",
+                    "mechanism": "Giảm hấp thu ibandronate.",
+                    "effect": "Giảm hiệu quả.",
+                    "management": "Dùng cách xa ít nhất 60 phút.",
+                },
+            ],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với ibandronate.",
+                "Suy thận nặng (CrCl <30 ml/min).",
+                "Hạ calci máu.",
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-60) - thận trọng.",
+                "Hẹp thực quản (PO).",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Tránh dùng trong thai kỳ.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Không khuyến cáo dùng khi cho con bú.",
+                "recommendation": "Ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Không cần chỉnh liều.",
+            "severe": "Không cần chỉnh liều.",
+            "notes": "Ibandronate không chuyển hóa qua gan.",
+        },
+        "overdose_management": {
+            "symptoms": ["Kích ứng thực quản (PO).", "Hạ calci máu.", "Phản ứng giống cúm (IV)."],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": ["Uống sữa hoặc antacid (PO).", "Điều trị hạ calci máu nếu cần.", "Điều trị hỗ trợ phản ứng giống cúm (IV)."],
+            "monitoring": "Calci máu, dấu hiệu kích ứng thực quản, dấu hiệu sinh tồn.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "PHẢI uống lúc đói, ít nhất 60 phút trước ăn.",
+                "timing": "Uống vào buổi sáng, lúc đói, với nước lọc (≥200ml). Đứng hoặc ngồi thẳng ít nhất 60 phút sau khi uống.",
+            },
+            "iv": {
+                "reconstitution": "Dung dịch tiêm sẵn dùng.",
+                "infusion_rate": "Truyền tĩnh mạch trong 15-30 giây.",
+                "compatibility": ["Normal saline", "D5W"],
+                "incompatibility": [],
+                "notes": "Có thể gây phản ứng giống cúm sau tiêm (sốt, ớn lạnh, đau cơ) - thường tự hết trong 24-48 giờ.",
+            },
+        },
+        "references": {
+            "primary_sources": ["FDA Drug Label - Boniva (ibandronate)", "NOF Guidelines 2024"],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved",
+        },
+              "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+},
+
     "Risedronate": {
         "group": "Endocrinology - Bisphosphonate (Osteoporosis)",
         "vietnamese_name": "Risedronate, Actonel",
@@ -297,139 +430,6 @@ BISPHOSPHONATES_DRUGS = {
         },
         "references": {
             "primary_sources": ["FDA Drug Label - Actonel (risedronate)", "NOF Guidelines 2024"],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High – FDA-approved",
-        },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-},
-
-    "Ibandronate": {
-        "group": "Endocrinology - Bisphosphonate (Osteoporosis)",
-        "vietnamese_name": "Ibandronate, Boniva",
-        "administration": ["PO", "IV"],
-        "indications": [
-            "Loãng xương sau mãn kinh (PO hoặc IV).",
-        ],
-        "contraindications": [
-            "Dị ứng với ibandronate.",
-            "Hẹp thực quản, rối loạn vận động thực quản (PO).",
-            "Suy thận nặng (CrCl <30 ml/min).",
-            "Hạ calci máu.",
-        ],
-        "dosage": {
-            "adult_po_monthly": "150mg PO mỗi tháng.",
-            "adult_iv_quarterly": "3mg IV mỗi 3 tháng.",
-            "notes": "PO: uống lúc đói, ít nhất 60 phút trước ăn. Uống với nước lọc (≥200ml). Đứng hoặc ngồi thẳng ít nhất 60 phút sau khi uống. IV: truyền tĩnh mạch trong 15-30 giây.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều.",
-            "30_60": "Thận trọng.",
-            "under_30": "Không dùng nếu CrCl <30 ml/min.",
-        },
-        "side_effects": [
-            "Kích ứng thực quản (PO).",
-            "Đau cơ, đau xương, đau khớp.",
-            "Sốt, ớn lạnh, đau cơ sau tiêm IV (phản ứng giống cúm).",
-            "Hoại tử xương hàm (ONJ) - hiếm.",
-            "Gãy xương đùi không điển hình - hiếm.",
-        ],
-        "interactions": [
-            "Calcium, sắt, antacids: giảm hấp thu (PO) - dùng cách xa ít nhất 60 phút.",
-        ],
-        "pregnancy": "C: tránh dùng trong thai kỳ.",
-        "mechanism_of_action": (
-            "Ibandronate là bisphosphonate thế hệ 2, ức chế hủy xương bằng cách gắn vào hydroxyapatite "
-            "trong xương và ức chế enzyme farnesyl pyrophosphate synthase (FPPS) trong tế bào hủy xương. "
-            "Giảm hoạt động và gây apoptosis của tế bào hủy xương, dẫn đến giảm hủy xương và tăng mật độ xương."
-        ),
-        "monitoring": [
-            "Mật độ xương (DEXA scan) trước điều trị và sau 1-2 năm.",
-            "Calci máu, phospho máu trước và trong điều trị.",
-            "Creatinine, eGFR (CrCl) trước điều trị.",
-            "Dấu hiệu hoại tử xương hàm.",
-            "Dấu hiệu gãy xương đùi không điển hình.",
-        ],
-        "precautions": [
-            "PO: uống lúc đói, ít nhất 60 phút trước ăn. Đứng hoặc ngồi thẳng ít nhất 60 phút sau khi uống.",
-            "IV: có thể gây phản ứng giống cúm sau tiêm (sốt, ớn lạnh, đau cơ) - thường tự hết trong 24-48 giờ.",
-            "Dùng cách xa calcium, sắt, antacids ít nhất 60 phút (PO).",
-            "Nguy cơ hoại tử xương hàm: đánh giá răng miệng trước điều trị.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "Hơn 10 năm (trong xương), ~10-60 giờ (trong máu).",
-            "onset": "Giảm markers hủy xương trong 1-3 tháng.",
-            "duration": "Tác dụng kéo dài nhiều năm sau khi ngừng.",
-            "protein_binding": "~86-99% (gắn với xương).",
-            "clearance": "Gắn vào xương, thải qua thận.",
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
-        "black_box_warnings": (
-            "Hoại tử xương hàm (ONJ): có thể xảy ra. Đánh giá răng miệng trước điều trị. "
-            "Gãy xương đùi không điển hình: tăng nguy cơ."
-        ),
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Calcium, Sắt, Antacids (PO)",
-                    "mechanism": "Giảm hấp thu ibandronate.",
-                    "effect": "Giảm hiệu quả.",
-                    "management": "Dùng cách xa ít nhất 60 phút.",
-                },
-            ],
-            "moderate": [],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng với ibandronate.",
-                "Suy thận nặng (CrCl <30 ml/min).",
-                "Hạ calci máu.",
-            ],
-            "tương_đối": [
-                "Suy thận trung bình (CrCl 30-60) - thận trọng.",
-                "Hẹp thực quản (PO).",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Tránh dùng trong thai kỳ.",
-            "lactation": {
-                "safety": "Incompatible",
-                "details": "Không khuyến cáo dùng khi cho con bú.",
-                "recommendation": "Ngừng cho con bú hoặc ngừng thuốc.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh liều.",
-            "moderate": "Không cần chỉnh liều.",
-            "severe": "Không cần chỉnh liều.",
-            "notes": "Ibandronate không chuyển hóa qua gan.",
-        },
-        "overdose_management": {
-            "symptoms": ["Kích ứng thực quản (PO).", "Hạ calci máu.", "Phản ứng giống cúm (IV)."],
-            "antidote": "Không có antidote đặc hiệu.",
-            "treatment": ["Uống sữa hoặc antacid (PO).", "Điều trị hạ calci máu nếu cần.", "Điều trị hỗ trợ phản ứng giống cúm (IV)."],
-            "monitoring": "Calci máu, dấu hiệu kích ứng thực quản, dấu hiệu sinh tồn.",
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "oral": {
-                "with_food": "PHẢI uống lúc đói, ít nhất 60 phút trước ăn.",
-                "timing": "Uống vào buổi sáng, lúc đói, với nước lọc (≥200ml). Đứng hoặc ngồi thẳng ít nhất 60 phút sau khi uống.",
-            },
-            "iv": {
-                "reconstitution": "Dung dịch tiêm sẵn dùng.",
-                "infusion_rate": "Truyền tĩnh mạch trong 15-30 giây.",
-                "compatibility": ["Normal saline", "D5W"],
-                "incompatibility": [],
-                "notes": "Có thể gây phản ứng giống cúm sau tiêm (sốt, ớn lạnh, đau cơ) - thường tự hết trong 24-48 giờ.",
-            },
-        },
-        "references": {
-            "primary_sources": ["FDA Drug Label - Boniva (ibandronate)", "NOF Guidelines 2024"],
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },

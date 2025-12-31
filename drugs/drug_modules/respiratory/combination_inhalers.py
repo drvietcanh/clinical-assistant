@@ -293,6 +293,121 @@ COMBINATION_INHALERS_DRUGS = {
              "evidence_level": "C - Cần tra cứu và cập nhật"
          },
 },
+    "Fluticasone/Umeclidinium/Vilanterol inhaler": {
+        "group": "Respiratory - Fixed-dose Combination (ICS/LAMA/LABA)",
+        "vietnamese_name": "Fluticasone/Umeclidinium/Vilanterol, Trelegy Ellipta",
+        "administration": ["Inhalation"],
+        "indications": [
+            "COPD nặng, nhiều đợt cấp (triple therapy)",
+            "Hen phế quản không kiểm soát với ICS/LABA",
+        ],
+        "contraindications": [
+            "Dị ứng với fluticasone, umeclidinium, vilanterol",
+            "Dùng cùng ritonavir (tăng mạnh nồng độ fluticasone)",
+        ],
+        "dosage": {
+            "adult_copd": "100/62.5/25mcg: 1 hít x 1 lần/ngày",
+            "adult_asthma": "200/62.5/25mcg: 1 hít x 1 lần/ngày (tùy mức độ)",
+            "notes": "Dùng đều đặn 1 lần/ngày; không dùng để cắt cơn.",
+        },
+        "renal_adjustment": {"normal": "Không đổi", "30_60": "Thận trọng", "under_30": "Thận trọng", "dialysis": "Thận trọng", "notes": "LAMA thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy."},
+        "side_effects": [
+            "Nấm miệng, khàn tiếng (ICS)",
+            "Khô miệng, bí tiểu (LAMA)",
+            "Tim đập nhanh, run cơ (LABA)",
+        ],
+        "interactions": [
+            "Ritonavir: chống chỉ định (tăng mạnh nồng độ fluticasone)",
+            "Ketoconazole/itraconazole: tăng nồng độ fluticasone",
+        ],
+        "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "GINA Guidelines (Global Initiative for Asthma)",
+            "GOLD Guidelines (Global Initiative for Chronic Obstructive Lung Disease)"
+        ],
+        "mechanism_of_action": "Phối hợp 3 trong 1: ICS (fluticasone) kháng viêm, LAMA (umeclidinium) và LABA (vilanterol) giãn phế quản kéo dài, tối ưu hóa kiểm soát COPD/hen nặng.",
+        "monitoring": [
+            "Triệu chứng hen/COPD, FEV1",
+            "Nấm miệng, tác dụng phụ anticholinergic",
+            "Nhịp tim, huyết áp",
+        ],
+        "precautions": [
+            "Súc miệng sau khi dùng.",
+            "Không dùng với ritonavir.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Fluticasone: 7.8 giờ; Umeclidinium: 11 giờ; Vilanterol: 11 giờ",
+            "onset": "Vilanterol: 5 phút; Umeclidinium: 5-15 phút; Fluticasone: vài giờ",
+            "duration": "Cả ba: 24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "Fluticasone: 91%; Umeclidinium: 89%; Vilanterol: 94%",
+            "clearance": "Fluticasone: chuyển hóa gan (CYP3A4), thải qua phân; Umeclidinium: chuyển hóa gan (CYP2D6), thải qua phân và thận; Vilanterol: chuyển hóa gan (CYP3A4), thải qua phân và thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
+        "black_box_warnings": "Không dùng với ritonavir do tăng mạnh nồng độ fluticasone gây tác dụng phụ nghiêm trọng. Không dùng LABA đơn độc cho hen phế quản.",
+             "drug_interactions": {
+             "major": [],
+             "moderate": [],
+             "minor": [
+                 {
+                     "drug": "Ritonavir: chống chỉ định (tăng mạnh nồng độ fluticasone)",
+                     "mechanism": "Tương tác lâm sàng"
+                 },
+                 {
+                     "drug": "Ketoconazole/itraconazole: tăng nồng độ fluticasone",
+                     "mechanism": "Tương tác lâm sàng"
+                 }
+             ]
+         },
+         "pregnancy_lactation": {
+             "fda_category": "C",
+             "pregnancy_details": "Category C - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+             "lactation": {
+                 "safety": "Compatible with monitoring",
+                 "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                 "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+             }
+         },
+         "hepatic_adjustment": {
+             "mild": "Không đổi",
+             "moderate": "Thận trọng",
+             "severe": "Thận trọng, có thể giảm liều",
+             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+         },
+         "overdose_management": {
+             "symptoms": [
+                 "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+             ],
+             "antidote": "Không có antidote đặc hiệu",
+             "treatment": [
+                 "Ngừng ngay thuốc",
+                 "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                 "Than hoạt tính",
+                 "Điều trị hỗ trợ và điều trị triệu chứng",
+                 "Theo dõi dấu hiệu sinh tồn"
+             ],
+             "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+         },
+         "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
+         "administration_instructions": {},
+         "references": {
+             "primary_sources": [
+                 "FDA Drug Label - Fluticasone/Umeclidinium/Vilanterol inhaler",
+                 "UpToDate - Cần cập nhật"
+             ],
+             "last_updated": "2025-12-28",
+             "evidence_level": "C - Cần tra cứu và cập nhật"
+         },
+},
     "Ipratropium/Salbutamol inhaler": {
         "group": "Respiratory - Fixed-dose Combination (SAMA/SABA)",
         "vietnamese_name": "Ipratropium/Salbutamol, Combivent, Duoneb",
@@ -765,121 +880,6 @@ COMBINATION_INHALERS_DRUGS = {
          "black_box_warnings": None,
          "black_box_warnings": None,
          "black_box_warnings": "Không có",
-},
-    "Fluticasone/Umeclidinium/Vilanterol inhaler": {
-        "group": "Respiratory - Fixed-dose Combination (ICS/LAMA/LABA)",
-        "vietnamese_name": "Fluticasone/Umeclidinium/Vilanterol, Trelegy Ellipta",
-        "administration": ["Inhalation"],
-        "indications": [
-            "COPD nặng, nhiều đợt cấp (triple therapy)",
-            "Hen phế quản không kiểm soát với ICS/LABA",
-        ],
-        "contraindications": [
-            "Dị ứng với fluticasone, umeclidinium, vilanterol",
-            "Dùng cùng ritonavir (tăng mạnh nồng độ fluticasone)",
-        ],
-        "dosage": {
-            "adult_copd": "100/62.5/25mcg: 1 hít x 1 lần/ngày",
-            "adult_asthma": "200/62.5/25mcg: 1 hít x 1 lần/ngày (tùy mức độ)",
-            "notes": "Dùng đều đặn 1 lần/ngày; không dùng để cắt cơn.",
-        },
-        "renal_adjustment": {"normal": "Không đổi", "30_60": "Thận trọng", "under_30": "Thận trọng", "dialysis": "Thận trọng", "notes": "LAMA thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy."},
-        "side_effects": [
-            "Nấm miệng, khàn tiếng (ICS)",
-            "Khô miệng, bí tiểu (LAMA)",
-            "Tim đập nhanh, run cơ (LABA)",
-        ],
-        "interactions": [
-            "Ritonavir: chống chỉ định (tăng mạnh nồng độ fluticasone)",
-            "Ketoconazole/itraconazole: tăng nồng độ fluticasone",
-        ],
-        "pregnancy": "C",
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {},
-            "icu_critical_care_only": False,
-            "look_alike_sound_alike": []
-        },
-        "guideline_tags": [
-            "GINA Guidelines (Global Initiative for Asthma)",
-            "GOLD Guidelines (Global Initiative for Chronic Obstructive Lung Disease)"
-        ],
-        "mechanism_of_action": "Phối hợp 3 trong 1: ICS (fluticasone) kháng viêm, LAMA (umeclidinium) và LABA (vilanterol) giãn phế quản kéo dài, tối ưu hóa kiểm soát COPD/hen nặng.",
-        "monitoring": [
-            "Triệu chứng hen/COPD, FEV1",
-            "Nấm miệng, tác dụng phụ anticholinergic",
-            "Nhịp tim, huyết áp",
-        ],
-        "precautions": [
-            "Súc miệng sau khi dùng.",
-            "Không dùng với ritonavir.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "Fluticasone: 7.8 giờ; Umeclidinium: 11 giờ; Vilanterol: 11 giờ",
-            "onset": "Vilanterol: 5 phút; Umeclidinium: 5-15 phút; Fluticasone: vài giờ",
-            "duration": "Cả ba: 24 giờ (dùng 1 lần/ngày)",
-            "protein_binding": "Fluticasone: 91%; Umeclidinium: 89%; Vilanterol: 94%",
-            "clearance": "Fluticasone: chuyển hóa gan (CYP3A4), thải qua phân; Umeclidinium: chuyển hóa gan (CYP2D6), thải qua phân và thận; Vilanterol: chuyển hóa gan (CYP3A4), thải qua phân và thận"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh ẩm. Không bảo quản trong tủ lạnh. Để xa tầm tay trẻ em. Kiểm tra hạn sử dụng trước khi dùng.",
-        "black_box_warnings": "Không dùng với ritonavir do tăng mạnh nồng độ fluticasone gây tác dụng phụ nghiêm trọng. Không dùng LABA đơn độc cho hen phế quản.",
-             "drug_interactions": {
-             "major": [],
-             "moderate": [],
-             "minor": [
-                 {
-                     "drug": "Ritonavir: chống chỉ định (tăng mạnh nồng độ fluticasone)",
-                     "mechanism": "Tương tác lâm sàng"
-                 },
-                 {
-                     "drug": "Ketoconazole/itraconazole: tăng nồng độ fluticasone",
-                     "mechanism": "Tương tác lâm sàng"
-                 }
-             ]
-         },
-         "pregnancy_lactation": {
-             "fda_category": "C",
-             "pregnancy_details": "Category C - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
-             "lactation": {
-                 "safety": "Compatible with monitoring",
-                 "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
-                 "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
-             }
-         },
-         "hepatic_adjustment": {
-             "mild": "Không đổi",
-             "moderate": "Thận trọng",
-             "severe": "Thận trọng, có thể giảm liều",
-             "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
-         },
-         "overdose_management": {
-             "symptoms": [
-                 "Cần tra cứu thêm thông tin về triệu chứng quá liều"
-             ],
-             "antidote": "Không có antidote đặc hiệu",
-             "treatment": [
-                 "Ngừng ngay thuốc",
-                 "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
-                 "Than hoạt tính",
-                 "Điều trị hỗ trợ và điều trị triệu chứng",
-                 "Theo dõi dấu hiệu sinh tồn"
-             ],
-             "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
-         },
-         "reversal_agents": {
-             "available": False,
-             "agents": []
-         },
-         "administration_instructions": {},
-         "references": {
-             "primary_sources": [
-                 "FDA Drug Label - Fluticasone/Umeclidinium/Vilanterol inhaler",
-                 "UpToDate - Cần cập nhật"
-             ],
-             "last_updated": "2025-12-28",
-             "evidence_level": "C - Cần tra cứu và cập nhật"
-         },
 },
 }
 

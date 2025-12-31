@@ -3,6 +3,346 @@
 # Beta-lactams
 
 BETA_LACTAMS_DRUGS = {
+    "Amoxicillin": {
+        "group": "Antibiotic - Beta-lactam (Penicillin)",
+        "vietnamese_name": "Amoxicillin, Amoxil, Amoxicillin 500mg",
+        "administration": ["PO"],
+        "indications": [
+            "Nhiễm khuẩn đường hô hấp trên/dưới",
+            "Nhiễm khuẩn đường tiết niệu",
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm khuẩn răng miệng",
+            "Nhiễm khuẩn tai mũi họng",
+            "Helicobacter pylori (kết hợp với PPI và clarithromycin)"
+        ],
+        "contraindications": [
+            "Dị ứng penicillin",
+            "Dị ứng beta-lactam",
+            "Nhiễm trùng do vi khuẩn tiết beta-lactamase (cần dùng amoxicillin-clavulanate)"
+        ],
+        "dosage": {
+            "adult_standard": "250-500mg x 3 lần/ngày hoặc 500-875mg x 2 lần/ngày",
+            "adult_severe": "500-1000mg x 3 lần/ngày",
+            "adult_h_pylori": "1000mg x 2 lần/ngày (với PPI và clarithromycin)",
+            "pediatric": "20-40mg/kg/ngày chia 3 lần (tối đa 500mg/lần)",
+            "notes": "Uống với hoặc không có thức ăn. Dùng đủ thời gian (thường 7-10 ngày)"
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25% hoặc tăng khoảng cách",
+            "under_30": "Giảm liều 50% hoặc tăng khoảng cách",
+            "hemodialysis": "Liều sau mỗi lần lọc máu"
+        },
+        "side_effects": [
+            "Tiêu chảy (phổ biến)",
+            "Buồn nôn, nôn",
+            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV)",
+            "Nhiễm trùng nấm Candida (oral, vaginal)",
+            "Tăng men gan (hiếm)",
+            "Viêm thận kẽ (hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: có thể tăng INR",
+            "Methotrexate: tăng độc tính methotrexate",
+            "Allopurinol: tăng nguy cơ phát ban",
+            "Thuốc tránh thai: có thể giảm hiệu quả",
+            "Probenecid: tăng nồng độ amoxicillin"
+        ],
+        "pregnancy": "B - An toàn trong thai kỳ",
+        "mechanism_of_action": "Amoxicillin là aminopenicillin (beta-lactam antibiotic), ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs) trên màng tế bào vi khuẩn. Amoxicillin là chất tương tự penicillin nhưng có nhóm amin, giúp tăng khả năng xuyên qua màng ngoài của vi khuẩn Gram-âm và tăng phổ kháng khuẩn. Amoxicillin ức chế enzyme transpeptidase, ngăn chặn liên kết chéo giữa các chuỗi peptidoglycan trong thành tế bào vi khuẩn, dẫn đến làm suy yếu và vỡ thành tế bào khi vi khuẩn phân chia. Amoxicillin có phổ kháng khuẩn rộng: Gram-dương (Streptococcus, Enterococcus, một số Staphylococcus không kháng penicillinase), Gram-âm (H. influenzae, E. coli, Proteus mirabilis, Salmonella, Shigella), và một số kỵ khí. Không hiệu quả với vi khuẩn tiết beta-lactamase (cần kết hợp với clavulanate).",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Chức năng thận (creatinine) - hiếm viêm thận kẽ",
+            "Dấu hiệu nhiễm C. difficile",
+            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV, CMV)",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan"
+        ],
+        "precautions": [
+            "Không dùng ở bệnh nhân dị ứng penicillins (phản ứng chéo cao)",
+            "Phát ban thường gặp, đặc biệt ở bệnh nhân nhiễm virus (EBV, CMV) - không phải dị ứng thật",
+            "Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy",
+            "Uống với hoặc không có thức ăn (hấp thu tốt trong cả hai trường hợp)",
+            "Dùng đúng liều và đủ thời gian để tránh kháng thuốc",
+            "Không dùng cho nhiễm trùng do vi khuẩn tiết beta-lactamase (cần amoxicillin-clavulanate)",
+            "Theo dõi nhiễm nấm thứ phát khi dùng kéo dài"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-1.5 giờ",
+            "onset": "1-2 giờ (PO)",
+            "duration": "q8h hoặc q12h tùy liều",
+            "protein_binding": "17-20%",
+            "metabolism": "Một phần trong gan",
+            "clearance": "Chủ yếu qua thận (60-70% bài tiết nguyên dạng qua nước tiểu trong 6-8 giờ), cần điều chỉnh thận ở suy thận nặng"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng bột pha suspension: bảo quản trong tủ lạnh sau khi pha, dùng trong 10-14 ngày.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ phản ứng dị ứng nặng (sốc phản vệ) ở bệnh nhân dị ứng penicillin. Phát ban thường gặp và có thể nhầm với dị ứng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm tổng hợp vitamin K, tăng tác dụng warfarin.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng amoxicillin. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Amoxicillin làm giảm thải trừ methotrexate qua thận, tăng nồng độ methotrexate.",
+                    "effect": "Tăng nồng độ methotrexate, tăng độc tính (giảm bạch cầu, độc gan, độc thận)",
+                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, giảm liều methotrexate, theo dõi chặt chẽ công thức máu, chức năng gan, thận. Ngừng methotrexate nếu có dấu hiệu độc tính."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Allopurinol",
+                    "mechanism": "Cơ chế chưa rõ ràng, nhưng allopurinol làm tăng nguy cơ phản ứng da nghiêm trọng với amoxicillin.",
+                    "effect": "Tăng nguy cơ phát ban, phản ứng dị ứng (đặc biệt phát ban maculopapular)",
+                    "management": "Thận trọng khi dùng đồng thời. Theo dõi dấu hiệu phát ban. Ngừng ngay nếu có phát ban nặng hoặc phản ứng dị ứng."
+                },
+                {
+                    "drug": "Thuốc tránh thai nội tiết",
+                    "mechanism": "Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, giảm tái hấp thu estrogen, giảm hiệu quả thuốc tránh thai.",
+                    "effect": "Có thể giảm hiệu quả thuốc tránh thai, tăng nguy cơ mang thai",
+                    "management": "Khuyến nghị sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng amoxicillin và 7 ngày sau khi ngừng thuốc."
+                },
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết amoxicillin ở ống thận, làm tăng nồng độ amoxicillin.",
+                    "effect": "Tăng nồng độ amoxicillin, tăng thời gian bán thải",
+                    "management": "Có thể dùng để tăng nồng độ amoxicillin nếu cần. Theo dõi tác dụng phụ. Giảm liều amoxicillin nếu cần."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Antacids",
+                    "mechanism": "Antacids có thể giảm nhẹ hấp thu amoxicillin.",
+                    "effect": "Giảm nhẹ hấp thu amoxicillin",
+                    "management": "Cách 2 giờ nếu có thể. Không ảnh hưởng đáng kể ở liều điều trị thông thường."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng amoxicillin hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
+                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
+                "Sốc phản vệ với penicillin trước đây"
+            ],
+            "tương_đối": [
+                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
+                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
+                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Dùng với methotrexate - tăng độc tính methotrexate",
+                "Dùng với allopurinol - tăng nguy cơ phát ban"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng amoxicillin hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
+                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
+                "Sốc phản vệ với penicillin trước đây"
+            ],
+            "tương_đối": [
+                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
+                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
+                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Dùng với methotrexate - tăng độc tính methotrexate",
+                "Dùng với allopurinol - tăng nguy cơ phát ban"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Amoxicillin phân loại B - an toàn trong thai kỳ. Các nghiên cứu trên động vật không cho thấy nguy cơ gây dị tật thai nhi. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng. Tuy nhiên, nên dùng liều thấp nhất hiệu quả và tránh dùng không cần thiết.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Amoxicillin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Penicillin là một trong những kháng sinh an toàn nhất khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh nếu dùng liều cao hoặc kéo dài (tiêu chảy, phát ban)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận, không chuyển hóa ở gan.",
+            "moderate": "Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.",
+            "severe": "Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.",
+            "notes": "Amoxicillin chủ yếu thải qua thận (60-70% trong 6-8 giờ), không chuyển hóa ở gan. Suy gan không ảnh hưởng đến nồng độ amoxicillin."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng",
+                "Triệu chứng thần kinh: Kích động, co giật (hiếm, thường ở liều rất cao)",
+                "Triệu chứng thận: Tăng creatinine, suy thận cấp (hiếm)",
+                "Triệu chứng da: Phát ban, mày đay"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay amoxicillin",
+                "Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Điều trị triệu chứng tiêu hóa: Chống nôn nếu cần, truyền dịch nếu mất nước, theo dõi điện giải",
+                "Điều trị co giật nếu có: Benzodiazepine (diazepam, lorazepam), theo dõi hô hấp",
+                "Lọc máu (hemodialysis) có thể loại bỏ một phần amoxicillin nhưng không được khuyến nghị thường quy"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận (creatinine, BUN, lượng nước tiểu), dấu hiệu da trong ít nhất 24-48 giờ."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay amoxicillin, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn, điều trị triệu chứng tiêu hóa và thần kinh, lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ.",
+                "timing": "Uống 2-3 lần/ngày tùy liều (250-500mg x 3 lần/ngày hoặc 500-875mg x 2 lần/ngày). Uống đều đặn, cách đều nhau trong ngày. Không bỏ liều."
+            },
+            "iv": {
+                "reconstitution": "N/A - Chỉ có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Amoxicillin chỉ có dạng uống. Nếu cần dạng IV, dùng amoxicillin-clavulanate hoặc ampicillin."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Amoxicillin",
+                "UpToDate - Amoxicillin: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
+    },
+    
+    "Amoxicillin suspension": {'group': 'Antibiotic - Beta-lactam (Penicillin)', 'vietnamese_name':
+        'Amoxicillin suspension, Amoxicillin sirô', 'administration': ['PO'],
+        'indications': ['Nhiễm khuẩn đường hô hấp', 'Nhiễm khuẩn tai mũi họng',
+        'Nhiễm khuẩn đường tiết niệu', 'Nhiễm khuẩn da mô mềm',
+        'Helicobacter pylori (phối hợp)'], 'contraindications': [
+        'Dị ứng penicillin', 'Dị ứng beta-lactam'], 'dosage': {
+        'pediatric_otitis': '80-90mg/kg/ngày chia 2 lần (10 ngày)',
+        'pediatric_pneumonia': '80-100mg/kg/ngày chia 3-4 lần', 'pediatric_uti':
+        '25-50mg/kg/ngày chia 3 lần', 'pediatric_suspension_common':
+        '20-40mg/kg/ngày chia 2-3 lần', 'notes':
+        'Có dạng suspension 125mg/5ml, 250mg/5ml cho trẻ em. Uống với hoặc không thức ăn'
+        }, 'renal_adjustment': {'normal': 'Không đổi', '30_60':
+        'Giảm liều hoặc tăng khoảng cách', 'under_30':
+        'Liều thấp hơn, khoảng cách dài hơn'}, 'side_effects': ['Tiêu chảy',
+        'Buồn nôn', 'Phát ban', 'Nhiễm trùng nấm Candida',
+        'Giảm bạch cầu (hiếm)'], 'interactions': ['Warfarin: tăng INR',
+        'Methotrexate: tăng độc tính', 'Allopurinol: tăng nguy cơ phát ban',
+        'Thuốc tránh thai: có thể giảm hiệu quả'], 'pregnancy': 'B - An toàn',
+        'mechanism_of_action':
+        'Amoxicillin là aminopenicillin (beta-lactam antibiotic), ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs) trên màng tế bào vi khuẩn. Amoxicillin là chất tương tự penicillin nhưng có nhóm amin, giúp tăng khả năng xuyên qua màng ngoài của vi khuẩn Gram-âm và tăng phổ kháng khuẩn. Amoxicillin ức chế enzyme transpeptidase, ngăn chặn liên kết chéo giữa các chuỗi peptidoglycan trong thành tế bào vi khuẩn, dẫn đến làm suy yếu và vỡ thành tế bào khi vi khuẩn phân chia. Amoxicillin có phổ kháng khuẩn rộng: Gram-dương (Streptococcus, Enterococcus, một số Staphylococcus không kháng penicillinase), Gram-âm (H. influenzae, E. coli, Proteus mirabilis, Salmonella, Shigella), và một số kỵ khí. Không hiệu quả với vi khuẩn tiết beta-lactamase (cần kết hợp với clavulanate). Dạng suspension phù hợp cho trẻ em, dễ uống và hấp thu tốt.'
+        , 'monitoring': [
+        'Dấu hiệu nhiễm trùng: sốt, WBC, CRP (theo dõi đáp ứng điều trị)',
+        'Cấy máu và cấy từ vị trí nhiễm trùng (nếu có) để đánh giá hiệu quả',
+        'Dấu hiệu dị ứng: phát ban, mề đay, khó thở, sốc phản vệ (đặc biệt ở lần đầu tiên dùng)'
+        , 'Tiêu chảy (phổ biến, có thể là nhiễm C. difficile nếu nặng)',
+        'Chức năng thận (creatinine) nếu dùng liều cao hoặc suy thận',
+        'Dấu hiệu nhiễm C. difficile: tiêu chảy nặng, đau bụng, sốt (cần ngừng và điều trị)'
+        , 'Chức năng gan (ALT, AST) nếu có triệu chứng (hiếm)',
+        'Công thức máu (giảm bạch cầu, thiếu máu hiếm)',
+        'INR nếu dùng với warfarin (tăng nguy cơ chảy máu)'], 'precautions': [
+        'Không dùng ở bệnh nhân dị ứng penicillin hoặc beta-lactam (phản ứng chéo với cephalosporin ~5-10%)'
+        , 'Lắc kỹ suspension trước khi dùng (thuốc lắng xuống đáy)',
+        'Có thể uống với hoặc không thức ăn (hấp thu tốt)',
+        'Dùng đủ liều và đủ thời gian (thường 7-10 ngày) để tránh kháng thuốc',
+        'Thận trọng ở bệnh nhân suy thận (giảm liều hoặc tăng khoảng cách)',
+        'Thận trọng ở bệnh nhân có tiền sử nhiễm C. difficile (tăng nguy cơ tái phát)'
+        , 'Thận trọng với allopurinol (tăng nguy cơ phát ban)',
+        'Thận trọng với methotrexate (amoxicillin làm giảm thải trừ methotrexate, tăng độc tính)'
+        , 'Có thể giảm hiệu quả thuốc tránh thai (dùng biện pháp dự phòng)',
+        'Theo dõi tiêu chảy - nếu nặng hoặc kéo dài, có thể là nhiễm C. difficile',
+        'Dùng đúng liều theo cân nặng ở trẻ em (tính theo mg/kg)'],
+        'pharmacokinetics': {'half_life': '1-1.5 giờ', 'onset':
+        '1-2 giờ (đạt nồng độ đỉnh trong máu)', 'duration':
+        '6-8 giờ (dùng 2-3 lần/ngày)', 'protein_binding': '20%', 'clearance':
+        'Thận: bài tiết chủ yếu qua nước tiểu (không thay đổi, 60-70% trong 6-8 giờ). Một phần nhỏ qua mật. Hấp thu tốt qua đường uống (75-90%), không bị ảnh hưởng bởi thức ăn. Dạng suspension hấp thu tương tự viên nén.'
+        }, 'storage':
+        'Bảo quản suspension ở nhiệt độ phòng (15-30°C) hoặc trong tủ lạnh (2-8°C) - theo hướng dẫn trên nhãn. Lắc kỹ trước khi dùng. Sau khi pha (nếu là bột pha nước): bảo quản trong tủ lạnh (2-8°C), dùng trong vòng 7-14 ngày (theo hướng dẫn). Tránh đông lạnh. Để nơi khô ráo, tránh ánh sáng trực tiếp, tránh xa tầm tay trẻ em.'
+        , 'black_box_warnings': None, 'drug_interactions': {'major': [{'drug':
+        'Methotrexate', 'mechanism':
+        'Amoxicillin làm giảm thải trừ methotrexate qua thận, tăng nồng độ methotrexate.'
+        , 'effect':
+        'Tăng độc tính methotrexate (giảm bạch cầu, độc gan, độc thận, viêm niêm mạc)'
+        , 'management':
+        'Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi công thức máu, chức năng gan, thận chặt chẽ. Có thể cần giảm liều methotrexate.'
+        }, {'drug': 'Allopurinol', 'mechanism':
+        'Cơ chế chưa rõ ràng, nhưng allopurinol làm tăng nguy cơ phản ứng da nghiêm trọng với amoxicillin.'
+        , 'effect':
+        'Tăng nguy cơ phát ban nghiêm trọng, SJS, TEN (đe dọa tính mạng)',
+        'management':
+        'Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu phát ban. Ngừng ngay nếu có phát ban.'
+        }], 'moderate': [{'drug': 'Warfarin', 'mechanism':
+        'Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, ảnh hưởng đến chuyển hóa vitamin K, tăng tác dụng warfarin.'
+        , 'effect': 'Tăng INR, tăng nguy cơ chảy máu', 'management':
+        'Theo dõi INR thường xuyên khi dùng amoxicillin. Điều chỉnh liều warfarin nếu cần.'
+        }, {'drug': 'Thuốc tránh thai (estrogen)', 'mechanism':
+        'Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, giảm tái hấp thu estrogen, giảm hiệu quả thuốc tránh thai.'
+        , 'effect': 'Giảm hiệu quả thuốc tránh thai, tăng nguy cơ có thai',
+        'management':
+        'Dùng biện pháp tránh thai dự phòng (bao cao su) trong thời gian dùng amoxicillin và 7 ngày sau.'
+        }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'Dị ứng penicillin - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (phản ứng chéo với cephalosporin ~5-10%)'
+        , 'Dị ứng beta-lactam', 'Sốc phản vệ với penicillin trước đây'],
+        'tương_đối': [
+        'Dị ứng cephalosporin - thận trọng (phản ứng chéo ~5-10%)',
+        'Nhiễm C. difficile trước đây - tăng nguy cơ tái phát',
+        'Suy thận nặng - giảm liều hoặc tăng khoảng cách',
+        'Đang dùng methotrexate - tăng độc tính methotrexate',
+        'Đang dùng allopurinol - tăng nguy cơ phát ban']},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng penicillin - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (phản ứng chéo với cephalosporin ~5-10%)'
+        , 'Dị ứng beta-lactam', 'Sốc phản vệ với penicillin trước đây'],
+        'tương_đối': [
+        'Dị ứng cephalosporin - thận trọng (phản ứng chéo ~5-10%)',
+        'Nhiễm C. difficile trước đây - tăng nguy cơ tái phát',
+        'Suy thận nặng - giảm liều hoặc tăng khoảng cách',
+        'Đang dùng methotrexate - tăng độc tính methotrexate',
+        'Đang dùng allopurinol - tăng nguy cơ phát ban']},
+        'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
+        'Amoxicillin là category B - an toàn trong thai kỳ. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Không có bằng chứng về dị tật thai nhi. Có thể dùng trong tất cả các tam cá nguyệt.'
+        , 'lactation': {'safety': 'Compatible', 'details':
+        'Amoxicillin bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ. Có thể gây tiêu chảy nhẹ hoặc phát ban ở trẻ, nhưng hiếm.'
+        , 'recommendation':
+        'Có thể dùng khi cho con bú. An toàn cho trẻ bú mẹ. Theo dõi dấu hiệu tiêu chảy hoặc phát ban ở trẻ.'
+        }}, 'hepatic_adjustment': {'mild':
+        'Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận, không chuyển hóa ở gan.'
+        , 'moderate':
+        'Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.',
+        'severe':
+        'Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.',
+        'notes':
+        'Amoxicillin chủ yếu thải qua thận (60-70% trong 6-8 giờ), không chuyển hóa ở gan. Suy gan không ảnh hưởng đến nồng độ amoxicillin.'
+        }, 'overdose_management': {'symptoms': [
+        'Tiêu chảy nặng (có thể là nhiễm C. difficile)', 'Buồn nôn, nôn',
+        'Phát ban, mề đay', 'Sốc phản vệ (hiếm nhưng nguy hiểm)',
+        'Co giật (với liều rất cao, suy thận)',
+        'Rối loạn điện giải (natri cao nếu dùng liều lớn)'], 'antidote':
+        'Không có antidote đặc hiệu. Điều trị hỗ trợ.', 'treatment': [
+        'Ngừng amoxicillin ngay lập tức',
+        'Nếu sốc phản vệ: epinephrine, corticosteroids, antihistamines, hỗ trợ hô hấp'
+        ,
+        'Nếu tiêu chảy nặng: điều trị C. difficile nếu xác định (metronidazole, vancomycin)'
+        , 'Nếu co giật: benzodiazepines (diazepam, lorazepam)',
+        'Điều chỉnh điện giải nếu cần', 'Hỗ trợ hô hấp và tuần hoàn nếu cần',
+        'Theo dõi dấu hiệu sinh tồn'], 'monitoring':
+        'Dấu hiệu sinh tồn, dấu hiệu dị ứng, tiêu chảy, điện giải, dấu hiệu nhiễm C. difficile'
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng.'},
+        'administration_instructions': {'oral': {'with_food':
+        'Có thể uống với hoặc không thức ăn. Hấp thu tốt, không bị ảnh hưởng bởi thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.'
+        , 'timing':
+        'Uống 2-3 lần/ngày tùy chỉ định, cách đều. Lắc kỹ suspension trước khi dùng (thuốc lắng xuống đáy). Dùng đúng liều theo cân nặng ở trẻ em (tính theo mg/kg).'
+        }, 'iv': {'reconstitution': 'N/A - chỉ có dạng uống', 'infusion_rate':
+        'N/A', 'compatibility': [], 'incompatibility': [], 'notes':
+        'Chỉ có dạng uống (suspension)'}}, 'references': {'primary_sources': [
+        'FDA Drug Label - Amoxicillin',
+        'UpToDate - Amoxicillin: Drug Information',
+        "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+        ], 'last_updated': '2025-02-04',         'evidence_level':
+        'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}},
+    
     "Amoxicillin-clavulanate": {'group':
         'Antibiotic - Beta-lactam (Penicillin + Beta-lactamase inhibitor)',
         'vietnamese_name': 'Amoxicillin-clavulanate, Augmentin, Amoclav',
@@ -200,135 +540,214 @@ BETA_LACTAMS_DRUGS = {
         'evidence_level':
         'Level 1 - FDA approved, multiple clinical trials, extensive clinical experience'
         }},
-    "Amoxicillin suspension": {'group': 'Antibiotic - Beta-lactam (Penicillin)', 'vietnamese_name':
-        'Amoxicillin suspension, Amoxicillin sirô', 'administration': ['PO'],
-        'indications': ['Nhiễm khuẩn đường hô hấp', 'Nhiễm khuẩn tai mũi họng',
-        'Nhiễm khuẩn đường tiết niệu', 'Nhiễm khuẩn da mô mềm',
-        'Helicobacter pylori (phối hợp)'], 'contraindications': [
-        'Dị ứng penicillin', 'Dị ứng beta-lactam'], 'dosage': {
-        'pediatric_otitis': '80-90mg/kg/ngày chia 2 lần (10 ngày)',
-        'pediatric_pneumonia': '80-100mg/kg/ngày chia 3-4 lần', 'pediatric_uti':
-        '25-50mg/kg/ngày chia 3 lần', 'pediatric_suspension_common':
-        '20-40mg/kg/ngày chia 2-3 lần', 'notes':
-        'Có dạng suspension 125mg/5ml, 250mg/5ml cho trẻ em. Uống với hoặc không thức ăn'
-        }, 'renal_adjustment': {'normal': 'Không đổi', '30_60':
-        'Giảm liều hoặc tăng khoảng cách', 'under_30':
-        'Liều thấp hơn, khoảng cách dài hơn'}, 'side_effects': ['Tiêu chảy',
-        'Buồn nôn', 'Phát ban', 'Nhiễm trùng nấm Candida',
-        'Giảm bạch cầu (hiếm)'], 'interactions': ['Warfarin: tăng INR',
-        'Methotrexate: tăng độc tính', 'Allopurinol: tăng nguy cơ phát ban',
-        'Thuốc tránh thai: có thể giảm hiệu quả'], 'pregnancy': 'B - An toàn',
-        'mechanism_of_action':
-        'Amoxicillin là aminopenicillin (beta-lactam antibiotic), ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs) trên màng tế bào vi khuẩn. Amoxicillin là chất tương tự penicillin nhưng có nhóm amin, giúp tăng khả năng xuyên qua màng ngoài của vi khuẩn Gram-âm và tăng phổ kháng khuẩn. Amoxicillin ức chế enzyme transpeptidase, ngăn chặn liên kết chéo giữa các chuỗi peptidoglycan trong thành tế bào vi khuẩn, dẫn đến làm suy yếu và vỡ thành tế bào khi vi khuẩn phân chia. Amoxicillin có phổ kháng khuẩn rộng: Gram-dương (Streptococcus, Enterococcus, một số Staphylococcus không kháng penicillinase), Gram-âm (H. influenzae, E. coli, Proteus mirabilis, Salmonella, Shigella), và một số kỵ khí. Không hiệu quả với vi khuẩn tiết beta-lactamase (cần kết hợp với clavulanate). Dạng suspension phù hợp cho trẻ em, dễ uống và hấp thu tốt.'
-        , 'monitoring': [
-        'Dấu hiệu nhiễm trùng: sốt, WBC, CRP (theo dõi đáp ứng điều trị)',
-        'Cấy máu và cấy từ vị trí nhiễm trùng (nếu có) để đánh giá hiệu quả',
-        'Dấu hiệu dị ứng: phát ban, mề đay, khó thở, sốc phản vệ (đặc biệt ở lần đầu tiên dùng)'
-        , 'Tiêu chảy (phổ biến, có thể là nhiễm C. difficile nếu nặng)',
-        'Chức năng thận (creatinine) nếu dùng liều cao hoặc suy thận',
-        'Dấu hiệu nhiễm C. difficile: tiêu chảy nặng, đau bụng, sốt (cần ngừng và điều trị)'
-        , 'Chức năng gan (ALT, AST) nếu có triệu chứng (hiếm)',
-        'Công thức máu (giảm bạch cầu, thiếu máu hiếm)',
-        'INR nếu dùng với warfarin (tăng nguy cơ chảy máu)'], 'precautions': [
-        'Không dùng ở bệnh nhân dị ứng penicillin hoặc beta-lactam (phản ứng chéo với cephalosporin ~5-10%)'
-        , 'Lắc kỹ suspension trước khi dùng (thuốc lắng xuống đáy)',
-        'Có thể uống với hoặc không thức ăn (hấp thu tốt)',
-        'Dùng đủ liều và đủ thời gian (thường 7-10 ngày) để tránh kháng thuốc',
-        'Thận trọng ở bệnh nhân suy thận (giảm liều hoặc tăng khoảng cách)',
-        'Thận trọng ở bệnh nhân có tiền sử nhiễm C. difficile (tăng nguy cơ tái phát)'
-        , 'Thận trọng với allopurinol (tăng nguy cơ phát ban)',
-        'Thận trọng với methotrexate (amoxicillin làm giảm thải trừ methotrexate, tăng độc tính)'
-        , 'Có thể giảm hiệu quả thuốc tránh thai (dùng biện pháp dự phòng)',
-        'Theo dõi tiêu chảy - nếu nặng hoặc kéo dài, có thể là nhiễm C. difficile',
-        'Dùng đúng liều theo cân nặng ở trẻ em (tính theo mg/kg)'],
-        'pharmacokinetics': {'half_life': '1-1.5 giờ', 'onset':
-        '1-2 giờ (đạt nồng độ đỉnh trong máu)', 'duration':
-        '6-8 giờ (dùng 2-3 lần/ngày)', 'protein_binding': '20%', 'clearance':
-        'Thận: bài tiết chủ yếu qua nước tiểu (không thay đổi, 60-70% trong 6-8 giờ). Một phần nhỏ qua mật. Hấp thu tốt qua đường uống (75-90%), không bị ảnh hưởng bởi thức ăn. Dạng suspension hấp thu tương tự viên nén.'
-        }, 'storage':
-        'Bảo quản suspension ở nhiệt độ phòng (15-30°C) hoặc trong tủ lạnh (2-8°C) - theo hướng dẫn trên nhãn. Lắc kỹ trước khi dùng. Sau khi pha (nếu là bột pha nước): bảo quản trong tủ lạnh (2-8°C), dùng trong vòng 7-14 ngày (theo hướng dẫn). Tránh đông lạnh. Để nơi khô ráo, tránh ánh sáng trực tiếp, tránh xa tầm tay trẻ em.'
-        , 'black_box_warnings': None, 'drug_interactions': {'major': [{'drug':
-        'Methotrexate', 'mechanism':
-        'Amoxicillin làm giảm thải trừ methotrexate qua thận, tăng nồng độ methotrexate.'
-        , 'effect':
-        'Tăng độc tính methotrexate (giảm bạch cầu, độc gan, độc thận, viêm niêm mạc)'
-        , 'management':
-        'Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi công thức máu, chức năng gan, thận chặt chẽ. Có thể cần giảm liều methotrexate.'
-        }, {'drug': 'Allopurinol', 'mechanism':
-        'Cơ chế chưa rõ ràng, nhưng allopurinol làm tăng nguy cơ phản ứng da nghiêm trọng với amoxicillin.'
-        , 'effect':
-        'Tăng nguy cơ phát ban nghiêm trọng, SJS, TEN (đe dọa tính mạng)',
-        'management':
-        'Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu phát ban. Ngừng ngay nếu có phát ban.'
-        }], 'moderate': [{'drug': 'Warfarin', 'mechanism':
-        'Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, ảnh hưởng đến chuyển hóa vitamin K, tăng tác dụng warfarin.'
-        , 'effect': 'Tăng INR, tăng nguy cơ chảy máu', 'management':
-        'Theo dõi INR thường xuyên khi dùng amoxicillin. Điều chỉnh liều warfarin nếu cần.'
-        }, {'drug': 'Thuốc tránh thai (estrogen)', 'mechanism':
-        'Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, giảm tái hấp thu estrogen, giảm hiệu quả thuốc tránh thai.'
-        , 'effect': 'Giảm hiệu quả thuốc tránh thai, tăng nguy cơ có thai',
-        'management':
-        'Dùng biện pháp tránh thai dự phòng (bao cao su) trong thời gian dùng amoxicillin và 7 ngày sau.'
-        }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
-        'Dị ứng penicillin - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (phản ứng chéo với cephalosporin ~5-10%)'
-        , 'Dị ứng beta-lactam', 'Sốc phản vệ với penicillin trước đây'],
-        'tương_đối': [
-        'Dị ứng cephalosporin - thận trọng (phản ứng chéo ~5-10%)',
-        'Nhiễm C. difficile trước đây - tăng nguy cơ tái phát',
-        'Suy thận nặng - giảm liều hoặc tăng khoảng cách',
-        'Đang dùng methotrexate - tăng độc tính methotrexate',
-        'Đang dùng allopurinol - tăng nguy cơ phát ban']},
-        'contraindications_detail': {'tuyệt_đối': [
-        'Dị ứng penicillin - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (phản ứng chéo với cephalosporin ~5-10%)'
-        , 'Dị ứng beta-lactam', 'Sốc phản vệ với penicillin trước đây'],
-        'tương_đối': [
-        'Dị ứng cephalosporin - thận trọng (phản ứng chéo ~5-10%)',
-        'Nhiễm C. difficile trước đây - tăng nguy cơ tái phát',
-        'Suy thận nặng - giảm liều hoặc tăng khoảng cách',
-        'Đang dùng methotrexate - tăng độc tính methotrexate',
-        'Đang dùng allopurinol - tăng nguy cơ phát ban']},
-        'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
-        'Amoxicillin là category B - an toàn trong thai kỳ. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Không có bằng chứng về dị tật thai nhi. Có thể dùng trong tất cả các tam cá nguyệt.'
-        , 'lactation': {'safety': 'Compatible', 'details':
-        'Amoxicillin bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ. Có thể gây tiêu chảy nhẹ hoặc phát ban ở trẻ, nhưng hiếm.'
-        , 'recommendation':
-        'Có thể dùng khi cho con bú. An toàn cho trẻ bú mẹ. Theo dõi dấu hiệu tiêu chảy hoặc phát ban ở trẻ.'
-        }}, 'hepatic_adjustment': {'mild':
-        'Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận, không chuyển hóa ở gan.'
-        , 'moderate':
-        'Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.',
-        'severe':
-        'Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.',
-        'notes':
-        'Amoxicillin chủ yếu thải qua thận (60-70% trong 6-8 giờ), không chuyển hóa ở gan. Suy gan không ảnh hưởng đến nồng độ amoxicillin.'
-        }, 'overdose_management': {'symptoms': [
-        'Tiêu chảy nặng (có thể là nhiễm C. difficile)', 'Buồn nôn, nôn',
-        'Phát ban, mề đay', 'Sốc phản vệ (hiếm nhưng nguy hiểm)',
-        'Co giật (với liều rất cao, suy thận)',
-        'Rối loạn điện giải (natri cao nếu dùng liều lớn)'], 'antidote':
-        'Không có antidote đặc hiệu. Điều trị hỗ trợ.', 'treatment': [
-        'Ngừng amoxicillin ngay lập tức',
-        'Nếu sốc phản vệ: epinephrine, corticosteroids, antihistamines, hỗ trợ hô hấp'
-        ,
-        'Nếu tiêu chảy nặng: điều trị C. difficile nếu xác định (metronidazole, vancomycin)'
-        , 'Nếu co giật: benzodiazepines (diazepam, lorazepam)',
-        'Điều chỉnh điện giải nếu cần', 'Hỗ trợ hô hấp và tuần hoàn nếu cần',
-        'Theo dõi dấu hiệu sinh tồn'], 'monitoring':
-        'Dấu hiệu sinh tồn, dấu hiệu dị ứng, tiêu chảy, điện giải, dấu hiệu nhiễm C. difficile'
-        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
-        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng.'},
-        'administration_instructions': {'oral': {'with_food':
-        'Có thể uống với hoặc không thức ăn. Hấp thu tốt, không bị ảnh hưởng bởi thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.'
-        , 'timing':
-        'Uống 2-3 lần/ngày tùy chỉ định, cách đều. Lắc kỹ suspension trước khi dùng (thuốc lắng xuống đáy). Dùng đúng liều theo cân nặng ở trẻ em (tính theo mg/kg).'
-        }, 'iv': {'reconstitution': 'N/A - chỉ có dạng uống', 'infusion_rate':
-        'N/A', 'compatibility': [], 'incompatibility': [], 'notes':
-        'Chỉ có dạng uống (suspension)'}}, 'references': {'primary_sources': [
-        'FDA Drug Label - Amoxicillin',
-        'UpToDate - Amoxicillin: Drug Information',
-        "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ], 'last_updated': '2025-02-04',         'evidence_level':
-        'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}},
+    "Ampicillin": {
+        "group": "Antibiotic - Beta-lactam (Penicillin)",
+        "vietnamese_name": "Ampicillin, Ampicillin sodium",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Nhiễm khuẩn đường hô hấp",
+            "Nhiễm khuẩn đường tiết niệu",
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm khuẩn ổ bụng",
+            "Nhiễm khuẩn huyết",
+            "Viêm màng não do Listeria (kết hợp với gentamicin)",
+            "Viêm nội tâm mạc do Enterococcus (kết hợp với gentamicin)"
+        ],
+        "contraindications": [
+            "Dị ứng penicillin",
+            "Dị ứng beta-lactam",
+            "Nhiễm trùng do vi khuẩn tiết beta-lactamase (cần dùng ampicillin-sulbactam)"
+        ],
+        "dosage": {
+            "adult_standard": "1-2g IV mỗi 4-6 giờ",
+            "adult_severe": "2g IV mỗi 4 giờ",
+            "adult_meningitis": "2g IV mỗi 4 giờ",
+            "adult_endocarditis": "2g IV mỗi 4 giờ (kết hợp với gentamicin)",
+            "pediatric_standard": "100-200mg/kg/ngày chia 4-6 lần",
+            "pediatric_meningitis": "200-300mg/kg/ngày chia 4-6 lần",
+            "notes": "Chỉ có dạng IV/IM. Không hiệu quả với vi khuẩn tiết beta-lactamase (cần ampicillin-sulbactam)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "1-2g IV mỗi 6-8 giờ",
+            "under_30": "1-2g IV mỗi 8-12 giờ",
+            "hemodialysis": "Bổ sung liều sau mỗi lần lọc máu"
+        },
+        "side_effects": [
+            "Tiêu chảy (phổ biến)",
+            "Buồn nôn, nôn",
+            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV)",
+            "Nhiễm trùng nấm Candida",
+            "Tăng men gan (hiếm)",
+            "Viêm thận kẽ (hiếm)",
+            "Giảm bạch cầu (hiếm)"
+        ],
+        "interactions": [
+            "Warfarin: có thể tăng INR",
+            "Methotrexate: tăng độc tính methotrexate",
+            "Allopurinol: tăng nguy cơ phát ban",
+            "Probenecid: tăng nồng độ ampicillin",
+            "Aminoglycosides: không pha chung, truyền riêng"
+        ],
+        "pregnancy": "B - An toàn trong thai kỳ",
+        "mechanism_of_action": "Ampicillin là aminopenicillin (beta-lactam antibiotic), ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs) trên màng tế bào vi khuẩn. Ampicillin có nhóm amin, giúp tăng khả năng xuyên qua màng ngoài của vi khuẩn Gram-âm và tăng phổ kháng khuẩn so với penicillin G. Ampicillin có phổ kháng khuẩn: Gram-dương (Streptococcus, Enterococcus, một số Staphylococcus không kháng penicillinase), Gram-âm (H. influenzae, E. coli, Proteus mirabilis, Salmonella, Shigella), và một số kỵ khí. Không hiệu quả với vi khuẩn tiết beta-lactamase (cần kết hợp với sulbactam). Ampicillin thường dùng IV trong bệnh viện, đặc biệt cho nhiễm trùng nặng.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Chức năng thận (creatinine) - cần điều chỉnh liều ở suy thận",
+            "Dấu hiệu nhiễm C. difficile",
+            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV, CMV)",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Công thức máu (CBC) - hiếm giảm bạch cầu"
+        ],
+        "precautions": [
+            "Không dùng ở bệnh nhân dị ứng penicillins (phản ứng chéo cao)",
+            "Phát ban thường gặp, đặc biệt ở bệnh nhân nhiễm virus (EBV, CMV) - không phải dị ứng thật",
+            "Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy",
+            "Phải điều chỉnh liều theo chức năng thận (eGFR) - quan trọng",
+            "Không dùng cho nhiễm trùng do vi khuẩn tiết beta-lactamase (cần ampicillin-sulbactam)",
+            "Pha trong NS hoặc D5W, truyền IV trong 15-30 phút",
+            "Không pha trộn với aminoglycosides (truyền riêng biệt)",
+            "Theo dõi nhiễm nấm thứ phát khi dùng kéo dài"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1 giờ",
+            "onset": "Ngay lập tức sau khi truyền IV",
+            "duration": "Liều q4h hoặc q6h",
+            "protein_binding": "20%",
+            "metabolism": "Một phần trong gan",
+            "clearance": "Chủ yếu qua thận (75-85% bài tiết nguyên dạng qua nước tiểu trong 6-8 giờ), cần điều chỉnh thận ở suy thận nặng"
+        },
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 1 giờ, hoặc trong tủ lạnh 8 giờ. Không đông lạnh.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ phản ứng dị ứng nặng (sốc phản vệ) ở bệnh nhân dị ứng penicillin. Phát ban thường gặp và có thể nhầm với dị ứng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Ampicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm tổng hợp vitamin K, tăng tác dụng warfarin.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng ampicillin. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Ampicillin ức chế bài tiết methotrexate ở ống thận, làm giảm thải trừ methotrexate.",
+                    "effect": "Tăng nồng độ methotrexate, tăng độc tính (giảm bạch cầu, độc gan, độc thận)",
+                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, giảm liều methotrexate, theo dõi chặt chẽ công thức máu, chức năng gan, thận."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Allopurinol",
+                    "mechanism": "Cơ chế chưa rõ ràng, nhưng allopurinol làm tăng nguy cơ phản ứng da nghiêm trọng với ampicillin.",
+                    "effect": "Tăng nguy cơ phát ban, phản ứng dị ứng",
+                    "management": "Thận trọng khi dùng đồng thời. Theo dõi dấu hiệu phát ban. Ngừng ngay nếu có phát ban nặng."
+                },
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết ampicillin ở ống thận, làm tăng nồng độ ampicillin.",
+                    "effect": "Tăng nồng độ ampicillin, tăng thời gian bán thải",
+                    "management": "Có thể dùng để tăng nồng độ ampicillin nếu cần. Theo dõi tác dụng phụ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Aminoglycosides (Gentamicin, Amikacin, Tobramycin)",
+                    "mechanism": "Cả hai đều có độc tính thận, tác dụng cộng dồn. Ngoài ra, aminoglycosides có thể bị bất hoạt về mặt hóa học bởi beta-lactams khi pha chung.",
+                    "effect": "Tăng nguy cơ độc thận, giảm hiệu quả kháng khuẩn của aminoglycosides nếu pha chung",
+                    "management": "Không pha chung trong cùng một ống truyền. Truyền riêng biệt. Theo dõi chức năng thận chặt chẽ."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng ampicillin hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
+                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
+                "Sốc phản vệ với penicillin trước đây"
+            ],
+            "tương_đối": [
+                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
+                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
+                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Dùng với methotrexate - tăng độc tính methotrexate",
+                "Dùng với allopurinol - tăng nguy cơ phát ban"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng ampicillin hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
+                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
+                "Sốc phản vệ với penicillin trước đây"
+            ],
+            "tương_đối": [
+                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
+                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
+                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Dùng với methotrexate - tăng độc tính methotrexate",
+                "Dùng với allopurinol - tăng nguy cơ phát ban"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Ampicillin phân loại B - an toàn trong thai kỳ. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Ampicillin bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Ampicillin chủ yếu thải qua thận, không chuyển hóa ở gan.",
+            "moderate": "Không cần điều chỉnh liều. Ampicillin chủ yếu thải qua thận.",
+            "severe": "Không cần điều chỉnh liều. Ampicillin chủ yếu thải qua thận.",
+            "notes": "Ampicillin chủ yếu thải qua thận (75-85% trong 6-8 giờ), không chuyển hóa ở gan. Suy gan không ảnh hưởng đến nồng độ ampicillin."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy",
+                "Triệu chứng thần kinh: Kích động, co giật (hiếm, thường ở liều rất cao)",
+                "Triệu chứng thận: Tăng creatinine, suy thận cấp (hiếm)",
+                "Triệu chứng da: Phát ban, mày đay"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay ampicillin",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Điều trị triệu chứng tiêu hóa",
+                "Điều trị co giật nếu có",
+                "Lọc máu có thể loại bỏ một phần ampicillin nhưng không được khuyến nghị thường quy"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, dấu hiệu da trong ít nhất 24-48 giờ."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay ampicillin, theo dõi dấu hiệu sinh tồn, điều trị triệu chứng tiêu hóa và thần kinh, lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "N/A - Chỉ có dạng IV/IM",
+                "timing": "N/A"
+            },
+            "iv": {
+                "reconstitution": "Pha ampicillin với nước cất vô trùng hoặc NaCl 0.9% theo hướng dẫn nhà sản xuất. Lắc kỹ để hòa tan hoàn toàn.",
+                "infusion_rate": "Truyền IV trong 15-30 phút (không truyền nhanh hơn).",
+                "compatibility": ["NaCl 0.9%", "D5W"],
+                "incompatibility": ["Không pha với aminoglycosides trong cùng đường truyền"],
+                "notes": "Chỉ có dạng IV/IM. Không pha trộn với aminoglycosides (truyền riêng biệt)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ampicillin",
+                "UpToDate - Ampicillin: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
+    },
     
     "Ampicillin-sulbactam": {
         "group": "Antibiotic - Beta-lactam (Penicillin + Beta-lactamase inhibitor)",
@@ -576,617 +995,6 @@ BETA_LACTAMS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "Level 1 - FDA approved, multiple clinical trials, extensive clinical experience"
-        }
-    },
-    
-    "Amoxicillin": {
-        "group": "Antibiotic - Beta-lactam (Penicillin)",
-        "vietnamese_name": "Amoxicillin, Amoxil, Amoxicillin 500mg",
-        "administration": ["PO"],
-        "indications": [
-            "Nhiễm khuẩn đường hô hấp trên/dưới",
-            "Nhiễm khuẩn đường tiết niệu",
-            "Nhiễm khuẩn da và mô mềm",
-            "Nhiễm khuẩn răng miệng",
-            "Nhiễm khuẩn tai mũi họng",
-            "Helicobacter pylori (kết hợp với PPI và clarithromycin)"
-        ],
-        "contraindications": [
-            "Dị ứng penicillin",
-            "Dị ứng beta-lactam",
-            "Nhiễm trùng do vi khuẩn tiết beta-lactamase (cần dùng amoxicillin-clavulanate)"
-        ],
-        "dosage": {
-            "adult_standard": "250-500mg x 3 lần/ngày hoặc 500-875mg x 2 lần/ngày",
-            "adult_severe": "500-1000mg x 3 lần/ngày",
-            "adult_h_pylori": "1000mg x 2 lần/ngày (với PPI và clarithromycin)",
-            "pediatric": "20-40mg/kg/ngày chia 3 lần (tối đa 500mg/lần)",
-            "notes": "Uống với hoặc không có thức ăn. Dùng đủ thời gian (thường 7-10 ngày)"
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Giảm liều 25% hoặc tăng khoảng cách",
-            "under_30": "Giảm liều 50% hoặc tăng khoảng cách",
-            "hemodialysis": "Liều sau mỗi lần lọc máu"
-        },
-        "side_effects": [
-            "Tiêu chảy (phổ biến)",
-            "Buồn nôn, nôn",
-            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV)",
-            "Nhiễm trùng nấm Candida (oral, vaginal)",
-            "Tăng men gan (hiếm)",
-            "Viêm thận kẽ (hiếm)"
-        ],
-        "interactions": [
-            "Warfarin: có thể tăng INR",
-            "Methotrexate: tăng độc tính methotrexate",
-            "Allopurinol: tăng nguy cơ phát ban",
-            "Thuốc tránh thai: có thể giảm hiệu quả",
-            "Probenecid: tăng nồng độ amoxicillin"
-        ],
-        "pregnancy": "B - An toàn trong thai kỳ",
-        "mechanism_of_action": "Amoxicillin là aminopenicillin (beta-lactam antibiotic), ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs) trên màng tế bào vi khuẩn. Amoxicillin là chất tương tự penicillin nhưng có nhóm amin, giúp tăng khả năng xuyên qua màng ngoài của vi khuẩn Gram-âm và tăng phổ kháng khuẩn. Amoxicillin ức chế enzyme transpeptidase, ngăn chặn liên kết chéo giữa các chuỗi peptidoglycan trong thành tế bào vi khuẩn, dẫn đến làm suy yếu và vỡ thành tế bào khi vi khuẩn phân chia. Amoxicillin có phổ kháng khuẩn rộng: Gram-dương (Streptococcus, Enterococcus, một số Staphylococcus không kháng penicillinase), Gram-âm (H. influenzae, E. coli, Proteus mirabilis, Salmonella, Shigella), và một số kỵ khí. Không hiệu quả với vi khuẩn tiết beta-lactamase (cần kết hợp với clavulanate).",
-        "monitoring": [
-            "Dấu hiệu nhiễm trùng (sốt, WBC)",
-            "Cấy máu và cấy từ vị trí nhiễm trùng",
-            "Chức năng thận (creatinine) - hiếm viêm thận kẽ",
-            "Dấu hiệu nhiễm C. difficile",
-            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV, CMV)",
-            "Chức năng gan (ALT, AST) - hiếm viêm gan"
-        ],
-        "precautions": [
-            "Không dùng ở bệnh nhân dị ứng penicillins (phản ứng chéo cao)",
-            "Phát ban thường gặp, đặc biệt ở bệnh nhân nhiễm virus (EBV, CMV) - không phải dị ứng thật",
-            "Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy",
-            "Uống với hoặc không có thức ăn (hấp thu tốt trong cả hai trường hợp)",
-            "Dùng đúng liều và đủ thời gian để tránh kháng thuốc",
-            "Không dùng cho nhiễm trùng do vi khuẩn tiết beta-lactamase (cần amoxicillin-clavulanate)",
-            "Theo dõi nhiễm nấm thứ phát khi dùng kéo dài"
-        ],
-        "pharmacokinetics": {
-            "half_life": "1-1.5 giờ",
-            "onset": "1-2 giờ (PO)",
-            "duration": "q8h hoặc q12h tùy liều",
-            "protein_binding": "17-20%",
-            "metabolism": "Một phần trong gan",
-            "clearance": "Chủ yếu qua thận (60-70% bài tiết nguyên dạng qua nước tiểu trong 6-8 giờ), cần điều chỉnh thận ở suy thận nặng"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng bột pha suspension: bảo quản trong tủ lạnh sau khi pha, dùng trong 10-14 ngày.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ phản ứng dị ứng nặng (sốc phản vệ) ở bệnh nhân dị ứng penicillin. Phát ban thường gặp và có thể nhầm với dị ứng.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm tổng hợp vitamin K, tăng tác dụng warfarin.",
-                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng amoxicillin. Điều chỉnh liều warfarin nếu cần."
-                },
-                {
-                    "drug": "Methotrexate",
-                    "mechanism": "Amoxicillin làm giảm thải trừ methotrexate qua thận, tăng nồng độ methotrexate.",
-                    "effect": "Tăng nồng độ methotrexate, tăng độc tính (giảm bạch cầu, độc gan, độc thận)",
-                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, giảm liều methotrexate, theo dõi chặt chẽ công thức máu, chức năng gan, thận. Ngừng methotrexate nếu có dấu hiệu độc tính."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Allopurinol",
-                    "mechanism": "Cơ chế chưa rõ ràng, nhưng allopurinol làm tăng nguy cơ phản ứng da nghiêm trọng với amoxicillin.",
-                    "effect": "Tăng nguy cơ phát ban, phản ứng dị ứng (đặc biệt phát ban maculopapular)",
-                    "management": "Thận trọng khi dùng đồng thời. Theo dõi dấu hiệu phát ban. Ngừng ngay nếu có phát ban nặng hoặc phản ứng dị ứng."
-                },
-                {
-                    "drug": "Thuốc tránh thai nội tiết",
-                    "mechanism": "Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, giảm tái hấp thu estrogen, giảm hiệu quả thuốc tránh thai.",
-                    "effect": "Có thể giảm hiệu quả thuốc tránh thai, tăng nguy cơ mang thai",
-                    "management": "Khuyến nghị sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng amoxicillin và 7 ngày sau khi ngừng thuốc."
-                },
-                {
-                    "drug": "Probenecid",
-                    "mechanism": "Probenecid ức chế bài tiết amoxicillin ở ống thận, làm tăng nồng độ amoxicillin.",
-                    "effect": "Tăng nồng độ amoxicillin, tăng thời gian bán thải",
-                    "management": "Có thể dùng để tăng nồng độ amoxicillin nếu cần. Theo dõi tác dụng phụ. Giảm liều amoxicillin nếu cần."
-                }
-            ],
-            "minor": [
-                {
-                    "drug": "Antacids",
-                    "mechanism": "Antacids có thể giảm nhẹ hấp thu amoxicillin.",
-                    "effect": "Giảm nhẹ hấp thu amoxicillin",
-                    "management": "Cách 2 giờ nếu có thể. Không ảnh hưởng đáng kể ở liều điều trị thông thường."
-                }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng amoxicillin hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
-                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
-                "Sốc phản vệ với penicillin trước đây"
-            ],
-            "tương_đối": [
-                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
-                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
-                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
-                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
-                "Dùng với methotrexate - tăng độc tính methotrexate",
-                "Dùng với allopurinol - tăng nguy cơ phát ban"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng amoxicillin hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
-                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
-                "Sốc phản vệ với penicillin trước đây"
-            ],
-            "tương_đối": [
-                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
-                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
-                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
-                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
-                "Dùng với methotrexate - tăng độc tính methotrexate",
-                "Dùng với allopurinol - tăng nguy cơ phát ban"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Amoxicillin phân loại B - an toàn trong thai kỳ. Các nghiên cứu trên động vật không cho thấy nguy cơ gây dị tật thai nhi. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng. Tuy nhiên, nên dùng liều thấp nhất hiệu quả và tránh dùng không cần thiết.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Amoxicillin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Penicillin là một trong những kháng sinh an toàn nhất khi cho con bú.",
-                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh nếu dùng liều cao hoặc kéo dài (tiêu chảy, phát ban)."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận, không chuyển hóa ở gan.",
-            "moderate": "Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.",
-            "severe": "Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.",
-            "notes": "Amoxicillin chủ yếu thải qua thận (60-70% trong 6-8 giờ), không chuyển hóa ở gan. Suy gan không ảnh hưởng đến nồng độ amoxicillin."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng",
-                "Triệu chứng thần kinh: Kích động, co giật (hiếm, thường ở liều rất cao)",
-                "Triệu chứng thận: Tăng creatinine, suy thận cấp (hiếm)",
-                "Triệu chứng da: Phát ban, mày đay"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
-            "treatment": [
-                "Ngừng ngay amoxicillin",
-                "Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)",
-                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
-                "Điều trị triệu chứng tiêu hóa: Chống nôn nếu cần, truyền dịch nếu mất nước, theo dõi điện giải",
-                "Điều trị co giật nếu có: Benzodiazepine (diazepam, lorazepam), theo dõi hô hấp",
-                "Lọc máu (hemodialysis) có thể loại bỏ một phần amoxicillin nhưng không được khuyến nghị thường quy"
-            ],
-            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận (creatinine, BUN, lượng nước tiểu), dấu hiệu da trong ít nhất 24-48 giờ."
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay amoxicillin, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn, điều trị triệu chứng tiêu hóa và thần kinh, lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ.",
-                "timing": "Uống 2-3 lần/ngày tùy liều (250-500mg x 3 lần/ngày hoặc 500-875mg x 2 lần/ngày). Uống đều đặn, cách đều nhau trong ngày. Không bỏ liều."
-            },
-            "iv": {
-                "reconstitution": "N/A - Chỉ có dạng uống",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Amoxicillin chỉ có dạng uống. Nếu cần dạng IV, dùng amoxicillin-clavulanate hoặc ampicillin."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Amoxicillin",
-                "UpToDate - Amoxicillin: Drug Information",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
-        }
-    },
-    
-    "Ampicillin": {
-        "group": "Antibiotic - Beta-lactam (Penicillin)",
-        "vietnamese_name": "Ampicillin, Ampicillin sodium",
-        "administration": ["IV", "IM"],
-        "indications": [
-            "Nhiễm khuẩn đường hô hấp",
-            "Nhiễm khuẩn đường tiết niệu",
-            "Nhiễm khuẩn da và mô mềm",
-            "Nhiễm khuẩn ổ bụng",
-            "Nhiễm khuẩn huyết",
-            "Viêm màng não do Listeria (kết hợp với gentamicin)",
-            "Viêm nội tâm mạc do Enterococcus (kết hợp với gentamicin)"
-        ],
-        "contraindications": [
-            "Dị ứng penicillin",
-            "Dị ứng beta-lactam",
-            "Nhiễm trùng do vi khuẩn tiết beta-lactamase (cần dùng ampicillin-sulbactam)"
-        ],
-        "dosage": {
-            "adult_standard": "1-2g IV mỗi 4-6 giờ",
-            "adult_severe": "2g IV mỗi 4 giờ",
-            "adult_meningitis": "2g IV mỗi 4 giờ",
-            "adult_endocarditis": "2g IV mỗi 4 giờ (kết hợp với gentamicin)",
-            "pediatric_standard": "100-200mg/kg/ngày chia 4-6 lần",
-            "pediatric_meningitis": "200-300mg/kg/ngày chia 4-6 lần",
-            "notes": "Chỉ có dạng IV/IM. Không hiệu quả với vi khuẩn tiết beta-lactamase (cần ampicillin-sulbactam)."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "1-2g IV mỗi 6-8 giờ",
-            "under_30": "1-2g IV mỗi 8-12 giờ",
-            "hemodialysis": "Bổ sung liều sau mỗi lần lọc máu"
-        },
-        "side_effects": [
-            "Tiêu chảy (phổ biến)",
-            "Buồn nôn, nôn",
-            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV)",
-            "Nhiễm trùng nấm Candida",
-            "Tăng men gan (hiếm)",
-            "Viêm thận kẽ (hiếm)",
-            "Giảm bạch cầu (hiếm)"
-        ],
-        "interactions": [
-            "Warfarin: có thể tăng INR",
-            "Methotrexate: tăng độc tính methotrexate",
-            "Allopurinol: tăng nguy cơ phát ban",
-            "Probenecid: tăng nồng độ ampicillin",
-            "Aminoglycosides: không pha chung, truyền riêng"
-        ],
-        "pregnancy": "B - An toàn trong thai kỳ",
-        "mechanism_of_action": "Ampicillin là aminopenicillin (beta-lactam antibiotic), ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs) trên màng tế bào vi khuẩn. Ampicillin có nhóm amin, giúp tăng khả năng xuyên qua màng ngoài của vi khuẩn Gram-âm và tăng phổ kháng khuẩn so với penicillin G. Ampicillin có phổ kháng khuẩn: Gram-dương (Streptococcus, Enterococcus, một số Staphylococcus không kháng penicillinase), Gram-âm (H. influenzae, E. coli, Proteus mirabilis, Salmonella, Shigella), và một số kỵ khí. Không hiệu quả với vi khuẩn tiết beta-lactamase (cần kết hợp với sulbactam). Ampicillin thường dùng IV trong bệnh viện, đặc biệt cho nhiễm trùng nặng.",
-        "monitoring": [
-            "Dấu hiệu nhiễm trùng (sốt, WBC)",
-            "Cấy máu và cấy từ vị trí nhiễm trùng",
-            "Chức năng thận (creatinine) - cần điều chỉnh liều ở suy thận",
-            "Dấu hiệu nhiễm C. difficile",
-            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV, CMV)",
-            "Chức năng gan (ALT, AST) - hiếm viêm gan",
-            "Công thức máu (CBC) - hiếm giảm bạch cầu"
-        ],
-        "precautions": [
-            "Không dùng ở bệnh nhân dị ứng penicillins (phản ứng chéo cao)",
-            "Phát ban thường gặp, đặc biệt ở bệnh nhân nhiễm virus (EBV, CMV) - không phải dị ứng thật",
-            "Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy",
-            "Phải điều chỉnh liều theo chức năng thận (eGFR) - quan trọng",
-            "Không dùng cho nhiễm trùng do vi khuẩn tiết beta-lactamase (cần ampicillin-sulbactam)",
-            "Pha trong NS hoặc D5W, truyền IV trong 15-30 phút",
-            "Không pha trộn với aminoglycosides (truyền riêng biệt)",
-            "Theo dõi nhiễm nấm thứ phát khi dùng kéo dài"
-        ],
-        "pharmacokinetics": {
-            "half_life": "1 giờ",
-            "onset": "Ngay lập tức sau khi truyền IV",
-            "duration": "Liều q4h hoặc q6h",
-            "protein_binding": "20%",
-            "metabolism": "Một phần trong gan",
-            "clearance": "Chủ yếu qua thận (75-85% bài tiết nguyên dạng qua nước tiểu trong 6-8 giờ), cần điều chỉnh thận ở suy thận nặng"
-        },
-        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 1 giờ, hoặc trong tủ lạnh 8 giờ. Không đông lạnh.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ phản ứng dị ứng nặng (sốc phản vệ) ở bệnh nhân dị ứng penicillin. Phát ban thường gặp và có thể nhầm với dị ứng.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Ampicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm tổng hợp vitamin K, tăng tác dụng warfarin.",
-                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng ampicillin. Điều chỉnh liều warfarin nếu cần."
-                },
-                {
-                    "drug": "Methotrexate",
-                    "mechanism": "Ampicillin ức chế bài tiết methotrexate ở ống thận, làm giảm thải trừ methotrexate.",
-                    "effect": "Tăng nồng độ methotrexate, tăng độc tính (giảm bạch cầu, độc gan, độc thận)",
-                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, giảm liều methotrexate, theo dõi chặt chẽ công thức máu, chức năng gan, thận."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Allopurinol",
-                    "mechanism": "Cơ chế chưa rõ ràng, nhưng allopurinol làm tăng nguy cơ phản ứng da nghiêm trọng với ampicillin.",
-                    "effect": "Tăng nguy cơ phát ban, phản ứng dị ứng",
-                    "management": "Thận trọng khi dùng đồng thời. Theo dõi dấu hiệu phát ban. Ngừng ngay nếu có phát ban nặng."
-                },
-                {
-                    "drug": "Probenecid",
-                    "mechanism": "Probenecid ức chế bài tiết ampicillin ở ống thận, làm tăng nồng độ ampicillin.",
-                    "effect": "Tăng nồng độ ampicillin, tăng thời gian bán thải",
-                    "management": "Có thể dùng để tăng nồng độ ampicillin nếu cần. Theo dõi tác dụng phụ."
-                }
-            ],
-            "minor": [
-                {
-                    "drug": "Aminoglycosides (Gentamicin, Amikacin, Tobramycin)",
-                    "mechanism": "Cả hai đều có độc tính thận, tác dụng cộng dồn. Ngoài ra, aminoglycosides có thể bị bất hoạt về mặt hóa học bởi beta-lactams khi pha chung.",
-                    "effect": "Tăng nguy cơ độc thận, giảm hiệu quả kháng khuẩn của aminoglycosides nếu pha chung",
-                    "management": "Không pha chung trong cùng một ống truyền. Truyền riêng biệt. Theo dõi chức năng thận chặt chẽ."
-                }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng ampicillin hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
-                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
-                "Sốc phản vệ với penicillin trước đây"
-            ],
-            "tương_đối": [
-                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
-                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
-                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
-                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
-                "Dùng với methotrexate - tăng độc tính methotrexate",
-                "Dùng với allopurinol - tăng nguy cơ phát ban"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng ampicillin hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
-                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
-                "Sốc phản vệ với penicillin trước đây"
-            ],
-            "tương_đối": [
-                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
-                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách",
-                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
-                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
-                "Dùng với methotrexate - tăng độc tính methotrexate",
-                "Dùng với allopurinol - tăng nguy cơ phát ban"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Ampicillin phân loại B - an toàn trong thai kỳ. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Ampicillin bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.",
-                "recommendation": "Có thể dùng khi cho con bú."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều. Ampicillin chủ yếu thải qua thận, không chuyển hóa ở gan.",
-            "moderate": "Không cần điều chỉnh liều. Ampicillin chủ yếu thải qua thận.",
-            "severe": "Không cần điều chỉnh liều. Ampicillin chủ yếu thải qua thận.",
-            "notes": "Ampicillin chủ yếu thải qua thận (75-85% trong 6-8 giờ), không chuyển hóa ở gan. Suy gan không ảnh hưởng đến nồng độ ampicillin."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy",
-                "Triệu chứng thần kinh: Kích động, co giật (hiếm, thường ở liều rất cao)",
-                "Triệu chứng thận: Tăng creatinine, suy thận cấp (hiếm)",
-                "Triệu chứng da: Phát ban, mày đay"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng ngay ampicillin",
-                "Theo dõi dấu hiệu sinh tồn",
-                "Điều trị triệu chứng tiêu hóa",
-                "Điều trị co giật nếu có",
-                "Lọc máu có thể loại bỏ một phần ampicillin nhưng không được khuyến nghị thường quy"
-            ],
-            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, dấu hiệu da trong ít nhất 24-48 giờ."
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay ampicillin, theo dõi dấu hiệu sinh tồn, điều trị triệu chứng tiêu hóa và thần kinh, lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "N/A - Chỉ có dạng IV/IM",
-                "timing": "N/A"
-            },
-            "iv": {
-                "reconstitution": "Pha ampicillin với nước cất vô trùng hoặc NaCl 0.9% theo hướng dẫn nhà sản xuất. Lắc kỹ để hòa tan hoàn toàn.",
-                "infusion_rate": "Truyền IV trong 15-30 phút (không truyền nhanh hơn).",
-                "compatibility": ["NaCl 0.9%", "D5W"],
-                "incompatibility": ["Không pha với aminoglycosides trong cùng đường truyền"],
-                "notes": "Chỉ có dạng IV/IM. Không pha trộn với aminoglycosides (truyền riêng biệt)."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Ampicillin",
-                "UpToDate - Ampicillin: Drug Information",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
-        }
-    },
-    
-    "Penicillin V": {
-        "group": "Antibiotic - Beta-lactam (Penicillin, Oral)",
-        "vietnamese_name": "Penicillin V, Penicillin VK, Phenoxymethylpenicillin",
-        "administration": ["PO"],
-        "indications": [
-            "Viêm họng do Streptococcus (phòng thấp khớp)",
-            "Nhiễm trùng đường hô hấp trên",
-            "Nhiễm trùng da và mô mềm nhẹ",
-            "Nhiễm trùng răng miệng",
-            "Phòng ngừa viêm nội tâm mạc (bệnh nhân có bệnh van tim)"
-        ],
-        "contraindications": [
-            "Dị ứng penicillin",
-            "Dị ứng beta-lactam",
-            "Nhiễm trùng nặng (cần penicillin G IV)"
-        ],
-        "dosage": {
-            "adult_standard": "250-500mg x 3-4 lần/ngày",
-            "adult_strep_throat": "500mg x 2-3 lần/ngày x 10 ngày",
-            "adult_endocarditis_prophylaxis": "2g PO 1 giờ trước thủ thuật",
-            "pediatric_standard": "25-50mg/kg/ngày chia 3-4 lần",
-            "pediatric_strep_throat": "250-500mg x 2-3 lần/ngày x 10 ngày (tùy tuổi)",
-            "notes": "Penicillin uống, acid-stable. Uống với hoặc không có thức ăn. Dùng đủ thời gian (thường 10 ngày cho strep throat)."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Không đổi (thải qua thận nhưng an toàn)"
-        },
-        "side_effects": [
-            "Tiêu chảy (phổ biến)",
-            "Buồn nôn, nôn",
-            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV)",
-            "Nhiễm trùng nấm Candida",
-            "Tăng men gan (hiếm)",
-            "Phản ứng dị ứng (mày đay, sốc phản vệ)"
-        ],
-        "interactions": [
-            "Warfarin: có thể tăng INR",
-            "Methotrexate: tăng độc tính methotrexate",
-            "Probenecid: tăng nồng độ penicillin V",
-            "Thuốc tránh thai: có thể giảm hiệu quả"
-        ],
-        "pregnancy": "B - An toàn trong thai kỳ",
-        "mechanism_of_action": "Penicillin V (phenoxymethylpenicillin) là penicillin uống, acid-stable (khác với penicillin G bị phá hủy bởi acid dạ dày). Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs) trên màng tế bào vi khuẩn. Penicillin V ức chế enzyme transpeptidase, ngăn chặn liên kết chéo giữa các chuỗi peptidoglycan trong thành tế bào vi khuẩn, dẫn đến làm suy yếu và vỡ thành tế bào khi vi khuẩn phân chia. Phổ kháng khuẩn: Gram-dương (Streptococcus, một số Staphylococcus không kháng penicillinase), một số kỵ khí. Không hiệu quả với vi khuẩn tiết beta-lactamase hoặc Gram-âm. Penicillin V thường dùng cho nhiễm trùng nhẹ đến trung bình, đặc biệt viêm họng do Streptococcus để phòng thấp khớp.",
-        "monitoring": [
-            "Dấu hiệu nhiễm trùng (sốt, WBC)",
-            "Cấy máu và cấy từ vị trí nhiễm trùng (nếu cần)",
-            "Dấu hiệu nhiễm C. difficile",
-            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV, CMV)",
-            "Chức năng gan (ALT, AST) - hiếm viêm gan",
-            "Dấu hiệu dị ứng (mày đay, sốc phản vệ)"
-        ],
-        "precautions": [
-            "Không dùng ở bệnh nhân dị ứng penicillins (phản ứng chéo cao)",
-            "Phát ban thường gặp, đặc biệt ở bệnh nhân nhiễm virus (EBV, CMV) - không phải dị ứng thật",
-            "Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy",
-            "Uống với hoặc không có thức ăn (hấp thu tốt trong cả hai trường hợp)",
-            "Dùng đúng liều và đủ thời gian để tránh kháng thuốc (đặc biệt quan trọng cho strep throat - 10 ngày)",
-            "Không dùng cho nhiễm trùng nặng (cần penicillin G IV)",
-            "Theo dõi nhiễm nấm thứ phát khi dùng kéo dài"
-        ],
-        "pharmacokinetics": {
-            "half_life": "0.5-1 giờ",
-            "onset": "1-2 giờ (PO)",
-            "duration": "q6h hoặc q8h",
-            "protein_binding": "80%",
-            "metabolism": "Một phần trong gan",
-            "clearance": "Chủ yếu qua thận (60-80% bài tiết nguyên dạng qua nước tiểu trong 6 giờ)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ phản ứng dị ứng nặng (sốc phản vệ) ở bệnh nhân dị ứng penicillin. Phát ban thường gặp và có thể nhầm với dị ứng.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Penicillin V có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm tổng hợp vitamin K, tăng tác dụng warfarin.",
-                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng penicillin V. Điều chỉnh liều warfarin nếu cần."
-                },
-                {
-                    "drug": "Methotrexate",
-                    "mechanism": "Penicillin V làm giảm thải trừ methotrexate qua thận, tăng nồng độ methotrexate.",
-                    "effect": "Tăng nồng độ methotrexate, tăng độc tính (giảm bạch cầu, độc gan, độc thận)",
-                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, giảm liều methotrexate, theo dõi chặt chẽ công thức máu, chức năng gan, thận."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Probenecid",
-                    "mechanism": "Probenecid ức chế bài tiết penicillin V ở ống thận, làm tăng nồng độ penicillin V.",
-                    "effect": "Tăng nồng độ penicillin V, tăng thời gian bán thải",
-                    "management": "Có thể dùng để tăng nồng độ penicillin V nếu cần. Theo dõi tác dụng phụ."
-                },
-                {
-                    "drug": "Thuốc tránh thai nội tiết",
-                    "mechanism": "Penicillin V có thể ảnh hưởng đến hệ vi khuẩn đường ruột, giảm tái hấp thu estrogen, giảm hiệu quả thuốc tránh thai.",
-                    "effect": "Có thể giảm hiệu quả thuốc tránh thai, tăng nguy cơ mang thai",
-                    "management": "Khuyến nghị sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng penicillin V và 7 ngày sau khi ngừng thuốc."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng penicillin V hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
-                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
-                "Sốc phản vệ với penicillin trước đây"
-            ],
-            "tương_đối": [
-                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
-                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
-                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
-                "Dùng với methotrexate - tăng độc tính methotrexate"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng penicillin V hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
-                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
-                "Sốc phản vệ với penicillin trước đây"
-            ],
-            "tương_đối": [
-                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
-                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
-                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
-                "Dùng với methotrexate - tăng độc tính methotrexate"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Penicillin V phân loại B - an toàn trong thai kỳ. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Penicillin V bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.",
-                "recommendation": "Có thể dùng khi cho con bú."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Không cần điều chỉnh liều",
-            "severe": "Không cần điều chỉnh liều",
-            "notes": "Penicillin V chủ yếu thải qua thận, không chuyển hóa ở gan. Suy gan không ảnh hưởng đến nồng độ penicillin V."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy",
-                "Triệu chứng thần kinh: Kích động, co giật (hiếm, thường ở liều rất cao)",
-                "Triệu chứng thận: Tăng creatinine (hiếm)",
-                "Triệu chứng da: Phát ban, mày đay"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng ngay penicillin V",
-                "Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ",
-                "Theo dõi dấu hiệu sinh tồn",
-                "Điều trị triệu chứng tiêu hóa",
-                "Điều trị co giật nếu có",
-                "Lọc máu có thể loại bỏ một phần penicillin V nhưng không được khuyến nghị thường quy"
-            ],
-            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, dấu hiệu da trong ít nhất 24 giờ."
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ.",
-                "timing": "Uống 3-4 lần/ngày (250-500mg mỗi lần). Uống đều đặn, cách đều nhau trong ngày. Không bỏ liều. Đặc biệt quan trọng: dùng đủ 10 ngày cho strep throat để phòng thấp khớp."
-            },
-            "iv": {
-                "reconstitution": "N/A - Chỉ có dạng uống",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Penicillin V chỉ có dạng uống. Nếu cần dạng IV, dùng penicillin G."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Penicillin V",
-                "UpToDate - Penicillin V: Drug Information",
-                "American Heart Association guidelines (phòng thấp khớp)",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
         }
     },
     
@@ -1585,7 +1393,199 @@ BETA_LACTAMS_DRUGS = {
                       "notes": "Cần tra cứu thêm thông tin chi tiết."
                   }
               },
-}
+},
+    "Penicillin V": {
+        "group": "Antibiotic - Beta-lactam (Penicillin, Oral)",
+        "vietnamese_name": "Penicillin V, Penicillin VK, Phenoxymethylpenicillin",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm họng do Streptococcus (phòng thấp khớp)",
+            "Nhiễm trùng đường hô hấp trên",
+            "Nhiễm trùng da và mô mềm nhẹ",
+            "Nhiễm trùng răng miệng",
+            "Phòng ngừa viêm nội tâm mạc (bệnh nhân có bệnh van tim)"
+        ],
+        "contraindications": [
+            "Dị ứng penicillin",
+            "Dị ứng beta-lactam",
+            "Nhiễm trùng nặng (cần penicillin G IV)"
+        ],
+        "dosage": {
+            "adult_standard": "250-500mg x 3-4 lần/ngày",
+            "adult_strep_throat": "500mg x 2-3 lần/ngày x 10 ngày",
+            "adult_endocarditis_prophylaxis": "2g PO 1 giờ trước thủ thuật",
+            "pediatric_standard": "25-50mg/kg/ngày chia 3-4 lần",
+            "pediatric_strep_throat": "250-500mg x 2-3 lần/ngày x 10 ngày (tùy tuổi)",
+            "notes": "Penicillin uống, acid-stable. Uống với hoặc không có thức ăn. Dùng đủ thời gian (thường 10 ngày cho strep throat)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi (thải qua thận nhưng an toàn)"
+        },
+        "side_effects": [
+            "Tiêu chảy (phổ biến)",
+            "Buồn nôn, nôn",
+            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV)",
+            "Nhiễm trùng nấm Candida",
+            "Tăng men gan (hiếm)",
+            "Phản ứng dị ứng (mày đay, sốc phản vệ)"
+        ],
+        "interactions": [
+            "Warfarin: có thể tăng INR",
+            "Methotrexate: tăng độc tính methotrexate",
+            "Probenecid: tăng nồng độ penicillin V",
+            "Thuốc tránh thai: có thể giảm hiệu quả"
+        ],
+        "pregnancy": "B - An toàn trong thai kỳ",
+        "mechanism_of_action": "Penicillin V (phenoxymethylpenicillin) là penicillin uống, acid-stable (khác với penicillin G bị phá hủy bởi acid dạ dày). Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs) trên màng tế bào vi khuẩn. Penicillin V ức chế enzyme transpeptidase, ngăn chặn liên kết chéo giữa các chuỗi peptidoglycan trong thành tế bào vi khuẩn, dẫn đến làm suy yếu và vỡ thành tế bào khi vi khuẩn phân chia. Phổ kháng khuẩn: Gram-dương (Streptococcus, một số Staphylococcus không kháng penicillinase), một số kỵ khí. Không hiệu quả với vi khuẩn tiết beta-lactamase hoặc Gram-âm. Penicillin V thường dùng cho nhiễm trùng nhẹ đến trung bình, đặc biệt viêm họng do Streptococcus để phòng thấp khớp.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng (nếu cần)",
+            "Dấu hiệu nhiễm C. difficile",
+            "Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV, CMV)",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Dấu hiệu dị ứng (mày đay, sốc phản vệ)"
+        ],
+        "precautions": [
+            "Không dùng ở bệnh nhân dị ứng penicillins (phản ứng chéo cao)",
+            "Phát ban thường gặp, đặc biệt ở bệnh nhân nhiễm virus (EBV, CMV) - không phải dị ứng thật",
+            "Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy",
+            "Uống với hoặc không có thức ăn (hấp thu tốt trong cả hai trường hợp)",
+            "Dùng đúng liều và đủ thời gian để tránh kháng thuốc (đặc biệt quan trọng cho strep throat - 10 ngày)",
+            "Không dùng cho nhiễm trùng nặng (cần penicillin G IV)",
+            "Theo dõi nhiễm nấm thứ phát khi dùng kéo dài"
+        ],
+        "pharmacokinetics": {
+            "half_life": "0.5-1 giờ",
+            "onset": "1-2 giờ (PO)",
+            "duration": "q6h hoặc q8h",
+            "protein_binding": "80%",
+            "metabolism": "Một phần trong gan",
+            "clearance": "Chủ yếu qua thận (60-80% bài tiết nguyên dạng qua nước tiểu trong 6 giờ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, nguy cơ phản ứng dị ứng nặng (sốc phản vệ) ở bệnh nhân dị ứng penicillin. Phát ban thường gặp và có thể nhầm với dị ứng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Penicillin V có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm tổng hợp vitamin K, tăng tác dụng warfarin.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng penicillin V. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Penicillin V làm giảm thải trừ methotrexate qua thận, tăng nồng độ methotrexate.",
+                    "effect": "Tăng nồng độ methotrexate, tăng độc tính (giảm bạch cầu, độc gan, độc thận)",
+                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, giảm liều methotrexate, theo dõi chặt chẽ công thức máu, chức năng gan, thận."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết penicillin V ở ống thận, làm tăng nồng độ penicillin V.",
+                    "effect": "Tăng nồng độ penicillin V, tăng thời gian bán thải",
+                    "management": "Có thể dùng để tăng nồng độ penicillin V nếu cần. Theo dõi tác dụng phụ."
+                },
+                {
+                    "drug": "Thuốc tránh thai nội tiết",
+                    "mechanism": "Penicillin V có thể ảnh hưởng đến hệ vi khuẩn đường ruột, giảm tái hấp thu estrogen, giảm hiệu quả thuốc tránh thai.",
+                    "effect": "Có thể giảm hiệu quả thuốc tránh thai, tăng nguy cơ mang thai",
+                    "management": "Khuyến nghị sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng penicillin V và 7 ngày sau khi ngừng thuốc."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng penicillin V hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
+                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
+                "Sốc phản vệ với penicillin trước đây"
+            ],
+            "tương_đối": [
+                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
+                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Dùng với methotrexate - tăng độc tính methotrexate"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng penicillin V hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam",
+                "Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao",
+                "Sốc phản vệ với penicillin trước đây"
+            ],
+            "tương_đối": [
+                "Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng",
+                "Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)",
+                "Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát",
+                "Dùng với methotrexate - tăng độc tính methotrexate"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Penicillin V phân loại B - an toàn trong thai kỳ. Penicillin là một trong những kháng sinh an toàn nhất trong thai kỳ. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Penicillin V bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Không cần điều chỉnh liều",
+            "notes": "Penicillin V chủ yếu thải qua thận, không chuyển hóa ở gan. Suy gan không ảnh hưởng đến nồng độ penicillin V."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy",
+                "Triệu chứng thần kinh: Kích động, co giật (hiếm, thường ở liều rất cao)",
+                "Triệu chứng thận: Tăng creatinine (hiếm)",
+                "Triệu chứng da: Phát ban, mày đay"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay penicillin V",
+                "Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Điều trị triệu chứng tiêu hóa",
+                "Điều trị co giật nếu có",
+                "Lọc máu có thể loại bỏ một phần penicillin V nhưng không được khuyến nghị thường quy"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, dấu hiệu da trong ít nhất 24 giờ."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ.",
+                "timing": "Uống 3-4 lần/ngày (250-500mg mỗi lần). Uống đều đặn, cách đều nhau trong ngày. Không bỏ liều. Đặc biệt quan trọng: dùng đủ 10 ngày cho strep throat để phòng thấp khớp."
+            },
+            "iv": {
+                "reconstitution": "N/A - Chỉ có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Penicillin V chỉ có dạng uống. Nếu cần dạng IV, dùng penicillin G."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Penicillin V",
+                "UpToDate - Penicillin V: Drug Information",
+                "American Heart Association guidelines (phòng thấp khớp)",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
+    },
+    
 }
 
 __all__ = ['BETA_LACTAMS_DRUGS']

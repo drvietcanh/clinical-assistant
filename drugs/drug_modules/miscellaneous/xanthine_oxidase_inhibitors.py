@@ -149,7 +149,7 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
             'ACR Guidelines - Gout Management',
             'FDA Black Box Warning - Allopurinol and Severe Skin Reactions',
             'EULAR Guidelines - Gout',
-            'FDA Drug Safety Communication - Allopurinol and SJS/TEN'
+            'FDA Drug Safety Communication - Allopurinol and SJS/TEN',
         ]}}
 
 __all__ = ['XANTHINE_OXIDASE_INHIBITORS_DRUGS']

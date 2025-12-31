@@ -184,7 +184,7 @@ NITROIMIDAZOLES_DRUGS = {
         'Micromedex - Metronidazole Drug Information',
         'IDSA Guidelines - Anaerobic Infections, C. difficile Infection'],
         'last_updated': '2025-02-03', 'evidence_level':
-        'A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
+        'A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn',
         }}}
 
 __all__ = ['NITROIMIDAZOLES_DRUGS']

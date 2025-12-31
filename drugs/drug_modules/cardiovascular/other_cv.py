@@ -3,6 +3,143 @@ Other Cardiovascular Drugs
 """
 
 OTHER_CV_DRUGS = {
+    "Clonidine": {
+        "group": "Cardiovascular - Central Alpha-2 Agonist",
+        "vietnamese_name": "Clonidine, Catapres",
+        "administration": ["PO", "Transdermal"],
+        "indications": [
+            "Tăng huyết áp",
+            "Cai nghiện opioid",
+            "Cai nghiện rượu",
+            "Rối loạn tăng động giảm chú ý (ADHD)",
+            "Đau dây thần kinh",
+            "Đổ mồ hôi quá mức"
+        ],
+        "contraindications": [
+            "Dị ứng clonidine",
+            "Block nhĩ thất độ 2-3",
+            "Sick sinus syndrome"
+        ],
+        "dosage": {
+            "adult_htn": "0.1-0.3mg x 2-3 lần/ngày, tăng dần đến 0.6-2.4mg/ngày",
+            "adult_htn_transdermal": "Patch 0.1-0.3mg/ngày, thay mỗi 7 ngày",
+            "adult_opioid_withdrawal": "0.1-0.3mg x 3 lần/ngày",
+            "notes": "KHÔNG ngừng đột ngột (rebound hypertension). Giảm liều dần trong 2-4 ngày."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, có thể giảm liều",
+            "under_30": "Thận trọng, giảm liều 25-50%"
+        },
+        "side_effects": [
+            "Khô miệng (thường gặp)",
+            "Buồn ngủ, mệt mỏi",
+            "Chóng mặt",
+            "Táo bón",
+            "Rebound hypertension (nếu ngừng đột ngột)",
+            "Nhịp tim chậm",
+            "Hạ huyết áp tư thế"
+        ],
+        "interactions": [
+            "Beta-blocker: tăng nguy cơ nhịp tim chậm, block AV khi ngừng clonidine",
+            "Tricyclic antidepressants: giảm hiệu quả clonidine",
+            "Alcohol, sedatives: tăng tác dụng an thần"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Central alpha-2 adrenergic agonist. Kích thích thụ thể alpha-2 ở hành não (nucleus tractus solitarius), làm giảm hoạt động giao cảm, giảm giải phóng norepinephrine từ các neuron giao cảm trung ương. Kết quả: giảm nhịp tim, giảm sức cản mạch máu ngoại vi, giảm huyết áp. Cũng có tác dụng giảm đau và giảm triệu chứng cai nghiện opioid/rượu. Clonidine cũng có tác dụng ngoại vi nhẹ (alpha-2 agonist ngoại vi).",
+        "monitoring": [
+            "Huyết áp và nhịp tim (đặc biệt khi bắt đầu và khi ngừng)",
+            "Dấu hiệu rebound hypertension (nếu ngừng đột ngột)",
+            "Dấu hiệu quá liều (hạ huyết áp nặng, nhịp tim chậm, buồn ngủ nặng)",
+            "Chức năng thận (creatinine, eGFR)"
+        ],
+        "precautions": [
+            "KHÔNG ngừng đột ngột - phải giảm liều dần trong 2-4 ngày (nguy cơ rebound hypertension nặng)",
+            "Thận trọng ở suy thận (giảm thải trừ)",
+            "Thận trọng ở bệnh nhân có block AV hoặc nhịp tim chậm",
+            "Tăng tác dụng an thần với alcohol, sedatives",
+            "Dạng transdermal: có thể gây kích ứng da, thay vị trí mỗi tuần",
+            "Tương tác với beta-blockers: không ngừng clonidine đột ngột khi đang dùng beta-blocker"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12-16 giờ",
+            "onset": "30-60 phút (PO), 2-3 ngày (transdermal)",
+            "duration": "6-8 giờ (PO), 7 ngày (transdermal patch)",
+            "protein_binding": "20-40%",
+            "metabolism": "Gan (50%), thận (50% bài tiết không đổi)",
+            "clearance": "Gan và thận, cần điều chỉnh ở suy thận"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Patch: bảo quản trong túi kín, tránh nhiệt độ cao.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, ngừng đột ngột clonidine có thể gây rebound hypertension nặng, đe dọa tính mạng. PHẢI giảm liều dần trong 2-4 ngày.",
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Catapres (clonidine)",
+                "UpToDate - Clonidine: Drug information",
+                "American Heart Association/American College of Cardiology guidelines - Hypertension"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - Extensive clinical experience in hypertension and opioid withdrawal"
+        },
+        "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "Beta-blocker: tăng nguy cơ nhịp tim chậm, block AV khi ngừng clonidine",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Tricyclic antidepressants: giảm hiệu quả clonidine",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Alcohol, sedatives: tăng tác dụng an thần",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "C",
+              "pregnancy_details": "Category C - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+              "lactation": {
+                  "safety": "Compatible with monitoring",
+                  "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                  "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi",
+              "moderate": "Thận trọng",
+              "severe": "Thận trọng, có thể giảm liều",
+              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+              ],
+              "antidote": "Không có antidote đặc hiệu",
+              "treatment": [
+                  "Ngừng ngay thuốc",
+                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                  "Than hoạt tính",
+                  "Điều trị hỗ trợ và điều trị triệu chứng",
+                  "Theo dõi dấu hiệu sinh tồn"
+              ],
+              "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+          },
+          "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                  "timing": "Theo chỉ định của bác sĩ",
+                  "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+              }
+          },
+},
+
       "Digoxin": {
         "group": "Cardiovascular - Cardiac Glycoside",
         "vietnamese_name": "Digoxin, Lanoxin",
@@ -267,298 +404,501 @@ OTHER_CV_DRUGS = {
         }
     },
 
-    "Clonidine": {
-        "group": "Cardiovascular - Central Alpha-2 Agonist",
-        "vietnamese_name": "Clonidine, Catapres",
-        "administration": ["PO", "Transdermal"],
+    "Doxazosin": {
+        "group": "Cardiovascular - Alpha-1 Blocker",
+        "vietnamese_name": "Doxazosin, Cardura",
+        "administration": ["PO"],
         "indications": [
             "Tăng huyết áp",
-            "Cai nghiện opioid",
-            "Cai nghiện rượu",
-            "Rối loạn tăng động giảm chú ý (ADHD)",
-            "Đau dây thần kinh",
-            "Đổ mồ hôi quá mức"
+            "Phì đại tuyến tiền liệt lành tính (BPH - Benign Prostatic Hyperplasia)",
+            "Rối loạn tiểu tiện do BPH"
         ],
         "contraindications": [
-            "Dị ứng clonidine",
-            "Block nhĩ thất độ 2-3",
-            "Sick sinus syndrome"
+            "Dị ứng doxazosin hoặc bất kỳ thành phần nào",
+            "Hạ huyết áp nặng",
+            "Suy tim nặng"
         ],
         "dosage": {
-            "adult_htn": "0.1-0.3mg x 2-3 lần/ngày, tăng dần đến 0.6-2.4mg/ngày",
-            "adult_htn_transdermal": "Patch 0.1-0.3mg/ngày, thay mỗi 7 ngày",
-            "adult_opioid_withdrawal": "0.1-0.3mg x 3 lần/ngày",
-            "notes": "KHÔNG ngừng đột ngột (rebound hypertension). Giảm liều dần trong 2-4 ngày."
+            "adult_hypertension": "1mg PO x 1 lần/ngày, tăng dần đến 2-4mg/ngày (tối đa 16mg/ngày)",
+            "adult_bph": "1mg PO x 1 lần/ngày, tăng dần đến 4-8mg/ngày (tối đa 8mg/ngày)",
+            "adult_max": "16mg/ngày (hypertension), 8mg/ngày (BPH)",
+            "notes": "Khởi đầu với liều thấp (1mg) để tránh hạ huyết áp tư thế. Tăng dần mỗi 1-2 tuần. Uống buổi tối để giảm tác dụng phụ hạ huyết áp."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
-            "30_60": "Thận trọng, có thể giảm liều",
-            "under_30": "Thận trọng, giảm liều 25-50%"
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
         },
         "side_effects": [
-            "Khô miệng (thường gặp)",
-            "Buồn ngủ, mệt mỏi",
-            "Chóng mặt",
-            "Táo bón",
-            "Rebound hypertension (nếu ngừng đột ngột)",
-            "Nhịp tim chậm",
-            "Hạ huyết áp tư thế"
+            "Hạ huyết áp tư thế (orthostatic hypotension) - phổ biến, đặc biệt liều đầu tiên",
+            "Chóng mặt, ngất",
+            "Nhức đầu",
+            "Mệt mỏi",
+            "Buồn nôn",
+            "Phù ngoại biên (hiếm)",
+            "Rối loạn cương dương (hiếm)"
         ],
         "interactions": [
-            "Beta-blocker: tăng nguy cơ nhịp tim chậm, block AV khi ngừng clonidine",
-            "Tricyclic antidepressants: giảm hiệu quả clonidine",
-            "Alcohol, sedatives: tăng tác dụng an thần"
+            "Thuốc hạ huyết áp khác: tăng tác dụng hạ huyết áp",
+            "Sildenafil, Tadalafil, Vardenafil: tăng nguy cơ hạ huyết áp",
+            "Rượu: tăng tác dụng hạ huyết áp"
         ],
         "pregnancy": "C",
-        "mechanism_of_action": "Central alpha-2 adrenergic agonist. Kích thích thụ thể alpha-2 ở hành não (nucleus tractus solitarius), làm giảm hoạt động giao cảm, giảm giải phóng norepinephrine từ các neuron giao cảm trung ương. Kết quả: giảm nhịp tim, giảm sức cản mạch máu ngoại vi, giảm huyết áp. Cũng có tác dụng giảm đau và giảm triệu chứng cai nghiện opioid/rượu. Clonidine cũng có tác dụng ngoại vi nhẹ (alpha-2 agonist ngoại vi).",
+        "mechanism_of_action": "Doxazosin là alpha-1 adrenergic receptor blocker chọn lọc. Ức chế alpha-1 receptors trên cơ trơn mạch máu và cơ trơn tuyến tiền liệt. Kết quả: (1) Giãn mạch ngoại biên → giảm huyết áp, (2) Giãn cơ trơn tuyến tiền liệt và cổ bàng quang → cải thiện triệu chứng BPH (tiểu khó, tiểu rắt, tiểu đêm). Doxazosin chọn lọc alpha-1 hơn alpha-2 → ít tác dụng phụ hơn alpha-blocker không chọn lọc. Tác dụng: điều trị tăng huyết áp và BPH. Tác dụng phụ: hạ huyết áp tư thế (phổ biến, đặc biệt liều đầu tiên).",
         "monitoring": [
-            "Huyết áp và nhịp tim (đặc biệt khi bắt đầu và khi ngừng)",
-            "Dấu hiệu rebound hypertension (nếu ngừng đột ngột)",
-            "Dấu hiệu quá liều (hạ huyết áp nặng, nhịp tim chậm, buồn ngủ nặng)",
-            "Chức năng thận (creatinine, eGFR)"
+            "Huyết áp - hạ huyết áp tư thế phổ biến, đặc biệt liều đầu tiên",
+            "Triệu chứng BPH (tiểu khó, tiểu rắt, tiểu đêm) - đánh giá hiệu quả",
+            "Dấu hiệu hạ huyết áp tư thế (chóng mặt khi đứng dậy, ngất)",
+            "Chức năng thận (creatinine, eGFR) - không cần điều chỉnh liều"
         ],
         "precautions": [
-            "KHÔNG ngừng đột ngột - phải giảm liều dần trong 2-4 ngày (nguy cơ rebound hypertension nặng)",
-            "Thận trọng ở suy thận (giảm thải trừ)",
-            "Thận trọng ở bệnh nhân có block AV hoặc nhịp tim chậm",
-            "Tăng tác dụng an thần với alcohol, sedatives",
-            "Dạng transdermal: có thể gây kích ứng da, thay vị trí mỗi tuần",
-            "Tương tác với beta-blockers: không ngừng clonidine đột ngột khi đang dùng beta-blocker"
+            "Hạ huyết áp tư thế - phổ biến, đặc biệt liều đầu tiên (first-dose effect), khởi đầu với liều thấp (1mg)",
+            "Uống buổi tối để giảm tác dụng phụ hạ huyết áp",
+            "Tránh đứng dậy đột ngột - tăng nguy cơ ngất",
+            "Khởi đầu với liều thấp (1mg) và tăng dần mỗi 1-2 tuần",
+            "Thận trọng ở bệnh nhân suy tim nặng - có thể làm nặng",
+            "Thận trọng khi dùng với thuốc hạ huyết áp khác (tăng tác dụng)",
+            "Thận trọng khi dùng với sildenafil, tadalafil, vardenafil (tăng nguy cơ hạ huyết áp)",
+            "Tránh rượu - tăng tác dụng hạ huyết áp",
+            "Có thể dùng cho cả tăng huyết áp và BPH (2 chỉ định)"
         ],
         "pharmacokinetics": {
-            "half_life": "12-16 giờ",
-            "onset": "30-60 phút (PO), 2-3 ngày (transdermal)",
-            "duration": "6-8 giờ (PO), 7 ngày (transdermal patch)",
-            "protein_binding": "20-40%",
-            "metabolism": "Gan (50%), thận (50% bài tiết không đổi)",
-            "clearance": "Gan và thận, cần điều chỉnh ở suy thận"
+            "half_life": "19-22 giờ",
+            "onset": "1-2 giờ",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "98%",
+            "clearance": "Gan (chuyển hóa qua CYP3A4), thận (bài tiết một phần)"
         },
-        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Patch: bảo quản trong túi kín, tránh nhiệt độ cao.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, ngừng đột ngột clonidine có thể gây rebound hypertension nặng, đe dọa tính mạng. PHẢI giảm liều dần trong 2-4 ngày.",
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Catapres (clonidine)",
-                "UpToDate - Clonidine: Drug information",
-                "American Heart Association/American College of Cardiology guidelines - Hypertension"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "High - Extensive clinical experience in hypertension and opioid withdrawal"
-        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể gây hạ huyết áp tư thế nghiêm trọng, đặc biệt liều đầu tiên (first-dose effect). Khởi đầu với liều thấp (1mg) và uống buổi tối. Tránh đứng dậy đột ngột.",
         "drug_interactions": {
-              "major": [],
-              "moderate": [],
-              "minor": [
-                  {
-                      "drug": "Beta-blocker: tăng nguy cơ nhịp tim chậm, block AV khi ngừng clonidine",
-                      "mechanism": "Tương tác lâm sàng"
-                  },
-                  {
-                      "drug": "Tricyclic antidepressants: giảm hiệu quả clonidine",
-                      "mechanism": "Tương tác lâm sàng"
-                  },
-                  {
-                      "drug": "Alcohol, sedatives: tăng tác dụng an thần",
-                      "mechanism": "Tương tác lâm sàng"
-                  }
-              ]
-          },
-          "pregnancy_lactation": {
-              "fda_category": "C",
-              "pregnancy_details": "Category C - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
-              "lactation": {
-                  "safety": "Compatible with monitoring",
-                  "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
-                  "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
-              }
-          },
-          "hepatic_adjustment": {
-              "mild": "Không đổi",
-              "moderate": "Thận trọng",
-              "severe": "Thận trọng, có thể giảm liều",
-              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy gan."
-          },
-          "overdose_management": {
-              "symptoms": [
-                  "Cần tra cứu thêm thông tin về triệu chứng quá liều"
-              ],
-              "antidote": "Không có antidote đặc hiệu",
-              "treatment": [
-                  "Ngừng ngay thuốc",
-                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
-                  "Than hoạt tính",
-                  "Điều trị hỗ trợ và điều trị triệu chứng",
-                  "Theo dõi dấu hiệu sinh tồn"
-              ],
-              "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
-          },
-          "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-          "administration_instructions": {
-              "oral": {
-                  "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
-                  "timing": "Theo chỉ định của bác sĩ",
-                  "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
-              }
-          },
-},
-
-    "Methyldopa": {
-        "group": "Cardiovascular - Central Alpha-2 Agonist",
-        "vietnamese_name": "Methyldopa, Aldomet",
-        "administration": ["PO", "IV"],
-        "indications": [
-            "Tăng huyết áp thai kỳ (ưu tiên)",
-            "Tăng huyết áp",
-            "Tăng huyết áp ở bệnh nhân suy thận"
-        ],
-        "contraindications": [
-            "Dị ứng methyldopa",
-            "Bệnh gan hoạt động",
-            "Pheochromocytoma",
-            "Dùng MAO inhibitors"
-        ],
-        "dosage": {
-            "adult_htn": "250mg x 2-3 lần/ngày, tăng dần đến 500-2000mg/ngày chia 2-4 lần",
-            "adult_htn_max": "Tối đa 3000mg/ngày",
-            "adult_pregnancy": "250mg x 2-3 lần/ngày, tăng dần đến 500-2000mg/ngày",
-            "adult_iv": "250-500mg IV mỗi 6 giờ",
-            "notes": "Thuốc lựa chọn cho tăng huyết áp thai kỳ"
+            "major": [
+                {
+                    "drug": "Sildenafil, Tadalafil, Vardenafil (PDE-5 inhibitors)",
+                    "mechanism": "Cả hai đều gây giãn mạch, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ hạ huyết áp nghiêm trọng, ngất",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều doxazosin hoặc tránh dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc hạ huyết áp khác (ACE inhibitors, ARBs, Beta-blockers, Diuretics)",
+                    "mechanism": "Tác dụng cộng dồn hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức, hạ huyết áp tư thế",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều các thuốc hạ huyết áp khác."
+                },
+                {
+                    "drug": "Rượu",
+                    "mechanism": "Rượu gây giãn mạch, tác dụng cộng dồn với doxazosin",
+                    "effect": "Tăng tác dụng hạ huyết áp, tăng nguy cơ ngất",
+                    "management": "Tránh rượu khi dùng doxazosin."
+                }
+            ],
+            "minor": []
         },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Thận trọng, giảm liều 25-50%",
-            "under_30": "Giảm liều 50%"
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng doxazosin hoặc bất kỳ thành phần nào",
+                "Hạ huyết áp nặng (systolic <90 mmHg)"
+            ],
+            "tương_đối": [
+                "Suy tim nặng - thận trọng, có thể làm nặng",
+                "Dùng với thuốc hạ huyết áp khác - tăng nguy cơ hạ huyết áp",
+                "Dùng với sildenafil, tadalafil, vardenafil - tăng nguy cơ hạ huyết áp"
+            ]
         },
-        "side_effects": [
-            "Buồn ngủ, mệt mỏi (thường gặp khi bắt đầu)",
-            "Khô miệng",
-            "Chóng mặt",
-            "Hạ huyết áp tư thế",
-            "Rối loạn chức năng gan (hiếm nhưng nguy hiểm)",
-            "Hemolytic anemia (hiếm)",
-            "Dương tính Coombs test (không có triệu chứng)",
-            "Tăng prolactin"
-        ],
-        "interactions": [
-            "MAO inhibitors: tăng tác dụng, nguy hiểm",
-            "Lithium: tăng nguy cơ độc tính lithium",
-            "Iron: giảm hấp thu methyldopa",
-            "Antidepressants: có thể giảm hiệu quả"
-        ],
-        "pregnancy": "B",
-        "mechanism_of_action": "Central alpha-2 adrenergic agonist (tương tự clonidine). Methyldopa được chuyển hóa thành alpha-methylnorepinephrine trong não, kích thích thụ thể alpha-2 ở hành não, làm giảm hoạt động giao cảm trung ương, giảm giải phóng norepinephrine. Kết quả: giảm nhịp tim, giảm sức cản mạch máu ngoại vi, giảm huyết áp. Methyldopa là thuốc lựa chọn cho tăng huyết áp thai kỳ vì an toàn cho thai nhi (category B).",
-        "monitoring": [
-            "Huyết áp và nhịp tim",
-            "Chức năng gan (ALT, AST, bilirubin) - QUAN TRỌNG (có thể gây viêm gan)",
-            "Công thức máu (hemolytic anemia hiếm)",
-            "Coombs test (dương tính nhưng thường không có triệu chứng)",
-            "Dấu hiệu quá liều (hạ huyết áp nặng, buồn ngủ nặng)"
-        ],
-        "precautions": [
-            "Theo dõi chức năng gan định kỳ (có thể gây viêm gan, ngừng ngay nếu có)",
-            "Thận trọng ở suy thận (giảm thải trừ)",
-            "Thận trọng ở bệnh nhân có bệnh gan (chống chỉ định nếu bệnh gan hoạt động)",
-            "Dương tính Coombs test thường gặp nhưng không có triệu chứng",
-            "Hemolytic anemia hiếm nhưng cần theo dõi",
-            "Tăng prolactin có thể gây vú to, tiết sữa",
-            "Buồn ngủ thường gặp khi bắt đầu, thường giảm sau vài tuần",
-            "KHÔNG dùng với MAO inhibitors",
-            "Dùng cách xa bữa ăn với iron (giảm hấp thu)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "1.5-2 giờ",
-            "onset": "2-4 giờ (PO), 4-6 giờ (IV)",
-            "duration": "12-24 giờ",
-            "protein_binding": "Thấp",
-            "metabolism": "Gan (chuyển hóa thành alpha-methylnorepinephrine)",
-            "clearance": "Thận (70%), cần điều chỉnh ở suy thận"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: ổn định.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, methyldopa có thể gây rối loạn chức năng gan nặng (viêm gan, hoại tử gan) - ngừng ngay nếu có dấu hiệu viêm gan.",
         "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Methyldopa là thuốc lựa chọn cho tăng huyết áp thai kỳ. An toàn cho thai nhi (category B). Đã được sử dụng rộng rãi trong thai kỳ với dữ liệu an toàn tốt. Có thể dùng trong cả 3 tam cá nguyệt.",
+            "fda_category": "C",
+            "pregnancy_details": "Doxazosin là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ.",
             "lactation": {
-                "safety": "Compatible",
-                "details": "Methyldopa bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
-                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu hạ huyết áp hoặc buồn ngủ."
+                "safety": "Unknown",
+                "details": "Không biết doxazosin có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
             }
         },
         "hepatic_adjustment": {
-            "mild": "Thận trọng (methyldopa chuyển hóa ở gan)",
-            "moderate": "Thận trọng, giảm liều 25-50%",
-            "severe": "CHỐNG CHỈ ĐỊNH nếu bệnh gan hoạt động",
-            "notes": "Methyldopa chuyển hóa ở gan. Có thể gây viêm gan, hoại tử gan. CHỐNG CHỈ ĐỊNH ở bệnh nhân có bệnh gan hoạt động. Theo dõi chức năng gan định kỳ. Ngừng ngay nếu có dấu hiệu viêm gan."
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều",
+            "notes": "Doxazosin chuyển hóa ở gan qua CYP3A4. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng, ngất",
+                "Chóng mặt nặng",
+                "Nhịp tim nhanh phản ứng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng doxazosin ngay",
+                "Đặt bệnh nhân nằm ngửa, nâng chân cao",
+                "Truyền dịch nếu cần (normal saline)",
+                "Nếu hạ huyết áp nặng: thuốc vận mạch (norepinephrine, phenylephrine)",
+                "Theo dõi huyết áp, nhịp tim liên tục"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu đáng kể.",
+                "timing": "Uống 1 lần/ngày, tốt nhất vào BUỔI TỐI để giảm tác dụng phụ hạ huyết áp. Khởi đầu với liều thấp (1mg) và tăng dần mỗi 1-2 tuần."
+            }
         },
         "references": {
             "primary_sources": [
-                "FDA Drug Label - Aldomet (methyldopa)",
-                "UpToDate - Methyldopa: Drug information",
-                "ACOG Practice Bulletin - Hypertension in Pregnancy",
-                "American Heart Association/American College of Cardiology guidelines - Hypertension"
+                "FDA Drug Label - Doxazosin (Cardura)",
+                "UpToDate - Doxazosin: Drug Information",
+                "ACC/AHA Hypertension Guidelines 2024",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, clinical guidelines"
+        }
+    },
+    "Finerenone": {
+        "group": "Cardiovascular/Metabolic - Nonsteroidal MRA",
+        "vietnamese_name": "Finerenone, Kerendia",
+        "administration": ["PO"],
+        "indications": [
+            "Bệnh thận do đái tháo đường type 2 (CKD + albumin niệu) để giảm tiến triển thận và biến cố tim mạch"
+        ],
+        "contraindications": [
+            "Kali >5.0 mEq/L trước khởi trị",
+            "eGFR <25 mL/min/1.73m²",
+            "Dùng đồng thời strong CYP3A4 inhibitors"
+        ],
+        "dosage": {
+            "adult_ckd_t2dm": "eGFR ≥60: 20 mg PO ngày 1 lần. eGFR 25-<60: 10 mg PO ngày 1 lần, có thể tăng 20 mg nếu K+ ≤4.8 sau 4 tuần.",
+            "notes": "Kiểm tra K+ và eGFR trước, 4 tuần sau khởi trị/điều chỉnh liều, sau đó định kỳ."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều nếu eGFR ≥60",
+            "30_60": "Khởi 10 mg nếu eGFR 25-<60",
+            "under_30": "Không khởi trị nếu eGFR <25"
+        },
+        "side_effects": [
+            "Tăng kali máu",
+            "Tụt huyết áp nhẹ",
+            "Tăng creatinine nhẹ"
+        ],
+        "interactions": [
+            "Strong CYP3A4 inhibitors: tăng nồng độ finerenone",
+            "ACEi/ARB, K-sparing diuretics, bổ sung K+: tăng kali"
+        ],
+        "pregnancy": "Tránh dùng nếu có thể",
+        "mechanism_of_action": "Ns-MRA chọn lọc, ức chế receptor mineralocorticoid, giảm viêm/xơ hóa thận-tim; ít tác dụng nội tiết, chứng minh giảm biến cố thận/tim (FIDELIO-DKD, FIGARO-DKD).",
+        "monitoring": [
+            "Kali máu (trước, 4 tuần sau chỉnh liều, định kỳ)",
+            "eGFR/creatinine",
+            "Huyết áp",
+            "Triệu chứng tăng kali"
+        ],
+        "precautions": [
+            "Không khởi trị nếu K+ >5.0 hoặc eGFR <25",
+            "Giảm/ngưng nếu K+ >5.5; khởi lại khi K+ ≤5.0",
+            "Thận trọng phối hợp ACEi/ARB (thường dùng nền) và thuốc giữ K+/bổ sung K+",
+            "Theo dõi sát K+ sau mỗi chỉnh liều"
+        ],
+        "pharmacokinetics": {
+            "half_life": "≈2-3 giờ",
+            "onset": "Vài giờ",
+            "duration": "24 giờ",
+            "protein_binding": "≈90%",
+            "metabolism": "Chủ yếu CYP3A4",
+            "clearance": "Phân và nước tiểu"
+        },
+        "storage": "Nhiệt độ phòng, khô ráo.",
+        "black_box_warnings": "Tăng kali máu; không khởi trị nếu K+ >5.0, theo dõi sát.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Strong CYP3A4 inhibitors (ketoconazole, clarithromycin, ritonavir)",
+                    "mechanism": "Giảm chuyển hóa finerenone",
+                    "effect": "Tăng nồng độ, tăng nguy cơ tăng kali",
+                    "management": "Chống chỉ định phối hợp"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "ACEi/ARB/ARNI, K-sparing diuretics, bổ sung K+",
+                    "mechanism": "Cộng hưởng tăng kali",
+                    "effect": "Tăng nguy cơ tăng kali",
+                    "management": "Theo dõi sát K+, điều chỉnh/giảm bổ sung K+"
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "K+ >5.0 mEq/L trước khởi trị",
+                "eGFR <25 mL/min/1.73m²",
+                "Dùng strong CYP3A4 inhibitor",
+                "Dị ứng finerenone"
+            ],
+            "tương_đối": [
+                "K+ 4.8-5.0 mEq/L (khởi liều thấp, theo dõi sát)",
+                "Hạ huyết áp nền",
+                "Suy gan trung bình-nặng (dữ liệu hạn chế)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "Tránh dùng",
+            "pregnancy_details": "Thiếu dữ liệu; tránh nếu có thể.",
+            "lactation": {
+                "safety": "Không khuyến cáo",
+                "details": "Chưa rõ bài tiết sữa mẹ.",
+                "recommendation": "Tránh hoặc ngừng cho bú nếu phải dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh",
+            "moderate": "Thận trọng, theo dõi K+",
+            "severe": "Dữ liệu hạn chế; tránh nếu có thể"
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng kali máu",
+                "Tụt huyết áp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc",
+                "Xử trí tăng kali (insulin/glucose, beta-agonist, resin, lọc máu nếu cần)",
+                "Bù dịch/vasopressor nếu tụt huyết áp"
+            ],
+            "monitoring": "Kali, ECG, huyết áp, creatinine"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể cùng hoặc không cùng thức ăn",
+                "timing": "1 lần/ngày, cùng giờ",
+                "notes": "Nuốt nguyên viên"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Finerenone (Kerendia)",
+                "FIDELIO-DKD, FIGARO-DKD trials",
+                "KDIGO/ADA CKD-T2DM Guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA 2021, large RCTs"
+        }
+    },
+
+    "Ivabradine": {
+        "group": "Cardiovascular - If Channel Inhibitor",
+        "vietnamese_name": "Ivabradine, Corlanor, Procoralan",
+        "administration": ["PO"],
+        "indications": [
+            "Suy tim mạn tính (NYHA class II-IV) với nhịp xoang ≥70 bpm",
+            "Đau thắt ngực ổn định với nhịp xoang ≥70 bpm (không dùng với beta-blocker)"
+        ],
+        "contraindications": [
+            "Nhịp tim chậm (<60 bpm trước điều trị)",
+            "Block nhĩ thất độ 2-3",
+            "Suy tim cấp",
+            "Huyết áp thấp (<90/50 mmHg)",
+            "Rung nhĩ hoặc rối loạn nhịp tim khác",
+            "Dùng với CYP3A4 inhibitors mạnh"
+        ],
+        "dosage": {
+            "adult_heart_failure": "5mg x 2 lần/ngày, tăng đến 7.5mg x 2 lần/ngày nếu nhịp tim vẫn ≥60 bpm sau 2 tuần",
+            "adult_angina": "5mg x 2 lần/ngày, tăng đến 7.5mg x 2 lần/ngày nếu nhịp tim vẫn ≥60 bpm",
+            "elderly": "Khởi đầu 2.5mg x 2 lần/ngày",
+            "notes": "Chỉ dùng cho bệnh nhân có nhịp xoang ≥70 bpm. Theo dõi nhịp tim, ngừng nếu <50 bpm."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, khởi đầu 2.5mg x 2 lần/ngày"
+        },
+        "side_effects": [
+            "Nhịp tim chậm (thường gặp)",
+            "Rối loạn thị giác (phosphenes - nhìn thấy ánh sáng nhấp nháy, thường tạm thời)",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "Hạ huyết áp",
+            "Rối loạn nhịp tim (ngoại tâm thu nhĩ, rung nhĩ)"
+        ],
+        "interactions": [
+            "CYP3A4 inhibitors mạnh: CHỐNG CHỈ ĐỊNH (ketoconazole, itraconazole, clarithromycin, ritonavir)",
+            "CYP3A4 inhibitors vừa: giảm liều 50% (diltiazem, verapamil, fluconazole)",
+            "Grapefruit juice: tránh dùng"
+        ],
+        "pregnancy": "N/A",
+        "mechanism_of_action": "Ivabradine ức chế kênh If (funny current) trong nút xoang, làm giảm nhịp tim mà không ảnh hưởng đến lực co bóp cơ tim, dẫn truyền nhĩ thất, hoặc huyết áp. Khác với beta-blocker: ivabradine chỉ làm chậm nhịp tim, không ảnh hưởng đến co bóp tim. Có bằng chứng giảm tỷ lệ tử vong và nhập viện trong suy tim mạn tính (SHIFT study). Chuyển hóa qua CYP3A4.",
+        "monitoring": [
+            "Nhịp tim (BẮT BUỘC): đo trước mỗi liều, ngừng nếu <50 bpm hoặc có triệu chứng nhịp tim chậm",
+            "ECG: nhịp tim, block nhĩ thất, rối loạn nhịp",
+            "Dấu hiệu suy tim: khó thở, phù, tăng cân",
+            "Huyết áp (có thể gây hạ huyết áp)",
+            "Rối loạn thị giác (phosphenes - thường tạm thời, không nguy hiểm)",
+            "Chức năng thận (thải một phần qua thận)"
+        ],
+        "precautions": [
+            "CHỈ dùng cho bệnh nhân có nhịp xoang ≥70 bpm",
+            "Ngừng ngay nếu nhịp tim <50 bpm hoặc có triệu chứng nhịp tim chậm",
+            "CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, ritonavir)",
+            "Giảm liều 50% với CYP3A4 inhibitors vừa (diltiazem, verapamil, fluconazole)",
+            "Tránh grapefruit juice (ức chế CYP3A4)",
+            "Thận trọng ở suy thận nặng (CrCl <30) - khởi đầu 2.5mg x 2 lần/ngày",
+            "Rối loạn thị giác (phosphenes) thường tạm thời, không nguy hiểm, thường tự hết",
+            "Có thể dùng cùng với beta-blocker trong suy tim (nhưng thận trọng - tăng nguy cơ nhịp tim chậm)",
+            "Không dùng trong suy tim cấp"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2 giờ (nhưng tác dụng kéo dài do tác dụng trên kênh If)",
+            "onset": "1 giờ",
+            "duration": "12 giờ (uống 2 lần/ngày)",
+            "protein_binding": "70%",
+            "clearance": "Gan (CYP3A4) và thận (một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, ritonavir) - có thể tăng nồng độ ivabradine đáng kể, tăng nguy cơ nhịp tim chậm nặng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, erythromycin, ritonavir, cobicistat)",
+                    "mechanism": "Ức chế chuyển hóa ivabradine qua CYP3A4",
+                    "effect": "Tăng nồng độ ivabradine đáng kể (có thể tăng 7-8 lần), tăng nguy cơ nhịp tim chậm nặng, block AV",
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 inhibitors vừa (diltiazem, verapamil, fluconazole)",
+                    "mechanism": "Ức chế chuyển hóa ivabradine qua CYP3A4",
+                    "effect": "Tăng nồng độ ivabradine, tăng nguy cơ nhịp tim chậm",
+                    "management": "Giảm liều ivabradine 50% (2.5mg x 2 lần/ngày). Theo dõi nhịp tim chặt chẽ."
+                },
+                {
+                    "drug": "Grapefruit juice",
+                    "mechanism": "Ức chế CYP3A4",
+                    "effect": "Tăng nồng độ ivabradine, tăng nguy cơ nhịp tim chậm",
+                    "management": "TRÁNH hoàn toàn grapefruit juice khi dùng ivabradine."
+                },
+                {
+                    "drug": "Beta-blockers",
+                    "mechanism": "Tác dụng hiệp đồng làm chậm nhịp tim",
+                    "effect": "Tăng nguy cơ nhịp tim chậm nặng",
+                    "management": "Thận trọng. Có thể dùng cùng trong suy tim nhưng theo dõi nhịp tim chặt chẽ. Có thể cần giảm liều một trong hai thuốc."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Nhịp tim chậm (<60 bpm trước điều trị)",
+                "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
+                "Suy tim cấp",
+                "Huyết áp thấp (<90/50 mmHg)",
+                "Rung nhĩ hoặc rối loạn nhịp tim khác (chỉ dùng cho nhịp xoang)",
+                "Dùng với CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, ritonavir)"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng, khởi đầu 2.5mg x 2 lần/ngày",
+                "Dùng với CYP3A4 inhibitors vừa (diltiazem, verapamil, fluconazole) - giảm liều 50%",
+                "Dùng với beta-blockers - tăng nguy cơ nhịp tim chậm"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "N/A",
+            "pregnancy_details": "Không có dữ liệu đầy đủ trên phụ nữ có thai. Không khuyến cáo dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết ivabradine có bài tiết vào sữa mẹ hay không. Không khuyến cáo dùng khi cho con bú.",
+                "recommendation": "Tránh dùng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể giảm liều (chuyển hóa qua gan)",
+            "severe": "Thận trọng, giảm liều 50% (chuyển hóa qua gan CYP3A4)",
+            "notes": "Ivabradine chuyển hóa qua gan (CYP3A4). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Nhịp tim chậm nặng (<40 bpm)",
+                "Block nhĩ thất",
+                "Hạ huyết áp nặng",
+                "Chóng mặt, ngất",
+                "Mệt mỏi nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Atropine (cho nhịp tim chậm)",
+            "treatment": [
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Điều trị nhịp tim chậm: Atropine 0.5-1mg IV, có thể lặp lại",
+                "Nếu atropine không hiệu quả: Isoproterenol hoặc máy tạo nhịp tạm thời",
+                "Điều trị hạ huyết áp: Truyền dịch, nâng chân, nếu cần: dopamine, norepinephrine",
+                "Theo dõi ECG liên tục",
+                "Theo dõi ít nhất 12-24 giờ"
+            ],
+            "monitoring": "ECG liên tục, huyết áp, nhịp tim, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [
+                {
+                    "name": "Atropine",
+                    "mechanism": "Chẹn muscarinic, tăng nhịp tim",
+                    "dose": "0.5-1mg IV, có thể lặp lại",
+                    "indication": "Nhịp tim chậm do quá liều ivabradine"
+                }
+            ],
+            "notes": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Atropine có thể giúp tăng nhịp tim."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để tăng hấp thu và giảm tác dụng phụ.",
+                "timing": "Uống 2 lần/ngày (sáng và tối) vào cùng giờ mỗi ngày. Đo nhịp tim trước mỗi liều. Ngừng nếu nhịp tim <50 bpm hoặc có triệu chứng nhịp tim chậm."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Ivabradine chỉ có dạng uống (PO)."
+            }
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "adolescents": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng khi thực sự cần thiết và có chỉ định đặc biệt."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (nhịp tim chậm, hạ huyết áp). Suy gan và suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (2.5mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo chức năng thận và gan",
+            "monitoring": "Theo dõi nhịp tim sát hơn. Đo nhịp tim trước mỗi liều. Theo dõi chức năng thận và gan"
+        },
+        "brand_names": {
+            "vietnam": ["Corlanor", "Procoralan", "Ivabradine"],
+            "common": ["Corlanor", "Procoralan", "Ivabradine"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "50,000 - 150,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá cao hơn các thuốc tim mạch khác do là thuốc mới. Giá thay đổi theo thương hiệu và nhà thuốc."
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Corlanor (ivabradine)",
+                "UpToDate - Ivabradine: Drug information",
+                "SHIFT Study - The Lancet (2010) - Ivabradine trong suy tim",
+                "American Heart Association/American College of Cardiology guidelines - Heart failure"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - Extensive clinical experience, especially in pregnancy (category B, preferred for pregnancy hypertension)"
-        },
-        "drug_interactions": {
-              "major": [],
-              "moderate": [],
-              "minor": [
-                  {
-                      "drug": "MAO inhibitors: tăng tác dụng, nguy hiểm",
-                      "mechanism": "Tương tác lâm sàng"
-                  },
-                  {
-                      "drug": "Lithium: tăng nguy cơ độc tính lithium",
-                      "mechanism": "Tương tác lâm sàng"
-                  },
-                  {
-                      "drug": "Iron: giảm hấp thu methyldopa",
-                      "mechanism": "Tương tác lâm sàng"
-                  },
-                  {
-                      "drug": "Antidepressants: có thể giảm hiệu quả",
-                      "mechanism": "Tương tác lâm sàng"
-                  }
-              ]
-          },
-          "overdose_management": {
-              "symptoms": [
-                  "Cần tra cứu thêm thông tin về triệu chứng quá liều"
-              ],
-              "antidote": "Không có antidote đặc hiệu",
-              "treatment": [
-                  "Ngừng ngay thuốc",
-                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
-                  "Than hoạt tính",
-                  "Điều trị hỗ trợ và điều trị triệu chứng",
-                  "Theo dõi dấu hiệu sinh tồn"
-              ],
-              "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
-          },
-          "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-          "administration_instructions": {
-              "oral": {
-                  "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
-                  "timing": "Theo chỉ định của bác sĩ",
-                  "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
-              },
-              "iv": {
-                  "reconstitution": "Cần tra cứu",
-                  "infusion_rate": "Cần tra cứu",
-                  "compatibility": [
-                      "Cần tra cứu"
-                  ],
-                  "incompatibility": [],
-                  "notes": "Cần tra cứu thêm thông tin chi tiết."
-              }
-          },
-},
+            "evidence_level": "High - Large RCT (SHIFT) showing mortality and hospitalization benefit in heart failure"
+        }
+    },
 
     "Labetalol": {
         "group": "Cardiovascular - Alpha-Beta Blocker",
@@ -773,214 +1113,161 @@ OTHER_CV_DRUGS = {
         }
     },
 
-    "Ivabradine": {
-        "group": "Cardiovascular - If Channel Inhibitor",
-        "vietnamese_name": "Ivabradine, Corlanor, Procoralan",
-        "administration": ["PO"],
+    "Methyldopa": {
+        "group": "Cardiovascular - Central Alpha-2 Agonist",
+        "vietnamese_name": "Methyldopa, Aldomet",
+        "administration": ["PO", "IV"],
         "indications": [
-            "Suy tim mạn tính (NYHA class II-IV) với nhịp xoang ≥70 bpm",
-            "Đau thắt ngực ổn định với nhịp xoang ≥70 bpm (không dùng với beta-blocker)"
+            "Tăng huyết áp thai kỳ (ưu tiên)",
+            "Tăng huyết áp",
+            "Tăng huyết áp ở bệnh nhân suy thận"
         ],
         "contraindications": [
-            "Nhịp tim chậm (<60 bpm trước điều trị)",
-            "Block nhĩ thất độ 2-3",
-            "Suy tim cấp",
-            "Huyết áp thấp (<90/50 mmHg)",
-            "Rung nhĩ hoặc rối loạn nhịp tim khác",
-            "Dùng với CYP3A4 inhibitors mạnh"
+            "Dị ứng methyldopa",
+            "Bệnh gan hoạt động",
+            "Pheochromocytoma",
+            "Dùng MAO inhibitors"
         ],
         "dosage": {
-            "adult_heart_failure": "5mg x 2 lần/ngày, tăng đến 7.5mg x 2 lần/ngày nếu nhịp tim vẫn ≥60 bpm sau 2 tuần",
-            "adult_angina": "5mg x 2 lần/ngày, tăng đến 7.5mg x 2 lần/ngày nếu nhịp tim vẫn ≥60 bpm",
-            "elderly": "Khởi đầu 2.5mg x 2 lần/ngày",
-            "notes": "Chỉ dùng cho bệnh nhân có nhịp xoang ≥70 bpm. Theo dõi nhịp tim, ngừng nếu <50 bpm."
+            "adult_htn": "250mg x 2-3 lần/ngày, tăng dần đến 500-2000mg/ngày chia 2-4 lần",
+            "adult_htn_max": "Tối đa 3000mg/ngày",
+            "adult_pregnancy": "250mg x 2-3 lần/ngày, tăng dần đến 500-2000mg/ngày",
+            "adult_iv": "250-500mg IV mỗi 6 giờ",
+            "notes": "Thuốc lựa chọn cho tăng huyết áp thai kỳ"
         },
         "renal_adjustment": {
             "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Thận trọng, khởi đầu 2.5mg x 2 lần/ngày"
+            "30_60": "Thận trọng, giảm liều 25-50%",
+            "under_30": "Giảm liều 50%"
         },
         "side_effects": [
-            "Nhịp tim chậm (thường gặp)",
-            "Rối loạn thị giác (phosphenes - nhìn thấy ánh sáng nhấp nháy, thường tạm thời)",
+            "Buồn ngủ, mệt mỏi (thường gặp khi bắt đầu)",
+            "Khô miệng",
             "Chóng mặt",
-            "Mệt mỏi",
-            "Hạ huyết áp",
-            "Rối loạn nhịp tim (ngoại tâm thu nhĩ, rung nhĩ)"
+            "Hạ huyết áp tư thế",
+            "Rối loạn chức năng gan (hiếm nhưng nguy hiểm)",
+            "Hemolytic anemia (hiếm)",
+            "Dương tính Coombs test (không có triệu chứng)",
+            "Tăng prolactin"
         ],
         "interactions": [
-            "CYP3A4 inhibitors mạnh: CHỐNG CHỈ ĐỊNH (ketoconazole, itraconazole, clarithromycin, ritonavir)",
-            "CYP3A4 inhibitors vừa: giảm liều 50% (diltiazem, verapamil, fluconazole)",
-            "Grapefruit juice: tránh dùng"
+            "MAO inhibitors: tăng tác dụng, nguy hiểm",
+            "Lithium: tăng nguy cơ độc tính lithium",
+            "Iron: giảm hấp thu methyldopa",
+            "Antidepressants: có thể giảm hiệu quả"
         ],
-        "pregnancy": "N/A",
-        "mechanism_of_action": "Ivabradine ức chế kênh If (funny current) trong nút xoang, làm giảm nhịp tim mà không ảnh hưởng đến lực co bóp cơ tim, dẫn truyền nhĩ thất, hoặc huyết áp. Khác với beta-blocker: ivabradine chỉ làm chậm nhịp tim, không ảnh hưởng đến co bóp tim. Có bằng chứng giảm tỷ lệ tử vong và nhập viện trong suy tim mạn tính (SHIFT study). Chuyển hóa qua CYP3A4.",
+        "pregnancy": "B",
+        "mechanism_of_action": "Central alpha-2 adrenergic agonist (tương tự clonidine). Methyldopa được chuyển hóa thành alpha-methylnorepinephrine trong não, kích thích thụ thể alpha-2 ở hành não, làm giảm hoạt động giao cảm trung ương, giảm giải phóng norepinephrine. Kết quả: giảm nhịp tim, giảm sức cản mạch máu ngoại vi, giảm huyết áp. Methyldopa là thuốc lựa chọn cho tăng huyết áp thai kỳ vì an toàn cho thai nhi (category B).",
         "monitoring": [
-            "Nhịp tim (BẮT BUỘC): đo trước mỗi liều, ngừng nếu <50 bpm hoặc có triệu chứng nhịp tim chậm",
-            "ECG: nhịp tim, block nhĩ thất, rối loạn nhịp",
-            "Dấu hiệu suy tim: khó thở, phù, tăng cân",
-            "Huyết áp (có thể gây hạ huyết áp)",
-            "Rối loạn thị giác (phosphenes - thường tạm thời, không nguy hiểm)",
-            "Chức năng thận (thải một phần qua thận)"
+            "Huyết áp và nhịp tim",
+            "Chức năng gan (ALT, AST, bilirubin) - QUAN TRỌNG (có thể gây viêm gan)",
+            "Công thức máu (hemolytic anemia hiếm)",
+            "Coombs test (dương tính nhưng thường không có triệu chứng)",
+            "Dấu hiệu quá liều (hạ huyết áp nặng, buồn ngủ nặng)"
         ],
         "precautions": [
-            "CHỈ dùng cho bệnh nhân có nhịp xoang ≥70 bpm",
-            "Ngừng ngay nếu nhịp tim <50 bpm hoặc có triệu chứng nhịp tim chậm",
-            "CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, ritonavir)",
-            "Giảm liều 50% với CYP3A4 inhibitors vừa (diltiazem, verapamil, fluconazole)",
-            "Tránh grapefruit juice (ức chế CYP3A4)",
-            "Thận trọng ở suy thận nặng (CrCl <30) - khởi đầu 2.5mg x 2 lần/ngày",
-            "Rối loạn thị giác (phosphenes) thường tạm thời, không nguy hiểm, thường tự hết",
-            "Có thể dùng cùng với beta-blocker trong suy tim (nhưng thận trọng - tăng nguy cơ nhịp tim chậm)",
-            "Không dùng trong suy tim cấp"
+            "Theo dõi chức năng gan định kỳ (có thể gây viêm gan, ngừng ngay nếu có)",
+            "Thận trọng ở suy thận (giảm thải trừ)",
+            "Thận trọng ở bệnh nhân có bệnh gan (chống chỉ định nếu bệnh gan hoạt động)",
+            "Dương tính Coombs test thường gặp nhưng không có triệu chứng",
+            "Hemolytic anemia hiếm nhưng cần theo dõi",
+            "Tăng prolactin có thể gây vú to, tiết sữa",
+            "Buồn ngủ thường gặp khi bắt đầu, thường giảm sau vài tuần",
+            "KHÔNG dùng với MAO inhibitors",
+            "Dùng cách xa bữa ăn với iron (giảm hấp thu)"
         ],
         "pharmacokinetics": {
-            "half_life": "2 giờ (nhưng tác dụng kéo dài do tác dụng trên kênh If)",
-            "onset": "1 giờ",
-            "duration": "12 giờ (uống 2 lần/ngày)",
-            "protein_binding": "70%",
-            "clearance": "Gan (CYP3A4) và thận (một phần)"
+            "half_life": "1.5-2 giờ",
+            "onset": "2-4 giờ (PO), 4-6 giờ (IV)",
+            "duration": "12-24 giờ",
+            "protein_binding": "Thấp",
+            "metabolism": "Gan (chuyển hóa thành alpha-methylnorepinephrine)",
+            "clearance": "Thận (70%), cần điều chỉnh ở suy thận"
         },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, ritonavir) - có thể tăng nồng độ ivabradine đáng kể, tăng nguy cơ nhịp tim chậm nặng.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, erythromycin, ritonavir, cobicistat)",
-                    "mechanism": "Ức chế chuyển hóa ivabradine qua CYP3A4",
-                    "effect": "Tăng nồng độ ivabradine đáng kể (có thể tăng 7-8 lần), tăng nguy cơ nhịp tim chậm nặng, block AV",
-                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Không dùng cùng."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "CYP3A4 inhibitors vừa (diltiazem, verapamil, fluconazole)",
-                    "mechanism": "Ức chế chuyển hóa ivabradine qua CYP3A4",
-                    "effect": "Tăng nồng độ ivabradine, tăng nguy cơ nhịp tim chậm",
-                    "management": "Giảm liều ivabradine 50% (2.5mg x 2 lần/ngày). Theo dõi nhịp tim chặt chẽ."
-                },
-                {
-                    "drug": "Grapefruit juice",
-                    "mechanism": "Ức chế CYP3A4",
-                    "effect": "Tăng nồng độ ivabradine, tăng nguy cơ nhịp tim chậm",
-                    "management": "TRÁNH hoàn toàn grapefruit juice khi dùng ivabradine."
-                },
-                {
-                    "drug": "Beta-blockers",
-                    "mechanism": "Tác dụng hiệp đồng làm chậm nhịp tim",
-                    "effect": "Tăng nguy cơ nhịp tim chậm nặng",
-                    "management": "Thận trọng. Có thể dùng cùng trong suy tim nhưng theo dõi nhịp tim chặt chẽ. Có thể cần giảm liều một trong hai thuốc."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Nhịp tim chậm (<60 bpm trước điều trị)",
-                "Block nhĩ thất độ 2-3 không có máy tạo nhịp",
-                "Suy tim cấp",
-                "Huyết áp thấp (<90/50 mmHg)",
-                "Rung nhĩ hoặc rối loạn nhịp tim khác (chỉ dùng cho nhịp xoang)",
-                "Dùng với CYP3A4 inhibitors mạnh (ketoconazole, itraconazole, clarithromycin, ritonavir)"
-            ],
-            "tương_đối": [
-                "Suy thận nặng (CrCl <30) - thận trọng, khởi đầu 2.5mg x 2 lần/ngày",
-                "Dùng với CYP3A4 inhibitors vừa (diltiazem, verapamil, fluconazole) - giảm liều 50%",
-                "Dùng với beta-blockers - tăng nguy cơ nhịp tim chậm"
-            ]
-        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: ổn định.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, methyldopa có thể gây rối loạn chức năng gan nặng (viêm gan, hoại tử gan) - ngừng ngay nếu có dấu hiệu viêm gan.",
         "pregnancy_lactation": {
-            "fda_category": "N/A",
-            "pregnancy_details": "Không có dữ liệu đầy đủ trên phụ nữ có thai. Không khuyến cáo dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ.",
+            "fda_category": "B",
+            "pregnancy_details": "Methyldopa là thuốc lựa chọn cho tăng huyết áp thai kỳ. An toàn cho thai nhi (category B). Đã được sử dụng rộng rãi trong thai kỳ với dữ liệu an toàn tốt. Có thể dùng trong cả 3 tam cá nguyệt.",
             "lactation": {
-                "safety": "Unknown",
-                "details": "Không biết ivabradine có bài tiết vào sữa mẹ hay không. Không khuyến cáo dùng khi cho con bú.",
-                "recommendation": "Tránh dùng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
+                "safety": "Compatible",
+                "details": "Methyldopa bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu hạ huyết áp hoặc buồn ngủ."
             }
         },
         "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng, có thể giảm liều (chuyển hóa qua gan)",
-            "severe": "Thận trọng, giảm liều 50% (chuyển hóa qua gan CYP3A4)",
-            "notes": "Ivabradine chuyển hóa qua gan (CYP3A4). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Nhịp tim chậm nặng (<40 bpm)",
-                "Block nhĩ thất",
-                "Hạ huyết áp nặng",
-                "Chóng mặt, ngất",
-                "Mệt mỏi nặng"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Atropine (cho nhịp tim chậm)",
-            "treatment": [
-                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
-                "Than hoạt tính",
-                "Điều trị nhịp tim chậm: Atropine 0.5-1mg IV, có thể lặp lại",
-                "Nếu atropine không hiệu quả: Isoproterenol hoặc máy tạo nhịp tạm thời",
-                "Điều trị hạ huyết áp: Truyền dịch, nâng chân, nếu cần: dopamine, norepinephrine",
-                "Theo dõi ECG liên tục",
-                "Theo dõi ít nhất 12-24 giờ"
-            ],
-            "monitoring": "ECG liên tục, huyết áp, nhịp tim, ý thức"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [
-                {
-                    "name": "Atropine",
-                    "mechanism": "Chẹn muscarinic, tăng nhịp tim",
-                    "dose": "0.5-1mg IV, có thể lặp lại",
-                    "indication": "Nhịp tim chậm do quá liều ivabradine"
-                }
-            ],
-            "notes": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Atropine có thể giúp tăng nhịp tim."
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Uống với thức ăn để tăng hấp thu và giảm tác dụng phụ.",
-                "timing": "Uống 2 lần/ngày (sáng và tối) vào cùng giờ mỗi ngày. Đo nhịp tim trước mỗi liều. Ngừng nếu nhịp tim <50 bpm hoặc có triệu chứng nhịp tim chậm."
-            },
-            "iv": {
-                "reconstitution": "Không có dạng IV",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Ivabradine chỉ có dạng uống (PO)."
-            }
-        },
-        "pediatric_dosing": {
-            "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
-            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
-            "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
-            "adolescents": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
-            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng khi thực sự cần thiết và có chỉ định đặc biệt."
-        },
-        "geriatric_dosing": {
-            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (nhịp tim chậm, hạ huyết áp). Suy gan và suy thận phổ biến hơn",
-            "dose_adjustment": "Khởi đầu với liều thấp hơn (2.5mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo chức năng thận và gan",
-            "monitoring": "Theo dõi nhịp tim sát hơn. Đo nhịp tim trước mỗi liều. Theo dõi chức năng thận và gan"
-        },
-        "brand_names": {
-            "vietnam": ["Corlanor", "Procoralan", "Ivabradine"],
-            "common": ["Corlanor", "Procoralan", "Ivabradine"]
-        },
-        "cost_estimate": {
-            "unit": "VND",
-            "range": "50,000 - 150,000 VND/viên (tùy hàm lượng và thương hiệu)",
-            "note": "Giá cao hơn các thuốc tim mạch khác do là thuốc mới. Giá thay đổi theo thương hiệu và nhà thuốc."
+            "mild": "Thận trọng (methyldopa chuyển hóa ở gan)",
+            "moderate": "Thận trọng, giảm liều 25-50%",
+            "severe": "CHỐNG CHỈ ĐỊNH nếu bệnh gan hoạt động",
+            "notes": "Methyldopa chuyển hóa ở gan. Có thể gây viêm gan, hoại tử gan. CHỐNG CHỈ ĐỊNH ở bệnh nhân có bệnh gan hoạt động. Theo dõi chức năng gan định kỳ. Ngừng ngay nếu có dấu hiệu viêm gan."
         },
         "references": {
             "primary_sources": [
-                "FDA Drug Label - Corlanor (ivabradine)",
-                "UpToDate - Ivabradine: Drug information",
-                "SHIFT Study - The Lancet (2010) - Ivabradine trong suy tim",
-                "American Heart Association/American College of Cardiology guidelines - Heart failure"
+                "FDA Drug Label - Aldomet (methyldopa)",
+                "UpToDate - Methyldopa: Drug information",
+                "ACOG Practice Bulletin - Hypertension in Pregnancy",
+                "American Heart Association/American College of Cardiology guidelines - Hypertension"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - Large RCT (SHIFT) showing mortality and hospitalization benefit in heart failure"
-        }
-    },
+            "evidence_level": "High - Extensive clinical experience, especially in pregnancy (category B, preferred for pregnancy hypertension)"
+        },
+        "drug_interactions": {
+              "major": [],
+              "moderate": [],
+              "minor": [
+                  {
+                      "drug": "MAO inhibitors: tăng tác dụng, nguy hiểm",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Lithium: tăng nguy cơ độc tính lithium",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Iron: giảm hấp thu methyldopa",
+                      "mechanism": "Tương tác lâm sàng"
+                  },
+                  {
+                      "drug": "Antidepressants: có thể giảm hiệu quả",
+                      "mechanism": "Tương tác lâm sàng"
+                  }
+              ]
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+              ],
+              "antidote": "Không có antidote đặc hiệu",
+              "treatment": [
+                  "Ngừng ngay thuốc",
+                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                  "Than hoạt tính",
+                  "Điều trị hỗ trợ và điều trị triệu chứng",
+                  "Theo dõi dấu hiệu sinh tồn"
+              ],
+              "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+          },
+          "reversal_agents": {
+              "available": False,
+              "agents": []
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Có thể uống với hoặc không có thức ăn (trừ khi có chỉ định khác)",
+                  "timing": "Theo chỉ định của bác sĩ",
+                  "notes": "Cần tra cứu thêm thông tin chi tiết về cách dùng."
+              },
+              "iv": {
+                  "reconstitution": "Cần tra cứu",
+                  "infusion_rate": "Cần tra cứu",
+                  "compatibility": [
+                      "Cần tra cứu"
+                  ],
+                  "incompatibility": [],
+                  "notes": "Cần tra cứu thêm thông tin chi tiết."
+              }
+          },
+},
 
     "Sacubitril-valsartan": {
         "group": "Cardiovascular - ARNI (Angiotensin Receptor-Neprilysin Inhibitor)",
@@ -1207,139 +1494,6 @@ OTHER_CV_DRUGS = {
         }
     },
 
-    "Vericiguat": {
-        "group": "Cardiovascular - Soluble Guanylate Cyclase (sGC) Stimulator",
-        "vietnamese_name": "Vericiguat, Verquvo",
-        "administration": ["PO"],
-        "indications": [
-            "Suy tim HFrEF (EF ≤40%) NYHA II-IV sau đợt mất bù gần đây dù đã tối ưu GDMT"
-        ],
-        "contraindications": [
-            "Đang dùng nitrate hữu cơ hoặc riociguat",
-            "Hạ huyết áp nặng (SBP <90 mmHg)"
-        ],
-        "dosage": {
-            "adult_hf": "Khởi 2.5 mg PO ngày 1 lần với thức ăn, tăng gấp đôi sau mỗi 2 tuần nếu dung nạp (5 mg → 10 mg) đến liều đích 10 mg PO ngày 1 lần",
-            "notes": "Nuốt nguyên viên, dùng với thức ăn để tối ưu hấp thu. Theo dõi huyết áp."
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Không cần chỉnh liều; theo dõi tụt huyết áp",
-            "under_30": "Không cần chỉnh liều; theo dõi tụt huyết áp",
-            "dialysis": "Dữ liệu hạn chế; thận trọng"
-        },
-        "side_effects": [
-            "Tụt huyết áp, chóng mặt",
-            "Thiếu máu nhẹ",
-            "Buồn nôn",
-            "Đau đầu"
-        ],
-        "interactions": [
-            "Nitrates, riociguat (chống chỉ định)",
-            "Thuốc hạ áp khác: cộng hưởng tụt huyết áp"
-        ],
-        "pregnancy": "Tránh nếu có thể; dữ liệu hạn chế",
-        "mechanism_of_action": "Kích thích trực tiếp sGC và tăng nhạy cảm với NO → tăng cGMP → giãn mạch, giảm tiền/hậu gánh, cải thiện huyết động HF.",
-        "monitoring": [
-            "Huyết áp, triệu chứng tụt huyết áp",
-            "Hemoglobin/hematocrit",
-            "Triệu chứng suy tim, cân nặng",
-            "Chức năng thận, điện giải nếu phối hợp lợi tiểu/RAASi/SGLT2i"
-        ],
-        "precautions": [
-            "Tránh phối hợp nitrate hoặc riociguat",
-            "Thận trọng nếu SBP <100 mmHg",
-            "Theo dõi thiếu máu nhẹ",
-            "Không khởi trị khi đang mất bù huyết động"
-        ],
-        "pharmacokinetics": {
-            "half_life": "≈20 giờ",
-            "onset": "Vài giờ",
-            "duration": "24 giờ (dùng 1 lần/ngày)",
-            "protein_binding": "≈98%",
-            "metabolism": "Chủ yếu UGT1A9/UGT1A1; ít CYP",
-            "clearance": "Thải qua phân và nước tiểu"
-        },
-        "storage": "Nhiệt độ phòng, khô, tránh ẩm.",
-        "black_box_warnings": "Không dùng cùng nitrate hữu cơ hoặc riociguat (tụt huyết áp nặng).",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Nitrates, Riociguat",
-                    "mechanism": "Cộng dồn kích hoạt sGC",
-                    "effect": "Tụt huyết áp nghiêm trọng",
-                    "management": "Chống chỉ định phối hợp"
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Thuốc hạ áp khác",
-                    "mechanism": "Cộng hưởng hạ áp",
-                    "effect": "Tụt huyết áp",
-                    "management": "Theo dõi huyết áp, chỉnh liều nếu cần"
-                }
-            ],
-            "minor": []
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dùng nitrate hữu cơ hoặc riociguat",
-                "SBP <90 mmHg",
-                "Quá mẫn với vericiguat"
-            ],
-            "tương_đối": [
-                "SBP 90-100 mmHg",
-                "Thiếu máu đang điều trị",
-                "Suy thận nặng cần lọc máu (dữ liệu hạn chế)"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "Tránh dùng",
-            "pregnancy_details": "Dữ liệu hạn chế; tránh nếu có thể.",
-            "lactation": {
-                "safety": "Không khuyến cáo",
-                "details": "Chưa rõ bài tiết sữa mẹ.",
-                "recommendation": "Tránh hoặc ngừng cho bú nếu phải dùng."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh",
-            "moderate": "Không cần chỉnh; theo dõi huyết áp",
-            "severe": "Dữ liệu hạn chế; thận trọng"
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Tụt huyết áp",
-                "Chóng mặt",
-                "Ngất"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Nằm đầu thấp/nâng chân",
-                "Bù dịch",
-                "Vận mạch nếu cần"
-            ],
-            "monitoring": "Huyết áp, nhịp tim, ý thức"
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Dùng cùng thức ăn",
-                "timing": "1 lần/ngày, cùng giờ",
-                "notes": "Nuốt nguyên viên"
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Vericiguat (Verquvo)",
-                "VICTORIA trial",
-                "ACC/AHA/HFSA Heart Failure Guidelines"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA 2021, large RCT (VICTORIA)"
-        }
-    },
-
     "Sotagliflozin": {
         "group": "Cardiovascular/Diabetes - Dual SGLT1/2 Inhibitor",
         "vietnamese_name": "Sotagliflozin, Inpefa",
@@ -1478,95 +1632,95 @@ OTHER_CV_DRUGS = {
         }
     },
 
-    "Finerenone": {
-        "group": "Cardiovascular/Metabolic - Nonsteroidal MRA",
-        "vietnamese_name": "Finerenone, Kerendia",
+    "Vericiguat": {
+        "group": "Cardiovascular - Soluble Guanylate Cyclase (sGC) Stimulator",
+        "vietnamese_name": "Vericiguat, Verquvo",
         "administration": ["PO"],
         "indications": [
-            "Bệnh thận do đái tháo đường type 2 (CKD + albumin niệu) để giảm tiến triển thận và biến cố tim mạch"
+            "Suy tim HFrEF (EF ≤40%) NYHA II-IV sau đợt mất bù gần đây dù đã tối ưu GDMT"
         ],
         "contraindications": [
-            "Kali >5.0 mEq/L trước khởi trị",
-            "eGFR <25 mL/min/1.73m²",
-            "Dùng đồng thời strong CYP3A4 inhibitors"
+            "Đang dùng nitrate hữu cơ hoặc riociguat",
+            "Hạ huyết áp nặng (SBP <90 mmHg)"
         ],
         "dosage": {
-            "adult_ckd_t2dm": "eGFR ≥60: 20 mg PO ngày 1 lần. eGFR 25-<60: 10 mg PO ngày 1 lần, có thể tăng 20 mg nếu K+ ≤4.8 sau 4 tuần.",
-            "notes": "Kiểm tra K+ và eGFR trước, 4 tuần sau khởi trị/điều chỉnh liều, sau đó định kỳ."
+            "adult_hf": "Khởi 2.5 mg PO ngày 1 lần với thức ăn, tăng gấp đôi sau mỗi 2 tuần nếu dung nạp (5 mg → 10 mg) đến liều đích 10 mg PO ngày 1 lần",
+            "notes": "Nuốt nguyên viên, dùng với thức ăn để tối ưu hấp thu. Theo dõi huyết áp."
         },
         "renal_adjustment": {
-            "normal": "Không cần chỉnh liều nếu eGFR ≥60",
-            "30_60": "Khởi 10 mg nếu eGFR 25-<60",
-            "under_30": "Không khởi trị nếu eGFR <25"
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều; theo dõi tụt huyết áp",
+            "under_30": "Không cần chỉnh liều; theo dõi tụt huyết áp",
+            "dialysis": "Dữ liệu hạn chế; thận trọng"
         },
         "side_effects": [
-            "Tăng kali máu",
-            "Tụt huyết áp nhẹ",
-            "Tăng creatinine nhẹ"
+            "Tụt huyết áp, chóng mặt",
+            "Thiếu máu nhẹ",
+            "Buồn nôn",
+            "Đau đầu"
         ],
         "interactions": [
-            "Strong CYP3A4 inhibitors: tăng nồng độ finerenone",
-            "ACEi/ARB, K-sparing diuretics, bổ sung K+: tăng kali"
+            "Nitrates, riociguat (chống chỉ định)",
+            "Thuốc hạ áp khác: cộng hưởng tụt huyết áp"
         ],
-        "pregnancy": "Tránh dùng nếu có thể",
-        "mechanism_of_action": "Ns-MRA chọn lọc, ức chế receptor mineralocorticoid, giảm viêm/xơ hóa thận-tim; ít tác dụng nội tiết, chứng minh giảm biến cố thận/tim (FIDELIO-DKD, FIGARO-DKD).",
+        "pregnancy": "Tránh nếu có thể; dữ liệu hạn chế",
+        "mechanism_of_action": "Kích thích trực tiếp sGC và tăng nhạy cảm với NO → tăng cGMP → giãn mạch, giảm tiền/hậu gánh, cải thiện huyết động HF.",
         "monitoring": [
-            "Kali máu (trước, 4 tuần sau chỉnh liều, định kỳ)",
-            "eGFR/creatinine",
-            "Huyết áp",
-            "Triệu chứng tăng kali"
+            "Huyết áp, triệu chứng tụt huyết áp",
+            "Hemoglobin/hematocrit",
+            "Triệu chứng suy tim, cân nặng",
+            "Chức năng thận, điện giải nếu phối hợp lợi tiểu/RAASi/SGLT2i"
         ],
         "precautions": [
-            "Không khởi trị nếu K+ >5.0 hoặc eGFR <25",
-            "Giảm/ngưng nếu K+ >5.5; khởi lại khi K+ ≤5.0",
-            "Thận trọng phối hợp ACEi/ARB (thường dùng nền) và thuốc giữ K+/bổ sung K+",
-            "Theo dõi sát K+ sau mỗi chỉnh liều"
+            "Tránh phối hợp nitrate hoặc riociguat",
+            "Thận trọng nếu SBP <100 mmHg",
+            "Theo dõi thiếu máu nhẹ",
+            "Không khởi trị khi đang mất bù huyết động"
         ],
         "pharmacokinetics": {
-            "half_life": "≈2-3 giờ",
+            "half_life": "≈20 giờ",
             "onset": "Vài giờ",
-            "duration": "24 giờ",
-            "protein_binding": "≈90%",
-            "metabolism": "Chủ yếu CYP3A4",
-            "clearance": "Phân và nước tiểu"
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "≈98%",
+            "metabolism": "Chủ yếu UGT1A9/UGT1A1; ít CYP",
+            "clearance": "Thải qua phân và nước tiểu"
         },
-        "storage": "Nhiệt độ phòng, khô ráo.",
-        "black_box_warnings": "Tăng kali máu; không khởi trị nếu K+ >5.0, theo dõi sát.",
+        "storage": "Nhiệt độ phòng, khô, tránh ẩm.",
+        "black_box_warnings": "Không dùng cùng nitrate hữu cơ hoặc riociguat (tụt huyết áp nặng).",
         "drug_interactions": {
             "major": [
                 {
-                    "drug": "Strong CYP3A4 inhibitors (ketoconazole, clarithromycin, ritonavir)",
-                    "mechanism": "Giảm chuyển hóa finerenone",
-                    "effect": "Tăng nồng độ, tăng nguy cơ tăng kali",
+                    "drug": "Nitrates, Riociguat",
+                    "mechanism": "Cộng dồn kích hoạt sGC",
+                    "effect": "Tụt huyết áp nghiêm trọng",
                     "management": "Chống chỉ định phối hợp"
                 }
             ],
             "moderate": [
                 {
-                    "drug": "ACEi/ARB/ARNI, K-sparing diuretics, bổ sung K+",
-                    "mechanism": "Cộng hưởng tăng kali",
-                    "effect": "Tăng nguy cơ tăng kali",
-                    "management": "Theo dõi sát K+, điều chỉnh/giảm bổ sung K+"
+                    "drug": "Thuốc hạ áp khác",
+                    "mechanism": "Cộng hưởng hạ áp",
+                    "effect": "Tụt huyết áp",
+                    "management": "Theo dõi huyết áp, chỉnh liều nếu cần"
                 }
             ],
             "minor": []
         },
         "contraindications_detail": {
             "tuyệt_đối": [
-                "K+ >5.0 mEq/L trước khởi trị",
-                "eGFR <25 mL/min/1.73m²",
-                "Dùng strong CYP3A4 inhibitor",
-                "Dị ứng finerenone"
+                "Dùng nitrate hữu cơ hoặc riociguat",
+                "SBP <90 mmHg",
+                "Quá mẫn với vericiguat"
             ],
             "tương_đối": [
-                "K+ 4.8-5.0 mEq/L (khởi liều thấp, theo dõi sát)",
-                "Hạ huyết áp nền",
-                "Suy gan trung bình-nặng (dữ liệu hạn chế)"
+                "SBP 90-100 mmHg",
+                "Thiếu máu đang điều trị",
+                "Suy thận nặng cần lọc máu (dữ liệu hạn chế)"
             ]
         },
         "pregnancy_lactation": {
             "fda_category": "Tránh dùng",
-            "pregnancy_details": "Thiếu dữ liệu; tránh nếu có thể.",
+            "pregnancy_details": "Dữ liệu hạn chế; tránh nếu có thể.",
             "lactation": {
                 "safety": "Không khuyến cáo",
                 "details": "Chưa rõ bài tiết sữa mẹ.",
@@ -1575,196 +1729,41 @@ OTHER_CV_DRUGS = {
         },
         "hepatic_adjustment": {
             "mild": "Không cần chỉnh",
-            "moderate": "Thận trọng, theo dõi K+",
-            "severe": "Dữ liệu hạn chế; tránh nếu có thể"
+            "moderate": "Không cần chỉnh; theo dõi huyết áp",
+            "severe": "Dữ liệu hạn chế; thận trọng"
         },
         "overdose_management": {
             "symptoms": [
-                "Tăng kali máu",
-                "Tụt huyết áp"
+                "Tụt huyết áp",
+                "Chóng mặt",
+                "Ngất"
             ],
             "antidote": "Không có antidote đặc hiệu",
             "treatment": [
-                "Ngừng thuốc",
-                "Xử trí tăng kali (insulin/glucose, beta-agonist, resin, lọc máu nếu cần)",
-                "Bù dịch/vasopressor nếu tụt huyết áp"
+                "Nằm đầu thấp/nâng chân",
+                "Bù dịch",
+                "Vận mạch nếu cần"
             ],
-            "monitoring": "Kali, ECG, huyết áp, creatinine"
+            "monitoring": "Huyết áp, nhịp tim, ý thức"
         },
         "reversal_agents": None,
         "administration_instructions": {
             "oral": {
-                "with_food": "Có thể cùng hoặc không cùng thức ăn",
+                "with_food": "Dùng cùng thức ăn",
                 "timing": "1 lần/ngày, cùng giờ",
                 "notes": "Nuốt nguyên viên"
             }
         },
         "references": {
             "primary_sources": [
-                "FDA Drug Label - Finerenone (Kerendia)",
-                "FIDELIO-DKD, FIGARO-DKD trials",
-                "KDIGO/ADA CKD-T2DM Guidelines"
+                "FDA Drug Label - Vericiguat (Verquvo)",
+                "VICTORIA trial",
+                "ACC/AHA/HFSA Heart Failure Guidelines"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA 2021, large RCTs"
+            "evidence_level": "A - FDA 2021, large RCT (VICTORIA)"
         }
     },
-
-    "Doxazosin": {
-        "group": "Cardiovascular - Alpha-1 Blocker",
-        "vietnamese_name": "Doxazosin, Cardura",
-        "administration": ["PO"],
-        "indications": [
-            "Tăng huyết áp",
-            "Phì đại tuyến tiền liệt lành tính (BPH - Benign Prostatic Hyperplasia)",
-            "Rối loạn tiểu tiện do BPH"
-        ],
-        "contraindications": [
-            "Dị ứng doxazosin hoặc bất kỳ thành phần nào",
-            "Hạ huyết áp nặng",
-            "Suy tim nặng"
-        ],
-        "dosage": {
-            "adult_hypertension": "1mg PO x 1 lần/ngày, tăng dần đến 2-4mg/ngày (tối đa 16mg/ngày)",
-            "adult_bph": "1mg PO x 1 lần/ngày, tăng dần đến 4-8mg/ngày (tối đa 8mg/ngày)",
-            "adult_max": "16mg/ngày (hypertension), 8mg/ngày (BPH)",
-            "notes": "Khởi đầu với liều thấp (1mg) để tránh hạ huyết áp tư thế. Tăng dần mỗi 1-2 tuần. Uống buổi tối để giảm tác dụng phụ hạ huyết áp."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Không đổi"
-        },
-        "side_effects": [
-            "Hạ huyết áp tư thế (orthostatic hypotension) - phổ biến, đặc biệt liều đầu tiên",
-            "Chóng mặt, ngất",
-            "Nhức đầu",
-            "Mệt mỏi",
-            "Buồn nôn",
-            "Phù ngoại biên (hiếm)",
-            "Rối loạn cương dương (hiếm)"
-        ],
-        "interactions": [
-            "Thuốc hạ huyết áp khác: tăng tác dụng hạ huyết áp",
-            "Sildenafil, Tadalafil, Vardenafil: tăng nguy cơ hạ huyết áp",
-            "Rượu: tăng tác dụng hạ huyết áp"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Doxazosin là alpha-1 adrenergic receptor blocker chọn lọc. Ức chế alpha-1 receptors trên cơ trơn mạch máu và cơ trơn tuyến tiền liệt. Kết quả: (1) Giãn mạch ngoại biên → giảm huyết áp, (2) Giãn cơ trơn tuyến tiền liệt và cổ bàng quang → cải thiện triệu chứng BPH (tiểu khó, tiểu rắt, tiểu đêm). Doxazosin chọn lọc alpha-1 hơn alpha-2 → ít tác dụng phụ hơn alpha-blocker không chọn lọc. Tác dụng: điều trị tăng huyết áp và BPH. Tác dụng phụ: hạ huyết áp tư thế (phổ biến, đặc biệt liều đầu tiên).",
-        "monitoring": [
-            "Huyết áp - hạ huyết áp tư thế phổ biến, đặc biệt liều đầu tiên",
-            "Triệu chứng BPH (tiểu khó, tiểu rắt, tiểu đêm) - đánh giá hiệu quả",
-            "Dấu hiệu hạ huyết áp tư thế (chóng mặt khi đứng dậy, ngất)",
-            "Chức năng thận (creatinine, eGFR) - không cần điều chỉnh liều"
-        ],
-        "precautions": [
-            "Hạ huyết áp tư thế - phổ biến, đặc biệt liều đầu tiên (first-dose effect), khởi đầu với liều thấp (1mg)",
-            "Uống buổi tối để giảm tác dụng phụ hạ huyết áp",
-            "Tránh đứng dậy đột ngột - tăng nguy cơ ngất",
-            "Khởi đầu với liều thấp (1mg) và tăng dần mỗi 1-2 tuần",
-            "Thận trọng ở bệnh nhân suy tim nặng - có thể làm nặng",
-            "Thận trọng khi dùng với thuốc hạ huyết áp khác (tăng tác dụng)",
-            "Thận trọng khi dùng với sildenafil, tadalafil, vardenafil (tăng nguy cơ hạ huyết áp)",
-            "Tránh rượu - tăng tác dụng hạ huyết áp",
-            "Có thể dùng cho cả tăng huyết áp và BPH (2 chỉ định)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "19-22 giờ",
-            "onset": "1-2 giờ",
-            "duration": "24 giờ (dùng 1 lần/ngày)",
-            "protein_binding": "98%",
-            "clearance": "Gan (chuyển hóa qua CYP3A4), thận (bài tiết một phần)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Có thể gây hạ huyết áp tư thế nghiêm trọng, đặc biệt liều đầu tiên (first-dose effect). Khởi đầu với liều thấp (1mg) và uống buổi tối. Tránh đứng dậy đột ngột.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Sildenafil, Tadalafil, Vardenafil (PDE-5 inhibitors)",
-                    "mechanism": "Cả hai đều gây giãn mạch, tác dụng cộng dồn",
-                    "effect": "Tăng nguy cơ hạ huyết áp nghiêm trọng, ngất",
-                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều doxazosin hoặc tránh dùng cùng."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Thuốc hạ huyết áp khác (ACE inhibitors, ARBs, Beta-blockers, Diuretics)",
-                    "mechanism": "Tác dụng cộng dồn hạ huyết áp",
-                    "effect": "Tăng nguy cơ hạ huyết áp quá mức, hạ huyết áp tư thế",
-                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều các thuốc hạ huyết áp khác."
-                },
-                {
-                    "drug": "Rượu",
-                    "mechanism": "Rượu gây giãn mạch, tác dụng cộng dồn với doxazosin",
-                    "effect": "Tăng tác dụng hạ huyết áp, tăng nguy cơ ngất",
-                    "management": "Tránh rượu khi dùng doxazosin."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng doxazosin hoặc bất kỳ thành phần nào",
-                "Hạ huyết áp nặng (systolic <90 mmHg)"
-            ],
-            "tương_đối": [
-                "Suy tim nặng - thận trọng, có thể làm nặng",
-                "Dùng với thuốc hạ huyết áp khác - tăng nguy cơ hạ huyết áp",
-                "Dùng với sildenafil, tadalafil, vardenafil - tăng nguy cơ hạ huyết áp"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Doxazosin là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ.",
-            "lactation": {
-                "safety": "Unknown",
-                "details": "Không biết doxazosin có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
-                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Thận trọng, có thể cần giảm liều",
-            "severe": "Thận trọng, giảm liều",
-            "notes": "Doxazosin chuyển hóa ở gan qua CYP3A4. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Hạ huyết áp nghiêm trọng, ngất",
-                "Chóng mặt nặng",
-                "Nhịp tim nhanh phản ứng"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng doxazosin ngay",
-                "Đặt bệnh nhân nằm ngửa, nâng chân cao",
-                "Truyền dịch nếu cần (normal saline)",
-                "Nếu hạ huyết áp nặng: thuốc vận mạch (norepinephrine, phenylephrine)",
-                "Theo dõi huyết áp, nhịp tim liên tục"
-            ],
-            "monitoring": "Huyết áp, nhịp tim, dấu hiệu sinh tồn"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu đáng kể.",
-                "timing": "Uống 1 lần/ngày, tốt nhất vào BUỔI TỐI để giảm tác dụng phụ hạ huyết áp. Khởi đầu với liều thấp (1mg) và tăng dần mỗi 1-2 tuần."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Doxazosin (Cardura)",
-                "UpToDate - Doxazosin: Drug Information",
-                "ACC/AHA Hypertension Guidelines 2024",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High - FDA-approved, clinical guidelines"
-        }
-    }
 
 }
 

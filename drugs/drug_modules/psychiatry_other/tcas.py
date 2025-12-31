@@ -414,7 +414,7 @@ TCA_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
-    }
+    },
 }
 
 __all__ = ['TCA_DRUGS']

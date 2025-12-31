@@ -217,6 +217,335 @@ FLUOROQUINOLONES_DRUGS = {
         'A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         }},
     
+    "Gemifloxacin": {
+        "group": "Antibiotic - Fluoroquinolone",
+        "vietnamese_name": "Gemifloxacin, Factive",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm phổi mắc phải cộng đồng (CAP)",
+            "Nhiễm khuẩn đường hô hấp",
+            "Nhiễm khuẩn đường tiết niệu"
+        ],
+        "contraindications": [
+            "Dị ứng fluoroquinolone",
+            "Có thai",
+            "Trẻ em <18 tuổi",
+            "QT kéo dài"
+        ],
+        "dosage": {
+            "adult_cap": "320mg x 1 lần/ngày x 5-7 ngày",
+            "adult_uti": "320mg x 1 lần/ngày x 3-7 ngày",
+            "notes": "Uống cách xa antacid 2 giờ. Không dùng với sữa. Dùng 1 lần/ngày."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Giảm liều 50-75%"
+        },
+        "side_effects": [
+            "Rối loạn tiêu hóa",
+            "Đau gân, viêm gân (có thể đứt gân)",
+            "QT kéo dài",
+            "Co giật (hiếm)",
+            "Nhạy cảm ánh sáng",
+            "Rối loạn tâm thần (hiếm)",
+            "Phát ban (phổ biến hơn các fluoroquinolone khác)"
+        ],
+        "interactions": [
+            "Antacid: giảm hấp thu",
+            "Warfarin: tăng INR",
+            "Probenecid: tăng nồng độ gemifloxacin"
+        ],
+        "pregnancy": "C - Tránh dùng",
+        "mechanism_of_action": "Gemifloxacin là fluoroquinolone kháng sinh phổ rộng thuộc thế hệ thứ tư. Ức chế DNA gyrase (topoisomerase II) ở vi khuẩn Gram-âm và topoisomerase IV ở vi khuẩn Gram-dương, các enzyme cần thiết cho quá trình sao chép, phiên mã, sửa chữa, và tái tổ hợp DNA. Dẫn đến tổn thương DNA không thể sửa chữa và chết tế bào vi khuẩn. Phổ kháng khuẩn: Gram-âm mạnh (Enterobacteriaceae, H. influenzae, Neisseria, Moraxella), Gram-dương (Streptococcus pneumoniae, bao gồm một số chủng kháng penicillin), và một số vi khuẩn không điển hình (Legionella, Mycoplasma, Chlamydia). Gemifloxacin có hoạt tính tốt với Streptococcus pneumoniae, thường dùng trong điều trị viêm phổi mắc phải cộng đồng. Dùng 1 lần/ngày.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng) để đánh giá đáp ứng điều trị",
+            "Cấy máu và cấy từ vị trí nhiễm trùng (nếu có) để xác định vi khuẩn và độ nhạy cảm",
+            "Tendon (gân) - đau, sưng, đứt gân (đặc biệt gân Achilles)",
+            "Thần kinh trung ương (co giật, kích động, mất ngủ, lo âu, trầm cảm, rối loạn tâm thần)",
+            "Tim mạch (ECG - QT kéo dài, rối loạn nhịp tim)",
+            "Phát ban - phổ biến hơn các fluoroquinolone khác",
+            "Chức năng thận (creatinine, BUN) - điều chỉnh liều ở suy thận"
+        ],
+        "precautions": [
+            "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles)",
+            "NGỪNG NGAY nếu có đau, sưng gân",
+            "QT kéo dài → không dùng với các thuốc kéo dài QT khác",
+            "Co giật → không dùng ở bệnh nhân có tiền sử co giật",
+            "Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp",
+            "Phát ban - phổ biến hơn các fluoroquinolone khác, ngừng nếu có phát ban nặng",
+            "Tương tác với nhiều thuốc: giảm hấp thu với antacid, sucralfate, sắt, kẽm, canxi (cách ít nhất 2 giờ)",
+            "Điều chỉnh liều ở suy thận (CrCl <50 - giảm liều 25-75%)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "7-8 giờ",
+            "onset": "1-2 giờ (PO)",
+            "duration": "24 giờ",
+            "protein_binding": "60-70%",
+            "clearance": "Thận: bài tiết chủ yếu qua thận (25-40% nguyên dạng), gan (chuyển hóa một phần). Dùng 1 lần/ngày."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng",
+        "black_box_warnings": "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles). QT kéo dài và rối loạn nhịp tim. Rối loạn thần kinh trung ương (co giật, kích động, mất ngủ, lo âu, trầm cảm, rối loạn tâm thần).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Gemifloxacin có thể ức chế chuyển hóa warfarin, tăng nồng độ warfarin",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu hoặc ngừng gemifloxacin. Có thể cần giảm liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antacid, Sucralfate, Sắt, Kẽm, Canxi",
+                    "mechanism": "Tạo phức hợp không hòa tan, giảm hấp thu gemifloxacin",
+                    "effect": "Giảm hấp thu gemifloxacin, giảm hiệu quả",
+                    "management": "Cách ít nhất 2 giờ. Uống gemifloxacin trước antacid/sucralfate/sắt/kẽm/canxi 2 giờ, hoặc sau 4 giờ."
+                },
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết ống thận của gemifloxacin, tăng nồng độ",
+                    "effect": "Tăng nồng độ gemifloxacin, tăng độc tính",
+                    "management": "Thận trọng. Có thể cần giảm liều gemifloxacin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng gemifloxacin hoặc các fluoroquinolone khác",
+                "Có thai (category C) - tránh dùng",
+                "Trẻ em <18 tuổi - nguy cơ đứt gân, viêm gân",
+                "QT kéo dài hoặc rối loạn nhịp tim nặng",
+                "Tiền sử co giật"
+            ],
+            "tương_đối": [
+                "Suy thận (CrCl <50) - giảm liều 25-75%",
+                "Người già (>60 tuổi) - tăng nguy cơ đứt gân, viêm gân",
+                "Dùng corticosteroid - tăng nguy cơ đứt gân, viêm gân"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Gemifloxacin là category C. Tránh dùng trong thai kỳ, đặc biệt trong tam cá nguyệt thứ ba.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Gemifloxacin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Gemifloxacin chuyển hóa một phần qua gan nhưng chủ yếu thải qua thận.",
+            "moderate": "Không cần điều chỉnh liều thường quy. Theo dõi đáp ứng điều trị.",
+            "severe": "Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị và độc tính.",
+            "notes": "Gemifloxacin chủ yếu thải qua thận, một phần chuyển hóa qua gan. Suy gan thường không ảnh hưởng đáng kể đến nồng độ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Rối loạn tiêu hóa (buồn nôn, nôn, tiêu chảy)",
+                "Đau gân, viêm gân",
+                "Co giật",
+                "Rối loạn tâm thần (kích động, lo âu, trầm cảm)",
+                "QT kéo dài, rối loạn nhịp tim",
+                "Phát ban"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng gemifloxacin ngay lập tức",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Điều trị co giật nếu có (benzodiazepines)",
+                "Theo dõi ECG (QT interval)",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Điều trị hỗ trợ: truyền dịch nếu cần"
+            ],
+            "monitoring": "ECG (QT interval), dấu hiệu sinh tồn, dấu hiệu co giật, dấu hiệu rối loạn tâm thần, phát ban"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ.",
+                "timing": "Uống 1 lần/ngày. Cách xa antacid, sucralfate, sắt, kẽm, canxi ít nhất 2 giờ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Gemifloxacin (Factive)",
+                "UpToDate - Gemifloxacin: Drug Information",
+                "Micromedex - Gemifloxacin",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, multiple RCTs"
+        }
+    },
+    "Norfloxacin": {
+        "group": "Antibiotic - Fluoroquinolone",
+        "vietnamese_name": "Norfloxacin, Noroxin",
+        "administration": ["PO"],
+        "indications": [
+            "Nhiễm khuẩn đường tiết niệu không biến chứng",
+            "Nhiễm khuẩn đường tiết niệu tái phát",
+            "Viêm tuyến tiền liệt do vi khuẩn"
+        ],
+        "contraindications": [
+            "Dị ứng fluoroquinolone",
+            "Có thai",
+            "Trẻ em <18 tuổi",
+            "QT kéo dài"
+        ],
+        "dosage": {
+            "adult_uti_uncomplicated": "400mg x 2 lần/ngày x 3 ngày",
+            "adult_uti_complicated": "400mg x 2 lần/ngày x 7-10 ngày",
+            "adult_prostatitis": "400mg x 2 lần/ngày x 28 ngày",
+            "notes": "Uống cách xa antacid 2 giờ. Không dùng với sữa. Hấp thu kém, chỉ dùng cho nhiễm khuẩn đường tiết niệu."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Giảm liều 50-75%"
+        },
+        "side_effects": [
+            "Rối loạn tiêu hóa",
+            "Đau gân, viêm gân (có thể đứt gân)",
+            "QT kéo dài",
+            "Co giật (hiếm)",
+            "Nhạy cảm ánh sáng",
+            "Rối loạn tâm thần (hiếm)"
+        ],
+        "interactions": [
+            "Antacid: giảm hấp thu",
+            "Warfarin: tăng INR",
+            "Theophylline: tăng nồng độ theophylline"
+        ],
+        "pregnancy": "C - Tránh dùng",
+        "mechanism_of_action": "Norfloxacin là fluoroquinolone kháng sinh phổ rộng thuộc thế hệ thứ nhất. Ức chế DNA gyrase (topoisomerase II) ở vi khuẩn Gram-âm, các enzyme cần thiết cho quá trình sao chép, phiên mã, sửa chữa, và tái tổ hợp DNA. Dẫn đến tổn thương DNA không thể sửa chữa và chết tế bào vi khuẩn. Phổ kháng khuẩn: Gram-âm mạnh (Enterobacteriaceae, H. influenzae, Neisseria), một số Gram-dương. Norfloxacin hấp thu kém qua đường uống (30-40%), nồng độ trong máu thấp, nhưng nồng độ trong nước tiểu cao, nên chỉ dùng cho nhiễm khuẩn đường tiết niệu. Không hiệu quả với Pseudomonas aeruginosa (kém hơn ciprofloxacin).",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng) để đánh giá đáp ứng điều trị",
+            "Cấy nước tiểu để xác định vi khuẩn và độ nhạy cảm",
+            "Tendon (gân) - đau, sưng, đứt gân (đặc biệt gân Achilles)",
+            "Thần kinh trung ương (co giật, kích động, mất ngủ)",
+            "Tim mạch (ECG - QT kéo dài)",
+            "Chức năng thận (creatinine, BUN) - điều chỉnh liều ở suy thận"
+        ],
+        "precautions": [
+            "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles)",
+            "NGỪNG NGAY nếu có đau, sưng gân",
+            "QT kéo dài → không dùng với các thuốc kéo dài QT khác",
+            "Co giật → không dùng ở bệnh nhân có tiền sử co giật",
+            "Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp",
+            "Tương tác với nhiều thuốc: giảm hấp thu với antacid, sucralfate, sắt, kẽm, canxi (cách ít nhất 2 giờ)",
+            "Điều chỉnh liều ở suy thận (CrCl <50 - giảm liều 25-75%)",
+            "Chỉ dùng cho nhiễm khuẩn đường tiết niệu (hấp thu kém, nồng độ trong máu thấp)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-4 giờ",
+            "onset": "1-2 giờ (PO)",
+            "duration": "12 giờ",
+            "protein_binding": "10-15%",
+            "clearance": "Thận: bài tiết chủ yếu qua thận (30% nguyên dạng), gan (chuyển hóa một phần). Hấp thu kém (30-40%), nồng độ trong máu thấp, nhưng nồng độ trong nước tiểu cao."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng",
+        "black_box_warnings": "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles). QT kéo dài và rối loạn nhịp tim. Rối loạn thần kinh trung ương (co giật, kích động, mất ngủ, lo âu, trầm cảm, rối loạn tâm thần).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Norfloxacin có thể ức chế chuyển hóa warfarin, tăng nồng độ warfarin",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu hoặc ngừng norfloxacin. Có thể cần giảm liều warfarin."
+                },
+                {
+                    "drug": "Theophylline",
+                    "mechanism": "Norfloxacin ức chế chuyển hóa theophylline qua CYP1A2",
+                    "effect": "Tăng nồng độ theophylline, tăng độc tính",
+                    "management": "Theo dõi nồng độ theophylline và dấu hiệu độc tính. Giảm liều theophylline 25-50%."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antacid, Sucralfate, Sắt, Kẽm, Canxi",
+                    "mechanism": "Tạo phức hợp không hòa tan, giảm hấp thu norfloxacin",
+                    "effect": "Giảm hấp thu norfloxacin, giảm hiệu quả",
+                    "management": "Cách ít nhất 2 giờ. Uống norfloxacin trước antacid/sucralfate/sắt/kẽm/canxi 2 giờ, hoặc sau 4 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng norfloxacin hoặc các fluoroquinolone khác",
+                "Có thai (category C) - tránh dùng",
+                "Trẻ em <18 tuổi - nguy cơ đứt gân, viêm gân",
+                "QT kéo dài hoặc rối loạn nhịp tim nặng",
+                "Tiền sử co giật"
+            ],
+            "tương_đối": [
+                "Suy thận (CrCl <50) - giảm liều 25-75%",
+                "Người già (>60 tuổi) - tăng nguy cơ đứt gân, viêm gân",
+                "Dùng corticosteroid - tăng nguy cơ đứt gân, viêm gân"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Norfloxacin là category C. Tránh dùng trong thai kỳ, đặc biệt trong tam cá nguyệt thứ ba.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Norfloxacin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Norfloxacin chuyển hóa một phần qua gan nhưng chủ yếu thải qua thận.",
+            "moderate": "Không cần điều chỉnh liều thường quy. Theo dõi đáp ứng điều trị.",
+            "severe": "Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị và độc tính.",
+            "notes": "Norfloxacin chủ yếu thải qua thận, một phần chuyển hóa qua gan. Suy gan thường không ảnh hưởng đáng kể đến nồng độ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Rối loạn tiêu hóa (buồn nôn, nôn, tiêu chảy)",
+                "Đau gân, viêm gân",
+                "Co giật",
+                "Rối loạn tâm thần (kích động, lo âu, trầm cảm)",
+                "QT kéo dài, rối loạn nhịp tim"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng norfloxacin ngay lập tức",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
+                "Điều trị co giật nếu có (benzodiazepines)",
+                "Theo dõi ECG (QT interval)",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Điều trị hỗ trợ: truyền dịch nếu cần"
+            ],
+            "monitoring": "ECG (QT interval), dấu hiệu sinh tồn, dấu hiệu co giật, dấu hiệu rối loạn tâm thần"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ.",
+                "timing": "Uống 2 lần/ngày (mỗi 12 giờ). Cách xa antacid, sucralfate, sắt, kẽm, canxi ít nhất 2 giờ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Norfloxacin (Noroxin)",
+                "UpToDate - Norfloxacin: Drug Information",
+                "Micromedex - Norfloxacin",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, multiple RCTs"
+        }
+    },
+    
     "Ofloxacin": {
         "group": "Antibiotic - Fluoroquinolone",
         "vietnamese_name": "Ofloxacin, Floxin",
@@ -422,335 +751,6 @@ FLUOROQUINOLONES_DRUGS = {
         }
     },
     
-    "Norfloxacin": {
-        "group": "Antibiotic - Fluoroquinolone",
-        "vietnamese_name": "Norfloxacin, Noroxin",
-        "administration": ["PO"],
-        "indications": [
-            "Nhiễm khuẩn đường tiết niệu không biến chứng",
-            "Nhiễm khuẩn đường tiết niệu tái phát",
-            "Viêm tuyến tiền liệt do vi khuẩn"
-        ],
-        "contraindications": [
-            "Dị ứng fluoroquinolone",
-            "Có thai",
-            "Trẻ em <18 tuổi",
-            "QT kéo dài"
-        ],
-        "dosage": {
-            "adult_uti_uncomplicated": "400mg x 2 lần/ngày x 3 ngày",
-            "adult_uti_complicated": "400mg x 2 lần/ngày x 7-10 ngày",
-            "adult_prostatitis": "400mg x 2 lần/ngày x 28 ngày",
-            "notes": "Uống cách xa antacid 2 giờ. Không dùng với sữa. Hấp thu kém, chỉ dùng cho nhiễm khuẩn đường tiết niệu."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Giảm liều 25-50%",
-            "under_30": "Giảm liều 50-75%"
-        },
-        "side_effects": [
-            "Rối loạn tiêu hóa",
-            "Đau gân, viêm gân (có thể đứt gân)",
-            "QT kéo dài",
-            "Co giật (hiếm)",
-            "Nhạy cảm ánh sáng",
-            "Rối loạn tâm thần (hiếm)"
-        ],
-        "interactions": [
-            "Antacid: giảm hấp thu",
-            "Warfarin: tăng INR",
-            "Theophylline: tăng nồng độ theophylline"
-        ],
-        "pregnancy": "C - Tránh dùng",
-        "mechanism_of_action": "Norfloxacin là fluoroquinolone kháng sinh phổ rộng thuộc thế hệ thứ nhất. Ức chế DNA gyrase (topoisomerase II) ở vi khuẩn Gram-âm, các enzyme cần thiết cho quá trình sao chép, phiên mã, sửa chữa, và tái tổ hợp DNA. Dẫn đến tổn thương DNA không thể sửa chữa và chết tế bào vi khuẩn. Phổ kháng khuẩn: Gram-âm mạnh (Enterobacteriaceae, H. influenzae, Neisseria), một số Gram-dương. Norfloxacin hấp thu kém qua đường uống (30-40%), nồng độ trong máu thấp, nhưng nồng độ trong nước tiểu cao, nên chỉ dùng cho nhiễm khuẩn đường tiết niệu. Không hiệu quả với Pseudomonas aeruginosa (kém hơn ciprofloxacin).",
-        "monitoring": [
-            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng) để đánh giá đáp ứng điều trị",
-            "Cấy nước tiểu để xác định vi khuẩn và độ nhạy cảm",
-            "Tendon (gân) - đau, sưng, đứt gân (đặc biệt gân Achilles)",
-            "Thần kinh trung ương (co giật, kích động, mất ngủ)",
-            "Tim mạch (ECG - QT kéo dài)",
-            "Chức năng thận (creatinine, BUN) - điều chỉnh liều ở suy thận"
-        ],
-        "precautions": [
-            "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles)",
-            "NGỪNG NGAY nếu có đau, sưng gân",
-            "QT kéo dài → không dùng với các thuốc kéo dài QT khác",
-            "Co giật → không dùng ở bệnh nhân có tiền sử co giật",
-            "Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp",
-            "Tương tác với nhiều thuốc: giảm hấp thu với antacid, sucralfate, sắt, kẽm, canxi (cách ít nhất 2 giờ)",
-            "Điều chỉnh liều ở suy thận (CrCl <50 - giảm liều 25-75%)",
-            "Chỉ dùng cho nhiễm khuẩn đường tiết niệu (hấp thu kém, nồng độ trong máu thấp)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "3-4 giờ",
-            "onset": "1-2 giờ (PO)",
-            "duration": "12 giờ",
-            "protein_binding": "10-15%",
-            "clearance": "Thận: bài tiết chủ yếu qua thận (30% nguyên dạng), gan (chuyển hóa một phần). Hấp thu kém (30-40%), nồng độ trong máu thấp, nhưng nồng độ trong nước tiểu cao."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng",
-        "black_box_warnings": "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles). QT kéo dài và rối loạn nhịp tim. Rối loạn thần kinh trung ương (co giật, kích động, mất ngủ, lo âu, trầm cảm, rối loạn tâm thần).",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Norfloxacin có thể ức chế chuyển hóa warfarin, tăng nồng độ warfarin",
-                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR chặt chẽ khi bắt đầu hoặc ngừng norfloxacin. Có thể cần giảm liều warfarin."
-                },
-                {
-                    "drug": "Theophylline",
-                    "mechanism": "Norfloxacin ức chế chuyển hóa theophylline qua CYP1A2",
-                    "effect": "Tăng nồng độ theophylline, tăng độc tính",
-                    "management": "Theo dõi nồng độ theophylline và dấu hiệu độc tính. Giảm liều theophylline 25-50%."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Antacid, Sucralfate, Sắt, Kẽm, Canxi",
-                    "mechanism": "Tạo phức hợp không hòa tan, giảm hấp thu norfloxacin",
-                    "effect": "Giảm hấp thu norfloxacin, giảm hiệu quả",
-                    "management": "Cách ít nhất 2 giờ. Uống norfloxacin trước antacid/sucralfate/sắt/kẽm/canxi 2 giờ, hoặc sau 4 giờ."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng norfloxacin hoặc các fluoroquinolone khác",
-                "Có thai (category C) - tránh dùng",
-                "Trẻ em <18 tuổi - nguy cơ đứt gân, viêm gân",
-                "QT kéo dài hoặc rối loạn nhịp tim nặng",
-                "Tiền sử co giật"
-            ],
-            "tương_đối": [
-                "Suy thận (CrCl <50) - giảm liều 25-75%",
-                "Người già (>60 tuổi) - tăng nguy cơ đứt gân, viêm gân",
-                "Dùng corticosteroid - tăng nguy cơ đứt gân, viêm gân"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Norfloxacin là category C. Tránh dùng trong thai kỳ, đặc biệt trong tam cá nguyệt thứ ba.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Norfloxacin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp.",
-                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều. Norfloxacin chuyển hóa một phần qua gan nhưng chủ yếu thải qua thận.",
-            "moderate": "Không cần điều chỉnh liều thường quy. Theo dõi đáp ứng điều trị.",
-            "severe": "Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị và độc tính.",
-            "notes": "Norfloxacin chủ yếu thải qua thận, một phần chuyển hóa qua gan. Suy gan thường không ảnh hưởng đáng kể đến nồng độ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Rối loạn tiêu hóa (buồn nôn, nôn, tiêu chảy)",
-                "Đau gân, viêm gân",
-                "Co giật",
-                "Rối loạn tâm thần (kích động, lo âu, trầm cảm)",
-                "QT kéo dài, rối loạn nhịp tim"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng norfloxacin ngay lập tức",
-                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
-                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
-                "Điều trị co giật nếu có (benzodiazepines)",
-                "Theo dõi ECG (QT interval)",
-                "Theo dõi dấu hiệu sinh tồn",
-                "Điều trị hỗ trợ: truyền dịch nếu cần"
-            ],
-            "monitoring": "ECG (QT interval), dấu hiệu sinh tồn, dấu hiệu co giật, dấu hiệu rối loạn tâm thần"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ.",
-                "timing": "Uống 2 lần/ngày (mỗi 12 giờ). Cách xa antacid, sucralfate, sắt, kẽm, canxi ít nhất 2 giờ."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Norfloxacin (Noroxin)",
-                "UpToDate - Norfloxacin: Drug Information",
-                "Micromedex - Norfloxacin",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved, multiple RCTs"
-        }
-    },
-    
-    "Gemifloxacin": {
-        "group": "Antibiotic - Fluoroquinolone",
-        "vietnamese_name": "Gemifloxacin, Factive",
-        "administration": ["PO"],
-        "indications": [
-            "Viêm phổi mắc phải cộng đồng (CAP)",
-            "Nhiễm khuẩn đường hô hấp",
-            "Nhiễm khuẩn đường tiết niệu"
-        ],
-        "contraindications": [
-            "Dị ứng fluoroquinolone",
-            "Có thai",
-            "Trẻ em <18 tuổi",
-            "QT kéo dài"
-        ],
-        "dosage": {
-            "adult_cap": "320mg x 1 lần/ngày x 5-7 ngày",
-            "adult_uti": "320mg x 1 lần/ngày x 3-7 ngày",
-            "notes": "Uống cách xa antacid 2 giờ. Không dùng với sữa. Dùng 1 lần/ngày."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Giảm liều 25-50%",
-            "under_30": "Giảm liều 50-75%"
-        },
-        "side_effects": [
-            "Rối loạn tiêu hóa",
-            "Đau gân, viêm gân (có thể đứt gân)",
-            "QT kéo dài",
-            "Co giật (hiếm)",
-            "Nhạy cảm ánh sáng",
-            "Rối loạn tâm thần (hiếm)",
-            "Phát ban (phổ biến hơn các fluoroquinolone khác)"
-        ],
-        "interactions": [
-            "Antacid: giảm hấp thu",
-            "Warfarin: tăng INR",
-            "Probenecid: tăng nồng độ gemifloxacin"
-        ],
-        "pregnancy": "C - Tránh dùng",
-        "mechanism_of_action": "Gemifloxacin là fluoroquinolone kháng sinh phổ rộng thuộc thế hệ thứ tư. Ức chế DNA gyrase (topoisomerase II) ở vi khuẩn Gram-âm và topoisomerase IV ở vi khuẩn Gram-dương, các enzyme cần thiết cho quá trình sao chép, phiên mã, sửa chữa, và tái tổ hợp DNA. Dẫn đến tổn thương DNA không thể sửa chữa và chết tế bào vi khuẩn. Phổ kháng khuẩn: Gram-âm mạnh (Enterobacteriaceae, H. influenzae, Neisseria, Moraxella), Gram-dương (Streptococcus pneumoniae, bao gồm một số chủng kháng penicillin), và một số vi khuẩn không điển hình (Legionella, Mycoplasma, Chlamydia). Gemifloxacin có hoạt tính tốt với Streptococcus pneumoniae, thường dùng trong điều trị viêm phổi mắc phải cộng đồng. Dùng 1 lần/ngày.",
-        "monitoring": [
-            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng) để đánh giá đáp ứng điều trị",
-            "Cấy máu và cấy từ vị trí nhiễm trùng (nếu có) để xác định vi khuẩn và độ nhạy cảm",
-            "Tendon (gân) - đau, sưng, đứt gân (đặc biệt gân Achilles)",
-            "Thần kinh trung ương (co giật, kích động, mất ngủ, lo âu, trầm cảm, rối loạn tâm thần)",
-            "Tim mạch (ECG - QT kéo dài, rối loạn nhịp tim)",
-            "Phát ban - phổ biến hơn các fluoroquinolone khác",
-            "Chức năng thận (creatinine, BUN) - điều chỉnh liều ở suy thận"
-        ],
-        "precautions": [
-            "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles)",
-            "NGỪNG NGAY nếu có đau, sưng gân",
-            "QT kéo dài → không dùng với các thuốc kéo dài QT khác",
-            "Co giật → không dùng ở bệnh nhân có tiền sử co giật",
-            "Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp",
-            "Phát ban - phổ biến hơn các fluoroquinolone khác, ngừng nếu có phát ban nặng",
-            "Tương tác với nhiều thuốc: giảm hấp thu với antacid, sucralfate, sắt, kẽm, canxi (cách ít nhất 2 giờ)",
-            "Điều chỉnh liều ở suy thận (CrCl <50 - giảm liều 25-75%)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "7-8 giờ",
-            "onset": "1-2 giờ (PO)",
-            "duration": "24 giờ",
-            "protein_binding": "60-70%",
-            "clearance": "Thận: bài tiết chủ yếu qua thận (25-40% nguyên dạng), gan (chuyển hóa một phần). Dùng 1 lần/ngày."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng",
-        "black_box_warnings": "Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles). QT kéo dài và rối loạn nhịp tim. Rối loạn thần kinh trung ương (co giật, kích động, mất ngủ, lo âu, trầm cảm, rối loạn tâm thần).",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Gemifloxacin có thể ức chế chuyển hóa warfarin, tăng nồng độ warfarin",
-                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR chặt chẽ khi bắt đầu hoặc ngừng gemifloxacin. Có thể cần giảm liều warfarin."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Antacid, Sucralfate, Sắt, Kẽm, Canxi",
-                    "mechanism": "Tạo phức hợp không hòa tan, giảm hấp thu gemifloxacin",
-                    "effect": "Giảm hấp thu gemifloxacin, giảm hiệu quả",
-                    "management": "Cách ít nhất 2 giờ. Uống gemifloxacin trước antacid/sucralfate/sắt/kẽm/canxi 2 giờ, hoặc sau 4 giờ."
-                },
-                {
-                    "drug": "Probenecid",
-                    "mechanism": "Probenecid ức chế bài tiết ống thận của gemifloxacin, tăng nồng độ",
-                    "effect": "Tăng nồng độ gemifloxacin, tăng độc tính",
-                    "management": "Thận trọng. Có thể cần giảm liều gemifloxacin."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng gemifloxacin hoặc các fluoroquinolone khác",
-                "Có thai (category C) - tránh dùng",
-                "Trẻ em <18 tuổi - nguy cơ đứt gân, viêm gân",
-                "QT kéo dài hoặc rối loạn nhịp tim nặng",
-                "Tiền sử co giật"
-            ],
-            "tương_đối": [
-                "Suy thận (CrCl <50) - giảm liều 25-75%",
-                "Người già (>60 tuổi) - tăng nguy cơ đứt gân, viêm gân",
-                "Dùng corticosteroid - tăng nguy cơ đứt gân, viêm gân"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Gemifloxacin là category C. Tránh dùng trong thai kỳ, đặc biệt trong tam cá nguyệt thứ ba.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Gemifloxacin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp.",
-                "recommendation": "Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều. Gemifloxacin chuyển hóa một phần qua gan nhưng chủ yếu thải qua thận.",
-            "moderate": "Không cần điều chỉnh liều thường quy. Theo dõi đáp ứng điều trị.",
-            "severe": "Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị và độc tính.",
-            "notes": "Gemifloxacin chủ yếu thải qua thận, một phần chuyển hóa qua gan. Suy gan thường không ảnh hưởng đáng kể đến nồng độ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Rối loạn tiêu hóa (buồn nôn, nôn, tiêu chảy)",
-                "Đau gân, viêm gân",
-                "Co giật",
-                "Rối loạn tâm thần (kích động, lo âu, trầm cảm)",
-                "QT kéo dài, rối loạn nhịp tim",
-                "Phát ban"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng gemifloxacin ngay lập tức",
-                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
-                "Than hoạt tính nếu uống trong vòng 1-2 giờ",
-                "Điều trị co giật nếu có (benzodiazepines)",
-                "Theo dõi ECG (QT interval)",
-                "Theo dõi dấu hiệu sinh tồn",
-                "Điều trị hỗ trợ: truyền dịch nếu cần"
-            ],
-            "monitoring": "ECG (QT interval), dấu hiệu sinh tồn, dấu hiệu co giật, dấu hiệu rối loạn tâm thần, phát ban"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ.",
-                "timing": "Uống 1 lần/ngày. Cách xa antacid, sucralfate, sắt, kẽm, canxi ít nhất 2 giờ."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Gemifloxacin (Factive)",
-                "UpToDate - Gemifloxacin: Drug Information",
-                "Micromedex - Gemifloxacin",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved, multiple RCTs"
-        }
-    },
     "Sparfloxacin": {
         "group": "Antibiotic - Fluoroquinolone",
         "vietnamese_name": "Sparfloxacin, Sparflo",
@@ -925,7 +925,7 @@ FLUOROQUINOLONES_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs"
         }
-    }
+    },
 }
 
 __all__ = ['FLUOROQUINOLONES_DRUGS']

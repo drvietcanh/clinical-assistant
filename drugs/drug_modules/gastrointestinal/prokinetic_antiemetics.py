@@ -4,6 +4,109 @@ Active module - contains all gastrointestinal drug data"""
 # Prokinetic, Antiemetics
 
 PROKINETIC_ANTIEMETICS_DRUGS = {
+    "Domperidone": {'group': 'Gastrointestinal - Prokinetic, Antiemetic', 'vietnamese_name':
+        'Domperidone, Motilium', 'administration': ['PO'], 'indications': [
+        'Buồn nôn, nôn', 'Liệt dạ dày (gastroparesis)', 'Ợ nóng',
+        'Trào ngược dạ dày thực quản'], 'contraindications': [
+        'Dị ứng domperidone', 'Chảy máu dạ dày', 'Tắc ruột cơ học',
+        'Prolactinoma', 'Dùng với các thuốc QT kéo dài'], 'dosage': {
+        'adult_nausea': '10-20mg x 3-4 lần/ngày, uống trước bữa ăn',
+        'adult_gastroparesis': '10mg x 3-4 lần/ngày trước bữa ăn', 'adult_max':
+        '80mg/ngày', 'notes':
+        'Không qua hàng rào máu-não nên ít tác dụng phụ thần kinh hơn metoclopramide'
+        }, 'renal_adjustment': {'normal': 'Không đổi', '30_60':
+        'Thận trọng, giảm liều', 'under_30': 'Thận trọng, giảm liều 50%'},
+        'side_effects': ['Rối loạn kinh nguyệt', 'Tăng prolactin', 'Đau vú',
+        'Chảy sữa (galactorrhea)', 'QT kéo dài (liều cao)', 'Nhức đầu'],
+        'interactions': [
+        'QT kéo dài: tránh dùng với thuốc QT kéo dài (amiodarone, quinolone)',
+        'Ketoconazole: tăng nồng độ domperidone',
+        'Erythromycin: tăng nồng độ domperidone'], 'pregnancy': 'C',
+        'mechanism_of_action':
+        'Dopamine D2 receptor antagonist ở ngoại vi (ruột và chemoreceptor trigger zone). Ức chế dopamine → tăng nhu động dạ dày và ruột, tăng trương lực cơ thắt dưới thực quản, tăng tốc độ làm rỗng dạ dày. Có tác dụng chống nôn do ức chế dopamine ở chemoreceptor trigger zone. KHÔNG qua hàng rào máu-não (do bị P-glycoprotein đẩy ra) → ít tác dụng phụ thần kinh hơn metoclopramide (không gây mê sảng, parkinsonism). Tăng prolactin do ức chế dopamine ở tuyến yên (dopamine ức chế tiết prolactin).'
+        , 'monitoring': [
+        'Đáp ứng lâm sàng (giảm buồn nôn, nôn, cải thiện làm rỗng dạ dày)',
+        'ECG nếu dùng liều cao hoặc kéo dài (nguy cơ QT kéo dài)',
+        'Dấu hiệu tăng prolactin: rối loạn kinh nguyệt, chảy sữa, đau vú',
+        'Dấu hiệu QT kéo dài: loạn nhịp tim, chóng mặt, ngất',
+        'Dấu hiệu tác dụng phụ thần kinh (hiếm nhưng có thể xảy ra nếu tích lũy)'
+        ], 'precautions': ['Uống trước bữa ăn 15-30 phút (tăng hiệu quả)',
+        'Không vượt quá 80mg/ngày (tăng nguy cơ QT kéo dài)',
+        'Tránh dùng với các thuốc kéo dài QT (amiodarone, quinolone, macrolide) - tăng nguy cơ loạn nhịp'
+        , 'Thận trọng ở suy thận (giảm liều)',
+        'Thận trọng ở suy gan (giảm liều)',
+        'Theo dõi dấu hiệu tăng prolactin (rối loạn kinh nguyệt, chảy sữa)',
+        'Ngừng nếu có dấu hiệu QT kéo dài hoặc loạn nhịp',
+        'Ít tác dụng phụ thần kinh hơn metoclopramide (không qua hàng rào máu-não)'
+        ,
+        'Không dùng trong prolactinoma (tăng prolactin có thể làm tăng kích thước u)'
+        ], 'pharmacokinetics': {'half_life': '7-9 giờ', 'onset': '30-60 phút',
+        'duration': '4-8 giờ', 'protein_binding': '91-93%', 'metabolism':
+        'Gan (chuyển hóa qua CYP3A4), CYP1A2', 'clearance':
+        'Gan (chuyển hóa), thận (thải trừ)'}, 'storage':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
+        'black_box_warnings':
+        'Nguy cơ QT kéo dài và loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Nguy cơ tăng ở liều cao (>80mg/ngày), suy thận, suy gan, hoặc dùng với các thuốc kéo dài QT. Không vượt quá 80mg/ngày. Tránh dùng với các thuốc kéo dài QT.'
+        , 'drug_interactions': {'major': [{'drug':
+        'Thuốc kéo dài QT (amiodarone, quinolone, macrolide, haloperidol, etc.)',
+        'mechanism': 'Tác dụng hiệp đồng kéo dài QT interval', 'effect':
+        'Tăng nguy cơ QT kéo dài, torsades de pointes, loạn nhịp tim, có thể tử vong'
+        , 'management':
+        'CHỐNG CHỈ ĐỊNH dùng cùng. Tránh dùng domperidone với các thuốc kéo dài QT.'
+        }], 'moderate': [{'drug':
+        'CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir, clarithromycin, erythromycin)'
+        , 'mechanism': 'Ức chế chuyển hóa domperidone qua CYP3A4', 'effect':
+        'Tăng nồng độ domperidone, tăng nguy cơ QT kéo dài', 'management':
+        'Tránh dùng cùng hoặc giảm liều domperidone. Theo dõi ECG.'}, {'drug':
+        'Anticholinergics', 'mechanism': 'Đối kháng tác dụng prokinetic',
+        'effect': 'Giảm hiệu quả prokinetic', 'management':
+        'Tránh dùng cùng nếu có thể'}], 'minor': []}, 'contraindications': {
+        'tuyệt_đối': ['Dị ứng domperidone', 'Chảy máu dạ dày',
+        'Tắc ruột cơ học', 'Prolactinoma',
+        'Dùng với các thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH tuyệt đối',
+        'QT kéo dài (QTc >450ms ở nam, >470ms ở nữ) - CHỐNG CHỈ ĐỊNH'],
+        'tương_đối': ['Suy thận nặng (CrCl <30) - giảm liều 50%',
+        'Suy gan nặng - giảm liều, tăng nguy cơ QT kéo dài',
+        'Hạ kali, hạ magie - tăng nguy cơ QT kéo dài',
+        'Người già - thận trọng, giảm liều', 'Rối loạn nhịp tim - thận trọng']},
+        'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        'Domperidone là FDA category C. Nghiên cứu trên động vật cho thấy có thể gây độc tính cho thai nhi. Không có nghiên cứu đầy đủ trên người. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ, nhưng nên tránh trong tam cá nguyệt đầu nếu có thể.'
+        , 'lactation': {'safety': 'Compatible', 'details':
+        'Domperidone bài tiết vào sữa mẹ ở nồng độ thấp. Có thể dùng để tăng tiết sữa mẹ (off-label). An toàn khi cho con bú.'
+        , 'recommendation':
+        'Có thể dùng khi cho con bú. Dùng liều thường dùng (10-20mg x 3-4 lần/ngày).'
+        }}, 'hepatic_adjustment': {'mild': 'Không cần chỉnh liều', 'moderate':
+        'Thận trọng, có thể giảm liều', 'severe':
+        'Giảm liều hoặc tránh dùng. Domperidone chuyển hóa ở gan qua CYP3A4. Suy gan nặng làm giảm chuyển hóa, tăng nồng độ, tăng nguy cơ QT kéo dài.'
+        , 'notes':
+        'Domperidone chuyển hóa ở gan. Suy gan nặng làm tăng nồng độ, tăng nguy cơ QT kéo dài. Giảm liều hoặc tránh dùng ở suy gan nặng.'
+        }, 'overdose_management': {'symptoms': [
+        'QT kéo dài, torsades de pointes, loạn nhịp tim (triệu chứng chính, có thể tử vong)'
+        , 'Tăng prolactin: rối loạn kinh nguyệt, chảy sữa', 'Buồn nôn, nôn',
+        'Nhức đầu'], 'antidote': 'Không có antidote đặc hiệu', 'treatment': [
+        'Theo dõi ECG liên tục (QT interval)',
+        'Điều trị torsades de pointes nếu có: magnesium sulfate 2g IV, pacing nếu cần'
+        , 'Bổ sung kali, magie nếu thiếu', 'Hỗ trợ triệu chứng',
+        'Theo dõi dấu hiệu sinh tồn chặt chẽ'], 'monitoring':
+        'Theo dõi ECG liên tục (QT interval), dấu hiệu sinh tồn, điện giải'},
+        'reversal_agents': None, 'administration_instructions': {'oral': {
+        'with_food': 'Uống 15-30 phút TRƯỚC bữa ăn (tăng hiệu quả)', 'timing':
+        'Uống 15-30 phút trước bữa ăn và trước khi đi ngủ. Không vượt quá 80mg/ngày.'
+        }, 'iv': {'reconstitution': 'Domperidone chỉ có dạng uống (PO)',
+        'infusion_rate': 'N/A', 'compatibility': [], 'incompatibility': [],
+        'notes': 'Domperidone chỉ có dạng uống, không có dạng IV'}},
+        'references': {'primary_sources': [
+        'FDA Drug Label - Domperidone (Note: Not FDA approved in US, available in other countries)'
+        , 'UpToDate - Domperidone: Drug information',
+        'Micromedex - Domperidone',
+        'European Medicines Agency - Domperidone safety review',
+        "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
+        'last_updated': '2024-12-19', 'evidence_level':
+        'High - Multiple RCTs, safety warnings (QT prolongation)'},
+        "reversal_agents": {
+             "available": False,
+             "agents": []
+         },
     "Metoclopramide": {'group': 'Gastrointestinal - Prokinetic, Antiemetic', 'vietnamese_name':
         'Metoclopramide, Primperan', 'administration': ['PO', 'IV', 'IM'],
         'indications': ['Buồn nôn, nôn', 'Liệt dạ dày',
@@ -120,109 +223,6 @@ PROKINETIC_ANTIEMETICS_DRUGS = {
         'FDA Black Box Warning - Tardive dyskinesia risk'], 'last_updated':
         '2024-12-19', 'evidence_level':
         'High - FDA approved, multiple RCTs, black box warning'}},
-    "Domperidone": {'group': 'Gastrointestinal - Prokinetic, Antiemetic', 'vietnamese_name':
-        'Domperidone, Motilium', 'administration': ['PO'], 'indications': [
-        'Buồn nôn, nôn', 'Liệt dạ dày (gastroparesis)', 'Ợ nóng',
-        'Trào ngược dạ dày thực quản'], 'contraindications': [
-        'Dị ứng domperidone', 'Chảy máu dạ dày', 'Tắc ruột cơ học',
-        'Prolactinoma', 'Dùng với các thuốc QT kéo dài'], 'dosage': {
-        'adult_nausea': '10-20mg x 3-4 lần/ngày, uống trước bữa ăn',
-        'adult_gastroparesis': '10mg x 3-4 lần/ngày trước bữa ăn', 'adult_max':
-        '80mg/ngày', 'notes':
-        'Không qua hàng rào máu-não nên ít tác dụng phụ thần kinh hơn metoclopramide'
-        }, 'renal_adjustment': {'normal': 'Không đổi', '30_60':
-        'Thận trọng, giảm liều', 'under_30': 'Thận trọng, giảm liều 50%'},
-        'side_effects': ['Rối loạn kinh nguyệt', 'Tăng prolactin', 'Đau vú',
-        'Chảy sữa (galactorrhea)', 'QT kéo dài (liều cao)', 'Nhức đầu'],
-        'interactions': [
-        'QT kéo dài: tránh dùng với thuốc QT kéo dài (amiodarone, quinolone)',
-        'Ketoconazole: tăng nồng độ domperidone',
-        'Erythromycin: tăng nồng độ domperidone'], 'pregnancy': 'C',
-        'mechanism_of_action':
-        'Dopamine D2 receptor antagonist ở ngoại vi (ruột và chemoreceptor trigger zone). Ức chế dopamine → tăng nhu động dạ dày và ruột, tăng trương lực cơ thắt dưới thực quản, tăng tốc độ làm rỗng dạ dày. Có tác dụng chống nôn do ức chế dopamine ở chemoreceptor trigger zone. KHÔNG qua hàng rào máu-não (do bị P-glycoprotein đẩy ra) → ít tác dụng phụ thần kinh hơn metoclopramide (không gây mê sảng, parkinsonism). Tăng prolactin do ức chế dopamine ở tuyến yên (dopamine ức chế tiết prolactin).'
-        , 'monitoring': [
-        'Đáp ứng lâm sàng (giảm buồn nôn, nôn, cải thiện làm rỗng dạ dày)',
-        'ECG nếu dùng liều cao hoặc kéo dài (nguy cơ QT kéo dài)',
-        'Dấu hiệu tăng prolactin: rối loạn kinh nguyệt, chảy sữa, đau vú',
-        'Dấu hiệu QT kéo dài: loạn nhịp tim, chóng mặt, ngất',
-        'Dấu hiệu tác dụng phụ thần kinh (hiếm nhưng có thể xảy ra nếu tích lũy)'
-        ], 'precautions': ['Uống trước bữa ăn 15-30 phút (tăng hiệu quả)',
-        'Không vượt quá 80mg/ngày (tăng nguy cơ QT kéo dài)',
-        'Tránh dùng với các thuốc kéo dài QT (amiodarone, quinolone, macrolide) - tăng nguy cơ loạn nhịp'
-        , 'Thận trọng ở suy thận (giảm liều)',
-        'Thận trọng ở suy gan (giảm liều)',
-        'Theo dõi dấu hiệu tăng prolactin (rối loạn kinh nguyệt, chảy sữa)',
-        'Ngừng nếu có dấu hiệu QT kéo dài hoặc loạn nhịp',
-        'Ít tác dụng phụ thần kinh hơn metoclopramide (không qua hàng rào máu-não)'
-        ,
-        'Không dùng trong prolactinoma (tăng prolactin có thể làm tăng kích thước u)'
-        ], 'pharmacokinetics': {'half_life': '7-9 giờ', 'onset': '30-60 phút',
-        'duration': '4-8 giờ', 'protein_binding': '91-93%', 'metabolism':
-        'Gan (chuyển hóa qua CYP3A4), CYP1A2', 'clearance':
-        'Gan (chuyển hóa), thận (thải trừ)'}, 'storage':
-        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
-        'black_box_warnings':
-        'Nguy cơ QT kéo dài và loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Nguy cơ tăng ở liều cao (>80mg/ngày), suy thận, suy gan, hoặc dùng với các thuốc kéo dài QT. Không vượt quá 80mg/ngày. Tránh dùng với các thuốc kéo dài QT.'
-        , 'drug_interactions': {'major': [{'drug':
-        'Thuốc kéo dài QT (amiodarone, quinolone, macrolide, haloperidol, etc.)',
-        'mechanism': 'Tác dụng hiệp đồng kéo dài QT interval', 'effect':
-        'Tăng nguy cơ QT kéo dài, torsades de pointes, loạn nhịp tim, có thể tử vong'
-        , 'management':
-        'CHỐNG CHỈ ĐỊNH dùng cùng. Tránh dùng domperidone với các thuốc kéo dài QT.'
-        }], 'moderate': [{'drug':
-        'CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir, clarithromycin, erythromycin)'
-        , 'mechanism': 'Ức chế chuyển hóa domperidone qua CYP3A4', 'effect':
-        'Tăng nồng độ domperidone, tăng nguy cơ QT kéo dài', 'management':
-        'Tránh dùng cùng hoặc giảm liều domperidone. Theo dõi ECG.'}, {'drug':
-        'Anticholinergics', 'mechanism': 'Đối kháng tác dụng prokinetic',
-        'effect': 'Giảm hiệu quả prokinetic', 'management':
-        'Tránh dùng cùng nếu có thể'}], 'minor': []}, 'contraindications': {
-        'tuyệt_đối': ['Dị ứng domperidone', 'Chảy máu dạ dày',
-        'Tắc ruột cơ học', 'Prolactinoma',
-        'Dùng với các thuốc kéo dài QT - CHỐNG CHỈ ĐỊNH tuyệt đối',
-        'QT kéo dài (QTc >450ms ở nam, >470ms ở nữ) - CHỐNG CHỈ ĐỊNH'],
-        'tương_đối': ['Suy thận nặng (CrCl <30) - giảm liều 50%',
-        'Suy gan nặng - giảm liều, tăng nguy cơ QT kéo dài',
-        'Hạ kali, hạ magie - tăng nguy cơ QT kéo dài',
-        'Người già - thận trọng, giảm liều', 'Rối loạn nhịp tim - thận trọng']},
-        'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
-        'Domperidone là FDA category C. Nghiên cứu trên động vật cho thấy có thể gây độc tính cho thai nhi. Không có nghiên cứu đầy đủ trên người. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ, nhưng nên tránh trong tam cá nguyệt đầu nếu có thể.'
-        , 'lactation': {'safety': 'Compatible', 'details':
-        'Domperidone bài tiết vào sữa mẹ ở nồng độ thấp. Có thể dùng để tăng tiết sữa mẹ (off-label). An toàn khi cho con bú.'
-        , 'recommendation':
-        'Có thể dùng khi cho con bú. Dùng liều thường dùng (10-20mg x 3-4 lần/ngày).'
-        }}, 'hepatic_adjustment': {'mild': 'Không cần chỉnh liều', 'moderate':
-        'Thận trọng, có thể giảm liều', 'severe':
-        'Giảm liều hoặc tránh dùng. Domperidone chuyển hóa ở gan qua CYP3A4. Suy gan nặng làm giảm chuyển hóa, tăng nồng độ, tăng nguy cơ QT kéo dài.'
-        , 'notes':
-        'Domperidone chuyển hóa ở gan. Suy gan nặng làm tăng nồng độ, tăng nguy cơ QT kéo dài. Giảm liều hoặc tránh dùng ở suy gan nặng.'
-        }, 'overdose_management': {'symptoms': [
-        'QT kéo dài, torsades de pointes, loạn nhịp tim (triệu chứng chính, có thể tử vong)'
-        , 'Tăng prolactin: rối loạn kinh nguyệt, chảy sữa', 'Buồn nôn, nôn',
-        'Nhức đầu'], 'antidote': 'Không có antidote đặc hiệu', 'treatment': [
-        'Theo dõi ECG liên tục (QT interval)',
-        'Điều trị torsades de pointes nếu có: magnesium sulfate 2g IV, pacing nếu cần'
-        , 'Bổ sung kali, magie nếu thiếu', 'Hỗ trợ triệu chứng',
-        'Theo dõi dấu hiệu sinh tồn chặt chẽ'], 'monitoring':
-        'Theo dõi ECG liên tục (QT interval), dấu hiệu sinh tồn, điện giải'},
-        'reversal_agents': None, 'administration_instructions': {'oral': {
-        'with_food': 'Uống 15-30 phút TRƯỚC bữa ăn (tăng hiệu quả)', 'timing':
-        'Uống 15-30 phút trước bữa ăn và trước khi đi ngủ. Không vượt quá 80mg/ngày.'
-        }, 'iv': {'reconstitution': 'Domperidone chỉ có dạng uống (PO)',
-        'infusion_rate': 'N/A', 'compatibility': [], 'incompatibility': [],
-        'notes': 'Domperidone chỉ có dạng uống, không có dạng IV'}},
-        'references': {'primary_sources': [
-        'FDA Drug Label - Domperidone (Note: Not FDA approved in US, available in other countries)'
-        , 'UpToDate - Domperidone: Drug information',
-        'Micromedex - Domperidone',
-        'European Medicines Agency - Domperidone safety review',
-        "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
-        'last_updated': '2024-12-19', 'evidence_level':
-        'High - Multiple RCTs, safety warnings (QT prolongation)'},
-        "reversal_agents": {
-             "available": False,
-             "agents": []
-         },
 }}
 
 __all__ = ['PROKINETIC_ANTIEMETICS_DRUGS']

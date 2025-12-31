@@ -274,7 +274,7 @@ CORTICOSTEROIDS_DRUGS = {
             "last_updated": "2025-02-03",
             "evidence_level": "A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
-    }
+    },
 }
 
 __all__ = ['CORTICOSTEROIDS_DRUGS']

@@ -4,6 +4,188 @@ Active module - contains all oncology drug data"""
 # Topoisomerase Inhibitors
 
 TOPOISOMERASE_INHIBITORS_DRUGS = {
+    "Etoposide": {
+        "group": "Oncology - Topoisomerase II Inhibitor",
+        "vietnamese_name": "Etoposide, VP-16, Etopophos",
+        "administration": ["IV", "PO"],
+        "indications": [
+            "Ung thư tế bào nhỏ phổi (small cell lung cancer - SCLC)",
+            "Ung thư tinh hoàn (testicular cancer)",
+            "U lympho (lymphoma)",
+            "Bệnh bạch cầu cấp (acute leukemia)",
+            "Ung thư buồng trứng",
+            "Sarcoma mô mềm"
+        ],
+        "contraindications": [
+            "Dị ứng etoposide hoặc bất kỳ thành phần nào",
+            "Giảm bạch cầu nặng (ANC <1000)",
+            "Giảm tiểu cầu nặng (<50,000)",
+            "Có thai",
+            "Đang cho con bú"
+        ],
+        "dosage": {
+            "adult_iv_standard": "100-120mg/m² IV ngày 1-3 (mỗi 3-4 tuần)",
+            "adult_iv_high": "500mg/m² IV ngày 1, 3, 5 (mỗi 3-4 tuần)",
+            "adult_po": "50mg/m² PO x 21 ngày (mỗi 28 ngày) hoặc 100mg/m² PO ngày 1-5 (mỗi 3-4 tuần)",
+            "notes": "Truyền IV trong 30-60 phút. Etoposide có cả dạng IV và PO. Dạng PO có sinh khả dụng thấp (50%), cần liều cao hơn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25%",
+            "under_30": "Giảm liều 50%"
+        },
+        "side_effects": [
+            "Giảm bạch cầu, tiểu cầu (myelosuppression - RẤT PHỔ BIẾN, nặng)",
+            "Thiếu máu - phổ biến",
+            "Buồn nôn, nôn - phổ biến",
+            "Rụng tóc - phổ biến",
+            "Mệt mỏi - phổ biến",
+            "Độc gan (tăng transaminase) - hiếm",
+            "Ung thư thứ phát (acute myeloid leukemia - AML) - hiếm nhưng nghiêm trọng, với liều cao",
+            "Phản ứng quá mẫn (hypersensitivity) - hiếm"
+        ],
+        "interactions": [
+            "Cisplatin: tăng độc tính tủy xương",
+            "Warfarin: tăng nguy cơ chảy máu",
+            "CYP3A4 inhibitors: tăng nồng độ etoposide",
+            "CYP3A4 inducers: giảm nồng độ etoposide"
+        ],
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Etoposide là topoisomerase II inhibitor (epipodophyllotoxin derivative). Topoisomerase II là enzyme quan trọng để tháo xoắn DNA trong quá trình sao chép và phân chia tế bào. Etoposide gắn với topoisomerase II-DNA complex → ức chế enzyme → ngăn cản quá trình sửa chữa DNA sau khi tháo xoắn → gây đứt gãy DNA và chết tế bào. Etoposide tác động chủ yếu lên tế bào đang phân chia nhanh (ung thư), gây độc tế bào. Khác với topoisomerase I inhibitors (irinotecan, topotecan), etoposide ức chế topoisomerase II. Hiệu quả với ung thư tế bào nhỏ phổi, tinh hoàn, u lympho. Độc tính chính: myelosuppression (RẤT PHỔ BIẾN, nặng).",
+        "monitoring": [
+            "Công thức máu toàn phần (CBC) trước mỗi chu kỳ và giữa các chu kỳ - QUAN TRỌNG (myelosuppression RẤT PHỔ BIẾN, nặng)",
+            "Dấu hiệu nhiễm trùng (sốt, ớn lạnh) do giảm bạch cầu",
+            "Dấu hiệu chảy máu (do giảm tiểu cầu)",
+            "Chức năng gan (ALT, AST, bilirubin) trước và trong điều trị (độc gan hiếm)",
+            "Dấu hiệu phản ứng quá mẫn (hypersensitivity) - hiếm",
+            "Dấu hiệu ung thư thứ phát (AML) - hiếm nhưng nghiêm trọng, với liều cao"
+        ],
+        "precautions": [
+            "MYELOSUPPRESSION - RẤT PHỔ BIẾN, NẶNG - theo dõi CBC chặt chẽ trước mỗi chu kỳ",
+            "Trì hoãn điều trị nếu giảm bạch cầu nặng (ANC <1000) hoặc giảm tiểu cầu nặng (<50,000)",
+            "Có thể cần hỗ trợ G-CSF hoặc truyền máu/tiểu cầu",
+            "Tương tác với cisplatin (tăng độc tính tủy xương)",
+            "Tương tác với warfarin (tăng nguy cơ chảy máu - theo dõi INR)",
+            "Tương tác với CYP3A4 inhibitors/inducers (ảnh hưởng nồng độ etoposide)",
+            "Nguy cơ ung thư thứ phát (AML) - hiếm nhưng nghiêm trọng, với liều cao",
+            "Dạng PO: sinh khả dụng thấp (50%), cần liều cao hơn dạng IV"
+        ],
+        "pharmacokinetics": {
+            "half_life": "4-11 giờ",
+            "onset": "1-2 tuần (tác dụng lâm sàng)",
+            "duration": "24-48 giờ (tác dụng sinh học)",
+            "protein_binding": "97%",
+            "metabolism": "Gan (CYP3A4, glucuronidation)",
+            "clearance": "Gan (chủ yếu), thận (một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu. Pha với NS hoặc D5W.",
+        "black_box_warnings": "MYELOSUPPRESSION (giảm bạch cầu, tiểu cầu, thiếu máu) RẤT PHỔ BIẾN VÀ NẶNG. Theo dõi CBC trước mỗi chu kỳ. Trì hoãn điều trị nếu giảm bạch cầu nặng (ANC <1000) hoặc giảm tiểu cầu nặng (<50,000). Nguy cơ ung thư thứ phát (acute myeloid leukemia - AML) - hiếm nhưng nghiêm trọng, với liều cao.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Cisplatin, Carboplatin",
+                    "mechanism": "Cả hai đều gây myelosuppression, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ giảm bạch cầu, tiểu cầu nghiêm trọng",
+                    "management": "Theo dõi CBC chặt chẽ. Có thể cần giảm liều hoặc trì hoãn điều trị."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Etoposide có thể tăng tác dụng chống đông",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Thận trọng. Theo dõi INR chặt chẽ. Có thể cần giảm liều warfarin."
+                },
+                {
+                    "drug": "CYP3A4 Inhibitors (Ketoconazole, Itraconazole, Ritonavir)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ etoposide",
+                    "effect": "Tăng nồng độ etoposide, tăng độc tính",
+                    "management": "Thận trọng. Có thể cần giảm liều etoposide."
+                },
+                {
+                    "drug": "CYP3A4 Inducers (Rifampin, Carbamazepine, Phenytoin)",
+                    "mechanism": "Cảm ứng CYP3A4, giảm nồng độ etoposide",
+                    "effect": "Giảm nồng độ etoposide, giảm hiệu quả",
+                    "management": "Thận trọng. Có thể cần tăng liều etoposide."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng etoposide hoặc bất kỳ thành phần nào",
+                "Có thai - CHỐNG CHỈ ĐỊNH (category D)",
+                "Đang cho con bú - CHỐNG CHỈ ĐỊNH",
+                "Giảm bạch cầu nặng (ANC <1000) - trì hoãn điều trị",
+                "Giảm tiểu cầu nặng (<50,000) - trì hoãn điều trị"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - giảm liều 50%",
+                "Suy gan nặng - thận trọng (chuyển hóa qua gan)",
+                "Bệnh nhân cao tuổi - tăng nguy cơ độc tính"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Etoposide phân loại D - chống chỉ định trong thai kỳ. Etoposide gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Etoposide bài tiết vào sữa mẹ. Thuốc có thể gây độc tính nghiêm trọng cho trẻ sơ sinh.",
+                "recommendation": "Không cho con bú khi dùng etoposide. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều 25-50%",
+            "notes": "Etoposide chuyển hóa qua gan (CYP3A4, glucuronidation). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và độc tính chặt chẽ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Giảm bạch cầu, tiểu cầu nặng (nhiễm trùng, chảy máu)",
+                "Thiếu máu nặng",
+                "Buồn nôn, nôn nặng",
+                "Độc gan (tăng transaminase)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay etoposide",
+                "Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu/tiểu cầu nếu cần",
+                "Hỗ trợ G-CSF nếu giảm bạch cầu nặng",
+                "Theo dõi CBC, chức năng gan, chức năng thận",
+                "Theo dõi và điều trị triệu chứng"
+            ],
+            "monitoring": "CBC mỗi ngày, chức năng gan, chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với hoặc không thức ăn. Có thể uống với thức ăn để giảm kích ứng dạ dày.",
+                "timing": "50mg/m² PO x 21 ngày (mỗi 28 ngày) hoặc 100mg/m² PO ngày 1-5 (mỗi 3-4 tuần). Uống đều đặn cùng một thời điểm mỗi ngày.",
+                "notes": "QUAN TRỌNG: 1) Sinh khả dụng thấp (50%), cần liều cao hơn dạng IV, 2) MYELOSUPPRESSION - RẤT PHỔ BIẾN, NẶNG, 3) Theo dõi CBC chặt chẽ."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ cuối: 0.2-0.4mg/ml. Không lọc.",
+                "infusion_rate": "Truyền tĩnh mạch trong 30-60 phút.",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": ["Không pha với các thuốc khác"],
+                "notes": "100-120mg/m² IV ngày 1-3 (mỗi 3-4 tuần). Truyền trong 30-60 phút. QUAN TRỌNG: 1) MYELOSUPPRESSION - RẤT PHỔ BIẾN, NẶNG, 2) Theo dõi CBC chặt chẽ, 3) Tương tác với cisplatin và warfarin."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Etoposide (VP-16, Etopophos)",
+                "UpToDate - Etoposide: Drug Information",
+                "NCCN Guidelines - Small Cell Lung Cancer, Testicular Cancer",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data, widely used"
+        }
+    },
     "Irinotecan": {'group': 'Oncology - Topoisomerase Inhibitor', 'vietnamese_name':
         'Irinotecan, Camptosar, CPT-11', 'administration': ['IV'], 'indications': [
         'Ung thư đại trực tràng (metastatic)', 'Ung thư phổi không tế bào nhỏ (NSCLC)',
@@ -287,188 +469,6 @@ TOPOISOMERASE_INHIBITORS_DRUGS = {
         }
     },
 
-    "Etoposide": {
-        "group": "Oncology - Topoisomerase II Inhibitor",
-        "vietnamese_name": "Etoposide, VP-16, Etopophos",
-        "administration": ["IV", "PO"],
-        "indications": [
-            "Ung thư tế bào nhỏ phổi (small cell lung cancer - SCLC)",
-            "Ung thư tinh hoàn (testicular cancer)",
-            "U lympho (lymphoma)",
-            "Bệnh bạch cầu cấp (acute leukemia)",
-            "Ung thư buồng trứng",
-            "Sarcoma mô mềm"
-        ],
-        "contraindications": [
-            "Dị ứng etoposide hoặc bất kỳ thành phần nào",
-            "Giảm bạch cầu nặng (ANC <1000)",
-            "Giảm tiểu cầu nặng (<50,000)",
-            "Có thai",
-            "Đang cho con bú"
-        ],
-        "dosage": {
-            "adult_iv_standard": "100-120mg/m² IV ngày 1-3 (mỗi 3-4 tuần)",
-            "adult_iv_high": "500mg/m² IV ngày 1, 3, 5 (mỗi 3-4 tuần)",
-            "adult_po": "50mg/m² PO x 21 ngày (mỗi 28 ngày) hoặc 100mg/m² PO ngày 1-5 (mỗi 3-4 tuần)",
-            "notes": "Truyền IV trong 30-60 phút. Etoposide có cả dạng IV và PO. Dạng PO có sinh khả dụng thấp (50%), cần liều cao hơn."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Giảm liều 25%",
-            "under_30": "Giảm liều 50%"
-        },
-        "side_effects": [
-            "Giảm bạch cầu, tiểu cầu (myelosuppression - RẤT PHỔ BIẾN, nặng)",
-            "Thiếu máu - phổ biến",
-            "Buồn nôn, nôn - phổ biến",
-            "Rụng tóc - phổ biến",
-            "Mệt mỏi - phổ biến",
-            "Độc gan (tăng transaminase) - hiếm",
-            "Ung thư thứ phát (acute myeloid leukemia - AML) - hiếm nhưng nghiêm trọng, với liều cao",
-            "Phản ứng quá mẫn (hypersensitivity) - hiếm"
-        ],
-        "interactions": [
-            "Cisplatin: tăng độc tính tủy xương",
-            "Warfarin: tăng nguy cơ chảy máu",
-            "CYP3A4 inhibitors: tăng nồng độ etoposide",
-            "CYP3A4 inducers: giảm nồng độ etoposide"
-        ],
-        "pregnancy": "D - Chống chỉ định",
-        "mechanism_of_action": "Etoposide là topoisomerase II inhibitor (epipodophyllotoxin derivative). Topoisomerase II là enzyme quan trọng để tháo xoắn DNA trong quá trình sao chép và phân chia tế bào. Etoposide gắn với topoisomerase II-DNA complex → ức chế enzyme → ngăn cản quá trình sửa chữa DNA sau khi tháo xoắn → gây đứt gãy DNA và chết tế bào. Etoposide tác động chủ yếu lên tế bào đang phân chia nhanh (ung thư), gây độc tế bào. Khác với topoisomerase I inhibitors (irinotecan, topotecan), etoposide ức chế topoisomerase II. Hiệu quả với ung thư tế bào nhỏ phổi, tinh hoàn, u lympho. Độc tính chính: myelosuppression (RẤT PHỔ BIẾN, nặng).",
-        "monitoring": [
-            "Công thức máu toàn phần (CBC) trước mỗi chu kỳ và giữa các chu kỳ - QUAN TRỌNG (myelosuppression RẤT PHỔ BIẾN, nặng)",
-            "Dấu hiệu nhiễm trùng (sốt, ớn lạnh) do giảm bạch cầu",
-            "Dấu hiệu chảy máu (do giảm tiểu cầu)",
-            "Chức năng gan (ALT, AST, bilirubin) trước và trong điều trị (độc gan hiếm)",
-            "Dấu hiệu phản ứng quá mẫn (hypersensitivity) - hiếm",
-            "Dấu hiệu ung thư thứ phát (AML) - hiếm nhưng nghiêm trọng, với liều cao"
-        ],
-        "precautions": [
-            "MYELOSUPPRESSION - RẤT PHỔ BIẾN, NẶNG - theo dõi CBC chặt chẽ trước mỗi chu kỳ",
-            "Trì hoãn điều trị nếu giảm bạch cầu nặng (ANC <1000) hoặc giảm tiểu cầu nặng (<50,000)",
-            "Có thể cần hỗ trợ G-CSF hoặc truyền máu/tiểu cầu",
-            "Tương tác với cisplatin (tăng độc tính tủy xương)",
-            "Tương tác với warfarin (tăng nguy cơ chảy máu - theo dõi INR)",
-            "Tương tác với CYP3A4 inhibitors/inducers (ảnh hưởng nồng độ etoposide)",
-            "Nguy cơ ung thư thứ phát (AML) - hiếm nhưng nghiêm trọng, với liều cao",
-            "Dạng PO: sinh khả dụng thấp (50%), cần liều cao hơn dạng IV"
-        ],
-        "pharmacokinetics": {
-            "half_life": "4-11 giờ",
-            "onset": "1-2 tuần (tác dụng lâm sàng)",
-            "duration": "24-48 giờ (tác dụng sinh học)",
-            "protein_binding": "97%",
-            "metabolism": "Gan (CYP3A4, glucuronidation)",
-            "clearance": "Gan (chủ yếu), thận (một phần)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu. Pha với NS hoặc D5W.",
-        "black_box_warnings": "MYELOSUPPRESSION (giảm bạch cầu, tiểu cầu, thiếu máu) RẤT PHỔ BIẾN VÀ NẶNG. Theo dõi CBC trước mỗi chu kỳ. Trì hoãn điều trị nếu giảm bạch cầu nặng (ANC <1000) hoặc giảm tiểu cầu nặng (<50,000). Nguy cơ ung thư thứ phát (acute myeloid leukemia - AML) - hiếm nhưng nghiêm trọng, với liều cao.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Cisplatin, Carboplatin",
-                    "mechanism": "Cả hai đều gây myelosuppression, tác dụng cộng dồn",
-                    "effect": "Tăng nguy cơ giảm bạch cầu, tiểu cầu nghiêm trọng",
-                    "management": "Theo dõi CBC chặt chẽ. Có thể cần giảm liều hoặc trì hoãn điều trị."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Etoposide có thể tăng tác dụng chống đông",
-                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Thận trọng. Theo dõi INR chặt chẽ. Có thể cần giảm liều warfarin."
-                },
-                {
-                    "drug": "CYP3A4 Inhibitors (Ketoconazole, Itraconazole, Ritonavir)",
-                    "mechanism": "Ức chế CYP3A4, tăng nồng độ etoposide",
-                    "effect": "Tăng nồng độ etoposide, tăng độc tính",
-                    "management": "Thận trọng. Có thể cần giảm liều etoposide."
-                },
-                {
-                    "drug": "CYP3A4 Inducers (Rifampin, Carbamazepine, Phenytoin)",
-                    "mechanism": "Cảm ứng CYP3A4, giảm nồng độ etoposide",
-                    "effect": "Giảm nồng độ etoposide, giảm hiệu quả",
-                    "management": "Thận trọng. Có thể cần tăng liều etoposide."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng etoposide hoặc bất kỳ thành phần nào",
-                "Có thai - CHỐNG CHỈ ĐỊNH (category D)",
-                "Đang cho con bú - CHỐNG CHỈ ĐỊNH",
-                "Giảm bạch cầu nặng (ANC <1000) - trì hoãn điều trị",
-                "Giảm tiểu cầu nặng (<50,000) - trì hoãn điều trị"
-            ],
-            "tương_đối": [
-                "Suy thận nặng (CrCl <30) - giảm liều 50%",
-                "Suy gan nặng - thận trọng (chuyển hóa qua gan)",
-                "Bệnh nhân cao tuổi - tăng nguy cơ độc tính"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "D",
-            "pregnancy_details": "Etoposide phân loại D - chống chỉ định trong thai kỳ. Etoposide gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
-            "lactation": {
-                "safety": "Incompatible",
-                "details": "Etoposide bài tiết vào sữa mẹ. Thuốc có thể gây độc tính nghiêm trọng cho trẻ sơ sinh.",
-                "recommendation": "Không cho con bú khi dùng etoposide. Ngừng cho con bú hoặc ngừng thuốc."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng, có thể cần giảm liều",
-            "severe": "Thận trọng, giảm liều 25-50%",
-            "notes": "Etoposide chuyển hóa qua gan (CYP3A4, glucuronidation). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và độc tính chặt chẽ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Giảm bạch cầu, tiểu cầu nặng (nhiễm trùng, chảy máu)",
-                "Thiếu máu nặng",
-                "Buồn nôn, nôn nặng",
-                "Độc gan (tăng transaminase)"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng ngay etoposide",
-                "Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu/tiểu cầu nếu cần",
-                "Hỗ trợ G-CSF nếu giảm bạch cầu nặng",
-                "Theo dõi CBC, chức năng gan, chức năng thận",
-                "Theo dõi và điều trị triệu chứng"
-            ],
-            "monitoring": "CBC mỗi ngày, chức năng gan, chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Uống với hoặc không thức ăn. Có thể uống với thức ăn để giảm kích ứng dạ dày.",
-                "timing": "50mg/m² PO x 21 ngày (mỗi 28 ngày) hoặc 100mg/m² PO ngày 1-5 (mỗi 3-4 tuần). Uống đều đặn cùng một thời điểm mỗi ngày.",
-                "notes": "QUAN TRỌNG: 1) Sinh khả dụng thấp (50%), cần liều cao hơn dạng IV, 2) MYELOSUPPRESSION - RẤT PHỔ BIẾN, NẶNG, 3) Theo dõi CBC chặt chẽ."
-            },
-            "iv": {
-                "reconstitution": "Pha với NS hoặc D5W. Nồng độ cuối: 0.2-0.4mg/ml. Không lọc.",
-                "infusion_rate": "Truyền tĩnh mạch trong 30-60 phút.",
-                "compatibility": ["NS", "D5W"],
-                "incompatibility": ["Không pha với các thuốc khác"],
-                "notes": "100-120mg/m² IV ngày 1-3 (mỗi 3-4 tuần). Truyền trong 30-60 phút. QUAN TRỌNG: 1) MYELOSUPPRESSION - RẤT PHỔ BIẾN, NẶNG, 2) Theo dõi CBC chặt chẽ, 3) Tương tác với cisplatin và warfarin."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Etoposide (VP-16, Etopophos)",
-                "UpToDate - Etoposide: Drug Information",
-                "NCCN Guidelines - Small Cell Lung Cancer, Testicular Cancer",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High - FDA-approved, extensive clinical data, widely used"
-        }
-    }
 }
 
 __all__ = ['TOPOISOMERASE_INHIBITORS_DRUGS']

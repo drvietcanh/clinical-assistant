@@ -4,6 +4,193 @@ Neuraminidase inhibitors for influenza treatment
 """
 
 INFLUENZA_ANTIVIRALS = {
+    "Favipiravir": {
+        "group": "Infectious Disease - Antiviral (RNA polymerase inhibitor)",
+        "vietnamese_name": "Favipiravir, Avigan",
+        "administration": ["PO"],
+        "indications": [
+            "Cúm A và B (khi không đáp ứng hoặc không dùng được neuraminidase inhibitor)",
+            "Cúm do chủng kháng oseltamivir/zanamivir",
+            "COVID-19 (off-label tùy hướng dẫn địa phương)"
+        ],
+        "contraindications": [
+            "Có thai hoặc dự định mang thai",
+            "Cho con bú",
+            "Bệnh gan tiến triển (ALT/AST >5x ULN)",
+            "Gút tiến triển hoặc tăng acid uric không kiểm soát",
+            "Dị ứng favipiravir"
+        ],
+        "dosage": {
+            "adult_influenza": "1600mg x 2 lần (ngày 1), sau đó 600mg x 2 lần/ngày (ngày 2-5)",
+            "adult_covid_off_label": "1800mg x 2 lần (ngày 1), sau đó 800mg x 2 lần/ngày (ngày 2-10) - theo phác đồ địa phương",
+            "max_duration": "5 ngày cho cúm; 10 ngày cho COVID-19 (off-label)",
+            "notes": "Uống sau ăn. Không dùng đơn trị kéo dài vì nguy cơ kháng thuốc và độc tính phôi thai."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần điều chỉnh",
+            "30_60": "Thận trọng, có thể giữ nguyên liều nhưng theo dõi chặt chẽ men gan/acid uric",
+            "under_30": "Dữ liệu hạn chế; tránh nếu có lựa chọn khác, hoặc giảm liều 50% và theo dõi sát"
+        },
+        "side_effects": [
+            "Tăng acid uric, cơn gút",
+            "Tăng men gan (ALT/AST)",
+            "Buồn nôn, nôn, tiêu chảy",
+            "Giảm bạch cầu trung tính nhẹ",
+            "Kéo dài QT (hiếm)"
+        ],
+        "interactions": [
+            "Thuốc tăng acid uric (thiazide, ciclosporin): tăng nguy cơ cơn gút",
+            "Thuốc kéo dài QT (amiodarone, fluoroquinolone): tăng nguy cơ loạn nhịp",
+            "Warfarin: có thể tăng INR, cần theo dõi"
+        ],
+        "pregnancy": "X - Chống chỉ định (gây quái thai)",
+        "mechanism_of_action": "Favipiravir là tiền thuốc, được ribosyl hóa và phosphoryl hóa nội bào thành favipiravir-RTP, ức chế RNA-dependent RNA polymerase (RdRp) của virus RNA, gây ngừng kéo dài chuỗi và đột biến thảm họa, làm ngừng nhân lên virus.",
+        "monitoring": [
+            "Men gan (ALT/AST) trước và mỗi 2-3 ngày trong quá trình dùng",
+            "Acid uric huyết thanh (nguy cơ cơn gút)",
+            "Triệu chứng tim mạch nếu phối hợp thuốc kéo dài QT",
+            "Công thức máu nếu dùng >5-10 ngày",
+            "Test thai (nữ) và tư vấn tránh thai cho cả nam và nữ trong và sau điều trị (ít nhất 7 ngày)"
+        ],
+        "precautions": [
+            "Gây quái thai: chống chỉ định tuyệt đối ở phụ nữ có thai; nam và nữ phải tránh thai hiệu quả",
+            "Theo dõi men gan; ngừng nếu ALT/AST >5x ULN hoặc có triệu chứng viêm gan",
+            "Thận trọng ở bệnh nhân gút hoặc tăng acid uric; cân nhắc allopurinol dự phòng nếu cần",
+            "Uống sau ăn để giảm buồn nôn",
+            "Không dùng đơn trị liệu cho COVID-19 ngoài phác đồ được phê duyệt"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-5 giờ (tăng theo liều do ức chế aldehyde oxidase)",
+            "onset": "Nồng độ đỉnh sau 2 giờ",
+            "duration": "Liên quan phơi nhiễm AUC; dùng chia 2 lần/ngày sau liều tải",
+            "protein_binding": "54%",
+            "clearance": "Chuyển hóa chủ yếu qua aldehyde oxidase, một phần xanthine oxidase; thải qua thận dạng không hoạt tính"
+        },
+        "storage": "Bảo quản nhiệt độ phòng, tránh ẩm và ánh sáng.",
+        "black_box_warnings": "GÂY QUÁI THAI - chống chỉ định tuyệt đối ở thai kỳ; yêu cầu tránh thai cho cả nam và nữ.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc kéo dài QT (amiodarone, sotalol, levofloxacin)",
+                    "mechanism": "Nguy cơ cộng dồn kéo dài QT",
+                    "effect": "Tăng nguy cơ xoắn đỉnh",
+                    "management": "Tránh nếu có thể; nếu bắt buộc, theo dõi ECG và điện giải."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Có thể ức chế nhẹ chuyển hóa warfarin",
+                    "effect": "Tăng INR",
+                    "management": "Theo dõi INR và chỉnh liều warfarin khi bắt đầu/ngừng favipiravir."
+                },
+                {
+                    "drug": "Allopurinol hoặc febuxostat",
+                    "mechanism": "Tác động lên chuyển hóa purine/acid uric, có thể thay đổi nồng độ favipiravir",
+                    "effect": "Biến thiên nồng độ thuốc và acid uric",
+                    "management": "Theo dõi acid uric, lâm sàng; điều chỉnh nếu cần."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Có thai hoặc dự định mang thai",
+                "Cho con bú",
+                "Dị ứng với favipiravir",
+                "ALT/AST >5x ULN"
+            ],
+            "tương_đối": [
+                "Tăng acid uric/gút không kiểm soát",
+                "Suy gan vừa-nặng",
+                "Phối hợp thuốc kéo dài QT",
+                "CrCl <30 ml/phút (dữ liệu hạn chế)"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Có thai hoặc dự định mang thai",
+                "Cho con bú",
+                "Dị ứng với favipiravir",
+                "ALT/AST >5x ULN"
+            ],
+            "tương_đối": [
+                "Tăng acid uric/gút không kiểm soát",
+                "Suy gan vừa-nặng",
+                "Phối hợp thuốc kéo dài QT",
+                "CrCl <30 ml/phút (dữ liệu hạn chế)"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
+        },
+        "pregnancy_lactation": {
+            "fda_category": "X",
+            "pregnancy_details": "Chống chỉ định tuyệt đối do gây quái thai trên động vật và cảnh báo của nhà sản xuất. Cả nam và nữ phải tránh thai hiệu quả trong điều trị và 7 ngày sau liều cuối.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Chưa rõ bài tiết vào sữa mẹ; nguy cơ độc tính phôi thai/nhũ nhi.",
+                "recommendation": "Ngừng cho con bú hoặc chọn thuốc khác."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh nhưng theo dõi men gan",
+            "moderate": "Thận trọng, cân nhắc giảm 25-50% nếu ALT/AST tăng nền",
+            "severe": "Tránh dùng nếu ALT/AST >5x ULN hoặc Child-Pugh C",
+            "notes": "Favipiravir chuyển hóa qua gan; suy gan làm tăng phơi nhiễm."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Tăng mạnh acid uric",
+                "Tăng men gan",
+                "Kéo dài QT (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc, điều trị hỗ trợ",
+                "Theo dõi ECG, điện giải nếu nghi kéo dài QT",
+                "Hydrat và dùng thuốc hạ acid uric nếu cần",
+                "Theo dõi men gan"
+            ],
+            "monitoring": "ECG, men gan, acid uric, triệu chứng lâm sàng"
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống sau ăn để giảm kích ứng tiêu hóa",
+                "timing": "Liều tải ngày 1, sau đó chia 2 lần/ngày. Uống cách đều 12 giờ."
+            },
+            "iv": None
+        },
+        "references": {
+            "primary_sources": [
+                "PMDA Japan - Favipiravir Prescribing Information",
+                "WHO COVID-19 Therapeutics (off-label use)",
+                "UpToDate - Favipiravir",
+                "IDSA influenza guidance (kháng neuraminidase)"
+            ],
+            "last_updated": "2025-02-17",
+            "evidence_level": "B - Dữ liệu cấp phép tại Nhật và nghiên cứu quan sát; sử dụng off-label cần cân nhắc lợi ích/nguy cơ"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Teratogenicity (category X) - CRITICAL", "Hepatotoxicity", "Hyperuricemia/gout attacks", "QT prolongation (rare)"],
+            "qt_prolongation": True,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hepatic function (ALT, AST) - CRITICAL (before and every 2-3 days)", "Uric acid levels - CRITICAL (gout risk)", "ECG if co-administered with QT-prolonging drugs", "Pregnancy test (women) and contraception counseling (both sexes) - CRITICAL", "CBC if used >5-10 days"]
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Influenza Antiviral Treatment",
+            "FDA Black Box Warning - Favipiravir and Teratogenicity",
+            "FDA Black Box Warning - Favipiravir and Pregnancy (Category X)",
+            "IDSA Guidelines - Influenza Treatment"
+        ]
+    },
     "Oseltamivir": {
         "group": "Infectious Disease - Antiviral (Neuraminidase Inhibitor)",
         "vietnamese_name": "Oseltamivir, Tamiflu",
@@ -164,170 +351,6 @@ INFLUENZA_ANTIVIRALS = {
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
             ],
             "last_updated": "2025-02-04",
-            "evidence_level": "A - Dựa trên FDA drug labels, CDC/WHO guidelines, và dữ liệu lâm sàng"
-        }
-    },
-
-    "Zanamivir": {
-        "group": "Infectious Disease - Antiviral (Neuraminidase Inhibitor)",
-        "vietnamese_name": "Zanamivir, Relenza",
-        "administration": ["Inhalation"],
-        "indications": [
-            "Cúm A và B (treatment)",
-            "Phòng ngừa cúm"
-        ],
-        "contraindications": [
-            "Dị ứng zanamivir",
-            "Bệnh phổi tắc nghẽn mạn tính (COPD)",
-            "Hen phế quản",
-            "Suy hô hấp"
-        ],
-        "dosage": {
-            "adult_treatment": "10mg (2 lần hít) x 2 lần/ngày x 5 ngày",
-            "adult_prophylaxis": "10mg (2 lần hít) x 1 lần/ngày x 10 ngày (sau tiếp xúc) hoặc x 28 ngày (mùa cúm)",
-            "notes": "Dạng hít. Bắt đầu trong 48 giờ đầu triệu chứng. Hiệu quả nhất trong 24 giờ đầu"
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Thận trọng"
-        },
-        "side_effects": [
-            "Co thắt phế quản (nguy hiểm ở bệnh nhân COPD/hen)",
-            "Khó thở",
-            "Ho",
-            "Đau đầu",
-            "Buồn nôn",
-            "Chóng mặt"
-        ],
-        "interactions": [
-            "Ít tương tác (hấp thu toàn thân thấp)"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Zanamivir là thuốc kháng virus cúm, thuộc nhóm chất ức chế neuraminidase. Zanamivir ức chế trực tiếp enzyme neuraminidase của virus cúm A và B, enzyme này có vai trò quan trọng trong việc giải phóng các hạt virus mới từ tế bào chủ và lan truyền virus trong đường hô hấp. Bằng cách ức chế neuraminidase, zanamivir ngăn chặn sự giải phóng virus, làm giảm lan truyền virus và giảm thời gian bệnh. Zanamivir được dùng dạng hít, tác dụng trực tiếp tại đường hô hấp, nơi virus cúm nhân lên. Zanamivir hiệu quả với cả cúm A và cúm B, nhưng hiệu quả nhất khi bắt đầu điều trị trong vòng 48 giờ đầu (tốt nhất là 24 giờ đầu) sau khi xuất hiện triệu chứng.",
-        "monitoring": [
-            "Triệu chứng cúm (sốt, ho, đau họng, đau cơ) - đánh giá đáp ứng điều trị",
-            "Dấu hiệu biến chứng (viêm phổi, suy hô hấp, nhiễm trùng thứ phát)",
-            "Chức năng hô hấp - đặc biệt ở bệnh nhân COPD/hen (nguy cơ co thắt phế quản)",
-            "Tác dụng phụ hô hấp (co thắt phế quản, khó thở, ho) - nguy hiểm ở bệnh nhân COPD/hen",
-            "Tác dụng phụ khác (đau đầu, buồn nôn, chóng mặt) - thường nhẹ"
-        ],
-        "precautions": [
-            "CHỐNG CHỈ ĐỊNH ở bệnh nhân COPD hoặc hen phế quản - nguy cơ co thắt phế quản nghiêm trọng, có thể đe dọa tính mạng",
-            "CHỐNG CHỈ ĐỊNH ở bệnh nhân suy hô hấp",
-            "Bắt đầu điều trị càng sớm càng tốt - hiệu quả nhất trong vòng 48 giờ đầu (tốt nhất là 24 giờ đầu) sau khi xuất hiện triệu chứng",
-            "Dạng hít - cần hướng dẫn bệnh nhân cách sử dụng đúng",
-            "Ngừng ngay nếu có co thắt phế quản hoặc khó thở nặng",
-            "Có thể cần dùng thuốc giãn phế quản trước khi dùng zanamivir ở bệnh nhân có nguy cơ",
-            "Hiệu quả phòng ngừa: dùng 10mg x 1 lần/ngày x 10 ngày sau tiếp xúc hoặc x 28 ngày trong mùa cúm",
-            "Không thay thế vaccine cúm - vaccine vẫn là biện pháp phòng ngừa chính",
-            "Kháng thuốc có thể xảy ra - theo dõi đáp ứng điều trị"
-        ],
-        "pharmacokinetics": {
-            "half_life": "2.5-5 giờ",
-            "onset": "24-48 giờ (giảm triệu chứng)",
-            "duration": "5 ngày (treatment), 10-28 ngày (prophylaxis)",
-            "protein_binding": "<10%",
-            "clearance": "Thận (bài tiết nguyên dạng). Hấp thu toàn thân thấp (4-17%) do dùng dạng hít"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Đĩa Rotadisk: bảo quản trong bao bì kín. Không bảo quản trong tủ lạnh.",
-        "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở bệnh nhân COPD hoặc hen phế quản - có thể gây co thắt phế quản nghiêm trọng, suy hô hấp, và tử vong. Ngừng ngay nếu có co thắt phế quản hoặc khó thở nặng.",
-        "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng zanamivir hoặc các thành phần khác",
-                "COPD - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
-                "Hen phế quản - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
-                "Suy hô hấp - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI"
-            ],
-            "tương_đối": [
-                "Bệnh phổi mạn tính khác - thận trọng, có thể gây co thắt phế quản",
-                "Có thai - category C, thận trọng",
-                "Trẻ em <5 tuổi - không khuyến cáo (khó sử dụng dạng hít)"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Zanamivir là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Cúm trong thai kỳ có thể gây biến chứng nghiêm trọng. Zanamivir có thể được dùng trong thai kỳ nếu có chỉ định, nhưng ưu tiên oseltamivir (dạng uống, dễ dùng hơn).",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Zanamivir hấp thu toàn thân thấp (4-17%) do dùng dạng hít. Nồng độ trong sữa mẹ rất thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ.",
-                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ sơ sinh nếu có dấu hiệu bất thường (hiếm)."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Không cần điều chỉnh liều",
-            "severe": "Không cần điều chỉnh liều",
-            "notes": "Zanamivir hấp thu toàn thân thấp và thải trừ chủ yếu qua thận. Suy gan không ảnh hưởng đáng kể đến dược động học của zanamivir."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Co thắt phế quản (nguy hiểm)",
-                "Khó thở nặng",
-                "Ho",
-                "Đau đầu",
-                "Buồn nôn"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Thuốc giãn phế quản (albuterol) cho co thắt phế quản.",
-            "treatment": [
-                "Ngừng zanamivir ngay nếu có co thắt phế quản hoặc khó thở nặng",
-                "Điều trị co thắt phế quản: Albuterol, ipratropium (thuốc giãn phế quản)",
-                "Hỗ trợ hô hấp nếu cần (oxy, thở máy)",
-                "Theo dõi dấu hiệu sinh tồn",
-                "Theo dõi ít nhất 4-6 giờ"
-            ],
-            "monitoring": "Chức năng hô hấp, dấu hiệu co thắt phế quản, dấu hiệu sinh tồn"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "inhalation": {
-                "instructions": "Dùng với thiết bị Diskhaler. Mỗi liều: 2 lần hít (mỗi lần hít 5mg). Hướng dẫn bệnh nhân cách sử dụng đúng. Đặt đĩa Rotadisk vào Diskhaler, đóng nắp, bấm để đâm thủng đĩa, hít sâu và giữ hơi thở 10 giây. Lặp lại lần hít thứ hai.",
-                "timing": "Hít 2 lần/ngày (treatment) hoặc 1 lần/ngày (prophylaxis). Hít cùng thời điểm mỗi ngày để dễ nhớ.",
-                "notes": "CHỐNG CHỈ ĐỊNH ở bệnh nhân COPD/hen - nguy cơ co thắt phế quản nghiêm trọng. Có thể cần dùng thuốc giãn phế quản trước khi dùng zanamivir ở bệnh nhân có nguy cơ."
-            },
-            "oral": {
-                "with_food": "Không áp dụng",
-                "timing": "Không áp dụng",
-                "notes": "Zanamivir chỉ có dạng hít, không có dạng uống."
-            }
-        },
-        "pediatric_dosing": {
-            "neonates": "Không khuyến cáo cho trẻ <5 tuổi (khó sử dụng dạng hít)",
-            "infants": "Không khuyến cáo cho trẻ <5 tuổi (khó sử dụng dạng hít)",
-            "children": "5-12 tuổi: 10mg (2 lần hít) x 2 lần/ngày x 5 ngày (treatment), 10mg x 1 lần/ngày x 10 ngày (prophylaxis). Cần hướng dẫn cách sử dụng đúng.",
-            "adolescents": "Liều người lớn: 10mg (2 lần hít) x 2 lần/ngày x 5 ngày (treatment), 10mg x 1 lần/ngày x 10 ngày (prophylaxis)",
-            "notes": "Không khuyến cáo cho trẻ <5 tuổi do khó sử dụng dạng hít. Cần hướng dẫn cách sử dụng đúng. CHỐNG CHỈ ĐỊNH ở trẻ có COPD/hen."
-        },
-        "geriatric_dosing": {
-            "considerations": "Người cao tuổi có thể khó sử dụng dạng hít. Có thể ưu tiên oseltamivir (dạng uống) nếu có thể.",
-            "dose_adjustment": "Không cần điều chỉnh liều. Liều người lớn.",
-            "monitoring": "Theo dõi chức năng hô hấp sát hơn. Đảm bảo bệnh nhân sử dụng đúng cách."
-        },
-        "brand_names": {
-            "vietnam": ["Relenza", "Zanamivir"],
-            "common": ["Relenza", "Zanamivir"]
-        },
-        "cost_estimate": {
-            "unit": "VND",
-            "range": "200,000 - 500,000 VND/hộp (tùy thương hiệu và nhà thuốc)",
-            "note": "Giá cao hơn oseltamivir. Giá thay đổi theo thương hiệu và nhà thuốc."
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Zanamivir (Relenza)",
-                "CDC Guidelines - Influenza Antiviral Medications",
-                "WHO Guidelines - Antiviral Treatment for Influenza",
-                "UpToDate - Zanamivir: Drug Information"
-            ],
-            "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, CDC/WHO guidelines, và dữ liệu lâm sàng"
         }
     },
@@ -530,193 +553,169 @@ INFLUENZA_ANTIVIRALS = {
         ]
     },
 
-    "Favipiravir": {
-        "group": "Infectious Disease - Antiviral (RNA polymerase inhibitor)",
-        "vietnamese_name": "Favipiravir, Avigan",
-        "administration": ["PO"],
+    "Zanamivir": {
+        "group": "Infectious Disease - Antiviral (Neuraminidase Inhibitor)",
+        "vietnamese_name": "Zanamivir, Relenza",
+        "administration": ["Inhalation"],
         "indications": [
-            "Cúm A và B (khi không đáp ứng hoặc không dùng được neuraminidase inhibitor)",
-            "Cúm do chủng kháng oseltamivir/zanamivir",
-            "COVID-19 (off-label tùy hướng dẫn địa phương)"
+            "Cúm A và B (treatment)",
+            "Phòng ngừa cúm"
         ],
         "contraindications": [
-            "Có thai hoặc dự định mang thai",
-            "Cho con bú",
-            "Bệnh gan tiến triển (ALT/AST >5x ULN)",
-            "Gút tiến triển hoặc tăng acid uric không kiểm soát",
-            "Dị ứng favipiravir"
+            "Dị ứng zanamivir",
+            "Bệnh phổi tắc nghẽn mạn tính (COPD)",
+            "Hen phế quản",
+            "Suy hô hấp"
         ],
         "dosage": {
-            "adult_influenza": "1600mg x 2 lần (ngày 1), sau đó 600mg x 2 lần/ngày (ngày 2-5)",
-            "adult_covid_off_label": "1800mg x 2 lần (ngày 1), sau đó 800mg x 2 lần/ngày (ngày 2-10) - theo phác đồ địa phương",
-            "max_duration": "5 ngày cho cúm; 10 ngày cho COVID-19 (off-label)",
-            "notes": "Uống sau ăn. Không dùng đơn trị kéo dài vì nguy cơ kháng thuốc và độc tính phôi thai."
+            "adult_treatment": "10mg (2 lần hít) x 2 lần/ngày x 5 ngày",
+            "adult_prophylaxis": "10mg (2 lần hít) x 1 lần/ngày x 10 ngày (sau tiếp xúc) hoặc x 28 ngày (mùa cúm)",
+            "notes": "Dạng hít. Bắt đầu trong 48 giờ đầu triệu chứng. Hiệu quả nhất trong 24 giờ đầu"
         },
         "renal_adjustment": {
-            "normal": "Không cần điều chỉnh",
-            "30_60": "Thận trọng, có thể giữ nguyên liều nhưng theo dõi chặt chẽ men gan/acid uric",
-            "under_30": "Dữ liệu hạn chế; tránh nếu có lựa chọn khác, hoặc giảm liều 50% và theo dõi sát"
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng"
         },
         "side_effects": [
-            "Tăng acid uric, cơn gút",
-            "Tăng men gan (ALT/AST)",
-            "Buồn nôn, nôn, tiêu chảy",
-            "Giảm bạch cầu trung tính nhẹ",
-            "Kéo dài QT (hiếm)"
+            "Co thắt phế quản (nguy hiểm ở bệnh nhân COPD/hen)",
+            "Khó thở",
+            "Ho",
+            "Đau đầu",
+            "Buồn nôn",
+            "Chóng mặt"
         ],
         "interactions": [
-            "Thuốc tăng acid uric (thiazide, ciclosporin): tăng nguy cơ cơn gút",
-            "Thuốc kéo dài QT (amiodarone, fluoroquinolone): tăng nguy cơ loạn nhịp",
-            "Warfarin: có thể tăng INR, cần theo dõi"
+            "Ít tương tác (hấp thu toàn thân thấp)"
         ],
-        "pregnancy": "X - Chống chỉ định (gây quái thai)",
-        "mechanism_of_action": "Favipiravir là tiền thuốc, được ribosyl hóa và phosphoryl hóa nội bào thành favipiravir-RTP, ức chế RNA-dependent RNA polymerase (RdRp) của virus RNA, gây ngừng kéo dài chuỗi và đột biến thảm họa, làm ngừng nhân lên virus.",
+        "pregnancy": "C",
+        "mechanism_of_action": "Zanamivir là thuốc kháng virus cúm, thuộc nhóm chất ức chế neuraminidase. Zanamivir ức chế trực tiếp enzyme neuraminidase của virus cúm A và B, enzyme này có vai trò quan trọng trong việc giải phóng các hạt virus mới từ tế bào chủ và lan truyền virus trong đường hô hấp. Bằng cách ức chế neuraminidase, zanamivir ngăn chặn sự giải phóng virus, làm giảm lan truyền virus và giảm thời gian bệnh. Zanamivir được dùng dạng hít, tác dụng trực tiếp tại đường hô hấp, nơi virus cúm nhân lên. Zanamivir hiệu quả với cả cúm A và cúm B, nhưng hiệu quả nhất khi bắt đầu điều trị trong vòng 48 giờ đầu (tốt nhất là 24 giờ đầu) sau khi xuất hiện triệu chứng.",
         "monitoring": [
-            "Men gan (ALT/AST) trước và mỗi 2-3 ngày trong quá trình dùng",
-            "Acid uric huyết thanh (nguy cơ cơn gút)",
-            "Triệu chứng tim mạch nếu phối hợp thuốc kéo dài QT",
-            "Công thức máu nếu dùng >5-10 ngày",
-            "Test thai (nữ) và tư vấn tránh thai cho cả nam và nữ trong và sau điều trị (ít nhất 7 ngày)"
+            "Triệu chứng cúm (sốt, ho, đau họng, đau cơ) - đánh giá đáp ứng điều trị",
+            "Dấu hiệu biến chứng (viêm phổi, suy hô hấp, nhiễm trùng thứ phát)",
+            "Chức năng hô hấp - đặc biệt ở bệnh nhân COPD/hen (nguy cơ co thắt phế quản)",
+            "Tác dụng phụ hô hấp (co thắt phế quản, khó thở, ho) - nguy hiểm ở bệnh nhân COPD/hen",
+            "Tác dụng phụ khác (đau đầu, buồn nôn, chóng mặt) - thường nhẹ"
         ],
         "precautions": [
-            "Gây quái thai: chống chỉ định tuyệt đối ở phụ nữ có thai; nam và nữ phải tránh thai hiệu quả",
-            "Theo dõi men gan; ngừng nếu ALT/AST >5x ULN hoặc có triệu chứng viêm gan",
-            "Thận trọng ở bệnh nhân gút hoặc tăng acid uric; cân nhắc allopurinol dự phòng nếu cần",
-            "Uống sau ăn để giảm buồn nôn",
-            "Không dùng đơn trị liệu cho COVID-19 ngoài phác đồ được phê duyệt"
+            "CHỐNG CHỈ ĐỊNH ở bệnh nhân COPD hoặc hen phế quản - nguy cơ co thắt phế quản nghiêm trọng, có thể đe dọa tính mạng",
+            "CHỐNG CHỈ ĐỊNH ở bệnh nhân suy hô hấp",
+            "Bắt đầu điều trị càng sớm càng tốt - hiệu quả nhất trong vòng 48 giờ đầu (tốt nhất là 24 giờ đầu) sau khi xuất hiện triệu chứng",
+            "Dạng hít - cần hướng dẫn bệnh nhân cách sử dụng đúng",
+            "Ngừng ngay nếu có co thắt phế quản hoặc khó thở nặng",
+            "Có thể cần dùng thuốc giãn phế quản trước khi dùng zanamivir ở bệnh nhân có nguy cơ",
+            "Hiệu quả phòng ngừa: dùng 10mg x 1 lần/ngày x 10 ngày sau tiếp xúc hoặc x 28 ngày trong mùa cúm",
+            "Không thay thế vaccine cúm - vaccine vẫn là biện pháp phòng ngừa chính",
+            "Kháng thuốc có thể xảy ra - theo dõi đáp ứng điều trị"
         ],
         "pharmacokinetics": {
-            "half_life": "2-5 giờ (tăng theo liều do ức chế aldehyde oxidase)",
-            "onset": "Nồng độ đỉnh sau 2 giờ",
-            "duration": "Liên quan phơi nhiễm AUC; dùng chia 2 lần/ngày sau liều tải",
-            "protein_binding": "54%",
-            "clearance": "Chuyển hóa chủ yếu qua aldehyde oxidase, một phần xanthine oxidase; thải qua thận dạng không hoạt tính"
+            "half_life": "2.5-5 giờ",
+            "onset": "24-48 giờ (giảm triệu chứng)",
+            "duration": "5 ngày (treatment), 10-28 ngày (prophylaxis)",
+            "protein_binding": "<10%",
+            "clearance": "Thận (bài tiết nguyên dạng). Hấp thu toàn thân thấp (4-17%) do dùng dạng hít"
         },
-        "storage": "Bảo quản nhiệt độ phòng, tránh ẩm và ánh sáng.",
-        "black_box_warnings": "GÂY QUÁI THAI - chống chỉ định tuyệt đối ở thai kỳ; yêu cầu tránh thai cho cả nam và nữ.",
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Đĩa Rotadisk: bảo quản trong bao bì kín. Không bảo quản trong tủ lạnh.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở bệnh nhân COPD hoặc hen phế quản - có thể gây co thắt phế quản nghiêm trọng, suy hô hấp, và tử vong. Ngừng ngay nếu có co thắt phế quản hoặc khó thở nặng.",
         "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Thuốc kéo dài QT (amiodarone, sotalol, levofloxacin)",
-                    "mechanism": "Nguy cơ cộng dồn kéo dài QT",
-                    "effect": "Tăng nguy cơ xoắn đỉnh",
-                    "management": "Tránh nếu có thể; nếu bắt buộc, theo dõi ECG và điện giải."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Có thể ức chế nhẹ chuyển hóa warfarin",
-                    "effect": "Tăng INR",
-                    "management": "Theo dõi INR và chỉnh liều warfarin khi bắt đầu/ngừng favipiravir."
-                },
-                {
-                    "drug": "Allopurinol hoặc febuxostat",
-                    "mechanism": "Tác động lên chuyển hóa purine/acid uric, có thể thay đổi nồng độ favipiravir",
-                    "effect": "Biến thiên nồng độ thuốc và acid uric",
-                    "management": "Theo dõi acid uric, lâm sàng; điều chỉnh nếu cần."
-                }
-            ],
+            "major": [],
+            "moderate": [],
             "minor": []
         },
         "contraindications": {
             "tuyệt_đối": [
-                "Có thai hoặc dự định mang thai",
-                "Cho con bú",
-                "Dị ứng với favipiravir",
-                "ALT/AST >5x ULN"
+                "Dị ứng zanamivir hoặc các thành phần khác",
+                "COPD - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
+                "Hen phế quản - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
+                "Suy hô hấp - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI"
             ],
             "tương_đối": [
-                "Tăng acid uric/gút không kiểm soát",
-                "Suy gan vừa-nặng",
-                "Phối hợp thuốc kéo dài QT",
-                "CrCl <30 ml/phút (dữ liệu hạn chế)"
+                "Bệnh phổi mạn tính khác - thận trọng, có thể gây co thắt phế quản",
+                "Có thai - category C, thận trọng",
+                "Trẻ em <5 tuổi - không khuyến cáo (khó sử dụng dạng hít)"
             ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Có thai hoặc dự định mang thai",
-                "Cho con bú",
-                "Dị ứng với favipiravir",
-                "ALT/AST >5x ULN"
-            ],
-            "tương_đối": [
-                "Tăng acid uric/gút không kiểm soát",
-                "Suy gan vừa-nặng",
-                "Phối hợp thuốc kéo dài QT",
-                "CrCl <30 ml/phút (dữ liệu hạn chế)"
-            ]
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
         },
         "pregnancy_lactation": {
-            "fda_category": "X",
-            "pregnancy_details": "Chống chỉ định tuyệt đối do gây quái thai trên động vật và cảnh báo của nhà sản xuất. Cả nam và nữ phải tránh thai hiệu quả trong điều trị và 7 ngày sau liều cuối.",
+            "fda_category": "C",
+            "pregnancy_details": "Zanamivir là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Cúm trong thai kỳ có thể gây biến chứng nghiêm trọng. Zanamivir có thể được dùng trong thai kỳ nếu có chỉ định, nhưng ưu tiên oseltamivir (dạng uống, dễ dùng hơn).",
             "lactation": {
-                "safety": "Incompatible",
-                "details": "Chưa rõ bài tiết vào sữa mẹ; nguy cơ độc tính phôi thai/nhũ nhi.",
-                "recommendation": "Ngừng cho con bú hoặc chọn thuốc khác."
+                "safety": "Compatible",
+                "details": "Zanamivir hấp thu toàn thân thấp (4-17%) do dùng dạng hít. Nồng độ trong sữa mẹ rất thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ sơ sinh nếu có dấu hiệu bất thường (hiếm)."
             }
         },
         "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh nhưng theo dõi men gan",
-            "moderate": "Thận trọng, cân nhắc giảm 25-50% nếu ALT/AST tăng nền",
-            "severe": "Tránh dùng nếu ALT/AST >5x ULN hoặc Child-Pugh C",
-            "notes": "Favipiravir chuyển hóa qua gan; suy gan làm tăng phơi nhiễm."
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Không cần điều chỉnh liều",
+            "notes": "Zanamivir hấp thu toàn thân thấp và thải trừ chủ yếu qua thận. Suy gan không ảnh hưởng đáng kể đến dược động học của zanamivir."
         },
         "overdose_management": {
             "symptoms": [
-                "Buồn nôn, nôn",
-                "Tăng mạnh acid uric",
-                "Tăng men gan",
-                "Kéo dài QT (hiếm)"
+                "Co thắt phế quản (nguy hiểm)",
+                "Khó thở nặng",
+                "Ho",
+                "Đau đầu",
+                "Buồn nôn"
             ],
-            "antidote": "Không có antidote đặc hiệu",
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Thuốc giãn phế quản (albuterol) cho co thắt phế quản.",
             "treatment": [
-                "Ngừng thuốc, điều trị hỗ trợ",
-                "Theo dõi ECG, điện giải nếu nghi kéo dài QT",
-                "Hydrat và dùng thuốc hạ acid uric nếu cần",
-                "Theo dõi men gan"
+                "Ngừng zanamivir ngay nếu có co thắt phế quản hoặc khó thở nặng",
+                "Điều trị co thắt phế quản: Albuterol, ipratropium (thuốc giãn phế quản)",
+                "Hỗ trợ hô hấp nếu cần (oxy, thở máy)",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Theo dõi ít nhất 4-6 giờ"
             ],
-            "monitoring": "ECG, men gan, acid uric, triệu chứng lâm sàng"
+            "monitoring": "Chức năng hô hấp, dấu hiệu co thắt phế quản, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
         },
         "administration_instructions": {
-            "oral": {
-                "with_food": "Uống sau ăn để giảm kích ứng tiêu hóa",
-                "timing": "Liều tải ngày 1, sau đó chia 2 lần/ngày. Uống cách đều 12 giờ."
+            "inhalation": {
+                "instructions": "Dùng với thiết bị Diskhaler. Mỗi liều: 2 lần hít (mỗi lần hít 5mg). Hướng dẫn bệnh nhân cách sử dụng đúng. Đặt đĩa Rotadisk vào Diskhaler, đóng nắp, bấm để đâm thủng đĩa, hít sâu và giữ hơi thở 10 giây. Lặp lại lần hít thứ hai.",
+                "timing": "Hít 2 lần/ngày (treatment) hoặc 1 lần/ngày (prophylaxis). Hít cùng thời điểm mỗi ngày để dễ nhớ.",
+                "notes": "CHỐNG CHỈ ĐỊNH ở bệnh nhân COPD/hen - nguy cơ co thắt phế quản nghiêm trọng. Có thể cần dùng thuốc giãn phế quản trước khi dùng zanamivir ở bệnh nhân có nguy cơ."
             },
-            "iv": None
+            "oral": {
+                "with_food": "Không áp dụng",
+                "timing": "Không áp dụng",
+                "notes": "Zanamivir chỉ có dạng hít, không có dạng uống."
+            }
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <5 tuổi (khó sử dụng dạng hít)",
+            "infants": "Không khuyến cáo cho trẻ <5 tuổi (khó sử dụng dạng hít)",
+            "children": "5-12 tuổi: 10mg (2 lần hít) x 2 lần/ngày x 5 ngày (treatment), 10mg x 1 lần/ngày x 10 ngày (prophylaxis). Cần hướng dẫn cách sử dụng đúng.",
+            "adolescents": "Liều người lớn: 10mg (2 lần hít) x 2 lần/ngày x 5 ngày (treatment), 10mg x 1 lần/ngày x 10 ngày (prophylaxis)",
+            "notes": "Không khuyến cáo cho trẻ <5 tuổi do khó sử dụng dạng hít. Cần hướng dẫn cách sử dụng đúng. CHỐNG CHỈ ĐỊNH ở trẻ có COPD/hen."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi có thể khó sử dụng dạng hít. Có thể ưu tiên oseltamivir (dạng uống) nếu có thể.",
+            "dose_adjustment": "Không cần điều chỉnh liều. Liều người lớn.",
+            "monitoring": "Theo dõi chức năng hô hấp sát hơn. Đảm bảo bệnh nhân sử dụng đúng cách."
+        },
+        "brand_names": {
+            "vietnam": ["Relenza", "Zanamivir"],
+            "common": ["Relenza", "Zanamivir"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "200,000 - 500,000 VND/hộp (tùy thương hiệu và nhà thuốc)",
+            "note": "Giá cao hơn oseltamivir. Giá thay đổi theo thương hiệu và nhà thuốc."
         },
         "references": {
             "primary_sources": [
-                "PMDA Japan - Favipiravir Prescribing Information",
-                "WHO COVID-19 Therapeutics (off-label use)",
-                "UpToDate - Favipiravir",
-                "IDSA influenza guidance (kháng neuraminidase)"
+                "FDA Drug Label - Zanamivir (Relenza)",
+                "CDC Guidelines - Influenza Antiviral Medications",
+                "WHO Guidelines - Antiviral Treatment for Influenza",
+                "UpToDate - Zanamivir: Drug Information"
             ],
-            "last_updated": "2025-02-17",
-            "evidence_level": "B - Dữ liệu cấp phép tại Nhật và nghiên cứu quan sát; sử dụng off-label cần cân nhắc lợi ích/nguy cơ"
-        },
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Teratogenicity (category X) - CRITICAL", "Hepatotoxicity", "Hyperuricemia/gout attacks", "QT prolongation (rare)"],
-            "qt_prolongation": True,
-            "hepatotoxicity": True,
-            "nephrotoxicity": False,
-            "requires_monitoring": ["Hepatic function (ALT, AST) - CRITICAL (before and every 2-3 days)", "Uric acid levels - CRITICAL (gout risk)", "ECG if co-administered with QT-prolonging drugs", "Pregnancy test (women) and contraception counseling (both sexes) - CRITICAL", "CBC if used >5-10 days"]
-        },
-        "guideline_tags": [
-            "WHO Guidelines - Influenza Antiviral Treatment",
-            "FDA Black Box Warning - Favipiravir and Teratogenicity",
-            "FDA Black Box Warning - Favipiravir and Pregnancy (Category X)",
-            "IDSA Guidelines - Influenza Treatment"
-        ]
-    }
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels, CDC/WHO guidelines, và dữ liệu lâm sàng"
+        }
+    },
 
 }
 

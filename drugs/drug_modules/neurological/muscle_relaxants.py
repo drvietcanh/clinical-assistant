@@ -188,170 +188,138 @@ MUSCLE_RELAXANTS_DRUGS = {
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
         }
     },
-    "Tizanidine": {
-        "group": "Neurology - Muscle Relaxant (Alpha-2 Adrenergic Agonist)",
-        "vietnamese_name": "Tizanidine, Zanaflex",
+    "Carisoprodol": {
+        "group": "Neurology - Muscle Relaxant (Skeletal)",
+        "vietnamese_name": "Carisoprodol, Soma",
         "administration": ["PO"],
         "indications": [
-            "Co cứng cơ (spasticity) - đa xơ cứng, chấn thương tủy sống",
-            "Co cứng cơ do bại não",
-            "Đau cơ xương (off-label)"
+            "Co thắt cơ xương khớp (muscle spasm) - ngắn hạn",
+            "Đau cơ xương (musculoskeletal pain)"
         ],
         "contraindications": [
-            "Dị ứng",
-            "Dùng với ciprofloxacin hoặc fluvoxamine (tăng nguy cơ tác dụng phụ nặng)"
+            "Dị ứng carisoprodol",
+            "Porphyria",
+            "Dị ứng với meprobamate (metabolite)"
         ],
         "dosage": {
-            "adult_spasticity": "2-4mg x 3 lần/ngày, tăng dần đến 8mg x 3 lần/ngày (tối đa 36mg/ngày)",
-            "adult_max": "36mg/ngày",
-            "notes": "Alpha-2 adrenergic agonist. Tác dụng ngắn (3-6 giờ). Tăng liều chậm để giảm tác dụng phụ. CHỐNG CHỈ ĐỊNH với ciprofloxacin hoặc fluvoxamine."
+            "adult_standard": "250-350mg x 3-4 lần/ngày",
+            "adult_max": "1400mg/ngày",
+            "notes": "CHỈ dùng ngắn hạn (2-3 tuần). Chuyển hóa thành meprobamate (controlled substance, nguy cơ nghiện)."
         },
         "side_effects": [
             "Buồn ngủ (phổ biến)",
             "Chóng mặt",
-            "Khô miệng (phổ biến)",
-            "Yếu cơ",
-            "Mệt mỏi",
-            "Hạ huyết áp (phổ biến)",
-            "Nhịp chậm",
-            "Lú lẫn (đặc biệt ở người cao tuổi)",
-            "Tăng ALT/AST (hiếm)"
+            "Đau đầu",
+            "Nguy cơ nghiện/lệ thuộc (do meprobamate)",
+            "Hội chứng cai khi ngừng"
         ],
         "interactions": [
-            "Ciprofloxacin: CHỐNG CHỈ ĐỊNH - tăng nồng độ tizanidine, tăng nguy cơ tác dụng phụ nặng",
-            "Fluvoxamine: CHỐNG CHỈ ĐỊNH - tăng nồng độ tizanidine, tăng nguy cơ tác dụng phụ nặng",
-            "CYP1A2 inhibitors: tăng nồng độ tizanidine",
-            "CYP1A2 inducers: giảm nồng độ tizanidine",
-            "Alcohol: tăng tác dụng ức chế hệ thần kinh trung ương",
-            "Antihypertensives: tăng nguy cơ hạ huyết áp",
-            "Oral contraceptives: tăng nồng độ tizanidine"
+            "Alcohol: tăng tác dụng an thần, nguy cơ ức chế hô hấp",
+            "CNS depressants: tăng tác dụng ức chế",
+            "CYP2C19 inhibitors: tăng nồng độ carisoprodol"
         ],
         "pregnancy": "C",
-        "mechanism_of_action": "Tizanidine là alpha-2 adrenergic agonist, kích thích thụ thể alpha-2 adrenergic ở tủy sống và não. Alpha-2 receptors là thụ thể G-protein coupled, khi được kích thích sẽ ức chế phóng thích chất dẫn truyền thần kinh kích thích (norepinephrine) và tăng phóng thích chất dẫn truyền thần kinh ức chế (GABA). Ở tủy sống, tizanidine ức chế phản xạ kéo dãn (stretch reflex), giảm co cứng cơ (spasticity). Tác dụng: điều trị co cứng cơ (spasticity) trong đa xơ cứng, chấn thương tủy sống, và bại não. Có dạng uống (PO). Tác dụng ngắn (3-6 giờ), cần dùng nhiều lần/ngày. Tác dụng phụ: buồn ngủ, chóng mặt, khô miệng (phổ biến), hạ huyết áp (phổ biến), nhịp chậm, tăng ALT/AST (hiếm).",
+        "mechanism_of_action": "Carisoprodol là thuốc giãn cơ xương khớp, được chuyển hóa thành meprobamate (controlled substance, có nguy cơ nghiện). Cơ chế chính xác chưa rõ. CHỈ dùng ngắn hạn (2-3 tuần). Có nguy cơ nghiện/lệ thuộc do meprobamate.",
         "monitoring": [
-            "Đáp ứng điều trị: giảm co cứng cơ, cải thiện chức năng vận động",
-            "Huyết áp - hạ huyết áp phổ biến, đặc biệt khi bắt đầu hoặc tăng liều",
-            "Nhịp tim - nhịp chậm, đặc biệt khi bắt đầu hoặc tăng liều",
-            "Dấu hiệu quá liều: buồn ngủ nặng, lú lẫn, hạ huyết áp nặng, nhịp chậm",
-            "ALT/AST - tăng ALT/AST hiếm, theo dõi định kỳ",
-            "Tương tác với ciprofloxacin, fluvoxamine (CHỐNG CHỈ ĐỊNH), CYP1A2 inhibitors/inducers, oral contraceptives"
+            "Đáp ứng điều trị: giảm co thắt cơ",
+            "Dấu hiệu nghiện/lệ thuộc",
+            "Dấu hiệu cai khi ngừng"
         ],
         "precautions": [
-            "CHỐNG CHỈ ĐỊNH với ciprofloxacin hoặc fluvoxamine - tăng nồng độ tizanidine, tăng nguy cơ tác dụng phụ nặng (hạ huyết áp nặng, nhịp chậm, suy hô hấp)",
-            "Hạ huyết áp - phổ biến, đặc biệt khi bắt đầu hoặc tăng liều, đứng dậy chậm, uống đủ nước",
-            "Nhịp chậm - đặc biệt khi bắt đầu hoặc tăng liều, theo dõi nhịp tim",
-            "Lú lẫn - đặc biệt ở người cao tuổi, giảm liều",
-            "Tăng liều chậm để giảm tác dụng phụ (đặc biệt hạ huyết áp, buồn ngủ)",
-            "Tránh rượu - tăng tác dụng ức chế hệ thần kinh trung ương",
-            "Thận trọng khi dùng với CYP1A2 inhibitors (fluvoxamine, ciprofloxacin) - CHỐNG CHỈ ĐỊNH với fluvoxamine và ciprofloxacin",
-            "Thận trọng khi dùng với CYP1A2 inducers (carbamazepine, smoking) - giảm nồng độ tizanidine, có thể cần tăng liều",
-            "Thận trọng khi dùng với oral contraceptives - tăng nồng độ tizanidine, giảm liều tizanidine 50%",
-            "Thận trọng khi dùng với antihypertensives - tăng nguy cơ hạ huyết áp",
-            "Hút thuốc - giảm nồng độ tizanidine, có thể cần tăng liều ở người hút thuốc"
+            "CHỈ dùng ngắn hạn (2-3 tuần)",
+            "NGUY CƠ NGHIỆN/LỆ THUỘC - do meprobamate (controlled substance)",
+            "Không ngừng đột ngột - có thể gây hội chứng cai",
+            "Tránh rượu - tăng tác dụng an thần, nguy cơ ức chế hô hấp",
+            "Thận trọng ở bệnh nhân có tiền sử nghiện/lạm dụng chất"
         ],
         "pharmacokinetics": {
-            "half_life": "2-4 giờ",
-            "onset": "1-2 giờ (PO)",
-            "duration": "3-6 giờ (PO)",
-            "protein_binding": "30%",
-            "clearance": "Gan: chuyển hóa qua CYP1A2 (chính). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều khi dùng với CYP1A2 inhibitors/inducers và oral contraceptives."
+            "half_life": "2 giờ (carisoprodol), 10 giờ (meprobamate)",
+            "onset": "30 phút",
+            "duration": "4-6 giờ",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Gan (chuyển hóa thành meprobamate qua CYP2C19), thận (thải trừ)"
         },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": "CHỐNG CHỈ ĐỊNH với ciprofloxacin hoặc fluvoxamine - tăng nồng độ tizanidine, tăng nguy cơ tác dụng phụ nặng (hạ huyết áp nặng, nhịp chậm, suy hô hấp).",
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Controlled substance - cần bảo quản an toàn.",
+        "black_box_warnings": "NGUY CƠ NGHIỆN, LẠM DỤNG, VÀ LỆ THUỘC - carisoprodol chuyển hóa thành meprobamate (controlled substance). Chỉ dùng ngắn hạn (2-3 tuần).",
         "drug_interactions": {
             "major": [
                 {
-                    "drug": "Ciprofloxacin",
-                    "mechanism": "Ức chế chuyển hóa tizanidine qua CYP1A2, tăng nồng độ tizanidine",
-                    "effect": "Tăng nồng độ tizanidine 10-33 lần, tăng nguy cơ tác dụng phụ nặng (hạ huyết áp nặng, nhịp chậm, suy hô hấp)",
-                    "management": "CHỐNG CHỈ ĐỊNH - không được dùng cùng. Nếu đang dùng tizanidine, ngừng tizanidine ít nhất 2 tuần trước khi dùng ciprofloxacin."
-                },
-                {
-                    "drug": "Fluvoxamine",
-                    "mechanism": "Ức chế chuyển hóa tizanidine qua CYP1A2, tăng nồng độ tizanidine",
-                    "effect": "Tăng nồng độ tizanidine 10-33 lần, tăng nguy cơ tác dụng phụ nặng (hạ huyết áp nặng, nhịp chậm, suy hô hấp)",
-                    "management": "CHỐNG CHỈ ĐỊNH - không được dùng cùng. Nếu đang dùng tizanidine, ngừng tizanidine ít nhất 2 tuần trước khi dùng fluvoxamine."
-                },
-                {
-                    "drug": "Other CYP1A2 inhibitors (Cimetidine, Acyclovir)",
-                    "mechanism": "Ức chế chuyển hóa tizanidine qua CYP1A2, tăng nồng độ tizanidine",
-                    "effect": "Tăng nồng độ tizanidine, tăng tác dụng phụ (hạ huyết áp, nhịp chậm)",
-                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, giảm liều tizanidine 50-75%. Theo dõi tác dụng phụ chặt chẽ."
+                    "drug": "Alcohol, CNS depressants",
+                    "mechanism": "Tăng tác dụng ức chế CNS",
+                    "effect": "Tăng buồn ngủ, nguy cơ ức chế hô hấp",
+                    "management": "Tránh rượu. Thận trọng với CNS depressants."
                 }
             ],
             "moderate": [
                 {
-                    "drug": "CYP1A2 inducers (Carbamazepine, Smoking)",
-                    "mechanism": "Cảm ứng chuyển hóa tizanidine qua CYP1A2, giảm nồng độ tizanidine",
-                    "effect": "Giảm nồng độ tizanidine, giảm hiệu quả",
-                    "management": "Tăng liều tizanidine 50-100% khi dùng với carbamazepine hoặc ở người hút thuốc. Theo dõi đáp ứng điều trị."
-                },
-                {
-                    "drug": "Oral contraceptives",
-                    "mechanism": "Ức chế chuyển hóa tizanidine qua CYP1A2, tăng nồng độ tizanidine",
-                    "effect": "Tăng nồng độ tizanidine, tăng tác dụng phụ",
-                    "management": "Giảm liều tizanidine 50% khi dùng với oral contraceptives. Theo dõi tác dụng phụ."
-                },
-                {
-                    "drug": "Antihypertensives",
-                    "mechanism": "Cả hai đều có thể gây hạ huyết áp",
-                    "effect": "Tăng nguy cơ hạ huyết áp tư thế, ngất",
-                    "management": "Thận trọng. Có thể cần giảm liều một trong hai thuốc. Theo dõi huyết áp."
+                    "drug": "CYP2C19 inhibitors (Omeprazole, Fluoxetine)",
+                    "mechanism": "Ức chế chuyển hóa carisoprodol",
+                    "effect": "Tăng nồng độ carisoprodol",
+                    "management": "Thận trọng. Có thể cần giảm liều carisoprodol."
                 }
             ]
         },
         "contraindications": {
             "tuyệt_đối": [
-                "Dị ứng tizanidine hoặc các thành phần khác",
-                "Dùng với ciprofloxacin - CHỐNG CHỈ ĐỊNH",
-                "Dùng với fluvoxamine - CHỐNG CHỈ ĐỊNH"
+                "Dị ứng carisoprodol",
+                "Porphyria",
+                "Dị ứng với meprobamate"
             ],
             "tương_đối": [
-                "Bệnh gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
-                "Bệnh thận nặng - giảm thải trừ, tăng nguy cơ tích lũy",
-                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ hạ huyết áp, nhịp chậm",
-                "Người cao tuổi - tăng nguy cơ tác dụng phụ, lú lẫn, hạ huyết áp, giảm liều 50%",
-                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
-                "Dùng với CYP1A2 inhibitors (trừ ciprofloxacin, fluvoxamine) - giảm liều tizanidine",
-                "Dùng với CYP1A2 inducers hoặc hút thuốc - tăng liều tizanidine",
-                "Dùng với oral contraceptives - giảm liều tizanidine 50%",
-                "Dùng với antihypertensives - tăng nguy cơ hạ huyết áp"
+                "Tiền sử nghiện/lạm dụng chất - tăng nguy cơ nghiện",
+                "Bệnh gan nặng - thận trọng"
             ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng carisoprodol",
+                "Porphyria",
+                "Dị ứng với meprobamate"
+            ],
+            "tương_đối": [
+                "Tiền sử nghiện/lạm dụng chất - tăng nguy cơ nghiện",
+                "Bệnh gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng, giảm liều"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Carisoprodol và meprobamate không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Carisoprodol chuyển hóa thành meprobamate ở gan, sau đó thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy meprobamate. Giảm liều và theo dõi chặt chẽ ở suy thận."
         },
         "pregnancy_lactation": {
             "fda_category": "C",
-            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh, nhưng chứng cứ không rõ ràng. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ.",
+            "pregnancy_details": "Category C. Có thể dùng nếu lợi ích > nguy cơ.",
             "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Tizanidine bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ sơ sinh rất thấp. Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
-                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém)."
+                "safety": "Unknown",
+                "details": "Carisoprodol và meprobamate bài tiết vào sữa mẹ.",
+                "recommendation": "Thận trọng khi cho con bú."
             }
         },
         "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Giảm liều 25-50%, theo dõi tác dụng phụ",
-            "severe": "Giảm liều 50%, theo dõi tác dụng phụ chặt chẽ. Hoặc tránh dùng nếu có thể.",
-            "notes": "Tizanidine chuyển hóa ở gan qua CYP1A2. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng",
+            "notes": "Carisoprodol chuyển hóa qua gan. Suy gan có thể ảnh hưởng đến chuyển hóa."
         },
         "overdose_management": {
             "symptoms": [
-                "Triệu chứng thần kinh: buồn ngủ nặng, lú lẫn, hôn mê",
-                "Rối loạn tim mạch: hạ huyết áp nặng, nhịp chậm",
-                "Rối loạn hô hấp: suy hô hấp (hiếm)",
-                "Rối loạn tiêu hóa: buồn nôn, nôn"
+                "Buồn ngủ nặng",
+                "Ức chế hô hấp",
+                "Hôn mê",
+                "Hạ huyết áp"
             ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "antidote": "Không có antidote đặc hiệu",
             "treatment": [
-                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần",
-                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
-                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
-                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, huyết áp (quan trọng)",
-                "Xử trí hạ huyết áp: IV fluids, vasopressors nếu cần",
-                "Xử trí nhịp chậm: Atropine nếu cần",
-                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
-                "Theo dõi ít nhất 24 giờ"
+                "Đánh giá đường thở, hô hấp, tuần hoàn",
+                "Hỗ trợ hô hấp",
+                "Rửa dạ dày",
+                "Than hoạt tính",
+                "Theo dõi hỗ trợ"
             ],
-            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, huyết áp (quan trọng), nhịp tim"
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch"
         },
         "reversal_agents": {
             "available": False,
@@ -359,33 +327,17 @@ MUSCLE_RELAXANTS_DRUGS = {
         },
         "administration_instructions": {
             "oral": {
-                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn.",
-                "timing": "Chia 3 lần/ngày. Uống cùng thời điểm mỗi ngày. Tăng liều chậm để giảm tác dụng phụ (đặc biệt hạ huyết áp, buồn ngủ)."
-            },
-            "im": {
-                "reconstitution": "Không có dạng IM",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Chỉ có dạng uống"
-            },
-            "iv": {
-                "reconstitution": "Không có dạng IV",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Chỉ có dạng uống"
+                "with_food": "Có thể uống với thức ăn hoặc không",
+                "timing": "250-350mg x 3-4 lần/ngày. CHỈ dùng ngắn hạn (2-3 tuần)."
             }
         },
         "references": {
             "primary_sources": [
-                "Lexicomp - Tizanidine",
-                "UpToDate - Tizanidine: Drug information",
-                "FDA - Zanaflex (tizanidine) prescribing information",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+                "FDA Drug Label - Carisoprodol (Soma)",
+                "UpToDate - Carisoprodol: Drug information"
             ],
-            "last_updated": "2024-12-19",
-            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, controlled substance"
         }
     },
 
@@ -698,159 +650,6 @@ MUSCLE_RELAXANTS_DRUGS = {
         "black_box_warnings": None,
 },
 
-    "Carisoprodol": {
-        "group": "Neurology - Muscle Relaxant (Skeletal)",
-        "vietnamese_name": "Carisoprodol, Soma",
-        "administration": ["PO"],
-        "indications": [
-            "Co thắt cơ xương khớp (muscle spasm) - ngắn hạn",
-            "Đau cơ xương (musculoskeletal pain)"
-        ],
-        "contraindications": [
-            "Dị ứng carisoprodol",
-            "Porphyria",
-            "Dị ứng với meprobamate (metabolite)"
-        ],
-        "dosage": {
-            "adult_standard": "250-350mg x 3-4 lần/ngày",
-            "adult_max": "1400mg/ngày",
-            "notes": "CHỈ dùng ngắn hạn (2-3 tuần). Chuyển hóa thành meprobamate (controlled substance, nguy cơ nghiện)."
-        },
-        "side_effects": [
-            "Buồn ngủ (phổ biến)",
-            "Chóng mặt",
-            "Đau đầu",
-            "Nguy cơ nghiện/lệ thuộc (do meprobamate)",
-            "Hội chứng cai khi ngừng"
-        ],
-        "interactions": [
-            "Alcohol: tăng tác dụng an thần, nguy cơ ức chế hô hấp",
-            "CNS depressants: tăng tác dụng ức chế",
-            "CYP2C19 inhibitors: tăng nồng độ carisoprodol"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Carisoprodol là thuốc giãn cơ xương khớp, được chuyển hóa thành meprobamate (controlled substance, có nguy cơ nghiện). Cơ chế chính xác chưa rõ. CHỈ dùng ngắn hạn (2-3 tuần). Có nguy cơ nghiện/lệ thuộc do meprobamate.",
-        "monitoring": [
-            "Đáp ứng điều trị: giảm co thắt cơ",
-            "Dấu hiệu nghiện/lệ thuộc",
-            "Dấu hiệu cai khi ngừng"
-        ],
-        "precautions": [
-            "CHỈ dùng ngắn hạn (2-3 tuần)",
-            "NGUY CƠ NGHIỆN/LỆ THUỘC - do meprobamate (controlled substance)",
-            "Không ngừng đột ngột - có thể gây hội chứng cai",
-            "Tránh rượu - tăng tác dụng an thần, nguy cơ ức chế hô hấp",
-            "Thận trọng ở bệnh nhân có tiền sử nghiện/lạm dụng chất"
-        ],
-        "pharmacokinetics": {
-            "half_life": "2 giờ (carisoprodol), 10 giờ (meprobamate)",
-            "onset": "30 phút",
-            "duration": "4-6 giờ",
-            "protein_binding": "Không đáng kể",
-            "clearance": "Gan (chuyển hóa thành meprobamate qua CYP2C19), thận (thải trừ)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Controlled substance - cần bảo quản an toàn.",
-        "black_box_warnings": "NGUY CƠ NGHIỆN, LẠM DỤNG, VÀ LỆ THUỘC - carisoprodol chuyển hóa thành meprobamate (controlled substance). Chỉ dùng ngắn hạn (2-3 tuần).",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Alcohol, CNS depressants",
-                    "mechanism": "Tăng tác dụng ức chế CNS",
-                    "effect": "Tăng buồn ngủ, nguy cơ ức chế hô hấp",
-                    "management": "Tránh rượu. Thận trọng với CNS depressants."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "CYP2C19 inhibitors (Omeprazole, Fluoxetine)",
-                    "mechanism": "Ức chế chuyển hóa carisoprodol",
-                    "effect": "Tăng nồng độ carisoprodol",
-                    "management": "Thận trọng. Có thể cần giảm liều carisoprodol."
-                }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng carisoprodol",
-                "Porphyria",
-                "Dị ứng với meprobamate"
-            ],
-            "tương_đối": [
-                "Tiền sử nghiện/lạm dụng chất - tăng nguy cơ nghiện",
-                "Bệnh gan nặng - thận trọng"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng carisoprodol",
-                "Porphyria",
-                "Dị ứng với meprobamate"
-            ],
-            "tương_đối": [
-                "Tiền sử nghiện/lạm dụng chất - tăng nguy cơ nghiện",
-                "Bệnh gan nặng - thận trọng",
-                "Suy thận nặng - thận trọng, giảm liều"
-            ]
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Thận trọng, có thể cần giảm liều",
-            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
-            "dialysis": "Thận trọng, giảm liều. Carisoprodol và meprobamate không được lọc sạch hiệu quả qua thẩm phân máu.",
-            "notes": "Carisoprodol chuyển hóa thành meprobamate ở gan, sau đó thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy meprobamate. Giảm liều và theo dõi chặt chẽ ở suy thận."
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Category C. Có thể dùng nếu lợi ích > nguy cơ.",
-            "lactation": {
-                "safety": "Unknown",
-                "details": "Carisoprodol và meprobamate bài tiết vào sữa mẹ.",
-                "recommendation": "Thận trọng khi cho con bú."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng",
-            "severe": "Thận trọng",
-            "notes": "Carisoprodol chuyển hóa qua gan. Suy gan có thể ảnh hưởng đến chuyển hóa."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Buồn ngủ nặng",
-                "Ức chế hô hấp",
-                "Hôn mê",
-                "Hạ huyết áp"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Đánh giá đường thở, hô hấp, tuần hoàn",
-                "Hỗ trợ hô hấp",
-                "Rửa dạ dày",
-                "Than hoạt tính",
-                "Theo dõi hỗ trợ"
-            ],
-            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với thức ăn hoặc không",
-                "timing": "250-350mg x 3-4 lần/ngày. CHỈ dùng ngắn hạn (2-3 tuần)."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Carisoprodol (Soma)",
-                "UpToDate - Carisoprodol: Drug information"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High - FDA-approved, controlled substance"
-        }
-    },
-
     "Methocarbamol": {
         "group": "Neurology - Muscle Relaxant (Skeletal)",
         "vietnamese_name": "Methocarbamol, Robaxin",
@@ -982,7 +781,208 @@ MUSCLE_RELAXANTS_DRUGS = {
             "evidence_level": "High - FDA-approved"
         },
         "black_box_warnings": None,
-}
+},
+    "Tizanidine": {
+        "group": "Neurology - Muscle Relaxant (Alpha-2 Adrenergic Agonist)",
+        "vietnamese_name": "Tizanidine, Zanaflex",
+        "administration": ["PO"],
+        "indications": [
+            "Co cứng cơ (spasticity) - đa xơ cứng, chấn thương tủy sống",
+            "Co cứng cơ do bại não",
+            "Đau cơ xương (off-label)"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Dùng với ciprofloxacin hoặc fluvoxamine (tăng nguy cơ tác dụng phụ nặng)"
+        ],
+        "dosage": {
+            "adult_spasticity": "2-4mg x 3 lần/ngày, tăng dần đến 8mg x 3 lần/ngày (tối đa 36mg/ngày)",
+            "adult_max": "36mg/ngày",
+            "notes": "Alpha-2 adrenergic agonist. Tác dụng ngắn (3-6 giờ). Tăng liều chậm để giảm tác dụng phụ. CHỐNG CHỈ ĐỊNH với ciprofloxacin hoặc fluvoxamine."
+        },
+        "side_effects": [
+            "Buồn ngủ (phổ biến)",
+            "Chóng mặt",
+            "Khô miệng (phổ biến)",
+            "Yếu cơ",
+            "Mệt mỏi",
+            "Hạ huyết áp (phổ biến)",
+            "Nhịp chậm",
+            "Lú lẫn (đặc biệt ở người cao tuổi)",
+            "Tăng ALT/AST (hiếm)"
+        ],
+        "interactions": [
+            "Ciprofloxacin: CHỐNG CHỈ ĐỊNH - tăng nồng độ tizanidine, tăng nguy cơ tác dụng phụ nặng",
+            "Fluvoxamine: CHỐNG CHỈ ĐỊNH - tăng nồng độ tizanidine, tăng nguy cơ tác dụng phụ nặng",
+            "CYP1A2 inhibitors: tăng nồng độ tizanidine",
+            "CYP1A2 inducers: giảm nồng độ tizanidine",
+            "Alcohol: tăng tác dụng ức chế hệ thần kinh trung ương",
+            "Antihypertensives: tăng nguy cơ hạ huyết áp",
+            "Oral contraceptives: tăng nồng độ tizanidine"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Tizanidine là alpha-2 adrenergic agonist, kích thích thụ thể alpha-2 adrenergic ở tủy sống và não. Alpha-2 receptors là thụ thể G-protein coupled, khi được kích thích sẽ ức chế phóng thích chất dẫn truyền thần kinh kích thích (norepinephrine) và tăng phóng thích chất dẫn truyền thần kinh ức chế (GABA). Ở tủy sống, tizanidine ức chế phản xạ kéo dãn (stretch reflex), giảm co cứng cơ (spasticity). Tác dụng: điều trị co cứng cơ (spasticity) trong đa xơ cứng, chấn thương tủy sống, và bại não. Có dạng uống (PO). Tác dụng ngắn (3-6 giờ), cần dùng nhiều lần/ngày. Tác dụng phụ: buồn ngủ, chóng mặt, khô miệng (phổ biến), hạ huyết áp (phổ biến), nhịp chậm, tăng ALT/AST (hiếm).",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm co cứng cơ, cải thiện chức năng vận động",
+            "Huyết áp - hạ huyết áp phổ biến, đặc biệt khi bắt đầu hoặc tăng liều",
+            "Nhịp tim - nhịp chậm, đặc biệt khi bắt đầu hoặc tăng liều",
+            "Dấu hiệu quá liều: buồn ngủ nặng, lú lẫn, hạ huyết áp nặng, nhịp chậm",
+            "ALT/AST - tăng ALT/AST hiếm, theo dõi định kỳ",
+            "Tương tác với ciprofloxacin, fluvoxamine (CHỐNG CHỈ ĐỊNH), CYP1A2 inhibitors/inducers, oral contraceptives"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH với ciprofloxacin hoặc fluvoxamine - tăng nồng độ tizanidine, tăng nguy cơ tác dụng phụ nặng (hạ huyết áp nặng, nhịp chậm, suy hô hấp)",
+            "Hạ huyết áp - phổ biến, đặc biệt khi bắt đầu hoặc tăng liều, đứng dậy chậm, uống đủ nước",
+            "Nhịp chậm - đặc biệt khi bắt đầu hoặc tăng liều, theo dõi nhịp tim",
+            "Lú lẫn - đặc biệt ở người cao tuổi, giảm liều",
+            "Tăng liều chậm để giảm tác dụng phụ (đặc biệt hạ huyết áp, buồn ngủ)",
+            "Tránh rượu - tăng tác dụng ức chế hệ thần kinh trung ương",
+            "Thận trọng khi dùng với CYP1A2 inhibitors (fluvoxamine, ciprofloxacin) - CHỐNG CHỈ ĐỊNH với fluvoxamine và ciprofloxacin",
+            "Thận trọng khi dùng với CYP1A2 inducers (carbamazepine, smoking) - giảm nồng độ tizanidine, có thể cần tăng liều",
+            "Thận trọng khi dùng với oral contraceptives - tăng nồng độ tizanidine, giảm liều tizanidine 50%",
+            "Thận trọng khi dùng với antihypertensives - tăng nguy cơ hạ huyết áp",
+            "Hút thuốc - giảm nồng độ tizanidine, có thể cần tăng liều ở người hút thuốc"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-4 giờ",
+            "onset": "1-2 giờ (PO)",
+            "duration": "3-6 giờ (PO)",
+            "protein_binding": "30%",
+            "clearance": "Gan: chuyển hóa qua CYP1A2 (chính). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều khi dùng với CYP1A2 inhibitors/inducers và oral contraceptives."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH với ciprofloxacin hoặc fluvoxamine - tăng nồng độ tizanidine, tăng nguy cơ tác dụng phụ nặng (hạ huyết áp nặng, nhịp chậm, suy hô hấp).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Ciprofloxacin",
+                    "mechanism": "Ức chế chuyển hóa tizanidine qua CYP1A2, tăng nồng độ tizanidine",
+                    "effect": "Tăng nồng độ tizanidine 10-33 lần, tăng nguy cơ tác dụng phụ nặng (hạ huyết áp nặng, nhịp chậm, suy hô hấp)",
+                    "management": "CHỐNG CHỈ ĐỊNH - không được dùng cùng. Nếu đang dùng tizanidine, ngừng tizanidine ít nhất 2 tuần trước khi dùng ciprofloxacin."
+                },
+                {
+                    "drug": "Fluvoxamine",
+                    "mechanism": "Ức chế chuyển hóa tizanidine qua CYP1A2, tăng nồng độ tizanidine",
+                    "effect": "Tăng nồng độ tizanidine 10-33 lần, tăng nguy cơ tác dụng phụ nặng (hạ huyết áp nặng, nhịp chậm, suy hô hấp)",
+                    "management": "CHỐNG CHỈ ĐỊNH - không được dùng cùng. Nếu đang dùng tizanidine, ngừng tizanidine ít nhất 2 tuần trước khi dùng fluvoxamine."
+                },
+                {
+                    "drug": "Other CYP1A2 inhibitors (Cimetidine, Acyclovir)",
+                    "mechanism": "Ức chế chuyển hóa tizanidine qua CYP1A2, tăng nồng độ tizanidine",
+                    "effect": "Tăng nồng độ tizanidine, tăng tác dụng phụ (hạ huyết áp, nhịp chậm)",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, giảm liều tizanidine 50-75%. Theo dõi tác dụng phụ chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP1A2 inducers (Carbamazepine, Smoking)",
+                    "mechanism": "Cảm ứng chuyển hóa tizanidine qua CYP1A2, giảm nồng độ tizanidine",
+                    "effect": "Giảm nồng độ tizanidine, giảm hiệu quả",
+                    "management": "Tăng liều tizanidine 50-100% khi dùng với carbamazepine hoặc ở người hút thuốc. Theo dõi đáp ứng điều trị."
+                },
+                {
+                    "drug": "Oral contraceptives",
+                    "mechanism": "Ức chế chuyển hóa tizanidine qua CYP1A2, tăng nồng độ tizanidine",
+                    "effect": "Tăng nồng độ tizanidine, tăng tác dụng phụ",
+                    "management": "Giảm liều tizanidine 50% khi dùng với oral contraceptives. Theo dõi tác dụng phụ."
+                },
+                {
+                    "drug": "Antihypertensives",
+                    "mechanism": "Cả hai đều có thể gây hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp tư thế, ngất",
+                    "management": "Thận trọng. Có thể cần giảm liều một trong hai thuốc. Theo dõi huyết áp."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng tizanidine hoặc các thành phần khác",
+                "Dùng với ciprofloxacin - CHỐNG CHỈ ĐỊNH",
+                "Dùng với fluvoxamine - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Bệnh gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Bệnh thận nặng - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ hạ huyết áp, nhịp chậm",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ, lú lẫn, hạ huyết áp, giảm liều 50%",
+                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Dùng với CYP1A2 inhibitors (trừ ciprofloxacin, fluvoxamine) - giảm liều tizanidine",
+                "Dùng với CYP1A2 inducers hoặc hút thuốc - tăng liều tizanidine",
+                "Dùng với oral contraceptives - giảm liều tizanidine 50%",
+                "Dùng với antihypertensives - tăng nguy cơ hạ huyết áp"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh, nhưng chứng cứ không rõ ràng. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Tizanidine bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ sơ sinh rất thấp. Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
+                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Giảm liều 25-50%, theo dõi tác dụng phụ",
+            "severe": "Giảm liều 50%, theo dõi tác dụng phụ chặt chẽ. Hoặc tránh dùng nếu có thể.",
+            "notes": "Tizanidine chuyển hóa ở gan qua CYP1A2. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: buồn ngủ nặng, lú lẫn, hôn mê",
+                "Rối loạn tim mạch: hạ huyết áp nặng, nhịp chậm",
+                "Rối loạn hô hấp: suy hô hấp (hiếm)",
+                "Rối loạn tiêu hóa: buồn nôn, nôn"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, huyết áp (quan trọng)",
+                "Xử trí hạ huyết áp: IV fluids, vasopressors nếu cần",
+                "Xử trí nhịp chậm: Atropine nếu cần",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
+                "Theo dõi ít nhất 24 giờ"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, huyết áp (quan trọng), nhịp tim"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn.",
+                "timing": "Chia 3 lần/ngày. Uống cùng thời điểm mỗi ngày. Tăng liều chậm để giảm tác dụng phụ (đặc biệt hạ huyết áp, buồn ngủ)."
+            },
+            "im": {
+                "reconstitution": "Không có dạng IM",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Lexicomp - Tizanidine",
+                "UpToDate - Tizanidine: Drug information",
+                "FDA - Zanaflex (tizanidine) prescribing information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+        }
+    },
+
 }
 
 __all__ = ['MUSCLE_RELAXANTS_DRUGS']

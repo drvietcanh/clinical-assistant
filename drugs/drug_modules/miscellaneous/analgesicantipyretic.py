@@ -133,7 +133,6 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
         'UpToDate - Acetaminophen poisoning', 'Rumack-Matthew nomogram',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics",
         "King's College Criteria for liver transplantation in acute liver failure"
-        ], 'last_updated': '2024-12-19', 'evidence_level':
-        'High - RCTs và guidelines dựa trên chứng cứ'}}}
+        ], 'last_updated': '2024-12-19', 'evidence_level': 'High - RCTs và guidelines dựa trên chứng cứ'}}}
 
 __all__ = ['ANALGESIC_ANTIPYRETIC_DRUGS']

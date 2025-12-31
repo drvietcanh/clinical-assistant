@@ -142,7 +142,7 @@ BIGUANIDES_DRUGS = {
             'AACE/ACE Diabetes Guidelines',
             'EASD Guidelines',
             'UKPDS Study',
-            'FDA Drug Safety Communication - Metformin and Contrast Media'
+            'FDA Drug Safety Communication - Metformin and Contrast Media',
         ]}}
 
 __all__ = ['BIGUANIDES_DRUGS']

@@ -393,7 +393,7 @@ STATINS_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "High - Multiple large RCTs (JUPITER, CORONA) showing cardiovascular benefit"
         }
-    }
+    },
 }
 
 __all__ = ['STATINS_DRUGS']

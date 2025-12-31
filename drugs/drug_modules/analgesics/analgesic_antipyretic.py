@@ -206,7 +206,7 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
             'last_updated': '2024-12-19',
             'evidence_level': 'High - RCTs và guidelines dựa trên chứng cứ'
         }
-    }
+    },
 }
 
 __all__ = ['ANALGESIC_ANTIPYRETIC_DRUGS']

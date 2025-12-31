@@ -2,6 +2,187 @@
 Mebeverine, Trimebutine, Hyoscine butylbromide"""
 
 ANTISPASMODICS_DRUGS = {
+    "Hyoscine butylbromide": {
+        "group": "Gastrointestinal - Antispasmodic (Anticholinergic)",
+        "vietnamese_name": "Hyoscine butylbromide, Buscopan",
+        "administration": ["PO", "IV", "IM"],
+        "indications": [
+            "Co thắt cơ trơn đường tiêu hóa (dạ dày, ruột, đại tràng) gây đau quặn",
+            "Co thắt đường mật, tiết niệu (hỗ trợ giảm đau)",
+            "Đau bụng quặn do IBS hoặc co thắt đại tràng",
+        ],
+        "contraindications": [
+            "Glaucoma góc đóng",
+            "Phì đại tuyến tiền liệt có bí tiểu",
+            "Tắc ruột cơ học, liệt ruột",
+            "Nhịp tim nhanh chưa kiểm soát",
+        ],
+        "dosage": {
+            "adult_po": "10–20mg PO x 3–5 lần/ngày (tối đa ~100mg/ngày tùy hướng dẫn quốc gia)",
+            "adult_iv_im": "20mg IV/IM, có thể lặp lại sau 30 phút nếu cần (tối đa 100mg/ngày)",
+            "notes": "Dùng ngắn hạn cho cơn đau quặn; PO hoặc IV/IM tùy mức độ.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều, nhưng thận trọng nếu dùng IV/IM nhiều lần",
+            "under_30": "Thận trọng, dữ liệu hạn chế",
+        },
+        "side_effects": [
+            "Khô miệng",
+            "Nhìn mờ",
+            "Táo bón",
+            "Giữ tiểu, bí tiểu (đặc biệt ở nam lớn tuổi có BPH)",
+            "Tim nhanh, đánh trống ngực",
+            "Lú lẫn (nhạy cảm ở người già, hiếm với dạng butylbromide do ít qua BBB)",
+        ],
+        "interactions": [
+            "Thuốc kháng cholinergic khác (TCAs, thuốc kháng H1 thế hệ 1): tăng tác dụng phụ kháng cholinergic",
+            "Thuốc tăng nhịp tim (β-agonists): có thể tăng nhịp tim nhiều hơn",
+        ],
+        "pregnancy": "B/C – thường dùng ngắn hạn, lợi ích > nguy cơ",
+        "mechanism_of_action": (
+            "Hyoscine butylbromide là dẫn xuất ammonium bậc 4 của scopolamine, "
+            "tác dụng kháng muscarinic (anticholinergic) chủ yếu ở ngoại vi trên cơ trơn "
+            "dạ dày-ruột, đường mật, tiết niệu. Giảm co thắt cơ trơn và giảm đau quặn. "
+            "Do là ammonium bậc 4 nên hầu như không qua hàng rào máu não → ít tác dụng trung ương hơn atropine/scopolamine.",
+        ),
+        "monitoring": [
+            "Triệu chứng đau bụng quặn",
+            "Mạch, huyết áp (IV/IM)",
+            "Dấu hiệu bí tiểu ở bệnh nhân BPH",
+            "Dấu hiệu khô miệng, nhìn mờ, táo bón nặng",
+        ],
+        "precautions": [
+            "Tránh dùng kéo dài ở người già do nhạy cảm với anticholinergic (lú lẫn, té ngã)",
+            "Không dùng nếu nghi ngờ bụng cấp ngoại khoa chưa rõ chẩn đoán (có thể che lấp triệu chứng)",
+            "Thận trọng ở bệnh nhân BPH, glaucoma góc đóng, nhịp nhanh",
+        ],
+        "pharmacokinetics": {
+            "half_life": "4–6 giờ",
+            "onset": "15–30 phút (PO), nhanh hơn với IV/IM",
+            "duration": "3–6 giờ",
+            "protein_binding": "Cao",
+            "clearance": "Chuyển hóa qua gan và thải qua mật/thận; hấp thu đường uống không hoàn toàn",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc kháng cholinergic khác (TCAs, kháng H1 thế hệ 1, antipsychotics cổ điển)",
+                    "mechanism": "Tác dụng cộng dồn kháng cholinergic",
+                    "effect": "Tăng nguy cơ bí tiểu, táo bón nặng, nhìn mờ, lú lẫn",
+                    "management": "Thận trọng, tránh phối hợp nếu có thể, đặc biệt ở người già.",
+                },
+                {
+                    "drug": "Thuốc tăng nhịp tim (β-agonists)",
+                    "mechanism": "Tác dụng cộng dồn tăng nhịp tim",
+                    "effect": "Tăng nhịp tim nhiều hơn",
+                    "management": "Thận trọng, theo dõi mạch."
+                }
+            ],
+            "minor": [],
+        },
+        "drug_interactions_detail": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc kháng cholinergic khác (TCAs, kháng H1 thế hệ 1, antipsychotics cổ điển)",
+                    "mechanism": "Tác dụng cộng dồn kháng cholinergic",
+                    "effect": "Tăng nguy cơ bí tiểu, táo bón nặng, nhìn mờ, lú lẫn",
+                    "management": "Thận trọng, tránh phối hợp nếu có thể, đặc biệt ở người già.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Glaucoma góc đóng",
+                "Bí tiểu do BPH",
+                "Tắc ruột cơ học, liệt ruột",
+                "Nhịp nhanh chưa kiểm soát nặng",
+            ],
+            "tương_đối": [
+                "BPH không bí tiểu (nguy cơ bí tiểu)",
+                "Bệnh tim mạch (nhịp nhanh, thiếu máu cơ tim)",
+                "Người cao tuổi (nguy cơ lú lẫn, té ngã)",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu hạn chế; thường dùng ngắn hạn dưới giám sát bác sĩ khi lợi ích rõ ràng.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ bài tiết vào sữa; nguy cơ lý thuyết gây khô miệng, bí tiểu ở trẻ.",
+                "recommendation": "Dùng thận trọng, tránh kéo dài; theo dõi trẻ nếu dùng.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng, không nhất thiết chỉnh liều",
+            "moderate": "Thận trọng, tránh liều cao lặp lại IV/IM",
+            "severe": "Tránh dùng lặp lại, cân nhắc thuốc khác",
+            "notes": "Chuyển hóa qua gan; suy gan có thể tăng phơi nhiễm.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Khô miệng rất nhiều, nhìn mờ",
+                "Tim nhanh, sốt nhẹ",
+                "Bí tiểu, táo bón nặng",
+                "Trong quá liều rất cao: lú lẫn, kích động (hiếm do ít qua BBB)",
+            ],
+            "antidote": "Không có antidote đặc hiệu; trong ngộ độc anticholinergic nặng có thể cân nhắc physostigmine (chuyên khoa).",
+            "treatment": [
+                "Ngừng thuốc",
+                "Hỗ trợ: bù dịch, làm mát nếu sốt, điều trị bí tiểu (đặt sonde nếu cần)",
+                "Theo dõi mạch, huyết áp, ý thức",
+            ],
+            "monitoring": "Mạch, huyết áp, ý thức, lượng nước tiểu.",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không với thức ăn.",
+                "timing": "Thường 3–5 lần/ngày khi có cơn đau quặn; không nên dùng kéo dài liều cao.",
+            },
+            "iv": {
+                "reconstitution": "Dùng dung dịch tiêm sẵn; có thể tiêm chậm trực tiếp hoặc pha loãng trong NaCl 0,9%.",
+                "infusion_rate": "Tiêm tĩnh mạch chậm trong vài phút để tránh tụt huyết áp hoặc tim nhanh quá mức.",
+                "compatibility": ["NaCl 0,9%", "D5W"],
+                "incompatibility": [],
+                "notes": "Chỉ dùng IV/IM trong cơn đau quặn nặng; chuyển sang PO khi ổn định.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "BNF – Hyoscine butylbromide monograph",
+                "ESNM guidelines – Management of IBS and functional abdominal pain",
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "Moderate – rộng rãi trong thực hành lâm sàng",
+        },
+              "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": "Không có",
+},
     "Mebeverine": {
         "group": "Gastrointestinal - Antispasmodic (Direct smooth muscle relaxant)",
         "vietnamese_name": "Mebeverine, Duspatalin",
@@ -262,187 +443,6 @@ ANTISPASMODICS_DRUGS = {
           "black_box_warnings": "Không có",
 },
 
-    "Hyoscine butylbromide": {
-        "group": "Gastrointestinal - Antispasmodic (Anticholinergic)",
-        "vietnamese_name": "Hyoscine butylbromide, Buscopan",
-        "administration": ["PO", "IV", "IM"],
-        "indications": [
-            "Co thắt cơ trơn đường tiêu hóa (dạ dày, ruột, đại tràng) gây đau quặn",
-            "Co thắt đường mật, tiết niệu (hỗ trợ giảm đau)",
-            "Đau bụng quặn do IBS hoặc co thắt đại tràng",
-        ],
-        "contraindications": [
-            "Glaucoma góc đóng",
-            "Phì đại tuyến tiền liệt có bí tiểu",
-            "Tắc ruột cơ học, liệt ruột",
-            "Nhịp tim nhanh chưa kiểm soát",
-        ],
-        "dosage": {
-            "adult_po": "10–20mg PO x 3–5 lần/ngày (tối đa ~100mg/ngày tùy hướng dẫn quốc gia)",
-            "adult_iv_im": "20mg IV/IM, có thể lặp lại sau 30 phút nếu cần (tối đa 100mg/ngày)",
-            "notes": "Dùng ngắn hạn cho cơn đau quặn; PO hoặc IV/IM tùy mức độ.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Không cần chỉnh liều, nhưng thận trọng nếu dùng IV/IM nhiều lần",
-            "under_30": "Thận trọng, dữ liệu hạn chế",
-        },
-        "side_effects": [
-            "Khô miệng",
-            "Nhìn mờ",
-            "Táo bón",
-            "Giữ tiểu, bí tiểu (đặc biệt ở nam lớn tuổi có BPH)",
-            "Tim nhanh, đánh trống ngực",
-            "Lú lẫn (nhạy cảm ở người già, hiếm với dạng butylbromide do ít qua BBB)",
-        ],
-        "interactions": [
-            "Thuốc kháng cholinergic khác (TCAs, thuốc kháng H1 thế hệ 1): tăng tác dụng phụ kháng cholinergic",
-            "Thuốc tăng nhịp tim (β-agonists): có thể tăng nhịp tim nhiều hơn",
-        ],
-        "pregnancy": "B/C – thường dùng ngắn hạn, lợi ích > nguy cơ",
-        "mechanism_of_action": (
-            "Hyoscine butylbromide là dẫn xuất ammonium bậc 4 của scopolamine, "
-            "tác dụng kháng muscarinic (anticholinergic) chủ yếu ở ngoại vi trên cơ trơn "
-            "dạ dày-ruột, đường mật, tiết niệu. Giảm co thắt cơ trơn và giảm đau quặn. "
-            "Do là ammonium bậc 4 nên hầu như không qua hàng rào máu não → ít tác dụng trung ương hơn atropine/scopolamine.",
-        ),
-        "monitoring": [
-            "Triệu chứng đau bụng quặn",
-            "Mạch, huyết áp (IV/IM)",
-            "Dấu hiệu bí tiểu ở bệnh nhân BPH",
-            "Dấu hiệu khô miệng, nhìn mờ, táo bón nặng",
-        ],
-        "precautions": [
-            "Tránh dùng kéo dài ở người già do nhạy cảm với anticholinergic (lú lẫn, té ngã)",
-            "Không dùng nếu nghi ngờ bụng cấp ngoại khoa chưa rõ chẩn đoán (có thể che lấp triệu chứng)",
-            "Thận trọng ở bệnh nhân BPH, glaucoma góc đóng, nhịp nhanh",
-        ],
-        "pharmacokinetics": {
-            "half_life": "4–6 giờ",
-            "onset": "15–30 phút (PO), nhanh hơn với IV/IM",
-            "duration": "3–6 giờ",
-            "protein_binding": "Cao",
-            "clearance": "Chuyển hóa qua gan và thải qua mật/thận; hấp thu đường uống không hoàn toàn",
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm, tránh ánh sáng.",
-        "black_box_warnings": None,
-        "drug_interactions": {
-            "major": [],
-            "moderate": [
-                {
-                    "drug": "Thuốc kháng cholinergic khác (TCAs, kháng H1 thế hệ 1, antipsychotics cổ điển)",
-                    "mechanism": "Tác dụng cộng dồn kháng cholinergic",
-                    "effect": "Tăng nguy cơ bí tiểu, táo bón nặng, nhìn mờ, lú lẫn",
-                    "management": "Thận trọng, tránh phối hợp nếu có thể, đặc biệt ở người già.",
-                },
-                {
-                    "drug": "Thuốc tăng nhịp tim (β-agonists)",
-                    "mechanism": "Tác dụng cộng dồn tăng nhịp tim",
-                    "effect": "Tăng nhịp tim nhiều hơn",
-                    "management": "Thận trọng, theo dõi mạch."
-                }
-            ],
-            "minor": [],
-        },
-        "drug_interactions_detail": {
-            "major": [],
-            "moderate": [
-                {
-                    "drug": "Thuốc kháng cholinergic khác (TCAs, kháng H1 thế hệ 1, antipsychotics cổ điển)",
-                    "mechanism": "Tác dụng cộng dồn kháng cholinergic",
-                    "effect": "Tăng nguy cơ bí tiểu, táo bón nặng, nhìn mờ, lú lẫn",
-                    "management": "Thận trọng, tránh phối hợp nếu có thể, đặc biệt ở người già.",
-                }
-            ],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Glaucoma góc đóng",
-                "Bí tiểu do BPH",
-                "Tắc ruột cơ học, liệt ruột",
-                "Nhịp nhanh chưa kiểm soát nặng",
-            ],
-            "tương_đối": [
-                "BPH không bí tiểu (nguy cơ bí tiểu)",
-                "Bệnh tim mạch (nhịp nhanh, thiếu máu cơ tim)",
-                "Người cao tuổi (nguy cơ lú lẫn, té ngã)",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Dữ liệu hạn chế; thường dùng ngắn hạn dưới giám sát bác sĩ khi lợi ích rõ ràng.",
-            "lactation": {
-                "safety": "Caution",
-                "details": "Chưa rõ bài tiết vào sữa; nguy cơ lý thuyết gây khô miệng, bí tiểu ở trẻ.",
-                "recommendation": "Dùng thận trọng, tránh kéo dài; theo dõi trẻ nếu dùng.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Thận trọng, không nhất thiết chỉnh liều",
-            "moderate": "Thận trọng, tránh liều cao lặp lại IV/IM",
-            "severe": "Tránh dùng lặp lại, cân nhắc thuốc khác",
-            "notes": "Chuyển hóa qua gan; suy gan có thể tăng phơi nhiễm.",
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Khô miệng rất nhiều, nhìn mờ",
-                "Tim nhanh, sốt nhẹ",
-                "Bí tiểu, táo bón nặng",
-                "Trong quá liều rất cao: lú lẫn, kích động (hiếm do ít qua BBB)",
-            ],
-            "antidote": "Không có antidote đặc hiệu; trong ngộ độc anticholinergic nặng có thể cân nhắc physostigmine (chuyên khoa).",
-            "treatment": [
-                "Ngừng thuốc",
-                "Hỗ trợ: bù dịch, làm mát nếu sốt, điều trị bí tiểu (đặt sonde nếu cần)",
-                "Theo dõi mạch, huyết áp, ý thức",
-            ],
-            "monitoring": "Mạch, huyết áp, ý thức, lượng nước tiểu.",
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống cùng hoặc không với thức ăn.",
-                "timing": "Thường 3–5 lần/ngày khi có cơn đau quặn; không nên dùng kéo dài liều cao.",
-            },
-            "iv": {
-                "reconstitution": "Dùng dung dịch tiêm sẵn; có thể tiêm chậm trực tiếp hoặc pha loãng trong NaCl 0,9%.",
-                "infusion_rate": "Tiêm tĩnh mạch chậm trong vài phút để tránh tụt huyết áp hoặc tim nhanh quá mức.",
-                "compatibility": ["NaCl 0,9%", "D5W"],
-                "incompatibility": [],
-                "notes": "Chỉ dùng IV/IM trong cơn đau quặn nặng; chuyển sang PO khi ổn định.",
-            },
-        },
-        "references": {
-            "primary_sources": [
-                "BNF – Hyoscine butylbromide monograph",
-                "ESNM guidelines – Management of IBS and functional abdominal pain",
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "Moderate – rộng rãi trong thực hành lâm sàng",
-        },
-              "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": "Không có",
-},
 }
 
 __all__ = ["ANTISPASMODICS_DRUGS"]

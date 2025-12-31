@@ -424,6 +424,386 @@ ANTIPLATELETS_DRUGS = {
           },
 },
 
+    "Dipyridamole": {
+        "group": "Cardiovascular - Antiplatelet",
+        "vietnamese_name": "Dipyridamole, Persantine",
+        "administration": ["PO"],
+        "indications": [
+            "Phòng ngừa đột quỵ/TIA (kết hợp với aspirin)",
+            "Phòng ngừa huyết khối sau phẫu thuật van tim"
+        ],
+        "contraindications": [
+            "Nhồi máu cơ tim cấp",
+            "Co thắt mạch vành (vasospasm)"
+        ],
+        "dosage": {
+            "adult_standard": "200mg x 2 lần/ngày (với aspirin)",
+            "adult_modified_release": "200mg x 2 lần/ngày",
+            "notes": "Thường dùng kết hợp với aspirin 25mg x 2 lần/ngày"
+        },
+        "side_effects": [
+            "Nhức đầu (phổ biến)",
+            "Chóng mặt",
+            "Đau bụng",
+            "Chảy máu",
+            "Tim đập nhanh"
+        ],
+        "interactions": [
+            "Aspirin: dùng kèm để tăng hiệu quả",
+            "Warfarin: tăng nguy cơ chảy máu"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Dipyridamole ức chế phosphodiesterase và adenosine deaminase, làm tăng nồng độ cAMP và adenosine trong tiểu cầu, ức chế aggregation tiểu cầu. Thuốc cũng ức chế tái hấp thu adenosine, làm giãn mạch vành. Dipyridamole thường dùng kết hợp với aspirin để phòng ngừa đột quỵ/TIA sau stroke hoặc TIA. Thuốc có tác dụng chống đông và giãn mạch, nhưng có thể gây nhức đầu do giãn mạch. Thường dùng dạng modified-release để giảm tác dụng phụ.",
+        "monitoring": [
+            "Dấu hiệu chảy máu (xuất huyết, chảy máu chân răng, chảy máu cam)",
+            "Nhức đầu (tác dụng phụ phổ biến, có thể giảm khi dùng liều thấp hơn)",
+            "Huyết áp (có thể giảm nhẹ do giãn mạch)",
+            "Nhịp tim (có thể tăng nhẹ)",
+            "Đáp ứng điều trị (giảm nguy cơ đột quỵ/TIA)"
+        ],
+        "precautions": [
+            "Thường dùng kết hợp với aspirin 25mg x 2 lần/ngày để tăng hiệu quả",
+            "Nhức đầu là tác dụng phụ phổ biến (có thể giảm khi dùng liều thấp hơn hoặc dạng modified-release)",
+            "Tránh dùng trong nhồi máu cơ tim cấp (có thể làm nặng thêm)",
+            "Thận trọng ở bệnh nhân co thắt mạch vành (vasospasm)",
+            "Tránh dùng với warfarin (tăng nguy cơ chảy máu)",
+            "Có thể gây chóng mặt, đau bụng",
+            "Ngừng 5-7 ngày trước phẫu thuật lớn",
+            "Thận trọng ở bệnh nhân hạ huyết áp"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10-12 giờ",
+            "onset": "2-4 giờ",
+            "duration": "12-24 giờ",
+            "protein_binding": "91-99%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin, Anticoagulants",
+                    "mechanism": "Tác dụng cộng dồn chống đông máu.",
+                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng, tăng INR",
+                    "management": "Tránh dùng cùng. Nếu bắt buộc, theo dõi INR chặt chẽ và điều chỉnh liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Aspirin",
+                    "mechanism": "Cả hai đều ức chế tiểu cầu, tác dụng cộng dồn.",
+                    "effect": "Tăng hiệu quả chống đông nhưng tăng nguy cơ chảy máu",
+                    "management": "Thường dùng kết hợp (dipyridamole + aspirin 25mg x 2 lần/ngày). Theo dõi dấu hiệu chảy máu."
+                },
+                {
+                    "drug": "Theophylline, Caffeine",
+                    "mechanism": "Dipyridamole ức chế adenosine deaminase, tăng adenosine. Theophylline/caffeine đối kháng adenosine.",
+                    "effect": "Giảm hiệu quả dipyridamole",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi đáp ứng điều trị."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Nhồi máu cơ tim cấp - có thể làm nặng thêm",
+                "Co thắt mạch vành (vasospasm) - có thể làm nặng thêm",
+                "Dị ứng dipyridamole"
+            ],
+            "tương_đối": [
+                "Hạ huyết áp nặng - dipyridamole gây giãn mạch, có thể làm nặng hạ huyết áp",
+                "Suy tim nặng - thận trọng",
+                "Có thai - category B, thận trọng",
+                "Đang dùng warfarin - tăng nguy cơ chảy máu"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Dipyridamole là category B. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Thận trọng, đặc biệt trong tam cá nguyệt thứ ba (tăng nguy cơ chảy máu ở mẹ và thai nhi).",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết dipyridamole có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+            "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan.",
+            "severe": "Thận trọng, giảm liều. Suy gan nặng làm giảm chuyển hóa, có thể tăng nồng độ.",
+            "notes": "Dipyridamole chuyển hóa ở gan. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Chảy máu nghiêm trọng (xuất huyết, chảy máu cam, chảy máu tiêu hóa)",
+                "Hạ huyết áp nặng, ngất",
+                "Nhức đầu nặng",
+                "Chóng mặt, buồn nôn"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng dipyridamole ngay lập tức",
+                "Theo dõi huyết áp, nhịp tim",
+                "Nếu chảy máu: điều trị hỗ trợ, truyền tiểu cầu nếu cần",
+                "Nếu hạ huyết áp: truyền dịch, thuốc vận mạch nếu cần",
+                "Theo dõi dấu hiệu sinh tồn"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, dấu hiệu chảy máu, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.",
+                "timing": "Uống 2 lần/ngày (sáng và tối), cách đều. Dạng modified-release: uống 1-2 lần/ngày theo chỉ định."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Dipyridamole (Persantine)",
+                "UpToDate - Dipyridamole: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Moderate",
+            "organ_toxicity": {"cardiovascular": "Moderate (hypotension, angina)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Secondary Prevention",
+            "ESPRIT Study - Stroke Prevention",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
+              "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "renal_adjustment": {
+              "normal": "Không đổi",
+              "30_60": "Thận trọng, có thể giảm liều",
+              "under_30": "Giảm liều hoặc tránh dùng",
+              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+          },
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": None,
+          "black_box_warnings": "Không có",
+},
+    "Prasugrel": {
+        "group": "Cardiovascular - Antiplatelet (P2Y12 Inhibitor)",
+        "vietnamese_name": "Prasugrel, Effient",
+        "administration": ["PO"],
+        "indications": [
+            "Hội chứng mạch vành cấp cần PCI",
+            "Sau đặt stent"
+        ],
+        "contraindications": [
+            "Chảy máu đang hoạt động",
+            "Tiền sử TIA/đột quỵ",
+            "Tuổi ≥75 (trừ nguy cơ cao)",
+            "Cân nặng <60kg (trừ nguy cơ cao)"
+        ],
+        "dosage": {
+            "adult_loading": "60mg x 1 lần",
+            "adult_maintenance": "10mg x 1 lần/ngày (5mg nếu <60kg hoặc ≥75 tuổi)",
+            "notes": "Mạnh hơn clopidogrel, nguy cơ chảy máu cao hơn"
+        },
+        "side_effects": [
+            "Chảy máu (nhiều hơn clopidogrel)",
+            "Chảy máu lớn (hiếm nhưng nguy hiểm)",
+            "Thrombotic thrombocytopenic purpura (TTP) - hiếm"
+        ],
+        "interactions": [
+            "Aspirin: dùng kèm (dual antiplatelet therapy)",
+            "Warfarin: tăng nguy cơ chảy máu"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Prasugrel là chất ức chế P2Y12 receptor, đối kháng không thể đảo ngược (irreversible) với P2Y12 receptor trên tiểu cầu. P2Y12 receptor là một thụ thể adenosine diphosphate (ADP) quan trọng trong quá trình hoạt hóa và kết tập tiểu cầu. Prasugrel là một prodrug, được chuyển hóa nhanh chóng qua CYP3A4 và CYP2B6 thành metabolite hoạt động. Metabolite hoạt động gắn không thể đảo ngược với P2Y12 receptor, ức chế kết tập tiểu cầu do ADP. Prasugrel mạnh hơn và có tác dụng nhanh hơn clopidogrel, với ít biến thể di truyền (genetic variation) hơn. Prasugrel giảm nguy cơ huyết khối trong hội chứng mạch vành cấp cần can thiệp mạch vành (PCI), nhưng tăng nguy cơ chảy máu lớn so với clopidogrel, đặc biệt ở bệnh nhân có tiền sử TIA/đột quỵ hoặc tuổi ≥75.",
+        "monitoring": [
+            "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu tại vị trí tiêm)",
+            "Chảy máu lớn (xuất huyết tiêu hóa, xuất huyết nội sọ, chảy máu sau phẫu thuật) - nguy cơ cao hơn clopidogrel",
+            "Thrombotic thrombocytopenic purpura (TTP) - hiếm nhưng nguy hiểm (sốt, thiếu máu, giảm tiểu cầu, rối loạn thần kinh)",
+            "Chức năng gan nếu có triệu chứng (hiếm)",
+            "Công thức máu (tiểu cầu) nếu có dấu hiệu chảy máu"
+        ],
+        "precautions": [
+            "Dùng kèm với aspirin 75-100mg/ngày (dual antiplatelet therapy - DAPT)",
+            "Không dùng ở bệnh nhân có tiền sử TIA hoặc đột quỵ - tăng nguy cơ chảy máu nội sọ",
+            "Thận trọng ở bệnh nhân ≥75 tuổi - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
+            "Thận trọng ở bệnh nhân <60kg - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
+            "Nguy cơ chảy máu cao hơn clopidogrel - không dùng nếu có chảy máu đang hoạt động",
+            "Không ngừng đột ngột (tăng nguy cơ huyết khối)",
+            "Không dùng ở bệnh nhân có nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây)",
+            "Thời gian DAPT thường 12 tháng sau ACS với PCI, có thể kéo dài ở một số bệnh nhân nguy cơ cao",
+            "Mạnh hơn clopidogrel - giảm nguy cơ huyết khối nhưng tăng nguy cơ chảy máu",
+            "Liều khởi đầu: 60mg loading dose, sau đó 10mg/ngày (5mg nếu <60kg hoặc ≥75 tuổi)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "7 giờ",
+            "onset": "30 phút - 1 giờ (nhanh hơn clopidogrel)",
+            "duration": "7-10 ngày (do irreversible binding - tiểu cầu mới không bị ảnh hưởng)",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Gan: chuyển hóa nhanh qua CYP3A4 và CYP2B6 thành metabolite hoạt động (không cần chuyển hóa qua CYP2C19 như clopidogrel). Thận: bài tiết một phần. Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": "Nguy cơ chảy máu nghiêm trọng, có thể gây tử vong. Không dùng ở bệnh nhân có tiền sử TIA hoặc đột quỵ - tăng nguy cơ chảy máu nội sọ. Không dùng ở bệnh nhân có chảy máu đang hoạt động. Thận trọng ở bệnh nhân ≥75 tuổi, <60kg, hoặc có nguy cơ chảy máu cao.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Tác dụng hiệp đồng chống đông",
+                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng",
+                    "management": "Thận trọng. Theo dõi INR, dấu hiệu chảy máu. Thường tránh dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Aspirin",
+                    "mechanism": "Dùng kèm trong dual antiplatelet therapy",
+                    "effect": "Tăng nguy cơ chảy máu",
+                    "management": "Dùng kèm aspirin 75-100mg/ngày. Theo dõi dấu hiệu chảy máu."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen)",
+                    "mechanism": "Tác dụng hiệp đồng chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu",
+                    "management": "Thận trọng. Tránh dùng nếu có thể."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "CYP inducers/inhibitors",
+                    "mechanism": "Prasugrel chuyển hóa qua CYP3A4, CYP2B6, nhưng ít bị ảnh hưởng bởi CYP inhibitors/inducers hơn clopidogrel",
+                    "effect": "Tương tác tối thiểu",
+                    "management": "Không cần điều chỉnh liều"
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Chảy máu đang hoạt động",
+                "Tiền sử TIA hoặc đột quỵ",
+                "Dị ứng prasugrel"
+            ],
+            "tương_đối": [
+                "Tuổi ≥75 (trừ nguy cơ cao) - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
+                "Cân nặng <60kg (trừ nguy cơ cao) - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
+                "Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng",
+                "Phẫu thuật lớn - cần ngừng trước phẫu thuật",
+                "Suy gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Không có bằng chứng về nguy cơ gây dị tật thai nhi ở động vật. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Nguy cơ chảy máu ở mẹ và thai nhi. Cân nhắc nguy cơ huyết khối vs nguy cơ chảy máu. Theo dõi chặt chẽ dấu hiệu chảy máu.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Prasugrel và metabolite có thể bài tiết vào sữa mẹ. Không có dữ liệu đầy đủ về an toàn ở trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể. Nếu cần dùng, theo dõi trẻ chặt chẽ về dấu hiệu chảy máu."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Thận trọng",
+            "notes": "Prasugrel chuyển hóa ở gan qua CYP3A4 và CYP2B6. Không cần điều chỉnh liều ở suy gan nhẹ đến trung bình. Thận trọng ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Chảy máu: chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu nội sọ",
+                "Chảy máu lớn có thể nghiêm trọng và đe dọa tính mạng",
+                "Thrombotic thrombocytopenic purpura (TTP) - hiếm nhưng nguy hiểm"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Truyền tiểu cầu nếu cần (hiệu quả hạn chế do irreversible binding)",
+            "treatment": [
+                "Ngừng prasugrel ngay lập tức",
+                "Truyền tiểu cầu nếu chảy máu nghiêm trọng (hiệu quả hạn chế do irreversible binding - cần tiểu cầu mới)",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi dấu hiệu sống, công thức máu, dấu hiệu chảy máu",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Theo dõi ít nhất 7-10 ngày (do irreversible binding - tiểu cầu mới không bị ảnh hưởng)",
+                "Điều trị chảy máu: truyền máu, tiểu cầu, huyết tương tươi đông lạnh nếu cần",
+                "Nếu có TTP: điều trị với plasma exchange"
+            ],
+            "monitoring": "Dấu hiệu sống, công thức máu (tiểu cầu, hemoglobin), dấu hiệu chảy máu, dấu hiệu TTP"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu.",
+                "timing": "Uống 1 lần/ngày. Loading dose: 60mg x 1 lần. Maintenance: 10mg x 1 lần/ngày (5mg nếu <60kg hoặc ≥75 tuổi). Dùng kèm aspirin 75-100mg/ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Effient (prasugrel)",
+                "TRITON-TIMI 38 Study - New England Journal of Medicine",
+                "UpToDate - Prasugrel: Drug information",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - Large RCT (TRITON-TIMI 38 study)"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High",
+            "organ_toxicity": {"hematologic": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Acute Coronary Syndrome",
+            "ACC/AHA Guidelines - Dual Antiplatelet Therapy",
+            "TRITON-TIMI 38 Study - Acute Coronary Syndrome",
+            "ESC Guidelines - Acute Coronary Syndrome",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
+              "renal_adjustment": {
+              "normal": "Không đổi",
+              "30_60": "Thận trọng, có thể giảm liều",
+              "under_30": "Giảm liều hoặc tránh dùng",
+              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
+          },
+},
+
     "Ticagrelor": {
         "group": "Cardiovascular - Antiplatelet (P2Y12 Inhibitor)",
         "vietnamese_name": "Ticagrelor, Brilinta",
@@ -613,196 +993,6 @@ ANTIPLATELETS_DRUGS = {
             "ACC/AHA Guidelines - Acute Coronary Syndrome",
             "ACC/AHA Guidelines - Dual Antiplatelet Therapy",
             "PLATO Study - Acute Coronary Syndrome",
-            "ESC Guidelines - Acute Coronary Syndrome",
-            "WHO Essential Medicines List"
-        ],
-        "last_updated": "2025-02-18",
-              "renal_adjustment": {
-              "normal": "Không đổi",
-              "30_60": "Thận trọng, có thể giảm liều",
-              "under_30": "Giảm liều hoặc tránh dùng",
-              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
-          },
-},
-
-    "Prasugrel": {
-        "group": "Cardiovascular - Antiplatelet (P2Y12 Inhibitor)",
-        "vietnamese_name": "Prasugrel, Effient",
-        "administration": ["PO"],
-        "indications": [
-            "Hội chứng mạch vành cấp cần PCI",
-            "Sau đặt stent"
-        ],
-        "contraindications": [
-            "Chảy máu đang hoạt động",
-            "Tiền sử TIA/đột quỵ",
-            "Tuổi ≥75 (trừ nguy cơ cao)",
-            "Cân nặng <60kg (trừ nguy cơ cao)"
-        ],
-        "dosage": {
-            "adult_loading": "60mg x 1 lần",
-            "adult_maintenance": "10mg x 1 lần/ngày (5mg nếu <60kg hoặc ≥75 tuổi)",
-            "notes": "Mạnh hơn clopidogrel, nguy cơ chảy máu cao hơn"
-        },
-        "side_effects": [
-            "Chảy máu (nhiều hơn clopidogrel)",
-            "Chảy máu lớn (hiếm nhưng nguy hiểm)",
-            "Thrombotic thrombocytopenic purpura (TTP) - hiếm"
-        ],
-        "interactions": [
-            "Aspirin: dùng kèm (dual antiplatelet therapy)",
-            "Warfarin: tăng nguy cơ chảy máu"
-        ],
-        "pregnancy": "B",
-        "mechanism_of_action": "Prasugrel là chất ức chế P2Y12 receptor, đối kháng không thể đảo ngược (irreversible) với P2Y12 receptor trên tiểu cầu. P2Y12 receptor là một thụ thể adenosine diphosphate (ADP) quan trọng trong quá trình hoạt hóa và kết tập tiểu cầu. Prasugrel là một prodrug, được chuyển hóa nhanh chóng qua CYP3A4 và CYP2B6 thành metabolite hoạt động. Metabolite hoạt động gắn không thể đảo ngược với P2Y12 receptor, ức chế kết tập tiểu cầu do ADP. Prasugrel mạnh hơn và có tác dụng nhanh hơn clopidogrel, với ít biến thể di truyền (genetic variation) hơn. Prasugrel giảm nguy cơ huyết khối trong hội chứng mạch vành cấp cần can thiệp mạch vành (PCI), nhưng tăng nguy cơ chảy máu lớn so với clopidogrel, đặc biệt ở bệnh nhân có tiền sử TIA/đột quỵ hoặc tuổi ≥75.",
-        "monitoring": [
-            "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu tại vị trí tiêm)",
-            "Chảy máu lớn (xuất huyết tiêu hóa, xuất huyết nội sọ, chảy máu sau phẫu thuật) - nguy cơ cao hơn clopidogrel",
-            "Thrombotic thrombocytopenic purpura (TTP) - hiếm nhưng nguy hiểm (sốt, thiếu máu, giảm tiểu cầu, rối loạn thần kinh)",
-            "Chức năng gan nếu có triệu chứng (hiếm)",
-            "Công thức máu (tiểu cầu) nếu có dấu hiệu chảy máu"
-        ],
-        "precautions": [
-            "Dùng kèm với aspirin 75-100mg/ngày (dual antiplatelet therapy - DAPT)",
-            "Không dùng ở bệnh nhân có tiền sử TIA hoặc đột quỵ - tăng nguy cơ chảy máu nội sọ",
-            "Thận trọng ở bệnh nhân ≥75 tuổi - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
-            "Thận trọng ở bệnh nhân <60kg - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
-            "Nguy cơ chảy máu cao hơn clopidogrel - không dùng nếu có chảy máu đang hoạt động",
-            "Không ngừng đột ngột (tăng nguy cơ huyết khối)",
-            "Không dùng ở bệnh nhân có nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây)",
-            "Thời gian DAPT thường 12 tháng sau ACS với PCI, có thể kéo dài ở một số bệnh nhân nguy cơ cao",
-            "Mạnh hơn clopidogrel - giảm nguy cơ huyết khối nhưng tăng nguy cơ chảy máu",
-            "Liều khởi đầu: 60mg loading dose, sau đó 10mg/ngày (5mg nếu <60kg hoặc ≥75 tuổi)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "7 giờ",
-            "onset": "30 phút - 1 giờ (nhanh hơn clopidogrel)",
-            "duration": "7-10 ngày (do irreversible binding - tiểu cầu mới không bị ảnh hưởng)",
-            "protein_binding": "Không đáng kể",
-            "clearance": "Gan: chuyển hóa nhanh qua CYP3A4 và CYP2B6 thành metabolite hoạt động (không cần chuyển hóa qua CYP2C19 như clopidogrel). Thận: bài tiết một phần. Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": "Nguy cơ chảy máu nghiêm trọng, có thể gây tử vong. Không dùng ở bệnh nhân có tiền sử TIA hoặc đột quỵ - tăng nguy cơ chảy máu nội sọ. Không dùng ở bệnh nhân có chảy máu đang hoạt động. Thận trọng ở bệnh nhân ≥75 tuổi, <60kg, hoặc có nguy cơ chảy máu cao.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Tác dụng hiệp đồng chống đông",
-                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng",
-                    "management": "Thận trọng. Theo dõi INR, dấu hiệu chảy máu. Thường tránh dùng cùng."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Aspirin",
-                    "mechanism": "Dùng kèm trong dual antiplatelet therapy",
-                    "effect": "Tăng nguy cơ chảy máu",
-                    "management": "Dùng kèm aspirin 75-100mg/ngày. Theo dõi dấu hiệu chảy máu."
-                },
-                {
-                    "drug": "NSAIDs (ibuprofen, naproxen)",
-                    "mechanism": "Tác dụng hiệp đồng chống kết tập tiểu cầu",
-                    "effect": "Tăng nguy cơ chảy máu",
-                    "management": "Thận trọng. Tránh dùng nếu có thể."
-                }
-            ],
-            "minor": [
-                {
-                    "drug": "CYP inducers/inhibitors",
-                    "mechanism": "Prasugrel chuyển hóa qua CYP3A4, CYP2B6, nhưng ít bị ảnh hưởng bởi CYP inhibitors/inducers hơn clopidogrel",
-                    "effect": "Tương tác tối thiểu",
-                    "management": "Không cần điều chỉnh liều"
-                }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Chảy máu đang hoạt động",
-                "Tiền sử TIA hoặc đột quỵ",
-                "Dị ứng prasugrel"
-            ],
-            "tương_đối": [
-                "Tuổi ≥75 (trừ nguy cơ cao) - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
-                "Cân nặng <60kg (trừ nguy cơ cao) - tăng nguy cơ chảy máu, cân nhắc liều 5mg/ngày",
-                "Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng",
-                "Phẫu thuật lớn - cần ngừng trước phẫu thuật",
-                "Suy gan nặng - thận trọng",
-                "Suy thận nặng - thận trọng"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Không có bằng chứng về nguy cơ gây dị tật thai nhi ở động vật. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Nguy cơ chảy máu ở mẹ và thai nhi. Cân nhắc nguy cơ huyết khối vs nguy cơ chảy máu. Theo dõi chặt chẽ dấu hiệu chảy máu.",
-            "lactation": {
-                "safety": "Caution",
-                "details": "Prasugrel và metabolite có thể bài tiết vào sữa mẹ. Không có dữ liệu đầy đủ về an toàn ở trẻ bú mẹ.",
-                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể. Nếu cần dùng, theo dõi trẻ chặt chẽ về dấu hiệu chảy máu."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Không đổi",
-            "severe": "Thận trọng",
-            "notes": "Prasugrel chuyển hóa ở gan qua CYP3A4 và CYP2B6. Không cần điều chỉnh liều ở suy gan nhẹ đến trung bình. Thận trọng ở suy gan nặng."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Chảy máu: chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu nội sọ",
-                "Chảy máu lớn có thể nghiêm trọng và đe dọa tính mạng",
-                "Thrombotic thrombocytopenic purpura (TTP) - hiếm nhưng nguy hiểm"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Truyền tiểu cầu nếu cần (hiệu quả hạn chế do irreversible binding)",
-            "treatment": [
-                "Ngừng prasugrel ngay lập tức",
-                "Truyền tiểu cầu nếu chảy máu nghiêm trọng (hiệu quả hạn chế do irreversible binding - cần tiểu cầu mới)",
-                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
-                "Theo dõi dấu hiệu sống, công thức máu, dấu hiệu chảy máu",
-                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
-                "Than hoạt tính",
-                "Theo dõi ít nhất 7-10 ngày (do irreversible binding - tiểu cầu mới không bị ảnh hưởng)",
-                "Điều trị chảy máu: truyền máu, tiểu cầu, huyết tương tươi đông lạnh nếu cần",
-                "Nếu có TTP: điều trị với plasma exchange"
-            ],
-            "monitoring": "Dấu hiệu sống, công thức máu (tiểu cầu, hemoglobin), dấu hiệu chảy máu, dấu hiệu TTP"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể dùng với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu.",
-                "timing": "Uống 1 lần/ngày. Loading dose: 60mg x 1 lần. Maintenance: 10mg x 1 lần/ngày (5mg nếu <60kg hoặc ≥75 tuổi). Dùng kèm aspirin 75-100mg/ngày."
-            },
-            "iv": {
-                "reconstitution": "Không có dạng IV",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Chỉ có dạng uống"
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Effient (prasugrel)",
-                "TRITON-TIMI 38 Study - New England Journal of Medicine",
-                "UpToDate - Prasugrel: Drug information",
-                "American Heart Association/American College of Cardiology guidelines"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High - Large RCT (TRITON-TIMI 38 study)"
-        },
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "High",
-            "organ_toxicity": {"hematologic": "Moderate"}
-        },
-        "guideline_tags": [
-            "ACC/AHA Guidelines - Acute Coronary Syndrome",
-            "ACC/AHA Guidelines - Dual Antiplatelet Therapy",
-            "TRITON-TIMI 38 Study - Acute Coronary Syndrome",
             "ESC Guidelines - Acute Coronary Syndrome",
             "WHO Essential Medicines List"
         ],
@@ -1008,196 +1198,6 @@ ANTIPLATELETS_DRUGS = {
         "last_updated": "2025-02-18",
     },
 
-    "Dipyridamole": {
-        "group": "Cardiovascular - Antiplatelet",
-        "vietnamese_name": "Dipyridamole, Persantine",
-        "administration": ["PO"],
-        "indications": [
-            "Phòng ngừa đột quỵ/TIA (kết hợp với aspirin)",
-            "Phòng ngừa huyết khối sau phẫu thuật van tim"
-        ],
-        "contraindications": [
-            "Nhồi máu cơ tim cấp",
-            "Co thắt mạch vành (vasospasm)"
-        ],
-        "dosage": {
-            "adult_standard": "200mg x 2 lần/ngày (với aspirin)",
-            "adult_modified_release": "200mg x 2 lần/ngày",
-            "notes": "Thường dùng kết hợp với aspirin 25mg x 2 lần/ngày"
-        },
-        "side_effects": [
-            "Nhức đầu (phổ biến)",
-            "Chóng mặt",
-            "Đau bụng",
-            "Chảy máu",
-            "Tim đập nhanh"
-        ],
-        "interactions": [
-            "Aspirin: dùng kèm để tăng hiệu quả",
-            "Warfarin: tăng nguy cơ chảy máu"
-        ],
-        "pregnancy": "B",
-        "mechanism_of_action": "Dipyridamole ức chế phosphodiesterase và adenosine deaminase, làm tăng nồng độ cAMP và adenosine trong tiểu cầu, ức chế aggregation tiểu cầu. Thuốc cũng ức chế tái hấp thu adenosine, làm giãn mạch vành. Dipyridamole thường dùng kết hợp với aspirin để phòng ngừa đột quỵ/TIA sau stroke hoặc TIA. Thuốc có tác dụng chống đông và giãn mạch, nhưng có thể gây nhức đầu do giãn mạch. Thường dùng dạng modified-release để giảm tác dụng phụ.",
-        "monitoring": [
-            "Dấu hiệu chảy máu (xuất huyết, chảy máu chân răng, chảy máu cam)",
-            "Nhức đầu (tác dụng phụ phổ biến, có thể giảm khi dùng liều thấp hơn)",
-            "Huyết áp (có thể giảm nhẹ do giãn mạch)",
-            "Nhịp tim (có thể tăng nhẹ)",
-            "Đáp ứng điều trị (giảm nguy cơ đột quỵ/TIA)"
-        ],
-        "precautions": [
-            "Thường dùng kết hợp với aspirin 25mg x 2 lần/ngày để tăng hiệu quả",
-            "Nhức đầu là tác dụng phụ phổ biến (có thể giảm khi dùng liều thấp hơn hoặc dạng modified-release)",
-            "Tránh dùng trong nhồi máu cơ tim cấp (có thể làm nặng thêm)",
-            "Thận trọng ở bệnh nhân co thắt mạch vành (vasospasm)",
-            "Tránh dùng với warfarin (tăng nguy cơ chảy máu)",
-            "Có thể gây chóng mặt, đau bụng",
-            "Ngừng 5-7 ngày trước phẫu thuật lớn",
-            "Thận trọng ở bệnh nhân hạ huyết áp"
-        ],
-        "pharmacokinetics": {
-            "half_life": "10-12 giờ",
-            "onset": "2-4 giờ",
-            "duration": "12-24 giờ",
-            "protein_binding": "91-99%",
-            "clearance": "Gan (chuyển hóa), thận (thải trừ)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": None,
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Warfarin, Anticoagulants",
-                    "mechanism": "Tác dụng cộng dồn chống đông máu.",
-                    "effect": "Tăng nguy cơ chảy máu nghiêm trọng, tăng INR",
-                    "management": "Tránh dùng cùng. Nếu bắt buộc, theo dõi INR chặt chẽ và điều chỉnh liều warfarin."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Aspirin",
-                    "mechanism": "Cả hai đều ức chế tiểu cầu, tác dụng cộng dồn.",
-                    "effect": "Tăng hiệu quả chống đông nhưng tăng nguy cơ chảy máu",
-                    "management": "Thường dùng kết hợp (dipyridamole + aspirin 25mg x 2 lần/ngày). Theo dõi dấu hiệu chảy máu."
-                },
-                {
-                    "drug": "Theophylline, Caffeine",
-                    "mechanism": "Dipyridamole ức chế adenosine deaminase, tăng adenosine. Theophylline/caffeine đối kháng adenosine.",
-                    "effect": "Giảm hiệu quả dipyridamole",
-                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi đáp ứng điều trị."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Nhồi máu cơ tim cấp - có thể làm nặng thêm",
-                "Co thắt mạch vành (vasospasm) - có thể làm nặng thêm",
-                "Dị ứng dipyridamole"
-            ],
-            "tương_đối": [
-                "Hạ huyết áp nặng - dipyridamole gây giãn mạch, có thể làm nặng hạ huyết áp",
-                "Suy tim nặng - thận trọng",
-                "Có thai - category B, thận trọng",
-                "Đang dùng warfarin - tăng nguy cơ chảy máu"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Dipyridamole là category B. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > nguy cơ. Thận trọng, đặc biệt trong tam cá nguyệt thứ ba (tăng nguy cơ chảy máu ở mẹ và thai nhi).",
-            "lactation": {
-                "safety": "Unknown",
-                "details": "Không biết dipyridamole có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
-                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
-            "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan.",
-            "severe": "Thận trọng, giảm liều. Suy gan nặng làm giảm chuyển hóa, có thể tăng nồng độ.",
-            "notes": "Dipyridamole chuyển hóa ở gan. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Chảy máu nghiêm trọng (xuất huyết, chảy máu cam, chảy máu tiêu hóa)",
-                "Hạ huyết áp nặng, ngất",
-                "Nhức đầu nặng",
-                "Chóng mặt, buồn nôn"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng dipyridamole ngay lập tức",
-                "Theo dõi huyết áp, nhịp tim",
-                "Nếu chảy máu: điều trị hỗ trợ, truyền tiểu cầu nếu cần",
-                "Nếu hạ huyết áp: truyền dịch, thuốc vận mạch nếu cần",
-                "Theo dõi dấu hiệu sinh tồn"
-            ],
-            "monitoring": "Huyết áp, nhịp tim, dấu hiệu chảy máu, dấu hiệu sinh tồn"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.",
-                "timing": "Uống 2 lần/ngày (sáng và tối), cách đều. Dạng modified-release: uống 1-2 lần/ngày theo chỉ định."
-            },
-            "iv": {
-                "reconstitution": "Không có dạng IV",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Chỉ có dạng uống"
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Dipyridamole (Persantine)",
-                "UpToDate - Dipyridamole: Drug Information",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
-        },
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "Moderate",
-            "organ_toxicity": {"cardiovascular": "Moderate (hypotension, angina)"}
-        },
-        "guideline_tags": [
-            "ACC/AHA Guidelines - Secondary Prevention",
-            "ESPRIT Study - Stroke Prevention",
-            "WHO Essential Medicines List"
-        ],
-        "last_updated": "2025-02-18",
-              "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "renal_adjustment": {
-              "normal": "Không đổi",
-              "30_60": "Thận trọng, có thể giảm liều",
-              "under_30": "Giảm liều hoặc tránh dùng",
-              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
-          },
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": "Không có",
-}
 }
 
 __all__ = ['ANTIPLATELETS_DRUGS']

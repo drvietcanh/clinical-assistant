@@ -4,6 +4,121 @@ Active module - contains all oncology drug data"""
 # Platinum Compounds
 
 PLATINUM_COMPOUNDS_DRUGS = {
+    "Carboplatin": {'group': 'Oncology - Platinum Compound', 'vietnamese_name':
+        'Carboplatin, Paraplatin', 'administration': ['IV'], 'indications': [
+        'Ung thư buồng trứng', 'Ung thư phổi (NSCLC)', 'Ung thư đầu cổ',
+        'Ung thư cổ tử cung', 'Ung thư tinh hoàn'], 'contraindications': [
+        'Dị ứng carboplatin hoặc platinum compounds',
+        'Giảm bạch cầu/tiểu cầu nặng', 'Có thai', 'Đang cho con bú'], 'dosage':
+        {'adult_calvert': 'AUC 4-6 mg/mL x min IV (tính theo GFR)',
+        'adult_fixed': '300-400mg/m² IV mỗi 4 tuần', 'adult_weekly':
+        '100mg/m² IV mỗi tuần', 'notes':
+        'Dùng công thức Calvert: Dose (mg) = AUC x (GFR + 25). Ít độc thận hơn cisplatin'
+        }, 'renal_adjustment': {'normal':
+        'Tính theo GFR trong công thức Calvert', '30_60':
+        'Giảm AUC hoặc liều 25-50%', 'under_30':
+        'Thận trọng, giảm liều đáng kể'}, 'side_effects': [
+        'Giảm bạch cầu, tiểu cầu (myelosuppression - phổ biến hơn cisplatin)',
+        'Nôn mửa (ít hơn cisplatin)',
+        'Độc thận (ít hơn cisplatin nhưng vẫn có)', 'Rụng tóc (ít)',
+        'Độc thần kinh (ít hơn cisplatin)', 'Phản ứng dị ứng (hiếm)',
+        'Hạ magne máu'], 'interactions': ['Aminoglycosides: tăng độc thận',
+        'Thuốc độc thận: tránh dùng đồng thời',
+        'Phenytoin: giảm nồng độ phenytoin'], 'pregnancy': 'D - Chống chỉ định',
+        'mechanism_of_action':
+        'Carboplatin là hợp chất platinum tương tự cisplatin, gây liên kết chéo DNA và ngăn chặn quá trình sao chép DNA. Cơ chế tác dụng giống cisplatin nhưng có cấu trúc hóa học khác (thay nhóm amin bằng cyclobutanedicarboxylate). Tác dụng trên nhiều loại ung thư tương tự cisplatin. Ưu điểm: ít độc thận và độc thần kinh hơn cisplatin, nhưng gây myelosuppression nhiều hơn. Liều được tính theo AUC (Area Under Curve) dựa trên GFR để đảm bảo hiệu quả và giảm độc tính'
+        , 'monitoring': [
+        'Creatinine, BUN, GFR trước mỗi chu kỳ (để tính liều theo công thức Calvert)'
+        ,
+        'Công thức máu (CBC) trước và sau mỗi chu kỳ - myelosuppression là độc tính phổ biến nhất'
+        , 'Chức năng thận (CrCl) - cần để tính liều chính xác',
+        'Dấu hiệu nhiễm trùng (do giảm bạch cầu)',
+        'Dấu hiệu chảy máu (do giảm tiểu cầu)',
+        'Dấu hiệu nôn mửa (ít hơn cisplatin nhưng vẫn có)',
+        'Chức năng thận (độc thận ít hơn cisplatin nhưng vẫn cần theo dõi)',
+        'Magne máu (hạ magne phổ biến)'], 'precautions': [
+        'Dùng công thức Calvert để tính liều: Dose (mg) = AUC x (GFR + 25) - đảm bảo hiệu quả và giảm độc tính'
+        , 'AUC thường dùng: 4-6 mg/mL x min (tùy phác đồ)',
+        'THEO DÕI CHẶT CHẼ myelosuppression (giảm bạch cầu, tiểu cầu) - là độc tính phổ biến nhất'
+        , 'Có thể cần hỗ trợ G-CSF nếu giảm bạch cầu nặng',
+        'Có thể cần truyền tiểu cầu nếu giảm tiểu cầu nặng',
+        'Ít cần hydration như cisplatin (ít độc thận hơn) nhưng vẫn nên truyền dịch đầy đủ'
+        , 'Dùng antiemetic trước và sau truyền (ít nôn hơn cisplatin)',
+        'Bổ sung magne nếu hạ magne máu',
+        'Thận trọng ở bệnh nhân suy thận (cần điều chỉnh liều theo GFR)',
+        'Theo dõi nhiễm trùng và chảy máu (do myelosuppression)',
+        'Không dùng trong thai kỳ (dị tật thai nhi)'], 'pharmacokinetics': {
+        'half_life': '2-6 giờ (ngắn hơn cisplatin)', 'onset': 'Nhanh',
+        'duration': 'Dài (tác dụng kéo dài)', 'protein_binding':
+        'Thấp (khác với cisplatin)', 'clearance':
+        'Thận (chủ yếu, thải trừ nhanh hơn cisplatin)'}, 'storage':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch pha: bảo quản ở nhiệt độ phòng, dùng trong 8 giờ. Không đông lạnh'
+        , 'black_box_warnings':
+        'Myelosuppression có thể nặng (giảm bạch cầu, tiểu cầu) - theo dõi chặt chẽ. Nhiễm trùng và chảy máu có thể xảy ra. Chống chỉ định trong thai kỳ'
+        , 'drug_interactions': {'major': [{'drug': 'Aminoglycosides',
+        'mechanism': 'Tăng độc thận', 'effect': 'Tăng nguy cơ suy thận cấp',
+        'management':
+        'Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận chặt chẽ.'
+        }, {'drug': 'Thuốc độc thận khác', 'mechanism':
+        'Tăng độc thận tích lũy', 'effect': 'Tăng nguy cơ suy thận cấp',
+        'management':
+        'Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận.'}
+        ], 'moderate': [{'drug': 'Phenytoin', 'mechanism':
+        'Carboplatin có thể giảm nồng độ phenytoin', 'effect':
+        'Giảm nồng độ phenytoin, tăng nguy cơ co giật', 'management':
+        'Theo dõi nồng độ phenytoin. Tăng liều phenytoin nếu cần.'}, {'drug':
+        'Nephrotoxic drugs (NSAIDs, ACE inhibitors)', 'mechanism':
+        'Tăng độc thận', 'effect': 'Tăng nguy cơ suy thận', 'management':
+        'Thận trọng. Theo dõi chức năng thận.'}], 'minor': []},
+        'contraindications': {'tuyệt_đối': ['Có thai', 'Đang cho con bú',
+        'Dị ứng carboplatin hoặc platinum compounds',
+        'Giảm bạch cầu/tiểu cầu nặng'], 'tương_đối': [
+        'Suy thận nặng (CrCl <30) - giảm liều đáng kể, điều chỉnh công thức Calvert'
+        , 'Suy gan nặng - thận trọng',
+        'Người cao tuổi - tăng nguy cơ myelosuppression',
+        'Đã dùng platinum compounds trước đây - tăng nguy cơ phản ứng dị ứng']},
+        'pregnancy_lactation': {'fda_category': 'D', 'pregnancy_details':
+        'Chống chỉ định trong thai kỳ. Carboplatin gây dị tật thai nhi, chậm phát triển, tử vong thai nhi. Cần test thai trước khi điều trị. Sử dụng biện pháp tránh thai hiệu quả trong và sau điều trị (ít nhất 6 tháng).'
+        , 'lactation': {'safety': 'Incompatible', 'details':
+        'Carboplatin bài tiết vào sữa mẹ. Không an toàn cho trẻ bú mẹ. Có thể gây độc tính nghiêm trọng ở trẻ.'
+        , 'recommendation':
+        'Không dùng khi cho con bú. Ngừng cho con bú hoặc ngừng điều trị.'}},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
+        'Không đổi hoặc giảm liều nhẹ', 'severe':
+        'Thận trọng, có thể giảm liều', 'notes':
+        'Carboplatin chủ yếu thải trừ qua thận, không phụ thuộc nhiều vào chức năng gan. Liều được tính theo GFR (công thức Calvert).'
+        }, 'overdose_management': {'symptoms': [
+        'Myelosuppression nặng (giảm bạch cầu, tiểu cầu, thiếu máu)',
+        'Nhiễm trùng (do giảm bạch cầu)', 'Chảy máu (do giảm tiểu cầu)',
+        'Suy thận cấp (ít hơn cisplatin nhưng vẫn có)', 'Nôn mửa',
+        'Hạ magne máu'], 'antidote':
+        'Không có antidote đặc hiệu. Điều trị hỗ trợ', 'treatment': [
+        'Ngừng truyền ngay lập tức',
+        'Theo dõi công thức máu chặt chẽ (myelosuppression là độc tính chính)',
+        'Điều trị myelosuppression: G-CSF nếu giảm bạch cầu nặng, truyền tiểu cầu nếu giảm tiểu cầu nặng, truyền máu nếu thiếu máu'
+        , 'Điều trị nhiễm trùng: Kháng sinh phổ rộng nếu có nhiễm trùng',
+        'Điều trị chảy máu: Truyền tiểu cầu, hỗ trợ đông máu',
+        'Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)',
+        'Bổ sung magne nếu hạ magne máu',
+        'Điều trị nôn mửa: Antiemetics (ondansetron, aprepitant)',
+        'Hydration đầy đủ để tăng thải trừ'], 'monitoring':
+        'Công thức máu (CBC), chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, magne máu'
+        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Hydration đầy đủ để tăng thải trừ. Điều trị độc thận, độc thần kinh hỗ trợ.'},
+        'administration_instructions': {'oral': {'with_food': 'N/A', 'timing':
+        'N/A'}, 'iv': {'reconstitution':
+        'Pha với D5W hoặc NS để nồng độ 0.5-2mg/mL', 'infusion_rate':
+        'Truyền trong 15-60 phút. Tốc độ phụ thuộc liều và phác đồ',
+        'compatibility': ['D5W', 'NS'], 'incompatibility': ['Các thuốc khác'],
+        'notes':
+        'Dùng công thức Calvert để tính liều: Dose (mg) = AUC x (GFR + 25). Ít cần hydration như cisplatin nhưng vẫn nên truyền dịch đầy đủ. Theo dõi công thức máu chặt chẽ.'
+        }}, 'references': {'primary_sources': [
+        'FDA Drug Label - Paraplatin (carboplatin)',
+        'UpToDate - Carboplatin: Drug information',
+        'NCCN Guidelines - Cancer treatment',
+        "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
+        'last_updated': '2024-12-19', 'evidence_level':
+        'High - Multiple RCTs and systematic reviews'}},
     "Cisplatin": {'group': 'Oncology - Platinum Compound', 'vietnamese_name':
         'Cisplatin, Platinol', 'administration': ['IV'], 'indications': [
         'Ung thư phổi (NSCLC, SCLC)', 'Ung thư đầu cổ', 'Ung thư tinh hoàn',
@@ -133,121 +248,6 @@ PLATINUM_COMPOUNDS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
         'last_updated': '2024-12-19', 'evidence_level':
         'High - Multiple RCTs and systematic reviews'}},
-    "Carboplatin": {'group': 'Oncology - Platinum Compound', 'vietnamese_name':
-        'Carboplatin, Paraplatin', 'administration': ['IV'], 'indications': [
-        'Ung thư buồng trứng', 'Ung thư phổi (NSCLC)', 'Ung thư đầu cổ',
-        'Ung thư cổ tử cung', 'Ung thư tinh hoàn'], 'contraindications': [
-        'Dị ứng carboplatin hoặc platinum compounds',
-        'Giảm bạch cầu/tiểu cầu nặng', 'Có thai', 'Đang cho con bú'], 'dosage':
-        {'adult_calvert': 'AUC 4-6 mg/mL x min IV (tính theo GFR)',
-        'adult_fixed': '300-400mg/m² IV mỗi 4 tuần', 'adult_weekly':
-        '100mg/m² IV mỗi tuần', 'notes':
-        'Dùng công thức Calvert: Dose (mg) = AUC x (GFR + 25). Ít độc thận hơn cisplatin'
-        }, 'renal_adjustment': {'normal':
-        'Tính theo GFR trong công thức Calvert', '30_60':
-        'Giảm AUC hoặc liều 25-50%', 'under_30':
-        'Thận trọng, giảm liều đáng kể'}, 'side_effects': [
-        'Giảm bạch cầu, tiểu cầu (myelosuppression - phổ biến hơn cisplatin)',
-        'Nôn mửa (ít hơn cisplatin)',
-        'Độc thận (ít hơn cisplatin nhưng vẫn có)', 'Rụng tóc (ít)',
-        'Độc thần kinh (ít hơn cisplatin)', 'Phản ứng dị ứng (hiếm)',
-        'Hạ magne máu'], 'interactions': ['Aminoglycosides: tăng độc thận',
-        'Thuốc độc thận: tránh dùng đồng thời',
-        'Phenytoin: giảm nồng độ phenytoin'], 'pregnancy': 'D - Chống chỉ định',
-        'mechanism_of_action':
-        'Carboplatin là hợp chất platinum tương tự cisplatin, gây liên kết chéo DNA và ngăn chặn quá trình sao chép DNA. Cơ chế tác dụng giống cisplatin nhưng có cấu trúc hóa học khác (thay nhóm amin bằng cyclobutanedicarboxylate). Tác dụng trên nhiều loại ung thư tương tự cisplatin. Ưu điểm: ít độc thận và độc thần kinh hơn cisplatin, nhưng gây myelosuppression nhiều hơn. Liều được tính theo AUC (Area Under Curve) dựa trên GFR để đảm bảo hiệu quả và giảm độc tính'
-        , 'monitoring': [
-        'Creatinine, BUN, GFR trước mỗi chu kỳ (để tính liều theo công thức Calvert)'
-        ,
-        'Công thức máu (CBC) trước và sau mỗi chu kỳ - myelosuppression là độc tính phổ biến nhất'
-        , 'Chức năng thận (CrCl) - cần để tính liều chính xác',
-        'Dấu hiệu nhiễm trùng (do giảm bạch cầu)',
-        'Dấu hiệu chảy máu (do giảm tiểu cầu)',
-        'Dấu hiệu nôn mửa (ít hơn cisplatin nhưng vẫn có)',
-        'Chức năng thận (độc thận ít hơn cisplatin nhưng vẫn cần theo dõi)',
-        'Magne máu (hạ magne phổ biến)'], 'precautions': [
-        'Dùng công thức Calvert để tính liều: Dose (mg) = AUC x (GFR + 25) - đảm bảo hiệu quả và giảm độc tính'
-        , 'AUC thường dùng: 4-6 mg/mL x min (tùy phác đồ)',
-        'THEO DÕI CHẶT CHẼ myelosuppression (giảm bạch cầu, tiểu cầu) - là độc tính phổ biến nhất'
-        , 'Có thể cần hỗ trợ G-CSF nếu giảm bạch cầu nặng',
-        'Có thể cần truyền tiểu cầu nếu giảm tiểu cầu nặng',
-        'Ít cần hydration như cisplatin (ít độc thận hơn) nhưng vẫn nên truyền dịch đầy đủ'
-        , 'Dùng antiemetic trước và sau truyền (ít nôn hơn cisplatin)',
-        'Bổ sung magne nếu hạ magne máu',
-        'Thận trọng ở bệnh nhân suy thận (cần điều chỉnh liều theo GFR)',
-        'Theo dõi nhiễm trùng và chảy máu (do myelosuppression)',
-        'Không dùng trong thai kỳ (dị tật thai nhi)'], 'pharmacokinetics': {
-        'half_life': '2-6 giờ (ngắn hơn cisplatin)', 'onset': 'Nhanh',
-        'duration': 'Dài (tác dụng kéo dài)', 'protein_binding':
-        'Thấp (khác với cisplatin)', 'clearance':
-        'Thận (chủ yếu, thải trừ nhanh hơn cisplatin)'}, 'storage':
-        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch pha: bảo quản ở nhiệt độ phòng, dùng trong 8 giờ. Không đông lạnh'
-        , 'black_box_warnings':
-        'Myelosuppression có thể nặng (giảm bạch cầu, tiểu cầu) - theo dõi chặt chẽ. Nhiễm trùng và chảy máu có thể xảy ra. Chống chỉ định trong thai kỳ'
-        , 'drug_interactions': {'major': [{'drug': 'Aminoglycosides',
-        'mechanism': 'Tăng độc thận', 'effect': 'Tăng nguy cơ suy thận cấp',
-        'management':
-        'Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận chặt chẽ.'
-        }, {'drug': 'Thuốc độc thận khác', 'mechanism':
-        'Tăng độc thận tích lũy', 'effect': 'Tăng nguy cơ suy thận cấp',
-        'management':
-        'Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận.'}
-        ], 'moderate': [{'drug': 'Phenytoin', 'mechanism':
-        'Carboplatin có thể giảm nồng độ phenytoin', 'effect':
-        'Giảm nồng độ phenytoin, tăng nguy cơ co giật', 'management':
-        'Theo dõi nồng độ phenytoin. Tăng liều phenytoin nếu cần.'}, {'drug':
-        'Nephrotoxic drugs (NSAIDs, ACE inhibitors)', 'mechanism':
-        'Tăng độc thận', 'effect': 'Tăng nguy cơ suy thận', 'management':
-        'Thận trọng. Theo dõi chức năng thận.'}], 'minor': []},
-        'contraindications': {'tuyệt_đối': ['Có thai', 'Đang cho con bú',
-        'Dị ứng carboplatin hoặc platinum compounds',
-        'Giảm bạch cầu/tiểu cầu nặng'], 'tương_đối': [
-        'Suy thận nặng (CrCl <30) - giảm liều đáng kể, điều chỉnh công thức Calvert'
-        , 'Suy gan nặng - thận trọng',
-        'Người cao tuổi - tăng nguy cơ myelosuppression',
-        'Đã dùng platinum compounds trước đây - tăng nguy cơ phản ứng dị ứng']},
-        'pregnancy_lactation': {'fda_category': 'D', 'pregnancy_details':
-        'Chống chỉ định trong thai kỳ. Carboplatin gây dị tật thai nhi, chậm phát triển, tử vong thai nhi. Cần test thai trước khi điều trị. Sử dụng biện pháp tránh thai hiệu quả trong và sau điều trị (ít nhất 6 tháng).'
-        , 'lactation': {'safety': 'Incompatible', 'details':
-        'Carboplatin bài tiết vào sữa mẹ. Không an toàn cho trẻ bú mẹ. Có thể gây độc tính nghiêm trọng ở trẻ.'
-        , 'recommendation':
-        'Không dùng khi cho con bú. Ngừng cho con bú hoặc ngừng điều trị.'}},
-        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
-        'Không đổi hoặc giảm liều nhẹ', 'severe':
-        'Thận trọng, có thể giảm liều', 'notes':
-        'Carboplatin chủ yếu thải trừ qua thận, không phụ thuộc nhiều vào chức năng gan. Liều được tính theo GFR (công thức Calvert).'
-        }, 'overdose_management': {'symptoms': [
-        'Myelosuppression nặng (giảm bạch cầu, tiểu cầu, thiếu máu)',
-        'Nhiễm trùng (do giảm bạch cầu)', 'Chảy máu (do giảm tiểu cầu)',
-        'Suy thận cấp (ít hơn cisplatin nhưng vẫn có)', 'Nôn mửa',
-        'Hạ magne máu'], 'antidote':
-        'Không có antidote đặc hiệu. Điều trị hỗ trợ', 'treatment': [
-        'Ngừng truyền ngay lập tức',
-        'Theo dõi công thức máu chặt chẽ (myelosuppression là độc tính chính)',
-        'Điều trị myelosuppression: G-CSF nếu giảm bạch cầu nặng, truyền tiểu cầu nếu giảm tiểu cầu nặng, truyền máu nếu thiếu máu'
-        , 'Điều trị nhiễm trùng: Kháng sinh phổ rộng nếu có nhiễm trùng',
-        'Điều trị chảy máu: Truyền tiểu cầu, hỗ trợ đông máu',
-        'Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)',
-        'Bổ sung magne nếu hạ magne máu',
-        'Điều trị nôn mửa: Antiemetics (ondansetron, aprepitant)',
-        'Hydration đầy đủ để tăng thải trừ'], 'monitoring':
-        'Công thức máu (CBC), chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, magne máu'
-        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
-        'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Hydration đầy đủ để tăng thải trừ. Điều trị độc thận, độc thần kinh hỗ trợ.'},
-        'administration_instructions': {'oral': {'with_food': 'N/A', 'timing':
-        'N/A'}, 'iv': {'reconstitution':
-        'Pha với D5W hoặc NS để nồng độ 0.5-2mg/mL', 'infusion_rate':
-        'Truyền trong 15-60 phút. Tốc độ phụ thuộc liều và phác đồ',
-        'compatibility': ['D5W', 'NS'], 'incompatibility': ['Các thuốc khác'],
-        'notes':
-        'Dùng công thức Calvert để tính liều: Dose (mg) = AUC x (GFR + 25). Ít cần hydration như cisplatin nhưng vẫn nên truyền dịch đầy đủ. Theo dõi công thức máu chặt chẽ.'
-        }}, 'references': {'primary_sources': [
-        'FDA Drug Label - Paraplatin (carboplatin)',
-        'UpToDate - Carboplatin: Drug information',
-        'NCCN Guidelines - Cancer treatment',
-        "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
-        'last_updated': '2024-12-19', 'evidence_level':
-        'High - Multiple RCTs and systematic reviews'}},
     "Oxaliplatin": {'group': 'Oncology - Platinum Compound', 'vietnamese_name':
         'Oxaliplatin, Eloxatin', 'administration': ['IV'], 'indications': [
         'Ung thư đại trực tràng (adjuvant và metastatic)', 'Ung thư dạ dày',
@@ -352,7 +352,6 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'FDA Drug Label - Oxaliplatin (Eloxatin)',
         'UpToDate - Oxaliplatin Drug Information',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
-        'last_updated': '2025-01-15', 'evidence_level':
-        'High (FDA-approved, extensive clinical data)'}}}
+        'last_updated': '2025-01-15', 'evidence_level': 'High (FDA-approved, extensive clinical data)'}}}
 
 __all__ = ['PLATINUM_COMPOUNDS_DRUGS']

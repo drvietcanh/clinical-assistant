@@ -136,7 +136,6 @@ SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS = {
         'UpToDate - Fluoxetine: Drug information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'American Psychiatric Association guidelines'], 'last_updated':
-        '2024-12-19', 'evidence_level':
-        'High - Multiple RCTs and systematic reviews'}}}
+        '2024-12-19', 'evidence_level': 'High - Multiple RCTs and systematic reviews'}}}
 
 __all__ = ['SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS']

@@ -250,8 +250,8 @@ def render():
                     result_value=float(score)
                 )
             else:
-            st.markdown("### 💡 Giải thích & Khuyến cáo")
-            st.markdown(f"**Nguy cơ đột quỵ hàng năm:** {risk}")
+                st.markdown("### 💡 Giải thích & Khuyến cáo")
+                st.markdown(f"**Nguy cơ đột quỵ hàng năm:** {risk}")
             
             # Visual Charts
             st.markdown("---")

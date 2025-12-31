@@ -206,7 +206,7 @@ SHORT_ACTING_BETA_2_AGONISTS_DRUGS = {
             'last_updated': '2024-12-19',
             'evidence_level': 'A - Dựa trên FDA drug labels, GINA guidelines'
         }
-    }
+    },
 }
 
 __all__ = ['SHORT_ACTING_BETA_2_AGONISTS_DRUGS']

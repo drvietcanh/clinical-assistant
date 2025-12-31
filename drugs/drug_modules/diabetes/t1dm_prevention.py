@@ -162,7 +162,7 @@ T1DM_PREVENTION_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved (2022), clinical trial data, first drug approved for T1DM prevention"
         }
-    }
+    },
 }
 
 __all__ = ["T1DM_PREVENTION_DRUGS"]

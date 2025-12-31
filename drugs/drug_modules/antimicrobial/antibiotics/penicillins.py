@@ -86,86 +86,6 @@ PENICILLIN_ANTIBIOTICS = {
         "last_updated": "2025-02-18",
     },
 
-    "Ampicillin": {
-        "group": "Antibiotic - Penicillin (Aminopenicillin)",
-        "vietnamese_name": "Ampicillin",
-        "administration": ["IV", "IM", "PO"],
-        "indications": [
-            "Nhiễm Enterococcus faecalis (kết hợp gentamicin trong viêm nội tâm mạc)",
-            "Listeria monocytogenes (viêm màng não, nhiễm khuẩn huyết)",
-            "Nhiễm khuẩn đường tiết niệu, đường mật",
-            "Nhiễm Streptococcus, Enterococcus nhạy cảm",
-        ],
-        "contraindications": [
-            "Dị ứng penicillin/beta-lactam",
-            "Tiền sử phản vệ với penicillin",
-        ],
-        "dosage": {
-            "adult_iv": "1-2g IV mỗi 4-6 giờ",
-            "adult_po": "500mg PO mỗi 6 giờ",
-            "adult_listeria_meningitis": "2g IV mỗi 4 giờ",
-            "pediatric": "100-200mg/kg/ngày IV chia 4-6 lần (tối đa 12g/ngày)",
-            "notes": "Ưu tiên đường IV cho nhiễm nặng/Listeria. Thường phối hợp gentamicin trong viêm nội tâm mạc do Enterococcus.",
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Mỗi 8 giờ",
-            "under_30": "Mỗi 12 giờ",
-            "hemodialysis": "Liều sau mỗi lần lọc",
-        },
-        "side_effects": [
-            "Phát ban (đặc biệt ở bệnh nhân EBV)",
-            "Tiêu chảy",
-            "Buồn nôn",
-            "Tăng men gan nhẹ",
-        ],
-        "interactions": [
-            "Probenecid: tăng nồng độ ampicillin (giảm bài tiết thận)",
-            "Allopurinol: tăng nguy cơ phát ban",
-            "Warfarin: có thể tăng INR",
-        ],
-        "pregnancy": "B",
-        "mechanism_of_action": "Aminopenicillin, ức chế tổng hợp thành tế bào. Phổ: Streptococcus, Enterococcus, Listeria, H. influenzae không sinh beta-lactamase, một số Gram âm đường ruột; bị phá bởi beta-lactamase.",
-        "monitoring": [
-            "Dấu hiệu dị ứng (phát ban, phản vệ)",
-            "Chức năng thận khi cần chỉnh liều",
-            "Dấu hiệu nhiễm C. difficile nếu tiêu chảy kéo dài",
-            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
-        ],
-        "precautions": [
-            "Phản ứng chéo với cephalosporin ~5-10%",
-            "Điều chỉnh liều ở suy thận",
-            "Phát ban giả dị ứng khi nhiễm EBV",
-        ],
-        "pharmacokinetics": {
-            "half_life": "1-1.5 giờ",
-            "clearance": "Thận (chủ yếu)",
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng. Dung dịch pha IV: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày.",
-        "black_box_warnings": None,
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng penicillin/beta-lactam",
-                "Tiền sử phản vệ với penicillin",
-            ],
-            "tương_đối": []
-        },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."},
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"hepatic": "Low", "renal": "Low"}
-        },
-        "guideline_tags": [
-            "IDSA Guidelines - Infective Endocarditis (Enterococcus)",
-            "IDSA Guidelines - Listeria monocytogenes Infections",
-            "WHO Essential Medicines List"
-        ],
-        "last_updated": "2025-02-18",
-    },
-
     "Amoxicillin-clavulanate": {
         "group": "Antibiotic - Penicillin/Beta-lactamase Inhibitor",
         "vietnamese_name": "Amoxicillin-clavulanate, Augmentin",
@@ -243,6 +163,86 @@ PENICILLIN_ANTIBIOTICS = {
             "IDSA Guidelines - Community-Acquired Pneumonia",
             "IDSA Guidelines - Acute Bacterial Sinusitis",
             "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
+    },
+
+    "Ampicillin": {
+        "group": "Antibiotic - Penicillin (Aminopenicillin)",
+        "vietnamese_name": "Ampicillin",
+        "administration": ["IV", "IM", "PO"],
+        "indications": [
+            "Nhiễm Enterococcus faecalis (kết hợp gentamicin trong viêm nội tâm mạc)",
+            "Listeria monocytogenes (viêm màng não, nhiễm khuẩn huyết)",
+            "Nhiễm khuẩn đường tiết niệu, đường mật",
+            "Nhiễm Streptococcus, Enterococcus nhạy cảm",
+        ],
+        "contraindications": [
+            "Dị ứng penicillin/beta-lactam",
+            "Tiền sử phản vệ với penicillin",
+        ],
+        "dosage": {
+            "adult_iv": "1-2g IV mỗi 4-6 giờ",
+            "adult_po": "500mg PO mỗi 6 giờ",
+            "adult_listeria_meningitis": "2g IV mỗi 4 giờ",
+            "pediatric": "100-200mg/kg/ngày IV chia 4-6 lần (tối đa 12g/ngày)",
+            "notes": "Ưu tiên đường IV cho nhiễm nặng/Listeria. Thường phối hợp gentamicin trong viêm nội tâm mạc do Enterococcus.",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Mỗi 8 giờ",
+            "under_30": "Mỗi 12 giờ",
+            "hemodialysis": "Liều sau mỗi lần lọc",
+        },
+        "side_effects": [
+            "Phát ban (đặc biệt ở bệnh nhân EBV)",
+            "Tiêu chảy",
+            "Buồn nôn",
+            "Tăng men gan nhẹ",
+        ],
+        "interactions": [
+            "Probenecid: tăng nồng độ ampicillin (giảm bài tiết thận)",
+            "Allopurinol: tăng nguy cơ phát ban",
+            "Warfarin: có thể tăng INR",
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Aminopenicillin, ức chế tổng hợp thành tế bào. Phổ: Streptococcus, Enterococcus, Listeria, H. influenzae không sinh beta-lactamase, một số Gram âm đường ruột; bị phá bởi beta-lactamase.",
+        "monitoring": [
+            "Dấu hiệu dị ứng (phát ban, phản vệ)",
+            "Chức năng thận khi cần chỉnh liều",
+            "Dấu hiệu nhiễm C. difficile nếu tiêu chảy kéo dài",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+        ],
+        "precautions": [
+            "Phản ứng chéo với cephalosporin ~5-10%",
+            "Điều chỉnh liều ở suy thận",
+            "Phát ban giả dị ứng khi nhiễm EBV",
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-1.5 giờ",
+            "clearance": "Thận (chủ yếu)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng. Dung dịch pha IV: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày.",
+        "black_box_warnings": None,
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng penicillin/beta-lactam",
+                "Tiền sử phản vệ với penicillin",
+            ],
+            "tương_đối": []
+        },
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."},
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Infective Endocarditis (Enterococcus)",
+            "IDSA Guidelines - Listeria monocytogenes Infections",
             "WHO Essential Medicines List"
         ],
         "last_updated": "2025-02-18",

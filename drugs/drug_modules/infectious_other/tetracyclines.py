@@ -466,168 +466,6 @@ TETRACYCLINES_DRUGS = {
         }
     },
     
-    "Tigecycline": {
-        "group": "Antibiotic - Glycylcycline (Tetracycline derivative)",
-        "vietnamese_name": "Tigecycline, Tygacil",
-        "administration": ["IV"],
-        "indications": [
-            "Nhiễm khuẩn da và mô mềm phức tạp (cSSTI)",
-            "Nhiễm khuẩn ổ bụng phức tạp (cIAI)",
-            "Viêm phổi cộng đồng (CAP)",
-            "Nhiễm khuẩn do vi khuẩn kháng đa thuốc (MDR)",
-            "MRSA (Methicillin-resistant Staphylococcus aureus)",
-            "VRE (Vancomycin-resistant Enterococcus)",
-            "CRE (Carbapenem-resistant Enterobacteriaceae)",
-            "Acinetobacter baumannii kháng đa thuốc",
-            "Nhiễm khuẩn huyết do MDR Gram-dương và Gram-âm"
-        ],
-        "contraindications": [
-            "Dị ứng tigecycline hoặc tetracycline",
-            "Có thai (3 tháng cuối) - thận trọng",
-            "Trẻ em <8 tuổi - thận trọng (dữ liệu hạn chế)"
-        ],
-        "dosage": {
-            "adult_standard": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
-            "adult_severe": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
-            "adult_ciai": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
-            "adult_cssti": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
-            "adult_cap": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
-            "notes": "Truyền IV trong 30-60 phút. Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình. CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Không đổi (không tích lũy ở suy thận)",
-            "hemodialysis": "Không đổi (không bị loại bỏ bởi lọc máu)"
-        },
-        "side_effects": [
-            "Buồn nôn, nôn (rất phổ biến, 20-30%)",
-            "Tiêu chảy",
-            "Tăng tỷ lệ tử vong (so với các kháng sinh khác) - CẢNH BÁO QUAN TRỌNG",
-            "Tăng ALT, AST (tăng men gan)",
-            "Phát ban",
-            "Chóng mặt",
-            "Đau đầu",
-            "Giảm bạch cầu (hiếm)",
-            "Viêm tĩnh mạch tại vị trí tiêm"
-        ],
-        "interactions": [
-            "Warfarin: có thể tăng INR",
-            "Thuốc tránh thai đường uống: có thể giảm hiệu quả",
-            "Antacid/Sắt/Calcium: giảm hấp thu (nhưng chỉ dùng IV nên ít ảnh hưởng)"
-        ],
-        "pregnancy": "D - Sử dụng nếu lợi ích > nguy cơ",
-        "mechanism_of_action": "Tigecycline là glycylcycline kháng sinh, dẫn xuất của minocycline. Ức chế tổng hợp protein vi khuẩn bằng cách gắn với tiểu phần 30S của ribosome, tương tự tetracycline nhưng gắn mạnh hơn và kháng được nhiều cơ chế kháng tetracycline. Phổ kháng khuẩn: RẤT RỘNG - Gram-dương (Staphylococcus - kể cả MRSA, Streptococcus, Enterococcus - kể cả VRE), Gram-âm (Enterobacteriaceae - kể cả một số CRE, Acinetobacter baumannii), kỵ khí (Bacteroides fragilis), và một số vi khuẩn không điển hình. Không hiệu quả với Pseudomonas aeruginosa hoặc Proteus. Đặc điểm: phổ rất rộng, kháng được nhiều cơ chế kháng thuốc, nhưng CẢNH BÁO: tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác (MDR).",
-        "monitoring": [
-            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
-            "Cấy máu và cấy từ vị trí nhiễm trùng",
-            "Dạ dày-ruột (buồn nôn, nôn, tiêu chảy) - rất phổ biến (20-30%)",
-            "Chức năng gan (ALT, AST, bilirubin) - có thể tăng men gan",
-            "Dấu hiệu sinh tồn (huyết áp, nhịp tim, nhịp thở) - CẢNH BÁO: tăng tỷ lệ tử vong",
-            "Công thức máu (CBC) - hiếm giảm bạch cầu",
-            "PT/INR (nếu dùng với warfarin)",
-            "Đánh giá đáp ứng điều trị - cân nhắc chuyển sang kháng sinh khác nếu có thể"
-        ],
-        "precautions": [
-            "CẢNH BÁO QUAN TRỌNG: Tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác (MDR, không đáp ứng với các kháng sinh khác)",
-            "Buồn nôn, nôn rất phổ biến (20-30%) - có thể cần điều trị triệu chứng (ondansetron, metoclopramide)",
-            "Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình",
-            "Thận trọng ở suy gan nặng - có thể cần giảm liều",
-            "KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - dữ liệu hạn chế, nguy cơ ố vàng răng",
-            "Không dùng trong 3 tháng cuối thai kỳ (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)",
-            "Truyền IV trong 30-60 phút",
-            "Pha trong NS hoặc D5W",
-            "Cân nhắc chuyển sang kháng sinh khác nếu có thể (do tăng tỷ lệ tử vong)",
-            "Theo dõi đáp ứng điều trị chặt chẽ"
-        ],
-        "pharmacokinetics": {
-            "half_life": "27-42 giờ (rất dài)",
-            "onset": "Ngay lập tức sau khi truyền IV",
-            "duration": "12 giờ (liều q12h)",
-            "protein_binding": "71-89% (cao)",
-            "metabolism": "Chuyển hóa một phần ở gan",
-            "clearance": "Chủ yếu qua gan (59% bài tiết qua mật), không tích lũy ở suy thận",
-            "volume_of_distribution": "7-9 L/kg (rất lớn, phân bố rộng)"
-        },
-        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 48 giờ. Không đông lạnh.",
-        "black_box_warnings": "CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác. Chỉ dùng khi không còn lựa chọn khác (nhiễm khuẩn do vi khuẩn kháng đa thuốc MDR). Không dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Tigecycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K.",
-                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng tigecycline). Có thể cần giảm liều warfarin."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Thuốc tránh thai đường uống",
-                    "mechanism": "Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.",
-                    "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
-                    "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng."
-                }
-            ]
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Tigecycline (Tygacil)",
-                "IDSA Guidelines - Antimicrobial Therapy, MDR",
-                "UpToDate - Tigecycline: Drug Information",
-                "Medscape - Tigecycline Drug Reference",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
-                "Lexicomp Online - Tigecycline Monograph",
-                "Micromedex - Tigecycline Drug Information"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        },
-        "pregnancy_lactation": {
-                  "fda_category": "D - Sử dụng nếu lợi ích > nguy cơ",
-                  "pregnancy_details": "Category D - Sử dụng nếu lợi ích > nguy cơ - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
-                  "lactation": {
-                      "safety": "Use with caution",
-                      "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
-                      "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
-                  }
-              },
-              "hepatic_adjustment": {
-                  "mild": "Không đổi",
-                  "moderate": "Thận trọng, có thể giảm liều",
-                  "severe": "Thận trọng, giảm liều hoặc tránh dùng",
-                  "notes": "Nhiều kháng sinh chuyển hóa qua gan, cần điều chỉnh liều ở suy gan nặng."
-              },
-              "overdose_management": {
-                  "symptoms": [
-                      "Cần tra cứu thêm thông tin về triệu chứng quá liều"
-                  ],
-                  "antidote": "Không có antidote đặc hiệu",
-                  "treatment": [
-                      "Ngừng ngay thuốc",
-                      "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
-                      "Than hoạt tính",
-                      "Điều trị hỗ trợ và điều trị triệu chứng",
-                      "Theo dõi dấu hiệu sinh tồn"
-                  ],
-                  "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
-              },
-              "reversal_agents": {
-                  "available": False,
-                  "agents": []
-              },
-              "administration_instructions": {
-                  "iv": {
-                      "reconstitution": "Cần tra cứu",
-                      "infusion_rate": "Cần tra cứu",
-                      "compatibility": [
-                          "Cần tra cứu"
-                      ],
-                      "incompatibility": [],
-                      "notes": "Cần tra cứu thêm thông tin chi tiết."
-                  }
-              },
-},
-    
     "Tetracycline": {
         "group": "Infectious Disease - Tetracycline Antibiotic",
         "vietnamese_name": "Tetracycline, Tetracyn",
@@ -824,7 +662,169 @@ TETRACYCLINES_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
         }
-    }
+    },
+    "Tigecycline": {
+        "group": "Antibiotic - Glycylcycline (Tetracycline derivative)",
+        "vietnamese_name": "Tigecycline, Tygacil",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn da và mô mềm phức tạp (cSSTI)",
+            "Nhiễm khuẩn ổ bụng phức tạp (cIAI)",
+            "Viêm phổi cộng đồng (CAP)",
+            "Nhiễm khuẩn do vi khuẩn kháng đa thuốc (MDR)",
+            "MRSA (Methicillin-resistant Staphylococcus aureus)",
+            "VRE (Vancomycin-resistant Enterococcus)",
+            "CRE (Carbapenem-resistant Enterobacteriaceae)",
+            "Acinetobacter baumannii kháng đa thuốc",
+            "Nhiễm khuẩn huyết do MDR Gram-dương và Gram-âm"
+        ],
+        "contraindications": [
+            "Dị ứng tigecycline hoặc tetracycline",
+            "Có thai (3 tháng cuối) - thận trọng",
+            "Trẻ em <8 tuổi - thận trọng (dữ liệu hạn chế)"
+        ],
+        "dosage": {
+            "adult_standard": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
+            "adult_severe": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
+            "adult_ciai": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
+            "adult_cssti": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
+            "adult_cap": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
+            "notes": "Truyền IV trong 30-60 phút. Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình. CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi (không tích lũy ở suy thận)",
+            "hemodialysis": "Không đổi (không bị loại bỏ bởi lọc máu)"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn (rất phổ biến, 20-30%)",
+            "Tiêu chảy",
+            "Tăng tỷ lệ tử vong (so với các kháng sinh khác) - CẢNH BÁO QUAN TRỌNG",
+            "Tăng ALT, AST (tăng men gan)",
+            "Phát ban",
+            "Chóng mặt",
+            "Đau đầu",
+            "Giảm bạch cầu (hiếm)",
+            "Viêm tĩnh mạch tại vị trí tiêm"
+        ],
+        "interactions": [
+            "Warfarin: có thể tăng INR",
+            "Thuốc tránh thai đường uống: có thể giảm hiệu quả",
+            "Antacid/Sắt/Calcium: giảm hấp thu (nhưng chỉ dùng IV nên ít ảnh hưởng)"
+        ],
+        "pregnancy": "D - Sử dụng nếu lợi ích > nguy cơ",
+        "mechanism_of_action": "Tigecycline là glycylcycline kháng sinh, dẫn xuất của minocycline. Ức chế tổng hợp protein vi khuẩn bằng cách gắn với tiểu phần 30S của ribosome, tương tự tetracycline nhưng gắn mạnh hơn và kháng được nhiều cơ chế kháng tetracycline. Phổ kháng khuẩn: RẤT RỘNG - Gram-dương (Staphylococcus - kể cả MRSA, Streptococcus, Enterococcus - kể cả VRE), Gram-âm (Enterobacteriaceae - kể cả một số CRE, Acinetobacter baumannii), kỵ khí (Bacteroides fragilis), và một số vi khuẩn không điển hình. Không hiệu quả với Pseudomonas aeruginosa hoặc Proteus. Đặc điểm: phổ rất rộng, kháng được nhiều cơ chế kháng thuốc, nhưng CẢNH BÁO: tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác (MDR).",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Dạ dày-ruột (buồn nôn, nôn, tiêu chảy) - rất phổ biến (20-30%)",
+            "Chức năng gan (ALT, AST, bilirubin) - có thể tăng men gan",
+            "Dấu hiệu sinh tồn (huyết áp, nhịp tim, nhịp thở) - CẢNH BÁO: tăng tỷ lệ tử vong",
+            "Công thức máu (CBC) - hiếm giảm bạch cầu",
+            "PT/INR (nếu dùng với warfarin)",
+            "Đánh giá đáp ứng điều trị - cân nhắc chuyển sang kháng sinh khác nếu có thể"
+        ],
+        "precautions": [
+            "CẢNH BÁO QUAN TRỌNG: Tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác (MDR, không đáp ứng với các kháng sinh khác)",
+            "Buồn nôn, nôn rất phổ biến (20-30%) - có thể cần điều trị triệu chứng (ondansetron, metoclopramide)",
+            "Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình",
+            "Thận trọng ở suy gan nặng - có thể cần giảm liều",
+            "KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - dữ liệu hạn chế, nguy cơ ố vàng răng",
+            "Không dùng trong 3 tháng cuối thai kỳ (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)",
+            "Truyền IV trong 30-60 phút",
+            "Pha trong NS hoặc D5W",
+            "Cân nhắc chuyển sang kháng sinh khác nếu có thể (do tăng tỷ lệ tử vong)",
+            "Theo dõi đáp ứng điều trị chặt chẽ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "27-42 giờ (rất dài)",
+            "onset": "Ngay lập tức sau khi truyền IV",
+            "duration": "12 giờ (liều q12h)",
+            "protein_binding": "71-89% (cao)",
+            "metabolism": "Chuyển hóa một phần ở gan",
+            "clearance": "Chủ yếu qua gan (59% bài tiết qua mật), không tích lũy ở suy thận",
+            "volume_of_distribution": "7-9 L/kg (rất lớn, phân bố rộng)"
+        },
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 48 giờ. Không đông lạnh.",
+        "black_box_warnings": "CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác. Chỉ dùng khi không còn lựa chọn khác (nhiễm khuẩn do vi khuẩn kháng đa thuốc MDR). Không dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Tigecycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K.",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng tigecycline). Có thể cần giảm liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc tránh thai đường uống",
+                    "mechanism": "Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.",
+                    "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
+                    "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng."
+                }
+            ]
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Tigecycline (Tygacil)",
+                "IDSA Guidelines - Antimicrobial Therapy, MDR",
+                "UpToDate - Tigecycline: Drug Information",
+                "Medscape - Tigecycline Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Tigecycline Monograph",
+                "Micromedex - Tigecycline Drug Information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        },
+        "pregnancy_lactation": {
+                  "fda_category": "D - Sử dụng nếu lợi ích > nguy cơ",
+                  "pregnancy_details": "Category D - Sử dụng nếu lợi ích > nguy cơ - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+                  "lactation": {
+                      "safety": "Use with caution",
+                      "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                      "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+                  }
+              },
+              "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng, có thể giảm liều",
+                  "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+                  "notes": "Nhiều kháng sinh chuyển hóa qua gan, cần điều chỉnh liều ở suy gan nặng."
+              },
+              "overdose_management": {
+                  "symptoms": [
+                      "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+                  ],
+                  "antidote": "Không có antidote đặc hiệu",
+                  "treatment": [
+                      "Ngừng ngay thuốc",
+                      "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                      "Than hoạt tính",
+                      "Điều trị hỗ trợ và điều trị triệu chứng",
+                      "Theo dõi dấu hiệu sinh tồn"
+                  ],
+                  "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+              },
+              "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+              "administration_instructions": {
+                  "iv": {
+                      "reconstitution": "Cần tra cứu",
+                      "infusion_rate": "Cần tra cứu",
+                      "compatibility": [
+                          "Cần tra cứu"
+                      ],
+                      "incompatibility": [],
+                      "notes": "Cần tra cứu thêm thông tin chi tiết."
+                  }
+              },
+},
+    
 }
 
 __all__ = ['TETRACYCLINES_DRUGS']

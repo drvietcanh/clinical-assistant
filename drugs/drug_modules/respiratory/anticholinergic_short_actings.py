@@ -126,7 +126,6 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         'GOLD Guidelines 2024: COPD Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Ipratropium'], 'last_updated': '2025-02-03',
-        'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}}}
+        'evidence_level': 'High - FDA approved, multiple RCTs, clinical guidelines'}}}
 
 __all__ = ['ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS']

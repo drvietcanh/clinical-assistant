@@ -198,7 +198,7 @@ SEX_HORMONES_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng"
         }
-    }
+    },
 }
 
 __all__ = ['SEX_HORMONES_DRUGS']

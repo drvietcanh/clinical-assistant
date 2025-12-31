@@ -485,7 +485,7 @@ NON_DIHYDROPYRIDINE_CCB = {
             "last_updated": "2024-12-19",
             "evidence_level": "High - Extensive clinical experience and multiple RCTs in atrial fibrillation rate control and hypertension"
         }
-    }
+    },
 }
 
 __all__ = ['NON_DIHYDROPYRIDINE_CCB']

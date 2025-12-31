@@ -124,7 +124,6 @@ ANTHRACYCLINES_DRUGS = {
         'FDA Drug Label - Doxorubicin (Adriamycin)',
         'UpToDate - Doxorubicin Drug Information',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
-        'last_updated': '2025-01-15', 'evidence_level':
-        'High (FDA-approved, extensive clinical data)'}}}
+        'last_updated': '2025-01-15',        'evidence_level': 'High (FDA-approved, extensive clinical data)'}}}
 
 __all__ = ['ANTHRACYCLINES_DRUGS']

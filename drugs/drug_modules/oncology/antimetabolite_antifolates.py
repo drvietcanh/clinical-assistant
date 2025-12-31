@@ -160,7 +160,7 @@ ANTIMETABOLITE_ANTIFOLATES_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
         'Lexicomp Online - Methotrexate Monograph'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'A - Dựa trên FDA drug labels, ACR guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
+        'A - Dựa trên FDA drug labels, ACR guidelines, và dữ liệu lâm sàng từ nhiều nguồn',
         }}}
 
 __all__ = ['ANTIMETABOLITE_ANTIFOLATES_DRUGS']

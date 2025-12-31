@@ -1,9 +1,13 @@
 [theme]
-primaryColor = "#00897B"
-backgroundColor = "#F5F7FA"
-secondaryBackgroundColor = "#E0F2F1"
-textColor = "#263238"
+# Primary colors (Calm Medical Design)
+primaryColor = "#00897B"              # Teal (Trust, Calm) - Primary actions
+backgroundColor = "#F5F7FA"            # Off-White (Reduces eye strain)
+secondaryBackgroundColor = "#E3F2FD"  # Light Blue (Cards, panels, highlights)
+textColor = "#263238"                  # Dark Gray (Optimal readability)
 font = "sans serif"
+
+# Note: Additional accent colors (Coral, Red, Green, Orange) are defined
+# in static/styles.css as CSS variables for alerts, actions, and status indicators
 
 [server]
 headless = true

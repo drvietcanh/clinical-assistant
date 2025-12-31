@@ -286,6 +286,6 @@ PCSK9_INHIBITORS = {
             "agents": [],
             "notes": ""
         },
-    }
+    },
 }
 

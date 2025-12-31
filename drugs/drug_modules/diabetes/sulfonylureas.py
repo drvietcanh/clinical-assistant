@@ -528,7 +528,7 @@ SULFONYLUREAS_DRUGS = {
             "AACE/ACE Diabetes Guidelines",
             "ISMP High Alert Medications"
         ]
-    }
+    },
 }
 
 __all__ = ['SULFONYLUREAS_DRUGS']

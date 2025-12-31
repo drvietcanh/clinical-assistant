@@ -4,6 +4,192 @@ Active module - contains all supportive care drug data"""
 # Antihistamine (H1 Antagonist, 1st generation)s
 
 ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
+    "Chlorpheniramine": {
+        'group': 'Allergy - Antihistamine (H1 Antagonist, 1st generation)',
+        'vietnamese_name': 'Chlorpheniramine, Chlor-Trimeton',
+        'administration': ['PO', 'IV', 'IM'],
+        'indications': [
+            'Dị ứng (allergic rhinitis)',
+            'Mề đay (urticaria)',
+            'Dị ứng da',
+            'Dị ứng mắt',
+            'Phản ứng dị ứng cấp tính (IV/IM)'
+        ],
+        'contraindications': [
+            'Dị ứng chlorpheniramine',
+            'Glaucoma góc đóng',
+            'Bí tiểu do tắc nghẽn',
+            'Trẻ sơ sinh (<1 tháng)'
+        ],
+        'dosage': {
+            'adult_standard': '4mg x 3-4 lần/ngày (PO)',
+            'adult_max': '24mg/ngày',
+            'adult_iv_im': '10-20mg IV/IM (phản ứng dị ứng cấp)',
+            'pediatric': '0.35mg/kg/ngày chia 3-4 lần',
+            'pediatric_6_12': '2-4mg x 3-4 lần/ngày',
+            'pediatric_2_6': '1-2mg x 3-4 lần/ngày',
+            'notes': 'Sedating nhưng ít hơn diphenhydramine'
+        },
+        'side_effects': [
+            'Buồn ngủ (phổ biến nhưng ít hơn diphenhydramine)',
+            'Khô miệng',
+            'Chóng mặt',
+            'Nhìn mờ',
+            'Bí tiểu',
+            'Táo bón',
+            'Tim đập nhanh (hiếm)',
+            'Hạ huyết áp (IV)'
+        ],
+        'interactions': [
+            'Alcohol: tăng buồn ngủ',
+            'Benzodiazepines: tăng ức chế hệ thần kinh trung ương',
+            'Opioids: tăng ức chế hệ thần kinh trung ương',
+            'MAOIs: tăng tác dụng anticholinergic',
+            'Anticholinergics khác: tăng tác dụng phụ'
+        ],
+        'pregnancy': 'B',
+        'mechanism_of_action': 'Chlorpheniramine là antihistamine thế hệ thứ nhất, đối kháng không chọn lọc với thụ thể H1 ở cả ngoại biên và trung ương. Chlorpheniramine qua hàng rào máu-não nên gây buồn ngủ, nhưng ít hơn so với diphenhydramine. Chlorpheniramine có tác dụng anticholinergic (kháng muscarinic) nhưng ít hơn diphenhydramine. Chlorpheniramine ức chế phóng thích histamine từ mast cells và basophils, ngăn chặn tác dụng của histamine trên các thụ thể H1. Tác dụng anticholinergic làm giảm tiết dịch, giảm co thắt cơ trơn. Chlorpheniramine được sử dụng rộng rãi ở Việt Nam do giá rẻ và hiệu quả tốt cho các triệu chứng dị ứng.',
+        'monitoring': [
+            'Dấu hiệu buồn ngủ (đặc biệt khi lái xe hoặc vận hành máy móc)',
+            'Dấu hiệu anticholinergic: khô miệng, nhìn mờ, bí tiểu, táo bón',
+            'Huyết áp (đặc biệt khi dùng IV)',
+            'Nhịp tim',
+            'Đáp ứng điều trị (giảm triệu chứng dị ứng)'
+        ],
+        'precautions': [
+            'Gây buồn ngủ - thận trọng khi lái xe hoặc vận hành máy móc',
+            'Tác dụng anticholinergic - thận trọng với bệnh nhân glaucoma góc đóng, bí tiểu',
+            'Thận trọng với người cao tuổi - tăng nguy cơ té ngã, lú lẫn',
+            'Tránh dùng với alcohol, benzodiazepines, opioids',
+            'Không dùng cho trẻ sơ sinh <1 tháng tuổi',
+            'Dùng IV/IM cho phản ứng dị ứng cấp tính - theo dõi huyết áp',
+            'Giá rẻ, hiệu quả tốt, phù hợp cho bệnh nhân không cần tỉnh táo hoàn toàn'
+        ],
+        'pharmacokinetics': {
+            'half_life': '20-24 giờ',
+            'onset': '15-30 phút (PO), 5-10 phút (IV/IM)',
+            'duration': '4-6 giờ',
+            'protein_binding': '72%',
+            'clearance': 'Gan: chuyển hóa qua CYP2D6 thành desmethylchlorpheniramine (metabolite hoạt động). Thận: bài tiết một phần nguyên dạng và metabolites.'
+        },
+        'storage': 'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng syrup: bảo quản ở nhiệt độ phòng, đậy kín sau khi dùng. Dạng IV/IM: bảo quản ở nhiệt độ phòng, tránh đông lạnh.',
+        'black_box_warnings': None,
+        'drug_interactions': {
+            'major': [
+                {
+                    'drug': 'Alcohol, Benzodiazepines, Opioids',
+                    'mechanism': 'Cả hai đều ức chế hệ thần kinh trung ương',
+                    'effect': 'Tăng ức chế hệ thần kinh trung ương, suy hô hấp',
+                    'management': 'Thận trọng. Tránh dùng với rượu. Giảm liều nếu cần.'
+                }
+            ],
+            'moderate': [
+                {
+                    'drug': 'MAOIs, Anticholinergics khác',
+                    'mechanism': 'Tăng tác dụng anticholinergic',
+                    'effect': 'Tăng tác dụng phụ anticholinergic',
+                    'management': 'Thận trọng. Theo dõi tác dụng phụ.'
+                }
+            ],
+            'minor': []
+        },
+        'contraindications': {
+            'tuyệt_đối': [
+                'Dị ứng chlorpheniramine',
+                'Glaucoma góc đóng',
+                'Bí tiểu do tắc nghẽn',
+                'Trẻ sơ sinh <1 tháng tuổi'
+            ],
+            'tương_đối': [
+                'Người cao tuổi - tăng nguy cơ té ngã, lú lẫn',
+                'Bệnh nhân có tiền sử bí tiểu - tăng nguy cơ',
+                'Bệnh nhân có tiền sử glaucoma - thận trọng',
+                'Phụ nữ có thai - category B, thận trọng'
+            ]
+        },
+        'pregnancy_lactation': {
+            'fda_category': 'B',
+            'pregnancy_details': 'An toàn trong thai kỳ. Không có bằng chứng về dị tật bẩm sinh. Có thể dùng ở tất cả các tam cá nguyệt nếu cần thiết.',
+            'lactation': {
+                'safety': 'Compatible',
+                'details': 'Chlorpheniramine bài tiết vào sữa mẹ ở nồng độ thấp. Có thể gây buồn ngủ nhẹ ở trẻ bú mẹ.',
+                'recommendation': 'Có thể dùng khi cho con bú. Theo dõi dấu hiệu buồn ngủ ở trẻ.'
+            }
+        },
+        'hepatic_adjustment': {
+            'mild': 'Không đổi',
+            'moderate': 'Thận trọng, có thể giảm liều nhẹ',
+            'severe': 'Thận trọng, giảm liều hoặc tránh dùng',
+            'notes': 'Chlorpheniramine chuyển hóa ở gan qua CYP2D6. Suy gan có thể làm giảm chuyển hóa, tăng nguy cơ tích lũy.'
+        },
+        'overdose_management': {
+            'symptoms': [
+                'Buồn ngủ nặng, hôn mê',
+                'Kích động, lú lẫn',
+                'Tim đập nhanh',
+                'Hạ huyết áp',
+                'Suy hô hấp',
+                'Bí tiểu, nhìn mờ, khô miệng nặng'
+            ],
+            'antidote': 'Không có antidote đặc hiệu. Điều trị hỗ trợ.',
+            'treatment': [
+                'Rửa dạ dày nếu uống trong vòng 1-2 giờ',
+                'Than hoạt tính nếu uống trong vòng 1-2 giờ',
+                'Hỗ trợ hô hấp nếu cần',
+                'Theo dõi ý thức, huyết áp, nhịp tim, hô hấp',
+                'Truyền dịch nếu hạ huyết áp',
+                'Theo dõi ít nhất 24-48 giờ (half-life 20-24 giờ)'
+            ],
+            'monitoring': 'Ý thức, huyết áp, nhịp tim, hô hấp'
+        },
+        'reversal_agents': {
+            'available': False,
+            'agents': []
+        },
+        'administration_instructions': {
+            'oral': {
+                'with_food': 'Có thể dùng với hoặc không có thức ăn.',
+                'timing': 'Dùng 3-4 lần/ngày. Thận trọng khi lái xe sau khi dùng.'
+            },
+            'iv': {
+                'reconstitution': 'Dùng trực tiếp từ lọ, không cần pha loãng',
+                'infusion_rate': 'Tiêm tĩnh mạch chậm (10-20mg trong 1-2 phút)',
+                'compatibility': ['NS', 'D5W'],
+                'incompatibility': [],
+                'notes': 'Dùng cho phản ứng dị ứng cấp tính. Theo dõi huyết áp.'
+            },
+            'im': {
+                'reconstitution': 'Dùng trực tiếp từ lọ',
+                'injection_site': 'Tiêm bắp sâu',
+                'notes': 'Dùng cho phản ứng dị ứng cấp tính nếu không có đường IV.'
+            }
+        },
+        'references': {
+            'primary_sources': [
+                'FDA Drug Label - Chlor-Trimeton (chlorpheniramine)',
+                'UpToDate - Chlorpheniramine: Drug information',
+                'Allergy & Clinical Immunology guidelines'
+            ],
+            'last_updated': '2025-02-05',
+            'evidence_level': 'High - Multiple RCTs and systematic reviews'
+        },
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['CNS depression (sedation, drowsiness)', 'Anticholinergic effects (dry mouth, blurred vision, urinary retention)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Sedation/drowsiness (especially when driving or operating machinery)', 'Anticholinergic symptoms (dry mouth, blurred vision, urinary retention)', 'Blood pressure (especially with IM administration)', 'Heart rate']
+        },
+        'guideline_tags': [
+            'EAACI Guidelines - Allergic Rhinitis',
+            'AAAAI Guidelines - Urticaria',
+            'FDA Drug Information - Hydroxyzine'
+        ],
+        "black_box_warnings": None,
+},
     "Diphenhydramine": {
         'group': 'Allergy - Antihistamine (H1 Antagonist, 1st generation)',
         'vietnamese_name': 'Diphenhydramine, Benadryl',
@@ -196,192 +382,6 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             'last_updated': '2025-02-05',
             'evidence_level': 'High - Multiple RCTs and systematic reviews'
         },
-        "black_box_warnings": None,
-},
-    "Chlorpheniramine": {
-        'group': 'Allergy - Antihistamine (H1 Antagonist, 1st generation)',
-        'vietnamese_name': 'Chlorpheniramine, Chlor-Trimeton',
-        'administration': ['PO', 'IV', 'IM'],
-        'indications': [
-            'Dị ứng (allergic rhinitis)',
-            'Mề đay (urticaria)',
-            'Dị ứng da',
-            'Dị ứng mắt',
-            'Phản ứng dị ứng cấp tính (IV/IM)'
-        ],
-        'contraindications': [
-            'Dị ứng chlorpheniramine',
-            'Glaucoma góc đóng',
-            'Bí tiểu do tắc nghẽn',
-            'Trẻ sơ sinh (<1 tháng)'
-        ],
-        'dosage': {
-            'adult_standard': '4mg x 3-4 lần/ngày (PO)',
-            'adult_max': '24mg/ngày',
-            'adult_iv_im': '10-20mg IV/IM (phản ứng dị ứng cấp)',
-            'pediatric': '0.35mg/kg/ngày chia 3-4 lần',
-            'pediatric_6_12': '2-4mg x 3-4 lần/ngày',
-            'pediatric_2_6': '1-2mg x 3-4 lần/ngày',
-            'notes': 'Sedating nhưng ít hơn diphenhydramine'
-        },
-        'side_effects': [
-            'Buồn ngủ (phổ biến nhưng ít hơn diphenhydramine)',
-            'Khô miệng',
-            'Chóng mặt',
-            'Nhìn mờ',
-            'Bí tiểu',
-            'Táo bón',
-            'Tim đập nhanh (hiếm)',
-            'Hạ huyết áp (IV)'
-        ],
-        'interactions': [
-            'Alcohol: tăng buồn ngủ',
-            'Benzodiazepines: tăng ức chế hệ thần kinh trung ương',
-            'Opioids: tăng ức chế hệ thần kinh trung ương',
-            'MAOIs: tăng tác dụng anticholinergic',
-            'Anticholinergics khác: tăng tác dụng phụ'
-        ],
-        'pregnancy': 'B',
-        'mechanism_of_action': 'Chlorpheniramine là antihistamine thế hệ thứ nhất, đối kháng không chọn lọc với thụ thể H1 ở cả ngoại biên và trung ương. Chlorpheniramine qua hàng rào máu-não nên gây buồn ngủ, nhưng ít hơn so với diphenhydramine. Chlorpheniramine có tác dụng anticholinergic (kháng muscarinic) nhưng ít hơn diphenhydramine. Chlorpheniramine ức chế phóng thích histamine từ mast cells và basophils, ngăn chặn tác dụng của histamine trên các thụ thể H1. Tác dụng anticholinergic làm giảm tiết dịch, giảm co thắt cơ trơn. Chlorpheniramine được sử dụng rộng rãi ở Việt Nam do giá rẻ và hiệu quả tốt cho các triệu chứng dị ứng.',
-        'monitoring': [
-            'Dấu hiệu buồn ngủ (đặc biệt khi lái xe hoặc vận hành máy móc)',
-            'Dấu hiệu anticholinergic: khô miệng, nhìn mờ, bí tiểu, táo bón',
-            'Huyết áp (đặc biệt khi dùng IV)',
-            'Nhịp tim',
-            'Đáp ứng điều trị (giảm triệu chứng dị ứng)'
-        ],
-        'precautions': [
-            'Gây buồn ngủ - thận trọng khi lái xe hoặc vận hành máy móc',
-            'Tác dụng anticholinergic - thận trọng với bệnh nhân glaucoma góc đóng, bí tiểu',
-            'Thận trọng với người cao tuổi - tăng nguy cơ té ngã, lú lẫn',
-            'Tránh dùng với alcohol, benzodiazepines, opioids',
-            'Không dùng cho trẻ sơ sinh <1 tháng tuổi',
-            'Dùng IV/IM cho phản ứng dị ứng cấp tính - theo dõi huyết áp',
-            'Giá rẻ, hiệu quả tốt, phù hợp cho bệnh nhân không cần tỉnh táo hoàn toàn'
-        ],
-        'pharmacokinetics': {
-            'half_life': '20-24 giờ',
-            'onset': '15-30 phút (PO), 5-10 phút (IV/IM)',
-            'duration': '4-6 giờ',
-            'protein_binding': '72%',
-            'clearance': 'Gan: chuyển hóa qua CYP2D6 thành desmethylchlorpheniramine (metabolite hoạt động). Thận: bài tiết một phần nguyên dạng và metabolites.'
-        },
-        'storage': 'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng syrup: bảo quản ở nhiệt độ phòng, đậy kín sau khi dùng. Dạng IV/IM: bảo quản ở nhiệt độ phòng, tránh đông lạnh.',
-        'black_box_warnings': None,
-        'drug_interactions': {
-            'major': [
-                {
-                    'drug': 'Alcohol, Benzodiazepines, Opioids',
-                    'mechanism': 'Cả hai đều ức chế hệ thần kinh trung ương',
-                    'effect': 'Tăng ức chế hệ thần kinh trung ương, suy hô hấp',
-                    'management': 'Thận trọng. Tránh dùng với rượu. Giảm liều nếu cần.'
-                }
-            ],
-            'moderate': [
-                {
-                    'drug': 'MAOIs, Anticholinergics khác',
-                    'mechanism': 'Tăng tác dụng anticholinergic',
-                    'effect': 'Tăng tác dụng phụ anticholinergic',
-                    'management': 'Thận trọng. Theo dõi tác dụng phụ.'
-                }
-            ],
-            'minor': []
-        },
-        'contraindications': {
-            'tuyệt_đối': [
-                'Dị ứng chlorpheniramine',
-                'Glaucoma góc đóng',
-                'Bí tiểu do tắc nghẽn',
-                'Trẻ sơ sinh <1 tháng tuổi'
-            ],
-            'tương_đối': [
-                'Người cao tuổi - tăng nguy cơ té ngã, lú lẫn',
-                'Bệnh nhân có tiền sử bí tiểu - tăng nguy cơ',
-                'Bệnh nhân có tiền sử glaucoma - thận trọng',
-                'Phụ nữ có thai - category B, thận trọng'
-            ]
-        },
-        'pregnancy_lactation': {
-            'fda_category': 'B',
-            'pregnancy_details': 'An toàn trong thai kỳ. Không có bằng chứng về dị tật bẩm sinh. Có thể dùng ở tất cả các tam cá nguyệt nếu cần thiết.',
-            'lactation': {
-                'safety': 'Compatible',
-                'details': 'Chlorpheniramine bài tiết vào sữa mẹ ở nồng độ thấp. Có thể gây buồn ngủ nhẹ ở trẻ bú mẹ.',
-                'recommendation': 'Có thể dùng khi cho con bú. Theo dõi dấu hiệu buồn ngủ ở trẻ.'
-            }
-        },
-        'hepatic_adjustment': {
-            'mild': 'Không đổi',
-            'moderate': 'Thận trọng, có thể giảm liều nhẹ',
-            'severe': 'Thận trọng, giảm liều hoặc tránh dùng',
-            'notes': 'Chlorpheniramine chuyển hóa ở gan qua CYP2D6. Suy gan có thể làm giảm chuyển hóa, tăng nguy cơ tích lũy.'
-        },
-        'overdose_management': {
-            'symptoms': [
-                'Buồn ngủ nặng, hôn mê',
-                'Kích động, lú lẫn',
-                'Tim đập nhanh',
-                'Hạ huyết áp',
-                'Suy hô hấp',
-                'Bí tiểu, nhìn mờ, khô miệng nặng'
-            ],
-            'antidote': 'Không có antidote đặc hiệu. Điều trị hỗ trợ.',
-            'treatment': [
-                'Rửa dạ dày nếu uống trong vòng 1-2 giờ',
-                'Than hoạt tính nếu uống trong vòng 1-2 giờ',
-                'Hỗ trợ hô hấp nếu cần',
-                'Theo dõi ý thức, huyết áp, nhịp tim, hô hấp',
-                'Truyền dịch nếu hạ huyết áp',
-                'Theo dõi ít nhất 24-48 giờ (half-life 20-24 giờ)'
-            ],
-            'monitoring': 'Ý thức, huyết áp, nhịp tim, hô hấp'
-        },
-        'reversal_agents': {
-            'available': False,
-            'agents': []
-        },
-        'administration_instructions': {
-            'oral': {
-                'with_food': 'Có thể dùng với hoặc không có thức ăn.',
-                'timing': 'Dùng 3-4 lần/ngày. Thận trọng khi lái xe sau khi dùng.'
-            },
-            'iv': {
-                'reconstitution': 'Dùng trực tiếp từ lọ, không cần pha loãng',
-                'infusion_rate': 'Tiêm tĩnh mạch chậm (10-20mg trong 1-2 phút)',
-                'compatibility': ['NS', 'D5W'],
-                'incompatibility': [],
-                'notes': 'Dùng cho phản ứng dị ứng cấp tính. Theo dõi huyết áp.'
-            },
-            'im': {
-                'reconstitution': 'Dùng trực tiếp từ lọ',
-                'injection_site': 'Tiêm bắp sâu',
-                'notes': 'Dùng cho phản ứng dị ứng cấp tính nếu không có đường IV.'
-            }
-        },
-        'references': {
-            'primary_sources': [
-                'FDA Drug Label - Chlor-Trimeton (chlorpheniramine)',
-                'UpToDate - Chlorpheniramine: Drug information',
-                'Allergy & Clinical Immunology guidelines'
-            ],
-            'last_updated': '2025-02-05',
-            'evidence_level': 'High - Multiple RCTs and systematic reviews'
-        },
-        'risk_flags': {
-            'high_alert': False,
-            'narrow_therapeutic_index': False,
-            'bleeding_risk': False,
-            'organ_toxicity': ['CNS depression (sedation, drowsiness)', 'Anticholinergic effects (dry mouth, blurred vision, urinary retention)'],
-            'qt_prolongation': False,
-            'hepatotoxicity': False,
-            'nephrotoxicity': False,
-            'requires_monitoring': ['Sedation/drowsiness (especially when driving or operating machinery)', 'Anticholinergic symptoms (dry mouth, blurred vision, urinary retention)', 'Blood pressure (especially with IM administration)', 'Heart rate']
-        },
-        'guideline_tags': [
-            'EAACI Guidelines - Allergic Rhinitis',
-            'AAAAI Guidelines - Urticaria',
-            'FDA Drug Information - Hydroxyzine'
-        ],
         "black_box_warnings": None,
 },
     "Hydroxyzine": {
@@ -584,7 +584,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             'FDA Drug Information - Hydroxyzine'
         ],
         "black_box_warnings": None,
-}
+},
 }
 
 __all__ = ['ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS']

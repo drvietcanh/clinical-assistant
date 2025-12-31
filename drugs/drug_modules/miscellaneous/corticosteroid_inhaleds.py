@@ -120,7 +120,6 @@ CORTICOSTEROID_INHALED_DRUGS = {
         'FDA Drug Label - Budesonide (Pulmicort)',
         'UpToDate - Budesonide: Drug Information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ], 'last_updated': '2025-02-04', 'evidence_level':
-        'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}}}
+        ], 'last_updated': '2025-02-04', 'evidence_level': 'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}}}
 
 __all__ = ['CORTICOSTEROID_INHALED_DRUGS']

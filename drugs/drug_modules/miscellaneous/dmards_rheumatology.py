@@ -4,6 +4,314 @@ Bao gồm: Methotrexate, Leflunomide, Hydroxychloroquine dùng trong viêm khớ
 viêm cột sống dính khớp, lupus và các bệnh tự miễn khác liên quan khớp."""
 
 DMARDS_RHEUMATOLOGY_DRUGS = {
+    "Hydroxychloroquine": {
+        "group": "Rheumatology - Conventional DMARD (Antimalarial)",
+        "vietnamese_name": "Hydroxychloroquine, Plaquenil",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm khớp dạng thấp thể nhẹ đến trung bình (thường phối hợp DMARD khác)",
+            "Lupus ban đỏ hệ thống (SLE) – thuốc nền tảng",
+            "Viêm khớp vảy nến thể nhẹ (ít dùng đơn độc)",
+        ],
+        "contraindications": [
+            "Dị ứng hydroxychloroquine hoặc chloroquine",
+            "Bệnh võng mạc do 4-aminoquinoline hiện có",
+        ],
+        "dosage": {
+            "adult_ra_sle": "200–400mg/ngày PO, chia 1–2 lần",
+            "max_by_weight": "Không vượt quá 5mg/kg/ngày theo cân nặng thật (hoặc 6.5mg/kg/ngày theo cân nặng lý tưởng) để giảm nguy cơ độc võng mạc",
+            "notes": "Tác dụng xuất hiện chậm (6–12 tuần), tối đa 6 tháng. Thường dùng phối hợp MTX/sulfasalazine trong RA.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Cân nhắc giảm liều nhẹ nếu dùng lâu dài",
+            "under_30": "Giảm liều hoặc kéo dài khoảng cách dùng, theo dõi độc võng mạc",
+        },
+        "side_effects": [
+            "Buồn nôn, đau bụng, tiêu chảy nhẹ",
+            "Ban da, ngứa",
+            "Tăng sắc tố da/móng (dùng lâu dài)",
+            "Độc võng mạc (hiếm, liên quan liều tích lũy và thời gian dùng)",
+            "Bệnh cơ/ bệnh thần kinh cơ rất hiếm",
+        ],
+        "interactions": [
+            "Thuốc hạ đường huyết (insulin, sulfonylurea): tăng nguy cơ hạ đường huyết",
+            "Thuốc kéo dài QT (amiodarone, một số kháng loạn nhịp, kháng sinh): tăng nguy cơ rối loạn nhịp",
+        ],
+        "pregnancy": "C – nhưng thường được xem là an toàn và khuyến cáo duy trì ở SLE",
+        "mechanism_of_action": (
+            "Hydroxychloroquine tích tụ trong lysosome tế bào miễn dịch, tăng pH nội lysosome, "
+            "ức chế xử lý kháng nguyên và trình diện qua MHC class II, giảm hoạt hóa tế bào T. "
+            "Nó cũng ức chế Toll-like receptors (TLR7/9), giảm sản xuất interferon và cytokine tiền viêm; "
+            "tác dụng điều hòa miễn dịch nhẹ nhưng an toàn, hữu ích trong SLE và RA nhẹ."
+        ),
+        "monitoring": [
+            "Khám mắt (võng mạc) nền trong 1 năm đầu dùng, sau đó định kỳ (thường mỗi năm sau 5 năm điều trị hoặc sớm hơn nếu có nguy cơ)",
+            "Thị lực tự báo cáo (nhìn mờ, ám điểm hình bò – bull’s-eye maculopathy)",
+            "Công thức máu (hiếm khi gây giảm bạch cầu)",
+            "Men gan, creatinin định kỳ nếu dùng lâu dài",
+        ],
+        "precautions": [
+            "Độc võng mạc phụ thuộc liều tích lũy và thời gian dùng (>5 năm, liều cao); giới hạn liều theo cân nặng.",
+            "Thận trọng ở bệnh nhân có bệnh thận mạn, béo phì (cân nhắc liều theo cân nặng lý tưởng).",
+            "Thận trọng khi phối hợp thuốc kéo dài QT; tránh ở bệnh nhân tiền sử loạn nhịp thất nặng.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Dài, khoảng 40–50 ngày (tích lũy mô, đặc biệt mô mắt)",
+            "onset": "6–12 tuần",
+            "duration": "Hiệu quả duy trì nhiều tuần–tháng sau ngừng thuốc",
+            "protein_binding": "~50%",
+            "clearance": "Chuyển hóa ở gan, thải qua thận và phân; tích lũy trong mô (mắt, da).",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc kéo dài QT (amiodarone, sotalol, một số macrolide, fluoroquinolone)",
+                    "mechanism": "Cộng hưởng kéo dài QT",
+                    "effect": "Tăng nguy cơ xoắn đỉnh và loạn nhịp thất",
+                    "management": "Thận trọng; tránh phối hợp nếu bệnh nhân có yếu tố nguy cơ QT kéo dài.",
+                },
+                {
+                    "drug": "Insulin, sulfonylurea",
+                    "mechanism": "Tăng nhạy cảm insulin và/hoặc tác dụng hạ đường huyết",
+                    "effect": "Nguy cơ hạ đường huyết",
+                    "management": "Theo dõi đường huyết, giảm liều thuốc hạ đường nếu cần.",
+                },
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng hydroxychloroquine hoặc chloroquine",
+                "Bệnh võng mạc đặc hiệu do 4-aminoquinoline trước đó",
+            ],
+            "tương_đối": [
+                "Bệnh thận mạn (tăng nguy cơ độc võng mạc)",
+                "Tiền sử loạn nhịp thất, QT kéo dài",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": (
+                "Trong SLE và RA, đa số guideline khuyến cáo TIẾP TỤC hydroxychloroquine trong thai kỳ "
+                "do giảm đợt bùng phát và an toàn tương đối cho thai."
+            ),
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Nồng độ trong sữa thấp; không thấy tác dụng phụ nghiêm trọng ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú; theo dõi trẻ nếu dùng liều cao kéo dài.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều nhưng thận trọng",
+            "moderate": "Cân nhắc giảm liều và theo dõi chức năng gan",
+            "severe": "Thận trọng cao hoặc tránh dùng nếu có lựa chọn khác",
+            "notes": "Chuyển hóa qua gan; suy gan có thể tăng phơi nhiễm.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, hạ huyết áp",
+                "Loạn nhịp thất, ngừng tim (quá liều cấp nặng, thường do chloroquine hơn)",
+            ],
+            "antidote": "Không có antidote đặc hiệu; điều trị cấp cứu nâng đỡ.",
+            "treatment": [
+                "Hồi sức tim phổi tích cực, theo dõi ECG liên tục",
+                "Bicarbonate natri, magnesium sulfate cho loạn nhịp, tùy phác đồ",
+            ],
+            "monitoring": "ECG, huyết áp, dấu hiệu thần kinh, đường huyết.",
+        },
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc tính thần kinh và tim mạch hỗ trợ nếu có."},
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Nên uống cùng thức ăn hoặc sữa để giảm kích ứng tiêu hóa.",
+                "timing": "Chia 1–2 lần/ngày; nên dùng đều đặn, không tự ý ngừng đột ngột nếu đang kiểm soát tốt bệnh.",
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "ACR Guidelines for SLE and RA",
+                "UpToDate – Hydroxychloroquine: Drug information",
+            ],
+            "last_updated": "2025-02-23",
+            "evidence_level": "A – lâu năm, guideline-recommended background therapy",
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Retinal toxicity (irreversible, dose and duration dependent) - CRITICAL", "QT prolongation", "Hepatotoxicity (rare)"],
+            "qt_prolongation": True,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Retinal examination (baseline within 1 year, then annually after 5 years) - CRITICAL", "Visual acuity and symptoms (blurred vision, bull's-eye maculopathy)", "ECG if co-administered with QT-prolonging drugs", "Hepatic function (ALT, AST) if used long-term", "Blood glucose if co-administered with insulin/sulfonylureas"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Rheumatoid Arthritis",
+            "ACR Guidelines - Systemic Lupus Erythematosus",
+            "EULAR Guidelines - Rheumatoid Arthritis",
+            "FDA Drug Information - Hydroxychloroquine",
+            "AAO Guidelines - Retinal Toxicity Screening"
+        ],
+        "black_box_warnings": None,
+},
+    "Leflunomide": {
+        "group": "Rheumatology - Conventional DMARD (Pyrimidine Synthesis Inhibitor)",
+        "vietnamese_name": "Leflunomide, Arava",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm khớp dạng thấp (Rheumatoid Arthritis)",
+            "Viêm khớp vảy nến (Psoriatic arthritis)",
+        ],
+        "contraindications": [
+            "Có thai hoặc dự định có thai (gây quái thai, rất kéo dài do t1/2 dài)",
+            "Cho con bú",
+            "Bệnh gan mạn tính hoặc men gan tăng cao",
+            "Giảm bạch cầu, tiểu cầu nặng",
+            "Nhiễm trùng nặng đang tiến triển",
+        ],
+        "dosage": {
+            "adult_ra": "Liều duy trì thường 10–20mg PO 1 lần/ngày; có thể dùng liều nạp 100mg/ngày x 3 ngày nhưng hay gây độc tiêu hóa",
+            "notes": "Nhiều guideline hiện nay bỏ liều nạp để giảm tác dụng phụ. Bắt đầu 10–20mg/ngày tùy bệnh nhân.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, theo dõi tác dụng phụ",
+            "under_30": "Tránh dùng hoặc giảm liều, vì chất chuyển hóa thải chủ yếu qua mật nhưng có phần qua thận",
+        },
+        "side_effects": [
+            "Tiêu chảy, buồn nôn, đau bụng",
+            "Tăng men gan, hiếm khi suy gan nặng",
+            "Rụng tóc nhẹ",
+            "Tăng huyết áp nhẹ",
+            "Giảm bạch cầu, tiểu cầu",
+            "Tăng nguy cơ nhiễm trùng",
+        ],
+        "interactions": [
+            "Hepatotoxic drugs khác (MTX, isoniazid, rượu): tăng nguy cơ độc gan",
+            "Warfarin: có thể tăng INR",
+            "Cholestyramine: tăng thanh thải leflunomide (dùng để 'rửa thuốc')",
+        ],
+        "pregnancy": "X – CHỐNG CHỈ ĐỊNH trong thai kỳ",
+        "mechanism_of_action": (
+            "Leflunomide là tiền chất, chuyển hóa thành A77 1726 (teriflunomide), "
+            "ức chế dihydroorotate dehydrogenase, enzym then chốt trong tổng hợp de novo pyrimidine. "
+            "Điều này làm giảm tăng sinh tế bào lympho T/N kích hoạt và điều hòa đáp ứng miễn dịch trong RA."
+        ),
+        "monitoring": [
+            "Men gan (ALT, AST) trước và định kỳ (mỗi 1–2 tháng trong 6 tháng đầu, sau đó 3–6 tháng)",
+            "Công thức máu (CBC) định kỳ",
+            "Huyết áp",
+            "Dấu hiệu nhiễm trùng (sốt, ho, tiểu đau)",
+        ],
+        "precautions": [
+            "Thời gian bán thải dài (1–2 tuần) và tích lũy trong cơ thể; cần dùng cholestyramine để rửa thuốc nếu có thai/ngộ độc.",
+            "Tránh dùng cùng các thuốc độc gan khác; nếu phối hợp MTX phải theo dõi men gan sát.",
+            "Ngừng thuốc và rửa thuốc nếu men gan tăng kéo dài hoặc >2–3 lần giới hạn trên.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Dài, khoảng 14–18 ngày (do chu trình ruột–gan)",
+            "onset": "4–6 tuần, tối đa 3–6 tháng",
+            "duration": "Tác dụng kéo dài hàng tuần sau khi ngừng nếu không rửa thuốc",
+            "protein_binding": ">99%",
+            "clearance": "Chuyển hóa ở gan; thải qua mật (phân) và ít qua thận; chu trình ruột–gan mạnh.",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": (
+            "Gây độc gan nặng, có thể tử vong; cần theo dõi men gan thường xuyên. "
+            "Gây quái thai; phụ nữ trong độ tuổi sinh sản phải tránh thai hiệu quả và rửa thuốc khi muốn mang thai."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Methotrexate và thuốc độc gan khác",
+                    "mechanism": "Cộng hưởng độc gan",
+                    "effect": "Tăng nguy cơ viêm gan, suy gan",
+                    "management": "Chỉ phối hợp dưới giám sát chuyên khoa; theo dõi men gan mỗi 2–4 tuần.",
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Tương tác chuyển hóa qua CYP2C9 và gắn protein",
+                    "effect": "Có thể tăng INR, nguy cơ chảy máu",
+                    "management": "Theo dõi INR sát khi bắt đầu/ngừng leflunomide.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Có thai hoặc dự định có thai (cả nam và nữ cần rửa thuốc trước khi có thai)",
+                "Bệnh gan mạn tính tiến triển hoặc men gan tăng cao",
+                "Giảm bạch cầu/tiểu cầu nặng không giải thích được",
+            ],
+            "tương_đối": [
+                "Tiền sử bệnh gan, uống rượu nhiều",
+                "Suy thận trung bình–nặng",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "X",
+            "pregnancy_details": (
+                "CHỐNG CHỈ ĐỊNH. Cần rửa thuốc bằng cholestyramine (8g x 3 lần/ngày x 11 ngày) "
+                "và đo nồng độ <0.02 mg/L trước khi mang thai."
+            ),
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Chưa rõ nồng độ trong sữa nhưng nguy cơ lý thuyết cao.",
+                "recommendation": "Không dùng khi cho con bú.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng, theo dõi men gan sát",
+            "moderate": "Tránh dùng nếu có lựa chọn khác",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Do nguy cơ độc gan, không khuyến cáo ở bệnh gan trung bình–nặng.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nặng",
+                "Tăng men gan mạnh",
+                "Giảm bạch cầu, tiểu cầu",
+            ],
+            "antidote": "Không có antidote đặc hiệu; dùng cholestyramine để tăng thải trừ (rửa thuốc).",
+            "treatment": [
+                "Ngừng leflunomide",
+                "Dùng cholestyramine 8g uống 3 lần/ngày trong 11 ngày (không nhất thiết liên tiếp nếu không dung nạp)",
+                "Theo dõi men gan, CBC, huyết áp",
+            ],
+            "monitoring": "Men gan, CBC, huyết áp mỗi vài ngày đến khi ổn định.",
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Cholestyramine",
+                    "dose": "8g uống 3 lần/ngày x 11 ngày (hoặc phác đồ tương đương)",
+                    "mechanism": "Gắn chất chuyển hóa leflunomide trong ruột, cắt chu trình ruột–gan, tăng thải trừ.",
+                    "notes": "Dùng khi ngộ độc, men gan tăng nặng, hoặc chuẩn bị mang thai.",
+                }
+            ],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không với thức ăn.",
+                "timing": "Uống 1 lần/ngày, vào cùng thời điểm mỗi ngày.",
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "ACR 2021 Guidelines for RA",
+                "UpToDate – Leflunomide: Drug information",
+            ],
+            "last_updated": "2025-02-23",
+            "evidence_level": "A – guideline-supported DMARD",
+        },
+    },
+
     "Methotrexate": {
         "group": "Rheumatology - Conventional DMARD (Antimetabolite, Folic Acid Antagonist)",
         "vietnamese_name": "Methotrexate, MTX",
@@ -201,314 +509,6 @@ DMARDS_RHEUMATOLOGY_DRUGS = {
         },
     },
 
-    "Leflunomide": {
-        "group": "Rheumatology - Conventional DMARD (Pyrimidine Synthesis Inhibitor)",
-        "vietnamese_name": "Leflunomide, Arava",
-        "administration": ["PO"],
-        "indications": [
-            "Viêm khớp dạng thấp (Rheumatoid Arthritis)",
-            "Viêm khớp vảy nến (Psoriatic arthritis)",
-        ],
-        "contraindications": [
-            "Có thai hoặc dự định có thai (gây quái thai, rất kéo dài do t1/2 dài)",
-            "Cho con bú",
-            "Bệnh gan mạn tính hoặc men gan tăng cao",
-            "Giảm bạch cầu, tiểu cầu nặng",
-            "Nhiễm trùng nặng đang tiến triển",
-        ],
-        "dosage": {
-            "adult_ra": "Liều duy trì thường 10–20mg PO 1 lần/ngày; có thể dùng liều nạp 100mg/ngày x 3 ngày nhưng hay gây độc tiêu hóa",
-            "notes": "Nhiều guideline hiện nay bỏ liều nạp để giảm tác dụng phụ. Bắt đầu 10–20mg/ngày tùy bệnh nhân.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Thận trọng, theo dõi tác dụng phụ",
-            "under_30": "Tránh dùng hoặc giảm liều, vì chất chuyển hóa thải chủ yếu qua mật nhưng có phần qua thận",
-        },
-        "side_effects": [
-            "Tiêu chảy, buồn nôn, đau bụng",
-            "Tăng men gan, hiếm khi suy gan nặng",
-            "Rụng tóc nhẹ",
-            "Tăng huyết áp nhẹ",
-            "Giảm bạch cầu, tiểu cầu",
-            "Tăng nguy cơ nhiễm trùng",
-        ],
-        "interactions": [
-            "Hepatotoxic drugs khác (MTX, isoniazid, rượu): tăng nguy cơ độc gan",
-            "Warfarin: có thể tăng INR",
-            "Cholestyramine: tăng thanh thải leflunomide (dùng để 'rửa thuốc')",
-        ],
-        "pregnancy": "X – CHỐNG CHỈ ĐỊNH trong thai kỳ",
-        "mechanism_of_action": (
-            "Leflunomide là tiền chất, chuyển hóa thành A77 1726 (teriflunomide), "
-            "ức chế dihydroorotate dehydrogenase, enzym then chốt trong tổng hợp de novo pyrimidine. "
-            "Điều này làm giảm tăng sinh tế bào lympho T/N kích hoạt và điều hòa đáp ứng miễn dịch trong RA."
-        ),
-        "monitoring": [
-            "Men gan (ALT, AST) trước và định kỳ (mỗi 1–2 tháng trong 6 tháng đầu, sau đó 3–6 tháng)",
-            "Công thức máu (CBC) định kỳ",
-            "Huyết áp",
-            "Dấu hiệu nhiễm trùng (sốt, ho, tiểu đau)",
-        ],
-        "precautions": [
-            "Thời gian bán thải dài (1–2 tuần) và tích lũy trong cơ thể; cần dùng cholestyramine để rửa thuốc nếu có thai/ngộ độc.",
-            "Tránh dùng cùng các thuốc độc gan khác; nếu phối hợp MTX phải theo dõi men gan sát.",
-            "Ngừng thuốc và rửa thuốc nếu men gan tăng kéo dài hoặc >2–3 lần giới hạn trên.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "Dài, khoảng 14–18 ngày (do chu trình ruột–gan)",
-            "onset": "4–6 tuần, tối đa 3–6 tháng",
-            "duration": "Tác dụng kéo dài hàng tuần sau khi ngừng nếu không rửa thuốc",
-            "protein_binding": ">99%",
-            "clearance": "Chuyển hóa ở gan; thải qua mật (phân) và ít qua thận; chu trình ruột–gan mạnh.",
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm, tránh ánh sáng.",
-        "black_box_warnings": (
-            "Gây độc gan nặng, có thể tử vong; cần theo dõi men gan thường xuyên. "
-            "Gây quái thai; phụ nữ trong độ tuổi sinh sản phải tránh thai hiệu quả và rửa thuốc khi muốn mang thai."
-        ),
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Methotrexate và thuốc độc gan khác",
-                    "mechanism": "Cộng hưởng độc gan",
-                    "effect": "Tăng nguy cơ viêm gan, suy gan",
-                    "management": "Chỉ phối hợp dưới giám sát chuyên khoa; theo dõi men gan mỗi 2–4 tuần.",
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Tương tác chuyển hóa qua CYP2C9 và gắn protein",
-                    "effect": "Có thể tăng INR, nguy cơ chảy máu",
-                    "management": "Theo dõi INR sát khi bắt đầu/ngừng leflunomide.",
-                }
-            ],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Có thai hoặc dự định có thai (cả nam và nữ cần rửa thuốc trước khi có thai)",
-                "Bệnh gan mạn tính tiến triển hoặc men gan tăng cao",
-                "Giảm bạch cầu/tiểu cầu nặng không giải thích được",
-            ],
-            "tương_đối": [
-                "Tiền sử bệnh gan, uống rượu nhiều",
-                "Suy thận trung bình–nặng",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "X",
-            "pregnancy_details": (
-                "CHỐNG CHỈ ĐỊNH. Cần rửa thuốc bằng cholestyramine (8g x 3 lần/ngày x 11 ngày) "
-                "và đo nồng độ <0.02 mg/L trước khi mang thai."
-            ),
-            "lactation": {
-                "safety": "Incompatible",
-                "details": "Chưa rõ nồng độ trong sữa nhưng nguy cơ lý thuyết cao.",
-                "recommendation": "Không dùng khi cho con bú.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Thận trọng, theo dõi men gan sát",
-            "moderate": "Tránh dùng nếu có lựa chọn khác",
-            "severe": "CHỐNG CHỈ ĐỊNH",
-            "notes": "Do nguy cơ độc gan, không khuyến cáo ở bệnh gan trung bình–nặng.",
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Tiêu chảy nặng",
-                "Tăng men gan mạnh",
-                "Giảm bạch cầu, tiểu cầu",
-            ],
-            "antidote": "Không có antidote đặc hiệu; dùng cholestyramine để tăng thải trừ (rửa thuốc).",
-            "treatment": [
-                "Ngừng leflunomide",
-                "Dùng cholestyramine 8g uống 3 lần/ngày trong 11 ngày (không nhất thiết liên tiếp nếu không dung nạp)",
-                "Theo dõi men gan, CBC, huyết áp",
-            ],
-            "monitoring": "Men gan, CBC, huyết áp mỗi vài ngày đến khi ổn định.",
-        },
-        "reversal_agents": {
-            "available": True,
-            "agents": [
-                {
-                    "agent": "Cholestyramine",
-                    "dose": "8g uống 3 lần/ngày x 11 ngày (hoặc phác đồ tương đương)",
-                    "mechanism": "Gắn chất chuyển hóa leflunomide trong ruột, cắt chu trình ruột–gan, tăng thải trừ.",
-                    "notes": "Dùng khi ngộ độc, men gan tăng nặng, hoặc chuẩn bị mang thai.",
-                }
-            ],
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống cùng hoặc không với thức ăn.",
-                "timing": "Uống 1 lần/ngày, vào cùng thời điểm mỗi ngày.",
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "ACR 2021 Guidelines for RA",
-                "UpToDate – Leflunomide: Drug information",
-            ],
-            "last_updated": "2025-02-23",
-            "evidence_level": "A – guideline-supported DMARD",
-        },
-    },
-
-    "Hydroxychloroquine": {
-        "group": "Rheumatology - Conventional DMARD (Antimalarial)",
-        "vietnamese_name": "Hydroxychloroquine, Plaquenil",
-        "administration": ["PO"],
-        "indications": [
-            "Viêm khớp dạng thấp thể nhẹ đến trung bình (thường phối hợp DMARD khác)",
-            "Lupus ban đỏ hệ thống (SLE) – thuốc nền tảng",
-            "Viêm khớp vảy nến thể nhẹ (ít dùng đơn độc)",
-        ],
-        "contraindications": [
-            "Dị ứng hydroxychloroquine hoặc chloroquine",
-            "Bệnh võng mạc do 4-aminoquinoline hiện có",
-        ],
-        "dosage": {
-            "adult_ra_sle": "200–400mg/ngày PO, chia 1–2 lần",
-            "max_by_weight": "Không vượt quá 5mg/kg/ngày theo cân nặng thật (hoặc 6.5mg/kg/ngày theo cân nặng lý tưởng) để giảm nguy cơ độc võng mạc",
-            "notes": "Tác dụng xuất hiện chậm (6–12 tuần), tối đa 6 tháng. Thường dùng phối hợp MTX/sulfasalazine trong RA.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Cân nhắc giảm liều nhẹ nếu dùng lâu dài",
-            "under_30": "Giảm liều hoặc kéo dài khoảng cách dùng, theo dõi độc võng mạc",
-        },
-        "side_effects": [
-            "Buồn nôn, đau bụng, tiêu chảy nhẹ",
-            "Ban da, ngứa",
-            "Tăng sắc tố da/móng (dùng lâu dài)",
-            "Độc võng mạc (hiếm, liên quan liều tích lũy và thời gian dùng)",
-            "Bệnh cơ/ bệnh thần kinh cơ rất hiếm",
-        ],
-        "interactions": [
-            "Thuốc hạ đường huyết (insulin, sulfonylurea): tăng nguy cơ hạ đường huyết",
-            "Thuốc kéo dài QT (amiodarone, một số kháng loạn nhịp, kháng sinh): tăng nguy cơ rối loạn nhịp",
-        ],
-        "pregnancy": "C – nhưng thường được xem là an toàn và khuyến cáo duy trì ở SLE",
-        "mechanism_of_action": (
-            "Hydroxychloroquine tích tụ trong lysosome tế bào miễn dịch, tăng pH nội lysosome, "
-            "ức chế xử lý kháng nguyên và trình diện qua MHC class II, giảm hoạt hóa tế bào T. "
-            "Nó cũng ức chế Toll-like receptors (TLR7/9), giảm sản xuất interferon và cytokine tiền viêm; "
-            "tác dụng điều hòa miễn dịch nhẹ nhưng an toàn, hữu ích trong SLE và RA nhẹ."
-        ),
-        "monitoring": [
-            "Khám mắt (võng mạc) nền trong 1 năm đầu dùng, sau đó định kỳ (thường mỗi năm sau 5 năm điều trị hoặc sớm hơn nếu có nguy cơ)",
-            "Thị lực tự báo cáo (nhìn mờ, ám điểm hình bò – bull’s-eye maculopathy)",
-            "Công thức máu (hiếm khi gây giảm bạch cầu)",
-            "Men gan, creatinin định kỳ nếu dùng lâu dài",
-        ],
-        "precautions": [
-            "Độc võng mạc phụ thuộc liều tích lũy và thời gian dùng (>5 năm, liều cao); giới hạn liều theo cân nặng.",
-            "Thận trọng ở bệnh nhân có bệnh thận mạn, béo phì (cân nhắc liều theo cân nặng lý tưởng).",
-            "Thận trọng khi phối hợp thuốc kéo dài QT; tránh ở bệnh nhân tiền sử loạn nhịp thất nặng.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "Dài, khoảng 40–50 ngày (tích lũy mô, đặc biệt mô mắt)",
-            "onset": "6–12 tuần",
-            "duration": "Hiệu quả duy trì nhiều tuần–tháng sau ngừng thuốc",
-            "protein_binding": "~50%",
-            "clearance": "Chuyển hóa ở gan, thải qua thận và phân; tích lũy trong mô (mắt, da).",
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm, tránh ánh sáng.",
-        "black_box_warnings": None,
-        "drug_interactions": {
-            "major": [],
-            "moderate": [
-                {
-                    "drug": "Thuốc kéo dài QT (amiodarone, sotalol, một số macrolide, fluoroquinolone)",
-                    "mechanism": "Cộng hưởng kéo dài QT",
-                    "effect": "Tăng nguy cơ xoắn đỉnh và loạn nhịp thất",
-                    "management": "Thận trọng; tránh phối hợp nếu bệnh nhân có yếu tố nguy cơ QT kéo dài.",
-                },
-                {
-                    "drug": "Insulin, sulfonylurea",
-                    "mechanism": "Tăng nhạy cảm insulin và/hoặc tác dụng hạ đường huyết",
-                    "effect": "Nguy cơ hạ đường huyết",
-                    "management": "Theo dõi đường huyết, giảm liều thuốc hạ đường nếu cần.",
-                },
-            ],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng hydroxychloroquine hoặc chloroquine",
-                "Bệnh võng mạc đặc hiệu do 4-aminoquinoline trước đó",
-            ],
-            "tương_đối": [
-                "Bệnh thận mạn (tăng nguy cơ độc võng mạc)",
-                "Tiền sử loạn nhịp thất, QT kéo dài",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": (
-                "Trong SLE và RA, đa số guideline khuyến cáo TIẾP TỤC hydroxychloroquine trong thai kỳ "
-                "do giảm đợt bùng phát và an toàn tương đối cho thai."
-            ),
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Nồng độ trong sữa thấp; không thấy tác dụng phụ nghiêm trọng ở trẻ.",
-                "recommendation": "Có thể dùng khi cho con bú; theo dõi trẻ nếu dùng liều cao kéo dài.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh liều nhưng thận trọng",
-            "moderate": "Cân nhắc giảm liều và theo dõi chức năng gan",
-            "severe": "Thận trọng cao hoặc tránh dùng nếu có lựa chọn khác",
-            "notes": "Chuyển hóa qua gan; suy gan có thể tăng phơi nhiễm.",
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Buồn nôn, nôn, hạ huyết áp",
-                "Loạn nhịp thất, ngừng tim (quá liều cấp nặng, thường do chloroquine hơn)",
-            ],
-            "antidote": "Không có antidote đặc hiệu; điều trị cấp cứu nâng đỡ.",
-            "treatment": [
-                "Hồi sức tim phổi tích cực, theo dõi ECG liên tục",
-                "Bicarbonate natri, magnesium sulfate cho loạn nhịp, tùy phác đồ",
-            ],
-            "monitoring": "ECG, huyết áp, dấu hiệu thần kinh, đường huyết.",
-        },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc tính thần kinh và tim mạch hỗ trợ nếu có."},
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Nên uống cùng thức ăn hoặc sữa để giảm kích ứng tiêu hóa.",
-                "timing": "Chia 1–2 lần/ngày; nên dùng đều đặn, không tự ý ngừng đột ngột nếu đang kiểm soát tốt bệnh.",
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "ACR Guidelines for SLE and RA",
-                "UpToDate – Hydroxychloroquine: Drug information",
-            ],
-            "last_updated": "2025-02-23",
-            "evidence_level": "A – lâu năm, guideline-recommended background therapy",
-        },
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Retinal toxicity (irreversible, dose and duration dependent) - CRITICAL", "QT prolongation", "Hepatotoxicity (rare)"],
-            "qt_prolongation": True,
-            "hepatotoxicity": True,
-            "nephrotoxicity": False,
-            "requires_monitoring": ["Retinal examination (baseline within 1 year, then annually after 5 years) - CRITICAL", "Visual acuity and symptoms (blurred vision, bull's-eye maculopathy)", "ECG if co-administered with QT-prolonging drugs", "Hepatic function (ALT, AST) if used long-term", "Blood glucose if co-administered with insulin/sulfonylureas"]
-        },
-        "guideline_tags": [
-            "ACR Guidelines - Rheumatoid Arthritis",
-            "ACR Guidelines - Systemic Lupus Erythematosus",
-            "EULAR Guidelines - Rheumatoid Arthritis",
-            "FDA Drug Information - Hydroxychloroquine",
-            "AAO Guidelines - Retinal Toxicity Screening"
-        ],
-        "black_box_warnings": None,
-},
 }
 
 __all__ = ["DMARDS_RHEUMATOLOGY_DRUGS"]

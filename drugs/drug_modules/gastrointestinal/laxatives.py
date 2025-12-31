@@ -2,6 +2,141 @@
 Lactulose, Polyethylene glycol (PEG 3350)"""
 
 LAXATIVES_DRUGS = {
+    "Bisacodyl": {
+        "group": "Gastrointestinal - Stimulant Laxative (Diphenylmethane)",
+        "vietnamese_name": "Bisacodyl, Dulcolax",
+        "administration": ["PO", "PR"],
+        "indications": [
+            "Táo bón cấp, táo bón do ít vận động",
+            "Chuẩn bị ruột trước phẫu thuật, nội soi (kết hợp các thuốc khác)",
+        ],
+        "contraindications": [
+            "Tắc ruột, thủng ruột, viêm phúc mạc",
+            "Đau bụng cấp chưa rõ nguyên nhân (nghi ngờ bụng ngoại khoa)",
+            "Viêm ruột cấp (viêm đại tràng nặng, bệnh Crohn đợt cấp nặng)",
+        ],
+        "dosage": {
+            "adult_po": "5–10mg PO vào buổi tối; có thể tăng tối đa 15–20mg theo chỉ định",
+            "adult_pr": "10mg đặt trực tràng (suppository) buổi sáng; tác dụng nhanh 15–60 phút",
+            "notes": "Uống nguyên viên, không nghiền/nhai; không uống cùng sữa, antacid hoặc PPI ngay trước/sau.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều; tránh lạm dụng kéo dài",
+            "under_30": "Thận trọng nếu dùng kéo dài (mất điện giải)",
+        },
+        "side_effects": [
+            "Đau quặn bụng, tiêu chảy",
+            "Buồn nôn",
+            "Kích ứng trực tràng (dạng suppository)",
+            "Mất điện giải (giảm K+, Na+) nếu lạm dụng",
+        ],
+        "interactions": [
+            "Sữa, antacid, PPI: hòa tan sớm viên bao tan trong ruột → kích ứng dạ dày",
+            "Thuốc lợi tiểu, corticosteroid: tăng nguy cơ hạ K+ khi tiêu chảy nhiều",
+        ],
+        "pregnancy": "C – dùng ngắn hạn khi cần thiết; ưu tiên thuốc an toàn hơn nếu có",
+        "mechanism_of_action": (
+            "Bisacodyl là thuốc nhuận tràng kích thích, sau khi được thủy phân ở đại tràng sẽ kích thích đám rối thần kinh "
+            "cơ trơn ruột (plexus myentericus), tăng nhu động đại tràng và tiết nước vào lòng ruột, giúp tống phân."
+        ),
+        "monitoring": [
+            "Tần suất và tính chất phân",
+            "Dấu hiệu mất nước, rối loạn điện giải nếu dùng lặp lại",
+        ],
+        "precautions": [
+            "Chỉ dùng ngắn hạn (vài ngày); không dùng kéo dài hàng tuần–tháng vì nguy cơ lệ thuộc thuốc và rối loạn điện giải.",
+            "Nếu táo bón kéo dài, cần tìm và xử lý nguyên nhân (chế độ ăn, thuốc, bệnh nền).",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không rõ (tác dụng chủ yếu tại chỗ ở đại tràng)",
+            "onset": "PO: 6–12 giờ; PR: 15–60 phút",
+            "duration": "Một liều thường có tác dụng trong ngày",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Bài tiết qua phân và nước tiểu dưới dạng chuyển hóa.",
+        },
+        "storage": "Bảo quản nơi khô mát, tránh ẩm; suppository cần bảo quản tránh nóng chảy.",
+        "black_box_warnings": "Không có cảnh báo hộp đen đặc biệt. Tuy nhiên, lạm dụng kéo dài có thể gây lệ thuộc thuốc và rối loạn điện giải.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc lợi tiểu, corticosteroid",
+                    "mechanism": "Cả hai đều có thể gây hạ K+; cộng hưởng với tiêu chảy do bisacodyl",
+                    "effect": "Tăng nguy cơ hạ K+, loạn nhịp tim",
+                    "management": "Theo dõi điện giải nếu dùng nhiều lần hoặc kéo dài.",
+                }
+            ],
+            "minor": [],
+        },
+        "drug_interactions_detail": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc lợi tiểu, corticosteroid",
+                    "mechanism": "Cả hai đều có thể gây hạ K+; cộng hưởng với tiêu chảy do bisacodyl",
+                    "effect": "Tăng nguy cơ hạ K+, loạn nhịp tim",
+                    "management": "Theo dõi điện giải nếu dùng nhiều lần hoặc kéo dài.",
+                }
+            ],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tắc ruột, thủng ruột, viêm phúc mạc",
+                "Đau bụng cấp chưa rõ nguyên nhân",
+            ],
+            "tương_đối": [
+                "Viêm ruột cấp nặng",
+                "Suy thận (tránh lạm dụng kéo dài)",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng ngắn hạn nếu các biện pháp khác thất bại; ưu tiên bulk-forming/osmotic trước.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Hấp thu toàn thân ít; chưa ghi nhận tác dụng phụ rõ ràng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng ngắn hạn, theo dõi phân của trẻ.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều",
+            "notes": "Tác dụng chủ yếu tại chỗ ở đại tràng.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nhiều, đau bụng, mất nước, hạ K+",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng thuốc, bù dịch và điện giải",
+                "Điều chỉnh hạ K+ nếu có",
+            ],
+            "monitoring": "Điện giải, chức năng thận, dấu hiệu mất nước.",
+        },
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Bù nước và điện giải nếu mất nước."},
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống nguyên viên với nước, không nghiền/nhai.",
+                "timing": "Uống buổi tối (tác dụng sau 6–12 giờ). Không uống ngay sau khi dùng sữa/antacid.",
+            },
+            "pr": {
+                "notes": "Đặt trực tràng, giữ thuốc càng lâu càng tốt (15–30 phút) cho đến khi muốn đi ngoài.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "AGA guidelines – Management of chronic constipation",
+                "UpToDate – Bisacodyl: Drug information",
+            ],
+            "last_updated": "2025-02-23",
+            "evidence_level": "High – guideline-recommended stimulant laxative",
+        },
+    },
+
     "Lactulose": {
         "group": "Gastrointestinal - Osmotic Laxative (Disaccharide)",
         "vietnamese_name": "Lactulose, Duphalac",
@@ -292,141 +427,6 @@ LAXATIVES_DRUGS = {
           "black_box_warnings": None,
           "black_box_warnings": "Không có",
 },
-
-    "Bisacodyl": {
-        "group": "Gastrointestinal - Stimulant Laxative (Diphenylmethane)",
-        "vietnamese_name": "Bisacodyl, Dulcolax",
-        "administration": ["PO", "PR"],
-        "indications": [
-            "Táo bón cấp, táo bón do ít vận động",
-            "Chuẩn bị ruột trước phẫu thuật, nội soi (kết hợp các thuốc khác)",
-        ],
-        "contraindications": [
-            "Tắc ruột, thủng ruột, viêm phúc mạc",
-            "Đau bụng cấp chưa rõ nguyên nhân (nghi ngờ bụng ngoại khoa)",
-            "Viêm ruột cấp (viêm đại tràng nặng, bệnh Crohn đợt cấp nặng)",
-        ],
-        "dosage": {
-            "adult_po": "5–10mg PO vào buổi tối; có thể tăng tối đa 15–20mg theo chỉ định",
-            "adult_pr": "10mg đặt trực tràng (suppository) buổi sáng; tác dụng nhanh 15–60 phút",
-            "notes": "Uống nguyên viên, không nghiền/nhai; không uống cùng sữa, antacid hoặc PPI ngay trước/sau.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Không cần chỉnh liều; tránh lạm dụng kéo dài",
-            "under_30": "Thận trọng nếu dùng kéo dài (mất điện giải)",
-        },
-        "side_effects": [
-            "Đau quặn bụng, tiêu chảy",
-            "Buồn nôn",
-            "Kích ứng trực tràng (dạng suppository)",
-            "Mất điện giải (giảm K+, Na+) nếu lạm dụng",
-        ],
-        "interactions": [
-            "Sữa, antacid, PPI: hòa tan sớm viên bao tan trong ruột → kích ứng dạ dày",
-            "Thuốc lợi tiểu, corticosteroid: tăng nguy cơ hạ K+ khi tiêu chảy nhiều",
-        ],
-        "pregnancy": "C – dùng ngắn hạn khi cần thiết; ưu tiên thuốc an toàn hơn nếu có",
-        "mechanism_of_action": (
-            "Bisacodyl là thuốc nhuận tràng kích thích, sau khi được thủy phân ở đại tràng sẽ kích thích đám rối thần kinh "
-            "cơ trơn ruột (plexus myentericus), tăng nhu động đại tràng và tiết nước vào lòng ruột, giúp tống phân."
-        ),
-        "monitoring": [
-            "Tần suất và tính chất phân",
-            "Dấu hiệu mất nước, rối loạn điện giải nếu dùng lặp lại",
-        ],
-        "precautions": [
-            "Chỉ dùng ngắn hạn (vài ngày); không dùng kéo dài hàng tuần–tháng vì nguy cơ lệ thuộc thuốc và rối loạn điện giải.",
-            "Nếu táo bón kéo dài, cần tìm và xử lý nguyên nhân (chế độ ăn, thuốc, bệnh nền).",
-        ],
-        "pharmacokinetics": {
-            "half_life": "Không rõ (tác dụng chủ yếu tại chỗ ở đại tràng)",
-            "onset": "PO: 6–12 giờ; PR: 15–60 phút",
-            "duration": "Một liều thường có tác dụng trong ngày",
-            "protein_binding": "Không đáng kể",
-            "clearance": "Bài tiết qua phân và nước tiểu dưới dạng chuyển hóa.",
-        },
-        "storage": "Bảo quản nơi khô mát, tránh ẩm; suppository cần bảo quản tránh nóng chảy.",
-        "black_box_warnings": "Không có cảnh báo hộp đen đặc biệt. Tuy nhiên, lạm dụng kéo dài có thể gây lệ thuộc thuốc và rối loạn điện giải.",
-        "drug_interactions": {
-            "major": [],
-            "moderate": [
-                {
-                    "drug": "Thuốc lợi tiểu, corticosteroid",
-                    "mechanism": "Cả hai đều có thể gây hạ K+; cộng hưởng với tiêu chảy do bisacodyl",
-                    "effect": "Tăng nguy cơ hạ K+, loạn nhịp tim",
-                    "management": "Theo dõi điện giải nếu dùng nhiều lần hoặc kéo dài.",
-                }
-            ],
-            "minor": [],
-        },
-        "drug_interactions_detail": {
-            "major": [],
-            "moderate": [
-                {
-                    "drug": "Thuốc lợi tiểu, corticosteroid",
-                    "mechanism": "Cả hai đều có thể gây hạ K+; cộng hưởng với tiêu chảy do bisacodyl",
-                    "effect": "Tăng nguy cơ hạ K+, loạn nhịp tim",
-                    "management": "Theo dõi điện giải nếu dùng nhiều lần hoặc kéo dài.",
-                }
-            ],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Tắc ruột, thủng ruột, viêm phúc mạc",
-                "Đau bụng cấp chưa rõ nguyên nhân",
-            ],
-            "tương_đối": [
-                "Viêm ruột cấp nặng",
-                "Suy thận (tránh lạm dụng kéo dài)",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Có thể dùng ngắn hạn nếu các biện pháp khác thất bại; ưu tiên bulk-forming/osmotic trước.",
-            "lactation": {
-                "safety": "Compatible with caution",
-                "details": "Hấp thu toàn thân ít; chưa ghi nhận tác dụng phụ rõ ràng ở trẻ bú mẹ.",
-                "recommendation": "Có thể dùng ngắn hạn, theo dõi phân của trẻ.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh liều",
-            "moderate": "Không cần chỉnh liều",
-            "severe": "Không cần chỉnh liều",
-            "notes": "Tác dụng chủ yếu tại chỗ ở đại tràng.",
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Tiêu chảy nhiều, đau bụng, mất nước, hạ K+",
-            ],
-            "antidote": "Không có antidote đặc hiệu.",
-            "treatment": [
-                "Ngừng thuốc, bù dịch và điện giải",
-                "Điều chỉnh hạ K+ nếu có",
-            ],
-            "monitoring": "Điện giải, chức năng thận, dấu hiệu mất nước.",
-        },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Bù nước và điện giải nếu mất nước."},
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Uống nguyên viên với nước, không nghiền/nhai.",
-                "timing": "Uống buổi tối (tác dụng sau 6–12 giờ). Không uống ngay sau khi dùng sữa/antacid.",
-            },
-            "pr": {
-                "notes": "Đặt trực tràng, giữ thuốc càng lâu càng tốt (15–30 phút) cho đến khi muốn đi ngoài.",
-            },
-        },
-        "references": {
-            "primary_sources": [
-                "AGA guidelines – Management of chronic constipation",
-                "UpToDate – Bisacodyl: Drug information",
-            ],
-            "last_updated": "2025-02-23",
-            "evidence_level": "High – guideline-recommended stimulant laxative",
-        },
-    },
 
     "Senna (sennosides)": {
         "group": "Gastrointestinal - Stimulant Laxative (Anthraquinone)",

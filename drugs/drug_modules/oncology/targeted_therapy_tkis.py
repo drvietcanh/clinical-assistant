@@ -4,189 +4,6 @@ Active module - contains targeted therapy TKIs for cancer treatment"""
 # Targeted Therapy - Tyrosine Kinase Inhibitors
 
 TARGETED_THERAPY_TKIS_DRUGS = {
-    "Imatinib": {
-        "group": "Oncology - BCR-ABL Tyrosine Kinase Inhibitor",
-        "vietnamese_name": "Imatinib, Gleevec, Glivec",
-        "administration": ["PO"],
-        "indications": [
-            "Bệnh bạch cầu dòng tủy mạn (CML - Chronic Myeloid Leukemia) - tất cả các giai đoạn",
-            "Bệnh bạch cầu lympho cấp (ALL) - Ph+ (Philadelphia chromosome positive)",
-            "U mô đệm đường tiêu hóa (GIST - Gastrointestinal Stromal Tumor)",
-            "U xơ da (DFSP - Dermatofibrosarcoma Protuberans)",
-            "Hội chứng tăng bạch cầu ái toan (HES - Hypereosinophilic Syndrome)",
-            "U tế bào mast hệ thống (SM - Systemic Mastocytosis)"
-        ],
-        "contraindications": [
-            "Dị ứng imatinib hoặc bất kỳ thành phần nào"
-        ],
-        "dosage": {
-            "adult_cml_chronic": "400mg PO x 1 lần/ngày",
-            "adult_cml_accelerated": "600mg PO x 1 lần/ngày",
-            "adult_cml_blast_crisis": "600mg PO x 1 lần/ngày",
-            "adult_all_ph_positive": "600mg PO x 1 lần/ngày",
-            "adult_gist": "400mg PO x 1 lần/ngày",
-            "notes": "Uống với thức ăn và một cốc nước lớn để giảm kích ứng dạ dày. Có thể tăng liều nếu không đáp ứng. Imatinib là thuốc đầu tiên trong nhóm TKI, đã cách mạng hóa điều trị CML."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Giảm liều 25-50%",
-            "under_30": "Giảm liều 50%"
-        },
-        "side_effects": [
-            "Giữ nước, phù (fluid retention, edema) - phổ biến",
-            "Buồn nôn, nôn - phổ biến",
-            "Tiêu chảy - phổ biến",
-            "Đau cơ, đau khớp - phổ biến",
-            "Phát ban - phổ biến",
-            "Mệt mỏi - phổ biến",
-            "Giảm bạch cầu, tiểu cầu (myelosuppression) - phổ biến",
-            "Tăng men gan (ALT, AST) - phổ biến",
-            "Độc tim (suy tim, rối loạn nhịp) - hiếm nhưng nghiêm trọng",
-            "Xuất huyết (chảy máu) - hiếm"
-        ],
-        "interactions": [
-            "CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir): tăng nồng độ imatinib",
-            "CYP3A4 inducers (rifampin, carbamazepine): giảm nồng độ imatinib",
-            "Warfarin: tăng nguy cơ chảy máu - dùng thuốc chống đông khác",
-            "Simvastatin, atorvastatin: tăng nguy cơ tiêu cơ vân"
-        ],
-        "pregnancy": "D",
-        "mechanism_of_action": "Imatinib là tyrosine kinase inhibitor (TKI), ức chế đặc hiệu BCR-ABL tyrosine kinase (fusion protein trong CML do translocation t(9;22) tạo ra Philadelphia chromosome). BCR-ABL là protein bất thường có hoạt tính tyrosine kinase liên tục, kích thích tăng sinh và ức chế apoptosis của tế bào bạch cầu, dẫn đến CML. Imatinib gắn với vị trí ATP-binding của BCR-ABL, ức chế hoạt tính kinase, ngăn chặn tín hiệu tăng sinh và khôi phục apoptosis. Imatinib cũng ức chế các tyrosine kinase khác: c-KIT (trong GIST), PDGFR (platelet-derived growth factor receptor). ĐẶC ĐIỂM: (1) Thuốc đầu tiên trong nhóm TKI, đã cách mạng hóa điều trị CML (từ 30% sống 5 năm → 90% sống 5 năm), (2) Uống hàng ngày, tiện lợi, (3) Tác dụng phụ thường nhẹ đến trung bình, (4) Có thể phát triển kháng thuốc (mutations) → cần TKI thế hệ 2 (dasatinib, nilotinib), (5) Hiệu quả cao với CML chronic phase (90% đạt complete cytogenetic response).",
-        "monitoring": [
-            "Công thức máu toàn phần (CBC) mỗi 2 tuần trong 3 tháng đầu, sau đó mỗi tháng - theo dõi myelosuppression",
-            "Chức năng gan (ALT, AST, bilirubin) mỗi tháng trong 3 tháng đầu, sau đó mỗi 3 tháng",
-            "Chức năng thận (creatinine, eGFR) trước và trong điều trị",
-            "Đáp ứng điều trị CML:",
-            "  - Complete hematologic response (CHR): CBC bình thường",
-            "  - Complete cytogenetic response (CCyR): không còn Philadelphia chromosome",
-            "  - Major molecular response (MMR): BCR-ABL <0.1%",
-            "Dấu hiệu giữ nước, phù (fluid retention) - phổ biến",
-            "Dấu hiệu độc tim (suy tim, rối loạn nhịp) - hiếm nhưng nghiêm trọng",
-            "Dấu hiệu xuất huyết (chảy máu) - hiếm"
-        ],
-        "precautions": [
-            "GIỮ NƯỚC, PHÙ - phổ biến, có thể nặng, điều trị với furosemide nếu cần",
-            "Tăng men gan - phổ biến, theo dõi ALT/AST, giảm liều hoặc ngừng nếu nặng",
-            "Myelosuppression - phổ biến, theo dõi CBC, giảm liều hoặc trì hoãn nếu nặng",
-            "Độc tim - hiếm nhưng nghiêm trọng, ngừng ngay nếu có suy tim",
-            "Tương tác với CYP3A4 inhibitors/inducers - điều chỉnh liều nếu cần",
-            "Tương tác với warfarin - dùng thuốc chống đông khác",
-            "Uống với thức ăn và một cốc nước lớn để giảm kích ứng dạ dày",
-            "Có thể phát triển kháng thuốc (mutations) → cần TKI thế hệ 2",
-            "Theo dõi đáp ứng điều trị (CHR, CCyR, MMR)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "18 giờ",
-            "onset": "1-2 tuần (tác dụng lâm sàng)",
-            "duration": "Dài (dùng hàng ngày)",
-            "protein_binding": "95%",
-            "metabolism": "Gan (CYP3A4, CYP2D6, CYP2C9, CYP2C19)",
-            "clearance": "Gan (chủ yếu), thận (một phần)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
-        "black_box_warnings": "Có thể gây độc tim (suy tim, rối loạn nhịp) - hiếm nhưng nghiêm trọng. Ngừng ngay nếu có suy tim. Có thể gây xuất huyết (chảy máu) - hiếm. Theo dõi chức năng tim và dấu hiệu xuất huyết.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "CYP3A4 Inhibitors mạnh (Ketoconazole, Itraconazole, Ritonavir)",
-                    "mechanism": "Ức chế CYP3A4, tăng nồng độ imatinib",
-                    "effect": "Tăng nồng độ imatinib, tăng nguy cơ tác dụng phụ",
-                    "management": "Thận trọng. Có thể cần giảm liều imatinib 50%. Theo dõi tác dụng phụ."
-                },
-                {
-                    "drug": "CYP3A4 Inducers mạnh (Rifampin, Carbamazepine, Phenytoin)",
-                    "mechanism": "Cảm ứng CYP3A4, giảm nồng độ imatinib",
-                    "effect": "Giảm nồng độ imatinib, giảm hiệu quả điều trị",
-                    "management": "Thận trọng. Có thể cần tăng liều imatinib. Theo dõi đáp ứng điều trị."
-                },
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Imatinib ức chế chuyển hóa warfarin",
-                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
-                    "management": "TRÁNH DÙNG warfarin. Dùng thuốc chống đông khác (LMWH, DOAC). Nếu bắt buộc, theo dõi INR chặt chẽ."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Simvastatin, Atorvastatin",
-                    "mechanism": "Imatinib ức chế CYP3A4, tăng nồng độ statin",
-                    "effect": "Tăng nồng độ statin, tăng nguy cơ tiêu cơ vân",
-                    "management": "Thận trọng. Có thể cần giảm liều statin hoặc dùng statin khác (pravastatin, rosuvastatin)."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng imatinib hoặc bất kỳ thành phần nào"
-            ],
-            "tương_đối": [
-                "Suy thận nặng (CrCl <30) - giảm liều 50%",
-                "Suy gan nặng - thận trọng, có thể cần giảm liều",
-                "Bệnh tim - tăng nguy cơ độc tim",
-                "Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "D",
-            "pregnancy_details": "Imatinib phân loại D - có thể gây hại cho thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ. Có thể gây dị tật thai nhi. Tránh thai hiệu quả trong và sau điều trị.",
-            "lactation": {
-                "safety": "Incompatible",
-                "details": "Imatinib bài tiết vào sữa mẹ. Không dùng khi cho con bú.",
-                "recommendation": "Không dùng khi cho con bú. Ngừng cho con bú hoặc ngừng thuốc."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng, có thể cần giảm liều",
-            "severe": "Thận trọng, giảm liều 25-50%",
-            "notes": "Imatinib chuyển hóa qua gan (CYP3A4, CYP2D6, CYP2C9, CYP2C19). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và độc tính chặt chẽ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Giữ nước, phù nặng",
-                "Buồn nôn, nôn nặng",
-                "Tiêu chảy nặng",
-                "Giảm bạch cầu, tiểu cầu nặng",
-                "Tăng men gan nặng",
-                "Độc tim (suy tim, rối loạn nhịp)",
-                "Xuất huyết (chảy máu)"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng ngay imatinib",
-                "Rửa dạ dày nếu mới uống <1 giờ",
-                "Than hoạt tính",
-                "Điều trị giữ nước: furosemide, hạn chế muối",
-                "Điều trị độc tim: hỗ trợ tim mạch nếu cần",
-                "Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu nếu cần",
-                "Theo dõi CBC, chức năng gan, chức năng thận, ECG"
-            ],
-            "monitoring": "CBC, chức năng gan, chức năng thận, ECG, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu độc tim"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Uống với thức ăn và một cốc nước lớn để giảm kích ứng dạ dày.",
-                "timing": "CML chronic: 400mg PO x 1 lần/ngày. CML accelerated/blast crisis: 600mg PO x 1 lần/ngày. GIST: 400mg PO x 1 lần/ngày. Uống đều đặn cùng một thời điểm mỗi ngày.",
-                "notes": "QUAN TRỌNG: 1) Uống với thức ăn và một cốc nước lớn, 2) Giữ nước, phù - phổ biến, 3) Theo dõi CBC và chức năng gan chặt chẽ, 4) Có thể phát triển kháng thuốc → cần TKI thế hệ 2, 5) Tương tác với CYP3A4 inhibitors/inducers."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Imatinib (Gleevec)",
-                "UpToDate - Imatinib: Drug Information",
-                "NCCN Guidelines - Chronic Myeloid Leukemia",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High - FDA-approved, revolutionized CML treatment, extensive clinical data"
-        }
-    },
-
     "Erlotinib": {
         "group": "Oncology - EGFR Tyrosine Kinase Inhibitor",
         "vietnamese_name": "Erlotinib, Tarceva",
@@ -534,7 +351,190 @@ TARGETED_THERAPY_TKIS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved, extensive clinical data, effective for EGFR mutation positive NSCLC"
         }
-    }
+    },
+    "Imatinib": {
+        "group": "Oncology - BCR-ABL Tyrosine Kinase Inhibitor",
+        "vietnamese_name": "Imatinib, Gleevec, Glivec",
+        "administration": ["PO"],
+        "indications": [
+            "Bệnh bạch cầu dòng tủy mạn (CML - Chronic Myeloid Leukemia) - tất cả các giai đoạn",
+            "Bệnh bạch cầu lympho cấp (ALL) - Ph+ (Philadelphia chromosome positive)",
+            "U mô đệm đường tiêu hóa (GIST - Gastrointestinal Stromal Tumor)",
+            "U xơ da (DFSP - Dermatofibrosarcoma Protuberans)",
+            "Hội chứng tăng bạch cầu ái toan (HES - Hypereosinophilic Syndrome)",
+            "U tế bào mast hệ thống (SM - Systemic Mastocytosis)"
+        ],
+        "contraindications": [
+            "Dị ứng imatinib hoặc bất kỳ thành phần nào"
+        ],
+        "dosage": {
+            "adult_cml_chronic": "400mg PO x 1 lần/ngày",
+            "adult_cml_accelerated": "600mg PO x 1 lần/ngày",
+            "adult_cml_blast_crisis": "600mg PO x 1 lần/ngày",
+            "adult_all_ph_positive": "600mg PO x 1 lần/ngày",
+            "adult_gist": "400mg PO x 1 lần/ngày",
+            "notes": "Uống với thức ăn và một cốc nước lớn để giảm kích ứng dạ dày. Có thể tăng liều nếu không đáp ứng. Imatinib là thuốc đầu tiên trong nhóm TKI, đã cách mạng hóa điều trị CML."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Giảm liều 50%"
+        },
+        "side_effects": [
+            "Giữ nước, phù (fluid retention, edema) - phổ biến",
+            "Buồn nôn, nôn - phổ biến",
+            "Tiêu chảy - phổ biến",
+            "Đau cơ, đau khớp - phổ biến",
+            "Phát ban - phổ biến",
+            "Mệt mỏi - phổ biến",
+            "Giảm bạch cầu, tiểu cầu (myelosuppression) - phổ biến",
+            "Tăng men gan (ALT, AST) - phổ biến",
+            "Độc tim (suy tim, rối loạn nhịp) - hiếm nhưng nghiêm trọng",
+            "Xuất huyết (chảy máu) - hiếm"
+        ],
+        "interactions": [
+            "CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir): tăng nồng độ imatinib",
+            "CYP3A4 inducers (rifampin, carbamazepine): giảm nồng độ imatinib",
+            "Warfarin: tăng nguy cơ chảy máu - dùng thuốc chống đông khác",
+            "Simvastatin, atorvastatin: tăng nguy cơ tiêu cơ vân"
+        ],
+        "pregnancy": "D",
+        "mechanism_of_action": "Imatinib là tyrosine kinase inhibitor (TKI), ức chế đặc hiệu BCR-ABL tyrosine kinase (fusion protein trong CML do translocation t(9;22) tạo ra Philadelphia chromosome). BCR-ABL là protein bất thường có hoạt tính tyrosine kinase liên tục, kích thích tăng sinh và ức chế apoptosis của tế bào bạch cầu, dẫn đến CML. Imatinib gắn với vị trí ATP-binding của BCR-ABL, ức chế hoạt tính kinase, ngăn chặn tín hiệu tăng sinh và khôi phục apoptosis. Imatinib cũng ức chế các tyrosine kinase khác: c-KIT (trong GIST), PDGFR (platelet-derived growth factor receptor). ĐẶC ĐIỂM: (1) Thuốc đầu tiên trong nhóm TKI, đã cách mạng hóa điều trị CML (từ 30% sống 5 năm → 90% sống 5 năm), (2) Uống hàng ngày, tiện lợi, (3) Tác dụng phụ thường nhẹ đến trung bình, (4) Có thể phát triển kháng thuốc (mutations) → cần TKI thế hệ 2 (dasatinib, nilotinib), (5) Hiệu quả cao với CML chronic phase (90% đạt complete cytogenetic response).",
+        "monitoring": [
+            "Công thức máu toàn phần (CBC) mỗi 2 tuần trong 3 tháng đầu, sau đó mỗi tháng - theo dõi myelosuppression",
+            "Chức năng gan (ALT, AST, bilirubin) mỗi tháng trong 3 tháng đầu, sau đó mỗi 3 tháng",
+            "Chức năng thận (creatinine, eGFR) trước và trong điều trị",
+            "Đáp ứng điều trị CML:",
+            "  - Complete hematologic response (CHR): CBC bình thường",
+            "  - Complete cytogenetic response (CCyR): không còn Philadelphia chromosome",
+            "  - Major molecular response (MMR): BCR-ABL <0.1%",
+            "Dấu hiệu giữ nước, phù (fluid retention) - phổ biến",
+            "Dấu hiệu độc tim (suy tim, rối loạn nhịp) - hiếm nhưng nghiêm trọng",
+            "Dấu hiệu xuất huyết (chảy máu) - hiếm"
+        ],
+        "precautions": [
+            "GIỮ NƯỚC, PHÙ - phổ biến, có thể nặng, điều trị với furosemide nếu cần",
+            "Tăng men gan - phổ biến, theo dõi ALT/AST, giảm liều hoặc ngừng nếu nặng",
+            "Myelosuppression - phổ biến, theo dõi CBC, giảm liều hoặc trì hoãn nếu nặng",
+            "Độc tim - hiếm nhưng nghiêm trọng, ngừng ngay nếu có suy tim",
+            "Tương tác với CYP3A4 inhibitors/inducers - điều chỉnh liều nếu cần",
+            "Tương tác với warfarin - dùng thuốc chống đông khác",
+            "Uống với thức ăn và một cốc nước lớn để giảm kích ứng dạ dày",
+            "Có thể phát triển kháng thuốc (mutations) → cần TKI thế hệ 2",
+            "Theo dõi đáp ứng điều trị (CHR, CCyR, MMR)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "18 giờ",
+            "onset": "1-2 tuần (tác dụng lâm sàng)",
+            "duration": "Dài (dùng hàng ngày)",
+            "protein_binding": "95%",
+            "metabolism": "Gan (CYP3A4, CYP2D6, CYP2C9, CYP2C19)",
+            "clearance": "Gan (chủ yếu), thận (một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Có thể gây độc tim (suy tim, rối loạn nhịp) - hiếm nhưng nghiêm trọng. Ngừng ngay nếu có suy tim. Có thể gây xuất huyết (chảy máu) - hiếm. Theo dõi chức năng tim và dấu hiệu xuất huyết.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP3A4 Inhibitors mạnh (Ketoconazole, Itraconazole, Ritonavir)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ imatinib",
+                    "effect": "Tăng nồng độ imatinib, tăng nguy cơ tác dụng phụ",
+                    "management": "Thận trọng. Có thể cần giảm liều imatinib 50%. Theo dõi tác dụng phụ."
+                },
+                {
+                    "drug": "CYP3A4 Inducers mạnh (Rifampin, Carbamazepine, Phenytoin)",
+                    "mechanism": "Cảm ứng CYP3A4, giảm nồng độ imatinib",
+                    "effect": "Giảm nồng độ imatinib, giảm hiệu quả điều trị",
+                    "management": "Thận trọng. Có thể cần tăng liều imatinib. Theo dõi đáp ứng điều trị."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Imatinib ức chế chuyển hóa warfarin",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "TRÁNH DÙNG warfarin. Dùng thuốc chống đông khác (LMWH, DOAC). Nếu bắt buộc, theo dõi INR chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Simvastatin, Atorvastatin",
+                    "mechanism": "Imatinib ức chế CYP3A4, tăng nồng độ statin",
+                    "effect": "Tăng nồng độ statin, tăng nguy cơ tiêu cơ vân",
+                    "management": "Thận trọng. Có thể cần giảm liều statin hoặc dùng statin khác (pravastatin, rosuvastatin)."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng imatinib hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - giảm liều 50%",
+                "Suy gan nặng - thận trọng, có thể cần giảm liều",
+                "Bệnh tim - tăng nguy cơ độc tim",
+                "Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Imatinib phân loại D - có thể gây hại cho thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ. Có thể gây dị tật thai nhi. Tránh thai hiệu quả trong và sau điều trị.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Imatinib bài tiết vào sữa mẹ. Không dùng khi cho con bú.",
+                "recommendation": "Không dùng khi cho con bú. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều 25-50%",
+            "notes": "Imatinib chuyển hóa qua gan (CYP3A4, CYP2D6, CYP2C9, CYP2C19). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và độc tính chặt chẽ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Giữ nước, phù nặng",
+                "Buồn nôn, nôn nặng",
+                "Tiêu chảy nặng",
+                "Giảm bạch cầu, tiểu cầu nặng",
+                "Tăng men gan nặng",
+                "Độc tim (suy tim, rối loạn nhịp)",
+                "Xuất huyết (chảy máu)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay imatinib",
+                "Rửa dạ dày nếu mới uống <1 giờ",
+                "Than hoạt tính",
+                "Điều trị giữ nước: furosemide, hạn chế muối",
+                "Điều trị độc tim: hỗ trợ tim mạch nếu cần",
+                "Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu nếu cần",
+                "Theo dõi CBC, chức năng gan, chức năng thận, ECG"
+            ],
+            "monitoring": "CBC, chức năng gan, chức năng thận, ECG, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu độc tim"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn và một cốc nước lớn để giảm kích ứng dạ dày.",
+                "timing": "CML chronic: 400mg PO x 1 lần/ngày. CML accelerated/blast crisis: 600mg PO x 1 lần/ngày. GIST: 400mg PO x 1 lần/ngày. Uống đều đặn cùng một thời điểm mỗi ngày.",
+                "notes": "QUAN TRỌNG: 1) Uống với thức ăn và một cốc nước lớn, 2) Giữ nước, phù - phổ biến, 3) Theo dõi CBC và chức năng gan chặt chẽ, 4) Có thể phát triển kháng thuốc → cần TKI thế hệ 2, 5) Tương tác với CYP3A4 inhibitors/inducers."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Imatinib (Gleevec)",
+                "UpToDate - Imatinib: Drug Information",
+                "NCCN Guidelines - Chronic Myeloid Leukemia",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, revolutionized CML treatment, extensive clinical data"
+        }
+    },
+
 }
 
 __all__ = ['TARGETED_THERAPY_TKIS_DRUGS']

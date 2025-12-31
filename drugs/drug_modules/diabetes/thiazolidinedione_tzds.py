@@ -264,7 +264,7 @@ THIAZOLIDINEDIONE_TZDS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs (controversial về nguy cơ tim mạch)"
         }
-    }
+    },
 }
 
 __all__ = ['THIAZOLIDINEDIONE_TZDS_DRUGS']

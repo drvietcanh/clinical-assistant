@@ -146,7 +146,7 @@ BENZODIAZEPINE_ANTAGONISTS_DRUGS = {
         'Lexicomp Online - Flumazenil Monograph',
         'Micromedex - Flumazenil Drug Information'], 'last_updated':
         '2025-02-03', 'evidence_level':
-        'A - Dựa trên FDA drug labels, ACLS guidelines, benzodiazepine overdose guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
+        'A - Dựa trên FDA drug labels, ACLS guidelines, benzodiazepine overdose guidelines, và dữ liệu lâm sàng từ nhiều nguồn',
         }}}
 
 __all__ = ['BENZODIAZEPINE_ANTAGONISTS_DRUGS']

@@ -127,6 +127,123 @@ ANTHELMINTICS_DRUGS = {
             'FDA Black Box Warning - Albendazole and Pregnancy (Category D)',
             'CDC Guidelines - Parasitic Infections'
         ]},
+    "Ivermectin": {'group': 'Infectious Disease - Anthelmintic', 'vietnamese_name':
+        'Ivermectin', 'administration': ['PO'], 'indications': [
+        'Strongyloidiasis', 'Onchocerciasis', 'Ấu trùng di trú da', 'Ghẻ/chấy (off-label)']
+        , 'contraindications': ['Dị ứng ivermectin', 'Trẻ <15kg (thiếu dữ liệu)'],
+        'dosage': {'adult_strongyloides': '200 mcg/kg PO x 1, lặp lại sau 2 tuần nếu cần',
+        'adult_onchocerciasis': '150 mcg/kg PO mỗi 3-12 tháng', 'adult_scabies':
+        '200 mcg/kg PO, lặp lại sau 7-14 ngày (off-label)', 'notes':
+        'Uống lúc bụng đói với nước; cân nặng để tính liều'},
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Không đổi'}, 'side_effects': [
+        'Chóng mặt, mệt mỏi', 'Buồn nôn, tiêu chảy', 'Phản ứng Mazzotti (ngứa, ban, sốt) khi điều trị onchocerciasis'
+        ], 'interactions': ['Warfarin: tăng INR hiếm gặp', 'Thuốc ức chế P-gp: thận trọng (nguy cơ độc thần kinh)']
+        , 'pregnancy': 'C - tránh nếu có thể', 'mechanism_of_action':
+        'Gắn kênh chloride glutamate-gated của ký sinh trùng, tăng dòng chloride, gây liệt và chết ký sinh trùng; không qua hàng máu não người nên an toàn với người.'
+        , 'monitoring': [
+        'Triệu chứng lâm sàng và xét nghiệm phân (strongyloides)',
+        'Theo dõi phản ứng Mazzotti (ngứa, phát ban, sốt) khi điều trị onchocerciasis',
+        'Cân nhắc công thức máu và chức năng gan nếu điều trị nhiều đợt'],
+        'precautions': [
+        'Thận trọng đồng nhiễm Loa loa (nguy cơ viêm não do ấu trùng chết)',
+        'Tránh lái xe nếu chóng mặt/mệt', 'Không dùng cho trẻ <15kg do thiếu dữ liệu'
+        ], 'pharmacokinetics': {'half_life': '12-36 giờ', 'onset': '4-6 giờ',
+        'duration': 'Cao nhất trong 1-2 ngày', 'protein_binding': '93%',
+        'clearance': 'Chuyển hóa gan (CYP3A4), thải trừ chủ yếu qua phân'},
+        'storage': 'Bảo quản nhiệt độ phòng, tránh ẩm', 'black_box_warnings':
+        None, 'drug_interactions': {'moderate': [{'drug': 'Warfarin', 'mechanism':
+        'Tăng INR chưa rõ cơ chế', 'effect': 'Tăng nguy cơ chảy máu',
+        'management': 'Theo dõi INR khi bắt đầu/dừng ivermectin'}]}, 
+        'contraindications': {'tuyệt_đối': ['Dị ứng ivermectin'], 'tương_đối': [
+        'Trẻ <15kg', 'Đồng nhiễm Loa loa (nguy cơ biến chứng thần kinh)']},
+        'contraindications_detail': {'tuyệt_đối': ['Dị ứng ivermectin'], 'tương_đối': [
+        'Trẻ <15kg', 'Đồng nhiễm Loa loa (nguy cơ biến chứng thần kinh)']},
+        'black_box_warnings': None,
+        'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        'Tránh nếu có thể; dùng khi lợi ích vượt trội nguy cơ', 'lactation': {
+        'safety': 'Thấp', 'details':
+        'Bài tiết ít vào sữa; WHO cho phép dùng liều đơn ở phụ nữ cho con bú >1 tuần tuổi'
+        , 'recommendation': 'Có thể dùng nếu cần; theo dõi trẻ sơ sinh'}},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate': 'Thận trọng',
+        'severe': 'Thiếu dữ liệu, thận trọng tối đa'}, 'overdose_management': {
+        'symptoms': ['Chóng mặt, nôn', 'Hạ huyết áp, ngủ gà', 'Co giật hiếm'],
+        'antidote': 'Không có', 'treatment': ['Hỗ trợ, than hoạt nếu sớm',
+        'Theo dõi huyết áp, hô hấp', 'Điều trị triệu chứng']},
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có thuốc giải độc đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ, than hoạt nếu sớm, theo dõi huyết áp, hô hấp, và điều trị triệu chứng.'}, 'administration_instructions': {
+        'oral': {'with_food': 'Uống lúc đói với nước (tăng hấp thu nhẹ)',
+        'timing': 'Uống 1 lần; lặp lại theo chỉ định', 'notes':
+        'Tính liều theo cân nặng, làm tròn theo viên 3mg/6mg nếu cần'}},
+        'references': {'primary_sources': [
+        'WHO guidelines for strongyloidiasis/onchocerciasis',
+        'UpToDate - Ivermectin', 'CDC DPDx - Ivermectin'],
+        'last_updated': '2025-02-06', 'evidence_level': 'High - WHO/CDC/UpToDate'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['Mazzotti reaction (itching, rash, fever) when treating onchocerciasis', 'Neurological toxicity (rare, with P-gp inhibitors)'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Clinical symptoms and stool examination (for strongyloidiasis)', 'Mazzotti reaction (itching, rash, fever) when treating onchocerciasis', 'INR if co-administered with warfarin', 'CBC and hepatic function if multiple courses']
+        },
+        'guideline_tags': [
+            'WHO Guidelines - Strongyloidiasis Treatment',
+            'WHO Guidelines - Onchocerciasis Treatment',
+            'CDC Guidelines - Parasitic Infections',
+            'FDA Drug Information - Ivermectin'
+        ]},
+    "Levamisole": {'group': 'Infectious Disease - Anthelmintic', 'vietnamese_name':
+        'Levamisole', 'administration': ['PO'], 'indications': [
+        'Tẩy giun (giun đũa, giun móc) - ít dùng hiện nay'], 'contraindications':
+        ['Dị ứng levamisole', 'Tiền sử giảm bạch cầu hạt', 'Có thai'],
+        'dosage': {'adult_roundworm': '150mg x 1 lần (đơn liều) sau ăn tối',
+        'notes': 'Ít dùng do nguy cơ giảm bạch cầu hạt; cân nhắc thuốc khác an toàn hơn'},
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Thận trọng'}, 'side_effects': [
+        'Buồn nôn, nôn, đau bụng', 'Nhức đầu, chóng mặt', 'Vị kim loại',
+        'Giảm bạch cầu hạt hiếm nhưng nghiêm trọng'], 'interactions': [
+        'Clozapine: tăng nguy cơ giảm bạch cầu hạt', 'Warfarin: có thể tăng INR'],
+        'pregnancy': 'C - tránh dùng', 'mechanism_of_action':
+        'Kích thích hạch thần kinh cơ của giun, gây liệt cơ và tống xuất giun; có tác dụng điều hòa miễn dịch nhẹ.'
+        , 'monitoring': [
+        'Công thức máu nếu dùng >1 liều hoặc có triệu chứng nhiễm trùng',
+        'Triệu chứng thần kinh/tiêu hóa'], 'precautions': [
+        'Nguy cơ giảm bạch cầu hạt: ngừng ngay nếu sốt/đau họng',
+        'Ít dùng; ưu tiên albendazole/mebendazole nếu không chống chỉ định'],
+        'pharmacokinetics': {'half_life': '3-6 giờ', 'onset': '1-2 giờ',
+        'duration': '12-24 giờ', 'protein_binding': '~20%', 'clearance':
+        'Chuyển hóa gan, thải trừ qua thận'}, 'storage':
+        'Bảo quản nhiệt độ phòng, tránh ẩm', 'black_box_warnings': None,
+        'drug_interactions': {'moderate': [{'drug': 'Clozapine', 'mechanism':
+        'Tăng nguy cơ giảm bạch cầu hạt', 'effect': 'Tăng nguy cơ nhiễm trùng',
+        'management': 'Tránh phối hợp'}, {'drug': 'Warfarin', 'mechanism':
+        'Chưa rõ, có thể tăng INR', 'effect': 'Tăng nguy cơ chảy máu',
+        'management': 'Theo dõi INR nếu phối hợp'}]},         'contraindications': {
+        'tuyệt_đối': ['Dị ứng levamisole', 'Tiền sử giảm bạch cầu hạt', 'Có thai'],
+        'tương_đối': ['Suy gan, suy thận - thận trọng']},
+        'contraindications_detail': {
+        'tuyệt_đối': ['Dị ứng levamisole', 'Tiền sử giảm bạch cầu hạt', 'Có thai'],
+        'tương_đối': ['Suy gan, suy thận - thận trọng']},
+        'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        'Tránh dùng; cân nhắc thuốc khác an toàn hơn', 'lactation': {
+        'safety': 'Unknown', 'details': 'Không có dữ liệu; tránh dùng nếu có thể',
+        'recommendation': 'Nếu buộc dùng, theo dõi trẻ dấu hiệu độc tính'}},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate': 'Thận trọng',
+        'severe': 'Tránh nếu có thể'}, 'overdose_management': {
+        'symptoms': ['Buồn nôn, nôn, chóng mặt', 'Co giật hiếm'],
+        'antidote': 'Không có', 'treatment': ['Điều trị hỗ trợ, than hoạt nếu sớm',
+        'Theo dõi CBC, dấu hiệu nhiễm trùng']},         'reversal_agents': {
+        'available': False, 'agents': [], 'notes': 'Không có thuốc giải độc đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ, than hoạt nếu sớm, theo dõi CBC và dấu hiệu nhiễm trùng.'},
+        'administration_instructions': {'oral': {'with_food':
+        'Uống sau ăn tối để giảm kích ứng dạ dày', 'timing': 'Liều đơn',
+        'notes': 'Theo dõi CBC nếu phải lặp lại hoặc nghi ngờ giảm bạch cầu'}},
+        'references': {'primary_sources': [
+        'WHO deworming guideline (historical use)', 'UpToDate - Levamisole'],
+        'last_updated': '2025-02-06', 'evidence_level': 'Moderate - dữ liệu hạn chế hiện nay'},
+        "black_box_warnings": None,
     "Mebendazole": {'group': 'Infectious Disease - Anthelmintic', 'vietnamese_name':
         'Mebendazole, Vermox', 'administration': ['PO'], 'indications': [
         'Giun sán (giun đũa, giun móc, giun tóc, giun kim)', 'Sán dây',
@@ -278,123 +395,6 @@ ANTHELMINTICS_DRUGS = {
         'primary_sources': ['WHO schistosomiasis treatment guideline',
         'UpToDate - Praziquantel', 'FDA label'], 'last_updated': '2025-02-06',
         'evidence_level': 'High - hướng dẫn WHO/FDA'}},
-    "Ivermectin": {'group': 'Infectious Disease - Anthelmintic', 'vietnamese_name':
-        'Ivermectin', 'administration': ['PO'], 'indications': [
-        'Strongyloidiasis', 'Onchocerciasis', 'Ấu trùng di trú da', 'Ghẻ/chấy (off-label)']
-        , 'contraindications': ['Dị ứng ivermectin', 'Trẻ <15kg (thiếu dữ liệu)'],
-        'dosage': {'adult_strongyloides': '200 mcg/kg PO x 1, lặp lại sau 2 tuần nếu cần',
-        'adult_onchocerciasis': '150 mcg/kg PO mỗi 3-12 tháng', 'adult_scabies':
-        '200 mcg/kg PO, lặp lại sau 7-14 ngày (off-label)', 'notes':
-        'Uống lúc bụng đói với nước; cân nặng để tính liều'},
-        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
-        'under_30': 'Không đổi'}, 'side_effects': [
-        'Chóng mặt, mệt mỏi', 'Buồn nôn, tiêu chảy', 'Phản ứng Mazzotti (ngứa, ban, sốt) khi điều trị onchocerciasis'
-        ], 'interactions': ['Warfarin: tăng INR hiếm gặp', 'Thuốc ức chế P-gp: thận trọng (nguy cơ độc thần kinh)']
-        , 'pregnancy': 'C - tránh nếu có thể', 'mechanism_of_action':
-        'Gắn kênh chloride glutamate-gated của ký sinh trùng, tăng dòng chloride, gây liệt và chết ký sinh trùng; không qua hàng máu não người nên an toàn với người.'
-        , 'monitoring': [
-        'Triệu chứng lâm sàng và xét nghiệm phân (strongyloides)',
-        'Theo dõi phản ứng Mazzotti (ngứa, phát ban, sốt) khi điều trị onchocerciasis',
-        'Cân nhắc công thức máu và chức năng gan nếu điều trị nhiều đợt'],
-        'precautions': [
-        'Thận trọng đồng nhiễm Loa loa (nguy cơ viêm não do ấu trùng chết)',
-        'Tránh lái xe nếu chóng mặt/mệt', 'Không dùng cho trẻ <15kg do thiếu dữ liệu'
-        ], 'pharmacokinetics': {'half_life': '12-36 giờ', 'onset': '4-6 giờ',
-        'duration': 'Cao nhất trong 1-2 ngày', 'protein_binding': '93%',
-        'clearance': 'Chuyển hóa gan (CYP3A4), thải trừ chủ yếu qua phân'},
-        'storage': 'Bảo quản nhiệt độ phòng, tránh ẩm', 'black_box_warnings':
-        None, 'drug_interactions': {'moderate': [{'drug': 'Warfarin', 'mechanism':
-        'Tăng INR chưa rõ cơ chế', 'effect': 'Tăng nguy cơ chảy máu',
-        'management': 'Theo dõi INR khi bắt đầu/dừng ivermectin'}]}, 
-        'contraindications': {'tuyệt_đối': ['Dị ứng ivermectin'], 'tương_đối': [
-        'Trẻ <15kg', 'Đồng nhiễm Loa loa (nguy cơ biến chứng thần kinh)']},
-        'contraindications_detail': {'tuyệt_đối': ['Dị ứng ivermectin'], 'tương_đối': [
-        'Trẻ <15kg', 'Đồng nhiễm Loa loa (nguy cơ biến chứng thần kinh)']},
-        'black_box_warnings': None,
-        'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
-        'Tránh nếu có thể; dùng khi lợi ích vượt trội nguy cơ', 'lactation': {
-        'safety': 'Thấp', 'details':
-        'Bài tiết ít vào sữa; WHO cho phép dùng liều đơn ở phụ nữ cho con bú >1 tuần tuổi'
-        , 'recommendation': 'Có thể dùng nếu cần; theo dõi trẻ sơ sinh'}},
-        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate': 'Thận trọng',
-        'severe': 'Thiếu dữ liệu, thận trọng tối đa'}, 'overdose_management': {
-        'symptoms': ['Chóng mặt, nôn', 'Hạ huyết áp, ngủ gà', 'Co giật hiếm'],
-        'antidote': 'Không có', 'treatment': ['Hỗ trợ, than hoạt nếu sớm',
-        'Theo dõi huyết áp, hô hấp', 'Điều trị triệu chứng']},
-        'reversal_agents': {'available': False, 'agents': [], 'notes':
-        'Không có thuốc giải độc đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ, than hoạt nếu sớm, theo dõi huyết áp, hô hấp, và điều trị triệu chứng.'}, 'administration_instructions': {
-        'oral': {'with_food': 'Uống lúc đói với nước (tăng hấp thu nhẹ)',
-        'timing': 'Uống 1 lần; lặp lại theo chỉ định', 'notes':
-        'Tính liều theo cân nặng, làm tròn theo viên 3mg/6mg nếu cần'}},
-        'references': {'primary_sources': [
-        'WHO guidelines for strongyloidiasis/onchocerciasis',
-        'UpToDate - Ivermectin', 'CDC DPDx - Ivermectin'],
-        'last_updated': '2025-02-06', 'evidence_level': 'High - WHO/CDC/UpToDate'},
-        'risk_flags': {
-            'high_alert': False,
-            'narrow_therapeutic_index': False,
-            'bleeding_risk': False,
-            'organ_toxicity': ['Mazzotti reaction (itching, rash, fever) when treating onchocerciasis', 'Neurological toxicity (rare, with P-gp inhibitors)'],
-            'qt_prolongation': False,
-            'hepatotoxicity': False,
-            'nephrotoxicity': False,
-            'requires_monitoring': ['Clinical symptoms and stool examination (for strongyloidiasis)', 'Mazzotti reaction (itching, rash, fever) when treating onchocerciasis', 'INR if co-administered with warfarin', 'CBC and hepatic function if multiple courses']
-        },
-        'guideline_tags': [
-            'WHO Guidelines - Strongyloidiasis Treatment',
-            'WHO Guidelines - Onchocerciasis Treatment',
-            'CDC Guidelines - Parasitic Infections',
-            'FDA Drug Information - Ivermectin'
-        ]},
-    "Levamisole": {'group': 'Infectious Disease - Anthelmintic', 'vietnamese_name':
-        'Levamisole', 'administration': ['PO'], 'indications': [
-        'Tẩy giun (giun đũa, giun móc) - ít dùng hiện nay'], 'contraindications':
-        ['Dị ứng levamisole', 'Tiền sử giảm bạch cầu hạt', 'Có thai'],
-        'dosage': {'adult_roundworm': '150mg x 1 lần (đơn liều) sau ăn tối',
-        'notes': 'Ít dùng do nguy cơ giảm bạch cầu hạt; cân nhắc thuốc khác an toàn hơn'},
-        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
-        'under_30': 'Thận trọng'}, 'side_effects': [
-        'Buồn nôn, nôn, đau bụng', 'Nhức đầu, chóng mặt', 'Vị kim loại',
-        'Giảm bạch cầu hạt hiếm nhưng nghiêm trọng'], 'interactions': [
-        'Clozapine: tăng nguy cơ giảm bạch cầu hạt', 'Warfarin: có thể tăng INR'],
-        'pregnancy': 'C - tránh dùng', 'mechanism_of_action':
-        'Kích thích hạch thần kinh cơ của giun, gây liệt cơ và tống xuất giun; có tác dụng điều hòa miễn dịch nhẹ.'
-        , 'monitoring': [
-        'Công thức máu nếu dùng >1 liều hoặc có triệu chứng nhiễm trùng',
-        'Triệu chứng thần kinh/tiêu hóa'], 'precautions': [
-        'Nguy cơ giảm bạch cầu hạt: ngừng ngay nếu sốt/đau họng',
-        'Ít dùng; ưu tiên albendazole/mebendazole nếu không chống chỉ định'],
-        'pharmacokinetics': {'half_life': '3-6 giờ', 'onset': '1-2 giờ',
-        'duration': '12-24 giờ', 'protein_binding': '~20%', 'clearance':
-        'Chuyển hóa gan, thải trừ qua thận'}, 'storage':
-        'Bảo quản nhiệt độ phòng, tránh ẩm', 'black_box_warnings': None,
-        'drug_interactions': {'moderate': [{'drug': 'Clozapine', 'mechanism':
-        'Tăng nguy cơ giảm bạch cầu hạt', 'effect': 'Tăng nguy cơ nhiễm trùng',
-        'management': 'Tránh phối hợp'}, {'drug': 'Warfarin', 'mechanism':
-        'Chưa rõ, có thể tăng INR', 'effect': 'Tăng nguy cơ chảy máu',
-        'management': 'Theo dõi INR nếu phối hợp'}]},         'contraindications': {
-        'tuyệt_đối': ['Dị ứng levamisole', 'Tiền sử giảm bạch cầu hạt', 'Có thai'],
-        'tương_đối': ['Suy gan, suy thận - thận trọng']},
-        'contraindications_detail': {
-        'tuyệt_đối': ['Dị ứng levamisole', 'Tiền sử giảm bạch cầu hạt', 'Có thai'],
-        'tương_đối': ['Suy gan, suy thận - thận trọng']},
-        'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
-        'Tránh dùng; cân nhắc thuốc khác an toàn hơn', 'lactation': {
-        'safety': 'Unknown', 'details': 'Không có dữ liệu; tránh dùng nếu có thể',
-        'recommendation': 'Nếu buộc dùng, theo dõi trẻ dấu hiệu độc tính'}},
-        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate': 'Thận trọng',
-        'severe': 'Tránh nếu có thể'}, 'overdose_management': {
-        'symptoms': ['Buồn nôn, nôn, chóng mặt', 'Co giật hiếm'],
-        'antidote': 'Không có', 'treatment': ['Điều trị hỗ trợ, than hoạt nếu sớm',
-        'Theo dõi CBC, dấu hiệu nhiễm trùng']},         'reversal_agents': {
-        'available': False, 'agents': [], 'notes': 'Không có thuốc giải độc đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ, than hoạt nếu sớm, theo dõi CBC và dấu hiệu nhiễm trùng.'},
-        'administration_instructions': {'oral': {'with_food':
-        'Uống sau ăn tối để giảm kích ứng dạ dày', 'timing': 'Liều đơn',
-        'notes': 'Theo dõi CBC nếu phải lặp lại hoặc nghi ngờ giảm bạch cầu'}},
-        'references': {'primary_sources': [
-        'WHO deworming guideline (historical use)', 'UpToDate - Levamisole'],
-        'last_updated': '2025-02-06', 'evidence_level': 'Moderate - dữ liệu hạn chế hiện nay'},
-        "black_box_warnings": None,
 }}
 
 __all__ = ['ANTHELMINTICS_DRUGS']

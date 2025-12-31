@@ -186,7 +186,7 @@ VINCA_ALKALOIDS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved, extensive clinical data, widely used"
         }
-    }
+    },
 }
 
 __all__ = ['VINCA_ALKALOIDS_DRUGS']

@@ -127,7 +127,7 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
         'UpToDate - Codeine: Drug information', 'Lexicomp - Codeine monograph',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-06', 'evidence_level':
-        'High - FDA-approved, extensive clinical data. Note: efficacy depends on CYP2D6 genotype'
+        'High - FDA-approved, extensive clinical data. Note: efficacy depends on CYP2D6 genotype',
         }}}
 
 __all__ = ['OPIOID_AGONIST_WEAKS_DRUGS']

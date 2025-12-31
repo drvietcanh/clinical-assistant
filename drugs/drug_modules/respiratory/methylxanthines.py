@@ -4,6 +4,176 @@ Bronchodilators for asthma and COPD
 """
 
 METHYLXANTHINES_DRUGS = {
+    "Aminophylline": {
+        "group": "Respiratory - Methylxanthine (Bronchodilator)",
+        "vietnamese_name": "Aminophylline, Theophylline ethylenediamine",
+        "administration": ["IV"],
+        "indications": [
+            "Hen suyễn cấp tính",
+            "COPD cấp tính",
+            "Bronchospasm cấp tính",
+            "Apnea of prematurity (trẻ sơ sinh)"
+        ],
+        "contraindications": [
+            "Dị ứng theophylline hoặc ethylenediamine",
+            "Rối loạn nhịp tim nặng",
+            "Động kinh không kiểm soát",
+            "Loét dạ dày tá tràng hoạt động"
+        ],
+        "dosage": {
+            "adult_loading": "5-6mg/kg IV (tính theo theophylline) trong 20-30 phút",
+            "adult_maintenance": "0.4-0.6mg/kg/giờ (tính theo theophylline) truyền liên tục",
+            "pediatric_loading": "5mg/kg IV (tính theo theophylline)",
+            "pediatric_maintenance": "0.5-1mg/kg/giờ IV (tính theo theophylline)",
+            "notes": "Aminophylline = theophylline + ethylenediamine (2:1). 1g aminophylline = 800mg theophylline. Cần tính liều theo theophylline. CẦN TDM."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50%",
+            "under_30": "Giảm liều 50-75%"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn (phổ biến ở nồng độ cao)",
+            "Nhức đầu",
+            "Run, bồn chồn",
+            "Tim đập nhanh, rối loạn nhịp tim",
+            "Co giật (ở nồng độ rất cao)",
+            "Phản ứng dị ứng với ethylenediamine (hiếm)"
+        ],
+        "interactions": [
+            "Ciprofloxacin, Erythromycin, Clarithromycin: tăng nồng độ theophylline",
+            "Cimetidine: tăng nồng độ theophylline",
+            "Rifampin: giảm nồng độ theophylline",
+            "Beta-2 agonists: tăng tác dụng phụ"
+        ],
+        "pregnancy": "C - Thận trọng trong thai kỳ",
+        "mechanism_of_action": "Aminophylline là phức hợp của theophylline và ethylenediamine (tỷ lệ 2:1), được chuyển hóa thành theophylline trong cơ thể. 1g aminophylline tương đương 800mg theophylline. Cơ chế tác dụng giống theophylline: ức chế phosphodiesterase (PDE), làm tăng cAMP và cGMP, gây giãn phế quản. Đối kháng adenosine receptors. Aminophylline chỉ có dạng IV, dùng trong cấp cứu. Cần tính liều theo theophylline (aminophylline = theophylline × 1.25).",
+        "monitoring": [
+            "Nồng độ theophylline trong máu (TDM) - Target 10-20 mcg/mL",
+            "Dấu hiệu độc tính: buồn nôn, nôn, run, tim đập nhanh, co giật",
+            "Nhịp tim, huyết áp",
+            "Chức năng gan, thận",
+            "Triệu chứng lâm sàng (cải thiện khó thở)"
+        ],
+        "precautions": [
+            "CẦN TDM - therapeutic window hẹp (10-20 mcg/mL)",
+            "Tính liều theo theophylline: aminophylline = theophylline × 1.25",
+            "KHÔNG truyền nhanh (nguy cơ độc tính)",
+            "Nhiều yếu tố ảnh hưởng clearance",
+            "Nhiều tương tác thuốc",
+            "Theo dõi sát dấu hiệu độc tính"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Giống theophylline (4-8 giờ người lớn, thay đổi tùy yếu tố)",
+            "onset": "15-30 phút (IV)",
+            "duration": "6-12 giờ",
+            "protein_binding": "40%",
+            "metabolism": "Chuyển hóa thành theophylline, sau đó chuyển hóa ở gan",
+            "clearance": "Gan (chủ yếu), thận (một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch IV: bảo quản theo hướng dẫn nhà sản xuất.",
+        "black_box_warnings": "Therapeutic window hẹp. Nồng độ >20 mcg/mL: tăng nguy cơ độc tính. Nồng độ >30 mcg/mL: nguy cơ co giật, tử vong. CẦN TDM.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Ciprofloxacin, Enoxacin",
+                    "mechanism": "Ức chế chuyển hóa theophylline",
+                    "effect": "Tăng nồng độ theophylline 2-3 lần",
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: giảm liều 30-50%, TDM chặt chẽ."
+                },
+                {
+                    "drug": "Erythromycin, Clarithromycin, Cimetidine",
+                    "mechanism": "Ức chế chuyển hóa theophylline",
+                    "effect": "Tăng nồng độ theophylline",
+                    "management": "Giảm liều 25-50%, TDM."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng theophylline hoặc ethylenediamine",
+                "Rối loạn nhịp tim nặng",
+                "Động kinh không kiểm soát"
+            ],
+            "tương_đối": [
+                "Suy gan/thận nặng",
+                "Suy tim",
+                "Nhiều tương tác thuốc"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Bài tiết vào sữa mẹ. Thận trọng.",
+                "recommendation": "Có thể dùng khi cho con bú, thận trọng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Giảm liều 25%",
+            "moderate": "Giảm liều 50%",
+            "severe": "Giảm liều 75% hoặc tránh dùng",
+            "notes": "Chuyển hóa ở gan. Suy gan làm giảm clearance."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Run, tim đập nhanh",
+                "Co giật (ở nồng độ >30 mcg/mL)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay aminophylline",
+                "TDM",
+                "Điều trị co giật: Benzodiazepine",
+                "Thanh lọc máu nếu nồng độ cao (>40 mcg/mL)"
+            ],
+            "monitoring": "Nồng độ theophylline, dấu hiệu sinh tồn, dấu hiệu thần kinh"
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng theophylline hoặc ethylenediamine",
+                "Rối loạn nhịp tim nặng (rung nhĩ, rung thất)",
+                "Động kinh không kiểm soát",
+                "Loét dạ dày tá tràng hoạt động"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - giảm clearance, tăng nguy cơ độc tính",
+                "Suy thận nặng - giảm clearance nhẹ",
+                "Suy tim - giảm clearance",
+                "Sốt cao - có thể giảm clearance",
+                "Trẻ sơ sinh - clearance chậm, half-life dài",
+                "Người già - clearance giảm",
+                "Dùng với ciprofloxacin, erythromycin, cimetidine - tăng nồng độ"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị quá liều aminophylline chủ yếu là hỗ trợ và thanh lọc máu (hemodialysis, hemoperfusion) ở nồng độ cao (>40 mcg/mL theophylline)."},
+        "administration_instructions": {
+            "oral": {
+                "with_food": "N/A - Chỉ có dạng IV",
+                "timing": "N/A"
+            },
+            "iv": {
+                "reconstitution": "Pha với NaCl 0.9% hoặc D5W",
+                "infusion_rate": "Loading: 5-6mg/kg (theophylline) trong 20-30 phút. Maintenance: 0.4-0.6mg/kg/giờ truyền liên tục. KHÔNG truyền nhanh.",
+                "compatibility": ["NaCl 0.9%", "D5W"],
+                "incompatibility": ["Không pha với các thuốc khác"],
+                "notes": "CẦN TDM. Tính liều theo theophylline (aminophylline = theophylline × 1.25)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Aminophylline",
+                "UpToDate - Aminophylline: Drug information",
+                "American Thoracic Society guidelines"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, extensive clinical experience"
+        }
+    },
     "Theophylline": {
         "group": "Respiratory - Methylxanthine (Bronchodilator)",
         "vietnamese_name": "Theophylline, Theolair, Uniphyl",
@@ -232,176 +402,6 @@ METHYLXANTHINES_DRUGS = {
         }
     },
     
-    "Aminophylline": {
-        "group": "Respiratory - Methylxanthine (Bronchodilator)",
-        "vietnamese_name": "Aminophylline, Theophylline ethylenediamine",
-        "administration": ["IV"],
-        "indications": [
-            "Hen suyễn cấp tính",
-            "COPD cấp tính",
-            "Bronchospasm cấp tính",
-            "Apnea of prematurity (trẻ sơ sinh)"
-        ],
-        "contraindications": [
-            "Dị ứng theophylline hoặc ethylenediamine",
-            "Rối loạn nhịp tim nặng",
-            "Động kinh không kiểm soát",
-            "Loét dạ dày tá tràng hoạt động"
-        ],
-        "dosage": {
-            "adult_loading": "5-6mg/kg IV (tính theo theophylline) trong 20-30 phút",
-            "adult_maintenance": "0.4-0.6mg/kg/giờ (tính theo theophylline) truyền liên tục",
-            "pediatric_loading": "5mg/kg IV (tính theo theophylline)",
-            "pediatric_maintenance": "0.5-1mg/kg/giờ IV (tính theo theophylline)",
-            "notes": "Aminophylline = theophylline + ethylenediamine (2:1). 1g aminophylline = 800mg theophylline. Cần tính liều theo theophylline. CẦN TDM."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Giảm liều 25-50%",
-            "under_30": "Giảm liều 50-75%"
-        },
-        "side_effects": [
-            "Buồn nôn, nôn (phổ biến ở nồng độ cao)",
-            "Nhức đầu",
-            "Run, bồn chồn",
-            "Tim đập nhanh, rối loạn nhịp tim",
-            "Co giật (ở nồng độ rất cao)",
-            "Phản ứng dị ứng với ethylenediamine (hiếm)"
-        ],
-        "interactions": [
-            "Ciprofloxacin, Erythromycin, Clarithromycin: tăng nồng độ theophylline",
-            "Cimetidine: tăng nồng độ theophylline",
-            "Rifampin: giảm nồng độ theophylline",
-            "Beta-2 agonists: tăng tác dụng phụ"
-        ],
-        "pregnancy": "C - Thận trọng trong thai kỳ",
-        "mechanism_of_action": "Aminophylline là phức hợp của theophylline và ethylenediamine (tỷ lệ 2:1), được chuyển hóa thành theophylline trong cơ thể. 1g aminophylline tương đương 800mg theophylline. Cơ chế tác dụng giống theophylline: ức chế phosphodiesterase (PDE), làm tăng cAMP và cGMP, gây giãn phế quản. Đối kháng adenosine receptors. Aminophylline chỉ có dạng IV, dùng trong cấp cứu. Cần tính liều theo theophylline (aminophylline = theophylline × 1.25).",
-        "monitoring": [
-            "Nồng độ theophylline trong máu (TDM) - Target 10-20 mcg/mL",
-            "Dấu hiệu độc tính: buồn nôn, nôn, run, tim đập nhanh, co giật",
-            "Nhịp tim, huyết áp",
-            "Chức năng gan, thận",
-            "Triệu chứng lâm sàng (cải thiện khó thở)"
-        ],
-        "precautions": [
-            "CẦN TDM - therapeutic window hẹp (10-20 mcg/mL)",
-            "Tính liều theo theophylline: aminophylline = theophylline × 1.25",
-            "KHÔNG truyền nhanh (nguy cơ độc tính)",
-            "Nhiều yếu tố ảnh hưởng clearance",
-            "Nhiều tương tác thuốc",
-            "Theo dõi sát dấu hiệu độc tính"
-        ],
-        "pharmacokinetics": {
-            "half_life": "Giống theophylline (4-8 giờ người lớn, thay đổi tùy yếu tố)",
-            "onset": "15-30 phút (IV)",
-            "duration": "6-12 giờ",
-            "protein_binding": "40%",
-            "metabolism": "Chuyển hóa thành theophylline, sau đó chuyển hóa ở gan",
-            "clearance": "Gan (chủ yếu), thận (một phần)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch IV: bảo quản theo hướng dẫn nhà sản xuất.",
-        "black_box_warnings": "Therapeutic window hẹp. Nồng độ >20 mcg/mL: tăng nguy cơ độc tính. Nồng độ >30 mcg/mL: nguy cơ co giật, tử vong. CẦN TDM.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Ciprofloxacin, Enoxacin",
-                    "mechanism": "Ức chế chuyển hóa theophylline",
-                    "effect": "Tăng nồng độ theophylline 2-3 lần",
-                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: giảm liều 30-50%, TDM chặt chẽ."
-                },
-                {
-                    "drug": "Erythromycin, Clarithromycin, Cimetidine",
-                    "mechanism": "Ức chế chuyển hóa theophylline",
-                    "effect": "Tăng nồng độ theophylline",
-                    "management": "Giảm liều 25-50%, TDM."
-                }
-            ],
-            "moderate": [],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng theophylline hoặc ethylenediamine",
-                "Rối loạn nhịp tim nặng",
-                "Động kinh không kiểm soát"
-            ],
-            "tương_đối": [
-                "Suy gan/thận nặng",
-                "Suy tim",
-                "Nhiều tương tác thuốc"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Category C. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Bài tiết vào sữa mẹ. Thận trọng.",
-                "recommendation": "Có thể dùng khi cho con bú, thận trọng."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Giảm liều 25%",
-            "moderate": "Giảm liều 50%",
-            "severe": "Giảm liều 75% hoặc tránh dùng",
-            "notes": "Chuyển hóa ở gan. Suy gan làm giảm clearance."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Buồn nôn, nôn",
-                "Run, tim đập nhanh",
-                "Co giật (ở nồng độ >30 mcg/mL)"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Ngừng ngay aminophylline",
-                "TDM",
-                "Điều trị co giật: Benzodiazepine",
-                "Thanh lọc máu nếu nồng độ cao (>40 mcg/mL)"
-            ],
-            "monitoring": "Nồng độ theophylline, dấu hiệu sinh tồn, dấu hiệu thần kinh"
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng theophylline hoặc ethylenediamine",
-                "Rối loạn nhịp tim nặng (rung nhĩ, rung thất)",
-                "Động kinh không kiểm soát",
-                "Loét dạ dày tá tràng hoạt động"
-            ],
-            "tương_đối": [
-                "Suy gan nặng - giảm clearance, tăng nguy cơ độc tính",
-                "Suy thận nặng - giảm clearance nhẹ",
-                "Suy tim - giảm clearance",
-                "Sốt cao - có thể giảm clearance",
-                "Trẻ sơ sinh - clearance chậm, half-life dài",
-                "Người già - clearance giảm",
-                "Dùng với ciprofloxacin, erythromycin, cimetidine - tăng nồng độ"
-            ]
-        },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị quá liều aminophylline chủ yếu là hỗ trợ và thanh lọc máu (hemodialysis, hemoperfusion) ở nồng độ cao (>40 mcg/mL theophylline)."},
-        "administration_instructions": {
-            "oral": {
-                "with_food": "N/A - Chỉ có dạng IV",
-                "timing": "N/A"
-            },
-            "iv": {
-                "reconstitution": "Pha với NaCl 0.9% hoặc D5W",
-                "infusion_rate": "Loading: 5-6mg/kg (theophylline) trong 20-30 phút. Maintenance: 0.4-0.6mg/kg/giờ truyền liên tục. KHÔNG truyền nhanh.",
-                "compatibility": ["NaCl 0.9%", "D5W"],
-                "incompatibility": ["Không pha với các thuốc khác"],
-                "notes": "CẦN TDM. Tính liều theo theophylline (aminophylline = theophylline × 1.25)."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Aminophylline",
-                "UpToDate - Aminophylline: Drug information",
-                "American Thoracic Society guidelines"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved, extensive clinical experience"
-        }
-    }
 }
 
 __all__ = ['METHYLXANTHINES_DRUGS']

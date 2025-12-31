@@ -178,7 +178,7 @@ BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
         'Lexicomp Online - Albuterol Monograph',
         'Micromedex - Albuterol Drug Information'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'A - Dựa trên FDA drug labels, GINA guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
+        'A - Dựa trên FDA drug labels, GINA guidelines, và dữ liệu lâm sàng từ nhiều nguồn',
         }}}
 
 __all__ = ['BETA_2_AGONIST_SHORT_ACTING_DRUGS']

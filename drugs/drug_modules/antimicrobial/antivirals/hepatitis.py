@@ -4,6 +4,297 @@ Ribavirin for hepatitis C treatment
 """
 
 HEPATITIS_ANTIVIRALS = {
+    "Entecavir": {
+        "group": "Infectious Disease - Antiviral (HBV)",
+        "vietnamese_name": "Entecavir, Baraclude",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm gan B mạn (HBV) - có hoặc không xơ gan bù"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Bệnh nhân đồng nhiễm HIV chưa điều trị (nguy cơ kháng lamivudine/entecavir)"
+        ],
+        "dosage": {
+            "naive": "0.5mg x 1 lần/ngày, uống lúc đói",
+            "lamivudine_resistance_or_decompensated": "1mg x 1 lần/ngày, uống lúc đói",
+            "notes": "Uống cách bữa ăn ít nhất 2 giờ (trước và sau)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm 50% hoặc dùng cách ngày",
+            "under_30": "Giảm 75% hoặc dùng mỗi 3 ngày; chạy thận: dùng sau lọc"
+        },
+        "side_effects": [
+            "Đau đầu, mệt",
+            "Tăng men gan thoáng qua",
+            "Toan lactic (hiếm, nguy cơ cao hơn ở xơ gan mất bù)"
+        ],
+        "interactions": [
+            "Ít tương tác đáng kể; thận trọng với thuốc độc thận"
+        ],
+        "pregnancy": "C (ưu tiên tenofovir ở phụ nữ mang thai)",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "AASLD 2024 HBV",
+            "EASL 2023 HBV"
+        ],
+        "mechanism_of_action": "Nucleoside analog (guanosine) ức chế HBV DNA polymerase/reverse transcriptase, gây kết thúc chuỗi.",
+        "monitoring": [
+            "HBV DNA, ALT mỗi 3-6 tháng",
+            "Chức năng thận định kỳ (điều chỉnh liều)",
+            "Dấu hiệu toan lactic ở bệnh nhân xơ gan mất bù"
+        ],
+        "precautions": [
+            "Nguy cơ bùng phát HBV sau ngừng thuốc - giảm liều hoặc theo dõi sát",
+            "Điều chỉnh liều ở suy thận",
+            "Không đơn trị ở bệnh nhân đồng nhiễm HIV chưa được ART"
+        ],
+        "pharmacokinetics": {
+            "half_life": "128-149 giờ (pha cuối)",
+            "onset": "Giảm HBV DNA trong vài tuần",
+            "duration": "Dùng hằng ngày, dài hạn",
+            "protein_binding": "<1%",
+            "clearance": "Thận (bài tiết ống thận)"
+        },
+        "storage": "Nhiệt độ phòng, tránh ẩm.",
+        "black_box_warnings": "Bùng phát viêm gan sau ngừng điều trị; nguy cơ toan lactic và gan to nhiễm mỡ với nucleos(t)ide analogs.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc độc thận (aminoglycoside, amphotericin B, cisplatin)",
+                    "mechanism": "Tăng nguy cơ suy thận → tăng nồng độ entecavir",
+                    "effect": "Tăng độc tính",
+                    "management": "Tránh nếu có thể; theo dõi creatinine, điều chỉnh liều."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": ["Dị ứng entecavir"],
+            "tương_đối": [
+                "Đồng nhiễm HIV chưa điều trị",
+                "Suy thận (cần chỉnh liều)",
+                "Xơ gan mất bù (theo dõi toan lactic)"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": ["Dị ứng entecavir"],
+            "tương_đối": [
+                "Đồng nhiễm HIV chưa điều trị",
+                "Suy thận (cần chỉnh liều)",
+                "Xơ gan mất bù (theo dõi toan lactic)"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu có thể loại bỏ entecavir một phần."
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Ưu tiên tenofovir nếu có thai. Dữ liệu hạn chế.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa rõ bài tiết sữa; cân nhắc ngừng cho bú hoặc chọn thuốc khác.",
+                "recommendation": "Cân nhắc lợi ích/nguy cơ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh",
+            "moderate": "Không cần chỉnh nhưng theo dõi toan lactic",
+            "severe": "Thận trọng; theo dõi sát ALT/AST và toan lactic",
+            "notes": "Chủ yếu thải qua thận; độc tính gan liên quan nhóm nucleoside."
+        },
+        "overdose_management": {
+            "symptoms": ["Buồn nôn, tăng men gan, toan lactic (hiếm)"],
+            "antidote": "Không có",
+            "treatment": [
+                "Điều trị hỗ trợ, theo dõi toan chuyển hóa",
+                "Lọc máu có thể loại bỏ entecavir một phần"
+            ],
+            "monitoring": "Creatinine, men gan, khí máu nếu nghi ngờ toan lactic"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống lúc đói (cách bữa ăn ≥2 giờ)",
+                "timing": "1 lần/ngày, cố định thời điểm"
+            },
+            "iv": None
+        },
+        "references": {
+            "primary_sources": [
+                "AASLD 2024 HBV Guidance",
+                "EASL 2023 HBV Guidelines",
+                "Baraclude Prescribing Information"
+            ],
+            "last_updated": "2025-12-24",
+            "evidence_level": "A - Dữ liệu thử nghiệm lâm sàng và hướng dẫn chuyên ngành"
+        }
+    },
+
+    "Ledipasvir": {
+        "group": "Infectious Disease - Antiviral (HCV NS5A inhibitor)",
+        "vietnamese_name": "Ledipasvir (phối hợp Sofosbuvir/Ledipasvir - Harvoni)",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm gan C mạn genotype 1, 4, 5, 6 (phối hợp cố định với sofosbuvir)"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Dùng đơn trị (không có dạng đơn thành phần lưu hành)",
+            "Dùng với rifampin, carbamazepine, St. John’s wort (giảm nồng độ)"
+        ],
+        "dosage": {
+            "adult": "Ledipasvir 90mg + Sofosbuvir 400mg x 1 lần/ngày",
+            "duration": "12 tuần (đa số); 8 tuần nếu không xơ gan, tải lượng thấp; 24 tuần nếu xơ gan mất bù hoặc thất bại trước đó",
+            "notes": "Uống cùng hoặc không cùng thức ăn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, dữ liệu hạn chế",
+            "under_30": "Tránh hoặc theo dõi sát; cân nhắc phác đồ khác ở eGFR <30"
+        },
+        "side_effects": [
+            "Mệt mỏi, đau đầu",
+            "Buồn nôn",
+            "Tăng bilirubin nhẹ",
+            "Nhịp chậm khi phối hợp amiodarone (qua sofosbuvir)"
+        ],
+        "interactions": [
+            "Thuốc kháng acid/PPIs: giảm hấp thu ledipasvir (pH phụ thuộc)",
+            "P-gp inducers (rifampin, carbamazepine): giảm nồng độ",
+            "Amiodarone: nguy cơ nhịp chậm (do sofosbuvir thành phần)"
+        ],
+        "pregnancy": "B (không phối hợp ribavirin); tránh nếu phác đồ có ribavirin",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "AASLD/IDSA HCV 2024",
+            "EASL HCV 2024"
+        ],
+        "mechanism_of_action": "Ức chế NS5A của HCV, chặn nhân lên và lắp ráp virus; dùng phối hợp với sofosbuvir để ngăn đề kháng.",
+        "monitoring": [
+            "HCV RNA, ALT",
+            "Nhịp tim nếu có amiodarone (tránh)",
+            "Tương tác pH: đảm bảo khoảng cách với PPI/antacid"
+        ],
+        "precautions": [
+            "Không phối hợp với rifampin, carbamazepine, St. John’s wort",
+            "Antacid: dùng cách ≥4 giờ; PPI: omeprazole tối đa 20mg dùng cùng lúc trước ăn",
+            "Tránh amiodarone; theo dõi nếu buộc dùng",
+            "Bùng phát HBV: sàng lọc HBV trước điều trị HCV"
+        ],
+        "pharmacokinetics": {
+            "half_life": "47 giờ",
+            "onset": "Giảm HCV RNA trong tuần đầu khi phối hợp",
+            "duration": "1 lần/ngày",
+            "protein_binding": "99.8%",
+            "clearance": "Chủ yếu qua mật/phân; bài tiết thận tối thiểu"
+        },
+        "storage": "Nhiệt độ phòng, khô ráo.",
+        "black_box_warnings": "Nguy cơ bùng phát HBV khi điều trị HCV.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rifampin, carbamazepine, phenytoin, St. John’s wort",
+                    "mechanism": "Cảm ứng P-gp/BCRP → giảm nồng độ",
+                    "effect": "Thất bại điều trị",
+                    "management": "TRÁNH phối hợp."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "PPI/antacid",
+                    "mechanism": "Tăng pH dạ dày làm giảm hấp thu ledipasvir",
+                    "effect": "Giảm hiệu quả",
+                    "management": "Uống Harvoni cùng PPI liều thấp (omeprazole ≤20mg) trước ăn; antacid cách 4 giờ."
+                },
+                {
+                    "drug": "Amiodarone",
+                    "mechanism": "Nhịp chậm qua thành phần sofosbuvir",
+                    "effect": "Nguy cơ block/nhịp chậm nặng",
+                    "management": "Tránh; nếu bắt buộc, theo dõi ECG."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": ["Dị ứng", "Phối hợp rifampin/carbamazepine/St. John's wort"],
+            "tương_đối": [
+                "Suy thận nặng (eGFR <30)",
+                "Dùng PPI/antacid liều cao",
+                "Đồng nhiễm HBV chưa điều trị"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": ["Dị ứng", "Phối hợp rifampin/carbamazepine/St. John's wort"],
+            "tương_đối": [
+                "Suy thận nặng (eGFR <30)",
+                "Dùng PPI/antacid liều cao",
+                "Đồng nhiễm HBV chưa điều trị"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Tránh nếu phác đồ kèm ribavirin (X). Nếu không có ribavirin, dữ liệu hạn chế nhưng không cho thấy độc tính rõ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa rõ bài tiết; cân nhắc ngừng cho bú.",
+                "recommendation": "Quyết định theo lợi ích/nguy cơ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh",
+            "moderate": "Không cần chỉnh",
+            "severe": "Thận trọng ở Child-Pugh C; tham khảo phác đồ chuyên khoa",
+            "notes": "Chuyển hóa qua gan/bile; dữ liệu hạn chế ở xơ gan mất bù."
+        },
+        "overdose_management": {
+            "symptoms": ["Buồn nôn, đau đầu; lý thuyết kéo dài QT/nhịp chậm (thành phần sofosbuvir)"],
+            "antidote": "Không có",
+            "treatment": [
+                "Điều trị hỗ trợ",
+                "Theo dõi ECG, điện giải"
+            ],
+            "monitoring": "ECG, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể với hoặc không",
+                "timing": "1 lần/ngày; tránh antacid gần thời điểm uống"
+            },
+            "iv": None
+        },
+        "references": {
+            "primary_sources": [
+                "AASLD/IDSA HCV Guidance 2024",
+                "Harvoni Prescribing Information"
+            ],
+            "last_updated": "2025-12-24",
+            "evidence_level": "A - Hướng dẫn chuyên ngành và dữ liệu pha 3"
+        }
+    },
+
     "Ribavirin": {
         "group": "Infectious Disease - Antiviral",
         "vietnamese_name": "Ribavirin, Rebetol",
@@ -209,294 +500,6 @@ HEPATITIS_ANTIVIRALS = {
     }
 
     ,
-    "Entecavir": {
-        "group": "Infectious Disease - Antiviral (HBV)",
-        "vietnamese_name": "Entecavir, Baraclude",
-        "administration": ["PO"],
-        "indications": [
-            "Viêm gan B mạn (HBV) - có hoặc không xơ gan bù"
-        ],
-        "contraindications": [
-            "Dị ứng",
-            "Bệnh nhân đồng nhiễm HIV chưa điều trị (nguy cơ kháng lamivudine/entecavir)"
-        ],
-        "dosage": {
-            "naive": "0.5mg x 1 lần/ngày, uống lúc đói",
-            "lamivudine_resistance_or_decompensated": "1mg x 1 lần/ngày, uống lúc đói",
-            "notes": "Uống cách bữa ăn ít nhất 2 giờ (trước và sau)."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Giảm 50% hoặc dùng cách ngày",
-            "under_30": "Giảm 75% hoặc dùng mỗi 3 ngày; chạy thận: dùng sau lọc"
-        },
-        "side_effects": [
-            "Đau đầu, mệt",
-            "Tăng men gan thoáng qua",
-            "Toan lactic (hiếm, nguy cơ cao hơn ở xơ gan mất bù)"
-        ],
-        "interactions": [
-            "Ít tương tác đáng kể; thận trọng với thuốc độc thận"
-        ],
-        "pregnancy": "C (ưu tiên tenofovir ở phụ nữ mang thai)",
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {"hepatic": True},
-            "icu_critical_care_only": False,
-            "look_alike_sound_alike": []
-        },
-        "guideline_tags": [
-            "AASLD 2024 HBV",
-            "EASL 2023 HBV"
-        ],
-        "mechanism_of_action": "Nucleoside analog (guanosine) ức chế HBV DNA polymerase/reverse transcriptase, gây kết thúc chuỗi.",
-        "monitoring": [
-            "HBV DNA, ALT mỗi 3-6 tháng",
-            "Chức năng thận định kỳ (điều chỉnh liều)",
-            "Dấu hiệu toan lactic ở bệnh nhân xơ gan mất bù"
-        ],
-        "precautions": [
-            "Nguy cơ bùng phát HBV sau ngừng thuốc - giảm liều hoặc theo dõi sát",
-            "Điều chỉnh liều ở suy thận",
-            "Không đơn trị ở bệnh nhân đồng nhiễm HIV chưa được ART"
-        ],
-        "pharmacokinetics": {
-            "half_life": "128-149 giờ (pha cuối)",
-            "onset": "Giảm HBV DNA trong vài tuần",
-            "duration": "Dùng hằng ngày, dài hạn",
-            "protein_binding": "<1%",
-            "clearance": "Thận (bài tiết ống thận)"
-        },
-        "storage": "Nhiệt độ phòng, tránh ẩm.",
-        "black_box_warnings": "Bùng phát viêm gan sau ngừng điều trị; nguy cơ toan lactic và gan to nhiễm mỡ với nucleos(t)ide analogs.",
-        "drug_interactions": {
-            "major": [],
-            "moderate": [
-                {
-                    "drug": "Thuốc độc thận (aminoglycoside, amphotericin B, cisplatin)",
-                    "mechanism": "Tăng nguy cơ suy thận → tăng nồng độ entecavir",
-                    "effect": "Tăng độc tính",
-                    "management": "Tránh nếu có thể; theo dõi creatinine, điều chỉnh liều."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": ["Dị ứng entecavir"],
-            "tương_đối": [
-                "Đồng nhiễm HIV chưa điều trị",
-                "Suy thận (cần chỉnh liều)",
-                "Xơ gan mất bù (theo dõi toan lactic)"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": ["Dị ứng entecavir"],
-            "tương_đối": [
-                "Đồng nhiễm HIV chưa điều trị",
-                "Suy thận (cần chỉnh liều)",
-                "Xơ gan mất bù (theo dõi toan lactic)"
-            ]
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu có thể loại bỏ entecavir một phần."
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Ưu tiên tenofovir nếu có thai. Dữ liệu hạn chế.",
-            "lactation": {
-                "safety": "Unknown",
-                "details": "Chưa rõ bài tiết sữa; cân nhắc ngừng cho bú hoặc chọn thuốc khác.",
-                "recommendation": "Cân nhắc lợi ích/nguy cơ."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh",
-            "moderate": "Không cần chỉnh nhưng theo dõi toan lactic",
-            "severe": "Thận trọng; theo dõi sát ALT/AST và toan lactic",
-            "notes": "Chủ yếu thải qua thận; độc tính gan liên quan nhóm nucleoside."
-        },
-        "overdose_management": {
-            "symptoms": ["Buồn nôn, tăng men gan, toan lactic (hiếm)"],
-            "antidote": "Không có",
-            "treatment": [
-                "Điều trị hỗ trợ, theo dõi toan chuyển hóa",
-                "Lọc máu có thể loại bỏ entecavir một phần"
-            ],
-            "monitoring": "Creatinine, men gan, khí máu nếu nghi ngờ toan lactic"
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Uống lúc đói (cách bữa ăn ≥2 giờ)",
-                "timing": "1 lần/ngày, cố định thời điểm"
-            },
-            "iv": None
-        },
-        "references": {
-            "primary_sources": [
-                "AASLD 2024 HBV Guidance",
-                "EASL 2023 HBV Guidelines",
-                "Baraclude Prescribing Information"
-            ],
-            "last_updated": "2025-12-24",
-            "evidence_level": "A - Dữ liệu thử nghiệm lâm sàng và hướng dẫn chuyên ngành"
-        }
-    },
-
-    "Tenofovir": {
-        "group": "Infectious Disease - Antiviral (HBV, HIV)",
-        "vietnamese_name": "Tenofovir disoproxil fumarate (TDF), Tenofovir alafenamide (TAF)",
-        "administration": ["PO"],
-        "indications": [
-            "Viêm gan B mạn",
-            "Điều trị hoặc dự phòng HIV (phối hợp ART) - ghi chú tương tác"
-        ],
-        "contraindications": [
-            "Dị ứng",
-            "Không dùng đơn trị ở HIV"
-        ],
-        "dosage": {
-            "hbv_tdf": "300mg x 1 lần/ngày",
-            "hbv_taf": "25mg x 1 lần/ngày (uống với thức ăn)",
-            "notes": "Ưu tiên TAF nếu nguy cơ độc thận/loãng xương; TDF phổ biến và rẻ hơn."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "TDF: 300mg mỗi 48 giờ; TAF: thận trọng, dữ liệu hạn chế",
-            "under_30": "TDF: tránh nếu có thể; chạy thận: 300mg mỗi tuần sau lọc; TAF: tránh nếu CrCl <15 (không lọc)"
-        },
-        "side_effects": [
-            "Suy thận, tăng creatinine",
-            "Giảm mật độ xương (TDF)",
-            "Buồn nôn, tiêu chảy",
-            "Tăng men gan thoáng qua"
-        ],
-        "interactions": [
-            "Thuốc độc thận (aminoglycoside, NSAID liều cao)",
-            "Phối hợp ART (cobicistat, boosted PIs) có thể tăng nồng độ TDF",
-            "P-gp inducers/inhibitors ảnh hưởng hấp thu TAF"
-        ],
-        "pregnancy": "B (TDF được khuyến cáo cho thai kỳ HBV/HIV)",
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {"renal": True, "bone": True},
-            "icu_critical_care_only": False,
-            "look_alike_sound_alike": ["TDF vs TAF"]
-        },
-        "guideline_tags": [
-            "AASLD 2024 HBV",
-            "EASL 2023 HBV",
-            "WHO HIV 2024"
-        ],
-        "mechanism_of_action": "Nucleotide analog (adenosine monophosphate) ức chế HBV DNA polymerase và HIV reverse transcriptase, gây kết thúc chuỗi.",
-        "monitoring": [
-            "Creatinine, eGFR mỗi 3-6 tháng",
-            "Phosphat huyết, mật độ xương nếu dùng dài hạn",
-            "HBV DNA, ALT",
-            "HIV test trước khi đơn trị HBV (tránh kháng HIV)"
-        ],
-        "precautions": [
-            "Điều chỉnh liều khi suy thận (đặc biệt TDF)",
-            "Theo dõi mật độ xương ở bệnh nhân nguy cơ",
-            "Nguy cơ bùng phát HBV khi ngừng thuốc",
-            "Không đơn trị ở bệnh nhân có hoặc nguy cơ HIV chưa được kiểm soát"
-        ],
-        "pharmacokinetics": {
-            "half_life": "TDF: ~17 giờ; TAF: ~17 giờ (tiền thuốc, nồng độ nội bào cao hơn)",
-            "onset": "Giảm HBV DNA trong vài tuần",
-            "duration": "Dùng hằng ngày, dài hạn",
-            "protein_binding": "TDF: <1%; TAF: ~80%",
-            "clearance": "Thận (lọc cầu thận và bài tiết ống thận)"
-        },
-        "storage": "Nhiệt độ phòng, khô ráo.",
-        "black_box_warnings": "Bùng phát viêm gan sau ngừng; acid lactic/gan to nhiễm mỡ (nhóm NRTI).",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Thuốc độc thận (aminoglycoside, amphotericin B, cisplatin, high-dose NSAID)",
-                    "mechanism": "Cộng hưởng độc thận",
-                    "effect": "Tăng nguy cơ suy thận",
-                    "management": "Tránh nếu có thể; theo dõi creatinine/eGFR sát."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Boosted protease inhibitors hoặc cobicistat",
-                    "mechanism": "Tăng nồng độ TDF qua ức chế P-gp",
-                    "effect": "Tăng độc thận",
-                    "management": "Cân nhắc TAF thay TDF; nếu dùng TDF, theo dõi thận."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": ["Dị ứng tenofovir"],
-            "tương_đối": [
-                "Suy thận hoặc dùng thuốc độc thận",
-                "Nguy cơ loãng xương cao (ưu tiên TAF)",
-                "Nghi ngờ/đồng nhiễm HIV chưa điều trị (không đơn trị)"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": ["Dị ứng tenofovir"],
-            "tương_đối": [
-                "Suy thận hoặc dùng thuốc độc thận",
-                "Nguy cơ loãng xương cao (ưu tiên TAF)",
-                "Nghi ngờ/đồng nhiễm HIV chưa điều trị (không đơn trị)"
-            ]
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu loại bỏ TDF; TAF dữ liệu hạn chế."
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "TDF an toàn và khuyến cáo cho thai kỳ HBV/HIV; dữ liệu về TAF ít hơn nhưng có vẻ an toàn.",
-            "lactation": {
-                "safety": "TDF: Compatible",
-                "details": "Bài tiết ít vào sữa; được dùng trong dự phòng lây truyền mẹ-con.",
-                "recommendation": "Có thể dùng; theo dõi trẻ sơ sinh nếu kéo dài."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh",
-            "moderate": "Không cần chỉnh",
-            "severe": "Thận trọng ở Child-Pugh C; ưu tiên theo dõi thận/xương",
-            "notes": "Thải qua thận; suy gan ít ảnh hưởng dược động học."
-        },
-        "overdose_management": {
-            "symptoms": ["Buồn nôn, đau đầu, suy thận, toan lactic (hiếm)"],
-            "antidote": "Không có",
-            "treatment": [
-                "Ngừng thuốc, điều trị hỗ trợ",
-                "Lọc máu loại bỏ TDF; TAF dữ liệu hạn chế"
-            ],
-            "monitoring": "Creatinine, phosphat, men gan, lactate"
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "oral": {
-                "with_food": "TDF: có thể với hoặc không; TAF: nên uống với thức ăn",
-                "timing": "1 lần/ngày, giờ cố định"
-            },
-            "iv": None
-        },
-        "references": {
-            "primary_sources": [
-                "AASLD 2024 HBV Guidance",
-                "EASL 2023 HBV Guidelines",
-                "WHO consolidated HIV guidelines 2024"
-            ],
-            "last_updated": "2025-12-24",
-            "evidence_level": "A - Hướng dẫn chuyên ngành và dữ liệu thử nghiệm lâm sàng"
-        }
-    },
-
     "Sofosbuvir": {
         "group": "Infectious Disease - Antiviral (HCV NS5B inhibitor)",
         "vietnamese_name": "Sofosbuvir, Sovaldi",
@@ -637,160 +640,6 @@ HEPATITIS_ANTIVIRALS = {
             "primary_sources": [
                 "AASLD/IDSA HCV Guidance 2024",
                 "Sovaldi Prescribing Information"
-            ],
-            "last_updated": "2025-12-24",
-            "evidence_level": "A - Hướng dẫn chuyên ngành và dữ liệu pha 3"
-        }
-    },
-
-    "Ledipasvir": {
-        "group": "Infectious Disease - Antiviral (HCV NS5A inhibitor)",
-        "vietnamese_name": "Ledipasvir (phối hợp Sofosbuvir/Ledipasvir - Harvoni)",
-        "administration": ["PO"],
-        "indications": [
-            "Viêm gan C mạn genotype 1, 4, 5, 6 (phối hợp cố định với sofosbuvir)"
-        ],
-        "contraindications": [
-            "Dị ứng",
-            "Dùng đơn trị (không có dạng đơn thành phần lưu hành)",
-            "Dùng với rifampin, carbamazepine, St. John’s wort (giảm nồng độ)"
-        ],
-        "dosage": {
-            "adult": "Ledipasvir 90mg + Sofosbuvir 400mg x 1 lần/ngày",
-            "duration": "12 tuần (đa số); 8 tuần nếu không xơ gan, tải lượng thấp; 24 tuần nếu xơ gan mất bù hoặc thất bại trước đó",
-            "notes": "Uống cùng hoặc không cùng thức ăn."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Thận trọng, dữ liệu hạn chế",
-            "under_30": "Tránh hoặc theo dõi sát; cân nhắc phác đồ khác ở eGFR <30"
-        },
-        "side_effects": [
-            "Mệt mỏi, đau đầu",
-            "Buồn nôn",
-            "Tăng bilirubin nhẹ",
-            "Nhịp chậm khi phối hợp amiodarone (qua sofosbuvir)"
-        ],
-        "interactions": [
-            "Thuốc kháng acid/PPIs: giảm hấp thu ledipasvir (pH phụ thuộc)",
-            "P-gp inducers (rifampin, carbamazepine): giảm nồng độ",
-            "Amiodarone: nguy cơ nhịp chậm (do sofosbuvir thành phần)"
-        ],
-        "pregnancy": "B (không phối hợp ribavirin); tránh nếu phác đồ có ribavirin",
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {"hepatic": True},
-            "icu_critical_care_only": False,
-            "look_alike_sound_alike": []
-        },
-        "guideline_tags": [
-            "AASLD/IDSA HCV 2024",
-            "EASL HCV 2024"
-        ],
-        "mechanism_of_action": "Ức chế NS5A của HCV, chặn nhân lên và lắp ráp virus; dùng phối hợp với sofosbuvir để ngăn đề kháng.",
-        "monitoring": [
-            "HCV RNA, ALT",
-            "Nhịp tim nếu có amiodarone (tránh)",
-            "Tương tác pH: đảm bảo khoảng cách với PPI/antacid"
-        ],
-        "precautions": [
-            "Không phối hợp với rifampin, carbamazepine, St. John’s wort",
-            "Antacid: dùng cách ≥4 giờ; PPI: omeprazole tối đa 20mg dùng cùng lúc trước ăn",
-            "Tránh amiodarone; theo dõi nếu buộc dùng",
-            "Bùng phát HBV: sàng lọc HBV trước điều trị HCV"
-        ],
-        "pharmacokinetics": {
-            "half_life": "47 giờ",
-            "onset": "Giảm HCV RNA trong tuần đầu khi phối hợp",
-            "duration": "1 lần/ngày",
-            "protein_binding": "99.8%",
-            "clearance": "Chủ yếu qua mật/phân; bài tiết thận tối thiểu"
-        },
-        "storage": "Nhiệt độ phòng, khô ráo.",
-        "black_box_warnings": "Nguy cơ bùng phát HBV khi điều trị HCV.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Rifampin, carbamazepine, phenytoin, St. John’s wort",
-                    "mechanism": "Cảm ứng P-gp/BCRP → giảm nồng độ",
-                    "effect": "Thất bại điều trị",
-                    "management": "TRÁNH phối hợp."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "PPI/antacid",
-                    "mechanism": "Tăng pH dạ dày làm giảm hấp thu ledipasvir",
-                    "effect": "Giảm hiệu quả",
-                    "management": "Uống Harvoni cùng PPI liều thấp (omeprazole ≤20mg) trước ăn; antacid cách 4 giờ."
-                },
-                {
-                    "drug": "Amiodarone",
-                    "mechanism": "Nhịp chậm qua thành phần sofosbuvir",
-                    "effect": "Nguy cơ block/nhịp chậm nặng",
-                    "management": "Tránh; nếu bắt buộc, theo dõi ECG."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": ["Dị ứng", "Phối hợp rifampin/carbamazepine/St. John's wort"],
-            "tương_đối": [
-                "Suy thận nặng (eGFR <30)",
-                "Dùng PPI/antacid liều cao",
-                "Đồng nhiễm HBV chưa điều trị"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": ["Dị ứng", "Phối hợp rifampin/carbamazepine/St. John's wort"],
-            "tương_đối": [
-                "Suy thận nặng (eGFR <30)",
-                "Dùng PPI/antacid liều cao",
-                "Đồng nhiễm HBV chưa điều trị"
-            ]
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Tránh nếu phác đồ kèm ribavirin (X). Nếu không có ribavirin, dữ liệu hạn chế nhưng không cho thấy độc tính rõ.",
-            "lactation": {
-                "safety": "Unknown",
-                "details": "Chưa rõ bài tiết; cân nhắc ngừng cho bú.",
-                "recommendation": "Quyết định theo lợi ích/nguy cơ."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh",
-            "moderate": "Không cần chỉnh",
-            "severe": "Thận trọng ở Child-Pugh C; tham khảo phác đồ chuyên khoa",
-            "notes": "Chuyển hóa qua gan/bile; dữ liệu hạn chế ở xơ gan mất bù."
-        },
-        "overdose_management": {
-            "symptoms": ["Buồn nôn, đau đầu; lý thuyết kéo dài QT/nhịp chậm (thành phần sofosbuvir)"],
-            "antidote": "Không có",
-            "treatment": [
-                "Điều trị hỗ trợ",
-                "Theo dõi ECG, điện giải"
-            ],
-            "monitoring": "ECG, dấu hiệu sinh tồn"
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể với hoặc không",
-                "timing": "1 lần/ngày; tránh antacid gần thời điểm uống"
-            },
-            "iv": None
-        },
-        "references": {
-            "primary_sources": [
-                "AASLD/IDSA HCV Guidance 2024",
-                "Harvoni Prescribing Information"
             ],
             "last_updated": "2025-12-24",
             "evidence_level": "A - Hướng dẫn chuyên ngành và dữ liệu pha 3"
@@ -949,7 +798,158 @@ HEPATITIS_ANTIVIRALS = {
             "last_updated": "2025-12-24",
             "evidence_level": "A - Hướng dẫn chuyên ngành và dữ liệu pha 3"
         }
-    }
+    },
+    "Tenofovir": {
+        "group": "Infectious Disease - Antiviral (HBV, HIV)",
+        "vietnamese_name": "Tenofovir disoproxil fumarate (TDF), Tenofovir alafenamide (TAF)",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm gan B mạn",
+            "Điều trị hoặc dự phòng HIV (phối hợp ART) - ghi chú tương tác"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Không dùng đơn trị ở HIV"
+        ],
+        "dosage": {
+            "hbv_tdf": "300mg x 1 lần/ngày",
+            "hbv_taf": "25mg x 1 lần/ngày (uống với thức ăn)",
+            "notes": "Ưu tiên TAF nếu nguy cơ độc thận/loãng xương; TDF phổ biến và rẻ hơn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "TDF: 300mg mỗi 48 giờ; TAF: thận trọng, dữ liệu hạn chế",
+            "under_30": "TDF: tránh nếu có thể; chạy thận: 300mg mỗi tuần sau lọc; TAF: tránh nếu CrCl <15 (không lọc)"
+        },
+        "side_effects": [
+            "Suy thận, tăng creatinine",
+            "Giảm mật độ xương (TDF)",
+            "Buồn nôn, tiêu chảy",
+            "Tăng men gan thoáng qua"
+        ],
+        "interactions": [
+            "Thuốc độc thận (aminoglycoside, NSAID liều cao)",
+            "Phối hợp ART (cobicistat, boosted PIs) có thể tăng nồng độ TDF",
+            "P-gp inducers/inhibitors ảnh hưởng hấp thu TAF"
+        ],
+        "pregnancy": "B (TDF được khuyến cáo cho thai kỳ HBV/HIV)",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"renal": True, "bone": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": ["TDF vs TAF"]
+        },
+        "guideline_tags": [
+            "AASLD 2024 HBV",
+            "EASL 2023 HBV",
+            "WHO HIV 2024"
+        ],
+        "mechanism_of_action": "Nucleotide analog (adenosine monophosphate) ức chế HBV DNA polymerase và HIV reverse transcriptase, gây kết thúc chuỗi.",
+        "monitoring": [
+            "Creatinine, eGFR mỗi 3-6 tháng",
+            "Phosphat huyết, mật độ xương nếu dùng dài hạn",
+            "HBV DNA, ALT",
+            "HIV test trước khi đơn trị HBV (tránh kháng HIV)"
+        ],
+        "precautions": [
+            "Điều chỉnh liều khi suy thận (đặc biệt TDF)",
+            "Theo dõi mật độ xương ở bệnh nhân nguy cơ",
+            "Nguy cơ bùng phát HBV khi ngừng thuốc",
+            "Không đơn trị ở bệnh nhân có hoặc nguy cơ HIV chưa được kiểm soát"
+        ],
+        "pharmacokinetics": {
+            "half_life": "TDF: ~17 giờ; TAF: ~17 giờ (tiền thuốc, nồng độ nội bào cao hơn)",
+            "onset": "Giảm HBV DNA trong vài tuần",
+            "duration": "Dùng hằng ngày, dài hạn",
+            "protein_binding": "TDF: <1%; TAF: ~80%",
+            "clearance": "Thận (lọc cầu thận và bài tiết ống thận)"
+        },
+        "storage": "Nhiệt độ phòng, khô ráo.",
+        "black_box_warnings": "Bùng phát viêm gan sau ngừng; acid lactic/gan to nhiễm mỡ (nhóm NRTI).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc độc thận (aminoglycoside, amphotericin B, cisplatin, high-dose NSAID)",
+                    "mechanism": "Cộng hưởng độc thận",
+                    "effect": "Tăng nguy cơ suy thận",
+                    "management": "Tránh nếu có thể; theo dõi creatinine/eGFR sát."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Boosted protease inhibitors hoặc cobicistat",
+                    "mechanism": "Tăng nồng độ TDF qua ức chế P-gp",
+                    "effect": "Tăng độc thận",
+                    "management": "Cân nhắc TAF thay TDF; nếu dùng TDF, theo dõi thận."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": ["Dị ứng tenofovir"],
+            "tương_đối": [
+                "Suy thận hoặc dùng thuốc độc thận",
+                "Nguy cơ loãng xương cao (ưu tiên TAF)",
+                "Nghi ngờ/đồng nhiễm HIV chưa điều trị (không đơn trị)"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": ["Dị ứng tenofovir"],
+            "tương_đối": [
+                "Suy thận hoặc dùng thuốc độc thận",
+                "Nguy cơ loãng xương cao (ưu tiên TAF)",
+                "Nghi ngờ/đồng nhiễm HIV chưa điều trị (không đơn trị)"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ. Lọc máu loại bỏ TDF; TAF dữ liệu hạn chế."
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "TDF an toàn và khuyến cáo cho thai kỳ HBV/HIV; dữ liệu về TAF ít hơn nhưng có vẻ an toàn.",
+            "lactation": {
+                "safety": "TDF: Compatible",
+                "details": "Bài tiết ít vào sữa; được dùng trong dự phòng lây truyền mẹ-con.",
+                "recommendation": "Có thể dùng; theo dõi trẻ sơ sinh nếu kéo dài."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh",
+            "moderate": "Không cần chỉnh",
+            "severe": "Thận trọng ở Child-Pugh C; ưu tiên theo dõi thận/xương",
+            "notes": "Thải qua thận; suy gan ít ảnh hưởng dược động học."
+        },
+        "overdose_management": {
+            "symptoms": ["Buồn nôn, đau đầu, suy thận, toan lactic (hiếm)"],
+            "antidote": "Không có",
+            "treatment": [
+                "Ngừng thuốc, điều trị hỗ trợ",
+                "Lọc máu loại bỏ TDF; TAF dữ liệu hạn chế"
+            ],
+            "monitoring": "Creatinine, phosphat, men gan, lactate"
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "TDF: có thể với hoặc không; TAF: nên uống với thức ăn",
+                "timing": "1 lần/ngày, giờ cố định"
+            },
+            "iv": None
+        },
+        "references": {
+            "primary_sources": [
+                "AASLD 2024 HBV Guidance",
+                "EASL 2023 HBV Guidelines",
+                "WHO consolidated HIV guidelines 2024"
+            ],
+            "last_updated": "2025-12-24",
+            "evidence_level": "A - Hướng dẫn chuyên ngành và dữ liệu thử nghiệm lâm sàng"
+        }
+    },
+
 }
 
 __all__ = ['HEPATITIS_ANTIVIRALS']

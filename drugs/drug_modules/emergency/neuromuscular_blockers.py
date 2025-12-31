@@ -4,6 +4,378 @@ Thuốc giãn cơ dùng trong ICU, gây mê, và cấp cứu
 """
 
 NEUROMUSCULAR_BLOCKERS_DRUGS = {
+    "Cisatracurium": {
+        "group": "Emergency - Non-depolarizing Neuromuscular Blocker (Benzylisoquinolinium)",
+        "vietnamese_name": "Cisatracurium, Nimbex",
+        "administration": ["IV"],
+        "indications": [
+            "Đặt nội khí quản (intubation)",
+            "Duy trì giãn cơ trong phẫu thuật",
+            "Giãn cơ trong ICU (ARDS, status asthmaticus) - THUỐC ƯU TIÊN",
+            "Tăng áp lực nội sọ (intracranial hypertension)"
+        ],
+        "contraindications": [
+            "Dị ứng cisatracurium",
+            "Bệnh nhược cơ (myasthenia gravis) - có thể cần liều cao hơn hoặc tác dụng kéo dài"
+        ],
+        "dosage": {
+            "adult_intubation": "0.15-0.2 mg/kg IV bolus",
+            "adult_maintenance": "0.03 mg/kg mỗi 40-60 phút hoặc 1-3 mcg/kg/phút IV infusion",
+            "adult_icu": "1-3 mcg/kg/phút IV infusion (điều chỉnh theo TOF)",
+            "pediatric_intubation": "0.1-0.15 mg/kg IV bolus",
+            "notes": "Tác dụng trung bình (2-3 phút), thời gian tác dụng 40-60 phút. Hofmann elimination - không phụ thuộc gan/thận (ưu điểm lớn). Thuốc ưu tiên cho ICU."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi (Hofmann elimination)",
+            "under_30": "Không đổi (Hofmann elimination - không phụ thuộc thận)"
+        },
+        "side_effects": [
+            "Giãn cơ kéo dài (ít hơn so với vecuronium/rocuronium ở suy gan/thận)",
+            "Ức chế hô hấp (suy hô hấp nếu không hỗ trợ thông khí)",
+            "Phản ứng dị ứng (hiếm)",
+            "Giải phóng histamine nhẹ (ít hơn atracurium)"
+        ],
+        "interactions": [
+            "Aminoglycosides: tăng tác dụng, kéo dài thời gian giãn cơ",
+            "Magnesium: tăng tác dụng, kéo dài thời gian giãn cơ",
+            "Volatile anesthetics: tăng tác dụng"
+        ],
+        "pregnancy": "C - An toàn trong cấp cứu và gây mê",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ASA Difficult Airway Guidelines",
+            "SCCM ICU Sedation Guidelines"
+        ],
+        "mechanism_of_action": "Cisatracurium là non-depolarizing neuromuscular blocker (benzylisoquinolinium). Ức chế cạnh tranh nicotinic acetylcholine receptors tại junction thần kinh-cơ, ngăn chặn acetylcholine gắn với receptor. Kết quả: giãn cơ xương. Cisatracurium là đồng phân của atracurium, nhưng mạnh hơn 3 lần và ít giải phóng histamine hơn. ĐẶC ĐIỂM QUAN TRỌNG: Cisatracurium bị phân hủy bởi Hofmann elimination (phản ứng hóa học tự phát ở nhiệt độ và pH cơ thể), KHÔNG phụ thuộc gan/thận. Đây là ưu điểm lớn so với vecuronium/rocuronium. Thời gian tác dụng trung bình (40-60 phút).",
+        "monitoring": [
+            "TOF (train-of-four) monitoring liên tục (quan trọng)",
+            "Hô hấp (phải hỗ trợ thông khí cho đến khi hồi phục)",
+            "ECG (theo dõi nhịp tim)",
+            "Dấu hiệu hồi phục (cử động tự nhiên, phản xạ)"
+        ],
+        "precautions": [
+            "PHẢI hỗ trợ thông khí cho đến khi hồi phục (bệnh nhân không thể thở tự nhiên)",
+            "Theo dõi TOF để đánh giá mức độ block và hồi phục",
+            "Dùng với sedative/anesthetic (bệnh nhân phải được an thần)",
+            "Ưu điểm: Không phụ thuộc gan/thận (Hofmann elimination) - an toàn ở suy gan/thận",
+            "Thuốc ưu tiên cho ICU (đặc biệt ARDS) - không tích lũy ở suy gan/thận",
+            "Ít giải phóng histamine hơn atracurium (ưu điểm)",
+            "Không có reversal agent đặc hiệu (sugammadex không hiệu quả) - phải chờ tự hồi phục"
+        ],
+        "pharmacokinetics": {
+            "half_life": "22-29 phút",
+            "onset": "2-3 phút",
+            "duration": "40-60 phút (phụ thuộc liều)",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Hofmann elimination (phản ứng hóa học tự phát, không phụ thuộc gan/thận) - 77%, một phần qua thận (16%) và gan (7%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh. Dung dịch đã pha: ổn định trong 24 giờ ở nhiệt độ phòng.",
+        "black_box_warnings": "PHẢI hỗ trợ thông khí cho đến khi hồi phục. Bệnh nhân không thể thở tự nhiên khi đang dùng cisatracurium.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Aminoglycosides (gentamicin, tobramycin, amikacin)",
+                    "mechanism": "Aminoglycosides ức chế giải phóng acetylcholine",
+                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
+                    "management": "Thận trọng. Giảm liều cisatracurium. Theo dõi TOF chặt chẽ."
+                },
+                {
+                    "drug": "Magnesium (IV)",
+                    "mechanism": "Magnesium ức chế giải phóng acetylcholine và tăng tác dụng của cisatracurium",
+                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
+                    "management": "Thận trọng. Giảm liều cisatracurium. Theo dõi TOF. Có thể cần giảm liều magnesium."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Volatile anesthetics (sevoflurane, isoflurane, desflurane)",
+                    "mechanism": "Tăng nhạy cảm với neuromuscular blockers",
+                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
+                    "management": "Thận trọng. Giảm liều cisatracurium. Theo dõi TOF."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng cisatracurium"
+            ],
+            "tương_đối": [
+                "Bệnh nhược cơ (myasthenia gravis) - có thể cần liều cao hơn hoặc tác dụng kéo dài",
+                "Bệnh nhân cao tuổi - tăng nhạy cảm, tác dụng kéo dài"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Cisatracurium là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Cisatracurium có thể qua nhau thai nhưng nồng độ thấp. Được sử dụng rộng rãi trong gây mê sản khoa và có vẻ an toàn. Trong cấp cứu, lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết cisatracurium có bài tiết vào sữa mẹ hay không. Thời gian bán thải 22-29 phút. Có thể bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều (Hofmann elimination)",
+            "moderate": "Không cần điều chỉnh liều (Hofmann elimination)",
+            "severe": "Không cần điều chỉnh liều (Hofmann elimination - không phụ thuộc gan)",
+            "notes": "Cisatracurium bị phân hủy chủ yếu bởi Hofmann elimination (77%), không phụ thuộc chức năng gan. Đây là ưu điểm lớn so với vecuronium/rocuronium. Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Giãn cơ kéo dài (>60 phút)",
+                "Suy hô hấp (bệnh nhân không thể thở tự nhiên)"
+            ],
+            "antidote": "Neostigmine + Glycopyrrolate (chỉ khi block nhẹ). Không có reversal agent đặc hiệu (sugammadex không hiệu quả với cisatracurium).",
+            "treatment": [
+                "Hỗ trợ thông khí: Đặt nội khí quản, thở máy cho đến khi hồi phục",
+                "Theo dõi TOF để đánh giá hồi phục",
+                "Nếu block nhẹ:",
+                "  - Neostigmine 0.04-0.07 mg/kg IV + Glycopyrrolate 0.01 mg/kg IV",
+                "Nếu block sâu:",
+                "  - Hỗ trợ thông khí cho đến khi hồi phục (có thể >1 giờ)",
+                "  - Cisatracurium tự phân hủy bởi Hofmann elimination",
+                "Theo dõi: TOF, hô hấp, dấu hiệu hồi phục"
+            ],
+            "monitoring": "Theo dõi TOF, hô hấp liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Neostigmine + Glycopyrrolate",
+                    "mechanism": "Neostigmine ức chế cholinesterase, tăng acetylcholine. Glycopyrrolate chống nhịp chậm.",
+                    "indication": "Đảo ngược cisatracurium (chỉ khi liều thấp, block nhẹ)",
+                    "dose": "Neostigmine 0.04-0.07 mg/kg IV + Glycopyrrolate 0.01 mg/kg IV",
+                    "caution": "Chỉ hiệu quả khi block nhẹ. Không hiệu quả khi block sâu. Sugammadex KHÔNG hiệu quả với cisatracurium."
+                }
+            ],
+            "notes": "Không có reversal agent đặc hiệu cho cisatracurium (sugammadex chỉ hiệu quả với rocuronium/vecuronium). Neostigmine chỉ hiệu quả khi block nhẹ. Cisatracurium tự phân hủy bởi Hofmann elimination."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Dùng trực tiếp dung dịch đã pha sẵn (2mg/ml hoặc 10mg/ml).",
+                "infusion_rate": "Intubation: 0.15-0.2 mg/kg IV bolus. Maintenance: 0.03 mg/kg mỗi 40-60 phút hoặc 1-3 mcg/kg/phút IV infusion. ICU: 1-3 mcg/kg/phút IV infusion (điều chỉnh theo TOF).",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác. Tiêm bolus riêng biệt hoặc dùng đường truyền riêng cho infusion."
+                ],
+                "notes": "QUAN TRỌNG: 1) PHẢI hỗ trợ thông khí cho đến khi hồi phục, 2) Theo dõi TOF liên tục, 3) Dùng với sedative/anesthetic (bệnh nhân phải được an thần), 4) ƯU ĐIỂM: Không phụ thuộc gan/thận (Hofmann elimination) - an toàn ở suy gan/thận, 5) Thuốc ưu tiên cho ICU (đặc biệt ARDS), 6) Không có reversal agent đặc hiệu (sugammadex không hiệu quả)."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Cisatracurium (Nimbex)",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "ARDS Guidelines - Neuromuscular Blockade",
+                "UpToDate - Cisatracurium: Drug Information",
+                "Anesthesia Guidelines - Neuromuscular Blocking Agents",
+                "ROSE Trial - NEJM (2019) - Cisatracurium trong ARDS",
+                "Medscape - Cisatracurium Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, ROSE trial (ARDS), và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    "Rocuronium": {
+        "group": "Emergency - Non-depolarizing Neuromuscular Blocker (Aminosteroid)",
+        "vietnamese_name": "Rocuronium, Esmeron",
+        "administration": ["IV"],
+        "indications": [
+            "Đặt nội khí quản (intubation)",
+            "Duy trì giãn cơ trong phẫu thuật",
+            "Giãn cơ trong ICU (ARDS, status asthmaticus)",
+            "RSI (rapid sequence intubation) - thay thế succinylcholine khi chống chỉ định"
+        ],
+        "contraindications": [
+            "Dị ứng rocuronium",
+            "Bệnh nhược cơ (myasthenia gravis) - có thể cần liều cao hơn hoặc tác dụng kéo dài"
+        ],
+        "dosage": {
+            "adult_intubation": "0.6-1.2 mg/kg IV bolus (thường 0.6 mg/kg)",
+            "adult_rsi": "1-1.2 mg/kg IV bolus (liều cao để đạt tác dụng nhanh)",
+            "adult_maintenance": "0.1-0.2 mg/kg mỗi 20-45 phút hoặc 5-12 mcg/kg/phút IV infusion",
+            "adult_icu": "5-12 mcg/kg/phút IV infusion (điều chỉnh theo TOF)",
+            "pediatric_intubation": "0.6-1.2 mg/kg IV bolus",
+            "notes": "Tác dụng nhanh (60-90 giây với liều 1.2 mg/kg), trung bình (30-60 phút). Có thể dùng cho RSI khi succinylcholine chống chỉ định."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi (nhưng thận trọng, có thể kéo dài)",
+            "under_30": "Thận trọng (có thể kéo dài, giảm liều maintenance)"
+        },
+        "side_effects": [
+            "Giãn cơ kéo dài (đặc biệt ở suy gan, suy thận)",
+            "Ức chế hô hấp (suy hô hấp nếu không hỗ trợ thông khí)",
+            "Phản ứng dị ứng (hiếm)",
+            "Tăng nhịp tim nhẹ (do giải phóng histamine nhẹ)"
+        ],
+        "interactions": [
+            "Aminoglycosides: tăng tác dụng, kéo dài thời gian giãn cơ",
+            "Magnesium: tăng tác dụng, kéo dài thời gian giãn cơ",
+            "Volatile anesthetics: tăng tác dụng",
+            "Corticosteroids: có thể giảm tác dụng nhẹ"
+        ],
+        "pregnancy": "C - An toàn trong cấp cứu và gây mê",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {},
+            "icu_critical_care_only": True,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ASA Difficult Airway Guidelines",
+            "SCCM ICU Sedation Guidelines"
+        ],
+        "mechanism_of_action": "Rocuronium là non-depolarizing neuromuscular blocker (aminosteroid). Ức chế cạnh tranh nicotinic acetylcholine receptors tại junction thần kinh-cơ, ngăn chặn acetylcholine gắn với receptor. Kết quả: giãn cơ xương. Khác với succinylcholine (depolarizing), rocuronium không gây khử cực và không gây fasciculations. Rocuronium có tác dụng nhanh (60-90 giây với liều cao 1.2 mg/kg), phù hợp cho RSI. Thời gian tác dụng trung bình (30-60 phút). Thải trừ chủ yếu qua gan (70%), một phần qua thận (30%).",
+        "monitoring": [
+            "TOF (train-of-four) monitoring liên tục (quan trọng)",
+            "Hô hấp (phải hỗ trợ thông khí cho đến khi hồi phục)",
+            "ECG (theo dõi nhịp tim)",
+            "Dấu hiệu hồi phục (cử động tự nhiên, phản xạ)"
+        ],
+        "precautions": [
+            "PHẢI hỗ trợ thông khí cho đến khi hồi phục (bệnh nhân không thể thở tự nhiên)",
+            "Theo dõi TOF để đánh giá mức độ block và hồi phục",
+            "Dùng với sedative/anesthetic (bệnh nhân phải được an thần)",
+            "Thận trọng ở suy gan (thải trừ chủ yếu qua gan, tác dụng kéo dài)",
+            "Thận trọng ở suy thận (thải trừ một phần qua thận, có thể kéo dài)",
+            "Có thể dùng cho RSI khi succinylcholine chống chỉ định",
+            "Có reversal agent (sugammadex) - ưu điểm so với vecuronium"
+        ],
+        "pharmacokinetics": {
+            "half_life": "60-90 phút",
+            "onset": "60-90 giây (với liều 1.2 mg/kg), 90-120 giây (với liều 0.6 mg/kg)",
+            "duration": "30-60 phút (phụ thuộc liều)",
+            "protein_binding": "30%",
+            "clearance": "Gan (70% - chuyển hóa), thận (30% - thải trừ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh. Dung dịch đã pha: ổn định trong 24 giờ ở nhiệt độ phòng.",
+        "black_box_warnings": "PHẢI hỗ trợ thông khí cho đến khi hồi phục. Bệnh nhân không thể thở tự nhiên khi đang dùng rocuronium.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Aminoglycosides (gentamicin, tobramycin, amikacin)",
+                    "mechanism": "Aminoglycosides ức chế giải phóng acetylcholine",
+                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
+                    "management": "Thận trọng. Giảm liều rocuronium. Theo dõi TOF chặt chẽ."
+                },
+                {
+                    "drug": "Magnesium (IV)",
+                    "mechanism": "Magnesium ức chế giải phóng acetylcholine và tăng tác dụng của rocuronium",
+                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
+                    "management": "Thận trọng. Giảm liều rocuronium. Theo dõi TOF. Có thể cần giảm liều magnesium."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Volatile anesthetics (sevoflurane, isoflurane, desflurane)",
+                    "mechanism": "Tăng nhạy cảm với neuromuscular blockers",
+                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
+                    "management": "Thận trọng. Giảm liều rocuronium. Theo dõi TOF."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng rocuronium"
+            ],
+            "tương_đối": [
+                "Bệnh nhược cơ (myasthenia gravis) - có thể cần liều cao hơn hoặc tác dụng kéo dài",
+                "Suy gan nặng - tác dụng kéo dài (thải trừ chủ yếu qua gan)",
+                "Suy thận nặng - tác dụng kéo dài (thải trừ một phần qua thận)",
+                "Bệnh nhân cao tuổi - tăng nhạy cảm, tác dụng kéo dài"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Rocuronium là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Rocuronium có thể qua nhau thai nhưng nồng độ thấp. Được sử dụng rộng rãi trong gây mê sản khoa và có vẻ an toàn. Trong cấp cứu, lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết rocuronium có bài tiết vào sữa mẹ hay không. Thời gian bán thải 60-90 phút, protein binding 30%. Có thể bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng (thải trừ chủ yếu qua gan)",
+            "severe": "Thận trọng, giảm liều maintenance (tác dụng kéo dài)",
+            "notes": "Rocuronium thải trừ chủ yếu qua gan (70%). Suy gan làm giảm thải trừ, tăng nồng độ và kéo dài tác dụng. Giảm liều maintenance ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Giãn cơ kéo dài (>60 phút)",
+                "Suy hô hấp (bệnh nhân không thể thở tự nhiên)",
+                "Không thể đảo ngược bằng neostigmine (nếu dùng liều cao)"
+            ],
+            "antidote": "Sugammadex (Bridion) - reversal agent đặc hiệu cho rocuronium và vecuronium. Hoặc neostigmine + glycopyrrolate (nếu liều thấp).",
+            "treatment": [
+                "Hỗ trợ thông khí: Đặt nội khí quản, thở máy cho đến khi hồi phục",
+                "Theo dõi TOF để đánh giá hồi phục",
+                "Nếu cần đảo ngược nhanh:",
+                "  - Sugammadex (Bridion): 2-16 mg/kg IV (tùy mức độ block)",
+                "  - Hoặc Neostigmine 0.04-0.07 mg/kg IV + Glycopyrrolate 0.01 mg/kg IV (nếu liều rocuronium thấp)",
+                "Nếu không có reversal agent:",
+                "  - Hỗ trợ thông khí cho đến khi hồi phục (có thể >1 giờ)",
+                "Theo dõi: TOF, hô hấp, dấu hiệu hồi phục"
+            ],
+            "monitoring": "Theo dõi TOF, hô hấp liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Sugammadex (Bridion)",
+                    "mechanism": "Cyclodextrin, bao bọc rocuronium và vecuronium, đảo ngược block nhanh chóng",
+                    "indication": "Đảo ngược rocuronium/vecuronium (đặc biệt liều cao)",
+                    "dose": "2-16 mg/kg IV (tùy mức độ block: 2mg/kg cho block nhẹ, 4mg/kg cho block vừa, 16mg/kg cho block sâu)",
+                    "caution": "Sugammadex là reversal agent đặc hiệu, an toàn và hiệu quả. Ưu điểm so với neostigmine."
+                },
+                {
+                    "agent": "Neostigmine + Glycopyrrolate",
+                    "mechanism": "Neostigmine ức chế cholinesterase, tăng acetylcholine. Glycopyrrolate chống nhịp chậm.",
+                    "indication": "Đảo ngược rocuronium (chỉ khi liều thấp, block nhẹ)",
+                    "dose": "Neostigmine 0.04-0.07 mg/kg IV + Glycopyrrolate 0.01 mg/kg IV",
+                    "caution": "Chỉ hiệu quả khi block nhẹ. Không hiệu quả khi block sâu hoặc liều cao."
+                }
+            ],
+            "notes": "Sugammadex là reversal agent đặc hiệu và ưu tiên cho rocuronium. Neostigmine chỉ hiệu quả khi block nhẹ."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Dùng trực tiếp dung dịch đã pha sẵn (10mg/ml).",
+                "infusion_rate": "Intubation: 0.6-1.2 mg/kg IV bolus. Maintenance: 0.1-0.2 mg/kg mỗi 20-45 phút hoặc 5-12 mcg/kg/phút IV infusion. ICU: 5-12 mcg/kg/phút IV infusion (điều chỉnh theo TOF).",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác. Tiêm bolus riêng biệt hoặc dùng đường truyền riêng cho infusion."
+                ],
+                "notes": "QUAN TRỌNG: 1) PHẢI hỗ trợ thông khí cho đến khi hồi phục, 2) Theo dõi TOF liên tục, 3) Dùng với sedative/anesthetic (bệnh nhân phải được an thần), 4) Liều RSI: 1-1.2 mg/kg để đạt tác dụng nhanh, 5) Thận trọng ở suy gan (tác dụng kéo dài), 6) Có reversal agent (sugammadex) - ưu điểm."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Rocuronium (Esmeron)",
+                "ACLS Guidelines 2020 - American Heart Association",
+                "Rapid Sequence Intubation (RSI) Guidelines",
+                "UpToDate - Rocuronium: Drug Information",
+                "Anesthesia Guidelines - Neuromuscular Blocking Agents",
+                "Medscape - Rocuronium Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, RSI guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    
     "Succinylcholine": {
         "group": "Emergency - Depolarizing Neuromuscular Blocker",
         "vietnamese_name": "Succinylcholine, Suxamethonium",
@@ -227,198 +599,6 @@ NEUROMUSCULAR_BLOCKERS_DRUGS = {
         }
     },
     
-    "Rocuronium": {
-        "group": "Emergency - Non-depolarizing Neuromuscular Blocker (Aminosteroid)",
-        "vietnamese_name": "Rocuronium, Esmeron",
-        "administration": ["IV"],
-        "indications": [
-            "Đặt nội khí quản (intubation)",
-            "Duy trì giãn cơ trong phẫu thuật",
-            "Giãn cơ trong ICU (ARDS, status asthmaticus)",
-            "RSI (rapid sequence intubation) - thay thế succinylcholine khi chống chỉ định"
-        ],
-        "contraindications": [
-            "Dị ứng rocuronium",
-            "Bệnh nhược cơ (myasthenia gravis) - có thể cần liều cao hơn hoặc tác dụng kéo dài"
-        ],
-        "dosage": {
-            "adult_intubation": "0.6-1.2 mg/kg IV bolus (thường 0.6 mg/kg)",
-            "adult_rsi": "1-1.2 mg/kg IV bolus (liều cao để đạt tác dụng nhanh)",
-            "adult_maintenance": "0.1-0.2 mg/kg mỗi 20-45 phút hoặc 5-12 mcg/kg/phút IV infusion",
-            "adult_icu": "5-12 mcg/kg/phút IV infusion (điều chỉnh theo TOF)",
-            "pediatric_intubation": "0.6-1.2 mg/kg IV bolus",
-            "notes": "Tác dụng nhanh (60-90 giây với liều 1.2 mg/kg), trung bình (30-60 phút). Có thể dùng cho RSI khi succinylcholine chống chỉ định."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi (nhưng thận trọng, có thể kéo dài)",
-            "under_30": "Thận trọng (có thể kéo dài, giảm liều maintenance)"
-        },
-        "side_effects": [
-            "Giãn cơ kéo dài (đặc biệt ở suy gan, suy thận)",
-            "Ức chế hô hấp (suy hô hấp nếu không hỗ trợ thông khí)",
-            "Phản ứng dị ứng (hiếm)",
-            "Tăng nhịp tim nhẹ (do giải phóng histamine nhẹ)"
-        ],
-        "interactions": [
-            "Aminoglycosides: tăng tác dụng, kéo dài thời gian giãn cơ",
-            "Magnesium: tăng tác dụng, kéo dài thời gian giãn cơ",
-            "Volatile anesthetics: tăng tác dụng",
-            "Corticosteroids: có thể giảm tác dụng nhẹ"
-        ],
-        "pregnancy": "C - An toàn trong cấp cứu và gây mê",
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {},
-            "icu_critical_care_only": True,
-            "look_alike_sound_alike": []
-        },
-        "guideline_tags": [
-            "ASA Difficult Airway Guidelines",
-            "SCCM ICU Sedation Guidelines"
-        ],
-        "mechanism_of_action": "Rocuronium là non-depolarizing neuromuscular blocker (aminosteroid). Ức chế cạnh tranh nicotinic acetylcholine receptors tại junction thần kinh-cơ, ngăn chặn acetylcholine gắn với receptor. Kết quả: giãn cơ xương. Khác với succinylcholine (depolarizing), rocuronium không gây khử cực và không gây fasciculations. Rocuronium có tác dụng nhanh (60-90 giây với liều cao 1.2 mg/kg), phù hợp cho RSI. Thời gian tác dụng trung bình (30-60 phút). Thải trừ chủ yếu qua gan (70%), một phần qua thận (30%).",
-        "monitoring": [
-            "TOF (train-of-four) monitoring liên tục (quan trọng)",
-            "Hô hấp (phải hỗ trợ thông khí cho đến khi hồi phục)",
-            "ECG (theo dõi nhịp tim)",
-            "Dấu hiệu hồi phục (cử động tự nhiên, phản xạ)"
-        ],
-        "precautions": [
-            "PHẢI hỗ trợ thông khí cho đến khi hồi phục (bệnh nhân không thể thở tự nhiên)",
-            "Theo dõi TOF để đánh giá mức độ block và hồi phục",
-            "Dùng với sedative/anesthetic (bệnh nhân phải được an thần)",
-            "Thận trọng ở suy gan (thải trừ chủ yếu qua gan, tác dụng kéo dài)",
-            "Thận trọng ở suy thận (thải trừ một phần qua thận, có thể kéo dài)",
-            "Có thể dùng cho RSI khi succinylcholine chống chỉ định",
-            "Có reversal agent (sugammadex) - ưu điểm so với vecuronium"
-        ],
-        "pharmacokinetics": {
-            "half_life": "60-90 phút",
-            "onset": "60-90 giây (với liều 1.2 mg/kg), 90-120 giây (với liều 0.6 mg/kg)",
-            "duration": "30-60 phút (phụ thuộc liều)",
-            "protein_binding": "30%",
-            "clearance": "Gan (70% - chuyển hóa), thận (30% - thải trừ)"
-        },
-        "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh. Dung dịch đã pha: ổn định trong 24 giờ ở nhiệt độ phòng.",
-        "black_box_warnings": "PHẢI hỗ trợ thông khí cho đến khi hồi phục. Bệnh nhân không thể thở tự nhiên khi đang dùng rocuronium.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Aminoglycosides (gentamicin, tobramycin, amikacin)",
-                    "mechanism": "Aminoglycosides ức chế giải phóng acetylcholine",
-                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
-                    "management": "Thận trọng. Giảm liều rocuronium. Theo dõi TOF chặt chẽ."
-                },
-                {
-                    "drug": "Magnesium (IV)",
-                    "mechanism": "Magnesium ức chế giải phóng acetylcholine và tăng tác dụng của rocuronium",
-                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
-                    "management": "Thận trọng. Giảm liều rocuronium. Theo dõi TOF. Có thể cần giảm liều magnesium."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Volatile anesthetics (sevoflurane, isoflurane, desflurane)",
-                    "mechanism": "Tăng nhạy cảm với neuromuscular blockers",
-                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
-                    "management": "Thận trọng. Giảm liều rocuronium. Theo dõi TOF."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng rocuronium"
-            ],
-            "tương_đối": [
-                "Bệnh nhược cơ (myasthenia gravis) - có thể cần liều cao hơn hoặc tác dụng kéo dài",
-                "Suy gan nặng - tác dụng kéo dài (thải trừ chủ yếu qua gan)",
-                "Suy thận nặng - tác dụng kéo dài (thải trừ một phần qua thận)",
-                "Bệnh nhân cao tuổi - tăng nhạy cảm, tác dụng kéo dài"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Rocuronium là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Rocuronium có thể qua nhau thai nhưng nồng độ thấp. Được sử dụng rộng rãi trong gây mê sản khoa và có vẻ an toàn. Trong cấp cứu, lợi ích vượt quá nguy cơ.",
-            "lactation": {
-                "safety": "Unknown",
-                "details": "Không biết rocuronium có bài tiết vào sữa mẹ hay không. Thời gian bán thải 60-90 phút, protein binding 30%. Có thể bài tiết vào sữa mẹ ở nồng độ thấp.",
-                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Thận trọng (thải trừ chủ yếu qua gan)",
-            "severe": "Thận trọng, giảm liều maintenance (tác dụng kéo dài)",
-            "notes": "Rocuronium thải trừ chủ yếu qua gan (70%). Suy gan làm giảm thải trừ, tăng nồng độ và kéo dài tác dụng. Giảm liều maintenance ở suy gan nặng."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Giãn cơ kéo dài (>60 phút)",
-                "Suy hô hấp (bệnh nhân không thể thở tự nhiên)",
-                "Không thể đảo ngược bằng neostigmine (nếu dùng liều cao)"
-            ],
-            "antidote": "Sugammadex (Bridion) - reversal agent đặc hiệu cho rocuronium và vecuronium. Hoặc neostigmine + glycopyrrolate (nếu liều thấp).",
-            "treatment": [
-                "Hỗ trợ thông khí: Đặt nội khí quản, thở máy cho đến khi hồi phục",
-                "Theo dõi TOF để đánh giá hồi phục",
-                "Nếu cần đảo ngược nhanh:",
-                "  - Sugammadex (Bridion): 2-16 mg/kg IV (tùy mức độ block)",
-                "  - Hoặc Neostigmine 0.04-0.07 mg/kg IV + Glycopyrrolate 0.01 mg/kg IV (nếu liều rocuronium thấp)",
-                "Nếu không có reversal agent:",
-                "  - Hỗ trợ thông khí cho đến khi hồi phục (có thể >1 giờ)",
-                "Theo dõi: TOF, hô hấp, dấu hiệu hồi phục"
-            ],
-            "monitoring": "Theo dõi TOF, hô hấp liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng."
-        },
-        "reversal_agents": {
-            "available": True,
-            "agents": [
-                {
-                    "agent": "Sugammadex (Bridion)",
-                    "mechanism": "Cyclodextrin, bao bọc rocuronium và vecuronium, đảo ngược block nhanh chóng",
-                    "indication": "Đảo ngược rocuronium/vecuronium (đặc biệt liều cao)",
-                    "dose": "2-16 mg/kg IV (tùy mức độ block: 2mg/kg cho block nhẹ, 4mg/kg cho block vừa, 16mg/kg cho block sâu)",
-                    "caution": "Sugammadex là reversal agent đặc hiệu, an toàn và hiệu quả. Ưu điểm so với neostigmine."
-                },
-                {
-                    "agent": "Neostigmine + Glycopyrrolate",
-                    "mechanism": "Neostigmine ức chế cholinesterase, tăng acetylcholine. Glycopyrrolate chống nhịp chậm.",
-                    "indication": "Đảo ngược rocuronium (chỉ khi liều thấp, block nhẹ)",
-                    "dose": "Neostigmine 0.04-0.07 mg/kg IV + Glycopyrrolate 0.01 mg/kg IV",
-                    "caution": "Chỉ hiệu quả khi block nhẹ. Không hiệu quả khi block sâu hoặc liều cao."
-                }
-            ],
-            "notes": "Sugammadex là reversal agent đặc hiệu và ưu tiên cho rocuronium. Neostigmine chỉ hiệu quả khi block nhẹ."
-        },
-        "administration_instructions": {
-            "oral": None,
-            "iv": {
-                "reconstitution": "Dùng trực tiếp dung dịch đã pha sẵn (10mg/ml).",
-                "infusion_rate": "Intubation: 0.6-1.2 mg/kg IV bolus. Maintenance: 0.1-0.2 mg/kg mỗi 20-45 phút hoặc 5-12 mcg/kg/phút IV infusion. ICU: 5-12 mcg/kg/phút IV infusion (điều chỉnh theo TOF).",
-                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
-                "incompatibility": [
-                    "Không trộn với các thuốc khác. Tiêm bolus riêng biệt hoặc dùng đường truyền riêng cho infusion."
-                ],
-                "notes": "QUAN TRỌNG: 1) PHẢI hỗ trợ thông khí cho đến khi hồi phục, 2) Theo dõi TOF liên tục, 3) Dùng với sedative/anesthetic (bệnh nhân phải được an thần), 4) Liều RSI: 1-1.2 mg/kg để đạt tác dụng nhanh, 5) Thận trọng ở suy gan (tác dụng kéo dài), 6) Có reversal agent (sugammadex) - ưu điểm."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Rocuronium (Esmeron)",
-                "ACLS Guidelines 2020 - American Heart Association",
-                "Rapid Sequence Intubation (RSI) Guidelines",
-                "UpToDate - Rocuronium: Drug Information",
-                "Anesthesia Guidelines - Neuromuscular Blocking Agents",
-                "Medscape - Rocuronium Drug Reference"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, RSI guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
-    },
-    
     "Vecuronium": {
         "group": "Emergency - Non-depolarizing Neuromuscular Blocker (Aminosteroid)",
         "vietnamese_name": "Vecuronium, Norcuron",
@@ -609,186 +789,6 @@ NEUROMUSCULAR_BLOCKERS_DRUGS = {
         }
     },
     
-    "Cisatracurium": {
-        "group": "Emergency - Non-depolarizing Neuromuscular Blocker (Benzylisoquinolinium)",
-        "vietnamese_name": "Cisatracurium, Nimbex",
-        "administration": ["IV"],
-        "indications": [
-            "Đặt nội khí quản (intubation)",
-            "Duy trì giãn cơ trong phẫu thuật",
-            "Giãn cơ trong ICU (ARDS, status asthmaticus) - THUỐC ƯU TIÊN",
-            "Tăng áp lực nội sọ (intracranial hypertension)"
-        ],
-        "contraindications": [
-            "Dị ứng cisatracurium",
-            "Bệnh nhược cơ (myasthenia gravis) - có thể cần liều cao hơn hoặc tác dụng kéo dài"
-        ],
-        "dosage": {
-            "adult_intubation": "0.15-0.2 mg/kg IV bolus",
-            "adult_maintenance": "0.03 mg/kg mỗi 40-60 phút hoặc 1-3 mcg/kg/phút IV infusion",
-            "adult_icu": "1-3 mcg/kg/phút IV infusion (điều chỉnh theo TOF)",
-            "pediatric_intubation": "0.1-0.15 mg/kg IV bolus",
-            "notes": "Tác dụng trung bình (2-3 phút), thời gian tác dụng 40-60 phút. Hofmann elimination - không phụ thuộc gan/thận (ưu điểm lớn). Thuốc ưu tiên cho ICU."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi (Hofmann elimination)",
-            "under_30": "Không đổi (Hofmann elimination - không phụ thuộc thận)"
-        },
-        "side_effects": [
-            "Giãn cơ kéo dài (ít hơn so với vecuronium/rocuronium ở suy gan/thận)",
-            "Ức chế hô hấp (suy hô hấp nếu không hỗ trợ thông khí)",
-            "Phản ứng dị ứng (hiếm)",
-            "Giải phóng histamine nhẹ (ít hơn atracurium)"
-        ],
-        "interactions": [
-            "Aminoglycosides: tăng tác dụng, kéo dài thời gian giãn cơ",
-            "Magnesium: tăng tác dụng, kéo dài thời gian giãn cơ",
-            "Volatile anesthetics: tăng tác dụng"
-        ],
-        "pregnancy": "C - An toàn trong cấp cứu và gây mê",
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {},
-            "icu_critical_care_only": True,
-            "look_alike_sound_alike": []
-        },
-        "guideline_tags": [
-            "ASA Difficult Airway Guidelines",
-            "SCCM ICU Sedation Guidelines"
-        ],
-        "mechanism_of_action": "Cisatracurium là non-depolarizing neuromuscular blocker (benzylisoquinolinium). Ức chế cạnh tranh nicotinic acetylcholine receptors tại junction thần kinh-cơ, ngăn chặn acetylcholine gắn với receptor. Kết quả: giãn cơ xương. Cisatracurium là đồng phân của atracurium, nhưng mạnh hơn 3 lần và ít giải phóng histamine hơn. ĐẶC ĐIỂM QUAN TRỌNG: Cisatracurium bị phân hủy bởi Hofmann elimination (phản ứng hóa học tự phát ở nhiệt độ và pH cơ thể), KHÔNG phụ thuộc gan/thận. Đây là ưu điểm lớn so với vecuronium/rocuronium. Thời gian tác dụng trung bình (40-60 phút).",
-        "monitoring": [
-            "TOF (train-of-four) monitoring liên tục (quan trọng)",
-            "Hô hấp (phải hỗ trợ thông khí cho đến khi hồi phục)",
-            "ECG (theo dõi nhịp tim)",
-            "Dấu hiệu hồi phục (cử động tự nhiên, phản xạ)"
-        ],
-        "precautions": [
-            "PHẢI hỗ trợ thông khí cho đến khi hồi phục (bệnh nhân không thể thở tự nhiên)",
-            "Theo dõi TOF để đánh giá mức độ block và hồi phục",
-            "Dùng với sedative/anesthetic (bệnh nhân phải được an thần)",
-            "Ưu điểm: Không phụ thuộc gan/thận (Hofmann elimination) - an toàn ở suy gan/thận",
-            "Thuốc ưu tiên cho ICU (đặc biệt ARDS) - không tích lũy ở suy gan/thận",
-            "Ít giải phóng histamine hơn atracurium (ưu điểm)",
-            "Không có reversal agent đặc hiệu (sugammadex không hiệu quả) - phải chờ tự hồi phục"
-        ],
-        "pharmacokinetics": {
-            "half_life": "22-29 phút",
-            "onset": "2-3 phút",
-            "duration": "40-60 phút (phụ thuộc liều)",
-            "protein_binding": "Không đáng kể",
-            "clearance": "Hofmann elimination (phản ứng hóa học tự phát, không phụ thuộc gan/thận) - 77%, một phần qua thận (16%) và gan (7%)"
-        },
-        "storage": "Bảo quản ở nhiệt độ 2-8°C, tránh ánh sáng, tránh đông lạnh. Dung dịch đã pha: ổn định trong 24 giờ ở nhiệt độ phòng.",
-        "black_box_warnings": "PHẢI hỗ trợ thông khí cho đến khi hồi phục. Bệnh nhân không thể thở tự nhiên khi đang dùng cisatracurium.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Aminoglycosides (gentamicin, tobramycin, amikacin)",
-                    "mechanism": "Aminoglycosides ức chế giải phóng acetylcholine",
-                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
-                    "management": "Thận trọng. Giảm liều cisatracurium. Theo dõi TOF chặt chẽ."
-                },
-                {
-                    "drug": "Magnesium (IV)",
-                    "mechanism": "Magnesium ức chế giải phóng acetylcholine và tăng tác dụng của cisatracurium",
-                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
-                    "management": "Thận trọng. Giảm liều cisatracurium. Theo dõi TOF. Có thể cần giảm liều magnesium."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Volatile anesthetics (sevoflurane, isoflurane, desflurane)",
-                    "mechanism": "Tăng nhạy cảm với neuromuscular blockers",
-                    "effect": "Tăng tác dụng và kéo dài thời gian giãn cơ",
-                    "management": "Thận trọng. Giảm liều cisatracurium. Theo dõi TOF."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng cisatracurium"
-            ],
-            "tương_đối": [
-                "Bệnh nhược cơ (myasthenia gravis) - có thể cần liều cao hơn hoặc tác dụng kéo dài",
-                "Bệnh nhân cao tuổi - tăng nhạy cảm, tác dụng kéo dài"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Cisatracurium là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Cisatracurium có thể qua nhau thai nhưng nồng độ thấp. Được sử dụng rộng rãi trong gây mê sản khoa và có vẻ an toàn. Trong cấp cứu, lợi ích vượt quá nguy cơ.",
-            "lactation": {
-                "safety": "Unknown",
-                "details": "Không biết cisatracurium có bài tiết vào sữa mẹ hay không. Thời gian bán thải 22-29 phút. Có thể bài tiết vào sữa mẹ ở nồng độ thấp.",
-                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều (Hofmann elimination)",
-            "moderate": "Không cần điều chỉnh liều (Hofmann elimination)",
-            "severe": "Không cần điều chỉnh liều (Hofmann elimination - không phụ thuộc gan)",
-            "notes": "Cisatracurium bị phân hủy chủ yếu bởi Hofmann elimination (77%), không phụ thuộc chức năng gan. Đây là ưu điểm lớn so với vecuronium/rocuronium. Không cần điều chỉnh liều ở bệnh nhân suy gan."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Giãn cơ kéo dài (>60 phút)",
-                "Suy hô hấp (bệnh nhân không thể thở tự nhiên)"
-            ],
-            "antidote": "Neostigmine + Glycopyrrolate (chỉ khi block nhẹ). Không có reversal agent đặc hiệu (sugammadex không hiệu quả với cisatracurium).",
-            "treatment": [
-                "Hỗ trợ thông khí: Đặt nội khí quản, thở máy cho đến khi hồi phục",
-                "Theo dõi TOF để đánh giá hồi phục",
-                "Nếu block nhẹ:",
-                "  - Neostigmine 0.04-0.07 mg/kg IV + Glycopyrrolate 0.01 mg/kg IV",
-                "Nếu block sâu:",
-                "  - Hỗ trợ thông khí cho đến khi hồi phục (có thể >1 giờ)",
-                "  - Cisatracurium tự phân hủy bởi Hofmann elimination",
-                "Theo dõi: TOF, hô hấp, dấu hiệu hồi phục"
-            ],
-            "monitoring": "Theo dõi TOF, hô hấp liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng."
-        },
-        "reversal_agents": {
-            "available": True,
-            "agents": [
-                {
-                    "agent": "Neostigmine + Glycopyrrolate",
-                    "mechanism": "Neostigmine ức chế cholinesterase, tăng acetylcholine. Glycopyrrolate chống nhịp chậm.",
-                    "indication": "Đảo ngược cisatracurium (chỉ khi liều thấp, block nhẹ)",
-                    "dose": "Neostigmine 0.04-0.07 mg/kg IV + Glycopyrrolate 0.01 mg/kg IV",
-                    "caution": "Chỉ hiệu quả khi block nhẹ. Không hiệu quả khi block sâu. Sugammadex KHÔNG hiệu quả với cisatracurium."
-                }
-            ],
-            "notes": "Không có reversal agent đặc hiệu cho cisatracurium (sugammadex chỉ hiệu quả với rocuronium/vecuronium). Neostigmine chỉ hiệu quả khi block nhẹ. Cisatracurium tự phân hủy bởi Hofmann elimination."
-        },
-        "administration_instructions": {
-            "oral": None,
-            "iv": {
-                "reconstitution": "Dùng trực tiếp dung dịch đã pha sẵn (2mg/ml hoặc 10mg/ml).",
-                "infusion_rate": "Intubation: 0.15-0.2 mg/kg IV bolus. Maintenance: 0.03 mg/kg mỗi 40-60 phút hoặc 1-3 mcg/kg/phút IV infusion. ICU: 1-3 mcg/kg/phút IV infusion (điều chỉnh theo TOF).",
-                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
-                "incompatibility": [
-                    "Không trộn với các thuốc khác. Tiêm bolus riêng biệt hoặc dùng đường truyền riêng cho infusion."
-                ],
-                "notes": "QUAN TRỌNG: 1) PHẢI hỗ trợ thông khí cho đến khi hồi phục, 2) Theo dõi TOF liên tục, 3) Dùng với sedative/anesthetic (bệnh nhân phải được an thần), 4) ƯU ĐIỂM: Không phụ thuộc gan/thận (Hofmann elimination) - an toàn ở suy gan/thận, 5) Thuốc ưu tiên cho ICU (đặc biệt ARDS), 6) Không có reversal agent đặc hiệu (sugammadex không hiệu quả)."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Cisatracurium (Nimbex)",
-                "ACLS Guidelines 2020 - American Heart Association",
-                "ARDS Guidelines - Neuromuscular Blockade",
-                "UpToDate - Cisatracurium: Drug Information",
-                "Anesthesia Guidelines - Neuromuscular Blocking Agents",
-                "ROSE Trial - NEJM (2019) - Cisatracurium trong ARDS",
-                "Medscape - Cisatracurium Drug Reference"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, ROSE trial (ARDS), và dữ liệu lâm sàng từ nhiều nguồn"
-        }
-    }
 }
 
 __all__ = ['NEUROMUSCULAR_BLOCKERS_DRUGS']

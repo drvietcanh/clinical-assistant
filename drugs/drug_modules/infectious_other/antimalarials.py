@@ -3,117 +3,118 @@
 # Antimalarials
 
 ANTIMALARIALS_DRUGS = {
-    "Chloroquine": {'group': 'Infectious Disease - Antimalarial', 'vietnamese_name':
-        'Chloroquine, Aralen', 'administration': ['PO'], 'indications': [
-        'Sốt rét (phòng ngừa và điều trị)', 'Amebiasis ngoài gan',
-        'Lupus ban đỏ hệ thống', 'Viêm khớp dạng thấp'], 'contraindications': [
-        'Dị ứng chloroquine/4-aminoquinoline', 'Bệnh võng mạc', 'Bệnh gan nặng',
-        'Bệnh thận nặng', 'Rối loạn tạo máu'], 'dosage': {
-        'adult_malaria_treatment':
-        '600mg base (1g phosphate) ngày đầu, sau đó 300mg base (500mg phosphate) sau 6-8 giờ, sau đó 300mg base/ngày x 2 ngày'
-        , 'adult_malaria_prophylaxis':
-        '300mg base (500mg phosphate) x 1 lần/tuần, bắt đầu 1-2 tuần trước khi đi, tiếp tục trong khi ở và 4 tuần sau khi về'
-        , 'adult_lupus': '200-400mg base/ngày', 'notes':
-        'Rất độc cho võng mạc nếu dùng lâu dài. Theo dõi mắt định kỳ'},
-        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Giảm liều 50%',
-        'under_30': 'Tránh dùng'}, 'side_effects': [
-        'Độc võng mạc (dùng lâu dài, không hồi phục)', 'Rối loạn thị giác',
-        'Ban da, rụng tóc', 'Rối loạn tạo máu', 'Rối loạn tim mạc (liều cao)',
-        'Co giật (quá liều)', 'Độc gan'], 'interactions': [
-        'Digoxin: tăng nồng độ digoxin', 'Cimetidine: tăng nồng độ chloroquine',
-        'Ampicillin: giảm hấp thu ampicillin',
-        'Kaolin: giảm hấp thu chloroquine'], 'pregnancy':
-        'C - Thận trọng, nhưng có thể dùng cho sốt rét', 'mechanism_of_action':
-        'Chloroquine là 4-aminoquinoline, ức chế polymerase của ký sinh trùng sốt rét, ngăn cản tổng hợp DNA và RNA. Thuốc tích lũy trong lysosome của ký sinh trùng, tăng pH và ức chế tiêu hóa hemoglobin. Đối với sốt rét, chloroquine diệt thể vô tính trong hồng cầu. Đối với bệnh tự miễn (lupus, RA), chloroquine ức chế hoạt động của tế bào miễn dịch và giảm sản xuất cytokine viêm'
-        , 'monitoring': [
-        'Khám mắt định kỳ mỗi 6-12 tháng nếu dùng lâu dài (theo dõi độc võng mạc)',
-        'Thị trường (visual field) mỗi 6-12 tháng nếu dùng lâu dài',
-        'Chức năng gan (ALT, AST) định kỳ',
-        'Công thức máu toàn phần (CBC) định kỳ',
-        'Điện tâm đồ nếu dùng liều cao (theo dõi rối loạn nhịp)',
-        'Dấu hiệu rối loạn thị giác (nhìn mờ, ám điểm)',
-        'Dấu hiệu độc võng mạc (không hồi phục nếu phát hiện muộn)'],
-        'precautions': [
-        'Rất độc cho võng mạc nếu dùng lâu dài - cần khám mắt định kỳ',
-        'Ngừng ngay nếu có dấu hiệu độc võng mạc (nhìn mờ, ám điểm)',
-        'Giảm liều 50% nếu suy thận (CrCl 30-60)',
-        'Tránh dùng nếu suy thận nặng (CrCl <30)',
-        'Có thể dùng trong thai kỳ cho sốt rét (category C)',
-        'Tránh dùng với kaolin (giảm hấp thu)',
-        'Tương tác với digoxin (tăng nồng độ digoxin)',
-        'Có thể gây rối loạn nhịp tim nếu dùng liều cao (cần theo dõi ECG)'],
-        'pharmacokinetics': {'half_life': '20-60 ngày (rất dài, tích lũy)',
-        'onset': '2-3 giờ (sốt rét), 4-8 tuần (lupus/RA)', 'duration':
-        '7-14 ngày (sốt rét), kéo dài (lupus/RA)', 'protein_binding': '55%',
-        'clearance': 'Gan (chuyển hóa), thận (thải trừ - chậm)'}, 'storage':
-        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
+    "Artemether-lumefantrine": {'group':
+        'Infectious Disease - Antimalarial (ACT)', 'vietnamese_name':
+        'Artemether-lumefantrine, Coartem', 'administration': ['PO'],
+        'indications': [
+        'Sốt rét P. falciparum không biến chứng (first-line ACT)',
+        'Sốt rét kháng chloroquine', 'Sốt rét hỗn hợp (kết hợp với primaquine để diệt thể ngủ nếu P. vivax/ovale)'],
+        'contraindications': [
+        'Dị ứng artemether hoặc lumefantrine',
+        'Sốt rét nặng cần artesunate IV',
+        'Kéo dài QT nặng hoặc loạn nhịp thất đang tồn tại'], 'dosage': {
+        'adult_uncomplicated':
+        '4 viên (20mg/120mg) lúc 0, 8, 24, 36, 48, 60 giờ (tổng 6 liều). Uống với thức ăn có chất béo để tăng hấp thu'
+        , 'pediatric_weight_based':
+        '5-<15kg: 1 viên mỗi liều x 6; 15-<25kg: 2 viên mỗi liều x 6; 25-<35kg: 3 viên mỗi liều x 6; ≥35kg: 4 viên mỗi liều x 6'
+        , 'notes':
+        'KHÔNG dùng dự phòng dài ngày. Nếu nôn trong 1 giờ sau uống, nhắc lại liều.'},
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Thận trọng, theo dõi ECG và điện giải'}, 'side_effects': [
+        'Nhức đầu', 'Chóng mặt', 'Buồn nôn/nôn', 'Đau bụng', 'Mất ngủ',
+        'Kéo dài QT (hiếm, liên quan lumefantrine)', 'Hồi hộp, đánh trống ngực'],
+        'interactions': [
+        'Thuốc kéo dài QT (macrolide, fluoroquinolone, haloperidol)',
+        'CYP3A4 inhibitors (ketoconazole, ritonavir): tăng nồng độ lumefantrine',
+        'CYP3A4 inducers (rifampin, carbamazepine, phenytoin): giảm hiệu quả'],
+        'pregnancy':
+        'C - Tránh 3 tháng đầu nếu có lựa chọn khác; có thể dùng tam cá nguyệt 2-3 nếu lợi ích > nguy cơ',
+        'mechanism_of_action':
+        'Artemether (artemisinin dẫn xuất) tác dụng nhanh, tạo gốc tự do phá vỡ ký sinh trùng trong hồng cầu. Lumefantrine là aryl-amino alcohol tác dụng chậm hơn, ức chế chuyển hóa heme, kéo dài hiệu quả diệt ký sinh trùng và ngăn tái phát. Phối hợp giúp giảm nguy cơ kháng thuốc và tái phát.',
+        'monitoring': [
+        'Smear/ký sinh trùng máu mỗi 12-24 giờ đến khi âm tính',
+        'ECG (QTc) nếu có yếu tố nguy cơ hoặc dùng thuốc kéo dài QT',
+        'Triệu chứng lâm sàng (sốt, nôn, đau đầu)',
+        'Điện giải (K+, Mg2+) nếu nôn nhiều hoặc tiêu chảy',
+        'Dấu hiệu tái phát trong 28 ngày'], 'precautions': [
+        'Uống cùng bữa ăn giàu chất béo (sữa, thức ăn chứa dầu) để tăng hấp thu',
+        'Không dùng để dự phòng dài hạn',
+        'Tránh dùng cùng thuốc kéo dài QT hoặc hạ K+/Mg2+',
+        'Nếu nôn trong 1 giờ: nhắc lại liều; nếu nôn nhiều lần có thể cần đổi phác đồ',
+        'Không dùng đơn độc cho sốt rét nặng (dùng artesunate IV trước)',
+        'Cân nhắc phối hợp primaquine để diệt giao bào hoặc thể ngủ (vivax/ovale)'],
+        'pharmacokinetics': {'half_life':
+        'Artemether: 1-3 giờ; Lumefantrine: 3-6 ngày', 'onset': '1-2 giờ',
+        'duration': 'Lumefantrine kéo dài tác dụng vài ngày', 'protein_binding':
+        'Artemether ~95%, Lumefantrine >99%', 'clearance':
+        'Gan (CYP3A4 chuyển hóa cả hai), thải trừ mật/ phân'}, 'storage':
+        'Bảo quản nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
         'black_box_warnings':
-        'Có thể gây độc võng mạc nặng và không hồi phục nếu dùng lâu dài. Cần khám mắt định kỳ mỗi 6-12 tháng khi dùng lâu dài. Ngừng ngay nếu có dấu hiệu độc võng mạc'
-        , 'drug_interactions': {'major': [{'drug': 'Digoxin', 'mechanism':
-        'Chloroquine tăng nồng độ digoxin (cơ chế chưa rõ)', 'effect':
-        'Tăng nồng độ digoxin, tăng nguy cơ độc tính digoxin (rối loạn nhịp, buồn nôn)'
-        , 'management':
-        'Theo dõi nồng độ digoxin, giảm liều digoxin nếu cần. Theo dõi ECG và triệu chứng độc tính digoxin'
-        }], 'moderate': [{'drug': 'Cimetidine', 'mechanism':
-        'Ức chế chuyển hóa chloroquine', 'effect':
-        'Tăng nồng độ chloroquine, tăng độc tính', 'management':
-        'Theo dõi độc tính chloroquine (võng mạc, gan, máu)'}, {'drug':
-        'Ampicillin', 'mechanism': 'Chloroquine giảm hấp thu ampicillin',
-        'effect': 'Giảm hiệu quả ampicillin', 'management':
-        'Tách thời gian dùng (cách nhau ít nhất 2 giờ)'}, {'drug': 'Kaolin',
-        'mechanism': 'Kaolin giảm hấp thu chloroquine', 'effect':
-        'Giảm hiệu quả chloroquine', 'management':
-        'Tách thời gian dùng (cách nhau ít nhất 2 giờ)'}]}, 'contraindications':
-        {'tuyệt_đối': ['Dị ứng chloroquine hoặc 4-aminoquinoline',
-        'Bệnh võng mạc (retinopathy) - đặc biệt nếu dùng lâu dài',
-        'Suy gan nặng', 'Suy thận nặng (CrCl <30)'], 'tương_đối': [
-        'Rối loạn tạo máu - thận trọng, theo dõi công thức máu',
-        'Bệnh tim mạch - thận trọng với liều cao (có thể gây rối loạn nhịp)',
-        'Bệnh võng mạc nhẹ - thận trọng, khám mắt thường xuyên']},
+        'Nguy cơ kéo dài QT nếu dùng cùng thuốc kéo dài QT hoặc rối loạn điện giải. Phải uống đủ 6 liều và uống với thức ăn chứa chất béo để tránh thất bại điều trị.',
+        'drug_interactions': {'major': [{'drug': 'Rifampin, carbamazepine, phenytoin',
+        'mechanism': 'Cảm ứng CYP3A4, giảm nồng độ lumefantrine',
+        'effect': 'Giảm hiệu quả diệt ký sinh trùng, tăng nguy cơ thất bại điều trị',
+        'management': 'TRÁNH dùng. Nếu bắt buộc, chọn phác đồ khác'}],
+        'moderate': [{'drug': 'Macrolide/fluoroquinolone/haloperidol',
+        'mechanism': 'Kéo dài QT, cộng hưởng với lumefantrine',
+        'effect': 'Tăng nguy cơ loạn nhịp thất',
+        'management': 'Tránh phối hợp hoặc theo dõi ECG, điện giải'},
+        {'drug': 'Ritonavir/ketoconazole (ức chế CYP3A4)', 'mechanism':
+        'Tăng nồng độ lumefantrine', 'effect': 'Tăng nguy cơ kéo dài QT',
+        'management': 'Theo dõi ECG, cân nhắc phác đồ khác nếu nguy cơ cao'}],
+        'minor': [{'drug': 'Thực phẩm giàu chất béo', 'mechanism':
+        'Tăng hấp thu', 'effect': 'Tăng nồng độ thuốc (mong muốn)',
+        'management': 'Khuyến cáo uống với bữa ăn có chất béo'}]},
+        'contraindications': {'tuyệt_đối': [
+        'Dị ứng artemether, lumefantrine hoặc dẫn xuất artemisinin',
+        'Kéo dài QT rõ rệt/loạn nhịp thất đang hoạt động',
+        'Sốt rét nặng cần artesunate IV'], 'tương_đối': [
+        'Hạ kali/magie chưa chỉnh',
+        'Dùng thuốc kéo dài QT', 'Suy gan nặng', 'Suy thận nặng (ít dữ liệu)']},
         'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
-        'Có thể dùng trong thai kỳ cho sốt rét (category C). Sốt rét có thể đe dọa tính mạng mẹ và thai nhi, nên điều trị vẫn cần thiết. Tuy nhiên, thận trọng với liều cao và dùng lâu dài (lupus, RA) do nguy cơ độc võng mạc. Cân nhắc lợi ích/nguy cơ.'
-        , 'lactation': {'safety': 'Unknown', 'details':
-        'Chloroquine bài tiết vào sữa mẹ. Không có dữ liệu đầy đủ về an toàn cho trẻ bú mẹ.'
-        , 'recommendation':
-        'Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc tùy theo tình trạng lâm sàng. Sốt rét có thể đe dọa tính mạng, nên điều trị vẫn cần thiết'
-        }}, 'hepatic_adjustment': {'mild': 'Không đổi liều', 'moderate':
-        'Không đổi liều, nhưng theo dõi chức năng gan', 'severe':
-        'Tránh dùng hoặc dùng liều thấp dưới sự giám sát chặt chẽ. Theo dõi ALT/AST, bilirubin thường xuyên'
+        'Tránh dùng trong 3 tháng đầu nếu có lựa chọn khác; có thể dùng tam cá nguyệt 2-3 nếu lợi ích vượt trội nguy cơ. WHO cho phép dùng ở T2/T3 cho sốt rét falciparum không biến chứng.'
+        , 'lactation': {'safety': 'Caution', 'details':
+        'Bài tiết một lượng nhỏ vào sữa. Chưa rõ ảnh hưởng trên trẻ bú mẹ.',
+        'recommendation': 'Thận trọng; theo dõi trẻ nếu mẹ dùng.'}},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
+        'Thận trọng, theo dõi chức năng gan và QT', 'severe':
+        'Tránh hoặc theo dõi sát, cân nhắc phác đồ khác', 'notes':
+        'Chuyển hóa qua CYP3A4, suy gan có thể tăng nồng độ lumefantrine'},
+        'overdose_management': {'symptoms': [
+        'Buồn nôn, nôn', 'Chóng mặt', 'Kéo dài QT, loạn nhịp', 'Hạ huyết áp'],
+        'antidote': 'Không có antidote đặc hiệu', 'treatment': [
+        'Than hoạt tính nếu uống trong 1 giờ', 'Theo dõi ECG liên tục',
+        'Sửa điện giải (K+, Mg2+)', 'Điều trị loạn nhịp theo ACLS',
+        'Điều trị hỗ trợ huyết động'], 'monitoring':
+        'ECG, điện giải, huyết áp, nhịp tim ít nhất 24 giờ nếu quá liều'},
+        'reversal_agents': {'available': False, 'agents': None, 'notes':
+        'Không có thuốc giải độc; xử trí hỗ trợ và theo dõi ECG'},
+        'administration_instructions': {'oral': {'with_food':
+        'Uống với thức ăn nhiều chất béo hoặc sữa để tăng hấp thu',
+        'timing':
+        'Uống vào các thời điểm 0-8-24-36-48-60 giờ (tổng 6 liều), nên đặt nhắc nhở'
         , 'notes':
-        'Chloroquine chuyển hóa ở gan. Suy gan có thể làm giảm chuyển hóa và tăng tích lũy, tăng nguy cơ độc tính gan'
-        }, 'overdose_management': {'symptoms': [
-        'Rối loạn thị giác (nhìn mờ, ám điểm)',
-        'Độc võng mạc (không hồi phục nếu phát hiện muộn)',
-        'Rối loạn nhịp tim (liều cao)', 'Co giật (quá liều)',
-        'Rối loạn tạo máu (giảm bạch cầu, giảm tiểu cầu)', 'Độc gan',
-        'Ban da, rụng tóc'], 'antidote': 'Không có thuốc giải độc đặc hiệu',
-        'treatment': ['Rửa dạ dày nếu uống trong vòng 1-2 giờ',
-        'Than hoạt tính nếu uống trong vòng 1 giờ',
-        'Điều trị hỗ trợ: Truyền dịch, điều chỉnh điện giải',
-        'Theo dõi ECG nếu có triệu chứng rối loạn nhịp',
-        'Điều trị co giật nếu có (benzodiazepine)',
-        'Theo dõi chức năng gan (ALT, AST, bilirubin)',
-        'Theo dõi công thức máu (CBC) - theo dõi rối loạn tạo máu',
-        'Khám mắt ngay (theo dõi độc võng mạc)',
-        'Điều trị triệu chứng: Thuốc chống nôn, giảm đau nếu cần'],
-        'monitoring':
-        'ECG (nếu có triệu chứng rối loạn nhịp), chức năng gan (ALT, AST, bilirubin), công thức máu (CBC), khám mắt (theo dõi độc võng mạc), triệu chứng lâm sàng'
-        }, 'reversal_agents': {'available': False, 'agents': None, 'notes':
-        'Không có thuốc giải độc đặc hiệu. Điều trị hỗ trợ và theo dõi. Quan trọng: khám mắt ngay để phát hiện độc võng mạc sớm'
-        }, 'administration_instructions': {'oral': {'with_food':
-        'Có thể uống với thức ăn hoặc không. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ'
-        , 'timing':
-        'Với sốt rét: 600mg base (1g phosphate) ngày đầu, sau đó 300mg base (500mg phosphate) sau 6-8 giờ, sau đó 300mg base/ngày x 2 ngày. Với phòng ngừa: 300mg base (500mg phosphate) x 1 lần/tuần. Với lupus/RA: 200-400mg base/ngày'
-        , 'notes':
-        'Rất độc cho võng mạc nếu dùng lâu dài (lupus, RA). Cần khám mắt định kỳ mỗi 6-12 tháng. Ngừng ngay nếu có dấu hiệu độc võng mạc. Tránh dùng với kaolin (giảm hấp thu)'
-        }}, 'references': {'primary_sources': [
-        'FDA Drug Label - Chloroquine (Aralen)',
-        'UpToDate - Chloroquine drug information',
-        'WHO Guidelines for the treatment of malaria',
-        'American Academy of Ophthalmology Guidelines for chloroquine retinopathy screening'
-        , "Goodman & Gilman's Pharmacological Basis of Therapeutics"],
-        'last_updated': '2025-02-04', 'evidence_level':
-        'High - Guidelines dựa trên chứng cứ từ WHO, FDA và AAO'}},
+        'Nếu nôn trong 1 giờ, uống lại liều. Nếu nôn ≥2 lần, cân nhắc đổi phác đồ hoặc tiêm tĩnh mạch artesunate.'}},
+        'references': {'primary_sources': [
+        'WHO Guidelines for the treatment of malaria (uncomplicated falciparum)',
+        'CDC Malaria Treatment Guidelines',
+        'UpToDate - Artemether-lumefantrine drug information'],
+        'last_updated': '2025-02-06', 'evidence_level': 'High - WHO/CDC guidelines'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['QT prolongation (lumefantrine component)', 'Hepatotoxicity (rare)'],
+            'qt_prolongation': True,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['ECG (QTc) if risk factors or co-administered QT-prolonging drugs', 'Parasite count (blood smear)', 'Clinical symptoms', 'Electrolytes (K+, Mg2+)']
+        },
+        'guideline_tags': [
+            'WHO Guidelines - Malaria Treatment',
+            'CDC Guidelines - Malaria Treatment',
+            'FDA Drug Safety Communication - QT Prolongation'
+        ]},
     "Artesunate": {'group': 'Infectious Disease - Antimalarial (Artemisinin)',
         'vietnamese_name': 'Artesunate', 'administration': ['PO', 'IV', 'IM',
         'Rectal'], 'indications': ['Sốt rét nặng (severe malaria)',
@@ -243,118 +244,117 @@ ANTIMALARIALS_DRUGS = {
             'WHO Guidelines - ACT (Artemisinin-based Combination Therapy)',
             'CDC Guidelines - Malaria Treatment'
         ]},
-    "Artemether-lumefantrine": {'group':
-        'Infectious Disease - Antimalarial (ACT)', 'vietnamese_name':
-        'Artemether-lumefantrine, Coartem', 'administration': ['PO'],
-        'indications': [
-        'Sốt rét P. falciparum không biến chứng (first-line ACT)',
-        'Sốt rét kháng chloroquine', 'Sốt rét hỗn hợp (kết hợp với primaquine để diệt thể ngủ nếu P. vivax/ovale)'],
-        'contraindications': [
-        'Dị ứng artemether hoặc lumefantrine',
-        'Sốt rét nặng cần artesunate IV',
-        'Kéo dài QT nặng hoặc loạn nhịp thất đang tồn tại'], 'dosage': {
-        'adult_uncomplicated':
-        '4 viên (20mg/120mg) lúc 0, 8, 24, 36, 48, 60 giờ (tổng 6 liều). Uống với thức ăn có chất béo để tăng hấp thu'
-        , 'pediatric_weight_based':
-        '5-<15kg: 1 viên mỗi liều x 6; 15-<25kg: 2 viên mỗi liều x 6; 25-<35kg: 3 viên mỗi liều x 6; ≥35kg: 4 viên mỗi liều x 6'
-        , 'notes':
-        'KHÔNG dùng dự phòng dài ngày. Nếu nôn trong 1 giờ sau uống, nhắc lại liều.'},
-        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
-        'under_30': 'Thận trọng, theo dõi ECG và điện giải'}, 'side_effects': [
-        'Nhức đầu', 'Chóng mặt', 'Buồn nôn/nôn', 'Đau bụng', 'Mất ngủ',
-        'Kéo dài QT (hiếm, liên quan lumefantrine)', 'Hồi hộp, đánh trống ngực'],
-        'interactions': [
-        'Thuốc kéo dài QT (macrolide, fluoroquinolone, haloperidol)',
-        'CYP3A4 inhibitors (ketoconazole, ritonavir): tăng nồng độ lumefantrine',
-        'CYP3A4 inducers (rifampin, carbamazepine, phenytoin): giảm hiệu quả'],
-        'pregnancy':
-        'C - Tránh 3 tháng đầu nếu có lựa chọn khác; có thể dùng tam cá nguyệt 2-3 nếu lợi ích > nguy cơ',
-        'mechanism_of_action':
-        'Artemether (artemisinin dẫn xuất) tác dụng nhanh, tạo gốc tự do phá vỡ ký sinh trùng trong hồng cầu. Lumefantrine là aryl-amino alcohol tác dụng chậm hơn, ức chế chuyển hóa heme, kéo dài hiệu quả diệt ký sinh trùng và ngăn tái phát. Phối hợp giúp giảm nguy cơ kháng thuốc và tái phát.',
-        'monitoring': [
-        'Smear/ký sinh trùng máu mỗi 12-24 giờ đến khi âm tính',
-        'ECG (QTc) nếu có yếu tố nguy cơ hoặc dùng thuốc kéo dài QT',
-        'Triệu chứng lâm sàng (sốt, nôn, đau đầu)',
-        'Điện giải (K+, Mg2+) nếu nôn nhiều hoặc tiêu chảy',
-        'Dấu hiệu tái phát trong 28 ngày'], 'precautions': [
-        'Uống cùng bữa ăn giàu chất béo (sữa, thức ăn chứa dầu) để tăng hấp thu',
-        'Không dùng để dự phòng dài hạn',
-        'Tránh dùng cùng thuốc kéo dài QT hoặc hạ K+/Mg2+',
-        'Nếu nôn trong 1 giờ: nhắc lại liều; nếu nôn nhiều lần có thể cần đổi phác đồ',
-        'Không dùng đơn độc cho sốt rét nặng (dùng artesunate IV trước)',
-        'Cân nhắc phối hợp primaquine để diệt giao bào hoặc thể ngủ (vivax/ovale)'],
-        'pharmacokinetics': {'half_life':
-        'Artemether: 1-3 giờ; Lumefantrine: 3-6 ngày', 'onset': '1-2 giờ',
-        'duration': 'Lumefantrine kéo dài tác dụng vài ngày', 'protein_binding':
-        'Artemether ~95%, Lumefantrine >99%', 'clearance':
-        'Gan (CYP3A4 chuyển hóa cả hai), thải trừ mật/ phân'}, 'storage':
-        'Bảo quản nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
+    "Chloroquine": {'group': 'Infectious Disease - Antimalarial', 'vietnamese_name':
+        'Chloroquine, Aralen', 'administration': ['PO'], 'indications': [
+        'Sốt rét (phòng ngừa và điều trị)', 'Amebiasis ngoài gan',
+        'Lupus ban đỏ hệ thống', 'Viêm khớp dạng thấp'], 'contraindications': [
+        'Dị ứng chloroquine/4-aminoquinoline', 'Bệnh võng mạc', 'Bệnh gan nặng',
+        'Bệnh thận nặng', 'Rối loạn tạo máu'], 'dosage': {
+        'adult_malaria_treatment':
+        '600mg base (1g phosphate) ngày đầu, sau đó 300mg base (500mg phosphate) sau 6-8 giờ, sau đó 300mg base/ngày x 2 ngày'
+        , 'adult_malaria_prophylaxis':
+        '300mg base (500mg phosphate) x 1 lần/tuần, bắt đầu 1-2 tuần trước khi đi, tiếp tục trong khi ở và 4 tuần sau khi về'
+        , 'adult_lupus': '200-400mg base/ngày', 'notes':
+        'Rất độc cho võng mạc nếu dùng lâu dài. Theo dõi mắt định kỳ'},
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Giảm liều 50%',
+        'under_30': 'Tránh dùng'}, 'side_effects': [
+        'Độc võng mạc (dùng lâu dài, không hồi phục)', 'Rối loạn thị giác',
+        'Ban da, rụng tóc', 'Rối loạn tạo máu', 'Rối loạn tim mạc (liều cao)',
+        'Co giật (quá liều)', 'Độc gan'], 'interactions': [
+        'Digoxin: tăng nồng độ digoxin', 'Cimetidine: tăng nồng độ chloroquine',
+        'Ampicillin: giảm hấp thu ampicillin',
+        'Kaolin: giảm hấp thu chloroquine'], 'pregnancy':
+        'C - Thận trọng, nhưng có thể dùng cho sốt rét', 'mechanism_of_action':
+        'Chloroquine là 4-aminoquinoline, ức chế polymerase của ký sinh trùng sốt rét, ngăn cản tổng hợp DNA và RNA. Thuốc tích lũy trong lysosome của ký sinh trùng, tăng pH và ức chế tiêu hóa hemoglobin. Đối với sốt rét, chloroquine diệt thể vô tính trong hồng cầu. Đối với bệnh tự miễn (lupus, RA), chloroquine ức chế hoạt động của tế bào miễn dịch và giảm sản xuất cytokine viêm'
+        , 'monitoring': [
+        'Khám mắt định kỳ mỗi 6-12 tháng nếu dùng lâu dài (theo dõi độc võng mạc)',
+        'Thị trường (visual field) mỗi 6-12 tháng nếu dùng lâu dài',
+        'Chức năng gan (ALT, AST) định kỳ',
+        'Công thức máu toàn phần (CBC) định kỳ',
+        'Điện tâm đồ nếu dùng liều cao (theo dõi rối loạn nhịp)',
+        'Dấu hiệu rối loạn thị giác (nhìn mờ, ám điểm)',
+        'Dấu hiệu độc võng mạc (không hồi phục nếu phát hiện muộn)'],
+        'precautions': [
+        'Rất độc cho võng mạc nếu dùng lâu dài - cần khám mắt định kỳ',
+        'Ngừng ngay nếu có dấu hiệu độc võng mạc (nhìn mờ, ám điểm)',
+        'Giảm liều 50% nếu suy thận (CrCl 30-60)',
+        'Tránh dùng nếu suy thận nặng (CrCl <30)',
+        'Có thể dùng trong thai kỳ cho sốt rét (category C)',
+        'Tránh dùng với kaolin (giảm hấp thu)',
+        'Tương tác với digoxin (tăng nồng độ digoxin)',
+        'Có thể gây rối loạn nhịp tim nếu dùng liều cao (cần theo dõi ECG)'],
+        'pharmacokinetics': {'half_life': '20-60 ngày (rất dài, tích lũy)',
+        'onset': '2-3 giờ (sốt rét), 4-8 tuần (lupus/RA)', 'duration':
+        '7-14 ngày (sốt rét), kéo dài (lupus/RA)', 'protein_binding': '55%',
+        'clearance': 'Gan (chuyển hóa), thận (thải trừ - chậm)'}, 'storage':
+        'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
         'black_box_warnings':
-        'Nguy cơ kéo dài QT nếu dùng cùng thuốc kéo dài QT hoặc rối loạn điện giải. Phải uống đủ 6 liều và uống với thức ăn chứa chất béo để tránh thất bại điều trị.',
-        'drug_interactions': {'major': [{'drug': 'Rifampin, carbamazepine, phenytoin',
-        'mechanism': 'Cảm ứng CYP3A4, giảm nồng độ lumefantrine',
-        'effect': 'Giảm hiệu quả diệt ký sinh trùng, tăng nguy cơ thất bại điều trị',
-        'management': 'TRÁNH dùng. Nếu bắt buộc, chọn phác đồ khác'}],
-        'moderate': [{'drug': 'Macrolide/fluoroquinolone/haloperidol',
-        'mechanism': 'Kéo dài QT, cộng hưởng với lumefantrine',
-        'effect': 'Tăng nguy cơ loạn nhịp thất',
-        'management': 'Tránh phối hợp hoặc theo dõi ECG, điện giải'},
-        {'drug': 'Ritonavir/ketoconazole (ức chế CYP3A4)', 'mechanism':
-        'Tăng nồng độ lumefantrine', 'effect': 'Tăng nguy cơ kéo dài QT',
-        'management': 'Theo dõi ECG, cân nhắc phác đồ khác nếu nguy cơ cao'}],
-        'minor': [{'drug': 'Thực phẩm giàu chất béo', 'mechanism':
-        'Tăng hấp thu', 'effect': 'Tăng nồng độ thuốc (mong muốn)',
-        'management': 'Khuyến cáo uống với bữa ăn có chất béo'}]},
-        'contraindications': {'tuyệt_đối': [
-        'Dị ứng artemether, lumefantrine hoặc dẫn xuất artemisinin',
-        'Kéo dài QT rõ rệt/loạn nhịp thất đang hoạt động',
-        'Sốt rét nặng cần artesunate IV'], 'tương_đối': [
-        'Hạ kali/magie chưa chỉnh',
-        'Dùng thuốc kéo dài QT', 'Suy gan nặng', 'Suy thận nặng (ít dữ liệu)']},
+        'Có thể gây độc võng mạc nặng và không hồi phục nếu dùng lâu dài. Cần khám mắt định kỳ mỗi 6-12 tháng khi dùng lâu dài. Ngừng ngay nếu có dấu hiệu độc võng mạc'
+        , 'drug_interactions': {'major': [{'drug': 'Digoxin', 'mechanism':
+        'Chloroquine tăng nồng độ digoxin (cơ chế chưa rõ)', 'effect':
+        'Tăng nồng độ digoxin, tăng nguy cơ độc tính digoxin (rối loạn nhịp, buồn nôn)'
+        , 'management':
+        'Theo dõi nồng độ digoxin, giảm liều digoxin nếu cần. Theo dõi ECG và triệu chứng độc tính digoxin'
+        }], 'moderate': [{'drug': 'Cimetidine', 'mechanism':
+        'Ức chế chuyển hóa chloroquine', 'effect':
+        'Tăng nồng độ chloroquine, tăng độc tính', 'management':
+        'Theo dõi độc tính chloroquine (võng mạc, gan, máu)'}, {'drug':
+        'Ampicillin', 'mechanism': 'Chloroquine giảm hấp thu ampicillin',
+        'effect': 'Giảm hiệu quả ampicillin', 'management':
+        'Tách thời gian dùng (cách nhau ít nhất 2 giờ)'}, {'drug': 'Kaolin',
+        'mechanism': 'Kaolin giảm hấp thu chloroquine', 'effect':
+        'Giảm hiệu quả chloroquine', 'management':
+        'Tách thời gian dùng (cách nhau ít nhất 2 giờ)'}]}, 'contraindications':
+        {'tuyệt_đối': ['Dị ứng chloroquine hoặc 4-aminoquinoline',
+        'Bệnh võng mạc (retinopathy) - đặc biệt nếu dùng lâu dài',
+        'Suy gan nặng', 'Suy thận nặng (CrCl <30)'], 'tương_đối': [
+        'Rối loạn tạo máu - thận trọng, theo dõi công thức máu',
+        'Bệnh tim mạch - thận trọng với liều cao (có thể gây rối loạn nhịp)',
+        'Bệnh võng mạc nhẹ - thận trọng, khám mắt thường xuyên']},
         'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
-        'Tránh dùng trong 3 tháng đầu nếu có lựa chọn khác; có thể dùng tam cá nguyệt 2-3 nếu lợi ích vượt trội nguy cơ. WHO cho phép dùng ở T2/T3 cho sốt rét falciparum không biến chứng.'
-        , 'lactation': {'safety': 'Caution', 'details':
-        'Bài tiết một lượng nhỏ vào sữa. Chưa rõ ảnh hưởng trên trẻ bú mẹ.',
-        'recommendation': 'Thận trọng; theo dõi trẻ nếu mẹ dùng.'}},
-        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
-        'Thận trọng, theo dõi chức năng gan và QT', 'severe':
-        'Tránh hoặc theo dõi sát, cân nhắc phác đồ khác', 'notes':
-        'Chuyển hóa qua CYP3A4, suy gan có thể tăng nồng độ lumefantrine'},
-        'overdose_management': {'symptoms': [
-        'Buồn nôn, nôn', 'Chóng mặt', 'Kéo dài QT, loạn nhịp', 'Hạ huyết áp'],
-        'antidote': 'Không có antidote đặc hiệu', 'treatment': [
-        'Than hoạt tính nếu uống trong 1 giờ', 'Theo dõi ECG liên tục',
-        'Sửa điện giải (K+, Mg2+)', 'Điều trị loạn nhịp theo ACLS',
-        'Điều trị hỗ trợ huyết động'], 'monitoring':
-        'ECG, điện giải, huyết áp, nhịp tim ít nhất 24 giờ nếu quá liều'},
-        'reversal_agents': {'available': False, 'agents': None, 'notes':
-        'Không có thuốc giải độc; xử trí hỗ trợ và theo dõi ECG'},
-        'administration_instructions': {'oral': {'with_food':
-        'Uống với thức ăn nhiều chất béo hoặc sữa để tăng hấp thu',
-        'timing':
-        'Uống vào các thời điểm 0-8-24-36-48-60 giờ (tổng 6 liều), nên đặt nhắc nhở'
+        'Có thể dùng trong thai kỳ cho sốt rét (category C). Sốt rét có thể đe dọa tính mạng mẹ và thai nhi, nên điều trị vẫn cần thiết. Tuy nhiên, thận trọng với liều cao và dùng lâu dài (lupus, RA) do nguy cơ độc võng mạc. Cân nhắc lợi ích/nguy cơ.'
+        , 'lactation': {'safety': 'Unknown', 'details':
+        'Chloroquine bài tiết vào sữa mẹ. Không có dữ liệu đầy đủ về an toàn cho trẻ bú mẹ.'
+        , 'recommendation':
+        'Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc tùy theo tình trạng lâm sàng. Sốt rét có thể đe dọa tính mạng, nên điều trị vẫn cần thiết'
+        }}, 'hepatic_adjustment': {'mild': 'Không đổi liều', 'moderate':
+        'Không đổi liều, nhưng theo dõi chức năng gan', 'severe':
+        'Tránh dùng hoặc dùng liều thấp dưới sự giám sát chặt chẽ. Theo dõi ALT/AST, bilirubin thường xuyên'
         , 'notes':
-        'Nếu nôn trong 1 giờ, uống lại liều. Nếu nôn ≥2 lần, cân nhắc đổi phác đồ hoặc tiêm tĩnh mạch artesunate.'}},
-        'references': {'primary_sources': [
-        'WHO Guidelines for the treatment of malaria (uncomplicated falciparum)',
-        'CDC Malaria Treatment Guidelines',
-        'UpToDate - Artemether-lumefantrine drug information'],
-        'last_updated': '2025-02-06', 'evidence_level': 'High - WHO/CDC guidelines'},
-        'risk_flags': {
-            'high_alert': False,
-            'narrow_therapeutic_index': False,
-            'bleeding_risk': False,
-            'organ_toxicity': ['QT prolongation (lumefantrine component)', 'Hepatotoxicity (rare)'],
-            'qt_prolongation': True,
-            'hepatotoxicity': False,
-            'nephrotoxicity': False,
-            'requires_monitoring': ['ECG (QTc) if risk factors or co-administered QT-prolonging drugs', 'Parasite count (blood smear)', 'Clinical symptoms', 'Electrolytes (K+, Mg2+)']
-        },
-        'guideline_tags': [
-            'WHO Guidelines - Malaria Treatment',
-            'CDC Guidelines - Malaria Treatment',
-            'FDA Drug Safety Communication - QT Prolongation'
-        ]},
+        'Chloroquine chuyển hóa ở gan. Suy gan có thể làm giảm chuyển hóa và tăng tích lũy, tăng nguy cơ độc tính gan'
+        }, 'overdose_management': {'symptoms': [
+        'Rối loạn thị giác (nhìn mờ, ám điểm)',
+        'Độc võng mạc (không hồi phục nếu phát hiện muộn)',
+        'Rối loạn nhịp tim (liều cao)', 'Co giật (quá liều)',
+        'Rối loạn tạo máu (giảm bạch cầu, giảm tiểu cầu)', 'Độc gan',
+        'Ban da, rụng tóc'], 'antidote': 'Không có thuốc giải độc đặc hiệu',
+        'treatment': ['Rửa dạ dày nếu uống trong vòng 1-2 giờ',
+        'Than hoạt tính nếu uống trong vòng 1 giờ',
+        'Điều trị hỗ trợ: Truyền dịch, điều chỉnh điện giải',
+        'Theo dõi ECG nếu có triệu chứng rối loạn nhịp',
+        'Điều trị co giật nếu có (benzodiazepine)',
+        'Theo dõi chức năng gan (ALT, AST, bilirubin)',
+        'Theo dõi công thức máu (CBC) - theo dõi rối loạn tạo máu',
+        'Khám mắt ngay (theo dõi độc võng mạc)',
+        'Điều trị triệu chứng: Thuốc chống nôn, giảm đau nếu cần'],
+        'monitoring':
+        'ECG (nếu có triệu chứng rối loạn nhịp), chức năng gan (ALT, AST, bilirubin), công thức máu (CBC), khám mắt (theo dõi độc võng mạc), triệu chứng lâm sàng'
+        }, 'reversal_agents': {'available': False, 'agents': None, 'notes':
+        'Không có thuốc giải độc đặc hiệu. Điều trị hỗ trợ và theo dõi. Quan trọng: khám mắt ngay để phát hiện độc võng mạc sớm'
+        }, 'administration_instructions': {'oral': {'with_food':
+        'Có thể uống với thức ăn hoặc không. Uống với thức ăn có thể giảm kích ứng dạ dày nhẹ'
+        , 'timing':
+        'Với sốt rét: 600mg base (1g phosphate) ngày đầu, sau đó 300mg base (500mg phosphate) sau 6-8 giờ, sau đó 300mg base/ngày x 2 ngày. Với phòng ngừa: 300mg base (500mg phosphate) x 1 lần/tuần. Với lupus/RA: 200-400mg base/ngày'
+        , 'notes':
+        'Rất độc cho võng mạc nếu dùng lâu dài (lupus, RA). Cần khám mắt định kỳ mỗi 6-12 tháng. Ngừng ngay nếu có dấu hiệu độc võng mạc. Tránh dùng với kaolin (giảm hấp thu)'
+        }}, 'references': {'primary_sources': [
+        'FDA Drug Label - Chloroquine (Aralen)',
+        'UpToDate - Chloroquine drug information',
+        'WHO Guidelines for the treatment of malaria',
+        'American Academy of Ophthalmology Guidelines for chloroquine retinopathy screening'
+        , "Goodman & Gilman's Pharmacological Basis of Therapeutics"],
+        'last_updated': '2025-02-04', 'evidence_level':
+        'High - Guidelines dựa trên chứng cứ từ WHO, FDA và AAO'}},
     "Hydroxychloroquine": {'group':
         'Infectious Disease - Antimalarial/Antirheumatic',
         'vietnamese_name': 'Hydroxychloroquine, Plaquenil', 'administration': [
@@ -547,7 +547,7 @@ ANTIMALARIALS_DRUGS = {
             'CDC Guidelines - Malaria Treatment',
             'FDA Black Box Warning - Primaquine and G6PD Deficiency',
             'FDA Black Box Warning - Primaquine and Hemolysis',
-            'FDA Black Box Warning - Primaquine and Pregnancy (Category X)'
+            'FDA Black Box Warning - Primaquine and Pregnancy (Category X)',
         ]}}
 
 __all__ = ['ANTIMALARIALS_DRUGS']

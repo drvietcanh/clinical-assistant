@@ -4,6 +4,149 @@ Active module - contains all respiratory drug data"""
 # Leukotriene Receptor Antagonists
 
 LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
+    "Cromolyn": {
+        "group": "Respiratory - Mast Cell Stabilizer",
+        "vietnamese_name": "Cromolyn, Cromolyn Sodium, Intal",
+        "administration": ["Inhalation", "Nasal", "Ophthalmic"],
+        "indications": [
+            "Hen phế quản (phòng ngừa)",
+            "Viêm mũi dị ứng",
+            "Viêm kết mạc dị ứng"
+        ],
+        "contraindications": [
+            "Dị ứng cromolyn",
+            "Hen phế quản cấp tính (không dùng cho cắt cơn cấp)"
+        ],
+        "dosage": {
+            "adult_inhalation": "20mg (2 puffs) x 4 lần/ngày, có thể giảm xuống 2-3 lần/ngày khi kiểm soát tốt",
+            "adult_nasal": "5.2mg (1 spray) mỗi lỗ mũi x 3-4 lần/ngày",
+            "adult_ophthalmic": "1-2 giọt mỗi mắt x 4-6 lần/ngày",
+            "pediatric_inhalation": "20mg (2 puffs) x 4 lần/ngày (từ 2 tuổi trở lên)",
+            "notes": "Mast cell stabilizer, dùng để phòng ngừa, không dùng cho cắt cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi",
+            "dialysis": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Không cần điều chỉnh liều ở suy thận."
+        },
+        "side_effects": [
+            "Ho (phổ biến khi hít)",
+            "Kích ứng họng",
+            "Vị đắng (khi hít)",
+            "Hắt hơi (khi dùng mũi)",
+            "Kích ứng mắt (khi dùng mắt)",
+            "Nhức đầu",
+            "Buồn nôn (hiếm)"
+        ],
+        "interactions": [
+            "Ít tương tác thuốc"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Cromolyn là mast cell stabilizer, ức chế phóng thích các chất trung gian gây viêm (histamine, leukotriene, prostaglandin, tryptase) từ mast cells. Ngăn chặn degranulation của mast cells khi tiếp xúc với chất gây dị ứng, từ đó giảm co thắt phế quản, giảm viêm, và giảm triệu chứng hen. Tác dụng phòng ngừa hen, đặc biệt hen do dị ứng và hen do gắng sức. Tác dụng phát huy sau vài ngày đến vài tuần. Không dùng cho cắt cơn cấp. Có dạng hít (inhalation), mũi (nasal), và mắt (ophthalmic).",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng hen, giảm tần suất cơn cấp)",
+            "Ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến",
+            "Tần suất dùng SABA (nếu tăng → cần đánh giá lại điều trị)",
+            "Kỹ thuật hít (nếu dùng dạng hít)"
+        ],
+        "precautions": [
+            "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, cromolyn là thuốc phòng ngừa",
+            "Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì",
+            "Dùng đều đặn hàng ngày, không phải khi cần",
+            "Ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến, có thể giảm sau vài ngày",
+            "Súc miệng sau khi hít để giảm vị đắng và kích ứng",
+            "Có thể dùng cho trẻ em từ 2 tuổi trở lên (dạng hít)",
+            "Hiệu quả với hen do dị ứng và hen do gắng sức"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1.3 giờ",
+            "onset": "Vài ngày đến vài tuần (tác dụng phòng ngừa)",
+            "duration": "6-8 giờ (dùng 3-4 lần/ngày)",
+            "protein_binding": "65%",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Thận: bài tiết một phần."
+        },
+        "storage": "Dạng hít (MDI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Dạng mũi/mắt: bảo quản ở nhiệt độ phòng, tránh ẩm.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, không dùng cho cắt cơn cấp.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng cromolyn",
+                "Hen phế quản cấp tính (không dùng cho cắt cơn cấp)"
+            ],
+            "tương_đối": [
+                "Trẻ em <2 tuổi (dạng hít) - an toàn từ 2 tuổi trở lên"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Category B - an toàn hơn category C. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Cromolyn hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Bài tiết vào sữa mẹ ở nồng độ rất thấp.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ho nặng",
+                "Kích ứng họng nặng",
+                "Buồn nôn",
+                "Nhức đầu"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay cromolyn",
+                "Súc miệng kỹ",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi triệu chứng, ho, kích ứng họng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": None,
+            "inhalation": {
+                "technique": "Dạng hít (MDI): Lắc kỹ trước khi dùng. Hít sâu và giữ hơi thở 10 giây. Đợi 30-60 giây trước khi dùng liều thứ hai (nếu cần).",
+                "timing": "Dùng 3-4 lần/ngày, đều đặn hàng ngày, không phải khi cần.",
+                "after_use": "Súc miệng và súc họng sau mỗi lần dùng để giảm vị đắng và kích ứng.",
+                "notes": "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần."
+            },
+            "nasal": {
+                "technique": "Dạng mũi: Lắc kỹ trước khi dùng. Xịt vào mỗi lỗ mũi.",
+                "timing": "Dùng 3-4 lần/ngày, đều đặn hàng ngày.",
+                "notes": "Hiệu quả với viêm mũi dị ứng."
+            },
+            "ophthalmic": {
+                "technique": "Dạng mắt: Nhỏ 1-2 giọt vào mỗi mắt.",
+                "timing": "Dùng 4-6 lần/ngày, đều đặn hàng ngày.",
+                "notes": "Hiệu quả với viêm kết mạc dị ứng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Intal (cromolyn sodium)",
+                "UpToDate - Mast cell stabilizers in asthma"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
     "Montelukast": {'group': 'Respiratory - Leukotriene Receptor Antagonist',
         'vietnamese_name': 'Montelukast, Singulair', 'administration': ['PO'],
         'indications': ['Hen phế quản (phòng ngừa)', 'Viêm mũi dị ứng',
@@ -336,149 +479,6 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         }
     },
     
-    "Cromolyn": {
-        "group": "Respiratory - Mast Cell Stabilizer",
-        "vietnamese_name": "Cromolyn, Cromolyn Sodium, Intal",
-        "administration": ["Inhalation", "Nasal", "Ophthalmic"],
-        "indications": [
-            "Hen phế quản (phòng ngừa)",
-            "Viêm mũi dị ứng",
-            "Viêm kết mạc dị ứng"
-        ],
-        "contraindications": [
-            "Dị ứng cromolyn",
-            "Hen phế quản cấp tính (không dùng cho cắt cơn cấp)"
-        ],
-        "dosage": {
-            "adult_inhalation": "20mg (2 puffs) x 4 lần/ngày, có thể giảm xuống 2-3 lần/ngày khi kiểm soát tốt",
-            "adult_nasal": "5.2mg (1 spray) mỗi lỗ mũi x 3-4 lần/ngày",
-            "adult_ophthalmic": "1-2 giọt mỗi mắt x 4-6 lần/ngày",
-            "pediatric_inhalation": "20mg (2 puffs) x 4 lần/ngày (từ 2 tuổi trở lên)",
-            "notes": "Mast cell stabilizer, dùng để phòng ngừa, không dùng cho cắt cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Không đổi",
-            "dialysis": "Không đổi",
-            "notes": "Hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Không cần điều chỉnh liều ở suy thận."
-        },
-        "side_effects": [
-            "Ho (phổ biến khi hít)",
-            "Kích ứng họng",
-            "Vị đắng (khi hít)",
-            "Hắt hơi (khi dùng mũi)",
-            "Kích ứng mắt (khi dùng mắt)",
-            "Nhức đầu",
-            "Buồn nôn (hiếm)"
-        ],
-        "interactions": [
-            "Ít tương tác thuốc"
-        ],
-        "pregnancy": "B",
-        "mechanism_of_action": "Cromolyn là mast cell stabilizer, ức chế phóng thích các chất trung gian gây viêm (histamine, leukotriene, prostaglandin, tryptase) từ mast cells. Ngăn chặn degranulation của mast cells khi tiếp xúc với chất gây dị ứng, từ đó giảm co thắt phế quản, giảm viêm, và giảm triệu chứng hen. Tác dụng phòng ngừa hen, đặc biệt hen do dị ứng và hen do gắng sức. Tác dụng phát huy sau vài ngày đến vài tuần. Không dùng cho cắt cơn cấp. Có dạng hít (inhalation), mũi (nasal), và mắt (ophthalmic).",
-        "monitoring": [
-            "Đáp ứng điều trị (giảm triệu chứng hen, giảm tần suất cơn cấp)",
-            "Ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến",
-            "Tần suất dùng SABA (nếu tăng → cần đánh giá lại điều trị)",
-            "Kỹ thuật hít (nếu dùng dạng hít)"
-        ],
-        "precautions": [
-            "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, cromolyn là thuốc phòng ngừa",
-            "Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì",
-            "Dùng đều đặn hàng ngày, không phải khi cần",
-            "Ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến, có thể giảm sau vài ngày",
-            "Súc miệng sau khi hít để giảm vị đắng và kích ứng",
-            "Có thể dùng cho trẻ em từ 2 tuổi trở lên (dạng hít)",
-            "Hiệu quả với hen do dị ứng và hen do gắng sức"
-        ],
-        "pharmacokinetics": {
-            "half_life": "1.3 giờ",
-            "onset": "Vài ngày đến vài tuần (tác dụng phòng ngừa)",
-            "duration": "6-8 giờ (dùng 3-4 lần/ngày)",
-            "protein_binding": "65%",
-            "clearance": "Hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Thận: bài tiết một phần."
-        },
-        "storage": "Dạng hít (MDI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Dạng mũi/mắt: bảo quản ở nhiệt độ phòng, tránh ẩm.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, không dùng cho cắt cơn cấp.",
-        "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng cromolyn",
-                "Hen phế quản cấp tính (không dùng cho cắt cơn cấp)"
-            ],
-            "tương_đối": [
-                "Trẻ em <2 tuổi (dạng hít) - an toàn từ 2 tuổi trở lên"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Category B - an toàn hơn category C. Có thể dùng khi lợi ích vượt quá nguy cơ.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Cromolyn hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Bài tiết vào sữa mẹ ở nồng độ rất thấp.",
-                "recommendation": "Có thể dùng an toàn khi cho con bú."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Không đổi",
-            "severe": "Không đổi",
-            "notes": "Hấp thu toàn thân tối thiểu từ dạng hít/mũi/mắt. Không cần điều chỉnh liều ở suy gan."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Ho nặng",
-                "Kích ứng họng nặng",
-                "Buồn nôn",
-                "Nhức đầu"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Ngừng ngay cromolyn",
-                "Súc miệng kỹ",
-                "Hỗ trợ và điều trị triệu chứng"
-            ],
-            "monitoring": "Theo dõi triệu chứng, ho, kích ứng họng"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng."
-        },
-        "administration_instructions": {
-            "oral": None,
-            "iv": None,
-            "inhalation": {
-                "technique": "Dạng hít (MDI): Lắc kỹ trước khi dùng. Hít sâu và giữ hơi thở 10 giây. Đợi 30-60 giây trước khi dùng liều thứ hai (nếu cần).",
-                "timing": "Dùng 3-4 lần/ngày, đều đặn hàng ngày, không phải khi cần.",
-                "after_use": "Súc miệng và súc họng sau mỗi lần dùng để giảm vị đắng và kích ứng.",
-                "notes": "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần."
-            },
-            "nasal": {
-                "technique": "Dạng mũi: Lắc kỹ trước khi dùng. Xịt vào mỗi lỗ mũi.",
-                "timing": "Dùng 3-4 lần/ngày, đều đặn hàng ngày.",
-                "notes": "Hiệu quả với viêm mũi dị ứng."
-            },
-            "ophthalmic": {
-                "technique": "Dạng mắt: Nhỏ 1-2 giọt vào mỗi mắt.",
-                "timing": "Dùng 4-6 lần/ngày, đều đặn hàng ngày.",
-                "notes": "Hiệu quả với viêm kết mạc dị ứng."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Intal (cromolyn sodium)",
-                "UpToDate - Mast cell stabilizers in asthma"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A"
-        }
-    }
 }
 
 __all__ = ['LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS']

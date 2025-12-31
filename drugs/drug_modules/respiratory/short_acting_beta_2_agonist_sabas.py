@@ -116,7 +116,7 @@ SHORT_ACTING_BETA_2_AGONIST_SABA_DRUGS = {
             "guidelines": [],
             "other": []
         },
-        }
+        },
     }
 
 __all__ = ['SHORT_ACTING_BETA_2_AGONIST_SABA_DRUGS']

@@ -323,7 +323,7 @@ ALPHA_GLUCOSIDASE_INHIBITORS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs"
         }
-    }
+    },
 }
 
 __all__ = ['ALPHA_GLUCOSIDASE_INHIBITORS_DRUGS']

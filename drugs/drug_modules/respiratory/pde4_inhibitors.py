@@ -174,7 +174,7 @@ PDE4_INHIBITORS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved, effective for severe COPD with exacerbation history, extensive clinical data"
         }
-    }
+    },
 }
 
 __all__ = ['PDE4_INHIBITORS_DRUGS']

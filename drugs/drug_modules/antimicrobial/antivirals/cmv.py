@@ -235,7 +235,7 @@ CMV_ANTIVIRALS = {
             "FDA Black Box Warning - Ganciclovir and Pregnancy (Category D)",
             "FDA Black Box Warning - Ganciclovir and Neurotoxicity"
         ]
-    }
+    },
 }
 
 __all__ = ['CMV_ANTIVIRALS']

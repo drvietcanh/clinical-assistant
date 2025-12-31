@@ -3,916 +3,6 @@ Antipsychotic Drugs
 """
 
 ANTIPSYCHOTICS_DRUGS = {
-    "Quetiapine": {
-        "group": "Psychiatry - Antipsychotic (Atypical)",
-        "vietnamese_name": "Quetiapine, Seroquel",
-        "administration": ["PO"],
-        "indications": [
-            "Tâm thần phân liệt",
-            "Rối loạn lưỡng cực (mania, depression)",
-            "Trầm cảm kháng trị (adjunct)",
-            "Rối loạn lo âu tổng quát (GAD) - off-label"
-        ],
-        "contraindications": [
-            "Dị ứng",
-            "QT prolongation nặng"
-        ],
-        "dosage": {
-            "adult_schizophrenia": "25mg x 2 lần/ngày, tăng đến 300-800mg/ngày (chia 2-3 lần)",
-            "adult_bipolar_mania": "50mg x 2 lần/ngày, tăng đến 400-800mg/ngày",
-            "adult_bipolar_depression": "50mg/ngày, tăng đến 300mg/ngày",
-            "adult_max": "800mg/ngày",
-            "notes": "Tăng liều chậm. Dạng extended release (XR): uống 1 lần/ngày"
-        },
-        "side_effects": [
-            "Buồn ngủ (phổ biến)",
-            "Chóng mặt",
-            "Khô miệng",
-            "Tăng cân (phổ biến)",
-            "Tăng lipid máu",
-            "Tăng đường huyết (nguy cơ đái tháo đường)",
-            "QT prolongation (hiếm)",
-            "Hạ huyết áp tư thế",
-            "Rối loạn vận động (hiếm hơn typical antipsychotics)"
-        ],
-        "interactions": [
-            "CYP3A4 inhibitors (ketoconazole, erythromycin): tăng nồng độ quetiapine",
-            "CYP3A4 inducers (carbamazepine, phenytoin): giảm nồng độ quetiapine",
-            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
-            "Alcohol: tăng tác dụng an thần",
-            "Antihypertensives: tăng nguy cơ hạ huyết áp"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Quetiapine là thuốc chống loạn thần không điển hình (atypical antipsychotic), đối kháng thụ thể dopamine D2 và serotonin 5-HT2A. Khác với typical antipsychotics, quetiapine có ái lực thấp hơn với D2 và gắn tạm thời (fast dissociation), giảm nguy cơ rối loạn vận động ngoại tháp (EPS) và tăng prolactin. Quetiapine cũng đối kháng thụ thể histamine H1 (gây buồn ngủ, tăng cân), alpha-1 adrenergic (gây hạ huyết áp), và muscarinic (gây khô miệng). Tác dụng: điều trị tâm thần phân liệt, rối loạn lưỡng cực (mania và depression), và trầm cảm kháng trị (adjunct). Có dạng immediate release (IR) và extended release (XR). Tác dụng phụ: buồn ngủ (phổ biến), tăng cân, tăng lipid máu, tăng đường huyết (nguy cơ đái tháo đường), QT prolongation (hiếm).",
-        "monitoring": [
-            "Đáp ứng điều trị: giảm triệu chứng tâm thần, ổn định tâm trạng (đánh giá sau 2-4 tuần)",
-            "Cân nặng - tăng cân phổ biến, theo dõi định kỳ",
-            "Lipid máu (cholesterol, triglyceride) - tăng lipid máu phổ biến",
-            "Đường huyết (glucose, HbA1c) - tăng đường huyết, nguy cơ đái tháo đường",
-            "ECG - QT prolongation (hiếm nhưng nguy hiểm), đặc biệt ở liều cao",
-            "Huyết áp - hạ huyết áp tư thế, đặc biệt khi bắt đầu hoặc tăng liều",
-            "Prolactin - ít tăng prolactin hơn typical antipsychotics",
-            "Dấu hiệu rối loạn vận động ngoại tháp (EPS) - hiếm hơn typical antipsychotics",
-            "Tương tác với CYP3A4 inhibitors/inducers (ảnh hưởng nồng độ quetiapine)"
-        ],
-        "precautions": [
-            "Tăng liều chậm để giảm tác dụng phụ (đặc biệt hạ huyết áp, buồn ngủ)",
-            "Buồn ngủ - phổ biến, đặc biệt khi bắt đầu hoặc tăng liều, tránh lái xe hoặc vận hành máy móc",
-            "Tăng cân - phổ biến, theo dõi cân nặng, khuyến khích chế độ ăn lành mạnh và tập thể dục",
-            "Tăng lipid máu - phổ biến, theo dõi cholesterol, triglyceride, điều chỉnh chế độ ăn hoặc dùng statin nếu cần",
-            "Tăng đường huyết, nguy cơ đái tháo đường - theo dõi glucose, HbA1c, đặc biệt ở bệnh nhân có nguy cơ đái tháo đường",
-            "QT prolongation - hiếm nhưng nguy hiểm, đặc biệt ở liều cao, tránh dùng với thuốc kéo dài QT khác",
-            "Hạ huyết áp tư thế - đặc biệt khi bắt đầu hoặc tăng liều, đứng dậy chậm, uống đủ nước",
-            "Thận trọng khi dùng với CYP3A4 inhibitors (ketoconazole, erythromycin) - tăng nồng độ quetiapine, giảm liều quetiapine 50-75%",
-            "Thận trọng khi dùng với CYP3A4 inducers (carbamazepine, phenytoin) - giảm nồng độ quetiapine, có thể cần tăng liều",
-            "Thận trọng khi dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-            "Tránh rượu - tăng tác dụng an thần",
-            "Dạng extended release (XR) - uống 1 lần/ngày, thuận tiện hơn, không nghiền hoặc nhai (phải uống nguyên viên)",
-            "Không ngừng đột ngột (có thể làm tăng triệu chứng)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "6 giờ (IR), 7 giờ (XR)",
-            "onset": "Vài ngày đến vài tuần (tác dụng chống loạn thần)",
-            "duration": "12-24 giờ (dùng 1-2 lần/ngày)",
-            "protein_binding": "83%",
-            "clearance": "Gan: chuyển hóa qua CYP3A4 (chính), CYP2D6 (phụ). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều khi dùng với CYP3A4 inhibitors/inducers."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng extended release (XR): bảo quản tương tự, không nghiền hoặc nhai (phải uống nguyên viên).",
-        "black_box_warnings": "Nguy cơ tử vong tăng ở bệnh nhân lớn tuổi với rối loạn tâm thần do sa sút trí tuệ (dementia-related psychosis) - không được dùng cho chỉ định này. Nguy cơ QT prolongation, có thể gây rối loạn nhịp tim (torsades de pointes). Nguy cơ tăng đường huyết, đái tháo đường. Nguy cơ tăng lipid máu. Nguy cơ tăng cân.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "CYP3A4 inhibitors (Ketoconazole, Itraconazole, Erythromycin, Clarithromycin, Ritonavir)",
-                    "mechanism": "Ức chế chuyển hóa quetiapine qua CYP3A4, tăng nồng độ quetiapine",
-                    "effect": "Tăng nồng độ quetiapine, tăng tác dụng phụ (buồn ngủ, hạ huyết áp, QT prolongation)",
-                    "management": "Giảm liều quetiapine 50-75% khi dùng với CYP3A4 inhibitors. Theo dõi tác dụng phụ chặt chẽ."
-                },
-                {
-                    "drug": "CYP3A4 inducers (Carbamazepine, Phenytoin, Rifampin, St. John's wort)",
-                    "mechanism": "Cảm ứng chuyển hóa quetiapine qua CYP3A4, giảm nồng độ quetiapine",
-                    "effect": "Giảm nồng độ quetiapine, giảm hiệu quả",
-                    "management": "Tăng liều quetiapine 2-5 lần khi dùng với CYP3A4 inducers. Theo dõi đáp ứng điều trị."
-                },
-                {
-                    "drug": "QT prolonging drugs (Amiodarone, Sotalol, Citalopram, Escitalopram, Haloperidol)",
-                    "mechanism": "Cả hai đều kéo dài QT, tăng nguy cơ rối loạn nhịp tim",
-                    "effect": "QT prolongation, rối loạn nhịp tim (torsades de pointes)",
-                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi ECG. Giảm liều một trong hai thuốc."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Antihypertensives",
-                    "mechanism": "Cả hai đều có thể gây hạ huyết áp",
-                    "effect": "Tăng nguy cơ hạ huyết áp tư thế, ngất",
-                    "management": "Thận trọng. Có thể cần giảm liều một trong hai thuốc. Theo dõi huyết áp."
-                },
-                {
-                    "drug": "Alcohol",
-                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
-                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
-                    "management": "Tránh hoặc giảm rượu. Cảnh báo bệnh nhân."
-                },
-                {
-                    "drug": "CYP2D6 inhibitors (Paroxetine, Fluoxetine)",
-                    "mechanism": "Ức chế chuyển hóa quetiapine qua CYP2D6 (phụ)",
-                    "effect": "Tăng nhẹ nồng độ quetiapine",
-                    "management": "Thận trọng. Có thể cần giảm liều quetiapine nhẹ."
-                }
-            ],
-            "minor": [
-                {
-                    "drug": "Lithium",
-                    "mechanism": "Có thể tăng tác dụng an thần nhẹ",
-                    "effect": "Tăng nhẹ buồn ngủ, chóng mặt",
-                    "management": "Thận trọng. Thường không cần điều chỉnh liều."
-                }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng quetiapine hoặc các thành phần khác",
-                "QT prolongation nặng (QTc >500ms)"
-            ],
-            "tương_đối": [
-                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
-                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
-                "Tăng lipid máu - tăng cholesterol, triglyceride",
-                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
-                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
-                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
-                "Dùng với CYP3A4 inhibitors - giảm liều quetiapine 50-75%",
-                "Dùng với CYP3A4 inducers - tăng liều quetiapine 2-5 lần",
-                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng quetiapine hoặc các thành phần khác",
-                "QT prolongation nặng (QTc >500ms)"
-            ],
-            "tương_đối": [
-                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
-                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
-                "Tăng lipid máu - tăng cholesterol, triglyceride",
-                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
-                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
-                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
-                "Dùng với CYP3A4 inhibitors - giảm liều quetiapine 50-75%",
-                "Dùng với CYP3A4 inducers - tăng liều quetiapine 2-5 lần",
-                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
-            ]
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Thận trọng, có thể cần giảm liều",
-            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
-            "dialysis": "Thận trọng, giảm liều. Quetiapine không được lọc sạch hiệu quả qua thẩm phân máu.",
-            "notes": "Quetiapine thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh, nhưng chứng cứ không rõ ràng. Trẻ sơ sinh có thể có withdrawal syndrome (khó chịu, run, khó thở) nếu mẹ dùng quetiapine trong thai kỳ, đặc biệt gần cuối thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ. Theo dõi trẻ sơ sinh về dấu hiệu withdrawal.",
-            "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Quetiapine bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
-                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém)."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Giảm liều 25-50%, theo dõi tác dụng phụ",
-            "severe": "Giảm liều 50%, theo dõi tác dụng phụ chặt chẽ. Hoặc tránh dùng nếu có thể.",
-            "notes": "Quetiapine chuyển hóa ở gan qua CYP3A4, CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, hôn mê",
-                "Rối loạn tim mạch: QT prolongation, rối loạn nhịp tim (torsades de pointes), hạ huyết áp",
-                "Rối loạn hô hấp: suy hô hấp",
-                "Rối loạn tiêu hóa: buồn nôn, nôn",
-                "Triệu chứng khác: giãn đồng tử"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
-            "treatment": [
-                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần (quan trọng)",
-                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
-                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
-                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, điện tâm đồ (QT prolongation)",
-                "Xử trí QT prolongation: Magnesium sulfate (2g IV), isoproterenol nếu cần",
-                "Xử trí torsades de pointes: Magnesium sulfate, overdrive pacing",
-                "Xử trí hạ huyết áp: IV fluids, vasopressors nếu cần",
-                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
-                "Theo dõi ít nhất 24-48 giờ"
-            ],
-            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, điện tâm đồ (QT interval), huyết áp"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn",
-                "timing": "Dạng immediate release (IR): chia 2-3 lần/ngày. Dạng extended release (XR): uống 1 lần/ngày vào buổi tối. Uống cùng thời điểm mỗi ngày. KHÔNG nghiền hoặc nhai viên XR (phải uống nguyên viên). Tăng liều chậm để giảm tác dụng phụ. Không ngừng đột ngột."
-            },
-            "iv": {
-                "reconstitution": "Không có dạng IV",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Chỉ có dạng uống"
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "Lexicomp - Quetiapine",
-                "UpToDate - Quetiapine: Drug information",
-                "FDA - Seroquel (quetiapine) prescribing information",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-            ],
-            "last_updated": "2024-12-19",
-            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
-        }
-    },
-    "Haloperidol": {
-        "group": "Psychiatry - Antipsychotic (Typical)",
-        "vietnamese_name": "Haloperidol, Haldol",
-        "administration": ["PO", "IM", "IV"],
-        "indications": [
-            "Tâm thần phân liệt",
-            "Rối loạn lưỡng cực (mania)",
-            "Loạn thần cấp",
-            "Delirium (ICU)",
-            "Tourette syndrome",
-            "Chứng nôn mửa nặng (refractory)"
-        ],
-        "contraindications": [
-            "Dị ứng",
-            "Parkinson's disease",
-            "Coma",
-            "Ức chế hệ thần kinh trung ương nặng"
-        ],
-        "dosage": {
-            "adult_schizophrenia_po": "0.5-5mg x 2-3 lần/ngày, tăng đến 15-20mg/ngày (tối đa 100mg/ngày)",
-            "adult_schizophrenia_im": "2-5mg IM, lặp mỗi 4-8 giờ nếu cần (tối đa 20mg/ngày)",
-            "adult_delirium": "0.5-2mg PO/IM mỗi 4-6 giờ",
-            "adult_max": "100mg/ngày PO, 20mg/ngày IM",
-            "notes": "Typical antipsychotic, nguy cơ cao rối loạn vận động ngoại tháp (EPS). Dạng decanoate (depot): 50-200mg IM mỗi 4 tuần."
-        },
-        "side_effects": [
-            "Rối loạn vận động ngoại tháp (EPS) - phổ biến: dystonia, akathisia, parkinsonism, tardive dyskinesia",
-            "Tăng prolactin (phổ biến)",
-            "QT prolongation (nguy hiểm)",
-            "Neuroleptic malignant syndrome (NMS) - hiếm nhưng nguy hiểm",
-            "Buồn ngủ, chóng mặt",
-            "Khô miệng",
-            "Táo bón",
-            "Hạ huyết áp tư thế"
-        ],
-        "interactions": [
-            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
-            "CYP2D6 inhibitors: tăng nồng độ haloperidol",
-            "CYP3A4 inhibitors: tăng nồng độ haloperidol",
-            "Anticholinergics: giảm EPS nhưng tăng tác dụng phụ anticholinergic",
-            "Alcohol: tăng tác dụng ức chế hệ thần kinh trung ương"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Haloperidol là thuốc chống loạn thần điển hình (typical antipsychotic), đối kháng mạnh thụ thể dopamine D2. Khác với atypical antipsychotics, haloperidol gắn chặt với D2 (tight binding), gây ức chế dopamine mạnh, dẫn đến nguy cơ cao rối loạn vận động ngoại tháp (EPS) và tăng prolactin. Haloperidol cũng đối kháng thụ thể alpha-1 adrenergic (gây hạ huyết áp) và histamine H1 (gây buồn ngủ). Tác dụng: điều trị tâm thần phân liệt, rối loạn lưỡng cực (mania), loạn thần cấp, delirium (ICU), và Tourette syndrome. Có dạng uống (PO), tiêm bắp (IM), tiêm tĩnh mạch (IV), và dạng depot (decanoate). Tác dụng phụ: rối loạn vận động ngoại tháp (EPS) - phổ biến, tăng prolactin, QT prolongation, neuroleptic malignant syndrome (NMS) - hiếm nhưng nguy hiểm.",
-        "monitoring": [
-            "Đáp ứng điều trị: giảm triệu chứng tâm thần, ổn định tâm trạng (đánh giá sau 2-4 tuần)",
-            "Rối loạn vận động ngoại tháp (EPS) - phổ biến, theo dõi: dystonia, akathisia, parkinsonism, tardive dyskinesia",
-            "ECG - QT prolongation (nguy hiểm), đặc biệt ở liều cao",
-            "Prolactin - tăng prolactin phổ biến (gây vô kinh, tiết sữa)",
-            "Dấu hiệu neuroleptic malignant syndrome (NMS): sốt, cứng cơ, thay đổi ý thức, tăng CK, tăng nhịp tim",
-            "Huyết áp - hạ huyết áp tư thế, đặc biệt khi bắt đầu hoặc tăng liều",
-            "Tương tác với CYP2D6, CYP3A4 inhibitors/inducers (ảnh hưởng nồng độ haloperidol)"
-        ],
-        "precautions": [
-            "Rối loạn vận động ngoại tháp (EPS) - phổ biến, đặc biệt ở liều cao, có thể dùng anticholinergics (benztropine, trihexyphenidyl) để điều trị",
-            "QT prolongation - nguy hiểm, đặc biệt ở liều cao, tránh dùng với thuốc kéo dài QT khác, theo dõi ECG",
-            "Neuroleptic malignant syndrome (NMS) - hiếm nhưng nguy hiểm, ngừng ngay nếu nghi ngờ, điều trị hỗ trợ",
-            "Tăng prolactin - phổ biến, gây vô kinh, tiết sữa, giảm ham muốn tình dục",
-            "Tardive dyskinesia - rối loạn vận động muộn, có thể không hồi phục, giảm liều hoặc ngừng nếu có thể",
-            "Hạ huyết áp tư thế - đặc biệt khi bắt đầu hoặc tăng liều, đứng dậy chậm, uống đủ nước",
-            "Thận trọng khi dùng với CYP2D6, CYP3A4 inhibitors - tăng nồng độ haloperidol, giảm liều",
-            "Thận trọng khi dùng với CYP2D6, CYP3A4 inducers - giảm nồng độ haloperidol, có thể cần tăng liều",
-            "Thận trọng khi dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-            "Tránh rượu - tăng tác dụng ức chế hệ thần kinh trung ương",
-            "Dạng depot (decanoate) - tiêm bắp mỗi 4 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị",
-            "Không ngừng đột ngột (có thể làm tăng triệu chứng)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "12-38 giờ (PO), 21 giờ (IM), 14-26 giờ (decanoate depot)",
-            "onset": "30-60 phút (IM), vài ngày đến vài tuần (tác dụng chống loạn thần)",
-            "duration": "12-24 giờ (PO), 4-8 giờ (IM), 4 tuần (decanoate depot)",
-            "protein_binding": "92%",
-            "clearance": "Gan: chuyển hóa qua CYP2D6 (chính), CYP3A4 (phụ). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều khi dùng với CYP2D6, CYP3A4 inhibitors/inducers."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng tiêm: bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh. Dạng depot (decanoate): bảo quản ở nhiệt độ phòng, tránh ánh sáng.",
-        "black_box_warnings": "Nguy cơ tử vong tăng ở bệnh nhân lớn tuổi với rối loạn tâm thần do sa sút trí tuệ (dementia-related psychosis) - không được dùng cho chỉ định này. Nguy cơ QT prolongation, có thể gây rối loạn nhịp tim (torsades de pointes). Nguy cơ neuroleptic malignant syndrome (NMS). Nguy cơ rối loạn vận động ngoại tháp (EPS), đặc biệt tardive dyskinesia (có thể không hồi phục).",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "QT prolonging drugs (Amiodarone, Sotalol, Citalopram, Escitalopram, Quetiapine)",
-                    "mechanism": "Cả hai đều kéo dài QT, tăng nguy cơ rối loạn nhịp tim",
-                    "effect": "QT prolongation, rối loạn nhịp tim (torsades de pointes)",
-                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi ECG. Giảm liều một trong hai thuốc."
-                },
-                {
-                    "drug": "CYP2D6 inhibitors (Paroxetine, Fluoxetine, Bupropion)",
-                    "mechanism": "Ức chế chuyển hóa haloperidol qua CYP2D6, tăng nồng độ haloperidol",
-                    "effect": "Tăng nồng độ haloperidol, tăng tác dụng phụ (EPS, QT prolongation)",
-                    "management": "Giảm liều haloperidol 50% khi dùng với CYP2D6 inhibitors. Theo dõi tác dụng phụ chặt chẽ."
-                },
-                {
-                    "drug": "CYP3A4 inhibitors (Ketoconazole, Itraconazole, Erythromycin, Clarithromycin)",
-                    "mechanism": "Ức chế chuyển hóa haloperidol qua CYP3A4, tăng nồng độ haloperidol",
-                    "effect": "Tăng nồng độ haloperidol, tăng tác dụng phụ",
-                    "management": "Giảm liều haloperidol 25-50% khi dùng với CYP3A4 inhibitors. Theo dõi tác dụng phụ chặt chẽ."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Anticholinergics (Benztropine, Trihexyphenidyl)",
-                    "mechanism": "Điều trị EPS nhưng tăng tác dụng phụ anticholinergic",
-                    "effect": "Tăng khô miệng, táo bón, bí tiểu, lú lẫn (đặc biệt ở người cao tuổi)",
-                    "management": "Dùng liều thấp nhất có hiệu quả. Theo dõi tác dụng phụ anticholinergic."
-                },
-                {
-                    "drug": "Alcohol",
-                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
-                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
-                    "management": "Tránh hoặc giảm rượu. Cảnh báo bệnh nhân."
-                }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng haloperidol hoặc các thành phần khác",
-                "Parkinson's disease - làm nặng triệu chứng",
-                "Coma - ức chế hệ thần kinh trung ương nặng",
-                "Ức chế hệ thần kinh trung ương nặng"
-            ],
-            "tương_đối": [
-                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
-                "QT prolongation - tăng nguy cơ rối loạn nhịp tim",
-                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
-                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
-                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
-                "Dùng với CYP2D6, CYP3A4 inhibitors - giảm liều haloperidol",
-                "Dùng với CYP2D6, CYP3A4 inducers - tăng liều haloperidol",
-                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, EPS, hạ huyết áp"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng haloperidol hoặc các thành phần khác",
-                "Parkinson's disease - làm nặng triệu chứng",
-                "Coma - ức chế hệ thần kinh trung ương nặng",
-                "Ức chế hệ thần kinh trung ương nặng"
-            ],
-            "tương_đối": [
-                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
-                "QT prolongation - tăng nguy cơ rối loạn nhịp tim",
-                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
-                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
-                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
-                "Dùng với CYP2D6, CYP3A4 inhibitors - giảm liều haloperidol",
-                "Dùng với CYP2D6, CYP3A4 inducers - tăng liều haloperidol",
-                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, EPS, hạ huyết áp"
-            ]
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Thận trọng, có thể cần giảm liều",
-            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
-            "dialysis": "Thận trọng, giảm liều. Haloperidol không được lọc sạch hiệu quả qua thẩm phân máu.",
-            "notes": "Haloperidol thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh, nhưng chứng cứ không rõ ràng. Trẻ sơ sinh có thể có withdrawal syndrome (khó chịu, run, khó thở) nếu mẹ dùng haloperidol trong thai kỳ, đặc biệt gần cuối thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ. Theo dõi trẻ sơ sinh về dấu hiệu withdrawal.",
-            "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Haloperidol bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
-                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém)."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Giảm liều 25-50%, theo dõi tác dụng phụ",
-            "severe": "Giảm liều 50%, theo dõi tác dụng phụ chặt chẽ. Hoặc tránh dùng nếu có thể.",
-            "notes": "Haloperidol chuyển hóa ở gan qua CYP2D6, CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, hôn mê, co giật",
-                "Rối loạn vận động: dystonia nặng, akathisia, parkinsonism",
-                "Rối loạn tim mạch: QT prolongation, rối loạn nhịp tim (torsades de pointes), hạ huyết áp",
-                "Rối loạn hô hấp: suy hô hấp",
-                "Neuroleptic malignant syndrome (NMS): sốt, cứng cơ, thay đổi ý thức, tăng CK",
-                "Rối loạn tiêu hóa: buồn nôn, nôn"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Benztropine hoặc diphenhydramine cho EPS.",
-            "treatment": [
-                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần (quan trọng)",
-                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
-                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
-                "Xử trí EPS: Benztropine 1-2mg IM/IV hoặc diphenhydramine 25-50mg IM/IV",
-                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, điện tâm đồ (QT prolongation)",
-                "Xử trí QT prolongation: Magnesium sulfate (2g IV), isoproterenol nếu cần",
-                "Xử trí torsades de pointes: Magnesium sulfate, overdrive pacing",
-                "Xử trí NMS: Ngừng haloperidol ngay, điều trị hỗ trợ, dantrolene nếu cần",
-                "Xử trí hạ huyết áp: IV fluids, vasopressors nếu cần",
-                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
-                "Theo dõi ít nhất 24-48 giờ"
-            ],
-            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, điện tâm đồ (QT interval), huyết áp, CK (nếu nghi ngờ NMS)"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn.",
-                "timing": "Chia 2-3 lần/ngày. Uống cùng thời điểm mỗi ngày. Tăng liều chậm để giảm tác dụng phụ (đặc biệt EPS). Không ngừng đột ngột (có thể làm tăng triệu chứng)."
-            },
-            "im": {
-                "reconstitution": "Không cần pha loãng. Lắc kỹ trước khi dùng.",
-                "infusion_rate": "Tiêm bắp sâu vào cơ lớn (gluteal, deltoid). Tránh tiêm vào mạch máu.",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Dạng IM: dùng cho loạn thần cấp, delirium. Dạng depot (decanoate): tiêm bắp mỗi 4 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị."
-            },
-            "iv": {
-                "reconstitution": "Pha loãng trong NS hoặc D5W. Nồng độ: 0.2-5mg/mL.",
-                "infusion_rate": "Tiêm tĩnh mạch chậm (không quá 5mg/phút). Hoặc truyền tĩnh mạch liên tục.",
-                "compatibility": ["NS", "D5W"],
-                "incompatibility": [],
-                "notes": "Dạng IV: dùng cho loạn thần cấp, delirium (ICU). Theo dõi QT prolongation chặt chẽ."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "Lexicomp - Haloperidol",
-                "UpToDate - Haloperidol: Drug information",
-                "FDA - Haldol (haloperidol) prescribing information",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-            ],
-            "last_updated": "2024-12-19",
-            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
-        }
-    },
-    "Risperidone": {
-        "group": "Psychiatry - Antipsychotic (Atypical)",
-        "vietnamese_name": "Risperidone, Risperdal",
-        "administration": ["PO", "IM"],
-        "indications": [
-            "Tâm thần phân liệt",
-            "Rối loạn lưỡng cực (mania)",
-            "Rối loạn phổ tự kỷ (irritability)",
-            "Delirium (ICU) - off-label"
-        ],
-        "contraindications": [
-            "Dị ứng",
-            "QT prolongation nặng"
-        ],
-        "dosage": {
-            "adult_schizophrenia_po": "1mg x 2 lần/ngày, tăng đến 4-6mg/ngày (tối đa 16mg/ngày)",
-            "adult_bipolar_mania_po": "2-3mg/ngày, tăng đến 6mg/ngày",
-            "adult_im": "25mg IM mỗi 2 tuần, tăng đến 37.5-50mg mỗi 2 tuần (tối đa 50mg mỗi 2 tuần)",
-            "adult_max": "16mg/ngày PO, 50mg mỗi 2 tuần IM",
-            "notes": "Atypical antipsychotic, ít EPS hơn typical antipsychotics nhưng vẫn có nguy cơ. Dạng depot (Consta): tiêm bắp mỗi 2 tuần."
-        },
-        "side_effects": [
-            "Rối loạn vận động ngoại tháp (EPS) - ít hơn typical antipsychotics nhưng vẫn có",
-            "Tăng prolactin (phổ biến, nhiều hơn các atypical khác)",
-            "Tăng cân (phổ biến)",
-            "Tăng lipid máu",
-            "Tăng đường huyết (nguy cơ đái tháo đường)",
-            "QT prolongation (hiếm)",
-            "Hạ huyết áp tư thế",
-            "Buồn ngủ, chóng mặt"
-        ],
-        "interactions": [
-            "CYP2D6 inhibitors: tăng nồng độ risperidone",
-            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
-            "Antihypertensives: tăng nguy cơ hạ huyết áp",
-            "Alcohol: tăng tác dụng an thần"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Risperidone là thuốc chống loạn thần không điển hình (atypical antipsychotic), đối kháng thụ thể dopamine D2 và serotonin 5-HT2A. Khác với typical antipsychotics, risperidone có ái lực cân bằng với D2 và 5-HT2A, giảm nguy cơ rối loạn vận động ngoại tháp (EPS) so với typical antipsychotics, nhưng vẫn có nguy cơ (đặc biệt ở liều cao >6mg/ngày). Risperidone tăng prolactin nhiều hơn các atypical antipsychotics khác (do ức chế D2 mạnh hơn). Tác dụng: điều trị tâm thần phân liệt, rối loạn lưỡng cực (mania), và rối loạn phổ tự kỷ (irritability). Có dạng uống (PO) và dạng depot (Consta - tiêm bắp mỗi 2 tuần). Tác dụng phụ: rối loạn vận động ngoại tháp (EPS) - ít hơn typical nhưng vẫn có, tăng prolactin (phổ biến), tăng cân, tăng lipid máu, tăng đường huyết, QT prolongation (hiếm).",
-        "monitoring": [
-            "Đáp ứng điều trị: giảm triệu chứng tâm thần, ổn định tâm trạng (đánh giá sau 2-4 tuần)",
-            "Rối loạn vận động ngoại tháp (EPS) - ít hơn typical nhưng vẫn có, đặc biệt ở liều cao >6mg/ngày",
-            "Prolactin - tăng prolactin phổ biến (gây vô kinh, tiết sữa), nhiều hơn các atypical khác",
-            "Cân nặng - tăng cân phổ biến, theo dõi định kỳ",
-            "Lipid máu (cholesterol, triglyceride) - tăng lipid máu phổ biến",
-            "Đường huyết (glucose, HbA1c) - tăng đường huyết, nguy cơ đái tháo đường",
-            "ECG - QT prolongation (hiếm nhưng nguy hiểm), đặc biệt ở liều cao",
-            "Huyết áp - hạ huyết áp tư thế, đặc biệt khi bắt đầu hoặc tăng liều",
-            "Tương tác với CYP2D6 inhibitors (ảnh hưởng nồng độ risperidone)"
-        ],
-        "precautions": [
-            "Rối loạn vận động ngoại tháp (EPS) - ít hơn typical nhưng vẫn có, đặc biệt ở liều cao >6mg/ngày, có thể dùng anticholinergics nếu cần",
-            "Tăng prolactin - phổ biến, nhiều hơn các atypical khác, gây vô kinh, tiết sữa, giảm ham muốn tình dục",
-            "Tăng cân - phổ biến, theo dõi cân nặng, khuyến khích chế độ ăn lành mạnh và tập thể dục",
-            "Tăng lipid máu - phổ biến, theo dõi cholesterol, triglyceride, điều chỉnh chế độ ăn hoặc dùng statin nếu cần",
-            "Tăng đường huyết, nguy cơ đái tháo đường - theo dõi glucose, HbA1c, đặc biệt ở bệnh nhân có nguy cơ đái tháo đường",
-            "QT prolongation - hiếm nhưng nguy hiểm, đặc biệt ở liều cao, tránh dùng với thuốc kéo dài QT khác",
-            "Hạ huyết áp tư thế - đặc biệt khi bắt đầu hoặc tăng liều, đứng dậy chậm, uống đủ nước",
-            "Thận trọng khi dùng với CYP2D6 inhibitors (paroxetine, fluoxetine) - tăng nồng độ risperidone, giảm liều risperidone 50%",
-            "Thận trọng khi dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-            "Tránh rượu - tăng tác dụng an thần",
-            "Dạng depot (Consta) - tiêm bắp mỗi 2 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị",
-            "Không ngừng đột ngột (có thể làm tăng triệu chứng)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "3 giờ (PO), 3-6 ngày (depot)",
-            "onset": "Vài ngày đến vài tuần (tác dụng chống loạn thần)",
-            "duration": "12-24 giờ (PO), 2 tuần (depot)",
-            "protein_binding": "90%",
-            "clearance": "Gan: chuyển hóa qua CYP2D6 (chính). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều khi dùng với CYP2D6 inhibitors."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng depot (Consta): bảo quản ở nhiệt độ phòng, tránh ánh sáng, tránh đông lạnh.",
-        "black_box_warnings": "Nguy cơ tử vong tăng ở bệnh nhân lớn tuổi với rối loạn tâm thần do sa sút trí tuệ (dementia-related psychosis) - không được dùng cho chỉ định này. Nguy cơ QT prolongation, có thể gây rối loạn nhịp tim (torsades de pointes). Nguy cơ tăng đường huyết, đái tháo đường. Nguy cơ tăng lipid máu. Nguy cơ tăng cân.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "CYP2D6 inhibitors (Paroxetine, Fluoxetine, Bupropion)",
-                    "mechanism": "Ức chế chuyển hóa risperidone qua CYP2D6, tăng nồng độ risperidone",
-                    "effect": "Tăng nồng độ risperidone, tăng tác dụng phụ (EPS, tăng prolactin, QT prolongation)",
-                    "management": "Giảm liều risperidone 50% khi dùng với CYP2D6 inhibitors. Theo dõi tác dụng phụ chặt chẽ."
-                },
-                {
-                    "drug": "QT prolonging drugs (Amiodarone, Sotalol, Citalopram, Escitalopram, Haloperidol)",
-                    "mechanism": "Cả hai đều kéo dài QT, tăng nguy cơ rối loạn nhịp tim",
-                    "effect": "QT prolongation, rối loạn nhịp tim (torsades de pointes)",
-                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi ECG. Giảm liều một trong hai thuốc."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Antihypertensives",
-                    "mechanism": "Cả hai đều có thể gây hạ huyết áp",
-                    "effect": "Tăng nguy cơ hạ huyết áp tư thế, ngất",
-                    "management": "Thận trọng. Có thể cần giảm liều một trong hai thuốc. Theo dõi huyết áp."
-                },
-                {
-                    "drug": "Alcohol",
-                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
-                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
-                    "management": "Tránh hoặc giảm rượu. Cảnh báo bệnh nhân."
-                }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng risperidone hoặc các thành phần khác",
-                "QT prolongation nặng (QTc >500ms)"
-            ],
-            "tương_đối": [
-                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
-                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
-                "Tăng lipid máu - tăng cholesterol, triglyceride",
-                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
-                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
-                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
-                "Dùng với CYP2D6 inhibitors - giảm liều risperidone 50%",
-                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng risperidone hoặc các thành phần khác",
-                "QT prolongation nặng (QTc >500ms)"
-            ],
-            "tương_đối": [
-                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
-                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
-                "Tăng lipid máu - tăng cholesterol, triglyceride",
-                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
-                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
-                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
-                "Dùng với CYP2D6 inhibitors - giảm liều risperidone 50%",
-                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
-            ]
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Thận trọng, có thể cần giảm liều",
-            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
-            "dialysis": "Thận trọng, giảm liều. Risperidone không được lọc sạch hiệu quả qua thẩm phân máu.",
-            "notes": "Risperidone thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh, nhưng chứng cứ không rõ ràng. Trẻ sơ sinh có thể có withdrawal syndrome (khó chịu, run, khó thở) nếu mẹ dùng risperidone trong thai kỳ, đặc biệt gần cuối thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ. Theo dõi trẻ sơ sinh về dấu hiệu withdrawal.",
-            "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Risperidone bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
-                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém)."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Giảm liều 25-50%, theo dõi tác dụng phụ",
-            "severe": "Giảm liều 50%, theo dõi tác dụng phụ chặt chẽ. Hoặc tránh dùng nếu có thể.",
-            "notes": "Risperidone chuyển hóa ở gan qua CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, hôn mê",
-                "Rối loạn vận động: EPS (dystonia, akathisia, parkinsonism)",
-                "Rối loạn tim mạch: QT prolongation, rối loạn nhịp tim (torsades de pointes), hạ huyết áp",
-                "Rối loạn hô hấp: suy hô hấp",
-                "Rối loạn tiêu hóa: buồn nôn, nôn"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Benztropine hoặc diphenhydramine cho EPS.",
-            "treatment": [
-                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần (quan trọng)",
-                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
-                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
-                "Xử trí EPS: Benztropine 1-2mg IM/IV hoặc diphenhydramine 25-50mg IM/IV",
-                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, điện tâm đồ (QT prolongation)",
-                "Xử trí QT prolongation: Magnesium sulfate (2g IV), isoproterenol nếu cần",
-                "Xử trí torsades de pointes: Magnesium sulfate, overdrive pacing",
-                "Xử trí hạ huyết áp: IV fluids, vasopressors nếu cần",
-                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
-                "Theo dõi ít nhất 24-48 giờ"
-            ],
-            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, điện tâm đồ (QT interval), huyết áp"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn.",
-                "timing": "Chia 2 lần/ngày. Uống cùng thời điểm mỗi ngày. Tăng liều chậm để giảm tác dụng phụ. Không ngừng đột ngột (có thể làm tăng triệu chứng)."
-            },
-            "im": {
-                "reconstitution": "Dạng depot (Consta): pha loãng với diluent đi kèm. Lắc kỹ trước khi dùng.",
-                "infusion_rate": "Tiêm bắp sâu vào cơ lớn (gluteal, deltoid). Tránh tiêm vào mạch máu.",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Dạng depot (Consta): tiêm bắp mỗi 2 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị."
-            },
-            "iv": {
-                "reconstitution": "Không có dạng IV",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Chỉ có dạng uống và tiêm bắp (depot)"
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "Lexicomp - Risperidone",
-                "UpToDate - Risperidone: Drug information",
-                "FDA - Risperdal (risperidone) prescribing information",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-            ],
-            "last_updated": "2024-12-19",
-            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
-        }
-    },
-    "Olanzapine": {
-        "group": "Psychiatry - Antipsychotic (Atypical)",
-        "vietnamese_name": "Olanzapine, Zyprexa",
-        "administration": ["PO", "IM"],
-        "indications": [
-            "Tâm thần phân liệt",
-            "Rối loạn lưỡng cực (mania, depression)",
-            "Trầm cảm kháng trị (adjunct)",
-            "Delirium (ICU) - off-label"
-        ],
-        "contraindications": [
-            "Dị ứng",
-            "QT prolongation nặng"
-        ],
-        "dosage": {
-            "adult_schizophrenia_po": "5-10mg/ngày, tăng đến 10-20mg/ngày (tối đa 20mg/ngày)",
-            "adult_bipolar_mania_po": "10-15mg/ngày, tăng đến 15-20mg/ngày",
-            "adult_im": "5-10mg IM, lặp mỗi 2-4 giờ nếu cần (tối đa 30mg/ngày)",
-            "adult_max": "20mg/ngày PO, 30mg/ngày IM",
-            "notes": "Atypical antipsychotic, tăng cân nhiều nhất trong các atypical antipsychotics. Dạng depot (Relprevv): tiêm bắp mỗi 2-4 tuần."
-        },
-        "side_effects": [
-            "Tăng cân (phổ biến, nhiều nhất trong các atypical)",
-            "Tăng lipid máu (phổ biến)",
-            "Tăng đường huyết (nguy cơ đái tháo đường) - phổ biến",
-            "Buồn ngủ (phổ biến)",
-            "Chóng mặt",
-            "Khô miệng",
-            "Rối loạn vận động (hiếm hơn typical antipsychotics)",
-            "QT prolongation (hiếm)",
-            "Hạ huyết áp tư thế"
-        ],
-        "interactions": [
-            "CYP1A2 inhibitors (fluvoxamine): tăng nồng độ olanzapine",
-            "CYP1A2 inducers (carbamazepine, smoking): giảm nồng độ olanzapine",
-            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
-            "Antihypertensives: tăng nguy cơ hạ huyết áp",
-            "Alcohol: tăng tác dụng an thần"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Olanzapine là thuốc chống loạn thần không điển hình (atypical antipsychotic), đối kháng thụ thể dopamine D2 và serotonin 5-HT2A. Khác với typical antipsychotics, olanzapine có ái lực thấp hơn với D2 và gắn tạm thời (fast dissociation), giảm nguy cơ rối loạn vận động ngoại tháp (EPS) và tăng prolactin. Olanzapine đối kháng mạnh thụ thể histamine H1 (gây buồn ngủ, tăng cân - nhiều nhất trong các atypical), muscarinic (gây khô miệng), và alpha-1 adrenergic (gây hạ huyết áp). Tác dụng: điều trị tâm thần phân liệt, rối loạn lưỡng cực (mania và depression), và trầm cảm kháng trị (adjunct). Có dạng uống (PO), tiêm bắp (IM), và dạng depot (Relprevv). Tác dụng phụ: tăng cân (phổ biến, nhiều nhất trong các atypical), tăng lipid máu, tăng đường huyết (nguy cơ đái tháo đường) - phổ biến, buồn ngủ, QT prolongation (hiếm).",
-        "monitoring": [
-            "Đáp ứng điều trị: giảm triệu chứng tâm thần, ổn định tâm trạng (đánh giá sau 2-4 tuần)",
-            "Cân nặng - tăng cân phổ biến, nhiều nhất trong các atypical, theo dõi định kỳ",
-            "Lipid máu (cholesterol, triglyceride) - tăng lipid máu phổ biến",
-            "Đường huyết (glucose, HbA1c) - tăng đường huyết, nguy cơ đái tháo đường (phổ biến)",
-            "ECG - QT prolongation (hiếm nhưng nguy hiểm), đặc biệt ở liều cao",
-            "Huyết áp - hạ huyết áp tư thế, đặc biệt khi bắt đầu hoặc tăng liều",
-            "Prolactin - ít tăng prolactin hơn typical antipsychotics",
-            "Dấu hiệu rối loạn vận động ngoại tháp (EPS) - hiếm hơn typical antipsychotics",
-            "Tương tác với CYP1A2 inhibitors/inducers (ảnh hưởng nồng độ olanzapine)"
-        ],
-        "precautions": [
-            "Tăng cân - phổ biến, nhiều nhất trong các atypical, theo dõi cân nặng, khuyến khích chế độ ăn lành mạnh và tập thể dục",
-            "Tăng lipid máu - phổ biến, theo dõi cholesterol, triglyceride, điều chỉnh chế độ ăn hoặc dùng statin nếu cần",
-            "Tăng đường huyết, nguy cơ đái tháo đường - phổ biến, theo dõi glucose, HbA1c, đặc biệt ở bệnh nhân có nguy cơ đái tháo đường",
-            "Buồn ngủ - phổ biến, đặc biệt khi bắt đầu hoặc tăng liều, tránh lái xe hoặc vận hành máy móc",
-            "QT prolongation - hiếm nhưng nguy hiểm, đặc biệt ở liều cao, tránh dùng với thuốc kéo dài QT khác",
-            "Hạ huyết áp tư thế - đặc biệt khi bắt đầu hoặc tăng liều, đứng dậy chậm, uống đủ nước",
-            "Thận trọng khi dùng với CYP1A2 inhibitors (fluvoxamine) - tăng nồng độ olanzapine, giảm liều olanzapine 50%",
-            "Thận trọng khi dùng với CYP1A2 inducers (carbamazepine, smoking) - giảm nồng độ olanzapine, có thể cần tăng liều",
-            "Hút thuốc - giảm nồng độ olanzapine, có thể cần tăng liều ở người hút thuốc",
-            "Thận trọng khi dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-            "Tránh rượu - tăng tác dụng an thần",
-            "Dạng depot (Relprevv) - tiêm bắp mỗi 2-4 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị",
-            "Không ngừng đột ngột (có thể làm tăng triệu chứng)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "30 giờ",
-            "onset": "Vài ngày đến vài tuần (tác dụng chống loạn thần)",
-            "duration": "24 giờ (PO), 2-4 tuần (depot)",
-            "protein_binding": "93%",
-            "clearance": "Gan: chuyển hóa qua CYP1A2 (chính), CYP2D6 (phụ). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều khi dùng với CYP1A2 inhibitors/inducers và khi hút thuốc."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng depot (Relprevv): bảo quản ở nhiệt độ phòng, tránh ánh sáng, tránh đông lạnh.",
-        "black_box_warnings": "Nguy cơ tử vong tăng ở bệnh nhân lớn tuổi với rối loạn tâm thần do sa sút trí tuệ (dementia-related psychosis) - không được dùng cho chỉ định này. Nguy cơ QT prolongation, có thể gây rối loạn nhịp tim (torsades de pointes). Nguy cơ tăng đường huyết, đái tháo đường. Nguy cơ tăng lipid máu. Nguy cơ tăng cân.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "CYP1A2 inhibitors (Fluvoxamine)",
-                    "mechanism": "Ức chế chuyển hóa olanzapine qua CYP1A2, tăng nồng độ olanzapine",
-                    "effect": "Tăng nồng độ olanzapine, tăng tác dụng phụ (buồn ngủ, tăng cân, QT prolongation)",
-                    "management": "Giảm liều olanzapine 50% khi dùng với fluvoxamine. Theo dõi tác dụng phụ chặt chẽ."
-                },
-                {
-                    "drug": "CYP1A2 inducers (Carbamazepine, Smoking)",
-                    "mechanism": "Cảm ứng chuyển hóa olanzapine qua CYP1A2, giảm nồng độ olanzapine",
-                    "effect": "Giảm nồng độ olanzapine, giảm hiệu quả",
-                    "management": "Tăng liều olanzapine 50-100% khi dùng với carbamazepine hoặc ở người hút thuốc. Theo dõi đáp ứng điều trị."
-                },
-                {
-                    "drug": "QT prolonging drugs (Amiodarone, Sotalol, Citalopram, Escitalopram, Haloperidol)",
-                    "mechanism": "Cả hai đều kéo dài QT, tăng nguy cơ rối loạn nhịp tim",
-                    "effect": "QT prolongation, rối loạn nhịp tim (torsades de pointes)",
-                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi ECG. Giảm liều một trong hai thuốc."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Antihypertensives",
-                    "mechanism": "Cả hai đều có thể gây hạ huyết áp",
-                    "effect": "Tăng nguy cơ hạ huyết áp tư thế, ngất",
-                    "management": "Thận trọng. Có thể cần giảm liều một trong hai thuốc. Theo dõi huyết áp."
-                },
-                {
-                    "drug": "Alcohol",
-                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
-                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
-                    "management": "Tránh hoặc giảm rượu. Cảnh báo bệnh nhân."
-                }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng olanzapine hoặc các thành phần khác",
-                "QT prolongation nặng (QTc >500ms)"
-            ],
-            "tương_đối": [
-                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
-                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
-                "Tăng lipid máu - tăng cholesterol, triglyceride",
-                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
-                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
-                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
-                "Dùng với CYP1A2 inhibitors - giảm liều olanzapine 50%",
-                "Dùng với CYP1A2 inducers hoặc hút thuốc - tăng liều olanzapine 50-100%",
-                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng olanzapine hoặc các thành phần khác",
-                "QT prolongation nặng (QTc >500ms)"
-            ],
-            "tương_đối": [
-                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
-                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
-                "Tăng lipid máu - tăng cholesterol, triglyceride",
-                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
-                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
-                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
-                "Dùng với CYP1A2 inhibitors - giảm liều olanzapine 50%",
-                "Dùng với CYP1A2 inducers hoặc hút thuốc - tăng liều olanzapine 50-100%",
-                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
-                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
-            ]
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Thận trọng, có thể cần giảm liều",
-            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
-            "dialysis": "Thận trọng, giảm liều. Olanzapine không được lọc sạch hiệu quả qua thẩm phân máu.",
-            "notes": "Olanzapine thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh, nhưng chứng cứ không rõ ràng. Trẻ sơ sinh có thể có withdrawal syndrome (khó chịu, run, khó thở) nếu mẹ dùng olanzapine trong thai kỳ, đặc biệt gần cuối thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ. Theo dõi trẻ sơ sinh về dấu hiệu withdrawal.",
-            "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Olanzapine bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
-                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém)."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Giảm liều 25-50%, theo dõi tác dụng phụ",
-            "severe": "Giảm liều 50%, theo dõi tác dụng phụ chặt chẽ. Hoặc tránh dùng nếu có thể.",
-            "notes": "Olanzapine chuyển hóa ở gan qua CYP1A2, CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, hôn mê",
-                "Rối loạn tim mạch: QT prolongation, rối loạn nhịp tim (torsades de pointes), hạ huyết áp",
-                "Rối loạn hô hấp: suy hô hấp",
-                "Rối loạn tiêu hóa: buồn nôn, nôn"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
-            "treatment": [
-                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần (quan trọng)",
-                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
-                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
-                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, điện tâm đồ (QT prolongation)",
-                "Xử trí QT prolongation: Magnesium sulfate (2g IV), isoproterenol nếu cần",
-                "Xử trí torsades de pointes: Magnesium sulfate, overdrive pacing",
-                "Xử trí hạ huyết áp: IV fluids, vasopressors nếu cần",
-                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
-                "Theo dõi ít nhất 24-48 giờ"
-            ],
-            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, điện tâm đồ (QT interval), huyết áp"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn.",
-                "timing": "Uống 1 lần/ngày vào buổi tối. Uống cùng thời điểm mỗi ngày. Tăng liều chậm để giảm tác dụng phụ (đặc biệt buồn ngủ, tăng cân). Không ngừng đột ngột (có thể làm tăng triệu chứng)."
-            },
-            "im": {
-                "reconstitution": "Không cần pha loãng. Lắc kỹ trước khi dùng.",
-                "infusion_rate": "Tiêm bắp sâu vào cơ lớn (gluteal, deltoid). Tránh tiêm vào mạch máu.",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Dạng IM: dùng cho loạn thần cấp, delirium. Dạng depot (Relprevv): tiêm bắp mỗi 2-4 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị."
-            },
-            "iv": {
-                "reconstitution": "Không có dạng IV",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Chỉ có dạng uống và tiêm bắp (depot)"
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "Lexicomp - Olanzapine",
-                "UpToDate - Olanzapine: Drug information",
-                "FDA - Zyprexa (olanzapine) prescribing information",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-            ],
-            "last_updated": "2024-12-19",
-            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
-        }
-    },
-    
     "Aripiprazole": {
         "group": "Psychiatry - Antipsychotic (Atypical, Partial Agonist)",
         "vietnamese_name": "Aripiprazole, Abilify",
@@ -1288,506 +378,6 @@ ANTIPSYCHOTICS_DRUGS = {
         }
     },
 
-    "Fluphenazine": {
-        "group": "Psychiatry - Antipsychotic (Typical)",
-        "vietnamese_name": "Fluphenazine, Prolixin",
-        "administration": ["PO", "IM", "SC"],
-        "indications": [
-            "Tâm thần phân liệt",
-            "Rối loạn tâm thần khác"
-        ],
-        "contraindications": [
-            "Dị ứng phenothiazine",
-            "Coma do CNS depressants",
-            "Suy gan nặng"
-        ],
-        "dosage": {
-            "adult_po": "2.5-10mg x 2-4 lần/ngày, tăng đến 20mg/ngày",
-            "adult_im": "2.5-10mg mỗi 6-8 giờ",
-            "adult_depot": "12.5-25mg IM mỗi 2-4 tuần",
-            "adult_max": "40mg/ngày (PO)",
-            "notes": "Typical antipsychotic, nguy cơ EPS cao. Có dạng depot (long-acting)."
-        },
-        "side_effects": [
-            "Rối loạn vận động ngoại tháp (EPS) - phổ biến",
-            "Dystonia",
-            "Parkinsonism",
-            "Akathisia",
-            "Tardive dyskinesia",
-            "Hạ huyết áp",
-            "Sedation",
-            "Tăng prolactin"
-        ],
-        "interactions": [
-            "CNS depressants: tăng tác dụng an thần",
-            "Anticholinergics: giảm EPS nhưng tăng tác dụng phụ anticholinergic",
-            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Fluphenazine là typical antipsychotic (phenothiazine), đối kháng mạnh thụ thể dopamine D2 ở não. Ức chế dopaminergic pathway dẫn đến giảm triệu chứng tâm thần nhưng tăng nguy cơ rối loạn vận động ngoại tháp (EPS). Có dạng depot (long-acting) cho phép tiêm mỗi 2-4 tuần, cải thiện compliance. Nguy cơ EPS cao hơn atypical antipsychotics.",
-        "monitoring": [
-            "Đáp ứng điều trị: giảm triệu chứng tâm thần",
-            "EPS: dystonia, parkinsonism, akathisia, tardive dyskinesia",
-            "Huyết áp - hạ huyết áp có thể xảy ra",
-            "ECG - QT prolongation",
-            "Prolactin - tăng prolactin có thể gây vô kinh, galactorrhea"
-        ],
-        "precautions": [
-            "Nguy cơ EPS cao - cần theo dõi chặt chẽ",
-            "Tardive dyskinesia - có thể không hồi phục, cần đánh giá định kỳ",
-            "Hạ huyết áp - đặc biệt khi bắt đầu điều trị",
-            "Dạng depot - tiêm sâu vào cơ, không tiêm vào mạch máu",
-            "Không ngừng đột ngột - giảm liều dần dần"
-        ],
-        "pharmacokinetics": {
-            "half_life": "15-30 giờ (PO), 6.8-9.6 ngày (depot)",
-            "onset": "1-2 giờ (PO), 24-72 giờ (depot)",
-            "duration": "6-8 giờ (PO), 2-4 tuần (depot)",
-            "protein_binding": ">90%",
-            "clearance": "Gan: chuyển hóa qua CYP2D6. Thận: bài tiết một phần."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dạng depot: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng.",
-        "black_box_warnings": "Tardive dyskinesia có thể không hồi phục. Nguy cơ tăng ở người cao tuổi, phụ nữ, dùng lâu dài.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "QT prolonging drugs",
-                    "mechanism": "Cả hai đều kéo dài QT",
-                    "effect": "Tăng nguy cơ rối loạn nhịp tim",
-                    "management": "Tránh dùng chung nếu có thể. Theo dõi ECG."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "CNS depressants",
-                    "mechanism": "Tác dụng hiệp đồng ức chế CNS",
-                    "effect": "Tăng tác dụng an thần",
-                    "management": "Thận trọng, giảm liều nếu cần."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng fluphenazine hoặc phenothiazine",
-                "Coma do CNS depressants",
-                "Suy gan nặng"
-            ],
-            "tương_đối": [
-                "Bệnh tim - tăng nguy cơ QT prolongation",
-                "Động kinh - có thể làm tăng nguy cơ co giật",
-                "Mang thai (category C) - thận trọng"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng fluphenazine hoặc phenothiazine",
-                "Coma do CNS depressants",
-                "Suy gan nặng"
-            ],
-            "tương_đối": [
-                "Bệnh tim - tăng nguy cơ QT prolongation",
-                "Động kinh - có thể làm tăng nguy cơ co giật",
-                "Mang thai (category C) - thận trọng",
-                "Suy thận nặng (CrCl <30) - thận trọng, giảm liều"
-            ]
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Thận trọng, có thể cần giảm liều",
-            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
-            "dialysis": "Thận trọng, giảm liều. Fluphenazine không được lọc sạch hiệu quả qua thẩm phân máu.",
-            "notes": "Fluphenazine thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Có thể dùng khi cần thiết. Thận trọng.",
-            "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Bài tiết vào sữa mẹ. Có thể gây tác dụng phụ ở trẻ.",
-                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng, giảm liều",
-            "severe": "CHỐNG CHỈ ĐỊNH",
-            "notes": "Chuyển hóa qua gan (CYP2D6). Suy gan nặng là chống chỉ định."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Buồn ngủ sâu, hôn mê",
-                "Hạ huyết áp nặng",
-                "QT prolongation, rối loạn nhịp tim",
-                "EPS nặng",
-                "Suy hô hấp"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Hỗ trợ hô hấp ngay lập tức",
-                "Rửa dạ dày nếu trong vòng 1-2 giờ",
-                "Theo dõi ECG liên tục",
-                "Điều trị hạ huyết áp",
-                "Điều trị EPS nếu có"
-            ],
-            "monitoring": "Theo dõi liên tục ECG, huyết áp, ý thức, hô hấp"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Uống với thức ăn để giảm kích ứng dạ dày.",
-                "timing": "Chia 2-4 lần/ngày. Không ngừng đột ngột."
-            },
-            "im": {
-                "reconstitution": "Dùng trực tiếp từ lọ.",
-                "injection_site": "Tiêm sâu vào cơ (gluteus maximus).",
-                "notes": "Tiêm sâu vào cơ. Dạng depot: tiêm mỗi 2-4 tuần."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Prolixin (Fluphenazine)",
-                "UpToDate - Fluphenazine: Drug information"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved"
-        }
-    },
-
-    "Lurasidone": {
-        "group": "Psychiatry - Antipsychotic (Atypical)",
-        "vietnamese_name": "Lurasidone, Latuda",
-        "administration": ["PO"],
-        "indications": [
-            "Tâm thần phân liệt",
-            "Rối loạn lưỡng cực (depression)",
-            "Trầm cảm kháng trị (adjunct)"
-        ],
-        "contraindications": [
-            "Dị ứng",
-            "QT prolongation nặng"
-        ],
-        "dosage": {
-            "adult_schizophrenia": "40-80mg x 1 lần/ngày (tối đa 160mg/ngày)",
-            "adult_bipolar_depression": "20-60mg x 1 lần/ngày",
-            "adult_max": "160mg/ngày",
-            "notes": "Uống với thức ăn (≥350 calo) để tăng hấp thu. Atypical antipsychotic, ít tăng cân hơn các atypical khác."
-        },
-        "side_effects": [
-            "Buồn ngủ",
-            "Buồn nôn",
-            "Chóng mặt",
-            "Akathisia",
-            "QT prolongation (hiếm)",
-            "Tăng prolactin (nhẹ)",
-            "Ít tăng cân hơn các atypical khác"
-        ],
-        "interactions": [
-            "CYP3A4 inhibitors: tăng nồng độ lurasidone",
-            "CYP3A4 inducers: giảm nồng độ lurasidone",
-            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp"
-        ],
-        "pregnancy": "B",
-        "mechanism_of_action": "Lurasidone là atypical antipsychotic, đối kháng thụ thể dopamine D2 và serotonin 5-HT2A. Khác với các atypical khác, lurasidone ít gây tăng cân và tăng lipid máu. Có tác dụng chống trầm cảm, được dùng cho rối loạn lưỡng cực depression. Ưu điểm: ít tăng cân, ít tác dụng phụ chuyển hóa. Phải uống với thức ăn để tăng hấp thu.",
-        "monitoring": [
-            "Đáp ứng điều trị: giảm triệu chứng tâm thần, cải thiện trầm cảm",
-            "ECG - QT prolongation (hiếm)",
-            "Cân nặng - ít tăng cân hơn các atypical khác",
-            "Prolactin - tăng nhẹ",
-            "Akathisia - tác dụng phụ phổ biến"
-        ],
-        "precautions": [
-            "PHẢI uống với thức ăn (≥350 calo) để tăng hấp thu - nếu không hấp thu giảm 50%",
-            "Akathisia - tác dụng phụ phổ biến, có thể điều trị bằng propranolol",
-            "QT prolongation - hiếm nhưng cần theo dõi ECG",
-            "Ít tăng cân hơn các atypical khác - ưu điểm",
-            "Thận trọng với CYP3A4 inhibitors/inducers"
-        ],
-        "pharmacokinetics": {
-            "half_life": "18 giờ",
-            "onset": "1-2 tuần",
-            "duration": "24 giờ",
-            "protein_binding": "99%",
-            "clearance": "Gan: chuyển hóa qua CYP3A4. Thận: bài tiết một phần."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
-        "black_box_warnings": "Nguy cơ tự sát ở trẻ em, thanh thiếu niên, và người trẻ tuổi (<25 tuổi).",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "CYP3A4 inhibitors (ketoconazole, clarithromycin)",
-                    "mechanism": "Ức chế chuyển hóa lurasidone",
-                    "effect": "Tăng nồng độ lurasidone, tăng tác dụng phụ",
-                    "management": "Giảm liều lurasidone 50%. Tránh dùng với ketoconazole liều cao."
-                },
-                {
-                    "drug": "CYP3A4 inducers (carbamazepine, rifampin)",
-                    "mechanism": "Tăng chuyển hóa lurasidone",
-                    "effect": "Giảm nồng độ lurasidone, giảm hiệu quả",
-                    "management": "Tăng liều lurasidone. Hoặc tránh dùng chung."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "QT prolonging drugs",
-                    "mechanism": "Cả hai đều kéo dài QT",
-                    "effect": "Tăng nguy cơ rối loạn nhịp tim",
-                    "management": "Thận trọng, theo dõi ECG."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng lurasidone",
-                "QT prolongation nặng"
-            ],
-            "tương_đối": [
-                "Bệnh tim - tăng nguy cơ QT prolongation",
-                "Dùng với CYP3A4 inhibitors mạnh - giảm liều",
-                "Dùng với CYP3A4 inducers mạnh - tăng liều"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng lurasidone",
-                "QT prolongation nặng"
-            ],
-            "tương_đối": [
-                "Bệnh tim - tăng nguy cơ QT prolongation",
-                "Dùng với CYP3A4 inhibitors mạnh - giảm liều",
-                "Dùng với CYP3A4 inducers mạnh - tăng liều",
-                "Suy thận nặng (CrCl <30) - thận trọng, giảm liều"
-            ]
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều",
-            "30_60": "Thận trọng, có thể cần giảm liều",
-            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
-            "dialysis": "Thận trọng, giảm liều. Lurasidone không được lọc sạch hiệu quả qua thẩm phân máu do protein binding cao (99%).",
-            "notes": "Lurasidone thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Category B - an toàn hơn category C. Có thể dùng khi cần thiết.",
-            "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Bài tiết vào sữa mẹ ở nồng độ thấp.",
-                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Giảm liều 50%",
-            "severe": "Giảm liều 50%",
-            "notes": "Chuyển hóa qua gan (CYP3A4). Suy gan làm giảm chuyển hóa."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Buồn ngủ sâu",
-                "QT prolongation",
-                "Hạ huyết áp",
-                "Akathisia nặng"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Hỗ trợ hô hấp nếu cần",
-                "Theo dõi ECG liên tục",
-                "Điều trị hạ huyết áp",
-                "Điều trị akathisia nếu có"
-            ],
-            "monitoring": "Theo dõi liên tục ECG, huyết áp, ý thức"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "PHẢI uống với thức ăn (≥350 calo) để tăng hấp thu - nếu không hấp thu giảm 50%",
-                "timing": "Dùng 1 lần/ngày với bữa ăn. Không ngừng đột ngột."
-            },
-            "iv": {
-                "reconstitution": "Không có dạng IV",
-                "infusion_rate": "N/A",
-                "compatibility": [],
-                "incompatibility": [],
-                "notes": "Chỉ có dạng uống"
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Latuda (Lurasidone)",
-                "UpToDate - Lurasidone: Drug information"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved"
-        }
-    },
-    
-    "Ziprasidone": {
-        "group": "Psychiatry - Antipsychotic (Atypical)",
-        "vietnamese_name": "Ziprasidone, Geodon",
-        "administration": ["PO", "IM"],
-        "indications": [
-            "Tâm thần phân liệt",
-            "Rối loạn lưỡng cực (mania, mixed episodes)",
-            "Agitation cấp tính (IM)"
-        ],
-        "contraindications": [
-            "QT prolongation nặng (QTc >500ms)",
-            "Nhồi máu cơ tim gần đây",
-            "Suy tim nặng",
-            "Dị ứng ziprasidone"
-        ],
-        "dosage": {
-            "adult_po": "20mg x 2 lần/ngày với thức ăn, tăng đến 40-80mg x 2 lần/ngày",
-            "adult_im": "10-20mg IM, có thể lặp lại sau 2-4 giờ (tối đa 40mg/ngày)",
-            "adult_max": "160mg/ngày (PO)",
-            "notes": "PHẢI uống với thức ăn (≥500 calo) để tăng hấp thu. QT prolongation - cần theo dõi ECG."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Thận trọng"
-        },
-        "side_effects": [
-            "QT prolongation (quan trọng - cần theo dõi ECG)",
-            "Buồn ngủ",
-            "Chóng mặt",
-            "Buồn nôn",
-            "Tăng cân (ít hơn các atypical khác)",
-            "Hạ huyết áp tư thế",
-            "Rối loạn vận động (hiếm)"
-        ],
-        "interactions": [
-            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
-            "CYP3A4 inhibitors: tăng nồng độ ziprasidone",
-            "CYP3A4 inducers: giảm nồng độ ziprasidone"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Ziprasidone là atypical antipsychotic, đối kháng thụ thể dopamine D2 và serotonin 5-HT2A. Cũng đối kháng 5-HT1A, 5-HT1D, 5-HT2C, và ức chế tái hấp thu serotonin và norepinephrine. Đặc điểm: ít tăng cân hơn các atypical khác, nhưng có nguy cơ QT prolongation (cần theo dõi ECG). PHẢI uống với thức ăn (≥500 calo) để tăng hấp thu. Có dạng IM cho agitation cấp tính.",
-        "monitoring": [
-            "ECG trước khi bắt đầu và định kỳ (QT prolongation)",
-            "Triệu chứng tâm thần",
-            "Cân nặng (ít tăng cân hơn các atypical khác)",
-            "Huyết áp (hạ huyết áp tư thế)",
-            "Chức năng gan (hiếm)"
-        ],
-        "precautions": [
-            "QT PROLONGATION - cần theo dõi ECG trước và định kỳ",
-            "PHẢI uống với thức ăn (≥500 calo) để tăng hấp thu - nếu không hấp thu giảm 50%",
-            "Tránh dùng với QT prolonging drugs",
-            "Thận trọng ở bệnh nhân có bệnh tim",
-            "Ít tăng cân hơn các atypical khác - ưu điểm",
-            "Thận trọng với CYP3A4 inhibitors/inducers"
-        ],
-        "pharmacokinetics": {
-            "half_life": "7 giờ",
-            "onset": "1-2 tuần (PO), 30-60 phút (IM)",
-            "duration": "12 giờ (PO), 4-6 giờ (IM)",
-            "protein_binding": "99%",
-            "clearance": "Gan: chuyển hóa qua CYP3A4. Thận: bài tiết một phần."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "Nguy cơ tự sát ở trẻ em, thanh thiếu niên, và người trẻ tuổi (<25 tuổi). QT prolongation - cần theo dõi ECG.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "QT prolonging drugs (amiodarone, sotalol, haloperidol, thioridazine)",
-                    "mechanism": "Cả hai đều kéo dài QT",
-                    "effect": "Tăng nguy cơ rối loạn nhịp tim nghiêm trọng (torsades de pointes)",
-                    "management": "TRÁNH dùng cùng. Nếu cần, theo dõi ECG sát."
-                },
-                {
-                    "drug": "CYP3A4 inhibitors (ketoconazole, clarithromycin)",
-                    "mechanism": "Ức chế chuyển hóa ziprasidone",
-                    "effect": "Tăng nồng độ ziprasidone, tăng tác dụng phụ",
-                    "management": "Giảm liều ziprasidone 50%."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "CYP3A4 inducers (carbamazepine, rifampin)",
-                    "mechanism": "Tăng chuyển hóa ziprasidone",
-                    "effect": "Giảm nồng độ ziprasidone, giảm hiệu quả",
-                    "management": "Tăng liều ziprasidone."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "QT prolongation nặng (QTc >500ms)",
-                "Nhồi máu cơ tim gần đây",
-                "Suy tim nặng",
-                "Dị ứng ziprasidone"
-            ],
-            "tương_đối": [
-                "Bệnh tim - tăng nguy cơ QT prolongation",
-                "Dùng với QT prolonging drugs - tránh",
-                "Dùng với CYP3A4 inhibitors mạnh - giảm liều"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Có thể dùng khi cần thiết. Có nguy cơ dị tật thai nhi.",
-            "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Bài tiết vào sữa mẹ ở nồng độ thấp.",
-                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Giảm liều 50%",
-            "severe": "Giảm liều 50%",
-            "notes": "Chuyển hóa qua gan (CYP3A4). Suy gan làm giảm chuyển hóa."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Buồn ngủ sâu",
-                "QT prolongation nặng",
-                "Hạ huyết áp",
-                "Rối loạn nhịp tim"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Hỗ trợ hô hấp nếu cần",
-                "Theo dõi ECG liên tục (QT prolongation)",
-                "Điều trị rối loạn nhịp tim nếu có",
-                "Điều trị hạ huyết áp"
-            ],
-            "monitoring": "Theo dõi liên tục ECG, huyết áp, ý thức"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "PHẢI uống với thức ăn (≥500 calo) để tăng hấp thu - nếu không hấp thu giảm 50%",
-                "timing": "Dùng 2 lần/ngày với bữa ăn. Không ngừng đột ngột."
-            },
-            "im": {
-                "reconstitution": "Dùng trực tiếp dung dịch đã pha sẵn",
-                "injection_site": "Cơ lớn (đùi, cánh tay)",
-                "notes": "IM: 10-20mg, có thể lặp lại sau 2-4 giờ (tối đa 40mg/ngày). Dùng cho agitation cấp tính."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Geodon (ziprasidone)",
-                "UpToDate - Ziprasidone: Drug information"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A"
-        }
-    },
-    
     "Clozapine": {
         "group": "Psychiatry - Antipsychotic (Atypical)",
         "vietnamese_name": "Clozapine, Clozaril",
@@ -1961,6 +551,805 @@ ANTIPSYCHOTICS_DRUGS = {
         }
     },
     
+    "Fluphenazine": {
+        "group": "Psychiatry - Antipsychotic (Typical)",
+        "vietnamese_name": "Fluphenazine, Prolixin",
+        "administration": ["PO", "IM", "SC"],
+        "indications": [
+            "Tâm thần phân liệt",
+            "Rối loạn tâm thần khác"
+        ],
+        "contraindications": [
+            "Dị ứng phenothiazine",
+            "Coma do CNS depressants",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_po": "2.5-10mg x 2-4 lần/ngày, tăng đến 20mg/ngày",
+            "adult_im": "2.5-10mg mỗi 6-8 giờ",
+            "adult_depot": "12.5-25mg IM mỗi 2-4 tuần",
+            "adult_max": "40mg/ngày (PO)",
+            "notes": "Typical antipsychotic, nguy cơ EPS cao. Có dạng depot (long-acting)."
+        },
+        "side_effects": [
+            "Rối loạn vận động ngoại tháp (EPS) - phổ biến",
+            "Dystonia",
+            "Parkinsonism",
+            "Akathisia",
+            "Tardive dyskinesia",
+            "Hạ huyết áp",
+            "Sedation",
+            "Tăng prolactin"
+        ],
+        "interactions": [
+            "CNS depressants: tăng tác dụng an thần",
+            "Anticholinergics: giảm EPS nhưng tăng tác dụng phụ anticholinergic",
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Fluphenazine là typical antipsychotic (phenothiazine), đối kháng mạnh thụ thể dopamine D2 ở não. Ức chế dopaminergic pathway dẫn đến giảm triệu chứng tâm thần nhưng tăng nguy cơ rối loạn vận động ngoại tháp (EPS). Có dạng depot (long-acting) cho phép tiêm mỗi 2-4 tuần, cải thiện compliance. Nguy cơ EPS cao hơn atypical antipsychotics.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm triệu chứng tâm thần",
+            "EPS: dystonia, parkinsonism, akathisia, tardive dyskinesia",
+            "Huyết áp - hạ huyết áp có thể xảy ra",
+            "ECG - QT prolongation",
+            "Prolactin - tăng prolactin có thể gây vô kinh, galactorrhea"
+        ],
+        "precautions": [
+            "Nguy cơ EPS cao - cần theo dõi chặt chẽ",
+            "Tardive dyskinesia - có thể không hồi phục, cần đánh giá định kỳ",
+            "Hạ huyết áp - đặc biệt khi bắt đầu điều trị",
+            "Dạng depot - tiêm sâu vào cơ, không tiêm vào mạch máu",
+            "Không ngừng đột ngột - giảm liều dần dần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "15-30 giờ (PO), 6.8-9.6 ngày (depot)",
+            "onset": "1-2 giờ (PO), 24-72 giờ (depot)",
+            "duration": "6-8 giờ (PO), 2-4 tuần (depot)",
+            "protein_binding": ">90%",
+            "clearance": "Gan: chuyển hóa qua CYP2D6. Thận: bài tiết một phần."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dạng depot: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng.",
+        "black_box_warnings": "Tardive dyskinesia có thể không hồi phục. Nguy cơ tăng ở người cao tuổi, phụ nữ, dùng lâu dài.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "QT prolonging drugs",
+                    "mechanism": "Cả hai đều kéo dài QT",
+                    "effect": "Tăng nguy cơ rối loạn nhịp tim",
+                    "management": "Tránh dùng chung nếu có thể. Theo dõi ECG."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CNS depressants",
+                    "mechanism": "Tác dụng hiệp đồng ức chế CNS",
+                    "effect": "Tăng tác dụng an thần",
+                    "management": "Thận trọng, giảm liều nếu cần."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng fluphenazine hoặc phenothiazine",
+                "Coma do CNS depressants",
+                "Suy gan nặng"
+            ],
+            "tương_đối": [
+                "Bệnh tim - tăng nguy cơ QT prolongation",
+                "Động kinh - có thể làm tăng nguy cơ co giật",
+                "Mang thai (category C) - thận trọng"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng fluphenazine hoặc phenothiazine",
+                "Coma do CNS depressants",
+                "Suy gan nặng"
+            ],
+            "tương_đối": [
+                "Bệnh tim - tăng nguy cơ QT prolongation",
+                "Động kinh - có thể làm tăng nguy cơ co giật",
+                "Mang thai (category C) - thận trọng",
+                "Suy thận nặng (CrCl <30) - thận trọng, giảm liều"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Fluphenazine không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Fluphenazine thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng khi cần thiết. Thận trọng.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Bài tiết vào sữa mẹ. Có thể gây tác dụng phụ ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, giảm liều",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan (CYP2D6). Suy gan nặng là chống chỉ định."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ sâu, hôn mê",
+                "Hạ huyết áp nặng",
+                "QT prolongation, rối loạn nhịp tim",
+                "EPS nặng",
+                "Suy hô hấp"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ hô hấp ngay lập tức",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ",
+                "Theo dõi ECG liên tục",
+                "Điều trị hạ huyết áp",
+                "Điều trị EPS nếu có"
+            ],
+            "monitoring": "Theo dõi liên tục ECG, huyết áp, ý thức, hô hấp"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để giảm kích ứng dạ dày.",
+                "timing": "Chia 2-4 lần/ngày. Không ngừng đột ngột."
+            },
+            "im": {
+                "reconstitution": "Dùng trực tiếp từ lọ.",
+                "injection_site": "Tiêm sâu vào cơ (gluteus maximus).",
+                "notes": "Tiêm sâu vào cơ. Dạng depot: tiêm mỗi 2-4 tuần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Prolixin (Fluphenazine)",
+                "UpToDate - Fluphenazine: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved"
+        }
+    },
+
+    "Haloperidol": {
+        "group": "Psychiatry - Antipsychotic (Typical)",
+        "vietnamese_name": "Haloperidol, Haldol",
+        "administration": ["PO", "IM", "IV"],
+        "indications": [
+            "Tâm thần phân liệt",
+            "Rối loạn lưỡng cực (mania)",
+            "Loạn thần cấp",
+            "Delirium (ICU)",
+            "Tourette syndrome",
+            "Chứng nôn mửa nặng (refractory)"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "Parkinson's disease",
+            "Coma",
+            "Ức chế hệ thần kinh trung ương nặng"
+        ],
+        "dosage": {
+            "adult_schizophrenia_po": "0.5-5mg x 2-3 lần/ngày, tăng đến 15-20mg/ngày (tối đa 100mg/ngày)",
+            "adult_schizophrenia_im": "2-5mg IM, lặp mỗi 4-8 giờ nếu cần (tối đa 20mg/ngày)",
+            "adult_delirium": "0.5-2mg PO/IM mỗi 4-6 giờ",
+            "adult_max": "100mg/ngày PO, 20mg/ngày IM",
+            "notes": "Typical antipsychotic, nguy cơ cao rối loạn vận động ngoại tháp (EPS). Dạng decanoate (depot): 50-200mg IM mỗi 4 tuần."
+        },
+        "side_effects": [
+            "Rối loạn vận động ngoại tháp (EPS) - phổ biến: dystonia, akathisia, parkinsonism, tardive dyskinesia",
+            "Tăng prolactin (phổ biến)",
+            "QT prolongation (nguy hiểm)",
+            "Neuroleptic malignant syndrome (NMS) - hiếm nhưng nguy hiểm",
+            "Buồn ngủ, chóng mặt",
+            "Khô miệng",
+            "Táo bón",
+            "Hạ huyết áp tư thế"
+        ],
+        "interactions": [
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
+            "CYP2D6 inhibitors: tăng nồng độ haloperidol",
+            "CYP3A4 inhibitors: tăng nồng độ haloperidol",
+            "Anticholinergics: giảm EPS nhưng tăng tác dụng phụ anticholinergic",
+            "Alcohol: tăng tác dụng ức chế hệ thần kinh trung ương"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Haloperidol là thuốc chống loạn thần điển hình (typical antipsychotic), đối kháng mạnh thụ thể dopamine D2. Khác với atypical antipsychotics, haloperidol gắn chặt với D2 (tight binding), gây ức chế dopamine mạnh, dẫn đến nguy cơ cao rối loạn vận động ngoại tháp (EPS) và tăng prolactin. Haloperidol cũng đối kháng thụ thể alpha-1 adrenergic (gây hạ huyết áp) và histamine H1 (gây buồn ngủ). Tác dụng: điều trị tâm thần phân liệt, rối loạn lưỡng cực (mania), loạn thần cấp, delirium (ICU), và Tourette syndrome. Có dạng uống (PO), tiêm bắp (IM), tiêm tĩnh mạch (IV), và dạng depot (decanoate). Tác dụng phụ: rối loạn vận động ngoại tháp (EPS) - phổ biến, tăng prolactin, QT prolongation, neuroleptic malignant syndrome (NMS) - hiếm nhưng nguy hiểm.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm triệu chứng tâm thần, ổn định tâm trạng (đánh giá sau 2-4 tuần)",
+            "Rối loạn vận động ngoại tháp (EPS) - phổ biến, theo dõi: dystonia, akathisia, parkinsonism, tardive dyskinesia",
+            "ECG - QT prolongation (nguy hiểm), đặc biệt ở liều cao",
+            "Prolactin - tăng prolactin phổ biến (gây vô kinh, tiết sữa)",
+            "Dấu hiệu neuroleptic malignant syndrome (NMS): sốt, cứng cơ, thay đổi ý thức, tăng CK, tăng nhịp tim",
+            "Huyết áp - hạ huyết áp tư thế, đặc biệt khi bắt đầu hoặc tăng liều",
+            "Tương tác với CYP2D6, CYP3A4 inhibitors/inducers (ảnh hưởng nồng độ haloperidol)"
+        ],
+        "precautions": [
+            "Rối loạn vận động ngoại tháp (EPS) - phổ biến, đặc biệt ở liều cao, có thể dùng anticholinergics (benztropine, trihexyphenidyl) để điều trị",
+            "QT prolongation - nguy hiểm, đặc biệt ở liều cao, tránh dùng với thuốc kéo dài QT khác, theo dõi ECG",
+            "Neuroleptic malignant syndrome (NMS) - hiếm nhưng nguy hiểm, ngừng ngay nếu nghi ngờ, điều trị hỗ trợ",
+            "Tăng prolactin - phổ biến, gây vô kinh, tiết sữa, giảm ham muốn tình dục",
+            "Tardive dyskinesia - rối loạn vận động muộn, có thể không hồi phục, giảm liều hoặc ngừng nếu có thể",
+            "Hạ huyết áp tư thế - đặc biệt khi bắt đầu hoặc tăng liều, đứng dậy chậm, uống đủ nước",
+            "Thận trọng khi dùng với CYP2D6, CYP3A4 inhibitors - tăng nồng độ haloperidol, giảm liều",
+            "Thận trọng khi dùng với CYP2D6, CYP3A4 inducers - giảm nồng độ haloperidol, có thể cần tăng liều",
+            "Thận trọng khi dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+            "Tránh rượu - tăng tác dụng ức chế hệ thần kinh trung ương",
+            "Dạng depot (decanoate) - tiêm bắp mỗi 4 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị",
+            "Không ngừng đột ngột (có thể làm tăng triệu chứng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12-38 giờ (PO), 21 giờ (IM), 14-26 giờ (decanoate depot)",
+            "onset": "30-60 phút (IM), vài ngày đến vài tuần (tác dụng chống loạn thần)",
+            "duration": "12-24 giờ (PO), 4-8 giờ (IM), 4 tuần (decanoate depot)",
+            "protein_binding": "92%",
+            "clearance": "Gan: chuyển hóa qua CYP2D6 (chính), CYP3A4 (phụ). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều khi dùng với CYP2D6, CYP3A4 inhibitors/inducers."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng tiêm: bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh. Dạng depot (decanoate): bảo quản ở nhiệt độ phòng, tránh ánh sáng.",
+        "black_box_warnings": "Nguy cơ tử vong tăng ở bệnh nhân lớn tuổi với rối loạn tâm thần do sa sút trí tuệ (dementia-related psychosis) - không được dùng cho chỉ định này. Nguy cơ QT prolongation, có thể gây rối loạn nhịp tim (torsades de pointes). Nguy cơ neuroleptic malignant syndrome (NMS). Nguy cơ rối loạn vận động ngoại tháp (EPS), đặc biệt tardive dyskinesia (có thể không hồi phục).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "QT prolonging drugs (Amiodarone, Sotalol, Citalopram, Escitalopram, Quetiapine)",
+                    "mechanism": "Cả hai đều kéo dài QT, tăng nguy cơ rối loạn nhịp tim",
+                    "effect": "QT prolongation, rối loạn nhịp tim (torsades de pointes)",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi ECG. Giảm liều một trong hai thuốc."
+                },
+                {
+                    "drug": "CYP2D6 inhibitors (Paroxetine, Fluoxetine, Bupropion)",
+                    "mechanism": "Ức chế chuyển hóa haloperidol qua CYP2D6, tăng nồng độ haloperidol",
+                    "effect": "Tăng nồng độ haloperidol, tăng tác dụng phụ (EPS, QT prolongation)",
+                    "management": "Giảm liều haloperidol 50% khi dùng với CYP2D6 inhibitors. Theo dõi tác dụng phụ chặt chẽ."
+                },
+                {
+                    "drug": "CYP3A4 inhibitors (Ketoconazole, Itraconazole, Erythromycin, Clarithromycin)",
+                    "mechanism": "Ức chế chuyển hóa haloperidol qua CYP3A4, tăng nồng độ haloperidol",
+                    "effect": "Tăng nồng độ haloperidol, tăng tác dụng phụ",
+                    "management": "Giảm liều haloperidol 25-50% khi dùng với CYP3A4 inhibitors. Theo dõi tác dụng phụ chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Anticholinergics (Benztropine, Trihexyphenidyl)",
+                    "mechanism": "Điều trị EPS nhưng tăng tác dụng phụ anticholinergic",
+                    "effect": "Tăng khô miệng, táo bón, bí tiểu, lú lẫn (đặc biệt ở người cao tuổi)",
+                    "management": "Dùng liều thấp nhất có hiệu quả. Theo dõi tác dụng phụ anticholinergic."
+                },
+                {
+                    "drug": "Alcohol",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
+                    "management": "Tránh hoặc giảm rượu. Cảnh báo bệnh nhân."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng haloperidol hoặc các thành phần khác",
+                "Parkinson's disease - làm nặng triệu chứng",
+                "Coma - ức chế hệ thần kinh trung ương nặng",
+                "Ức chế hệ thần kinh trung ương nặng"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
+                "QT prolongation - tăng nguy cơ rối loạn nhịp tim",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Dùng với CYP2D6, CYP3A4 inhibitors - giảm liều haloperidol",
+                "Dùng với CYP2D6, CYP3A4 inducers - tăng liều haloperidol",
+                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, EPS, hạ huyết áp"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng haloperidol hoặc các thành phần khác",
+                "Parkinson's disease - làm nặng triệu chứng",
+                "Coma - ức chế hệ thần kinh trung ương nặng",
+                "Ức chế hệ thần kinh trung ương nặng"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
+                "QT prolongation - tăng nguy cơ rối loạn nhịp tim",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Dùng với CYP2D6, CYP3A4 inhibitors - giảm liều haloperidol",
+                "Dùng với CYP2D6, CYP3A4 inducers - tăng liều haloperidol",
+                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, EPS, hạ huyết áp"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Haloperidol không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Haloperidol thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh, nhưng chứng cứ không rõ ràng. Trẻ sơ sinh có thể có withdrawal syndrome (khó chịu, run, khó thở) nếu mẹ dùng haloperidol trong thai kỳ, đặc biệt gần cuối thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ. Theo dõi trẻ sơ sinh về dấu hiệu withdrawal.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Haloperidol bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
+                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Giảm liều 25-50%, theo dõi tác dụng phụ",
+            "severe": "Giảm liều 50%, theo dõi tác dụng phụ chặt chẽ. Hoặc tránh dùng nếu có thể.",
+            "notes": "Haloperidol chuyển hóa ở gan qua CYP2D6, CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, hôn mê, co giật",
+                "Rối loạn vận động: dystonia nặng, akathisia, parkinsonism",
+                "Rối loạn tim mạch: QT prolongation, rối loạn nhịp tim (torsades de pointes), hạ huyết áp",
+                "Rối loạn hô hấp: suy hô hấp",
+                "Neuroleptic malignant syndrome (NMS): sốt, cứng cơ, thay đổi ý thức, tăng CK",
+                "Rối loạn tiêu hóa: buồn nôn, nôn"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Benztropine hoặc diphenhydramine cho EPS.",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần (quan trọng)",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "Xử trí EPS: Benztropine 1-2mg IM/IV hoặc diphenhydramine 25-50mg IM/IV",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, điện tâm đồ (QT prolongation)",
+                "Xử trí QT prolongation: Magnesium sulfate (2g IV), isoproterenol nếu cần",
+                "Xử trí torsades de pointes: Magnesium sulfate, overdrive pacing",
+                "Xử trí NMS: Ngừng haloperidol ngay, điều trị hỗ trợ, dantrolene nếu cần",
+                "Xử trí hạ huyết áp: IV fluids, vasopressors nếu cần",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, điện tâm đồ (QT interval), huyết áp, CK (nếu nghi ngờ NMS)"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn.",
+                "timing": "Chia 2-3 lần/ngày. Uống cùng thời điểm mỗi ngày. Tăng liều chậm để giảm tác dụng phụ (đặc biệt EPS). Không ngừng đột ngột (có thể làm tăng triệu chứng)."
+            },
+            "im": {
+                "reconstitution": "Không cần pha loãng. Lắc kỹ trước khi dùng.",
+                "infusion_rate": "Tiêm bắp sâu vào cơ lớn (gluteal, deltoid). Tránh tiêm vào mạch máu.",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Dạng IM: dùng cho loạn thần cấp, delirium. Dạng depot (decanoate): tiêm bắp mỗi 4 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị."
+            },
+            "iv": {
+                "reconstitution": "Pha loãng trong NS hoặc D5W. Nồng độ: 0.2-5mg/mL.",
+                "infusion_rate": "Tiêm tĩnh mạch chậm (không quá 5mg/phút). Hoặc truyền tĩnh mạch liên tục.",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Dạng IV: dùng cho loạn thần cấp, delirium (ICU). Theo dõi QT prolongation chặt chẽ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Lexicomp - Haloperidol",
+                "UpToDate - Haloperidol: Drug information",
+                "FDA - Haldol (haloperidol) prescribing information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+        }
+    },
+    "Lurasidone": {
+        "group": "Psychiatry - Antipsychotic (Atypical)",
+        "vietnamese_name": "Lurasidone, Latuda",
+        "administration": ["PO"],
+        "indications": [
+            "Tâm thần phân liệt",
+            "Rối loạn lưỡng cực (depression)",
+            "Trầm cảm kháng trị (adjunct)"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "QT prolongation nặng"
+        ],
+        "dosage": {
+            "adult_schizophrenia": "40-80mg x 1 lần/ngày (tối đa 160mg/ngày)",
+            "adult_bipolar_depression": "20-60mg x 1 lần/ngày",
+            "adult_max": "160mg/ngày",
+            "notes": "Uống với thức ăn (≥350 calo) để tăng hấp thu. Atypical antipsychotic, ít tăng cân hơn các atypical khác."
+        },
+        "side_effects": [
+            "Buồn ngủ",
+            "Buồn nôn",
+            "Chóng mặt",
+            "Akathisia",
+            "QT prolongation (hiếm)",
+            "Tăng prolactin (nhẹ)",
+            "Ít tăng cân hơn các atypical khác"
+        ],
+        "interactions": [
+            "CYP3A4 inhibitors: tăng nồng độ lurasidone",
+            "CYP3A4 inducers: giảm nồng độ lurasidone",
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Lurasidone là atypical antipsychotic, đối kháng thụ thể dopamine D2 và serotonin 5-HT2A. Khác với các atypical khác, lurasidone ít gây tăng cân và tăng lipid máu. Có tác dụng chống trầm cảm, được dùng cho rối loạn lưỡng cực depression. Ưu điểm: ít tăng cân, ít tác dụng phụ chuyển hóa. Phải uống với thức ăn để tăng hấp thu.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm triệu chứng tâm thần, cải thiện trầm cảm",
+            "ECG - QT prolongation (hiếm)",
+            "Cân nặng - ít tăng cân hơn các atypical khác",
+            "Prolactin - tăng nhẹ",
+            "Akathisia - tác dụng phụ phổ biến"
+        ],
+        "precautions": [
+            "PHẢI uống với thức ăn (≥350 calo) để tăng hấp thu - nếu không hấp thu giảm 50%",
+            "Akathisia - tác dụng phụ phổ biến, có thể điều trị bằng propranolol",
+            "QT prolongation - hiếm nhưng cần theo dõi ECG",
+            "Ít tăng cân hơn các atypical khác - ưu điểm",
+            "Thận trọng với CYP3A4 inhibitors/inducers"
+        ],
+        "pharmacokinetics": {
+            "half_life": "18 giờ",
+            "onset": "1-2 tuần",
+            "duration": "24 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4. Thận: bài tiết một phần."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Nguy cơ tự sát ở trẻ em, thanh thiếu niên, và người trẻ tuổi (<25 tuổi).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, clarithromycin)",
+                    "mechanism": "Ức chế chuyển hóa lurasidone",
+                    "effect": "Tăng nồng độ lurasidone, tăng tác dụng phụ",
+                    "management": "Giảm liều lurasidone 50%. Tránh dùng với ketoconazole liều cao."
+                },
+                {
+                    "drug": "CYP3A4 inducers (carbamazepine, rifampin)",
+                    "mechanism": "Tăng chuyển hóa lurasidone",
+                    "effect": "Giảm nồng độ lurasidone, giảm hiệu quả",
+                    "management": "Tăng liều lurasidone. Hoặc tránh dùng chung."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "QT prolonging drugs",
+                    "mechanism": "Cả hai đều kéo dài QT",
+                    "effect": "Tăng nguy cơ rối loạn nhịp tim",
+                    "management": "Thận trọng, theo dõi ECG."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng lurasidone",
+                "QT prolongation nặng"
+            ],
+            "tương_đối": [
+                "Bệnh tim - tăng nguy cơ QT prolongation",
+                "Dùng với CYP3A4 inhibitors mạnh - giảm liều",
+                "Dùng với CYP3A4 inducers mạnh - tăng liều"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng lurasidone",
+                "QT prolongation nặng"
+            ],
+            "tương_đối": [
+                "Bệnh tim - tăng nguy cơ QT prolongation",
+                "Dùng với CYP3A4 inhibitors mạnh - giảm liều",
+                "Dùng với CYP3A4 inducers mạnh - tăng liều",
+                "Suy thận nặng (CrCl <30) - thận trọng, giảm liều"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Lurasidone không được lọc sạch hiệu quả qua thẩm phân máu do protein binding cao (99%).",
+            "notes": "Lurasidone thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Category B - an toàn hơn category C. Có thể dùng khi cần thiết.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Giảm liều 50%",
+            "severe": "Giảm liều 50%",
+            "notes": "Chuyển hóa qua gan (CYP3A4). Suy gan làm giảm chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ sâu",
+                "QT prolongation",
+                "Hạ huyết áp",
+                "Akathisia nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi ECG liên tục",
+                "Điều trị hạ huyết áp",
+                "Điều trị akathisia nếu có"
+            ],
+            "monitoring": "Theo dõi liên tục ECG, huyết áp, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "PHẢI uống với thức ăn (≥350 calo) để tăng hấp thu - nếu không hấp thu giảm 50%",
+                "timing": "Dùng 1 lần/ngày với bữa ăn. Không ngừng đột ngột."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Latuda (Lurasidone)",
+                "UpToDate - Lurasidone: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved"
+        }
+    },
+    
+    "Olanzapine": {
+        "group": "Psychiatry - Antipsychotic (Atypical)",
+        "vietnamese_name": "Olanzapine, Zyprexa",
+        "administration": ["PO", "IM"],
+        "indications": [
+            "Tâm thần phân liệt",
+            "Rối loạn lưỡng cực (mania, depression)",
+            "Trầm cảm kháng trị (adjunct)",
+            "Delirium (ICU) - off-label"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "QT prolongation nặng"
+        ],
+        "dosage": {
+            "adult_schizophrenia_po": "5-10mg/ngày, tăng đến 10-20mg/ngày (tối đa 20mg/ngày)",
+            "adult_bipolar_mania_po": "10-15mg/ngày, tăng đến 15-20mg/ngày",
+            "adult_im": "5-10mg IM, lặp mỗi 2-4 giờ nếu cần (tối đa 30mg/ngày)",
+            "adult_max": "20mg/ngày PO, 30mg/ngày IM",
+            "notes": "Atypical antipsychotic, tăng cân nhiều nhất trong các atypical antipsychotics. Dạng depot (Relprevv): tiêm bắp mỗi 2-4 tuần."
+        },
+        "side_effects": [
+            "Tăng cân (phổ biến, nhiều nhất trong các atypical)",
+            "Tăng lipid máu (phổ biến)",
+            "Tăng đường huyết (nguy cơ đái tháo đường) - phổ biến",
+            "Buồn ngủ (phổ biến)",
+            "Chóng mặt",
+            "Khô miệng",
+            "Rối loạn vận động (hiếm hơn typical antipsychotics)",
+            "QT prolongation (hiếm)",
+            "Hạ huyết áp tư thế"
+        ],
+        "interactions": [
+            "CYP1A2 inhibitors (fluvoxamine): tăng nồng độ olanzapine",
+            "CYP1A2 inducers (carbamazepine, smoking): giảm nồng độ olanzapine",
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
+            "Antihypertensives: tăng nguy cơ hạ huyết áp",
+            "Alcohol: tăng tác dụng an thần"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Olanzapine là thuốc chống loạn thần không điển hình (atypical antipsychotic), đối kháng thụ thể dopamine D2 và serotonin 5-HT2A. Khác với typical antipsychotics, olanzapine có ái lực thấp hơn với D2 và gắn tạm thời (fast dissociation), giảm nguy cơ rối loạn vận động ngoại tháp (EPS) và tăng prolactin. Olanzapine đối kháng mạnh thụ thể histamine H1 (gây buồn ngủ, tăng cân - nhiều nhất trong các atypical), muscarinic (gây khô miệng), và alpha-1 adrenergic (gây hạ huyết áp). Tác dụng: điều trị tâm thần phân liệt, rối loạn lưỡng cực (mania và depression), và trầm cảm kháng trị (adjunct). Có dạng uống (PO), tiêm bắp (IM), và dạng depot (Relprevv). Tác dụng phụ: tăng cân (phổ biến, nhiều nhất trong các atypical), tăng lipid máu, tăng đường huyết (nguy cơ đái tháo đường) - phổ biến, buồn ngủ, QT prolongation (hiếm).",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm triệu chứng tâm thần, ổn định tâm trạng (đánh giá sau 2-4 tuần)",
+            "Cân nặng - tăng cân phổ biến, nhiều nhất trong các atypical, theo dõi định kỳ",
+            "Lipid máu (cholesterol, triglyceride) - tăng lipid máu phổ biến",
+            "Đường huyết (glucose, HbA1c) - tăng đường huyết, nguy cơ đái tháo đường (phổ biến)",
+            "ECG - QT prolongation (hiếm nhưng nguy hiểm), đặc biệt ở liều cao",
+            "Huyết áp - hạ huyết áp tư thế, đặc biệt khi bắt đầu hoặc tăng liều",
+            "Prolactin - ít tăng prolactin hơn typical antipsychotics",
+            "Dấu hiệu rối loạn vận động ngoại tháp (EPS) - hiếm hơn typical antipsychotics",
+            "Tương tác với CYP1A2 inhibitors/inducers (ảnh hưởng nồng độ olanzapine)"
+        ],
+        "precautions": [
+            "Tăng cân - phổ biến, nhiều nhất trong các atypical, theo dõi cân nặng, khuyến khích chế độ ăn lành mạnh và tập thể dục",
+            "Tăng lipid máu - phổ biến, theo dõi cholesterol, triglyceride, điều chỉnh chế độ ăn hoặc dùng statin nếu cần",
+            "Tăng đường huyết, nguy cơ đái tháo đường - phổ biến, theo dõi glucose, HbA1c, đặc biệt ở bệnh nhân có nguy cơ đái tháo đường",
+            "Buồn ngủ - phổ biến, đặc biệt khi bắt đầu hoặc tăng liều, tránh lái xe hoặc vận hành máy móc",
+            "QT prolongation - hiếm nhưng nguy hiểm, đặc biệt ở liều cao, tránh dùng với thuốc kéo dài QT khác",
+            "Hạ huyết áp tư thế - đặc biệt khi bắt đầu hoặc tăng liều, đứng dậy chậm, uống đủ nước",
+            "Thận trọng khi dùng với CYP1A2 inhibitors (fluvoxamine) - tăng nồng độ olanzapine, giảm liều olanzapine 50%",
+            "Thận trọng khi dùng với CYP1A2 inducers (carbamazepine, smoking) - giảm nồng độ olanzapine, có thể cần tăng liều",
+            "Hút thuốc - giảm nồng độ olanzapine, có thể cần tăng liều ở người hút thuốc",
+            "Thận trọng khi dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+            "Tránh rượu - tăng tác dụng an thần",
+            "Dạng depot (Relprevv) - tiêm bắp mỗi 2-4 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị",
+            "Không ngừng đột ngột (có thể làm tăng triệu chứng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "30 giờ",
+            "onset": "Vài ngày đến vài tuần (tác dụng chống loạn thần)",
+            "duration": "24 giờ (PO), 2-4 tuần (depot)",
+            "protein_binding": "93%",
+            "clearance": "Gan: chuyển hóa qua CYP1A2 (chính), CYP2D6 (phụ). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều khi dùng với CYP1A2 inhibitors/inducers và khi hút thuốc."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng depot (Relprevv): bảo quản ở nhiệt độ phòng, tránh ánh sáng, tránh đông lạnh.",
+        "black_box_warnings": "Nguy cơ tử vong tăng ở bệnh nhân lớn tuổi với rối loạn tâm thần do sa sút trí tuệ (dementia-related psychosis) - không được dùng cho chỉ định này. Nguy cơ QT prolongation, có thể gây rối loạn nhịp tim (torsades de pointes). Nguy cơ tăng đường huyết, đái tháo đường. Nguy cơ tăng lipid máu. Nguy cơ tăng cân.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP1A2 inhibitors (Fluvoxamine)",
+                    "mechanism": "Ức chế chuyển hóa olanzapine qua CYP1A2, tăng nồng độ olanzapine",
+                    "effect": "Tăng nồng độ olanzapine, tăng tác dụng phụ (buồn ngủ, tăng cân, QT prolongation)",
+                    "management": "Giảm liều olanzapine 50% khi dùng với fluvoxamine. Theo dõi tác dụng phụ chặt chẽ."
+                },
+                {
+                    "drug": "CYP1A2 inducers (Carbamazepine, Smoking)",
+                    "mechanism": "Cảm ứng chuyển hóa olanzapine qua CYP1A2, giảm nồng độ olanzapine",
+                    "effect": "Giảm nồng độ olanzapine, giảm hiệu quả",
+                    "management": "Tăng liều olanzapine 50-100% khi dùng với carbamazepine hoặc ở người hút thuốc. Theo dõi đáp ứng điều trị."
+                },
+                {
+                    "drug": "QT prolonging drugs (Amiodarone, Sotalol, Citalopram, Escitalopram, Haloperidol)",
+                    "mechanism": "Cả hai đều kéo dài QT, tăng nguy cơ rối loạn nhịp tim",
+                    "effect": "QT prolongation, rối loạn nhịp tim (torsades de pointes)",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi ECG. Giảm liều một trong hai thuốc."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antihypertensives",
+                    "mechanism": "Cả hai đều có thể gây hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp tư thế, ngất",
+                    "management": "Thận trọng. Có thể cần giảm liều một trong hai thuốc. Theo dõi huyết áp."
+                },
+                {
+                    "drug": "Alcohol",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
+                    "management": "Tránh hoặc giảm rượu. Cảnh báo bệnh nhân."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng olanzapine hoặc các thành phần khác",
+                "QT prolongation nặng (QTc >500ms)"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
+                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
+                "Tăng lipid máu - tăng cholesterol, triglyceride",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Dùng với CYP1A2 inhibitors - giảm liều olanzapine 50%",
+                "Dùng với CYP1A2 inducers hoặc hút thuốc - tăng liều olanzapine 50-100%",
+                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng olanzapine hoặc các thành phần khác",
+                "QT prolongation nặng (QTc >500ms)"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
+                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
+                "Tăng lipid máu - tăng cholesterol, triglyceride",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Dùng với CYP1A2 inhibitors - giảm liều olanzapine 50%",
+                "Dùng với CYP1A2 inducers hoặc hút thuốc - tăng liều olanzapine 50-100%",
+                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Olanzapine không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Olanzapine thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh, nhưng chứng cứ không rõ ràng. Trẻ sơ sinh có thể có withdrawal syndrome (khó chịu, run, khó thở) nếu mẹ dùng olanzapine trong thai kỳ, đặc biệt gần cuối thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ. Theo dõi trẻ sơ sinh về dấu hiệu withdrawal.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Olanzapine bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
+                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Giảm liều 25-50%, theo dõi tác dụng phụ",
+            "severe": "Giảm liều 50%, theo dõi tác dụng phụ chặt chẽ. Hoặc tránh dùng nếu có thể.",
+            "notes": "Olanzapine chuyển hóa ở gan qua CYP1A2, CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, hôn mê",
+                "Rối loạn tim mạch: QT prolongation, rối loạn nhịp tim (torsades de pointes), hạ huyết áp",
+                "Rối loạn hô hấp: suy hô hấp",
+                "Rối loạn tiêu hóa: buồn nôn, nôn"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần (quan trọng)",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, điện tâm đồ (QT prolongation)",
+                "Xử trí QT prolongation: Magnesium sulfate (2g IV), isoproterenol nếu cần",
+                "Xử trí torsades de pointes: Magnesium sulfate, overdrive pacing",
+                "Xử trí hạ huyết áp: IV fluids, vasopressors nếu cần",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, điện tâm đồ (QT interval), huyết áp"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn.",
+                "timing": "Uống 1 lần/ngày vào buổi tối. Uống cùng thời điểm mỗi ngày. Tăng liều chậm để giảm tác dụng phụ (đặc biệt buồn ngủ, tăng cân). Không ngừng đột ngột (có thể làm tăng triệu chứng)."
+            },
+            "im": {
+                "reconstitution": "Không cần pha loãng. Lắc kỹ trước khi dùng.",
+                "infusion_rate": "Tiêm bắp sâu vào cơ lớn (gluteal, deltoid). Tránh tiêm vào mạch máu.",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Dạng IM: dùng cho loạn thần cấp, delirium. Dạng depot (Relprevv): tiêm bắp mỗi 2-4 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống và tiêm bắp (depot)"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Lexicomp - Olanzapine",
+                "UpToDate - Olanzapine: Drug information",
+                "FDA - Zyprexa (olanzapine) prescribing information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+        }
+    },
+    
     "Pimozide": {
         "group": "Psychiatry - Antipsychotic (Typical)",
         "vietnamese_name": "Pimozide, Orap",
@@ -2119,7 +1508,618 @@ ANTIPSYCHOTICS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
-    }
+    },
+    "Quetiapine": {
+        "group": "Psychiatry - Antipsychotic (Atypical)",
+        "vietnamese_name": "Quetiapine, Seroquel",
+        "administration": ["PO"],
+        "indications": [
+            "Tâm thần phân liệt",
+            "Rối loạn lưỡng cực (mania, depression)",
+            "Trầm cảm kháng trị (adjunct)",
+            "Rối loạn lo âu tổng quát (GAD) - off-label"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "QT prolongation nặng"
+        ],
+        "dosage": {
+            "adult_schizophrenia": "25mg x 2 lần/ngày, tăng đến 300-800mg/ngày (chia 2-3 lần)",
+            "adult_bipolar_mania": "50mg x 2 lần/ngày, tăng đến 400-800mg/ngày",
+            "adult_bipolar_depression": "50mg/ngày, tăng đến 300mg/ngày",
+            "adult_max": "800mg/ngày",
+            "notes": "Tăng liều chậm. Dạng extended release (XR): uống 1 lần/ngày"
+        },
+        "side_effects": [
+            "Buồn ngủ (phổ biến)",
+            "Chóng mặt",
+            "Khô miệng",
+            "Tăng cân (phổ biến)",
+            "Tăng lipid máu",
+            "Tăng đường huyết (nguy cơ đái tháo đường)",
+            "QT prolongation (hiếm)",
+            "Hạ huyết áp tư thế",
+            "Rối loạn vận động (hiếm hơn typical antipsychotics)"
+        ],
+        "interactions": [
+            "CYP3A4 inhibitors (ketoconazole, erythromycin): tăng nồng độ quetiapine",
+            "CYP3A4 inducers (carbamazepine, phenytoin): giảm nồng độ quetiapine",
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
+            "Alcohol: tăng tác dụng an thần",
+            "Antihypertensives: tăng nguy cơ hạ huyết áp"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Quetiapine là thuốc chống loạn thần không điển hình (atypical antipsychotic), đối kháng thụ thể dopamine D2 và serotonin 5-HT2A. Khác với typical antipsychotics, quetiapine có ái lực thấp hơn với D2 và gắn tạm thời (fast dissociation), giảm nguy cơ rối loạn vận động ngoại tháp (EPS) và tăng prolactin. Quetiapine cũng đối kháng thụ thể histamine H1 (gây buồn ngủ, tăng cân), alpha-1 adrenergic (gây hạ huyết áp), và muscarinic (gây khô miệng). Tác dụng: điều trị tâm thần phân liệt, rối loạn lưỡng cực (mania và depression), và trầm cảm kháng trị (adjunct). Có dạng immediate release (IR) và extended release (XR). Tác dụng phụ: buồn ngủ (phổ biến), tăng cân, tăng lipid máu, tăng đường huyết (nguy cơ đái tháo đường), QT prolongation (hiếm).",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm triệu chứng tâm thần, ổn định tâm trạng (đánh giá sau 2-4 tuần)",
+            "Cân nặng - tăng cân phổ biến, theo dõi định kỳ",
+            "Lipid máu (cholesterol, triglyceride) - tăng lipid máu phổ biến",
+            "Đường huyết (glucose, HbA1c) - tăng đường huyết, nguy cơ đái tháo đường",
+            "ECG - QT prolongation (hiếm nhưng nguy hiểm), đặc biệt ở liều cao",
+            "Huyết áp - hạ huyết áp tư thế, đặc biệt khi bắt đầu hoặc tăng liều",
+            "Prolactin - ít tăng prolactin hơn typical antipsychotics",
+            "Dấu hiệu rối loạn vận động ngoại tháp (EPS) - hiếm hơn typical antipsychotics",
+            "Tương tác với CYP3A4 inhibitors/inducers (ảnh hưởng nồng độ quetiapine)"
+        ],
+        "precautions": [
+            "Tăng liều chậm để giảm tác dụng phụ (đặc biệt hạ huyết áp, buồn ngủ)",
+            "Buồn ngủ - phổ biến, đặc biệt khi bắt đầu hoặc tăng liều, tránh lái xe hoặc vận hành máy móc",
+            "Tăng cân - phổ biến, theo dõi cân nặng, khuyến khích chế độ ăn lành mạnh và tập thể dục",
+            "Tăng lipid máu - phổ biến, theo dõi cholesterol, triglyceride, điều chỉnh chế độ ăn hoặc dùng statin nếu cần",
+            "Tăng đường huyết, nguy cơ đái tháo đường - theo dõi glucose, HbA1c, đặc biệt ở bệnh nhân có nguy cơ đái tháo đường",
+            "QT prolongation - hiếm nhưng nguy hiểm, đặc biệt ở liều cao, tránh dùng với thuốc kéo dài QT khác",
+            "Hạ huyết áp tư thế - đặc biệt khi bắt đầu hoặc tăng liều, đứng dậy chậm, uống đủ nước",
+            "Thận trọng khi dùng với CYP3A4 inhibitors (ketoconazole, erythromycin) - tăng nồng độ quetiapine, giảm liều quetiapine 50-75%",
+            "Thận trọng khi dùng với CYP3A4 inducers (carbamazepine, phenytoin) - giảm nồng độ quetiapine, có thể cần tăng liều",
+            "Thận trọng khi dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+            "Tránh rượu - tăng tác dụng an thần",
+            "Dạng extended release (XR) - uống 1 lần/ngày, thuận tiện hơn, không nghiền hoặc nhai (phải uống nguyên viên)",
+            "Không ngừng đột ngột (có thể làm tăng triệu chứng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6 giờ (IR), 7 giờ (XR)",
+            "onset": "Vài ngày đến vài tuần (tác dụng chống loạn thần)",
+            "duration": "12-24 giờ (dùng 1-2 lần/ngày)",
+            "protein_binding": "83%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4 (chính), CYP2D6 (phụ). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều khi dùng với CYP3A4 inhibitors/inducers."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng extended release (XR): bảo quản tương tự, không nghiền hoặc nhai (phải uống nguyên viên).",
+        "black_box_warnings": "Nguy cơ tử vong tăng ở bệnh nhân lớn tuổi với rối loạn tâm thần do sa sút trí tuệ (dementia-related psychosis) - không được dùng cho chỉ định này. Nguy cơ QT prolongation, có thể gây rối loạn nhịp tim (torsades de pointes). Nguy cơ tăng đường huyết, đái tháo đường. Nguy cơ tăng lipid máu. Nguy cơ tăng cân.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP3A4 inhibitors (Ketoconazole, Itraconazole, Erythromycin, Clarithromycin, Ritonavir)",
+                    "mechanism": "Ức chế chuyển hóa quetiapine qua CYP3A4, tăng nồng độ quetiapine",
+                    "effect": "Tăng nồng độ quetiapine, tăng tác dụng phụ (buồn ngủ, hạ huyết áp, QT prolongation)",
+                    "management": "Giảm liều quetiapine 50-75% khi dùng với CYP3A4 inhibitors. Theo dõi tác dụng phụ chặt chẽ."
+                },
+                {
+                    "drug": "CYP3A4 inducers (Carbamazepine, Phenytoin, Rifampin, St. John's wort)",
+                    "mechanism": "Cảm ứng chuyển hóa quetiapine qua CYP3A4, giảm nồng độ quetiapine",
+                    "effect": "Giảm nồng độ quetiapine, giảm hiệu quả",
+                    "management": "Tăng liều quetiapine 2-5 lần khi dùng với CYP3A4 inducers. Theo dõi đáp ứng điều trị."
+                },
+                {
+                    "drug": "QT prolonging drugs (Amiodarone, Sotalol, Citalopram, Escitalopram, Haloperidol)",
+                    "mechanism": "Cả hai đều kéo dài QT, tăng nguy cơ rối loạn nhịp tim",
+                    "effect": "QT prolongation, rối loạn nhịp tim (torsades de pointes)",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi ECG. Giảm liều một trong hai thuốc."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antihypertensives",
+                    "mechanism": "Cả hai đều có thể gây hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp tư thế, ngất",
+                    "management": "Thận trọng. Có thể cần giảm liều một trong hai thuốc. Theo dõi huyết áp."
+                },
+                {
+                    "drug": "Alcohol",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
+                    "management": "Tránh hoặc giảm rượu. Cảnh báo bệnh nhân."
+                },
+                {
+                    "drug": "CYP2D6 inhibitors (Paroxetine, Fluoxetine)",
+                    "mechanism": "Ức chế chuyển hóa quetiapine qua CYP2D6 (phụ)",
+                    "effect": "Tăng nhẹ nồng độ quetiapine",
+                    "management": "Thận trọng. Có thể cần giảm liều quetiapine nhẹ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "Có thể tăng tác dụng an thần nhẹ",
+                    "effect": "Tăng nhẹ buồn ngủ, chóng mặt",
+                    "management": "Thận trọng. Thường không cần điều chỉnh liều."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng quetiapine hoặc các thành phần khác",
+                "QT prolongation nặng (QTc >500ms)"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
+                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
+                "Tăng lipid máu - tăng cholesterol, triglyceride",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Dùng với CYP3A4 inhibitors - giảm liều quetiapine 50-75%",
+                "Dùng với CYP3A4 inducers - tăng liều quetiapine 2-5 lần",
+                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng quetiapine hoặc các thành phần khác",
+                "QT prolongation nặng (QTc >500ms)"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
+                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
+                "Tăng lipid máu - tăng cholesterol, triglyceride",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Dùng với CYP3A4 inhibitors - giảm liều quetiapine 50-75%",
+                "Dùng với CYP3A4 inducers - tăng liều quetiapine 2-5 lần",
+                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Quetiapine không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Quetiapine thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh, nhưng chứng cứ không rõ ràng. Trẻ sơ sinh có thể có withdrawal syndrome (khó chịu, run, khó thở) nếu mẹ dùng quetiapine trong thai kỳ, đặc biệt gần cuối thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ. Theo dõi trẻ sơ sinh về dấu hiệu withdrawal.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Quetiapine bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
+                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Giảm liều 25-50%, theo dõi tác dụng phụ",
+            "severe": "Giảm liều 50%, theo dõi tác dụng phụ chặt chẽ. Hoặc tránh dùng nếu có thể.",
+            "notes": "Quetiapine chuyển hóa ở gan qua CYP3A4, CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, hôn mê",
+                "Rối loạn tim mạch: QT prolongation, rối loạn nhịp tim (torsades de pointes), hạ huyết áp",
+                "Rối loạn hô hấp: suy hô hấp",
+                "Rối loạn tiêu hóa: buồn nôn, nôn",
+                "Triệu chứng khác: giãn đồng tử"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần (quan trọng)",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, điện tâm đồ (QT prolongation)",
+                "Xử trí QT prolongation: Magnesium sulfate (2g IV), isoproterenol nếu cần",
+                "Xử trí torsades de pointes: Magnesium sulfate, overdrive pacing",
+                "Xử trí hạ huyết áp: IV fluids, vasopressors nếu cần",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, điện tâm đồ (QT interval), huyết áp"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn",
+                "timing": "Dạng immediate release (IR): chia 2-3 lần/ngày. Dạng extended release (XR): uống 1 lần/ngày vào buổi tối. Uống cùng thời điểm mỗi ngày. KHÔNG nghiền hoặc nhai viên XR (phải uống nguyên viên). Tăng liều chậm để giảm tác dụng phụ. Không ngừng đột ngột."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Lexicomp - Quetiapine",
+                "UpToDate - Quetiapine: Drug information",
+                "FDA - Seroquel (quetiapine) prescribing information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+        }
+    },
+    "Risperidone": {
+        "group": "Psychiatry - Antipsychotic (Atypical)",
+        "vietnamese_name": "Risperidone, Risperdal",
+        "administration": ["PO", "IM"],
+        "indications": [
+            "Tâm thần phân liệt",
+            "Rối loạn lưỡng cực (mania)",
+            "Rối loạn phổ tự kỷ (irritability)",
+            "Delirium (ICU) - off-label"
+        ],
+        "contraindications": [
+            "Dị ứng",
+            "QT prolongation nặng"
+        ],
+        "dosage": {
+            "adult_schizophrenia_po": "1mg x 2 lần/ngày, tăng đến 4-6mg/ngày (tối đa 16mg/ngày)",
+            "adult_bipolar_mania_po": "2-3mg/ngày, tăng đến 6mg/ngày",
+            "adult_im": "25mg IM mỗi 2 tuần, tăng đến 37.5-50mg mỗi 2 tuần (tối đa 50mg mỗi 2 tuần)",
+            "adult_max": "16mg/ngày PO, 50mg mỗi 2 tuần IM",
+            "notes": "Atypical antipsychotic, ít EPS hơn typical antipsychotics nhưng vẫn có nguy cơ. Dạng depot (Consta): tiêm bắp mỗi 2 tuần."
+        },
+        "side_effects": [
+            "Rối loạn vận động ngoại tháp (EPS) - ít hơn typical antipsychotics nhưng vẫn có",
+            "Tăng prolactin (phổ biến, nhiều hơn các atypical khác)",
+            "Tăng cân (phổ biến)",
+            "Tăng lipid máu",
+            "Tăng đường huyết (nguy cơ đái tháo đường)",
+            "QT prolongation (hiếm)",
+            "Hạ huyết áp tư thế",
+            "Buồn ngủ, chóng mặt"
+        ],
+        "interactions": [
+            "CYP2D6 inhibitors: tăng nồng độ risperidone",
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
+            "Antihypertensives: tăng nguy cơ hạ huyết áp",
+            "Alcohol: tăng tác dụng an thần"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Risperidone là thuốc chống loạn thần không điển hình (atypical antipsychotic), đối kháng thụ thể dopamine D2 và serotonin 5-HT2A. Khác với typical antipsychotics, risperidone có ái lực cân bằng với D2 và 5-HT2A, giảm nguy cơ rối loạn vận động ngoại tháp (EPS) so với typical antipsychotics, nhưng vẫn có nguy cơ (đặc biệt ở liều cao >6mg/ngày). Risperidone tăng prolactin nhiều hơn các atypical antipsychotics khác (do ức chế D2 mạnh hơn). Tác dụng: điều trị tâm thần phân liệt, rối loạn lưỡng cực (mania), và rối loạn phổ tự kỷ (irritability). Có dạng uống (PO) và dạng depot (Consta - tiêm bắp mỗi 2 tuần). Tác dụng phụ: rối loạn vận động ngoại tháp (EPS) - ít hơn typical nhưng vẫn có, tăng prolactin (phổ biến), tăng cân, tăng lipid máu, tăng đường huyết, QT prolongation (hiếm).",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm triệu chứng tâm thần, ổn định tâm trạng (đánh giá sau 2-4 tuần)",
+            "Rối loạn vận động ngoại tháp (EPS) - ít hơn typical nhưng vẫn có, đặc biệt ở liều cao >6mg/ngày",
+            "Prolactin - tăng prolactin phổ biến (gây vô kinh, tiết sữa), nhiều hơn các atypical khác",
+            "Cân nặng - tăng cân phổ biến, theo dõi định kỳ",
+            "Lipid máu (cholesterol, triglyceride) - tăng lipid máu phổ biến",
+            "Đường huyết (glucose, HbA1c) - tăng đường huyết, nguy cơ đái tháo đường",
+            "ECG - QT prolongation (hiếm nhưng nguy hiểm), đặc biệt ở liều cao",
+            "Huyết áp - hạ huyết áp tư thế, đặc biệt khi bắt đầu hoặc tăng liều",
+            "Tương tác với CYP2D6 inhibitors (ảnh hưởng nồng độ risperidone)"
+        ],
+        "precautions": [
+            "Rối loạn vận động ngoại tháp (EPS) - ít hơn typical nhưng vẫn có, đặc biệt ở liều cao >6mg/ngày, có thể dùng anticholinergics nếu cần",
+            "Tăng prolactin - phổ biến, nhiều hơn các atypical khác, gây vô kinh, tiết sữa, giảm ham muốn tình dục",
+            "Tăng cân - phổ biến, theo dõi cân nặng, khuyến khích chế độ ăn lành mạnh và tập thể dục",
+            "Tăng lipid máu - phổ biến, theo dõi cholesterol, triglyceride, điều chỉnh chế độ ăn hoặc dùng statin nếu cần",
+            "Tăng đường huyết, nguy cơ đái tháo đường - theo dõi glucose, HbA1c, đặc biệt ở bệnh nhân có nguy cơ đái tháo đường",
+            "QT prolongation - hiếm nhưng nguy hiểm, đặc biệt ở liều cao, tránh dùng với thuốc kéo dài QT khác",
+            "Hạ huyết áp tư thế - đặc biệt khi bắt đầu hoặc tăng liều, đứng dậy chậm, uống đủ nước",
+            "Thận trọng khi dùng với CYP2D6 inhibitors (paroxetine, fluoxetine) - tăng nồng độ risperidone, giảm liều risperidone 50%",
+            "Thận trọng khi dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+            "Tránh rượu - tăng tác dụng an thần",
+            "Dạng depot (Consta) - tiêm bắp mỗi 2 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị",
+            "Không ngừng đột ngột (có thể làm tăng triệu chứng)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3 giờ (PO), 3-6 ngày (depot)",
+            "onset": "Vài ngày đến vài tuần (tác dụng chống loạn thần)",
+            "duration": "12-24 giờ (PO), 2 tuần (depot)",
+            "protein_binding": "90%",
+            "clearance": "Gan: chuyển hóa qua CYP2D6 (chính). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều khi dùng với CYP2D6 inhibitors."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng depot (Consta): bảo quản ở nhiệt độ phòng, tránh ánh sáng, tránh đông lạnh.",
+        "black_box_warnings": "Nguy cơ tử vong tăng ở bệnh nhân lớn tuổi với rối loạn tâm thần do sa sút trí tuệ (dementia-related psychosis) - không được dùng cho chỉ định này. Nguy cơ QT prolongation, có thể gây rối loạn nhịp tim (torsades de pointes). Nguy cơ tăng đường huyết, đái tháo đường. Nguy cơ tăng lipid máu. Nguy cơ tăng cân.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP2D6 inhibitors (Paroxetine, Fluoxetine, Bupropion)",
+                    "mechanism": "Ức chế chuyển hóa risperidone qua CYP2D6, tăng nồng độ risperidone",
+                    "effect": "Tăng nồng độ risperidone, tăng tác dụng phụ (EPS, tăng prolactin, QT prolongation)",
+                    "management": "Giảm liều risperidone 50% khi dùng với CYP2D6 inhibitors. Theo dõi tác dụng phụ chặt chẽ."
+                },
+                {
+                    "drug": "QT prolonging drugs (Amiodarone, Sotalol, Citalopram, Escitalopram, Haloperidol)",
+                    "mechanism": "Cả hai đều kéo dài QT, tăng nguy cơ rối loạn nhịp tim",
+                    "effect": "QT prolongation, rối loạn nhịp tim (torsades de pointes)",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi ECG. Giảm liều một trong hai thuốc."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Antihypertensives",
+                    "mechanism": "Cả hai đều có thể gây hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp tư thế, ngất",
+                    "management": "Thận trọng. Có thể cần giảm liều một trong hai thuốc. Theo dõi huyết áp."
+                },
+                {
+                    "drug": "Alcohol",
+                    "mechanism": "Tăng tác dụng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, chóng mặt, suy hô hấp",
+                    "management": "Tránh hoặc giảm rượu. Cảnh báo bệnh nhân."
+                }
+            ]
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng risperidone hoặc các thành phần khác",
+                "QT prolongation nặng (QTc >500ms)"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
+                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
+                "Tăng lipid máu - tăng cholesterol, triglyceride",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Dùng với CYP2D6 inhibitors - giảm liều risperidone 50%",
+                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng risperidone hoặc các thành phần khác",
+                "QT prolongation nặng (QTc >500ms)"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch (suy tim, loạn nhịp) - tăng nguy cơ QT prolongation, hạ huyết áp",
+                "Đái tháo đường - tăng đường huyết, nguy cơ đái tháo đường",
+                "Tăng lipid máu - tăng cholesterol, triglyceride",
+                "Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy",
+                "Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy",
+                "Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ",
+                "Dùng với CYP2D6 inhibitors - giảm liều risperidone 50%",
+                "Dùng với QT prolonging drugs - tăng nguy cơ rối loạn nhịp tim",
+                "Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ, hạ huyết áp"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Risperidone không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Risperidone thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy. Giảm liều và theo dõi chặt chẽ ở suy thận nặng."
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh, nhưng chứng cứ không rõ ràng. Trẻ sơ sinh có thể có withdrawal syndrome (khó chịu, run, khó thở) nếu mẹ dùng risperidone trong thai kỳ, đặc biệt gần cuối thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ. Theo dõi trẻ sơ sinh về dấu hiệu withdrawal.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Risperidone bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.",
+                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém)."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Giảm liều 25-50%, theo dõi tác dụng phụ",
+            "severe": "Giảm liều 50%, theo dõi tác dụng phụ chặt chẽ. Hoặc tránh dùng nếu có thể.",
+            "notes": "Risperidone chuyển hóa ở gan qua CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, hôn mê",
+                "Rối loạn vận động: EPS (dystonia, akathisia, parkinsonism)",
+                "Rối loạn tim mạch: QT prolongation, rối loạn nhịp tim (torsades de pointes), hạ huyết áp",
+                "Rối loạn hô hấp: suy hô hấp",
+                "Rối loạn tiêu hóa: buồn nôn, nôn"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Benztropine hoặc diphenhydramine cho EPS.",
+            "treatment": [
+                "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần (quan trọng)",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)",
+                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
+                "Xử trí EPS: Benztropine 1-2mg IM/IV hoặc diphenhydramine 25-50mg IM/IV",
+                "Theo dõi liên tục: ý thức, hô hấp, tim mạch, điện tâm đồ (QT prolongation)",
+                "Xử trí QT prolongation: Magnesium sulfate (2g IV), isoproterenol nếu cần",
+                "Xử trí torsades de pointes: Magnesium sulfate, overdrive pacing",
+                "Xử trí hạ huyết áp: IV fluids, vasopressors nếu cần",
+                "Hỗ trợ hô hấp: thở máy nếu suy hô hấp",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Theo dõi ý thức, hô hấp, tim mạch, điện tâm đồ (QT interval), huyết áp"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn.",
+                "timing": "Chia 2 lần/ngày. Uống cùng thời điểm mỗi ngày. Tăng liều chậm để giảm tác dụng phụ. Không ngừng đột ngột (có thể làm tăng triệu chứng)."
+            },
+            "im": {
+                "reconstitution": "Dạng depot (Consta): pha loãng với diluent đi kèm. Lắc kỹ trước khi dùng.",
+                "infusion_rate": "Tiêm bắp sâu vào cơ lớn (gluteal, deltoid). Tránh tiêm vào mạch máu.",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Dạng depot (Consta): tiêm bắp mỗi 2 tuần, thuận tiện cho bệnh nhân không tuân thủ điều trị."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống và tiêm bắp (depot)"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "Lexicomp - Risperidone",
+                "UpToDate - Risperidone: Drug information",
+                "FDA - Risperdal (risperidone) prescribing information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
+        }
+    },
+    "Ziprasidone": {
+        "group": "Psychiatry - Antipsychotic (Atypical)",
+        "vietnamese_name": "Ziprasidone, Geodon",
+        "administration": ["PO", "IM"],
+        "indications": [
+            "Tâm thần phân liệt",
+            "Rối loạn lưỡng cực (mania, mixed episodes)",
+            "Agitation cấp tính (IM)"
+        ],
+        "contraindications": [
+            "QT prolongation nặng (QTc >500ms)",
+            "Nhồi máu cơ tim gần đây",
+            "Suy tim nặng",
+            "Dị ứng ziprasidone"
+        ],
+        "dosage": {
+            "adult_po": "20mg x 2 lần/ngày với thức ăn, tăng đến 40-80mg x 2 lần/ngày",
+            "adult_im": "10-20mg IM, có thể lặp lại sau 2-4 giờ (tối đa 40mg/ngày)",
+            "adult_max": "160mg/ngày (PO)",
+            "notes": "PHẢI uống với thức ăn (≥500 calo) để tăng hấp thu. QT prolongation - cần theo dõi ECG."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "QT prolongation (quan trọng - cần theo dõi ECG)",
+            "Buồn ngủ",
+            "Chóng mặt",
+            "Buồn nôn",
+            "Tăng cân (ít hơn các atypical khác)",
+            "Hạ huyết áp tư thế",
+            "Rối loạn vận động (hiếm)"
+        ],
+        "interactions": [
+            "QT prolonging drugs: tăng nguy cơ rối loạn nhịp",
+            "CYP3A4 inhibitors: tăng nồng độ ziprasidone",
+            "CYP3A4 inducers: giảm nồng độ ziprasidone"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Ziprasidone là atypical antipsychotic, đối kháng thụ thể dopamine D2 và serotonin 5-HT2A. Cũng đối kháng 5-HT1A, 5-HT1D, 5-HT2C, và ức chế tái hấp thu serotonin và norepinephrine. Đặc điểm: ít tăng cân hơn các atypical khác, nhưng có nguy cơ QT prolongation (cần theo dõi ECG). PHẢI uống với thức ăn (≥500 calo) để tăng hấp thu. Có dạng IM cho agitation cấp tính.",
+        "monitoring": [
+            "ECG trước khi bắt đầu và định kỳ (QT prolongation)",
+            "Triệu chứng tâm thần",
+            "Cân nặng (ít tăng cân hơn các atypical khác)",
+            "Huyết áp (hạ huyết áp tư thế)",
+            "Chức năng gan (hiếm)"
+        ],
+        "precautions": [
+            "QT PROLONGATION - cần theo dõi ECG trước và định kỳ",
+            "PHẢI uống với thức ăn (≥500 calo) để tăng hấp thu - nếu không hấp thu giảm 50%",
+            "Tránh dùng với QT prolonging drugs",
+            "Thận trọng ở bệnh nhân có bệnh tim",
+            "Ít tăng cân hơn các atypical khác - ưu điểm",
+            "Thận trọng với CYP3A4 inhibitors/inducers"
+        ],
+        "pharmacokinetics": {
+            "half_life": "7 giờ",
+            "onset": "1-2 tuần (PO), 30-60 phút (IM)",
+            "duration": "12 giờ (PO), 4-6 giờ (IM)",
+            "protein_binding": "99%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4. Thận: bài tiết một phần."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Nguy cơ tự sát ở trẻ em, thanh thiếu niên, và người trẻ tuổi (<25 tuổi). QT prolongation - cần theo dõi ECG.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "QT prolonging drugs (amiodarone, sotalol, haloperidol, thioridazine)",
+                    "mechanism": "Cả hai đều kéo dài QT",
+                    "effect": "Tăng nguy cơ rối loạn nhịp tim nghiêm trọng (torsades de pointes)",
+                    "management": "TRÁNH dùng cùng. Nếu cần, theo dõi ECG sát."
+                },
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, clarithromycin)",
+                    "mechanism": "Ức chế chuyển hóa ziprasidone",
+                    "effect": "Tăng nồng độ ziprasidone, tăng tác dụng phụ",
+                    "management": "Giảm liều ziprasidone 50%."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 inducers (carbamazepine, rifampin)",
+                    "mechanism": "Tăng chuyển hóa ziprasidone",
+                    "effect": "Giảm nồng độ ziprasidone, giảm hiệu quả",
+                    "management": "Tăng liều ziprasidone."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "QT prolongation nặng (QTc >500ms)",
+                "Nhồi máu cơ tim gần đây",
+                "Suy tim nặng",
+                "Dị ứng ziprasidone"
+            ],
+            "tương_đối": [
+                "Bệnh tim - tăng nguy cơ QT prolongation",
+                "Dùng với QT prolonging drugs - tránh",
+                "Dùng với CYP3A4 inhibitors mạnh - giảm liều"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng khi cần thiết. Có nguy cơ dị tật thai nhi.",
+            "lactation": {
+                "safety": "Compatible with monitoring",
+                "details": "Bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Giảm liều 50%",
+            "severe": "Giảm liều 50%",
+            "notes": "Chuyển hóa qua gan (CYP3A4). Suy gan làm giảm chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ sâu",
+                "QT prolongation nặng",
+                "Hạ huyết áp",
+                "Rối loạn nhịp tim"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ hô hấp nếu cần",
+                "Theo dõi ECG liên tục (QT prolongation)",
+                "Điều trị rối loạn nhịp tim nếu có",
+                "Điều trị hạ huyết áp"
+            ],
+            "monitoring": "Theo dõi liên tục ECG, huyết áp, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "PHẢI uống với thức ăn (≥500 calo) để tăng hấp thu - nếu không hấp thu giảm 50%",
+                "timing": "Dùng 2 lần/ngày với bữa ăn. Không ngừng đột ngột."
+            },
+            "im": {
+                "reconstitution": "Dùng trực tiếp dung dịch đã pha sẵn",
+                "injection_site": "Cơ lớn (đùi, cánh tay)",
+                "notes": "IM: 10-20mg, có thể lặp lại sau 2-4 giờ (tối đa 40mg/ngày). Dùng cho agitation cấp tính."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Geodon (ziprasidone)",
+                "UpToDate - Ziprasidone: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
+        }
+    },
+    
 }
 
 __all__ = ['ANTIPSYCHOTICS_DRUGS']

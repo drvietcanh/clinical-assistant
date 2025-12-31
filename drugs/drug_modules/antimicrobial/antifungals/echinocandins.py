@@ -3,6 +3,140 @@ Echinocandin Antifungals - Antifungal Medications
 """
 
 ECHINOCANDINS_DRUGS = {
+    "Anidulafungin": {
+        "group": "Infectious Disease - Antifungal (Echinocandin)",
+        "vietnamese_name": "Anidulafungin, Eraxis",
+        "administration": ["IV"],
+        "indications": [
+            "Candidemia và Candida xâm lấn (intra-abdominal, peritonitis)",
+            "Viêm thực quản do Candida",
+            "Hỗ trợ điều trị aspergillosis (off-label) khi không dung nạp azole"
+        ],
+        "contraindications": [
+            "Dị ứng anidulafungin hoặc echinocandin"
+        ],
+        "dosage": {
+            "adult_loading": "200mg IV ngày đầu",
+            "adult_maintenance": "100mg IV mỗi ngày",
+            "notes": "Không cần chỉnh liều ở suy gan/thận. Truyền ≥1.5 giờ."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi",
+            "hemodialysis": "Không cần bổ sung (không lọc qua thận)"
+        },
+        "side_effects": [
+            "Tăng men gan nhẹ",
+            "Buồn nôn, tiêu chảy",
+            "Nhức đầu",
+            "Phản ứng truyền (phát ban, ngứa, đỏ bừng)",
+            "Hạ kali máu (hiếm)"
+        ],
+        "interactions": [
+            "Ít tương tác qua CYP, không ức chế/cảm ứng đáng kể",
+            "Không cần chỉnh liều với cyclosporine, tacrolimus, rifampin"
+        ],
+        "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "IDSA Candidiasis Guidelines 2024",
+            "IDSA Aspergillosis Guidelines 2024"
+        ],
+        "mechanism_of_action": "Echinocandin ức chế 1,3-β-D-glucan synthase → giảm tổng hợp thành tế bào nấm. Diệt nấm Candida, kìm nấm Aspergillus.",
+        "monitoring": [
+            "Men gan định kỳ",
+            "Dấu hiệu phản ứng truyền",
+            "Cấy máu/đáp ứng lâm sàng Candida",
+            "Điện giải (K+) nếu điều trị kéo dài"
+        ],
+        "precautions": [
+            "Truyền chậm ≥1.5 giờ để giảm phản ứng histamine",
+            "Theo dõi men gan, đặc biệt nếu có bệnh gan nền",
+            "Ít tương tác thuốc; vẫn nên rà soát thuốc kèm",
+            "Không cần chỉnh liều ở suy gan/thận hoặc lọc máu"
+        ],
+        "pharmacokinetics": {
+            "half_life": "24-26 giờ",
+            "onset": "24-48 giờ",
+            "duration": "Dùng 1 lần/ngày",
+            "protein_binding": "≈99%",
+            "clearance": "Phân hủy hóa học (không phụ thuộc CYP), thải qua mật/phân; không phụ thuộc thận"
+        },
+        "storage": "Bảo quản lọ bột ở 2-8°C. Sau pha: ổn định 24 giờ ở nhiệt độ phòng hoặc 48 giờ khi bảo quản lạnh (2-8°C).",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng anidulafungin hoặc echinocandin"
+            ],
+            "tương_đối": [
+                "Tiền sử phản ứng truyền/histamine với echinocandin",
+                "Bệnh gan nền (theo dõi men gan)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu hạn chế; chỉ dùng khi lợi ích vượt nguy cơ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ bài tiết sữa; cân nhắc ngừng cho bú hoặc theo dõi trẻ.",
+                "recommendation": "Ưu tiên thuốc khác nếu có thể."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh",
+            "moderate": "Không cần điều chỉnh",
+            "severe": "Không cần điều chỉnh (dữ liệu hạn chế, theo dõi men gan)",
+            "notes": "Không chuyển hóa qua CYP; nguy cơ tăng men gan vẫn cần theo dõi."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng men gan",
+                "Phản ứng truyền (ban, ngứa, đỏ bừng)",
+                "Buồn nôn, nhức đầu"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc, điều trị hỗ trợ",
+                "Theo dõi men gan và triệu chứng",
+                "Thẩm tách máu không hiệu quả (gắn protein cao)"
+            ],
+            "monitoring": "Theo dõi men gan, dấu hiệu phản ứng truyền, lâm sàng trong 24-48 giờ."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Không có dạng uống"
+            },
+            "iv": {
+                "reconstitution": "Pha lọ 100mg với 30ml NS hoặc D5W, sau đó pha loãng vào 250ml NS hoặc D5W",
+                "infusion_rate": "Truyền trong ≥1.5 giờ",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Truyền riêng, không pha chung thuốc khác."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Eraxis (Anidulafungin)",
+                "IDSA Guidelines - Candidiasis",
+                "UpToDate - Anidulafungin: Drug Information"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High (FDA-approved, guideline-supported)"
+        }
+    },
     "Caspofungin": {
         "group": "Infectious Disease - Antifungal (Echinocandin)",
         "vietnamese_name": "Caspofungin, Cancidas",
@@ -324,140 +458,6 @@ ECHINOCANDINS_DRUGS = {
         },
     },
 
-    "Anidulafungin": {
-        "group": "Infectious Disease - Antifungal (Echinocandin)",
-        "vietnamese_name": "Anidulafungin, Eraxis",
-        "administration": ["IV"],
-        "indications": [
-            "Candidemia và Candida xâm lấn (intra-abdominal, peritonitis)",
-            "Viêm thực quản do Candida",
-            "Hỗ trợ điều trị aspergillosis (off-label) khi không dung nạp azole"
-        ],
-        "contraindications": [
-            "Dị ứng anidulafungin hoặc echinocandin"
-        ],
-        "dosage": {
-            "adult_loading": "200mg IV ngày đầu",
-            "adult_maintenance": "100mg IV mỗi ngày",
-            "notes": "Không cần chỉnh liều ở suy gan/thận. Truyền ≥1.5 giờ."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Không đổi",
-            "hemodialysis": "Không cần bổ sung (không lọc qua thận)"
-        },
-        "side_effects": [
-            "Tăng men gan nhẹ",
-            "Buồn nôn, tiêu chảy",
-            "Nhức đầu",
-            "Phản ứng truyền (phát ban, ngứa, đỏ bừng)",
-            "Hạ kali máu (hiếm)"
-        ],
-        "interactions": [
-            "Ít tương tác qua CYP, không ức chế/cảm ứng đáng kể",
-            "Không cần chỉnh liều với cyclosporine, tacrolimus, rifampin"
-        ],
-        "pregnancy": "C",
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {"hepatic": True},
-            "icu_critical_care_only": False,
-            "look_alike_sound_alike": []
-        },
-        "guideline_tags": [
-            "IDSA Candidiasis Guidelines 2024",
-            "IDSA Aspergillosis Guidelines 2024"
-        ],
-        "mechanism_of_action": "Echinocandin ức chế 1,3-β-D-glucan synthase → giảm tổng hợp thành tế bào nấm. Diệt nấm Candida, kìm nấm Aspergillus.",
-        "monitoring": [
-            "Men gan định kỳ",
-            "Dấu hiệu phản ứng truyền",
-            "Cấy máu/đáp ứng lâm sàng Candida",
-            "Điện giải (K+) nếu điều trị kéo dài"
-        ],
-        "precautions": [
-            "Truyền chậm ≥1.5 giờ để giảm phản ứng histamine",
-            "Theo dõi men gan, đặc biệt nếu có bệnh gan nền",
-            "Ít tương tác thuốc; vẫn nên rà soát thuốc kèm",
-            "Không cần chỉnh liều ở suy gan/thận hoặc lọc máu"
-        ],
-        "pharmacokinetics": {
-            "half_life": "24-26 giờ",
-            "onset": "24-48 giờ",
-            "duration": "Dùng 1 lần/ngày",
-            "protein_binding": "≈99%",
-            "clearance": "Phân hủy hóa học (không phụ thuộc CYP), thải qua mật/phân; không phụ thuộc thận"
-        },
-        "storage": "Bảo quản lọ bột ở 2-8°C. Sau pha: ổn định 24 giờ ở nhiệt độ phòng hoặc 48 giờ khi bảo quản lạnh (2-8°C).",
-        "black_box_warnings": None,
-        "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng anidulafungin hoặc echinocandin"
-            ],
-            "tương_đối": [
-                "Tiền sử phản ứng truyền/histamine với echinocandin",
-                "Bệnh gan nền (theo dõi men gan)"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Dữ liệu hạn chế; chỉ dùng khi lợi ích vượt nguy cơ.",
-            "lactation": {
-                "safety": "Caution",
-                "details": "Chưa rõ bài tiết sữa; cân nhắc ngừng cho bú hoặc theo dõi trẻ.",
-                "recommendation": "Ưu tiên thuốc khác nếu có thể."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh",
-            "moderate": "Không cần điều chỉnh",
-            "severe": "Không cần điều chỉnh (dữ liệu hạn chế, theo dõi men gan)",
-            "notes": "Không chuyển hóa qua CYP; nguy cơ tăng men gan vẫn cần theo dõi."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Tăng men gan",
-                "Phản ứng truyền (ban, ngứa, đỏ bừng)",
-                "Buồn nôn, nhức đầu"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Ngừng thuốc, điều trị hỗ trợ",
-                "Theo dõi men gan và triệu chứng",
-                "Thẩm tách máu không hiệu quả (gắn protein cao)"
-            ],
-            "monitoring": "Theo dõi men gan, dấu hiệu phản ứng truyền, lâm sàng trong 24-48 giờ."
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Không có dạng uống"
-            },
-            "iv": {
-                "reconstitution": "Pha lọ 100mg với 30ml NS hoặc D5W, sau đó pha loãng vào 250ml NS hoặc D5W",
-                "infusion_rate": "Truyền trong ≥1.5 giờ",
-                "compatibility": ["NS", "D5W"],
-                "incompatibility": [],
-                "notes": "Truyền riêng, không pha chung thuốc khác."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Eraxis (Anidulafungin)",
-                "IDSA Guidelines - Candidiasis",
-                "UpToDate - Anidulafungin: Drug Information"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High (FDA-approved, guideline-supported)"
-        }
-    }
 }
 
 __all__ = ['ECHINOCANDINS_DRUGS']

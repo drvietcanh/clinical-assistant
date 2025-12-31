@@ -176,86 +176,95 @@ CEPHALOSPORIN_ANTIBIOTICS = {
         "last_updated": "2025-02-18",
     },
 
-    "Cephalexin": {
-        "group": "Antibiotic - Cephalosporin (1st Generation)",
-        "vietnamese_name": "Cephalexin, Keflex",
-        "administration": ["PO"],
+    "Cefepime": {
+        "group": "Antibiotic - Cephalosporin (4th Generation)",
+        "vietnamese_name": "Cefepime, Maxipime",
+        "administration": ["IV", "IM"],
         "indications": [
-            "Nhiễm khuẩn da và mô mềm",
-            "Nhiễm khuẩn đường tiết niệu",
-            "Viêm phổi cộng đồng",
-            "Nhiễm khuẩn do Staphylococcus (MSSA)",
-            "Nhiễm khuẩn do Streptococcus",
-            "Nhiễm khuẩn xương và khớp (nhẹ)"
+            "Viêm phổi bệnh viện",
+            "Nhiễm khuẩn huyết",
+            "Nhiễm khuẩn đường tiết niệu phức tạp",
+            "Nhiễm khuẩn da và mô mềm phức tạp",
+            "Nhiễm khuẩn ổ bụng phức tạp",
+            "Nhiễm khuẩn do Pseudomonas aeruginosa",
+            "Nhiễm khuẩn do Enterobacteriaceae (kể cả một số ESBL)"
         ],
         "contraindications": [
+            "Dị ứng cefepime",
             "Dị ứng cephalosporin",
             "Dị ứng penicillin nặng (phản ứng chéo 5-10%)"
         ],
         "dosage": {
-            "adult_standard": "250-500mg PO x 4 lần/ngày",
-            "adult_severe": "500mg-1g PO x 4 lần/ngày",
-            "adult_uti": "250-500mg PO x 4 lần/ngày",
-            "adult_skin": "250-500mg PO x 4 lần/ngày",
-            "pediatric": "25-50mg/kg/ngày PO chia 4 lần (tối đa 4g/ngày)",
-            "notes": "Uống với hoặc không thức ăn. Có thể uống với thức ăn để giảm kích ứng dạ dày."
+            "adult_standard": "1-2g IV mỗi 12 giờ",
+            "adult_severe": "2g IV mỗi 8 giờ",
+            "adult_pseudomonas": "2g IV mỗi 8 giờ",
+            "adult_febrile_neutropenia": "2g IV mỗi 8 giờ",
+            "adult_im": "500mg-1g IM mỗi 12 giờ",
+            "pediatric": "50mg/kg IV mỗi 8-12 giờ (tối đa 2g mỗi liều)",
+            "notes": "Cefepime là cephalosporin thế hệ 4, phổ rộng hơn thế hệ 3, hiệu quả với Pseudomonas aeruginosa. Dùng 2-3 lần/ngày. Điều chỉnh liều theo chức năng thận."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
-            "30_60": "250-500mg PO x 2-3 lần/ngày",
-            "under_30": "250mg PO x 2 lần/ngày",
-            "hemodialysis": "250-500mg PO sau mỗi lần lọc máu"
+            "30_60": "1-2g IV mỗi 12 giờ",
+            "under_30": "1g IV mỗi 12 giờ",
+            "hemodialysis": "1g IV sau mỗi lần lọc máu"
         },
         "side_effects": [
-            "Tiêu chảy (phổ biến)",
-            "Buồn nôn, nôn",
+            "Tiêu chảy",
             "Phát ban dị ứng",
-            "Đau đầu",
-            "Chóng mặt",
-            "Nhiễm C. difficile (hiếm)"
+            "Buồn nôn, nôn",
+            "Viêm tĩnh mạch tại chỗ tiêm",
+            "Tăng men gan (hiếm)",
+            "Co giật (hiếm, ở suy thận nặng)",
+            "Rối loạn thần kinh (lú lẫn, kích động) - hiếm, ở suy thận nặng",
+            "Giảm bạch cầu (hiếm)"
         ],
         "interactions": [
-            "Probenecid: tăng nồng độ cephalexin",
+            "Aminoglycosides: tác dụng hiệp đồng với Pseudomonas, nhưng không pha chung",
             "Warfarin: có thể tăng INR",
-            "Metformin: có thể tăng nồng độ metformin"
+            "Probenecid: tăng nồng độ cefepime"
         ],
         "pregnancy": "B",
-        "mechanism_of_action": "Cephalexin là cephalosporin thế hệ 1 đường uống, kháng sinh beta-lactam. Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs). Phổ kháng khuẩn: Gram-dương mạnh (Staphylococcus aureus - MSSA, Streptococcus pneumoniae, Streptococcus pyogenes), Gram-âm yếu (E. coli, Klebsiella, Proteus mirabilis - một số chủng), không hiệu quả với Enterococcus, Pseudomonas, kỵ khí. Đặc điểm: cephalosporin đường uống phổ biến nhất, dùng 4 lần/ngày, hấp thu tốt qua đường tiêu hóa.",
+        "mechanism_of_action": "Cefepime là cephalosporin thế hệ 4, kháng sinh beta-lactam. Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs). Phổ kháng khuẩn: Gram-dương (Staphylococcus aureus - MSSA, Streptococcus pneumoniae), Gram-âm mạnh (Enterobacteriaceae - kể cả một số ESBL, Pseudomonas aeruginosa, Acinetobacter - một số chủng), một số kỵ khí. Không hiệu quả với MRSA, Enterococcus, kỵ khí mạnh. Đặc điểm: phổ rộng hơn thế hệ 3, hiệu quả với Pseudomonas aeruginosa, kháng được một số beta-lactamase, dùng 2-3 lần/ngày, có thể gây co giật và rối loạn thần kinh ở suy thận nặng.",
         "monitoring": [
-            "Dấu hiệu dị ứng (phát ban)",
-            "Dấu hiệu nhiễm trùng (sốt, triệu chứng lâm sàng)",
-            "Cấy máu và cấy từ vị trí nhiễm trùng (nếu có)",
-            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều",
-            "Dấu hiệu nhiễm C. difficile (tiêu chảy)"
+            "Dấu hiệu dị ứng (phát ban, sốc phản vệ)",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều, đặc biệt quan trọng",
+            "Dấu hiệu co giật, rối loạn thần kinh (lú lẫn, kích động) - đặc biệt ở suy thận nặng",
+            "Chức năng gan (ALT, AST) - hiếm",
+            "Công thức máu (CBC) - hiếm giảm bạch cầu"
         ],
         "precautions": [
+            "Nguy cơ co giật và rối loạn thần kinh ở suy thận nặng - điều chỉnh liều quan trọng",
             "Phản ứng chéo với penicillin (5-10%)",
-            "Điều chỉnh liều theo chức năng thận",
-            "Uống với thức ăn để giảm kích ứng dạ dày",
-            "Theo dõi nhiễm C. difficile",
-            "Uống nhiều nước"
+            "Điều chỉnh liều theo chức năng thận (CrCl) - QUAN TRỌNG",
+            "Hiệu quả với Pseudomonas aeruginosa - ưu điểm so với thế hệ 3",
+            "Không pha chung với aminoglycosides",
+            "Pha trong NS hoặc D5W, truyền IV trong 30 phút",
+            "Theo dõi nhiễm C. difficile"
         ],
         "pharmacokinetics": {
-            "half_life": "0.5-1 giờ",
-            "onset": "1-2 giờ sau khi uống",
-            "duration": "q6h (dùng 4 lần/ngày)",
-            "protein_binding": "10-15%",
-            "clearance": "Chủ yếu qua thận (80-90% bài tiết nguyên dạng), cần điều chỉnh thận"
+            "half_life": "2 giờ",
+            "onset": "Ngay lập tức sau khi truyền IV",
+            "duration": "Liều q8-12h",
+            "protein_binding": "20%",
+            "clearance": "Chủ yếu qua thận (85% bài tiết nguyên dạng), cần điều chỉnh thận"
         },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Viên nang/viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": None,
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày.",
+        "black_box_warnings": "Nguy cơ co giật và rối loạn thần kinh ở suy thận nặng. Phải điều chỉnh liều theo chức năng thận.",
         "drug_interactions": {
             "major": [],
             "moderate": [
                 {
-                    "drug": "Probenecid",
-                    "mechanism": "Probenecid ức chế bài tiết cephalexin ở thận",
-                    "effect": "Tăng nồng độ cephalexin",
-                    "management": "Có thể dùng cùng. Theo dõi dấu hiệu độc tính."
+                    "drug": "Aminoglycosides",
+                    "mechanism": "Tác dụng hiệp đồng với Pseudomonas, nhưng aminoglycosides có thể bị bất hoạt khi pha chung",
+                    "effect": "Tăng hiệu quả nếu truyền riêng biệt",
+                    "management": "Có thể dùng cùng nhưng truyền riêng biệt, không pha chung."
                 },
                 {
                     "drug": "Warfarin",
-                    "mechanism": "Cephalexin có thể ảnh hưởng đến hệ vi khuẩn đường ruột",
+                    "mechanism": "Cefepime có thể ảnh hưởng đến hệ vi khuẩn đường ruột",
                     "effect": "Tăng INR",
                     "management": "Theo dõi INR thường xuyên."
                 }
@@ -264,21 +273,22 @@ CEPHALOSPORIN_ANTIBIOTICS = {
         },
         "contraindications": {
             "tuyệt_đối": [
-                "Dị ứng cephalexin hoặc cephalosporin",
+                "Dị ứng cefepime hoặc cephalosporin",
                 "Dị ứng penicillin nặng (sốc phản vệ)"
             ],
             "tương_đối": [
                 "Dị ứng penicillin nhẹ - thận trọng",
-                "Suy thận nặng - giảm liều",
+                "Suy thận nặng - giảm liều, tăng nguy cơ co giật",
+                "Tiền sử co giật - tăng nguy cơ",
                 "Tiền sử nhiễm C. difficile"
             ]
         },
         "pregnancy_lactation": {
             "fda_category": "B",
-            "pregnancy_details": "Cephalexin là thuốc phân loại B. An toàn trong thai kỳ.",
+            "pregnancy_details": "Cefepime là thuốc phân loại B. An toàn trong thai kỳ.",
             "lactation": {
                 "safety": "Compatible",
-                "details": "Cephalexin bài tiết vào sữa mẹ ở nồng độ thấp. An toàn khi cho con bú.",
+                "details": "Cefepime bài tiết vào sữa mẹ ở nồng độ thấp. An toàn khi cho con bú.",
                 "recommendation": "Có thể dùng khi cho con bú."
             }
         },
@@ -289,37 +299,65 @@ CEPHALOSPORIN_ANTIBIOTICS = {
         },
         "overdose_management": {
             "symptoms": [
-                "Buồn nôn, nôn",
-                "Tiêu chảy",
-                "Phát ban"
+                "Co giật (đặc biệt ở suy thận nặng)",
+                "Rối loạn thần kinh (lú lẫn, kích động)",
+                "Phản ứng dị ứng nặng"
             ],
             "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
             "treatment": [
-                "Ngừng cephalexin",
-                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
-                "Điều trị triệu chứng",
-                "Theo dõi chức năng thận"
+                "Ngừng cefepime",
+                "Điều trị co giật nếu có: Benzodiazepine",
+                "Điều trị dị ứng nếu có: Epinephrine, antihistamine, corticosteroid",
+                "Lọc máu nếu suy thận nặng",
+                "Theo dõi chức năng thận, thần kinh"
             ],
-            "monitoring": "Theo dõi triệu chứng, chức năng thận trong 24 giờ."
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, thần kinh trong 24-48 giờ."
         },
         "reversal_agents": None,
         "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.",
-                "timing": "Uống 4 lần/ngày (q6h), thường 250-500mg mỗi lần. Uống đều đặn, cách đều nhau trong ngày."
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ pha: 100mg/ml (tối đa). Pha 1g trong 10ml = 100mg/ml, sau đó pha loãng trong 50-100ml NS hoặc D5W.",
+                "infusion_rate": "Truyền IV trong 30 phút. Tốc độ: 50ml/30 phút = ~1.7ml/phút.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Aminoglycosides - bất hoạt, không pha chung",
+                    "Amphotericin B - không tương thích"
+                ],
+                "notes": "QUAN TRỌNG: 1) Điều chỉnh liều theo chức năng thận (nguy cơ co giật ở suy thận nặng), 2) Hiệu quả với Pseudomonas aeruginosa, 3) Dùng 2-3 lần/ngày, 4) Không pha chung với aminoglycosides."
+            },
+            "im": {
+                "reconstitution": "Pha với NS hoặc lidocaine 1%. Nồng độ pha: 280mg/ml (tối đa).",
+                "injection_site": "Cơ lớn (mông, đùi)",
+                "notes": "IM: 500mg-1g mỗi 12 giờ. Tiêm sâu vào cơ. Có thể đau tại chỗ tiêm."
             }
         },
         "references": {
             "primary_sources": [
-                "FDA Drug Label - Cephalexin (Keflex)",
-                "UpToDate - Cephalexin: Drug Information",
-                "Medscape - Cephalexin Drug Reference"
+                "FDA Drug Label - Cefepime (Maxipime)",
+                "IDSA Guidelines - Hospital-Acquired Pneumonia",
+                "UpToDate - Cefepime: Drug Information",
+                "Medscape - Cefepime Drug Reference"
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low", "neurological": "High (co giật ở suy thận nặng)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Ventilator-Associated Pneumonia",
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Febrile Neutropenia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
-
     "Ceftriaxone": {
         "group": "Antibiotic - Cephalosporin (3rd Generation)",
         "vietnamese_name": "Ceftriaxone, Rocephin",
@@ -524,95 +562,86 @@ CEPHALOSPORIN_ANTIBIOTICS = {
         "last_updated": "2025-02-18",
     },
 
-    "Cefepime": {
-        "group": "Antibiotic - Cephalosporin (4th Generation)",
-        "vietnamese_name": "Cefepime, Maxipime",
-        "administration": ["IV", "IM"],
+    "Cephalexin": {
+        "group": "Antibiotic - Cephalosporin (1st Generation)",
+        "vietnamese_name": "Cephalexin, Keflex",
+        "administration": ["PO"],
         "indications": [
-            "Viêm phổi bệnh viện",
-            "Nhiễm khuẩn huyết",
-            "Nhiễm khuẩn đường tiết niệu phức tạp",
-            "Nhiễm khuẩn da và mô mềm phức tạp",
-            "Nhiễm khuẩn ổ bụng phức tạp",
-            "Nhiễm khuẩn do Pseudomonas aeruginosa",
-            "Nhiễm khuẩn do Enterobacteriaceae (kể cả một số ESBL)"
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm khuẩn đường tiết niệu",
+            "Viêm phổi cộng đồng",
+            "Nhiễm khuẩn do Staphylococcus (MSSA)",
+            "Nhiễm khuẩn do Streptococcus",
+            "Nhiễm khuẩn xương và khớp (nhẹ)"
         ],
         "contraindications": [
-            "Dị ứng cefepime",
             "Dị ứng cephalosporin",
             "Dị ứng penicillin nặng (phản ứng chéo 5-10%)"
         ],
         "dosage": {
-            "adult_standard": "1-2g IV mỗi 12 giờ",
-            "adult_severe": "2g IV mỗi 8 giờ",
-            "adult_pseudomonas": "2g IV mỗi 8 giờ",
-            "adult_febrile_neutropenia": "2g IV mỗi 8 giờ",
-            "adult_im": "500mg-1g IM mỗi 12 giờ",
-            "pediatric": "50mg/kg IV mỗi 8-12 giờ (tối đa 2g mỗi liều)",
-            "notes": "Cefepime là cephalosporin thế hệ 4, phổ rộng hơn thế hệ 3, hiệu quả với Pseudomonas aeruginosa. Dùng 2-3 lần/ngày. Điều chỉnh liều theo chức năng thận."
+            "adult_standard": "250-500mg PO x 4 lần/ngày",
+            "adult_severe": "500mg-1g PO x 4 lần/ngày",
+            "adult_uti": "250-500mg PO x 4 lần/ngày",
+            "adult_skin": "250-500mg PO x 4 lần/ngày",
+            "pediatric": "25-50mg/kg/ngày PO chia 4 lần (tối đa 4g/ngày)",
+            "notes": "Uống với hoặc không thức ăn. Có thể uống với thức ăn để giảm kích ứng dạ dày."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
-            "30_60": "1-2g IV mỗi 12 giờ",
-            "under_30": "1g IV mỗi 12 giờ",
-            "hemodialysis": "1g IV sau mỗi lần lọc máu"
+            "30_60": "250-500mg PO x 2-3 lần/ngày",
+            "under_30": "250mg PO x 2 lần/ngày",
+            "hemodialysis": "250-500mg PO sau mỗi lần lọc máu"
         },
         "side_effects": [
-            "Tiêu chảy",
-            "Phát ban dị ứng",
+            "Tiêu chảy (phổ biến)",
             "Buồn nôn, nôn",
-            "Viêm tĩnh mạch tại chỗ tiêm",
-            "Tăng men gan (hiếm)",
-            "Co giật (hiếm, ở suy thận nặng)",
-            "Rối loạn thần kinh (lú lẫn, kích động) - hiếm, ở suy thận nặng",
-            "Giảm bạch cầu (hiếm)"
+            "Phát ban dị ứng",
+            "Đau đầu",
+            "Chóng mặt",
+            "Nhiễm C. difficile (hiếm)"
         ],
         "interactions": [
-            "Aminoglycosides: tác dụng hiệp đồng với Pseudomonas, nhưng không pha chung",
+            "Probenecid: tăng nồng độ cephalexin",
             "Warfarin: có thể tăng INR",
-            "Probenecid: tăng nồng độ cefepime"
+            "Metformin: có thể tăng nồng độ metformin"
         ],
         "pregnancy": "B",
-        "mechanism_of_action": "Cefepime là cephalosporin thế hệ 4, kháng sinh beta-lactam. Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs). Phổ kháng khuẩn: Gram-dương (Staphylococcus aureus - MSSA, Streptococcus pneumoniae), Gram-âm mạnh (Enterobacteriaceae - kể cả một số ESBL, Pseudomonas aeruginosa, Acinetobacter - một số chủng), một số kỵ khí. Không hiệu quả với MRSA, Enterococcus, kỵ khí mạnh. Đặc điểm: phổ rộng hơn thế hệ 3, hiệu quả với Pseudomonas aeruginosa, kháng được một số beta-lactamase, dùng 2-3 lần/ngày, có thể gây co giật và rối loạn thần kinh ở suy thận nặng.",
+        "mechanism_of_action": "Cephalexin là cephalosporin thế hệ 1 đường uống, kháng sinh beta-lactam. Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs). Phổ kháng khuẩn: Gram-dương mạnh (Staphylococcus aureus - MSSA, Streptococcus pneumoniae, Streptococcus pyogenes), Gram-âm yếu (E. coli, Klebsiella, Proteus mirabilis - một số chủng), không hiệu quả với Enterococcus, Pseudomonas, kỵ khí. Đặc điểm: cephalosporin đường uống phổ biến nhất, dùng 4 lần/ngày, hấp thu tốt qua đường tiêu hóa.",
         "monitoring": [
-            "Dấu hiệu dị ứng (phát ban, sốc phản vệ)",
-            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
-            "Cấy máu và cấy từ vị trí nhiễm trùng",
-            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều, đặc biệt quan trọng",
-            "Dấu hiệu co giật, rối loạn thần kinh (lú lẫn, kích động) - đặc biệt ở suy thận nặng",
-            "Chức năng gan (ALT, AST) - hiếm",
-            "Công thức máu (CBC) - hiếm giảm bạch cầu"
+            "Dấu hiệu dị ứng (phát ban)",
+            "Dấu hiệu nhiễm trùng (sốt, triệu chứng lâm sàng)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng (nếu có)",
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều",
+            "Dấu hiệu nhiễm C. difficile (tiêu chảy)"
         ],
         "precautions": [
-            "Nguy cơ co giật và rối loạn thần kinh ở suy thận nặng - điều chỉnh liều quan trọng",
             "Phản ứng chéo với penicillin (5-10%)",
-            "Điều chỉnh liều theo chức năng thận (CrCl) - QUAN TRỌNG",
-            "Hiệu quả với Pseudomonas aeruginosa - ưu điểm so với thế hệ 3",
-            "Không pha chung với aminoglycosides",
-            "Pha trong NS hoặc D5W, truyền IV trong 30 phút",
-            "Theo dõi nhiễm C. difficile"
+            "Điều chỉnh liều theo chức năng thận",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Theo dõi nhiễm C. difficile",
+            "Uống nhiều nước"
         ],
         "pharmacokinetics": {
-            "half_life": "2 giờ",
-            "onset": "Ngay lập tức sau khi truyền IV",
-            "duration": "Liều q8-12h",
-            "protein_binding": "20%",
-            "clearance": "Chủ yếu qua thận (85% bài tiết nguyên dạng), cần điều chỉnh thận"
+            "half_life": "0.5-1 giờ",
+            "onset": "1-2 giờ sau khi uống",
+            "duration": "q6h (dùng 4 lần/ngày)",
+            "protein_binding": "10-15%",
+            "clearance": "Chủ yếu qua thận (80-90% bài tiết nguyên dạng), cần điều chỉnh thận"
         },
-        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày.",
-        "black_box_warnings": "Nguy cơ co giật và rối loạn thần kinh ở suy thận nặng. Phải điều chỉnh liều theo chức năng thận.",
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Viên nang/viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": None,
         "drug_interactions": {
             "major": [],
             "moderate": [
                 {
-                    "drug": "Aminoglycosides",
-                    "mechanism": "Tác dụng hiệp đồng với Pseudomonas, nhưng aminoglycosides có thể bị bất hoạt khi pha chung",
-                    "effect": "Tăng hiệu quả nếu truyền riêng biệt",
-                    "management": "Có thể dùng cùng nhưng truyền riêng biệt, không pha chung."
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết cephalexin ở thận",
+                    "effect": "Tăng nồng độ cephalexin",
+                    "management": "Có thể dùng cùng. Theo dõi dấu hiệu độc tính."
                 },
                 {
                     "drug": "Warfarin",
-                    "mechanism": "Cefepime có thể ảnh hưởng đến hệ vi khuẩn đường ruột",
+                    "mechanism": "Cephalexin có thể ảnh hưởng đến hệ vi khuẩn đường ruột",
                     "effect": "Tăng INR",
                     "management": "Theo dõi INR thường xuyên."
                 }
@@ -621,22 +650,21 @@ CEPHALOSPORIN_ANTIBIOTICS = {
         },
         "contraindications": {
             "tuyệt_đối": [
-                "Dị ứng cefepime hoặc cephalosporin",
+                "Dị ứng cephalexin hoặc cephalosporin",
                 "Dị ứng penicillin nặng (sốc phản vệ)"
             ],
             "tương_đối": [
                 "Dị ứng penicillin nhẹ - thận trọng",
-                "Suy thận nặng - giảm liều, tăng nguy cơ co giật",
-                "Tiền sử co giật - tăng nguy cơ",
+                "Suy thận nặng - giảm liều",
                 "Tiền sử nhiễm C. difficile"
             ]
         },
         "pregnancy_lactation": {
             "fda_category": "B",
-            "pregnancy_details": "Cefepime là thuốc phân loại B. An toàn trong thai kỳ.",
+            "pregnancy_details": "Cephalexin là thuốc phân loại B. An toàn trong thai kỳ.",
             "lactation": {
                 "safety": "Compatible",
-                "details": "Cefepime bài tiết vào sữa mẹ ở nồng độ thấp. An toàn khi cho con bú.",
+                "details": "Cephalexin bài tiết vào sữa mẹ ở nồng độ thấp. An toàn khi cho con bú.",
                 "recommendation": "Có thể dùng khi cho con bú."
             }
         },
@@ -647,65 +675,37 @@ CEPHALOSPORIN_ANTIBIOTICS = {
         },
         "overdose_management": {
             "symptoms": [
-                "Co giật (đặc biệt ở suy thận nặng)",
-                "Rối loạn thần kinh (lú lẫn, kích động)",
-                "Phản ứng dị ứng nặng"
+                "Buồn nôn, nôn",
+                "Tiêu chảy",
+                "Phát ban"
             ],
             "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
             "treatment": [
-                "Ngừng cefepime",
-                "Điều trị co giật nếu có: Benzodiazepine",
-                "Điều trị dị ứng nếu có: Epinephrine, antihistamine, corticosteroid",
-                "Lọc máu nếu suy thận nặng",
-                "Theo dõi chức năng thận, thần kinh"
+                "Ngừng cephalexin",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Điều trị triệu chứng",
+                "Theo dõi chức năng thận"
             ],
-            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, thần kinh trong 24-48 giờ."
+            "monitoring": "Theo dõi triệu chứng, chức năng thận trong 24 giờ."
         },
         "reversal_agents": None,
         "administration_instructions": {
-            "oral": None,
-            "iv": {
-                "reconstitution": "Pha với NS hoặc D5W. Nồng độ pha: 100mg/ml (tối đa). Pha 1g trong 10ml = 100mg/ml, sau đó pha loãng trong 50-100ml NS hoặc D5W.",
-                "infusion_rate": "Truyền IV trong 30 phút. Tốc độ: 50ml/30 phút = ~1.7ml/phút.",
-                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
-                "incompatibility": [
-                    "Aminoglycosides - bất hoạt, không pha chung",
-                    "Amphotericin B - không tương thích"
-                ],
-                "notes": "QUAN TRỌNG: 1) Điều chỉnh liều theo chức năng thận (nguy cơ co giật ở suy thận nặng), 2) Hiệu quả với Pseudomonas aeruginosa, 3) Dùng 2-3 lần/ngày, 4) Không pha chung với aminoglycosides."
-            },
-            "im": {
-                "reconstitution": "Pha với NS hoặc lidocaine 1%. Nồng độ pha: 280mg/ml (tối đa).",
-                "injection_site": "Cơ lớn (mông, đùi)",
-                "notes": "IM: 500mg-1g mỗi 12 giờ. Tiêm sâu vào cơ. Có thể đau tại chỗ tiêm."
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.",
+                "timing": "Uống 4 lần/ngày (q6h), thường 250-500mg mỗi lần. Uống đều đặn, cách đều nhau trong ngày."
             }
         },
         "references": {
             "primary_sources": [
-                "FDA Drug Label - Cefepime (Maxipime)",
-                "IDSA Guidelines - Hospital-Acquired Pneumonia",
-                "UpToDate - Cefepime: Drug Information",
-                "Medscape - Cefepime Drug Reference"
+                "FDA Drug Label - Cephalexin (Keflex)",
+                "UpToDate - Cephalexin: Drug Information",
+                "Medscape - Cephalexin Drug Reference"
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        },
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"hepatic": "Low", "renal": "Low", "neurological": "High (co giật ở suy thận nặng)"}
-        },
-        "guideline_tags": [
-            "IDSA Guidelines - Hospital-Acquired Pneumonia",
-            "IDSA Guidelines - Ventilator-Associated Pneumonia",
-            "IDSA Guidelines - Complicated Urinary Tract Infections",
-            "IDSA Guidelines - Febrile Neutropenia",
-            "WHO Essential Medicines List"
-        ],
-        "last_updated": "2025-02-18",
-    }
+        }
+    },
+
 }
 
 __all__ = ['CEPHALOSPORIN_ANTIBIOTICS']

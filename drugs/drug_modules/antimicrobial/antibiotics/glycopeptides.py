@@ -5,169 +5,6 @@ Daptomycin (Lipopeptide)
 """
 
 GLYCOPEPTIDE_ANTIBIOTICS = {
-    "Vancomycin": {
-        "group": "Antibiotic - Glycopeptide",
-        "vietnamese_name": "Vancomycin, Vancocin",
-        "administration": ["IV", "PO"],
-        "indications": [
-            "Nhiễm khuẩn do MRSA (Methicillin-resistant Staphylococcus aureus)",
-            "Nhiễm khuẩn do Enterococcus (kể cả VRE - vancomycin-resistant enterococci với liều cao)",
-            "Nhiễm khuẩn huyết",
-            "Viêm nội tâm mạc",
-            "Viêm phổi bệnh viện",
-            "Nhiễm khuẩn da và mô mềm",
-            "Nhiễm khuẩn xương và khớp",
-            "Viêm màng não do vi khuẩn (Gram-dương)",
-            "Viêm đại tràng do C. difficile (uống)"
-        ],
-        "contraindications": [
-            "Dị ứng vancomycin",
-            "Suy thận nặng (CrCl <10) - thận trọng, cần điều chỉnh liều"
-        ],
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng vancomycin"
-            ],
-            "tương_đối": [
-                "Suy thận nặng (CrCl <10) - thận trọng, cần điều chỉnh liều"
-            ]
-        },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có độc tính thận hoặc phản ứng dị ứng nghiêm trọng (Red man syndrome)."},
-        "dosage": {
-            "adult_iv_standard": "15-20 mg/kg IV mỗi 8-12 giờ (dựa trên trọng lượng thực tế)",
-            "adult_iv_severe": "15-20 mg/kg IV mỗi 8-12 giờ",
-            "adult_iv_meningitis": "15-20 mg/kg IV mỗi 6-8 giờ",
-            "adult_iv_endocarditis": "15-20 mg/kg IV mỗi 8-12 giờ",
-            "adult_po_cdiff": "125-500mg PO x 4 lần/ngày x 10-14 ngày",
-            "notes": "Cần TDM (therapeutic drug monitoring). Trough: 10-20 mg/L (nhiễm khuẩn thông thường), 15-20 mg/L (nhiễm khuẩn nặng). Truyền IV trong ít nhất 60 phút để tránh red man syndrome."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Giảm liều 25-50% hoặc tăng khoảng cách",
-            "under_30": "Giảm liều 50-75% hoặc tăng khoảng cách đáng kể",
-            "hemodialysis": "Liều sau lọc máu, cần TDM"
-        },
-        "side_effects": [
-            "Độc thận (nephrotoxicity) - tăng creatinine, đặc biệt khi dùng với aminoglycoside",
-            "Độc thần kinh thính giác (ototoxicity) - hiếm, thường kết hợp với độc thận",
-            "Red man syndrome (hội chứng người đỏ) - đỏ bừng mặt, cổ, ngực, hạ huyết áp (do truyền quá nhanh)",
-            "Thrombophlebitis (viêm tĩnh mạch) tại vị trí tiêm",
-            "Giảm bạch cầu (neutropenia) - hiếm, thường khi dùng kéo dài",
-            "Thrombocytopenia (giảm tiểu cầu) - hiếm"
-        ],
-        "interactions": [
-            "Aminoglycosides: tăng độc thận",
-            "Furosemide: tăng độc thận",
-            "Cisplatin: tăng độc thận",
-            "Anesthesia: tăng nguy cơ red man syndrome"
-        ],
-        "pregnancy": "C - Sử dụng nếu lợi ích > nguy cơ",
-        "mechanism_of_action": "Vancomycin là glycopeptide kháng sinh, ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với D-alanyl-D-alanine của peptidoglycan, ngăn chặn quá trình transglycosylation và transpeptidation. Dẫn đến thành tế bào yếu và vỡ tế bào vi khuẩn. Phổ kháng khuẩn: Gram-dương mạnh (Staphylococcus aureus - kể cả MRSA, Staphylococcus epidermidis, Streptococcus pneumoniae, Enterococcus - kể cả một số VRE với liều cao), không có hoạt tính với Gram-âm. Đặc điểm: phụ thuộc thời gian (time-dependent killing), cần duy trì nồng độ trên MIC, cần TDM để tối ưu hiệu quả và giảm độc tính.",
-        "monitoring": [
-            "TDM (Therapeutic Drug Monitoring) - BẮT BUỘC: Trough (ngay trước liều tiếp theo, ít nhất sau 1-2 liều)",
-            "Mục tiêu: Trough 10-20 mg/L (nhiễm khuẩn thông thường), 15-20 mg/L (nhiễm khuẩn nặng như viêm nội tâm mạc, viêm màng não, viêm phổi)",
-            "Chức năng thận (creatinine, eGFR) - hàng ngày, đặc biệt quan trọng vì độc thận",
-            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
-            "Cấy máu và cấy từ vị trí nhiễm trùng",
-            "Thính giác (audiometry) - nếu dùng kéo dài hoặc có dấu hiệu độc tính",
-            "Công thức máu (CBC) - nếu dùng kéo dài (>14 ngày) để phát hiện giảm bạch cầu, giảm tiểu cầu",
-            "Dấu hiệu red man syndrome (đỏ bừng, hạ huyết áp) - nếu truyền quá nhanh"
-        ],
-        "precautions": [
-            "TDM BẮT BUỘC - không dùng nếu không có khả năng theo dõi nồng độ",
-            "Độc thận - đặc biệt nguy hiểm khi dùng với aminoglycoside, furosemide, cisplatin",
-            "Điều chỉnh liều theo chức năng thận (eGFR) - quan trọng",
-            "Truyền IV trong ít nhất 60 phút (liều chuẩn) để tránh red man syndrome",
-            "Không truyền quá nhanh - nguy cơ red man syndrome (đỏ bừng, hạ huyết áp, có thể nguy hiểm)",
-            "Tránh dùng với thuốc độc thận khác (aminoglycosides, furosemide, cisplatin)",
-            "Thận trọng ở người cao tuổi, suy thận, mất nước",
-            "Theo dõi công thức máu nếu dùng kéo dài (>14 ngày)",
-            "Pha trong NS hoặc D5W, nồng độ không quá 5 mg/ml"
-        ],
-        "pharmacokinetics": {
-            "half_life": "4-6 giờ (bình thường), 200-250 giờ (suy thận nặng)",
-            "onset": "Ngay lập tức sau khi truyền IV",
-            "duration": "Liều q8-12h (bình thường), q24-48h (suy thận)",
-            "protein_binding": "30-55%",
-            "metabolism": "Không chuyển hóa đáng kể",
-            "clearance": "Chủ yếu qua thận (80-90% bài tiết nguyên dạng), cần điều chỉnh thận",
-            "volume_of_distribution": "0.4-1 L/kg"
-        },
-        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 14 ngày. Không đông lạnh.",
-        "black_box_warnings": "Độc thận - có thể không hồi phục, đặc biệt khi dùng với aminoglycoside. Cần TDM để tối ưu hiệu quả và giảm độc tính. Red man syndrome có thể xảy ra nếu truyền quá nhanh.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Aminoglycosides (Gentamicin, Amikacin, Tobramycin)",
-                    "mechanism": "Cả hai đều độc thận, tác dụng cộng dồn",
-                    "effect": "Tăng nguy cơ độc thận nặng, có thể không hồi phục",
-                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chức năng thận sát, TDM cho cả hai, giảm liều nếu cần."
-                },
-                {
-                    "drug": "Furosemide",
-                    "mechanism": "Furosemide tăng nồng độ vancomycin trong thận, tăng độc tính",
-                    "effect": "Tăng nguy cơ độc thận",
-                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chức năng thận sát."
-                },
-                {
-                    "drug": "Cisplatin",
-                    "mechanism": "Cả hai đều độc thận, tác dụng cộng dồn",
-                    "effect": "Tăng nguy cơ độc thận nặng",
-                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chức năng thận sát."
-                }
-            ]
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Vancomycin",
-                "IDSA Guidelines - Antimicrobial Therapy",
-                "UpToDate - Vancomycin: Drug Information",
-                "Medscape - Vancomycin Drug Reference",
-                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
-                "Lexicomp Online - Vancomycin Monograph",
-                "Micromedex - Vancomycin Drug Information"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        },
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": True,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"renal": "High", "neurological": "Moderate (ototoxicity)"}
-        },
-        "guideline_tags": [
-            "IDSA Guidelines - Methicillin-Resistant Staphylococcus aureus Infections",
-            "IDSA Guidelines - Infective Endocarditis",
-            "IDSA Guidelines - Hospital-Acquired Pneumonia",
-            "IDSA Guidelines - Skin and Soft Tissue Infections",
-            "IDSA Guidelines - Clostridium difficile Infection",
-            "WHO Essential Medicines List"
-        ],
-        "last_updated": "2025-02-18",
-        "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
-            "lactation_details": ""
-        },
-        "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": ""
-        },
-        "overdose_management": {
-            "symptoms": [],
-            "treatment": "",
-            "antidote": None
-        },
-        "administration_instructions": {
-            "preparation": "",
-            "administration": "",
-            "monitoring": []
-        },
-    },
-    
     "Daptomycin": {
         "group": "Antibiotic - Lipopeptide",
         "vietnamese_name": "Daptomycin, Cubicin",
@@ -532,7 +369,170 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
             "WHO Essential Medicines List"
         ],
         "last_updated": "2025-02-18",
-    }
+    },
+    "Vancomycin": {
+        "group": "Antibiotic - Glycopeptide",
+        "vietnamese_name": "Vancomycin, Vancocin",
+        "administration": ["IV", "PO"],
+        "indications": [
+            "Nhiễm khuẩn do MRSA (Methicillin-resistant Staphylococcus aureus)",
+            "Nhiễm khuẩn do Enterococcus (kể cả VRE - vancomycin-resistant enterococci với liều cao)",
+            "Nhiễm khuẩn huyết",
+            "Viêm nội tâm mạc",
+            "Viêm phổi bệnh viện",
+            "Nhiễm khuẩn da và mô mềm",
+            "Nhiễm khuẩn xương và khớp",
+            "Viêm màng não do vi khuẩn (Gram-dương)",
+            "Viêm đại tràng do C. difficile (uống)"
+        ],
+        "contraindications": [
+            "Dị ứng vancomycin",
+            "Suy thận nặng (CrCl <10) - thận trọng, cần điều chỉnh liều"
+        ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng vancomycin"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <10) - thận trọng, cần điều chỉnh liều"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có độc tính thận hoặc phản ứng dị ứng nghiêm trọng (Red man syndrome)."},
+        "dosage": {
+            "adult_iv_standard": "15-20 mg/kg IV mỗi 8-12 giờ (dựa trên trọng lượng thực tế)",
+            "adult_iv_severe": "15-20 mg/kg IV mỗi 8-12 giờ",
+            "adult_iv_meningitis": "15-20 mg/kg IV mỗi 6-8 giờ",
+            "adult_iv_endocarditis": "15-20 mg/kg IV mỗi 8-12 giờ",
+            "adult_po_cdiff": "125-500mg PO x 4 lần/ngày x 10-14 ngày",
+            "notes": "Cần TDM (therapeutic drug monitoring). Trough: 10-20 mg/L (nhiễm khuẩn thông thường), 15-20 mg/L (nhiễm khuẩn nặng). Truyền IV trong ít nhất 60 phút để tránh red man syndrome."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 25-50% hoặc tăng khoảng cách",
+            "under_30": "Giảm liều 50-75% hoặc tăng khoảng cách đáng kể",
+            "hemodialysis": "Liều sau lọc máu, cần TDM"
+        },
+        "side_effects": [
+            "Độc thận (nephrotoxicity) - tăng creatinine, đặc biệt khi dùng với aminoglycoside",
+            "Độc thần kinh thính giác (ototoxicity) - hiếm, thường kết hợp với độc thận",
+            "Red man syndrome (hội chứng người đỏ) - đỏ bừng mặt, cổ, ngực, hạ huyết áp (do truyền quá nhanh)",
+            "Thrombophlebitis (viêm tĩnh mạch) tại vị trí tiêm",
+            "Giảm bạch cầu (neutropenia) - hiếm, thường khi dùng kéo dài",
+            "Thrombocytopenia (giảm tiểu cầu) - hiếm"
+        ],
+        "interactions": [
+            "Aminoglycosides: tăng độc thận",
+            "Furosemide: tăng độc thận",
+            "Cisplatin: tăng độc thận",
+            "Anesthesia: tăng nguy cơ red man syndrome"
+        ],
+        "pregnancy": "C - Sử dụng nếu lợi ích > nguy cơ",
+        "mechanism_of_action": "Vancomycin là glycopeptide kháng sinh, ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với D-alanyl-D-alanine của peptidoglycan, ngăn chặn quá trình transglycosylation và transpeptidation. Dẫn đến thành tế bào yếu và vỡ tế bào vi khuẩn. Phổ kháng khuẩn: Gram-dương mạnh (Staphylococcus aureus - kể cả MRSA, Staphylococcus epidermidis, Streptococcus pneumoniae, Enterococcus - kể cả một số VRE với liều cao), không có hoạt tính với Gram-âm. Đặc điểm: phụ thuộc thời gian (time-dependent killing), cần duy trì nồng độ trên MIC, cần TDM để tối ưu hiệu quả và giảm độc tính.",
+        "monitoring": [
+            "TDM (Therapeutic Drug Monitoring) - BẮT BUỘC: Trough (ngay trước liều tiếp theo, ít nhất sau 1-2 liều)",
+            "Mục tiêu: Trough 10-20 mg/L (nhiễm khuẩn thông thường), 15-20 mg/L (nhiễm khuẩn nặng như viêm nội tâm mạc, viêm màng não, viêm phổi)",
+            "Chức năng thận (creatinine, eGFR) - hàng ngày, đặc biệt quan trọng vì độc thận",
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Thính giác (audiometry) - nếu dùng kéo dài hoặc có dấu hiệu độc tính",
+            "Công thức máu (CBC) - nếu dùng kéo dài (>14 ngày) để phát hiện giảm bạch cầu, giảm tiểu cầu",
+            "Dấu hiệu red man syndrome (đỏ bừng, hạ huyết áp) - nếu truyền quá nhanh"
+        ],
+        "precautions": [
+            "TDM BẮT BUỘC - không dùng nếu không có khả năng theo dõi nồng độ",
+            "Độc thận - đặc biệt nguy hiểm khi dùng với aminoglycoside, furosemide, cisplatin",
+            "Điều chỉnh liều theo chức năng thận (eGFR) - quan trọng",
+            "Truyền IV trong ít nhất 60 phút (liều chuẩn) để tránh red man syndrome",
+            "Không truyền quá nhanh - nguy cơ red man syndrome (đỏ bừng, hạ huyết áp, có thể nguy hiểm)",
+            "Tránh dùng với thuốc độc thận khác (aminoglycosides, furosemide, cisplatin)",
+            "Thận trọng ở người cao tuổi, suy thận, mất nước",
+            "Theo dõi công thức máu nếu dùng kéo dài (>14 ngày)",
+            "Pha trong NS hoặc D5W, nồng độ không quá 5 mg/ml"
+        ],
+        "pharmacokinetics": {
+            "half_life": "4-6 giờ (bình thường), 200-250 giờ (suy thận nặng)",
+            "onset": "Ngay lập tức sau khi truyền IV",
+            "duration": "Liều q8-12h (bình thường), q24-48h (suy thận)",
+            "protein_binding": "30-55%",
+            "metabolism": "Không chuyển hóa đáng kể",
+            "clearance": "Chủ yếu qua thận (80-90% bài tiết nguyên dạng), cần điều chỉnh thận",
+            "volume_of_distribution": "0.4-1 L/kg"
+        },
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 14 ngày. Không đông lạnh.",
+        "black_box_warnings": "Độc thận - có thể không hồi phục, đặc biệt khi dùng với aminoglycoside. Cần TDM để tối ưu hiệu quả và giảm độc tính. Red man syndrome có thể xảy ra nếu truyền quá nhanh.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Aminoglycosides (Gentamicin, Amikacin, Tobramycin)",
+                    "mechanism": "Cả hai đều độc thận, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ độc thận nặng, có thể không hồi phục",
+                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chức năng thận sát, TDM cho cả hai, giảm liều nếu cần."
+                },
+                {
+                    "drug": "Furosemide",
+                    "mechanism": "Furosemide tăng nồng độ vancomycin trong thận, tăng độc tính",
+                    "effect": "Tăng nguy cơ độc thận",
+                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chức năng thận sát."
+                },
+                {
+                    "drug": "Cisplatin",
+                    "mechanism": "Cả hai đều độc thận, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ độc thận nặng",
+                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chức năng thận sát."
+                }
+            ]
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Vancomycin",
+                "IDSA Guidelines - Antimicrobial Therapy",
+                "UpToDate - Vancomycin: Drug Information",
+                "Medscape - Vancomycin Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Vancomycin Monograph",
+                "Micromedex - Vancomycin Drug Information"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "High", "neurological": "Moderate (ototoxicity)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Methicillin-Resistant Staphylococcus aureus Infections",
+            "IDSA Guidelines - Infective Endocarditis",
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Clostridium difficile Infection",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation_details": ""
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": ""
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "treatment": "",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "",
+            "administration": "",
+            "monitoring": []
+        },
+    },
+    
 }
 
 __all__ = ['GLYCOPEPTIDE_ANTIBIOTICS']

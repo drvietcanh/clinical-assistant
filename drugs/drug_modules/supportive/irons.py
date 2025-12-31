@@ -186,7 +186,7 @@ IRONS_DRUGS = {
             'ASH Guidelines - Iron Deficiency Anemia',
             'WHO Guidelines - Iron Supplementation in Pregnancy',
             'ACOG Guidelines - Iron Supplementation in Pregnancy',
-            'FDA Drug Information - Iron'
+            'FDA Drug Information - Iron',
         ]}}
 
 __all__ = ['IRONS_DRUGS']

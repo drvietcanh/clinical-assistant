@@ -4,6 +4,226 @@ ACE/ARB + Diuretic, ARB + CCB, ACE + CCB combinations
 """
 
 CARDIOVASCULAR_FIXED_DOSE_COMBINATIONS = {
+    "Amlodipine/Olmesartan": {
+        "group": "Cardiovascular - CCB + ARB (Fixed-Dose Combination)",
+        "vietnamese_name": "Amlodipine/Olmesartan, Azor",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp (khi cần phối hợp CCB và ARB).",
+        ],
+        "contraindications": [
+            "Dị ứng với amlodipine, olmesartan, hoặc dihydropyridine.",
+            "Có thai (ARB chống chỉ định trong thai kỳ).",
+        ],
+        "dosage": {
+            "adult_initial": "Amlodipine 5mg/Olmesartan 20mg PO mỗi ngày.",
+            "adult_maintenance": "Amlodipine 5mg/Olmesartan 40mg hoặc Amlodipine 10mg/Olmesartan 40mg PO mỗi ngày.",
+            "notes": "Uống 1 lần/ngày, có thể uống với hoặc không thức ăn.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều.",
+            "under_30": "Thận trọng, có thể cần giảm liều olmesartan.",
+        },
+        "side_effects": [
+            "Phù chân (do amlodipine).",
+            "Chóng mặt, hạ huyết áp.",
+            "Đau đầu.",
+        ],
+        "interactions": [],
+        "pregnancy": "D: chống chỉ định trong thai kỳ (ARB).",
+        "mechanism_of_action": (
+            "Amlodipine là CCB dihydropyridine, ức chế kênh calci L-type, giãn mạch ngoại vi. "
+            "Olmesartan là ARB, ức chế thụ thể AT1 của angiotensin II, giãn mạch. "
+            "Phối hợp hai thuốc có tác dụng hiệp đồng giảm huyết áp."
+        ),
+        "monitoring": [
+            "Huyết áp trước và trong điều trị.",
+            "Creatinine, eGFR trước và trong điều trị.",
+            "Dấu hiệu phù chân.",
+        ],
+        "precautions": [
+            "Chống chỉ định trong thai kỳ - ARB có thể gây dị tật thai nhi.",
+            "Nguy cơ phù chân (do amlodipine).",
+            "Nguy cơ suy thận cấp - theo dõi creatinine chặt chẽ.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Amlodipine: ~30-50 giờ; Olmesartan: ~13 giờ.",
+            "onset": "Giảm huyết áp trong vài giờ đến vài ngày.",
+            "duration": "24 giờ (dùng 1 lần/ngày).",
+            "protein_binding": "Amlodipine: ~98%; Olmesartan: ~99%.",
+            "clearance": "Amlodipine: chuyển hóa ở gan; Olmesartan: không chuyển hóa, thải qua phân và nước tiểu.",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": (
+            "Chống chỉ định trong thai kỳ: ARB có thể gây dị tật thai nhi và tử vong thai nhi. "
+            "Ngừng ngay khi phát hiện có thai."
+        ),
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với amlodipine, olmesartan, hoặc dihydropyridine.",
+                "Có thai hoặc có thể mang thai.",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. ARB có thể gây dị tật thai nhi.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Amlodipine và olmesartan đều bài tiết vào sữa mẹ.",
+                "recommendation": "Thận trọng khi cho con bú.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Thận trọng.",
+            "severe": "Thận trọng, có thể cần giảm liều.",
+            "notes": "Amlodipine chuyển hóa ở gan; olmesartan không chuyển hóa qua gan.",
+        },
+        "overdose_management": {
+            "symptoms": ["Hạ huyết áp nặng."],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": ["Điều trị hạ huyết áp: bù dịch, norepinephrine nếu cần."],
+            "monitoring": "Huyết áp, dấu hiệu sinh tồn.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn.",
+                "timing": "Uống 1 lần/ngày, cùng giờ mỗi ngày.",
+            },
+        },
+        "references": {
+            "primary_sources": ["FDA Drug Label - Azor (amlodipine/olmesartan)", "ACC/AHA Guidelines 2024"],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved",
+        },
+    },
+    "Amlodipine/Valsartan": {
+        "group": "Cardiovascular - CCB + ARB (Fixed-Dose Combination)",
+        "vietnamese_name": "Amlodipine/Valsartan, Exforge",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp (khi cần phối hợp CCB và ARB).",
+        ],
+        "contraindications": [
+            "Dị ứng với amlodipine, valsartan, hoặc dihydropyridine.",
+            "Có thai (ARB chống chỉ định trong thai kỳ).",
+            "Hẹp động mạch chủ nặng.",
+        ],
+        "dosage": {
+            "adult_initial": "Amlodipine 5mg/Valsartan 160mg PO mỗi ngày.",
+            "adult_maintenance": "Amlodipine 5mg/Valsartan 320mg hoặc Amlodipine 10mg/Valsartan 320mg PO mỗi ngày.",
+            "notes": "Uống 1 lần/ngày, có thể uống với hoặc không thức ăn.",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều.",
+            "under_30": "Thận trọng, có thể cần giảm liều valsartan.",
+        },
+        "side_effects": [
+            "Phù chân (do amlodipine).",
+            "Chóng mặt, hạ huyết áp.",
+            "Đỏ mặt, nhức đầu (do amlodipine).",
+            "Tăng creatinin máu (do valsartan).",
+        ],
+        "interactions": [
+            "NSAIDs: tăng nguy cơ suy thận cấp.",
+        ],
+        "pregnancy": "D: chống chỉ định trong thai kỳ (ARB).",
+        "mechanism_of_action": (
+            "Amlodipine là CCB (Calcium Channel Blocker) dihydropyridine, ức chế kênh calci L-type, "
+            "dẫn đến giãn mạch ngoại vi và giảm huyết áp. Valsartan là ARB, ức chế thụ thể AT1 của angiotensin II, "
+            "dẫn đến giãn mạch và giảm huyết áp. "
+            "Phối hợp hai thuốc có tác dụng hiệp đồng giảm huyết áp và giảm phù chân (ARB đối kháng tác dụng phụ của CCB)."
+        ),
+        "monitoring": [
+            "Huyết áp trước và trong điều trị.",
+            "Creatinine, eGFR trước và trong điều trị.",
+            "Dấu hiệu phù chân.",
+        ],
+        "precautions": [
+            "Chống chỉ định trong thai kỳ - ARB có thể gây dị tật thai nhi.",
+            "Nguy cơ phù chân (do amlodipine) - có thể giảm khi phối hợp với ARB.",
+            "Nguy cơ suy thận cấp - theo dõi creatinine chặt chẽ.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Amlodipine: ~30-50 giờ; Valsartan: ~6 giờ.",
+            "onset": "Giảm huyết áp trong vài giờ đến vài ngày.",
+            "duration": "24 giờ (dùng 1 lần/ngày).",
+            "protein_binding": "Amlodipine: ~98%; Valsartan: ~95%.",
+            "clearance": "Amlodipine: chuyển hóa ở gan; Valsartan: chủ yếu thải qua phân.",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": (
+            "Chống chỉ định trong thai kỳ: ARB có thể gây dị tật thai nhi và tử vong thai nhi. "
+            "Ngừng ngay khi phát hiện có thai."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "NSAIDs",
+                    "mechanism": "Tăng nguy cơ suy thận cấp.",
+                    "effect": "Suy thận cấp.",
+                    "management": "Thận trọng. Theo dõi chức năng thận.",
+                },
+            ],
+            "moderate": [],
+            "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với amlodipine, valsartan, hoặc dihydropyridine.",
+                "Có thai hoặc có thể mang thai.",
+                "Hẹp động mạch chủ nặng.",
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng.",
+            ],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. ARB có thể gây dị tật thai nhi.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Amlodipine và valsartan đều bài tiết vào sữa mẹ.",
+                "recommendation": "Thận trọng khi cho con bú.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Thận trọng.",
+            "severe": "Thận trọng, có thể cần giảm liều.",
+            "notes": "Amlodipine chuyển hóa ở gan; valsartan chuyển hóa một phần qua gan.",
+        },
+        "overdose_management": {
+            "symptoms": ["Hạ huyết áp nặng.", "Phù chân nặng."],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": ["Điều trị hạ huyết áp: bù dịch, norepinephrine nếu cần."],
+            "monitoring": "Huyết áp, dấu hiệu sinh tồn.",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn.",
+                "timing": "Uống 1 lần/ngày, cùng giờ mỗi ngày.",
+            },
+        },
+        "references": {
+            "primary_sources": ["FDA Drug Label - Exforge (amlodipine/valsartan)", "ACC/AHA Guidelines 2024"],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High – FDA-approved",
+        },
+    },
+
     "Lisinopril/Hydrochlorothiazide": {
         "group": "Cardiovascular - ACE Inhibitor + Diuretic (Fixed-Dose Combination)",
         "vietnamese_name": "Lisinopril/HCTZ, Zestoretic, Prinzide",
@@ -286,226 +506,6 @@ CARDIOVASCULAR_FIXED_DOSE_COMBINATIONS = {
         },
     },
 
-    "Amlodipine/Valsartan": {
-        "group": "Cardiovascular - CCB + ARB (Fixed-Dose Combination)",
-        "vietnamese_name": "Amlodipine/Valsartan, Exforge",
-        "administration": ["PO"],
-        "indications": [
-            "Tăng huyết áp (khi cần phối hợp CCB và ARB).",
-        ],
-        "contraindications": [
-            "Dị ứng với amlodipine, valsartan, hoặc dihydropyridine.",
-            "Có thai (ARB chống chỉ định trong thai kỳ).",
-            "Hẹp động mạch chủ nặng.",
-        ],
-        "dosage": {
-            "adult_initial": "Amlodipine 5mg/Valsartan 160mg PO mỗi ngày.",
-            "adult_maintenance": "Amlodipine 5mg/Valsartan 320mg hoặc Amlodipine 10mg/Valsartan 320mg PO mỗi ngày.",
-            "notes": "Uống 1 lần/ngày, có thể uống với hoặc không thức ăn.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều.",
-            "30_60": "Không cần chỉnh liều.",
-            "under_30": "Thận trọng, có thể cần giảm liều valsartan.",
-        },
-        "side_effects": [
-            "Phù chân (do amlodipine).",
-            "Chóng mặt, hạ huyết áp.",
-            "Đỏ mặt, nhức đầu (do amlodipine).",
-            "Tăng creatinin máu (do valsartan).",
-        ],
-        "interactions": [
-            "NSAIDs: tăng nguy cơ suy thận cấp.",
-        ],
-        "pregnancy": "D: chống chỉ định trong thai kỳ (ARB).",
-        "mechanism_of_action": (
-            "Amlodipine là CCB (Calcium Channel Blocker) dihydropyridine, ức chế kênh calci L-type, "
-            "dẫn đến giãn mạch ngoại vi và giảm huyết áp. Valsartan là ARB, ức chế thụ thể AT1 của angiotensin II, "
-            "dẫn đến giãn mạch và giảm huyết áp. "
-            "Phối hợp hai thuốc có tác dụng hiệp đồng giảm huyết áp và giảm phù chân (ARB đối kháng tác dụng phụ của CCB)."
-        ),
-        "monitoring": [
-            "Huyết áp trước và trong điều trị.",
-            "Creatinine, eGFR trước và trong điều trị.",
-            "Dấu hiệu phù chân.",
-        ],
-        "precautions": [
-            "Chống chỉ định trong thai kỳ - ARB có thể gây dị tật thai nhi.",
-            "Nguy cơ phù chân (do amlodipine) - có thể giảm khi phối hợp với ARB.",
-            "Nguy cơ suy thận cấp - theo dõi creatinine chặt chẽ.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "Amlodipine: ~30-50 giờ; Valsartan: ~6 giờ.",
-            "onset": "Giảm huyết áp trong vài giờ đến vài ngày.",
-            "duration": "24 giờ (dùng 1 lần/ngày).",
-            "protein_binding": "Amlodipine: ~98%; Valsartan: ~95%.",
-            "clearance": "Amlodipine: chuyển hóa ở gan; Valsartan: chủ yếu thải qua phân.",
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
-        "black_box_warnings": (
-            "Chống chỉ định trong thai kỳ: ARB có thể gây dị tật thai nhi và tử vong thai nhi. "
-            "Ngừng ngay khi phát hiện có thai."
-        ),
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "NSAIDs",
-                    "mechanism": "Tăng nguy cơ suy thận cấp.",
-                    "effect": "Suy thận cấp.",
-                    "management": "Thận trọng. Theo dõi chức năng thận.",
-                },
-            ],
-            "moderate": [],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng với amlodipine, valsartan, hoặc dihydropyridine.",
-                "Có thai hoặc có thể mang thai.",
-                "Hẹp động mạch chủ nặng.",
-            ],
-            "tương_đối": [
-                "Suy thận nặng (CrCl <30) - thận trọng.",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "D",
-            "pregnancy_details": "Chống chỉ định trong thai kỳ. ARB có thể gây dị tật thai nhi.",
-            "lactation": {
-                "safety": "Caution",
-                "details": "Amlodipine và valsartan đều bài tiết vào sữa mẹ.",
-                "recommendation": "Thận trọng khi cho con bú.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh liều.",
-            "moderate": "Thận trọng.",
-            "severe": "Thận trọng, có thể cần giảm liều.",
-            "notes": "Amlodipine chuyển hóa ở gan; valsartan chuyển hóa một phần qua gan.",
-        },
-        "overdose_management": {
-            "symptoms": ["Hạ huyết áp nặng.", "Phù chân nặng."],
-            "antidote": "Không có antidote đặc hiệu.",
-            "treatment": ["Điều trị hạ huyết áp: bù dịch, norepinephrine nếu cần."],
-            "monitoring": "Huyết áp, dấu hiệu sinh tồn.",
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không thức ăn.",
-                "timing": "Uống 1 lần/ngày, cùng giờ mỗi ngày.",
-            },
-        },
-        "references": {
-            "primary_sources": ["FDA Drug Label - Exforge (amlodipine/valsartan)", "ACC/AHA Guidelines 2024"],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High – FDA-approved",
-        },
-    },
-
-    "Amlodipine/Olmesartan": {
-        "group": "Cardiovascular - CCB + ARB (Fixed-Dose Combination)",
-        "vietnamese_name": "Amlodipine/Olmesartan, Azor",
-        "administration": ["PO"],
-        "indications": [
-            "Tăng huyết áp (khi cần phối hợp CCB và ARB).",
-        ],
-        "contraindications": [
-            "Dị ứng với amlodipine, olmesartan, hoặc dihydropyridine.",
-            "Có thai (ARB chống chỉ định trong thai kỳ).",
-        ],
-        "dosage": {
-            "adult_initial": "Amlodipine 5mg/Olmesartan 20mg PO mỗi ngày.",
-            "adult_maintenance": "Amlodipine 5mg/Olmesartan 40mg hoặc Amlodipine 10mg/Olmesartan 40mg PO mỗi ngày.",
-            "notes": "Uống 1 lần/ngày, có thể uống với hoặc không thức ăn.",
-        },
-        "renal_adjustment": {
-            "normal": "Không cần chỉnh liều.",
-            "30_60": "Không cần chỉnh liều.",
-            "under_30": "Thận trọng, có thể cần giảm liều olmesartan.",
-        },
-        "side_effects": [
-            "Phù chân (do amlodipine).",
-            "Chóng mặt, hạ huyết áp.",
-            "Đau đầu.",
-        ],
-        "interactions": [],
-        "pregnancy": "D: chống chỉ định trong thai kỳ (ARB).",
-        "mechanism_of_action": (
-            "Amlodipine là CCB dihydropyridine, ức chế kênh calci L-type, giãn mạch ngoại vi. "
-            "Olmesartan là ARB, ức chế thụ thể AT1 của angiotensin II, giãn mạch. "
-            "Phối hợp hai thuốc có tác dụng hiệp đồng giảm huyết áp."
-        ),
-        "monitoring": [
-            "Huyết áp trước và trong điều trị.",
-            "Creatinine, eGFR trước và trong điều trị.",
-            "Dấu hiệu phù chân.",
-        ],
-        "precautions": [
-            "Chống chỉ định trong thai kỳ - ARB có thể gây dị tật thai nhi.",
-            "Nguy cơ phù chân (do amlodipine).",
-            "Nguy cơ suy thận cấp - theo dõi creatinine chặt chẽ.",
-        ],
-        "pharmacokinetics": {
-            "half_life": "Amlodipine: ~30-50 giờ; Olmesartan: ~13 giờ.",
-            "onset": "Giảm huyết áp trong vài giờ đến vài ngày.",
-            "duration": "24 giờ (dùng 1 lần/ngày).",
-            "protein_binding": "Amlodipine: ~98%; Olmesartan: ~99%.",
-            "clearance": "Amlodipine: chuyển hóa ở gan; Olmesartan: không chuyển hóa, thải qua phân và nước tiểu.",
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
-        "black_box_warnings": (
-            "Chống chỉ định trong thai kỳ: ARB có thể gây dị tật thai nhi và tử vong thai nhi. "
-            "Ngừng ngay khi phát hiện có thai."
-        ),
-        "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": [],
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng với amlodipine, olmesartan, hoặc dihydropyridine.",
-                "Có thai hoặc có thể mang thai.",
-            ],
-            "tương_đối": [
-                "Suy thận nặng (CrCl <30) - thận trọng.",
-            ],
-        },
-        "pregnancy_lactation": {
-            "fda_category": "D",
-            "pregnancy_details": "Chống chỉ định trong thai kỳ. ARB có thể gây dị tật thai nhi.",
-            "lactation": {
-                "safety": "Caution",
-                "details": "Amlodipine và olmesartan đều bài tiết vào sữa mẹ.",
-                "recommendation": "Thận trọng khi cho con bú.",
-            },
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần chỉnh liều.",
-            "moderate": "Thận trọng.",
-            "severe": "Thận trọng, có thể cần giảm liều.",
-            "notes": "Amlodipine chuyển hóa ở gan; olmesartan không chuyển hóa qua gan.",
-        },
-        "overdose_management": {
-            "symptoms": ["Hạ huyết áp nặng."],
-            "antidote": "Không có antidote đặc hiệu.",
-            "treatment": ["Điều trị hạ huyết áp: bù dịch, norepinephrine nếu cần."],
-            "monitoring": "Huyết áp, dấu hiệu sinh tồn.",
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không thức ăn.",
-                "timing": "Uống 1 lần/ngày, cùng giờ mỗi ngày.",
-            },
-        },
-        "references": {
-            "primary_sources": ["FDA Drug Label - Azor (amlodipine/olmesartan)", "ACC/AHA Guidelines 2024"],
-            "last_updated": "2025-02-18",
-            "evidence_level": "High – FDA-approved",
-        },
-    },
 }
 
 __all__ = ["CARDIOVASCULAR_FIXED_DOSE_COMBINATIONS"]

@@ -167,7 +167,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
         'Lexicomp Online - Ibuprofen Monograph',
         'Micromedex - Ibuprofen Drug Information'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
+        'A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn',
         }}}
 
 __all__ = ['ANALGESIC_ANTIPYRETIC_NSAID_DRUGS']

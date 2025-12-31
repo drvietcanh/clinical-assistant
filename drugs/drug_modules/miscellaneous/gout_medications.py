@@ -203,172 +203,6 @@ GOUT_MEDICATIONS_DRUGS = {
         }
     },
     
-    "Probenecid": {
-        "group": "Metabolism - Gout Medication (Uricosuric Agent)",
-        "vietnamese_name": "Probenecid",
-        "administration": ["PO"],
-        "indications": [
-            "Gout mạn tính (tăng bài tiết acid uric)",
-            "Tăng acid uric máu",
-            "Tăng nồng độ penicillin/cephalosporin (dùng kèm để tăng nồng độ kháng sinh)"
-        ],
-        "contraindications": [
-            "Dị ứng probenecid",
-            "Sỏi thận uric acid",
-            "Suy thận nặng (CrCl <30)",
-            "Đang dùng salicylates liều cao"
-        ],
-        "dosage": {
-            "adult_standard": "250mg x 2 lần/ngày x 1 tuần, sau đó 500mg x 2 lần/ngày",
-            "adult_max": "2g/ngày",
-            "notes": "Uống với nhiều nước (2-3L/ngày) để tránh sỏi thận. Khởi đầu với liều thấp."
-        },
-        "side_effects": [
-            "Sỏi thận uric acid (nếu không uống đủ nước)",
-            "Buồn nôn, nôn",
-            "Đau đầu",
-            "Phát ban",
-            "Tăng men gan"
-        ],
-        "interactions": [
-            "Penicillin/Cephalosporin: tăng nồng độ kháng sinh",
-            "Salicylates liều cao: giảm hiệu quả probenecid",
-            "Methotrexate: tăng nồng độ methotrexate",
-            "NSAIDs: tăng nồng độ NSAIDs"
-        ],
-        "pregnancy": "B",
-        "mechanism_of_action": "Probenecid là uricosuric agent, ức chế tái hấp thu acid uric ở ống thận gần, làm tăng bài tiết acid uric qua nước tiểu và giảm nồng độ acid uric trong máu. Probenecid cũng ức chế bài tiết các acid hữu cơ khác ở ống thận, bao gồm penicillin và cephalosporin, làm tăng nồng độ các kháng sinh này trong máu. Probenecid được sử dụng để điều trị gout mạn tính bằng cách tăng bài tiết acid uric, nhưng cần uống nhiều nước để tránh sỏi thận uric acid. Probenecid cũng được dùng để tăng nồng độ penicillin/cephalosporin khi cần thiết.",
-        "monitoring": [
-            "Nồng độ acid uric máu (mục tiêu <6 mg/dL)",
-            "Chức năng thận (creatinine, eGFR)",
-            "Dấu hiệu sỏi thận (đau lưng, đau bụng, tiểu máu)",
-            "Nồng độ penicillin/cephalosporin nếu dùng kèm",
-            "Chức năng gan (ALT, AST)"
-        ],
-        "precautions": [
-            "UỐNG NHIỀU NƯỚC (2-3L/ngày) để tránh sỏi thận uric acid",
-            "Khởi đầu với liều thấp (250mg x 2 lần/ngày) để tránh cơn gout cấp",
-            "Không dùng nếu có sỏi thận uric acid",
-            "Thận trọng ở suy thận (CrCl <30 - chống chỉ định)",
-            "Tránh dùng với salicylates liều cao (giảm hiệu quả)",
-            "Có thể tăng nồng độ penicillin/cephalosporin - thận trọng với độc tính",
-            "Có thể tăng nồng độ methotrexate - thận trọng"
-        ],
-        "pharmacokinetics": {
-            "half_life": "4-12 giờ",
-            "onset": "Vài ngày đến vài tuần",
-            "duration": "12 giờ",
-            "protein_binding": "85-95%",
-            "clearance": "Thận: bài tiết qua nước tiểu. Gan: chuyển hóa một phần."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
-        "black_box_warnings": None,
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Methotrexate",
-                    "mechanism": "Probenecid ức chế bài tiết methotrexate ở ống thận, tăng nồng độ",
-                    "effect": "Tăng nồng độ methotrexate, tăng độc tính",
-                    "management": "Thận trọng. Giảm liều methotrexate hoặc tránh dùng cùng."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Penicillin, Cephalosporin",
-                    "mechanism": "Probenecid ức chế bài tiết kháng sinh ở ống thận, tăng nồng độ",
-                    "effect": "Tăng nồng độ kháng sinh, có thể tăng độc tính",
-                    "management": "Thận trọng. Có thể dùng để tăng nồng độ kháng sinh nếu cần, nhưng theo dõi độc tính."
-                },
-                {
-                    "drug": "Salicylates liều cao (>3g/ngày)",
-                    "mechanism": "Salicylates ức chế tác dụng uricosuric của probenecid",
-                    "effect": "Giảm hiệu quả probenecid",
-                    "management": "Tránh dùng salicylates liều cao khi dùng probenecid."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng probenecid",
-                "Sỏi thận uric acid",
-                "Suy thận nặng (CrCl <30)"
-            ],
-            "tương_đối": [
-                "Suy thận (CrCl 30-60) - thận trọng",
-                "Đang dùng methotrexate - tăng nồng độ",
-                "Đang dùng salicylates liều cao - giảm hiệu quả"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Có thể dùng trong thai kỳ nếu cần thiết. Không có bằng chứng về dị tật thai nhi.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Probenecid bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.",
-                "recommendation": "Có thể dùng khi cho con bú."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng",
-            "severe": "Thận trọng",
-            "notes": "Probenecid chuyển hóa một phần ở gan. Suy gan có thể ảnh hưởng đến chuyển hóa."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Buồn nôn, nôn",
-                "Đau đầu",
-                "Sỏi thận uric acid",
-                "Phát ban"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng probenecid",
-                "Uống nhiều nước để tăng bài tiết",
-                "Điều trị sỏi thận nếu có",
-                "Điều trị hỗ trợ"
-            ],
-            "monitoring": "Chức năng thận, dấu hiệu sỏi thận"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": []
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Có thể uống với hoặc không có thức ăn. Uống với thức ăn có thể giảm buồn nôn.",
-                "timing": "Khởi đầu: 250mg x 2 lần/ngày x 1 tuần. Sau đó: 500mg x 2 lần/ngày. UỐNG NHIỀU NƯỚC (2-3L/ngày) để tránh sỏi thận."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Probenecid",
-                "American College of Rheumatology Guidelines - Gout Management",
-                "UpToDate - Probenecid: Drug information"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA-approved, ACR guidelines"
-        },
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Uric acid kidney stones (if inadequate hydration)", "Hepatotoxicity (rare)"],
-            "qt_prolongation": False,
-            "hepatotoxicity": True,
-            "nephrotoxicity": False,
-            "requires_monitoring": ["Uric acid levels (target <6 mg/dL)", "Renal function (creatinine, eGFR)", "Signs of kidney stones (back pain, abdominal pain, hematuria) - CRITICAL", "Penicillin/cephalosporin levels if co-administered", "Hepatic function (ALT, AST)"]
-        },
-        "guideline_tags": [
-            "ACR Guidelines - Gout Management",
-            "EULAR Guidelines - Gout Management",
-            "FDA Drug Information - Probenecid",
-            "UpToDate - Gout Treatment"
-        ],
-        "black_box_warnings": None,
-},
-    
     "Febuxostat": {
         "group": "Metabolism - Gout Medication (Xanthine Oxidase Inhibitor)",
         "vietnamese_name": "Febuxostat, Uloric",
@@ -544,7 +378,173 @@ GOUT_MEDICATIONS_DRUGS = {
             "FDA Black Box Warning - Febuxostat and Azathioprine/6-Mercaptopurine Interaction",
             "CARES Trial - Cardiovascular Risk"
         ]
-    }
+    },
+    "Probenecid": {
+        "group": "Metabolism - Gout Medication (Uricosuric Agent)",
+        "vietnamese_name": "Probenecid",
+        "administration": ["PO"],
+        "indications": [
+            "Gout mạn tính (tăng bài tiết acid uric)",
+            "Tăng acid uric máu",
+            "Tăng nồng độ penicillin/cephalosporin (dùng kèm để tăng nồng độ kháng sinh)"
+        ],
+        "contraindications": [
+            "Dị ứng probenecid",
+            "Sỏi thận uric acid",
+            "Suy thận nặng (CrCl <30)",
+            "Đang dùng salicylates liều cao"
+        ],
+        "dosage": {
+            "adult_standard": "250mg x 2 lần/ngày x 1 tuần, sau đó 500mg x 2 lần/ngày",
+            "adult_max": "2g/ngày",
+            "notes": "Uống với nhiều nước (2-3L/ngày) để tránh sỏi thận. Khởi đầu với liều thấp."
+        },
+        "side_effects": [
+            "Sỏi thận uric acid (nếu không uống đủ nước)",
+            "Buồn nôn, nôn",
+            "Đau đầu",
+            "Phát ban",
+            "Tăng men gan"
+        ],
+        "interactions": [
+            "Penicillin/Cephalosporin: tăng nồng độ kháng sinh",
+            "Salicylates liều cao: giảm hiệu quả probenecid",
+            "Methotrexate: tăng nồng độ methotrexate",
+            "NSAIDs: tăng nồng độ NSAIDs"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Probenecid là uricosuric agent, ức chế tái hấp thu acid uric ở ống thận gần, làm tăng bài tiết acid uric qua nước tiểu và giảm nồng độ acid uric trong máu. Probenecid cũng ức chế bài tiết các acid hữu cơ khác ở ống thận, bao gồm penicillin và cephalosporin, làm tăng nồng độ các kháng sinh này trong máu. Probenecid được sử dụng để điều trị gout mạn tính bằng cách tăng bài tiết acid uric, nhưng cần uống nhiều nước để tránh sỏi thận uric acid. Probenecid cũng được dùng để tăng nồng độ penicillin/cephalosporin khi cần thiết.",
+        "monitoring": [
+            "Nồng độ acid uric máu (mục tiêu <6 mg/dL)",
+            "Chức năng thận (creatinine, eGFR)",
+            "Dấu hiệu sỏi thận (đau lưng, đau bụng, tiểu máu)",
+            "Nồng độ penicillin/cephalosporin nếu dùng kèm",
+            "Chức năng gan (ALT, AST)"
+        ],
+        "precautions": [
+            "UỐNG NHIỀU NƯỚC (2-3L/ngày) để tránh sỏi thận uric acid",
+            "Khởi đầu với liều thấp (250mg x 2 lần/ngày) để tránh cơn gout cấp",
+            "Không dùng nếu có sỏi thận uric acid",
+            "Thận trọng ở suy thận (CrCl <30 - chống chỉ định)",
+            "Tránh dùng với salicylates liều cao (giảm hiệu quả)",
+            "Có thể tăng nồng độ penicillin/cephalosporin - thận trọng với độc tính",
+            "Có thể tăng nồng độ methotrexate - thận trọng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "4-12 giờ",
+            "onset": "Vài ngày đến vài tuần",
+            "duration": "12 giờ",
+            "protein_binding": "85-95%",
+            "clearance": "Thận: bài tiết qua nước tiểu. Gan: chuyển hóa một phần."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Probenecid ức chế bài tiết methotrexate ở ống thận, tăng nồng độ",
+                    "effect": "Tăng nồng độ methotrexate, tăng độc tính",
+                    "management": "Thận trọng. Giảm liều methotrexate hoặc tránh dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Penicillin, Cephalosporin",
+                    "mechanism": "Probenecid ức chế bài tiết kháng sinh ở ống thận, tăng nồng độ",
+                    "effect": "Tăng nồng độ kháng sinh, có thể tăng độc tính",
+                    "management": "Thận trọng. Có thể dùng để tăng nồng độ kháng sinh nếu cần, nhưng theo dõi độc tính."
+                },
+                {
+                    "drug": "Salicylates liều cao (>3g/ngày)",
+                    "mechanism": "Salicylates ức chế tác dụng uricosuric của probenecid",
+                    "effect": "Giảm hiệu quả probenecid",
+                    "management": "Tránh dùng salicylates liều cao khi dùng probenecid."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng probenecid",
+                "Sỏi thận uric acid",
+                "Suy thận nặng (CrCl <30)"
+            ],
+            "tương_đối": [
+                "Suy thận (CrCl 30-60) - thận trọng",
+                "Đang dùng methotrexate - tăng nồng độ",
+                "Đang dùng salicylates liều cao - giảm hiệu quả"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Có thể dùng trong thai kỳ nếu cần thiết. Không có bằng chứng về dị tật thai nhi.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Probenecid bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng",
+            "notes": "Probenecid chuyển hóa một phần ở gan. Suy gan có thể ảnh hưởng đến chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Đau đầu",
+                "Sỏi thận uric acid",
+                "Phát ban"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng probenecid",
+                "Uống nhiều nước để tăng bài tiết",
+                "Điều trị sỏi thận nếu có",
+                "Điều trị hỗ trợ"
+            ],
+            "monitoring": "Chức năng thận, dấu hiệu sỏi thận"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Uống với thức ăn có thể giảm buồn nôn.",
+                "timing": "Khởi đầu: 250mg x 2 lần/ngày x 1 tuần. Sau đó: 500mg x 2 lần/ngày. UỐNG NHIỀU NƯỚC (2-3L/ngày) để tránh sỏi thận."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Probenecid",
+                "American College of Rheumatology Guidelines - Gout Management",
+                "UpToDate - Probenecid: Drug information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA-approved, ACR guidelines"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Uric acid kidney stones (if inadequate hydration)", "Hepatotoxicity (rare)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Uric acid levels (target <6 mg/dL)", "Renal function (creatinine, eGFR)", "Signs of kidney stones (back pain, abdominal pain, hematuria) - CRITICAL", "Penicillin/cephalosporin levels if co-administered", "Hepatic function (ALT, AST)"]
+        },
+        "guideline_tags": [
+            "ACR Guidelines - Gout Management",
+            "EULAR Guidelines - Gout Management",
+            "FDA Drug Information - Probenecid",
+            "UpToDate - Gout Treatment"
+        ],
+        "black_box_warnings": None,
+},
+    
 }
 
 __all__ = ['GOUT_MEDICATIONS_DRUGS']

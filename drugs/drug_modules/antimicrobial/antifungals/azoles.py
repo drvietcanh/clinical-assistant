@@ -269,6 +269,184 @@ AZOLES_DRUGS = {
         },
     },
 
+    "Isavuconazole": {
+        "group": "Infectious Disease - Antifungal (Azole - Triazole, prodrug)",
+        "vietnamese_name": "Isavuconazole (Isavuconazonium sulfate), Cresemba",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm nấm Aspergillosis xâm lấn",
+            "Nhiễm nấm Mucorales (mucormycosis) khi không dung nạp/không đáp ứng Amphotericin B",
+            "Nhiễm nấm Candida xâm lấn (off-label/backup)",
+            "Thay thế khi chống chỉ định hoặc thất bại với voriconazole/posaconazole"
+        ],
+        "contraindications": [
+            "Dị ứng isavuconazole/isavuconazonium",
+            "Hội chứng QT ngắn bẩm sinh",
+            "Dùng với chất cảm ứng mạnh CYP3A4 (rifampin, carbamazepine, phenobarbital, phenytoin, St. John's wort)",
+            "Dùng với chất ức chế mạnh CYP3A4 (ketoconazole, high-dose ritonavir, clarithromycin) do tăng nồng độ"
+        ],
+        "dosage": {
+            "adult_loading": "372mg (tương đương 200mg isavuconazole) IV/PO mỗi 8 giờ x 6 liều (48 giờ)",
+            "adult_maintenance": "372mg IV/PO mỗi 24 giờ, bắt đầu 12-24 giờ sau liều loading cuối",
+            "notes": "Không cần chỉnh liều giữa PO và IV. Không chứa cyclodextrin nên an toàn hơn ở suy thận so với voriconazole/posaconazole."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi (không chứa cyclodextrin)",
+            "hemodialysis": "Không bị loại đáng kể qua lọc máu, không cần bổ sung"
+        },
+        "side_effects": [
+            "Tăng men gan",
+            "Buồn nôn, nôn, tiêu chảy",
+            "Nhức đầu",
+            "Hạ kali máu",
+            "Phản ứng truyền (IV)",
+            "QT NGẮN (đặc trưng của isavuconazole)"
+        ],
+        "interactions": [
+            "CYP3A4 inducers mạnh (rifampin, carbamazepine, phenobarbital, phenytoin, St. John's wort): giảm nồng độ, tránh",
+            "CYP3A4 inhibitors mạnh (ketoconazole, ritonavir liều cao, clarithromycin): tăng nồng độ, tránh/giảm liều",
+            "Tacrolimus/Cyclosporine/Sirolimus: tăng nồng độ, cần giảm liều và theo dõi",
+            "Warfarin: có thể tăng nhẹ INR, theo dõi",
+            "Thuốc/nhóm gây QT ngắn: thận trọng"
+        ],
+        "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "organ_toxicity": {"hepatic": True, "cardiac": True},
+            "icu_critical_care_only": False,
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "IDSA Invasive Aspergillosis Guidelines 2024",
+            "IDSA Candidiasis Guidelines 2024",
+            "ECMM-ERCMID-ERS Invasive Fungal Disease Guidelines",
+            "WHO Guidelines for Invasive Fungal Infections"
+        ],
+        "mechanism_of_action": "Isavuconazole (hoạt chất từ tiền chất isavuconazonium sulfate) là triazole ức chế lanosterol 14α-demethylase (CYP51) của nấm, ngăn tổng hợp ergosterol → màng tế bào nấm mất ổn định. Phổ rộng: Aspergillus, Mucorales, Candida, Fusarium.",
+        "monitoring": [
+            "Chức năng gan (ALT, AST, bilirubin) trước và trong điều trị",
+            "Điện giải (đặc biệt kali) do nguy cơ QT ngắn",
+            "ECG nền và khi có triệu chứng tim mạch",
+            "Theo dõi tương tác khi phối hợp thuốc ức chế/cảm ứng CYP3A4",
+            "Đánh giá đáp ứng lâm sàng và xét nghiệm với nhiễm nấm xâm lấn"
+        ],
+        "precautions": [
+            "Có thể gây QT NGẮN (khác với azole khác gây QT dài) - tránh ở bệnh nhân có hội chứng QT ngắn",
+            "Chất nền và ức chế CYP3A4 mức trung bình → nhiều tương tác",
+            "Không cần chỉnh liều ở suy thận, không chứa cyclodextrin",
+            "Suy gan trung bình-nặng: theo dõi sát men gan, cân nhắc giảm liều nếu tăng men",
+            "Thẩm tách máu không loại bỏ đáng kể thuốc",
+            "Theo dõi phản ứng truyền khi dùng IV"
+        ],
+        "pharmacokinetics": {
+            "half_life": "≈130 giờ (rất dài) → dùng 1 lần/ngày sau liều tải",
+            "onset": "Cần liều tải để đạt nồng độ điều trị nhanh; trạng thái ổn định sau ~7 ngày",
+            "duration": "Duy trì 24 giờ/liều sau pha tải",
+            "protein_binding": "≈99%",
+            "clearance": "Chuyển hóa gan (CYP3A4/5; glucuronidation thứ cấp), thải trừ qua phân và nước tiểu dưới dạng chuyển hóa"
+        },
+        "storage": "Bảo quản viên và lọ bột ở 20-25°C, tránh ẩm. Dung dịch sau pha IV dùng trong 6 giờ ở nhiệt độ phòng hoặc 24 giờ nếu bảo quản lạnh (2-8°C).",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rifampin, Carbamazepine, Phenobarbital, Phenytoin, St. John's wort",
+                    "mechanism": "Cảm ứng mạnh CYP3A4 → giảm mạnh nồng độ isavuconazole",
+                    "effect": "Giảm hiệu quả điều trị, nguy cơ thất bại",
+                    "management": "TRÁNH dùng chung; chọn thuốc kháng nấm khác."
+                },
+                {
+                    "drug": "Ketoconazole, Ritonavir liều cao, Clarithromycin",
+                    "mechanism": "Ức chế mạnh CYP3A4 → tăng nồng độ isavuconazole",
+                    "effect": "Nguy cơ tăng độc tính (tăng men gan, rối loạn điện giải, QT ngắn)",
+                    "management": "Tránh phối hợp hoặc giảm liều và theo dõi chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Tacrolimus, Cyclosporine, Sirolimus",
+                    "mechanism": "Isavuconazole ức chế CYP3A4 mức trung bình → tăng nồng độ thuốc ức chế miễn dịch",
+                    "effect": "Tăng độc tính thận, tăng huyết áp, rối loạn điện giải",
+                    "management": "Giảm liều và theo dõi nồng độ thuốc ức chế miễn dịch."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Ảnh hưởng chuyển hóa qua CYP, có thể tăng INR",
+                    "effect": "Tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR khi bắt đầu/ngừng hoặc thay đổi liều."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng isavuconazole/isavuconazonium",
+                "Hội chứng QT ngắn bẩm sinh",
+                "Dùng cùng chất ức chế hoặc cảm ứng mạnh CYP3A4 (ketoconazole, rifampin, carbamazepine, phenobarbital, phenytoin, St. John's wort)"
+            ],
+            "tương_đối": [
+                "Suy gan trung bình-nặng (theo dõi men gan chặt chẽ)",
+                "Rối loạn điện giải (hạ kali, hạ magie) - có thể làm nặng QT ngắn",
+                "Bệnh tim nền hoặc tiền sử loạn nhịp"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu trên người hạn chế; động vật cho thấy độc tính phôi. Chỉ dùng khi lợi ích vượt trội.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ bài tiết vào sữa mẹ. Cân nhắc ngừng cho bú hoặc chọn thuốc khác.",
+                "recommendation": "Tránh hoặc theo dõi trẻ nếu phải dùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh",
+            "moderate": "Thận trọng, theo dõi men gan; cân nhắc giảm liều nếu men gan tăng kéo dài",
+            "severe": "Dữ liệu hạn chế; thận trọng tối đa hoặc cân nhắc thuốc khác",
+            "notes": "Chuyển hóa qua gan (CYP3A4/5). Tăng AUC ở Child-Pugh B/C; cần giám sát lâm sàng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, chóng mặt",
+                "Tăng men gan",
+                "Rối loạn điện giải, QT ngắn"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc, điều trị hỗ trợ",
+                "Theo dõi ECG và điện giải (K, Mg)",
+                "Bù điện giải nếu cần",
+                "Thẩm tách máu không hiệu quả do gắn protein cao"
+            ],
+            "monitoring": "Theo dõi men gan, ECG, điện giải, dấu hiệu lâm sàng trong 24-48 giờ."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn",
+                "timing": "Liều tải: mỗi 8 giờ x 6 liều; sau đó 1 lần/ngày vào cùng thời điểm"
+            },
+            "iv": {
+                "reconstitution": "Pha lọ 200mg base (372mg muối) với dung môi kèm theo, sau đó pha loãng trong 250ml NS hoặc D5W",
+                "infusion_rate": "Truyền trong ≥1 giờ",
+                "compatibility": ["NS", "D5W"],
+                "incompatibility": [],
+                "notes": "Không chứa cyclodextrin; theo dõi phản ứng truyền."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Cresemba (Isavuconazonium sulfate)",
+                "IDSA Guidelines - Treatment of Aspergillosis and Mucormycosis",
+                "UpToDate - Isavuconazole: Drug Information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High (FDA-approved, IDSA guideline-endorsed)"
+        }
+    },
     "Itraconazole": {
         "group": "Infectious Disease - Antifungal (Azole)",
         "vietnamese_name": "Itraconazole, Sporanox",
@@ -508,235 +686,6 @@ AZOLES_DRUGS = {
         },
     },
 
-    "Voriconazole": {
-        "group": "Infectious Disease - Antifungal (Azole, 2nd generation)",
-        "vietnamese_name": "Voriconazole, Vfend",
-        "administration": ["PO", "IV"],
-        "indications": [
-            "Nhiễm nấm Aspergillosis invasive",
-            "Nhiễm nấm Candida (invasive, kháng fluconazole)",
-            "Nhiễm nấm Fusarium",
-            "Nhiễm nấm Scedosporium",
-            "Nhiễm nấm Seedosporium"
-        ],
-        "contraindications": [
-            "Dị ứng voriconazole",
-            "Có thai",
-            "Dùng rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine"
-        ],
-        "dosage": {
-            "adult_po_loading": "400mg x 2 lần/ngày x 2 ngày đầu",
-            "adult_po_maintenance": "200mg x 2 lần/ngày",
-            "adult_iv_loading": "6mg/kg x 2 lần/ngày x 2 ngày đầu",
-            "adult_iv_maintenance": "4mg/kg x 2 lần/ngày",
-            "notes": "Theo dõi nồng độ trong máu. Nguy cơ cao với rối loạn chuyển hóa CYP2C19"
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "IV: thay đổi chất pha (không dùng cyclodextrin)",
-            "under_30": "IV: thay đổi chất pha. PO: không đổi"
-        },
-        "side_effects": [
-            "Rối loạn thị giác (nhìn mờ, nhạy cảm ánh sáng - thường thoáng qua)",
-            "Ban da (phản ứng quang hóa)",
-            "Tăng men gan, suy gan",
-            "Hallucination",
-            "QT kéo dài",
-            "Nhức đầu",
-            "Buồn nôn"
-        ],
-        "interactions": [
-            "Rifampin/Rifabutin: giảm nồng độ voriconazole - tránh dùng",
-            "Carbamazepine/Phenobarbital: giảm nồng độ voriconazole - tránh dùng",
-            "Warfarin: tăng tác dụng chống đông",
-            "Cyclosporine/Tacrolimus: tăng nồng độ",
-            "Phenytoin: giảm nồng độ voriconazole",
-            "Omeprazole: tăng nồng độ omeprazole"
-        ],
-        "pregnancy": "D - Chống chỉ định",
-        "mechanism_of_action": "Voriconazole là thuốc chống nấm phổ rộng thuộc nhóm triazole thế hệ thứ hai, ức chế enzyme lanosterol 14-alpha-demethylase (CYP51) của nấm. Enzyme này có vai trò quan trọng trong tổng hợp ergosterol, một thành phần chính của màng tế bào nấm. Bằng cách ức chế tổng hợp ergosterol, voriconazole làm thay đổi tính thấm màng tế bào nấm, dẫn đến ức chế sự phát triển và gây chết tế bào nấm. Voriconazole có phổ kháng nấm rộng hơn fluconazole: nấm men (Candida, bao gồm cả kháng fluconazole), nấm sợi (Aspergillus, Fusarium, Scedosporium), và một số nấm kháng thuốc khác. Voriconazole được coi là thuốc điều trị đầu tay cho nhiễm nấm Aspergillus invasive. Voriconazole ức chế CYP2C19, CYP2C9, và CYP3A4 ở gan, dẫn đến nhiều tương tác thuốc. Chuyển hóa phụ thuộc vào CYP2C19 (polymorphism), cần theo dõi nồng độ trong máu.",
-        "monitoring": [
-            "Đáp ứng điều trị (giảm triệu chứng nhiễm nấm, cải thiện lâm sàng)",
-            "Nồng độ voriconazole trong máu (therapeutic drug monitoring - TDM) - QUAN TRỌNG, đặc biệt ở bệnh nhân suy gan, suy thận, hoặc có rối loạn chuyển hóa CYP2C19",
-            "Chức năng gan (ALT, AST, bilirubin) - tăng men gan phổ biến, suy gan có thể nghiêm trọng",
-            "Rối loạn thị giác (nhìn mờ, nhạy cảm ánh sáng, nhìn thấy ánh sáng bất thường) - thường thoáng qua, xuất hiện 30 phút sau liều, kéo dài 30 phút",
-            "Dấu hiệu phản ứng quang hóa (ban da, phồng rộp) - tránh ánh nắng trực tiếp",
-            "ECG - QT kéo dài (nguy cơ loạn nhịp)",
-            "Hallucination - hiếm nhưng có thể xảy ra",
-            "Tương tác với rifampin, rifabutin, carbamazepine, phenobarbital (giảm nồng độ voriconazole), warfarin (tăng INR), cyclosporine, tacrolimus (tăng nồng độ), phenytoin (giảm nồng độ voriconazole)"
-        ],
-        "precautions": [
-            "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D)",
-            "CHỐNG CHỈ ĐỊNH với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine (giảm nồng độ voriconazole hoặc tăng nguy cơ độc tính)",
-            "Theo dõi nồng độ trong máu (TDM) - QUAN TRỌNG, đặc biệt ở bệnh nhân suy gan, suy thận, hoặc có rối loạn chuyển hóa CYP2C19 (poor metabolizer có nồng độ cao, extensive metabolizer có nồng độ thấp)",
-            "Liều khởi đầu (loading dose) QUAN TRỌNG - PO: 400mg x 2 lần/ngày x 2 ngày đầu, IV: 6mg/kg x 2 lần/ngày x 2 ngày đầu",
-            "Rối loạn thị giác - thường thoáng qua, xuất hiện 30 phút sau liều, kéo dài 30 phút, thường tự khỏi, không cần ngừng thuốc",
-            "Tránh ánh nắng trực tiếp - nguy cơ phản ứng quang hóa (ban da, phồng rộp), dùng kem chống nắng, mặc quần áo che",
-            "Tăng men gan, suy gan - theo dõi chức năng gan, ngừng nếu có suy gan",
-            "QT kéo dài - không dùng với các thuốc kéo dài QT khác, bệnh nhân có tiền sử rối loạn nhịp",
-            "Hallucination - hiếm nhưng có thể xảy ra, cần theo dõi",
-            "Nhiều tương tác thuốc do ức chế CYP - tăng nồng độ warfarin (tăng INR), cyclosporine, tacrolimus (tăng nồng độ, nguy cơ độc tính), omeprazole (tăng nồng độ)",
-            "Phenytoin giảm nồng độ voriconazole - có thể cần tăng liều voriconazole",
-            "IV chứa cyclodextrin - không dùng ở suy thận nặng (CrCl <50), tích lũy cyclodextrin",
-            "Uống với hoặc không thức ăn (không ảnh hưởng hấp thu như itraconazole)"
-        ],
-        "pharmacokinetics": {
-            "half_life": "6 giờ (bình thường), tăng ở poor CYP2C19 metabolizers",
-            "onset": "Vài ngày đến vài tuần (tác dụng chống nấm)",
-            "duration": "12 giờ (dùng 2 lần/ngày)",
-            "protein_binding": "58%",
-            "clearance": "Gan: chuyển hóa qua CYP2C19 (chính), CYP2C9, và CYP3A4. Chuyển hóa phụ thuộc vào polymorphism CYP2C19 (poor metabolizer có nồng độ cao, extensive metabolizer có nồng độ thấp). Thận: bài tiết một phần metabolites. IV chứa cyclodextrin, tích lũy ở suy thận."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. IV: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi pha, dùng trong vòng 24 giờ sau khi pha.",
-        "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D). Nguy cơ suy gan nghiêm trọng, có thể gây tử vong. Theo dõi chức năng gan trước và trong khi điều trị. Ngừng ngay nếu có suy gan. Nguy cơ QT kéo dài và rối loạn nhịp tim. Theo dõi ECG nếu có nguy cơ. Nguy cơ rối loạn thị giác (thường thoáng qua). CHỐNG CHỈ ĐỊNH với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Rifampin, Rifabutin",
-                    "mechanism": "Rifampin và rifabutin cảm ứng CYP450 mạnh, làm tăng chuyển hóa voriconazole, giảm nồng độ voriconazole trong máu.",
-                    "effect": "Giảm nồng độ voriconazole đáng kể, giảm hiệu quả điều trị, nguy cơ thất bại điều trị",
-                    "management": "CHỐNG CHỈ ĐỊNH - không dùng đồng thời. Nếu bắt buộc, tăng liều voriconazole (có thể cần tăng gấp đôi), theo dõi nồng độ voriconazole trong máu."
-                },
-                {
-                    "drug": "Carbamazepine, Phenobarbital",
-                    "mechanism": "Carbamazepine và phenobarbital cảm ứng CYP450 mạnh, làm tăng chuyển hóa voriconazole, giảm nồng độ voriconazole trong máu.",
-                    "effect": "Giảm nồng độ voriconazole đáng kể, giảm hiệu quả điều trị",
-                    "management": "CHỐNG CHỈ ĐỊNH - không dùng đồng thời. Nếu bắt buộc, tăng liều voriconazole, theo dõi nồng độ voriconazole trong máu."
-                },
-                {
-                    "drug": "Ergotamine",
-                    "mechanism": "Voriconazole ức chế CYP3A4, làm giảm chuyển hóa ergotamine, tăng nồng độ ergotamine trong máu.",
-                    "effect": "Tăng nguy cơ co thắt mạch máu nghiêm trọng, hoại tử chi, đe dọa tính mạng",
-                    "management": "CHỐNG CHỈ ĐỊNH - không dùng đồng thời."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Voriconazole ức chế CYP2C9, làm giảm chuyển hóa warfarin, tăng nồng độ warfarin trong máu.",
-                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng voriconazole. Giảm liều warfarin 25-50% khi bắt đầu voriconazole."
-                },
-                {
-                    "drug": "Cyclosporine, Tacrolimus",
-                    "mechanism": "Voriconazole ức chế CYP3A4, làm giảm chuyển hóa cyclosporine và tacrolimus, tăng nồng độ trong máu.",
-                    "effect": "Tăng nồng độ cyclosporine/tacrolimus, tăng độc tính (độc thận, tăng huyết áp, rối loạn điện giải)",
-                    "management": "Theo dõi nồng độ cyclosporine/tacrolimus chặt chẽ. Giảm liều cyclosporine/tacrolimus 50-75% khi bắt đầu voriconazole."
-                },
-                {
-                    "drug": "Phenytoin",
-                    "mechanism": "Phenytoin cảm ứng CYP450, làm giảm nồng độ voriconazole. Voriconazole ức chế CYP2C9, tăng nồng độ phenytoin.",
-                    "effect": "Giảm nồng độ voriconazole, tăng nồng độ phenytoin",
-                    "management": "Theo dõi nồng độ cả hai thuốc. Tăng liều voriconazole (có thể cần tăng gấp đôi), giảm liều phenytoin nếu cần."
-                }
-            ],
-            "minor": [
-                {
-                    "drug": "Omeprazole",
-                    "mechanism": "Voriconazole ức chế CYP2C19, làm giảm chuyển hóa omeprazole, tăng nồng độ omeprazole trong máu.",
-                    "effect": "Tăng nhẹ nồng độ omeprazole",
-                    "management": "Theo dõi dấu hiệu độc tính omeprazole. Có thể cần giảm liều omeprazole."
-                }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng voriconazole",
-                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
-                "Dùng với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine - chống chỉ định"
-            ],
-            "tương_đối": [
-                "Suy thận nặng (CrCl <50) khi dùng IV - không dùng IV (chứa cyclodextrin, tích lũy), có thể dùng PO",
-                "Suy gan - thận trọng, theo dõi chức năng gan, ngừng nếu có suy gan",
-                "Rối loạn chuyển hóa CYP2C19 (poor metabolizer) - tăng nồng độ, tăng độc tính, cần giảm liều",
-                "Rối loạn chuyển hóa CYP2C19 (extensive metabolizer) - giảm nồng độ, có thể cần tăng liều",
-                "Bệnh nhân có tiền sử rối loạn nhịp tim - nguy cơ QT kéo dài"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng voriconazole",
-                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
-                "Dùng với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine - chống chỉ định"
-            ],
-            "tương_đối": [
-                "Suy thận nặng (CrCl <50) khi dùng IV - không dùng IV (chứa cyclodextrin, tích lũy), có thể dùng PO",
-                "Suy gan - thận trọng, theo dõi chức năng gan, ngừng nếu có suy gan",
-                "Rối loạn chuyển hóa CYP2C19 (poor metabolizer) - tăng nồng độ, tăng độc tính, cần giảm liều",
-                "Rối loạn chuyển hóa CYP2C19 (extensive metabolizer) - giảm nồng độ, có thể cần tăng liều",
-                "Bệnh nhân có tiền sử rối loạn nhịp tim - nguy cơ QT kéo dài"
-            ]
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
-        },
-        "pregnancy_lactation": {
-            "fda_category": "D",
-            "pregnancy_details": "Chống chỉ định trong thai kỳ. Voriconazole gây dị tật thai nhi, đặc biệt trong 3 tháng đầu. Có thể gây sẩy thai, dị tật xương, dị tật tim. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
-            "lactation": {
-                "safety": "Incompatible",
-                "details": "Voriconazole bài tiết vào sữa mẹ. Thuốc có thể gây độc tính cho trẻ sơ sinh.",
-                "recommendation": "Không cho con bú khi dùng voriconazole. Ngừng cho con bú hoặc ngừng thuốc."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không đổi",
-            "moderate": "Thận trọng, theo dõi chức năng gan, có thể cần giảm liều",
-            "severe": "Tránh dùng hoặc giảm liều mạnh, theo dõi chặt chẽ",
-            "notes": "Voriconazole chuyển hóa chủ yếu qua gan (CYP2C19, CYP2C9, CYP3A4). Suy gan làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và nồng độ voriconazole trong máu, ngừng nếu có suy gan."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Rối loạn thị giác (nhìn mờ, nhạy cảm ánh sáng)",
-                "Tăng men gan, suy gan",
-                "Ban da (phản ứng quang hóa)",
-                "Hallucination",
-                "QT kéo dài, rối loạn nhịp tim",
-                "Buồn nôn, nôn"
-            ],
-            "antidote": "Không có antidote đặc hiệu",
-            "treatment": [
-                "Ngừng ngay voriconazole",
-                "Rửa dạ dày nếu mới uống <1 giờ",
-                "Supportive care",
-                "Theo dõi chức năng gan, ECG",
-                "Điều trị suy gan nếu có (supportive care)",
-                "Theo dõi và điều trị rối loạn nhịp tim nếu có",
-                "Tránh ánh nắng trực tiếp (phản ứng quang hóa)"
-            ],
-            "monitoring": "Chức năng gan, ECG, nồng độ voriconazole trong máu, dấu hiệu lâm sàng"
-        },
-        "reversal_agents": None,
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Uống với hoặc không thức ăn (không ảnh hưởng hấp thu)",
-                "timing": "Chia 2 lần/ngày. Loading dose: 400mg x 2 lần/ngày x 2 ngày đầu, sau đó 200mg x 2 lần/ngày."
-            },
-            "iv": {
-                "reconstitution": "Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất",
-                "infusion_rate": "Truyền trong 1-2 giờ",
-                "compatibility": ["NS", "D5W"],
-                "incompatibility": [],
-                "notes": "Không dùng IV nếu CrCl <50 (chứa cyclodextrin, tích lũy ở suy thận). Loading dose: 6mg/kg x 2 lần/ngày x 2 ngày đầu, sau đó 4mg/kg x 2 lần/ngày. Truyền trong 1-2 giờ."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Voriconazole (Vfend)",
-                "UpToDate - Voriconazole Drug Information",
-                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
-            ],
-            "last_updated": "2025-01-15",
-            "evidence_level": "High (FDA-approved, extensive clinical data)"
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-        },
-    },
-    
     "Posaconazole": {
         "group": "Infectious Disease - Antifungal (Azole - Triazole)",
         "vietnamese_name": "Posaconazole, Noxafil",
@@ -967,184 +916,235 @@ AZOLES_DRUGS = {
         },
     },
 
-    "Isavuconazole": {
-        "group": "Infectious Disease - Antifungal (Azole - Triazole, prodrug)",
-        "vietnamese_name": "Isavuconazole (Isavuconazonium sulfate), Cresemba",
+    "Voriconazole": {
+        "group": "Infectious Disease - Antifungal (Azole, 2nd generation)",
+        "vietnamese_name": "Voriconazole, Vfend",
         "administration": ["PO", "IV"],
         "indications": [
-            "Nhiễm nấm Aspergillosis xâm lấn",
-            "Nhiễm nấm Mucorales (mucormycosis) khi không dung nạp/không đáp ứng Amphotericin B",
-            "Nhiễm nấm Candida xâm lấn (off-label/backup)",
-            "Thay thế khi chống chỉ định hoặc thất bại với voriconazole/posaconazole"
+            "Nhiễm nấm Aspergillosis invasive",
+            "Nhiễm nấm Candida (invasive, kháng fluconazole)",
+            "Nhiễm nấm Fusarium",
+            "Nhiễm nấm Scedosporium",
+            "Nhiễm nấm Seedosporium"
         ],
         "contraindications": [
-            "Dị ứng isavuconazole/isavuconazonium",
-            "Hội chứng QT ngắn bẩm sinh",
-            "Dùng với chất cảm ứng mạnh CYP3A4 (rifampin, carbamazepine, phenobarbital, phenytoin, St. John's wort)",
-            "Dùng với chất ức chế mạnh CYP3A4 (ketoconazole, high-dose ritonavir, clarithromycin) do tăng nồng độ"
+            "Dị ứng voriconazole",
+            "Có thai",
+            "Dùng rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine"
         ],
         "dosage": {
-            "adult_loading": "372mg (tương đương 200mg isavuconazole) IV/PO mỗi 8 giờ x 6 liều (48 giờ)",
-            "adult_maintenance": "372mg IV/PO mỗi 24 giờ, bắt đầu 12-24 giờ sau liều loading cuối",
-            "notes": "Không cần chỉnh liều giữa PO và IV. Không chứa cyclodextrin nên an toàn hơn ở suy thận so với voriconazole/posaconazole."
+            "adult_po_loading": "400mg x 2 lần/ngày x 2 ngày đầu",
+            "adult_po_maintenance": "200mg x 2 lần/ngày",
+            "adult_iv_loading": "6mg/kg x 2 lần/ngày x 2 ngày đầu",
+            "adult_iv_maintenance": "4mg/kg x 2 lần/ngày",
+            "notes": "Theo dõi nồng độ trong máu. Nguy cơ cao với rối loạn chuyển hóa CYP2C19"
         },
         "renal_adjustment": {
             "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Không đổi (không chứa cyclodextrin)",
-            "hemodialysis": "Không bị loại đáng kể qua lọc máu, không cần bổ sung"
+            "30_60": "IV: thay đổi chất pha (không dùng cyclodextrin)",
+            "under_30": "IV: thay đổi chất pha. PO: không đổi"
         },
         "side_effects": [
-            "Tăng men gan",
-            "Buồn nôn, nôn, tiêu chảy",
+            "Rối loạn thị giác (nhìn mờ, nhạy cảm ánh sáng - thường thoáng qua)",
+            "Ban da (phản ứng quang hóa)",
+            "Tăng men gan, suy gan",
+            "Hallucination",
+            "QT kéo dài",
             "Nhức đầu",
-            "Hạ kali máu",
-            "Phản ứng truyền (IV)",
-            "QT NGẮN (đặc trưng của isavuconazole)"
+            "Buồn nôn"
         ],
         "interactions": [
-            "CYP3A4 inducers mạnh (rifampin, carbamazepine, phenobarbital, phenytoin, St. John's wort): giảm nồng độ, tránh",
-            "CYP3A4 inhibitors mạnh (ketoconazole, ritonavir liều cao, clarithromycin): tăng nồng độ, tránh/giảm liều",
-            "Tacrolimus/Cyclosporine/Sirolimus: tăng nồng độ, cần giảm liều và theo dõi",
-            "Warfarin: có thể tăng nhẹ INR, theo dõi",
-            "Thuốc/nhóm gây QT ngắn: thận trọng"
+            "Rifampin/Rifabutin: giảm nồng độ voriconazole - tránh dùng",
+            "Carbamazepine/Phenobarbital: giảm nồng độ voriconazole - tránh dùng",
+            "Warfarin: tăng tác dụng chống đông",
+            "Cyclosporine/Tacrolimus: tăng nồng độ",
+            "Phenytoin: giảm nồng độ voriconazole",
+            "Omeprazole: tăng nồng độ omeprazole"
         ],
-        "pregnancy": "C",
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "organ_toxicity": {"hepatic": True, "cardiac": True},
-            "icu_critical_care_only": False,
-            "look_alike_sound_alike": []
-        },
-        "guideline_tags": [
-            "IDSA Invasive Aspergillosis Guidelines 2024",
-            "IDSA Candidiasis Guidelines 2024",
-            "ECMM-ERCMID-ERS Invasive Fungal Disease Guidelines",
-            "WHO Guidelines for Invasive Fungal Infections"
-        ],
-        "mechanism_of_action": "Isavuconazole (hoạt chất từ tiền chất isavuconazonium sulfate) là triazole ức chế lanosterol 14α-demethylase (CYP51) của nấm, ngăn tổng hợp ergosterol → màng tế bào nấm mất ổn định. Phổ rộng: Aspergillus, Mucorales, Candida, Fusarium.",
+        "pregnancy": "D - Chống chỉ định",
+        "mechanism_of_action": "Voriconazole là thuốc chống nấm phổ rộng thuộc nhóm triazole thế hệ thứ hai, ức chế enzyme lanosterol 14-alpha-demethylase (CYP51) của nấm. Enzyme này có vai trò quan trọng trong tổng hợp ergosterol, một thành phần chính của màng tế bào nấm. Bằng cách ức chế tổng hợp ergosterol, voriconazole làm thay đổi tính thấm màng tế bào nấm, dẫn đến ức chế sự phát triển và gây chết tế bào nấm. Voriconazole có phổ kháng nấm rộng hơn fluconazole: nấm men (Candida, bao gồm cả kháng fluconazole), nấm sợi (Aspergillus, Fusarium, Scedosporium), và một số nấm kháng thuốc khác. Voriconazole được coi là thuốc điều trị đầu tay cho nhiễm nấm Aspergillus invasive. Voriconazole ức chế CYP2C19, CYP2C9, và CYP3A4 ở gan, dẫn đến nhiều tương tác thuốc. Chuyển hóa phụ thuộc vào CYP2C19 (polymorphism), cần theo dõi nồng độ trong máu.",
         "monitoring": [
-            "Chức năng gan (ALT, AST, bilirubin) trước và trong điều trị",
-            "Điện giải (đặc biệt kali) do nguy cơ QT ngắn",
-            "ECG nền và khi có triệu chứng tim mạch",
-            "Theo dõi tương tác khi phối hợp thuốc ức chế/cảm ứng CYP3A4",
-            "Đánh giá đáp ứng lâm sàng và xét nghiệm với nhiễm nấm xâm lấn"
+            "Đáp ứng điều trị (giảm triệu chứng nhiễm nấm, cải thiện lâm sàng)",
+            "Nồng độ voriconazole trong máu (therapeutic drug monitoring - TDM) - QUAN TRỌNG, đặc biệt ở bệnh nhân suy gan, suy thận, hoặc có rối loạn chuyển hóa CYP2C19",
+            "Chức năng gan (ALT, AST, bilirubin) - tăng men gan phổ biến, suy gan có thể nghiêm trọng",
+            "Rối loạn thị giác (nhìn mờ, nhạy cảm ánh sáng, nhìn thấy ánh sáng bất thường) - thường thoáng qua, xuất hiện 30 phút sau liều, kéo dài 30 phút",
+            "Dấu hiệu phản ứng quang hóa (ban da, phồng rộp) - tránh ánh nắng trực tiếp",
+            "ECG - QT kéo dài (nguy cơ loạn nhịp)",
+            "Hallucination - hiếm nhưng có thể xảy ra",
+            "Tương tác với rifampin, rifabutin, carbamazepine, phenobarbital (giảm nồng độ voriconazole), warfarin (tăng INR), cyclosporine, tacrolimus (tăng nồng độ), phenytoin (giảm nồng độ voriconazole)"
         ],
         "precautions": [
-            "Có thể gây QT NGẮN (khác với azole khác gây QT dài) - tránh ở bệnh nhân có hội chứng QT ngắn",
-            "Chất nền và ức chế CYP3A4 mức trung bình → nhiều tương tác",
-            "Không cần chỉnh liều ở suy thận, không chứa cyclodextrin",
-            "Suy gan trung bình-nặng: theo dõi sát men gan, cân nhắc giảm liều nếu tăng men",
-            "Thẩm tách máu không loại bỏ đáng kể thuốc",
-            "Theo dõi phản ứng truyền khi dùng IV"
+            "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D)",
+            "CHỐNG CHỈ ĐỊNH với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine (giảm nồng độ voriconazole hoặc tăng nguy cơ độc tính)",
+            "Theo dõi nồng độ trong máu (TDM) - QUAN TRỌNG, đặc biệt ở bệnh nhân suy gan, suy thận, hoặc có rối loạn chuyển hóa CYP2C19 (poor metabolizer có nồng độ cao, extensive metabolizer có nồng độ thấp)",
+            "Liều khởi đầu (loading dose) QUAN TRỌNG - PO: 400mg x 2 lần/ngày x 2 ngày đầu, IV: 6mg/kg x 2 lần/ngày x 2 ngày đầu",
+            "Rối loạn thị giác - thường thoáng qua, xuất hiện 30 phút sau liều, kéo dài 30 phút, thường tự khỏi, không cần ngừng thuốc",
+            "Tránh ánh nắng trực tiếp - nguy cơ phản ứng quang hóa (ban da, phồng rộp), dùng kem chống nắng, mặc quần áo che",
+            "Tăng men gan, suy gan - theo dõi chức năng gan, ngừng nếu có suy gan",
+            "QT kéo dài - không dùng với các thuốc kéo dài QT khác, bệnh nhân có tiền sử rối loạn nhịp",
+            "Hallucination - hiếm nhưng có thể xảy ra, cần theo dõi",
+            "Nhiều tương tác thuốc do ức chế CYP - tăng nồng độ warfarin (tăng INR), cyclosporine, tacrolimus (tăng nồng độ, nguy cơ độc tính), omeprazole (tăng nồng độ)",
+            "Phenytoin giảm nồng độ voriconazole - có thể cần tăng liều voriconazole",
+            "IV chứa cyclodextrin - không dùng ở suy thận nặng (CrCl <50), tích lũy cyclodextrin",
+            "Uống với hoặc không thức ăn (không ảnh hưởng hấp thu như itraconazole)"
         ],
         "pharmacokinetics": {
-            "half_life": "≈130 giờ (rất dài) → dùng 1 lần/ngày sau liều tải",
-            "onset": "Cần liều tải để đạt nồng độ điều trị nhanh; trạng thái ổn định sau ~7 ngày",
-            "duration": "Duy trì 24 giờ/liều sau pha tải",
-            "protein_binding": "≈99%",
-            "clearance": "Chuyển hóa gan (CYP3A4/5; glucuronidation thứ cấp), thải trừ qua phân và nước tiểu dưới dạng chuyển hóa"
+            "half_life": "6 giờ (bình thường), tăng ở poor CYP2C19 metabolizers",
+            "onset": "Vài ngày đến vài tuần (tác dụng chống nấm)",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "58%",
+            "clearance": "Gan: chuyển hóa qua CYP2C19 (chính), CYP2C9, và CYP3A4. Chuyển hóa phụ thuộc vào polymorphism CYP2C19 (poor metabolizer có nồng độ cao, extensive metabolizer có nồng độ thấp). Thận: bài tiết một phần metabolites. IV chứa cyclodextrin, tích lũy ở suy thận."
         },
-        "storage": "Bảo quản viên và lọ bột ở 20-25°C, tránh ẩm. Dung dịch sau pha IV dùng trong 6 giờ ở nhiệt độ phòng hoặc 24 giờ nếu bảo quản lạnh (2-8°C).",
-        "black_box_warnings": None,
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. IV: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi pha, dùng trong vòng 24 giờ sau khi pha.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D). Nguy cơ suy gan nghiêm trọng, có thể gây tử vong. Theo dõi chức năng gan trước và trong khi điều trị. Ngừng ngay nếu có suy gan. Nguy cơ QT kéo dài và rối loạn nhịp tim. Theo dõi ECG nếu có nguy cơ. Nguy cơ rối loạn thị giác (thường thoáng qua). CHỐNG CHỈ ĐỊNH với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine.",
         "drug_interactions": {
             "major": [
                 {
-                    "drug": "Rifampin, Carbamazepine, Phenobarbital, Phenytoin, St. John's wort",
-                    "mechanism": "Cảm ứng mạnh CYP3A4 → giảm mạnh nồng độ isavuconazole",
-                    "effect": "Giảm hiệu quả điều trị, nguy cơ thất bại",
-                    "management": "TRÁNH dùng chung; chọn thuốc kháng nấm khác."
+                    "drug": "Rifampin, Rifabutin",
+                    "mechanism": "Rifampin và rifabutin cảm ứng CYP450 mạnh, làm tăng chuyển hóa voriconazole, giảm nồng độ voriconazole trong máu.",
+                    "effect": "Giảm nồng độ voriconazole đáng kể, giảm hiệu quả điều trị, nguy cơ thất bại điều trị",
+                    "management": "CHỐNG CHỈ ĐỊNH - không dùng đồng thời. Nếu bắt buộc, tăng liều voriconazole (có thể cần tăng gấp đôi), theo dõi nồng độ voriconazole trong máu."
                 },
                 {
-                    "drug": "Ketoconazole, Ritonavir liều cao, Clarithromycin",
-                    "mechanism": "Ức chế mạnh CYP3A4 → tăng nồng độ isavuconazole",
-                    "effect": "Nguy cơ tăng độc tính (tăng men gan, rối loạn điện giải, QT ngắn)",
-                    "management": "Tránh phối hợp hoặc giảm liều và theo dõi chặt chẽ."
+                    "drug": "Carbamazepine, Phenobarbital",
+                    "mechanism": "Carbamazepine và phenobarbital cảm ứng CYP450 mạnh, làm tăng chuyển hóa voriconazole, giảm nồng độ voriconazole trong máu.",
+                    "effect": "Giảm nồng độ voriconazole đáng kể, giảm hiệu quả điều trị",
+                    "management": "CHỐNG CHỈ ĐỊNH - không dùng đồng thời. Nếu bắt buộc, tăng liều voriconazole, theo dõi nồng độ voriconazole trong máu."
+                },
+                {
+                    "drug": "Ergotamine",
+                    "mechanism": "Voriconazole ức chế CYP3A4, làm giảm chuyển hóa ergotamine, tăng nồng độ ergotamine trong máu.",
+                    "effect": "Tăng nguy cơ co thắt mạch máu nghiêm trọng, hoại tử chi, đe dọa tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH - không dùng đồng thời."
                 }
             ],
             "moderate": [
                 {
-                    "drug": "Tacrolimus, Cyclosporine, Sirolimus",
-                    "mechanism": "Isavuconazole ức chế CYP3A4 mức trung bình → tăng nồng độ thuốc ức chế miễn dịch",
-                    "effect": "Tăng độc tính thận, tăng huyết áp, rối loạn điện giải",
-                    "management": "Giảm liều và theo dõi nồng độ thuốc ức chế miễn dịch."
+                    "drug": "Warfarin",
+                    "mechanism": "Voriconazole ức chế CYP2C9, làm giảm chuyển hóa warfarin, tăng nồng độ warfarin trong máu.",
+                    "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng voriconazole. Giảm liều warfarin 25-50% khi bắt đầu voriconazole."
                 },
                 {
-                    "drug": "Warfarin",
-                    "mechanism": "Ảnh hưởng chuyển hóa qua CYP, có thể tăng INR",
-                    "effect": "Tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR khi bắt đầu/ngừng hoặc thay đổi liều."
+                    "drug": "Cyclosporine, Tacrolimus",
+                    "mechanism": "Voriconazole ức chế CYP3A4, làm giảm chuyển hóa cyclosporine và tacrolimus, tăng nồng độ trong máu.",
+                    "effect": "Tăng nồng độ cyclosporine/tacrolimus, tăng độc tính (độc thận, tăng huyết áp, rối loạn điện giải)",
+                    "management": "Theo dõi nồng độ cyclosporine/tacrolimus chặt chẽ. Giảm liều cyclosporine/tacrolimus 50-75% khi bắt đầu voriconazole."
+                },
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Phenytoin cảm ứng CYP450, làm giảm nồng độ voriconazole. Voriconazole ức chế CYP2C9, tăng nồng độ phenytoin.",
+                    "effect": "Giảm nồng độ voriconazole, tăng nồng độ phenytoin",
+                    "management": "Theo dõi nồng độ cả hai thuốc. Tăng liều voriconazole (có thể cần tăng gấp đôi), giảm liều phenytoin nếu cần."
                 }
             ],
-            "minor": []
+            "minor": [
+                {
+                    "drug": "Omeprazole",
+                    "mechanism": "Voriconazole ức chế CYP2C19, làm giảm chuyển hóa omeprazole, tăng nồng độ omeprazole trong máu.",
+                    "effect": "Tăng nhẹ nồng độ omeprazole",
+                    "management": "Theo dõi dấu hiệu độc tính omeprazole. Có thể cần giảm liều omeprazole."
+                }
+            ]
         },
         "contraindications": {
             "tuyệt_đối": [
-                "Dị ứng isavuconazole/isavuconazonium",
-                "Hội chứng QT ngắn bẩm sinh",
-                "Dùng cùng chất ức chế hoặc cảm ứng mạnh CYP3A4 (ketoconazole, rifampin, carbamazepine, phenobarbital, phenytoin, St. John's wort)"
+                "Dị ứng voriconazole",
+                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
+                "Dùng với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine - chống chỉ định"
             ],
             "tương_đối": [
-                "Suy gan trung bình-nặng (theo dõi men gan chặt chẽ)",
-                "Rối loạn điện giải (hạ kali, hạ magie) - có thể làm nặng QT ngắn",
-                "Bệnh tim nền hoặc tiền sử loạn nhịp"
+                "Suy thận nặng (CrCl <50) khi dùng IV - không dùng IV (chứa cyclodextrin, tích lũy), có thể dùng PO",
+                "Suy gan - thận trọng, theo dõi chức năng gan, ngừng nếu có suy gan",
+                "Rối loạn chuyển hóa CYP2C19 (poor metabolizer) - tăng nồng độ, tăng độc tính, cần giảm liều",
+                "Rối loạn chuyển hóa CYP2C19 (extensive metabolizer) - giảm nồng độ, có thể cần tăng liều",
+                "Bệnh nhân có tiền sử rối loạn nhịp tim - nguy cơ QT kéo dài"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng voriconazole",
+                "Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)",
+                "Dùng với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine - chống chỉ định"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <50) khi dùng IV - không dùng IV (chứa cyclodextrin, tích lũy), có thể dùng PO",
+                "Suy gan - thận trọng, theo dõi chức năng gan, ngừng nếu có suy gan",
+                "Rối loạn chuyển hóa CYP2C19 (poor metabolizer) - tăng nồng độ, tăng độc tính, cần giảm liều",
+                "Rối loạn chuyển hóa CYP2C19 (extensive metabolizer) - giảm nồng độ, có thể cần tăng liều",
+                "Bệnh nhân có tiền sử rối loạn nhịp tim - nguy cơ QT kéo dài"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ."
+        },
         "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Dữ liệu trên người hạn chế; động vật cho thấy độc tính phôi. Chỉ dùng khi lợi ích vượt trội.",
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Voriconazole gây dị tật thai nhi, đặc biệt trong 3 tháng đầu. Có thể gây sẩy thai, dị tật xương, dị tật tim. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.",
             "lactation": {
-                "safety": "Caution",
-                "details": "Chưa rõ bài tiết vào sữa mẹ. Cân nhắc ngừng cho bú hoặc chọn thuốc khác.",
-                "recommendation": "Tránh hoặc theo dõi trẻ nếu phải dùng."
+                "safety": "Incompatible",
+                "details": "Voriconazole bài tiết vào sữa mẹ. Thuốc có thể gây độc tính cho trẻ sơ sinh.",
+                "recommendation": "Không cho con bú khi dùng voriconazole. Ngừng cho con bú hoặc ngừng thuốc."
             }
         },
         "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh",
-            "moderate": "Thận trọng, theo dõi men gan; cân nhắc giảm liều nếu men gan tăng kéo dài",
-            "severe": "Dữ liệu hạn chế; thận trọng tối đa hoặc cân nhắc thuốc khác",
-            "notes": "Chuyển hóa qua gan (CYP3A4/5). Tăng AUC ở Child-Pugh B/C; cần giám sát lâm sàng."
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, theo dõi chức năng gan, có thể cần giảm liều",
+            "severe": "Tránh dùng hoặc giảm liều mạnh, theo dõi chặt chẽ",
+            "notes": "Voriconazole chuyển hóa chủ yếu qua gan (CYP2C19, CYP2C9, CYP3A4). Suy gan làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và nồng độ voriconazole trong máu, ngừng nếu có suy gan."
         },
         "overdose_management": {
             "symptoms": [
-                "Buồn nôn, nôn, chóng mặt",
-                "Tăng men gan",
-                "Rối loạn điện giải, QT ngắn"
+                "Rối loạn thị giác (nhìn mờ, nhạy cảm ánh sáng)",
+                "Tăng men gan, suy gan",
+                "Ban da (phản ứng quang hóa)",
+                "Hallucination",
+                "QT kéo dài, rối loạn nhịp tim",
+                "Buồn nôn, nôn"
             ],
             "antidote": "Không có antidote đặc hiệu",
             "treatment": [
-                "Ngừng thuốc, điều trị hỗ trợ",
-                "Theo dõi ECG và điện giải (K, Mg)",
-                "Bù điện giải nếu cần",
-                "Thẩm tách máu không hiệu quả do gắn protein cao"
+                "Ngừng ngay voriconazole",
+                "Rửa dạ dày nếu mới uống <1 giờ",
+                "Supportive care",
+                "Theo dõi chức năng gan, ECG",
+                "Điều trị suy gan nếu có (supportive care)",
+                "Theo dõi và điều trị rối loạn nhịp tim nếu có",
+                "Tránh ánh nắng trực tiếp (phản ứng quang hóa)"
             ],
-            "monitoring": "Theo dõi men gan, ECG, điện giải, dấu hiệu lâm sàng trong 24-48 giờ."
+            "monitoring": "Chức năng gan, ECG, nồng độ voriconazole trong máu, dấu hiệu lâm sàng"
         },
         "reversal_agents": None,
         "administration_instructions": {
             "oral": {
-                "with_food": "Có thể uống cùng hoặc không cùng thức ăn",
-                "timing": "Liều tải: mỗi 8 giờ x 6 liều; sau đó 1 lần/ngày vào cùng thời điểm"
+                "with_food": "Uống với hoặc không thức ăn (không ảnh hưởng hấp thu)",
+                "timing": "Chia 2 lần/ngày. Loading dose: 400mg x 2 lần/ngày x 2 ngày đầu, sau đó 200mg x 2 lần/ngày."
             },
             "iv": {
-                "reconstitution": "Pha lọ 200mg base (372mg muối) với dung môi kèm theo, sau đó pha loãng trong 250ml NS hoặc D5W",
-                "infusion_rate": "Truyền trong ≥1 giờ",
+                "reconstitution": "Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất",
+                "infusion_rate": "Truyền trong 1-2 giờ",
                 "compatibility": ["NS", "D5W"],
                 "incompatibility": [],
-                "notes": "Không chứa cyclodextrin; theo dõi phản ứng truyền."
+                "notes": "Không dùng IV nếu CrCl <50 (chứa cyclodextrin, tích lũy ở suy thận). Loading dose: 6mg/kg x 2 lần/ngày x 2 ngày đầu, sau đó 4mg/kg x 2 lần/ngày. Truyền trong 1-2 giờ."
             }
         },
         "references": {
             "primary_sources": [
-                "FDA Drug Label - Cresemba (Isavuconazonium sulfate)",
-                "IDSA Guidelines - Treatment of Aspergillosis and Mucormycosis",
-                "UpToDate - Isavuconazole: Drug Information"
+                "FDA Drug Label - Voriconazole (Vfend)",
+                "UpToDate - Voriconazole Drug Information",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
             ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "High (FDA-approved, IDSA guideline-endorsed)"
-        }
-    }
+            "last_updated": "2025-01-15",
+            "evidence_level": "High (FDA-approved, extensive clinical data)"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+    },
+    
 }
 
 __all__ = ['AZOLES_DRUGS']

@@ -178,7 +178,7 @@ ACE_INHIBITORS_IV_DRUGS = {
             "last_updated": "2025-02-04",
             "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
         }
-    }
+    },
 }
 
 __all__ = ['ACE_INHIBITORS_IV_DRUGS']

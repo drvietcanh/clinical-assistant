@@ -431,7 +431,7 @@ POLYMYXIN_ANTIBIOTICS = {
             "WHO Essential Medicines List"
         ],
         "last_updated": "2025-02-18",
-    }
+    },
 }
 
 __all__ = ['POLYMYXIN_ANTIBIOTICS']

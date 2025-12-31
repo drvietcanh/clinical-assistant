@@ -308,7 +308,7 @@ OTHER_ANTIDIABETICS_DRUGS = {
             }
         },
         "black_box_warnings": None,
-}
+},
 }
 
 __all__ = ['OTHER_ANTIDIABETICS_DRUGS']

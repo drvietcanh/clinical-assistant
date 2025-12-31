@@ -4,6 +4,344 @@ Fosfomycin, Nitrofurantoin, Fidaxomicin
 """
 
 OTHER_ANTIBIOTICS = {
+    "Eravacycline": {
+        "group": "Antibiotic - Tetracycline (Next Generation)",
+        "vietnamese_name": "Eravacycline, Xerava",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn ổ bụng phức tạp (cIAI) do vi khuẩn Gram-âm, Gram-dương, và kỵ khí",
+            "Nhiễm khuẩn ổ bụng do vi khuẩn đa kháng",
+            "Nhiễm khuẩn do CRE (Carbapenem-resistant Enterobacteriaceae)",
+            "Nhiễm khuẩn do MDR Gram-âm (khi các kháng sinh khác không hiệu quả)"
+        ],
+        "contraindications": [
+            "Dị ứng eravacycline hoặc tetracycline",
+            "Trẻ em <18 tuổi - chưa được nghiên cứu",
+            "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)",
+            "Phụ nữ đang cho con bú - thận trọng"
+        ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng eravacycline hoặc tetracycline",
+                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)"
+            ],
+            "tương_đối": [
+                "Trẻ em <18 tuổi - chưa được nghiên cứu",
+                "Phụ nữ đang cho con bú - thận trọng"
+            ]
+        },
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Hydration đầy đủ để tăng thải trừ."},
+        "dosage": {
+            "adult_standard": "1mg/kg IV mỗi 12 giờ trong 4-14 ngày",
+            "adult_ciai": "1mg/kg IV mỗi 12 giờ trong 4-14 ngày",
+            "notes": "Eravacycline là tetracycline thế hệ mới, kháng được nhiều cơ chế kháng tetracycline. Dùng 2 lần/ngày. Truyền IV trong 60 phút. Điều chỉnh liều theo chức năng gan."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi (thải trừ qua gan và thận)"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn - phổ biến",
+            "Tiêu chảy",
+            "Phản ứng tại chỗ tiêm (đau, viêm tĩnh mạch)",
+            "Tăng transaminase (hiếm)",
+            "Nhạy cảm với ánh sáng (photosensitivity) - hiếm",
+            "Răng vàng (ở trẻ em, nếu dùng) - hiếm",
+            "Ức chế xương (ở trẻ em, nếu dùng) - hiếm"
+        ],
+        "interactions": [
+            "Warfarin: có thể tăng INR",
+            "Thuốc tránh thai đường uống: có thể giảm hiệu quả",
+            "Antacid, sắt, canxi: giảm hấp thu (nếu có dạng uống)",
+            "Penicillin: giảm hiệu quả penicillin (bacteriostatic vs bactericidal)"
+        ],
+        "pregnancy": "D - CHỐNG CHỈ ĐỊNH",
+        "mechanism_of_action": "Eravacycline là tetracycline thế hệ mới (fluorocycline), kháng được nhiều cơ chế kháng tetracycline (efflux pumps, ribosomal protection). Gắn với ribosome 30S của vi khuẩn, ngăn chặn sự gắn aminoacyl-tRNA với ribosome, dẫn đến ức chế tổng hợp protein (bacteriostatic). Phổ kháng khuẩn: Gram-dương (Staphylococcus - kể cả MRSA, Streptococcus, Enterococcus - kể cả VRE), Gram-âm (Enterobacteriaceae - kể cả CRE, E. coli, Klebsiella, Enterobacter, Acinetobacter), và kỵ khí (Bacteroides fragilis, Clostridium). Không hiệu quả với Pseudomonas aeruginosa. ĐẶC ĐIỂM: (1) Kháng được nhiều cơ chế kháng tetracycline (ưu điểm so với tetracycline cũ), (2) Hiệu quả với CRE và MDR Gram-âm, (3) Phổ rộng (Gram-dương, Gram-âm, kỵ khí), (4) Dùng 2 lần/ngày, (5) CHỐNG CHỈ ĐỊNH ở phụ nữ có thai (category D), (6) Buồn nôn, nôn phổ biến.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Dấu hiệu buồn nôn, nôn - phổ biến",
+            "Chức năng gan (ALT, AST) - hiếm",
+            "Dấu hiệu nhạy cảm với ánh sáng (đỏ da, phát ban)",
+            "PT/INR (nếu dùng với warfarin)"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH ở phụ nữ có thai (category D) - gây răng vàng và ức chế xương ở thai nhi",
+            "Buồn nôn, nôn phổ biến - có thể cần điều trị hỗ trợ",
+            "Truyền IV trong 60 phút để giảm phản ứng tại chỗ",
+            "Điều chỉnh liều theo chức năng gan (suy gan nặng)",
+            "Tránh ánh nắng mặt trời (nhạy cảm ánh sáng)",
+            "Theo dõi INR nếu dùng với warfarin",
+            "Không dùng với antacid, sắt, canxi cùng lúc (nếu có dạng uống)",
+            "Trẻ em <18 tuổi - chưa được nghiên cứu"
+        ],
+        "pharmacokinetics": {
+            "half_life": "20 giờ",
+            "onset": "Ngay lập tức sau khi tiêm IV",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "79-90%",
+            "metabolism": "Chuyển hóa một phần ở gan (CYP3A4)",
+            "clearance": "Thải trừ qua gan (50%) và thận (50%)"
+        },
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 6 giờ, hoặc trong tủ lạnh 24 giờ. Không đông lạnh.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở phụ nữ có thai (category D). Eravacycline gây răng vàng và ức chế xương ở thai nhi. Không dùng trong thai kỳ.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Eravacycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K.",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng eravacycline). Có thể cần giảm liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc tránh thai đường uống",
+                    "mechanism": "Tetracycline có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.",
+                    "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
+                    "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng eravacycline và 7 ngày sau khi ngừng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng eravacycline hoặc tetracycline",
+                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D, gây răng vàng và ức chế xương ở thai nhi)"
+            ],
+            "tương_đối": [
+                "Trẻ em <18 tuổi - chưa được nghiên cứu",
+                "Phụ nữ đang cho con bú - thận trọng",
+                "Suy gan nặng - điều chỉnh liều",
+                "Nhạy cảm với ánh sáng - tránh ánh nắng mặt trời"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Eravacycline là thuốc phân loại D. CHỐNG CHỈ ĐỊNH trong thai kỳ. Tetracycline gây răng vàng và ức chế xương ở thai nhi. Không dùng trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible with Caution",
+                "details": "Eravacycline bài tiết vào sữa mẹ. Tetracycline có thể gây răng vàng và ức chế xương ở trẻ bú mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Tránh dùng khi cho con bú. Nếu bắt buộc, theo dõi trẻ về dấu hiệu răng vàng và ức chế xương."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Giảm liều 25-50%",
+            "severe": "Giảm liều 50% hoặc tăng khoảng cách liều",
+            "notes": "Eravacycline chuyển hóa một phần ở gan (CYP3A4) và thải trừ qua gan (50%). Suy gan nặng có thể làm tích lũy eravacycline, tăng nguy cơ tác dụng phụ. Cần điều chỉnh liều ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn nặng",
+                "Tiêu chảy nặng",
+                "Tăng transaminase",
+                "Nhạy cảm với ánh sáng nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay eravacycline",
+                "Điều trị buồn nôn, nôn: Antiemetic (ondansetron, metoclopramide)",
+                "Điều trị tiêu chảy: Bù dịch, điện giải",
+                "Theo dõi: Dấu hiệu sinh tồn, chức năng gan"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST) trong ít nhất 24-48 giờ."
+        },
+        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có độc tính gan nặng."},
+        "administration_instructions": {
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 0.3-0.5mg/ml. Pha 1mg/kg trong 100ml = 0.01mg/ml (quá loãng). Pha 1mg/kg trong 250ml = 0.004mg/ml. Truyền trong 60 phút.",
+                "infusion_rate": "Truyền IV trong 60 phút. Tốc độ: 100ml/60 phút = ~1.7ml/phút.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Antacid, sắt, canxi - giảm hấp thu (nếu có dạng uống)",
+                    "Penicillin - giảm hiệu quả penicillin"
+                ],
+                "notes": "QUAN TRỌNG: 1) Dùng 2 lần/ngày (1mg/kg mỗi 12 giờ), 2) CHỐNG CHỈ ĐỊNH ở phụ nữ có thai, 3) Buồn nôn, nôn phổ biến, 4) Truyền IV trong 60 phút, 5) Điều chỉnh liều theo chức năng gan, 6) Tránh ánh nắng mặt trời."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Eravacycline (Xerava)",
+                "UpToDate - Eravacycline: Drug Information",
+                "Medscape - Eravacycline Drug Reference",
+                "IDSA Guidelines - Complicated Intra-abdominal Infections",
+                "IDSA Guidelines - Antimicrobial Resistance"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    
+    "Fidaxomicin": {
+        "group": "Antibiotic - Macrocyclic",
+        "vietnamese_name": "Fidaxomicin, Dificid",
+        "administration": ["PO"],
+        "indications": [
+            "Nhiễm Clostridioides difficile (C. diff) - đợt đầu tiên",
+            "Nhiễm C. diff tái phát",
+            "Nhiễm C. diff nặng",
+            "Dự phòng tái phát C. diff (ở bệnh nhân có nguy cơ cao)"
+        ],
+        "contraindications": [
+            "Dị ứng fidaxomicin",
+            "Trẻ em <18 tuổi - chưa có dữ liệu an toàn"
+        ],
+        "dosage": {
+            "adult_cdiff_first": "200mg PO x 2 lần/ngày x 10 ngày",
+            "adult_cdiff_recurrent": "200mg PO x 2 lần/ngày x 10 ngày",
+            "adult_cdiff_severe": "200mg PO x 2 lần/ngày x 10 ngày",
+            "notes": "Uống với hoặc không thức ăn. Liều cố định 200mg x 2 lần/ngày. Tỷ lệ tái phát thấp hơn vancomycin (ưu điểm chính). Không hấp thu vào máu (chỉ tác dụng tại ruột)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi (không hấp thu vào máu)",
+            "under_30": "Không đổi (không hấp thu vào máu)"
+        },
+        "side_effects": [
+            "Buồn nôn (phổ biến)",
+            "Nôn",
+            "Đau bụng",
+            "Tiêu chảy",
+            "Phát ban (hiếm)",
+            "Giảm bạch cầu (hiếm)",
+            "Tăng men gan (hiếm)"
+        ],
+        "interactions": [
+            "Cyclosporine: tăng nồng độ fidaxomicin (hiếm, vì fidaxomicin không hấp thu)",
+            "Không có tương tác đáng kể (không hấp thu vào máu)"
+        ],
+        "pregnancy": "B - An toàn trong thai kỳ",
+        "mechanism_of_action": "Fidaxomicin là kháng sinh macrocyclic, ức chế RNA polymerase của vi khuẩn, ngăn chặn tổng hợp RNA và protein. Phổ kháng khuẩn: Clostridioides difficile (C. diff) mạnh, một số vi khuẩn Gram-dương khác (Staphylococcus, Enterococcus), không có hoạt tính với vi khuẩn Gram-âm hoặc kỵ khí khác. ĐẶC ĐIỂM QUAN TRỌNG: (1) KHÔNG hấp thu vào máu (chỉ tác dụng tại ruột) - an toàn, ít tác dụng phụ toàn thân, (2) Tỷ lệ tái phát thấp hơn vancomycin (15-25% so với 25-35% của vancomycin) - ưu điểm chính, (3) Ít ảnh hưởng đến hệ vi khuẩn đường ruột bình thường (microbiome-sparing), (4) Hiệu quả với cả đợt đầu tiên và tái phát, (5) Đắt tiền hơn vancomycin. Được khuyến cáo là lựa chọn ưu tiên trong IDSA/SHEA 2021 guidelines cho C. diff.",
+        "monitoring": [
+            "Dấu hiệu nhiễm C. diff (tiêu chảy, đau bụng, sốt) để đánh giá đáp ứng điều trị",
+            "Xét nghiệm C. diff (NAAT, GDH, Toxin) - theo dõi đáp ứng",
+            "Công thức máu (CBC) - hiếm giảm bạch cầu",
+            "Chức năng gan (ALT, AST) - hiếm tăng men gan",
+            "Dấu hiệu tái phát (tiêu chảy tái phát sau khi ngừng thuốc)",
+            "Dấu hiệu dị ứng (phát ban) - hiếm"
+        ],
+        "precautions": [
+            "Chỉ dùng cho nhiễm C. diff - KHÔNG dùng cho nhiễm khuẩn khác",
+            "Uống với hoặc không thức ăn (không ảnh hưởng hấp thu vì không hấp thu)",
+            "Liều cố định 200mg x 2 lần/ngày - không cần điều chỉnh liều",
+            "Không cần điều chỉnh liều theo chức năng thận (không hấp thu vào máu)",
+            "Không cần điều chỉnh liều theo chức năng gan (không hấp thu vào máu)",
+            "Tỷ lệ tái phát thấp hơn vancomycin - ưu điểm chính",
+            "Ít ảnh hưởng đến hệ vi khuẩn đường ruột bình thường (microbiome-sparing)",
+            "Đắt tiền hơn vancomycin - cân nhắc chi phí",
+            "Theo dõi dấu hiệu tái phát sau khi ngừng thuốc"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (không hấp thu vào máu)",
+            "onset": "2-4 ngày (cải thiện triệu chứng)",
+            "duration": "10 ngày (liều chuẩn)",
+            "protein_binding": "Không áp dụng (không hấp thu vào máu)",
+            "clearance": "Không hấp thu vào máu, thải trừ qua phân (dạng nguyên dạng)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Cyclosporine",
+                    "mechanism": "Cyclosporine ức chế P-gp, có thể tăng nồng độ fidaxomicin (hiếm, vì fidaxomicin không hấp thu)",
+                    "effect": "Tăng nhẹ nồng độ fidaxomicin (không đáng kể vì không hấp thu)",
+                    "management": "Không cần điều chỉnh liều. Fidaxomicin không hấp thu vào máu, tương tác không đáng kể."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng fidaxomicin"
+            ],
+            "tương_đối": [
+                "Trẻ em <18 tuổi - chưa có dữ liệu an toàn",
+                "Có thai - thận trọng (phân loại B, nhưng dữ liệu còn hạn chế)"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng fidaxomicin"
+            ],
+            "tương_đối": [
+                "Trẻ em <18 tuổi - chưa có dữ liệu an toàn",
+                "Có thai - thận trọng (phân loại B, nhưng dữ liệu còn hạn chế)"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Fidaxomicin là thuốc phân loại B. Không có bằng chứng về nguy cơ dị tật thai nhi trong các nghiên cứu trên động vật. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh rõ ràng, nhưng dữ liệu còn hạn chế. Fidaxomicin không hấp thu vào máu (chỉ tác dụng tại ruột), nên ít có khả năng ảnh hưởng đến thai nhi. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong điều trị C. diff nặng. C. diff trong thai kỳ có thể gây nguy hiểm cho cả mẹ và thai nhi nếu không điều trị.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Fidaxomicin không hấp thu vào máu, nên không bài tiết vào sữa mẹ. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Fidaxomicin không hấp thu vào máu và không bài tiết vào sữa mẹ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều (không hấp thu vào máu)",
+            "moderate": "Không cần điều chỉnh liều (không hấp thu vào máu)",
+            "severe": "Không cần điều chỉnh liều (không hấp thu vào máu)",
+            "notes": "Fidaxomicin không hấp thu vào máu, chỉ tác dụng tại ruột. Không cần điều chỉnh liều ở bệnh nhân suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn nặng",
+                "Tiêu chảy",
+                "Đau bụng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng fidaxomicin",
+                "Điều trị triệu chứng tiêu hóa:",
+                "  - Chống nôn nếu cần",
+                "  - Truyền dịch nếu mất nước",
+                "  - Theo dõi điện giải",
+                "Theo dõi: Triệu chứng, điện giải"
+            ],
+            "monitoring": "Theo dõi triệu chứng, điện giải trong 24-48 giờ."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có reversal agent đặc hiệu. Điều trị hỗ trợ. Fidaxomicin không hấp thu vào máu, nên ít nguy cơ độc tính toàn thân."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với hoặc không thức ăn (không ảnh hưởng hấp thu vì không hấp thu vào máu).",
+                "timing": "200mg PO x 2 lần/ngày x 10 ngày. Uống đều đặn, cách đều nhau trong ngày (q12h). Không bỏ liều.",
+                "notes": "QUAN TRỌNG: 1) Chỉ dùng cho nhiễm C. diff, 2) Liều cố định 200mg x 2 lần/ngày, 3) Không cần điều chỉnh liều theo chức năng thận/gan (không hấp thu vào máu), 4) Tỷ lệ tái phát thấp hơn vancomycin (ưu điểm chính), 5) Ít ảnh hưởng đến hệ vi khuẩn đường ruột bình thường, 6) Đắt tiền hơn vancomycin."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Fidaxomicin (Dificid)",
+                "IDSA/SHEA Guidelines 2021 - Clostridioides difficile Infection",
+                "UpToDate - Fidaxomicin: Drug Information",
+                "Medscape - Fidaxomicin Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA/SHEA guidelines 2021, và dữ liệu lâm sàng từ nhiều nguồn"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"gastrointestinal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA/SHEA Guidelines - Clostridioides difficile Infection",
+            "IDSA Guidelines - Clostridium difficile Infection",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
+    },
+    
     "Fosfomycin": {
         "group": "Antibiotic - Phosphonic Acid",
         "vietnamese_name": "Fosfomycin, Monuril",
@@ -191,6 +529,186 @@ OTHER_ANTIBIOTICS = {
         "last_updated": "2025-02-18",
     },
     
+    "Lefamulin": {
+        "group": "Antibiotic - Pleuromutilin",
+        "vietnamese_name": "Lefamulin, Xenleta",
+        "administration": ["IV", "PO"],
+        "indications": [
+            "Viêm phổi cộng đồng (CABP) do vi khuẩn",
+            "Viêm phổi do MRSA",
+            "Viêm phổi do MDR Gram-âm (khi các kháng sinh khác không hiệu quả)"
+        ],
+        "contraindications": [
+            "Dị ứng lefamulin",
+            "Rối loạn nhịp tim (QT prolongation) - thận trọng",
+            "Dùng với thuốc kéo dài QT - thận trọng",
+            "Trẻ em <18 tuổi - chưa được nghiên cứu"
+        ],
+        "dosage": {
+            "adult_iv": "150mg IV mỗi 12 giờ trong 5-7 ngày",
+            "adult_po": "600mg PO mỗi 12 giờ trong 5-7 ngày",
+            "notes": "Lefamulin là pleuromutilin, có cả dạng IV và PO. Dùng 2 lần/ngày trong 5-7 ngày. Uống khi đói (1 giờ trước hoặc 2 giờ sau ăn). Có thể kéo dài QT interval."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi (thải trừ qua gan và thận)"
+        },
+        "side_effects": [
+            "Tiêu chảy - phổ biến",
+            "Buồn nôn, nôn",
+            "Phản ứng tại chỗ tiêm (IV) - đau, viêm tĩnh mạch",
+            "Kéo dài QT interval - phổ biến",
+            "Rối loạn nhịp tim (arrhythmia) - hiếm",
+            "Tăng transaminase (hiếm)",
+            "Đau đầu"
+        ],
+        "interactions": [
+            "Thuốc kéo dài QT (quinidine, procainamide, amiodarone, sotalol): tăng nguy cơ kéo dài QT",
+            "CYP3A4 inhibitors (ketoconazole, clarithromycin): tăng nồng độ lefamulin",
+            "CYP3A4 inducers (rifampin, carbamazepine): giảm nồng độ lefamulin",
+            "P-glycoprotein inhibitors: tăng nồng độ lefamulin"
+        ],
+        "pregnancy": "C - Thận trọng",
+        "mechanism_of_action": "Lefamulin là pleuromutilin (kháng sinh mới), gắn với ribosome 50S của vi khuẩn tại vị trí peptidyl transferase center, ngăn chặn sự tổng hợp protein, dẫn đến tiêu diệt vi khuẩn (bactericidal). Phổ kháng khuẩn: Gram-dương (Staphylococcus - kể cả MRSA, Streptococcus, Enterococcus - kể cả VRE), Gram-âm (Haemophilus influenzae, Moraxella catarrhalis), và một số kỵ khí (Mycoplasma pneumoniae, Chlamydia pneumoniae, Legionella pneumophila). Không hiệu quả với Enterobacteriaceae, Pseudomonas, hoặc Acinetobacter. ĐẶC ĐIỂM: (1) Pleuromutilin (kháng sinh mới, cơ chế độc đáo), (2) Hiệu quả với MRSA và viêm phổi cộng đồng, (3) Có cả dạng IV và PO (ưu điểm), (4) Dùng 2 lần/ngày trong 5-7 ngày, (5) Có thể kéo dài QT interval - cần theo dõi ECG, (6) Tiêu chảy phổ biến.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "ECG - QUAN TRỌNG: theo dõi QT interval (có thể kéo dài)",
+            "Dấu hiệu rối loạn nhịp tim (palpitations, chóng mặt, ngất)",
+            "Dấu hiệu tiêu chảy - phổ biến",
+            "Chức năng gan (ALT, AST) - hiếm"
+        ],
+        "precautions": [
+            "Có thể kéo dài QT interval - theo dõi ECG trước và sau điều trị",
+            "Thận trọng ở bệnh nhân có rối loạn nhịp tim hoặc dùng thuốc kéo dài QT",
+            "Tiêu chảy phổ biến - có thể cần điều trị hỗ trợ",
+            "Uống khi đói (1 giờ trước hoặc 2 giờ sau ăn) để tăng hấp thu (PO)",
+            "Tránh dùng với CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin) - tăng nồng độ",
+            "Tránh dùng với CYP3A4 inducers mạnh (rifampin, carbamazepine) - giảm nồng độ",
+            "Trẻ em <18 tuổi - chưa được nghiên cứu"
+        ],
+        "pharmacokinetics": {
+            "half_life": "8 giờ",
+            "onset": "Ngay lập tức sau khi tiêm IV, 1-2 giờ sau khi uống (PO)",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": "94-97%",
+            "metabolism": "Chuyển hóa một phần ở gan (CYP3A4)",
+            "clearance": "Thải trừ qua gan (50%) và thận (50%)"
+        },
+        "storage": "Bảo quản bột khô (IV) và viên nén (PO) ở nhiệt độ phòng (20-25°C). Sau khi pha (IV): bảo quản ở nhiệt độ phòng 6 giờ, hoặc trong tủ lạnh 24 giờ. Không đông lạnh.",
+        "black_box_warnings": "Có thể kéo dài QT interval và gây rối loạn nhịp tim. Theo dõi ECG trước và sau điều trị. Thận trọng ở bệnh nhân có rối loạn nhịp tim hoặc dùng thuốc kéo dài QT.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc kéo dài QT (Quinidine, Procainamide, Amiodarone, Sotalol)",
+                    "mechanism": "Cả hai đều kéo dài QT interval, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ kéo dài QT nặng, rối loạn nhịp tim (torsades de pointes)",
+                    "management": "TRÁNH DÙNG CÙNG. Nếu bắt buộc, theo dõi ECG chặt chẽ trước và sau điều trị. Theo dõi QT interval."
+                },
+                {
+                    "drug": "CYP3A4 Inhibitors mạnh (Ketoconazole, Clarithromycin, Itraconazole)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ lefamulin",
+                    "effect": "Tăng nồng độ lefamulin, tăng nguy cơ tác dụng phụ (kéo dài QT)",
+                    "management": "TRÁNH DÙNG CÙNG. Nếu bắt buộc, giảm liều lefamulin và theo dõi ECG chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 Inducers mạnh (Rifampin, Carbamazepine, Phenytoin)",
+                    "mechanism": "Cảm ứng CYP3A4, giảm nồng độ lefamulin",
+                    "effect": "Giảm nồng độ lefamulin, giảm hiệu quả",
+                    "management": "Thận trọng. Có thể cần tăng liều lefamulin. Theo dõi đáp ứng điều trị."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng lefamulin"
+            ],
+            "tương_đối": [
+                "Rối loạn nhịp tim (QT prolongation) - thận trọng, theo dõi ECG",
+                "Dùng với thuốc kéo dài QT - thận trọng, theo dõi ECG",
+                "Trẻ em <18 tuổi - chưa được nghiên cứu",
+                "Có thai (category C) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Lefamulin là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
+            "lactation": {
+                "safety": "Compatible with Caution",
+                "details": "Lefamulin bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Theo dõi trẻ về dấu hiệu tiêu chảy."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Giảm liều 25-50%",
+            "severe": "Giảm liều 50% hoặc tăng khoảng cách liều",
+            "notes": "Lefamulin chuyển hóa một phần ở gan (CYP3A4) và thải trừ qua gan (50%). Suy gan nặng có thể làm tích lũy lefamulin, tăng nguy cơ tác dụng phụ (kéo dài QT). Cần điều chỉnh liều ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kéo dài QT interval nặng",
+                "Rối loạn nhịp tim (torsades de pointes) - NGUY HIỂM",
+                "Tiêu chảy nặng",
+                "Buồn nôn, nôn nặng"
+            ],
+            "antidote": "Magnesium sulfate cho torsades de pointes. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay lefamulin",
+                "Nếu torsades de pointes:",
+                "  - Magnesium sulfate 1-2g IV",
+                "  - Điều chỉnh điện giải (K+, Mg2+)",
+                "  - Máy tạo nhịp tạm thời nếu cần",
+                "Nếu tiêu chảy nặng:",
+                "  - Bù dịch, điện giải",
+                "  - Điều trị hỗ trợ",
+                "Theo dõi: ECG, dấu hiệu sinh tồn, điện giải"
+            ],
+            "monitoring": "Theo dõi ECG (QT interval), dấu hiệu sinh tồn, điện giải (K+, Mg2+) trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có rối loạn nhịp tim."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Magnesium Sulfate",
+                    "mechanism": "Điều trị torsades de pointes do kéo dài QT",
+                    "indication": "Torsades de pointes do lefamulin",
+                    "dose": "1-2g IV, lặp lại nếu cần"
+                }
+            ],
+            "notes": "Magnesium sulfate điều trị torsades de pointes do kéo dài QT interval."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống khi đói (1 giờ trước hoặc 2 giờ sau ăn) để tăng hấp thu",
+                "timing": "600mg PO mỗi 12 giờ trong 5-7 ngày. Uống đều đặn, cách đều nhau trong ngày."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 1.5mg/ml. Pha 150mg trong 100ml = 1.5mg/ml. Truyền trong 60 phút.",
+                "infusion_rate": "Truyền IV trong 60 phút. Tốc độ: 100ml/60 phút = ~1.7ml/phút.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Thuốc kéo dài QT - tăng nguy cơ kéo dài QT",
+                    "CYP3A4 inhibitors mạnh - tăng nồng độ"
+                ],
+                "notes": "QUAN TRỌNG: 1) Dùng 2 lần/ngày (150mg IV hoặc 600mg PO mỗi 12 giờ), 2) Có thể kéo dài QT interval - theo dõi ECG, 3) Tiêu chảy phổ biến, 4) Uống khi đói (PO), 5) Tránh dùng với thuốc kéo dài QT, 6) Tránh dùng với CYP3A4 inhibitors mạnh."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Lefamulin (Xenleta)",
+                "UpToDate - Lefamulin: Drug Information",
+                "Medscape - Lefamulin Drug Reference",
+                "IDSA Guidelines - Community-Acquired Pneumonia"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
     "Nitrofurantoin": {
         "group": "Antibiotic - Nitrofuran",
         "vietnamese_name": "Nitrofurantoin, Macrobid, Macrodantin",
@@ -396,344 +914,6 @@ OTHER_ANTIBIOTICS = {
         "last_updated": "2025-02-18",
     },
     
-    "Fidaxomicin": {
-        "group": "Antibiotic - Macrocyclic",
-        "vietnamese_name": "Fidaxomicin, Dificid",
-        "administration": ["PO"],
-        "indications": [
-            "Nhiễm Clostridioides difficile (C. diff) - đợt đầu tiên",
-            "Nhiễm C. diff tái phát",
-            "Nhiễm C. diff nặng",
-            "Dự phòng tái phát C. diff (ở bệnh nhân có nguy cơ cao)"
-        ],
-        "contraindications": [
-            "Dị ứng fidaxomicin",
-            "Trẻ em <18 tuổi - chưa có dữ liệu an toàn"
-        ],
-        "dosage": {
-            "adult_cdiff_first": "200mg PO x 2 lần/ngày x 10 ngày",
-            "adult_cdiff_recurrent": "200mg PO x 2 lần/ngày x 10 ngày",
-            "adult_cdiff_severe": "200mg PO x 2 lần/ngày x 10 ngày",
-            "notes": "Uống với hoặc không thức ăn. Liều cố định 200mg x 2 lần/ngày. Tỷ lệ tái phát thấp hơn vancomycin (ưu điểm chính). Không hấp thu vào máu (chỉ tác dụng tại ruột)."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi (không hấp thu vào máu)",
-            "under_30": "Không đổi (không hấp thu vào máu)"
-        },
-        "side_effects": [
-            "Buồn nôn (phổ biến)",
-            "Nôn",
-            "Đau bụng",
-            "Tiêu chảy",
-            "Phát ban (hiếm)",
-            "Giảm bạch cầu (hiếm)",
-            "Tăng men gan (hiếm)"
-        ],
-        "interactions": [
-            "Cyclosporine: tăng nồng độ fidaxomicin (hiếm, vì fidaxomicin không hấp thu)",
-            "Không có tương tác đáng kể (không hấp thu vào máu)"
-        ],
-        "pregnancy": "B - An toàn trong thai kỳ",
-        "mechanism_of_action": "Fidaxomicin là kháng sinh macrocyclic, ức chế RNA polymerase của vi khuẩn, ngăn chặn tổng hợp RNA và protein. Phổ kháng khuẩn: Clostridioides difficile (C. diff) mạnh, một số vi khuẩn Gram-dương khác (Staphylococcus, Enterococcus), không có hoạt tính với vi khuẩn Gram-âm hoặc kỵ khí khác. ĐẶC ĐIỂM QUAN TRỌNG: (1) KHÔNG hấp thu vào máu (chỉ tác dụng tại ruột) - an toàn, ít tác dụng phụ toàn thân, (2) Tỷ lệ tái phát thấp hơn vancomycin (15-25% so với 25-35% của vancomycin) - ưu điểm chính, (3) Ít ảnh hưởng đến hệ vi khuẩn đường ruột bình thường (microbiome-sparing), (4) Hiệu quả với cả đợt đầu tiên và tái phát, (5) Đắt tiền hơn vancomycin. Được khuyến cáo là lựa chọn ưu tiên trong IDSA/SHEA 2021 guidelines cho C. diff.",
-        "monitoring": [
-            "Dấu hiệu nhiễm C. diff (tiêu chảy, đau bụng, sốt) để đánh giá đáp ứng điều trị",
-            "Xét nghiệm C. diff (NAAT, GDH, Toxin) - theo dõi đáp ứng",
-            "Công thức máu (CBC) - hiếm giảm bạch cầu",
-            "Chức năng gan (ALT, AST) - hiếm tăng men gan",
-            "Dấu hiệu tái phát (tiêu chảy tái phát sau khi ngừng thuốc)",
-            "Dấu hiệu dị ứng (phát ban) - hiếm"
-        ],
-        "precautions": [
-            "Chỉ dùng cho nhiễm C. diff - KHÔNG dùng cho nhiễm khuẩn khác",
-            "Uống với hoặc không thức ăn (không ảnh hưởng hấp thu vì không hấp thu)",
-            "Liều cố định 200mg x 2 lần/ngày - không cần điều chỉnh liều",
-            "Không cần điều chỉnh liều theo chức năng thận (không hấp thu vào máu)",
-            "Không cần điều chỉnh liều theo chức năng gan (không hấp thu vào máu)",
-            "Tỷ lệ tái phát thấp hơn vancomycin - ưu điểm chính",
-            "Ít ảnh hưởng đến hệ vi khuẩn đường ruột bình thường (microbiome-sparing)",
-            "Đắt tiền hơn vancomycin - cân nhắc chi phí",
-            "Theo dõi dấu hiệu tái phát sau khi ngừng thuốc"
-        ],
-        "pharmacokinetics": {
-            "half_life": "Không áp dụng (không hấp thu vào máu)",
-            "onset": "2-4 ngày (cải thiện triệu chứng)",
-            "duration": "10 ngày (liều chuẩn)",
-            "protein_binding": "Không áp dụng (không hấp thu vào máu)",
-            "clearance": "Không hấp thu vào máu, thải trừ qua phân (dạng nguyên dạng)"
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": None,
-        "drug_interactions": {
-            "major": [],
-            "moderate": [
-                {
-                    "drug": "Cyclosporine",
-                    "mechanism": "Cyclosporine ức chế P-gp, có thể tăng nồng độ fidaxomicin (hiếm, vì fidaxomicin không hấp thu)",
-                    "effect": "Tăng nhẹ nồng độ fidaxomicin (không đáng kể vì không hấp thu)",
-                    "management": "Không cần điều chỉnh liều. Fidaxomicin không hấp thu vào máu, tương tác không đáng kể."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng fidaxomicin"
-            ],
-            "tương_đối": [
-                "Trẻ em <18 tuổi - chưa có dữ liệu an toàn",
-                "Có thai - thận trọng (phân loại B, nhưng dữ liệu còn hạn chế)"
-            ]
-        },
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng fidaxomicin"
-            ],
-            "tương_đối": [
-                "Trẻ em <18 tuổi - chưa có dữ liệu an toàn",
-                "Có thai - thận trọng (phân loại B, nhưng dữ liệu còn hạn chế)"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "B",
-            "pregnancy_details": "Fidaxomicin là thuốc phân loại B. Không có bằng chứng về nguy cơ dị tật thai nhi trong các nghiên cứu trên động vật. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh rõ ràng, nhưng dữ liệu còn hạn chế. Fidaxomicin không hấp thu vào máu (chỉ tác dụng tại ruột), nên ít có khả năng ảnh hưởng đến thai nhi. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong điều trị C. diff nặng. C. diff trong thai kỳ có thể gây nguy hiểm cho cả mẹ và thai nhi nếu không điều trị.",
-            "lactation": {
-                "safety": "Compatible",
-                "details": "Fidaxomicin không hấp thu vào máu, nên không bài tiết vào sữa mẹ. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
-                "recommendation": "Có thể dùng khi cho con bú. Fidaxomicin không hấp thu vào máu và không bài tiết vào sữa mẹ."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều (không hấp thu vào máu)",
-            "moderate": "Không cần điều chỉnh liều (không hấp thu vào máu)",
-            "severe": "Không cần điều chỉnh liều (không hấp thu vào máu)",
-            "notes": "Fidaxomicin không hấp thu vào máu, chỉ tác dụng tại ruột. Không cần điều chỉnh liều ở bệnh nhân suy gan."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Buồn nôn, nôn nặng",
-                "Tiêu chảy",
-                "Đau bụng"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng fidaxomicin",
-                "Điều trị triệu chứng tiêu hóa:",
-                "  - Chống nôn nếu cần",
-                "  - Truyền dịch nếu mất nước",
-                "  - Theo dõi điện giải",
-                "Theo dõi: Triệu chứng, điện giải"
-            ],
-            "monitoring": "Theo dõi triệu chứng, điện giải trong 24-48 giờ."
-        },
-        "reversal_agents": {
-            "available": False,
-            "agents": [],
-            "notes": "Không có reversal agent đặc hiệu. Điều trị hỗ trợ. Fidaxomicin không hấp thu vào máu, nên ít nguy cơ độc tính toàn thân."
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Uống với hoặc không thức ăn (không ảnh hưởng hấp thu vì không hấp thu vào máu).",
-                "timing": "200mg PO x 2 lần/ngày x 10 ngày. Uống đều đặn, cách đều nhau trong ngày (q12h). Không bỏ liều.",
-                "notes": "QUAN TRỌNG: 1) Chỉ dùng cho nhiễm C. diff, 2) Liều cố định 200mg x 2 lần/ngày, 3) Không cần điều chỉnh liều theo chức năng thận/gan (không hấp thu vào máu), 4) Tỷ lệ tái phát thấp hơn vancomycin (ưu điểm chính), 5) Ít ảnh hưởng đến hệ vi khuẩn đường ruột bình thường, 6) Đắt tiền hơn vancomycin."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Fidaxomicin (Dificid)",
-                "IDSA/SHEA Guidelines 2021 - Clostridioides difficile Infection",
-                "UpToDate - Fidaxomicin: Drug Information",
-                "Medscape - Fidaxomicin Drug Reference"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, IDSA/SHEA guidelines 2021, và dữ liệu lâm sàng từ nhiều nguồn"
-        },
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"gastrointestinal": "Low"}
-        },
-        "guideline_tags": [
-            "IDSA/SHEA Guidelines - Clostridioides difficile Infection",
-            "IDSA Guidelines - Clostridium difficile Infection",
-            "WHO Essential Medicines List"
-        ],
-        "last_updated": "2025-02-18",
-    },
-    
-    "Eravacycline": {
-        "group": "Antibiotic - Tetracycline (Next Generation)",
-        "vietnamese_name": "Eravacycline, Xerava",
-        "administration": ["IV"],
-        "indications": [
-            "Nhiễm khuẩn ổ bụng phức tạp (cIAI) do vi khuẩn Gram-âm, Gram-dương, và kỵ khí",
-            "Nhiễm khuẩn ổ bụng do vi khuẩn đa kháng",
-            "Nhiễm khuẩn do CRE (Carbapenem-resistant Enterobacteriaceae)",
-            "Nhiễm khuẩn do MDR Gram-âm (khi các kháng sinh khác không hiệu quả)"
-        ],
-        "contraindications": [
-            "Dị ứng eravacycline hoặc tetracycline",
-            "Trẻ em <18 tuổi - chưa được nghiên cứu",
-            "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)",
-            "Phụ nữ đang cho con bú - thận trọng"
-        ],
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng eravacycline hoặc tetracycline",
-                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)"
-            ],
-            "tương_đối": [
-                "Trẻ em <18 tuổi - chưa được nghiên cứu",
-                "Phụ nữ đang cho con bú - thận trọng"
-            ]
-        },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Hydration đầy đủ để tăng thải trừ."},
-        "dosage": {
-            "adult_standard": "1mg/kg IV mỗi 12 giờ trong 4-14 ngày",
-            "adult_ciai": "1mg/kg IV mỗi 12 giờ trong 4-14 ngày",
-            "notes": "Eravacycline là tetracycline thế hệ mới, kháng được nhiều cơ chế kháng tetracycline. Dùng 2 lần/ngày. Truyền IV trong 60 phút. Điều chỉnh liều theo chức năng gan."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Không đổi (thải trừ qua gan và thận)"
-        },
-        "side_effects": [
-            "Buồn nôn, nôn - phổ biến",
-            "Tiêu chảy",
-            "Phản ứng tại chỗ tiêm (đau, viêm tĩnh mạch)",
-            "Tăng transaminase (hiếm)",
-            "Nhạy cảm với ánh sáng (photosensitivity) - hiếm",
-            "Răng vàng (ở trẻ em, nếu dùng) - hiếm",
-            "Ức chế xương (ở trẻ em, nếu dùng) - hiếm"
-        ],
-        "interactions": [
-            "Warfarin: có thể tăng INR",
-            "Thuốc tránh thai đường uống: có thể giảm hiệu quả",
-            "Antacid, sắt, canxi: giảm hấp thu (nếu có dạng uống)",
-            "Penicillin: giảm hiệu quả penicillin (bacteriostatic vs bactericidal)"
-        ],
-        "pregnancy": "D - CHỐNG CHỈ ĐỊNH",
-        "mechanism_of_action": "Eravacycline là tetracycline thế hệ mới (fluorocycline), kháng được nhiều cơ chế kháng tetracycline (efflux pumps, ribosomal protection). Gắn với ribosome 30S của vi khuẩn, ngăn chặn sự gắn aminoacyl-tRNA với ribosome, dẫn đến ức chế tổng hợp protein (bacteriostatic). Phổ kháng khuẩn: Gram-dương (Staphylococcus - kể cả MRSA, Streptococcus, Enterococcus - kể cả VRE), Gram-âm (Enterobacteriaceae - kể cả CRE, E. coli, Klebsiella, Enterobacter, Acinetobacter), và kỵ khí (Bacteroides fragilis, Clostridium). Không hiệu quả với Pseudomonas aeruginosa. ĐẶC ĐIỂM: (1) Kháng được nhiều cơ chế kháng tetracycline (ưu điểm so với tetracycline cũ), (2) Hiệu quả với CRE và MDR Gram-âm, (3) Phổ rộng (Gram-dương, Gram-âm, kỵ khí), (4) Dùng 2 lần/ngày, (5) CHỐNG CHỈ ĐỊNH ở phụ nữ có thai (category D), (6) Buồn nôn, nôn phổ biến.",
-        "monitoring": [
-            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
-            "Cấy máu và cấy từ vị trí nhiễm trùng",
-            "Dấu hiệu buồn nôn, nôn - phổ biến",
-            "Chức năng gan (ALT, AST) - hiếm",
-            "Dấu hiệu nhạy cảm với ánh sáng (đỏ da, phát ban)",
-            "PT/INR (nếu dùng với warfarin)"
-        ],
-        "precautions": [
-            "CHỐNG CHỈ ĐỊNH ở phụ nữ có thai (category D) - gây răng vàng và ức chế xương ở thai nhi",
-            "Buồn nôn, nôn phổ biến - có thể cần điều trị hỗ trợ",
-            "Truyền IV trong 60 phút để giảm phản ứng tại chỗ",
-            "Điều chỉnh liều theo chức năng gan (suy gan nặng)",
-            "Tránh ánh nắng mặt trời (nhạy cảm ánh sáng)",
-            "Theo dõi INR nếu dùng với warfarin",
-            "Không dùng với antacid, sắt, canxi cùng lúc (nếu có dạng uống)",
-            "Trẻ em <18 tuổi - chưa được nghiên cứu"
-        ],
-        "pharmacokinetics": {
-            "half_life": "20 giờ",
-            "onset": "Ngay lập tức sau khi tiêm IV",
-            "duration": "12 giờ (dùng 2 lần/ngày)",
-            "protein_binding": "79-90%",
-            "metabolism": "Chuyển hóa một phần ở gan (CYP3A4)",
-            "clearance": "Thải trừ qua gan (50%) và thận (50%)"
-        },
-        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 6 giờ, hoặc trong tủ lạnh 24 giờ. Không đông lạnh.",
-        "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở phụ nữ có thai (category D). Eravacycline gây răng vàng và ức chế xương ở thai nhi. Không dùng trong thai kỳ.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Warfarin",
-                    "mechanism": "Eravacycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K.",
-                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng eravacycline). Có thể cần giảm liều warfarin."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "Thuốc tránh thai đường uống",
-                    "mechanism": "Tetracycline có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.",
-                    "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
-                    "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng eravacycline và 7 ngày sau khi ngừng."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng eravacycline hoặc tetracycline",
-                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D, gây răng vàng và ức chế xương ở thai nhi)"
-            ],
-            "tương_đối": [
-                "Trẻ em <18 tuổi - chưa được nghiên cứu",
-                "Phụ nữ đang cho con bú - thận trọng",
-                "Suy gan nặng - điều chỉnh liều",
-                "Nhạy cảm với ánh sáng - tránh ánh nắng mặt trời"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "D",
-            "pregnancy_details": "Eravacycline là thuốc phân loại D. CHỐNG CHỈ ĐỊNH trong thai kỳ. Tetracycline gây răng vàng và ức chế xương ở thai nhi. Không dùng trong thai kỳ.",
-            "lactation": {
-                "safety": "Compatible with Caution",
-                "details": "Eravacycline bài tiết vào sữa mẹ. Tetracycline có thể gây răng vàng và ức chế xương ở trẻ bú mẹ. Thận trọng khi cho con bú.",
-                "recommendation": "Tránh dùng khi cho con bú. Nếu bắt buộc, theo dõi trẻ về dấu hiệu răng vàng và ức chế xương."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Giảm liều 25-50%",
-            "severe": "Giảm liều 50% hoặc tăng khoảng cách liều",
-            "notes": "Eravacycline chuyển hóa một phần ở gan (CYP3A4) và thải trừ qua gan (50%). Suy gan nặng có thể làm tích lũy eravacycline, tăng nguy cơ tác dụng phụ. Cần điều chỉnh liều ở suy gan nặng."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Buồn nôn, nôn nặng",
-                "Tiêu chảy nặng",
-                "Tăng transaminase",
-                "Nhạy cảm với ánh sáng nặng"
-            ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng ngay eravacycline",
-                "Điều trị buồn nôn, nôn: Antiemetic (ondansetron, metoclopramide)",
-                "Điều trị tiêu chảy: Bù dịch, điện giải",
-                "Theo dõi: Dấu hiệu sinh tồn, chức năng gan"
-            ],
-            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST) trong ít nhất 24-48 giờ."
-        },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có độc tính gan nặng."},
-        "administration_instructions": {
-            "oral": None,
-            "iv": {
-                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 0.3-0.5mg/ml. Pha 1mg/kg trong 100ml = 0.01mg/ml (quá loãng). Pha 1mg/kg trong 250ml = 0.004mg/ml. Truyền trong 60 phút.",
-                "infusion_rate": "Truyền IV trong 60 phút. Tốc độ: 100ml/60 phút = ~1.7ml/phút.",
-                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
-                "incompatibility": [
-                    "Antacid, sắt, canxi - giảm hấp thu (nếu có dạng uống)",
-                    "Penicillin - giảm hiệu quả penicillin"
-                ],
-                "notes": "QUAN TRỌNG: 1) Dùng 2 lần/ngày (1mg/kg mỗi 12 giờ), 2) CHỐNG CHỈ ĐỊNH ở phụ nữ có thai, 3) Buồn nôn, nôn phổ biến, 4) Truyền IV trong 60 phút, 5) Điều chỉnh liều theo chức năng gan, 6) Tránh ánh nắng mặt trời."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Eravacycline (Xerava)",
-                "UpToDate - Eravacycline: Drug Information",
-                "Medscape - Eravacycline Drug Reference",
-                "IDSA Guidelines - Complicated Intra-abdominal Infections",
-                "IDSA Guidelines - Antimicrobial Resistance"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
-    },
-    
     "Omadacycline": {
         "group": "Antibiotic - Tetracycline (Next Generation)",
         "vietnamese_name": "Omadacycline, Nuzyra",
@@ -904,186 +1084,6 @@ OTHER_ANTIBIOTICS = {
         }
     },
     
-    "Lefamulin": {
-        "group": "Antibiotic - Pleuromutilin",
-        "vietnamese_name": "Lefamulin, Xenleta",
-        "administration": ["IV", "PO"],
-        "indications": [
-            "Viêm phổi cộng đồng (CABP) do vi khuẩn",
-            "Viêm phổi do MRSA",
-            "Viêm phổi do MDR Gram-âm (khi các kháng sinh khác không hiệu quả)"
-        ],
-        "contraindications": [
-            "Dị ứng lefamulin",
-            "Rối loạn nhịp tim (QT prolongation) - thận trọng",
-            "Dùng với thuốc kéo dài QT - thận trọng",
-            "Trẻ em <18 tuổi - chưa được nghiên cứu"
-        ],
-        "dosage": {
-            "adult_iv": "150mg IV mỗi 12 giờ trong 5-7 ngày",
-            "adult_po": "600mg PO mỗi 12 giờ trong 5-7 ngày",
-            "notes": "Lefamulin là pleuromutilin, có cả dạng IV và PO. Dùng 2 lần/ngày trong 5-7 ngày. Uống khi đói (1 giờ trước hoặc 2 giờ sau ăn). Có thể kéo dài QT interval."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Không đổi (thải trừ qua gan và thận)"
-        },
-        "side_effects": [
-            "Tiêu chảy - phổ biến",
-            "Buồn nôn, nôn",
-            "Phản ứng tại chỗ tiêm (IV) - đau, viêm tĩnh mạch",
-            "Kéo dài QT interval - phổ biến",
-            "Rối loạn nhịp tim (arrhythmia) - hiếm",
-            "Tăng transaminase (hiếm)",
-            "Đau đầu"
-        ],
-        "interactions": [
-            "Thuốc kéo dài QT (quinidine, procainamide, amiodarone, sotalol): tăng nguy cơ kéo dài QT",
-            "CYP3A4 inhibitors (ketoconazole, clarithromycin): tăng nồng độ lefamulin",
-            "CYP3A4 inducers (rifampin, carbamazepine): giảm nồng độ lefamulin",
-            "P-glycoprotein inhibitors: tăng nồng độ lefamulin"
-        ],
-        "pregnancy": "C - Thận trọng",
-        "mechanism_of_action": "Lefamulin là pleuromutilin (kháng sinh mới), gắn với ribosome 50S của vi khuẩn tại vị trí peptidyl transferase center, ngăn chặn sự tổng hợp protein, dẫn đến tiêu diệt vi khuẩn (bactericidal). Phổ kháng khuẩn: Gram-dương (Staphylococcus - kể cả MRSA, Streptococcus, Enterococcus - kể cả VRE), Gram-âm (Haemophilus influenzae, Moraxella catarrhalis), và một số kỵ khí (Mycoplasma pneumoniae, Chlamydia pneumoniae, Legionella pneumophila). Không hiệu quả với Enterobacteriaceae, Pseudomonas, hoặc Acinetobacter. ĐẶC ĐIỂM: (1) Pleuromutilin (kháng sinh mới, cơ chế độc đáo), (2) Hiệu quả với MRSA và viêm phổi cộng đồng, (3) Có cả dạng IV và PO (ưu điểm), (4) Dùng 2 lần/ngày trong 5-7 ngày, (5) Có thể kéo dài QT interval - cần theo dõi ECG, (6) Tiêu chảy phổ biến.",
-        "monitoring": [
-            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
-            "Cấy máu và cấy từ vị trí nhiễm trùng",
-            "ECG - QUAN TRỌNG: theo dõi QT interval (có thể kéo dài)",
-            "Dấu hiệu rối loạn nhịp tim (palpitations, chóng mặt, ngất)",
-            "Dấu hiệu tiêu chảy - phổ biến",
-            "Chức năng gan (ALT, AST) - hiếm"
-        ],
-        "precautions": [
-            "Có thể kéo dài QT interval - theo dõi ECG trước và sau điều trị",
-            "Thận trọng ở bệnh nhân có rối loạn nhịp tim hoặc dùng thuốc kéo dài QT",
-            "Tiêu chảy phổ biến - có thể cần điều trị hỗ trợ",
-            "Uống khi đói (1 giờ trước hoặc 2 giờ sau ăn) để tăng hấp thu (PO)",
-            "Tránh dùng với CYP3A4 inhibitors mạnh (ketoconazole, clarithromycin) - tăng nồng độ",
-            "Tránh dùng với CYP3A4 inducers mạnh (rifampin, carbamazepine) - giảm nồng độ",
-            "Trẻ em <18 tuổi - chưa được nghiên cứu"
-        ],
-        "pharmacokinetics": {
-            "half_life": "8 giờ",
-            "onset": "Ngay lập tức sau khi tiêm IV, 1-2 giờ sau khi uống (PO)",
-            "duration": "12 giờ (dùng 2 lần/ngày)",
-            "protein_binding": "94-97%",
-            "metabolism": "Chuyển hóa một phần ở gan (CYP3A4)",
-            "clearance": "Thải trừ qua gan (50%) và thận (50%)"
-        },
-        "storage": "Bảo quản bột khô (IV) và viên nén (PO) ở nhiệt độ phòng (20-25°C). Sau khi pha (IV): bảo quản ở nhiệt độ phòng 6 giờ, hoặc trong tủ lạnh 24 giờ. Không đông lạnh.",
-        "black_box_warnings": "Có thể kéo dài QT interval và gây rối loạn nhịp tim. Theo dõi ECG trước và sau điều trị. Thận trọng ở bệnh nhân có rối loạn nhịp tim hoặc dùng thuốc kéo dài QT.",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Thuốc kéo dài QT (Quinidine, Procainamide, Amiodarone, Sotalol)",
-                    "mechanism": "Cả hai đều kéo dài QT interval, tác dụng cộng dồn",
-                    "effect": "Tăng nguy cơ kéo dài QT nặng, rối loạn nhịp tim (torsades de pointes)",
-                    "management": "TRÁNH DÙNG CÙNG. Nếu bắt buộc, theo dõi ECG chặt chẽ trước và sau điều trị. Theo dõi QT interval."
-                },
-                {
-                    "drug": "CYP3A4 Inhibitors mạnh (Ketoconazole, Clarithromycin, Itraconazole)",
-                    "mechanism": "Ức chế CYP3A4, tăng nồng độ lefamulin",
-                    "effect": "Tăng nồng độ lefamulin, tăng nguy cơ tác dụng phụ (kéo dài QT)",
-                    "management": "TRÁNH DÙNG CÙNG. Nếu bắt buộc, giảm liều lefamulin và theo dõi ECG chặt chẽ."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "CYP3A4 Inducers mạnh (Rifampin, Carbamazepine, Phenytoin)",
-                    "mechanism": "Cảm ứng CYP3A4, giảm nồng độ lefamulin",
-                    "effect": "Giảm nồng độ lefamulin, giảm hiệu quả",
-                    "management": "Thận trọng. Có thể cần tăng liều lefamulin. Theo dõi đáp ứng điều trị."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng lefamulin"
-            ],
-            "tương_đối": [
-                "Rối loạn nhịp tim (QT prolongation) - thận trọng, theo dõi ECG",
-                "Dùng với thuốc kéo dài QT - thận trọng, theo dõi ECG",
-                "Trẻ em <18 tuổi - chưa được nghiên cứu",
-                "Có thai (category C) - thận trọng"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Lefamulin là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt khi không có lựa chọn khác.",
-            "lactation": {
-                "safety": "Compatible with Caution",
-                "details": "Lefamulin bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
-                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Theo dõi trẻ về dấu hiệu tiêu chảy."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Giảm liều 25-50%",
-            "severe": "Giảm liều 50% hoặc tăng khoảng cách liều",
-            "notes": "Lefamulin chuyển hóa một phần ở gan (CYP3A4) và thải trừ qua gan (50%). Suy gan nặng có thể làm tích lũy lefamulin, tăng nguy cơ tác dụng phụ (kéo dài QT). Cần điều chỉnh liều ở suy gan nặng."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Kéo dài QT interval nặng",
-                "Rối loạn nhịp tim (torsades de pointes) - NGUY HIỂM",
-                "Tiêu chảy nặng",
-                "Buồn nôn, nôn nặng"
-            ],
-            "antidote": "Magnesium sulfate cho torsades de pointes. Điều trị hỗ trợ.",
-            "treatment": [
-                "Ngừng ngay lefamulin",
-                "Nếu torsades de pointes:",
-                "  - Magnesium sulfate 1-2g IV",
-                "  - Điều chỉnh điện giải (K+, Mg2+)",
-                "  - Máy tạo nhịp tạm thời nếu cần",
-                "Nếu tiêu chảy nặng:",
-                "  - Bù dịch, điện giải",
-                "  - Điều trị hỗ trợ",
-                "Theo dõi: ECG, dấu hiệu sinh tồn, điện giải"
-            ],
-            "monitoring": "Theo dõi ECG (QT interval), dấu hiệu sinh tồn, điện giải (K+, Mg2+) trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có rối loạn nhịp tim."
-        },
-        "reversal_agents": {
-            "available": True,
-            "agents": [
-                {
-                    "agent": "Magnesium Sulfate",
-                    "mechanism": "Điều trị torsades de pointes do kéo dài QT",
-                    "indication": "Torsades de pointes do lefamulin",
-                    "dose": "1-2g IV, lặp lại nếu cần"
-                }
-            ],
-            "notes": "Magnesium sulfate điều trị torsades de pointes do kéo dài QT interval."
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Uống khi đói (1 giờ trước hoặc 2 giờ sau ăn) để tăng hấp thu",
-                "timing": "600mg PO mỗi 12 giờ trong 5-7 ngày. Uống đều đặn, cách đều nhau trong ngày."
-            },
-            "iv": {
-                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 1.5mg/ml. Pha 150mg trong 100ml = 1.5mg/ml. Truyền trong 60 phút.",
-                "infusion_rate": "Truyền IV trong 60 phút. Tốc độ: 100ml/60 phút = ~1.7ml/phút.",
-                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
-                "incompatibility": [
-                    "Thuốc kéo dài QT - tăng nguy cơ kéo dài QT",
-                    "CYP3A4 inhibitors mạnh - tăng nồng độ"
-                ],
-                "notes": "QUAN TRỌNG: 1) Dùng 2 lần/ngày (150mg IV hoặc 600mg PO mỗi 12 giờ), 2) Có thể kéo dài QT interval - theo dõi ECG, 3) Tiêu chảy phổ biến, 4) Uống khi đói (PO), 5) Tránh dùng với thuốc kéo dài QT, 6) Tránh dùng với CYP3A4 inhibitors mạnh."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Lefamulin (Xenleta)",
-                "UpToDate - Lefamulin: Drug Information",
-                "Medscape - Lefamulin Drug Reference",
-                "IDSA Guidelines - Community-Acquired Pneumonia"
-            ],
-            "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
-    }
 }
 
 __all__ = ['OTHER_ANTIBIOTICS']

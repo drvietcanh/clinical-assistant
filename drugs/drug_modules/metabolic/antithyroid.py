@@ -321,7 +321,7 @@ ANTITHYROID_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "A - Dựa trên FDA drug labels, ATA guidelines, và dữ liệu lâm sàng"
         }
-    }
+    },
 }
 
 __all__ = ['ANTITHYROID_DRUGS']

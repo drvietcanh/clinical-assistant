@@ -3,226 +3,6 @@ Non-selective Beta-blockers
 Non-selective beta-adrenergic blocking agents
 """
 NON_SELECTIVE_BETA_BLOCKERS = {
-    "Propranolol": {
-        "group": "Cardiovascular - Beta-blocker (non-selective)",
-        "vietnamese_name": "Propranolol, Inderal",
-        "administration": ["PO"],
-        "indications": [
-            "Tăng huyết áp",
-            "Đau thắt ngực",
-            "Rối loạn nhịp tim",
-            "Migraine phòng ngừa",
-            "Run cơ",
-            "Lo âu"
-        ],
-        "contraindications": [
-            "Hen phế quản",
-            "Suy tim cấp",
-            "Block nhĩ thất độ 2-3",
-            "Nhịp tim chậm nặng"
-        ],
-        "dosage": {
-            "adult_htn": "40-160mg x 2 lần/ngày",
-            "adult_angina": "80-320mg x 2-3 lần/ngày",
-            "adult_migraine": "20-40mg x 2-3 lần/ngày",
-            "notes": "Non-selective, ức chế cả beta1 và beta2"
-        },
-        "side_effects": [
-            "Mệt mỏi",
-            "Lạnh tay chân",
-            "Nhịp tim chậm",
-            "Co thắt phế quản",
-            "Giảm libido"
-        ],
-                  "interactions": [
-              "Verapamil: tăng nguy cơ block nhĩ thất",
-              "Insulin: che dấu triệu chứng hạ đường huyết"
-          ],
-          "pregnancy": "C",
-          "mechanism_of_action": "Non-selective beta-adrenergic receptor blocker (beta1 và beta2). Ức chế tác dụng của catecholamines (epinephrine, norepinephrine), giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp, giảm nhu cầu oxy cơ tim. Ức chế renin-angiotensin system. Có tác dụng chống loạn nhịp (class II antiarrhythmic).",
-          "monitoring": [
-              "Nhịp tim và huyết áp (trước và sau khi bắt đầu)",
-              "Dấu hiệu suy tim (khó thở, phù, tăng cân)",
-              "Chức năng phổi (nếu có bệnh phổi tắc nghẽn)",
-              "Đường huyết (đặc biệt ở bệnh nhân đái tháo đường - che dấu triệu chứng hạ đường huyết)",
-              "Triệu chứng mệt mỏi, lạnh tay chân, rối loạn cương dương"
-          ],
-          "precautions": [
-              "KHÔNG được ngừng đột ngột (có thể gây rebound hypertension, đau thắt ngực nặng, nhồi máu cơ tim). Phải giảm liều dần trong 1-2 tuần",
-              "Thận trọng ở bệnh nhân hen phế quản/COPD (có thể gây co thắt phế quản nặng)",
-              "Tránh dùng trong suy tim cấp, block AV độ 2-3, nhịp tim chậm <50 bpm",
-              "Thận trọng ở bệnh nhân đái tháo đường (che dấu triệu chứng hạ đường huyết)",
-              "Có thể gây mệt mỏi, giảm khả năng tập luyện",
-              "Thận trọng khi dùng với verapamil/diltiazem (tăng nguy cơ block AV, suy tim)"
-          ],
-          "pharmacokinetics": {
-              "half_life": "3-5 giờ (ngắn), nhưng tác dụng kéo dài hơn do tác dụng trên receptor",
-              "onset": "1-2 giờ (PO)",
-              "duration": "6-12 giờ",
-              "protein_binding": "90-95%",
-              "clearance": "Gan (extensive first-pass metabolism), CYP2D6, CYP1A2"
-          },
-          "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-          "black_box_warnings": "KHÔNG được ngừng đột ngột ở bệnh nhân đau thắt ngực - có thể gây đau thắt ngực nặng, nhồi máu cơ tim, rối loạn nhịp tim nặng. Phải giảm liều dần dần trong 1-2 tuần",
-          "drug_interactions": {
-              "major": [
-                  {
-                      "drug": "Verapamil, Diltiazem",
-                      "mechanism": "Tác dụng hiệp đồng ức chế dẫn truyền nhĩ thất và co bóp tim",
-                      "effect": "Tăng nguy cơ block nhĩ thất độ 2-3, nhịp tim chậm nặng, suy tim",
-                      "management": "Thận trọng. Tránh dùng cùng nếu có thể. Nếu cần, dùng liều thấp và theo dõi ECG sát."
-                  }
-              ],
-              "moderate": [
-                  {
-                      "drug": "Insulin, các thuốc hạ đường huyết",
-                      "mechanism": "Che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run rẩy)",
-                      "effect": "Tăng nguy cơ hạ đường huyết không được phát hiện, nguy hiểm",
-                      "management": "Theo dõi đường huyết thường xuyên. Bệnh nhân đái tháo đường nên biết các triệu chứng khác của hạ đường huyết."
-                  },
-                  {
-                      "drug": "NSAIDs (ibuprofen, naproxen)",
-                      "mechanism": "Giảm tác dụng hạ huyết áp",
-                      "effect": "Giảm hiệu quả điều trị tăng huyết áp",
-                      "management": "Thận trọng. Theo dõi huyết áp. Tránh dùng lâu dài cùng."
-                  },
-                  {
-                      "drug": "CYP2D6, CYP1A2 inhibitors (fluoxetine, cimetidine, ciprofloxacin)",
-                      "mechanism": "Ức chế chuyển hóa propranolol",
-                      "effect": "Tăng nồng độ propranolol, tăng tác dụng phụ",
-                      "management": "Theo dõi nhịp tim, huyết áp. Có thể cần giảm liều propranolol."
-                  }
-              ],
-              "minor": [
-                  {
-                      "drug": "Chlorpromazine",
-                      "mechanism": "Tăng nguy cơ an thần",
-                      "effect": "Tăng tác dụng an thần",
-                      "management": "Thận trọng. Tránh lái xe hoặc vận hành máy móc."
-                  }
-              ]
-          },
-          "contraindications": {
-              "tuyệt_đối": [
-                  "Hen phế quản",
-                  "Suy tim cấp",
-                  "Block nhĩ thất độ 2-3",
-                  "Nhịp tim chậm nặng (<50 bpm)",
-                  "Sốc tim",
-                  "Hội chứng sick sinus (trừ khi có máy tạo nhịp)"
-              ],
-              "tương_đối": [
-                  "COPD (thận trọng, có thể dùng liều thấp nhưng nguy cơ co thắt phế quản cao hơn)",
-                  "Đái tháo đường (che dấu triệu chứng hạ đường huyết)",
-                  "Bệnh mạch máu ngoại biên (có thể làm nặng)",
-                  "Suy gan (giảm chuyển hóa, extensive first-pass)",
-                  "Dùng với verapamil/diltiazem (tăng nguy cơ block AV)"
-              ]
-          },
-          "pregnancy_lactation": {
-              "fda_category": "C",
-              "pregnancy_details": "Có thể dùng khi cần thiết. Có thể gây nhịp tim chậm thai nhi, hạ đường huyết, giảm thông khí. Theo dõi sát thai nhi. Ưu tiên dùng trong 3 tháng cuối nếu có thể.",
-              "lactation": {
-                  "safety": "Compatible",
-                  "details": "Propranolol bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
-                  "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu nhịp tim chậm hoặc hạ đường huyết."
-              }
-          },
-          "hepatic_adjustment": {
-              "mild": "Không đổi",
-              "moderate": "Thận trọng, có thể giảm liều (extensive first-pass metabolism)",
-              "severe": "Giảm liều 50% (extensive first-pass metabolism qua gan)",
-              "notes": "Propranolol có extensive first-pass metabolism qua gan (CYP2D6, CYP1A2). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
-          },
-          "overdose_management": {
-              "symptoms": [
-                  "Nhịp tim chậm nặng (<40 bpm)",
-                  "Block nhĩ thất độ 2-3",
-                  "Hạ huyết áp nặng",
-                  "Suy tim cấp",
-                  "Co thắt phế quản nặng",
-                  "Hạ đường huyết",
-                  "Ngất",
-                  "Sốc tim"
-              ],
-              "antidote": "Atropine (cho nhịp tim chậm), Glucagon (cho suy tim), Epinephrine (cho hạ huyết áp nặng)",
-              "treatment": [
-                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
-                  "Than hoạt tính",
-                  "Điều trị nhịp tim chậm: Atropine 0.5-1mg IV, có thể lặp lại",
-                  "Nếu atropine không hiệu quả: Glucagon 1-5mg IV (kích thích tim qua cơ chế không phụ thuộc beta-receptor)",
-                  "Điều trị hạ huyết áp: Truyền dịch, nâng chân, nếu cần: dopamine, norepinephrine",
-                  "Điều trị block AV: Atropine, nếu cần: máy tạo nhịp tạm thời",
-                  "Điều trị co thắt phế quản: Albuterol, ipratropium (quan trọng vì non-selective)",
-                  "Điều trị hạ đường huyết: Glucose IV",
-                  "Hỗ trợ hô hấp và tuần hoàn nếu cần",
-                  "Theo dõi ít nhất 12-24 giờ (do half-life 3-5 giờ nhưng tác dụng kéo dài)"
-              ],
-              "monitoring": "Nhịp tim, huyết áp, ECG (block AV, rối loạn nhịp), đường huyết, chức năng hô hấp (đặc biệt quan trọng), ý thức"
-          },
-          "reversal_agents": {
-              "available": True,
-              "agents": [
-                  {
-                      "name": "Glucagon",
-                      "mechanism": "Kích thích tim qua cơ chế không phụ thuộc beta-receptor (tăng cAMP)",
-                      "indication": "Suy tim, nhịp tim chậm nặng do beta-blocker",
-                      "dose": "1-5mg IV, có thể lặp lại"
-                  },
-                  {
-                      "name": "Atropine",
-                      "mechanism": "Ức chế phó giao cảm, tăng nhịp tim",
-                      "indication": "Nhịp tim chậm, block nhĩ thất",
-                      "dose": "0.5-1mg IV, có thể lặp lại"
-                  }
-              ]
-          },
-          "administration_instructions": {
-              "oral": {
-                  "with_food": "Uống với thức ăn để giảm tác dụng phụ và tăng hấp thu (giảm first-pass metabolism).",
-                  "timing": "Uống 2-3 lần/ngày (do half-life ngắn). Uống cùng giờ mỗi ngày. KHÔNG ngừng đột ngột - giảm liều dần dần trong 1-2 tuần."
-              },
-              "iv": {
-                  "reconstitution": "Không có dạng IV thường dùng",
-                  "infusion_rate": "N/A",
-                  "compatibility": [],
-                  "incompatibility": [],
-                  "notes": "Chỉ có dạng uống thường dùng"
-              }
-          },
-          "pediatric_dosing": {
-              "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
-              "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
-              "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Nếu cần, 1-4mg/kg/ngày chia 2-3 lần, tối đa 160mg/ngày",
-              "adolescents": "20-40mg x 2-3 lần/ngày, tăng dần đến 80-160mg x 2 lần/ngày nếu cần. Liều người lớn",
-              "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng khi thực sự cần thiết. Theo dõi nhịp tim, huyết áp, chức năng gan, chức năng phổi chặt chẽ"
-          },
-          "geriatric_dosing": {
-              "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (nhịp tim chậm, hạ huyết áp, mệt mỏi). Suy gan phổ biến hơn (extensive first-pass metabolism)",
-              "dose_adjustment": "Khởi đầu với liều thấp hơn (10-20mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo chức năng gan",
-              "monitoring": "Theo dõi nhịp tim, huyết áp sát hơn. Theo dõi chức năng gan. Cảnh báo về không ngừng đột ngột"
-          },
-          "brand_names": {
-              "vietnam": ["Inderal", "Propranolol Stada", "Propranolol"],
-              "common": ["Inderal", "Propranolol"]
-          },
-          "cost_estimate": {
-              "unit": "VND",
-              "range": "5,000 - 20,000 VND/viên (tùy hàm lượng và thương hiệu)",
-              "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Propranolol generic thường rẻ hơn (5,000-12,000 VND/viên 40mg)."
-          },
-          "references": {
-              "primary_sources": [
-                  "FDA Drug Label - Inderal (propranolol)",
-                  "UpToDate - Propranolol: Drug information",
-                  "Beta-Blocker Heart Attack Trial - JAMA",
-                  "ISIS-1 Study - The Lancet",
-                  "American Heart Association/American College of Cardiology guidelines"
-              ],
-              "last_updated": "2024-12-19",
-              "evidence_level": "High - Multiple large RCTs (BHAT, ISIS-1) and extensive clinical experience"
-          }    },
-
     "Carvedilol": {
     "group": "Cardiovascular - Beta-blocker (Non-selective with Alpha-blocking)",
     "vietnamese_name": "Carvedilol, Dilatrend",
@@ -667,6 +447,226 @@ NON_SELECTIVE_BETA_BLOCKERS = {
         }
     },
     
+    "Propranolol": {
+        "group": "Cardiovascular - Beta-blocker (non-selective)",
+        "vietnamese_name": "Propranolol, Inderal",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Đau thắt ngực",
+            "Rối loạn nhịp tim",
+            "Migraine phòng ngừa",
+            "Run cơ",
+            "Lo âu"
+        ],
+        "contraindications": [
+            "Hen phế quản",
+            "Suy tim cấp",
+            "Block nhĩ thất độ 2-3",
+            "Nhịp tim chậm nặng"
+        ],
+        "dosage": {
+            "adult_htn": "40-160mg x 2 lần/ngày",
+            "adult_angina": "80-320mg x 2-3 lần/ngày",
+            "adult_migraine": "20-40mg x 2-3 lần/ngày",
+            "notes": "Non-selective, ức chế cả beta1 và beta2"
+        },
+        "side_effects": [
+            "Mệt mỏi",
+            "Lạnh tay chân",
+            "Nhịp tim chậm",
+            "Co thắt phế quản",
+            "Giảm libido"
+        ],
+                  "interactions": [
+              "Verapamil: tăng nguy cơ block nhĩ thất",
+              "Insulin: che dấu triệu chứng hạ đường huyết"
+          ],
+          "pregnancy": "C",
+          "mechanism_of_action": "Non-selective beta-adrenergic receptor blocker (beta1 và beta2). Ức chế tác dụng của catecholamines (epinephrine, norepinephrine), giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp, giảm nhu cầu oxy cơ tim. Ức chế renin-angiotensin system. Có tác dụng chống loạn nhịp (class II antiarrhythmic).",
+          "monitoring": [
+              "Nhịp tim và huyết áp (trước và sau khi bắt đầu)",
+              "Dấu hiệu suy tim (khó thở, phù, tăng cân)",
+              "Chức năng phổi (nếu có bệnh phổi tắc nghẽn)",
+              "Đường huyết (đặc biệt ở bệnh nhân đái tháo đường - che dấu triệu chứng hạ đường huyết)",
+              "Triệu chứng mệt mỏi, lạnh tay chân, rối loạn cương dương"
+          ],
+          "precautions": [
+              "KHÔNG được ngừng đột ngột (có thể gây rebound hypertension, đau thắt ngực nặng, nhồi máu cơ tim). Phải giảm liều dần trong 1-2 tuần",
+              "Thận trọng ở bệnh nhân hen phế quản/COPD (có thể gây co thắt phế quản nặng)",
+              "Tránh dùng trong suy tim cấp, block AV độ 2-3, nhịp tim chậm <50 bpm",
+              "Thận trọng ở bệnh nhân đái tháo đường (che dấu triệu chứng hạ đường huyết)",
+              "Có thể gây mệt mỏi, giảm khả năng tập luyện",
+              "Thận trọng khi dùng với verapamil/diltiazem (tăng nguy cơ block AV, suy tim)"
+          ],
+          "pharmacokinetics": {
+              "half_life": "3-5 giờ (ngắn), nhưng tác dụng kéo dài hơn do tác dụng trên receptor",
+              "onset": "1-2 giờ (PO)",
+              "duration": "6-12 giờ",
+              "protein_binding": "90-95%",
+              "clearance": "Gan (extensive first-pass metabolism), CYP2D6, CYP1A2"
+          },
+          "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+          "black_box_warnings": "KHÔNG được ngừng đột ngột ở bệnh nhân đau thắt ngực - có thể gây đau thắt ngực nặng, nhồi máu cơ tim, rối loạn nhịp tim nặng. Phải giảm liều dần dần trong 1-2 tuần",
+          "drug_interactions": {
+              "major": [
+                  {
+                      "drug": "Verapamil, Diltiazem",
+                      "mechanism": "Tác dụng hiệp đồng ức chế dẫn truyền nhĩ thất và co bóp tim",
+                      "effect": "Tăng nguy cơ block nhĩ thất độ 2-3, nhịp tim chậm nặng, suy tim",
+                      "management": "Thận trọng. Tránh dùng cùng nếu có thể. Nếu cần, dùng liều thấp và theo dõi ECG sát."
+                  }
+              ],
+              "moderate": [
+                  {
+                      "drug": "Insulin, các thuốc hạ đường huyết",
+                      "mechanism": "Che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run rẩy)",
+                      "effect": "Tăng nguy cơ hạ đường huyết không được phát hiện, nguy hiểm",
+                      "management": "Theo dõi đường huyết thường xuyên. Bệnh nhân đái tháo đường nên biết các triệu chứng khác của hạ đường huyết."
+                  },
+                  {
+                      "drug": "NSAIDs (ibuprofen, naproxen)",
+                      "mechanism": "Giảm tác dụng hạ huyết áp",
+                      "effect": "Giảm hiệu quả điều trị tăng huyết áp",
+                      "management": "Thận trọng. Theo dõi huyết áp. Tránh dùng lâu dài cùng."
+                  },
+                  {
+                      "drug": "CYP2D6, CYP1A2 inhibitors (fluoxetine, cimetidine, ciprofloxacin)",
+                      "mechanism": "Ức chế chuyển hóa propranolol",
+                      "effect": "Tăng nồng độ propranolol, tăng tác dụng phụ",
+                      "management": "Theo dõi nhịp tim, huyết áp. Có thể cần giảm liều propranolol."
+                  }
+              ],
+              "minor": [
+                  {
+                      "drug": "Chlorpromazine",
+                      "mechanism": "Tăng nguy cơ an thần",
+                      "effect": "Tăng tác dụng an thần",
+                      "management": "Thận trọng. Tránh lái xe hoặc vận hành máy móc."
+                  }
+              ]
+          },
+          "contraindications": {
+              "tuyệt_đối": [
+                  "Hen phế quản",
+                  "Suy tim cấp",
+                  "Block nhĩ thất độ 2-3",
+                  "Nhịp tim chậm nặng (<50 bpm)",
+                  "Sốc tim",
+                  "Hội chứng sick sinus (trừ khi có máy tạo nhịp)"
+              ],
+              "tương_đối": [
+                  "COPD (thận trọng, có thể dùng liều thấp nhưng nguy cơ co thắt phế quản cao hơn)",
+                  "Đái tháo đường (che dấu triệu chứng hạ đường huyết)",
+                  "Bệnh mạch máu ngoại biên (có thể làm nặng)",
+                  "Suy gan (giảm chuyển hóa, extensive first-pass)",
+                  "Dùng với verapamil/diltiazem (tăng nguy cơ block AV)"
+              ]
+          },
+          "pregnancy_lactation": {
+              "fda_category": "C",
+              "pregnancy_details": "Có thể dùng khi cần thiết. Có thể gây nhịp tim chậm thai nhi, hạ đường huyết, giảm thông khí. Theo dõi sát thai nhi. Ưu tiên dùng trong 3 tháng cuối nếu có thể.",
+              "lactation": {
+                  "safety": "Compatible",
+                  "details": "Propranolol bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                  "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu nhịp tim chậm hoặc hạ đường huyết."
+              }
+          },
+          "hepatic_adjustment": {
+              "mild": "Không đổi",
+              "moderate": "Thận trọng, có thể giảm liều (extensive first-pass metabolism)",
+              "severe": "Giảm liều 50% (extensive first-pass metabolism qua gan)",
+              "notes": "Propranolol có extensive first-pass metabolism qua gan (CYP2D6, CYP1A2). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+          },
+          "overdose_management": {
+              "symptoms": [
+                  "Nhịp tim chậm nặng (<40 bpm)",
+                  "Block nhĩ thất độ 2-3",
+                  "Hạ huyết áp nặng",
+                  "Suy tim cấp",
+                  "Co thắt phế quản nặng",
+                  "Hạ đường huyết",
+                  "Ngất",
+                  "Sốc tim"
+              ],
+              "antidote": "Atropine (cho nhịp tim chậm), Glucagon (cho suy tim), Epinephrine (cho hạ huyết áp nặng)",
+              "treatment": [
+                  "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                  "Than hoạt tính",
+                  "Điều trị nhịp tim chậm: Atropine 0.5-1mg IV, có thể lặp lại",
+                  "Nếu atropine không hiệu quả: Glucagon 1-5mg IV (kích thích tim qua cơ chế không phụ thuộc beta-receptor)",
+                  "Điều trị hạ huyết áp: Truyền dịch, nâng chân, nếu cần: dopamine, norepinephrine",
+                  "Điều trị block AV: Atropine, nếu cần: máy tạo nhịp tạm thời",
+                  "Điều trị co thắt phế quản: Albuterol, ipratropium (quan trọng vì non-selective)",
+                  "Điều trị hạ đường huyết: Glucose IV",
+                  "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                  "Theo dõi ít nhất 12-24 giờ (do half-life 3-5 giờ nhưng tác dụng kéo dài)"
+              ],
+              "monitoring": "Nhịp tim, huyết áp, ECG (block AV, rối loạn nhịp), đường huyết, chức năng hô hấp (đặc biệt quan trọng), ý thức"
+          },
+          "reversal_agents": {
+              "available": True,
+              "agents": [
+                  {
+                      "name": "Glucagon",
+                      "mechanism": "Kích thích tim qua cơ chế không phụ thuộc beta-receptor (tăng cAMP)",
+                      "indication": "Suy tim, nhịp tim chậm nặng do beta-blocker",
+                      "dose": "1-5mg IV, có thể lặp lại"
+                  },
+                  {
+                      "name": "Atropine",
+                      "mechanism": "Ức chế phó giao cảm, tăng nhịp tim",
+                      "indication": "Nhịp tim chậm, block nhĩ thất",
+                      "dose": "0.5-1mg IV, có thể lặp lại"
+                  }
+              ]
+          },
+          "administration_instructions": {
+              "oral": {
+                  "with_food": "Uống với thức ăn để giảm tác dụng phụ và tăng hấp thu (giảm first-pass metabolism).",
+                  "timing": "Uống 2-3 lần/ngày (do half-life ngắn). Uống cùng giờ mỗi ngày. KHÔNG ngừng đột ngột - giảm liều dần dần trong 1-2 tuần."
+              },
+              "iv": {
+                  "reconstitution": "Không có dạng IV thường dùng",
+                  "infusion_rate": "N/A",
+                  "compatibility": [],
+                  "incompatibility": [],
+                  "notes": "Chỉ có dạng uống thường dùng"
+              }
+          },
+          "pediatric_dosing": {
+              "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+              "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+              "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Nếu cần, 1-4mg/kg/ngày chia 2-3 lần, tối đa 160mg/ngày",
+              "adolescents": "20-40mg x 2-3 lần/ngày, tăng dần đến 80-160mg x 2 lần/ngày nếu cần. Liều người lớn",
+              "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng khi thực sự cần thiết. Theo dõi nhịp tim, huyết áp, chức năng gan, chức năng phổi chặt chẽ"
+          },
+          "geriatric_dosing": {
+              "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (nhịp tim chậm, hạ huyết áp, mệt mỏi). Suy gan phổ biến hơn (extensive first-pass metabolism)",
+              "dose_adjustment": "Khởi đầu với liều thấp hơn (10-20mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo chức năng gan",
+              "monitoring": "Theo dõi nhịp tim, huyết áp sát hơn. Theo dõi chức năng gan. Cảnh báo về không ngừng đột ngột"
+          },
+          "brand_names": {
+              "vietnam": ["Inderal", "Propranolol Stada", "Propranolol"],
+              "common": ["Inderal", "Propranolol"]
+          },
+          "cost_estimate": {
+              "unit": "VND",
+              "range": "5,000 - 20,000 VND/viên (tùy hàm lượng và thương hiệu)",
+              "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Propranolol generic thường rẻ hơn (5,000-12,000 VND/viên 40mg)."
+          },
+          "references": {
+              "primary_sources": [
+                  "FDA Drug Label - Inderal (propranolol)",
+                  "UpToDate - Propranolol: Drug information",
+                  "Beta-Blocker Heart Attack Trial - JAMA",
+                  "ISIS-1 Study - The Lancet",
+                  "American Heart Association/American College of Cardiology guidelines"
+              ],
+              "last_updated": "2024-12-19",
+              "evidence_level": "High - Multiple large RCTs (BHAT, ISIS-1) and extensive clinical experience"
+          }    },
+
     "Timolol": {
         "group": "Cardiovascular - Beta-blocker (non-selective)",
         "vietnamese_name": "Timolol, Blocadren, Timoptic",
@@ -860,7 +860,7 @@ NON_SELECTIVE_BETA_BLOCKERS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         }
-    }
+    },
 }
 
 __all__ = ['NON_SELECTIVE_BETA_BLOCKERS']
