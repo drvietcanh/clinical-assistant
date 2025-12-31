@@ -11,6 +11,13 @@ except ImportError:
     ANTIBIOTICS_DATABASE = {}
 from .card_components import render_compact_drug_card
 
+# Phase 3: Import card view component
+try:
+    from components.drug_cards import render_drug_list_cards, render_drug_filters
+    CARD_VIEW_AVAILABLE = True
+except ImportError:
+    CARD_VIEW_AVAILABLE = False
+
 def render_drug_database():
     """Main function to render drug database page with search and browse"""
     from .search import (
@@ -261,8 +268,18 @@ def render_drug_database():
             end_idx = start_idx + page_size
             page_results = filter_results[start_idx:end_idx]
             
-            for idx, (drug_name, drug_data) in enumerate(page_results):
-                render_compact_drug_card(drug_name, drug_data, search_query='', card_index=start_idx + idx)
+            # page_results is a list of tuples (drug_name, drug_data)
+            # Convert to dict for render_drug_list_cards
+            page_drugs_dict = dict(page_results)
+            
+            if CARD_VIEW_AVAILABLE:
+                render_drug_list_cards(
+                    page_drugs_dict, 
+                    layout=st.session_state.get('drug_view_layout', 'list')
+                )
+            else:
+                for idx, (drug_name, drug_data) in enumerate(page_results):
+                    render_compact_drug_card(drug_name, drug_data, search_query='', card_index=start_idx + idx)
             
             if len(filter_results) > page_size:
                 total_pages = (len(filter_results) + page_size - 1) // page_size
@@ -364,10 +381,15 @@ def render_drug_database():
         with col_search_btn:
             st.markdown('<br>', unsafe_allow_html=True)
             search_button = st.button('🔍 Tìm', use_container_width=True)
-    with st.expander('🔍 Advanced Filters', expanded=False):
+    with st.expander('🔍 Advanced Filters & View Settings', expanded=False):
         col1, col2, col3 = st.columns(3)
         if 'drug_filters' not in st.session_state:
             st.session_state['drug_filters'] = {}
+        
+        # Initialize view layout
+        if 'drug_view_layout' not in st.session_state:
+            st.session_state['drug_view_layout'] = 'list'
+            
         filters = st.session_state['drug_filters']
         with col1:
             filter_groups = st.multiselect('Nhóm thuốc', options=list(
@@ -391,6 +413,20 @@ def render_drug_database():
                 filters.get('has_renal_adjustment', False), key='filter_renal')
             filter_black_box = st.checkbox('Có cảnh báo hộp đen', value=
                 filters.get('has_black_box', False), key='filter_black_box')
+            
+            # View layout toggle
+            st.markdown("---")
+            st.markdown("**Giao diện:**")
+            view_layout = st.radio(
+                "Chế độ hiển thị",
+                options=['list', 'grid'],
+                index=0 if st.session_state['drug_view_layout'] == 'list' else 1,
+                format_func=lambda x: "📋 Danh sách" if x == 'list' else "🎴 Lưới (Grid)",
+                horizontal=True,
+                key='view_layout_radio'
+            )
+            # Update session state when changed
+            st.session_state['drug_view_layout'] = view_layout
         # Convert 'Tất cả' back to 'All' for internal processing
         pregnancy_value = 'All' if filter_pregnancy == 'Tất cả' else filter_pregnancy
         st.session_state['drug_filters'] = {'groups': filter_groups,
@@ -554,9 +590,18 @@ def render_drug_database():
                 start_idx = current_page * page_size
                 end_idx = start_idx + page_size
                 page_results = results[start_idx:end_idx]
-                for idx, (drug_name, drug_data) in enumerate(page_results):
-                    render_compact_drug_card(drug_name, drug_data, search_query
-                        =effective_query, card_index=start_idx + idx)
+                # page_results is list of tuples
+                page_drugs_dict = dict(page_results)
+                
+                if CARD_VIEW_AVAILABLE:
+                    render_drug_list_cards(
+                        page_drugs_dict,
+                        layout=st.session_state.get('drug_view_layout', 'list')
+                    )
+                else:
+                    for idx, (drug_name, drug_data) in enumerate(page_results):
+                        render_compact_drug_card(drug_name, drug_data, search_query
+                            =effective_query, card_index=start_idx + idx)
                 if len(results) > page_size:
                     total_pages = (len(results) + page_size - 1) // page_size
                     st.markdown('---')
@@ -605,8 +650,17 @@ def render_drug_database():
             start_idx = current_page * page_size
             end_idx = start_idx + page_size
             page_drugs = all_drugs[start_idx:end_idx]
-            for idx, (drug_name, drug_data) in enumerate(page_drugs):
-                render_compact_drug_card(drug_name, drug_data, search_query='', card_index=start_idx + idx)
+            # page_drugs is list of tuples
+            page_drugs_dict = dict(page_drugs)
+            
+            if CARD_VIEW_AVAILABLE:
+                render_drug_list_cards(
+                    page_drugs_dict,
+                    layout=st.session_state.get('drug_view_layout', 'list')
+                )
+            else:
+                for idx, (drug_name, drug_data) in enumerate(page_drugs):
+                    render_compact_drug_card(drug_name, drug_data, search_query='', card_index=start_idx + idx)
             if len(all_drugs) > page_size:
                 total_pages = (len(all_drugs) + page_size - 1) // page_size
                 st.markdown('---')

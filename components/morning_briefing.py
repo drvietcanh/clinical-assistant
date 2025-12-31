@@ -33,7 +33,8 @@ def render_morning_briefing():
     total_fav = len(st.session_state.get('favorites', []))
     
     # Hero section with gradient background
-    st.markdown(f"""
+    import textwrap
+    st.markdown(textwrap.dedent(f"""
     <div style="
         background: linear-gradient(135deg, #00897B 0%, #00695C 100%);
         padding: 2rem;
@@ -70,7 +71,7 @@ def render_morning_briefing():
             </div>
         </div>
     </div>
-    """, unsafe_allow_html=True)
+    """), unsafe_allow_html=True)
     
     # What's New section
     st.markdown("### 📰 Điểm tin nổi bật")

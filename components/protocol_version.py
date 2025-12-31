@@ -134,7 +134,7 @@ def render_version_badge(protocol_name: str):
     except:
         formatted_date = last_updated
     
-    html = f"""
+    badge_html = f"""
     <div style="
         background: linear-gradient(135deg, #E7F3FF 0%, #ffffff 100%);
         border-left: 4px solid #0066CC;
@@ -161,7 +161,7 @@ def render_version_badge(protocol_name: str):
     </div>
     """
     
-    st.markdown(html, unsafe_allow_html=True)
+    st.markdown(badge_html, unsafe_allow_html=True)
 
 
 def render_version_history(protocol_name: str):
