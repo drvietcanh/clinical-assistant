@@ -16,6 +16,16 @@ from components.smart_suggestions import render_suggestions
 from components.risk_color_coding import render_risk_badge, get_risk_level
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ===================================================
 
 
@@ -94,6 +104,64 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # Educational information - Enhanced with Phase 1
+        if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+            st.markdown("---")
+            render_calculator_explanation(
+                title="Về CHA₂DS₂-VASc Score",
+                content="""
+                **CHA₂DS₂-VASc Score** đánh giá nguy cơ đột quỵ ở bệnh nhân rung nhĩ (AF):
+                
+                - Sử dụng để quyết định có cần kháng đông hay không
+                - Kết hợp với HAS-BLED để cân nhắc lợi ích/nguy cơ
+                - CHA₂DS₂-VASc ≥2 (nam) hoặc ≥3 (nữ): Khuyến cáo kháng đông
+                
+                **9 yếu tố nguy cơ:**
+                - **C:** Congestive heart failure / LV dysfunction
+                - **H:** Hypertension
+                - **A:** Age (≥75 = 2 điểm, 65-74 = 1 điểm)
+                - **D:** Diabetes
+                - **S:** Stroke/TIA/thromboembolism (2 điểm)
+                - **V:** Vascular disease
+                - **A:** Age 65-74 (1 điểm)
+                - **Sc:** Sex category (nữ = 1 điểm)
+                
+                **Tổng điểm: 0-9**
+                """,
+                when_to_use="""
+                **Sử dụng CHA₂DS₂-VASc Score khi:**
+                - Bệnh nhân có rung nhĩ (AF) cần đánh giá nguy cơ đột quỵ
+                - Quyết định có cần kháng đông hay không
+                - Kết hợp với HAS-BLED để cân nhắc lợi ích/nguy cơ
+                - Theo dõi nguy cơ đột quỵ trong quá trình điều trị
+                """,
+                limitations="""
+                **Hạn chế:**
+                - Không áp dụng cho rung nhĩ do bệnh van tim (cần kháng đông bắt buộc)
+                - Cần kết hợp với HAS-BLED để đánh giá toàn diện
+                - Một số yếu tố có thể thay đổi theo thời gian
+                - Không thay thế đánh giá lâm sàng cá thể hóa
+                """,
+                clinical_context="""
+                **Bối cảnh lâm sàng:**
+                - **Nam giới:**
+                  - CHA₂DS₂-VASc = 0: Không cần kháng đông
+                  - CHA₂DS₂-VASc = 1: Cân nhắc kháng đông
+                  - CHA₂DS₂-VASc ≥2: Khuyến cáo kháng đông
+                - **Nữ giới:**
+                  - CHA₂DS₂-VASc = 0-1: Cân nhắc kháng đông
+                  - CHA₂DS₂-VASc ≥2: Khuyến cáo kháng đông
+                - Luôn kết hợp với HAS-BLED để đánh giá nguy cơ chảy máu
+                """
+            )
+            
+            # Evidence citation
+            render_evidence_citation(
+                citation_text="Lip GY, et al. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using a novel risk factor-based approach: the euro heart survey on atrial fibrillation. Chest. 2010;137(2):263-72.",
+                doi="10.1378/chest.09-1584",
+                pmid="19762550"
+            )
         
         if st.button("🧮 Tính Điểm", type="primary", key="cha2ds2vasc_calc"):
             score = 0

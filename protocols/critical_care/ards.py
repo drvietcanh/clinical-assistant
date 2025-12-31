@@ -7,12 +7,25 @@ Acute Respiratory Distress Syndrome Management
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """ARDS Management Protocol"""
     st.subheader("🫁 ARDS Management Protocol")
     st.caption("Berlin Definition 2012, SCCM Guidelines - Acute Respiratory Distress Syndrome")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-03-01",
+        last_updated="2024-03-01",
+        version="2024",
+        guideline_source="SCCM/ESICM 2024"
+    )
     
     st.error("""
     **⚠️ CRITICAL: ARDS là hội chứng suy hô hấp cấp nặng!**

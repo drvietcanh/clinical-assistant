@@ -7,12 +7,25 @@ Advanced Cardiac Life Support for cardiac arrest management
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Cardiac Arrest / ACLS Protocol"""
     st.subheader("💔 Cardiac Arrest / ACLS Protocol")
     st.caption("AHA 2020, ERC 2021 - Advanced Cardiac Life Support")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-11-01",
+        last_updated="2024-11-01",
+        version="2024",
+        guideline_source="AHA 2020, ERC 2021"
+    )
     
     st.error("""
     **🚨 CARDIAC ARREST = IMMEDIATE LIFE-THREATENING EMERGENCY**

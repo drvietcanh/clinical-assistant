@@ -15,6 +15,16 @@ from components.smart_suggestions import render_suggestions
 from components.risk_color_coding import render_risk_badge, get_risk_level
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ===================================================
 
 
@@ -30,9 +40,62 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.info("""
-    **TIMI Risk Score** dự đoán tử vong, nhồi máu cơ tim mới hoặc cần tái can thiệp trong 14 ngày.
-    """)
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về TIMI Risk Score",
+            content="""
+            **TIMI Risk Score** dự đoán tử vong, nhồi máu cơ tim mới hoặc cần tái can thiệp trong 14 ngày:
+            
+            - Sử dụng cho bệnh nhân UA/NSTEMI
+            - Hướng dẫn chiến lược điều trị (invasive vs conservative)
+            - Dự đoán kết quả lâm sàng
+            
+            **7 tiêu chí:**
+            1. Tuổi ≥65
+            2. ≥3 yếu tố nguy cơ mạch vành
+            3. Bệnh mạch vành đã biết (hẹp ≥50%)
+            4. ST chênh xuống ≥0.5mm
+            5. ≥2 cơn đau ngực trong 24h
+            6. Aspirin trong 7 ngày qua
+            7. Tăng troponin/CK-MB
+            
+            **Tổng điểm: 0-7**
+            """,
+            when_to_use="""
+            **Sử dụng TIMI Risk Score khi:**
+            - Bệnh nhân có UA/NSTEMI
+            - Cần quyết định chiến lược điều trị (invasive vs conservative)
+            - Đánh giá tiên lượng và kết quả lâm sàng
+            - Hướng dẫn thời điểm can thiệp mạch vành
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Chỉ áp dụng cho UA/NSTEMI, không áp dụng cho STEMI
+            - Cần có đầy đủ thông tin lâm sàng và xét nghiệm
+            - Không thay thế đánh giá lâm sàng cá thể hóa
+            - Một số yếu tố có thể không có sẵn ngay
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - **TIMI 0-2:** Nguy cơ thấp → Cân nhắc điều trị bảo tồn
+            - **TIMI 3-4:** Nguy cơ trung bình → Cân nhắc can thiệp sớm
+            - **TIMI 5-7:** Nguy cơ cao → Khuyến cáo can thiệp sớm (<48h)
+            - TIMI cao liên quan đến tử vong và biến cố tim mạch cao hơn
+            """
+        )
+        
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Antman EM, et al. The TIMI risk score for unstable angina/non-ST elevation MI: A method for prognostication and therapeutic decision making. JAMA. 2000;284(7):835-42.",
+            doi="10.1001/jama.284.7.835",
+            pmid="10938172"
+        )
+    else:
+        # Fallback to original
+        st.info("""
+        **TIMI Risk Score** dự đoán tử vong, nhồi máu cơ tim mới hoặc cần tái can thiệp trong 14 ngày.
+        """)
     
     col1, col2 = st.columns([2, 1])
     

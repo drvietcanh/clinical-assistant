@@ -7,12 +7,25 @@ Life-threatening allergic reaction requiring immediate treatment
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Anaphylaxis Management Protocol"""
     st.subheader("🚨 Anaphylaxis Management")
     st.caption("ACAAI/WAO 2020, NIAID 2017 - Immediate life-threatening allergic reaction")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2023-10-01",
+        last_updated="2023-10-01",
+        version="2023",
+        guideline_source="ACAAI/WAO 2020, NIAID 2017"
+    )
     
     st.error("""
     **⚠️ ANAPHYLAXIS = MEDICAL EMERGENCY**
