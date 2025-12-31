@@ -96,19 +96,31 @@ def render():
     tabs = st.tabs(["💨 Bronchodilators", "💊 Corticosteroids", "💉 Add-on Therapy", "🏥 ICU Criteria", "📋 Theo dõi"])
     
     with tabs[0]:  # Bronchodilators
-        st.markdown("#### Thuốc Giãn Phế Quản")
+        st.markdown("#### Thuốc Giãn Phế Quản & Cắt Cơn (Reliever)")
+        
+        st.info("""
+        **GINA 2025 Updates:**
+        - **Track 1 (Ưu tiên):** Dùng ICS-Formoterol làm thuốc cắt cơn (thay vì SABA đơn thuần).
+        - **Track 2 (Thay thế):** Dùng SABA cắt cơn + dùng kèm ICS ngay lập tức.
+        """)
         
         st.success("""
-        **SABA (Short-Acting Beta-2 Agonist):**
+        **Lựa chọn thuốc cắt cơn:**
+        
+        **1. ICS-Formoterol (Ưu tiên):**
+        - Budesonide-Formoterol 160/4.5mcg
+        - 1 nhát khi khó thở
+        - Tối đa 72mcg formoterol/ngày
+        
+        **2. SABA (Nếu không chọn Track 1):**
         - **Salbutamol** nebulizer 5mg hoặc MDI 4-8 puffs
         - **Tần suất:** Mỗi 20 phút x 3 lần đầu (giờ đầu)
         - Sau đó: Mỗi 1-4h tùy đáp ứng
         
-        **Ipratropium Bromide (Anticholinergic):**
-        - **Phối hợp với SABA** hiệu quả hơn đơn trị
+        **3. Ipratropium Bromide (Kết hợp):**
+        - **Phối hợp với SABA** hiệu quả hơn đơn trị trong cơn cấp nặng
         - Ipratropium 0.5mg nebulizer
         - Mỗi 20 phút x 3 lần đầu
-        - Sau đó: Mỗi 4-6h
         """)
         
         if severity == "life-threatening":
@@ -132,10 +144,9 @@ def render():
         else:
             st.info("""
             **Cơn hen nhẹ-vừa:**
-            - Salbutamol 2.5-5mg nebulizer hoặc MDI 4-8 puffs
+            - Ưu tiên dùng bình xịt ICS-Formoterol (nếu bệnh nhân đang dùng duy trì - MART)
+            - Hoặc: Salbutamol 2.5-5mg nebulizer hoặc MDI 4-8 puffs
             - Mỗi 20 phút x 3 lần (giờ đầu)
-            - Thêm Ipratropium nếu đáp ứng kém
-            - Sau đó: Mỗi 1-4h tùy đáp ứng
             """)
     
     with tabs[1]:  # Corticosteroids

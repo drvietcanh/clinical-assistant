@@ -12,7 +12,14 @@ from components.references import render_references_section
 def render():
     """H. pylori Gastritis/Ulcer Treatment Protocol"""
     st.subheader("🫀 Điều trị Viêm Loét Dạ Dày HP (+) (H. pylori Gastritis/Ulcer)")
-    st.caption("Maastricht V/Florence 2016, ACG 2017, AGA 2021 - H. pylori eradication therapy")
+    st.caption("ACG 2024, Maastricht VI - H. pylori eradication therapy")
+    
+    st.info("""
+    **Cập nhật ACG 2024:**
+    - **Bismuth Quadruple:** Ưu tiên hàng đầu (Strong recommendation).
+    - **Thời gian:** 14 ngày bắt buộc.
+    - **PCAB (Vonoprazan):** Thay thế hiệu quả cho PPI.
+    """)
     
     st.info("""
     **Helicobacter pylori (H. pylori):**

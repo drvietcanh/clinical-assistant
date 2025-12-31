@@ -167,16 +167,25 @@ def render():
         - **Golimumab:** 50mg SC q month
         - **Certolizumab:** 200mg SC q2 weeks
         
-        **Non-TNF Biologics:**
+        **Non-TNF Biologics & Small Molecules:**
         - **Tocilizumab (IL-6):** 8mg/kg IV q4 weeks hoặc 162mg SC q2 weeks
         - **Rituximab (CD20):** 1000mg IV × 2 (2 tuần apart), lặp lại q6 months
         - **Abatacept (CTLA-4):** 10mg/kg IV q4 weeks hoặc 125mg SC q week
-        - **Tofacitinib (JAK):** 5mg PO BID
+        
+        **JAK Inhibitors (TsDMARDs):**
+        - **Tofacitinib:** 5mg PO BID
+        - **Baricitinib:** 2-4mg PO QD
+        - **Upadacitinib:** 15mg PO QD
+        
+        **⚠️ RAFT/Oral Surveillance Warning (JAKi):**
+        - Cẩn trọng ở bệnh nhân >65 tuổi, hút thuốc, có nguy cơ tim mạch hoặc ung thư.
+        - Nguy cơ: MACE, VTE, Malignancy cao hơn so với TNF-i.
+        - Khuyến cáo: Chỉ dùng khi không có lựa chọn phù hợp khác ở nhóm nguy cơ cao.
         
         **Lưu ý:**
         - Cần screening TB, HBV, HCV trước khi dùng
         - Theo dõi infection
-        - Không dùng nếu có infection active
+        - **Difficult-to-Treat RA (D2T RA):** Thất bại với ≥2 b/tsDMARDs cơ chế khác nhau. Cần hội chẩn chuyên gia.
         """)
     
     st.markdown("---")

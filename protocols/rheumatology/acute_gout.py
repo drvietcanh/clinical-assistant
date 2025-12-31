@@ -12,7 +12,14 @@ from components.references import render_references_section
 def render():
     """Acute Gout Management Protocol"""
     st.subheader("🦴 Acute Gout Management Protocol")
-    st.caption("ACR 2020, ACR 2023, EULAR 2016, EULAR 2023 - Acute Gout Attack Management")
+    st.caption("ACR 2020 Guidelines (Current Standard) - Acute Gout Attack Management")
+    
+    st.info("""
+    **Cập nhật ACR 2020:**
+    - **Treat-to-Target:** Mục tiêu acid uric <6 mg/dL (<360 µmol/L) cho TẤT CẢ bệnh nhân đang điều trị ULT.
+    - **Anti-inflammatory:** Bắt đầu càng sớm càng tốt (trong 24h).
+    - **ULT:** Có thể bắt đầu ULT ngay trong cơn cấp (kèm kháng viêm) thay vì chờ hết cơn (conditional recommendation).
+    """)
     
     st.info("""
     **Gout là bệnh viêm khớp do lắng đọng tinh thể monosodium urate (MSU)**

@@ -149,7 +149,10 @@ def render_complicated_uti():
     - Meropenem 1 g IV mỗi 8h nếu nguy cơ ESBL cao
     - Step-down uống (khi ổn định và có kháng sinh đồ): Amoxiclav, Cefuroxime, hoặc Fluoroquinolone (chỉ khi nhạy và không có chống chỉ định)
 
-    **Thời gian:** 7–10 ngày; 10–14 ngày nếu nam, tiểu máu dai dẳng, hoặc bất thường cấu trúc
+    **Lưu ý "Oral Step-down" (Cập nhật mới):**
+    - Với nhiễm khuẩn huyết Gram âm (Gram-negative bacteremia) nguồn gốc tiết niệu: Có thể chuyển sang uống sau khi ổn định lâm sàng.
+    - Tổng thời gian điều trị: **7 ngày** (hiệu quả tương đương 14 ngày - theo nghiên cứu mới).
+    - Kháng sinh uống cần có sinh khả dụng cao (Fluoroquinolone hoặc TMP/SMX, Beta-lactam liều cao).
     """)
 
     st.markdown("---")

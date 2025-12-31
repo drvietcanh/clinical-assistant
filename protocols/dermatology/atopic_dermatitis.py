@@ -156,10 +156,32 @@ def render():
     - **Bổ sung:** Folic acid 5 mg/tuần
     - **Theo dõi:** Chức năng gan, công thức máu
     
-    **5. Dupilumab (Monoclonal antibody):**
+    **5. Dupilumab (Monoclonal antibody - IL-4/13):**
     - **Liều:** 600 mg khởi đầu, sau đó 300 mg mỗi 2 tuần
-    - **Chỉ định:** Bệnh nặng, không đáp ứng điều trị khác
-    - **Lưu ý:** Đắt tiền, cần đánh giá kỹ
+    - **Chỉ định:** Bệnh trung bình-nặng, không kiểm soát được bằng thuốc bôi
+    - **An toàn:** Dùng được cho trẻ em (tùy độ tuổi)
+
+    **6. Tralokinumab (Anti-IL-13):**
+    - **Liều:** 600 mg khởi đầu, sau đó 300 mg mỗi 2 tuần
+    - **Chỉ định:** Người lớn bệnh trung bình-nặng
+    
+    **7. JAK Inhibitors (Thuốc uống mới - AAD 2024 Update):**
+    - **Upadacitinib:** 15-30 mg/ngày
+    - **Abrocitinib:** 100-200 mg/ngày
+    - **Ưu điểm:** Tác dụng nhanh, giảm ngứa rất tốt
+    - **⚠️ Lưu ý:** Cần sàng lọc TB, viêm gan B/C, theo dõi công thức máu, lipid. Black box warning về tim mạch/ung thư (dù hiếm ở nhóm AD trẻ).
+    """)
+
+    st.markdown("---")
+    st.markdown("### 🧴 New Topical Therapies (Non-Steroidal)")
+    st.info("""
+    **1. Ruxolitinib Cream 1.5% (Topical JAKi):**
+    - Dùng ngắn hạn cho bệnh nhẹ-trung bình
+    - Hiệu quả nhanh, không gây teo da
+    
+    **2. Roflumilast Cream 0.3% / Foam (PDE4 Inhibitor):**
+    - Dùng cho vùng da nếp gấp, mặt
+    - Không gây châm chích như crisaborole
     """)
     
     st.markdown("---")

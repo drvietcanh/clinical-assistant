@@ -47,7 +47,7 @@ def render():
     # Stroke type selection
     stroke_type = st.radio(
         "**Loại Stroke:**",
-        ["Đột quỵ thiếu máu (Ischemic)", "Đột quỵ xuất huyết (Hemorrhagic)", "Chưa xác định"],
+        ["Đột quỵ thiếu máu (Ischemic)", "Đột quỵ xuất huyết (Hemorrhagic)", "Dự phòng Đột quỵ (Prevention)", "Chưa xác định"],
         key="stroke_type"
     )
     
@@ -57,6 +57,8 @@ def render():
         render_ischemic_stroke()
     elif "xuất huyết" in stroke_type or "Hemorrhagic" in stroke_type:
         render_hemorrhagic_stroke()
+    elif "Dự phòng" in stroke_type or "Prevention" in stroke_type:
+        render_prevention()
     else:
         render_unknown_stroke()
 
@@ -1455,4 +1457,72 @@ def render_unknown_stroke():
     
     # Enhanced footer with Phase 1 component
     render_protocol_footer("Stroke Management")
+
+
+def render_prevention():
+    """Primary Prevention of Stroke (AHA 2024)"""
+    st.subheader("🛡️ Dự phòng Đột quỵ Tiên phát (AHA 2024)")
+    st.caption("AHA 2024 Guideline for the Primary Prevention of Stroke")
+    
+    st.info("""
+    **Cập nhật AHA 2024:**
+    - Tập trung vào **Life's Essential 8** để giảm nguy cơ.
+    - Khuyến cáo mới về **GLP-1 Receptor Agonists** cho bệnh nhân tiểu đường.
+    - Mục tiêu huyết áp tích cực hơn (**<130/80 mmHg**).
+    """)
+    
+    st.markdown("### 1️⃣ Life's Essential 8 (8 Yếu tố Cốt lõi)")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.success("""
+        **Yếu tố Hành vi:**
+        1. **Chế độ ăn (Diet):** Địa Trung Hải, DASH. Hạn chế muối, đường.
+        2. **Hoạt động thể lực (Activity):** 150 phút/tuần trung bình hoặc 75 phút/tuần mạnh.
+        3. **Ngưng thuốc lá (Nicotine):** Bao gồm cả thuốc lá điện tử.
+        4. **Giấc ngủ (Sleep):** 7-9 giờ/đêm. Điều trị ngưng thở khi ngủ (OSA) nếu có.
+        """)
+        
+    with col2:
+        st.warning("""
+        **Yếu tố Sức khỏe:**
+        5. **BMI:** Duy trì BMI 18.5-24.9.
+        6. **Lipid máu:** Kiểm soát Non-HDL và LDL.
+        7. **Đường huyết:** HbA1c <7%.
+        8. **Huyết áp:** <130/80 mmHg.
+        """)
+    
+    st.markdown("---")
+    st.markdown("### 2️⃣ Khuyến cáo Thuốc (Pharmacotherapy)")
+    
+    with st.expander("💊 Xem chi tiết khuyến cáo thuốc", expanded=True):
+        st.markdown("""
+        **1. Bệnh nhân Đái tháo đường:**
+        - **GLP-1 Receptor Agonists:** (Semaglutide, Liraglutide) được khuyến cáo để giảm nguy cơ đột quỵ ở bệnh nhân ĐTĐ type 2 và nguy cơ tim mạch cao. (Class 1)
+        - **SGLT2 Inhibitors:** Cũng có lợi ích trên tim mạch và thận.
+        
+        **2. Huyết áp:**
+        - Mục tiêu: **<130/80 mmHg** cho hầu hết bệnh nhân.
+        - Thuốc: Thiazide, ACEi/ARB, CCB (Calcium Channel Blocker).
+        
+        **3. Lipid máu (Primary Prevention):**
+        - Nguy cơ tim mạch 10 năm (ASCVD Risk) ≥7.5% hoặc ĐTĐ: Dùng Statin cường độ trung bình-cao.
+        - Mục tiêu LDL: Giảm ≥50% hoặc <70 mg/dL (nguy cơ cao).
+        
+        **4. Aspirin:**
+        - **KHÔNG** khuyến cáo Aspirin liều thấp thường quy cho dự phòng *tiên phát* (do nguy cơ xuất huyết > lợi ích).
+        - Chỉ cân nhắc ở nhóm nguy cơ tim mạch rất cao và nguy cơ xuất huyết thấp (Class 2b).
+        """)
+    
+    st.markdown("---")
+    st.markdown("### 3️⃣ Sàng lọc Rung nhĩ (Atrial Fibrillation)")
+    st.info("""
+    - Sàng lọc rung nhĩ cho người **>65 tuổi** (bắt mạch, ECG, thiết bị đeo).
+    - Nếu phát hiện Rung nhĩ: Đánh giá điểm **CHA₂DS₂-VASc**.
+    - **CHA₂DS₂-VASc ≥2 (nam) hoặc ≥3 (nữ):** Chỉ định thuốc chống đông đường uống (DOAC ưu tiên hơn Warfarin).
+    """)
+    
+    render_protocol_footer("Stroke Prevention")
+
 

@@ -12,7 +12,14 @@ from components.references import render_references_section
 def render():
     """Atrial Fibrillation Management Protocol"""
     st.subheader("💓 Rung Nhĩ (Atrial Fibrillation)")
-    st.caption("AHA/ACC/HRS 2019, ESC 2020 - AF management")
+    st.caption("ESC 2020 / ACC/AHA/ACCP/HRS 2023 - Early Rhythm Control Priority")
+    
+    st.info("""
+    **Cập nhật quan trọng (2024):**
+    - **ABC Pathway:** Anticoagulation (Chống đông), Better symptom control (Kiểm soát triệu chứng), Comorbidities (Bệnh đồng mắc).
+    - **Early Rhythm Control:** Ưu tiên khôi phục nhịp sớm (Ablation/Antiarrhythmic) cho bệnh nhân mới chẩn đoán (<1 năm) để cải thiện tiên lượng.
+    - **Catheter Ablation:** First-line cho một số nhóm bệnh nhân (suy tim HFrEF).
+    """)
     
     st.info("""
     **Rung nhĩ (AF) là gì:**
@@ -48,27 +55,31 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 🎯 Chiến Lược Điều trị")
+    st.markdown("### 🎯 Chiến Lược Điều trị (ABC Pathway)")
     
     strategy = st.radio(
         "**Chiến lược điều trị:**",
         [
-            "Kiểm soát tần số (Rate Control)",
-            "Khôi phục nhịp (Rhythm Control)",
-            "Chống đông (Anticoagulation)",
-            "Rung nhĩ cấp với RVR"
+            "A - Anticoagulation (Tránh đột quỵ)",
+            "B - Better Symptom Control (Rate/Rhythm)",
+            "C - Comorbidities (Quản lý bệnh nền)",
+            "Rung nhĩ cấp với RVR (Cấp cứu)"
         ],
         key="af_strategy"
     )
     
     st.markdown("---")
     
-    if "Kiểm soát tần số" in strategy:
-        render_rate_control()
-    elif "Khôi phục nhịp" in strategy:
-        render_rhythm_control()
-    elif "Chống đông" in strategy:
+    if "Anticoagulation" in strategy:
         render_anticoagulation()
+    elif "Better Symptom" in strategy:
+        control_type = st.radio("Chọn phương pháp:", ["Kiểm soát Nhịp (Rhythm Control - Ưu tiên)", "Kiểm soát Tần số (Rate Control)"], horizontal=True)
+        if "Rhythm" in control_type:
+            render_rhythm_control()
+        else:
+            render_rate_control()
+    elif "Comorbidities" in strategy:
+        render_comorbidities()
     elif "RVR" in strategy or "cấp" in strategy:
         render_acute_af_rvr()
     
@@ -273,28 +284,27 @@ def render_rate_control():
 
 def render_rhythm_control():
     """Rhythm control strategy"""
-    st.warning("## 🟡 Khôi Phục Nhịp")
+    st.success("## 🟡 Khôi Phục Nhịp (Rhythm Control)")
+    st.caption("Ưu tiên cho: Mới chẩn đoán (<1 năm), Trẻ tuổi, Suy tim, Có triệu chứng")
     
     st.markdown("""
-    **Chỉ định:**
-    - Rung nhĩ mới (<48 giờ)
-    - Có triệu chứng nặng
-    - Suy tim do rung nhĩ
-    - Trẻ tuổi
+    **Chiến lược sớm (Early Rhythm Control):**
+    - Giảm biến cố tim mạch và đột quỵ ở bệnh nhân rung nhĩ mới chẩn đoán.
     
     **Phương pháp:**
-    1. **Cardioversion:**
-       - Điện: 100-200 J
-       - Thuốc: Flecainide, propafenone
+    1. **Catheter Ablation (Triệt đốt qua catheter):**
+       - **Class I:** Suy tim HFrEF (cải thiện tử vong), Rung nhĩ paroxysmal có triệu chứng (thất bại thuốc).
+       - **Class IIa:** First-line cho Rung nhĩ paroxysmal.
     
-    2. **Duy trì nhịp:**
-       - Flecainide, propafenone
-       - Amiodarone
-       - Sotalol
+    2. **Cardioversion (Sốc điện/Thuốc):**
+       - Điện: 100-200 J (đồng bộ)
+       - Thuốc: Flecainide, Amiodarone, Propafenone (Pill-in-pocket)
+       - **Lưu ý:** Cần loại trừ huyết khối tiểu nhĩ trái (TEE) nếu >48h.
     
-    **Lưu ý:**
-    - Cần chống đông trước/sau cardioversion
-    - Tỷ lệ tái phát cao
+    3. **Thuốc chống loạn nhịp (Antiarrhythmic Drugs - AAD):**
+       - **Không bệnh tim cấu trúc:** Flecainide, Propafenone
+       - **Có suy tim/CAD:** Amiodarone
+       - **Sotalol:** Cần theo dõi QT
     """)
 
 
@@ -348,5 +358,18 @@ def render_acute_af_rvr():
     **Mục tiêu:** Tần số thất <100 bpm
     
     **Theo dõi:** ECG liên tục, huyết áp
+    """)
+
+def render_comorbidities():
+    """Manage comorbidities (C in ABC pathway)"""
+    st.info("## 🔵 Quản lý Bệnh Đồng Mắc (Comorbidities)")
+    st.markdown("""
+    **Tối ưu hóa điều trị các yếu tố nguy cơ:**
+    - **Hypertension:** Kiểm soát HA tốt.
+    - **Heart Failure:** Điều trị nội khoa tối ưu (GDMT).
+    - **Diabetes:** Kiểm soát đường huyết.
+    - **Obesity:** Giảm cân (giảm >10% cân nặng giúp giảm gánh nặng rung nhĩ).
+    - **Sleep Apnea:** Tầm soát và điều trị CPAP.
+    - **Alcohol:** Hạn chế hoặc ngừng rượu bia.
     """)
 

@@ -36,10 +36,10 @@ def render():
     )
     
     st.info("""
-    **Chẩn đoán Sepsis:**
+    **Chẩn đoán Sepsis (Sepsis-3):**
     - Nhiễm trùng (nghi ngờ hoặc xác định)
-    - qSOFA ≥2 hoặc SOFA tăng ≥2 điểm
-    - Rối loạn chức năng cơ quan
+    - Tăng điểm SOFA ≥2 điểm
+    - *Lưu ý: qSOFA (nhịp thở ≥22, GCS <15, Huyết áp tâm thu ≤100) chỉ dùng để sàng lọc nhanh, độ nhạy thấp.*
     """)
     
     st.markdown("---")
@@ -53,45 +53,45 @@ def render():
     
     # Evidence summary
     render_evidence_summary(
-        last_reviewed="2024-10-01",
-        last_updated="2024-10-01",
-        version="2024",
-        guideline_source="Surviving Sepsis Campaign 2021"
+        last_reviewed="2025-01-01",
+        last_updated="2025-01-01",
+        version="2025",
+        guideline_source="Surviving Sepsis Campaign 2021 + 2025 Updates"
     )
     
     st.markdown("### ⏱️ Thực hiện NGAY trong vòng 1 GIỜ")
     
     # Enhanced recommendations with evidence levels using Phase 1 component
     render_recommendation_with_evidence(
-        "Đo Lactate - Lactate >2 mmol/L = septic shock. Đo lại sau 2-4h nếu tăng.",
+        "Đo Lactate - Lactate >2 mmol/L = dấu hiệu giảm tưới máu. Đo lại sau 2-4h nếu tăng.",
         evidence_level="A",
         citation_indices=[1],
         inline=False
     )
     
     render_recommendation_with_evidence(
-        "Cấy máu trước khi kháng sinh - 2 bộ cấy máu (từ 2 vị trí khác nhau). Cấy dịch từ ổ nhiễm (nếu có).",
+        "Cấy máu trước kháng sinh - 2 bộ (Aerobic + Anaerobic). KHÔNG trì hoãn kháng sinh >45 phút nếu khó lấy ven.",
         evidence_level="A",
         citation_indices=[1],
         inline=False
     )
     
     render_recommendation_with_evidence(
-        "Kháng sinh phổ rộng trong vòng 1 giờ - Theo guideline địa phương. Liều đủ, đường IV.",
+        "Kháng sinh phổ rộng IV - Trong vòng 1 giờ đầu. Cân nhắc MRSA/Pseudomonas nếu có nguy cơ.",
         evidence_level="A",
         citation_indices=[1, 2],
         inline=False
     )
     
     render_recommendation_with_evidence(
-        "Truyền dịch nhanh - 30 mL/kg crystalloid trong 3 giờ đầu. Ringer Lactate hoặc Normal Saline.",
+        "Bù dịch nhanh 30 mL/kg - Cho tụt huyết áp hoặc Lactate ≥4 mmol/L. Dùng tinh thể cân bằng (Balanced Crystalloids).",
         evidence_level="B",
         citation_indices=[1],
         inline=False
     )
     
     render_recommendation_with_evidence(
-        "Vasopressor nếu hạ huyết áp - Nếu MAP <65 mmHg sau truyền dịch. Norepinephrine là thuốc đầu tay. Mục tiêu MAP ≥65 mmHg.",
+        "Vasopressor sớm - Dùng Norepinephrine nếu MAP <65 mmHg trong khi đang bù dịch. Đừng đợi bù đủ 30ml/kg mới bắt đầu.",
         evidence_level="A",
         citation_indices=[1],
         inline=False

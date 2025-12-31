@@ -22,15 +22,22 @@ from components.phase1_protocol_enhancer import (
 def render():
     """Cardiac Arrest / ACLS Protocol"""
     st.subheader("💔 Cardiac Arrest / ACLS Protocol")
-    st.caption("AHA 2020, ERC 2021 - Advanced Cardiac Life Support")
+    st.caption("AHA 2025 Guidelines - Advanced Cardiac Life Support")
     
     # Enhanced header with Phase 1 components
     render_protocol_header(
         protocol_name="Cardiac Arrest / ACLS",
-        guideline_source="AHA 2020, ERC 2021",
+        guideline_source="AHA 2025",
         show_version=True,
         show_evidence_summary=True
     )
+    
+    st.info("""
+    **Cập nhật AHA 2025:**
+    - **Unified Chain of Survival:** Áp dụng cho cả nội viện/ngoại viện, người lớn/trẻ em.
+    - **Opioid-associated:** Naloxone được tích hợp vào BLS algorithm (nếu nghi ngờ).
+    - **Choking:** Khuyến cáo vỗ lưng 5 cái + ấn bụng 5 cái (người lớn/trẻ em tỉnh).
+    """)
     
     st.error("""
     **🚨 CARDIAC ARREST = IMMEDIATE LIFE-THREATENING EMERGENCY**

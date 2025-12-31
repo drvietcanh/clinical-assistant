@@ -10,13 +10,14 @@ from components.references import render_references_section
 
 def render():
     """COPD Exacerbation Protocol"""
-    st.subheader("🫁 COPD Exacerbation")
-    st.caption("Cơn Cấp COPD - Xử tríTheo GOLD 2023")
-    
-    st.info("ℹ️ **Guideline Update Note:** Vui lòng kiểm tra GOLD 2025 (nếu đã phát hành) tại https://goldcopd.org để cập nhật khuyến cáo mới nhất.")
+    st.subheader("🫁 COPD Exacerbation Management")
+    st.caption("GOLD 2025 Guidelines")
     
     st.info("""
-    **Cơn cấp COPD** là đợt xấu đi cấp tính các triệu chứng hô hấp cần điều chỉnh điều trị.
+    **Cập nhật GOLD 2025:**
+    - Tiêu chuẩn chẩn đoán: Tăng khó thở, ho, đờm < 14 ngày.
+    - Phân loại: Nhẹ (chỉ dùng SABA), Trung bình (SABA + KS/Corticoid), Nặng (nhập viện/Suy hô hấp).
+    - **Lưu ý:** Eosinophils máu chỉ dẫn đường dùng Corticoid trong giai đoạn ổn định, không phải trong đợt cấp (tuy nhiên nếu Eos thấp <2% thì ít đáp ứng ICS).
     """)
     
     # Assessment

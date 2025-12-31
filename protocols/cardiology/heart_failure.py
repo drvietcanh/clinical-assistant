@@ -339,16 +339,19 @@ def render():
         """)
         
         st.info("""
-        **HFpEF (EF ≥50%):**
-        - Lợi tiểu để giảm tắc nghẽn
-        - Kiểm soát THA (<130/80)
-        - Kiểm soát HR nếu AF
-        - SGLT2 inhibitor (Dapagliflozin, Empagliflozin)
-        - Điều trị bệnh kèm theo
+        **HFpEF (EF ≥50%) - Cập nhật ESC 2024:**
+        - **SGLT2 Inhibitor (Dapa/Empa):** Class I cho TẤT CẢ bệnh nhân suy tim (bất kể EF).
+        - **Lợi tiểu:** Giảm sung huyết.
+        - **Kiểm soát bệnh đồng mắc:**
+            - **Béo phì:** Cân nhắc **Semaglutide** (STEP-HFpEF) để giảm triệu chứng & cân nặng.
+            - **Thiếu sắt:** Bù sắt IV (Ferric Carboxymaltose) để cải thiện triệu chứng (Class I).
+            - **Rung nhĩ:** Kiểm soát nhịp/tần số.
+        """)
         
+        st.info("""
         **HFmrEF (EF 40-49%):**
-        - Điều trị tương tự HFrEF
-        - Evidence ít hơn nhưng có lợi ích
+        - Điều trị tương tự HFrEF (SGLT2i là quan trọng nhất).
+        - ACEi/ARB/MRA/Beta-blocker có thể cân nhắc.
         """)
     
     st.markdown("---")

@@ -419,36 +419,32 @@ def render_dengue_with_warning():
     st.error("## 🚨 SỐT XUẤT HUYẾT DENGUE CÓ DẤU HIỆU CẢNH BÁO")
     
     st.markdown("""
-    **Nhập viện ngay:**
+    **Nhập viện ngay (MOH 2023):**
     
-    **1. Truyền dịch:**
-    - NaCl 0.9% hoặc Ringer Lactate
-    - Liều: 10-20 mL/kg trong 1-2 giờ đầu
-    - Sau đó: 5-10 mL/kg/giờ
-    - Điều chỉnh theo đáp ứng
+    **1. Dấu hiệu cảnh báo lâm sàng (Quan trọng):**
+    - Đau bụng nhiều, liên tục hoặc tăng cảm giác đau vùng gan.
+    - Nôn ói liên tục (≥3 lần/giờ hoặc ≥4 lần/6 giờ).
+    - Mệt mỏi, lừ đừ, bồn chồn (thay đổi tri giác).
+    - Chảy máu chân răng, mũi, nôn ra máu, tiêu phân đen, kinh nguyệt bất thường.
+    - Gan to >2 cm dưới bờ sườn.
+    - Tiểu ít.
     
-    **2. Theo dõi sát:**
-    - Dấu hiệu sống mỗi 2-4 giờ
-    - Hct, tiểu cầu mỗi 6-12 giờ
-    - Lượng nước tiểu
-    - Dấu hiệu sốc
+    **2. Truyền dịch (Thận trọng):**
+    - Chỉ định khi không uống được hoặc nôn nhiều/có dấu hiệu mất nước.
+    - **Lactated Ringer's** hoặc **NaCl 0.9%**.
+    - Tốc độ: 6-7 ml/kg/giờ (trong 1-3 giờ), sau đó giảm dần 5 -> 3 -> 1.5 ml/kg/giờ.
+    - Ngừng truyền khi huyết động ổn định và bệnh nhân uống được.
     
     **3. Điều trị hỗ trợ:**
-    - Hạ sốt: Paracetamol
-    - Chống nôn nếu cần
-    - Điều chỉnh điện giải
+    - Hạ sốt: Paracetamol (đơn chất).
+    - Tuyệt đối KHÔNG dùng Aspirin, Ibuprofen, Analgin.
     
-    **4. Chuẩn bị:**
-    - Sẵn sàng xử trí sốc
-    - Có thể cần truyền máu
-    - Có thể cần ICU
-    
-    **Tiêu chuẩn xuất viện:**
-    - Hết sốt 24-48 giờ
-    - Không có dấu hiệu cảnh báo
-    - Hct ổn định
-    - Tiểu cầu tăng
-    - Tổng trạng tốt
+    **Tiêu chuẩn xuất viện (MOH 2023):**
+    - Hết sốt ≥ 2 ngày, tỉnh táo.
+    - Mạch, huyết áp bình thường.
+    - Không khó thở/suy hô hấp.
+    - **Tiểu cầu:** Khuynh hướng tăng và >50,000/µL.
+    - Hct ổn định.
     """)
 
 
