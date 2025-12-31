@@ -525,10 +525,8 @@ def render_scoring_calculator():
         "🧠 CAM-ICU",
         "🧪 AKI Staging"
     ]
-    if default_tab is not None and 0 <= default_tab < len(tab_labels):
-        tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(tab_labels, selected=default_tab)
-    else:
-        tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(tab_labels)
+    # Note: st.tabs does not support programmatic selection
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(tab_labels)
     
     # Tab 1: APACHE II
     with tab1:
