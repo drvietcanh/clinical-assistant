@@ -27,7 +27,18 @@ try:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = True
 except ImportError:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = False
-# ======================================
+
+# ========== PHASE 1: CALCULATOR METADATA ==========
+try:
+    from components.phase1_calculator_metadata import (
+        render_calculator_education,
+        render_calculator_result_with_interpretation,
+        get_calculator_metadata
+    )
+    CALCULATOR_METADATA_AVAILABLE = True
+except ImportError:
+    CALCULATOR_METADATA_AVAILABLE = False
+# ===================================================
 
 
 def render():
@@ -146,8 +157,11 @@ def render():
             limit=3
         )
         
-        # Educational information - Enhanced with Phase 1
-        if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        # Educational information - Enhanced with Phase 1 Metadata
+        if CALCULATOR_METADATA_AVAILABLE:
+            st.markdown("---")
+            render_calculator_education("curb65")
+        elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
             st.markdown("---")
             render_calculator_explanation(
                 title="Về CURB-65 Score",
@@ -325,14 +339,22 @@ def render():
             else:
                 st.write("- Không có tiêu chí nào")
             
-            st.markdown("---")
-            st.markdown("### 💊 Khuyến cáo")
-            
-            st.info(f"""
-            **Tỷ lệ tử vong 30 ngày:** {mortality}
-            
-            **Khuyến cáo:** {recommendation}
-            """)
+            # Enhanced result interpretation with Phase 1 metadata
+            if CALCULATOR_METADATA_AVAILABLE:
+                render_calculator_result_with_interpretation(
+                    calculator_id="curb65",
+                    result=f"CURB-65 Score: {score}/5",
+                    result_value=float(score)
+                )
+            else:
+                st.markdown("---")
+                st.markdown("### 💊 Khuyến cáo")
+                
+                st.info(f"""
+                **Tỷ lệ tử vong 30 ngày:** {mortality}
+                
+                **Khuyến cáo:** {recommendation}
+                """)
             
             if score <= 1:
                 st.success("""

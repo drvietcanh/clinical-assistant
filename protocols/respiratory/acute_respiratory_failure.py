@@ -8,12 +8,25 @@ Updated with latest guidelines 2024-2025
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.phase1_protocol_enhancer import (
+    render_protocol_header,
+    render_recommendation_with_evidence,
+    render_protocol_footer
+)
 
 
 def render():
     """Acute Respiratory Failure Protocol"""
     st.subheader("🫁 Acute Respiratory Failure (Non-ARDS)")
     st.caption("ATS/ERS 2017, SCCM 2017, ESICM 2023-2024 - Management of acute respiratory failure (Updated 2024-2025)")
+    
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="Acute Respiratory Failure",
+        guideline_source="ATS/ERS 2017, SCCM 2017, ESICM 2023-2024",
+        show_version=True,
+        show_evidence_summary=True
+    )
     
     st.warning("""
     **⚠️ ACUTE RESPIRATORY FAILURE = URGENT ASSESSMENT REQUIRED**
@@ -344,6 +357,10 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 10: REFERENCES ==========
+    # Enhanced footer with Phase 1 component
+    render_protocol_footer("Acute Respiratory Failure")
+    
+    # Keep existing references as fallback
     render_references_section(get_references("acute_respiratory_failure"))
     
     st.markdown("---")

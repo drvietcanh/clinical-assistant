@@ -12,6 +12,11 @@ from components.evidence_badge import (
     render_evidence_summary,
     Citation
 )
+from components.phase1_protocol_enhancer import (
+    render_protocol_header,
+    render_recommendation_with_evidence,
+    render_protocol_footer
+)
 
 
 def render():
@@ -19,12 +24,12 @@ def render():
     st.subheader("💔 Cardiac Arrest / ACLS Protocol")
     st.caption("AHA 2020, ERC 2021 - Advanced Cardiac Life Support")
     
-    # Evidence summary
-    render_evidence_summary(
-        last_reviewed="2024-11-01",
-        last_updated="2024-11-01",
-        version="2024",
-        guideline_source="AHA 2020, ERC 2021"
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="Cardiac Arrest / ACLS",
+        guideline_source="AHA 2020, ERC 2021",
+        show_version=True,
+        show_evidence_summary=True
     )
     
     st.error("""
@@ -296,8 +301,8 @@ def render():
     
     st.markdown("---")
     
-    # ========== SECTION 9: REFERENCES ==========
-    render_references_section(get_references("cardiac_arrest"))
+    # Enhanced footer with Phase 1 component
+    render_protocol_footer("Cardiac Arrest / ACLS")
     
     st.markdown("---")
     

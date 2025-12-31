@@ -19,12 +19,12 @@ def render():
     st.subheader("🧠 Chấn thương Sọ Não (TBI) – Xử trí ban đầu")
     st.caption("Brain Trauma Foundation 4th ed. – ABC, CPP/ICP, chỉ định CT và chuyển tuyến")
     
-    # Evidence summary
-    render_evidence_summary(
-        last_reviewed="2023-09-01",
-        last_updated="2023-09-01",
-        version="2023",
-        guideline_source="Brain Trauma Foundation 4th ed."
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="Traumatic Brain Injury",
+        guideline_source="Brain Trauma Foundation 4th ed.",
+        show_version=True,
+        show_evidence_summary=True
     )
 
     st.error(
@@ -127,6 +127,9 @@ def render():
 
     st.markdown("---")
 
+    # Enhanced footer with Phase 1 component
+    render_protocol_footer("Traumatic Brain Injury")
+    
+    # Keep existing references as fallback
     render_references_section(get_references("Traumatic Brain Injury"))
-
 

@@ -6,25 +6,12 @@ GOLD 2023 Guidelines
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
-from components.evidence_badge import (
-    render_evidence_badge,
-    render_evidence_summary,
-    Citation
-)
 
 
 def render():
     """COPD Exacerbation Protocol"""
     st.subheader("🫁 COPD Exacerbation")
     st.caption("Cơn Cấp COPD - Xử tríTheo GOLD 2023")
-    
-    # Evidence summary
-    render_evidence_summary(
-        last_reviewed="2023-11-01",
-        last_updated="2023-11-01",
-        version="2023",
-        guideline_source="GOLD 2023"
-    )
     
     st.info("ℹ️ **Guideline Update Note:** Vui lòng kiểm tra GOLD 2025 (nếu đã phát hành) tại https://goldcopd.org để cập nhật khuyến cáo mới nhất.")
     

@@ -45,6 +45,27 @@ from components.ui.scoring import render_score_result, render_score_breakdown
 from components.risk_color_coding import render_risk_badge, get_risk_level
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
+
+# ========== PHASE 1: CALCULATOR METADATA ==========
+try:
+    from components.phase1_calculator_metadata import (
+        render_calculator_education,
+        render_calculator_result_with_interpretation,
+        get_calculator_metadata
+    )
+    CALCULATOR_METADATA_AVAILABLE = True
+except ImportError:
+    CALCULATOR_METADATA_AVAILABLE = False
 # ===================================================
 
 
@@ -210,8 +231,10 @@ def render():
     st.title("🩸 Wells Score - Deep Vein Thrombosis (DVT)")
     st.markdown("**Đánh giá xác suất tiền test của huyết khối tĩnh mạch sâu**")
     
-    # Educational information - Enhanced with Phase 1
-    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+    # Educational information - Enhanced with Phase 1 Metadata
+    if CALCULATOR_METADATA_AVAILABLE:
+        render_calculator_education("wells_dvt")
+    elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
         render_calculator_explanation(
             title="Về Wells DVT Score",
             content="""
@@ -406,6 +429,14 @@ def render():
             color=score_color,
             icon=result['color'],
             size="large"
+        )
+        
+        # Enhanced result interpretation with Phase 1 metadata
+        if CALCULATOR_METADATA_AVAILABLE:
+            render_calculator_result_with_interpretation(
+                calculator_id="wells_dvt",
+                result=f"Wells DVT Score: {result['score']}",
+                result_value=float(result['score'])
         )
         
         # Visual Charts

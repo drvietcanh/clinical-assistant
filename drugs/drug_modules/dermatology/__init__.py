@@ -1,0 +1,1 @@
+DERMATOLOGY_DRUGS = {}

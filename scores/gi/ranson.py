@@ -78,29 +78,45 @@ def render():
         st.info("📥 Đã tải kết quả chia sẻ Ranson")
     
     st.title("🏥 Ranson Criteria")
-    st.markdown("""
-    ### Tiên lượng viêm tụy cấp
+    st.caption("Tiên lượng viêm tụy cấp")
     
-    **Ranson Criteria:**
-    - Tiên lượng mức độ nặng viêm tụy cấp
-    - 11 tiêu chí: 5 lúc nhập viện + 6 sau 48h
-    - Điểm từ 0-11
-    - Dự đoán tử vong và cần ICU
-    
-    **2 Bộ Tiêu chí:**
-    - **Lúc nhập viện (0h):** 5 tiêu chí
-    - **Sau 48 giờ:** 6 tiêu chí
-    
-    **Phân loại:**
-    - **< 3:** Viêm tụy nhẹ (tử vong < 1%)
-    - **3-5:** Viêm tụy trung bình (tử vong 10-20%)
-    - **≥ 6:** Viêm tụy nặng (tử vong > 50%)
-    
-    **Lưu ý:**
-    - Cần CHỜ 48H để tính đủ điểm
-    - Không dùng được ngay lúc nhập viện
-    - Atlanta classification và CT severity index là alternatives
-    """)
+    # Educational information - Enhanced with Phase 1 Metadata
+    if CALCULATOR_METADATA_AVAILABLE:
+        render_calculator_education("ranson")
+    elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        st.markdown("""
+        ### Tiên lượng viêm tụy cấp
+        
+        **Ranson Criteria:**
+        - Tiên lượng mức độ nặng viêm tụy cấp
+        - 11 tiêu chí: 5 lúc nhập viện + 6 sau 48h
+        - Điểm từ 0-11
+        - Dự đoán tử vong và cần ICU
+        
+        **2 Bộ Tiêu chí:**
+        - **Lúc nhập viện (0h):** 5 tiêu chí
+        - **Sau 48 giờ:** 6 tiêu chí
+        
+        **Phân loại:**
+        - **< 3:** Viêm tụy nhẹ (tử vong < 1%)
+        - **3-5:** Viêm tụy trung bình (tử vong 10-20%)
+        - **≥ 6:** Viêm tụy nặng (tử vong > 50%)
+        
+        **Lưu ý:**
+        - Cần CHỜ 48H để tính đủ điểm
+        - Không dùng được ngay lúc nhập viện
+        - Atlanta classification và CT severity index là alternatives
+        """)
+    else:
+        st.markdown("""
+        ### Tiên lượng viêm tụy cấp
+        
+        **Ranson Criteria:**
+        - Tiên lượng mức độ nặng viêm tụy cấp
+        - 11 tiêu chí: 5 lúc nhập viện + 6 sau 48h
+        - Điểm từ 0-11
+        - Dự đoán tử vong và cần ICU
+        """)
     
     st.markdown("---")
     
@@ -308,20 +324,28 @@ def render():
         
         st.markdown("---")
         
-        # Interpretation
-        st.subheader("🎯 Phân tích & Tiên lượng")
-        
-        st.info(f"""
-        **Ranson Score: {total_score}/11**
-        
-        **Mức độ nặng:** {interp['severity']}
-        
-        **Tử vong dự đoán:** {interp['mortality']}
-        
-        **ICU:** {interp['icu_need']}
-        
-        **Khuyến nghị:** {interp['recommendation']}
-        """)
+        # Enhanced result interpretation with Phase 1 metadata
+        if CALCULATOR_METADATA_AVAILABLE:
+            render_calculator_result_with_interpretation(
+                calculator_id="ranson",
+                result=f"Ranson Score: {total_score}/11",
+                result_value=float(total_score)
+            )
+        else:
+            # Interpretation
+            st.subheader("🎯 Phân tích & Tiên lượng")
+            
+            st.info(f"""
+            **Ranson Score: {total_score}/11**
+            
+            **Mức độ nặng:** {interp['severity']}
+            
+            **Tử vong dự đoán:** {interp['mortality']}
+            
+            **ICU:** {interp['icu_need']}
+            
+            **Khuyến nghị:** {interp['recommendation']}
+            """)
         
         # Detailed management
         st.markdown("---")

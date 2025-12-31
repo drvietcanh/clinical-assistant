@@ -12,6 +12,11 @@ from components.evidence_badge import (
     render_evidence_summary,
     Citation
 )
+from components.phase1_protocol_enhancer import (
+    render_protocol_header,
+    render_recommendation_with_evidence,
+    render_protocol_footer
+)
 
 
 def render():
@@ -19,12 +24,12 @@ def render():
     st.subheader("🫁 ARDS Management Protocol")
     st.caption("Berlin Definition 2012, SCCM Guidelines - Acute Respiratory Distress Syndrome")
     
-    # Evidence summary
-    render_evidence_summary(
-        last_reviewed="2024-03-01",
-        last_updated="2024-03-01",
-        version="2024",
-        guideline_source="SCCM/ESICM 2024"
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="ARDS Management",
+        guideline_source="SCCM/ESICM 2024, Berlin Definition 2012",
+        show_version=True,
+        show_evidence_summary=True
     )
     
     st.error("""
@@ -1373,12 +1378,15 @@ def render():
         - Long-term complications: ICU-acquired weakness, cognitive impairment
         """)
     
-    # References section
+    # Enhanced footer with Phase 1 component
+    render_protocol_footer("ARDS Management")
+    
+    # Keep existing references as fallback
     references = get_references("ARDS")
     if references:
         render_references_section(
             references=references,
-            title="📚 Tài liệu tham khảo",
+            title="📚 Tài liệu tham khảo (Additional)",
             last_updated="2024-01-15",
             show_evidence_level=True,
             show_links=True

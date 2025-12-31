@@ -12,6 +12,11 @@ from components.evidence_badge import (
     render_evidence_summary,
     Citation
 )
+from components.phase1_protocol_enhancer import (
+    render_protocol_header,
+    render_recommendation_with_evidence,
+    render_protocol_footer
+)
 
 
 def render():
@@ -19,12 +24,12 @@ def render():
     st.subheader("💉 Ngộ Độc Opioid / Naloxone")
     st.caption("AHA 2020, SAMHSA - Opioid overdose reversal protocol")
     
-    # Evidence summary
-    render_evidence_summary(
-        last_reviewed="2023-12-01",
-        last_updated="2023-12-01",
-        version="2023",
-        guideline_source="AHA 2020, SAMHSA"
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="Opioid Overdose / Naloxone",
+        guideline_source="AHA 2020, SAMHSA",
+        show_version=True,
+        show_evidence_summary=True
     )
     
     st.error("""
@@ -444,12 +449,15 @@ def render_respiratory_arrest():
     
     st.markdown("---")
     
-    # References section
+    # Enhanced footer with Phase 1 component
+    render_protocol_footer("Opioid Overdose / Naloxone")
+    
+    # Keep existing references as fallback
     references = get_references("Opioid Overdose")
     if references:
         render_references_section(
             references=references,
-            title="📚 Tài liệu tham khảo",
+            title="📚 Tài liệu tham khảo (Additional)",
             last_updated="2024-01-15",
             show_evidence_level=True,
             show_links=True

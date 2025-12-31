@@ -18,12 +18,12 @@ def render():
     st.subheader("💔 ACS - Hội Chứng Vành Cấp")
     st.caption("STEMI & NSTEMI Management - ESC/AHA Guidelines")
     
-    # Evidence summary
-    render_evidence_summary(
-        last_reviewed="2024-12-01",
-        last_updated="2024-12-01",
-        version="2024",
-        guideline_source="ACC/AHA/SCAI 2024"
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="ACS",
+        guideline_source="ACC/AHA/SCAI 2024",
+        show_version=True,
+        show_evidence_summary=True
     )
     
     st.info("""
@@ -702,16 +702,8 @@ def render():
         
         """)
     
-    # References section
-    references = get_references("ACS")
-    if references:
-        render_references_section(
-            references=references,
-            title="📚 Tài liệu tham khảo",
-            last_updated="2024-01-15",
-            show_evidence_level=True,
-            show_links=True
-        )
+    # Enhanced footer with Phase 1 component
+    render_protocol_footer("ACS")
     
     st.markdown("---")
     st.caption("⚠️ Protocol hỗ trợ lâm sàng - CODE STEMI cần quy trình bệnh viện cụ thể")

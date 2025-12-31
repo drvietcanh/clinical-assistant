@@ -22,7 +22,28 @@ from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
-# ======================================
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
+
+# ========== PHASE 1: CALCULATOR METADATA ==========
+try:
+    from components.phase1_calculator_metadata import (
+        render_calculator_education,
+        render_calculator_result_with_interpretation,
+        get_calculator_metadata
+    )
+    CALCULATOR_METADATA_AVAILABLE = True
+except ImportError:
+    CALCULATOR_METADATA_AVAILABLE = False
+# ===================================================
 from scores.utils.validation import validate_lab_value
 from components.ui.scoring import render_score_result, render_score_breakdown
 
@@ -99,7 +120,8 @@ def render():
     
     col1, col2 = st.columns([2, 1])
     
-    with col1:
+    with col2:
+        # Smart Suggestions
         render_suggestions(
             calculator_id="meld",
             calculator_name="MELD Score",
@@ -108,6 +130,22 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # Educational information - Enhanced with Phase 1 Metadata
+        if CALCULATOR_METADATA_AVAILABLE:
+            st.markdown("---")
+            render_calculator_education("meld")
+        elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
+            st.markdown("---")
+            render_calculator_explanation(
+                title="Về MELD Score",
+                content="MELD đánh giá mức độ nặng bệnh gan...",
+                when_to_use="Sử dụng khi...",
+                limitations="Hạn chế...",
+                clinical_context="Bối cảnh lâm sàng..."
+            )
+    
+    with col1:
         st.markdown("### 🔬 Xét nghiệm")
         
         # 1. Bilirubin
@@ -289,6 +327,14 @@ def render():
                 
                 st.metric("Tử vong 1 năm", mortality_1yr)
                 st.metric("Ưu tiên ghép gan", transplant_priority)
+                
+                # Enhanced result interpretation with Phase 1 metadata
+                if CALCULATOR_METADATA_AVAILABLE:
+                    render_calculator_result_with_interpretation(
+                        calculator_id="meld",
+                        result=f"MELD Score: {meld_score}",
+                        result_value=float(meld_score)
+                    )
             
             st.markdown("---")
             st.markdown("### 📋 ĐÁNH GIÁ & KHUYẾN NGHỊ")

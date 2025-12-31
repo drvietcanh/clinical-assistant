@@ -1,0 +1,1 @@
+UROLOGY_DRUGS = {}

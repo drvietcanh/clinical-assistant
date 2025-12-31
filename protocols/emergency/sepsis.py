@@ -15,6 +15,11 @@ from components.evidence_badge import (
     render_evidence_summary,
     Citation
 )
+from components.phase1_protocol_enhancer import (
+    render_protocol_header,
+    render_recommendation_with_evidence,
+    render_protocol_footer
+)
 
 
 def render():
@@ -22,8 +27,13 @@ def render():
     st.subheader("🦠 Sepsis 1-Hour Bundle")
     st.caption("Surviving Sepsis Campaign 2021")
     
-    # Version badge
-    render_version_badge("Sepsis 1-Hour Bundle")
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="Sepsis 1-Hour Bundle",
+        guideline_source="Surviving Sepsis Campaign 2021",
+        show_version=True,
+        show_evidence_summary=True
+    )
     
     st.info("""
     **Chẩn đoán Sepsis:**
@@ -49,32 +59,43 @@ def render():
         guideline_source="Surviving Sepsis Campaign 2021"
     )
     
-    st.error("""
-    **Thực hiện NGAY trong vòng 1 GIỜ:**
+    st.markdown("### ⏱️ Thực hiện NGAY trong vòng 1 GIỜ")
     
-    1. ✅ **Đo Lactate** <span style="background: #4caf50; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Level A</span>
-       - Lactate >2 mmol/L = septic shock
-       - Đo lại sau 2-4h nếu tăng
+    # Enhanced recommendations with evidence levels using Phase 1 component
+    render_recommendation_with_evidence(
+        "Đo Lactate - Lactate >2 mmol/L = septic shock. Đo lại sau 2-4h nếu tăng.",
+        evidence_level="A",
+        citation_indices=[1],
+        inline=False
+    )
     
-    2. ✅ **Cấy máu trước khi kháng sinh** <span style="background: #4caf50; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Level A</span>
-       - 2 bộ cấy máu (từ 2 vị trí khác nhau)
-       - Cấy dịch từ ổ nhiễm (nếu có)
+    render_recommendation_with_evidence(
+        "Cấy máu trước khi kháng sinh - 2 bộ cấy máu (từ 2 vị trí khác nhau). Cấy dịch từ ổ nhiễm (nếu có).",
+        evidence_level="A",
+        citation_indices=[1],
+        inline=False
+    )
     
-    3. ✅ **Kháng sinh phổ rộng** <span style="background: #4caf50; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Level A</span>
-       - Trong vòng 1 giờ
-       - Theo guideline địa phương
-       - Liều đủ, đường IV
+    render_recommendation_with_evidence(
+        "Kháng sinh phổ rộng trong vòng 1 giờ - Theo guideline địa phương. Liều đủ, đường IV.",
+        evidence_level="A",
+        citation_indices=[1, 2],
+        inline=False
+    )
     
-    4. ✅ **Truyền dịch nhanh** <span style="background: #2196f3; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Level B</span>
-       - 30 mL/kg crystalloid
-       - Trong 3 giờ đầu
-       - Ringer Lactate hoặc Normal Saline
+    render_recommendation_with_evidence(
+        "Truyền dịch nhanh - 30 mL/kg crystalloid trong 3 giờ đầu. Ringer Lactate hoặc Normal Saline.",
+        evidence_level="B",
+        citation_indices=[1],
+        inline=False
+    )
     
-    5. ✅ **Vasopressor nếu hạ huyết áp** <span style="background: #4caf50; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">Level A</span>
-       - Nếu MAP <65 mmHg sau truyền dịch
-       - Norepinephrine là thuốc đầu tay
-       - Mục tiêu MAP ≥65 mmHg
-    """, unsafe_allow_html=True)
+    render_recommendation_with_evidence(
+        "Vasopressor nếu hạ huyết áp - Nếu MAP <65 mmHg sau truyền dịch. Norepinephrine là thuốc đầu tay. Mục tiêu MAP ≥65 mmHg.",
+        evidence_level="A",
+        citation_indices=[1],
+        inline=False
+    )
     
     st.markdown("---")
     
@@ -169,14 +190,6 @@ def render():
     
     st.markdown("---")
     
-    # References section
-    references = get_references("Sepsis")
-    if references:
-        render_references_section(
-            references=references,
-            title="📚 Tài liệu tham khảo",
-            last_updated="2024-01-15",
-            show_evidence_level=True,
-            show_links=True
-        )
+    # Enhanced footer with Phase 1 component
+    render_protocol_footer("Sepsis 1-Hour Bundle")
 

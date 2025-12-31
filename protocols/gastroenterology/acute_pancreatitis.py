@@ -7,12 +7,25 @@ Management of acute pancreatitis
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.phase1_protocol_enhancer import (
+    render_protocol_header,
+    render_recommendation_with_evidence,
+    render_protocol_footer
+)
 
 
 def render():
     """Acute Pancreatitis Protocol"""
     st.subheader("🫀 Viêm Tụy Cấp (Acute Pancreatitis)")
     st.caption("ACG 2013, AGA 2018 - Acute pancreatitis management")
+    
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="Acute Pancreatitis",
+        guideline_source="ACG 2013, AGA 2018",
+        show_version=True,
+        show_evidence_summary=True
+    )
     
     st.info("""
     **Viêm tụy cấp:**
@@ -178,16 +191,8 @@ def render():
     
     st.markdown("---")
     
-    # References section
-    references = get_references("Acute Pancreatitis")
-    if references:
-        render_references_section(
-            references=references,
-            title="📚 Tài liệu tham khảo",
-            last_updated="2024-01-15",
-            show_evidence_level=True,
-            show_links=True
-        )
+    # Enhanced footer with Phase 1 component
+    render_protocol_footer("Acute Pancreatitis")
     
     st.markdown("---")
     st.caption("⚠️ Protocol chỉ mang tính tham khảo. Điều chỉnh theo tình huống lâm sàng cụ thể và guidelines mới nhất.")

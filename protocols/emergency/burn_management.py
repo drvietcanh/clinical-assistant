@@ -12,6 +12,11 @@ from components.evidence_badge import (
     render_evidence_summary,
     Citation
 )
+from components.phase1_protocol_enhancer import (
+    render_protocol_header,
+    render_recommendation_with_evidence,
+    render_protocol_footer
+)
 
 
 def render():
@@ -19,12 +24,12 @@ def render():
     st.subheader("🔥 Bỏng (Burn Management)")
     st.caption("ABA Burn Care Guidelines 2024, ATLS Guidelines 2024 - Life-threatening burns")
     
-    # Evidence summary
-    render_evidence_summary(
-        last_reviewed="2024-09-01",
-        last_updated="2024-09-01",
-        version="2024",
-        guideline_source="ABA 2024, ATLS 2024"
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="Burn Management",
+        guideline_source="ABA 2024, ATLS 2024",
+        show_version=True,
+        show_evidence_summary=True
     )
     
     st.error("""
@@ -270,12 +275,15 @@ def render():
     
     st.markdown("---")
     
-    # References
+    # Enhanced footer with Phase 1 component
+    render_protocol_footer("Burn Management")
+    
+    # Keep existing references as fallback
     references = get_references("Burn Management")
     if references:
         render_references_section(references)
     else:
-        st.markdown("### 📚 References")
+        st.markdown("### 📚 References (Additional)")
         st.markdown("""
         1. **ABA Burn Care Guidelines 2024** - American Burn Association
         2. **ATLS Guidelines 2024** - Advanced Trauma Life Support
@@ -384,4 +392,3 @@ def render_critical_burn():
     - Cần điều trị rất lâu dài
     - Nhiều biến chứng
     """)
-

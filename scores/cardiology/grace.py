@@ -47,8 +47,10 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    # Educational information - Enhanced with Phase 1
-    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+    # Educational information - Enhanced with Phase 1 Metadata
+    if CALCULATOR_METADATA_AVAILABLE:
+        render_calculator_education("grace")
+    elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
         render_calculator_explanation(
             title="Về GRACE Score",
             content="""
@@ -400,6 +402,14 @@ def render():
                     icon=icon,
                     size="large"
                 )
+                
+                # Enhanced result interpretation with Phase 1 metadata
+                if CALCULATOR_METADATA_AVAILABLE:
+                    render_calculator_result_with_interpretation(
+                        calculator_id="grace",
+                        result=f"GRACE Score: {points}",
+                        result_value=float(points)
+                    )
             
             # Build breakdown of component scores
             component_scores = {}

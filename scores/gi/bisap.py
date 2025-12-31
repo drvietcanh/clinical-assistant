@@ -16,7 +16,28 @@ from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
-# ======================================
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
+
+# ========== PHASE 1: CALCULATOR METADATA ==========
+try:
+    from components.phase1_calculator_metadata import (
+        render_calculator_education,
+        render_calculator_result_with_interpretation,
+        get_calculator_metadata
+    )
+    CALCULATOR_METADATA_AVAILABLE = True
+except ImportError:
+    CALCULATOR_METADATA_AVAILABLE = False
+# ===================================================
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -89,6 +110,20 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # Educational information - Enhanced with Phase 1 Metadata
+        if CALCULATOR_METADATA_AVAILABLE:
+            st.markdown("---")
+            render_calculator_education("bisap")
+        elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
+            st.markdown("---")
+            render_calculator_explanation(
+                title="Về BISAP Score",
+                content="BISAP đánh giá mức độ nặng viêm tụy cấp...",
+                when_to_use="Sử dụng khi...",
+                limitations="Hạn chế...",
+                clinical_context="Bối cảnh lâm sàng..."
+            )
     
     # Input form
     st.subheader("📝 Nhập thông tin bệnh nhân")
@@ -390,6 +425,14 @@ def render():
             icon=icon,
             size="large"
         )
+        
+        # Enhanced result interpretation with Phase 1 metadata
+        if CALCULATOR_METADATA_AVAILABLE:
+            render_calculator_result_with_interpretation(
+                calculator_id="bisap",
+                result=f"BISAP Score: {bisap_score}/5",
+                result_value=float(bisap_score)
+            )
         
         # Build breakdown of component scores
         component_scores = {}

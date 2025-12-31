@@ -27,6 +27,17 @@ try:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = True
 except ImportError:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = False
+
+# ========== PHASE 1: CALCULATOR METADATA ==========
+try:
+    from components.phase1_calculator_metadata import (
+        render_calculator_education,
+        render_calculator_result_with_interpretation,
+        get_calculator_metadata
+    )
+    CALCULATOR_METADATA_AVAILABLE = True
+except ImportError:
+    CALCULATOR_METADATA_AVAILABLE = False
 # ===================================================
 
 from scores.utils.validation import validate_gcs as validate_gcs_score
@@ -108,6 +119,20 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # Educational information - Enhanced with Phase 1 Metadata
+        if CALCULATOR_METADATA_AVAILABLE:
+            st.markdown("---")
+            render_calculator_education("gcs")
+        elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
+            st.markdown("---")
+            render_calculator_explanation(
+                title="Về GCS Score",
+                content="Glasgow Coma Scale đánh giá mức độ ý thức...",
+                when_to_use="Sử dụng khi...",
+                limitations="Hạn chế...",
+                clinical_context="Bối cảnh lâm sàng..."
+        )
     
     if st.button("🧮 Tính GCS", type="primary"):
             # Validate GCS components (total should be 3-15)
@@ -156,6 +181,14 @@ def render():
                     color=color,
                     icon=icon,
                     size="large"
+                )
+                
+                # Enhanced result interpretation with Phase 1 metadata
+                if CALCULATOR_METADATA_AVAILABLE:
+                    render_calculator_result_with_interpretation(
+                        calculator_id="gcs",
+                        result=f"GCS Score: {total_score}/15",
+                        result_value=float(total_score)
                 )
             
             # Use render_score_breakdown for component scores

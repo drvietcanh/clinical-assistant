@@ -62,6 +62,17 @@ try:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = True
 except ImportError:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = False
+
+# ========== PHASE 1: CALCULATOR METADATA ==========
+try:
+    from components.phase1_calculator_metadata import (
+        render_calculator_education,
+        render_calculator_result_with_interpretation,
+        get_calculator_metadata
+    )
+    CALCULATOR_METADATA_AVAILABLE = True
+except ImportError:
+    CALCULATOR_METADATA_AVAILABLE = False
 # ===================================================
 
 from scores.utils.validation import (
@@ -237,8 +248,10 @@ def render():
             limit=3
         )
     
-    # Educational information - Enhanced with Phase 1 features
-    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+    # Educational information - Enhanced with Phase 1 Metadata
+    if CALCULATOR_METADATA_AVAILABLE:
+        render_calculator_education("sofa")
+    elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
         render_calculator_explanation(
             title="Về SOFA Score",
             content="""
@@ -512,8 +525,14 @@ def render():
         if result['sepsis_note']:
             st.warning(result['sepsis_note'])
         
-        # Interpretation & Management - Enhanced with Phase 1
-        if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        # Interpretation & Management - Enhanced with Phase 1 Metadata
+        if CALCULATOR_METADATA_AVAILABLE:
+            render_calculator_result_with_interpretation(
+                calculator_id="sofa",
+                result=f"SOFA Score: {result['total_score']}/24",
+                result_value=float(result['total_score'])
+            )
+        elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
             # Determine recommendations based on score
             recommendations = []
             if result['total_score'] >= 2:

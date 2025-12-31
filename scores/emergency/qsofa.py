@@ -32,6 +32,17 @@ try:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = True
 except ImportError:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = False
+
+# ========== PHASE 1: CALCULATOR METADATA ==========
+try:
+    from components.phase1_calculator_metadata import (
+        render_calculator_education,
+        render_calculator_result_with_interpretation,
+        get_calculator_metadata
+    )
+    CALCULATOR_METADATA_AVAILABLE = True
+except ImportError:
+    CALCULATOR_METADATA_AVAILABLE = False
 # ===================================================
 
 
@@ -90,8 +101,12 @@ def render():
             limit=3
         )
         
-        # Educational information - Enhanced with Phase 1
-        if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        # Educational information - Enhanced with Phase 1 Metadata
+        if CALCULATOR_METADATA_AVAILABLE:
+            st.markdown("---")
+            # Use Phase 1 calculator metadata system
+            render_calculator_education("qsofa")
+        elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
             st.markdown("---")
             render_calculator_explanation(
                 title="Về qSOFA Score",
@@ -242,6 +257,14 @@ def render():
                     size="large"
                 )
                 
+                # Enhanced result interpretation with Phase 1 metadata
+                if CALCULATOR_METADATA_AVAILABLE:
+                    render_calculator_result_with_interpretation(
+                        calculator_id="qsofa",
+                        result=f"qSOFA Score: {score}/3",
+                        result_value=float(score)
+                    )
+                else:
                 st.markdown(interpretation)
             
             # Build breakdown of criteria

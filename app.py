@@ -26,10 +26,7 @@ except ImportError:
 from components.favorites import render_favorites
 from components.recently_used import render_recently_used
 from components.stats import render_stats, render_updates, render_tips
-try:
-    from components.homepage_doctor import render_homepage_doctor
-except ImportError:
-    render_homepage_doctor = None
+from components.homepage_doctor import render_homepage_doctor
 
 # Offline indicator (rendered at top level)
 try:
@@ -37,6 +34,9 @@ try:
     render_offline_indicator()
 except ImportError:
     pass
+
+# Import Patient Context
+from components.patient_context import render_patient_context
 
 # Mobile navigation and optimizations
 try:
@@ -149,6 +149,10 @@ st.markdown("---")
 # ========== SIDEBAR ==========
 with st.sidebar:
     st.header("📋 Điều hướng theo Modules")
+    
+    # Patient Context (New 2025 Feature)
+    render_patient_context()
+    st.sidebar.markdown("---")
     
     # Quick access to top-level modules
     st.subheader("⚡ Truy cập nhanh Modules")

@@ -13,6 +13,11 @@ from components.evidence_badge import (
     render_evidence_summary,
     Citation
 )
+from components.phase1_protocol_enhancer import (
+    render_protocol_header,
+    render_recommendation_with_evidence,
+    render_protocol_footer
+)
 
 
 def render():
@@ -20,12 +25,12 @@ def render():
     st.subheader("🩸 GI Bleeding Protocol")
     st.caption("Upper & Lower GI Bleeding - Risk Stratification & Management")
     
-    # Evidence summary
-    render_evidence_summary(
-        last_reviewed="2024-08-01",
-        last_updated="2024-08-01",
-        version="2024",
-        guideline_source="ACG 2024, BSG 2021"
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="GI Bleeding",
+        guideline_source="ACG 2024, BSG 2021",
+        show_version=True,
+        show_evidence_summary=True
     )
     
     st.info("""
@@ -1610,14 +1615,6 @@ def render_unknown_gi_bleeding():
     - EGD hoặc Colonoscopy trong 24h
     """)
     
-    # References section
-    references = get_references("GI Bleeding")
-    if references:
-        render_references_section(
-            references=references,
-            title="📚 Tài liệu tham khảo",
-            last_updated="2024-01-15",
-            show_evidence_level=True,
-            show_links=True
-        )
+    # Enhanced footer with Phase 1 component
+    render_protocol_footer("GI Bleeding")
 

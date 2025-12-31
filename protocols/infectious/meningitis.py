@@ -7,12 +7,25 @@ Bacterial & Viral Meningitis, Encephalitis Management
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.phase1_protocol_enhancer import (
+    render_protocol_header,
+    render_recommendation_with_evidence,
+    render_protocol_footer
+)
 
 
 def render():
     """Meningitis / Encephalitis Protocol"""
     st.subheader("🧠 Meningitis / Encephalitis Protocol")
     st.caption("IDSA 2016 - Bacterial & Viral Meningitis, Encephalitis Management")
+    
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="Meningitis / Encephalitis",
+        guideline_source="IDSA 2016",
+        show_version=True,
+        show_evidence_summary=True
+    )
     
     st.error("""
     **⚠️ CRITICAL: Meningitis/Encephalitis là cấp cứu thần kinh!**
@@ -523,12 +536,15 @@ def render_unknown_meningitis():
     - **CSF PCR (+):** → Pathogen-specific treatment
     """)
     
-    # References section
+    # Enhanced footer with Phase 1 component
+    render_protocol_footer("Meningitis / Encephalitis")
+    
+    # Keep existing references as fallback
     references = get_references("Meningitis")
     if references:
         render_references_section(
             references=references,
-            title="📚 Tài liệu tham khảo",
+            title="📚 Tài liệu tham khảo (Additional)",
             last_updated="2024-01-15",
             show_evidence_level=True,
             show_links=True

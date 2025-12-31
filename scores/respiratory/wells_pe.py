@@ -23,6 +23,17 @@ try:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = True
 except ImportError:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = False
+
+# ========== PHASE 1: CALCULATOR METADATA ==========
+try:
+    from components.phase1_calculator_metadata import (
+        render_calculator_education,
+        render_calculator_result_with_interpretation,
+        get_calculator_metadata
+    )
+    CALCULATOR_METADATA_AVAILABLE = True
+except ImportError:
+    CALCULATOR_METADATA_AVAILABLE = False
 # ===================================================
 
 
@@ -39,8 +50,10 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    # Educational information - Enhanced with Phase 1
-    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+    # Educational information - Enhanced with Phase 1 Metadata
+    if CALCULATOR_METADATA_AVAILABLE:
+        render_calculator_education("wells_pe")
+    elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
         render_calculator_explanation(
             title="Về Wells PE Score",
             content="""
@@ -259,6 +272,19 @@ def render():
                     icon=score_icon,
                     size="large"
                 )
+                
+                # Enhanced result interpretation with Phase 1 metadata
+                if CALCULATOR_METADATA_AVAILABLE:
+                    # Determine interpretation key based on score
+                    if score <= 4:
+                        interpretation_key = "≤4"
+                    else:
+                        interpretation_key = ">4"
+                    render_calculator_result_with_interpretation(
+                        calculator_id="wells_pe",
+                        result=f"Wells PE Score: {round(score, 1)}",
+                        result_value=float(score)
+                    )
             
             # Build breakdown of criteria
             criteria_scores = {}

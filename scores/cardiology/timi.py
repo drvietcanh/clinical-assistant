@@ -25,6 +25,17 @@ try:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = True
 except ImportError:
     CALCULATOR_ENHANCEMENTS_AVAILABLE = False
+
+# ========== PHASE 1: CALCULATOR METADATA ==========
+try:
+    from components.phase1_calculator_metadata import (
+        render_calculator_education,
+        render_calculator_result_with_interpretation,
+        get_calculator_metadata
+    )
+    CALCULATOR_METADATA_AVAILABLE = True
+except ImportError:
+    CALCULATOR_METADATA_AVAILABLE = False
 # ===================================================
 
 
@@ -40,8 +51,10 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    # Educational information - Enhanced with Phase 1
-    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+    # Educational information - Enhanced with Phase 1 Metadata
+    if CALCULATOR_METADATA_AVAILABLE:
+        render_calculator_education("timi")
+    elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
         render_calculator_explanation(
             title="Về TIMI Risk Score",
             content="""
@@ -231,6 +244,14 @@ def render():
                 else:
                     st.error(f"## TIMI = {score}")
                     st.error("🚨 Nguy cơ CAO")
+                
+                # Enhanced result interpretation with Phase 1 metadata
+                if CALCULATOR_METADATA_AVAILABLE:
+                    render_calculator_result_with_interpretation(
+                        calculator_id="timi",
+                        result=f"TIMI Risk Score: {score}/7",
+                        result_value=float(score)
+                    )
             
             # Risk percentages based on score
             risk_data = {

@@ -324,6 +324,20 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # Educational information - Enhanced with Phase 1 Metadata
+        if CALCULATOR_METADATA_AVAILABLE:
+            st.markdown("---")
+            render_calculator_education("ascvd")
+        elif CALCULATOR_ENHANCEMENTS_AVAILABLE:
+            st.markdown("---")
+            render_calculator_explanation(
+                title="Về ASCVD Risk Calculator",
+                content="ASCVD đánh giá nguy cơ tim mạch 10 năm...",
+                when_to_use="Sử dụng khi...",
+                limitations="Hạn chế...",
+                clinical_context="Bối cảnh lâm sàng..."
+            )
     
     with col1:
         st.markdown("### Thông tin bệnh nhân")
@@ -496,10 +510,18 @@ def render():
                         size="large"
                     )
                     
-                    st.markdown("---")
-                    st.markdown("### Khuyến nghị")
-                    for rec in result['recommendations']:
-                        st.markdown(rec)
+                    # Enhanced result interpretation with Phase 1 metadata
+                    if CALCULATOR_METADATA_AVAILABLE:
+                        render_calculator_result_with_interpretation(
+                            calculator_id="ascvd",
+                            result=f"ASCVD Risk: {risk_percent:.1f}%",
+                            result_value=float(risk_percent)
+                        )
+                    else:
+                        st.markdown("---")
+                        st.markdown("### Khuyến nghị")
+                        for rec in result['recommendations']:
+                            st.markdown(rec)
                 
                 # Display input summary
                 st.markdown("### Tóm tắt thông tin đầu vào")
