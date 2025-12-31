@@ -45,6 +45,16 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ======================================
 
 # ========== NEW COMPONENTS (Phase 1 & 2) ==========
@@ -541,28 +551,82 @@ def render():
             limit=3
         )
     
-    # Educational information
-    with st.expander("ℹ️ Thông tin & cách sử dụng"):
-        st.markdown("""
-        ### 📋 Giới Thiệu
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về APACHE III Score",
+            content="""
+            **APACHE III (Acute Physiology and Chronic Health Evaluation III)** là phiên bản cập nhật của APACHE II:
+            
+            - Chính xác hơn trong dự đoán tử vong ICU
+            - 17 biến số sinh lý (thay vì 12)
+            - Điểm số chi tiết hơn với khoảng giá trị chính xác hơn
+            - Công thức dự đoán tử vong phức tạp hơn với disease-specific coefficients
+            
+            **3 Thành phần:**
+            1. **Acute Physiology Score (APS):** 0-252 điểm từ 17 biến số sinh lý
+            2. **Age Points:** 0-24 điểm
+            3. **Chronic Health Points:** 0-23 điểm
+            
+            **Tổng điểm: 0-299 (thường <200 trong thực tế)**
+            """,
+            when_to_use="""
+            **Sử dụng APACHE III khi:**
+            - Bệnh nhân ICU cần đánh giá tiên lượng chính xác
+            - So sánh chất lượng chăm sóc giữa các ICU
+            - Nghiên cứu và phân tầng bệnh nhân
+            - Đánh giá mức độ nặng bệnh chi tiết
+            - Cần độ chính xác cao hơn APACHE II
+            """,
+            limitations="""
+            **Hạn chế:**
+            - **APACHE III có bản quyền:** Công thức chính xác thuộc Cerner Corporation
+            - Calculator này là phiên bản đơn giản hóa dựa trên thông tin công khai
+            - Để tính chính xác 100%, cần sử dụng phần mềm có bản quyền
+            - Tính trong 24h đầu vào ICU
+            - Cần có đầy đủ thông tin lâm sàng và xét nghiệm
+            - Không áp dụng cho bệnh nhân <16 tuổi
+            - Chỉ dự đoán tử vong ICU, không phải tử vong bệnh viện
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - APACHE III được tính trong 24h đầu vào ICU
+            - Điểm cao (>150) liên quan đến tử vong cao
+            - Sử dụng kết hợp với lâm sàng, không chỉ dựa vào điểm số
+            - APACHE IV là phiên bản mới hơn nhưng APACHE III vẫn được dùng rộng rãi
+            - Có disease-specific coefficients cho từng nhóm bệnh
+            """
+        )
         
-        **APACHE III** là phiên bản cập nhật của APACHE II:
-        - Chính xác hơn trong dự đoán tử vong ICU
-        - 17 biến số sinh lý (thay vì 12)
-        - Điểm số chi tiết hơn
-        - Công thức dự đoán tử vong phức tạp hơn
-        
-        ### ⚠️ Lưu ý quan trọng
-        
-        **APACHE III có bản quyền:**
-        - Công thức chính xác thuộc Cerner Corporation
-        - Calculator này là phiên bản đơn giản hóa dựa trên thông tin công khai
-        - Để tính chính xác 100%, cần sử dụng phần mềm có bản quyền
-        
-        ### 🎯 3 Thành phần
-        
-        1. **Acute Physiology Score (0-252):** 17 biến số sinh lý
-        2. **Age Points (0-24):** Điểm tuổi
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Knaus WA, et al. The APACHE III prognostic system. Risk prediction of hospital mortality for critically ill hospitalized adults. Chest. 1991;100(6):1619-36.",
+            doi="10.1378/chest.100.6.1619",
+            pmid="1959406"
+        )
+    else:
+        # Fallback to original expander
+        with st.expander("ℹ️ Thông tin & cách sử dụng"):
+            st.markdown("""
+            ### 📋 Giới Thiệu
+            
+            **APACHE III** là phiên bản cập nhật của APACHE II:
+            - Chính xác hơn trong dự đoán tử vong ICU
+            - 17 biến số sinh lý (thay vì 12)
+            - Điểm số chi tiết hơn
+            - Công thức dự đoán tử vong phức tạp hơn
+            
+            ### ⚠️ Lưu ý quan trọng
+            
+            **APACHE III có bản quyền:**
+            - Công thức chính xác thuộc Cerner Corporation
+            - Calculator này là phiên bản đơn giản hóa dựa trên thông tin công khai
+            - Để tính chính xác 100%, cần sử dụng phần mềm có bản quyền
+            
+            ### 🎯 3 Thành phần
+            
+            1. **Acute Physiology Score (0-252):** 17 biến số sinh lý
+            2. **Age Points (0-24):** Điểm tuổi
         3. **Chronic Health (0-23):** Bệnh mạn tính (theo loại bệnh)
         
         **Tổng điểm:** 0-299 (lý thuyết)

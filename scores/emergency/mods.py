@@ -41,6 +41,16 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ======================================
 
 
@@ -247,46 +257,107 @@ def render():
             limit=3
         )
     
-    # Educational information
-    with st.expander("ℹ️ Thông tin & cách sử dụng"):
-        st.markdown("""
-        ### 📋 Giới Thiệu
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về MODS Score",
+            content="""
+            **MODS (Multiple Organ Dysfunction Score)** là thang điểm lượng hóa rối loạn đa cơ quan:
+            
+            - Lượng hóa rối loạn đa cơ quan
+            - Dự đoán tử vong ICU
+            - Theo dõi diễn tiến bệnh
+            - Đơn giản, khách quan
+            
+            **6 Hệ Cơ Quan (mỗi hệ 0-4 điểm):**
+            1. **Hô hấp:** PaO₂/FiO₂ ratio
+            2. **Thận:** Creatinine
+            3. **Gan:** Bilirubin
+            4. **Tim mạch:** PAR (Pressure-Adjusted Heart Rate = HR/MAP)
+            5. **Huyết học:** Tiểu cầu
+            6. **Thần kinh:** GCS
+            
+            **Tổng điểm: 0-24**
+            """,
+            when_to_use="""
+            **Sử dụng MODS khi:**
+            - Bệnh nhân ICU cần đánh giá rối loạn đa cơ quan
+            - Theo dõi diễn tiến bệnh theo thời gian
+            - Dự đoán tử vong ICU
+            - Nghiên cứu về suy đa cơ quan
+            - Cần đánh giá đơn giản hơn SOFA (không cần vasopressor dose)
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Cần có đầy đủ thông tin lâm sàng và xét nghiệm
+            - Không tính đến liều vasopressor (SOFA có)
+            - Một số giá trị có thể không có sẵn
+            - Không thay thế đánh giá lâm sàng cá thể hóa
+            - Chỉ đánh giá 6 hệ cơ quan, không bao gồm tất cả
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - **0 điểm:** Không có rối loạn cơ quan → Tử vong <5%
+            - **1-4 điểm:** Rối loạn nhẹ → Tử vong 5-10%
+            - **5-8 điểm:** Rối loạn trung bình → Tử vong 10-25%
+            - **9-12 điểm:** Rối loạn nặng → Tử vong 25-50%
+            - **>12 điểm:** Rối loạn rất nặng → Tử vong >50%
+            
+            **So sánh với SOFA:**
+            - MODS đơn giản hơn (không cần vasopressor dose)
+            - SOFA phổ biến hơn (Sepsis-3 definition)
+            - Cả hai đều đánh giá 6 hệ cơ quan
+            - MODS có thể tính hàng ngày để theo dõi diễn tiến
+            """
+        )
         
-        **MODS (Multiple Organ Dysfunction Score)** là thang điểm:
-        - Lượng hóa rối loạn đa cơ quan
-        - Dự đoán tử vong ICU
-        - Theo dõi diễn tiến bệnh
-        - Đơn giản, khách quan
-        
-        ### 🎯 6 Hệ Cơ Quan
-        
-        1. **Hô hấp:** PaO₂/FiO₂ ratio
-        2. **Thận:** Creatinine
-        3. **Gan:** Bilirubin
-        4. **Tim mạch:** PAR (Pressure-Adjusted Nhịp tim)
-        5. **Huyết học:** Tiểu cầu
-        6. **Thần kinh:** GCS
-        
-        Mỗi hệ: 0-4 điểm → Tổng: 0-24 điểm
-        
-        ### 📊 Điểm & Tử vong
-        
-        | MODS Score | Tử vong ICU |
-        |------------|-------------|
-        | 0 | <5% |
-        | 1-4 | 5-10% |
-        | 5-8 | 10-25% |
-        | 9-12 | 25-50% |
-        | >12 | >50% |
-        
-        ### 🔍 So sánh với SOFA
-        
-        **MODS vs SOFA:**
-        - MODS đơn giản hơn (không cần vasopressor dose)
-        - SOFA phổ biến hơn (Sepsis-3)
-        - Cả hai đều đánh giá 6 hệ cơ quan
-        
-        ### 📚 Tham khảo
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Marshall JC, et al. Multiple organ dysfunction score: a reliable descriptor of a complex clinical outcome. Crit Care Med. 1995;23(10):1638-52.",
+            doi="10.1097/00003246-199510000-00007",
+            pmid="7587228"
+        )
+    else:
+        # Fallback to original expander
+        with st.expander("ℹ️ Thông tin & cách sử dụng"):
+            st.markdown("""
+            ### 📋 Giới Thiệu
+            
+            **MODS (Multiple Organ Dysfunction Score)** là thang điểm:
+            - Lượng hóa rối loạn đa cơ quan
+            - Dự đoán tử vong ICU
+            - Theo dõi diễn tiến bệnh
+            - Đơn giản, khách quan
+            
+            ### 🎯 6 Hệ Cơ Quan
+            
+            1. **Hô hấp:** PaO₂/FiO₂ ratio
+            2. **Thận:** Creatinine
+            3. **Gan:** Bilirubin
+            4. **Tim mạch:** PAR (Pressure-Adjusted Nhịp tim)
+            5. **Huyết học:** Tiểu cầu
+            6. **Thần kinh:** GCS
+            
+            Mỗi hệ: 0-4 điểm → Tổng: 0-24 điểm
+            
+            ### 📊 Điểm & Tử vong
+            
+            | MODS Score | Tử vong ICU |
+            |------------|-------------|
+            | 0 | <5% |
+            | 1-4 | 5-10% |
+            | 5-8 | 10-25% |
+            | 9-12 | 25-50% |
+            | >12 | >50% |
+            
+            ### 🔍 So sánh với SOFA
+            
+            **MODS vs SOFA:**
+            - MODS đơn giản hơn (không cần vasopressor dose)
+            - SOFA phổ biến hơn (Sepsis-3)
+            - Cả hai đều đánh giá 6 hệ cơ quan
+            
+            ### 📚 Tham khảo
         
         - Marshall JC, et al. *Crit Care Med* 1995;23:1638-1652
         """)

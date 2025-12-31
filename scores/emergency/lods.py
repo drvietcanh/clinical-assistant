@@ -39,6 +39,16 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ======================================
 from scores.utils.validation import (
     validate_gcs,
@@ -262,19 +272,79 @@ def render():
             limit=3
         )
     
-    st.markdown("""
-    **LODS (Logistic Organ Dysfunction Score)** đánh giá mức độ suy cơ quan trong ICU.
-    
-    **6 hệ cơ quan (mỗi hệ 0-5 điểm):**
-    1. **Thần kinh** (GCS)
-    2. **Tim mạch** (HR, SBP)
-    3. **Thận** (Creatinine, Urine output)
-    4. **Hô hấp** (PaO2/FiO2)
-    5. **Huyết học** (Platelets, WBC)
-    6. **Gan** (Bilirubin, PT)
-    
-    **Tổng điểm:** 0-22
-    """)
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về LODS Score",
+            content="""
+            **LODS (Logistic Organ Dysfunction Score)** đánh giá mức độ suy cơ quan trong ICU:
+            
+            - Đánh giá 6 hệ cơ quan
+            - Dự đoán tử vong ICU
+            - Nghiên cứu và chất lượng chăm sóc
+            - Đơn giản, khách quan
+            
+            **6 Hệ Cơ Quan (mỗi hệ 0-5 điểm):**
+            1. **Thần kinh** (GCS)
+            2. **Tim mạch** (HR, SBP)
+            3. **Thận** (Creatinine, Urine output)
+            4. **Hô hấp** (PaO₂/FiO₂ - chỉ khi thở máy)
+            5. **Huyết học** (Platelets, WBC)
+            6. **Gan** (Bilirubin, PT)
+            
+            **Tổng điểm: 0-22**
+            """,
+            when_to_use="""
+            **Sử dụng LODS khi:**
+            - Bệnh nhân ICU cần đánh giá suy cơ quan
+            - Dự đoán tử vong ICU
+            - Nghiên cứu về suy đa cơ quan
+            - Đánh giá chất lượng chăm sóc ICU
+            - So sánh giữa các nhóm bệnh nhân
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Cần có đầy đủ thông tin lâm sàng và xét nghiệm
+            - Một số giá trị có thể không có sẵn (PT, urine output)
+            - Hô hấp chỉ tính khi thở máy
+            - Không thay thế đánh giá lâm sàng cá thể hóa
+            - Chỉ đánh giá 6 hệ cơ quan, không bao gồm tất cả
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - **≤5 điểm:** Suy cơ quan nhẹ
+            - **6-10 điểm:** Suy cơ quan trung bình
+            - **>10 điểm:** Suy cơ quan nặng
+            
+            **So sánh với MODS và SOFA:**
+            - LODS có 6 hệ cơ quan giống MODS và SOFA
+            - LODS có điểm tối đa 22 (MODS 24, SOFA 24)
+            - LODS được phát triển cùng nhóm với SAPS II
+            - Cả ba đều dùng để đánh giá suy đa cơ quan và dự đoán tử vong
+            """
+        )
+        
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Le Gall JR, et al. The Logistic Organ Dysfunction system. A new way to assess organ dysfunction in the intensive care unit. JAMA. 1996;276(10):802-10.",
+            doi="10.1001/jama.1996.03540100046027",
+            pmid="8769591"
+        )
+    else:
+        # Fallback to original markdown
+        st.markdown("""
+        **LODS (Logistic Organ Dysfunction Score)** đánh giá mức độ suy cơ quan trong ICU.
+        
+        **6 hệ cơ quan (mỗi hệ 0-5 điểm):**
+        1. **Thần kinh** (GCS)
+        2. **Tim mạch** (HR, SBP)
+        3. **Thận** (Creatinine, Urine output)
+        4. **Hô hấp** (PaO2/FiO2)
+        5. **Huyết học** (Platelets, WBC)
+        6. **Gan** (Bilirubin, PT)
+        
+        **Tổng điểm:** 0-22
+        """)
     
     st.markdown("---")
     
