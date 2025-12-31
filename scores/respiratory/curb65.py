@@ -299,16 +299,49 @@ def render():
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                # Use render_score_result for main score display
-                render_score_result(
-                    title="CURB-65 Score",
-                    score=score,
-                    interpretation=risk_level,
-                    mortality=f"Tử vong 30 ngày: {mortality}",
-                    color=color,
-                    icon=icon,
-                    size="large"
-                )
+                # Modern Result Card for CURB-65
+                color_hex = {
+                    "#dc3545": "#d93025",  # High Risk (Red)
+                    "#6c757d": "#5f6368",  # Very High (Gray)
+                    "#fd7e14": "#f9ab00",  # Intermediate (Orange)
+                    "#17a2b8": "#1a73e8",  # Low/Intermediate (Blue)
+                    "#28a745": "#1e8e3e"   # Low (Green)
+                }.get(color, "#1a73e8")
+
+                bg_color = {
+                    "#dc3545": "#fce8e6",
+                    "#6c757d": "#e8eaed",
+                    "#fd7e14": "#fef7e0",
+                    "#17a2b8": "#e8f0fe",
+                    "#28a745": "#e6f4ea"
+                }.get(color, "#e8f0fe")
+                
+                # Main Result Badge
+                st.markdown(f"""
+                <div style="background: {bg_color}; border-radius: 12px; padding: 24px; border: 1px solid {color_hex}; text-align: center; margin-bottom: 24px;">
+                    <h3 style="color: {color_hex}; margin: 0 0 8px 0; font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.5px;">CURB-65 Score</h3>
+                    <div style="font-size: 4em; font-weight: 700; color: {color_hex}; line-height: 1;">
+                        {score}<span style="font-size: 0.5em; color: {color_hex}; opacity: 0.8;">/5</span>
+                    </div>
+                    <div style="background: {color_hex}; color: white; display: inline-block; padding: 6px 16px; border-radius: 20px; font-weight: 600; margin-top: 12px; margin-bottom: 8px;">
+                        {risk_level}
+                    </div>
+                    <div style="color: {color_hex}; font-size: 0.9em; font-weight: 500;">
+                        Tử vong 30 ngày: {mortality}
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                # Recommendation Card
+                rec_bg_color = "#ffffff"
+                rec_border_color = color_hex
+                
+                st.markdown(f"""
+                <div style="background: {rec_bg_color}; border-radius: 8px; padding: 16px; border-left: 4px solid {rec_border_color}; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 16px;">
+                    <strong style="display: block; margin-bottom: 8px; color: #495057;">Khuyến cáo nơi điều trị:</strong>
+                    <div style="color: #212529; font-size: 1.1em; font-weight: 500;">{recommendation}</div>
+                </div>
+                """, unsafe_allow_html=True)
             
             # Build breakdown of criteria
             criteria_scores = {}

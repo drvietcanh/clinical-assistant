@@ -14,6 +14,7 @@ from components.smart_suggestions import render_suggestions
 
 # ========== NEW COMPONENTS (Phase 1 & 2) ==========
 from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.ui.scoring import render_score_result
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
 # ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
@@ -234,12 +235,25 @@ def render():
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                # Display score with color coding
-                st.markdown(f"## CHA₂DS₂-VASc = {score}")
-                render_risk_badge(
-                    risk_level=risk_level,
-                    label=f"Nguy cơ: {risk_text}",
-                    value=score
+                # Map risk level to color
+                color_map = {
+                    'very_low': 'success',
+                    'low': 'success',
+                    'moderate': 'warning',
+                    'high': 'error',
+                    'very_high': 'error'
+                }
+                component_color = color_map.get(risk_level, 'info')
+                
+                # Use render_score_result for main score display
+                render_score_result(
+                    title="CHA₂DS₂-VASc Score",
+                    score=score,
+                    interpretation=risk_text,
+                    mortality=f"Nguy cơ: {risk}",
+                    color=component_color,
+                    icon="❤️",
+                    size="large"
                 )
             
             # Enhanced result interpretation with Phase 1 metadata

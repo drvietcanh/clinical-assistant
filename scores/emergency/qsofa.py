@@ -238,34 +238,51 @@ def render():
             with col2:
                 st.markdown("### Kết quả")
                 
-                # Display score with color coding badge
-                st.markdown(f"## qSOFA = {score}/3")
-                render_risk_badge(
-                    risk_level=risk_level_code,
-                    label=risk_level,
-                    value=score
-                )
+                # Modern Result Card for qSOFA
+                color_hex = {
+                    "#dc3545": "#dc3545",  # High Risk (Red)
+                    "#fd7e14": "#fd7e14",  # Intermediate (Orange)
+                    "#28a745": "#28a745"   # Low (Green)
+                }.get(color, "#007bff")
                 
-                # Use render_score_result for main score display
-                render_score_result(
-                    title="qSOFA Score",
-                    score=score,
-                    interpretation=risk_level,
-                    mortality=None,
-                    color=color,
-                    icon=icon,
-                    size="large"
-                )
+                bg_color = {
+                    "#dc3545": "#f8d7da",
+                    "#fd7e14": "#fff3cd",
+                    "#28a745": "#d4edda"
+                }.get(color, "#e8f0fe")
                 
-                # Enhanced result interpretation with Phase 1 metadata
-                if CALCULATOR_METADATA_AVAILABLE:
+                # Risk Level Label for VN
+                risk_vn = "Nguy cơ Cao (Sepsis)" if score >= 2 else ("Nguy cơ Trung bình" if score == 1 else "Nguy cơ Thấp")
+
+                st.markdown(f"""
+                <div style="background: {bg_color}; border-radius: 12px; padding: 24px; border: 1px solid {color_hex}; text-align: center; margin-bottom: 24px;">
+                    <h3 style="color: {color_hex}; margin: 0 0 8px 0; font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.5px;">qSOFA Score</h3>
+                    <div style="font-size: 4em; font-weight: 700; color: {color_hex}; line-height: 1;">
+                        {score}<span style="font-size: 0.5em; color: {color_hex}; opacity: 0.8;">/3</span>
+                    </div>
+                    <div style="background: {color_hex}; color: white; display: inline-block; padding: 6px 16px; border-radius: 20px; font-weight: 600; margin-top: 12px;">
+                        {risk_vn}
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                # Clinical Action Card
+                st.markdown(f"""
+                <div style="background: white; border-radius: 8px; padding: 16px; border-left: 4px solid {color_hex}; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 16px;">
+                    <strong style="display: block; margin-bottom: 8px; color: #495057;">Khuyến nghị lâm sàng:</strong>
+                    <div style="color: #212529; white-space: pre-line; line-height: 1.5;">{risk_level}</div>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                # Interpretation detail
+                if not CALCULATOR_METADATA_AVAILABLE:
+                    st.info(interpretation.replace("**Interpretation:**", "**Giải thích:**").replace("**Action Required:**", "**Cần làm gì:**").replace("**Consider:**", "**Cân nhắc:**"))
+                else:
                     render_calculator_result_with_interpretation(
                         calculator_id="qsofa",
                         result=f"qSOFA Score: {score}/3",
                         result_value=float(score)
                     )
-                else:
-                    st.markdown(interpretation)
             
             # Build breakdown of criteria
             criteria_scores = {}

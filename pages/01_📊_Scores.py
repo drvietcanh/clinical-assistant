@@ -296,34 +296,30 @@ with st.sidebar:
 current_name = SCORES_BY_SPECIALTY[specialty][selected_score_id]['name'] if selected_score_id else "Chọn calculator bên trái"
 current_desc = SCORES_BY_SPECIALTY[specialty][selected_score_id].get('desc', '') if selected_score_id else ""
 
-# Enhanced header with favorite button
+# Enhanced header with favorite button using Modern UI
 col_header1, col_header2 = st.columns([4, 1])
 with col_header1:
     if selected_score_id:
-        render_info_box(
-            f"""
-            <div>
-                <p><strong>📊 Chuyên khoa:</strong> {specialty}</p>
-                <p><strong>🔢 Số lượng calculators:</strong> {len(scores_in_specialty)}</p>
-                <p><strong>🔬 Đang xem:</strong> {current_name}</p>
-                <p><strong>💡 Dùng khi:</strong> {current_desc if current_desc else 'Chọn calculator để xem mô tả chi tiết.'}</p>
+        st.markdown(f"""
+        <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                <span style="background: #e8f0fe; color: #1967d2; padding: 4px 12px; border-radius: 16px; font-size: 0.8em; font-weight: 600;">{specialty}</span>
+                {'<span style="background: #e6fffa; color: #047481; padding: 4px 12px; border-radius: 16px; font-size: 0.8em; font-weight: 600;">⭐ Dùng hàng ngày</span>' if is_daily_use(SCORES_BY_SPECIALTY[specialty][selected_score_id]) else ''}
             </div>
-            """,
-            type="info",
-            title="Thông tin Calculator"
-        )
+            <h2 style="color: #1a73e8; margin: 0 0 10px 0; font-size: 1.5em;">{current_name}</h2>
+            <p style="color: #5f6368; margin: 0; line-height: 1.5;">{current_desc}</p>
+        </div>
+        """, unsafe_allow_html=True)
     else:
-        render_info_box(
-            f"""
-            <div>
-                <p><strong>📊 Chuyên khoa:</strong> {specialty}</p>
-                <p><strong>🔢 Số lượng calculators:</strong> {len(scores_in_specialty)}</p>
-                <p><strong>💡 Hướng dẫn:</strong> Chọn một calculator từ danh sách ở sidebar bên trái để bắt đầu.</p>
+        st.markdown(f"""
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px dashed #ced4da; margin-bottom: 20px; text-align: center;">
+            <p style="color: #6c757d; margin: 0;">👈 Chọn một calculator từ danh sách bên trái để bắt đầu</p>
+            <div style="margin-top: 10px;">
+                <span style="background: #e9ecef; color: #495057; padding: 4px 12px; border-radius: 16px; font-size: 0.85em;">{len(scores_in_specialty)} calculators</span>
+                <span style="background: #e9ecef; color: #495057; padding: 4px 12px; border-radius: 16px; font-size: 0.85em;">{specialty}</span>
             </div>
-            """,
-            type="info",
-            title="Chọn Calculator"
-        )
+        </div>
+        """, unsafe_allow_html=True)
 
 with col_header2:
     if selected_score_id:

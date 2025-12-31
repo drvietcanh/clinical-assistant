@@ -74,7 +74,7 @@ def render_protocols_sidebar() -> Tuple[str, str, bool]:
         Tuple of (specialty, protocol, use_deep_link)
     """
     st.header("📋 Phác đồ điều trị")
-    st.caption("Sub-module **Phác đồ điều trị** – thuộc nhóm *🫁 Hồi sức & Quy trình*.")
+    st.caption("Tra cứu nhanh phác đồ và hướng dẫn xử trí lâm sàng.")
     
     # Check for deep link from Articles page
     deep_link_specialty = st.session_state.get('protocol_specialty')
@@ -106,9 +106,11 @@ def render_protocols_sidebar() -> Tuple[str, str, bool]:
     st.markdown("---")
     
     # Liên kết nhanh về module Hồi sức
-    with st.expander("Liên kết tới module Hồi sức", expanded=False):
+    with st.expander("Liên kết nhanh", expanded=False):
         if st.button("🫁 Mở Hồi sức (ICU Tools)", use_container_width=True):
             st.switch_page("pages/09_🫁_Critical_Care.py")
+        if st.button("📊 Mở Thang điểm & Công thức", use_container_width=True):
+            st.switch_page("pages/01_📊_Scores.py")
     
     st.markdown("---")
     
@@ -116,21 +118,12 @@ def render_protocols_sidebar() -> Tuple[str, str, bool]:
     protocol_list = get_protocol_list(specialty)
     
     # ========== SEARCH/FILTER PROTOCOL - ENHANCED UI ==========
+    # ========== SEARCH/FILTER PROTOCOL - ENHANCED UI ==========
     if protocol_list:
-        # Enhanced search box with better styling
-        st.markdown("""
-        <style>
-        div[data-testid="stTextInput"] input[placeholder*="Nhập tên protocol"] {
-            font-size: 14px !important;
-            padding: 10px 14px !important;
-        }
-        </style>
-        """, unsafe_allow_html=True)
-        
         search_term = st.text_input(
             "🔍 Tìm protocol...",
             key=f"protocol_search_{specialty}",
-            placeholder="Nhập tên protocol để tìm...",
+            placeholder="Nhập tên protocol...",
             help="Tìm kiếm nhanh trong danh sách protocols"
         )
         
@@ -146,50 +139,28 @@ def render_protocols_sidebar() -> Tuple[str, str, bool]:
             
             if filtered_list:
                 protocol_list = filtered_list
-                st.success(f"✅ Tìm thấy **{len(filtered_list)}** protocol(s)")
+                st.caption(f"✅ Tìm thấy **{len(filtered_list)}** kết quả")
             else:
-                st.warning(f"⚠️ Không tìm thấy protocol nào với từ khóa '{search_term}'")
+                st.warning(f"Không có protocol nào khớp với '{search_term}'")
                 protocol_list = []  # Show empty list
         else:
-            # Show protocol count with better styling
-            st.markdown(f"<div style='padding: 8px; background: #f0f7ff; border-radius: 6px; margin-bottom: 8px;'><strong>📊 Tổng cộng:</strong> <span style='color: #0066CC; font-weight: 600;'>{len(protocol_list)}</span> protocol(s)</div>", unsafe_allow_html=True)
+            # Simple count
+            st.caption(f"📊 **{len(protocol_list)}** protocols trong chuyên khoa này")
     
     if protocol_list:
-        # Enhanced protocol selector with better visual feedback
-        st.markdown("""
-        <style>
-        /* Style for protocol radio buttons */
-        div[data-testid="stRadio"] label {
-            padding: 10px 12px !important;
-            margin-bottom: 6px !important;
-            border-radius: 8px !important;
-            transition: all 0.2s ease !important;
-            border: 1px solid transparent !important;
-        }
-        div[data-testid="stRadio"] label:hover {
-            background: #f0f7ff !important;
-            border-color: #0066CC !important;
-        }
-        div[data-testid="stRadio"] label[data-baseweb="radio"] {
-            font-size: 14px !important;
-            line-height: 1.5 !important;
-        }
-        </style>
-        """, unsafe_allow_html=True)
-        
         # Use helper function for consistency
         protocol = render_protocol_selector(protocol_list, use_deep_link, deep_link_protocol)
         
-        # Show favorite button for selected protocol with better styling
+        # Show favorite button for selected protocol
         if protocol and protocol != "Không có protocol nào":
             st.markdown("---")
-            col_fav1, col_fav2 = st.columns([1, 3])
+            col_fav1, col_fav2 = st.columns([1, 4])
             with col_fav1:
                 render_favorite_button(protocol, key_suffix=specialty)
             with col_fav2:
                 # Show protocol info
                 protocol_display = protocol.split(' ', 1)[-1] if ' ' in protocol else protocol
-                st.caption(f"📋 **{protocol_display}**")
+                st.caption(f"**{protocol_display}**")
     else:
         # Fallback: show empty selector
         protocol = st.radio(
@@ -205,12 +176,18 @@ def render_protocols_sidebar() -> Tuple[str, str, bool]:
     
     st.markdown("---")
     
-    st.info("""
-    **📚 Căn cứ:**
-    - International Guidelines
-    - Evidence-based protocols
-    - Updated regularly
-    """)
+    from components.ui import render_info_box
+    render_info_box(
+        """
+        **Nguồn dữ liệu:**
+        - Hướng dẫn Bộ Y tế
+        - AHA/ACC, ESC, IDSA
+        - UpToDate & Medscape
+        """,
+        title="Thông tin",
+        type="info",
+        icon="📚"
+    )
     
     return specialty, protocol, use_deep_link
 

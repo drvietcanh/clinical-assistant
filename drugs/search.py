@@ -104,6 +104,16 @@ def search_drugs(query, max_results=None):
                             score = 0.4
                             results.append((drug_name, drug_data, score))
                             break
+            
+            # --- FUZZY MATCHING FALLBACK ---
+            # If standard search yields no results (or very few), try fuzzy matching on name
+            if not results and len(query_lower) >= 3:
+                similarity = similarity_score(query, drug_name)
+                if similarity > 0.6:  # Threshold for fuzzy match
+                    # Valid fuzzy match
+                    score = 0.3 + (similarity * 0.4)  # Score between 0.54 and 0.7
+                    results.append((drug_name, drug_data, score))
+
     
         # Sort by score (descending)
         results.sort(key=lambda x: x[2], reverse=True)
@@ -397,9 +407,39 @@ def load_saved_search(name):
     return None, None
 
 
-def delete_saved_search(name):
-    """Delete saved search by name"""
-    if 'drug_saved_searches' not in st.session_state:
-        return
     if name in st.session_state.drug_saved_searches:
         del st.session_state.drug_saved_searches[name]
+
+
+def get_related_interactions(drug_name, limit=5):
+    """
+    Get significant interactions for a specific drug
+    Useful for showing "Quick Interactions" in search results
+    """
+    try:
+        from .interactions_data import DRUG_INTERACTIONS, SEVERITY_MAJOR, normalize_drug_name
+        
+        normalized_name = normalize_drug_name(drug_name)
+        related = []
+        
+        for (d1, d2), data in DRUG_INTERACTIONS.items():
+            if normalized_name.lower() in [d1.lower(), d2.lower()]:
+                other_drug = d2 if d1.lower() == normalized_name.lower() else d1
+                severity = data.get('severity', 'Unknown')
+                
+                # Only show Major interactions for quick view
+                if severity == SEVERITY_MAJOR:
+                    related.append({
+                        'drug': other_drug,
+                        'severity': severity,
+                        'mechanism': data.get('mechanism', '')
+                    })
+        
+        # Sort primarily by severity (already filtered for Major), then name
+        related.sort(key=lambda x: x['drug'])
+        
+        return related[:limit]
+        
+    except ImportError:
+        return []
+

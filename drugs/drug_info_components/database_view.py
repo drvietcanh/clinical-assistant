@@ -31,6 +31,7 @@ def render_drug_database():
         get_saved_searches,
         load_saved_search,
         delete_saved_search,
+        get_related_interactions,
     )
     from ..drug_database import DRUG_GROUPS
     # Optional PPIs quick view (gastrointestinal proton pump inhibitors)
@@ -581,6 +582,16 @@ def render_drug_database():
                 # Default: search by name (original behavior)
                 results = search_drugs_with_filters(effective_query, filters)
             if results:
+                # Show quick interactions for exact drug name searches
+                if current_search_type == 'Tên thuốc' and effective_query:
+                    related_interactions = get_related_interactions(effective_query)
+                    if related_interactions:
+                        with st.expander(f"⚠️ Tương tác nghiêm trọng thường gặp với '{effective_query}'", expanded=True):
+                            st.warning(f"Tìm thấy {len(related_interactions)} thuốc có tương tác nghiêm trọng:")
+                            for interaction in related_interactions:
+                                st.markdown(f"- **{interaction['drug']}**: {interaction['mechanism']}")
+                            st.caption("ℹ️ Để kiểm tra chi tiết, vui lòng dùng công cụ Tra cứu tương tác.")
+
                 st.markdown(f'### 📊 Kết quả tìm kiếm ({len(results)} thuốc)')
                 page_size = 20
                 page_key = 'drug_results_page'

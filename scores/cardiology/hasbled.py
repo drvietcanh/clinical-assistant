@@ -14,6 +14,7 @@ from components.smart_suggestions import render_suggestions
 
 # ========== NEW COMPONENTS (Phase 1 & 2) ==========
 from components.risk_color_coding import render_risk_badge, get_risk_level
+from components.ui.scoring import render_score_result
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
 # ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
@@ -189,20 +190,23 @@ def render():
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                # Display score with color coding badge
-                st.markdown(f"## HAS-BLED = {score}")
-                render_risk_badge(
-                    risk_level=risk_level_code,
-                    label=f"Nguy cơ chảy máu: {risk_text}",
-                    value=score
+                color_map = {
+                    'low': 'success',
+                    'moderate': 'warning',
+                    'high': 'error'
+                }
+                component_color = color_map.get(risk_level_code, 'info')
+
+                # Use render_score_result
+                render_score_result(
+                    title="HAS-BLED Score",
+                    score=score,
+                    interpretation=f"Nguy cơ {risk_text}",
+                    mortality=None,
+                    color=component_color,
+                    icon="🩸",
+                    size="large"
                 )
-                
-                if score <= 2:
-                    st.success("✅ Nguy cơ chảy máu THẤP")
-                elif score == 3:
-                    st.warning("⚠️ Nguy cơ TRUNG BÌNH")
-                else:
-                    st.error("🚨 Nguy cơ chảy máu CAO")
             
             st.markdown("### 💡 Giải thích")
             

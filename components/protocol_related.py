@@ -169,9 +169,9 @@ def render_related_protocols(protocol_name: str, specialty: str = None):
         return
     
     st.markdown("---")
-    st.markdown("### 🔗 Protocols Liên Quan")
+    st.subheader("🔗 Protocols Liên Quan")
     
-    st.info("💡 **Các protocols có thể hữu ích:**")
+    st.markdown("Các protocols có thể hữu ích cho bệnh cảnh này:")
     
     # Display as buttons or links
     cols = st.columns(min(3, len(related)))
@@ -180,10 +180,9 @@ def render_related_protocols(protocol_name: str, specialty: str = None):
         with cols[idx % 3]:
             # Create button to switch to related protocol
             if st.button(
-                f"📋 {related_protocol}",
+                f"📄 {related_protocol}",
                 key=f"related_{related_protocol}_{protocol_name}".replace(" ", "_"),
-                use_container_width=True,
-                type="secondary"
+                use_container_width=True
             ):
                 # Set session state to open related protocol
                 st.session_state['protocol_to_open'] = related_protocol
@@ -191,7 +190,7 @@ def render_related_protocols(protocol_name: str, specialty: str = None):
                     st.session_state['protocol_specialty'] = specialty
                 st.rerun()
     
-    st.caption("💡 Click vào protocol để mở ngay")
+    st.caption("💡 Chọn protocol để chuyển nhanh")
 
 
 def render_related_by_keywords(keywords: List[str], specialty: str = None):
@@ -202,11 +201,10 @@ def render_related_by_keywords(keywords: List[str], specialty: str = None):
         keywords: List of keywords to search
         specialty: Optional specialty filter
     """
-    # This could be enhanced with semantic search in the future
-    st.markdown("### 🔍 Tìm Theo Từ Khóa")
-    
+    if not keywords:
+        return
+        
     keyword_str = ", ".join(keywords)
-    st.info(f"**Từ khóa:** {keyword_str}")
     
     # Simple keyword matching
     all_protocols = []
@@ -225,15 +223,20 @@ def render_related_by_keywords(keywords: List[str], specialty: str = None):
             matched.append(protocol)
     
     if matched:
-        st.markdown("**Protocols phù hợp:**")
-        for protocol in matched[:5]:  # Limit to 5
-            if st.button(
-                f"📋 {protocol}",
-                key=f"keyword_{protocol}".replace(" ", "_"),
-                use_container_width=True
-            ):
-                st.session_state['protocol_to_open'] = protocol
-                st.rerun()
+        st.markdown(f"**Tìm thấy từ khóa:** *{keyword_str}*")
+        st.markdown("---")
+        st.subheader("🔍 Gợi ý liên quan")
+        
+        cols = st.columns(min(3, len(matched[:6])))
+        for idx, protocol in enumerate(matched[:6]):  # Limit to 6
+            with cols[idx % 3]:
+                if st.button(
+                    f"📄 {protocol}",
+                    key=f"keyword_{protocol}".replace(" ", "_"),
+                    use_container_width=True
+                ):
+                    st.session_state['protocol_to_open'] = protocol
+                    st.rerun()
     else:
-        st.info("Không tìm thấy protocol nào phù hợp với từ khóa này.")
+        pass # Don't show anything if no matches found
 

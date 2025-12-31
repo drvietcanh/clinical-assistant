@@ -478,50 +478,53 @@ def render():
                 st.error(result['error'])
             else:
                 with col2:
-                    st.markdown("### Kết quả")
+                    # Modern Result Card
+                    color_hex = {
+                        "error": "#d93025",    # High Risk
+                        "warning": "#f9ab00",  # Intermediate
+                        "info": "#1a73e8",     # Borderline
+                        "success": "#1e8e3e"   # Low
+                    }.get(color, "#1a73e8")
                     
-                    risk_percent = result['risk']
-                    category_vn = result['category_vn']
-                    color = result['color']
+                    bg_color = {
+                        "error": "#fce8e6",
+                        "warning": "#fef7e0",
+                        "info": "#e8f0fe",
+                        "success": "#e6f4ea"
+                    }.get(color, "#e8f0fe")
+
+                    st.markdown(f"""
+                    <div style="background: {bg_color}; border-radius: 12px; padding: 24px; border: 1px solid {color_hex}; text-align: center; margin-bottom: 24px;">
+                        <h3 style="color: {color_hex}; margin: 0 0 8px 0; font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.5px;">Nguy cơ 10 năm ASCVD</h3>
+                        <div style="font-size: 3.5em; font-weight: 700; color: {color_hex}; line-height: 1.2;">
+                            {risk_percent:.1f}%
+                        </div>
+                        <div style="background: {color_hex}; color: white; display: inline-block; padding: 4px 16px; border-radius: 20px; font-weight: 600; margin-top: 8px;">
+                            {category_vn} Risk
+                        </div>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+                    # Recommendations Card
+                    st.markdown("""
+                    <div style="background: white; border-radius: 8px; padding: 20px; border: 1px solid #dadce0; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+                        <h4 style="margin-top: 0; color: #202124; border-bottom: 1px solid #f1f3f4; padding-bottom: 12px; margin-bottom: 16px;">
+                            📋 Khuyến nghị lâm sàng
+                        </h4>
+                    """, unsafe_allow_html=True)
                     
-                    # Map color names to component colors
-                    color_map = {
-                        "error": "error",
-                        "warning": "warning",
-                        "info": "info",
-                        "success": "success"
-                    }
-                    icon_map = {
-                        "error": "⚠️",
-                        "warning": "⚡",
-                        "info": "💡",
-                        "success": "✅"
-                    }
-                    component_color = color_map.get(color, "info")
-                    component_icon = icon_map.get(color, "💡")
+                    for rec in result['recommendations']:
+                        # Style bullet points
+                        icon = rec.split(' ', 1)[0]
+                        text = rec.split(' ', 1)[1] if ' ' in rec else rec
+                        st.markdown(f"""
+                        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
+                            <span style="font-size: 1.2em; line-height: 1;">{icon}</span>
+                            <span style="color: #3c4043; line-height: 1.5;">{text}</span>
+                        </div>
+                        """, unsafe_allow_html=True)
                     
-                    # Use render_result_box for risk percentage display
-                    render_result_box(
-                        title="Nguy cơ 10 năm mắc ASCVD",
-                        value=f"{risk_percent:.1f}%",
-                        subtitle=f"Nguy cơ {category_vn}",
-                        color=component_color,
-                        icon=component_icon,
-                        size="large"
-                    )
-                    
-                    # Enhanced result interpretation with Phase 1 metadata
-                    if CALCULATOR_METADATA_AVAILABLE:
-                        render_calculator_result_with_interpretation(
-                            calculator_id="ascvd",
-                            result=f"ASCVD Risk: {risk_percent:.1f}%",
-                            result_value=float(risk_percent)
-                        )
-                    else:
-                        st.markdown("---")
-                        st.markdown("### Khuyến nghị")
-                        for rec in result['recommendations']:
-                            st.markdown(rec)
+                    st.markdown("</div>", unsafe_allow_html=True)
                 
                 # Display input summary
                 st.markdown("### Tóm tắt thông tin đầu vào")

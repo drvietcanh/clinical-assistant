@@ -78,36 +78,53 @@ if protocol and protocol != "Không có protocol nào":
     st.markdown("""
     <style>
     .protocol-header-card {
-        background: linear-gradient(135deg, #0066CC 0%, #004499 100%);
-        color: white;
-        padding: 20px 24px;
-        border-radius: 12px;
+        background: white;
+        color: #202124;
+        padding: 24px;
+        border-radius: 8px;
         margin-bottom: 24px;
-        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+        border-left: 4px solid #007bff;
+        border-top: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
     }
     .protocol-header-card h2 {
-        color: white !important;
+        color: #1a73e8 !important;
         border: none !important;
         margin: 0 0 12px 0 !important;
         padding: 0 !important;
-        font-size: 24px !important;
-    }
-    .protocol-header-card p {
-        color: rgba(255, 255, 255, 0.95) !important;
-        margin: 6px 0 !important;
+        font-size: 26px !important;
+        font-weight: 600 !important;
+        line-height: 1.4 !important;
     }
     .protocol-meta {
         display: flex;
-        gap: 20px;
+        gap: 16px;
         flex-wrap: wrap;
-        margin-top: 12px;
-        padding-top: 12px;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .protocol-meta-item {
-        display: flex;
+        margin-top: 16px;
         align-items: center;
-        gap: 6px;
+    }
+    .protocol-badge-specialty {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 12px;
+        border-radius: 16px;
+        background-color: #e8f0fe;
+        color: #1967d2;
+        font-weight: 500;
+        font-size: 0.85rem;
+        border: 1px solid #d2e3fc;
+    }
+    .protocol-badge-source {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 12px;
+        border-radius: 16px;
+        background-color: #f1f3f4;
+        color: #5f6368;
+        font-size: 0.85rem;
+        border: 1px solid #dadce0;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -116,11 +133,8 @@ if protocol and protocol != "Không có protocol nào":
     <div class="protocol-header-card">
         <h2>📋 {html.escape(protocol_display)}</h2>
         <div class="protocol-meta">
-            <div class="protocol-meta-item">
-                <span>🏥</span>
-                <span><strong>Chuyên khoa:</strong> {html.escape(specialty)}</span>
-            </div>
-            {f'<div class="protocol-meta-item"><span>🔗</span><span style="font-style: italic;">Đã tự động mở từ bài viết chuyên sâu</span></div>' if use_deep_link else ''}
+            <span class="protocol-badge-specialty">🏥 {html.escape(specialty)}</span>
+            {'<span class="protocol-badge-source">🔗 Mở từ bài viết</span>' if use_deep_link else ''}
         </div>
     </div>
     """

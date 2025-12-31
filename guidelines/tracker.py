@@ -81,10 +81,27 @@ def search_guidelines(query: str, category: Optional[str] = None) -> List[Guidel
     results = []
     for guideline in guidelines_to_search:
         # Search in title (English and Vietnamese)
-        if (query_lower in guideline.title.lower() or 
-            query_lower in guideline.title_vn.lower() or
-            query_lower in guideline.description.lower() or
-            query_lower in guideline.organization.lower()):
+        # Search content (Titles, Description, Org, Content, Protocol)
+        search_content = [
+            guideline.title,
+            guideline.title_vn,
+            guideline.description,
+            guideline.organization,
+            str(guideline.related_protocol) if guideline.related_protocol else ""
+        ]
+        
+        # Add key recommendations to search
+        if guideline.key_recommendations:
+            search_content.extend(guideline.key_recommendations)
+            
+        # Check if query is in any of the content
+        found = False
+        for content in search_content:
+            if query_lower in content.lower():
+                found = True
+                break
+        
+        if found:
             results.append(guideline)
     
     return results

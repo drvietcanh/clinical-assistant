@@ -33,172 +33,135 @@ setup_page(
 # Inject custom CSS for modern UI (inspired by UpToDate, Medscape, BMJ Best Practice)
 st.markdown("""
 <style>
-/* Enhanced Card Design - UpToDate/Medscape style */
+/* Modern Medical Interface - Clean & Professional (UpToDate/Epocrates Style) */
+:root {
+    --primary-color: #0066CC;
+    --text-primary: #212529;
+    --text-secondary: #5f6368;
+    --bg-card: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+/* Card Design - Flat & Clean */
 .guideline-card {
-    background: white;
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    border-left: 5px solid #667eea;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-.guideline-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: var(--border-color, #667eea);
-    transition: width 0.3s ease;
-}
-.guideline-card:hover {
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    transform: translateY(-4px);
-    border-left-width: 6px;
-}
-.guideline-card:hover::before {
-    width: 6px;
-}
-
-/* Enhanced Badge Design */
-.org-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    letter-spacing: 0.3px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.category-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
-    color: #7b1fa2;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.year-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    min-width: 60px;
-    justify-content: center;
-}
-
-/* Evidence Level Badge - BMJ Best Practice style */
-.evidence-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-left: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Status Indicators */
-.status-new {
-    background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
-    color: white;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-left: 8px;
-}
-.status-updated {
-    background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
-    color: white;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-left: 8px;
-}
-.status-old {
-    background: linear-gradient(135deg, #f44336 0%, #ef5350 100%);
-    color: white;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-left: 8px;
-}
-
-/* Quick Action Buttons */
-.quick-action-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    border: 1px solid;
-}
-.quick-action-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    padding: 20px;
+    margin-bottom: 16px;
+    border-left: 4px solid #0066CC; /* Default, overridden inline */
+    transition: all 0.2s ease-in-out;
 }
 
-/* Typography Improvements */
-.guideline-title {
-    font-size: 1.3rem;
-    font-weight: 700;
-    line-height: 1.4;
-    color: #1a1a1a;
-    margin: 0 0 12px 0;
-    letter-spacing: -0.3px;
+.guideline-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+    border-color: #b0c4de;
 }
+
+/* Typography */
+.guideline-title {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.guideline-meta {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
 .guideline-description {
-    color: #424242;
+    color: #333;
     font-size: 0.95rem;
     line-height: 1.6;
     margin: 12px 0;
 }
 
-/* Recommendations Box - Enhanced */
-.recommendations-box {
-    background: linear-gradient(135deg, #f3f6ff 0%, #e8f0fe 100%);
-    border-left: 4px solid;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+/* Badges - Subtle & Professional */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .guideline-card {
-        padding: 16px;
-    }
-    .guideline-title {
-        font-size: 1.1rem;
-    }
+.badge-new {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.badge-update {
+    background-color: #fff3e0;
+    color: #ef6c00;
+    border: 1px solid #ffe0b2;
+}
+
+.badge-org {
+    background-color: #f1f3f4;
+    color: #3c4043;
+    border: 1px solid #dadce0;
+}
+
+/* Clinical Pearl Box */
+.pearl-box {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    border-left: 3px solid #fbbc04; /* Amber for insight */
+}
+
+.pearl-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #e37400;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+}
+
+.pearl-content {
+    font-size: 0.9rem;
+    color: #202124;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #0066CC;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #f0f7ff;
+    transition: background 0.2s;
+}
+
+.action-link:hover {
+    background-color: #e1effe;
+    text-decoration: none;
 }
 </style>
+
 """, unsafe_allow_html=True)
 
 # ========== CACHING ==========
@@ -262,153 +225,171 @@ def get_evidence_level(year: int, current_year: int = 2025) -> tuple:
 
 
 def render_guideline_card(guideline, index: int):
-    """Render guideline card với UI đẹp - UpToDate/Medscape style"""
+    """Render guideline card với UI sạch, hiện đại, tối ưu cho đọc (UpToDate style)"""
     gradient, border_color = get_category_color(guideline.category)
     org_color = get_org_color(guideline.organization)
     
-    # Xác định status và màu sắc
+    # Xác định status
     current_year = 2025
-    is_old = guideline.year < 2020
     is_recent = guideline.year >= 2023
-    status_text, status_class, status_color = get_evidence_level(guideline.year, current_year)
     
-    # Year badge colors - more sophisticated
-    if is_recent:
-        year_bg = 'linear-gradient(135deg, #4caf50 0%, #66bb6a 100%)'
-        year_color = '#ffffff'
+    status_html = ""
+    if guideline.is_high_impact:
+         status_html = '<span class="badge" style="background: #e8f0fe; color: #1967d2; border: 1px solid #d2e3fc;">⭐ PRACTICE CHANGING</span>'
+    elif is_recent:
+        status_html = '<span class="badge badge-new">NEW</span>'
     elif guideline.year >= 2020:
-        year_bg = 'linear-gradient(135deg, #2196f3 0%, #42a5f5 100%)'
-        year_color = '#ffffff'
-    else:
-        year_bg = 'linear-gradient(135deg, #ff5722 0%, #ff7043 100%)'
-        year_color = '#ffffff'
+        status_html = '<span class="badge badge-update">UPDATED</span>'
     
-    # Build HTML directly without separate variables to avoid escaping issues
-    # Build HTML using enhanced design - all in one string to avoid escaping problems
+    # Build HTML
     card_html_parts = []
     
-    # Start card
-    card_html_parts.append(f'<div class="guideline-card" style="--border-color: {border_color}; border-left-color: {border_color};">')
+    # Card Start (Add gold border left for high impact)
+    border_style = "border-left-color: #fbbc04;" if guideline.is_high_impact else f"border-left-color: {border_color};"
+    card_html_parts.append(f'<div class="guideline-card" style="{border_style}">')
     
-    # Title and year section
-    card_html_parts.append('<div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 16px; gap: 16px;">')
-    card_html_parts.append(f'<h3 class="guideline-title" style="flex: 1; margin: 0;">{html.escape(guideline.title_vn)}</h3>')
-    card_html_parts.append('<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">')
-    card_html_parts.append(f'<span class="year-badge" style="background: {year_bg}; color: {year_color};">{guideline.year}</span>')
-    card_html_parts.append(f'<span class="{status_class}" style="background: {status_color};">{status_text}</span>')
-    card_html_parts.append('</div>')
+    # Header: Title & Status
+    card_html_parts.append(f'<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">')
+    card_html_parts.append(f'<h3 class="guideline-title">{html.escape(guideline.title_vn or guideline.title_en)}</h3>')
+    card_html_parts.append(status_html)
     card_html_parts.append('</div>')
     
-    # Badges section
-    card_html_parts.append('<div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">')
-    card_html_parts.append(f'<span class="org-badge" style="background: {org_color}15; color: {org_color}; border: 2px solid {org_color}40;">🏢 {html.escape(guideline.organization)}</span>')
-    card_html_parts.append(f'<span class="category-badge">🩺 {html.escape(guideline.category)}</span>')
-    if guideline.key_recommendations:
-        card_html_parts.append(f'<span class="evidence-badge" style="background: {border_color}20; color: {border_color}; border: 1px solid {border_color}40;">📊 Evidence-Based</span>')
+    # Meta: Org, Year, Category
+    card_html_parts.append('<div class="guideline-meta">')
+    card_html_parts.append(f'<span class="badge badge-org" style="color: {org_color}; border-color: {org_color}40;">{html.escape(guideline.organization)}</span>')
+    card_html_parts.append(f'<span>{guideline.year}</span>')
+    card_html_parts.append(f'<span style="color: {border_color}; font-weight: 500;">{html.escape(guideline.category)}</span>')
     card_html_parts.append('</div>')
     
     # Description
     if guideline.description:
-        card_html_parts.append(f'<p class="guideline-description">{html.escape(guideline.description)}</p>')
+        card_html_parts.append(f'<div class="guideline-description">{html.escape(guideline.description)}</div>')
     
-    # Recommendations
+    # Clinical Pearl (Key Recommendations)
     if guideline.key_recommendations:
-        card_html_parts.append(f'<div class="recommendations-box" style="border-left-color: {border_color};"><div style="font-weight: 700; color: {border_color}; margin-bottom: 10px; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;"><span>⭐</span> <span>Khuyến nghị chính:</span></div><ul style="margin: 0; padding-left: 24px; color: #37474f; font-size: 0.9rem; line-height: 1.8;">')
-        for rec in guideline.key_recommendations[:5]:
-            card_html_parts.append(f'<li style="margin-bottom: 8px; padding-left: 4px;">{html.escape(rec)}</li>')
+        card_html_parts.append('<div class="pearl-box">')
+        card_html_parts.append('<div class="pearl-title">💡 Clinical Pearl</div>')
+        card_html_parts.append('<div class="pearl-content"><ul style="margin: 0; padding-left: 20px;">')
+        for rec in guideline.key_recommendations[:3]: # Limit to 3 for brevity
+            card_html_parts.append(f'<li style="margin-bottom: 4px;">{html.escape(rec)}</li>')
         card_html_parts.append('</ul></div>')
+        card_html_parts.append('</div>')
     
-    # Footer section with links
-    card_html_parts.append('<div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e0e0e0; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: space-between;">')
-    card_html_parts.append('<div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">')
+    # Actions Footer
+    card_html_parts.append('<div style="margin-top: 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">')
     
-    # URL link
     if guideline.url:
-        url_escaped = html.escape(guideline.url)
-        card_html_parts.append(f'<a href="{url_escaped}" target="_blank" class="quick-action-btn" style="background: {border_color}; color: white; border-color: {border_color};">🔗 Xem guideline đầy đủ</a>')
-    
-    # Protocol link
+        card_html_parts.append(f'<a href="{html.escape(guideline.url)}" target="_blank" class="action-link">🔗 Xem Guideline gốc</a>')
+        
     if guideline.related_protocol:
-        protocol_escaped = html.escape(guideline.related_protocol)
-        card_html_parts.append(f'<span style="color: #616161; font-size: 0.9rem; display: flex; align-items: center; gap: 4px;">📋 <strong>Protocol:</strong> {protocol_escaped}</span>')
+         card_html_parts.append(f'<span style="font-size: 0.85rem; color: #5f6368; margin-left: auto;">📋 Protocol: <strong>{html.escape(guideline.related_protocol)}</strong></span>')
+
+    card_html_parts.append('</div>') # End Footer
+    card_html_parts.append('</div>') # End Card
     
-    card_html_parts.append('</div>')
+    components.html(''.join(card_html_parts), height=0, scrolling=False)
     
-    # Last updated
-    if guideline.last_updated:
-        last_updated_escaped = html.escape(guideline.last_updated)
-        card_html_parts.append(f'<span style="color: #757575; font-size: 0.85rem; display: flex; align-items: center; gap: 4px;">🔄 <span>Cập nhật: {last_updated_escaped}</span></span>')
+    # Interactive Buttons (Protocol + Tools)
+    if guideline.related_protocol or guideline.related_tools:
+        cols = st.columns([1, 1, 3])
+        
+        # 1. Protocol Button
+        with cols[0]:
+            if guideline.related_protocol:
+                if st.button(
+                    f"📋 Mở Protocol",
+                    key=f"proto_btn_{index}",
+                    type="primary",
+                    use_container_width=True
+                ):
+                    st.session_state['protocol_specialty'] = guideline.category
+                    st.session_state['protocol_to_open'] = guideline.related_protocol
+                    st.switch_page("pages/04_📋_Protocols.py")
+        
+        # 2. Related Tools Buttons
+        if guideline.related_tools:
+            # We can only show one primary "Tool" button easily in this layout, or list them. 
+            # For simplicity, let's just show the first tool or a generic "Tools"
+            # Since we can't easily deep link to other pages with args (except standard query params which streamlit handles poorly without full page reload), 
+            # we'll simulation "Open Tool" if it points to Scores.
+             for idx_tool, tool in enumerate(guideline.related_tools):
+                 with cols[1]:
+                     # This is a bit hacky for multiple tools, but fine for 1-2. 
+                     # Ideally we'd have them in the HTML but deep linking in Streamlit from HTML iframe is hard.
+                     if st.button(f"🧮 {tool['name']}", key=f"tool_btn_{index}_{idx_tool}", use_container_width=True):
+                         st.switch_page("pages/01_📊_Scores.py") # Simple redirect for now
+
+
+def render_featured_updates(guidelines):
+    """Render section for high impact updates"""
+    high_impact = [g for g in guidelines if getattr(g, 'is_high_impact', False)]
+    if not high_impact:
+        return
+
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%); 
+                border-left: 4px solid #fbbc04; padding: 16px; border-radius: 8px; margin-bottom: 24px;">
+        <h3 style="margin: 0 0 12px 0; color: #b06000; display: flex; align-items: center; gap: 8px; font-size: 1.1rem;">
+            <span>⭐</span> Practice Changing Updates
+        </h3>
+        <p style="margin: 0; color: #5f6368; font-size: 0.9rem;">
+            Những cập nhật quan trọng có ảnh hưởng trực tiếp đến thực hành lâm sàng.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
     
-    card_html_parts.append('</div>')
-    card_html_parts.append('</div>')
-    
-    # Join all parts into single HTML string
-    card_html = ''.join(card_html_parts)
-    
-    # Render HTML using components.v1.html to bypass markdown escaping
-    # This ensures HTML is rendered directly without being escaped
-    components.html(
-        card_html,
-        height=0,  # Auto height
-        scrolling=False
-    )
-    
-    # Protocol deep link button
-    if guideline.related_protocol:
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            if st.button(
-                "📋 Mở Protocol",
-                key=f"protocol_btn_{guideline.id}_{index}",
-                use_container_width=True,
-                help=f"Mở protocol: {html.escape(guideline.related_protocol)}",
-                type="primary"
-            ):
-                # Store protocol selection in session state
-                st.session_state['protocol_specialty'] = guideline.category
-                st.session_state['protocol_to_open'] = guideline.related_protocol
-                st.switch_page("pages/04_📋_Protocols.py")
-        with col2:
-            st.caption(f"💡 Có protocol tương ứng: **{html.escape(guideline.related_protocol)}**")
-    
-    st.markdown("---")
+    # Show high impact cards
+    for idx, guideline in enumerate(high_impact):
+        render_guideline_card(guideline, f"feat_{idx}")
+
 
 
 def render_statistics_dashboard(guidelines):
-    """Hiển thị dashboard thống kê"""
+    """Hiển thị dashboard thống kê clean"""
     total = len(guidelines)
-    categories = Counter([g.category for g in guidelines])
-    organizations = Counter([g.organization for g in guidelines])
     years = [g.year for g in guidelines]
-    recent_count = len([y for y in years if y >= 2020])
-    old_count = len([y for y in years if y < 2020])
+    recent_count = len([y for y in years if y >= 2023])
     
-    col1, col2, col3, col4, col5 = st.columns(5)
-    
-    with col1:
-        st.metric("📋 Tổng số", total)
-    with col2:
-        st.metric("🩺 Chuyên khoa", len(categories))
-    with col3:
-        st.metric("🏢 Tổ chức", len(organizations))
-    with col4:
-        st.metric("🆕 Gần đây (≥2020)", recent_count)
-    with col5:
-        st.metric("⚠️ Cần cập nhật (<2020)", old_count)
-
+    col1, col2, col3, col4 = st.columns(4)
+    with col1: st.metric("Tổng số", total)
+    with col2: st.metric("🆕 Mới nhất (≥2023)", recent_count)
+    with col3: st.metric("📅 Năm cập nhật", f"{min(years) if years else '-'} - {max(years) if years else '-'}")
+    with col4: st.metric("🏥 Chuyên khoa", len(set(g.category for g in guidelines)))
 
 # ========== SIDEBAR ==========
 with st.sidebar:
     st.header("📋 Theo dõi Guidelines")
-    st.caption("Module **Theo dõi Guidelines** – theo dõi các hướng dẫn thực hành lâm sàng.")
+    
+    # 1. Personalization Section
+    st.subheader("👤 Cá nhân hóa")
+    if 'my_specialties' not in st.session_state:
+        st.session_state['my_specialties'] = []
+        
+    my_specialties = st.multiselect(
+        "Chuyên khoa quan tâm:",
+        options=get_category_list(),
+        default=st.session_state.get('my_specialties', []),
+        key='pref_specialties',
+        help="Chọn chuyên khoa để lọc nhanh trong tab 'Của tôi'"
+    )
+    # Save to session (auto-handled by key, but explicit update for logic)
+    st.session_state['my_specialties'] = my_specialties
+
+    st.markdown("---")
+    
+    # 2. View Mode
+    view_modes = ["Của tôi", "Tất cả", "Gần đây", "Cần cập nhật", "Tìm kiếm"]
+    # If no specialties selected, default to "Tất cả" or show tip
+    default_index = 0 if my_specialties else 1
     
     view_mode = st.radio(
         "Chế độ xem:",
-        ["Tất cả", "Gần đây", "Cần cập nhật", "Tìm kiếm"],
+        view_modes,
+        index=default_index,
         key="guidelines_view_mode"
     )
     
-    # Filters
+    # Filters (only show for relevant modes)
     if view_mode == "Tất cả":
         category_filter = st.selectbox(
             "Lọc theo chuyên khoa:",
@@ -422,18 +403,10 @@ with st.sidebar:
             key="guidelines_org_filter"
         )
         
-        # Year filter (using cached data)
-        all_years = get_cached_years()
-        year_filter = st.selectbox(
-            "Lọc theo năm:",
-            ["Tất cả"] + [str(y) for y in all_years],
-            key="guidelines_year_filter"
-        )
-        
         # Sort options
         sort_by = st.selectbox(
             "Sắp xếp theo:",
-            ["Năm (mới nhất)", "Năm (cũ nhất)", "Tổ chức", "Chuyên khoa", "Tên"],
+            ["Năm (mới nhất)", "Năm (cũ nhất)", "Tổ chức", "Chuyên khoa"],
             key="guidelines_sort"
         )
     
@@ -467,8 +440,68 @@ render_hero(
 )
 
 # Display based on view mode
-if view_mode == "Tất cả":
+# Display based on view mode
+if view_mode == "Của tôi":
+    st.markdown("### 👤 Dành cho bạn")
+    
+    if not my_specialties:
+        render_info_box("""
+        **👋 Chào mừng bạn!**
+        
+        Để xem các guidelines phù hợp, hãy chọn **Chuyên khoa quan tâm** ở thanh bên trái.
+        """, type="info")
+        
+        # Fallback to recent guidelines but show featured first
+        recent = get_recent_guidelines(limit=5)
+        render_featured_updates(recent)
+        
+        st.markdown("#### 🆕 Có thể bạn quan tâm (Mới nhất)")
+        for idx, guideline in enumerate(recent):
+            if not getattr(guideline, 'is_high_impact', False):
+                render_guideline_card(guideline, idx)
+            
+    else:
+        # Get guidelines for selected specialties
+        all_guidelines = get_cached_all_guidelines()
+        personal_guidelines = [
+            g for g in all_guidelines 
+            if g.category in my_specialties
+        ]
+        # Sort by year desc
+        personal_guidelines.sort(key=lambda x: x.year, reverse=True)
+        
+        # Show featured updates for these specialties
+        render_featured_updates(personal_guidelines)
+        
+        if personal_guidelines:
+            render_statistics_dashboard(personal_guidelines)
+            st.markdown("---")
+            
+            # Pagination
+            items_per_page = 20
+            start_idx, end_idx, _, _ = render_pagination(
+                total_items=len(personal_guidelines),
+                items_per_page=items_per_page,
+                page_key="guidelines_page_my",
+                show_info=True
+            )
+            
+            for idx, guideline in enumerate(personal_guidelines[start_idx:end_idx]):
+                 # Optional: Filter out if already shown in featured? 
+                 # Let's keep them for completeness in the list but maybe distinctive style?
+                 # For now, just render them all.
+                render_guideline_card(guideline, start_idx + idx)
+        else:
+            st.info(f"Chưa có guideline nào cho các chuyên khoa: {', '.join(my_specialties)}")
+
+elif view_mode == "Tất cả":
     st.markdown("### 📚 Tất cả Guidelines")
+    
+    # Show featured updates if no heavy filtering (Category/Org) is applied
+    if st.session_state.get('guidelines_category_filter', 'Tất cả') == 'Tất cả' and \
+       st.session_state.get('guidelines_org_filter', 'Tất cả') == 'Tất cả':
+        render_featured_updates(get_cached_all_guidelines())
+        st.markdown("---")
     
     # Apply filters (optimized - start with all guidelines and filter down)
     category = None if category_filter == "Tất cả" else category_filter

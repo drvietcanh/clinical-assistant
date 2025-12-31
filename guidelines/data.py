@@ -23,10 +23,14 @@ class Guideline:
     related_protocol: Optional[str] = None  # Link to protocol in app
     description: str = ""
     key_recommendations: List[str] = None  # List of key recommendations
+    is_high_impact: bool = False # Highlights "Practice Changing" updates
+    related_tools: List[dict] = None # List of dicts: {"name": "Calculators...", "url": "..."}
     
     def __post_init__(self):
         if self.key_recommendations is None:
             self.key_recommendations = []
+        if self.related_tools is None:
+            self.related_tools = []
 
 
 # Guidelines Database
@@ -124,6 +128,10 @@ GUIDELINES_DATABASE: List[Guideline] = [
             "Anticoagulation: DOACs preferred over warfarin",
             "Rate control: Beta-blockers, diltiazem, verapamil, digoxin",
             "Rhythm control: Cardioversion, antiarrhythmics, ablation"
+        ],
+        related_tools=[
+            {"name": "CHA2DS2-VASc", "url": "/Scores?calc=CHA2DS2-VASc"},
+            {"name": "HAS-BLED", "url": "/Scores?calc=HAS-BLED"}
         ]
     ),
     
@@ -145,6 +153,10 @@ GUIDELINES_DATABASE: List[Guideline] = [
             "Beta-lactam + macrolide or respiratory fluoroquinolone for inpatient",
             "Duration: 5-7 days for most patients",
             "Switch to oral when clinically stable"
+        ],
+        related_tools=[
+            {"name": "CURB-65", "url": "/Scores?calc=CURB-65"},
+            {"name": "PSI/PORT", "url": "/Scores?calc=PSI/PORT"}
         ]
     ),
     Guideline(
@@ -177,6 +189,10 @@ GUIDELINES_DATABASE: List[Guideline] = [
             "Antibiotics within 1 hour of recognition",
             "30 mL/kg crystalloid for hypotension or lactate ≥4",
             "Norepinephrine as first-line vasopressor"
+        ],
+        related_tools=[
+            {"name": "qSOFA", "url": "/Scores?calc=qSOFA"},
+            {"name": "SOFA", "url": "/Scores?calc=SOFA"}
         ]
     ),
     
@@ -292,6 +308,11 @@ GUIDELINES_DATABASE: List[Guideline] = [
             "Mechanical thrombectomy within 24 hours for large vessel occlusion",
             "BP management: <185/110 before tPA, <180/105 after",
             "Aspirin 325 mg within 24-48 hours (avoid if tPA given)"
+        ],
+        is_high_impact=True,
+        related_tools=[
+            {"name": "NIHSS", "url": "/Scores?calc=NIHSS"},
+            {"name": "ASPECTS", "url": "/Scores?calc=ASPECTS"}
         ]
     ),
     
@@ -647,6 +668,10 @@ GUIDELINES_DATABASE: List[Guideline] = [
             "Single-pill combination as initial therapy",
             "ACEi/ARB + CCB or thiazide as first-line",
             "SGLT2 inhibitors for diabetes or heart failure"
+        ],
+        is_high_impact=True,
+        related_tools=[
+            {"name": "CV Risk Score", "url": "/Scores?calc=cv_risk"}
         ]
     ),
     Guideline(
@@ -666,6 +691,11 @@ GUIDELINES_DATABASE: List[Guideline] = [
             "Quadruple therapy: ACEi/ARNI + beta-blocker + MRA + SGLT2i",
             "Vericiguat for HFrEF with recent decompensation",
             "Ivabradine for HFrEF with HR >70 on beta-blocker"
+        ],
+        is_high_impact=True,
+        related_tools=[
+            {"name": "HFrEF Calculator", "url": "/Scores?calc=hfref"},
+            {"name": "MAGGIC Score", "url": "/Scores?calc=maggic"}
         ]
     ),
     Guideline(
@@ -725,6 +755,11 @@ GUIDELINES_DATABASE: List[Guideline] = [
             "Antibiotics within 1 hour, or immediately if shock",
             "30 mL/kg crystalloid, reassess after each bolus",
             "Norepinephrine as first-line vasopressor"
+        ],
+        is_high_impact=True,
+        related_tools=[
+            {"name": "SOFA Score", "url": "/Scores?calc=sofa"},
+            {"name": "qSOFA", "url": "/Scores?calc=qsofa"}
         ]
     ),
     Guideline(
@@ -765,6 +800,11 @@ GUIDELINES_DATABASE: List[Guideline] = [
             "Triple therapy (ICS/LAMA/LABA) for Group E patients",
             "SGLT2 inhibitors for COPD with heart failure",
             "Pulmonary rehabilitation for all symptomatic patients"
+        ],
+        is_high_impact=True,
+        related_tools=[
+            {"name": "mMRC", "url": "/Scores?calc=mMRC"},
+            {"name": "BODE Index", "url": "/Scores?calc=BODE Index"}
         ]
     ),
     Guideline(
@@ -784,6 +824,10 @@ GUIDELINES_DATABASE: List[Guideline] = [
             "Avoid SABA-only treatment",
             "Biologics for severe uncontrolled asthma",
             "Step-up based on symptom control and exacerbations"
+        ],
+        is_high_impact=True,
+        related_tools=[
+            {"name": "Asthma Control Test", "url": "/Scores?calc=ACT"}
         ]
     ),
     
@@ -798,8 +842,13 @@ GUIDELINES_DATABASE: List[Guideline] = [
         version="2024",
         last_updated="2024-11-01",
         url="https://kdigo.org/guidelines/ckd-evaluation-and-management/",
+        description="Latest KDIGO CKD guidelines 2024",
+        is_high_impact=True,
+        related_tools=[
+            {"name": "eGFR", "url": "/Scores?calc=eGFR"},
+            {"name": "KDIGO Staging", "url": "/Scores?calc=KDIGO"}
+        ],
         related_protocol="Suy thận mạn tính (CKD)",
-        description="Updated KDIGO CKD guidelines 2024",
         key_recommendations=[
             "SGLT2 inhibitors for CKD with eGFR ≥20",
             "ACEi/ARB for proteinuria regardless of diabetes",
