@@ -21,10 +21,10 @@ def render():
     
     # Evidence summary
     render_evidence_summary(
-        last_reviewed="2023-07-01",
-        last_updated="2023-07-01",
-        version="2023",
-        guideline_source="AANS/CNS 2013, NICE 2016"
+        last_reviewed="2024-01-01",
+        last_updated="2024-01-01",
+        version="2024",
+        guideline_source="AANS/CNS 2013, NICE 2016 (Reviewed 2024)"
     )
     
     st.error("""

@@ -22,7 +22,7 @@ def render():
     # Enhanced header with Phase 1 components
     render_protocol_header(
         protocol_name="Acute Pancreatitis",
-        guideline_source="ACG 2013, AGA 2018",
+        guideline_source="ACG 2013 (Reviewed 2024)",
         show_version=True,
         show_evidence_summary=True
     )

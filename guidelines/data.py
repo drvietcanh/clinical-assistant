@@ -1282,6 +1282,396 @@ GUIDELINES_DATABASE: List[Guideline] = [
             "Metabolic evaluation for recurrent stone formers"
         ]
     ),
+    
+    # === TRAUMA & CRITICAL CARE - NEW ===
+    Guideline(
+        id="atls_trauma_2018",
+        title="ATLS 10th Edition: Advanced Trauma Life Support",
+        title_vn="ATLS Phiên bản 10: Hỗ trợ Sự sống Chấn thương Nâng cao",
+        organization="ACS",
+        year=2018,
+        category="Trauma",
+        version="10th Ed",
+        last_updated="2024-01-01",
+        url="https://www.facs.org/quality-programs/trauma/atls",
+        related_protocol="Trauma Assessment",
+        description="Standard protocol for initial assessment and management of trauma patients",
+        key_recommendations=[
+            "ABCDE priority: Airway, Breathing, Circulation, Disability, Exposure",
+            "Identify and treat life-threatening injuries immediately",
+            "Protect cervical spine",
+            "Avoid hypothermia"
+        ]
+    ),
+    Guideline(
+        id="btf_tbi_2023",
+        title="Brain Trauma Foundation Guidelines for Prevention of Secondary Brain Injury",
+        title_vn="Hướng dẫn của Brain Trauma Foundation về Phòng ngừa Tổn thương Não Thứ phát",
+        organization="BTF",
+        year=2023,
+        category="Trauma",
+        version="4th Ed+",
+        last_updated="2023-01-01",
+        url="https://braintrauma.org/guidelines",
+        related_protocol="Traumatic Brain Injury",
+        description="Guidelines for management of severe TBI",
+        key_recommendations=[
+            "Maintain SBP >100 mmHg (50-69y) or >110 mmHg (15-49y)",
+            "CPP target 60-70 mmHg",
+            "Avoid prophylactic hyperventilation",
+            "Limit steroid use"
+        ]
+    ),
+    Guideline(
+        id="aans_sci_2013",
+        title="Management of Acute Spinal Cord Injuries",
+        title_vn="Quản lý Chấn thương Tủy sống Cấp",
+        organization="AANS/CNS",
+        year=2013,
+        category="Trauma",
+        version="2013 (Rev 2024)",
+        last_updated="2024-01-01",
+        url="https://www.cns.org/guidelines/guidelines-management-acute-cervical-spine-and-spinal-cord-injuries",
+        related_protocol="Spinal Cord Injury",
+        description="Guidelines for acute spinal cord injury",
+        key_recommendations=[
+            "Maintain MAP >85-90 mmHg for 7 days",
+            "Immobilization and early decompression",
+            "Methylprednisolone high-dose is optional/controversial",
+            "VTE prophylaxis essential"
+        ]
+    ),
+    Guideline(
+        id="sccm_delirium_2018",
+        title="SCCM PADIS Guidelines 2018",
+        title_vn="Hướng dẫn SCCM PADIS 2018",
+        organization="SCCM",
+        year=2018,
+        category="Critical Care",
+        version="2018",
+        last_updated="2024-01-01",
+        url="https://www.sccm.org/ICULiberation/PADIS-Guidelines",
+        related_protocol="Delirium Management",
+        description="Guidelines for Pain, Agitation/Sedation, Delirium, Immobility, and Sleep Disruption",
+        key_recommendations=[
+            "Assess delirium daily with CAM-ICU",
+            "ABCDEF Bundle implementation",
+            "Avoid benzodiazepines for sedation",
+            "Promote early mobility"
+        ]
+    ),
+
+    # === TOXICOLOGY - NEW ===
+    Guideline(
+        id="rumack_paracetamol",
+        title="Rumack-Matthew Nomogram for Acetaminophen Poisoning",
+        title_vn="Biểu đồ Rumack-Matthew cho Ngộ độc Paracetamol",
+        organization="Toxicology",
+        year=2020,
+        category="Toxicology",
+        version="2020",
+        last_updated="2024-01-01",
+        url="https://www.ncbi.nlm.nih.gov/books/NBK441917/",
+        related_protocol="Paracetamol Poisoning",
+        description="Protocol for NAC treatment in paracetamol overdose",
+        key_recommendations=[
+            "Quantify acetaminophen level 4-24h post-ingestion",
+            "Use nomogram to determine NAC indication",
+            "Give NAC within 8 hours for best outcome",
+            "Treat if above treatment line"
+        ]
+    ),
+    Guideline(
+        id="asam_alcohol_2020",
+        title="ASAM Clinical Practice Guideline on Alcohol Withdrawal Management",
+        title_vn="Hướng dẫn ASAM về Quản lý Cai rượu",
+        organization="ASAM",
+        year=2020,
+        category="Toxicology",
+        version="2020",
+        last_updated="2024-01-01",
+        url="https://www.asam.org/quality-care/clinical-guidelines/alcohol-withdrawal-management-guideline",
+        related_protocol="Alcohol Withdrawal",
+        description="Management of alcohol withdrawal syndrome",
+        key_recommendations=[
+            "Use CIWA-Ar for assessment",
+            "Symptom-triggered benzodiazepine therapy preferred",
+            "Thiamine prophylaxis for Wernicke's",
+            "Monitor for seizures and delirium tremens"
+        ]
+    ),
+
+    # === PEDIATRICS - NEW ===
+    Guideline(
+        id="aap_bronchiolitis_2014",
+        title="AAP Clinical Practice Guideline: Bronchiolitis",
+        title_vn="Hướng dẫn AAP: Viêm tiểu phế quản",
+        organization="AAP",
+        year=2014,
+        category="Pediatrics",
+        version="2014 (Rev 2023)",
+        last_updated="2023-01-01",
+        url="https://publications.aap.org/pediatrics/article/134/5/e1474/32952/Clinical-Practice-Guideline-The-Diagnosis",
+        related_protocol="Bronchiolitis",
+        description="Management of bronchiolitis in infants",
+        key_recommendations=[
+            "Diagnosis is clinical",
+            "Do not use bronchodilators or steroids routinely",
+            "Supportive care (oxygen, hydration) is mainstay",
+            "Avoid antibiotics unless bacterial coinfection"
+        ]
+    ),
+    Guideline(
+        id="aap_jaundice_2022",
+        title="AAP Clinical Practice Guideline Revision: Management of Hyperbilirubinemia",
+        title_vn="Hướng dẫn AAP 2022: Quản lý Tăng Bilirubin máu Sơ sinh",
+        organization="AAP",
+        year=2022,
+        category="Pediatrics",
+        version="2022",
+        last_updated="2024-01-01",
+        url="https://publications.aap.org/pediatrics/article/150/3/e2022058859/188722/Clinical-Practice-Guideline-Revision-Management-of",
+        related_protocol="Neonatal Jaundice",
+        description="Management of hyperbilirubinemia in newborns >35 weeks",
+        key_recommendations=[
+            "Universal screening for risk of severe hyperbilirubinemia",
+            "Revised phototherapy and exchange transfusion thresholds",
+            "Follow-up based on risk assessment",
+            "Prevention of kernicterus"
+        ]
+    ),
+    Guideline(
+        id="aap_febrile_seizures_2019",
+        title="AAP Clinical Practice Guideline: Febrile Seizures",
+        title_vn="Hướng dẫn AAP: Co giật do sốt",
+        organization="AAP",
+        year=2019,
+        category="Pediatrics",
+        version="2019",
+        last_updated="2024-01-01",
+        url="https://publications.aap.org/pediatrics/article/122/4/895/71542/Febrile-Seizures-Guideline-for-the-Neurodiagnostic",
+        related_protocol="Febrile Seizures",
+        description="Management of simple febrile seizures",
+        key_recommendations=[
+            "No routine EEG or neuroimaging for simple febrile seizures",
+            "Identify source of fever",
+            "Reassurance and education for parents",
+            "Antipyretics for comfort, not seizure prevention"
+        ]
+    ),
+    Guideline(
+        id="aap_uti_2021",
+        title="AAP Clinical Practice Guideline: UTI in Febrile Infants",
+        title_vn="Hướng dẫn AAP: Nhiễm trùng tiểu ở trẻ sốt",
+        organization="AAP",
+        year=2021,
+        category="Pediatrics",
+        version="2021",
+        last_updated="2024-01-01",
+        url="https://publications.aap.org/pediatrics/article/128/3/595/30605/Urinary-Tract-Infection-Clinical-Practice",
+        related_protocol="Pediatric UTI",
+        description="Diagnosis and management of UTI in children",
+        key_recommendations=[
+            "Catheterized specimen for diagnosis",
+            "Renal ultrasound for first febrile UTI",
+            "7-14 days antibiotics",
+            "VCUG not routine after first UTI"
+        ]
+    ),
+
+    # === OBSTETRICS - NEW ===
+    Guideline(
+        id="acog_ectopic_2018",
+        title="ACOG Practice Bulletin No. 193: Tubal Ectopic Pregnancy",
+        title_vn="Thực hành Lâm sàng ACOG: Thai ngoài tử cung",
+        organization="ACOG",
+        year=2018,
+        category="Obstetrics",
+        version="2018 (Rev 2020)",
+        last_updated="2020-01-01",
+        url="https://www.acog.org/clinical/clinical-guidance/practice-bulletin/articles/2018/03/tubal-ectopic-pregnancy",
+        related_protocol="Ectopic Pregnancy",
+        description="Management of tubal ectopic pregnancy",
+        key_recommendations=[
+            "Methotrexate for stable patients with suitable criteria",
+            "Surgery for unstable or ruptured cases",
+            "Serial hCG monitoring",
+            "Rh immunoglobulin for Rh-negative women"
+        ]
+    ),
+    Guideline(
+        id="acog_preterm_2019",
+        title="ACOG Practice Bulletin No. 234: Management of Preterm Labor",
+        title_vn="Thực hành Lâm sàng ACOG: Quản lý Dọa sanh non",
+        organization="ACOG",
+        year=2019,
+        category="Obstetrics",
+        version="2021",
+        last_updated="2021-08-01",
+        url="https://www.acog.org/clinical/clinical-guidance/practice-bulletin/articles/2021/08/management-of-preterm-labor",
+        related_protocol="Preterm Labor",
+        description="Management of preterm labor <37 weeks",
+        key_recommendations=[
+            "Corticosteroids for fetal lung maturity (23-34w)",
+            "Magnesium sulfate for neuroprotection (<32w)",
+            "Tocolysis for 48h to allow steroid effect",
+            "GBS prophylaxis"
+        ]
+    ),
+
+    # === MEDICINE SUBSPECIALTIES - NEW ===
+    Guideline(
+        id="aasld_hbv_2018",
+        title="AASLD 2018 Hepatitis B Guidance",
+        title_vn="Hướng dẫn AASLD 2018 về Viêm gan B",
+        organization="AASLD",
+        year=2018,
+        category="Gastroenterology",
+        version="2018 (Update 2020)",
+        last_updated="2020-01-01",
+        url="https://www.aasld.org/practice-guidelines/chronic-hepatitis-b",
+        related_protocol="Chronic Hepatitis B",
+        description="Management of chronic hepatitis B",
+        key_recommendations=[
+            "Treat all cirrhotics with viremia",
+            "Treat immune-active chronic hepatitis",
+            "Entecavir, TDF, or TAF are first-line",
+            "HCC surveillance every 6 months"
+        ]
+    ),
+    Guideline(
+        id="acg_pancreatitis_2024",
+        title="ACG Guidelines: Management of Acute Pancreatitis",
+        title_vn="Hướng dẫn ACG: Quản lý Viêm tụy cấp",
+        organization="ACG",
+        year=2024,
+        category="Gastroenterology",
+        version="2024",
+        last_updated="2024-03-01",
+        url="https://journals.lww.com/ajg/Fulltext/2013/09000/ACG_Guideline__Management_of_Acute_Pancreatitis.1.aspx",
+        related_protocol="Acute Pancreatitis",
+        description="Management of acute pancreatitis",
+        key_recommendations=[
+            "Aggressive hydration with Lactated Ringer's",
+            "Early enteral feeding within 24-48h",
+            "No routine prophylactic antibiotics",
+            "ERCP for cholangitis"
+        ]
+    ),
+    Guideline(
+        id="ata_thyroid_storm_2016",
+        title="ATA 2016 Guidelines for Diagnosis and Management of Hyperthyroidism",
+        title_vn="Hướng dẫn ATA 2016 về Cường giáp và Bão giáp",
+        organization="ATA",
+        year=2016,
+        category="Endocrinology",
+        version="2016",
+        last_updated="2024-01-01",
+        url="https://www.thyroid.org/professionals/ata-professional-guidelines/",
+        related_protocol="Thyroid Storm",
+        description="Management of thyroid storm",
+        key_recommendations=[
+            "Multimodal therapy: Beta-blocker, Thionamide, Iodine, Steroids",
+            "PTU preferred in storm",
+            "Treat precipitating cause",
+            "ICU admission"
+        ]
+    ),
+    Guideline(
+        id="ata_myxedema_2014",
+        title="ATA 2014 Guidelines for Treatment of Hypothyroidism",
+        title_vn="Hướng dẫn ATA 2014 về Suy giáp và Hôn mê phù niêm",
+        organization="ATA",
+        year=2014,
+        category="Endocrinology",
+        version="2014",
+        last_updated="2024-01-01",
+        url="https://www.thyroid.org/professionals/ata-professional-guidelines/",
+        related_protocol="Myxedema Coma",
+        description="Management of myxedema coma",
+        key_recommendations=[
+            "Empiric glucocorticoids before thyroid hormone",
+            "IV Levothyroxine loading dose",
+            "Consider IV Liothyronine (T3)",
+            "Active warming and supportive care"
+        ]
+    ),
+    Guideline(
+        id="endo_adrenal_2016",
+        title="Endocrine Society 2016: Primary Adrenal Insufficiency",
+        title_vn="Hội Nội tiết 2016: Suy thượng thận",
+        organization="Endocrine Soc",
+        year=2016,
+        category="Endocrinology",
+        version="2016",
+        last_updated="2024-01-01",
+        url="https://www.endocrine.org/clinical-practice-guidelines/primary-adrenal-insufficiency",
+        related_protocol="Adrenal Crisis",
+        description="Management of adrenal crisis",
+        key_recommendations=[
+            "Immediate IV Hydrocortisone 100mg",
+            "Fluid resuscitation with saline",
+            "Do not wait for cortisol results",
+            "Treat precipitating factors"
+        ]
+    ),
+    Guideline(
+        id="ahs_migraine_2021",
+        title="AHS Consensus Statement: Acute Treatment of Migraine",
+        title_vn="Đồng thuận AHS: Điều trị cắt cơn Migraine",
+        organization="AHS",
+        year=2021,
+        category="Neurology",
+        version="2021",
+        last_updated="2024-01-01",
+        url="https://headachejournal.onlinelibrary.wiley.com/doi/full/10.1111/head.14153",
+        related_protocol="Acute Migraine",
+        description="Acute migraine management",
+        key_recommendations=[
+            "Stratified care based on severity",
+            "NSAIDs for mild-moderate",
+            "Triptans for moderate-severe",
+            "Avoid opioids"
+        ]
+    ),
+    Guideline(
+        id="aao_bppv_2017",
+        title="AAO-HNSF Clinical Practice Guideline: BPPV",
+        title_vn="Hướng dẫn AAO-HNSF: Chóng mặt tư thế kịch phát lành tính",
+        organization="AAO-HNSF",
+        year=2017,
+        category="Neurology",
+        version="2017",
+        last_updated="2024-01-01",
+        url="https://journals.sagepub.com/doi/full/10.1177/0194599816689667",
+        related_protocol="BPPV",
+        description="Diagnosis and management of BPPV",
+        key_recommendations=[
+            "Diagnose with Dix-Hallpike maneuver",
+            "Treat with Epley maneuver (Canalith repositioning)",
+            "Do not use vestibular suppressants routinely",
+            "Imaging not recommended for typical BPPV"
+        ]
+    ),
+    Guideline(
+        id="ash_sickle_cell_2020",
+        title="ASH 2020 Guidelines for Sickle Cell Disease: Acute Pain",
+        title_vn="Hướng dẫn ASH 2020 về Hồng cầu hình liềm: Đau cấp",
+        organization="ASH",
+        year=2020,
+        category="Hematology",
+        version="2020",
+        last_updated="2024-01-01",
+        url="https://www.hematology.org/education/clinicians/guidelines-and-quality-care/sickle-cell-disease-guidelines",
+        related_protocol="Sickle Cell Crisis",
+        description="Management of vaso-occlusive crisis",
+        key_recommendations=[
+            "Rapid analgesic initiation (<1 hour)",
+            "Individualized opioid dosing",
+            "Supportive care",
+            "Monitor for acute chest syndrome"
+        ]
+    ),
 ]
 
 

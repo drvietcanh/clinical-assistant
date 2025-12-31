@@ -22,7 +22,7 @@ def render():
     # Enhanced header with Phase 1 components
     render_protocol_header(
         protocol_name="Traumatic Brain Injury",
-        guideline_source="Brain Trauma Foundation 4th ed.",
+        guideline_source="BTF 4th Ed (2017) / Review 2024",
         show_version=True,
         show_evidence_summary=True
     )
