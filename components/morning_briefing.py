@@ -28,6 +28,10 @@ def render_morning_briefing():
     date_str = datetime.now().strftime("%d tháng %m, %Y")
     day_of_week = ["Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy", "Chủ nhật"][datetime.now().weekday()]
     
+    # Get values first
+    total_calc = st.session_state.get('total_calculations', 0)
+    total_fav = len(st.session_state.get('favorites', []))
+    
     # Hero section with gradient background
     st.markdown(f"""
     <div style="
@@ -54,11 +58,11 @@ def render_morning_briefing():
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
             <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 12px; backdrop-filter: blur(10px);">
                 <p style="font-size: 0.85rem; opacity: 0.9; margin: 0;">Tổng tính toán</p>
-                <p style="font-size: 2rem; font-weight: 700; margin: 0.25rem 0 0 0;">{st.session_state.get('total_calculations', 0)}</p>
+                <p style="font-size: 2rem; font-weight: 700; margin: 0.25rem 0 0 0;">{total_calc}</p>
             </div>
             <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 12px; backdrop-filter: blur(10px);">
                 <p style="font-size: 0.85rem; opacity: 0.9; margin: 0;">Yêu thích</p>
-                <p style="font-size: 2rem; font-weight: 700; margin: 0.25rem 0 0 0;">{len(st.session_state.get('favorites', []))}</p>
+                <p style="font-size: 2rem; font-weight: 700; margin: 0.25rem 0 0 0;">{total_fav}</p>
             </div>
             <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 12px; backdrop-filter: blur(10px);">
                 <p style="font-size: 0.85rem; opacity: 0.9; margin: 0;">Cập nhật mới</p>

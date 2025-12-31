@@ -13,14 +13,15 @@ def add_to_recently_used(calc_id):
     add_recent(calc_id)
 
 
-def render_recently_used():
+def render_recently_used(max_items=5):
     """Render recently used section"""
     st.markdown("### 🕐 Sử dụng Gần Đây")
     
     recently_used = st.session_state.get('recently_used', [])
     if recently_used:
-        cols = st.columns(min(5, len(recently_used)))
-        for idx, calc_id in enumerate(recently_used[:5]):  # Show max 5
+        display_items = recently_used[:max_items]
+        cols = st.columns(min(max_items, len(display_items)))
+        for idx, calc_id in enumerate(display_items):
             if calc_id in ALL_CALCULATORS:
                 calc_info = ALL_CALCULATORS[calc_id]
                 with cols[idx]:

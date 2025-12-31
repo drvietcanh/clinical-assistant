@@ -265,7 +265,7 @@ def render():
                         result_value=float(score)
                     )
                 else:
-                st.markdown(interpretation)
+                    st.markdown(interpretation)
             
             # Build breakdown of criteria
             criteria_scores = {}
