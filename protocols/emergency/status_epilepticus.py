@@ -7,12 +7,25 @@ Prolonged or recurrent seizures without recovery
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Status Epilepticus Protocol"""
     st.subheader("🧠 Trạng thái động kinh liên tục (Status Epilepticus)")
     st.caption("AES 2016, Neurocritical Care Society - Prolonged seizures management")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2022-06-01",
+        last_updated="2022-06-01",
+        version="2022",
+        guideline_source="AES 2016, Neurocritical Care Society"
+    )
     
     st.error("""
     **⚠️ TRẠNG THÁI ĐỘNG KINH LIÊN TỤC = CẤP CỨU Y TẾ**

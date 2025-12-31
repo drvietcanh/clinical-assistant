@@ -22,6 +22,16 @@ from components.smart_suggestions import render_suggestions
 from components.risk_color_coding import render_risk_badge, get_risk_level
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ===================================================
 
 
@@ -37,9 +47,63 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.info("""
-    **GRACE Score** dự đoán tử vong trong bệnh viện và 6 tháng sau ACS (STEMI/NSTEMI).
-    """)
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về GRACE Score",
+            content="""
+            **GRACE (Global Registry of Acute Coronary Events) Score** dự đoán tử vong:
+            
+            - Tử vong trong bệnh viện
+            - Tử vong 6 tháng sau ACS (STEMI/NSTEMI)
+            - Hướng dẫn chiến lược điều trị (invasive vs conservative)
+            
+            **8 thông số lâm sàng:**
+            1. Tuổi
+            2. Nhịp tim
+            3. Huyết áp tâm thu
+            4. Creatinine
+            5. Killip class
+            6. ST chênh lên
+            7. Cardiac arrest tại nhập viện
+            8. Tăng men tim (CK-MB/Troponin)
+            
+            **Tổng điểm: 0-258**
+            """,
+            when_to_use="""
+            **Sử dụng GRACE Score khi:**
+            - Bệnh nhân có ACS (STEMI/NSTEMI/UA)
+            - Cần đánh giá tiên lượng tử vong
+            - Quyết định chiến lược điều trị (invasive vs conservative)
+            - Hướng dẫn thời điểm can thiệp mạch vành
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Cần có đầy đủ thông tin lâm sàng và xét nghiệm
+            - Không áp dụng cho bệnh nhân không có ACS
+            - Một số thông số có thể không có sẵn ngay
+            - Không thay thế đánh giá lâm sàng cá thể hóa
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - **GRACE <109:** Nguy cơ tử vong thấp → Cân nhắc điều trị bảo tồn
+            - **GRACE 109-140:** Nguy cơ tử vong trung bình → Cân nhắc can thiệp sớm
+            - **GRACE >140:** Nguy cơ tử vong cao → Khuyến cáo can thiệp sớm
+            - GRACE cao liên quan đến tử vong và biến cố tim mạch cao hơn
+            """
+        )
+        
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Granger CB, et al. Predictors of hospital mortality in the global registry of acute coronary events. Arch Intern Med. 2003;163(19):2345-53.",
+            doi="10.1001/archinte.163.19.2345",
+            pmid="14581255"
+        )
+    else:
+        # Fallback to original
+        st.info("""
+        **GRACE Score** dự đoán tử vong trong bệnh viện và 6 tháng sau ACS (STEMI/NSTEMI).
+        """)
     
     col1, col2 = st.columns([2, 1])
     

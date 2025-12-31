@@ -11,6 +11,16 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ======================================
 
 
@@ -37,23 +47,72 @@ def render():
         limit=3
     )
     
-    with st.expander("ℹ️ Giới thiệu về Killip Classification"):
-        st.markdown("""
-        **Killip Classification** phân loại **mức độ nặng** của suy tim cấp trong **nhồi máu cơ tim (AMI)** 
-        dựa trên **lâm sàng đơn giản**.
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về Killip Classification",
+            content="""
+            **Killip Classification** phân loại mức độ nặng của suy tim cấp trong nhồi máu cơ tim (AMI):
+            
+            - Dựa trên lâm sàng đơn giản, không cần xét nghiệm phức tạp
+            - Tiên lượng tử vong chính xác
+            - Hướng dẫn điều trị
+            - Sử dụng từ 1967, vẫn còn giá trị trong thực hành lâm sàng
+            
+            **4 Class:**
+            - **Class I:** Không suy tim (tử vong ~6%)
+            - **Class II:** Suy tim nhẹ - ran ẩm ½ dưới phổi, S3, có thể tĩnh mạch cảnh nổi (tử vong ~17%)
+            - **Class III:** Phù phổi cấp - ran ẩm cả 2 phổi (tử vong ~38%)
+            - **Class IV:** Shock tim - hạ huyết áp, thiểu niệu, lạnh chi (tử vong ~81%)
+            """,
+            when_to_use="""
+            **Sử dụng Killip Classification khi:**
+            - Bệnh nhân có nhồi máu cơ tim (AMI)
+            - Cần đánh giá mức độ nặng của suy tim cấp
+            - Tiên lượng tử vong
+            - Hướng dẫn điều trị và theo dõi
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Chỉ áp dụng cho bệnh nhân AMI
+            - Cần đánh giá lâm sàng chính xác
+            - Không thay thế đánh giá lâm sàng cá thể hóa
+            - Một số bệnh nhân có thể không rõ ràng giữa các class
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - Killip Class I-II: Tiên lượng tốt, điều trị chuẩn
+            - Killip Class III: Cần điều trị tích cực phù phổi, có thể cần hỗ trợ hô hấp
+            - Killip Class IV: Cần hồi sức tích cực, hỗ trợ tuần hoàn, tiên lượng xấu
+            - Killip Class cao liên quan đến tử vong và biến cố tim mạch cao hơn
+            """
+        )
         
-        **Ưu điểm:**
-        - Cực kỳ đơn giản - chỉ cần khám lâm sàng
-        - Tiên lượng tử vong chính xác
-        - Hướng dẫn điều trị
-        - Sử dụng từ 1967, vẫn còn giá trị
-        
-        **4 Class:**
-        - **Class I:** Không suy tim
-        - **Class II:** Suy tim nhẹ (ran ẩm, S3, phù phổi nhẹ)
-        - **Class III:** Phù phổi cấp
-        - **Class IV:** Shock tim
-        """)
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Killip T 3rd, Kimball JT. Treatment of myocardial infarction in a coronary care unit. A two year experience with 250 patients. Am J Cardiol. 1967;20(4):457-64.",
+            doi="10.1016/0002-9149(67)90023-9",
+            pmid="6059183"
+        )
+    else:
+        # Fallback to original expander
+        with st.expander("ℹ️ Giới thiệu về Killip Classification"):
+            st.markdown("""
+            **Killip Classification** phân loại **mức độ nặng** của suy tim cấp trong **nhồi máu cơ tim (AMI)** 
+            dựa trên **lâm sàng đơn giản**.
+            
+            **Ưu điểm:**
+            - Cực kỳ đơn giản - chỉ cần khám lâm sàng
+            - Tiên lượng tử vong chính xác
+            - Hướng dẫn điều trị
+            - Sử dụng từ 1967, vẫn còn giá trị
+            
+            **4 Class:**
+            - **Class I:** Không suy tim
+            - **Class II:** Suy tim nhẹ (ran ẩm, S3, phù phổi nhẹ)
+            - **Class III:** Phù phổi cấp
+            - **Class IV:** Shock tim
+            """)
     
     st.markdown("---")
     

@@ -7,12 +7,25 @@ Acute severe hypertension with or without end-organ damage
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Hypertensive Emergency/Urgency Protocol"""
     st.subheader("⚡ Cơn tăng huyết áp cấp cứu")
     st.caption("AHA/ACC 2017, JNC 8 - Hypertensive Emergency/Urgency Management")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2023-11-01",
+        last_updated="2023-11-01",
+        version="2023",
+        guideline_source="AHA/ACC 2017, JNC 8"
+    )
     
     st.info("""
     **Phân biệt:**
