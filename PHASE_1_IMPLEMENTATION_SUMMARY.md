@@ -206,11 +206,16 @@ render_evidence_citation(
 ---
 
 *Last updated: 2025-01-30*
-*Phase 1 Status: In Progress (60% complete)*
+*Phase 1 Status: In Progress (65% complete)*
+
+## 📄 RELATED DOCUMENTS
+
+- `PHASE_1_COMPLETION_REPORT.md` - Detailed completion report
+- `DANH_SACH_DE_XUAT_TOI_UU_APP.md` - Original optimization proposal
 
 ## 📊 PROGRESS SUMMARY
 
-### Protocols với Evidence: 8/50+ (16%)
+### Protocols với Evidence: 13/50+ (26%)
 - ✅ Sepsis
 - ✅ Stroke
 - ✅ ACS
@@ -219,8 +224,13 @@ render_evidence_citation(
 - ✅ Cardiac Arrest
 - ✅ Anaphylaxis
 - ✅ ARDS
+- ✅ Hypertensive Emergency
+- ✅ Status Epilepticus
+- ✅ Shock
+- ✅ Acute Pulmonary Edema
+- ✅ Ventilator Weaning
 
-### Calculators với Enhancements: 10/110+ (9%)
+### Calculators với Enhancements: 14/110+ (13%)
 - ✅ SOFA Score
 - ✅ APACHE II
 - ✅ GCS
@@ -230,6 +240,10 @@ render_evidence_citation(
 - ✅ CURB-65
 - ✅ CHA₂DS₂-VASc
 - ✅ TIMI Risk Score
+- ✅ GRACE Score
+- ✅ Killip Classification
+- ✅ qSOFA
+- ✅ SIRS
 - ✅ (và các calculators khác đã có sẵn)
 
 ### Image Library: ✅ Structure created
