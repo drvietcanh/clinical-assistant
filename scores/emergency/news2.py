@@ -329,6 +329,61 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về NEWS2 Score",
+            content="""
+            **NEWS2 (National Early Warning Score 2)** là hệ thống cảnh báo sớm để phát hiện tình trạng xấu đi của bệnh nhân:
+            
+            - Cập nhật từ NEWS (2012) với cải tiến cho Type 2 respiratory failure
+            - Sử dụng 7 thông số sinh tồn
+            - Category-based response thresholds
+            - Sử dụng rộng rãi trong UK và nhiều nước
+            
+            **7 thông số:**
+            1. Nhịp thở (0-3 điểm)
+            2. SpO₂ (0-3 điểm, +2 nếu cần oxy hỗ trợ)
+            3. Huyết áp tâm thu (0-3 điểm)
+            4. Nhịp tim (0-3 điểm)
+            5. Mức độ tỉnh táo (0-3 điểm)
+            6. Nhiệt độ (0-2 điểm)
+            7. Oxy hỗ trợ (0-2 điểm)
+            
+            **Tổng điểm: 0-20**
+            """,
+            when_to_use="""
+            **Sử dụng NEWS2 Score khi:**
+            - Bệnh nhân nội trú trong general wards
+            - Cần phát hiện sớm clinical deterioration
+            - Theo dõi định kỳ (mỗi 4-12 giờ)
+            - Quyết định escalation of care
+            - Đặc biệt hữu ích cho bệnh nhân Type 2 respiratory failure
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Chỉ là công cụ sàng lọc, không chẩn đoán
+            - Cần kết hợp với đánh giá lâm sàng
+            - Một số bệnh nhân có thể có điểm cao nhưng ổn định
+            - Không thay thế clinical judgment
+            - Cần đánh giá lại thường xuyên
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - **NEWS2 0-4:** Low risk → Standard monitoring
+            - **NEWS2 5-6:** Low-medium risk → Enhanced monitoring, inform nurse in charge
+            - **NEWS2 7+:** High risk → Urgent clinical review, consider critical care
+            - **NEWS2 ≥9:** Very high risk → Emergency response, immediate clinical review
+            - NEWS2 cao liên quan đến nguy cơ cardiac arrest và ICU admission
+            """
+        )
+        
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Royal College of Physicians. National Early Warning Score (NEWS) 2: Standardising the assessment of acute-illness severity in the NHS. Updated report of a working party. London: RCP, 2017.",
+            url="https://www.rcplondon.ac.uk/projects/outputs/national-early-warning-score-news-2"
+        )
+    
     col1, col2 = st.columns([2, 1])
     
     with col1:

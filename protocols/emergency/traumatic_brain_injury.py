@@ -7,12 +7,25 @@ Focus on airway, CPP, ICP, CT indications, and transfer criteria
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Traumatic Brain Injury Protocol"""
     st.subheader("🧠 Chấn thương Sọ Não (TBI) – Xử trí ban đầu")
     st.caption("Brain Trauma Foundation 4th ed. – ABC, CPP/ICP, chỉ định CT và chuyển tuyến")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2023-09-01",
+        last_updated="2023-09-01",
+        version="2023",
+        guideline_source="Brain Trauma Foundation 4th ed."
+    )
 
     st.error(
         """

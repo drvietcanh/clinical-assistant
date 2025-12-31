@@ -7,12 +7,25 @@ Evidence-based sedation and analgesia management in ICU
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """ICU Sedation & Analgesia Protocol"""
     st.subheader("💤 An thần & Giảm đau ICU (ICU Sedation & Analgesia)")
     st.caption("SCCM 2018 Guidelines - Sedation and analgesia in critically ill patients")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-01-01",
+        last_updated="2024-01-01",
+        version="2024",
+        guideline_source="SCCM 2018, Updated 2024"
+    )
     
     st.info("""
     **Nguyên tắc an thần & giảm đau ICU:**

@@ -7,12 +7,25 @@ Immediate defibrillation, magnesium, antiarrhythmics, and reversible causes
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Malignant Arrhythmias Protocol"""
     st.subheader("⚡ Rối loạn Nhịp Nguy Hiểm (VF/pVT/Torsades)")
     st.caption("AHA ACLS 2020/2022, ESC 2022 – Sốc điện sớm, MgSO4, tìm Hs & Ts")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-11-01",
+        last_updated="2024-11-01",
+        version="2024",
+        guideline_source="AHA ACLS 2020/2022, ESC 2022"
+    )
 
     st.error(
         """

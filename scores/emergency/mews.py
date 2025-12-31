@@ -42,6 +42,16 @@ from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ======================================
 
 
@@ -171,10 +181,62 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.info("""
-    **MEWS** là hệ thống cảnh báo sớm để phát hiện tình trạng xấu đi của bệnh nhân trong khoa.
-    Sử dụng 5 thông số sinh tồn để tính điểm và phân loại nguy cơ.
-    """)
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về MEWS Score",
+            content="""
+            **MEWS (Modified Early Warning Score)** là hệ thống cảnh báo sớm để phát hiện tình trạng xấu đi của bệnh nhân trong khoa:
+            
+            - Sử dụng 5 thông số sinh tồn đơn giản
+            - Phát hiện sớm clinical deterioration
+            - Hướng dẫn response protocol
+            - Sử dụng rộng rãi trong general wards
+            
+            **5 thông số:**
+            1. Huyết áp tâm thu (0-3 điểm)
+            2. Nhịp tim (0-3 điểm)
+            3. Nhịp thở (0-3 điểm)
+            4. Nhiệt độ (0-2 điểm)
+            5. AVPU (Alert/Verbal/Pain/Unresponsive) (0-3 điểm)
+            
+            **Tổng điểm: 0-14**
+            """,
+            when_to_use="""
+            **Sử dụng MEWS Score khi:**
+            - Bệnh nhân nội trú trong general wards
+            - Cần phát hiện sớm clinical deterioration
+            - Theo dõi định kỳ (mỗi 4-12 giờ)
+            - Quyết định escalation of care
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Chỉ là công cụ sàng lọc, không chẩn đoán
+            - Cần kết hợp với đánh giá lâm sàng
+            - Một số bệnh nhân có thể có điểm cao nhưng ổn định
+            - Không thay thế clinical judgment
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - **MEWS 0-4:** Nguy cơ thấp → Theo dõi định kỳ (mỗi 12h)
+            - **MEWS 5-6:** Nguy cơ trung bình → Theo dõi thường xuyên (mỗi 4-6h), báo bác sĩ
+            - **MEWS ≥7:** Nguy cơ cao → Báo bác sĩ ngay, cân nhắc chuyển ICU
+            - MEWS cao liên quan đến nguy cơ cardiac arrest và ICU admission
+            """
+        )
+        
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Subbe CP, et al. Validation of a modified Early Warning Score in medical admissions. QJM. 2001;94(10):521-6.",
+            doi="10.1093/qjmed/94.10.521",
+            pmid="11588210"
+        )
+    else:
+        # Fallback to original
+        st.info("""
+        **MEWS** là hệ thống cảnh báo sớm để phát hiện tình trạng xấu đi của bệnh nhân trong khoa.
+        Sử dụng 5 thông số sinh tồn để tính điểm và phân loại nguy cơ.
+        """)
     
     st.markdown("---")
     
