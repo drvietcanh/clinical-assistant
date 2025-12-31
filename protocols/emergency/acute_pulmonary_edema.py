@@ -7,12 +7,25 @@ Life-threatening condition requiring immediate treatment
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Acute Pulmonary Edema Management Protocol"""
     st.subheader("🫁 Phù Phổi Cấp (Acute Pulmonary Edema)")
     st.caption("ESC Heart Failure Guidelines 2023, AHA/ACC 2022 - Life-threatening condition")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-04-01",
+        last_updated="2024-04-01",
+        version="2024",
+        guideline_source="ESC 2023, AHA/ACC 2022"
+    )
     
     st.error("""
     **⚠️ PHÙ PHỔI CẤP = CẤP CỨU Y KHOA**

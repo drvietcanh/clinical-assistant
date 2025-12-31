@@ -10,6 +10,16 @@ from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # =====================================
 
 
@@ -74,10 +84,62 @@ def render():
     <p style='text-align: center;'><em>Hội chứng đáp ứng viêm toàn thân</em></p>
     """, unsafe_allow_html=True)
     
-    # Thông tin về SIRS
-    with st.expander("ℹ️ Giới thiệu về SIRS"):
-        st.markdown("""
-        **SIRS (Systemic Inflammatory Response Syndrome)** là phản ứng viêm toàn thân của cơ thể 
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về SIRS",
+            content="""
+            **SIRS (Systemic Inflammatory Response Syndrome)** là phản ứng viêm toàn thân của cơ thể:
+            
+            - Được định nghĩa trong Sepsis-2 (1992)
+            - ≥2 tiêu chuẩn trong 4 tiêu chuẩn
+            - Có thể do nhiễm trùng hoặc không do nhiễm trùng
+            - Sepsis-3 (2016) đã thay thế bằng SOFA/qSOFA, nhưng SIRS vẫn được dùng
+            
+            **4 tiêu chuẩn:**
+            1. Nhiệt độ <36°C hoặc >38°C
+            2. Nhịp tim >90/min
+            3. Nhịp thở >20/min hoặc PaCO₂ <32 mmHg
+            4. WBC <4000 hoặc >12000 hoặc >10% bands
+            
+            **Tổng điểm: 0-4**
+            """,
+            when_to_use="""
+            **Sử dụng SIRS khi:**
+            - Bệnh nhân có dấu hiệu viêm toàn thân
+            - Sàng lọc sepsis (theo Sepsis-2)
+            - Đánh giá mức độ nặng của phản ứng viêm
+            - Theo dõi diễn tiến bệnh
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Sepsis-3 đã thay thế bằng SOFA/qSOFA
+            - SIRS không đặc hiệu cho sepsis
+            - Nhiều bệnh nhân ICU đáp ứng SIRS nhưng không phải sepsis
+            - Cần kết hợp với đánh giá lâm sàng và xét nghiệm
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - **SIRS ≥2:** Phản ứng viêm toàn thân, cần tìm nguyên nhân
+            - SIRS + nhiễm trùng = Sepsis (theo Sepsis-2)
+            - SIRS + nhiễm trùng + suy cơ quan = Severe Sepsis
+            - SIRS + nhiễm trùng + shock = Septic Shock (Sepsis-2)
+            - Sepsis-3 sử dụng SOFA/qSOFA thay vì SIRS
+            """
+        )
+        
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Bone RC, et al. Definitions for sepsis and organ failure and guidelines for the use of innovative therapies in sepsis. The ACCP/SCCM Consensus Conference Committee. Chest. 1992;101(6):1644-55.",
+            doi="10.1378/chest.101.6.1644",
+            pmid="1303622"
+        )
+    else:
+        # Fallback to original expander
+        # Thông tin về SIRS
+        with st.expander("ℹ️ Giới thiệu về SIRS"):
+            st.markdown("""
+            **SIRS (Systemic Inflammatory Response Syndrome)** là phản ứng viêm toàn thân của cơ thể 
         trước các tổn thương khác nhau (nhiễm trùng, chấn thương, bỏng, viêm tụy...).
         
         **Định nghĩa:**

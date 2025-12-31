@@ -6,12 +6,25 @@ Phân loại và xử trí các loại sốc trong cấp cứu
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Shock Management Protocol"""
     st.subheader("💔 Quản lý Sốc")
     st.caption("Phân loại và xử trí sốc")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-09-01",
+        last_updated="2024-09-01",
+        version="2024",
+        guideline_source="SCCM/ESICM 2024"
+    )
     
     st.info("""
     **Định nghĩa sốc:**

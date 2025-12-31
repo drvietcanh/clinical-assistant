@@ -22,6 +22,16 @@ from components.smart_suggestions import render_suggestions
 from components.risk_color_coding import render_risk_badge, get_risk_level
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ===================================================
 
 
@@ -79,6 +89,56 @@ def render():
             show_category=True,
             limit=3
         )
+        
+        # Educational information - Enhanced with Phase 1
+        if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+            st.markdown("---")
+            render_calculator_explanation(
+                title="Về qSOFA Score",
+                content="""
+                **qSOFA (Quick SOFA)** là công cụ sàng lọc nhanh cho sepsis:
+                
+                - Phần của Sepsis-3 definition (2016)
+                - Sử dụng 3 tiêu chí lâm sàng đơn giản
+                - Không cần xét nghiệm
+                - qSOFA ≥2: Nguy cơ tử vong cao, cần đánh giá thêm
+                
+                **3 tiêu chí:**
+                1. Nhịp thở ≥22/min
+                2. Huyết áp tâm thu ≤100 mmHg
+                3. GCS <15
+                
+                **Tổng điểm: 0-3**
+                """,
+                when_to_use="""
+                **Sử dụng qSOFA khi:**
+                - Bệnh nhân nghi ngờ nhiễm trùng
+                - Cần sàng lọc nhanh sepsis
+                - Không có sẵn xét nghiệm (SOFA cần xét nghiệm)
+                - Sử dụng ở ED, ward, ngoại trú
+                """,
+                limitations="""
+                **Hạn chế:**
+                - Chỉ là công cụ sàng lọc, không chẩn đoán
+                - qSOFA <2 không loại trừ sepsis
+                - Cần kết hợp với đánh giá lâm sàng
+                - SOFA score chính xác hơn nhưng cần xét nghiệm
+                """,
+                clinical_context="""
+                **Bối cảnh lâm sàng:**
+                - **qSOFA ≥2:** Nguy cơ tử vong cao, cần đánh giá SOFA đầy đủ
+                - Nếu qSOFA ≥2 + nhiễm trùng → Sepsis (Sepsis-3)
+                - qSOFA <2 nhưng nghi ngờ cao → Vẫn cần đánh giá thêm
+                - qSOFA không thay thế SOFA trong ICU
+                """
+            )
+            
+            # Evidence citation
+            render_evidence_citation(
+                citation_text="Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA. 2016;315(8):801-10.",
+                doi="10.1001/jama.2016.0287",
+                pmid="26903338"
+            )
         
         if st.button("🔢 Tính qSOFA", type="primary", use_container_width=True):
             # Validate inputs

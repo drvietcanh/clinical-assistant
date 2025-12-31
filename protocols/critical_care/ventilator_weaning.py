@@ -7,12 +7,25 @@ Mechanical Ventilation Liberation
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Ventilator Weaning Protocol"""
     st.subheader("🫁 Ventilator Weaning Protocol")
     st.caption("SCCM Guidelines - Mechanical Ventilation Liberation")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-02-01",
+        last_updated="2024-02-01",
+        version="2024",
+        guideline_source="SCCM/ATS 2024"
+    )
     
     st.info("""
     **Ventilator Weaning là quá trình giảm dần hỗ trợ thở máy và cuối cùng là cai máy thở.**
