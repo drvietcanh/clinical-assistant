@@ -149,24 +149,75 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    # Educational information
-    with st.expander("ℹ️ Thông tin & cách sử dụng"):
-        st.markdown("""
-        ### 📋 Giới Thiệu
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về Charlson Comorbidity Index",
+            content="""
+            **Charlson Comorbidity Index** dự đoán tử vong 10 năm dựa trên bệnh lý mạn tính:
+            
+            - Dùng rộng rãi trong nghiên cứu và lâm sàng
+            - Điều chỉnh cho bệnh lý kèm theo trong các nghiên cứu
+            - Hướng dẫn quyết định điều trị
+            - 19 bệnh lý mạn tính với điểm số khác nhau (1-6 điểm)
+            
+            **19 bệnh lý mạn tính:**
+            - **1 điểm:** Nhồi máu cơ tim, Suy tim, Bệnh mạch máu ngoại biên, Bệnh mạch máu não, Sa sút trí tuệ, Bệnh phổi mạn tính, Bệnh mô liên kết, Loét dạ dày-tá tràng, Bệnh gan nhẹ, Đái tháo đường không biến chứng
+            - **2 điểm:** Liệt nửa người, Bệnh thận trung bình-nặng, Đái tháo đường có biến chứng, U bất kỳ (không di căn), Bệnh bạch cầu, Lymphoma
+            - **3 điểm:** Bệnh gan trung bình-nặng
+            - **6 điểm:** U di căn, AIDS
+            
+            **Tổng điểm: 0-37**
+            """,
+            when_to_use="""
+            **Sử dụng Charlson Comorbidity Index khi:**
+            - Cần đánh giá nguy cơ tử vong 10 năm
+            - Điều chỉnh cho bệnh lý kèm theo trong nghiên cứu
+            - Hướng dẫn quyết định điều trị
+            - Đánh giá healthcare utilization
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Dự đoán tử vong 10 năm, không phải ngắn hạn
+            - Dựa trên bệnh lý mạn tính, không tính đến bệnh cấp tính
+            - Một số bệnh lý có thể không được ghi nhận đầy đủ
+            - Không thay thế đánh giá lâm sàng cá thể hóa
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - **0 điểm:** Tử vong 10 năm ~12% → Nguy cơ thấp
+            - **1-2 điểm:** Tử vong 10 năm ~26% → Nguy cơ trung bình
+            - **3-4 điểm:** Tử vong 10 năm ~52% → Nguy cơ cao
+            - **≥5 điểm:** Tử vong 10 năm ~85% → Nguy cơ rất cao
+            - Charlson Index cao cần cân nhắc kỹ khi quyết định điều trị xâm lấn
+            """
+        )
         
-        **Charlson Comorbidity Index** dự đoán tử vong 10 năm:
-        - Dùng rộng rãi trong nghiên cứu và lâm sàng
-        - Điều chỉnh cho bệnh lý kèm theo trong các nghiên cứu
-        - 19 bệnh lý mạn tính với điểm số khác nhau
-        
-        ### 🎯 19 Bệnh lý mạn tính
-        
-        **1 điểm:**
-        - Nhồi máu cơ tim, Suy tim, Bệnh mạch máu ngoại biên, Bệnh mạch máu não
-        - Sa sút trí tuệ, Bệnh phổi mạn tính, Bệnh mô liên kết
-        - Loét dạ dày-tá tràng, Bệnh gan nhẹ, Đái tháo đường không biến chứng
-        
-        **2 điểm:**
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Charlson ME, et al. A new method of classifying prognostic comorbidity in longitudinal studies: development and validation. J Chronic Dis. 1987;40(5):373-83.",
+            doi="10.1016/0021-9681(87)90171-8",
+            pmid="3558716"
+        )
+    else:
+        # Fallback to original expander
+        with st.expander("ℹ️ Thông tin & cách sử dụng"):
+            st.markdown("""
+            ### 📋 Giới Thiệu
+            
+            **Charlson Comorbidity Index** dự đoán tử vong 10 năm:
+            - Dùng rộng rãi trong nghiên cứu và lâm sàng
+            - Điều chỉnh cho bệnh lý kèm theo trong các nghiên cứu
+            - 19 bệnh lý mạn tính với điểm số khác nhau
+            
+            ### 🎯 19 Bệnh lý mạn tính
+            
+            **1 điểm:**
+            - Nhồi máu cơ tim, Suy tim, Bệnh mạch máu ngoại biên, Bệnh mạch máu não
+            - Sa sút trí tuệ, Bệnh phổi mạn tính, Bệnh mô liên kết
+            - Loét dạ dày-tá tràng, Bệnh gan nhẹ, Đái tháo đường không biến chứng
+            
+            **2 điểm:**
         - Liệt nửa người, Bệnh thận trung bình-nặng, Đái tháo đường có biến chứng
         - U bất kỳ (không di căn), Bệnh bạch cầu, Lymphoma
         

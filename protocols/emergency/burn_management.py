@@ -7,12 +7,25 @@ Life-threatening burns requiring immediate assessment and treatment
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Burn Management Protocol"""
     st.subheader("🔥 Bỏng (Burn Management)")
     st.caption("ABA Burn Care Guidelines 2024, ATLS Guidelines 2024 - Life-threatening burns")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-09-01",
+        last_updated="2024-09-01",
+        version="2024",
+        guideline_source="ABA 2024, ATLS 2024"
+    )
     
     st.error("""
     **⚠️ BỎNG NẶNG = CẤP CỨU Y KHOA**

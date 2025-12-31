@@ -34,6 +34,16 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
+# ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
+try:
+    from components.calculator_enhancements import (
+        render_calculator_explanation,
+        render_evidence_citation,
+        render_result_interpretation
+    )
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = True
+except ImportError:
+    CALCULATOR_ENHANCEMENTS_AVAILABLE = False
 # ======================================
 
 
@@ -361,13 +371,64 @@ def render():
             limit=3
         )
     
-    # Educational information
-    with st.expander("ℹ️ Thông tin & cách sử dụng"):
-        st.markdown("""
-        ### 📋 Giới Thiệu
+    # Educational information - Enhanced with Phase 1
+    if CALCULATOR_ENHANCEMENTS_AVAILABLE:
+        render_calculator_explanation(
+            title="Về SAPS II Score",
+            content="""
+            **SAPS II (Simplified Acute Physiology Score II)** là thang điểm ICU:
+            
+            - Đơn giản hơn APACHE II nhưng vẫn chính xác
+            - Dự đoán tử vong ICU
+            - Sử dụng rộng rãi ở châu Âu
+            - Dựa trên 12 biến số sinh lý, tuổi, loại nhập viện
+            
+            **Thành phần:**
+            - 12 biến số sinh lý (huyết áp, nhịp tim, nhiệt độ, PaO₂/FiO₂, v.v.)
+            - Tuổi
+            - Loại nhập viện (phẫu thuật theo kế hoạch, nội khoa, phẫu thuật cấp cứu)
+            - Bệnh lý mạn tính (AIDS, ung thư)
+            
+            **Tổng điểm: 0-163 (thường <100 trong thực tế)**
+            """,
+            when_to_use="""
+            **Sử dụng SAPS II khi:**
+            - Bệnh nhân ICU cần đánh giá tiên lượng
+            - So sánh chất lượng chăm sóc giữa các ICU
+            - Nghiên cứu và phân tầng bệnh nhân
+            - Đánh giá mức độ nặng bệnh
+            """,
+            limitations="""
+            **Hạn chế:**
+            - Tính trong 24h đầu vào ICU
+            - Cần có đầy đủ thông tin lâm sàng và xét nghiệm
+            - Không áp dụng cho bệnh nhân <18 tuổi
+            - Không áp dụng cho bệnh nhân burn, cardiac surgery
+            - Chỉ dự đoán tử vong ICU, không phải tử vong bệnh viện
+            """,
+            clinical_context="""
+            **Bối cảnh lâm sàng:**
+            - SAPS II được tính trong 24h đầu vào ICU
+            - Điểm cao (>50) liên quan đến tử vong cao
+            - Sử dụng kết hợp với lâm sàng, không chỉ dựa vào điểm số
+            - SAPS III là phiên bản mới hơn nhưng SAPS II vẫn được dùng rộng rãi
+            """
+        )
         
-        **SAPS II** là thang điểm ICU:
-        - Đơn giản hơn APACHE II
+        # Evidence citation
+        render_evidence_citation(
+            citation_text="Le Gall JR, et al. A new Simplified Acute Physiology Score (SAPS II) based on a European/North American multicenter study. JAMA. 1993;270(24):2957-63.",
+            doi="10.1001/jama.1993.03510240069035",
+            pmid="8254858"
+        )
+    else:
+        # Fallback to original expander
+        with st.expander("ℹ️ Thông tin & cách sử dụng"):
+            st.markdown("""
+            ### 📋 Giới Thiệu
+            
+            **SAPS II** là thang điểm ICU:
+            - Đơn giản hơn APACHE II
         - Dự đoán tử vong bệnh viện
         - Phổ biến ở châu Âu
         - 17 biến số (vs 12 physiological + age + admission)

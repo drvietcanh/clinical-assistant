@@ -7,12 +7,25 @@ Management of delirium in ICU and hospitalized patients
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Delirium Management Protocol"""
     st.subheader("🧠 Quản lý Delirium (Delirium Management)")
     st.caption("ICU Delirium Guidelines, NICE - Delirium assessment and management")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2024-03-01",
+        last_updated="2024-03-01",
+        version="2024",
+        guideline_source="SCCM 2018, NICE 2019"
+    )
     
     st.error("""
     **⚠️ DELIRIUM = TÌNH TRẠNG CẤP TÍNH**

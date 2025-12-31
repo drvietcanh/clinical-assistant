@@ -7,12 +7,25 @@ Management of acute spinal cord injury
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Acute Spinal Cord Injury Protocol"""
     st.subheader("🧠 Acute Spinal Cord Injury")
     st.caption("AANS/CNS 2013, NICE 2016 - Management of acute spinal cord injury")
+    
+    # Evidence summary
+    render_evidence_summary(
+        last_reviewed="2023-07-01",
+        last_updated="2023-07-01",
+        version="2023",
+        guideline_source="AANS/CNS 2013, NICE 2016"
+    )
     
     st.error("""
     **🚨 ACUTE SPINAL CORD INJURY = URGENT ASSESSMENT REQUIRED**
