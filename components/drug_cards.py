@@ -54,8 +54,8 @@ def render_drug_card(drug_name: str, drug_data: Dict, compact: bool = False) -> 
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         " onmouseover="this.style.transform='translateX(4px)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.15)';" 
            onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)';">
-            <div style="display: flex; justify-content: space-between; align-items: start;">
-                <div style="flex: 1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                <div style="flex: 1; min-width: 200px;">
                     <div style="font-size: 1.1rem; font-weight: 600; color: #263238; margin-bottom: 0.25rem;">
                         {drug_name}
                     </div>

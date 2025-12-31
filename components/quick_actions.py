@@ -50,81 +50,67 @@ def get_quick_actions() -> List[Dict]:
 
 def render_quick_actions(max_items: int = 4, layout: str = "cards") -> None:
     """
-    Render quick actions with Phase 1 modern design
-    
-    Args:
-        max_items: Maximum number of actions to show (default: 4)
-        layout: "cards" (desktop) or "compact" (mobile)
+    Render quick actions with Phase 6 Mobile Optimization (Responsive Grid)
     """
     actions = get_quick_actions()[:max_items]
     
     st.markdown("### ⚡ Truy cập nhanh")
-    st.markdown("Các công cụ được sử dụng nhiều nhất")
+    st.caption("Các công cụ được sử dụng nhiều nhất")
     
-    if layout == "cards":
-        # Desktop: 4-column grid with large cards
-        cols = st.columns(4)
-        
-        for idx, (col, action) in enumerate(zip(cols, actions)):
-            with col:
-                # Styled card with gradient background
-                card_html = f"""
-                <div style="
-                    background: linear-gradient(135deg, {action['color']}15 0%, {action['color']}05 100%);
-                    border: 2px solid {action['color']}40;
-                    border-radius: 16px;
-                    padding: 1.5rem;
-                    text-align: center;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    min-height: 180px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                " onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" 
-                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
-                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">{action['icon']}</div>
-                    <div>
-                        <div style="
-                            font-size: 1.1rem;
-                            font-weight: 600;
-                            color: #263238;
-                            margin-bottom: 0.5rem;
-                        ">{action['label']}</div>
-                        <div style="
-                            font-size: 0.85rem;
-                            color: #546E7A;
-                            line-height: 1.4;
-                        ">{action['desc']}</div>
-                    </div>
+    # CSS Grid Layout
+    cols = st.columns(min(len(actions), 4)) # Streamlit columns stack automatically on mobile
+    
+    for idx, (col, action) in enumerate(zip(cols, actions)):
+        with col:
+            # Styled card with gradient background and hover effect
+            card_html = f"""
+            <div style="
+                background: linear-gradient(135deg, {action['color']}15 0%, {action['color']}05 100%);
+                border: 2px solid {action['color']}40;
+                border-radius: 16px;
+                padding: 1.25rem;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                min-height: 160px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                margin-bottom: 0.5rem;
+            " onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)';" 
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">{action['icon']}</div>
+                <div>
+                    <div style="
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: #263238;
+                        margin-bottom: 0.25rem;
+                        line-height: 1.2;
+                    ">{action['label']}</div>
+                    <div style="
+                        font-size: 0.8rem;
+                        color: #546E7A;
+                        line-height: 1.3;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    ">{action['desc']}</div>
                 </div>
-                """
-                st.markdown(card_html, unsafe_allow_html=True)
-                
-                # Functional button (visually hidden but clickable)
-                if st.button(
-                    f"{action['icon']} {action['label']}", 
-                    key=f"qa_{action['id']}",
-                    use_container_width=True,
-                    type="primary" if idx == 0 else "secondary"
-                ):
-                    st.switch_page(action['page'])
-    
-    elif layout == "compact":
-        # Mobile: 2x2 grid
-        row1_cols = st.columns(2)
-        row2_cols = st.columns(2)
-        
-        for idx, action in enumerate(actions):
-            col = row1_cols[idx % 2] if idx < 2 else row2_cols[idx % 2]
-            with col:
-                if st.button(
-                    f"{action['icon']} {action['label']}", 
-                    key=f"qa_mobile_{action['id']}",
-                    use_container_width=True
-                ):
-                    st.switch_page(action['page'])
+            </div>
+            """
+            st.markdown(card_html, unsafe_allow_html=True)
+            
+            # Functional button (visually hidden but clickable overlay)
+            if st.button(
+                f"{action['label']}", 
+                key=f"qa_{action['id']}",
+                use_container_width=True,
+                type="secondary"
+            ):
+                st.switch_page(action['page'])
 
 
 def render_quick_actions_horizontal(max_items: int = 4) -> None:

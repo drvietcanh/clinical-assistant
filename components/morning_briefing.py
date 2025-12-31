@@ -50,7 +50,7 @@ def render_morning_briefing():
             font-weight: 500;
         ">{day_of_week}, {date_str}</p>
         <h1 style="
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive/Fluid Typography */
             font-weight: 700;
             margin: 0 0 1.5rem 0;
             letter-spacing: -0.02em;
