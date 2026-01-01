@@ -703,7 +703,19 @@ CEPHALOSPORIN_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "renal": "Low"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Urinary Tract Infections",
+            "IDSA Guidelines - Community-Acquired Pneumonia"
+        ]
     },
 
 }

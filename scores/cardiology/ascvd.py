@@ -31,8 +31,10 @@ Output:
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 from components.ui.results import render_result_box, render_result_card
+from scores.utils.validation import validate_age, validate_blood_pressure, validate_lab_value
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -245,19 +247,19 @@ def calculate_ascvd(
     if risk_percent < 5.0:
         category = "Low"
         category_vn = "Thấp"
-        color = "success"
+        color = COLORS["success"]
     elif risk_percent < 7.5:
         category = "Borderline"
         category_vn = "Trung bình"
-        color = "info"
+        color = COLORS["primary"]
     elif risk_percent < 20.0:
         category = "Intermediate"
         category_vn = "Trung bình-Cao"
-        color = "warning"
+        color = COLORS["warning"]
     else:
         category = "High"
         category_vn = "Cao"
-        color = "error"
+        color = COLORS["error"]
     
     # Generate recommendations based on 2019 ACC/AHA Primary Prevention Guidelines
     recommendations = []
@@ -302,7 +304,10 @@ def calculate_ascvd(
 
 def render():
     """ASCVD Risk Calculator"""
-    st.subheader("❤️ ASCVD Risk Calculator")
+    # st.subheader("❤️ ASCVD Risk Calculator")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>❤️ ASCVD Risk Calculator</h3>
+    """, unsafe_allow_html=True)
     st.caption("Atherosclerotic Cardiovascular Disease - 10-Year Risk Assessment (ACC/AHA 2013)")
     
     # Load shared result if available
@@ -462,6 +467,31 @@ def render():
         )
         
         if st.button("🧮 Tính ASCVD Risk", type="primary"):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_age, age_error = validate_age(age, 40, 79)
+            if not is_valid_age:
+                validation_errors.append(age_error)
+            
+            is_valid_tc, tc_error = validate_lab_value(tc_mgdl, "Total Cholesterol (mg/dL)", 100, 400)
+            if not is_valid_tc:
+                validation_errors.append(tc_error)
+                
+            is_valid_hdl, hdl_error = validate_lab_value(hdl_mgdl, "HDL Cholesterol (mg/dL)", 20, 150)
+            if not is_valid_hdl:
+                validation_errors.append(hdl_error)
+                
+            is_valid_sbp, sbp_error = validate_blood_pressure(sbp)
+            if not is_valid_sbp:
+                validation_errors.append(sbp_error)
+                
+            if validation_errors:
+                st.error("**⚠️ Lỗi validation:**")
+                for error in validation_errors:
+                    st.error(f"- {error}")
+                st.stop()
+                
             result = calculate_ascvd(
                 age=age,
                 is_male=is_male,
@@ -479,19 +509,14 @@ def render():
             else:
                 with col2:
                     # Modern Result Card
-                    color_hex = {
-                        "error": "#d93025",    # High Risk
-                        "warning": "#f9ab00",  # Intermediate
-                        "info": "#1a73e8",     # Borderline
-                        "success": "#1e8e3e"   # Low
-                    }.get(color, "#1a73e8")
+                    color_hex = color
                     
                     bg_color = {
-                        "error": "#fce8e6",
-                        "warning": "#fef7e0",
-                        "info": "#e8f0fe",
-                        "success": "#e6f4ea"
-                    }.get(color, "#e8f0fe")
+                        COLORS["error"]: COLORS["error_light"],
+                        COLORS["warning"]: COLORS["warning_light"],
+                        COLORS["primary"]: COLORS["primary_light"],
+                        COLORS["success"]: COLORS["success_light"]
+                    }.get(color, COLORS["info_light"])
 
                     st.markdown(f"""
                     <div style="background: {bg_color}; border-radius: 12px; padding: 24px; border: 1px solid {color_hex}; text-align: center; margin-bottom: 24px;">

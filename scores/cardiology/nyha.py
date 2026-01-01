@@ -4,6 +4,8 @@ Phân loại chức năng suy tim theo New York Heart Association
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -23,8 +25,8 @@ def render():
         st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'NYHA Classification')}")
         shared_inputs = shared.get("inputs", {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>❤️ NYHA Functional Classification</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>❤️ NYHA Functional Classification</h3>
     <p style='text-align: center;'><em>Phân loại chức năng suy tim - New York Heart Association</em></p>
     """, unsafe_allow_html=True)
     
@@ -131,7 +133,7 @@ def render():
                 - Có thể leo cầu thang nhiều tầng không khó thở
                 - Có thể chơi thể thao nhẹ
                 """,
-                "color": "#28a745",
+                "color": COLORS["success"],
                 "icon": "✅",
                 "prognosis": "Tiên lượng tốt",
                 "mortality": "Tỷ lệ tử vong 1 năm: ~5%"
@@ -147,7 +149,7 @@ def render():
                 - Có thể làm việc nhà nhẹ nhàng
                 - Có thể đi bộ khoảng cách vừa phải
                 """,
-                "color": "#ffc107",
+                "color": COLORS["warning"],
                 "icon": "⚠️",
                 "prognosis": "Tiên lượng tương đối tốt",
                 "mortality": "Tỷ lệ tử vong 1 năm: ~10-15%"
@@ -163,7 +165,7 @@ def render():
                 - Chỉ có thể làm việc nhà rất nhẹ
                 - Khó đi bộ quãng đường ngắn
                 """,
-                "color": "#fd7e14",
+                "color": COLORS["warning"],
                 "icon": "🔶",
                 "prognosis": "Tiên lượng kém hơn",
                 "mortality": "Tỷ lệ tử vong 1 năm: ~20-30%"
@@ -180,7 +182,7 @@ def render():
                 - Không thể tự chăm sóc bản thân
                 - Phụ thuộc hoàn toàn vào người khác
                 """,
-                "color": "#dc3545",
+                "color": COLORS["error"],
                 "icon": "🚨",
                 "prognosis": "Tiên lượng xấu",
                 "mortality": "Tỷ lệ tử vong 1 năm: ~40-60%"
@@ -192,17 +194,15 @@ def render():
         # Main result
         st.markdown("## 📊 Kết quả")
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {result['color']}22 0%, {result['color']}44 100%); 
-                    padding: 40px; border-radius: 15px; border-left: 5px solid {result['color']}; margin: 20px 0;'>
-            <h1 style='color: {result['color']}; margin: 0; text-align: center; font-size: 3em;'>
-                {result['icon']} NYHA {result['class']}
-            </h1>
-            <p style='text-align: center; font-size: 1.3em; margin-top: 15px; font-weight: bold;'>
-                {result['description']}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title=f"NYHA {result['class']}",
+            score=result['class'],
+            interpretation=result['description'],
+            mortality=f"Tử vong 1 năm: {result['mortality']}",
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
         # Details
         st.markdown(f"""

@@ -21,6 +21,7 @@ Clin Infect Dis. 2008;47(3):375-84.
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_age,
     validate_blood_pressure,
@@ -48,8 +49,12 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.subheader("🫁 SMART-COP Score")
-    st.caption("Dự đoán nhu cầu hỗ trợ hô hấp hoặc thuốc vận mạch trong viêm phổi cộng đồng")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🫁 SMART-COP Score</h2>
+    <p style='text-align: center; color: #6B7280;'>
+    Dự đoán nhu cầu hỗ trợ hô hấp hoặc thuốc vận mạch trong viêm phổi cộng đồng
+    </p>
+    """, unsafe_allow_html=True)
     
     st.markdown("""
     **SMART-COP** là thang điểm dự đoán bệnh nhân viêm phổi cộng đồng (CAP) nào cần:
@@ -379,45 +384,23 @@ def render():
         st.markdown("## 📊 KẾT QUẢ")
         
         # Score badge
-        if total_score <= 2:
-            color = "green"
-            risk = "Thấp"
-        elif total_score <= 4:
-            color = "orange"
-            risk = "Trung bình"
-        else:
-            color = "red"
-            risk = "Cao"
-        
-        st.markdown(f"""
-        <div style="background-color: {color}; padding: 20px; border-radius: 10px; text-align: center;">
-            <h1 style="color: white; margin: 0;">SMART-COP = {total_score}</h1>
-            <p style="color: white; margin: 0; font-size: 1.2rem;">Nguy cơ: {risk}</p>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        st.markdown("<br>", unsafe_allow_html=True)
-        
-        # Predicted risk of IRVS
-        # Data from original paper (Charles et al. 2008)
-        irvs_risk = {
-            0: 5.0, 1: 5.4, 2: 8.3, 3: 12.1, 4: 17.8, 
-            5: 25.3, 6: 34.7, 7: 45.7, 8: 57.3, 9: 68.2, 10: 77.5, 11: 84.7
+        # Use render_score_result for main score display
+        icon_map = {
+            COLORS["success"]: "✅",
+            COLORS["warning"]: "⚠️",
+            COLORS["error"]: "🔴"
         }
         
-        predicted_risk = irvs_risk.get(total_score, 85.0)
-        
-        # Metrics
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            st.metric("SMART-COP Score", f"{total_score}/11")
-        
-        with col2:
-            st.metric("Nguy cơ Cần IRVS", f"{predicted_risk:.1f}%")
-        
-        with col3:
-            st.metric("Mức độ nguy cơ", risk)
+        from components.ui.scoring import render_score_result
+        render_score_result(
+            title="SMART-COP",
+            score=total_score,
+            max_score=11,
+            interpretation=f"Nguy cơ {risk}",
+            recommendation=f"Nguy cơ cần IRVS: {predicted_risk:.1f}%",
+            color=color,
+            icon=icon_map.get(color, "📊")
+        )
         
         st.markdown("---")
         

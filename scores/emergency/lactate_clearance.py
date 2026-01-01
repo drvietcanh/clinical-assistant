@@ -28,6 +28,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_lab_value
 from components.ui.validation import render_validation_errors
 # ========== PHASE 1 IMPORTS ==========
@@ -64,17 +65,17 @@ def calculate_lactate_clearance(initial_lactate: float, repeat_lactate: float) -
     if clearance_percent >= 20:
         response = "Tốt"
         response_class = "GOOD"
-        color = "success"
+        color = COLORS["success"]
         recommendation = "Đáp ứng tốt với hồi sức, tiếp tục điều trị hiện tại"
     elif clearance_percent >= 10:
         response = "Trung bình"
         response_class = "MODERATE"
-        color = "warning"
+        color = COLORS["warning"]
         recommendation = "Đáp ứng trung bình, xem xét tăng cường hồi sức"
     else:
         response = "Kém"
         response_class = "POOR"
-        color = "error"
+        color = COLORS["error"]
         recommendation = "Đáp ứng kém, cần can thiệp tích cực hơn"
     
     return {
@@ -90,7 +91,10 @@ def calculate_lactate_clearance(initial_lactate: float, repeat_lactate: float) -
 def render():
     """Render Lactate Clearance calculator"""
     
-    st.title("🩸 Lactate Clearance")
+    # st.title("🩸 Lactate Clearance")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩸 Lactate Clearance</h3>
+    """, unsafe_allow_html=True)
     st.markdown("**Đánh giá hiệu quả hồi sức ở bệnh nhân sốc (DÙNG HÀNG NGÀY)**")
     
     # Load shared result if available

@@ -4,6 +4,8 @@ NIHSS - NIH Stroke Scale
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.results import render_result_box
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -36,8 +38,8 @@ except ImportError:
 
 def render():
     """NIHSS Calculator"""
-    st.subheader("🧠 NIHSS - NIH Stroke Scale")
-    st.caption("Thang điểm Đánh giá Mức độ Nặng Đột Quỵ")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🧠 NIHSS - NIH Stroke Scale</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Thang điểm Đánh giá Mức độ Nặng Đột Quỵ</p>", unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -323,40 +325,45 @@ def render():
             # Determine severity
             if total_score == 0:
                 severity = "KHÔNG CÓ ĐỘT QUỴ"
-                color = "success"
+                color = COLORS["success"]
                 thrombolysis = "Không"
             elif total_score <= 4:
                 severity = "ĐỘT QUỴ NHẸ"
-                color = "info"
+                color = COLORS["info"]
                 thrombolysis = "Cân nhắc (nếu triệu chứng disabling)"
             elif total_score <= 15:
                 severity = "ĐỘT QUỴ TRUNG BÌNH"
-                color = "warning"
+                color = COLORS["warning"]
                 thrombolysis = "Có chỉ định (nếu trong thời gian vàng)"
             elif total_score <= 20:
                 severity = "ĐỘT QUỴ TRUNG BÌNH - NẶNG"
-                color = "warning"
+                color = COLORS["warning"]
                 thrombolysis = "Có chỉ định cao"
             else:
                 severity = "ĐỘT QUỴ NẶNG"
-                color = "error"
+                color = COLORS["error"]
                 thrombolysis = "Có chỉ định cao + xem xét thrombectomy"
             
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                if color == "success":
-                    st.success(f"## NIHSS = {total_score}")
-                    st.success(f"**{severity}**")
-                elif color == "info":
-                    st.info(f"## NIHSS = {total_score}")
-                    st.info(f"**{severity}**")
-                elif color == "warning":
-                    st.warning(f"## NIHSS = {total_score}")
-                    st.warning(f"**{severity}**")
+                if color == COLORS["success"]:
+                    icon = "✅"
+                elif color == COLORS["info"]:
+                    icon = "ℹ️"
+                elif color == COLORS["warning"]:
+                    icon = "⚠️"
                 else:
-                    st.error(f"## NIHSS = {total_score}")
-                    st.error(f"**{severity}**")
+                    icon = "🚨"
+                
+                render_result_box(
+                    title="NIHSS Score",
+                    value=f"{total_score}/42",
+                    subtitle=severity,
+                    color=color,
+                    icon=icon,
+                    size="large"
+                )
             
             st.markdown("---")
             st.markdown("### 💡 Chi tiết điểm số")

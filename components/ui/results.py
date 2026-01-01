@@ -41,6 +41,7 @@ def render_result_box(
         "warning": THEME['colors']['warning'],
         "error": THEME['colors']['error'],
         "info": THEME['colors']['info'],
+        "neutral": THEME['colors']['neutral'],
     }
     
     bg_color = color_map.get(color, THEME['colors']['primary'])
@@ -127,6 +128,8 @@ def render_result_card(
         "red": THEME['colors']['error'],
         "orange": THEME['colors']['warning'],
         "purple": THEME['colors']['primary'],
+        "neutral": THEME['colors']['neutral'],
+        "grey": THEME['colors']['neutral'],
     }
     
     accent_color = color_map.get(color, THEME['colors']['primary'])

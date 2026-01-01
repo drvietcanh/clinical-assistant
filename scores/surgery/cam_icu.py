@@ -4,6 +4,7 @@ Chẩn đoán mê sảng trong ICU (DÙNG HÀNG NGÀY)
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -72,8 +73,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🧠 CAM-ICU - Confusion Assessment Method for ICU</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🧠 CAM-ICU - Confusion Assessment Method for ICU</h2>
     <p style='text-align: center;'><em>Chẩn đoán mê sảng trong ICU (DÙNG HÀNG NGÀY)</em></p>
     """, unsafe_allow_html=True)
     

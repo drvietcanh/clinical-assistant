@@ -4,6 +4,9 @@ Sàng lọc nguy cơ Obstructive Sleep Apnea (OSA)
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
+from scores.utils.validation import validate_weight, validate_lab_value
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -38,24 +41,28 @@ def calculate_stop_bang(snoring, tired, observed, pressure, bmi, age, neck, gend
         risk = "Thấp"
         osa_probability = "< 15%"
         action = "Nguy cơ OSA thấp, không cần đánh giá thêm trừ khi có triệu chứng rõ"
-        color = "green"
+        color = COLORS["success"]
+        icon = "🟢"
     elif total <= 4:
         risk = "Trung bình"
         osa_probability = "15-30%"
         action = "Nguy cơ OSA trung bình, cân nhắc polysomnography"
-        color = "orange"
+        color = COLORS["warning"]
+        icon = "🟠"
     else:  # >= 5
         risk = "Cao"
         osa_probability = "> 30%"
         action = "Nguy cơ OSA cao, khuyến cáo làm polysomnography"
-        color = "red"
+        color = COLORS["error"]
+        icon = "🔴"
     
     return {
         "total_score": total,
         "risk_level": risk,
         "osa_probability": osa_probability,
         "action": action,
-        "color": color
+        "color": color,
+        "icon": icon
     }
 
 
@@ -69,8 +76,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #6366F1;'>😴 STOP-BANG Score</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>😴 STOP-BANG Score</h2>
     <p style='text-align: center;'><em>Sàng lọc nguy cơ Obstructive Sleep Apnea (OSA)</em></p>
     """, unsafe_allow_html=True)
     
@@ -231,29 +238,45 @@ def render():
     
     # Calculate button
     if st.button("🔬 Tính điểm STOP-BANG", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_wt, wt_error = validate_weight(weight)
+        if not is_valid_wt:
+            validation_errors.append(wt_error)
+            
+        is_valid_ht, ht_error = validate_lab_value(height, "Chiều cao (cm)", 50, 300)
+        if not is_valid_ht:
+            validation_errors.append(ht_error)
+            
+        is_valid_neck, neck_error = validate_lab_value(neck_circ, "Chu vi cổ (cm)", 20, 70)
+        if not is_valid_neck:
+            validation_errors.append(neck_error)
+            
+        if validation_errors:
+             st.error("**⚠️ Lỗi validation:**")
+             for error in validation_errors:
+                 st.error(f"- {error}")
+             st.stop()
+
         result = calculate_stop_bang(
             snoring_val, tired_val, observed_val, pressure_val,
             bmi_over_35, age_val, neck_large, gender_val
         )
         
         # Display result
-        st.markdown("## 📊 Kết quả đánh giá")
+        st.markdown("---")
+        st.subheader("📊 Kết quả đánh giá")
         
-        # Score display
-        score_color = {
-            "green": "#28a745",
-            "orange": "#fd7e14",
-            "red": "#dc3545"
-        }[result["color"]]
-        
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'>
-            <h2 style='color: {score_color}; margin: 0; text-align: center;'>
-                STOP-BANG: {result['total_score']}/8
-            </h2>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="STOP-BANG Score",
+            score=f"{result['total_score']}/8",
+            interpretation=f"Nguy cơ OSA: {result['risk_level']}",
+            mortality=f"Xác suất OSA TB-nặng: {result['osa_probability']}",
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
         # Component breakdown
         st.markdown("### 📋 Chi tiết các thành phần")
@@ -276,16 +299,12 @@ def render():
         
         st.markdown("---")
         
-        # Risk level
+        st.markdown("---")
+        
         st.markdown(f"""
-        <div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'>
-            <h3 style='color: {score_color}; margin-top: 0;'>🎯 Nguy cơ OSA: {result['risk_level']}</h3>
-            <p style='font-size: 1.1em; margin: 10px 0;'>
-                <strong>Xác suất OSA trung bình-nặng:</strong> {result['osa_probability']}
-            </p>
-            <p style='font-size: 1.2em; color: {score_color}; font-weight: bold; margin: 10px 0;'>
-                {result['action']}
-            </p>
+        <div style='background-color: {result['color']}10; padding: 20px; border-radius: 10px; border-left: 5px solid {result['color']};'>
+            <h3 style='color: {result['color']}; margin-top: 0;'>{result['icon']} Khuyến cáo xử trí</h3>
+            <p style='font-size: 1.1em; font-weight: bold;'>{result['action']}</p>
         </div>
         """, unsafe_allow_html=True)
         

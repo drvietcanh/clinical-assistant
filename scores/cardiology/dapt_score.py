@@ -34,6 +34,9 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
+from scores.utils.validation import validate_age
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -137,12 +140,12 @@ def calculate_dapt_score(
         recommendation = "DAPT kéo dài 30 tháng"
         benefit = "Lợi ích > Nguy cơ"
         risk_class = "EXTENDED"
-        color = "success"
+        color = COLORS["success"]
     else:
         recommendation = "DAPT tiêu chuẩn 12 tháng"
         benefit = "DAPT 12 tháng đủ"
         risk_class = "STANDARD"
-        color = "info"
+        color = COLORS["primary"]
     
     return {
         'total_score': score,
@@ -157,7 +160,10 @@ def calculate_dapt_score(
 def render():
     """Render DAPT Score calculator"""
     
-    st.title("💊 DAPT Score")
+    # st.title("💊 DAPT Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>💊 DAPT Score</h3>
+    """, unsafe_allow_html=True)
     st.markdown("**Thời gian dùng DAPT sau PCI (DÙNG HÀNG NGÀY)**")
     
     # Load shared result if available
@@ -265,6 +271,11 @@ def render():
     
     # Calculate button
     if st.button("🧮 Tính DAPT Score", type="primary", use_container_width=True):
+        is_valid_age, age_error = validate_age(age, 18, 120)
+        if not is_valid_age:
+            st.error(f"⚠️ {age_error}")
+            st.stop()
+            
         result = calculate_dapt_score(
             age=age,
             current_smoking=current_smoking,
@@ -279,18 +290,22 @@ def render():
         # Display results
         st.subheader("📊 Kết quả")
         
-        col_r1, col_r2 = st.columns([1, 2])
+        # Use render_score_result for main score display
+        icon_map = {
+            "EXTENDED": "⏳",
+            "STANDARD": "📅"
+        }
+        icon = icon_map.get(result['risk_class'], "💊")
         
-        with col_r1:
-            st.metric(
-                "**DAPT Score**",
-                f"{result['total_score']}"
-            )
-            st.caption(f"Ngưỡng: 2")
-        
-        with col_r2:
-            st.markdown(f"### {result['recommendation']}")
-            st.caption(f"{result['benefit']}")
+        render_score_result(
+            title="DAPT Score",
+            score=result['total_score'],
+            interpretation=result['recommendation'],
+            mortality=f"Phân tích: {result['benefit']}",
+            color=result['color'],
+            icon=icon,
+            size="large"
+        )
         
         # Score breakdown
         with st.expander("📋 Chi tiết điểm số", expanded=True):

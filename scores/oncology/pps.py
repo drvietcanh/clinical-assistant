@@ -4,6 +4,8 @@ Thang đo thể trạng chăm sóc giảm nhẹ
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -24,9 +26,8 @@ def render():
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
-    <h2 style='text-align: center; color: #8B5CF6;'>🕊️ PPS - Palliative Performance Scale</h2>
-    <p style='text-align: center;'><em>Thang đo thể trạng chăm sóc giảm nhẹ</em></p>
-    """, unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🕊️ PPS - Palliative Performance Scale</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Thang đo thể trạng chăm sóc giảm nhẹ</p>", unsafe_allow_html=True)
     
     with st.expander("ℹ️ Giới thiệu về PPS"):
         st.markdown("""
@@ -92,41 +93,35 @@ def render():
     if st.button("🔬 Đánh giá PPS", type="primary", use_container_width=True):
         if pps_score >= 70:
             prognosis = "Tuần/tháng"
-            color = "green"
+            color = COLORS["success"]
             care = "Chăm sóc giảm nhẹ ngoại trú"
+            icon = "✅"
         elif pps_score >= 50:
             prognosis = "Tuần"
-            color = "orange"
+            color = COLORS["warning"]
             care = "Chăm sóc tại nhà với hỗ trợ"
+            icon = "⚠️"
         elif pps_score >= 20:
             prognosis = "Ngày/tuần"
-            color = "orange"
+            color = COLORS["warning"]
             care = "Chăm sóc tại nhà hoặc hospice"
+            icon = "🟠"
         else:
             prognosis = "Giờ/ngày"
-            color = "red"
+            color = COLORS["error"]
             care = "Hospice, chăm sóc end-of-life"
+            icon = "🚨"
         
-        score_color_map = {
-            "green": "#28a745",
-            "orange": "#fd7e14",
-            "red": "#dc3545"
-        }
-        sc = score_color_map[color]
-        
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {sc}22 0%, {sc}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {sc}; margin: 20px 0;'>
-            <h2 style='color: {sc}; margin: 0; text-align: center;'>PPS: {pps_score}%</h2>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        st.markdown(f"""
-        <div style='background-color: {sc}22; padding: 20px; border-radius: 10px; border: 2px solid {sc};'>
-            <h3 style='color: {sc};'>🎯 Tiên lượng sống: {prognosis}</h3>
-            <p style='font-size: 1.1em;'><strong>Khuyến cáo:</strong> {care}</p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="PPS Score",
+            score=f"{pps_score}%",
+            interpretation=f"Tiên lượng sống: {prognosis}",
+            mortality=f"Khuyến cáo: {care}",
+            color=color,
+            icon=icon,
+            size="large",
+            max_score=100
+        )
         
         # Prepare data for history and share
         inputs_dict = {

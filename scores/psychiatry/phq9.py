@@ -4,6 +4,8 @@ Sàng lọc và đánh giá mức độ trầm cảm
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -53,7 +55,7 @@ def interpret_phq9(total_score):
     if total_score < 5:
         return {
             "severity": "Không có / Tối thiểu",
-            "color": "🟢",
+            "color": COLORS['success'],
             "description": "Không có triệu chứng trầm cảm đáng kể",
             "recommendation": "Không cần can thiệp. Tái đánh giá khi cần thiết.",
             "monitoring": "Theo dõi thường xuyên nếu có yếu tố nguy cơ",
@@ -62,7 +64,7 @@ def interpret_phq9(total_score):
     elif total_score < 10:
         return {
             "severity": "Trầm cảm nhẹ",
-            "color": "🟡",
+            "color": COLORS['warning'],
             "description": "Có một số triệu chứng trầm cảm",
             "recommendation": "Hỗ trợ, watchful waiting. Giáo dục bệnh nhân, vệ sinh giấc ngủ, tập thể dục.",
             "monitoring": "Tái đánh giá sau 4-6 tuần. Xem xét can thiệp nếu không cải thiện.",
@@ -71,7 +73,7 @@ def interpret_phq9(total_score):
     elif total_score < 15:
         return {
             "severity": "Trầm cảm mức trung bình",
-            "color": "🟠",
+            "color": COLORS['warning'],
             "description": "Trầm cảm ảnh hưởng đến chức năng hàng ngày",
             "recommendation": "Xem xét điều trị: Tâm lý trị liệu (CBT) hoặc thuốc chống trầm cảm (SSRI).",
             "monitoring": "Tái đánh giá sau 2-4 tuần. Theo dõi sát đáp ứng điều trị.",
@@ -80,7 +82,7 @@ def interpret_phq9(total_score):
     elif total_score < 20:
         return {
             "severity": "Trầm cảm mức trung bình nặng",
-            "color": "🟠",
+            "color": COLORS['warning_dark'],
             "description": "Trầm cảm ảnh hưởng nghiêm trọng đến chức năng",
             "recommendation": "Điều trị tích cực: Kết hợp tâm lý trị liệu VÀ thuốc chống trầm cảm.",
             "monitoring": "Theo dõi sát, tái đánh giá mỗi 1-2 tuần. Cân nhắc hội chẩn tâm thần.",
@@ -89,7 +91,7 @@ def interpret_phq9(total_score):
     else:
         return {
             "severity": "Trầm cảm nặng",
-            "color": "🔴",
+            "color": COLORS['error'],
             "description": "Trầm cảm rất nặng, có thể cần can thiệp khẩn cấp",
             "recommendation": "Điều trị tích cực: Thuốc + Tâm lý trị liệu. Chuyển tới chuyên khoa tâm thần. Xem xét nhập viện nếu có ý tưởng tự tử.",
             "monitoring": "Theo dõi rất sát (hàng tuần). Đánh giá nguy cơ tự tử. Liên lạc với chuyên khoa tâm thần.",
@@ -143,7 +145,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🧠 PHQ-9 - Patient Health Questionnaire")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🧠 PHQ-9 - Patient Health Questionnaire</h2>", unsafe_allow_html=True)
     st.markdown("""
     ### Sàng Lọc & Đánh giá Trầm Cảm
     
@@ -232,22 +234,16 @@ def render():
         st.subheader("📈 Kết quả đánh giá")
         
         # Display total score
-        col1, col2 = st.columns([1, 2])
+        # Display total score
         
-        with col1:
-            st.metric(
-                "Tổng Điểm PHQ-9",
-                f"{total_score}/27",
-                help="Tổng điểm từ 9 câu hỏi"
-            )
-        
-        with col2:
-            if result['level'] == "none":
-                st.success(f"{result['color']} **{result['severity']}**")
-            elif result['level'] in ["mild", "moderate"]:
-                st.warning(f"{result['color']} **{result['severity']}**")
-            else:
-                st.error(f"{result['color']} **{result['severity']}**")
+        render_score_result(
+            title="Kết quả PHQ-9",
+            score=f"{total_score}/27",
+            interpretation=result['description'],
+            mortality=result['severity'],
+            color=result['color'],
+            icon="🧠"
+        )
         
         st.markdown("---")
         

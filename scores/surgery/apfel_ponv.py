@@ -4,6 +4,7 @@ Nguy cơ buồn nôn nôn sau mổ (Postoperative Nausea and Vomiting)
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.anesthesia_validation import validate_ponv_risk_factors
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
@@ -73,8 +74,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🤢 Apfel PONV Risk Score</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🤢 Apfel PONV Risk Score</h2>
     <p style='text-align: center;'><em>Nguy cơ buồn nôn nôn sau mổ (Postoperative Nausea and Vomiting)</em></p>
     """, unsafe_allow_html=True)
     

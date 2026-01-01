@@ -103,8 +103,7 @@ __all__ = [
     'RHEUMATOLOGY_DRUGS',
     'IMMUNOLOGY_DRUGS',
     'ONCOLOGY_DRUGS',
-    'ANTIPSYCHOTICS',
-    'MOOD_STABILIZERS',
+
     # Deprecated (kept for backward compatibility)
     'CARDIOVASCULAR_OTHER_DRUGS',
     'INFECTIOUS_OTHER_DRUGS',

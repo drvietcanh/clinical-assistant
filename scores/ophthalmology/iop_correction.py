@@ -4,6 +4,9 @@ IOP Correction Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
+from scores.utils.validation import validate_input_range
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -80,8 +83,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #3B82F6;'>👁️ IOP Correction</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>👁️ IOP Correction</h2>
     <p style='text-align: center;'><em>Điều chỉnh nhãn áp theo độ dày giác mạc (CCT)</em></p>
     """, unsafe_allow_html=True)
     
@@ -169,6 +172,23 @@ def render():
     shared_inputs = st.session_state.get('shared_inputs', {})
     
     if st.button("🔬 Điều chỉnh IOP", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_iop, iop_error = validate_input_range(measured_iop, "IOP", 5.0, 60.0, "mmHg")
+        if not is_valid_iop:
+             validation_errors.append(iop_error)
+             
+        is_valid_cct, cct_error = validate_input_range(cct, "CCT", 400, 700, "μm")
+        if not is_valid_cct:
+             validation_errors.append(cct_error)
+             
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+            
         result = calculate_corrected_iop(measured_iop, cct)
         
         st.markdown("## 📊 Kết quả")
@@ -188,7 +208,7 @@ def render():
                          delta="Giác mạc mỏng" if result['correction'] < 0 else "Chuẩn")
         
         with col3:
-            score_color = "#28a745" if result["color"] == "green" else "#dc3545"
+            score_color = COLORS["success"] if result["color"] == "green" else COLORS["error"]
             st.markdown(f"""
             <div style='text-align: center; padding: 10px; background-color: {score_color}22; border-radius: 10px; border: 2px solid {score_color};'>
                 <p style='margin: 0; font-size: 0.9em; color: #666;'>IOP điều chỉnh</p>
@@ -212,25 +232,19 @@ def render():
         
         st.markdown("---")
         
-        # Interpretation
-        score_color_map = {
-            "green": "#28a745",
-            "red": "#dc3545"
-        }
-        final_color = score_color_map[result["color"]]
-        
-        st.markdown(f"""
-        <div style='background-color: {final_color}22; padding: 20px; border-radius: 10px; border: 2px solid {final_color};'>
-            <h3 style='color: {final_color}; margin-top: 0;'>🎯 Đánh giá nhãn áp</h3>
-            <p style='font-size: 1.2em; font-weight: bold;'>{result['status']}</p>
-            <p style='font-size: 1.1em;'>{result['interpretation']}</p>
-        </div>
-        """, unsafe_allow_html=True)
-        
         st.markdown("---")
         
         # Recommendations
         if result["corrected_iop"] > 21:
+            render_score_result(
+                title="Nhãn áp điều chỉnh (Corrected IOP)",
+                score=f"{result['corrected_iop']:.1f} mmHg",
+                interpretation=f"**{result['status']}**\n\n{result['interpretation']}",
+                mortality="NGUY CƠ CAO",
+                color=COLORS['error'],
+                icon="⚠️"
+            )
+            
             st.warning("""
             ⚠️ **IOP cao - Nghi ngờ Glaucoma**
             
@@ -256,6 +270,15 @@ def render():
             - Mục tiêu: Giảm IOP 20-30% hoặc < 18 mmHg
             """)
         else:
+            render_score_result(
+                title="Nhãn áp điều chỉnh (Corrected IOP)",
+                score=f"{result['corrected_iop']:.1f} mmHg",
+                interpretation=f"**{result['status']}**\n\n{result['interpretation']}",
+                mortality="BÌNH THƯỜNG",
+                color=COLORS['success'],
+                icon="✅"
+            )
+            
             st.success("""
             ✅ **IOP trong giới hạn bình thường**
             

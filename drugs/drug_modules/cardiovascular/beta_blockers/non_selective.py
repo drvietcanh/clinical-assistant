@@ -48,7 +48,8 @@ NON_SELECTIVE_BETA_BLOCKERS = {
           "narrow_therapeutic_index": False,
           "icu_critical_care_only": False,
           "bleeding_risk": "Low",
-          "organ_toxicity": ["cardiac_bradycardia", "cardiac_av_block", "hypotension"]
+          "organ_toxicity": ["cardiac_bradycardia", "cardiac_av_block", "hypotension"],
+          "requires_monitoring": ["Heart rate", "Blood pressure", "Renal function", "ECG"]
       },
       "guideline_tags": [
           "ACC/AHA/HFSA HFrEF GDMT",
@@ -444,7 +445,18 @@ NON_SELECTIVE_BETA_BLOCKERS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Cardiovascular (Bradycardia, AV Block)"],
+            "requires_monitoring": ["Heart rate", "Blood pressure", "Renal function"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ACC/AHA Guidelines - Angina"
+        ]
     },
     
     "Propranolol": {
@@ -656,16 +668,28 @@ NON_SELECTIVE_BETA_BLOCKERS = {
               "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Propranolol generic thường rẻ hơn (5,000-12,000 VND/viên 40mg)."
           },
           "references": {
-              "primary_sources": [
-                  "FDA Drug Label - Inderal (propranolol)",
-                  "UpToDate - Propranolol: Drug information",
-                  "Beta-Blocker Heart Attack Trial - JAMA",
-                  "ISIS-1 Study - The Lancet",
-                  "American Heart Association/American College of Cardiology guidelines"
-              ],
-              "last_updated": "2024-12-19",
-              "evidence_level": "High - Multiple large RCTs (BHAT, ISIS-1) and extensive clinical experience"
-          }    },
+            "primary_sources": [
+                "FDA Drug Label - Inderal (propranolol)",
+                "UpToDate - Propranolol: Drug information",
+                "Beta-Blocker Heart Attack Trial - JAMA",
+                "ISIS-1 Study - The Lancet",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2024-12-19",
+            "evidence_level": "High - Multiple large RCTs (BHAT, ISIS-1) and extensive clinical experience"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Cardiovascular (Bradycardia, AV Block)"],
+            "requires_monitoring": ["Heart rate", "Blood pressure", "Blood glucose (in diabetics)"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ACC/AHA Guidelines - Angina",
+            "AAN Guidelines - Migraine"
+        ]  },
 
     "Timolol": {
         "group": "Cardiovascular - Beta-blocker (non-selective)",
@@ -859,7 +883,18 @@ NON_SELECTIVE_BETA_BLOCKERS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Cardiovascular (Bradycardia)"],
+            "requires_monitoring": ["Heart rate", "Blood pressure", "Intraocular pressure (for ophthalmic)"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "AAO Guidelines - Glaucoma (ophthalmic form)"
+        ]
     },
 }
 

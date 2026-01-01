@@ -33,6 +33,11 @@ COLORS = {
     "info_dark": "#0288d1",
     "info_light": "#4fc3f7",
     
+    # Neutral - Grey
+    "neutral": "#9e9e9e",
+    "neutral_dark": "#757575",
+    "neutral_light": "#bdbdbd",
+    
     # Text Colors
     "text_primary": "#212121",
     "text_secondary": "#757575",

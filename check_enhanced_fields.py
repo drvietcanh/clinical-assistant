@@ -6,6 +6,10 @@ Script to check enhanced fields structure in drug database
 
 import sys
 import json
+
+# Set stdout encoding to utf-8
+sys.stdout.reconfigure(encoding='utf-8')
+
 from drugs.drug_database import DRUG_DATABASE
 
 # Standard enhanced fields
@@ -15,7 +19,9 @@ ENHANCED_FIELDS = [
     'precautions',
     'pharmacokinetics',
     'storage',
-    'black_box_warnings'
+    'black_box_warnings',
+    'risk_flags',
+    'guideline_tags'
 ]
 
 def check_enhanced_fields():
@@ -139,7 +145,7 @@ def check_enhanced_fields():
     print("DRUGS WITH ENHANCED FIELDS:")
     print("=" * 80)
     for drug in enhanced_drugs:
-        status = "✓ COMPLETE" if drug['all_present'] else "⚠ INCOMPLETE"
+        status = "[COMPLETE]" if drug['all_present'] else "[INCOMPLETE]"
         print(f"\n{drug['name']} - {status}")
         print(f"  Present: {', '.join(drug['fields'])}")
         if drug['missing']:

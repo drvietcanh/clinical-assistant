@@ -4,6 +4,7 @@ Surgical Apgar Score Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -32,17 +33,17 @@ def calculate_surgical_apgar(hr_min, sbp_min, blood_loss):
         risk = "Nguy cơ thấp"
         complication_rate = "3-5%"
         recommendation = "Tiên lượng tốt, theo dõi thường quy"
-        color = "green"
+        color = COLORS["success"]
     elif total >= 4:
         risk = "Nguy cơ trung bình"
         complication_rate = "15-20%"
         recommendation = "Theo dõi sát, chuẩn bị xử trí biến chứng"
-        color = "orange"
+        color = COLORS["warning"]
     else:  # 0-3
         risk = "Nguy cơ cao"
         complication_rate = "30-40%"
         recommendation = "Theo dõi tích cực, có thể cần ICU, chuẩn bị xử trí biến chứng nghiêm trọng"
-        color = "red"
+        color = COLORS["error"]
     
     return {
         "total_score": total,
@@ -63,8 +64,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🏥 Surgical Apgar Score</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🏥 Surgical Apgar Score</h2>
     <p style='text-align: center;'><em>Đánh giá nguy cơ biến chứng sau mổ dựa trên 3 yếu tố trong mổ</em></p>
     """, unsafe_allow_html=True)
     
@@ -191,9 +192,9 @@ def render():
             st.markdown("---")
             
             # Risk interpretation
-            if result['color'] == "green":
+            if result['color'] == COLORS["success"]:
                 st.success(f"**{result['risk']}** - Tỷ lệ biến chứng: {result['complication_rate']}")
-            elif result['color'] == "orange":
+            elif result['color'] == COLORS["warning"]:
                 st.warning(f"**{result['risk']}** - Tỷ lệ biến chứng: {result['complication_rate']}")
             else:
                 st.error(f"**{result['risk']}** - Tỷ lệ biến chứng: {result['complication_rate']}")

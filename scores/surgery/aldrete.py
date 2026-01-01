@@ -4,6 +4,7 @@ Aldrete Score Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
 
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
@@ -62,8 +63,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🏥 Aldrete Score</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🏥 Aldrete Score</h2>
     <p style='text-align: center;'><em>Đánh giá hồi tỉnh sau gây mê</em></p>
     """, unsafe_allow_html=True)
     
@@ -183,9 +184,9 @@ def render():
         st.markdown("## 📊 Kết quả")
         
         score_color = {
-            "green": "#28a745",
-            "orange": "#fd7e14",
-            "red": "#dc3545"
+            "green": COLORS["success"],
+            "orange": COLORS["warning"],
+            "red": COLORS["error"]
         }[result["color"]]
         
         st.markdown(f"""

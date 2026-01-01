@@ -31,6 +31,7 @@ Vietnam is typically considered MODERATE to HIGH risk region.
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 from scores.utils.validation import (
     validate_age,
@@ -45,6 +46,7 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
+from components.ui.scoring import render_score_result
 # ======================================
 
 
@@ -111,7 +113,8 @@ def calculate_score2_moderate_risk(
     if risk_10yr < 2.5:
         risk_category = "Nguy cơ THẤP"
         risk_class = "LOW"
-        color = "🟢"
+        color = COLORS["success"]
+        icon = "🟢"
         recommendation = """
         **🟢 Nguy cơ tim mạch THẤP (<2.5%):**
         
@@ -125,7 +128,8 @@ def calculate_score2_moderate_risk(
     elif risk_10yr < 7.5:
         risk_category = "Nguy cơ TRUNG BÌNH"
         risk_class = "MODERATE"
-        color = "🟡"
+        color = COLORS["warning"]
+        icon = "🟡"
         recommendation = """
         **🟡 Nguy cơ tim mạch TRUNG BÌNH (2.5-7.5%):**
         
@@ -146,7 +150,8 @@ def calculate_score2_moderate_risk(
     elif risk_10yr < 10:
         risk_category = "Nguy cơ CAO"
         risk_class = "HIGH"
-        color = "🟠"
+        color = COLORS["warning"]
+        icon = "🟠"
         recommendation = """
         **🟠 Nguy cơ tim mạch CAO (7.5-10%):**
         
@@ -169,7 +174,8 @@ def calculate_score2_moderate_risk(
     else:
         risk_category = "Nguy cơ RẤT CAO"
         risk_class = "VERY_HIGH"
-        color = "🔴"
+        color = COLORS["error"]
+        icon = "🔴"
         recommendation = """
         **🔴 Nguy cơ tim mạch RẤT CAO (≥10%):**
         
@@ -199,6 +205,7 @@ def calculate_score2_moderate_risk(
         'risk_category': risk_category,
         'risk_class': risk_class,
         'color': color,
+        'icon': icon,
         'recommendation': recommendation,
         'non_hdl': non_hdl
     }
@@ -207,7 +214,10 @@ def calculate_score2_moderate_risk(
 def render():
     """Render SCORE2 calculator"""
     
-    st.title("📊 SCORE2 - ESC 2021")
+    # st.title("📊 SCORE2 - ESC 2021")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>📊 SCORE2 - ESC 2021</h3>
+    """, unsafe_allow_html=True)
     st.markdown("**Đánh giá nguy cơ bệnh tim mạch 10 năm (40-69 tuổi)**")
     
     # Load shared result if available
@@ -408,18 +418,16 @@ def render():
         # Display results
         st.subheader("📊 Kết quả")
         
-        col_r1, col_r2 = st.columns([1, 2])
-        
-        with col_r1:
-            st.metric(
-                "**Nguy cơ 10 Năm**",
-                f"{result['risk_10yr']:.1f}%"
-            )
-            st.caption("Mắc CVD trong 10 năm")
-        
-        with col_r2:
-            st.markdown(f"### {result['color']} {result['risk_category']}")
-            st.caption("MI tử vong/không tử vong + Đột quỵ tử vong/không tử vong")
+        # Use render_score_result
+        render_score_result(
+            title="SCORE2 Risk",
+            score=f"{result['risk_10yr']:.1f}%",
+            interpretation=f"{result['risk_category']}",
+            mortality="Mắc CVD trong 10 năm (MI/Stroke)",
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
         # Risk factors summary
         with st.expander("📋 Tóm tắt yếu tố nguy cơ", expanded=True):

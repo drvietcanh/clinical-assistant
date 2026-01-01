@@ -799,6 +799,7 @@ EXTRA_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 "Thiếu máu cục bộ mô",
             ],
         },
+
         "drug_interactions": {
             "major": [
                 {

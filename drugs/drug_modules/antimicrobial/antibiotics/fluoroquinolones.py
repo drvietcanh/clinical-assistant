@@ -183,6 +183,18 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng.",
         "black_box_warnings": "Như các fluoroquinolone khác: gân, thần kinh, tâm thần, nhược cơ.",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"musculoskeletal": "High (tendon rupture)", "neurological": "Moderate"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Uncomplicated Urinary Tract Infections (Historical)",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
     },
     
     "Ofloxacin": {
@@ -241,6 +253,18 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng.",
         "black_box_warnings": "Như lớp fluoroquinolone khác.",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"musculoskeletal": "High (tendon rupture)", "neurological": "Moderate"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Urinary Tract Infections",
+            "CDC Guidelines - Sexually Transmitted Diseases (Historical)"
+        ],
+        "last_updated": "2025-02-18",
     },
     "renal_adjustment": {
         "normal": "Không đổi",

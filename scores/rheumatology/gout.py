@@ -1,5 +1,7 @@
 """ACR/EULAR Gout Classification Criteria"""
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -16,7 +18,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("<h2 style='text-align: center; color: #F97316;'>🦴 ACR/EULAR Gout Classification</h2><p style='text-align: center;'><em>Tiêu chuẩn chẩn đoán Gout</em></p>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: center; color: {COLORS['success']};'>🦴 ACR/EULAR Gout Classification</h3><p style='text-align: center;'><em>Tiêu chuẩn chẩn đoán Gout</em></p>", unsafe_allow_html=True)
     with st.expander("ℹ️ Gout Classification"): 
         st.markdown("**ACR/EULAR 2015** chẩn đoán gout. **Chuẩn vàng:** Thấy tinh thể urat trong dịch khớp. Nếu không có → Dùng điểm số ≥8 để chẩn đoán.")
     
@@ -24,7 +26,14 @@ def render():
     crystal = st.radio("Có tinh thể urat trong dịch khớp/tophi?", ["Có", "Không", "Không làm"])
     
     if crystal == "Có": 
-        st.success("✅ **Chẩn đoán xác định GOUT**\n\nThấy tinh thể urat → Chuẩn vàng chẩn đoán")
+        render_score_result(
+            title="Kết quả Chẩn đoán Gout",
+            score="DƯƠNG TÍNH",
+            interpretation="**Chẩn đoán xác định GOUT**\n\nThấy tinh thể urat → Chuẩn vàng chẩn đoán",
+            mortality="GOUT CONFIRMED",
+            color=COLORS['error'],
+            icon="🚨"
+        )
         st.info("**Điều trị:** NSAID/Colchicine (cấp) + Allopurinol/Febuxostat (dự phòng)")
         
         # Prepare data for history and share
@@ -89,12 +98,26 @@ def render():
         
         if st.button("🔬 Đánh giá Gout", type="primary", use_container_width=True):
             if score >= 8: 
-                st.error(f"🚨 **{score} điểm - Chẩn đoán GOUT (theo tiêu chuẩn lâm sàng)**")
+                render_score_result(
+                    title="Kết quả Chẩn đoán Gout (Lâm sàng)",
+                    score=f"{score} điểm",
+                    interpretation="**Chẩn đoán GOUT (theo tiêu chuẩn lâm sàng)**",
+                    mortality="DƯƠNG TÍNH",
+                    color=COLORS['error'],
+                    icon="🚨"
+                )
                 st.info("**Điều trị cấp:** Colchicine/NSAID/Corticosteroid\n\n**Dự phòng:** Allopurinol/Febuxostat khi acid uric > 6 mg/dL")
                 
                 diagnosis = "Gout (theo tiêu chuẩn lâm sàng)"
             else: 
-                st.success(f"✅ **{score} điểm - Chưa đủ tiêu chuẩn Gout lâm sàng**\n\nCân nhắc chẩn đoán khác hoặc chọc dịch khớp tìm tinh thể")
+                render_score_result(
+                    title="Kết quả Chẩn đoán Gout (Lâm sàng)",
+                    score=f"{score} điểm",
+                    interpretation="**Chưa đủ tiêu chuẩn Gout lâm sàng**\n\nCân nhắc chẩn đoán khác hoặc chọc dịch khớp tìm tinh thể",
+                    mortality="ÂM TÍNH",
+                    color=COLORS['success'],
+                    icon="✅"
+                )
                 diagnosis = "Chưa đủ tiêu chuẩn Gout"
             
             # Prepare data for history and share

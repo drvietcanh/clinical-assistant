@@ -34,6 +34,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_age
 from components.ui.validation import render_validation_errors
 # ========== PHASE 1 IMPORTS ==========
@@ -118,8 +119,8 @@ def render():
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🫁 RDOS</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🫁 RDOS</h2>
     <p style='text-align: center; color: #6B7280;'>
     Respiratory Distress Observation Scale<br>
     Định lượng suy hô hấp ở bệnh nhân không thể tự báo cáo triệu chứng

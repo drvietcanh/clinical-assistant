@@ -4,6 +4,7 @@ Phân loại nguy cơ phẫu thuật của Hội Gây mê Hoa Kỳ
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -139,7 +140,9 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🔪 ASA Physical Status Classification")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🔪 ASA Physical Status Classification</h2>
+    """, unsafe_allow_html=True)
     st.markdown("""
     ### Phân loại Nguy cơ Phẫu Thuật
     

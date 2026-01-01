@@ -4,6 +4,8 @@ Chuyển đổi giữa HbA1c và glucose trung bình ước tính
 """
 
 import streamlit as st
+from config.theme import COLORS
+from scores.utils.validation import validate_lab_value
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -57,42 +59,48 @@ def get_diabetes_status(hba1c_percent):
     if hba1c_percent < 5.7:
         return {
             "status": "Bình thường",
-            "color": "🟢",
+            "color": COLORS["success"],
+            "icon": "🟢",
             "risk": "Không có đái tháo đường",
             "recommendation": "Duy trì lối sống lành mạnh"
         }
     elif hba1c_percent < 6.5:
         return {
             "status": "Tiền đái tháo đường",
-            "color": "🟡",
+            "color": COLORS["warning"],
+            "icon": "🟡",
             "risk": "Nguy cơ cao tiến triển thành ĐTĐ type 2",
             "recommendation": "Can thiệp lối sống tích cực (ăn uống, vận động)"
         }
     elif hba1c_percent < 7.0:
         return {
             "status": "Đái tháo đường - Kiểm soát tốt",
-            "color": "🟠",
+            "color": COLORS["success"],
+            "icon": "🟠",
             "risk": "ĐTĐ được kiểm soát",
             "recommendation": "Tiếp tục điều trị, theo dõi định kỳ"
         }
     elif hba1c_percent < 8.0:
         return {
             "status": "Đái tháo đường - Kiểm soát trung bình",
-            "color": "🟠",
+            "color": COLORS["warning"],
+            "icon": "🟠",
             "risk": "Cần cải thiện kiểm soát đường huyết",
             "recommendation": "Xem xét điều chỉnh phác đồ điều trị"
         }
     elif hba1c_percent < 9.0:
         return {
             "status": "Đái tháo đường - Kiểm soát kém",
-            "color": "🔴",
+            "color": COLORS["error"],
+            "icon": "🔴",
             "risk": "Nguy cơ biến chứng cao",
             "recommendation": "Cần điều chỉnh điều trị tích cực"
         }
     else:
         return {
             "status": "Đái tháo đường - Không kiểm soát",
-            "color": "🔴",
+            "color": COLORS["error"],
+            "icon": "🔴",
             "risk": "Nguy cơ biến chứng cấp và mạn rất cao",
             "recommendation": "Cần can thiệp điều trị khẩn cấp"
         }
@@ -108,7 +116,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🩺 HbA1c - eAG Converter")
+    st.markdown(f"<h1 style='text-align: center; color: {COLORS['success']};'>🩺 HbA1c - eAG Converter</h1>", unsafe_allow_html=True)
     
     col_main, col_suggestions = st.columns([2, 1])
     
@@ -170,6 +178,12 @@ def render():
             )
         
         if st.button("🔄 Chuyển đổi", type="primary", use_container_width=True):
+            # Validate input
+            is_valid, error = validate_lab_value(hba1c, "HbA1c (%)", 3.0, 20.0)
+            if not is_valid:
+                st.error(f"⚠️ {error}")
+                st.stop()
+                
             # Calculate eAG
             eag_mgdl, eag_mmol = calculate_eag_from_hba1c(hba1c)
             
@@ -208,7 +222,7 @@ def render():
             st.subheader("🎯 Phân loại & Đánh giá")
             
             st.info(f"""
-            **{status_info['color']} Tình trạng:** {status_info['status']}
+            **{status_info['icon']} Tình trạng:** {status_info['status']}
             
             **Đánh giá:** {status_info['risk']}
             
@@ -306,6 +320,18 @@ def render():
                 eag_value = eag_mmol_input * 18.0  # Convert to mg/dL
         
         if st.button("🔄 Chuyển đổi", type="primary", use_container_width=True):
+            # Validate input
+            if unit == "mg/dL":
+                is_valid, error = validate_lab_value(eag_value, "Glucose trung bình (mg/dL)", 40.0, 600.0)
+            else:
+                 # eag_value is already converted to mg/dL in code but let's check input range logic implicitly or explicitly
+                 # The input was eag_mmol_input
+                 is_valid, error = validate_lab_value(eag_mmol_input, "Glucose trung bình (mmol/L)", 2.2, 33.3)
+
+            if not is_valid:
+                st.error(f"⚠️ {error}")
+                st.stop()
+
             # Calculate HbA1c
             hba1c = calculate_hba1c_from_eag(eag_value)
             
@@ -344,7 +370,7 @@ def render():
             st.subheader("🎯 Phân loại & Đánh giá")
             
             st.info(f"""
-            **{status_info['color']} Tình trạng:** {status_info['status']}
+            **{status_info['icon']} Tình trạng:** {status_info['status']}
             
             **Đánh giá:** {status_info['risk']}
             

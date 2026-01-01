@@ -27,7 +27,9 @@ Clinical Utility:
 """
 
 import streamlit as st
-# ========== PHASE 1 IMPORTS ==========
+from config.theme import COLORS
+from scores.utils.validation import validate_lab_value, validate_weight
+from components.ui.scoring import render_score_result
 from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
@@ -130,7 +132,8 @@ def calculate_kdigo(
     # Generate interpretation
     if final_stage == 0:
         stage_text = "KHÔNG CÓ AKI"
-        stage_color = "🟢"
+        stage_color = COLORS["success"]
+        stage_icon = "🟢"
         risk_class = "NO_AKI"
         interpretation = """
         **🟢 Không đủ tiêu chuẩn chẩn đoán AKI**
@@ -144,7 +147,8 @@ def calculate_kdigo(
         """
     elif final_stage == 1:
         stage_text = "AKI GIAI ĐOẠN 1 (Mild)"
-        stage_color = "🟡"
+        stage_color = COLORS["warning"]
+        stage_icon = "🟡"
         risk_class = "STAGE_1"
         interpretation = """
         **🟡 AKI Giai Đoạn 1 - Nhẹ**
@@ -160,7 +164,8 @@ def calculate_kdigo(
         """
     elif final_stage == 2:
         stage_text = "AKI GIAI ĐOẠN 2 (Moderate)"
-        stage_color = "🟠"
+        stage_color = COLORS["warning"]
+        stage_icon = "🟠"
         risk_class = "STAGE_2"
         interpretation = """
         **🟠 AKI Giai Đoạn 2 - Trung Bình**
@@ -176,7 +181,8 @@ def calculate_kdigo(
         """
     else:  # stage == 3
         stage_text = "AKI GIAI ĐOẠN 3 (Severe)"
-        stage_color = "🔴"
+        stage_color = COLORS["error"]
+        stage_icon = "🔴"
         risk_class = "STAGE_3"
         interpretation = """
         **🔴 AKI Giai Đoạn 3 - Nặng**
@@ -356,6 +362,7 @@ def calculate_kdigo(
         'stage': final_stage,
         'stage_text': stage_text,
         'stage_color': stage_color,
+        'stage_icon': stage_icon,
         'risk_class': risk_class,
         'interpretation': interpretation,
         'management': management,
@@ -378,8 +385,10 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🧪 KDIGO Criteria - Acute Kidney Injury (AKI)")
-    st.markdown("**Phân loại và đánh giá giai đoạn suy thận cấp**")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🧪 KDIGO Criteria - Acute Kidney Injury (AKI)</h3>
+    <p style='text-align: center; color: #6B7280;'>Phân loại và đánh giá giai đoạn suy thận cấp</p>
+    """, unsafe_allow_html=True)
     
     # Educational information
     with st.expander("ℹ️ Thông tin & cách sử dụng"):
@@ -548,6 +557,23 @@ def render():
     
     # Calculate button
     if st.button("🧮 Đánh giá KDIGO AKI Stage", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_scr, scr_error = validate_lab_value(scr_current, "SCr Hiện tại", 0, 20)
+        if not is_valid_scr:
+             validation_errors.append(scr_error)
+            
+        is_valid_wt, wt_error = validate_weight(weight)
+        if not is_valid_wt:
+             validation_errors.append(wt_error)
+             
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+            
         result = calculate_kdigo(
             scr_baseline=scr_baseline,
             scr_current=scr_current,
@@ -563,24 +589,16 @@ def render():
         st.subheader("📊 Kết quả")
         
         # Stage box
-        col_r1, col_r2 = st.columns([1, 2])
+        render_score_result(
+            title="KDIGO Stage",
+            score=result['stage_text'],
+            interpretation=result['interpretation'].strip(),
+            color=result['stage_color'],
+            icon=result['stage_icon']
+        )
         
-        with col_r1:
-            if result['stage'] == 0:
-                st.metric(
-                    label="**Đánh giá**",
-                    value="Không AKI"
-                )
-            else:
-                st.metric(
-                    label="**KDIGO Stage**",
-                    value=f"Giai đoạn {result['stage']}"
-                )
-        
-        with col_r2:
-            st.markdown(f"### {result['stage_color']} {result['stage_text']}")
-            if result['scr_fold'] > 0:
-                st.caption(f"SCr: {scr_baseline:.2f} → {scr_current:.2f} mg/dL ({result['scr_fold']:.2f}×)")
+        if result['scr_fold'] > 0:
+            st.caption(f"SCr: {scr_baseline:.2f} → {scr_current:.2f} mg/dL ({result['scr_fold']:.2f}×)")
         
         # Details
         with st.expander("📋 Chi tiết đánh giá", expanded=True):
@@ -604,8 +622,7 @@ def render():
                     st.markdown("- ❌ Không đáp ứng tiêu chí nước tiểu")
         
         # Interpretation
-        st.markdown("---")
-        st.markdown(result['interpretation'])
+
         
         # Management
         st.markdown("---")

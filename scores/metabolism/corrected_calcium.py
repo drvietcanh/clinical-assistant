@@ -14,6 +14,7 @@ Br Med J. 1973;4(5893):643-6.
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_lab_value
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box
@@ -38,7 +39,7 @@ def _format_num(value: float, decimals: int = 1) -> str:
 def render():
     """Render Corrected Calcium Calculator"""
     
-    st.subheader("🦴 Corrected Calcium")
+    st.markdown(f"<h1 style='text-align: center; color: {COLORS['success']};'>🦴 Corrected Calcium</h1>", unsafe_allow_html=True)
     st.caption("Calcium Điều chỉnh Theo Albumin")
     shared = load_shared_result_from_url()
     if shared and shared.get("calculator_id") == "corrected_calcium":
@@ -146,13 +147,13 @@ def render():
             # Interpret corrected calcium
             if ca_corrected_mgdl < 8.5:
                 interpretation = "THẤP (Hypocalcemia)"
-                color = "error"
+                color = COLORS["error"]
             elif ca_corrected_mgdl <= 10.5:
                 interpretation = "BÌNH THƯỜNG"
-                color = "success"
+                color = COLORS["success"]
             else:
                 interpretation = "CAO (Hypercalcemia)"
-                color = "warning"
+                color = COLORS["warning"]
             
             st.markdown("---")
             st.markdown("## 📊 Kết quả")
@@ -162,7 +163,7 @@ def render():
                 title="Calcium Đo Được",
                 value=f"{ca_mgdl:.1f} mg/dL",
                 subtitle=f"{ca_mgdl/4:.2f} mmol/L",
-                color="info",
+                color=COLORS["info"],
                 icon="🔬",
                 size="medium"
             )
@@ -173,7 +174,7 @@ def render():
                 value=f"{ca_corrected_mgdl:.1f} mg/dL",
                 subtitle=f"{interpretation} ({ca_corrected_mmol:.2f} mmol/L)",
                 color=color,
-                icon="🦴" if color == "success" else "⚠️" if color == "warning" else "🚨",
+                icon="🦴" if color == COLORS["success"] else "⚠️" if color == COLORS["warning"] else "🚨",
                 size="large"
             )
             

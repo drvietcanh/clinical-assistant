@@ -4,6 +4,8 @@ Westley Croup Score
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -23,10 +25,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>👶 Westley Croup Score</h2>
-    <p style='text-align: center;'><em>Đánh giá mức độ nặng của Croup ở trẻ em</em></p>
-    """, unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>👶 Westley Croup Score</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Đánh giá mức độ nặng của Croup ở trẻ em</p>", unsafe_allow_html=True)
     
     with st.expander("ℹ️ Giới thiệu về Croup và Westley Score"):
         st.markdown("""
@@ -131,30 +131,27 @@ def render():
         # Severity
         if score < 3:
             severity = "Nhẹ"
-            color = "#28a745"
+            color = COLORS["success"]
             icon = "✅"
         elif score <= 7:
             severity = "Trung bình"
-            color = "#ffc107"
+            color = COLORS["warning"]
             icon = "⚠️"
         else:
             severity = "Nặng"
-            color = "#dc3545"
+            color = COLORS["error"]
             icon = "🚨"
         
-        st.markdown("## 📊 Kết quả")
-        
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 40px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h1 style='color: {color}; margin: 0; text-align: center; font-size: 3em;'>
-                {icon} Westley Score = {score}
-            </h1>
-            <p style='text-align: center; font-size: 1.3em; margin-top: 15px; font-weight: bold;'>
-                Croup {severity}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="Westley Score",
+            score=score,
+            interpretation=f"Croup {severity}",
+            mortality=None,
+            color=color,
+            icon=icon,
+            size="large",
+            max_score=17
+        )
         
         st.markdown("### 💊 Khuyến cáo điều trị:")
         

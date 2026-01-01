@@ -4,12 +4,14 @@ Tiên lượng viêm tụy cấp (Acute Pancreatitis)
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+from components.ui.scoring import render_score_result
 from components.export import render_export_section
 # ======================================
 
@@ -43,7 +45,8 @@ def interpret_ranson(total_score):
     if total_score < 3:
         return {
             "severity": "Nhẹ",
-            "color": "🟢",
+            "color": COLORS["success"],
+            "icon": "🟢",
             "mortality": "< 1%",
             "recommendation": "Điều trị nội khoa thường quy. Theo dõi",
             "icu_need": "Không cần ICU (thường)",
@@ -52,7 +55,8 @@ def interpret_ranson(total_score):
     elif total_score <= 5:
         return {
             "severity": "Trung bình",
-            "color": "🟡",
+            "color": COLORS["warning"],
+            "icon": "🟡",
             "mortality": "10-20%",
             "recommendation": "Theo dõi chặt. Cân nhắc ICU/HDU",
             "icu_need": "Xem xét ICU/HDU",
@@ -61,7 +65,8 @@ def interpret_ranson(total_score):
     else:  # ≥ 6
         return {
             "severity": "Nặng",
-            "color": "🔴",
+            "color": COLORS["error"],
+            "icon": "🔴",
             "mortality": "> 50%",
             "recommendation": "ICU care. Điều trị tích cực. Xem xét can thiệp",
             "icu_need": "CẦN ICU",
@@ -77,8 +82,10 @@ def render():
     if shared_inputs:
         st.info("📥 Đã tải kết quả chia sẻ Ranson")
     
-    st.title("🏥 Ranson Criteria")
-    st.caption("Tiên lượng viêm tụy cấp")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🏥 Ranson Criteria</h3>
+    <p style='text-align: center; color: #6B7280;'>Tiên lượng viêm tụy cấp</p>
+    """, unsafe_allow_html=True)
     
     # Educational information - Enhanced with Phase 1 Metadata
     if CALCULATOR_METADATA_AVAILABLE:
@@ -289,7 +296,23 @@ def render():
         st.subheader("📈 Kết quả")
         
         # Display scores
-        col1, col2, col3 = st.columns(3)
+        st.markdown("---")
+        st.subheader("📈 Kết quả")
+        
+        # Use render_score_result
+        render_score_result(
+            title="Ranson Score",
+            score=f"{total_score}/11",
+            interpretation=f"Viêm tụy {interp['severity']}",
+            mortality=f"Tử vong dự đoán: {interp['mortality']}",
+            color=interp['color'],
+            icon=interp['icon'],
+            size="large"
+        )
+        
+        # Display breakdown metrics
+        st.markdown("<br>", unsafe_allow_html=True)
+        col1, col2 = st.columns(2)
         
         with col1:
             st.metric(
@@ -304,23 +327,6 @@ def render():
                 f"{criteria_48h_count}/6",
                 help="Tiêu chí tại 48h"
             )
-        
-        with col3:
-            st.metric(
-                "Ranson Score",
-                f"{total_score}/11",
-                help="Tổng điểm"
-            )
-        
-        st.markdown("---")
-        
-        # Severity
-        if interp['level'] == "mild":
-            st.success(f"{interp['color']} Viêm Tụy {interp['severity']}")
-        elif interp['level'] == "moderate":
-            st.warning(f"{interp['color']} Viêm Tụy {interp['severity']}")
-        else:
-            st.error(f"{interp['color']} Viêm Tụy {interp['severity']}")
         
         st.markdown("---")
         

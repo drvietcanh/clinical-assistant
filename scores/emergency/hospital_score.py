@@ -28,7 +28,9 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from components.ui.results import render_result_box
+from scores.utils.validation import validate_lab_value
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -119,17 +121,17 @@ def calculate_hospital_score(
     if score <= 4:
         readmission_risk = "<10%"
         interpretation = "Nguy cơ tái nhập viện thấp"
-        color = "success"
+        color = COLORS["success"]
         severity = "Thấp"
     elif score <= 6:
         readmission_risk = "10-20%"
         interpretation = "Nguy cơ tái nhập viện trung bình"
-        color = "warning"
+        color = COLORS["warning"]
         severity = "Trung bình"
     else:
         readmission_risk = ">20%"
         interpretation = "Nguy cơ tái nhập viện cao"
-        color = "error"
+        color = COLORS["error"]
         severity = "Cao"
     
     return {
@@ -144,7 +146,10 @@ def calculate_hospital_score(
 
 def render():
     """HOSPITAL Score Calculator"""
-    st.subheader("🏥 HOSPITAL Score")
+    # st.subheader("🏥 HOSPITAL Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🏥 HOSPITAL Score</h3>
+    """, unsafe_allow_html=True)
     st.caption("Dự đoán nguy cơ tái nhập viện 30 ngày")
     
     # Load shared result if available
@@ -247,6 +252,27 @@ def render():
     st.markdown("---")
     
     if st.button("🧮 Tính HOSPITAL Score", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_hb, hb_error = validate_lab_value(hemoglobin, "Hemoglobin", 0, 20)
+        if not is_valid_hb:
+             validation_errors.append(hb_error)
+
+        is_valid_na, na_error = validate_lab_value(sodium, "Sodium", 100, 180)
+        if not is_valid_na:
+             validation_errors.append(na_error)
+             
+        is_valid_los, los_error = validate_lab_value(length_of_stay, "Thời gian nằm viện", 0, 365)
+        if not is_valid_los:
+             validation_errors.append(los_error)
+             
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+            
         result = calculate_hospital_score(
             hemoglobin,
             is_oncology,

@@ -30,8 +30,7 @@ from .drug_modules import (
     MISCELLANEOUS_DRUGS,
     # New Standardized Modules
     # Psychiatry
-    ANTIPSYCHOTICS,
-    MOOD_STABILIZERS,
+
     # Anesthesia
     ANESTHESIA_DRUGS,
     # Vaccines
@@ -84,8 +83,7 @@ DRUG_DATABASE = {
     **OBSTETRICS_GYNECOLOGY_DRUGS,
     **ENT_ORAL_NASAL_COMBINATIONS_DRUGS,
     **MISCELLANEOUS_DRUGS,
-    **ANTIPSYCHOTICS,
-    **MOOD_STABILIZERS,
+
     **ANESTHESIA_DRUGS,
     **VACCINES_DRUGS,
     **TOXICOLOGY_DRUGS,

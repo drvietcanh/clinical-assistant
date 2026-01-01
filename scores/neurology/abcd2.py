@@ -8,6 +8,9 @@ Lancet. 2007;369(9558):283-292.
 """
 
 import streamlit as st
+from config.theme import COLORS
+from scores.utils.validation import validate_age, validate_blood_pressure
+from components.ui.results import render_result_box
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -67,31 +70,31 @@ def calculate_abcd2(age, bp, clinical_features, duration, diabetes):
         risk_category = "High Risk"
         stroke_risk_2d = "8.1%"
         stroke_risk_7d = "11.7%"
-        color = "error"
+        grade_color = COLORS["error"]
     elif score >= 4:
         risk_category = "Moderate Risk"
         stroke_risk_2d = "4.1%"
         stroke_risk_7d = "5.9%"
-        color = "warning"
+        grade_color = COLORS["warning"]
     else:
         risk_category = "Low Risk"
         stroke_risk_2d = "1.0%"
         stroke_risk_7d = "1.2%"
-        color = "success"
+        grade_color = COLORS["success"]
     
     return {
         "total_score": score,
         "risk_category": risk_category,
         "stroke_risk_2d": stroke_risk_2d,
         "stroke_risk_7d": stroke_risk_7d,
-        "color": color
+        "color": grade_color
     }
 
 
 def render():
     """ABCD2 Score Calculator"""
-    st.subheader("🧠 ABCD2 Score")
-    st.caption("TIA Risk Stratification - Stroke Risk After Transient Ischemic Attack")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🧠 ABCD2 Score</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>TIA Risk Stratification - Stroke Risk After Transient Ischemic Attack</p>", unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -207,6 +210,23 @@ def render():
     
     # Calculate button
     if st.button("🧮 Tính ABCD2 Score", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_age, age_error = validate_age(age)
+        if not is_valid_age:
+             validation_errors.append(age_error)
+             
+        is_valid_sbp, sbp_error = validate_blood_pressure(systolic_bp)
+        if not is_valid_sbp:
+             validation_errors.append(sbp_error)
+        
+        if validation_errors:
+             st.error("**⚠️ Lỗi validation:**")
+             for error in validation_errors:
+                 st.error(f"- {error}")
+             st.stop()
+             
         # Calculate
         # ABCD2 BP criterion: Systolic ≥140 OR Diastolic ≥90
         bp_meets_criterion = (systolic_bp >= 140) or (diastolic_bp >= 90)
@@ -234,23 +254,32 @@ def render():
                 result["risk_category"] = "High Risk"
                 result["stroke_risk_2d"] = "8.1%"
                 result["stroke_risk_7d"] = "11.7%"
-                result["color"] = "error"
+                result["color"] = COLORS["error"]
             elif result["total_score"] >= 4:
                 result["risk_category"] = "Moderate Risk"
                 result["stroke_risk_2d"] = "4.1%"
                 result["stroke_risk_7d"] = "5.9%"
-                result["color"] = "warning"
+                result["color"] = COLORS["warning"]
         
         # Display results
         with col1:
             st.markdown("### 📊 Kết quả")
             
-            if result["color"] == "success":
-                st.success(f"## **ABCD2 Score: {result['total_score']}/7**")
-            elif result["color"] == "warning":
-                st.warning(f"## **ABCD2 Score: {result['total_score']}/7**")
-            else:
-                st.error(f"## **ABCD2 Score: {result['total_score']}/7**")
+            # Determine icon based on category
+            icon = "✅"
+            if result["total_score"] >= 6:
+                icon = "🚨"
+            elif result["total_score"] >= 4:
+                icon = "⚠️"
+            
+            render_result_box(
+                title="ABCD2 Score",
+                value=f"{result['total_score']}/7",
+                subtitle=result['risk_category'],
+                color=result['color'],
+                icon=icon,
+                size="medium"
+            )
             
             st.markdown(f"**Phân loại nguy cơ:** {result['risk_category']}")
             st.markdown(f"**Nguy cơ đột quỵ 2 ngày:** {result['stroke_risk_2d']}")

@@ -4,6 +4,7 @@ Ramsay Sedation Scale Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.anesthesia_validation import validate_ramsay_score
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
@@ -30,37 +31,37 @@ def get_ramsay_interpretation(score):
             "description": "Bệnh nhân lo lắng, kích động, hoặc bồn chồn",
             "level": "Không an thần / Kích động",
             "recommendation": "Cần tăng liều an thần",
-            "color": "red"
+            "color": COLORS["error"]
         },
         2: {
             "description": "Bệnh nhân hợp tác, định hướng, và yên tĩnh",
             "level": "Tỉnh táo",
             "recommendation": "Mức độ phù hợp cho bệnh nhân tỉnh",
-            "color": "green"
+            "color": COLORS["success"]
         },
         3: {
             "description": "Bệnh nhân chỉ đáp ứng với lệnh",
             "level": "An thần nhẹ",
             "recommendation": "Mức độ phù hợp cho bệnh nhân thở máy",
-            "color": "green"
+            "color": COLORS["success"]
         },
         4: {
             "description": "Bệnh nhân đáp ứng nhanh với kích thích nhẹ hoặc gõ nhẹ",
             "level": "An thần vừa",
             "recommendation": "Mức độ phù hợp cho bệnh nhân thở máy",
-            "color": "green"
+            "color": COLORS["success"]
         },
         5: {
             "description": "Bệnh nhân đáp ứng chậm với kích thích mạnh",
             "level": "An thần sâu",
             "recommendation": "Có thể quá sâu, cân nhắc giảm liều",
-            "color": "orange"
+            "color": COLORS["warning"]
         },
         6: {
             "description": "Bệnh nhân không đáp ứng",
             "level": "An thần rất sâu",
             "recommendation": "Quá sâu, cần giảm liều an thần ngay",
-            "color": "red"
+            "color": COLORS["error"]
         }
     }
     
@@ -77,8 +78,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>😴 Ramsay Sedation Scale</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>😴 Ramsay Sedation Scale</h2>
     <p style='text-align: center;'><em>Đánh giá mức độ an thần</em></p>
     """, unsafe_allow_html=True)
     
@@ -178,9 +179,9 @@ def render():
             st.markdown("---")
             
             # Recommendation
-            if result['color'] == "green":
+            if result['color'] == COLORS["success"]:
                 st.success(f"**Khuyến nghị:** {result['recommendation']}")
-            elif result['color'] == "orange":
+            elif result['color'] == COLORS["warning"]:
                 st.warning(f"**Khuyến nghị:** {result['recommendation']}")
             else:
                 st.error(f"**Khuyến nghị:** {result['recommendation']}")

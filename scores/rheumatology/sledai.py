@@ -1,6 +1,7 @@
 """SLEDAI - SLE Disease Activity Index"""
 import streamlit as st
 import streamlit.components.v1 as components
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -17,7 +18,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("<h2 style='text-align: center; color: #F97316;'>🦋 SLEDAI</h2><p style='text-align: center;'><em>Hoạt động bệnh Lupus</em></p>", unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['warning_dark']};'>🦋 SLEDAI</h2><p style='text-align: center;'><em>Hoạt động bệnh Lupus</em></p>", unsafe_allow_html=True)
     with st.expander("ℹ️ SLEDAI"): 
         st.markdown("**SLEDAI** đánh giá hoạt động bệnh SLE trong 10 ngày qua. **Điểm:** 0-105")
     
@@ -84,16 +85,16 @@ def render():
     if st.button("🔬 Tính SLEDAI", type="primary", use_container_width=True):
         if score == 0: 
             status = "Không hoạt động"
-            color = "#28a745"
+            color = COLORS["success"]
         elif score <= 5: 
             status = "Hoạt động nhẹ"
-            color = "#28a745"
+            color = COLORS["success"]
         elif score <= 11: 
             status = "Hoạt động trung bình"
-            color = "#fd7e14"
+            color = COLORS["warning"]
         else: 
             status = "Hoạt động cao"
-            color = "#dc3545"
+            color = COLORS["error"]
         
         result_html = f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>SLEDAI: {score}</h2><p style='text-align: center; margin-top: 10px;'>{status}</p></div>"
         components.html(result_html, height=120, scrolling=False)

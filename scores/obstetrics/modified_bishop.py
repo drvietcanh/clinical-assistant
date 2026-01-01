@@ -4,6 +4,8 @@ Phiên bản cải tiến của Bishop Score với thêm yếu tố lâm sàng
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.results import render_result_box
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -95,7 +97,8 @@ def interpret_modified_bishop(total_score, is_nulliparous=True):
     if total_score <= 5:
         return {
             "favorability": "KHÔNG THUẬN LỢI",
-            "color": "🔴",
+            "color": COLORS["error"],
+            "icon": "🔴",
             "recommendation": "Cần cervical ripening",
             "success_rate": "30-50% (nullip), 60-70% (multip)",
             "severity": "unfavorable"
@@ -103,7 +106,8 @@ def interpret_modified_bishop(total_score, is_nulliparous=True):
     elif total_score <= 8:
         return {
             "favorability": "TRUNG BÌNH",
-            "color": "🟡",
+            "color": COLORS["warning"],
+            "icon": "🟡",
             "recommendation": "Xem xét ripening (đặc biệt nulliparous)",
             "success_rate": "60-75% (nullip), 80-90% (multip)",
             "severity": "intermediate"
@@ -111,7 +115,8 @@ def interpret_modified_bishop(total_score, is_nulliparous=True):
     else:  # > 8
         return {
             "favorability": "THUẬN LỢI",
-            "color": "🟢",
+            "color": COLORS["success"],
+            "icon": "🟢",
             "recommendation": "Induction khả năng thành công cao",
             "success_rate": "80-95% (nullip), 95-98% (multip)",
             "severity": "favorable"
@@ -128,7 +133,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🤰 Modified Bishop Score")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🤰 Modified Bishop Score</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Phiên bản cải tiến của Bishop Score với thêm yếu tố lâm sàng</p>", unsafe_allow_html=True)
     st.markdown("""
     ### Phiên Bản Cải Tiến Bishop Score
     
@@ -260,38 +266,21 @@ def render():
         st.subheader("📈 Kết quả đánh giá")
         
         # Display scores
-        col1, col2, col3 = st.columns(3)
+        # Display scores
+        render_result_box(
+            title="Modified Bishop Score",
+            value=f"{total_score}/15",
+            subtitle=result['favorability'],
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
+        col1, col2 = st.columns(2)
         with col1:
-            st.metric(
-                "Bishop Score Gốc",
-                f"{base_score}/13",
-                help="5 thành phần chính"
-            )
-        
+             st.metric("Bishop Score Gốc", f"{base_score}/13")
         with col2:
-            st.metric(
-                "Modifier Score",
-                f"+{modifier_score}",
-                help="Preeclampsia + PROM"
-            )
-        
-        with col3:
-            st.metric(
-                "Modified Bishop",
-                f"{total_score}/15",
-                help="Tổng điểm"
-            )
-        
-        st.markdown("---")
-        
-        # Favorability
-        if result['severity'] == "favorable":
-            st.success(f"{result['color']} {result['favorability']}")
-        elif result['severity'] == "intermediate":
-            st.warning(f"{result['color']} {result['favorability']}")
-        else:
-            st.error(f"{result['color']} {result['favorability']}")
+             st.metric("Modifier Score", f"+{modifier_score}")
         
         st.markdown("---")
         

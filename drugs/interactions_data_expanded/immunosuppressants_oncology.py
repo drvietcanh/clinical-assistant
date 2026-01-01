@@ -1,6 +1,6 @@
 """
-Oncology Drug Interactions
-Expanded database for oncology drug interactions
+Immunosuppressants and Oncology Drug Interactions
+Expanded database for immunosuppressants and oncology drugs
 Based on Micromedex, Lexicomp, AHFS Drug Information
 """
 
@@ -9,10 +9,120 @@ SEVERITY_MAJOR = "Major"
 SEVERITY_MODERATE = "Moderate"
 SEVERITY_MINOR = "Minor"
 
-ONCOLOGY_INTERACTIONS = {
+IMMUNOSUPPRESSANTS_ONCOLOGY_INTERACTIONS = {
+    # ========== IMMUNOSUPPRESSANTS (General) ==========
+
+    # Azathioprine
+    ("Azathioprine", "Allopurinol"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Allopurinol ức chế xanthine oxidase, enzym chuyển hóa azathioprine/6-MP",
+        "description": "Tăng nồng độ 6-MP gấp 4 lần, gây suy tủy nghiêm trọng",
+        "clinical_significance": "Nguy cơ suy tủy xương, nhiễm trùng, tử vong.",
+        "management": "Giảm liều azathioprine xuống còn 25-33% liều bình thường khi dùng chung với allopurinol. Theo dõi sát công thức máu.",
+        "references": "FDA Boxed Warning, Micromedex"
+    },
+
+    ("Azathioprine", "Febuxostat"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Febuxostat ức chế xanthine oxidase, tăng nồng độ chất chuyển hóa độc hại của azathioprine",
+        "description": "Nguy cơ suy tủy nghiêm trọng",
+        "management": "CHỐNG CHỈ ĐỊNH DÙNG CHUNG",
+        "references": "Micromedex"
+    },
+
+    # Mycophenolate
+    ("Mycophenolate", "Antacid"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Antacid chứa nhôm/magie làm giảm hấp thu mycophenolate",
+        "description": "Giảm hiệu quả bảo vệ cơ quan ghép",
+        "management": "Uống cách nhau ít nhất 2 giờ",
+        "references": "Micromedex"
+    },
+
+    ("Mycophenolate", "Cholestyramine"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Cholestyramine làm giảm tái hấp thu mycophenolate (chu trình gan ruột)",
+        "description": "Giảm nồng độ thuốc đáng kể",
+        "management": "Tránh dùng chung nếu có thể, hoặc theo dõi nồng độ",
+        "references": "Micromedex"
+    },
+    
+    # Cyclosporine (Migrated from other.py + Expanded)
+    ("Cyclosporine", "Erythromycin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Erythromycin ức chế chuyển hóa cyclosporine",
+        "description": "Tăng nồng độ cyclosporine",
+        "management": "Theo dõi nồng độ cyclosporine, giảm liều",
+        "references": "Micromedex"
+    },
+    
+    ("Cyclosporine", "Clarithromycin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Clarithromycin ức chế chuyển hóa cyclosporine",
+        "description": "Tăng nồng độ cyclosporine",
+        "management": "Theo dõi nồng độ cyclosporine, giảm liều",
+        "references": "Micromedex"
+    },
+    
+    ("Cyclosporine", "Ketoconazole"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ketoconazole ức chế chuyển hóa cyclosporine",
+        "description": "Tăng nồng độ cyclosporine",
+        "management": "Giảm liều cyclosporine 50-75% khi dùng ketoconazole",
+        "references": "Micromedex"
+    },
+
+    ("Cyclosporine", "St. John's Wort"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "St. John's Wort cảm ứng CYP3A4, giảm nồng độ cyclosporine",
+        "description": "Giảm đáng kể hiệu quả cyclosporine, nguy cơ thải ghép",
+        "management": "Tránh dùng chung. Theo dõi nồng độ cyclosporine",
+        "references": "FDA, Micromedex"
+    },
+    
+    ("Cyclosporine", "Statin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cạnh tranh CYP3A4 và OATP1B1, tăng nồng độ statin",
+        "description": "Tăng nguy cơ tiêu cơ vân",
+        "management": "Tránh dùng với simvastatin/lovastatin liều cao. Các statin khác dùng liều thấp.",
+        "references": "FDA"
+    },
+
+    # Tacrolimus (Migrated from other.py + Expanded)
+    ("Tacrolimus", "Erythromycin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Erythromycin ức chế chuyển hóa tacrolimus",
+        "description": "Tăng nồng độ tacrolimus",
+        "management": "Theo dõi nồng độ tacrolimus, cân nhắc giảm liều",
+        "references": "Micromedex"
+    },
+    
+    ("Tacrolimus", "Clarithromycin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Clarithromycin ức chế chuyển hóa tacrolimus",
+        "description": "Tăng nồng độ tacrolimus",
+        "management": "Theo dõi nồng độ tacrolimus, cân nhắc giảm liều",
+        "references": "Micromedex"
+    },
+    
+    ("Tacrolimus", "Ketoconazole"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ketoconazole ức chế chuyển hóa tacrolimus",
+        "description": "Tăng nồng độ tacrolimus",
+        "management": "Giảm liều tacrolimus 50-75% khi dùng ketoconazole",
+        "references": "Micromedex"
+    },
+
+    ("Tacrolimus", "St. John's Wort"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "St. John's Wort cảm ứng CYP3A4, giảm nồng độ tacrolimus",
+        "description": "Giảm đáng kể hiệu quả tacrolimus, nguy cơ thải ghép",
+        "management": "Tránh dùng chung. Theo dõi nồng độ tacrolimus",
+        "references": "FDA, Micromedex"
+    },
+
     # ========== METHOTREXATE ==========
     
-    # Methotrexate + NSAID (already in main file)
     ("Methotrexate", "NSAID"): {
         "severity": SEVERITY_MAJOR,
         "mechanism": "NSAID làm giảm đào thải methotrexate, tăng nguy cơ độc tính",
@@ -22,7 +132,6 @@ ONCOLOGY_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    # Methotrexate + TMP-SMX (already in main file)
     ("Methotrexate", "Trimethoprim-Sulfamethoxazole"): {
         "severity": SEVERITY_MAJOR,
         "mechanism": "Tăng độc tính methotrexate",
@@ -55,8 +164,9 @@ ONCOLOGY_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    # ========== 5-FLUOROURACIL (5-FU) ==========
+    # ========== ONCOLOGY - CHEMOTHERAPY (Migrated from oncology.py) ==========
     
+    # 5-Fluorouracil (5-FU)
     ("5-Fluorouracil", "Warfarin"): {
         "severity": SEVERITY_MAJOR,
         "mechanism": "5-FU ức chế chuyển hóa warfarin, tăng tác dụng warfarin",
@@ -73,8 +183,7 @@ ONCOLOGY_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    # ========== CYCLOPHOSPHAMIDE ==========
-    
+    # Cyclophosphamide
     ("Cyclophosphamide", "Warfarin"): {
         "severity": SEVERITY_MODERATE,
         "mechanism": "Có thể tăng tác dụng warfarin",
@@ -91,8 +200,7 @@ ONCOLOGY_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    # ========== DOXORUBICIN ==========
-    
+    # Doxorubicin
     ("Doxorubicin", "QT Prolonging Drugs"): {
         "severity": SEVERITY_MAJOR,
         "mechanism": "Doxorubicin kéo dài QT, tăng nguy cơ khi dùng với thuốc kéo dài QT khác",
@@ -109,8 +217,7 @@ ONCOLOGY_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    # ========== PACLITAXEL ==========
-    
+    # Paclitaxel
     ("Paclitaxel", "CYP3A4 Inhibitor"): {
         "severity": SEVERITY_MODERATE,
         "mechanism": "CYP3A4 inhibitor tăng nồng độ paclitaxel",
@@ -127,8 +234,7 @@ ONCOLOGY_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    # ========== IMATINIB ==========
-    
+    # Imatinib
     ("Imatinib", "Warfarin"): {
         "severity": SEVERITY_MAJOR,
         "mechanism": "Imatinib ức chế CYP2C9, tăng tác dụng warfarin",
@@ -153,8 +259,7 @@ ONCOLOGY_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    # ========== SORAFENIB ==========
-    
+    # Sorafenib
     ("Sorafenib", "Warfarin"): {
         "severity": SEVERITY_MODERATE,
         "mechanism": "Có thể tăng tác dụng warfarin",
@@ -163,8 +268,7 @@ ONCOLOGY_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    # ========== SUNITINIB ==========
-    
+    # Sunitinib
     ("Sunitinib", "QT Prolonging Drugs"): {
         "severity": SEVERITY_MAJOR,
         "mechanism": "Sunitinib kéo dài QT, tăng nguy cơ khi dùng với thuốc kéo dài QT khác",
@@ -173,8 +277,7 @@ ONCOLOGY_INTERACTIONS = {
         "references": "FDA, Micromedex"
     },
     
-    # ========== VINCRISTINE ==========
-    
+    # Vincristine
     ("Vincristine", "CYP3A4 Inhibitor"): {
         "severity": SEVERITY_MODERATE,
         "mechanism": "CYP3A4 inhibitor tăng nồng độ vincristine",
@@ -183,8 +286,7 @@ ONCOLOGY_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    # ========== CISPLATIN ==========
-    
+    # Cisplatin
     ("Cisplatin", "Aminoglycoside"): {
         "severity": SEVERITY_MAJOR,
         "mechanism": "Tăng độc tính thận",
@@ -201,8 +303,7 @@ ONCOLOGY_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    # ========== BUSULFAN ==========
-    
+    # Busulfan
     ("Busulfan", "Metronidazole"): {
         "severity": SEVERITY_MAJOR,
         "mechanism": "Metronidazole ức chế chuyển hóa busulfan",
@@ -211,72 +312,12 @@ ONCOLOGY_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    # ========== IMMUNOSUPPRESSANTS ==========
-    
-    ("Cyclosporine", "Erythromycin"): {
+    # Tamoxifen
+    ("Tamoxifen", "CYP2D6 Inhibitor"): {
         "severity": SEVERITY_MODERATE,
-        "mechanism": "Erythromycin ức chế chuyển hóa cyclosporine",
-        "description": "Tăng nồng độ cyclosporine",
-        "management": "Theo dõi nồng độ cyclosporine, cân nhắc giảm liều",
-        "references": "Micromedex"
-    },
-    
-    ("Cyclosporine", "Clarithromycin"): {
-        "severity": SEVERITY_MODERATE,
-        "mechanism": "Clarithromycin ức chế chuyển hóa cyclosporine",
-        "description": "Tăng nồng độ cyclosporine",
-        "management": "Theo dõi nồng độ cyclosporine, cân nhắc giảm liều",
-        "references": "Micromedex"
-    },
-    
-    ("Cyclosporine", "Ketoconazole"): {
-        "severity": SEVERITY_MAJOR,
-        "mechanism": "Ketoconazole ức chế chuyển hóa cyclosporine",
-        "description": "Tăng nồng độ cyclosporine",
-        "management": "Giảm liều cyclosporine 50-75% khi dùng ketoconazole",
-        "references": "Micromedex"
-    },
-    
-    ("Tacrolimus", "Erythromycin"): {
-        "severity": SEVERITY_MODERATE,
-        "mechanism": "Erythromycin ức chế chuyển hóa tacrolimus",
-        "description": "Tăng nồng độ tacrolimus",
-        "management": "Theo dõi nồng độ tacrolimus, cân nhắc giảm liều",
-        "references": "Micromedex"
-    },
-    
-    ("Tacrolimus", "Clarithromycin"): {
-        "severity": SEVERITY_MODERATE,
-        "mechanism": "Clarithromycin ức chế chuyển hóa tacrolimus",
-        "description": "Tăng nồng độ tacrolimus",
-        "management": "Theo dõi nồng độ tacrolimus, cân nhắc giảm liều",
-        "references": "Micromedex"
-    },
-    
-    ("Tacrolimus", "Ketoconazole"): {
-        "severity": SEVERITY_MAJOR,
-        "mechanism": "Ketoconazole ức chế chuyển hóa tacrolimus",
-        "description": "Tăng nồng độ tacrolimus",
-        "management": "Giảm liều tacrolimus 50-75% khi dùng ketoconazole",
-        "references": "Micromedex"
-    },
-    
-    # ========== IMMUNOSUPPRESSANTS (continued) ==========
-    
-    ("Cyclosporine", "St. John's Wort"): {
-        "severity": SEVERITY_MAJOR,
-        "mechanism": "St. John's Wort cảm ứng CYP3A4, giảm nồng độ cyclosporine",
-        "description": "Giảm đáng kể hiệu quả cyclosporine, nguy cơ thải ghép",
-        "management": "Tránh dùng chung. Theo dõi nồng độ cyclosporine",
-        "references": "FDA, Micromedex"
-    },
-    
-    ("Tacrolimus", "St. John's Wort"): {
-        "severity": SEVERITY_MAJOR,
-        "mechanism": "St. John's Wort cảm ứng CYP3A4, giảm nồng độ tacrolimus",
-        "description": "Giảm đáng kể hiệu quả tacrolimus, nguy cơ thải ghép",
-        "management": "Tránh dùng chung. Theo dõi nồng độ tacrolimus",
-        "references": "FDA, Micromedex"
-    },
+        "mechanism": "CYP2D6 (Fluoxetine, Paroxetine...) chuyển hóa tamoxifen thành dạng hoạt động. Ức chế CYP2D6 làm giảm hiệu quả tamoxifen.",
+        "description": "Giảm hiệu quả điều trị ung thư vú",
+        "management": "Tránh dùng với thuốc ức chế mạnh CYP2D6 (như fluoxetine, paroxetine). Dùng venlafaxine nếu cần thuốc chống trầm cảm.",
+        "references": "Clinical Pharmacology"
+    }
 }
-

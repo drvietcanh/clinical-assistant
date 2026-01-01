@@ -4,6 +4,7 @@ Công thức Winter - PCO2 dự đoán trong toan chuyển hóa
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_lab_value, validate_range
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box
@@ -51,7 +52,7 @@ def interpret_compensation(actual_pco2, expected_pco2, lower_limit, upper_limit)
     if lower_limit <= actual_pco2 <= upper_limit:
         return {
             "status": "Bù thường thích hợp",
-            "color": "🟢",
+            "color": COLORS["success"],
             "interpretation": "Bù thường hô hấp đầy đủ cho toan chuyển hóa",
             "clinical": "Chỉ có rối loạn acid-base đơn thuần (Toan chuyển hóa)",
             "action": "Điều trị nguyên nhân gây toan chuyển hóa"
@@ -60,7 +61,7 @@ def interpret_compensation(actual_pco2, expected_pco2, lower_limit, upper_limit)
         deviation = lower_limit - actual_pco2
         return {
             "status": "Bù thường quá mức",
-            "color": "🔵",
+            "color": COLORS["info"],
             "interpretation": f"PCO2 thấp hơn dự đoán {deviation:.1f} mmHg",
             "clinical": "Rối loạn acid-base hỗn hợp: Toan chuyển hóa + Kiềm hô hấp",
             "action": "Tìm nguyên nhân tăng thông khí (lo âu, đau, nhiễm trùng phổi, v.v.)"
@@ -69,7 +70,7 @@ def interpret_compensation(actual_pco2, expected_pco2, lower_limit, upper_limit)
         deviation = actual_pco2 - upper_limit
         return {
             "status": "Bù thường không đầy đủ",
-            "color": "🟠",
+            "color": COLORS["warning"],
             "interpretation": f"PCO2 cao hơn dự đoán {deviation:.1f} mmHg",
             "clinical": "Rối loạn acid-base hỗn hợp: Toan chuyển hóa + Toan hô hấp",
             "action": "Đánh giá chức năng hô hấp, xem xét hỗ trợ thông khí"
@@ -120,7 +121,7 @@ def get_metabolic_acidosis_causes(anion_gap):
 def render():
     """Render the Winter Formula calculator"""
     
-    st.title("🧪 Winter Formula")
+    st.markdown(f"<h1 style='text-align: center; color: {COLORS['success']};'>🧪 Winter Formula</h1>", unsafe_allow_html=True)
     st.markdown("""
     ### PCO2 dự đoán trong toan chuyển hóa
     
@@ -264,25 +265,25 @@ def render():
             title="PCO₂ Dự Đoán",
             value=f"{expected_pco2:.1f} mmHg",
             subtitle=f"Khoảng: {lower_limit:.1f} - {upper_limit:.1f} mmHg",
-            color="info",
+            color=COLORS["info"],
             icon="📊",
             size="medium"
         )
         
         # Display actual PCO2 and compensation status
-        compensation_color_map = {
-            "🟢": "success",
-            "🔵": "info",
-            "🟠": "warning"
+        compensation_icon_map = {
+            COLORS["success"]: "🟢",
+            COLORS["info"]: "🔵",
+            COLORS["warning"]: "🟠"
         }
-        comp_color = compensation_color_map.get(result['color'], "info")
+        icon = compensation_icon_map.get(result['color'], "🟢")
         
         render_result_box(
             title="PCO₂ Thực Tế & Bù Thường",
             value=f"{actual_pco2:.1f} mmHg",
             subtitle=f"{result['status']} - {result['interpretation']}",
-            color=comp_color,
-            icon=result['color'],
+            color=result['color'],
+            icon=icon,
             size="large"
         )
         
@@ -342,7 +343,7 @@ def render():
         # Clinical interpretation
         st.subheader("🎯 Phân tích Lâm sàng")
         
-        if result['color'] == "🟢":
+        if result['color'] == COLORS["success"]:
             st.success(f"""
             ✅ **{result['clinical']}**
             

@@ -25,6 +25,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -62,8 +63,12 @@ MMRC_SCALE = {
 def render():
     """Render mMRC Dyspnea Scale calculator"""
     
-    st.title("🫁 mMRC Dyspnea Scale")
-    st.markdown("**Đánh giá mức độ khó thở ở bệnh nhân COPD (DÙNG HÀNG NGÀY)**")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🫁 mMRC Dyspnea Scale</h2>
+    <p style='text-align: center; color: #6B7280;'>
+    Đánh giá mức độ khó thở ở bệnh nhân COPD (DÙNG HÀNG NGÀY)
+    </p>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -143,57 +148,41 @@ def render():
         # Display results
         st.subheader("📊 Kết quả")
         
-        col_r1, col_r2 = st.columns([1, 2])
-        
-        with col_r1:
-            st.metric(
-                "**mMRC Grade**",
-                f"{selected_grade}/4"
-            )
-        
-        with col_r2:
-            st.markdown(f"### {grade_info['description']}")
-            st.caption(grade_info['detail'])
-        
-        # Interpretation
-        st.markdown("---")
-        st.markdown("### 💡 Diễn giải")
-        
+        # Determine color based on grade
         if selected_grade == 0:
-            st.success("""
-            **✅ Mức độ nhẹ:**
-            - Không khó thở trong hoạt động hàng ngày
-            - Chỉ khó thở khi gắng sức mạnh
-            - Chức năng hô hấp tốt
-            """)
+            color = COLORS["success"]
+            severity = "Mức độ nhẹ"
+            icon = "✅"
         elif selected_grade == 1:
-            st.info("""
-            **ℹ️ Mức độ nhẹ-trung bình:**
-            - Khó thở khi gắng sức vừa phải
-            - Ảnh hưởng nhẹ đến hoạt động hàng ngày
-            - Cần theo dõi và điều trị phù hợp
-            """)
+            color = COLORS["info"]
+            severity = "Mức độ nhẹ-trung bình"
+            icon = "ℹ️"
         elif selected_grade == 2:
-            st.warning("""
-            **⚠️ Mức độ trung bình:**
-            - Khó thở ảnh hưởng rõ rệt đến hoạt động hàng ngày
-            - Phải đi chậm hoặc dừng lại để thở
-            - Cần điều trị tích cực
-            """)
+            color = COLORS["warning"]
+            severity = "Mức độ trung bình"
+            icon = "⚠️"
         elif selected_grade == 3:
-            st.error("""
-            **🚨 Mức độ nặng:**
-            - Khó thở nặng, chỉ đi được khoảng 100m
-            - Ảnh hưởng nghiêm trọng đến chất lượng cuộc sống
-            - Cần điều trị tích cực, xem xét oxy liệu pháp
-            """)
+            color = COLORS["error"]
+            severity = "Mức độ nặng"
+            icon = "🚨"
         else:  # Grade 4
-            st.error("""
-            **🚨🚨 Mức độ rất nặng:**
-            - Khó thở rất nặng, không thể ra khỏi nhà
-            - Khó thở ngay cả khi nghỉ ngơi hoặc mặc/quần áo
-            - Cần điều trị khẩn cấp, oxy liệu pháp, xem xét thở máy
-            """)
+            color = COLORS["dark"]  # Using a distinct color for very severe if defined, else 'error' could work but 'dark' or similar emphasizes severity
+            # If 'dark' isn't standard, stick to 'error' or define it. Assuming 'error' for safety or checking colors. 
+            # Sticking to standard colors used in other files.
+            color = COLORS["error"]
+            severity = "Mức độ rất nặng"
+            icon = "🚨"
+
+        from components.ui.scoring import render_score_result
+        render_score_result(
+            title=f"mMRC Grade {selected_grade}",
+            score=selected_grade,
+            max_score=4,
+            interpretation=f"{severity}: {grade_info['description']}",
+            recommendation=grade_info['detail'],
+            color=color,
+            icon=icon
+        )
         
         # GOLD Classification
         st.markdown("---")

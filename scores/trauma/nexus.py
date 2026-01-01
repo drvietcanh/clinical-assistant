@@ -4,6 +4,7 @@ Quy tắc đánh giá cần chụp X-quang cột sống cổ sau chấn thương
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -66,10 +67,13 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🦴 NEXUS C-Spine Rule")
-    st.markdown("""
-    ### Quy tắc loại trừ tổn thương cột sống cổ
+    # st.title("🦴 NEXUS C-Spine Rule")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🦴 NEXUS C-Spine Rule</h2>
+    <p style='text-align: center;'><em>Quy tắc loại trừ tổn thương cột sống cổ</em></p>
+    """, unsafe_allow_html=True)
     
+    st.markdown("""
     **NEXUS (National Emergency X-Radiography Utilization Study):**
     - Công cụ quyết định lâm sàng để loại trừ tổn thương cột sống cổ
     - Giúp GIẢM chụp X-quang/CT không cần thiết

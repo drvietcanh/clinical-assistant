@@ -30,6 +30,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_blood_pressure,
     validate_heart_rate,
@@ -340,7 +341,10 @@ def calculate_news2(
 
 def render():
     """NEWS2 Score Calculator"""
-    st.subheader("📊 NEWS2 Score")
+    # st.subheader("📊 NEWS2 Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>📊 NEWS2 Score</h3>
+    """, unsafe_allow_html=True)
     st.caption("National Early Warning Score 2 - Hệ thống cảnh báo sớm cho bệnh nhân nội trú")
     
     # Load shared result if available
@@ -548,19 +552,19 @@ def render():
             
             # Determine color and icon based on category
             if result['category'] == "Very High":
-                color = "#6c757d"  # dark gray
+                color = COLORS["error"]
                 icon = "🚨"
             elif result['category'] == "High":
-                color = "#dc3545"  # red
+                color = COLORS["error"]
                 icon = "⚠️"
             elif result['category'] == "Medium":
-                color = "#fd7e14"  # orange
+                color = COLORS["warning"]
                 icon = "⚡"
             elif result['category'] == "Low-Medium":
-                color = "#ffc107"  # yellow
+                color = COLORS["warning"]
                 icon = "⚡"
             else:
-                color = "#28a745"  # green
+                color = COLORS["success"]
                 icon = "✅"
             
             with col2:

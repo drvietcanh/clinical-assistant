@@ -32,6 +32,7 @@ Clinical Utility:
 import streamlit as st
 from scores.utils.validation import validate_age, validate_lab_value
 from components.ui.validation import render_validation_errors
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -201,8 +202,8 @@ def render():
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🦴 RHMP-30</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🦴 RHMP-30</h2>
     <p style='text-align: center; color: #6B7280;'>
     Rotterdam Hip Fracture Mortality Prediction-30 Days<br>
     Dự đoán nguy cơ tử vong 30 ngày sau phẫu thuật gãy xương hông

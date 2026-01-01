@@ -5,6 +5,7 @@ Nguy cơ huyết khối tĩnh mạch sau phẫu thuật
 
 import streamlit as st
 import streamlit.components.v1 as components
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -22,7 +23,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("<h2 style='text-align: center; color: #DC2626;'>🩸 Caprini VTE Risk Score</h2><p style='text-align: center;'><em>Nguy cơ huyết khối sau phẫu thuật</em></p>", unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['error']};'>🩸 Caprini VTE Risk Score</h2><p style='text-align: center;'><em>Nguy cơ huyết khối sau phẫu thuật</em></p>", unsafe_allow_html=True)
     
     col_main, col_suggestions = st.columns([2, 1])
     
@@ -78,7 +79,7 @@ def render():
         else:
             risk = "Cao"; prophylaxis = "LMWH liều cao + tất chống huyết khối"; color = "red"
         
-        score_color = {"green": "#28a745", "orange": "#fd7e14", "red": "#dc3545"}[color]
+        score_color = {"green": COLORS["success"], "orange": COLORS["warning"], "red": COLORS["error"]}[color]
         
         result_html1 = f"<div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'><h2 style='color: {score_color}; margin: 0; text-align: center;'>Caprini: {score}</h2></div>"
         components.html(result_html1, height=120, scrolling=False)

@@ -18,7 +18,11 @@ Stroke. 2001;32(4):891-7.
 """
 
 import streamlit as st
-from components.ui.scoring import render_score_result, render_score_breakdown
+from config.theme import COLORS
+from components.ui.scoring import render_score_result, render_score_breakdown, render_recommendation_box
+
+from scores.utils.validation import validate_positive
+
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -31,8 +35,8 @@ from components.smart_suggestions import render_suggestions
 def render():
     """Render ICH Score Calculator"""
     
-    st.subheader("🧠 ICH Score - Đánh giá Xuất huyết nội sọ")
-    st.caption("Dự đoán tỷ lệ tử vong 30 ngày ở bệnh nhân xuất huyết não")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🧠 ICH Score - Đánh giá Xuất huyết nội sọ</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Dự đoán tỷ lệ tử vong 30 ngày ở bệnh nhân xuất huyết não</p>", unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -82,6 +86,27 @@ def render():
         total_score += gcs_score
         
         st.markdown("### 2️⃣ Thể tích máu tụ (ICH Volume)")
+        
+        # Volume Helper (ABC/2)
+        with st.expander("🧮 Hỗ trợ tính thể tích (Công thức ABC/2)"):
+             col_v1, col_v2, col_v3 = st.columns(3)
+             with col_v1:
+                  dim_a = st.number_input("A (Chiều dài lớn nhất - cm)", min_value=0.0, step=0.1, help="Đường kính lớn nhất của khối máu tụ trên phim CT (cm)")
+             with col_v2:
+                  dim_b = st.number_input("B (Chiều rộng vuông góc - cm)", min_value=0.0, step=0.1, help="Đường kính vuông góc với A lớn nhất (cm)")
+             with col_v3:
+                  dim_c = st.number_input("C (Chiều cao/Số lát cắt - cm)", min_value=0.0, step=0.1, help="Số lát cắt có máu tụ × Độ dày lát cắt (cm)")
+             
+             if dim_a > 0 and dim_b > 0 and dim_c > 0:
+                  ich_vol = (dim_a * dim_b * dim_c) / 2.0
+                  st.info(f"🧠 Thể tích ước tính: **{ich_vol:.1f} cm³**")
+                  
+                  if ich_vol >= 30:
+                       st.error("⚠️ **≥ 30 cm³ (1 điểm)**")
+                       st.caption("→ Tiên lượng xấu hơn")
+                  else:
+                       st.success("✅ **< 30 cm³ (0 điểm)**")
+        
         volume_options = {
             "< 30 cm³": 0,
             "≥ 30 cm³": 1
@@ -153,13 +178,13 @@ def render():
         
         # Mortality prediction
         mortality_data = {
-            0: {"rate": "0%", "desc": "Rất thấp", "color": "#28a745", "icon": "🟢"},
-            1: {"rate": "13%", "desc": "Thấp", "color": "#ffc107", "icon": "🟡"},
-            2: {"rate": "26%", "desc": "Trung bình", "color": "#fd7e14", "icon": "🟠"},
-            3: {"rate": "72%", "desc": "Cao", "color": "#dc3545", "icon": "🔴"},
-            4: {"rate": "97%", "desc": "Rất cao", "color": "#dc3545", "icon": "🔴"},
-            5: {"rate": "100%", "desc": "Cực cao", "color": "#6c757d", "icon": "⚫"},
-            6: {"rate": "100%", "desc": "Cực cao", "color": "#6c757d", "icon": "⚫"}
+            0: {"rate": "0%", "desc": "Rất thấp", "color": COLORS["success"], "icon": "🟢"},
+            1: {"rate": "13%", "desc": "Thấp", "color": COLORS["warning"], "icon": "🟡"},
+            2: {"rate": "26%", "desc": "Trung bình", "color": COLORS["warning"], "icon": "🟠"},
+            3: {"rate": "72%", "desc": "Cao", "color": COLORS["error"], "icon": "🔴"},
+            4: {"rate": "97%", "desc": "Rất cao", "color": COLORS["error"], "icon": "🔴"},
+            5: {"rate": "100%", "desc": "Cực cao", "color": COLORS["dark"], "icon": "⚫"},
+            6: {"rate": "100%", "desc": "Cực cao", "color": COLORS["dark"], "icon": "⚫"}
         }
         
         mortality = mortality_data[total_score]
@@ -194,118 +219,136 @@ def render():
         st.markdown("### 📋 ĐÁNH GIÁ & KHUYẾN NGHỊ")
         
         if total_score == 0:
-            st.success(f"""
-            **{mortality['color']} Tiên lượng TỐT** (ICH Score = 0)
-            
-            **Tỷ lệ tử vong 30 ngày:** 0%
-            
-            **Khuyến nghị:**
-            - Theo dõi sát tại khoa Thần kinh hoặc ICU
-            - Kiểm soát huyết áp mục tiêu: SBP 140-160 mmHg
-            - Tránh thuốc chống đông, kháng tiểu cầu trong giai đoạn cấp
-            - CT scan kiểm tra sau 24h để đánh giá tiến triển
-            - Bắt đầu phục hồi chức năng sớm khi ổn định
-            - Tìm nguyên nhân xuất huyết (tăng huyết áp, vỡ phình mạch, dị dạng mạch máu...)
-            """)
+            render_recommendation_box(
+                title="Tiên lượng TỐT (ICH Score = 0)",
+                content="""
+                **Tỷ lệ tử vong 30 ngày:** 0%
+                
+                **Khuyến nghị:**
+                - Theo dõi sát tại khoa Thần kinh hoặc ICU
+                - Kiểm soát huyết áp mục tiêu: SBP 140-160 mmHg
+                - Tránh thuốc chống đông, kháng tiểu cầu trong giai đoạn cấp
+                - CT scan kiểm tra sau 24h để đánh giá tiến triển
+                - Bắt đầu phục hồi chức năng sớm khi ổn định
+                - Tìm nguyên nhân xuất huyết (tăng huyết áp, vỡ phình mạch, dị dạng mạch máu...)
+                """,
+                type="success",
+                icon="🟢"
+            )
         
         elif total_score == 1:
-            st.success(f"""
-            **{mortality['color']} Tiên lượng TƯƠNG ĐỐI TỐT** (ICH Score = 1)
-            
-            **Tỷ lệ tử vong 30 ngày:** 13%
-            
-            **Khuyến nghị:**
-            - Nhập viện ICU hoặc Stroke Unit
-            - Kiểm soát huyết áp chặt chẽ: SBP 140-160 mmHg
-            - Đảo ngược tác dụng kháng đông nếu bệnh nhân đang dùng
-            - CT scan lặp lại 24h hoặc sớm hơn nếu có diễn biến xấu
-            - Theo dõi GCS, dấu hiệu thần kinh mỗi 1-2 giờ
-            - Cân nhắc tham vấn phẫu thuật thần kinh nếu có chỉ định
-            - Phòng ngừa biến chứng: DVT prophylaxis, stress ulcer prophylaxis
-            """)
+            render_recommendation_box(
+                title="Tiên lượng TƯƠNG ĐỐI TỐT (ICH Score = 1)",
+                content="""
+                **Tỷ lệ tử vong 30 ngày:** 13%
+                
+                **Khuyến nghị:**
+                - Nhập viện ICU hoặc Stroke Unit
+                - Kiểm soát huyết áp chặt chẽ: SBP 140-160 mmHg
+                - Đảo ngược tác dụng kháng đông nếu bệnh nhân đang dùng
+                - CT scan lặp lại 24h hoặc sớm hơn nếu có diễn biến xấu
+                - Theo dõi GCS, dấu hiệu thần kinh mỗi 1-2 giờ
+                - Cân nhắc tham vấn phẫu thuật thần kinh nếu có chỉ định
+                - Phòng ngừa biến chứng: DVT prophylaxis, stress ulcer prophylaxis
+                """,
+                type="success",
+                icon="🟡"
+            )
         
         elif total_score == 2:
-            st.warning(f"""
-            **{mortality['color']} Tiên lượng TRUNG BÌNH** (ICH Score = 2)
-            
-            **Tỷ lệ tử vong 30 ngày:** 26%
-            
-            **Khuyến nghị:**
-            - **BẮT BUỘC nhập ICU/Stroke Unit**
-            - Theo dõi sát: GCS, pupils, huyết động mỗi 1 giờ
-            - Kiểm soát huyết áp tích cực: SBP 140-160 mmHg (nicardipine, labetalol)
-            - Đảo ngược kháng đông KHẨN CẤP nếu có (Vit K, PCC, FFP)
-            - CT scan lặp lại 6-12 giờ hoặc khi có diễn biến xấu
-            - **THAM VẤN PHẪU THUẬT THẦN KINH:** đánh giá chỉ định mổ
-            - Cân nhắc đặt ICP monitor nếu GCS ≤8 hoặc có dấu hiệu tăng áp lực nội sọ
-            - Phòng ngừa: DVT, stress ulcer, nhiễm trùng phổi
-            - Kiểm soát sốt, đường huyết chặt chẽ
-            """)
+            render_recommendation_box(
+                title="Tiên lượng TRUNG BÌNH (ICH Score = 2)",
+                content="""
+                **Tỷ lệ tử vong 30 ngày:** 26%
+                
+                **Khuyến nghị:**
+                - **BẮT BUỘC nhập ICU/Stroke Unit**
+                - Theo dõi sát: GCS, pupils, huyết động mỗi 1 giờ
+                - Kiểm soát huyết áp tích cực: SBP 140-160 mmHg (nicardipine, labetalol)
+                - Đảo ngược kháng đông KHẨN CẤP nếu có (Vit K, PCC, FFP)
+                - CT scan lặp lại 6-12 giờ hoặc khi có diễn biến xấu
+                - **THAM VẤN PHẪU THUẬT THẦN KINH:** đánh giá chỉ định mổ
+                - Cân nhắc đặt ICP monitor nếu GCS ≤8 hoặc có dấu hiệu tăng áp lực nội sọ
+                - Phòng ngừa: DVT, stress ulcer, nhiễm trùng phổi
+                - Kiểm soát sốt, đường huyết chặt chẽ
+                """,
+                type="warning",
+                icon="🟠"
+            )
         
         elif total_score == 3:
-            st.error(f"""
-            **{mortality['color']} Tiên lượng XẤU** (ICH Score = 3)
-            
-            **Tỷ lệ tử vong 30 ngày:** 72%
-            
-            **Khuyến nghị:**
-            - **KHẨN CẤP - ICU chuyên sâu**
-            - Hội chẩn đa chuyên khoa: thần kinh, hồi sức, phẫu thuật thần kinh
-            - Kiểm soát huyết áp: SBP 140-160 mmHg
-            - Đảo ngược kháng đông NGAY LẬP TỨC
-            - **THAM VẤN PHẪU THUẬT THẦN KINH KHẨN CẤP:**
-              * Cân nhắc phẫu thuật giảm áp nếu có hiệu ứng chèn ép
-              * Dẫn lưu não thất nếu có hydrocephalus do IVH
-            - Đặt ICP monitor nếu GCS ≤8
-            - Sedation, mechanical ventilation nếu cần bảo vệ đường thở
-            - Kiểm soát tăng áp lực nội sọ: nâng đầu 30°, thẩm thấu liệu (mannitol/hypertonic saline)
-            - Thảo luận tiên lượng với gia đình
-            - Cân nhắc mức độ chăm sóc (goals of care discussion)
-            """)
+            render_recommendation_box(
+                title="Tiên lượng XẤU (ICH Score = 3)",
+                content="""
+                **Tỷ lệ tử vong 30 ngày:** 72%
+                
+                **Khuyến nghị:**
+                - **KHẨN CẤP - ICU chuyên sâu**
+                - Hội chẩn đa chuyên khoa: thần kinh, hồi sức, phẫu thuật thần kinh
+                - Kiểm soát huyết áp: SBP 140-160 mmHg
+                - Đảo ngược kháng đông NGAY LẬP TỨC
+                - **THAM VẤN PHẪU THUẬT THẦN KINH KHẨN CẤP:**
+                  * Cân nhắc phẫu thuật giảm áp nếu có hiệu ứng chèn ép
+                  * Dẫn lưu não thất nếu có hydrocephalus do IVH
+                - Đặt ICP monitor nếu GCS ≤8
+                - Sedation, mechanical ventilation nếu cần bảo vệ đường thở
+                - Kiểm soát tăng áp lực nội sọ: nâng đầu 30°, thẩm thấu liệu (mannitol/hypertonic saline)
+                - Thảo luận tiên lượng với gia đình
+                - Cân nhắc mức độ chăm sóc (goals of care discussion)
+                """,
+                type="error",
+                icon="🔴"
+            )
         
         elif total_score == 4:
-            st.error(f"""
-            **{mortality['color']} Tiên lượng RẤT XẤU** (ICH Score = 4)
-            
-            **Tỷ lệ tử vong 30 ngày:** 97%
-            
-            **Khuyến nghị:**
-            - **TIÊN LƯỢNG RẤT XẤU - Tử vong gần như chắc chắn**
-            - Hội chẩn khẩn cấp đa chuyên khoa
-            - **Thảo luận nghiêm túc với gia đình về:**
-              * Tiên lượng cực kỳ xấu
-              * Mức độ chăm sóc (full code vs DNR/DNI)
-              * Comfort care measures
-            - Nếu gia đình chọn điều trị tích cực:
-              * ICU chuyên sâu, hồi sức tích cực
-              * Tham vấn phẫu thuật thần kinh (tỷ lệ thành công rất thấp)
-              * Kiểm soát triệu chứng, giảm đau
-            - Cân nhắc chăm sóc giảm nhẹ (palliative care consultation)
-            - Hỗ trợ tâm lý gia đình
-            """)
+            render_recommendation_box(
+                title="Tiên lượng RẤT XẤU (ICH Score = 4)",
+                content="""
+                **Tỷ lệ tử vong 30 ngày:** 97%
+                
+                **Khuyến nghị:**
+                - **TIÊN LƯỢNG RẤT XẤU - Tử vong gần như chắc chắn**
+                - Hội chẩn khẩn cấp đa chuyên khoa
+                - **Thảo luận nghiêm túc với gia đình về:**
+                  * Tiên lượng cực kỳ xấu
+                  * Mức độ chăm sóc (full code vs DNR/DNI)
+                  * Comfort care measures
+                - Nếu gia đình chọn điều trị tích cực:
+                  * ICU chuyên sâu, hồi sức tích cực
+                  * Tham vấn phẫu thuật thần kinh (tỷ lệ thành công rất thấp)
+                  * Kiểm soát triệu chứng, giảm đau
+                - Cân nhắc chăm sóc giảm nhẹ (palliative care consultation)
+                - Hỗ trợ tâm lý gia đình
+                """,
+                type="error",
+                icon="🔴"
+            )
         
         else:  # Score 5-6
-            st.error(f"""
-            **{mortality['color']} Tiên lượng CỰC KỲ XẤU** (ICH Score = {total_score})
-            
-            **Tỷ lệ tử vong 30 ngày:** 100%
-            
-            **Khuyến nghị:**
-            - **TIÊN LƯỢNG CỰC KỲ XẤU - Tử vong gần như chắc chắn**
-            - **Thảo luận thẳng thắn với gia đình:**
-              * Không có khả năng sống sót
-              * Điều trị tích cực không mang lại lợi ích
-              * Cân nhắc chăm sóc giảm nhẹ/comfort care
-            - **Khuyến nghị mạnh mẽ:**
-              * **Palliative care consultation**
-              * Comfort measures only
-              * Pain management, symptom control
-              * Spiritual support
-              * Family support
-            - Tôn trọng nguyện vọng của bệnh nhân/gia đình
-            - Cân nhắc hiến tạng nếu phù hợp và gia đình đồng ý
-            - End-of-life care planning
-            """)
+            render_recommendation_box(
+                title=f"Tiên lượng CỰC KỲ XẤU (ICH Score = {total_score})",
+                content="""
+                **Tỷ lệ tử vong 30 ngày:** 100%
+                
+                **Khuyến nghị:**
+                - **TIÊN LƯỢNG CỰC KỲ XẤU - Tử vong gần như chắc chắn**
+                - **Thảo luận thẳng thắn với gia đình:**
+                  * Không có khả năng sống sót
+                  * Điều trị tích cực không mang lại lợi ích
+                  * Cân nhắc chăm sóc giảm nhẹ/comfort care
+                - **Khuyến nghị mạnh mẽ:**
+                  * **Palliative care consultation**
+                  * Comfort measures only
+                  * Pain management, symptom control
+                  * Spiritual support
+                  * Family support
+                - Tôn trọng nguyện vọng của bệnh nhân/gia đình
+                - Cân nhắc hiến tạng nếu phù hợp và gia đình đồng ý
+                - End-of-life care planning
+                """,
+                type="neutral",
+                icon="⚫"
+            )
         
         # Additional notes
         st.markdown("---")

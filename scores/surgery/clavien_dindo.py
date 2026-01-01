@@ -30,6 +30,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -82,8 +83,10 @@ CLAVIEN_DINDO_GRADES = {
 def render():
     """Render Clavien-Dindo Classification calculator"""
     
-    st.title("🔪 Clavien-Dindo Classification")
-    st.markdown("**Phân loại biến chứng sau phẫu thuật (DÙNG HÀNG NGÀY)**")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🔪 Clavien-Dindo Classification</h2>
+    <p style='text-align: center;'><em>Phân loại biến chứng sau phẫu thuật (DÙNG HÀNG NGÀY)</em></p>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()

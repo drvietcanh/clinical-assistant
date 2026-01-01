@@ -4,6 +4,7 @@ Phân loại tầm nhìn khi soi thanh quản
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.anesthesia_validation import validate_cormack_lehane_grade
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
@@ -65,8 +66,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🔍 Cormack-Lehane Classification</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🔍 Cormack-Lehane Classification</h2>
     <p style='text-align: center;'><em>Phân loại tầm nhìn khi soi thanh quản</em></p>
     """, unsafe_allow_html=True)
     

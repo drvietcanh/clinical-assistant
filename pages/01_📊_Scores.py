@@ -20,6 +20,7 @@ from components.scores_dark_mode import init_theme, render_theme_toggle
 from components.scores_autocomplete import render_search_with_autocomplete, add_to_recent_searches
 from components.scores_related import render_related_calculators
 from components.scores_mobile import init_mobile_optimizations
+from components.scores_references import render_references
 
 # ========== HELPER FUNCTIONS ==========
 
@@ -332,6 +333,14 @@ def render_calculator_with_related(specialty_name: str, score_id: str, render_fu
     """Render calculator and show related calculators"""
     if score_id:
         render_func(score_id)
+        # Verify if specialty/score info is available to pass to render_references
+        # It's better to modify render_related_calculators or add it here if we have access to score_info
+        # We need to look up score_info from global SCORES_BY_SPECIALTY
+        from scores.config import SCORES_BY_SPECIALTY
+        if specialty_name in SCORES_BY_SPECIALTY and score_id in SCORES_BY_SPECIALTY[specialty_name]:
+            score_info = SCORES_BY_SPECIALTY[specialty_name][score_id]
+            render_references(score_info)
+            
         # Show related calculators
         render_related_calculators(specialty_name, score_id)
 

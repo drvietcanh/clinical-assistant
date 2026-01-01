@@ -4,6 +4,7 @@ Stroke risk assessment in atrial fibrillation
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -43,7 +44,10 @@ except ImportError:
 
 def render():
     """CHA₂DS₂-VASc Score Calculator"""
-    st.subheader("❤️ CHA₂DS₂-VASc Score")
+    # st.subheader("❤️ CHA₂DS₂-VASc Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>❤️ CHA₂DS₂-VASc Score</h3>
+    """, unsafe_allow_html=True)
     st.caption("Đánh giá nguy cơ đột quỵ Trong Rung Nhĩ")
     
     # Load shared result if available
@@ -237,13 +241,13 @@ def render():
                 
                 # Map risk level to color
                 color_map = {
-                    'very_low': 'success',
-                    'low': 'success',
-                    'moderate': 'warning',
-                    'high': 'error',
-                    'very_high': 'error'
+                    'very_low': COLORS['success'],
+                    'low': COLORS['success'],
+                    'moderate': COLORS['warning'],
+                    'high': COLORS['error'],
+                    'very_high': COLORS['error']
                 }
-                component_color = color_map.get(risk_level, 'info')
+                component_color = color_map.get(risk_level, COLORS['primary'])
                 
                 # Use render_score_result for main score display
                 render_score_result(

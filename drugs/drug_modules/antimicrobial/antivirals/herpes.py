@@ -392,7 +392,22 @@ HERPES_ANTIVIRALS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Nephrotoxicity (high doses, dehydration)", "Neurotoxicity (confusion, hallucinations - especially in renal impairment)", "Thrombotic Thrombocytopenic Purpura/Hemolytic Uremic Syndrome (TTP/HUS) - in immunocompromised"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Renal function (CrCl, creatinine) - CRITICAL", "CNS status (especially in elderly/renal impairment)", "Signs of TTP/HUS (pallor, bruising, oliguria) - in immunocompromised"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Herpes Simplex Virus Infections",
+            "IDSA Guidelines - Varicella-Zoster Virus Infections",
+            "CDC STI Treatment Guidelines 2021 - Genital Herpes"
+        ]
     },
 }
 

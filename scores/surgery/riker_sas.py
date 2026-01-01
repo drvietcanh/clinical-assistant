@@ -4,6 +4,7 @@ Thang điểm an thần/kích động
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -29,43 +30,43 @@ def get_riker_sas_interpretation(score):
             "description": "Không đáp ứng - Không đáp ứng với kích thích đau mạnh",
             "level": "An thần rất sâu",
             "recommendation": "Quá sâu, cần giảm liều an thần ngay",
-            "color": "red"
+            "color": COLORS["error"]
         },
         2: {
             "description": "Đáp ứng rất chậm - Đáp ứng với kích thích đau mạnh nhưng không mở mắt hoặc cử động",
             "level": "An thần sâu",
             "recommendation": "Có thể quá sâu, cân nhắc giảm liều",
-            "color": "orange"
+            "color": COLORS["warning"]
         },
         3: {
             "description": "Đáp ứng chậm - Đáp ứng với kích thích vật lý hoặc lệnh bằng lời",
             "level": "An thần vừa",
             "recommendation": "Mức độ phù hợp cho bệnh nhân thở máy",
-            "color": "green"
+            "color": COLORS["success"]
         },
         4: {
             "description": "Yên tĩnh và hợp tác - Dễ đánh thức, hợp tác với máy thở",
             "level": "An thần nhẹ",
             "recommendation": "Mức độ phù hợp cho bệnh nhân thở máy",
-            "color": "green"
+            "color": COLORS["success"]
         },
         5: {
             "description": "Kích động nhẹ - Lo lắng hoặc bồn chồn nhưng không kích động",
             "level": "Kích động nhẹ",
             "recommendation": "Có thể cần tăng an thần nhẹ",
-            "color": "yellow"
+            "color": COLORS["warning"]
         },
         6: {
             "description": "Kích động vừa - Kích động, không hợp tác, cần thuốc an thần",
             "level": "Kích động vừa",
             "recommendation": "Cần tăng an thần",
-            "color": "orange"
+            "color": COLORS["warning"]
         },
         7: {
             "description": "Kích động nguy hiểm - Kích động mạnh, kéo ống NKQ, đánh nhân viên",
             "level": "Kích động nguy hiểm",
             "recommendation": "Cần tăng an thần ngay, có thể cần thuốc an thần mạnh",
-            "color": "red"
+            "color": COLORS["error"]
         }
     }
     
@@ -82,8 +83,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>😴 Riker SAS - Sedation-Agitation Scale</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>😴 Riker SAS - Sedation-Agitation Scale</h2>
     <p style='text-align: center;'><em>Thang điểm an thần/kích động</em></p>
     """, unsafe_allow_html=True)
     
@@ -186,9 +187,9 @@ def render():
             st.markdown("---")
             
             # Recommendation
-            if result['color'] == "green":
+            if result['color'] == COLORS["success"]:
                 st.success(f"**Khuyến nghị:** {result['recommendation']}")
-            elif result['color'] == "orange" or result['color'] == "yellow":
+            elif result['color'] == COLORS["warning"]:
                 st.warning(f"**Khuyến nghị:** {result['recommendation']}")
             else:
                 st.error(f"**Khuyến nghị:** {result['recommendation']}")

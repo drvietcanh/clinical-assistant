@@ -35,8 +35,9 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_age
-from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -159,13 +160,13 @@ def render():
     """Render Sudbury Vertigo Risk Score interface"""
     import streamlit as st
     
-    st.set_page_config(page_title="Sudbury Vertigo Risk Score", layout="wide")
+    # st.set_page_config(page_title="Sudbury Vertigo Risk Score", layout="wide")
     
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🧠 Sudbury Vertigo Risk Score</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🧠 Sudbury Vertigo Risk Score</h3>
     <p style='text-align: center; color: #6B7280;'>
     Xác định bệnh nhân chóng mặt có nguy cơ tăng cao chẩn đoán trung ương nghiêm trọng
     </p>
@@ -273,18 +274,25 @@ def render():
             
             # Display results
             st.markdown("---")
-            st.markdown("### 📋 Kết quả Sudbury Vertigo Risk Score")
+            st.subheader("📋 Kết quả")
             
-            col1, col2 = st.columns(2)
-            
-            with col1:
-                st.metric("Điểm số", f"{result['score']}/8")
-            
-            with col2:
-                st.metric(
-                    "Nguy cơ",
-                    result['risk_category']
-                )
+            if result['score'] <= 2:
+                color = COLORS["success"]
+                icon = "✅"
+            elif result['score'] <= 4:
+                color = COLORS["warning"]
+                icon = "⚠️"
+            else:
+                color = COLORS["error"]
+                icon = "🚨"
+
+            render_score_result(
+                title="Sudbury Vertigo Risk Score",
+                score=result['score'],
+                interpretation=f"{result['risk_category']}\n({result['interpretation']})",
+                color=color,
+                icon=icon
+            )
             
             # Details
             st.markdown("### 📝 Chi tiết tính điểm")

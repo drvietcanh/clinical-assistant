@@ -23,10 +23,12 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 from components.ui.scoring import (
     render_score_result,
 )
+from scores.utils.validation import validate_age, validate_gcs, validate_blood_pressure, validate_heart_rate, validate_temperature, validate_lab_value
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -319,23 +321,28 @@ def calculate_saps2(params: dict) -> dict:
     if score < 30:
         interpretation = "Mức độ nặng THẤP"
         mortality_range = "<10%"
-        color = "🟢"
+        color = COLORS["success"]
+        icon = "🟢"
     elif score < 40:
         interpretation = "Mức độ nặng TRUNG BÌNH"
         mortality_range = "10-25%"
-        color = "🟡"
+        color = COLORS["warning"]
+        icon = "🟡"
     elif score < 50:
         interpretation = "Mức độ nặng CAO"
         mortality_range = "25-40%"
-        color = "🟠"
+        color = COLORS["warning"]
+        icon = "🟠"
     elif score < 60:
         interpretation = "Mức độ nặng RẤT CAO"
         mortality_range = "40-60%"
-        color = "🟠"
+        color = COLORS["error"]
+        icon = "🟠"
     else:
         interpretation = "Mức độ nặng CỰC KỲ CAO"
         mortality_range = ">60%"
-        color = "🔴"
+        color = COLORS["error"]
+        icon = "🔴"
     
     return {
         'total_score': score,
@@ -343,6 +350,7 @@ def calculate_saps2(params: dict) -> dict:
         'mortality_range': mortality_range,
         'interpretation': interpretation,
         'color': color,
+        'icon': icon,
         'details': details
     }
 
@@ -350,7 +358,10 @@ def calculate_saps2(params: dict) -> dict:
 def render():
     """Render SAPS II calculator"""
     
-    st.title("🏥 SAPS II Score")
+    # st.subheader("🏥 SAPS II Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🏥 SAPS II Score</h3>
+    """, unsafe_allow_html=True)
     st.markdown("**Simplified Acute Physiology Score II - Dự đoán tử vong ICU đơn giản hóa**")
     
     # Load shared result if available
@@ -631,7 +642,8 @@ def render():
             score=result['total_score'],
             interpretation=result['interpretation'],
             mortality=mortality_text,
-            icon=result['color'],
+            color=result['color'],
+            icon=result['icon'],
             thresholds={"low": 20, "moderate": 40, "high": 60},  # SAPS II thresholds
             size="large"
         )

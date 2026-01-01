@@ -35,6 +35,7 @@ from components.ui.results import render_result_box, render_result_card
 from components.ui.alerts import render_info_alert, render_warning_alert
 from scores.utils.validation import validate_positive
 from components.ui.scoring import render_score_result, render_score_breakdown
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -64,19 +65,19 @@ def calculate_four_score(eye: int, motor: int, brainstem: int, respiration: int)
     if total_score >= 13:
         interpretation = "Tỉnh táo hoặc lú lẫn nhẹ"
         severity = "Nhẹ"
-        color = "success"
+        color = COLORS["success"]
     elif total_score >= 9:
         interpretation = "Hôn mê nhẹ"
         severity = "Trung bình"
-        color = "warning"
+        color = COLORS["warning"]
     elif total_score >= 5:
         interpretation = "Hôn mê trung bình"
         severity = "Nặng"
-        color = "error"
+        color = COLORS["error"]
     else:
         interpretation = "Hôn mê sâu"
         severity = "Rất nặng"
-        color = "error"
+        color = COLORS["error"]
     
     return {
         "total_score": total_score,
@@ -92,8 +93,8 @@ def calculate_four_score(eye: int, motor: int, brainstem: int, respiration: int)
 
 def render():
     """FOUR Score Calculator"""
-    st.subheader("🧠 FOUR Score - Full Outline of UnResponsiveness")
-    st.caption("Đánh giá mức độ ý thức - Thay thế GCS cho bệnh nhân thở máy")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🧠 FOUR Score - Full Outline of UnResponsiveness</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Đánh giá mức độ ý thức - Thay thế GCS cho bệnh nhân thở máy</p>", unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -228,18 +229,15 @@ def render():
         st.markdown("### 📊 Kết quả")
         
         # Map color names to hex
-        color_map = {
-            "success": "#28a745",  # green
-            "warning": "#fd7e14",  # orange
-            "error": "#dc3545"     # red
-        }
+        score_color = result['color']
+        
+        # Icon map
         icon_map = {
-            "success": "✅",
-            "warning": "⚠️",
-            "error": "🚨"
+            COLORS["success"]: "✅",
+            COLORS["warning"]: "⚠️",
+            COLORS["error"]: "🚨"
         }
-        score_color = color_map.get(result['color'], "#17a2b8")
-        score_icon = icon_map.get(result['color'], "🧠")
+        score_icon = icon_map.get(score_color, "🧠")
         
         # Use render_score_result for main score display
         render_score_result(

@@ -31,8 +31,10 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_age, validate_lab_value
 from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -126,13 +128,13 @@ def calculate_precise_dapt(
         risk_level = "Thấp"
         risk_class = "LOW"
         dapt_duration = "12 tháng (tiêu chuẩn)"
-        color = "success"
+        color = COLORS["success"]
         recommendation = "DAPT tiêu chuẩn 12 tháng"
     else:
         risk_level = "Cao"
         risk_class = "HIGH"
         dapt_duration = "3-6 tháng (ngắn)"
-        color = "error"
+        color = COLORS["error"]
         recommendation = "DAPT ngắn 3-6 tháng"
     
     return {
@@ -149,7 +151,10 @@ def calculate_precise_dapt(
 def render():
     """Render PRECISE-DAPT Score calculator"""
     
-    st.title("💊 PRECISE-DAPT Score")
+    # st.title("💊 PRECISE-DAPT Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>💊 PRECISE-DAPT Score</h3>
+    """, unsafe_allow_html=True)
     st.markdown("**Dự đoán nguy cơ chảy máu khi dùng DAPT (DÙNG HÀNG NGÀY)**")
     
     # Load shared result if available
@@ -276,20 +281,14 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết quả")
-        
-        col_r1, col_r2 = st.columns([1, 2])
-        
+        # Details
         with col_r1:
-            st.metric(
-                "**PRECISE-DAPT Score**",
-                f"{result['total_score']}"
-            )
-            st.caption(f"Ngưỡng: 25")
+             st.write("") # Placeholder or remove columns if not needed anymore, check logic below. 
+             # Actually I should remove the whole columns block and just put render_score_result.
+             pass
         
         with col_r2:
-            st.markdown(f"### {result['risk_level'].upper()}")
-            st.caption(f"Nguy cơ chảy máu: {result['risk_level']}")
+             pass
         
         # Score breakdown
         with st.expander("📋 Chi tiết điểm số", expanded=True):
@@ -298,31 +297,22 @@ def render():
             st.markdown(f"**Tổng điểm: {result['total_score']}**")
         
         # Interpretation
-        st.markdown("---")
-        st.markdown("### 💡 Diễn giải")
-        
         if result['risk_class'] == "LOW":
-            st.success(f"""
-            **✅ Nguy cơ chảy máu THẤP (Score = {result['total_score']} < 25):**
-            
-            **Khuyến cáo:**
-            - **DAPT tiêu chuẩn 12 tháng**
-            - Aspirin + P2Y12 inhibitor (clopidogrel/prasugrel/ticagrelor)
-            - Theo dõi sát dấu hiệu chảy máu
-            - Có thể kéo dài hơn nếu nguy cơ thiếu máu cao (xem DAPT Score)
-            """)
+            icon = "✅"
+            interpretation_text = ""
         else:
-            st.error(f"""
-            **🚨 Nguy cơ chảy máu CAO (Score = {result['total_score']} ≥ 25):**
+            icon = "🚨"
+            interpretation_text = ""
             
-            **Khuyến cáo:**
-            - **DAPT ngắn 3-6 tháng**
-            - Aspirin + P2Y12 inhibitor (clopidogrel/prasugrel/ticagrelor)
-            - Sau đó chuyển sang aspirin đơn độc
-            - Theo dõi sát dấu hiệu chảy máu
-            - Cân nhắc dùng clopidogrel thay vì prasugrel/ticagrelor (ít chảy máu hơn)
-            - Xem xét stent phủ thuốc thế hệ mới (cho phép DAPT ngắn)
-            """)
+        render_score_result(
+            title="PRECISE-DAPT Score",
+            score=result['total_score'],
+            interpretation=f"{result['risk_level'].upper()} Risk - {result['recommendation']}",
+            mortality=None,
+            color=result['color'],
+            icon=icon,
+            size="large"
+        )
         
         st.info("""
         **📌 Lưu ý quan trọng:**

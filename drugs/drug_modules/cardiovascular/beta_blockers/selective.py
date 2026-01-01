@@ -187,7 +187,18 @@ SELECTIVE_BETA_BLOCKERS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Cardiovascular (Bradycardia, AV Block)"],
+            "requires_monitoring": ["Heart rate", "Blood pressure", "Renal function", "ECG"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ACC/AHA Guidelines - Angina"
+        ]
     },
     
     "Atenolol": {
@@ -425,7 +436,8 @@ SELECTIVE_BETA_BLOCKERS = {
           "narrow_therapeutic_index": False,
           "icu_critical_care_only": False,
           "bleeding_risk": "Low",
-          "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"}
+          "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"},
+          "requires_monitoring": ["Heart rate", "Blood pressure", "Renal function"]
       },
       "guideline_tags": [
           "ACC/AHA Guidelines - Post-Myocardial Infarction",
@@ -625,7 +637,18 @@ SELECTIVE_BETA_BLOCKERS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Cardiovascular (Bradycardia)"],
+            "requires_monitoring": ["Heart rate", "Blood pressure", "Intraocular pressure (for ophthalmic)"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "AAO Guidelines - Glaucoma (ophthalmic form)"
+        ]
     },
     "Bisoprolol": {
     "group": "Cardiovascular - Beta-blocker (Selective)",
@@ -665,13 +688,7 @@ SELECTIVE_BETA_BLOCKERS = {
           "Insulin: che dấu triệu chứng hạ đường huyết"
       ],
       "pregnancy": "C",
-      "risk_flags": {
-          "high_alert": False,
-          "narrow_therapeutic_index": False,
-          "icu_critical_care_only": False,
-          "bleeding_risk": "Low",
-          "organ_toxicity": ["cardiac_bradycardia", "cardiac_av_block"]
-      },
+
       "guideline_tags": [
           "ACC/AHA/HFSA HFrEF GDMT",
           "ESC HFrEF Class I"
@@ -878,7 +895,8 @@ SELECTIVE_BETA_BLOCKERS = {
           "narrow_therapeutic_index": False,
           "icu_critical_care_only": False,
           "bleeding_risk": "Low",
-          "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"}
+          "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"},
+          "requires_monitoring": ["Heart rate", "Blood pressure", "Renal function"]
       },
       "guideline_tags": [
           "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
@@ -926,13 +944,7 @@ SELECTIVE_BETA_BLOCKERS = {
             "NSAID: giảm hiệu quả"
         ],
         "pregnancy": "C",
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": ["cardiac_bradycardia", "cardiac_av_block"]
-        },
+
         "guideline_tags": [
             "ACC/AHA/HFSA HFrEF GDMT (metoprolol succinate)",
             "ESC HFrEF Class I (metoprolol succinate)"
@@ -1121,7 +1133,8 @@ SELECTIVE_BETA_BLOCKERS = {
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"}
+            "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"},
+            "requires_monitoring": ["Heart rate", "Blood pressure", "Renal function"]
         },
         "guideline_tags": [
             "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
@@ -1317,7 +1330,8 @@ SELECTIVE_BETA_BLOCKERS = {
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"}
+            "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"},
+            "requires_monitoring": ["Heart rate", "Blood pressure"]
         },
         "guideline_tags": [
             "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
@@ -1535,8 +1549,20 @@ SELECTIVE_BETA_BLOCKERS = {
                 "American Heart Association/American College of Cardiology guidelines - Beta-blockers"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - Multiple large RCTs and extensive clinical experience"
-        }
+            "evidence_level": "High - Multiple large RCTs (ALLHAT) and clinical guidelines (ESC/ESH 2023, ACC/AHA 2024)"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["Cardiovascular (Bradycardia, AV Block)"],
+            "requires_monitoring": ["Heart rate", "Blood pressure", "Intraocular pressure (for ophthalmic)"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ESC/ESH Guidelines - Hypertension"
+        ]
     },
     
 }

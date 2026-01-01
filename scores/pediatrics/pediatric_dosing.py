@@ -4,11 +4,15 @@ Weight-based, BSA-based, and age-based dosing for children
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.results import render_result_box
 from typing import Dict, Optional, Tuple
 from scores.metabolism.bmi_ibw_bsa import (
     calculate_bsa_mosteller,
+    calculate_bsa_mosteller,
     calculate_bsa_dubois
 )
+from scores.utils.validation import validate_weight, validate_input_range
 
 
 def calculate_weight_based_dose(
@@ -251,8 +255,8 @@ def render_pediatric_dosing_calculator() -> None:
     """
     Render pediatric dosing calculator interface
     """
-    st.subheader("👶 Pediatric Dosing Calculator")
-    st.caption("Tính liều thuốc cho trẻ em")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>👶 Pediatric Dosing Calculator</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Tính liều thuốc cho trẻ em</p>", unsafe_allow_html=True)
     
     # Method selection
     method = st.radio(
@@ -313,6 +317,23 @@ def render_pediatric_dosing_calculator() -> None:
                 min_dose = None
         
         if st.button("🧮 Tính liều", type="primary"):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_wt, wt_error = validate_weight(weight_kg)
+            if not is_valid_wt:
+                 validation_errors.append(wt_error)
+                 
+            is_valid_dose, dose_error = validate_input_range(dose_per_kg, "Liều", 0.0, 1000.0, "mg/kg")
+            if not is_valid_dose:
+                 validation_errors.append(dose_error)
+            
+            if validation_errors:
+                st.error("**⚠️ Lỗi validation:**")
+                for error in validation_errors:
+                    st.error(f"- {error}")
+                st.stop()
+
             result = calculate_weight_based_dose(
                 weight_kg=weight_kg,
                 dose_per_kg=dose_per_kg,
@@ -323,11 +344,14 @@ def render_pediatric_dosing_calculator() -> None:
             st.markdown("---")
             st.markdown("### 📊 Kết quả")
             
-            col1, col2 = st.columns(2)
-            with col1:
-                st.metric("Liều tính được", f"{result['calculated_dose']:.2f} mg")
-            with col2:
-                st.metric("Cân nặng", f"{weight_kg:.1f} kg")
+            render_result_box(
+                title="Kết quả tính liều",
+                value=f"{result['calculated_dose']:.2f} mg",
+                subtitle=f"Cân nặng: {weight_kg:.1f} kg",
+                color=COLORS["success"],
+                icon="💊",
+                size="large"
+            )
             
             st.markdown(f"**Liều:** {dose_per_kg:.2f} mg/kg × {weight_kg:.1f} kg = **{result['calculated_dose']:.2f} mg**")
             
@@ -384,6 +408,27 @@ def render_pediatric_dosing_calculator() -> None:
             max_dose = None
         
         if st.button("🧮 Tính liều", type="primary"):
+            # Validate inputs
+            validation_errors = []
+            
+            is_valid_wt, wt_error = validate_weight(weight_kg)
+            if not is_valid_wt:
+                 validation_errors.append(wt_error)
+
+            is_valid_ht, ht_error = validate_input_range(height_cm, "Chiều cao", 10.0, 200.0, "cm")
+            if not is_valid_ht:
+                 validation_errors.append(ht_error)
+                 
+            is_valid_dose, dose_error = validate_input_range(dose_per_m2, "Liều", 0.0, 10000.0, "mg/m²")
+            if not is_valid_dose:
+                 validation_errors.append(dose_error)
+            
+            if validation_errors:
+                st.error("**⚠️ Lỗi validation:**")
+                for error in validation_errors:
+                    st.error(f"- {error}")
+                st.stop()
+
             result = calculate_bsa_based_dose(
                 weight_kg=weight_kg,
                 height_cm=height_cm,
@@ -394,13 +439,15 @@ def render_pediatric_dosing_calculator() -> None:
             st.markdown("---")
             st.markdown("### 📊 Kết quả")
             
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.metric("BSA", f"{result['bsa']:.2f} m²")
-            with col2:
-                st.metric("Liều tính được", f"{result['calculated_dose']:.2f} mg")
-            with col3:
-                st.metric("Liều/m²", f"{dose_per_m2:.0f} mg/m²")
+            render_result_box(
+                title="Kết quả tính liều (BSA)",
+                value=f"{result['calculated_dose']:.2f} mg",
+                subtitle=f"BSA: {result['bsa']:.2f} m²",
+                color=COLORS["success"],
+                icon="💊",
+                size="large"
+            )
+            st.metric("Liều/m²", f"{dose_per_m2:.0f} mg/m²")
             
             st.markdown(f"**Liều:** {dose_per_m2:.0f} mg/m² × {result['bsa']:.2f} m² = **{result['calculated_dose']:.2f} mg**")
             

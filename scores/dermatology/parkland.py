@@ -4,6 +4,7 @@ Công thức truyền dịch cho bệnh nhân bỏng
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -49,8 +50,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #F59E0B;'>💧 Parkland Formula</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>💧 Parkland Formula</h3>
     <p style='text-align: center;'><em>Truyền dịch ban đầu cho bệnh nhân bỏng</em></p>
     """, unsafe_allow_html=True)
     
@@ -124,30 +125,32 @@ def render():
         
         st.markdown("## 📊 Kết quả - Parkland Formula")
         
-        st.success(f"""
-        ### Công thức:
-        **4 ml × {tbsa}% × {weight} kg = {result['total_24h']:.0f} ml Ringer Lactate trong 24h**
-        """)
+        st.markdown(f"""
+        <div style="background-color: {COLORS['success']}15; padding: 20px; border-radius: 10px; border-left: 5px solid {COLORS['success']}; margin-bottom: 20px;">
+            <h3 style="color: {COLORS['success']}; margin-top: 0;">Tổng dịch 24h: {result['total_24h']:.0f} ml</h3>
+            <p style="margin-bottom: 0;"><strong>Công thức:</strong> 4 ml × {tbsa}% × {weight} kg</p>
+        </div>
+        """, unsafe_allow_html=True)
         
         col1, col2 = st.columns(2)
         
         with col1:
-            st.markdown("""
-            <div style='background-color: #FEE2E2; padding: 20px; border-radius: 10px; border-left: 5px solid #DC2626;'>
-                <h3 style='color: #DC2626; margin-top: 0;'>⏱️ 8 giờ ĐẦU</h3>
-                <p style='font-size: 1.5em; font-weight: bold; margin: 10px 0;'>{:.0f} ml</p>
-                <p style='margin: 0;'>Tốc độ: <strong>{:.0f} ml/giờ</strong></p>
+            st.markdown(f"""
+            <div style='background-color: {COLORS['error']}22; padding: 20px; border-radius: 10px; border-left: 5px solid {COLORS['error']};'>
+                <h3 style='color: {COLORS['error']}; margin-top: 0;'>⏱️ 8 giờ ĐẦU</h3>
+                <p style='font-size: 1.5em; font-weight: bold; margin: 10px 0;'>{result['first_8h']:.0f} ml</p>
+                <p style='margin: 0;'>Tốc độ: <strong>{result['rate_first_8h']:.0f} ml/giờ</strong></p>
             </div>
-            """.format(result['first_8h'], result['rate_first_8h']), unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
         
         with col2:
-            st.markdown("""
-            <div style='background-color: #DBEAFE; padding: 20px; border-radius: 10px; border-left: 5px solid #2563EB;'>
-                <h3 style='color: #2563EB; margin-top: 0;'>⏱️ 16 giờ SAU</h3>
-                <p style='font-size: 1.5em; font-weight: bold; margin: 10px 0;'>{:.0f} ml</p>
-                <p style='margin: 0;'>Tốc độ: <strong>{:.0f} ml/giờ</strong></p>
+            st.markdown(f"""
+            <div style='background-color: {COLORS['primary']}22; padding: 20px; border-radius: 10px; border-left: 5px solid {COLORS['primary']};'>
+                <h3 style='color: {COLORS['primary']}; margin-top: 0;'>⏱️ 16 giờ SAU</h3>
+                <p style='font-size: 1.5em; font-weight: bold; margin: 10px 0;'>{result['next_16h']:.0f} ml</p>
+                <p style='margin: 0;'>Tốc độ: <strong>{result['rate_next_16h']:.0f} ml/giờ</strong></p>
             </div>
-            """.format(result['next_16h'], result['rate_next_16h']), unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
         
         st.markdown("---")
         

@@ -1,6 +1,8 @@
 """P-POSSUM - Portsmouth Physiological and Operative Severity Score"""
 import streamlit as st
 import streamlit.components.v1 as components
+from scores.utils.validation import validate_age, validate_blood_pressure, validate_heart_rate, validate_input_range
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -18,7 +20,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("<h2 style='text-align: center; color: #DC2626;'>🏥 P-POSSUM Score</h2><p style='text-align: center;'><em>Nguy cơ tử vong phẫu thuật</em></p>", unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['error']};'>🏥 P-POSSUM Score</h2><p style='text-align: center;'><em>Nguy cơ tử vong phẫu thuật</em></p>", unsafe_allow_html=True)
     
     col_main, col_suggestions = st.columns([2, 1])
     
@@ -38,10 +40,21 @@ def render():
     
     st.markdown("---"); st.warning("⚠️ **Lưu ý:** P-POSSUM rất phức tạp (18 biến số), thường cần tính toán chuyên dụng. Đây là phiên bản đơn giản hóa."); age = st.number_input("Tuổi", 20, 100, 60, format="%d"); cardiac = st.selectbox("Tim mạch", ["Bình thường", "Bệnh tim", "Suy tim"]); respiratory = st.selectbox("Hô hấp", ["Bình thường", "Khó thở nhẹ", "COPD"]); bp = st.number_input("SBP (mmHg)", 50, 200, 120, format="%d"); pulse_rate = st.number_input("Mạch", 40, 150, 80, format="%d"); gcs_score = st.number_input("GCS", 3, 15, 15, format="%d"); operation_severity = st.selectbox("Mức độ phẫu thuật", ["Nhỏ", "Trung bình", "Lớn", "Lớn+"])
     if st.button("🔬 Ước tính P-POSSUM", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        if not validate_age(age)[0]: validation_errors.append("Tuổi không hợp lệ")
+        if not validate_blood_pressure(bp)[0]: validation_errors.append("Huyết áp không hợp lệ")
+        if not validate_heart_rate(pulse_rate)[0]: validation_errors.append("Mạch không hợp lệ")
+        if not validate_input_range(gcs_score, "GCS", 3, 15)[0]: validation_errors.append("GCS phải từ 3-15")
+        
+        if validation_errors:
+            for error in validation_errors: st.error(error)
+            st.stop()
+            
         risk_score = 0; risk_score += max(0, (age - 60) // 5); risk_score += 1 if cardiac != "Bình thường" else 0; risk_score += 1 if respiratory != "Bình thường" else 0; risk_score += 1 if bp < 100 else 0; risk_score += 1 if gcs_score < 15 else 0; risk_score += {"Nhỏ": 0, "Trung bình": 1, "Lớn": 2, "Lớn+": 3}[operation_severity]
-        if risk_score <= 2: risk = "Thấp (<5%)"; color = "#28a745"
-        elif risk_score <= 4: risk = "Trung bình (5-15%)"; color = "#fd7e14"
-        else: risk = "Cao (>15%)"; color = "#dc3545"
+        if risk_score <= 2: risk = "Thấp (<5%)"; color = COLORS["success"]
+        elif risk_score <= 4: risk = "Trung bình (5-15%)"; color = COLORS["warning"]
+        else: risk = "Cao (>15%)"; color = COLORS["error"]
         result_html = f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>Nguy cơ: {risk}</h2></div>"
         components.html(result_html, height=120, scrolling=False)
         st.info("💡 **Lưu ý:** Đây chỉ là ước tính đơn giản. P-POSSUM thực tế cần 18 biến số và công thức phức tạp.")

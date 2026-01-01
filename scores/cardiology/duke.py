@@ -4,6 +4,8 @@ Tiêu chuẩn chẩn đoán viêm nội tâm mạc nhiễm khuẩn
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -24,8 +26,8 @@ def render():
         st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'Duke Criteria')}")
         shared_inputs = shared.get("inputs", {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>❤️ Duke Criteria</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>❤️ Duke Criteria</h3>
     <p style='text-align: center;'><em>Chẩn đoán Viêm Nội Tâm Mạc Nhiễm Khuẩn (IE)</em></p>
     """, unsafe_allow_html=True)
     
@@ -187,32 +189,32 @@ def render():
         # Diagnosis
         if (major_count >= 2) or (major_count >= 1 and minor_count >= 3) or (minor_count >= 5):
             diagnosis = "DEFINITE IE"
-            color = "#dc3545"
+            color = COLORS["error"]
             icon = "🚨"
             recommendation = "Chẩn đoán XÁC ĐỊNH viêm nội tâm mạc nhiễm khuẩn"
         elif (major_count >= 1 and minor_count >= 1) or (minor_count >= 3):
             diagnosis = "POSSIBLE IE"
-            color = "#ffc107"
+            color = COLORS["warning"]
             icon = "⚠️"
             recommendation = "NGHI NGỜ viêm nội tâm mạc - Cần theo dõi, xét nghiệm thêm"
         else:
             diagnosis = "REJECTED"
-            color = "#28a745"
+            color = COLORS["success"]
             icon = "✅"
             recommendation = "Không đủ tiêu chí chẩn đoán IE"
         
         st.markdown("## 📊 Kết quả")
         
         st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 40px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h1 style='color: {color}; margin: 0; text-align: center; font-size: 2.5em;'>
-                {icon} {diagnosis}
-            </h1>
-            <p style='text-align: center; font-size: 1.2em; margin-top: 15px;'>
-                {recommendation}
-            </p>
-        </div>
+        render_score_result(
+            title="Duke Criteria Results",
+            score=diagnosis,
+            interpretation=recommendation,
+            mortality=None,
+            color=color,
+            icon=icon,
+            size="large"
+        )
         """, unsafe_allow_html=True)
         
         col1, col2 = st.columns(2)

@@ -4,6 +4,8 @@ CIWA-Ar - Clinical Institute Withdrawal Assessment for Alcohol
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -16,11 +18,11 @@ def calculate_ciwa(nausea, tremor, sweating, anxiety, agitation, tactile, audito
     total = nausea + tremor + sweating + anxiety + agitation + tactile + auditory + visual + headache + orientation
     
     if total < 8:
-        severity = "Nhẹ"; management = "Theo dõi, không cần thuốc"; color = "green"
+        severity = "Nhẹ"; management = "Theo dõi, không cần thuốc"; color = COLORS['success']
     elif total <= 15:
-        severity = "Trung bình"; management = "Cân nhắc benzodiazepine"; color = "orange"
+        severity = "Trung bình"; management = "Cân nhắc benzodiazepine"; color = COLORS['warning']
     else:
-        severity = "Nặng"; management = "Benzodiazepine ngay, theo dõi ICU"; color = "red"
+        severity = "Nặng"; management = "Benzodiazepine ngay, theo dõi ICU"; color = COLORS['error']
     
     return {"total_score": total, "severity": severity, "management": management, "color": color}
 
@@ -34,7 +36,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🍺 CIWA-Ar - Clinical Institute Withdrawal Assessment")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🍺 CIWA-Ar - Clinical Institute Withdrawal Assessment</h2>", unsafe_allow_html=True)
     st.caption("Đánh giá mức độ nặng cai rượu")
     
     st.markdown("""
@@ -77,23 +79,14 @@ def render():
         
         if st.button("🔬 Tính CIWA-Ar", type="primary", use_container_width=True):
             result = calculate_ciwa(nausea, tremor, sweating, anxiety, agitation, tactile, auditory, visual, headache, orientation)
-            score_color = {"green": "#28a745", "orange": "#fd7e14", "red": "#dc3545"}[result["color"]]
-            
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); 
-                        padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'>
-                <h2 style='color: {score_color}; margin: 0; text-align: center;'>
-                    CIWA-Ar: {result['total_score']}/67
-                </h2>
-            </div>
-            """, unsafe_allow_html=True)
-            
-            st.markdown(f"""
-            <div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'>
-                <h3 style='color: {score_color};'>🎯 Mức độ: {result['severity']}</h3>
-                <p style='font-size: 1.2em;'><strong>Điều trị:</strong> {result['management']}</p>
-            </div>
-            """, unsafe_allow_html=True)
+        
+            render_score_result(
+                title="Kết quả CIWA-Ar",
+                score=f"{result['total_score']}/67",
+                interpretation=f"**Điều trị:** {result['management']}",
+                mortality=f"Mức độ: {result['severity']}",
+                color=result['color']
+            )
             
             st.info("""
             **Khuyến cáo điều trị:**

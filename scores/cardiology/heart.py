@@ -3,7 +3,11 @@ HEART Score Calculator
 """
 
 import streamlit as st
-from components.ui.scoring import render_score_result, render_score_breakdown
+from config.theme import COLORS
+from components.ui.scoring import render_score_result, render_score_breakdown, render_recommendation_box
+
+from scores.utils.validation import validate_positive
+
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -15,7 +19,10 @@ from components.smart_suggestions import render_suggestions
 
 def render():
     """HEART Score Calculator"""
-    st.subheader("❤️ HEART Score")
+    # st.subheader("❤️ HEART Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>❤️ HEART Score</h3>
+    """, unsafe_allow_html=True)
     st.caption("Đánh giá nguy cơ ACS Trong Đau Ngực Cấp")
     
     # Load shared result if available
@@ -108,6 +115,26 @@ def render():
         
         # Troponin
         st.markdown("#### T - Troponin")
+        
+        # Troponin Helper
+        with st.expander("🧮 Hỗ trợ Đánh giá Troponin"):
+             col_t1, col_t2 = st.columns(2)
+             with col_t1:
+                  trop_val = st.number_input("Giá trị Troponin", min_value=0.0, step=0.01, format="%.3f")
+             with col_t2:
+                  trop_uln = st.number_input("Giới hạn trên (ULN)", min_value=0.001, value=0.014, step=0.001, format="%.3f", help="Ngưỡng bình thường cao của phòng xét nghiệm (ví dụ: Hs-cTnT 14 ng/L = 0.014 ng/mL)")
+                  
+             if trop_val > 0:
+                  ratio = trop_val / trop_uln
+                  st.info(f"📈 Tỷ lệ so với ULN: **{ratio:.1f} lần**")
+                  
+                  if ratio <= 1.0:
+                       st.success("✅ **Bình thường (0 điểm)**")
+                  elif ratio <= 3.0:
+                       st.warning("⚠️ **Tăng nhẹ 1-3 lần (1 điểm)**")
+                  else:
+                       st.error("🚨 **Tăng cao >3 lần (2 điểm)**")
+
         troponin_score = st.radio(
             "Troponin:",
             [
@@ -137,17 +164,17 @@ def render():
             if total_score <= 3:
                 risk_level = "Nguy cơ THẤP"
                 mace_risk = "0.9-1.7%"
-                color = "#28a745"  # green
+                color = COLORS["success"]  # green
                 icon = "✅"
             elif total_score <= 6:
                 risk_level = "Nguy cơ TRUNG BÌNH"
                 mace_risk = "12-16.6%"
-                color = "#fd7e14"  # orange
+                color = COLORS["warning"]  # orange
                 icon = "⚠️"
             else:
                 risk_level = "Nguy cơ CAO"
                 mace_risk = "50-65%"
-                color = "#dc3545"  # red
+                color = COLORS["error"]  # red
                 icon = "🚨"
             
             with col2:
@@ -184,42 +211,51 @@ def render():
             st.markdown("### 💊 Khuyến cáo xử trí")
             
             if total_score <= 3:
-                st.success("""
-                **Nguy cơ MACE thấp ({})** trong 6 tuần
-                
-                **Khuyến cáo:**
-                - ✅ Có thể xuất viện an toàn
-                - Theo dõi ngoại trú
-                - Giáo dục bệnh nhân về các triệu chứng cần tái khám
-                - Kiểm soát yếu tố nguy cơ
-                - Cân nhắc stress test ngoại trú
-                """.format(mace_risk))
+                render_recommendation_box(
+                    title=f"Nguy cơ MACE thấp ({mace_risk})",
+                    content="""
+                    **Khuyến cáo:**
+                    - ✅ Có thể xuất viện an toàn
+                    - Theo dõi ngoại trú
+                    - Giáo dục bệnh nhân về các triệu chứng cần tái khám
+                    - Kiểm soát yếu tố nguy cơ
+                    - Cân nhắc stress test ngoại trú
+                    """,
+                    type="success",
+                    icon="✅"
+                )
             
             elif total_score <= 6:
-                st.warning("""
-                **Nguy cơ MACE trung bình ({})** trong 6 tuần
-                
-                **Khuyến cáo:**
-                - ⚠️ Theo dõi tại bệnh viện
-                - Serial troponin (0h, 3h, 6h)
-                - Cân nhắc stress test hoặc CT coronary angiography
-                - Hội chẩn tim mạch
-                - Điều trị kháng kết tập tiểu cầu nếu được
-                """.format(mace_risk))
+                render_recommendation_box(
+                    title=f"Nguy cơ MACE trung bình ({mace_risk})",
+                    content="""
+                    **Khuyến cáo:**
+                    - ⚠️ Theo dõi tại bệnh viện
+                    - Serial troponin (0h, 3h, 6h)
+                    - Cân nhắc stress test hoặc CT coronary angiography
+                    - Hội chẩn tim mạch
+                    - Điều trị kháng kết tập tiểu cầu nếu được
+                    """,
+                    type="warning",
+                    icon="⚠️"
+                )
             
             else:
-                st.error("""
-                **Nguy cơ MACE cao ({})** trong 6 tuần
-                
-                **Khuyến cáo:**
-                - 🚨 Nhập viện ngay
-                - Xử trí theo protocol ACS
-                - DAPT (Aspirin + P2Y12 inhibitor)
-                - Anticoagulation (heparin/LMWH)
-                - Hội chẩn tim mạch khẩn cấp
-                - Cân nhắc can thiệp mạch vành sớm
-                - ICU/CCU monitoring
-                """.format(mace_risk))
+                render_recommendation_box(
+                    title=f"Nguy cơ MACE cao ({mace_risk})",
+                    content="""
+                    **Khuyến cáo:**
+                    - 🚨 Nhập viện ngay
+                    - Xử trí theo protocol ACS
+                    - DAPT (Aspirin + P2Y12 inhibitor)
+                    - Anticoagulation (heparin/LMWH)
+                    - Hội chẩn tim mạch khẩn cấp
+                    - Cân nhắc can thiệp mạch vành sớm
+                    - ICU/CCU monitoring
+                    """,
+                    type="error",
+                    icon="🚨"
+                )
             
             # Prepare inputs for export and history
             inputs_dict = {

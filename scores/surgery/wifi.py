@@ -38,6 +38,7 @@ Clinical Utility:
 
 import streamlit as st
 from components.ui.validation import render_validation_errors
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -111,8 +112,8 @@ def render():
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🦶 WIFI Classification</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🦶 WIFI Classification</h2>
     <p style='text-align: center; color: #6B7280;'>
     Wound, Ischemia, foot Infection Classification<br>
     Đánh giá mức độ nặng đe dọa chi ở bệnh nhân bệnh chi dưới

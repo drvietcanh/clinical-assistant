@@ -12,6 +12,7 @@ Gastrointest Endosc. 2011 Dec;74(6):1215-24.
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_age,
     validate_blood_pressure,
@@ -58,8 +59,10 @@ def calculate_aims65(albumin, inr, mental_status, sbp, age):
 def render():
     """Render AIMS65 Score Calculator"""
     
-    st.subheader("🩸 AIMS65 Score")
-    st.caption("Đánh giá nguy cơ tử vong trong xuất huyết tiêu hóa trên")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩸 AIMS65 Score</h3>
+    """, unsafe_allow_html=True)
+    st.caption("**Đánh giá nguy cơ tử vong trong xuất huyết tiêu hóa trên**")
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -208,54 +211,48 @@ def render():
             if score == 0:
                 mortality = "<0.3%"
                 risk = "RẤT THẤP"
-                color = "green"
+                color = COLORS["success"]
                 length_of_stay = "2-3 ngày"
                 cost = "Thấp"
             elif score == 1:
                 mortality = "~1%"
                 risk = "THẤP"
-                color = "green"
+                color = COLORS["success"]
                 length_of_stay = "3-4 ngày"
                 cost = "Trung bình thấp"
             elif score == 2:
                 mortality = "~2-3%"
                 risk = "TRUNG BÌNH"
-                color = "info"
+                color = COLORS["primary"]
                 length_of_stay = "4-5 ngày"
                 cost = "Trung bình"
             elif score == 3:
                 mortality = "~5-8%"
                 risk = "TRUNG BÌNH CAO"
-                color = "warning"
+                color = COLORS["warning"]
                 length_of_stay = "5-7 ngày"
                 cost = "Trung bình cao"
             elif score == 4:
                 mortality = "~15-20%"
                 risk = "CAO"
-                color = "error"
+                color = COLORS["error"]
                 length_of_stay = "7-10 ngày"
                 cost = "Cao"
             else:  # score == 5
                 mortality = ">25%"
                 risk = "RẤT CAO"
-                color = "error"
+                color = COLORS["error"]
                 length_of_stay = ">10 ngày"
                 cost = "Rất cao"
             
             # Map color names to hex
-            color_map = {
-                "green": "#28a745",  # green
-                "info": "#17a2b8",   # blue
-                "warning": "#fd7e14",  # orange
-                "error": "#dc3545"     # red
-            }
             icon_map = {
-                "green": "✅",
-                "info": "💡",
-                "warning": "⚠️",
-                "error": "🚨"
+                COLORS["success"]: "✅",
+                COLORS["primary"]: "💡",
+                COLORS["warning"]: "⚠️",
+                COLORS["error"]: "🚨"
             }
-            score_color = color_map[color]
+            score_color = color
             score_icon = icon_map[color]
             
             with col2:

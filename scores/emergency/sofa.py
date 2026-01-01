@@ -28,6 +28,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from components.ui.scoring import (
     render_score_result,
     render_score_breakdown,
@@ -179,27 +180,32 @@ def calculate_sofa(
         interpretation = "Không có suy cơ quan"
         mortality = "<10%"
         risk_class = "LOW"
-        color = "🟢"
+        color = COLORS["success"]
+        icon = "🟢"
     elif total_score <= 6:
         interpretation = "Suy cơ quan nhẹ"
         mortality = "~10-20%"
         risk_class = "MILD"
-        color = "🟡"
+        color = COLORS["warning"]
+        icon = "🟡"
     elif total_score <= 11:
         interpretation = "Suy cơ quan trung bình"
         mortality = "~20-40%"
         risk_class = "MODERATE"
-        color = "🟠"
+        color = COLORS["warning"]
+        icon = "🟠"
     elif total_score <= 14:
         interpretation = "Suy cơ quan nặng"
         mortality = "~40-60%"
         risk_class = "SEVERE"
-        color = "🔴"
+        color = COLORS["error"]
+        icon = "🔴"
     else:
         interpretation = "Suy cơ quan rất nặng"
         mortality = ">60%"
         risk_class = "CRITICAL"
-        color = "🔴"
+        color = COLORS["error"]
+        icon = "🔴"
     
     # Management based on score
     if total_score >= 2:
@@ -219,6 +225,7 @@ def calculate_sofa(
         'mortality': mortality,
         'risk_class': risk_class,
         'color': color,
+        'icon': icon,
         'details': details,
         'sepsis_note': sepsis_note
     }
@@ -227,7 +234,10 @@ def calculate_sofa(
 def render():
     """Render SOFA Score calculator in Streamlit"""
     
-    st.title("🏥 SOFA Score")
+    # st.title("🏥 SOFA Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🏥 SOFA Score</h3>
+    """, unsafe_allow_html=True)
     st.markdown("**Sequential Organ Failure Assessment - Đánh giá suy đa cơ quan**")
     
     # Load shared result if available
@@ -495,7 +505,8 @@ def render():
             score=result['total_score'],
             interpretation=result['interpretation'],
             mortality=result['mortality'],
-            icon=result['color'],
+            color=result['color'],
+            icon=result['icon'],
             thresholds={"low": 6, "moderate": 11, "high": 14},
             size="large"
         )

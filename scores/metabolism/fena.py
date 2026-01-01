@@ -17,6 +17,7 @@ JAMA. 1976;236(6):579-81.
 
 import streamlit as st
 from datetime import datetime
+from config.theme import COLORS
 
 from .fena_calculator import calculate_fena, interpret_fena
 from .fena_ui_input import render_input_form
@@ -47,7 +48,7 @@ from components.export import render_export_section
 def render():
     """Render FENa Calculator"""
     
-    st.subheader("🧪 FENa - Fractional Excretion of Sodium")
+    st.markdown(f"<h1 style='text-align: center; color: {COLORS['success']};'>🧪 FENa - Fractional Excretion of Sodium</h1>", unsafe_allow_html=True)
     st.caption("Phân biệt suy thận cấp tiền thận vs thận")
     shared = load_shared_result_from_url()
     if shared and shared.get("calculator_id") == "fena":

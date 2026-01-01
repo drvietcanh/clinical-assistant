@@ -4,9 +4,11 @@ Tính QT điều chỉnh theo nhịp tim
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 from scores.utils.validation import validate_heart_rate, validate_range
 from components.ui.results import render_result_box
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -174,7 +176,10 @@ def calculate_rr_interval(hr):
 def render():
     """Render the QTc Calculator"""
     
-    st.title("💓 QTc - Corrected QT Interval")
+    # st.title("💓 QTc - Corrected QT Interval")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>💓 QTc - Corrected QT Interval</h3>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -333,18 +338,20 @@ def render():
         
         # Map severity to color
         color_map = {
-            "normal": "success",
-            "borderline": "warning",
-            "prolonged": "error",
-            "severe": "error"
+            "normal": COLORS["success"],
+            "borderline": COLORS["warning"],
+            "prolonged": COLORS["error"],
+            "severe": COLORS["error"]
         }
-        box_color = color_map.get(result['severity'], "info")
+        box_color = color_map.get(result['severity'], COLORS["primary"])
         
         # Use render_result_box for main result
-        render_result_box(
+        # Use render_score_result for main result
+        render_score_result(
             title="QTc (Corrected QT Interval)",
-            value=f"{qtc:.0f} ms",
-            subtitle=f"{result['status']} - {result['risk']}",
+            score=f"{qtc:.0f} ms",
+            interpretation=f"{result['status']} - {result['risk']}",
+            mortality=result['recommendation'],
             color=box_color,
             icon=result['color'],
             size="large"

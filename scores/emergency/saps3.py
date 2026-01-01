@@ -26,6 +26,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 from components.ui.scoring import render_score_result
 from components.ui.results import render_result_box, render_result_card
@@ -247,15 +248,15 @@ def calculate_saps3(params: dict) -> dict:
     # Interpretation
     if predicted_mortality < 10:
         interpretation = "Nguy cơ tử vong thấp"
-        color = "success"
+        color = COLORS["success"]
         severity = "Thấp"
     elif predicted_mortality < 30:
         interpretation = "Nguy cơ tử vong trung bình"
-        color = "warning"
+        color = COLORS["warning"]
         severity = "Trung bình"
     else:
         interpretation = "Nguy cơ tử vong cao"
-        color = "error"
+        color = COLORS["error"]
         severity = "Cao"
     
     return {
@@ -270,7 +271,10 @@ def calculate_saps3(params: dict) -> dict:
 
 def render():
     """SAPS III Score Calculator"""
-    st.subheader("🚨 SAPS III - Simplified Acute Physiology Score III")
+    # st.subheader("🚨 SAPS III - Simplified Acute Physiology Score III")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🚨 SAPS III - Simplified Acute Physiology Score III</h3>
+    """, unsafe_allow_html=True)
     st.caption("Dự đoán tử vong ICU - Phiên bản cập nhật (chính xác hơn SAPS II)")
     
     # Load shared result if available

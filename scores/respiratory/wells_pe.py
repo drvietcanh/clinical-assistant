@@ -4,6 +4,7 @@ Wells Score for Pulmonary Embolism
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -39,8 +40,12 @@ except ImportError:
 
 def render():
     """Wells PE Score Calculator"""
-    st.subheader("🫁 Wells PE Score")
-    st.caption("Wells Score - Xác Suất Tắc Mạch Phổi")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🫁 Wells PE Score</h2>
+    <p style='text-align: center; color: #6B7280;'>
+    Wells Score - Xác Suất Tắc Mạch Phổi
+    </p>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -229,35 +234,24 @@ def render():
             if score < 2:
                 probability = "THẤP"
                 pe_prevalence = "3.6%"
-                color = "success"
+                color = COLORS["success"]
                 recommendation = "Xét nghiệm D-dimer"
                 detail = "D-dimer âm tính → Loại trừ PE (không cần CTPA)"
+                icon = "✅"
             elif score <= 6:
                 probability = "TRUNG BÌNH"
                 pe_prevalence = "20.5%"
-                color = "warning"
+                color = COLORS["warning"]
                 recommendation = "Xét nghiệm D-dimer"
                 detail = "D-dimer dương tính → Chụp CTPA"
+                icon = "⚠️"
             else:
                 probability = "CAO"
                 pe_prevalence = "66.7%"
-                color = "error"
+                color = COLORS["error"]
                 recommendation = "Chụp CTPA ngay"
                 detail = "Không cần D-dimer - chụp CTPA trực tiếp"
-            
-            # Map color names to hex
-            color_map = {
-                "success": "#28a745",  # green
-                "warning": "#fd7e14",  # orange
-                "error": "#dc3545"     # red
-            }
-            icon_map = {
-                "success": "✅",
-                "warning": "⚠️",
-                "error": "🚨"
-            }
-            score_color = color_map[color]
-            score_icon = icon_map[color]
+                icon = "🚨"
             
             with col2:
                 st.markdown("### 📊 Kết quả")
@@ -268,8 +262,8 @@ def render():
                     score=round(score, 1),
                     interpretation=f"Xác suất {probability} - PE: {pe_prevalence}",
                     mortality=None,
-                    color=score_color,
-                    icon=score_icon,
+                    color=color,
+                    icon=icon,
                     size="large"
                 )
                 
@@ -324,7 +318,7 @@ def render():
             st.markdown("---")
             st.markdown("### 💊 Khuyến cáo xét nghiệm")
             
-            if color == "success":
+            if color == COLORS["success"]:
                 st.success(f"""
                 **Xác suất THẤP (Score <2) - PE: {pe_prevalence}**
                 
@@ -340,7 +334,7 @@ def render():
                 
                 **Lưu ý:** D-dimer có độ nhạy cao, độ đặc hiệu thấp
                 """)
-            elif color == "warning":
+            elif color == COLORS["warning"]:
                 st.warning(f"""
                 **Xác suất TRUNG BÌNH (Score 2-6) - PE: {pe_prevalence}**
                 

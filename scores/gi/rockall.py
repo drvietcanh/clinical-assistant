@@ -12,6 +12,7 @@ Gut. 1996;38(3):316-21.
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -36,8 +37,10 @@ def render():
     if shared_inputs:
         st.info("📥 Đã tải kết quả chia sẻ Rockall")
     
-    st.subheader("🩸 Rockall Score")
-    st.caption("Tiên lượng xuất huyết tiêu hóa trên")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩸 Rockall Score</h3>
+    <p style='text-align: center; color: #6B7280;'>Tiên lượng xuất huyết tiêu hóa trên</p>
+    """, unsafe_allow_html=True)
     
     st.markdown("""
     **Rockall Score** dự đoán tử vong và tái chảy máu trong xuất huyết tiêu hóa trên.
@@ -247,62 +250,56 @@ def render():
                     mortality = "0.2%"
                     rebleed = "4.9%"
                     risk = "RẤT THẤP"
-                    color = "green"
+                    color = COLORS["success"]
                 elif total_score <= 2:
                     mortality = "0.2-0.5%"
                     rebleed = "5-11%"
                     risk = "THẤP"
-                    color = "green"
+                    color = COLORS["success"]
                 elif total_score <= 4:
                     mortality = "3-5%"
                     rebleed = "14%"
                     risk = "TRUNG BÌNH"
-                    color = "orange"
+                    color = COLORS["warning"]
                 else:
                     mortality = "11-25%"
                     rebleed = "24%"
                     risk = "CAO"
-                    color = "red"
+                    color = COLORS["error"]
             else:
                 # Complete Rockall
                 if total_score <= 2:
                     mortality = "0.2%"
                     rebleed = "5%"
                     risk = "RẤT THẤP"
-                    color = "green"
+                    color = COLORS["success"]
                 elif total_score <= 3:
                     mortality = "2.9%"
                     rebleed = "11%"
                     risk = "THẤP"
-                    color = "green"
+                    color = COLORS["success"]
                 elif total_score <= 5:
                     mortality = "5.3%"
                     rebleed = "14%"
                     risk = "TRUNG BÌNH"
-                    color = "orange"
+                    color = COLORS["warning"]
                 elif total_score <= 7:
                     mortality = "10.8%"
                     rebleed = "24%"
                     risk = "CAO"
-                    color = "red"
+                    color = COLORS["error"]
                 else:
                     mortality = "26.7%"
                     rebleed = "42%"
                     risk = "RẤT CAO"
-                    color = "red"
+                    color = COLORS["error"]
             
-            # Map color names to hex
-            color_map = {
-                "green": "#28a745",  # green
-                "orange": "#fd7e14",  # orange
-                "red": "#dc3545"     # red
-            }
             icon_map = {
-                "green": "✅",
-                "orange": "⚠️",
-                "red": "🚨"
+                COLORS["success"]: "✅",
+                COLORS["warning"]: "⚠️",
+                COLORS["error"]: "🚨"
             }
-            score_color = color_map.get(color, "#17a2b8")
+            score_color = color
             score_icon = icon_map.get(color, "💡")
             
             with col2:
@@ -325,90 +322,129 @@ def render():
             st.markdown("### 💊 KHUYẾN CÁO")
             
             if not is_complete:
-                st.info("""
-                **ℹ️ Pre-endoscopy (Clinical) Rockall Score**
-                
-                Đây là điểm trước nội soi. Để đánh giá đầy đủ, cần thực hiện nội soi 
-                và tính Complete Rockall Score.
-                """)
+                st.markdown(f"""
+                <div style="background-color: {COLORS['info']}15; padding: 16px; border-radius: 8px; border-left: 5px solid {COLORS['info']}; margin-bottom: 20px;">
+                <strong style="color: {COLORS['info']};">ℹ️ Pre-endoscopy (Clinical) Rockall Score</strong>
+                <p>Đây là điểm trước nội soi. Để đánh giá đầy đủ, cần thực hiện nội soi và tính Complete Rockall Score.</p>
+                </div>
+                """, unsafe_allow_html=True)
             
             if total_score <= 2 and is_complete:
-                st.success(f"""
-                **🟢 Rockall ≤2 - NGUY CƠ RẤT THẤP**
+                st.markdown(f"""
+                <div style="padding: 16px; border-radius: 8px; border: 1px solid {COLORS['success']}30; background-color: {COLORS['success']}05;">
+                <h4 style="color: {COLORS['success']}; margin-top: 0;">🟢 Rockall ≤2 - NGUY CƠ RẤT THẤP</h4>
                 
-                **Tiên lượng:**
-                - Tử vong: {mortality}
-                - Tái chảy máu: {rebleed}
+                <p><strong>Tiên lượng:</strong><br>
+                - Tử vong: {mortality}<br>
+                - Tái chảy máu: {rebleed}</p>
                 
-                **Khuyến nghị:**
+                <p><strong>Khuyến nghị:</strong></p>
                 
-                1. **Có thể xuất viện sớm:**
-                   - Sau nội soi 12-24h
-                   - Nếu ổn định lâm sàng
-                   - Không comorbidity nặng
+                <ol>
+                <li><strong>Có thể xuất viện sớm:</strong>
+                   <ul>
+                   <li>Sau nội soi 12-24h</li>
+                   <li>Nếu ổn định lâm sàng</li>
+                   <li>Không comorbidity nặng</li>
+                   </ul>
+                </li>
                 
-                2. **Điều trị:**
-                   - PPI: Omeprazole 20-40mg daily
-                   - Thời gian tùy nguyên nhân
+                <li><strong>Điều trị:</strong>
+                   <ul>
+                   <li>PPI: Omeprazole 20-40mg daily</li>
+                   <li>Thời gian tùy nguyên nhân</li>
+                   </ul>
+                </li>
                 
-                3. **Theo dõi ngoại trú:**
-                   - Tái khám 1-2 tuần
-                   - H. pylori test & treat
+                <li><strong>Theo dõi ngoại trú:</strong>
+                   <ul>
+                   <li>Tái khám 1-2 tuần</li>
+                   <li>H. pylori test & treat</li>
+                   </ul>
+                </li>
+                </ol>
                 
-                **Tiên lượng:** Xuất sắc
-                """)
+                <p><strong>Tiên lượng:</strong> Xuất sắc</p>
+                </div>
+                """, unsafe_allow_html=True)
             
             elif total_score <= 5:
-                st.warning(f"""
-                **🟡 Rockall {total_score} - NGUY CƠ TRUNG BÌNH**
+                st.markdown(f"""
+                <div style="padding: 16px; border-radius: 8px; border: 1px solid {COLORS['warning']}30; background-color: {COLORS['warning']}05;">
+                <h4 style="color: {COLORS['warning']}; margin-top: 0;">🟡 Rockall {total_score} - NGUY CƠ TRUNG BÌNH</h4>
                 
-                **Tiên lượng:**
-                - Tử vong: {mortality}
-                - Tái chảy máu: {rebleed}
+                <p><strong>Tiên lượng:</strong><br>
+                - Tử vong: {mortality}<br>
+                - Tái chảy máu: {rebleed}</p>
                 
-                **Khuyến nghị:**
+                <p><strong>Khuyến nghị:</strong></p>
                 
-                1. **Nhập viện theo dõi:**
-                   - 2-3 ngày
-                   - Theo dõi biến chứng
+                <ol>
+                <li><strong>Nhập viện theo dõi:</strong>
+                   <ul>
+                   <li>2-3 ngày</li>
+                   <li>Theo dõi biến chứng</li>
+                   </ul>
+                </li>
                 
-                2. **Điều trị:**
-                   - PPI IV 72h → PO
-                   - Theo dõi Hgb
+                <li><strong>Điều trị:</strong>
+                   <ul>
+                   <li>PPI IV 72h → PO</li>
+                   <li>Theo dõi Hgb</li>
+                   </ul>
+                </li>
                 
-                3. **Nội soi lại nếu:**
-                   - Tái chảy máu
-                   - Không cải thiện
+                <li><strong>Nội soi lại nếu:</strong>
+                   <ul>
+                   <li>Tái chảy máu</li>
+                   <li>Không cải thiện</li>
+                   </ul>
+                </li>
+                </ol>
                 
-                **Tiên lượng:** Tốt với điều trị
-                """)
+                <p><strong>Tiên lượng:</strong> Tốt với điều trị</p>
+                </div>
+                """, unsafe_allow_html=True)
             
             else:
-                st.error(f"""
-                **🔴 Rockall {total_score} - NGUY CƠ CAO**
+                st.markdown(f"""
+                <div style="padding: 16px; border-radius: 8px; border: 1px solid {COLORS['error']}30; background-color: {COLORS['error']}05;">
+                <h4 style="color: {COLORS['error']}; margin-top: 0;">🔴 Rockall {total_score} - NGUY CƠ CAO</h4>
                 
-                **Tiên lượng:**
-                - Tử vong: {mortality}
-                - Tái chảy máu: {rebleed}
+                <p><strong>Tiên lượng:</strong><br>
+                - Tử vong: {mortality}<br>
+                - Tái chảy máu: {rebleed}</p>
                 
-                **Khuyến nghị:**
+                <p><strong>Khuyến nghị:</strong></p>
                 
-                1. **ICU/HDU monitoring:**
-                   - Theo dõi sát
-                   - Sẵn sàng can thiệp
+                <ol>
+                <li><strong>ICU/HDU monitoring:</strong>
+                   <ul>
+                   <li>Theo dõi sát</li>
+                   <li>Sẵn sàng can thiệp</li>
+                   </ul>
+                </li>
                 
-                2. **Điều trị tích cực:**
-                   - PPI IV liều cao
-                   - Truyền máu nếu cần
-                   - Sẵn sàng nội soi lại
+                <li><strong>Điều trị tích cực:</strong>
+                   <ul>
+                   <li>PPI IV liều cao</li>
+                   <li>Truyền máu nếu cần</li>
+                   <li>Sẵn sàng nội soi lại</li>
+                   </ul>
+                </li>
                 
-                3. **Cân nhắc:**
-                   - IR embolization
-                   - Phẫu thuật
-                   - TIPS (nếu variceal)
+                <li><strong>Cân nhắc:</strong>
+                   <ul>
+                   <li>IR embolization</li>
+                   <li>Phẫu thuật</li>
+                   <li>TIPS (nếu variceal)</li>
+                   </ul>
+                </li>
+                </ol>
                 
-                **Tiên lượng:** Xấu, cần theo dõi sát
-                """)
+                <p><strong>Tiên lượng:</strong> Xấu, cần theo dõi sát</p>
+                </div>
+                """, unsafe_allow_html=True)
             
             # Phase 1: save/share/history + references
             inputs_dict = {

@@ -506,7 +506,18 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "High", "neurological": "High (ototoxicity)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Multidrug-Resistant Gram-Negative Infections"
+        ]
     },
     "Tobramycin": {
         "group": "Antibiotic - Aminoglycoside",

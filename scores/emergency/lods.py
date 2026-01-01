@@ -30,6 +30,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 from components.ui.results import render_result_box
 # ========== PHASE 1 IMPORTS ==========
@@ -212,15 +213,15 @@ def calculate_lods(params: dict) -> dict:
     if total_score <= 5:
         interpretation = "Suy cơ quan nhẹ"
         severity = "Nhẹ"
-        color = "success"
+        color = COLORS["success"]
     elif total_score <= 10:
         interpretation = "Suy cơ quan trung bình"
         severity = "Trung bình"
-        color = "warning"
+        color = COLORS["warning"]
     else:
         interpretation = "Suy cơ quan nặng"
         severity = "Nặng"
-        color = "error"
+        color = COLORS["error"]
     
     return {
         "total_score": total_score,
@@ -241,7 +242,10 @@ def calculate_lods(params: dict) -> dict:
 
 def render():
     """LODS Score Calculator"""
-    st.subheader("🚨 LODS - Logistic Organ Dysfunction Score")
+    # st.subheader("🚨 LODS - Logistic Organ Dysfunction Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🚨 LODS - Logistic Organ Dysfunction Score</h3>
+    """, unsafe_allow_html=True)
     st.caption("Đánh giá suy cơ quan trong ICU")
     
     # Load shared result if available

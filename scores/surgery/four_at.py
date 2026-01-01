@@ -4,6 +4,7 @@ Sàng lọc mê sảng nhanh (2 phút)
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.anesthesia_validation import validate_4at_components
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
@@ -34,15 +35,15 @@ def calculate_4at(alertness, amt4, attention, acute_change):
     if total == 0:
         result = "Không có mê sảng"
         recommendation = "Tiếp tục theo dõi, đánh giá lại khi có thay đổi"
-        color = "green"
+        color = COLORS["success"]
     elif total <= 3:
         result = "Có thể có mê sảng"
         recommendation = "Cần đánh giá thêm bằng CAM-ICU hoặc đánh giá lâm sàng chi tiết"
-        color = "orange"
+        color = COLORS["warning"]
     else:  # ≥4
         result = "Có mê sảng"
         recommendation = "Cần điều trị mê sảng: tìm nguyên nhân, điều chỉnh yếu tố nguy cơ, cân nhắc thuốc"
-        color = "red"
+        color = COLORS["error"]
     
     return {
         "total_score": total,
@@ -62,8 +63,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🧠 4AT - 4 A's Test for Delirium</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🧠 4AT - 4 A's Test for Delirium</h2>
     <p style='text-align: center;'><em>Sàng lọc mê sảng nhanh (2 phút)</em></p>
     """, unsafe_allow_html=True)
     
@@ -233,9 +234,9 @@ def render():
             st.markdown("---")
             
             # Result interpretation
-            if result['color'] == "green":
+            if result['color'] == COLORS["success"]:
                 st.success(f"**{result['result']}**")
-            elif result['color'] == "orange":
+            elif result['color'] == COLORS["warning"]:
                 st.warning(f"**{result['result']}**")
             else:
                 st.error(f"**{result['result']}**")

@@ -4,6 +4,8 @@ Sàng lọc và đánh giá rối loạn lo âu lan tỏa
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -50,7 +52,7 @@ def interpret_gad7(total_score):
     if total_score < 5:
         return {
             "severity": "Lo âu tối thiểu",
-            "color": "🟢",
+            "color": COLORS['success'],
             "description": "Không có triệu chứng lo âu đáng kể",
             "recommendation": "Không cần can thiệp. Tái đánh giá khi cần thiết.",
             "monitoring": "Theo dõi thường xuyên nếu có yếu tố nguy cơ",
@@ -59,7 +61,7 @@ def interpret_gad7(total_score):
     elif total_score < 10:
         return {
             "severity": "Lo âu nhẹ",
-            "color": "🟡",
+            "color": COLORS['warning'],
             "description": "Có một số triệu chứng lo âu",
             "recommendation": "Watchful waiting, hỗ trợ tâm lý. Kỹ thuật thư giãn, mindfulness.",
             "monitoring": "Tái đánh giá sau 4-6 tuần",
@@ -68,7 +70,7 @@ def interpret_gad7(total_score):
     elif total_score < 15:
         return {
             "severity": "Lo âu mức trung bình",
-            "color": "🟠",
+            "color": COLORS['warning_dark'],
             "description": "Lo âu ảnh hưởng đến chức năng hàng ngày",
             "recommendation": "Xem xét điều trị: CBT hoặc thuốc (SSRI/SNRI).",
             "monitoring": "Tái đánh giá sau 2-4 tuần. Theo dõi đáp ứng điều trị.",
@@ -77,7 +79,7 @@ def interpret_gad7(total_score):
     else:
         return {
             "severity": "Lo âu nặng",
-            "color": "🔴",
+            "color": COLORS['error'],
             "description": "Lo âu nghiêm trọng, ảnh hưởng đáng kể đến cuộc sống",
             "recommendation": "Điều trị tích cực: Kết hợp CBT và thuốc. Chuyển chuyên khoa tâm thần nếu cần.",
             "monitoring": "Theo dõi sát mỗi 1-2 tuần. Đánh giá các rối loạn đồng mắc (trầm cảm, panic).",
@@ -95,7 +97,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("😰 GAD-7 - Generalized Anxiety Disorder")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>😰 GAD-7 - Generalized Anxiety Disorder</h2>", unsafe_allow_html=True)
     st.markdown("""
     ### Sàng lọc Rối Loạn Lo âu Lan Tỏa
     
@@ -164,22 +166,14 @@ def render():
             st.subheader("📈 Kết quả đánh giá")
             
             # Display total score
-            col1, col2 = st.columns([1, 2])
-            
-            with col1:
-                st.metric(
-                    "Tổng Điểm GAD-7",
-                    f"{total_score}/21",
-                    help="Tổng điểm từ 7 câu hỏi"
-                )
-            
-            with col2:
-                if result['level'] == "minimal":
-                    st.success(f"{result['color']} **{result['severity']}**")
-                elif result['level'] in ["mild", "moderate"]:
-                    st.warning(f"{result['color']} **{result['severity']}**")
-                else:
-                    st.error(f"{result['color']} **{result['severity']}**")
+            render_score_result(
+                title="Kết quả GAD-7",
+                score=f"{total_score}/21",
+                interpretation=result['description'],
+                mortality=result['severity'],
+                color=result['color'],
+                icon="📊"
+            )
             
             st.markdown("---")
             

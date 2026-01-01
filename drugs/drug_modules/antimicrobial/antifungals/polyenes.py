@@ -364,7 +364,21 @@ POLYENES_DRUGS = {
             "last_updated": "2025-01-15",
             "evidence_level": "High (FDA-approved, extensive clinical data)"
         },
-        "black_box_warnings": "Cần xem xét black box warnings",
+        "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response"]
+        },
+        "guideline_tags": [
+            "IDSA Candidiasis Guidelines 2024",
+            "WHO Essential Medicines List"
+        ],
         "reversal_agents": {
             "available": False,
             "agents": [],

@@ -4,6 +4,8 @@ Thang điểm số đánh giá đau (0-10)
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -23,8 +25,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>😣 NRS - Numeric Rating Scale</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>😣 NRS - Numeric Rating Scale</h2>
     <p style='text-align: center;'><em>Thang điểm số đánh giá đau (0-10)</em></p>
     """, unsafe_allow_html=True)
     
@@ -89,38 +91,33 @@ def render():
         # Interpret pain level
         if pain_level == 0:
             severity = "Không đau"
-            color = "#10b981"
+            color = COLORS['success']
             icon = "✅"
             interpretation = "Bệnh nhân không có đau"
         elif pain_level <= 3:
             severity = "Đau nhẹ"
-            color = "#fbbf24"
+            color = COLORS['warning']
             icon = "😐"
             interpretation = "Đau nhẹ, có thể chịu đựng được"
         elif pain_level <= 6:
             severity = "Đau vừa"
-            color = "#f59e0b"
+            color = COLORS['warning_dark']
             icon = "😣"
             interpretation = "Đau vừa, ảnh hưởng đến hoạt động"
         else:
             severity = "Đau nặng"
-            color = "#ef4444"
+            color = COLORS['error']
             icon = "😰"
             interpretation = "Đau nặng, ảnh hưởng nghiêm trọng"
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h2 style='color: {color}; margin: 0; text-align: center;'>
-                {icon} NRS = {pain_level}/10
-            </h2>
-            <p style='text-align: center; font-size: 1.1em; margin-top: 10px;'>
-                {severity}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        st.markdown(f"**Diễn giải:** {interpretation}")
+        render_score_result(
+            title="Kết quả NRS",
+            score=f"{pain_level}/10",
+            interpretation=interpretation,
+            mortality=severity,
+            color=color,
+            icon=icon
+        )
         
         # Treatment recommendations
         st.markdown("---")

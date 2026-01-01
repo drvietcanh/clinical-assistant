@@ -407,6 +407,11 @@ def load_saved_search(name):
     return None, None
 
 
+def delete_saved_search(name):
+    """Delete a saved search"""
+    if 'drug_saved_searches' not in st.session_state:
+        return
+
     if name in st.session_state.drug_saved_searches:
         del st.session_state.drug_saved_searches[name]
 

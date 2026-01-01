@@ -4,6 +4,8 @@ COWS - Clinical Opiate Withdrawal Scale
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -16,13 +18,13 @@ def calculate_cows(pulse, sweating, restlessness, pupil, bone_pain, runny, gi, t
     total = pulse + sweating + restlessness + pupil + bone_pain + runny + gi + tremor + yawning + anxiety + gooseflesh
     
     if total <= 4:
-        severity = "Nhẹ"; management = "Hỗ trợ triệu chứng"; color = "green"
+        severity = "Nhẹ"; management = "Hỗ trợ triệu chứng"; color = COLORS['success']
     elif total <= 12:
-        severity = "Trung bình"; management = "Clonidine, hỗ trợ triệu chứng"; color = "orange"
+        severity = "Trung bình"; management = "Clonidine, hỗ trợ triệu chứng"; color = COLORS['warning']
     elif total <= 24:
-        severity = "Trung bình-Nặng"; management = "Buprenorphine/Methadone"; color = "orange"
+        severity = "Trung bình-Nặng"; management = "Buprenorphine/Methadone"; color = COLORS['warning_dark']
     else:
-        severity = "Nặng"; management = "Điều trị tích cực, Buprenorphine/Methadone"; color = "red"
+        severity = "Nặng"; management = "Điều trị tích cực, Buprenorphine/Methadone"; color = COLORS['error']
     
     return {"total_score": total, "severity": severity, "management": management, "color": color}
 
@@ -36,7 +38,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("💊 COWS - Clinical Opiate Withdrawal Scale")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>💊 COWS - Clinical Opiate Withdrawal Scale</h2>", unsafe_allow_html=True)
     st.caption("Đánh giá cai opioid")
     
     st.markdown("""
@@ -94,23 +96,14 @@ def render():
     
     if st.button("🔬 Tính COWS", type="primary", use_container_width=True):
         result = calculate_cows(pulse, sweating, restlessness, pupil, bone_pain, runny, gi, tremor, yawning, anxiety, gooseflesh)
-        score_color = {"green": "#28a745", "orange": "#fd7e14", "red": "#dc3545"}[result["color"]]
-            
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'>
-            <h2 style='color: {score_color}; margin: 0; text-align: center;'>
-                COWS: {result['total_score']}/48
-            </h2>
-        </div>
-        """, unsafe_allow_html=True)
         
-        st.markdown(f"""
-        <div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'>
-            <h3 style='color: {score_color};'>🎯 Mức độ: {result['severity']}</h3>
-            <p style='font-size: 1.2em;'><strong>Điều trị:</strong> {result['management']}</p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="Kết quả COWS",
+            score=f"{result['total_score']}/48",
+            interpretation=f"**Điều trị:** {result['management']}",
+            mortality=f"Mức độ: {result['severity']}",
+            color=result['color']
+        )
         
         st.info("""
         **Điều trị:**

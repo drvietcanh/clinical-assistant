@@ -4,6 +4,7 @@ Mallampati Classification Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -57,8 +58,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #EF4444;'>👄 Mallampati Classification</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['error']};'>👄 Mallampati Classification</h2>
     <p style='text-align: center;'><em>Đánh giá đường thở khó</em></p>
     """, unsafe_allow_html=True)
     
@@ -103,8 +104,8 @@ def render():
         )
     
     # Visual guide
-    st.markdown("""
-    <div style='background-color: #FEF3C7; padding: 15px; border-radius: 10px; border-left: 4px solid #F59E0B; margin-bottom: 20px;'>
+    st.markdown(f"""
+    <div style='background-color: {COLORS['warning']}22; padding: 15px; border-radius: 10px; border-left: 4px solid {COLORS['warning']}; margin-bottom: 20px;'>
         <p style='margin: 0;'><strong>Cách đánh giá:</strong></p>
         <ul style='margin: 5px 0;'>
             <li>Bệnh nhân ngồi thẳng, đầu ở tư thế trung tính</li>
@@ -177,9 +178,9 @@ def render():
         st.markdown("## 📊 Kết quả")
         
         score_color = {
-            "green": "#28a745",
-            "orange": "#fd7e14",
-            "red": "#dc3545"
+            "green": COLORS["success"],
+            "orange": COLORS["warning"],
+            "red": COLORS["error"]
         }[result["color"]]
         
         st.markdown(f"""

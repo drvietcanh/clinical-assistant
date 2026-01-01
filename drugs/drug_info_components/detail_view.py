@@ -111,7 +111,31 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     """,
                     unsafe_allow_html=True
                 )
-            if 'pregnancy' in drug_data:
+            # Improved Pregnancy & Lactation Display in Overview
+            if 'pregnancy_lactation' in drug_data:
+                pl = drug_data['pregnancy_lactation']
+                fda_cat = pl.get('fda_category', drug_data.get('pregnancy', 'N/A'))
+                lac_safety = pl.get('lactation', {}).get('safety', 'N/A')
+                
+                preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
+                cat_letter = fda_cat.split()[0] if fda_cat else 'N/A' # Get first letter
+                icon = preg_icons.get(cat_letter, '⚪')
+                
+                st.markdown(
+                    f"""
+                    <div style='background: #fce7f3; padding: 15px; border-radius: 8px; border-left: 4px solid #EC4899; margin-top: 10px;'>
+                        <div style='color: #831843; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>🤰 Thai kỳ & Cho con bú</div>
+                        <div style='margin-bottom: 4px; color: #9f1239; font-size: 0.95em;'>
+                            <b>Thai kỳ:</b> {icon} {escape_html(fda_cat)}
+                        </div>
+                        <div style='color: #9f1239; font-size: 0.95em;'>
+                            <b>Cho con bú:</b> {escape_html(lac_safety)}
+                        </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            elif 'pregnancy' in drug_data:
                 preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
                 preg = drug_data['pregnancy']
                 preg_desc = {'A': 'An toàn', 'B': 'Khá an toàn', 'C': 'Thận trọng', 'D': 'Nguy cơ', 'X': 'Chống chỉ định'}
@@ -701,24 +725,69 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                 )
             else:
                 st.info(str(precautions) if precautions else "Không có thông tin về thận trọng")
-        if 'pregnancy' in drug_data:
+            st.info(str(precautions) if precautions else "Không có thông tin về thận trọng")
+        
+        # Enhanced Pregnancy & Lactation Section
+        if 'pregnancy_lactation' in drug_data:
             st.markdown('---')
-            preg = drug_data['pregnancy']
-            preg_descriptions = {'A':
-                'An toàn - Nghiên cứu không thấy nguy cơ', 'B':
-                'An toàn - Nghiên cứu động vật không thấy nguy cơ', 'C':
-                'Thận trọng - Nguy cơ không thể loại trừ', 'D':
-                'Nguy cơ - Có bằng chứng nguy cơ, cân nhắc lợi ích', 'X':
-                'Chống chỉ định - Nguy cơ vượt quá lợi ích'}
-            desc = preg_descriptions.get(preg, '')
+            pl = drug_data['pregnancy_lactation']
+            
+            # Pregnancy
+            fda_cat = pl.get('fda_category', 'N/A')
+            preg_details = pl.get('pregnancy_details', 'Chưa có thông tin chi tiết.')
+            
             preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
+            cat_letter = fda_cat.split()[0] if fda_cat else 'N/A'
+            icon = preg_icons.get(cat_letter, '⚪')
+            
+            st.markdown(f"### 🤰 An toàn thai kỳ: {icon} {fda_cat}")
             st.markdown(
-                f"### 🤰 **An toàn thai kỳ:** {preg_icons.get(preg, '')} {preg} - {desc}"
+                f"""
+                <div style='background: #fdf2f8; border-left: 4px solid #db2777; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                    <div style='color: #9d174d; font-size: 1em; line-height: 1.6;'>{safe_render_html(preg_details)}</div>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+            
+            # Lactation
+            if 'lactation' in pl:
+                lac = pl['lactation']
+                safety = lac.get('safety', 'N/A')
+                details = lac.get('details', '')
+                rec = lac.get('recommendation', '')
+                
+                st.markdown(f"### 🤱 An toàn cho con bú: {safety}")
+                rec_html = f"<div style='font-weight: bold; margin-top: 8px;'>💡 Khuyến cáo: {safe_render_html(rec)}</div>" if rec else ""
+                
+                st.markdown(
+                    f"""
+                    <div style='background: #ecfeff; border-left: 4px solid #0891b2; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                        <div style='color: #155e75; font-size: 1em; line-height: 1.6;'>{safe_render_html(details)}</div>
+                        {rec_html}
+                    </div>
+                    """,
+                    unsafe_allow_html=True
                 )
-        if 'lactation' in drug_data:
+                
+        elif 'pregnancy' in drug_data or 'lactation' in drug_data:
             st.markdown('---')
-            st.markdown(
-                f"### 🤱 **An toàn cho con bú:** {escape_html(str(drug_data['lactation']))}")
+            if 'pregnancy' in drug_data:
+                preg = drug_data['pregnancy']
+                preg_descriptions = {'A':
+                    'An toàn - Nghiên cứu không thấy nguy cơ', 'B':
+                    'An toàn - Nghiên cứu động vật không thấy nguy cơ', 'C':
+                    'Thận trọng - Nguy cơ không thể loại trừ', 'D':
+                    'Nguy cơ - Có bằng chứng nguy cơ, cân nhắc lợi ích', 'X':
+                    'Chống chỉ định - Nguy cơ vượt quá lợi ích'}
+                desc = preg_descriptions.get(preg, '')
+                preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
+                st.markdown(
+                    f"### 🤰 **An toàn thai kỳ (FDA):** {preg_icons.get(preg, '')} {preg} - {desc}"
+                    )
+            if 'lactation' in drug_data:
+                st.markdown(
+                    f"### 🤱 **An toàn cho con bú:** {escape_html(str(drug_data['lactation']))}")
     with tab_interactions:
         if 'interactions' in drug_data:
             st.markdown('### 🔗 Tương tác thuốc:')

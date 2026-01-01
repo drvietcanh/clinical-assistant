@@ -4,6 +4,7 @@ Dự đoán đặt nội khí quản khó
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -35,17 +36,17 @@ def calculate_wilson_risk(weight, head_neck_movement, jaw_movement, receding_man
         risk = "Nguy cơ thấp"
         difficulty = "Đặt NKQ dễ dàng"
         recommendation = "Gây mê tiêu chuẩn, bác sĩ gây mê thường quy"
-        color = "green"
+        color = COLORS["success"]
     elif total == 2:
         risk = "Nguy cơ trung bình"
         difficulty = "Có thể đặt NKQ khó"
         recommendation = "Chuẩn bị dụng cụ đường thở khó, có bác sĩ gây mê giàu kinh nghiệm"
-        color = "orange"
+        color = COLORS["warning"]
     else:  # ≥3
         risk = "Nguy cơ cao"
         difficulty = "Đặt NKQ khó - Cần chuẩn bị đặc biệt"
         recommendation = "Bắt buộc có bác sĩ gây mê giàu kinh nghiệm, chuẩn bị đầy đủ dụng cụ đường thở khó (video laryngoscope, LMA, fiberoptic), cân nhắc đặt NKQ tỉnh"
-        color = "red"
+        color = COLORS["error"]
     
     return {
         "total_score": total,
@@ -66,8 +67,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🔍 Wilson Risk Score</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🔍 Wilson Risk Score</h2>
     <p style='text-align: center;'><em>Dự đoán đặt nội khí quản khó</em></p>
     """, unsafe_allow_html=True)
     
@@ -206,9 +207,9 @@ def render():
             st.markdown("---")
             
             # Risk interpretation
-            if result['color'] == "green":
+            if result['color'] == COLORS["success"]:
                 st.success(f"**{result['risk']}** - {result['difficulty']}")
-            elif result['color'] == "orange":
+            elif result['color'] == COLORS["warning"]:
                 st.warning(f"**{result['risk']}** - {result['difficulty']}")
             else:
                 st.error(f"**{result['risk']}** - {result['difficulty']}")

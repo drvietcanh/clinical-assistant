@@ -1,5 +1,7 @@
 """CIPN - Chemotherapy-Induced Peripheral Neuropathy Grading"""
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -15,17 +17,46 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("<h2 style='text-align: center; color: #8B5CF6;'>💊 CIPN Grading</h2><p style='text-align: center;'><em>Phân độ tổn thương thần kinh ngoại biên do hóa trị</em></p>", unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>💊 CIPN Grading</h2><p style='text-align: center;'><em>Phân độ tổn thương thần kinh ngoại biên do hóa trị</em></p>", unsafe_allow_html=True)
     with st.expander("ℹ️ CIPN"): st.markdown("**CIPN** phân độ tổn thương thần kinh ngoại biên do hóa trị (taxanes, platinum, vinca alkaloids). **Độ:** 0-4")
     st.markdown("---"); grade = st.radio("Chọn độ CIPN:", [0,1,2,3,4], format_func=lambda x: ["0: Không triệu chứng", "1: Tê nhẹ, không ảnh hưởng chức năng", "2: Tê/đau trung bình, ảnh hưởng ADL", "3: Tê/đau nặng, ảnh hưởng ADL nặng", "4: Liệt, mất chức năng"][x])
     if st.button("🔬 Đánh giá CIPN", type="primary", use_container_width=True):
-        if grade == 0: st.success("✅ **Độ 0:** Không CIPN")
-        elif grade == 1: st.info("**Độ 1:** CIPN nhẹ - Tiếp tục hóa trị, theo dõi")
-        elif grade == 2: st.warning("⚠️ **Độ 2:** CIPN trung bình - Cân nhắc giảm liều 25%")
-        elif grade == 3: st.error("🚨 **Độ 3:** CIPN nặng - Tạm ngừng hóa trị đến khi giảm xuống Độ 1")
+        if grade == 0: 
+            interpretation = "Không CIPN"
+            color = COLORS["success"]
+            icon = "✅"
+            action = "Tiếp tục theo dõi"
+        elif grade == 1: 
+            interpretation = "CIPN nhẹ"
+            color = COLORS["info"]
+            icon = "ℹ️" 
+            action = "Tiếp tục hóa trị, theo dõi"
+        elif grade == 2: 
+            interpretation = "CIPN trung bình"
+            color = COLORS["warning"]
+            icon = "⚠️"
+            action = "Cân nhắc giảm liều 25%"
+        elif grade == 3: 
+            interpretation = "CIPN nặng"
+            color = COLORS["error"]
+            icon = "🚨"
+            action = "Tạm ngừng hóa trị đến khi giảm xuống Độ 1"
         else: 
-            st.error("🆘 **Độ 4:** Liệt - NGỪNG hóa trị gây CIPN")
-            st.info("""**Điều trị CIPN:** Duloxetine (30-60mg/ngày) - Bằng chứng tốt nhất""")
+            interpretation = "Liệt - Mất chức năng"
+            color = COLORS["error"]
+            icon = "🆘"
+            action = "NGỪNG hóa trị gây CIPN. Điều trị: Duloxetine (30-60mg/ngày)"
+
+        render_score_result(
+            title="CIPN Grade",
+            score=grade,
+            interpretation=interpretation,
+            mortality=action,
+            color=color,
+            icon=icon,
+            size="large",
+            max_score=4
+        )
         
         # Prepare data for history and share
         inputs_dict = {

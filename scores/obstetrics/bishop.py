@@ -4,6 +4,8 @@ Bishop Score
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.results import render_result_box
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -100,7 +102,8 @@ def interpret_bishop_score(total_score, is_nulliparous=True):
     if total_score <= 5:
         return {
             "favorability": "KHÔNG THUẬN LỢI (Unfavorable)",
-            "color": "🔴",
+            "color": COLORS["error"],
+            "icon": "🔴",
             "induction_success": "Thấp (30-50% nếu nulliparous)",
             "recommendation": "Cân nhắc cervical ripening trước induction",
             "labor_duration": "Có thể kéo dài hoặc thất bại",
@@ -111,7 +114,8 @@ def interpret_bishop_score(total_score, is_nulliparous=True):
     elif total_score <= 8:
         return {
             "favorability": "TRUNG BÌNH (Intermediate)",
-            "color": "🟡",
+            "color": COLORS["warning"],
+            "icon": "🟡",
             "induction_success": "Trung bình (60-75%)",
             "recommendation": "Có thể induction, cân nhắc ripening",
             "labor_duration": "Bình thường đến hơi kéo dài",
@@ -122,7 +126,8 @@ def interpret_bishop_score(total_score, is_nulliparous=True):
     else:  # > 8
         return {
             "favorability": "THUẬN LỢI (Favorable)",
-            "color": "🟢",
+            "color": COLORS["success"],
+            "icon": "🟢",
             "induction_success": "Cao (80-95%)",
             "recommendation": "Induction có khả năng thành công cao",
             "labor_duration": "Bình thường, có thể ngắn",
@@ -142,7 +147,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🤰 Bishop Score")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🤰 Bishop Score</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Đánh giá độ chín cổ tử cung và khả năng gây chuyển dạ thành công</p>", unsafe_allow_html=True)
     st.markdown("""
     ### Đánh giá Độ Chín Cổ Tử Cung
     
@@ -303,22 +309,14 @@ def render():
         st.subheader("📈 Kết quả đánh giá")
         
         # Display total score
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.metric(
-                "Bishop Score",
-                f"{total_score}/13",
-                help="Tổng điểm Bishop"
-            )
-        
-        with col2:
-            if result['severity'] == "favorable":
-                st.success(f"{result['color']} {result['favorability']}")
-            elif result['severity'] == "intermediate":
-                st.warning(f"{result['color']} {result['favorability']}")
-            else:
-                st.error(f"{result['color']} {result['favorability']}")
+        render_result_box(
+            title="Bishop Score",
+            value=f"{total_score}/13",
+            subtitle=result['favorability'],
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
         st.markdown("---")
         
@@ -358,7 +356,7 @@ def render():
         
         if result['severity'] == "favorable":
             st.success(f"""
-            ### {result['color']} {result['favorability']}
+            ### {result['favorability']}
             
             **Bishop Score: {total_score}/13** ({'Sản phụ ' + parity_text})
             
@@ -397,7 +395,7 @@ def render():
             
         else:
             st.warning(f"""
-            ### {result['color']} {result['favorability']}
+            ### {result['favorability']}
             
             **Bishop Score: {total_score}/13** ({'Sản phụ ' + parity_text})
             

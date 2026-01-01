@@ -3,6 +3,7 @@ GRACE Score Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_age,
     validate_heart_rate,
@@ -37,7 +38,10 @@ except ImportError:
 
 def render():
     """GRACE Score Calculator"""
-    st.subheader("📊 GRACE Score")
+    # st.subheader("📊 GRACE Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>📊 GRACE Score</h3>
+    """, unsafe_allow_html=True)
     st.caption("Tiên lượng Tử vong Trong ACS")
     
     # Load shared result if available
@@ -364,21 +368,23 @@ def render():
                 risk_level_code = "low"
                 hospital_mort = "<1%"
                 six_month_mort = "<3%"
-                color = "#28a745"  # green
+                hospital_mort = "<1%"
+                six_month_mort = "<3%"
+                color = COLORS["success"]
                 icon = "✅"
             elif points <= 140:
                 risk_category = "Nguy cơ TRUNG BÌNH"
                 risk_level_code = "moderate"
                 hospital_mort = "1-3%"
                 six_month_mort = "3-8%"
-                color = "#fd7e14"  # orange
+                color = COLORS["warning"]
                 icon = "⚠️"
             else:
                 risk_category = "Nguy cơ CAO"
                 risk_level_code = "high"
                 hospital_mort = ">3%"
                 six_month_mort = ">8%"
-                color = "#dc3545"  # red
+                color = COLORS["error"]
                 icon = "🚨"
             
             with col2:

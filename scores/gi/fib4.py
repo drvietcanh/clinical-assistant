@@ -4,9 +4,10 @@ FIB-4 Index for Liver Fibrosis
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_range, validate_age, validate_lab_value
 from components.ui.validation import render_validation_errors
-from components.ui.results import render_result_box
+from components.ui.scoring import render_score_result
 from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
@@ -54,7 +55,9 @@ def interpret_fib4(fib4_value, etiology="HCV"):
     if etiology == "HCV":
         if fib4_value < 1.45:
             return {
-                "status": "🟢 Thấp",
+                "status": "Thấp",
+                "color": COLORS["success"],
+                "icon": "🟢",
                 "interpretation": "FIB-4 < 1.45 - Xơ hóa không đáng kể (F0-F1)",
                 "risk": "Thấp",
                 "recommendations": [
@@ -64,7 +67,9 @@ def interpret_fib4(fib4_value, etiology="HCV"):
             }
         elif fib4_value < 3.25:
             return {
-                "status": "🟡 Trung bình",
+                "status": "Trung bình",
+                "color": COLORS["warning"],
+                "icon": "🟡",
                 "interpretation": "FIB-4 1.45-3.25 - Xơ hóa trung bình (F2-F3)",
                 "risk": "Trung bình",
                 "recommendations": [
@@ -75,7 +80,9 @@ def interpret_fib4(fib4_value, etiology="HCV"):
             }
         else:
             return {
-                "status": "🔴 Cao",
+                "status": "Cao",
+                "color": COLORS["error"],
+                "icon": "🔴",
                 "interpretation": "FIB-4 ≥ 3.25 - Xơ hóa nặng/xơ gan (F4)",
                 "risk": "Cao",
                 "recommendations": [
@@ -88,21 +95,27 @@ def interpret_fib4(fib4_value, etiology="HCV"):
     elif etiology == "HBV":
         if fib4_value < 1.45:
             return {
-                "status": "🟢 Thấp",
+                "status": "Thấp",
+                "color": COLORS["success"],
+                "icon": "🟢",
                 "interpretation": "FIB-4 < 1.45 - Xơ hóa không đáng kể",
                 "risk": "Thấp",
                 "recommendations": ["Theo dõi định kỳ"]
             }
         elif fib4_value < 3.25:
             return {
-                "status": "🟡 Trung bình",
+                "status": "Trung bình",
+                "color": COLORS["warning"],
+                "icon": "🟡",
                 "interpretation": "FIB-4 1.45-3.25 - Xơ hóa trung bình",
                 "risk": "Trung bình",
                 "recommendations": ["Cân nhắc đánh giá thêm", "Xem xét điều trị"]
             }
         else:
             return {
-                "status": "🔴 Cao",
+                "status": "Cao",
+                "color": COLORS["error"],
+                "icon": "🔴",
                 "interpretation": "FIB-4 ≥ 3.25 - Xơ hóa nặng/xơ gan",
                 "risk": "Cao",
                 "recommendations": ["Điều trị tích cực", "Theo dõi biến chứng"]
@@ -110,21 +123,27 @@ def interpret_fib4(fib4_value, etiology="HCV"):
     else:  # NAFLD
         if fib4_value < 1.30:
             return {
-                "status": "🟢 Thấp",
+                "status": "Thấp",
+                "color": COLORS["success"],
+                "icon": "🟢",
                 "interpretation": "FIB-4 < 1.30 - Xơ hóa không đáng kể",
                 "risk": "Thấp",
                 "recommendations": ["Theo dõi định kỳ"]
             }
         elif fib4_value < 2.67:
             return {
-                "status": "🟡 Trung bình",
+                "status": "Trung bình",
+                "color": COLORS["warning"],
+                "icon": "🟡",
                 "interpretation": "FIB-4 1.30-2.67 - Xơ hóa trung bình",
                 "risk": "Trung bình",
                 "recommendations": ["Cân nhắc đánh giá thêm"]
             }
         else:
             return {
-                "status": "🔴 Cao",
+                "status": "Cao",
+                "color": COLORS["error"],
+                "icon": "🔴",
                 "interpretation": "FIB-4 ≥ 2.67 - Xơ hóa nặng/xơ gan",
                 "risk": "Cao",
                 "recommendations": ["Điều trị tích cực", "Theo dõi biến chứng"]
@@ -134,9 +153,9 @@ def interpret_fib4(fib4_value, etiology="HCV"):
 def render():
     """Render FIB-4 calculator interface"""
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🩸 FIB-4 Index for Liver Fibrosis</h2>
-    <p style='text-align: center;'><em>Đánh giá mức độ xơ hóa gan không xâm lấn</em></p>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩸 FIB-4 Index for Liver Fibrosis</h3>
+    <p style='text-align: center; color: #6B7280;'><em>Đánh giá mức độ xơ hóa gan không xâm lấn</em></p>
     """, unsafe_allow_html=True)
     
     shared = load_shared_result_from_url()
@@ -246,16 +265,23 @@ def render():
         
         st.subheader("📊 Kết quả")
         
-        render_result_box(
+        render_score_result(
             title="FIB-4 Index",
-            value=f"{fib4_value:.2f}",
-            unit="",
-            status=interpretation["status"]
+            score=f"{fib4_value:.2f}",
+            interpretation=f"{interpretation['status']} - {interpretation['interpretation']}",
+            mortality=f"Nguy cơ xơ hóa: {interpretation['risk']}",
+            color=interpretation['color'],
+            icon=interpretation['icon'],
+            size="large"
         )
         
-        # Interpretation
-        st.info(f"**{interpretation['interpretation']}**")
-        st.info(f"**Nguy cơ xơ hóa:** {interpretation['risk']}")
+        # Recommendations display
+        if interpretation['risk'] == "Cao":
+             st.error(f"**{interpretation['interpretation']}**")
+        elif interpretation['risk'] == "Trung bình":
+             st.warning(f"**{interpretation['interpretation']}**")
+        else:
+             st.success(f"**{interpretation['interpretation']}**")
         
         # Formula
         with st.expander("📐 Công thức"):

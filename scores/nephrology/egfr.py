@@ -5,6 +5,7 @@ Chuẩn hóa và tuyệt đối GFR
 """
 
 import streamlit as st
+from config.theme import COLORS
 
 from .egfr_bsa import (
     calculate_bsa_mosteller,
@@ -48,8 +49,8 @@ from components.export import render_export_section
 def render():
     """Render comprehensive eGFR/GFR calculator"""
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🧪 eGFR/GFR Calculator</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🧪 eGFR/GFR Calculator</h2>
     <p style='text-align: center;'><em>Tính tốc độ lọc cầu thận với nhiều công thức</em></p>
     """, unsafe_allow_html=True)
     shared = load_shared_result_from_url()

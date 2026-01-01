@@ -3,6 +3,7 @@ TIMI Risk Score Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -15,6 +16,7 @@ from components.smart_suggestions import render_suggestions
 from components.risk_color_coding import render_risk_badge, get_risk_level
 from components.score_charts import render_risk_gauge_chart, render_risk_bar_chart
 from components.scores_export import render_export_section as render_scores_export
+from components.ui.scoring import render_score_result
 # ========== PHASE 1: CALCULATOR ENHANCEMENTS ==========
 try:
     from components.calculator_enhancements import (
@@ -41,7 +43,10 @@ except ImportError:
 
 def render():
     """TIMI Risk Score Calculator"""
-    st.subheader("💔 TIMI Risk Score")
+    # st.subheader("💔 TIMI Risk Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>💔 TIMI Risk Score</h3>
+    """, unsafe_allow_html=True)
     st.caption("Đánh giá nguy cơ trong UA/NSTEMI")
     
     # Load shared result if available
@@ -227,23 +232,23 @@ def render():
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                # Display score with color coding badge
-                st.markdown(f"## TIMI Score = {score}/7")
-                render_risk_badge(
-                    risk_level=risk_level_code,
-                    label=f"Nguy cơ {risk_level.upper()}",
-                    value=score
-                )
+                # Use render_score_result
+                color_map = {
+                    "low": COLORS["success"],
+                    "moderate": COLORS["warning"],
+                    "high": COLORS["error"]
+                }
+                color = color_map.get(risk_level_code, COLORS["primary"])
                 
-                if score <= 2:
-                    st.success(f"## TIMI = {score}")
-                    st.success("✅ Nguy cơ THẤP")
-                elif score <= 4:
-                    st.warning(f"## TIMI = {score}")
-                    st.warning("⚠️ Nguy cơ TRUNG BÌNH")
-                else:
-                    st.error(f"## TIMI = {score}")
-                    st.error("🚨 Nguy cơ CAO")
+                render_score_result(
+                    title="TIMI Risk Score",
+                    score=f"{score}/7",
+                    interpretation=f"Nguy cơ {risk_level.upper()}",
+                    mortality=f"Nguy cơ sự kiện (14 ngày): {risk_data.get(score, '>65%')}",
+                    color=color,
+                    icon="💔",
+                    size="large"
+                )
                 
                 # Enhanced result interpretation with Phase 1 metadata
                 if CALCULATOR_METADATA_AVAILABLE:

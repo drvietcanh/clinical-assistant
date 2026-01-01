@@ -273,9 +273,9 @@ def render():
         
         # FTI display
         score_color_map = {
-            "green": "#28a745",
-            "blue": "#007bff",
-            "red": "#dc3545"
+            "green": COLORS["success"],
+            "blue": COLORS["info"],
+            "red": COLORS["error"]
         }
         score_color = score_color_map[result["color"]]
         

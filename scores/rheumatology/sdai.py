@@ -12,7 +12,8 @@ from scores.utils.validation import (
     validate_range,
     validate_lab_value
 )
-from components.ui.validation import render_validation_errors
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 
 def render():
     # Load shared result if available
@@ -22,7 +23,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("<h2 style='text-align: center; color: #F97316;'>🦴 SDAI</h2><p style='text-align: center;'><em>Chỉ số đơn giản hóa RA</em></p>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: center; color: {COLORS['success']};'>🦴 SDAI</h3><p style='text-align: center;'><em>Chỉ số đơn giản hóa RA</em></p>", unsafe_allow_html=True)
     with st.expander("ℹ️ SDAI"): st.markdown("**SDAI** = CDAI + CRP. Tương tự CDAI nhưng có CRP.")
     st.markdown("---"); tjc = st.number_input("TJC - Số khớp đau (0-28)", 0, 28, 0, format="%d"); sjc = st.number_input("SJC - Số khớp sưng (0-28)", 0, 28, 0, format="%d"); pga = st.slider("PGA - Bệnh nhân đánh giá (cm, 0-10)", 0.0, 10.0, 5.0, 0.1); ega = st.slider("EGA - Bác sĩ đánh giá (cm, 0-10)", 0.0, 10.0, 5.0, 0.1); crp = st.number_input("CRP (mg/dL)", 0.0, 20.0, 0.5, 0.1, format="%.1f"); sdai = tjc + sjc + pga + ega + crp
     if st.button("🔬 Tính SDAI", type="primary", use_container_width=True):
@@ -54,16 +55,19 @@ def render():
         if not is_valid_crp:
             validation_errors.append(f"CRP: {crp_error}")
         
-        if validation_errors:
-            render_validation_errors(validation_errors)
-            return
         
-        if sdai <= 3.3: status = "Thuyên giảm"; color = "#28a745"
-        elif sdai <= 11: status = "Hoạt động thấp"; color = "#28a745"
-        elif sdai <= 26: status = "Hoạt động trung bình"; color = "#fd7e14"
-        else: status = "Hoạt động cao"; color = "#dc3545"
-        result_html = f"<div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'><h2 style='color: {color}; margin: 0; text-align: center;'>SDAI: {sdai:.1f}</h2><p style='text-align: center; margin-top: 10px;'>{status}</p></div>"
-        components.html(result_html, height=120, scrolling=False)
+        if sdai <= 3.3: status = "Thuyên giảm"; color = COLORS["success"]; icon = "✅"
+        elif sdai <= 11: status = "Hoạt động thấp"; color = COLORS["success"]; icon = "🟢"
+        elif sdai <= 26: status = "Hoạt động trung bình"; color = COLORS["warning"]; icon = "⚠️"
+        else: status = "Hoạt động cao"; color = COLORS["error"]; icon = "🚨"
+        
+        render_score_result(
+            title="SDAI Score",
+            score=f"{sdai:.1f}",
+            interpretation=status,
+            color=color,
+            icon=icon
+        )
         
         # Prepare data for history and share
         inputs_dict = {

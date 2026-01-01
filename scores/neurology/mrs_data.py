@@ -3,6 +3,8 @@ mRS - Modified Rankin Scale Data
 Contains all mRS grade definitions and descriptions
 """
 
+from config.theme import COLORS
+
 MRS_GRADES = {
     0: {
         "name": "mRS 0 - Không có triệu chứng",
@@ -18,7 +20,7 @@ MRS_GRADES = {
         - Người bệnh đã hồi phục hoàn toàn sau TIA hoặc đột quỵ nhẹ
         - Không có dấu hiệu suy giảm thần kinh
         """,
-        "color": "green",
+        "color": COLORS["success"],
         "icon": "✅",
         "outcome": "Excellent",
         "independence": "Hoàn toàn độc lập"
@@ -38,7 +40,7 @@ MRS_GRADES = {
         - Tê bì nhẹ nhưng không ảnh hưởng sinh hoạt
         - Nói khó nhẹ nhưng vẫn giao tiếp tốt
         """,
-        "color": "green",
+        "color": COLORS["success"],
         "icon": "✅",
         "outcome": "Excellent",
         "independence": "Hoàn toàn độc lập"
@@ -60,7 +62,7 @@ MRS_GRADES = {
         - Tự nấu ăn, tắm rửa, ăn uống được
         - Yếu tay/chân vừa phải nhưng không cần người hỗ trợ
         """,
-        "color": "lightgreen",
+        "color": COLORS["success"],
         "icon": "🟢",
         "outcome": "Good",
         "independence": "Độc lập"
@@ -81,7 +83,7 @@ MRS_GRADES = {
         - Đi lại trong nhà tốt, ra ngoài cần có người đi cùng
         - Cần giúp quản lý thuốc, tài chính
         """,
-        "color": "orange",
+        "color": COLORS["warning"],
         "icon": "🟡",
         "outcome": "Moderate",
         "independence": "Phụ thuộc nhẹ"
@@ -103,7 +105,7 @@ MRS_GRADES = {
         - Liệt nặng, chỉ ngồi được trên xe lăn hoặc nằm giường
         - Có thể tự ngồi nhưng không tự đi được
         """,
-        "color": "red",
+        "color": COLORS["error"],
         "icon": "🔴",
         "outcome": "Poor",
         "independence": "Phụ thuộc nặng"
@@ -127,7 +129,7 @@ MRS_GRADES = {
         - Cần chăm sóc toàn bộ: vệ sinh, thay đổi tư thế, phòng loét
         - Có thể ở trạng thái thực vật (vegetative state)
         """,
-        "color": "darkred",
+        "color": COLORS["error"],
         "icon": "⚫",
         "outcome": "Very Poor",
         "independence": "Phụ thuộc hoàn toàn"
@@ -140,7 +142,7 @@ MRS_GRADES = {
         **Đặc điểm:**
         - Bệnh nhân đã tử vong
         """,
-        "color": "black",
+        "color": COLORS["neutral_dark"],
         "icon": "💀",
         "outcome": "Death",
         "independence": "N/A"

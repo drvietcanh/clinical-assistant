@@ -4,6 +4,7 @@ PSI/PORT Score (Pneumonia Severity Index)
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_age,
     validate_respiratory_rate,
@@ -36,8 +37,12 @@ except ImportError:
 
 def render():
     """PSI/PORT Score Calculator"""
-    st.subheader("🫁 PSI/PORT Score")
-    st.caption("Pneumonia Severity Index - Chỉ số Mức độ Nặng Viêm Phổi")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🫁 PSI/PORT Score</h2>
+    <p style='text-align: center; color: #6B7280;'>
+    Pneumonia Severity Index - Chỉ số Mức độ Nặng Viêm Phổi
+    </p>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -509,57 +514,72 @@ def render():
                 risk_class = "I"
                 mortality = "0.1%"
                 recommendation = "Điều trị ngoại trú"
-                color = "success"
+                color = COLORS["success"]
             elif score <= 70:
                 risk_class = "II"
                 mortality = "0.6%"
                 recommendation = "Điều trị ngoại trú"
-                color = "success"
+                color = COLORS["success"]
             elif score <= 90:
                 risk_class = "III"
                 mortality = "2.8%"
                 recommendation = "Cân nhắc nhập viện ngắn ngày"
-                color = "info"
+                color = COLORS["warning"]
             elif score <= 130:
                 risk_class = "IV"
                 mortality = "8.2%"
                 recommendation = "Nhập viện"
-                color = "warning"
+                color = COLORS["error"]
             else:
                 risk_class = "V"
                 mortality = "29.2%"
                 recommendation = "Nhập viện/ICU"
-                color = "error"
+                color = COLORS["dark"]
             
             st.markdown("---")
             st.markdown("## 📊 Kết quả")
             
-            # Map color to hex
-            color_map_hex = {
-                "success": "#28a745",
-                "info": "#17a2b8",
-                "warning": "#ffc107",
-                "error": "#dc3545"
-            }
-            score_color = color_map_hex.get(color, "#6c757d")
-            
             icon_map = {
-                "success": "✅",
-                "info": "ℹ️",
-                "warning": "⚠️",
-                "error": "🚨"
+                COLORS["success"]: "✅",
+                COLORS["info"]: "ℹ️",
+                COLORS["warning"]: "⚠️",
+                COLORS["error"]: "🚨",
+                COLORS["dark"]: "🚨"
             }
             icon = icon_map.get(color, "📊")
             
+            # Define variables for result rendering
+            if risk_class in ["I", "II"]:
+                color = COLORS["success"]
+                icon = "✅"
+                recommendation = "Ngoại trú"
+                detail_color = "success"
+            elif risk_class == "III":
+                color = COLORS["warning"]
+                icon = "⚠️"
+                recommendation = "Nguy cơ thấp (Theo dõi ngắn ngày)"
+                detail_color = "warning"
+            elif risk_class == "IV":
+                color = COLORS["error"]
+                icon = "🚨"
+                recommendation = "Nhập viện"
+                detail_color = "error"
+            else: # Class V
+                color = COLORS["error"]
+                icon = "🚑"
+                recommendation = "Nhập viện / ICU"
+                detail_color = "error"
+
             # Use render_score_result for main score display
+            from components.ui.scoring import render_score_result
             render_score_result(
-                title="PSI/PORT Score",
+                title=f"PSI/PORT Score",
                 score=score,
+                max_score=None,
                 interpretation=f"Class {risk_class} - {recommendation}",
-                mortality=f"Tỷ lệ tử vong 30 ngày: {mortality}",
-                color=score_color,
-                icon=icon,
-                size="large"
+                recommendation=f"Tỷ lệ tử vong 30 ngày: {mortality}",
+                color=color,
+                icon=icon
             )
             
             st.markdown("---")

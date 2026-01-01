@@ -339,7 +339,7 @@ OTHER_ANTIBIOTICS = {
             "IDSA Guidelines - Clostridium difficile Infection",
             "WHO Essential Medicines List"
         ],
-        "last_updated": "2025-02-18",
+        "last_updated": "2025-02-18"
     },
     
     "Fosfomycin": {
@@ -447,7 +447,6 @@ OTHER_ANTIBIOTICS = {
                 "Suy thận (CrCl 10-30) - giảm liều IV"
             ]
         },
-        "black_box_warnings": None,
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "Fosfomycin là thuốc phân loại B. Không có bằng chứng về nguy cơ dị tật thai nhi trong các nghiên cứu trên động vật. Các nghiên cứu trên người không cho thấy nguy cơ tăng dị tật bẩm sinh. Được sử dụng trong thai kỳ để điều trị UTI và có vẻ an toàn. UTI trong thai kỳ có thể gây nguy hiểm cho cả mẹ và thai nhi nếu không điều trị.",
@@ -526,7 +525,7 @@ OTHER_ANTIBIOTICS = {
             "IDSA Guidelines - Multidrug-Resistant Gram-Negative Infections",
             "WHO Essential Medicines List"
         ],
-        "last_updated": "2025-02-18",
+        "last_updated": "2025-02-18"
     },
     
     "Lefamulin": {
@@ -801,13 +800,25 @@ OTHER_ANTIBIOTICS = {
             "moderate": [
                 {
                     "drug": "Antacids (magnesium trisilicate, aluminum hydroxide)",
-                    "mechanism": "Antacids giảm hấp thu nitrofurantoin",
-                    "effect": "Giảm nồng độ nitrofurantoin, giảm hiệu quả điều trị",
-                    "management": "Cách antacids 2 giờ trước hoặc sau khi uống nitrofurantoin."
+                    "mechanism": "Làm giảm hấp thu nitrofurantoin",
+                    "effect": "Giảm hiệu quả điều trị",
+                    "management": "Uống cách nhau ít nhất 2 giờ."
                 }
             ],
             "minor": []
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"pulmonary": "High (acute/chronic pneumonitis)", "neurological": "High (peripheral neuropathy)", "hematologic": "High (hemolytic anemia in G6PD)"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Uncomplicated Urinary Tract Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
         "contraindications": {
             "tuyệt_đối": [
                 "Dị ứng nitrofurantoin",

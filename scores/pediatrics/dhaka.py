@@ -32,6 +32,8 @@ Clinical Utility:
 import streamlit as st
 from scores.utils.validation import validate_age
 from components.ui.validation import render_validation_errors
+from config.theme import COLORS
+from components.ui.results import render_result_box
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -67,20 +69,28 @@ def calculate_dhaka(
         category = "Không mất nước hoặc nhẹ"
         dehydration_percent = "<5%"
         treatment = "Điều trị tại nhà với ORS"
+        color = COLORS["success"]
+        icon = "✅"
     elif total_score <= 5:
         category = "Mất nước trung bình"
         dehydration_percent = "5-10%"
         treatment = "Điều trị tại bệnh viện với ORS hoặc truyền dịch"
+        color = COLORS["warning"]
+        icon = "⚠️"
     else:
         category = "Mất nước nặng"
         dehydration_percent = ">10%"
         treatment = "Truyền dịch tĩnh mạch ngay, nhập viện"
+        color = COLORS["error"]
+        icon = "🚨"
     
     return {
         "score": total_score,
         "category": category,
         "dehydration_percent": dehydration_percent,
-        "treatment": treatment
+        "treatment": treatment,
+        "color": color,
+        "icon": icon
     }
 
 
@@ -93,13 +103,8 @@ def render():
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>👶 DHAKA Score</h2>
-    <p style='text-align: center; color: #6B7280;'>
-    Dehydration: Assessing Kids Accurately<br>
-    Phân loại mất nước ở trẻ em <5 tuổi bị tiêu chảy cấp
-    </p>
-    """, unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>👶 DHAKA Score</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Dehydration: Assessing Kids Accurately - Phân loại mất nước ở trẻ em <5 tuổi bị tiêu chảy cấp</p>", unsafe_allow_html=True)
     
     with st.expander("ℹ️ Giới thiệu về DHAKA Score"):
         st.markdown("""
@@ -185,22 +190,20 @@ def render():
         st.markdown("---")
         st.markdown("### 📋 Kết quả DHAKA Score")
         
-        col1, col2, col3 = st.columns(3)
+        render_result_box(
+            title="DHAKA Score",
+            value=f"{result['score']}/6",
+            subtitle=result['category'],
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
+        col1, col2 = st.columns(2)
         with col1:
-            st.metric("Điểm DHAKA", f"{result['score']}/6")
-        
+             st.metric("Tỷ lệ mất nước", result['dehydration_percent'])
         with col2:
-            st.metric(
-                "Mức độ mất nước",
-                result['category']
-            )
-        
-        with col3:
-            st.metric(
-                "Tỷ lệ mất nước",
-                result['dehydration_percent']
-            )
+             st.metric("Phân loại", result['category'])
         
         # Treatment recommendations
         st.markdown("### 💡 Khuyến nghị điều trị")

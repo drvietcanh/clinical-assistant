@@ -4,6 +4,7 @@ Bleeding risk assessment in patients on anticoagulation
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -32,7 +33,10 @@ except ImportError:
 
 def render():
     """HAS-BLED Score Calculator"""
-    st.subheader("🩸 HAS-BLED Score")
+    # st.subheader("🩸 HAS-BLED Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩸 HAS-BLED Score</h3>
+    """, unsafe_allow_html=True)
     st.caption("Đánh giá nguy cơ chảy máu Khi Dùng Kháng đông")
     
     # Load shared result if available
@@ -191,17 +195,17 @@ def render():
                 st.markdown("### 📊 Kết quả")
                 
                 color_map = {
-                    'low': 'success',
-                    'moderate': 'warning',
-                    'high': 'error'
+                    'low': COLORS['success'],
+                    'moderate': COLORS['warning'],
+                    'high': COLORS['error']
                 }
-                component_color = color_map.get(risk_level_code, 'info')
+                component_color = color_map.get(risk_level_code, COLORS['primary'])
 
                 # Use render_score_result
                 render_score_result(
                     title="HAS-BLED Score",
                     score=score,
-                    interpretation=f"Nguy cơ {risk_text}",
+                    interpretation=f"Nguy cơ {risk_text} ({risk_level_code.upper()})",
                     mortality=None,
                     color=component_color,
                     icon="🩸",

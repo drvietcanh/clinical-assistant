@@ -34,12 +34,14 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_age,
     validate_blood_pressure,
     validate_lab_value
 )
 from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -179,27 +181,27 @@ def calculate_crusade_score(
         risk_category = "Rất thấp"
         risk_class = "VERY_LOW"
         bleeding_risk = "<3.1%"
-        color = "success"
+        color = COLORS["success"]
     elif score <= 30:
         risk_category = "Thấp"
         risk_class = "LOW"
         bleeding_risk = "3.1-5.5%"
-        color = "success"
+        color = COLORS["success"]
     elif score <= 40:
         risk_category = "Trung bình"
         risk_class = "MODERATE"
         bleeding_risk = "5.5-8.6%"
-        color = "warning"
+        color = COLORS["warning"]
     elif score <= 50:
         risk_category = "Cao"
         risk_class = "HIGH"
         bleeding_risk = "8.6-11.9%"
-        color = "error"
+        color = COLORS["error"]
     else:
         risk_category = "Rất cao"
         risk_class = "VERY_HIGH"
         bleeding_risk = ">11.9%"
-        color = "error"
+        color = COLORS["error"]
     
     return {
         'total_score': score,
@@ -214,7 +216,10 @@ def calculate_crusade_score(
 def render():
     """Render CRUSADE Score calculator"""
     
-    st.title("🩸 CRUSADE Bleeding Risk Score")
+    # st.title("🩸 CRUSADE Bleeding Risk Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩸 CRUSADE Bleeding Risk Score</h3>
+    """, unsafe_allow_html=True)
     st.markdown("**Dự đoán nguy cơ chảy máu trong viện ở bệnh nhân ACS**")
     
     # Load shared result if available
@@ -375,18 +380,25 @@ def render():
         # Display results
         st.subheader("📊 Kết quả")
         
-        col_r1, col_r2 = st.columns([1, 2])
+        # Use render_score_result for main score display
+        icon_map = {
+            "VERY_LOW": "✅",
+            "LOW": "✅",
+            "MODERATE": "⚠️",
+            "HIGH": "🚨",
+            "VERY_HIGH": "🚨"
+        }
+        icon = icon_map.get(result['risk_class'], "🩸")
         
-        with col_r1:
-            st.metric(
-                "**CRUSADE Score**",
-                f"{result['total_score']}/100"
-            )
-            st.caption("Điểm chảy máu")
-        
-        with col_r2:
-            st.markdown(f"### {result['risk_category'].upper()}")
-            st.caption(f"Nguy cơ chảy máu: {result['bleeding_risk']}")
+        render_score_result(
+            title="CRUSADE Score",
+            score=result['total_score'],
+            interpretation=f"{result['risk_category'].upper()} Risk - {result['bleeding_risk']}",
+            mortality=None,
+            color=result['color'],
+            icon=icon,
+            size="large"
+        )
         
         # Risk factors summary
         with st.expander("📋 Chi tiết điểm số", expanded=True):

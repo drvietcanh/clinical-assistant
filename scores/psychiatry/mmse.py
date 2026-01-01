@@ -4,6 +4,9 @@ MMSE - Mini Mental State Exam
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
+from scores.utils.validation import validate_input_range
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -22,7 +25,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🧠 MMSE - Mini Mental State Exam")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🧠 MMSE - Mini Mental State Exam</h2>", unsafe_allow_html=True)
     st.caption("Đánh giá nhận thức - Sàng lọc suy giảm nhận thức")
     
     st.markdown("""
@@ -88,35 +91,52 @@ def render():
         total = orientation + registration + attention + recall + language
         
         if st.button("🔬 Tính MMSE", type="primary", use_container_width=True):
+            # Validate inputs
+            validation_errors = []
+            
+            if not validate_input_range(orientation, "Định hướng", 0, 10)[0]:
+                validation_errors.append("Điểm Định hướng phải từ 0-10")
+            if not validate_input_range(registration, "Ghi nhớ", 0, 3)[0]:
+                validation_errors.append("Điểm Ghi nhớ phải từ 0-3")
+            if not validate_input_range(attention, "Chú ý", 0, 5)[0]:
+                validation_errors.append("Điểm Chú ý phải từ 0-5")
+            if not validate_input_range(recall, "Nhớ lại", 0, 3)[0]:
+                validation_errors.append("Điểm Nhớ lại phải từ 0-3")
+            if not validate_input_range(language, "Ngôn ngữ", 0, 9)[0]:
+                validation_errors.append("Điểm Ngôn ngữ phải từ 0-9")
+                
+            if validation_errors:
+                st.error("**⚠️ Lỗi validation:**")
+                for error in validation_errors:
+                    st.error(f"- {error}")
+                st.stop()
+
             # Interpret score
             if total >= 27:
                 status = "Bình thường"
-                color = "#28a745"
+                color = COLORS['success']
                 level = "normal"
             elif total >= 21:
                 status = "Suy giảm nhẹ"
-                color = "#fd7e14"
+                color = COLORS['warning']
                 level = "mild"
             elif total >= 10:
                 status = "Suy giảm trung bình"
-                color = "#fd7e14"
+                color = COLORS['warning_dark']
                 level = "moderate"
             else:
                 status = "Suy giảm nặng"
-                color = "#dc3545"
+                color = COLORS['error']
                 level = "severe"
             
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                        padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-                <h2 style='color: {color}; margin: 0; text-align: center;'>
-                    MMSE: {total}/30
-                </h2>
-                <p style='text-align: center; margin-top: 10px; font-size: 1.2em; font-weight: bold;'>
-                    {status}
-                </p>
-            </div>
-            """, unsafe_allow_html=True)
+            render_score_result(
+                title="Kết quả MMSE",
+                score=f"{total}/30",
+                interpretation=f"**{status}**",
+                mortality=None,
+                color=color,
+                icon="🧠"
+            )
             
             # Detailed breakdown
             st.markdown("### 📊 Chi tiết điểm:")

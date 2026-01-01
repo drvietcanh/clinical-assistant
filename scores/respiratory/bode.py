@@ -24,6 +24,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_range,
     validate_positive
@@ -127,7 +128,8 @@ def calculate_bode(
         quartile = "Quartile 1"
         mortality_4yr = "~20%"
         risk_class = "LOW"
-        color = "🟢"
+        color = COLORS["success"]
+        icon = "🟢"
         interpretation = "Nguy cơ THẤP"
         management = """
         **🟢 BODE 0-2 (Nguy cơ Thấp):**
@@ -148,7 +150,8 @@ def calculate_bode(
         quartile = "Quartile 2"
         mortality_4yr = "~30%"
         risk_class = "MODERATE"
-        color = "🟡"
+        color = COLORS["warning"]
+        icon = "🟡"
         interpretation = "Nguy cơ TRUNG BÌNH"
         management = """
         **🟡 BODE 3-4 (Nguy cơ Trung Bình):**
@@ -172,7 +175,8 @@ def calculate_bode(
         quartile = "Quartile 3"
         mortality_4yr = "~40-50%"
         risk_class = "HIGH"
-        color = "🟠"
+        color = COLORS["orange"]
+        icon = "🟠"
         interpretation = "Nguy cơ CAO"
         management = """
         **🟠 BODE 5-6 (Nguy cơ Cao):**
@@ -182,8 +186,8 @@ def calculate_bode(
         - PDE4 inhibitor (Roflumilast) xem xét
         - Macrolide dài hạn nếu đợt cấp tái phát
         - **Oxy liệu pháp dài hạn** (LTOT) nếu:
-          * PaO2 ≤55 mmHg
-          * PaO2 56-59 + polycythemia/cor pulmonale
+        -   * PaO2 ≤55 mmHg
+        -   * PaO2 56-59 + polycythemia/cor pulmonale
         - **Phục hồi chức năng tích cực**
         - Hỗ trợ dinh dưỡng
         - NIV nếu hypercapnia
@@ -202,7 +206,8 @@ def calculate_bode(
         quartile = "Quartile 4"
         mortality_4yr = ">60%"
         risk_class = "VERY_HIGH"
-        color = "🔴"
+        color = COLORS["error"]
+        icon = "🔴"
         interpretation = "Nguy cơ RẤT CAO"
         management = """
         **🔴 BODE 7-10 (Nguy cơ Rất Cao):**
@@ -241,6 +246,7 @@ def calculate_bode(
         'mortality_4yr': mortality_4yr,
         'risk_class': risk_class,
         'color': color,
+        'icon': icon,
         'interpretation': interpretation,
         'management': management,
         'details': details
@@ -257,8 +263,12 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🫁 BODE Index")
-    st.markdown("**Tiên lượng tử vong ở bệnh nhân COPD**")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🫁 BODE Index</h2>
+    <p style='text-align: center; color: #6B7280;'>
+    Tiên lượng tử vong ở bệnh nhân COPD
+    </p>
+    """, unsafe_allow_html=True)
     
     # Educational information
     with st.expander("ℹ️ Thông tin & cách sử dụng"):
@@ -419,15 +429,16 @@ def render():
         # Display results
         st.subheader("📊 Kết quả")
         
-        col_r1, col_r2 = st.columns([1, 2])
-        
-        with col_r1:
-            st.metric("**BODE Index**", f"{result['total_score']}/10")
-            st.caption(f"{result['quartile']}")
-        
-        with col_r2:
-            st.markdown(f"### {result['color']} {result['interpretation']}")
-            st.markdown(f"**Tử vong 4 năm: {result['mortality_4yr']}**")
+        from components.ui.scoring import render_score_result
+        render_score_result(
+            title="BODE Index",
+            score=result['total_score'],
+            max_score=10,
+            interpretation=f"{result['interpretation']} ({result['quartile']})",
+            recommendation=f"Tử vong 4 năm: {result['mortality_4yr']}",
+            color=result['color'],
+            icon=result['icon']
+        )
         
         # Details
         with st.expander("📋 Chi tiết tính điểm", expanded=True):

@@ -5,6 +5,7 @@ Body Mass Index, Ideal Body Weight, Body Surface Area
 
 import streamlit as st
 import math
+from config.theme import COLORS
 from scores.utils.validation import validate_age, validate_range
 from components.ui.results import render_result_card
 # ========== PHASE 1 IMPORTS ==========
@@ -63,8 +64,8 @@ def calculate_bsa_dubois(weight, height_cm):
 def render():
     """Render BMI/IBW/BSA calculator interface"""
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>📏 Máy tính BMI | IBW | BSA</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>📏 Máy tính BMI | IBW | BSA</h2>
     <p style='text-align: center;'><em>Chỉ số cơ thể - BMI, cân nặng lý tưởng, diện tích da cơ thể</em></p>
     """, unsafe_allow_html=True)
     shared = load_shared_result_from_url()
@@ -176,37 +177,38 @@ def render():
         bsa_dubois = calculate_bsa_dubois(weight, height_cm)
         
         # Classify BMI
+        # Classify BMI
         if bmi < 16:
             bmi_category = "Gầy độ III"
-            bmi_color = "#dc3545"
+            bmi_color = COLORS["error"]
             bmi_icon = "🚨"
         elif bmi < 17:
             bmi_category = "Gầy độ II"
-            bmi_color = "#fd7e14"
+            bmi_color = COLORS["warning"]
             bmi_icon = "⚠️"
         elif bmi < 18.5:
             bmi_category = "Gầy độ I"
-            bmi_color = "#ffc107"
+            bmi_color = COLORS["warning"]
             bmi_icon = "⚠️"
         elif bmi < 25:
             bmi_category = "Bình thường"
-            bmi_color = "#28a745"
+            bmi_color = COLORS["success"]
             bmi_icon = "✅"
         elif bmi < 30:
             bmi_category = "Thừa cân"
-            bmi_color = "#ffc107"
+            bmi_color = COLORS["warning"]
             bmi_icon = "⚠️"
         elif bmi < 35:
             bmi_category = "Béo phì độ I"
-            bmi_color = "#fd7e14"
+            bmi_color = COLORS["warning"]
             bmi_icon = "⚠️"
         elif bmi < 40:
             bmi_category = "Béo phì độ II"
-            bmi_color = "#dc3545"
+            bmi_color = COLORS["error"]
             bmi_icon = "🚨"
         else:
             bmi_category = "Béo phì độ III"
-            bmi_color = "#dc3545"
+            bmi_color = COLORS["error"]
             bmi_icon = "🚨"
         
         # Display results
@@ -224,13 +226,13 @@ def render():
         
         # Determine card color based on BMI
         if bmi < 18.5:
-            card_color = "warning"
+            card_color = COLORS["warning"]
         elif bmi < 25:
-            card_color = "success"
+            card_color = COLORS["success"]
         elif bmi < 30:
-            card_color = "warning"
+            card_color = COLORS["warning"]
         else:
-            card_color = "error"
+            card_color = COLORS["error"]
         
         render_result_card(
             title_or_value=f"{bmi_icon} BMI = {_format_num(bmi, 1)} kg/m² - {bmi_category}",

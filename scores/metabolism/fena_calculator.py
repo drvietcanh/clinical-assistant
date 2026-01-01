@@ -3,6 +3,8 @@ FENa Calculator - Calculation Functions
 Handles FENa calculation and interpretation logic
 """
 
+from config.theme import COLORS
+
 
 def calculate_fena(u_na, p_na, u_cr_mgdl, p_cr_mgdl):
     """
@@ -39,19 +41,19 @@ def interpret_fena(fena):
     if fena < 1.0:
         return {
             "interpretation": "PRERENAL AKI",
-            "color": "info",
+            "color": COLORS["info"],
             "cause": "Thiếu tưới máu thận"
         }
     elif fena <= 2.0:
         return {
             "interpretation": "KHÔNG RÕ RÀNG",
-            "color": "warning",
+            "color": COLORS["warning"],
             "cause": "Cần thêm thông tin lâm sàng"
         }
     else:
         return {
             "interpretation": "INTRINSIC RENAL AKI",
-            "color": "error",
+            "color": COLORS["error"],
             "cause": "Tổn thương nhu mô thận"
         }
 

@@ -23,6 +23,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 from components.ui.scoring import (
     render_score_result,
@@ -165,23 +166,23 @@ def calculate_apache2(params: dict) -> dict:
     if total_score < 10:
         interpretation = "Mức độ nặng THẤP"
         mortality_range = "<10%"
-        color = "🟢"
+        color = COLORS["success"]
     elif total_score < 15:
         interpretation = "Mức độ nặng TRUNG BÌNH"
         mortality_range = "10-25%"
-        color = "🟡"
+        color = COLORS["warning"]
     elif total_score < 20:
         interpretation = "Mức độ nặng CAO"
         mortality_range = "25-40%"
-        color = "🟠"
+        color = COLORS["warning"]
     elif total_score < 25:
         interpretation = "Mức độ nặng RẤT CAO"
         mortality_range = "40-55%"
-        color = "🟠"
+        color = COLORS["error"]
     else:
         interpretation = "Mức độ nặng CỰC KỲ CAO"
         mortality_range = ">55%"
-        color = "🔴"
+        color = COLORS["error"]
     
     return {
         'total_score': total_score,
@@ -199,8 +200,11 @@ def calculate_apache2(params: dict) -> dict:
 def render():
     """Render APACHE II calculator"""
     
-    st.title("🏥 APACHE II Score")
-    st.markdown("**Acute Physiology and Chronic Health Evaluation II - Dự đoán tử vong ICU**")
+    # st.title("🏥 APACHE II Score")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🏥 APACHE II Score</h2>
+    <p style='text-align: center;'><em>Acute Physiology and Chronic Health Evaluation II - Dự đoán tử vong ICU</em></p>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()

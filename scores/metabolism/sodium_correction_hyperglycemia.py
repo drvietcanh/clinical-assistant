@@ -4,9 +4,10 @@ Sodium Correction for Hyperglycemia
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_range, validate_lab_value
 from components.ui.validation import render_validation_errors
-from components.ui.results import render_result_box
+from components.ui.scoring import render_score_result, render_result_box
 from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
@@ -70,8 +71,8 @@ def interpret_sodium(na_value):
 def render():
     """Render Sodium Correction calculator interface"""
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🧪 Sodium Correction for Hyperglycemia</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🧪 Sodium Correction for Hyperglycemia</h2>
     <p style='text-align: center;'><em>Điều chỉnh Na khi tăng đường huyết</em></p>
     """, unsafe_allow_html=True)
     
@@ -160,23 +161,20 @@ def render():
         
         st.subheader("📊 Kết quả")
         
-        col1, col2 = st.columns(2)
+        # Difference
+        difference = corrected_na - measured_na
         
-        with col1:
-            render_result_box(
-                title="Na đo được",
-                value=f"{measured_na:.1f}",
-                unit="mmol/L",
-                status=measured_interp["status"]
-            )
+        corrected_status = interpretation["status"]
+        is_normal = "Bình thường" in corrected_status
         
-        with col2:
-            render_result_box(
-                title="Na điều chỉnh",
-                value=f"{corrected_na:.1f}",
-                unit="mmol/L",
-                status=interpretation["status"]
-            )
+        render_score_result(
+            title="Kết quả Na điều chỉnh",
+            score=f"{corrected_na:.1f} mmol/L",
+            interpretation=f"**{interpretation['interpretation']}**\n\nChênh lệch: {difference:+.1f} mmol/L",
+            mortality=interpretation['severity'],
+            color=COLORS['success'] if is_normal else COLORS['warning'] if "Nhẹ" in interpretation['severity'] else COLORS['error'],
+            icon="🧪"
+        )
         
         # Difference
         difference = corrected_na - measured_na

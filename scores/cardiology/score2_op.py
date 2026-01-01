@@ -17,6 +17,7 @@ Note: Shorter time horizons (5 years) more relevant for elderly with limited lif
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
@@ -25,6 +26,7 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
+from components.ui.scoring import render_score_result
 # ======================================
 from scores.utils.validation import (
     validate_age,
@@ -105,7 +107,8 @@ def calculate_score2_op(
     if risk_calculated < 7.5:
         risk_category = "Nguy cơ THẤP-TRUNG BÌNH"
         risk_class = "LOW_MODERATE"
-        color = "🟢"
+        color = COLORS["success"]
+        icon = "🟢"
         recommendation = f"""
         **🟢 Nguy cơ tim mạch THẤP-TRUNG BÌNH (<7.5% trong {time_horizon} năm):**
         
@@ -131,7 +134,8 @@ def calculate_score2_op(
     elif risk_calculated < 15:
         risk_category = "Nguy cơ CAO"
         risk_class = "HIGH"
-        color = "🟡"
+        color = COLORS["warning"]
+        icon = "🟡"
         recommendation = f"""
         **🟡 Nguy cơ tim mạch CAO (7.5-15% trong {time_horizon} năm):**
         
@@ -163,7 +167,8 @@ def calculate_score2_op(
     else:
         risk_category = "Nguy cơ RẤT CAO"
         risk_class = "VERY_HIGH"
-        color = "🟠"
+        color = COLORS["error"]
+        icon = "🟠"
         recommendation = f"""
         **🟠 Nguy cơ tim mạch RẤT CAO (≥15% trong {time_horizon} năm):**
         
@@ -207,7 +212,9 @@ def calculate_score2_op(
         'risk': risk_calculated,
         'risk_category': risk_category,
         'risk_class': risk_class,
+        'risk_class': risk_class,
         'color': color,
+        'icon': icon,
         'recommendation': recommendation,
         'non_hdl': non_hdl,
         'time_horizon': time_horizon
@@ -223,7 +230,10 @@ def render():
         st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'SCORE2-OP')}")
         shared_inputs = shared.get("inputs", {})
     
-    st.title("👴 SCORE2-OP - ESC 2021")
+    # st.title("👴 SCORE2-OP - ESC 2021")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>👴 SCORE2-OP - ESC 2021</h3>
+    """, unsafe_allow_html=True)
     st.markdown("**Đánh giá nguy cơ tim mạch ở người cao tuổi (≥70 tuổi)**")
     
     render_suggestions(
@@ -409,18 +419,16 @@ def render():
         # Display results
         st.subheader("📊 Kết quả")
         
-        col_r1, col_r2 = st.columns([1, 2])
-        
-        with col_r1:
-            st.metric(
-                f"**Nguy cơ {time_horizon} năm**",
-                f"{result['risk']:.1f}%"
-            )
-            st.caption("Mắc CVD (MI + Stroke)")
-        
-        with col_r2:
-            st.markdown(f"### {result['color']} {result['risk_category']}")
-            st.caption(f"Dự đoán trong {time_horizon} năm tới")
+        # Use render_score_result
+        render_score_result(
+            title=f"SCORE2-OP ({time_horizon} năm)",
+            score=f"{result['risk']:.1f}%",
+            interpretation=f"{result['risk_category']}",
+            mortality=f"Mắc CVD (MI + Stroke) trong {time_horizon} năm",
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
         # Summary
         with st.expander("📋 Tóm Tắt", expanded=True):

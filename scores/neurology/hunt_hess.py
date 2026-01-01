@@ -11,6 +11,7 @@ J Neurosurg. 1968;28(1):14-20.
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -23,8 +24,8 @@ from components.smart_suggestions import render_suggestions
 def render():
     """Render Hunt & Hess Scale Calculator"""
     
-    st.subheader("🧠 Hunt & Hess Scale - Xuất huyết dưới nhện")
-    st.caption("Phân loại mức độ nghiêm trọng của xuất huyết dưới màng nhện")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🧠 Hunt & Hess Scale - Xuất huyết dưới nhện</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Phân loại mức độ nghiêm trọng của xuất huyết dưới màng nhện</p>", unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -76,7 +77,7 @@ def render():
             """,
             "mortality": "0-5%",
             "outcome": "Rất tốt",
-            "color": "green"
+            "color": COLORS["success"]
         },
         "Grade 2": {
             "name": "Grade 2 - Đau đầu vừa đến nặng, cứng gáy",
@@ -91,7 +92,7 @@ def render():
             """,
             "mortality": "5-10%",
             "outcome": "Tốt",
-            "color": "green"
+            "color": COLORS["success"]
         },
         "Grade 3": {
             "name": "Grade 3 - Buồn ngủ, lú lẫn, thiếu sót thần kinh nhẹ",
@@ -105,7 +106,7 @@ def render():
             """,
             "mortality": "10-15%",
             "outcome": "Trung bình",
-            "color": "orange"
+            "color": COLORS["warning"]
         },
         "Grade 4": {
             "name": "Grade 4 - Hôn mê, liệt nửa người, cứng co sớm",
@@ -120,7 +121,7 @@ def render():
             """,
             "mortality": "60-70%",
             "outcome": "Xấu",
-            "color": "red"
+            "color": COLORS["error"]
         },
         "Grade 5": {
             "name": "Grade 5 - Hôn mê sâu, cứng co tư thế, hấp hối",
@@ -135,7 +136,7 @@ def render():
             """,
             "mortality": "70-90%",
             "outcome": "Rất xấu",
-            "color": "red"
+            "color": COLORS["error"]
         }
     }
     

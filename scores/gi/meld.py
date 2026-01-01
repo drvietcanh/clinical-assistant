@@ -15,6 +15,7 @@ Hepatology. 2001;33(2):464-70.
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
@@ -104,8 +105,10 @@ def render():
         st.info(f"📥 Đã tải kết quả chia sẻ: {shared.get('calculator_name', 'MELD Score')}")
         shared_inputs = shared.get("inputs", {})
     
-    st.subheader("🩸 MELD Score")
-    st.caption("Model for End-Stage Liver Disease - Tiên lượng xơ gan & ưu tiên ghép gan")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩸 MELD Score</h3>
+    <p style='text-align: center; color: #6B7280;'>Model for End-Stage Liver Disease - Tiên lượng xơ gan & ưu tiên ghép gan</p>
+    """, unsafe_allow_html=True)
     
     st.markdown("""
     **MELD Score** dự đoán tỷ lệ tử vong 3 tháng ở bệnh nhân xơ gan mất bù.
@@ -280,32 +283,33 @@ def render():
             meld_score = calculate_meld(bili_mgdl, inr, cr_mgdl, dialysis)
             
             # Determine mortality risk
+            # Determine mortality risk
             if meld_score < 10:
                 mortality_3m = "1.9%"
                 mortality_1yr = "5-10%"
                 severity = "XƠ GAN NHẸ"
-                color = "#28a745"  # green
+                color = COLORS["success"]
                 icon = "🟢"
                 transplant_priority = "Thấp"
             elif meld_score < 20:
                 mortality_3m = "6.0%"
                 mortality_1yr = "15-25%"
                 severity = "XƠ GAN TRUNG BÌNH"
-                color = "#fd7e14"  # orange
+                color = COLORS["warning"]
                 icon = "🟡"
                 transplant_priority = "Trung bình"
             elif meld_score < 30:
                 mortality_3m = "19.6%"
                 mortality_1yr = "40-60%"
                 severity = "XƠ GAN NẶNG"
-                color = "#dc3545"  # red
+                color = COLORS["error"]
                 icon = "🔴"
                 transplant_priority = "Cao"
             else:
                 mortality_3m = "52.6%"
                 mortality_1yr = ">70%"
                 severity = "XƠ GAN RẤT NẶNG"
-                color = "#6c757d"  # dark gray
+                color = COLORS["error"]
                 icon = "⚫"
                 transplant_priority = "Rất cao (khẩn cấp)"
             

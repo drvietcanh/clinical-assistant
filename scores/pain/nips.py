@@ -4,6 +4,8 @@ Thang điểm đánh giá đau ở trẻ sơ sinh (0-2 tháng)
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -23,8 +25,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>👶 NIPS - Neonatal Infant Pain Scale</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>👶 NIPS - Neonatal Infant Pain Scale</h2>
     <p style='text-align: center;'><em>Thang điểm đánh giá đau ở trẻ sơ sinh (0-2 tháng)</em></p>
     """, unsafe_allow_html=True)
     
@@ -134,36 +136,33 @@ def render():
         # Interpret score
         if total_score == 0:
             severity = "Không đau"
-            color = "#10b981"
+            color = COLORS['success']
             icon = "✅"
             interpretation = "Trẻ sơ sinh không có dấu hiệu đau"
         elif total_score <= 2:
             severity = "Đau nhẹ"
-            color = "#fbbf24"
+            color = COLORS['warning']
             icon = "😐"
             interpretation = "Đau nhẹ, cần theo dõi"
         elif total_score <= 4:
             severity = "Đau vừa"
-            color = "#f59e0b"
+            color = COLORS['warning_dark']
             icon = "😣"
             interpretation = "Đau vừa, cần điều trị giảm đau"
         else:
             severity = "Đau nặng"
-            color = "#ef4444"
+            color = COLORS['error']
             icon = "😰"
             interpretation = "Đau nặng, cần điều trị ngay lập tức"
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h2 style='color: {color}; margin: 0; text-align: center;'>
-                {icon} NIPS = {total_score}/7
-            </h2>
-            <p style='text-align: center; font-size: 1.1em; margin-top: 10px;'>
-                {severity}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="Kết quả NIPS",
+            score=f"{total_score}/7",
+            interpretation=interpretation,
+            mortality=severity,
+            color=color,
+            icon=icon
+        )
         
         # Chi tiết
         st.markdown("### 📋 Chi tiết điểm số:")

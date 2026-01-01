@@ -4,6 +4,7 @@ Handles all input fields and form sections
 """
 
 import streamlit as st
+from scores.utils.validation import validate_age, validate_weight, validate_lab_value
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -150,6 +151,19 @@ def render_input_form():
     
     st.markdown("---")
     
+    # Input validation
+    is_valid_age, age_msg = validate_age(age, 18, 120)
+    if not is_valid_age:
+        st.error(f"⚠️ {age_msg}")
+        
+    is_valid_wt, wt_msg = validate_weight(weight_kg, 20, 300)
+    if not is_valid_wt:
+        st.warning(f"⚠️ {wt_msg}")
+        
+    is_valid_cr, cr_msg = validate_lab_value(creatinine_mg, "Creatinine", 0.1, 25.0)
+    if not is_valid_cr:
+        st.warning(f"⚠️ {cr_msg}")
+
     # Return all input values
     return {
         "age": age,

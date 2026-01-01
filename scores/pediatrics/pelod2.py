@@ -20,7 +20,8 @@ from scores.utils.validation import (
     validate_positive
 )
 from components.ui.validation import render_validation_errors
-# ========== PHASE 1 IMPORTS ==========
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
@@ -183,8 +184,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.subheader("🏥 PELOD-2 Score")
-    st.caption("Pediatric Logistic Organ Dysfunction Score - ICU Mortality Prediction")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🏥 PELOD-2 Score</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Pediatric Logistic Organ Dysfunction Score - ICU Mortality Prediction</p>", unsafe_allow_html=True)
     
     st.info("""
     **PELOD-2** đánh giá mức độ suy đa cơ quan ở trẻ em ICU và dự đoán nguy cơ tử vong.
@@ -562,83 +563,34 @@ def render():
         
         st.markdown("### 📊 Kết quả PELOD-2")
         
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.metric(
-                "PELOD-2 Score",
-                f"{result['total_score']}/33"
-            )
-        
-        with col2:
-            st.metric(
-                "Nguy cơ tử vong",
-                f"{result['mortality_percent']:.1f}%"
-            )
-        
-        st.markdown("---")
-        
-        # Chi tiết
-        st.markdown("#### 📋 Chi tiết điểm số:")
-        
-        import pandas as pd
-        
-        breakdown = pd.DataFrame({
-            "Hệ thống": [
-                "Thần kinh",
-                "Tim mạch",
-                "Thận",
-                "Hô hấp",
-                "Huyết học",
-                "Gan"
-            ],
-            "Điểm": [
-                result['neurologic_score'],
-                result['cardiovascular_score'],
-                result['renal_score'],
-                result['respiratory_score'],
-                result['hematologic_score'],
-                result['hepatic_score']
-            ]
-        })
-        
-        st.dataframe(breakdown, use_container_width=True, hide_index=True)
-        
-        st.markdown("---")
-        
-        # Interpretation
+        # Determine color and interpretation
         if result['total_score'] == 0:
-            st.success("""
-            **✅ Không có suy đa cơ quan**
-            
-            - PELOD-2 = 0
-            - Nguy cơ tử vong rất thấp
-            - Tiếp tục theo dõi
-            """)
+            interpretation = "Không có suy đa cơ quan"
+            color = COLORS["success"]
+            icon = "✅"
         elif result['total_score'] <= 5:
-            st.info(f"""
-            **⚠️ Suy đa cơ quan nhẹ**
-            
-            - PELOD-2 = {result['total_score']}
-            - Nguy cơ tử vong: {result['mortality_percent']:.1f}%
-            - Theo dõi sát, điều trị hỗ trợ
-            """)
+            interpretation = "Suy đa cơ quan nhẹ"
+            color = COLORS["info"]
+            icon = "⚠️"
         elif result['total_score'] <= 15:
-            st.warning(f"""
-            **🚨 Suy đa cơ quan trung bình-nặng**
-            
-            - PELOD-2 = {result['total_score']}
-            - Nguy cơ tử vong: {result['mortality_percent']:.1f}%
-            - Điều trị tích cực, monitoring chặt chẽ
-            """)
+            interpretation = "Suy đa cơ quan trung bình-nặng"
+            color = COLORS["warning"]
+            icon = "🚨"
         else:
-            st.error(f"""
-            **🚨🚨 Suy đa cơ quan rất nặng**
-            
-            - PELOD-2 = {result['total_score']}
-            - Nguy cơ tử vong: {result['mortality_percent']:.1f}%
-            - Điều trị tối đa, tiên lượng dè dặt
-            """)
+            interpretation = "Suy đa cơ quan rất nặng"
+            color = COLORS["error"]
+            icon = "🆘"
+
+        render_score_result(
+            title="PELOD-2 Score",
+            score=result['total_score'],
+            interpretation=interpretation,
+            mortality=f"Tử vong: {result['mortality_percent']:.1f}%",
+            color=color,
+            icon=icon,
+            size="large",
+            max_score=33
+        )
         
         # Prepare data for history and share
         inputs_dict = {

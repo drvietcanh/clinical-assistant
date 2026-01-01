@@ -31,8 +31,11 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_age, validate_lab_value
 from components.ui.validation import render_validation_errors
+from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -171,8 +174,8 @@ def render():
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🩺 SAFE Score</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩺 SAFE Score</h3>
     <p style='text-align: center; color: #6B7280;'>
     Steatosis-Associated Fibrosis Estimator<br>
     Ước tính nguy cơ xơ hóa gan trung bình đến tiến triển (F2+) ở bệnh nhân MASLD
@@ -299,22 +302,26 @@ def render():
             st.markdown("---")
             st.markdown("### 📋 Kết quả SAFE Score")
             
-            col1, col2, col3 = st.columns(3)
-            
-            with col1:
-                st.metric("Điểm SAFE", f"{result['score']}")
-            
-            with col2:
-                st.metric(
-                    "Nguy cơ F2+",
-                    result['fibrosis_probability']
-                )
-            
-            with col3:
-                st.metric(
-                    "Phân loại",
-                    result['risk_category']
-                )
+            # Determine color and icon
+            if result['score'] <= 2:
+                 color = COLORS['success']
+                 icon = "🟢"
+            elif result['score'] <= 5:
+                 color = COLORS['warning']
+                 icon = "🟡"
+            else:
+                 color = COLORS['error']
+                 icon = "🔴"
+
+            render_score_result(
+                title="SAFE Score",
+                score=result['score'],
+                interpretation=f"{result['risk_category']} - {result['interpretation']}",
+                mortality=f"Nguy cơ F2+: {result['fibrosis_probability']}",
+                color=color,
+                icon=icon,
+                size="large"
+            )
             
             # AST/ALT ratio
             st.info(f"**Tỷ lệ AST/ALT:** {result['ast_alt_ratio']:.2f}")
@@ -327,38 +334,46 @@ def render():
             # Interpretation
             st.markdown("### 💡 Diễn giải và khuyến nghị")
             
+            st.markdown(f"""
+            <div style="padding: 16px; border-radius: 8px; border: 1px solid {color}30; background-color: {color}05;">
+            <p><strong>Khuyến nghị:</strong> {result['recommendation']}</p>
+            <ul>
+            """, unsafe_allow_html=True)
+
             if result['score'] <= 2:
-                st.success(f"**{result['risk_category']}** - {result['interpretation']}")
-                st.markdown(f"**Khuyến nghị:** {result['recommendation']}")
                 st.markdown("""
-                - Tiếp tục điều trị MASLD (giảm cân, kiểm soát đường huyết, lipid)
-                - Theo dõi định kỳ (6-12 tháng)
-                - Đánh giá lại SAFE Score khi có thay đổi
-                """)
+                <li>Tiếp tục điều trị MASLD (giảm cân, kiểm soát đường huyết, lipid)</li>
+                <li>Theo dõi định kỳ (6-12 tháng)</li>
+                <li>Đánh giá lại SAFE Score khi có thay đổi</li>
+                """, unsafe_allow_html=True)
             elif result['score'] <= 5:
-                st.warning(f"**{result['risk_category']}** - {result['interpretation']}")
-                st.markdown(f"**Khuyến nghị:** {result['recommendation']}")
                 st.markdown("""
-                - Cân nhắc đánh giá thêm:
-                  - Elastography (FibroScan)
-                  - FIB-4 Score
-                  - APRI Score
-                - Tăng cường điều trị MASLD
-                - Theo dõi sát hơn (3-6 tháng)
-                """)
+                <li>Cân nhắc đánh giá thêm:
+                  <ul>
+                  <li>Elastography (FibroScan)</li>
+                  <li>FIB-4 Score</li>
+                  <li>APRI Score</li>
+                  </ul>
+                </li>
+                <li>Tăng cường điều trị MASLD</li>
+                <li>Theo dõi sát hơn (3-6 tháng)</li>
+                """, unsafe_allow_html=True)
             else:
-                st.error(f"**{result['risk_category']}** - {result['interpretation']}")
-                st.markdown(f"**Khuyến nghị:** {result['recommendation']}")
                 st.markdown("""
-                - **Đánh giá thêm ngay:**
-                  - Elastography (FibroScan) - ưu tiên
-                  - FIB-4, APRI Score
-                  - Cân nhắc sinh thiết gan nếu cần
-                - Điều trị tích cực MASLD
-                - Theo dõi biến chứng xơ gan
-                - Tầm soát ung thư gan nếu xơ gan
-                - Theo dõi sát (3 tháng)
-                """)
+                <li><strong>Đánh giá thêm ngay:</strong>
+                  <ul>
+                  <li>Elastography (FibroScan) - ưu tiên</li>
+                  <li>FIB-4, APRI Score</li>
+                  <li>Cân nhắc sinh thiết gan nếu cần</li>
+                  </ul>
+                </li>
+                <li>Điều trị tích cực MASLD</li>
+                <li>Theo dõi biến chứng xơ gan</li>
+                <li>Tầm soát ung thư gan nếu xơ gan</li>
+                <li>Theo dõi sát (3 tháng)</li>
+                """, unsafe_allow_html=True)
+                
+            st.markdown("</ul></div>", unsafe_allow_html=True)
             
             # Save to history
             save_calculation_to_history(

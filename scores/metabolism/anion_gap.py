@@ -14,6 +14,7 @@ Arch Intern Med. 1990;150(2):311-3.
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_lab_value
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box
@@ -30,7 +31,7 @@ from components.export import render_export_section
 def render():
     """Render Anion Gap Calculator"""
     
-    st.subheader("🧪 Anion Gap")
+    st.markdown(f"<h1 style='text-align: center; color: {COLORS['success']};'>🧪 Anion Gap</h1>", unsafe_allow_html=True)
     st.caption("Khoảng Trống Anion - Đánh giá Rối loạn Acid-Base")
     shared = load_shared_result_from_url()
     if shared and shared.get("calculator_id") == "anion_gap":
@@ -149,28 +150,29 @@ def render():
                 ag_display = ag
             
             # Interpret
+            # Interpret
             if ag_display < 8:
                 interpretation = "THẤP"
-                color = "info"
+                color = COLORS["info"]
             elif ag_display <= 12:
                 interpretation = "BÌNH THƯỜNG"
-                color = "success"
+                color = COLORS["success"]
             elif ag_display <= 16:
                 interpretation = "TĂNG NHẸ"
-                color = "warning"
+                color = COLORS["warning"]
             else:
                 interpretation = "TĂNG CAO"
-                color = "error"
+                color = COLORS["error"]
             
             st.markdown("---")
             st.markdown("## 📊 Kết quả")
             
             # Use render_result_box for main result display
             icon_map = {
-                "success": "✅",
-                "info": "ℹ️",
-                "warning": "⚠️",
-                "error": "🚨"
+                COLORS["success"]: "✅",
+                COLORS["info"]: "ℹ️",
+                COLORS["warning"]: "⚠️",
+                COLORS["error"]: "🚨"
             }
             icon = icon_map.get(color, "📊")
             

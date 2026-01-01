@@ -4,6 +4,8 @@ ECOG Performance Status (Eastern Cooperative Oncology Group)
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -20,7 +22,8 @@ def get_ecog_criteria():
             "status": "Hoàn toàn hoạt động",
             "description": "Có thể thực hiện tất cả các hoạt động như trước khi mắc bệnh mà không bị hạn chế",
             "details": "Không có triệu chứng, có thể làm việc bình thường",
-            "color": "🟢",
+            "color": COLORS["success"],
+            "icon": "🟢",
             "prognosis": "Tiên lượng tốt nhất",
             "treatment": "Phù hợp với tất cả các phác đồ điều trị, kể cả thử nghiệm lâm sàng",
             "survival": "Thời gian sống thêm dài nhất"
@@ -29,7 +32,8 @@ def get_ecog_criteria():
             "status": "Hạn chế hoạt động nặng",
             "description": "Có triệu chứng nhưng vẫn đi lại được. Có thể làm công việc nhẹ hoặc công việc văn phòng",
             "details": "Không thể làm việc nặng nhưng vẫn tự chăm sóc bản thân",
-            "color": "🟡",
+            "color": COLORS["success"],
+            "icon": "🟡",
             "prognosis": "Tiên lượng tốt",
             "treatment": "Phù hợp với hầu hết các phác đồ điều trị tiêu chuẩn",
             "survival": "Thời gian sống thêm tốt"
@@ -38,7 +42,8 @@ def get_ecog_criteria():
             "status": "Tự chăm sóc được nhưng không thể làm việc",
             "description": "Đi lại được và tự chăm sóc bản thân nhưng không thể làm việc. Thức dậy > 50% thời gian trong ngày",
             "details": "Có thể đi lại nhưng cần nghỉ ngơi nhiều",
-            "color": "🟠",
+            "color": COLORS["warning"],
+            "icon": "🟠",
             "prognosis": "Tiên lượng trung bình",
             "treatment": "Có thể điều trị nhưng cần cân nhắc độc tính. Một số phác đồ có thể không phù hợp",
             "survival": "Thời gian sống thêm trung bình"
@@ -47,7 +52,8 @@ def get_ecog_criteria():
             "status": "Chỉ tự chăm sóc hạn chế",
             "description": "Chỉ tự chăm sóc bản thân hạn chế. Nằm giường hoặc ngồi ghế > 50% thời gian thức",
             "details": "Cần hỗ trợ đáng kể trong sinh hoạt hàng ngày",
-            "color": "🔴",
+            "color": COLORS["error"],
+            "icon": "🔴",
             "prognosis": "Tiên lượng kém",
             "treatment": "Điều trị hạn chế. Chỉ dùng phác đồ nhẹ hoặc best supportive care",
             "survival": "Thời gian sống thêm ngắn"
@@ -56,7 +62,8 @@ def get_ecog_criteria():
             "status": "Hoàn toàn không thể tự chăm sóc",
             "description": "Hoàn toàn tàn tật. Không thể tự chăm sóc bản thân. Nằm liệt giường hoàn toàn",
             "details": "Cần chăm sóc toàn diện",
-            "color": "🔴",
+            "color": COLORS["error"],
+            "icon": "🔴",
             "prognosis": "Tiên lượng rất kém",
             "treatment": "Chỉ best supportive care / chăm sóc giảm nhẹ. Không phù hợp với hóa trị tích cực",
             "survival": "Thời gian sống thêm rất ngắn (thường < 3 tháng)"
@@ -130,7 +137,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🎗️ ECOG Performance Status")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🎗️ ECOG Performance Status</h2>", unsafe_allow_html=True)
     st.markdown("""
     ### Đánh giá Thể Trạng Bệnh nhân Ung thư
     
@@ -177,7 +184,7 @@ def render():
     st.subheader("📊 Mô tả Chi tiết")
     
     st.info(f"""
-    **{selected_info['color']} ECOG {selected_ecog}: {selected_info['status']}**
+    **{selected_info['icon']} ECOG {selected_ecog}: {selected_info['status']}**
     
     **Mô tả:** {selected_info['description']}
     
@@ -188,7 +195,7 @@ def render():
     with st.expander("👀 Xem tất cả các mức độ ECOG"):
         for score, info in ecog_options.items():
             st.markdown(f"""
-            **{info['color']} ECOG {score}: {info['status']}**
+            **{info['icon']} ECOG {score}: {info['status']}**
             - {info['description']}
             """)
             st.markdown("---")
@@ -197,23 +204,16 @@ def render():
         st.markdown("---")
         st.subheader("🎯 Đánh giá & Khuyến nghị")
         
-        # Prognosis
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.metric(
-                "ECOG Score",
-                selected_ecog,
-                help="Điểm thể trạng (0-4)"
-            )
-        
-        with col2:
-            if selected_ecog <= 1:
-                st.success(f"**Tiên lượng:** {selected_info['prognosis']}")
-            elif selected_ecog == 2:
-                st.warning(f"**Tiên lượng:** {selected_info['prognosis']}")
-            else:
-                st.error(f"**Tiên lượng:** {selected_info['prognosis']}")
+        render_score_result(
+            title="ECOG Score",
+            score=selected_ecog,
+            interpretation=f"{selected_info['status']}",
+            mortality=f"Tiên lượng: {selected_info['prognosis']}",
+            color=selected_info['color'],
+            icon=selected_info['icon'],
+            size="large",
+            max_score=4
+        )
         
         st.markdown("---")
         

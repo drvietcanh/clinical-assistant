@@ -35,6 +35,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_age, validate_lab_value
 from components.ui.validation import render_validation_errors
 # ========== PHASE 1 IMPORTS ==========
@@ -158,27 +159,27 @@ def calculate_findrisc(
         risk_category = "Thấp"
         risk_class = "LOW"
         diabetes_risk = "<1%"
-        color = "success"
+        color = COLORS["success"]
     elif score < 12:
         risk_category = "Hơi tăng"
         risk_class = "SLIGHTLY_ELEVATED"
         diabetes_risk = "4%"
-        color = "info"
+        color = COLORS["info"]
     elif score < 15:
         risk_category = "Trung bình"
         risk_class = "MODERATE"
         diabetes_risk = "17%"
-        color = "warning"
+        color = COLORS["warning"]
     elif score <= 20:
         risk_category = "Cao"
         risk_class = "HIGH"
         diabetes_risk = "33%"
-        color = "error"
+        color = COLORS["error"]
     else:
         risk_category = "Rất cao"
         risk_class = "VERY_HIGH"
         diabetes_risk = "50%"
-        color = "error"
+        color = COLORS["error"]
     
     return {
         'total_score': score,
@@ -193,7 +194,7 @@ def calculate_findrisc(
 def render():
     """Render FINDRISC calculator"""
     
-    st.title("💉 FINDRISC Score")
+    st.markdown(f"<h1 style='text-align: center; color: {COLORS['success']};'>💉 FINDRISC Score</h1>", unsafe_allow_html=True)
     st.markdown("**Dự đoán nguy cơ đái tháo đường type 2 trong 10 năm (DÙNG HÀNG NGÀY)**")
     
     # Load shared result if available

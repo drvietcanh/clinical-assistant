@@ -20,6 +20,7 @@ Br J Surg. 1973;60(8):646-9.
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_lab_value
 from components.ui.scoring import render_score_result, render_score_breakdown
 # ========== PHASE 1 IMPORTS ==========
@@ -55,8 +56,10 @@ except ImportError:
 def render():
     """Render Child-Pugh Score Calculator"""
     
-    st.subheader("🩸 Child-Pugh Score")
-    st.caption("Đánh giá mức độ nặng xơ gan")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩸 Child-Pugh Score</h3>
+    <p style='text-align: center; color: #6B7280;'>Đánh giá mức độ nặng xơ gan</p>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -323,11 +326,10 @@ def render():
                 st.error(f"- {error}")
             st.stop()
         
-        # Determine Child-Pugh Class
         if total_score <= 6:
             cp_class = "A"
             severity = "XƠ GAN BÙ TRỪ TỐT"
-            color = "#28a745"  # green
+            color = COLORS["success"]
             icon = "🟢"
             survival_1yr = "100%"
             survival_2yr = "85%"
@@ -335,7 +337,7 @@ def render():
         elif total_score <= 9:
             cp_class = "B"
             severity = "SUY CHỨC NĂNG GAN ĐÁNG KỂ"
-            color = "#fd7e14"  # orange
+            color = COLORS["warning"]
             icon = "🟡"
             survival_1yr = "81%"
             survival_2yr = "57%"
@@ -343,7 +345,7 @@ def render():
         else:
             cp_class = "C"
             severity = "XƠ GAN MẤT BÙ"
-            color = "#dc3545"  # red
+            color = COLORS["error"]
             icon = "🔴"
             survival_1yr = "45%"
             survival_2yr = "35%"

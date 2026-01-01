@@ -30,6 +30,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_respiratory_rate, validate_lab_value
 from components.ui.validation import render_validation_errors
 # ========== PHASE 1 IMPORTS ==========
@@ -62,13 +63,13 @@ def calculate_rox_index(spo2: float, fio2: float, respiratory_rate: int) -> dict
         risk_level = "Thấp"
         risk_class = "LOW"
         interpretation = "Nguy cơ thất bại HFNC thấp"
-        color = "success"
+        color = COLORS["success"]
         recommendation = "Tiếp tục HFNC, theo dõi"
     else:
         risk_level = "Cao"
         risk_class = "HIGH"
         interpretation = "Nguy cơ thất bại HFNC cao"
-        color = "error"
+        color = COLORS["error"]
         recommendation = "Cân nhắc đặt nội khí quản"
     
     return {
@@ -84,7 +85,10 @@ def calculate_rox_index(spo2: float, fio2: float, respiratory_rate: int) -> dict
 def render():
     """Render ROX Index calculator"""
     
-    st.title("🫁 ROX Index")
+    # st.title("🫁 ROX Index")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🫁 ROX Index</h3>
+    """, unsafe_allow_html=True)
     st.markdown("**Dự đoán thất bại HFNC (High Flow Nasal Cannula) - DÙNG HÀNG NGÀY**")
     
     # Load shared result if available

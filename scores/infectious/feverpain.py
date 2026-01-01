@@ -4,6 +4,8 @@ FeverPAIN Score Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -35,19 +37,22 @@ def calculate_feverpain(fever, purulence, attend_rapidly, inflamed_tonsils, no_c
         risk = "Rất thấp"
         strep_probability = "13-18%"
         recommendation = "Không cần kháng sinh. Tư vấn điều trị triệu chứng"
-        color = "green"
+        color = COLORS["success"]
+        icon = "🟢"
         antibiotic_advice = "KHÔNG khuyến cáo"
     elif total <= 3:
         risk = "Thấp-Trung bình"
         strep_probability = "34-40%"
         recommendation = "Cân nhắc kháng sinh hoặc đợi-quan sát (delayed prescription)"
-        color = "orange"
+        color = COLORS["warning"]
+        icon = "🟠"
         antibiotic_advice = "Cân nhắc hoặc kê đơn chờ"
     else:  # >= 4
         risk = "Cao"
         strep_probability = "62-65%"
         recommendation = "Khả năng cao nhiễm liên cầu. Nên dùng kháng sinh ngay"
-        color = "red"
+        color = COLORS["error"]
+        icon = "🔴"
         antibiotic_advice = "KHUYẾN CÁO dùng"
     
     return {
@@ -56,7 +61,8 @@ def calculate_feverpain(fever, purulence, attend_rapidly, inflamed_tonsils, no_c
         "strep_probability": strep_probability,
         "recommendation": recommendation,
         "antibiotic_advice": antibiotic_advice,
-        "color": color
+        "color": color,
+        "icon": icon
     }
 
 
@@ -70,8 +76,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #EF4444;'>🤒 FeverPAIN Score</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🤒 FeverPAIN Score</h2>
     <p style='text-align: center;'><em>Viêm amidan - Quyết định kháng sinh</em></p>
     """, unsafe_allow_html=True)
     
@@ -157,20 +163,15 @@ def render():
         # Display result
         st.markdown("## 📊 Kết quả")
         
-        score_color = {
-            "green": "#28a745",
-            "orange": "#fd7e14",
-            "red": "#dc3545"
-        }[result["color"]]
-        
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'>
-            <h2 style='color: {score_color}; margin: 0; text-align: center;'>
-                FeverPAIN: {result['total_score']}/5
-            </h2>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="FeverPAIN Score",
+            score=result['total_score'],
+            interpretation=f"Nguy cơ: {result['risk_level']}",
+            mortality=f"Xác suất Strep: {result['strep_probability']}",
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
         # Component breakdown
         st.markdown("### ✅ Tiêu chí có:")
@@ -190,12 +191,12 @@ def render():
         
         # Risk and recommendation
         st.markdown(f"""
-        <div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'>
-            <h3 style='color: {score_color}; margin-top: 0;'>🎯 Nguy cơ nhiễm liên cầu: {result['risk_level']}</h3>
+        <div style='background-color: {result['color']}22; padding: 20px; border-radius: 10px; border: 2px solid {result['color']};'>
+            <h3 style='color: {result['color']}; margin-top: 0;'>🎯 Nguy cơ nhiễm liên cầu: {result['risk_level']}</h3>
             <p style='font-size: 1.1em; margin: 10px 0;'>
                 <strong>Xác suất nhiễm Streptococcus:</strong> {result['strep_probability']}
             </p>
-            <p style='font-size: 1.2em; color: {score_color}; font-weight: bold; margin: 10px 0;'>
+            <p style='font-size: 1.2em; color: {result['color']}; font-weight: bold; margin: 10px 0;'>
                 💊 Kháng sinh: {result['antibiotic_advice']}
             </p>
             <p style='font-size: 1.1em; margin: 10px 0;'>

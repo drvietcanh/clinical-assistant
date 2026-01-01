@@ -4,6 +4,7 @@ Consciousness level assessment
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -46,8 +47,8 @@ from components.ui.scoring import render_score_result, render_score_breakdown
 
 def render():
     """Thang điểm hôn mê Glasgow Calculator"""
-    st.subheader("🧠 Thang điểm hôn mê Glasgow (GCS)")
-    st.caption("Đánh giá Mức độ ý thức")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🧠 Thang điểm hôn mê Glasgow (GCS)</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Đánh giá Mức độ ý thức</p>", unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -148,17 +149,17 @@ def render():
             if total_score >= 14:
                 severity = "Chấn thương sọ não nhẹ (Mild TBI)"
                 risk_level_code = "low"
-                color = "#28a745"  # green
+                color = COLORS["success"]
                 icon = "✅"
             elif total_score >= 9:
                 severity = "Chấn thương sọ não trung bình (Moderate TBI)"
                 risk_level_code = "moderate"
-                color = "#fd7e14"  # orange
+                color = COLORS["warning"]
                 icon = "⚠️"
             else:
                 severity = "Chấn thương sọ não nặng (Severe TBI)"
                 risk_level_code = "very_high"
-                color = "#dc3545"  # red
+                color = COLORS["error"]
                 icon = "🚨"
             
             with col2:

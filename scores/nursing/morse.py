@@ -4,6 +4,8 @@ Thang điểm đánh giá nguy cơ té ngã
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -24,9 +26,8 @@ def render():
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>⚠️ Morse Fall Scale</h2>
-    <p style='text-align: center;'><em>Thang điểm đánh giá nguy cơ té ngã</em></p>
-    """, unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>⚠️ Morse Fall Scale</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Thang điểm đánh giá nguy cơ té ngã</p>", unsafe_allow_html=True)
     
     with st.expander("ℹ️ Giới thiệu"):
         st.markdown("""
@@ -49,7 +50,7 @@ def render():
         **Nguy cơ:**
         - **0-24:** Nguy cơ thấp
         - **25-44:** Nguy cơ trung bình
-        - **≥ 45:** Nguy cơ cao
+        - **&ge; 45:** Nguy cơ cao
         """)
     
     st.markdown("---")
@@ -140,31 +141,30 @@ def render():
         # Interpret risk
         if total_score < 25:
             risk_level = "Nguy cơ thấp"
-            color = "#10b981"
+            color = COLORS["success"]
             icon = "✅"
             interpretation = "Nguy cơ té ngã thấp"
         elif total_score < 45:
             risk_level = "Nguy cơ trung bình"
-            color = "#f59e0b"
+            color = COLORS["warning"]
             icon = "⚠️"
             interpretation = "Nguy cơ té ngã trung bình, cần theo dõi"
         else:
             risk_level = "Nguy cơ cao"
-            color = "#ef4444"
+            color = COLORS["error"]
             icon = "🚨"
             interpretation = "Nguy cơ té ngã cao, cần can thiệp ngay"
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h2 style='color: {color}; margin: 0; text-align: center;'>
-                {icon} Morse Fall Score = {total_score}
-            </h2>
-            <p style='text-align: center; font-size: 1.1em; margin-top: 10px;'>
-                {risk_level}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="Morse Fall Score",
+            score=total_score,
+            interpretation=f"{risk_level}: {interpretation}",
+            mortality=None,
+            color=color,
+            icon=icon,
+            size="large",
+            max_score=125
+        )
         
         st.markdown(f"**Diễn giải:** {interpretation}")
         

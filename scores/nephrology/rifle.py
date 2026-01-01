@@ -21,6 +21,9 @@ settings and has extensive historical validation data.
 """
 
 import streamlit as st
+from config.theme import COLORS
+from scores.utils.validation import validate_lab_value, validate_weight
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -76,12 +79,14 @@ def calculate_rifle(
     final_category = max(category_by_scr, category_by_uo)
     
     categories = ["Không AKI", "Risk", "Injury", "Failure"]
-    colors = ["🟢", "🟡", "🟠", "🔴"]
+    colors = [COLORS["success"], COLORS["warning"], COLORS["warning"], COLORS["error"]]
+    icons = ["🟢", "🟡", "🟠", "🔴"]
     
     return {
         'category': final_category,
         'category_name': categories[final_category],
         'color': colors[final_category],
+        'icon': icons[final_category],
         'scr_fold': scr_fold,
         'uo_6h_rate': uo_6h_rate,
         'uo_12h_rate': uo_12h_rate
@@ -98,8 +103,10 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🧪 RIFLE Criteria - Acute Kidney Injury")
-    st.markdown("**Hệ thống phân loại AKI (Historical - KDIGO khuyến cáo hơn)**")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🧪 RIFLE Criteria - Acute Kidney Injury</h3>
+    <p style='text-align: center; color: #6B7280;'>Hệ thống phân loại AKI (Historical - KDIGO khuyến cáo hơn)</p>
+    """, unsafe_allow_html=True)
     
     st.info("""
     **ℹ️ Lưu ý:**
@@ -157,11 +164,35 @@ def render():
         urine_output_12h = st.number_input("Nước tiểu 12h (mL)", -1.0, 10000.0, -1.0, 10.0, format="%.0f")
     
     if st.button("🧮 Đánh giá RIFLE", type="primary"):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_scr, scr_error = validate_lab_value(scr_current, "SCr Hiện tại", 0, 20)
+        if not is_valid_scr:
+             validation_errors.append(scr_error)
+            
+        is_valid_wt, wt_error = validate_weight(weight)
+        if not is_valid_wt:
+             validation_errors.append(wt_error)
+             
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+            
         result = calculate_rifle(scr_baseline, scr_current, gfr_decrease_percent, 
                                  urine_output_6h, urine_output_12h, weight)
         
         st.subheader("📊 Kết quả")
-        st.markdown(f"### {result['color']} {result['category_name']}")
+        
+        render_score_result(
+            title="RIFLE Category",
+            score=result['category_name'],
+            interpretation="Based on RIFLE Criteria",
+            color=result['color'],
+            icon=result['icon']
+        )
         
         if result['scr_fold'] > 0:
             st.caption(f"Creatinine: {scr_baseline:.2f} → {scr_current:.2f} mg/dL ({result['scr_fold']:.2f}×)")

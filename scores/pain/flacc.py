@@ -4,6 +4,8 @@ Thang điểm đánh giá đau ở trẻ em (2 tháng - 7 tuổi)
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -23,10 +25,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>👶 FLACC - Face, Legs, Activity, Cry, Consolability</h2>
-    <p style='text-align: center;'><em>Thang điểm đánh giá đau ở trẻ em (2 tháng - 7 tuổi)</em></p>
-    """, unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: center; color: {COLORS['success']};'>👶 FLACC - Face, Legs, Activity, Cry, Consolability</h3>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Thang điểm đánh giá đau ở trẻ em (2 tháng - 7 tuổi)</p>", unsafe_allow_html=True)
     
     with st.expander("ℹ️ Giới thiệu"):
         st.markdown("""
@@ -126,36 +126,35 @@ def render():
         # Interpret score
         if total_score == 0:
             severity = "Không đau"
-            color = "#10b981"
+            color = COLORS["success"]
             icon = "✅"
             interpretation = "Trẻ không có dấu hiệu đau"
         elif total_score <= 3:
             severity = "Đau nhẹ"
-            color = "#fbbf24"
+            color = COLORS["info"]
             icon = "😐"
             interpretation = "Đau nhẹ, cần theo dõi"
         elif total_score <= 6:
             severity = "Đau vừa"
-            color = "#f59e0b"
+            color = COLORS["warning"]
             icon = "😣"
             interpretation = "Đau vừa, cần điều trị giảm đau"
         else:
             severity = "Đau nặng"
-            color = "#ef4444"
+            color = COLORS["error"]
             icon = "😰"
             interpretation = "Đau nặng, cần điều trị ngay lập tức"
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h2 style='color: {color}; margin: 0; text-align: center;'>
-                {icon} FLACC = {total_score}/10
-            </h2>
-            <p style='text-align: center; font-size: 1.1em; margin-top: 10px;'>
-                {severity}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="FLACC Score",
+            score=total_score,
+            interpretation=f"{severity}: {interpretation}",
+            mortality=None,
+            color=color,
+            icon=icon,
+            size="large",
+            max_score=10
+        )
         
         # Chi tiết
         st.markdown("### 📋 Chi tiết điểm số:")
@@ -179,7 +178,7 @@ def render():
             st.success("**✅ Không cần điều trị giảm đau**")
         elif total_score <= 3:
             st.info("""
-            **💊 Đau nhẹ (FLACC 1-3):**
+            **Đau nhẹ (FLACC 1-3):**
             
             **Điều trị:**
             - Paracetamol: 15 mg/kg mỗi 4-6 giờ (max 60 mg/kg/ngày)
@@ -191,7 +190,7 @@ def render():
             """)
         elif total_score <= 6:
             st.warning("""
-            **💊 Đau vừa (FLACC 4-6):**
+            **Đau vừa (FLACC 4-6):**
             
             **Điều trị:**
             - Paracetamol + Ibuprofen (nếu không chống chỉ định)

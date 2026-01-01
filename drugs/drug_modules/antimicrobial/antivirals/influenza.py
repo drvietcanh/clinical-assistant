@@ -352,7 +352,22 @@ INFLUENZA_ANTIVIRALS = {
             ],
             "last_updated": "2025-02-04",
             "evidence_level": "A - Dựa trên FDA drug labels, CDC/WHO guidelines, và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Neuropsychiatric events (rare, especially in children)", "Serious skin reactions (SJS/TEN) - rare"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Renal function (CrCl) - for dose adjustment", "Neuropsychiatric signs (hallucinations, delirium) - especially in children", "Skin reactions"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Influenza Treatment",
+            "CDC Guidelines - Influenza Antiviral Medications",
+            "FDA Drug Safety Communication - Neuropsychiatric Events"
+        ]
     },
 
     "Remdesivir": {
@@ -714,7 +729,22 @@ INFLUENZA_ANTIVIRALS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, CDC/WHO guidelines, và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Bronchospasm (CRITICAL in asthma/COPD)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Respiratory status (bronchospasm) - CRITICAL", "Signs of allergic reaction"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Influenza Treatment",
+            "CDC Guidelines - Influenza Antiviral Medications",
+            "FDA Warning - Zanamivir and Bronchospasm"
+        ]
     },
 
 }

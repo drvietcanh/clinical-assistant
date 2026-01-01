@@ -4,6 +4,7 @@ Thang điểm đánh giá mức độ nặng và tiên lượng thuyên tắc ph
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_age,
     validate_heart_rate,
@@ -34,9 +35,9 @@ except ImportError:
 
 def render():
     """PESI Score Calculator"""
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🫁 PESI - Pulmonary Embolism Severity Index</h2>
-    <p style='text-align: center;'><em>Thang điểm đánh giá mức độ nặng và tiên lượng thuyên tắc phổi</em></p>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🫁 PESI - Pulmonary Embolism Severity Index</h2>
+    <p style='text-align: center; color: #6B7280;'><em>Thang điểm đánh giá mức độ nặng và tiên lượng thuyên tắc phổi</em></p>
     """, unsafe_allow_html=True)
     
     # Load shared result if available
@@ -343,35 +344,35 @@ def render():
             risk_class = "I"
             risk_level = "Nguy cơ thấp"
             mortality = "0-1.6%"
-            color = "#10b981"
+            color = COLORS["success"]
             icon = "✅"
             treatment = "Có thể điều trị ngoại trú"
         elif total_score <= 85:
             risk_class = "II"
             risk_level = "Nguy cơ thấp"
             mortality = "1.7-3.5%"
-            color = "#3b82f6"
+            color = COLORS["info"]
             icon = "💡"
             treatment = "Cân nhắc điều trị ngoại trú (theo dõi sát)"
         elif total_score <= 105:
             risk_class = "III"
             risk_level = "Nguy cơ trung bình"
             mortality = "3.2-7.1%"
-            color = "#f59e0b"
+            color = COLORS["warning"]
             icon = "⚠️"
             treatment = "Nên điều trị nội trú"
         elif total_score <= 125:
             risk_class = "IV"
             risk_level = "Nguy cơ cao"
             mortality = "4.0-11.4%"
-            color = "#ef4444"
+            color = COLORS["error"]
             icon = "🚨"
             treatment = "Cần điều trị nội trú, theo dõi sát"
         else:
             risk_class = "V"
             risk_level = "Nguy cơ rất cao"
             mortality = "10.0-24.5%"
-            color = "#dc2626"
+            color = COLORS["dark"]
             icon = "🚨"
             treatment = "Cần điều trị nội trú, có thể cần ICU"
         
@@ -443,8 +444,32 @@ def render():
         st.markdown("### 💊 Khuyến nghị điều trị")
         
         if total_score <= 85:
+            color = COLORS["success"]
+            icon = "✅"
+            recommendation = "Ngoại trú"
+        elif total_score <= 105:
+            color = COLORS["warning"]
+            icon = "⚠️"
+            recommendation = "Nội trú"
+        else:
+            color = COLORS["error"]
+            icon = "🚨"
+            recommendation = "Nội trú / ICU"
+
+        from components.ui.scoring import render_score_result
+        render_score_result(
+            title=f"PESI Score {total_score}",
+            score=total_score,
+            max_score=None,
+            interpretation=f"Class {risk_class} - {risk_level}",
+            recommendation=recommendation,
+            color=color,
+            icon=icon
+        )
+
+        if total_score <= 85:
             st.info(f"""
-            **✅ PESI Class {risk_class} - Nguy cơ thấp (≤ 85 điểm)**
+            **✅ PESI Class {risk_class} - Nguy cơ thấp ({mortality})**
             
             **Điều trị:**
             - **Có thể điều trị ngoại trú** (Class I-II)
@@ -461,7 +486,7 @@ def render():
             """)
         elif total_score <= 105:
             st.warning(f"""
-            **⚠️ PESI Class {risk_class} - Nguy cơ trung bình (86-105 điểm)**
+            **⚠️ PESI Class {risk_class} - Nguy cơ trung bình ({mortality})**
             
             **Điều trị:**
             - **Nên điều trị nội trú**
@@ -476,7 +501,7 @@ def render():
             """)
         else:
             st.error(f"""
-            **🚨 PESI Class {risk_class} - Nguy cơ cao (≥ 106 điểm)**
+            **🚨 PESI Class {risk_class} - Nguy cơ cao ({mortality})**
             
             **Điều trị:**
             - **Cần điều trị nội trú, theo dõi sát**

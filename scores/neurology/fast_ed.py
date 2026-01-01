@@ -30,8 +30,10 @@ Clinical Utility:
 - Faster than NIHSS in field
 """
 
+
 import streamlit as st
-from components.ui.validation import render_validation_errors
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -108,17 +110,23 @@ def calculate_fast_ed(
         lvos_probability = "Cao (≥4 điểm)"
         transport = "Vận chuyển đến trung tâm đột quỵ toàn diện (Comprehensive Stroke Center)"
         recommendation = "Có thể cần thrombectomy"
+        color = COLORS["error"]
+        icon = "🚨"
     else:
         lvos_probability = "Thấp (<4 điểm)"
         transport = "Có thể vận chuyển đến trung tâm đột quỵ cơ bản (Primary Stroke Center)"
         recommendation = "Đánh giá thêm tại bệnh viện"
+        color = COLORS["warning"]
+        icon = "⚠️"
     
     return {
         "score": score,
         "lvos_probability": lvos_probability,
         "transport": transport,
         "recommendation": recommendation,
-        "details": details
+        "details": details,
+        "color": color,
+        "icon": icon
     }
 
 
@@ -126,15 +134,14 @@ def render():
     """Render FAST-ED Score interface"""
     import streamlit as st
     
-    st.set_page_config(page_title="FAST-ED Score", layout="wide")
+    # st.set_page_config(page_title="FAST-ED Score", layout="wide")
     
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🧠 FAST-ED Score</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🧠 FAST-ED Score</h3>
     <p style='text-align: center; color: #6B7280;'>
-    Field Assessment Stroke Triage for Emergency Destination<br>
     Xác định đột quỵ tắc mạch lớn (LVOS) trong môi trường tiền viện
     </p>
     """, unsafe_allow_html=True)
@@ -213,15 +220,15 @@ def render():
         
         # Display results
         st.markdown("---")
-        st.markdown("### 📋 Kết quả FAST-ED")
+        st.subheader("📋 Kết quả")
         
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.metric("Điểm FAST-ED", f"{result['score']}/6")
-        
-        with col2:
-            st.metric("Khả năng LVOS", result['lvos_probability'])
+        render_score_result(
+            title="FAST-ED Score",
+            score=result['score'],
+            interpretation=f"LVOS Probability: {result['lvos_probability']}",
+            color=result['color'],
+            icon=result['icon']
+        )
         
         # Details
         st.markdown("### 📝 Chi tiết tính điểm")
@@ -231,30 +238,22 @@ def render():
         # Transport recommendation
         st.markdown("### 💡 Khuyến nghị vận chuyển")
         
+        st.markdown(f"""
+        <div style='background-color: {result['color']}20; border-left: 5px solid {result['color']}; padding: 15px; border-radius: 5px;'>
+            <h4 style='color: {result['color']}; margin-top: 0;'>{result['icon']} {result['transport']}</h4>
+            <p><strong>Lý do:</strong> {result['recommendation']}</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
         if result['score'] >= 4:
-            st.error(f"**{result['transport']}**")
             st.markdown("""
-            **Lý do:**
-            - Khả năng cao đột quỵ tắc mạch lớn (LVOS)
-            - Có thể cần can thiệp nội mạch (thrombectomy)
-            - Cần trung tâm đột quỵ toàn diện với:
-              - Chụp mạch máu não
-              - Can thiệp nội mạch 24/7
-              - Chuyên khoa thần kinh can thiệp
-            
             **Hành động:**
-            - Vận chuyển ngay lập tức
+            - **Vận chuyển ngay lập tức** đến trung tâm đột quỵ toàn diện
             - Thông báo trước cho bệnh viện
             - Chuẩn bị cho can thiệp nội mạch
             """)
         else:
-            st.warning(f"**{result['transport']}**")
             st.markdown("""
-            **Lý do:**
-            - Khả năng thấp đột quỵ tắc mạch lớn
-            - Có thể điều trị tại trung tâm đột quỵ cơ bản
-            - Đánh giá thêm tại bệnh viện
-            
             **Hành động:**
             - Vận chuyển đến trung tâm đột quỵ gần nhất
             - Đánh giá lại tại bệnh viện

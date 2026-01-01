@@ -33,6 +33,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -133,17 +134,17 @@ def calculate_alvarado_score(
         probability = "Thấp"
         risk_class = "LOW"
         recommendation = "Quan sát hoặc xuất viện"
-        color = "success"
+        color = COLORS["success"]
     elif score <= 6:
         probability = "Trung bình"
         risk_class = "MODERATE"
         recommendation = "Quan sát, cân nhắc chụp CT"
-        color = "warning"
+        color = COLORS["warning"]
     else:
         probability = "Cao"
         risk_class = "HIGH"
         recommendation = "Phẫu thuật/cắt ruột thừa"
-        color = "error"
+        color = COLORS["error"]
     
     return {
         'total_score': score,
@@ -162,8 +163,11 @@ def render():
     from components.scores_css_fix import inject_text_overlap_fix
     inject_text_overlap_fix()
     
-    st.title("🔪 Alvarado Score")
-    st.markdown("**Dự đoán nguy cơ viêm ruột thừa cấp (DÙNG HÀNG NGÀY)**")
+    # st.title("🔪 Alvarado Score")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🔪 Alvarado Score</h2>
+    <p style='text-align: center;'><em>Dự đoán nguy cơ viêm ruột thừa cấp (DÙNG HÀNG NGÀY)</em></p>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()

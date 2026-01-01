@@ -35,6 +35,7 @@ from scores.utils.validation import (
     validate_blood_pressure,
     validate_respiratory_rate
 )
+from config.theme import COLORS
 from components.ui.scoring import render_score_result, render_score_breakdown
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
@@ -204,8 +205,11 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🦴 Revised Trauma Score (RTS)")
-    st.markdown("**Đánh giá sinh lý và tiên lượng bệnh nhân chấn thương**")
+    # st.title("🦴 Revised Trauma Score (RTS)")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🦴 Revised Trauma Score (RTS)</h2>
+    <p style='text-align: center;'><em>Đánh giá sinh lý và tiên lượng bệnh nhân chấn thương</em></p>
+    """, unsafe_allow_html=True)
     
     # Educational information
     with st.expander("ℹ️ Thông tin & cách sử dụng"):
@@ -363,12 +367,12 @@ def render():
         
         # Map color emoji to hex
         color_map_hex = {
-            "🟢": "#28a745",
-            "🟡": "#ffc107",
-            "🟠": "#fd7e14",
-            "🔴": "#dc3545"
+            "🟢": COLORS["success"],
+            "🟡": COLORS["warning"],
+            "🟠": COLORS["warning_dark"],  # Using warning_dark as orange proxy or define orange in theme
+            "🔴": COLORS["error"]
         }
-        score_color = color_map_hex.get(result['color'], "#6c757d")
+        score_color = color_map_hex.get(result['color'], COLORS["neutral"])
         
         # Use render_score_result for main score display
         render_score_result(

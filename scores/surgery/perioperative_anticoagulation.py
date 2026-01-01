@@ -26,6 +26,7 @@ import streamlit as st
 from datetime import datetime, timedelta
 from scores.utils.validation import validate_age
 from components.ui.validation import render_validation_errors
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -199,8 +200,8 @@ def render():
     
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>💊 Perioperative Anticoagulation Management</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>💊 Perioperative Anticoagulation Management</h2>
     <p style='text-align: center; color: #6B7280;'>
     Quản lý kháng đông trong phẫu thuật<br>
     Hướng dẫn ngừng và khởi động lại kháng đông

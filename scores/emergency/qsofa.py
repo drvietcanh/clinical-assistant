@@ -4,6 +4,7 @@ Sepsis-3 screening tool
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_gcs,
     validate_blood_pressure,
@@ -48,7 +49,10 @@ except ImportError:
 
 def render():
     """qSOFA (Quick SOFA) Calculator"""
-    st.subheader("🩺 qSOFA (Quick SOFA)")
+    # st.subheader("🩺 qSOFA (Quick SOFA)")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩺 qSOFA (Quick SOFA)</h3>
+    """, unsafe_allow_html=True)
     st.caption("Tiêu chuẩn Sepsis-3 để sàng lọc nhiễm trùng huyết")
     
     # Load shared result if available
@@ -202,7 +206,7 @@ def render():
             if score >= 2:
                 risk_level_code = "very_high"  # For color coding component
                 risk_level = "CONCERNING FOR SEPSIS"
-                color = "#dc3545"  # red
+                color = COLORS["error"]
                 icon = "⚠️"
                 interpretation = """
                 **Action Required:**
@@ -215,7 +219,7 @@ def render():
             elif score == 1:
                 risk_level_code = "moderate"  # For color coding component
                 risk_level = "Intermediate Risk"
-                color = "#fd7e14"  # orange
+                color = COLORS["warning"]
                 icon = "⚡"
                 interpretation = """
                 **Consider:**
@@ -226,7 +230,7 @@ def render():
             else:
                 risk_level_code = "low"  # For color coding component
                 risk_level = "Low Risk"
-                color = "#28a745"  # green
+                color = COLORS["success"]
                 icon = "✅"
                 interpretation = """
                 **Interpretation:**
@@ -239,17 +243,13 @@ def render():
                 st.markdown("### Kết quả")
                 
                 # Modern Result Card for qSOFA
-                color_hex = {
-                    "#dc3545": "#dc3545",  # High Risk (Red)
-                    "#fd7e14": "#fd7e14",  # Intermediate (Orange)
-                    "#28a745": "#28a745"   # Low (Green)
-                }.get(color, "#007bff")
+                color_hex = color
                 
                 bg_color = {
-                    "#dc3545": "#f8d7da",
-                    "#fd7e14": "#fff3cd",
-                    "#28a745": "#d4edda"
-                }.get(color, "#e8f0fe")
+                    COLORS["error"]: COLORS["error_light"],
+                    COLORS["warning"]: COLORS["warning_light"],
+                    COLORS["success"]: COLORS["success_light"]
+                }.get(color, COLORS["info_light"])
                 
                 # Risk Level Label for VN
                 risk_vn = "Nguy cơ Cao (Sepsis)" if score >= 2 else ("Nguy cơ Trung bình" if score == 1 else "Nguy cơ Thấp")

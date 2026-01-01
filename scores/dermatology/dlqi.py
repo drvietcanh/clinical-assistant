@@ -4,13 +4,15 @@ Chỉ số chất lượng cuộc sống bệnh da
 """
 
 import streamlit as st
-import streamlit.components.v1 as components
+from config.theme import COLORS
+# import streamlit.components.v1 as components
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
+from components.ui.scoring import render_score_result
 # =====================================
 
 def calculate_dlqi(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
@@ -18,15 +20,15 @@ def calculate_dlqi(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
     total = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10
     
     if total <= 1:
-        impact = "Không ảnh hưởng"; color = "green"
+        impact = "Không ảnh hưởng"; color = COLORS["success"]
     elif total <= 5:
-        impact = "Ảnh hưởng nhỏ"; color = "green"
+        impact = "Ảnh hưởng nhỏ"; color = COLORS["success"]
     elif total <= 10:
-        impact = "Ảnh hưởng trung bình"; color = "orange"
+        impact = "Ảnh hưởng trung bình"; color = COLORS["warning"]
     elif total <= 20:
-        impact = "Ảnh hưởng lớn"; color = "orange"
+        impact = "Ảnh hưởng lớn"; color = COLORS["warning"]
     else:
-        impact = "Ảnh hưởng rất lớn"; color = "red"
+        impact = "Ảnh hưởng rất lớn"; color = COLORS["error"]
     
     return {"total_score": total, "impact": impact, "color": color}
 
@@ -38,7 +40,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("<h2 style='text-align: center; color: #EC4899;'>🩹 DLQI</h2><p style='text-align: center;'><em>Chất lượng cuộc sống bệnh da</em></p>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: center; color: {COLORS['success']};'>🩹 DLQI</h3><p style='text-align: center;'><em>Chất lượng cuộc sống bệnh da</em></p>", unsafe_allow_html=True)
     
     with st.expander("ℹ️ DLQI"):
         st.markdown("**DLQI** đánh giá ảnh hưởng bệnh da đến chất lượng sống. **Thang điểm:** 0-30")
@@ -61,13 +63,25 @@ def render():
     
     if st.button("🔬 Tính DLQI", type="primary", use_container_width=True):
         result = calculate_dlqi(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10)
-        score_color = {"green": "#28a745", "orange": "#fd7e14", "red": "#dc3545"}[result["color"]]
         
-        result_html1 = f"<div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'><h2 style='color: {score_color}; margin: 0; text-align: center;'>DLQI: {result['total_score']}/30</h2></div>"
-        components.html(result_html1, height=120, scrolling=False)
-        
-        result_html2 = f"<div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'><h3 style='color: {score_color};'>🎯 Ảnh hưởng: {result['impact']}</h3></div>"
-        components.html(result_html2, height=100, scrolling=False)
+        # Determine icon
+        if result['color'] == COLORS["success"]:
+            icon = "🟢"
+        elif result['color'] == COLORS["warning"]:
+            icon = "🟠"
+        else:
+            icon = "🔴"
+
+        st.markdown("---")
+        render_score_result(
+            title="DLQI Score",
+            score=f"{result['total_score']}/30",
+            interpretation=result['impact'],
+            mortality="",
+            color=result['color'],
+            icon=icon,
+            size="large"
+        )
         
         st.info("""
         **Phân loại:**

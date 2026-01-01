@@ -12,6 +12,7 @@ Lancet. 2000;356(9238):1318-21.
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_blood_pressure,
     validate_heart_rate,
@@ -101,8 +102,10 @@ def calculate_gbs(
 def render():
     """Render Glasgow-Blatchford Score Calculator"""
     
-    st.subheader("🩸 Glasgow-Blatchford Score (GBS)")
-    st.caption("Đánh giá nguy cơ xuất huyết tiêu hóa trên cần can thiệp")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩸 Glasgow-Blatchford Score (GBS)</h3>
+    <p style='text-align: center; color: #6B7280;'>Đánh giá nguy cơ xuất huyết tiêu hóa trên cần can thiệp</p>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -286,49 +289,42 @@ def render():
             # Determine risk
             if gbs == 0:
                 risk = "RẤT THẤP"
-                color = "green"
+                color = COLORS["success"]
                 recommendation = "Xuất viện an toàn"
                 intervention_risk = "<1%"
                 mortality = "<0.5%"
             elif gbs <= 1:
                 risk = "THẤP"
-                color = "green"
+                color = COLORS["success"]
                 recommendation = "Có thể xuất viện sớm"
                 intervention_risk = "~2%"
                 mortality = "<0.5%"
             elif gbs <= 3:
                 risk = "TRUNG BÌNH THẤP"
-                color = "info"
+                color = COLORS["primary"]
                 recommendation = "Nhập viện theo dõi"
                 intervention_risk = "~5%"
                 mortality = "~1%"
             elif gbs <= 6:
                 risk = "TRUNG BÌNH"
-                color = "warning"
+                color = COLORS["warning"]
                 recommendation = "Nhập viện, nội soi sớm"
                 intervention_risk = "~15%"
                 mortality = "~2%"
             else:
                 risk = "CAO"
-                color = "error"
+                color = COLORS["error"]
                 recommendation = "Nhập viện/ICU, can thiệp khẩn cấp"
                 intervention_risk = ">30%"
                 mortality = ">5%"
             
-            # Map color names to hex
-            color_map = {
-                "green": "#28a745",  # green
-                "info": "#17a2b8",   # blue
-                "warning": "#fd7e14",  # orange
-                "error": "#dc3545"     # red
-            }
             icon_map = {
-                "green": "✅",
-                "info": "💡",
-                "warning": "⚠️",
-                "error": "🚨"
+                COLORS["success"]: "✅",
+                COLORS["primary"]: "💡",
+                COLORS["warning"]: "⚠️",
+                COLORS["error"]: "🚨"
             }
-            score_color = color_map[color]
+            score_color = color
             score_icon = icon_map[color]
             
             with col2:

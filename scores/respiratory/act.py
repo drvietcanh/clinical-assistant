@@ -35,6 +35,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -107,8 +108,12 @@ ACT_QUESTIONS = [
 def render():
     """Render Asthma Control Test (ACT) calculator"""
     
-    st.title("🫁 Asthma Control Test (ACT)")
-    st.markdown("**Đánh giá mức độ kiểm soát hen phế quản (DÙNG HÀNG NGÀY)**")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🫁 Asthma Control Test (ACT)</h2>
+    <p style='text-align: center; color: #6B7280;'>
+    Đánh giá mức độ kiểm soát hen phế quản (DÙNG HÀNG NGÀY)
+    </p>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -208,22 +213,31 @@ def render():
         with col_r2:
             if total_score == 25:
                 control_level = "Kiểm soát hoàn toàn"
-                color = "success"
+                color = COLORS["success"]
                 icon = "✅"
             elif total_score >= 20:
                 control_level = "Kiểm soát tốt"
-                color = "success"
+                color = COLORS["success"]
                 icon = "✅"
             elif total_score >= 16:
                 control_level = "Kiểm soát chưa tốt"
-                color = "warning"
+                color = COLORS["warning"]
                 icon = "⚠️"
             else:
                 control_level = "Kiểm soát kém"
-                color = "error"
+                color = COLORS["error"]
                 icon = "🚨"
-            
-            st.markdown(f"### {icon} {control_level}")
+
+            from components.ui.scoring import render_score_result
+            render_score_result(
+                title="ACT Score",
+                score=total_score,
+                max_score=25,
+                interpretation=control_level,
+                recommendation=None,
+                color=color,
+                icon=icon
+            )
         
         # Score breakdown
         with st.expander("📋 Chi tiết điểm số", expanded=True):

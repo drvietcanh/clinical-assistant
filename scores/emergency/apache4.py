@@ -33,6 +33,7 @@ an approximation based on published methodology.
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 from components.ui.scoring import (
     render_score_result,
@@ -381,8 +382,11 @@ def estimate_apache4_mortality(apache4_score: float, diagnosis_category: str = "
 def render():
     """Render APACHE IV calculator"""
     
-    st.title("📊 APACHE IV Score")
-    st.markdown("**Dự đoán tử vong ICU - Phiên bản mới nhất (2006)**")
+    # st.title("📊 APACHE IV Score")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>📊 APACHE IV Score</h2>
+    <p style='text-align: center;'><em>Dự đoán tử vong ICU - Phiên bản mới nhất (2006)</em></p>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()

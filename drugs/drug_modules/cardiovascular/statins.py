@@ -57,7 +57,18 @@ STATINS_DRUGS = {
             "Tránh grapefruit juice",
             "Thận trọng khi dùng chung với Fibrate"
         ],
-        "black_box_warnings": "Gây quái thai. Chống chỉ định ở thai kỳ và cho con bú."
+        "black_box_warnings": "Gây quái thai. Chống chỉ định ở thai kỳ và cho con bú.",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity", "Myopathy/Rhabdomyolysis"],
+            "requires_monitoring": ["Liver function tests (ALT/AST)", "Creatine Kinase (if symptomatic)", "Lipid profile"]
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "ESC/EAS Guidelines for Dyslipidaemias 2019"
+        ]
     },
 
     "Simvastatin": {
@@ -88,6 +99,17 @@ STATINS_DRUGS = {
             "Tương tự Atorvastatin",
             "Liều 80mg KHÔNG khuyến cáo (nguy cơ tan rã cơ cao)",
             "Tương tác thuốc nhiều - Thận trọng"
+        ],
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity", "Myopathy/Rhabdomyolysis (High risk with 80mg)"],
+            "requires_monitoring": ["Liver function tests (ALT/AST)", "Creatine Kinase (if symptomatic)", "Lipid profile"]
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "FDA Drug Safety Communication - Simvastatin 80mg"
         ]
     },
 
@@ -110,7 +132,18 @@ STATINS_DRUGS = {
         "side_effects": [
             "Tương tự Atorvastatin"
         ],
-        "mechanism_of_action": "Statin mạnh nhất. Giảm LDL hiệu quả nhất. Tương tác thuốc ít hơn Simvastatin."
+        "mechanism_of_action": "Statin mạnh nhất. Giảm LDL hiệu quả nhất. Tương tác thuốc ít hơn Simvastatin.",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity", "Myopathy/Rhabdomyolysis", "Renal (proteinuria with high dose)"],
+            "requires_monitoring": ["Liver function tests (ALT/AST)", "Creatine Kinase (if symptomatic)", "Lipid profile", "Renal function (with 40mg dose)"]
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "ESC/EAS Guidelines for Dyslipidaemias 2019"
+        ]
     },
 
     "Pravastatin": {
@@ -130,6 +163,16 @@ STATINS_DRUGS = {
         "side_effects": [
             "Tương tự Atorvastatin nhưng ít hơn"
         ],
-        "mechanism_of_action": "Statin ít tương tác thuốc nhất (không chuyển hóa qua CYP450). An toàn hơn ở bệnh nhân dùng nhiều thuốc."
+        "mechanism_of_action": "Statin ít tương tác thuốc nhất (không chuyển hóa qua CYP450). An toàn hơn ở bệnh nhân dùng nhiều thuốc.",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity", "Myopathy/Rhabdomyolysis"],
+            "requires_monitoring": ["Liver function tests (ALT/AST)", "Creatine Kinase (if symptomatic)", "Lipid profile"]
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines"
+        ]
     }
 }

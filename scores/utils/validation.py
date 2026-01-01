@@ -218,3 +218,52 @@ def validate_ratio(
     ratio = numerator / denominator
     return True, None, ratio
 
+
+def validate_input_range(
+    value: float,
+    name: str,
+    min_val: float,
+    max_val: float,
+    unit: str = ""
+) -> Tuple[bool, Optional[str]]:
+    """
+    Validate input range with unit support
+    
+    Args:
+        value: Input value
+        name: Name of the input
+        min_val: Minimum value
+        max_val: Maximum value
+        unit: Unit string (optional)
+        
+    Returns:
+        Tuple of (is_valid, error_message)
+    """
+    if value < min_val:
+        return False, f"{name} phải ≥ {min_val} {unit}".strip()
+    if value > max_val:
+        return False, f"{name} phải ≤ {max_val} {unit}".strip()
+    return True, None
+
+
+def validate_weight(
+    weight: float,
+    min_val: float = 0.0,
+    max_val: float = 600.0
+) -> Tuple[bool, Optional[str]]:
+    """
+    Validate weight
+    
+    Args:
+        weight: Weight in kg
+        min_val: Minimum weight
+        max_val: Maximum weight
+        
+    Returns:
+        Tuple of (is_valid, error_message)
+    """
+    if weight < min_val or weight > max_val:
+        return False, f"Cân nặng phải từ {min_val}-{max_val} kg"
+    return True, None
+
+

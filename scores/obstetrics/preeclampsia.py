@@ -4,6 +4,9 @@ Phân loại mức độ nặng của tiền sản giật
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.results import render_result_box
+from scores.utils.validation import validate_blood_pressure, validate_lab_value, validate_input_range
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -23,10 +26,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🤰 Preeclampsia Severity</h2>
-    <p style='text-align: center;'><em>Phân loại mức độ nặng của Tiền sản giật</em></p>
-    """, unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🤰 Preeclampsia Severity</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Phân loại mức độ nặng của Tiền sản giật</p>", unsafe_allow_html=True)
     
     # Thông tin
     with st.expander("ℹ️ Giới thiệu về Preeclampsia"):
@@ -202,23 +203,53 @@ def render():
     
     # Calculate button
     if st.button("📊 Đánh giá mức độ nặng", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_bp, bp_error = validate_blood_pressure(bp_sys, bp_dia)
+        if not is_valid_bp:
+             validation_errors.append(bp_error)
+            
+        is_valid_ga, ga_error = validate_input_range(gestational_age, "Tuổi thai", 20, 42, "tuần")
+        if not is_valid_ga:
+             validation_errors.append(ga_error)
+             
+        is_valid_plt, plt_error = validate_lab_value(plt, "Tiểu cầu", 0, 500)
+        if not is_valid_plt:
+             validation_errors.append(plt_error)
+             
+        is_valid_creat, creat_error = validate_lab_value(creat, "Creatinine", 0, 1000)
+        if not is_valid_creat:
+             validation_errors.append(creat_error)
+             
+        is_valid_alt, alt_error = validate_lab_value(alt, "ALT/AST", 0, 2000)
+        if not is_valid_alt:
+             validation_errors.append(alt_error)
+             
+        is_valid_ldh, ldh_error = validate_lab_value(ldh, "LDH", 0, 2000)
+        if not is_valid_ldh:
+             validation_errors.append(ldh_error)
+
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+
         is_severe = len(severe_features) > 0
         
         # Kết quảs
         st.markdown("## 📊 Kết quả")
         
         if is_severe:
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, #dc354522 0%, #dc354544 100%); 
-                        padding: 40px; border-radius: 15px; border-left: 5px solid #dc3545; margin: 20px 0;'>
-                <h1 style='color: #dc3545; margin: 0; text-align: center; font-size: 2.5em;'>
-                    🚨 PREECLAMPSIA NẶNG
-                </h1>
-                <p style='text-align: center; font-size: 1.2em; margin-top: 15px;'>
-                    Có {len(severe_features)} dấu hiệu nặng
-                </p>
-            </div>
-            """, unsafe_allow_html=True)
+            render_result_box(
+                title="PREECLAMPSIA NẶNG",
+                value="SEVERE",
+                subtitle=f"Có {len(severe_features)} dấu hiệu nặng",
+                color=COLORS["error"],
+                icon="🚨",
+                size="large"
+            )
             
             st.markdown("### ⚠️ Dấu hiệu nặng:")
             for feature in severe_features:
@@ -282,17 +313,14 @@ def render():
             """)
         
         else:
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, #ffc10722 0%, #ffc10744 100%); 
-                        padding: 40px; border-radius: 15px; border-left: 5px solid #ffc107; margin: 20px 0;'>
-                <h1 style='color: #ff8800; margin: 0; text-align: center; font-size: 2.5em;'>
-                    ⚠️ PREECLAMPSIA KHÔNG NẶNG
-                </h1>
-                <p style='text-align: center; font-size: 1.2em; margin-top: 15px;'>
-                    Không có dấu hiệu nặng
-                </p>
-            </div>
-            """, unsafe_allow_html=True)
+            render_result_box(
+                title="PREECLAMPSIA KHÔNG NẶNG",
+                value="MILD",
+                subtitle="Không có dấu hiệu nặng",
+                color=COLORS["warning"],
+                icon="⚠️",
+                size="large"
+            )
             
             st.warning("""
             ### ⚠️ XỬ TRÍ

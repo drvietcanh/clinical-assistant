@@ -35,6 +35,8 @@ from scores.utils.validation import validate_age
 from components.ui.validation import render_validation_errors
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
@@ -132,17 +134,17 @@ def calculate_mskcc_rcc(
     # Determine risk category
     if risk_score <= 1:
         risk_category = "Thấp"
-        risk_color = "success"
+        risk_color = COLORS["success"]
         risk_icon = "🟢"
         recurrence_risk = "5-10%"
     elif risk_score == 2:
         risk_category = "Trung bình"
-        risk_color = "info"
+        risk_color = COLORS["warning"]
         risk_icon = "🟡"
         recurrence_risk = "15-25%"
     else:  # risk_score >= 3
         risk_category = "Cao"
-        risk_color = "warning"
+        risk_color = COLORS["error"]
         risk_icon = "🟠"
         recurrence_risk = "30-50%"
     
@@ -163,8 +165,8 @@ def render():
     
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🎗️ MSKCC Risk of Recurrence</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🎗️ MSKCC Risk of Recurrence</h2>
     <p style='text-align: center; color: #6B7280;'>
     Renal Cell Carcinoma (RCC)<br>
     Dự đoán nguy cơ tái phát sau cắt thận ở ung thư thận
@@ -292,20 +294,15 @@ def render():
             st.markdown("---")
             st.markdown("### 📋 Kết quả đánh giá nguy cơ")
             
-            if result["risk_category"] == "Cao":
-                st.warning(f"{result['risk_icon']} **NGUY CƠ CAO** - Điểm số: {result['risk_score']}")
-            elif result["risk_category"] == "Trung bình":
-                st.info(f"{result['risk_icon']} **NGUY CƠ TRUNG BÌNH** - Điểm số: {result['risk_score']}")
-            else:
-                st.success(f"{result['risk_icon']} **NGUY CƠ THẤP** - Điểm số: {result['risk_score']}")
-            
-            col1, col2 = st.columns(2)
-            
-            with col1:
-                st.metric("Tổng điểm nguy cơ", f"{result['risk_score']}")
-            
-            with col2:
-                st.metric("Nguy cơ tái phát", result["recurrence_risk"])
+            render_score_result(
+                title="MSKCC Score",
+                score=result['risk_score'],
+                interpretation=f"Nguy cơ: {result['risk_category']}",
+                mortality=f"Nguy cơ tái phát: {result['recurrence_risk']}",
+                color=result['risk_color'],
+                icon=result['risk_icon'],
+                size="large"
+            )
             
             if result['risk_factors']:
                 st.markdown("**Các yếu tố nguy cơ:**")

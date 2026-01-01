@@ -3,7 +3,8 @@ DN4 - Douleur Neuropathique 4
 Thang điểm chẩn đoán đau thần kinh
 """
 
-import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -23,8 +24,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🧠 DN4 - Douleur Neuropathique 4</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🧠 DN4 - Douleur Neuropathique 4</h2>
     <p style='text-align: center;'><em>Thang điểm chẩn đoán đau thần kinh</em></p>
     """, unsafe_allow_html=True)
     
@@ -133,28 +134,23 @@ def render():
         
         if is_neuropathic:
             severity = "Có đau thần kinh"
-            color = "#ef4444"
+            color = COLORS['error']
             icon = "🚨"
             interpretation = "Chẩn đoán đau thần kinh (≥ 4 điểm)"
         else:
             severity = "Không có đau thần kinh"
-            color = "#10b981"
+            color = COLORS['success']
             icon = "✅"
             interpretation = "Không đủ tiêu chí đau thần kinh (< 4 điểm)"
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h2 style='color: {color}; margin: 0; text-align: center;'>
-                {icon} DN4 = {score}/10
-            </h2>
-            <p style='text-align: center; font-size: 1.1em; margin-top: 10px;'>
-                {severity}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        st.markdown(f"**Diễn giải:** {interpretation}")
+        render_score_result(
+            title="Kết quả DN4",
+            score=f"{score}/10",
+            interpretation=interpretation,
+            mortality=severity,
+            color=color,
+            icon=icon
+        )
         
         # Chi tiết
         st.markdown("### 📋 Chi tiết điểm số:")

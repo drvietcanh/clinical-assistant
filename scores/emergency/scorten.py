@@ -35,6 +35,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_age, validate_lab_value
 from components.ui.validation import render_validation_errors
 # ========== PHASE 1 IMPORTS ==========
@@ -170,8 +171,8 @@ def render():
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🩺 SCORTEN Score</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🩺 SCORTEN Score</h2>
     <p style='text-align: center; color: #6B7280;'>
     Severity-of-Illness Score for Toxic Epidermal Necrolysis<br>
     Ước tính nguy cơ tử vong ở bệnh nhân hội chứng Stevens-Johnson (SJS) và/hoặc hoại tử biểu bì nhiễm độc (TEN)

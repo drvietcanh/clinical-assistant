@@ -33,7 +33,8 @@ Clinical Utility:
 """
 
 import streamlit as st
-from components.ui.validation import render_validation_errors
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -69,17 +70,17 @@ def calculate_ice_score(
     # Determine grade based on score
     if total_score >= 7:
         grade = "Nhẹ (Mild)"
-        grade_color = "success"
+        grade_color = COLORS["success"]
         grade_icon = "🟢"
         severity = "Mức độ nhẹ"
     elif total_score >= 3:
         grade = "Trung bình (Moderate)"
-        grade_color = "warning"
+        grade_color = COLORS["warning"]
         grade_icon = "🟡"
         severity = "Mức độ trung bình"
     else:
         grade = "Nặng (Severe)"
-        grade_color = "error"
+        grade_color = COLORS["error"]
         grade_icon = "🔴"
         severity = "Mức độ nặng"
     
@@ -105,14 +106,13 @@ def calculate_ice_score(
 
 def render():
     """Render ICE Score interface"""
-    st.set_page_config(page_title="ICE Score", layout="wide")
+    # st.set_page_config(page_title="ICE Score", layout="wide")
     
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🧠 ICE Score</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🧠 ICE Score (Immune Effector Cell Encephalopathy)</h3>
     <p style='text-align: center; color: #6B7280;'>
-    Immune Effector Cell Encephalopathy Score<br>
     Đánh giá độc tính thần kinh ở bệnh nhân điều trị CAR T-cell
     </p>
     """, unsafe_allow_html=True)
@@ -221,16 +221,15 @@ def render():
         )
         
         st.markdown("---")
-        st.markdown("### 📋 Kết quả ICE Score")
+        st.subheader("📋 Kết quả")
         
-        if result["grade"] == "Nặng (Severe)":
-            st.error(f"{result['grade_icon']} **{result['grade']}** - Điểm số: {result['total_score']}/10")
-        elif result["grade"] == "Trung bình (Moderate)":
-            st.warning(f"{result['grade_icon']} **{result['grade']}** - Điểm số: {result['total_score']}/10")
-        else:
-            st.success(f"{result['grade_icon']} **{result['grade']}** - Điểm số: {result['total_score']}/10")
-        
-        st.metric("ICE Score", f"{result['total_score']}/10")
+        render_score_result(
+            title="ICE Score",
+            score=result['total_score'],
+            interpretation=f"{result['grade']}\n({result['severity']})",
+            color=result['grade_color'],
+            icon=result['grade_icon']
+        )
         
         st.markdown("### 📊 Chi tiết từng thành phần")
         for component_name, component_data in result["components"].items():

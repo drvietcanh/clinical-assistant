@@ -31,6 +31,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from components.ui.scoring import render_score_result, render_score_breakdown
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
@@ -218,8 +219,11 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🦴 Injury Severity Score (ISS)")
-    st.markdown("**Đánh giá mức độ nặng đa chấn thương dựa trên giải phẫu**")
+    # st.title("🦴 Injury Severity Score (ISS)")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🦴 Injury Severity Score (ISS)</h2>
+    <p style='text-align: center;'><em>Đánh giá mức độ nặng đa chấn thương dựa trên giải phẫu</em></p>
+    """, unsafe_allow_html=True)
     
     # Educational information
     with st.expander("ℹ️ Thông tin & cách sử dụng"):
@@ -390,12 +394,12 @@ def render():
         
         # Map color emoji to hex
         color_map_hex = {
-            "🟢": "#28a745",
-            "🟡": "#ffc107",
-            "🟠": "#fd7e14",
-            "🔴": "#dc3545"
+            "🟢": COLORS["success"],
+            "🟡": COLORS["warning"],
+            "🟠": COLORS["warning_dark"],
+            "🔴": COLORS["error"]
         }
-        score_color = color_map_hex.get(result['color'], "#6c757d")
+        score_color = color_map_hex.get(result['color'], COLORS["neutral"])
         
         # Use render_score_result for main score display
         render_score_result(

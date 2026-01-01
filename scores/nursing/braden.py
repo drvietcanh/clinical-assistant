@@ -4,6 +4,8 @@ Thang điểm đánh giá nguy cơ loét tì đè
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -24,9 +26,8 @@ def render():
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
     st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🛏️ Braden Scale</h2>
-    <p style='text-align: center;'><em>Thang điểm đánh giá nguy cơ loét tì đè</em></p>
-    """, unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🛏️ Braden Scale</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Thang điểm đánh giá nguy cơ loét tì đè</p>", unsafe_allow_html=True)
     
     with st.expander("ℹ️ Giới thiệu"):
         st.markdown("""
@@ -47,10 +48,10 @@ def render():
         6. **Friction & Shear (Ma sát)** - 1-3 điểm
         
         **Nguy cơ:**
-        - **≤ 12:** Nguy cơ cao
+        - **&le; 12:** Nguy cơ cao
         - **13-14:** Nguy cơ trung bình
         - **15-18:** Nguy cơ thấp
-        - **≥ 19:** Rất ít nguy cơ
+        - **&ge; 19:** Rất ít nguy cơ
         """)
     
     st.markdown("---")
@@ -150,36 +151,35 @@ def render():
         # Interpret risk
         if total_score <= 12:
             risk_level = "Nguy cơ cao"
-            color = "#ef4444"
+            color = COLORS["error"]
             icon = "🚨"
             interpretation = "Nguy cơ loét tì đè cao, cần can thiệp ngay"
         elif total_score <= 14:
             risk_level = "Nguy cơ trung bình"
-            color = "#f59e0b"
+            color = COLORS["warning"]
             icon = "⚠️"
             interpretation = "Nguy cơ loét tì đè trung bình, cần theo dõi"
         elif total_score <= 18:
             risk_level = "Nguy cơ thấp"
-            color = "#fbbf24"
+            color = COLORS["info"]
             icon = "💡"
             interpretation = "Nguy cơ loét tì đè thấp, tiếp tục phòng ngừa"
         else:
             risk_level = "Rất ít nguy cơ"
-            color = "#10b981"
+            color = COLORS["success"]
             icon = "✅"
             interpretation = "Rất ít nguy cơ loét tì đè"
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h2 style='color: {color}; margin: 0; text-align: center;'>
-                {icon} Braden Score = {total_score}/23
-            </h2>
-            <p style='text-align: center; font-size: 1.1em; margin-top: 10px;'>
-                {risk_level}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="Braden Score",
+            score=total_score,
+            interpretation=f"{risk_level}: {interpretation}",
+            mortality=None,
+            color=color,
+            icon=icon,
+            size="large",
+            max_score=23
+        )
         
         st.markdown(f"**Diễn giải:** {interpretation}")
         
@@ -202,7 +202,7 @@ def render():
         
         if total_score <= 12:
             st.error("""
-            **🚨 Nguy cơ cao (Braden ≤ 12) - Can thiệp ngay:**
+            **Nguy cơ cao (Braden &le; 12) - Can thiệp ngay:**
             
             **Biện pháp phòng ngừa:**
             

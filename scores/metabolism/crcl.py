@@ -9,6 +9,7 @@ from scores.utils.validation import (
     validate_range,
     validate_lab_value
 )
+from config.theme import COLORS
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box
 # ========== PHASE 1 IMPORTS ==========
@@ -55,8 +56,8 @@ def calculate_crcl(age, weight, creatinine, gender, creatinine_unit="µmol/L"):
 def render():
     """Render Creatinine Clearance calculator interface"""
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🧪 Creatinine Clearance (CrCl)</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🧪 Creatinine Clearance (CrCl)</h2>
     <p style='text-align: center;'><em>Cockcroft-Gault Formula - Điều chỉnh liều thuốc</em></p>
     """, unsafe_allow_html=True)
     shared = load_shared_result_from_url()
@@ -229,47 +230,38 @@ def render():
         # Classify kidney function
         if crcl >= 90:
             stage = "Bình thường"
-            color = "#28a745"
+            color = COLORS["success"]
             icon = "✅"
         elif crcl >= 60:
             stage = "Giảm nhẹ (CKD G2)"
-            color = "#28a745"
+            color = COLORS["success"]
             icon = "✅"
         elif crcl >= 45:
             stage = "Giảm nhẹ-TB (CKD G3a)"
-            color = "#ffc107"
+            color = COLORS["warning"]
             icon = "⚠️"
         elif crcl >= 30:
             stage = "Giảm TB-nặng (CKD G3b)"
-            color = "#fd7e14"
+            color = COLORS["warning"]
             icon = "⚠️"
         elif crcl >= 15:
             stage = "Giảm nặng (CKD G4)"
-            color = "#dc3545"
+            color = COLORS["error"]
             icon = "🚨"
         else:
             stage = "Suy thận cuối (CKD G5)"
-            color = "#dc3545"
+            color = COLORS["error"]
             icon = "🚨"
         
         # Display results
         st.markdown("## 📊 Kết quả")
-        
-        # Map color to result box color
-        color_map = {
-            "#28a745": "success",
-            "#ffc107": "warning",
-            "#fd7e14": "warning",
-            "#dc3545": "error"
-        }
-        box_color = color_map.get(color, "info")
         
         # Use render_result_box for main result display
         render_result_box(
             title=f"{icon} Creatinine Clearance",
             value=f"{crcl:.1f} mL/min",
             subtitle=stage,
-            color=box_color,
+            color=color,
             icon=icon,
             size="large"
         )

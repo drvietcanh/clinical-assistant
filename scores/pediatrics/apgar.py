@@ -4,6 +4,8 @@ APGAR Score - Newborn Assessment
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.results import render_result_box
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -44,7 +46,8 @@ def interpret_apgar(score, time_point):
     if score >= 7:
         return {
             "status": "Bình thường",
-            "color": "🟢",
+            "color": COLORS["success"],
+            "icon": "🟢",
             "condition": "Trẻ khỏe mạnh, thích nghi tốt",
             "action": "Chăm sóc thường quy. Quan sát.",
             "prognosis": "Tiên lượng tốt",
@@ -53,7 +56,8 @@ def interpret_apgar(score, time_point):
     elif score >= 4:
         return {
             "status": "Ức chế vừa",
-            "color": "🟡",
+            "color": COLORS["warning"],
+            "icon": "🟡",
             "condition": "Trẻ cần hỗ trợ, theo dõi sát",
             "action": "Kích thích, hút đờm, O2, theo dõi sát. Xem xét thông khí áp lực dương nếu cần.",
             "prognosis": "Tiên lượng thận trọng, cần theo dõi",
@@ -62,7 +66,8 @@ def interpret_apgar(score, time_point):
     else:
         return {
             "status": "Ức chế nặng",
-            "color": "🔴",
+            "color": COLORS["error"],
+            "icon": "🔴",
             "condition": "Trẻ nguy kịch, cần hồi sức tích cực",
             "action": "HỒI SỨC NGAY: Thông khí áp lực dương, ép tim nếu cần, đánh giá nguyên nhân.",
             "prognosis": "Nguy cơ cao tổn thương não và tử vong",
@@ -80,7 +85,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("👶 APGAR Score")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>👶 APGAR Score</h2>", unsafe_allow_html=True)
     st.markdown("""
     ### Đánh giá trẻ Sơ Sinh Ngay Sau Sinh
     
@@ -229,29 +234,14 @@ def render():
         st.subheader("📈 Kết quả APGAR")
         
         # Display score
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            st.metric(
-                "Thời điểm",
-                time_point,
-                help="Thời điểm đánh giá sau sinh"
-            )
-        
-        with col2:
-            st.metric(
-                "Điểm APGAR",
-                f"{total_score}/10",
-                help="Tổng điểm APGAR"
-            )
-        
-        with col3:
-            if result['level'] == "normal":
-                st.success(f"{result['color']} {result['status']}")
-            elif result['level'] == "moderate":
-                st.warning(f"{result['color']} {result['status']}")
-            else:
-                st.error(f"{result['color']} {result['status']}")
+        render_result_box(
+            title="Kết quả APGAR",
+            value=f"{total_score}/10",
+            subtitle=f"{time_point} - {result['status']}",
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
         st.markdown("---")
         
@@ -272,11 +262,11 @@ def render():
                 st.write(label)
             with col2:
                 if score == 0:
-                    st.write("🔴 0")
+                    st.write("0")
                 elif score == 1:
-                    st.write("🟡 1")
+                    st.write("1")
                 else:
-                    st.write("🟢 2")
+                    st.write("2")
         
         st.markdown("---")
         

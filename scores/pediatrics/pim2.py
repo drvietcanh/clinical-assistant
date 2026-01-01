@@ -37,6 +37,7 @@ from scores.utils.validation import (
 )
 from components.ui.validation import render_validation_errors
 from components.ui.scoring import render_score_result
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -148,13 +149,13 @@ def calculate_pim2(
     # Interpretation
     if mortality_percent < 5:
         risk_category = "Thấp"
-        color = "success"
+        color = COLORS["success"]
     elif mortality_percent < 15:
         risk_category = "Trung bình"
-        color = "warning"
+        color = COLORS["warning"]
     else:
         risk_category = "Cao"
-        color = "error"
+        color = COLORS["error"]
     
     return {
         "total_score": score,
@@ -172,8 +173,8 @@ def calculate_pim2(
 
 def render():
     """PIM2 Score Calculator"""
-    st.subheader("👶 PIM2 - Pediatric Index of Mortality 2")
-    st.caption("ICU Mortality Prediction for Pediatric Patients")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>👶 PIM2 - Pediatric Index of Mortality 2</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>ICU Mortality Prediction for Pediatric Patients</p>", unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -333,29 +334,14 @@ def render():
         # Display result
         st.markdown("## 📊 Kết quả")
         
-        # Map color to hex
-        color_map_hex = {
-            "success": "#28a745",
-            "warning": "#ffc107",
-            "error": "#dc3545"
-        }
-        score_color = color_map_hex.get(result['color'], "#6c757d")
-        
-        icon_map = {
-            "success": "✅",
-            "warning": "⚠️",
-            "error": "🚨"
-        }
-        icon = icon_map.get(result['color'], "📊")
-        
         # Use render_score_result for main score display
         render_score_result(
             title="PIM2 Score",
             score=round(result['total_score'], 2),
             interpretation=f"Nguy cơ: {result['risk_category']}",
             mortality=f"Tỷ lệ tử vong: {result['mortality_percent']:.1f}%",
-            color=score_color,
-            icon=icon,
+            color=result['color'],
+            icon="👶",
             size="large"
         )
         

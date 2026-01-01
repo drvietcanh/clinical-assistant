@@ -26,6 +26,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_gcs,
     validate_blood_pressure,
@@ -190,27 +191,27 @@ def calculate_mods(
         interpretation = "Không có rối loạn cơ quan"
         mortality = "<5%"
         risk_class = "NONE"
-        color = "🟢"
+        color = COLORS["success"]
     elif total_score <= 4:
         interpretation = "Rối loạn cơ quan nhẹ"
         mortality = "5-10%"
         risk_class = "MILD"
-        color = "🟡"
+        color = COLORS["warning"]
     elif total_score <= 8:
         interpretation = "Rối loạn cơ quan trung bình"
         mortality = "10-25%"
         risk_class = "MODERATE"
-        color = "🟡"
+        color = COLORS["warning"]
     elif total_score <= 12:
         interpretation = "Rối loạn cơ quan nặng"
         mortality = "25-50%"
         risk_class = "SEVERE"
-        color = "🟠"
+        color = COLORS["error"]
     else:
         interpretation = "Rối loạn cơ quan rất nặng"
         mortality = ">50%"
         risk_class = "CRITICAL"
-        color = "🔴"
+        color = COLORS["error"]
     
     return {
         'total_score': total_score,
@@ -226,7 +227,10 @@ def calculate_mods(
 def render():
     """Render MODS calculator"""
     
-    st.title("🏥 MODS Score")
+    # st.title("🏥 MODS Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🏥 MODS Score</h3>
+    """, unsafe_allow_html=True)
     st.markdown("**Multiple Organ Dysfunction Score - Đánh giá rối loạn đa cơ quan**")
     
     # Load shared result if available
@@ -363,13 +367,9 @@ def render():
         st.markdown("## 📊 Kết quả")
         
         # Map color emoji to hex
-        color_map_hex = {
-            "🟢": "#28a745",
-            "🟡": "#ffc107",
-            "🟠": "#fd7e14",
-            "🔴": "#dc3545"
-        }
-        score_color = color_map_hex.get(result['color'], "#6c757d")
+        
+        score_color = result['color']
+        icon = "🚨" if result['color'] == COLORS["error"] else ("⚠️" if result['color'] == COLORS["warning"] else "✅")
         
         # Use render_score_result for main score display
         render_score_result(
@@ -378,7 +378,7 @@ def render():
             interpretation=result['interpretation'],
             mortality=f"Tử vong ICU: {result['mortality']}",
             color=score_color,
-            icon=result['color'],
+            icon=icon,
             size="large"
         )
         

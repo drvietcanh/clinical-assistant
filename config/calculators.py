@@ -9,7 +9,13 @@ ALL_CALCULATORS = {
     "nyha": {"name": "NYHA Classification", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
     "killip": {"name": "Killip Classification", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
     "duke": {"name": "Duke Criteria", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
-    "cha2ds2vasc": {"name": "CHA₂DS₂-VASc", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
+    "cha2ds2vasc": {
+        "name": "CHA₂DS₂-VASc", 
+        "category": "Tim Mạch", 
+        "icon": "❤️", 
+        "page": "Scores",
+        "reference": "Lip GY, et al. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using a novel risk factor-based approach: the euro heart survey on atrial fibrillation. Chest. 2010;137(2):263-72."
+    },
     "hasbled": {"name": "HAS-BLED", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
     "score2": {"name": "SCORE2", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
     "score2_op": {"name": "SCORE2-OP", "category": "Tim Mạch", "icon": "❤️", "page": "Scores"},
@@ -23,7 +29,13 @@ ALL_CALCULATORS = {
     "news2": {"name": "NEWS2", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
     "mews": {"name": "MEWS - Modified Early Warning Score", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
     "qsofa": {"name": "qSOFA", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
-    "sofa": {"name": "SOFA", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
+    "sofa": {
+        "name": "SOFA", 
+        "category": "Cấp cứu", 
+        "icon": "🚨", 
+        "page": "Scores",
+        "reference": "Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA. 2016;315(8):801-10."
+    },
     "sofa2": {"name": "SOFA-2 (2025)", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
     "apache2": {"name": "APACHE II", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
     "apache3": {"name": "APACHE III", "category": "Cấp cứu", "icon": "🚨", "page": "Scores"},
@@ -36,7 +48,13 @@ ALL_CALCULATORS = {
     
     # Scores - Respiratory
     "perc": {"name": "PERC Rule", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
-    "curb65": {"name": "CURB-65", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
+    "curb65": {
+        "name": "CURB-65", 
+        "category": "Hô hấp", 
+        "icon": "🫁", 
+        "page": "Scores",
+        "reference": "Lim WS, et al. Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study. Thorax. 2003;58(5):377-82."
+    },
     "psi_port": {"name": "PSI/PORT", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
     "wells_pe": {"name": "Wells PE", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},
     "smartcop": {"name": "SMART-COP", "category": "Hô hấp", "icon": "🫁", "page": "Scores"},

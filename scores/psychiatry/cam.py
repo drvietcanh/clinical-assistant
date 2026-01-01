@@ -4,6 +4,8 @@ CAM - Confusion Assessment Method
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -21,7 +23,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🧠 CAM - Confusion Assessment Method")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🧠 CAM - Confusion Assessment Method</h2>", unsafe_allow_html=True)
     st.caption("Chẩn đoán Delirium")
     
     st.markdown("""
@@ -75,9 +77,10 @@ def render():
             has_delirium = feature1 and feature2 and (feature3 or feature4)
             
             if has_delirium:
-                st.error("""
-                🚨 **DƯƠNG TÍNH - Chẩn đoán DELIRIUM**
-                
+                severity = "DƯƠNG TÍNH - Chẩn đoán DELIRIUM"
+                color = COLORS['error']
+                icon = "🚨"
+                interpretation = """
                 **Đáp ứng đủ tiêu chí CAM:**
                 - ✅ Tiêu chí 1: Khởi phát cấp + dao động
                 - ✅ Tiêu chí 2: Giảm chú ý
@@ -89,16 +92,26 @@ def render():
                 3. Không dùng thuốc (trừ kích động nguy hiểm)
                 4. Định hướng lại, môi trường yên tĩnh
                 5. Huy động gia đình
-                """)
+                """
             else:
-                st.success("""
-                ✅ **ÂM TÍNH - Không đủ tiêu chí Delirium**
-                
+                severity = "ÂM TÍNH - Không đủ tiêu chí Delirium"
+                color = COLORS['success']
+                icon = "✅"
+                interpretation = """
                 Không đáp ứng tiêu chí CAM. Tuy nhiên:
                 - Theo dõi tiếp
                 - Đánh giá lại nếu có thay đổi
                 - Cân nhắc nguyên nhân khác của thay đổi tâm thần
-                """)
+                """
+            
+            render_score_result(
+                title="Kết quả CAM",
+                score="DELIRIUM" if has_delirium else "NORMAL",
+                interpretation=interpretation,
+                mortality=severity,
+                color=color,
+                icon=icon
+            )
             
             # Prepare data for history and share
             inputs_dict = {

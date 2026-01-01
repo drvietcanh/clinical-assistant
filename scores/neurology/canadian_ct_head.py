@@ -4,6 +4,7 @@ Quyết định chụp CT đầu ở chấn thương đầu nhẹ (người lớ
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_age
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box
@@ -69,6 +70,7 @@ def evaluate_canadian_ct_head(age, gcs, dangerous_mechanism, amnesia_antegrade,
             "risk": "high",
             "status": "🔴 Nguy cơ cao",
             "recommendation": "Cần chụp CT đầu",
+            "risk_color": COLORS["error"],
             "high_risk": high_risk_criteria,
             "medium_risk": medium_risk_criteria,
             "details": "Có tiêu chuẩn nguy cơ cao → Chụp CT đầu để loại trừ tổn thương nội sọ"
@@ -78,6 +80,7 @@ def evaluate_canadian_ct_head(age, gcs, dangerous_mechanism, amnesia_antegrade,
             "risk": "medium",
             "status": "🟡 Nguy cơ trung bình",
             "recommendation": "Cân nhắc chụp CT đầu",
+            "risk_color": COLORS["warning"],
             "high_risk": [],
             "medium_risk": medium_risk_criteria,
             "details": "Có tiêu chuẩn nguy cơ trung bình → Cân nhắc chụp CT đầu"
@@ -87,6 +90,7 @@ def evaluate_canadian_ct_head(age, gcs, dangerous_mechanism, amnesia_antegrade,
             "risk": "low",
             "status": "🟢 Nguy cơ thấp",
             "recommendation": "Không cần chụp CT đầu",
+            "risk_color": COLORS["success"],
             "high_risk": [],
             "medium_risk": [],
             "details": "Không có tiêu chuẩn nguy cơ → Có thể xuất viện với hướng dẫn theo dõi"
@@ -96,8 +100,8 @@ def evaluate_canadian_ct_head(age, gcs, dangerous_mechanism, amnesia_antegrade,
 def render():
     """Render Canadian CT Head Rule calculator interface"""
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🧠 Canadian CT Head Rule</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🧠 Canadian CT Head Rule</h2>
     <p style='text-align: center;'><em>Quyết định chụp CT đầu ở chấn thương đầu nhẹ (người lớn)</em></p>
     """, unsafe_allow_html=True)
     
@@ -219,7 +223,7 @@ def render():
             title="Đánh giá nguy cơ",
             value=result["status"],
             unit="",
-            status=result["status"]
+            status=result["risk_color"]
         )
         
         st.info(f"**Khuyến cáo:** {result['recommendation']}")

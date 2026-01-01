@@ -283,10 +283,60 @@ def render_quick_reference_table(
     st.markdown(table_html, unsafe_allow_html=True)
 
 
+def render_recommendation_box(
+    title: str,
+    content: str,
+    type: str = "info",
+    icon: str = "📋"
+) -> None:
+    """
+    Render a standardized recommendation/management box
+    
+    Args:
+        title: Box title
+        content: Main content text
+        type: 'success', 'warning', 'error', 'info', or 'neutral'
+        icon: Optional icon
+    """
+    # Map types to colors
+    color_map = {
+        "success": COLORS["success"],
+        "warning": COLORS["warning"],
+        "error": COLORS["error"], 
+        "info": COLORS["info"],
+        "neutral": COLORS["neutral"]
+    }
+    
+    color = color_map.get(type, COLORS["primary"])
+    bg_color = _hex_to_rgba(color, 0.1)
+    
+    box_html = f"""
+    <div style="
+        background-color: {bg_color};
+        border: 2px solid {color};
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        box-shadow: {THEME['shadows']['sm']};
+    ">
+        <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+            <span style="font-size: 1.5rem; margin-right: 0.75rem;">{icon}</span>
+            <h3 style="color: {color}; margin: 0; font-size: 1.25rem;">{title}</h3>
+        </div>
+        <div style="font-size: 1.1rem; color: {COLORS['text_primary']}; line-height: 1.6;">
+            {content}
+        </div>
+    </div>
+    """
+    
+    st.markdown(box_html, unsafe_allow_html=True)
+
+
 __all__ = [
     'get_risk_color',
     'render_score_result',
     'render_score_breakdown',
     'render_quick_reference_table',
+    'render_recommendation_box',
 ]
 

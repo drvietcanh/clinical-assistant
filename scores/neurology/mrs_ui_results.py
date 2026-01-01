@@ -6,19 +6,22 @@ Handles all results display and recommendations
 import streamlit as st
 
 
+from components.ui.scoring import render_score_result
+
 def render_results_display(selected_mrs, mrs_info):
     """Render all results display sections"""
     
     st.markdown("---")
-    st.markdown("## 📊 KẾT QUẢ")
+    st.subheader("📋 KẾT QUẢ")
     
-    # Score badge
-    st.markdown(f"""
-    <div style="background-color: {mrs_info['color']}; padding: 20px; border-radius: 10px; text-align: center;">
-        <h1 style="color: white; margin: 0;">{mrs_info['icon']} mRS = {selected_mrs}</h1>
-        <p style="color: white; margin: 0; font-size: 1.2rem;">{mrs_info['independence']}</p>
-    </div>
-    """, unsafe_allow_html=True)
+    # Render score result using standard component
+    render_score_result(
+        title="mRS Score",
+        score=f"{selected_mrs}",
+        interpretation=f"{mrs_info['independence']}\nKết cục: {mrs_info['outcome']}",
+        color=mrs_info['color'],
+        icon=mrs_info['icon']
+    )
     
     st.markdown("<br>", unsafe_allow_html=True)
     

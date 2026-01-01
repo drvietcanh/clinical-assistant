@@ -19,6 +19,7 @@ from scores.utils.validation import (
     validate_lab_value
 )
 from components.ui.validation import render_validation_errors
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -339,8 +340,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.subheader("🏥 PRISM III Score")
-    st.caption("Pediatric Risk of Mortality - ICU Mortality Prediction")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🏥 PRISM III Score</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Pediatric Risk of Mortality - ICU Mortality Prediction</p>", unsafe_allow_html=True)
     
     st.info("""
     **PRISM III** đánh giá nguy cơ tử vong ở trẻ em ICU dựa trên:
@@ -724,57 +725,39 @@ def render():
         
         result = calculate_prism3(variables)
         
-        st.markdown("### 📊 Kết quả PRISM III")
-        
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.metric(
-                "PRISM III Score",
-                f"{result['total_score']}/74"
-            )
-        
-        with col2:
-            st.metric(
-                "Nguy cơ tử vong",
-                f"{result['mortality_percent']:.1f}%"
-            )
-        
-        st.markdown("---")
-        
-        # Interpretation
         if result['total_score'] <= 10:
-            st.success(f"""
-            **✅ Nguy cơ thấp**
-            
-            - PRISM III = {result['total_score']}
-            - Nguy cơ tử vong: {result['mortality_percent']:.1f}%
-            - Tiên lượng tốt
-            """)
+            interpretation = "Nguy cơ thấp"
+            color = COLORS["success"]
+            icon = "✅"
+            prognosis = "Tiên lượng tốt"
         elif result['total_score'] <= 20:
-            st.info(f"""
-            **⚠️ Nguy cơ trung bình**
-            
-            - PRISM III = {result['total_score']}
-            - Nguy cơ tử vong: {result['mortality_percent']:.1f}%
-            - Theo dõi sát, điều trị tích cực
-            """)
+            interpretation = "Nguy cơ trung bình"
+            color = COLORS["info"]
+            icon = "⚠️"
+            prognosis = "Theo dõi sát, điều trị tích cực"
         elif result['total_score'] <= 30:
-            st.warning(f"""
-            **🚨 Nguy cơ cao**
-            
-            - PRISM III = {result['total_score']}
-            - Nguy cơ tử vong: {result['mortality_percent']:.1f}%
-            - Điều trị tối đa, tiên lượng dè dặt
-            """)
+            interpretation = "Nguy cơ cao"
+            color = COLORS["warning"]
+            icon = "🚨"
+            prognosis = "Điều trị tối đa, tiên lượng dè dặt"
         else:
-            st.error(f"""
-            **🚨🚨 Nguy cơ rất cao**
-            
-            - PRISM III = {result['total_score']}
-            - Nguy cơ tử vong: {result['mortality_percent']:.1f}%
-            - Tiên lượng xấu, điều trị hỗ trợ tối đa
-            """)
+            interpretation = "Nguy cơ rất cao"
+            color = COLORS["error"]
+            icon = "🆘"
+            prognosis = "Tiên lượng xấu, điều trị hỗ trợ tối đa"
+
+        render_score_result(
+            title="PRISM III Score",
+            score=result['total_score'],
+            interpretation=interpretation,
+            mortality=f"Tử vong: {result['mortality_percent']:.1f}%",
+            color=color,
+            icon=icon,
+            size="large",
+            max_score=74
+        )
+        
+        st.info(f"💡 **Tiên lượng:** {prognosis}")
         
         # Prepare data for history and share
         inputs_dict = {

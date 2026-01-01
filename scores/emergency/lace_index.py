@@ -31,7 +31,9 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from components.ui.results import render_result_box
+from scores.utils.validation import validate_lab_value
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -132,22 +134,22 @@ def calculate_lace_index(
     if total_score <= 4:
         risk = "<5%"
         interpretation = "Nguy cơ thấp"
-        color = "success"
+        color = COLORS["success"]
         severity = "Thấp"
     elif total_score <= 9:
         risk = "5-10%"
         interpretation = "Nguy cơ trung bình"
-        color = "warning"
+        color = COLORS["warning"]
         severity = "Trung bình"
     elif total_score <= 14:
         risk = "10-20%"
         interpretation = "Nguy cơ cao"
-        color = "error"
+        color = COLORS["error"]
         severity = "Cao"
     else:
         risk = ">20%"
         interpretation = "Nguy cơ rất cao"
-        color = "error"
+        color = COLORS["error"]
         severity = "Rất cao"
     
     return {
@@ -171,7 +173,10 @@ def calculate_lace_index(
 
 def render():
     """LACE Index Calculator"""
-    st.subheader("🏥 LACE Index")
+    # st.subheader("🏥 LACE Index")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🏥 LACE Index</h3>
+    """, unsafe_allow_html=True)
     st.caption("Dự đoán tái nhập viện hoặc tử vong 30 ngày sau xuất viện")
     
     # Load shared result if available
@@ -289,6 +294,27 @@ def render():
     st.markdown("---")
     
     if st.button("🧮 Tính LACE Index", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_los, los_error = validate_lab_value(length_of_stay, "Thời gian nằm viện", 0, 365)
+        if not is_valid_los:
+             validation_errors.append(los_error)
+             
+        is_valid_charlson, charlson_error = validate_lab_value(charlson_index, "Charlson Index", 0, 30)
+        if not is_valid_charlson:
+             validation_errors.append(charlson_error)
+            
+        is_valid_ed, ed_error = validate_lab_value(ed_visits, "Số lần cấp cứu", 0, 20)
+        if not is_valid_ed:
+             validation_errors.append(ed_error)
+             
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+
         result = calculate_lace_index(
             length_of_stay,
             is_emergent,

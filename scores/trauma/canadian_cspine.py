@@ -4,6 +4,8 @@ Quy tắc quyết định chụp cột sống cổ sau chấn thương
 """
 
 import streamlit as st
+from config.theme import COLORS
+from scores.utils.validation import validate_age
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -89,7 +91,11 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🍁 Canadian C-Spine Rule")
+    # st.title("🍁 Canadian C-Spine Rule")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🍁 Canadian C-Spine Rule</h2>
+    <p style='text-align: center;'><em>Quy tắc quyết định chụp cột sống cổ sau chấn thương</em></p>
+    """, unsafe_allow_html=True)
     st.markdown("""
     ### Quy tắc quyết định chụp cột sống cổ
     
@@ -304,6 +310,12 @@ def render():
     
     # Evaluate button
     if st.button("📊 Đánh giá Canadian C-Spine Rule", type="primary", use_container_width=True):
+        # Validate inputs
+        is_valid_age, age_error = validate_age(age)
+        if not is_valid_age:
+            st.error(f"❌ {age_error}")
+            st.stop()
+            
         result = evaluate_canadian_cspine(
             age, dangerous_mechanism, paresthesias,
             simple_rear_end_mvc, sitting_position, ambulatory, delayed_neck_pain,

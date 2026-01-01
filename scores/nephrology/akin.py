@@ -19,6 +19,9 @@ which is now the international standard.
 """
 
 import streamlit as st
+from config.theme import COLORS
+from scores.utils.validation import validate_lab_value, validate_weight
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -81,12 +84,14 @@ def calculate_akin(
     final_stage = max(stage_by_scr, stage_by_uo)
     
     stage_names = ["Không AKI", "Stage 1", "Stage 2", "Stage 3"]
-    colors = ["🟢", "🟡", "🟠", "🔴"]
+    colors = [COLORS["success"], COLORS["warning"], COLORS["warning"], COLORS["error"]]
+    icons = ["🟢", "🟡", "🟠", "🔴"]
     
     return {
         'stage': final_stage,
         'stage_name': stage_names[final_stage],
         'color': colors[final_stage],
+        'icon': icons[final_stage],
         'scr_fold': scr_fold,
         'uo_6h_rate': uo_6h_rate,
         'uo_12h_rate': uo_12h_rate,
@@ -104,8 +109,10 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🧪 AKIN Criteria - Acute Kidney Injury")
-    st.markdown("**Acute Kidney Injury Network Classification (Historical)**")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🧪 AKIN Criteria - Acute Kidney Injury</h3>
+    <p style='text-align: center; color: #6B7280;'>Acute Kidney Injury Network Classification (Historical)</p>
+    """, unsafe_allow_html=True)
     
     st.info("""
     **ℹ️ Lưu ý quan trọng:**
@@ -171,23 +178,40 @@ def render():
         urine_output_24h = st.number_input("Nước tiểu 24h (mL)", -1.0, 20000.0, -1.0, 10.0, format="%.0f")
     
     if st.button("🧮 Đánh giá AKIN Stage", type="primary"):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_scr, scr_error = validate_lab_value(scr_current, "SCr Hiện tại", 0, 20)
+        if not is_valid_scr:
+             validation_errors.append(scr_error)
+            
+        is_valid_wt, wt_error = validate_weight(weight)
+        if not is_valid_wt:
+             validation_errors.append(wt_error)
+             
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+
         result = calculate_akin(scr_baseline, scr_current, scr_increase_48h,
                                 urine_output_6h, urine_output_12h, urine_output_24h,
                                 weight, on_rrt)
         
         st.subheader("📊 Kết quả")
-        st.markdown(f"### {result['color']} {result['stage_name']}")
+        st.subheader("📊 Kết quả")
+        
+        render_score_result(
+            title="AKIN Stage",
+            score=result['stage_name'],
+            interpretation=f"Tương đương: {['', 'KDIGO 1', 'KDIGO 2', 'KDIGO 3'][result['stage']] if result['stage'] > 0 else 'N/A'}",
+            color=result['color'],
+            icon=result['icon']
+        )
         
         if result['scr_fold'] > 0:
             st.caption(f"Creatinine: {scr_baseline:.2f} → {scr_current:.2f} mg/dL ({result['scr_fold']:.2f}×)")
-        
-        col_a, col_b = st.columns(2)
-        with col_a:
-            st.metric("AKIN Stage", result['stage'] if result['stage'] > 0 else "Không AKI")
-        with col_b:
-            if result['stage'] > 0:
-                kdigo_equivalent = ["", "KDIGO 1", "KDIGO 2", "KDIGO 3"][result['stage']]
-                st.metric("Tương Đương", kdigo_equivalent)
         
         if result['stage'] > 0:
             st.warning("""

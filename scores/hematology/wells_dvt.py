@@ -32,6 +32,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -39,7 +40,10 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 # =====================================
-from components.ui.scoring import render_score_result, render_score_breakdown
+from components.ui.scoring import render_score_result, render_score_breakdown, render_recommendation_box
+
+from scores.utils.validation import validate_age, validate_positive
+
 
 # ========== NEW COMPONENTS (Phase 1 & 2) ==========
 from components.risk_color_coding import render_risk_badge, get_risk_level
@@ -143,8 +147,6 @@ def calculate_wells_dvt(
         probability_percent = "Nguy cơ DVT: ~28-34% (trước xét nghiệm)"
         risk_class = "HIGH"
         recommendation = """
-        **🔴 Xử trí khuyến cáo:**
-        
         1. **Cận Lâm sàng:**
            - Siêu âm tĩnh mạch chân (Duplex ultrasound) - NGAY
            - Nếu siêu âm âm tính nhưng nghi ngờ cao → xem xét chụp CT/MRI tĩnh mạch
@@ -168,14 +170,13 @@ def calculate_wells_dvt(
         - Nếu siêu âm âm tính + D-dimer âm tính → loại trừ DVT
         - Nếu siêu âm dương tính → bắt đầu điều trị kháng đông
         """
-        color = "🔴"
+        color = COLORS["error"]
+        icon = "🔴"
     else:  # score < 2
         probability = "KHẢ NĂNG THẤP (DVT Unlikely)"
         probability_percent = "Nguy cơ DVT: ~3-6% (trước xét nghiệm)"
         risk_class = "LOW"
         recommendation = """
-        **🟢 Xử trí khuyến cáo:**
-        
         1. **D-dimer:**
            - Xét nghiệm D-dimer trước tiên
            - D-dimer âm tính (age-adjusted) → loại trừ DVT (NPV ~99%)
@@ -204,7 +205,8 @@ def calculate_wells_dvt(
         - D-dimer âm tính + Wells <2 → NPV cực cao (~99%)
         - Nếu D-dimer dương → vẫn cần siêu âm để xác định
         """
-        color = "🟢"
+        color = COLORS["success"]
+        icon = "🟢"
     
     return {
         'score': score,
@@ -214,7 +216,9 @@ def calculate_wells_dvt(
         'recommendation': recommendation,
         'education': education,
         'details': details,
-        'color': color
+        'details': details,
+        'color': color,
+        'icon': icon
     }
 
 
@@ -228,8 +232,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🩸 Wells Score - Deep Vein Thrombosis (DVT)")
-    st.markdown("**Đánh giá xác suất tiền test của huyết khối tĩnh mạch sâu**")
+    st.markdown(f"<h3 style='text-align: center; color: {COLORS['success']};'>🩸 Wells Score - Deep Vein Thrombosis (DVT)</h3>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center;'><em>Đánh giá xác suất tiền test của huyết khối tĩnh mạch sâu</em></p>", unsafe_allow_html=True)
     
     # Educational information - Enhanced with Phase 1 Metadata
     if CALCULATOR_METADATA_AVAILABLE:
@@ -324,6 +328,31 @@ def render():
     # Input section
     st.subheader("📝 Nhập Thông tin lâm sàng")
     
+    # D-dimer Helper
+    with st.expander("🧮 Hỗ trợ Đánh giá D-dimer (Age-Adjusted)"):
+        col_d1, col_d2 = st.columns(2)
+        with col_d1:
+            age_input = st.number_input("Tuổi (năm)", min_value=18, max_value=120, value=50, step=1)
+        with col_d2:
+            ddimer_input = st.number_input("D-dimer (ng/mLFEU)", min_value=0.0, step=10.0, help="Đơn vị: ng/mL hoặc µg/L (FEU)")
+            
+        if ddimer_input > 0:
+            # Calculate Age-Adjusted Cutoff
+            # < 50y: 500 ng/mL
+            # >= 50y: Age * 10 ng/mL
+            cutoff = 500
+            if age_input >= 50:
+                cutoff = age_input * 10
+            
+            st.caption(f"ℹ️ Cutoff theo tuổi ({age_input}t): **{cutoff} ng/mL**")
+            
+            if ddimer_input >= cutoff:
+                st.error(f"⚠️ **D-dimer DƯƠNG TÍNH** ({ddimer_input} ≥ {cutoff})")
+                st.markdown("→ Cần kết hợp Wells Score để quyết định siêu âm.")
+            else:
+                st.success(f"✅ **D-dimer ÂM TÍNH** ({ddimer_input} < {cutoff})")
+                st.markdown("→ Giá trị NPV cao để loại trừ DVT nếu Wells thấp.")
+
     col1, col2 = st.columns(2)
     
     with col1:
@@ -413,21 +442,14 @@ def render():
             value=result['score']
         )
         
-        # Map color emoji to hex
-        color_map_hex = {
-            "🔴": "#dc3545",
-            "🟢": "#28a745"
-        }
-        score_color = color_map_hex.get(result['color'], "#6c757d")
-        
         # Use render_score_result for main score display
         render_score_result(
             title="Wells DVT Score",
             score=result['score'],
             interpretation=result['probability'],
             mortality=result['probability_percent'],
-            color=score_color,
-            icon=result['color'],
+            color=result['color'],
+            icon=result['icon'],
             size="large"
         )
         
@@ -478,7 +500,12 @@ def render():
         
         # Recommendations
         st.markdown("---")
-        st.markdown(result['recommendation'])
+        render_recommendation_box(
+            title=f"Xử trí khuyến cáo - {result['probability']}",
+            content=result['recommendation'],
+            type="error" if result['score'] >= 2 else "success",
+            icon=result['icon']
+        )
         
         # Education
         with st.expander("💡 Diễn giải kết quả"):

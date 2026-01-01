@@ -33,9 +33,11 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 from scores.utils.validation import validate_age, validate_blood_pressure, validate_lab_value
 from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -183,8 +185,8 @@ def render():
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>❤️ PCP-HF Risk Score</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>❤️ PCP-HF Risk Score</h3>
     <p style='text-align: center; color: #6B7280;'>
     Pooled Cohort Equations to Prevent Heart Failure<br>
     Ước tính nguy cơ 10 năm của suy tim mới khởi phát ở người lớn không có triệu chứng
@@ -389,12 +391,26 @@ def render():
                 )
             
             # Risk interpretation
+            # Risk interpretation
             if result['risk_percentage'] < 5:
-                st.success(f"**{result['risk_category']}** - {result['recommendation']}")
+                color = COLORS['success']
+                icon = "🟢"
             elif result['risk_percentage'] < 10:
-                st.warning(f"**{result['risk_category']}** - {result['recommendation']}")
+                color = COLORS['warning']
+                icon = "🟡"
             else:
-                st.error(f"**{result['risk_category']}** - {result['recommendation']}")
+                color = COLORS['error']
+                icon = "🔴"
+
+            render_score_result(
+                title="PCP-HF Risk Score",
+                score=f"{result['risk_percentage']:.1f}%",
+                interpretation=f"{result['risk_category']}",
+                mortality=result['recommendation'],
+                color=color,
+                icon=icon,
+                size="large"
+            )
             
             # Clinical recommendations
             st.markdown("### 💡 Khuyến nghị lâm sàng")

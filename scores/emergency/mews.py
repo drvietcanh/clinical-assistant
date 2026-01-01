@@ -28,6 +28,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from utils.formatters import format_number
 from scores.utils.validation import (
     validate_blood_pressure,
@@ -145,15 +146,15 @@ def calculate_mews(sbp: float, hr: float, resp_rate: float, temp: float, avpu: s
     # Risk category
     if total_score <= 4:
         risk = "Thấp"
-        color = "success"
+        color = COLORS["success"]
         action = "Theo dõi định kỳ (mỗi 12h)"
     elif total_score <= 6:
         risk = "Trung bình"
-        color = "warning"
+        color = COLORS["warning"]
         action = "Theo dõi sát (mỗi 4-6h), cân nhắc chuyển HDU"
     else:
         risk = "Cao"
-        color = "error"
+        color = COLORS["error"]
         action = "Khẩn cấp: Đánh giá ngay, cân nhắc chuyển ICU/HDU"
     
     return {
@@ -171,7 +172,10 @@ def calculate_mews(sbp: float, hr: float, resp_rate: float, temp: float, avpu: s
 
 def render():
     """MEWS Score Calculator"""
-    st.subheader("🚨 MEWS - Modified Early Warning Score")
+    # st.subheader("🚨 MEWS - Modified Early Warning Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🚨 MEWS - Modified Early Warning Score</h3>
+    """, unsafe_allow_html=True)
     st.caption("Early Warning System for Clinical Deterioration Detection")
     
     # Load shared result if available
@@ -334,18 +338,15 @@ def render():
         st.markdown("### 📊 Kết quả")
         
         # Map color names to hex
-        color_map = {
-            "success": "#28a745",  # green
-            "warning": "#fd7e14",  # orange
-            "error": "#dc3545"     # red
-        }
+        # Map color names to hex
+        
         icon_map = {
-            "success": "✅",
-            "warning": "⚠️",
-            "error": "🚨"
+            COLORS["success"]: "✅",
+            COLORS["warning"]: "⚠️",
+            COLORS["error"]: "🚨"
         }
-        score_color = color_map[result["color"]]
-        score_icon = icon_map[result["color"]]
+        score_color = result["color"]
+        score_icon = icon_map.get(result["color"], "✅")
         
         # Use render_score_result for main score display
         render_score_result(

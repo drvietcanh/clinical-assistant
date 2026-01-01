@@ -4,6 +4,8 @@ Thang điểm khuôn mặt đánh giá đau (trẻ em và người lớn)
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -23,10 +25,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>😊 Wong-Baker Faces Rating Scale</h2>
-    <p style='text-align: center;'><em>Thang điểm khuôn mặt đánh giá đau (0-10)</em></p>
-    """, unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: center; color: {COLORS['success']};'>😊 Wong-Baker Faces Rating Scale</h3>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Thang điểm khuôn mặt đánh giá đau (0-10)</p>", unsafe_allow_html=True)
     
     with st.expander("ℹ️ Giới thiệu"):
         st.markdown("""
@@ -120,36 +120,35 @@ def render():
         # Interpret pain level
         if selected_face == 0:
             severity = "Không đau"
-            color = "#10b981"
+            color = COLORS["success"]
             icon = "✅"
             interpretation = "Bệnh nhân không có đau"
         elif selected_face <= 3:
             severity = "Đau nhẹ"
-            color = "#fbbf24"
+            color = COLORS["info"]
             icon = "😐"
             interpretation = "Đau nhẹ, có thể chịu đựng được"
         elif selected_face <= 6:
             severity = "Đau vừa"
-            color = "#f59e0b"
+            color = COLORS["warning"]
             icon = "😣"
             interpretation = "Đau vừa, ảnh hưởng đến hoạt động"
         else:
             severity = "Đau nặng"
-            color = "#ef4444"
+            color = COLORS["error"]
             icon = "😰"
             interpretation = "Đau nặng, ảnh hưởng nghiêm trọng"
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h2 style='color: {color}; margin: 0; text-align: center;'>
-                {icon} Wong-Baker = {selected_face}/10
-            </h2>
-            <p style='text-align: center; font-size: 1.1em; margin-top: 10px;'>
-                {severity}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="Wong-Baker Score",
+            score=selected_face,
+            interpretation=f"{severity}: {interpretation}",
+            mortality=None,
+            color=color,
+            icon=icon,
+            size="large",
+            max_score=10
+        )
         
         st.markdown(f"**Diễn giải:** {interpretation}")
         
@@ -161,13 +160,13 @@ def render():
             st.success("**✅ Không cần điều trị giảm đau**")
         elif selected_face <= 3:
             st.info("""
-            **💊 Đau nhẹ (Wong-Baker 1-3):**
+            **Đau nhẹ (Wong-Baker 1-3):**
             - Paracetamol hoặc NSAID
             - Đánh giá lại sau 30-60 phút
             """)
         elif selected_face <= 6:
             st.warning("""
-            **💊 Đau vừa (Wong-Baker 4-6):**
+            **Đau vừa (Wong-Baker 4-6):**
             - Opioid yếu (Codeine, Tramadol) + Non-opioid
             - Đánh giá lại sau 30 phút
             """)

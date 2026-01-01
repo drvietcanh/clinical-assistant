@@ -4,12 +4,14 @@ Tiên lượng bệnh gan giai đoạn cuối với điều chỉnh theo Na
 """
 
 import streamlit as st
+from config.theme import COLORS
 import math
 from scores.utils.validation import (
     validate_lab_value,
     validate_range
 )
 from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -147,10 +149,12 @@ def interpret_meld_na(meld_na_score):
 def render():
     """Render the MELD-Na calculator"""
     
-    st.title("🏥 MELD-Na Score")
-    st.markdown("""
-    ### Model for End-Stage Liver Disease with Sodium
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🏥 MELD-Na Score</h3>
+    <h4 style='text-align: center; color: #6B7280;'>Model for End-Stage Liver Disease with Sodium</h4>
+    """, unsafe_allow_html=True)
     
+    st.markdown("""
     **MELD-Na:**
     - Phiên bản cải tiến của MELD score
     - Bổ sung yếu tố **Sodium** để dự đoán chính xác hơn
@@ -169,7 +173,9 @@ def render():
     - Càng cao → Càng nặng
     - ≥ 15: Nên list transplant
     - ≥ 30: Cần transplant khẩn cấp
+    """)
     
+    st.markdown("""
     **Ưu điểm MELD-Na so với MELD:**
     - Dự đoán chính xác hơn (đặc biệt với hyponatremia)
     - Giảm "gaming" (cheat) MELD score
@@ -367,40 +373,54 @@ def render():
         st.markdown("---")
         st.subheader("📈 Kết quả")
         
-        # Display scores
+        st.markdown("---")
+        st.subheader("📈 Kết quả")
+        
+        # Determine color and icon
+        if interp['level'] in ["minimal", "low"]:
+             color = COLORS['success']
+             icon = "🟢"
+        elif interp['level'] == "moderate":
+             color = COLORS['warning']
+             icon = "🟠"
+        else:
+             color = COLORS['error']
+             icon = "🔴"
+
+        # Display main score with render_score_result
+        render_score_result(
+            title="MELD-Na Score",
+            score=meld_na,
+            interpretation=f"{interp['severity']} Risk",
+            mortality=f"Tử vong 3 tháng: {interp['mortality_3mo']}",
+            color=color,
+            icon=icon,
+            size="large"
+        )
+        
+        # Display breakdown metrics
+        st.markdown("<br>", unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         
         with col1:
             st.metric(
-                "MELD Score",
+                "MELD Score (gốc)",
                 meld,
                 help="MELD gốc (không có sodium)"
             )
         
         with col2:
             st.metric(
-                "MELD-Na Score",
-                meld_na,
-                delta=f"+{meld_na - meld}" if meld_na > meld else "0",
-                help="MELD điều chỉnh theo sodium"
-            )
-        
-        with col3:
-            st.metric(
                 "Sodium Effect",
                 f"{meld_na - meld:+d}",
                 help="Điểm cộng thêm do hyponatremia"
             )
         
-        st.markdown("---")
-        
-        # Severity
-        if interp['level'] in ["minimal", "low"]:
-            st.success(f"{interp['color']} Mức độ nặng: {interp['severity']}")
-        elif interp['level'] == "moderate":
-            st.warning(f"{interp['color']} Mức độ nặng: {interp['severity']}")
-        else:
-            st.error(f"{interp['color']} Mức độ nặng: {interp['severity']}")
+        with col3:
+             st.metric(
+                  "Ưu tiên ghép gan",
+                  interp['transplant_priority'].split(" - ")[0]
+             )
         
         st.markdown("---")
         
@@ -440,12 +460,12 @@ def render():
               {' (Floored at 125)' if result['sodium_used'] == 125 and sodium < 125 else ''}
             
             **Công thức MELD:**
-            - MELD = 9.57 × ln(Cr) + 3.78 × ln(Bili) + 11.2 × ln(INR) + 6.43
+            - MELD = 9.57 * ln(Cr) + 3.78 * ln(Bili) + 11.2 * ln(INR) + 6.43
             - Làm tròn, giới hạn 6-40
             
-            **Công thức MELD-Na (nếu MELD ≥ 12):**
-            - MELD-Na = MELD + 1.32 × (137 - Na) - 0.033 × MELD × (137 - Na)
-            - Giới hạn: MELD-Na ≥ MELD và ≤ 40
+            **Công thức MELD-Na (nếu MELD >= 12):**
+            - MELD-Na = MELD + 1.32 * (137 - Na) - 0.033 * MELD * (137 - Na)
+            - Giới hạn: MELD-Na >= MELD và <= 40
             """)
         
         # Recommendations based on score
@@ -538,7 +558,7 @@ def render():
             **Transplant:**
             - **LIST TRANSPLANT NGAY LẬP TỨC**
             - Ưu tiên cao trong danh sách
-            - MELD ≥ 30: Status 1 consideration
+            - MELD >= 30: Status 1 consideration
             - Xem xét living donor nếu có
             - Transfer về transplant center
             
@@ -567,7 +587,7 @@ def render():
             - Xem xét transplant khẩn
             
             **HCC (Hepatocellular Carcinoma):**
-            - Nếu có HCC trong Milan criteria → Exception points
+            - Nếu có HCC trong Milan criteria -> Exception points
             - MELD-Na có thể được tăng lên
             - Staging: AFP, CT/MRI
             - Bridging therapy (TACE, RFA)
@@ -665,7 +685,7 @@ def render():
         
         **MELD có hạn chế:**
         - Không tính hyponatremia
-        - Một số bệnh nhân MELD thấp nhưng hypoNa nặng → Tử vong cao
+        - Một số bệnh nhân MELD thấp nhưng hypoNa nặng -> Tử vong cao
         - Gaming MELD (manipulate labs)
         
         **MELD-Na cải thiện:**
@@ -676,15 +696,15 @@ def render():
         
         **Khi nào MELD-Na khác MELD nhiều?**
         - Hyponatremia nặng (< 130)
-        - MELD ≥ 12 (công thức chỉ áp dụng từ MELD ≥ 12)
-        - MELD < 12 → MELD-Na = MELD
+        - MELD >= 12 (công thức chỉ áp dụng từ MELD >= 12)
+        - MELD < 12 -> MELD-Na = MELD
         """)
     
     with st.expander("🏥 Liver Transplant Allocation"):
         st.markdown("""
         ### Hệ thống phân bổ gan transplant (UNOS):
         
-        **Ưu tiên theo MELD-Na (cao → thấp):**
+        **Ưu tiên theo MELD-Na (cao -> thấp):**
         
         **Status 1A/1B (Highest):**
         - Acute liver failure
@@ -692,7 +712,7 @@ def render():
         - Hepatic artery thrombosis < 7 days
         - Acute decompensated Wilson disease
         
-        **MELD-Na ≥ 35:**
+        **MELD-Na >= 35:**
         - Ưu tiên rất cao
         - Thường được transplant trong vài tuần
         

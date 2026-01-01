@@ -39,6 +39,8 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 from components.ui.validation import render_validation_errors
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
@@ -99,21 +101,25 @@ def calculate_gmaws(
         interpretation = "Triệu chứng cai rượu nhẹ"
         recommendation = "Theo dõi, điều trị triệu chứng nhẹ"
         benzodiazepine = "Không cần hoặc liều thấp"
+        color = COLORS['success']
     elif total_score < 20:
         severity = "Trung bình"
         interpretation = "Triệu chứng cai rượu trung bình"
         recommendation = "Điều trị benzodiazepine, theo dõi sát"
         benzodiazepine = "Liều trung bình (ví dụ: chlordiazepoxide 25-50mg q6h)"
+        color = COLORS['warning']
     elif total_score < 30:
         severity = "Nặng"
         interpretation = "Triệu chứng cai rượu nặng"
         recommendation = "Điều trị benzodiazepine tích cực, theo dõi ICU"
         benzodiazepine = "Liều cao (ví dụ: chlordiazepoxide 50-100mg q4-6h)"
+        color = COLORS['warning_dark']
     else:
         severity = "Rất nặng"
         interpretation = "Triệu chứng cai rượu rất nặng - Nguy cơ co giật/DTS"
         recommendation = "Điều trị tích cực tại ICU, phòng ngừa co giật"
         benzodiazepine = "Liều rất cao (ví dụ: chlordiazepoxide 100mg q2-4h hoặc diazepam IV)"
+        color = COLORS['error']
     
     return {
         "total_score": total_score,
@@ -121,7 +127,8 @@ def calculate_gmaws(
         "interpretation": interpretation,
         "recommendation": recommendation,
         "benzodiazepine": benzodiazepine,
-        "risk_seizures": total_score >= 30
+        "risk_seizures": total_score >= 30,
+        "color": color
     }
 
 
@@ -134,8 +141,8 @@ def render():
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🧠 GMAWS</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🧠 GMAWS</h2>
     <p style='text-align: center; color: #6B7280;'>
     Glasgow Modified Alcohol Withdrawal Scale<br>
     Đánh giá và theo dõi mức độ nặng của các triệu chứng cai rượu (AWS)
@@ -291,18 +298,14 @@ def render():
         
         # Display results
         st.markdown("---")
-        st.markdown("### 📋 Kết quả GMAWS")
         
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.metric("Điểm GMAWS", f"{result['total_score']}/70")
-        
-        with col2:
-            st.metric(
-                "Mức độ",
-                result['severity']
-            )
+        render_score_result(
+            title="Kết quả GMAWS",
+            score=f"{result['total_score']}/70",
+            interpretation=f"{result['interpretation']}\n\n**Khuyến nghị:** {result['recommendation']}",
+            mortality=f"Mức độ: {result['severity']}",
+            color=result['color']
+        )
         
         # Interpretation
         st.markdown("### 💡 Diễn giải và khuyến nghị điều trị")

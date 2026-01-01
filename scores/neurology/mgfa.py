@@ -31,7 +31,8 @@ Clinical Utility:
 """
 
 import streamlit as st
-from components.ui.validation import render_validation_errors
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -122,16 +123,15 @@ def render():
     """Render MGFA Clinical Classification interface"""
     import streamlit as st
     
-    st.set_page_config(page_title="MGFA Classification", layout="wide")
+    # st.set_page_config(page_title="MGFA Classification", layout="wide")
     
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🧠 MGFA Clinical Classification</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🧠 MGFA Clinical Classification</h3>
     <p style='text-align: center; color: #6B7280;'>
-    Myasthenia Gravis Foundation of America Clinical Classification<br>
-    Phân loại mức độ nặng của bệnh nhược cơ
+    Phân loại mức độ nặng của bệnh nhược cơ (Myasthenia Gravis)
     </p>
     """, unsafe_allow_html=True)
     
@@ -233,15 +233,28 @@ def render():
         
         # Display results
         st.markdown("---")
-        st.markdown("### 📋 Kết quả MGFA Classification")
+        st.subheader("📋 Kết quả")
         
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.metric("MGFA Class", result['mgfa_class'])
-        
-        with col2:
-            st.metric("Mức độ", result['severity'])
+        if result['mgfa_class'] == "Class I":
+            color = COLORS["success"]
+            icon = "✅"
+        elif result['mgfa_class'].startswith("Class II"):
+            color = COLORS["info"]
+            icon = "ℹ️"
+        elif result['mgfa_class'].startswith("Class III"):
+            color = COLORS["warning"]
+            icon = "⚠️"
+        else:
+            color = COLORS["error"]
+            icon = "🚨"
+
+        render_score_result(
+            title="MGFA Class",
+            score=0, # Not a score, but passing 0 and using string in title/interpretation
+            interpretation=f"{result['mgfa_class']} - {result['severity']}\n({result['class_description']})",
+            color=color,
+            icon=icon
+        )
         
         st.info(f"**{result['class_description']}**")
         

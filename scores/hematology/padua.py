@@ -4,6 +4,8 @@ Nguy cơ VTE ở bệnh nhân nội khoa - Chỉ định thromboprophylaxis
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -28,8 +30,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🩺 Padua Prediction Score</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🩺 Padua Prediction Score</h2>
     <p style='text-align: center;'><em>Nguy cơ VTE ở bệnh nhân nội khoa nhập viện</em></p>
     """, unsafe_allow_html=True)
     
@@ -149,30 +151,28 @@ def render():
         # Risk level
         if score >= 4:
             risk = "CAO"
-            color = "#dc3545"
+            color = COLORS["error"]
             icon = "🚨"
             vte_risk = "~11%"
             recommendation = "NÊN DỰ PHÒNG"
         else:
             risk = "THẤP"
-            color = "#28a745"
+            color = COLORS["success"]
             icon = "✅"
             vte_risk = "~0.3%"
             recommendation = "KHÔNG cần dự phòng thường quy"
         
         st.markdown("## 📊 Kết quả")
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 40px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h1 style='color: {color}; margin: 0; text-align: center; font-size: 3em;'>
-                {icon} Padua Score = {score}
-            </h1>
-            <p style='text-align: center; font-size: 1.3em; margin-top: 15px; font-weight: bold;'>
-                Nguy cơ VTE: {risk}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="Padua Score",
+            score=score,
+            interpretation=f"Nguy cơ VTE: {risk}",
+            mortality=f"Tỷ lệ VTE: {vte_risk}",
+            color=color,
+            icon=icon,
+            size="large"
+        )
         
         if components:
             st.markdown("### 📋 Thành phần điểm:")

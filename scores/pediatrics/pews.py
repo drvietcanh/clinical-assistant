@@ -5,7 +5,9 @@ Cảnh báo sớm suy giảm trạng thái lâm sàng ở trẻ em
 
 import streamlit as st
 from components.ui.scoring import render_score_result, render_score_breakdown
-# ========== PHASE 1 IMPORTS ==========
+from scores.utils.validation import validate_age, validate_heart_rate, validate_respiratory_rate
+
+from config.theme import COLORS
 from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
@@ -32,19 +34,19 @@ def calculate_pews(behavior, cardiovascular, respiratory):
     if total == 0:
         risk = "Thấp"
         action = "Tiếp tục theo dõi thường quy"
-        color = "green"
+        color = COLORS["success"]
     elif total <= 2:
         risk = "Thấp - Trung bình"
         action = "Tăng cường theo dõi, thông báo bác sĩ"
-        color = "orange"
+        color = COLORS["warning"]
     elif total <= 4:
         risk = "Trung bình"
         action = "Gọi bác sĩ khám ngay, theo dõi chặt chẽ"
-        color = "orange"
+        color = COLORS["warning"]
     else:  # >= 5
         risk = "Cao"
-        action = "⚠️ KHẨN CẤP: Kích hoạt đội cấp cứu nhi khoa ngay"
-        color = "red"
+        action = "KHẨN CẤP: Kích hoạt đội cấp cứu nhi khoa ngay"
+        color = COLORS["error"]
     
     return {
         "total_score": total,
@@ -64,10 +66,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #FF6B9D;'>👶 PEWS - Pediatric Early Warning Score</h2>
-    <p style='text-align: center;'><em>Cảnh báo sớm suy giảm trạng thái lâm sàng ở trẻ em</em></p>
-    """, unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>👶 PEWS - Pediatric Early Warning Score</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Cảnh báo sớm suy giảm trạng thái lâm sàng ở trẻ em</p>", unsafe_allow_html=True)
     
     # Thông tin về PEWS
     with st.expander("ℹ️ Giới thiệu về PEWS"):
@@ -115,7 +115,7 @@ def render():
     with col1:
         st.markdown("### 🧠 Hành vi")
         behavior = st.radio(
-            "Chọn mức độ:",
+            "Chọn mức độ (Hành vi):",
             options=[0, 1, 2, 3],
             format_func=lambda x: {
                 0: "0 - Chơi/Hoạt động bình thường",
@@ -127,6 +127,68 @@ def render():
             help="Đánh giá tình trạng ý thức và hành vi của trẻ"
         )
     
+    # Vital Signs Helper
+    with st.expander("🧮 Hỗ trợ đánh giá Dấu hiệu sinh tồn (HR, RR)"):
+        col_v1, col_v2, col_v3 = st.columns(3)
+        with col_v1:
+            age_months_input = st.number_input("Tuổi (tháng)", min_value=0, max_value=216, value=12, step=1)
+        with col_v2:
+            hr_input = st.number_input("Nhịp tim (lần/phút)", min_value=0, max_value=300, value=100)
+        with col_v3:
+            rr_input = st.number_input("Nhịp thở (lần/phút)", min_value=0, max_value=120, value=30)
+            
+        suggested_cv = None
+        suggested_resp = None
+        
+        # Validation logic
+        # Reference ranges from PEWS table in file
+        # Age groups: <12m, 12-24m, 2-5y (24-60m), 5-12y (60-144m), >12y
+        
+        # HR Limits (simplification for suggestions)
+        # Normal: 0, Raised: 1? PEWS scores usually:
+        # 0: Normal
+        # 1: Above normal range
+        # 2: Much above
+        # 3: Tachycardia + compromise
+        
+        # Actually PEWS scoring for HR/RR often depends on specific deviations. 
+        # The file's format_func only describes clinical state "0 - Hồng hào", "1 - Xanh nhạt". 
+        # It DOES NOT explicitly link HR numbers to score 0,1,2 in the radio labels.
+        # However, the "Age-specific normal ranges" table AT THE BOTTOM gives ranges.
+        # High HR/RR correlates with higher scores.
+        
+        # Let's just validate normalcy and suggest checking if abnormal.
+        
+        st.caption("ℹ️ Công cụ này kiểm tra giá trị so với giới hạn bình thường theo tuổi.")
+        
+        # Define ranges (Max Normal)
+        max_hr = 160
+        max_rr = 40
+        
+        if age_months_input < 12: # < 1y
+            max_hr, max_rr = 160, 50 # Adjusted based on table >50 is fast
+        elif age_months_input < 24: # 1-2y
+            max_hr, max_rr = 150, 40
+        elif age_months_input < 60: # 2-5y
+            max_hr, max_rr = 140, 35
+        elif age_months_input < 144: # 5-12y
+            max_hr, max_rr = 120, 30
+        else: # >12y
+            max_hr, max_rr = 100, 25
+            
+        # Check components
+        # Resp
+        if rr_input > max_rr:
+             st.warning(f"⚠️ Nhịp thở {rr_input} cao hơn bình thường ({max_rr}). Cân nhắc điểm Hô hấp 1-3.")
+        else:
+             st.success(f"✅ Nhịp thở trong giới hạn bình thường (≤{max_rr}).")
+             
+        # HR
+        if hr_input > max_hr:
+             st.warning(f"⚠️ Nhịp tim {hr_input} cao hơn bình thường ({max_hr}). Cân nhắc điểm Tim mạch 1-3.")
+        else:
+             st.success(f"✅ Nhịp tim trong giới hạn bình thường (≤{max_hr}).")
+
     with col2:
         st.markdown("### ❤️ Tim mạch")
         cardiovascular = st.radio(
@@ -139,13 +201,13 @@ def render():
                 3: "3 - Xanh tái nặng, CTR > 5s"
             }[x],
             key="pews_cardio",
-            help="CTR = Capillary Refill Time (thời gian hồi màu mao mạch)"
+            help="CTR = Capillary Refill Time (thời gian hồi màu mao mạch). Nhịp tim nhanh cũng là dấu hiệu gợi ý tăng điểm."
         )
     
     with col3:
         st.markdown("### 🫁 Hô hấp")
         respiratory = st.radio(
-            "Chọn mức độ:",
+            "Chọn mức độ (Hô hấp):",
             options=[0, 1, 2, 3],
             format_func=lambda x: {
                 0: "0 - Không khó thở, SpO₂ > 95%",
@@ -166,21 +228,13 @@ def render():
         # Display result using standardized components
         st.markdown("## 📊 Kết quả đánh giá")
         
-        # Map color names to hex for render_score_result
-        color_map = {
-            "green": "#28a745",
-            "orange": "#fd7e14", 
-            "red": "#dc3545"
-        }
-        score_color = color_map[result["color"]]
-        
         # Use render_score_result for main score display
         render_score_result(
             title="PEWS Score",
             score=result['total_score'],
             interpretation=result['risk_level'],
             mortality=None,
-            color=score_color,
+            color=result['color'],
             icon="👶",
             size="large"
         )
@@ -200,10 +254,10 @@ def render():
         
         # Risk level and action
         st.markdown(f"""
-        <div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'>
-            <h3 style='color: {score_color}; margin-top: 0;'>🎯 Mức độ nguy cơ: {result['risk_level']}</h3>
+        <div style='background-color: {result['color']}22; padding: 20px; border-radius: 10px; border: 2px solid {result['color']};'>
+            <h3 style='color: {result['color']}; margin-top: 0;'>🎯 Mức độ nguy cơ: {result['risk_level']}</h3>
             <p style='font-size: 1.1em; margin: 10px 0;'><strong>Hành động khuyến cáo:</strong></p>
-            <p style='font-size: 1.2em; color: {score_color}; font-weight: bold;'>{result['action']}</p>
+            <p style='font-size: 1.2em; color: {result['color']}; font-weight: bold;'>{result['action']}</p>
         </div>
         """, unsafe_allow_html=True)
         

@@ -4,6 +4,7 @@ Handles all input fields and form sections
 """
 
 import streamlit as st
+from scores.utils.validation import validate_lab_value, validate_input_range
 
 
 def _format_num(value: float, decimals: int = 1) -> str:
@@ -136,7 +137,16 @@ def render_input_form():
             
             **Khuyến nghị:** Dùng **FEUrea** thay thế (không bị ảnh hưởng bởi lợi tiểu)
             """)
+
+    # Validate inputs logic handled here or returned to main calculator
+    # Since this is a UI input component, we can do inline validation if critical or just return values
+    # Let's perform some basic validation warning if values are biologically implausible
     
+    if p_na < 100 or p_na > 180:
+        st.warning(f"⚠️ Plasma Sodium {p_na} mEq/L ngoài khoảng thường gặp (100-180)")
+    if p_cr_mgdl > 20:
+        st.warning(f"⚠️ Plasma Creatinine {p_cr_mgdl:.1f} mg/dL rất cao")
+        
     return {
         "p_na": p_na,
         "p_cr_mgdl": p_cr_mgdl,

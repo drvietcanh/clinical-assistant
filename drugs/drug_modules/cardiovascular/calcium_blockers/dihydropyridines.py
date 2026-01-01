@@ -1114,6 +1114,17 @@ DIHYDROPYRIDINE_CCB = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng IV: bảo quản ở nhiệt độ phòng, tránh đông lạnh.",
         "black_box_warnings": "TRÁNH grapefruit juice - tăng nồng độ nicardipine đáng kể, tăng tác dụng phụ (phù chân, hạ huyết áp, nhức đầu).",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Cardiovascular (Hypotension)", "IV site (Phlebitis)"],
+            "requires_monitoring": ["Blood pressure", "Heart rate", "IV site"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ASA Guidelines - Perioperative Blood Pressure Management"
+        ],
         "drug_interactions": {
             "major": [
                 {
@@ -1505,6 +1516,16 @@ DIHYDROPYRIDINE_CCB = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
         "black_box_warnings": "TRÁNH grapefruit juice - tăng nồng độ nisoldipine đáng kể, tăng tác dụng phụ (phù chân, hạ huyết áp, nhức đầu).",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Cardiovascular (Hypotension, Edema)"],
+            "requires_monitoring": ["Blood pressure", "Heart rate"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension"
+        ],
         "drug_interactions": {
             "major": [
                 {

@@ -26,6 +26,7 @@ known to be associated with DIC (sepsis, trauma, malignancy, obstetric complicat
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_lab_value, validate_range
 from components.ui.validation import render_validation_errors
 from components.ui.scoring import render_score_result, render_score_breakdown
@@ -112,7 +113,8 @@ def calculate_dic_score(
     if score >= 5:
         interpretation = "TƯƠNG THÍCH VỚI DIC RÕ RÀNG (Overt DIC)"
         risk_class = "POSITIVE"
-        color = "🔴"
+        color = COLORS["error"]
+        icon = "🔴"
         recommendation = """
         **🔴 Xử trí khuyến cáo - OVERT DIC:**
         
@@ -194,7 +196,8 @@ def calculate_dic_score(
     else:  # score < 5
         interpretation = "GỢI Ý NHƯNG CHƯA XÁC ĐỊNH DIC (Non-Overt DIC)"
         risk_class = "SUGGESTIVE"
-        color = "🟡"
+        color = COLORS["warning"]
+        icon = "🟡"
         recommendation = """
         **🟡 Xử trí khuyến cáo - NON-OVERT DIC:**
         
@@ -280,6 +283,7 @@ def calculate_dic_score(
         'education': education,
         'details': details,
         'color': color,
+        'icon': icon,
         'clinical_notes': clinical_notes
     }
 
@@ -294,8 +298,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🩸 ISTH DIC Score")
-    st.markdown("**Chẩn đoán rối loạn đông máu nội mạch lan tỏa (Disseminated Intravascular Coagulation)**")
+    st.markdown(f"<h3 style='text-align: center; color: {COLORS['success']};'>🩸 ISTH DIC Score</h3>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center;'><em>Chẩn đoán rối loạn đông máu nội mạch lan tỏa (Disseminated Intravascular Coagulation)</em></p>", unsafe_allow_html=True)
     
     # Important warning at the top
     st.error("""
@@ -463,21 +467,14 @@ def render():
         # Display results
         st.markdown("## 📊 Kết quả")
         
-        # Map color emoji to hex
-        color_map_hex = {
-            "🔴": "#dc3545",
-            "🟡": "#ffc107"
-        }
-        score_color = color_map_hex.get(result['color'], "#6c757d")
-        
         # Use render_score_result for main score display
         render_score_result(
             title="ISTH DIC Score",
             score=result['score'],
             interpretation=result['interpretation'],
             mortality=None,
-            color=score_color,
-            icon=result['color'],
+            color=result['color'],
+            icon=result['icon'],
             size="large"
         )
         

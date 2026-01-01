@@ -175,7 +175,19 @@ BETA_LACTAM_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, allergy guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "Moderate"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Gram-Negative Infections",
+            "IDSA Guidelines - Complicated Urinary Tract Infections"
+        ]
     },
     
     "Cefiderocol": {
@@ -341,7 +353,19 @@ BETA_LACTAM_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels (2019), IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "High"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Ventilator-Associated Pneumonia",
+            "IDSA Guidelines - Multidrug-Resistant Gram-Negative Infections"
+        ]
     },
     "Doripenem": {
         "group": "Antibiotic - Carbapenem",
@@ -507,7 +531,19 @@ BETA_LACTAM_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"neurological": "Moderate (seizures)", "renal": "Moderate"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Complicated Intra-abdominal Infections",
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Hospital-Acquired Pneumonia"
+        ]
     },
     
     "Ertapenem": {
@@ -732,7 +768,20 @@ BETA_LACTAM_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"neurological": "Moderate (seizures)", "renal": "Moderate"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Complicated Intra-abdominal Infections",
+            "IDSA Guidelines - Complicated Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Complicated Urinary Tract Infections",
+            "IDSA Guidelines - Community-Acquired Pneumonia"
+        ]
     },
 
     "Imipenem-cilastatin": {

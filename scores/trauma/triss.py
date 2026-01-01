@@ -28,6 +28,7 @@ Clinical Utility:
 import streamlit as st
 import math
 from components.ui.results import render_result_box
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_gcs,
     validate_blood_pressure,
@@ -148,15 +149,15 @@ def calculate_triss(
     # Interpretation
     if ps_percent >= 75:
         interpretation = "Tiên lượng sống tốt"
-        color = "success"
+        color = COLORS["success"]
         severity = "Tốt"
     elif ps_percent >= 50:
         interpretation = "Tiên lượng sống trung bình"
-        color = "warning"
+        color = COLORS["warning"]
         severity = "Trung bình"
     else:
         interpretation = "Tiên lượng sống kém"
-        color = "error"
+        color = COLORS["error"]
         severity = "Kém"
     
     return {
@@ -182,8 +183,10 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.subheader("🦴 TRISS - Trauma and Injury Severity Score")
-    st.caption("Dự đoán khả năng sống sót sau chấn thương")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🦴 TRISS - Trauma and Injury Severity Score</h2>
+    <p style='text-align: center;'><em>Dự đoán khả năng sống sót sau chấn thương</em></p>
+    """, unsafe_allow_html=True)
     
     st.markdown("""
     **TRISS (Trauma and Injury Severity Score)** dự đoán khả năng sống sót sau chấn thương.

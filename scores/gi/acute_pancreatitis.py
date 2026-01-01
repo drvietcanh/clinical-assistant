@@ -35,8 +35,10 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_age, validate_lab_value
 from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -227,8 +229,8 @@ def render():
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🩺 Acute Pancreatitis Prediction Model</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩺 Acute Pancreatitis Prediction Model</h3>
     <p style='text-align: center; color: #6B7280;'>
     Ước tính khả năng viêm tụy cấp ở bệnh nhân có nồng độ lipase huyết thanh tăng cao<br>
     Trước khi xác nhận bằng hình ảnh
@@ -400,64 +402,54 @@ def render():
             st.markdown("---")
             st.markdown("### 📋 Kết quả dự đoán")
             
-            col1, col2, col3 = st.columns(3)
-            
-            with col1:
-                st.metric("Điểm số", f"{result['score']}")
-            
-            with col2:
-                st.metric(
-                    "Khả năng viêm tụy cấp",
-                    f"{result['probability']:.1f}%"
-                )
-            
-            with col3:
-                st.metric(
-                    "Phân loại",
-                    result['risk_category']
-                )
-            
-            # Details
-            st.markdown("### 📝 Chi tiết tính điểm")
-            for detail in result['details']:
-                st.markdown(f"- {detail}")
-            
-            # Recommendation
-            st.markdown("### 💡 Khuyến nghị")
-            
+            # Determine color and icon
             if result['probability'] >= 70:
-                st.error(f"**{result['risk_category']}**")
-                st.markdown(f"{result['recommendation']}")
+                color = COLORS['error']
+                icon = "🚨"
+            elif result['probability'] >= 50:
+                color = COLORS['warning']
+                icon = "⚠️"
+            elif result['probability'] >= 30:
+                color = COLORS['warning']
+                icon = "🟠"
+            else:
+                color = COLORS['success']
+                icon = "✅"
+
+            # Use render_score_result
+            render_score_result(
+                title="Acute Pancreatitis Probability",
+                score=f"{result['score']}",
+                interpretation=f"{result['risk_category']} ({result['probability']:.1f}%)",
+                mortality=result['recommendation'],
+                color=color,
+                icon=icon,
+                size="large"
+            )
+            
+            # Additional actions based on risk
+            st.markdown("### 💡 Hành động khuyến nghị")
+            if result['probability'] >= 70:
                 st.markdown("""
-                **Hành động ngay:**
-                - Chụp CT bụng có cản quang
+                - **Chụp CT bụng có cản quang** ngay
                 - Đánh giá mức độ nặng (BISAP, Ranson)
                 - Điều trị hỗ trợ tích cực
                 - Theo dõi sát tại bệnh viện
                 """)
             elif result['probability'] >= 50:
-                st.warning(f"**{result['risk_category']}**")
-                st.markdown(f"{result['recommendation']}")
                 st.markdown("""
-                **Hành động:**
-                - Chụp CT bụng để xác nhận
+                - **Chụp CT bụng** để xác nhận
                 - Điều trị hỗ trợ
                 - Theo dõi tại bệnh viện
                 """)
             elif result['probability'] >= 30:
-                st.info(f"**{result['risk_category']}**")
-                st.markdown(f"{result['recommendation']}")
                 st.markdown("""
-                **Hành động:**
                 - Theo dõi lâm sàng
                 - Cân nhắc chụp CT nếu không cải thiện
                 - Điều trị triệu chứng
                 """)
             else:
-                st.success(f"**{result['risk_category']}**")
-                st.markdown(f"{result['recommendation']}")
                 st.markdown("""
-                **Hành động:**
                 - Theo dõi và đánh giá lại
                 - Điều trị triệu chứng
                 - Tìm nguyên nhân khác nếu cần

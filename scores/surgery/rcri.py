@@ -4,6 +4,7 @@ RCRI - Revised Cardiac Risk Index Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -51,8 +52,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #DC2626;'>❤️ RCRI - Revised Cardiac Risk Index</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['error']};'>❤️ RCRI - Revised Cardiac Risk Index</h2>
     <p style='text-align: center;'><em>Nguy cơ biến chứng tim mạch phẫu thuật (Lee's Index)</em></p>
     """, unsafe_allow_html=True)
     
@@ -134,9 +135,9 @@ def render():
         )
         
         score_color = {
-            "green": "#28a745",
-            "orange": "#fd7e14",
-            "red": "#dc3545"
+            "green": COLORS["success"],
+            "orange": COLORS["warning"],
+            "red": COLORS["error"]
         }[result["color"]]
         
         st.markdown(f"""

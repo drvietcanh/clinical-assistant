@@ -33,7 +33,8 @@ Clinical Utility:
 """
 
 import streamlit as st
-from components.ui.validation import render_validation_errors
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -110,22 +111,32 @@ def grade_icans(
             details.append("Tăng áp lực nội sọ → Grade 4")
         if cerebral_edema:
             details.append("Phù não → Grade 4")
+        color = COLORS["error"]
+        icon = "🔴"
     elif ice_score <= 2:
         grade = 3
         grade_description = "Nặng"
         details.append(f"ICE Score {ice_score} (0-2) → Grade 3")
+        color = COLORS["error"]
+        icon = "🔴"
     elif ice_score <= 6:
         grade = 2
         grade_description = "Trung bình"
         details.append(f"ICE Score {ice_score} (3-6) → Grade 2")
+        color = COLORS["warning"]
+        icon = "🟠"
     elif ice_score <= 9:
         grade = 1
         grade_description = "Nhẹ"
         details.append(f"ICE Score {ice_score} (7-9) → Grade 1")
+        color = COLORS["warning"]
+        icon = "🟡"
     else:  # ICE Score 10
         grade = 0
         grade_description = "Không có triệu chứng"
         details.append(f"ICE Score {ice_score} (10) → Grade 0")
+        color = COLORS["success"]
+        icon = "🟢"
     
     # Management recommendations
     management = {
@@ -141,7 +152,9 @@ def grade_icans(
         "grade": grade,
         "grade_description": grade_description,
         "management": management[grade],
-        "details": details
+        "details": details,
+        "color": color,
+        "icon": icon
     }
 
 
@@ -149,15 +162,14 @@ def render():
     """Render ICANS Consensus Grading interface"""
     import streamlit as st
     
-    st.set_page_config(page_title="ICANS Grading", layout="wide")
+    # st.set_page_config(page_title="ICANS Grading", layout="wide")
     
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🧠 ICANS Consensus Grading</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🧠 ICANS Consensus Grading</h3>
     <p style='text-align: center; color: #6B7280;'>
-    Immune Effector Cell-Associated Neurotoxicity Syndrome<br>
     Phân độ mức độ nặng của độc tính thần kinh gây ra bởi liệu pháp tế bào hiệu ứng miễn dịch
     </p>
     """, unsafe_allow_html=True)
@@ -267,24 +279,15 @@ def render():
         
         # Display results
         st.markdown("---")
-        st.markdown("### 📋 Kết quả ICANS Grading")
+        st.subheader("📋 Kết quả")
         
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            st.metric("ICE Score", f"{result['ice_score']}/10")
-        
-        with col2:
-            st.metric(
-                "ICANS Grade",
-                f"Grade {result['grade']}"
-            )
-        
-        with col3:
-            st.metric(
-                "Mức độ",
-                result['grade_description']
-            )
+        render_score_result(
+            title="ICANS Grade",
+            score=result['ice_score'], # Pass ICE score as score
+            interpretation=f"Grade {result['grade']}: {result['grade_description']}",
+            color=result['color'],
+            icon=result['icon']
+        )
         
         # Details
         st.markdown("### 📝 Chi tiết")

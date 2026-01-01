@@ -997,6 +997,24 @@ AZOLES_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. IV: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi pha, dùng trong vòng 24 giờ sau khi pha.",
         "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ - gây dị tật thai nhi (category D). Nguy cơ suy gan nghiêm trọng, có thể gây tử vong. Theo dõi chức năng gan trước và trong khi điều trị. Ngừng ngay nếu có suy gan. Nguy cơ QT kéo dài và rối loạn nhịp tim. Theo dõi ECG nếu có nguy cơ. Nguy cơ rối loạn thị giác (thường thoáng qua). CHỐNG CHỈ ĐỊNH với rifampin, rifabutin, carbamazepine, phenobarbital, ergotamine.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity - CRITICAL", "QT prolongation", "Visual disturbances", "Renal toxicity (IV vehicle accumulation)"],
+            "qt_prolongation": True,
+            "hepatotoxicity": True,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Therapeutic Drug Monitoring (TDM) - CRITICAL", "Hepatic function (ALT, AST, bilirubin)", "Visual function (acuity, visual field)", "ECG", "Renal function (for IV vehicle)", "Cyclosporine/Tacrolimus levels if co-administered", "INR if co-administered with warfarin"]
+        },
+        "guideline_tags": [
+            "IDSA Invasive Aspergillosis Guidelines 2024",
+            "IDSA Candidiasis Guidelines 2024",
+            "FDA Black Box Warning - Voriconazole and Pregnancy (Category D)",
+            "FDA Black Box Warning - Voriconazole and Hepatotoxicity",
+            "FDA Black Box Warning - Voriconazole and QT Prolongation",
+            "ESCMID-ECMM-ERS Guidelines for Aspergillus"
+        ],
         "drug_interactions": {
             "major": [
                 {

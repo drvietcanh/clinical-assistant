@@ -4,6 +4,8 @@ Epworth Sleepiness Scale (ESS)
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -39,7 +41,8 @@ def interpret_epworth(total_score):
     if total_score <= 5:
         return {
             "level": "Bình thường thấp",
-            "color": "🟢",
+            "color": COLORS["success"],
+            "icon": "🟢",
             "description": "Mức độ buồn ngủ ban ngày trong giới hạn bình thường thấp",
             "recommendation": "Không có dấu hiệu buồn ngủ quá mức ban ngày",
             "action": "Không cần can thiệp",
@@ -49,7 +52,8 @@ def interpret_epworth(total_score):
     elif total_score <= 10:
         return {
             "level": "Bình thường cao",
-            "color": "🟡",
+            "color": COLORS["success"],
+            "icon": "🟢",
             "description": "Mức độ buồn ngủ ban ngày trong giới hạn bình thường cao",
             "recommendation": "Theo dõi. Đánh giá vệ sinh giấc ngủ.",
             "action": "Cải thiện thói quen ngủ. Tái đánh giá nếu có triệu chứng.",
@@ -59,7 +63,8 @@ def interpret_epworth(total_score):
     elif total_score <= 15:
         return {
             "level": "Buồn ngủ vừa phải",
-            "color": "🟠",
+            "color": COLORS["warning"],
+            "icon": "🟠",
             "description": "Buồn ngủ ban ngày mức độ vừa phải - cần đánh giá thêm",
             "recommendation": "Xem xét nguyên nhân. Sàng lọc rối loạn giấc ngủ (OSA, narcolepsy).",
             "action": "Đánh giá tiền sử chi tiết. Xem xét nghiên cứu giấc ngủ (polysomnography) nếu có yếu tố nguy cơ OSA.",
@@ -69,7 +74,8 @@ def interpret_epworth(total_score):
     else:  # > 15
         return {
             "level": "Buồn ngủ nặng",
-            "color": "🔴",
+            "color": COLORS["error"],
+            "icon": "🔴",
             "description": "Buồn ngủ ban ngày mức độ nặng - BẤT THƯỜNG",
             "recommendation": "CẦN đánh giá chuyên khoa. Nghi ngờ cao rối loạn giấc ngủ.",
             "action": "Chuyển chuyên khoa giấc ngủ/ENT. Polysomnography. Đánh giá OSA, narcolepsy, và các rối loạn giấc ngủ khác.",
@@ -143,7 +149,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("😴 Epworth Sleepiness Scale")
+    st.markdown(f"<h3 style='text-align: center; color: {COLORS['success']};'>😴 Epworth Sleepiness Scale</h3>", unsafe_allow_html=True)
     st.markdown("""
     ### Đánh giá mức độ buồn ngủ ban ngày
     
@@ -227,22 +233,15 @@ def render():
         st.subheader("📈 Kết quả đánh giá")
         
         # Display score
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.metric(
-                "Điểm ESS",
-                f"{total_score}/24",
-                help="Tổng điểm Epworth Sleepiness Scale"
-            )
-        
-        with col2:
-            if result['severity'] in ["normal_low", "normal_high"]:
-                st.success(f"{result['color']} {result['level']}")
-            elif result['severity'] == "moderate":
-                st.warning(f"{result['color']} {result['level']}")
-            else:
-                st.error(f"{result['color']} {result['level']}")
+        render_score_result(
+            title="Epworth Sleepiness Scale",
+            score=f"{total_score}/24",
+            interpretation=result['level'],
+            mortality=result.get('osa_risk', ''),
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
         st.markdown("---")
         
@@ -269,17 +268,15 @@ def render():
         st.subheader("🎯 Phân tích & khuyến nghị")
         
         if result['severity'] in ["normal_low", "normal_high"]:
-            st.success(f"""
-            ### {result['color']} {result['level']}
-            
-            **Điểm ESS: {total_score}/24**
-            
-            **Đánh giá:** {result['description']}
-            
-            **Khuyến nghị:** {result['recommendation']}
-            
-            **Xử trí:** {result['action']}
-            """)
+            st.markdown(f"""
+            <div style="background-color: {result['color']}10; padding: 20px; border-radius: 10px; border-left: 5px solid {result['color']};">
+                <h3 style="color: {result['color']}; margin-top: 0;">{result['icon']} {result['level']}</h3>
+                <p><strong>Điểm ESS: {total_score}/24</strong></p>
+                <p><strong>Đánh giá:</strong> {result['description']}</p>
+                <p><strong>Khuyến nghị:</strong> {result['recommendation']}</p>
+                <p><strong>Xử trí:</strong> {result['action']}</p>
+            </div>
+            """, unsafe_allow_html=True)
             
             if result['severity'] == "normal_high":
                 st.info("""
@@ -290,19 +287,16 @@ def render():
                 """)
                 
         else:
-            st.warning(f"""
-            ### {result['color']} {result['level']}
-            
-            **Điểm ESS: {total_score}/24** - BẤT THƯỜNG
-            
-            **Đánh giá:** {result['description']}
-            
-            **Nguy cơ OSA:** {result['osa_risk']}
-            
-            **Khuyến nghị:** {result['recommendation']}
-            
-            **Xử trí:** {result['action']}
-            """)
+            st.markdown(f"""
+            <div style="background-color: {result['color']}10; padding: 20px; border-radius: 10px; border-left: 5px solid {result['color']};">
+                <h3 style="color: {result['color']}; margin-top: 0;">{result['icon']} {result['level']}</h3>
+                <p><strong>Điểm ESS: {total_score}/24</strong> - BẤT THƯỜNG</p>
+                <p><strong>Đánh giá:</strong> {result['description']}</p>
+                <p><strong>Nguy cơ OSA:</strong> {result['osa_risk']}</p>
+                <p><strong>Khuyến nghị:</strong> {result['recommendation']}</p>
+                <p><strong>Xử trí:</strong> {result['action']}</p>
+            </div>
+            """, unsafe_allow_html=True)
             
             # Additional OSA screening
             st.markdown("---")

@@ -18,14 +18,12 @@
 
 ---
 
-## 🎯 Công Việc Tiếp Theo
-
 ### **1. Thêm Validation (Ưu Tiên Cao)** 🔴
 
 #### **Nhi khoa (Quan trọng):**
 - [x] **PRISM3** - ✅ ĐÃ CÓ VALIDATION
-- [ ] **PEWS** - Vital signs cần validation
-- [ ] **Pediatric GCS** - Tương tự GCS
+- [x] **PEWS** - ✅ ĐÃ CÓ VALIDATION
+- [x] **Pediatric GCS** - ✅ ĐÃ CÓ VALIDATION
 - [x] **PELOD2** - ✅ ĐÃ CÓ VALIDATION
 
 #### **Tiêu hóa:**
@@ -33,8 +31,8 @@
 - [x] **Ranson** - ✅ Chỉ có checkboxes, không cần validation
 
 #### **Huyết học:**
-- [ ] **Four T's (HIT)** - Platelet count validation
-- [ ] **Wells DVT** - Kiểm tra inputs
+- [x] **Four T's (HIT)** - ✅ ĐÃ CÓ VALIDATION
+- [x] **Wells DVT** - ✅ ĐÃ CÓ VALIDATION
 - [x] **Padua Score** - ✅ ĐÃ CÓ VALIDATION
 
 #### **Hô hấp:**
@@ -44,19 +42,16 @@
 #### **Tim mạch:**
 - [x] **SCORE2** - ✅ ĐÃ CÓ VALIDATION
 - [x] **SCORE2-OP** - ✅ ĐÃ CÓ VALIDATION
-- [ ] **HEART Score** - Age, Troponin validation
+- [x] **HEART Score** - ✅ ĐÃ CÓ VALIDATION
 
 #### **Thần kinh:**
-- [ ] **ICH Score** - Age, GCS, Volume validation
+- [x] **ICH Score** - ✅ ĐÃ CÓ VALIDATION
 
 #### **Da liễu:**
 - [x] **Parkland Formula** - ✅ ĐÃ CÓ VALIDATION
 - [x] **Burn TBSA** - ✅ ĐÃ CÓ VALIDATION
 - [x] **SCORAD** - ✅ ĐÃ CÓ VALIDATION
 - [x] **PASI** - ✅ ĐÃ CÓ VALIDATION
-- [ ] **Burn TBSA** - Percentages validation
-- [ ] **SCORAD** - Scores validation
-- [ ] **PASI** - Scores validation
 
 #### **Thấp khớp:**
 - [x] **DAS28** - ✅ ĐÃ CÓ VALIDATION
@@ -64,8 +59,8 @@
 - [x] **SDAI** - ✅ ĐÃ CÓ VALIDATION
 
 #### **Nhiễm khuẩn:**
-- [ ] **MASCC** - Age validation
-- [ ] **Pitt Bacteremia** - Temp validation
+- [x] **MASCC** - Age validation (Added Helper)
+- [x] **Pitt Bacteremia** - Temp validation (Added Helper & Score Correction)
 
 #### **Chuyển hóa:**
 - [x] **Free T4 Index** - ✅ ĐÃ CÓ VALIDATION
@@ -127,17 +122,17 @@
 
 ### **3. Chuẩn Hóa Format** 🟢
 
-- [ ] Tạo template cho score display
-- [ ] Chuẩn hóa color coding
-- [ ] Chuẩn hóa format cho mortality/risk
-- [ ] Chuẩn hóa breakdown tables
+- [x] Tạo template cho score display (`render_score_result`, `render_recommendation_box`)
+- [x] Áp dụng `render_recommendation_box` cho các calculators chính (ICH, Heart, 4Ts, Wells, MASCC, Pitt)
+- [x] Chuẩn hóa color coding toàn bộ app (Review `theme.py` usage)
+- [x] Chuẩn hóa breakdown tables toàn bộ app (Ensure all use `render_score_breakdown`)
 
 ### **4. Testing & Documentation** 🔵
 
-- [ ] Test validation functions
-- [ ] Test result display components
-- [ ] Document usage examples
-- [ ] Performance check
+- [x] Test validation functions (`verify_validation_utils.py`)
+- [x] Regression testing (`test_regression_calculators.py`)
+- [x] Document usage examples (`DEVELOPER_GUIDE.md`)
+- [x] Performance check (Verified lazy loading of pandas/numpy)
 
 ---
 

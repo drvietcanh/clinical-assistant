@@ -3,6 +3,7 @@ Framingham Risk Score Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_age,
     validate_blood_pressure,
@@ -10,6 +11,7 @@ from scores.utils.validation import (
 )
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box, render_result_card
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -21,7 +23,10 @@ from components.smart_suggestions import render_suggestions
 
 def render():
     """Framingham Risk Score Calculator"""
-    st.subheader("📈 Framingham Risk Score")
+    # st.subheader("📈 Framingham Risk Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>📈 Framingham Risk Score</h3>
+    """, unsafe_allow_html=True)
     st.caption("Nguy cơ Bệnh Tim Mạch 10 Năm")
     
     # Load shared result if available
@@ -355,36 +360,31 @@ def render():
             # Risk category
             if risk_pct < 10:
                 risk_cat = "thấp"
-                color = "success"
+                color = COLORS["success"]
             elif risk_pct < 20:
                 risk_cat = "trung bình"
-                color = "warning"
+                color = COLORS["warning"]
             else:
                 risk_cat = "cao"
-                color = "error"
+                color = COLORS["error"]
             
-            # Map color names to component colors
-            color_map = {
-                "success": "success",
-                "warning": "warning",
-                "error": "error"
-            }
             icon_map = {
-                "success": "✅",
-                "warning": "⚠️",
-                "error": "🚨"
+                COLORS["success"]: "✅",
+                COLORS["warning"]: "⚠️",
+                COLORS["error"]: "🚨"
             }
-            component_color = color_map.get(color, "info")
+            component_color = color
             component_icon = icon_map.get(color, "💡")
             
             with col2:
                 st.markdown("### 📊 Kết quả")
                 
-                # Use render_result_box for risk percentage display
-                render_result_box(
-                    title="Nguy cơ 10 năm mắc bệnh tim mạch",
-                    value=f"{risk_pct}%",
-                    subtitle=f"Nguy cơ {risk_cat}",
+                # Use render_score_result for risk percentage display
+                render_score_result(
+                    title="Framingham Risk Score",
+                    score=f"{risk_pct}%",
+                    interpretation=f"Nguy cơ {risk_cat.upper()}",
+                    mortality="Nguy cơ mắc bệnh tim mạch 10 năm",
                     color=component_color,
                     icon=component_icon,
                     size="large"

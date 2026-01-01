@@ -4,6 +4,9 @@ Hội chứng đáp ứng viêm toàn thân
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
+from scores.utils.validation import validate_temperature, validate_heart_rate, validate_respiratory_rate, validate_lab_value
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -39,25 +42,30 @@ def calculate_sirs(temp_abnormal, hr_high, rr_high_pco2_low, wbc_abnormal):
     total = temp_abnormal + hr_high + rr_high_pco2_low + wbc_abnormal
     
     # Phân loại
+    # Phân loại
     if total < 2:
         status = "Không SIRS"
         interpretation = "< 2 tiêu chuẩn - không đáp ứng tiêu chuẩn SIRS"
-        color = "green"
+        color = COLORS["success"]
+        icon = "✅"
         recommendation = "Theo dõi lâm sàng thường quy"
     elif total == 2:
         status = "SIRS"
         interpretation = "≥ 2 tiêu chuẩn - Hội chứng đáp ứng viêm toàn thân"
-        color = "orange"
+        color = COLORS["warning"]
+        icon = "⚠️"
         recommendation = "Tìm nguyên nhân, xét nghiệm thêm nếu cần"
     elif total == 3:
         status = "SIRS"
         interpretation = "≥ 2 tiêu chuẩn - SIRS rõ ràng"
-        color = "orange"
+        color = COLORS["warning"]
+        icon = "⚠️"
         recommendation = "Đánh giá nhiễm trùng, xem xét nuôi cấy"
     else:  # 4
         status = "SIRS (4/4 tiêu chuẩn)"
         interpretation = "Tất cả 4 tiêu chuẩn - SIRS nặng"
-        color = "red"
+        color = COLORS["error"]
+        icon = "🚨"
         recommendation = "Nghi ngờ nhiễm trùng nặng/sepsis, xử trí tích cực"
     
     return {
@@ -65,6 +73,7 @@ def calculate_sirs(temp_abnormal, hr_high, rr_high_pco2_low, wbc_abnormal):
         "status": status,
         "interpretation": interpretation,
         "color": color,
+        "icon": icon,
         "recommendation": recommendation
     }
 
@@ -79,8 +88,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #EF4444;'>🔥 SIRS - Systemic Inflammatory Response Syndrome</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🔥 SIRS - Systemic Inflammatory Response Syndrome</h2>
     <p style='text-align: center;'><em>Hội chứng đáp ứng viêm toàn thân</em></p>
     """, unsafe_allow_html=True)
     
@@ -317,28 +326,52 @@ def render():
     
     # Calculate button
     if st.button("🔬 Đánh giá SIRS", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_temp, temp_error = validate_temperature(temp)
+        if not is_valid_temp:
+            validation_errors.append(temp_error)
+            
+        is_valid_hr, hr_error = validate_heart_rate(hr)
+        if not is_valid_hr:
+            validation_errors.append(hr_error)
+            
+        if assessment_method == "Nhịp thở":
+            is_valid_rr, rr_error = validate_respiratory_rate(rr)
+            if not is_valid_rr:
+                validation_errors.append(rr_error)
+        else:
+            is_valid_paco2, paco2_error = validate_lab_value(paco2, "PaCO2", 10, 150)
+            if not is_valid_paco2:
+                validation_errors.append(paco2_error)
+                
+        is_valid_wbc, wbc_error = validate_lab_value(wbc, "WBC", 0, 200)
+        if not is_valid_wbc:
+             validation_errors.append(wbc_error)
+             
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+
         result = calculate_sirs(temp_abnormal, hr_high, rr_high_pco2_low, wbc_abnormal)
         
         # Display result
         st.markdown("## 📊 Kết quả")
         
-        score_color = {
-            "green": "#28a745",
-            "orange": "#fd7e14",
-            "red": "#dc3545"
-        }[result["color"]]
+        st.markdown("## 📊 Kết quả")
         
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {score_color}22 0%, {score_color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {score_color}; margin: 20px 0;'>
-            <h2 style='color: {score_color}; margin: 0; text-align: center;'>
-                {result['total_criteria']}/4 tiêu chuẩn SIRS
-            </h2>
-            <p style='text-align: center; font-size: 1.2em; margin-top: 10px;'>
-                {result['status']}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="SIRS Criteria",
+            score=f"{result['total_criteria']}/4",
+            interpretation=result['status'],
+            mortality="", # No explicitly defined mortality in this calculator struct, can skip or pass empty
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
         # Criteria breakdown
         st.markdown("### ✅ Tiêu chuẩn đáp ứng:")
@@ -364,10 +397,10 @@ def render():
         
         # Interpretation
         st.markdown(f"""
-        <div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'>
-            <h3 style='color: {score_color}; margin-top: 0;'>📋 Giải thích</h3>
+        <div style='background-color: {result['color']}22; padding: 20px; border-radius: 10px; border: 2px solid {result['color']};'>
+            <h3 style='color: {result['color']}; margin-top: 0;'>📋 Giải thích</h3>
             <p style='font-size: 1.1em; margin: 10px 0;'>{result['interpretation']}</p>
-            <p style='font-size: 1.2em; color: {score_color}; font-weight: bold; margin: 10px 0;'>
+            <p style='font-size: 1.2em; color: {result['color']}; font-weight: bold; margin: 10px 0;'>
                 💡 {result['recommendation']}
             </p>
         </div>

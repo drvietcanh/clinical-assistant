@@ -3,6 +3,8 @@ eGFR Calculator - Helper Functions
 Convert, interpret, recommend functions
 """
 
+from config.theme import COLORS
+
 def convert_egfr_to_absolute_gfr(egfr_normalized, bsa_actual):
     """
     Convert eGFR normalized (mL/min/1.73m²) to absolute GFR (mL/min)
@@ -20,37 +22,37 @@ def interpret_egfr(egfr):
     if egfr >= 90:
         stage = "G1 - Bình thường hoặc cao"
         description = "Chức năng thận bình thường (nếu không có bằng chứng tổn thương thận khác)"
-        color = "#28a745"
+        color = COLORS["success"]
         icon = "✅"
         action = "Theo dõi thường quy nếu có yếu tố nguy cơ"
     elif egfr >= 60:
         stage = "G2 - Giảm nhẹ"
         description = "Giảm GFR nhẹ (có thể bình thường ở người cao tuổi)"
-        color = "#28a745"
+        color = COLORS["success"]
         icon = "✅"
         action = "Theo dõi, kiểm soát yếu tố nguy cơ"
     elif egfr >= 45:
         stage = "G3a - Giảm nhẹ-trung bình"
         description = "Suy thận mạn giai đoạn 3a"
-        color = "#ffc107"
+        color = COLORS["warning"]
         icon = "⚠️"
         action = "Theo dõi 6-12 tháng, điều chỉnh liều thuốc"
     elif egfr >= 30:
         stage = "G3b - Giảm trung bình-nặng"
         description = "Suy thận mạn giai đoạn 3b"
-        color = "#fd7e14"
+        color = COLORS["warning"]
         icon = "⚠️"
         action = "Theo dõi 3-6 tháng, hội chẩn chuyên khoa"
     elif egfr >= 15:
         stage = "G4 - Giảm nặng"
         description = "Suy thận mạn giai đoạn 4"
-        color = "#dc3545"
+        color = COLORS["error"]
         icon = "🚨"
         action = "Theo dõi 1-3 tháng, chuẩn bị lọc máu"
     else:
         stage = "G5 - Suy thận giai đoạn cuối"
         description = "Suy thận giai đoạn cuối (ESRD)"
-        color = "#dc3545"
+        color = COLORS["error"]
         icon = "🚨🚨"
         action = "Cần lọc máu hoặc ghép thận NGAY"
     

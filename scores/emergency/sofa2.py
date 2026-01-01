@@ -29,6 +29,8 @@ Score: 0-4 points per organ system → Total: 0-24 points
 """
 
 import streamlit as st
+from config.theme import COLORS
+from scores.utils.validation import validate_lab_value, validate_blood_pressure, validate_heart_rate
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -167,7 +169,10 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🏥 SOFA-2 Score")
+    # st.title("🏥 SOFA-2 Score")
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🏥 SOFA-2 Score</h3>
+    """, unsafe_allow_html=True)
     st.markdown("**Sequential Organ Failure Assessment - Version 2 (2025) - Đánh giá suy đa cơ quan**")
     
     # Badge for new version
@@ -349,7 +354,41 @@ def render():
     st.divider()
     
     # Calculate button
+    # Calculate button
     if st.button("🧮 Tính SOFA-2 Score", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_pao2, pao2_error = validate_lab_value(pao2, "PaO2", 0, 700)
+        if not is_valid_pao2:
+            validation_errors.append(pao2_error)
+            
+        is_valid_fio2, fio2_error = validate_lab_value(fio2, "FiO2", 21, 100)
+        if not is_valid_fio2:
+            validation_errors.append(fio2_error)
+            
+        is_valid_plt, plt_error = validate_lab_value(platelets, "Tiểu cầu", 0, 1000)
+        if not is_valid_plt:
+            validation_errors.append(plt_error)
+            
+        is_valid_bili, bili_error = validate_lab_value(bilirubin, "Bilirubin", 0, 50)
+        if not is_valid_bili:
+            validation_errors.append(bili_error)
+            
+        if not use_vasopressor:
+            is_valid_map, map_error = validate_blood_pressure(map_value) # MAP range similar to BP
+            if not is_valid_map:
+                validation_errors.append(f"MAP: {map_error}")
+                
+        is_valid_cr, cr_error = validate_lab_value(creatinine, "Creatinine", 0, 30)
+        if not is_valid_cr:
+            validation_errors.append(cr_error)
+            
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
         result = calculate_sofa2(
             pao2_fio2=pao2_fio2,
             respiratory_support=respiratory_support,

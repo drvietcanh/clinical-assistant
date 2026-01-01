@@ -9,7 +9,9 @@ Am J Respir Crit Care Med. 2017;196(2):208-217.
 
 import streamlit as st
 import math
-# ========== PHASE 1 IMPORTS ==========
+from scores.utils.validation import validate_lab_value, validate_blood_pressure, validate_age, validate_weight
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
@@ -234,23 +236,23 @@ def calculate_pediatric_sofa(
     # Interpretation
     if total_score == 0:
         interpretation = "Không có suy cơ quan"
-        color = "success"
+        color = COLORS["success"]
         mortality = "< 5%"
     elif total_score <= 6:
         interpretation = "Suy cơ quan nhẹ"
-        color = "info"
+        color = COLORS["info"]
         mortality = "5-10%"
     elif total_score <= 11:
         interpretation = "Suy cơ quan trung bình"
-        color = "warning"
+        color = COLORS["warning"]
         mortality = "10-25%"
     elif total_score <= 16:
         interpretation = "Suy cơ quan nặng"
-        color = "error"
+        color = COLORS["error"]
         mortality = "25-50%"
     else:
         interpretation = "Suy đa cơ quan rất nặng"
-        color = "error"
+        color = COLORS["error"]
         mortality = "> 50%"
     
     # Sepsis note (pSOFA ≥2 suggests sepsis)
@@ -282,8 +284,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.subheader("👶 Pediatric SOFA (pSOFA) Score")
-    st.caption("Sequential Organ Failure Assessment for Pediatric ICU Patients")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>👶 Pediatric SOFA (pSOFA) Score</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Sequential Organ Failure Assessment for Pediatric ICU Patients</p>", unsafe_allow_html=True)
     
     st.info("""
     **Pediatric SOFA (pSOFA)** đánh giá mức độ suy đa cơ quan ở trẻ em ICU.
@@ -476,6 +478,44 @@ def render():
     
     # Calculate button
     if st.button("🧮 Tính pSOFA Score", type="primary", use_container_width=True, key="psofa_calculate"):
+        # Validate inputs
+        validation_errors = []
+        
+        is_valid_age, age_error = validate_age(age_years, min_age=0, max_age=18)
+        if not is_valid_age:
+            validation_errors.append(f"Tuổi: {age_error}")
+            
+        is_valid_wt, wt_error = validate_weight(weight_kg, min_weight=0.5, max_weight=150)
+        if not is_valid_wt:
+            validation_errors.append(f"Cân nặng: {wt_error}")
+            
+        is_valid_pao2, pao2_error = validate_lab_value(pao2, "PaO2", 30, 600)
+        if not is_valid_pao2:
+            validation_errors.append(pao2_error)
+            
+        is_valid_plt, plt_error = validate_lab_value(platelets, "Tiểu cầu", 0, 1000)
+        if not is_valid_plt:
+            validation_errors.append(plt_error)
+            
+        is_valid_bili, bili_error = validate_lab_value(bilirubin, "Bilirubin", 0, 50)
+        if not is_valid_bili:
+            validation_errors.append(bili_error)
+            
+        if not use_vasopressor:
+            is_valid_map, map_error = validate_blood_pressure(map_value)
+            if not is_valid_map:
+                validation_errors.append(f"MAP: {map_error}")
+                
+        is_valid_cr, cr_error = validate_lab_value(creatinine, "Creatinine", 0.1, 20)
+        if not is_valid_cr:
+            validation_errors.append(cr_error)
+            
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+            
         result = calculate_pediatric_sofa(
             age_years=age_years,
             pao2_fio2=pao2_fio2,
@@ -491,20 +531,17 @@ def render():
         )
         
         # Display results
-        st.subheader("📊 Kết quả")
         
-        # Color-coded score
-        if result["color"] == "success":
-            st.success(f"## **pSOFA Score: {result['total_score']}/24**")
-        elif result["color"] == "info":
-            st.info(f"## **pSOFA Score: {result['total_score']}/24**")
-        elif result["color"] == "warning":
-            st.warning(f"## **pSOFA Score: {result['total_score']}/24**")
-        else:
-            st.error(f"## **pSOFA Score: {result['total_score']}/24**")
-        
-        st.markdown(f"**Đánh giá:** {result['interpretation']}")
-        st.markdown(f"**Tỷ lệ tử vong ước tính:** {result['mortality']}")
+        render_score_result(
+            title="Pediatric SOFA Score",
+            score=result['total_score'],
+            interpretation=result['interpretation'],
+            mortality=f"Tử vong: {result['mortality']}",
+            color=result['color'],
+            icon="👶",
+            size="large",
+            max_score=24
+        )
         
         # Sepsis note
         if result["sepsis_note"]:

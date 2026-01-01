@@ -4,6 +4,9 @@ Centor Score (Modified Centor / McIsaac Score)
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
+from scores.utils.validation import validate_age
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -51,7 +54,8 @@ def interpret_centor(score):
     if score <= 0:
         return {
             "risk": "Rất thấp",
-            "color": "🟢",
+            "color": COLORS["success"],
+            "icon": "🟢",
             "probability": "< 2.5%",
             "recommendation": "KHÔNG cần test hoặc kháng sinh",
             "action": "Điều trị triệu chứng (giảm đau, hạ sốt). Theo dõi tại nhà.",
@@ -62,7 +66,8 @@ def interpret_centor(score):
     elif score == 1:
         return {
             "risk": "Thấp",
-            "color": "🟡",
+            "color": COLORS["success"],
+            "icon": "🟡",
             "probability": "5-10%",
             "recommendation": "KHÔNG cần test hoặc kháng sinh (trừ dịch tễ đặc biệt)",
             "action": "Điều trị triệu chứng. Tái khám nếu không đỡ sau 3-5 ngày.",
@@ -73,7 +78,8 @@ def interpret_centor(score):
     elif score == 2:
         return {
             "risk": "Trung bình",
-            "color": "🟠",
+            "color": COLORS["warning"],
+            "icon": "🟠",
             "probability": "10-17%",
             "recommendation": "XEM XÉT test (Rapid Antigen hoặc throat culture)",
             "action": "Test nếu có sẵn. Điều trị dựa trên kết quả test. Nếu không test → Triệu chứng + theo dõi.",
@@ -84,7 +90,8 @@ def interpret_centor(score):
     elif score == 3:
         return {
             "risk": "Trung bình-cao",
-            "color": "🟠",
+            "color": COLORS["warning"],
+            "icon": "🟠",
             "probability": "28-35%",
             "recommendation": "NÊN test (Rapid Antigen hoặc throat culture)",
             "action": "Test để xác định. Kháng sinh nếu test (+). Nếu không test → Xem xét điều trị kinh nghiệm.",
@@ -95,7 +102,8 @@ def interpret_centor(score):
     else:  # score >= 4
         return {
             "risk": "Cao",
-            "color": "🔴",
+            "color": COLORS["error"],
+            "icon": "🔴",
             "probability": "51-53%",
             "recommendation": "Test hoặc điều trị kinh nghiệm",
             "action": "Test nhanh (RADT). Nếu (+) → Kháng sinh. Nếu (-) → Throat culture xác nhận. HOẶC điều trị kinh nghiệm nếu không test được.",
@@ -149,7 +157,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🦠 Centor Score (Modified)")
+    st.markdown(f"<h1 style='text-align: center; color: {COLORS['success']};'>🦠 Centor Score (Modified)</h1>", unsafe_allow_html=True)
     st.markdown("""
     ### Đánh giá Viêm Họng Do Liên Cầu Khuẩn
     
@@ -221,6 +229,11 @@ def render():
     
     # Calculate button
     if st.button("📊 Tính Centor Score", type="primary", use_container_width=True):
+        is_valid_age, age_error = validate_age(age)
+        if not is_valid_age:
+            st.error(f"⚠️ {age_error}")
+            st.stop()
+            
         # Convert checkboxes to int
         fever_score = 1 if fever else 0
         exudate_score = 1 if exudate else 0
@@ -237,29 +250,15 @@ def render():
         st.subheader("📈 Kết quả đánh giá")
         
         # Display scores
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            st.metric(
-                "Centor Score",
-                total_score,
-                help="Điểm từ -1 đến 5"
-            )
-        
-        with col2:
-            st.metric(
-                "Xác suất GAS",
-                result['probability'],
-                help="Khả năng viêm họng do Streptococcus pyogenes"
-            )
-        
-        with col3:
-            if result['level'] in ["very_low", "low"]:
-                st.success(f"{result['color']} {result['risk']}")
-            elif result['level'] in ["moderate", "moderate_high"]:
-                st.warning(f"{result['color']} {result['risk']}")
-            else:
-                st.error(f"{result['color']} {result['risk']}")
+        render_score_result(
+            title="Centor Score",
+            score=total_score,
+            interpretation=f"Nguy cơ: {result['risk']}",
+            mortality=f"Xác suất GAS: {result['probability']}",
+            color=result['color'],
+            icon=result['icon'],
+            size="large"
+        )
         
         st.markdown("---")
         

@@ -4,6 +4,7 @@ Dự đoán nhu cầu chụp CT đầu ở trẻ chấn thương đầu
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import validate_age
 from components.ui.validation import render_validation_errors
 from components.ui.results import render_result_box
@@ -99,7 +100,9 @@ def evaluate_pecarn(age_months, gcs, mental_status, signs_of_basilar_skull_fract
     if high_risk_found:
         return {
             "risk": "high",
-            "status": "🔴 Nguy cơ cao",
+            "status": "Nguy cơ cao",
+            "color": COLORS["error"],
+            "icon": "🔴",
             "recommendation": "Cần chụp CT đầu ngay",
             "reasons": high_risk_reasons,
             "details": "Có tiêu chuẩn nguy cơ cao → Chụp CT đầu để loại trừ tổn thương nội sọ"
@@ -107,7 +110,9 @@ def evaluate_pecarn(age_months, gcs, mental_status, signs_of_basilar_skull_fract
     elif medium_risk_found:
         return {
             "risk": "medium",
-            "status": "🟡 Nguy cơ trung bình",
+            "status": "Nguy cơ trung bình",
+            "color": COLORS["warning"],
+            "icon": "🟡",
             "recommendation": "Cân nhắc chụp CT đầu hoặc theo dõi sát",
             "reasons": medium_risk_reasons,
             "details": "Có tiêu chuẩn nguy cơ trung bình → Có thể chụp CT hoặc theo dõi sát tại khoa cấp cứu"
@@ -115,7 +120,9 @@ def evaluate_pecarn(age_months, gcs, mental_status, signs_of_basilar_skull_fract
     else:
         return {
             "risk": "low",
-            "status": "🟢 Nguy cơ thấp",
+            "status": "Nguy cơ thấp",
+            "color": COLORS["success"],
+            "icon": "🟢",
             "recommendation": "Không cần chụp CT đầu",
             "reasons": [],
             "details": "Không có tiêu chuẩn nguy cơ → Có thể xuất viện với hướng dẫn theo dõi"
@@ -125,10 +132,8 @@ def evaluate_pecarn(age_months, gcs, mental_status, signs_of_basilar_skull_fract
 def render():
     """Render PECARN calculator interface"""
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>👶 PECARN Pediatric Head Injury Algorithm</h2>
-    <p style='text-align: center;'><em>Dự đoán nhu cầu chụp CT đầu ở trẻ chấn thương đầu</em></p>
-    """, unsafe_allow_html=True)
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>👶 PECARN Pediatric Head Injury Algorithm</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Dự đoán nhu cầu chụp CT đầu ở trẻ chấn thương đầu</p>", unsafe_allow_html=True)
     
     shared = load_shared_result_from_url()
     if shared and shared.get("calculator_id") == "pecarn":
@@ -242,8 +247,10 @@ def render():
         render_result_box(
             title="Đánh giá nguy cơ",
             value=result["status"],
-            unit="",
-            status=result["status"]
+            subtitle=result["recommendation"],
+            color=result["color"],
+            icon=result["icon"],
+            size="large"
         )
         
         st.info(f"**Khuyến cáo:** {result['recommendation']}")

@@ -8,6 +8,8 @@ JAMA. 2012;307(23):2526-2533.
 """
 
 import streamlit as st
+from config.theme import COLORS
+from scores.utils.validation import validate_lab_value, validate_input_range
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -119,10 +121,10 @@ def evaluate_ards_berlin(
     
     if all_criteria_met and oxygenation_met:
         diagnosis = f"ARDS - {severity}"
-        color = "error" if severity == "Severe ARDS" else ("warning" if severity == "Moderate ARDS" else "info")
+        color = COLORS["error"] if severity == "Severe ARDS" else (COLORS["warning"] if severity == "Moderate ARDS" else COLORS["info"])
     else:
         diagnosis = "Không đáp ứng tiêu chuẩn ARDS"
-        color = "success"
+        color = COLORS["success"]
     
     return {
         "diagnosis": diagnosis,
@@ -145,8 +147,12 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.subheader("🫁 ARDS Berlin Definition")
-    st.caption("Tiêu chuẩn chẩn đoán ARDS - Berlin Definition 2012")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🫁 ARDS Berlin Definition</h2>
+    <p style='text-align: center; color: #6B7280;'>
+    Tiêu chuẩn chẩn đoán ARDS - Berlin Definition 2012
+    </p>
+    """, unsafe_allow_html=True)
     
     st.warning("""
     **⚠️ QUAN TRỌNG: ARDS Berlin Definition (2012)**
@@ -276,6 +282,21 @@ def render():
     
     st.markdown("---")
     
+    if st.button("📊 Đánh giá ARDS Berlin", type="primary", use_container_width=True):
+        # Validate inputs if ABG
+        if has_abg:
+            validation_errors = []
+            if not validate_lab_value(pao2, "PaO2", 30, 600)[0]:
+                validation_errors.append("PaO2 phải từ 30-600 mmHg")
+            if not validate_input_range(fio2_input, "FiO2", 21, 100, "%")[0]:
+                validation_errors.append("FiO2 phải từ 21-100%")
+            
+            if validation_errors:
+                st.error("**⚠️ Lỗi validation:**")
+                for error in validation_errors:
+                    st.error(f"- {error}")
+                st.stop()
+    
     # Calculate
     result = evaluate_ards_berlin(
         timing,
@@ -291,16 +312,28 @@ def render():
     )
     
     # Display results
-    st.markdown("### 📊 Kết quả")
+    st.subheader("📊 Kết quả")
     
-    if result["color"] == "error":
-        st.error(f"## **{result['diagnosis']}**")
-    elif result["color"] == "warning":
-        st.warning(f"## **{result['diagnosis']}**")
-    elif result["color"] == "info":
-        st.info(f"## **{result['diagnosis']}**")
-    else:
-        st.success(f"## **{result['diagnosis']}**")
+    from components.ui.scoring import render_score_result
+    
+    icon = "🫁"
+    if result['severity'] == "Severe ARDS":
+        icon = "🚨"
+    elif result['severity'] == "Moderate ARDS":
+        icon = "⚠️"
+    elif result['severity'] == "Mild ARDS":
+        icon = "ℹ️"
+    elif not result["all_criteria_met"]:
+        icon = "✅"
+        
+    render_score_result(
+        title="ARDS Berlin Diagnosis",
+        score=None,
+        interpretation=result['diagnosis'],
+        recommendation=None,
+        color=result['color'],
+        icon=icon
+    )
     
     st.markdown("---")
     

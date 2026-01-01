@@ -4,6 +4,7 @@ Nguy cơ biến chứng trong sốt giảm bạch cầu hạt
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -11,7 +12,10 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 # =====================================
-from components.ui.scoring import render_score_result, render_score_breakdown
+from components.ui.scoring import render_score_result, render_score_breakdown, render_recommendation_box
+
+from scores.utils.validation import validate_age
+
 
 
 def calculate_mascc(burden, hypotension, copd, solid_tumor_fungal, dehydration, outpatient, age):
@@ -22,14 +26,23 @@ def calculate_mascc(burden, hypotension, copd, solid_tumor_fungal, dehydration, 
         risk = "Thấp"
         mortality = "< 1-5%"
         management = "Có thể điều trị ngoại trú với kháng sinh uống"
-        color = "green"
+        color = COLORS["success"]
+        icon = "✅"
     else:
         risk = "Cao"
         mortality = "> 10-20%"
         management = "Cần nhập viện, kháng sinh tĩnh mạch"
-        color = "red"
+        color = COLORS["error"]
+        icon = "🚨"
     
-    return {"total_score": total, "risk_level": risk, "mortality": mortality, "management": management, "color": color}
+    return {
+        "total_score": total,
+        "risk_level": risk,
+        "mortality": mortality,
+        "management": management,
+        "color": color,
+        "icon": icon
+    }
 
 
 def render():
@@ -42,8 +55,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #8B5CF6;'>🦠 MASCC Risk Index</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🦠 MASCC Risk Index</h2>
     <p style='text-align: center;'><em>Nguy cơ biến chứng sốt giảm bạch cầu hạt (Febrile Neutropenia)</em></p>
     """, unsafe_allow_html=True)
     
@@ -102,19 +115,51 @@ def render():
         format_func=lambda x: "3 điểm - Có" if x == 3 else "0 điểm - Không (đang nội trú)"
     )
     
+    
+    # Age Helper
+    with st.expander("🧮 Hỗ trợ chọn Tuổi"):
+         col_age1, col_age2 = st.columns(2)
+         with col_age1:
+              mascc_age_val = st.number_input("Nhập tuổi (năm)", 0, 120, 50, key="mascc_age_num")
+         with col_age2:
+              if mascc_age_val < 60:
+                   st.success(f"✅ Tuổi {mascc_age_val} < 60 (2 điểm)")
+                   mascc_age_auto = 0 # Index 0 is "2 points - Yes" (Wait, format_func says options=[0, 2], index 0 is val 0?)
+                   # Let's check options below: options=[0, 2]
+                   # format_func: x=2 "2 điểm...", x=0 "0 điểm..."
+                   # So if < 60, we want value 2.
+                   # options=[0, 2]. So index of 2 is 1. Index of 0 is 0.
+                   # Wait, the radio returns the value.
+                   pass
+              else:
+                   st.warning(f"⚠️ Tuổi {mascc_age_val} ≥ 60 (0 điểm)")
+                   pass
+         
+         if st.button("Áp dụng tuổi"):
+              st.session_state['mascc_age_auto'] = 2 if mascc_age_val < 60 else 0
+              st.rerun()
+
+    # Determine default
+    default_age_val = 0 # Default is "0 điểm" (>= 60)
+    if 'mascc_age_auto' in st.session_state:
+         default_age_val = st.session_state['mascc_age_auto']
+         
+    # Options are [0, 2]. 
+    # If default is 2, index is 1. If 0, index is 0.
+    idx_age = 1 if default_age_val == 2 else 0
+
     age = st.radio(
         "Tuổi < 60",
         options=[0, 2],
+        index=idx_age,
         format_func=lambda x: "2 điểm - Có (< 60 tuổi)" if x == 2 else "0 điểm - Không (≥ 60 tuổi)"
     )
+
     
     st.markdown("---")
     
     if st.button("🔬 Tính MASCC Score", type="primary", use_container_width=True):
         result = calculate_mascc(burden, hypotension, copd, solid_tumor_fungal, dehydration, outpatient, age)
-        
-        score_color = "#28a745" if result["color"] == "green" else "#dc3545"
-        icon = "✅" if result["color"] == "green" else "🚨"
         
         st.markdown("## 📊 Kết quả")
         
@@ -124,8 +169,8 @@ def render():
             score=result['total_score'],
             interpretation=f"Nguy cơ: {result['risk_level']}",
             mortality=f"Tử vong: {result['mortality']}",
-            color=score_color,
-            icon=icon,
+            color=result['color'],
+            icon=result['icon'],
             size="large"
         )
         
@@ -146,12 +191,12 @@ def render():
         
         st.markdown("---")
         
-        st.markdown(f"""
-        <div style='background-color: {score_color}22; padding: 20px; border-radius: 10px; border: 2px solid {score_color};'>
-            <h3 style='color: {score_color}; margin-top: 0;'>📋 Quản lý khuyến cáo</h3>
-            <p style='font-size: 1.2em; font-weight: bold;'>{result['management']}</p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_recommendation_box(
+            title="Quản lý khuyến cáo",
+            content=result['management'],
+            type="success" if result["color"] == COLORS["success"] else "error"
+        )
+
         
         if result["total_score"] >= 21:
             st.success("""

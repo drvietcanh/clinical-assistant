@@ -9,6 +9,8 @@ Lancet. 2000;355(9216):1670-1674.
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -36,13 +38,13 @@ def calculate_aspects(regions):
     # Interpretation
     if total_score >= 7:
         interpretation = "Low risk - Favorable for thrombolysis/thrombectomy"
-        color = "success"
+        color = COLORS["success"]
     elif total_score >= 4:
         interpretation = "Moderate risk - Consider carefully"
-        color = "warning"
+        color = COLORS["warning"]
     else:
         interpretation = "High risk - Poor prognosis, may not benefit from thrombolysis"
-        color = "error"
+        color = COLORS["error"]
     
     return {
         "total_score": total_score,
@@ -54,8 +56,8 @@ def calculate_aspects(regions):
 
 def render():
     """ASPECTS Score Calculator"""
-    st.subheader("🧠 ASPECTS Score")
-    st.caption("Alberta Stroke Program Early CT Score - Stroke Imaging Assessment")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🧠 ASPECTS Score</h2>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center;'>Alberta Stroke Program Early CT Score - Stroke Imaging Assessment</p>", unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -209,12 +211,14 @@ def render():
     with col1:
         st.markdown("### 📊 Kết quả")
         
-        if result["color"] == "success":
-            st.success(f"## **ASPECTS Score: {result['total_score']}/10**")
-        elif result["color"] == "warning":
-            st.warning(f"## **ASPECTS Score: {result['total_score']}/10**")
-        else:
-            st.error(f"## **ASPECTS Score: {result['total_score']}/10**")
+        render_score_result(
+            title="ASPECTS Score",
+            score=result['total_score'],
+            interpretation=result['interpretation'],
+            mortality="",
+            color=result["color"],
+            size="large"
+        )
         
         st.markdown(f"**Vùng bị ảnh hưởng:** {result['regions_affected']}/10")
         st.markdown(f"**Đánh giá:** {result['interpretation']}")

@@ -71,12 +71,25 @@ DIURETICS = {
                 "UpToDate - Bumetanide: Drug information"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - Extensive clinical experience",
+            "evidence_level": "High - Extensive clinical experience"
+        },
         "drug_interactions": {
             "major": [],
             "moderate": [],
             "minor": []
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["Renal (Acute Kidney Injury)", "Ototoxicity (High dose IV)"],
+            "requires_monitoring": ["Electrolytes", "Renal function", "Fluid status"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Heart Failure",
+            "KDIGO Guidelines - Acute Kidney Injury"
+        ],
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -102,7 +115,6 @@ DIURETICS = {
             "administration": "",
             "monitoring": []
         },
-        }
     },
 
     "Chlorthalidone": {
@@ -284,7 +296,19 @@ DIURETICS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - Multiple large RCTs (ALLHAT) and clinical guidelines (ESC/ESH 2023, ACC/AHA 2024)"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["Metabolic (Hypokalemia, Hyponatremia)"],
+            "requires_monitoring": ["Electrolytes", "Renal function", "Blood pressure"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ESC/ESH Guidelines - Hypertension"
+        ]
     },
     "Eplerenone": {
         "group": "Cardiovascular - Aldosterone Antagonist (Potassium-sparing Diuretic)",
@@ -332,7 +356,8 @@ DIURETICS = {
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": ["hyperkalemia"]
+            "organ_toxicity": ["hyperkalemia"],
+            "requires_monitoring": ["Potassium", "Renal function (eGFR)"]
         },
         "guideline_tags": [
             "ACC/AHA/HFSA HFrEF MRA Class I",
@@ -536,7 +561,8 @@ DIURETICS = {
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": ["renal_hypoperfusion", "ototoxicity", "electrolyte_disturbance"]
+            "organ_toxicity": ["renal_hypoperfusion", "ototoxicity", "electrolyte_disturbance"],
+            "requires_monitoring": ["Electrolytes (K, Na, Mg)", "Renal function (BUN, Cr)", "Fluid status"]
         },
         "guideline_tags": [
             "ACC/AHA/HFSA HFrEF diuretic",
@@ -920,8 +946,9 @@ DIURETICS = {
               "narrow_therapeutic_index": False,
               "icu_critical_care_only": False,
               "bleeding_risk": "Low",
-              "organ_toxicity": {"metabolic": "Moderate (electrolyte disturbances, hyperglycemia, hyperuricemia)"}
-          },
+              "organ_toxicity": {"metabolic": "Moderate (electrolyte disturbances, hyperglycemia, hyperuricemia)"},
+            "requires_monitoring": ["Electrolytes (K, Na)", "Renal function", "Blood pressure"]
+        },
           "guideline_tags": [
               "ACC/AHA Guidelines - Hypertension",
               "ALLHAT Study - Hypertension",
@@ -1086,7 +1113,19 @@ DIURETICS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - Extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["Metabolic (Hypokalemia, Hyponatremia)"],
+            "requires_monitoring": ["Electrolytes", "Renal function", "Blood pressure"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "ESC/ESH Guidelines - Hypertension"
+        ]
     },
 
     "Spironolactone": {
@@ -1346,7 +1385,8 @@ DIURETICS = {
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"metabolic": "High (hyperkalemia)", "endocrine": "Moderate (gynecomastia, menstrual irregularities)"}
+            "organ_toxicity": {"metabolic": "High (hyperkalemia)", "endocrine": "Moderate (gynecomastia, menstrual irregularities)"},
+            "requires_monitoring": ["Potassium", "Renal function (eGFR)", "Blood pressure"]
         },
         "guideline_tags": [
             "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
@@ -1427,12 +1467,25 @@ DIURETICS = {
                 "UpToDate - Torsemide: Drug information"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - Extensive clinical experience",
+            "evidence_level": "High - Extensive clinical experience"
+        },
         "drug_interactions": {
             "major": [],
             "moderate": [],
             "minor": []
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": ["Renal (Acute Kidney Injury)", "Ototoxicity (High dose IV)"],
+            "requires_monitoring": ["Electrolytes", "Renal function", "Fluid status"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Heart Failure",
+            "KDIGO Guidelines - Acute Kidney Injury"
+        ],
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -1457,7 +1510,6 @@ DIURETICS = {
             "preparation": "",
             "administration": "",
             "monitoring": []
-        },
         }
     },
 

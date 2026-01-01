@@ -30,8 +30,9 @@ Clinical Utility:
 - Used in gastroenterology
 """
 
-import streamlit as st
+from config.theme import COLORS
 from components.ui.validation import render_validation_errors
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -100,8 +101,8 @@ def render():
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🩺 EREFS</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩺 EREFS</h3>
     <p style='text-align: center; color: #6B7280;'>
     Eosinophilic Esophagitis Endoscopic Reference Score<br>
     Đánh giá mức độ nặng của các phát hiện nội soi ở bệnh nhân viêm thực quản tăng bạch cầu ái toan (EoE)
@@ -185,25 +186,30 @@ def render():
         )
         
         # Display results
+        # Determine color and icon based on severity
+        if result['total_score'] <= 2:
+            color = COLORS['success']
+            icon = "🟢"
+        elif result['total_score'] <= 5:
+            color = COLORS['warning']
+            icon = "🟡"
+        else:
+            color = COLORS['error']
+            icon = "🔴"
+
+        # Display results with render_score_result
         st.markdown("---")
         st.markdown("### 📋 Kết quả EREFS")
         
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            st.metric("Điểm EREFS", f"{result['total_score']}/8")
-        
-        with col2:
-            st.metric(
-                "Mức độ",
-                result['severity']
-            )
-        
-        with col3:
-            st.metric(
-                "Diễn giải",
-                result['interpretation']
-            )
+        render_score_result(
+            title="EREFS Score",
+            score=f"{result['total_score']}/8",
+            interpretation=f"{result['severity']} - {result['interpretation']}",
+            mortality=result['recommendation'],
+            color=color,
+            icon=icon,
+            size="large"
+        )
         
         # Breakdown
         st.markdown("### 📝 Chi tiết")
@@ -218,12 +224,10 @@ def render():
             st.markdown(f"- **Furrows:** {result['furrows']}/1")
             st.markdown(f"- **Strictures:** {result['strictures']}/1")
         
-        # Clinical recommendations
+        # Clinical recommendations (Detailed)
         st.markdown("### 💡 Khuyến nghị lâm sàng")
         
         if result['total_score'] <= 2:
-            st.success(f"**{result['severity']}** - {result['interpretation']}")
-            st.markdown(f"**Khuyến nghị:** {result['recommendation']}")
             st.markdown("""
             - Điều trị theo tiêu chuẩn EoE
             - PPI, thuốc ức chế miễn dịch tại chỗ (fluticasone, budesonide)
@@ -232,8 +236,6 @@ def render():
             - Nội soi lại sau 8-12 tuần điều trị
             """)
         elif result['total_score'] <= 5:
-            st.warning(f"**{result['severity']}** - {result['interpretation']}")
-            st.markdown(f"**Khuyến nghị:** {result['recommendation']}")
             st.markdown("""
             - Điều trị tích cực EoE
             - PPI + thuốc ức chế miễn dịch tại chỗ
@@ -243,8 +245,6 @@ def render():
             - Cân nhắc điều trị toàn thân nếu không đáp ứng
             """)
         else:
-            st.error(f"**{result['severity']}** - {result['interpretation']}")
-            st.markdown(f"**Khuyến nghị:** {result['recommendation']}")
             st.markdown("""
             - **Điều trị tích cực ngay**
             - PPI + thuốc ức chế miễn dịch tại chỗ liều cao

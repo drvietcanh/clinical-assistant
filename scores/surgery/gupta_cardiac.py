@@ -4,6 +4,7 @@ Gupta Perioperative Cardiac Risk Index Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -34,27 +35,27 @@ def calculate_gupta_cardiac(age, history_cad, history_chf, history_cva, diabetes
     if risk_score == 0:
         risk_pct = 0.4
         risk_level = "Nguy cơ rất thấp"
-        color = "green"
+        color = COLORS["success"]
     elif risk_score == 1:
         risk_pct = 0.9
         risk_level = "Nguy cơ thấp"
-        color = "green"
+        color = COLORS["success"]
     elif risk_score == 2:
         risk_pct = 2.0
         risk_level = "Nguy cơ trung bình"
-        color = "orange"
+        color = COLORS["warning"]
     elif risk_score == 3:
         risk_pct = 5.4
         risk_level = "Nguy cơ cao"
-        color = "orange"
+        color = COLORS["warning"]
     elif risk_score == 4:
         risk_pct = 11.0
         risk_level = "Nguy cơ rất cao"
-        color = "red"
+        color = COLORS["error"]
     else:  # ≥5
         risk_pct = 20.0
         risk_level = "Nguy cơ cực cao"
-        color = "red"
+        color = COLORS["error"]
     
     return {
         "risk_score": risk_score,
@@ -74,8 +75,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>❤️ Gupta Perioperative Cardiac Risk Index</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['error']};'>❤️ Gupta Perioperative Cardiac Risk Index</h2>
     <p style='text-align: center;'><em>Đánh giá nguy cơ tim mạch trong phẫu thuật không tim</em></p>
     """, unsafe_allow_html=True)
     
@@ -229,9 +230,9 @@ def render():
             st.markdown("---")
             
             # Risk interpretation
-            if result['color'] == "green":
+            if result['color'] == COLORS["success"]:
                 st.success(f"**{result['risk_level']}** - Tỷ lệ biến chứng tim mạch: {result['risk_percentage']:.1f}%")
-            elif result['color'] == "orange":
+            elif result['color'] == COLORS["warning"]:
                 st.warning(f"**{result['risk_level']}** - Tỷ lệ biến chứng tim mạch: {result['risk_percentage']:.1f}%")
             else:
                 st.error(f"**{result['risk_level']}** - Tỷ lệ biến chứng tim mạch: {result['risk_percentage']:.1f}%")

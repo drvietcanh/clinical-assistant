@@ -47,6 +47,7 @@ Clinical Utility:
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -139,8 +140,11 @@ def calculate_charlson_index(selected_conditions: list) -> dict:
 def render():
     """Render Charlson Comorbidity Index calculator"""
     
-    st.title("🏥 Charlson Comorbidity Index")
-    st.markdown("**Dự đoán tử vong 10 năm dựa trên bệnh lý mạn tính**")
+    # st.title("🏥 Charlson Comorbidity Index")
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🏥 Charlson Comorbidity Index</h2>
+    <p style='text-align: center;'><em>Dự đoán tử vong 10 năm dựa trên bệnh lý mạn tính</em></p>
+    """, unsafe_allow_html=True)
     
     # Load shared result if available
     shared = load_shared_result_from_url()

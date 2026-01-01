@@ -4,6 +4,7 @@ Tiên lượng viêm tụy cấp - đơn giản, nhanh chóng
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.validation import (
     validate_age,
     validate_lab_value
@@ -51,8 +52,8 @@ def _format_num(value: float, decimals: int = 1) -> str:
 def render():
     """Render BISAP Score interface"""
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🩺 BISAP Score</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🩺 BISAP Score</h3>
     <p style='text-align: center;'><em>Bedside Index for Severity in Acute Pancreatitis</em></p>
     """, unsafe_allow_html=True)
     
@@ -401,15 +402,15 @@ def render():
         # Severity classification
         if bisap_score == 0:
             severity = "Nhẹ"
-            color = "#28a745"
+            color = COLORS["success"]
             icon = "✅"
         elif bisap_score <= 2:
             severity = "Trung bình"
-            color = "#ffc107"
+            color = COLORS["warning"]
             icon = "⚠️"
         else:
             severity = "Nặng"
-            color = "#dc3545"
+            color = COLORS["error"]
             icon = "🚨"
         
         # Display results

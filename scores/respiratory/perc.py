@@ -4,6 +4,7 @@ Loại trừ thuyên tắc phổi mà không cần D-dimer
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -16,9 +17,9 @@ from components.smart_suggestions import render_suggestions
 def render():
     """Render PERC Rule interface"""
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #0EA5E9;'>🫁 PERC Rule</h2>
-    <p style='text-align: center;'><em>Pulmonary Embolism Rule-out Criteria</em></p>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🫁 PERC Rule</h2>
+    <p style='text-align: center; color: #6B7280;'><em>Pulmonary Embolism Rule-out Criteria</em></p>
     """, unsafe_allow_html=True)
     
     # Load shared result if available
@@ -203,22 +204,20 @@ def render():
         st.markdown("## 📊 Kết quả")
         
         # PERC negative or positive
+        from components.ui.scoring import render_score_result
+        
+        # PERC negative or positive
         if perc_score == 0:
             # PERC NEGATIVE
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, #28a74522 0%, #28a74544 100%); 
-                        padding: 40px; border-radius: 15px; border-left: 5px solid #28a745; margin: 20px 0;'>
-                <h1 style='color: #28a745; margin: 0; text-align: center; font-size: 3em;'>
-                    ✅ PERC Âm Tính
-                </h1>
-                <p style='text-align: center; font-size: 1.5em; margin-top: 15px; font-weight: bold;'>
-                    Điểm PERC: {perc_score}/8
-                </p>
-                <p style='text-align: center; font-size: 1.2em; margin-top: 10px;'>
-                    Tất cả tiêu chí đều ÂM TÍNH
-                </p>
-            </div>
-            """, unsafe_allow_html=True)
+            render_score_result(
+                title="PERC Âm Tính",
+                score=perc_score,
+                max_score=8,
+                interpretation="Có thể loại trừ PE",
+                recommendation="Nguy cơ PE < 1.4% - Không cần xét nghiệm thêm",
+                color=COLORS['success'],
+                icon="✅"
+            )
             
             st.success("""
             ### ✅ CÓ THỂ LOẠI TRỪ PE!
@@ -241,20 +240,15 @@ def render():
         
         else:
             # PERC POSITIVE
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, #dc354522 0%, #dc354544 100%); 
-                        padding: 40px; border-radius: 15px; border-left: 5px solid #dc3545; margin: 20px 0;'>
-                <h1 style='color: #dc3545; margin: 0; text-align: center; font-size: 3em;'>
-                    ⚠️ PERC Dương Tính
-                </h1>
-                <p style='text-align: center; font-size: 1.5em; margin-top: 15px; font-weight: bold;'>
-                    Điểm PERC: {perc_score}/8
-                </p>
-                <p style='text-align: center; font-size: 1.2em; margin-top: 10px;'>
-                    Có {perc_score} tiêu chí DƯƠNG TÍNH
-                </p>
-            </div>
-            """, unsafe_allow_html=True)
+            render_score_result(
+                title="PERC Dương Tính",
+                score=perc_score,
+                max_score=8,
+                interpretation=f"Có {perc_score} tiêu chí dương tính",
+                recommendation="Cần xét nghiệm thêm (D-dimer/CT)",
+                color=COLORS['error'],
+                icon="⚠️"
+            )
             
             # List positive criteria
             st.markdown("### 📋 Tiêu chí dương tính:")

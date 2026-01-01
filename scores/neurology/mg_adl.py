@@ -34,7 +34,8 @@ Clinical Utility:
 """
 
 import streamlit as st
-from components.ui.validation import render_validation_errors
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -122,15 +123,14 @@ def render():
     """Render MG-ADL interface"""
     import streamlit as st
     
-    st.set_page_config(page_title="MG-ADL", layout="wide")
+    # st.set_page_config(page_title="MG-ADL", layout="wide")
     
     # Check for shared result
     shared = load_shared_result_from_url()
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🧠 MG-ADL</h2>
+    st.markdown(f"""
+    <h3 style='text-align: center; color: {COLORS['success']};'>🧠 MG-ADL (Myasthenia Gravis Activities of Daily Living)</h3>
     <p style='text-align: center; color: #6B7280;'>
-    Myasthenia Gravis Activities of Daily Living<br>
     Đánh giá mức độ nặng bệnh ở bệnh nhân nhược cơ (MG)
     </p>
     """, unsafe_allow_html=True)
@@ -257,15 +257,32 @@ def render():
         
         # Display results
         st.markdown("---")
-        st.markdown("### 📋 Kết quả MG-ADL")
+        st.subheader("📋 Kết quả")
         
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.metric("Điểm MG-ADL", f"{result['total_score']}/24")
-        
-        with col2:
-            st.metric("Mức độ", result['severity'])
+        if result['total_score'] <= 5:
+            color = COLORS["success"]
+            icon = "✅"
+            severity_class = "Nhẹ"
+        elif result['total_score'] <= 11:
+            color = COLORS["info"]
+            icon = "ℹ️"
+            severity_class = "Trung bình"
+        elif result['total_score'] <= 17:
+            color = COLORS["warning"]
+            icon = "⚠️"
+            severity_class = "Nặng"
+        else:
+            color = COLORS["error"]
+            icon = "🚨"
+            severity_class = "Rất nặng"
+
+        render_score_result(
+            title="MG-ADL Score",
+            score=result['total_score'],
+            interpretation=f"{result['severity']}\n({result['interpretation']})",
+            color=color,
+            icon=icon
+        )
         
         st.info(f"**{result['interpretation']}**")
         

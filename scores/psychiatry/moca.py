@@ -4,6 +4,9 @@ MoCA - Montreal Cognitive Assessment
 """
 
 import streamlit as st
+from config.theme import COLORS
+from components.ui.scoring import render_score_result
+from scores.utils.validation import validate_input_range
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -22,7 +25,7 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.title("🧠 MoCA - Montreal Cognitive Assessment")
+    st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>🧠 MoCA - Montreal Cognitive Assessment</h2>", unsafe_allow_html=True)
     st.caption("Đánh giá nhận thức Montreal - Nhạy hơn MMSE với suy giảm nhận thức nhẹ")
     
     # Introduction
@@ -130,36 +133,55 @@ def render():
     
     # Calculate button
     if st.button("🔬 Tính MoCA", type="primary", use_container_width=True):
+        # Validate inputs
+        validation_errors = []
+        
+        if not validate_input_range(visuospatial, "Thị-không gian", 0, 5)[0]:
+            validation_errors.append("Điểm Thị-không gian phải từ 0-5")
+        if not validate_input_range(naming, "Đặt tên", 0, 3)[0]:
+             validation_errors.append("Điểm Đặt tên phải từ 0-3")
+        if not validate_input_range(attention, "Chú ý", 0, 6)[0]:
+             validation_errors.append("Điểm Chú ý phải từ 0-6")
+        if not validate_input_range(language, "Ngôn ngữ", 0, 3)[0]:
+             validation_errors.append("Điểm Ngôn ngữ phải từ 0-3")
+        if not validate_input_range(abstraction, "Trừu tượng", 0, 2)[0]:
+             validation_errors.append("Điểm Trừu tượng phải từ 0-2")
+        if not validate_input_range(memory, "Trí nhớ", 0, 5)[0]:
+             validation_errors.append("Điểm Trí nhớ phải từ 0-5")
+        if not validate_input_range(orientation, "Định hướng", 0, 6)[0]:
+             validation_errors.append("Điểm Định hướng phải từ 0-6")
+             
+        if validation_errors:
+            st.error("**⚠️ Lỗi validation:**")
+            for error in validation_errors:
+                st.error(f"- {error}")
+            st.stop()
+            
         # Interpret score
         if total >= 26:
             status = "Bình thường"
-            color = "#28a745"
+            color = COLORS['success']
             icon = "✅"
             interpretation = "Không có suy giảm nhận thức"
         else:
             status = "Suy giảm nhận thức"
-            color = "#fd7e14"
+            color = COLORS['warning']
             icon = "⚠️"
             if total >= 18:
                 interpretation = "Suy giảm nhận thức nhẹ (MCI)"
             else:
                 interpretation = "Suy giảm nhận thức nặng (Dementia)"
+                color = COLORS['error']
         
         # Display result
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {color}22 0%, {color}44 100%); 
-                    padding: 30px; border-radius: 15px; border-left: 5px solid {color}; margin: 20px 0;'>
-            <h2 style='color: {color}; margin: 0; text-align: center;'>
-                {icon} MoCA: {total}/30
-            </h2>
-            <p style='text-align: center; font-size: 1.2em; margin-top: 10px; font-weight: bold;'>
-                {status}
-            </p>
-            <p style='text-align: center; margin-top: 10px;'>
-                {interpretation}
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        render_score_result(
+            title="Kết quả MoCA",
+            score=f"{total}/30",
+            interpretation=interpretation,
+            mortality=status,
+            color=color,
+            icon=icon
+        )
         
         # Chi tiết
         st.markdown("### 📊 Chi tiết điểm:")

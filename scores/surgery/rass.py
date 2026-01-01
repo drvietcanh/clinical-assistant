@@ -4,6 +4,7 @@ RASS - Richmond Agitation-Sedation Scale Calculator
 """
 
 import streamlit as st
+from config.theme import COLORS
 from scores.utils.anesthesia_validation import validate_rass_score
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
@@ -30,61 +31,61 @@ def get_rass_interpretation(score):
             "description": "Kích động nguy hiểm - Đánh, đá, cắn ống NKQ",
             "level": "Kích động nguy hiểm",
             "recommendation": "Cần tăng an thần ngay, có thể cần thuốc an thần mạnh",
-            "color": "red"
+            "color": COLORS["error"]
         },
         +3: {
             "description": "Kích động mạnh - Kéo hoặc loại bỏ ống NKQ, catheter",
             "level": "Kích động mạnh",
             "recommendation": "Cần tăng an thần, đảm bảo an toàn bệnh nhân",
-            "color": "red"
+            "color": COLORS["error"]
         },
         +2: {
             "description": "Kích động vừa - Cử động không mục đích, không hợp tác",
             "level": "Kích động vừa",
             "recommendation": "Cần tăng an thần nhẹ",
-            "color": "orange"
+            "color": COLORS["warning"]
         },
         +1: {
             "description": "Kích động nhẹ - Lo lắng, bồn chồn nhưng không kích động",
             "level": "Kích động nhẹ",
             "recommendation": "Có thể cần tăng an thần nhẹ",
-            "color": "yellow"
+            "color": COLORS["warning"]
         },
         0: {
             "description": "Tỉnh táo và yên tĩnh",
             "level": "Tỉnh táo",
             "recommendation": "Mức độ phù hợp cho bệnh nhân tỉnh",
-            "color": "green"
+            "color": COLORS["success"]
         },
         -1: {
             "description": "Buồn ngủ - Không hoàn toàn tỉnh táo, nhưng đáp ứng với gọi tên (mở mắt >10 giây)",
             "level": "Buồn ngủ",
             "recommendation": "Mức độ phù hợp cho bệnh nhân thở máy",
-            "color": "green"
+            "color": COLORS["success"]
         },
         -2: {
             "description": "An thần nhẹ - Đáp ứng với kích thích nhẹ (gọi tên, chạm nhẹ)",
             "level": "An thần nhẹ",
             "recommendation": "Mức độ phù hợp cho bệnh nhân thở máy",
-            "color": "green"
+            "color": COLORS["success"]
         },
         -3: {
             "description": "An thần vừa - Đáp ứng với kích thích vật lý (lắc vai, kích thích đau nhẹ)",
             "level": "An thần vừa",
             "recommendation": "Mức độ phù hợp cho bệnh nhân thở máy",
-            "color": "green"
+            "color": COLORS["success"]
         },
         -4: {
             "description": "An thần sâu - Đáp ứng với kích thích đau mạnh (ấn xương ức, kéo lông mày)",
             "level": "An thần sâu",
             "recommendation": "Có thể quá sâu, cân nhắc giảm liều",
-            "color": "orange"
+            "color": COLORS["warning"]
         },
         -5: {
             "description": "Không đáp ứng - Không đáp ứng với kích thích đau mạnh",
             "level": "An thần rất sâu",
             "recommendation": "Quá sâu, cần giảm liều an thần ngay",
-            "color": "red"
+            "color": COLORS["error"]
         }
     }
     
@@ -101,8 +102,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>😴 RASS - Richmond Agitation-Sedation Scale</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>😴 RASS - Richmond Agitation-Sedation Scale</h2>
     <p style='text-align: center;'><em>Đánh giá an thần/kích động (DÙNG HÀNG NGÀY)</em></p>
     """, unsafe_allow_html=True)
     
@@ -225,9 +226,9 @@ def render():
             st.markdown("---")
             
             # Recommendation
-            if result['color'] == "green":
+            if result['color'] == COLORS["success"]:
                 st.success(f"**Khuyến nghị:** {result['recommendation']}")
-            elif result['color'] == "orange" or result['color'] == "yellow":
+            elif result['color'] == COLORS["warning"]:
                 st.warning(f"**Khuyến nghị:** {result['recommendation']}")
             else:
                 st.error(f"**Khuyến nghị:** {result['recommendation']}")

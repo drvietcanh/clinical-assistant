@@ -4,6 +4,7 @@ Tiêu chuẩn xuất viện sau gây mê ngoại trú
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -34,11 +35,11 @@ def calculate_padss(vitals, ambulation, nausea_vomiting, pain, bleeding):
     if total >= 9:
         status = "Đủ tiêu chuẩn xuất viện"
         recommendation = "Có thể xuất viện về nhà (nếu phẫu thuật ngoại trú)"
-        color = "green"
+        color = COLORS["success"]
     else:
         status = "Chưa đủ tiêu chuẩn"
         recommendation = "Cần tiếp tục theo dõi tại phòng hồi tỉnh, đánh giá lại sau 30-60 phút"
-        color = "orange"
+        color = COLORS["warning"]
     
     return {
         "total_score": total,
@@ -58,8 +59,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🏥 PADSS - Post-Anesthesia Discharge Scoring System</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🏥 PADSS - Post-Anesthesia Discharge Scoring System</h2>
     <p style='text-align: center;'><em>Tiêu chuẩn xuất viện sau gây mê ngoại trú</em></p>
     """, unsafe_allow_html=True)
     
@@ -220,7 +221,7 @@ def render():
             st.markdown("---")
             
             # Status interpretation
-            if result['color'] == "green":
+            if result['color'] == COLORS["success"]:
                 st.success(f"**{result['status']}**")
             else:
                 st.warning(f"**{result['status']}**")

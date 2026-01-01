@@ -4,6 +4,7 @@ Nguy cơ buồn nôn nôn sau mổ - Phiên bản mở rộng
 """
 
 import streamlit as st
+from config.theme import COLORS
 # ========== PHASE 1 IMPORTS ==========
 from scores.references_config import get_references
 from components.references import render_references_section
@@ -11,7 +12,7 @@ from components.calculation_history import save_calculation_to_history, render_h
 from components.share_results import render_share_section, load_shared_result_from_url
 from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
-from scores.utils.anesthesia_validation import validate_surgery_duration
+from scores.utils.validation import validate_input_range
 
 
 def calculate_koivuranta_ponv(female, non_smoker, history_ponv, duration_surgery, type_anesthesia):
@@ -85,8 +86,8 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
-    <h2 style='text-align: center; color: #10B981;'>🤢 Koivuranta PONV Risk Score</h2>
+    st.markdown(f"""
+    <h2 style='text-align: center; color: {COLORS['success']};'>🤢 Koivuranta PONV Risk Score</h2>
     <p style='text-align: center;'><em>Nguy cơ buồn nôn nôn sau mổ - Phiên bản mở rộng</em></p>
     """, unsafe_allow_html=True)
     
@@ -164,7 +165,7 @@ def render():
     
     if st.button("🔬 Tính điểm Koivuranta PONV", type="primary", use_container_width=True):
         # Validation
-        is_valid, error_msg = validate_surgery_duration(duration_surgery)
+        is_valid, error_msg = validate_input_range(duration_surgery, "Thời gian phẫu thuật", 0, 600, "phút")
         
         if not is_valid:
             st.error(f"❌ Lỗi: {error_msg}")

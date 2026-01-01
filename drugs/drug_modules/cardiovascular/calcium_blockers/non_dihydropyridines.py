@@ -80,7 +80,19 @@ NON_DIHYDROPYRIDINE_CCB = {
             "clearance": "Chủ yếu qua gan, cần điều chỉnh ở suy gan"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén extended-release: không nghiền, không nhai.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, block nhĩ thất và nhịp tim chậm có thể nặng, đặc biệt khi dùng với beta-blockers. Suy tim có thể nặng lên. Không dùng ở block nhĩ thất độ 2-3 hoặc sick sinus syndrome (trừ khi có máy tạo nhịp).",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, block nhĩ thất và nhịp tim chậm có thể nặng.",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Cardiac (AV block, bradycardia)", "Heart Failure exacerbation"],
+            "requires_monitoring": ["ECG (AV block)", "Heart rate", "Blood pressure", "Liver function"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Atrial Fibrillation",
+            "ACC/AHA Guidelines - Hypertension",
+            "ESC Guidelines - Atrial Fibrillation"
+        ],
         "drug_interactions": {
             "major": [
                 {
@@ -320,7 +332,19 @@ NON_DIHYDROPYRIDINE_CCB = {
             "clearance": "Chủ yếu qua gan, cần điều chỉnh ở suy gan"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nén extended-release: không nghiền, không nhai.",
-        "black_box_warnings": "Không có black box warning. Tuy nhiên, block nhĩ thất và nhịp tim chậm có thể nặng, đặc biệt khi dùng với beta-blockers. Suy tim có thể nặng lên. Không dùng ở block nhĩ thất độ 2-3 hoặc sick sinus syndrome (trừ khi có máy tạo nhịp).",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, block nhĩ thất và nhịp tim chậm có thể nặng.",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Cardiac (Severe AV block, bradycardia)", "Heart Failure exacerbation"],
+            "requires_monitoring": ["ECG (AV block)", "Heart rate", "Blood pressure", "Liver function"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Atrial Fibrillation",
+            "ACC/AHA Guidelines - Hypertension",
+            "ESC Guidelines - Atrial Fibrillation"
+        ],
         "drug_interactions": {
             "major": [
                 {

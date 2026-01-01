@@ -4,6 +4,7 @@ Handles all results display sections
 """
 
 import streamlit as st
+from config.theme import COLORS
 
 
 def render_results_display(fena, interpretation, on_diuretics):
@@ -21,7 +22,7 @@ def render_results_display(fena, interpretation, on_diuretics):
     interpretation_text = interpretation["interpretation"]
     cause = interpretation["cause"]
     
-    if color == "info":
+    if color == COLORS["info"]:
         st.info(f"""
         **FENa = {fena:.2f}%**
         
@@ -29,7 +30,7 @@ def render_results_display(fena, interpretation, on_diuretics):
         
         {cause}
         """)
-    elif color == "warning":
+    elif color == COLORS["warning"]:
         st.warning(f"""
         **FENa = {fena:.2f}%**
         
