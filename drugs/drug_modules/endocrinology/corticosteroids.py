@@ -1,0 +1,174 @@
+"""
+Corticosteroids (Thuốc Corticoid)
+Nhóm thuốc kháng viêm mạnh, ức chế miễn dịch, dùng rất phổ biến trong lâm sàng.
+"""
+
+CORTICOSTEROIDS_DRUGS = {
+    "Prednisone": {
+        "group": "Endocrinology - Corticosteroid (Oral)",
+        "vietnamese_name": "Prednisone, Prednisolone",
+        "brand_names": {
+            "common": ["Deltasone", "Prednisolone"],
+            "vietnam": ["Prednisone 5mg", "Prednisolone 5mg"]
+        },
+        "administration": ["PO"],
+        "indications": [
+            "Viêm khớp dạng thấp (Rheumatoid Arthritis)",
+            "Lupus ban đỏ hệ thống (SLE)",
+            "Hen phế quản cấp",
+            "COPD cấp",
+            "Bệnh viêm ruột (IBD)",
+            "Phản ứng dị ứng nặng",
+            "Bệnh thận (Hội chứng thận hư)",
+            "Bệnh da (Pemphigus, Dermatitis nặng)"
+        ],
+        "contraindications": [
+            "Nhiễm trùng nấm toàn thân",
+            "Tiêm vắc-xin sống (khi dùng liều cao)"
+        ],
+        "dosage": {
+            "ra_sle": "5-60mg/ngày, tùy mức độ nặng. Giảm liều dần khi đáp ứng.",
+            "asthma_exacerbation": "40-60mg/ngày x 5-7 ngày.",
+            "copd_exacerbation": "40mg/ngày x 5 ngày.",
+            "notes": "Uống buổi sáng để giảm ức chế trục HPA. Giảm liều từ từ khi dùng >2 tuần để tránh suy thượng thận."
+        },
+        "side_effects": [
+            "Tăng đường huyết (Đái tháo đường do steroid)",
+            "Tăng huyết áp",
+            "Tăng cân, mặt trăng (Cushingoid)",
+            "Loãng xương (Osteoporosis)",
+            "Tăng nguy cơ nhiễm trùng",
+            "Loét dạ dày",
+            "Rối loạn tâm thần (Psychosis, Mania)",
+            "Suy thượng thận (nếu ngừng đột ngột sau dùng lâu dài)"
+        ],
+        "interactions": [
+            "NSAIDs: Tăng nguy cơ loét dạ dày.",
+            "Warfarin: Có thể tăng hoặc giảm INR.",
+            "Thuốc hạ đường huyết: Giảm hiệu quả (steroid tăng đường huyết).",
+            "Vaccine sống: Tăng nguy cơ nhiễm trùng từ vaccine."
+        ],
+        "mechanism_of_action": "Corticosteroid tổng hợp, chống viêm mạnh bằng cách ức chế phospholipase A2, giảm tổng hợp prostaglandin và leukotriene. Ức chế miễn dịch bằng cách giảm hoạt động lymphocyte và macrophage.",
+        "monitoring": [
+            "Đường huyết (đặc biệt ở bệnh nhân đái tháo đường)",
+            "Huyết áp",
+            "Cân nặng",
+            "Mật độ xương (DEXA scan nếu dùng lâu dài)",
+            "Dấu hiệu nhiễm trùng",
+            "Dấu hiệu loét dạ dày"
+        ],
+        "precautions": [
+            "Uống buổi sáng với thức ăn để giảm kích ứng dạ dày",
+            "KHÔNG NGỪNG ĐỘT NGỘT nếu dùng >2 tuần (nguy cơ suy thượng thận)",
+            "Giảm liều từ từ (taper) khi ngừng",
+            "Tăng đường huyết - Theo dõi glucose máu",
+            "Tăng nguy cơ nhiễm trùng - Tránh tiếp xúc người bệnh",
+            "Loãng xương - Bổ sung Calci + Vitamin D",
+            "Cân nhắc dùng PPI để bảo vệ dạ dày"
+        ],
+        "black_box_warnings": "Suy thượng thận nghiêm trọng nếu ngừng đột ngột sau dùng lâu dài. Tăng nguy cơ nhiễm trùng nghiêm trọng."
+    },
+
+    "Dexamethasone": {
+        "group": "Endocrinology - Corticosteroid (Oral/IV)",
+        "vietnamese_name": "Dexamethasone",
+        "brand_names": {
+            "common": ["Decadron"],
+            "vietnam": ["Dexamethasone 0.5mg/4mg", "Dexamethasone injection"]
+        },
+        "administration": ["PO", "IV", "IM"],
+        "dosage": {
+            "cerebral_edema": "10mg IV, sau đó 4mg IV/IM mỗi 6h.",
+            "covid19_severe": "6mg PO/IV x 1 lần/ngày x 10 ngày (RECOVERY trial).",
+            "antiemetic_chemo": "8-20mg IV trước hóa trị.",
+            "croup": "0.6mg/kg PO/IM x 1 liều (trẻ em).",
+            "notes": "Corticoid mạnh nhất, tác dụng kéo dài (36-72h). Không có tác dụng mineralocorticoid."
+        },
+        "indications": [
+            "Phù não (Cerebral edema)",
+            "COVID-19 nặng cần oxy (Chỉ định mới từ 2020)",
+            "Chống nôn do hóa trị",
+            "Viêm thanh quản cấp (Croup) ở trẻ em",
+            "Viêm khớp, Lupus (tương tự Prednisone)"
+        ],
+        "side_effects": [
+            "Tương tự Prednisone nhưng mạnh hơn",
+            "Tăng đường huyết cao hơn",
+            "Ức chế miễn dịch mạnh hơn"
+        ],
+        "mechanism_of_action": "Corticoid tổng hợp mạnh nhất, tác dụng kéo dài. Không có tác dụng mineralocorticoid (không giữ nước/natri). Chống viêm và ức chế miễn dịch mạnh.",
+        "monitoring": [
+            "Đường huyết (tăng cao)",
+            "Dấu hiệu nhiễm trùng",
+            "Huyết áp"
+        ],
+        "black_box_warnings": "Tương tự Prednisone. Suy thượng thận nếu ngừng đột ngột."
+    },
+
+    "Hydrocortisone": {
+        "group": "Endocrinology - Corticosteroid (IV/PO/Topical)",
+        "vietnamese_name": "Hydrocortisone, Cortisol",
+        "brand_names": {
+            "common": ["Solu-Cortef (IV)", "Hydrocortisone cream"],
+            "vietnam": ["Hydrocortisone 100mg injection", "Hydrocortisone cream 1%"]
+        },
+        "administration": ["PO", "IV", "IM", "Topical"],
+        "indications": [
+            "Suy thượng thận cấp (Adrenal crisis)",
+            "Sốc nhiễm trùng (Septic shock) không đáp ứng với vasopressor",
+            "Viêm da (Topical)",
+            "Thay thế hormone ở suy thượng thận mạn"
+        ],
+        "dosage": {
+            "adrenal_crisis": "100mg IV bolus, sau đó 50-100mg IV mỗi 6-8h.",
+            "septic_shock": "50mg IV mỗi 6h hoặc 200mg/ngày truyền liên tục.",
+            "replacement_therapy": "15-25mg/ngày PO chia 2-3 lần (buổi sáng liều cao hơn).",
+            "topical": "Bôi 1-2 lần/ngày.",
+            "notes": "Có cả tác dụng glucocorticoid và mineralocorticoid (giữ nước/natri)."
+        },
+        "side_effects": [
+            "Tương tự Prednisone",
+            "Giữ nước, phù (do tác dụng mineralocorticoid)"
+        ],
+        "mechanism_of_action": "Corticoid tự nhiên (cortisol sinh tổng hợp). Có cả tác dụng glucocorticoid (chống viêm) và mineralocorticoid (giữ nước/natri). Dùng thay thế hormone ở suy thượng thận.",
+        "monitoring": [
+            "Đường huyết, huyết áp",
+            "Natri, Kali (do tác dụng mineralocorticoid)",
+            "Dấu hiệu phù"
+        ]
+    },
+
+    "Methylprednisolone": {
+        "group": "Endocrinology - Corticosteroid (IV/PO)",
+        "vietnamese_name": "Methylprednisolone, Medrol",
+        "brand_names": {
+            "common": ["Solu-Medrol (IV)", "Medrol (PO)"],
+            "vietnam": ["Solu-Medrol 40mg/125mg", "Medrol 16mg"]
+        },
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Chấn thương tủy sống cấp (Spinal cord injury) - Liều cao",
+            "Lupus thận nặng (Lupus nephritis)",
+            "Viêm khớp dạng thấp",
+            "Hen phế quản cấp, COPD cấp",
+            "Thải ghép cấp"
+        ],
+        "dosage": {
+            "spinal_cord_injury": "30mg/kg IV bolus, sau đó 5.4mg/kg/h x 23h (trong 8h đầu sau chấn thương).",
+            "lupus_nephritis": "500-1000mg IV x 3 ngày (pulse therapy).",
+            "asthma_copd": "40-125mg IV/PO mỗi 6h.",
+            "notes": "Methylprednisolone mạnh hơn Prednisone ~1.25 lần. Dạng IV (Solu-Medrol) dùng cho cấp cứu."
+        },
+        "side_effects": [
+            "Tương tự Prednisone",
+            "Liều cao (pulse therapy): Tăng đường huyết nặng, rối loạn tâm thần"
+        ],
+        "mechanism_of_action": "Corticoid tổng hợp, mạnh hơn Prednisone. Dùng cho các tình huống cấp cứu (IV) hoặc bệnh nặng.",
+        "monitoring": [
+            "Đường huyết (đặc biệt với liều cao)",
+            "Huyết áp",
+            "Dấu hiệu nhiễm trùng",
+            "Tâm thần (với liều cao)"
+        ]
+    }
+}

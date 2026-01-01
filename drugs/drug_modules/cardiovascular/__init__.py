@@ -11,7 +11,8 @@ from .vasodilators import VASODILATORS
 from .ace_inhibitors import ACE_INHIBITORS
 from .arbs import ARBS
 from .beta_blockers import BETA_BLOCKERS
-from .statins import STATINS
+from .statins import STATINS_DRUGS  # Updated to match new file
+from .ace_arb import ACE_ARB_DRUGS  # New combined ACE-I/ARB module
 from .cholesterol_absorption_inhibitors import CHOLESTEROL_ABSORPTION_INHIBITORS
 from .antiarrhythmics import ANTIARRHYTHMICS
 from .calcium_blockers import CALCIUM_BLOCKERS
@@ -33,7 +34,8 @@ CARDIOVASCULAR_DRUGS = {
     **ACE_INHIBITORS,
     **ARBS,
     **BETA_BLOCKERS,
-    **STATINS,
+    **STATINS_DRUGS,  # New statins (Atorvastatin, Simvastatin, Rosuvastatin, Pravastatin)
+    **ACE_ARB_DRUGS,  # New combined module (Lisinopril, Losartan, etc.)
     **CHOLESTEROL_ABSORPTION_INHIBITORS,
     **ANTIARRHYTHMICS,
     **CALCIUM_BLOCKERS,
@@ -44,7 +46,7 @@ CARDIOVASCULAR_DRUGS = {
     **CARDIOVASCULAR_FIXED_DOSE_COMBINATIONS,
     # Merged from cardiovascular_other
     **ANTIPLATELETS_DRUGS,
-    **STATINS_OTHER_DRUGS,
+    **STATINS_OTHER_DRUGS,  # May have duplicates with STATINS_DRUGS - need to check
     **ACE_INHIBITORS_IV_DRUGS,
 }
 

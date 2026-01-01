@@ -3,6 +3,9 @@ Hematology and Anticoagulant Medications
 Contains antiplatelet medications
 """
 
+from .anticoagulants_common import ANTICOAGULANTS_COMMON
+from .anemia import ANEMIA_DRUGS
+
 HEMATOLOGY_DRUGS = {
     "Alteplase": {
         "group": "Hematology - Thrombolytic (tPA)",
@@ -3723,7 +3726,10 @@ HEMATOLOGY_DRUGS = {
             "evidence_level": "High - FDA-approved, widely used in clinical practice"
         }
     },
-    
+    # Merge common anticoagulants (Warfarin, Rivaroxaban, Enoxaparin)
+    **ANTICOAGULANTS_COMMON,
+    # Merge anemia drugs (Iron, Erythropoietin)
+    **ANEMIA_DRUGS,
 }
 
 __all__ = ['HEMATOLOGY_DRUGS']

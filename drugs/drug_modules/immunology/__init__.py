@@ -1,0 +1,5 @@
+from .immunosuppressants import IMMUNOSUPPRESSANTS_DRUGS
+
+IMMUNOLOGY_DRUGS = {
+    **IMMUNOSUPPRESSANTS_DRUGS
+}

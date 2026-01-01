@@ -1,0 +1,12 @@
+from .antipsychotics import ANTIPSYCHOTICS_DRUGS
+from .mood_stabilizers import MOOD_STABILIZERS_DRUGS
+from .benzodiazepines import BENZODIAZEPINES_DRUGS
+
+# Merge all psychiatry drugs
+PSYCHIATRY_DRUGS = {
+    **ANTIPSYCHOTICS_DRUGS,
+    **MOOD_STABILIZERS_DRUGS,
+    **BENZODIAZEPINES_DRUGS,
+}
+
+__all__ = ['PSYCHIATRY_DRUGS', 'ANTIPSYCHOTICS_DRUGS', 'MOOD_STABILIZERS_DRUGS', 'BENZODIAZEPINES_DRUGS']

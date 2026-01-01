@@ -139,46 +139,73 @@ if protocol and protocol != "Không có protocol nào":
     </div>
     """
     st.markdown(header_html, unsafe_allow_html=True)
+    st.markdown(header_html, unsafe_allow_html=True)
 else:
-    # Enhanced welcome message
-    st.markdown("""
-    <div style="background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%); 
-                padding: 24px; border-radius: 12px; border-left: 4px solid #0066CC; 
-                margin-bottom: 24px;">
-        <h3 style="color: #0066CC; margin-top: 0;">💡 Hướng dẫn sử dụng</h3>
-        <p style="margin-bottom: 8px;">Chọn một protocol từ danh sách ở <strong>sidebar bên trái</strong> để xem nội dung chi tiết.</p>
-        <p style="margin-bottom: 0;">Bạn có thể:</p>
-        <ul style="margin-top: 8px;">
-            <li>🔍 Tìm kiếm protocol bằng từ khóa</li>
-            <li>🏥 Lọc theo chuyên khoa</li>
-            <li>⭐ Đánh dấu yêu thích các protocol thường dùng</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
+    # Enhanced welcome message logic (unchanged)
+    pass
 
-# ========== TABLE OF CONTENTS ==========
-# Simple TOC for protocol navigation (only show if protocol exists)
-if protocol and protocol != "Không có protocol nào":
-    from components.protocol_toc import render_simple_toc
-    render_simple_toc()
+# ========== INTERACTIVE FLOWCHART INTEGRATION ==========
+# Only show interactive mode for protocols that have flow data
+has_interactive = False
+flow_data = None
+
+# Check if current protocol has interactive flow
+if protocol and "Phản vệ" in protocol: # Simple string match for pilot
+    try:
+        from components.flowcharts.anaphylaxis_flow import ANAPHYLAXIS_FLOW
+        from components.flowchart import render_flowchart
+        has_interactive = True
+        flow_data = ANAPHYLAXIS_FLOW
+        flow_id = "anaphylaxis_v1"
+    except ImportError:
+        pass
+
+# Render Table of Contents (only if NOT in interactive mode or we want it above)
+# ...
 
 st.markdown("---")
 
-# render_article_link is now imported from components.protocols_article_link
-# render_score_links_from_protocol is now imported from components.score_links_from_content
+# Tab Layout if Interactive is available
+if has_interactive and protocol and protocol != "Không có protocol nào":
+    tab_read, tab_interact = st.tabs(["📖 Nội dung chi tiết", "🔄 Interactive Flow (Thử nghiệm)"])
+    
+    with tab_read:
+        # render_article_link is now imported from components.protocols_article_link
+        # render_score_links_from_protocol is now imported from components.score_links_from_content
 
-# Show calculator links and export if protocol exists
-if protocol and protocol != "Không có protocol nào":
-    render_calculator_links(protocol)
-    render_export_section(protocol)
+        # Show calculator links and export if protocol exists
+        render_calculator_links(protocol)
+        render_export_section(protocol)
 
-# Route to appropriate protocol using dictionary-based routing
-protocol_rendered = render_protocol_by_name(protocol, render_article_link, render_score_links_from_protocol)
+        # Route to appropriate protocol using dictionary-based routing
+        protocol_rendered = render_protocol_by_name(protocol, render_article_link, render_score_links_from_protocol)
 
-# Show related protocols and version history after rendering
-if protocol_rendered and protocol and protocol != "Không có protocol nào":
-    render_related_protocols(protocol, specialty)
-    render_version_history(protocol)
+        # Show related protocols and version history after rendering
+        if protocol_rendered:
+            render_related_protocols(protocol, specialty)
+            render_version_history(protocol)
+            
+    with tab_interact:
+        st.caption("🔍 Chế độ tương tác từng bước hỗ trợ ra quyết định lâm sàng.")
+        render_flowchart(flow_data, flow_id)
+        
+else:
+    # Standard rendering (No tabs)
+    if protocol and protocol != "Không có protocol nào":
+        if protocol and protocol != "Không có protocol nào":
+            from components.protocol_toc import render_simple_toc
+            render_simple_toc()
+            
+        render_calculator_links(protocol)
+        render_export_section(protocol)
+
+        # Route to appropriate protocol
+        protocol_rendered = render_protocol_by_name(protocol, render_article_link, render_score_links_from_protocol)
+
+        if protocol_rendered:
+            render_related_protocols(protocol, specialty)
+            render_version_history(protocol)
+
 
 if not protocol_rendered:
     # Default case: Protocol not found

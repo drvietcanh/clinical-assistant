@@ -11,6 +11,7 @@ from .local_anesthetic__antiarrhythmic_class_ibs import LOCAL_ANESTHETIC_ANTIARR
 from .electrolytes import ELECTROLYTES_DRUGS
 from .uterotonics import UTEROTONICS_DRUGS
 from .neuromuscular_blockers import NEUROMUSCULAR_BLOCKERS_DRUGS
+from .fluids import FLUIDS_DRUGS
 
 # Merge all categories
 EMERGENCY_DRUGS = {
@@ -23,6 +24,7 @@ EMERGENCY_DRUGS = {
     **ELECTROLYTES_DRUGS,
     **UTEROTONICS_DRUGS,
     **NEUROMUSCULAR_BLOCKERS_DRUGS,
+    **FLUIDS_DRUGS,
 }
 
 __all__ = ['EMERGENCY_DRUGS']

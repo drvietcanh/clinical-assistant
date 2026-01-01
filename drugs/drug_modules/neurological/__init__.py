@@ -14,6 +14,7 @@ from .antiparkinsonian import ANTIPARKINSONIAN_DRUGS
 from .cerebral_circulation import CEREBRAL_CIRCULATION_DRUGS
 from .neurological_combinations import NEUROLOGICAL_COMBINATIONS_DRUGS
 from .migraine_cgrp_drugs import MIGRAINE_CGRP_DRUGS
+from .migraine_triptans import MIGRAINE_TRIPTANS
 from .multiple_sclerosis_drugs import MULTIPLE_SCLEROSIS_DRUGS
 
 # Import from psychiatry_other (merged into neurological module)
@@ -36,6 +37,7 @@ NEUROLOGICAL_DRUGS = {
     **CEREBRAL_CIRCULATION_DRUGS,
     **NEUROLOGICAL_COMBINATIONS_DRUGS,
     **MIGRAINE_CGRP_DRUGS,
+    **MIGRAINE_TRIPTANS,
     **MULTIPLE_SCLEROSIS_DRUGS,
     # Merged from psychiatry_other
     **SSRI_DRUGS,

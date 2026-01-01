@@ -1,409 +1,109 @@
 """
-Interactive Flowchart Component
-Visual flowcharts for diagnostic algorithms and clinical decision trees
+Interactive Flowchart Engine
+Renders a step-by-step wizard based on node-link data structure.
 """
 
 import streamlit as st
-import streamlit.components.v1 as components
-from typing import List, Dict, Any, Optional, Tuple
-from enum import Enum
-
-
-class NodeType(Enum):
-    """Node types in flowchart"""
-    START = "start"
-    DECISION = "decision"
-    ACTION = "action"
-    END = "end"
-    TEST = "test"
-
-
-class FlowchartNode:
-    """Represents a node in the flowchart"""
-    
-    def __init__(
-        self,
-        id: str,
-        label: str,
-        node_type: NodeType = NodeType.ACTION,
-        options: Optional[Dict[str, str]] = None,
-        color: Optional[str] = None,
-        icon: Optional[str] = None
-    ):
-        self.id = id
-        self.label = label
-        self.node_type = node_type
-        self.options = options or {}
-        self.color = color
-        self.icon = icon
-    
-    def get_color(self) -> str:
-        """Get color for node based on type"""
-        if self.color:
-            return self.color
-        
-        color_map = {
-            NodeType.START: "#28a745",  # Green
-            NodeType.DECISION: "#ffc107",  # Yellow
-            NodeType.ACTION: "#17a2b8",  # Blue
-            NodeType.TEST: "#6f42c1",  # Purple
-            NodeType.END: "#dc3545"  # Red
-        }
-        return color_map.get(self.node_type, "#6c757d")
-    
-    def get_shape(self) -> str:
-        """Get HTML shape for node"""
-        shape_map = {
-            NodeType.START: "ellipse",
-            NodeType.DECISION: "diamond",
-            NodeType.ACTION: "rect",
-            NodeType.TEST: "rect",
-            NodeType.END: "ellipse"
-        }
-        return shape_map.get(self.node_type, "rect")
-
-
-class FlowchartEdge:
-    """Represents an edge (connection) in the flowchart"""
-    
-    def __init__(
-        self,
-        from_node: str,
-        to_node: str,
-        label: Optional[str] = None,
-        color: Optional[str] = None
-    ):
-        self.from_node = from_node
-        self.to_node = to_node
-        self.label = label
-        self.color = color or "#495057"
-
-
-def render_flowchart_node_html(node: FlowchartNode, x: float, y: float, width: float = 150, height: float = 60) -> str:
-    """Render a single node as HTML"""
-    color = node.get_color()
-    shape = node.get_shape()
-    icon = f"{node.icon} " if node.icon else ""
-    
-    # Node styling based on shape
-    if shape == "ellipse":
-        border_radius = "50%"
-    elif shape == "diamond":
-        # Diamond shape using CSS transform
-        return f"""
-        <div id="node-{node.id}" 
-             style="
-                 position: absolute;
-                 left: {x}px;
-                 top: {y}px;
-                 width: {width}px;
-                 height: {height}px;
-                 background: {color}15;
-                 border: 3px solid {color};
-                 transform: rotate(45deg);
-                 display: flex;
-                 align-items: center;
-                 justify-content: center;
-                 cursor: pointer;
-                 transition: all 0.3s;
-                 z-index: 10;
-             "
-             onmouseover="this.style.transform='rotate(45deg) scale(1.1)'; this.style.zIndex='100';"
-             onmouseout="this.style.transform='rotate(45deg) scale(1)'; this.style.zIndex='10';"
-             title="{node.label}">
-            <div style="
-                transform: rotate(-45deg);
-                font-size: 0.85rem;
-                font-weight: bold;
-                color: {color};
-                text-align: center;
-                padding: 8px;
-            ">
-                {icon}{node.label}
-            </div>
-        </div>
-        """
-    else:
-        border_radius = "8px"
-    
-    return f"""
-    <div id="node-{node.id}" 
-         style="
-             position: absolute;
-             left: {x}px;
-             top: {y}px;
-             width: {width}px;
-             height: {height}px;
-             background: {color}15;
-             border: 3px solid {color};
-             border-radius: {border_radius};
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             cursor: pointer;
-             transition: all 0.3s;
-             z-index: 10;
-             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-         "
-         onmouseover="this.style.transform='scale(1.1)'; this.style.zIndex='100'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';"
-         onmouseout="this.style.transform='scale(1)'; this.style.zIndex='10'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)';"
-         title="{node.label}">
-        <div style="
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: {color};
-            text-align: center;
-            padding: 8px;
-        ">
-            {icon}{node.label}
-        </div>
-    </div>
-    """
-
-
-def render_flowchart_edge_html(edge: FlowchartEdge, nodes: Dict[str, Tuple[float, float]], node_width: float = 150, node_height: float = 60) -> str:
-    """Render an edge (arrow) as SVG"""
-    from_pos = nodes.get(edge.from_node, (0, 0))
-    to_pos = nodes.get(edge.to_node, (0, 0))
-    
-    # Calculate arrow path
-    from_x = from_pos[0] + node_width / 2
-    from_y = from_pos[1] + node_height
-    to_x = to_pos[0] + node_width / 2
-    to_y = to_pos[1]
-    
-    # Arrow path
-    mid_x = (from_x + to_x) / 2
-    mid_y = (from_y + to_y) / 2
-    
-    # Label position
-    label_x = mid_x
-    label_y = mid_y - 10
-    
-    # Arrow SVG
-    arrow_svg = f"""
-    <svg style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;">
-        <defs>
-            <marker id="arrowhead-{edge.from_node}-{edge.to_node}" 
-                    markerWidth="10" markerHeight="10" 
-                    refX="9" refY="3" 
-                    orient="auto">
-                <polygon points="0 0, 10 3, 0 6" fill="{edge.color}" />
-            </marker>
-        </defs>
-        <line x1="{from_x}" y1="{from_y}" 
-              x2="{to_x}" y2="{to_y}" 
-              stroke="{edge.color}" 
-              stroke-width="2" 
-              marker-end="url(#arrowhead-{edge.from_node}-{edge.to_node})" />
-        {f'<text x="{label_x}" y="{label_y}" fill="{edge.color}" font-size="12px" font-weight="bold" text-anchor="middle">{edge.label}</text>' if edge.label else ''}
-    </svg>
-    """
-    
-    return arrow_svg
-
+from typing import Dict, Any, Optional
 
 def render_flowchart(
-    nodes: List[FlowchartNode],
-    edges: List[FlowchartEdge],
-    title: str = "Clinical Algorithm",
-    width: int = 800,
-    height: int = 600,
-    interactive: bool = True
-) -> None:
+    data: Dict[str, Any],
+    flow_id: str
+):
     """
-    Render an interactive flowchart
+    Render interactive flowchart
     
     Args:
-        nodes: List of FlowchartNode objects
-        edges: List of FlowchartEdge objects
-        title: Flowchart title
-        width: Canvas width
-        height: Canvas height
-        interactive: Whether to enable interactive features
-    """
-    st.markdown(f"### {title}")
-    
-    # Calculate node positions (simple layout)
-    node_positions = {}
-    node_width = 150
-    node_height = 60
-    spacing_x = 200
-    spacing_y = 120
-    
-    # Simple grid layout
-    cols = 3
-    for idx, node in enumerate(nodes):
-        row = idx // cols
-        col = idx % cols
-        x = col * spacing_x + 50
-        y = row * spacing_y + 50
-        node_positions[node.id] = (x, y)
-    
-    # Build HTML
-    nodes_html = "\n".join([
-        render_flowchart_node_html(node, *node_positions[node.id], node_width, node_height)
-        for node in nodes
-    ])
-    
-    edges_html = "\n".join([
-        render_flowchart_edge_html(edge, node_positions, node_width, node_height)
-        for edge in edges
-    ])
-    
-    flowchart_html = f"""
-    <div style="
-        position: relative;
-        width: {width}px;
-        height: {height}px;
-        margin: 2rem auto;
-        background: #f8f9fa;
-        border: 2px solid #dee2e6;
-        border-radius: 8px;
-        overflow: auto;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    ">
-        {edges_html}
-        {nodes_html}
-    </div>
+        data: Flowchart definition (nodes, start_node_id)
+        flow_id: Unique ID for this flowchart instance (for session state)
     """
     
-    # Use components.html thay vì markdown để tránh Streamlit escape các thẻ SVG
-    components.html(flowchart_html, height=height + 100, scrolling=True)
+    # Initialize session state for this flow
+    state_key = f"flow_state_{flow_id}"
+    history_key = f"flow_history_{flow_id}"
     
-    # Legend - Dùng components.html để render HTML đúng cách
-    st.markdown("**Chú thích:**")
+    if state_key not in st.session_state:
+        st.session_state[state_key] = data.get("start_node_id")
+        st.session_state[history_key] = []
+        
+    current_node_id = st.session_state[state_key]
     
-    legend_items = []
-    color_map = {
-        NodeType.START: ("#28a745", "🟢 Start"),
-        NodeType.DECISION: ("#ffc107", "🟡 Decision"),
-        NodeType.ACTION: ("#17a2b8", "🔵 Action"),
-        NodeType.TEST: ("#6f42c1", "🟣 Test"),
-        NodeType.END: ("#dc3545", "🔴 End")
-    }
-    
-    for node_type in NodeType:
-        color, label = color_map.get(node_type, ("#6c757d", "Node"))
-        legend_items.append(f"""
-        <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.25rem;">
-            <div style="
-                width: 20px;
-                height: 20px;
-                background: {color}20;
-                border: 2px solid {color};
-                border-radius: 4px;
-                flex-shrink: 0;
-            "></div>
-            <span style="font-size: 0.85rem;">{label}</span>
-        </div>
-        """)
-    
-    legend_html = f"""
-    <div style="
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin: 0.5rem 0;
-        padding: 0.75rem;
-        background: #f8f9fa;
-        border-radius: 8px;
-    ">
-        {''.join(legend_items)}
-    </div>
-    """
-    
-    components.html(legend_html, height=60)
+    # Handle completion or invalid state
+    if not current_node_id or current_node_id not in data["nodes"]:
+        st.error(f"Lỗi: Không tìm thấy bước '{current_node_id}'")
+        if st.button("Quay lại từ đầu"):
+             st.session_state[state_key] = data.get("start_node_id")
+             st.session_state[history_key] = []
+             st.rerun()
+        return
 
-
-def create_chest_pain_algorithm() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
-    """
-    Create chest pain diagnostic algorithm
+    node = data["nodes"][current_node_id]
     
-    Dựa trên:
-    - AHA/ACC Guidelines for Management of Patients with STEMI (2023)
-    - ESC Guidelines for Management of Acute Coronary Syndromes (2023)
-    - AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for Evaluation and Diagnosis of Chest Pain (2021)
-    """
-    nodes = [
-        FlowchartNode("start", "Chest Pain Present?", NodeType.START, icon="🚨"),
-        FlowchartNode("ecg", "ECG", NodeType.TEST, icon="📊"),
-        FlowchartNode("stemi", "STEMI", NodeType.ACTION, color="#dc3545", icon="🔴"),
-        FlowchartNode("troponin", "Troponin", NodeType.TEST, icon="🧪"),
-        FlowchartNode("positive", "Positive", NodeType.ACTION, color="#ffc107", icon="⚠️"),
-        FlowchartNode("negative", "Negative", NodeType.ACTION, color="#28a745", icon="✅"),
-        FlowchartNode("cath", "Cath Lab", NodeType.END, color="#dc3545", icon="🏥"),
-        FlowchartNode("monitor", "Monitor & Reassess", NodeType.END, color="#17a2b8", icon="👁️"),
-        FlowchartNode("discharge", "Consider Discharge", NodeType.END, color="#28a745", icon="🏠"),
-    ]
+    # Progress Bar (optional, simplistic)
+    # Could be improved by calculating depth
     
-    edges = [
-        FlowchartEdge("start", "ecg", "Yes"),
-        FlowchartEdge("ecg", "stemi", "STEMI"),
-        FlowchartEdge("ecg", "troponin", "Not STEMI"),
-        FlowchartEdge("stemi", "cath", ""),
-        FlowchartEdge("troponin", "positive", "Elevated"),
-        FlowchartEdge("troponin", "negative", "Normal"),
-        FlowchartEdge("positive", "monitor", ""),
-        FlowchartEdge("negative", "discharge", ""),
-    ]
-    
-    return nodes, edges
+    # Render Node UI
+    with st.container():
+        # Header / Title
+        if "title" in node:
+            st.subheader(node["title"])
+            
+        # Content / Description
+        if "content" in node:
+            st.info(node["content"]) if node.get("type") == "action" else st.markdown(node["content"])
+            
+        # Warning/Critical info
+        if "warning" in node:
+            st.error(f"⚠️ {node['warning']}")
 
+        st.markdown("---")
+        
+        # Interaction Area
+        col1, col2 = st.columns([3, 1])
+        
+        with col1:
+            if node.get("type") == "question":
+                st.markdown("**Lựa chọn của bạn:**")
+                options = node.get("options", [])
+                
+                # Render options as buttons (better for touch)
+                for idx, opt in enumerate(options):
+                    if st.button(
+                        f"👉 {opt['label']}", 
+                        key=f"btn_{flow_id}_{current_node_id}_{idx}",
+                        use_container_width=True,
+                        type="primary" if idx == 0 else "secondary" # Highlight first option usually Yes
+                    ):
+                        # Add to history
+                        st.session_state[history_key].append(current_node_id)
+                        # Move to next
+                        st.session_state[state_key] = opt["next"]
+                        st.rerun()
+                        
+            elif node.get("type") in ["action", "result"]:
+                next_node = node.get("next")
+                if next_node:
+                    if st.button("Tiếp tục ➡️", key=f"next_{flow_id}", type="primary"):
+                        st.session_state[history_key].append(current_node_id)
+                        st.session_state[state_key] = next_node
+                        st.rerun()
+                else:
+                    st.success("✅ Đã hoàn thành quy trình.")
+                    if st.button("🔄 Làm lại từ đầu"):
+                        st.session_state[state_key] = data.get("start_node_id")
+                        st.session_state[history_key] = []
+                        st.rerun()
 
-def create_aki_algorithm() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
-    """Create AKI diagnostic algorithm"""
-    nodes = [
-        FlowchartNode("start", "AKI Suspected?", NodeType.START, icon="🫘"),
-        FlowchartNode("stage", "Stage AKI", NodeType.ACTION, icon="📊"),
-        FlowchartNode("fena", "FENa", NodeType.TEST, icon="🧪"),
-        FlowchartNode("prerenal", "Prerenal", NodeType.ACTION, color="#17a2b8", icon="💧"),
-        FlowchartNode("intrinsic", "Intrinsic Renal", NodeType.ACTION, color="#ffc107", icon="⚠️"),
-        FlowchartNode("postrenal", "Postrenal", NodeType.ACTION, color="#dc3545", icon="🔴"),
-        FlowchartNode("treat", "Treat Cause", NodeType.END, color="#28a745", icon="💊"),
-    ]
-    
-    edges = [
-        FlowchartEdge("start", "stage", ""),
-        FlowchartEdge("stage", "fena", ""),
-        FlowchartEdge("fena", "prerenal", "< 1%"),
-        FlowchartEdge("fena", "intrinsic", "> 2%"),
-        FlowchartEdge("fena", "postrenal", "Check obstruction"),
-        FlowchartEdge("prerenal", "treat", "Volume, BP"),
-        FlowchartEdge("intrinsic", "treat", "Nephrotoxins, ATN"),
-        FlowchartEdge("postrenal", "treat", "Relieve obstruction"),
-    ]
-    
-    return nodes, edges
-
-
-def render_algorithm_selector() -> Optional[str]:
-    """Render algorithm selector"""
-    algorithms = {
-        "Chest Pain": "chest_pain",
-        "Acute Kidney Injury": "aki",
-        "Dyspnea Workup": "dyspnea",
-        "Sepsis Protocol": "sepsis",
-        "Anemia Workup": "anemia"
-    }
-    
-    selected = st.selectbox(
-        "Chọn Algorithm:",
-        list(algorithms.keys()),
-        key="algorithm_selector"
-    )
-    
-    return algorithms.get(selected)
-
-
-def render_interactive_algorithm(algorithm_name: str) -> None:
-    """Render interactive algorithm based on name"""
-    if algorithm_name == "chest_pain":
-        nodes, edges = create_chest_pain_algorithm()
-        render_flowchart(nodes, edges, "Chest Pain Diagnostic Algorithm", width=800, height=600)
-    elif algorithm_name == "aki":
-        nodes, edges = create_aki_algorithm()
-        render_flowchart(nodes, edges, "Acute Kidney Injury (AKI) Diagnostic Algorithm", width=800, height=500)
-    else:
-        st.info(f"Algorithm '{algorithm_name}' chưa được implement. Đang phát triển...")
-
+        # Navigation Controls (Back / Reset)
+        with col2:
+            st.markdown("<br>", unsafe_allow_html=True) # Spacer
+            if st.session_state[history_key]:
+                if st.button("⬅️ Quay lại", key=f"back_{flow_id}"):
+                    prev_node = st.session_state[history_key].pop()
+                    st.session_state[state_key] = prev_node
+                    st.rerun()
+            
+            if st.button("Reset", key=f"reset_{flow_id}"):
+                st.session_state[state_key] = data.get("start_node_id")
+                st.session_state[history_key] = []
+                st.rerun()

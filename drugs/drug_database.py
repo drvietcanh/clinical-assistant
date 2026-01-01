@@ -28,6 +28,26 @@ from .drug_modules import (
     OBSTETRICS_GYNECOLOGY_DRUGS,
     ENT_ORAL_NASAL_COMBINATIONS_DRUGS,
     MISCELLANEOUS_DRUGS,
+    # New Standardized Modules
+    # Psychiatry
+    ANTIPSYCHOTICS,
+    MOOD_STABILIZERS,
+    # Anesthesia
+    ANESTHESIA_DRUGS,
+    # Vaccines
+    VACCINES_DRUGS,
+    # Toxicology
+    TOXICOLOGY_DRUGS,
+    # Allergy
+    ALLERGY_DRUGS,
+    # Nutrition
+    NUTRITION_DRUGS,
+    # Rheumatology
+    RHEUMATOLOGY_DRUGS,
+    # Immunology
+    IMMUNOLOGY_DRUGS,
+    # Oncology
+    ONCOLOGY_DRUGS,
     # Deprecated modules (kept for backward compatibility, but already merged above)
     CARDIOVASCULAR_OTHER_DRUGS,
     INFECTIOUS_OTHER_DRUGS,
@@ -64,6 +84,16 @@ DRUG_DATABASE = {
     **OBSTETRICS_GYNECOLOGY_DRUGS,
     **ENT_ORAL_NASAL_COMBINATIONS_DRUGS,
     **MISCELLANEOUS_DRUGS,
+    **ANTIPSYCHOTICS,
+    **MOOD_STABILIZERS,
+    **ANESTHESIA_DRUGS,
+    **VACCINES_DRUGS,
+    **TOXICOLOGY_DRUGS,
+    **ALLERGY_DRUGS,
+    **NUTRITION_DRUGS,
+    **RHEUMATOLOGY_DRUGS,
+    **IMMUNOLOGY_DRUGS,
+    **ONCOLOGY_DRUGS,
     # Note: Deprecated modules (CARDIOVASCULAR_OTHER_DRUGS, INFECTIOUS_OTHER_DRUGS,
     #       PSYCHIATRY_OTHER_DRUGS, ENDOCRINOLOGY_OTHER_DRUGS, OTHER_DRUGS)
     #       are already included in the main modules above, so we don't merge them again

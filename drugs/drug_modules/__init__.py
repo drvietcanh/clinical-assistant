@@ -1,7 +1,7 @@
 """
 Drug Modules Package
 All drug data modules organized by therapeutic category
-Reorganized for better access and statistics (666 drugs total)
+Reorganized for better access and statistics (700+ drugs total)
 """
 
 # Main therapeutic categories (reorganized and merged)
@@ -24,6 +24,16 @@ from .ophthalmology import OPHTHALMOLOGY_DRUGS
 from .obstetrics_gynecology import OBSTETRICS_GYNECOLOGY_DRUGS
 from .ent_oral_nasal_combinations import ENT_ORAL_NASAL_COMBINATIONS_DRUGS
 from .miscellaneous import MISCELLANEOUS_DRUGS
+
+# Additional modules from Phase 1-10
+from .anesthesia import ANESTHESIA_DRUGS
+from .allergy import ALLERGY_DRUGS
+from .nutrition import NUTRITION_DRUGS
+from .toxicology import TOXICOLOGY_DRUGS
+from .vaccines import VACCINES_DRUGS
+from .immunology import IMMUNOLOGY_DRUGS
+from .rheumatology import RHEUMATOLOGY_DRUGS
+from .psychiatry import PSYCHIATRY_DRUGS
 
 # Backward compatibility - keep old imports but they point to merged modules
 # These are now included in the main modules above
@@ -54,6 +64,7 @@ ALL_DRUGS.update(OPHTHALMOLOGY_DRUGS)
 ALL_DRUGS.update(OBSTETRICS_GYNECOLOGY_DRUGS)
 ALL_DRUGS.update(ENT_ORAL_NASAL_COMBINATIONS_DRUGS)
 ALL_DRUGS.update(MISCELLANEOUS_DRUGS)
+ALL_DRUGS.update(ANESTHESIA_DRUGS)
 # Add other collections if they have unique keys not covered above
 ALL_DRUGS.update(CARDIOVASCULAR_OTHER_DRUGS)
 ALL_DRUGS.update(INFECTIOUS_OTHER_DRUGS)
@@ -84,6 +95,16 @@ __all__ = [
     'OBSTETRICS_GYNECOLOGY_DRUGS',
     'ENT_ORAL_NASAL_COMBINATIONS_DRUGS',
     'MISCELLANEOUS_DRUGS',
+    'ANESTHESIA_DRUGS',
+    'VACCINES_DRUGS',
+    'TOXICOLOGY_DRUGS',
+    'ALLERGY_DRUGS',
+    'NUTRITION_DRUGS',
+    'RHEUMATOLOGY_DRUGS',
+    'IMMUNOLOGY_DRUGS',
+    'ONCOLOGY_DRUGS',
+    'ANTIPSYCHOTICS',
+    'MOOD_STABILIZERS',
     # Deprecated (kept for backward compatibility)
     'CARDIOVASCULAR_OTHER_DRUGS',
     'INFECTIOUS_OTHER_DRUGS',

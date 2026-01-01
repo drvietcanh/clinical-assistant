@@ -1,0 +1,5 @@
+from .antihistamines import ANTIHISTAMINES_DRUGS
+
+ALLERGY_DRUGS = {
+    **ANTIHISTAMINES_DRUGS
+}
