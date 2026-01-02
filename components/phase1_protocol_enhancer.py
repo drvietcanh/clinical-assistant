@@ -6,9 +6,10 @@ Automatically adds evidence levels, citations, and version tracking to protocols
 import streamlit as st
 from typing import Optional, Dict, List, Any
 from components.protocol_version import render_version_badge, render_version_history, get_protocol_version
-from components.evidence_badge import render_evidence_badge, render_evidence_summary, Citation
+from components.evidence_badge import render_evidence_badge, Citation
 from components.references import render_references_section
 from protocols.references_config import PROTOCOL_REFERENCES, get_references
+from utils.evidence_levels import EvidenceMetadata, EvidenceLevel
 from datetime import datetime
 
 
@@ -33,12 +34,36 @@ def render_protocol_header(
     if show_evidence_summary:
         version_info = get_protocol_version(protocol_name)
         if version_info:
-            render_evidence_summary(
-                last_reviewed=version_info.get("last_updated", ""),
-                last_updated=version_info.get("last_updated", ""),
-                version=version_info.get("version", "1.0"),
-                guideline_source=guideline_source or version_info.get("guideline", "")
+            # Create evidence metadata from version info
+            guideline_source_str = guideline_source or version_info.get("guideline", "")
+            last_updated = version_info.get("last_updated", "")
+            version = version_info.get("version", "1.0")
+            
+            # Create a simple evidence metadata for protocol header
+            evidence = EvidenceMetadata(
+                level=EvidenceLevel.C,  # Default to C for protocol-level evidence
+                citation=guideline_source_str,
+                last_reviewed=last_updated,
+                version=version,
+                synopsis=f"Protocol version {version}. Last updated: {last_updated}."
             )
+            
+            # Render simple version/guideline info instead of full evidence summary
+            if guideline_source_str or last_updated:
+                st.markdown(f"""
+                <div style="
+                    background: #f5f5f5;
+                    border-left: 4px solid #2196F3;
+                    padding: 12px;
+                    border-radius: 4px;
+                    margin: 8px 0;
+                    font-size: 0.9rem;
+                ">
+                    <strong>📚 Guideline:</strong> {guideline_source_str}<br>
+                    <strong>📅 Last Updated:</strong> {last_updated}<br>
+                    <strong>📌 Version:</strong> {version}
+                </div>
+                """, unsafe_allow_html=True)
 
 
 def render_recommendation_with_evidence(

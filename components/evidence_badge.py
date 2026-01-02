@@ -158,17 +158,63 @@ def render_evidence_section(evidence_list: list, title: str = "Evidence") -> Non
         render_evidence_badge(evidence, show_description=True, show_citation=True)
 
 
-def render_evidence_summary(evidence: EvidenceMetadata, summary_text: str = None) -> None:
+def render_evidence_summary(
+    evidence: EvidenceMetadata = None,
+    summary_text: str = None,
+    # Legacy parameters for backward compatibility
+    last_reviewed: str = None,
+    last_updated: str = None,
+    version: str = None,
+    guideline_source: str = None
+) -> None:
     """
     Render evidence summary with optional text
     
     Args:
-        evidence: EvidenceMetadata object
+        evidence: EvidenceMetadata object (preferred)
         summary_text: Optional summary text
+        last_reviewed: Legacy parameter - last reviewed date
+        last_updated: Legacy parameter - last updated date
+        version: Legacy parameter - version string
+        guideline_source: Legacy parameter - guideline source
     """
-    render_evidence_badge(evidence, show_description=True, show_citation=True)
-    if summary_text:
-        st.markdown(summary_text)
+    # Handle legacy call style (keyword arguments)
+    if evidence is None and (last_reviewed or last_updated or version or guideline_source):
+        import streamlit as st
+        from utils.evidence_levels import EvidenceLevel
+        
+        # Create EvidenceMetadata from legacy parameters
+        evidence = EvidenceMetadata(
+            level=EvidenceLevel.C,  # Default to C
+            citation=guideline_source,
+            last_reviewed=last_updated or last_reviewed,
+            version=version,
+            synopsis=f"Protocol version {version or '1.0'}. Last updated: {last_updated or last_reviewed or 'N/A'}."
+        )
+        
+        # Render simple info box for legacy calls
+        if guideline_source or last_updated or last_reviewed:
+            st.markdown(f"""
+            <div style="
+                background: #f5f5f5;
+                border-left: 4px solid #2196F3;
+                padding: 12px;
+                border-radius: 4px;
+                margin: 8px 0;
+                font-size: 0.9rem;
+            ">
+                <strong>📚 Guideline:</strong> {guideline_source or 'N/A'}<br>
+                <strong>📅 Last Updated:</strong> {last_updated or last_reviewed or 'N/A'}<br>
+                <strong>📌 Version:</strong> {version or '1.0'}
+            </div>
+            """, unsafe_allow_html=True)
+            return
+    
+    # Handle new call style (EvidenceMetadata object)
+    if evidence:
+        render_evidence_badge(evidence, show_description=True, show_citation=True)
+        if summary_text:
+            st.markdown(summary_text)
 
 
 @dataclass
