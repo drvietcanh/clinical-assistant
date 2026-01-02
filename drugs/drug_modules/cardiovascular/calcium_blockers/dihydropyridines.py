@@ -348,9 +348,20 @@ DIHYDROPYRIDINE_CCB = {
                 "UpToDate - Clevidipine: Drug Information",
                 "Medscape - Clevidipine Drug Reference"
             ],
-            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": True,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiovascular": "Moderate (hypotension, reflex tachycardia)"},
+            "requires_monitoring": ["Blood pressure", "Heart rate"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertensive Emergency",
+            "ASA Guidelines - Perioperative Hypertension"
+        ]
     },
     "Felodipine": {
         "group": "Cardiovascular - Calcium Channel Blocker (Dihydropyridine)",
@@ -539,175 +550,21 @@ DIHYDROPYRIDINE_CCB = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - Extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiovascular": "Moderate (peripheral edema)"},
+            "requires_monitoring": ["Blood pressure", "Heart rate", "Liver function"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension"
+        ]
     },
 
-    "Felodipine": {
-        "group": "Cardiovascular - Calcium Channel Blocker (Dihydropyridine)",
-        "vietnamese_name": "Felodipine, Plendil",
-        "administration": ["PO"],
-        "indications": [
-            "Tăng huyết áp",
-            "Đau thắt ngực"
-        ],
-        "contraindications": [
-            "Dị ứng felodipine hoặc dihydropyridine",
-            "Sốc tim",
-            "Suy gan nặng"
-        ],
-        "dosage": {
-            "adult_htn": "5-10mg x 1 lần/ngày, tăng đến 20mg/ngày nếu cần",
-            "adult_angina": "5-10mg x 1 lần/ngày",
-            "adult_max": "20mg/ngày",
-            "notes": "Dihydropyridine CCB. Uống với thức ăn để tăng hấp thu. Tránh grapefruit juice (tăng nồng độ)."
-        },
-        "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Không đổi"
-        },
-        "side_effects": [
-            "Phù chân (phổ biến)",
-            "Đỏ mặt",
-            "Nhức đầu",
-            "Chóng mặt",
-            "Tim đập nhanh (phản ứng)",
-            "Chảy máu nướu (hiếm, do tăng sản nướu)",
-            "Tăng men gan (hiếm)"
-        ],
-        "interactions": [
-            "Grapefruit juice: tăng nồng độ felodipine đáng kể",
-            "CYP3A4 inhibitors: tăng nồng độ felodipine",
-            "CYP3A4 inducers: giảm nồng độ felodipine"
-        ],
-        "pregnancy": "C",
-        "mechanism_of_action": "Dihydropyridine calcium channel blocker. Ức chế dòng calci vào tế bào cơ trơn mạch máu qua kênh calci L-type, gây giãn mạch ngoại biên, giảm kháng lực mạch máu ngoại biên, giảm huyết áp. Tác dụng chủ yếu trên mạch máu, ít ảnh hưởng đến tim (khác với non-dihydropyridine CCB như verapamil, diltiazem). Được dùng để điều trị tăng huyết áp và đau thắt ngực. Đặc điểm: hấp thu tốt hơn với thức ăn, tương tác mạnh với grapefruit juice (ức chế CYP3A4).",
-        "monitoring": [
-            "Huyết áp mỗi lần khám",
-            "Nhịp tim (có thể tăng nhẹ phản ứng)",
-            "Phù chân (dấu hiệu tác dụng phụ phổ biến)",
-            "Chức năng gan (ALT, AST) - hiếm viêm gan",
-            "Dấu hiệu chảy máu nướu, tăng sản nướu (hiếm)"
-        ],
-        "precautions": [
-            "Uống với thức ăn để tăng hấp thu",
-            "TRÁNH grapefruit juice (tăng nồng độ felodipine đáng kể, tăng tác dụng phụ)",
-            "Phù chân phổ biến - thường không nghiêm trọng nhưng có thể khó chịu",
-            "Có thể gây nhức đầu, chóng mặt - thận trọng khi lái xe",
-            "Thận trọng ở suy gan nặng (chống chỉ định)",
-            "Tương tác với CYP3A4 inhibitors (tăng nồng độ) và inducers (giảm nồng độ)",
-            "Nguy cơ chảy máu nướu, tăng sản nướu (hiếm) - vệ sinh răng miệng tốt"
-        ],
-        "pharmacokinetics": {
-            "half_life": "11-16 giờ (dài)",
-            "onset": "2-5 giờ",
-            "duration": "24 giờ (dùng 1 lần/ngày)",
-            "protein_binding": "99% (rất cao)",
-            "metabolism": "Gan (chuyển hóa chủ yếu qua CYP3A4)",
-            "clearance": "Gan (chuyển hóa), thận (thải trừ một phần). Không cần điều chỉnh thận."
-        },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": "TRÁNH grapefruit juice - tăng nồng độ felodipine đáng kể, tăng tác dụng phụ (phù chân, hạ huyết áp, nhức đầu).",
-        "drug_interactions": {
-            "major": [
-                {
-                    "drug": "Grapefruit juice",
-                    "mechanism": "Ức chế CYP3A4 trong ruột và gan, giảm chuyển hóa felodipine",
-                    "effect": "Tăng nồng độ felodipine đáng kể (có thể tăng 2-3 lần), tăng tác dụng phụ (phù chân, hạ huyết áp, nhức đầu)",
-                    "management": "TRÁNH TUYỆT ĐỐI grapefruit juice khi dùng felodipine. Tư vấn bệnh nhân về nguy cơ này."
-                },
-                {
-                    "drug": "CYP3A4 inhibitors (ketoconazole, itraconazole, clarithromycin, ritonavir)",
-                    "mechanism": "Ức chế chuyển hóa felodipine qua CYP3A4",
-                    "effect": "Tăng nồng độ felodipine, tăng tác dụng phụ",
-                    "management": "Thận trọng. Giảm liều felodipine. Theo dõi huyết áp, phù chân."
-                }
-            ],
-            "moderate": [
-                {
-                    "drug": "CYP3A4 inducers (carbamazepine, phenytoin, rifampin)",
-                    "mechanism": "Cảm ứng enzyme CYP3A4, tăng chuyển hóa felodipine",
-                    "effect": "Giảm nồng độ felodipine, giảm hiệu quả",
-                    "management": "Tăng liều felodipine nếu cần. Theo dõi huyết áp."
-                }
-            ],
-            "minor": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng felodipine hoặc dihydropyridine",
-                "Sốc tim",
-                "Suy gan nặng (Child-Pugh C)"
-            ],
-            "tương_đối": [
-                "Suy gan nhẹ đến trung bình (Child-Pugh A-B) - thận trọng, có thể giảm liều",
-                "Dùng với grapefruit juice - tăng nồng độ đáng kể",
-                "Dùng với CYP3A4 inhibitors - tăng nồng độ",
-                "Mang thai (category C) - thận trọng, chỉ dùng nếu lợi ích > nguy cơ"
-            ]
-        },
-        "pregnancy_lactation": {
-            "fda_category": "C",
-            "pregnancy_details": "Felodipine là category C. Có thể dùng khi cần thiết. Có thể gây hạ huyết áp thai nhi. Theo dõi sát thai nhi.",
-            "lactation": {
-                "safety": "Compatible with monitoring",
-                "details": "Felodipine bài tiết vào sữa mẹ ở nồng độ thấp. Có thể gây tác dụng phụ ở trẻ (hạ huyết áp, nhịp tim nhanh).",
-                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu hạ huyết áp, nhịp tim nhanh ở trẻ."
-            }
-        },
-        "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều, nhưng theo dõi chặt chẽ chức năng gan",
-            "moderate": "Thận trọng, có thể giảm liều nhẹ",
-            "severe": "CHỐNG CHỈ ĐỊNH (chuyển hóa chủ yếu qua gan)",
-            "notes": "Felodipine chuyển hóa chủ yếu qua gan (CYP3A4). Suy gan nặng là chống chỉ định."
-        },
-        "overdose_management": {
-            "symptoms": [
-                "Hạ huyết áp nặng",
-                "Nhịp tim nhanh (phản ứng)",
-                "Phù chân nặng",
-                "Nhức đầu nặng",
-                "Chóng mặt, ngất",
-                "Rối loạn nhịp tim (hiếm)"
-            ],
-            "antidote": "Calcium gluconate hoặc calcium chloride (đảo ngược một phần tác dụng)",
-            "treatment": [
-                "Rửa dạ dày nếu trong vòng 1-2 giờ sau uống",
-                "Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ",
-                "Điều trị hạ huyết áp: Truyền dịch (normal saline), nâng chân, nếu cần: dopamine, norepinephrine",
-                "Calcium gluconate 1-3g IV hoặc calcium chloride 1g IV (đảo ngược một phần tác dụng)",
-                "Theo dõi liên tục: huyết áp, nhịp tim, ECG",
-                "Hỗ trợ hô hấp và tuần hoàn nếu cần"
-            ],
-            "monitoring": "Theo dõi liên tục huyết áp, nhịp tim, ECG trong ít nhất 12-24 giờ"
-        },
-        "reversal_agents": {
-            "available": True,
-            "agents": [
-                {
-                    "name": "Calcium gluconate hoặc calcium chloride",
-                    "mechanism": "Đảo ngược một phần tác dụng ức chế kênh calci",
-                    "indication": "Hạ huyết áp nặng do quá liều CCB",
-                    "dose": "Calcium gluconate 1-3g IV hoặc calcium chloride 1g IV"
-                }
-            ]
-        },
-        "administration_instructions": {
-            "oral": {
-                "with_food": "Uống với thức ăn để tăng hấp thu. Không uống khi bụng đói.",
-                "timing": "Uống 1 lần/ngày (do half-life dài 11-16 giờ). Uống cùng thời điểm mỗi ngày. QUAN TRỌNG: TRÁNH grapefruit juice - tăng nồng độ đáng kể."
-            }
-        },
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Plendil (felodipine)",
-                "UpToDate - Felodipine: Drug information",
-                "American Heart Association/American College of Cardiology guidelines - Hypertension"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "A"
-        }
-    },
+
     
     "Isradipine": {
         "group": "Cardiovascular - Calcium Channel Blocker (Dihydropyridine)",
@@ -897,7 +754,18 @@ DIHYDROPYRIDINE_CCB = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - Extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiovascular": "Moderate (peripheral edema)"},
+            "requires_monitoring": ["Blood pressure", "Heart rate"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension"
+        ]
     },
     
     "Lacidipine": {
@@ -1044,7 +912,18 @@ DIHYDROPYRIDINE_CCB = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiovascular": "Moderate (hypotension, tachycardia)"},
+            "requires_monitoring": ["Blood pressure", "Heart rate"]
+        },
+        "guideline_tags": [
+            "ESC/ESH Guidelines - Hypertension"
+        ]
     },
     
     "Nicardipine": {

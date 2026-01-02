@@ -18,7 +18,7 @@ def remove_from_favorites(calc_id):
     remove_fav(calc_id)
 
 
-def render_favorites():
+def render_favorites(max_items=None):
     """Render enhanced favorites section"""
     st.markdown("### ⭐ Yêu Thích")
     
@@ -29,7 +29,14 @@ def render_favorites():
         num_cols = min(4, num_favs)
         cols = st.columns(num_cols)
         
-        for idx, calc_id in enumerate(st.session_state.favorites[:12]):  # Show max 12
+        if max_items:
+            # If max_items provided (e.g., from homepage), use it
+            display_items = st.session_state.favorites[:max_items]
+        else:
+            # Default behavior (show up to 12)
+            display_items = st.session_state.favorites[:12]
+            
+        for idx, calc_id in enumerate(display_items):  # Show max items requested
             if calc_id in ALL_CALCULATORS:
                 calc_info = ALL_CALCULATORS[calc_id]
                 with cols[idx % num_cols]:

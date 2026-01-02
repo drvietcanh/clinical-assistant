@@ -7,7 +7,7 @@ import streamlit as st
 from config.theme import COLORS
 from scores.utils.validation import validate_range, validate_lab_value
 from components.ui.validation import render_validation_errors
-from components.ui.scoring import render_score_result, render_result_box
+from components.ui.scoring import render_score_result
 from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
