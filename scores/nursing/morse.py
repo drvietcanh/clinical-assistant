@@ -25,7 +25,6 @@ def render():
         if 'shared_inputs' not in st.session_state:
             st.session_state['shared_inputs'] = shared.get('inputs', {})
     
-    st.markdown("""
     st.markdown(f"<h2 style='text-align: center; color: {COLORS['success']};'>⚠️ Morse Fall Scale</h2>", unsafe_allow_html=True)
     st.caption("<p style='text-align: center;'>Thang điểm đánh giá nguy cơ té ngã</p>", unsafe_allow_html=True)
     
