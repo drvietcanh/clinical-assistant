@@ -3,7 +3,7 @@
 ## Cập nhật ngày 2025-01-30
 
 ### Tổng kết
-- **Tổng số bệnh:** 72 (tăng từ 35 ban đầu)
+- **Tổng số bệnh:** 80 (tăng từ 35 ban đầu)
 - **Số chuyên khoa:** 21/21 ✅
 - **Trạng thái:** Hệ thống hoàn chỉnh, tất cả modules đã có dữ liệu
 
@@ -71,6 +71,27 @@
 6. **Dermatology:**
    - ✅ Acne Vulgaris (Mụn trứng cá)
    - ✅ Tinea (Nấm da)
+
+### Phiên 5: Bổ sung các bệnh phổ biến khác (80 bệnh)
+**Bổ sung 8 bệnh mới:**
+
+1. **Pediatrics:**
+   - ✅ Upper Respiratory Infection (Nhiễm khuẩn hô hấp trên)
+   - ✅ Bronchiolitis (Viêm tiểu phế quản)
+
+2. **Obstetrics/Gynecology:**
+   - ✅ Menstrual Disorders (Rối loạn kinh nguyệt)
+   - ✅ Menopause (Mãn kinh)
+
+3. **Orthopedics:**
+   - ✅ Fractures (Gãy xương)
+   - ✅ Tendonitis (Viêm gân)
+
+4. **Cardiology:**
+   - ✅ Dyslipidemia (Rối loạn lipid máu)
+
+5. **Gastroenterology:**
+   - ✅ Ulcerative Colitis (Viêm loét đại trực tràng chảy máu)
 
 ---
 
@@ -160,6 +181,6 @@ Mỗi bệnh có đầy đủ thông tin:
 ---
 
 **Cập nhật lần cuối:** 2025-01-30  
-**Tổng số bệnh:** 72  
+**Tổng số bệnh:** 80  
 **Trạng thái:** ✅ Hoàn chỉnh, sẵn sàng sử dụng
 

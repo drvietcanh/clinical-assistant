@@ -7634,6 +7634,93 @@ EXTRA_ENHANCED_FIELDS.update({
 })
 # ======================== END BATCH 4 ========================
 
+# ======================== BATCH 5: PREGNANCY & LACTATION SAFETY ========================
+EXTRA_ENHANCED_FIELDS.update({
+    "Metformin": {
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": (
+                "Thường được xem là an toàn và hiệu quả trong thai kỳ, đặc biệt cho đái tháo đường thai kỳ (GDM) và PCOS. "
+                "Không thấy bằng chứng gây quái thai. Tuy nhiên, insulin vẫn là lựa chọn đầu tay chính thức trong nhiều hướng dẫn."
+            ),
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Bài tiết vào sữa mẹ với lượng rất nhỏ (0.1-1% liều mẹ). Không ghi nhận tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể sử dụng. An toàn khi cho con bú.",
+            },
+        },
+    },
+    "Amlodipine": {
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": (
+                "Chưa có nghiên cứu đầy đủ trên người. Trên động vật có ghi nhận độc tính khi dùng liều cao. "
+                "Chỉ sử dụng khi lợi ích vượt trội nguy cơ. Nifedipine hoặc Methyldopa thường được ưu tiên hơn cho tăng huyết áp thai kỳ."
+            ),
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ mức độ bài tiết vào sữa mẹ. Các thuốc chẹn kênh canxi khác (như Nifedipine) có thông tin an toàn rõ ràng hơn.",
+                "recommendation": "Thận trọng. Cân nhắc chuyển sang thuốc an toàn hơn nếu có thể, hoặc theo dõi trẻ.",
+            },
+        },
+    },
+    "Atorvastatin": {
+        "pregnancy_lactation": {
+            "fda_category": "X",
+            "pregnancy_details": (
+                "CHỐNG CHỈ ĐỊNH. Statin can thiệp vào tổng hợp cholesterol cần thiết cho sự phát triển của thai nhi. "
+                "Ngưng thuốc ngay lập tức nếu phát hiện có thai."
+            ),
+            "lactation": {
+                "safety": "Avoid",
+                "details": "Có khả năng bài tiết vào sữa mẹ và gây ảnh hưởng đến chuyển hóa lipid của trẻ.",
+                "recommendation": "Không sử dụng. Ngưng cho con bú hoặc ngưng thuốc.",
+            },
+        },
+    },
+    "Cephalexin": {
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": (
+                "An toàn. Được sử dụng rộng rãi trong thai kỳ để điều trị nhiễm trùng tiểu và hô hấp. Không có bằng chứng gây hại."
+            ),
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Bài tiết vào sữa mẹ lượng nhỏ. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể sử dụng. Theo dõi tiêu chảy ở trẻ.",
+            },
+        },
+    },
+    "Omeprazole": {
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": (
+                "Dữ liệu lớn trên người không cho thấy nguy cơ dị tật. Tuy nhiên FDA xếp loại C do một số nghiên cứu động vật. "
+                "Thường được dùng khi các thuốc kháng H2 không hiệu quả."
+            ),
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Bài tiết vào sữa mẹ lượng nhỏ (khoảng 7% liều mẹ). Bị phá hủy phần lớn bởi acid dạ dày của trẻ.",
+                "recommendation": "Có thể sử dụng. Được coi là an toàn.",
+            },
+        },
+    },
+    "Loratadine": {
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": (
+                "An toàn. Là lựa chọn thuốc kháng histamin thế hệ 2 ưu tiên trong thai kỳ.",
+            ),
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Bài tiết vào sữa mẹ lượng rất nhỏ. AAP xếp vào nhóm thuốc an toàn.",
+                "recommendation": "Có thể sử dụng.",
+            },
+        },
+    },
+})
+
+
 __all__ = ["EXTRA_ENHANCED_FIELDS"]
 
 

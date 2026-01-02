@@ -147,4 +147,134 @@ PEDIATRICS_DISEASES: List[Disease] = [
         related_protocols=[],
         icd10_codes=["B08.4"]
     ),
+    
+    Disease(
+        id="upper_respiratory_infection",
+        name="Upper Respiratory Infection (URI)",
+        name_vn="Nhiễm khuẩn hô hấp trên",
+        category="Pediatrics",
+        definition="Nhiễm khuẩn hô hấp trên là tình trạng nhiễm trùng cấp tính các cơ quan đường hô hấp trên (mũi, họng, xoang, thanh quản), rất phổ biến ở trẻ em.",
+        causes=[
+            "Virus (phổ biến nhất): Rhinovirus, Influenza, Parainfluenza, Adenovirus, RSV",
+            "Vi khuẩn: Streptococcus pneumoniae, Haemophilus influenzae, Moraxella catarrhalis (thường gây bội nhiễm)",
+            "Yếu tố nguy cơ: thay đổi thời tiết, môi trường ô nhiễm, tiếp xúc người bệnh"
+        ],
+        symptoms=[
+            "Sốt (nhẹ hoặc cao)",
+            "Ho",
+            "Chảy mũi, nghẹt mũi",
+            "Đau họng",
+            "Hắt hơi",
+            "Mệt mỏi, quấy khóc (trẻ nhỏ)",
+            "Nôn trớ (do đờm)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Chủ yếu dựa vào lâm sàng",
+                "Loại trừ nhiễm khuẩn hô hấp dưới (viêm phổi)"
+            ],
+            "tests": [
+                "Không cần xét nghiệm thường quy",
+                "Công thức máu (nếu sốt cao kéo dài)",
+                "Test cúm (nếu nghi ngờ)"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Điều trị triệu chứng là chủ yếu. Hạn chế kháng sinh nếu do virus.",
+            "medications": [
+                "Hạ sốt: Paracetamol, Ibuprofen",
+                "Vệ sinh mũi: Nước muối sinh lý",
+                "Giảm ho: thuốc ho thảo dược (trẻ em)",
+                "Kháng sinh: CHỈ DÙNG khi có bằng chứng nhiễm khuẩn hoặc nguy cơ cao (viêm tai giữa, viêm xoang cấp do vi khuẩn)"
+            ],
+            "procedures": [
+                "Vệ sinh mũi họng sạch sẽ",
+                "Giữ ấm",
+                "Uống đủ nước"
+            ]
+        },
+        prevention=[
+            "Giữ ấm cơ thể",
+            "Vệ sinh mũi họng",
+            "Rửa tay thường xuyên",
+            "Tránh tiếp xúc nguồn lây",
+            "Tiêm chủng đầy đủ (Cúm, Phế cầu)"
+        ],
+        complications=[
+            "Viêm tai giữa",
+            "Viêm xoang",
+            "Viêm phổi (bội nhiễm)",
+            "Khởi phát cơn hen"
+        ],
+        related_scores=["Centor Criteria"],
+        related_drugs=["Paracetamol", "Ibuprofen", "Sodium Chloride"],
+        related_protocols=["URI Management"],
+        icd10_codes=["J06.9", "J00", "J02.9"]
+    ),
+
+    Disease(
+        id="bronchiolitis",
+        name="Bronchiolitis",
+        name_vn="Viêm tiểu phế quản",
+        category="Pediatrics",
+        definition="Viêm tiểu phế quản là bệnh viêm nhiễm cấp tính các tiểu phế quản, thường do virus, hay gặp ở trẻ < 2 tuổi, đặc biệt là trẻ nhũ nhi.",
+        causes=[
+            "Virus hợp bào hô hấp (RSV) - nguyên nhân hàng đầu",
+            "Influenza virus, Adenovirus, Parainfluenza virus",
+            "Yếu tố nguy cơ: trẻ < 6 tháng, sinh non, tim bẩm sinh, phổi mạn"
+        ],
+        symptoms=[
+            "Khởi phát: ho, chảy mũi, sốt nhẹ",
+            "Toàn phát: thở nhanh, khó thở, khò khè",
+            "Rút lõm lồng ngực",
+            "Tím tái (nếu nặng)",
+            "Bú kém, bỏ bú"
+        ],
+        diagnosis={
+            "criteria": [
+                "Lâm sàng: trẻ < 2 tuổi, khò khè lần đầu, có triệu chứng viêm long hô hấp",
+                "Loại trừ: hen phế quản, dị vật đường thở"
+            ],
+            "tests": [
+                "Test nhanh RSV (nếu cần cách ly)",
+                "SpO2 (đánh giá mức độ)",
+                "Khí máu động mạch (nếu suy hô hấp nặng)"
+            ],
+            "imaging": [
+                "X-quang phổi: ứ khí phế nang, xẹp phổi rải rác (không chỉ định thường quy nếu nhẹ)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị hỗ trợ hô hấp và dinh dưỡng là quan trọng nhất.",
+            "medications": [
+                "Hạ sốt",
+                "Khí dung nước muối ưu trương (có thể cân nhắc)",
+                "KHÔNG khuyến cáo thường quy: Corticoid, thuốc giãn phế quản, kháng sinh (trừ khi bội nhiễm)",
+                "Oxy (nếu SaO2 < 90-92%)"
+            ],
+            "procedures": [
+                "Hút đờm dãi, thông thoáng đường thở",
+                "Hỗ trợ hô hấp: Oxy, NCPAP (nếu suy hô hấp)",
+                "Đảm bảo dinh dưỡng, nước điện giải (nuôi ăn tĩnh mạch nếu bú kém)"
+            ]
+        },
+        prevention=[
+            "Tránh tiếp xúc nguồn lây",
+            "Rửa tay",
+            "Nuôi con bằng sữa mẹ",
+            "Tránh khói thuốc lá",
+            "Palivizumab (dự phòng cho trẻ nguy cơ cao - đắt tiền)"
+        ],
+        complications=[
+            "Suy hô hấp",
+            "Ngừng thở (trẻ nhỏ)",
+            "Bội nhiễm phổi",
+            "Xẹp phổi"
+        ],
+        related_scores=["Bronchiolitis Severity Score"],
+        related_drugs=["Paracetamol", "Hypertonic Saline"],
+        related_protocols=["Bronchiolitis Management"],
+        icd10_codes=["J21.9", "J21.0", "J21.8"]
+    ),
 ]

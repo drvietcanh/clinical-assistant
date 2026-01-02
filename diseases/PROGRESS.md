@@ -1,7 +1,7 @@
 # Disease Encyclopedia Module System - Progress Document
 
 **Ngày cập nhật:** 2025-01-30  
-**Tổng số bệnh:** 72  
+**Tổng số bệnh:** 80  
 **Số chuyên khoa có dữ liệu:** 21/21 ✅
 
 ---
@@ -82,6 +82,7 @@ diseases/
 - ✅ Type 2 Diabetes (Đái tháo đường type 2)
 - ✅ Hyperthyroidism (Cường giáp)
 - ✅ Hypothyroidism (Suy giáp)
+- ✅ Dyslipidemia (Rối loạn lipid máu)
 
 ### 6. Nephrology (Thận) - 2 bệnh
 - ✅ AKI (Tổn thương thận cấp)
@@ -125,15 +126,21 @@ diseases/
 - ✅ Osteoarthritis (Thoái hóa khớp)
 - ✅ Rheumatoid Arthritis (Viêm khớp dạng thấp)
 - ✅ Osteoporosis (Loãng xương)
+- ✅ Fractures (Gãy xương)
+- ✅ Tendonitis (Viêm gân)
 
 ### 16. Pediatrics (Nhi khoa) - 2 bệnh
 - ✅ Malnutrition (Suy dinh dưỡng)
 - ✅ Hand, Foot and Mouth Disease (Bệnh tay chân miệng)
+- ✅ Upper Respiratory Infection (Nhiễm khuẩn hô hấp trên)
+- ✅ Bronchiolitis (Viêm tiểu phế quản)
 
 ### 17. Obstetrics/Gynecology (Sản phụ khoa) - 3 bệnh
 - ✅ Pelvic Inflammatory Disease (Viêm nhiễm phụ khoa)
 - ✅ Uterine Fibroids (U xơ tử cung)
 - ✅ Polycystic Ovary Syndrome (Hội chứng buồng trứng đa nang)
+- ✅ Menstrual Disorders (Rối loạn kinh nguyệt)
+- ✅ Menopause (Mãn kinh)
 
 ### 18. Ophthalmology (Mắt) - 2 bệnh
 - ✅ Cataract (Đục thủy tinh thể)
@@ -163,13 +170,13 @@ diseases/
 ## 📊 Thống kê
 
 ### Tổng số bệnh theo chuyên khoa:
-1. Cardiology: 9 bệnh
+1. Cardiology: 10 bệnh
 2. Infectious: 6 bệnh
-3. Gastroenterology: 5 bệnh
+3. Gastroenterology: 6 bệnh
 4. Neurology: 4 bệnh
 5. ENT: 3 bệnh
-6. Orthopedics: 3 bệnh
-7. Obstetrics/Gynecology: 3 bệnh
+6. Orthopedics: 5 bệnh
+7. Obstetrics/Gynecology: 5 bệnh
 8. Oncology: 3 bệnh
 9. Endocrinology: 3 bệnh
 10. Emergency: 2 bệnh
@@ -179,14 +186,14 @@ diseases/
 14. Respiratory: 2 bệnh
 15. Nephrology: 2 bệnh
 16. Urology: 2 bệnh
-17. Pediatrics: 2 bệnh
+17. Pediatrics: 4 bệnh
 18. Ophthalmology: 2 bệnh
 19. Allergy/Immunology: 2 bệnh
 20. Rheumatology: 1 bệnh
 
 21. Critical Care: 4 bệnh
 
-**Tổng:** 72 bệnh
+**Tổng:** 80 bệnh
 
 ---
 

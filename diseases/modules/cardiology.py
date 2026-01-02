@@ -690,4 +690,74 @@ CARDIOLOGY_DISEASES: List[Disease] = [
         related_protocols=["Heart Failure Management"],
         icd10_codes=["I42.0", "I42.9"]
     ),
+
+    Disease(
+        id="dyslipidemia",
+        name="Dyslipidemia",
+        name_vn="Rối loạn lipid máu",
+        category="Cardiology",
+        definition="Rối loạn lipid máu là tình trạng bất thường của các chỉ số lipid trong máu (tăng Cholesterol, Triglyceride, LDL-C hoặc giảm HDL-C), là yếu tố nguy cơ chính của bệnh tim mạch.",
+        causes=[
+            "Chế độ ăn nhiều chất béo bão hòa, trans fat",
+            "Ít vận động, béo phì",
+            "Hút thuốc lá, uống rượu bia",
+            "Di truyền (Tăng cholesterol máu gia đình)",
+            "Thứ phát: đái tháo đường, suy giáp, hội chứng thận hư, bệnh gan"
+        ],
+        symptoms=[
+            "Thường không có triệu chứng (kẻ giết người thầm lặng)",
+            "Ban vàng (xanthoma) ở da, gân (nếu tăng rất cao do di truyền)",
+            "Vòng giác mạc (arcus senilis) ở người trẻ",
+            "Viêm tụy cấp (nếu Triglyceride tăng rất cao > 1000 mg/dL)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Xét nghiệm bộ mỡ máu (Lipid panel) lúc đói",
+                "Chẩn đoán xác định khi có bất thường 1 trong các chỉ số lipid",
+                "Đánh giá nguy cơ tim mạch tổng thể (ASCVD risk)"
+            ],
+            "tests": [
+                "Cholesterol toàn phần (> 200 mg/dL là tăng)",
+                "LDL-C (> 130 mg/dL là tăng, tùy nguy cơ)",
+                "HDL-C (< 40 mg/dL là giảm)",
+                "Triglyceride (> 150 mg/dL là tăng)",
+                "Đường huyết, chức năng gan, thận, TSH (tìm nguyên nhân thứ phát)"
+            ],
+            "imaging": [
+                "Không có giá trị chẩn đoán trực tiếp",
+                "Siêu âm động mạch cảnh/vành (đánh giá xơ vữa)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị dựa trên mức độ nguy cơ tim mạch (thấp, trung bình, cao, rất cao). Thay đổi lối sống là nền tảng.",
+            "medications": [
+                "Statin (Atorvastatin, Rosuvastatin) - thuốc đầu tay giảm LDL",
+                "Ezetimibe (phối hợp nếu chưa đạt mục tiêu)",
+                "Fibrate (Fenofibrate) - ưu tiên giảm Triglyceride",
+                "PCSK9 inhibitor (nếu nguy cơ rất cao, kháng trị)",
+                "Omega-3 (giảm Triglyceride)"
+            ],
+            "procedures": [
+                "Thay đổi lối sống: chế độ ăn giảm mỡ, tập thể dục",
+                "Lọc huyết tương (Plasmapheresis) - hiếm, cho tăng TG rất cao viêm tụy"
+            ]
+        },
+        prevention=[
+            "Chế độ ăn lành mạnh (ít mỡ động vật, nhiều rau)",
+            "Tập thể dục đều đặn",
+            "Duy trì cân nặng lý tưởng",
+            "Bỏ thuốc lá"
+        ],
+        complications=[
+            "Xơ vữa động mạch",
+            "Nhồi máu cơ tim",
+            "Đột quỵ não",
+            "Bệnh động mạch ngoại biên",
+            "Viêm tụy cấp (do tăng Triglyceride)"
+        ],
+        related_scores=["ASCVD Risk Estimator", "Framingham Risk Score"],
+        related_drugs=["Atorvastatin", "Rosuvastatin", "Fenofibrate", "Ezetimibe"],
+        related_protocols=["Dyslipidemia Management"],
+        icd10_codes=["E78.0", "E78.1", "E78.2", "E78.4", "E78.5"]
+    ),
 ]

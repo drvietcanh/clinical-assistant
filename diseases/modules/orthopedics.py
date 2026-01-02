@@ -224,4 +224,137 @@ ORTHOPEDICS_DISEASES: List[Disease] = [
         related_protocols=["Osteoporosis Management"],
         icd10_codes=["M81.9", "M80.9"]
     ),
+
+    Disease(
+        id="fracture_bone",
+        name="Fractures (General)",
+        name_vn="Gãy xương (Tổng quan)",
+        category="Orthopedics",
+        definition="Gãy xương là tình trạng mất tính liên tục của cấu trúc xương, thường do chấn thương hoặc bệnh lý (loãng xương).",
+        causes=[
+            "Chấn thương: tai nạn giao thông, té ngã, tai nạn lao động",
+            "Bệnh lý: loãng xương, u xương, viêm xương",
+            "Mỏi: do lặp đi lặp lại một động tác quá mức (stress fracture)"
+        ],
+        symptoms=[
+            "Đau chói tại chỗ gãy",
+            "Sưng nề, bầm tím",
+            "Biến dạng chi (lệch trục, ngắn chi)",
+            "Mất cơ năng (không cử động được)",
+            "Cử động bất thường",
+            "Tiếng lạo xạo xương"
+        ],
+        diagnosis={
+            "criteria": [
+                "Lâm sàng: dấu hiệu chắc chắn (biến dạng, cử động bất thường, lạo xạo xương)",
+                "X-quang: xác định vị trí, đường gãy, di lệch"
+            ],
+            "tests": [
+                "Công thức máu (đánh giá mất máu nếu gãy xương lớn)",
+                "Đông máu cơ bản (chuẩn bị phẫu thuật)"
+            ],
+            "imaging": [
+                "X-quang (thẳng, nghiêng)",
+                "CT scan (nếu gãy phức tạp, gãy phạm khớp)",
+                "MRI (nếu nghi ngờ tổn thương dây chằng, sụn chêm kèm theo)"
+            ]
+        },
+        treatment={
+            "general": "Nguyên tắc: Nắn chỉnh - Bất động - Tập vận động.",
+            "medications": [
+                "Giảm đau: Paracetamol, Tramadol, NSAID",
+                "Kháng sinh (nếu gãy hở)",
+                "Chống phù nề",
+                "Tiêm phòng uốn ván (nếu có vết thương)"
+            ],
+            "procedures": [
+                "Sơ cứu: cố định tạm thời",
+                "Điều trị bảo tồn: Bó bột, nẹp (gãy không di lệch, ít di lệch)",
+                "Phẫu thuật: Kết hợp xương (đinh nội tủy, nẹp vít) - nếu gãy di lệch, gãy hở, gãy phạm khớp"
+            ]
+        },
+        prevention=[
+            "An toan giao thông, lao động",
+            "Phòng chống loãng xương",
+            "Phòng ngã (người già)"
+        ],
+        complications=[
+            "Sốc chấn thương, mất máu",
+            "Tổn thương mạch máu, thần kinh",
+            "Hội chứng chèn ép khoang",
+            "Nhiễm trùng (gãy hở)",
+            "Can lệch, khớp giả",
+            "Teo cơ, cứng khớp"
+        ],
+        related_scores=["MESS Score"],
+        related_drugs=["Paracetamol", "Tramadol", "Ibuprofen", "Cefazolin"],
+        related_protocols=["Fracture Management"],
+        icd10_codes=["T14.2"]
+    ),
+
+    Disease(
+        id="tendonitis",
+        name="Tendonitis",
+        name_vn="Viêm gân",
+        category="Orthopedics",
+        definition="Viêm gân là tình trạng viêm hoặc kích ứng của gân (dây chằng nối cơ với xương), thường gặp ở khớp vai, khuỷu, cổ tay, gót chân.",
+        causes=[
+            "Chấn thương lặp đi lặp lại (overuse injury) - phổ biến nhất",
+            "Chấn thương đột ngột",
+            "Tuổi tác (gân kém đàn hồi)",
+            "Sai tư thế khi làm việc, chơi thể thao",
+            "Bệnh lý: viêm khớp dạng thấp, gout"
+        ],
+        symptoms=[
+            "Đau tại vị trí gân bám hoặc dọc theo gân",
+            "Đau tăng khi vận động cơ đó",
+            "Sưng nề nhẹ",
+            "Cảm giác cứng khớp buổi sáng",
+            "Tiếng lạo xạo khi vận động gân (viêm bao gân)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Lâm sàng là chủ yếu: điểm đau chói, đau khi vận động đối kháng",
+                "Siêu âm: gân to, giảm âm, có dịch bao quanh"
+            ],
+            "tests": [
+                "Không có xét nghiệm đặc hiệu",
+                "Loại trừ bệnh khác: Acid uric (Gout), RF (Viêm khớp dạng thấp)"
+            ],
+            "imaging": [
+                "Siêu âm cơ xương khớp (rất có giá trị)",
+                "MRI (nếu nghi ngờ rách gân)"
+            ]
+        },
+        treatment={
+            "general": "RICE (Rest, Ice, Compression, Elevation). Điều trị nguyên nhân.",
+            "medications": [
+                "NSAID đường uống (Ibuprofen, Celecoxib) hoặc bôi tại chỗ",
+                "Tiêm Corticosteroid tại chỗ (thận trọng, nguy cơ đứt gân)",
+                "Glucosamine (hỗ trợ)"
+            ],
+            "procedures": [
+                "Nghỉ ngơi, hạn chế vận động vùng đau",
+                "Chườm lạnh",
+                "Vật lý trị liệu: sóng xung kích, siêu âm trị liệu",
+                "Băng chun hỗ trợ",
+                "Phẫu thuật (hiếm, nếu mạn tính, đứt gân)"
+            ]
+        },
+        prevention=[
+            "Khởi động kỹ trước khi vận động",
+            "Tránh các động tác lặp lại quá mức",
+            "Tư thế làm việc đúng",
+            "Nghỉ ngơi hợp lý"
+        ],
+        complications=[
+            "Viêm gân mạn tính",
+            "Đứt gân",
+            "Hạn chế vận động vĩnh viễn"
+        ],
+        related_scores=["VISA-A", "DASH Score"],
+        related_drugs=["Ibuprofen", "Diclofenac Gel", "Celecoxib"],
+        related_protocols=["Tendonitis Management"],
+        icd10_codes=["M77.9", "M65.9"]
+    ),
 ]

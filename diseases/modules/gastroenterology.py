@@ -525,4 +525,76 @@ GASTROENTEROLOGY_DISEASES: List[Disease] = [
         related_protocols=["Acute Pancreatitis Management"],
         icd10_codes=["K85.9", "K85.0", "K85.1"]
     ),
+
+    Disease(
+        id="ulcerative_colitis",
+        name="Ulcerative Colitis",
+        name_vn="Viêm loét đại trực tràng chảy máu",
+        category="Gastroenterology",
+        definition="Viêm loét đại trực tràng chảy máu (UC) là bệnh viêm ruột mạn tính (IBD), gây viêm và loét ở niêm mạc đại tràng và trực tràng.",
+        causes=[
+            "Tự miễn (hệ miễn dịch tấn công ruột)",
+            "Di truyền",
+            "Môi trường (chế độ ăn, vi khuẩn)",
+            "Yếu tố nguy cơ: tiền sử gia đình, tuổi trẻ (15-30) hoặc lớn tuổi (50-70)"
+        ],
+        symptoms=[
+            "Tiêu chảy kéo dài, thường có máu và nhầy",
+            "Đau bụng, co thắt bụng",
+            "Mót rặn (tenesmus)",
+            "Sụt cân",
+            "Sốt (nếu nặng)",
+            "Mệt mỏi",
+            "Biểu hiện ngoài ruột: đau khớp, viêm mắt, ban da"
+        ],
+        diagnosis={
+            "criteria": [
+                "Lâm sàng: tiêu chảy máu mạn tính",
+                "Nội soi đại tràng: viêm loét liên tục từ trực tràng lan lên",
+                "Mô bệnh học: viêm mạn tính lớp niêm mạc, áp xe hốc",
+                "Loại trừ nhiễm trùng (cấy phân)"
+            ],
+            "tests": [
+                "Công thức máu (thiếu máu, tăng bạch cầu)",
+                "CRP, ESR (đánh giá mức độ viêm)",
+                "Calprotectin trong phân (chẩn đoán phân biệt với IBS)",
+                "Cấy phân (loại trừ nhiễm khuẩn, lỵ amip, C.difficile)"
+            ],
+            "imaging": [
+                "Nội soi đại trực tràng (chuẩn vàng)",
+                "CT/MRI bụng (đánh giá biến chứng)",
+                "X-quang bụng (nếu nghi ngờ phình đại tràng nhiễm độc)"
+            ]
+        },
+        treatment={
+            "general": "Mục tiêu: lui bệnh niêm mạc, kiểm soát triệu chứng, nâng cao chất lượng sống. Điều trị leo thang (Step-up) hoặc Top-down tùy mức độ.",
+            "medications": [
+                "5-ASA (Mesalamine, Sulfasalazine) - cho mức độ nhẹ-trung bình",
+                "Corticosteroid (Prednisolone, Hydrocortisone) - cho đợt cấp",
+                "Thuốc ức chế miễn dịch (Azathioprine, 6-MP) - duy trì",
+                "Thuốc sinh học (Infliximab, Adalimumab, Vedolizumab) - cho mức độ trung bình-nặng"
+            ],
+            "procedures": [
+                "Nội soi theo dõi ung thư (sau 8-10 năm mắc bệnh)",
+                "Phẫu thuật cắt đại tràng (nếu kháng trị, biến chứng thủng, ung thư)"
+            ]
+        },
+        prevention=[
+            "Tuân thủ điều trị duy trì",
+            "Chế độ ăn phù hợp (tránh kích thích, fiber thấp trong đợt cấp)",
+            "Tầm soát ung thư đại tràng",
+            "Quản lý stress"
+        ],
+        complications=[
+            "Phình đại tràng nhiễm độc (Toxic megacolon)",
+            "Thủng ruột",
+            "Xuất huyết ồ ạt",
+            "Ung thư đại trực tràng (nguy cơ tăng theo thời gian)",
+            "Suy dinh dưỡng"
+        ],
+        related_scores=["Mayo Score", "Truelove and Witts Criteria"],
+        related_drugs=["Mesalamine", "Prednisolone", "Azathioprine", "Infliximab"],
+        related_protocols=["IBD Management"],
+        icd10_codes=["K51.9", "K51.0", "K51.5", "K51.8"]
+    ),
 ]

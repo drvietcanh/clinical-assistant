@@ -229,43 +229,38 @@ def render():
         
         # Classify kidney function
         if crcl >= 90:
-            stage = "Bình thường / Tăng lọc (Cần loại trừ CKD)"
-            ckd_label = "G1 (nếu có tổn thương thận)"
+            stage = "Bình thường"
             color = COLORS["success"]
             icon = "✅"
         elif crcl >= 60:
-            stage = "Giảm nhẹ"
-            ckd_label = "G2 (nếu có tổn thương thận)"
+            stage = "Giảm nhẹ (CKD G2)"
             color = COLORS["success"]
             icon = "✅"
         elif crcl >= 45:
-            stage = "Giảm nhẹ - trung bình"
-            ckd_label = "G3a"
+            stage = "Giảm nhẹ-TB (CKD G3a)"
             color = COLORS["warning"]
             icon = "⚠️"
         elif crcl >= 30:
-            stage = "Giảm trung bình - nặng"
-            ckd_label = "G3b"
+            stage = "Giảm TB-nặng (CKD G3b)"
             color = COLORS["warning"]
             icon = "⚠️"
         elif crcl >= 15:
-            stage = "Giảm nặng"
-            ckd_label = "G4"
+            stage = "Giảm nặng (CKD G4)"
             color = COLORS["error"]
             icon = "🚨"
         else:
-            stage = "Suy thận giai đoạn cuối (End-Stage)"
-            ckd_label = "G5"
-            color = COLORS["risk_critical"]
+            stage = "Suy thận cuối (CKD G5)"
+            color = COLORS["error"]
             icon = "🚨"
         
         # Display results
         st.markdown("## 📊 Kết quả")
         
-        render_score_result(
-            title="Creatinine Clearance (Cockcroft-Gault)",
-            score=round(crcl, 1),
-            interpretation=f"{stage} (KDIGO {ckd_label})",
+        # Use render_result_box for main result display
+        render_result_box(
+            title=f"{icon} Creatinine Clearance",
+            value=f"{crcl:.1f} mL/min",
+            subtitle=stage,
             color=color,
             icon=icon,
             size="large"
@@ -346,74 +341,96 @@ def render():
         st.markdown("### 💊 Hướng dẫn điều chỉnh liều thuốc:")
         
         if crcl >= 60:
-            render_recommendation_box(
-                title="CrCl ≥ 60 mL/min: Chức năng thận ổn định",
-                content="""
-                - **Hầu hết các thuốc:** Dùng liều bình thường.
-                - **Lưu ý:**
-                  - **Metformin:** Cẩn trọng nếu CrCl 45-60.
-                  - **SGLT2i:** Hiệu quả giảm khi CrCl < 60.
-                  - **Dabigatran:** Giảm liều nếu CrCl 30-50.
-                - **Khuyến cáo:** Vẫn cần theo dõi chức năng thận định kỳ, tránh thuốc độc thận.
-                """,
-                type="success",
-                icon="✅"
-            )
+            st.success("""
+            **✅ CrCl ≥ 60 mL/min - Chức năng thận gần bình thường**
+            
+            **Hầu hết các thuốc:**
+            - ✅ Dùng liều bình thường
+            - ✅ Không cần điều chỉnh liều
+            
+            **Ngoại trừ một số thuốc đặc biệt:**
+            - Metformin: Cẩn trọng nếu CrCl 45-60
+            - SGLT2i: Hiệu quả giảm khi CrCl < 60
+            - Dabigatran: Giảm liều nếu CrCl 30-50
+            
+            **Lưu ý:**
+            - Vẫn cần theo dõi chức năng thận định kỳ
+            - Tránh thuốc độc thận (NSAIDs, aminoglycosides...)
+            """)
         
         elif crcl >= 30:
-            render_recommendation_box(
-                title=f"CrCl {crcl:.0f} mL/min: Suy thận Mạn Giai đoạn 3 (G3a/G3b)",
-                content="""
-                **Cần điều chỉnh liều nhiều thuốc quan trọng:**
-                
-                **1. Kháng sinh:**
-                - **Beta-lactams:** Giảm liều 50-75% hoặc tăng khoảng cách dùng.
-                - **Fluoroquinolones (Levo/Cipro):** Giảm liều 50%.
-                - **Aminoglycosides/Vancomycin:** Cần monitor nồng độ thuốc.
-                
-                **2. Thuốc Tim mạch & Chống đông:**
-                - **Digoxin:** Giảm liều 50%, monitor nồng độ.
-                - **NOACs (Dabigatran, Rivaroxaban):** Cần giảm liều.
-                - **LMWH (Enoxaparin):** Cân nhắc giảm liều điều trị.
-                
-                **3. Nội tiết / Đái tháo đường:**
-                - **Metformin:** **TRÁNH dùng** nếu CrCl < 45. Cẩn trọng 45-60.
-                - **SGLT2i:** **TRÁNH bắt đầu** nếu CrCl < 45.
-                - **Insulin:** Nguy cơ hạ đường huyết tăng (do giảm thanh thải).
-                
-                **4. Giảm đau / Thần kinh:**
-                - **Gabapentin/Pregabalin:** Giảm liều đáng kể.
-                - **NSAIDs:** Tránh dùng (nguy cơ suy thận cấp).
-                """,
-                type="warning",
-                icon="⚠️"
-            )
+            st.warning(f"""
+            **⚠️ CrCl 30-59 mL/min - Suy thận mạn giai đoạn 3**
+            
+            **CrCl hiện tại: {crcl:.0f} mL/min**
+            
+            **Cần điều chỉnh liều nhiều thuốc:**
+            
+            **Kháng sinh:**
+            - **Beta-lactams:** Giảm liều 50-75% hoặc tăng khoảng cách
+            - **Fluoroquinolones:** Giảm liều 50%
+            - **Aminoglycosides:** Giảm liều đáng kể, monitor nồng độ
+            - **Vancomycin:** Điều chỉnh theo nồng độ đáy
+            
+            **Thuốc tim mạch:**
+            - **Digoxin:** Giảm liều 50%, monitor nồng độ
+            - **LMWH:** Giảm liều hoặc chuyển UFH
+            - **Dabigatran:** Giảm liều (110 mg bid nếu CrCl 30-50)
+            - **Rivaroxaban, Apixaban:** Giảm liều
+            
+            **Đái tháo đường:**
+            - **Metformin:** TRÁNH nếu CrCl < 45, cẩn trọng 45-60
+            - **SGLT2i:** TRÁNH nếu CrCl < 45
+            - **Insulin:** Có thể cần giảm liều (giảm thanh thải)
+            
+            **Khác:**
+            - **Allopurinol:** 100-200 mg/ngày (thay vì 300)
+            - **Gabapentin, Pregabalin:** Giảm liều đáng kể
+            - **Bisphosphonates:** Cẩn trọng nếu CrCl < 35
+            
+            ⚠️ **LUÔN tra cứu hướng dẫn cụ thể cho từng thuốc!**
+            """)
         
         else:  # CrCl < 30
-            render_recommendation_box(
-                title=f"CrCl {crcl:.0f} mL/min: Suy thận Nặng / Giai đoạn cuối (G4/G5)",
-                content="""
-                **⚠️ TÌNH TRẠNG NGUY HIỂM - CẦN HỘI CHẨN DƯỢC LÂM SÀNG / BÁC SĨ THẬN**
-                
-                **❌ CHỐNG CHỈ ĐỊNH:**
-                - **Metformin** (Nguy cơ toan lactic).
-                - **SGLT2i** (Không hiệu quả, nguy cơ cao).
-                - **NSAIDs** (Tuyệt đối tránh).
-                - **Nitrofurantoin**.
-                
-                **⚠️ GIẢM LIỀU MẠNH / THAY THẾ:**
-                - **LMWH:** Chống chỉ định hoặc chuyển sang Heparin thường (UFH).
-                - **Kháng sinh:** Hầu hết cần giảm liều. Ưu tiên **Ceftriaxone, Moxifloxacin, Linezolid** (ít cần chỉnh liều thận).
-                - **Digoxin:** Giảm liều cực thấp hoặc tránh dùng.
-                - **Gabapentin/Pregabalin:** Giảm 75-90% liều.
-                
-                **🛡️ KHUYẾN CÁO:**
-                - Cân nhắc lọc máu nếu có chỉ định cấp cứu (AEIOU).
-                - Monitor sát điện giải (K+) và cân bằng dịch.
-                """,
-                type="error",
-                icon="🚨"
-            )
+            st.error(f"""
+            **🚨 CrCl < 30 mL/min - Suy thận nặng/giai đoạn cuối**
+            
+            **CrCl hiện tại: {crcl:.0f} mL/min**
+            
+            **⚠️ NGUY HIỂM - Cần hội chẩn dược sĩ/thận!**
+            
+            **Nhiều thuốc CHỐNG CHỈ ĐỊNH hoặc cần giảm liều mạnh:**
+            
+            **Chống chỉ định:**
+            - ❌ **Metformin** (nguy cơ toan lactic)
+            - ❌ **SGLT2i** (Dapagliflozin, Empagliflozin...)
+            - ❌ **NSAIDs** (trừ khi thực sự cần thiết)
+            - ❌ **Nitrofurantoin** (không hiệu quả)
+            - ❌ **Dabigatran** nếu CrCl < 30
+            
+            **Cần GIẢM LIỀU MẠNH:**
+            - **Kháng sinh:** Hầu hết cần điều chỉnh
+            - **Digoxin:** 0.0625-0.125 mg/ngày, monitor nồng độ
+            - **LMWH:** Chuyển sang UFH hoặc giảm liều rõ rệt
+            - **Gabapentin/Pregabalin:** Giảm liều 50-75%
+            - **Insulin:** Giảm liều, monitor đường huyết sát
+            
+            **Lựa chọn an toàn hơn:**
+            - **Kháng sinh:** Ceftriaxone (không qua thận)
+            - **Chống đông:** Warfarin (nhưng cần monitor)
+            - **Giảm đau:** Tramadol (liều thấp), Morphine (cẩn trọng)
+            
+            **KHUYẾN CÁO:**
+            - 🏥 **Hội chẩn dược sĩ lâm sàng** cho MỌI đơn thuốc
+            - 📞 **Gọi thận bác sĩ** nếu nghi ngờ
+            - 🧪 **Monitor:** SCr, K+, thuốc trong máu (nếu có)
+            - 💊 **Cân nhắc lọc máu** nếu CrCl < 15
+            
+            **Nếu CrCl < 15:**
+            - Nhiều thuốc tích lũy nguy hiểm
+            - Cân nhắc lọc máu dự phòng
+            - Chỉ dùng thuốc thực sự cần thiết
+            """)
         
         # Common drugs dosing table
         with st.expander(f"💊 Bảng điều chỉnh liều thuốc phổ biến (CrCl = {crcl:.0f})"):
