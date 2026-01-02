@@ -218,6 +218,48 @@ if st.session_state.enc_view == "search":
             st.session_state.enc_view = "home"
             st.rerun()
 
+elif st.session_state.enc_view == "az_filter":
+    # Show A-Z Filter View
+    letter = st.session_state.enc_letter
+    col_back, col_title = st.columns([1, 5])
+    with col_back:
+        if st.button("⬅️ Quay lại"):
+            st.session_state.enc_view = "home"
+            st.session_state.enc_letter = None
+            st.rerun()
+    with col_title:
+        st.subheader(f"🔤 Bệnh lý bắt đầu bằng '{letter}'")
+    
+    all_diseases = get_all_diseases()
+    # Filter by name (English or Vietnamese) starting with the letter
+    filtered_diseases = [
+        d for d in all_diseases 
+        if d.name.upper().startswith(letter) or d.name_vn.upper().startswith(letter)
+    ]
+    
+    if filtered_diseases:
+        for disease in filtered_diseases:
+             with st.expander(f"**{disease.name_vn}** ({disease.name})", expanded=False):
+                render_disease_detail_tabs(disease)
+    else:
+        st.info(f"Không tìm thấy bệnh lý nào bắt đầu bằng chữ cái '{letter}'.")
+
+elif st.session_state.enc_view == "detail":
+    # Show Single Disease Detail View
+    disease = st.session_state.enc_selected_disease
+    
+    col_back, col_title = st.columns([1, 5])
+    with col_back:
+        if st.button("⬅️ Quay lại"):
+            st.session_state.enc_view = "home"
+            st.session_state.enc_selected_disease = None
+            st.rerun()
+    
+    if disease:
+        render_disease_detail_tabs(disease)
+    else:
+        st.error("Không tìm thấy thông tin bệnh lý.")
+
 elif st.session_state.enc_view == "category":
     # Show Category View
     cat = st.session_state.enc_category
@@ -238,14 +280,70 @@ elif st.session_state.enc_view == "category":
     else:
         st.info("Chưa có dữ liệu cho chuyên khoa này.")
 
+elif st.session_state.enc_view == "detail":
+    disease = st.session_state.enc_selected_disease
+    if disease:
+        col_back, col_title = st.columns([1, 5])
+        with col_back:
+            if st.button("⬅️ Quay lại"):
+                st.session_state.enc_view = "home" # Or previous view if tracked
+                st.session_state.enc_selected_disease = None
+                st.rerun()
+        with col_title:
+            st.markdown("## Chi tiết bệnh lý")
+        render_disease_detail_tabs(disease)
+    else:
+        st.error("Không tìm thấy thông tin bệnh lý.")
+        if st.button("🔙 Quay lại trang chủ"):
+            st.session_state.enc_view = "home"
+            st.rerun()
+
 else:
     # === HOME DASHBOARD ===
     
-    # A. Featured / Common Conditions (Optional)
-    # st.markdown("### 🔥 Bệnh lý phổ biến")
-    # ...
+    # A. Featured / Common Conditions
+    st.markdown("### 🔥 Bệnh lý Phổ biến")
+    
+    # List of IDs for common diseases in Vietnam context
+    common_ids = ["dengue_fever", "hypertension", "type_2_diabetes", "pneumonia", "stroke", "gerd"]
+    all_d = get_all_diseases()
+    featured_diseases = [d for d in all_d if d.id in common_ids]
+    
+    # Render as a carousel or grid of small info cards
+    # Using 3 columns for featured items
+    feat_cols = st.columns(3)
+    for i, disease in enumerate(featured_diseases):
+        with feat_cols[i % 3]:
+            # Create a localized clean card appearance
+            with st.container(border=True):
+                st.markdown(f"**{disease.name_vn}**")
+                st.caption(f"{disease.name}")
+                if st.button("Xem chi tiết", key=f"feat_btn_{disease.id}"):
+                    # To show detail, we can simulate a search or just use a dedicated 'detail' view state
+                    # Here reusing search view logic nicely by setting query to exact name 
+                    # OR better: add a specific single_view state. 
+                    # Let's use the 'search' view trick for simplicity or add 'detail' view.
+                    # Simpler: trick search query
+                    # We need to make sure the search picks it up, let's use the name
+                    # But wait, search query is bound to text_input key 'main_search_box' which might be tricky to set programmatically without rerunning with updated state
+                    # Better approach: Just set a 'detail_disease' state if I refactored for it, 
+                    # but for now let's just use the search view with the disease name as query?
+                    # Streamlit text_input key sync is one way.
+                    # Let's actually implement a cleaner 'detail' view mode 
+                    
+                    # Correction: I will add a 'detail' view block above 'category' view block in next edit steps if needed.
+                    # For now, let's force search view by manually handling it in the view logic if I can.
+                    # Actually, 'search' view checks `search_query` variable.
+                    # I can't easily set `search_query` widget value directly from button without callback.
+                    
+                    # Alternative: Redirect to separate "detail_view"
+                    st.session_state.enc_view = "detail"
+                    st.session_state.enc_selected_disease = disease
+                    st.rerun()
+
     
     # B. Category Grid
+    st.markdown("---")
     st.markdown("### 📂 Duyệt theo Chuyên khoa")
     
     categories = get_category_list()
@@ -257,12 +355,12 @@ else:
         "Gastroenterology": {"icon": "🤰", "name_vn": "Tiêu hóa"},
         "Neurology": {"icon": "🧠", "name_vn": "Thần kinh"},
         "Endocrinology": {"icon": "🩸", "name_vn": "Nội tiết"}, 
-        "Infectious": {"icon": "🦠", "name_vn": "Truyền nhiễm"}, # Changed from Infectious Diseases
+        "Infectious": {"icon": "🦠", "name_vn": "Truyền nhiễm"}, 
         "Dermatology": {"icon": "🧴", "name_vn": "Da liễu"}, 
         "Pediatrics": {"icon": "👶", "name_vn": "Nhi khoa"}, 
         "Emergency": {"icon": "🚑", "name_vn": "Cấp cứu"},
         "Oncology": {"icon": "🎗️", "name_vn": "Ung bướu"},
-        "Obstetrics/Gynecology": {"icon": "🤰", "name_vn": "Sản Phụ khoa"}, # Fixed key
+        "Obstetrics/Gynecology": {"icon": "🤰", "name_vn": "Sản Phụ khoa"},
         "Urology": {"icon": "🚽", "name_vn": "Tiết niệu"},
         "Nephrology": {"icon": "🫧", "name_vn": "Thận học"},
         "Hematology": {"icon": "🩸", "name_vn": "Huyết học"},
@@ -288,18 +386,21 @@ else:
                 st.session_state.enc_view = "category"
                 st.rerun()
     
-    # C. A-Z Index Quick Links (Visual only for now, can implement filtering later)
+    # C. A-Z Index Quick Links
     st.markdown("---")
     st.markdown("### 🔤 Tra cứu A-Z")
     
-    az_cols = st.columns(13) # 26 letters / 2 rows roughly
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    selected_letter = None
+    # Using many columns for a compact bar
+    az_cols = st.columns(len(alphabet))
     
-    # Simple A-Z filter buttons
-    # This renders a lot of buttons, might clutter but requested "A-Z Index"
-    # To save space, maybe display just available letters? 
-    # For now, let's keep it simple: List styling
+    for i, letter in enumerate(alphabet):
+        with az_cols[i]:
+            if st.button(letter, key=f"az_{letter}", use_container_width=True):
+                st.session_state.enc_letter = letter
+                st.session_state.enc_view = "az_filter"
+                st.rerun()
+    
     st.caption("Chọn chữ cái đầu của tên bệnh (Tiếng Anh/Việt)")
     
     # D. Statistics footer
@@ -308,5 +409,4 @@ else:
     st.caption(f"📚 Cơ sở dữ liệu hiện có: **{total_diseases}** bệnh lý & hội chứng.")
 
 # Footer
-render_standard_footer(disclaimer=True)
 
