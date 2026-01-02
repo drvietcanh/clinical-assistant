@@ -107,6 +107,52 @@ def search_guidelines(query: str, category: Optional[str] = None) -> List[Guidel
     return results
 
 
+def get_search_suggestions(query: str, limit: int = 5) -> List[str]:
+    """
+    Get autocomplete suggestions for search query
+    
+    Args:
+        query: Partial search query
+        limit: Maximum number of suggestions
+        
+    Returns:
+        List of suggested search terms
+    """
+    if not query or len(query) < 2:
+        return []
+    
+    query_lower = query.lower().strip()
+    suggestions = set()
+    
+    # Common search terms
+    common_terms = [
+        "Heart Failure", "Sepsis", "Diabetes", "Hypertension", "COPD", "Asthma",
+        "AHA", "ACC", "ESC", "IDSA", "KDIGO", "GOLD", "GINA", "SSC", "ADA",
+        "Cardiology", "Infectious", "Respiratory", "Nephrology", "Endocrinology",
+        "Neurology", "Critical Care", "Emergency", "ACS", "AKI", "CKD"
+    ]
+    
+    # Match against common terms
+    for term in common_terms:
+        if query_lower in term.lower():
+            suggestions.add(term)
+            if len(suggestions) >= limit:
+                break
+    
+    # Also get suggestions from guideline titles
+    for guideline in GUIDELINES_DATABASE:
+        if len(suggestions) >= limit:
+            break
+        title_words = guideline.title_vn.split() + guideline.title.split()
+        for word in title_words:
+            if len(word) > 3 and query_lower in word.lower():
+                suggestions.add(word)
+                if len(suggestions) >= limit:
+                    break
+    
+    return sorted(list(suggestions))[:limit]
+
+
 def get_guidelines_by_year(year: int) -> List[Guideline]:
     """
     Get guidelines from a specific year

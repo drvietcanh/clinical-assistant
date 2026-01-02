@@ -53,7 +53,7 @@ NAVIGATION_CATEGORIES = {
         title="🩺 Diagnosis & Reference",
         icon="🩺",
         description="Differential diagnosis, disease encyclopedia, symptom checker, ICD-10, articles",
-        module_ids=["diagnosis", "disease_encyclopedia", "symptom_checker", "icd10_lookup", "in_depth_articles"],
+        module_ids=["diagnosis", "disease_encyclopedia", "icd10_lookup", "in_depth_articles"],
         color="linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%)",
         border="#f44336"
     ),
