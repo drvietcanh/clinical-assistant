@@ -390,6 +390,12 @@ with st.sidebar:
     )
     
     # Filters (only show for relevant modes)
+    # Initialize filter variables to avoid NameError
+    category_filter = None
+    org_filter = None
+    year_filter = None
+    sort_by = None
+    
     if view_mode == "Tất cả":
         category_filter = st.selectbox(
             "Lọc theo chuyên khoa:",
@@ -401,6 +407,15 @@ with st.sidebar:
             "Lọc theo tổ chức:",
             ["Tất cả"] + get_organization_list(),
             key="guidelines_org_filter"
+        )
+        
+        # Year filter - get unique years from guidelines
+        all_guidelines = get_all_guidelines()
+        years = sorted(set(g.year for g in all_guidelines), reverse=True)
+        year_filter = st.selectbox(
+            "Lọc theo năm:",
+            ["Tất cả"] + [str(year) for year in years],
+            key="guidelines_year_filter"
         )
         
         # Sort options
@@ -504,9 +519,15 @@ elif view_mode == "Tất cả":
         st.markdown("---")
     
     # Apply filters (optimized - start with all guidelines and filter down)
-    category = None if category_filter == "Tất cả" else category_filter
-    org = None if org_filter == "Tất cả" else org_filter
-    year = None if year_filter == "Tất cả" else int(year_filter)
+    # Only apply filters if they are defined (in "Tất cả" mode)
+    category = None
+    org = None
+    year = None
+    
+    if view_mode == "Tất cả" and year_filter is not None:
+        category = None if category_filter == "Tất cả" else category_filter
+        org = None if org_filter == "Tất cả" else org_filter
+        year = None if year_filter == "Tất cả" else int(year_filter)
     
     # Start with all guidelines (cached)
     guidelines = get_cached_all_guidelines()
