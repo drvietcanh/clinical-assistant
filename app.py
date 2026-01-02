@@ -320,17 +320,18 @@ with tab1:
         categorized_modules = {cat: [] for cat in categories.keys()}
         uncategorized = []
         category_display_map = {}
-    
-    for module in modules:
-        module_id = module.get('id', module['key'].replace('quick_', ''))
-        categorized = False
-        for cat_name, cat_ids in categories.items():
-            if module_id in cat_ids:
-                categorized_modules[cat_name].append(module)
-                categorized = True
-                break
-        if not categorized:
-            uncategorized.append(module)
+        
+        # Categorize modules
+        for module in modules:
+            module_id = module.get('id', module['key'].replace('quick_', ''))
+            categorized = False
+            for cat_name, cat_ids in categories.items():
+                if module_id in cat_ids:
+                    categorized_modules[cat_name].append(module)
+                    categorized = True
+                    break
+            if not categorized:
+                uncategorized.append(module)
     
     # Display modules by category
     for cat_id, cat_modules in categorized_modules.items():
