@@ -20,6 +20,12 @@ from components.phase1_protocol_enhancer import (
     render_recommendation_with_evidence,
     render_protocol_footer
 )
+# CDS Decision Tree integration
+try:
+    from components.cds_decision_trees import get_decision_tree, render_decision_tree
+    CDS_DECISION_TREES_AVAILABLE = True
+except ImportError:
+    CDS_DECISION_TREES_AVAILABLE = False
 
 
 def render():
@@ -41,6 +47,14 @@ def render():
     - Tăng điểm SOFA ≥2 điểm
     - *Lưu ý: qSOFA (nhịp thở ≥22, GCS <15, Huyết áp tâm thu ≤100) chỉ dùng để sàng lọc nhanh, độ nhạy thấp.*
     """)
+    
+    # CDS Decision Tree (optional)
+    if CDS_DECISION_TREES_AVAILABLE:
+        with st.expander("🧭 Cây quyết định lâm sàng (CDS)", expanded=False):
+            sepsis_tree = get_decision_tree("sepsis")
+            if sepsis_tree:
+                render_decision_tree(sepsis_tree, title="Sepsis Decision Tree")
+        st.markdown("---")
     
     st.markdown("---")
     

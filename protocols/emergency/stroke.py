@@ -17,6 +17,12 @@ from components.phase1_protocol_enhancer import (
     render_recommendation_with_evidence,
     render_protocol_footer
 )
+# CDS Decision Tree integration
+try:
+    from components.cds_decision_trees import get_decision_tree, render_decision_tree
+    CDS_DECISION_TREES_AVAILABLE = True
+except ImportError:
+    CDS_DECISION_TREES_AVAILABLE = False
 
 
 def render():
@@ -41,6 +47,14 @@ def render():
     - **S**peech: Nói khó
     - **T**ime: Gọi cấp cứu ngay!
     """)
+    
+    # CDS Decision Tree (optional)
+    if CDS_DECISION_TREES_AVAILABLE:
+        with st.expander("🧭 Cây quyết định lâm sàng (CDS)", expanded=False):
+            stroke_tree = get_decision_tree("stroke")
+            if stroke_tree:
+                render_decision_tree(stroke_tree, title="Stroke Decision Tree")
+        st.markdown("---")
     
     st.markdown("---")
     

@@ -80,6 +80,8 @@ def render_personalized_recommendations() -> None:
     # Get usage patterns
     calculator_usage = st.session_state.get('calculator_usage', {})
     favorites = st.session_state.get('favorites', [])
+    recently_used = st.session_state.get('recently_used', [])
+    activity_log = st.session_state.get('activity_log', [])
     
     recommendations = []
     
@@ -88,15 +90,38 @@ def render_personalized_recommendations() -> None:
         recommendations.append({
             'title': '🫁 Critical Care Tools',
             'description': 'Bạn thường dùng scores hồi sức. Xem thêm Critical Care module?',
-            'link': 'pages/09_🫁_Critical_Care.py'
+            'link': 'pages/09_🫁_Critical_Care.py',
+            'icon': '🫁'
         })
     
     if 'cha2ds2vasc' in calculator_usage or 'hasbled' in calculator_usage:
         recommendations.append({
             'title': '❤️ Cardiology Protocols',
             'description': 'Bạn quan tâm tim mạch. Xem protocols tim mạch?',
-            'link': 'pages/04_📋_Protocols.py'
+            'link': 'pages/04_📋_Protocols.py',
+            'icon': '❤️'
         })
+    
+    # Recommend based on drug searches
+    drug_searches = [a for a in activity_log if 'drug' in a.get('action', '').lower()]
+    if len(drug_searches) > 3:
+        recommendations.append({
+            'title': '💊 Drug Interactions',
+            'description': 'Bạn thường tra cứu thuốc. Kiểm tra tương tác thuốc?',
+            'link': 'pages/07_💊_Drug_Database.py',
+            'icon': '💊'
+        })
+    
+    # Recommend based on recent activity
+    if recently_used:
+        recent_category = recently_used[0].split('_')[0] if '_' in recently_used[0] else ''
+        if 'protocol' in recent_category.lower():
+            recommendations.append({
+                'title': '📋 Related Protocols',
+                'description': 'Xem các protocols liên quan?',
+                'link': 'pages/04_📋_Protocols.py',
+                'icon': '📋'
+            })
     
     if not favorites:
         recommendations.append({

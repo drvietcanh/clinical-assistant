@@ -8,6 +8,13 @@ from utils.page_helper import setup_page, render_standard_footer
 from components.news_logic import get_medical_news
 import webbrowser
 
+# RSS Feed integration
+try:
+    from components.rss_news import render_rss_news_feed, render_multiple_rss_feeds, MEDICAL_NEWS_FEEDS
+    RSS_AVAILABLE = True
+except ImportError:
+    RSS_AVAILABLE = False
+
 # Standard page setup with mobile optimizations
 setup_page(
     page_title="Tin tức Y khoa",
@@ -24,7 +31,10 @@ with st.spinner("Đang tải tin tức..."):
     news_data = get_medical_news()
 
 # UI Layout
-tab1, tab2 = st.tabs(["🇻🇳 Tin Việt Nam (Nỗi bật)", "🌍 Tin Quốc tế (Mới nhất)"])
+if RSS_AVAILABLE:
+    tab1, tab2, tab3 = st.tabs(["🇻🇳 Tin Việt Nam (Nỗi bật)", "🌍 Tin Quốc tế (Mới nhất)", "📡 RSS Feeds"])
+else:
+    tab1, tab2 = st.tabs(["🇻🇳 Tin Việt Nam (Nỗi bật)", "🌍 Tin Quốc tế (Mới nhất)"])
 
 def render_news_card(item):
     """Render a single news item as a card"""
@@ -86,6 +96,18 @@ with tab2:
         if not errors:
              st.info("Đang cập nhật tin quốc tế...")
 
+# RSS Feeds tab
+if RSS_AVAILABLE:
+    with tab3:
+        st.markdown("### 📡 RSS Feeds từ Tạp chí Y khoa Quốc tế")
+        st.info("Tin tức từ các tạp chí y khoa hàng đầu thế giới")
+        
+        # Render multiple RSS feeds
+        render_multiple_rss_feeds(
+            feeds=MEDICAL_NEWS_FEEDS,
+            max_items_per_feed=5
+        )
+
 # Sidebar
 with st.sidebar:
     st.success("Tự động cập nhật mỗi giờ.")
@@ -94,5 +116,12 @@ with st.sidebar:
     st.markdown("- Cục Y tế dự phòng (VNCDC)")
     st.markdown("- Bộ Y tế Việt Nam (MOH)")
     st.markdown("- WHO & CDC US")
+    if RSS_AVAILABLE:
+        st.markdown("---")
+        st.markdown("**RSS Feeds:**")
+        st.markdown("- Medscape")
+        st.markdown("- NEJM")
+        st.markdown("- JAMA")
+        st.markdown("- BMJ")
 
 render_standard_footer()

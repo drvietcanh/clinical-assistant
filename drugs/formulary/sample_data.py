@@ -51,6 +51,37 @@ SAMPLE_FORMULARY_DATA = {
         generic_available=False,
         alternative_drugs=["Warfarin", "Dabigatran"],
         notes="Không trong danh mục BHYT, có thể dùng Warfarin thay thế"
+    ),
+    "Aspirin": FormularyInfo(
+        status=FormularyStatus.COVERED,
+        coverage_percentage=100,
+        generic_available=True,
+        notes="BHYT chi trả 100% cho generic"
+    ),
+    "Furosemide": FormularyInfo(
+        status=FormularyStatus.COVERED,
+        coverage_percentage=100,
+        generic_available=True,
+        notes="BHYT chi trả 100% cho generic"
+    ),
+    "Amlodipine": FormularyInfo(
+        status=FormularyStatus.COVERED,
+        coverage_percentage=100,
+        generic_available=True,
+        notes="BHYT chi trả 100% cho generic"
+    ),
+    "Losartan": FormularyInfo(
+        status=FormularyStatus.COVERED,
+        coverage_percentage=100,
+        generic_available=True,
+        notes="BHYT chi trả 100% cho generic"
+    ),
+    "Insulin Glargine": FormularyInfo(
+        status=FormularyStatus.PARTIAL,
+        coverage_percentage=50,
+        generic_available=False,
+        requires_prior_auth=True,
+        notes="BHYT chi trả 50%, cần xác nhận trước cho bệnh nhân đái tháo đường type 1 hoặc type 2 khó kiểm soát"
     )
 }
 

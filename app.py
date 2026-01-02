@@ -308,17 +308,17 @@ with tab1:
             uncategorized = []
     except ImportError:
         # Fallback to old structure
-    categories = {
-        "📊 Calculators & Scores": ["scores", "labs", "tdm"],
-        "💊 Thuốc & Liều dùng": ["drug_database", "antibiotics", "pill_identifier"],
-        "🫁 Hồi sức & Quy trình": ["critical_care", "ventilator", "protocols", "guidelines_tracker"],
-        "🧭 Hỗ trợ quyết định": ["phase2_features"],
-        "🩺 Chẩn đoán & Bài viết": ["diagnosis", "in_depth_articles", "icd10_lookup", "disease_encyclopedia", "symptom_checker", "patient_education"],
-        "💉 Tiêm chủng": ["vaccination"],
-    }
-    
-    categorized_modules = {cat: [] for cat in categories.keys()}
-    uncategorized = []
+        categories = {
+            "📊 Calculators & Scores": ["scores", "labs", "tdm"],
+            "💊 Thuốc & Liều dùng": ["drug_database", "antibiotics", "pill_identifier"],
+            "🫁 Hồi sức & Quy trình": ["critical_care", "ventilator", "protocols", "guidelines_tracker"],
+            "🧭 Hỗ trợ quyết định": ["phase2_features"],
+            "🩺 Chẩn đoán & Bài viết": ["diagnosis", "in_depth_articles", "icd10_lookup", "disease_encyclopedia", "symptom_checker", "patient_education"],
+            "💉 Tiêm chủng": ["vaccination"],
+        }
+        
+        categorized_modules = {cat: [] for cat in categories.keys()}
+        uncategorized = []
         category_display_map = {}
     
     for module in modules:

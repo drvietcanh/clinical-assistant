@@ -12,6 +12,7 @@ const CACHE_RESOURCES = [
     '/static/styles.css',
     '/static/offline.js',
     '/static/manifest.json',
+    '/static/service-worker-enhanced.js',
     
     // Main pages
     '/',
@@ -19,10 +20,19 @@ const CACHE_RESOURCES = [
     '/pages/04_📋_Protocols.py',
     '/pages/07_💊_Drug_Database.py',
     '/pages/09_🫁_Critical_Care.py',
+    '/pages/17_🎯_Unified_Dashboard.py',
     
     // Data files (if available)
     '/config/calculators.py',
+    '/config/navigation_config.py',
 ];
+
+// Cache strategies
+const CACHE_STRATEGIES = {
+    'network-first': ['/api/', '/data/'],
+    'cache-first': ['/static/', '/config/'],
+    'stale-while-revalidate': ['/pages/']
+};
 
 // Install event - cache resources
 self.addEventListener('install', (event) => {

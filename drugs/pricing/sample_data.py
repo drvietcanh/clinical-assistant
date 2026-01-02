@@ -46,6 +46,62 @@ SAMPLE_DRUG_PRICING: Dict[str, Dict] = {
         "last_updated": "2024-12-01",
         "unit": "viên 20mg",
         "generic_available": True
+    },
+    "Warfarin": {
+        "price_vnd": 3000,
+        "price_usd": 0.13,
+        "source": "VN Drug Price Database 2024",
+        "last_updated": "2024-12-01",
+        "unit": "viên 5mg",
+        "generic_available": True
+    },
+    "Aspirin": {
+        "price_vnd": 2000,
+        "price_usd": 0.08,
+        "source": "VN Drug Price Database 2024",
+        "last_updated": "2024-12-01",
+        "unit": "viên 100mg",
+        "generic_available": True
+    },
+    "Clopidogrel": {
+        "price_vnd": 18000,
+        "price_usd": 0.75,
+        "source": "VN Drug Price Database 2024",
+        "last_updated": "2024-12-01",
+        "unit": "viên 75mg",
+        "generic_available": True
+    },
+    "Furosemide": {
+        "price_vnd": 4000,
+        "price_usd": 0.17,
+        "source": "VN Drug Price Database 2024",
+        "last_updated": "2024-12-01",
+        "unit": "viên 40mg",
+        "generic_available": True
+    },
+    "Amlodipine": {
+        "price_vnd": 10000,
+        "price_usd": 0.42,
+        "source": "VN Drug Price Database 2024",
+        "last_updated": "2024-12-01",
+        "unit": "viên 5mg",
+        "generic_available": True
+    },
+    "Losartan": {
+        "price_vnd": 12000,
+        "price_usd": 0.50,
+        "source": "VN Drug Price Database 2024",
+        "last_updated": "2024-12-01",
+        "unit": "viên 50mg",
+        "generic_available": True
+    },
+    "Insulin Glargine": {
+        "price_vnd": 250000,
+        "price_usd": 10.42,
+        "source": "VN Drug Price Database 2024",
+        "last_updated": "2024-12-01",
+        "unit": "lọ 1000 IU",
+        "generic_available": False
     }
 }
 
