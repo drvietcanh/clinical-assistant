@@ -772,6 +772,68 @@ def create_febrile_neutropenia_flowchart() -> Tuple[List[FlowchartNode], List[Fl
     return nodes, edges
 
 
+def create_chest_pain_algorithm() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
+    """
+    Create Acute Chest Pain / ACS diagnostic algorithm
+    
+    Dựa trên:
+    - ACC/AHA Guidelines for the Management of Patients With Acute Coronary Syndromes (2023)
+    - ESC Guidelines for the Management of Acute Coronary Syndromes (2023)
+    - AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain (2021)
+    """
+    nodes = [
+        FlowchartNode("start", "Đau ngực cấp?", NodeType.START, icon="💔"),
+        FlowchartNode("ecg", "ECG ngay lập tức\n(Trong vòng 10 phút)", NodeType.TEST, icon="📊"),
+        FlowchartNode("stemi", "STEMI?\n(ST chênh lên ≥1mm\nở ≥2 chuyển đạo liên tiếp)", NodeType.DECISION, icon="🔴"),
+        FlowchartNode("nstemi", "NSTEMI?\n(ST chênh xuống,\nT đảo ngược,\nTroponin↑)", NodeType.DECISION, icon="🟡"),
+        FlowchartNode("unstable_angina", "Unstable Angina?\n(Đau ngực + ECG bình thường\n+ Troponin bình thường)", NodeType.DECISION, icon="🟠"),
+        FlowchartNode("low_risk", "Nguy cơ thấp?\n(Đau không điển hình,\nECG bình thường,\nTroponin bình thường)", NodeType.DECISION, icon="🟢"),
+        FlowchartNode("pci_stemi", "PCI ngay lập tức\n(Trong 90 phút)", NodeType.ACTION, color="#dc3545", icon="💊"),
+        FlowchartNode("antiplatelet", "Dual Antiplatelet Therapy\n(Aspirin + P2Y12 inhibitor)", NodeType.ACTION, icon="💊"),
+        FlowchartNode("anticoag", "Anticoagulation\n(Heparin/Enoxaparin)", NodeType.ACTION, icon="💉"),
+        FlowchartNode("statins", "Statin liều cao", NodeType.ACTION, icon="💊"),
+        FlowchartNode("pci_nstemi", "PCI trong 24-72h\n(Nếu nguy cơ cao)", NodeType.ACTION, color="#ffc107", icon="💊"),
+        FlowchartNode("troponin", "Troponin (hs-Tn)\n(0h, 3h, hoặc 0h, 1h)", NodeType.TEST, icon="🧪"),
+        FlowchartNode("trop_pos", "Troponin (+)", NodeType.DECISION, icon="🔴"),
+        FlowchartNode("trop_neg", "Troponin (-)", NodeType.DECISION, icon="🟢"),
+        FlowchartNode("stress_test", "Stress test / CTCA\n(Nếu nguy cơ thấp-trung bình)", NodeType.TEST, icon="📷"),
+        FlowchartNode("discharge", "Xuất viện\n+ Điều trị ngoại trú", NodeType.END, color="#28a745", icon="🏠"),
+        FlowchartNode("admit_ccu", "Nhập CCU/ICU", NodeType.END, color="#dc3545", icon="🏥"),
+        FlowchartNode("admit_ward", "Nhập khoa tim mạch", NodeType.END, color="#ffc107", icon="🏥"),
+    ]
+    
+    edges = [
+        FlowchartEdge("start", "ecg", ""),
+        FlowchartEdge("ecg", "stemi", "ST chênh lên"),
+        FlowchartEdge("ecg", "nstemi", "ST chênh xuống/T đảo"),
+        FlowchartEdge("ecg", "unstable_angina", "ECG bình thường + đau ngực"),
+        FlowchartEdge("ecg", "low_risk", "ECG bình thường + đau không điển hình"),
+        FlowchartEdge("stemi", "pci_stemi", ""),
+        FlowchartEdge("pci_stemi", "antiplatelet", ""),
+        FlowchartEdge("antiplatelet", "anticoag", ""),
+        FlowchartEdge("anticoag", "statins", ""),
+        FlowchartEdge("statins", "admit_ccu", ""),
+        FlowchartEdge("nstemi", "troponin", ""),
+        FlowchartEdge("troponin", "trop_pos", "Dương tính"),
+        FlowchartEdge("troponin", "trop_neg", "Âm tính"),
+        FlowchartEdge("trop_pos", "antiplatelet", ""),
+        FlowchartEdge("antiplatelet", "anticoag", ""),
+        FlowchartEdge("anticoag", "statins", ""),
+        FlowchartEdge("statins", "pci_nstemi", "Nguy cơ cao"),
+        FlowchartEdge("pci_nstemi", "admit_ccu", ""),
+        FlowchartEdge("statins", "admit_ward", "Nguy cơ thấp-trung bình"),
+        FlowchartEdge("unstable_angina", "antiplatelet", ""),
+        FlowchartEdge("antiplatelet", "statins", ""),
+        FlowchartEdge("statins", "admit_ward", ""),
+        FlowchartEdge("low_risk", "troponin", ""),
+        FlowchartEdge("trop_neg", "stress_test", ""),
+        FlowchartEdge("stress_test", "discharge", "Âm tính"),
+        FlowchartEdge("stress_test", "admit_ward", "Dương tính"),
+    ]
+    
+    return nodes, edges
+
+
 def create_acute_pancreatitis_flowchart() -> Tuple[List[FlowchartNode], List[FlowchartEdge]]:
     """
     Create Acute Pancreatitis initial evaluation & severity stratification algorithm

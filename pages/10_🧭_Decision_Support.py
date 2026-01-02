@@ -10,8 +10,9 @@ from utils.page_helper import setup_page, render_standard_footer
 from components.ui import render_info_box, render_hero
 
 # Phase 2 imports
-from components.flowchart import render_flowchart, create_chest_pain_algorithm
+from components.flowchart import render_flowchart
 from components.flowcharts.clinical_rules import (
+    create_chest_pain_algorithm,
     create_wells_pe_flowchart,
     create_perc_flowchart,
     create_cha2ds2vasc_flowchart,
