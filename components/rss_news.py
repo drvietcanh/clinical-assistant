@@ -50,7 +50,8 @@ def parse_rss_feed(feed_url: str) -> List[Dict[str, str]]:
 def render_rss_news_feed(
     feed_url: str,
     max_items: int = 10,
-    title: str = "📰 Medical News"
+    title: str = "📰 Medical News",
+    feed_key: str = None
 ) -> None:
     """
     Render RSS news feed
@@ -59,12 +60,18 @@ def render_rss_news_feed(
         feed_url: RSS feed URL
         max_items: Maximum number of items to show
         title: Section title
+        feed_key: Unique key for this feed (for button keys)
     """
     st.markdown(f"### {title}")
     
-    if st.button("🔄 Làm mới", key="refresh_rss"):
-        if 'rss_cache' in st.session_state:
-            del st.session_state['rss_cache']
+    # Generate unique key for button
+    button_key = f"refresh_rss_{feed_key or feed_url.replace('/', '_').replace(':', '_')}"
+    
+    if st.button("🔄 Làm mới", key=button_key):
+        # Clear cache for this specific feed
+        cache_key = f"rss_cache_{feed_url}"
+        if cache_key in st.session_state:
+            del st.session_state[cache_key]
         st.rerun()
     
     # Cache RSS feed
@@ -113,7 +120,8 @@ def render_multiple_rss_feeds(
             render_rss_news_feed(
                 feed_url=feed_url,
                 max_items=max_items_per_feed,
-                title=f"📰 {feed_name}"
+                title=f"📰 {feed_name}",
+                feed_key=feed_name  # Use feed name as unique key
             )
 
 
