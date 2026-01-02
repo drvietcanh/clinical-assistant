@@ -10,8 +10,6 @@ from components.references import (
     STRENGTH_STRONG, STRENGTH_MODERATE
 )
 
-# References database organized by calculator name
-CALCULATOR_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
 from .cardiology import CARDIOLOGY_REFERENCES
 from .emergency import EMERGENCY_REFERENCES
 from .gastrointestinal import GASTROINTESTINAL_REFERENCES
