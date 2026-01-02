@@ -223,6 +223,42 @@ def render_interaction_checker():
         # Summary with visual metrics
         render_interaction_summary(interactions)
         
+        # CDS Alerts Panel
+        try:
+            from components.cds_alerts import (
+                check_drug_interactions as cds_check_interactions,
+                render_cds_alerts_panel
+            )
+            
+            # Generate CDS alerts from interactions
+            cds_alerts = []
+            for interaction in interactions:
+                if interaction.get('severity') == SEVERITY_MAJOR:
+                    cds_alerts.append({
+                        'type': 'interaction',
+                        'severity': 'critical',
+                        'title': f"Tương tác nghiêm trọng: {interaction.get('drug1')} + {interaction.get('drug2')}",
+                        'message': interaction.get('description', ''),
+                        'recommendation': interaction.get('management', ''),
+                        'drugs': [interaction.get('drug1'), interaction.get('drug2')]
+                    })
+                elif interaction.get('severity') == SEVERITY_MODERATE:
+                    cds_alerts.append({
+                        'type': 'interaction',
+                        'severity': 'warning',
+                        'title': f"Tương tác vừa: {interaction.get('drug1')} + {interaction.get('drug2')}",
+                        'message': interaction.get('description', ''),
+                        'recommendation': interaction.get('management', ''),
+                        'drugs': [interaction.get('drug1'), interaction.get('drug2')]
+                    })
+            
+            if cds_alerts:
+                st.markdown("---")
+                st.markdown("### 🚨 CDS Alerts")
+                render_cds_alerts_panel(cds_alerts)
+        except ImportError:
+            pass
+        
         # Show checked drugs with normalization info
         st.markdown("**📋 Danh sách thuốc đã kiểm tra:**")
         drugs_display_parts = []

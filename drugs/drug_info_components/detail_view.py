@@ -64,9 +64,9 @@ def display_drug_info(drug_name, drug_data, show_header=True):
         </div>
         """
             , unsafe_allow_html=True)
-    # Enhanced tabs with better styling
-    tab_names = ['📋 Overview', '💊 Dosing', '⚠️ Safety', '🔗 Interactions', '📊 Monitoring']
-    (tab_overview, tab_dosing, tab_safety, tab_interactions, tab_monitoring) = st.tabs(tab_names)
+    # Enhanced tabs with better styling (added Pricing & Formulary)
+    tab_names = ['📋 Overview', '💊 Dosing', '⚠️ Safety', '🔗 Interactions', '📊 Monitoring', '💰 Pricing & BHYT']
+    (tab_overview, tab_dosing, tab_safety, tab_interactions, tab_monitoring, tab_pricing) = st.tabs(tab_names)
     with tab_overview:
         if 'black_box_warnings' in drug_data:
             _render_black_box_warning(drug_data['black_box_warnings'])
@@ -901,4 +901,82 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             pass
         except Exception as e:
             pass
+    
+    # Pricing & Formulary Tab
+    with tab_pricing:
+        st.markdown('### 💰 Giá & BHYT')
+        
+        # Try to get pricing info
+        try:
+            from drugs.pricing import get_drug_price, format_price
+            from drugs.pricing.sample_data import get_sample_pricing
+            
+            pricing = get_drug_price(drug_name) or get_sample_pricing(drug_name)
+            
+            if pricing:
+                col_price1, col_price2 = st.columns(2)
+                
+                with col_price1:
+                    st.markdown("#### 💵 Giá tham khảo")
+                    price_display = format_price(pricing.get('price_vnd', 0), show_usd=True)
+                    st.markdown(f"""
+                    <div style='background: #f0fdf4; border-left: 4px solid #22c55e; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                        <div style='color: #166534; font-size: 1.2em; font-weight: bold;'>{price_display}</div>
+                        <div style='color: #15803d; font-size: 0.9em; margin-top: 5px;'>Đơn vị: {pricing.get('unit', 'N/A')}</div>
+                        <div style='color: #16a34a; font-size: 0.85em; margin-top: 5px;'>Nguồn: {pricing.get('source', 'N/A')}</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                with col_price2:
+                    if pricing.get('generic_available'):
+                        st.markdown("""
+                        <div style='background: #eff6ff; border-left: 4px solid #3b82f6; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                            <div style='color: #1e40af; font-weight: bold;'>✅ Generic có sẵn</div>
+                            <div style='color: #1e3a8a; font-size: 0.9em; margin-top: 5px;'>Có thể tiết kiệm chi phí</div>
+                        </div>
+                        """, unsafe_allow_html=True)
+            else:
+                st.info("Chưa có thông tin giá cho thuốc này")
+        except ImportError:
+            st.info("Module pricing chưa được tích hợp đầy đủ")
+        
+        st.markdown("---")
+        
+        # Try to get formulary info
+        try:
+            from drugs.formulary import get_formulary_info, get_formulary_status_badge
+            from drugs.formulary.sample_data import get_sample_formulary
+            
+            formulary = get_formulary_info(drug_name) or get_sample_formulary(drug_name)
+            
+            if formulary:
+                st.markdown("#### 🏥 BHYT Coverage")
+                
+                # Status badge
+                badge_html = get_formulary_status_badge(formulary.status)
+                st.markdown(badge_html, unsafe_allow_html=True)
+                
+                # Coverage details
+                if formulary.coverage_percentage is not None:
+                    st.markdown(f"""
+                    <div style='background: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                        <div style='color: #92400e; font-weight: bold; margin-bottom: 5px;'>Mức chi trả: {formulary.coverage_percentage}%</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                if formulary.requires_prior_auth:
+                    st.warning("⚠️ Cần xác nhận trước khi kê đơn (Prior Authorization)")
+                
+                if formulary.generic_available:
+                    st.success("✅ Generic có trong danh mục BHYT")
+                
+                if formulary.alternative_drugs:
+                    st.info(f"💡 Thuốc thay thế: {', '.join(formulary.alternative_drugs)}")
+                
+                if formulary.notes:
+                    st.markdown(f"**Ghi chú:** {formulary.notes}")
+            else:
+                st.info("Chưa có thông tin BHYT cho thuốc này")
+        except ImportError:
+            st.info("Module formulary chưa được tích hợp đầy đủ")
 

@@ -9,11 +9,11 @@ from typing import Optional, Dict, List
 import html
 
 
-# Image library structure
+# Image library structure - Updated to use static/images/medical/
 IMAGE_LIBRARY = {
     "protocols": {
         "sepsis": {
-            "path": "static/images/protocols/sepsis/",
+            "path": "static/images/medical/protocols/sepsis/",
             "images": {
                 "sepsis_pathophysiology": "sepsis_pathophysiology.png",
                 "sepsis_algorithm": "sepsis_algorithm.png",
@@ -21,7 +21,7 @@ IMAGE_LIBRARY = {
             }
         },
         "stroke": {
-            "path": "static/images/protocols/stroke/",
+            "path": "static/images/medical/protocols/stroke/",
             "images": {
                 "stroke_types": "stroke_types.png",
                 "stroke_algorithm": "stroke_algorithm.png",
@@ -29,7 +29,7 @@ IMAGE_LIBRARY = {
             }
         },
         "acs": {
-            "path": "static/images/protocols/acs/",
+            "path": "static/images/medical/protocols/acs/",
             "images": {
                 "ecg_stemi": "ecg_stemi.png",
                 "ecg_nstemi": "ecg_nstemi.png",
@@ -38,7 +38,7 @@ IMAGE_LIBRARY = {
         }
     },
     "anatomy": {
-        "path": "static/images/anatomy/",
+        "path": "static/images/medical/anatomy/",
         "images": {
             "heart_anatomy": "heart_anatomy.png",
             "brain_anatomy": "brain_anatomy.png",
@@ -46,7 +46,7 @@ IMAGE_LIBRARY = {
         }
     },
     "flowcharts": {
-        "path": "static/images/flowcharts/",
+        "path": "static/images/medical/flowcharts/",
         "images": {
             "sepsis_flowchart": "sepsis_flowchart.png",
             "stroke_flowchart": "stroke_flowchart.png",
@@ -54,11 +54,23 @@ IMAGE_LIBRARY = {
         }
     },
     "ecg": {
-        "path": "static/images/ecg/",
+        "path": "static/images/medical/ecg/",
         "images": {
             "normal_ecg": "normal_ecg.png",
             "stemi_ecg": "stemi_ecg.png",
             "afib_ecg": "afib_ecg.png"
+        }
+    },
+    "clinical_photos": {
+        "path": "static/images/medical/clinical/",
+        "images": {
+            # Placeholder for clinical photos (with consent)
+        }
+    },
+    "infographics": {
+        "path": "static/images/medical/infographics/",
+        "images": {
+            # Placeholder for patient education infographics
         }
     }
 }

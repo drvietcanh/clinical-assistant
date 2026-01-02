@@ -288,7 +288,26 @@ with tab1:
     # Ẩn module Kháng sinh (chuyên sâu) khỏi trang chủ, chỉ truy cập qua Cơ sở dữ liệu thuốc
     modules = [m for m in modules if m.get("id") != "antibiotics"]
     
-    # Define categories
+    # Use new navigation structure if available
+    try:
+        from config.app_config import get_modules_grouped_by_category
+        from config.navigation_config import get_all_categories
+        
+        categorized_modules = get_modules_grouped_by_category()
+        nav_categories = get_all_categories()
+        
+        # Map category IDs to display names
+        category_display_map = {}
+        for cat_id, cat_info in nav_categories.items():
+            category_display_map[cat_id] = cat_info.title
+        
+        # Also include uncategorized if exists
+        if 'uncategorized' in categorized_modules:
+            uncategorized = categorized_modules.pop('uncategorized')
+        else:
+            uncategorized = []
+    except ImportError:
+        # Fallback to old structure
     categories = {
         "📊 Calculators & Scores": ["scores", "labs", "tdm"],
         "💊 Thuốc & Liều dùng": ["drug_database", "antibiotics", "pill_identifier"],
@@ -298,9 +317,9 @@ with tab1:
         "💉 Tiêm chủng": ["vaccination"],
     }
     
-    # Organize modules by category
     categorized_modules = {cat: [] for cat in categories.keys()}
     uncategorized = []
+        category_display_map = {}
     
     for module in modules:
         module_id = module.get('id', module['key'].replace('quick_', ''))
@@ -314,8 +333,10 @@ with tab1:
             uncategorized.append(module)
     
     # Display modules by category
-    for cat_name, cat_modules in categorized_modules.items():
+    for cat_id, cat_modules in categorized_modules.items():
         if cat_modules:
+            # Use display name if available, otherwise use ID
+            cat_name = category_display_map.get(cat_id, cat_id.replace('_', ' ').title())
             st.markdown(f"#### {cat_name}")
             st.caption(f"{len(cat_modules)} module")
             

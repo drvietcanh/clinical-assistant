@@ -197,6 +197,21 @@ with st.sidebar:
 
 # Main content
 if view_mode == "Overview":
+    # Try to render personalized dashboard widgets
+    try:
+        from components.dashboard_widgets import render_dashboard_layout
+        with st.expander("🏠 Personalized Dashboard", expanded=True):
+            render_dashboard_layout(
+                show_quick_access=True,
+                show_activity=True,
+                show_recommendations=True,
+                show_stats=True
+            )
+        st.markdown("---")
+    except ImportError:
+        pass
+
+if view_mode == "Overview":
     st.markdown("### 📊 Combined Overview")
     
     # Top-level metrics

@@ -18,6 +18,19 @@ except ImportError:
     # Fallback to difflib
     from difflib import SequenceMatcher
 
+# Import NLP utilities
+try:
+    from utils.nlp_search import (
+        normalize_query,
+        extract_keywords,
+        expand_medical_terms,
+        parse_search_intent,
+        improve_search_query
+    )
+    HAS_NLP = True
+except ImportError:
+    HAS_NLP = False
+
 
 # Popular searches tracking (in session state)
 def _init_popular_searches():
@@ -162,11 +175,19 @@ def search_calculators_enhanced(
     if not query:
         return []
     
+    _init_popular_searches()
+    
+    # Use NLP to improve query if available
+    if HAS_NLP:
+        improved_query = improve_search_query(query)
+        # Parse intent for better filtering
+        intent = parse_search_intent(query)
+        # Use improved query for search
+        query = improved_query
+    
     query = query.strip()
     query_lower = query.lower()
     results = []
-    
-    _init_popular_searches()
     
     # Get recently used for boosting
     recently_used = st.session_state.get('recently_used', [])

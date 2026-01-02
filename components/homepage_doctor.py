@@ -88,3 +88,11 @@ def render_homepage_doctor():
                     st.markdown(f"- {item}")
             else:
                 st.info("Chưa có mục yêu thích")
+
+    # Try to add personalized recommendations if available
+    try:
+        from components.dashboard_widgets import render_personalized_recommendations
+        st.markdown("---")
+        render_personalized_recommendations()
+    except ImportError:
+        pass

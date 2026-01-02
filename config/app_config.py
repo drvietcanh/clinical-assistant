@@ -249,6 +249,38 @@ def get_module_list_for_navigation() -> List[Dict]:
     return modules
 
 
+def get_modules_grouped_by_category() -> Dict[str, List[Dict]]:
+    """
+    Get modules grouped by navigation category
+    
+    Returns:
+        Dict mapping category_id to list of module dicts
+    """
+    try:
+        from config.navigation_config import get_category_by_module_id, get_all_categories
+    except ImportError:
+        # Fallback to old structure
+        return {}
+    
+    all_modules = get_module_list_for_navigation()
+    categories = get_all_categories()
+    grouped = {cat_id: [] for cat_id in categories.keys()}
+    uncategorized = []
+    
+    for module in all_modules:
+        module_id = module.get('id', module['key'].replace('quick_', ''))
+        category = get_category_by_module_id(module_id)
+        if category:
+            grouped[category.id].append(module)
+        else:
+            uncategorized.append(module)
+    
+    if uncategorized:
+        grouped['uncategorized'] = uncategorized
+    
+    return grouped
+
+
 # Export main config
 __all__ = [
     'APP_CONFIG',
@@ -258,5 +290,6 @@ __all__ = [
     'get_module_info',
     'get_all_modules',
     'get_module_list_for_navigation',
+    'get_modules_grouped_by_category',
 ]
 
