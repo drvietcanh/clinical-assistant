@@ -112,24 +112,40 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     unsafe_allow_html=True
                 )
             # Improved Pregnancy & Lactation Display in Overview
+            # Improved Pregnancy & Lactation Display in Overview
             if 'pregnancy_lactation' in drug_data:
                 pl = drug_data['pregnancy_lactation']
                 fda_cat = pl.get('fda_category', drug_data.get('pregnancy', 'N/A'))
                 lac_safety = pl.get('lactation', {}).get('safety', 'N/A')
                 
+                # Pregnancy Logic
                 preg_icons = {'A': '🟢', 'B': '🟡', 'C': '🟠', 'D': '🔴', 'X': '⚫'}
                 cat_letter = fda_cat.split()[0] if fda_cat else 'N/A' # Get first letter
+                # Handle extended categories like "C (D in 3rd trimester)"
+                cat_display = fda_cat
                 icon = preg_icons.get(cat_letter, '⚪')
                 
+                # High Risk Alert for D and X
+                bg_color = "#fce7f3"
+                border_color = "#EC4899"
+                text_color = "#831843"
+                
+                if cat_letter in ['D', 'X']:
+                    bg_color = "#fee2e2"
+                    border_color = "#DC2626"
+                    text_color = "#991b1b"
+
                 st.markdown(
                     f"""
-                    <div style='background: #fce7f3; padding: 15px; border-radius: 8px; border-left: 4px solid #EC4899; margin-top: 10px;'>
-                        <div style='color: #831843; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>🤰 Thai kỳ & Cho con bú</div>
-                        <div style='margin-bottom: 4px; color: #9f1239; font-size: 0.95em;'>
-                            <b>Thai kỳ:</b> {icon} {escape_html(fda_cat)}
-                        </div>
-                        <div style='color: #9f1239; font-size: 0.95em;'>
-                            <b>Cho con bú:</b> {escape_html(lac_safety)}
+                    <div style='background: {bg_color}; padding: 15px; border-radius: 8px; border-left: 4px solid {border_color}; margin-top: 10px;'>
+                        <div style='color: {text_color}; font-size: 0.85em; font-weight: bold; margin-bottom: 5px;'>🤰 An toàn Thai kỳ & Cho con bú</div>
+                        <div style='display: flex; justify-content: space-between; align-items: center;'>
+                            <div style='color: #9f1239; font-size: 0.95em;'>
+                                <b>Thai kỳ:</b> {icon} {escape_html(cat_display)}
+                            </div>
+                            <div style='background: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; border: 1px solid {border_color}; color: {text_color};'>
+                                🤱 {escape_html(lac_safety)}
+                            </div>
                         </div>
                     </div>
                     """,
@@ -740,10 +756,16 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             cat_letter = fda_cat.split()[0] if fda_cat else 'N/A'
             icon = preg_icons.get(cat_letter, '⚪')
             
-            st.markdown(f"### 🤰 An toàn thai kỳ: {icon} {fda_cat}")
+            # Special alert style for higher risk categories
+            preg_header_style = "color: #1e293b;"
+            if cat_letter in ['D', 'X']:
+                preg_header_style = "color: #DC2626;"
+
+            st.markdown(f"<h3 style='{preg_header_style}'>🤰 An toàn thai kỳ: {icon} {safe_render_html(fda_cat)}</h3>", unsafe_allow_html=True)
             st.markdown(
                 f"""
                 <div style='background: #fdf2f8; border-left: 4px solid #db2777; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                    <div style='color: #be185d; font-weight: bold; margin-bottom: 5px;'>Chi tiết:</div>
                     <div style='color: #9d174d; font-size: 1em; line-height: 1.6;'>{safe_render_html(preg_details)}</div>
                 </div>
                 """,
@@ -757,12 +779,21 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                 details = lac.get('details', '')
                 rec = lac.get('recommendation', '')
                 
-                st.markdown(f"### 🤱 An toàn cho con bú: {safety}")
-                rec_html = f"<div style='font-weight: bold; margin-top: 8px;'>💡 Khuyến cáo: {safe_render_html(rec)}</div>" if rec else ""
+                # Lactation styling
+                lac_icon = "🤱"
+                lac_color = "#0891b2" # Cyan
+                if safety == "Avoid":
+                    lac_color = "#DC2626"
+                elif safety == "Caution":
+                    lac_color = "#F59E0B"
+                
+                st.markdown(f"<h3 style='color: {lac_color}; margin-top: 20px;'>{lac_icon} An toàn cho con bú: {safe_render_html(safety)}</h3>", unsafe_allow_html=True)
+                
+                rec_html = f"<div style='font-weight: bold; margin-top: 8px; color: {lac_color};'>💡 Khuyến cáo: {safe_render_html(rec)}</div>" if rec else ""
                 
                 st.markdown(
                     f"""
-                    <div style='background: #ecfeff; border-left: 4px solid #0891b2; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                    <div style='background: #ecfeff; border-left: 4px solid {lac_color}; padding: 15px; border-radius: 8px; margin: 10px 0;'>
                         <div style='color: #155e75; font-size: 1em; line-height: 1.6;'>{safe_render_html(details)}</div>
                         {rec_html}
                     </div>

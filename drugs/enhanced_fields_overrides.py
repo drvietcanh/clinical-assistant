@@ -1910,6 +1910,26 @@ EXTRA_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             },
         },
     },
+    "Amoxicillin": {
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": (
+                "Được xem là an toàn khi sử dụng trong thai kỳ. Không có bằng chứng về quái thai hoặc độc tính lên thai nhi "
+                "trong các nghiên cứu trên động vật và người."
+            ),
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Bài tiết vào sữa mẹ với lượng nhỏ. Có thể gây tiêu chảy hoặc phát ban nhẹ ở trẻ, nhưng thường an toàn.",
+                "recommendation": "Có thể sử dụng. Theo dõi trẻ về tiêu chảy hoặc nấm miệng (tưa miệng).",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Không cần chỉnh liều.",
+            "severe": "Không cần chỉnh liều.",
+            "notes": "Chuyển hóa gan thấp; thải trừ chủ yếu qua thận.",
+        },
+    },
     # ======================== ANTIBIOTICS: BETA-LACTAMS (Penicillins) ==========
     "Dicloxacillin": {
         "contraindications": {
@@ -6041,6 +6061,18 @@ EXTRA_ENHANCED_FIELDS.update({
         },
     },
     "Paracetamol": {
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": (
+                "Được xem là an toàn để hạ sốt và giảm đau trong tất cả các giai đoạn của thai kỳ khi dùng ở liều điều trị. "
+                "Tuy nhiên, nên dùng liều thấp nhất có hiệu quả trong thời gian ngắn nhất."
+            ),
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Bài tiết vào sữa mẹ với lượng nhỏ. Được Viện Nhi khoa Hoa Kỳ (AAP) xếp vào nhóm thuốc an toàn khi cho con bú.",
+                "recommendation": "Có thể sử dụng. Không cần ngừng cho con bú.",
+            },
+        },
         "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng với paracetamol",
@@ -6052,12 +6084,22 @@ EXTRA_ENHANCED_FIELDS.update({
                 "Suy thận nặng - thận trọng",
                 "Thiếu G6PD - thận trọng",
                 "Suy dinh dưỡng - tăng nguy cơ độc tính",
-                "Có thai - thận trọng, nhưng an toàn tương đối",
-                "Đang cho con bú - thận trọng",
             ],
         },
     },
     "Ibuprofen": {
+        "pregnancy_lactation": {
+            "fda_category": "C (D trong 3 tháng cuối)",
+            "pregnancy_details": (
+                "FDA Category C trong 6 tháng đầu; Category D trong 3 tháng cuối (nguy cơ đóng ống động mạch sớm, thiểu niệu thai nhi, "
+                "kéo dài thời gian chuyển dạ). KHÔNG DÙNG trong 3 tháng cuối thai kỳ."
+            ),
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Bài tiết rất ít vào sữa mẹ (liều tương đối cho trẻ < 0.6%). AAP xếp vào nhóm an toàn.",
+                "recommendation": "Có thể sử dụng. Là lựa chọn NSAID ưu tiên cho phụ nữ cho con bú.",
+            },
+        },
         "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng với ibuprofen hoặc NSAID",
@@ -6065,7 +6107,7 @@ EXTRA_ENHANCED_FIELDS.update({
                 "Loét dạ dày tá tràng đang hoạt động",
                 "Xuất huyết tiêu hóa đang hoạt động",
                 "Suy tim nặng (NYHA III-IV)",
-                "Có thai (3 tháng cuối) - nguy cơ đóng ống động mạch sớm",
+                "Có thai (3 tháng cuối)",
             ],
             "tương_đối": [
                 "Tiền sử loét dạ dày tá tràng",
@@ -6074,8 +6116,7 @@ EXTRA_ENHANCED_FIELDS.update({
                 "Suy tim vừa - thận trọng",
                 "Tăng huyết áp không kiểm soát",
                 "Đang dùng thuốc chống đông",
-                "Có thai (1-2 tháng đầu và giữa) - thận trọng",
-                "Đang cho con bú - thận trọng",
+                "Có thai (1-2 tháng đầu) - thận trọng",
                 "Người cao tuổi - tăng nguy cơ tác dụng phụ",
             ],
         },
