@@ -249,20 +249,39 @@ else:
     st.markdown("### 📂 Duyệt theo Chuyên khoa")
     
     categories = get_category_list()
-    # Simple icon mapping
-    cat_icons = {
-        "Cardiology": "❤️", "Respiratory": "🫁", "Gastroenterology": "🥨",
-        "Nurology": "🧠", "Endocrinology": "🩸", "Infectious Diseases": "🦠",
-        "Dermatology": "🧴", "Pediatrics": "👶", "Emergency": "🚑"
+    
+    # Comprehensive Category Mapping (Icon + Vietnamese Name)
+    category_metadata = {
+        "Cardiology": {"icon": "❤️", "name_vn": "Tim mạch"},
+        "Respiratory": {"icon": "🫁", "name_vn": "Hô hấp"}, 
+        "Gastroenterology": {"icon": "🤰", "name_vn": "Tiêu hóa"},
+        "Neurology": {"icon": "🧠", "name_vn": "Thần kinh"},
+        "Endocrinology": {"icon": "🩸", "name_vn": "Nội tiết"}, 
+        "Infectious": {"icon": "🦠", "name_vn": "Truyền nhiễm"}, # Changed from Infectious Diseases
+        "Dermatology": {"icon": "🧴", "name_vn": "Da liễu"}, 
+        "Pediatrics": {"icon": "👶", "name_vn": "Nhi khoa"}, 
+        "Emergency": {"icon": "🚑", "name_vn": "Cấp cứu"},
+        "Oncology": {"icon": "🎗️", "name_vn": "Ung bướu"},
+        "Obstetrics/Gynecology": {"icon": "🤰", "name_vn": "Sản Phụ khoa"}, # Fixed key
+        "Urology": {"icon": "🚽", "name_vn": "Tiết niệu"},
+        "Nephrology": {"icon": "🫧", "name_vn": "Thận học"},
+        "Hematology": {"icon": "🩸", "name_vn": "Huyết học"},
+        "Psychiatry": {"icon": "🧘", "name_vn": "Tâm thần"},
+        "Rheumatology": {"icon": "🦴", "name_vn": "Cơ Xương Khớp"},
+        "Orthopedics": {"icon": "💪", "name_vn": "Chấn thương chỉnh hình"},
+        "Ophthalmology": {"icon": "👁️", "name_vn": "Nhãn khoa"},
+        "ENT": {"icon": "👂", "name_vn": "Tai Mũi Họng"},
+        "Critical Care": {"icon": "🏥", "name_vn": "Hồi sức tích cực"},
+        "Allergy Immunology": {"icon": "🛡️", "name_vn": "Dị ứng - Miễn dịch"}
     }
     
     # Creating a grid of buttons
     cols = st.columns(4)
     for i, cat in enumerate(categories):
         with cols[i % 4]:
-            icon = cat_icons.get(cat, "📁")
-            # Translation for display if needed, keeping English key for data
-            display_name = cat 
+            meta = category_metadata.get(cat, {"icon": "📁", "name_vn": cat})
+            display_name = meta["name_vn"]
+            icon = meta["icon"]
             
             if st.button(f"{icon} {display_name}", use_container_width=True, key=f"cat_{i}"):
                 st.session_state.enc_category = cat

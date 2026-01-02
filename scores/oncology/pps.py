@@ -139,8 +139,7 @@ def render():
         render_export_section(
                 title="PPS",
                 inputs=inputs_dict,
-                results=results_dict
-        ,
+                results=results_dict,
                 calculator_name="PPS"
             )
         
