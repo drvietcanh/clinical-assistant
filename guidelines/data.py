@@ -649,9 +649,47 @@ GUIDELINES_DATABASE: List[Guideline] = [
         ]
     ),
     
-    # === LATEST GUIDELINES 2023-2025 ===
-    
+
+    # === LATEST GUIDELINES 2025-2026 ===
+
     # === CARDIOLOGY - LATEST ===
+    Guideline(
+        id="esc_valvular_2025",
+        title="2025 ESC/EACTS Guidelines for the Management of Valvular Heart Disease",
+        title_vn="Hướng dẫn ESC/EACTS 2025 về Quản lý Bệnh Van Tim",
+        organization="ESC/EACTS",
+        year=2025,
+        category="Cardiology",
+        version="2025",
+        last_updated="2025-08-25",
+        url="https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines",
+        description="Updated criteria for intervention in aortic stenosis and mitral regurgitation",
+        key_recommendations=[
+            "TAVI indicated for patients ≥75 years or high surgical risk",
+            "Surgery preferred for patients <75 years and low risk",
+            "Earlier intervention for severe asymptomatic aortic stenosis with predictors of rapid progression"
+        ],
+        is_high_impact=True
+    ),
+    Guideline(
+        id="esc_pregnancy_2025",
+        title="2025 ESC Guidelines for the Management of Cardiovascular Diseases during Pregnancy",
+        title_vn="Hướng dẫn ESC 2025 về Quản lý Bệnh Tim mạch trong Thai kỳ",
+        organization="ESC",
+        year=2025,
+        category="Cardiology",
+        version="2025",
+        last_updated="2025-08-25",
+        url="https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines",
+        description="Comprehensive management of CVD in pregnancy",
+        key_recommendations=[
+            "Multidisciplinary Pregnancy Heart Team for moderate-high risk",
+            "Revised thresholds for initiating antihypertensive therapy in pregnancy",
+            "Prophylactic anticoagulation strategies"
+        ],
+        is_high_impact=True
+    ),
+
     Guideline(
         id="esc_hypertension_2024",
         title="2024 ESC/ESH Guidelines for the Management of Arterial Hypertension",
@@ -784,6 +822,30 @@ GUIDELINES_DATABASE: List[Guideline] = [
     
     # === RESPIRATORY - LATEST ===
     Guideline(
+        id="gold_copd_2026",
+        title="Global Strategy for the Diagnosis, Management, and Prevention of Chronic Obstructive Pulmonary Disease 2026",
+        title_vn="Chiến lược Toàn cầu Chẩn đoán, Quản lý và Phòng ngừa COPD 2026",
+        organization="GOLD",
+        year=2026,
+        category="Respiratory",
+        version="2026",
+        last_updated="2025-12-15",
+        url="https://goldcopd.org/2026-gold-report/",
+        related_protocol="COPD Exacerbation",
+        description="Latest GOLD guidelines for COPD management 2026",
+        key_recommendations=[
+            "New definitions for exacerbation severity and etiology",
+            "Triple therapy (ICS/LAMA/LABA) mortality benefit emphasis",
+            "Pre-bronchodilator spirometry for screening",
+            "Vaccination: Flu, Pneumococcal, RSV, Tdap, Zoster"
+        ],
+        is_high_impact=True,
+        related_tools=[
+            {"name": "mMRC", "url": "/Scores?calc=mMRC"},
+            {"name": "CAT Assessment", "url": "/Scores?calc=CAT"}
+        ]
+    ),
+    Guideline(
         id="gold_copd_2025",
         title="Global Strategy for the Diagnosis, Management, and Prevention of Chronic Obstructive Pulmonary Disease 2025",
         title_vn="Chiến lược Toàn cầu Chẩn đoán, Quản lý và Phòng ngừa COPD 2025",
@@ -877,6 +939,25 @@ GUIDELINES_DATABASE: List[Guideline] = [
     ),
     
     # === ENDOCRINOLOGY - LATEST ===
+    Guideline(
+        id="ada_diabetes_2026",
+        title="Standards of Care in Diabetes—2026",
+        title_vn="Tiêu chuẩn Chăm sóc Đái tháo đường—2026",
+        organization="ADA",
+        year=2026,
+        category="Endocrinology",
+        version="2026",
+        last_updated="2026-01-01",
+        url="https://diabetesjournals.org/care/issue/49/Supplement_1",
+        description="Latest American Diabetes Association standards of care 2026",
+        key_recommendations=[
+            "CGM recommended for all people with diabetes who benefit",
+            "Personalized obesity medication dosing",
+            "Screening for presymptomatic Type 1 diabetes (autoantibodies)",
+            "GLP-1s for metabolic dysfunction-associated steatotic liver disease (MASLD)"
+        ],
+        is_high_impact=True
+    ),
     Guideline(
         id="ada_diabetes_2025",
         title="Standards of Care in Diabetes—2025",

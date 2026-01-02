@@ -1,0 +1,27 @@
+[
+    {
+        "name": "WHO Outbreak News",
+        "url": "https://www.who.int/feeds/entity/emergencies/disease-outbreak-news/en/rss.xml",
+        "category": "Global Health"
+    },
+    {
+        "name": "CDC Health Alert Network",
+        "url": "https://emergency.cdc.gov/han/rss/han.xml",
+        "category": "Public Health"
+    },
+    {
+        "name": "Medscape Medical News",
+        "url": "https://www.medscape.com/cx/rssfeeds/medicalnews.xml",
+        "category": "Clinical"
+    },
+    {
+        "name": "JAMA Current Issue",
+        "url": "https://jamanetwork.com/rss/site_3/current_issue.xml",
+        "category": "Research"
+    },
+    {
+        "name": "NEJM This Week",
+        "url": "https://www.nejm.org/action/showFeed?type=etoc&feed=rss&jc=nejm",
+        "category": "Research"
+    }
+]

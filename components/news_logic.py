@@ -9,45 +9,42 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 import streamlit as st
 from typing import List, Dict, Optional
+import json
+import os
 
-# Constants
-RSS_SOURCES = {
-    "WHO Outbreak News": "https://www.who.int/feeds/entity/emergencies/disease-outbreak-news/en/rss.xml",
-    # "PubMed - Clinical": "https://pubmed.ncbi.nlm.nih.gov/rss/search/1/K3... (Dynamic)" # Add later if needed
-}
+# Paths
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+LOCAL_NEWS_PATH = os.path.join(DATA_DIR, "local_news.json")
+RSS_SOURCES_PATH = os.path.join(DATA_DIR, "rss_sources.json")
 
-MOCK_VN_NEWS = [
-    {
-        "title": "Bộ Y tế ban hành Hướng dẫn Chẩn đoán và Điều trị Sốt xuất huyết Dengue (2024)",
-        "link": "#",
-        "date": "2024-08-15",
-        "source": "Bộ Y Tế",
-        "summary": "Cập nhật tiêu chuẩn chẩn đoán, phân độ lâm sàng và phác đồ điều trị dịch truyền..."
-    },
-    {
-        "title": "Cảnh báo gia tăng ca mắc Sởi tại một số địa phương",
-        "link": "#",
-        "date": "2024-09-01",
-        "source": "Cục YTDP",
-        "summary": "Nhiều ca biến chứng nặng do không tiêm chủng đầy đủ..."
-    },
-    {
-        "title": "Hướng dẫn mới về quản lý Tăng huyết áp tại tuyến cơ sở",
-        "link": "#",
-        "date": "2024-07-20",
-        "source": "Bộ Y Tế",
-        "summary": "Nhấn mạnh vai trò của phối hợp thuốc sớm và theo dõi huyết áp tại nhà..."
-    }
-]
+def load_json_data(filepath: str) -> List[Dict]:
+    """Load list of dicts from JSON file safely"""
+    try:
+        if not os.path.exists(filepath):
+            return []
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"Error loading {filepath}: {e}")
+        return []
 
-def parse_rss_item(item) -> Dict:
+def parse_rss_item(item, source_name: str) -> Dict:
     """Helper to parse XML item element"""
+    # Namespaces are annoying in XML, try simple find first
+    title = item.findtext("title")
+    link = item.findtext("link")
+    description = item.findtext("description")
+    pubDate = item.findtext("pubDate")
+
+    # Clean description (remove HTML tags if simple)
+    # For now, just truncating if too long might be enough, but let's keep it raw
+    
     return {
-        "title": item.findtext("title"),
-        "link": item.findtext("link"),
-        "description": item.findtext("description"),
-        "pubDate": item.findtext("pubDate"),
-        "source": "International"
+        "title": title,
+        "link": link,
+        "summary": description, # Mapping description to summary for consistency
+        "date": pubDate, # TODO: Format date nicely
+        "source": source_name
     }
 
 @st.cache_data(ttl=3600)  # Cache for 1 hour
@@ -59,49 +56,56 @@ def fetch_news_feed(url: str, source_name: str) -> List[Dict]:
         response = requests.get(url, timeout=5)
         response.raise_for_status()
         
+        # Determine encoding if possible, else utf-8
+        response.encoding = 'utf-8' 
+        
         root = ET.fromstring(response.content)
         items = []
         
         # Parse standard RSS 2.0
-        for item in root.findall(".//item")[:10]: # Limit to 10 items
-            news_item = parse_rss_item(item)
-            news_item["source"] = source_name
+        # Usually items are under channel/item
+        channel = root.find("channel")
+        if channel is not None:
+            xml_items = channel.findall("item")
+        else:
+            # Fallback for some feeds (Atom/RSS1.0 might be different structure)
+             xml_items = root.findall(".//item") # Recursive search
+
+        for item in xml_items[:5]: # Limit to 5 items per source
+            news_item = parse_rss_item(item, source_name)
             items.append(news_item)
             
         return items
     except Exception as e:
-        # Return error item so UI knows
+        # Return error item so UI knows, or just empty list to hide failure
         return [{"title": f"Không thể tải tin từ {source_name}", "summary": str(e), "error": True}]
 
 def get_medical_news() -> Dict[str, List[Dict]]:
     """
-    Get all news (Local Mock + International Live)
+    Get all news (Local JSON + International Live RSS)
     """
-    # 1. Local News (Mock)
-    local_news = MOCK_VN_NEWS
+    # 1. Local/Curated News (from JSON)
+    local_news = load_json_data(LOCAL_NEWS_PATH)
     
-    # 2. International News (Live)
-    # Note: WHO RSS might be unstable depending on region, wrap safe
+    # 2. International News (Live from RSS)
+    rss_sources = load_json_data(RSS_SOURCES_PATH)
     intl_news = []
-    # Uncomment to enable live fetch when internet is guaranteed
-    # intl_news = fetch_news_feed(RSS_SOURCES["WHO Outbreak News"], "WHO")
     
-    # Fallback/Demo content for International if fetch fails or disabled
-    if not intl_news or intl_news[0].get("error"):
+    # Simple strategy: Fetch first 2 sources to avoid waiting too long
+    # Or fetch all. Let's try fetching first 2 for performance in this demo
+    for source in rss_sources[:3]:
+        feed_items = fetch_news_feed(source['url'], source['name'])
+        intl_news.extend(feed_items)
+    
+    # Fallback if no internet or empty
+    if not intl_news:
          intl_news = [
             {
-                "title": "WHO: Global Strategy for Influenza 2024-2030",
-                "link": "https://www.who.int",
-                "date": "2024-09-10",
-                "source": "WHO",
-                "summary": "Strengthening country capacities for influenza surveillance and response..."
-            },
-            {
-                "title": "New Clinical Guidelines for Sepsis Management",
-                "link": "https://www.who.int",
-                "date": "2024-09-05",
-                "source": "WHO/Intl",
-                "summary": "Updated surviving sepsis campaign bundles..."
+                "title": "International News Unavailable",
+                "link": "#",
+                "date": datetime.now().strftime("%Y-%m-%d"),
+                "source": "System",
+                "summary": "Could not fetch live RSS feeds. Please check internet connection."
             }
          ]
     
