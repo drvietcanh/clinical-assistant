@@ -1489,6 +1489,172 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 7: CEREBRAL CIRCULATION DRUGS (FINAL) ========================
+        "Citicoline": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "Low (mild insomnia, headache)", "cardiovascular": "Low (mild hypotension - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Cognitive function (stroke/TBI recovery assessment)",
+                    "Neurologic symptoms (headache, insomnia)",
+                    "Blood pressure (mild hypotension - rare)"
+                ],
+                "look_alike_sound_alike": ["Citicoline", "CDP-choline"]
+            },
+            "guideline_tags": [
+                "ESO/ASA Stroke Guidelines (supportive therapy, not standard treatment)",
+                "TBI Treatment Guidelines (supportive therapy)"
+            ]
+        },
+
+        "Edaravone": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Moderate (elevated liver enzymes)", "renal": "Moderate (acute kidney injury, elevated creatinine)", "allergic": "Moderate (anaphylaxis, angioedema - rare but serious)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Stroke recovery assessment",
+                    "Hepatic function (ALT, AST) - CRITICAL",
+                    "Renal function (creatinine, eGFR) - CRITICAL (acute kidney injury risk)",
+                    "Signs of anaphylaxis/angioedema (rare but serious)",
+                    "Sulfite sensitivity (contraindicated in sulfite allergy)"
+                ],
+                "look_alike_sound_alike": ["Edaravone", "Radicava"]
+            },
+            "guideline_tags": [
+                "Japanese Stroke Guidelines (AIS adjunct, not standard in Western guidelines)",
+                "FDA Drug Label - Edaravone (hepatic and renal monitoring, sulfite allergy warning)"
+            ]
+        },
+
+        "Ginkgo biloba extract": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {"hematologic": "Moderate (bleeding risk, especially with anticoagulants/antiplatelets)", "neurologic": "Low (seizures - rare, especially with unstandardized preparations)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (petechiae, bruising, epistaxis) - CRITICAL (especially with anticoagulants/antiplatelets)",
+                    "Cognitive function (subjective assessment)",
+                    "Drug interactions (warfarin, DOACs, aspirin, clopidogrel, NSAIDs - increased bleeding risk) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Ginkgo biloba", "EGb 761"]
+            },
+            "guideline_tags": [
+                "Ginkgo Evaluation of Memory (GEM) Study - no clear benefit in dementia prevention",
+                "FDA Drug Label - Ginkgo biloba (bleeding risk warnings)"
+            ]
+        },
+
+        "Piracetam": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "Low (mild stimulation, insomnia)", "renal": "Low (requires dose adjustment in renal impairment)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Cognitive function (subjective assessment)",
+                    "Renal function (CrCl, eGFR) - CRITICAL (dose adjustment required if CrCl <60)",
+                    "Neurologic symptoms (insomnia, stimulation)"
+                ],
+                "look_alike_sound_alike": ["Piracetam", "Nootropil"]
+            },
+            "guideline_tags": [
+                "Cochrane Reviews on Piracetam for Cognitive Impairment (inconsistent results)",
+                "ESO/ASA Stroke Guidelines (not standard treatment)"
+            ]
+        },
+
+        "Vinpocetine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "Moderate (hypotension, palpitations)", "reproductive": "High (teratogenicity - pregnancy category X)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Cognitive function (subjective assessment)",
+                    "Blood pressure and heart rate (hypotension, palpitations)",
+                    "Pregnancy status - CRITICAL (pregnancy category X - CONTRAINDICATED)"
+                ],
+                "look_alike_sound_alike": ["Vinpocetine", "Cavinton"]
+            },
+            "guideline_tags": [
+                "ESO/ASA Stroke Guidelines (not standard treatment, limited evidence)",
+                "FDA Drug Label - Vinpocetine (pregnancy category X warning)"
+            ]
+        },
+
+        "Nicergoline": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "Moderate (hypotension, orthostatic hypotension)", "metabolic": "Low (increased uric acid - rare, caution in gout)", "fibrotic": "Low (retroperitoneal fibrosis - very rare with long-term high-dose use)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Cognitive function (subjective assessment)",
+                    "Blood pressure (hypotension, orthostatic hypotension)",
+                    "Uric acid levels (if history of gout)",
+                    "Signs of retroperitoneal fibrosis (very rare with long-term high-dose use)"
+                ],
+                "look_alike_sound_alike": ["Nicergoline", "Sermion"]
+            },
+            "guideline_tags": [
+                "ESO/ASA Stroke Guidelines (not standard treatment, limited evidence)",
+                "Drug Monographs - Nicergoline"
+            ]
+        },
+
+        "Cerebrolysin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "Low (seizures in patients with low seizure threshold - rare)", "allergic": "Low (hypersensitivity reactions - rare)", "renal": "Low (requires caution in severe renal impairment)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Stroke/TBI recovery assessment",
+                    "Neurologic symptoms (seizures - rare, especially in patients with seizure history)",
+                    "Signs of hypersensitivity reactions (rare)",
+                    "Renal function (severe renal impairment - caution)"
+                ],
+                "look_alike_sound_alike": ["Cerebrolysin", "Cerebroprotein hydrolysate"]
+            },
+            "guideline_tags": [
+                "ESO/ASA Stroke Guidelines (supportive therapy, not standard treatment, controversial evidence)",
+                "TBI Treatment Guidelines (supportive therapy)"
+            ]
+        },
+
 }
 
 __all__ = ["NEUROLOGICAL_ENHANCED_FIELDS"]
