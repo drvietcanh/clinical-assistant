@@ -4744,4 +4744,199 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             },
         },
 
+    # ======================== SESSION 5: CORTICOSTEROIDS & SSRIs ========================
+        "Prednisone": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "endocrine": "High (adrenal insufficiency - can be fatal if stopped abruptly after long-term use, Black Box Warning)",
+                    "metabolic": "High (hyperglycemia - very common, can cause steroid-induced diabetes)",
+                    "cardiovascular": "High (hypertension - very common)",
+                    "skeletal": "High (osteoporosis - very common with long-term use)",
+                    "gastrointestinal": "High (peptic ulcer disease - increased risk, especially with NSAIDs)",
+                    "immunologic": "High (increased risk of serious infections - Black Box Warning)",
+                    "ophthalmic": "Moderate (cataracts, glaucoma - with long-term use)",
+                    "dermatologic": "Moderate (Cushingoid appearance - moon face, buffalo hump, striae)",
+                    "neuropsychiatric": "Moderate (psychosis, mania, depression - especially with high doses)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (hyperglycemia very common, can cause steroid-induced diabetes)",
+                    "Blood pressure - CRITICAL (hypertension very common)",
+                    "Signs of infection - CRITICAL (increased risk of serious infections, Black Box Warning)",
+                    "Signs of adrenal insufficiency (fatigue, weakness, hypotension, hyponatremia) - CRITICAL (if stopped abruptly after >2 weeks use, can be fatal, Black Box Warning)",
+                    "Bone density (DEXA scan) - CRITICAL (if long-term use >3 months, osteoporosis risk)",
+                    "Signs of peptic ulcer (abdominal pain, melena, hematemesis) - CRITICAL (increased risk, especially with NSAIDs)",
+                    "Weight and Cushingoid appearance - CRITICAL (moon face, buffalo hump, striae - very common)",
+                    "Ophthalmologic exam - CRITICAL (if long-term use, cataracts, glaucoma risk)",
+                    "Neuropsychiatric symptoms - CRITICAL (psychosis, mania, depression - especially with high doses)",
+                    "Taper schedule - CRITICAL (must taper gradually if used >2 weeks to avoid adrenal insufficiency, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Prednisone", "Prednisolone", "Methylprednisolone", "Dexamethasone"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Adrenal Insufficiency (Can Be Fatal If Stopped Abruptly After Long-Term Use)",
+                "FDA Black Box Warning - Increased Risk of Serious Infections",
+                "FDA Drug Label - Prednisone",
+                "ACR Guidelines - Rheumatoid Arthritis",
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "KDIGO Guidelines - Kidney Disease"
+            ]
+        },
+
+        "Methylprednisolone": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "endocrine": "High (adrenal insufficiency - can be fatal if stopped abruptly after long-term use, Black Box Warning)",
+                    "metabolic": "High (hyperglycemia - very common, can cause steroid-induced diabetes, especially with high-dose pulse therapy)",
+                    "cardiovascular": "High (hypertension - very common)",
+                    "skeletal": "High (osteoporosis - very common with long-term use)",
+                    "gastrointestinal": "High (peptic ulcer disease - increased risk, especially with NSAIDs)",
+                    "immunologic": "High (increased risk of serious infections - Black Box Warning)",
+                    "neuropsychiatric": "High (psychosis, mania, depression - especially with high-dose pulse therapy)",
+                    "ophthalmic": "Moderate (cataracts, glaucoma - with long-term use)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (hyperglycemia very common, especially with high-dose pulse therapy)",
+                    "Blood pressure - CRITICAL (hypertension very common)",
+                    "Signs of infection - CRITICAL (increased risk of serious infections, Black Box Warning)",
+                    "Signs of adrenal insufficiency (fatigue, weakness, hypotension, hyponatremia) - CRITICAL (if stopped abruptly after >2 weeks use, can be fatal, Black Box Warning)",
+                    "Neuropsychiatric symptoms - CRITICAL (psychosis, mania, depression - especially with high-dose pulse therapy)",
+                    "Bone density (DEXA scan) - CRITICAL (if long-term use >3 months, osteoporosis risk)",
+                    "Signs of peptic ulcer (abdominal pain, melena, hematemesis) - CRITICAL (increased risk, especially with NSAIDs)",
+                    "Taper schedule - CRITICAL (must taper gradually if used >2 weeks to avoid adrenal insufficiency, Black Box Warning)",
+                    "High-dose pulse therapy monitoring - CRITICAL (monitor for hyperglycemia, psychosis, infections)"
+                ],
+                "look_alike_sound_alike": ["Methylprednisolone", "Solu-Medrol", "Medrol", "Prednisone", "Prednisolone"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Adrenal Insufficiency (Can Be Fatal If Stopped Abruptly After Long-Term Use)",
+                "FDA Black Box Warning - Increased Risk of Serious Infections",
+                "FDA Drug Label - Methylprednisolone (Solu-Medrol, Medrol)",
+                "ACR Guidelines - Rheumatoid Arthritis",
+                "KDIGO Guidelines - Lupus Nephritis",
+                "AANS/CNS Guidelines - Spinal Cord Injury"
+            ]
+        },
+
+        "Dexamethasone": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "endocrine": "High (adrenal insufficiency - can be fatal if stopped abruptly after long-term use, Black Box Warning)",
+                    "metabolic": "High (hyperglycemia - very common, can cause steroid-induced diabetes)",
+                    "cardiovascular": "High (hypertension - very common)",
+                    "skeletal": "High (osteoporosis - very common with long-term use)",
+                    "gastrointestinal": "High (peptic ulcer disease - increased risk, especially with NSAIDs)",
+                    "immunologic": "High (increased risk of serious infections - Black Box Warning)",
+                    "ophthalmic": "Moderate (cataracts, glaucoma - with long-term use)",
+                    "neuropsychiatric": "Moderate (psychosis, mania, depression - especially with high doses)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (hyperglycemia very common, can cause steroid-induced diabetes)",
+                    "Blood pressure - CRITICAL (hypertension very common)",
+                    "Signs of infection - CRITICAL (increased risk of serious infections, Black Box Warning)",
+                    "Signs of adrenal insufficiency (fatigue, weakness, hypotension, hyponatremia) - CRITICAL (if stopped abruptly after >2 weeks use, can be fatal, Black Box Warning)",
+                    "Bone density (DEXA scan) - CRITICAL (if long-term use >3 months, osteoporosis risk)",
+                    "Signs of peptic ulcer (abdominal pain, melena, hematemesis) - CRITICAL (increased risk, especially with NSAIDs)",
+                    "Taper schedule - CRITICAL (must taper gradually if used >2 weeks to avoid adrenal insufficiency, Black Box Warning)",
+                    "Long half-life - CRITICAL (36-72 hours, longer than prednisone, effects persist longer)"
+                ],
+                "look_alike_sound_alike": ["Dexamethasone", "Decadron", "Prednisone", "Methylprednisolone"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Adrenal Insufficiency (Can Be Fatal If Stopped Abruptly After Long-Term Use)",
+                "FDA Black Box Warning - Increased Risk of Serious Infections",
+                "FDA Drug Label - Dexamethasone (Decadron)",
+                "WHO Guidelines - COVID-19 Treatment (Severe Cases)",
+                "ACR Guidelines - Rheumatoid Arthritis",
+                "KDIGO Guidelines - Kidney Disease"
+            ]
+        },
+
+        "Citalopram": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (QT prolongation - can be serious, Black Box Warning, dose limit 40mg/day, 20mg/day if >60 years old)",
+                    "neuropsychiatric": "High (suicidal ideation and behavior - increased risk in children, adolescents, and young adults <24 years, Black Box Warning)"
+                },
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mood and depressive/anxiety symptoms - CRITICAL (periodic assessment)",
+                    "Signs of suicidal ideation and behavior - CRITICAL (increased risk in first few weeks, especially in <24 years old, Black Box Warning)",
+                    "ECG (QT interval) - CRITICAL (if dose >40mg/day or in elderly >60 years, QT prolongation risk, Black Box Warning)",
+                    "Signs of serotonin syndrome (if used with other serotonergic drugs) - CRITICAL",
+                    "INR (if used with warfarin) - CRITICAL (may increase bleeding risk)",
+                    "Signs of withdrawal when discontinuing - CRITICAL",
+                    "Dose limit - CRITICAL (max 40mg/day, 20mg/day if >60 years old, Black Box Warning)",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, QT-prolonging drugs - AVOID, warfarin - monitor INR) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Citalopram", "Celexa", "Escitalopram", "Lexapro"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior (Increased Risk in Children, Adolescents, and Young Adults <24 Years)",
+                "FDA Black Box Warning - QT Prolongation (Dose Limit 40mg/Day, 20mg/Day If >60 Years Old)",
+                "FDA Drug Label - Citalopram (Celexa)",
+                "APA Guidelines - Depression Treatment",
+                "NICE Guidelines - Depression Treatment"
+            ]
+        },
+
+        "Sertraline": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "neuropsychiatric": "High (suicidal ideation and behavior - increased risk in children, adolescents, and young adults <24 years, Black Box Warning)",
+                    "hepatic": "Low (hepatotoxicity - rare but can occur)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mood and depressive/anxiety symptoms - CRITICAL (periodic assessment)",
+                    "Signs of suicidal ideation and behavior - CRITICAL (increased risk in first few weeks, especially in <24 years old, Black Box Warning)",
+                    "Hepatic function (ALT, AST) - CRITICAL (if symptoms of liver injury, rare hepatotoxicity)",
+                    "Signs of serotonin syndrome (if used with other serotonergic drugs) - CRITICAL",
+                    "INR (if used with warfarin) - CRITICAL (may increase bleeding risk)",
+                    "Signs of withdrawal when discontinuing - CRITICAL",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, warfarin - monitor INR) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Sertraline", "Zoloft", "Citalopram", "Escitalopram"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior (Increased Risk in Children, Adolescents, and Young Adults <24 Years)",
+                "FDA Drug Label - Sertraline (Zoloft)",
+                "APA Guidelines - Depression Treatment",
+                "NICE Guidelines - Depression Treatment"
+            ]
+        },
+
 }
