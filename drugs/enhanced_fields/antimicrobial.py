@@ -2742,4 +2742,279 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 5: FINAL ANTIMICROBIAL DRUGS ========================
+        "Itraconazole": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Moderate (hepatitis)", "cardiac": "High (heart failure, QT prolongation)", "dermatologic": "Moderate (photosensitivity)"},
+                "qt_prolongation": True,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Itraconazole trough level - CRITICAL (TDM recommended, target >0.5 mcg/ml)",
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL",
+                    "ECG (QT prolongation risk, heart failure risk)",
+                    "Signs of heart failure (dyspnea, edema)",
+                    "Skin examination (photosensitivity)",
+                    "Signs of allergic reaction (rash, Stevens-Johnson syndrome)"
+                ],
+                "look_alike_sound_alike": ["Itraconazole", "Fluconazole", "Voriconazole"]
+            },
+            "guideline_tags": [
+                "IDSA Invasive Aspergillosis Treatment Guidelines",
+                "IDSA Blastomycosis Treatment Guidelines",
+                "IDSA Histoplasmosis Treatment Guidelines",
+                "FDA Black Box Warning - Heart Failure",
+                "FDA Black Box Warning - Hepatotoxicity",
+                "FDA Drug Label - Itraconazole (TDM recommended)"
+            ]
+        },
+
+        "Rifampin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "High (hepatitis)", "hematologic": "Moderate (thrombocytopenia, leukopenia)", "dermatologic": "Moderate (rash, orange discoloration of body fluids)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL",
+                    "Complete blood count (thrombocytopenia, leukopenia)",
+                    "Signs of allergic reaction (rash, fever, flu-like syndrome)",
+                    "Orange discoloration of body fluids (urine, tears, sweat) - normal",
+                    "Drug interactions (strong CYP450 inducer) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Rifampin", "Rifabutin", "Rifapentine"]
+            },
+            "guideline_tags": [
+                "IDSA Tuberculosis Treatment Guidelines",
+                "IDSA Latent Tuberculosis Infection Guidelines",
+                "WHO Tuberculosis Treatment Guidelines",
+                "CDC Tuberculosis Treatment Guidelines",
+                "FDA Drug Label - Rifampin (hepatotoxicity and drug interactions warnings)"
+            ]
+        },
+
+        "Isoniazid": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "High (hepatitis, especially with age >35, alcohol use, slow acetylators)", "neurologic": "High (peripheral neuropathy, especially with pyridoxine deficiency)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL",
+                    "Signs of peripheral neuropathy (numbness, tingling) - especially without pyridoxine supplementation",
+                    "Signs of allergic reaction (rash, fever)",
+                    "Pyridoxine supplementation (25-50mg/day) - CRITICAL to prevent neuropathy"
+                ],
+                "look_alike_sound_alike": ["Isoniazid", "Isoniazid"]
+            },
+            "guideline_tags": [
+                "IDSA Tuberculosis Treatment Guidelines",
+                "IDSA Latent Tuberculosis Infection Guidelines",
+                "WHO Tuberculosis Treatment Guidelines",
+                "CDC Tuberculosis Treatment Guidelines",
+                "FDA Black Box Warning - Hepatotoxicity",
+                "FDA Drug Label - Isoniazid (pyridoxine supplementation required)"
+            ]
+        },
+
+        "Pyrazinamide": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "High (hepatitis)", "gout": "High (hyperuricemia, gout, arthralgia)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL",
+                    "Uric acid levels (hyperuricemia, gout risk)",
+                    "Signs of gout (joint pain, swelling)",
+                    "Signs of allergic reaction (rash, fever)"
+                ],
+                "look_alike_sound_alike": ["Pyrazinamide", "Pyrazinamide"]
+            },
+            "guideline_tags": [
+                "IDSA Tuberculosis Treatment Guidelines",
+                "WHO Tuberculosis Treatment Guidelines",
+                "CDC Tuberculosis Treatment Guidelines",
+                "FDA Drug Label - Pyrazinamide (hepatotoxicity and hyperuricemia warnings)"
+            ]
+        },
+
+        "Ofloxacin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"tendon": "Moderate (tendonitis, tendon rupture)", "cardiac": "Moderate (QT prolongation)", "hepatic": "Low"},
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG (QT prolongation risk)",
+                    "Signs of tendonitis/tendon rupture (especially Achilles tendon)",
+                    "Signs of peripheral neuropathy",
+                    "Signs of CNS effects (seizures, confusion)",
+                    "Hepatic function (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Ofloxacin", "Ciprofloxacin", "Levofloxacin"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Tendonitis and Tendon Rupture",
+                "FDA Black Box Warning - Peripheral Neuropathy",
+                "IDSA Urinary Tract Infection Guidelines",
+                "IDSA Sexually Transmitted Infections Guidelines",
+                "WHO Guidelines - Antimicrobial Resistance"
+            ]
+        },
+
+        "Penicillin G": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "Moderate (neurotoxicity with high doses, especially in renal impairment)", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis) - CRITICAL",
+                    "Neurologic symptoms (seizures, confusion) - especially with high doses or renal impairment",
+                    "Renal function (CrCl) - adjust dose if CrCl <10",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Penicillin G", "Penicillin V", "Ampicillin"]
+            },
+            "guideline_tags": [
+                "IDSA Syphilis Treatment Guidelines",
+                "IDSA Group A Streptococcus Infection Guidelines",
+                "IDSA Meningitis Guidelines",
+                "IDSA Endocarditis Guidelines",
+                "FDA Drug Label - Penicillin G"
+            ]
+        },
+
+        "Penicillin V": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis) - CRITICAL",
+                    "Diarrhea (C. difficile risk)",
+                    "Renal function (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Penicillin V", "Penicillin G", "Ampicillin"]
+            },
+            "guideline_tags": [
+                "IDSA Group A Streptococcus Infection Guidelines",
+                "IDSA Pharyngitis Guidelines",
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "FDA Drug Label - Penicillin V"
+            ]
+        },
+
+        "Streptomycin": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "High", "auditory": "High", "vestibular": "High", "neuromuscular": "Moderate"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Streptomycin peak and trough levels - CRITICAL (TDM recommended)",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Urine output",
+                    "Auditory function (hearing loss risk)",
+                    "Vestibular function (dizziness, balance)",
+                    "Signs of neuromuscular blockade (respiratory depression)",
+                    "Electrolytes (sodium, potassium, magnesium)"
+                ],
+                "look_alike_sound_alike": ["Streptomycin", "Gentamicin", "Tobramycin"]
+            },
+            "guideline_tags": [
+                "IDSA Tuberculosis Treatment Guidelines",
+                "IDSA Multidrug-Resistant Tuberculosis Guidelines",
+                "WHO Tuberculosis Treatment Guidelines",
+                "ASHP Guidelines - Aminoglycoside Therapeutic Monitoring",
+                "FDA Drug Label - Streptomycin (nephrotoxicity and ototoxicity warnings)"
+            ]
+        },
+
+        "Polymyxin B": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": True,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "High", "neurologic": "High (neuropathy, neuromuscular blockade)", "respiratory": "Moderate (if inhaled)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Urine output",
+                    "Signs of neurotoxicity (numbness, tingling, weakness)",
+                    "Signs of neuromuscular blockade (respiratory depression) - CRITICAL",
+                    "Respiratory function (if inhaled form)"
+                ],
+                "look_alike_sound_alike": ["Polymyxin B", "Colistin"]
+            },
+            "guideline_tags": [
+                "IDSA Multidrug-Resistant Gram-Negative Infection Guidelines",
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "FDA Drug Label - Polymyxin B (nephrotoxicity and neurotoxicity warnings)"
+            ]
+        },
+
+        "Cefiderocol": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Renal function (CrCl) - adjust dose if CrCl <60",
+                    "Complete blood count",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Cefiderocol", "Ceftazidime", "Cefepime"]
+            },
+            "guideline_tags": [
+                "IDSA Multidrug-Resistant Gram-Negative Infection Guidelines",
+                "IDSA Carbapenem-Resistant Enterobacteriaceae (CRE) Guidelines",
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "FDA Drug Label - Cefiderocol"
+            ]
+        },
+
 }
