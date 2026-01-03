@@ -5168,4 +5168,142 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+    # ======================== SESSION 7: SSRIs, TCAs & STATINS (continued) ========================
+        "Paroxetine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "neuropsychiatric": "High (suicidal ideation and behavior - increased risk in children, adolescents, and young adults <24 years, Black Box Warning)",
+                    "teratogenic": "High (teratogenicity - FDA category D, increased risk of cardiac defects, cleft lip/palate, Black Box Warning)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mood and depressive/anxiety symptoms - CRITICAL (periodic assessment)",
+                    "Signs of suicidal ideation and behavior - CRITICAL (increased risk in first few weeks, especially in <24 years old, Black Box Warning)",
+                    "Signs of withdrawal when discontinuing - CRITICAL (withdrawal syndrome more common than other SSRIs due to short half-life)",
+                    "Signs of serotonin syndrome (if used with other serotonergic drugs) - CRITICAL",
+                    "INR (if used with warfarin) - CRITICAL (may increase bleeding risk)",
+                    "Weight - CRITICAL (weight gain more common than other SSRIs)",
+                    "Pregnancy test - CRITICAL (FDA category D, teratogenicity risk, Black Box Warning)",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, CYP2D6 substrates - paroxetine is strong CYP2D6 inhibitor, warfarin - monitor INR) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Paroxetine", "Paxil", "Citalopram", "Sertraline"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior (Increased Risk in Children, Adolescents, and Young Adults <24 Years)",
+                "FDA Black Box Warning - Teratogenicity (FDA Category D - Increased Risk of Cardiac Defects, Cleft Lip/Palate)",
+                "FDA Drug Label - Paroxetine (Paxil)",
+                "APA Guidelines - Depression Treatment",
+                "NICE Guidelines - Depression Treatment"
+            ]
+        },
+
+        "Fluvoxamine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "neuropsychiatric": "High (suicidal ideation and behavior - increased risk in children, adolescents, and young adults <24 years, Black Box Warning)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mood and depressive/anxiety/OCD symptoms - CRITICAL (periodic assessment)",
+                    "Signs of suicidal ideation and behavior - CRITICAL (increased risk in first few weeks, especially in <24 years old, Black Box Warning)",
+                    "Signs of serotonin syndrome (if used with other serotonergic drugs) - CRITICAL",
+                    "INR (if used with warfarin) - CRITICAL (may increase bleeding risk)",
+                    "Drug interactions - CRITICAL (MAO inhibitors - CONTRAINDICATED, tizanidine - CONTRAINDICATED, alosetron - CONTRAINDICATED, theophylline/caffeine - increase levels significantly, clozapine/olanzapine - increase levels, warfarin - monitor INR)",
+                    "CYP450 interactions - CRITICAL (strong CYP1A2, CYP2C9, CYP3A4 inhibitor - many drug interactions)"
+                ],
+                "look_alike_sound_alike": ["Fluvoxamine", "Luvox", "Fluoxetine", "Paroxetine"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior (Increased Risk in Children, Adolescents, and Young Adults <24 Years)",
+                "FDA Drug Label - Fluvoxamine (Luvox)",
+                "APA Guidelines - Depression Treatment",
+                "NICE Guidelines - Depression Treatment"
+            ]
+        },
+
+        "Nortriptyline": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (arrhythmias, AV block, QT prolongation - can be fatal in overdose, Black Box Warning)",
+                    "neuropsychiatric": "High (suicidal ideation and behavior - increased risk in children, adolescents, and young adults <24 years, Black Box Warning, overdose can be fatal)",
+                    "anticholinergic": "Moderate (dry mouth, constipation, urinary retention, blurred vision - less than amitriptyline)"
+                },
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG - CRITICAL (before starting and periodically, QT prolongation, AV block risk, Black Box Warning)",
+                    "Heart rate and blood pressure - CRITICAL (arrhythmias, orthostatic hypotension)",
+                    "Mood and depressive symptoms - CRITICAL (periodic assessment)",
+                    "Signs of suicidal ideation and behavior - CRITICAL (increased risk in first few weeks, especially in <24 years old, Black Box Warning)",
+                    "Signs of overdose (tachycardia, arrhythmias, seizures, coma) - CRITICAL (can be fatal, Black Box Warning)",
+                    "Anticholinergic symptoms (dry mouth, constipation, urinary retention, blurred vision) - CRITICAL (less than amitriptyline but still common)",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, quinidine/cimetidine - increase levels) - CRITICAL",
+                    "Prescribe limited quantities - CRITICAL (overdose can be fatal, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Nortriptyline", "Pamelor", "Amitriptyline", "Imipramine"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior (Increased Risk in Children, Adolescents, and Young Adults <24 Years)",
+                "FDA Black Box Warning - Overdose Can Be Fatal (Cardiac Arrhythmias, Seizures, Coma)",
+                "FDA Drug Label - Nortriptyline (Pamelor)",
+                "APA Guidelines - Depression Treatment",
+                "NICE Guidelines - Depression Treatment"
+            ]
+        },
+
+        "Rosuvastatin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "musculoskeletal": "High (myopathy, rhabdomyolysis - rare but serious, can cause acute kidney injury, Black Box Warning)",
+                    "hepatic": "Moderate (hepatotoxicity - elevated transaminases, rare but can occur)",
+                    "renal": "Moderate (proteinuria, hematuria - with high dose 40mg)",
+                    "metabolic": "Low (new-onset diabetes - slight increase in risk)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Muscle symptoms (myalgia, weakness) - CRITICAL (if severe, check CK, rhabdomyolysis risk, Black Box Warning)",
+                    "Creatine kinase (CK) - CRITICAL (if muscle symptoms, stop if CK >10x ULN, Black Box Warning)",
+                    "Hepatic function (ALT, AST) - CRITICAL (before starting, then if symptoms, hepatotoxicity risk)",
+                    "Renal function (proteinuria, hematuria) - CRITICAL (with 40mg dose, monitor for proteinuria)",
+                    "Lipid profile (LDL, HDL, triglycerides) - CRITICAL (after 4-12 weeks, assess response)",
+                    "Blood glucose - CRITICAL (new-onset diabetes risk, slight increase)",
+                    "Asian patients - CRITICAL (consider starting dose 5mg, higher exposure)",
+                    "Drug interactions (cyclosporine - limit to 5mg/day, gemfibrozil - avoid or limit to 10mg/day, warfarin - monitor INR) - CRITICAL",
+                    "Pregnancy test - CRITICAL (contraindicated in pregnancy, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Rosuvastatin", "Crestor", "Atorvastatin", "Simvastatin"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Myopathy and Rhabdomyolysis (Can Cause Acute Kidney Injury)",
+                "FDA Black Box Warning - Teratogenicity (Contraindicated in Pregnancy)",
+                "FDA Drug Label - Rosuvastatin (Crestor)",
+                "ACC/AHA 2018 Cholesterol Guidelines",
+                "ESC/EAS Guidelines for Dyslipidaemias 2019",
+                "JUPITER Study"
+            ]
+        },
+
 }
