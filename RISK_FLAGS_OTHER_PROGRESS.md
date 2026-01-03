@@ -2,7 +2,7 @@
 
 ## Tổng quan
 - **Tổng số thuốc:** 216 thuốc
-- **Tiến độ hiện tại:** 11/216 thuốc (5%)
+- **Tiến độ hiện tại:** 16/216 thuốc (7%)
 - **Trạng thái:** Đang thực hiện (in_progress)
 - **Thời gian dự kiến:** Week 10-14, 15-20 sessions
 
@@ -68,6 +68,22 @@
 
 ---
 
+### Session 5 - Corticosteroids & SSRIs (5 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Corticosteroids:**
+- ✅ **Prednisone** - Inflammatory/autoimmune diseases (adrenal insufficiency - Black Box Warning, increased risk of serious infections - Black Box Warning, hyperglycemia, hypertension, osteoporosis, peptic ulcer disease, must taper gradually if used >2 weeks)
+- ✅ **Methylprednisolone** - Inflammatory/autoimmune diseases, spinal cord injury, lupus nephritis (adrenal insufficiency - Black Box Warning, increased risk of serious infections - Black Box Warning, hyperglycemia especially with high-dose pulse therapy, psychosis/mania with high doses, high_alert)
+- ✅ **Dexamethasone** - Cerebral edema, COVID-19 severe, antiemetic (adrenal insufficiency - Black Box Warning, increased risk of serious infections - Black Box Warning, hyperglycemia, long half-life 36-72 hours)
+
+**Nhóm SSRIs:**
+- ✅ **Citalopram** - Depression, anxiety (suicidal ideation and behavior - Black Box Warning, QT prolongation - Black Box Warning, dose limit 40mg/day, 20mg/day if >60 years old)
+- ✅ **Sertraline** - Depression, anxiety, OCD (suicidal ideation and behavior - Black Box Warning, rare hepatotoxicity)
+
+**Tổng Session 5:** 5 thuốc
+
+---
+
 ## Tổng kết các Session
 
 | Session | Số thuốc | Nhóm thuốc chính | Trạng thái |
@@ -76,9 +92,10 @@
 | Session 2 | 2 | Anticoagulants, Cardiac Glycosides | ✅ Hoàn thành |
 | Session 3 | 2 | Inotropes, Antiplatelets | ✅ Hoàn thành |
 | Session 4 | 1 | Antiarrhythmics | ✅ Hoàn thành |
-| **TỔNG CỘNG** | **11** | - | **5% hoàn thành** |
+| Session 5 | 5 | Corticosteroids, SSRIs | ✅ Hoàn thành |
+| **TỔNG CỘNG** | **16** | - | **7% hoàn thành** |
 
-## Các thuốc đã hoàn thành (11 thuốc)
+## Các thuốc đã hoàn thành (16 thuốc)
 
 1. ✅ Clopidogrel
 2. ✅ Amiodarone
@@ -92,6 +109,11 @@
 10. ✅ Dobutamine
 11. ✅ Dipyridamole
 12. ✅ Adenosine
+13. ✅ Prednisone
+14. ✅ Methylprednisolone
+15. ✅ Dexamethasone
+16. ✅ Citalopram
+17. ✅ Sertraline
 
 ## Các nhóm thuốc đã bao phủ
 
@@ -102,6 +124,8 @@
 - ✅ Cardiac Glycosides (Digoxin)
 - ✅ Inotropes/Vasopressors (Dobutamine)
 - ✅ Immunosuppressants (Cyclosporine, Azathioprine)
+- ✅ Corticosteroids (Prednisone, Methylprednisolone, Dexamethasone)
+- ✅ SSRIs (Citalopram, Sertraline)
 
 ## Các nhóm thuốc còn lại cần bổ sung
 
@@ -140,12 +164,14 @@
 - **Session 2:** `feat: Add comprehensive risk_flags and guideline_tags for 2 additional priority Other drugs - Session 2 (Warfarin, Digoxin)`
 - **Session 3:** `feat: Add comprehensive risk_flags and guideline_tags for 2 additional Other drugs - Session 3 (Dobutamine, Dipyridamole)`
 - **Session 4:** `feat: Add comprehensive risk_flags and guideline_tags for 1 additional priority Other drug - Session 4 (Adenosine)`
+- **Session 5:** `feat: Add comprehensive risk_flags and guideline_tags for 5 additional Other drugs - Session 5 (Prednisone, Methylprednisolone, Dexamethasone, Citalopram, Sertraline)`
 
 ## Next Steps
 
-1. Tiếp tục Session 5 với các thuốc quan trọng khác:
-   - Corticosteroids (Prednisone, Methylprednisolone, Dexamethasone)
-   - SSRIs (Citalopram, Sertraline, Fluoxetine)
+1. Tiếp tục Session 6 với các thuốc quan trọng khác:
+   - SSRIs khác (Fluoxetine, Escitalopram, Paroxetine)
+   - SNRIs (Venlafaxine, Duloxetine)
+   - TCAs (Amitriptyline, Nortriptyline)
    - Statins (Atorvastatin, Simvastatin, Rosuvastatin)
    - Các thuốc ICU/cấp cứu khác
 
@@ -156,5 +182,5 @@
 ---
 
 **Cập nhật lần cuối:** 2025-02-18
-**Phiên làm việc:** Session 4 hoàn thành
+**Phiên làm việc:** Session 5 hoàn thành
 
