@@ -5,7 +5,235 @@ from typing import Any, Dict
 
 
 RESPIRATORY_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
-        # ======================== RESPIRATORY – THEOPHYLLINE ========================
+        # ======================== SESSION 1: SABAs, LABAs, ICS, METHYLXANTHINES, LEUKOTRIENE ANTAGONISTS ========================
+        "Salbutamol": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "Moderate (tachycardia, arrhythmias - especially with IV or high doses)", "metabolic": "Moderate (hypokalemia - especially with high doses)", "respiratory": "Low (paradoxical bronchospasm - rare but serious)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Heart rate and blood pressure - CRITICAL (especially with IV or high doses)",
+                    "Serum potassium - CRITICAL (hypokalemia risk, especially with high doses)",
+                    "Bronchodilator response (peak flow, FEV1)",
+                    "Signs of paradoxical bronchospasm (worsening wheezing) - CRITICAL (rare but serious)",
+                    "Signs of overdose (tachycardia >120 bpm, severe tremor, arrhythmias)",
+                    "Frequency of use - CRITICAL (if >4 times/day, need to reassess treatment and increase ICS)"
+                ],
+                "look_alike_sound_alike": ["Salbutamol", "Ventolin", "Albuterol", "Terbutaline"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Not for Chronic Use Without ICS",
+                "FDA Drug Label - Salbutamol (paradoxical bronchospasm and excessive use warnings)"
+            ]
+        },
+
+        "Terbutaline": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "Moderate (tachycardia, arrhythmias - especially with SC or high doses)", "metabolic": "Moderate (hypokalemia - especially with high doses)", "respiratory": "Low (paradoxical bronchospasm - rare but serious)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Heart rate and blood pressure - CRITICAL (especially with SC or high doses)",
+                    "Serum potassium - CRITICAL (hypokalemia risk, especially with high doses)",
+                    "Bronchodilator response (peak flow, FEV1)",
+                    "Signs of paradoxical bronchospasm (worsening wheezing) - CRITICAL (rare but serious)",
+                    "Signs of overdose (tachycardia >120 bpm, severe tremor, arrhythmias)",
+                    "Frequency of use - CRITICAL (if >4 times/day, need to reassess treatment and increase ICS)"
+                ],
+                "look_alike_sound_alike": ["Terbutaline", "Bricanyl", "Salbutamol"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Not for Chronic Use Without ICS",
+                "FDA Drug Label - Terbutaline (paradoxical bronchospasm and excessive use warnings)"
+            ]
+        },
+
+        "Formoterol": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "Moderate (tachycardia, arrhythmias)", "metabolic": "Moderate (hypokalemia)", "respiratory": "Low (paradoxical bronchospasm - rare but serious)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Heart rate and blood pressure (especially when starting treatment)",
+                    "Bronchodilator response (peak flow, FEV1)",
+                    "Signs of paradoxical bronchospasm (worsening wheezing) - CRITICAL (rare but serious)",
+                    "Signs of overdose (tachycardia >120 bpm, severe tremor, arrhythmias)",
+                    "Frequency of SABA use (if increasing, need to reassess treatment)",
+                    "Drug interactions (beta-blockers - CONTRAINDICATED, theophylline, digoxin) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Formoterol", "Foradil", "Oxeze", "Salmeterol"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Never Use Alone for Asthma (Must Combine with ICS)",
+                "FDA Drug Label - Formoterol (asthma-related death warning)"
+            ]
+        },
+
+        "Salmeterol": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "Moderate (tachycardia, arrhythmias)", "metabolic": "Moderate (hypokalemia)", "respiratory": "Low (paradoxical bronchospasm - rare but serious)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Heart rate and blood pressure (especially when starting treatment)",
+                    "Bronchodilator response (peak flow, FEV1)",
+                    "Signs of paradoxical bronchospasm (worsening wheezing) - CRITICAL (rare but serious)",
+                    "Signs of overdose (tachycardia >120 bpm, severe tremor, arrhythmias)",
+                    "Frequency of SABA use (if increasing, need to reassess treatment)",
+                    "Drug interactions (beta-blockers - CONTRAINDICATED, theophylline, digoxin) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Salmeterol", "Serevent", "Formoterol"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Never Use Alone for Asthma (Must Combine with ICS)",
+                "FDA Black Box Warning - Asthma-Related Death",
+                "FDA Drug Label - Salmeterol (asthma-related death warning)"
+            ]
+        },
+
+        "Beclomethasone inhaled": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"infectious": "Moderate (oral candidiasis - common)", "endocrine": "Low (HPA axis suppression - rare, only with high doses)", "ophthalmic": "Low (cataracts, glaucoma - rare, only with high doses)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Asthma/COPD response (symptoms, exacerbation frequency, SABA use)",
+                    "Oral candidiasis - CRITICAL (check tongue, mouth, especially if not rinsing after use)",
+                    "Hoarseness, cough, throat irritation (common local side effects)",
+                    "HPA axis function (cortisol, ACTH) - only with high doses (>1600mcg/day)",
+                    "Growth in children (only with high doses)",
+                    "Drug interactions (ritonavir - CONTRAINDICATED, ketoconazole/itraconazole - increased levels) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Beclomethasone", "Beclovent", "Qvar", "Budesonide", "Fluticasone"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Drug Label - Beclomethasone (ritonavir interaction and oral candidiasis warnings)"
+            ]
+        },
+
+        "Theophylline": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "High (seizures - at levels >30 mcg/ml, can be fatal)", "cardiovascular": "High (arrhythmias, tachycardia - at levels >20 mcg/ml)", "gastrointestinal": "Moderate (nausea, vomiting - common at levels >20 mcg/ml)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Theophylline blood level - CRITICAL (TDM required, therapeutic range: 10-20 mcg/ml, Black Box Warning)",
+                    "Signs of toxicity (nausea, vomiting, tremor, tachycardia, seizures) - CRITICAL",
+                    "Heart rate, blood pressure, ECG (arrhythmias risk)",
+                    "Blood glucose (may increase)",
+                    "Hepatic function (ALT, AST) - CRITICAL (metabolized in liver)",
+                    "Renal function (CrCl, eGFR) - CRITICAL (dose adjustment required)",
+                    "Drug interactions (ciprofloxacin/enoxacin - AVOID, erythromycin/clarithromycin, cimetidine, rifampin) - CRITICAL",
+                    "Smoking status (increases clearance 50-100%, need higher dose)"
+                ],
+                "look_alike_sound_alike": ["Theophylline", "Theolair", "Uniphyl", "Aminophylline"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Narrow Therapeutic Window (TDM Required)",
+                "FDA Black Box Warning - Seizures and Death at High Levels",
+                "FDA Drug Label - Theophylline (TDM and toxicity warnings)"
+            ]
+        },
+
+        "Aminophylline": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "High (seizures - at theophylline levels >30 mcg/ml, can be fatal)", "cardiovascular": "High (arrhythmias, tachycardia - at theophylline levels >20 mcg/ml)", "gastrointestinal": "Moderate (nausea, vomiting - common at theophylline levels >20 mcg/ml)", "allergic": "Low (ethylenediamine hypersensitivity - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Theophylline blood level - CRITICAL (TDM required, therapeutic range: 10-20 mcg/ml, Black Box Warning)",
+                    "Signs of toxicity (nausea, vomiting, tremor, tachycardia, seizures) - CRITICAL",
+                    "Heart rate, blood pressure, ECG (arrhythmias risk)",
+                    "Hepatic function (ALT, AST) - CRITICAL (metabolized in liver)",
+                    "Renal function (CrCl, eGFR) - CRITICAL (dose adjustment required)",
+                    "Signs of ethylenediamine hypersensitivity (rare)",
+                    "Drug interactions (ciprofloxacin/enoxacin - AVOID, erythromycin/clarithromycin, cimetidine, rifampin) - CRITICAL",
+                    "Dose calculation - CRITICAL (aminophylline = theophylline × 1.25, calculate dose based on theophylline)"
+                ],
+                "look_alike_sound_alike": ["Aminophylline", "Theophylline ethylenediamine", "Theophylline"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Narrow Therapeutic Window (TDM Required)",
+                "FDA Black Box Warning - Seizures and Death at High Levels",
+                "FDA Drug Label - Aminophylline (TDM and toxicity warnings)"
+            ]
+        },
+
+        "Montelukast": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neuropsychiatric": "High (mood changes, depression, suicidal ideation and behavior - Black Box Warning, especially in children and adolescents)", "neurologic": "Moderate (sleep disturbances, nightmares)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Asthma response (symptoms, exacerbation frequency, SABA use)",
+                    "Neuropsychiatric symptoms - CRITICAL (mood changes, depression, suicidal ideation and behavior - Black Box Warning, especially in children and adolescents)",
+                    "Sleep disturbances (insomnia, nightmares)",
+                    "Drug interactions (phenobarbital, rifampin - decreased levels)"
+                ],
+                "look_alike_sound_alike": ["Montelukast", "Singulair", "Zafirlukast"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "FDA Black Box Warning - Neuropsychiatric Events (Mood Changes, Depression, Suicidal Ideation)",
+                "FDA Drug Label - Montelukast (neuropsychiatric events warning)"
+            ]
+        },
+
+        # ======================== RESPIRATORY – THEOPHYLLINE (OLD DATA - TO BE REMOVED) ========================
         "Amikacin": {
             "drug_interactions": {
                 "major": [],
