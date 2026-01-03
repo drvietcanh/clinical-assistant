@@ -179,6 +179,247 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Người cao tuổi - tăng nhạy cảm",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hematologic": "High (aplastic anemia, agranulocytosis, thrombocytopenia)", "dermatologic": "High (Stevens-Johnson syndrome, toxic epidermal necrolysis)", "hepatic": "Moderate (hepatitis)", "metabolic": "Moderate (hyponatremia)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Carbamazepine blood level - CRITICAL (therapeutic range: 4-12 mcg/ml)",
+                    "Complete blood count - CRITICAL (aplastic anemia, agranulocytosis, thrombocytopenia risk)",
+                    "Signs of Stevens-Johnson syndrome/toxic epidermal necrolysis (severe rash) - CRITICAL",
+                    "Hepatic function (ALT, AST) - CRITICAL",
+                    "Serum sodium (hyponatremia risk)",
+                    "Signs of toxicity (dizziness, ataxia, confusion, nausea)",
+                    "Seizure frequency and severity",
+                    "Drug interactions (strong CYP450 inducer) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Carbamazepine", "Tegretol", "Oxcarbazepine"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "ILAE Treatment Guidelines - Focal Seizures",
+                "AAN Trigeminal Neuralgia Treatment Guidelines",
+                "FDA Black Box Warning - Aplastic Anemia and Agranulocytosis",
+                "FDA Black Box Warning - Stevens-Johnson Syndrome and Toxic Epidermal Necrolysis",
+                "FDA Black Box Warning - Suicidal Behavior and Ideation",
+                "FDA Drug Label - Carbamazepine"
+            ]
+        },
+
+        # ======================== SESSION 1: ANTICONVULSANTS & ANTIPARKINSONIAN ========================
+        "Phenytoin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"dermatologic": "High (Stevens-Johnson syndrome, toxic epidermal necrolysis, DRESS)", "hepatic": "Moderate (hepatitis)", "hematologic": "Moderate (agranulocytosis, thrombocytopenia)", "neurologic": "Moderate (cerebellar atrophy with chronic use)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Phenytoin blood level - CRITICAL (therapeutic range: 10-20 mcg/ml)",
+                    "Signs of Stevens-Johnson syndrome/toxic epidermal necrolysis (severe rash) - CRITICAL",
+                    "Signs of DRESS (drug reaction with eosinophilia and systemic symptoms) - CRITICAL",
+                    "Hepatic function (ALT, AST) - CRITICAL",
+                    "Complete blood count (agranulocytosis, thrombocytopenia risk)",
+                    "Signs of toxicity (nystagmus, ataxia, dysarthria, confusion)",
+                    "Seizure frequency and severity",
+                    "Drug interactions (strong CYP450 inducer/inhibitor) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Phenytoin", "Dilantin", "Fosphenytoin"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "ILAE Treatment Guidelines - Generalized Tonic-Clonic Seizures",
+                "AAN Status Epilepticus Treatment Guidelines",
+                "FDA Black Box Warning - Stevens-Johnson Syndrome and Toxic Epidermal Necrolysis",
+                "FDA Black Box Warning - Suicidal Behavior and Ideation",
+                "FDA Drug Label - Phenytoin"
+            ]
+        },
+
+        "Valproic acid": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "High (hepatotoxicity, especially in children <2 years)", "hematologic": "Moderate (thrombocytopenia, bleeding risk)", "pancreatic": "Moderate (pancreatitis)", "metabolic": "Moderate (hyperammonemia, especially with carnitine deficiency)", "teratogenic": "High (neural tube defects, craniofacial defects)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Valproic acid blood level - CRITICAL (therapeutic range: 50-100 mcg/ml)",
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL (especially in first 6 months)",
+                    "Complete blood count (thrombocytopenia, bleeding risk)",
+                    "Ammonia level (hyperammonemia risk, especially with carnitine deficiency)",
+                    "Signs of pancreatitis (severe abdominal pain, nausea, vomiting) - CRITICAL",
+                    "Signs of hepatotoxicity (jaundice, fatigue, nausea) - CRITICAL",
+                    "Seizure frequency and severity",
+                    "Pregnancy test (if woman of childbearing age) - CRITICAL (teratogenic)"
+                ],
+                "look_alike_sound_alike": ["Valproic acid", "Depakote", "Depakene", "Divalproex"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "ILAE Treatment Guidelines - Generalized Seizures",
+                "AAN Bipolar Disorder Treatment Guidelines",
+                "FDA Black Box Warning - Hepatotoxicity (especially in children <2 years)",
+                "FDA Black Box Warning - Teratogenicity (neural tube defects)",
+                "FDA Black Box Warning - Pancreatitis",
+                "FDA Black Box Warning - Suicidal Behavior and Ideation",
+                "FDA Drug Label - Valproic acid"
+            ]
+        },
+
+        "Levetiracetam": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neuropsychiatric": "Moderate (agitation, aggression, depression, psychosis)", "hematologic": "Low (thrombocytopenia, leukopenia)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Seizure frequency and severity",
+                    "Neuropsychiatric symptoms (agitation, aggression, depression, psychosis) - CRITICAL",
+                    "Complete blood count (thrombocytopenia, leukopenia risk)",
+                    "Renal function (CrCl) - adjust dose if CrCl <50"
+                ],
+                "look_alike_sound_alike": ["Levetiracetam", "Keppra", "Briviact"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "ILAE Treatment Guidelines - Focal and Generalized Seizures",
+                "AAN Status Epilepticus Treatment Guidelines",
+                "FDA Black Box Warning - Neuropsychiatric Adverse Reactions",
+                "FDA Black Box Warning - Suicidal Behavior and Ideation",
+                "FDA Drug Label - Levetiracetam"
+            ]
+        },
+
+        "Lamotrigine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"dermatologic": "High (Stevens-Johnson syndrome, toxic epidermal necrolysis - especially with rapid titration or valproate co-administration)", "hematologic": "Low (blood dyscrasias)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of Stevens-Johnson syndrome/toxic epidermal necrolysis (severe rash) - CRITICAL (especially during first 8 weeks or with rapid titration)",
+                    "Rash (any rash - may progress to SJS/TEN)",
+                    "Seizure frequency and severity",
+                    "Complete blood count (blood dyscrasias risk)",
+                    "Drug interactions (valproate increases lamotrigine levels - requires slower titration)"
+                ],
+                "look_alike_sound_alike": ["Lamotrigine", "Lamictal", "Lamotrigine"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "ILAE Treatment Guidelines - Focal and Generalized Seizures",
+                "AAN Bipolar Disorder Treatment Guidelines",
+                "FDA Black Box Warning - Stevens-Johnson Syndrome and Toxic Epidermal Necrolysis",
+                "FDA Black Box Warning - Suicidal Behavior and Ideation",
+                "FDA Drug Label - Lamotrigine (rash and SJS/TEN warnings)"
+            ]
+        },
+
+        "Levodopa/Carbidopa": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neuropsychiatric": "High (hallucinations, psychosis, impulse control disorders)", "cardiovascular": "Moderate (orthostatic hypotension, arrhythmias)", "gastrointestinal": "Moderate (nausea, vomiting)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Parkinson's disease symptoms (motor fluctuations, dyskinesias)",
+                    "Neuropsychiatric symptoms (hallucinations, psychosis, impulse control disorders) - CRITICAL",
+                    "Blood pressure (orthostatic hypotension)",
+                    "ECG (arrhythmias risk)",
+                    "Gastrointestinal symptoms (nausea, vomiting)",
+                    "Motor complications (wearing-off, on-off fluctuations, dyskinesias)"
+                ],
+                "look_alike_sound_alike": ["Levodopa/Carbidopa", "Sinemet", "Duopa", "Rytary"]
+            },
+            "guideline_tags": [
+                "MDS Evidence-Based Medicine Review - Parkinson's Disease",
+                "AAN Parkinson's Disease Treatment Guidelines",
+                "NICE Parkinson's Disease Guidelines",
+                "FDA Drug Label - Levodopa/Carbidopa (hallucinations and impulse control disorders warnings)"
+            ]
+        },
+
+        "Clonazepam": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"respiratory": "High (respiratory depression, especially with opioids or alcohol)", "neurologic": "Moderate (dependence, withdrawal, falls, ataxia)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Seizure frequency and severity",
+                    "Respiratory function (respiratory depression risk, especially with opioids/alcohol) - CRITICAL",
+                    "Signs of dependence and withdrawal",
+                    "Falls risk (especially in elderly)",
+                    "Ataxia (loss of coordination)",
+                    "Cognitive function (confusion, especially in elderly)",
+                    "Drug interactions (CYP3A4 inhibitors/inducers, opioids, alcohol) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Clonazepam", "Klonopin", "Diazepam", "Lorazepam"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "ILAE Treatment Guidelines - Status Epilepticus",
+                "AAN Panic Disorder Treatment Guidelines",
+                "FDA Black Box Warning - Respiratory Depression (especially with opioids)",
+                "FDA Black Box Warning - Abuse, Dependence, and Withdrawal",
+                "FDA Drug Label - Clonazepam"
+            ]
+        },
+
+        "Sumatriptan": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "High (coronary vasospasm, MI, stroke, arrhythmias - contraindicated in CAD)", "cerebrovascular": "High (stroke, TIA risk)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure",
+                    "Signs of coronary vasospasm (chest pain, tightness) - CRITICAL (may be benign but must rule out cardiac)",
+                    "ECG (if cardiac risk factors present)",
+                    "Signs of stroke (focal neurological deficits)",
+                    "Drug interactions (MAO inhibitors, ergotamine, SSRI/SNRI - serotonin syndrome risk)"
+                ],
+                "look_alike_sound_alike": ["Sumatriptan", "Imitrex", "Imigran", "Rizatriptan", "Zolmitriptan"]
+            },
+            "guideline_tags": [
+                "AHS Migraine Treatment Guidelines",
+                "EFNS Migraine Treatment Guidelines",
+                "FDA Drug Label - Sumatriptan (cardiovascular and cerebrovascular warnings)"
+            ]
         },
 
 }
+
+__all__ = ["NEUROLOGICAL_ENHANCED_FIELDS"]
