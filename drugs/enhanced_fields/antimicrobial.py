@@ -689,6 +689,28 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Điều chỉnh liều theo chức năng thận.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Renal function (CrCl) - adjust dose if CrCl <10",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Cefuroxime", "Ceftriaxone", "Cefotaxime"]
+            },
+            "guideline_tags": [
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "IDSA Urinary Tract Infection Guidelines",
+                "FDA Drug Label - Cefuroxime"
+            ]
         },
 
         "Cefaclor": {
@@ -724,6 +746,27 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Điều chỉnh liều theo chức năng thận.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Renal function (if prolonged use)",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Cefaclor", "Cephalexin", "Cefadroxil"]
+            },
+            "guideline_tags": [
+                "IDSA Acute Otitis Media Guidelines",
+                "IDSA Upper Respiratory Tract Infection Guidelines",
+                "FDA Drug Label - Cefaclor"
+            ]
         },
 
         "Cefdinir": {
@@ -760,6 +803,28 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Tránh antacid và sắt trong 2 giờ. Điều chỉnh liều theo chức năng thận.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Renal function (if prolonged use)",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Cefdinir", "Cefixime", "Cefaclor"]
+            },
+            "guideline_tags": [
+                "IDSA Acute Otitis Media Guidelines",
+                "IDSA Upper Respiratory Tract Infection Guidelines",
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "FDA Drug Label - Cefdinir"
+            ]
         },
 
         "Cefepime": {
@@ -830,6 +895,28 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Điều chỉnh liều theo chức năng thận.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Renal function (if prolonged use)",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Cefixime", "Cefdinir", "Cefaclor"]
+            },
+            "guideline_tags": [
+                "IDSA Urinary Tract Infection Guidelines",
+                "IDSA Sexually Transmitted Infections Guidelines",
+                "IDSA Upper Respiratory Tract Infection Guidelines",
+                "FDA Drug Label - Cefixime"
+            ]
         },
 
         "Cefotaxime": {
@@ -865,6 +952,28 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Điều chỉnh liều theo chức năng thận.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Renal function (CrCl) - adjust dose if CrCl <20",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Cefotaxime", "Ceftriaxone", "Ceftazidime"]
+            },
+            "guideline_tags": [
+                "IDSA Meningitis Guidelines",
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "FDA Drug Label - Cefotaxime"
+            ]
         },
 
         "Ceftazidime": {
@@ -900,6 +1009,28 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Điều chỉnh liều theo chức năng thận. Có thể dùng với calcium (khác ceftriaxone).",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction",
+                    "Renal function (CrCl) - adjust dose if CrCl <50",
+                    "Complete blood count"
+                ],
+                "look_alike_sound_alike": ["Ceftazidime", "Ceftriaxone", "Cefepime"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "IDSA Pseudomonas aeruginosa Infection Guidelines",
+                "FDA Drug Label - Ceftazidime"
+            ]
         },
 
         "Amoxicillin": {
@@ -2245,6 +2376,369 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 "CDC Influenza Antiviral Treatment Guidelines",
                 "WHO Influenza Treatment Guidelines",
                 "FDA Drug Label - Oseltamivir (neuropsychiatric events warning, especially in children)"
+            ]
+        },
+
+        # ======================== SESSION 4: ADDITIONAL CEPHALOSPORINS & OTHER ANTIBIOTICS ========================
+        "Piperacillin/tazobactam": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": "Moderate (hypoprothrombinemia, especially with vitamin K deficiency)",
+                "organ_toxicity": {"renal": "Low", "hepatic": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis) - CRITICAL",
+                    "PT/INR (bleeding risk, especially in malnourished patients)",
+                    "Renal function (CrCl) - adjust dose if CrCl <40",
+                    "Complete blood count",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Piperacillin/tazobactam", "Ampicillin-sulbactam", "Ticarcillin/clavulanate"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "IDSA Complicated Skin and Soft Tissue Infection Guidelines",
+                "IDSA Febrile Neutropenia Guidelines",
+                "FDA Drug Label - Piperacillin/tazobactam"
+            ]
+        },
+
+        "Ampicillin-sulbactam": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis) - CRITICAL",
+                    "Diarrhea (C. difficile risk)",
+                    "Renal function (CrCl) - adjust dose if CrCl <30",
+                    "Complete blood count (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Ampicillin-sulbactam", "Amoxicillin-clavulanate", "Piperacillin/tazobactam"]
+            },
+            "guideline_tags": [
+                "IDSA Complicated Skin and Soft Tissue Infection Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "FDA Drug Label - Ampicillin-sulbactam"
+            ]
+        },
+
+        "Aztreonam": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low", "hepatic": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Renal function (CrCl) - adjust dose if CrCl <30",
+                    "Complete blood count (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Aztreonam", "Azithromycin"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "FDA Drug Label - Aztreonam"
+            ]
+        },
+
+        "Cefadroxil": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Renal function (if prolonged use)",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Cefadroxil", "Cephalexin", "Cefaclor"]
+            },
+            "guideline_tags": [
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "IDSA Urinary Tract Infection Guidelines",
+                "FDA Drug Label - Cefadroxil"
+            ]
+        },
+
+        "Cefoperazone": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": "Moderate (hypoprothrombinemia, especially with vitamin K deficiency)",
+                "organ_toxicity": {"hepatic": "Low", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "PT/INR (bleeding risk, especially in malnourished patients)",
+                    "Renal function (CrCl) - adjust dose if CrCl <20",
+                    "Complete blood count"
+                ],
+                "look_alike_sound_alike": ["Cefoperazone", "Cefotaxime", "Ceftriaxone"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "FDA Drug Label - Cefoperazone"
+            ]
+        },
+
+        "Cefotetan": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": "High (hypoprothrombinemia, disulfiram-like reaction with alcohol)",
+                "organ_toxicity": {"hepatic": "Low", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "PT/INR (bleeding risk) - CRITICAL",
+                    "Disulfiram-like reaction (if alcohol consumed)",
+                    "Renal function (CrCl) - adjust dose if CrCl <30",
+                    "Complete blood count"
+                ],
+                "look_alike_sound_alike": ["Cefotetan", "Cefoxitin", "Cefotaxime"]
+            },
+            "guideline_tags": [
+                "IDSA Surgical Site Infection Prevention Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "FDA Drug Label - Cefotetan (bleeding and disulfiram-like reaction warnings)"
+            ]
+        },
+
+        "Cefoxitin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": "Moderate (hypoprothrombinemia)",
+                "organ_toxicity": {"hepatic": "Low", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "PT/INR (bleeding risk)",
+                    "Renal function (CrCl) - adjust dose if CrCl <30",
+                    "Complete blood count"
+                ],
+                "look_alike_sound_alike": ["Cefoxitin", "Cefotetan", "Cefotaxime"]
+            },
+            "guideline_tags": [
+                "IDSA Surgical Site Infection Prevention Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "IDSA Pelvic Inflammatory Disease Guidelines",
+                "FDA Drug Label - Cefoxitin"
+            ]
+        },
+
+        "Cefpirome": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low", "neurologic": "Low (neurotoxicity risk)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Neurologic symptoms (seizures, confusion) - especially in renal impairment",
+                    "Renal function (CrCl) - adjust dose if CrCl <50",
+                    "Complete blood count"
+                ],
+                "look_alike_sound_alike": ["Cefpirome", "Cefepime", "Ceftazidime"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "FDA Drug Label - Cefpirome"
+            ]
+        },
+
+        "Doripenem": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "Moderate (seizures, especially in renal impairment)", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Neurologic symptoms (seizures, confusion) - especially if CrCl <50 or high doses",
+                    "Renal function (CrCl) - adjust dose if CrCl <50",
+                    "Complete blood count",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Doripenem", "Meropenem", "Imipenem/cilastatin"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "FDA Drug Label - Doripenem (seizure warning)"
+            ]
+        },
+
+        "Fosfomycin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"gastrointestinal": "Moderate (diarrhea, nausea)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Gastrointestinal symptoms (diarrhea, nausea)",
+                    "Renal function (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Fosfomycin", "Fosfomycin trometamol"]
+            },
+            "guideline_tags": [
+                "IDSA Urinary Tract Infection Guidelines",
+                "IDSA Uncomplicated Cystitis Guidelines",
+                "FDA Drug Label - Fosfomycin"
+            ]
+        },
+
+        "Nitrofurantoin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"pulmonary": "Moderate (pulmonary fibrosis, especially with prolonged use)", "hepatic": "Moderate (hepatitis)", "neurologic": "Moderate (peripheral neuropathy)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Pulmonary function (pulmonary fibrosis risk, especially with prolonged use)",
+                    "Hepatic function (hepatitis risk)",
+                    "Signs of peripheral neuropathy (numbness, tingling)",
+                    "Renal function (contraindicated if CrCl <60)"
+                ],
+                "look_alike_sound_alike": ["Nitrofurantoin", "Nitrofurantoin macrocrystals"]
+            },
+            "guideline_tags": [
+                "IDSA Urinary Tract Infection Guidelines",
+                "IDSA Uncomplicated Cystitis Guidelines",
+                "FDA Black Box Warning - Pulmonary Fibrosis (especially with prolonged use)",
+                "FDA Drug Label - Nitrofurantoin"
+            ]
+        },
+
+        "Fidaxomicin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"gastrointestinal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Gastrointestinal symptoms (nausea, vomiting)"
+                ],
+                "look_alike_sound_alike": ["Fidaxomicin", "Fidaxomicin"]
+            },
+            "guideline_tags": [
+                "IDSA Clostridium difficile Infection Guidelines",
+                "IDSA Recurrent C. difficile Infection Guidelines",
+                "FDA Drug Label - Fidaxomicin"
+            ]
+        },
+
+        "Ganciclovir": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hematologic": "High (neutropenia, thrombocytopenia, anemia)", "renal": "High (crystalluria, acute kidney injury)", "neurologic": "Moderate (neurotoxicity, especially in renal impairment)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Complete blood count - CRITICAL (neutropenia, thrombocytopenia, anemia)",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Urine output",
+                    "Signs of crystalluria",
+                    "Neurologic symptoms (confusion, hallucinations, seizures) - especially in renal impairment",
+                    "Hydration status (maintain adequate hydration to prevent crystalluria)"
+                ],
+                "look_alike_sound_alike": ["Ganciclovir", "Acyclovir", "Valganciclovir"]
+            },
+            "guideline_tags": [
+                "IDSA Cytomegalovirus (CMV) Infection Guidelines",
+                "IDSA CMV Retinitis Guidelines",
+                "IDSA CMV Prophylaxis in Transplant Guidelines",
+                "FDA Black Box Warning - Hematologic Toxicity (neutropenia, thrombocytopenia, anemia)",
+                "FDA Drug Label - Ganciclovir"
+            ]
+        },
+
+        "Ethambutol": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"visual": "High (optic neuropathy, color vision loss, vision loss)", "hepatic": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Visual function (visual acuity, color vision, visual fields) - CRITICAL",
+                    "Ophthalmologic examination (baseline and monthly during treatment)",
+                    "Hepatic function (if prolonged use)",
+                    "Renal function (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Ethambutol", "Ethambutol"]
+            },
+            "guideline_tags": [
+                "IDSA Tuberculosis Treatment Guidelines",
+                "WHO Tuberculosis Treatment Guidelines",
+                "CDC Tuberculosis Treatment Guidelines",
+                "FDA Black Box Warning - Optic Neuropathy",
+                "FDA Drug Label - Ethambutol"
             ]
         },
 
