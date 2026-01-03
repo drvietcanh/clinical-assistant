@@ -2,7 +2,7 @@
 
 ## Tổng quan
 - **Tổng số thuốc:** 216 thuốc
-- **Tiến độ hiện tại:** 23/216 thuốc (11%)
+- **Tiến độ hiện tại:** 27/216 thuốc (13%)
 - **Trạng thái:** Đang thực hiện (in_progress)
 - **Thời gian dự kiến:** Week 10-14, 15-20 sessions
 
@@ -106,6 +106,23 @@
 
 ---
 
+### Session 7 - SSRIs, TCAs & Statins (continued) (4 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm SSRIs:**
+- ✅ **Paroxetine** - Depression, anxiety, OCD, PTSD (suicidal ideation and behavior - Black Box Warning, teratogenicity - FDA category D, increased risk of cardiac defects, cleft lip/palate, Black Box Warning, withdrawal syndrome more common than other SSRIs, weight gain more common, strong CYP2D6 inhibitor)
+- ✅ **Fluvoxamine** - OCD, depression, anxiety (suicidal ideation and behavior - Black Box Warning, strong CYP1A2/CYP2C9/CYP3A4 inhibitor - many drug interactions, contraindicated with tizanidine and alosetron)
+
+**Nhóm TCAs:**
+- ✅ **Nortriptyline** - Depression, neuropathic pain (suicidal ideation and behavior - Black Box Warning, overdose can be fatal - cardiac arrhythmias, seizures, coma, Black Box Warning, high_alert, narrow_therapeutic_index, QT prolongation, less anticholinergic than amitriptyline)
+
+**Nhóm Statins:**
+- ✅ **Rosuvastatin** - Hypercholesterolemia, cardiovascular prevention (myopathy/rhabdomyolysis - Black Box Warning, teratogenicity - Black Box Warning, strongest statin, proteinuria/hematuria with 40mg dose, higher exposure in Asian patients - consider starting dose 5mg)
+
+**Tổng Session 7:** 4 thuốc
+
+---
+
 ## Tổng kết các Session
 
 | Session | Số thuốc | Nhóm thuốc chính | Trạng thái |
@@ -116,9 +133,10 @@
 | Session 4 | 1 | Antiarrhythmics | ✅ Hoàn thành |
 | Session 5 | 5 | Corticosteroids, SSRIs | ✅ Hoàn thành |
 | Session 6 | 7 | SSRIs, SNRIs, TCAs, Statins | ✅ Hoàn thành |
-| **TỔNG CỘNG** | **23** | - | **11% hoàn thành** |
+| Session 7 | 4 | SSRIs, TCAs, Statins (continued) | ✅ Hoàn thành |
+| **TỔNG CỘNG** | **27** | - | **13% hoàn thành** |
 
-## Các thuốc đã hoàn thành (23 thuốc)
+## Các thuốc đã hoàn thành (27 thuốc)
 
 1. ✅ Clopidogrel
 2. ✅ Amiodarone
@@ -144,6 +162,10 @@
 22. ✅ Amitriptyline
 23. ✅ Atorvastatin
 24. ✅ Simvastatin
+25. ✅ Paroxetine
+26. ✅ Fluvoxamine
+27. ✅ Nortriptyline
+28. ✅ Rosuvastatin
 
 ## Các nhóm thuốc đã bao phủ
 
@@ -155,10 +177,10 @@
 - ✅ Inotropes/Vasopressors (Dobutamine)
 - ✅ Immunosuppressants (Cyclosporine, Azathioprine)
 - ✅ Corticosteroids (Prednisone, Methylprednisolone, Dexamethasone)
-- ✅ SSRIs (Citalopram, Sertraline, Fluoxetine, Escitalopram)
+- ✅ SSRIs (Citalopram, Sertraline, Fluoxetine, Escitalopram, Paroxetine, Fluvoxamine)
 - ✅ SNRIs (Venlafaxine, Duloxetine)
-- ✅ TCAs (Amitriptyline)
-- ✅ Statins (Atorvastatin, Simvastatin)
+- ✅ TCAs (Amitriptyline, Nortriptyline)
+- ✅ Statins (Atorvastatin, Simvastatin, Rosuvastatin)
 
 ## Các nhóm thuốc còn lại cần bổ sung
 
@@ -199,14 +221,15 @@
 - **Session 4:** `feat: Add comprehensive risk_flags and guideline_tags for 1 additional priority Other drug - Session 4 (Adenosine)`
 - **Session 5:** `feat: Add comprehensive risk_flags and guideline_tags for 5 additional Other drugs - Session 5 (Prednisone, Methylprednisolone, Dexamethasone, Citalopram, Sertraline)`
 - **Session 6:** `feat: Add comprehensive risk_flags and guideline_tags for 7 additional Other drugs - Session 6 (Fluoxetine, Escitalopram, Venlafaxine, Duloxetine, Amitriptyline, Atorvastatin, Simvastatin)`
+- **Session 7:** `feat: Add comprehensive risk_flags and guideline_tags for 4 additional Other drugs - Session 7 (Paroxetine, Fluvoxamine, Nortriptyline, Rosuvastatin)`
 
 ## Next Steps
 
-1. Tiếp tục Session 7 với các thuốc quan trọng khác:
-   - SSRIs khác (Paroxetine, Fluvoxamine)
-   - TCAs khác (Nortriptyline, Imipramine)
-   - Statins khác (Rosuvastatin, Pravastatin, Lovastatin)
+1. Tiếp tục Session 8 với các thuốc quan trọng khác:
+   - TCAs khác (Imipramine, Clomipramine)
+   - Statins khác (Pravastatin, Lovastatin)
    - Các thuốc ICU/cấp cứu khác
+   - Các thuốc miscellaneous khác
 
 2. Đảm bảo không trùng lặp với các nhóm đã xử lý
 
@@ -215,5 +238,5 @@
 ---
 
 **Cập nhật lần cuối:** 2025-02-18
-**Phiên làm việc:** Session 6 hoàn thành
+**Phiên làm việc:** Session 7 hoàn thành
 
