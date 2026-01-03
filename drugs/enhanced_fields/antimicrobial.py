@@ -2080,4 +2080,172 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 3: ANTIFUNGALS & ANTIVIRALS ========================
+        "Fluconazole": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low", "cardiac": "Moderate (QT prolongation at high doses)"},
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Hepatic function (hepatitis risk, especially with prolonged use)",
+                    "ECG (QT prolongation risk at high doses or with other QT-prolonging drugs)",
+                    "Signs of allergic reaction (rash, Stevens-Johnson syndrome)",
+                    "Renal function (if high doses or prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Fluconazole", "Voriconazole", "Itraconazole"]
+            },
+            "guideline_tags": [
+                "IDSA Candidiasis Treatment Guidelines",
+                "IDSA Cryptococcosis Treatment Guidelines",
+                "IDSA Coccidioidomycosis Treatment Guidelines",
+                "FDA Drug Label - Fluconazole (QT prolongation and hepatotoxicity warnings)"
+            ]
+        },
+
+        "Voriconazole": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "High", "visual": "High (photophobia, blurred vision, color vision changes)", "cardiac": "Moderate (QT prolongation)", "dermatologic": "High (photosensitivity, skin cancer risk)"},
+                "qt_prolongation": True,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Voriconazole trough level - CRITICAL (TDM recommended, target 1-5.5 mcg/ml)",
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL",
+                    "Visual function (photophobia, blurred vision, color vision changes)",
+                    "ECG (QT prolongation risk)",
+                    "Skin examination (photosensitivity, skin cancer risk)",
+                    "Signs of allergic reaction (rash, Stevens-Johnson syndrome)"
+                ],
+                "look_alike_sound_alike": ["Voriconazole", "Fluconazole", "Itraconazole"]
+            },
+            "guideline_tags": [
+                "IDSA Invasive Aspergillosis Treatment Guidelines",
+                "IDSA Invasive Candidiasis Treatment Guidelines",
+                "IDSA Scedosporium and Fusarium Infection Guidelines",
+                "FDA Black Box Warning - Hepatotoxicity",
+                "FDA Black Box Warning - Visual Disturbances",
+                "FDA Drug Label - Voriconazole (TDM recommended)"
+            ]
+        },
+
+        "Amphotericin B": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "High", "hepatic": "Moderate", "hematologic": "Moderate (anemia)", "cardiac": "Moderate (arrhythmias, especially with rapid infusion)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Renal function (creatinine, eGFR, BUN) - CRITICAL",
+                    "Urine output",
+                    "Electrolytes (potassium, magnesium) - CRITICAL (hypokalemia, hypomagnesemia)",
+                    "Complete blood count (anemia)",
+                    "Hepatic function (hepatitis risk)",
+                    "ECG (arrhythmias, especially with rapid infusion)",
+                    "Infusion reactions (fever, chills, rigors, hypotension) - CRITICAL",
+                    "Signs of allergic reaction (anaphylaxis)"
+                ],
+                "look_alike_sound_alike": ["Amphotericin B", "Amphotericin B lipid complex", "Liposomal amphotericin B"]
+            },
+            "guideline_tags": [
+                "IDSA Invasive Candidiasis Treatment Guidelines",
+                "IDSA Invasive Aspergillosis Treatment Guidelines",
+                "IDSA Cryptococcosis Treatment Guidelines",
+                "IDSA Mucormycosis Treatment Guidelines",
+                "FDA Black Box Warning - Nephrotoxicity",
+                "FDA Drug Label - Amphotericin B (infusion reactions and nephrotoxicity warnings)"
+            ]
+        },
+
+        "Acyclovir": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "High (crystalluria, acute kidney injury, especially with rapid IV infusion or dehydration)", "neurologic": "Moderate (neurotoxicity, especially in renal impairment)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Renal function (creatinine, eGFR) - CRITICAL, especially with IV high-dose therapy",
+                    "Urine output",
+                    "Signs of crystalluria (crystal formation in urine)",
+                    "Neurologic symptoms (confusion, hallucinations, seizures) - especially in renal impairment",
+                    "Hydration status (maintain adequate hydration to prevent crystalluria)"
+                ],
+                "look_alike_sound_alike": ["Acyclovir", "Valacyclovir", "Ganciclovir"]
+            },
+            "guideline_tags": [
+                "IDSA Herpes Simplex Virus (HSV) Infection Guidelines",
+                "IDSA Varicella-Zoster Virus (VZV) Infection Guidelines",
+                "IDSA Encephalitis Guidelines",
+                "FDA Drug Label - Acyclovir (nephrotoxicity and neurotoxicity warnings)"
+            ]
+        },
+
+        "Valacyclovir": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (crystalluria, acute kidney injury, especially with high doses or renal impairment)", "neurologic": "Moderate (neurotoxicity, especially in renal impairment)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Renal function (creatinine, eGFR) - especially with high doses or renal impairment",
+                    "Urine output",
+                    "Signs of crystalluria",
+                    "Neurologic symptoms (confusion, hallucinations, seizures) - especially in renal impairment",
+                    "Hydration status (maintain adequate hydration)"
+                ],
+                "look_alike_sound_alike": ["Valacyclovir", "Acyclovir", "Famciclovir"]
+            },
+            "guideline_tags": [
+                "IDSA Herpes Simplex Virus (HSV) Infection Guidelines",
+                "IDSA Varicella-Zoster Virus (VZV) Infection Guidelines",
+                "IDSA Genital Herpes Guidelines",
+                "FDA Drug Label - Valacyclovir (nephrotoxicity and neurotoxicity warnings)"
+            ]
+        },
+
+        "Oseltamivir": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neuropsychiatric": "Moderate (especially in children/adolescents - confusion, hallucinations, self-injury)", "gastrointestinal": "Moderate (nausea, vomiting)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Neuropsychiatric symptoms (especially in children/adolescents) - confusion, hallucinations, abnormal behavior, self-injury",
+                    "Gastrointestinal symptoms (nausea, vomiting)",
+                    "Signs of allergic reaction (rash, anaphylaxis)"
+                ],
+                "look_alike_sound_alike": ["Oseltamivir", "Zanamivir", "Peramivir"]
+            },
+            "guideline_tags": [
+                "IDSA Influenza Treatment Guidelines",
+                "CDC Influenza Antiviral Treatment Guidelines",
+                "WHO Influenza Treatment Guidelines",
+                "FDA Drug Label - Oseltamivir (neuropsychiatric events warning, especially in children)"
+            ]
+        },
+
 }
