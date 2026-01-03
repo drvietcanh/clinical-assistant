@@ -371,7 +371,123 @@
 
 ---
 
+---
+
+## CÔNG VIỆC ĐÃ THỰC HIỆN - SESSION 5
+
+### Bổ sung Risk Flags & Guideline Tags - Session 5 ✅
+
+**Đã bổ sung 10 thuốc trong session này:**
+
+#### Nhóm Antifungals:
+1. ✅ **Itraconazole** - Invasive fungal infections (TDM required, heart failure, hepatotoxicity - Black Box Warnings)
+
+#### Nhóm Tuberculosis:
+2. ✅ **Rifampin** - TB treatment (hepatotoxicity, strong CYP450 inducer)
+3. ✅ **Isoniazid** - TB treatment (hepatotoxicity, peripheral neuropathy - Black Box Warning, requires pyridoxine)
+4. ✅ **Pyrazinamide** - TB treatment (hepatotoxicity, hyperuricemia/gout)
+
+#### Nhóm Quinolones:
+5. ✅ **Ofloxacin** - UTI, STIs (tendonitis, QT prolongation - Black Box Warnings)
+
+#### Nhóm Penicillins:
+6. ✅ **Penicillin G** - Syphilis, Group A Strep, meningitis, endocarditis (neurotoxicity with high doses)
+7. ✅ **Penicillin V** - Group A Strep, pharyngitis, SSTI
+
+#### Nhóm Aminoglycosides:
+8. ✅ **Streptomycin** - Tuberculosis, MDR-TB (TDM required, nephrotoxicity, ototoxicity)
+
+#### Nhóm Polymyxins:
+9. ✅ **Polymyxin B** - MDR Gram-negative infections (nephrotoxicity, neurotoxicity - ICU only)
+
+#### Nhóm Cephalosporins (thế hệ mới):
+10. ✅ **Cefiderocol** - MDR Gram-negative, CRE infections
+
+**Tổng Session 5: 10 thuốc**
+
+---
+
+## KẾT QUẢ TỔNG HỢP
+
+### Trước Session 1:
+- ⏳ Thuốc ưu tiên cao: 25/33 thiếu (76%)
+- ⏳ Tổng số: 41/81 đã có (50%)
+
+### Sau Session 1:
+- ✅ Thuốc ưu tiên cao: 0/33 thiếu (100%)
+- ✅ Tổng số: 60/81 đã có (74%)
+- ✅ **Đã bổ sung: 19 thuốc**
+
+### Sau Session 2:
+- ✅ Tổng số: 71/81 đã có (88%)
+- ✅ **Đã bổ sung thêm: 11 thuốc**
+- ✅ **Tổng cộng: 30/74 thuốc cần bổ sung đã hoàn thành (41%)**
+
+### Sau Session 3:
+- ✅ Tổng số: 77/81 đã có (95%)
+- ✅ **Đã bổ sung thêm: 6 thuốc**
+- ✅ **Tổng cộng: 36/74 thuốc cần bổ sung đã hoàn thành (49%)**
+
+### Sau Session 4:
+- ✅ Tổng số: ~80/81 đã có (99%)
+- ✅ **Đã bổ sung thêm: 20 thuốc**
+- ✅ **Tổng cộng: 56/74 thuốc cần bổ sung đã hoàn thành (76%)**
+
+### Sau Session 5:
+- ✅ Tổng số: **~81/81 đã có (100%)** 🎉
+- ✅ **Đã bổ sung thêm: 10 thuốc**
+- ✅ **Tổng cộng: 66/74 thuốc cần bổ sung đã hoàn thành (89%)**
+
+---
+
+## ĐIỂM NỔI BẬT SESSION 5
+
+**Black Box Warnings:**
+- Itraconazole: Heart Failure, Hepatotoxicity
+- Isoniazid: Hepatotoxicity
+
+**TDM Required:**
+- Itraconazole: Trough level monitoring (target >0.5 mcg/ml)
+- Streptomycin: Peak and trough level monitoring
+
+**High Alert Medications:**
+- Streptomycin (narrow therapeutic index, TDM required)
+- Polymyxin B (nephrotoxicity, neurotoxicity, ICU only)
+
+**Special Monitoring:**
+- Isoniazid: Pyridoxine supplementation (25-50mg/day) - CRITICAL to prevent neuropathy
+- Rifampin: Drug interactions (strong CYP450 inducer) - CRITICAL
+- Pyrazinamide: Uric acid levels (hyperuricemia, gout risk)
+- Itraconazole: Heart failure monitoring, visual monitoring
+
+**Tuberculosis Drugs:**
+- Đã bổ sung đầy đủ 3 thuốc chính: Rifampin, Isoniazid, Pyrazinamide (cùng với Ethambutol từ Session 4)
+
+---
+
+## TỔNG KẾT CUỐI CÙNG
+
+### Tổng số thuốc đã bổ sung: 66/74 thuốc (89%)
+
+**Phân bố theo nhóm:**
+- ✅ Beta-Lactams (Penicillins & Cephalosporins): ~25 thuốc
+- ✅ Carbapenems: 3 thuốc
+- ✅ Aminoglycosides: 4 thuốc
+- ✅ Macrolides: 3 thuốc
+- ✅ Quinolones: 4 thuốc
+- ✅ Tetracyclines: 3 thuốc
+- ✅ Glycopeptides: 1 thuốc (Vancomycin)
+- ✅ Polymyxins: 2 thuốc (Colistin, Polymyxin B)
+- ✅ Antifungals: 3 thuốc
+- ✅ Antivirals: 3 thuốc
+- ✅ Tuberculosis: 4 thuốc
+- ✅ Other: ~12 thuốc
+
+**Còn lại:** ~8-10 thuốc (chủ yếu là các dạng đặc biệt: eye drops, ointments, topical, suspensions)
+
+---
+
 **Cập nhật lần cuối:** 2025-02-18  
 **Người thực hiện:** AI Assistant  
-**Trạng thái:** ⏳ ĐANG TIẾN HÀNH - Session 4/5-6 hoàn thành (76% tổng thể)
+**Trạng thái:** ✅ GẦN HOÀN THÀNH - Session 5/5-6 hoàn thành (89% tổng thể, 100% thuốc chính)
 
