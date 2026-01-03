@@ -324,6 +324,316 @@ ONCOLOGY_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "ASCO Guidelines - Targeted Therapy Toxicity Management"
         ]
     },
+
+    # ======================== SESSION 2: ADDITIONAL ONCOLOGY DRUGS ========================
+    "Oxaliplatin": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "neurologic": "High (cold-induced neuropathy - very common, characteristic, and peripheral neuropathy - cumulative)",
+                "hematologic": "Moderate (myelosuppression - less than cisplatin)",
+                "gastrointestinal": "Moderate (nausea, vomiting, diarrhea)",
+                "allergic": "Low (allergic reactions - rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Cold-induced neuropathy - CRITICAL (numbness, tingling, electric shock sensation when touching cold - very common, characteristic, avoid cold for 3-7 days after infusion)",
+                "Peripheral neuropathy (numbness, tingling, loss of sensation) - CRITICAL (cumulative)",
+                "CBC (myelosuppression) - CRITICAL (before each cycle, less than cisplatin)",
+                "Renal function (CrCl, BUN, creatinine) - CRITICAL (before each cycle, for dose adjustment)",
+                "Hepatic function (ALT, AST) - CRITICAL (before each cycle)",
+                "Signs of allergic reactions (rash, dyspnea) - CRITICAL (rare)",
+                "Extravasation during infusion - CRITICAL",
+                "Avoid cold exposure - CRITICAL (no cold drinks, no touching cold objects, wear warm clothes, gloves, socks for 3-7 days after infusion)"
+            ],
+            "look_alike_sound_alike": ["Oxaliplatin", "Eloxatin", "Cisplatin", "Carboplatin"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Cold-Induced Neuropathy (Avoid Cold for 3-7 Days After Infusion)",
+            "FDA Black Box Warning - Peripheral Neuropathy (Cumulative)",
+            "FDA Drug Label - Oxaliplatin (Eloxatin)",
+            "NCCN Guidelines - Colorectal Cancer Treatment (FOLFOX Protocol)",
+            "ASCO Guidelines - Chemotherapy Toxicity Management"
+        ]
+    },
+
+    "Vincristine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "neurologic": "High (peripheral neuropathy - very common, cumulative, can be irreversible, Black Box Warning)",
+                "gastrointestinal": "High (constipation - very common, can be severe, ileus, Black Box Warning)",
+                "autonomic": "Moderate (autonomic neuropathy - hypotension, urinary retention, very common)",
+                "metabolic": "Low (SIADH - hyponatremia, rare)",
+                "hematologic": "Low (myelosuppression - less than other agents)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Peripheral neuropathy (numbness, tingling, weakness) - CRITICAL (very common, cumulative, can be irreversible, Black Box Warning)",
+                "Constipation - CRITICAL (very common, can be severe, ileus, Black Box Warning, prophylactic laxatives recommended)",
+                "Autonomic neuropathy (hypotension, urinary retention) - CRITICAL (very common)",
+                "CBC (myelosuppression) - CRITICAL (less than other agents, but still monitor)",
+                "Hepatic function (ALT, AST) - CRITICAL (metabolized via CYP3A4)",
+                "Sodium levels - CRITICAL (SIADH - rare)",
+                "Signs of seizures - CRITICAL (rare)",
+                "Drug interactions (L-asparaginase - use vincristine before, azole antifungals - increase neurotoxicity, CYP3A4 inhibitors/inducers) - CRITICAL",
+                "INTRATHECAL ADMINISTRATION - CRITICAL (FATAL - NEVER administer intrathecally, Black Box Warning)"
+            ],
+            "look_alike_sound_alike": ["Vincristine", "Oncovin", "Vinblastine", "Vindesine"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Intrathecal Administration (FATAL - Never Administer Intrathecally)",
+            "FDA Black Box Warning - Peripheral Neuropathy (Very Common, Cumulative, Can Be Irreversible)",
+            "FDA Black Box Warning - Constipation (Very Common, Can Be Severe, Ileus)",
+            "FDA Drug Label - Vincristine (Oncovin)",
+            "NCCN Guidelines - Cancer Treatment",
+            "ASCO Guidelines - Chemotherapy Toxicity Management",
+            "ISMP High Alert Medications - Vincristine (Intrathecal Error Prevention)"
+        ]
+    },
+
+    "Etoposide": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "hematologic": "High (myelosuppression - very common and severe, dose-limiting, Black Box Warning)",
+                "oncologic": "Moderate (secondary malignancies - AML, rare but serious, with high doses, Black Box Warning)",
+                "hepatic": "Low (hepatotoxicity - elevated transaminases, rare)",
+                "allergic": "Low (hypersensitivity reactions - rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "CBC (myelosuppression) - CRITICAL (very common and severe, dose-limiting, Black Box Warning, before and between cycles)",
+                "Signs of infection (fever, chills) - CRITICAL (due to neutropenia)",
+                "Signs of bleeding - CRITICAL (due to thrombocytopenia)",
+                "Hepatic function (ALT, AST, bilirubin) - CRITICAL (before and during treatment, rare)",
+                "Signs of hypersensitivity reactions - CRITICAL (rare)",
+                "Signs of secondary malignancies (AML) - CRITICAL (rare but serious, with high doses, Black Box Warning)",
+                "Drug interactions (cisplatin - increases myelosuppression, warfarin - increases bleeding risk, CYP3A4 inhibitors/inducers) - CRITICAL",
+                "Renal function (CrCl) - CRITICAL (for dose adjustment, reduce dose 25-50% if CrCl <30-60)"
+            ],
+            "look_alike_sound_alike": ["Etoposide", "VP-16", "Etopophos", "Teniposide"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Myelosuppression (Very Common and Severe, Dose-Limiting)",
+            "FDA Black Box Warning - Secondary Malignancies (AML, Rare But Serious, With High Doses)",
+            "FDA Drug Label - Etoposide (VP-16, Etopophos)",
+            "NCCN Guidelines - Small Cell Lung Cancer, Testicular Cancer",
+            "ASCO Guidelines - Chemotherapy Toxicity Management"
+        ]
+    },
+
+    "Irinotecan": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "gastrointestinal": "High (diarrhea - very common, can be severe and dangerous, early cholinergic and late toxicity, Black Box Warning)",
+                "hematologic": "High (myelosuppression - very common)",
+                "autonomic": "Moderate (cholinergic syndrome - sweating, rhinorrhea, salivation, early, very common)",
+                "hepatic": "Low (hepatotoxicity - elevated transaminases, rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Diarrhea - CRITICAL (very common, can be severe and dangerous, early cholinergic and late toxicity, Black Box Warning, treat early with loperamide or atropine)",
+                "Cholinergic syndrome (sweating, rhinorrhea, salivation) - CRITICAL (early, very common, treat with atropine)",
+                "Premedication with atropine - CRITICAL (to reduce cholinergic syndrome)",
+                "CBC (myelosuppression) - CRITICAL (very common, before each cycle)",
+                "Signs of infection (fever, chills) - CRITICAL (due to neutropenia)",
+                "Signs of bleeding - CRITICAL (due to thrombocytopenia)",
+                "Hepatic function (ALT, AST, bilirubin) - CRITICAL (before and during treatment, rare)",
+                "UGT1A1 genotype - CRITICAL (UGT1A1*28 polymorphism increases toxicity, consider dose reduction)",
+                "Drug interactions (5-FU - increases myelosuppression and diarrhea) - CRITICAL"
+            ],
+            "look_alike_sound_alike": ["Irinotecan", "Camptosar", "CPT-11", "Topotecan"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Diarrhea (Very Common, Can Be Severe and Dangerous, Early and Late)",
+            "FDA Black Box Warning - Cholinergic Syndrome (Requires Atropine Premedication)",
+            "FDA Drug Label - Irinotecan (Camptosar)",
+            "NCCN Guidelines - Colorectal Cancer Treatment (FOLFIRI Protocol)",
+            "ASCO Guidelines - Chemotherapy Toxicity Management"
+        ]
+    },
+
+    "5-Fluorouracil": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "gastrointestinal": "High (stomatitis, diarrhea - very common, can be severe, Black Box Warning)",
+                "hematologic": "High (myelosuppression - very common, Black Box Warning)",
+                "metabolic": "High (DPD deficiency - can cause severe toxicity and death, Black Box Warning)",
+                "cardiac": "Low (cardiotoxicity - rare but dangerous)",
+                "neurologic": "Low (neurotoxicity - rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "DPD (dihydropyrimidine dehydrogenase) testing - CRITICAL (before treatment if possible, DPD deficiency can cause severe toxicity and death, Black Box Warning)",
+                "CBC (myelosuppression) - CRITICAL (very common, Black Box Warning, before and between cycles)",
+                "Signs of stomatitis (oral mucositis) - CRITICAL (very common, can be severe)",
+                "Signs of diarrhea - CRITICAL (very common, can be severe, treat early)",
+                "Signs of cardiotoxicity (chest pain, dyspnea, arrhythmias) - CRITICAL (rare but dangerous)",
+                "Hepatic function (ALT, AST, bilirubin) - CRITICAL (before and during treatment)",
+                "Signs of infection (fever, chills) - CRITICAL (due to neutropenia)",
+                "Signs of bleeding - CRITICAL (due to thrombocytopenia)",
+                "Drug interactions (leucovorin - increases efficacy and toxicity, methotrexate - increases toxicity, warfarin - increases bleeding risk) - CRITICAL",
+                "Uridine triacetate (Vistogard) - CRITICAL (antidote for overdose due to DPD deficiency, use within 96 hours)"
+            ],
+            "look_alike_sound_alike": ["5-Fluorouracil", "5-FU", "Fluorouracil", "Capecitabine"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - DPD Deficiency (Can Cause Severe Toxicity and Death, Test Before Treatment)",
+            "FDA Black Box Warning - Myelosuppression (Very Common)",
+            "FDA Black Box Warning - Stomatitis and Diarrhea (Very Common, Can Be Severe)",
+            "FDA Drug Label - 5-Fluorouracil",
+            "NCCN Guidelines - Colorectal Cancer Treatment",
+            "ASCO Guidelines - Chemotherapy Toxicity Management",
+            "Uridine Triacetate (Vistogard) - Antidote for 5-FU Overdose"
+        ]
+    },
+
+    "Gemcitabine": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "hematologic": "Moderate (myelosuppression - very common)",
+                "pulmonary": "Moderate (interstitial pneumonitis - rare but dangerous, can be fatal)",
+                "hepatic": "Low (hepatotoxicity - elevated transaminases, rare)",
+                "systemic": "Moderate (flu-like syndrome - fever, chills, very common)",
+                "dermatologic": "Low (rash, pruritus, common)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "CBC (myelosuppression) - CRITICAL (very common, before each cycle)",
+                "Interstitial pneumonitis (dyspnea, cough, fever) - CRITICAL (rare but dangerous, can be fatal)",
+                "Flu-like syndrome (fever, chills) - CRITICAL (very common, usually self-limiting)",
+                "Hepatic function (ALT, AST, bilirubin) - CRITICAL (before and during treatment, rare)",
+                "Signs of infection (fever, chills) - CRITICAL (due to neutropenia, distinguish from flu-like syndrome)",
+                "Signs of bleeding - CRITICAL (due to thrombocytopenia)",
+                "Drug interactions (cisplatin - increases myelosuppression, warfarin - may increase anticoagulation) - CRITICAL"
+            ],
+            "look_alike_sound_alike": ["Gemcitabine", "Gemzar", "5-Fluorouracil", "Capecitabine"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Interstitial Pneumonitis (Rare But Dangerous, Can Be Fatal)",
+            "FDA Drug Label - Gemcitabine (Gemzar)",
+            "NCCN Guidelines - Pancreatic Cancer, NSCLC Treatment",
+            "ASCO Guidelines - Chemotherapy Toxicity Management"
+        ]
+    },
+
+    "Bevacizumab": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": True,
+            "organ_toxicity": {
+                "hemorrhagic": "High (bleeding - very common, can be severe and life-threatening, Black Box Warning)",
+                "gastrointestinal": "High (GI perforation - rare but dangerous, can be fatal, Black Box Warning)",
+                "wound_healing": "High (wound healing impairment - very common, Black Box Warning, contraindicated recent surgery within 28 days)",
+                "cardiovascular": "High (arterial thrombosis - rare but dangerous, venous thrombosis - common, Black Box Warning)",
+                "renal": "High (proteinuria - very common, can be severe, Black Box Warning)",
+                "cardiovascular_hypertension": "High (hypertension - very common, Black Box Warning)",
+                "neurologic": "Low (posterior reversible encephalopathy syndrome - PRES, rare but dangerous)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Bleeding - CRITICAL (very common, can be severe and life-threatening, Black Box Warning, stop immediately if severe bleeding)",
+                "GI perforation (abdominal pain, vomiting, fever) - CRITICAL (rare but dangerous, can be fatal, Black Box Warning, stop immediately)",
+                "Wound healing - CRITICAL (very common, Black Box Warning, contraindicated recent surgery within 28 days and open wounds)",
+                "Blood pressure - CRITICAL (hypertension very common, Black Box Warning, monitor each cycle)",
+                "Proteinuria - CRITICAL (very common, can be severe, Black Box Warning, monitor each cycle, stop if >3.5g/24h)",
+                "Arterial thrombosis (chest pain, dyspnea, stroke symptoms) - CRITICAL (rare but dangerous, Black Box Warning)",
+                "Venous thrombosis (leg swelling, pain) - CRITICAL (common)",
+                "Cardiac function (heart failure) - CRITICAL (rare)",
+                "PRES (headache, seizures, visual disturbances) - CRITICAL (rare but dangerous, stop immediately)",
+                "Infusion-related reactions - CRITICAL (rare, monitor during first 30 minutes)"
+            ],
+            "look_alike_sound_alike": ["Bevacizumab", "Avastin", "Ramucirumab", "Aflibercept"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+            "FDA Black Box Warning - GI Perforation (Rare But Dangerous, Can Be Fatal)",
+            "FDA Black Box Warning - Wound Healing Impairment (Contraindicated Recent Surgery Within 28 Days)",
+            "FDA Black Box Warning - Arterial Thrombosis (Rare But Dangerous)",
+            "FDA Black Box Warning - Hypertension (Very Common)",
+            "FDA Black Box Warning - Proteinuria (Very Common, Can Be Severe)",
+            "FDA Drug Label - Bevacizumab (Avastin)",
+            "NCCN Guidelines - Colorectal Cancer, NSCLC, Renal Cell Carcinoma Treatment",
+            "ASCO Guidelines - Targeted Therapy Toxicity Management"
+        ]
+    },
+
+    "Abiraterone": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "cardiac": "High (cardiotoxicity - heart failure, arrhythmias, very common and dangerous, Black Box Warning)",
+                "metabolic": "High (hypokalemia - very common, can be severe, Black Box Warning)",
+                "hepatic": "High (hepatotoxicity - elevated transaminases, very common, Black Box Warning, contraindicated in severe hepatic impairment)",
+                "cardiovascular_hypertension": "High (hypertension - very common)",
+                "fluid_retention": "High (fluid retention, edema - very common)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Cardiac function (LVEF) - CRITICAL (before treatment and every 3 months, very common and dangerous, Black Box Warning)",
+                "Potassium levels - CRITICAL (before treatment and every 2 weeks for first 3 months, very common, can be severe, Black Box Warning)",
+                "Hepatic function (ALT, AST, bilirubin) - CRITICAL (before treatment and every 2 weeks for first 3 months, very common, Black Box Warning, contraindicated in severe hepatic impairment)",
+                "Blood pressure - CRITICAL (hypertension very common, monitor each cycle)",
+                "Fluid retention (edema, weight gain) - CRITICAL (very common)",
+                "Prednisone use - CRITICAL (must be used concomitantly to reduce side effects, Black Box Warning)",
+                "Food interactions - CRITICAL (must take on empty stomach, 1 hour before or 2 hours after meals, food increases absorption 10-fold)",
+                "Drug interactions (CYP3A4 inhibitors/inducers) - CRITICAL"
+            ],
+            "look_alike_sound_alike": ["Abiraterone", "Zytiga", "Enzalutamide", "Apalutamide"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Cardiotoxicity (Very Common and Dangerous)",
+            "FDA Black Box Warning - Hypokalemia (Very Common, Can Be Severe)",
+            "FDA Black Box Warning - Hepatotoxicity (Very Common, Contraindicated in Severe Hepatic Impairment)",
+            "FDA Black Box Warning - Must Use Concomitantly with Prednisone",
+            "FDA Drug Label - Abiraterone (Zytiga)",
+            "NCCN Guidelines - Prostate Cancer Treatment (Castration-Resistant)",
+            "ASCO Guidelines - Hormone Therapy Toxicity Management"
+        ]
+    },
 }
 
 __all__ = ['ONCOLOGY_ENHANCED_FIELDS']
