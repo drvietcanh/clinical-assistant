@@ -2,7 +2,7 @@
 
 ## Tổng quan
 - **Tổng số thuốc:** 216 thuốc
-- **Tiến độ hiện tại:** 16/216 thuốc (7%)
+- **Tiến độ hiện tại:** 23/216 thuốc (11%)
 - **Trạng thái:** Đang thực hiện (in_progress)
 - **Thời gian dự kiến:** Week 10-14, 15-20 sessions
 
@@ -84,6 +84,28 @@
 
 ---
 
+### Session 6 - SSRIs, SNRIs, TCAs & Statins (7 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm SSRIs:**
+- ✅ **Fluoxetine** - Depression, anxiety (suicidal ideation and behavior - Black Box Warning, very long half-life 4-6 days, active metabolite 4-16 days, effects persist long after discontinuation)
+- ✅ **Escitalopram** - Depression, anxiety (suicidal ideation and behavior - Black Box Warning, S-enantiomer of citalopram, fewer side effects)
+
+**Nhóm SNRIs:**
+- ✅ **Venlafaxine** - Depression, anxiety (suicidal ideation and behavior - Black Box Warning, hypertension - dose-dependent, especially at higher doses >225mg/day, withdrawal syndrome common)
+- ✅ **Duloxetine** - Depression, anxiety, neuropathic pain, fibromyalgia (suicidal ideation and behavior - Black Box Warning, hepatotoxicity - contraindicated in severe hepatic impairment, Black Box Warning, hypertension - dose-dependent)
+
+**Nhóm TCAs:**
+- ✅ **Amitriptyline** - Depression, neuropathic pain, migraine prevention (suicidal ideation and behavior - Black Box Warning, overdose can be fatal - cardiac arrhythmias, seizures, coma, Black Box Warning, high_alert, narrow_therapeutic_index, QT prolongation, anticholinergic effects)
+
+**Nhóm Statins:**
+- ✅ **Atorvastatin** - Hypercholesterolemia, cardiovascular prevention (myopathy/rhabdomyolysis - Black Box Warning, teratogenicity - Black Box Warning, hepatotoxicity, new-onset diabetes)
+- ✅ **Simvastatin** - Hypercholesterolemia, cardiovascular prevention (myopathy/rhabdomyolysis - higher risk than atorvastatin, especially with 80mg dose, Black Box Warning, 80mg dose NOT recommended except in patients stable on 80mg for >12 months, Black Box Warning, teratogenicity - Black Box Warning)
+
+**Tổng Session 6:** 7 thuốc
+
+---
+
 ## Tổng kết các Session
 
 | Session | Số thuốc | Nhóm thuốc chính | Trạng thái |
@@ -93,9 +115,10 @@
 | Session 3 | 2 | Inotropes, Antiplatelets | ✅ Hoàn thành |
 | Session 4 | 1 | Antiarrhythmics | ✅ Hoàn thành |
 | Session 5 | 5 | Corticosteroids, SSRIs | ✅ Hoàn thành |
-| **TỔNG CỘNG** | **16** | - | **7% hoàn thành** |
+| Session 6 | 7 | SSRIs, SNRIs, TCAs, Statins | ✅ Hoàn thành |
+| **TỔNG CỘNG** | **23** | - | **11% hoàn thành** |
 
-## Các thuốc đã hoàn thành (16 thuốc)
+## Các thuốc đã hoàn thành (23 thuốc)
 
 1. ✅ Clopidogrel
 2. ✅ Amiodarone
@@ -114,6 +137,13 @@
 15. ✅ Dexamethasone
 16. ✅ Citalopram
 17. ✅ Sertraline
+18. ✅ Fluoxetine
+19. ✅ Escitalopram
+20. ✅ Venlafaxine
+21. ✅ Duloxetine
+22. ✅ Amitriptyline
+23. ✅ Atorvastatin
+24. ✅ Simvastatin
 
 ## Các nhóm thuốc đã bao phủ
 
@@ -125,7 +155,10 @@
 - ✅ Inotropes/Vasopressors (Dobutamine)
 - ✅ Immunosuppressants (Cyclosporine, Azathioprine)
 - ✅ Corticosteroids (Prednisone, Methylprednisolone, Dexamethasone)
-- ✅ SSRIs (Citalopram, Sertraline)
+- ✅ SSRIs (Citalopram, Sertraline, Fluoxetine, Escitalopram)
+- ✅ SNRIs (Venlafaxine, Duloxetine)
+- ✅ TCAs (Amitriptyline)
+- ✅ Statins (Atorvastatin, Simvastatin)
 
 ## Các nhóm thuốc còn lại cần bổ sung
 
@@ -165,14 +198,14 @@
 - **Session 3:** `feat: Add comprehensive risk_flags and guideline_tags for 2 additional Other drugs - Session 3 (Dobutamine, Dipyridamole)`
 - **Session 4:** `feat: Add comprehensive risk_flags and guideline_tags for 1 additional priority Other drug - Session 4 (Adenosine)`
 - **Session 5:** `feat: Add comprehensive risk_flags and guideline_tags for 5 additional Other drugs - Session 5 (Prednisone, Methylprednisolone, Dexamethasone, Citalopram, Sertraline)`
+- **Session 6:** `feat: Add comprehensive risk_flags and guideline_tags for 7 additional Other drugs - Session 6 (Fluoxetine, Escitalopram, Venlafaxine, Duloxetine, Amitriptyline, Atorvastatin, Simvastatin)`
 
 ## Next Steps
 
-1. Tiếp tục Session 6 với các thuốc quan trọng khác:
-   - SSRIs khác (Fluoxetine, Escitalopram, Paroxetine)
-   - SNRIs (Venlafaxine, Duloxetine)
-   - TCAs (Amitriptyline, Nortriptyline)
-   - Statins (Atorvastatin, Simvastatin, Rosuvastatin)
+1. Tiếp tục Session 7 với các thuốc quan trọng khác:
+   - SSRIs khác (Paroxetine, Fluvoxamine)
+   - TCAs khác (Nortriptyline, Imipramine)
+   - Statins khác (Rosuvastatin, Pravastatin, Lovastatin)
    - Các thuốc ICU/cấp cứu khác
 
 2. Đảm bảo không trùng lặp với các nhóm đã xử lý
@@ -182,5 +215,5 @@
 ---
 
 **Cập nhật lần cuối:** 2025-02-18
-**Phiên làm việc:** Session 5 hoàn thành
+**Phiên làm việc:** Session 6 hoàn thành
 
