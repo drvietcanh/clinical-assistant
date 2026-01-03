@@ -1655,6 +1655,214 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 8: MULTIPLE SCLEROSIS & MIGRAINE CGRP DRUGS (FINAL) ========================
+        "Fingolimod": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "High (bradycardia, AV block - Black Box Warning, especially after first dose)", "infectious": "High (serious infections, PML - Black Box Warning)", "ophthalmic": "High (macular edema - Black Box Warning)", "hepatic": "Moderate (elevated liver enzymes - common)"},
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Cardiac monitoring - CRITICAL (ECG, blood pressure, heart rate for 6 hours after first dose - Black Box Warning)",
+                    "Lymphocyte count - CRITICAL (lymphopenia)",
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL (elevated liver enzymes are common)",
+                    "Signs of infection (fever, cough, dyspnea, dysuria) - CRITICAL (serious infections, PML risk - Black Box Warning)",
+                    "Ophthalmologic examination (macular edema - Black Box Warning) - every 3-4 months after starting",
+                    "Signs of PML (progressive multifocal leukoencephalopathy) - CRITICAL (neurologic changes, confusion, weakness)",
+                    "Blood pressure (hypertension)",
+                    "Drug interactions (QT-prolonging drugs - CONTRAINDICATED, bradycardia-causing drugs, live vaccines - CONTRAINDICATED) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Fingolimod", "Gilenya"]
+            },
+            "guideline_tags": [
+                "AAN Multiple Sclerosis Treatment Guidelines",
+                "ECTRIMS/EAN Multiple Sclerosis Treatment Guidelines",
+                "FDA Black Box Warning - Bradycardia and AV Block",
+                "FDA Black Box Warning - Serious Infections and PML",
+                "FDA Black Box Warning - Macular Edema",
+                "FDA Drug Label - Fingolimod"
+            ]
+        },
+
+        "Ofatumumab": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"infectious": "High (serious infections, PML risk)", "hematologic": "Moderate (lymphopenia, hypogammaglobulinemia)", "allergic": "Low (infusion reactions - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "MS relapse frequency and MRI findings",
+                    "Signs of infection (fever, cough, dyspnea, dysuria) - CRITICAL (serious infections, PML risk)",
+                    "Lymphocyte count (lymphopenia)",
+                    "Immunoglobulin levels (hypogammaglobulinemia)",
+                    "Signs of PML (progressive multifocal leukoencephalopathy) - CRITICAL (neurologic changes, confusion, weakness)",
+                    "Injection site reactions (pain, redness, itching - common)",
+                    "Drug interactions (live vaccines - CONTRAINDICATED, other immunosuppressants - increased infection risk) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Ofatumumab", "Kesimpta", "Rituximab"]
+            },
+            "guideline_tags": [
+                "AAN Multiple Sclerosis Treatment Guidelines",
+                "ECTRIMS/EAN Multiple Sclerosis Treatment Guidelines",
+                "FDA Drug Label - Ofatumumab (serious infections and PML warnings)"
+            ]
+        },
+
+        "Erenumab": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"gastrointestinal": "High (constipation - common and can be serious)", "dermatologic": "Low (injection site reactions - common)", "allergic": "Low (hypersensitivity - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Migraine frequency and severity (migraine diary)",
+                    "Constipation - CRITICAL (common and can be serious, may require treatment)",
+                    "Injection site reactions (pain, redness, itching - common)",
+                    "Signs of hypersensitivity (rash, difficulty breathing, angioedema - rare)"
+                ],
+                "look_alike_sound_alike": ["Erenumab", "Aimovig", "Fremanezumab", "Galcanezumab"]
+            },
+            "guideline_tags": [
+                "AHS Migraine Treatment Guidelines",
+                "EFNS Migraine Treatment Guidelines",
+                "FDA Drug Label - Erenumab (constipation warning)"
+            ]
+        },
+
+        "Fremanezumab": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"dermatologic": "Low (injection site reactions - common)", "allergic": "Low (hypersensitivity - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Migraine frequency and severity (migraine diary)",
+                    "Injection site reactions (pain, redness, itching - common)",
+                    "Signs of hypersensitivity (rash, difficulty breathing, angioedema - rare)"
+                ],
+                "look_alike_sound_alike": ["Fremanezumab", "Ajovy", "Erenumab", "Galcanezumab"]
+            },
+            "guideline_tags": [
+                "AHS Migraine Treatment Guidelines",
+                "EFNS Migraine Treatment Guidelines",
+                "FDA Drug Label - Fremanezumab"
+            ]
+        },
+
+        "Galcanezumab": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"dermatologic": "Low (injection site reactions - common)", "allergic": "Low (hypersensitivity - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Migraine frequency and severity (migraine diary)",
+                    "Injection site reactions (pain, redness, itching - common)",
+                    "Signs of hypersensitivity (rash, difficulty breathing, angioedema - rare)"
+                ],
+                "look_alike_sound_alike": ["Galcanezumab", "Emgality", "Erenumab", "Fremanezumab"]
+            },
+            "guideline_tags": [
+                "AHS Migraine Treatment Guidelines",
+                "EFNS Migraine Treatment Guidelines",
+                "FDA Drug Label - Galcanezumab"
+            ]
+        },
+
+        "Eptinezumab": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"allergic": "Moderate (infusion-related reactions - common, anaphylaxis - rare)", "dermatologic": "Low (infusion site reactions)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Migraine frequency and severity (migraine diary)",
+                    "Infusion-related reactions - CRITICAL (monitor during and after infusion, may need premedication)",
+                    "Signs of anaphylaxis (difficulty breathing, angioedema, hypotension - rare but serious)"
+                ],
+                "look_alike_sound_alike": ["Eptinezumab", "Vyepti", "Erenumab", "Fremanezumab"]
+            },
+            "guideline_tags": [
+                "AHS Migraine Treatment Guidelines",
+                "EFNS Migraine Treatment Guidelines",
+                "FDA Drug Label - Eptinezumab (infusion-related reactions warning)"
+            ]
+        },
+
+        "Rimegepant": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Moderate (hepatotoxicity - rare)", "gastrointestinal": "Low (nausea - common)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Migraine frequency and severity (migraine diary)",
+                    "Hepatic function (ALT, AST) - CRITICAL (hepatotoxicity risk - rare)",
+                    "Gastrointestinal symptoms (nausea - common)",
+                    "Drug interactions (strong CYP3A4 inhibitors - avoid, moderate CYP3A4 inhibitors - reduce dose)"
+                ],
+                "look_alike_sound_alike": ["Rimegepant", "Nurtec ODT", "Ubrogepant"]
+            },
+            "guideline_tags": [
+                "AHS Migraine Treatment Guidelines",
+                "EFNS Migraine Treatment Guidelines",
+                "FDA Drug Label - Rimegepant (hepatotoxicity warning)"
+            ]
+        },
+
+        "Ubrogepant": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Moderate (hepatotoxicity - rare)", "gastrointestinal": "Low (nausea - common)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Migraine frequency and severity (migraine diary)",
+                    "Hepatic function (ALT, AST) - CRITICAL (hepatotoxicity risk - rare)",
+                    "Gastrointestinal symptoms (nausea - common)",
+                    "Drug interactions (strong CYP3A4 inhibitors - avoid, moderate CYP3A4 inhibitors - reduce dose)"
+                ],
+                "look_alike_sound_alike": ["Ubrogepant", "Ubrelvy", "Rimegepant"]
+            },
+            "guideline_tags": [
+                "AHS Migraine Treatment Guidelines",
+                "EFNS Migraine Treatment Guidelines",
+                "FDA Drug Label - Ubrogepant (hepatotoxicity warning)"
+            ]
+        },
+
 }
 
 __all__ = ["NEUROLOGICAL_ENHANCED_FIELDS"]
