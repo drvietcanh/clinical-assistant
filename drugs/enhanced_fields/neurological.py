@@ -1357,6 +1357,138 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 6: FINAL NEUROLOGY DRUGS ========================
+        "Opicapone": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Moderate (elevated transaminases - common)", "musculoskeletal": "Low (rhabdomyolysis - rare but serious)", "neuropsychiatric": "Low (hallucinations, impulse control disorders - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Parkinson's disease symptoms (motor fluctuations, dyskinesias)",
+                    "Hepatic function (ALT, AST) - CRITICAL (elevated transaminases are common)",
+                    "Creatine kinase (CK) - CRITICAL (monitor for rhabdomyolysis - rare but serious)",
+                    "Signs of rhabdomyolysis (muscle pain, weakness, dark urine) - CRITICAL",
+                    "Dyskinesia (common, may need to reduce levodopa dose)",
+                    "Drug interactions (non-selective MAO inhibitors - CONTRAINDICATED, pheochromocytoma - CONTRAINDICATED) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Opicapone", "Ongentys", "Entacapone", "Tolcapone"]
+            },
+            "guideline_tags": [
+                "MDS Evidence-Based Medicine Review - Parkinson's Disease",
+                "AAN Parkinson's Disease Treatment Guidelines",
+                "FDA Drug Label - Opicapone (MAO inhibitor contraindication, hepatic monitoring, and rhabdomyolysis warnings)"
+            ]
+        },
+
+        "Istradefylline": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "High (severe hepatic impairment - CONTRAINDICATED)", "neuropsychiatric": "Moderate (hallucinations, confusion, impulse control disorders - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Parkinson's disease symptoms (motor fluctuations, dyskinesias)",
+                    "Dyskinesia (common, may need to reduce levodopa dose)",
+                    "Hepatic function (ALT, AST) - CRITICAL (severe hepatic impairment is CONTRAINDICATED)",
+                    "Neuropsychiatric symptoms (hallucinations, confusion, impulse control disorders)",
+                    "Drug interactions (CYP3A4 inhibitors/inducers)"
+                ],
+                "look_alike_sound_alike": ["Istradefylline", "Nourianz"]
+            },
+            "guideline_tags": [
+                "MDS Evidence-Based Medicine Review - Parkinson's Disease",
+                "AAN Parkinson's Disease Treatment Guidelines",
+                "FDA Drug Label - Istradefylline (severe hepatic impairment contraindication)"
+            ]
+        },
+
+        "Aducanumab": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {"neurologic": "High (ARIA-E: amyloid-related imaging abnormalities-edema, ARIA-H: amyloid-related imaging abnormalities-hemosiderin deposits - Black Box Warning)", "hematologic": "High (intracerebral hemorrhage risk, especially with anticoagulants)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "MRI brain - CRITICAL (baseline and periodic monitoring for ARIA)",
+                    "Neurologic symptoms (headache, confusion, visual changes, seizures) - CRITICAL (signs of ARIA)",
+                    "Signs of intracerebral hemorrhage (sudden severe headache, focal neurological deficits) - CRITICAL",
+                    "APOE ε4 genotype (homozygotes have higher ARIA risk)",
+                    "Drug interactions (anticoagulants, antiplatelets - increased bleeding risk with ARIA-H) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Aducanumab", "Aduhelm", "Donanemab", "Lecanemab"]
+            },
+            "guideline_tags": [
+                "AAN/Alzheimer Association Practice Updates",
+                "FDA Black Box Warning - ARIA (Amyloid-Related Imaging Abnormalities)",
+                "FDA Drug Label - Aducanumab (ARIA monitoring requirements)"
+            ]
+        },
+
+        "Donanemab": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {"neurologic": "High (ARIA-E: amyloid-related imaging abnormalities-edema, ARIA-H: amyloid-related imaging abnormalities-hemosiderin deposits - Black Box Warning)", "hematologic": "High (intracerebral hemorrhage risk, especially with anticoagulants)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "MRI brain - CRITICAL (baseline and periodic monitoring for ARIA)",
+                    "Neurologic symptoms (headache, confusion, visual changes, seizures) - CRITICAL (signs of ARIA)",
+                    "Signs of intracerebral hemorrhage (sudden severe headache, focal neurological deficits) - CRITICAL",
+                    "APOE ε4 genotype (carriers have higher ARIA risk)",
+                    "Drug interactions (anticoagulants, antiplatelets - increased bleeding risk with ARIA-H) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Donanemab", "Kisunla", "Aducanumab", "Lecanemab"]
+            },
+            "guideline_tags": [
+                "AAN/Alzheimer Association Practice Updates",
+                "FDA Black Box Warning - ARIA (Amyloid-Related Imaging Abnormalities)",
+                "FDA Drug Label - Donanemab (ARIA monitoring requirements)"
+            ]
+        },
+
+        "Lecanemab": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {"neurologic": "High (ARIA-E: amyloid-related imaging abnormalities-edema, ARIA-H: amyloid-related imaging abnormalities-hemosiderin deposits - Black Box Warning)", "hematologic": "High (intracerebral hemorrhage risk, especially with anticoagulants)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "MRI brain - CRITICAL (baseline and periodic monitoring for ARIA)",
+                    "Neurologic symptoms (headache, confusion, visual changes, seizures) - CRITICAL (signs of ARIA)",
+                    "Signs of intracerebral hemorrhage (sudden severe headache, focal neurological deficits) - CRITICAL",
+                    "APOE ε4 genotype (carriers have higher ARIA risk)",
+                    "Drug interactions (anticoagulants, antiplatelets - increased bleeding risk with ARIA-H) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Lecanemab", "Leqembi", "Aducanumab", "Donanemab"]
+            },
+            "guideline_tags": [
+                "AAN/Alzheimer Association Practice Updates",
+                "FDA Black Box Warning - ARIA (Amyloid-Related Imaging Abnormalities)",
+                "FDA Drug Label - Lecanemab (ARIA monitoring requirements)"
+            ]
+        },
+
 }
 
 __all__ = ["NEUROLOGICAL_ENHANCED_FIELDS"]
