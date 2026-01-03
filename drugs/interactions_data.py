@@ -252,6 +252,180 @@ DRUG_INTERACTIONS = {
         "management": "Tránh dùng chung nếu có thể. Nếu cần: theo dõi công thức máu thường xuyên",
         "references": "AHFS Drug Information"
     },
+    
+    # ========== CLASS-BASED INTERACTIONS ==========
+    
+    # Anticoagulants + Antiplatelets
+    ("Anticoagulant", "Antiplatelet"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ xuất huyết do tăng tác dụng chống đông và chống kết tập tiểu cầu",
+        "description": "Tăng nguy cơ xuất huyết nặng, đặc biệt xuất huyết dạ dày-ruột và nội sọ",
+        "clinical_significance": "Nguy cơ xuất huyết nặng tăng 2-4 lần. Chỉ dùng khi có chỉ định rõ ràng (ví dụ: sau stent với mechanical valve).",
+        "management": "Chỉ dùng khi có chỉ định rõ ràng. Theo dõi INR và dấu hiệu xuất huyết sát. Dùng PPI bảo vệ dạ dày.",
+        "references": "ACC/AHA Guidelines, Micromedex"
+    },
+    
+    # Anticoagulants + NSAIDs
+    ("Anticoagulant", "NSAID"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng nguy cơ xuất huyết dạ dày-ruột và xuất huyết nặng",
+        "description": "NSAID làm tăng nguy cơ xuất huyết dạ dày và tăng tác dụng chống đông",
+        "clinical_significance": "Nguy cơ xuất huyết dạ dày-ruột tăng 2-4 lần. Đặc biệt nguy hiểm ở người cao tuổi.",
+        "management": "Tránh dùng chung. Dùng Paracetamol thay thế nếu cần giảm đau/sốt. Nếu bắt buộc: dùng PPI bảo vệ dạ dày, theo dõi INR.",
+        "alternatives": {
+            "for_nsaid": ["Paracetamol", "Acetaminophen"],
+            "for_anticoagulant": ["DOAC (nếu phù hợp)"]
+        },
+        "references": "Micromedex, AHFS Drug Information"
+    },
+    
+    # Statins + Macrolides
+    ("Statins", "Macrolide"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Macrolide ức chế CYP3A4 → Tăng nồng độ statin → Tăng nguy cơ tiêu cơ vân",
+        "description": "Tăng nguy cơ tiêu cơ vân nghiêm trọng, có thể tử vong",
+        "clinical_significance": "Nguy cơ tiêu cơ vân tăng 10-15 lần. Đặc biệt nguy hiểm với Simvastatin, Lovastatin, Atorvastatin.",
+        "management": "Tránh dùng chung nếu có thể. Nếu cần: giảm liều statin 50-75%, theo dõi CK, triệu chứng đau cơ. Hoặc chuyển sang Pravastatin/Rosuvastatin (ít tương tác hơn).",
+        "alternatives": {
+            "for_macrolide": ["Azithromycin (ít tương tác hơn)", "Doxycycline"],
+            "for_statins": ["Pravastatin", "Rosuvastatin"]
+        },
+        "references": "FDA, Micromedex, ACC/AHA Guidelines"
+    },
+    
+    # Statins + Azole Antifungals
+    ("Statins", "Azole Antifungal"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Azole antifungal ức chế CYP3A4 → Tăng nồng độ statin → Tăng nguy cơ tiêu cơ vân",
+        "description": "Tăng nguy cơ tiêu cơ vân nghiêm trọng",
+        "clinical_significance": "Nguy cơ tiêu cơ vân tăng 10-20 lần. Đặc biệt nguy hiểm với Ketoconazole, Itraconazole.",
+        "management": "Tránh dùng chung nếu có thể. Nếu cần: giảm liều statin 50-75%, theo dõi CK. Hoặc chuyển sang Pravastatin/Rosuvastatin.",
+        "alternatives": {
+            "for_azole": ["Terbinafine (nếu phù hợp)", "Amphotericin B (nếu phù hợp)"],
+            "for_statins": ["Pravastatin", "Rosuvastatin"]
+        },
+        "references": "FDA, Micromedex"
+    },
+    
+    # ACE Inhibitors + Potassium-sparing Diuretics
+    ("ACE Inhibitor", "Potassium-sparing Diuretic"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cả hai đều giữ kali → Tăng nguy cơ tăng kali máu nguy hiểm",
+        "description": "Tăng nguy cơ tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+        "clinical_significance": "Kali máu có thể tăng >5.5 mEq/L, nguy cơ rối loạn nhịp tim, đặc biệt ở bệnh nhân suy thận.",
+        "management": "Tránh dùng chung nếu có thể. Nếu cần: theo dõi kali máu sát (mỗi 1-2 tuần khi bắt đầu, sau đó mỗi tháng). Nếu K+ >5.5 mEq/L: giảm liều hoặc ngừng một trong hai thuốc.",
+        "alternatives": {
+            "for_potassium_sparing": ["Furosemide", "Hydrochlorothiazide"],
+            "for_ace_inhibitor": ["ARB (Losartan, Valsartan)"]
+        },
+        "references": "Micromedex, AHFS Drug Information, KDIGO Guidelines"
+    },
+    
+    # ARBs + Potassium-sparing Diuretics
+    ("ARB", "Potassium-sparing Diuretic"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cả hai đều giữ kali → Tăng nguy cơ tăng kali máu",
+        "description": "Tăng nguy cơ tăng kali máu nghiêm trọng",
+        "management": "Theo dõi kali máu sát. Tránh dùng chung nếu có thể.",
+        "references": "Micromedex"
+    },
+    
+    # ACE Inhibitors + NSAIDs
+    ("ACE Inhibitor", "NSAID"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "NSAID ức chế prostaglandin → Co mạch thận → Giảm GFR. ACE-I giãn tiểu động mạch thận → Giảm GFR. Tác dụng cộng hưởng.",
+        "description": "Giảm hiệu quả hạ huyết áp của ACE-I, tăng nguy cơ suy thận cấp",
+        "clinical_significance": "Có thể gây suy thận cấp, đặc biệt ở bệnh nhân suy thận, cao tuổi, mất nước.",
+        "management": "Tránh NSAIDs nếu có thể. Dùng Paracetamol thay thế. Nếu bắt buộc: theo dõi huyết áp, Cr, K+ thường xuyên. Dùng liều thấp nhất, thời gian ngắn nhất.",
+        "alternatives": {
+            "for_nsaid": ["Paracetamol", "Acetaminophen"]
+        },
+        "references": "JNC 8, KDIGO Guidelines, Micromedex"
+    },
+    
+    # ARBs + NSAIDs
+    ("ARB", "NSAID"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tương tự ACE-I + NSAID",
+        "description": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp",
+        "management": "Tránh NSAIDs nếu có thể. Theo dõi huyết áp và chức năng thận.",
+        "references": "JNC 8, KDIGO Guidelines"
+    },
+    
+    # SSRIs + MAOIs
+    ("SSRI", "MAOI"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "MAOIs ức chế phân hủy serotonin. SSRIs tăng serotonin. → Tích lũy serotonin quá mức → Hội chứng Serotonin.",
+        "description": "Hội chứng Serotonin nghiêm trọng - có thể tử vong",
+        "clinical_significance": "Nguy cơ cao gây hội chứng Serotonin với các triệu chứng: kích động, tăng thân nhiệt, co giật, rối loạn nhịp tim, tử vong.",
+        "management": "CHỐNG CHỈ ĐỊNH tuyệt đối. Ngừng MAOI ít nhất 14 ngày trước khi bắt đầu SSRI. Ngừng SSRI ít nhất 5 tuần (Fluoxetine) hoặc 2 tuần (SSRI khác) trước khi bắt đầu MAOI.",
+        "references": "FDA Contraindication, Sternbach Criteria, Micromedex"
+    },
+    
+    # SSRIs + SNRIs
+    ("SSRI", "SNRI"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cả hai đều tăng serotonin → Tăng nguy cơ hội chứng Serotonin",
+        "description": "Tăng nguy cơ hội chứng Serotonin",
+        "management": "Tránh dùng chung. Nếu cần: dùng liều thấp, theo dõi sát triệu chứng hội chứng Serotonin.",
+        "references": "Micromedex"
+    },
+    
+    # SSRIs + Opioids (Tramadol)
+    ("SSRI", "Opioid"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "SSRI + Opioid (đặc biệt Tramadol) → Tăng nguy cơ hội chứng Serotonin và co giật",
+        "description": "Tăng nguy cơ hội chứng Serotonin và co giật",
+        "clinical_significance": "Đặc biệt nguy hiểm với Tramadol. Có thể gây co giật, nhầm lẫn, hôn mê.",
+        "management": "Tránh dùng chung nếu có thể. Nếu cần: dùng liều thấp, theo dõi sát. Tránh Tramadol.",
+        "alternatives": {
+            "for_opioid": ["Morphine", "Codeine (nếu phù hợp)"],
+            "for_ssri": ["Mirtazapine (nếu phù hợp)"]
+        },
+        "references": "Micromedex, FDA Warning"
+    },
+    
+    # Quinolones + Antacids
+    ("Quinolone", "Antacid"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Antacid (Ca, Mg, Al) chelate với quinolone → Giảm hấp thu quinolone",
+        "description": "Giảm đáng kể hấp thu quinolone → Giảm hiệu quả điều trị",
+        "management": "Cách xa ít nhất 2 giờ. Tốt nhất: dùng antacid 2 giờ sau quinolone.",
+        "references": "Micromedex, FDA Label"
+    },
+    
+    # Metformin + Contrast Media
+    ("Metformin", "Contrast Media"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Thuốc cản quang có thể gây suy thận cấp → Giảm thải Metformin → Tích lũy Metformin → Toan lactic.",
+        "description": "Nguy cơ toan lactic (Lactic acidosis) - có thể tử vong",
+        "clinical_significance": "Nguy cơ toan lactic tăng đáng kể, đặc biệt ở bệnh nhân suy thận, cao tuổi.",
+        "management": "NGỪNG Metformin trước chụp CT/MRI có thuốc cản quang. Ngừng ít nhất 48h trước. Kiểm tra chức năng thận sau chụp. Chỉ dùng lại Metformin khi chức năng thận bình thường (ít nhất 48-72h sau chụp).",
+        "references": "FDA Label, ACR Guidelines, Micromedex"
+    },
+    
+    # Methotrexate + NSAIDs
+    ("Methotrexate", "NSAID"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "NSAID làm giảm đào thải methotrexate qua thận (ức chế bài tiết ống thận). NSAID cũng giảm GFR → Giảm lọc Methotrexate.",
+        "description": "Tăng độc tính Methotrexate (suy tủy, độc gan, độc thận)",
+        "clinical_significance": "Nguy cơ độc tính tăng đáng kể, đặc biệt với liều cao Methotrexate (>20mg/tuần).",
+        "management": "Tránh NSAIDs khi dùng Methotrexate liều cao (>20mg/tuần hoặc liều hóa trị). Với liều thấp (RA): Có thể dùng NSAIDs nhưng theo dõi CBC, AST/ALT, Cr thường xuyên. Dùng Paracetamol thay thế nếu có thể.",
+        "alternatives": {
+            "for_nsaid": ["Paracetamol", "Acetaminophen"]
+        },
+        "references": "FDA Label, ACR Guidelines, Micromedex"
+    },
+    
+    # Digoxin + Amiodarone
+    ("Digoxin", "Amiodarone"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Amiodarone ức chế P-glycoprotein → Giảm thải Digoxin qua thận và ruột → Tăng nồng độ Digoxin",
+        "description": "Tăng nồng độ Digoxin → Độc Digoxin (buồn nôn, rối loạn nhịp, rối loạn thị giác)",
+        "clinical_significance": "Nồng độ Digoxin có thể tăng 2-3 lần. Nguy cơ độc tính cao.",
+        "management": "Giảm liều Digoxin 50% khi bắt đầu Amiodarone. Theo dõi nồng độ Digoxin (mục tiêu 0.5-0.9 ng/mL). Theo dõi triệu chứng độc Digoxin, ECG, K+ máu.",
+        "references": "UpToDate, ACC/AHA AF Guidelines, Micromedex"
+    },
 }
 
 # Merge with expanded interactions
@@ -259,26 +433,105 @@ if _EXPANDED_LOADED:
     DRUG_INTERACTIONS.update(EXPANDED_INTERACTIONS)
 
 # Alternative drug names mapping (Vietnamese names, brand names, etc.)
+# Expanded with common brand names and Vietnamese names
 DRUG_ALIASES = {
-    "Aspirin": ["Aspirin", "Acetylsalicylic acid", "ASA", "Aspirin"],
-    "Warfarin": ["Warfarin", "Coumadin", "Marevan"],
-    "Ibuprofen": ["Ibuprofen", "Brufen", "Advil"],
-    "Omeprazole": ["Omeprazole", "Losec", "Omez"],
+    # Anticoagulants
+    "Warfarin": ["Warfarin", "Coumadin", "Marevan", "Warfarin sodium", "Warfarin natri"],
+    "Aspirin": ["Aspirin", "Acetylsalicylic acid", "ASA", "Aspirin", "Acetyl salicylic acid"],
+    "Clopidogrel": ["Clopidogrel", "Plavix", "Clopidogrel bisulfate"],
+    "Ticagrelor": ["Ticagrelor", "Brilinta"],
+    "Prasugrel": ["Prasugrel", "Effient"],
+    "Dabigatran": ["Dabigatran", "Pradaxa"],
+    "Rivaroxaban": ["Rivaroxaban", "Xarelto"],
+    "Apixaban": ["Apixaban", "Eliquis"],
+    "Edoxaban": ["Edoxaban", "Savaysa"],
+    
+    # NSAIDs & Analgesics
+    "Ibuprofen": ["Ibuprofen", "Brufen", "Advil", "Nurofen", "Motrin"],
+    "Naproxen": ["Naproxen", "Naprosyn", "Aleve"],
+    "Diclofenac": ["Diclofenac", "Voltaren", "Cataflam"],
+    "Paracetamol": ["Paracetamol", "Acetaminophen", "Tylenol", "Panadol"],
+    "Tramadol": ["Tramadol", "Tramal", "Tramadon", "Ultram"],
+    
+    # PPIs & GI
+    "Omeprazole": ["Omeprazole", "Losec", "Omez", "Prilosec"],
+    "Pantoprazole": ["Pantoprazole", "Protonix", "Pantoloc"],
+    "Lansoprazole": ["Lansoprazole", "Prevacid", "Lanzor"],
+    "Esomeprazole": ["Esomeprazole", "Nexium"],
+    "Rabeprazole": ["Rabeprazole", "Aciphex", "Pariet"],
+    
+    # Antibiotics
+    "Amoxicillin": ["Amoxicillin", "Amoxil", "Amoxicilline"],
+    "Ciprofloxacin": ["Ciprofloxacin", "Cipro", "Cifran", "Ciprobay"],
+    "Levofloxacin": ["Levofloxacin", "Levaquin", "Tavanic"],
+    "Azithromycin": ["Azithromycin", "Zithromax", "Azithro"],
+    "Clarithromycin": ["Clarithromycin", "Klacid", "Biaxin"],
+    "Erythromycin": ["Erythromycin", "Erythrocin"],
     "Metronidazole": ["Metronidazole", "Flagyl", "Metronidazol"],
-    "Ciprofloxacin": ["Ciprofloxacin", "Cipro", "Cifran"],
-    "Fluoxetine": ["Fluoxetine", "Prozac", "Fluoxetin"],
-    "Tramadol": ["Tramadol", "Tramal", "Tramadon"],
+    "Ceftriaxone": ["Ceftriaxone", "Rocephin"],
+    "Cefazolin": ["Cefazolin", "Ancef", "Kefzol"],
+    
+    # Antifungals
+    "Fluconazole": ["Fluconazole", "Diflucan", "Fluconazol"],
+    "Ketoconazole": ["Ketoconazole", "Nizoral", "Ketoconazol"],
+    "Itraconazole": ["Itraconazole", "Sporanox"],
+    "Voriconazole": ["Voriconazole", "Vfend"],
+    
+    # Antidepressants
+    "Fluoxetine": ["Fluoxetine", "Prozac", "Fluoxetin", "Prozac"],
+    "Sertraline": ["Sertraline", "Zoloft"],
+    "Citalopram": ["Citalopram", "Celexa"],
+    "Escitalopram": ["Escitalopram", "Lexapro"],
+    "Paroxetine": ["Paroxetine", "Paxil"],
+    "Venlafaxine": ["Venlafaxine", "Effexor"],
+    "Duloxetine": ["Duloxetine", "Cymbalta"],
+    
+    # Cardiovascular
     "Digoxin": ["Digoxin", "Lanoxin", "Digoxine"],
     "Amiodarone": ["Amiodarone", "Cordarone", "Amiodaron"],
-    "Metformin": ["Metformin", "Glucophage", "Metformin HCl"],
-    "Atorvastatin": ["Atorvastatin", "Lipitor", "Atorvastatin"],
-    "Simvastatin": ["Simvastatin", "Zocor", "Simvastatin"],
-    "Clarithromycin": ["Clarithromycin", "Klacid", "Clarithromycin"],
-    "Ketoconazole": ["Ketoconazole", "Nizoral", "Ketoconazol"],
-    "Fluconazole": ["Fluconazole", "Diflucan", "Fluconazol"],
-    "Clopidogrel": ["Clopidogrel", "Plavix", "Clopidogrel"],
+    "Lisinopril": ["Lisinopril", "Prinivil", "Zestril"],
+    "Enalapril": ["Enalapril", "Vasotec"],
+    "Losartan": ["Losartan", "Cozaar"],
+    "Valsartan": ["Valsartan", "Diovan"],
+    "Amlodipine": ["Amlodipine", "Norvasc"],
+    "Metoprolol": ["Metoprolol", "Lopressor", "Toprol"],
+    "Atenolol": ["Atenolol", "Tenormin"],
+    "Carvedilol": ["Carvedilol", "Coreg"],
+    "Propranolol": ["Propranolol", "Inderal"],
+    
+    # Statins
+    "Atorvastatin": ["Atorvastatin", "Lipitor"],
+    "Simvastatin": ["Simvastatin", "Zocor"],
+    "Rosuvastatin": ["Rosuvastatin", "Crestor"],
+    "Pravastatin": ["Pravastatin", "Pravachol"],
+    
+    # Antidiabetics
+    "Metformin": ["Metformin", "Glucophage", "Metformin HCl", "Glucophage"],
+    "Glibenclamide": ["Glibenclamide", "Glyburide", "Daonil"],
+    "Gliclazide": ["Gliclazide", "Diamicron"],
+    "Glimepiride": ["Glimepiride", "Amaryl"],
+    "Sitagliptin": ["Sitagliptin", "Januvia"],
+    "Dapagliflozin": ["Dapagliflozin", "Farxiga"],
+    "Empagliflozin": ["Empagliflozin", "Jardiance"],
+    "Insulin": ["Insulin", "Humulin", "Novolin"],
+    
+    # Others
     "Diphenhydramine": ["Diphenhydramine", "Benadryl", "Diphenhydramin"],
-    "Methotrexate": ["Methotrexate", "MTX", "Methotrexat"],
+    "Methotrexate": ["Methotrexate", "MTX", "Methotrexat", "Trexall"],
+    "Prednisone": ["Prednisone", "Deltasone"],
+    "Furosemide": ["Furosemide", "Lasix"],
+    "Spironolactone": ["Spironolactone", "Aldactone"],
+    "Hydrochlorothiazide": ["Hydrochlorothiazide", "HCTZ", "Microzide"],
+    "Levothyroxine": ["Levothyroxine", "Synthroid", "Levoxyl"],
+    
+    # Vietnamese common names (phổ biến ở VN)
+    "Paracetamol": ["Paracetamol", "Paracetamol", "Panadol", "Efferalgan", "Hapacol"],
+    "Amoxicillin": ["Amoxicillin", "Amoxicillin", "Clamoxyl"],
+    "Ciprofloxacin": ["Ciprofloxacin", "Ciprofloxacin", "Cifran"],
+    "Omeprazole": ["Omeprazole", "Omeprazole", "Omez", "Losec"],
+    "Metformin": ["Metformin", "Metformin", "Glucophage"],
+    "Atorvastatin": ["Atorvastatin", "Atorvastatin", "Lipitor"],
+    "Amlodipine": ["Amlodipine", "Amlodipine", "Norvasc"],
 }
 
 # Drug class mappings - maps specific drugs to their therapeutic classes
@@ -360,17 +613,88 @@ DRUG_CLASS_MAPPINGS = {
     
     # Tetracyclines
     "Tetracycline": ["Doxycycline", "Minocycline", "Tetracycline", "Tigecycline"],
+    
+    # Anticoagulants
+    "Anticoagulant": ["Warfarin", "Dabigatran", "Rivaroxaban", "Apixaban", "Edoxaban", "Heparin", "Enoxaparin"],
+    "DOAC": ["Dabigatran", "Rivaroxaban", "Apixaban", "Edoxaban"],  # Direct Oral Anticoagulants
+    "LMWH": ["Enoxaparin", "Dalteparin", "Tinzaparin"],  # Low Molecular Weight Heparin
+    
+    # Antiplatelets
+    "Antiplatelet": ["Aspirin", "Clopidogrel", "Ticagrelor", "Prasugrel", "Ticlopidine", "Dipyridamole"],
+    
+    # Anticonvulsants
+    "Anticonvulsant": ["Phenytoin", "Carbamazepine", "Valproate", "Lamotrigine", "Levetiracetam", 
+                       "Topiramate", "Gabapentin", "Pregabalin", "Oxcarbazepine"],
+    
+    # Antipsychotics
+    "Antipsychotic": ["Haloperidol", "Risperidone", "Olanzapine", "Quetiapine", "Aripiprazole", 
+                      "Clozapine", "Ziprasidone"],
+    
+    # Benzodiazepines
+    "Benzodiazepine": ["Diazepam", "Lorazepam", "Alprazolam", "Clonazepam", "Midazolam", "Temazepam"],
+    
+    # Antihistamines
+    "Antihistamine": ["Diphenhydramine", "Loratadine", "Cetirizine", "Fexofenadine", "Desloratadine", 
+                      "Levocetirizine"],
+    
+    # Beta-lactam Antibiotics
+    "Penicillin": ["Amoxicillin", "Ampicillin", "Penicillin G", "Penicillin V", "Amoxicillin-clavulanate"],
+    "Cephalosporin": ["Ceftriaxone", "Cefazolin", "Cefuroxime", "Ceftazidime", "Cefepime", "Cephalexin"],
+    "Carbapenem": ["Imipenem", "Meropenem", "Ertapenem", "Doripenem"],
+    
+    # Aminoglycosides
+    "Aminoglycoside": ["Gentamicin", "Tobramycin", "Amikacin", "Streptomycin"],
+    
+    # Antivirals
+    "Antiviral": ["Acyclovir", "Valacyclovir", "Oseltamivir", "Ganciclovir", "Valganciclovir", 
+                  "Ribavirin", "Lamivudine", "Tenofovir"],
+    
+    # Immunosuppressants
+    "Immunosuppressant": ["Cyclosporine", "Tacrolimus", "Mycophenolate", "Azathioprine", "Sirolimus", 
+                          "Everolimus"],
+    
+    # Chemotherapy
+    "Chemotherapy": ["Methotrexate", "Cisplatin", "Carboplatin", "Cyclophosphamide", "Doxorubicin", 
+                     "5-Fluorouracil", "Paclitaxel", "Docetaxel"],
+    
+    # Potassium-sparing Diuretics
+    "Potassium-sparing Diuretic": ["Spironolactone", "Eplerenone", "Triamterene", "Amiloride"],
+    
+    # Loop Diuretics
+    "Loop Diuretic": ["Furosemide", "Bumetanide", "Torsemide", "Ethacrynic acid"],
+    
+    # Thiazide Diuretics
+    "Thiazide Diuretic": ["Hydrochlorothiazide", "Chlorthalidone", "Indapamide", "Metolazone"],
+    
+    # Antiemetics
+    "Antiemetic": ["Ondansetron", "Granisetron", "Metoclopramide", "Domperidone", "Prochlorperazine"],
+    
+    # Opioids
+    "Opioid": ["Morphine", "Codeine", "Tramadol", "Fentanyl", "Oxycodone", "Hydrocodone", "Methadone"],
+    
+    # MAOIs
+    "MAOI": ["Phenelzine", "Tranylcypromine", "Isocarboxazid", "Selegiline"],
+    
+    # TCAs (Tricyclic Antidepressants)
+    "TCA": ["Amitriptyline", "Nortriptyline", "Imipramine", "Desipramine", "Doxepin"],
+    
+    # Antacids
+    "Antacid": ["Calcium carbonate", "Magnesium hydroxide", "Aluminum hydroxide", "Sodium bicarbonate"],
+    
+    # Contrast Media
+    "Contrast Media": ["Iodinated contrast", "Gadolinium contrast", "Barium contrast"],
 }
 
 
-def _fuzzy_match(query: str, target: str, threshold: float = 0.8) -> float:
+def _fuzzy_match(query: str, target: str, threshold: float = 0.70) -> float:
     """
     Calculate fuzzy matching score between two strings
+    Enhanced with better matching algorithms including typo handling
     
     Args:
         query: Query string
         target: Target string
-        threshold: Minimum similarity threshold
+        threshold: Minimum similarity threshold (lowered to 0.70 for better matching)
     
     Returns:
         Similarity score (0.0 to 1.0)
@@ -382,16 +706,76 @@ def _fuzzy_match(query: str, target: str, threshold: float = 0.8) -> float:
     if query_lower == target_lower:
         return 1.0
     
-    # Starts with
-    if target_lower.startswith(query_lower) or query_lower.startswith(target_lower):
-        return 0.95
+    # Remove common suffixes/prefixes for better matching
+    common_suffixes = [' hcl', ' hydrochloride', ' sodium', ' tablet', ' injection', ' iv', ' oral', 
+                       ' mg', ' ml', ' solution', ' capsule', ' tablet', ' syrup', ' cream', ' gel']
+    common_prefixes = ['oral ', 'iv ', 'injection ', 'tablet ', 'capsule ']
     
-    # Contains
-    if query_lower in target_lower or target_lower in query_lower:
-        return 0.9
+    query_clean = query_lower
+    target_clean = target_lower
     
-    # Sequence matcher
-    similarity = SequenceMatcher(None, query_lower, target_lower).ratio()
+    for suffix in common_suffixes:
+        query_clean = query_clean.replace(suffix, '')
+        target_clean = target_clean.replace(suffix, '')
+    
+    for prefix in common_prefixes:
+        if query_clean.startswith(prefix):
+            query_clean = query_clean[len(prefix):].strip()
+        if target_clean.startswith(prefix):
+            target_clean = target_clean[len(prefix):].strip()
+    
+    # Check cleaned versions
+    if query_clean == target_clean:
+        return 0.98
+    
+    # Starts with (improved) - check both directions
+    if target_clean.startswith(query_clean) or query_clean.startswith(target_clean):
+        # Longer match gets higher score
+        min_len = min(len(query_clean), len(target_clean))
+        max_len = max(len(query_clean), len(target_clean))
+        if min_len >= 3:  # Only if meaningful length
+            return 0.90 + (min_len / max_len) * 0.05
+    
+    # Contains (improved) - check both directions
+    if query_clean in target_clean or target_clean in query_clean:
+        # Longer match gets higher score
+        min_len = min(len(query_clean), len(target_clean))
+        max_len = max(len(query_clean), len(target_clean))
+        if min_len >= 4:  # Only if meaningful length
+            return 0.85 + (min_len / max_len) * 0.05
+    
+    # Word-based matching (better for multi-word drug names)
+    query_words = set(query_clean.split())
+    target_words = set(target_clean.split())
+    if query_words and target_words:
+        word_overlap = len(query_words & target_words) / max(len(query_words), len(target_words))
+        if word_overlap > 0.5:
+            return 0.80 + (word_overlap * 0.15)
+        elif word_overlap > 0.3:  # Partial word match
+            return 0.70 + (word_overlap * 0.10)
+    
+    # Character-based similarity (for typos)
+    # Check if strings are similar length and have high character overlap
+    if abs(len(query_clean) - len(target_clean)) <= 2:  # Allow 1-2 char difference (typos)
+        char_overlap = len(set(query_clean) & set(target_clean))
+        char_total = len(set(query_clean) | set(target_clean))
+        if char_total > 0:
+            char_similarity = char_overlap / char_total
+            if char_similarity > 0.7:  # High character overlap suggests typo
+                # Use sequence matcher for final score
+                similarity = SequenceMatcher(None, query_clean, target_clean).ratio()
+                return max(similarity, char_similarity * 0.9)
+    
+    # Sequence matcher (improved with cleaned strings)
+    similarity = SequenceMatcher(None, query_clean, target_clean).ratio()
+    
+    # Also try original strings (in case cleaning removed important info)
+    similarity_orig = SequenceMatcher(None, query_lower, target_lower).ratio()
+    similarity = max(similarity, similarity_orig)
+    
+    # Boost score for short strings (more forgiving for short drug names)
+    if len(query_clean) <= 5 or len(target_clean) <= 5:
+        similarity = min(1.0, similarity * 1.1)
     
     return similarity if similarity >= threshold else 0.0
 
@@ -436,6 +820,7 @@ def _find_best_drug_match(drug_name: str, threshold: float = 0.75) -> Optional[s
 def get_drug_classes(drug_name: str) -> List[str]:
     """
     Get drug classes for a specific drug
+    Enhanced with better class detection for all drug classes
     
     Args:
         drug_name: Drug name
@@ -446,46 +831,102 @@ def get_drug_classes(drug_name: str) -> List[str]:
     classes = []
     drug_normalized = normalize_drug_name(drug_name)
     
-    # Check direct class mappings
+    # Check direct class mappings (case-insensitive)
     for class_name, drugs_in_class in DRUG_CLASS_MAPPINGS.items():
+        # Check exact match
         if drug_normalized in drugs_in_class:
             classes.append(class_name)
+        # Check case-insensitive match
+        elif drug_normalized.lower() in [d.lower() for d in drugs_in_class]:
+            classes.append(class_name)
     
-    # Check DRUG_GROUPS
+    # Check DRUG_GROUPS and map to classes
     if _DRUG_DB_LOADED and DRUG_GROUPS:
         for group_name, drugs_in_group in DRUG_GROUPS.items():
-            if drug_normalized in drugs_in_group:
-                # Map group names to class names if needed
+            if drug_normalized in drugs_in_group or drug_normalized.lower() in [d.lower() for d in drugs_in_group]:
+                # Map group names to class names
                 if group_name == "Cardiovascular":
-                    # Check if it's an ACE inhibitor, ARB, etc.
+                    # Check specific cardiovascular classes
                     if drug_normalized in DRUG_CLASS_MAPPINGS.get("ACE Inhibitor", []):
                         classes.append("ACE Inhibitor")
-                    elif drug_normalized in DRUG_CLASS_MAPPINGS.get("ARB", []):
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("ARB", []):
                         classes.append("ARB")
-                    elif drug_normalized in DRUG_CLASS_MAPPINGS.get("Beta-blocker", []):
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Beta-blocker", []):
                         classes.append("Beta-blocker")
-                    elif drug_normalized in DRUG_CLASS_MAPPINGS.get("CCB", []):
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("CCB", []):
                         classes.append("CCB")
-                    elif drug_normalized in DRUG_CLASS_MAPPINGS.get("Statins", []):
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Statins", []):
                         classes.append("Statins")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Anticoagulant", []):
+                        classes.append("Anticoagulant")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Antiplatelet", []):
+                        classes.append("Antiplatelet")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Digoxin", []):
+                        classes.append("Digoxin")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Loop Diuretic", []):
+                        classes.append("Loop Diuretic")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Thiazide Diuretic", []):
+                        classes.append("Thiazide Diuretic")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Potassium-sparing Diuretic", []):
+                        classes.append("Potassium-sparing Diuretic")
                 elif group_name == "Diabetes":
                     if drug_normalized in DRUG_CLASS_MAPPINGS.get("Sulfonylurea", []):
                         classes.append("Sulfonylurea")
-                    elif drug_normalized in DRUG_CLASS_MAPPINGS.get("SGLT2 Inhibitor", []):
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("SGLT2 Inhibitor", []):
                         classes.append("SGLT2 Inhibitor")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("DPP-4 Inhibitor", []):
+                        classes.append("DPP-4 Inhibitor")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("GLP-1 Agonist", []):
+                        classes.append("GLP-1 Agonist")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("TZD", []):
+                        classes.append("TZD")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Metformin", []):
+                        classes.append("Metformin")
                 elif group_name == "Gastrointestinal":
                     if drug_normalized in DRUG_CLASS_MAPPINGS.get("PPI", []):
                         classes.append("PPI")
-                    elif drug_normalized in DRUG_CLASS_MAPPINGS.get("H2 Blockers", []):
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("H2 Blockers", []):
                         classes.append("H2 Blockers")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Antacid", []):
+                        classes.append("Antacid")
                 elif group_name == "Analgesics":
                     if drug_normalized in DRUG_CLASS_MAPPINGS.get("NSAID", []):
                         classes.append("NSAID")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Opioid", []):
+                        classes.append("Opioid")
                 elif group_name == "Neurology/Psychiatry":
                     if drug_normalized in DRUG_CLASS_MAPPINGS.get("SSRI", []):
                         classes.append("SSRI")
-                    elif drug_normalized in DRUG_CLASS_MAPPINGS.get("SNRI", []):
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("SNRI", []):
                         classes.append("SNRI")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("TCA", []):
+                        classes.append("TCA")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("MAOI", []):
+                        classes.append("MAOI")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Anticonvulsant", []):
+                        classes.append("Anticonvulsant")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Antipsychotic", []):
+                        classes.append("Antipsychotic")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Benzodiazepine", []):
+                        classes.append("Benzodiazepine")
+                elif group_name == "Antibiotics" or group_name == "Anti-infectives":
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Penicillin", []):
+                        classes.append("Penicillin")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Cephalosporin", []):
+                        classes.append("Cephalosporin")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Macrolide", []):
+                        classes.append("Macrolide")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Quinolone", []):
+                        classes.append("Quinolone")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Tetracycline", []):
+                        classes.append("Tetracycline")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Aminoglycoside", []):
+                        classes.append("Aminoglycoside")
+                elif group_name == "Oncology":
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Chemotherapy", []):
+                        classes.append("Chemotherapy")
+                    if drug_normalized in DRUG_CLASS_MAPPINGS.get("Methotrexate", []):
+                        classes.append("Methotrexate")
     
     return list(set(classes))  # Remove duplicates
 
@@ -493,6 +934,7 @@ def get_drug_classes(drug_name: str) -> List[str]:
 def normalize_drug_name(drug_name: str, use_fuzzy: bool = True) -> str:
     """
     Normalize drug name to canonical form with fuzzy matching support
+    Enhanced with better Vietnamese name and brand name handling
     
     Args:
         drug_name: Drug name to normalize
@@ -507,34 +949,52 @@ def normalize_drug_name(drug_name: str, use_fuzzy: bool = True) -> str:
     drug_lower = drug_name.strip().lower()
     drug_original = drug_name.strip()
     
-    # 1. Check exact match in DRUG_INTERACTIONS keys
+    # 1. Check exact match in DRUG_INTERACTIONS keys (case-insensitive)
     for (d1, d2) in DRUG_INTERACTIONS.keys():
-        if drug_original == d1 or drug_original == d2:
-            return drug_original
+        if drug_original.lower() == d1.lower() or drug_original.lower() == d2.lower():
+            return d1 if drug_original.lower() == d1.lower() else d2
     
-    # 2. Check aliases
+    # 2. Check aliases (case-insensitive, partial match)
     for canonical, aliases in DRUG_ALIASES.items():
+        # Exact match in aliases
         if drug_lower in [a.lower() for a in aliases]:
             return canonical
+        # Partial match (contains)
+        for alias in aliases:
+            if drug_lower in alias.lower() or alias.lower() in drug_lower:
+                if len(alias) >= 4:  # Only if meaningful length
+                    return canonical
     
-    # 3. If exact match with canonical name
-    if drug_original in DRUG_ALIASES:
-        return drug_original
+    # 3. If exact match with canonical name (case-insensitive)
+    for canonical in DRUG_ALIASES.keys():
+        if drug_lower == canonical.lower():
+            return canonical
     
-    # 4. Check in drug database (exact match)
+    # 4. Check in drug database (exact match, case-insensitive)
     if _DRUG_DB_LOADED and DRUG_DATABASE:
+        # Exact match
         if drug_original in DRUG_DATABASE:
             return drug_original
         
-        # Check Vietnamese names
+        # Case-insensitive match
+        for db_drug_name in DRUG_DATABASE.keys():
+            if db_drug_name.lower() == drug_lower:
+                return db_drug_name
+        
+        # Check Vietnamese names (exact and partial)
         for db_drug_name, drug_data in DRUG_DATABASE.items():
             if 'vietnamese_name' in drug_data:
-                if drug_data['vietnamese_name'].lower() == drug_lower:
+                vn_name = drug_data['vietnamese_name']
+                if vn_name.lower() == drug_lower:
                     return db_drug_name
+                # Partial match for Vietnamese names
+                if drug_lower in vn_name.lower() or vn_name.lower() in drug_lower:
+                    if len(vn_name) >= 3:  # Only if meaningful length
+                        return db_drug_name
     
-    # 5. Fuzzy matching (if enabled)
+    # 5. Fuzzy matching (if enabled) - improved threshold
     if use_fuzzy and _DRUG_DB_LOADED:
-        fuzzy_match = _find_best_drug_match(drug_original, threshold=0.75)
+        fuzzy_match = _find_best_drug_match(drug_original, threshold=0.70)  # Lowered threshold for better matching
         if fuzzy_match:
             return fuzzy_match
     

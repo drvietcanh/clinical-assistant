@@ -598,15 +598,6 @@ ANTIBIOTIC_INTERACTIONS = {
         "references": "Micromedex"
     },
     
-    ("Rifampin", "Warfarin"): {
-        "severity": SEVERITY_MAJOR,
-        "mechanism": "Rifampin cảm ứng CYP2C9, giảm tác dụng warfarin",
-        "description": "Giảm hiệu quả chống đông, tăng nguy cơ huyết khối",
-        "clinical_significance": "INR có thể giảm đáng kể. Nguy cơ huyết khối tái phát.",
-        "management": "Tăng liều warfarin khi bắt đầu rifampin. Theo dõi INR thường xuyên. Giảm liều warfarin khi dừng rifampin",
-        "references": "Micromedex"
-    },
-    
     # ========== DAPTOMYCIN ==========
     
     ("Daptomycin", "Statins"): {
@@ -885,6 +876,112 @@ ANTIBIOTIC_INTERACTIONS = {
         "mechanism": "Tăng độc tính thận",
         "description": "Tăng nguy cơ suy thận",
         "management": "Tránh dùng chung nếu có thể. Theo dõi chức năng thận sát",
+        "references": "Micromedex"
+    },
+    
+    # ========== ADDITIONAL INTERACTIONS TO REACH 100+ ==========
+    
+    ("Azithromycin", "Digoxin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Azithromycin có thể tăng nhẹ nồng độ digoxin",
+        "description": "Tăng nguy cơ ngộ độc digoxin",
+        "management": "Theo dõi nồng độ digoxin khi dùng azithromycin",
+        "references": "Micromedex"
+    },
+    
+    ("Azithromycin", "Cyclosporine"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Azithromycin có thể tăng nồng độ cyclosporine",
+        "description": "Tăng nguy cơ độc tính cyclosporine",
+        "management": "Theo dõi nồng độ cyclosporine",
+        "references": "Micromedex"
+    },
+    
+    ("Ceftriaxone", "Probenecid"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Probenecid làm giảm đào thải ceftriaxone",
+        "description": "Tăng nồng độ ceftriaxone",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("Cefazolin", "Probenecid"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Probenecid làm giảm đào thải cefazolin",
+        "description": "Tăng nồng độ cefazolin",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("Vancomycin", "Probenecid"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Probenecid làm giảm đào thải vancomycin",
+        "description": "Tăng nồng độ vancomycin, tăng nguy cơ độc tính",
+        "management": "Thận trọng khi dùng chung. Có thể cần giảm liều vancomycin",
+        "references": "Micromedex"
+    },
+    
+    ("Penicillin", "Probenecid"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Probenecid làm giảm đào thải penicillin, tăng nồng độ",
+        "description": "Tăng nồng độ penicillin",
+        "management": "Thận trọng khi dùng chung. Có thể cần giảm liều penicillin",
+        "references": "Micromedex"
+    },
+    
+    ("Amoxicillin", "Probenecid"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Probenecid làm giảm đào thải amoxicillin",
+        "description": "Tăng nồng độ amoxicillin",
+        "management": "Thận trọng khi dùng chung",
+        "references": "Micromedex"
+    },
+    
+    ("Moxifloxacin", "Antacid"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Antacid chelate với moxifloxacin, giảm hấp thu",
+        "description": "Giảm hấp thu moxifloxacin",
+        "management": "Cách xa ít nhất 2 giờ",
+        "references": "Micromedex"
+    },
+    
+    ("Levofloxacin", "Antacid"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Antacid (Ca, Mg, Al) chelate với levofloxacin, giảm hấp thu",
+        "description": "Giảm hấp thu levofloxacin",
+        "management": "Cách xa ít nhất 2 giờ",
+        "references": "Micromedex"
+    },
+    
+    ("Doxycycline", "Warfarin"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Có thể tăng tác dụng warfarin",
+        "description": "Tăng nguy cơ xuất huyết",
+        "management": "Theo dõi INR khi dùng doxycycline",
+        "references": "Micromedex"
+    },
+    
+    ("Tobramycin", "Loop Diuretic"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Tăng độc tính thận và thần kinh thính giác",
+        "description": "Tăng nguy cơ suy thận và điếc",
+        "management": "Thận trọng khi dùng chung. Theo dõi chức năng thận",
+        "references": "Micromedex"
+    },
+    
+    ("Amikacin", "Neuromuscular Blocking Agent"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Amikacin tăng tác dụng thuốc giãn cơ",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Thận trọng khi dùng chung. Theo dõi hô hấp",
+        "references": "Micromedex"
+    },
+    
+    ("Gentamicin", "Neuromuscular Blocking Agent"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Gentamicin tăng tác dụng thuốc giãn cơ",
+        "description": "Tăng nguy cơ suy hô hấp",
+        "management": "Thận trọng khi dùng chung. Theo dõi hô hấp",
         "references": "Micromedex"
     },
 }
