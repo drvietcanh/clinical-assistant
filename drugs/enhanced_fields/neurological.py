@@ -1165,6 +1165,198 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 5: BENZODIAZEPINES, ANTIPARKINSONIAN, CEREBRAL CIRCULATION ========================
+        "Diazepam": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"respiratory": "High (respiratory depression, especially with opioids or alcohol - Black Box Warning)", "neurologic": "Moderate (dependence, abuse, withdrawal, cognitive impairment, falls in elderly)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Anxiety/seizure/spasticity response",
+                    "Respiratory function (respiratory depression risk, especially with opioids/alcohol) - CRITICAL (Black Box Warning)",
+                    "Signs of abuse, dependence, and withdrawal - CRITICAL",
+                    "Falls (especially in elderly) - CRITICAL",
+                    "Cognitive function (cognitive impairment, confusion, especially in elderly)",
+                    "Drug interactions (opioids, alcohol - Black Box Warning, CYP3A4 inhibitors/inducers) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Diazepam", "Valium", "Lorazepam", "Clonazepam"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "AAN Status Epilepticus Treatment Guidelines",
+                "FDA Black Box Warning - Respiratory Depression (especially with opioids)",
+                "FDA Black Box Warning - Abuse, Dependence, and Withdrawal",
+                "FDA Drug Label - Diazepam"
+            ]
+        },
+
+        "Lorazepam": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"respiratory": "High (respiratory depression, especially with opioids or alcohol - Black Box Warning)", "neurologic": "Moderate (dependence, abuse, withdrawal, cognitive impairment, falls in elderly)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Anxiety/seizure response",
+                    "Respiratory function (respiratory depression risk, especially with opioids/alcohol) - CRITICAL (Black Box Warning)",
+                    "Signs of abuse, dependence, and withdrawal - CRITICAL",
+                    "Falls (especially in elderly) - CRITICAL",
+                    "Cognitive function (cognitive impairment, confusion, especially in elderly)",
+                    "Drug interactions (opioids, alcohol - Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Lorazepam", "Ativan", "Diazepam", "Clonazepam"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "AAN Status Epilepticus Treatment Guidelines",
+                "FDA Black Box Warning - Respiratory Depression (especially with opioids)",
+                "FDA Black Box Warning - Abuse, Dependence, and Withdrawal",
+                "FDA Drug Label - Lorazepam"
+            ]
+        },
+
+        "Nimodipine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "High (hypotension - common and can be severe, especially with IV route - CONTRAINDICATED)", "neurologic": "Low (headache, dizziness)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure - CRITICAL (hypotension is common and can be severe)",
+                    "Signs of cerebral vasospasm (headache, altered mental status, focal neurological deficits)",
+                    "Drug interactions (CYP3A4 inhibitors/inducers, other antihypertensives) - CRITICAL",
+                    "IV route is CONTRAINDICATED (severe hypotension risk) - only PO/NG"
+                ],
+                "look_alike_sound_alike": ["Nimodipine", "Nifedipine", "Amlodipine"]
+            },
+            "guideline_tags": [
+                "AHA/ASA Guidelines for Aneurysmal Subarachnoid Hemorrhage",
+                "ESO Guidelines on Subarachnoid Hemorrhage",
+                "FDA Drug Label - Nimodipine (IV route contraindication warning)"
+            ]
+        },
+
+        "Deutetrabenazine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neuropsychiatric": "High (depression, suicidal ideation - Black Box Warning)", "cardiovascular": "High (QT prolongation - Black Box Warning)", "neurologic": "Moderate (somnolence, parkinsonism)"},
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Huntington's chorea/tardive dyskinesia response",
+                    "Depression and suicidal ideation - CRITICAL (Black Box Warning)",
+                    "ECG (QT interval) - CRITICAL (Black Box Warning, especially with QT-prolonging drugs)",
+                    "Parkinsonism symptoms",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, QT-prolonging drugs - AVOID, CYP2D6 inhibitors) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Deutetrabenazine", "Austedo", "Tetrabenazine"]
+            },
+            "guideline_tags": [
+                "AAN Huntington's Disease Treatment Guidelines",
+                "AAN Tardive Dyskinesia Treatment Guidelines",
+                "FDA Black Box Warning - Depression and Suicidal Ideation",
+                "FDA Black Box Warning - QT Prolongation",
+                "FDA Drug Label - Deutetrabenazine"
+            ]
+        },
+
+        "Tetrabenazine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neuropsychiatric": "High (depression, suicidal ideation - Black Box Warning)", "cardiovascular": "High (QT prolongation - Black Box Warning)", "neurologic": "Moderate (somnolence, parkinsonism)"},
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Huntington's chorea/tardive dyskinesia response",
+                    "Depression and suicidal ideation - CRITICAL (Black Box Warning)",
+                    "ECG (QT interval) - CRITICAL (Black Box Warning, especially with QT-prolonging drugs)",
+                    "Parkinsonism symptoms",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, QT-prolonging drugs - AVOID, CYP2D6 inhibitors) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Tetrabenazine", "Xenazine", "Deutetrabenazine"]
+            },
+            "guideline_tags": [
+                "AAN Huntington's Disease Treatment Guidelines",
+                "AAN Tardive Dyskinesia Treatment Guidelines",
+                "FDA Black Box Warning - Depression and Suicidal Ideation",
+                "FDA Black Box Warning - QT Prolongation",
+                "FDA Drug Label - Tetrabenazine"
+            ]
+        },
+
+        "Pimavanserin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "High (QT prolongation - Black Box Warning)", "neuropsychiatric": "Moderate (hallucinations, confusion)"},
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Parkinson's disease psychosis response",
+                    "ECG (QT interval) - CRITICAL (Black Box Warning, especially with QT-prolonging drugs)",
+                    "Neuropsychiatric symptoms (hallucinations, confusion)",
+                    "Drug interactions (QT-prolonging drugs - AVOID, CYP3A4 inhibitors/inducers) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Pimavanserin", "Nuplazid"]
+            },
+            "guideline_tags": [
+                "AAN Parkinson's Disease Treatment Guidelines",
+                "MDS Evidence-Based Medicine Review - Parkinson's Disease Psychosis",
+                "FDA Black Box Warning - QT Prolongation",
+                "FDA Drug Label - Pimavanserin"
+            ]
+        },
+
+        "Safinamide": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "Moderate (hypertension, orthostatic hypotension)", "neuropsychiatric": "Moderate (hallucinations, impulse control disorders)", "hepatic": "Low (elevated liver enzymes - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Parkinson's disease symptoms (motor fluctuations, dyskinesias)",
+                    "Blood pressure (hypertension, orthostatic hypotension)",
+                    "Neuropsychiatric symptoms (hallucinations, impulse control disorders)",
+                    "Hepatic function (ALT, AST) - rare hepatotoxicity",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, tyramine-rich foods - dietary restrictions)"
+                ],
+                "look_alike_sound_alike": ["Safinamide", "Xadago"]
+            },
+            "guideline_tags": [
+                "MDS Evidence-Based Medicine Review - Parkinson's Disease",
+                "AAN Parkinson's Disease Treatment Guidelines",
+                "FDA Drug Label - Safinamide (MAO inhibitor contraindication and tyramine dietary restrictions)"
+            ]
+        },
+
 }
 
 __all__ = ["NEUROLOGICAL_ENHANCED_FIELDS"]
