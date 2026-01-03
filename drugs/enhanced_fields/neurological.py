@@ -976,6 +976,195 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 4: ADDITIONAL ANTICONVULSANTS & MUSCLE RELAXANTS ========================
+        "Perampanel": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neuropsychiatric": "High (agitation, aggression, hostility, suicidal behavior and ideation - Black Box Warning)", "neurologic": "Moderate (dizziness, somnolence, fatigue, falls)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Seizure frequency and severity",
+                    "Neuropsychiatric symptoms (agitation, aggression, hostility, suicidal behavior and ideation) - CRITICAL (Black Box Warning)",
+                    "Falls (due to dizziness, somnolence)",
+                    "Neurologic symptoms (dizziness, somnolence, fatigue)",
+                    "Renal function (CrCl) - adjust dose if CrCl <30",
+                    "Drug interactions (CYP3A4 inducers/inhibitors, ethanol)"
+                ],
+                "look_alike_sound_alike": ["Perampanel", "Fycompa"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "ILAE Treatment Guidelines - Focal and Generalized Seizures",
+                "FDA Black Box Warning - Suicidal Behavior and Ideation",
+                "FDA Drug Label - Perampanel (suicidal behavior and ideation warning)"
+            ]
+        },
+
+        "Primidone": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"respiratory": "High (respiratory depression, especially with opioids or alcohol)", "neurologic": "Moderate (dependence, withdrawal, cognitive impairment)", "hematologic": "Low (megaloblastic anemia due to folate deficiency, leukopenia - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Primidone/phenobarbital blood level - CRITICAL (therapeutic range for phenobarbital: 15-40 mcg/ml)",
+                    "Seizure frequency and severity",
+                    "Respiratory function (respiratory depression risk, especially with opioids/alcohol) - CRITICAL",
+                    "Signs of dependence and withdrawal",
+                    "Cognitive function (cognitive impairment)",
+                    "Complete blood count (megaloblastic anemia, leukopenia risk - rare)",
+                    "Folate levels (megaloblastic anemia risk)",
+                    "Drug interactions (strong CYP450 inducer, valproate increases phenobarbital levels) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Primidone", "Mysoline", "Phenobarbital"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "ILAE Treatment Guidelines - Generalized Seizures",
+                "FDA Black Box Warning - Abuse, Dependence, and Withdrawal",
+                "FDA Black Box Warning - Respiratory Depression (especially with opioids)",
+                "FDA Drug Label - Primidone"
+            ]
+        },
+
+        "Tizanidine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "High (hypotension, bradycardia - common)", "hepatic": "Low (elevated ALT/AST - rare)", "neurologic": "Moderate (somnolence, dizziness, confusion, especially in elderly)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Spasticity response",
+                    "Blood pressure - CRITICAL (hypotension is common)",
+                    "Heart rate - CRITICAL (bradycardia risk)",
+                    "Neurologic symptoms (somnolence, dizziness, confusion)",
+                    "Hepatic function (ALT, AST) - rare but monitor",
+                    "Drug interactions (CIPROFLOXACIN and FLUVOXAMINE are CONTRAINDICATED - Black Box Warning) - CRITICAL",
+                    "CYP1A2 inhibitors/inducers, oral contraceptives"
+                ],
+                "look_alike_sound_alike": ["Tizanidine", "Zanaflex"]
+            },
+            "guideline_tags": [
+                "AAN Spasticity Treatment Guidelines",
+                "AAN Multiple Sclerosis Treatment Guidelines",
+                "FDA Black Box Warning - Ciprofloxacin and Fluvoxamine Contraindication",
+                "FDA Drug Label - Tizanidine (ciprofloxacin and fluvoxamine contraindication warning)"
+            ]
+        },
+
+        "Carisoprodol": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"respiratory": "High (respiratory depression, especially with alcohol or CNS depressants)", "neurologic": "Moderate (dependence, abuse, withdrawal - metabolized to meprobamate, controlled substance)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Muscle spasm response",
+                    "Signs of abuse, dependence, and withdrawal - CRITICAL (metabolized to meprobamate, controlled substance)",
+                    "Respiratory function (respiratory depression risk, especially with alcohol/CNS depressants) - CRITICAL",
+                    "Drug interactions (CYP2C19 inhibitors, alcohol, CNS depressants)"
+                ],
+                "look_alike_sound_alike": ["Carisoprodol", "Soma", "Meprobamate"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Abuse, Dependence, and Withdrawal",
+                "FDA Drug Label - Carisoprodol (abuse, dependence, and withdrawal warning)",
+                "ISMP High Alert Medications - Controlled Substances"
+            ]
+        },
+
+        "Cyclobenzaprine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "Moderate (hypotension, arrhythmias - contraindicated with MAO inhibitors, acute MI, heart failure, AV block)", "neuropsychiatric": "Moderate (serotonin syndrome risk with SSRI/SNRI)", "neurologic": "Moderate (somnolence, dizziness - very common)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Muscle spasm response",
+                    "Blood pressure (hypotension risk)",
+                    "ECG (arrhythmias risk, especially with cardiac disease)",
+                    "Signs of serotonin syndrome (if used with SSRI/SNRI) - CRITICAL",
+                    "Neurologic symptoms (somnolence, dizziness - very common)",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, SSRI/SNRI - serotonin syndrome risk) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Cyclobenzaprine", "Flexeril", "Amitriptyline"]
+            },
+            "guideline_tags": [
+                "FDA Drug Label - Cyclobenzaprine (MAO inhibitor contraindication and serotonin syndrome warnings)",
+                "AAN Muscle Spasm Treatment Guidelines"
+            ]
+        },
+
+        "Metaxalone": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hematologic": "Low (hemolytic anemia - rare, especially in G6PD deficiency)", "neurologic": "Moderate (somnolence, dizziness)", "hepatic": "Low (hepatotoxicity - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Muscle spasm response",
+                    "Complete blood count (hemolytic anemia risk, especially in G6PD deficiency) - rare",
+                    "Hepatic function (ALT, AST) - rare hepatotoxicity",
+                    "Neurologic symptoms (somnolence, dizziness)",
+                    "G6PD deficiency screening (if high risk)"
+                ],
+                "look_alike_sound_alike": ["Metaxalone", "Skelaxin"]
+            },
+            "guideline_tags": [
+                "FDA Drug Label - Metaxalone (hemolytic anemia warning in G6PD deficiency)",
+                "AAN Muscle Spasm Treatment Guidelines"
+            ]
+        },
+
+        "Methocarbamol": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "Moderate (somnolence, dizziness - common)", "respiratory": "Low (respiratory depression - rare, especially with alcohol/CNS depressants)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Muscle spasm response",
+                    "Neurologic symptoms (somnolence, dizziness - common)",
+                    "Respiratory function (respiratory depression risk, especially with alcohol/CNS depressants) - rare",
+                    "Renal function (CrCl) - adjust dose if CrCl <60"
+                ],
+                "look_alike_sound_alike": ["Methocarbamol", "Robaxin"]
+            },
+            "guideline_tags": [
+                "FDA Drug Label - Methocarbamol",
+                "AAN Muscle Spasm Treatment Guidelines"
+            ]
+        },
+
 }
 
 __all__ = ["NEUROLOGICAL_ENHANCED_FIELDS"]
