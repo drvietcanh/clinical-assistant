@@ -1277,6 +1277,501 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low (with high doses or prolonged use)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Renal function (CrCl) - adjust dose if CrCl <30",
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Complete blood count (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Cefazolin", "Cefuroxime", "Ceftriaxone"]
+            },
+            "guideline_tags": [
+                "IDSA Surgical Site Infection Prevention Guidelines",
+                "ASHP Guidelines - Surgical Prophylaxis",
+                "AHA/ACC Infective Endocarditis Prophylaxis Guidelines",
+                "FDA Drug Label - Cefazolin"
+            ]
+        },
+
+        # ======================== PRIORITY ANTIBIOTICS - RISK FLAGS & GUIDELINE TAGS ========================
+        "Amoxicillin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low (rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis) - CRITICAL",
+                    "Diarrhea (C. difficile risk)",
+                    "Renal function (if high doses or prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Amoxicillin", "Ampicillin", "Amoxicillin-clavulanate"]
+            },
+            "guideline_tags": [
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "IDSA Acute Otitis Media Guidelines",
+                "IDSA Sinusitis Guidelines",
+                "WHO Guidelines - Common Infections",
+                "FDA Drug Label - Amoxicillin"
+            ]
+        },
+
+        "Ceftriaxone": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": "Moderate (can cause hypoprothrombinemia, especially with vitamin K deficiency)",
+                "organ_toxicity": {"hepatic": "Low", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "PT/INR (bleeding risk, especially in malnourished patients)",
+                    "Complete blood count",
+                    "Renal function (CrCl) - adjust dose if CrCl <10",
+                    "Biliary sludge/pseudolithiasis (especially in children)"
+                ],
+                "look_alike_sound_alike": ["Ceftriaxone", "Ceftazidime", "Cefotaxime"]
+            },
+            "guideline_tags": [
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "IDSA Meningitis Guidelines",
+                "IDSA Gonorrhea Treatment Guidelines",
+                "WHO Guidelines - Sexually Transmitted Infections",
+                "FDA Drug Label - Ceftriaxone"
+            ]
+        },
+
+        "Azithromycin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low", "cardiac": "Moderate (QT prolongation)"},
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG (QT prolongation risk, especially with other QT-prolonging drugs)",
+                    "Signs of allergic reaction",
+                    "Hepatic function (if prolonged use)",
+                    "Hearing loss (rare, with high doses or prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Azithromycin", "Clarithromycin", "Erythromycin"]
+            },
+            "guideline_tags": [
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "IDSA Acute Otitis Media Guidelines",
+                "IDSA Sexually Transmitted Infections Guidelines",
+                "AHA/ACC Infective Endocarditis Prophylaxis Guidelines",
+                "FDA Drug Label - Azithromycin (QT prolongation warning)"
+            ]
+        },
+
+        "Ciprofloxacin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"tendon": "Moderate (tendonitis, tendon rupture)", "cardiac": "Moderate (QT prolongation)", "hepatic": "Low"},
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG (QT prolongation risk)",
+                    "Signs of tendonitis/tendon rupture (especially Achilles tendon)",
+                    "Signs of peripheral neuropathy",
+                    "Signs of CNS effects (seizures, confusion)",
+                    "Hepatic function (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Ciprofloxacin", "Levofloxacin", "Moxifloxacin"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Tendonitis and Tendon Rupture",
+                "FDA Black Box Warning - Peripheral Neuropathy",
+                "IDSA Urinary Tract Infection Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "WHO Guidelines - Antimicrobial Resistance"
+            ]
+        },
+
+        "Metronidazole": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "Moderate (peripheral neuropathy, encephalopathy)", "hepatic": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of peripheral neuropathy (numbness, tingling)",
+                    "Signs of CNS effects (seizures, encephalopathy)",
+                    "Complete blood count (leukopenia, thrombocytopenia)",
+                    "Hepatic function (if prolonged use)",
+                    "Disulfiram-like reaction (if alcohol consumed)"
+                ],
+                "look_alike_sound_alike": ["Metronidazole", "Mebendazole"]
+            },
+            "guideline_tags": [
+                "IDSA Clostridium difficile Infection Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "IDSA Bacterial Vaginosis Guidelines",
+                "WHO Guidelines - Anaerobic Infections",
+                "FDA Drug Label - Metronidazole (alcohol interaction warning)"
+            ]
+        },
+
+        "Doxycycline": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low", "esophageal": "Moderate (esophagitis, ulceration)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of photosensitivity (sunburn, rash)",
+                    "Signs of esophageal irritation (take with plenty of water, avoid lying down)",
+                    "Hepatic function (if prolonged use)",
+                    "Intracranial hypertension (headache, vision changes) - rare"
+                ],
+                "look_alike_sound_alike": ["Doxycycline", "Tetracycline", "Minocycline"]
+            },
+            "guideline_tags": [
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "IDSA Tick-borne Disease Guidelines (Lyme, Rickettsia)",
+                "IDSA Sexually Transmitted Infections Guidelines",
+                "WHO Guidelines - Malaria Prophylaxis",
+                "FDA Drug Label - Doxycycline (photosensitivity warning)"
+            ]
+        },
+
+        "Ampicillin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis) - CRITICAL",
+                    "Diarrhea (C. difficile risk)",
+                    "Complete blood count (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Ampicillin", "Amoxicillin", "Ampicillin-sulbactam"]
+            },
+            "guideline_tags": [
+                "IDSA Meningitis Guidelines",
+                "IDSA Endocarditis Guidelines",
+                "WHO Guidelines - Common Infections",
+                "FDA Drug Label - Ampicillin"
+            ]
+        },
+
+        "Cefepime": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low", "neurologic": "Moderate (neurotoxicity, especially in renal impairment)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction",
+                    "Neurologic symptoms (seizures, confusion, myoclonus) - especially if CrCl <60",
+                    "Renal function (CrCl) - adjust dose if CrCl <60",
+                    "Complete blood count"
+                ],
+                "look_alike_sound_alike": ["Cefepime", "Ceftazidime", "Cefpirome"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Febrile Neutropenia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "FDA Drug Label - Cefepime (neurotoxicity warning)"
+            ]
+        },
+
+        "Ceftazidime": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction",
+                    "Renal function (CrCl) - adjust dose if CrCl <50",
+                    "Complete blood count"
+                ],
+                "look_alike_sound_alike": ["Ceftazidime", "Ceftriaxone", "Cefepime"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "IDSA Pseudomonas aeruginosa Infection Guidelines",
+                "FDA Drug Label - Ceftazidime"
+            ]
+        },
+
+        "Clarithromycin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low", "cardiac": "Moderate (QT prolongation)"},
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG (QT prolongation risk, especially with other QT-prolonging drugs)",
+                    "Signs of allergic reaction",
+                    "Hepatic function (if prolonged use)",
+                    "Hearing loss (rare, with high doses)"
+                ],
+                "look_alike_sound_alike": ["Clarithromycin", "Azithromycin", "Erythromycin"]
+            },
+            "guideline_tags": [
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "IDSA Helicobacter pylori Treatment Guidelines",
+                "AHA/ACC Infective Endocarditis Prophylaxis Guidelines",
+                "FDA Drug Label - Clarithromycin (QT prolongation warning)"
+            ]
+        },
+
+        "Erythromycin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Moderate (cholestatic hepatitis)", "cardiac": "Moderate (QT prolongation)"},
+                "qt_prolongation": True,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG (QT prolongation risk)",
+                    "Hepatic function (cholestatic hepatitis risk)",
+                    "Signs of allergic reaction",
+                    "Hearing loss (rare, with high doses)"
+                ],
+                "look_alike_sound_alike": ["Erythromycin", "Azithromycin", "Clarithromycin"]
+            },
+            "guideline_tags": [
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "AHA/ACC Infective Endocarditis Prophylaxis Guidelines",
+                "FDA Drug Label - Erythromycin (QT prolongation and hepatotoxicity warnings)"
+            ]
+        },
+
+        "Tetracycline": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low", "renal": "Moderate (worsens renal function)", "esophageal": "Moderate"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Renal function (contraindicated in renal impairment)",
+                    "Signs of photosensitivity",
+                    "Signs of esophageal irritation",
+                    "Hepatic function (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Tetracycline", "Doxycycline", "Minocycline"]
+            },
+            "guideline_tags": [
+                "IDSA Acne Treatment Guidelines",
+                "IDSA Sexually Transmitted Infections Guidelines",
+                "FDA Drug Label - Tetracycline (renal impairment and photosensitivity warnings)"
+            ]
+        },
+
+        "Minocycline": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low", "autoimmune": "Moderate (drug-induced lupus, autoimmune hepatitis)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of photosensitivity",
+                    "Signs of autoimmune reactions (lupus-like syndrome, hepatitis)",
+                    "Hepatic function (autoimmune hepatitis risk)",
+                    "Complete blood count (autoimmune cytopenias)"
+                ],
+                "look_alike_sound_alike": ["Minocycline", "Doxycycline", "Tetracycline"]
+            },
+            "guideline_tags": [
+                "IDSA Acne Treatment Guidelines",
+                "IDSA Sexually Transmitted Infections Guidelines",
+                "FDA Drug Label - Minocycline (autoimmune reactions warning)"
+            ]
+        },
+
+        "Amoxicillin-clavulanate": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Moderate (hepatitis, especially with prolonged use)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis) - CRITICAL",
+                    "Hepatic function (hepatitis risk, especially with prolonged use)",
+                    "Diarrhea (C. difficile risk)",
+                    "Complete blood count (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Amoxicillin-clavulanate", "Amoxicillin", "Ampicillin-sulbactam"]
+            },
+            "guideline_tags": [
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "IDSA Complicated Skin and Soft Tissue Infection Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "FDA Drug Label - Amoxicillin-clavulanate (hepatitis warning)"
+            ]
+        },
+
+        "Cephalexin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Diarrhea (C. difficile risk)",
+                    "Renal function (if high doses or prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Cephalexin", "Cefadroxil", "Cefaclor"]
+            },
+            "guideline_tags": [
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "IDSA Urinary Tract Infection Guidelines",
+                "FDA Drug Label - Cephalexin"
+            ]
+        },
+
+        "Clindamycin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"gastrointestinal": "High (C. difficile colitis)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Diarrhea (C. difficile colitis risk) - CRITICAL",
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Complete blood count (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Clindamycin", "Clarithromycin", "Lincomycin"]
+            },
+            "guideline_tags": [
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "IDSA Clostridium difficile Infection Guidelines (risk factor)",
+                "IDSA Odontogenic Infection Guidelines",
+                "FDA Drug Label - Clindamycin (C. difficile warning)"
+            ]
+        },
+
+        "Levofloxacin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"tendon": "Moderate (tendonitis, tendon rupture)", "cardiac": "Moderate (QT prolongation)", "hepatic": "Low"},
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG (QT prolongation risk)",
+                    "Signs of tendonitis/tendon rupture (especially Achilles tendon)",
+                    "Signs of peripheral neuropathy",
+                    "Signs of CNS effects (seizures, confusion)",
+                    "Hepatic function (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Levofloxacin", "Ciprofloxacin", "Moxifloxacin"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Tendonitis and Tendon Rupture",
+                "FDA Black Box Warning - Peripheral Neuropathy",
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "WHO Guidelines - Antimicrobial Resistance"
+            ]
+        },
+
+        "Moxifloxacin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"tendon": "Moderate (tendonitis, tendon rupture)", "cardiac": "High (QT prolongation)", "hepatic": "Moderate (hepatitis)"},
+                "qt_prolongation": True,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG (QT prolongation risk) - CRITICAL",
+                    "Signs of tendonitis/tendon rupture",
+                    "Hepatic function (hepatitis risk)",
+                    "Signs of peripheral neuropathy",
+                    "Signs of CNS effects"
+                ],
+                "look_alike_sound_alike": ["Moxifloxacin", "Levofloxacin", "Ciprofloxacin"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Tendonitis and Tendon Rupture",
+                "FDA Black Box Warning - QT Prolongation",
+                "FDA Black Box Warning - Hepatotoxicity",
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "IDSA Complicated Skin and Soft Tissue Infection Guidelines"
+            ]
         },
 
 }
