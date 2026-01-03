@@ -365,13 +365,39 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
 
         "Digoxin": {
             "risk_flags": {
-                "high_alert": False,
+                "high_alert": True,
                 "narrow_therapeutic_index": True,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": False,
                 "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (arrhythmias - can be fatal, AV block, Black Box Warning)",
+                    "gastrointestinal": "Moderate (nausea, vomiting - common in toxicity)",
+                    "neurologic": "Moderate (visual disturbances - yellow-green vision, confusion - common in toxicity)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Digoxin levels - CRITICAL (target 0.8-2.0 ng/mL, narrow therapeutic index, Black Box Warning)",
+                    "ECG (arrhythmias, AV block) - CRITICAL (can be fatal, Black Box Warning)",
+                    "Electrolytes (K+, Mg2+) - CRITICAL (hypokalemia/hypomagnesemia increase toxicity risk, Black Box Warning)",
+                    "Renal function (CrCl, eGFR) - CRITICAL (digoxin eliminated renally, half-life increases from 36h to 4-6 days in renal failure)",
+                    "Signs of toxicity (nausea, vomiting, visual disturbances - yellow-green vision, confusion, arrhythmias) - CRITICAL (can be fatal)",
+                    "Drug interactions (amiodarone - reduce digoxin dose 50%, verapamil/diltiazem - reduce dose 25-50%, quinidine - reduce dose 50%, diuretics - maintain K+ >4.0 mEq/L) - CRITICAL",
+                    "Digibind/digoxin immune fab availability - CRITICAL (antidote for severe toxicity)"
+                ],
+                "look_alike_sound_alike": ["Digoxin", "Lanoxin", "Digitoxin"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Arrhythmias (Can Be Fatal)",
+                "FDA Black Box Warning - Narrow Therapeutic Index (TDM Required)",
+                "FDA Black Box Warning - WPW with AF (Contraindicated)",
+                "FDA Drug Label - Digoxin (Lanoxin)",
+                "AHA/ACC/HFSA Guidelines - Heart Failure",
+                "AHA/ACC Guidelines - Atrial Fibrillation",
+                "ESC Guidelines - Heart Failure",
+                "Digibind (Digoxin Immune Fab) - Antidote for Severe Toxicity"
+            ]
         },
 
         "Dipyridamole": {
@@ -1015,12 +1041,38 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
         "Warfarin": {
             "risk_flags": {
                 "high_alert": True,
-                "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
+                "narrow_therapeutic_index": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "High (bleeding - very common, can be severe and life-threatening, Black Box Warning)",
+                    "dermatologic": "Moderate (skin necrosis - rare but serious, warfarin-induced skin necrosis)",
+                    "fetal": "High (teratogenicity - Black Box Warning, contraindicated in pregnancy)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "INR - CRITICAL (target 2.0-3.0 for most indications, 2.5-3.5 for mechanical heart valves, Black Box Warning)",
+                    "Signs of bleeding (GI bleeding, intracranial hemorrhage, post-surgical bleeding) - CRITICAL (very common, can be severe and life-threatening, Black Box Warning)",
+                    "Drug interactions (many drugs affect warfarin - CRITICAL, check before starting/stopping any medication)",
+                    "Diet (vitamin K intake - CRITICAL, maintain consistent intake)",
+                    "Alcohol intake - CRITICAL (increases bleeding risk)",
+                    "Hepatic function (ALT, AST) - CRITICAL (warfarin metabolism affected by liver function)",
+                    "Vitamin K availability - CRITICAL (antidote for bleeding)"
+                ],
+                "look_alike_sound_alike": ["Warfarin", "Coumadin", "Jantoven", "Acenocoumarol"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+                "FDA Black Box Warning - Teratogenicity (Contraindicated in Pregnancy)",
+                "FDA Black Box Warning - INR Monitoring Required",
+                "FDA Drug Label - Warfarin (Coumadin)",
+                "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
+                "CHEST Guidelines - VTE Treatment and Prophylaxis",
+                "ESC Guidelines - Atrial Fibrillation",
+                "ACCP Guidelines - Antithrombotic Therapy"
+            ]
         },
 
         "Zonisamide": {
