@@ -233,6 +233,173 @@ RESPIRATORY_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 2: ICS, SAMA, LAMA, LEUKOTRIENE ANTAGONISTS, PDE-4 INHIBITORS ========================
+        "Budesonide inhaled": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"infectious": "Moderate (oral candidiasis - common)", "endocrine": "Low (HPA axis suppression - rare, only with high doses)", "ophthalmic": "Low (cataracts, glaucoma - rare, only with high doses)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Asthma/COPD response (symptoms, exacerbation frequency, SABA use)",
+                    "Oral candidiasis - CRITICAL (check tongue, mouth, especially if not rinsing after use)",
+                    "Hoarseness, cough, throat irritation (common local side effects)",
+                    "HPA axis function (cortisol, ACTH) - only with high doses (>1600mcg/day)",
+                    "Growth in children (only with high doses)",
+                    "Drug interactions (ritonavir - CONTRAINDICATED, ketoconazole/itraconazole - increased levels) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Budesonide", "Pulmicort", "Beclomethasone", "Fluticasone"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Drug Label - Budesonide (ritonavir interaction and oral candidiasis warnings)"
+            ]
+        },
+
+        "Fluticasone inhaled": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"infectious": "Moderate (oral candidiasis - common)", "endocrine": "Low (HPA axis suppression - rare, only with high doses, especially with ritonavir)", "ophthalmic": "Low (cataracts, glaucoma - rare, only with high doses)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Asthma/COPD response (symptoms, exacerbation frequency, SABA use)",
+                    "Oral candidiasis - CRITICAL (check tongue, mouth, especially if not rinsing after use)",
+                    "Hoarseness, cough, throat irritation (common local side effects)",
+                    "HPA axis function (cortisol, ACTH) - CRITICAL (especially with ritonavir - Black Box Warning)",
+                    "Growth in children (only with high doses)",
+                    "Drug interactions (ritonavir - CONTRAINDICATED - Black Box Warning, ketoconazole/itraconazole - increased levels) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Fluticasone", "Flixotide", "Advair", "Seretide", "Beclomethasone", "Budesonide"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Ritonavir Interaction (HPA Axis Suppression, Cushing Syndrome)",
+                "FDA Drug Label - Fluticasone (ritonavir interaction and oral candidiasis warnings)"
+            ]
+        },
+
+        "Ipratropium": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"ophthalmic": "High (increased intraocular pressure, angle-closure glaucoma - if enters eye, Black Box Warning)", "genitourinary": "Low (urinary retention - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Bronchodilator response (peak flow, FEV1)",
+                    "Intraocular pressure - CRITICAL (if eye exposure, especially in glaucoma patients)",
+                    "Signs of eye irritation (redness, pain, blurred vision) - CRITICAL",
+                    "Urinary retention (especially in BPH patients)",
+                    "Dry mouth (common, may affect oral health)"
+                ],
+                "look_alike_sound_alike": ["Ipratropium", "Atrovent", "Tiotropium"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Eye Exposure (Increased Intraocular Pressure, Angle-Closure Glaucoma)",
+                "FDA Drug Label - Ipratropium (eye exposure warning)"
+            ]
+        },
+
+        "Tiotropium": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"ophthalmic": "High (increased intraocular pressure, angle-closure glaucoma - if enters eye, Black Box Warning)", "genitourinary": "Moderate (urinary retention - especially in BPH patients)", "renal": "Moderate (accumulation in renal impairment - avoid if CrCl <30)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Bronchodilator response (peak flow, FEV1)",
+                    "Intraocular pressure - CRITICAL (if eye exposure, especially in glaucoma patients)",
+                    "Signs of eye irritation (redness, pain, blurred vision) - CRITICAL",
+                    "Renal function (CrCl, eGFR) - CRITICAL (accumulation risk, avoid if CrCl <30)",
+                    "Urinary retention (especially in BPH patients)",
+                    "Dry mouth (common, may affect oral health)"
+                ],
+                "look_alike_sound_alike": ["Tiotropium", "Spiriva", "Ipratropium"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Eye Exposure (Increased Intraocular Pressure, Angle-Closure Glaucoma)",
+                "FDA Black Box Warning - Renal Impairment (Accumulation Risk)",
+                "FDA Drug Label - Tiotropium (eye exposure and renal impairment warnings)"
+            ]
+        },
+
+        "Zafirlukast": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {"hepatic": "High (hepatotoxicity - rare but serious, can be fatal, Black Box Warning)", "hematologic": "Moderate (increased bleeding risk with warfarin)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Asthma response (symptoms, exacerbation frequency, SABA use)",
+                    "Hepatic function (ALT, AST) - CRITICAL (hepatotoxicity risk - Black Box Warning)",
+                    "Signs of hepatotoxicity (jaundice, abdominal pain, fatigue, dark urine) - CRITICAL",
+                    "INR - CRITICAL (if using warfarin - increased bleeding risk)",
+                    "Drug interactions (warfarin - increased INR, food - decreased absorption 40%) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Zafirlukast", "Accolate", "Montelukast"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "FDA Black Box Warning - Hepatotoxicity (Rare but Serious, Can Be Fatal)",
+                "FDA Black Box Warning - Warfarin Interaction (Increased Bleeding Risk)",
+                "FDA Drug Label - Zafirlukast (hepatotoxicity and warfarin interaction warnings)"
+            ]
+        },
+
+        "Roflumilast": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neuropsychiatric": "High (depression, anxiety, suicidal ideation and behavior - Black Box Warning)", "hepatic": "Moderate (elevated transaminases - common, contraindicated in severe hepatic impairment)", "gastrointestinal": "High (diarrhea, nausea - very common)", "hematologic": "Low (leukopenia - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "COPD response (exacerbation frequency, FEV1)",
+                    "Neuropsychiatric symptoms - CRITICAL (depression, anxiety, suicidal ideation and behavior - Black Box Warning)",
+                    "Hepatic function (ALT, AST) - CRITICAL (before treatment and every 3 months, contraindicated in severe hepatic impairment)",
+                    "Weight (weight loss - common)",
+                    "CBC (leukopenia - rare)",
+                    "Drug interactions (CYP3A4 inhibitors/inducers) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Roflumilast", "Daxas", "Daliresp"]
+            },
+            "guideline_tags": [
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Neuropsychiatric Events (Depression, Anxiety, Suicidal Ideation)",
+                "FDA Black Box Warning - Severe Hepatic Impairment (Contraindicated)",
+                "FDA Drug Label - Roflumilast (neuropsychiatric events and hepatic impairment warnings)"
+            ]
+        },
+
         # ======================== RESPIRATORY – THEOPHYLLINE (OLD DATA - TO BE REMOVED) ========================
         "Amikacin": {
             "drug_interactions": {
