@@ -79,6 +79,33 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Chỉ dùng đường uống cho viêm đại tràng do C. difficile. Không hấp thu qua đường tiêu hóa, chỉ tác dụng tại chỗ.",
                 },
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "High", "auditory": "High"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Vancomycin trough level - CRITICAL (target 10-20 mcg/ml)",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Urine output",
+                    "Auditory function (hearing loss risk)",
+                    "Complete blood count (if prolonged use)",
+                    "Signs of red man syndrome (if rapid infusion)"
+                ],
+                "look_alike_sound_alike": ["Vancomycin", "Vancocin"]
+            },
+            "guideline_tags": [
+                "IDSA MRSA Infection Guidelines",
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "IDSA Clostridium difficile Infection Guidelines",
+                "ASHP Guidelines - Vancomycin Therapeutic Monitoring",
+                "FDA Drug Label - Vancomycin (nephrotoxicity and ototoxicity warnings)"
+            ]
         },
 
         # ======================== ANTIBIOTICS: AMINOGLYCOSIDES ======================
@@ -155,6 +182,33 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "TDM BẮT BUỘC. Điều chỉnh liều theo chức năng thận.",
                 },
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "High", "auditory": "High", "vestibular": "High", "neuromuscular": "Moderate"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Gentamicin peak and trough levels - CRITICAL",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Urine output",
+                    "Auditory function (hearing loss risk)",
+                    "Vestibular function (dizziness, balance)",
+                    "Signs of neuromuscular blockade (respiratory depression)",
+                    "Electrolytes (sodium, potassium, magnesium)"
+                ],
+                "look_alike_sound_alike": ["Gentamicin", "Tobramycin", "Amikacin"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "ASHP Guidelines - Aminoglycoside Therapeutic Monitoring",
+                "FDA Drug Label - Gentamicin (nephrotoxicity, ototoxicity, neuromuscular blockade warnings)"
+            ]
         },
 
         "Amikacin": {
@@ -246,6 +300,33 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "TDM BẮT BUỘC. Điều chỉnh liều theo chức năng thận.",
                 },
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "High", "auditory": "High", "vestibular": "High", "neuromuscular": "Moderate"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Amikacin peak and trough levels - CRITICAL",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Urine output",
+                    "Auditory function (hearing loss risk)",
+                    "Vestibular function (dizziness, balance)",
+                    "Signs of neuromuscular blockade (respiratory depression)",
+                    "Electrolytes (sodium, potassium, magnesium)"
+                ],
+                "look_alike_sound_alike": ["Amikacin", "Gentamicin", "Tobramycin"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "IDSA Multidrug-Resistant Gram-Negative Infection Guidelines",
+                "ASHP Guidelines - Aminoglycoside Therapeutic Monitoring",
+                "FDA Drug Label - Amikacin (nephrotoxicity, ototoxicity warnings)"
+            ]
         },
 
         # ======================== ANTIBIOTICS: AMINOGLYCOSIDES (continued) =========
@@ -316,6 +397,33 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Dạng hít cho bệnh nhân xơ nang (CF) để điều trị nhiễm Pseudomonas mãn tính.",
                 },
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "High", "auditory": "High", "vestibular": "High", "neuromuscular": "Moderate"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Tobramycin peak and trough levels - CRITICAL",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Urine output",
+                    "Auditory function (hearing loss risk)",
+                    "Vestibular function (dizziness, balance)",
+                    "Signs of neuromuscular blockade (respiratory depression)",
+                    "Electrolytes (sodium, potassium, magnesium)"
+                ],
+                "look_alike_sound_alike": ["Tobramycin", "Gentamicin", "Amikacin"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "IDSA Cystic Fibrosis Pulmonary Infection Guidelines",
+                "ASHP Guidelines - Aminoglycoside Therapeutic Monitoring",
+                "FDA Drug Label - Tobramycin (nephrotoxicity, ototoxicity warnings)"
+            ]
         },
 
         # ======================== ANTIBIOTICS: POLYMYXINS ==========================
@@ -1771,6 +1879,204 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 "FDA Black Box Warning - Hepatotoxicity",
                 "IDSA Community-Acquired Pneumonia Guidelines",
                 "IDSA Complicated Skin and Soft Tissue Infection Guidelines"
+            ]
+        },
+
+        # ======================== SESSION 2: CARBAPENEMS & OTHER PRIORITY ANTIBIOTICS ========================
+        "Meropenem": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "Moderate (seizures, especially in renal impairment or high doses)", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Neurologic symptoms (seizures, confusion) - especially if CrCl <50 or high doses",
+                    "Renal function (CrCl) - adjust dose if CrCl <50",
+                    "Complete blood count (if prolonged use)",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Meropenem", "Imipenem/cilastatin", "Ertapenem"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "IDSA Febrile Neutropenia Guidelines",
+                "IDSA Meningitis Guidelines",
+                "FDA Drug Label - Meropenem (seizure warning)"
+            ]
+        },
+
+        "Imipenem/cilastatin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "High (seizures, especially in renal impairment or high doses)", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Neurologic symptoms (seizures, confusion) - CRITICAL, especially if CrCl <50 or high doses",
+                    "Renal function (CrCl) - adjust dose if CrCl <50",
+                    "Complete blood count (if prolonged use)",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Imipenem/cilastatin", "Meropenem", "Ertapenem"]
+            },
+            "guideline_tags": [
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "IDSA Febrile Neutropenia Guidelines",
+                "FDA Black Box Warning - Seizures (especially in patients with CNS disorders or renal impairment)",
+                "FDA Drug Label - Imipenem/cilastatin"
+            ]
+        },
+
+        "Ertapenem": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "Low (lower seizure risk than imipenem)", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Neurologic symptoms (seizures, confusion) - lower risk than imipenem",
+                    "Renal function (CrCl) - adjust dose if CrCl <30",
+                    "Complete blood count (if prolonged use)",
+                    "Diarrhea (C. difficile risk)"
+                ],
+                "look_alike_sound_alike": ["Ertapenem", "Meropenem", "Imipenem/cilastatin"]
+            },
+            "guideline_tags": [
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "IDSA Complicated Skin and Soft Tissue Infection Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "IDSA Community-Acquired Pneumonia Guidelines",
+                "FDA Drug Label - Ertapenem"
+            ]
+        },
+
+        "Trimethoprim/sulfamethoxazole": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (crystalluria, acute kidney injury)", "hepatic": "Moderate (hepatitis)", "hematologic": "Moderate (agranulocytosis, thrombocytopenia)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, Stevens-Johnson syndrome, toxic epidermal necrolysis) - CRITICAL",
+                    "Renal function (creatinine, eGFR) - crystalluria risk",
+                    "Hepatic function (hepatitis risk)",
+                    "Complete blood count (agranulocytosis, thrombocytopenia risk)",
+                    "Hyperkalemia (especially in renal impairment or high doses)",
+                    "Hyponatremia (especially in elderly)"
+                ],
+                "look_alike_sound_alike": ["Trimethoprim/sulfamethoxazole", "Cotrimoxazole", "Sulfamethoxazole/trimethoprim"]
+            },
+            "guideline_tags": [
+                "IDSA Urinary Tract Infection Guidelines",
+                "IDSA Pneumocystis jirovecii Pneumonia Guidelines",
+                "IDSA Stenotrophomonas maltophilia Infection Guidelines",
+                "FDA Black Box Warning - Severe Skin Reactions (Stevens-Johnson syndrome, toxic epidermal necrolysis)",
+                "FDA Drug Label - Trimethoprim/sulfamethoxazole"
+            ]
+        },
+
+        "Linezolid": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hematologic": "High (thrombocytopenia, anemia, leukopenia)", "neurologic": "Moderate (peripheral neuropathy, optic neuropathy)", "serotonin": "Moderate (serotonin syndrome with serotonergic drugs)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Complete blood count - CRITICAL (thrombocytopenia, anemia, leukopenia)",
+                    "Signs of peripheral neuropathy (numbness, tingling)",
+                    "Vision changes (optic neuropathy risk)",
+                    "Signs of serotonin syndrome (if used with serotonergic drugs)",
+                    "Lactic acidosis (rare but serious)"
+                ],
+                "look_alike_sound_alike": ["Linezolid", "Lincosamides"]
+            },
+            "guideline_tags": [
+                "IDSA Vancomycin-Resistant Enterococcus (VRE) Infection Guidelines",
+                "IDSA Methicillin-Resistant Staphylococcus aureus (MRSA) Infection Guidelines",
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "FDA Black Box Warning - Myelosuppression (thrombocytopenia, anemia, leukopenia)",
+                "FDA Black Box Warning - Peripheral and Optic Neuropathy",
+                "FDA Drug Label - Linezolid"
+            ]
+        },
+
+        "Daptomycin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"musculoskeletal": "High (rhabdomyolysis, myopathy)", "renal": "Moderate (rhabdomyolysis-related AKI)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Creatine phosphokinase (CPK) - CRITICAL (rhabdomyolysis risk)",
+                    "Renal function (creatinine, eGFR) - rhabdomyolysis-related AKI",
+                    "Signs of myopathy (muscle pain, weakness)",
+                    "Signs of allergic reaction (rash, eosinophilic pneumonia)"
+                ],
+                "look_alike_sound_alike": ["Daptomycin", "Daptomycin"]
+            },
+            "guideline_tags": [
+                "IDSA Vancomycin-Resistant Enterococcus (VRE) Infection Guidelines",
+                "IDSA Methicillin-Resistant Staphylococcus aureus (MRSA) Infection Guidelines",
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "IDSA Bacteremia and Endocarditis Guidelines",
+                "FDA Black Box Warning - Rhabdomyolysis",
+                "FDA Drug Label - Daptomycin"
+            ]
+        },
+
+        "Colistin": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": True,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "High", "neurologic": "High (neuropathy, neuromuscular blockade)", "respiratory": "Moderate (if inhaled)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Urine output",
+                    "Signs of neurotoxicity (numbness, tingling, weakness)",
+                    "Signs of neuromuscular blockade (respiratory depression) - CRITICAL",
+                    "Respiratory function (if inhaled form)"
+                ],
+                "look_alike_sound_alike": ["Colistin", "Colistimethate"]
+            },
+            "guideline_tags": [
+                "IDSA Multidrug-Resistant Gram-Negative Infection Guidelines",
+                "IDSA Healthcare-Associated Pneumonia Guidelines",
+                "IDSA Complicated Urinary Tract Infection Guidelines",
+                "FDA Drug Label - Colistin (nephrotoxicity and neurotoxicity warnings)"
             ]
         },
 
