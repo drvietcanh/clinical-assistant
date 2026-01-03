@@ -218,7 +218,73 @@
 
 ---
 
+---
+
+## CÔNG VIỆC ĐÃ THỰC HIỆN - SESSION 3
+
+### Bổ sung Risk Flags & Guideline Tags - Session 3 ✅
+
+**Đã bổ sung 6 thuốc trong session này:**
+
+#### Nhóm Antifungals:
+1. ✅ **Fluconazole** - Candidiasis, cryptococcosis (QT prolongation, hepatotoxicity)
+2. ✅ **Voriconazole** - Invasive aspergillosis, candidiasis (TDM required, hepatotoxicity, visual disturbances - Black Box Warnings)
+3. ✅ **Amphotericin B** - Invasive fungal infections (nephrotoxicity, infusion reactions - Black Box Warning)
+
+#### Nhóm Antivirals:
+4. ✅ **Acyclovir** - HSV, VZV infections (nephrotoxicity, neurotoxicity)
+5. ✅ **Valacyclovir** - HSV, VZV infections (nephrotoxicity, neurotoxicity)
+6. ✅ **Oseltamivir** - Influenza (neuropsychiatric events, especially in children)
+
+**Tổng Session 3: 6 thuốc**
+
+---
+
+## KẾT QUẢ TỔNG HỢP
+
+### Trước Session 1:
+- ⏳ Thuốc ưu tiên cao: 25/33 thiếu (76%)
+- ⏳ Tổng số: 41/81 đã có (50%)
+
+### Sau Session 1:
+- ✅ Thuốc ưu tiên cao: 0/33 thiếu (100%)
+- ✅ Tổng số: 60/81 đã có (74%)
+- ✅ **Đã bổ sung: 19 thuốc**
+
+### Sau Session 2:
+- ✅ Tổng số: 71/81 đã có (88%)
+- ✅ **Đã bổ sung thêm: 11 thuốc**
+- ✅ **Tổng cộng: 30/74 thuốc cần bổ sung đã hoàn thành (41%)**
+
+### Sau Session 3:
+- ✅ Tổng số: **77/81 đã có (95%)**
+- ✅ **Đã bổ sung thêm: 6 thuốc**
+- ✅ **Tổng cộng: 36/74 thuốc cần bổ sung đã hoàn thành (49%)**
+
+---
+
+## ĐIỂM NỔI BẬT SESSION 3
+
+**Black Box Warnings:**
+- Voriconazole: Hepatotoxicity, Visual Disturbances
+- Amphotericin B: Nephrotoxicity
+
+**TDM Required:**
+- Voriconazole: Trough level monitoring (target 1-5.5 mcg/ml)
+
+**High Alert Medications:**
+- Voriconazole (narrow therapeutic index, TDM required)
+- Amphotericin B (nephrotoxicity, infusion reactions)
+
+**Special Monitoring:**
+- Voriconazole: Visual function, skin examination (photosensitivity, skin cancer risk)
+- Amphotericin B: Electrolytes (hypokalemia, hypomagnesemia), infusion reactions
+- Acyclovir/Valacyclovir: Renal function, crystalluria risk
+- Oseltamivir: Neuropsychiatric symptoms (especially in children/adolescents)
+
+---
+
 **Cập nhật lần cuối:** 2025-02-18  
 **Người thực hiện:** AI Assistant  
-**Trạng thái:** ⏳ ĐANG TIẾN HÀNH - Session 2/5-6 hoàn thành (41% tổng thể)
+**Trạng thái:** ⏳ ĐANG TIẾN HÀNH - Session 3/5-6 hoàn thành (49% tổng thể)
 
