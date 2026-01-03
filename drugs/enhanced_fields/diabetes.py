@@ -308,6 +308,258 @@ DIABETES_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 2: DPP-4 INHIBITORS, TZDs, MEGLITINIDES, ALPHA-GLUCOSIDASE INHIBITORS ========================
+        "Sitagliptin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"pancreatic": "Moderate (acute pancreatitis risk)", "joint": "Moderate (severe joint pain - rare)", "cardiac": "Low (slight increase in heart failure risk)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose (HbA1c, glucose) - but hypoglycemia risk is low",
+                    "Signs of acute pancreatitis (severe abdominal pain, nausea, vomiting) - CRITICAL",
+                    "Severe joint pain - rare, discontinue if occurs",
+                    "Signs of heart failure (dyspnea, edema) - slight increase in risk",
+                    "Renal function (CrCl) - adjust dose if CrCl <50"
+                ],
+                "look_alike_sound_alike": ["Sitagliptin", "Januvia", "Saxagliptin", "Linagliptin"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "TECOS Trial - Cardiovascular Safety",
+                "FDA Drug Label - Sitagliptin (pancreatitis and heart failure warnings)"
+            ]
+        },
+
+        "Saxagliptin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"pancreatic": "Moderate (acute pancreatitis risk)", "cardiac": "Moderate (increased heart failure risk)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose (HbA1c, glucose) - but hypoglycemia risk is low",
+                    "Signs of acute pancreatitis (severe abdominal pain, nausea, vomiting) - CRITICAL",
+                    "Signs of heart failure (dyspnea, edema) - CRITICAL (increased risk)",
+                    "Renal function (CrCl) - adjust dose if CrCl <50"
+                ],
+                "look_alike_sound_alike": ["Saxagliptin", "Onglyza", "Sitagliptin", "Linagliptin"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "SAVOR-TIMI 53 Trial - Heart Failure Risk",
+                "FDA Drug Label - Saxagliptin (pancreatitis and heart failure warnings)"
+            ]
+        },
+
+        "Linagliptin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"pancreatic": "Moderate (acute pancreatitis risk)", "cardiac": "Low (slight increase in heart failure risk)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose (HbA1c, glucose) - but hypoglycemia risk is low",
+                    "Signs of acute pancreatitis (severe abdominal pain, nausea, vomiting) - CRITICAL",
+                    "Signs of heart failure (dyspnea, edema) - slight increase in risk",
+                    "Renal function (no dose adjustment needed - unique among DPP-4 inhibitors)"
+                ],
+                "look_alike_sound_alike": ["Linagliptin", "Tradjenta", "Sitagliptin", "Saxagliptin"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "CAROLINA Trial - Cardiovascular Safety",
+                "FDA Drug Label - Linagliptin (pancreatitis warning)"
+            ]
+        },
+
+        "Pioglitazone": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiac": "High (heart failure risk - contraindicated in NYHA class III-IV)", "hepatic": "Moderate (hepatotoxicity risk)", "skeletal": "Moderate (increased fracture risk in women)", "bladder": "Moderate (increased bladder cancer risk)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose (HbA1c, glucose)",
+                    "Signs of heart failure (dyspnea, edema, weight gain) - CRITICAL (contraindicated in NYHA class III-IV)",
+                    "Hepatic function (ALT, AST) - CRITICAL (baseline and during first 12 months, discontinue if ALT >3x ULN)",
+                    "Signs of fractures (especially in women)",
+                    "Complete blood count (anemia risk)",
+                    "Lipid panel (LDL cholesterol may increase)",
+                    "Bladder cancer screening (increased risk)"
+                ],
+                "look_alike_sound_alike": ["Pioglitazone", "Actos", "Rosiglitazone"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "PROactive Study - Cardiovascular Outcomes",
+                "FDA Black Box Warning - Heart Failure",
+                "FDA Drug Label - Pioglitazone (heart failure, hepatotoxicity, and bladder cancer warnings)"
+            ]
+        },
+
+        "Rosiglitazone": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiac": "High (heart failure risk, increased MI risk - restricted use)", "hepatic": "Moderate (hepatotoxicity risk)", "skeletal": "Moderate (increased fracture risk in women)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose (HbA1c, glucose)",
+                    "Signs of heart failure (dyspnea, edema) - CRITICAL",
+                    "Cardiac events (MI, stroke) - increased risk",
+                    "Hepatic function (ALT, AST) - CRITICAL (baseline and during first 12 months, discontinue if ALT >3x ULN)",
+                    "Signs of fractures (especially in women)",
+                    "Complete blood count (anemia risk)"
+                ],
+                "look_alike_sound_alike": ["Rosiglitazone", "Avandia", "Pioglitazone"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "FDA Black Box Warning - Heart Failure",
+                "FDA Black Box Warning - Myocardial Ischemia",
+                "FDA Drug Label - Rosiglitazone (restricted use due to cardiovascular risks)"
+            ]
+        },
+
+        "Repaglinide": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (hypoglycemia risk)",
+                    "HbA1c (every 3 months)",
+                    "Signs of hypoglycemia (tremor, sweating, tachycardia, hunger, confusion, seizures, coma) - CRITICAL",
+                    "Hepatic function (ALT, AST) - increased hypoglycemia risk in hepatic impairment",
+                    "Weight (may cause weight gain)"
+                ],
+                "look_alike_sound_alike": ["Repaglinide", "Prandin", "Nateglinide"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "FDA Drug Label - Repaglinide (hypoglycemia warning)"
+            ]
+        },
+
+        "Nateglinide": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (hypoglycemia risk)",
+                    "HbA1c (every 3 months)",
+                    "Signs of hypoglycemia (tremor, sweating, tachycardia, hunger, confusion, seizures, coma) - CRITICAL",
+                    "Hepatic function (ALT, AST) - contraindicated in severe hepatic impairment",
+                    "Weight (may cause slight weight gain)"
+                ],
+                "look_alike_sound_alike": ["Nateglinide", "Starlix", "Repaglinide"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "FDA Drug Label - Nateglinide (hypoglycemia warning)"
+            ]
+        },
+
+        "Acarbose": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"gastrointestinal": "High (flatulence, bloating, diarrhea - very common 30-50%)", "hepatic": "Low (elevated liver enzymes - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Postprandial blood glucose - main effect",
+                    "HbA1c (every 3 months)",
+                    "Gastrointestinal symptoms (flatulence, bloating, diarrhea) - very common, usually improves over time",
+                    "Hepatic function (ALT, AST) - rare elevation",
+                    "Renal function (CrCl) - contraindicated if CrCl <25"
+                ],
+                "look_alike_sound_alike": ["Acarbose", "Glucobay", "Miglitol"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "STOP-NIDDM Study - Prevention of Type 2 Diabetes",
+                "FDA Drug Label - Acarbose"
+            ]
+        },
+
+        "Miglitol": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"gastrointestinal": "High (flatulence, bloating, diarrhea - very common 30-50%)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Postprandial blood glucose - main effect",
+                    "HbA1c (every 3 months)",
+                    "Gastrointestinal symptoms (flatulence, bloating, diarrhea) - very common, usually improves over time",
+                    "Renal function (CrCl) - contraindicated if CrCl <25"
+                ],
+                "look_alike_sound_alike": ["Miglitol", "Glyset", "Acarbose"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "FDA Drug Label - Miglitol"
+            ]
+        },
+
 }
 
 __all__ = ["DIABETES_ENHANCED_FIELDS"]
