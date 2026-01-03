@@ -501,11 +501,33 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
-                "icu_critical_care_only": False,
+                "icu_critical_care_only": True,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (arrhythmias, tachycardia - very common, especially at higher doses >10 mcg/kg/min)",
+                    "peripheral": "High (peripheral ischemia, tissue necrosis - especially with extravasation)",
+                    "renal": "Moderate (renal effects - low dose may improve, high dose may worsen)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure - CRITICAL (continuous monitoring, dose-dependent effects)",
+                    "ECG - CRITICAL (continuous monitoring, arrhythmias, tachycardia very common)",
+                    "Heart rate - CRITICAL (tachycardia very common, especially at higher doses >10 mcg/kg/min)",
+                    "Peripheral perfusion - CRITICAL (peripheral ischemia, tissue necrosis risk)",
+                    "Extravasation - CRITICAL (can cause severe tissue necrosis, use central line)",
+                    "Renal function (urine output, creatinine) - CRITICAL (dose-dependent effects)",
+                    "Dose-dependent effects - CRITICAL (low dose <5 mcg/kg/min: renal, medium 5-10: cardiac, high >10: vasoconstriction)"
+                ],
+                "look_alike_sound_alike": ["Dopamine", "Dobutamine", "Dopamine", "Epinephrine"]
             },
+            "guideline_tags": [
+                "SSC Guidelines - Septic Shock Management (Not First-Line, Consider Norepinephrine)",
+                "AHA ACLS Guidelines - Shock Management",
+                "FDA Drug Label - Dopamine",
+                "ISMP High Alert Medications"
+            ]
         },
 
         "Doxorubicin": {
@@ -556,11 +578,35 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (tachycardia, arrhythmias, hypertension, myocardial ischemia - can be fatal, especially with IV in cardiac patients)",
+                    "cerebrovascular": "High (intracranial hemorrhage risk with high doses, especially in hypertensive patients)",
+                    "metabolic": "High (hyperglycemia, lactic acidosis - especially with high doses)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG - CRITICAL (continuous monitoring, tachycardia, arrhythmias, myocardial ischemia risk)",
+                    "Blood pressure - CRITICAL (hypertension, can cause intracranial hemorrhage)",
+                    "Heart rate - CRITICAL (tachycardia very common)",
+                    "Signs of myocardial ischemia (chest pain, ST changes) - CRITICAL (especially in cardiac patients)",
+                    "Blood glucose - CRITICAL (hyperglycemia, especially with high doses)",
+                    "Lactate levels - CRITICAL (lactic acidosis risk with high doses)",
+                    "Extravasation - CRITICAL (can cause tissue necrosis, use central line if possible)",
+                    "Administration route - CRITICAL (IM for anaphylaxis, IV for cardiac arrest, subcutaneous for local effects)"
+                ],
+                "look_alike_sound_alike": ["Epinephrine", "Adrenalin", "Norepinephrine", "Phenylephrine"]
             },
+            "guideline_tags": [
+                "AHA ACLS Guidelines - Cardiac Arrest",
+                "AHA ACLS Guidelines - Anaphylaxis",
+                "FDA Drug Label - Epinephrine (Adrenalin)",
+                "WHO Essential Medicines List",
+                "ISMP High Alert Medications"
+            ]
         },
 
         "Ethosuximide": {
@@ -809,11 +855,34 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
-                "icu_critical_care_only": False,
+                "icu_critical_care_only": True,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (arrhythmias, myocardial ischemia - especially in cardiac patients)",
+                    "peripheral": "High (peripheral ischemia, tissue necrosis - especially with extravasation, Black Box Warning)",
+                    "renal": "Moderate (renal ischemia - can worsen acute kidney injury)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure - CRITICAL (continuous monitoring, target MAP 65-70 mmHg in septic shock)",
+                    "ECG - CRITICAL (continuous monitoring, arrhythmias, myocardial ischemia risk)",
+                    "Peripheral perfusion - CRITICAL (peripheral ischemia, tissue necrosis risk, Black Box Warning)",
+                    "Extravasation - CRITICAL (can cause severe tissue necrosis, use central line, Black Box Warning)",
+                    "Renal function (urine output, creatinine) - CRITICAL (renal ischemia risk, can worsen AKI)",
+                    "Lactate levels - CRITICAL (tissue ischemia marker)",
+                    "Administration route - CRITICAL (central line preferred, avoid peripheral if possible, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Norepinephrine", "Levophed", "Epinephrine", "Dopamine"]
             },
+            "guideline_tags": [
+                "SSC Guidelines - Septic Shock Management",
+                "AHA ACLS Guidelines - Shock Management",
+                "FDA Black Box Warning - Extravasation (Can Cause Severe Tissue Necrosis)",
+                "FDA Drug Label - Norepinephrine (Levophed)",
+                "ISMP High Alert Medications"
+            ]
         },
 
         "Oxaliplatin": {
@@ -1084,11 +1153,35 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
-                "icu_critical_care_only": False,
+                "icu_critical_care_only": True,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (myocardial ischemia, decreased cardiac output - especially in cardiac patients)",
+                    "peripheral": "High (peripheral ischemia, tissue necrosis - especially with extravasation)",
+                    "renal": "Moderate (renal ischemia - can worsen acute kidney injury)",
+                    "gastrointestinal": "Moderate (mesenteric ischemia - rare but serious)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure - CRITICAL (continuous monitoring)",
+                    "ECG - CRITICAL (continuous monitoring, myocardial ischemia risk)",
+                    "Peripheral perfusion - CRITICAL (peripheral ischemia, tissue necrosis risk)",
+                    "Extravasation - CRITICAL (can cause severe tissue necrosis, use central line)",
+                    "Renal function (urine output, creatinine) - CRITICAL (renal ischemia risk)",
+                    "Signs of mesenteric ischemia (abdominal pain, distension) - CRITICAL (rare but serious)",
+                    "Cardiac output - CRITICAL (can decrease, especially in cardiac patients)",
+                    "Administration route - CRITICAL (central line preferred, avoid peripheral if possible)"
+                ],
+                "look_alike_sound_alike": ["Vasopressin", "Pitressin", "Desmopressin", "Terlipressin"]
             },
+            "guideline_tags": [
+                "SSC Guidelines - Septic Shock Management (Adjunctive Therapy)",
+                "AHA ACLS Guidelines - Shock Management",
+                "FDA Drug Label - Vasopressin (Pitressin)",
+                "ISMP High Alert Medications"
+            ]
         },
 
         "Vitamin K": {
@@ -5303,6 +5396,110 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 "ACC/AHA 2018 Cholesterol Guidelines",
                 "ESC/EAS Guidelines for Dyslipidaemias 2019",
                 "JUPITER Study"
+            ]
+        },
+
+    # ======================== SESSION 8: VASOPRESSORS, TCAs & STATINS (continued) ========================
+        "Clomipramine": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (arrhythmias, AV block, QT prolongation - can be fatal in overdose, Black Box Warning)",
+                    "neuropsychiatric": "High (suicidal ideation and behavior - increased risk in children, adolescents, and young adults <24 years, Black Box Warning, overdose can be fatal)",
+                    "anticholinergic": "High (dry mouth, constipation, urinary retention, blurred vision - very common)",
+                    "serotonergic": "High (serotonin syndrome - if used with SSRIs/MAOIs, Black Box Warning)"
+                },
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG - CRITICAL (before starting and periodically, QT prolongation, AV block risk, Black Box Warning)",
+                    "Heart rate and blood pressure - CRITICAL (arrhythmias, orthostatic hypotension)",
+                    "Mood and OCD symptoms - CRITICAL (periodic assessment, Y-BOCS score if available)",
+                    "Signs of suicidal ideation and behavior - CRITICAL (increased risk in first few weeks, especially in <24 years old, Black Box Warning)",
+                    "Signs of overdose (tachycardia, arrhythmias, seizures, coma) - CRITICAL (can be fatal, Black Box Warning)",
+                    "Signs of serotonin syndrome (fever, agitation, tremor, hyperreflexia) - CRITICAL (if used with SSRIs/MAOIs, Black Box Warning)",
+                    "Anticholinergic symptoms (dry mouth, constipation, urinary retention, blurred vision) - CRITICAL (very common)",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, SSRIs - CONTRAINDICATED, quinidine/cimetidine - increase levels) - CRITICAL",
+                    "Prescribe limited quantities - CRITICAL (overdose can be fatal, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Clomipramine", "Anafranil", "Amitriptyline", "Imipramine"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior (Increased Risk in Children, Adolescents, and Young Adults <24 Years)",
+                "FDA Black Box Warning - Overdose Can Be Fatal (Cardiac Arrhythmias, Seizures, Coma)",
+                "FDA Black Box Warning - Serotonin Syndrome (If Used with SSRIs/MAOIs)",
+                "FDA Drug Label - Clomipramine (Anafranil)",
+                "APA Guidelines - OCD Treatment",
+                "NICE Guidelines - OCD Treatment"
+            ]
+        },
+
+        "Pravastatin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "musculoskeletal": "Moderate (myopathy, rhabdomyolysis - rare but serious, lower risk than other statins)",
+                    "hepatic": "Moderate (hepatotoxicity - elevated transaminases, rare but can occur)",
+                    "metabolic": "Low (new-onset diabetes - slight increase in risk)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Muscle symptoms (myalgia, weakness) - CRITICAL (if severe, check CK, rhabdomyolysis risk)",
+                    "Creatine kinase (CK) - CRITICAL (if muscle symptoms, stop if CK >10x ULN)",
+                    "Hepatic function (ALT, AST) - CRITICAL (before starting, then if symptoms, hepatotoxicity risk)",
+                    "Lipid profile (LDL, HDL, triglycerides) - CRITICAL (after 4-12 weeks, assess response)",
+                    "Blood glucose - CRITICAL (new-onset diabetes risk, slight increase)",
+                    "Drug interactions (cyclosporine - reduce dose, gemfibrozil - avoid or reduce dose) - CRITICAL (fewer interactions than other statins - not metabolized by CYP450)",
+                    "Pregnancy test - CRITICAL (contraindicated in pregnancy)"
+                ],
+                "look_alike_sound_alike": ["Pravastatin", "Pravachol", "Atorvastatin", "Simvastatin"]
+            },
+            "guideline_tags": [
+                "FDA Drug Label - Pravastatin (Pravachol)",
+                "ACC/AHA 2018 Cholesterol Guidelines",
+                "ESC/EAS Guidelines for Dyslipidaemias 2019"
+            ]
+        },
+
+        "Lovastatin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "musculoskeletal": "High (myopathy, rhabdomyolysis - rare but serious, especially with drug interactions, Black Box Warning)",
+                    "hepatic": "Moderate (hepatotoxicity - elevated transaminases, rare but can occur)",
+                    "metabolic": "Low (new-onset diabetes - slight increase in risk)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Muscle symptoms (myalgia, weakness) - CRITICAL (if severe, check CK, rhabdomyolysis risk, Black Box Warning)",
+                    "Creatine kinase (CK) - CRITICAL (if muscle symptoms, stop if CK >10x ULN, Black Box Warning)",
+                    "Hepatic function (ALT, AST) - CRITICAL (before starting, then if symptoms, hepatotoxicity risk)",
+                    "Lipid profile (LDL, HDL, triglycerides) - CRITICAL (after 4-12 weeks, assess response)",
+                    "Blood glucose - CRITICAL (new-onset diabetes risk, slight increase)",
+                    "Drug interactions (CYP3A4 inhibitors - increase levels significantly, amiodarone - limit dose, diltiazem/verapamil - limit dose, fibrates - increase rhabdomyolysis risk, grapefruit juice - avoid) - CRITICAL",
+                    "Pregnancy test - CRITICAL (contraindicated in pregnancy, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Lovastatin", "Mevacor", "Simvastatin", "Atorvastatin"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Myopathy and Rhabdomyolysis (Especially with Drug Interactions)",
+                "FDA Black Box Warning - Teratogenicity (Contraindicated in Pregnancy)",
+                "FDA Drug Label - Lovastatin (Mevacor)",
+                "ACC/AHA 2018 Cholesterol Guidelines"
             ]
         },
 
