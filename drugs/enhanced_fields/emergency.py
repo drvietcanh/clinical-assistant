@@ -362,6 +362,31 @@ EMERGENCY_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Respiratory rate and SpO2 - CRITICAL (monitor for re-overdose)",
+                    "Level of consciousness (GCS)",
+                    "Blood pressure and heart rate",
+                    "Signs of opioid withdrawal syndrome",
+                    "Signs of re-overdose (respiratory depression returns)"
+                ],
+                "look_alike_sound_alike": []
+            },
+            "guideline_tags": [
+                "AHA ACLS Guidelines - Opioid Overdose Management",
+                "CDC Opioid Overdose Guidelines",
+                "WHO Guidelines - Opioid Overdose Response",
+                "SAMHSA Opioid Overdose Prevention Toolkit",
+                "FDA Drug Label - Naloxone (Narcan)"
+            ]
         },
 
         "Flumazenil": {
@@ -379,6 +404,32 @@ EMERGENCY_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Suy gan nặng - thời gian tác dụng kéo dài",
                 ],
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Level of consciousness (GCS) - CRITICAL (monitor for re-sedation)",
+                    "Respiratory rate and SpO2 - CRITICAL (monitor for re-respiratory depression)",
+                    "Blood pressure and heart rate",
+                    "Signs of benzodiazepine withdrawal syndrome",
+                    "Seizure activity (especially in patients with seizure history)",
+                    "Signs of re-sedation (benzodiazepine effects return)"
+                ],
+                "look_alike_sound_alike": []
+            },
+            "guideline_tags": [
+                "AHA ACLS Guidelines - Benzodiazepine Overdose Management",
+                "FDA Drug Label - Flumazenil (Anexate)",
+                "Benzodiazepine Overdose Guidelines",
+                "UpToDate - Flumazenil: Drug Information",
+                "ISMP High Alert Medications - Reversal Agents"
+            ]
         },
 
 }
