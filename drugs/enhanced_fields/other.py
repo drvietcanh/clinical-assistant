@@ -31,11 +31,36 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
-                "icu_critical_care_only": False,
+                "icu_critical_care_only": True,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "High (bleeding - very common, can be severe and life-threatening, intracranial hemorrhage can be fatal, Black Box Warning)",
+                    "neurologic": "High (intracranial hemorrhage - can be fatal, Black Box Warning)",
+                    "cardiovascular": "Low (reperfusion arrhythmias - rare)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (GI bleeding, intracranial hemorrhage, injection site bleeding) - CRITICAL (very common, can be severe and life-threatening, Black Box Warning)",
+                    "Intracranial hemorrhage (headache, altered mental status, focal neurological deficits) - CRITICAL (can be fatal, Black Box Warning)",
+                    "Blood pressure - CRITICAL (maintain <185/110 mmHg before and during infusion, Black Box Warning)",
+                    "Neurological exam - CRITICAL (every 15 minutes during infusion, every hour for 6 hours after, then every 2 hours for 18 hours)",
+                    "CBC (hemoglobin, hematocrit) - CRITICAL (if signs of bleeding)",
+                    "Time from symptom onset - CRITICAL (must be within 3-4.5 hours for stroke, within 12 hours for MI, Black Box Warning)",
+                    "Contraindications check - CRITICAL (intracranial hemorrhage, recent stroke, recent surgery, active bleeding, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Alteplase", "tPA", "Activase", "Tenecteplase", "Reteplase"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+                "FDA Black Box Warning - Intracranial Hemorrhage (Can Be Fatal)",
+                "FDA Black Box Warning - Time Window (Must Be Within 3-4.5 Hours for Stroke)",
+                "FDA Drug Label - Alteplase (Activase)",
+                "AHA/ASA Guidelines - Acute Ischemic Stroke",
+                "AHA/ACC Guidelines - ST-Elevation Myocardial Infarction (STEMI)",
+                "ESC Guidelines - Acute Coronary Syndrome"
+            ]
         },
 
         "Amikacin": {
@@ -53,22 +78,73 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": True,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "pulmonary": "High (interstitial pneumonitis - can be fatal, Black Box Warning)",
+                    "hepatic": "High (hepatotoxicity - can be fatal, Black Box Warning)",
+                    "cardiac": "High (arrhythmias - can be fatal, Black Box Warning, QT prolongation, torsades de pointes)",
+                    "endocrine": "High (thyroid dysfunction - hyperthyroidism or hypothyroidism, very common)",
+                    "ophthalmic": "Moderate (corneal deposits, cataracts, very common)",
+                    "dermatologic": "Moderate (photosensitivity, blue-gray skin discoloration, very common)"
+                },
+                "qt_prolongation": True,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Pulmonary function (chest X-ray, PFT) - CRITICAL (every 6 months, interstitial pneumonitis can be fatal, Black Box Warning)",
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL (every 3-6 months, hepatotoxicity can be fatal, Black Box Warning)",
+                    "ECG (QT interval) - CRITICAL (QT prolongation is normal but QTc >500ms or increase >60ms is dangerous, Black Box Warning)",
+                    "Thyroid function (TSH, FT4, FT3) - CRITICAL (every 6 months, hyperthyroidism or hypothyroidism very common)",
+                    "Ophthalmologic exam - CRITICAL (every 6-12 months, corneal deposits, cataracts very common)",
+                    "Electrolytes (K+, Mg2+) - CRITICAL (must be normal before use, hypokalemia/hypomagnesemia increase torsades risk)",
+                    "Drug interactions (digoxin - reduce dose 50%, warfarin - reduce dose 30-50%, statins - reduce dose 50%, QT-prolonging drugs - CONTRAINDICATED) - CRITICAL",
+                    "Half-life - CRITICAL (50-60 days, very long, effects persist after discontinuation)"
+                ],
+                "look_alike_sound_alike": ["Amiodarone", "Cordarone", "Dronedarone", "Sotalol"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Pulmonary Toxicity (Interstitial Pneumonitis, Can Be Fatal)",
+                "FDA Black Box Warning - Hepatotoxicity (Can Be Fatal)",
+                "FDA Black Box Warning - Arrhythmias (Can Be Fatal, QT Prolongation)",
+                "FDA Black Box Warning - Only for Life-Threatening Arrhythmias",
+                "FDA Drug Label - Amiodarone (Cordarone)",
+                "ACC/AHA Guidelines - Arrhythmias",
+                "ESC Guidelines - Arrhythmias"
+            ]
         },
 
         "Apixaban": {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "High (bleeding - very common, can be severe and life-threatening, Black Box Warning)",
+                    "hepatic": "Low (hepatotoxicity - elevated transaminases, rare)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (GI bleeding, intracranial hemorrhage, post-surgical bleeding) - CRITICAL (very common, can be severe and life-threatening, Black Box Warning)",
+                    "Creatinine - CRITICAL (for dose adjustment, reduce dose if ≥2 factors: age ≥80, weight ≤60kg, Cr ≥1.5mg/dL)",
+                    "Hepatic function (ALT, AST) - CRITICAL (rare hepatotoxicity)",
+                    "Drug interactions (CYP3A4/P-gp inhibitors/inducers - CONTRAINDICATED/AVOID strong inhibitors) - CRITICAL",
+                    "Hepatic impairment - CRITICAL (contraindicated in Child-Pugh C)",
+                    "Andexanet alfa availability - CRITICAL (antidote for bleeding, if available)"
+                ],
+                "look_alike_sound_alike": ["Apixaban", "Eliquis", "Rivaroxaban", "Edoxaban", "Dabigatran"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+                "FDA Black Box Warning - No Specific Antidote (Before Andexanet Alfa)",
+                "FDA Drug Label - Apixaban (Eliquis)",
+                "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
+                "CHEST Guidelines - VTE Treatment and Prophylaxis",
+                "ESC Guidelines - Atrial Fibrillation"
+            ]
         },
 
         "Aspirin": {
@@ -85,12 +161,42 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
         "Azathioprine": {
             "risk_flags": {
                 "high_alert": True,
-                "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
+                "narrow_therapeutic_index": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "hematologic": "High (myelosuppression - very common, can be severe, Black Box Warning)",
+                    "hepatic": "High (hepatotoxicity - can be severe, Black Box Warning)",
+                    "oncologic": "Moderate (increased risk of malignancies - lymphoma, skin cancer, Black Box Warning)",
+                    "gastrointestinal": "Moderate (pancreatitis - rare but serious)",
+                    "infectious": "High (increased risk of serious infections - Black Box Warning)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "TPMT (thiopurine methyltransferase) genotype - CRITICAL (before treatment, TPMT deficiency increases toxicity, Black Box Warning)",
+                    "CBC (myelosuppression) - CRITICAL (very common, can be severe, Black Box Warning, weekly for first month, then monthly)",
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL (hepatotoxicity can be severe, Black Box Warning)",
+                    "Signs of pancreatitis (severe abdominal pain, nausea, vomiting) - CRITICAL (rare but serious)",
+                    "Signs of infection (fever, chills) - CRITICAL (increased risk of serious infections, Black Box Warning)",
+                    "Signs of malignancies (lymphoma, skin cancer) - CRITICAL (increased risk, Black Box Warning)",
+                    "Drug interactions (allopurinol - CONTRAINDICATED, increases toxicity, Black Box Warning)",
+                    "Dose reduction - CRITICAL (reduce dose 50-75% if TPMT deficiency or with allopurinol)"
+                ],
+                "look_alike_sound_alike": ["Azathioprine", "Imuran", "Mercaptopurine", "Cyclophosphamide"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Myelosuppression (Very Common, Can Be Severe)",
+                "FDA Black Box Warning - Hepatotoxicity (Can Be Severe)",
+                "FDA Black Box Warning - Increased Risk of Malignancies (Lymphoma, Skin Cancer)",
+                "FDA Black Box Warning - Increased Risk of Serious Infections",
+                "FDA Black Box Warning - TPMT Testing Required (Before Treatment)",
+                "FDA Black Box Warning - Allopurinol Interaction (Contraindicated)",
+                "FDA Drug Label - Azathioprine (Imuran)",
+                "ACR Guidelines - Rheumatoid Arthritis",
+                "KDIGO Guidelines - Kidney Disease"
+            ]
         },
 
         "Carbamazepine": {
@@ -130,11 +236,33 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "High (bleeding - very common, can be severe and life-threatening, Black Box Warning)",
+                    "hematologic_ttp": "Low (thrombotic thrombocytopenic purpura - TTP, rare but dangerous)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (epistaxis, gingival bleeding, melena, hematemesis, injection site bleeding) - CRITICAL (very common, can be severe and life-threatening, Black Box Warning)",
+                    "Major bleeding (GI bleeding, intracranial hemorrhage, post-surgical bleeding) - CRITICAL (Black Box Warning)",
+                    "Thrombotic thrombocytopenic purpura (TTP) - CRITICAL (fever, anemia, thrombocytopenia, neurological symptoms - rare but dangerous)",
+                    "Platelet count - CRITICAL (if signs of bleeding or TTP)",
+                    "CYP2C19 genotype - CRITICAL (poor metabolizers may have reduced response, consider prasugrel or ticagrelor)",
+                    "Drug interactions (PPIs - omeprazole/esomeprazole may reduce efficacy, warfarin - increases bleeding risk) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Clopidogrel", "Plavix", "Prasugrel", "Ticagrelor"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+                "FDA Black Box Warning - CYP2C19 Poor Metabolizers (May Have Reduced Response)",
+                "FDA Drug Label - Clopidogrel (Plavix)",
+                "ACC/AHA Guidelines - Acute Coronary Syndrome",
+                "ACC/AHA Guidelines - Dual Antiplatelet Therapy (DAPT)",
+                "ESC Guidelines - Cardiovascular Disease Prevention"
+            ]
         },
 
         "Codeine": {
@@ -162,23 +290,77 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
         "Cyclosporine": {
             "risk_flags": {
                 "high_alert": True,
-                "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
+                "narrow_therapeutic_index": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "renal": "High (nephrotoxicity - very common, dose-dependent, can be severe, Black Box Warning)",
+                    "cardiovascular": "High (hypertension - very common, Black Box Warning)",
+                    "metabolic": "High (hyperlipidemia - very common)",
+                    "dermatologic": "Moderate (gingival hyperplasia, hirsutism - very common)",
+                    "hepatic": "Low (hepatotoxicity - rare)",
+                    "oncologic": "Moderate (increased risk of malignancies - lymphoma, skin cancer, Black Box Warning)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Cyclosporine trough levels - CRITICAL (narrow therapeutic index, TDM required, target varies by indication, Black Box Warning)",
+                    "Renal function (CrCl, BUN, creatinine) - CRITICAL (nephrotoxicity very common, dose-dependent, Black Box Warning)",
+                    "Blood pressure - CRITICAL (hypertension very common, Black Box Warning)",
+                    "Lipid profile (cholesterol, triglycerides) - CRITICAL (hyperlipidemia very common)",
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL (rare hepatotoxicity)",
+                    "Signs of gingival hyperplasia - CRITICAL (very common)",
+                    "Signs of hirsutism - CRITICAL (very common)",
+                    "Signs of malignancies (lymphoma, skin cancer) - CRITICAL (increased risk, Black Box Warning)",
+                    "Drug interactions (CYP3A4 inhibitors/inducers - CRITICAL, grapefruit juice - increases levels, Black Box Warning)",
+                    "Formulation - CRITICAL (Neoral modified and Sandimmune non-modified are NOT interchangeable)"
+                ],
+                "look_alike_sound_alike": ["Cyclosporine", "Neoral", "Sandimmune", "Tacrolimus", "Cyclophosphamide"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Nephrotoxicity (Very Common, Dose-Dependent)",
+                "FDA Black Box Warning - Hypertension (Very Common)",
+                "FDA Black Box Warning - Increased Risk of Malignancies (Lymphoma, Skin Cancer)",
+                "FDA Black Box Warning - Neoral and Sandimmune NOT Interchangeable",
+                "FDA Drug Label - Cyclosporine (Neoral, Sandimmune)",
+                "KDIGO Guidelines - Kidney Transplant",
+                "AST Guidelines - Organ Transplant"
+            ]
         },
 
         "Dabigatran": {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "High (bleeding - very common, can be severe and life-threatening, Black Box Warning)",
+                    "gastrointestinal": "Moderate (GI bleeding - more common than other DOACs)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (GI bleeding - more common than other DOACs, intracranial hemorrhage, post-surgical bleeding) - CRITICAL (very common, can be severe and life-threatening, Black Box Warning)",
+                    "Creatinine - CRITICAL (for dose adjustment, contraindicated if CrCl <30, reduce dose if CrCl 30-50)",
+                    "Drug interactions (P-gp inhibitors/inducers - CONTRAINDICATED/AVOID strong inhibitors) - CRITICAL",
+                    "Renal function - CRITICAL (contraindicated in CrCl <30, reduce dose in CrCl 30-50)",
+                    "Idarucizumab availability - CRITICAL (antidote for bleeding, Praxbind)"
+                ],
+                "look_alike_sound_alike": ["Dabigatran", "Pradaxa", "Apixaban", "Rivaroxaban", "Edoxaban"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+                "FDA Black Box Warning - GI Bleeding (More Common Than Other DOACs)",
+                "FDA Black Box Warning - Renal Impairment (Contraindicated in CrCl <30)",
+                "FDA Drug Label - Dabigatran (Pradaxa)",
+                "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
+                "CHEST Guidelines - VTE Treatment and Prophylaxis",
+                "ESC Guidelines - Atrial Fibrillation",
+                "Idarucizumab (Praxbind) - Antidote for Dabigatran"
+            ]
         },
 
         "Digoxin": {
