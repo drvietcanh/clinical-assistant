@@ -690,6 +690,292 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 3: ADDITIONAL ANTICONVULSANTS, TRIPTANS, MS DRUGS ========================
+        "Lacosamide": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "Moderate (PR interval prolongation, atrioventricular block)", "neurologic": "Moderate (dizziness, ataxia, diplopia)", "hematologic": "Low (agranulocytosis - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Seizure frequency and severity",
+                    "ECG (PR interval prolongation, atrioventricular block risk) - CRITICAL",
+                    "Neurologic symptoms (dizziness, ataxia, diplopia)",
+                    "Complete blood count (agranulocytosis risk - rare)",
+                    "Renal function (CrCl) - adjust dose if CrCl <30"
+                ],
+                "look_alike_sound_alike": ["Lacosamide", "Vimpat"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "ILAE Treatment Guidelines - Focal Seizures",
+                "AAN Status Epilepticus Treatment Guidelines",
+                "FDA Drug Label - Lacosamide (PR interval prolongation warning)"
+            ]
+        },
+
+        "Phenobarbital": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"respiratory": "High (respiratory depression, especially with opioids or alcohol)", "neurologic": "Moderate (dependence, withdrawal, cognitive impairment)", "dermatologic": "Moderate (Stevens-Johnson syndrome, toxic epidermal necrolysis - rare)", "hematologic": "Low (agranulocytosis, aplastic anemia - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Phenobarbital blood level - CRITICAL (therapeutic range: 15-40 mcg/ml)",
+                    "Seizure frequency and severity",
+                    "Respiratory function (respiratory depression risk, especially with opioids/alcohol) - CRITICAL",
+                    "Signs of dependence and withdrawal",
+                    "Cognitive function (cognitive impairment)",
+                    "Signs of Stevens-Johnson syndrome/toxic epidermal necrolysis (severe rash) - rare",
+                    "Complete blood count (agranulocytosis, aplastic anemia risk - rare)",
+                    "Drug interactions (strong CYP450 inducer) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Phenobarbital", "Luminal", "Primidone"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "ILAE Treatment Guidelines - Generalized Seizures",
+                "AAN Status Epilepticus Treatment Guidelines",
+                "FDA Black Box Warning - Respiratory Depression (especially with opioids)",
+                "FDA Black Box Warning - Abuse, Dependence, and Withdrawal",
+                "FDA Drug Label - Phenobarbital"
+            ]
+        },
+
+        "Zonisamide": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"metabolic": "Moderate (metabolic acidosis, kidney stones)", "dermatologic": "Moderate (Stevens-Johnson syndrome, toxic epidermal necrolysis - rare)", "neurologic": "Moderate (cognitive impairment, word-finding difficulties)", "ophthalmic": "Low (acute angle-closure glaucoma - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Seizure frequency and severity",
+                    "Serum bicarbonate (metabolic acidosis risk)",
+                    "Kidney stones (nephrolithiasis risk)",
+                    "Cognitive function (word-finding difficulties, memory problems)",
+                    "Signs of Stevens-Johnson syndrome/toxic epidermal necrolysis (severe rash) - rare",
+                    "Visual function (acute angle-closure glaucoma risk - rare)",
+                    "Renal function (CrCl) - adjust dose if CrCl <50"
+                ],
+                "look_alike_sound_alike": ["Zonisamide", "Zonegran"]
+            },
+            "guideline_tags": [
+                "AAN Epilepsy Treatment Guidelines",
+                "ILAE Treatment Guidelines - Focal Seizures",
+                "FDA Black Box Warning - Stevens-Johnson Syndrome and Toxic Epidermal Necrolysis",
+                "FDA Black Box Warning - Suicidal Behavior and Ideation",
+                "FDA Drug Label - Zonisamide"
+            ]
+        },
+
+        "Rizatriptan": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "High (coronary vasospasm, MI, stroke, arrhythmias - contraindicated in CAD)", "cerebrovascular": "High (stroke, TIA risk)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure",
+                    "Signs of coronary vasospasm (chest pain, tightness) - CRITICAL (may be benign but must rule out cardiac)",
+                    "ECG (if cardiac risk factors present)",
+                    "Signs of stroke (focal neurological deficits)",
+                    "Drug interactions (propranolol increases rizatriptan levels - reduce dose to 5mg max)"
+                ],
+                "look_alike_sound_alike": ["Rizatriptan", "Maxalt", "Sumatriptan", "Zolmitriptan"]
+            },
+            "guideline_tags": [
+                "AHS Migraine Treatment Guidelines",
+                "EFNS Migraine Treatment Guidelines",
+                "FDA Drug Label - Rizatriptan (cardiovascular and cerebrovascular warnings)"
+            ]
+        },
+
+        "Zolmitriptan": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "High (coronary vasospasm, MI, stroke, arrhythmias - contraindicated in CAD)", "cerebrovascular": "High (stroke, TIA risk)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure",
+                    "Signs of coronary vasospasm (chest pain, tightness) - CRITICAL (may be benign but must rule out cardiac)",
+                    "ECG (if cardiac risk factors present)",
+                    "Signs of stroke (focal neurological deficits)",
+                    "Drug interactions (cimetidine increases zolmitriptan levels)"
+                ],
+                "look_alike_sound_alike": ["Zolmitriptan", "Zomig", "Sumatriptan", "Rizatriptan"]
+            },
+            "guideline_tags": [
+                "AHS Migraine Treatment Guidelines",
+                "EFNS Migraine Treatment Guidelines",
+                "FDA Drug Label - Zolmitriptan (cardiovascular and cerebrovascular warnings)"
+            ]
+        },
+
+        "Dimethyl fumarate": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hematologic": "High (lymphopenia - common and can be severe)", "hepatic": "Moderate (elevated liver enzymes)", "infectious": "Moderate (increased infection risk due to lymphopenia)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Lymphocyte count - CRITICAL (baseline, after 6 months, then every 6-12 months)",
+                    "Complete blood count (lymphopenia, neutropenia, leukopenia)",
+                    "Hepatic function (ALT, AST) - CRITICAL",
+                    "Signs of infection (fever, cough, dyspnea, dysuria) - increased risk due to lymphopenia",
+                    "MS relapse frequency and MRI findings",
+                    "Gastrointestinal symptoms (flushing, nausea, diarrhea) - common, usually improves over time"
+                ],
+                "look_alike_sound_alike": ["Dimethyl fumarate", "Tecfidera"]
+            },
+            "guideline_tags": [
+                "AAN Multiple Sclerosis Treatment Guidelines",
+                "ECTRIMS/EAN Multiple Sclerosis Treatment Guidelines",
+                "FDA Black Box Warning - Lymphopenia",
+                "FDA Black Box Warning - Serious Infections",
+                "FDA Drug Label - Dimethyl fumarate"
+            ]
+        },
+
+        "Rivastigmine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"gastrointestinal": "High (nausea, vomiting, diarrhea - very common)", "cardiovascular": "Moderate (bradycardia, syncope, especially in patients with cardiac conduction abnormalities)", "neurologic": "Moderate (insomnia, nightmares, muscle cramps)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Cognitive function (Alzheimer's disease progression)",
+                    "Gastrointestinal symptoms (nausea, vomiting, diarrhea) - very common, usually improves over time",
+                    "Heart rate and ECG (bradycardia risk, especially in patients with cardiac conduction abnormalities) - CRITICAL",
+                    "Blood pressure (syncope risk)",
+                    "Sleep patterns (insomnia, nightmares)",
+                    "Muscle cramps"
+                ],
+                "look_alike_sound_alike": ["Rivastigmine", "Exelon", "Exelon Patch", "Donepezil"]
+            },
+            "guideline_tags": [
+                "AAN Dementia Treatment Guidelines",
+                "AAIC Alzheimer's Disease Treatment Guidelines",
+                "NICE Dementia Treatment Guidelines",
+                "FDA Drug Label - Rivastigmine (bradycardia and syncope warnings)"
+            ]
+        },
+
+        "Galantamine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"gastrointestinal": "High (nausea, vomiting, diarrhea - very common)", "cardiovascular": "Moderate (bradycardia, syncope, especially in patients with cardiac conduction abnormalities)", "neurologic": "Moderate (insomnia, nightmares, muscle cramps)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Cognitive function (Alzheimer's disease progression)",
+                    "Gastrointestinal symptoms (nausea, vomiting, diarrhea) - very common, usually improves over time",
+                    "Heart rate and ECG (bradycardia risk, especially in patients with cardiac conduction abnormalities) - CRITICAL",
+                    "Blood pressure (syncope risk)",
+                    "Sleep patterns (insomnia, nightmares)",
+                    "Muscle cramps",
+                    "Renal function (CrCl) - adjust dose if CrCl <9"
+                ],
+                "look_alike_sound_alike": ["Galantamine", "Razadyne", "Donepezil", "Rivastigmine"]
+            },
+            "guideline_tags": [
+                "AAN Dementia Treatment Guidelines",
+                "AAIC Alzheimer's Disease Treatment Guidelines",
+                "NICE Dementia Treatment Guidelines",
+                "FDA Drug Label - Galantamine (bradycardia and syncope warnings)"
+            ]
+        },
+
+        "Pramipexole": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neuropsychiatric": "High (hallucinations, psychosis, impulse control disorders, sleep attacks)", "cardiovascular": "Moderate (orthostatic hypotension, syncope)", "gastrointestinal": "Moderate (nausea, vomiting)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Parkinson's disease symptoms (motor fluctuations, dyskinesias)",
+                    "Neuropsychiatric symptoms (hallucinations, psychosis, impulse control disorders) - CRITICAL",
+                    "Sleep attacks (sudden sleep episodes) - CRITICAL",
+                    "Blood pressure (orthostatic hypotension, syncope)",
+                    "Gastrointestinal symptoms (nausea, vomiting)",
+                    "Renal function (CrCl) - adjust dose if CrCl <50"
+                ],
+                "look_alike_sound_alike": ["Pramipexole", "Mirapex", "Ropinirole"]
+            },
+            "guideline_tags": [
+                "MDS Evidence-Based Medicine Review - Parkinson's Disease",
+                "AAN Parkinson's Disease Treatment Guidelines",
+                "NICE Parkinson's Disease Guidelines",
+                "FDA Black Box Warning - Sleep Attacks",
+                "FDA Drug Label - Pramipexole (hallucinations, impulse control disorders, and sleep attacks warnings)"
+            ]
+        },
+
+        "Ropinirole": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neuropsychiatric": "High (hallucinations, psychosis, impulse control disorders, sleep attacks)", "cardiovascular": "Moderate (orthostatic hypotension, syncope)", "gastrointestinal": "Moderate (nausea, vomiting)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Parkinson's disease symptoms (motor fluctuations, dyskinesias)",
+                    "Neuropsychiatric symptoms (hallucinations, psychosis, impulse control disorders) - CRITICAL",
+                    "Sleep attacks (sudden sleep episodes) - CRITICAL",
+                    "Blood pressure (orthostatic hypotension, syncope)",
+                    "Gastrointestinal symptoms (nausea, vomiting)",
+                    "Hepatic function (ALT, AST) - adjust dose if hepatic impairment"
+                ],
+                "look_alike_sound_alike": ["Ropinirole", "Requip", "Pramipexole"]
+            },
+            "guideline_tags": [
+                "MDS Evidence-Based Medicine Review - Parkinson's Disease",
+                "AAN Parkinson's Disease Treatment Guidelines",
+                "NICE Parkinson's Disease Guidelines",
+                "FDA Black Box Warning - Sleep Attacks",
+                "FDA Drug Label - Ropinirole (hallucinations, impulse control disorders, and sleep attacks warnings)"
+            ]
+        },
+
 }
 
 __all__ = ["NEUROLOGICAL_ENHANCED_FIELDS"]
