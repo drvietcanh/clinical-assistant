@@ -400,6 +400,167 @@ RESPIRATORY_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 3: LAMA, LABA, MAST CELL STABILIZERS, BIOLOGICS ========================
+        "Aclidinium": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"ophthalmic": "High (increased intraocular pressure, angle-closure glaucoma - if enters eye, Black Box Warning)", "genitourinary": "Moderate (urinary retention - especially in BPH patients)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Bronchodilator response (peak flow, FEV1)",
+                    "Intraocular pressure - CRITICAL (if eye exposure, especially in glaucoma patients)",
+                    "Signs of eye irritation (redness, pain, blurred vision) - CRITICAL",
+                    "Urinary retention (especially in BPH patients)",
+                    "Dry mouth (common, may affect oral health)"
+                ],
+                "look_alike_sound_alike": ["Aclidinium", "Tudorza", "Tiotropium", "Ipratropium"]
+            },
+            "guideline_tags": [
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Eye Exposure (Increased Intraocular Pressure, Angle-Closure Glaucoma)",
+                "FDA Drug Label - Aclidinium (eye exposure warning)"
+            ]
+        },
+
+        "Indacaterol": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "Moderate (tachycardia, arrhythmias)", "metabolic": "Moderate (hypokalemia)", "respiratory": "Low (paradoxical bronchospasm - rare but serious)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Heart rate and blood pressure (especially when starting treatment)",
+                    "Bronchodilator response (peak flow, FEV1)",
+                    "Signs of paradoxical bronchospasm (worsening wheezing) - CRITICAL (rare but serious)",
+                    "Signs of overdose (tachycardia >120 bpm, severe tremor, arrhythmias)",
+                    "Frequency of SABA use (if increasing, need to reassess treatment)",
+                    "Drug interactions (beta-blockers - CONTRAINDICATED, theophylline, digoxin) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Indacaterol", "Onbrez", "Arcapta", "Formoterol", "Salmeterol"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Never Use Alone for Asthma (Must Combine with ICS)",
+                "FDA Drug Label - Indacaterol (asthma-related death warning)"
+            ]
+        },
+
+        "Olodaterol": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiovascular": "Moderate (tachycardia, arrhythmias)", "metabolic": "Moderate (hypokalemia)", "respiratory": "Low (paradoxical bronchospasm - rare but serious)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Heart rate and blood pressure (especially when starting treatment)",
+                    "Bronchodilator response (peak flow, FEV1)",
+                    "Signs of paradoxical bronchospasm (worsening wheezing) - CRITICAL (rare but serious)",
+                    "Signs of overdose (tachycardia >120 bpm, severe tremor, arrhythmias)",
+                    "Frequency of SABA use (if increasing, need to reassess treatment)",
+                    "Drug interactions (beta-blockers - CONTRAINDICATED, theophylline, digoxin) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Olodaterol", "Striverdi", "Indacaterol", "Formoterol"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "GOLD Guidelines - COPD Management",
+                "FDA Black Box Warning - Never Use Alone for Asthma (Must Combine with ICS)",
+                "FDA Drug Label - Olodaterol (asthma-related death warning)"
+            ]
+        },
+
+        "Cromolyn": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"respiratory": "Low (cough, throat irritation - common local side effects)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Asthma response (symptoms, exacerbation frequency, SABA use)",
+                    "Cough, throat irritation (common local side effects)",
+                    "Frequency of SABA use (if increasing, need to reassess treatment)"
+                ],
+                "look_alike_sound_alike": ["Cromolyn", "Intal", "Nedocromil"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "FDA Drug Label - Cromolyn (mast cell stabilizer)"
+            ]
+        },
+
+        "Benralizumab": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"immunologic": "Moderate (injection site reactions - common, serious infections - rare, allergic reactions - rare)", "hematologic": "Moderate (eosinophil depletion - expected, may reach 0)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Asthma response (symptoms, exacerbation frequency, FEV1) - CRITICAL",
+                    "Eosinophil count - CRITICAL (may decrease to 0, expected effect)",
+                    "Injection site reactions (pain, redness, swelling)",
+                    "Signs of serious infection",
+                    "Signs of allergic reaction",
+                    "Vaccine status (avoid live vaccines during and after treatment)"
+                ],
+                "look_alike_sound_alike": ["Benralizumab", "Fasenra", "Mepolizumab", "Omalizumab"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "FDA Drug Label - Benralizumab (severe eosinophilic asthma)",
+                "UpToDate - Benralizumab: Drug Information"
+            ]
+        },
+
+        "Omalizumab": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"immunologic": "High (anaphylaxis - Black Box Warning, injection site reactions - common)", "cardiovascular": "Moderate (thromboembolic events - rare but serious)", "hematologic": "Low (eosinophilia - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Asthma response (symptoms, exacerbation frequency, FEV1) - CRITICAL",
+                    "Anaphylaxis - CRITICAL (Black Box Warning, monitor for 2 hours after injection)",
+                    "Injection site reactions (pain, redness, swelling)",
+                    "Signs of thromboembolic events (DVT, PE, stroke, MI)",
+                    "Total IgE levels (baseline and during treatment)",
+                    "Vaccine status (avoid live vaccines during and after treatment)"
+                ],
+                "look_alike_sound_alike": ["Omalizumab", "Xolair", "Benralizumab", "Mepolizumab"]
+            },
+            "guideline_tags": [
+                "GINA Guidelines - Asthma Management",
+                "FDA Black Box Warning - Anaphylaxis (Monitor for 2 Hours After Injection)",
+                "FDA Black Box Warning - Malignant Neoplasms",
+                "FDA Drug Label - Omalizumab (anaphylaxis and malignancy warnings)"
+            ]
+        },
+
         # ======================== RESPIRATORY – THEOPHYLLINE (OLD DATA - TO BE REMOVED) ========================
         "Amikacin": {
             "drug_interactions": {
