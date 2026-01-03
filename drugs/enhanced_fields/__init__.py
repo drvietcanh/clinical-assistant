@@ -4,6 +4,7 @@ Combines all enhanced fields from category-specific files
 """
 from typing import Any, Dict
 
+from .analgesics import ANALGESICS_ENHANCED_FIELDS
 from .antimicrobial import ANTIMICROBIAL_ENHANCED_FIELDS
 from .cardiovascular import CARDIOVASCULAR_ENHANCED_FIELDS
 from .diabetes import DIABETES_ENHANCED_FIELDS
@@ -15,6 +16,7 @@ from .respiratory import RESPIRATORY_ENHANCED_FIELDS
 
 # Combine all enhanced fields
 EXTRA_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
+    **ANALGESICS_ENHANCED_FIELDS,
     **ANTIMICROBIAL_ENHANCED_FIELDS,
     **CARDIOVASCULAR_ENHANCED_FIELDS,
     **DIABETES_ENHANCED_FIELDS,
