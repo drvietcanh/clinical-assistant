@@ -4939,4 +4939,233 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+    # ======================== SESSION 6: SSRIs, SNRIs, TCAs & STATINS ========================
+        "Fluoxetine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "neuropsychiatric": "High (suicidal ideation and behavior - increased risk in children, adolescents, and young adults <24 years, Black Box Warning)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mood and depressive/anxiety symptoms - CRITICAL (periodic assessment)",
+                    "Signs of suicidal ideation and behavior - CRITICAL (increased risk in first few weeks, especially in <24 years old, Black Box Warning)",
+                    "Signs of serotonin syndrome (if used with other serotonergic drugs) - CRITICAL",
+                    "Long half-life - CRITICAL (4-6 days, active metabolite norfluoxetine 4-16 days, effects persist long after discontinuation)",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, CYP2D6 inhibitors - may increase levels) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Fluoxetine", "Prozac", "Citalopram", "Sertraline"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior (Increased Risk in Children, Adolescents, and Young Adults <24 Years)",
+                "FDA Drug Label - Fluoxetine (Prozac)",
+                "APA Guidelines - Depression Treatment",
+                "NICE Guidelines - Depression Treatment"
+            ]
+        },
+
+        "Escitalopram": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "neuropsychiatric": "High (suicidal ideation and behavior - increased risk in children, adolescents, and young adults <24 years, Black Box Warning)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mood and depressive/anxiety symptoms - CRITICAL (periodic assessment)",
+                    "Signs of suicidal ideation and behavior - CRITICAL (increased risk in first few weeks, especially in <24 years old, Black Box Warning)",
+                    "Signs of serotonin syndrome (if used with other serotonergic drugs) - CRITICAL",
+                    "INR (if used with warfarin) - CRITICAL (may increase bleeding risk)",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, warfarin - monitor INR) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Escitalopram", "Lexapro", "Citalopram", "Celexa"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior (Increased Risk in Children, Adolescents, and Young Adults <24 Years)",
+                "FDA Drug Label - Escitalopram (Lexapro)",
+                "APA Guidelines - Depression Treatment",
+                "NICE Guidelines - Depression Treatment"
+            ]
+        },
+
+        "Venlafaxine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "neuropsychiatric": "High (suicidal ideation and behavior - increased risk in children, adolescents, and young adults <24 years, Black Box Warning)",
+                    "cardiovascular": "Moderate (hypertension - dose-dependent, especially at higher doses >225mg/day)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mood and depressive/anxiety symptoms - CRITICAL (periodic assessment)",
+                    "Signs of suicidal ideation and behavior - CRITICAL (increased risk in first few weeks, especially in <24 years old, Black Box Warning)",
+                    "Blood pressure - CRITICAL (hypertension risk, especially at higher doses >225mg/day)",
+                    "Heart rate - CRITICAL (tachycardia can occur)",
+                    "Signs of serotonin syndrome (if used with other serotonergic drugs) - CRITICAL",
+                    "Signs of withdrawal when discontinuing - CRITICAL (withdrawal syndrome common if stopped abruptly)",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Venlafaxine", "Effexor", "Desvenlafaxine", "Pristiq"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior (Increased Risk in Children, Adolescents, and Young Adults <24 Years)",
+                "FDA Drug Label - Venlafaxine (Effexor)",
+                "APA Guidelines - Depression Treatment",
+                "NICE Guidelines - Depression Treatment"
+            ]
+        },
+
+        "Duloxetine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "neuropsychiatric": "High (suicidal ideation and behavior - increased risk in children, adolescents, and young adults <24 years, Black Box Warning)",
+                    "hepatic": "Moderate (hepatotoxicity - rare but serious, contraindicated in severe hepatic impairment, Black Box Warning)",
+                    "cardiovascular": "Moderate (hypertension - dose-dependent)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mood and depressive/anxiety symptoms - CRITICAL (periodic assessment)",
+                    "Signs of suicidal ideation and behavior - CRITICAL (increased risk in first few weeks, especially in <24 years old, Black Box Warning)",
+                    "Hepatic function (ALT, AST) - CRITICAL (hepatotoxicity risk, contraindicated in severe hepatic impairment, Black Box Warning)",
+                    "Blood pressure - CRITICAL (hypertension risk, especially at higher doses)",
+                    "Signs of serotonin syndrome (if used with other serotonergic drugs) - CRITICAL",
+                    "Signs of withdrawal when discontinuing - CRITICAL (withdrawal syndrome common if stopped abruptly)",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Duloxetine", "Cymbalta", "Venlafaxine", "Effexor"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior (Increased Risk in Children, Adolescents, and Young Adults <24 Years)",
+                "FDA Black Box Warning - Severe Hepatic Impairment (Contraindicated)",
+                "FDA Drug Label - Duloxetine (Cymbalta)",
+                "APA Guidelines - Depression Treatment",
+                "NICE Guidelines - Depression Treatment"
+            ]
+        },
+
+        "Amitriptyline": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (arrhythmias, AV block, QT prolongation - can be fatal in overdose, Black Box Warning)",
+                    "neuropsychiatric": "High (suicidal ideation and behavior - increased risk in children, adolescents, and young adults <24 years, Black Box Warning, overdose can be fatal)",
+                    "anticholinergic": "High (dry mouth, constipation, urinary retention, blurred vision, confusion - very common)"
+                },
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG - CRITICAL (before starting and periodically, QT prolongation, AV block risk, Black Box Warning)",
+                    "Heart rate and blood pressure - CRITICAL (arrhythmias, orthostatic hypotension)",
+                    "Mood and depressive symptoms - CRITICAL (periodic assessment)",
+                    "Signs of suicidal ideation and behavior - CRITICAL (increased risk in first few weeks, especially in <24 years old, Black Box Warning)",
+                    "Signs of overdose (tachycardia, arrhythmias, seizures, coma) - CRITICAL (can be fatal, Black Box Warning)",
+                    "Anticholinergic symptoms (dry mouth, constipation, urinary retention, blurred vision) - CRITICAL (very common)",
+                    "Drug interactions (MAO inhibitors - CONTRAINDICATED, quinidine/cimetidine - increase levels) - CRITICAL",
+                    "Prescribe limited quantities - CRITICAL (overdose can be fatal, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Amitriptyline", "Elavil", "Nortriptyline", "Imipramine"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior (Increased Risk in Children, Adolescents, and Young Adults <24 Years)",
+                "FDA Black Box Warning - Overdose Can Be Fatal (Cardiac Arrhythmias, Seizures, Coma)",
+                "FDA Drug Label - Amitriptyline (Elavil)",
+                "APA Guidelines - Depression Treatment",
+                "NICE Guidelines - Depression Treatment"
+            ]
+        },
+
+        "Atorvastatin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "musculoskeletal": "High (myopathy, rhabdomyolysis - rare but serious, can cause acute kidney injury, Black Box Warning)",
+                    "hepatic": "Moderate (hepatotoxicity - elevated transaminases, rare but can occur)",
+                    "metabolic": "Low (new-onset diabetes - slight increase in risk)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Muscle symptoms (myalgia, weakness) - CRITICAL (if severe, check CK, rhabdomyolysis risk, Black Box Warning)",
+                    "Creatine kinase (CK) - CRITICAL (if muscle symptoms, stop if CK >10x ULN, Black Box Warning)",
+                    "Hepatic function (ALT, AST) - CRITICAL (before starting, then if symptoms, hepatotoxicity risk)",
+                    "Lipid profile (LDL, HDL, triglycerides) - CRITICAL (after 4-12 weeks, assess response)",
+                    "Blood glucose - CRITICAL (new-onset diabetes risk, slight increase)",
+                    "Drug interactions (CYP3A4 inhibitors - increase levels, fibrates - increase rhabdomyolysis risk, grapefruit juice - avoid) - CRITICAL",
+                    "Pregnancy test - CRITICAL (contraindicated in pregnancy, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Atorvastatin", "Lipitor", "Simvastatin", "Rosuvastatin"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Myopathy and Rhabdomyolysis (Can Cause Acute Kidney Injury)",
+                "FDA Black Box Warning - Teratogenicity (Contraindicated in Pregnancy)",
+                "FDA Drug Label - Atorvastatin (Lipitor)",
+                "ACC/AHA 2018 Cholesterol Guidelines",
+                "ESC/EAS Guidelines for Dyslipidaemias 2019"
+            ]
+        },
+
+        "Simvastatin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "musculoskeletal": "High (myopathy, rhabdomyolysis - higher risk than atorvastatin, especially with 80mg dose, Black Box Warning)",
+                    "hepatic": "Moderate (hepatotoxicity - elevated transaminases, rare but can occur)",
+                    "metabolic": "Low (new-onset diabetes - slight increase in risk)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Muscle symptoms (myalgia, weakness) - CRITICAL (if severe, check CK, rhabdomyolysis risk, Black Box Warning)",
+                    "Creatine kinase (CK) - CRITICAL (if muscle symptoms, stop if CK >10x ULN, Black Box Warning)",
+                    "Hepatic function (ALT, AST) - CRITICAL (before starting, then if symptoms, hepatotoxicity risk)",
+                    "Lipid profile (LDL, HDL, triglycerides) - CRITICAL (after 4 weeks, assess response)",
+                    "Dose limit - CRITICAL (80mg dose NOT recommended except in patients stable on 80mg for >12 months, Black Box Warning)",
+                    "Drug interactions (CYP3A4 inhibitors - increase levels significantly, amiodarone - limit to ≤20mg/day, diltiazem/verapamil - limit to ≤10mg/day, fibrates - increase rhabdomyolysis risk, grapefruit juice - avoid) - CRITICAL",
+                    "Pregnancy test - CRITICAL (contraindicated in pregnancy, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Simvastatin", "Zocor", "Atorvastatin", "Lovastatin"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Myopathy and Rhabdomyolysis (Higher Risk, Especially with 80mg Dose)",
+                "FDA Black Box Warning - 80mg Dose NOT Recommended (Except in Patients Stable on 80mg for >12 Months)",
+                "FDA Black Box Warning - Teratogenicity (Contraindicated in Pregnancy)",
+                "FDA Drug Label - Simvastatin (Zocor)",
+                "FDA Drug Safety Communication - Simvastatin 80mg",
+                "ACC/AHA 2018 Cholesterol Guidelines"
+            ]
+        },
+
 }
