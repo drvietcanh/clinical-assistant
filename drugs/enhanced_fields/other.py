@@ -402,24 +402,65 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
 
         "Dipyridamole": {
             "risk_flags": {
-                "high_alert": True,
+                "high_alert": False,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "cardiovascular": "Moderate (vasodilation - can cause headache, hypotension, especially with IV form)",
+                    "hematologic": "Low (bleeding - less common than other antiplatelets)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (epistaxis, gingival bleeding, melena) - CRITICAL (less common than other antiplatelets but can occur)",
+                    "Headache - CRITICAL (very common, due to vasodilation, may decrease with time or dose reduction)",
+                    "Blood pressure - CRITICAL (hypotension can occur, especially with IV form)",
+                    "Heart rate - CRITICAL (tachycardia can occur due to vasodilation)",
+                    "Drug interactions (aspirin - used together, warfarin - increases bleeding risk) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Dipyridamole", "Persantine", "Dipyridamole"]
             },
+            "guideline_tags": [
+                "AHA/ASA Guidelines - Stroke Secondary Prevention",
+                "ESC Guidelines - Antiplatelet Therapy (Secondary Prevention)",
+                "FDA Drug Label - Dipyridamole (Persantine)"
+            ]
         },
 
         "Dobutamine": {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
-                "icu_critical_care_only": False,
+                "icu_critical_care_only": True,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (arrhythmias - very common, tachycardia, can be serious, myocardial ischemia - especially in CAD)",
+                    "cardiovascular": "Moderate (hypotension - can occur due to vasodilation, especially at higher doses)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG - CRITICAL (continuous monitoring, arrhythmias very common, myocardial ischemia risk)",
+                    "Heart rate - CRITICAL (tachycardia very common, can be serious)",
+                    "Blood pressure - CRITICAL (hypotension can occur due to vasodilation, especially at higher doses)",
+                    "Cardiac output and hemodynamics - CRITICAL (if available, monitor response to therapy)",
+                    "Signs of myocardial ischemia (chest pain, ST changes) - CRITICAL (especially in CAD patients)",
+                    "Arrhythmias (atrial fibrillation, ventricular arrhythmias) - CRITICAL (very common, can be serious)",
+                    "Infusion site - CRITICAL (extravasation can cause tissue necrosis, use central line if possible)",
+                    "Drug interactions (beta-blockers - may antagonize effects, MAOIs - may increase effects) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Dobutamine", "Dobutrex", "Dopamine", "Dobutamine"]
             },
+            "guideline_tags": [
+                "AHA/ACC Guidelines - Heart Failure",
+                "AHA/ACC Guidelines - Cardiogenic Shock",
+                "SCCM Guidelines - Shock Management",
+                "ESC Guidelines - Heart Failure",
+                "FDA Drug Label - Dobutamine (Dobutrex)"
+            ]
         },
 
         "Docetaxel": {
