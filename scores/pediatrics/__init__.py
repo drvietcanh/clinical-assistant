@@ -36,6 +36,7 @@ def render_pediatrics_calculator(calculator_id):
         "Pediatric SOFA": render_pediatric_sofa,
         "PECARN": render_pecarn,
         "DHAKA Score": render_dhaka,
+        "Pediatric Dosing": render_pediatric_dosing_calculator,
     }
     
     calculator_func = calculators.get(calculator_id)
