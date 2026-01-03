@@ -20,11 +20,34 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": True,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (AV block - can be severe, bradycardia - can be severe, Black Box Warning)",
+                    "respiratory": "Moderate (bronchospasm - can be severe in asthma/COPD, Black Box Warning)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG - CRITICAL (continuous monitoring, AV block can be severe, Black Box Warning)",
+                    "Heart rate - CRITICAL (bradycardia can be severe, Black Box Warning)",
+                    "Blood pressure - CRITICAL (hypotension can occur)",
+                    "Respiratory rate and SpO2 - CRITICAL (bronchospasm can be severe in asthma/COPD, Black Box Warning)",
+                    "Administration technique - CRITICAL (must inject IV bolus RAPIDLY in 1-2 seconds into large vein, then flush immediately with 10-20ml NS)",
+                    "Drug interactions (dipyridamole - reduce dose 50-75%, theophylline/caffeine - may need higher dose) - CRITICAL",
+                    "Half-life - CRITICAL (<10 seconds, very short, effects usually resolve within seconds to minutes)"
+                ],
+                "look_alike_sound_alike": ["Adenosine", "Adenocard", "Adenosine"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - AV Block (Can Be Severe)",
+                "FDA Black Box Warning - Bradycardia (Can Be Severe)",
+                "FDA Black Box Warning - Bronchospasm (Can Be Severe in Asthma/COPD)",
+                "FDA Drug Label - Adenosine (Adenocard)",
+                "ACC/AHA/ESC Guidelines - Supraventricular Tachycardia",
+                "AHA ACLS Guidelines - SVT Management"
+            ]
         },
 
         "Alteplase": {
