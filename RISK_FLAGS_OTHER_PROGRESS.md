@@ -2,7 +2,7 @@
 
 ## Tổng quan
 - **Tổng số thuốc:** 216 thuốc
-- **Tiến độ hiện tại:** 27/216 thuốc (13%)
+- **Tiến độ hiện tại:** 34/216 thuốc (16%)
 - **Trạng thái:** Đang thực hiện (in_progress)
 - **Thời gian dự kiến:** Week 10-14, 15-20 sessions
 
@@ -123,6 +123,26 @@
 
 ---
 
+### Session 8 - Vasopressors, TCAs & Statins (continued) (7 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Vasopressors/Inotropes:**
+- ✅ **Epinephrine** - Anaphylaxis, cardiac arrest (tachycardia, arrhythmias, hypertension, myocardial ischemia - can be fatal, intracranial hemorrhage risk, hyperglycemia, lactic acidosis, high_alert)
+- ✅ **Norepinephrine** - Septic shock, shock (peripheral ischemia/tissue necrosis - Black Box Warning, extravasation can cause severe tissue necrosis - Black Box Warning, renal ischemia, arrhythmias, myocardial ischemia, high_alert, ICU critical care only)
+- ✅ **Dopamine** - Shock, heart failure (tachycardia, arrhythmias - very common, peripheral ischemia/tissue necrosis, dose-dependent effects, high_alert, ICU critical care only)
+- ✅ **Vasopressin** - Septic shock (adjunctive), shock (myocardial ischemia, peripheral ischemia/tissue necrosis, renal ischemia, mesenteric ischemia - rare but serious, decreased cardiac output, high_alert, ICU critical care only)
+
+**Nhóm TCAs:**
+- ✅ **Clomipramine** - OCD, depression (suicidal ideation and behavior - Black Box Warning, overdose can be fatal - cardiac arrhythmias, seizures, coma, Black Box Warning, serotonin syndrome if used with SSRIs/MAOIs - Black Box Warning, high_alert, narrow_therapeutic_index, QT prolongation, strongest serotonergic TCA)
+
+**Nhóm Statins:**
+- ✅ **Pravastatin** - Hypercholesterolemia, cardiovascular prevention (myopathy/rhabdomyolysis - lower risk than other statins, hepatotoxicity, fewer drug interactions - not metabolized by CYP450)
+- ✅ **Lovastatin** - Hypercholesterolemia, cardiovascular prevention (myopathy/rhabdomyolysis - especially with drug interactions, Black Box Warning, teratogenicity - Black Box Warning, many CYP3A4 interactions)
+
+**Tổng Session 8:** 7 thuốc
+
+---
+
 ## Tổng kết các Session
 
 | Session | Số thuốc | Nhóm thuốc chính | Trạng thái |
@@ -134,9 +154,10 @@
 | Session 5 | 5 | Corticosteroids, SSRIs | ✅ Hoàn thành |
 | Session 6 | 7 | SSRIs, SNRIs, TCAs, Statins | ✅ Hoàn thành |
 | Session 7 | 4 | SSRIs, TCAs, Statins (continued) | ✅ Hoàn thành |
-| **TỔNG CỘNG** | **27** | - | **13% hoàn thành** |
+| Session 8 | 7 | Vasopressors, TCAs, Statins (continued) | ✅ Hoàn thành |
+| **TỔNG CỘNG** | **34** | - | **16% hoàn thành** |
 
-## Các thuốc đã hoàn thành (27 thuốc)
+## Các thuốc đã hoàn thành (34 thuốc)
 
 1. ✅ Clopidogrel
 2. ✅ Amiodarone
@@ -166,6 +187,13 @@
 26. ✅ Fluvoxamine
 27. ✅ Nortriptyline
 28. ✅ Rosuvastatin
+29. ✅ Epinephrine
+30. ✅ Norepinephrine
+31. ✅ Dopamine
+32. ✅ Vasopressin
+33. ✅ Clomipramine
+34. ✅ Pravastatin
+35. ✅ Lovastatin
 
 ## Các nhóm thuốc đã bao phủ
 
@@ -179,8 +207,9 @@
 - ✅ Corticosteroids (Prednisone, Methylprednisolone, Dexamethasone)
 - ✅ SSRIs (Citalopram, Sertraline, Fluoxetine, Escitalopram, Paroxetine, Fluvoxamine)
 - ✅ SNRIs (Venlafaxine, Duloxetine)
-- ✅ TCAs (Amitriptyline, Nortriptyline)
-- ✅ Statins (Atorvastatin, Simvastatin, Rosuvastatin)
+- ✅ TCAs (Amitriptyline, Nortriptyline, Clomipramine)
+- ✅ Statins (Atorvastatin, Simvastatin, Rosuvastatin, Pravastatin, Lovastatin)
+- ✅ Vasopressors/Inotropes (Epinephrine, Norepinephrine, Dopamine, Vasopressin, Dobutamine)
 
 ## Các nhóm thuốc còn lại cần bổ sung
 
@@ -222,14 +251,15 @@
 - **Session 5:** `feat: Add comprehensive risk_flags and guideline_tags for 5 additional Other drugs - Session 5 (Prednisone, Methylprednisolone, Dexamethasone, Citalopram, Sertraline)`
 - **Session 6:** `feat: Add comprehensive risk_flags and guideline_tags for 7 additional Other drugs - Session 6 (Fluoxetine, Escitalopram, Venlafaxine, Duloxetine, Amitriptyline, Atorvastatin, Simvastatin)`
 - **Session 7:** `feat: Add comprehensive risk_flags and guideline_tags for 4 additional Other drugs - Session 7 (Paroxetine, Fluvoxamine, Nortriptyline, Rosuvastatin)`
+- **Session 8:** `feat: Add comprehensive risk_flags and guideline_tags for 7 additional Other drugs - Session 8 (Epinephrine, Norepinephrine, Dopamine, Vasopressin, Clomipramine, Pravastatin, Lovastatin)`
 
 ## Next Steps
 
-1. Tiếp tục Session 8 với các thuốc quan trọng khác:
-   - TCAs khác (Imipramine, Clomipramine)
-   - Statins khác (Pravastatin, Lovastatin)
+1. Tiếp tục Session 9 với các thuốc quan trọng khác:
+   - TCAs khác (Imipramine)
    - Các thuốc ICU/cấp cứu khác
    - Các thuốc miscellaneous khác
+   - Các thuốc cardiovascular khác
 
 2. Đảm bảo không trùng lặp với các nhóm đã xử lý
 
@@ -238,5 +268,5 @@
 ---
 
 **Cập nhật lần cuối:** 2025-02-18
-**Phiên làm việc:** Session 7 hoàn thành
+**Phiên làm việc:** Session 8 hoàn thành
 
