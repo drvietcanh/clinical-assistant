@@ -560,6 +560,270 @@ DIABETES_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        # ======================== SESSION 3: ADDITIONAL SGLT2, GLP-1, SULFONYLUREAS, INSULINS ========================
+        "Gliclazide": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (hypoglycemia risk)",
+                    "HbA1c (every 3 months)",
+                    "Signs of hypoglycemia (tremor, sweating, tachycardia, hunger, confusion, seizures, coma) - CRITICAL",
+                    "Renal function (CrCl, eGFR) - increased hypoglycemia risk in renal impairment",
+                    "Hepatic function (ALT, AST) - increased hypoglycemia risk in hepatic impairment",
+                    "Weight (sulfonylureas can cause weight gain)"
+                ],
+                "look_alike_sound_alike": ["Gliclazide", "Diamicron", "Glibenclamide", "Glimepiride"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "FDA Drug Label - Gliclazide (hypoglycemia warning)"
+            ]
+        },
+
+        "Dulaglutide": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"gastrointestinal": "High (nausea, vomiting, diarrhea - very common ~40%)", "pancreatic": "Moderate (acute pancreatitis risk)", "thyroid": "Moderate (medullary thyroid carcinoma risk - contraindicated)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose (HbA1c, glucose)",
+                    "Signs of acute pancreatitis (severe abdominal pain, nausea, vomiting) - CRITICAL",
+                    "Gastrointestinal symptoms (nausea, vomiting, diarrhea) - very common, usually improves over time",
+                    "Thyroid examination (medullary thyroid carcinoma risk - contraindicated in personal/family history)",
+                    "Weight (weight loss is expected effect)"
+                ],
+                "look_alike_sound_alike": ["Dulaglutide", "Trulicity", "Liraglutide", "Semaglutide"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "REWIND Trial - Cardiovascular Benefits",
+                "FDA Black Box Warning - Thyroid C-Cell Tumors (medullary thyroid carcinoma)",
+                "FDA Drug Label - Dulaglutide (pancreatitis and thyroid cancer warnings)"
+            ]
+        },
+
+        "Exenatide": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"gastrointestinal": "High (nausea, vomiting, diarrhea - very common ~40%)", "pancreatic": "Moderate (acute pancreatitis risk)", "thyroid": "Moderate (medullary thyroid carcinoma risk - contraindicated)", "renal": "Moderate (acute kidney injury risk, especially with dehydration)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose (HbA1c, glucose)",
+                    "Signs of acute pancreatitis (severe abdominal pain, nausea, vomiting) - CRITICAL",
+                    "Gastrointestinal symptoms (nausea, vomiting, diarrhea) - very common, usually improves over time",
+                    "Thyroid examination (medullary thyroid carcinoma risk - contraindicated in personal/family history)",
+                    "Renal function (creatinine, eGFR) - CRITICAL (acute kidney injury risk, especially with dehydration)",
+                    "Weight (weight loss is expected effect)"
+                ],
+                "look_alike_sound_alike": ["Exenatide", "Byetta", "Bydureon", "Liraglutide"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "FDA Black Box Warning - Thyroid C-Cell Tumors (medullary thyroid carcinoma)",
+                "FDA Drug Label - Exenatide (pancreatitis, thyroid cancer, and acute kidney injury warnings)"
+            ]
+        },
+
+        "Insulin Glargine": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (before meals, 2 hours postprandial, bedtime)",
+                    "HbA1c (every 3 months, target <7% or individualized)",
+                    "Signs of hypoglycemia (tremor, sweating, tachycardia, hunger, confusion, seizures, coma) - CRITICAL",
+                    "Signs of hyperglycemia (polydipsia, polyuria, fatigue, blurred vision)",
+                    "Weight (insulin can cause weight gain)",
+                    "Injection site (rotate sites to avoid lipodystrophy)"
+                ],
+                "look_alike_sound_alike": ["Insulin Glargine", "Lantus", "Toujeo", "Basaglar", "Insulin Detemir"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "ADA Type 1 Diabetes Management Guidelines",
+                "ISMP High Alert Medications - Insulin",
+                "FDA Drug Label - Insulin Glargine (hypoglycemia warning)"
+            ]
+        },
+
+        "Insulin Lispro": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (before meals, 2 hours postprandial, bedtime)",
+                    "HbA1c (every 3 months, target <7% or individualized)",
+                    "Signs of hypoglycemia (tremor, sweating, tachycardia, hunger, confusion, seizures, coma) - CRITICAL",
+                    "Signs of hyperglycemia (polydipsia, polyuria, fatigue, blurred vision)",
+                    "Weight (insulin can cause weight gain)",
+                    "Injection site (rotate sites to avoid lipodystrophy)"
+                ],
+                "look_alike_sound_alike": ["Insulin Lispro", "Humalog", "Admelog", "Insulin Aspart", "Insulin Glulisine"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "ADA Type 1 Diabetes Management Guidelines",
+                "ISMP High Alert Medications - Insulin",
+                "FDA Drug Label - Insulin Lispro (hypoglycemia warning)"
+            ]
+        },
+
+        "Insulin Aspart": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (before meals, 2 hours postprandial, bedtime)",
+                    "HbA1c (every 3 months, target <7% or individualized)",
+                    "Signs of hypoglycemia (tremor, sweating, tachycardia, hunger, confusion, seizures, coma) - CRITICAL",
+                    "Signs of hyperglycemia (polydipsia, polyuria, fatigue, blurred vision)",
+                    "Weight (insulin can cause weight gain)",
+                    "Injection site (rotate sites to avoid lipodystrophy)"
+                ],
+                "look_alike_sound_alike": ["Insulin Aspart", "NovoRapid", "Fiasp", "Insulin Lispro", "Insulin Glulisine"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "ADA Type 1 Diabetes Management Guidelines",
+                "ISMP High Alert Medications - Insulin",
+                "FDA Drug Label - Insulin Aspart (hypoglycemia warning)"
+            ]
+        },
+
+        "Insulin Degludec": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (before meals, 2 hours postprandial, bedtime)",
+                    "HbA1c (every 3 months, target <7% or individualized)",
+                    "Signs of hypoglycemia (tremor, sweating, tachycardia, hunger, confusion, seizures, coma) - CRITICAL",
+                    "Signs of hyperglycemia (polydipsia, polyuria, fatigue, blurred vision)",
+                    "Weight (insulin can cause weight gain)",
+                    "Injection site (rotate sites to avoid lipodystrophy)"
+                ],
+                "look_alike_sound_alike": ["Insulin Degludec", "Tresiba", "Insulin Glargine", "Insulin Detemir"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "ADA Type 1 Diabetes Management Guidelines",
+                "ISMP High Alert Medications - Insulin",
+                "FDA Drug Label - Insulin Degludec (hypoglycemia warning)"
+            ]
+        },
+
+        "Ertugliflozin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"genitourinary": "Moderate (genital mycotic infections, UTI)", "metabolic": "Moderate (euglycemic DKA risk)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose (HbA1c, glucose) - but hypoglycemia risk is low",
+                    "Signs of euglycemic DKA (nausea, vomiting, abdominal pain, dyspnea) - CRITICAL (can occur with normal glucose)",
+                    "Genital mycotic infections (especially in women)",
+                    "Urinary tract infections",
+                    "Volume status (dehydration, hypotension risk, especially with diuretics)",
+                    "Renal function (eGFR) - contraindicated if eGFR <25"
+                ],
+                "look_alike_sound_alike": ["Ertugliflozin", "Steglatro", "Empagliflozin", "Dapagliflozin"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "VERTIS CV Trial - Cardiovascular Safety",
+                "FDA Drug Label - Ertugliflozin (euglycemic DKA warning)"
+            ]
+        },
+
+        "Alogliptin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"pancreatic": "Moderate (acute pancreatitis risk)", "joint": "Moderate (severe joint pain - rare)", "cardiac": "Low (slight increase in heart failure risk)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose (HbA1c, glucose) - but hypoglycemia risk is low",
+                    "Signs of acute pancreatitis (severe abdominal pain, nausea, vomiting) - CRITICAL",
+                    "Severe joint pain - rare, discontinue if occurs",
+                    "Signs of heart failure (dyspnea, edema) - slight increase in risk",
+                    "Renal function (CrCl) - adjust dose if CrCl <60"
+                ],
+                "look_alike_sound_alike": ["Alogliptin", "Nesina", "Sitagliptin", "Saxagliptin"]
+            },
+            "guideline_tags": [
+                "ADA Standards of Medical Care in Diabetes",
+                "AACE/ACE Comprehensive Diabetes Management Algorithm",
+                "EASD/ADA Type 2 Diabetes Management Consensus",
+                "EXAMINE Trial - Cardiovascular Safety",
+                "FDA Drug Label - Alogliptin (pancreatitis and heart failure warnings)"
+            ]
+        },
+
 }
 
 __all__ = ["DIABETES_ENHANCED_FIELDS"]
