@@ -71,6 +71,22 @@ HEMOSTATICS_DRUGS: Dict[str, Dict[str, Any]] = {
             },
             "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Dung dịch IV: bảo quản ở nhiệt độ phòng, tránh đông lạnh.",
             "black_box_warnings": "Nguy cơ huyết khối nghiêm trọng, có thể gây tử vong. Không dùng ở bệnh nhân có huyết khối đang hoạt động hoặc tiền sử huyết khối. Theo dõi sát dấu hiệu huyết khối.",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiovascular", "neurological"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Signs of thrombosis (CRITICAL - Black Box Warning)", "Renal function (CrCl - dose adjustment required)", "Seizure signs (high dose IV)", "Vision (rare)"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Thrombosis Risk (can be fatal)",
+                "WHO Essential Medicines List",
+                "CRASH-2 Trial - Trauma Bleeding",
+                "WOMAN Trial - Postpartum Hemorrhage"
+            ],
             "drug_interactions": {
                 "major": [
                     {

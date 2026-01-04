@@ -165,7 +165,35 @@ ADHD_ANXIOLYTICS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "None",
+            "organ_toxicity": {
+                "hepatic": "High (hepatotoxicity - rare but serious, can be fatal - Black Box Warning)",
+                "psychiatric": "High (increased risk of suicidal ideation in children and adolescents - Black Box Warning)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Hepatic function (ALT, AST) - CRITICAL (hepatotoxicity risk - rare but serious, can be fatal, stop immediately if signs of liver injury)",
+                "Signs of liver injury (jaundice, abdominal pain, fatigue) - CRITICAL (stop immediately)",
+                "Suicidal ideation and behavior (especially in children and adolescents) - CRITICAL (Black Box Warning)",
+                "Blood pressure, heart rate (mild increase)",
+                "Weight (decreased appetite)",
+                "Nausea (common at start)"
+            ],
+            "look_alike_sound_alike": ["Atomoxetine", "Atorvastatin", "Atenolol"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Atomoxetine and Suicidal Ideation in Children",
+            "FDA Black Box Warning - Atomoxetine and Hepatotoxicity",
+            "AAP Guidelines - ADHD Treatment",
+            "AACAP Guidelines - ADHD Medications"
+        ]
     },
     
     "Buspirone": {
@@ -314,7 +342,35 @@ ADHD_ANXIOLYTICS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "None",
+            "organ_toxicity": {
+                "cardiovascular": "Low (hypotension rare)",
+                "hepatic": "Low (hepatotoxicity rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Anxiety symptoms (treatment response)",
+                "Dizziness (common)",
+                "Nausea",
+                "Hepatic function (rare hepatotoxicity)",
+                "Blood pressure (hypotension rare)",
+                "Drug interactions with MAO inhibitors (increased risk of hypertension, serotonin syndrome)",
+                "Drug interactions with CYP3A4 inhibitors (increased buspirone levels)"
+            ],
+            "look_alike_sound_alike": ["Buspirone", "Bupropion", "Bisoprolol"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information - Buspirone",
+            "APA Guidelines - Anxiety Disorders",
+            "WHO Essential Medicines List"
+        ]
     },
     
     "Dextroamphetamine": {
@@ -486,7 +542,38 @@ ADHD_ANXIOLYTICS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "None",
+            "organ_toxicity": {
+                "cardiovascular": "High (hypertension, tachycardia, serious cardiovascular events - Black Box Warning)",
+                "psychiatric": "High (abuse and dependence risk - Black Box Warning, stimulant)",
+                "neurologic": "Moderate (tics, can worsen Tourette's syndrome)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Blood pressure, heart rate - CRITICAL (hypertension, tachycardia - Black Box Warning)",
+                "ECG (if cardiovascular disease or risk factors) - serious cardiovascular events risk",
+                "Signs of abuse and dependence - CRITICAL (Black Box Warning, stimulant)",
+                "Weight (decreased appetite)",
+                "Sleep (insomnia - common)",
+                "Tics (can worsen Tourette's syndrome)",
+                "Cardiac function (if cardiovascular disease)"
+            ],
+            "look_alike_sound_alike": ["Dextroamphetamine", "Dextromethorphan", "Dexamethasone"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Dextroamphetamine and Abuse/Dependence Risk",
+            "FDA Black Box Warning - Dextroamphetamine and Cardiovascular Risk",
+            "DEA Schedule II Controlled Substance",
+            "AAP Guidelines - ADHD Treatment",
+            "AACAP Guidelines - ADHD Medications"
+        ]
     },
     
     "Lisdexamfetamine": {
@@ -658,7 +745,37 @@ ADHD_ANXIOLYTICS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "None",
+            "organ_toxicity": {
+                "cardiovascular": "High (hypertension, tachycardia, serious cardiovascular events - Black Box Warning)",
+                "psychiatric": "High (abuse and dependence risk - Black Box Warning, stimulant prodrug, less abuse potential than dextroamphetamine)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Blood pressure, heart rate - CRITICAL (hypertension, tachycardia - Black Box Warning)",
+                "ECG (if cardiovascular disease or risk factors) - serious cardiovascular events risk",
+                "Signs of abuse and dependence - CRITICAL (Black Box Warning, stimulant, but less abuse potential than dextroamphetamine due to prodrug)",
+                "Weight (decreased appetite)",
+                "Sleep (insomnia - common, long duration 10-12 hours)",
+                "Tics (can worsen Tourette's syndrome)",
+                "Cardiac function (if cardiovascular disease)"
+            ],
+            "look_alike_sound_alike": ["Lisdexamfetamine", "Dextroamphetamine", "Dextromethorphan"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Lisdexamfetamine and Abuse/Dependence Risk",
+            "FDA Black Box Warning - Lisdexamfetamine and Cardiovascular Risk",
+            "DEA Schedule II Controlled Substance",
+            "AAP Guidelines - ADHD Treatment",
+            "AACAP Guidelines - ADHD Medications"
+        ]
     },
     "Methylphenidate": {
         "group": "Psychiatry - ADHD Medication (Stimulant)",
@@ -829,7 +946,38 @@ ADHD_ANXIOLYTICS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "None",
+            "organ_toxicity": {
+                "cardiovascular": "High (hypertension, tachycardia, serious cardiovascular events - Black Box Warning)",
+                "psychiatric": "High (abuse and dependence risk - Black Box Warning, stimulant)",
+                "neurologic": "Moderate (tics, can worsen Tourette's syndrome)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Blood pressure, heart rate - CRITICAL (hypertension, tachycardia - Black Box Warning)",
+                "ECG (if cardiovascular disease or risk factors) - serious cardiovascular events risk",
+                "Signs of abuse and dependence - CRITICAL (Black Box Warning, stimulant)",
+                "Weight (decreased appetite)",
+                "Sleep (insomnia - common)",
+                "Tics (can worsen Tourette's syndrome)",
+                "Cardiac function (if cardiovascular disease)"
+            ],
+            "look_alike_sound_alike": ["Methylphenidate", "Methadone", "Methotrexate"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Methylphenidate and Abuse/Dependence Risk",
+            "FDA Black Box Warning - Methylphenidate and Cardiovascular Risk",
+            "DEA Schedule II Controlled Substance",
+            "AAP Guidelines - ADHD Treatment",
+            "AACAP Guidelines - ADHD Medications"
+        ]
     },
     
 }

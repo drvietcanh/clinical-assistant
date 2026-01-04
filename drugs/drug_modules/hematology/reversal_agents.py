@@ -348,6 +348,22 @@ REVERSAL_AGENTS_DRUGS: Dict[str, Dict[str, Any]] = {
             },
             "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh đông lạnh. Dung dịch pha loãng: bảo quản ở nhiệt độ phòng, dùng trong 24 giờ.",
             "black_box_warnings": "Phản ứng dị ứng nghiêm trọng, có thể gây sốc phản vệ và tử vong. Đặc biệt nguy hiểm ở bệnh nhân dị ứng cá hoặc đã dùng protamine trước đó. Tiêm IV chậm và theo dõi sát.",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiovascular", "respiratory", "immunologic"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Blood pressure (hypotension common - Black Box Warning)", "aPTT (after 5-15 min to confirm reversal)", "Signs of allergic reaction/anaphylaxis (Black Box Warning - especially in fish allergy)", "Heart rate (bradycardia)", "Signs of bleeding"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Severe Allergic Reactions/Anaphylaxis (can be fatal)",
+                "FDA Black Box Warning - Fish Allergy (increased risk)",
+                "ACC/AHA Guidelines - Anticoagulation Reversal",
+                "WHO Essential Medicines List"
+            ],
             "drug_interactions": {
                 "major": [],
                 "moderate": [],

@@ -146,7 +146,22 @@ BPH_5_ALPHA_REDUCTASE_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["reproductive", "oncologic"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Black Box Warning - Pregnancy test (teratogenicity - Category X)", "PSA (decreases 50% - need to adjust for prostate cancer risk)", "Sexual function (decreased libido, ED, reduced ejaculate volume)", "Depression/anxiety signs", "High-grade prostate cancer (Black Box Warning - slight increased risk)"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - High-Grade Prostate Cancer Risk (slight increase)",
+                "FDA Black Box Warning - Teratogenicity (Category X - contraindicated in pregnancy)",
+                "AUA Guidelines - Benign Prostatic Hyperplasia"
+            ]
         },
 
         "Finasteride": {

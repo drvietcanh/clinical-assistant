@@ -544,6 +544,23 @@ GROWTH_FACTORS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Cần theo dõi tủy xương định kỳ. "
                 "NGUY CƠ TĂNG SINH TẾ BÀO TỦY XƯƠNG - với dùng dài ngày, có thể dẫn đến myeloproliferative disorders."
             ),
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["hematologic", "cardiovascular"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Platelet count (CRITICAL - adjust dose if >400,000/μL)", "Signs of thrombosis (Black Box Warning)", "Bone marrow fibrosis signs (long-term use)", "Myeloproliferative disorder signs (long-term use)"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Thrombosis Risk (platelet count >400,000/μL)",
+                "FDA Black Box Warning - Bone Marrow Fibrosis (long-term use)",
+                "FDA Black Box Warning - Myeloproliferative Disorders (long-term use)",
+                "ASH Guidelines - ITP Treatment",
+                "WHO Essential Medicines List"
+            ],
             "drug_interactions": {
                 "major": [
                     {

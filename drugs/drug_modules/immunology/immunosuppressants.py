@@ -96,7 +96,25 @@ IMMUNOSUPPRESSANTS_DRUGS = {
         "features": {
              "comparison_tacrolimus": "Cyclosporine gây phì đại lợi và rậm lông, Tacrolimus gây rụng tóc và đái tháo đường nhiều hơn."
         },
-        "monitoring": ["Nồng độ Cyclosporine máu", "Chức năng thận", "Huyết áp"]
+        "monitoring": ["Nồng độ Cyclosporine máu", "Chức năng thận", "Huyết áp"],
+        "black_box_warnings": "Nguy cơ độc tính thận (nephrotoxicity) có thể không hồi phục. Tăng nguy cơ nhiễm trùng và ung thư. Tăng huyết áp. Cần theo dõi nồng độ thuốc trong máu (TDM) nghiêm ngặt.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["renal", "cardiovascular", "oncologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["TDM required (trough levels - narrow therapeutic index)", "Renal function (creatinine, eGFR - Black Box Warning for nephrotoxicity)", "Blood pressure (hypertension)", "Lipid profile (hyperlipidemia)", "Infection signs (Black Box Warning - increased risk)", "Malignancy screening (Black Box Warning - increased risk)", "CYP3A4 interactions (grapefruit juice, macrolides, azole antifungals)"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Nephrotoxicity (may be irreversible)",
+            "FDA Black Box Warning - Increased Risk of Infection and Malignancy",
+            "KDIGO Guidelines - Kidney Transplant",
+            "AST Guidelines - Solid Organ Transplant",
+            "WHO Essential Medicines List"
+        ]
     },
 
     "Mycophenolate": {

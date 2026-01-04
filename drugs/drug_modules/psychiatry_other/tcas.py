@@ -237,7 +237,23 @@ TCA_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "High - Multiple RCTs and systematic reviews"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "neurological"],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG (QT prolongation, AV block - Black Box Warning)", "Blood pressure (orthostatic hypotension)", "Suicidal ideation (Black Box Warning - children/adolescents)", "Overdose risk (cardiotoxic - Black Box Warning)", "Anticholinergic symptoms"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Suicidal Behavior (Children/Adolescents)",
+            "FDA Black Box Warning - Overdose Risk (Cardiotoxic - can be fatal)",
+            "ISMP High Alert Medications",
+            "APA Guidelines - Depression"
+        ]
     },
     
     "Clomipramine": {
@@ -413,7 +429,24 @@ TCA_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "neurological"],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG (QT prolongation, AV block - Black Box Warning)", "Blood pressure (orthostatic hypotension)", "Suicidal ideation (Black Box Warning - children/adolescents)", "Overdose risk (cardiotoxic - Black Box Warning)", "Seizures (higher risk than other TCAs)", "Anticholinergic symptoms"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Suicidal Behavior (Children/Adolescents)",
+            "FDA Black Box Warning - Overdose Risk (Cardiotoxic - can be fatal)",
+            "FDA Black Box Warning - Seizures (higher risk than other TCAs)",
+            "ISMP High Alert Medications",
+            "APA Guidelines - OCD"
+        ]
     },
 }
 

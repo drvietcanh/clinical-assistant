@@ -198,7 +198,23 @@ SSRI_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "High - Multiple RCTs and systematic reviews"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac"],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG (QT prolongation - dose >40mg/day)", "Suicidal ideation (Black Box Warning)", "INR (if warfarin)"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - QT Prolongation (dose >40mg/day)",
+            "FDA Black Box Warning - Suicidal Behavior (Children/Adolescents)",
+            "APA Guidelines - Depression",
+            "APA Guidelines - Anxiety Disorders"
+        ]
     },
 
     "Escitalopram": {
@@ -378,7 +394,22 @@ SSRI_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "High - Multiple RCTs and systematic reviews"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Suicidal ideation (Black Box Warning - children/adolescents)", "INR (if warfarin)", "Serotonin syndrome signs"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Suicidal Behavior (Children/Adolescents)",
+            "APA Guidelines - Depression",
+            "APA Guidelines - Anxiety Disorders"
+        ]
     },
 
     "Fluvoxamine": {
@@ -614,7 +645,23 @@ SSRI_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs, clinical guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Suicidal ideation (Black Box Warning - children/adolescents)", "INR (if warfarin)", "Serotonin syndrome signs", "CYP450 interactions (many drugs)", "Blood pressure (if tizanidine - contraindicated)"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Suicidal Behavior (Children/Adolescents)",
+            "FDA Black Box Warning - Drug Interactions (CYP450 inhibition - many contraindications)",
+            "APA Guidelines - OCD",
+            "APA Guidelines - Depression"
+        ]
     },
     "Paroxetine": {
         "group": "Psychiatry - SSRI (Selective Serotonin Reuptake Inhibitor)",
@@ -821,7 +868,23 @@ SSRI_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "High - Multiple RCTs and systematic reviews"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Suicidal ideation (Black Box Warning - children/adolescents)", "Withdrawal symptoms (more common than other SSRIs)", "INR (if warfarin)", "Serotonin syndrome signs", "CYP2D6 interactions (strong inhibitor)"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Suicidal Behavior (Children/Adolescents)",
+            "FDA Black Box Warning - Pregnancy Category D (Birth Defects)",
+            "APA Guidelines - Depression",
+            "APA Guidelines - Anxiety Disorders"
+        ]
     },
     "Sertraline": {
         "group": "Psychiatry - SSRI (Selective Serotonin Reuptake Inhibitor)",
@@ -1021,7 +1084,23 @@ SSRI_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "High - Multiple RCTs and systematic reviews"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Suicidal ideation (Black Box Warning - children/adolescents)", "INR (if warfarin)", "Serotonin syndrome signs"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Suicidal Behavior (Children/Adolescents)",
+            "APA Guidelines - Depression",
+            "APA Guidelines - Anxiety Disorders",
+            "Preferred SSRI in Pregnancy (Category C)"
+        ]
     },
 
 }

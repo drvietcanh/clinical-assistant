@@ -180,7 +180,26 @@ OTHER_ANTIDEPRESSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"neurological": "Seizures - Black Box Warning (dose-related, >450mg/day)", "cardiovascular": "Hypertension (rare)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Seizure risk (Black Box Warning - contraindicated in epilepsy, eating disorders)", "Blood pressure (rare hypertension)", "Dose limit: max 450mg/day, max 150mg per dose (immediate release)"],
+            "look_alike_sound_alike": ["Bupropion", "Buspirone"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Seizures (dose-related, contraindicated in epilepsy)",
+            "FDA Black Box Warning - Contraindicated in Eating Disorders",
+            "APA Guidelines - Depression",
+            "APA Guidelines - Smoking Cessation"
+        ],
+        "last_updated": "2025-02-18"
     },
     
     "Mirtazapine": {
@@ -343,7 +362,26 @@ OTHER_ANTIDEPRESSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"hematologic": "Agranulocytosis - Black Box Warning (rare but fatal)", "metabolic": "Weight gain (common), hyperlipidemia"},
+            "qt_prolongation": False,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": False,
+            "requires_monitoring": ["CBC (agranulocytosis - Black Box Warning)", "Lipid panel (cholesterol, triglycerides)", "Liver function (rare hepatotoxicity)", "Weight", "Suicidal ideation (Black Box Warning)"],
+            "look_alike_sound_alike": ["Mirtazapine", "Mirtazapine"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Agranulocytosis (rare but fatal)",
+            "FDA Black Box Warning - Suicidal Behavior (Children/Adolescents)",
+            "APA Guidelines - Depression",
+            "NICE Guidelines - Depression"
+        ],
+        "last_updated": "2025-02-18"
     },
     
     "Phenelzine": {
@@ -524,7 +562,41 @@ OTHER_ANTIDEPRESSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "cardiovascular": "Black Box Warning - Severe hypertension (tyramine reaction - can be fatal) - CRITICAL",
+                "neurological": "Black Box Warning - Serotonin syndrome (if used with SSRIs/SNRIs/TCAs - can be fatal) - CRITICAL",
+                "cardiovascular_other": "Orthostatic hypotension (common)",
+                "hepatic": "Hepatotoxicity (rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Black Box Warning - Tyramine-restricted diet (avoid fermented foods, cheese, red wine, cured meats) - CRITICAL to prevent severe hypertension",
+                "Black Box Warning - Signs of tyramine reaction (severe headache, chest pain, tachycardia, severe hypertension) - CRITICAL, treat immediately with phentolamine/nifedipine",
+                "Black Box Warning - CONTRAINDICATED with SSRIs, SNRIs, TCAs (serotonin syndrome risk - fatal) - CRITICAL, wait 14 days washout period",
+                "Black Box Warning - CONTRAINDICATED with meperidine (fatal reaction) - CRITICAL",
+                "Blood pressure (orthostatic hypotension - common, severe hypertension if tyramine reaction)",
+                "Signs of serotonin syndrome (fever, agitation, seizures, altered mental status) - if used with serotonergic drugs",
+                "Hepatic function (ALT, AST - hepatotoxicity rare)",
+                "Weight (weight gain common)"
+            ],
+            "look_alike_sound_alike": ["Phenelzine", "Nardil", "Tranylcypromine"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Tyramine Reaction (Severe Hypertension)",
+            "FDA Black Box Warning - Serotonin Syndrome (SSRI/SNRI/TCA Interaction)",
+            "APA Guidelines - Treatment-Resistant Depression",
+            "ISMP High Alert Medications",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
     
     "Tranylcypromine": {
@@ -704,7 +776,41 @@ OTHER_ANTIDEPRESSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "cardiovascular": "Black Box Warning - Severe hypertension (tyramine reaction - can be fatal) - CRITICAL",
+                "neurological": "Black Box Warning - Serotonin syndrome (if used with SSRIs/SNRIs/TCAs - can be fatal) - CRITICAL",
+                "cardiovascular_other": "Orthostatic hypotension (common)",
+                "hepatic": "Hepatotoxicity (rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Black Box Warning - Tyramine-restricted diet (avoid fermented foods, cheese, red wine, cured meats) - CRITICAL to prevent severe hypertension",
+                "Black Box Warning - Signs of tyramine reaction (severe headache, chest pain, tachycardia, severe hypertension) - CRITICAL, treat immediately with phentolamine/nifedipine",
+                "Black Box Warning - CONTRAINDICATED with SSRIs, SNRIs, TCAs (serotonin syndrome risk - fatal) - CRITICAL, wait 14 days washout period",
+                "Black Box Warning - CONTRAINDICATED with meperidine (fatal reaction) - CRITICAL",
+                "Blood pressure (orthostatic hypotension - common, severe hypertension if tyramine reaction)",
+                "Signs of serotonin syndrome (fever, agitation, seizures, altered mental status) - if used with serotonergic drugs",
+                "Hepatic function (ALT, AST - hepatotoxicity rare)",
+                "Weight (weight gain common)"
+            ],
+            "look_alike_sound_alike": ["Tranylcypromine", "Parnate", "Phenelzine"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Tyramine Reaction (Severe Hypertension)",
+            "FDA Black Box Warning - Serotonin Syndrome (SSRI/SNRI/TCA Interaction)",
+            "APA Guidelines - Treatment-Resistant Depression",
+            "ISMP High Alert Medications",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
     "Trazodone": {
         "group": "Psychiatry - Serotonin Antagonist/Reuptake Inhibitor (SARI)",
@@ -881,7 +987,26 @@ OTHER_ANTIDEPRESSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"genitourinary": "Priapism - Black Box Warning (can cause permanent damage)", "cardiovascular": "QT prolongation - Black Box Warning, arrhythmias", "cardiovascular_hypotension": "Orthostatic hypotension"},
+            "qt_prolongation": True,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG (QT prolongation - Black Box Warning)", "Priapism monitoring (Black Box Warning - emergency if >4 hours)", "Blood pressure (orthostatic hypotension)", "CYP3A4 interactions"],
+            "look_alike_sound_alike": ["Trazodone", "Tramadol"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Priapism (can cause permanent damage)",
+            "FDA Black Box Warning - QT Prolongation",
+            "APA Guidelines - Depression",
+            "NICE Guidelines - Depression"
+        ],
+        "last_updated": "2025-02-18"
     },
     
 }

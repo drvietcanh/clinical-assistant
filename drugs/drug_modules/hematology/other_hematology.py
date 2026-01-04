@@ -82,6 +82,21 @@ OTHER_HEMATOLOGY_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có báo cáo huyết khối tĩnh mạch sâu (DVT), thuyên tắc phổi (PE), và huyết khối động mạch. "
                 "Tránh dùng aPCC với emicizumab nếu có thể. Nếu cần dùng, dùng liều thấp nhất và theo dõi chặt chẽ dấu hiệu huyết khối."
             ),
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiovascular"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Signs of thrombosis (Black Box Warning - especially with aPCC)", "Injection site reactions", "Allergic reactions", "Liver function (ALT, AST)"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Thrombosis Risk (especially with aPCC)",
+                "ASH Guidelines - Hemophilia A Treatment",
+                "WHO Essential Medicines List"
+            ],
             "drug_interactions": {
                 "major": [
                     {

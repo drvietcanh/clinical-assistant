@@ -251,6 +251,7 @@ THROMBOLYTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "mild": "Không cần chỉnh",
                 "moderate": "Không cần chỉnh nhưng thận trọng",
                 "severe": "Tránh nếu có rối loạn đông máu nặng do suy gan",
+                "notes": "",
             },
             "overdose_management": {
                 "symptoms": ["Chảy máu lớn, xuất huyết nội sọ, tụt huyết áp"],

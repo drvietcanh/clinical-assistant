@@ -131,6 +131,25 @@ SNRI_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"cardiovascular": "Hypertension (dose-dependent, especially at higher doses)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure (hypertension - dose-dependent)", "Heart rate", "Suicidal ideation (Black Box Warning)", "Withdrawal symptoms"],
+            "look_alike_sound_alike": ["Desvenlafaxine", "Venlafaxine"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Suicidal Behavior (Children/Adolescents)",
+            "APA Guidelines - Depression",
+            "APA Guidelines - Anxiety Disorders",
+            "NICE Guidelines - Depression"
+        ],
+        "last_updated": "2025-02-18",
         "reversal_agents": {
               "available": False,
               "agents": []
