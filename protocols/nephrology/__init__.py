@@ -19,6 +19,8 @@ from .resistant_hypertension_ckd import render as render_resistant_hypertension_
 from .blood_pressure_ckd import render as render_blood_pressure_ckd
 from .iga_nephropathy import render as render_iga_nephropathy
 from .lupus_nephritis import render as render_lupus_nephritis
+from .heart_failure_ckd import render as render_heart_failure_ckd
+from .anca_vasculitis import render as render_anca_vasculitis
 
 
 __all__ = [
@@ -38,5 +40,7 @@ __all__ = [
     'render_blood_pressure_ckd',
     'render_iga_nephropathy',
     'render_lupus_nephritis',
+    'render_heart_failure_ckd',
+    'render_anca_vasculitis',
 ]
 

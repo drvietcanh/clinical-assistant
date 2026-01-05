@@ -67,7 +67,9 @@ from .nephrology import (
     render_resistant_hypertension_ckd,
     render_blood_pressure_ckd,
     render_iga_nephropathy,
-    render_lupus_nephritis
+    render_lupus_nephritis,
+    render_heart_failure_ckd,
+    render_anca_vasculitis
 )
 from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis, render_parasitic_worms, render_dengue_fever, render_scrub_typhus, render_malaria
 from .endocrinology import (

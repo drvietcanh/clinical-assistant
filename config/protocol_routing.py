@@ -76,6 +76,8 @@ from protocols import (
     render_blood_pressure_ckd,
     render_iga_nephropathy,
     render_lupus_nephritis,
+    render_heart_failure_ckd,
+    render_anca_vasculitis,
     render_cap,
     render_hap_vap,
     render_cdiff,
@@ -581,6 +583,18 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "render": render_lupus_nephritis,
         "has_article": True,
         "priority": 8
+    },
+    "anca_vasculitis": {
+        "keywords": ["ANCA vasculitis", "viêm mạch ANCA", "GPA", "MPA", "EGPA", "KDIGO 2021", "ANCA"],
+        "render": render_anca_vasculitis,
+        "has_article": True,
+        "priority": 8
+    },
+    "heart_failure_ckd": {
+        "keywords": ["Suy Tim Trong CKD", "Heart Failure CKD", "cardiorenal", "KDIGO 2025", "suy tim CKD"],
+        "render": render_heart_failure_ckd,
+        "has_article": True,
+        "priority": 9
     },
     "diabetic_nephropathy": {
         "keywords": ["đái tháo đường", "Diabetic", "diabetic"],

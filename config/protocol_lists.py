@@ -92,6 +92,8 @@ PROTOCOL_LISTS = {
         "💊 Tăng Huyết Áp Kháng Trị Trong CKD",
         "🔬 IgA Nephropathy (KDIGO 2021)",
         "🌙 Lupus Nephritis (KDIGO 2021)",
+        "🔬 ANCA Vasculitis (KDIGO 2021)",
+        "❤️ Suy Tim Trong CKD (KDIGO 2025)",
         "🍭 Bệnh thận do đái tháo đường",
         "📈 Bệnh thận do tăng huyết áp",
         "🚻 Nhiễm trùng tiểu / Viêm bể thận",
