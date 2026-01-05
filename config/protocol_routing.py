@@ -75,6 +75,7 @@ from protocols import (
     render_resistant_hypertension_ckd,
     render_blood_pressure_ckd,
     render_iga_nephropathy,
+    render_lupus_nephritis,
     render_cap,
     render_hap_vap,
     render_cdiff,
@@ -572,6 +573,12 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
     "iga_nephropathy": {
         "keywords": ["IgA Nephropathy", "IgAN", "Bệnh thận IgA", "KDIGO 2021", "glomerulonephritis"],
         "render": render_iga_nephropathy,
+        "has_article": True,
+        "priority": 8
+    },
+    "lupus_nephritis": {
+        "keywords": ["Lupus Nephritis", "viêm thận lupus", "SLE nephritis", "KDIGO 2021", "lupus nephritis"],
+        "render": render_lupus_nephritis,
         "has_article": True,
         "priority": 8
     },
