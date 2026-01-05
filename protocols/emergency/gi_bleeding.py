@@ -28,10 +28,35 @@ def render():
     # Enhanced header with Phase 1 components
     render_protocol_header(
         protocol_name="GI Bleeding",
-        guideline_source="ACG 2024, BSG 2021",
+        guideline_source="ACG 2024, BSG 2021, AASLD 2021",
         show_version=True,
         show_evidence_summary=True
     )
+    
+    # ACG/BSG Guidelines Summary
+    with st.expander("📚 ACG 2024 & BSG 2021 Guidelines - Key Recommendations", expanded=False):
+        st.markdown("""
+        **ACG 2024 Guidelines for Upper GI Bleeding:**
+        
+        **Class I Recommendations (Strong Evidence):**
+        - Risk stratification using Glasgow-Blatchford Score (GBS) for all patients
+        - Early endoscopy (<24h) for high-risk patients (GBS ≥6)
+        - PPI therapy before and after endoscopy
+        - Endoscopic therapy for high-risk lesions (Forrest Ia, Ib, IIa, IIb)
+        
+        **BSG 2021 Guidelines:**
+        - Risk stratification with GBS and Rockall scores
+        - Endoscopy within 24h for all patients
+        - Endoscopy <12h for high-risk patients
+        - PPI high-dose IV before endoscopy
+        - Dual therapy (PPI + endoscopic therapy) for peptic ulcer bleeding
+        
+        **Key Updates:**
+        - GBS preferred over Rockall for pre-endoscopy risk stratification
+        - Early endoscopy (<24h) standard of care
+        - High-dose PPI (80mg bolus + 8mg/h infusion) before endoscopy
+        - Tranexamic acid may be considered in selected patients
+        """)
     
     st.info("""
     **GI Bleeding phân loại:**
@@ -59,10 +84,21 @@ def render():
 
 
 def render_upper_gi_bleeding():
-    """Upper GI Bleeding Protocol"""
+    """Upper GI Bleeding Protocol - ACG 2024, BSG 2021"""
     
     st.error("## 🚨 UPPER GI BLEEDING (UGIB) PROTOCOL")
     st.error("**CODE GI BLEED - Xử trí khẩn cấp!**")
+    
+    # ACG 2024 Evidence Badge
+    render_evidence_badge(
+        level="Class I, Level A",
+        recommendation="Risk stratification using Glasgow-Blatchford Score for all patients with UGIB",
+        citation=Citation(
+            source="ACG 2024 Guidelines",
+            title="Management of Patients With Ulcer Bleeding",
+            year=2024
+        )
+    )
     
     st.markdown("### 1️⃣ Đánh giá & Resuscitation (< 30 Phút)")
     

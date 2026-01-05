@@ -184,8 +184,23 @@ GROWTH_FACTORS_DRUGS: Dict[str, Dict[str, Any]] = {
                     "ASH Guidelines - ITP"
                 ],
                 "last_updated": "2025-02-18",
-                "evidence_level": "A - FDA-approved, large RCTs showing benefit in ITP"
-            }
+                "evidence_level": "A - FDA-approved",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ] 
+
+        }
         },
 
         "Epoetin alfa": {

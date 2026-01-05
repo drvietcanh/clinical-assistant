@@ -46,7 +46,7 @@ IRONS_DRUGS = {
         'IV cho thiếu máu nặng hoặc không dung nạp PO (có thể gây phản ứng dị ứng nặng)'
         ,
         'Tiếp tục điều trị 3-6 tháng sau khi hemoglobin bình thường (để bổ sung dự trữ)'
-        ], 'pharmacokinetics': {'half_life': 'Không áp dụng (khoáng chất)',
+        ],
         'onset': 'Vài ngày đến vài tuần (tác dụng tích tụ)', 'duration':
         'Phụ thuộc vào dự trữ trong cơ thể', 'protein_binding':
         'Gắn với transferrin (vận chuyển) và ferritin (dự trữ)', 'clearance':
@@ -68,7 +68,8 @@ IRONS_DRUGS = {
         , 'effect': 'Giảm hấp thu cả sắt và quinolone, giảm hiệu quả điều trị',
         'management':
         'Cách ít nhất 2-3 giờ giữa sắt và quinolone. Uống sắt trước, quinolone sau.'
-        }], 'moderate': [{'drug': 'Levothyroxine', 'mechanism':
+        }], 'moderate': [
+        {'drug': 'Levothyroxine', 'mechanism':
         'Sắt gắn với levothyroxine trong ruột, giảm hấp thu levothyroxine.',
         'effect': 'Giảm hấp thu levothyroxine, giảm hiệu quả điều trị suy giáp',
         'management':
@@ -80,15 +81,23 @@ IRONS_DRUGS = {
         'effect': 'Giảm hấp thu sắt, giảm hiệu quả điều trị thiếu máu',
         'management':
         'Cách ít nhất 2 giờ giữa sắt và antacid/PPI/H2 blocker. Uống sắt khi bụng đói (nếu dung nạp), antacid sau bữa ăn.'
-        }], 'minor': [{'drug': 'Vitamin C (Ascorbic acid)', 'mechanism':
+        }], 'minor': [
+        {'drug': 'Vitamin C', 'mechanism':
         'Vitamin C tăng hấp thu sắt bằng cách khử Fe3+ thành Fe2+ (dạng hấp thu tốt hơn).'
         , 'effect': 'Tăng hấp thu sắt (tác dụng mong muốn)', 'management':
-        'Kết hợp sắt và vitamin C là phổ biến và có lợi. Uống cùng lúc hoặc gần nhau.'
-        }, {'drug': 'Chloramphenicol', 'mechanism':
+        'Kết hợp sắt và vitamin C là phổ biến và có lợi. Uống cùng lúc hoặc gần nhau.'}, {'drug': 'Chloramphenicol', 'mechanism':
         'Chloramphenicol có thể giảm đáp ứng với sắt trong điều trị thiếu máu.',
         'effect': 'Giảm đáp ứng với sắt', 'management':
         'Thận trọng. Theo dõi đáp ứng điều trị thiếu máu.'}]},
         'contraindications': {'tuyệt_đối': [
+        'Hemochromatosis (thừa sắt di truyền) - sắt làm nặng thêm',
+        'Thiếu máu không do thiếu sắt - không hiệu quả và có thể gây quá tải sắt',
+        'Dị ứng sắt'], 'tương_đối': [
+        'Viêm loét dạ dày tá tràng nặng - sắt có thể gây kích ứng',
+        'Viêm ruột (Crohn, viêm loét đại tràng) - sắt có thể gây kích ứng',
+        'Suy thận nặng - tăng nguy cơ tích tụ sắt',
+        'Đang truyền máu thường xuyên - tăng nguy cơ quá tải sắt']},
+        'contraindications_detail': {'tuyệt_đối': [
         'Hemochromatosis (thừa sắt di truyền) - sắt làm nặng thêm',
         'Thiếu máu không do thiếu sắt - không hiệu quả và có thể gây quá tải sắt',
         'Dị ứng sắt'], 'tương_đối': [
@@ -170,7 +179,7 @@ IRONS_DRUGS = {
         'WHO Guidelines - Iron Supplementation in Pregnancy',
         'UpToDate - Iron deficiency anemia treatment',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ], 'last_updated': '2025-02-04', 'evidence_level':
+        ], 'evidence_level':
         'A - Dựa trên FDA drug labels, ASH/WHO guidelines, và dữ liệu lâm sàng'},
         'risk_flags': {
             'high_alert': False,
@@ -187,6 +196,7 @@ IRONS_DRUGS = {
             'WHO Guidelines - Iron Supplementation in Pregnancy',
             'ACOG Guidelines - Iron Supplementation in Pregnancy',
             'FDA Drug Information - Iron',
-        ]}}
+        ]
+    }
 
 __all__ = ['IRONS_DRUGS']

@@ -21,7 +21,7 @@ MACROLIDES_DRUGS = {
         'interactions': ['Warfarin: tăng nguy cơ chảy máu',
         'Digoxin: tăng nồng độ digoxin',
         'Cyclosporine: tăng nồng độ cyclosporine',
-        'Thuốc QT kéo dài: tăng nguy cơ loạn nhịp'], 'pregnancy': 'B',
+        'Thuốc QT kéo dài: tăng nguy cơ loạn nhịp'],
         'mechanism_of_action':
         'Macrolide antibiotic. Ức chế tổng hợp protein vi khuẩn bằng cách gắn vào 50S ribosomal subunit, ức chế peptide chain elongation. Phổ tác dụng: Gram-positive (Streptococcus, Staphylococcus), một số Gram-negative (Haemophilus influenzae), atypical pathogens (Mycoplasma, Chlamydia, Legionella). Có tác dụng kéo dài do thời gian bán hủy dài (68 giờ), cho phép phác đồ ngắn (3-5 ngày).'
         , 'monitoring': [
@@ -59,7 +59,7 @@ MACROLIDES_DRUGS = {
         'Tăng nồng độ digoxin, tăng độc tính (buồn nôn, nôn, rối loạn nhịp tim, block AV)'
         , 'management':
         'Theo dõi nồng độ digoxin và dấu hiệu độc tính. Giảm liều digoxin nếu cần. Theo dõi ECG.'
-        }], 'moderate': [{'drug': 'Cyclosporine, Tacrolimus', 'mechanism':
+        }], 'mechanism':
         'Azithromycin có thể ức chế nhẹ CYP3A4, làm giảm chuyển hóa cyclosporine và tacrolimus.'
         , 'effect':
         'Tăng nồng độ cyclosporine/tacrolimus, tăng độc tính (độc thận, tăng huyết áp, độc thần kinh)'
@@ -71,7 +71,7 @@ MACROLIDES_DRUGS = {
         'Tăng nguy cơ QT kéo dài, torsades de pointes, rối loạn nhịp tim nghiêm trọng'
         , 'management':
         'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi ECG chặt chẽ. Đảm bảo kali, magie bình thường. Ngừng ngay nếu QT >500ms hoặc có triệu chứng.'
-        }], 'minor': [{'drug': 'Antacids (Aluminum, Magnesium)', 'mechanism':
+        }], 'mechanism':
         'Antacids có thể giảm nhẹ hấp thu azithromycin.', 'effect':
         'Giảm nhẹ hấp thu azithromycin', 'management':
         'Cách 2 giờ nếu có thể. Không ảnh hưởng đáng kể ở liều điều trị thông thường.'
@@ -174,18 +174,50 @@ MACROLIDES_DRUGS = {
         'monitoring':
         'Theo dõi ECG (QT interval) nếu có yếu tố nguy cơ. Theo dõi dấu hiệu tiêu chảy (có thể dẫn đến C. difficile colitis). Theo dõi dấu hiệu rối loạn nhịp tim. Theo dõi chức năng gan nếu có bệnh gan.'}, 'brand_names': {'vietnam': [
         'Azithromycin', 'Zithromax', 'Azithromycin Stada', 'Azitromax'], 'common': [
-        'Zithromax', 'Azithromycin']}, 'cost_estimate': {'unit': 'VND',
+        'Zithromax', 'Azithromycin'],
         'range': '10,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Azithromycin generic thường rẻ hơn (10,000-30,000 VND/viên 500mg). Dạng suspension: 80,000-150,000 VND/lọ 15ml (200mg/5ml).'}, 'references': {'primary_sources': [
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Azithromycin generic thường rẻ hơn (10,000-30,000 VND/viên 500mg). Dạng suspension: 80,000-150,000 VND/lọ 15ml (200mg/5ml).'},         'references': {'primary_sources': [
         'FDA Label: Zithromax (azithromycin)',
         'UpToDate: Azithromycin drug information',
         'Lexicomp: Azithromycin monograph',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Sanford Guide to Antimicrobial Therapy'], 'last_updated': '2025-02-03',
+        'Sanford Guide to Antimicrobial Therapy'],
         'evidence_level':
         'Level 1 - FDA approved, multiple clinical trials, extensive clinical experience'
-        }},
+        },
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': 'Moderate',
+            'organ_toxicity': {
+                'cardiac': 'High (QT prolongation, torsades de pointes - Black Box Warning, especially with risk factors)',
+                'hepatic': 'Low (hepatotoxicity rare)',
+                'auditory': 'Moderate (hearing loss rare, may be irreversible)'
+            },
+            'qt_prolongation': True,
+            'hepatotoxicity': True,
+            'nephrotoxicity': False,
+            'requires_monitoring': [
+                'ECG (QT interval) - CRITICAL (especially in patients with risk factors: heart failure, hypokalemia, hypomagnesemia, bradycardia, co-administered QT-prolonging drugs)',
+                'Symptoms of arrhythmias (torsades de pointes - rare but dangerous) - CRITICAL',
+                'Hepatic function (ALT, AST) - rare hepatotoxicity',
+                'GI symptoms (nausea, vomiting, diarrhea) - common',
+                'Hearing loss symptoms (tinnitus, hearing loss) - rare, may be irreversible',
+                'INR (if co-administered with warfarin) - increased bleeding risk',
+                'Digoxin levels (if co-administered) - increased digoxin toxicity',
+                'Cyclosporine/tacrolimus levels (if co-administered) - increased toxicity'
+            ],
+            'look_alike_sound_alike': ['Azithromycin', 'Clarithromycin', 'Erythromycin', 'Aztreonam']
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - Azithromycin and QT Prolongation',
+            'FDA Black Box Warning - Azithromycin and Torsades de Pointes',
+            'IDSA Guidelines - Community-Acquired Pneumonia',
+            'CDC Guidelines - Sexually Transmitted Infections',
+            'WHO Essential Medicines List'
+        ]},
     "Clarithromycin": {'group': 'Infectious Disease - Macrolide Antibiotic', 'vietnamese_name':
         'Clarithromycin, Klacid', 'administration': ['PO', 'IV'], 'indications':
         ['Nhiễm trùng đường hô hấp (viêm phổi, viêm phế quản)',
@@ -203,7 +235,7 @@ MACROLIDES_DRUGS = {
         'interactions': [
         'CYP3A4 substrates: tăng đáng kể nồng độ (simvastatin, lovastatin, midazolam)'
         , 'Warfarin: tăng tác dụng chống đông', 'Digoxin: tăng nồng độ digoxin',
-        'Theophylline: tăng nồng độ theophylline'], 'pregnancy': 'C',
+        'Theophylline: tăng nồng độ theophylline'],
         'mechanism_of_action':
         'Clarithromycin là kháng sinh macrolide bán tổng hợp, thuộc nhóm azalide. Ức chế tổng hợp protein của vi khuẩn bằng cách gắn vào tiểu đơn vị 50S của ribosome vi khuẩn, ngăn chặn quá trình dịch mã (translocation) và kéo dài chuỗi peptide. Dẫn đến ngừng tổng hợp protein và ức chế sự phát triển của vi khuẩn. Clarithromycin có phổ kháng khuẩn rộng: Gram-dương (Streptococcus pneumoniae, Staphylococcus aureus - không phải MRSA), một số Gram-âm (H. influenzae, Moraxella catarrhalis), và vi khuẩn không điển hình (Mycoplasma pneumoniae, Chlamydia pneumoniae, Legionella pneumophila). Clarithromycin cũng có tác dụng với Helicobacter pylori và một số vi khuẩn không điển hình khác. Mạnh hơn azithromycin nhưng có nhiều tương tác thuốc hơn do ức chế CYP3A4.'
         , 'monitoring': [
@@ -285,7 +317,7 @@ MACROLIDES_DRUGS = {
         'Tăng nguy cơ QT kéo dài, torsades de pointes, rối loạn nhịp tim nghiêm trọng'
         , 'management':
         'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi ECG chặt chẽ. Đảm bảo kali, magie bình thường. Ngừng ngay nếu QT >500ms hoặc có triệu chứng.'
-        }], 'minor': [{'drug': 'Rifampin', 'mechanism':
+        }], 'mechanism':
         'Rifampin cảm ứng CYP3A4, làm tăng chuyển hóa clarithromycin.',
         'effect': 'Giảm nồng độ clarithromycin, giảm hiệu quả điều trị',
         'management':
@@ -377,42 +409,87 @@ MACROLIDES_DRUGS = {
         "Lactated Ringer's (LR) - không tương thích",
         'Các dung dịch có cation (Al3+, Mg2+) - có thể tạo phức hợp'], 'notes':
         'Truyền IV trong 60 phút. Không truyền nhanh hơn. Theo dõi phản ứng tại chỗ tiêm (viêm tĩnh mạch). Dùng ngay sau khi pha. Không bảo quản lâu sau khi pha.'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Label: Klacid (clarithromycin)',
         'UpToDate: Clarithromycin drug information',
         'Lexicomp: Clarithromycin monograph',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Sanford Guide to Antimicrobial Therapy'], 'last_updated': '2025-02-03',
+        'Sanford Guide to Antimicrobial Therapy'],
         'evidence_level':
         'Level 1 - FDA approved, multiple clinical trials, extensive clinical experience'
-        }},
-    "Erythromycin": {
+        },
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': 'Moderate',
+            'organ_toxicity': {
+                'cardiac': 'High (QT prolongation, increased cardiovascular death risk - Black Box Warning, especially in patients with cardiovascular disease)',
+                'musculoskeletal': 'High (rhabdomyolysis when co-administered with simvastatin/lovastatin - Black Box Warning)',
+                'hepatic': 'Low (hepatotoxicity rare)',
+                'auditory': 'Moderate (hearing loss rare, may be irreversible)'
+            },
+            'qt_prolongation': True,
+            'hepatotoxicity': True,
+            'nephrotoxicity': False,
+            'requires_monitoring': [
+                'ECG (QT interval) - CRITICAL (especially in patients with cardiovascular disease or risk factors)',
+                'Symptoms of arrhythmias (torsades de pointes) - CRITICAL',
+                'CK (creatine kinase) - CRITICAL (if co-administered with simvastatin/lovastatin) - rhabdomyolysis risk',
+                'Muscle symptoms (pain, weakness) - CRITICAL (if co-administered with statins)',
+                'INR (if co-administered with warfarin) - CRITICAL (increased bleeding risk)',
+                'Digoxin levels (if co-administered) - CRITICAL (increased digoxin toxicity)',
+                'Cyclosporine/tacrolimus levels (if co-administered) - increased toxicity',
+                'Hepatic function (ALT, AST) - rare hepatotoxicity',
+                'Renal function (creatinine, eGFR) - dose adjustment required in renal impairment (CrCl <30)',
+                'Hearing loss symptoms (tinnitus, hearing loss) - rare, may be irreversible'
+            ],
+            'look_alike_sound_alike': ['Clarithromycin', 'Azithromycin', 'Erythromycin', 'Clindamycin']
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - Clarithromycin and Cardiovascular Death Risk',
+            'FDA Black Box Warning - Clarithromycin and QT Prolongation',
+            'FDA Black Box Warning - Clarithromycin and Rhabdomyolysis with Statins',
+            'IDSA Guidelines - Community-Acquired Pneumonia',
+            'ACCF/AHA Guidelines - Drug Interactions in Cardiovascular Disease'
+        ]},
+    "Erythromycin":     {
         "group": "Infectious Disease - Macrolide Antibiotic",
         "vietnamese_name": "Erythromycin, Erythrocin, E-mycin",
-        "administration": ["PO", "IV"],
+        "administration": [
+            "PO",
+            "IV"
+    ],
         "indications": [
             "Nhiễm trùng đường hô hấp (viêm phổi, viêm phế quản)",
             "Nhiễm trùng da và mô mềm",
             "Chlamydia (liều cao)",
             "Nhiễm trùng đường tiết niệu",
             "Prokinetic (kích thích nhu động dạ dày - off-label)"
-        ],
-        "contraindications": [
-            "Dị ứng erythromycin/macrolide",
-            "QT kéo dài",
-            "Suy gan nặng",
-            "Dùng pimozide, terfenadine, astemizole"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng erythromycin/macrolide",
+                "QT kéo dài",
+                "Dùng pimozide, terfenadine, astemizole",
+                "Suy gan nặng"
+    ],
+            "tương_đối": [
+                "Suy gan trung bình - thận trọng",
+                "Dùng với thuốc kéo dài QT - tăng nguy cơ",
+                "Dùng với CYP3A4 substrates - nhiều tương tác"
+    ],
+        },
         "dosage": {
             "adult_po": "250-500mg x 4 lần/ngày",
             "adult_iv": "1g x 4 lần/ngày hoặc truyền liên tục",
             "adult_prokinetic": "250mg x 3-4 lần/ngày (off-label)",
-            "notes": "Nhiều tương tác thuốc, nhiều tác dụng phụ tiêu hóa. Ít dùng hơn azithromycin/clarithromycin"
+            "notes": "Nhiều tương tác thuốc, nhiều tác dụng phụ tiêu hóa. Ít dùng hơn azithromycin/clarithromycin",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Không đổi",
-            "under_30": "Thận trọng"
+            "under_30": "Thận trọng",
         },
         "side_effects": [
             "Buồn nôn, nôn, tiêu chảy (rất phổ biến)",
@@ -420,23 +497,23 @@ MACROLIDES_DRUGS = {
             "QT kéo dài",
             "Rối loạn thính giác (hiếm)",
             "Viêm gan (hiếm)"
-        ],
+    ],
         "interactions": [
             "CYP3A4 substrates: tăng đáng kể nồng độ",
             "Warfarin: tăng tác dụng chống đông",
             "Digoxin: tăng nồng độ digoxin",
             "Theophylline: tăng nồng độ theophylline",
             "Carbamazepine: tăng nồng độ carbamazepine"
-        ],
+    ],
         "pregnancy": "B",
-        "mechanism_of_action": "Erythromycin là macrolide đầu tiên, ức chế tổng hợp protein vi khuẩn bằng cách gắn vào 50S ribosomal subunit. Phổ kháng khuẩn: Gram-dương, một số Gram-âm, atypical pathogens. Ức chế CYP3A4 mạnh → nhiều tương tác thuốc. Có tác dụng kích thích motilin receptor (ở liều thấp) → tác dụng prokinetic. Ít dùng hơn azithromycin/clarithromycin do nhiều tác dụng phụ tiêu hóa và tương tác thuốc.",
+        "mechanism_of_action": """Erythromycin là macrolide đầu tiên, ức chế tổng hợp protein vi khuẩn bằng cách gắn vào 50S ribosomal subunit. Phổ kháng khuẩn: Gram-dương, một số Gram-âm, atypical pathogens. Ức chế CYP3A4 mạnh → nhiều tương tác thuốc. Có tác dụng kích thích motilin receptor (ở liều thấp) → tác dụng prokinetic. Ít dùng hơn azithromycin/clarithromycin do nhiều tác dụng phụ tiêu hóa và tương tác thuốc.""",
         "monitoring": [
             "ECG: QT interval (có thể gây QT kéo dài)",
             "Triệu chứng tiêu hóa: buồn nôn, nôn, tiêu chảy (rất phổ biến)",
             "Chức năng gan: ALT, AST (hiếm gây viêm gan)",
             "Rối loạn thính giác (hiếm)",
             "Tương tác với CYP3A4 substrates"
-        ],
+    ],
         "precautions": [
             "Nhiều tác dụng phụ tiêu hóa (buồn nôn, nôn, tiêu chảy) - rất phổ biến",
             "Nhiều tương tác thuốc do ức chế CYP3A4 mạnh",
@@ -445,52 +522,40 @@ MACROLIDES_DRUGS = {
             "Uống với thức ăn để giảm tác dụng phụ tiêu hóa (nhưng có thể giảm hấp thu)",
             "Thận trọng ở suy gan nặng",
             "Ít dùng hơn azithromycin/clarithromycin do nhiều tác dụng phụ"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "1.5-2 giờ",
             "onset": "1-2 giờ (PO)",
             "duration": "q6-8h (dùng 3-4 lần/ngày)",
             "protein_binding": "70-90%",
-            "clearance": "Gan (CYP3A4) - ức chế mạnh CYP3A4"
+            "clearance": "Gan (CYP3A4) - ức chế mạnh CYP3A4",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
-        "black_box_warnings": "Có thể gây QT kéo dài và torsades de pointes. Không dùng với pimozide, terfenadine, astemizole. Tăng nguy cơ tử vong do tim mạch ở bệnh nhân có bệnh tim mạch.",
+        "black_box_warnings": """Có thể gây QT kéo dài và torsades de pointes. Không dùng với pimozide, terfenadine, astemizole. Tăng nguy cơ tử vong do tim mạch ở bệnh nhân có bệnh tim mạch.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Simvastatin, Lovastatin",
                     "mechanism": "Ức chế CYP3A4 mạnh",
                     "effect": "Tăng nguy cơ tiêu cơ vân",
-                    "management": "TRÁNH DÙNG đồng thời"
+                    "management": "TRÁNH DÙNG đồng thời",
                 },
-                {
+    {
                     "drug": "Pimozide, Terfenadine, Astemizole",
                     "mechanism": "Ức chế CYP3A4 + QT kéo dài",
                     "effect": "Tăng nguy cơ tử vong",
-                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI"
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Warfarin, Digoxin, Theophylline, Carbamazepine",
                     "mechanism": "Ức chế CYP3A4",
                     "effect": "Tăng nồng độ các thuốc này",
-                    "management": "Theo dõi và điều chỉnh liều"
+                    "management": "Theo dõi và điều chỉnh liều",
                 }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng erythromycin/macrolide",
-                "QT kéo dài",
-                "Dùng pimozide, terfenadine, astemizole",
-                "Suy gan nặng"
-            ],
-            "tương_đối": [
-                "Suy gan trung bình - thận trọng",
-                "Dùng với thuốc kéo dài QT - tăng nguy cơ",
-                "Dùng với CYP3A4 substrates - nhiều tương tác"
-            ]
+                ],
+            "minor": [],
         },
         "contraindications_detail": {
             "tuyệt_đối": [
@@ -498,26 +563,27 @@ MACROLIDES_DRUGS = {
                 "QT kéo dài",
                 "Dùng pimozide, terfenadine, astemizole",
                 "Suy gan nặng"
-            ],
+    ],
             "tương_đối": [
                 "Suy gan trung bình - thận trọng",
                 "Dùng với thuốc kéo dài QT - tăng nguy cơ",
                 "Dùng với CYP3A4 substrates - nhiều tương tác"
-            ]
+    ],
         },
         "pregnancy_lactation": {
             "fda_category": "B",
             "pregnancy_details": "An toàn trong thai kỳ. Phân loại B.",
             "lactation": {
                 "safety": "Compatible",
-                "details": "An toàn khi cho con bú"
-            }
+                "details": "An toàn khi cho con bú",
+                "recommendation": "",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không đổi",
             "moderate": "Thận trọng",
             "severe": "CHỐNG CHỈ ĐỊNH",
-            "notes": "Chuyển hóa chủ yếu qua gan. Suy gan nặng là chống chỉ định."
+            "notes": "Chuyển hóa chủ yếu qua gan. Suy gan nặng là chống chỉ định.",
         },
         "overdose_management": {
             "symptoms": [
@@ -525,7 +591,7 @@ MACROLIDES_DRUGS = {
                 "QT kéo dài, torsades de pointes",
                 "Rối loạn thính giác",
                 "Viêm gan"
-            ],
+    ],
             "antidote": "Không có antidote đặc hiệu",
             "treatment": [
                 "Ngừng erythromycin",
@@ -533,36 +599,72 @@ MACROLIDES_DRUGS = {
                 "Than hoạt tính",
                 "Điều trị hỗ trợ",
                 "Theo dõi ECG, chức năng gan"
-            ],
-            "monitoring": "ECG, chức năng gan, dấu hiệu sống"
+    ],
+            "monitoring": "ECG, chức năng gan, dấu hiệu sống",
         },
         "reversal_agents": {
             "available": False,
             "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng erythromycin, rửa dạ dày nếu uống trong vòng 1-2 giờ, than hoạt tính, theo dõi ECG và chức năng gan."
+            "notes": """Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng erythromycin, rửa dạ dày nếu uống trong vòng 1-2 giờ, than hoạt tính, theo dõi ECG và chức năng gan.""",
         },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống với thức ăn để giảm tác dụng phụ tiêu hóa (nhưng có thể giảm hấp thu)",
-                "timing": "Uống 3-4 lần/ngày (q6-8h)"
+                "timing": "Uống 3-4 lần/ngày (q6-8h)",
             },
             "iv": {
                 "reconstitution": "Pha theo hướng dẫn",
                 "infusion_rate": "Truyền trong 30-60 phút",
-                "compatibility": ["NaCl 0.9%", "D5W"],
-                "incompatibility": ["Không trộn với các thuốc khác"],
-                "notes": "Có thể truyền liên tục"
-            }
+                "compatibility": [
+                    "NaCl 0.9%",
+                    "D5W"
+    ],
+                "incompatibility": [
+                    "Không trộn với các thuốc khác"
+    ],
+                "notes": "Có thể truyền liên tục",
+            },
         },
         "references": {
             "primary_sources": [
                 "FDA Label: Erythromycin",
                 "UpToDate: Erythromycin drug information",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
-            ],
+    ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved, extensive clinical experience"
+            "evidence_level": "High - FDA approved, extensive clinical experience",
         },
-    }}
-
-__all__ = ['MACROLIDES_DRUGS']
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Moderate",
+            "organ_toxicity": {
+                "cardiac": "High (QT prolongation, torsades de pointes, increased cardiovascular death risk - Black Box Warning)",
+                "gastrointestinal": "High (nausea, vomiting, diarrhea - very common)",
+                "hepatic": "Moderate (hepatitis rare)",
+                "auditory": "Moderate (hearing loss rare, may be irreversible)"
+            },
+            "qt_prolongation": True,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "ECG (QT interval) - CRITICAL (can cause QT prolongation, torsades de pointes)",
+                "GI symptoms (nausea, vomiting, diarrhea) - very common",
+                "Hepatic function (ALT, AST) - rare hepatitis",
+                "Hearing loss symptoms (tinnitus, hearing loss) - rare, may be irreversible",
+                "INR (if co-administered with warfarin) - increased bleeding risk",
+                "Digoxin levels (if co-administered) - increased digoxin toxicity",
+                "Theophylline levels (if co-administered) - increased theophylline toxicity",
+                "Carbamazepine levels (if co-administered) - increased carbamazepine toxicity"
+            ],
+            "look_alike_sound_alike": ["Erythromycin", "Azithromycin", "Clarithromycin", "Erythropoietin"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Erythromycin and QT Prolongation",
+            "FDA Black Box Warning - Erythromycin and Cardiovascular Death Risk",
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "WHO Essential Medicines List"
+        ]
+        }
+}

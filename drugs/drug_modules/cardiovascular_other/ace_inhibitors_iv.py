@@ -177,7 +177,28 @@ ACE_INHIBITORS_IV_DRUGS = {
             ],
             "last_updated": "2025-02-04",
             "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"renal": "Acute kidney injury (especially bilateral renal artery stenosis)", "cardiovascular": "Hypotension (severe, especially first dose)", "dermatologic": "Angioedema (Black Box Warning - life-threatening)", "teratogenic": "Black Box Warning - Teratogenicity (Category D)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Blood pressure (continuous monitoring first 30-60 minutes - Black Box Warning for hypotension)", "Serum potassium (hyperkalemia risk)", "Renal function (creatinine, eGFR - acute kidney injury risk)", "Angioedema signs (Black Box Warning - life-threatening, face, lips, tongue, throat swelling)", "First dose hypotension (especially with diuretics)"],
+            "look_alike_sound_alike": ["Enalaprilat", "Enalapril"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Teratogenicity (Category D)",
+            "FDA Black Box Warning - Angioedema (life-threatening)",
+            "AHA/ACC Guidelines - Hypertension",
+            "AHA/ACC/HFSA Guidelines - Heart Failure",
+            "AHA/ASA Guidelines - Hypertensive Emergency",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 }
 

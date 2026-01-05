@@ -435,11 +435,16 @@ SELECTIVE_BETA_BLOCKERS = {
           "high_alert": False,
           "narrow_therapeutic_index": False,
           "icu_critical_care_only": False,
-          "bleeding_risk": "Low",
-          "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"},
-          "requires_monitoring": ["Heart rate", "Blood pressure", "Renal function"]
+          "bleeding_risk": None,
+          "organ_toxicity": {"cardiovascular": "Bradycardia, AV block, heart failure exacerbation", "respiratory": "Bronchospasm (less than non-selective)", "endocrine": "Masks hypoglycemia symptoms in diabetes", "renal": "Dose adjustment required (excreted renally)"},
+          "qt_prolongation": False,
+          "hepatotoxicity": False,
+          "nephrotoxicity": False,
+          "requires_monitoring": ["Heart rate (bradycardia risk)", "Blood pressure", "ECG (AV block)", "Renal function (CrCl - dose adjustment required)", "Blood glucose (masks hypoglycemia symptoms in diabetes)", "Withdrawal syndrome (do not stop abruptly - Black Box Warning)"],
+          "look_alike_sound_alike": ["Atenolol", "Atenolol"]
       },
       "guideline_tags": [
+          "FDA Black Box Warning - Do Not Stop Abruptly (angina, MI risk)",
           "ACC/AHA Guidelines - Post-Myocardial Infarction",
           "ACC/AHA Guidelines - Hypertension",
           "WHO Essential Medicines List"
@@ -1132,18 +1137,23 @@ SELECTIVE_BETA_BLOCKERS = {
             "high_alert": False,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"},
-            "requires_monitoring": ["Heart rate", "Blood pressure", "Renal function"]
+            "bleeding_risk": None,
+            "organ_toxicity": {"cardiovascular": "Bradycardia, AV block, heart failure exacerbation", "respiratory": "Bronchospasm (less than non-selective)", "endocrine": "Masks hypoglycemia symptoms in diabetes"},
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Heart rate (bradycardia risk)", "Blood pressure", "ECG (AV block)", "Blood glucose (masks hypoglycemia symptoms in diabetes)", "Withdrawal syndrome (do not stop abruptly - Black Box Warning)"],
+            "look_alike_sound_alike": ["Metoprolol", "Metoclopramide"]
         },
         "guideline_tags": [
+            "FDA Black Box Warning - Do Not Stop Abruptly (angina, MI risk)",
             "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
             "ESC Guidelines - Heart Failure",
             "ACC/AHA Guidelines - Hypertension",
             "ACC/AHA Guidelines - Post-Myocardial Infarction",
             "WHO Essential Medicines List"
         ],
-        "last_updated": "2025-02-18",
+        "last_updated": "2025-02-18"
     },
 
     "Nebivolol": {

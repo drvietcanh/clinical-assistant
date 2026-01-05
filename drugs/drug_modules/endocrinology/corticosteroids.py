@@ -66,7 +66,23 @@ CORTICOSTEROIDS_DRUGS = {
             "Loãng xương - Bổ sung Calci + Vitamin D",
             "Cân nhắc dùng PPI để bảo vệ dạ dày"
         ],
-        "black_box_warnings": "Suy thượng thận nghiêm trọng nếu ngừng đột ngột sau dùng lâu dài. Tăng nguy cơ nhiễm trùng nghiêm trọng."
+        "black_box_warnings": "Suy thượng thận nghiêm trọng nếu ngừng đột ngột sau dùng lâu dài. Tăng nguy cơ nhiễm trùng nghiêm trọng.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["endocrine", "metabolic", "gastrointestinal", "skeletal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose", "Blood pressure", "Bone density (DEXA if long-term)", "Signs of infection", "Adrenal insufficiency signs"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Adrenal Insufficiency (if stopped abruptly after long-term use)",
+            "FDA Black Box Warning - Serious Infections",
+            "ACR Guidelines - Rheumatoid Arthritis",
+            "WHO Essential Medicines List"
+        ],
     },
 
     "Dexamethasone": {
@@ -102,7 +118,24 @@ CORTICOSTEROIDS_DRUGS = {
             "Dấu hiệu nhiễm trùng",
             "Huyết áp"
         ],
-        "black_box_warnings": "Tương tự Prednisone. Suy thượng thận nếu ngừng đột ngột."
+        "black_box_warnings": "Tương tự Prednisone. Suy thượng thận nếu ngừng đột ngột.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["endocrine", "metabolic", "gastrointestinal", "skeletal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood glucose", "Blood pressure", "Bone density (DEXA if long-term)", "Signs of infection", "Adrenal insufficiency signs"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Adrenal Insufficiency (if stopped abruptly after long-term use)",
+            "FDA Black Box Warning - Serious Infections",
+            "WHO Guidelines - COVID-19 Treatment (RECOVERY trial)",
+            "ACR Guidelines - Rheumatoid Arthritis",
+            "WHO Essential Medicines List"
+        ],
     },
 
     "Hydrocortisone": {
@@ -135,7 +168,37 @@ CORTICOSTEROIDS_DRUGS = {
             "Đường huyết, huyết áp",
             "Natri, Kali (do tác dụng mineralocorticoid)",
             "Dấu hiệu phù"
-        ]
+        ],
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Hydrocortisone (Solu-Cortef)",
+                "UpToDate - Hydrocortisone: Drug information",
+                "Endocrine Society Guidelines - Adrenal Insufficiency",
+                "SCCM Guidelines - Septic Shock"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, extensive clinical experience"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"endocrine": "Black Box Warning - Adrenal insufficiency (if stopped abruptly)", "metabolic": "Hyperglycemia, fluid retention (mineralocorticoid effect)", "cardiovascular": "Hypertension, hypokalemia", "oncologic": "Black Box Warning - Increased risk of infection"},
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Black Box Warning - Adrenal insufficiency (do not stop abruptly)", "Blood glucose (hyperglycemia)", "Blood pressure (hypertension)", "Serum sodium, potassium (mineralocorticoid effect)", "Infection signs (Black Box Warning - increased risk)", "Fluid retention signs (edema)"],
+            "look_alike_sound_alike": ["Hydrocortisone", "Hydrochlorothiazide"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Adrenal Insufficiency (if stopped abruptly)",
+            "FDA Black Box Warning - Increased Risk of Infection",
+            "Endocrine Society Guidelines - Adrenal Insufficiency",
+            "SCCM Guidelines - Septic Shock",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 
     "Methylprednisolone": {
@@ -170,5 +233,5 @@ CORTICOSTEROIDS_DRUGS = {
             "Dấu hiệu nhiễm trùng",
             "Tâm thần (với liều cao)"
         ]
-    }
+        }
 }

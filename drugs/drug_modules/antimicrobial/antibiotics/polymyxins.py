@@ -5,10 +5,15 @@ Kháng sinh cuối cùng cho MDR Gram-âm
 """
 
 POLYMYXIN_ANTIBIOTICS = {
-    "Colistin": {
+    "Colistin":     {
         "group": "Antibiotic - Polymyxin",
         "vietnamese_name": "Colistin, Colistimethate sodium, Coly-Mycin",
-        "administration": ["IV", "IM", "Inhaled", "Intrathecal"],
+        "administration": [
+            "IV",
+            "IM",
+            "Inhaled",
+            "Intrathecal"
+    ],
         "indications": [
             "Nhiễm khuẩn do vi khuẩn kháng đa thuốc (MDR) Gram-âm",
             "Pseudomonas aeruginosa kháng đa thuốc",
@@ -20,22 +25,28 @@ POLYMYXIN_ANTIBIOTICS = {
             "Nhiễm khuẩn đường tiết niệu do MDR Gram-âm",
             "Viêm màng não do MDR Gram-âm (intrathecal)",
             "Nhiễm khuẩn phổi mãn tính ở bệnh nhân xơ nang (CF) - dạng hít"
-        ],
-        "contraindications": [
-            "Dị ứng colistin hoặc polymyxin",
-            "Myasthenia gravis - CHỐNG CHỈ ĐỊNH",
-            "Suy thận nặng (CrCl <30) - thận trọng, cần điều chỉnh liều",
-            "Suy thận cấp - thận trọng"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với colistin hoặc polymyxin",
+                "Myasthenia gravis - CHỐNG CHỈ ĐỊNH"
+    ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - thận trọng, cần điều chỉnh liều",
+                "Suy thận cấp - thận trọng",
+                "Độc thận đang hoạt động",
+                "Độc thần kinh đang hoạt động"
+    ],
+        },
         "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng colistin hoặc polymyxin",
                 "Myasthenia gravis - CHỐNG CHỈ ĐỊNH"
-            ],
+    ],
             "tương_đối": [
                 "Suy thận nặng (CrCl <30) - thận trọng, cần điều chỉnh liều",
                 "Suy thận cấp - thận trọng"
-            ]
+    ],
         },
         "dosage": {
             "adult_iv_standard": "2.5-5 mg/kg/ngày IV (tính theo colistin base), chia 2-3 lần",
@@ -43,13 +54,13 @@ POLYMYXIN_ANTIBIOTICS = {
             "adult_iv_meningitis": "5-6 mg/kg/ngày IV, chia 2-3 lần + intrathecal",
             "adult_inhaled_cf": "75-150mg x 2 lần/ngày (dạng hít)",
             "adult_intrathecal": "5-10mg intrathecal x 1 lần/ngày (viêm màng não)",
-            "notes": "Liều tính theo colistin base. Colistimethate sodium (CMS) chuyển thành colistin trong cơ thể. Cần điều chỉnh liều theo chức năng thận. Độc thận và độc thần kinh cao."
+            "notes": """Liều tính theo colistin base. Colistimethate sodium (CMS) chuyển thành colistin trong cơ thể. Cần điều chỉnh liều theo chức năng thận. Độc thận và độc thần kinh cao.""",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Giảm liều 25-50% hoặc tăng khoảng cách",
             "under_30": "Giảm liều 50-75% hoặc tăng khoảng cách đáng kể",
-            "hemodialysis": "Liều sau lọc máu, cần TDM nếu có thể"
+            "hemodialysis": "Liều sau lọc máu, cần TDM nếu có thể",
         },
         "side_effects": [
             "Độc thận (nephrotoxicity) - tăng creatinine, suy thận cấp, có thể không hồi phục",
@@ -59,16 +70,16 @@ POLYMYXIN_ANTIBIOTICS = {
             "Sốt",
             "Ho, khó thở (dạng hít)",
             "Đau tại chỗ tiêm"
-        ],
+    ],
         "interactions": [
             "Aminoglycosides: tăng độc thận và độc thần kinh",
             "Thuốc giãn cơ (neuromuscular blocking agents): tăng nguy cơ suy hô hấp",
             "Vancomycin: có thể tăng độc thận",
             "Furosemide: có thể tăng độc thận",
             "Cisplatin: tăng độc thận"
-        ],
+    ],
         "pregnancy": "C - Sử dụng nếu lợi ích > nguy cơ (độc thận, độc thần kinh)",
-        "mechanism_of_action": "Colistin là polymyxin kháng sinh, gắn với lipopolysaccharide (LPS) của màng ngoài vi khuẩn Gram-âm, phá vỡ tính toàn vẹn màng và gây chết tế bào. Tác động như một chất tẩy rửa (detergent), làm rò rỉ nội dung tế bào. Phổ kháng khuẩn: Gram-âm mạnh (Pseudomonas aeruginosa, Acinetobacter baumannii, Klebsiella pneumoniae, E. coli - kể cả các chủng kháng carbapenem CRE), không có hoạt tính với Gram-dương hoặc kỵ khí. Đặc điểm: kháng sinh cuối cùng cho MDR Gram-âm, độc thận và độc thần kinh cao, cần điều chỉnh liều theo chức năng thận. CHỐNG CHỈ ĐỊNH trong myasthenia gravis (nguy cơ neuromuscular blockade).",
+        "mechanism_of_action": """Colistin là polymyxin kháng sinh, gắn với lipopolysaccharide (LPS) của màng ngoài vi khuẩn Gram-âm, phá vỡ tính toàn vẹn màng và gây chết tế bào. Tác động như một chất tẩy rửa (detergent), làm rò rỉ nội dung tế bào. Phổ kháng khuẩn: Gram-âm mạnh (Pseudomonas aeruginosa, Acinetobacter baumannii, Klebsiella pneumoniae, E. coli - kể cả các chủng kháng carbapenem CRE), không có hoạt tính với Gram-dương hoặc kỵ khí. Đặc điểm: kháng sinh cuối cùng cho MDR Gram-âm, độc thận và độc thần kinh cao, cần điều chỉnh liều theo chức năng thận. CHỐNG CHỈ ĐỊNH trong myasthenia gravis (nguy cơ neuromuscular blockade).""",
         "monitoring": [
             "Chức năng thận (creatinine, eGFR, BUN) - BẮT BUỘC: hàng ngày, đặc biệt quan trọng vì độc thận cao",
             "Dấu hiệu độc thần kinh: tê bì, yếu cơ, rối loạn cảm giác, co giật, suy hô hấp",
@@ -78,7 +89,7 @@ POLYMYXIN_ANTIBIOTICS = {
             "Chức năng hô hấp (nếu có dấu hiệu neuromuscular blockade)",
             "Dấu hiệu suy hô hấp (neuromuscular blockade) - nguy hiểm tính mạng",
             "TDM (nếu có thể) - nồng độ colistin trong huyết thanh"
-        ],
+    ],
         "precautions": [
             "Độc thận và độc thần kinh - RẤT CAO, có thể không hồi phục",
             "CHỐNG CHỈ ĐỊNH trong myasthenia gravis - nguy cơ neuromuscular blockade, suy hô hấp",
@@ -92,7 +103,7 @@ POLYMYXIN_ANTIBIOTICS = {
             "Dạng hít: dùng cho bệnh nhân xơ nang (CF) để điều trị nhiễm Pseudomonas mãn tính, ít độc tính toàn thân hơn",
             "Intrathecal: chỉ dùng cho viêm màng não do MDR Gram-âm, cần thận trọng",
             "Pha trong NS hoặc D5W, truyền IV trong 30-60 phút"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "2-3 giờ (bình thường), 10-20 giờ (suy thận nặng)",
             "onset": "Ngay lập tức sau khi truyền IV",
@@ -100,37 +111,39 @@ POLYMYXIN_ANTIBIOTICS = {
             "protein_binding": "50%",
             "metabolism": "Chuyển hóa một phần (colistimethate → colistin)",
             "clearance": "Chủ yếu qua thận (70-80% bài tiết nguyên dạng), cần điều chỉnh thận",
-            "volume_of_distribution": "0.2-0.3 L/kg"
+            "volume_of_distribution": "0.2-0.3 L/kg",
         },
-        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày. Không đông lạnh.",
-        "black_box_warnings": "Độc thận và độc thần kinh - RẤT CAO, có thể không hồi phục. CHỐNG CHỈ ĐỊNH trong myasthenia gravis (nguy cơ neuromuscular blockade, suy hô hấp). Chỉ dùng khi không còn lựa chọn khác (MDR Gram-âm). Cần điều chỉnh liều theo chức năng thận và theo dõi sát.",
+        "storage": """Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày. Không đông lạnh.""",
+        "black_box_warnings": """Độc thận và độc thần kinh - RẤT CAO, có thể không hồi phục. CHỐNG CHỈ ĐỊNH trong myasthenia gravis (nguy cơ neuromuscular blockade, suy hô hấp). Chỉ dùng khi không còn lựa chọn khác (MDR Gram-âm). Cần điều chỉnh liều theo chức năng thận và theo dõi sát.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Aminoglycosides (Gentamicin, Amikacin, Tobramycin)",
                     "mechanism": "Cả hai đều độc thận và độc thần kinh, tác dụng cộng dồn",
                     "effect": "Tăng nguy cơ độc thận và độc thần kinh nặng, có thể không hồi phục",
-                    "management": "TRÁNH dùng đồng thời. Nếu bắt buộc, theo dõi chức năng thận và thần kinh sát, giảm liều nếu cần."
+                    "management": "TRÁNH dùng đồng thời. Nếu bắt buộc, theo dõi chức năng thận và thần kinh sát, giảm liều nếu cần.",
                 },
-                {
+    {
                     "drug": "Thuốc giãn cơ (Neuromuscular Blocking Agents: Succinylcholine, Rocuronium, Vecuronium)",
                     "mechanism": "Colistin tăng tác dụng thuốc giãn cơ, gây neuromuscular blockade",
                     "effect": "Tăng nguy cơ suy hô hấp, nguy hiểm tính mạng",
-                    "management": "TRÁNH dùng đồng thời. Nếu bắt buộc (phẫu thuật), theo dõi hô hấp sát, có thể cần giảm liều thuốc giãn cơ."
+                    "management": """TRÁNH dùng đồng thời. Nếu bắt buộc (phẫu thuật), theo dõi hô hấp sát, có thể cần giảm liều thuốc giãn cơ.""",
                 },
-                {
+    {
                     "drug": "Vancomycin",
                     "mechanism": "Cả hai đều độc thận, tác dụng cộng dồn",
                     "effect": "Tăng nguy cơ độc thận nặng",
-                    "management": "Theo dõi chức năng thận sát nếu dùng đồng thời."
+                    "management": "Theo dõi chức năng thận sát nếu dùng đồng thời.",
                 },
-                {
+    {
                     "drug": "Furosemide",
                     "mechanism": "Furosemide có thể tăng độc thận của colistin",
                     "effect": "Tăng nguy cơ độc thận",
-                    "management": "Theo dõi chức năng thận sát nếu dùng đồng thời."
+                    "management": "Theo dõi chức năng thận sát nếu dùng đồng thời.",
                 }
-            ]
+                ],
+            "moderate": [],
+            "minor": [],
         },
         "references": {
             "primary_sources": [
@@ -141,51 +154,77 @@ POLYMYXIN_ANTIBIOTICS = {
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
                 "Lexicomp Online - Colistin Monograph",
                 "Micromedex - Colistin Drug Information"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn",
         },
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": True,
             "icu_critical_care_only": True,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"renal": "High", "neurological": "High (neurotoxicity, neuromuscular blockade)"}
+            "organ_toxicity": {
+                "renal": "High",
+                "neurological": "High (neurotoxicity, neuromuscular blockade)",
+            },
         },
         "guideline_tags": [
             "IDSA Guidelines - Multidrug-Resistant Gram-Negative Infections",
             "IDSA Guidelines - Carbapenem-Resistant Enterobacteriaceae",
             "IDSA Guidelines - Hospital-Acquired Pneumonia",
             "WHO Essential Medicines List"
-        ],
+    ],
         "last_updated": "2025-02-18",
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
-            "lactation_details": ""
+            "fda_category": "C",
+            "pregnancy_details": """Sử dụng nếu lợi ích vượt trội nguy cơ. Colistin có thể qua nhau thai. Độc thận và độc thần kinh cao. CHỈ dùng khi không còn lựa chọn khác (MDR Gram-âm đe dọa tính mạng).""",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Có thể gây độc tính ở trẻ.",
+                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho bú tạm thời hoặc đổi thuốc khác.",
+            },
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": ""
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Không cần chỉnh liều.",
+            "severe": "Không cần chỉnh liều.",
+            "notes": "Colistin không chuyển hóa đáng kể qua gan, thải trừ chủ yếu qua thận.",
         },
         "overdose_management": {
-            "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "symptoms": [
+                "Độc thận (nephrotoxicity) - tăng creatinine, suy thận cấp",
+                "Độc thần kinh (neurotoxicity) - tê bì, yếu cơ, co giật",
+                "Block thần kinh-cơ (neuromuscular blockade) - suy hô hấp, nguy hiểm tính mạng"
+    ],
+            "antidote": "Calcium gluconate cho neuromuscular blockade.",
+            "treatment": [
+                "Ngừng colistin ngay",
+                "Đo chức năng thận ngay",
+                "Nếu độc thận: truyền dịch tích cực, theo dõi chức năng thận, hemodialysis nếu cần",
+                "Nếu neuromuscular blockade: đảm bảo đường thở, hỗ trợ hô hấp, calcium gluconate",
+                "Theo dõi dấu hiệu độc thần kinh"
+    ],
+            "monitoring": "Creatinine, eGFR, BUN, dấu hiệu độc thần kinh, chức năng hô hấp, điện giải.",
         },
         "reversal_agents": {
-            "available": False,
-            "agents": [],
-            "notes": ""
+            "available": True,
+            "agents": [
+                "Calcium gluconate",
+                "Calcium chloride"
+    ],
+            "notes": "Calcium có thể đối kháng neuromuscular blockade.",
         },
         "administration_instructions": {
-            "preparation": "",
-            "administration": "",
-            "monitoring": []
+            "iv": {
+                "reconstitution": "Pha trong NaCl 0.9% hoặc D5W.",
+                "infusion_rate": "Truyền IV trong 30-60 phút.",
+                "notes": """Điều chỉnh liều theo chức năng thận. Theo dõi chức năng thận hàng ngày. Tránh dùng với aminoglycosides hoặc thuốc giãn cơ.""",
+            },
+            "inhaled": {
+                "notes": "Dạng hít cho bệnh nhân xơ nang (CF) để điều trị nhiễm Pseudomonas mãn tính.",
+            },
         },
     },
-    
     "Polymyxin B": {
         "group": "Antibiotic - Polymyxin",
         "vietnamese_name": "Polymyxin B",

@@ -55,6 +55,23 @@ PPIS_DRUGS = {
             "Tránh dùng chung với Clopidogrel (chuyển sang Pantoprazole)",
             "Nguy cơ thiếu B12, Magie nếu dùng lâu dài",
             "Tăng nguy cơ nhiễm C. difficile"
+        ],
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "FDA Warning - Giảm hiệu quả Clopidogrel (tránh dùng chung, chuyển sang Pantoprazole)",
+            "ACG Guidelines - GERD and Peptic Ulcer Disease",
+            "WHO Guidelines - Essential medicines for GI disorders"
         ]
     },
 
@@ -82,6 +99,23 @@ PPIS_DRUGS = {
         "precautions": [
             "Tương tự Omeprazole",
             "Ưu tiên khi dùng chung với Clopidogrel"
+        ],
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ACG Guidelines - GERD and Peptic Ulcer Disease",
+            "FDA Recommendation - Ưu tiên khi dùng chung với Clopidogrel (ít tương tác hơn Omeprazole)",
+            "WHO Guidelines - Essential medicines for GI disorders"
         ]
     },
 
@@ -103,7 +137,23 @@ PPIS_DRUGS = {
         "side_effects": [
             "Tương tự Omeprazole"
         ],
-        "mechanism_of_action": "S-enantiomer của Omeprazole. Tác dụng tương tự nhưng sinh khả dụng cao hơn một chút."
+        "mechanism_of_action": "S-enantiomer của Omeprazole. Tác dụng tương tự nhưng sinh khả dụng cao hơn một chút.",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ACG Guidelines - GERD and Peptic Ulcer Disease",
+            "WHO Guidelines - Essential medicines for GI disorders"
+        ]
     },
 
     "Lansoprazole": {
@@ -123,6 +173,22 @@ PPIS_DRUGS = {
         },
         "side_effects": [
             "Tương tự Omeprazole"
+        ],
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "ACG Guidelines - GERD and Peptic Ulcer Disease",
+            "WHO Guidelines - Essential medicines for GI disorders"
         ]
-    }
+        }
 }

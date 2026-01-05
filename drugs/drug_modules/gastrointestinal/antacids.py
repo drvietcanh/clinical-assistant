@@ -146,6 +146,20 @@ ANTACIDS_DRUGS = {
          "black_box_warnings": None,
          "black_box_warnings": None,
          "black_box_warnings": "Không có",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "ACG 2017 GERD Guidelines",
+                "FDA - Over-the-counter antacids",
+            ]
 },
 
     "Calcium carbonate": {
@@ -289,6 +303,20 @@ ANTACIDS_DRUGS = {
           "black_box_warnings": None,
           "black_box_warnings": None,
           "black_box_warnings": "Không có",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "ACG 2017 GERD Guidelines",
+                "FDA - Over-the-counter antacids",
+            ]
 },
 }
 

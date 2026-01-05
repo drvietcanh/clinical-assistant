@@ -160,7 +160,22 @@ T1DM_PREVENTION_DRUGS = {
                 "ADA Guidelines - Type 1 Diabetes Prevention"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved (2022), clinical trial data, first drug approved for T1DM prevention"
+            "evidence_level": "A - FDA-approved (2022), clinical trial data",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ] 
+
         }
     },
 }

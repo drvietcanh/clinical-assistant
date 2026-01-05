@@ -195,8 +195,13 @@ DIHYDROPYRIDINE_CCB = {
             "high_alert": False,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"cardiovascular": "Moderate (peripheral edema, reflex tachycardia)"}
+            "bleeding_risk": None,
+            "organ_toxicity": {"cardiovascular": "Peripheral edema (common), reflex tachycardia, hypotension", "hepatic": "Hepatotoxicity (rare)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure", "Peripheral edema (common side effect)", "Heart rate (reflex tachycardia)", "Hepatic function (rare hepatotoxicity)", "CYP3A4 interactions (grapefruit juice, simvastatin)"],
+            "look_alike_sound_alike": ["Amlodipine", "Amlodipine"]
         },
         "guideline_tags": [
             "ACC/AHA Guidelines - Hypertension",
@@ -208,32 +213,40 @@ DIHYDROPYRIDINE_CCB = {
         "last_updated": "2025-02-18",
     },
 
-    "Clevidipine": {
+    "Clevidipine":     {
         "group": "Cardiovascular - Calcium Channel Blocker (Dihydropyridine, IV)",
         "vietnamese_name": "Clevidipine, Cleviprex",
-        "administration": ["IV"],
+        "administration": [
+            "IV"
+    ],
         "indications": [
             "Cơn tăng huyết áp (hypertensive emergency) - cấp cứu",
             "Tăng huyết áp trong phẫu thuật",
             "Tăng huyết áp trong ICU"
-        ],
-        "contraindications": [
-            "Dị ứng clevidipine hoặc đậu nành (soy)",
-            "Dị ứng trứng (egg)",
-            "Dị ứng lipid (lipid emulsion)",
-            "Rối loạn chuyển hóa lipid nặng",
-            "Suy gan nặng"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng clevidipine hoặc đậu nành (soy) - CHỐNG CHỈ ĐỊNH",
+                "Dị ứng trứng (egg) - CHỐNG CHỈ ĐỊNH",
+                "Dị ứng lipid (lipid emulsion) - CHỐNG CHỈ ĐỊNH",
+                "Rối loạn chuyển hóa lipid nặng - CHỐNG CHỈ ĐỊNH"
+    ],
+            "tương_đối": [
+                "Suy gan nặng - thận trọng (chuyển hóa một phần qua gan)",
+                "Bệnh nhân cao tuổi - tăng nhạy cảm với hạ huyết áp",
+                "Dùng với thuốc hạ huyết áp khác - tăng nguy cơ hạ huyết áp"
+    ],
+        },
         "dosage": {
             "adult_initial": "1-2 mg/giờ IV infusion",
             "adult_maintenance": "4-6 mg/giờ IV infusion (tối đa 16 mg/giờ)",
-            "notes": "Truyền liên tục. Chỉnh liều theo huyết áp mục tiêu. Tác dụng nhanh, thời gian tác dụng ngắn (half-life 1-15 phút)."
+            "notes": """Truyền liên tục. Chỉnh liều theo huyết áp mục tiêu. Tác dụng nhanh, thời gian tác dụng ngắn (half-life 1-15 phút).""",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Không cần điều chỉnh đáng kể",
             "under_30": "Không cần điều chỉnh đáng kể",
-            "hemodialysis": "Không cần điều chỉnh đáng kể"
+            "hemodialysis": "Không cần điều chỉnh đáng kể",
         },
         "side_effects": [
             "Hạ huyết áp (phổ biến, có thể nặng)",
@@ -242,19 +255,19 @@ DIHYDROPYRIDINE_CCB = {
             "Chóng mặt",
             "Buồn nôn",
             "Viêm tĩnh mạch tại chỗ tiêm"
-        ],
+    ],
         "interactions": [
             "Thuốc hạ huyết áp khác: tăng nguy cơ hạ huyết áp",
             "Thuốc gây mê: tăng nguy cơ hạ huyết áp"
-        ],
+    ],
         "pregnancy": "C - Thận trọng trong thai kỳ",
-        "mechanism_of_action": "Clevidipine là dihydropyridine calcium channel blocker dạng IV, tác dụng nhanh. Ức chế dòng calci vào tế bào cơ trơn mạch máu (L-type calcium channels), gây giãn mạch động mạch, giảm sức cản mạch hệ thống (SVR) và huyết áp. Không có tác dụng đáng kể trên cơ tim hoặc dẫn truyền AV (chọn lọc mạch máu). ĐẶC ĐIỂM: (1) Tác dụng cực nhanh (khởi phát trong 2-4 phút), (2) Thời gian tác dụng ngắn (half-life 1-15 phút, do chuyển hóa nhanh bởi esterase trong huyết tương), (3) Không tích lũy, (4) Không cần điều chỉnh liều ở suy thận (chuyển hóa bởi esterase, không phụ thuộc gan/thận), (5) Dạng lipid emulsion (chứa đậu nành và trứng) - CHỐNG CHỈ ĐỊNH nếu dị ứng đậu nành, trứng, hoặc lipid.",
+        "mechanism_of_action": """Clevidipine là dihydropyridine calcium channel blocker dạng IV, tác dụng nhanh. Ức chế dòng calci vào tế bào cơ trơn mạch máu (L-type calcium channels), gây giãn mạch động mạch, giảm sức cản mạch hệ thống (SVR) và huyết áp. Không có tác dụng đáng kể trên cơ tim hoặc dẫn truyền AV (chọn lọc mạch máu). ĐẶC ĐIỂM: (1) Tác dụng cực nhanh (khởi phát trong 2-4 phút), (2) Thời gian tác dụng ngắn (half-life 1-15 phút, do chuyển hóa nhanh bởi esterase trong huyết tương), (3) Không tích lũy, (4) Không cần điều chỉnh liều ở suy thận (chuyển hóa bởi esterase, không phụ thuộc gan/thận), (5) Dạng lipid emulsion (chứa đậu nành và trứng) - CHỐNG CHỈ ĐỊNH nếu dị ứng đậu nành, trứng, hoặc lipid.""",
         "monitoring": [
             "Huyết áp liên tục (arterial line nếu có thể) - QUAN TRỌNG",
             "Nhịp tim và ECG",
             "Dấu hiệu hạ huyết áp nặng",
             "Dấu hiệu phản ứng dị ứng (đậu nành, trứng, lipid)"
-        ],
+    ],
         "precautions": [
             "Hạ huyết áp - phổ biến, cần theo dõi sát",
             "CHỐNG CHỈ ĐỊNH nếu dị ứng đậu nành, trứng, hoặc lipid",
@@ -263,83 +276,74 @@ DIHYDROPYRIDINE_CCB = {
             "Bù dịch đầy đủ trước khi dùng (trừ sốc tim)",
             "Giảm liều hoặc ngừng nếu hạ huyết áp nặng",
             "Dùng đường truyền riêng, không trộn với các thuốc khác"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "1-15 phút (rất ngắn, do chuyển hóa nhanh bởi esterase trong huyết tương)",
             "onset": "2-4 phút",
             "duration": "Ngắn (cần truyền liên tục)",
             "protein_binding": ">99%",
             "metabolism": "Chuyển hóa nhanh bởi esterase trong huyết tương (không phụ thuộc CYP450), một phần qua gan",
-            "clearance": "Chuyển hóa bởi esterase trong huyết tương, không phụ thuộc gan/thận"
+            "clearance": "Chuyển hóa bởi esterase trong huyết tương, không phụ thuộc gan/thận",
         },
-        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh. Sau khi mở: dùng trong 12 giờ. Dạng lipid emulsion - bảo vệ khỏi ánh sáng.",
+        "storage": """Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh. Sau khi mở: dùng trong 12 giờ. Dạng lipid emulsion - bảo vệ khỏi ánh sáng.""",
         "black_box_warnings": None,
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Thuốc hạ huyết áp khác (ACE inhibitors, ARBs, Nitroglycerin, Hydralazine)",
                     "mechanism": "Tác dụng hạ huyết áp cộng dồn",
                     "effect": "Tăng nguy cơ hạ huyết áp nặng, sốc",
-                    "management": "Theo dõi huyết áp sát. Giảm liều các thuốc hạ huyết áp khác nếu cần."
+                    "management": "Theo dõi huyết áp sát. Giảm liều các thuốc hạ huyết áp khác nếu cần.",
                 }
-            ],
-            "moderate": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng clevidipine hoặc đậu nành (soy) - CHỐNG CHỈ ĐỊNH",
-                "Dị ứng trứng (egg) - CHỐNG CHỈ ĐỊNH",
-                "Dị ứng lipid (lipid emulsion) - CHỐNG CHỈ ĐỊNH",
-                "Rối loạn chuyển hóa lipid nặng - CHỐNG CHỈ ĐỊNH"
-            ],
-            "tương_đối": [
-                "Suy gan nặng - thận trọng (chuyển hóa một phần qua gan)",
-                "Bệnh nhân cao tuổi - tăng nhạy cảm với hạ huyết áp",
-                "Dùng với thuốc hạ huyết áp khác - tăng nguy cơ hạ huyết áp"
-            ]
+                ],
+            "moderate": [],
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "C",
-            "pregnancy_details": "Clevidipine là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong cơn tăng huyết áp đe dọa tính mạng.",
+            "pregnancy_details": """Clevidipine là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong cơn tăng huyết áp đe dọa tính mạng.""",
             "lactation": {
                 "safety": "Unknown",
                 "details": "Không biết clevidipine có bài tiết vào sữa mẹ hay không. Thời gian bán thải rất ngắn (1-15 phút).",
-                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
-            }
+                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc.",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không cần điều chỉnh liều",
             "moderate": "Thận trọng. Chuyển hóa một phần qua gan, nhưng chủ yếu qua esterase trong huyết tương.",
             "severe": "Thận trọng. Suy gan nặng có thể ảnh hưởng chuyển hóa. Theo dõi sát.",
-            "notes": "Clevidipine chuyển hóa chủ yếu bởi esterase trong huyết tương (không phụ thuộc CYP450), một phần qua gan. Suy gan nhẹ đến trung bình thường không ảnh hưởng đáng kể. Suy gan nặng có thể ảnh hưởng chuyển hóa."
+            "notes": """Clevidipine chuyển hóa chủ yếu bởi esterase trong huyết tương (không phụ thuộc CYP450), một phần qua gan. Suy gan nhẹ đến trung bình thường không ảnh hưởng đáng kể. Suy gan nặng có thể ảnh hưởng chuyển hóa.""",
         },
         "overdose_management": {
             "symptoms": [
                 "Hạ huyết áp nặng, sốc",
                 "Nhịp tim nhanh",
                 "Rối loạn nhịp tim"
-            ],
+    ],
             "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
             "treatment": [
                 "Ngừng ngay clevidipine nếu đang truyền",
                 "Hỗ trợ huyết động: Truyền dịch bolus (NS, LR), thuốc vận mạch (norepinephrine, dopamine) nếu cần",
                 "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, ECG liên tục",
                 "Hỗ trợ hô hấp nếu cần"
-            ],
-            "monitoring": "Theo dõi huyết áp, nhịp tim, ECG liên tục cho đến khi hồi phục. Thời gian bán thải ngắn (1-15 phút), hồi phục nhanh sau khi ngừng."
+    ],
+            "monitoring": """Theo dõi huyết áp, nhịp tim, ECG liên tục cho đến khi hồi phục. Thời gian bán thải ngắn (1-15 phút), hồi phục nhanh sau khi ngừng.""",
         },
         "reversal_agents": None,
         "administration_instructions": {
             "oral": None,
             "iv": {
                 "reconstitution": "Dung dịch sẵn dùng (0.5 mg/ml). Dạng lipid emulsion (chứa đậu nành và trứng). Bảo vệ khỏi ánh sáng.",
-                "infusion_rate": "Khởi đầu: 1-2 mg/giờ IV infusion. Chỉnh liều theo huyết áp mục tiêu. Tối đa: 16 mg/giờ. Tác dụng nhanh, chỉnh liều mỗi 90 giây nếu cần.",
-                "compatibility": ["D5W (5% Dextrose)", "NS (0.9% NaCl)"],
+                "infusion_rate": """Khởi đầu: 1-2 mg/giờ IV infusion. Chỉnh liều theo huyết áp mục tiêu. Tối đa: 16 mg/giờ. Tác dụng nhanh, chỉnh liều mỗi 90 giây nếu cần.""",
+                "compatibility": [
+                    "D5W (5% Dextrose)",
+                    "NS (0.9% NaCl)"
+    ],
                 "incompatibility": [
                     "Không trộn với các thuốc khác. Dùng đường truyền riêng."
-                ],
-                "notes": "QUAN TRỌNG: 1) CHỐNG CHỈ ĐỊNH nếu dị ứng đậu nành, trứng, hoặc lipid, 2) Theo dõi huyết áp sát, 3) Tác dụng nhanh, chỉnh liều mỗi 90 giây nếu cần, 4) Bảo vệ khỏi ánh sáng, 5) Dùng trong 12 giờ sau khi mở."
-            }
+    ],
+                "notes": """QUAN TRỌNG: 1) CHỐNG CHỈ ĐỊNH nếu dị ứng đậu nành, trứng, hoặc lipid, 2) Theo dõi huyết áp sát, 3) Tác dụng nhanh, chỉnh liều mỗi 90 giây nếu cần, 4) Bảo vệ khỏi ánh sáng, 5) Dùng trong 12 giờ sau khi mở.""",
+            },
         },
         "references": {
             "primary_sources": [
@@ -347,21 +351,38 @@ DIHYDROPYRIDINE_CCB = {
                 "ACC/AHA Guidelines for Hypertension",
                 "UpToDate - Clevidipine: Drug Information",
                 "Medscape - Clevidipine Drug Reference"
-            ],
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+    ],
+            "last_updated": "",
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA guidelines, và dữ liệu lâm sàng từ nhiều nguồn",
         },
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": True,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"cardiovascular": "Moderate (hypotension, reflex tachycardia)"},
-            "requires_monitoring": ["Blood pressure", "Heart rate"]
+            "organ_toxicity": {
+                "cardiovascular": "Moderate (hypotension, reflex tachycardia)",
+            },
+            "requires_monitoring": [
+                "Blood pressure",
+                "Heart rate"
+    ],
         },
         "guideline_tags": [
             "ACC/AHA Guidelines - Hypertensive Emergency",
             "ASA Guidelines - Perioperative Hypertension"
-        ]
+    ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với clevidipine hoặc soy/egg (chứa trong dung dịch)",
+                "Suy gan nặng"
+    ],
+            "tương_đối": [
+                "Suy thận nặng (theo dõi sát)",
+                "Bệnh mạch vành không ổn định (có thể gây phản xạ nhịp nhanh)",
+                "Hạ huyết áp nhẹ-vừa (theo dõi sát)"
+    ],
+        },
     },
     "Felodipine": {
         "group": "Cardiovascular - Calcium Channel Blocker (Dihydropyridine)",
@@ -1322,10 +1343,16 @@ DIHYDROPYRIDINE_CCB = {
             "high_alert": True,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"cardiovascular": "High (immediate-release: MI, stroke risk)"}
+            "bleeding_risk": None,
+            "organ_toxicity": {"cardiovascular": "Black Box Warning - immediate-release: MI, stroke risk (do not use for HTN/angina)", "cardiovascular_other": "Peripheral edema, reflex tachycardia, hypotension", "dermatologic": "Gingival hyperplasia (long-term use)", "hepatic": "Hepatotoxicity (rare)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure (Black Box Warning - immediate-release contraindicated for HTN/angina)", "Peripheral edema (common)", "Heart rate (reflex tachycardia)", "Gingival hyperplasia (long-term use)", "CYP3A4 interactions (grapefruit juice - Black Box Warning)"],
+            "look_alike_sound_alike": ["Nifedipine", "Nicardipine"]
         },
         "guideline_tags": [
+            "FDA Black Box Warning - Immediate-Release Formulation (MI, stroke risk)",
             "ACC/AHA Guidelines - Hypertension",
             "ESC/ESH Guidelines - Hypertension",
             "WHO Essential Medicines List"

@@ -13,7 +13,7 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'Uống 30-60 phút trước bữa ăn. Esomeprazole là S-enantiomer của omeprazole, hiệu quả hơn'}, 'side_effects': [
         'Nhức đầu', 'Tiêu chảy', 'Đau bụng', 'Buồn nôn', 'Tương tự các PPI khác'], 'interactions': [
         'Warfarin: có thể tăng INR', 'Clopidogrel: có thể giảm hiệu quả (ức chế CYP2C19)',
-        'Ketoconazole: giảm hấp thu (cách xa 2 giờ)'], 'pregnancy': 'B',
+        'Ketoconazole: giảm hấp thu (cách xa 2 giờ)'],
         'mechanism_of_action':
         'Proton pump inhibitor (PPI). Esomeprazole là S-enantiomer của omeprazole, có dược động học tốt hơn và hiệu quả mạnh hơn omeprazole. Ức chế H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, giảm tiết acid dạ dày mạnh và kéo dài. Esomeprazole được chuyển hóa chủ yếu qua CYP2C19 và CYP3A4.',
         'monitoring': ['Đáp ứng lâm sàng: giảm triệu chứng đau, ợ nóng',
@@ -64,7 +64,7 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'Nhiễm C. difficile - tăng nguy cơ',
         'Thiếu vitamin B12 - bổ sung nếu dùng lâu dài',
         'Thiếu magnesium - bổ sung nếu dùng lâu dài',
-        'Dùng với clopidogrel - thận trọng (có thể giảm hiệu quả clopidogrel)']}, 'pregnancy_lactation': {'fda_category': 'B',
+        'Dùng với clopidogrel - thận trọng (có thể giảm hiệu quả clopidogrel)'],
         'pregnancy_details':
         'Esomeprazole là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Một số nghiên cứu quan sát không cho thấy tăng nguy cơ dị tật bẩm sinh. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ.',
         'lactation': {'safety': 'Compatible', 'details':
@@ -108,7 +108,7 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'Uống 30 phút trước bữa ăn. Có thể mở viên nang và trộn với nước táo nếu cần'}, 'side_effects': [
         'Nhức đầu', 'Tiêu chảy', 'Đau bụng', 'Buồn nôn', 'Tương tự các PPI khác'], 'interactions': [
         'Warfarin: có thể tăng INR', 'Theophylline: tăng nồng độ theophylline',
-        'Ketoconazole: giảm hấp thu (cách xa 2 giờ)'], 'pregnancy': 'B',
+        'Ketoconazole: giảm hấp thu (cách xa 2 giờ)'],
         'mechanism_of_action':
         'Proton pump inhibitor (PPI). Ức chế H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, giảm tiết acid dạ dày mạnh và kéo dài. Lansoprazole được chuyển hóa chủ yếu qua CYP2C19 và CYP3A4. Tương tự omeprazole nhưng có thể có tương tác ít hơn với một số thuốc.',
         'monitoring': ['Đáp ứng lâm sàng: giảm triệu chứng đau, ợ nóng',
@@ -157,7 +157,7 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài',
         'Nhiễm C. difficile - tăng nguy cơ',
         'Thiếu vitamin B12 - bổ sung nếu dùng lâu dài',
-        'Thiếu magnesium - bổ sung nếu dùng lâu dài']}, 'pregnancy_lactation': {'fda_category': 'B',
+        'Thiếu magnesium - bổ sung nếu dùng lâu dài'],
         'pregnancy_details':
         'Lansoprazole là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Một số nghiên cứu quan sát không cho thấy tăng nguy cơ dị tật bẩm sinh. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ.',
         'lactation': {'safety': 'Compatible', 'details':
@@ -180,7 +180,7 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'timing':
         'Uống vào buổi sáng trước bữa sáng. KHÔNG được nhai hoặc nghiền viên bao tan trong ruột - phải nuốt nguyên viên. Có thể mở viên nang và trộn với nước táo nếu bệnh nhân không nuốt được viên.'},
         'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'}},
+        'compatibility': [], 'incompatibility': []}},
         'references': {'primary_sources': ['FDA Drug Label - Lansoprazole',
         'UpToDate - Proton pump inhibitors: Overview of use and adverse effects',
         'Micromedex - Lansoprazole',
@@ -193,7 +193,7 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         '40mg x 1-2 lần/ngày', 'adult_iv': '40mg x 1-2 lần/ngày', 'notes':
         'Ít tương tác hơn omeprazole với clopidogrel'}, 'side_effects': [
         'Nhức đầu', 'Tiêu chảy', 'Tương tự omeprazole'], 'interactions': [
-        'Ít tương tác hơn omeprazole'], 'pregnancy': 'B', 'mechanism_of_action':
+        'Ít tương tác hơn omeprazole'], 'mechanism_of_action':
         'Proton pump inhibitor (PPI). Ức chế H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, giảm tiết acid dạ dày mạnh và kéo dài. Khác với H2 blockers, PPI ức chế bước cuối cùng của quá trình tiết acid, nên hiệu quả hơn. Pantoprazole ít tương tác với CYP450 hơn omeprazole.'
         , 'monitoring': ['Đáp ứng lâm sàng: giảm triệu chứng đau, ợ nóng',
         'Mg2+ máu (nếu dùng kéo dài >3 tháng) - PPI có thể gây hạ magie máu',
@@ -224,7 +224,7 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'effect': 'Giảm nồng độ atazanavir, giảm hiệu quả điều trị HIV',
         'management':
         'CHỐNG CHỈ ĐỊNH dùng cùng. Không dùng pantoprazole với atazanavir. Dùng H2 blocker hoặc cách thời gian 12 giờ.'
-        }], 'moderate': [{'drug': 'Warfarin', 'mechanism':
+        }, {'drug': 'Warfarin', 'mechanism':
         'Pantoprazole ít ức chế CYP450 hơn omeprazole, nhưng vẫn có thể tương tác nhẹ'
         , 'effect': 'Có thể tăng INR nhẹ', 'management':
         'Theo dõi INR thường xuyên. Pantoprazole ít ảnh hưởng hơn omeprazole.'},

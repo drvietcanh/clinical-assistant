@@ -3,28 +3,32 @@ Diuretics - Water Pills
 """
 
 DIURETICS = {
-    "Bumetanide": {
+    "Bumetanide":     {
         "group": "Cardiovascular - Loop Diuretic",
         "vietnamese_name": "Bumetanide, Burinex",
-        "administration": ["PO", "IV", "IM"],
+        "administration": [
+            "PO",
+            "IV",
+            "IM"
+    ],
         "indications": [
             "Phù (suy tim, xơ gan, suy thận)",
             "Tăng huyết áp",
             "Suy tim cấp",
             "Tăng kali máu"
-        ],
+    ],
         "contraindications": [
             "Vô niệu",
             "Mất nước nặng",
             "Hạ kali máu nặng",
             "Dị ứng sulfonamide"
-        ],
+    ],
         "dosage": {
             "adult_po": "0.5-2mg x 1-2 lần/ngày",
             "adult_iv": "0.5-1mg IV (có thể lặp lại mỗi 2-3 giờ)",
             "adult_iv_continuous": "0.1-0.2mg/giờ truyền liên tục",
             "heart_failure_acute": "0.5-1mg IV, có thể lặp lại",
-            "notes": "1mg bumetanide ≈ 40mg furosemide. Theo dõi cân bằng dịch, điện giải"
+            "notes": "1mg bumetanide ≈ 40mg furosemide. Theo dõi cân bằng dịch, điện giải",
         },
         "side_effects": [
             "Hạ kali máu",
@@ -33,90 +37,121 @@ DIURETICS = {
             "Tăng acid uric",
             "Điếc tạm thời (IV liều cao)",
             "Tăng đường huyết"
-        ],
+    ],
         "interactions": [
             "Digoxin: tăng nguy cơ ngộ độc digoxin (hạ kali)",
             "Aminoglycosides: tăng độc tính thính giác",
             "NSAID: giảm hiệu quả",
             "Lithium: tăng nồng độ lithium"
-        ],
+    ],
         "pregnancy": "C",
-        "mechanism_of_action": "Loop diuretic. Ức chế đồng vận chuyển Na-K-2Cl ở quai Henle, tăng thải natri, kali, clo, và nước. Mạnh hơn furosemide (1mg bumetanide ≈ 40mg furosemide).",
+        "mechanism_of_action": """Loop diuretic. Ức chế đồng vận chuyển Na-K-2Cl ở quai Henle, tăng thải natri, kali, clo, và nước. Mạnh hơn furosemide (1mg bumetanide ≈ 40mg furosemide).""",
         "monitoring": [
             "Điện giải (K, Na, Cl) trước điều trị và định kỳ",
             "Cân bằng dịch vào-ra, cân nặng",
             "Creatinine, BUN",
             "Acid uric nếu dùng lâu dài",
             "Thính giác nếu IV liều cao hoặc suy thận"
-        ],
+    ],
         "precautions": [
             "Theo dõi sát điện giải, đặc biệt kali",
             "Bù kali nếu cần",
             "Tránh dùng quá liều (gây mất nước, suy thận)",
             "Thận trọng với bệnh nhân suy thận (có thể cần liều cao hơn)",
             "Tránh dùng IV liều cao ở bệnh nhân suy thận (nguy cơ điếc)"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "1-1.5 giờ (PO), 1 giờ (IV)",
             "onset": "30-60 phút (PO), 2-3 phút (IV)",
             "duration": "4-6 giờ",
             "protein_binding": "94-96%",
-            "clearance": "Thận (50%) và gan"
+            "clearance": "Thận (50%) và gan",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng",
-        "black_box_warnings": "Có thể gây mất nước và rối loạn điện giải nghiêm trọng. Điếc có thể xảy ra với liều IV cao hoặc dùng nhanh. Hạ kali máu có thể làm tăng nguy cơ ngộ độc digoxin và rối loạn nhịp tim",
+        "black_box_warnings": """Có thể gây mất nước và rối loạn điện giải nghiêm trọng. Điếc có thể xảy ra với liều IV cao hoặc dùng nhanh. Hạ kali máu có thể làm tăng nguy cơ ngộ độc digoxin và rối loạn nhịp tim""",
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Bumetanide",
                 "UpToDate - Bumetanide: Drug information"
-            ],
+    ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - Extensive clinical experience"
+            "evidence_level": "High - Extensive clinical experience",
         },
         "drug_interactions": {
             "major": [],
             "moderate": [],
-            "minor": []
+            "minor": [],
         },
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": ["Renal (Acute Kidney Injury)", "Ototoxicity (High dose IV)"],
-            "requires_monitoring": ["Electrolytes", "Renal function", "Fluid status"]
+            "organ_toxicity": [
+                "Renal (Acute Kidney Injury)",
+                "Ototoxicity (High dose IV)"
+    ],
+            "requires_monitoring": [
+                "Electrolytes",
+                "Renal function",
+                "Fluid status"
+    ],
         },
         "guideline_tags": [
             "ACC/AHA Guidelines - Heart Failure",
             "KDIGO Guidelines - Acute Kidney Injury"
-        ],
+    ],
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
-            "lactation_details": ""
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
         },
         "hepatic_adjustment": {
             "mild": "",
             "moderate": "",
-            "severe": ""
+            "severe": "",
+            "notes": "",
         },
         "overdose_management": {
             "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "antidote": "",
+            "treatment": [],
+            "monitoring": "",
         },
         "reversal_agents": {
             "available": False,
             "agents": [],
-            "notes": ""
+            "notes": "",
         },
         "administration_instructions": {
             "preparation": "",
             "administration": "",
-            "monitoring": []
+            "monitoring": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Vô niệu",
+                "Mất nước nặng",
+                "Hạ kali máu nặng",
+                "Dị ứng sulfonamide"
+    ],
+            "tương_đối": [
+                "Suy thận nặng - có thể cần liều cao hơn nhưng thận trọng",
+                "Suy gan nặng - thận trọng",
+                "Đang dùng digoxin - tăng nguy cơ ngộ độc digoxin"
+    ],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
         },
     },
-
     "Chlorthalidone": {
         "group": "Cardiovascular - Thiazide-like Diuretic",
         "vietnamese_name": "Chlorthalidone, Hygroton",
@@ -1398,28 +1433,31 @@ DIURETICS = {
         "last_updated": "2025-02-18",
     },
 
-    "Torsemide": {
+    "Torsemide":     {
         "group": "Cardiovascular - Loop Diuretic",
         "vietnamese_name": "Torsemide, Demadex",
-        "administration": ["PO", "IV"],
+        "administration": [
+            "PO",
+            "IV"
+    ],
         "indications": [
             "Phù (suy tim, xơ gan, suy thận)",
             "Tăng huyết áp",
             "Suy tim cấp",
             "Tăng kali máu"
-        ],
+    ],
         "contraindications": [
             "Vô niệu",
             "Mất nước nặng",
             "Hạ kali máu nặng",
             "Dị ứng sulfonamide"
-        ],
+    ],
         "dosage": {
             "adult_po": "5-20mg x 1 lần/ngày",
             "adult_iv": "10-20mg IV (có thể lặp lại)",
             "adult_iv_continuous": "0.2-0.4mg/giờ truyền liên tục",
             "heart_failure_acute": "10-20mg IV, có thể lặp lại",
-            "notes": "10mg torsemide ≈ 40mg furosemide. Thời gian bán hủy dài hơn furosemide. Theo dõi cân bằng dịch, điện giải"
+            "notes": """10mg torsemide ≈ 40mg furosemide. Thời gian bán hủy dài hơn furosemide. Theo dõi cân bằng dịch, điện giải""",
         },
         "side_effects": [
             "Hạ kali máu",
@@ -1428,22 +1466,22 @@ DIURETICS = {
             "Tăng acid uric",
             "Điếc tạm thời (IV liều cao)",
             "Tăng đường huyết"
-        ],
+    ],
         "interactions": [
             "Digoxin: tăng nguy cơ ngộ độc digoxin (hạ kali)",
             "Aminoglycosides: tăng độc tính thính giác",
             "NSAID: giảm hiệu quả",
             "Lithium: tăng nồng độ lithium"
-        ],
+    ],
         "pregnancy": "B",
-        "mechanism_of_action": "Loop diuretic. Ức chế đồng vận chuyển Na-K-2Cl ở quai Henle, tăng thải natri, kali, clo, và nước. 10mg torsemide ≈ 40mg furosemide. Thời gian bán hủy dài hơn furosemide (3-4 giờ vs 2 giờ), có thể dùng 1 lần/ngày.",
+        "mechanism_of_action": """Loop diuretic. Ức chế đồng vận chuyển Na-K-2Cl ở quai Henle, tăng thải natri, kali, clo, và nước. 10mg torsemide ≈ 40mg furosemide. Thời gian bán hủy dài hơn furosemide (3-4 giờ vs 2 giờ), có thể dùng 1 lần/ngày.""",
         "monitoring": [
             "Điện giải (K, Na, Cl) trước điều trị và định kỳ",
             "Cân bằng dịch vào-ra, cân nặng",
             "Creatinine, BUN",
             "Acid uric nếu dùng lâu dài",
             "Thính giác nếu IV liều cao hoặc suy thận"
-        ],
+    ],
         "precautions": [
             "Theo dõi sát điện giải, đặc biệt kali",
             "Bù kali nếu cần",
@@ -1451,68 +1489,99 @@ DIURETICS = {
             "Thận trọng với bệnh nhân suy thận (có thể cần liều cao hơn)",
             "Tránh dùng IV liều cao ở bệnh nhân suy thận (nguy cơ điếc)",
             "Thời gian bán hủy dài hơn furosemide - có thể dùng 1 lần/ngày"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "3-4 giờ (PO), 3 giờ (IV)",
             "onset": "60 phút (PO), 10 phút (IV)",
             "duration": "6-8 giờ",
             "protein_binding": "97-99%",
-            "clearance": "Thận (80%) và gan (20%)"
+            "clearance": "Thận (80%) và gan (20%)",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng",
-        "black_box_warnings": "Có thể gây mất nước và rối loạn điện giải nghiêm trọng. Điếc có thể xảy ra với liều IV cao hoặc dùng nhanh. Hạ kali máu có thể làm tăng nguy cơ ngộ độc digoxin và rối loạn nhịp tim",
+        "black_box_warnings": """Có thể gây mất nước và rối loạn điện giải nghiêm trọng. Điếc có thể xảy ra với liều IV cao hoặc dùng nhanh. Hạ kali máu có thể làm tăng nguy cơ ngộ độc digoxin và rối loạn nhịp tim""",
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Torsemide",
                 "UpToDate - Torsemide: Drug information"
-            ],
+    ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - Extensive clinical experience"
+            "evidence_level": "High - Extensive clinical experience",
         },
         "drug_interactions": {
             "major": [],
             "moderate": [],
-            "minor": []
+            "minor": [],
         },
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": ["Renal (Acute Kidney Injury)", "Ototoxicity (High dose IV)"],
-            "requires_monitoring": ["Electrolytes", "Renal function", "Fluid status"]
+            "organ_toxicity": [
+                "Renal (Acute Kidney Injury)",
+                "Ototoxicity (High dose IV)"
+    ],
+            "requires_monitoring": [
+                "Electrolytes",
+                "Renal function",
+                "Fluid status"
+    ],
         },
         "guideline_tags": [
             "ACC/AHA Guidelines - Heart Failure",
             "KDIGO Guidelines - Acute Kidney Injury"
-        ],
+    ],
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
-            "lactation_details": ""
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
         },
         "hepatic_adjustment": {
             "mild": "",
             "moderate": "",
-            "severe": ""
+            "severe": "",
+            "notes": "",
         },
         "overdose_management": {
             "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "antidote": "",
+            "treatment": [],
+            "monitoring": "",
         },
         "reversal_agents": {
             "available": False,
             "agents": [],
-            "notes": ""
+            "notes": "",
         },
         "administration_instructions": {
             "preparation": "",
             "administration": "",
-            "monitoring": []
-        }
+            "monitoring": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Vô niệu",
+                "Mất nước nặng",
+                "Hạ kali máu nặng",
+                "Dị ứng sulfonamide"
+    ],
+            "tương_đối": [
+                "Suy thận nặng - có thể cần liều cao hơn nhưng thận trọng",
+                "Suy gan nặng - thận trọng",
+                "Đang dùng digoxin - tăng nguy cơ ngộ độc digoxin"
+    ],
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi liều",
+            "30_60": "Có thể cần giảm liều, theo dõi chức năng thận",
+            "under_30": "Giảm liều hoặc tránh dùng nếu có lựa chọn khác",
+            "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
+        },
     },
-
 }
 
 __all__ = ['DIURETICS']

@@ -1,0 +1,755 @@
+"""
+Respiratory Biologics - Monoclonal Antibodies for Asthma
+Includes Omalizumab, Mepolizumab, Benralizumab, Dupilumab
+"""
+
+RESPIRATORY_BIOLOGICS_DRUGS = {
+    "Benralizumab": {
+        "group": "Respiratory - Biologics (anti-IL-5Rα)",
+        "vietnamese_name": "Benralizumab, Fasenra",
+        "administration": ["SC"],
+        "indications": [
+            "Hen suyễn eosinophilic nặng (severe eosinophilic asthma) - kiểm soát kém"
+        ],
+        "contraindications": [
+            "Dị ứng benralizumab hoặc bất kỳ thành phần nào"
+        ],
+        "dosage": {
+            "adult": "30mg SC ngày 0, 4, 8 tuần, sau đó 30mg SC mỗi 8 tuần",
+            "pediatric_12_17": "30mg SC ngày 0, 4, 8 tuần, sau đó 30mg SC mỗi 8 tuần",
+            "notes": "Tiêm dưới da. Có thể tự tiêm sau khi được hướng dẫn. Chỉ dùng cho hen suyễn eosinophilic (eosinophil ≥150 cells/μL)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, không cần điều chỉnh liều"
+        },
+        "side_effects": [
+            "Phản ứng tại chỗ tiêm (đau, đỏ, sưng) - phổ biến",
+            "Đau đầu",
+            "Nhiễm trùng đường hô hấp trên",
+            "Viêm họng",
+            "Nhiễm trùng nặng - hiếm",
+            "Phản ứng dị ứng nặng - hiếm"
+        ],
+        "interactions": [
+            "Không có tương tác dược động học quan trọng",
+            "Có thể làm giảm đáp ứng vaccine (sống)"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Benralizumab là kháng thể đơn dòng kháng IL-5Rα (interleukin-5 receptor alpha, afucosylated humanized monoclonal antibody). IL-5 là cytokine quan trọng cho sự sống và hoạt động của eosinophil. IL-5 gắn với IL-5Rα trên eosinophil → kích hoạt eosinophil → tăng số lượng và hoạt động eosinophil → gây viêm đường hô hấp và hen suyễn eosinophilic. Benralizumab gắn với IL-5Rα → ngăn chặn IL-5 gắn với receptor → ức chế signaling → giảm số lượng và hoạt động eosinophil. Ngoài ra, benralizumab có afucosylation → tăng khả năng gắn với FcγRIIIa trên NK cells → tăng ADCC (antibody-dependent cell-mediated cytotoxicity) → tiêu diệt eosinophil trực tiếp. Dẫn đến: giảm eosinophil trong máu và mô, giảm cơn hen và cải thiện chức năng hô hấp trong hen suyễn eosinophilic. Benralizumab được dùng để điều trị hen suyễn eosinophilic nặng.",
+        "monitoring": [
+            "Phản ứng tại chỗ tiêm",
+            "Chức năng hô hấp (FEV1) - đánh giá hiệu quả điều trị",
+            "Eosinophil máu - giảm đáng kể (có thể về 0)",
+            "Tần suất cơn hen - giảm cơn hen",
+            "Sử dụng corticosteroid (ICS) - có thể giảm liều",
+            "Dấu hiệu nhiễm trùng đường hô hấp",
+            "Dấu hiệu phản ứng dị ứng"
+        ],
+        "precautions": [
+            "CHỈ DÙNG CHO HEN SUYỄN EOSINOPHILIC - eosinophil ≥150 cells/μL",
+            "Không dùng vaccine sống trong và sau điều trị",
+            "Thận trọng ở bệnh nhân có nhiễm trùng đang hoạt động",
+            "Không ngừng đột ngột các thuốc hen khác (ICS, LABA) - giảm dần dần",
+            "Theo dõi chức năng hô hấp thường xuyên",
+            "Eosinophil có thể giảm về 0 - không phải dấu hiệu bất thường"
+        ],
+        "pharmacokinetics": {
+            "half_life": "15 ngày (dao động 10-20 ngày)",
+            "onset": "Vài tuần",
+            "duration": "8 tuần",
+            "protein_binding": "Không rõ",
+            "metabolism": "Chuyển hóa qua hệ thống RES, tương tự các immunoglobulin khác",
+            "clearance": "Chuyển hóa qua RES, thải trừ qua thận một phần. Half-life dài."
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Không để ở nhiệt độ phòng quá 14 ngày. Để nhiệt độ phòng 30 phút trước khi tiêm.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, cần theo dõi nhiễm trùng và không ngừng đột ngột các thuốc hen khác.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Vaccines (sống)",
+                    "mechanism": "Benralizumab làm thay đổi đáp ứng miễn dịch",
+                    "effect": "Giảm hiệu quả vaccine, tăng nguy cơ nhiễm trùng từ vaccine sống",
+                    "management": "Không dùng vaccine sống trong và sau điều trị benralizumab. Hoãn vaccine sống ít nhất 3-6 tháng sau liều cuối."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng benralizumab hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Nhiễm trùng đang hoạt động - thận trọng",
+                "Hen suyễn không eosinophilic - không hiệu quả",
+                "Có thai (category B) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Benralizumab là FDA category B. Có thể dùng trong thai kỳ khi cần thiết. Một số nghiên cứu cho thấy an toàn trong thai kỳ, nhưng cần theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Benralizumab bài tiết vào sữa mẹ ở nồng độ thấp. Có thể dùng khi cho con bú với theo dõi trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú với thận trọng. Theo dõi trẻ về dấu hiệu nhiễm trùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Thận trọng, không cần điều chỉnh liều",
+            "notes": "Benralizumab không chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Phản ứng dị ứng nặng",
+                "Nhiễm trùng nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng benralizumab",
+                "Điều trị phản ứng dị ứng: corticosteroid, antihistamine, epinephrine nếu cần",
+                "Điều trị nhiễm trùng nếu có",
+                "Theo dõi chặt chẽ trong ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn, dấu hiệu nhiễm trùng, dấu hiệu phản ứng dị ứng trong ít nhất 24-48 giờ."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."
+        },
+        "administration_instructions": {
+            "sc": {
+                "reconstitution": "Dạng SC: 30mg/ml, tiêm dưới da",
+                "injection_site": "Vùng đùi, bụng (tránh vùng quanh rốn 5cm), cánh tay",
+                "notes": "Để nhiệt độ phòng 30 phút trước khi tiêm. Tiêm dưới da, không tiêm vào cơ hoặc mạch máu. Thay đổi vị trí tiêm mỗi lần. Có thể tự tiêm sau khi được hướng dẫn."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Benralizumab (Fasenra)",
+                "UpToDate - Benralizumab: Drug information",
+                "Lexicomp - Benralizumab monograph",
+                "GINA Guidelines - Asthma"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
+        }
+    },
+    
+    "Dupilumab": {
+        "group": "Respiratory - Biologics (anti-IL-4Rα)",
+        "vietnamese_name": "Dupilumab, Dupixent",
+        "administration": ["SC"],
+        "indications": [
+            "Viêm da cơ địa (atopic dermatitis) - trung bình đến nặng",
+            "Hen suyễn (asthma) - trung bình đến nặng, kiểm soát kém",
+            "Polyp mũi với viêm mũi xoang mạn tính (CRSwNP)",
+            "Eosinophilic esophagitis (EoE)"
+        ],
+        "contraindications": [
+            "Dị ứng dupilumab hoặc bất kỳ thành phần nào",
+            "Nhiễm trùng giun ký sinh đang hoạt động chưa điều trị"
+        ],
+        "dosage": {
+            "adult_atopic_dermatitis": "600mg SC ngày 1 (2 lần tiêm 300mg), sau đó 300mg SC mỗi 2 tuần",
+            "adult_asthma": "400mg SC ngày 1 (2 lần tiêm 200mg), sau đó 200mg SC mỗi 2 tuần",
+            "adult_crswnp": "300mg SC mỗi 2 tuần",
+            "adult_eoe": "300mg SC mỗi tuần",
+            "pediatric_atopic_dermatitis_6_17": "400mg SC ngày 1 (nếu ≥60kg) hoặc 600mg SC ngày 1 (nếu ≥60kg), sau đó 200mg SC mỗi 2 tuần (nếu <60kg) hoặc 300mg SC mỗi 2 tuần (nếu ≥60kg)",
+            "notes": "Tiêm dưới da. Có thể tự tiêm sau khi được hướng dẫn. Điều trị nhiễm giun ký sinh trước khi bắt đầu nếu có."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, không cần điều chỉnh liều"
+        },
+        "side_effects": [
+            "Phản ứng tại chỗ tiêm (đau, đỏ, sưng) - phổ biến",
+            "Viêm kết mạc (conjunctivitis) - phổ biến, đặc biệt trong atopic dermatitis",
+            "Nhiễm trùng mắt (keratitis, blepharitis) - phổ biến",
+            "Nhiễm trùng đường hô hấp trên",
+            "Đau đầu",
+            "Mệt mỏi",
+            "Nhiễm giun ký sinh - tăng nguy cơ do ức chế IL-4/IL-13",
+            "Phản ứng dị ứng - hiếm"
+        ],
+        "interactions": [
+            "Không có tương tác dược động học quan trọng",
+            "Có thể làm giảm đáp ứng vaccine (sống)",
+            "Tăng nguy cơ nhiễm giun ký sinh"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Dupilumab là kháng thể đơn dòng kháng IL-4Rα (interleukin-4 receptor alpha, fully human monoclonal antibody). IL-4 và IL-13 là cytokines quan trọng trong quá trình viêm dị ứng (type 2 inflammation). Cả hai đều gắn với IL-4Rα để kích hoạt signaling → tăng sản xuất IgE, tăng eosinophil, tăng viêm → gây bệnh dị ứng (atopic dermatitis, asthma, CRSwNP). Dupilumab gắn với IL-4Rα → ngăn chặn cả IL-4 và IL-13 gắn với receptor → ức chế signaling → giảm viêm dị ứng. Dẫn đến: giảm triệu chứng và cải thiện chức năng trong các bệnh dị ứng. Dupilumab được dùng để điều trị viêm da cơ địa, hen suyễn, và CRSwNP.",
+        "monitoring": [
+            "Phản ứng tại chỗ tiêm",
+            "Viêm kết mạc và nhiễm trùng mắt - QUAN TRỌNG: theo dõi triệu chứng mắt, đặc biệt trong atopic dermatitis",
+            "Nhiễm giun ký sinh - test trước khi bắt đầu, theo dõi trong điều trị",
+            "Chức năng hô hấp (FEV1) - trong hen suyễn",
+            "Dấu hiệu nhiễm trùng đường hô hấp",
+            "Dấu hiệu phản ứng dị ứng"
+        ],
+        "precautions": [
+            "THEO DÕI VIÊM KẾT MẠC VÀ NHIỄM TRÙNG MẮT - phổ biến, đặc biệt trong atopic dermatitis",
+            "Điều trị viêm kết mạc nếu xảy ra (nước mắt nhân tạo, corticosteroid mắt)",
+            "TEST VÀ ĐIỀU TRỊ NHIỄM GIUN KÝ SINH TRƯỚC KHI BẮT ĐẦU - tăng nguy cơ do ức chế IL-4/IL-13",
+            "Theo dõi nhiễm giun ký sinh trong điều trị - điều trị ngay nếu có",
+            "Không dùng vaccine sống trong và sau điều trị",
+            "Thận trọng ở bệnh nhân có nhiễm giun ký sinh đang hoạt động",
+            "Theo dõi chức năng hô hấp trong hen suyễn"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không rõ chính xác, khoảng 2-3 tuần",
+            "onset": "Vài tuần",
+            "duration": "2 tuần (liều mỗi 2 tuần) hoặc 1 tuần (liều mỗi tuần)",
+            "protein_binding": "Không rõ",
+            "metabolism": "Chuyển hóa qua hệ thống RES, tương tự các immunoglobulin khác",
+            "clearance": "Chuyển hóa qua RES, thải trừ qua thận một phần. Half-life dài."
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Không để ở nhiệt độ phòng quá 14 ngày. Để nhiệt độ phòng 45 phút trước khi tiêm.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, cần theo dõi viêm kết mạc và nhiễm giun ký sinh.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Vaccines (sống)",
+                    "mechanism": "Dupilumab làm thay đổi đáp ứng miễn dịch",
+                    "effect": "Giảm hiệu quả vaccine, tăng nguy cơ nhiễm trùng từ vaccine sống",
+                    "management": "Không dùng vaccine sống trong và sau điều trị dupilumab. Hoãn vaccine sống ít nhất 3-6 tháng sau liều cuối."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng dupilumab hoặc bất kỳ thành phần nào",
+                "Nhiễm giun ký sinh đang hoạt động chưa điều trị"
+            ],
+            "tương_đối": [
+                "Nhiễm giun ký sinh - cần điều trị trước khi bắt đầu",
+                "Viêm kết mạc đang hoạt động - có thể làm nặng",
+                "Nhiễm trùng mắt đang hoạt động - có thể làm nặng",
+                "Có thai (category B) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Dupilumab là FDA category B. Có thể dùng trong thai kỳ khi cần thiết. Một số nghiên cứu cho thấy an toàn trong thai kỳ, nhưng cần theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Dupilumab bài tiết vào sữa mẹ ở nồng độ thấp. Có thể dùng khi cho con bú với theo dõi trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú với thận trọng. Theo dõi trẻ về dấu hiệu nhiễm trùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Thận trọng, không cần điều chỉnh liều",
+            "notes": "Dupilumab không chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Phản ứng dị ứng nặng",
+                "Nhiễm trùng nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng dupilumab",
+                "Điều trị phản ứng dị ứng: corticosteroid, antihistamine, epinephrine nếu cần",
+                "Điều trị nhiễm trùng nếu có",
+                "Theo dõi chặt chẽ trong ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn, dấu hiệu nhiễm trùng, dấu hiệu phản ứng dị ứng trong ít nhất 24-48 giờ."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."
+        },
+        "administration_instructions": {
+            "sc": {
+                "reconstitution": "Dạng SC: 300mg/2ml hoặc 200mg/1.14ml, tiêm dưới da",
+                "injection_site": "Vùng đùi, bụng (tránh vùng quanh rốn 5cm), cánh tay",
+                "notes": "Để nhiệt độ phòng 45 phút trước khi tiêm. Tiêm dưới da, không tiêm vào cơ hoặc mạch máu. Thay đổi vị trí tiêm mỗi lần. Có thể tự tiêm sau khi được hướng dẫn."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Dupilumab (Dupixent)",
+                "UpToDate - Dupilumab: Drug information",
+                "Lexicomp - Dupilumab monograph",
+                "AAAAI/ACAAI Guidelines - Atopic Dermatitis",
+                "GINA Guidelines - Asthma"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, extensive clinical data,
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ] widely used"
+        }
+    },
+    
+    "Mepolizumab": {
+        "group": "Respiratory - Biologics (anti-IL-5)",
+        "vietnamese_name": "Mepolizumab, Nucala",
+        "administration": ["SC"],
+        "indications": [
+            "Hen suyễn eosinophilic nặng (severe eosinophilic asthma) - kiểm soát kém",
+            "Chứng tăng eosinophil (hypereosinophilic syndrome, HES)",
+            "Polyp mũi với viêm mũi xoang mạn tính (CRSwNP)"
+        ],
+        "contraindications": [
+            "Dị ứng mepolizumab hoặc bất kỳ thành phần nào"
+        ],
+        "dosage": {
+            "adult_asthma": "100mg SC mỗi 4 tuần",
+            "adult_hes": "300mg SC mỗi 4 tuần",
+            "adult_crswnp": "100mg SC mỗi 4 tuần",
+            "pediatric_asthma_6_17": "40mg SC mỗi 4 tuần (nếu 12-17 tuổi và ≥40kg) hoặc 100mg SC mỗi 4 tuần (nếu ≥12 tuổi)",
+            "notes": "Tiêm dưới da. Có thể tự tiêm sau khi được hướng dẫn. Chỉ dùng cho hen suyễn eosinophilic (eosinophil ≥150 cells/μL)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, không cần điều chỉnh liều"
+        },
+        "side_effects": [
+            "Phản ứng tại chỗ tiêm (đau, đỏ, sưng) - phổ biến",
+            "Đau đầu",
+            "Nhiễm trùng đường hô hấp trên",
+            "Viêm họng",
+            "Nhiễm trùng nặng - hiếm",
+            "Phản ứng dị ứng nặng - hiếm"
+        ],
+        "interactions": [
+            "Không có tương tác dược động học quan trọng",
+            "Có thể làm giảm đáp ứng vaccine (sống)"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Mepolizumab là kháng thể đơn dòng kháng IL-5 (interleukin-5, humanized monoclonal antibody). IL-5 là cytokine quan trọng cho sự sống và hoạt động của eosinophil. IL-5 được giải phóng từ Th2 cells và mast cells → gắn với IL-5R trên eosinophil → kích hoạt eosinophil → tăng số lượng và hoạt động eosinophil → gây viêm đường hô hấp và hen suyễn eosinophilic. Mepolizumab gắn với IL-5 → ngăn chặn IL-5 gắn với receptor → ức chế signaling → giảm số lượng và hoạt động eosinophil. Dẫn đến: giảm eosinophil trong máu và mô, giảm cơn hen và cải thiện chức năng hô hấp trong hen suyễn eosinophilic. Mepolizumab được dùng để điều trị hen suyễn eosinophilic nặng, HES, và CRSwNP.",
+        "monitoring": [
+            "Phản ứng tại chỗ tiêm",
+            "Chức năng hô hấp (FEV1) - đánh giá hiệu quả điều trị",
+            "Eosinophil máu - giảm đáng kể (thường giảm 50-80%)",
+            "Tần suất cơn hen - giảm cơn hen",
+            "Sử dụng corticosteroid (ICS) - có thể giảm liều",
+            "Dấu hiệu nhiễm trùng đường hô hấp",
+            "Dấu hiệu phản ứng dị ứng"
+        ],
+        "precautions": [
+            "CHỈ DÙNG CHO HEN SUYỄN EOSINOPHILIC - eosinophil ≥150 cells/μL",
+            "Không dùng vaccine sống trong và sau điều trị",
+            "Thận trọng ở bệnh nhân có nhiễm trùng đang hoạt động",
+            "Không ngừng đột ngột các thuốc hen khác (ICS, LABA) - giảm dần dần",
+            "Theo dõi chức năng hô hấp thường xuyên"
+        ],
+        "pharmacokinetics": {
+            "half_life": "20 ngày (dao động 16-25 ngày)",
+            "onset": "Vài tuần",
+            "duration": "4 tuần",
+            "protein_binding": "Không rõ",
+            "metabolism": "Chuyển hóa qua hệ thống RES, tương tự các immunoglobulin khác",
+            "clearance": "Chuyển hóa qua RES, thải trừ qua thận một phần. Half-life dài."
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Không để ở nhiệt độ phòng quá 14 ngày. Để nhiệt độ phòng 30 phút trước khi tiêm.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, cần theo dõi nhiễm trùng và không ngừng đột ngột các thuốc hen khác.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Vaccines (sống)",
+                    "mechanism": "Mepolizumab làm thay đổi đáp ứng miễn dịch",
+                    "effect": "Giảm hiệu quả vaccine, tăng nguy cơ nhiễm trùng từ vaccine sống",
+                    "management": "Không dùng vaccine sống trong và sau điều trị mepolizumab. Hoãn vaccine sống ít nhất 3-6 tháng sau liều cuối."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng mepolizumab hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Nhiễm trùng đang hoạt động - thận trọng",
+                "Hen suyễn không eosinophilic - không hiệu quả",
+                "Có thai (category B) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Mepolizumab là FDA category B. Có thể dùng trong thai kỳ khi cần thiết. Một số nghiên cứu cho thấy an toàn trong thai kỳ, nhưng cần theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Mepolizumab bài tiết vào sữa mẹ ở nồng độ thấp. Có thể dùng khi cho con bú với theo dõi trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú với thận trọng. Theo dõi trẻ về dấu hiệu nhiễm trùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Thận trọng, không cần điều chỉnh liều",
+            "notes": "Mepolizumab không chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Phản ứng dị ứng nặng",
+                "Nhiễm trùng nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng mepolizumab",
+                "Điều trị phản ứng dị ứng: corticosteroid, antihistamine, epinephrine nếu cần",
+                "Điều trị nhiễm trùng nếu có",
+                "Theo dõi chặt chẽ trong ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn, dấu hiệu nhiễm trùng, dấu hiệu phản ứng dị ứng trong ít nhất 24-48 giờ."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."
+        },
+        "administration_instructions": {
+            "sc": {
+                "reconstitution": "Dạng SC: 100mg/ml, tiêm dưới da",
+                "injection_site": "Vùng đùi, bụng (tránh vùng quanh rốn 5cm), cánh tay",
+                "notes": "Để nhiệt độ phòng 30 phút trước khi tiêm. Tiêm dưới da, không tiêm vào cơ hoặc mạch máu. Thay đổi vị trí tiêm mỗi lần. Có thể tự tiêm sau khi được hướng dẫn."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Mepolizumab (Nucala)",
+                "UpToDate - Mepolizumab: Drug information",
+                "Lexicomp - Mepolizumab monograph",
+                "GINA Guidelines - Asthma"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
+        }
+    },
+    
+    "Omalizumab": {
+        "group": "Respiratory - Biologics (anti-IgE)",
+        "vietnamese_name": "Omalizumab, Xolair",
+        "administration": ["SC"],
+        "indications": [
+            "Hen suyễn dị ứng nặng (severe allergic asthma) - kiểm soát kém, IgE cao",
+            "Mày đay mạn tính tự phát (chronic spontaneous urticaria, CSU) - kháng trị với antihistamine"
+        ],
+        "contraindications": [
+            "Dị ứng omalizumab hoặc bất kỳ thành phần nào",
+            "Hen suyễn cấp tính nặng (acute severe asthma) - không dùng để điều trị cấp cứu"
+        ],
+        "dosage": {
+            "adult_asthma": "Liều tính theo IgE huyết thanh và cân nặng: 150-375mg SC mỗi 2-4 tuần (xem bảng liều)",
+            "adult_csu": "150mg hoặc 300mg SC mỗi 4 tuần",
+            "pediatric_asthma_6_17": "Liều tính theo IgE huyết thanh và cân nặng: 75-375mg SC mỗi 2-4 tuần",
+            "notes": "Liều omalizumab phụ thuộc vào IgE huyết thanh (IU/mL) và cân nặng (kg). Xem bảng liều của nhà sản xuất. Tiêm dưới da. Có thể tự tiêm sau khi được hướng dẫn. CHỈ dùng cho hen suyễn dị ứng với IgE 30-700 IU/mL."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, không cần điều chỉnh liều"
+        },
+        "side_effects": [
+            "Phản ứng tại chỗ tiêm (đau, đỏ, sưng) - phổ biến",
+            "Đau đầu",
+            "Nhiễm trùng đường hô hấp trên",
+            "Viêm họng",
+            "Phản ứng dị ứng nặng (anaphylaxis) - hiếm nhưng NGUY HIỂM (0.2%)",
+            "Sốc phản vệ - có thể xảy ra trong vòng 2 giờ sau tiêm",
+            "Nhiễm trùng nặng - hiếm"
+        ],
+        "interactions": [
+            "Không có tương tác dược động học quan trọng",
+            "Có thể làm giảm đáp ứng vaccine (sống)"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Omalizumab là kháng thể đơn dòng kháng IgE (anti-IgE, humanized monoclonal antibody). IgE là kháng thể quan trọng trong phản ứng dị ứng type I. Khi dị nguyên (allergen) gắn với IgE trên mast cells và basophils → giải phóng histamine và các chất trung gian viêm → gây phản ứng dị ứng (hen suyễn, mày đay). Omalizumab gắn với IgE tự do trong huyết thanh → ngăn chặn IgE gắn với receptor (FcεRI) trên mast cells và basophils → giảm giải phóng histamine và các chất trung gian viêm → giảm phản ứng dị ứng. Dẫn đến: giảm cơn hen, giảm triệu chứng mày đay, và cải thiện chức năng hô hấp. Omalizumab được dùng để điều trị hen suyễn dị ứng nặng và mày đay mạn tính tự phát.",
+        "monitoring": [
+            "Phản ứng tại chỗ tiêm",
+            "Phản ứng dị ứng nặng (anaphylaxis) - QUAN TRỌNG: theo dõi ít nhất 2 giờ sau mỗi lần tiêm, đặc biệt 3 lần tiêm đầu",
+            "Chức năng hô hấp (FEV1) - đánh giá hiệu quả điều trị",
+            "Tần suất cơn hen - giảm cơn hen",
+            "Sử dụng corticosteroid (ICS) - có thể giảm liều",
+            "IgE huyết thanh - tăng trong điều trị (do omalizumab-IgE complex), không phải dấu hiệu bất thường",
+            "Dấu hiệu nhiễm trùng đường hô hấp",
+            "Dấu hiệu phản ứng dị ứng"
+        ],
+        "precautions": [
+            "NGUY CƠ SỐC PHẢN VỆ - theo dõi ít nhất 2 giờ sau mỗi lần tiêm, đặc biệt 3 lần tiêm đầu",
+            "Chuẩn bị epinephrine và phương tiện hồi sức khi tiêm",
+            "CHỈ DÙNG CHO HEN SUYỄN DỊ ỨNG - IgE 30-700 IU/mL",
+            "Không dùng vaccine sống trong và sau điều trị",
+            "Thận trọng ở bệnh nhân có nhiễm trùng đang hoạt động",
+            "Không ngừng đột ngột các thuốc hen khác (ICS, LABA) - giảm dần dần",
+            "Theo dõi chức năng hô hấp thường xuyên",
+            "IgE tăng trong điều trị là bình thường (do omalizumab-IgE complex)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "26 ngày (dao động 20-32 ngày)",
+            "onset": "Vài tuần đến vài tháng",
+            "duration": "2-4 tuần (tùy liều)",
+            "protein_binding": "Gắn với IgE tự do",
+            "metabolism": "Chuyển hóa qua hệ thống RES, tương tự các immunoglobulin khác",
+            "clearance": "Chuyển hóa qua RES, thải trừ qua thận một phần. Half-life dài."
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Không để ở nhiệt độ phòng quá 4 giờ. Để nhiệt độ phòng 15-30 phút trước khi tiêm.",
+        "black_box_warnings": "NGUY CƠ SỐC PHẢN VỆ (anaphylaxis) - có thể xảy ra trong vòng 2 giờ sau tiêm, đặc biệt 3 lần tiêm đầu. Tỷ lệ khoảng 0.2%. Phải theo dõi ít nhất 2 giờ sau mỗi lần tiêm và chuẩn bị epinephrine.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Vaccines (sống)",
+                    "mechanism": "Omalizumab làm thay đổi đáp ứng miễn dịch",
+                    "effect": "Giảm hiệu quả vaccine, tăng nguy cơ nhiễm trùng từ vaccine sống",
+                    "management": "Không dùng vaccine sống trong và sau điều trị omalizumab. Hoãn vaccine sống ít nhất 3-6 tháng sau liều cuối."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng omalizumab hoặc bất kỳ thành phần nào",
+                "Hen suyễn cấp tính nặng - không dùng để điều trị cấp cứu"
+            ],
+            "tương_đối": [
+                "Nhiễm trùng đang hoạt động - thận trọng",
+                "Hen suyễn không dị ứng hoặc IgE ngoài khoảng 30-700 IU/mL - không hiệu quả",
+                "Có thai (category B) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Omalizumab là FDA category B. Có thể dùng trong thai kỳ khi cần thiết. Một số nghiên cứu cho thấy an toàn trong thai kỳ, nhưng cần theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Omalizumab bài tiết vào sữa mẹ ở nồng độ thấp. Có thể dùng khi cho con bú với theo dõi trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú với thận trọng. Theo dõi trẻ về dấu hiệu nhiễm trùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Thận trọng, không cần điều chỉnh liều",
+            "notes": "Omalizumab không chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Phản ứng dị ứng nặng (anaphylaxis)",
+                "Sốc phản vệ",
+                "Nhiễm trùng nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ. Epinephrine cho sốc phản vệ.",
+            "treatment": [
+                "Ngừng omalizumab",
+                "Nếu sốc phản vệ:",
+                "  - Epinephrine 0.3-0.5mg IM ngay lập tức",
+                "  - Hỗ trợ hô hấp: thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "  - Hỗ trợ tuần hoàn: truyền dịch, vasopressor nếu cần",
+                "  - Corticosteroid: methylprednisolone 125mg IV",
+                "  - Antihistamine: diphenhydramine 50mg IV",
+                "Điều trị nhiễm trùng nếu có",
+                "Theo dõi chặt chẽ trong ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn, dấu hiệu sốc phản vệ, dấu hiệu nhiễm trùng trong ít nhất 24-48 giờ."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Epinephrine",
+                    "mechanism": "Alpha và beta agonist, điều trị sốc phản vệ",
+                    "indication": "Sốc phản vệ do omalizumab",
+                    "dose": "0.3-0.5mg IM, lặp lại mỗi 5-15 phút nếu cần"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "sc": {
+                "reconstitution": "Dạng SC: 150mg/1.2ml, tiêm dưới da",
+                "injection_site": "Vùng đùi, bụng (tránh vùng quanh rốn 5cm), cánh tay",
+                "notes": "Để nhiệt độ phòng 15-30 phút trước khi tiêm. Tiêm dưới da, không tiêm vào cơ hoặc mạch máu. Thay đổi vị trí tiêm mỗi lần. Có thể tự tiêm sau khi được hướng dẫn. QUAN TRỌNG: Theo dõi ít nhất 2 giờ sau mỗi lần tiêm, đặc biệt 3 lần tiêm đầu, để phát hiện sốc phản vệ."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Omalizumab (Xolair)",
+                "UpToDate - Omalizumab: Drug information",
+                "Lexicomp - Omalizumab monograph",
+                "GINA Guidelines - Asthma",
+                "EAACI/GA²LEN/EDF/WAO Guidelines - Urticaria"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
+        }
+    },
+    
+    "Tezepelumab": {
+        "group": "Respiratory - Biologics (anti-TSLP)",
+        "vietnamese_name": "Tezepelumab, Tezspire",
+        "administration": ["SC"],
+        "indications": [
+            "Hen suyễn nặng (severe asthma) - kiểm soát kém, không phân loại theo phenotype",
+            "Hen suyễn eosinophilic nặng (severe eosinophilic asthma)",
+            "Hen suyễn dị ứng nặng (severe allergic asthma)",
+            "Hen suyễn không eosinophilic nặng (severe non-eosinophilic asthma)"
+        ],
+        "contraindications": [
+            "Dị ứng tezepelumab hoặc bất kỳ thành phần nào"
+        ],
+        "dosage": {
+            "adult": "210mg SC mỗi 4 tuần",
+            "pediatric_12_17": "210mg SC mỗi 4 tuần",
+            "notes": "Tiêm dưới da. Có thể tự tiêm sau khi được hướng dẫn. Tezepelumab là thuốc đầu tiên không yêu cầu biomarker cụ thể (có thể dùng cho cả eosinophilic và non-eosinophilic asthma)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, không cần điều chỉnh liều"
+        },
+        "side_effects": [
+            "Phản ứng tại chỗ tiêm (đau, đỏ, sưng) - phổ biến",
+            "Nhiễm trùng đường hô hấp trên",
+            "Viêm họng",
+            "Đau đầu",
+            "Viêm khớp (arthralgia)",
+            "Nhiễm trùng nặng - hiếm",
+            "Phản ứng dị ứng nặng - hiếm"
+        ],
+        "interactions": [
+            "Không có tương tác dược động học quan trọng",
+            "Có thể làm giảm đáp ứng vaccine (sống)"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Tezepelumab là kháng thể đơn dòng kháng TSLP (thymic stromal lymphopoietin, fully human monoclonal antibody). TSLP là cytokine quan trọng ở đầu chuỗi phản ứng viêm dị ứng (upstream cytokine). TSLP được giải phóng từ epithelial cells khi tiếp xúc với dị nguyên, chất kích thích, hoặc tổn thương → gắn với TSLPR trên nhiều loại tế bào (dendritic cells, T cells, mast cells, eosinophils) → kích hoạt nhiều con đường viêm dị ứng (type 2 và non-type 2) → gây viêm đường hô hấp và hen suyễn. Tezepelumab gắn với TSLP → ngăn chặn TSLP gắn với receptor → ức chế signaling → giảm viêm dị ứng ở nhiều mức độ. Dẫn đến: giảm cơn hen và cải thiện chức năng hô hấp trong hen suyễn nặng, không phân biệt phenotype. Tezepelumab là thuốc đầu tiên không yêu cầu biomarker cụ thể (có thể dùng cho cả eosinophilic và non-eosinophilic asthma). ĐẶC ĐIỂM: (1) Không yêu cầu biomarker cụ thể (có thể dùng cho cả eosinophilic và non-eosinophilic asthma), (2) Tác động ở đầu chuỗi phản ứng viêm (upstream), (3) Ức chế cả type 2 và non-type 2 inflammation, (4) Dùng mỗi 4 tuần, (5) Hiệu quả với nhiều phenotype hen suyễn.",
+        "monitoring": [
+            "Phản ứng tại chỗ tiêm",
+            "Chức năng hô hấp (FEV1) - đánh giá hiệu quả điều trị",
+            "Tần suất cơn hen - giảm cơn hen",
+            "Sử dụng corticosteroid (ICS) - có thể giảm liều",
+            "Dấu hiệu nhiễm trùng đường hô hấp",
+            "Dấu hiệu phản ứng dị ứng"
+        ],
+        "precautions": [
+            "Không yêu cầu biomarker cụ thể - có thể dùng cho cả eosinophilic và non-eosinophilic asthma",
+            "Không dùng vaccine sống trong và sau điều trị",
+            "Thận trọng ở bệnh nhân có nhiễm trùng đang hoạt động",
+            "Không ngừng đột ngột các thuốc hen khác (ICS, LABA) - giảm dần dần",
+            "Theo dõi chức năng hô hấp thường xuyên"
+        ],
+        "pharmacokinetics": {
+            "half_life": "26 ngày (dao động 20-32 ngày)",
+            "onset": "Vài tuần",
+            "duration": "4 tuần",
+            "protein_binding": "Không rõ",
+            "metabolism": "Chuyển hóa qua hệ thống RES, tương tự các immunoglobulin khác",
+            "clearance": "Chuyển hóa qua RES, thải trừ qua thận một phần. Half-life dài."
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Không để ở nhiệt độ phòng quá 14 ngày. Để nhiệt độ phòng 30 phút trước khi tiêm.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, cần theo dõi nhiễm trùng và không ngừng đột ngột các thuốc hen khác.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Vaccines (sống)",
+                    "mechanism": "Tezepelumab làm thay đổi đáp ứng miễn dịch",
+                    "effect": "Giảm hiệu quả vaccine, tăng nguy cơ nhiễm trùng từ vaccine sống",
+                    "management": "Không dùng vaccine sống trong và sau điều trị tezepelumab. Hoãn vaccine sống ít nhất 3-6 tháng sau liều cuối."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng tezepelumab hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Nhiễm trùng đang hoạt động - thận trọng",
+                "Có thai (category B) - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Tezepelumab là FDA category B. Có thể dùng trong thai kỳ khi cần thiết. Một số nghiên cứu cho thấy an toàn trong thai kỳ, nhưng cần theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Tezepelumab bài tiết vào sữa mẹ ở nồng độ thấp. Có thể dùng khi cho con bú với theo dõi trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú với thận trọng. Theo dõi trẻ về dấu hiệu nhiễm trùng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Thận trọng, không cần điều chỉnh liều",
+            "notes": "Tezepelumab không chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Phản ứng dị ứng nặng",
+                "Nhiễm trùng nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng tezepelumab",
+                "Điều trị phản ứng dị ứng: corticosteroid, antihistamine, epinephrine nếu cần",
+                "Điều trị nhiễm trùng nếu có",
+                "Theo dõi chặt chẽ trong ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn, dấu hiệu nhiễm trùng, dấu hiệu phản ứng dị ứng trong ít nhất 24-48 giờ."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."
+        },
+        "administration_instructions": {
+            "sc": {
+                "reconstitution": "Dạng SC: 210mg/1.91ml, tiêm dưới da",
+                "injection_site": "Vùng đùi, bụng (tránh vùng quanh rốn 5cm), cánh tay",
+                "notes": "Để nhiệt độ phòng 30 phút trước khi tiêm. Tiêm dưới da, không tiêm vào cơ hoặc mạch máu. Thay đổi vị trí tiêm mỗi lần. Có thể tự tiêm sau khi được hướng dẫn."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Tezepelumab (Tezspire)",
+                "UpToDate - Tezepelumab: Drug information",
+                "Lexicomp - Tezepelumab monograph",
+                "GINA Guidelines - Asthma"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Serious infections (rare)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Injection site reactions (pain, redness, swelling)", "Respiratory function (FEV1) - assess treatment response", "Asthma exacerbation frequency - reduction in asthma attacks", "ICS use - may reduce dose", "Signs of respiratory infection", "Signs of serious infection"]
+        },
+        "guideline_tags": [
+            "GINA Guidelines - Severe Asthma",
+            "FDA Drug Information - Tezepelumab"
+        ]
+    },
+}
+
+__all__ = ["RESPIRATORY_BIOLOGICS_DRUGS"]
+

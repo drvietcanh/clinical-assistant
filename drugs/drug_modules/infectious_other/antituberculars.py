@@ -1047,6 +1047,35 @@ ANTITUBERCULAR_DRUGS = {
             "last_updated": "2025-03-02",
             "evidence_level": "High – guideline and RCT-based trong MDR/XDR-TB.",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Moderate",
+            "organ_toxicity": {
+                "hematologic": "High (myelosuppression - anemia, leukopenia, thrombocytopenia)",
+                "neurologic": "High (peripheral neuropathy, optic neuropathy - with prolonged use)",
+                "metabolic": "Moderate (lactic acidosis - rare but serious)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "CBC (hemoglobin, WBC, platelets) - CRITICAL (weekly initially, then at least monthly with prolonged treatment)",
+                "Peripheral neuropathy symptoms (numbness, tingling, burning pain in extremities) - CRITICAL",
+                "Optic neuropathy symptoms (blurred vision, decreased color vision) - CRITICAL",
+                "Lactate levels and metabolic acidosis (if symptoms of fatigue, rapid breathing, unexplained abdominal pain)",
+                "Serotonin syndrome symptoms (if co-administered with SSRIs, SNRIs, TCAs, MAOIs, triptans)"
+            ],
+            "look_alike_sound_alike": ["Linezolid", "Lisinopril", "Levofloxacin"]
+        },
+        "guideline_tags": [
+            "WHO Consolidated Guidelines on Drug-Resistant Tuberculosis Treatment 2022",
+            "Group A - MDR/XDR-TB Regimens",
+            "FDA Black Box Warning - Linezolid and Myelosuppression",
+            "FDA Black Box Warning - Linezolid and Peripheral/Optic Neuropathy",
+            "FDA Black Box Warning - Linezolid and Serotonin Syndrome"
+        ]
     },
 
     "PAS (para-aminosalicylic acid)": {

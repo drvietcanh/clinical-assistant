@@ -197,7 +197,28 @@ SEX_HORMONES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"oncologic": "Black Box Warning - Prostate cancer risk", "cardiovascular": "Black Box Warning - Venous thromboembolism (DVT, PE), cardiovascular events", "hematologic": "Black Box Warning - Polycythemia (hematocrit >54%)", "hepatic": "Hepatotoxicity (especially oral form)", "cardiovascular_other": "Heart failure exacerbation (fluid retention)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["PSA (Black Box Warning - prostate cancer risk, every 3-6 months)", "Hematocrit (Black Box Warning - polycythemia, stop if >54%)", "Black Box Warning - Venous thromboembolism signs (DVT, PE)", "Black Box Warning - Cardiovascular events", "Blood pressure (hypertension risk)", "Lipid panel (dyslipidemia risk)", "Hepatic function (hepatotoxicity risk, especially oral form)", "Testosterone levels (target 400-1000 ng/dL)"],
+            "look_alike_sound_alike": ["Testosterone", "Testosterone"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Prostate Cancer Risk",
+            "FDA Black Box Warning - Venous Thromboembolism (DVT, PE)",
+            "FDA Black Box Warning - Cardiovascular Events",
+            "FDA Black Box Warning - Polycythemia (hematocrit >54%)",
+            "Endocrine Society Guidelines - Testosterone Therapy in Men",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 }
 

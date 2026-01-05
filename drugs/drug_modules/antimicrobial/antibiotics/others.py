@@ -172,7 +172,19 @@ OTHER_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "gastrointestinal": "Moderate"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Complicated Intra-abdominal Infections",
+            "IDSA Guidelines - Antimicrobial Resistance",
+            "IDSA Guidelines - Multidrug-Resistant Gram-Negative Infections"
+        ]
     },
     
     "Fidaxomicin": {
@@ -706,7 +718,18 @@ OTHER_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiac": "High (QT prolongation)", "gastrointestinal": "Moderate"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Methicillin-Resistant Staphylococcus aureus Infections"
+        ]
     },
     "Nitrofurantoin": {
         "group": "Antibiotic - Nitrofuran",
@@ -1092,7 +1115,19 @@ OTHER_ANTIBIOTICS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "gastrointestinal": "Moderate"}
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Methicillin-Resistant Staphylococcus aureus Infections"
+        ]
     },
     
 }

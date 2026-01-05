@@ -225,10 +225,16 @@ LINCOSAMIDE_ANTIBIOTICS = {
             "high_alert": True,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"gastrointestinal": "High (C. difficile colitis)"}
+            "bleeding_risk": "Low (with warfarin)",
+            "organ_toxicity": {"gastrointestinal": "Black Box Warning - C. difficile-associated diarrhea (severe colitis, may be fatal)", "dermatologic": "SJS/TEN (rare)", "hepatic": "Hepatotoxicity (rare)", "hematologic": "Neutropenia (rare)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": False,
+            "requires_monitoring": ["C. difficile infection signs (Black Box Warning - stop immediately if diarrhea)", "SJS/TEN signs", "Hepatic function (hepatotoxicity risk)", "CBC (neutropenia risk)", "PT/INR (if used with warfarin)", "Neuromuscular blockade (if used with neuromuscular blockers)"],
+            "look_alike_sound_alike": ["Clindamycin", "Clarithromycin"]
         },
         "guideline_tags": [
+            "FDA Black Box Warning - C. difficile-associated Diarrhea (severe colitis, may be fatal)",
             "IDSA Guidelines - Skin and Soft Tissue Infections",
             "IDSA Guidelines - Anaerobic Infections",
             "IDSA Guidelines - Clostridium difficile Infection",

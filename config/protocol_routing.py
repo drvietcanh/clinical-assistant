@@ -71,6 +71,10 @@ from protocols import (
     render_hypertensive_nephrosclerosis,
     render_hepatorenal_syndrome,
     render_emergency_dialysis,
+    render_ckd_anemia,
+    render_resistant_hypertension_ckd,
+    render_blood_pressure_ckd,
+    render_iga_nephropathy,
     render_cap,
     render_hap_vap,
     render_cdiff,
@@ -545,6 +549,30 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "keywords": ["Suy thận mạn", "CKD", "ckd"],
         "render": render_ckd,
         "has_article": False,
+        "priority": 8
+    },
+    "ckd_anemia": {
+        "keywords": ["Thiếu Máu Trong CKD", "KDIGO 2026", "thiếu máu", "anemia", "CKD anemia"],
+        "render": render_ckd_anemia,
+        "has_article": True,
+        "priority": 8
+    },
+    "resistant_hypertension_ckd": {
+        "keywords": ["Tăng Huyết Áp Kháng Trị", "resistant hypertension", "CKD", "tăng huyết áp kháng trị"],
+        "render": render_resistant_hypertension_ckd,
+        "has_article": True,
+        "priority": 8
+    },
+    "blood_pressure_ckd": {
+        "keywords": ["Quản Lý Huyết Áp Trong CKD", "Blood Pressure", "KDIGO 2021", "huyết áp trong CKD"],
+        "render": render_blood_pressure_ckd,
+        "has_article": True,
+        "priority": 8
+    },
+    "iga_nephropathy": {
+        "keywords": ["IgA Nephropathy", "IgAN", "Bệnh thận IgA", "KDIGO 2021", "glomerulonephritis"],
+        "render": render_iga_nephropathy,
+        "has_article": True,
         "priority": 8
     },
     "diabetic_nephropathy": {

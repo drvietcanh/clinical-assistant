@@ -679,6 +679,25 @@ CEPHALOSPORINS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"neurological": "Black Box Warning - Seizures, encephalopathy (especially in renal impairment)", "hepatic": "Hepatotoxicity (rare)", "hematologic": "Neutropenia (rare)", "gastrointestinal": "C. difficile infection"},
+            "qt_prolongation": False,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Renal function (CrCl - dose adjustment required, Black Box Warning for neurotoxicity)", "Neurological signs (seizures, encephalopathy - Black Box Warning)", "C. difficile infection signs", "Hepatic function (ALT, AST)", "CBC (neutropenia risk)"],
+            "look_alike_sound_alike": ["Cefepime", "Cefotaxime", "Ceftazidime"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Neurotoxicity (Seizures, Encephalopathy) in Renal Impairment",
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Febrile Neutropenia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
         "drug_interactions": {
                   "major": [
                       {
@@ -1165,6 +1184,25 @@ CEPHALOSPORINS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"neurological": "Seizures (rare, in renal impairment)", "hepatic": "Hepatotoxicity (rare)", "hematologic": "Neutropenia (rare)", "gastrointestinal": "C. difficile infection"},
+            "qt_prolongation": False,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Renal function (CrCl - dose adjustment required)", "Neurological signs (seizures in renal impairment)", "C. difficile infection signs", "Hepatic function (ALT, AST)", "CBC (neutropenia risk)", "PT/INR (if used with warfarin)"],
+            "look_alike_sound_alike": ["Cefotaxime", "Cefepime", "Ceftazidime"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Meningitis",
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
         "drug_interactions": {
                   "major": [
                       {
@@ -1888,6 +1926,24 @@ CEPHALOSPORINS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"neurological": "Seizures (rare, in renal impairment)", "hepatic": "Hepatotoxicity (rare)", "hematologic": "Neutropenia (rare)", "gastrointestinal": "C. difficile infection"},
+            "qt_prolongation": False,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Renal function (CrCl - dose adjustment required)", "Neurological signs (seizures in renal impairment)", "C. difficile infection signs", "Hepatic function (ALT, AST)", "CBC (neutropenia risk)"],
+            "look_alike_sound_alike": ["Ceftazidime", "Cefepime", "Cefotaxime"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Hospital-Acquired Pneumonia",
+            "IDSA Guidelines - Pseudomonas Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
         "drug_interactions": {
                   "major": [
                       {
@@ -1971,7 +2027,7 @@ CEPHALOSPORINS_DRUGS = {
         'Giảm bạch cầu (hiếm)', 'Sỏi mật (với liều cao dài ngày)'],
         'interactions': ['Warfarin: tăng INR',
         'Calcium IV: kết tủa (trẻ sơ sinh)',
-        'Probenecid: tăng nồng độ ceftriaxone'], 'pregnancy': 'B - An toàn',
+        'Probenecid: tăng nồng độ ceftriaxone'],
         'mechanism_of_action':
         'Cephalosporin thế hệ 3, phổ rộng. Ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs). Phổ kháng khuẩn: Gram-dương (một số), Gram-âm mạnh (Enterobacteriaceae, Neisseria, H. influenzae), và một số kỵ khí. Kháng được nhiều beta-lactamase do có cấu trúc vòng beta-lactam bền vững. Không hiệu quả với Pseudomonas aeruginosa, Enterococcus, hoặc MRSA. Thời gian bán thải dài (6-9 giờ) → chỉ cần tiêm 1 lần/ngày.'
         , 'monitoring': ['Dấu hiệu nhiễm trùng (sốt, WBC, CRP)',
@@ -2016,7 +2072,7 @@ CEPHALOSPORINS_DRUGS = {
         'Ceftriaxone có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K. Ngoài ra, có thể đẩy warfarin khỏi albumin (protein binding cao).'
         , 'effect': 'Tăng INR, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng ceftriaxone). Có thể cần giảm liều warfarin. Đặc biệt thận trọng ở bệnh nhân suy gan, dùng kéo dài (>7 ngày).'
-        }], 'moderate': [{'drug': 'Probenecid', 'mechanism':
+        }], 'mechanism':
         'Probenecid ức chế bài tiết ống thận của ceftriaxone, làm giảm thải trừ và tăng nồng độ ceftriaxone.'
         , 'effect': 'Tăng nồng độ ceftriaxone, tăng thời gian bán thải',
         'management':
@@ -2032,7 +2088,7 @@ CEPHALOSPORINS_DRUGS = {
         , 'effect': 'Kết tủa khi pha chung, tăng nguy cơ độc thận',
         'management':
         'Không pha chung. Truyền riêng biệt. Theo dõi chức năng thận chặt chẽ.'
-        }], 'minor': [{'drug': 'Thuốc tránh thai đường uống', 'mechanism':
+        }], 'mechanism':
         'Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.'
         , 'effect':
         'Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)',
@@ -2140,7 +2196,7 @@ CEPHALOSPORINS_DRUGS = {
         'monitoring':
         'Theo dõi chức năng gan (ALT, AST) nếu có bệnh gan. Theo dõi chức năng thận (creatinine, CrCl) nếu có suy thận nặng kèm suy gan. Theo dõi dấu hiệu nhiễm trùng (sốt, WBC). Theo dõi sỏi mật nếu dùng liều cao, dùng kéo dài.'}, 'brand_names': {'vietnam': [
         'Ceftriaxone', 'Rocephin', 'Ceftriaxone Stada', 'Ceftriax'], 'common': [
-        'Rocephin', 'Ceftriaxone']}, 'cost_estimate': {'unit': 'VND',
+        'Rocephin', 'Ceftriaxone'],
         'range': '50,000 - 200,000 VND/lọ (tùy hàm lượng và thương hiệu)',
         'note':
         'Giá thay đổi theo thương hiệu và nhà thuốc. Ceftriaxone generic thường rẻ hơn (50,000-100,000 VND/lọ 1g). Rocephin (brand) thường đắt hơn (100,000-200,000 VND/lọ 1g).'}, 'references': {'primary_sources': [
@@ -2231,6 +2287,24 @@ CEPHALOSPORINS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"hepatic": "Hepatotoxicity (rare)", "hematologic": "Neutropenia (rare)", "gastrointestinal": "C. difficile infection"},
+            "qt_prolongation": False,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Renal function (CrCl - dose adjustment required)", "C. difficile infection signs", "Hepatic function (ALT, AST)", "CBC (neutropenia risk)"],
+            "look_alike_sound_alike": ["Cefuroxime", "Cefuroxime axetil"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Surgical Prophylaxis",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
         "drug_interactions": {
                   "major": [
                       {

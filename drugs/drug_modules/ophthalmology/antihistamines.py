@@ -300,6 +300,21 @@ ANTIHISTAMINES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in itching, redness, swelling)", "Signs of eye irritation", "Systemic effects (drowsiness, fatigue) if systemic absorption"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Allergic Conjunctivitis",
+                "EAACI Guidelines - Allergic Conjunctivitis",
+                "FDA Drug Information - Ketotifen Ophthalmic"
+            ],
             "black_box_warnings": "Cần xem xét black box warnings",
             "reversal_agents": {
                 "available": False,
@@ -431,6 +446,21 @@ ANTIHISTAMINES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (improvement in allergic conjunctivitis symptoms)", "Signs of eye irritation", "Visual acuity (temporary blurring after instillation is normal)"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Allergic Conjunctivitis",
+                "EAACI Guidelines - Allergic Conjunctivitis",
+                "FDA Drug Information - Olopatadine Ophthalmic"
+            ],
             "black_box_warnings": "Cần xem xét black box warnings",
             "reversal_agents": {
                 "available": False,

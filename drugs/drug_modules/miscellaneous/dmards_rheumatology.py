@@ -310,6 +310,25 @@ DMARDS_RHEUMATOLOGY_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "A – guideline-supported DMARD",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High (with warfarin)",
+            "organ_toxicity": {"hepatic": "Black Box Warning - Hepatotoxicity (may be fatal)", "teratogenic": "Black Box Warning - Teratogenicity (Category X, very long half-life 14-18 days)", "hematologic": "Bone marrow suppression (neutropenia, thrombocytopenia)", "cardiovascular": "Hypertension"},
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Black Box Warning - Hepatic function (ALT, AST - every 1-2 months first 6 months, then every 3-6 months)", "Black Box Warning - Pregnancy test (teratogenicity, Category X)", "CBC (bone marrow suppression risk)", "Blood pressure (hypertension risk)", "Infection signs (increased risk)", "Cholestyramine washout procedure (if pregnancy/overdose - long half-life 14-18 days)", "Methotrexate/hepatotoxic drugs interactions (increases hepatotoxicity risk)", "PT/INR (if used with warfarin - bleeding risk)"],
+            "look_alike_sound_alike": ["Leflunomide", "Levetiracetam"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Hepatotoxicity (may be fatal)",
+            "FDA Black Box Warning - Teratogenicity (Category X)",
+            "ACR Guidelines - Rheumatoid Arthritis",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 
     "Methotrexate": {
@@ -507,6 +526,31 @@ DMARDS_RHEUMATOLOGY_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "A – guideline-recommended first-line DMARD",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Bone marrow suppression (myelosuppression) - Black Box Warning", "Hepatotoxicity (cirrhosis) - Black Box Warning", "Pulmonary toxicity (interstitial lung disease) - Black Box Warning", "Renal toxicity - Black Box Warning", "Teratogenicity - Black Box Warning"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Black Box Warning - CBC (WBC, platelet, hemoglobin) - baseline, every 2-4 weeks initially, then every 1-3 months", "Black Box Warning - Hepatic function (ALT, AST, albumin) - baseline, every 1-3 months, liver ultrasound if long-term use", "Black Box Warning - Renal function (creatinine, eGFR) - baseline, every 1-3 months", "Black Box Warning - Chest X-ray/CT baseline if pulmonary risk; monitor for cough/dyspnea", "Black Box Warning - Pregnancy test (teratogenicity, Category X)", "Black Box Warning - ONCE WEEKLY dosing - FATAL if taken daily", "Folic acid supplementation (5-10mg weekly or 1mg daily except MTX day)", "HBsAg, anti-HCV, HBsAb before treatment if risk factors", "Trimethoprim-sulfamethoxazole interaction (increases myelosuppression - avoid)", "NSAID interaction (increases MTX toxicity - use low dose, monitor)"],
+            "look_alike_sound_alike": ["Methotrexate", "Metformin", "Methadone"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Bone marrow suppression (myelosuppression)",
+            "FDA Black Box Warning - Hepatotoxicity (cirrhosis)",
+            "FDA Black Box Warning - Pulmonary toxicity (interstitial lung disease)",
+            "FDA Black Box Warning - Renal toxicity",
+            "FDA Black Box Warning - Teratogenicity (Category X)",
+            "FDA Black Box Warning - Fatal if taken daily (ONCE WEEKLY dosing only)",
+            "ISMP High Alert Medications",
+            "ACR Guidelines - Rheumatoid Arthritis (first-line DMARD)",
+            "EULAR Guidelines - Rheumatoid Arthritis",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 
 }

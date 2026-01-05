@@ -62,7 +62,11 @@ from .nephrology import (
     render_diabetic_nephropathy,
     render_hypertensive_nephrosclerosis,
     render_hepatorenal_syndrome,
-    render_emergency_dialysis
+    render_emergency_dialysis,
+    render_ckd_anemia,
+    render_resistant_hypertension_ckd,
+    render_blood_pressure_ckd,
+    render_iga_nephropathy
 )
 from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis, render_parasitic_worms, render_dengue_fever, render_scrub_typhus, render_malaria
 from .endocrinology import (

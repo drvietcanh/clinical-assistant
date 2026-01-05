@@ -6,8 +6,8 @@ Active module - contains all supportive care drug data"""
 VITAMIN_B12S_DRUGS = {
     "Vitamin B12": {'group': 'Vitamins/Supplements - Vitamin B12', 'vietnamese_name':
         'Vitamin B12, Cyanocobalamin, Methylcobalamin', 'administration': ['PO',
-        'IM', 'SC'], 'indications': ['Thiếu vitamin B12',
-        'Thiếu máu hồng cầu to', 'Bệnh thần kinh do thiếu B12',
+        'IM', 'SC'],
+        'indications': ['Thiếu máu hồng cầu to', 'Bệnh thần kinh do thiếu B12',
         'Dự phòng thiếu B12', 'Sau phẫu thuật cắt dạ dày'], 'contraindications':
         ['Dị ứng vitamin B12/cobalt',
         "Leber's disease (thoái hóa thần kinh thị giác di truyền)"], 'dosage':
@@ -65,13 +65,13 @@ VITAMIN_B12S_DRUGS = {
         'Giảm acid dạ dày, giảm tách B12 khỏi protein trong thức ăn, giảm hấp thu.'
         , 'effect': 'Giảm hấp thu B12, tăng nguy cơ thiếu B12', 'management':
         'Theo dõi nồng độ B12 định kỳ ở bệnh nhân dùng PPI/H2 blocker lâu dài (>2 năm). Bổ sung B12 nếu thiếu.'
-        }], 'minor': [{'drug': 'Folic acid', 'mechanism':
+        }, {'drug': 'Folic acid', 'mechanism':
         'Folic acid có thể che dấu thiếu B12 (cải thiện thiếu máu nhưng không cải thiện tổn thương thần kinh).'
         , 'effect':
         'Che dấu thiếu B12, dẫn đến tổn thương thần kinh không được điều trị',
         'management':
         'Luôn kiểm tra B12 khi thiếu máu. Không dùng folic acid đơn độc mà không kiểm tra B12.'
-        }, {'drug': 'Chloramphenicol', 'mechanism':
+        }], 'minor': [{'drug': 'Chloramphenicol', 'mechanism':
         'Chloramphenicol có thể giảm đáp ứng với B12 trong điều trị thiếu máu.',
         'effect': 'Giảm đáp ứng với B12', 'management':
         'Thận trọng. Theo dõi đáp ứng điều trị thiếu máu.'}]},
@@ -130,9 +130,25 @@ VITAMIN_B12S_DRUGS = {
         'UpToDate - Vitamin B12 deficiency',
         'American Society of Hematology Guidelines - Vitamin B12 Deficiency',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ], 'last_updated': '2025-02-04', 'evidence_level':
+        ], 'evidence_level':
         'A - Dựa trên FDA drug labels, ASH guidelines, và dữ liệu lâm sàng'},
         "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hemoglobin, MCV", "B12 levels (target: >300 pg/mL)", "MMA (methylmalonic acid)", "Homocysteine", "Clinical signs of neuropathy"]
+        },
+        "guideline_tags": [
+            "ASH Guidelines - Vitamin B12 Deficiency",
+            "FDA Drug Information - Vitamin B12",
+            "UpToDate - Vitamin B12 deficiency",
+            "ACOG Guidelines - Vitamin B12 in Pregnancy"
+        ],
 }}
 
 __all__ = ['VITAMIN_B12S_DRUGS']

@@ -106,6 +106,18 @@ CARDIOVASCULAR_FIXED_DOSE_COMBINATIONS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC 2024 Hypertension Management Update",
+            "ESC/ESH 2023 Hypertension Guidelines"
+        ],
     },
     "Amlodipine/Valsartan": {
         "group": "Cardiovascular - CCB + ARB (Fixed-Dose Combination)",
@@ -222,6 +234,18 @@ CARDIOVASCULAR_FIXED_DOSE_COMBINATIONS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC 2024 Hypertension Management Update",
+            "ESC/ESH 2023 Hypertension Guidelines"
+        ],
     },
 
     "Lisinopril/Hydrochlorothiazide": {
@@ -383,6 +407,18 @@ CARDIOVASCULAR_FIXED_DOSE_COMBINATIONS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)", "metabolic": "Moderate (hypokalemia)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC 2024 Hypertension Management Update",
+            "ESC/ESH 2023 Hypertension Guidelines"
+        ],
     },
 
     "Losartan/Hydrochlorothiazide": {
@@ -504,6 +540,18 @@ CARDIOVASCULAR_FIXED_DOSE_COMBINATIONS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)", "metabolic": "Moderate (hypokalemia)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC 2024 Hypertension Management Update",
+            "ESC/ESH 2023 Hypertension Guidelines"
+        ],
     },
 
 }

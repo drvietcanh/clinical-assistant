@@ -158,7 +158,7 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'Nhức đầu', 'Buồn nôn', 'Tiêu chảy', 'Rối loạn giấc ngủ',
         'Thay đổi tâm trạng (hiếm)', 'Phản ứng tâm thần (rất hiếm)'],
         'interactions': ['Phenobarbital: giảm nồng độ montelukast',
-        'Rifampin: giảm nồng độ montelukast'], 'pregnancy': 'B',
+        'Rifampin: giảm nồng độ montelukast'],
         'mechanism_of_action':
         'Montelukast là chất đối kháng chọn lọc thụ thể leukotriene D4 (LTD4), thuộc nhóm leukotriene receptor antagonist (LTRA). Leukotriene là các chất trung gian gây viêm được tổng hợp từ acid arachidonic qua con đường 5-lipoxygenase. Leukotriene D4 gắn vào CysLT1 receptor trên cơ trơn phế quản, mạch máu, và các tế bào viêm, gây co thắt phế quản, tăng tính thấm mạch máu, phù nề, và tăng tiết chất nhầy. Montelukast ức chế LTD4 gắn vào CysLT1 receptor, ngăn chặn các tác dụng này, từ đó giảm co thắt phế quản, giảm viêm, và giảm triệu chứng hen. Montelukast có tác dụng phòng ngừa hen, đặc biệt hen do dị ứng và hen do gắng sức. Không dùng cho cắt cơn cấp. Tác dụng phát huy sau vài giờ đến vài ngày, dùng hàng ngày để duy trì.'
         , 'monitoring': [
@@ -228,7 +228,7 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'Montelukast chuyển hóa qua gan (CYP2C8, CYP3A4, CYP2C9) nhưng không tích lũy ở suy gan. Không cần điều chỉnh liều ở suy gan.'
         }, 'overdose_management': {'symptoms': ['Nhức đầu', 'Buồn nôn, nôn',
         'Tiêu chảy', 'Rối loạn giấc ngủ', 'Thay đổi tâm trạng, kích động',
-        'Rối loạn tâm thần (hiếm)'], 'antidote': 'Không có antidote đặc hiệu',
+        'Rối loạn tâm thần (hiếm)'],
         'treatment': ['Ngừng ngay montelukast',
         'Hỗ trợ và điều trị triệu chứng',
         'Theo dõi rối loạn tâm thần (đặc biệt ở trẻ em và thanh thiếu niên)',
@@ -245,7 +245,7 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'UpToDate: Leukotriene receptor antagonists in asthma',
         'GINA Guidelines 2024: Asthma Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Montelukast'], 'last_updated': '2025-02-03',
+        'Micromedex: Montelukast'],
         'evidence_level':
         'High - FDA approved, multiple RCTs, clinical guidelines'}},
     "Nedocromil": {'group': 'Respiratory - Mast Cell Stabilizer',
@@ -259,7 +259,7 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'under_30': 'Không đổi', 'dialysis': 'Không đổi', 'notes':
         'Hấp thu toàn thân ít từ dạng hít. Không cần điều chỉnh liều ở suy thận.'}, 'side_effects': [
         'Vị đắng (phổ biến)', 'Ho', 'Kích ứng họng', 'Nhức đầu',
-        'Buồn nôn (hiếm)'], 'interactions': ['Ít tương tác'], 'pregnancy': 'B',
+        'Buồn nôn (hiếm)'], 'interactions': ['Ít tương tác'],
         'mechanism_of_action':
         'Nedocromil là mast cell stabilizer, ức chế phóng thích các chất trung gian gây viêm (histamine, leukotriene, prostaglandin) từ mast cells. Ngăn chặn degranulation của mast cells khi tiếp xúc với chất gây dị ứng, từ đó giảm co thắt phế quản, giảm viêm, và giảm triệu chứng hen. Tác dụng phòng ngừa, không dùng cho cắt cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần. Ít dùng hơn cromolyn nhưng có hiệu quả tương tự.'
         , 'monitoring': [
@@ -313,9 +313,23 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần.'}},
         'references': {'primary_sources': [
         'FDA Label: Tilade (Nedocromil)',
-        'UpToDate: Mast cell stabilizers in asthma'], 'last_updated': '2025-02-05',
+        'UpToDate: Mast cell stabilizers in asthma'],
         'evidence_level': 'High - FDA approved'},
         "black_box_warnings": None,
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
 },
     
     "Zafirlukast": {

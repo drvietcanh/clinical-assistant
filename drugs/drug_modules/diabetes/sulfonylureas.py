@@ -6,7 +6,8 @@ Active module - contains all diabetes drug data"""
 SULFONYLUREAS_DRUGS = {
     "Glibenclamide": {'group': 'Diabetes - Sulfonylurea', 'vietnamese_name':
         'Glibenclamide, Daonil', 'administration': ['PO'], 'indications': [
-        'Đái tháo đường type 2'], 'contraindications': ['Đái tháo đường type 1',
+        'Đái tháo đường type 2'],
+        'contraindications': [
         'Nhiễm toan ceton do đái tháo đường', 'Suy thận nặng', 'Suy gan nặng',
         'Có thai'], 'dosage': {'adult_start':
         '2.5-5mg x 1 lần/ngày trước bữa sáng', 'adult_usual':
@@ -66,7 +67,7 @@ SULFONYLUREAS_DRUGS = {
         'Khó nhận biết hạ đường huyết, tăng nguy cơ hạ đường huyết nặng',
         'management':
         'Thận trọng. Theo dõi đường huyết chặt chẽ. Bệnh nhân cần biết các triệu chứng hạ đường huyết không bị che dấu (vã mồ hôi, lú lẫn).'
-        }], 'moderate': [{'drug': 'Warfarin', 'mechanism':
+        }], 'minor': [{'drug': 'Warfarin', 'mechanism':
         'Glibenclamide có thể tăng tác dụng chống đông', 'effect':
         'Tăng INR, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần.'}, {
@@ -106,7 +107,7 @@ SULFONYLUREAS_DRUGS = {
         'Hạ đường huyết: run, vã mồ hôi, nhịp tim nhanh, đói, lú lẫn, co giật, hôn mê'
         , 'Hạ đường huyết có thể kéo dài (do thời gian bán thải dài)',
         'Hạ đường huyết nghiêm trọng có thể gây tử vong hoặc tổn thương não vĩnh viễn'
-        ], 'antidote': 'Glucose (đường uống hoặc IV)', 'treatment': [
+        ], 'treatment': [
         'Nếu tỉnh táo: Glucose 15-20g PO (nước đường, nước ngọt, kẹo)',
         'Nếu hôn mê hoặc không thể uống: Dextrose 50% 50ml IV hoặc glucagon 1mg SC/IM'
         ,
@@ -130,7 +131,7 @@ SULFONYLUREAS_DRUGS = {
         , 'timing':
         'Uống 1-2 lần/ngày, thường trước bữa sáng và/hoặc bữa tối. Khởi đầu với liều thấp (2.5-5mg/ngày) và tăng dần. Uống đúng giờ mỗi ngày.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': []
         }}, 'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Đái tháo đường type 2 ở trẻ em thường hiếm. Nguy cơ hạ đường huyết cao.',
         'infants':
@@ -147,7 +148,7 @@ SULFONYLUREAS_DRUGS = {
         'monitoring':
         'Theo dõi đường huyết chặt chẽ (đường huyết đói, sau ăn, HbA1c). Theo dõi dấu hiệu hạ đường huyết (run, vã mồ hôi, nhịp tim nhanh, lú lẫn, co giật). Theo dõi chức năng thận (creatinine, CrCl) định kỳ. Theo dõi chức năng gan (ALT, AST) nếu có bệnh gan. Cảnh báo bệnh nhân về dấu hiệu và cách xử trí hạ đường huyết.'}, 'brand_names': {'vietnam': [
         'Glibenclamide', 'Daonil', 'Glibenclamide Stada', 'Gliben'], 'common': [
-        'Daonil', 'Glibenclamide', 'Glyburide']}, 'cost_estimate': {'unit': 'VND',
+        'Daonil', 'Glibenclamide', 'Glyburide'],
         'range': '2,000 - 10,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
         'Giá thay đổi theo thương hiệu và nhà thuốc. Glibenclamide generic thường rẻ hơn (2,000-5,000 VND/viên 5mg). Daonil (brand) thường đắt hơn (5,000-10,000 VND/viên 5mg).'},         'references': {'primary_sources': [
@@ -183,13 +184,14 @@ SULFONYLUREAS_DRUGS = {
 },
     "Gliclazide": {'group': 'Diabetes - Sulfonylurea', 'vietnamese_name':
         'Gliclazide, Diamicron', 'administration': ['PO'], 'indications': [
-        'Đái tháo đường type 2'], 'contraindications': ['Đái tháo đường type 1',
+        'Đái tháo đường type 2'],
+        'contraindications': [
         'Nhiễm toan ceton', 'Suy thận nặng'], 'dosage': {'adult_standard':
         '80-320mg/ngày chia 1-2 lần', 'adult_modified_release':
         '30-120mg x 1 lần/ngày', 'notes':
         'Ít nguy cơ hạ đường huyết hơn glibenclamide'}, 'side_effects': [
         'Hạ đường huyết', 'Tăng cân', 'Ban da'], 'interactions': [
-        'Tương tự sulfonylurea khác'], 'pregnancy': 'C', 'mechanism_of_action':
+        'Tương tự sulfonylurea khác'], 'mechanism_of_action':
         'Sulfonylurea thế hệ 2. Kích thích tế bào beta tuyến tụy tiết insulin bằng cách đóng kênh KATP (ATP-sensitive K+ channel), làm khử cực màng tế bào, mở kênh Ca2+, và giải phóng insulin. Chỉ hoạt động khi còn chức năng tế bào beta. Gliclazide ưu điểm: thời gian bán hủy ngắn hơn, ít nguy cơ hạ đường huyết hơn glibenclamide.'
         , 'monitoring': [
         'Đường huyết: HbA1c (mỗi 3 tháng), đường huyết đói, đường huyết sau ăn',
@@ -257,7 +259,7 @@ SULFONYLUREAS_DRUGS = {
         'Hạ đường huyết: run, vã mồ hôi, nhịp tim nhanh, đói, lú lẫn, co giật, hôn mê'
         ,
         'Hạ đường huyết ít kéo dài hơn glibenclamide (do thời gian bán thải ngắn hơn)'
-        ], 'antidote': 'Glucose (đường uống hoặc IV)', 'treatment': [
+        ], 'treatment': [
         'Nếu tỉnh táo: Glucose 15-20g PO (nước đường, nước ngọt, kẹo)',
         'Nếu hôn mê hoặc không thể uống: Dextrose 50% 50ml IV hoặc glucagon 1mg SC/IM'
         , 'Theo dõi đường huyết mỗi 15-30 phút trong ít nhất 4 giờ',
@@ -278,7 +280,7 @@ SULFONYLUREAS_DRUGS = {
         , 'timing':
         'Uống 1-2 lần/ngày, thường trước bữa sáng và/hoặc bữa tối. Dạng modified-release: 1 lần/ngày với bữa sáng. Khởi đầu với liều thấp và tăng dần.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': []
         }}, 'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế). Đái tháo đường type 2 ở trẻ em thường hiếm. Nguy cơ hạ đường huyết cao.',
         'infants':
@@ -295,7 +297,7 @@ SULFONYLUREAS_DRUGS = {
         'monitoring':
         'Theo dõi đường huyết chặt chẽ (đường huyết đói, sau ăn, HbA1c). Theo dõi dấu hiệu hạ đường huyết (run, vã mồ hôi, nhịp tim nhanh, lú lẫn, co giật). Theo dõi chức năng thận (creatinine, CrCl) định kỳ. Theo dõi chức năng gan (ALT, AST) nếu có bệnh gan. Cảnh báo bệnh nhân về dấu hiệu và cách xử trí hạ đường huyết.'}, 'brand_names': {'vietnam': [
         'Gliclazide', 'Diamicron', 'Gliclazide Stada', 'Glicla'], 'common': [
-        'Diamicron', 'Gliclazide']}, 'cost_estimate': {'unit': 'VND',
+        'Diamicron', 'Gliclazide'],
         'range': '3,000 - 15,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
         'Giá thay đổi theo thương hiệu và nhà thuốc. Gliclazide generic thường rẻ hơn (3,000-8,000 VND/viên 80mg). Diamicron (brand) thường đắt hơn (8,000-15,000 VND/viên 80mg).'},         'references': {'primary_sources': [

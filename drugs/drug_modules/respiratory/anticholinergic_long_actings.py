@@ -51,8 +51,7 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'effect': 'Tăng khô miệng, bí tiểu, táo bón, tăng nhãn áp, nhìn mờ',
         'management':
         'Thận trọng khi dùng cùng. Theo dõi tác dụng phụ anticholinergic. Có thể cần giảm liều hoặc tránh dùng cùng.'
-        }], 'minor': [{'drug': 'Beta-agonist (Salbutamol, Salmeterol, Formoterol)',
-        'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
+        }], 'moderate': [{'drug': 'Beta-2 agonists (SABA, LABA)', 'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
         'Tăng hiệu quả giãn phế quản (tác dụng tích cực)', 'management':
         'Có thể dùng kết hợp để tăng hiệu quả. Không cần điều chỉnh liều.'}]},
         'contraindications': {'tuyệt_đối': [
@@ -113,9 +112,10 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'UpToDate: Long-acting anticholinergic bronchodilators in COPD',
         'GOLD Guidelines 2024: COPD Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Aclidinium'], 'last_updated': '2025-02-05',
+        'Micromedex: Aclidinium'],
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}},
+        'High - FDA approved, multiple RCTs, clinical guidelines'
+        }},
     "Glycopyrronium": {'group': 'Respiratory - Anticholinergic (Long-acting)',
         'vietnamese_name': 'Glycopyrronium, Glycopyrrolate, Seebri Breezhaler',
         'administration': ['Inhalation (DPI)'], 'indications': [
@@ -165,8 +165,7 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'effect': 'Tăng khô miệng, bí tiểu, táo bón, tăng nhãn áp, nhìn mờ',
         'management':
         'Thận trọng khi dùng cùng. Theo dõi tác dụng phụ anticholinergic. Có thể cần giảm liều hoặc tránh dùng cùng.'
-        }], 'minor': [{'drug': 'Beta-agonist (Salbutamol, Salmeterol, Formoterol, Indacaterol)',
-        'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
+        }], 'moderate': [{'drug': 'Beta-2 agonists (SABA, LABA)', 'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
         'Tăng hiệu quả giãn phế quản (tác dụng tích cực)', 'management':
         'Có thể dùng kết hợp để tăng hiệu quả. Không cần điều chỉnh liều.'}]},
         'contraindications': {'tuyệt_đối': [
@@ -227,9 +226,24 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'UpToDate: Long-acting anticholinergic bronchodilators in COPD',
         'GOLD Guidelines 2024: COPD Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Glycopyrronium'], 'last_updated': '2025-02-05',
+        'Micromedex: Glycopyrronium'],
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}},
+        'High - FDA approved, multiple RCTs',
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+        }},
     "Tiotropium": {'group': 'Respiratory - Anticholinergic (Long-acting)', 'vietnamese_name':
         'Tiotropium, Spiriva', 'administration': [
         'Inhalation (HandiHaler hoặc Respimat)'], 'indications': [
@@ -282,8 +296,7 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'effect': 'Tăng khô miệng, bí tiểu, táo bón, tăng nhãn áp, nhìn mờ',
         'management':
         'Thận trọng khi dùng cùng. Theo dõi tác dụng phụ anticholinergic. Có thể cần giảm liều hoặc tránh dùng cùng.'
-        }], 'minor': [{'drug': 'Beta-agonist (Salbutamol, Salmeterol)',
-        'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
+        }], 'moderate': [{'drug': 'Beta-2 agonists (SABA, LABA)', 'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
         'Tăng hiệu quả giãn phế quản (tác dụng tích cực)', 'management':
         'Có thể dùng kết hợp để tăng hiệu quả. Không cần điều chỉnh liều.'}]},
         'contraindications': {'tuyệt_đối': [
@@ -353,9 +366,10 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'UpToDate: Long-acting anticholinergic bronchodilators in COPD',
         'GOLD Guidelines 2024: COPD Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Tiotropium'], 'last_updated': '2025-02-03',
+        'Micromedex: Tiotropium'],
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}},
+        'High - FDA approved, multiple RCTs, clinical guidelines'
+        }},
     "Umeclidinium": {'group': 'Respiratory - Anticholinergic (Long-acting)',
         'vietnamese_name': 'Umeclidinium, Incruse Ellipta',
         'administration': ['Inhalation (DPI)'], 'indications': [
@@ -371,7 +385,7 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'Táo bón', 'Bí tiểu', 'Kích ứng mắt (nếu vào mắt)',
         'Nấm miệng (nếu dùng với fluticasone)'], 'interactions': [
         'Anticholinergic khác: tăng tác dụng phụ', 'Beta-agonist: hiệp đồng',
-        'Ritonavir: tăng nồng độ fluticasone (tránh dùng)'], 'pregnancy': 'C',
+        'Ritonavir: tăng nồng độ fluticasone (tránh dùng)'],
         'mechanism_of_action':
         'Anticholinergic dài tác dụng - ức chế muscarinic receptors (M1, M2, M3) ở cơ trơn phế quản, giảm acetylcholine-mediated co thắt phế quản. Giãn cơ trơn phế quản, giảm tiết dịch đường hô hấp. Tác dụng kéo dài 24 giờ (tương tự tiotropium). Không hấp thu hệ thống đáng kể khi dùng dạng hít (do ion hóa) → ít tác dụng phụ hệ thống. Chỉ có dạng fixed-dose combination với vilanterol (LABA) trong Anoro Ellipta hoặc vilanterol/fluticasone (ICS) trong Trelegy Ellipta. An toàn hơn beta-agonist cho bệnh nhân tim mạch.'
         , 'monitoring': [
@@ -413,8 +427,7 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'effect': 'Tăng khô miệng, bí tiểu, táo bón, tăng nhãn áp, nhìn mờ',
         'management':
         'Thận trọng khi dùng cùng. Theo dõi tác dụng phụ anticholinergic. Có thể cần giảm liều hoặc tránh dùng cùng.'
-        }], 'minor': [{'drug': 'Beta-agonist (Salbutamol, Salmeterol, Formoterol, Vilanterol)',
-        'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
+        }], 'moderate': [{'drug': 'Beta-2 agonists (SABA, LABA)', 'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
         'Tăng hiệu quả giãn phế quản (tác dụng tích cực)', 'management':
         'Có thể dùng kết hợp để tăng hiệu quả. Không cần điều chỉnh liều.'}]},
         'contraindications': {'tuyệt_đối': [
@@ -476,7 +489,22 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'UpToDate: Long-acting anticholinergic bronchodilators in COPD',
         'GOLD Guidelines 2024: COPD Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Umeclidinium'], 'last_updated': '2025-02-05',
-        'evidence_level': 'High - FDA approved, multiple RCTs, clinical guidelines'}}}
+        'Micromedex: Umeclidinium'],
+        'evidence_level': 'High - FDA approved, multiple RCTs, clinical guidelines',
+        "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+        }}}
 
 __all__ = ['ANTICHOLINERGIC_LONG_ACTINGS_DRUGS']

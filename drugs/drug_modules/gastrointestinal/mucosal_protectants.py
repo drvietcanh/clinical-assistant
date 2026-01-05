@@ -157,7 +157,8 @@ MUCOSAL_PROTECTANTS_DRUGS = {
     "Sucralfate": {'group': 'Gastrointestinal - Mucosal Protectant', 'vietnamese_name':
         'Sucralfate, Carafate', 'administration': ['PO'], 'indications': [
         'Loét dạ dày tá tràng', 'Viêm dạ dày', 'Trào ngược dạ dày thực quản',
-        'Loét do stress'], 'contraindications': ['Dị ứng sucralfate',
+        'Loét do stress'],
+        'contraindications': [
         'Suy thận nặng (tăng nguy cơ tích tụ nhôm)'], 'dosage': {'adult_ulcer':
         '1g x 4 lần/ngày (trước bữa ăn và trước khi ngủ) hoặc 2g x 2 lần/ngày',
         'adult_maintenance': '1g x 2 lần/ngày', 'notes':
@@ -169,7 +170,7 @@ MUCOSAL_PROTECTANTS_DRUGS = {
         'Warfarin: có thể tăng tác dụng chống đông',
         'Phenytoin: giảm hấp thu phenytoin', 'Digoxin: giảm hấp thu digoxin',
         'Quinolone: giảm hấp thu quinolone',
-        'Thyroxine: giảm hấp thu thyroxine'], 'pregnancy': 'B',
+        'Thyroxine: giảm hấp thu thyroxine'],
         'mechanism_of_action':
         'Phức hợp sucrose-aluminum. Tạo lớp phủ bảo vệ trên vết loét dạ dày tá tràng. Phản ứng với acid dạ dày tạo thành gel dính, bám chặt vào vết loét, tạo hàng rào bảo vệ khỏi acid, pepsin, và muối mật. Kích thích tổng hợp prostaglandin, tăng tiết chất nhầy, tăng tái tạo niêm mạc. Cũng có thể hấp phụ pepsin và muối mật. Không giảm tiết acid như PPI/H2 blocker mà bảo vệ niêm mạc trực tiếp.'
         , 'monitoring': ['Đáp ứng lâm sàng (giảm đau, lành vết loét)',
@@ -231,7 +232,7 @@ MUCOSAL_PROTECTANTS_DRUGS = {
         'Sucralfate ít gây quá liều nghiêm trọng do không hấp thu',
         'Triệu chứng nhẹ: táo bón nặng, buồn nôn',
         'Ở suy thận nặng: tích tụ nhôm có thể gây độc tính thần kinh, xương yếu'
-        ], 'antidote': 'Không có antidote đặc hiệu', 'treatment': [
+        ], 'treatment': [
         'Hỗ trợ triệu chứng (điều trị táo bón nếu cần)',
         'Theo dõi dấu hiệu tích tụ nhôm ở suy thận nặng',
         'Hầu hết trường hợp tự khỏi'], 'monitoring':
@@ -253,6 +254,20 @@ MUCOSAL_PROTECTANTS_DRUGS = {
              "available": False,
              "agents": []
          },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
 },
     
 }

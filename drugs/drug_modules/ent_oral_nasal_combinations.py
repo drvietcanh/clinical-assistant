@@ -150,6 +150,20 @@ ENT_ORAL_NASAL_COMBINATIONS_DRUGS = {
          "black_box_warnings": None,
          "black_box_warnings": None,
          "black_box_warnings": "Không có",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
 },
     "Cetirizine/Pseudoephedrine": {
         "group": "ENT - Combination (Oral Antihistamine + Decongestant)",
@@ -307,6 +321,20 @@ ENT_ORAL_NASAL_COMBINATIONS_DRUGS = {
          "black_box_warnings": None,
          "black_box_warnings": None,
          "black_box_warnings": "Không có",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
 },
     "Fexofenadine/Pseudoephedrine": {
         "group": "ENT - Combination (Oral Antihistamine + Decongestant)",
@@ -463,6 +491,20 @@ ENT_ORAL_NASAL_COMBINATIONS_DRUGS = {
          "black_box_warnings": None,
          "black_box_warnings": None,
          "black_box_warnings": "Không có",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
 },
     "Loratadine/Pseudoephedrine": {
         "group": "ENT - Combination (Oral Antihistamine + Decongestant)",
@@ -622,6 +664,20 @@ ENT_ORAL_NASAL_COMBINATIONS_DRUGS = {
          "black_box_warnings": None,
          "black_box_warnings": None,
          "black_box_warnings": "Không có",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
 },
 }
 

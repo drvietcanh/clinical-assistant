@@ -95,6 +95,28 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Không cắt patch. Đảm bảo patch dính chắc, tránh nguồn nhiệt trực tiếp.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiac": "Moderate (bradycardia, rebound hypertension with abrupt withdrawal)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure (hypotension, rebound hypertension if stopping abruptly) - CRITICAL",
+                    "Heart rate (bradycardia)",
+                    "Signs of withdrawal syndrome (rebound hypertension) - CRITICAL if stopping abruptly",
+                    "CNS depression (sedation, drowsiness)",
+                    "Renal function (if renal impairment)"
+                ],
+                "look_alike_sound_alike": ["Clonidine", "Clonidine"]
+            },
+            "guideline_tags": [
+                "AHA/ACC Hypertension Guidelines",
+                "FDA Drug Label - Clonidine (rebound hypertension warning)"
+            ]
         },
 
         "Methyldopa": {
@@ -186,6 +208,27 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Theo dõi huyết áp sát trong và sau khi truyền.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "High (hepatitis, especially with active liver disease)", "hematologic": "Moderate (hemolytic anemia, positive Coombs test)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL (hepatitis risk)",
+                    "Complete blood count (hemolytic anemia, positive Coombs test)",
+                    "Blood pressure (hypotension)",
+                    "CNS effects (sedation, drowsiness, depression)"
+                ],
+                "look_alike_sound_alike": ["Methyldopa", "Methyldopa"]
+            },
+            "guideline_tags": [
+                "AHA/ACC Hypertension Guidelines",
+                "FDA Drug Label - Methyldopa (hepatotoxicity warning)"
+            ]
         },
 
         # ======================== CARDIOVASCULAR: ARBs & RELATED ==========================
@@ -271,6 +314,28 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 ],
                 "minor": [],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (acute kidney injury, especially with renal artery stenosis)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure (hypotension)",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Serum potassium (hyperkalemia risk)"
+                ],
+                "look_alike_sound_alike": ["Valsartan", "Valsartan"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Fetal Toxicity (teratogenicity, Category D/X in T2/T3)",
+                "AHA/ACC Hypertension Guidelines",
+                "KDIGO Chronic Kidney Disease Guidelines",
+                "FDA Drug Label - Valsartan"
+            ]
         },
 
         "Olmesartan": {
@@ -337,6 +402,29 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 ],
                 "minor": [],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (acute kidney injury, especially with renal artery stenosis)", "gastrointestinal": "Low (sprue-like enteropathy - rare but serious)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure (hypotension)",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Serum potassium (hyperkalemia risk)",
+                    "Gastrointestinal symptoms (chronic diarrhea, weight loss - sprue-like enteropathy)"
+                ],
+                "look_alike_sound_alike": ["Olmesartan", "Olmesartan"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Fetal Toxicity (teratogenicity, Category D/X in T2/T3)",
+                "AHA/ACC Hypertension Guidelines",
+                "KDIGO Chronic Kidney Disease Guidelines",
+                "FDA Drug Label - Olmesartan (sprue-like enteropathy warning)"
+            ]
         },
 
         "Candesartan": {
@@ -409,6 +497,28 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 ],
                 "minor": [],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (acute kidney injury, especially with renal artery stenosis)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure (hypotension)",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Serum potassium (hyperkalemia risk)"
+                ],
+                "look_alike_sound_alike": ["Candesartan", "Candesartan"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Fetal Toxicity (teratogenicity, Category D/X in T2/T3)",
+                "AHA/ACC Hypertension Guidelines",
+                "KDIGO Chronic Kidney Disease Guidelines",
+                "FDA Drug Label - Candesartan"
+            ]
         },
 
         "Irbesartan": {
@@ -471,6 +581,29 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 ],
                 "minor": [],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (acute kidney injury, especially with renal artery stenosis)", "hepatic": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure (hypotension)",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Serum potassium (hyperkalemia risk)",
+                    "Hepatic function (CYP2C9 metabolism)"
+                ],
+                "look_alike_sound_alike": ["Irbesartan", "Irbesartan"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Fetal Toxicity (teratogenicity, Category D/X in T2/T3)",
+                "AHA/ACC Hypertension Guidelines",
+                "KDIGO Chronic Kidney Disease Guidelines",
+                "FDA Drug Label - Irbesartan"
+            ]
         },
 
         # ======================== CARDIOVASCULAR: STATINS ==========================
@@ -557,6 +690,32 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "timing": "Uống 1 lần/ngày vào BUỔI TỐI (cholesterol được tổng hợp nhiều vào ban đêm). Uống cùng một giờ mỗi ngày để nhớ. TRÁNH grapefruit juice hoàn toàn.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"musculoskeletal": "High (myopathy/rhabdomyolysis, especially with 80mg dose)", "hepatic": "Moderate (hepatotoxicity)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Creatine kinase (CK) - CRITICAL (myopathy/rhabdomyolysis risk)",
+                    "Hepatic function (ALT, AST) - CRITICAL",
+                    "Muscle symptoms (pain, weakness, tenderness) - CRITICAL",
+                    "Signs of rhabdomyolysis (dark urine, myoglobinuria)",
+                    "80mg dose: Higher myopathy risk - NOT recommended except in patients stable on 80mg for >12 months - CRITICAL",
+                    "Drug interactions (CYP3A4 inhibitors) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Simvastatin", "Lovastatin", "Atorvastatin"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Myopathy/Rhabdomyolysis (higher risk than atorvastatin, especially with 80mg dose)",
+                "FDA Black Box Warning - 80mg Dose NOT Recommended (except in patients stable on 80mg for >12 months)",
+                "FDA Black Box Warning - Teratogenicity (Category X)",
+                "AHA/ACC Cholesterol Guidelines",
+                "FDA Drug Label - Simvastatin"
+            ]
         },
 
         # ======================== CARDIOVASCULAR: PCSK9 INHIBITORS ==================
@@ -582,6 +741,26 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 "agents": [],
                 "notes": "Không có thuốc giải độc đặc hiệu. Half-life rất dài (17-20 ngày), tác dụng sẽ giảm dần theo thời gian.",
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of injection site reactions (redness, pain, swelling)",
+                    "Allergic reactions (hypersensitivity)",
+                    "Hepatic function (if severe hepatic impairment)"
+                ],
+                "look_alike_sound_alike": ["Alirocumab", "Evolocumab"]
+            },
+            "guideline_tags": [
+                "AHA/ACC Cholesterol Guidelines",
+                "FDA Drug Label - Alirocumab"
+            ]
         },
 
         "Evolocumab": {
@@ -606,6 +785,26 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 "agents": [],
                 "notes": "Không có thuốc giải độc đặc hiệu. Half-life rất dài (11-17 ngày), tác dụng sẽ giảm dần theo thời gian.",
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of injection site reactions (redness, pain, swelling)",
+                    "Allergic reactions (hypersensitivity)",
+                    "Hepatic function (if severe hepatic impairment)"
+                ],
+                "look_alike_sound_alike": ["Evolocumab", "Alirocumab"]
+            },
+            "guideline_tags": [
+                "AHA/ACC Cholesterol Guidelines",
+                "FDA Drug Label - Evolocumab"
+            ]
         },
 
         "Inclisiran": {
@@ -629,6 +828,26 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 "agents": [],
                 "notes": "Không có thuốc giải độc đặc hiệu. Tác dụng kéo dài 6 tháng sau liều thứ 2.",
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of injection site reactions (redness, pain, swelling)",
+                    "Allergic reactions (hypersensitivity)",
+                    "Hepatic function (if severe hepatic impairment)"
+                ],
+                "look_alike_sound_alike": ["Inclisiran", "Inclisiran"]
+            },
+            "guideline_tags": [
+                "AHA/ACC Cholesterol Guidelines",
+                "FDA Drug Label - Inclisiran"
+            ]
         },
 
         # ======================== CARDIOVASCULAR: DIURETICS ========================
@@ -729,6 +948,29 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Theo dõi điện giải sát. Tránh liều cao ở bệnh nhân suy thận (nguy cơ điếc).",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (electrolyte imbalances, especially hypokalemia)", "auditory": "Moderate (ototoxicity, especially with aminoglycosides or high IV doses)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Serum electrolytes (potassium, sodium, chloride) - CRITICAL",
+                    "Renal function (creatinine, eGFR)",
+                    "Auditory function (ototoxicity risk, especially with aminoglycosides or high IV doses)",
+                    "Signs of hypokalemia (arrhythmias, especially with digoxin)",
+                    "Fluid balance (dehydration risk)"
+                ],
+                "look_alike_sound_alike": ["Bumetanide", "Furosemide"]
+            },
+            "guideline_tags": [
+                "AHA/ACC Heart Failure Guidelines",
+                "KDIGO Chronic Kidney Disease Guidelines",
+                "FDA Drug Label - Bumetanide"
+            ]
         },
 
         "Torsemide": {
@@ -828,6 +1070,29 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Theo dõi điện giải sát. Tránh liều cao ở bệnh nhân suy thận (nguy cơ điếc).",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (electrolyte imbalances, especially hypokalemia)", "auditory": "Moderate (ototoxicity, especially with aminoglycosides or high IV doses)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Serum electrolytes (potassium, sodium, chloride) - CRITICAL",
+                    "Renal function (creatinine, eGFR)",
+                    "Auditory function (ototoxicity risk, especially with aminoglycosides or high IV doses)",
+                    "Signs of hypokalemia (arrhythmias, especially with digoxin)",
+                    "Fluid balance (dehydration risk)"
+                ],
+                "look_alike_sound_alike": ["Torsemide", "Furosemide"]
+            },
+            "guideline_tags": [
+                "AHA/ACC Heart Failure Guidelines",
+                "KDIGO Chronic Kidney Disease Guidelines",
+                "FDA Drug Label - Torsemide"
+            ]
         },
 
         # ======================== CARDIOVASCULAR: TRIGLYCERIDE LOWERING ============
@@ -846,6 +1111,26 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Không dùng quá 4g/ngày. Theo dõi dấu hiệu chảy máu nếu dùng với thuốc chống đông.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {"gastrointestinal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (especially with anticoagulants) - CRITICAL",
+                    "Gastrointestinal symptoms (diarrhea, nausea)",
+                    "Atrial fibrillation (increased risk in some studies)"
+                ],
+                "look_alike_sound_alike": ["Icosapent ethyl", "Icosapent ethyl"]
+            },
+            "guideline_tags": [
+                "AHA/ACC Cholesterol Guidelines",
+                "FDA Drug Label - Icosapent ethyl"
+            ]
         },
 
         "Omega-3 acid ethyl esters": {
@@ -863,6 +1148,25 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Theo dõi dấu hiệu chảy máu nếu dùng với thuốc chống đông.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {"gastrointestinal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (especially with anticoagulants)",
+                    "Gastrointestinal symptoms (diarrhea, nausea, belching)"
+                ],
+                "look_alike_sound_alike": ["Omega-3 acid ethyl esters", "Omega-3"]
+            },
+            "guideline_tags": [
+                "AHA/ACC Cholesterol Guidelines",
+                "FDA Drug Label - Omega-3 acid ethyl esters"
+            ]
         },
 
         "Pemafibrate": {
@@ -880,6 +1184,27 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "CHỐNG CHỈ ĐỊNH ở suy thận nặng (eGFR <30). Theo dõi CK nếu có đau cơ.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Moderate (hepatotoxicity)", "renal": "High (contraindicated if eGFR <30)", "musculoskeletal": "Low (myopathy, rhabdomyolysis)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Renal function (eGFR) - CRITICAL (contraindicated if eGFR <30)",
+                    "Hepatic function (ALT, AST)",
+                    "Creatine kinase (CK) - if muscle symptoms",
+                    "Signs of gallstones (cholelithiasis risk)"
+                ],
+                "look_alike_sound_alike": ["Pemafibrate", "Fenofibrate"]
+            },
+            "guideline_tags": [
+                "AHA/ACC Cholesterol Guidelines",
+                "FDA Drug Label - Pemafibrate"
+            ]
         },
 
     # ======================== BATCH 2: CARDIOVASCULAR DRUGS ========================
@@ -906,6 +1231,30 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block, heart failure exacerbation)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure and heart rate (bradycardia, AV block) - CRITICAL",
+                    "Renal function (CrCl) - dose adjustment required if CrCl <30",
+                    "Signs of withdrawal syndrome if stopping abruptly - CRITICAL",
+                    "Heart failure symptoms (can exacerbate)",
+                    "Signs of bronchospasm (asthma/COPD)"
+                ],
+                "look_alike_sound_alike": ["Atenolol", "Atenolol"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Withdrawal Syndrome (do not discontinue abruptly)",
+                "AHA/ACC Hypertension Guidelines",
+                "AHA/ACC Heart Failure Guidelines",
+                "FDA Drug Label - Atenolol"
+            ]
         },
 
         "Bisoprolol": {
@@ -932,6 +1281,30 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block, heart failure exacerbation)", "hepatic": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure and heart rate (bradycardia, AV block) - CRITICAL",
+                    "Renal function (CrCl) - dose adjustment required if CrCl <30",
+                    "Hepatic function - dose adjustment required if severe hepatic impairment",
+                    "Signs of withdrawal syndrome if stopping abruptly - CRITICAL",
+                    "Heart failure symptoms (can exacerbate)"
+                ],
+                "look_alike_sound_alike": ["Bisoprolol", "Bisoprolol"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Withdrawal Syndrome (do not discontinue abruptly)",
+                "AHA/ACC Hypertension Guidelines",
+                "AHA/ACC Heart Failure Guidelines",
+                "FDA Drug Label - Bisoprolol"
+            ]
         },
 
         "Carvedilol": {
@@ -959,6 +1332,30 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block, hypotension)", "hepatic": "Moderate (hepatotoxicity)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure (hypotension, especially with IV) - CRITICAL",
+                    "Heart rate (bradycardia, AV block) - CRITICAL",
+                    "Hepatic function (ALT, AST) - CRITICAL (hepatotoxicity risk)",
+                    "Signs of withdrawal syndrome if stopping abruptly - CRITICAL",
+                    "Heart failure symptoms"
+                ],
+                "look_alike_sound_alike": ["Carvedilol", "Carvedilol"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Withdrawal Syndrome (do not discontinue abruptly)",
+                "AHA/ACC Hypertension Guidelines",
+                "AHA/ACC Heart Failure Guidelines",
+                "FDA Drug Label - Carvedilol (hepatotoxicity warning)"
+            ]
         },
 
         "Nifedipine": {
@@ -979,6 +1376,29 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Người cao tuổi - tăng nhạy cảm",
                 ],
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiac": "High (immediate-release: MI/stroke risk)", "dermatologic": "Low (gingival hyperplasia, peripheral edema)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure (hypotension)",
+                    "Signs of MI/stroke (immediate-release form) - CRITICAL",
+                    "Peripheral edema",
+                    "Gingival hyperplasia (long-term use)",
+                    "Reflex tachycardia"
+                ],
+                "look_alike_sound_alike": ["Nifedipine", "Nifedipine"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Immediate-release: Increased Risk of MI and Stroke",
+                "AHA/ACC Hypertension Guidelines",
+                "FDA Drug Label - Nifedipine"
+            ]
         },
 
         "Diltiazem": {
@@ -1001,6 +1421,30 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiac": "High (heart failure, AV block, bradycardia)", "hepatic": "Moderate (hepatotoxicity)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure (hypotension)",
+                    "Heart rate (bradycardia, AV block) - CRITICAL",
+                    "Heart failure symptoms (can exacerbate) - CRITICAL",
+                    "Hepatic function (ALT, AST) - CRITICAL",
+                    "ECG (AV block, bradycardia)"
+                ],
+                "look_alike_sound_alike": ["Diltiazem", "Diltiazem"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Heart Failure",
+                "AHA/ACC Hypertension Guidelines",
+                "AHA/ACC Heart Failure Guidelines",
+                "FDA Drug Label - Diltiazem"
+            ]
         },
 
         "Verapamil": {
@@ -1023,6 +1467,30 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"cardiac": "High (heart failure, AV block, bradycardia)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure (hypotension)",
+                    "Heart rate (bradycardia, AV block) - CRITICAL",
+                    "Heart failure symptoms (can exacerbate) - CRITICAL",
+                    "ECG (AV block, bradycardia)",
+                    "Hepatic function (if severe hepatic impairment)"
+                ],
+                "look_alike_sound_alike": ["Verapamil", "Verapamil"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Heart Failure",
+                "AHA/ACC Hypertension Guidelines",
+                "AHA/ACC Heart Failure Guidelines",
+                "FDA Drug Label - Verapamil"
+            ]
         },
 
         "Hydrochlorothiazide": {
@@ -1045,6 +1513,29 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (electrolyte imbalances)", "metabolic": "Moderate (hyperglycemia, hyperuricemia, hypercalcemia)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Serum electrolytes (sodium, potassium, calcium) - CRITICAL",
+                    "Renal function (creatinine, eGFR)",
+                    "Blood glucose (hyperglycemia risk)",
+                    "Serum uric acid (hyperuricemia/gout risk)",
+                    "Signs of hypokalemia (muscle weakness, arrhythmias)"
+                ],
+                "look_alike_sound_alike": ["Hydrochlorothiazide", "Hydrochlorothiazide"]
+            },
+            "guideline_tags": [
+                "AHA/ACC Hypertension Guidelines",
+                "KDIGO Chronic Kidney Disease Guidelines",
+                "FDA Drug Label - Hydrochlorothiazide"
+            ]
         },
 
         "Spironolactone": {
@@ -1066,6 +1557,30 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Người cao tuổi - tăng nguy cơ tăng kali máu",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (hyperkalemia, especially with renal impairment)", "endocrine": "Moderate (gynecomastia in men, menstrual irregularities)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Serum potassium - CRITICAL (hyperkalemia risk, especially with renal impairment)",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Signs of hyperkalemia (arrhythmias, muscle weakness)",
+                    "Gynecomastia (men), menstrual irregularities (women)",
+                    "Drug interactions (ACE inhibitors, ARBs, potassium supplements) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Spironolactone", "Spironolactone"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Hyperkalemia (especially with renal impairment)",
+                "AHA/ACC Heart Failure Guidelines",
+                "KDIGO Chronic Kidney Disease Guidelines",
+                "FDA Drug Label - Spironolactone"
+            ]
         },
 
         "Captopril": {
@@ -1088,6 +1603,31 @@ CARDIOVASCULAR_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Người cao tuổi - tăng nhạy cảm",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (acute kidney injury, especially with renal artery stenosis)", "dermatologic": "Low (rash, angioedema)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of angioedema (face, lips, tongue, throat) - CRITICAL",
+                    "Blood pressure (hypotension, especially first dose)",
+                    "Renal function (creatinine, eGFR) - CRITICAL",
+                    "Serum potassium (hyperkalemia risk)",
+                    "Complete blood count (neutropenia, agranulocytosis - rare but serious)"
+                ],
+                "look_alike_sound_alike": ["Captopril", "Captopril"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Fetal Toxicity (teratogenicity)",
+                "FDA Black Box Warning - Angioedema",
+                "AHA/ACC Hypertension Guidelines",
+                "KDIGO Chronic Kidney Disease Guidelines",
+                "FDA Drug Label - Captopril"
+            ]
         },
 
 }

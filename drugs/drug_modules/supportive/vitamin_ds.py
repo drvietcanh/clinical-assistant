@@ -6,8 +6,8 @@ Active module - contains all supportive care drug data"""
 VITAMIN_DS_DRUGS = {
     "Vitamin D": {'group': 'Vitamins/Supplements - Vitamin D', 'vietnamese_name':
         'Vitamin D, Cholecalciferol (D3), Ergocalciferol (D2)',
-        'administration': ['PO'], 'indications': ['Thiếu vitamin D',
-        'Còi xương', 'Loãng xương (kết hợp với calcium)',
+        'administration': ['PO'],
+        'indications': ['Còi xương', 'Loãng xương (kết hợp với calcium)',
         'Dự phòng thiếu vitamin D',
         'Suy giảm chức năng thận (cần dạng hoạt hóa)'], 'contraindications': [
         'Tăng calci máu', 'Tăng calci niệu', 'Sỏi thận calci',
@@ -84,8 +84,7 @@ VITAMIN_DS_DRUGS = {
         'Tăng nguy cơ tăng calci máu nghiêm trọng, sỏi thận, suy thận',
         'management':
         'Theo dõi nồng độ calcium trong máu chặt chẽ. Có thể cần giảm liều vitamin D hoặc thiazide. Theo dõi dấu hiệu tăng calci máu.'
-        }], 'moderate': [{'drug': 'Corticosteroid (Prednisone, Dexamethasone)',
-        'mechanism':
+        }], 'moderate': [{'drug': 'Corticosteroid', 'mechanism':
         'Corticosteroid giảm hấp thu calcium ở ruột và tăng bài tiết calcium qua thận, đối kháng với tác dụng của vitamin D.'
         , 'effect': 'Giảm hiệu quả vitamin D, giảm hấp thu calcium',
         'management':
@@ -94,7 +93,7 @@ VITAMIN_DS_DRUGS = {
         'Các resin gắn acid mật gắn với vitamin D trong ruột, giảm hấp thu.',
         'effect': 'Giảm hấp thu vitamin D, giảm hiệu quả', 'management':
         'Cách ít nhất 4 giờ giữa vitamin D và resin. Uống vitamin D trước, resin sau.'
-        }], 'minor': [{'drug': 'Calcium supplements', 'mechanism':
+        }], 'minor': [{'drug': 'Calcium', 'mechanism':
         'Vitamin D tăng hấp thu calcium từ ruột.', 'effect':
         'Tăng hấp thu calcium (tác dụng mong muốn khi dùng kết hợp)',
         'management':
@@ -168,10 +167,27 @@ VITAMIN_DS_DRUGS = {
         'Institute of Medicine (IOM) - Dietary Reference Intakes for Calcium and Vitamin D'
         , 'UpToDate - Vitamin D deficiency in adults',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ], 'last_updated': '2025-02-04', 'evidence_level':
+        ], 'evidence_level':
         'A - Dựa trên FDA drug labels, Endocrine Society guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         },
         "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hypercalcemia (with overdose)", "Nephrolithiasis (with overdose)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["25(OH)D levels (target: 30-50 ng/mL)", "Serum calcium", "Phosphate", "PTH", "24h calcium urine (if hypercalciuria)", "Creatinine, eGFR", "Clinical signs of hypercalcemia"]
+        },
+        "guideline_tags": [
+            "Endocrine Society Guidelines - Vitamin D Deficiency",
+            "IOM Guidelines - Dietary Reference Intakes for Calcium and Vitamin D",
+            "NOF Guidelines - Calcium and Vitamin D for Osteoporosis",
+            "FDA Drug Information - Vitamin D",
+            "UpToDate - Vitamin D deficiency"
+        ],
 }}
 
 __all__ = ['VITAMIN_DS_DRUGS']

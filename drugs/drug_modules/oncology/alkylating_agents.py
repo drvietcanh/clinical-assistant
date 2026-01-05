@@ -179,7 +179,7 @@ ALKYLATING_AGENTS_DRUGS = {
         'Tránh dùng với các thuốc độc thận (cisplatin)',
         'Có thể gây vô sinh (cần tư vấn trước điều trị)',
         'Mesna phải được dùng đúng liều và thời điểm (trước, trong, và sau ifosfamide)'
-        ], 'pharmacokinetics': {'half_life': '3-15 giờ (tùy thuộc vào liều)',
+        ],
         'onset': '1-2 tuần (tác dụng lâm sàng)', 'duration':
         'Kéo dài (tích lũy)', 'protein_binding': '<20%', 'clearance':
         'Gan (chuyển hóa chủ yếu qua CYP2B6, CYP3A4), thận (thải trừ)'},
@@ -192,12 +192,12 @@ ALKYLATING_AGENTS_DRUGS = {
         , 'effect': 'Tăng nguy cơ suy thận cấp, độc thận nghiêm trọng',
         'management':
         'Thận trọng khi dùng đồng thời. Theo dõi chức năng thận chặt chẽ. Duy trì đủ dịch. Có thể cần giảm liều hoặc tránh dùng đồng thời.'
-        }], 'moderate': [{'drug': 'Phenobarbital', 'mechanism':
+        }], 'mechanism':
         'Phenobarbital cảm ứng CYP450, làm tăng chuyển hóa ifosfamide, giảm nồng độ ifosfamide trong máu.'
         , 'effect': 'Giảm nồng độ ifosfamide, giảm hiệu quả điều trị',
         'management':
         'Theo dõi đáp ứng điều trị. Có thể cần tăng liều ifosfamide.'}],
-        'minor': []}, 'contraindications': {'tuyệt_đối': ['Dị ứng ifosfamide',
+        'minor': [],
         'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
         'Đang cho con bú - chống chỉ định',
         'Viêm bàng quang chảy máu nặng - chống chỉ định cho đến khi hồi phục'],
@@ -206,7 +206,7 @@ ALKYLATING_AGENTS_DRUGS = {
         'Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục',
         'Suy gan - thận trọng, có thể cần giảm liều',
         'Bệnh nhân có tiền sử độc thần kinh trung ương - tăng nguy cơ độc thần kinh nặng'
-        ]}, 'pregnancy_lactation': {'fda_category': 'D', 'pregnancy_details':
+        ], 'pregnancy_details':
         'Chống chỉ định trong thai kỳ. Ifosfamide gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.'
         , 'lactation': {'safety': 'Incompatible', 'details':
         'Ifosfamide bài tiết vào sữa mẹ. Thuốc có thể gây độc tính nghiêm trọng cho trẻ sơ sinh.'
@@ -249,8 +249,9 @@ ALKYLATING_AGENTS_DRUGS = {
         'FDA Drug Label - Ifosfamide (Ifex)',
         'UpToDate - Ifosfamide Drug Information',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
-        'last_updated': '2025-01-15', 'evidence_level':
-        'High (FDA-approved, extensive clinical data)'}}}
+        'last_updated': '2025-01-15', "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
+    }
 
 
 __all__ = ['ALKYLATING_AGENTS_DRUGS']

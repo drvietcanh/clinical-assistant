@@ -172,7 +172,25 @@ METHYLXANTHINES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, extensive clinical experience"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "hepatic", "renal"],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["TDM", "ECG", "LFT", "RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Therapeutic window hẹp (10-20 mcg/mL). Nồng độ >20 mcg/mL: tăng nguy cơ độc tính. Nồng độ >30 mcg/mL: nguy cơ co giật, tử vong. CẦN TDM.",
+            "ISMP High Alert Medications",
+            "American Thoracic Society Guidelines - Theophylline dosing and monitoring",
+            "GINA Guidelines - Asthma management with methylxanthines"
+        ]
     },
     "Theophylline": {
         "group": "Respiratory - Methylxanthine (Bronchodilator)",
@@ -399,7 +417,26 @@ METHYLXANTHINES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, extensive clinical experience, TDM guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "hepatic", "renal"],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["TDM", "ECG", "LFT", "RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Therapeutic window hẹp (10-20 mcg/mL). Nồng độ >20 mcg/mL: tăng nguy cơ độc tính. Nồng độ >30 mcg/mL: nguy cơ co giật, rối loạn nhịp tim nặng, tử vong. CẦN TDM.",
+            "ISMP High Alert Medications",
+            "American Thoracic Society Guidelines - Theophylline dosing and monitoring",
+            "GINA Guidelines - Asthma management with methylxanthines",
+            "WHO Guidelines - Essential medicines for asthma"
+        ]
     },
     
 }

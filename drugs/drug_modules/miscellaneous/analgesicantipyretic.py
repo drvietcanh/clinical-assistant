@@ -5,7 +5,7 @@
 ANALGESIC_ANTIPYRETIC_DRUGS = {
     "Paracetamol": {'group': 'Analgesic/Antipyretic', 'vietnamese_name':
         'Paracetamol, Acetaminophen, Tylenol, Efferalgan', 'administration': [
-        'PO', 'IV', 'PR'], 'indications': ['Sốt', 'Đau nhẹ đến trung bình',
+        'PO', 'IV', 'PR'], 'Đau nhẹ đến trung bình',
         'Đau đầu', 'Đau cơ', 'Đau răng'], 'contraindications': [
         'Dị ứng paracetamol', 'Suy gan nặng', 'Bệnh gan tiến triển'], 'dosage':
         {'adult_po': '500-1000mg x 3-4 lần/ngày (tối đa 4g/ngày)', 'adult_iv':
@@ -62,7 +62,7 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
         'Tăng nguy cơ độc tính gan nghiêm trọng, đặc biệt ở liều paracetamol >4g/ngày'
         , 'management':
         'Tránh rượu hoặc giảm liều paracetamol khi uống rượu. Thận trọng ở bệnh nhân nghiện rượu.'
-        }], 'moderate': [{'drug': 'Isoniazid', 'mechanism':
+        }], 'mechanism':
         'Tăng chuyển hóa qua CYP2E1', 'effect': 'Tăng nguy cơ độc tính gan',
         'management': 'Thận trọng, giảm liều paracetamol, theo dõi ALT/AST'}, {
         'drug': 'Phenytoin, Carbamazepine', 'mechanism':
@@ -129,10 +129,39 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
         'NS', 'LR'], 'incompatibility': ['Không pha trộn với các thuốc khác'],
         'notes':
         'Dùng cho bệnh nhân không uống được hoặc cần tác dụng nhanh. Liều tương đương PO.'
-        }}, 'references': {'primary_sources': ['FDA Drug Label - Acetaminophen',
+        }},         'references': {'primary_sources': ['FDA Drug Label - Acetaminophen',
         'UpToDate - Acetaminophen poisoning', 'Rumack-Matthew nomogram',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics",
         "King's College Criteria for liver transplantation in acute liver failure"
-        ], 'last_updated': '2024-12-19', 'evidence_level': 'High - RCTs và guidelines dựa trên chứng cứ'}}}
+        ], 'evidence_level': 'High - RCTs và guidelines dựa trên chứng cứ'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': 'Low',
+            'organ_toxicity': {
+                'hepatic': 'CRITICAL (hepatotoxicity with overdose >150mg/kg or >10g - can be fatal, acute liver failure)',
+                'metabolic': 'Moderate (hypoglycemia with overdose)'
+            },
+            'qt_prolongation': False,
+            'hepatotoxicity': True,
+            'nephrotoxicity': False,
+            'requires_monitoring': [
+                'ALT/AST - CRITICAL (if suspected overdose or at-risk patients: liver disease, alcohol use, isoniazid use)',
+                'Serum acetaminophen level - CRITICAL (if overdose, use Rumack-Matthew nomogram to determine NAC treatment)',
+                'INR (if co-administered with warfarin at high doses >2g/day)',
+                'Signs of hepatotoxicity: nausea, vomiting, abdominal pain, jaundice (appears 24-48h after overdose) - CRITICAL',
+                'Blood glucose (hypoglycemia can occur with overdose)',
+                'King\'s College Criteria for liver transplantation (if acute liver failure)'
+            ],
+            'look_alike_sound_alike': ['Paracetamol', 'Acetaminophen', 'Acetylcysteine', 'N-acetylcysteine']
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - Acetaminophen and Hepatotoxicity',
+            'Rumack-Matthew Nomogram - Acetaminophen Overdose Treatment',
+            "King's College Criteria - Liver Transplantation in Acute Liver Failure",
+            'ACMT Guidelines - Acetaminophen Poisoning',
+            'WHO Essential Medicines List'
+        ]}}
 
 __all__ = ['ANALGESIC_ANTIPYRETIC_DRUGS']

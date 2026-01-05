@@ -6,7 +6,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
     "Ibuprofen": {'group': 'Analgesic/Antipyretic/NSAID', 'vietnamese_name':
         'Ibuprofen, Brufen, Advil', 'administration': ['PO', 'IV'],
         'indications': ['Sốt', 'Đau nhẹ đến trung bình', 'Viêm khớp',
-        'Đau bụng kinh', 'Đau đầu'], 'contraindications': ['Dị ứng NSAID',
+        'Đau bụng kinh', 'Đau đầu'],
         'Loét dạ dày tá tràng hoạt động', 'Suy thận nặng', 'Suy tim nặng',
         'Có thai (3 tháng cuối)', 'Trẻ em <6 tháng'], 'dosage': {'adult_po':
         '200-400mg x 3-4 lần/ngày (tối đa 2.4g/ngày)', 'adult_iv':
@@ -20,7 +20,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
         'Không dùng hoặc giảm liều đáng kể'}, 'side_effects': [
         'Kích ứng dạ dày', 'Đau đầu', 'Chóng mặt',
         'Tăng nguy cơ tim mạch (với dùng lâu dài)', 'Suy thận cấp (hiếm)',
-        'Phát ban'], 'interactions': ['Aspirin: có thể giảm hiệu quả aspirin',
+        'Phát ban'],
         'Warfarin: tăng nguy cơ chảy máu', 'Lithium: tăng nồng độ lithium',
         'Methotrexate: tăng độc tính', 'ACE inhibitors: giảm hiệu quả'],
         'pregnancy': 'C - Tránh dùng trong 3 tháng cuối (D)',
@@ -35,7 +35,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
         'Dấu hiệu suy tim (giữ nước, phù, khó thở) - NSAID có thể làm nặng suy tim'
         , 'INR nếu dùng với warfarin (tăng nguy cơ chảy máu)',
         'Triệu chứng tim mạch (đau ngực, khó thở) - tăng nguy cơ tim mạch với dùng lâu dài'
-        ], 'precautions': ['Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày',
+        ],
         'Cân nhắc dùng PPI (omeprazole, pantoprazole) hoặc misoprostol nếu có nguy cơ loét dạ dày (tuổi >65, tiền sử loét, dùng corticosteroid, dùng aspirin)'
         ,
         'Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp (làm nặng bệnh)'
@@ -71,7 +71,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
         'Ibuprofen có thể cạnh tranh với aspirin tại vị trí gắn COX-1, làm giảm tác dụng ức chế kết tập tiểu cầu của aspirin.'
         , 'effect': 'Giảm hiệu quả bảo vệ tim mạch của aspirin', 'management':
         'Nếu dùng aspirin liều thấp để bảo vệ tim mạch, dùng ibuprofen ít nhất 30 phút sau aspirin hoặc 8 giờ trước aspirin. Hoặc cân nhắc dùng NSAID khác không ức chế COX-1.'
-        }], 'moderate': [{'drug': 'Methotrexate', 'mechanism':
+        }], 'mechanism':
         'NSAID giảm thải trừ methotrexate qua thận, tăng nồng độ methotrexate trong máu.'
         , 'effect':
         'Tăng độc tính methotrexate (giảm bạch cầu, suy tủy xương, độc gan)',
@@ -85,7 +85,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
         'Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.', 'effect':
         'Tăng nguy cơ xuất huyết tiêu hóa, loét dạ dày', 'management':
         'Cân nhắc dùng PPI hoặc misoprostol. Theo dõi dấu hiệu chảy máu dạ dày.'
-        }], 'minor': [{'drug': 'Furosemide, Thiazide', 'mechanism':
+        }], 'mechanism':
         'NSAID giảm tác dụng lợi tiểu, có thể gây giữ natri và nước.', 'effect':
         'Giảm hiệu quả lợi tiểu, có thể gây phù', 'management':
         'Theo dõi cân nặng, dấu hiệu giữ nước. Có thể cần điều chỉnh liều lợi tiểu.'
@@ -159,7 +159,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
         'Không trộn với các thuốc khác trong cùng một ống truyền. Kiểm tra tương thích trước khi pha.'
         ], 'notes':
         'Không dùng cho trẻ em <12 tuổi qua đường IV. Theo dõi dấu hiệu phản ứng dị ứng và tác dụng phụ trong quá trình truyền.'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Ibuprofen (Advil, Motrin)',
         'UpToDate - Ibuprofen: Drug Information',
         'Medscape - Ibuprofen Drug Reference',
@@ -168,6 +168,39 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
         'Micromedex - Ibuprofen Drug Information'], 'last_updated':
         '2024-12-19', 'evidence_level':
         'A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn',
-        }}}
+        },
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': 'High',
+            'organ_toxicity': {
+                'gastrointestinal': 'High (GI bleeding, ulcers, perforation - can be fatal, especially in elderly)',
+                'cardiovascular': 'High (increased risk of serious cardiovascular events: MI, stroke, death - Black Box Warning)',
+                'renal': 'Moderate (acute kidney injury, especially with dehydration, ACE inhibitors, diuretics)',
+                'hepatic': 'Moderate (hepatotoxicity rare)'
+            },
+            'qt_prolongation': False,
+            'hepatotoxicity': True,
+            'nephrotoxicity': True,
+            'requires_monitoring': [
+                'Signs of GI bleeding (black stools, vomiting blood, abdominal pain, anemia) - CRITICAL',
+                'Creatinine, BUN (if long-term use or at-risk patients: elderly, diabetes, hypertension)',
+                'Blood pressure (NSAIDs can increase BP, especially in hypertensive patients)',
+                'Hepatic function (ALT, AST) if long-term use or symptoms',
+                'Signs of heart failure (fluid retention, edema, dyspnea) - NSAIDs can worsen heart failure',
+                'INR (if co-administered with warfarin) - CRITICAL (increased bleeding risk)',
+                'Cardiovascular symptoms (chest pain, dyspnea) - increased CV risk with long-term use',
+                'Renal function (creatinine, eGFR) if co-administered with ACE inhibitors/ARBs or diuretics'
+            ],
+            'look_alike_sound_alike': ['Ibuprofen', 'Naproxen', 'Indomethacin', 'Ketoprofen']
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - Ibuprofen and Cardiovascular Risk',
+            'FDA Black Box Warning - Ibuprofen and GI Bleeding',
+            'FDA Black Box Warning - Ibuprofen and Pregnancy (3rd trimester)',
+            'ACR Guidelines - NSAID Use',
+            'WHO Essential Medicines List'
+        ]}}
 
 __all__ = ['ANALGESIC_ANTIPYRETIC_NSAID_DRUGS']

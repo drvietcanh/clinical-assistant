@@ -8,7 +8,7 @@ ANTIMETABOLITES_DRUGS = {
         '5-Fluorouracil, 5-FU, Fluorouracil', 'administration': ['IV'],
         'indications': ['Ung thư đại trực tràng (adjuvant và metastatic)',
         'Ung thư dạ dày', 'Ung thư đầu cổ', 'Ung thư tụy', 'Ung thư vú',
-        'Ung thư da (topical)'], 'contraindications': ['Dị ứng 5-FU',
+        'Ung thư da (topical)'],
         'Thiếu hụt DPD (dihydropyrimidine dehydrogenase)',
         'Giảm bạch cầu/tiểu cầu nặng', 'Có thai', 'Đang cho con bú'], 'dosage':
         {'adult_bolus':
@@ -62,7 +62,7 @@ ANTIMETABOLITES_DRUGS = {
         'Tăng nguy cơ giảm bạch cầu, tiểu cầu, loét miệng, tiêu chảy nghiêm trọng',
         'management':
         'Thận trọng khi dùng đồng thời. Theo dõi CBC và dấu hiệu độc tính chặt chẽ. Có thể cần giảm liều hoặc tránh dùng đồng thời.'
-        }], 'moderate': [{'drug': 'Warfarin', 'mechanism':
+        }], 'mechanism':
         '5-FU có thể ức chế chuyển hóa warfarin, tăng nồng độ warfarin trong máu.',
         'effect': 'Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu',
         'management':
@@ -72,11 +72,11 @@ ANTIMETABOLITES_DRUGS = {
         , 'effect': 'Tăng nồng độ phenytoin, tăng độc tính phenytoin',
         'management':
         'Theo dõi nồng độ phenytoin và dấu hiệu độc tính. Có thể cần giảm liều phenytoin.'
-        }], 'minor': [{'drug': 'Leucovorin', 'mechanism':
+        }], 'mechanism':
         'Leucovorin tăng hiệu quả của 5-FU bằng cách tăng ức chế thymidylate synthase, nhưng cũng tăng độc tính.'
         , 'effect': 'Tăng hiệu quả và độc tính của 5-FU', 'management':
         'Dùng kèm để tăng hiệu quả, nhưng cần theo dõi độc tính chặt chẽ hơn.'}
-        ]}, 'contraindications': {'tuyệt_đối': ['Dị ứng 5-FU',
+        ],
         'Thiếu hụt DPD (dihydropyrimidine dehydrogenase) nặng - chống chỉ định tuyệt đối, có thể gây tử vong'
         ,
         'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
@@ -132,7 +132,7 @@ ANTIMETABOLITES_DRUGS = {
         'Gemcitabine, Gemzar', 'administration': ['IV'], 'indications': [
         'Ung thư tụy (adjuvant và metastatic)', 'Ung thư phổi không tế bào nhỏ (NSCLC)',
         'Ung thư bàng quang', 'Ung thư vú (metastatic)',
-        'Ung thư buồng trứng'], 'contraindications': ['Dị ứng gemcitabine',
+        'Ung thư buồng trứng'],
         'Giảm bạch cầu/tiểu cầu nặng', 'Có thai', 'Đang cho con bú'], 'dosage': {
         'adult_standard': '1000mg/m² IV ngày 1, 8, 15 (mỗi 28 ngày) hoặc ngày 1, 8 (mỗi 21 ngày)',
         'adult_pancreatic': '1000mg/m² IV ngày 1, 8, 15 (mỗi 28 ngày)',
@@ -148,7 +148,7 @@ ANTIMETABOLITES_DRUGS = {
         'Độc gan (tăng transaminase - hiếm)', 'Rụng tóc (nhẹ)'], 'interactions': [
         'Cisplatin: tăng độc tính tủy xương',
         'Warfarin: có thể tăng tác dụng chống đông',
-        'Live vaccines: tránh dùng trong điều trị'], 'pregnancy': 'D - Chống chỉ định',
+        'Live vaccines: tránh dùng trong điều trị'],
         'mechanism_of_action':
         'Gemcitabine là antimetabolite pyrimidine, tương tự cytarabine. Gemcitabine được chuyển hóa thành gemcitabine triphosphate (dFdCTP) và gemcitabine diphosphate (dFdCDP). dFdCTP tích hợp vào DNA, gây chấm dứt chuỗi DNA (chain termination) và ngăn cản quá trình sao chép DNA. dFdCDP ức chế enzyme ribonucleotide reductase (RNR), ngăn cản tổng hợp deoxyribonucleotides (thành phần DNA), dẫn đến thiếu hụt DNA và gây chết tế bào. Gemcitabine tác động chủ yếu lên tế bào đang phân chia nhanh (ung thư), gây độc tế bào. Gemcitabine có tác dụng tự tăng cường (self-potentiating) - tích hợp vào DNA làm tăng tích lũy dFdCTP. Hiệu quả với nhiều loại ung thư, đặc biệt ung thư tụy, phổi, bàng quang.'
         , 'monitoring': [

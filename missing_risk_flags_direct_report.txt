@@ -1,0 +1,150 @@
+MISSING BOTH
+================================================================================
+Hydralazine
+Isosorbide mononitrate
+Nesiritide
+Nitroglycerin
+Nitroprusside
+Adenosine
+Amiodarone
+Disopyramide
+Dofetilide
+Dronedarone
+Flecainide
+Ibutilide
+Procainamide
+Propafenone
+Quinidine
+Sotalol
+Empagliflozin
+Dapagliflozin
+Canagliflozin
+Acarbose
+Miglitol
+Metformin/Dapagliflozin
+Metformin/Empagliflozin
+Metformin/Glibenclamide
+Metformin/Pioglitazone
+Metformin/Sitagliptin
+Teplizumab
+Aluminum hydroxide/Magnesium hydroxide
+Calcium carbonate
+Bismuth subsalicylate
+Cimetidine
+Sucralfate
+Dexlansoprazole
+Ilaprazole
+Tegoprazan
+Vonoprazan
+Baricitinib
+Upadacitinib
+Lactulose
+Polyethylene glycol 3350
+Senna (sennosides)
+Hyoscine butylbromide
+Mebeverine
+Trimebutine
+Simethicone
+Celecoxib
+Etoricoxib
+Indomethacin
+Ketoprofen
+Nimesulide
+Buprenorphine
+Hydrocodone
+Tapentadol
+Meperidine
+Oxycodone
+Codeine
+Lasmiditan
+Aspirin/Carisoprodol
+Paracetamol/Carisoprodol
+Paracetamol/Chlorzoxazone
+Paracetamol/Methocarbamol
+Paracetamol/Orphenadrine
+Nedocromil
+Glycopyrronium
+Umeclidinium
+Dupilumab
+Mepolizumab
+Fosphenytoin
+Lacosamide
+Lamotrigine
+Levetiracetam
+Phenobarbital
+Memantine
+Rivastigmine
+Lorazepam
+Baclofen
+Tizanidine
+Istradefylline
+Levodopa/Carbidopa
+Opicapone
+Ropinirole
+Cerebroprotein hydrolysate (khác)
+Piracetam
+Vinpocetine
+Rimegepant
+Ubrogepant
+Eltrombopag
+Vitamin K
+Levocetirizine
+Cisatracurium
+Anastrozole
+Naloxone
+Naltrexone
+Lidocaine
+Demeclocycline
+Magnesium oxide
+Pamidronate
+Potassium phosphate
+Sodium phosphate
+Sodium polystyrene sulfonate
+Sodium Chloride 0.9%
+Ringer Lactate
+Albumin (Human)
+HES 130/0.4
+Vardenafil
+Mirabegron
+Tolterodine
+Hydrocortisone topical
+Ethinyl estradiol + Levonorgestrel
+Levonorgestrel
+Medroxyprogesterone
+Clotrimazole (vaginal)
+Metronidazole (vaginal gel)
+Miconazole (vaginal)
+Azelastine/Fluticasone nasal spray
+Cetirizine/Pseudoephedrine
+Fexofenadine/Pseudoephedrine
+Loratadine/Pseudoephedrine
+Vitamin D3 (Cholecalciferol)
+Levobupivacaine
+VAT (Tetanus Vaccine)
+Verorab (Rabies Vaccine)
+Influenza Vaccine
+Hepatitis B Vaccine
+SAT (Tetanus Antitoxin)
+SAR (Rabies Antiserum)
+Snake Antivenom (Luc Tre)
+Snake Antivenom (Ho Dat)
+Acetylcysteine
+Pralidoxime
+Vitamin K1
+Ethanol
+Thiamine (Vitamin B1)
+Pyridoxine (Vitamin B6)
+Cyanocobalamin (Vitamin B12)
+Vitamin C (Ascorbic Acid)
+
+
+MISSING ONLY GUIDELINE_TAGS
+================================================================================
+Aspirin
+Ticlopidine
+Carbamazepine
+Ethosuximide
+Oxcarbazepine
+Perampanel
+Primidone
+Zonisamide

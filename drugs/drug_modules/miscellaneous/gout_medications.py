@@ -200,7 +200,46 @@ GOUT_MEDICATIONS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA-approved, ACR guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "hematologic": "Bone marrow suppression (leukopenia, thrombocytopenia) - CRITICAL",
+                "muscular": "Rhabdomyolysis (muscle weakness, elevated CK) - CRITICAL",
+                "neurological": "Neurotoxicity (numbness, weakness) - CRITICAL",
+                "hepatic": "Hepatotoxicity",
+                "gastrointestinal": "Diarrhea, vomiting (early signs of toxicity - STOP IMMEDIATELY)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Black Box Warning - Diarrhea, vomiting (early signs of toxicity - STOP IMMEDIATELY) - CRITICAL",
+                "Black Box Warning - CBC (leukopenia, thrombocytopenia - bone marrow suppression) - CRITICAL",
+                "Black Box Warning - CK (creatine kinase - rhabdomyolysis risk) - CRITICAL",
+                "Black Box Warning - Neurological symptoms (numbness, weakness) - CRITICAL",
+                "Black Box Warning - Strong CYP3A4 inhibitors interaction (ketoconazole, clarithromycin - CONTRAINDICATED) - CRITICAL",
+                "Black Box Warning - P-gp inhibitors interaction (cyclosporine - CONTRAINDICATED) - CRITICAL",
+                "Renal function (creatinine, eGFR - dose adjustment required, contraindicated if CrCl <30)",
+                "Hepatic function (ALT, AST)",
+                "Statins/fibrates interaction (increased rhabdomyolysis risk)"
+            ],
+            "look_alike_sound_alike": ["Colchicine", "Colchicum"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Severe Toxicity (can be fatal if overdose)",
+            "FDA Black Box Warning - Narrow Therapeutic Window",
+            "FDA Black Box Warning - Strong CYP3A4 Inhibitors Interaction (contraindicated)",
+            "FDA Black Box Warning - P-gp Inhibitors Interaction (contraindicated)",
+            "ACR Guidelines - Gout Management",
+            "EULAR Guidelines - Gout Management",
+            "ISMP High Alert Medications",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
     
     "Febuxostat": {
@@ -364,20 +403,24 @@ GOUT_MEDICATIONS_DRUGS = {
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Cardiovascular events (increased risk vs allopurinol)", "Hepatotoxicity", "Severe cutaneous adverse reactions (SJS/TEN)"],
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"cardiovascular": "Black Box Warning - Increased cardiovascular death risk vs allopurinol", "hepatic": "Hepatotoxicity (common elevation)", "dermatologic": "Severe cutaneous adverse reactions (SJS/TEN - rare)"},
             "qt_prolongation": False,
             "hepatotoxicity": True,
             "nephrotoxicity": False,
-            "requires_monitoring": ["Uric acid levels (target <6 mg/dL)", "Hepatic function (ALT, AST) - common elevation", "Cardiovascular symptoms (chest pain, dyspnea)", "Skin reactions (rare but can be SJS/TEN)", "Acute gout attacks (may occur at initiation)"]
+            "requires_monitoring": ["Black Box Warning - Cardiovascular symptoms (chest pain, dyspnea - increased risk vs allopurinol)", "Serum uric acid (target <6 mg/dL)", "Hepatic function (ALT, AST - common elevation)", "Skin reactions (SJS/TEN risk - rare)", "Acute gout attacks (may occur at initiation - use colchicine prophylaxis)", "Azathioprine/6-mercaptopurine interaction (contraindicated - severe myelosuppression)"],
+            "look_alike_sound_alike": ["Febuxostat", "Allopurinol"]
         },
         "guideline_tags": [
+            "FDA Black Box Warning - Increased Cardiovascular Death Risk (vs allopurinol)",
+            "FDA Black Box Warning - Azathioprine/6-Mercaptopurine Interaction (contraindicated)",
             "ACR Guidelines - Gout Management",
             "EULAR Guidelines - Gout Management",
-            "FDA Black Box Warning - Febuxostat and Cardiovascular Risk",
-            "FDA Black Box Warning - Febuxostat and Azathioprine/6-Mercaptopurine Interaction",
-            "CARES Trial - Cardiovascular Risk"
-        ]
+            "CARES Trial - Cardiovascular Risk",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
     "Probenecid": {
         "group": "Metabolism - Gout Medication (Uricosuric Agent)",
@@ -529,19 +572,21 @@ GOUT_MEDICATIONS_DRUGS = {
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Uric acid kidney stones (if inadequate hydration)", "Hepatotoxicity (rare)"],
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"renal": "Uric acid kidney stones (if inadequate hydration - critical)", "hepatic": "Hepatotoxicity (rare)"},
             "qt_prolongation": False,
-            "hepatotoxicity": True,
+            "hepatotoxicity": "Rare",
             "nephrotoxicity": False,
-            "requires_monitoring": ["Uric acid levels (target <6 mg/dL)", "Renal function (creatinine, eGFR)", "Signs of kidney stones (back pain, abdominal pain, hematuria) - CRITICAL", "Penicillin/cephalosporin levels if co-administered", "Hepatic function (ALT, AST)"]
+            "requires_monitoring": ["Serum uric acid (target <6 mg/dL)", "Renal function (creatinine, eGFR - contraindicated if CrCl <30)", "Kidney stones signs (back pain, abdominal pain, hematuria - critical, maintain adequate hydration 2-3L/day)", "Penicillin/cephalosporin levels (if co-administered - increases levels)", "Methotrexate levels (if co-administered - increases levels)", "Hepatic function (ALT, AST - hepatotoxicity risk)"],
+            "look_alike_sound_alike": ["Probenecid", "Probenecid"]
         },
         "guideline_tags": [
             "ACR Guidelines - Gout Management",
             "EULAR Guidelines - Gout Management",
-            "FDA Drug Information - Probenecid",
-            "UpToDate - Gout Treatment"
+            "WHO Essential Medicines List"
         ],
+        "last_updated": "2025-02-18",
         "black_box_warnings": None,
 },
     

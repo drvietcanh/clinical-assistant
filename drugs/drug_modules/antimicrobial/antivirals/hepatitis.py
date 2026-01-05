@@ -474,7 +474,6 @@ HEPATITIS_ANTIVIRALS = {
             ],
             "monitoring": "CBC mỗi ngày, chức năng thận, chức năng gan, dấu hiệu lâm sàng"
         },
-        "reversal_agents": None,
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống với thức ăn để giảm kích ứng dạ dày",

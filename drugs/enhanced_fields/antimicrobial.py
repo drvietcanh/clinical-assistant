@@ -1088,6 +1088,28 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Điều chỉnh liều theo chức năng thận.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis) - CRITICAL",
+                    "Diarrhea (C. difficile infection risk)",
+                    "Renal function (if high doses or prolonged use)",
+                    "Complete blood count (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Dicloxacillin", "Diclofenac", "Cloxacillin"]
+            },
+            "guideline_tags": [
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "IDSA Surgical Site Infection Prevention Guidelines",
+                "FDA Drug Label - Dicloxacillin"
+            ]
         },
 
         "Nafcillin": {
@@ -1127,6 +1149,30 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Thải trừ qua mật, không cần điều chỉnh thận.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low (hepatitis rare, interstitial nephritis rare)", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis) - CRITICAL",
+                    "Hepatic function (hepatitis risk, especially with high doses)",
+                    "Diarrhea (C. difficile infection risk)",
+                    "Phlebitis (IV administration)",
+                    "Complete blood count (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Nafcillin", "Naicillin", "Oxacillin"]
+            },
+            "guideline_tags": [
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "IDSA Surgical Site Infection Prevention Guidelines",
+                "IDSA Endocarditis Guidelines",
+                "FDA Drug Label - Nafcillin"
+            ]
         },
 
         "Oxacillin": {
@@ -1166,6 +1212,30 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Thải trừ qua mật, không cần điều chỉnh thận.",
                 },
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "Low (hepatitis rare, interstitial nephritis rare)", "renal": "Low"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis) - CRITICAL",
+                    "Hepatic function (hepatitis risk, especially with high doses)",
+                    "Diarrhea (C. difficile infection risk)",
+                    "Phlebitis (IV administration)",
+                    "Complete blood count (if prolonged use)"
+                ],
+                "look_alike_sound_alike": ["Oxacillin", "Nafcillin", "Dicloxacillin"]
+            },
+            "guideline_tags": [
+                "IDSA Skin and Soft Tissue Infection Guidelines",
+                "IDSA Surgical Site Infection Prevention Guidelines",
+                "IDSA Endocarditis Guidelines",
+                "FDA Drug Label - Oxacillin"
+            ]
         },
 
         # ======================== ANTIBIOTICS: TETRACYCLINES =======================
@@ -1199,6 +1269,31 @@ ANTIMICROBIAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "notes": "Điều chỉnh liều theo chức năng gan. CHỐNG CHỈ ĐỊNH trong thai kỳ và trẻ <8 tuổi.",
                 },
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "High (hepatitis)", "pancreatic": "Moderate (pancreatitis)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of allergic reaction (rash, anaphylaxis)",
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL",
+                    "Signs of pancreatitis (abdominal pain, nausea, vomiting)",
+                    "Mortality monitoring (increased mortality risk)",
+                    "Complete blood count"
+                ],
+                "look_alike_sound_alike": ["Tigecycline", "Tetracycline", "Ticagrelor"]
+            },
+            "guideline_tags": [
+                "IDSA Complicated Skin and Soft Tissue Infection Guidelines",
+                "IDSA Complicated Intra-abdominal Infection Guidelines",
+                "FDA Black Box Warning - Increased Mortality",
+                "FDA Black Box Warning - Hepatotoxicity",
+                "FDA Drug Label - Tigecycline"
+            ]
         },
 
         # ======================== ANTIBIOTICS – AMINOGLYCOSIDES & VANCOMYCIN ========================

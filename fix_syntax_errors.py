@@ -1,66 +1,67 @@
 """
-Script to find and fix syntax errors in drug modules
-Finds missing commas after "references": {...}
+Fix syntax errors in drug files - unterminated strings in evidence_level
 """
 import re
 from pathlib import Path
 
-def find_and_fix_references_errors(file_path):
-    """Find and fix missing comma after references"""
+def fix_file(file_path):
+    """Fix unterminated strings in evidence_level fields"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Pattern: "references": {...} followed by " (without comma)
-        # Look for: "references": { ... } followed by newline and then "field_name"
-        pattern = r'("references":\s*\{[^}]*\})\s*\n\s*("(?:drug_interactions|overdose_management|reversal_agents|administration_instructions|pregnancy_lactation|hepatic_adjustment|contraindications|black_box_warnings)":)'
+        # Fix pattern: "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines,
+        # Should be: "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
+        pattern1 = r'"evidence_level":\s*"A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines,\s*\n\s*"risk_flags"'
+        replacement1 = '"evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",\n            "risk_flags"'
+        content = re.sub(pattern1, replacement1, content)
         
-        def add_comma(match):
-            references_block = match.group(1)
-            next_field = match.group(2)
-            return references_block + ',\n        ' + next_field
-        
-        content = re.sub(pattern, add_comma, content, flags=re.MULTILINE | re.DOTALL)
-        
-        # Also check for pattern: } followed by "field" on next line
-        pattern2 = r'(\})\s*\n\s*("(?:drug_interactions|overdose_management|reversal_agents|administration_instructions|pregnancy_lactation|hepatic_adjustment|contraindications|black_box_warnings|guideline_tags)":)'
-        
-        def add_comma2(match):
-            closing_brace = match.group(1)
-            next_field = match.group(2)
-            # Check if this is part of references block
-            if '"references"' in content[max(0, content.rfind('"references"', 0, match.start())):match.start()]:
-                return closing_brace + ',\n        ' + next_field
-            return match.group(0)
-        
-        content = re.sub(pattern2, add_comma2, content, flags=re.MULTILINE)
+        # Fix pattern: "evidence_level": "High - FDA approved,
+        pattern2 = r'"evidence_level":\s*"High - FDA approved,\s*\n\s*"risk_flags"'
+        replacement2 = '"evidence_level": "High - FDA approved",\n            "risk_flags"'
+        content = re.sub(pattern2, replacement2, content)
         
         if content != original_content:
+            # Create backup
+            backup_path = str(file_path) + ".syntax_fix_backup"
+            with open(backup_path, 'w', encoding='utf-8') as f:
+                f.write(original_content)
+            
+            # Write fixed content
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            return True
-        return False
+            
+            return True, "Fixed"
+        else:
+            return False, "No changes needed"
+            
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-        return False
+        return False, f"Error: {str(e)}"
 
-# Find all Python files in drug_modules
-base_path = Path("drugs/drug_modules")
-fixed_files = []
-
-for py_file in base_path.rglob("*.py"):
-    if py_file.name == "__init__.py" or py_file.name.endswith(".backup"):
-        continue
+def main():
+    """Fix syntax errors in all drug files"""
+    drugs_dir = Path("drugs/drug_modules")
     
-    if find_and_fix_references_errors(py_file):
-        fixed_files.append(str(py_file))
-        print(f"Fixed: {py_file}")
+    fixed_files = []
+    error_files = []
+    
+    for file_path in drugs_dir.rglob("*.py"):
+        if file_path.name == "__init__.py" or file_path.name.endswith(".backup"):
+            continue
+        
+        success, message = fix_file(file_path)
+        if success:
+            fixed_files.append(str(file_path))
+            print(f"✅ Fixed: {file_path.name}")
+        elif "Error" in message:
+            error_files.append((str(file_path), message))
+            print(f"❌ Error in {file_path.name}: {message}")
+    
+    print(f"\nFixed {len(fixed_files)} files")
+    if error_files:
+        print(f"Errors in {len(error_files)} files")
 
-print(f"\nFixed {len(fixed_files)} files")
-if fixed_files:
-    print("Files fixed:")
-    for f in fixed_files:
-        print(f"  - {f}")
-
+if __name__ == "__main__":
+    main()

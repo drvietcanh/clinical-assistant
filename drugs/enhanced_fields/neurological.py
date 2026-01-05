@@ -21,6 +21,29 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (interstitial nephritis - rare but serious)", "metabolic": "Moderate (hypomagnesemia, vitamin B12 deficiency with long-term use)", "skeletal": "Moderate (osteoporosis, fractures with long-term use)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Renal function (creatinine, eGFR) - CRITICAL (interstitial nephritis risk, rare but serious)",
+                    "Magnesium levels (hypomagnesemia risk with long-term use)",
+                    "Vitamin B12 levels (deficiency risk with long-term use)",
+                    "Bone density (osteoporosis risk with long-term use)",
+                    "Drug interactions (clopidogrel - reduced efficacy, FDA Warning) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Omeprazole", "Losec", "Pantoprazole", "Esomeprazole"]
+            },
+            "guideline_tags": [
+                "ACG GERD Treatment Guidelines",
+                "FDA Drug Safety Communication - Clopidogrel Interaction",
+                "FDA Drug Label - Omeprazole (interstitial nephritis and hypomagnesemia warnings)"
+            ]
         },
 
         "Pantoprazole": {
@@ -38,6 +61,27 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"renal": "Moderate (interstitial nephritis - rare but serious)", "metabolic": "Moderate (hypomagnesemia, vitamin B12 deficiency with long-term use)", "skeletal": "Moderate (osteoporosis, fractures with long-term use)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Renal function (creatinine, eGFR) - CRITICAL (interstitial nephritis risk, rare but serious)",
+                    "Magnesium levels (hypomagnesemia risk with long-term use)",
+                    "Vitamin B12 levels (deficiency risk with long-term use)",
+                    "Bone density (osteoporosis risk with long-term use)"
+                ],
+                "look_alike_sound_alike": ["Pantoprazole", "Protonix", "Omeprazole", "Esomeprazole"]
+            },
+            "guideline_tags": [
+                "ACG GERD Treatment Guidelines",
+                "FDA Drug Label - Pantoprazole (interstitial nephritis and hypomagnesemia warnings)"
+            ]
         },
 
         "Ranitidine": {
@@ -53,6 +97,27 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "Moderate (confusion, especially in elderly and renal impairment)", "hematologic": "Low (thrombocytopenia, agranulocytosis - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Renal function (CrCl) - CRITICAL (dose adjustment required if CrCl <50)",
+                    "Mental status (confusion risk, especially in elderly and renal impairment)",
+                    "Complete blood count (thrombocytopenia, agranulocytosis - rare)"
+                ],
+                "look_alike_sound_alike": ["Ranitidine", "Zantac", "Famotidine", "Cimetidine"]
+            },
+            "guideline_tags": [
+                "ACG GERD Treatment Guidelines",
+                "FDA Drug Safety Communication - NDMA Impurity (2020 recall)",
+                "FDA Drug Label - Ranitidine"
+            ]
         },
 
         "Famotidine": {
@@ -68,6 +133,26 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Đang cho con bú - thận trọng",
                 ],
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"neurologic": "Moderate (confusion, especially in elderly and renal impairment)", "hematologic": "Low (thrombocytopenia, agranulocytosis - rare)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Renal function (CrCl) - CRITICAL (dose adjustment required if CrCl <50)",
+                    "Mental status (confusion risk, especially in elderly and renal impairment)",
+                    "Complete blood count (thrombocytopenia, agranulocytosis - rare)"
+                ],
+                "look_alike_sound_alike": ["Famotidine", "Pepcid", "Ranitidine", "Cimetidine"]
+            },
+            "guideline_tags": [
+                "ACG GERD Treatment Guidelines",
+                "FDA Drug Label - Famotidine"
+            ]
         },
 
         "Paracetamol": {
@@ -96,6 +181,30 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Suy dinh dưỡng - tăng nguy cơ độc tính",
                 ],
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {"hepatic": "High (hepatotoxicity with overdose >150mg/kg or >10g - can be fatal, acute liver failure, Black Box Warning)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Hepatic function (ALT, AST, bilirubin, INR) - CRITICAL (if overdose suspected or symptoms of hepatotoxicity)",
+                    "Serum acetaminophen level - CRITICAL (if overdose suspected, check 4 hours post-ingestion, use Rumack-Matthew nomogram)",
+                    "Signs of hepatotoxicity (nausea, vomiting, right upper quadrant pain, jaundice) - CRITICAL",
+                    "Total daily dose - CRITICAL (do not exceed 4g/day, 3g/day if chronic liver disease or alcohol use)",
+                    "Concomitant medications (warfarin - increased INR risk, isoniazid - increased hepatotoxicity risk)"
+                ],
+                "look_alike_sound_alike": ["Paracetamol", "Acetaminophen", "Tylenol", "Panadol"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Hepatotoxicity (Can Be Fatal with Overdose)",
+                "ACMT Acetaminophen Overdose Guidelines",
+                "FDA Drug Label - Acetaminophen (hepatotoxicity warning)",
+                "ISMP High Alert Medications"
+            ]
         },
 
         "Ibuprofen": {
@@ -131,6 +240,31 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Người cao tuổi - tăng nguy cơ tác dụng phụ",
                 ],
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {"gastrointestinal": "High (GI bleeding, ulcers, perforation - can be fatal, Black Box Warning)", "cardiovascular": "High (MI, stroke, death - Black Box Warning)", "renal": "Moderate (acute kidney injury, especially with dehydration or pre-existing renal disease)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of GI bleeding (melena, hematemesis, abdominal pain) - CRITICAL (can be fatal, Black Box Warning)",
+                    "Signs of cardiovascular events (chest pain, dyspnea, weakness, slurred speech) - CRITICAL (MI, stroke, death - Black Box Warning)",
+                    "Renal function (creatinine, eGFR) - CRITICAL (acute kidney injury risk, especially with dehydration)",
+                    "Blood pressure (hypertension risk)",
+                    "Pregnancy status - CRITICAL (contraindicated in third trimester, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Ibuprofen", "Advil", "Motrin", "Naproxen", "Diclofenac"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Increased Risk of Serious Cardiovascular Events (MI, Stroke, Death)",
+                "FDA Black Box Warning - GI Bleeding, Ulceration, and Perforation (Can Be Fatal)",
+                "FDA Black Box Warning - Contraindicated in Third Trimester of Pregnancy",
+                "FDA Drug Label - Ibuprofen",
+                "ISMP High Alert Medications"
+            ]
         },
 
         "Diclofenac": {
@@ -157,6 +291,32 @@ NEUROLOGICAL_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                     "Người cao tuổi - tăng nguy cơ tác dụng phụ",
                 ],
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {"gastrointestinal": "High (GI bleeding, ulcers, perforation - can be fatal, Black Box Warning)", "cardiovascular": "High (MI, stroke, death - Black Box Warning)", "hepatic": "Moderate (hepatitis, liver failure - rare but serious)", "renal": "Moderate (acute kidney injury, especially with dehydration or pre-existing renal disease)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of GI bleeding (melena, hematemesis, abdominal pain) - CRITICAL (can be fatal, Black Box Warning)",
+                    "Signs of cardiovascular events (chest pain, dyspnea, weakness, slurred speech) - CRITICAL (MI, stroke, death - Black Box Warning)",
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL (hepatitis, liver failure risk - rare but serious)",
+                    "Renal function (creatinine, eGFR) - CRITICAL (acute kidney injury risk, especially with dehydration)",
+                    "Blood pressure (hypertension risk)",
+                    "Pregnancy status - CRITICAL (contraindicated in third trimester)"
+                ],
+                "look_alike_sound_alike": ["Diclofenac", "Voltaren", "Ibuprofen", "Naproxen"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Increased Risk of Serious Cardiovascular Events (MI, Stroke, Death)",
+                "FDA Black Box Warning - GI Bleeding, Ulceration, and Perforation (Can Be Fatal)",
+                "FDA Black Box Warning - Contraindicated in Third Trimester of Pregnancy",
+                "FDA Drug Label - Diclofenac (hepatotoxicity warning)",
+                "ISMP High Alert Medications"
+            ]
         },
 
         "Carbamazepine": {

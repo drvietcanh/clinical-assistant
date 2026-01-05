@@ -68,7 +68,22 @@ ONCOLOGY_DRUGS = {
             "Không gây ung thư nội mạc tử cung hay huyết khối cao như Tamoxifen"
         ],
         "mechanism_of_action": "Ức chế enzyme Aromatase, ngăn cản chuyển đổi Androgen thành Estrogen ở mô ngoại biên. Không ức chế sản xuất Estrogen tại buồng trứng (nên không dùng đơn độc cho phụ nữ tiền mãn kinh).",
-        "monitoring": ["Mật độ xương (DEXA scan) định kỳ", "Cholesterol máu"]
+        "monitoring": ["Mật độ xương (DEXA scan) định kỳ",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+Cholesterol máu"]
     },
 
     "Imatinib": {
@@ -129,5 +144,5 @@ ONCOLOGY_DRUGS = {
             "Hút thuốc lá: Làm giảm nồng độ thuốc (cảm ứng CYP1A2)."
         ],
         "monitoring": ["Dấu hiệu phổi (khó thở, ho - nghi ngờ ILD)", "Chức năng gan", "Tình trạng da"]
-    }
+        }
 }

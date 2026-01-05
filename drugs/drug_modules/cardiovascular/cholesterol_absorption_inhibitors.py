@@ -154,6 +154,18 @@ CHOLESTEROL_ABSORPTION_INHIBITORS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCT (CLEAR Outcomes)",
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Moderate", "metabolic": "Moderate (hyperuricemia, gout)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "ACC/AHA 2024 Cholesterol Management Update",
+            "ESC/EAS 2019 Dyslipidemia Guidelines"
+        ],
     },
     "Ezetimibe": {
         "group": "Cardiovascular - Cholesterol Absorption Inhibitor",
@@ -317,7 +329,20 @@ CHOLESTEROL_ABSORPTION_INHIBITORS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - Multiple large RCTs (IMPROVE-IT, SHARP) showing cardiovascular benefit when combined with statin"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "gastrointestinal": "Low"}
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "ACC/AHA 2024 Cholesterol Management Update",
+            "ESC/EAS 2019 Dyslipidemia Guidelines",
+            "KDIGO 2013 Lipid Management in CKD"
+        ]
     },
 
 }

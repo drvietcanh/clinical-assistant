@@ -193,7 +193,21 @@ ANTIARRHYTHMICS = {
                 "Medscape - Adenosine Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["ECG", "QT interval"],
+            },
+            "guideline_tags": [
+                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+                "ESC 2020 Atrial Fibrillation Guidelines"
+            ]
         }
     },
 
@@ -411,7 +425,21 @@ ANTIARRHYTHMICS = {
                 "American Heart Association/American College of Cardiology guidelines - Arrhythmias"
             ],
             "last_updated": "2024-12-19",
-            "evidence_level": "High - Multiple RCTs (EMERALD, ARREST) and extensive clinical experience in life-threatening arrhythmias"
+            "evidence_level": "High - Multiple RCTs (EMERALD, ARREST) and extensive clinical experience in life-threatening arrhythmias",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["ECG", "QT interval"]
+            },
+            "guideline_tags": [
+                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+                "ESC 2020 Atrial Fibrillation Guidelines"
+            ]
         }
       },
     "Disopyramide": {
@@ -637,7 +665,21 @@ ANTIARRHYTHMICS = {
                 "Medscape - Disopyramide Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["ECG", "QT interval"],
+            },
+            "guideline_tags": [
+                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+                "ESC 2020 Atrial Fibrillation Guidelines"
+            ]
         }
     },
     "Dofetilide": {
@@ -822,7 +864,21 @@ ANTIARRHYTHMICS = {
                 "Medscape - Dofetilide Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["ECG", "QT interval"],
+            },
+            "guideline_tags": [
+                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+                "ESC 2020 Atrial Fibrillation Guidelines"
+            ]
         }
     },
 
@@ -992,7 +1048,21 @@ ANTIARRHYTHMICS = {
                 "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved, clinical guidelines"
+            "evidence_level": "High - FDA approved",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["ECG", "QT interval"],
+            },
+            "guideline_tags": [
+                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+                "ESC 2020 Atrial Fibrillation Guidelines",
+            ]
         }
     },
 
@@ -1161,6 +1231,20 @@ ANTIARRHYTHMICS = {
                 "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
             ],
             "last_updated": "2025-02-05",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["ECG", "QT interval"],
+            },
+            "guideline_tags": [
+                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+                "ESC 2020 Atrial Fibrillation Guidelines"
+            ],
             "evidence_level": "High - Multiple RCTs and clinical guidelines"
         }
     },
@@ -1338,7 +1422,21 @@ ANTIARRHYTHMICS = {
                 "Medscape - Ibutilide Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["ECG", "QT interval"],
+            },
+            "guideline_tags": [
+                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+                "ESC 2020 Atrial Fibrillation Guidelines"
+            ]
         }
     },
 
@@ -1498,7 +1596,21 @@ ANTIARRHYTHMICS = {
                 "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved, clinical guidelines"
+            "evidence_level": "High - FDA approved",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["ECG", "QT interval"],
+            },
+            "guideline_tags": [
+                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+                "ESC 2020 Atrial Fibrillation Guidelines",
+            ]
         }
     },
     
@@ -1679,6 +1791,20 @@ ANTIARRHYTHMICS = {
                 "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
             ],
             "last_updated": "2025-02-05",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["ECG", "QT interval"],
+            },
+            "guideline_tags": [
+                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+                "ESC 2020 Atrial Fibrillation Guidelines"
+            ],
             "evidence_level": "High - Multiple RCTs and clinical guidelines"
         }
     },
@@ -1923,7 +2049,21 @@ ANTIARRHYTHMICS = {
                 "Medscape - Quinidine Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["ECG", "QT interval"],
+            },
+            "guideline_tags": [
+                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+                "ESC 2020 Atrial Fibrillation Guidelines"
+            ]
         }
     },
 
@@ -2165,7 +2305,21 @@ ANTIARRHYTHMICS = {
                 "Medscape - Sotalol Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["ECG", "QT interval"],
+            },
+            "guideline_tags": [
+                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+                "ESC 2020 Atrial Fibrillation Guidelines"
+            ]
         }
     },
     

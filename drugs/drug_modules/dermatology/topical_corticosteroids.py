@@ -118,7 +118,22 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Skin atrophy (common with prolonged use)", "HPA axis suppression (if used on large areas/long-term)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response", "Signs of skin atrophy", "Signs of skin infection", "HPA axis function if used on large areas/long-term"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Atopic Dermatitis",
+                "AAD Guidelines - Contact Dermatitis",
+                "FDA Drug Information - Betamethasone Topical"
+            ]
         },
 
         "Betamethasone/Clotrimazole topical": {
@@ -409,7 +424,23 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Skin atrophy (common with prolonged use) - CRITICAL", "HPA axis suppression (if used on large areas/long-term) - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in redness, swelling, itching)", "Signs of skin atrophy (thin, wrinkled skin, telangiectasia) - CRITICAL", "Signs of skin infection (pus, increased redness/swelling)", "Signs of HPA axis suppression (fatigue, hypotension, hypoglycemia) if used on large areas/long-term - CRITICAL", "Treatment area (avoid >20% body surface area)"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Atopic Dermatitis",
+                "AAD Guidelines - Psoriasis",
+                "FDA Drug Information - Clobetasol Topical",
+                "ISMP High Alert Medications - Ultra-high Potency Topical Corticosteroids"
+            ]
         },
 
         "Fusidic acid/Betamethasone topical": {
@@ -524,6 +555,21 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-23",
                 "evidence_level": "B - Hướng dẫn lâm sàng và dữ liệu thực hành"
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Skin atrophy (from betamethasone with prolonged use)", "Antibiotic resistance (if used long-term)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (improvement in redness, discharge, pustules)", "Signs of skin irritation or skin atrophy (if used >1-2 weeks)", "Signs of bacterial resistance (no improvement or worsening)"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Infected Eczema",
+                "AAD Guidelines - Topical Combination Therapy",
+                "FDA Drug Information - Topical Combinations"
+            ],
             "hepatic_adjustment": {
                       "mild": "Không đổi",
                       "moderate": "Thận trọng, có thể giảm liều",
@@ -1032,6 +1078,21 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-23",
                 "evidence_level": "B - Dựa trên dữ liệu thực hành và tờ hướng dẫn thuốc"
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Skin atrophy (rare, from hydrocortisone with prolonged use)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (improvement in redness, itching, scaling)", "Signs of skin irritation or worsening"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Topical Antifungal Treatment",
+                "AAD Guidelines - Topical Combination Therapy",
+                "FDA Drug Information - Topical Combinations"
+            ],
             "hepatic_adjustment": {
                       "mild": "Không đổi",
                       "moderate": "Thận trọng",
@@ -1154,7 +1215,22 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Skin atrophy (common with prolonged use)", "HPA axis suppression (if used on large areas/long-term)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response", "Signs of skin atrophy", "Signs of skin infection"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Atopic Dermatitis",
+                "AAD Guidelines - Contact Dermatitis",
+                "FDA Drug Information - Mometasone Topical"
+            ]
         },
 
         "Triamcinolone topical": {
@@ -1302,7 +1378,22 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Skin atrophy (common with prolonged use)", "HPA axis suppression (if used on large areas/long-term)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in redness, swelling, itching)", "Signs of skin atrophy (thin, wrinkled skin, telangiectasia)", "Signs of skin infection (pus, increased redness/swelling)", "Signs of HPA axis suppression (fatigue, hypotension, hypoglycemia) if used on large areas/long-term", "Treatment area (avoid >20% body surface area)"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Atopic Dermatitis",
+                "AAD Guidelines - Psoriasis",
+                "FDA Drug Information - Triamcinolone Topical"
+            ]
         },
 
         "Triamcinolone topical": {
@@ -1419,7 +1510,22 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Skin atrophy (common with prolonged use)", "HPA axis suppression (if used on large areas/long-term)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response", "Signs of skin atrophy", "Signs of skin infection"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Atopic Dermatitis",
+                "AAD Guidelines - Contact Dermatitis",
+                "FDA Drug Information - Triamcinolone Topical"
+            ]
         },
 
 }

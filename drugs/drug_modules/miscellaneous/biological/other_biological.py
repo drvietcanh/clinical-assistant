@@ -147,7 +147,39 @@ OTHER_BIOLOGICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, clinical trial data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "Black Box Warning - Serious bleeding (can be fatal) - CRITICAL"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Signs of serious bleeding (epistaxis, gum bleeding, GI bleeding) - CRITICAL (discontinue immediately if serious bleeding occurs)",
+                    "Black Box Warning - AVOID anticoagulants (warfarin, heparin, DOACs) - CRITICAL (increases bleeding risk)",
+                    "Black Box Warning - AVOID antiplatelet agents (aspirin, clopidogrel, ticagrelor) - CRITICAL (increases bleeding risk)",
+                    "Platelet count (monitor response, increase indicates response)",
+                    "LDH (decrease indicates response)",
+                    "Creatinine (monitor kidney function improvement)",
+                    "ADAMTS13 activity (continue until normal)",
+                    "Hemoglobin (monitor for anemia due to bleeding)",
+                    "Injection site reactions (common)",
+                    "CRITICAL - Use in combination with plasma exchange and immunosuppression - NOT monotherapy",
+                    "CRITICAL - Continue for at least 30 days after last plasma exchange or until ADAMTS13 activity normal"
+                ],
+                "look_alike_sound_alike": ["Caplacizumab", "Cablivi"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Serious Bleeding",
+                "ASH Guidelines - Thrombotic Thrombocytopenic Purpura",
+                "ISMP High Alert Medications"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Efgartigimod": {
@@ -294,7 +326,35 @@ OTHER_BIOLOGICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, clinical trial data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "immunologic": "Black Box Warning - Serious infections (increased risk due to decreased IgG) - CRITICAL"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Signs of serious infections (increased risk due to decreased IgG) - CRITICAL (discontinue if serious infection occurs)",
+                    "Infusion reactions (monitor during and after 1-hour infusion, especially first dose)",
+                    "Serum IgG levels (may decrease due to mechanism of action - may need IVIG supplementation if severely decreased)",
+                    "Myasthenia gravis symptoms (assess treatment response)",
+                    "AChR autoantibodies (may decrease)",
+                    "Do not use live vaccines during and after treatment",
+                    "May need to repeat treatment cycles if symptoms recur"
+                ],
+                "look_alike_sound_alike": ["Efgartigimod", "Vyvgart"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Serious Infections",
+                "AAN Guidelines - Myasthenia Gravis",
+                "ISMP High Alert Medications"
+            ],
+            "last_updated": "2025-02-18"
         },
 
 }

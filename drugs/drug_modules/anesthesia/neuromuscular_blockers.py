@@ -96,6 +96,21 @@ NEUROMUSCULAR_BLOCKERS = {
             "Dị ứng (hiếm)"
         ],
         "mechanism_of_action": "Non-depolarizing (Benzylisoquinolinium).",
-        "monitoring": ["TOF monitoring"]
-    }
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+       
+monitoring": ["TOF monitoring"]
+        }
 }

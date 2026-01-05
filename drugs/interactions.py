@@ -47,16 +47,17 @@ def render_interaction_checker():
     """, unsafe_allow_html=True)
     
     st.info("""
-    **Tính năng mới:**
+    **Tính năng mới (Week 2 Enhancements):**
     - 📊 Ma trận tương tác trực quan với color-coding
     - ⚕️ Ý nghĩa lâm sàng chi tiết
     - 💡 Gợi ý thuốc thay thế
     - 📋 Hướng dẫn xử trí cụ thể
-    - 🔍 **Tìm kiếm thông minh với autocomplete** (Day 8)
-    - 🎯 **Class-based interactions** - Tự động nhận diện tương tác theo nhóm thuốc (Day 8)
-    - 🔤 **Fuzzy matching** - Tìm thuốc ngay cả khi gõ sai chính tả (Day 8)
+    - 🔍 **Tìm kiếm thông minh với autocomplete** - Tự động gợi ý khi gõ
+    - 🎯 **Class-based interactions** - Tự động nhận diện tương tác theo nhóm thuốc (ví dụ: "ACE Inhibitor" + "Spironolactone")
+    - 🔤 **Fuzzy matching cải thiện** - Tìm thuốc ngay cả khi gõ sai chính tả, thiếu chữ, hoặc dùng tên khác
+    - 📈 **Database mở rộng** - 514+ tương tác (Anticoagulants 52+, Antibiotics 107+, Cardiovascular 81+)
     
-    ⚠️ **Lưu ý:** Database hiện tại bao gồm **500+ tương tác** phổ biến. Luôn tham khảo nguồn đáng tin cậy trước khi quyết định lâm sàng.
+    ⚠️ **Lưu ý:** Database hiện tại bao gồm **514+ tương tác** phổ biến. Luôn tham khảo nguồn đáng tin cậy trước khi quyết định lâm sàng.
     """)
     
     st.markdown("---")

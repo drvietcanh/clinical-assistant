@@ -394,7 +394,23 @@ MYDRIATICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Systemic anticholinergic effects (dry mouth, tachycardia, urinary retention, confusion)", "Increased intraocular pressure (if narrow-angle glaucoma)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Intraocular pressure (IOP) - CRITICAL (contraindicated in narrow-angle glaucoma)", "Systemic anticholinergic effects (dry mouth, tachycardia, urinary retention, confusion)", "Signs of CNS depression in elderly/children (confusion, delirium, fever)"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Cycloplegia",
+                "AAO Guidelines - Refraction",
+                "FDA Drug Information - Cyclopentolate Ophthalmic",
+                "FDA Black Box Warning - Cyclopentolate and Narrow-Angle Glaucoma"
+            ]
         },
 
         "Phenylephrine eye drops": {
@@ -610,7 +626,24 @@ MYDRIATICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Cardiovascular effects (hypertension, tachycardia, chest pain, arrhythmias)", "Increased intraocular pressure (if narrow-angle glaucoma)", "Cerebrovascular events (stroke, MI) with systemic absorption"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Intraocular pressure (IOP) - CRITICAL (contraindicated in narrow-angle glaucoma)", "Blood pressure - CRITICAL (hypertension risk)", "Heart rate - CRITICAL (tachycardia risk)", "Signs of cardiovascular events (chest pain, arrhythmias)"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Mydriasis",
+                "AAO Guidelines - Uveitis",
+                "FDA Drug Information - Phenylephrine Ophthalmic",
+                "FDA Black Box Warning - Phenylephrine and Cardiovascular Risk",
+                "FDA Black Box Warning - Phenylephrine and MAO Inhibitors"
+            ]
         },
 
         "Tropicamide eye drops": {
@@ -787,7 +820,23 @@ MYDRIATICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Acute angle-closure glaucoma (if narrow-angle glaucoma)", "Systemic anticholinergic effects (dry mouth, tachycardia) with systemic absorption"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Intraocular pressure (IOP) - CRITICAL (check before and after use, especially in at-risk patients)", "Signs of acute angle-closure glaucoma (severe eye pain, headache, nausea, blurred vision)", "Visual acuity (blurred vision lasting 4-6 hours is normal)"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Eye Examination",
+                "AAO Guidelines - Mydriasis",
+                "FDA Drug Information - Tropicamide Ophthalmic",
+                "FDA Black Box Warning - Tropicamide and Angle-Closure Glaucoma"
+            ]
         },
 
 }

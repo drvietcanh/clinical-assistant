@@ -407,7 +407,48 @@ IMMUNOSUPPRESSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used in transplantation"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "renal": "Black Box Warning - Nephrotoxicity (common, can be permanent) - CRITICAL",
+                "cardiovascular": "Black Box Warning - Hypertension (common)",
+                "metabolic": "Hyperlipidemia (cholesterol, triglycerides), post-transplant diabetes",
+                "hepatic": "Hepatotoxicity (rare)",
+                "hematologic": "Leukopenia, thrombocytopenia (rare)",
+                "oncologic": "Black Box Warning - Increased risk of malignancies (lymphoma, skin cancer)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": True,
+            "requires_monitoring": [
+                "Black Box Warning - Cyclosporine trough levels (target 100-200 ng/mL depending on indication and time post-transplant) - CRITICAL (TDM required)",
+                "Black Box Warning - Renal function (creatinine, eGFR) - CRITICAL (nephrotoxicity common, can be permanent)",
+                "Black Box Warning - Blood pressure - CRITICAL (hypertension common)",
+                "Black Box Warning - Neoral and Sandimmune NOT interchangeable - CRITICAL",
+                "Lipid panel (cholesterol, triglycerides) - hyperlipidemia common",
+                "Blood glucose - post-transplant diabetes",
+                "Hepatic function (ALT, AST, bilirubin) - hepatotoxicity rare",
+                "CBC (leukocytes, platelets) - rare",
+                "Signs of infection - increased risk",
+                "Signs of malignancy (lymphoma, skin cancer) - increased risk",
+                "Drug interactions - CRITICAL (many CYP3A4 inhibitors/inducers, NSAIDs, statins)"
+            ],
+            "look_alike_sound_alike": ["Cyclosporine", "Cyclosporin A", "Sandimmune", "Neoral"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Cyclosporine and Nephrotoxicity",
+            "FDA Black Box Warning - Cyclosporine and Hypertension",
+            "FDA Black Box Warning - Cyclosporine and Increased Risk of Malignancies",
+            "FDA Black Box Warning - Neoral and Sandimmune NOT Interchangeable",
+            "AST Guidelines - Organ Transplantation",
+            "KDIGO Guidelines - Kidney Transplantation",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
     
     "Mycophenolate": {
@@ -593,7 +634,39 @@ IMMUNOSUPPRESSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - FDA-approved, extensive clinical data, widely used in transplantation"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Moderate",
+            "organ_toxicity": {
+                "hematologic": "High (myelosuppression - leukopenia, thrombocytopenia, anemia - common)",
+                "gastrointestinal": "High (diarrhea - common, GI ulcers)",
+                "teratogenic": "CRITICAL (Category X - absolute contraindication in pregnancy)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "CBC (WBC, platelets, hemoglobin) - CRITICAL (every 1-4 weeks, especially first 3 months)",
+                "Signs of diarrhea - common, may be severe",
+                "Signs of GI ulcers (abdominal pain, vomiting blood, black stools)",
+                "Signs of infection - increased risk",
+                "Signs of malignancy (lymphoma, skin cancer) - increased risk",
+                "Pregnancy test - CRITICAL (before starting, monthly during treatment)",
+                "Renal function (creatinine, eGFR) - for dose adjustment in renal impairment"
+            ],
+            "look_alike_sound_alike": ["Mycophenolate", "Mycophenolic acid", "Mycophenolate mofetil"]
+        },
+        "guideline_tags": [
+            "AST Guidelines - Organ Transplantation",
+            "KDIGO Guidelines - Kidney Transplantation",
+            "FDA Black Box Warning - Mycophenolate and Teratogenicity (Category X)",
+            "FDA Black Box Warning - Mycophenolate and Myelosuppression",
+            "FDA Black Box Warning - Mycophenolate and Increased Risk of Infection and Malignancy",
+            "REMS Program - Mycophenolate"
+        ]
     },
     
     "Tacrolimus": {

@@ -115,7 +115,22 @@ TOPICAL_ANTIFUNGALS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in fungal infection)", "Signs of skin irritation", "Signs of recurrence"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Fungal Skin Infections",
+                "FDA Drug Information - Clotrimazole Topical",
+                "UpToDate - Fungal Skin Infections"
+            ]
         },
 
         "Econazole topical": {
@@ -224,7 +239,22 @@ TOPICAL_ANTIFUNGALS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in fungal infection)", "Signs of skin irritation", "Signs of recurrence"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Fungal Skin Infections",
+                "FDA Drug Information - Econazole Topical",
+                "UpToDate - Fungal Skin Infections"
+            ]
         },
 
         "Ketoconazole topical": {
@@ -337,7 +367,23 @@ TOPICAL_ANTIFUNGALS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in fungal infection, dandruff)", "Signs of skin irritation", "Signs of recurrence"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Fungal Skin Infections",
+                "AAD Guidelines - Seborrheic Dermatitis",
+                "FDA Drug Information - Ketoconazole Topical",
+                "UpToDate - Fungal Skin Infections"
+            ]
         },
 
         "Miconazole topical": {
@@ -455,7 +501,22 @@ TOPICAL_ANTIFUNGALS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in fungal infection)", "Signs of skin irritation", "Signs of recurrence", "INR if using warfarin (rare with topical form)"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Fungal Skin Infections",
+                "FDA Drug Information - Miconazole Topical",
+                "UpToDate - Fungal Skin Infections"
+            ]
         },
 
         "Terbinafine topical": {
@@ -585,7 +646,22 @@ TOPICAL_ANTIFUNGALS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in redness, itching, scaling)", "Signs of skin irritation (increased redness, itching, burning)", "Signs of skin infection (pus, increased redness/swelling)"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Fungal Skin Infections",
+                "FDA Drug Information - Terbinafine Topical",
+                "UpToDate - Fungal Skin Infections"
+            ]
         },
 
 }

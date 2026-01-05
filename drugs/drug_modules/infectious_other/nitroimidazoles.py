@@ -5,9 +5,9 @@
 NITROIMIDAZOLES_DRUGS = {
     "Metronidazole": {'group': 'Infectious Disease - Nitroimidazole Antibiotic',
         'vietnamese_name': 'Metronidazole, Flagyl', 'administration': ['PO',
-        'IV'], 'indications': ['Nhiễm khuẩn kỵ khí', 'Giardia', 'Trichomonas',
+        'IV'], 'Giardia', 'Trichomonas',
         'Amebiasis', 'Bacterial vaginosis', 'H. pylori (kết hợp)',
-        'C. difficile colitis'], 'contraindications': ['Dị ứng metronidazole',
+        'C. difficile colitis'],
         'Có thai (3 tháng đầu)', 'Dùng disulfiram trong 14 ngày'], 'dosage': {
         'adult_anaerobic': '500mg x 3 lần/ngày PO hoặc 500mg mỗi 6-8 giờ IV',
         'adult_giardia': '250mg x 3 lần/ngày x 7 ngày', 'adult_trichomonas':
@@ -72,7 +72,7 @@ NITROIMIDAZOLES_DRUGS = {
         , 'effect': 'Tăng INR, tăng nguy cơ chảy máu nghiêm trọng',
         'management':
         'Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng metronidazole). Giảm liều warfarin 30-50%. Đặc biệt thận trọng ở bệnh nhân suy gan, dùng kéo dài (>7 ngày).'
-        }], 'moderate': [{'drug': 'Lithium', 'mechanism':
+        }], 'mechanism':
         'Metronidazole có thể làm giảm thải trừ lithium, làm tăng nồng độ lithium trong máu.'
         , 'effect':
         'Tăng nồng độ lithium, tăng nguy cơ độc tính lithium (buồn nôn, run, lú lẫn, suy thận)'

@@ -23,7 +23,7 @@ BIGUANIDES_DRUGS = {
         'Thiếu vitamin B12 (dùng lâu dài)'], 'interactions': [
         'Thuốc cản quang: tăng nguy cơ nhiễm toan lactic - ngừng 48h trước và sau',
         'Rượu: tăng nguy cơ nhiễm toan lactic',
-        'Furosemide: có thể tăng nồng độ metformin'], 'pregnancy': 'B',
+        'Furosemide: có thể tăng nồng độ metformin'],
         'mechanism_of_action':
         'Ức chế sản xuất glucose ở gan, tăng nhạy cảm với insulin ở mô ngoại vi, giảm hấp thu glucose ở ruột'
         , 'monitoring': ['HbA1c mỗi 3 tháng', 'Đường huyết đói và sau ăn',

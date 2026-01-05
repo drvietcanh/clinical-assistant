@@ -677,7 +677,22 @@ ELECTROLYTES_DRUGS = {
                 "UpToDate - Treatment of SIADH"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A"
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+           ,
+            "evidence_level"": "A"
         }
     },
     
@@ -824,7 +839,22 @@ ELECTROLYTES_DRUGS = {
                 "UpToDate - Magnesium: Drug information"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A"
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "ACG 2017 GERD Guidelines",
+                "FDA - Over-the-counter antacids",
+            ]
+           ,
+            "evidence_level"": "A"
         }
     },
     
@@ -1187,7 +1217,22 @@ ELECTROLYTES_DRUGS = {
                 "ASCO Guidelines - Hypercalcemia of malignancy"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A"
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+           ,
+            "evidence_level"": "A"
         }
     },
     "Potassium phosphate": {
@@ -1351,7 +1396,22 @@ ELECTROLYTES_DRUGS = {
                 "UpToDate - Phosphate: Drug information"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A"
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+           ,
+            "evidence_level"": "A"
         }
     },
     
@@ -1699,7 +1759,22 @@ ELECTROLYTES_DRUGS = {
                 "UpToDate - Phosphate: Drug information"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A"
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+           ,
+            "evidence_level"": "A"
         }
     },
     
@@ -1854,7 +1929,22 @@ ELECTROLYTES_DRUGS = {
                 "KDIGO Guidelines - Chronic Kidney Disease"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A"
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+           ,
+            "evidence_level"": "A"
         }
     },
     

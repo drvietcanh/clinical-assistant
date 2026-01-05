@@ -7,12 +7,60 @@ Acute Liver Failure Management & Liver Transplant Criteria
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.phase1_protocol_enhancer import (
+    render_protocol_header,
+    render_recommendation_with_evidence,
+    render_protocol_footer
+)
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Acute Liver Failure Protocol"""
     st.subheader("🫀 Acute Liver Failure Protocol")
-    st.caption("AASLD 2011, EASL 2017 - Acute Liver Failure Management & Liver Transplant Criteria")
+    st.caption("AASLD 2011, EASL 2017, AASLD 2023 - Acute Liver Failure Management & Liver Transplant Criteria")
+    
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="Acute Liver Failure",
+        guideline_source="AASLD 2011, EASL 2017, AASLD 2023",
+        show_version=True,
+        show_evidence_summary=True
+    )
+    
+    # AASLD Guidelines Summary
+    with st.expander("📚 AASLD 2011 & 2023 Guidelines - Key Recommendations", expanded=False):
+        st.markdown("""
+        **AASLD 2011 Guidelines for Acute Liver Failure:**
+        
+        **Definition:**
+        - Coagulopathy (INR ≥1.5) + Encephalopathy
+        - Within 26 weeks of symptom onset
+        - No pre-existing liver disease
+        
+        **AASLD 2023 Updates:**
+        - Enhanced prognostic scoring systems
+        - Updated transplant criteria
+        - Improved management of complications
+        
+        **Class I Recommendations:**
+        - Immediate ICU admission
+        - Identify and treat reversible causes
+        - Early transplant evaluation
+        - Manage complications (ICP, infection, bleeding)
+        
+        **King's College Criteria (Acetaminophen):**
+        - pH <7.3 (after fluid resuscitation) OR
+        - All of: PT >100s, Cr >3.4 mg/dL, Grade 3-4 encephalopathy
+        
+        **King's College Criteria (Non-Acetaminophen):**
+        - PT >100s OR
+        - Any 3 of: Age <10 or >40, Duration >7 days, PT >50s, Bilirubin >17.5 mg/dL
+        """)
     
     st.error("""
     **⚠️ CRITICAL: Acute Liver Failure là cấp cứu nội khoa!**

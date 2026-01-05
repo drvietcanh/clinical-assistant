@@ -182,7 +182,22 @@ VASODILATORS = {
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A - FDA approved, large RCT (A-HeFT trial for heart failure)"
+            "evidence_level": "A - FDA approved",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+                "A-HeFT Trial - Large RCT for heart failure"
+            ]
         }
     },
     
@@ -362,34 +377,57 @@ VASODILATORS = {
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
             ],
             "last_updated": "2025-02-04",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ],
             "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
         }
     },
     
-    "Nesiritide": {
+    "Nesiritide":     {
         "group": "Cardiovascular - Natriuretic Peptide (Vasodilator)",
         "vietnamese_name": "Nesiritide, Natrecor",
-        "administration": ["IV"],
+        "administration": [
+            "IV"
+    ],
         "indications": [
             "Suy tim cấp mất bù (acute decompensated heart failure) - giảm khó thở",
             "Suy tim với sung huyết phổi nặng"
-        ],
-        "contraindications": [
-            "Dị ứng nesiritide",
-            "Hạ huyết áp nặng (systolic BP <90 mmHg)",
-            "Sốc tim",
-            "Bệnh van tim nặng (hẹp van động mạch chủ, hẹp van hai lá)"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng nesiritide",
+                "Hạ huyết áp nặng (systolic BP <90 mmHg) - CHỐNG CHỈ ĐỊNH",
+                "Sốc tim - CHỐNG CHỈ ĐỊNH",
+                "Bệnh van tim nặng (hẹp van động mạch chủ nặng, hẹp van hai lá nặng) - CHỐNG CHỈ ĐỊNH"
+    ],
+            "tương_đối": [
+                "Suy thận nặng - thận trọng, có thể cần giảm liều",
+                "Bệnh nhân cao tuổi - tăng nhạy cảm với hạ huyết áp",
+                "Dùng với thuốc hạ huyết áp khác - tăng nguy cơ hạ huyết áp"
+    ],
+        },
         "dosage": {
             "adult_loading": "2 mcg/kg IV bolus",
             "adult_maintenance": "0.01 mcg/kg/phút IV infusion",
-            "notes": "Truyền liên tục. Theo dõi huyết áp sát. Có thể tăng liều đến 0.03 mcg/kg/phút nếu cần và huyết áp cho phép."
+            "notes": """Truyền liên tục. Theo dõi huyết áp sát. Có thể tăng liều đến 0.03 mcg/kg/phút nếu cần và huyết áp cho phép.""",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Thận trọng, có thể cần giảm liều",
             "under_30": "Thận trọng, có thể cần giảm liều",
-            "hemodialysis": "Thận trọng"
+            "hemodialysis": "Thận trọng",
         },
         "side_effects": [
             "Hạ huyết áp (phổ biến, có thể nặng)",
@@ -398,13 +436,13 @@ VASODILATORS = {
             "Chóng mặt",
             "Buồn nôn",
             "Rối loạn nhịp tim (hiếm)"
-        ],
+    ],
         "interactions": [
             "Thuốc hạ huyết áp khác: tăng nguy cơ hạ huyết áp",
             "ACE inhibitors: tăng nguy cơ hạ huyết áp"
-        ],
+    ],
         "pregnancy": "C - Thận trọng trong thai kỳ",
-        "mechanism_of_action": "Nesiritide là B-type natriuretic peptide (BNP) tái tổ hợp. BNP là hormone được tiết ra từ tâm thất khi có căng thẳng (stretch). Nesiritide gắn với thụ thể natriuretic peptide (NPR-A), kích hoạt guanylate cyclase, làm tăng cGMP, dẫn đến: (1) Giãn tĩnh mạch và động mạch (giảm tiền gánh và hậu gánh), (2) Tăng bài tiết natri qua thận (lợi tiểu), (3) Ức chế hệ renin-angiotensin-aldosterone (RAAS), (4) Ức chế hệ thần kinh giao cảm. Kết quả: giảm áp lực đổ đầy tim, giảm khó thở, cải thiện huyết động trong suy tim cấp. Tác dụng nhanh (khởi phát trong vài phút), thời gian tác dụng ngắn (half-life 18 phút).",
+        "mechanism_of_action": """Nesiritide là B-type natriuretic peptide (BNP) tái tổ hợp. BNP là hormone được tiết ra từ tâm thất khi có căng thẳng (stretch). Nesiritide gắn với thụ thể natriuretic peptide (NPR-A), kích hoạt guanylate cyclase, làm tăng cGMP, dẫn đến: (1) Giãn tĩnh mạch và động mạch (giảm tiền gánh và hậu gánh), (2) Tăng bài tiết natri qua thận (lợi tiểu), (3) Ức chế hệ renin-angiotensin-aldosterone (RAAS), (4) Ức chế hệ thần kinh giao cảm. Kết quả: giảm áp lực đổ đầy tim, giảm khó thở, cải thiện huyết động trong suy tim cấp. Tác dụng nhanh (khởi phát trong vài phút), thời gian tác dụng ngắn (half-life 18 phút).""",
         "monitoring": [
             "Huyết áp liên tục (arterial line nếu có thể) - QUAN TRỌNG",
             "Nhịp tim và ECG",
@@ -412,7 +450,7 @@ VASODILATORS = {
             "Cân bằng dịch (nước tiểu giờ, cân nặng)",
             "Điện giải (Na+, K+)",
             "Chức năng thận (creatinine, eGFR)"
-        ],
+    ],
         "precautions": [
             "Hạ huyết áp - phổ biến, cần theo dõi sát",
             "CHỐNG CHỈ ĐỊNH nếu hạ huyết áp nặng (systolic BP <90 mmHg)",
@@ -420,82 +458,73 @@ VASODILATORS = {
             "Bù dịch đầy đủ trước khi dùng (trừ sốc tim)",
             "Giảm liều hoặc ngừng nếu hạ huyết áp nặng",
             "Pha trong NS hoặc D5W, truyền qua đường truyền riêng"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "18 phút",
             "onset": "Vài phút",
             "duration": "Ngắn (cần truyền liên tục)",
             "protein_binding": "Không đáng kể",
-            "clearance": "Thận (thải trừ qua nước tiểu), thời gian bán thải ngắn"
+            "clearance": "Thận (thải trừ qua nước tiểu), thời gian bán thải ngắn",
         },
         "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh. Dung dịch đã pha: dùng trong 24 giờ.",
         "black_box_warnings": None,
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Thuốc hạ huyết áp khác (ACE inhibitors, ARBs, Nitroglycerin, Hydralazine)",
                     "mechanism": "Tác dụng hạ huyết áp cộng dồn",
                     "effect": "Tăng nguy cơ hạ huyết áp nặng, sốc",
-                    "management": "Theo dõi huyết áp sát. Giảm liều các thuốc hạ huyết áp khác nếu cần."
+                    "management": "Theo dõi huyết áp sát. Giảm liều các thuốc hạ huyết áp khác nếu cần.",
                 }
-            ],
-            "moderate": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng nesiritide",
-                "Hạ huyết áp nặng (systolic BP <90 mmHg) - CHỐNG CHỈ ĐỊNH",
-                "Sốc tim - CHỐNG CHỈ ĐỊNH",
-                "Bệnh van tim nặng (hẹp van động mạch chủ nặng, hẹp van hai lá nặng) - CHỐNG CHỈ ĐỊNH"
-            ],
-            "tương_đối": [
-                "Suy thận nặng - thận trọng, có thể cần giảm liều",
-                "Bệnh nhân cao tuổi - tăng nhạy cảm với hạ huyết áp",
-                "Dùng với thuốc hạ huyết áp khác - tăng nguy cơ hạ huyết áp"
-            ]
+                ],
+            "moderate": [],
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "C",
-            "pregnancy_details": "Nesiritide là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong suy tim cấp nặng.",
+            "pregnancy_details": """Nesiritide là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong suy tim cấp nặng.""",
             "lactation": {
                 "safety": "Unknown",
                 "details": "Không biết nesiritide có bài tiết vào sữa mẹ hay không. Thời gian bán thải ngắn (18 phút).",
-                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc."
-            }
+                "recommendation": "Thận trọng khi cho con bú. Nếu cần, ngừng cho con bú hoặc ngừng thuốc.",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không cần điều chỉnh liều",
             "moderate": "Không cần điều chỉnh liều",
             "severe": "Không cần điều chỉnh liều (thải trừ chủ yếu qua thận)",
-            "notes": "Nesiritide thải trừ chủ yếu qua thận. Không cần điều chỉnh liều ở bệnh nhân suy gan."
+            "notes": "Nesiritide thải trừ chủ yếu qua thận. Không cần điều chỉnh liều ở bệnh nhân suy gan.",
         },
         "overdose_management": {
             "symptoms": [
                 "Hạ huyết áp nặng, sốc",
                 "Nhịp tim nhanh",
                 "Rối loạn nhịp tim"
-            ],
+    ],
             "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
             "treatment": [
                 "Ngừng ngay nesiritide nếu đang truyền",
                 "Hỗ trợ huyết động: Truyền dịch bolus (NS, LR), thuốc vận mạch (norepinephrine, dopamine) nếu cần",
                 "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, ECG liên tục",
                 "Hỗ trợ hô hấp nếu cần"
-            ],
-            "monitoring": "Theo dõi huyết áp, nhịp tim, ECG liên tục cho đến khi hồi phục."
+    ],
+            "monitoring": "Theo dõi huyết áp, nhịp tim, ECG liên tục cho đến khi hồi phục.",
         },
         "reversal_agents": None,
         "administration_instructions": {
             "oral": None,
             "iv": {
                 "reconstitution": "Pha trong NS hoặc D5W. Nồng độ thường dùng: 0.01-0.03 mcg/kg/phút.",
-                "infusion_rate": "Loading: 2 mcg/kg IV bolus. Maintenance: 0.01 mcg/kg/phút IV infusion. Có thể tăng đến 0.03 mcg/kg/phút nếu cần và huyết áp cho phép.",
-                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "infusion_rate": """Loading: 2 mcg/kg IV bolus. Maintenance: 0.01 mcg/kg/phút IV infusion. Có thể tăng đến 0.03 mcg/kg/phút nếu cần và huyết áp cho phép.""",
+                "compatibility": [
+                    "NS (0.9% NaCl)",
+                    "D5W (5% Dextrose)"
+    ],
                 "incompatibility": [
                     "Không trộn với các thuốc khác. Dùng đường truyền riêng."
-                ],
-                "notes": "QUAN TRỌNG: 1) Theo dõi huyết áp sát, 2) CHỐNG CHỈ ĐỊNH nếu hạ huyết áp nặng, 3) Bù dịch đầy đủ trước khi dùng."
-            }
+    ],
+                "notes": """QUAN TRỌNG: 1) Theo dõi huyết áp sát, 2) CHỐNG CHỈ ĐỊNH nếu hạ huyết áp nặng, 3) Bù dịch đầy đủ trước khi dùng.""",
+            },
         },
         "references": {
             "primary_sources": [
@@ -503,12 +532,38 @@ VASODILATORS = {
                 "ACC/AHA Guidelines for Heart Failure",
                 "UpToDate - Nesiritide: Drug Information",
                 "Medscape - Nesiritide Drug Reference"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA guidelines, và dữ liệu lâm sàng từ nhiều nguồn",
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với nesiritide",
+                "Hạ huyết áp nặng (systolic <90 mmHg)",
+                "Sốc tim"
+    ],
+            "tương_đối": [
+                "Hạ huyết áp vừa (theo dõi sát)",
+                "Bệnh mạch vành không ổn định",
+                "Suy thận nặng (giảm thải trừ)",
+                "Hẹp van động mạch chủ nặng"
+    ],
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
     },
-    
     "Nitroglycerin": {
         "group": "Cardiovascular - Nitrate",
         "vietnamese_name": "Nitroglycerin, Nitrostat, Nitro-Bid, Nitro-Dur",
@@ -718,32 +773,41 @@ VASODILATORS = {
             "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         }
     },
-    "Nitroprusside": {
+    "Nitroprusside":     {
         "group": "Cardiovascular - Vasodilator (Hypertensive Emergency)",
         "vietnamese_name": "Nitroprusside, Nipride",
-        "administration": ["IV"],
+        "administration": [
+            "IV"
+    ],
         "indications": [
             "Cơn tăng huyết áp (hypertensive emergency) - cấp cứu",
             "Suy tim cấp với tăng hậu gánh",
             "Phẫu thuật tim (giảm hậu gánh)",
             "Dissection động mạch chủ (aortic dissection)"
-        ],
-        "contraindications": [
-            "Dị ứng nitroprusside",
-            "Thiếu máu cục bộ cơ tim cấp (acute coronary syndrome) - thận trọng",
-            "Suy thận nặng (nguy cơ thiocyanate độc)",
-            "Thiếu cơ sở theo dõi huyết động liên tục - CHỐNG CHỈ ĐỊNH"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng nitroprusside",
+                "Thiếu cơ sở theo dõi huyết động liên tục (arterial line) - CHỐNG CHỈ ĐỊNH",
+                "Suy thận nặng (CrCl <30) với nguy cơ thiocyanate độc - CHỐNG CHỈ ĐỊNH hoặc dùng rất thận trọng"
+    ],
+            "tương_đối": [
+                "Thiếu máu cục bộ cơ tim cấp (acute coronary syndrome) - thận trọng, có thể làm nặng",
+                "Suy thận (CrCl 30-60) - thận trọng, giảm liều, theo dõi thiocyanate",
+                "Bệnh nhân cao tuổi - tăng nhạy cảm với hạ huyết áp",
+                "Dùng với thuốc hạ huyết áp khác - tăng nguy cơ hạ huyết áp"
+    ],
+        },
         "dosage": {
             "adult_initial": "0.25-0.5 mcg/kg/phút IV infusion",
             "adult_maintenance": "0.5-10 mcg/kg/phút IV infusion (tối đa 10 mcg/kg/phút)",
-            "notes": "CHỈ dùng trong ICU với monitoring huyết động liên tục (arterial line). Chỉnh liều theo huyết áp mục tiêu. Thời gian dùng tối đa 24-48 giờ (nguy cơ thiocyanate độc)."
+            "notes": """CHỈ dùng trong ICU với monitoring huyết động liên tục (arterial line). Chỉnh liều theo huyết áp mục tiêu. Thời gian dùng tối đa 24-48 giờ (nguy cơ thiocyanate độc).""",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Thận trọng, giảm liều, theo dõi thiocyanate",
             "under_30": "CHỐNG CHỈ ĐỊNH hoặc dùng rất thận trọng, giảm liều, theo dõi thiocyanate sát",
-            "hemodialysis": "CHỐNG CHỈ ĐỊNH hoặc dùng rất thận trọng"
+            "hemodialysis": "CHỐNG CHỈ ĐỊNH hoặc dùng rất thận trọng",
         },
         "side_effects": [
             "Hạ huyết áp nặng (phổ biến, có thể gây sốc)",
@@ -754,13 +818,13 @@ VASODILATORS = {
             "Buồn nôn, nôn",
             "Rối loạn ý thức (do thiocyanate độc)",
             "Co giật (do thiocyanate độc)"
-        ],
+    ],
         "interactions": [
             "Thuốc hạ huyết áp khác: tăng nguy cơ hạ huyết áp",
             "Thuốc gây mê: tăng nguy cơ hạ huyết áp"
-        ],
+    ],
         "pregnancy": "C - Thận trọng trong thai kỳ",
-        "mechanism_of_action": "Nitroprusside là thuốc giãn mạch mạnh, tác dụng nhanh. Sau khi vào cơ thể, nitroprusside giải phóng nitric oxide (NO) và cyanide. NO kích hoạt guanylate cyclase, làm tăng cGMP, dẫn đến thư giãn cơ trơn mạch máu. Nitroprusside giãn cả tĩnh mạch (giảm tiền gánh) và động mạch (giảm hậu gánh) mạnh. Kết quả: giảm huyết áp nhanh, giảm áp lực đổ đầy tim, cải thiện huyết động trong suy tim cấp. ĐẶC ĐIỂM: (1) Tác dụng cực nhanh (khởi phát trong vài giây), (2) Thời gian tác dụng ngắn (half-life vài phút), (3) CHỈ dùng trong ICU với monitoring huyết động liên tục, (4) Nguy cơ thiocyanate độc nếu dùng kéo dài (>24-48 giờ) hoặc liều cao (>10 mcg/kg/phút), (5) Cyanide được chuyển hóa thành thiocyanate ở gan (cần thiosulfate), thiocyanate thải trừ qua thận (nguy cơ tích lũy ở suy thận).",
+        "mechanism_of_action": """Nitroprusside là thuốc giãn mạch mạnh, tác dụng nhanh. Sau khi vào cơ thể, nitroprusside giải phóng nitric oxide (NO) và cyanide. NO kích hoạt guanylate cyclase, làm tăng cGMP, dẫn đến thư giãn cơ trơn mạch máu. Nitroprusside giãn cả tĩnh mạch (giảm tiền gánh) và động mạch (giảm hậu gánh) mạnh. Kết quả: giảm huyết áp nhanh, giảm áp lực đổ đầy tim, cải thiện huyết động trong suy tim cấp. ĐẶC ĐIỂM: (1) Tác dụng cực nhanh (khởi phát trong vài giây), (2) Thời gian tác dụng ngắn (half-life vài phút), (3) CHỈ dùng trong ICU với monitoring huyết động liên tục, (4) Nguy cơ thiocyanate độc nếu dùng kéo dài (>24-48 giờ) hoặc liều cao (>10 mcg/kg/phút), (5) Cyanide được chuyển hóa thành thiocyanate ở gan (cần thiosulfate), thiocyanate thải trừ qua thận (nguy cơ tích lũy ở suy thận).""",
         "monitoring": [
             "Huyết áp động mạch liên tục (arterial line - BẮT BUỘC) - QUAN TRỌNG",
             "Nhịp tim và ECG",
@@ -768,7 +832,7 @@ VASODILATORS = {
             "Dấu hiệu thiocyanate độc (rối loạn ý thức, co giật, buồn nôn, nôn)",
             "Chức năng thận (creatinine, eGFR) - thiocyanate thải trừ qua thận",
             "Acid-base balance (lactate, pH) - thiocyanate độc có thể gây toan lactic"
-        ],
+    ],
         "precautions": [
             "CHỈ dùng trong ICU với monitoring huyết động liên tục (arterial line) - BẮT BUỘC",
             "Hạ huyết áp nặng - phổ biến, cần theo dõi sát",
@@ -779,55 +843,43 @@ VASODILATORS = {
             "Bù dịch đầy đủ trước khi dùng (trừ sốc tim)",
             "Giảm liều hoặc ngừng nếu hạ huyết áp nặng",
             "Theo dõi nồng độ thiocyanate nếu dùng >24 giờ hoặc liều cao"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "Vài phút (nitroprusside), 2-7 ngày (thiocyanate)",
             "onset": "Vài giây",
             "duration": "Ngắn (cần truyền liên tục)",
             "protein_binding": "Không đáng kể",
             "metabolism": "Chuyển hóa thành cyanide và NO. Cyanide chuyển hóa thành thiocyanate ở gan (cần thiosulfate).",
-            "clearance": "Thiocyanate thải trừ qua thận (nguy cơ tích lũy ở suy thận)"
+            "clearance": "Thiocyanate thải trừ qua thận (nguy cơ tích lũy ở suy thận)",
         },
-        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C), tránh ánh sáng. Sau khi pha: bảo vệ khỏi ánh sáng (dùng bọc tối màu), dùng trong 24 giờ.",
-        "black_box_warnings": "Nguy cơ thiocyanate độc (cyanide toxicity) nếu dùng kéo dài (>24-48 giờ) hoặc liều cao (>10 mcg/kg/phút), có thể gây tử vong. CHỈ dùng trong ICU với monitoring huyết động liên tục (arterial line). CHỐNG CHỈ ĐỊNH hoặc dùng rất thận trọng ở suy thận nặng. Phải theo dõi nồng độ thiocyanate nếu dùng >24 giờ hoặc liều cao.",
+        "storage": """Bảo quản bột khô ở nhiệt độ phòng (20-25°C), tránh ánh sáng. Sau khi pha: bảo vệ khỏi ánh sáng (dùng bọc tối màu), dùng trong 24 giờ.""",
+        "black_box_warnings": """Nguy cơ thiocyanate độc (cyanide toxicity) nếu dùng kéo dài (>24-48 giờ) hoặc liều cao (>10 mcg/kg/phút), có thể gây tử vong. CHỈ dùng trong ICU với monitoring huyết động liên tục (arterial line). CHỐNG CHỈ ĐỊNH hoặc dùng rất thận trọng ở suy thận nặng. Phải theo dõi nồng độ thiocyanate nếu dùng >24 giờ hoặc liều cao.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Thuốc hạ huyết áp khác (ACE inhibitors, ARBs, Nitroglycerin, Hydralazine)",
                     "mechanism": "Tác dụng hạ huyết áp cộng dồn",
                     "effect": "Tăng nguy cơ hạ huyết áp nặng, sốc",
-                    "management": "Theo dõi huyết áp sát. Giảm liều các thuốc hạ huyết áp khác nếu cần."
+                    "management": "Theo dõi huyết áp sát. Giảm liều các thuốc hạ huyết áp khác nếu cần.",
                 }
-            ],
-            "moderate": []
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng nitroprusside",
-                "Thiếu cơ sở theo dõi huyết động liên tục (arterial line) - CHỐNG CHỈ ĐỊNH",
-                "Suy thận nặng (CrCl <30) với nguy cơ thiocyanate độc - CHỐNG CHỈ ĐỊNH hoặc dùng rất thận trọng"
-            ],
-            "tương_đối": [
-                "Thiếu máu cục bộ cơ tim cấp (acute coronary syndrome) - thận trọng, có thể làm nặng",
-                "Suy thận (CrCl 30-60) - thận trọng, giảm liều, theo dõi thiocyanate",
-                "Bệnh nhân cao tuổi - tăng nhạy cảm với hạ huyết áp",
-                "Dùng với thuốc hạ huyết áp khác - tăng nguy cơ hạ huyết áp"
-            ]
+                ],
+            "moderate": [],
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "C",
-            "pregnancy_details": "Nitroprusside là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Nitroprusside có thể qua nhau thai và có thể gây thiocyanate độc ở thai nhi. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong cơn tăng huyết áp đe dọa tính mạng.",
+            "pregnancy_details": """Nitroprusside là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Nitroprusside có thể qua nhau thai và có thể gây thiocyanate độc ở thai nhi. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong cơn tăng huyết áp đe dọa tính mạng.""",
             "lactation": {
                 "safety": "Not Recommended",
                 "details": "Nitroprusside và thiocyanate có thể bài tiết vào sữa mẹ. Nguy cơ thiocyanate độc ở trẻ bú mẹ.",
-                "recommendation": "Không khuyến cáo cho con bú khi đang dùng nitroprusside. Cân nhắc ngừng cho con bú hoặc dùng thuốc thay thế."
-            }
+                "recommendation": """Không khuyến cáo cho con bú khi đang dùng nitroprusside. Cân nhắc ngừng cho con bú hoặc dùng thuốc thay thế.""",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không cần điều chỉnh liều",
             "moderate": "Thận trọng. Chuyển hóa cyanide thành thiocyanate có thể giảm, tăng nguy cơ cyanide độc.",
-            "severe": "Thận trọng. Chuyển hóa cyanide thành thiocyanate giảm đáng kể, tăng nguy cơ cyanide độc. Có thể cần thiosulfate.",
-            "notes": "Nitroprusside chuyển hóa thành cyanide và NO. Cyanide chuyển hóa thành thiocyanate ở gan (cần thiosulfate). Suy gan có thể làm giảm chuyển hóa cyanide, tăng nguy cơ cyanide độc. Có thể cần thiosulfate để điều trị cyanide độc."
+            "severe": """Thận trọng. Chuyển hóa cyanide thành thiocyanate giảm đáng kể, tăng nguy cơ cyanide độc. Có thể cần thiosulfate.""",
+            "notes": """Nitroprusside chuyển hóa thành cyanide và NO. Cyanide chuyển hóa thành thiocyanate ở gan (cần thiosulfate). Suy gan có thể làm giảm chuyển hóa cyanide, tăng nguy cơ cyanide độc. Có thể cần thiosulfate để điều trị cyanide độc.""",
         },
         "overdose_management": {
             "symptoms": [
@@ -835,7 +887,7 @@ VASODILATORS = {
                 "Thiocyanate độc: rối loạn ý thức, co giật, buồn nôn, nôn, toan lactic",
                 "Cyanide độc: rối loạn ý thức, co giật, toan lactic nặng, ngừng tim",
                 "Nhịp tim nhanh"
-            ],
+    ],
             "antidote": "Thiosulfate cho cyanide độc. Lọc máu cho thiocyanate độc.",
             "treatment": [
                 "Ngừng ngay nitroprusside nếu đang truyền",
@@ -850,39 +902,41 @@ VASODILATORS = {
                 "  - Hydroxocobalamin 5g IV (nếu có) - đối kháng cyanide",
                 "  - Hỗ trợ hô hấp, thở oxy",
                 "Theo dõi: Huyết áp, nhịp tim, ECG, nồng độ thiocyanate, acid-base balance liên tục"
-            ],
-            "monitoring": "Theo dõi huyết áp, nhịp tim, ECG, nồng độ thiocyanate, acid-base balance liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (thiocyanate độc, cyanide độc)."
+    ],
+            "monitoring": """Theo dõi huyết áp, nhịp tim, ECG, nồng độ thiocyanate, acid-base balance liên tục cho đến khi hồi phục. Theo dõi lâu hơn nếu có biến chứng (thiocyanate độc, cyanide độc).""",
         },
         "reversal_agents": {
             "available": True,
             "agents": [
-                {
+    {
                     "agent": "Sodium thiosulfate",
                     "mechanism": "Chuyển hóa cyanide thành thiocyanate (ít độc hơn)",
                     "indication": "Cyanide độc do nitroprusside",
-                    "dose": "12.5g IV (150mg/kg)"
+                    "dose": "12.5g IV (150mg/kg)",
                 },
-                {
+    {
                     "agent": "Hydroxocobalamin",
                     "mechanism": "Đối kháng cyanide, tạo cyanocobalamin",
                     "indication": "Cyanide độc do nitroprusside",
-                    "dose": "5g IV (70mg/kg)"
+                    "dose": "5g IV (70mg/kg)",
                 }
-            ],
-            "notes": "Sodium thiosulfate và hydroxocobalamin điều trị cyanide độc. Lọc máu điều trị thiocyanate độc."
+                ],
+            "notes": "Sodium thiosulfate và hydroxocobalamin điều trị cyanide độc. Lọc máu điều trị thiocyanate độc.",
         },
         "administration_instructions": {
             "oral": None,
             "iv": {
-                "reconstitution": "Pha trong D5W (KHÔNG dùng NS - không ổn định). Nồng độ thường dùng: 50-200 mcg/ml. Bảo vệ khỏi ánh sáng (dùng bọc tối màu).",
-                "infusion_rate": "Khởi đầu: 0.25-0.5 mcg/kg/phút IV infusion. Chỉnh liều theo huyết áp mục tiêu. Tối đa: 10 mcg/kg/phút. Thời gian dùng tối đa 24-48 giờ.",
-                "compatibility": ["D5W (5% Dextrose)"],
+                "reconstitution": """Pha trong D5W (KHÔNG dùng NS - không ổn định). Nồng độ thường dùng: 50-200 mcg/ml. Bảo vệ khỏi ánh sáng (dùng bọc tối màu).""",
+                "infusion_rate": """Khởi đầu: 0.25-0.5 mcg/kg/phút IV infusion. Chỉnh liều theo huyết áp mục tiêu. Tối đa: 10 mcg/kg/phút. Thời gian dùng tối đa 24-48 giờ.""",
+                "compatibility": [
+                    "D5W (5% Dextrose)"
+    ],
                 "incompatibility": [
                     "NS (0.9% NaCl) - không ổn định",
                     "Không trộn với các thuốc khác. Dùng đường truyền riêng."
-                ],
-                "notes": "QUAN TRỌNG: 1) CHỈ dùng trong ICU với monitoring huyết động liên tục (arterial line), 2) Pha trong D5W (KHÔNG dùng NS), 3) Bảo vệ khỏi ánh sáng, 4) Thời gian dùng tối đa 24-48 giờ, 5) Theo dõi nồng độ thiocyanate nếu dùng >24 giờ hoặc liều cao."
-            }
+    ],
+                "notes": """QUAN TRỌNG: 1) CHỈ dùng trong ICU với monitoring huyết động liên tục (arterial line), 2) Pha trong D5W (KHÔNG dùng NS), 3) Bảo vệ khỏi ánh sáng, 4) Thời gian dùng tối đa 24-48 giờ, 5) Theo dõi nồng độ thiocyanate nếu dùng >24 giờ hoặc liều cao.""",
+            },
         },
         "references": {
             "primary_sources": [
@@ -890,12 +944,38 @@ VASODILATORS = {
                 "ACC/AHA Guidelines for Hypertension",
                 "UpToDate - Nitroprusside: Drug Information",
                 "Medscape - Nitroprusside Drug Reference"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA guidelines, và dữ liệu lâm sàng từ nhiều nguồn",
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với nitroprusside",
+                "Thiếu máu cơ tim cấp do hẹp động mạch chủ nặng",
+                "Thiếu hụt bẩm sinh cytochrome b5 reductase (nguy cơ nhiễm độc cyanide)"
+    ],
+            "tương_đối": [
+                "Suy thận nặng (tích tụ thiocyanate, nguy cơ độc tính)",
+                "Suy gan nặng (giảm chuyển hóa cyanide)",
+                "Thiếu vitamin B12 (tăng nguy cơ nhiễm độc cyanide)",
+                "Tăng áp lực nội sọ"
+    ],
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
     },
-
 }
 
 __all__ = ['VASODILATORS']

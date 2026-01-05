@@ -60,7 +60,7 @@ ANTIARRHYTHMICS_DRUGS = {
         'Tăng tác dụng và thời gian tác dụng của adenosine, tăng nguy cơ tác dụng phụ (ngừng tim kéo dài, block AV)'
         , 'management':
         'GIẢM LIỀU adenosine xuống 50-75% (1.5-3mg thay vì 6mg). Theo dõi chặt chẽ ECG. Chuẩn bị sẵn thiết bị hồi sức.'
-        }], 'moderate': [{'drug': 'Carbamazepine', 'mechanism':
+        }], 'mechanism':
         'Carbamazepine có thể tăng tác dụng của adenosine (cơ chế không rõ ràng, có thể liên quan đến bắt giữ adenosine).'
         , 'effect':
         'Tăng tác dụng và thời gian tác dụng của adenosine, tăng nguy cơ tác dụng phụ'

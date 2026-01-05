@@ -140,6 +140,21 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (DECLARE-TIMI 58)",
         },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["genitourinary"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["eGFR", "Genital/urinary infections"],
+            },
+            "guideline_tags": [
+                "ADA 2024 Standards of Care - Diabetes",
+                "AACE/ACE 2023 Type 2 Diabetes Guidelines",
+                "FDA Black Box Warning - Fournier's Gangrene (rare)",
+            ]
     },
 
     "Metformin/Empagliflozin": {
@@ -304,23 +319,40 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (EMPA-REG OUTCOME)",
         },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["genitourinary"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["eGFR", "Genital/urinary infections"],
+            },
+            "guideline_tags": [
+                "ADA 2024 Standards of Care - Diabetes",
+                "AACE/ACE 2023 Type 2 Diabetes Guidelines",
+                "FDA Black Box Warning - Fournier's Gangrene (rare)",
+            ]
     },
 
-    "Metformin/Glibenclamide": {
+    "Metformin/Glibenclamide":     {
         "group": "Diabetes - Biguanide + Sulfonylurea (Fixed-Dose Combination)",
         "vietnamese_name": "Metformin/Glibenclamide, Glucovance",
-        "administration": ["PO"],
+        "administration": [
+            "PO"
+    ],
         "indications": [
-            "Đái tháo đường type 2 (khi cần phối hợp metformin và glibenclamide).",
-        ],
+            "Đái tháo đường type 2 (khi cần phối hợp metformin và glibenclamide)."
+    ],
         "contraindications": [
             "Dị ứng với metformin, glibenclamide, hoặc sulfonylurea.",
             "Đái tháo đường type 1.",
             "Nhiễm toan ceton do đái tháo đường.",
             "Suy thận nặng (CrCl <30 ml/min/1.73m²).",
             "Nhiễm toan lactic.",
-            "Suy gan nặng.",
-        ],
+            "Suy gan nặng."
+    ],
         "dosage": {
             "adult_initial": "Metformin 500mg/Glibenclamide 2.5mg PO x 2 lần/ngày với bữa ăn.",
             "adult_maintenance": "Metformin 500mg/Glibenclamide 5mg PO x 2 lần/ngày với bữa ăn.",
@@ -335,88 +367,102 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "Buồn nôn, nôn, tiêu chảy (do metformin).",
             "Hạ đường huyết (do glibenclamide) - phổ biến và nghiêm trọng.",
             "Tăng cân (do glibenclamide).",
-            "Nhiễm toan lactic (do metformin) - hiếm nhưng nghiêm trọng.",
-        ],
+            "Nhiễm toan lactic (do metformin) - hiếm nhưng nghiêm trọng."
+    ],
         "interactions": [
             "Rượu: tăng nguy cơ hạ đường huyết và nhiễm toan lactic.",
-            "Beta-blocker: che dấu triệu chứng hạ đường huyết.",
-        ],
+            "Beta-blocker: che dấu triệu chứng hạ đường huyết."
+    ],
         "pregnancy": "B: metformin; C: glibenclamide - thận trọng trong thai kỳ.",
-        "mechanism_of_action": (
-            "Metformin giảm sản xuất glucose ở gan, tăng sử dụng glucose ở ngoại vi. "
-            "Glibenclamide kích thích tế bào beta tiết insulin. "
-            "Phối hợp hai thuốc có tác dụng hiệp đồng giảm đường huyết."
-        ),
+        "mechanism_of_action": """Metformin giảm sản xuất glucose ở gan, tăng sử dụng glucose ở ngoại vi. Glibenclamide kích thích tế bào beta tiết insulin. Phối hợp hai thuốc có tác dụng hiệp đồng giảm đường huyết.""",
         "monitoring": [
             "Đường huyết (HbA1c, glucose máu) trước và trong điều trị.",
             "Chức năng thận (creatinine, CrCl) - QUAN TRỌNG.",
             "Dấu hiệu hạ đường huyết - phổ biến và nghiêm trọng.",
-            "Dấu hiệu nhiễm toan lactic.",
-        ],
+            "Dấu hiệu nhiễm toan lactic."
+    ],
         "precautions": [
             "CHỐNG CHỈ ĐỊNH nếu CrCl <30 ml/min/1.73m².",
             "Nguy cơ hạ đường huyết cao (do glibenclamide) - theo dõi chặt chẽ.",
             "Nguy cơ nhiễm toan lactic - ngừng ngay nếu có triệu chứng.",
             "Uống với bữa ăn.",
-            "TRÁNH RƯỢU hoàn toàn.",
-        ],
+            "TRÁNH RƯỢU hoàn toàn."
+    ],
         "pharmacokinetics": {
             "half_life": "Metformin: ~6.2 giờ; Glibenclamide: ~10 giờ.",
             "onset": "Glibenclamide: 2-4 giờ; Metformin: vài ngày.",
             "duration": "12 giờ (dùng 2 lần/ngày).",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm.",
-        "black_box_warnings": (
-            "Nhiễm toan lactic: metformin có thể gây nhiễm toan lactic. "
-            "Hạ đường huyết: glibenclamide có thể gây hạ đường huyết nghiêm trọng."
-        ),
+        "black_box_warnings": """Nhiễm toan lactic: metformin có thể gây nhiễm toan lactic. Hạ đường huyết: glibenclamide có thể gây hạ đường huyết nghiêm trọng.""",
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Glucovance (metformin/glibenclamide)",
-                "ADA/EASD Diabetes Guidelines 2024",
-            ],
+                "ADA/EASD Diabetes Guidelines 2024"
+    ],
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
         "drug_interactions": {
             "major": [],
             "moderate": [],
-            "minor": []
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
-            "lactation_details": ""
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
         },
         "hepatic_adjustment": {
             "mild": "",
             "moderate": "",
-            "severe": ""
+            "severe": "",
+            "notes": "",
         },
         "overdose_management": {
             "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "antidote": "",
+            "treatment": [],
+            "monitoring": "",
         },
         "reversal_agents": {
             "available": False,
             "agents": [],
-            "notes": ""
+            "notes": "",
         },
         "administration_instructions": {
             "preparation": "",
             "administration": "",
-            "monitoring": []
+            "monitoring": [],
         },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
     },
-
-    "Metformin/Pioglitazone": {
+    "Metformin/Pioglitazone":     {
         "group": "Diabetes - Biguanide + Thiazolidinedione (Fixed-Dose Combination)",
         "vietnamese_name": "Metformin/Pioglitazone, Actoplus Met",
-        "administration": ["PO"],
+        "administration": [
+            "PO"
+    ],
         "indications": [
-            "Đái tháo đường type 2 (khi cần phối hợp metformin và pioglitazone).",
-        ],
+            "Đái tháo đường type 2 (khi cần phối hợp metformin và pioglitazone)."
+    ],
         "contraindications": [
             "Dị ứng với metformin, pioglitazone, hoặc TZD.",
             "Đái tháo đường type 1.",
@@ -424,8 +470,8 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "Suy thận nặng (CrCl <30 ml/min/1.73m²).",
             "Nhiễm toan lactic.",
             "Suy gan nặng.",
-            "Ung thư bàng quang.",
-        ],
+            "Ung thư bàng quang."
+    ],
         "dosage": {
             "adult_initial": "Metformin 500mg/Pioglitazone 15mg PO x 2 lần/ngày với bữa ăn.",
             "adult_maintenance": "Metformin 500mg/Pioglitazone 15mg hoặc Metformin 850mg/Pioglitazone 15mg PO x 2 lần/ngày với bữa ăn.",
@@ -442,79 +488,92 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "Tăng cân (do pioglitazone).",
             "Gãy xương (phụ nữ có nguy cơ tăng).",
             "Nhiễm toan lactic (do metformin).",
-            "Ung thư bàng quang (tăng nhẹ nguy cơ do pioglitazone).",
-        ],
+            "Ung thư bàng quang (tăng nhẹ nguy cơ do pioglitazone)."
+    ],
         "interactions": [
-            "Insulin: tăng nguy cơ suy tim, phù.",
-        ],
+            "Insulin: tăng nguy cơ suy tim, phù."
+    ],
         "pregnancy": "B: metformin; C: pioglitazone - thận trọng trong thai kỳ.",
-        "mechanism_of_action": (
-            "Metformin giảm sản xuất glucose ở gan, tăng sử dụng glucose ở ngoại vi. "
-            "Pioglitazone tăng nhạy cảm với insulin ở mô ngoại vi. "
-            "Phối hợp hai thuốc có tác dụng hiệp đồng giảm đường huyết."
-        ),
+        "mechanism_of_action": """Metformin giảm sản xuất glucose ở gan, tăng sử dụng glucose ở ngoại vi. Pioglitazone tăng nhạy cảm với insulin ở mô ngoại vi. Phối hợp hai thuốc có tác dụng hiệp đồng giảm đường huyết.""",
         "monitoring": [
             "Đường huyết (HbA1c, glucose máu) trước và trong điều trị.",
             "Chức năng thận (creatinine, CrCl) - QUAN TRỌNG.",
             "Dấu hiệu suy tim, phù (do pioglitazone).",
             "Dấu hiệu nhiễm toan lactic.",
-            "Gãy xương (đặc biệt ở phụ nữ).",
-        ],
+            "Gãy xương (đặc biệt ở phụ nữ)."
+    ],
         "precautions": [
             "CHỐNG CHỈ ĐỊNH nếu suy tim (NYHA class III-IV).",
             "CHỐNG CHỈ ĐỊNH nếu CrCl <30 ml/min/1.73m².",
             "Nguy cơ giữ nước, phù, suy tim - ngừng ngay nếu có dấu hiệu.",
             "Nguy cơ nhiễm toan lactic.",
-            "Uống với bữa ăn.",
-        ],
+            "Uống với bữa ăn."
+    ],
         "pharmacokinetics": {
             "half_life": "Metformin: ~6.2 giờ; Pioglitazone: 16-24 giờ.",
             "onset": "Metformin: vài ngày; Pioglitazone: 2-4 tuần.",
             "duration": "12 giờ (dùng 2 lần/ngày).",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm.",
-        "black_box_warnings": (
-            "Suy tim: pioglitazone có thể gây suy tim. "
-            "Nhiễm toan lactic: metformin có thể gây nhiễm toan lactic."
-        ),
+        "black_box_warnings": "Suy tim: pioglitazone có thể gây suy tim. Nhiễm toan lactic: metformin có thể gây nhiễm toan lactic.",
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Actoplus Met (metformin/pioglitazone)",
-                "ADA/EASD Diabetes Guidelines 2024",
-            ],
+                "ADA/EASD Diabetes Guidelines 2024"
+    ],
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
         "drug_interactions": {
             "major": [],
             "moderate": [],
-            "minor": []
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
-            "lactation_details": ""
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
         },
         "hepatic_adjustment": {
             "mild": "",
             "moderate": "",
-            "severe": ""
+            "severe": "",
+            "notes": "",
         },
         "overdose_management": {
             "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "antidote": "",
+            "treatment": [],
+            "monitoring": "",
         },
         "reversal_agents": {
             "available": False,
             "agents": [],
-            "notes": ""
+            "notes": "",
         },
         "administration_instructions": {
             "preparation": "",
             "administration": "",
-            "monitoring": []
+            "monitoring": [],
         },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
     },
     "Metformin/Sitagliptin": {
         "group": "Diabetes - Biguanide + DPP-4 Inhibitor (Fixed-Dose Combination)",
@@ -669,6 +728,20 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
     },
 
 }

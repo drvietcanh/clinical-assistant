@@ -35,7 +35,24 @@ ANTIHISTAMINES_DRUGS = {
             "Rối loạn tâm thần (người già)"
         ],
         "mechanism_of_action": "Đối kháng thụ thể Histamin H1 (có qua hàng rào máu não -> gây buồn ngủ) & Kháng Cholinergic.",
-        "monitoring": ["Mức độ tỉnh táo", "Bí tiểu"]
+        "monitoring": ["Mức độ tỉnh táo", "Bí tiểu"],
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "FDA Warning - Gây buồn ngủ mạnh, tránh lái xe/vận hành máy móc",
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
     },
 
     "Chlorpheniramine": {
@@ -53,7 +70,23 @@ ANTIHISTAMINES_DRUGS = {
             "notes": "Gây buồn ngủ (nhẹ hơn Diphenhydramine)."
         },
         "side_effects": ["Buồn ngủ", "Khô miệng"],
-        "pregnancy": "B (An toàn cho thai kỳ - thường dùng)"
+        "pregnancy": "B (An toàn cho thai kỳ - thường dùng)",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
     },
 
     "Cetirizine": {
@@ -75,7 +108,23 @@ ANTIHISTAMINES_DRUGS = {
             "under_30": "5 mg mỗi 2 ngày hoặc 5 mg/ngày tùy mức độ."
         },
         "side_effects": ["Buồn ngủ nhẹ", "Khô miệng"],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
     },
 
     "Loratadine": {
@@ -92,7 +141,23 @@ ANTIHISTAMINES_DRUGS = {
             "notes": "Thực sự không gây buồn ngủ (non-sedating). Chỉnh liều suy gan/thận (10 mg mỗi 2 ngày)."
         },
         "side_effects": ["Đau đầu", "Khô miệng (nhẹ)"],
-        "pregnancy": "B"
+        "pregnancy": "B",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["LFT", "RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
     },
 
     "Fexofenadine": {
@@ -110,7 +175,24 @@ ANTIHISTAMINES_DRUGS = {
             "notes": "KHÔNG uống cùng nước hoa quả (táo, cam, bưởi) - giảm hấp thu mạnh. An toàn nhất cho phi công/lái xe."
         },
         "side_effects": ["Đau đầu", "Buồn nôn"],
-        "pregnancy": "C (Thận trọng - Loratadine/Cetirizine ưu tiên hơn)"
+        "pregnancy": "C (Thận trọng - Loratadine/Cetirizine ưu tiên hơn)",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "FDA Warning - KHÔNG uống cùng nước hoa quả (táo, cam, bưởi) - giảm hấp thu mạnh",
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
     },
 
     "Desloratadine": {
@@ -126,6 +208,22 @@ ANTIHISTAMINES_DRUGS = {
             "adult": "5 mg uống 1 lần/ngày.",
             "notes": "Chất chuyển hóa hoạt tính của Loratadine. Tác dụng mạnh và kéo dài."
         },
-        "pregnancy": "C"
-    }
+        "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
+        }
 }

@@ -22,9 +22,9 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Nôn mửa (ít hơn cisplatin)',
         'Độc thận (ít hơn cisplatin nhưng vẫn có)', 'Rụng tóc (ít)',
         'Độc thần kinh (ít hơn cisplatin)', 'Phản ứng dị ứng (hiếm)',
-        'Hạ magne máu'], 'interactions': ['Aminoglycosides: tăng độc thận',
+        'Hạ magne máu'],
         'Thuốc độc thận: tránh dùng đồng thời',
-        'Phenytoin: giảm nồng độ phenytoin'], 'pregnancy': 'D - Chống chỉ định',
+        'Phenytoin: giảm nồng độ phenytoin'],
         'mechanism_of_action':
         'Carboplatin là hợp chất platinum tương tự cisplatin, gây liên kết chéo DNA và ngăn chặn quá trình sao chép DNA. Cơ chế tác dụng giống cisplatin nhưng có cấu trúc hóa học khác (thay nhóm amin bằng cyclobutanedicarboxylate). Tác dụng trên nhiều loại ung thư tương tự cisplatin. Ưu điểm: ít độc thận và độc thần kinh hơn cisplatin, nhưng gây myelosuppression nhiều hơn. Liều được tính theo AUC (Area Under Curve) dựa trên GFR để đảm bảo hiệu quả và giảm độc tính'
         , 'monitoring': [
@@ -63,7 +63,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Tăng độc thận tích lũy', 'effect': 'Tăng nguy cơ suy thận cấp',
         'management':
         'Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận.'}
-        ], 'moderate': [{'drug': 'Phenytoin', 'mechanism':
+        ], 'mechanism':
         'Carboplatin có thể giảm nồng độ phenytoin', 'effect':
         'Giảm nồng độ phenytoin, tăng nguy cơ co giật', 'management':
         'Theo dõi nồng độ phenytoin. Tăng liều phenytoin nếu cần.'}, {'drug':
@@ -184,7 +184,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'mechanism': 'Tăng độc thận tích lũy', 'effect':
         'Tăng nguy cơ suy thận cấp', 'management':
         'Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận chặt chẽ.'
-        }], 'moderate': [{'drug': 'Phenytoin', 'mechanism':
+        }], 'mechanism':
         'Cisplatin có thể giảm hấp thu phenytoin', 'effect':
         'Giảm nồng độ phenytoin, tăng nguy cơ co giật', 'management':
         'Theo dõi nồng độ phenytoin. Tăng liều phenytoin nếu cần.'}, {'drug':
@@ -238,7 +238,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Pha với NS 0.9% để nồng độ 0.5-1mg/mL. Không dùng D5W (không ổn định)',
         'infusion_rate':
         'Truyền 50-100mg/m² trong 1-2 giờ. Không quá 100mg/phút',
-        'compatibility': ['NS 0.9%'], 'incompatibility': ['D5W',
+        'compatibility': ['NS 0.9%'],
         'Dung dịch chứa clorua', 'Các thuốc khác'], 'notes':
         'PHẢI có pre-hydration (1-2L NS trước) và post-hydration (1-2L NS sau) để giảm độc thận. Truyền với NS 0.9% để tăng thải trừ. Theo dõi lượng nước tiểu (đảm bảo >100ml/giờ).'
         }}, 'references': {'primary_sources': [
@@ -317,7 +317,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Suy thận nặng (CrCl <30) - giảm liều 25-50%, theo dõi chặt chẽ',
         'Suy gan nặng - thận trọng, có thể cần giảm liều',
         'Bệnh nhân có tiền sử độc thần kinh - tăng nguy cơ độc thần kinh nặng']
-        }, 'pregnancy_lactation': {'fda_category': 'D', 'pregnancy_details':
+        ', 'pregnancy_details':
         'Chống chỉ định trong thai kỳ. Oxaliplatin gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.'
         , 'lactation': {'safety': 'Incompatible', 'details':
         'Oxaliplatin bài tiết vào sữa mẹ. Thuốc có thể gây độc tính nghiêm trọng cho trẻ sơ sinh.'
@@ -331,7 +331,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Độc lạnh nặng (tê, cảm giác như bị điện giật khi tiếp xúc lạnh)',
         'Độc thần kinh ngoại biên nặng (tê bì, mất cảm giác)', 'Nôn mửa nặng',
         'Tiêu chảy nặng', 'Giảm bạch cầu, tiểu cầu nặng',
-        'Phản ứng dị ứng nặng'], 'antidote': 'Không có antidote đặc hiệu',
+        'Phản ứng dị ứng nặng'],
         'treatment': ['Ngừng ngay oxaliplatin',
         'Tránh tiếp xúc với lạnh (quan trọng)',
         'Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu nếu cần',
@@ -352,6 +352,8 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'FDA Drug Label - Oxaliplatin (Eloxatin)',
         'UpToDate - Oxaliplatin Drug Information',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
-        'last_updated': '2025-01-15', 'evidence_level': 'High (FDA-approved, extensive clinical data)'}}}
+        'last_updated': '2025-01-15', "evidence_level": "High (FDA-approved, extensive clinical data)"
+        }
+    }
 
 __all__ = ['PLATINUM_COMPOUNDS_DRUGS']

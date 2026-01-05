@@ -135,7 +135,22 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["C. difficile colitis (rare, if systemic absorption occurs)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in acne)", "Signs of skin irritation (redness, dryness)", "Signs of C. difficile colitis (diarrhea, abdominal pain) - rare"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Acne Treatment",
+                "FDA Drug Information - Clindamycin Topical",
+                "UpToDate - Acne Treatment"
+            ]
         },
 
         "Erythromycin topical": {
@@ -261,7 +276,22 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Antibiotic resistance (if used long-term)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in acne)", "Signs of skin irritation (redness, dryness)", "Signs of antibiotic resistance (if used long-term)"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Acne Treatment",
+                "FDA Drug Information - Erythromycin Topical",
+                "UpToDate - Acne Treatment"
+            ]
         },
 
         "Fusidic Acid": {
@@ -377,7 +407,22 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Antibiotic resistance (if used long-term)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in infection)", "Signs of skin irritation", "Signs of antibiotic resistance (if used long-term)"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Skin Infections",
+                "IDSA Guidelines - Skin and Soft Tissue Infections",
+                "FDA Drug Information - Fusidic Acid Topical"
+            ]
         },
 
         "Metronidazole topical": {
@@ -507,7 +552,22 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in redness, reduction in rosacea pustules) - improvement after 4-8 weeks", "Signs of skin irritation (redness, burning, itching, dryness, peeling)", "Signs of allergic reaction"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Rosacea Treatment",
+                "FDA Drug Information - Metronidazole Topical",
+                "UpToDate - Rosacea Treatment"
+            ]
         },
 
         "Metronidazole topical": {
@@ -630,7 +690,22 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in rosacea)", "Signs of skin irritation (redness, burning, dryness)", "Signs of infection (if any)"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Rosacea Treatment",
+                "FDA Drug Information - Metronidazole Topical",
+                "UpToDate - Rosacea Treatment"
+            ]
         },
 
         "Mupirocin topical": {
@@ -761,7 +836,23 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Antibiotic resistance (if used long-term or incorrectly) - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in redness, swelling, pus) - improvement after 2-3 days", "Signs of skin irritation (increased redness, burning, itching)", "Signs of infection (pus, increased redness/swelling) - if no improvement", "Signs of antibiotic resistance (infection not improving after 5-7 days) - CRITICAL"]
+            },
+            "guideline_tags": [
+                "IDSA Guidelines - Skin and Soft Tissue Infections",
+                "AAD Guidelines - Skin Infections",
+                "FDA Drug Information - Mupirocin Topical",
+                "CDC Guidelines - Antibiotic Stewardship"
+            ]
         },
 
 }

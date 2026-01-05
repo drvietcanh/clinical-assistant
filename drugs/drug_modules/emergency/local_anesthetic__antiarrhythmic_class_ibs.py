@@ -69,7 +69,7 @@ LOCAL_ANESTHETIC_ANTIARRHYTHMIC_CLASS_IB_DRUGS = {
         'Tăng nồng độ lidocaine, tăng nguy cơ độc tính thần kinh trung ương và độc tính tim mạch'
         , 'management':
         'GIẢM LIỀU lidocaine xuống 30-50% khi dùng với cimetidine. Theo dõi chặt chẽ dấu hiệu độc tính. Có thể dùng ranitidine hoặc famotidine thay thế cimetidine.'
-        }], 'moderate': [{'drug': 'Phenytoin', 'mechanism':
+        }], 'mechanism':
         'Phenytoin có thể tăng độc tính của lidocaine (cơ chế không rõ ràng, có thể liên quan đến tác dụng trên hệ thần kinh trung ương).'
         , 'effect':
         'Tăng nguy cơ độc tính thần kinh trung ương (co giật, lú lẫn)',

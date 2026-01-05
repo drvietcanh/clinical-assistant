@@ -1,193 +1,295 @@
 """
-Drug CLI - Command line interface để quản lý thuốc
-Sử dụng: python -m drugs.drug_cli <command> [args]
+CLI Tool cho quản lý thuốc
+Commands: search, find, check-fields, stats, missing-fields, export
 """
-
-import sys
 import argparse
-from .drug_index import (
-    search_drugs,
-    find_drug_location,
-    get_module_info,
-    list_all_modules,
-    get_drugs_by_module,
-    MODULE_METADATA,
-)
-from .drug_manager import (
-    find_drug_file,
-    list_duplicate_drugs,
-    get_module_statistics,
-    export_module_structure,
-    suggest_drug_placement,
-)
+import json
+import sys
+from pathlib import Path
+from typing import List, Optional
+
+from .drug_index_system import DrugIndex, get_drug_index
+from .drug_manager_tool import DrugManager, get_drug_manager
 
 def cmd_search(args):
-    """Tìm kiếm thuốc"""
-    results = search_drugs(args.query, args.module, args.by)
+    """Command: search - Tìm kiếm thuốc"""
+    index = get_drug_index()
+    results = index.search(args.query, fuzzy=args.fuzzy)
     
     if not results:
-        print(f"Không tìm thấy thuốc nào với từ khóa '{args.query}'")
+        print(f"No drugs found matching '{args.query}'")
         return
     
-    print(f"\nTìm thấy {len(results)} thuốc:\n")
-    print(f"{'Tên thuốc':<40} {'Module':<25} {'Nhóm':<30}")
-    print("-" * 100)
-    
-    for drug_name, module_name, drug_data in results[:args.limit]:
-        group = drug_data.get("group", "N/A")
-        print(f"{drug_name:<40} {module_name:<25} {group[:30]:<30}")
-    
-    if len(results) > args.limit:
-        print(f"\n... và {len(results) - args.limit} kết quả khác")
-
-def cmd_find(args):
-    """Tìm vị trí file chứa thuốc"""
-    locations = find_drug_location(args.drug_name)
-    
-    if not locations:
-        print(f"Không tìm thấy thuốc '{args.drug_name}'")
-        return
-    
-    print(f"\nThuốc '{args.drug_name}' được tìm thấy trong:\n")
-    for module_name, file_path in locations:
-        print(f"  Module: {module_name}")
-        print(f"  File: {file_path}")
-        
-        # Try to find exact file
-        exact_file = find_drug_file(args.drug_name)
-        if exact_file:
-            print(f"  File chính xác: {exact_file}")
+    print(f"Found {len(results)} drug(s):")
+    for i, drug_name in enumerate(results[:args.limit], 1):
+        drug_info = index.get_drug_info(drug_name)
+        if drug_info:
+            module = drug_info.get('module', 'unknown')
+            group = drug_info.get('group', 'N/A')
+            print(f"{i}. {drug_name}")
+            print(f"   Module: {module}")
+            print(f"   Group: {group}")
+            if args.verbose:
+                print(f"   File: {drug_info.get('file', 'N/A')}")
+        else:
+            print(f"{i}. {drug_name}")
         print()
 
-def cmd_list_modules(args):
-    """Liệt kê tất cả modules"""
-    modules = list_all_modules(args.sort)
+def cmd_find(args):
+    """Command: find - Tìm file chứa thuốc"""
+    manager = get_drug_manager()
+    files = manager.find_drug_file(args.drug_name)
     
-    print(f"\n{'Module':<30} {'Code':<8} {'Số lượng':<12} {'Mô tả':<50}")
-    print("-" * 100)
-    
-    for module in modules:
-        name = module.get("name", "")
-        code = module.get("code", "")
-        count = module.get("count", 0)
-        desc = module.get("description", "")[:48]
-        print(f"{name:<30} {code:<8} {count:<12} {desc:<50}")
-
-def cmd_module_info(args):
-    """Thông tin chi tiết về module"""
-    info = get_module_info(args.module)
-    
-    if not info:
-        print(f"Không tìm thấy module '{args.module}'")
+    if not files:
+        print(f"Drug '{args.drug_name}' not found")
         return
     
-    print(f"\nThông tin module: {args.module}\n")
-    print(f"Code: {info.get('code', 'N/A')}")
-    print(f"Mô tả: {info.get('description', 'N/A')}")
-    print(f"File path: {info.get('file_path', 'N/A')}")
-    print(f"Độ ưu tiên: {info.get('priority', 'N/A')}")
-    print(f"\nTừ khóa: {', '.join(info.get('keywords', []))}")
-    print(f"\nDanh mục con:")
-    for subcat in info.get('subcategories', []):
-        print(f"  - {subcat}")
-    
-    # List drugs in module
-    drugs = get_drugs_by_module(args.module, "name")
-    print(f"\nSố thuốc: {len(drugs)}")
-    if args.show_drugs:
-        print("\nDanh sách thuốc:")
-        for i, drug_name in enumerate(list(drugs.keys())[:20], 1):
-            print(f"  {i}. {drug_name}")
-        if len(drugs) > 20:
-            print(f"  ... và {len(drugs) - 20} thuốc khác")
+    print(f"Drug '{args.drug_name}' found in:")
+    for file_path in files:
+        print(f"  - {file_path}")
 
-def cmd_duplicates(args):
-    """Tìm thuốc trùng lặp"""
-    duplicates = list_duplicate_drugs()
+def cmd_check_fields(args):
+    """Command: check-fields - Kiểm tra field của thuốc"""
+    manager = get_drug_manager()
+    index = get_drug_index()
     
-    if not duplicates:
-        print("\nKhông có thuốc trùng lặp")
+    drug_info = index.get_drug_info(args.drug_name)
+    if not drug_info:
+        print(f"Drug '{args.drug_name}' not found")
         return
     
-    print(f"\nTìm thấy {len(duplicates)} thuốc trùng lặp:\n")
-    print(f"{'Tên thuốc':<40} {'Số module':<12} {'Modules':<50}")
-    print("-" * 110)
+    # Get full drug data
+    try:
+        from drugs.drug_database import DRUG_DATABASE
+        drug_data = DRUG_DATABASE.get(args.drug_name, {})
+    except ImportError:
+        drug_data = drug_info
     
-    for dup in duplicates[:args.limit]:
-        drug_name = dup["drug_name"]
-        count = dup["count"]
-        modules = ", ".join(dup["modules"])
-        print(f"{drug_name:<40} {count:<12} {modules[:48]:<50}")
+    validation = manager.validate_drug_structure(drug_data)
     
-    if len(duplicates) > args.limit:
-        print(f"\n... và {len(duplicates) - args.limit} thuốc trùng lặp khác")
+    print(f"Field check for '{args.drug_name}':")
+    print(f"Valid: {validation['valid']}")
+    
+    if validation['errors']:
+        print("\nErrors:")
+        for error in validation['errors']:
+            print(f"  - {error}")
+    
+    if validation['warnings']:
+        print("\nWarnings:")
+        for warning in validation['warnings']:
+            print(f"  - {warning}")
+    
+    if validation['missing_fields']:
+        print("\nMissing fields:")
+        for field in validation['missing_fields']:
+            print(f"  - {field}")
+    
+    if validation['extra_fields']:
+        print("\nExtra fields:")
+        for field in validation['extra_fields']:
+            print(f"  - {field}")
 
-def cmd_statistics(args):
-    """Thống kê tổng quan"""
-    stats = get_module_statistics()
+def cmd_stats(args):
+    """Command: stats - Thống kê"""
+    index = get_drug_index()
+    stats = index.get_statistics()
     
-    print("\n" + "=" * 80)
-    print("THỐNG KÊ HỆ THỐNG THUỐC")
-    print("=" * 80)
+    if args.module:
+        # Stats for specific module
+        drugs = index.search_by_module(args.module)
+        print(f"Module '{args.module}':")
+        print(f"  Total drugs: {len(drugs)}")
+        if args.verbose:
+            print("\nDrugs:")
+            for drug_name in sorted(drugs)[:20]:
+                print(f"  - {drug_name}")
+    else:
+        # Overall stats
+        print("Drug System Statistics:")
+        print(f"  Total drugs: {stats['total_drugs']}")
+        print(f"  Total modules: {stats['total_modules']}")
+        print(f"  Total groups: {stats['total_groups']}")
+        print(f"  Total indications: {stats['total_indications']}")
+        print(f"  Total fields: {stats['total_fields']}")
+        
+        if args.verbose:
+            print("\nModules:")
+            for module, count in sorted(stats['modules'].items(), key=lambda x: x[1], reverse=True):
+                print(f"  {module}: {count} drugs")
+            
+            print("\nTop Groups:")
+            for group, count in sorted(stats['groups'].items(), key=lambda x: x[1], reverse=True)[:10]:
+                print(f"  {group}: {count} drugs")
+
+def cmd_missing_fields(args):
+    """Command: missing-fields - Tìm thuốc thiếu field"""
+    from check_all_drug_fields_comprehensive import scan_all_drugs, generate_statistics
     
-    total = sum(s["count"] for s in stats.values())
-    print(f"\nTổng số thuốc: {total}")
-    print(f"Số module: {len(stats)}\n")
+    print("Scanning all drugs...")
+    all_drugs = scan_all_drugs()
     
-    # Sort by count
-    sorted_stats = sorted(stats.items(), key=lambda x: x[1]["count"], reverse=True)
+    if args.module and args.module != 'all':
+        # Filter by module
+        filtered = {}
+        for drug_name, drug_info in all_drugs.items():
+            module = drug_info.get('file', '').split('/')[2] if '/' in drug_info.get('file', '') else 'unknown'
+            if module == args.module:
+                filtered[drug_name] = drug_info
+        all_drugs = filtered
     
-    print(f"{'Module':<30} {'Code':<8} {'Số lượng':<12} {'%':<10}")
-    print("-" * 80)
+    # Find drugs with missing fields
+    STANDARD_14_FIELDS = [
+        "group", "vietnamese_name", "administration", "indications", "dosage",
+        "side_effects", "contraindications", "interactions", "pregnancy",
+        "mechanism_of_action", "monitoring", "precautions", "pharmacokinetics", "storage"
+    ]
     
-    for module_name, data in sorted_stats:
-        count = data["count"]
-        percentage = (count / total * 100) if total > 0 else 0
-        code = data.get("code", "")
-        print(f"{module_name:<30} {code:<8} {count:<12} {percentage:>6.1f}%")
+    ADDITIONAL_8_FIELDS = [
+        "black_box_warnings", "drug_interactions", "pregnancy_lactation",
+        "hepatic_adjustment", "overdose_management", "reversal_agents",
+        "administration_instructions", "references"
+    ]
+    
+    missing_drugs = []
+    for drug_name, drug_info in all_drugs.items():
+        missing_standard = [f for f in STANDARD_14_FIELDS if f not in drug_info.get('fields', [])]
+        missing_additional = [f for f in ADDITIONAL_8_FIELDS if f not in drug_info.get('fields', [])]
+        
+        if missing_standard or (missing_additional and args.include_additional):
+            missing_drugs.append({
+                'name': drug_name,
+                'file': drug_info.get('file', 'N/A'),
+                'missing_standard': missing_standard,
+                'missing_additional': missing_additional,
+                'missing_count': len(missing_standard) + (len(missing_additional) if args.include_additional else 0)
+            })
+    
+    # Sort by missing count
+    missing_drugs.sort(key=lambda x: x['missing_count'], reverse=True)
+    
+    print(f"\nFound {len(missing_drugs)} drugs with missing fields:")
+    for drug in missing_drugs[:args.limit]:
+        print(f"\n{drug['name']} ({drug['missing_count']} missing):")
+        print(f"  File: {drug['file']}")
+        if drug['missing_standard']:
+            print(f"  Missing standard: {', '.join(drug['missing_standard'])}")
+        if drug['missing_additional'] and args.include_additional:
+            print(f"  Missing additional: {', '.join(drug['missing_additional'])}")
 
 def cmd_export(args):
-    """Xuất cấu trúc module"""
-    output_file = export_module_structure(args.output)
-    print(f"\nĐã xuất cấu trúc module ra file: {output_file}")
+    """Command: export - Export dữ liệu"""
+    index = get_drug_index()
+    manager = get_drug_manager()
+    
+    if args.drug:
+        # Export single drug
+        drug_info = index.get_drug_info(args.drug)
+        if not drug_info:
+            print(f"Drug '{args.drug}' not found")
+            return
+        
+        try:
+            from drugs.drug_database import DRUG_DATABASE
+            drug_data = DRUG_DATABASE.get(args.drug, {})
+        except ImportError:
+            drug_data = drug_info
+        
+        if args.format == 'json':
+            output = json.dumps({args.drug: drug_data}, indent=2, ensure_ascii=False)
+        else:
+            output = manager.export_drug(args.drug, format='python')
+        
+        if args.output:
+            with open(args.output, 'w', encoding='utf-8') as f:
+                f.write(output)
+            print(f"Exported to {args.output}")
+        else:
+            print(output)
+    
+    elif args.module:
+        # Export module
+        drugs = index.search_by_module(args.module)
+        if not drugs:
+            print(f"No drugs found in module '{args.module}'")
+            return
+        
+        try:
+            from drugs.drug_database import DRUG_DATABASE
+            module_data = {name: DRUG_DATABASE.get(name, {}) for name in drugs}
+        except ImportError:
+            module_data = {name: index.get_drug_info(name) for name in drugs}
+        
+        output = json.dumps(module_data, indent=2, ensure_ascii=False)
+        
+        if args.output:
+            with open(args.output, 'w', encoding='utf-8') as f:
+                f.write(output)
+            print(f"Exported {len(drugs)} drugs to {args.output}")
+        else:
+            print(output)
+    
+    else:
+        # Export all
+        print("Exporting all drugs...")
+        try:
+            from drugs.drug_database import DRUG_DATABASE
+            all_data = DRUG_DATABASE
+        except ImportError:
+            all_data = {name: index.get_drug_info(name) for name in index.drugs.keys()}
+        
+        output = json.dumps(all_data, indent=2, ensure_ascii=False)
+        
+        if args.output:
+            with open(args.output, 'w', encoding='utf-8') as f:
+                f.write(output)
+            print(f"Exported {len(all_data)} drugs to {args.output}")
+        else:
+            print(output[:1000] + "..." if len(output) > 1000 else output)
 
 def main():
-    parser = argparse.ArgumentParser(description="Drug Database Management CLI")
+    """Main CLI entry point"""
+    parser = argparse.ArgumentParser(description='Drug Management CLI Tool')
     subparsers = parser.add_subparsers(dest='command', help='Commands')
     
-    # Search command
-    search_parser = subparsers.add_parser('search', help='Tìm kiếm thuốc')
-    search_parser.add_argument('query', help='Từ khóa tìm kiếm')
-    search_parser.add_argument('--module', help='Giới hạn trong module')
-    search_parser.add_argument('--by', choices=['name', 'keyword', 'group', 'indication', 'all'],
-                               default='all', help='Cách tìm kiếm')
-    search_parser.add_argument('--limit', type=int, default=20, help='Số kết quả tối đa')
+    # search command
+    search_parser = subparsers.add_parser('search', help='Search drugs')
+    search_parser.add_argument('query', help='Search query')
+    search_parser.add_argument('--fuzzy', action='store_true', help='Use fuzzy search')
+    search_parser.add_argument('--limit', type=int, default=10, help='Limit results')
+    search_parser.add_argument('--verbose', '-v', action='store_true', help='Verbose output')
+    search_parser.set_defaults(func=cmd_search)
     
-    # Find command
-    find_parser = subparsers.add_parser('find', help='Tìm file chứa thuốc')
-    find_parser.add_argument('drug_name', help='Tên thuốc')
+    # find command
+    find_parser = subparsers.add_parser('find', help='Find file containing drug')
+    find_parser.add_argument('drug_name', help='Drug name')
+    find_parser.set_defaults(func=cmd_find)
     
-    # List modules command
-    list_parser = subparsers.add_parser('list', help='Liệt kê modules')
-    list_parser.add_argument('--sort', choices=['name', 'priority', 'count'],
-                            default='name', help='Cách sắp xếp')
+    # check-fields command
+    check_parser = subparsers.add_parser('check-fields', help='Check drug fields')
+    check_parser.add_argument('drug_name', help='Drug name')
+    check_parser.set_defaults(func=cmd_check_fields)
     
-    # Module info command
-    info_parser = subparsers.add_parser('info', help='Thông tin module')
-    info_parser.add_argument('module', help='Tên module')
-    info_parser.add_argument('--show-drugs', action='store_true', help='Hiển thị danh sách thuốc')
+    # stats command
+    stats_parser = subparsers.add_parser('stats', help='Show statistics')
+    stats_parser.add_argument('--module', help='Module name (optional)')
+    stats_parser.add_argument('--verbose', '-v', action='store_true', help='Verbose output')
+    stats_parser.set_defaults(func=cmd_stats)
     
-    # Duplicates command
-    dup_parser = subparsers.add_parser('duplicates', help='Tìm thuốc trùng lặp')
-    dup_parser.add_argument('--limit', type=int, default=20, help='Số kết quả tối đa')
+    # missing-fields command
+    missing_parser = subparsers.add_parser('missing-fields', help='Find drugs with missing fields')
+    missing_parser.add_argument('--module', default='all', help='Module name (default: all)')
+    missing_parser.add_argument('--include-additional', action='store_true', help='Include additional fields')
+    missing_parser.add_argument('--limit', type=int, default=20, help='Limit results')
+    missing_parser.set_defaults(func=cmd_missing_fields)
     
-    # Statistics command
-    stats_parser = subparsers.add_parser('stats', help='Thống kê')
-    
-    # Export command
-    export_parser = subparsers.add_parser('export', help='Xuất cấu trúc')
-    export_parser.add_argument('--output', default='drug_module_structure.json',
-                              help='File output')
+    # export command
+    export_parser = subparsers.add_parser('export', help='Export drugs')
+    export_parser.add_argument('--drug', help='Drug name (optional)')
+    export_parser.add_argument('--module', help='Module name (optional)')
+    export_parser.add_argument('--format', choices=['json', 'python'], default='json', help='Export format')
+    export_parser.add_argument('--output', '-o', help='Output file (optional)')
+    export_parser.set_defaults(func=cmd_export)
     
     args = parser.parse_args()
     
@@ -195,18 +297,14 @@ def main():
         parser.print_help()
         return
     
-    commands = {
-        'search': cmd_search,
-        'find': cmd_find,
-        'list': cmd_list_modules,
-        'info': cmd_module_info,
-        'duplicates': cmd_duplicates,
-        'stats': cmd_statistics,
-        'export': cmd_export,
-    }
-    
-    commands[args.command](args)
+    try:
+        args.func(args)
+    except Exception as e:
+        print(f"Error: {e}", file=sys.stderr)
+        import traceback
+        if args.verbose if hasattr(args, 'verbose') else False:
+            traceback.print_exc()
+        sys.exit(1)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-

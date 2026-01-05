@@ -109,5 +109,5 @@ INDUCTION_AGENTS = {
         ],
         "mechanism_of_action": "GABA Modulator.",
         "monitoring": ["Huyết áp", "Dấu hiệu suy thượng thận (nếu dùng truyền liên tục - Không khuyến cáo)"]
-    }
+        }
 }

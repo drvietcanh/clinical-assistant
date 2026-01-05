@@ -5,8 +5,8 @@ Active module - contains all analgesic drug data"""
 
 OPIOID_AGONIST_WEAKS_DRUGS = {
     "Codeine": {'group': 'Analgesic - Opioid Agonist (Weak)', 'vietnamese_name': 'Codeine',
-        'administration': ['PO'], 'indications': ['Đau nhẹ đến trung bình',
-        'Ho không hiệu quả (chỉ định hạn chế)', 'Đau sau phẫu thuật nhỏ'],
+        'administration': ['PO'], 'indications': [
+        'Đau nhẹ đến trung bình', 'Ho không hiệu quả (chỉ định hạn chế)', 'Đau sau phẫu thuật nhỏ'],
         'contraindications': ['Ngộ độc cấp tính opioid', 'Suy hô hấp nặng',
         'Hen phế quản nặng', 'Tắc ruột cơ học', 'Trẻ em <12 tuổi (ho)',
         'Trẻ em <18 tuổi sau cắt amidan/VA'], 'dosage': {'adult_pain':
@@ -19,7 +19,7 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
         'Ức chế hô hấp (liều cao)', 'Ngứa', 'Nguy cơ nghiện'], 'interactions':
         ['Thuốc an thần: tăng tác dụng an thần',
         'Rượu: tăng nguy cơ ức chế hô hấp', 'CYP2D6 inhibitors: giảm hiệu quả',
-        'Quinidine: giảm chuyển hóa thành morphine'], 'pregnancy': 'C',
+        'Quinidine: giảm chuyển hóa thành morphine'],
         'mechanism_of_action':
         'Prodrug của morphine. Codeine tự thân không có tác dụng giảm đau, cần chuyển hóa qua enzyme CYP2D6 ở gan để tạo thành morphine (active metabolite). Morphine gắn với mu-opioid receptors, ức chế dẫn truyền đau, tăng ngưỡng đau, giảm đáp ứng với kích thích đau. Tác dụng yếu hơn morphine trực tiếp. Có tác dụng chống ho do ức chế trung tâm ho. Hiệu quả phụ thuộc vào genotype CYP2D6 (poor metabolizers → không hiệu quả, ultra-rapid metabolizers → nguy cơ quá liều).'
         , 'monitoring': ['Mức độ đau (thang điểm đau) - đánh giá hiệu quả',
@@ -42,7 +42,7 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
         'Nếu không hiệu quả → có thể do poor CYP2D6 metabolizer, cân nhắc dùng opioid khác'
         , 'Trẻ em <12 tuổi: không dùng cho ho (nguy cơ ức chế hô hấp)',
         'Trẻ em <18 tuổi sau cắt amidan/VA: chống chỉ định (nguy cơ ức chế hô hấp nghiêm trọng)'
-        ], 'pharmacokinetics': {'half_life': '2.5-4 giờ', 'onset': '30-60 phút',
+        ], 'onset': '30-60 phút',
         'duration': '4-6 giờ', 'protein_binding': '7-25%', 'metabolism':
         'Gan: chuyển hóa qua CYP2D6 thành morphine (10% codeine → morphine), CYP3A4 thành norcodeine (không hoạt động)'
         , 'clearance': 'Chủ yếu qua thận (thải trừ)'}, 'storage':
@@ -121,13 +121,28 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
         , 'timing':
         'Mỗi 4-6 giờ khi cần. Liều tối đa: 360mg/ngày (đau), 120mg/ngày (ho)'},
         'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }}, 'references': {'primary_sources': [
         'FDA Drug Label - Codeine sulfate',
         'UpToDate - Codeine: Drug information', 'Lexicomp - Codeine monograph',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-06', 'evidence_level':
         'High - FDA-approved, extensive clinical data. Note: efficacy depends on CYP2D6 genotype',
-        }}}
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Respiratory rate", "Sedation", "Constipation"],
+            },
+            "guideline_tags": [
+                "CDC 2022 Opioid Prescribing Guidelines",
+                "FDA Black Box Warning - Opioid addiction, abuse, misuse",
+            ]
+        }
+}
 
 __all__ = ['OPIOID_AGONIST_WEAKS_DRUGS']

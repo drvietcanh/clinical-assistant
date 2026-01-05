@@ -199,19 +199,23 @@ HERPES_ANTIVIRALS = {
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Nephrotoxicity (IV, especially with high doses)", "Neurotoxicity (IV, rare)"],
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"renal": "Nephrotoxicity (IV, especially with high doses - dose-dependent, may be irreversible)", "neurological": "Neurotoxicity (IV, rare - confusion, seizures, hallucinations)", "dermatologic": "Phlebitis (IV administration)"},
             "qt_prolongation": False,
             "hepatotoxicity": False,
             "nephrotoxicity": True,
-            "requires_monitoring": ["Renal function (CrCl, creatinine, BUN) - CRITICAL for IV", "Signs of neurotoxicity (confusion, seizures) with IV", "IV site for phlebitis"]
+            "requires_monitoring": ["Renal function (creatinine, BUN, CrCl - dose adjustment required, especially IV)", "Neurological status (confusion, seizures, hallucinations - IV, rare)", "Fluid balance (maintain adequate hydration - critical for IV)", "Infusion rate (must infuse slowly over 1 hour - critical)", "Phlebitis signs (IV administration)"],
+            "look_alike_sound_alike": ["Acyclovir", "Valacyclovir"]
         },
         "guideline_tags": [
             "IDSA Guidelines - Herpes Simplex Virus Infections",
             "IDSA Guidelines - Varicella-Zoster Virus Infections",
             "FDA Drug Safety Communication - Acyclovir and Renal Toxicity",
-            "UpToDate - Acyclovir Drug Information"
-        ]
+            "UpToDate - Acyclovir Drug Information",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 
     "Valacyclovir": {
@@ -396,18 +400,21 @@ HERPES_ANTIVIRALS = {
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Nephrotoxicity (high doses, dehydration)", "Neurotoxicity (confusion, hallucinations - especially in renal impairment)", "Thrombotic Thrombocytopenic Purpura/Hemolytic Uremic Syndrome (TTP/HUS) - in immunocompromised"],
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"renal": "Nephrotoxicity (high doses, dehydration - dose-dependent)", "neurological": "Neurotoxicity (confusion, hallucinations - especially in renal impairment)", "hematologic": "Thrombotic thrombocytopenic purpura/hemolytic uremic syndrome (TTP/HUS - in immunocompromised patients)"},
             "qt_prolongation": False,
             "hepatotoxicity": False,
             "nephrotoxicity": True,
-            "requires_monitoring": ["Renal function (CrCl, creatinine) - CRITICAL", "CNS status (especially in elderly/renal impairment)", "Signs of TTP/HUS (pallor, bruising, oliguria) - in immunocompromised"]
+            "requires_monitoring": ["Renal function (CrCl, creatinine, BUN - dose adjustment required, critical)", "Neurological status (confusion, hallucinations - especially in elderly/renal impairment)", "TTP/HUS signs (pallor, bruising, oliguria - in immunocompromised patients)", "Fluid balance (maintain adequate hydration)"],
+            "look_alike_sound_alike": ["Valacyclovir", "Acyclovir"]
         },
         "guideline_tags": [
             "IDSA Guidelines - Herpes Simplex Virus Infections",
-            "IDSA Guidelines - Varicella-Zoster Virus Infections",
-            "CDC STI Treatment Guidelines 2021 - Genital Herpes"
-        ]
+            "IDSA Guidelines - Herpes Zoster",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 }
 

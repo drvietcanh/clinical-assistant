@@ -228,9 +228,9 @@ BETA_LACTAMS_DRUGS = {
         'Giảm liều hoặc tăng khoảng cách', 'under_30':
         'Liều thấp hơn, khoảng cách dài hơn'}, 'side_effects': ['Tiêu chảy',
         'Buồn nôn', 'Phát ban', 'Nhiễm trùng nấm Candida',
-        'Giảm bạch cầu (hiếm)'], 'interactions': ['Warfarin: tăng INR',
+        'Giảm bạch cầu (hiếm)'],
         'Methotrexate: tăng độc tính', 'Allopurinol: tăng nguy cơ phát ban',
-        'Thuốc tránh thai: có thể giảm hiệu quả'], 'pregnancy': 'B - An toàn',
+        'Thuốc tránh thai: có thể giảm hiệu quả'],
         'mechanism_of_action':
         'Amoxicillin là aminopenicillin (beta-lactam antibiotic), ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs) trên màng tế bào vi khuẩn. Amoxicillin là chất tương tự penicillin nhưng có nhóm amin, giúp tăng khả năng xuyên qua màng ngoài của vi khuẩn Gram-âm và tăng phổ kháng khuẩn. Amoxicillin ức chế enzyme transpeptidase, ngăn chặn liên kết chéo giữa các chuỗi peptidoglycan trong thành tế bào vi khuẩn, dẫn đến làm suy yếu và vỡ thành tế bào khi vi khuẩn phân chia. Amoxicillin có phổ kháng khuẩn rộng: Gram-dương (Streptococcus, Enterococcus, một số Staphylococcus không kháng penicillinase), Gram-âm (H. influenzae, E. coli, Proteus mirabilis, Salmonella, Shigella), và một số kỵ khí. Không hiệu quả với vi khuẩn tiết beta-lactamase (cần kết hợp với clavulanate). Dạng suspension phù hợp cho trẻ em, dễ uống và hấp thu tốt.'
         , 'monitoring': [
@@ -273,7 +273,7 @@ BETA_LACTAMS_DRUGS = {
         'Tăng nguy cơ phát ban nghiêm trọng, SJS, TEN (đe dọa tính mạng)',
         'management':
         'Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu phát ban. Ngừng ngay nếu có phát ban.'
-        }], 'moderate': [{'drug': 'Warfarin', 'mechanism':
+        }], 'mechanism':
         'Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, ảnh hưởng đến chuyển hóa vitamin K, tăng tác dụng warfarin.'
         , 'effect': 'Tăng INR, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên khi dùng amoxicillin. Điều chỉnh liều warfarin nếu cần.'
@@ -336,14 +336,35 @@ BETA_LACTAMS_DRUGS = {
         'Uống 2-3 lần/ngày tùy chỉ định, cách đều. Lắc kỹ suspension trước khi dùng (thuốc lắng xuống đáy). Dùng đúng liều theo cân nặng ở trẻ em (tính theo mg/kg).'
         }, 'iv': {'reconstitution': 'N/A - chỉ có dạng uống', 'infusion_rate':
         'N/A', 'compatibility': [], 'incompatibility': [], 'notes':
-        'Chỉ có dạng uống (suspension)'}}, 'references': {'primary_sources': [
+        'Chỉ có dạng uống (suspension)'}},         'references': {'primary_sources': [
         'FDA Drug Label - Amoxicillin',
         'UpToDate - Amoxicillin: Drug Information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ], 'last_updated': '2025-02-04',         'evidence_level':
-        'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}},
+        ],         'evidence_level':
+        'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': None,
+            'organ_toxicity': {'dermatologic': 'SJS/TEN (rare, especially with allopurinol)', 'gastrointestinal': 'C. difficile infection', 'hepatic': 'Hepatotoxicity (rare)', 'hematologic': 'Neutropenia (rare)'},
+            'qt_prolongation': False,
+            'hepatotoxicity': 'Rare',
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Allergic reactions (penicillin allergy - cross-reactivity with cephalosporins)', 'C. difficile infection signs', 'SJS/TEN signs (especially with allopurinol)', 'Hepatic function (rare hepatotoxicity)', 'CBC (neutropenia risk)', 'Renal function (dose adjustment required)'],
+            'look_alike_sound_alike': ['Amoxicillin', 'Amoxicillin-clavulanate']
+        },
+        'guideline_tags': [
+            'IDSA Guidelines - Community-Acquired Pneumonia',
+            'IDSA Guidelines - Urinary Tract Infections',
+            'IDSA Guidelines - Skin and Soft Tissue Infections',
+            'WHO Essential Medicines List'
+        ],
+        'last_updated': '2025-02-18'
+    },
     
-    "Amoxicillin-clavulanate": {'group':
+    "Amoxicillin-clavulanate": {
+        'group':
         'Antibiotic - Beta-lactam (Penicillin + Beta-lactamase inhibitor)',
         'vietnamese_name': 'Amoxicillin-clavulanate, Augmentin, Amoclav',
         'administration': ['PO', 'IV'], 'indications': [
@@ -369,7 +390,7 @@ BETA_LACTAMS_DRUGS = {
         'interactions': ['Warfarin: tăng INR',
         'Methotrexate: tăng độc tính methotrexate',
         'Allopurinol: tăng nguy cơ phát ban',
-        'Thuốc tránh thai: có thể giảm hiệu quả'], 'pregnancy': 'B - An toàn',
+        'Thuốc tránh thai: có thể giảm hiệu quả'],
         'mechanism_of_action':
         'Amoxicillin: aminopenicillin phổ rộng, ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs). Clavulanate: beta-lactamase inhibitor, bảo vệ amoxicillin khỏi bị phân hủy bởi beta-lactamase. Kết hợp này mở rộng phổ kháng khuẩn, đặc biệt hiệu quả với H. influenzae, E. coli, và một số kỵ khí. Clavulanate không có hoạt tính kháng khuẩn riêng. Được dùng rộng rãi trong nhiễm trùng đường hô hấp, tiết niệu, da và mô mềm.'
         , 'monitoring': ['Dấu hiệu nhiễm trùng (sốt, WBC)',
@@ -405,7 +426,7 @@ BETA_LACTAMS_DRUGS = {
         'Tăng nồng độ methotrexate, tăng độc tính (giảm bạch cầu, thiếu máu, độc gan, độc thận)'
         , 'management':
         'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, giảm liều methotrexate, theo dõi chặt chẽ công thức máu, chức năng gan, thận. Ngừng methotrexate nếu có dấu hiệu độc tính.'
-        }], 'moderate': [{'drug': 'Allopurinol', 'mechanism':
+        }], 'mechanism':
         'Cơ chế chưa rõ ràng, có thể liên quan đến phản ứng miễn dịch.',
         'effect':
         'Tăng nguy cơ phát ban, phản ứng dị ứng (đặc biệt phát ban maculopapular)',
@@ -421,7 +442,7 @@ BETA_LACTAMS_DRUGS = {
         'Probenecid ức chế bài tiết amoxicillin ở ống thận, làm tăng nồng độ amoxicillin.'
         , 'effect': 'Tăng nồng độ amoxicillin, tăng tác dụng phụ', 'management':
         'Có thể dùng để tăng nồng độ amoxicillin nếu cần. Theo dõi tác dụng phụ. Giảm liều amoxicillin nếu cần.'
-        }], 'minor': [{'drug': 'Antacids', 'mechanism':
+        }], 'mechanism':
         'Antacids có thể giảm nhẹ hấp thu amoxicillin.', 'effect':
         'Giảm nhẹ hấp thu amoxicillin', 'management':
         'Cách 2 giờ nếu có thể. Không ảnh hưởng đáng kể ở liều điều trị thông thường.'
@@ -528,7 +549,7 @@ BETA_LACTAMS_DRUGS = {
         'monitoring':
         'Theo dõi chức năng gan (ALT, AST) thường xuyên, đặc biệt ở nam giới, dùng kéo dài. Theo dõi chức năng thận (creatinine, CrCl). Theo dõi dấu hiệu viêm gan (vàng da, mệt mỏi). Theo dõi tiêu chảy (có thể là nhiễm C. difficile).'}, 'brand_names': {'vietnam': [
         'Amoxicillin-clavulanate', 'Augmentin', 'Amoclav', 'Clavulanate Stada'], 'common': [
-        'Augmentin', 'Amoxicillin-clavulanate', 'Amoclav']}, 'cost_estimate': {'unit': 'VND',
+        'Augmentin', 'Amoxicillin-clavulanate', 'Amoclav'],
         'range': '8,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
         'Giá thay đổi theo thương hiệu và nhà thuốc. Amoxicillin-clavulanate generic thường rẻ hơn (8,000-20,000 VND/viên 625mg). Augmentin (brand) thường đắt hơn (20,000-40,000 VND/viên 625mg). Dạng suspension: 100,000-200,000 VND/lọ 100ml (250mg/5ml).'}, 'references': {'primary_sources': [
@@ -536,7 +557,7 @@ BETA_LACTAMS_DRUGS = {
         'UpToDate: Amoxicillin-clavulanate drug information',
         'Lexicomp: Amoxicillin-clavulanate monograph',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Sanford Guide to Antimicrobial Therapy'], 'last_updated': '2025-02-03',
+        'Sanford Guide to Antimicrobial Therapy'],
         'evidence_level':
         'Level 1 - FDA approved, multiple clinical trials, extensive clinical experience'
         }},
@@ -1067,6 +1088,24 @@ BETA_LACTAMS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"dermatologic": "Allergic reactions (penicillin allergy)", "gastrointestinal": "C. difficile infection", "hepatic": "Hepatotoxicity (rare)", "hematologic": "Neutropenia (rare)", "renal": "Interstitial nephritis (rare)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": "Rare (interstitial nephritis)",
+            "requires_monitoring": ["Allergic reactions (penicillin allergy - cross-reactivity with cephalosporins)", "C. difficile infection signs", "Hepatic function (hepatotoxicity risk)", "CBC (neutropenia risk)", "Renal function (interstitial nephritis risk)"],
+            "look_alike_sound_alike": ["Dicloxacillin", "Diclofenac"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Bone and Joint Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
         "drug_interactions": {
                   "major": [
                       {
@@ -1198,6 +1237,25 @@ BETA_LACTAMS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"dermatologic": "Allergic reactions (penicillin allergy)", "gastrointestinal": "C. difficile infection", "hepatic": "Hepatotoxicity (rare)", "hematologic": "Neutropenia (rare)", "renal": "Interstitial nephritis (rare)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": "Rare (interstitial nephritis)",
+            "requires_monitoring": ["Allergic reactions (penicillin allergy - cross-reactivity with cephalosporins)", "C. difficile infection signs", "Hepatic function (hepatotoxicity risk)", "CBC (neutropenia risk)", "Renal function (interstitial nephritis risk)", "Phlebitis (IV administration)"],
+            "look_alike_sound_alike": ["Nafcillin", "Nafcillin"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Endocarditis",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Bone and Joint Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
         "drug_interactions": {
                   "major": [
                       {
@@ -1334,6 +1392,25 @@ BETA_LACTAMS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"dermatologic": "Allergic reactions (penicillin allergy)", "gastrointestinal": "C. difficile infection", "hepatic": "Hepatotoxicity (rare)", "hematologic": "Neutropenia (rare)", "renal": "Interstitial nephritis (rare)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": "Rare",
+            "nephrotoxicity": "Rare (interstitial nephritis)",
+            "requires_monitoring": ["Allergic reactions (penicillin allergy - cross-reactivity with cephalosporins)", "C. difficile infection signs", "Hepatic function (hepatotoxicity risk)", "CBC (neutropenia risk)", "Renal function (interstitial nephritis risk, dose adjustment required)", "Phlebitis (IV administration)"],
+            "look_alike_sound_alike": ["Oxacillin", "Oxacillin"]
+        },
+        "guideline_tags": [
+            "IDSA Guidelines - Endocarditis",
+            "IDSA Guidelines - Skin and Soft Tissue Infections",
+            "IDSA Guidelines - Bone and Joint Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
         "drug_interactions": {
                   "major": [
                       {

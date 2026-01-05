@@ -285,7 +285,22 @@ RESPIRATORY_BIOLOGICS_DRUGS = {
                 "GINA Guidelines - Asthma"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
+            "evidence_level": "A - FDA-approved, extensive clinical data",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ] 
+
         }
     },
     
@@ -424,7 +439,22 @@ RESPIRATORY_BIOLOGICS_DRUGS = {
                 "GINA Guidelines - Asthma"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
+            "evidence_level": "A - FDA-approved, extensive clinical data",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ] 
+
         }
     },
     

@@ -634,6 +634,498 @@ ONCOLOGY_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "ASCO Guidelines - Hormone Therapy Toxicity Management"
         ]
     },
+
+    # ======================== SESSION 2: HORMONAL THERAPY ========================
+    "Tamoxifen": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": True,
+            "organ_toxicity": {
+                "hematologic": "High (DVT/PE - can be fatal, Black Box Warning)",
+                "reproductive": "High (endometrial cancer - increased risk, Black Box Warning)",
+                "ophthalmic": "Moderate (cataracts, retinopathy - common)",
+                "hepatic": "Low (elevated liver enzymes - rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Signs of DVT/PE (leg swelling, chest pain, dyspnea) - CRITICAL (can be fatal, Black Box Warning)",
+                "Gynecologic exam (endometrial cancer risk) - CRITICAL (every 6-12 months, Black Box Warning)",
+                "Ophthalmologic exam (cataracts, retinopathy) - CRITICAL (every 1-2 years)",
+                "Hepatic function (ALT, AST) - CRITICAL (rare but monitor)",
+                "INR - CRITICAL (if using warfarin - increased bleeding risk)",
+                "Drug interactions (SSRI/SNRI CYP2D6 inhibitors - reduce efficacy, warfarin - increased INR) - CRITICAL"
+            ],
+            "look_alike_sound_alike": ["Tamoxifen", "Nolvadex", "Anastrozole", "Letrozole"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - DVT/PE (Can Be Fatal)",
+            "FDA Black Box Warning - Endometrial Cancer (Increased Risk)",
+            "FDA Drug Label - Tamoxifen (Nolvadex)",
+            "NCCN Guidelines - Breast Cancer Treatment (ER-Positive)",
+            "ASCO Guidelines - Hormonal Therapy Toxicity Management"
+        ]
+    },
+
+    "Anastrozole": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "skeletal": "High (osteoporosis, fractures - very common, Black Box Warning)",
+                "musculoskeletal": "High (arthralgia, myalgia - very common, leading cause of discontinuation)",
+                "metabolic": "Moderate (hypercholesterolemia - common)",
+                "cardiovascular": "Low (cardiovascular events - less than tamoxifen)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Bone mineral density (BMD/DEXA scan) - CRITICAL (before treatment and every 1-2 years, Black Box Warning)",
+                "Signs of fractures - CRITICAL (osteoporosis risk, Black Box Warning)",
+                "Arthralgia and myalgia - CRITICAL (very common, leading cause of discontinuation)",
+                "Lipid profile (cholesterol) - CRITICAL (every 6-12 months, hypercholesterolemia common)",
+                "Calcium and vitamin D supplementation - CRITICAL (to reduce osteoporosis risk)",
+                "Menopausal status - CRITICAL (contraindicated in premenopausal women without ovarian suppression)"
+            ],
+            "look_alike_sound_alike": ["Anastrozole", "Arimidex", "Letrozole", "Exemestane"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Osteoporosis and Fractures (Very Common)",
+            "FDA Drug Label - Anastrozole (Arimidex)",
+            "NCCN Guidelines - Breast Cancer Treatment (ER-Positive, Postmenopausal)",
+            "ASCO Guidelines - Hormonal Therapy Toxicity Management"
+        ]
+    },
+
+    # ======================== SESSION 3: TARGETED THERAPY - TKIs ========================
+    "Imatinib": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "cardiac": "Moderate (heart failure, left ventricular dysfunction - rare but serious)",
+                "hematologic": "High (myelosuppression - very common, can be severe)",
+                "hepatic": "Moderate (hepatotoxicity - elevated transaminases, rare but serious)",
+                "dermatologic": "Moderate (rash - common, fluid retention - very common, characteristic periorbital edema)",
+                "gastrointestinal": "Moderate (nausea, vomiting, diarrhea - common)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "CBC (myelosuppression) - CRITICAL (very common, can be severe, before and during treatment)",
+                "Cardiac function (LVEF) - CRITICAL (heart failure risk, rare but serious)",
+                "Hepatic function (ALT, AST, bilirubin) - CRITICAL (hepatotoxicity risk, rare but serious)",
+                "Fluid retention (periorbital edema, peripheral edema) - CRITICAL (very common, characteristic)",
+                "Signs of heart failure (dyspnea, edema, fatigue) - CRITICAL (rare but serious)",
+                "Drug interactions (CYP3A4 inhibitors/inducers, warfarin - increased INR) - CRITICAL",
+                "Food interactions - CRITICAL (take with food and large glass of water to reduce GI irritation)"
+            ],
+            "look_alike_sound_alike": ["Imatinib", "Gleevec", "Glivec", "Dasatinib", "Nilotinib"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Heart Failure (Rare But Serious)",
+            "FDA Drug Label - Imatinib (Gleevec)",
+            "NCCN Guidelines - CML and GIST Treatment",
+            "ASCO Guidelines - Targeted Therapy Toxicity Management"
+        ]
+    },
+
+    "Gefitinib": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "pulmonary": "High (interstitial lung disease - ILD, rare but dangerous, can be fatal, Black Box Warning)",
+                "dermatologic": "High (rash - very common 75-90%, acneiform rash, characteristic)",
+                "hepatic": "Moderate (hepatotoxicity - elevated transaminases, common)",
+                "gastrointestinal": "Moderate (diarrhea - common)",
+                "ophthalmic": "Low (conjunctivitis, keratitis - rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Interstitial lung disease (ILD) - CRITICAL (dyspnea, cough, fever - rare but dangerous, can be fatal, Black Box Warning)",
+                "Rash (acneiform) - CRITICAL (very common 75-90%, characteristic, may indicate treatment response)",
+                "Hepatic function (ALT, AST, bilirubin) - CRITICAL (before and monthly for first 3 months, common)",
+                "Signs of diarrhea - CRITICAL (common)",
+                "Ophthalmologic exam (conjunctivitis, keratitis - rare)",
+                "Drug interactions (CYP3A4 inhibitors/inducers, smoking - reduces efficacy) - CRITICAL",
+                "Food interactions - CRITICAL (take on empty stomach, 1 hour before or 2 hours after meals)"
+            ],
+            "look_alike_sound_alike": ["Gefitinib", "Iressa", "Erlotinib", "Afatinib"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Interstitial Lung Disease (ILD, Rare But Dangerous, Can Be Fatal)",
+            "FDA Drug Label - Gefitinib (Iressa)",
+            "NCCN Guidelines - NSCLC Treatment (EGFR Mutation Positive)",
+            "ASCO Guidelines - Targeted Therapy Toxicity Management"
+        ]
+    },
+
+    # ======================== SESSION 4: MONOCLONAL ANTIBODIES ========================
+    "Trastuzumab": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "cardiac": "High (heart failure, left ventricular dysfunction - very common and dangerous, Black Box Warning)",
+                "pulmonary": "Moderate (interstitial lung disease - ILD, rare but dangerous)",
+                "immunologic": "Moderate (infusion-related reactions - common, can be serious)",
+                "hematologic": "Moderate (myelosuppression - when used with chemotherapy)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Cardiac function (LVEF) - CRITICAL (before treatment, every 3 months during first year, then every 6 months, very common and dangerous, Black Box Warning)",
+                "Signs of heart failure (dyspnea, edema, fatigue, decreased exercise tolerance) - CRITICAL (very common and dangerous, Black Box Warning)",
+                "Interstitial lung disease (ILD) - CRITICAL (dyspnea, cough, fever - rare but dangerous)",
+                "Infusion-related reactions - CRITICAL (monitor during and after first infusion, common, can be serious)",
+                "CBC (myelosuppression) - CRITICAL (when used with chemotherapy)",
+                "HER2 testing - CRITICAL (IHC 3+ or FISH positive required before treatment)",
+                "Drug interactions (anthracyclines - CONTRAINDICATED, increased cardiotoxicity) - CRITICAL"
+            ],
+            "look_alike_sound_alike": ["Trastuzumab", "Herceptin", "Pertuzumab", "Ado-trastuzumab emtansine"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Heart Failure (Very Common and Dangerous)",
+            "FDA Black Box Warning - Left Ventricular Dysfunction (Very Common and Dangerous)",
+            "FDA Black Box Warning - Do Not Use with Anthracyclines (Increased Cardiotoxicity)",
+            "FDA Drug Label - Trastuzumab (Herceptin)",
+            "NCCN Guidelines - Breast Cancer Treatment (HER2-Positive)",
+            "ASCO Guidelines - Targeted Therapy Toxicity Management"
+        ]
+    },
+
+    "Cetuximab": {
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "dermatologic": "High (rash - very common 75-90%, acneiform rash, characteristic, may indicate treatment response)",
+                "pulmonary": "High (interstitial lung disease - ILD, rare but dangerous, can be fatal, Black Box Warning)",
+                "immunologic": "Moderate (infusion-related reactions - common, can be serious, anaphylaxis - rare)",
+                "cardiac": "Moderate (cardiopulmonary arrest - rare but dangerous, Black Box Warning)",
+                "electrolyte": "Moderate (hypomagnesemia - very common, can be severe)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Rash (acneiform) - CRITICAL (very common 75-90%, characteristic, may indicate treatment response)",
+                "Interstitial lung disease (ILD) - CRITICAL (dyspnea, cough, fever - rare but dangerous, can be fatal, Black Box Warning)",
+                "Cardiopulmonary arrest - CRITICAL (rare but dangerous, Black Box Warning, monitor during infusion)",
+                "Infusion-related reactions - CRITICAL (monitor during and after first infusion, common, can be serious, anaphylaxis - rare)",
+                "Magnesium levels - CRITICAL (hypomagnesemia very common, can be severe, monitor before each cycle)",
+                "Electrolytes (calcium, potassium) - CRITICAL (hypomagnesemia can cause hypocalcemia, hypokalemia)",
+                "EGFR testing - CRITICAL (KRAS wild-type required for colorectal cancer, EGFR expression for head and neck cancer)"
+            ],
+            "look_alike_sound_alike": ["Cetuximab", "Erbitux", "Panitumumab", "Erlotinib"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Interstitial Lung Disease (ILD, Rare But Dangerous, Can Be Fatal)",
+            "FDA Black Box Warning - Cardiopulmonary Arrest (Rare But Dangerous)",
+            "FDA Black Box Warning - Infusion Reactions (Can Be Serious, Anaphylaxis - Rare)",
+            "FDA Drug Label - Cetuximab (Erbitux)",
+            "NCCN Guidelines - Colorectal Cancer, Head and Neck Cancer Treatment",
+            "ASCO Guidelines - Targeted Therapy Toxicity Management"
+        ]
+    },
+
+    # ======================== SESSION 5: CHEMOTHERAPY - ALKYLATING/ANTIMETABOLITES ========================
+    "Ifosfamide": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": True,
+            "organ_toxicity": {
+                "genitourinary": "High (hemorrhagic cystitis - very common and dangerous, can be fatal, Black Box Warning)",
+                "neurologic": "High (CNS toxicity - encephalopathy, confusion, seizures, coma, can be fatal, Black Box Warning)",
+                "hematologic": "High (myelosuppression - very common, can be severe)",
+                "renal": "Moderate (nephrotoxicity - common)",
+                "hepatic": "Low (hepatotoxicity - rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": [
+                "Hemorrhagic cystitis - CRITICAL (blood in urine, dysuria, frequency - very common and dangerous, can be fatal, Black Box Warning, requires mesna prophylaxis)",
+                "CNS toxicity (encephalopathy, confusion, seizures, coma) - CRITICAL (can be fatal, Black Box Warning)",
+                "CBC (myelosuppression) - CRITICAL (very common, can be severe, before and during treatment)",
+                "Renal function (CrCl, BUN, creatinine) - CRITICAL (nephrotoxicity risk, common)",
+                "Urine output and urinalysis - CRITICAL (hemorrhagic cystitis monitoring)",
+                "Mesna prophylaxis - CRITICAL (must use with ifosfamide to prevent hemorrhagic cystitis, Black Box Warning)",
+                "Hydration - CRITICAL (adequate hydration to reduce hemorrhagic cystitis risk)",
+                "Drug interactions (CYP3A4 inhibitors/inducers, other nephrotoxic drugs) - CRITICAL"
+            ],
+            "look_alike_sound_alike": ["Ifosfamide", "Ifex", "Cyclophosphamide", "Mesna"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Hemorrhagic Cystitis (Very Common and Dangerous, Can Be Fatal, Requires Mesna Prophylaxis)",
+            "FDA Black Box Warning - CNS Toxicity (Encephalopathy, Can Be Fatal)",
+            "FDA Drug Label - Ifosfamide (Ifex)",
+            "NCCN Guidelines - Cancer Treatment",
+            "ASCO Guidelines - Chemotherapy Toxicity Management",
+            "ISMP High Alert Medications"
+        ]
+    },
+
+    "Capecitabine": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "gastrointestinal": "High (diarrhea, stomatitis - very common, can be severe, Black Box Warning)",
+                "dermatologic": "High (hand-foot syndrome - palmar-plantar erythrodysesthesia, very common, can be severe, Black Box Warning)",
+                "hematologic": "High (myelosuppression - very common, Black Box Warning)",
+                "metabolic": "High (DPD deficiency - can cause severe toxicity and death, Black Box Warning)",
+                "cardiac": "Low (cardiotoxicity - rare but dangerous)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "DPD (dihydropyrimidine dehydrogenase) testing - CRITICAL (before treatment if possible, DPD deficiency can cause severe toxicity and death, Black Box Warning)",
+                "Hand-foot syndrome (palmar-plantar erythrodysesthesia) - CRITICAL (redness, swelling, pain, blisters on palms and soles - very common, can be severe, Black Box Warning)",
+                "Diarrhea - CRITICAL (very common, can be severe, treat early, Black Box Warning)",
+                "Stomatitis (oral mucositis) - CRITICAL (very common, can be severe)",
+                "CBC (myelosuppression) - CRITICAL (very common, Black Box Warning, before and between cycles)",
+                "Signs of cardiotoxicity (chest pain, dyspnea, arrhythmias) - CRITICAL (rare but dangerous)",
+                "Hepatic function (ALT, AST, bilirubin) - CRITICAL (before and during treatment)",
+                "Signs of infection (fever, chills) - CRITICAL (due to neutropenia)",
+                "Signs of bleeding - CRITICAL (due to thrombocytopenia)",
+                "Drug interactions (warfarin - increased bleeding risk, leucovorin - increases efficacy and toxicity) - CRITICAL"
+            ],
+            "look_alike_sound_alike": ["Capecitabine", "Xeloda", "5-Fluorouracil", "Fluorouracil"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - DPD Deficiency (Can Cause Severe Toxicity and Death, Test Before Treatment)",
+            "FDA Black Box Warning - Hand-Foot Syndrome (Very Common, Can Be Severe)",
+            "FDA Black Box Warning - Diarrhea (Very Common, Can Be Severe)",
+            "FDA Black Box Warning - Myelosuppression (Very Common)",
+            "FDA Drug Label - Capecitabine (Xeloda)",
+            "NCCN Guidelines - Colorectal Cancer, Breast Cancer Treatment",
+            "ASCO Guidelines - Chemotherapy Toxicity Management"
+        ]
+    },
+
+    "Enzalutamide": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": True,
+            "organ_toxicity": {
+                "neurologic": "High (seizures - very common and dangerous, Black Box Warning)",
+                "cardiac": "Moderate (heart failure, arrhythmias - rare but serious)",
+                "cardiovascular": "Moderate (hypertension - common)",
+                "hematologic": "Low (thrombocytopenia - rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Seizures - CRITICAL (very common and dangerous, Black Box Warning, contraindicated in uncontrolled seizures)",
+                "Cardiac function (LVEF) - CRITICAL (heart failure risk, rare but serious)",
+                "ECG - CRITICAL (arrhythmias risk, rare but serious)",
+                "Blood pressure - CRITICAL (hypertension common, monitor each cycle)",
+                "CBC (thrombocytopenia - rare)",
+                "INR - CRITICAL (if using warfarin - increased bleeding risk)",
+                "Drug interactions (CYP2C8 inhibitors - increase enzalutamide levels, warfarin - increased INR) - CRITICAL",
+                "Driving and operating machinery - CRITICAL (seizures risk, dizziness)"
+            ],
+            "look_alike_sound_alike": ["Enzalutamide", "Xtandi", "Abiraterone", "Apalutamide"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Seizures (Very Common and Dangerous, Contraindicated in Uncontrolled Seizures)",
+            "FDA Drug Label - Enzalutamide (Xtandi)",
+            "NCCN Guidelines - Prostate Cancer Treatment (Castration-Resistant)",
+            "ASCO Guidelines - Hormone Therapy Toxicity Management"
+        ]
+    },
+
+    "Topotecan": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "hematologic": "High (myelosuppression - very common and severe, dose-limiting, Black Box Warning)",
+                "gastrointestinal": "Moderate (nausea, vomiting, diarrhea - common)",
+                "hepatic": "Low (hepatotoxicity - rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "CBC (myelosuppression) - CRITICAL (very common and severe, dose-limiting, Black Box Warning, before and between cycles)",
+                "Signs of infection (fever, chills) - CRITICAL (due to neutropenia)",
+                "Signs of bleeding - CRITICAL (due to thrombocytopenia)",
+                "Renal function (CrCl, eGFR) - CRITICAL (for dose adjustment, reduce dose 50% if CrCl 30-49, contraindicated if CrCl <30)",
+                "Hepatic function (ALT, AST, bilirubin) - CRITICAL (before and during treatment, rare)",
+                "Signs of nausea, vomiting, diarrhea - CRITICAL (common)",
+                "Drug interactions (cisplatin, carboplatin - increase myelosuppression, CYP3A4 inhibitors - increase topotecan levels with PO form) - CRITICAL"
+            ],
+            "look_alike_sound_alike": ["Topotecan", "Hycamtin", "Irinotecan", "Etoposide"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Myelosuppression (Very Common and Severe, Dose-Limiting)",
+            "FDA Black Box Warning - Renal Impairment (Contraindicated if CrCl <30)",
+            "FDA Drug Label - Topotecan (Hycamtin)",
+            "NCCN Guidelines - Ovarian Cancer, SCLC, Cervical Cancer Treatment",
+            "ASCO Guidelines - Chemotherapy Toxicity Management"
+        ]
+    },
+
+    "Daratumumab": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "hematologic": "High (myelosuppression - neutropenia, lymphopenia, thrombocytopenia, anemia, very common)",
+                "immunologic": "High (infusion-related reactions - very common, can be serious, Black Box Warning)",
+                "infectious": "High (serious infections including opportunistic infections - very common, Black Box Warning)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Infusion-related reactions - CRITICAL (monitor during and after first infusion, very common, can be serious, Black Box Warning, requires premedication)",
+                "CBC (myelosuppression) - CRITICAL (neutropenia, lymphopenia, thrombocytopenia, anemia - very common, before and during treatment)",
+                "Signs of infection (fever, chills, cough, dyspnea) - CRITICAL (serious infections including opportunistic infections - very common, Black Box Warning)",
+                "Signs of bleeding - CRITICAL (due to thrombocytopenia)",
+                "Vaccine status - CRITICAL (complete all vaccines at least 4-6 weeks before treatment, live vaccines CONTRAINDICATED during and after treatment)",
+                "Drug interactions (other immunosuppressants - increased infection risk, live vaccines - CONTRAINDICATED) - CRITICAL"
+            ],
+            "look_alike_sound_alike": ["Daratumumab", "Darzalex", "Isatuximab", "Elotuzumab"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Infusion-Related Reactions (Very Common, Can Be Serious)",
+            "FDA Black Box Warning - Serious Infections (Including Opportunistic Infections, Very Common)",
+            "FDA Drug Label - Daratumumab (Darzalex)",
+            "NCCN Guidelines - Multiple Myeloma Treatment",
+            "ASCO Guidelines - Targeted Therapy Toxicity Management"
+        ]
+    },
+
+    # ======================== SESSION 6: ADDITIONAL MONOCLONAL ANTIBODIES ========================
+    "Letrozole": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "musculoskeletal": "High (osteoporosis, fractures - common, serious, Black Box Warning)",
+                "metabolic": "Moderate (increased cholesterol - common)",
+                "cardiovascular": "Low (cardiovascular events - rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Bone mineral density (BMD) - CRITICAL (before treatment, then every 1-2 years, osteoporosis risk, Black Box Warning)",
+                "Signs of fractures - CRITICAL (osteoporosis can lead to fractures, Black Box Warning)",
+                "Lipid panel (cholesterol, triglycerides) - CRITICAL (before, 3 months after, then periodically)",
+                "Postmenopausal status confirmation - CRITICAL (CONTRAINDICATED in premenopausal women without ovarian suppression)",
+                "Calcium and vitamin D supplementation - CRITICAL (to reduce osteoporosis risk)"
+            ],
+            "look_alike_sound_alike": ["Letrozole", "Femara", "Anastrozole", "Exemestane"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Osteoporosis (Common, Can Lead to Fractures)",
+            "NCCN Guidelines - Breast Cancer",
+            "ASCO Guidelines - Breast Cancer",
+            "FDA Drug Label - Letrozole (Femara)"
+        ]
+    },
+
+    "Exemestane": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "musculoskeletal": "High (osteoporosis, fractures - common, serious)",
+                "metabolic": "Moderate (increased cholesterol - common)",
+                "cardiovascular": "Low (cardiovascular events - rare)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Bone mineral density (BMD) - CRITICAL (before treatment, then every 1-2 years, osteoporosis risk)",
+                "Signs of fractures - CRITICAL (osteoporosis can lead to fractures)",
+                "Lipid panel (cholesterol, triglycerides) - CRITICAL (before, 3 months after, then periodically)",
+                "Postmenopausal status confirmation - CRITICAL (CONTRAINDICATED in premenopausal women without ovarian suppression)",
+                "Calcium and vitamin D supplementation - CRITICAL (to reduce osteoporosis risk)"
+            ],
+            "look_alike_sound_alike": ["Exemestane", "Aromasin", "Anastrozole", "Letrozole"]
+        },
+        "guideline_tags": [
+            "NCCN Guidelines - Breast Cancer",
+            "ASCO Guidelines - Breast Cancer",
+            "FDA Drug Label - Exemestane (Aromasin)"
+        ]
+    },
+
+    "Teprotumumab": {
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "otologic": "High (hearing loss - very common, can be permanent, Black Box Warning)",
+                "metabolic": "High (hyperglycemia - very common, can be severe, Black Box Warning)",
+                "immunologic": "High (infusion-related reactions - common, can be serious)",
+                "infectious": "High (increased risk of serious infections - common)",
+                "hepatic": "Moderate (hepatotoxicity - elevated transaminases, can be severe)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Hearing (audiometry) - CRITICAL (before treatment, periodically during treatment, very common, can be permanent, Black Box Warning)",
+                "Blood glucose - CRITICAL (before and during treatment, very common, can be severe, Black Box Warning, may need insulin adjustment)",
+                "Infusion-related reactions - CRITICAL (monitor during and after infusion, common, can be serious, requires premedication)",
+                "Hepatic function (ALT, AST) - CRITICAL (before and during treatment, can be severe)",
+                "Signs of infection (fever, chills, cough, dyspnea) - CRITICAL (increased risk of serious infections, common)",
+                "Premedication (corticosteroid, antihistamine, acetaminophen) - CRITICAL (to reduce infusion reactions)",
+                "Drug interactions (insulin, antidiabetic drugs - may need dose adjustment, immunosuppressants - increased infection risk) - CRITICAL"
+            ],
+            "look_alike_sound_alike": ["Teprotumumab", "Tepezza", "Trastuzumab", "Cetuximab"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Hearing Loss (Very Common, Can Be Permanent)",
+            "FDA Black Box Warning - Hyperglycemia (Very Common, Can Be Severe)",
+            "FDA Drug Label - Teprotumumab (Tepezza)",
+            "ATA Guidelines - Thyroid Eye Disease Treatment"
+        ]
+    },
 }
 
 __all__ = ['ONCOLOGY_ENHANCED_FIELDS']

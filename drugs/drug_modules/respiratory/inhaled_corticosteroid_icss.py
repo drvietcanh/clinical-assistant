@@ -19,7 +19,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Khàn tiếng', 'Ho', 'Khô miệng', 'Tác dụng toàn thân (liều cao)',
         'Ức chế trục hạ đồi-tuyến yên-thượng thận (liều cao)'], 'interactions': [
         'Ritonavir: tăng nồng độ beclomethasone (tránh dùng)',
-        'Ketoconazole/Itraconazole: tăng nồng độ'], 'pregnancy': 'C',
+        'Ketoconazole/Itraconazole: tăng nồng độ'],
         'mechanism_of_action':
         'Beclomethasone là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Beclomethasone gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản, và tăng số lượng beta-2 receptors. Beclomethasone có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Tuy nhiên, một phần nhỏ vẫn được hấp thu và có thể gây tác dụng toàn thân ở liều cao. Beclomethasone được chuyển hóa nhanh ở gan (first-pass metabolism cao) nên tác dụng toàn thân ít hơn so với corticosteroid uống. Beclomethasone là ICS đầu tiên được sử dụng rộng rãi.'
         , 'monitoring': [
@@ -89,7 +89,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Hội chứng Cushing (tăng cân, mặt tròn, tăng huyết áp)',
         'Tăng đường huyết', 'Loãng xương (liều cao kéo dài)',
         'Chậm phát triển ở trẻ em (liều cao)', 'Nấm miệng nặng',
-        'Khàn tiếng nặng'], 'antidote': 'Không có antidote đặc hiệu', 'treatment': [
+        'Khàn tiếng nặng'], 'treatment': [
         'Ngừng ngay beclomethasone hoặc giảm liều đáng kể',
         'Theo dõi chức năng trục HPA (cortisol, ACTH)',
         'Bổ sung corticosteroid nếu có suy thượng thận',
@@ -111,17 +111,34 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'UpToDate: Inhaled corticosteroids in asthma',
         'GINA Guidelines 2024: Asthma Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Beclomethasone'], 'last_updated': '2025-02-05',
+        'Micromedex: Beclomethasone'],
         'evidence_level':
         'High - FDA approved, multiple RCTs, clinical guidelines'},
         "black_box_warnings": None,
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': False,
+            'organ_toxicity': [],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': [],
+            'look_alike_sound_alike': []
+        },
+        'guideline_tags': [
+            'GINA Guidelines 2024 - Asthma Management - Inhaled corticosteroids',
+            'FDA Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ beclomethasone, tăng nguy cơ ức chế HPA)',
+            'WHO Guidelines - Essential medicines for asthma'
+        ]
 },
     "Budesonide inhaled": {'group': 'Respiratory - Inhaled Corticosteroid (ICS)', 'vietnamese_name':
         'Budesonide, Pulmicort', 'administration': ['Inhalation', 'Nebulizer'],
         'indications': ['Hen phế quản (kiểm soát, phòng ngừa)',
         'COPD (nếu có nhiều đợt cấp)', 'Viêm phế quản co thắt'],
         'contraindications': ['Nhiễm trùng đường hô hấp nặng chưa điều trị',
-        'Dị ứng'], 'dosage': {'adult_inhalation_low': '200-400mcg x 2 lần/ngày',
+        'Dị ứng'],
         'adult_inhalation_medium': '400-800mcg x 2 lần/ngày',
         'adult_inhalation_high': '800-1600mcg x 2 lần/ngày', 'adult_nebulizer':
         '0.5-1mg x 2 lần/ngày', 'notes':
@@ -131,7 +148,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Khàn tiếng', 'Ho', 'Khô miệng', 'Tác dụng toàn thân (liều cao)',
         'Ức chế trục hạ đồi-tuyến yên-thượng thận (liều cao)'], 'interactions':
         ['Ritonavir: tăng nồng độ budesonide (tránh dùng)',
-        'Ketoconazole/Itraconazole: tăng nồng độ'], 'pregnancy': 'C',
+        'Ketoconazole/Itraconazole: tăng nồng độ'],
         'mechanism_of_action':
         'Budesonide là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Budesonide gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản, và tăng số lượng beta-2 receptors. Budesonide có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Tuy nhiên, một phần nhỏ vẫn được hấp thu và có thể gây tác dụng toàn thân ở liều cao. Budesonide được chuyển hóa nhanh ở gan (first-pass metabolism cao) nên tác dụng toàn thân ít hơn so với corticosteroid uống.'
         , 'monitoring': [
@@ -170,7 +187,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Tăng nguy cơ ức chế trục HPA, hội chứng Cushing, suy thượng thận',
         'management':
         'TRÁNH DÙNG với ritonavir. Nếu cần dùng, giảm liều budesonide đáng kể và theo dõi chặt chẽ.'
-        }], 'moderate': [{'drug': 'Ketoconazole, Itraconazole', 'mechanism':
+        }, {'drug': 'Ketoconazole, Itraconazole, Posaconazole', 'mechanism':
         'Ức chế CYP3A4, tăng nồng độ budesonide', 'effect':
         'Tăng nguy cơ tác dụng toàn thân, ức chế HPA', 'management':
         'Thận trọng, theo dõi tác dụng toàn thân. Có thể cần giảm liều budesonide.'
@@ -204,7 +221,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Hội chứng Cushing (tăng cân, mặt tròn, tăng huyết áp)',
         'Tăng đường huyết', 'Loãng xương (liều cao kéo dài)',
         'Chậm phát triển ở trẻ em (liều cao)', 'Nấm miệng nặng',
-        'Khàn tiếng nặng'], 'antidote': 'Không có antidote đặc hiệu',
+        'Khàn tiếng nặng'],
         'treatment': ['Ngừng ngay budesonide hoặc giảm liều đáng kể',
         'Theo dõi chức năng trục HPA (cortisol, ACTH)',
         'Bổ sung corticosteroid nếu có suy thượng thận',
@@ -227,16 +244,33 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'administration':
         'Dùng qua nebulizer, thở bình thường trong 10-15 phút.', 'timing':
         'Dùng 2 lần/ngày (sáng và tối). Dùng trong vòng 2 giờ sau khi mở gói.',
-        'after_use': 'Súc miệng sau khi dùng.'}}, 'references': {
+        'after_use': 'Súc miệng sau khi dùng.'}},         'references': {
         'primary_sources': ['FDA Label: Pulmicort (Budesonide)',
         'UpToDate: Inhaled corticosteroids in asthma',
         'GINA Guidelines 2024: Asthma Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Budesonide'], 'last_updated': '2025-02-03',
+        'Micromedex: Budesonide'],
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'},
+        'High - FDA approved, multiple RCTs, clinical guidelines',
         "black_box_warnings": None,
-},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': False,
+            'organ_toxicity': [],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': [],
+            'look_alike_sound_alike': []
+        },
+        'guideline_tags': [
+            'GINA Guidelines 2024 - Asthma Management - Inhaled corticosteroids',
+            'FDA Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ budesonide, tăng nguy cơ ức chế HPA)',
+            'WHO Guidelines - Essential medicines for asthma'
+        ]
+    },
     "Ciclesonide": {'group': 'Respiratory - Inhaled Corticosteroid (ICS)',
         'vietnamese_name': 'Ciclesonide, Alvesco', 'administration': [
         'Inhalation'], 'indications': [
@@ -252,7 +286,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Khàn tiếng', 'Ho', 'Khô miệng', 'Tác dụng toàn thân (liều cao)'],
         'interactions': [
         'Ritonavir: tăng nồng độ ciclesonide (tránh dùng)',
-        'Ketoconazole/Itraconazole: tăng nồng độ'], 'pregnancy': 'C',
+        'Ketoconazole/Itraconazole: tăng nồng độ'],
         'mechanism_of_action':
         'Ciclesonide là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Ciclesonide là prodrug, được chuyển thành des-ciclesonide (hoạt chất) bởi esterase trong phổi. Des-ciclesonide gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm, giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản. Ciclesonide có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Đặc điểm: là prodrug, được kích hoạt tại phổi, ít tác dụng toàn thân hơn các ICS khác.'
         , 'monitoring': [
@@ -288,11 +322,11 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Tăng nguy cơ ức chế trục HPA, hội chứng Cushing, suy thượng thận',
         'management':
         'TRÁNH DÙNG với ritonavir. Nếu cần dùng, giảm liều ciclesonide đáng kể và theo dõi chặt chẽ.'
-        }], 'moderate': [{'drug': 'Ketoconazole, Itraconazole', 'mechanism':
+        }, {'drug': 'Ketoconazole, Itraconazole, Posaconazole', 'mechanism':
         'Ức chế CYP3A4, tăng nồng độ ciclesonide', 'effect':
         'Tăng nguy cơ tác dụng toàn thân, ức chế HPA', 'management':
         'Thận trọng, theo dõi tác dụng toàn thân. Có thể cần giảm liều ciclesonide.'
-        }],         'minor': []}, 'contraindications': {'tuyệt_đối': [
+        }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
         'Dị ứng với ciclesonide hoặc các thành phần khác',
         'Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)'], 'tương_đối': [
         'Lao phổi - cần điều trị lao trước, thận trọng',
@@ -322,7 +356,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Hội chứng Cushing (tăng cân, mặt tròn, tăng huyết áp)',
         'Tăng đường huyết', 'Loãng xương (liều cao kéo dài)',
         'Chậm phát triển ở trẻ em (liều cao)', 'Nấm miệng nặng',
-        'Khàn tiếng nặng'], 'antidote': 'Không có antidote đặc hiệu', 'treatment': [
+        'Khàn tiếng nặng'], 'treatment': [
         'Ngừng ngay ciclesonide hoặc giảm liều đáng kể',
         'Theo dõi chức năng trục HPA (cortisol, ACTH)',
         'Bổ sung corticosteroid nếu có suy thượng thận',
@@ -345,10 +379,28 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'UpToDate: Inhaled corticosteroids in asthma',
         'GINA Guidelines 2024: Asthma Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Ciclesonide'], 'last_updated': '2025-02-05',
+        'Micromedex: Ciclesonide'],
         'evidence_level':
         'High - FDA approved, multiple RCTs, clinical guidelines'},
         "black_box_warnings": None,
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': False,
+            'organ_toxicity': [],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': [],
+            'look_alike_sound_alike': []
+        },
+        'guideline_tags': [
+            'GINA Guidelines 2024 - Asthma Management - Inhaled corticosteroids',
+            'FDA Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ ciclesonide, tăng nguy cơ ức chế HPA)',
+            'WHO Guidelines - Essential medicines for asthma'
+        ]
+    },
     "Fluticasone inhaled": {'group': 'Respiratory - Inhaled Corticosteroid (ICS)', 'vietnamese_name':
         'Fluticasone, Flixotide', 'administration': ['Inhalation'],
         'indications': ['Hen phế quản (kiểm soát, phòng ngừa)',
@@ -363,7 +415,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Ho', 'Kích ứng cổ họng', 'Tác dụng toàn thân (liều cao)',
         'Chậm phát triển ở trẻ em (liều cao)'], 'interactions': [
         'Ritonavir: tăng đáng kể nồng độ fluticasone - tránh dùng',
-        'Ketoconazole: tăng nồng độ'], 'pregnancy': 'C', 'mechanism_of_action':
+        'Ketoconazole: tăng nồng độ'], 'mechanism_of_action':
         'Fluticasone là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Fluticasone gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản, và tăng số lượng beta-2 receptors. Fluticasone có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Tuy nhiên, một phần nhỏ vẫn được hấp thu và có thể gây tác dụng toàn thân ở liều cao. Fluticasone được chuyển hóa nhanh ở gan (first-pass metabolism cao) nhưng thời gian bán thải dài hơn budesonide. Thường dùng kết hợp với LABA (long-acting beta-2 agonist) như salmeterol trong dạng fixed-dose combination.'
         , 'monitoring': [
         'Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)'
@@ -403,7 +455,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Tăng nguy cơ ức chế trục HPA nghiêm trọng, hội chứng Cushing, suy thượng thận'
         , 'management':
         'TRÁNH DÙNG với ritonavir. Nếu cần dùng, giảm liều fluticasone đáng kể hoặc xem xét thuốc thay thế (budesonide). Theo dõi chặt chẽ.'
-        }], 'moderate': [{'drug': 'Ketoconazole, Itraconazole', 'mechanism':
+        }, {'drug': 'Ketoconazole, Itraconazole, Posaconazole', 'mechanism':
         'Ức chế CYP3A4, tăng nồng độ fluticasone', 'effect':
         'Tăng nguy cơ tác dụng toàn thân, ức chế HPA', 'management':
         'Thận trọng, theo dõi tác dụng toàn thân. Có thể cần giảm liều fluticasone.'
@@ -430,7 +482,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Hội chứng Cushing (tăng cân, mặt tròn, tăng huyết áp)',
         'Tăng đường huyết', 'Loãng xương (liều cao kéo dài)',
         'Chậm phát triển ở trẻ em (liều cao)', 'Nấm miệng nặng',
-        'Khàn tiếng nặng'], 'antidote': 'Không có antidote đặc hiệu',
+        'Khàn tiếng nặng'],
         'treatment': ['Ngừng ngay fluticasone hoặc giảm liều đáng kể',
         'Theo dõi chức năng trục HPA (cortisol, ACTH)',
         'Bổ sung corticosteroid nếu có suy thượng thận',
@@ -450,14 +502,33 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Thường dùng kết hợp với LABA (salmeterol) trong dạng fixed-dose combination (Seretide/Advair).'
         , 'notes':
         'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần. TRÁNH DÙNG với ritonavir.'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Label: Flixotide (Fluticasone)',
         'UpToDate: Inhaled corticosteroids in asthma',
         'GINA Guidelines 2024: Asthma Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Fluticasone'], 'last_updated': '2025-02-03',
+        'Micromedex: Fluticasone'],
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}},
-}}
+        'High - FDA approved, multiple RCTs, clinical guidelines'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': False,
+            'organ_toxicity': [],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': [],
+            'look_alike_sound_alike': []
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ fluticasone, tăng nguy cơ ức chế trục HPA nghiêm trọng, có thể gây hội chứng Cushing, suy thượng thận)',
+            'ISMP High Alert Medications',
+            'GINA Guidelines 2024 - Asthma Management - Inhaled corticosteroids',
+            'WHO Guidelines - Essential medicines for asthma'
+        ]
+        }
+}
 
 __all__ = ['INHALED_CORTICOSTEROID_ICSS_DRUGS']

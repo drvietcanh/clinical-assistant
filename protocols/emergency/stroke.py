@@ -1,7 +1,8 @@
 """
 Stroke Management Protocol
-AHA/ASA Guidelines 2021
+AHA/ASA Guidelines 2019, 2021, 2023, 2024
 Ischemic & Hemorrhagic Stroke
+Comprehensive Protocol with AHA/ASA 2019 Thrombolysis Guidelines
 """
 
 import streamlit as st
@@ -28,15 +29,37 @@ except ImportError:
 def render():
     """Stroke Management Protocol"""
     st.subheader("🧠 Stroke Management Protocol")
-    st.caption("AHA/ASA Guidelines 2021 - Ischemic & Hemorrhagic Stroke")
+    st.caption("AHA/ASA Guidelines 2019, 2021, 2023, 2024 - Ischemic & Hemorrhagic Stroke")
     
     # Enhanced header with Phase 1 components
     render_protocol_header(
         protocol_name="Stroke Management",
-        guideline_source="AHA/ASA 2024",
+        guideline_source="AHA/ASA 2019, 2021, 2023, 2024",
         show_version=True,
         show_evidence_summary=True
     )
+    
+    # AHA/ASA 2019 Guidelines Summary
+    with st.expander("📚 AHA/ASA 2019 Guidelines - Key Recommendations", expanded=False):
+        st.markdown("""
+        **AHA/ASA 2019 Guidelines for Early Management of Acute Ischemic Stroke:**
+        
+        **Class I Recommendations (Strong Evidence):**
+        - IV alteplase (0.9 mg/kg, max 90 mg) within 3 hours of symptom onset (Class I, Level A)
+        - IV alteplase (0.9 mg/kg, max 90 mg) within 3-4.5 hours with additional criteria (Class I, Level B)
+        - Mechanical thrombectomy within 6 hours for large vessel occlusion (Class I, Level A)
+        - Blood pressure management: SBP <185 mmHg, DBP <110 mmHg before thrombolysis (Class I, Level B)
+        
+        **Class IIa Recommendations (Moderate Evidence):**
+        - Extended window mechanical thrombectomy (6-24h) with imaging selection (Class IIa, Level A)
+        - Tenecteplase as alternative to alteplase in selected patients (Class IIa, Level B-R)
+        
+        **Key Updates from 2019:**
+        - Expanded time window for alteplase (3-4.5h) with specific criteria
+        - Extended window for mechanical thrombectomy (up to 24h with imaging)
+        - Emphasis on door-to-needle time <60 minutes
+        - Detailed blood pressure management protocols
+        """)
     
     st.info("""
     **Triệu chứng Stroke (BE FAST):**
@@ -142,22 +165,39 @@ def render_ischemic_stroke():
     """)
     
     st.markdown("---")
-    st.markdown("### 3️⃣ Thrombolysis - tPA Criteria")
+    st.markdown("### 3️⃣ Thrombolysis - tPA Criteria (AHA/ASA 2019)")
     
-    st.markdown("#### ✅ Chỉ định tPA (Alteplase)")
+    # AHA/ASA 2019 Evidence Badge
+    render_evidence_badge(
+        level="Class I, Level A",
+        recommendation="IV alteplase (0.9 mg/kg, max 90 mg) within 3 hours of symptom onset",
+        citation=Citation(
+            source="AHA/ASA 2019 Guidelines",
+            title="2019 Update to the 2018 Guidelines for the Early Management of Acute Ischemic Stroke",
+            year=2019
+        )
+    )
     
-    st.markdown("##### ⏱️ Time Windows")
+    st.markdown("#### ✅ Chỉ định tPA (Alteplase) - AHA/ASA 2019")
+    
+    st.markdown("##### ⏱️ Time Windows (AHA/ASA 2019)")
     
     col1, col2, col3 = st.columns(3)
     
     with col1:
         st.success("""
-        **Standard Window:**
+        **Standard Window (0-3h) - Class I, Level A:**
         - **0-3 giờ:** Tất cả bệnh nhân đủ tiêu chuẩn
+        - **Evidence:** NINDS trial, ECASS III
+        - **Benefit:** NNT = 8 để tránh disability
+        
+        **Extended Window (3-4.5h) - Class I, Level B:**
         - **3-4.5 giờ:** Thêm tiêu chuẩn:
-          * Tuổi ≤80
+          * Tuổi ≤80 (Class I, Level B)
           * NIHSS ≤25
           * Không có tiền sử đột quỵ + đái tháo đường
+          * Không dùng OAC
+        - **Evidence:** ECASS III trial
         """)
     
     with col2:
@@ -219,7 +259,56 @@ def render_ischemic_stroke():
         """)
     
     st.markdown("---")
-    st.markdown("#### 📋 Interactive tPA Eligibility Checklist")
+    st.markdown("#### 📋 Interactive tPA Eligibility Checklist (AHA/ASA 2019)")
+    
+    # AHA/ASA 2019 Inclusion/Exclusion Summary
+    with st.expander("📖 AHA/ASA 2019 Inclusion/Exclusion Criteria - Detailed", expanded=False):
+        st.markdown("""
+        **AHA/ASA 2019 Inclusion Criteria (Class I):**
+        
+        **Time-based:**
+        - Symptom onset <3 hours: All eligible patients (Class I, Level A)
+        - Symptom onset 3-4.5 hours: Additional criteria apply (Class I, Level B)
+        
+        **Clinical:**
+        - Age ≥18 years (for 0-3h window)
+        - Age ≤80 years (for 3-4.5h window)
+        - Measurable neurologic deficit (NIHSS ≥1)
+        - NIHSS ≤25 (for 3-4.5h window)
+        
+        **Imaging:**
+        - No intracranial hemorrhage on CT
+        - No early infarct signs >1/3 MCA territory
+        
+        **Laboratory:**
+        - Platelet count ≥100,000/µL
+        - INR ≤1.7 (if on warfarin)
+        - aPTT normal (if on heparin)
+        - Glucose ≥50 mg/dL
+        
+        **Blood Pressure:**
+        - SBP <185 mmHg (can be treated)
+        - DBP <110 mmHg (can be treated)
+        
+        **AHA/ASA 2019 Absolute Contraindications:**
+        - Intracranial hemorrhage on CT
+        - Early infarct >1/3 MCA territory
+        - History of intracranial hemorrhage
+        - Recent stroke (<3 months)
+        - Recent head trauma (<3 months)
+        - Recent major surgery (<14 days)
+        - Recent GI bleeding (<21 days)
+        - Active bleeding
+        - Platelet <100,000/µL
+        - INR >1.7 (on warfarin)
+        - On NOAC <48 hours (unless reversed)
+        
+        **AHA/ASA 2019 Relative Contraindications (3-4.5h window):**
+        - Age >80 years
+        - NIHSS >25
+        - History of stroke + diabetes
+        - On oral anticoagulant (regardless of INR)
+        """)
     
     # Time window
     time_from_onset = st.number_input(
@@ -463,7 +552,23 @@ def render_ischemic_stroke():
         """)
     
     st.markdown("---")
-    st.markdown("#### 💉 tPA Dosing Calculator")
+    st.markdown("#### 💉 tPA Dosing Calculator (AHA/ASA 2019 Protocol)")
+    
+    # AHA/ASA 2019 Dosing Details
+    st.info("""
+    **AHA/ASA 2019 Dosing Protocol:**
+    - **Total dose:** 0.9 mg/kg (maximum 90 mg)
+    - **10% of total:** IV bolus over 1 minute
+    - **90% of total:** IV infusion over 60 minutes
+    - **Concentration:** 1 mg/ml (reconstitute in sterile water, then dilute in NS)
+    - **Infusion rate:** Calculated to complete 90% dose in exactly 60 minutes
+    
+    **AHA/ASA 2019 Key Points:**
+    - Do NOT exceed 90 mg total dose
+    - Complete infusion within 60 minutes (not longer)
+    - Use dedicated IV line (do not mix with other medications)
+    - Monitor closely during infusion (see monitoring protocol)
+    """)
     
     if not eligible:
         st.info("💡 **Lưu ý:** Bệnh nhân không đủ tiêu chuẩn tPA. Calculator này chỉ để tham khảo.")
@@ -575,7 +680,27 @@ def render_ischemic_stroke():
         st.dataframe(pd.DataFrame(timeline_data), use_container_width=True, hide_index=True)
     
     st.markdown("---")
-    st.markdown("#### 📊 Post-tPA Monitoring Protocol")
+    st.markdown("#### 📊 Post-tPA Monitoring Protocol (AHA/ASA 2019)")
+    
+    # AHA/ASA 2019 Monitoring Recommendations
+    st.warning("""
+    **AHA/ASA 2019 Monitoring Recommendations (Class I, Level B):**
+    
+    **During Infusion (0-60 minutes):**
+    - Blood pressure every 15 minutes
+    - Neurologic assessment every 30 minutes
+    - Monitor for signs of hemorrhage
+    
+    **After Infusion (0-24 hours):**
+    - Blood pressure every 15 minutes × 2 hours, then every 30 minutes × 6 hours, then hourly
+    - Neurologic checks every hour × 24 hours
+    - CT Head at 24 hours (or earlier if symptomatic)
+    
+    **Blood Pressure Targets (AHA/ASA 2019):**
+    - During and after tPA: Maintain SBP <185 mmHg, DBP <110 mmHg
+    - If SBP >185 or DBP >110: Treat with labetalol or nicardipine
+    - Avoid excessive lowering (may cause hypoperfusion)
+    """)
     
     # Monitoring checklist tabs
     tab1, tab2, tab3 = st.tabs(["⏱️ Trong khi truyền (0-60 phút)", "🕐 0-24 giờ", "🚨 Xử trí xuất huyết"])
@@ -750,34 +875,86 @@ def render_ischemic_stroke():
         """)
     
     st.markdown("---")
-    st.markdown("#### 🚫 Chống chỉ định điều chỉnh huyết áp")
+    st.markdown("#### 🚫 Chống chỉ định điều chỉnh huyết áp (AHA/ASA 2019)")
+    
+    # AHA/ASA 2019 Blood Pressure Management
+    render_evidence_badge(
+        level="Class I, Level B",
+        recommendation="Blood pressure should be <185/110 mmHg before thrombolysis",
+        citation=Citation(
+            source="AHA/ASA 2019 Guidelines",
+            title="Blood Pressure Management in Acute Ischemic Stroke",
+            year=2019
+        )
+    )
     
     st.info("""
+    **AHA/ASA 2019 Blood Pressure Management Before Thrombolysis:**
+    
+    **Class I, Level B Recommendation:**
+    - Blood pressure must be <185/110 mmHg before administering alteplase
+    - If elevated, treat to achieve target before starting tPA
+    
     **Nếu SBP >185 hoặc DBP >110 trước tPA:**
     
-    **Điều trị để đạt mục tiêu:**
-    - **Labetalol:** 10-20mg IV, có thể lặp lại mỗi 10-15 phút
-    - **Nicardipine:** 5mg/h IV, tăng dần đến 15mg/h
-    - **Clevidipine:** 1-2 mg/h IV (nếu có)
+    **Điều trị để đạt mục tiêu (AHA/ASA 2019):**
+    - **Labetalol:** 10-20mg IV bolus, có thể lặp lại mỗi 10-15 phút (max 300mg)
+      * Onset: 5-10 minutes
+      * Duration: 3-6 hours
+      * Preferred first-line agent
+    - **Nicardipine:** 5mg/h IV infusion, tăng dần 2.5mg/h mỗi 5-15 phút (max 15mg/h)
+      * Onset: 1-5 minutes
+      * Duration: 15-30 minutes after stopping
+      * Good for continuous control
+    - **Clevidipine:** 1-2 mg/h IV infusion, titrate 1-2 mg/h mỗi 2-5 phút (max 21 mg/h)
+      * Onset: 1-2 minutes
+      * Duration: 5-15 minutes after stopping
+      * Very rapid onset/offset
     
-    **Mục tiêu:**
+    **Mục tiêu (AHA/ASA 2019):**
     - SBP <185 mmHg
     - DBP <110 mmHg
     - Đạt được trong 60 phút để không bỏ lỡ cửa sổ tPA
     
-    **Nếu không kiểm soát được:** Không dùng tPA
+    **AHA/ASA 2019 Contraindication:**
+    - **Nếu không kiểm soát được sau điều trị:** Không dùng tPA (Class III, Level C)
+    - Do not use tPA if BP cannot be controlled to <185/110 mmHg
+    
+    **Avoid (AHA/ASA 2019):**
+    - Nitroprusside (may increase ICP)
+    - Hydralazine (unpredictable response)
+    - Rapid excessive lowering (may cause hypoperfusion)
     """)
     
     st.markdown("---")
     st.markdown("### 4️⃣ Lấy huyết khối cơ học (Mechanical Thrombectomy)")
     
-    st.markdown("#### ✅ Chỉ định MT (Endovascular Thrombectomy)")
+    st.markdown("#### ✅ Chỉ định MT (Endovascular Thrombectomy) - AHA/ASA 2019")
+    
+    # AHA/ASA 2019 MT Evidence
+    render_evidence_badge(
+        level="Class I, Level A",
+        recommendation="Mechanical thrombectomy within 6 hours for large vessel occlusion",
+        citation=Citation(
+            source="AHA/ASA 2019 Guidelines",
+            title="Endovascular Treatment for Acute Ischemic Stroke",
+            year=2019
+        )
+    )
     
     st.info("""
-    **AHA/ASA 2023 Update - Extended Windows:**
+    **AHA/ASA 2019 Mechanical Thrombectomy Recommendations:**
+    
+    **Class I, Level A (0-6 hours):**
+    - Mechanical thrombectomy for large vessel occlusion (ICA, M1) within 6 hours
+    - Evidence: MR CLEAN, ESCAPE, REVASCAT, SWIFT PRIME, EXTEND-IA trials
+    - Benefit: NNT = 2.6 để tránh disability
+    
+    **Class IIa, Level A (6-24 hours - Extended Window):**
     - **DAWN Trial:** Up to 24h với clinical-imaging mismatch
     - **DEFUSE-3 Trial:** Up to 16h với perfusion mismatch
     - **CT Perfusion** hoặc **MRI DWI-FLAIR** để xác định salvageable tissue
+    - Requires imaging selection (core infarct <70ml, penumbra >15ml)
     """)
     
     col1, col2 = st.columns(2)
@@ -1295,6 +1472,148 @@ def render_ischemic_stroke():
     **Lựa chọn:**
     - DOAC (Apixaban, Rivaroxaban) ưu tiên hơn Warfarin
     - Nếu Warfarin: INR mục tiêu 2.0-3.0
+    """)
+    
+    st.markdown("---")
+    st.markdown("### 📚 AHA/ASA 2019 Guidelines - Comprehensive Summary")
+    
+    with st.expander("📖 AHA/ASA 2019 Key Recommendations - Complete Reference", expanded=False):
+        st.markdown("""
+        **AHA/ASA 2019 Guidelines for Early Management of Acute Ischemic Stroke**
+        *2019 Update to the 2018 Guidelines*
+        
+        ---
+        
+        **1. IV THROMBOLYSIS (ALTEPLASE)**
+        
+        **Class I, Level A:**
+        - IV alteplase (0.9 mg/kg, max 90 mg) within 3 hours of symptom onset
+        - Administer to eligible patients without contraindications
+        
+        **Class I, Level B:**
+        - IV alteplase (0.9 mg/kg, max 90 mg) within 3-4.5 hours with:
+          * Age ≤80 years
+          * NIHSS ≤25
+          * No history of stroke + diabetes
+          * Not on oral anticoagulant
+        
+        **Class III, Level C (Harm):**
+        - Do NOT use alteplase if BP cannot be controlled to <185/110 mmHg
+        
+        **Dosing Protocol:**
+        - Total: 0.9 mg/kg (max 90 mg)
+        - 10% bolus over 1 minute
+        - 90% infusion over 60 minutes
+        
+        ---
+        
+        **2. MECHANICAL THROMBECTOMY**
+        
+        **Class I, Level A:**
+        - Mechanical thrombectomy for large vessel occlusion (ICA, M1) within 6 hours
+        - ASPECTS ≥6, NIHSS ≥6
+        - Age ≥18 years
+        
+        **Class IIa, Level A:**
+        - Extended window (6-24h) with imaging selection:
+          * Core infarct <70ml (CT Perfusion)
+          * Penumbra >15ml mismatch
+          * Clinical-imaging mismatch (DAWN criteria)
+        
+        ---
+        
+        **3. BLOOD PRESSURE MANAGEMENT**
+        
+        **Class I, Level B:**
+        - BP <185/110 mmHg before thrombolysis
+        - Treat elevated BP before tPA
+        
+        **During/After tPA (0-24h):**
+        - Maintain SBP <185 mmHg, DBP <110 mmHg
+        - Monitor every 15 minutes × 2h, then every 30 minutes
+        
+        **If no tPA:**
+        - Permissive hypertension up to 220 mmHg in first 24h
+        - Treat if SBP >220 mmHg or if symptomatic
+        
+        ---
+        
+        **4. ANTIPLATELET THERAPY**
+        
+        **After tPA:**
+        - Do NOT start within 24 hours
+        - Start after 24h if no hemorrhage on CT
+        
+        **Without tPA:**
+        - Start within 24-48 hours
+        - Aspirin 81-325 mg daily
+        
+        **DAPT (TIA/Minor Stroke):**
+        - Aspirin + Clopidogrel for 21-90 days
+        - Then continue with aspirin alone
+        
+        ---
+        
+        **5. STATIN THERAPY**
+        
+        **Class I, Level A:**
+        - High-intensity statin (Atorvastatin 80mg or Rosuvastatin 40mg)
+        - Start within 24-48 hours if no contraindication
+        
+        ---
+        
+        **6. COMPLICATIONS MANAGEMENT**
+        
+        **Symptomatic Intracranial Hemorrhage:**
+        - Stop tPA immediately
+        - CT Head immediately
+        - Reverse with cryoprecipitate (10 units) + FFP (2 units)
+        - Neurosurgery consult
+        
+        **Blood Pressure Management:**
+        - Labetalol 10-20mg IV (preferred)
+        - Nicardipine 5-15 mg/h IV
+        - Clevidipine 1-21 mg/h IV
+        
+        ---
+        
+        **7. TIMELINE GOALS (AHA/ASA 2019)**
+        
+        - **Door-to-CT:** ≤25 minutes
+        - **Door-to-Needle (tPA):** ≤60 minutes
+        - **Door-to-Puncture (MT):** ≤90 minutes
+        - **Door-to-Reperfusion:** ≤120 minutes
+        
+        ---
+        
+        **Evidence Levels:**
+        - **Level A:** Multiple randomized trials or meta-analyses
+        - **Level B:** Single randomized trial or nonrandomized studies
+        - **Level C:** Expert opinion, case studies
+        
+        **Class of Recommendation:**
+        - **Class I:** Benefit >> Risk (should be performed)
+        - **Class IIa:** Benefit >> Risk (reasonable to perform)
+        - **Class IIb:** Benefit ≥ Risk (may be considered)
+        - **Class III:** No benefit or harm (should NOT be performed)
+        """)
+    
+    # Add references section
+    st.markdown("---")
+    st.markdown("#### 📖 References - AHA/ASA 2019 Guidelines")
+    
+    st.info("""
+    **Primary Sources:**
+    1. Powers WJ, et al. 2019 Update to the 2018 Guidelines for the Early Management of Acute Ischemic Stroke. Stroke. 2019;50(12):e344-e418.
+    2. Jauch EC, et al. Guidelines for the Early Management of Patients With Acute Ischemic Stroke. Stroke. 2013;44(3):870-947.
+    3. NINDS rt-PA Stroke Study Group. Tissue plasminogen activator for acute ischemic stroke. N Engl J Med. 1995;333(24):1581-1587.
+    4. ECASS III Investigators. Thrombolysis with alteplase 3 to 4.5 hours after acute ischemic stroke. N Engl J Med. 2008;359(13):1317-1329.
+    5. MR CLEAN Investigators. A randomized trial of intraarterial treatment for acute ischemic stroke. N Engl J Med. 2015;372(1):11-20.
+    6. DAWN Trial Investigators. Thrombectomy 6 to 24 Hours after Stroke with a Mismatch between Deficit and Infarct. N Engl J Med. 2018;378(1):11-21.
+    7. DEFUSE-3 Investigators. Thrombectomy for Stroke at 6 to 16 Hours with Selection by Perfusion Imaging. N Engl J Med. 2018;378(8):708-718.
+    
+    **Last Updated:** Based on AHA/ASA 2019 Guidelines
+    **Evidence Level:** High - Multiple Class I recommendations with Level A evidence
     """)
 
 

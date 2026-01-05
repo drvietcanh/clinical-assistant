@@ -24,6 +24,7 @@ from scores.references_config import get_references
 from components.references import render_references_section
 from components.calculation_history import save_calculation_to_history, render_history_ui
 from components.share_results import render_share_section, load_shared_result_from_url
+from components.smart_suggestions import render_suggestions
 from components.export import render_export_section
 
 
@@ -325,6 +326,7 @@ def render():
             
             render_share_section(calculator_id="hfa_icos_anthracycline", calculator_name="HFA-ICOS Anthracycline Risk")
             render_export_section(calculator_id="hfa_icos_anthracycline", calculator_name="HFA-ICOS Anthracycline Risk", data={"result": result})
+            render_suggestions(calculator_id="hfa_icos_anthracycline", result=result)
     
     render_history_ui(calculator_id="hfa_icos_anthracycline", show_actions=True)
     references = get_references("HFA-ICOS Anthracycline Risk")

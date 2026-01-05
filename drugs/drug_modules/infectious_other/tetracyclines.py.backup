@@ -1,0 +1,830 @@
+"""Infectious Disease & Antibiotic Drugs (Other) - Macrolides, Fluoroquinolones, Antimalarials, etc."""
+
+# Tetracyclines
+
+TETRACYCLINES_DRUGS = {
+    "Doxycycline": {'group': 'Infectious Disease - Tetracycline Antibiotic', 'vietnamese_name':
+        'Doxycycline, Vibramycin', 'administration': ['PO', 'IV'],
+        'indications': ['Nhiễm trùng đường hô hấp',
+        'Nhiễm trùng da (mụn trứng cá)', 'Chlamydia', 'Lyme disease',
+        'Sốt rét phòng ngừa', 'Rickettsia', 'Mycoplasma'], 'contraindications':
+        ['Dị ứng doxycycline/tetracycline', 'Có thai (3 tháng cuối)',
+        'Trẻ em <8 tuổi (gây vàng răng)'], 'dosage': {'adult_respiratory':
+        '100mg x 2 lần/ngày x 7-14 ngày', 'adult_chlamydia':
+        '100mg x 2 lần/ngày x 7 ngày', 'adult_acne': '50-100mg x 1-2 lần/ngày',
+        'adult_malaria_prophylaxis': '100mg x 1 lần/ngày', 'notes':
+        'Uống với nhiều nước, tránh nằm ngay sau khi uống. Tránh nắng'},
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Không đổi'}, 'side_effects': ['Buồn nôn, nôn',
+        'Loét thực quản (nếu không uống đủ nước)',
+        'Phản ứng quang hóa (nhạy cảm ánh sáng)', 'Vàng răng (trẻ em, có thai)',
+        'Tăng áp lực nội sọ (hiếm)', 'Độc gan (liều cao)'], 'interactions': [
+        'Antacid/Sắt/Calcium: giảm hấp thu - cách 2 giờ',
+        'Warfarin: tăng tác dụng chống đông', 'Digoxin: tăng nồng độ digoxin',
+        'Phenytoin/Carbamazepine: giảm nồng độ doxycycline'], 'pregnancy':
+        'D - Chống chỉ định trong 3 tháng cuối', 'mechanism_of_action':
+        'Tetracycline kháng sinh phổ rộng. Ức chế tổng hợp protein vi khuẩn bằng cách gắn với tiểu phần 30S của ribosome, ngăn cản gắn aminoacyl-tRNA. Phổ kháng khuẩn: Gram-dương, Gram-âm, vi khuẩn không điển hình (Chlamydia, Mycoplasma, Rickettsia, Borrelia), và một số ký sinh trùng (Plasmodium). Không hiệu quả với Pseudomonas hoặc Proteus. Đặc biệt hiệu quả với vi khuẩn không điển hình và được dùng trong nhiễm trùng đường hô hấp, Lyme disease, và sốt rét.'
+        , 'monitoring': ['Dấu hiệu nhiễm trùng (sốt, WBC)',
+        'Cấy máu và cấy từ vị trí nhiễm trùng',
+        'Dạ dày-ruột (buồn nôn, nôn, tiêu chảy, viêm thực quản)',
+        'Da (tăng độ nhạy cảm với ánh sáng, phát ban)',
+        'Răng và xương (ở trẻ em < 8 tuổi: ố vàng răng vĩnh viễn, chậm phát triển xương)'
+        ,
+        'Chức năng gan (ALT, AST) - hiếm viêm gan, tăng áp lực nội sọ giả (ở phụ nữ)'
+        , 'Thận (không tích lũy ở suy thận, nhưng theo dõi)'], 'precautions': [
+        'KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - gây ố vàng răng vĩnh viễn, chậm phát triển xương'
+        ,
+        'Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp, dùng kem chống nắng, mặc quần áo che phủ'
+        ,
+        'Uống với nhiều nước (ít nhất 200ml) và ở tư thế đứng để tránh viêm thực quản (đau khi nuốt, khó nuốt)'
+        , 'KHÔNG uống nằm ngửa hoặc trước khi ngủ',
+        'Tương tác với nhiều thuốc và thực phẩm: giảm hấp thu với antacid, sắt, canxi, magie, kẽm, sữa (cách 2 giờ)'
+        , 'Tương tác với warfarin → tăng nguy cơ chảy máu (theo dõi INR)',
+        'Tương tác với thuốc tránh thai → giảm hiệu quả (dùng biện pháp tránh thai khác)'
+        ,
+        'Tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị) - đặc biệt ở phụ nữ, ngừng nếu có'
+        ,
+        'Không dùng trong 3 tháng cuối thai kỳ (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)'
+        ,
+        'Uống với thức ăn để giảm kích ứng dạ dày (nhưng giảm hấp thu một phần)'
+        ], 'pharmacokinetics': {'half_life': '18-22 giờ (dài)', 'onset':
+        '1-2 giờ (PO), ngay lập tức (IV)', 'duration': 'q12h hoặc q24h (PO/IV)',
+        'protein_binding': '80-90%', 'metabolism':
+        'Gan (một phần), bài tiết một phần nguyên dạng', 'clearance':
+        'Gan và thận, KHÔNG tích lũy ở suy thận (khác với tetracycline cũ)'},
+        'storage':
+        'Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nang: tránh ẩm. Bảo quản tốt hơn các tetracycline cũ (ít bị hỏng).'
+        , 'black_box_warnings':
+        'Không có black box warning. Tuy nhiên, ố vàng răng vĩnh viễn ở trẻ em < 8 tuổi là không hồi phục. Tăng áp lực nội sọ giả có thể gây mù. Viêm thực quản có thể nghiêm trọng.'
+        , 'drug_interactions': {'major': [{'drug':
+        'Antacid, Sắt, Calcium, Magnesium, Kẽm, Bismuth', 'mechanism':
+        'Các cation hóa trị 2+ (Ca²⁺, Mg²⁺, Fe²⁺, Zn²⁺) tạo phức hợp không hòa tan với doxycycline, làm giảm hấp thu doxycycline.'
+        , 'effect':
+        'Giảm hấp thu doxycycline đáng kể (50-90%), giảm hiệu quả kháng khuẩn',
+        'management':
+        'Cách ít nhất 2 giờ giữa doxycycline và các thuốc/thực phẩm chứa cation (antacid, sắt, canxi, magie, kẽm, sữa, bismuth). Uống doxycycline trước bữa ăn hoặc 2 giờ sau bữa ăn nếu bữa ăn chứa nhiều sữa hoặc thực phẩm giàu canxi.'
+        }, {'drug': 'Warfarin', 'mechanism':
+        'Doxycycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K. Ngoài ra, có thể đẩy warfarin khỏi albumin (protein binding cao).'
+        , 'effect': 'Tăng INR, tăng nguy cơ chảy máu', 'management':
+        'Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng doxycycline). Có thể cần giảm liều warfarin. Đặc biệt thận trọng ở bệnh nhân dùng kéo dài (>7 ngày).'
+        }], 'moderate': [{'drug': 'Digoxin', 'mechanism':
+        'Doxycycline có thể làm tăng hấp thu digoxin bằng cách thay đổi hệ vi khuẩn đường ruột, làm tăng nồng độ digoxin.'
+        , 'effect':
+        'Tăng nồng độ digoxin, tăng nguy cơ độc tính digoxin (buồn nôn, rối loạn nhịp tim)'
+        , 'management':
+        'Theo dõi nồng độ digoxin. Có thể cần giảm liều digoxin. Theo dõi dấu hiệu độc tính digoxin.'
+        }, {'drug': 'Phenytoin, Carbamazepine', 'mechanism':
+        'Phenytoin và carbamazepine cảm ứng enzyme chuyển hóa doxycycline, làm giảm nồng độ doxycycline.'
+        , 'effect': 'Giảm nồng độ doxycycline, giảm hiệu quả kháng khuẩn',
+        'management':
+        'Có thể cần tăng liều doxycycline. Theo dõi đáp ứng điều trị.'}, {
+        'drug': 'Thuốc tránh thai đường uống', 'mechanism':
+        'Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột. Ngoài ra, doxycycline có thể cảm ứng enzyme chuyển hóa estrogen.'
+        , 'effect':
+        'Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)',
+        'management':
+        'Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng.'
+        }], 'minor': [{'drug': 'Penicillin', 'mechanism':
+        'Doxycycline có thể đối kháng với penicillin trong một số trường hợp (ức chế tổng hợp protein vs ức chế tổng hợp thành tế bào).'
+        , 'effect': 'Giảm hiệu quả kháng khuẩn của penicillin (hiếm)',
+        'management':
+        'Tránh dùng đồng thời nếu có thể. Chọn một trong hai thuốc tùy theo chỉ định.'
+        }]}, 'contraindications': {'tuyệt_đối': [
+        'Dị ứng doxycycline hoặc tetracycline',
+        'Có thai (3 tháng cuối) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)'
+        ,
+        'Trẻ em < 8 tuổi - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (trừ trường hợp đe dọa tính mạng như sốt rét, rickettsia) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương'
+        ], 'tương_đối': [
+        'Có thai (3 tháng đầu và giữa) - nguy cơ ố vàng răng, chậm phát triển xương ở trẻ, chỉ dùng khi thực sự cần thiết'
+        , 'Suy gan nặng - tăng nguy cơ độc gan',
+        'Tăng áp lực nội sọ giả - có thể làm nặng thêm',
+        'Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu',
+        'Bệnh nhân đang dùng digoxin - tăng nguy cơ độc tính digoxin',
+        'Nhạy cảm với ánh sáng - tăng nguy cơ phản ứng quang hóa']},
+        'contraindications_detail': {'tuyệt_đối': [
+        'Dị ứng doxycycline hoặc tetracycline',
+        'Có thai (3 tháng cuối) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)'
+        ,
+        'Trẻ em < 8 tuổi - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (trừ trường hợp đe dọa tính mạng như sốt rét, rickettsia) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương'
+        ], 'tương_đối': [
+        'Có thai (3 tháng đầu và giữa) - nguy cơ ố vàng răng, chậm phát triển xương ở trẻ, chỉ dùng khi thực sự cần thiết'
+        , 'Suy gan nặng - tăng nguy cơ độc gan',
+        'Tăng áp lực nội sọ giả - có thể làm nặng thêm',
+        'Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu',
+        'Bệnh nhân đang dùng digoxin - tăng nguy cơ độc tính digoxin',
+        'Nhạy cảm với ánh sáng - tăng nguy cơ phản ứng quang hóa']},
+        'pregnancy_lactation': {'fda_category': 'D', 'pregnancy_details':
+        'Doxycycline là thuốc phân loại D. Các nghiên cứu trên động vật và người cho thấy nguy cơ ố vàng răng vĩnh viễn và chậm phát triển xương ở trẻ khi dùng trong thai kỳ, đặc biệt trong tam cá nguyệt thứ hai và thứ ba. Chống chỉ định trong tam cá nguyệt thứ hai và thứ ba. Tránh dùng trong tam cá nguyệt đầu tiên nếu có thể. Chỉ dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong các trường hợp đe dọa tính mạng như sốt rét, rickettsia.'
+        , 'lactation': {'safety': 'Compatible', 'details':
+        'Doxycycline bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Tuy nhiên, có thể gây ố vàng răng ở trẻ sơ sinh nếu dùng kéo dài.'
+        , 'recommendation':
+        'Có thể dùng khi cho con bú, nhưng thận trọng. Tránh dùng kéo dài. Theo dõi trẻ sơ sinh về dấu hiệu tiêu chảy, phát ban, hoặc các tác dụng phụ khác. Dùng liều thấp nhất hiệu quả.'
+        }}, 'hepatic_adjustment': {'mild':
+        'Không cần điều chỉnh liều. Doxycycline chuyển hóa một phần qua gan, nhưng không tích lũy đáng kể ở suy gan nhẹ.'
+        , 'moderate':
+        'Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan và dấu hiệu độc gan.'
+        , 'severe':
+        'Giảm liều 25-50% hoặc tăng khoảng cách giữa các liều. Theo dõi chức năng gan chặt chẽ. Có thể cần tránh dùng nếu suy gan rất nặng.'
+        , 'notes':
+        'Doxycycline chuyển hóa một phần qua gan, nhưng thải trừ chủ yếu qua gan và thận. Không tích lũy đáng kể ở suy gan nhẹ, nhưng có thể tích lũy ở suy gan nặng. Cần điều chỉnh liều ở suy gan nặng. Khác với tetracycline cũ, doxycycline không tích lũy ở suy thận.'
+        }, 'overdose_management': {'symptoms': [
+        'Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, viêm thực quản (đau khi nuốt, khó nuốt)'
+        ,
+        'Triệu chứng gan: Tăng men gan, viêm gan (đặc biệt ở liều cao, suy gan)',
+        'Triệu chứng thần kinh: Tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị) - đặc biệt ở phụ nữ, có thể gây mù'
+        ,
+        'Triệu chứng da: Phản ứng quang hóa nặng (phát ban, bỏng da khi tiếp xúc với ánh sáng)'
+        ,
+        'Triệu chứng chảy máu: Chảy máu kéo dài, tăng INR (khi dùng với warfarin)',
+        'Triệu chứng dị ứng: Phát ban, phù mạch, sốc phản vệ (nếu dị ứng)'],
+        'antidote':
+        'Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.',
+        'treatment': ['Ngừng ngay doxycycline',
+        'Điều trị viêm thực quản nếu có:', '  - Uống nhiều nước',
+        '  - Tránh nằm ngửa', '  - Điều trị giảm đau nếu cần',
+        '  - Có thể cần nội soi nếu nghiêm trọng',
+        'Điều trị tăng áp lực nội sọ giả nếu có:', '  - Ngừng ngay doxycycline',
+        '  - Điều trị bằng acetazolamide hoặc mannitol nếu cần',
+        '  - Theo dõi thị lực và dấu hiệu thần kinh',
+        '  - Có thể cần chọc dò tủy sống để giảm áp lực',
+        'Điều trị phản ứng quang hóa nếu có:', '  - Tránh ánh nắng trực tiếp',
+        '  - Dùng kem chống nắng', '  - Điều trị phát ban/bỏng da',
+        'Điều trị chảy máu nếu có:',
+        '  - Bổ sung vitamin K nếu giảm prothrombin',
+        '  - Truyền huyết tương tươi đông lạnh (FFP) nếu chảy máu nặng',
+        '  - Điều chỉnh liều warfarin nếu đang dùng',
+        'Điều trị độc gan nếu có:', '  - Ngừng ngay doxycycline',
+        '  - Điều trị hỗ trợ gan', '  - Theo dõi chức năng gan',
+        'Điều trị dị ứng nếu có:', '  - Epinephrine nếu sốc phản vệ',
+        '  - Antihistamine, corticosteroid', '  - Hỗ trợ hô hấp nếu cần',
+        'Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2',
+        'Lọc máu: Hemodialysis không hiệu quả do protein binding cao (80-90%)'],
+        'monitoring':
+        'Theo dõi dấu hiệu tiêu hóa (buồn nôn, nôn, viêm thực quản), dấu hiệu tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị), dấu hiệu phản ứng quang hóa (phát ban, bỏng da), chức năng gan (ALT, AST), PT/INR (nếu dùng với warfarin), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có tăng áp lực nội sọ giả hoặc độc gan.'
+        },
+        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay doxycycline, điều trị viêm thực quản nếu có, điều trị tăng áp lực nội sọ giả nếu có (acetazolamide hoặc mannitol), điều trị phản ứng quang hóa nếu có, điều trị chảy máu nếu có (vitamin K, FFP), điều trị độc gan nếu có, điều trị dị ứng nếu có (epinephrine nếu sốc phản vệ), lọc máu không hiệu quả do protein binding cao.'},
+        'administration_instructions': {'oral': {
+        'with_food':
+        'Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhưng giảm hấp thu một phần. Tránh uống với sữa hoặc thực phẩm giàu canxi (giảm hấp thu đáng kể).'
+        , 'timing':
+        'Uống 1-2 lần/ngày tùy chỉ định (respiratory: 2 lần/ngày, chlamydia: 2 lần/ngày, acne: 1-2 lần/ngày, malaria prophylaxis: 1 lần/ngày). Cách đều trong ngày. Uống với nhiều nước (ít nhất 200ml) và ở tư thế đứng để tránh viêm thực quản. KHÔNG uống nằm ngửa hoặc trước khi ngủ. Cách ít nhất 2 giờ với antacid, sắt, canxi, magie, kẽm, sữa.'
+        }, 'iv': {'reconstitution':
+        'Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 0.1-1mg/ml. Pha 100mg trong 100ml = 1mg/ml. Pha 200mg trong 200ml = 1mg/ml. Lắc kỹ để hòa tan hoàn toàn. Bảo quản tránh ánh sáng.'
+        , 'infusion_rate':
+        'Truyền IV trong 1-4 giờ. Tốc độ: 100ml/1 giờ = ~1.7ml/phút, 200ml/4 giờ = ~0.83ml/phút. KHÔNG truyền nhanh (bolus) - tăng nguy cơ tác dụng phụ.'
+        , 'compatibility': ['NS (0.9% NaCl)', 'D5W (5% Dextrose)'],
+        'incompatibility': ["Ringer's Lactate - có thể tạo kết tủa với canxi",
+        'Các dung dịch chứa canxi, magie, sắt - tạo kết tủa',
+        'Các thuốc có tính kiềm hoặc acid mạnh'], 'notes':
+        'QUAN TRỌNG: 1) Uống với nhiều nước và ở tư thế đứng để tránh viêm thực quản, 2) Tránh ánh nắng trực tiếp, dùng kem chống nắng, 3) Cách ít nhất 2 giờ với antacid, sắt, canxi, magie, kẽm, sữa, 4) KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng), 5) KHÔNG dùng trong 3 tháng cuối thai kỳ, 6) Theo dõi dấu hiệu tăng áp lực nội sọ giả.'
+        }}, 'references': {'primary_sources': [
+        'FDA Drug Label - Doxycycline (Vibramycin)',
+        'UpToDate - Doxycycline: Drug Information',
+        'Medscape - Doxycycline Drug Reference',
+        "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+        'Lexicomp Online - Doxycycline Monograph',
+        'Micromedex - Doxycycline Drug Information',
+        'IDSA Guidelines - Community-Acquired Pneumonia, Tick-Borne Infections'
+        ], 'last_updated': '2025-02-03', 'evidence_level':
+        'A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
+        }},
+
+    "Minocycline": {
+        "group": "Infectious Disease - Tetracycline Antibiotic",
+        "vietnamese_name": "Minocycline, Minocin",
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Nhiễm trùng đường hô hấp",
+            "Nhiễm trùng da (mụn trứng cá)",
+            "Chlamydia",
+            "Rickettsia",
+            "Mycoplasma",
+            "Nocardia",
+            "Viêm màng não do vi khuẩn (một số trường hợp)"
+        ],
+        "contraindications": [
+            "Dị ứng minocycline/tetracycline",
+            "Có thai (3 tháng cuối)",
+            "Trẻ em <8 tuổi (gây vàng răng)",
+            "Viêm gan tự miễn do minocycline trước đây"
+        ],
+        "dosage": {
+            "adult_standard": "100mg x 2 lần/ngày x 7-14 ngày",
+            "adult_acne": "50-100mg x 1-2 lần/ngày",
+            "adult_iv": "200mg IV x 1 lần/ngày, sau đó 100mg IV mỗi 12 giờ",
+            "pediatric_po": "4mg/kg ngày đầu, sau đó 2mg/kg x 2 lần/ngày (tối đa 200mg/ngày)",
+            "notes": "Uống với nhiều nước, tránh nằm ngay sau khi uống. Tránh nắng. Nguy cơ độc gan và viêm gan tự miễn cao hơn doxycycline."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi (không tích lũy ở suy thận)"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn",
+            "Chóng mặt, mất thăng bằng (đặc biệt ở phụ nữ, người cao tuổi)",
+            "Viêm gan tự miễn (hiếm nhưng nguy hiểm, có thể gây tử vong)",
+            "Tăng sắc tố da/vàng da (có thể không hồi phục)",
+            "Phản ứng quang hóa (nhạy cảm ánh sáng) - ít hơn doxycycline",
+            "Vàng răng (trẻ em, có thai)",
+            "Tăng áp lực nội sọ (hiếm)",
+            "Lupus-like syndrome (hiếm)"
+        ],
+        "interactions": [
+            "Antacid/Sắt/Calcium: giảm hấp thu - cách 2 giờ",
+            "Warfarin: tăng tác dụng chống đông",
+            "Digoxin: tăng nồng độ digoxin",
+            "Phenytoin/Carbamazepine: giảm nồng độ minocycline"
+        ],
+        "pregnancy": "D",
+        "mechanism_of_action": "Minocycline là tetracycline kháng sinh phổ rộng, ức chế tổng hợp protein vi khuẩn bằng cách gắn với tiểu phần 30S của ribosome, ngăn cản gắn aminoacyl-tRNA. Phổ kháng khuẩn: Gram-dương, Gram-âm, vi khuẩn không điển hình (Chlamydia, Mycoplasma, Rickettsia), và một số ký sinh trùng. Đặc biệt hiệu quả với Nocardia và một số vi khuẩn kháng doxycycline. Khác với doxycycline: minocycline có thể xuyên qua hàng rào máu-não tốt hơn (dùng trong viêm màng não), nhưng nguy cơ độc gan và viêm gan tự miễn cao hơn. Có thể gây tăng sắc tố da/vàng da (có thể không hồi phục).",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Chức năng gan (ALT, AST, bilirubin) - QUAN TRỌNG (nguy cơ viêm gan tự miễn)",
+            "Dấu hiệu viêm gan tự miễn (vàng da, mệt mỏi, đau bụng, sốt) - ngừng ngay nếu có",
+            "Dấu hiệu tăng sắc tố da/vàng da (có thể không hồi phục)",
+            "Dấu hiệu chóng mặt, mất thăng bằng (đặc biệt ở phụ nữ, người cao tuổi)",
+            "Dạ dày-ruột (buồn nôn, nôn, tiêu chảy)",
+            "Da (phản ứng quang hóa - ít hơn doxycycline)",
+            "Răng và xương (ở trẻ em < 8 tuổi: ố vàng răng vĩnh viễn)",
+            "Tăng áp lực nội sọ giả (ở phụ nữ)"
+        ],
+        "precautions": [
+            "NGUY CƠ VIÊM GAN TỰ MIỄN - cao hơn doxycycline, có thể gây tử vong. Theo dõi chức năng gan chặt chẽ. Ngừng ngay nếu có dấu hiệu viêm gan (vàng da, mệt mỏi, đau bụng, sốt).",
+            "NGUY CƠ TĂNG SẮC TỐ DA/VÀNG DA - có thể không hồi phục. Theo dõi dấu hiệu tăng sắc tố da. Ngừng nếu có.",
+            "CHÓNG MẶT, MẤT THĂNG BẰNG - đặc biệt ở phụ nữ, người cao tuổi. Thận trọng khi lái xe hoặc vận hành máy móc.",
+            "KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - gây ố vàng răng vĩnh viễn, chậm phát triển xương",
+            "Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp, dùng kem chống nắng (ít hơn doxycycline)",
+            "Uống với nhiều nước (ít nhất 200ml) và ở tư thế đứng để tránh viêm thực quản",
+            "KHÔNG uống nằm ngửa hoặc trước khi ngủ",
+            "Tương tác với nhiều thuốc và thực phẩm: giảm hấp thu với antacid, sắt, canxi, magie, kẽm, sữa (cách 2 giờ)",
+            "Tương tác với warfarin → tăng nguy cơ chảy máu (theo dõi INR)",
+            "Tương tác với thuốc tránh thai → giảm hiệu quả (dùng biện pháp tránh thai khác)",
+            "Tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị) - đặc biệt ở phụ nữ, ngừng nếu có",
+            "Không dùng trong 3 tháng cuối thai kỳ (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)",
+            "Uống với thức ăn để giảm kích ứng dạ dày (nhưng giảm hấp thu một phần)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "11-23 giờ (dài)",
+            "onset": "1-2 giờ (PO), ngay lập tức (IV)",
+            "duration": "q12h hoặc q24h (PO/IV)",
+            "protein_binding": "70-75%",
+            "metabolism": "Gan (một phần), bài tiết một phần nguyên dạng",
+            "clearance": "Gan và thận, KHÔNG tích lũy ở suy thận (khác với tetracycline cũ)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nang: tránh ẩm.",
+        "black_box_warnings": "NGUY CƠ VIÊM GAN TỰ MIỄN - có thể gây tử vong, cao hơn doxycycline. Ngừng ngay nếu có dấu hiệu viêm gan. NGUY CƠ TĂNG SẮC TỐ DA/VÀNG DA - có thể không hồi phục. Ố vàng răng vĩnh viễn ở trẻ em < 8 tuổi là không hồi phục. Tăng áp lực nội sọ giả có thể gây mù. Viêm thực quản có thể nghiêm trọng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Antacid, Sắt, Calcium, Magnesium, Kẽm, Bismuth",
+                    "mechanism": "Các cation hóa trị 2+ (Ca²⁺, Mg²⁺, Fe²⁺, Zn²⁺) tạo phức hợp không hòa tan với minocycline, làm giảm hấp thu minocycline.",
+                    "effect": "Giảm hấp thu minocycline đáng kể (50-90%), giảm hiệu quả kháng khuẩn",
+                    "management": "Cách ít nhất 2 giờ giữa minocycline và các thuốc/thực phẩm chứa cation (antacid, sắt, canxi, magie, kẽm, sữa, bismuth). Uống minocycline trước bữa ăn hoặc 2 giờ sau bữa ăn nếu bữa ăn chứa nhiều sữa hoặc thực phẩm giàu canxi."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Minocycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K. Ngoài ra, có thể đẩy warfarin khỏi albumin (protein binding cao).",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng minocycline). Có thể cần giảm liều warfarin. Đặc biệt thận trọng ở bệnh nhân dùng kéo dài (>7 ngày)."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Minocycline có thể làm tăng hấp thu digoxin bằng cách thay đổi hệ vi khuẩn đường ruột, làm tăng nồng độ digoxin.",
+                    "effect": "Tăng nồng độ digoxin, tăng nguy cơ độc tính digoxin (buồn nôn, rối loạn nhịp tim)",
+                    "management": "Theo dõi nồng độ digoxin. Có thể cần giảm liều digoxin. Theo dõi dấu hiệu độc tính digoxin."
+                },
+                {
+                    "drug": "Phenytoin, Carbamazepine",
+                    "mechanism": "Phenytoin và carbamazepine cảm ứng enzyme chuyển hóa minocycline, làm giảm nồng độ minocycline.",
+                    "effect": "Giảm nồng độ minocycline, giảm hiệu quả kháng khuẩn",
+                    "management": "Có thể cần tăng liều minocycline. Theo dõi đáp ứng điều trị."
+                },
+                {
+                    "drug": "Thuốc tránh thai đường uống",
+                    "mechanism": "Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột. Ngoài ra, minocycline có thể cảm ứng enzyme chuyển hóa estrogen.",
+                    "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
+                    "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng minocycline hoặc tetracycline",
+                "Có thai (3 tháng cuối) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)",
+                "Trẻ em < 8 tuổi - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (trừ trường hợp đe dọa tính mạng như sốt rét, rickettsia) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương",
+                "Viêm gan tự miễn do minocycline trước đây - nguy cơ tái phát cao, có thể gây tử vong"
+            ],
+            "tương_đối": [
+                "Có thai (3 tháng đầu và giữa) - nguy cơ ố vàng răng, chậm phát triển xương ở trẻ, chỉ dùng khi thực sự cần thiết",
+                "Suy gan nặng - tăng nguy cơ độc gan và viêm gan tự miễn",
+                "Tăng áp lực nội sọ giả - có thể làm nặng thêm",
+                "Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu",
+                "Bệnh nhân đang dùng digoxin - tăng nguy cơ độc tính digoxin",
+                "Nhạy cảm với ánh sáng - tăng nguy cơ phản ứng quang hóa",
+                "Chóng mặt, mất thăng bằng - thận trọng khi lái xe hoặc vận hành máy móc"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng minocycline hoặc tetracycline",
+                "Có thai (3 tháng cuối) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)",
+                "Trẻ em < 8 tuổi - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (trừ trường hợp đe dọa tính mạng như sốt rét, rickettsia) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương",
+                "Viêm gan tự miễn do minocycline trước đây - nguy cơ tái phát cao, có thể gây tử vong"
+            ],
+            "tương_đối": [
+                "Có thai (3 tháng đầu và giữa) - nguy cơ ố vàng răng, chậm phát triển xương ở trẻ, chỉ dùng khi thực sự cần thiết",
+                "Suy gan nặng - tăng nguy cơ độc gan và viêm gan tự miễn",
+                "Tăng áp lực nội sọ giả - có thể làm nặng thêm",
+                "Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu",
+                "Bệnh nhân đang dùng digoxin - tăng nguy cơ độc tính digoxin",
+                "Nhạy cảm với ánh sáng - tăng nguy cơ phản ứng quang hóa",
+                "Chóng mặt, mất thăng bằng - thận trọng khi lái xe hoặc vận hành máy móc"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Minocycline là thuốc phân loại D. Các nghiên cứu trên động vật và người cho thấy nguy cơ ố vàng răng vĩnh viễn và chậm phát triển xương ở trẻ khi dùng trong thai kỳ, đặc biệt trong tam cá nguyệt thứ hai và thứ ba. Chống chỉ định trong tam cá nguyệt thứ hai và thứ ba. Tránh dùng trong tam cá nguyệt đầu tiên nếu có thể. Chỉ dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong các trường hợp đe dọa tính mạng như sốt rét, rickettsia.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Minocycline bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Tuy nhiên, có thể gây ố vàng răng ở trẻ sơ sinh nếu dùng kéo dài.",
+                "recommendation": "Có thể dùng khi cho con bú, nhưng thận trọng. Tránh dùng kéo dài. Theo dõi trẻ sơ sinh về dấu hiệu tiêu chảy, phát ban, hoặc các tác dụng phụ khác. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng, theo dõi chức năng gan. Minocycline có nguy cơ độc gan và viêm gan tự miễn cao hơn doxycycline.",
+            "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan chặt chẽ. Nguy cơ độc gan và viêm gan tự miễn cao hơn.",
+            "severe": "TRÁNH DÙNG nếu có thể. Nếu bắt buộc, giảm liều đáng kể hoặc tăng khoảng cách giữa các liều. Theo dõi chức năng gan chặt chẽ. Nguy cơ độc gan và viêm gan tự miễn rất cao, có thể gây tử vong.",
+            "notes": "Minocycline có nguy cơ độc gan và viêm gan tự miễn cao hơn doxycycline. Chuyển hóa một phần qua gan, nhưng thải trừ chủ yếu qua gan và thận. Không tích lũy đáng kể ở suy gan nhẹ, nhưng có thể tích lũy ở suy gan nặng. Cần điều chỉnh liều ở suy gan nặng. Đặc biệt thận trọng ở suy gan - nguy cơ viêm gan tự miễn cao hơn."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, viêm thực quản (đau khi nuốt, khó nuốt)",
+                "Triệu chứng gan: Tăng men gan, viêm gan tự miễn (vàng da, mệt mỏi, đau bụng, sốt) - NGUY HIỂM, có thể gây tử vong",
+                "Triệu chứng da: Tăng sắc tố da/vàng da (có thể không hồi phục), phản ứng quang hóa nặng",
+                "Triệu chứng thần kinh: Chóng mặt, mất thăng bằng, tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị) - đặc biệt ở phụ nữ, có thể gây mù",
+                "Triệu chứng chảy máu: Chảy máu kéo dài, tăng INR (khi dùng với warfarin)",
+                "Triệu chứng dị ứng: Phát ban, phù mạch, sốc phản vệ (nếu dị ứng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay minocycline",
+                "Điều trị viêm gan tự miễn nếu có (QUAN TRỌNG):",
+                "  - Ngừng ngay minocycline",
+                "  - Theo dõi chức năng gan chặt chẽ (ALT, AST, bilirubin)",
+                "  - Điều trị hỗ trợ gan",
+                "  - Có thể cần corticosteroid nếu viêm gan tự miễn nặng",
+                "  - Có thể cần ghép gan nếu suy gan nặng",
+                "Điều trị viêm thực quản nếu có:",
+                "  - Uống nhiều nước",
+                "  - Tránh nằm ngửa",
+                "  - Điều trị giảm đau nếu cần",
+                "  - Có thể cần nội soi nếu nghiêm trọng",
+                "Điều trị tăng áp lực nội sọ giả nếu có:",
+                "  - Ngừng ngay minocycline",
+                "  - Điều trị bằng acetazolamide hoặc mannitol nếu cần",
+                "  - Theo dõi thị lực và dấu hiệu thần kinh",
+                "  - Có thể cần chọc dò tủy sống để giảm áp lực",
+                "Điều trị phản ứng quang hóa/tăng sắc tố da nếu có:",
+                "  - Tránh ánh nắng trực tiếp",
+                "  - Dùng kem chống nắng",
+                "  - Điều trị phát ban/bỏng da",
+                "  - Tăng sắc tố da có thể không hồi phục",
+                "Điều trị chảy máu nếu có:",
+                "  - Bổ sung vitamin K nếu giảm prothrombin",
+                "  - Truyền huyết tương tươi đông lạnh (FFP) nếu chảy máu nặng",
+                "  - Điều chỉnh liều warfarin nếu đang dùng",
+                "Điều trị dị ứng nếu có:",
+                "  - Epinephrine nếu sốc phản vệ",
+                "  - Antihistamine, corticosteroid",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis không hiệu quả do protein binding cao (70-75%)"
+            ],
+            "monitoring": "Theo dõi dấu hiệu tiêu hóa (buồn nôn, nôn, viêm thực quản), chức năng gan (ALT, AST, bilirubin) - QUAN TRỌNG (nguy cơ viêm gan tự miễn), dấu hiệu tăng sắc tố da/vàng da, dấu hiệu chóng mặt/mất thăng bằng, dấu hiệu tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị), PT/INR (nếu dùng với warfarin), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có viêm gan tự miễn, tăng áp lực nội sọ giả, hoặc độc gan."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay minocycline, điều trị viêm gan tự miễn nếu có (theo dõi chức năng gan, điều trị hỗ trợ gan, có thể cần corticosteroid hoặc ghép gan), điều trị viêm thực quản nếu có, điều trị tăng áp lực nội sọ giả nếu có (acetazolamide hoặc mannitol), điều trị phản ứng quang hóa/tăng sắc tố da nếu có, điều trị chảy máu nếu có (vitamin K, FFP), điều trị dị ứng nếu có (epinephrine nếu sốc phản vệ), lọc máu không hiệu quả do protein binding cao."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày nhưng giảm hấp thu một phần. Tránh uống với sữa hoặc thực phẩm giàu canxi (giảm hấp thu đáng kể).",
+                "timing": "Uống 1-2 lần/ngày tùy chỉ định (standard: 2 lần/ngày, acne: 1-2 lần/ngày). Cách đều trong ngày. Uống với nhiều nước (ít nhất 200ml) và ở tư thế đứng để tránh viêm thực quản. KHÔNG uống nằm ngửa hoặc trước khi ngủ. Cách ít nhất 2 giờ với antacid, sắt, canxi, magie, kẽm, sữa. Thận trọng khi lái xe hoặc vận hành máy móc (chóng mặt, mất thăng bằng)."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 0.1-1mg/ml. Pha 100mg trong 100ml = 1mg/ml. Pha 200mg trong 200ml = 1mg/ml. Lắc kỹ để hòa tan hoàn toàn. Bảo quản tránh ánh sáng.",
+                "infusion_rate": "Truyền IV trong 1-4 giờ. Tốc độ: 100ml/1 giờ = ~1.7ml/phút, 200ml/4 giờ = ~0.83ml/phút. KHÔNG truyền nhanh (bolus) - tăng nguy cơ tác dụng phụ.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Ringer's Lactate - có thể tạo kết tủa với canxi",
+                    "Các dung dịch chứa canxi, magie, sắt - tạo kết tủa",
+                    "Các thuốc có tính kiềm hoặc acid mạnh"
+                ],
+                "notes": "QUAN TRỌNG: 1) Uống với nhiều nước và ở tư thế đứng để tránh viêm thực quản, 2) Tránh ánh nắng trực tiếp, dùng kem chống nắng, 3) Cách ít nhất 2 giờ với antacid, sắt, canxi, magie, kẽm, sữa, 4) KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng), 5) KHÔNG dùng trong 3 tháng cuối thai kỳ, 6) Theo dõi chức năng gan chặt chẽ (nguy cơ viêm gan tự miễn), 7) Thận trọng khi lái xe (chóng mặt, mất thăng bằng)."
+            }
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <3 tháng tuổi (dữ liệu hạn chế, nguy cơ ố vàng răng).",
+            "infants": "3 tháng - 1 tuổi: Không khuyến cáo (nguy cơ ố vàng răng vĩnh viễn). Chỉ dùng trong trường hợp đe dọa tính mạng (sốt rét, rickettsia).",
+            "children": "1-8 tuổi: Không khuyến cáo (nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương). Chỉ dùng trong trường hợp đe dọa tính mạng (sốt rét, rickettsia).",
+            "adolescents": "≥8 tuổi: 4mg/kg ngày đầu, sau đó 2mg/kg x 2 lần/ngày (tối đa 200mg/ngày). Theo dõi chức năng gan, dấu hiệu chóng mặt.",
+            "notes": "KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng như sốt rét, rickettsia) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương. Theo dõi chức năng gan chặt chẽ (nguy cơ viêm gan tự miễn). Theo dõi dấu hiệu chóng mặt, mất thăng bằng."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ (chóng mặt, mất thăng bằng, độc gan). Suy gan, suy thận phổ biến hơn.",
+            "dose_adjustment": "Không cần điều chỉnh liều ở suy thận. Thận trọng ở suy gan nặng (nguy cơ độc gan và viêm gan tự miễn cao hơn).",
+            "monitoring": "Theo dõi chức năng gan chặt chẽ (nguy cơ viêm gan tự miễn cao hơn doxycycline). Theo dõi dấu hiệu chóng mặt, mất thăng bằng (thận trọng khi lái xe). Theo dõi dấu hiệu tăng sắc tố da/vàng da. Theo dõi dấu hiệu tăng áp lực nội sọ giả."
+        },
+        "brand_names": {
+            "vietnam": ["Minocin", "Minocycline", "Minocycline Stada"],
+            "common": ["Minocin", "Minocycline"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "30,000 - 100,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Minocycline generic thường rẻ hơn (30,000-70,000 VND/viên 100mg). Minocin (brand) thường đắt hơn (70,000-100,000 VND/viên 100mg)."
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Minocycline (Minocin)",
+                "UpToDate - Minocycline: Drug Information",
+                "Medscape - Minocycline Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Minocycline Monograph",
+                "Micromedex - Minocycline Drug Information",
+                "IDSA Guidelines - Community-Acquired Pneumonia, Tick-Borne Infections"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        }
+    },
+    
+    "Tetracycline": {
+        "group": "Infectious Disease - Tetracycline Antibiotic",
+        "vietnamese_name": "Tetracycline, Tetracyn",
+        "administration": ["PO"],
+        "indications": [
+            "Nhiễm trùng đường hô hấp",
+            "Nhiễm trùng da (mụn trứng cá)",
+            "Chlamydia",
+            "Rickettsia",
+            "Mycoplasma",
+            "Helicobacter pylori (kết hợp với PPI và metronidazole)"
+        ],
+        "contraindications": [
+            "Dị ứng tetracycline",
+            "Có thai (3 tháng cuối)",
+            "Trẻ em <8 tuổi (gây vàng răng)",
+            "Suy thận nặng (tích lũy)"
+        ],
+        "dosage": {
+            "adult_standard": "250-500mg x 4 lần/ngày",
+            "adult_severe": "500mg x 4 lần/ngày",
+            "adult_h_pylori": "500mg x 4 lần/ngày (kết hợp với PPI và metronidazole)",
+            "pediatric": "25-50mg/kg/ngày chia 4 lần (trẻ em ≥8 tuổi)",
+            "notes": "Uống với nhiều nước, tránh nằm ngay sau khi uống. Tránh nắng. Tích lũy ở suy thận → thường dùng doxycycline thay thế."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50% hoặc tăng khoảng cách",
+            "under_30": "TRÁNH DÙNG (tích lũy, tăng độc tính)",
+            "hemodialysis": "TRÁNH DÙNG"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn",
+            "Loét thực quản (nếu không uống đủ nước)",
+            "Phản ứng quang hóa (nhạy cảm ánh sáng)",
+            "Vàng răng (trẻ em, có thai) - vĩnh viễn",
+            "Tăng áp lực nội sọ (hiếm)",
+            "Độc gan (liều cao)",
+            "Độc thận (suy thận, tích lũy)"
+        ],
+        "interactions": [
+            "Antacid/Sắt/Calcium: giảm hấp thu - cách 2 giờ",
+            "Warfarin: tăng tác dụng chống đông",
+            "Digoxin: tăng nồng độ digoxin",
+            "Methoxyflurane: tăng độc thận"
+        ],
+        "pregnancy": "D - Chống chỉ định trong 3 tháng cuối",
+        "mechanism_of_action": "Tetracycline là kháng sinh phổ rộng, ức chế tổng hợp protein vi khuẩn bằng cách gắn với tiểu phần 30S của ribosome, ngăn cản gắn aminoacyl-tRNA. Phổ kháng khuẩn: Gram-dương, Gram-âm, vi khuẩn không điển hình (Chlamydia, Mycoplasma, Rickettsia, Borrelia). Không hiệu quả với Pseudomonas hoặc Proteus. Tetracycline là thuốc gốc của nhóm, nhưng ít dùng hơn doxycycline và minocycline do tích lũy ở suy thận và nhiều tác dụng phụ hơn. Doxycycline được ưa chuộng hơn vì không tích lũy ở suy thận và half-life dài hơn.",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Dạ dày-ruột (buồn nôn, nôn, tiêu chảy, viêm thực quản)",
+            "Da (tăng độ nhạy cảm với ánh sáng, phát ban)",
+            "Răng và xương (ở trẻ em < 8 tuổi: ố vàng răng vĩnh viễn, chậm phát triển xương)",
+            "Chức năng gan (ALT, AST) - hiếm viêm gan",
+            "Chức năng thận (creatinine, BUN) - QUAN TRỌNG: tích lũy ở suy thận, tăng độc tính",
+            "Tăng áp lực nội sọ giả (đau đầu, nhìn mờ, phù gai thị)"
+        ],
+        "precautions": [
+            "KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - gây ố vàng răng vĩnh viễn, chậm phát triển xương",
+            "Tích lũy ở suy thận → TRÁNH DÙNG ở suy thận nặng (CrCl <30). Dùng doxycycline thay thế (không tích lũy).",
+            "Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp, dùng kem chống nắng",
+            "Uống với nhiều nước (ít nhất 200ml) và ở tư thế đứng để tránh viêm thực quản",
+            "KHÔNG uống nằm ngửa hoặc trước khi ngủ",
+            "Tương tác với nhiều thuốc và thực phẩm: giảm hấp thu với antacid, sắt, canxi, magie, kẽm, sữa (cách 2 giờ)",
+            "Tương tác với warfarin → tăng nguy cơ chảy máu (theo dõi INR)",
+            "Không dùng trong 3 tháng cuối thai kỳ (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)",
+            "Uống với thức ăn để giảm kích ứng dạ dày (nhưng giảm hấp thu một phần)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "6-11 giờ",
+            "onset": "1-2 giờ (PO)",
+            "duration": "q6h hoặc q12h",
+            "protein_binding": "20-60%",
+            "metabolism": "Gan (một phần), bài tiết một phần nguyên dạng",
+            "clearance": "Gan và thận. TÍCH LŨY ở suy thận (khác với doxycycline) → tăng độc tính."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Viên nang: tránh ẩm. Dễ bị hỏng khi bảo quản không đúng cách.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, ố vàng răng vĩnh viễn ở trẻ em < 8 tuổi là không hồi phục. Tích lũy ở suy thận → tăng độc tính. Tăng áp lực nội sọ giả có thể gây mù. Viêm thực quản có thể nghiêm trọng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Antacid, Sắt, Calcium, Magnesium, Kẽm, Bismuth",
+                    "mechanism": "Các cation hóa trị 2+ (Ca²⁺, Mg²⁺, Fe²⁺, Zn²⁺) tạo phức hợp không hòa tan với tetracycline, làm giảm hấp thu tetracycline.",
+                    "effect": "Giảm hấp thu tetracycline đáng kể (50-90%), giảm hiệu quả kháng khuẩn",
+                    "management": "Cách ít nhất 2 giờ giữa tetracycline và các thuốc/thực phẩm chứa cation (antacid, sắt, canxi, magie, kẽm, sữa, bismuth)."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Tetracycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K.",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Có thể cần giảm liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Tetracycline có thể làm tăng hấp thu digoxin bằng cách thay đổi hệ vi khuẩn đường ruột.",
+                    "effect": "Tăng nồng độ digoxin, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ digoxin. Có thể cần giảm liều digoxin."
+                },
+                {
+                    "drug": "Methoxyflurane",
+                    "mechanism": "Cả hai đều có độc tính thận, tác dụng cộng dồn.",
+                    "effect": "Tăng độc thận nghiêm trọng",
+                    "management": "TRÁNH DÙNG CHUNG."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng tetracycline",
+                "Có thai (3 tháng cuối) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
+                "Trẻ em < 8 tuổi - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (trừ trường hợp đe dọa tính mạng)",
+                "Suy thận nặng (CrCl <30) - TÍCH LŨY, tăng độc tính"
+            ],
+            "tương_đối": [
+                "Có thai (3 tháng đầu và giữa) - nguy cơ ố vàng răng, chỉ dùng khi thực sự cần thiết",
+                "Suy gan nặng - tăng nguy cơ độc gan",
+                "Tăng áp lực nội sọ giả - có thể làm nặng thêm"
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng tetracycline",
+                "Có thai (3 tháng cuối) - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI",
+                "Trẻ em < 8 tuổi - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (trừ trường hợp đe dọa tính mạng)",
+                "Suy thận nặng (CrCl <30) - TÍCH LŨY, tăng độc tính"
+            ],
+            "tương_đối": [
+                "Có thai (3 tháng đầu và giữa) - nguy cơ ố vàng răng, chỉ dùng khi thực sự cần thiết",
+                "Suy gan nặng - tăng nguy cơ độc gan",
+                "Tăng áp lực nội sọ giả - có thể làm nặng thêm"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong 3 tháng cuối thai kỳ - nguy cơ ố vàng răng vĩnh viễn và chậm phát triển xương ở trẻ. Không dùng trong 3 tháng đầu và giữa trừ khi thực sự cần thiết.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Tetracycline bài tiết vào sữa mẹ ở nồng độ thấp. Có thể gây vàng răng ở trẻ nếu dùng kéo dài.",
+                "recommendation": "Có thể dùng khi cho con bú nhưng thận trọng. Dùng liều thấp nhất hiệu quả. Tránh dùng kéo dài."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+            "notes": "Tetracycline chuyển hóa một phần ở gan. Suy gan có thể tăng nguy cơ độc gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng",
+                "Triệu chứng thần kinh: Đau đầu, tăng áp lực nội sọ giả (nhìn mờ, phù gai thị)",
+                "Triệu chứng da: Phát ban, tăng độ nhạy cảm với ánh sáng",
+                "Triệu chứng thận: Tăng creatinine, suy thận cấp (đặc biệt ở suy thận)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay tetracycline",
+                "Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Điều trị triệu chứng tiêu hóa",
+                "Theo dõi chức năng thận (đặc biệt quan trọng ở suy thận)",
+                "Điều trị tăng áp lực nội sọ giả nếu có"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, dấu hiệu thần kinh trong ít nhất 24-48 giờ."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay tetracycline, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn, điều trị triệu chứng tiêu hóa, theo dõi chức năng thận (đặc biệt quan trọng ở suy thận do tích lũy), điều trị tăng áp lực nội sọ giả nếu có."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để giảm kích ứng dạ dày (nhưng giảm hấp thu một phần). Uống với nhiều nước (ít nhất 200ml).",
+                "timing": "Uống 4 lần/ngày (250-500mg mỗi lần). Uống đều đặn, cách đều nhau trong ngày. KHÔNG uống nằm ngửa hoặc trước khi ngủ (nguy cơ viêm thực quản)."
+            },
+            "iv": {
+                "reconstitution": "N/A - Chỉ có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Tetracycline chỉ có dạng uống. Nếu cần dạng IV, dùng doxycycline IV."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Tetracycline",
+                "UpToDate - Tetracycline: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
+        }
+    },
+    "Tigecycline": {
+        "group": "Antibiotic - Glycylcycline (Tetracycline derivative)",
+        "vietnamese_name": "Tigecycline, Tygacil",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn da và mô mềm phức tạp (cSSTI)",
+            "Nhiễm khuẩn ổ bụng phức tạp (cIAI)",
+            "Viêm phổi cộng đồng (CAP)",
+            "Nhiễm khuẩn do vi khuẩn kháng đa thuốc (MDR)",
+            "MRSA (Methicillin-resistant Staphylococcus aureus)",
+            "VRE (Vancomycin-resistant Enterococcus)",
+            "CRE (Carbapenem-resistant Enterobacteriaceae)",
+            "Acinetobacter baumannii kháng đa thuốc",
+            "Nhiễm khuẩn huyết do MDR Gram-dương và Gram-âm"
+        ],
+        "contraindications": [
+            "Dị ứng tigecycline hoặc tetracycline",
+            "Có thai (3 tháng cuối) - thận trọng",
+            "Trẻ em <8 tuổi - thận trọng (dữ liệu hạn chế)"
+        ],
+        "dosage": {
+            "adult_standard": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
+            "adult_severe": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
+            "adult_ciai": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
+            "adult_cssti": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
+            "adult_cap": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
+            "notes": "Truyền IV trong 30-60 phút. Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình. CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi (không tích lũy ở suy thận)",
+            "hemodialysis": "Không đổi (không bị loại bỏ bởi lọc máu)"
+        },
+        "side_effects": [
+            "Buồn nôn, nôn (rất phổ biến, 20-30%)",
+            "Tiêu chảy",
+            "Tăng tỷ lệ tử vong (so với các kháng sinh khác) - CẢNH BÁO QUAN TRỌNG",
+            "Tăng ALT, AST (tăng men gan)",
+            "Phát ban",
+            "Chóng mặt",
+            "Đau đầu",
+            "Giảm bạch cầu (hiếm)",
+            "Viêm tĩnh mạch tại vị trí tiêm"
+        ],
+        "interactions": [
+            "Warfarin: có thể tăng INR",
+            "Thuốc tránh thai đường uống: có thể giảm hiệu quả",
+            "Antacid/Sắt/Calcium: giảm hấp thu (nhưng chỉ dùng IV nên ít ảnh hưởng)"
+        ],
+        "pregnancy": "D - Sử dụng nếu lợi ích > nguy cơ",
+        "mechanism_of_action": "Tigecycline là glycylcycline kháng sinh, dẫn xuất của minocycline. Ức chế tổng hợp protein vi khuẩn bằng cách gắn với tiểu phần 30S của ribosome, tương tự tetracycline nhưng gắn mạnh hơn và kháng được nhiều cơ chế kháng tetracycline. Phổ kháng khuẩn: RẤT RỘNG - Gram-dương (Staphylococcus - kể cả MRSA, Streptococcus, Enterococcus - kể cả VRE), Gram-âm (Enterobacteriaceae - kể cả một số CRE, Acinetobacter baumannii), kỵ khí (Bacteroides fragilis), và một số vi khuẩn không điển hình. Không hiệu quả với Pseudomonas aeruginosa hoặc Proteus. Đặc điểm: phổ rất rộng, kháng được nhiều cơ chế kháng thuốc, nhưng CẢNH BÁO: tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác (MDR).",
+        "monitoring": [
+            "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
+            "Cấy máu và cấy từ vị trí nhiễm trùng",
+            "Dạ dày-ruột (buồn nôn, nôn, tiêu chảy) - rất phổ biến (20-30%)",
+            "Chức năng gan (ALT, AST, bilirubin) - có thể tăng men gan",
+            "Dấu hiệu sinh tồn (huyết áp, nhịp tim, nhịp thở) - CẢNH BÁO: tăng tỷ lệ tử vong",
+            "Công thức máu (CBC) - hiếm giảm bạch cầu",
+            "PT/INR (nếu dùng với warfarin)",
+            "Đánh giá đáp ứng điều trị - cân nhắc chuyển sang kháng sinh khác nếu có thể"
+        ],
+        "precautions": [
+            "CẢNH BÁO QUAN TRỌNG: Tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác (MDR, không đáp ứng với các kháng sinh khác)",
+            "Buồn nôn, nôn rất phổ biến (20-30%) - có thể cần điều trị triệu chứng (ondansetron, metoclopramide)",
+            "Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình",
+            "Thận trọng ở suy gan nặng - có thể cần giảm liều",
+            "KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - dữ liệu hạn chế, nguy cơ ố vàng răng",
+            "Không dùng trong 3 tháng cuối thai kỳ (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)",
+            "Truyền IV trong 30-60 phút",
+            "Pha trong NS hoặc D5W",
+            "Cân nhắc chuyển sang kháng sinh khác nếu có thể (do tăng tỷ lệ tử vong)",
+            "Theo dõi đáp ứng điều trị chặt chẽ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "27-42 giờ (rất dài)",
+            "onset": "Ngay lập tức sau khi truyền IV",
+            "duration": "12 giờ (liều q12h)",
+            "protein_binding": "71-89% (cao)",
+            "metabolism": "Chuyển hóa một phần ở gan",
+            "clearance": "Chủ yếu qua gan (59% bài tiết qua mật), không tích lũy ở suy thận",
+            "volume_of_distribution": "7-9 L/kg (rất lớn, phân bố rộng)"
+        },
+        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 48 giờ. Không đông lạnh.",
+        "black_box_warnings": "CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác. Chỉ dùng khi không còn lựa chọn khác (nhiễm khuẩn do vi khuẩn kháng đa thuốc MDR). Không dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Tigecycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K.",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng tigecycline). Có thể cần giảm liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc tránh thai đường uống",
+                    "mechanism": "Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.",
+                    "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
+                    "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng."
+                }
+            ]
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Tigecycline (Tygacil)",
+                "IDSA Guidelines - Antimicrobial Therapy, MDR",
+                "UpToDate - Tigecycline: Drug Information",
+                "Medscape - Tigecycline Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
+                "Lexicomp Online - Tigecycline Monograph",
+                "Micromedex - Tigecycline Drug Information"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        },
+        "pregnancy_lactation": {
+                  "fda_category": "D - Sử dụng nếu lợi ích > nguy cơ",
+                  "pregnancy_details": "Category D - Sử dụng nếu lợi ích > nguy cơ - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
+                  "lactation": {
+                      "safety": "Use with caution",
+                      "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
+                      "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
+                  }
+              },
+              "hepatic_adjustment": {
+                  "mild": "Không đổi",
+                  "moderate": "Thận trọng, có thể giảm liều",
+                  "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+                  "notes": "Nhiều kháng sinh chuyển hóa qua gan, cần điều chỉnh liều ở suy gan nặng."
+              },
+              "overdose_management": {
+                  "symptoms": [
+                      "Cần tra cứu thêm thông tin về triệu chứng quá liều"
+                  ],
+                  "antidote": "Không có antidote đặc hiệu",
+                  "treatment": [
+                      "Ngừng ngay thuốc",
+                      "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
+                      "Than hoạt tính",
+                      "Điều trị hỗ trợ và điều trị triệu chứng",
+                      "Theo dõi dấu hiệu sinh tồn"
+                  ],
+                  "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+              },
+              "reversal_agents": {
+                  "available": False,
+                  "agents": []
+              },
+              "administration_instructions": {
+                  "iv": {
+                      "reconstitution": "Cần tra cứu",
+                      "infusion_rate": "Cần tra cứu",
+                      "compatibility": [
+                          "Cần tra cứu"
+                      ],
+                      "incompatibility": [],
+                      "notes": "Cần tra cứu thêm thông tin chi tiết."
+                  }
+              },
+},
+    
+}
+
+__all__ = ['TETRACYCLINES_DRUGS']

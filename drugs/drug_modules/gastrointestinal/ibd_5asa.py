@@ -176,29 +176,28 @@ IBD_5ASA_DRUGS = {
          "black_box_warnings": "Không có",
 },
 
-    "Sulfasalazine": {
+    "Sulfasalazine":     {
         "group": "Gastrointestinal - 5-ASA (Aminosalicylate prodrug) + Sulfonamide",
         "vietnamese_name": "Sulfasalazine, Salazopyrin",
-        "administration": ["PO"],
+        "administration": [
+            "PO"
+    ],
         "indications": [
             "Viêm loét đại tràng (ulcerative colitis) mức độ nhẹ đến trung bình",
             "Bệnh Crohn ở đại tràng (Crohn's colitis) – hiệu quả kém hơn mesalazine",
-            "Viêm khớp dạng thấp (dạng DMARD, ngoài tiêu hóa)",
-        ],
+            "Viêm khớp dạng thấp (dạng DMARD, ngoài tiêu hóa)"
+    ],
         "contraindications": [
             "Dị ứng sulfonamide (sulfamide) hoặc salicylate",
             "Suy gan nặng",
             "Suy thận nặng",
-            "Thiếu men G6PD (nguy cơ tán huyết)",
-        ],
+            "Thiếu men G6PD (nguy cơ tán huyết)"
+    ],
         "dosage": {
             "uc_induction": "3–4 g/ngày PO chia 3–4 lần, tăng dần trong vài ngày–tuần để giảm tác dụng phụ tiêu hóa",
             "uc_maintenance": "2 g/ngày PO chia 2–4 lần",
             "ra": "2–3 g/ngày PO chia 2–3 lần (ngoài chỉ định tiêu hóa)",
-            "notes": (
-                "Bắt đầu với liều thấp (500 mg x 1–2 lần/ngày), tăng dần mỗi 3–7 ngày tới liều đích để cải thiện dung nạp. "
-                "Khuyến cáo dùng cùng acid folic 1 mg/ngày (sulfasalazine giảm hấp thu folate)."
-            ),
+            "notes": """Bắt đầu với liều thấp (500 mg x 1–2 lần/ngày), tăng dần mỗi 3–7 ngày tới liều đích để cải thiện dung nạp. Khuyến cáo dùng cùng acid folic 1 mg/ngày (sulfasalazine giảm hấp thu folate).""",
         },
         "renal_adjustment": {
             "normal": "Không đổi, nhưng theo dõi creatinin định kỳ.",
@@ -213,32 +212,27 @@ IBD_5ASA_DRUGS = {
             "Thiếu máu tán huyết (đặc biệt ở người thiếu G6PD)",
             "Giảm bạch cầu (leukopenia), giảm tiểu cầu (hiếm nhưng quan trọng)",
             "Tăng men gan",
-            "Nước tiểu và da có thể hơi vàng/cam (vô hại)",
-        ],
+            "Nước tiểu và da có thể hơi vàng/cam (vô hại)"
+    ],
         "interactions": [
             "Folate/acid folic: cần bổ sung để phòng thiếu hụt do sulfasalazine giảm hấp thu folate",
-            "Warfarin: có thể tăng tác dụng chống đông (gắn protein và chuyển hóa)",
-        ],
+            "Warfarin: có thể tăng tác dụng chống đông (gắn protein và chuyển hóa)"
+    ],
         "pregnancy": "B",
-        "mechanism_of_action": (
-            "Sulfasalazine là prodrug gồm sulfapyridine + 5-ASA (mesalazine) gắn với nhau qua liên kết azo. "
-            "Tại đại tràng, vi khuẩn phân cắt liên kết azo → giải phóng 5-ASA (tác dụng chống viêm tại chỗ) và sulfapyridine (nhiều tác dụng phụ toàn thân). "
-            "5-ASA: ức chế COX/LOX, giảm prostaglandin/leukotriene, quét gốc tự do, ức chế NF-κB và cytokine tiền viêm. "
-            "Sulfapyridine: mang đặc tính sulfonamide, liên quan đến nhiều tác dụng phụ (dị ứng, tán huyết, giảm bạch cầu)."
-        ),
+        "mechanism_of_action": """Sulfasalazine là prodrug gồm sulfapyridine + 5-ASA (mesalazine) gắn với nhau qua liên kết azo. Tại đại tràng, vi khuẩn phân cắt liên kết azo → giải phóng 5-ASA (tác dụng chống viêm tại chỗ) và sulfapyridine (nhiều tác dụng phụ toàn thân). 5-ASA: ức chế COX/LOX, giảm prostaglandin/leukotriene, quét gốc tự do, ức chế NF-κB và cytokine tiền viêm. Sulfapyridine: mang đặc tính sulfonamide, liên quan đến nhiều tác dụng phụ (dị ứng, tán huyết, giảm bạch cầu).""",
         "monitoring": [
             "Công thức máu (CBC) trước điều trị, sau 2–4 tuần, rồi mỗi 3 tháng trong năm đầu, sau đó mỗi 6–12 tháng (theo dõi thiếu máu, giảm bạch cầu, giảm tiểu cầu)",
             "Chức năng gan (ALT, AST) định kỳ",
             "Chức năng thận (creatinin, eGFR)",
-            "Triệu chứng lâm sàng UC: đau bụng, tiêu chảy, máu trong phân",
-        ],
+            "Triệu chứng lâm sàng UC: đau bụng, tiêu chảy, máu trong phân"
+    ],
         "precautions": [
             "Bắt đầu liều thấp và tăng dần để giảm buồn nôn, đau bụng",
             "Bổ sung acid folic (thường 1 mg/ngày) để phòng thiếu hụt folate",
             "Sàng lọc thiếu men G6PD nếu có thể, đặc biệt ở nhóm nguy cơ cao",
             "Ngừng thuốc ngay nếu xuất hiện phát ban nặng, sốt, đau họng (nghi ngờ giảm bạch cầu hoặc hội chứng quá mẫn)",
-            "Thận trọng ở người có tiền sử dị ứng sulfonamide",
-        ],
+            "Thận trọng ở người có tiền sử dị ứng sulfonamide"
+    ],
         "pharmacokinetics": {
             "half_life": "7–15 giờ (tùy thành phần; sulfapyridine kéo dài hơn)",
             "onset": "Vài tuần (cải thiện UC thường sau 2–4 tuần)",
@@ -247,24 +241,24 @@ IBD_5ASA_DRUGS = {
             "clearance": "Gan (acetyl hóa, hydroxyl hóa) và thận (thải trừ dưới dạng không đổi và chuyển hóa)",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15–30°C), tránh ẩm, tránh ánh sáng.",
-        "black_box_warnings": None,
+        "black_box_warnings": "Không có",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Warfarin",
                     "mechanism": "Cạnh tranh gắn protein và ảnh hưởng chuyển hóa warfarin.",
                     "effect": "Có thể tăng INR và nguy cơ chảy máu.",
                     "management": "Theo dõi INR chặt khi bắt đầu/ngừng; điều chỉnh liều warfarin nếu cần.",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Folate/acid folic",
                     "mechanism": "Sulfasalazine giảm hấp thu folate.",
                     "effect": "Nguy cơ thiếu máu do thiếu folate nếu không bổ sung.",
                     "management": "Bổ sung acid folic thường quy (ví dụ 1 mg/ngày).",
                 }
-            ],
+                ],
             "minor": [],
         },
         "contraindications_detail": {
@@ -272,20 +266,22 @@ IBD_5ASA_DRUGS = {
                 "Dị ứng sulfonamide hoặc salicylate",
                 "Thiếu men G6PD nặng (nguy cơ thiếu máu tán huyết)",
                 "Suy gan nặng",
-                "Suy thận nặng",
-            ],
+                "Suy thận nặng"
+    ],
             "tương_đối": [
                 "Tiền sử phản ứng quá mẫn với sulfonamide",
                 "Thiếu folate",
-                "Tiền sử bệnh máu (thiếu máu, giảm bạch cầu, giảm tiểu cầu)",
-            ],
+                "Tiền sử bệnh máu (thiếu máu, giảm bạch cầu, giảm tiểu cầu)"
+    ],
         },
         "pregnancy_lactation": {
             "fda_category": "B",
-            "pregnancy_details": (
-                "Sulfasalazine nhìn chung an toàn trong thai kỳ (category B) và được sử dụng rộng rãi cho UC. "
-                "Do giảm hấp thu folate, cần bổ sung acid folic liều cao hơn (ít nhất 2 mg/ngày) trước và trong thai kỳ."
-            ),
+            "pregnancy_details": """Sulfasalazine nhìn chung an toàn trong thai kỳ (category B) và được sử dụng rộng rãi cho UC. Do giảm hấp thu folate, cần bổ sung acid folic liều cao hơn (ít nhất 2 mg/ngày) trước và trong thai kỳ.""",
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Thận trọng, theo dõi men gan.",
@@ -297,51 +293,39 @@ IBD_5ASA_DRUGS = {
             "symptoms": [
                 "Buồn nôn, nôn, đau bụng",
                 "Chóng mặt, nhức đầu",
-                "Triệu chứng tán huyết (đặc biệt nếu thiếu G6PD): mệt, vàng da, nước tiểu sẫm",
-            ],
+                "Triệu chứng tán huyết (đặc biệt nếu thiếu G6PD): mệt, vàng da, nước tiểu sẫm"
+    ],
             "antidote": "Không có antidote đặc hiệu; điều trị hỗ trợ.",
             "treatment": [
                 "Ngừng thuốc, điều trị triệu chứng.",
                 "Bù dịch, điện giải.",
                 "Theo dõi CBC, men gan, chức năng thận.",
-                "Truyền máu nếu tán huyết nặng.",
-            ],
+                "Truyền máu nếu tán huyết nặng."
+    ],
             "monitoring": "Theo dõi CBC, men gan, creatinin, dấu hiệu tán huyết.",
         },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có tán huyết, độc tính thận, hoặc phản ứng dị ứng nghiêm trọng."},
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": """Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có tán huyết, độc tính thận, hoặc phản ứng dị ứng nghiêm trọng.""",
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống cùng thức ăn để giảm kích ứng dạ dày và buồn nôn.",
                 "timing": "Chia nhiều lần trong ngày; bắt đầu liều thấp và tăng dần mỗi vài ngày để cải thiện dung nạp.",
-            }
+            },
         },
         "references": {
             "primary_sources": [
                 "ACG Ulcerative Colitis Guidelines",
                 "ECCO Guidelines on Inflammatory Bowel Disease",
                 "UpToDate - Sulfasalazine in the treatment of IBD and RA",
-                "Lexicomp - Sulfasalazine monograph",
-            ],
+                "Lexicomp - Sulfasalazine monograph"
+    ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - guideline-supported therapy in mild-moderate UC",
         },
-              "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": "Không có",
-},
+    },
 }
 
 __all__ = ["IBD_5ASA_DRUGS"]

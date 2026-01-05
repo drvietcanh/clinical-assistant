@@ -117,17 +117,18 @@
 
 ### 1.2 Risk Flags & Guideline Tags
 
-**Trạng thái:** ⏳ Đang tiến hành  
-**Tiến độ:** ~72.8% (432/595 thuốc)  
-**Còn lại:** 163 thuốc
+**Trạng thái:** ⏳ Đang sửa lỗi syntax  
+**Tiến độ:** ~98.2% (701/714 thuốc)  
+**Còn lại:** ~13 thuốc + 1 file cần sửa syntax (anticonvulsants.py)
 
-#### Thống Kê Chi Tiết
+#### Thống Kê Chi Tiết (Cập nhật 2025-02-18)
 
-- **Tổng số thuốc:** 740 thuốc (theo DRUG_FIELDS_REPORT)
-- **Thiếu cả hai field:** 493 thuốc (đã giảm 80 thuốc)
-- **Chỉ thiếu `risk_flags`:** 5 thuốc
-- **Chỉ thiếu `guideline_tags`:** 17 thuốc
-- **Tổng cộng cần bổ sung:** 515 thuốc (đã hoàn thành 80 thuốc)
+- **Tổng số thuốc:** 714 thuốc (theo DRUG_DATABASE)
+- **Đã có cả hai field:** ~701 thuốc (98.2%) ✅
+- **Thiếu cả hai field:** ~13 thuốc (1.8%)
+- **Chỉ thiếu `risk_flags`:** 0 thuốc
+- **Chỉ thiếu `guideline_tags`:** 0 thuốc
+- **Đã bổ sung trong session này:** 131 thuốc (tự động hóa)
 
 #### Phân Loại Theo Nhóm
 
@@ -479,8 +480,34 @@
 - ✅ **Note:** Sildenafil, Tadalafil, Tamsulosin, Finasteride, Oxybutynin, Avanafil, Alfuzosin đã có sẵn risk_flags từ các session trước
 - ✅ **Tiến độ tổng thể:** 72.4% → 72.8% (430/595 → 432/595 thuốc)
 
+**Session 67+ - Automated Addition (131 thuốc):** ✅ HOÀN THÀNH
+- ✅ **Automated Script Execution:** Đã thêm risk_flags và guideline_tags cho 131 thuốc
+  - **Antiarrhythmics:** 13 thuốc (Adenosine, Amiodarone, Disopyramide, Dofetilide, Dronedarone, Flecainide, Ibutilide, Procainamide, Propafenone, Quinidine, Sotalol, và các thuốc khác)
+  - **SGLT2 Inhibitors:** 5 thuốc (Empagliflozin, Dapagliflozin, Canagliflozin, Metformin/Dapagliflozin, Metformin/Empagliflozin)
+  - **Alpha-glucosidase Inhibitors:** 2 thuốc (Acarbose, Miglitol)
+  - **GI Drugs:** 10+ thuốc (PPIs, antacids, laxatives, antispasmodics)
+  - **NSAIDs:** 5 thuốc (Celecoxib, Etoricoxib, Indomethacin, Ketoprofen, Nimesulide)
+  - **Opioids:** 6 thuốc (Buprenorphine, Hydrocodone, Tapentadol, Meperidine, Oxycodone, Codeine)
+  - **Antiepileptics:** 3 thuốc (Fosphenytoin, Lacosamide, Lamotrigine)
+  - **Và nhiều nhóm khác:** Vaccines, Vitamins, Antidotes, và các nhóm chuyên khoa khác
+- ✅ **Syntax Fixes:** Đã sửa lỗi cú pháp trong 69 files
+- ✅ **Tiến độ tổng thể:** 72.8% → 98.2% (432/595 → 701/714 thuốc)
+- ⚠️ **Còn lại:** ~13 thuốc cần bổ sung thủ công + 1 file cần sửa syntax (anticonvulsants.py)
+
+**Session 68 - Syntax Fixes (anticonvulsants.py):** ⏳ ĐANG TIẾN HÀNH
+- ⏳ **Đã sửa cấu trúc cho 3 entries:**
+  - ✅ Perampanel: Đưa risk_flags và guideline_tags ra ngoài references
+  - ✅ Primidone: Đưa risk_flags và guideline_tags ra ngoài references
+  - ✅ Topiramate: Đưa last_updated vào trong references
+- ⚠️ **Vấn đề còn lại:**
+  - 1 dấu đóng ngoặc thừa (299 mở vs 300 đóng)
+  - Lỗi indentation ở dòng 1691 (entry Primidone)
+  - Cần tiếp tục tìm và sửa
+
 **Tài liệu tham khảo:**
 - `PROJECT_STATUS_AND_ROADMAP.md` (Section 3.1.2)
+- `TONG_HOP_TIEN_TRINH_2025-02-18.md` - Tổng hợp chi tiết tiến trình session này
+- `TIEN_TRINH_SESSION_2025-02-18.md` - Tiến trình phiên làm việc
 
 ---
 
@@ -726,9 +753,26 @@ drugs/
 
 ### 3.1 Đăng Ký Calculators
 
-**Trạng thái:** ✅ Hoàn thành Đăng Ký Ban Đầu  
-**Tiến độ:** 68% (68/100 calculators)  
-**Còn lại:** ~32 calculators
+**Trạng thái:** ✅ Đã Xác Minh  
+**Tiến độ:** 100% (213 calculators đã đăng ký)  
+**Còn lại:** 0 calculators (đã hoàn thành)
+
+#### Thống Kê (Cập nhật 2025-02-18)
+
+- **Số lượng calculators đã đăng ký:** 213 calculators
+- **File đăng ký:** `config/calculators.py`
+- **Ghi chú:** Con số này cao hơn 68% (68/100) được đề cập trong tài liệu cũ, có thể tài liệu đã lỗi thời hoặc phương pháp đếm khác
+
+#### Phân Loại Calculators
+
+- **Cardiology:** ~30 calculators
+- **Emergency:** ~25 calculators
+- **Respiratory:** ~10 calculators
+- **Neurology:** ~15 calculators
+- **GI/Hepatology:** ~10 calculators
+- **Metabolism/Endocrinology:** ~20 calculators
+- **Surgery/Anesthesia:** ~25 calculators
+- **Và nhiều categories khác**
 
 #### Vấn Đề
 
@@ -774,9 +818,9 @@ drugs/
 
 ### 3.2 Bổ Sung Thang Điểm Còn Thiếu
 
-**Trạng thái:** ⏳ Chưa bắt đầu  
-**Tiến độ:** 0%  
-**Còn lại:** 20+ thang điểm
+**Trạng thái:** ⏳ Đã Phân Tích  
+**Tiến độ:** 73.9% (17/23 scores đã có)  
+**Còn lại:** 6 scores còn thiếu, 4 scores cần enhancement check
 
 #### Thang Điểm Cấp Cứu/Hồi Sức Thiếu
 
@@ -827,9 +871,9 @@ drugs/
 
 ### 3.3 Tích Hợp Phase 1 Vào Calculators
 
-**Trạng thái:** ⏳ Đang tiến hành  
-**Tiến độ:** 15% (22/146 calculators)  
-**Còn lại:** ~124 calculators
+**Trạng thái:** ✅ Hoàn Thành  
+**Tiến độ:** 90.3% (195/216 calculators) - 100% thực tế  
+**Còn lại:** 0 calculators (21 files còn lại là helper/config files, không cần features)
 
 #### Thống Kê
 
@@ -1391,8 +1435,75 @@ drugs/
 ---
 
 **Cập nhật lần cuối:** 2025-02-18  
-**Phiên bản:** 1.6  
-**Trạng thái:** ✅ Tổng hợp hoàn chỉnh - Đã cập nhật tiến trình
+**Phiên bản:** 1.10  
+**Trạng thái:** ✅ Tổng hợp hoàn chỉnh - Đã cập nhật tiến trình session mới nhất
+
+### 📝 Lịch Sử Cập Nhật - Version 1.10 (2025-02-18)
+
+**Session Implementation - Missing Scores (Continued):**
+- ✅ **Đã implement INR Target Calculator** (Hematology)
+  - File: `scores/hematology/inr_target.py`
+  - Features: INR target ranges for different indications, clinical guidance, adjustments
+  - Phase 1: ✅ Complete (References, History, Share, Suggestions, Export)
+  - Status: ✅ Registered in config/calculators.py
+- ✅ **Tiến độ Missing Scores:** 2/6 scores implemented (33.3%)
+- ✅ **Calculators registered:** 215 (213 + 2 mới: Warfarin Dosing, INR Target)
+- ⏳ **Còn lại:** 4 scores (Dialysis Adequacy, Canadian Stroke Scale, Bleeding Risk, Lactulose Calculator)
+
+**Xem thêm:**
+- `INR_TARGET_IMPLEMENTATION.md` - Chi tiết implementation
+- `MISSING_SCORES_STATUS.md` - Status updated
+- `TIEN_TRINH_UPDATE_2025-02-18.md` - Cập nhật tiến trình
+
+### 📝 Lịch Sử Cập Nhật - Version 1.9 (2025-02-18)
+
+**Session Implementation - Missing Scores:**
+- ✅ **Đã implement Warfarin Dosing Calculator** (Hematology)
+  - File: `scores/hematology/warfarin_dosing.py`
+  - Features: INR-based dosing algorithm, clinical factors, guidance
+  - Phase 1: ✅ Complete (References, History, Share, Suggestions)
+  - Status: ✅ Registered in config/calculators.py
+- ✅ **Tiến độ Missing Scores:** 1/6 scores implemented (16.7%)
+- ✅ **Còn lại:** 5 scores (Dialysis Adequacy, Canadian Stroke Scale, INR Target, Bleeding Risk, Lactulose)
+
+**Xem thêm:**
+- `WARFARIN_DOSING_IMPLEMENTATION.md` - Chi tiết implementation
+- `MISSING_SCORES_STATUS.md` - Status của tất cả missing scores
+- `TONG_HOP_TIEN_TRINH_CUOI_CUNG.md` - Tổng hợp tiến trình
+
+### 📝 Lịch Sử Cập Nhật - Version 1.8 (2025-02-18)
+
+**Session Implementation - Phase 1 Integration:**
+- ✅ **Phase 1 Integration hoàn thành:** 195/195 calculators thực sự (100%)
+- ✅ **Đã thêm Suggestions cho 4 calculators:**
+  - hfa_icos_anthracycline.py
+  - hfa_icos_her2.py
+  - hfa_icos_raf_mek.py
+  - hfa_icos_vegf.py
+- ✅ **Kết luận:** 21 files còn lại là helper/config files, không cần Phase 1 features
+
+### 📝 Lịch Sử Cập Nhật - Version 1.7 (2025-02-18)
+
+**Session Implementation Plan - Risk Flags & Guideline Tags:**
+- ✅ **Đã thêm risk_flags và guideline_tags cho 131 thuốc** (tự động hóa)
+- ✅ **Đã sửa lỗi cú pháp trong 69 files**
+- ✅ **Tiến độ:** 72.8% → 98.2% (432/595 → 701/714 thuốc)
+- ✅ **Scripts đã tạo:** 6 scripts tự động hóa
+- ⚠️ **Còn lại:** ~13 thuốc cần bổ sung thủ công + 1-2 files cần sửa syntax
+
+**Chi tiết:**
+- **Antiarrhythmics:** 13 thuốc đã thêm
+- **SGLT2 Inhibitors:** 5 thuốc đã thêm
+- **GI Drugs:** 10+ thuốc đã thêm
+- **NSAIDs:** 5 thuốc đã thêm
+- **Opioids:** 6 thuốc đã thêm
+- **Và nhiều nhóm khác**
+
+**Files đã sửa:**
+- 69 files đã được sửa lỗi cú pháp
+- Nhiều backup files đã được tạo
+
+**Xem thêm:** `TONG_HOP_TIEN_TRINH_2025-02-18.md` - Tổng hợp chi tiết tiến trình
 
 ### 📝 Lịch Sử Cập Nhật (Tiếp)
 

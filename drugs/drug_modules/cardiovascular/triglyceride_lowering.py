@@ -143,7 +143,19 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved (2021), large RCT (ELIPSE HoFH) showing 47-49% LDL-C reduction in HoFH"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "immunologic": "Moderate (infusion reactions)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "ACC/AHA 2024 Cholesterol Management Update",
+            "ESC/EAS 2019 Dyslipidemia Guidelines"
+        ]
     },
 
     "Fenofibrate": {
@@ -320,7 +332,19 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved, multiple RCTs, clinical guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Moderate", "renal": "Moderate", "musculoskeletal": "Moderate (myopathy)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "AHA 2019 Hypertriglyceridemia Guidelines",
+            "ESC/EAS 2019 Dyslipidemia Guidelines"
+        ]
     },
 
     "Gemfibrozil": {
@@ -501,7 +525,19 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved, multiple RCTs (Helsinki Heart Study, VA-HIT), clinical guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Moderate", "renal": "Moderate", "musculoskeletal": "High (rhabdomyolysis with statins)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "AHA 2019 Hypertriglyceridemia Guidelines",
+            "ESC/EAS 2019 Dyslipidemia Guidelines"
+        ]
     },
     "Icosapent ethyl": {
         "group": "Cardiovascular - Omega-3 Fatty Acid (EPA Ethyl Ester)",
@@ -619,6 +655,18 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "High - Large RCT (REDUCE-IT) showing 25% reduction in cardiovascular events"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Moderate",
+            "organ_toxicity": {"gastrointestinal": "Low", "cardiovascular": "Moderate (atrial fibrillation)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "AHA 2019 Hypertriglyceridemia Guidelines",
+            "REDUCE-IT Trial 2019"
+        ],
         "overdose_management": {
              "symptoms": [
                  "Cần tra cứu thêm thông tin về triệu chứng quá liều"
@@ -843,7 +891,18 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "Moderate - Effective for lipid lowering, but no additional cardiovascular benefit when combined with statin (AIM-HIGH, HPS2-THRIVE negative)"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Moderate", "gastrointestinal": "Moderate (flushing)", "metabolic": "Moderate (hyperglycemia, hyperuricemia)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "AHA 2019 Hypertriglyceridemia Guidelines"
+        ]
     },
 
     "Omega-3 acid ethyl esters": {
@@ -962,6 +1021,17 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "Moderate - Effective for hypertriglyceridemia, but cardiovascular benefit is controversial"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"gastrointestinal": "Low"}
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "AHA 2019 Hypertriglyceridemia Guidelines"
+        ],
         "overdose_management": {
               "symptoms": [
                   "Cần tra cứu thêm thông tin về triệu chứng quá liều"
@@ -1123,6 +1193,18 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "Moderate - Newer drug with selective PPAR-alpha activity, less side effects than traditional fibrates"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Moderate", "renal": "Moderate", "musculoskeletal": "Moderate (myopathy)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "AHA 2019 Hypertriglyceridemia Guidelines",
+            "ESC/EAS 2019 Dyslipidemia Guidelines"
+        ],
         "overdose_management": {
               "symptoms": [
                   "Cần tra cứu thêm thông tin về triệu chứng quá liều"
@@ -1292,7 +1374,19 @@ TRIGLYCERIDE_LOWERING_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "Moderate - FDA breakthrough therapy designation (2024), Phase 2/3 clinical trials showing 70-90% triglyceride reduction, Phase 3 expected completion 2026"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"hepatic": "Low", "immunologic": "Moderate (injection site reactions)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA 2018 Cholesterol Guidelines",
+            "AHA 2019 Hypertriglyceridemia Guidelines",
+            "ESC/EAS 2019 Dyslipidemia Guidelines"
+        ]
     },
 
 }

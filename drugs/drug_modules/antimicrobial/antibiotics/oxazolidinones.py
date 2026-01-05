@@ -260,10 +260,18 @@ OXAZOLIDINONE_ANTIBIOTICS = {
             "high_alert": True,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"hematologic": "High (thrombocytopenia)", "neurological": "High (peripheral/optic neuropathy)", "metabolic": "High (serotonin syndrome)"}
+            "bleeding_risk": "Low (thrombocytopenia)",
+            "organ_toxicity": {"hematologic": "Black Box Warning - Myelosuppression (thrombocytopenia, neutropenia, anemia)", "neurological": "Black Box Warning - Peripheral neuropathy, optic neuropathy (may be irreversible)", "metabolic": "Black Box Warning - Serotonin syndrome (with SSRI/SNRI/MAO inhibitors)", "gastrointestinal": "C. difficile infection"},
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["CBC weekly (Black Box Warning - myelosuppression, especially if >14 days)", "Neurological signs (Black Box Warning - peripheral/optic neuropathy, may be irreversible)", "Serotonin syndrome signs (Black Box Warning - with SSRI/SNRI/MAO inhibitors)", "C. difficile infection signs", "Duration of therapy (max 28 days due to toxicity risk)"],
+            "look_alike_sound_alike": ["Linezolid", "Lisinopril"]
         },
         "guideline_tags": [
+            "FDA Black Box Warning - Myelosuppression (Thrombocytopenia, Neutropenia, Anemia)",
+            "FDA Black Box Warning - Peripheral Neuropathy, Optic Neuropathy (may be irreversible)",
+            "FDA Black Box Warning - Serotonin Syndrome (with SSRI/SNRI/MAO inhibitors)",
             "IDSA Guidelines - Vancomycin-Resistant Enterococcus Infections",
             "IDSA Guidelines - Methicillin-Resistant Staphylococcus aureus Infections",
             "IDSA Guidelines - Hospital-Acquired Pneumonia",

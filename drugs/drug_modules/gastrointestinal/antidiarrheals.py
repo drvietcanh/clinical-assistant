@@ -20,7 +20,7 @@ ANTIDIARRHEALS_DRUGS = {
         'Aspirin: tăng nguy cơ chảy máu, tăng nguy cơ hội chứng Reye',
         'Warfarin: tăng nguy cơ chảy máu',
         'Tetracycline, Quinolone: giảm hấp thu kháng sinh (cách xa 2 giờ)',
-        'Probenecid: giảm tác dụng probenecid'], 'pregnancy': 'C',
+        'Probenecid: giảm tác dụng probenecid'],
         'mechanism_of_action':
         'Bismuth subsalicylate là thuốc chống tiêu chảy và kháng khuẩn. Bismuth có tác dụng kháng khuẩn tại chỗ, ức chế sự phát triển của vi khuẩn gây tiêu chảy (E. coli, Salmonella, Shigella). Salicylate (từ phân hủy bismuth subsalicylate) có tác dụng chống viêm và giảm tiết dịch ruột. Bismuth cũng tạo lớp bảo vệ trên niêm mạc dạ dày và ruột, giảm kích ứng. Tác dụng: giảm tiêu chảy, giảm đau bụng, giảm buồn nôn, và có tác dụng kháng khuẩn. Bismuth subsalicylate được chuyển hóa thành bismuth carbonate và salicylate trong dạ dày. Salicylate được hấp thu và có tác dụng toàn thân (giống aspirin), nên có nguy cơ tương tác với aspirin và thuốc chống đông.'
         , 'monitoring': [
@@ -100,7 +100,7 @@ ANTIDIARRHEALS_DRUGS = {
         'Có thể uống với hoặc không với thức ăn', 'timing':
         '524mg (2 viên hoặc 30ml) mỗi 30-60 phút khi có triệu chứng (tối đa 8 liều/ngày = 4.2g/ngày). Không dùng quá 2 ngày nếu không cải thiện. Uống cách xa tetracycline, quinolone ít nhất 2 giờ.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'}},
+        'compatibility': [], 'incompatibility': []}},
         'references': {'primary_sources': ['FDA Drug Label - Pepto-Bismol',
         'UpToDate - Bismuth subsalicylate: Drug information', 'Micromedex - Bismuth subsalicylate',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics"], 'last_updated':
@@ -116,11 +116,11 @@ ANTIDIARRHEALS_DRUGS = {
         'Loperamide, Imodium', 'administration': ['PO'], 'indications': [
         'Tiêu chảy cấp', 'Tiêu chảy mạn tính'], 'contraindications': [
         'Tiêu chảy do nhiễm khuẩn (nặng)', 'Viêm đại tràng giả mạc', 'Tắc ruột',
-        'Trẻ em <2 tuổi'], 'dosage': {'adult_loading': '4mg x 1 lần',
+        'Trẻ em <2 tuổi'],
         'adult_maintenance': '2mg sau mỗi lần đi ngoài (tối đa 16mg/ngày)',
         'notes': 'Không dùng quá 48 giờ nếu không cải thiện'}, 'side_effects':
         ['Táo bón', 'Buồn nôn', 'Đau bụng', 'Buồn ngủ'], 'interactions': [
-        'Opioids: tăng tác dụng (ít dùng chung)'], 'pregnancy': 'C',
+        'Opioids: tăng tác dụng (ít dùng chung)'],
         'mechanism_of_action':
         'Opioid mu-receptor agonist ở ruột (peripheral opioid). Ức chế acetylcholine và prostaglandin ở cơ trơn ruột, giảm nhu động ruột, tăng trương lực cơ thắt hậu môn, tăng hấp thu nước từ phân. Tác dụng chống tiêu chảy. Không qua hàng rào máu-não đáng kể ở liều điều trị → ít tác dụng phụ thần kinh và ít nguy cơ nghiện hơn opioid hệ thống. Tuy nhiên, liều cao có thể qua hàng rào máu-não và gây tác dụng opioid hệ thống.'
         , 'monitoring': [
@@ -218,7 +218,21 @@ ANTIDIARRHEALS_DRUGS = {
              "under_30": "Giảm liều hoặc tránh dùng",
              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
          },
-},
-}}
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [],
+        },
+        "guideline_tags": [
+            "ACG 2017 GERD Guidelines",
+            "FDA - Over-the-counter antacids",
+        ]
+    }
+}
 
 __all__ = ['ANTIDIARRHEALS_DRUGS']

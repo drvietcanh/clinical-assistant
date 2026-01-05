@@ -289,6 +289,20 @@ LAXATIVES_DRUGS = {
          "black_box_warnings": None,
          "black_box_warnings": None,
          "black_box_warnings": "Không có",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Electrolytes (long-term use)"],
+            },
+            "guideline_tags": [
+                "ACG 2013 Constipation Guidelines",
+                "FDA - Laxative safety",
+            ]
 },
 
     "Polyethylene glycol 3350": {
@@ -426,6 +440,20 @@ LAXATIVES_DRUGS = {
           "black_box_warnings": None,
           "black_box_warnings": None,
           "black_box_warnings": "Không có",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Electrolytes (long-term use)"],
+            },
+            "guideline_tags": [
+                "ACG 2013 Constipation Guidelines",
+                "FDA - Laxative safety",
+            ]
 },
 
     "Senna (sennosides)": {
@@ -570,6 +598,20 @@ LAXATIVES_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "High – thuốc phổ biến, được khuyến nghị trong táo bón cấp và do opioid",
         },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Electrolytes (long-term use)"],
+            },
+            "guideline_tags": [
+                "ACG 2013 Constipation Guidelines",
+                "FDA - Laxative safety",
+            ]
     },
 }
 

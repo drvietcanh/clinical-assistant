@@ -489,6 +489,12 @@ if 'guideline_bookmarks' not in st.session_state:
 if 'guideline_recent_history' not in st.session_state:
     st.session_state['guideline_recent_history'] = []
 
+if 'guideline_search_history' not in st.session_state:
+    st.session_state['guideline_search_history'] = []
+
+if 'guideline_notes' not in st.session_state:
+    st.session_state['guideline_notes'] = {}
+
 # ========== HELPER FUNCTIONS ==========
 
 def add_to_bookmarks(guideline_id: str):
@@ -526,6 +532,19 @@ def get_recent_guidelines_from_history():
     # Create a dict for quick lookup
     guideline_dict = {g.id: g for g in all_guidelines}
     return [guideline_dict[gid] for gid in history_ids if gid in guideline_dict]
+
+def get_guideline_note(guideline_id: str) -> str:
+    """Get user note for a guideline"""
+    return st.session_state.get('guideline_notes', {}).get(guideline_id, "")
+
+def set_guideline_note(guideline_id: str, note: str):
+    """Set user note for a guideline"""
+    if 'guideline_notes' not in st.session_state:
+        st.session_state['guideline_notes'] = {}
+    if note:
+        st.session_state['guideline_notes'][guideline_id] = note
+    elif guideline_id in st.session_state['guideline_notes']:
+        del st.session_state['guideline_notes'][guideline_id]
 
 def get_category_color(category: str) -> tuple:
     """Trả về màu gradient và border cho từng category"""
@@ -608,21 +627,58 @@ def render_sticky_search_bar():
     """Render sticky search bar with autocomplete and quick filters"""
     st.markdown('<div class="sticky-search-container">', unsafe_allow_html=True)
     
-    # Search input
+    # Initialize quick search term
+    if 'guidelines_quick_search_term' not in st.session_state:
+        st.session_state['guidelines_quick_search_term'] = ""
+    
+    # Get current search value
+    current_search = st.session_state.get('guidelines_search_main', '')
+    
+    # If quick search was triggered, use that value
+    if st.session_state.get('guidelines_quick_search_term'):
+        current_search = st.session_state['guidelines_quick_search_term']
+        # Clear quick search after using
+        st.session_state['guidelines_quick_search_term'] = ""
+    
+    # Search input with autocomplete suggestions
     col1, col2 = st.columns([4, 1])
     with col1:
         search_query = st.text_input(
             "🔍 Tìm kiếm guidelines",
+            value=current_search if current_search else "",
             placeholder="Nhập từ khóa: Heart Failure, Sepsis, AHA, ESC...",
             key="guidelines_search_main",
             help="Tìm kiếm theo tên bệnh, chuyên khoa, tổ chức, hoặc từ khóa bất kỳ"
         )
+        
+        # Show autocomplete suggestions if query is being typed
+        if search_query and len(search_query) >= 2:
+            suggestions = get_search_suggestions(search_query, limit=5)
+            if suggestions:
+                st.caption(f"💡 Gợi ý: {', '.join(suggestions[:3])}")
+    
     with col2:
         st.markdown("<br>", unsafe_allow_html=True)
         if st.button("🔄", help="Xóa tìm kiếm", use_container_width=True, key="clear_search_main"):
             if 'guidelines_search_main' in st.session_state:
                 del st.session_state['guidelines_search_main']
+            if 'guidelines_quick_search_term' in st.session_state:
+                st.session_state['guidelines_quick_search_term'] = ""
             st.rerun()
+    
+    # Add search to history when search is performed
+    if search_query and search_query not in st.session_state.get('guideline_search_history', []):
+        st.session_state['guideline_search_history'].insert(0, search_query)
+        # Keep only last 10 searches
+        st.session_state['guideline_search_history'] = st.session_state['guideline_search_history'][:10]
+    
+    # Show search history if available and no current query
+    if not search_query and st.session_state.get('guideline_search_history'):
+        with st.expander("📜 Lịch sử tìm kiếm", expanded=False):
+            for hist_term in st.session_state['guideline_search_history'][:5]:
+                if st.button(f"🔍 {hist_term}", key=f"hist_{hist_term}", use_container_width=True):
+                    st.session_state['guidelines_quick_search_term'] = hist_term
+                    st.rerun()
     
     # Quick search chips
     if not search_query:
@@ -632,7 +688,7 @@ def render_sticky_search_bar():
         for idx, term in enumerate(quick_searches):
             with cols[idx]:
                 if st.button(term, key=f"quick_{term}", use_container_width=True):
-                    st.session_state['guidelines_search_main'] = term
+                    st.session_state['guidelines_quick_search_term'] = term
                     st.rerun()
     
     st.markdown('</div>', unsafe_allow_html=True)
@@ -640,36 +696,64 @@ def render_sticky_search_bar():
 
 
 def render_filter_chips(active_filters: dict):
-    """Render active filter chips"""
-    if not any(active_filters.values()):
+    """Render active filter chips with remove functionality"""
+    active_filter_items = {k: v for k, v in active_filters.items() if v and v != "Tất cả"}
+    
+    if not active_filter_items:
         return
     
-    st.markdown('<div class="filter-summary">', unsafe_allow_html=True)
     st.markdown("**Bộ lọc đang áp dụng:**")
     
-    chips_html = []
-    for filter_type, filter_value in active_filters.items():
-        if filter_value and filter_value != "Tất cả":
-            chips_html.append(f'''
-                <span class="filter-chip active">
-                    {filter_type}: {filter_value}
-                    <span class="filter-chip-remove" onclick="removeFilter('{filter_type}')">×</span>
-                </span>
-            ''')
+    # Create columns for filter chips
+    num_filters = len(active_filter_items)
+    cols = st.columns(min(num_filters + 1, 6))  # Max 5 filters + clear all button
     
-    if chips_html:
-        st.markdown(''.join(chips_html), unsafe_allow_html=True)
-        if st.button("🗑️ Xóa tất cả", key="clear_all_filters"):
-            for key in active_filters.keys():
-                if f"guidelines_{key}_filter" in st.session_state:
-                    del st.session_state[f"guidelines_{key}_filter"]
-            st.rerun()
+    col_idx = 0
+    for filter_type, filter_value in active_filter_items.items():
+        if col_idx < len(cols) - 1:
+            with cols[col_idx]:
+                # Map filter type to session state key
+                filter_key_map = {
+                    "Chuyên khoa": "guidelines_category_filter",
+                    "Tổ chức": "guidelines_org_filter",
+                    "Năm": "guidelines_year_filter",
+                    "High Impact": "guidelines_high_impact_filter"
+                }
+                session_key = filter_key_map.get(filter_type)
+                
+                if st.button(f"❌ {filter_type}: {filter_value}", key=f"remove_{filter_type}_{col_idx}", use_container_width=True):
+                    if session_key and session_key in st.session_state:
+                        if filter_type == "High Impact":
+                            st.session_state[session_key] = False
+                        else:
+                            st.session_state[session_key] = "Tất cả"
+                    st.rerun()
+            col_idx += 1
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # Clear all button in last column
+    if col_idx < len(cols):
+        with cols[col_idx]:
+            if st.button("🗑️ Xóa tất cả", key="clear_all_filters", use_container_width=True):
+                for filter_type in active_filter_items.keys():
+                    filter_key_map = {
+                        "Chuyên khoa": "guidelines_category_filter",
+                        "Tổ chức": "guidelines_org_filter",
+                        "Năm": "guidelines_year_filter",
+                        "High Impact": "guidelines_high_impact_filter"
+                    }
+                    session_key = filter_key_map.get(filter_type)
+                    if session_key and session_key in st.session_state:
+                        if filter_type == "High Impact":
+                            st.session_state[session_key] = False
+                        else:
+                            st.session_state[session_key] = "Tất cả"
+                st.rerun()
+    
+    st.markdown("---")
 
 
 def render_quick_filters():
-    """Render quick filter buttons"""
+    """Render quick filter buttons with better icons and styling"""
     st.markdown("**⚡ Bộ lọc nhanh:**")
     col1, col2, col3, col4, col5 = st.columns(5)
     
@@ -680,7 +764,8 @@ def render_quick_filters():
     
     with col2:
         if st.button("⭐ High Impact", key="quick_high_impact", use_container_width=True):
-            st.session_state['guidelines_high_impact'] = True
+            # Filter for high impact guidelines
+            st.session_state['guidelines_high_impact_filter'] = True
             st.rerun()
     
     with col3:
@@ -700,123 +785,199 @@ def render_quick_filters():
 
 
 def render_enhanced_guideline_card(guideline, index: int, is_mobile: bool = False):
-    """Render guideline card với UI tối ưu mobile-first"""
+    """Render guideline card using Streamlit native components with enhanced design"""
     gradient, border_color = get_category_color(guideline.category)
     org_color = get_org_color(guideline.organization)
     current_year = 2025
     year_class, year_color, year_label = get_year_indicator_class(guideline.year, current_year)
     
-    # Status badge
-    status_html = ""
-    if guideline.is_high_impact:
-        status_html = '<span class="badge badge-high-impact">⭐ PRACTICE CHANGING</span>'
-    elif guideline.year >= 2023:
-        status_html = '<span class="badge badge-new">NEW</span>'
-    elif guideline.year >= 2020:
-        status_html = '<span class="badge badge-update">UPDATED</span>'
+    # Container với border styling và hover effects
+    border_color_hex = "#fbbc04" if guideline.is_high_impact else border_color
+    card_id = f"guideline_card_{index}"
+    st.markdown(f"""
+    <div id="{card_id}" style="
+        border-left: 4px solid {border_color_hex};
+        border-top: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+    ">""", unsafe_allow_html=True)
     
-    # Build HTML
-    card_html_parts = []
+    # Add hover effect via CSS
+    st.markdown(f"""
+    <style>
+        #{card_id}:hover {{
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+            border-left-color: {border_color_hex};
+        }}
+    </style>
+    """, unsafe_allow_html=True)
     
-    # Card Start
-    border_style = "border-left-color: #fbbc04;" if guideline.is_high_impact else f"border-left-color: {border_color};"
-    card_html_parts.append(f'<div class="guideline-card" style="{border_style}">')
+    # Title with better hierarchy
+    title_display = guideline.title_vn or guideline.title
+    st.markdown(f"### {title_display}")
     
-    # Header: Title & Status
-    card_html_parts.append('<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap;">')
-    card_html_parts.append(f'<h3 class="guideline-title" style="flex: 1; min-width: 200px;">{html.escape(guideline.title_vn or guideline.title)}</h3>')
-    card_html_parts.append(f'<div style="flex-shrink: 0;">{status_html}</div>')
-    card_html_parts.append('</div>')
+    # Metadata row with color-coded badges
+    meta_col1, meta_col2, meta_col3, meta_col4 = st.columns([2.5, 1.2, 1.2, 1])
     
-    # Meta: Org, Year, Category
-    card_html_parts.append('<div class="guideline-meta">')
-    card_html_parts.append(f'<span class="badge badge-org" style="color: {org_color}; border-color: {org_color}40;">{html.escape(guideline.organization)}</span>')
-    card_html_parts.append(f'<span class="year-indicator {year_class}" style="background: {year_color}20; color: {year_color};">{guideline.year} ({year_label})</span>')
-    card_html_parts.append(f'<span style="color: {border_color}; font-weight: 500; padding: 4px 8px; background: {border_color}20; border-radius: 4px;">{html.escape(guideline.category)}</span>')
-    card_html_parts.append('</div>')
+    with meta_col1:
+        # Organization with color
+        st.markdown(f'<span style="color: {org_color}; font-weight: 600;">{guideline.organization}</span> • <span style="color: #5f6368;">{guideline.year}</span>', unsafe_allow_html=True)
     
-    # Description (truncated)
+    with meta_col2:
+        # Status badge with better styling
+        if guideline.is_high_impact:
+            st.markdown('<span style="background: linear-gradient(135deg, #fff8e1 0%, #ffe082 100%); padding: 4px 8px; border-radius: 4px; font-weight: 700; color: #b06000;">⭐ PRACTICE CHANGING</span>', unsafe_allow_html=True)
+        elif guideline.year >= 2023:
+            st.markdown('<span style="background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-weight: 600; color: #2e7d32;">🆕 NEW</span>', unsafe_allow_html=True)
+        elif guideline.year >= 2020:
+            st.markdown('<span style="background: #fff3e0; padding: 4px 8px; border-radius: 4px; font-weight: 600; color: #ef6c00;">🔄 UPDATED</span>', unsafe_allow_html=True)
+    
+    with meta_col3:
+        # Category with color coding
+        st.markdown(f'<span style="color: {border_color}; font-weight: 500; padding: 4px 8px; background: {border_color}20; border-radius: 4px;">📁 {guideline.category}</span>', unsafe_allow_html=True)
+    
+    with meta_col4:
+        # Year indicator with color
+        st.markdown(f'<span style="background: {year_color}20; color: {year_color}; padding: 4px 8px; border-radius: 4px; font-weight: 600;">📅 {year_label}</span>', unsafe_allow_html=True)
+    
+    # Description
     if guideline.description:
-        desc_id = f"desc_{index}"
-        card_html_parts.append(f'<div class="guideline-description" id="{desc_id}">{html.escape(guideline.description)}</div>')
-        if len(guideline.description) > 150:
-            card_html_parts.append(f'<button onclick="toggleDescription(\'{desc_id}\')" style="color: var(--primary-color); background: none; border: none; cursor: pointer; padding: 4px 0; font-size: 0.85rem; margin-top: 4px;">Đọc thêm...</button>')
+        with st.expander("📄 Mô tả", expanded=False):
+            st.markdown(guideline.description)
     
-    # Clinical Pearl (Key Recommendations) - Collapsible
+    # Key Recommendations
     if guideline.key_recommendations:
-        pearl_id = f"pearl_{index}"
-        card_html_parts.append(f'<div class="pearl-box" id="{pearl_id}" style="display: none;">')
-        card_html_parts.append('<div class="pearl-title">💡 Clinical Pearl - Key Recommendations</div>')
-        card_html_parts.append('<div class="pearl-content"><ul style="margin: 0; padding-left: 20px;">')
-        for rec in guideline.key_recommendations[:3]:
-            card_html_parts.append(f'<li style="margin-bottom: 4px;">{html.escape(rec)}</li>')
-        if len(guideline.key_recommendations) > 3:
-            card_html_parts.append(f'<li style="color: var(--text-secondary); font-size: 0.85rem;">... và {len(guideline.key_recommendations) - 3} khuyến nghị khác</li>')
-        card_html_parts.append('</ul></div>')
-        card_html_parts.append('</div>')
-        card_html_parts.append(f'<button onclick="togglePearl(\'{pearl_id}\')" style="color: var(--primary-color); background: none; border: none; cursor: pointer; padding: 8px 0; font-size: 0.9rem; margin-top: 8px; font-weight: 600;">💡 Xem Key Recommendations</button>')
+        with st.expander("💡 Key Recommendations", expanded=False):
+            for rec in guideline.key_recommendations:
+                st.markdown(f"- {rec}")
     
-    # Actions Footer
-    card_html_parts.append('<div style="margin-top: 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">')
+    # Actions row
+    action_cols = st.columns([1, 1, 1, 1])
+    col_idx = 0
     
-    if guideline.url:
-        card_html_parts.append(f'<a href="{html.escape(guideline.url)}" target="_blank" class="action-link">🔗 Xem Guideline gốc</a>')
-    
-    if guideline.related_protocol:
-        card_html_parts.append(f'<span style="font-size: 0.85rem; color: #5f6368; margin-left: auto;">📋 Protocol: <strong>{html.escape(guideline.related_protocol)}</strong></span>')
-    
-    card_html_parts.append('</div>')
-    card_html_parts.append('</div>')
-    
-    components.html(''.join(card_html_parts), height=0, scrolling=False)
-    
-    # Interactive Buttons (Bookmark, Protocol + Tools) - Touch-friendly
-    num_buttons = 1  # Bookmark always
-    if guideline.related_protocol:
-        num_buttons += 1
-    if guideline.related_tools:
-        num_buttons += 1
-    
-    if num_buttons > 1:
-        cols = st.columns(num_buttons)
-        col_idx = 0
-        
-        # Bookmark button
-        with cols[col_idx]:
-            bookmark_key = f"bookmark_{index}"
-            is_booked = is_bookmarked(guideline.id)
-            bookmark_label = "⭐ Đã lưu" if is_booked else "⭐ Lưu"
-            if st.button(bookmark_label, key=bookmark_key, use_container_width=True):
-                if is_booked:
-                    remove_from_bookmarks(guideline.id)
-                else:
-                    add_to_bookmarks(guideline.id)
-                st.rerun()
-        col_idx += 1
-        
-        if guideline.related_protocol:
-            with cols[col_idx]:
-                if st.button(
-                    "📋 Protocol",
-                    key=f"proto_btn_{index}",
-                    type="primary",
-                    use_container_width=True
-                ):
-                    st.session_state['protocol_specialty'] = guideline.category
-                    st.session_state['protocol_to_open'] = guideline.related_protocol
-                    st.switch_page("pages/04_📋_Protocols.py")
-            col_idx += 1
-        
-        if guideline.related_tools:
-            for idx_tool, tool in enumerate(guideline.related_tools[:1]):  # Show first tool only
-                with cols[col_idx]:
-                    if st.button(f"🧮 {tool['name']}", key=f"tool_btn_{index}_{idx_tool}", use_container_width=True):
-                        st.switch_page("pages/01_📊_Scores.py")
-    else:
-        # Only bookmark button
-        if st.button("⭐ Lưu", key=f"bookmark_{index}", use_container_width=True):
-            add_to_bookmarks(guideline.id)
+    # Bookmark button
+    with action_cols[col_idx]:
+        is_booked = is_bookmarked(guideline.id)
+        bookmark_label = "⭐ Đã lưu" if is_booked else "⭐ Lưu"
+        button_type = "primary" if is_booked else "secondary"
+        if st.button(bookmark_label, key=f"bookmark_{index}", use_container_width=True, type=button_type):
+            if is_booked:
+                remove_from_bookmarks(guideline.id)
+            else:
+                add_to_bookmarks(guideline.id)
             st.rerun()
+    col_idx += 1
+    
+    # Protocol link
+    if guideline.related_protocol:
+        with action_cols[col_idx]:
+            if st.button("📋 Protocol", key=f"proto_btn_{index}", use_container_width=True, type="primary"):
+                st.session_state['protocol_specialty'] = guideline.category
+                st.session_state['protocol_to_open'] = guideline.related_protocol
+                st.switch_page("pages/04_📋_Protocols.py")
+        col_idx += 1
+    
+    # Related tools
+    if guideline.related_tools:
+        for idx_tool, tool in enumerate(guideline.related_tools[:1]):  # Show first tool only
+            with action_cols[col_idx]:
+                if st.button(f"🧮 {tool['name']}", key=f"tool_btn_{index}_{idx_tool}", use_container_width=True):
+                    st.switch_page("pages/01_📊_Scores.py")
+            col_idx += 1
+    
+    # External link
+    if guideline.url:
+        with action_cols[col_idx]:
+            st.markdown(f'<a href="{guideline.url}" target="_blank" style="color: #0066CC; text-decoration: none; font-weight: 600;">🔗 Xem gốc</a>', unsafe_allow_html=True)
+    
+    # Additional features row
+    feature_cols = st.columns([1, 1, 1, 1])
+    feat_idx = 0
+    
+    # Compare versions button
+    from guidelines.tracker import compare_guideline_versions
+    versions = compare_guideline_versions(guideline.id)
+    if versions and versions.get('total_versions', 0) > 1:
+        with feature_cols[feat_idx]:
+            if st.button("📊 So sánh", key=f"compare_{index}", use_container_width=True):
+                st.session_state[f'show_compare_{guideline.id}'] = True
+                st.rerun()
+        feat_idx += 1
+        
+        # Show comparison if requested
+        if st.session_state.get(f'show_compare_{guideline.id}', False):
+            with st.expander("📊 So sánh các phiên bản", expanded=True):
+                st.markdown(f"**Phiên bản mới nhất:** {versions['latest'].year}")
+                if versions.get('previous'):
+                    st.markdown("**Phiên bản trước:**")
+                    for prev in versions['previous']:
+                        st.markdown(f"- {prev.year}")
+                if st.button("Đóng", key=f"close_compare_{index}"):
+                    st.session_state[f'show_compare_{guideline.id}'] = False
+                    st.rerun()
+    
+    # User notes
+    with feature_cols[feat_idx]:
+        current_note = get_guideline_note(guideline.id)
+        if st.button("📝 Ghi chú" + (" ✓" if current_note else ""), key=f"note_btn_{index}", use_container_width=True):
+            st.session_state[f'show_note_{guideline.id}'] = True
+            st.rerun()
+    feat_idx += 1
+    
+    # Show note editor if requested
+    if st.session_state.get(f'show_note_{guideline.id}', False):
+        current_note = get_guideline_note(guideline.id)
+        new_note = st.text_area("Ghi chú của bạn:", value=current_note, key=f"note_input_{index}", height=100)
+        note_col1, note_col2 = st.columns([1, 1])
+        with note_col1:
+            if st.button("💾 Lưu", key=f"save_note_{index}"):
+                set_guideline_note(guideline.id, new_note)
+                st.session_state[f'show_note_{guideline.id}'] = False
+                st.rerun()
+        with note_col2:
+            if st.button("❌ Đóng", key=f"close_note_{index}"):
+                st.session_state[f'show_note_{guideline.id}'] = False
+                st.rerun()
+    
+    # Export button
+    with feature_cols[feat_idx]:
+        if st.button("📥 Export", key=f"export_{index}", use_container_width=True):
+            # Create export data
+            import json
+            export_data = {
+                "title": guideline.title_vn or guideline.title,
+                "organization": guideline.organization,
+                "year": guideline.year,
+                "category": guideline.category,
+                "description": guideline.description,
+                "key_recommendations": guideline.key_recommendations,
+                "url": guideline.url
+            }
+            st.download_button(
+                label="⬇️ Tải JSON",
+                data=json.dumps(export_data, indent=2, ensure_ascii=False),
+                file_name=f"guideline_{guideline.id}.json",
+                mime="application/json",
+                key=f"download_{index}"
+            )
+    feat_idx += 1
+    
+    # Share link (simplified - just show copy button)
+    with feature_cols[feat_idx]:
+        if st.button("🔗 Share", key=f"share_{index}", use_container_width=True):
+            st.session_state[f'share_url_{guideline.id}'] = f"?guideline={guideline.id}"
+            st.info(f"Link: {st.session_state.get('_stcore_host', '')}/Guidelines_Tracker?guideline={guideline.id}")
+    
+    # Close container div
+    st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown("---")
 
 
 def render_featured_updates(guidelines):
@@ -1009,6 +1170,9 @@ if view_mode == "Tất cả":
         "Tổ chức": org_filter,
         "Năm": year_filter
     }
+    # Add high impact filter if active
+    if st.session_state.get('guidelines_high_impact_filter', False):
+        active_filters["High Impact"] = "Có"
     render_filter_chips(active_filters)
 
 # Display based on view mode
@@ -1071,6 +1235,7 @@ elif view_mode == "Tất cả":
     category = None if category_filter == "Tất cả" else category_filter
     org = None if org_filter == "Tất cả" else org_filter
     year = None if year_filter == "Tất cả" else int(year_filter) if year_filter else None
+    high_impact_only = st.session_state.get('guidelines_high_impact_filter', False)
     
     guidelines = get_cached_all_guidelines()
     
@@ -1081,6 +1246,8 @@ elif view_mode == "Tất cả":
         guidelines = [g for g in guidelines if org in g.organization]
     if year:
         guidelines = [g for g in guidelines if g.year == year]
+    if high_impact_only:
+        guidelines = [g for g in guidelines if getattr(g, 'is_high_impact', False)]
     
     # Sort
     if sort_by == "Năm (mới nhất)":

@@ -87,6 +87,10 @@ PROTOCOL_LISTS = {
     "Thận": [
         "🧪 AKI Management",
         "🫘 Suy thận mạn tính (CKD)",
+        "🩸 Thiếu Máu Trong CKD (KDIGO 2026)",
+        "📊 Quản Lý Huyết Áp Trong CKD (KDIGO 2021)",
+        "💊 Tăng Huyết Áp Kháng Trị Trong CKD",
+        "🔬 IgA Nephropathy (KDIGO 2021)",
         "🍭 Bệnh thận do đái tháo đường",
         "📈 Bệnh thận do tăng huyết áp",
         "🚻 Nhiễm trùng tiểu / Viêm bể thận",

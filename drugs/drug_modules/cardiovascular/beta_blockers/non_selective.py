@@ -679,17 +679,27 @@ NON_SELECTIVE_BETA_BLOCKERS = {
             "evidence_level": "High - Multiple large RCTs (BHAT, ISIS-1) and extensive clinical experience"
         },
         "risk_flags": {
-            "high_alert": False,
+            "high_alert": True,
             "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Cardiovascular (Bradycardia, AV Block)"],
-            "requires_monitoring": ["Heart rate", "Blood pressure", "Blood glucose (in diabetics)"]
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"cardiovascular": "Bradycardia, AV block, heart failure exacerbation", "respiratory": "Bronchospasm (non-selective - Black Box Warning)", "endocrine": "Masks hypoglycemia symptoms in diabetes"},
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Heart rate (bradycardia risk)", "Blood pressure", "ECG (AV block)", "Blood glucose (masks hypoglycemia symptoms in diabetes)", "Withdrawal syndrome (do not stop abruptly - Black Box Warning)"],
+            "look_alike_sound_alike": ["Propranolol", "Propofol"]
         },
         "guideline_tags": [
+            "FDA Black Box Warning - Do Not Stop Abruptly (angina, MI risk)",
             "ACC/AHA Guidelines - Hypertension",
             "ACC/AHA Guidelines - Angina",
-            "AAN Guidelines - Migraine"
-        ]  },
+            "ACC/AHA Guidelines - Heart Failure",
+            "AAN Guidelines - Migraine Prevention",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
+    },
 
     "Timolol": {
         "group": "Cardiovascular - Beta-blocker (non-selective)",

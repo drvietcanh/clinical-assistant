@@ -6,7 +6,8 @@ Active module - contains all diabetes drug data"""
 THIAZOLIDINEDIONE_TZDS_DRUGS = {
     "Pioglitazone": {'group': 'Diabetes - Thiazolidinedione (TZD)', 'vietnamese_name':
         'Pioglitazone, Actos', 'administration': ['PO'], 'indications': [
-        'Đái tháo đường type 2'], 'contraindications': ['Đái tháo đường type 1',
+        'Đái tháo đường type 2'],
+        'contraindications': [
         'Suy tim (NYHA class III-IV)', 'Bệnh gan nặng', 'Ung thư bàng quang',
         'Gãy xương (phụ nữ có nguy cơ)'], 'dosage': {'adult_start':
         '15-30mg x 1 lần/ngày', 'adult_usual': '15-45mg x 1 lần/ngày',
@@ -18,7 +19,7 @@ THIAZOLIDINEDIONE_TZDS_DRUGS = {
         'Gãy xương (phụ nữ có nguy cơ tăng)', 'Thiếu máu',
         'Tăng LDL cholesterol', 'Ung thư bàng quang (tăng nhẹ nguy cơ)'],
         'interactions': ['Insulin: tăng nguy cơ suy tim, phù',
-        'Digoxin: có thể tăng nồng độ digoxin'], 'pregnancy': 'C',
+        'Digoxin: có thể tăng nồng độ digoxin'],
         'mechanism_of_action':
         'Pioglitazone là thiazolidinedione (TZD), hoạt động như agonist của PPAR-gamma (peroxisome proliferator-activated receptor gamma). Khi gắn vào PPAR-gamma trong nhân tế bào, pioglitazone kích hoạt phiên mã các gen liên quan đến chuyển hóa glucose và lipid, tăng nhạy cảm với insulin ở mô ngoại vi (cơ, mỡ, gan). Thuốc giảm đề kháng insulin, tăng sử dụng glucose ở mô ngoại vi, giảm sản xuất glucose ở gan, và giảm giải phóng acid béo tự do từ mô mỡ. Tác dụng chậm (2-4 tuần), và có thể gây giữ nước, tăng cân'
         , 'monitoring': ['HbA1c mỗi 3 tháng', 'Đường huyết đói',
@@ -45,7 +46,7 @@ THIAZOLIDINEDIONE_TZDS_DRUGS = {
         'Cả hai đều tăng giữ nước, tác dụng cộng dồn.', 'effect':
         'Tăng nguy cơ suy tim, phù, giữ nước nghiêm trọng', 'management':
         'Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu suy tim, phù. Có thể cần giảm liều insulin.'
-        }], 'moderate': [{'drug': 'Digoxin', 'mechanism':
+        }, {'drug': 'Digoxin', 'mechanism':
         'Pioglitazone có thể tăng nồng độ digoxin.', 'effect':
         'Tăng nồng độ digoxin, tăng nguy cơ độc tính', 'management':
         'Theo dõi nồng độ digoxin và điều chỉnh liều nếu cần.'}, {'drug':
@@ -94,12 +95,12 @@ THIAZOLIDINEDIONE_TZDS_DRUGS = {
         'Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu.',
         'timing': 'Uống 1 lần/ngày, bất kỳ lúc nào, cùng thời điểm mỗi ngày.'},
         'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }}, 'references': {'primary_sources': [
         'FDA Drug Label - Pioglitazone (Actos)',
         'UpToDate - Pioglitazone: Drug Information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ], 'last_updated': '2025-02-04', 'evidence_level':
+        ], 'evidence_level':
         'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}},
     
     "Rosiglitazone": {

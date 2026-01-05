@@ -7,12 +7,52 @@ Acute Gout Attack Management
 import streamlit as st
 from protocols.references_config import get_references
 from components.references import render_references_section
+from components.phase1_protocol_enhancer import (
+    render_protocol_header,
+    render_recommendation_with_evidence,
+    render_protocol_footer
+)
+from components.evidence_badge import (
+    render_evidence_badge,
+    render_evidence_summary,
+    Citation
+)
 
 
 def render():
     """Acute Gout Management Protocol"""
     st.subheader("🦴 Acute Gout Management Protocol")
-    st.caption("ACR 2020 Guidelines (Current Standard) - Acute Gout Attack Management")
+    st.caption("ACR 2020, ACR 2023, EULAR 2016, EULAR 2023 - Acute Gout Attack Management")
+    
+    # Enhanced header with Phase 1 components
+    render_protocol_header(
+        protocol_name="Acute Gout Management",
+        guideline_source="ACR 2020, ACR 2023, EULAR 2016, EULAR 2023",
+        show_version=True,
+        show_evidence_summary=True
+    )
+    
+    # ACR/EULAR Guidelines Summary
+    with st.expander("📚 ACR 2020 & EULAR 2023 Guidelines - Key Recommendations", expanded=False):
+        st.markdown("""
+        **ACR 2020 Guidelines for Gout Management:**
+        
+        **Class I Recommendations:**
+        - Start anti-inflammatory therapy within 24h of symptom onset
+        - NSAIDs, colchicine, or corticosteroids as first-line
+        - Low-dose colchicine (0.6mg BID) preferred over high-dose
+        - ULT can be started during acute attack (with anti-inflammatory coverage)
+        
+        **EULAR 2023 Updates:**
+        - Treat-to-target: Uric acid <6 mg/dL (<360 µmol/L)
+        - ULT for all patients with ≥2 attacks/year or tophi
+        - Colchicine prophylaxis when starting ULT
+        
+        **Key Points:**
+        - Early treatment (<24h) improves outcomes
+        - Low-dose colchicine as effective as high-dose, fewer side effects
+        - Can start ULT during attack (conditional recommendation)
+        """)
     
     st.info("""
     **Cập nhật ACR 2020:**

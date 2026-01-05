@@ -7,15 +7,15 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
     "Cetirizine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Cetirizine, Zyrtec', 'administration': ['PO'],
         'indications': ['Dị ứng (allergic rhinitis)', 'Mề đay (urticaria)',
-        'Dị ứng mắt', 'Dị ứng da'], 'contraindications': ['Dị ứng',
-        'Suy thận nặng'], 'dosage': {'adult_standard': '10mg x 1 lần/ngày',
+        'Dị ứng mắt', 'Dị ứng da'], 'contraindications': [
+        'Suy thận nặng'], 'dosage': {'adult': '10mg x 1 lần/ngày',
         'adult_max': '10mg x 2 lần/ngày', 'pediatric':
         '5mg x 1 lần/ngày (2-6 tuổi), 10mg/ngày (6-12 tuổi)', 'notes':
         'Non-sedating, an toàn cho trẻ em'}, 'renal_adjustment': {'normal':
         'Không đổi', '30_60': '5mg x 1 lần/ngày', 'under_30': '5mg cách ngày'},
         'side_effects': ['Buồn ngủ (ít, 10-15% người)', 'Khô miệng', 'Nhức đầu',
-        'Mệt mỏi'], 'interactions': ['Ít tương tác',
-        'Alcohol: có thể tăng buồn ngủ'], 'pregnancy': 'B',
+        'Mệt mỏi'], 'interactions': [
+        'Alcohol: có thể tăng buồn ngủ'],
         'mechanism_of_action':
         'Cetirizine là metabolite của hydroxyzine, là antihistamine thế hệ thứ hai, đối kháng chọn lọc và có ái lực cao với thụ thể H1 ở ngoại biên. Cetirizine ít qua hàng rào máu-não (do là zwitterion ở pH sinh lý) nên ít gây buồn ngủ hơn so với antihistamine thế hệ thứ nhất, nhưng vẫn có thể gây buồn ngủ ở một số người (10-15%). Cetirizine ức chế phóng thích histamine từ mast cells và basophils, ngăn chặn tác dụng của histamine trên các thụ thể H1. Ngoài ra, cetirizine có tác dụng kháng viêm nhẹ do ức chế phóng thích các chất trung gian gây viêm và ức chế chemotaxis của eosinophils. Tác dụng tốt cho cả allergic rhinitis và urticaria.'
         ,         'monitoring': ['Đáp ứng điều trị (giảm triệu chứng dị ứng)',
@@ -84,7 +84,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         , 'timing':
         'Dùng 1 lần/ngày (tác dụng kéo dài 24 giờ). Có thể dùng buổi sáng hoặc tối. CẦN ĐIỀU CHỈNH LIỀU Ở SUY THẬN: CrCl 30-60 → 5mg/ngày, CrCl <30 → 5mg cách ngày.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }},         'references': {'primary_sources': [
         'FDA Drug Label - Zyrtec (cetirizine)',
         'UpToDate - Cetirizine: Drug information',
@@ -116,7 +116,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'pediatric': '2.5mg x 1 lần/ngày (6-11 tuổi)', 'notes':
         'Là metabolite của loratadine, mạnh hơn và tác dụng dài hơn'},
         'side_effects': ['Buồn ngủ (rất hiếm)', 'Khô miệng', 'Nhức đầu',
-        'Ít tác dụng phụ'], 'interactions': ['Ít tương tác'], 'pregnancy': 'C',
+        'Ít tác dụng phụ'], 'interactions': ['Ít tương tác'],
         'mechanism_of_action':
         'Desloratadine là antihistamine thế hệ 2, là metabolite hoạt động của loratadine. Thuốc ức chế chọn lọc receptor H1 ngoại vi, ngăn cản histamine gắn vào receptor và gây các phản ứng dị ứng (ngứa, hắt hơi, chảy nước mũi, nổi mề đay). Desloratadine không qua hàng rào máu-não (BBB) nên ít gây buồn ngủ hơn so với antihistamine thế hệ 1. Thuốc cũng có tác dụng ức chế giải phóng các chất trung gian gây viêm từ tế bào mast và basophil'
         , 'monitoring': ['Dấu hiệu phản ứng dị ứng (nếu có)',
@@ -162,12 +162,12 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu.',
         'timing': 'Uống 1 lần/ngày, bất kỳ lúc nào, cùng thời điểm mỗi ngày.'},
         'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }}, 'references': {'primary_sources': [
         'FDA Drug Label - Desloratadine (Clarinex)',
         'UpToDate - Desloratadine: Drug Information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ], 'last_updated': '2025-02-04', 'evidence_level':
+        ], 'evidence_level':
         'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}},
     "Fexofenadine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Fexofenadine, Allegra', 'administration': ['PO'],
@@ -180,7 +180,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Rất ít tác dụng phụ', 'Buồn ngủ rất hiếm', 'Nhức đầu (hiếm)',
         'Mệt mỏi (hiếm)'], 'interactions': [
         'Fruit juices (apple, orange, grapefruit): giảm hấp thu (cách xa 1-2 giờ)',
-        'Antacids: giảm hấp thu (cách xa 2 giờ)'], 'pregnancy': 'C',
+        'Antacids: giảm hấp thu (cách xa 2 giờ)'],
         'mechanism_of_action':
         'Fexofenadine là metabolite hoạt động của terfenadine, là antihistamine thế hệ thứ hai, đối kháng chọn lọc và có ái lực cao với thụ thể H1 ở ngoại biên. Fexofenadine gần như không qua hàng rào máu-não (do là carboxylate anion ở pH sinh lý) nên không gây buồn ngủ và không có tác dụng anticholinergic. Fexofenadine ức chế phóng thích histamine từ mast cells và basophils, ngăn chặn tác dụng của histamine trên các thụ thể H1. Fexofenadine được coi là non-sedating nhất trong các antihistamine thế hệ thứ hai, phù hợp cho bệnh nhân cần tỉnh táo hoàn toàn. Tác dụng tốt cho cả allergic rhinitis và urticaria.'
         , 'monitoring': ['Đáp ứng điều trị (giảm triệu chứng dị ứng)',
@@ -239,7 +239,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         , 'timing':
         'Dùng 1-2 lần/ngày tùy liều (180mg x 1 lần/ngày hoặc 60mg x 2 lần/ngày). Cách xa fruit juices 1-2 giờ. Cách xa antacids 2 giờ.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }},         'references': {'primary_sources': [
         'FDA Drug Label - Allegra (fexofenadine)',
         'UpToDate - Fexofenadine: Drug information',
@@ -266,8 +266,8 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
     "Levocetirizine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Levocetirizine, Xyzal', 'administration': ['PO'],
         'indications': ['Dị ứng (allergic rhinitis)', 'Mề đay (urticaria)',
-        'Dị ứng da'], 'contraindications': ['Dị ứng', 'Suy thận nặng'],
-        'dosage': {'adult_standard': '5mg x 1 lần/ngày buổi tối', 'adult_max':
+        'Dị ứng da'], 'contraindications': [
+        'Suy thận nặng'], 'dosage': {'adult_standard': '5mg x 1 lần/ngày buổi tối', 'adult_max':
         '5mg x 2 lần/ngày', 'pediatric': '2.5mg x 1 lần/ngày (6-12 tuổi)',
         'notes': 'Là R-enantiomer của cetirizine, mạnh hơn cetirizine'},
         'renal_adjustment': {'normal': 'Không đổi', '30_60': '5mg cách ngày',
@@ -307,7 +307,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Suy thận (CrCl 30-60) - giảm liều (5mg cách ngày)',
         'Suy thận (CrCl 10-30) - giảm liều (5mg mỗi 3 ngày)',
         'Có thai - category B, thận trọng', 'Trẻ em <6 tuổi - không khuyến cáo'
-        ]}, 'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
+        ], 'pregnancy_details':
         'Levocetirizine là category B - an toàn hơn category C. Không có bằng chứng về dị tật thai nhi. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ.'
         , 'lactation': {'safety': 'Compatible', 'details':
         'Levocetirizine bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ.'
@@ -334,12 +334,28 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'timing':
         'Uống 1 lần/ngày buổi tối (để giảm buồn ngủ ban ngày) hoặc bất kỳ lúc nào, cùng thời điểm mỗi ngày. Giảm liều nếu suy thận (CrCl 30-60: 5mg cách ngày, CrCl 10-30: 5mg mỗi 3 ngày).'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }}, 'references': {'primary_sources': [
         'FDA Drug Label - Levocetirizine (Xyzal)',
         'UpToDate - Levocetirizine: Drug Information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ], 'last_updated': '2025-02-04', 'evidence_level': 'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}},
+        ],
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+        }
+    },
     "Loratadine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Loratadine, Clarityne', 'administration': ['PO'],
         'indications': ['Dị ứng (allergic rhinitis)', 'Mề đay (urticaria)',
@@ -351,7 +367,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Nhức đầu (hiếm)', 'Ít tác dụng phụ hơn antihistamine 1st generation'],
         'interactions': ['Ít tương tác',
         'Erythromycin/Ketoconazole: tăng nồng độ (nhưng thường không cần điều chỉnh)'
-        ], 'pregnancy': 'B', 'mechanism_of_action':
+        ], 'mechanism_of_action':
         'Loratadine là antihistamine thế hệ thứ hai, đối kháng chọn lọc và có ái lực cao với thụ thể H1 ở ngoại biên. Khác với antihistamine thế hệ thứ nhất (diphenhydramine, chlorpheniramine), loratadine ít qua hàng rào máu-não nên ít gây buồn ngủ và tác dụng phụ anticholinergic. Loratadine ức chế phóng thích histamine từ mast cells và basophils, ngăn chặn tác dụng của histamine trên các thụ thể H1 ở mạch máu, cơ trơn phế quản, và các mô khác. Điều này làm giảm các triệu chứng dị ứng như ngứa, chảy nước mũi, hắt hơi, và mề đay. Loratadine cũng có tác dụng kháng viêm nhẹ do ức chế phóng thích các chất trung gian gây viêm.'
         , 'monitoring': ['Đáp ứng điều trị (giảm triệu chứng dị ứng)',
         'Tác dụng phụ (buồn ngủ, khô miệng) - hiếm với loratadine',
@@ -406,7 +422,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         , 'timing':
         'Dùng 1 lần/ngày (tác dụng kéo dài 24 giờ). Có thể dùng buổi sáng hoặc tối.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }}, 'references': {'primary_sources': [
         'FDA Drug Label - Clarityne (loratadine)',
         'UpToDate - Loratadine: Drug information',

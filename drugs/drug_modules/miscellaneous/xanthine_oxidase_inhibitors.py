@@ -6,7 +6,7 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
     "Allopurinol": {'group': 'Metabolism - Xanthine Oxidase Inhibitor', 'vietnamese_name':
         'Allopurinol, Zyloric', 'administration': ['PO'], 'indications': [
         'Gout', 'Tăng acid uric máu', 'Phòng ngừa sỏi thận uric acid',
-        'Hóa trị (phòng ngừa tăng acid uric)'], 'contraindications': ['Dị ứng',
+        'Hóa trị (phòng ngừa tăng acid uric)'],
         'Có thai', 'Cho con bú'], 'dosage': {'adult_standard':
         '100-300mg x 1 lần/ngày', 'adult_severe': '400-600mg/ngày chia 2-3 lần',
         'notes':
@@ -15,7 +15,7 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
         'Buồn nôn', 'Đau đầu', 'Tăng men gan'], 'interactions': [
         'Azathioprine/6-mercaptopurine: tăng độc tính (giảm liều azathioprine 75%)'
         , 'Ampicillin/Amoxicillin: tăng nguy cơ ban da',
-        'Warfarin: tăng tác dụng chống đông'], 'pregnancy': 'C',
+        'Warfarin: tăng tác dụng chống đông'],
         'mechanism_of_action':
         'Xanthine oxidase inhibitor. Ức chế enzyme xanthine oxidase, enzyme chuyển hypoxanthine thành xanthine và xanthine thành acid uric. Giảm sản xuất acid uric, giảm nồng độ acid uric trong máu và nước tiểu. Được dùng để điều trị gout mạn tính và phòng ngừa tăng acid uric máu (ví dụ trong hóa trị).'
         , 'monitoring': ['Nồng độ acid uric máu (mục tiêu <6 mg/dL)',
@@ -62,7 +62,7 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
         , 'effect': 'Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu',
         'management':
         'Theo dõi INR chặt chẽ khi bắt đầu hoặc điều chỉnh liều allopurinol. Điều chỉnh liều warfarin nếu cần.'
-        }], 'moderate': [{'drug': 'Theophylline', 'mechanism':
+        }], 'mechanism':
         'Allopurinol có thể ức chế chuyển hóa theophylline, làm tăng nồng độ theophylline.'
         , 'effect':
         'Tăng nồng độ theophylline, tăng độc tính (nhịp tim nhanh, co giật)',
@@ -125,7 +125,7 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
         , 'timing':
         'Uống 1 lần/ngày sau bữa ăn. Uống với nhiều nước (2-3L/ngày) để tránh sỏi thận. Uống cùng thời điểm mỗi ngày.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }},         'references': {'primary_sources': [
         'FDA Drug Label - Allopurinol (Zyloric, Aloprim)',
         'American College of Rheumatology Guidelines - Gout Management',

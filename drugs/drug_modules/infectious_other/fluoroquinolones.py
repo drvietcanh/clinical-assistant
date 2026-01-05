@@ -83,7 +83,7 @@ FLUOROQUINOLONES_DRUGS = {
         'Tăng nồng độ theophylline, tăng độc tính theophylline (buồn nôn, nôn, co giật, rối loạn nhịp tim)'
         , 'management':
         'Giảm liều theophylline 25-50% khi bắt đầu ciprofloxacin. Theo dõi nồng độ theophylline. Theo dõi dấu hiệu độc tính.'
-        }], 'moderate': [{'drug': 'Probenecid', 'mechanism':
+        }], 'mechanism':
         'Probenecid ức chế bài tiết ống thận của ciprofloxacin, tăng nồng độ.',
         'effect': 'Tăng nồng độ ciprofloxacin, tăng tác dụng phụ', 'management':
         'Theo dõi tác dụng phụ. Có thể cần giảm liều ciprofloxacin.'}, {'drug':
@@ -95,7 +95,7 @@ FLUOROQUINOLONES_DRUGS = {
         'Cả hai đều tăng nguy cơ đứt gân, tác dụng cộng dồn.', 'effect':
         'Tăng nguy cơ viêm gân, đứt gân', 'management':
         'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ dấu hiệu đau, sưng gân. Ngừng ngay nếu có đau gân.'
-        }], 'minor': [{'drug': 'Sulfonylurea (Glibenclamide, Gliclazide)',
+        }],
         'mechanism': 'Ciprofloxacin có thể gây hạ đường huyết.', 'effect':
         'Tăng nguy cơ hạ đường huyết', 'management':
         'Theo dõi đường huyết. Điều chỉnh liều sulfonylurea nếu cần.'}]},
@@ -202,7 +202,7 @@ FLUOROQUINOLONES_DRUGS = {
         'monitoring':
         'Theo dõi chặt chẽ dấu hiệu đau gân, viêm gân, đứt gân (đặc biệt gân Achilles). Theo dõi ECG (QT interval). Theo dõi chức năng thận (creatinine, CrCl). Theo dõi dấu hiệu thần kinh (co giật, kích động). Ngừng ngay nếu có đau gân.'}, 'brand_names': {'vietnam': [
         'Ciprofloxacin', 'Cipro', 'Ciprobay', 'Ciproxin', 'Ciprofloxacin Stada'], 'common': [
-        'Cipro', 'Ciprofloxacin', 'Ciprobay']}, 'cost_estimate': {'unit': 'VND',
+        'Cipro', 'Ciprofloxacin', 'Ciprobay'],
         'range': '5,000 - 25,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
         'Giá thay đổi theo thương hiệu và nhà thuốc. Ciprofloxacin generic thường rẻ hơn (5,000-15,000 VND/viên 500mg). Dạng IV: 50,000-150,000 VND/lọ 200mg.'}, 'references': {'primary_sources': [
@@ -380,7 +380,27 @@ FLUOROQUINOLONES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"musculoskeletal": "Black Box Warning - Tendon rupture, tendonitis (especially Achilles)", "neurological": "Black Box Warning - Peripheral neuropathy (may be irreversible)", "cardiovascular": "QT prolongation - Black Box Warning", "dermatologic": "Photosensitivity", "psychiatric": "CNS effects (seizures, psychosis)"},
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Tendon signs (Black Box Warning - stop immediately if tendon pain/swelling)", "ECG (QT prolongation - Black Box Warning)", "Neurological signs (peripheral neuropathy - Black Box Warning)", "CNS effects (seizures, psychosis)", "Photosensitivity", "Renal function (dose adjustment required)"],
+            "look_alike_sound_alike": ["Gemifloxacin", "Gatifloxacin"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Tendon Rupture/Tendonitis",
+            "FDA Black Box Warning - Peripheral Neuropathy (may be irreversible)",
+            "FDA Black Box Warning - QT Prolongation",
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
     "Norfloxacin": {
         "group": "Antibiotic - Fluoroquinolone",
@@ -543,7 +563,27 @@ FLUOROQUINOLONES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"musculoskeletal": "Black Box Warning - Tendon rupture, tendonitis (especially Achilles)", "neurological": "Black Box Warning - Peripheral neuropathy (may be irreversible)", "cardiovascular": "QT prolongation - Black Box Warning", "dermatologic": "Photosensitivity", "psychiatric": "CNS effects (seizures, psychosis)"},
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Tendon signs (Black Box Warning - stop immediately if tendon pain/swelling)", "ECG (QT prolongation - Black Box Warning)", "Neurological signs (peripheral neuropathy - Black Box Warning)", "CNS effects (seizures, psychosis)", "Photosensitivity", "Renal function (dose adjustment required)"],
+            "look_alike_sound_alike": ["Norfloxacin", "Ciprofloxacin"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Tendon Rupture/Tendonitis",
+            "FDA Black Box Warning - Peripheral Neuropathy (may be irreversible)",
+            "FDA Black Box Warning - QT Prolongation",
+            "IDSA Guidelines - Urinary Tract Infections",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
     
     "Ofloxacin": {
@@ -924,7 +964,28 @@ FLUOROQUINOLONES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"musculoskeletal": "Black Box Warning - Tendon rupture, tendonitis (especially Achilles)", "neurological": "Black Box Warning - Peripheral neuropathy (may be irreversible)", "cardiovascular": "Severe QT prolongation - Black Box Warning (higher risk than other fluoroquinolones)", "dermatologic": "Severe photosensitivity - Black Box Warning", "psychiatric": "CNS effects (seizures, psychosis)"},
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG (QT prolongation - Black Box Warning, higher risk than other fluoroquinolones)", "Tendon signs (Black Box Warning - stop immediately if tendon pain/swelling)", "Neurological signs (peripheral neuropathy - Black Box Warning)", "Photosensitivity (Black Box Warning - severe)", "CNS effects (seizures, psychosis)", "Renal function (dose adjustment required)"],
+            "look_alike_sound_alike": ["Sparfloxacin", "Ciprofloxacin"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Severe QT Prolongation (higher risk than other fluoroquinolones)",
+            "FDA Black Box Warning - Tendon Rupture/Tendonitis",
+            "FDA Black Box Warning - Peripheral Neuropathy (may be irreversible)",
+            "FDA Black Box Warning - Severe Photosensitivity",
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 }
 

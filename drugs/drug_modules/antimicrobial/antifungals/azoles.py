@@ -250,19 +250,23 @@ AZOLES_DRUGS = {
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Hepatotoxicity", "QT prolongation (high doses ≥400mg/day)"],
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High (with warfarin)",
+            "organ_toxicity": {"hepatic": "Hepatotoxicity (especially with high doses or prolonged use)", "cardiovascular": "QT prolongation (high doses ≥400mg/day)", "dermatologic": "SJS/TEN (rare)", "teratogenic": "Teratogenicity (Category D in 1st trimester)"},
             "qt_prolongation": True,
             "hepatotoxicity": True,
             "nephrotoxicity": False,
-            "requires_monitoring": ["Hepatic function (ALT, AST) - especially with high doses or prolonged use", "Renal function (creatinine, BUN) - for dose adjustment", "ECG if high doses ≥400mg/day", "INR if co-administered with warfarin - CRITICAL", "Blood glucose if co-administered with sulfonylureas", "Phenytoin levels if co-administered"]
+            "requires_monitoring": ["Hepatic function (ALT, AST - especially with high doses or prolonged use)", "Renal function (creatinine, BUN - dose adjustment required)", "ECG (QT prolongation risk with high doses ≥400mg/day)", "PT/INR (if used with warfarin - critical interaction)", "Blood glucose (if used with sulfonylureas)", "Phenytoin levels (if used with phenytoin)", "Cyclosporine/Tacrolimus levels (if used with immunosuppressants)"],
+            "look_alike_sound_alike": ["Fluconazole", "Flucytosine"]
         },
         "guideline_tags": [
+            "FDA Black Box Warning - Teratogenicity (Category D in 1st trimester)",
             "IDSA Guidelines - Antifungal Therapy",
-            "FDA Black Box Warning - Fluconazole and Pregnancy (Category D in 1st trimester)",
-            "FDA Drug Information - Fluconazole",
-            "UpToDate - Fluconazole Drug Information"
+            "IDSA Guidelines - Candidiasis",
+            "IDSA Guidelines - Cryptococcosis",
+            "WHO Essential Medicines List"
         ],
+        "last_updated": "2025-02-18",
         "reversal_agents": {
             "available": False,
             "agents": [],
@@ -667,19 +671,26 @@ AZOLES_DRUGS = {
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Heart failure (contraindicated in CHF) - CRITICAL", "Hepatotoxicity", "QT prolongation"],
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High (with warfarin)",
+            "organ_toxicity": {"cardiovascular": "Black Box Warning - Congestive heart failure (contraindicated in CHF)", "hepatic": "Black Box Warning - Hepatotoxicity (may be severe)", "cardiovascular_other": "QT prolongation (with quinidine)", "teratogenic": "Teratogenicity (Category D)", "musculoskeletal": "Rhabdomyolysis (with simvastatin/lovastatin)"},
             "qt_prolongation": True,
             "hepatotoxicity": True,
             "nephrotoxicity": False,
-            "requires_monitoring": ["Signs of heart failure (edema, dyspnea, weight gain) - CRITICAL", "Hepatic function (ALT, AST, bilirubin) - common elevation", "ECG if co-administered with QT-prolonging drugs", "INR if co-administered with warfarin", "Digoxin levels if co-administered", "Phenytoin levels if co-administered", "Clinical response"]
+            "requires_monitoring": ["Black Box Warning - Heart failure signs (edema, dyspnea, weight gain - contraindicated in CHF)", "Hepatic function (ALT, AST, bilirubin - Black Box Warning for hepatotoxicity)", "ECG (QT prolongation risk with quinidine)", "PT/INR (if used with warfarin - critical interaction)", "Digoxin levels (if used with digoxin)", "Phenytoin levels (if used with phenytoin)", "CK (rhabdomyolysis risk with simvastatin/lovastatin)", "CYP3A4 interactions (many critical drug interactions)"],
+            "look_alike_sound_alike": ["Itraconazole", "Fluconazole"]
         },
         "guideline_tags": [
+            "FDA Black Box Warning - Congestive Heart Failure (contraindicated in CHF)",
+            "FDA Black Box Warning - Hepatotoxicity (may be severe)",
+            "FDA Black Box Warning - Teratogenicity (Category D)",
             "IDSA Guidelines - Antifungal Therapy",
-            "FDA Black Box Warning - Itraconazole and Heart Failure",
-            "FDA Black Box Warning - Itraconazole and Pregnancy (Category D)",
-            "FDA Black Box Warning - Itraconazole and Drug Interactions (CYP3A4)"
+            "IDSA Guidelines - Aspergillosis",
+            "IDSA Guidelines - Blastomycosis",
+            "IDSA Guidelines - Histoplasmosis",
+            "WHO Essential Medicines List"
         ],
+        "last_updated": "2025-02-18",
         "reversal_agents": {
             "available": False,
             "agents": [],
@@ -1000,21 +1011,25 @@ AZOLES_DRUGS = {
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": True,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Hepatotoxicity - CRITICAL", "QT prolongation", "Visual disturbances", "Renal toxicity (IV vehicle accumulation)"],
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High (with warfarin)",
+            "organ_toxicity": {"hepatic": "Black Box Warning - Hepatotoxicity (may be severe, may be fatal)", "cardiovascular": "Black Box Warning - QT prolongation", "neurological": "Visual disturbances (common, usually transient)", "ophthalmic": "Photosensitivity (severe skin reactions)", "renal": "Nephrotoxicity (IV vehicle - cyclodextrin accumulation)", "teratogenic": "Teratogenicity (Category D)"},
             "qt_prolongation": True,
             "hepatotoxicity": True,
             "nephrotoxicity": True,
-            "requires_monitoring": ["Therapeutic Drug Monitoring (TDM) - CRITICAL", "Hepatic function (ALT, AST, bilirubin)", "Visual function (acuity, visual field)", "ECG", "Renal function (for IV vehicle)", "Cyclosporine/Tacrolimus levels if co-administered", "INR if co-administered with warfarin"]
+            "requires_monitoring": ["TDM required (trough levels - Black Box Warning, narrow therapeutic index, CYP2C19 polymorphism)", "Hepatic function (ALT, AST, bilirubin - Black Box Warning for hepatotoxicity)", "ECG (Black Box Warning - QT prolongation)", "Visual function (visual disturbances - common, usually transient)", "Photosensitivity (severe skin reactions - avoid sunlight)", "Renal function (for IV - cyclodextrin accumulation, avoid IV if CrCl <50)", "Cyclosporine/Tacrolimus levels (if used with immunosuppressants)", "PT/INR (if used with warfarin - critical interaction)"],
+            "look_alike_sound_alike": ["Voriconazole", "Fluconazole"]
         },
         "guideline_tags": [
-            "IDSA Invasive Aspergillosis Guidelines 2024",
-            "IDSA Candidiasis Guidelines 2024",
-            "FDA Black Box Warning - Voriconazole and Pregnancy (Category D)",
-            "FDA Black Box Warning - Voriconazole and Hepatotoxicity",
-            "FDA Black Box Warning - Voriconazole and QT Prolongation",
-            "ESCMID-ECMM-ERS Guidelines for Aspergillus"
+            "FDA Black Box Warning - Hepatotoxicity (may be severe, may be fatal)",
+            "FDA Black Box Warning - QT Prolongation",
+            "FDA Black Box Warning - Teratogenicity (Category D)",
+            "IDSA Guidelines - Invasive Aspergillosis",
+            "IDSA Guidelines - Candidiasis",
+            "ESCMID-ECMM-ERS Guidelines - Aspergillus",
+            "WHO Essential Medicines List"
         ],
+        "last_updated": "2025-02-18",
         "drug_interactions": {
             "major": [
                 {

@@ -47,7 +47,7 @@ TETRACYCLINES_DRUGS = {
         'Không dùng trong 3 tháng cuối thai kỳ (nguy cơ ố vàng răng, chậm phát triển xương ở trẻ)'
         ,
         'Uống với thức ăn để giảm kích ứng dạ dày (nhưng giảm hấp thu một phần)'
-        ], 'pharmacokinetics': {'half_life': '18-22 giờ (dài)', 'onset':
+        ], 'onset':
         '1-2 giờ (PO), ngay lập tức (IV)', 'duration': 'q12h hoặc q24h (PO/IV)',
         'protein_binding': '80-90%', 'metabolism':
         'Gan (một phần), bài tiết một phần nguyên dạng', 'clearance':
@@ -67,7 +67,7 @@ TETRACYCLINES_DRUGS = {
         'Doxycycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K. Ngoài ra, có thể đẩy warfarin khỏi albumin (protein binding cao).'
         , 'effect': 'Tăng INR, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng doxycycline). Có thể cần giảm liều warfarin. Đặc biệt thận trọng ở bệnh nhân dùng kéo dài (>7 ngày).'
-        }], 'moderate': [{'drug': 'Digoxin', 'mechanism':
+        }], 'mechanism':
         'Doxycycline có thể làm tăng hấp thu digoxin bằng cách thay đổi hệ vi khuẩn đường ruột, làm tăng nồng độ digoxin.'
         , 'effect':
         'Tăng nồng độ digoxin, tăng nguy cơ độc tính digoxin (buồn nôn, rối loạn nhịp tim)'
@@ -84,7 +84,7 @@ TETRACYCLINES_DRUGS = {
         'Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)',
         'management':
         'Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng.'
-        }], 'minor': [{'drug': 'Penicillin', 'mechanism':
+        }], 'mechanism':
         'Doxycycline có thể đối kháng với penicillin trong một số trường hợp (ức chế tổng hợp protein vs ức chế tổng hợp thành tế bào).'
         , 'effect': 'Giảm hiệu quả kháng khuẩn của penicillin (hiếm)',
         'management':
@@ -178,7 +178,7 @@ TETRACYCLINES_DRUGS = {
         'Các dung dịch chứa canxi, magie, sắt - tạo kết tủa',
         'Các thuốc có tính kiềm hoặc acid mạnh'], 'notes':
         'QUAN TRỌNG: 1) Uống với nhiều nước và ở tư thế đứng để tránh viêm thực quản, 2) Tránh ánh nắng trực tiếp, dùng kem chống nắng, 3) Cách ít nhất 2 giờ với antacid, sắt, canxi, magie, kẽm, sữa, 4) KHÔNG dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng), 5) KHÔNG dùng trong 3 tháng cuối thai kỳ, 6) Theo dõi dấu hiệu tăng áp lực nội sọ giả.'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Doxycycline (Vibramycin)',
         'UpToDate - Doxycycline: Drug Information',
         'Medscape - Doxycycline Drug Reference',
@@ -186,9 +186,46 @@ TETRACYCLINES_DRUGS = {
         'Lexicomp Online - Doxycycline Monograph',
         'Micromedex - Doxycycline Drug Information',
         'IDSA Guidelines - Community-Acquired Pneumonia, Tick-Borne Infections'
-        ], 'last_updated': '2025-02-03', 'evidence_level':
+        ], 'evidence_level':
         'A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-        }},
+        },
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': 'Moderate',
+            'organ_toxicity': {
+                'gastrointestinal': 'High (esophagitis if not taken with adequate water and upright position - can be serious)',
+                'dermatologic': 'High (photosensitivity reactions - can cause severe sunburn)',
+                'neurologic': 'Moderate (pseudotumor cerebri - can cause blindness, especially in women)',
+                'hepatic': 'Moderate (hepatotoxicity with high doses)',
+                'dental': 'High (permanent tooth discoloration in children <8 years and pregnancy - irreversible)',
+                'skeletal': 'High (bone growth retardation in children <8 years and pregnancy)'
+            },
+            'qt_prolongation': False,
+            'hepatotoxicity': True,
+            'nephrotoxicity': False,
+            'requires_monitoring': [
+                'GI symptoms (nausea, vomiting, esophagitis - take with adequate water and upright position) - CRITICAL',
+                'Signs of pseudotumor cerebri (headache, blurred vision, papilledema) - CRITICAL (especially in women, can cause blindness)',
+                'Photosensitivity reactions (skin rash, sunburn) - avoid direct sunlight, use sunscreen',
+                'Hepatic function (ALT, AST) - rare hepatotoxicity with high doses',
+                'INR (if co-administered with warfarin) - increased bleeding risk',
+                'Digoxin levels (if co-administered) - increased digoxin toxicity',
+                'Signs of infection (fever, WBC) - to assess treatment response',
+                'Dental development (in children <8 years) - permanent tooth discoloration if used',
+                'Bone development (in children <8 years and pregnancy) - growth retardation if used'
+            ],
+            'look_alike_sound_alike': ['Doxycycline', 'Minocycline', 'Tetracycline', 'Doxepin']
+        },
+        'guideline_tags': [
+            'FDA Warning - Doxycycline and Permanent Tooth Discoloration',
+            'FDA Warning - Doxycycline and Pseudotumor Cerebri',
+            'IDSA Guidelines - Community-Acquired Pneumonia',
+            'IDSA Guidelines - Tick-Borne Infections',
+            'CDC Guidelines - Sexually Transmitted Infections',
+            'WHO Essential Medicines List'
+        ]},
 
     "Minocycline": {
         "group": "Infectious Disease - Tetracycline Antibiotic",
@@ -463,7 +500,46 @@ TETRACYCLINES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Moderate",
+            "organ_toxicity": {
+                "hepatic": "High (autoimmune hepatitis - rare but can be fatal, higher risk than doxycycline)",
+                "dermatologic": "High (skin hyperpigmentation/discoloration - may be irreversible)",
+                "neurologic": "Moderate (dizziness, loss of balance - especially in women, elderly)",
+                "gastrointestinal": "Moderate (nausea, vomiting, esophagitis)",
+                "dental": "High (permanent tooth discoloration in children <8 years and pregnancy - irreversible)",
+                "skeletal": "High (bone growth retardation in children <8 years and pregnancy)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Hepatic function (ALT, AST, bilirubin) - CRITICAL (autoimmune hepatitis risk, higher than doxycycline, can be fatal - stop immediately if signs of hepatitis)",
+                "Signs of autoimmune hepatitis (jaundice, fatigue, abdominal pain, fever) - CRITICAL (stop immediately)",
+                "Signs of skin hyperpigmentation/discoloration - may be irreversible",
+                "Dizziness, loss of balance symptoms (especially in women, elderly) - caution when driving/operating machinery",
+                "GI symptoms (nausea, vomiting, esophagitis - take with adequate water and upright position)",
+                "Photosensitivity reactions (skin rash, sunburn) - less than doxycycline but still occurs",
+                "INR (if co-administered with warfarin) - increased bleeding risk",
+                "Digoxin levels (if co-administered) - increased digoxin toxicity",
+                "Signs of pseudotumor cerebri (headache, blurred vision, papilledema) - especially in women",
+                "Dental development (in children <8 years) - permanent tooth discoloration if used",
+                "Bone development (in children <8 years and pregnancy) - growth retardation if used"
+            ],
+            "look_alike_sound_alike": ["Minocycline", "Doxycycline", "Tetracycline", "Minoxidil"]
+        },
+        "guideline_tags": [
+            "FDA Warning - Minocycline and Autoimmune Hepatitis",
+            "FDA Warning - Minocycline and Skin Hyperpigmentation",
+            "FDA Warning - Minocycline and Permanent Tooth Discoloration",
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "IDSA Guidelines - Tick-Borne Infections",
+            "WHO Essential Medicines List"
+        ]
     },
     
     "Tetracycline": {
@@ -661,12 +737,52 @@ TETRACYCLINES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Moderate",
+            "organ_toxicity": {
+                "renal": "High (accumulation in renal impairment - AVOID in CrCl <30, increased toxicity)",
+                "gastrointestinal": "High (esophagitis if not taken with adequate water and upright position - can be serious)",
+                "dermatologic": "High (photosensitivity reactions - can cause severe sunburn)",
+                "neurologic": "Moderate (pseudotumor cerebri - can cause blindness, especially in women)",
+                "hepatic": "Moderate (hepatotoxicity with high doses)",
+                "dental": "High (permanent tooth discoloration in children <8 years and pregnancy - irreversible)",
+                "skeletal": "High (bone growth retardation in children <8 years and pregnancy)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": True,
+            "requires_monitoring": [
+                "Renal function (creatinine, BUN, eGFR) - CRITICAL (accumulates in renal impairment, AVOID in CrCl <30)",
+                "GI symptoms (nausea, vomiting, esophagitis - take with adequate water and upright position) - CRITICAL",
+                "Signs of pseudotumor cerebri (headache, blurred vision, papilledema) - CRITICAL (especially in women, can cause blindness)",
+                "Photosensitivity reactions (skin rash, sunburn) - avoid direct sunlight, use sunscreen",
+                "Hepatic function (ALT, AST) - rare hepatotoxicity with high doses",
+                "INR (if co-administered with warfarin) - increased bleeding risk",
+                "Digoxin levels (if co-administered) - increased digoxin toxicity",
+                "Signs of infection (fever, WBC) - to assess treatment response",
+                "Dental development (in children <8 years) - permanent tooth discoloration if used",
+                "Bone development (in children <8 years and pregnancy) - growth retardation if used"
+            ],
+            "look_alike_sound_alike": ["Tetracycline", "Doxycycline", "Minocycline", "Tigecycline"]
+        },
+        "guideline_tags": [
+            "FDA Warning - Tetracycline and Renal Accumulation",
+            "FDA Warning - Tetracycline and Permanent Tooth Discoloration",
+            "FDA Warning - Tetracycline and Pseudotumor Cerebri",
+            "IDSA Guidelines - Community-Acquired Pneumonia",
+            "WHO Essential Medicines List"
+        ]
     },
-    "Tigecycline": {
+    "Tigecycline":     {
         "group": "Antibiotic - Glycylcycline (Tetracycline derivative)",
         "vietnamese_name": "Tigecycline, Tygacil",
-        "administration": ["IV"],
+        "administration": [
+            "IV"
+    ],
         "indications": [
             "Nhiễm khuẩn da và mô mềm phức tạp (cSSTI)",
             "Nhiễm khuẩn ổ bụng phức tạp (cIAI)",
@@ -677,25 +793,30 @@ TETRACYCLINES_DRUGS = {
             "CRE (Carbapenem-resistant Enterobacteriaceae)",
             "Acinetobacter baumannii kháng đa thuốc",
             "Nhiễm khuẩn huyết do MDR Gram-dương và Gram-âm"
-        ],
-        "contraindications": [
-            "Dị ứng tigecycline hoặc tetracycline",
-            "Có thai (3 tháng cuối) - thận trọng",
-            "Trẻ em <8 tuổi - thận trọng (dữ liệu hạn chế)"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng tigecycline hoặc tetracycline"
+    ],
+            "tương_đối": [
+                "Có thai (category D)",
+                "Trẻ <8 tuổi",
+                "Suy gan nặng"
+    ],
+        },
         "dosage": {
             "adult_standard": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
             "adult_severe": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
             "adult_ciai": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
             "adult_cssti": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
             "adult_cap": "100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ",
-            "notes": "Truyền IV trong 30-60 phút. Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình. CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác."
+            "notes": """Truyền IV trong 30-60 phút. Không cần điều chỉnh liều ở suy thận hoặc suy gan nhẹ-trung bình. CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác.""",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Không đổi",
             "under_30": "Không đổi (không tích lũy ở suy thận)",
-            "hemodialysis": "Không đổi (không bị loại bỏ bởi lọc máu)"
+            "hemodialysis": "Không đổi (không bị loại bỏ bởi lọc máu)",
         },
         "side_effects": [
             "Buồn nôn, nôn (rất phổ biến, 20-30%)",
@@ -707,14 +828,14 @@ TETRACYCLINES_DRUGS = {
             "Đau đầu",
             "Giảm bạch cầu (hiếm)",
             "Viêm tĩnh mạch tại vị trí tiêm"
-        ],
+    ],
         "interactions": [
             "Warfarin: có thể tăng INR",
             "Thuốc tránh thai đường uống: có thể giảm hiệu quả",
             "Antacid/Sắt/Calcium: giảm hấp thu (nhưng chỉ dùng IV nên ít ảnh hưởng)"
-        ],
+    ],
         "pregnancy": "D - Sử dụng nếu lợi ích > nguy cơ",
-        "mechanism_of_action": "Tigecycline là glycylcycline kháng sinh, dẫn xuất của minocycline. Ức chế tổng hợp protein vi khuẩn bằng cách gắn với tiểu phần 30S của ribosome, tương tự tetracycline nhưng gắn mạnh hơn và kháng được nhiều cơ chế kháng tetracycline. Phổ kháng khuẩn: RẤT RỘNG - Gram-dương (Staphylococcus - kể cả MRSA, Streptococcus, Enterococcus - kể cả VRE), Gram-âm (Enterobacteriaceae - kể cả một số CRE, Acinetobacter baumannii), kỵ khí (Bacteroides fragilis), và một số vi khuẩn không điển hình. Không hiệu quả với Pseudomonas aeruginosa hoặc Proteus. Đặc điểm: phổ rất rộng, kháng được nhiều cơ chế kháng thuốc, nhưng CẢNH BÁO: tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác (MDR).",
+        "mechanism_of_action": """Tigecycline là glycylcycline kháng sinh, dẫn xuất của minocycline. Ức chế tổng hợp protein vi khuẩn bằng cách gắn với tiểu phần 30S của ribosome, tương tự tetracycline nhưng gắn mạnh hơn và kháng được nhiều cơ chế kháng tetracycline. Phổ kháng khuẩn: RẤT RỘNG - Gram-dương (Staphylococcus - kể cả MRSA, Streptococcus, Enterococcus - kể cả VRE), Gram-âm (Enterobacteriaceae - kể cả một số CRE, Acinetobacter baumannii), kỵ khí (Bacteroides fragilis), và một số vi khuẩn không điển hình. Không hiệu quả với Pseudomonas aeruginosa hoặc Proteus. Đặc điểm: phổ rất rộng, kháng được nhiều cơ chế kháng thuốc, nhưng CẢNH BÁO: tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác (MDR).""",
         "monitoring": [
             "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng)",
             "Cấy máu và cấy từ vị trí nhiễm trùng",
@@ -724,7 +845,7 @@ TETRACYCLINES_DRUGS = {
             "Công thức máu (CBC) - hiếm giảm bạch cầu",
             "PT/INR (nếu dùng với warfarin)",
             "Đánh giá đáp ứng điều trị - cân nhắc chuyển sang kháng sinh khác nếu có thể"
-        ],
+    ],
         "precautions": [
             "CẢNH BÁO QUAN TRỌNG: Tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác (MDR, không đáp ứng với các kháng sinh khác)",
             "Buồn nôn, nôn rất phổ biến (20-30%) - có thể cần điều trị triệu chứng (ondansetron, metoclopramide)",
@@ -736,7 +857,7 @@ TETRACYCLINES_DRUGS = {
             "Pha trong NS hoặc D5W",
             "Cân nhắc chuyển sang kháng sinh khác nếu có thể (do tăng tỷ lệ tử vong)",
             "Theo dõi đáp ứng điều trị chặt chẽ"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "27-42 giờ (rất dài)",
             "onset": "Ngay lập tức sau khi truyền IV",
@@ -744,27 +865,28 @@ TETRACYCLINES_DRUGS = {
             "protein_binding": "71-89% (cao)",
             "metabolism": "Chuyển hóa một phần ở gan",
             "clearance": "Chủ yếu qua gan (59% bài tiết qua mật), không tích lũy ở suy thận",
-            "volume_of_distribution": "7-9 L/kg (rất lớn, phân bố rộng)"
+            "volume_of_distribution": "7-9 L/kg (rất lớn, phân bố rộng)",
         },
-        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 48 giờ. Không đông lạnh.",
-        "black_box_warnings": "CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác. Chỉ dùng khi không còn lựa chọn khác (nhiễm khuẩn do vi khuẩn kháng đa thuốc MDR). Không dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương.",
+        "storage": """Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 48 giờ. Không đông lạnh.""",
+        "black_box_warnings": """CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác. Chỉ dùng khi không còn lựa chọn khác (nhiễm khuẩn do vi khuẩn kháng đa thuốc MDR). Không dùng cho trẻ em < 8 tuổi (trừ trường hợp đe dọa tính mạng) - nguy cơ ố vàng răng vĩnh viễn, chậm phát triển xương.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Warfarin",
-                    "mechanism": "Tigecycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K.",
+                    "mechanism": """Tigecycline có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K.""",
                     "effect": "Tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng tigecycline). Có thể cần giảm liều warfarin."
+                    "management": """Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng tigecycline). Có thể cần giảm liều warfarin.""",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Thuốc tránh thai đường uống",
-                    "mechanism": "Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.",
+                    "mechanism": """Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.""",
                     "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
-                    "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng."
+                    "management": """Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng.""",
                 }
-            ]
+                ],
+            "minor": [],
         },
         "references": {
             "primary_sources": [
@@ -775,56 +897,72 @@ TETRACYCLINES_DRUGS = {
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
                 "Lexicomp Online - Tigecycline Monograph",
                 "Micromedex - Tigecycline Drug Information"
-            ],
+    ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"hepatic": "Hepatotoxicity (Black Box Warning)", "pancreatic": "Pancreatitis (rare)", "hematologic": "Neutropenia (rare)", "gastrointestinal": "Severe nausea/vomiting (20-30%)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Black Box Warning - Increased mortality (use only when no alternative)", "Hepatic function (ALT, AST, bilirubin - Black Box Warning)", "Pancreatitis signs", "GI symptoms (severe nausea/vomiting 20-30%)", "CBC (neutropenia risk)", "PT/INR (if used with warfarin)"],
+            "look_alike_sound_alike": ["Tigecycline", "Tetracycline"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Increased Mortality (use only when no alternative)",
+            "FDA Black Box Warning - Hepatotoxicity",
+            "IDSA Guidelines - Multidrug-Resistant Infections",
+            "IDSA Guidelines - Antimicrobial Therapy",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
         "pregnancy_lactation": {
-                  "fda_category": "D - Sử dụng nếu lợi ích > nguy cơ",
-                  "pregnancy_details": "Category D - Sử dụng nếu lợi ích > nguy cơ - Cần tra cứu thêm thông tin chi tiết về sử dụng trong thai kỳ.",
-                  "lactation": {
-                      "safety": "Use with caution",
-                      "details": "Cần tra cứu thêm thông tin chi tiết về bài tiết vào sữa mẹ.",
-                      "recommendation": "Thận trọng khi cho con bú, tra cứu thêm thông tin."
-                  }
-              },
-              "hepatic_adjustment": {
-                  "mild": "Không đổi",
-                  "moderate": "Thận trọng, có thể giảm liều",
-                  "severe": "Thận trọng, giảm liều hoặc tránh dùng",
-                  "notes": "Nhiều kháng sinh chuyển hóa qua gan, cần điều chỉnh liều ở suy gan nặng."
-              },
-              "overdose_management": {
-                  "symptoms": [
-                      "Cần tra cứu thêm thông tin về triệu chứng quá liều"
-                  ],
-                  "antidote": "Không có antidote đặc hiệu",
-                  "treatment": [
-                      "Ngừng ngay thuốc",
-                      "Rửa dạ dày nếu uống trong vòng 1-2 giờ (nếu phù hợp)",
-                      "Than hoạt tính",
-                      "Điều trị hỗ trợ và điều trị triệu chứng",
-                      "Theo dõi dấu hiệu sinh tồn"
-                  ],
-                  "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
-              },
-              "reversal_agents": {
-                  "available": False,
-                  "agents": []
-              },
-              "administration_instructions": {
-                  "iv": {
-                      "reconstitution": "Cần tra cứu",
-                      "infusion_rate": "Cần tra cứu",
-                      "compatibility": [
-                          "Cần tra cứu"
-                      ],
-                      "incompatibility": [],
-                      "notes": "Cần tra cứu thêm thông tin chi tiết."
-                  }
-              },
-},
-    
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH trong thai kỳ. Gây độc thai nhi, đặc biệt răng và xương.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Có thể gây độc tính ở trẻ.",
+                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho bú tạm thời.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Giảm liều khởi đầu 50%.",
+            "severe": "CHỐNG CHỈ ĐỊNH hoặc giảm liều mạnh.",
+            "notes": "Tigecycline chuyển hóa qua gan. Suy gan làm tăng nồng độ đáng kể.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Tăng men gan",
+                "Viêm tụy (hiếm)"
+    ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng tigecycline",
+                "Điều trị hỗ trợ",
+                "Theo dõi chức năng gan"
+    ],
+            "monitoring": "Chức năng gan, dấu hiệu viêm tụy.",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu.",
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha trong NaCl 0.9% hoặc D5W.",
+                "infusion_rate": "Truyền IV trong 60 phút.",
+                "notes": "Điều chỉnh liều theo chức năng gan. CHỐNG CHỈ ĐỊNH trong thai kỳ và trẻ <8 tuổi.",
+            },
+        },
+    },
 }
 
 __all__ = ['TETRACYCLINES_DRUGS']

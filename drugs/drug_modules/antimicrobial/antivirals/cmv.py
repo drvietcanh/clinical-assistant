@@ -222,19 +222,22 @@ CMV_ANTIVIRALS = {
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": True,
-            "bleeding_risk": False,
-            "organ_toxicity": ["Bone marrow suppression (severe neutropenia, thrombocytopenia, anemia) - CRITICAL", "Nephrotoxicity", "Neurotoxicity (confusion, seizures, hallucinations)"],
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High (thrombocytopenia)",
+            "organ_toxicity": {"hematologic": "Black Box Warning - Bone marrow suppression (severe neutropenia <500/mm³, thrombocytopenia <25,000/mm³, anemia - contraindicated if severe)", "renal": "Nephrotoxicity (dose-dependent, requires dose adjustment)", "neurological": "Neurotoxicity (confusion, seizures, hallucinations - rare but serious)", "teratogenic": "Teratogenicity (Category D with CMV)"},
             "qt_prolongation": False,
             "hepatotoxicity": False,
             "nephrotoxicity": True,
-            "requires_monitoring": ["CBC (neutrophils, platelets, hemoglobin) - CRITICAL (2-3 times/week when IV)", "Renal function (creatinine, BUN) - for dose adjustment", "Neurological status (confusion, seizures)", "Signs of infection (due to neutropenia)", "Signs of bleeding (due to thrombocytopenia)"]
+            "requires_monitoring": ["CBC (neutrophils, platelets, hemoglobin - Black Box Warning, 2-3 times/week when IV, critical)", "Renal function (creatinine, BUN, CrCl - dose adjustment required, critical)", "Neurological status (confusion, seizures, hallucinations)", "Infection signs (due to neutropenia)", "Bleeding signs (due to thrombocytopenia)", "Contraindicated if ANC <500/mm³ or platelets <25,000/mm³"],
+            "look_alike_sound_alike": ["Ganciclovir", "Valganciclovir"]
         },
         "guideline_tags": [
+            "FDA Black Box Warning - Bone Marrow Suppression (severe neutropenia, thrombocytopenia, anemia)",
+            "FDA Black Box Warning - Teratogenicity (Category D with CMV)",
             "IDSA Guidelines - Cytomegalovirus Infection",
-            "FDA Black Box Warning - Ganciclovir and Bone Marrow Suppression",
-            "FDA Black Box Warning - Ganciclovir and Pregnancy (Category D)",
-            "FDA Black Box Warning - Ganciclovir and Neurotoxicity"
-        ]
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 }
 

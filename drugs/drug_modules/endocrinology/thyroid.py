@@ -52,7 +52,36 @@ THYROID_DRUGS = {
             "Thận trọng ở người cao tuổi, bệnh tim (khởi đầu liều thấp)",
             "Không ngừng đột ngột",
             "Thai kỳ: Tăng nhu cầu levothyroxine ~30-50%"
-        ]
+        ],
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Levothyroxine (Synthroid, Levoxyl)",
+                "UpToDate - Levothyroxine: Drug information",
+                "ATA Guidelines - Hypothyroidism",
+                "AACE Guidelines - Thyroid Disorders"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, extensive clinical experience"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"cardiovascular": "Tachycardia, arrhythmias (if over-replacement)", "metabolic": "Osteoporosis (if TSH suppressed)", "endocrine": "Iatrogenic hyperthyroidism (if over-replacement)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["TSH (TDM required - target 0.5-2.5 mIU/L, Black Box Warning - not for weight loss)", "Free T4 (if needed)", "Heart rate, blood pressure (tachycardia, arrhythmias if over-replacement)", "Bone density (osteoporosis risk if TSH suppressed)", "Drug interactions (iron, calcium, PPI - separate by ≥4h)"],
+            "look_alike_sound_alike": ["Levothyroxine", "Liothyronine"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Not for Weight Loss",
+            "ATA Guidelines - Hypothyroidism",
+            "AACE Guidelines - Thyroid Disorders",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 
     "Methimazole": {
@@ -101,7 +130,37 @@ THYROID_DRUGS = {
             "Tác dụng chậm (4-6 tuần) - Cần kiên nhẫn",
             "Dùng kèm beta-blocker (Propranolol) để kiểm soát triệu chứng cường giáp"
         ],
-        "black_box_warnings": "Nguy cơ suy tủy (Agranulocytosis) nghiêm trọng, có thể tử vong. Ngừng thuốc ngay nếu có sốt, đau họng, nhiễm trùng."
+        "black_box_warnings": "Nguy cơ suy tủy (Agranulocytosis) nghiêm trọng, có thể tử vong. Ngừng thuốc ngay nếu có sốt, đau họng, nhiễm trùng.",
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Methimazole (Tapazole)",
+                "UpToDate - Methimazole: Drug information",
+                "ATA Guidelines - Hyperthyroidism",
+                "AACE Guidelines - Thyroid Disorders"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, extensive clinical experience"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"hematologic": "Black Box Warning - Agranulocytosis (may be fatal)", "hepatic": "Black Box Warning - Hepatotoxicity", "dermatologic": "Rash (common), SJS/TEN (rare)", "teratogenic": "Teratogenicity (first trimester - prefer PTU)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["CBC (Black Box Warning - agranulocytosis, stop immediately if fever/sore throat/infection)", "Hepatic function (ALT, AST - Black Box Warning for hepatotoxicity)", "Free T4, T3, TSH (thyroid function)", "Infection signs (fever, sore throat - agranulocytosis risk)"],
+            "look_alike_sound_alike": ["Methimazole", "Metronidazole"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Agranulocytosis (may be fatal)",
+            "FDA Black Box Warning - Hepatotoxicity",
+            "ATA Guidelines - Hyperthyroidism",
+            "AACE Guidelines - Thyroid Disorders",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 
     "Propylthiouracil": {
@@ -141,6 +200,36 @@ THYROID_DRUGS = {
             "Thai kỳ: Ưu tiên cho tam cá nguyệt 1, chuyển sang Methimazole ở tam cá nguyệt 2-3",
             "Ít được dùng hơn Methimazole (trừ thai kỳ và bão giáp)"
         ],
-        "black_box_warnings": "Nguy cơ suy gan cấp nghiêm trọng, có thể tử vong. Nguy cơ suy tủy (Agranulocytosis)."
+        "black_box_warnings": "Nguy cơ suy gan cấp nghiêm trọng, có thể tử vong. Nguy cơ suy tủy (Agranulocytosis).",
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Propylthiouracil (PTU)",
+                "UpToDate - Propylthiouracil: Drug information",
+                "ATA Guidelines - Hyperthyroidism",
+                "AACE Guidelines - Thyroid Disorders"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, extensive clinical experience"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"hepatic": "Black Box Warning - Severe hepatotoxicity, liver failure (may be fatal)", "hematologic": "Black Box Warning - Agranulocytosis (may be fatal)", "dermatologic": "Rash (common), SJS/TEN (rare)", "vascular": "ANCA-associated vasculitis (rare)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Hepatic function (ALT, AST - Black Box Warning for severe hepatotoxicity/liver failure)", "CBC (Black Box Warning - agranulocytosis, stop immediately if fever/sore throat/infection)", "Free T4, T3, TSH (thyroid function)", "Infection signs (fever, sore throat - agranulocytosis risk)", "Vasculitis signs (ANCA-associated vasculitis risk)"],
+            "look_alike_sound_alike": ["Propylthiouracil", "Propylthiouracil"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Severe Hepatotoxicity, Liver Failure (may be fatal)",
+            "FDA Black Box Warning - Agranulocytosis (may be fatal)",
+            "ATA Guidelines - Hyperthyroidism",
+            "AACE Guidelines - Thyroid Disorders",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     }
 }

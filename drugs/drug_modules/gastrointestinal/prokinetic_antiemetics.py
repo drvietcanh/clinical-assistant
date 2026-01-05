@@ -21,7 +21,7 @@ PROKINETIC_ANTIEMETICS_DRUGS = {
         'interactions': [
         'QT kéo dài: tránh dùng với thuốc QT kéo dài (amiodarone, quinolone)',
         'Ketoconazole: tăng nồng độ domperidone',
-        'Erythromycin: tăng nồng độ domperidone'], 'pregnancy': 'C',
+        'Erythromycin: tăng nồng độ domperidone'],
         'mechanism_of_action':
         'Dopamine D2 receptor antagonist ở ngoại vi (ruột và chemoreceptor trigger zone). Ức chế dopamine → tăng nhu động dạ dày và ruột, tăng trương lực cơ thắt dưới thực quản, tăng tốc độ làm rỗng dạ dày. Có tác dụng chống nôn do ức chế dopamine ở chemoreceptor trigger zone. KHÔNG qua hàng rào máu-não (do bị P-glycoprotein đẩy ra) → ít tác dụng phụ thần kinh hơn metoclopramide (không gây mê sảng, parkinsonism). Tăng prolactin do ức chế dopamine ở tuyến yên (dopamine ức chế tiết prolactin).'
         , 'monitoring': [
@@ -30,7 +30,7 @@ PROKINETIC_ANTIEMETICS_DRUGS = {
         'Dấu hiệu tăng prolactin: rối loạn kinh nguyệt, chảy sữa, đau vú',
         'Dấu hiệu QT kéo dài: loạn nhịp tim, chóng mặt, ngất',
         'Dấu hiệu tác dụng phụ thần kinh (hiếm nhưng có thể xảy ra nếu tích lũy)'
-        ], 'precautions': ['Uống trước bữa ăn 15-30 phút (tăng hiệu quả)',
+        ], 'precautions': [
         'Không vượt quá 80mg/ngày (tăng nguy cơ QT kéo dài)',
         'Tránh dùng với các thuốc kéo dài QT (amiodarone, quinolone, macrolide) - tăng nguy cơ loạn nhịp'
         , 'Thận trọng ở suy thận (giảm liều)',
@@ -40,7 +40,7 @@ PROKINETIC_ANTIEMETICS_DRUGS = {
         'Ít tác dụng phụ thần kinh hơn metoclopramide (không qua hàng rào máu-não)'
         ,
         'Không dùng trong prolactinoma (tăng prolactin có thể làm tăng kích thước u)'
-        ], 'pharmacokinetics': {'half_life': '7-9 giờ', 'onset': '30-60 phút',
+        ], 'pharmacokinetics': {'onset': '30-60 phút',
         'duration': '4-8 giờ', 'protein_binding': '91-93%', 'metabolism':
         'Gan (chuyển hóa qua CYP3A4), CYP1A2', 'clearance':
         'Gan (chuyển hóa), thận (thải trừ)'}, 'storage':
@@ -83,7 +83,7 @@ PROKINETIC_ANTIEMETICS_DRUGS = {
         }, 'overdose_management': {'symptoms': [
         'QT kéo dài, torsades de pointes, loạn nhịp tim (triệu chứng chính, có thể tử vong)'
         , 'Tăng prolactin: rối loạn kinh nguyệt, chảy sữa', 'Buồn nôn, nôn',
-        'Nhức đầu'], 'antidote': 'Không có antidote đặc hiệu', 'treatment': [
+        'Nhức đầu'], 'treatment': [
         'Theo dõi ECG liên tục (QT interval)',
         'Điều trị torsades de pointes nếu có: magnesium sulfate 2g IV, pacing nếu cần'
         , 'Bổ sung kali, magie nếu thiếu', 'Hỗ trợ triệu chứng',
@@ -95,6 +95,24 @@ PROKINETIC_ANTIEMETICS_DRUGS = {
         }, 'iv': {'reconstitution': 'Domperidone chỉ có dạng uống (PO)',
         'infusion_rate': 'N/A', 'compatibility': [], 'incompatibility': [],
         'notes': 'Domperidone chỉ có dạng uống, không có dạng IV'}},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['cardiac'],
+            'qt_prolongation': True,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['ECG'],
+            'look_alike_sound_alike': []
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - Nguy cơ QT kéo dài và loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Không vượt quá 80mg/ngày.',
+            'ISMP High Alert Medications',
+            'ACG Guidelines - Gastroparesis and Nausea/Vomiting',
+            'WHO Guidelines - Essential medicines for GI disorders'
+        ],
         'references': {'primary_sources': [
         'FDA Drug Label - Domperidone (Note: Not FDA approved in US, available in other countries)'
         , 'UpToDate - Domperidone: Drug information',
@@ -120,7 +138,7 @@ PROKINETIC_ANTIEMETICS_DRUGS = {
         'Hội chứng serotonin (với SSRI)',
         'Rối loạn vận động muộn (dùng lâu dài)'], 'interactions': [
         'SSRI/SNRI: tăng nguy cơ hội chứng serotonin',
-        'Antipsychotics: tăng nguy cơ rối loạn vận động'], 'pregnancy': 'B',
+        'Antipsychotics: tăng nguy cơ rối loạn vận động'],
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Giảm liều 25-50%',
         'under_30': 'Giảm liều 50-75%'}, 'mechanism_of_action':
         'Dopamine D2 receptor antagonist và 5-HT3 receptor antagonist. Ức chế dopamine ở chemoreceptor trigger zone (CTZ), giảm buồn nôn, nôn. Tăng co bóp dạ dày, tăng trương lực cơ thắt môn vị, tăng nhu động ruột (prokinetic effect). Cũng ức chế 5-HT3 receptor (giống ondansetron).'

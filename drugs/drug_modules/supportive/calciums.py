@@ -30,7 +30,7 @@ CALCIUMS_DRUGS = {
         'Thyroxine: giảm hấp thu thyroxine - cách 4 giờ',
         'Digoxin: tăng nguy cơ loạn nhịp',
         'Thiazide diuretics: tăng nguy cơ tăng calci máu',
-        'Vitamin D: tăng hấp thu calci'], 'pregnancy': 'A - An toàn, cần thiết',
+        'Vitamin D: tăng hấp thu calci'],
         'mechanism_of_action':
         'Calcium là khoáng chất thiết yếu cho nhiều chức năng sinh học. Trong xương: calcium là thành phần chính của hydroxyapatite, tạo cấu trúc và độ bền của xương. Trong máu: calcium ion (Ca2+) tham gia vào quá trình đông máu (cần thiết cho cascade đông máu), co cơ (bao gồm cơ tim và cơ trơn), dẫn truyền thần kinh, và giải phóng hormone. Calcium được hấp thu ở ruột non (chủ yếu ở tá tràng) nhờ vitamin D (calcitriol) và parathyroid hormone (PTH). Hấp thu phụ thuộc vào dạng muối: calcium citrate hấp thu tốt hơn calcium carbonate vì không cần acid dạ dày. Nồng độ calcium trong máu được điều hòa chặt chẽ bởi PTH, calcitonin, và vitamin D thông qua hấp thu ở ruột, tái hấp thu ở thận, và giải phóng từ xương.'
         , 'monitoring': [
@@ -98,7 +98,8 @@ CALCIUMS_DRUGS = {
         'Giảm hấp thu cả calcium và quinolone, giảm hiệu quả điều trị',
         'management':
         'Cách ít nhất 2 giờ giữa calcium và quinolone. Uống calcium trước, quinolone sau.'
-        }], 'moderate': [{'drug': 'Digoxin', 'mechanism':
+        }], 'moderate': [
+        {'drug': 'Digoxin', 'mechanism':
         'Calcium có thể tăng tác dụng của digoxin trên tim, tăng nguy cơ loạn nhịp.'
         , 'effect': 'Tăng nguy cơ loạn nhịp tim do digoxin', 'management':
         'Thận trọng. Theo dõi nồng độ digoxin và ECG. Tránh tăng calci máu.'},
@@ -111,7 +112,8 @@ CALCIUMS_DRUGS = {
         'Calcium gắn với sắt trong ruột, giảm hấp thu sắt.', 'effect':
         'Giảm hấp thu sắt, giảm hiệu quả điều trị thiếu máu', 'management':
         'Cách ít nhất 2 giờ giữa calcium và sắt. Uống sắt khi bụng đói, calcium sau bữa ăn.'
-        }], 'minor': [{'drug': 'Vitamin D', 'mechanism':
+        }], 'minor': [
+        {'drug': 'Vitamin D', 'mechanism':
         'Vitamin D tăng hấp thu calcium từ ruột.', 'effect':
         'Tăng hấp thu calcium (tác dụng mong muốn khi dùng kết hợp)',
         'management':
@@ -185,9 +187,25 @@ CALCIUMS_DRUGS = {
         , 'National Osteoporosis Foundation Guidelines - Calcium and Vitamin D',
         'UpToDate - Calcium supplementation',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ], 'last_updated': '2025-02-04', 'evidence_level':
+        ], 'evidence_level':
         'A - Dựa trên FDA drug labels, IOM/NOF guidelines, và dữ liệu lâm sàng'},
         "black_box_warnings": None,
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hypercalcemia (with overdose)", "Nephrolithiasis (with overdose)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Serum calcium (ionized and total)", "Phosphate", "Creatinine, eGFR", "PTH (if hypercalcemia)", "24h calcium urine (if hypercalciuria)", "Clinical signs of hypercalcemia"]
+        },
+        "guideline_tags": [
+            "IOM Guidelines - Dietary Reference Intakes for Calcium and Vitamin D",
+            "NOF Guidelines - Calcium and Vitamin D for Osteoporosis",
+            "FDA Drug Information - Calcium",
+            "UpToDate - Calcium supplementation"
+        ],
 }}
 
 __all__ = ['CALCIUMS_DRUGS']

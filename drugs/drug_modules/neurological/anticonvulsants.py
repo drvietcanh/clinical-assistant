@@ -7,7 +7,8 @@ ANTICONVULSANTS_DRUGS = {
     "Carbamazepine": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
         'Carbamazepine, Tegretol', 'administration': ['PO'], 'indications': [
         'Động kinh', 'Đau dây thần kinh sinh ba', 'Rối loạn lưỡng cực',
-        'Rối loạn nhân cách'], 'contraindications': ['Block nhĩ thất',
+        'Rối loạn nhân cách'],
+        'contraindications': [
         'Bệnh gan nặng', 'Porphyria', 'Dùng MAO inhibitor',
         'Giảm bạch cầu/giảm tiểu cầu'], 'dosage': {'adult_epilepsy':
         '200-400mg x 2-3 lần/ngày, tăng dần đến 800-1600mg/ngày',
@@ -19,7 +20,7 @@ ANTICONVULSANTS_DRUGS = {
         'Hạ natri máu'], 'interactions': [
         'Nhiều thuốc: cảm ứng enzyme CYP450, giảm nồng độ nhiều thuốc',
         'Warfarin: giảm tác dụng warfarin',
-        'Oral contraceptives: giảm hiệu quả'], 'pregnancy': 'D',
+        'Oral contraceptives: giảm hiệu quả'],
         'mechanism_of_action':
         'Thuốc chống co giật và ổn định tâm trạng. Ức chế kênh natri voltage-gated trong màng tế bào thần kinh, ngăn cản sự lan truyền của các xung động bất thường. Cũng có thể ức chế giải phóng glutamate và điều hòa dòng calci. Tự cảm ứng enzyme (auto-induction) - tăng chuyển hóa của chính nó và các thuốc khác. Được dùng trong điều trị co giật cục bộ, co giật toàn thể, đau dây thần kinh sinh ba (trigeminal neuralgia), và rối loạn lưỡng cực. Có nhiều tương tác thuốc do cảm ứng enzyme.'
         , 'monitoring': [
@@ -68,7 +69,7 @@ ANTICONVULSANTS_DRUGS = {
         'Ức chế CYP3A4, giảm chuyển hóa carbamazepine', 'effect':
         'Tăng nồng độ carbamazepine, tăng nguy cơ độc tính', 'management':
         'Giảm liều carbamazepine 25-50%, theo dõi nồng độ trong máu, dấu hiệu độc tính.'
-        }], 'moderate': [{'drug': 'Valproate', 'mechanism':
+        }, {'drug': 'Valproic acid', 'mechanism':
         'Cả hai đều ức chế chuyển hóa của nhau', 'effect':
         'Tăng nồng độ carbamazepine-10,11-epoxide (chất chuyển hóa độc)',
         'management':
@@ -135,7 +136,7 @@ ANTICONVULSANTS_DRUGS = {
         , 'timing':
         'Chia liều 2-3 lần/ngày. Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }}, 'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế). Nếu cần: 5-10mg/kg/ngày PO chia 2-3 lần, tăng dần. Theo dõi nồng độ chặt chẽ.',
         'infants':
@@ -152,14 +153,14 @@ ANTICONVULSANTS_DRUGS = {
         'monitoring':
         'Theo dõi nồng độ trong máu thường xuyên (đặc biệt sau 2-4 tuần khi tự cảm ứng enzyme). Theo dõi công thức máu (giảm bạch cầu, giảm tiểu cầu). Theo dõi natri máu (hạ natri máu thường gặp). Theo dõi chức năng gan (ALT, AST). Theo dõi dấu hiệu hội chứng Stevens-Johnson (phát ban nặng).'}, 'brand_names': {'vietnam': [
         'Carbamazepine', 'Tegretol', 'Carbamazepine Stada', 'Carba'], 'common': [
-        'Tegretol', 'Carbamazepine']}, 'cost_estimate': {'unit': 'VND',
+        'Tegretol', 'Carbamazepine'],
         'range': '8,000 - 30,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
         'Giá thay đổi theo thương hiệu và nhà thuốc. Carbamazepine generic thường rẻ hơn (8,000-20,000 VND/viên 200mg). Tegretol (brand) thường đắt hơn (20,000-30,000 VND/viên 200mg).'}, 'references': {'primary_sources': ['Lexicomp - Carbamazepine',
         'UpToDate - Carbamazepine: Drug information',
         'FDA - Tegretol (carbamazepine) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'last_updated': '2024-12-19', 'evidence_level':
+        ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         },
         "reversal_agents": {
@@ -349,6 +350,21 @@ ANTICONVULSANTS_DRUGS = {
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
             ],
             "last_updated": "2025-02-05",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+           ,
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
         }
     },
@@ -541,7 +557,21 @@ ANTICONVULSANTS_DRUGS = {
                 "Medscape - Fosphenytoin Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, status epilepticus guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, status epilepticus guidelines",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["hepatic", "dermatologic"],
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["LFT", "CBC", "Drug levels"],
+            },
+            "guideline_tags": [
+                "AAN 2018 Epilepsy Guidelines",
+                "FDA - Antiepileptic drug safety",
+            ] 
         }
     },
     "Lacosamide": {
@@ -708,7 +738,21 @@ ANTICONVULSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic", "dermatologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["LFT", "CBC", "Drug levels"]
+        },
+        "guideline_tags": [
+            "AAN 2018 Epilepsy Guidelines",
+            "FDA - Antiepileptic drug safety"
+        ]
     },
     
     "Lamotrigine": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
@@ -773,14 +817,14 @@ ANTICONVULSANTS_DRUGS = {
         'Giảm nồng độ lamotrigine 40-50%, có thể gây mất kiểm soát động kinh',
         'management':
         'Tăng liều lamotrigine khi dùng OCP. Giảm liều khi ngừng OCP. Theo dõi nồng độ và điều chỉnh liều.'
-        }], 'moderate': [{'drug': 'Carbamazepine, Phenytoin, Phenobarbital',
-        'mechanism': 'Cảm ứng glucuronidation, tăng chuyển hóa lamotrigine',
+        }, {'drug': 'Phenobarbital, Primidone', 'mechanism': 'Cảm ứng glucuronidation, tăng chuyển hóa lamotrigine',
         'effect': 'Giảm nồng độ lamotrigine', 'management':
         'Tăng liều lamotrigine nếu cần. Theo dõi nồng độ và điều chỉnh liều.'},
         {'drug': 'Rifampin', 'mechanism': 'Cảm ứng glucuronidation mạnh',
         'effect': 'Giảm nồng độ lamotrigine đáng kể', 'management':
         'Tăng liều lamotrigine. Theo dõi nồng độ và điều chỉnh liều.'}],
-        'minor': []}, 'contraindications': {'tuyệt_đối': ['Dị ứng lamotrigine',
+        'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'Dị ứng lamotrigine hoặc các thành phần khác',
         'Ban da nặng trước đây (SJS/TEN) với lamotrigine',
         'Tăng liều quá nhanh (vi phạm phác đồ tăng liều)'], 'tương_đối': [
         'Dùng với valproate - giảm liều khởi đầu 50%',
@@ -815,14 +859,30 @@ ANTICONVULSANTS_DRUGS = {
         'Có thể dùng với hoặc không có thức ăn', 'timing':
         'Chia 2 lần/ngày (do half-life dài). Có thể dùng cùng bữa ăn để giảm kích ứng dạ dày'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }}, 'references': {'primary_sources': [
         'FDA Drug Label - Lamictal (lamotrigine)',
         'UpToDate - Lamotrigine: Drug information',
         'Epilepsia - ILAE treatment guidelines',
         'American Academy of Neurology guidelines'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'High - Multiple RCTs and systematic reviews'}},
+        'High - Multiple RCTs and systematic reviews'
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic", "dermatologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["LFT", "CBC", "Drug levels"]
+        },
+        "guideline_tags": [
+            "AAN 2018 Epilepsy Guidelines",
+            "FDA - Antiepileptic drug safety"
+        ]
+    },
     "Levetiracetam": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
         'Levetiracetam, Keppra', 'administration': ['PO', 'IV'], 'indications':
         ['Động kinh cục bộ', 'Động kinh tổng quát', 'Status epilepticus (IV)'],
@@ -922,13 +982,15 @@ ANTICONVULSANTS_DRUGS = {
         'UpToDate - Levetiracetam: Drug information',
         'FDA - Keppra (levetiracetam) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'last_updated': '2024-12-19', 'evidence_level':
+        ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }},
+        }
+    },
     "Oxcarbazepine": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
         'Oxcarbazepine, Trileptal', 'administration': ['PO'], 'indications': [
         'Động kinh cục bộ', 'Động kinh tổng quát',
-        'Đau dây thần kinh sinh ba'], 'contraindications': ['Dị ứng',
+        'Đau dây thần kinh sinh ba'],
+        'contraindications': [
         'Dị ứng carbamazepine (cross-reactivity)'], 'dosage': {'adult_epilepsy':
         '300mg x 2 lần/ngày, tăng đến 600-1200mg x 2 lần/ngày',
         'adult_max': '2400mg/ngày', 'notes':
@@ -970,7 +1032,7 @@ ANTICONVULSANTS_DRUGS = {
         'Oxcarbazepine có thể cảm ứng enzyme nhẹ, giảm nồng độ estrogen', 'effect':
         'Giảm hiệu quả tránh thai, tăng nguy cơ mang thai', 'management':
         'Sử dụng biện pháp tránh thai bổ sung (barrier method) hoặc chuyển sang thuốc tránh thai liều cao hơn. Tư vấn bệnh nhân về nguy cơ.'
-        }], 'moderate': [{'drug': 'Phenytoin, Phenobarbital', 'mechanism':
+        }, {'drug': 'Phenobarbital, Phenytoin, Carbamazepine', 'mechanism':
         'Cảm ứng enzyme, tăng chuyển hóa MHD', 'effect':
         'Giảm nồng độ MHD, giảm hiệu quả', 'management':
         'Tăng liều oxcarbazepine nếu cần. Theo dõi nồng độ và điều chỉnh liều.'},
@@ -1023,7 +1085,7 @@ ANTICONVULSANTS_DRUGS = {
         , 'timing':
         'Chia liều 2 lần/ngày (sáng và tối). Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }}, 'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế). Nếu cần: 8-10mg/kg/ngày PO chia 2 lần, tăng dần. Theo dõi chặt chẽ.'
         , 'infants':
@@ -1040,20 +1102,34 @@ ANTICONVULSANTS_DRUGS = {
         , 'monitoring':
         'Theo dõi nồng độ natri thường xuyên (hạ natri máu thường gặp, có thể nặng). Theo dõi dấu hiệu độc tính (chóng mặt, ataxia, lú lẫn). Theo dõi chức năng gan, thận.'}, 'brand_names': {'vietnam': [
         'Oxcarbazepine', 'Trileptal', 'Oxcarbazepine Stada'], 'common': [
-        'Trileptal', 'Oxcarbazepine']}, 'cost_estimate': {'unit': 'VND',
+        'Trileptal', 'Oxcarbazepine'],
         'range': '15,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
         'Giá thay đổi theo thương hiệu và nhà thuốc. Oxcarbazepine generic thường rẻ hơn (15,000-30,000 VND/viên 300mg). Trileptal (brand) thường đắt hơn (30,000-50,000 VND/viên 300mg).'}, 'references': {'primary_sources': ['Lexicomp - Oxcarbazepine',
         'UpToDate - Oxcarbazepine: Drug information',
         'FDA - Trileptal (oxcarbazepine) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'last_updated': '2025-02-05', 'evidence_level':
+        ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         },
         "reversal_agents": {
              "available": False,
              "agents": []
          },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
 },
     "Perampanel": {
         "group": "Neurology - Anticonvulsant",
@@ -1227,7 +1303,21 @@ ANTICONVULSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": []
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information"
+        ]
     },
     
     "Phenobarbital": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
@@ -1352,7 +1442,7 @@ ANTICONVULSANTS_DRUGS = {
         'Rối loạn tim mạch: nhịp chậm, hạ huyết áp, shock',
         'Rối loạn tiêu hóa: buồn nôn, nôn',
         'Hạ thân nhiệt (do ức chế trung tâm điều nhiệt)',
-        'Phù phổi (hiếm)'], 'antidote': 'Không có antidote đặc hiệu', 'treatment': [
+        'Phù phổi (hiếm)'], 'treatment': [
         'Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp NGAY LẬP TỨC nếu cần (ưu tiên cao nhất)'
         , 'Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)',
         'Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ, có thể lặp lại mỗi 4-6 giờ (phenobarbital có enterohepatic circulation)'
@@ -1392,7 +1482,7 @@ ANTICONVULSANTS_DRUGS = {
         , 'monitoring':
         'Theo dõi nồng độ trong máu thường xuyên hơn (tăng nguy cơ tích lũy do half-life dài). Theo dõi dấu hiệu độc tính (buồn ngủ quá mức, ataxia, lú lẫn, ức chế hô hấp). Theo dõi hô hấp (tăng nguy cơ ức chế hô hấp). Theo dõi chức năng gan (ALT, AST). Theo dõi chức năng thận (creatinine, CrCl). Theo dõi nguy cơ ngã. Theo dõi mật độ xương nếu dùng lâu dài.'},
         'brand_names': {'vietnam': ['Phenobarbital', 'Luminal',
-        'Phenobarbital Stada'], 'common': ['Luminal', 'Phenobarbital']},
+        'Phenobarbital Stada']},
         'cost_estimate': {'unit': 'VND',
         'range': '3,000 - 15,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
@@ -1401,9 +1491,10 @@ ANTICONVULSANTS_DRUGS = {
         'UpToDate - Phenobarbital: Drug information',
         'FDA - Luminal (phenobarbital) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'last_updated': '2025-02-05', 'evidence_level':
+        ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }},
+        }
+    },
     "Phenytoin": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
         'Phenytoin, Dilantin', 'administration': ['PO', 'IV'], 'indications': [
         'Động kinh (tổng quát, cục bộ)', 'Status epilepticus',
@@ -1482,11 +1573,7 @@ ANTICONVULSANTS_DRUGS = {
         'Ức chế CYP2C9, CYP2C19, giảm chuyển hóa phenytoin', 'effect':
         'Tăng nồng độ phenytoin, tăng nguy cơ độc tính', 'management':
         'Giảm liều phenytoin 25-50%, theo dõi nồng độ trong máu, dấu hiệu độc tính.'
-        }], 'moderate': [{'drug': 'Carbamazepine', 'mechanism':
-        'Cảm ứng enzyme lẫn nhau', 'effect': 'Giảm nồng độ cả hai thuốc',
-        'management':
-        'Theo dõi nồng độ trong máu, tăng liều nếu cần để đạt mức điều trị.'},
-        {'drug': 'Valproate', 'mechanism':
+        }, {'drug': 'Valproate', 'mechanism':
         'Ức chế chuyển hóa phenytoin, tăng nồng độ free phenytoin (do giảm protein binding)'
         , 'effect': 'Tăng nồng độ free phenytoin, tăng nguy cơ độc tính',
         'management':
@@ -1497,10 +1584,9 @@ ANTICONVULSANTS_DRUGS = {
         'Corticosteroids', 'mechanism':
         'Phenytoin cảm ứng enzyme, tăng chuyển hóa', 'effect':
         'Giảm hiệu quả corticosteroid', 'management':
-        'Tăng liều corticosteroid nếu cần.'}], 'minor': [{'drug': 'Antacids',
-        'mechanism': 'Giảm hấp thu phenytoin', 'effect':
-        'Giảm nhẹ nồng độ phenytoin', 'management': 'Uống cách nhau 2-3 giờ.'}]
-        }, 'contraindications': {'tuyệt_đối': ['Dị ứng phenytoin',
+        'Tăng liều corticosteroid nếu cần.'}], 'minor': [{'drug': 'Antacids', 'mechanism': 'Giảm hấp thu phenytoin', 'effect':
+        'Giảm nhẹ nồng độ phenytoin', 'management': 'Uống cách nhau 2-3 giờ.'}]},
+        'contraindications': {'tuyệt_đối': [
         'Suy gan nặng (Child-Pugh C)', 'Block nhĩ thất độ II hoặc III',
         'Hội chứng bệnh lympho (lymphoma-like syndrome)',
         'Tiền sử hội chứng Stevens-Johnson do phenytoin'], 'tương_đối': [
@@ -1553,10 +1639,9 @@ ANTICONVULSANTS_DRUGS = {
         'Pha trong 0.9% NaCl (không dùng D5W - kết tủa). Nồng độ tối đa 10mg/ml. Không trộn với các thuốc khác.'
         , 'infusion_rate':
         'Truyền chậm: không quá 50mg/phút (tối đa 50mg/phút) để tránh hạ huyết áp, rối loạn nhịp, ngừng tim. Theo dõi huyết áp, nhịp tim liên tục trong khi truyền.'
-        , 'compatibility': ['0.9% NaCl'], 'incompatibility': ['D5W (kết tủa)',
-        'Không trộn với các thuốc khác'], 'notes':
+        , 'compatibility': ['0.9% NaCl', 'Không trộn với các thuốc khác']}, 'notes':
         'Chỉ dùng NS để pha. Truyền qua đường tĩnh mạch lớn. Theo dõi huyết áp, nhịp tim, điện tâm đồ trong khi truyền. Không dùng filter trong dây truyền (có thể làm giảm nồng độ).'
-        }}, 'pediatric_dosing': {'neonates':
+        }, 'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế). Nếu cần: 5mg/kg/ngày PO chia 2-3 lần, tăng dần. Theo dõi nồng độ chặt chẽ.',
         'infants':
         '1 tháng - 2 tuổi: 5-8mg/kg/ngày PO chia 2-3 lần. IV loading: 15-20mg/kg IV (tối đa 1.5g). Theo dõi nồng độ chặt chẽ. Non-linear kinetics - tăng liều nhỏ có thể làm nồng độ tăng rất nhiều.',
@@ -1572,16 +1657,19 @@ ANTICONVULSANTS_DRUGS = {
         'monitoring':
         'Theo dõi nồng độ trong máu thường xuyên hơn (non-linear kinetics). Theo dõi dấu hiệu độc tính (nystagmus, ataxia, lú lẫn). Theo dõi chức năng gan (ALT, AST). Theo dõi chức năng thận (creatinine, CrCl). Bổ sung folate và vitamin D. Theo dõi mật độ xương nếu dùng lâu dài.'}, 'brand_names': {'vietnam': [
         'Phenytoin', 'Dilantin', 'Phenytoin Stada', 'Phenyto'], 'common': [
-        'Dilantin', 'Phenytoin']}, 'cost_estimate': {'unit': 'VND',
+        'Dilantin', 'Phenytoin'],
         'range': '5,000 - 20,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Phenytoin generic thường rẻ hơn (5,000-12,000 VND/viên 100mg). Dilantin (brand) thường đắt hơn (12,000-20,000 VND/viên 100mg). Dạng IV: 50,000-100,000 VND/lọ 250mg.'}, 'references': {'primary_sources': ['Lexicomp - Phenytoin',
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Phenytoin generic thường rẻ hơn (5,000-12,000 VND/viên 100mg). Dilantin (brand) thường đắt hơn (12,000-20,000 VND/viên 100mg). Dạng IV: 50,000-100,000 VND/lọ 250mg.'},
+        'references': {'primary_sources': ['Lexicomp - Phenytoin',
         'UpToDate - Phenytoin: Drug information',
         'FDA - Dilantin (phenytoin) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'last_updated': '2024-12-19', 'evidence_level':
-        'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }},
+        ], 'evidence_level':
+        'A - Evidence from well-designed randomized controlled trials and systematic reviews',
+        'last_updated': '2025-02-18'
+        }
+    },
     "Primidone": {
         "group": "Neurology - Anticonvulsant",
         "vietnamese_name": "Primidone, Mysoline",
@@ -1768,7 +1856,21 @@ ANTICONVULSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": []
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information"
+        ]
     },
     
     "Topiramate": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
@@ -1788,7 +1890,7 @@ ANTICONVULSANTS_DRUGS = {
         'Phenytoin, Carbamazepine: giảm nồng độ topiramate',
         'Valproate: tăng nguy cơ tăng amoniac máu',
         'Oral contraceptives: có thể giảm hiệu quả (cần liều cao hơn)',
-        'Digoxin: có thể giảm nồng độ digoxin'], 'pregnancy': 'D',
+        'Digoxin: có thể giảm nồng độ digoxin'],
         'mechanism_of_action':
         'Topiramate là thuốc chống động kinh đa cơ chế. Ức chế kênh natri voltage-gated (giống phenytoin, carbamazepine), ức chế kênh calci (L-type), tăng hoạt động GABA (kích thích GABA-A receptors), và ức chế AMPA/kainate receptors (giảm glutamate). Cũng ức chế carbonic anhydrase (gây sỏi thận, toan chuyển hóa). Tác dụng: chống động kinh (cục bộ và tổng quát), phòng ngừa migraine, và có thể ổn định tâm trạng. Cơ chế đa dạng làm topiramate hiệu quả trong nhiều loại động kinh khác nhau.'
         , 'monitoring': [
@@ -1831,7 +1933,7 @@ ANTICONVULSANTS_DRUGS = {
         'Cả hai đều ức chế carbonic anhydrase, tăng nguy cơ tăng amoniac máu',
         'effect': 'Tăng nguy cơ tăng amoniac máu, toan chuyển hóa', 'management':
         'Theo dõi amoniac máu, bicarbonate. Có thể cần giảm liều một trong hai thuốc.'
-        }], 'moderate': [{'drug': 'Oral contraceptives', 'mechanism':
+        }, {'drug': 'Oral contraceptives', 'mechanism':
         'Topiramate có thể cảm ứng enzyme, giảm nồng độ estrogen', 'effect':
         'Giảm hiệu quả tránh thai, tăng nguy cơ mang thai', 'management':
         'Sử dụng biện pháp tránh thai bổ sung (barrier method) hoặc chuyển sang thuốc tránh thai liều cao hơn.'
@@ -1886,14 +1988,36 @@ ANTICONVULSANTS_DRUGS = {
         'Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn', 'timing':
         'Chia 2 lần/ngày (sáng, tối). Tăng liều chậm để giảm tác dụng phụ. Uống nhiều nước (2-3L/ngày) để giảm nguy cơ sỏi thận. KHÔNG ngừng đột ngột - giảm liều dần dần.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'}},
+        'compatibility': [], 'incompatibility': []
+        }
+        },
         'references': {'primary_sources': ['Lexicomp - Topiramate',
         'UpToDate - Topiramate: Drug information',
         'FDA - Topamax (topiramate) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'last_updated': '2024-12-19', 'evidence_level':
-        'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }},
+        ], 'evidence_level':
+        'A - Evidence from well-designed randomized controlled trials and systematic reviews',
+        'last_updated': '2025-02-18'
+        },
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': None,
+            'organ_toxicity': {'renal': 'Kidney stones (contraindicated in recurrent stones)', 'ophthalmic': 'Glaucoma (narrow-angle - contraindicated)', 'metabolic': 'Metabolic acidosis', 'teratogenic': 'Black Box Warning (cleft lip/palate)'},
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': 'Kidney stones risk',
+            'requires_monitoring': ['Renal function (kidney stones risk)', 'Bicarbonate (metabolic acidosis)', 'Cognitive function', 'Weight', 'Teratogenicity (pregnancy - Black Box Warning)'],
+            'look_alike_sound_alike': ['Topiramate', 'Topotecan']
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - Teratogenicity (Cleft Lip/Palate)',
+            'AAN Guidelines - Epilepsy Treatment',
+            'AAN Guidelines - Migraine Prevention',
+            'ILAE Guidelines - Antiepileptic Drugs'
+        ]
+    },
     "Valproate": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
         'Valproate, Valproic Acid, Depakote', 'administration': ['PO', 'IV'],
         'indications': ['Động kinh (nhiều loại)', 'Rối loạn lưỡng cực',
@@ -2051,17 +2175,39 @@ ANTICONVULSANTS_DRUGS = {
         'monitoring':
         'Theo dõi chức năng gan thường xuyên hơn (ALT, AST, bilirubin) - đặc biệt trong 6 tháng đầu. Theo dõi nồng độ trong máu (mục tiêu 50-100 mcg/mL). Theo dõi tiểu cầu. Theo dõi ammonia máu nếu có triệu chứng lú lẫn. Theo dõi dấu hiệu viêm tụy (đau bụng nặng). Theo dõi mật độ xương nếu dùng lâu dài.'}, 'brand_names': {'vietnam': [
         'Valproate', 'Valproic Acid', 'Depakote', 'Valproate Stada'], 'common': [
-        'Depakote', 'Valproate', 'Valproic Acid']}, 'cost_estimate': {'unit': 'VND',
+        'Depakote', 'Valproate', 'Valproic Acid'],
         'range': '10,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Valproate generic thường rẻ hơn (10,000-25,000 VND/viên 500mg). Depakote (brand) thường đắt hơn (25,000-40,000 VND/viên 500mg). Dạng IV: 100,000-200,000 VND/lọ 500mg.'}, 'references': {'primary_sources': [
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Valproate generic thường rẻ hơn (10,000-25,000 VND/viên 500mg). Depakote (brand) thường đắt hơn (25,000-40,000 VND/viên 500mg). Dạng IV: 100,000-200,000 VND/lọ 500mg.'},         'references': {'primary_sources': [
         'FDA Drug Label - Depakote (valproate sodium)',
         'UpToDate - Valproate: Drug information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Epilepsia - ILAE treatment guidelines',
         'American Academy of Neurology guidelines'], 'last_updated':
         '2024-12-19', 'evidence_level':
-        'High - Multiple RCTs and systematic reviews'}},
+        'High - Multiple RCTs and systematic reviews'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': 'Moderate (thrombocytopenia)',
+            'organ_toxicity': {'hepatic': 'Black Box Warning (fatal hepatitis)', 'pancreatic': 'Black Box Warning (fatal pancreatitis)', 'hematologic': 'Thrombocytopenia', 'teratogenic': 'Black Box Warning (neural tube defects)'},
+            'qt_prolongation': False,
+            'hepatotoxicity': 'Black Box Warning (fatal)',
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Liver function (Black Box Warning - first 6 months)', 'Platelet count', 'Serum valproate levels (50-100 mcg/mL)', 'Pancreatitis signs (Black Box Warning)', 'Ammonia levels', 'Teratogenicity (pregnancy - Black Box Warning)'],
+            'look_alike_sound_alike': ['Valproate', 'Valproic acid', 'Divalproex']
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - Fatal Hepatitis',
+            'FDA Black Box Warning - Fatal Pancreatitis',
+            'FDA Black Box Warning - Teratogenicity (Neural Tube Defects)',
+            'AAN Guidelines - Epilepsy Treatment',
+            'APA Guidelines - Bipolar Disorder',
+            'ILAE Guidelines - Antiepileptic Drugs',
+            'WHO Essential Medicines List'
+        ]
+    },
     "Zonisamide": {
         "group": "Neurology - Anticonvulsant",
         "vietnamese_name": "Zonisamide, Zonegran",
@@ -2235,9 +2381,23 @@ ANTICONVULSANTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
-    },
-    
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["RFT"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "ILAE Guidelines - Antiepileptic Drugs"
+        ]
+    }
 }
 
 __all__ = ['ANTICONVULSANTS_DRUGS']

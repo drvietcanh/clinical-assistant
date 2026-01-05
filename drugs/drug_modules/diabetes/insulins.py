@@ -5,12 +5,12 @@ Active module - contains all diabetes drug data"""
 
 INSULINS_DRUGS = {
     "Insulin": {'group': 'Diabetes - Insulin', 'vietnamese_name': 'Insulin',
-        'administration': ['SC', 'IV'], 'indications': ['Đái tháo đường type 1',
+        'administration': ['SC', 'IV'],
+        'indications': [
         'Đái tháo đường type 2 (khi không kiểm soát bằng thuốc uống)',
         'Nhiễm toan ceton do đái tháo đường',
         'Tăng đường huyết tăng áp lực thẩm thấu',
-        'Tăng đường huyết trong bệnh viện'], 'contraindications': [
-        'Hạ đường huyết', 'Dị ứng insulin'], 'dosage': {'type1_basal':
+        'Tăng đường huyết trong bệnh viện'], 'dosage': {'type1_basal':
         '0.2-0.4 đơn vị/kg/ngày (NPH hoặc insulin dài)', 'type1_bolus':
         '0.5-1 đơn vị/kg/ngày chia trước bữa ăn', 'dka_iv':
         '0.1 đơn vị/kg/giờ IV truyền liên tục', 'hospital_hyperglycemia':
@@ -20,7 +20,7 @@ INSULINS_DRUGS = {
         'Phản ứng tại chỗ tiêm', 'Kháng insulin (hiếm)'], 'interactions': [
         'Beta-blocker: che dấu triệu chứng hạ đường huyết',
         'Corticosteroid: tăng đường huyết', 'Rượu: tăng nguy cơ hạ đường huyết'
-        ], 'pregnancy': 'B - An toàn, điều chỉnh liều theo thai kỳ',
+        ],
         'mechanism_of_action':
         'Insulin là hormone tự nhiên được tiết ra từ tế bào beta tuyến tụy. Gắn với thụ thể insulin, kích hoạt các tín hiệu nội bào, tăng vận chuyển glucose vào tế bào, kích thích tổng hợp glycogen, protein, lipid, và ức chế sản xuất glucose ở gan. Giảm đường huyết bằng cách tăng sử dụng glucose và giảm sản xuất glucose'
         , 'monitoring': [
@@ -94,7 +94,7 @@ INSULINS_DRUGS = {
         'Pentamidine có thể gây hạ đường huyết (phá hủy tế bào beta) hoặc tăng đường huyết'
         , 'effect': 'Hạ đường huyết hoặc tăng đường huyết', 'management':
         'Theo dõi đường huyết chặt chẽ. Điều chỉnh liều insulin theo đường huyết.'
-        }], 'minor': [{'drug': 'Aspirin liều thấp', 'mechanism':
+        }], 'minor': [{'drug': 'Aspirin', 'mechanism':
         'Aspirin có thể tăng nhẹ tác dụng insulin', 'effect':
         'Tăng nhẹ nguy cơ hạ đường huyết', 'management':
         'Thường không cần điều chỉnh. Theo dõi đường huyết.'}, {'drug':
@@ -106,14 +106,14 @@ INSULINS_DRUGS = {
         'Hạ đường huyết (hypoglycemia) - không được dùng khi đường huyết thấp',
         'Dị ứng insulin hoặc bất kỳ thành phần nào trong chế phẩm insulin',
         'Hôn mê do hạ đường huyết - không được dùng insulin cho đến khi hồi phục'
-        ], 'tương_đối': ['Suy thận - giảm clearance insulin, giảm liều insulin',
+        ], 'tương_đối': [
         'Suy gan - giảm gluconeogenesis, tăng nguy cơ hạ đường huyết, giảm liều insulin'
         , 'Suy tim - thận trọng, có thể cần điều chỉnh liều',
         'Người cao tuổi - tăng nguy cơ hạ đường huyết, cần liều thấp hơn',
         'Bệnh nhân không có khả năng tự quản lý - cần người chăm sóc',
         'Bệnh nhân không có khả năng nhận biết hạ đường huyết - tăng nguy cơ',
         'Thai kỳ - điều chỉnh liều thường xuyên (tăng nhu cầu trong tam cá nguyệt 2-3)'
-        ]}, 'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
+        ]}, 'pregnancy_details':
         'Insulin là thuốc được ưu tiên trong thai kỳ cho đái tháo đường. Insulin không qua nhau thai, an toàn cho thai nhi. Nhu cầu insulin tăng trong thai kỳ, đặc biệt ở tam cá nguyệt 2-3 (tăng 50-100%). Cần điều chỉnh liều thường xuyên. Hạ đường huyết mẹ có thể ảnh hưởng đến thai nhi. Tăng đường huyết mẹ có thể gây dị tật thai nhi, thai to, hạ đường huyết ở trẻ sơ sinh. Mục tiêu đường huyết: <95 mg/dL (trước ăn), <140 mg/dL (1 giờ sau ăn), <120 mg/dL (2 giờ sau ăn).'
         , 'lactation': {'safety': 'Compatible', 'details':
         'Insulin không bài tiết vào sữa mẹ ở nồng độ đáng kể. Insulin là protein, bị tiêu hóa trong đường tiêu hóa của trẻ, không hấp thu. Insulin là thuốc được ưu tiên cho phụ nữ đái tháo đường cho con bú. Nhu cầu insulin có thể giảm nhẹ khi cho con bú (do tiêu thụ glucose).'
@@ -195,7 +195,7 @@ INSULINS_DRUGS = {
         'UKPDS Study - Lancet (1998) - Intensive glucose control in type 2 diabetes'
         ,
         "Goodman & Gilman's Pharmacological Basis of Therapeutics - Insulin and oral hypoglycemic agents"
-        ], 'last_updated': '2025-02-18', 'evidence_level':
+        ], 'evidence_level':
         'High - Multiple large RCTs (DCCT, UKPDS) showing benefit of intensive glucose control'
         },
         "risk_flags": {
@@ -212,12 +212,12 @@ INSULINS_DRUGS = {
             "WHO Essential Medicines List"
         ],
         "last_updated": "2025-02-18",
-                 "renal_adjustment": {
-             "normal": "Không đổi",
-             "30_60": "Không đổi",
-             "under_30": "Thận trọng, có thể giảm liều",
-             "notes": "Insulin chủ yếu chuyển hóa ở gan, nhưng cần thận trọng ở suy thận nặng."
-         },
-}}
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, có thể giảm liều",
+            "notes": "Insulin chủ yếu chuyển hóa ở gan, nhưng cần thận trọng ở suy thận nặng."
+        }
+}
 
 __all__ = ['INSULINS_DRUGS']

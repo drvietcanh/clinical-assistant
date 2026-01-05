@@ -5,10 +5,12 @@ Daptomycin (Lipopeptide)
 """
 
 GLYCOPEPTIDE_ANTIBIOTICS = {
-    "Daptomycin": {
+    "Daptomycin":     {
         "group": "Antibiotic - Lipopeptide",
         "vietnamese_name": "Daptomycin, Cubicin",
-        "administration": ["IV"],
+        "administration": [
+            "IV"
+    ],
         "indications": [
             "Nhiễm khuẩn da và mô mềm phức tạp (cSSTI) do Gram-dương",
             "Nhiễm khuẩn huyết do S. aureus (kể cả MRSA)",
@@ -16,25 +18,30 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
             "Nhiễm khuẩn do MRSA (Methicillin-resistant Staphylococcus aureus)",
             "Nhiễm khuẩn do VRE (Vancomycin-resistant Enterococcus)",
             "Nhiễm khuẩn do Enterococcus (kể cả VRE)"
-        ],
-        "contraindications": [
-            "Dị ứng daptomycin",
-            "Viêm cơ (myositis) - CHỐNG CHỈ ĐỊNH",
-            "Suy thận nặng (CrCl <30) - cần điều chỉnh liều"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với daptomycin",
+                "Viêm cơ (myositis) - CHỐNG CHỈ ĐỊNH"
+    ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - cần điều chỉnh liều",
+                "Đang dùng statin hoặc fibrate - tăng nguy cơ viêm cơ"
+    ],
+        },
         "dosage": {
             "adult_standard": "4-6 mg/kg IV x 1 lần/ngày",
             "adult_ssti": "4 mg/kg IV x 1 lần/ngày",
             "adult_bacteremia": "6 mg/kg IV x 1 lần/ngày",
             "adult_endocarditis": "6-10 mg/kg IV x 1 lần/ngày",
             "adult_vre": "6-10 mg/kg IV x 1 lần/ngày",
-            "notes": "Truyền IV trong 30 phút. Liều cao hơn (6-10 mg/kg) cho nhiễm khuẩn huyết, viêm nội tâm mạc, VRE. Cần theo dõi CPK (creatine phosphokinase) để phát hiện viêm cơ."
+            "notes": """Truyền IV trong 30 phút. Liều cao hơn (6-10 mg/kg) cho nhiễm khuẩn huyết, viêm nội tâm mạc, VRE. Cần theo dõi CPK (creatine phosphokinase) để phát hiện viêm cơ.""",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "4-6 mg/kg IV mỗi 48 giờ",
             "under_30": "4-6 mg/kg IV mỗi 48 giờ (bao gồm hemodialysis)",
-            "hemodialysis": "4-6 mg/kg IV sau lọc máu (mỗi 48 giờ)"
+            "hemodialysis": "4-6 mg/kg IV sau lọc máu (mỗi 48 giờ)",
         },
         "side_effects": [
             "Viêm cơ (myositis) - tăng CPK, đau cơ, yếu cơ, có thể dẫn đến rhabdomyolysis",
@@ -44,15 +51,15 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
             "Phát ban",
             "Tăng CPK (creatine phosphokinase) - dấu hiệu viêm cơ",
             "Giảm bạch cầu (hiếm)"
-        ],
+    ],
         "interactions": [
             "Statins (Atorvastatin, Simvastatin, Rosuvastatin): tăng nguy cơ viêm cơ, rhabdomyolysis",
             "Fibrates (Gemfibrozil): tăng nguy cơ viêm cơ",
             "Aminoglycosides: có thể tăng độc thận",
             "Warfarin: có thể tăng INR"
-        ],
+    ],
         "pregnancy": "B - Sử dụng nếu lợi ích > nguy cơ",
-        "mechanism_of_action": "Daptomycin là lipopeptide kháng sinh, gắn với màng tế bào vi khuẩn Gram-dương và tạo lỗ thủng trong màng, gây mất gradient ion và dẫn đến chết tế bào. Khác với vancomycin (ức chế tổng hợp thành tế bào), daptomycin tác động trực tiếp lên màng tế bào. Phổ kháng khuẩn: Gram-dương mạnh (Staphylococcus aureus - kể cả MRSA, Staphylococcus epidermidis, Streptococcus, Enterococcus - kể cả VRE), không có hoạt tính với Gram-âm hoặc kỵ khí. Đặc điểm: phụ thuộc nồng độ (concentration-dependent killing), có hiệu ứng hậu kháng sinh, dùng 1 lần/ngày. CHỐNG CHỈ ĐỊNH trong viêm phổi (bị bất hoạt bởi surfactant phổi).",
+        "mechanism_of_action": """Daptomycin là lipopeptide kháng sinh, gắn với màng tế bào vi khuẩn Gram-dương và tạo lỗ thủng trong màng, gây mất gradient ion và dẫn đến chết tế bào. Khác với vancomycin (ức chế tổng hợp thành tế bào), daptomycin tác động trực tiếp lên màng tế bào. Phổ kháng khuẩn: Gram-dương mạnh (Staphylococcus aureus - kể cả MRSA, Staphylococcus epidermidis, Streptococcus, Enterococcus - kể cả VRE), không có hoạt tính với Gram-âm hoặc kỵ khí. Đặc điểm: phụ thuộc nồng độ (concentration-dependent killing), có hiệu ứng hậu kháng sinh, dùng 1 lần/ngày. CHỐNG CHỈ ĐỊNH trong viêm phổi (bị bất hoạt bởi surfactant phổi).""",
         "monitoring": [
             "CPK (Creatine Phosphokinase) - BẮT BUỘC: 1-2 lần/tuần, hoặc ngay khi có triệu chứng đau cơ, yếu cơ",
             "Mục tiêu: CPK <5x ULN (upper limit of normal). Nếu CPK >5x ULN hoặc có triệu chứng viêm cơ → DỪNG NGAY",
@@ -62,7 +69,7 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
             "Triệu chứng viêm cơ: đau cơ, yếu cơ, sưng cơ, nước tiểu sẫm màu (myoglobinuria)",
             "Công thức máu (CBC) - nếu dùng kéo dài",
             "PT/INR (nếu dùng với warfarin)"
-        ],
+    ],
         "precautions": [
             "CPK monitoring BẮT BUỘC - không dùng nếu không có khả năng theo dõi CPK",
             "Viêm cơ (myositis) - CHỐNG CHỈ ĐỊNH nếu có tiền sử viêm cơ, rhabdomyolysis",
@@ -74,7 +81,7 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
             "Thận trọng ở người cao tuổi, suy thận, có tiền sử bệnh cơ",
             "Theo dõi chức năng thận nếu dùng kéo dài",
             "Pha trong NS, truyền IV trong 30 phút"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "8-9 giờ",
             "onset": "Ngay lập tức sau khi truyền IV",
@@ -82,39 +89,40 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
             "protein_binding": "90-93% (rất cao)",
             "metabolism": "Không chuyển hóa đáng kể",
             "clearance": "Chủ yếu qua thận (78% bài tiết nguyên dạng), cần điều chỉnh thận",
-            "volume_of_distribution": "0.1 L/kg (thấp, phân bố kém)"
+            "volume_of_distribution": "0.1 L/kg (thấp, phân bố kém)",
         },
-        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 12 giờ, hoặc trong tủ lạnh 48 giờ. Không đông lạnh.",
-        "black_box_warnings": "Viêm cơ (myositis) - có thể dẫn đến rhabdomyolysis. Cần theo dõi CPK thường xuyên. DỪNG NGAY nếu CPK >5x ULN hoặc có triệu chứng viêm cơ. CHỐNG CHỈ ĐỊNH trong viêm phổi (bị bất hoạt bởi surfactant phổi).",
+        "storage": """Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 12 giờ, hoặc trong tủ lạnh 48 giờ. Không đông lạnh.""",
+        "black_box_warnings": """Viêm cơ (myositis) - có thể dẫn đến rhabdomyolysis. Cần theo dõi CPK thường xuyên. DỪNG NGAY nếu CPK >5x ULN hoặc có triệu chứng viêm cơ. CHỐNG CHỈ ĐỊNH trong viêm phổi (bị bất hoạt bởi surfactant phổi).""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Statins (Atorvastatin, Simvastatin, Rosuvastatin, Pravastatin)",
                     "mechanism": "Cả hai đều có thể gây viêm cơ, tác dụng cộng dồn",
                     "effect": "Tăng nguy cơ viêm cơ, rhabdomyolysis nặng",
-                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi CPK sát (2-3 lần/tuần), dừng statin nếu CPK tăng. Dừng cả hai nếu CPK >5x ULN hoặc có triệu chứng viêm cơ."
+                    "management": """Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi CPK sát (2-3 lần/tuần), dừng statin nếu CPK tăng. Dừng cả hai nếu CPK >5x ULN hoặc có triệu chứng viêm cơ.""",
                 },
-                {
+    {
                     "drug": "Fibrates (Gemfibrozil, Fenofibrate)",
                     "mechanism": "Cả hai đều có thể gây viêm cơ, tác dụng cộng dồn",
                     "effect": "Tăng nguy cơ viêm cơ, rhabdomyolysis",
-                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi CPK sát, dừng fibrate nếu CPK tăng."
+                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi CPK sát, dừng fibrate nếu CPK tăng.",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Aminoglycosides (Gentamicin, Amikacin, Tobramycin)",
                     "mechanism": "Cả hai đều có thể gây độc thận, tác dụng cộng dồn",
                     "effect": "Tăng nguy cơ độc thận",
-                    "management": "Theo dõi chức năng thận sát nếu dùng đồng thời."
+                    "management": "Theo dõi chức năng thận sát nếu dùng đồng thời.",
                 },
-                {
+    {
                     "drug": "Warfarin",
                     "mechanism": "Daptomycin có thể ảnh hưởng đến đông máu",
                     "effect": "Tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần). Có thể cần giảm liều warfarin."
+                    "management": "Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần). Có thể cần giảm liều warfarin.",
                 }
-            ]
+                ],
+            "minor": [],
         },
         "references": {
             "primary_sources": [
@@ -125,16 +133,19 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
                 "Lexicomp Online - Daptomycin Monograph",
                 "Micromedex - Daptomycin Drug Information"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn",
         },
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"renal": "Moderate", "musculoskeletal": "High (myositis/rhabdomyolysis)"}
+            "organ_toxicity": {
+                "renal": "Moderate",
+                "musculoskeletal": "High (myositis/rhabdomyolysis)",
+            },
         },
         "guideline_tags": [
             "IDSA Guidelines - Methicillin-Resistant Staphylococcus aureus Infections",
@@ -142,35 +153,52 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
             "IDSA Guidelines - Skin and Soft Tissue Infections",
             "IDSA Guidelines - Vancomycin-Resistant Enterococcus Infections",
             "WHO Essential Medicines List"
-        ],
+    ],
         "last_updated": "2025-02-18",
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
-            "lactation_details": ""
+            "fda_category": "B",
+            "pregnancy_details": """Sử dụng nếu lợi ích vượt trội nguy cơ. Dữ liệu hạn chế nhưng được sử dụng rộng rãi. Theo dõi CPK và chức năng thận của mẹ.""",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ có bài tiết vào sữa mẹ hay không. Thận trọng khi cho con bú.",
+                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho bú tạm thời hoặc đổi thuốc khác.",
+            },
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": ""
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Không cần chỉnh liều.",
+            "severe": "Không cần chỉnh liều.",
+            "notes": "Daptomycin không chuyển hóa đáng kể qua gan, thải trừ chủ yếu qua thận.",
         },
         "overdose_management": {
-            "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "symptoms": [
+                "Viêm cơ (myositis) - tăng CPK, đau cơ, yếu cơ, rhabdomyolysis",
+                "Độc thận (nephrotoxicity) - tăng creatinine"
+    ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng daptomycin ngay",
+                "Đo CPK ngay",
+                "Nếu CPK >5x ULN hoặc có triệu chứng viêm cơ → DỪNG NGAY",
+                "Đo chức năng thận",
+                "Truyền dịch tích cực nếu rhabdomyolysis",
+                "Theo dõi CPK và chức năng thận hàng ngày"
+    ],
+            "monitoring": "CPK (bắt buộc), creatinine, eGFR, triệu chứng viêm cơ (đau cơ, yếu cơ, nước tiểu sẫm màu).",
         },
         "reversal_agents": {
             "available": False,
             "agents": [],
-            "notes": ""
+            "notes": "Không có thuốc giải độc đặc hiệu. Ngừng thuốc là biện pháp chính.",
         },
         "administration_instructions": {
-            "preparation": "",
-            "administration": "",
-            "monitoring": []
+            "iv": {
+                "reconstitution": "Pha trong NaCl 0.9%.",
+                "infusion_rate": "Truyền IV trong 30 phút.",
+                "notes": """CPK monitoring BẮT BUỘC. Điều chỉnh liều theo chức năng thận. DỪNG NGAY nếu CPK >5x ULN hoặc có triệu chứng viêm cơ. CHỐNG CHỈ ĐỊNH trong viêm phổi.""",
+            },
         },
     },
-    
     "Teicoplanin": {
         "group": "Antibiotic - Glycopeptide",
         "vietnamese_name": "Teicoplanin, Targocid",
@@ -499,10 +527,16 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
             "high_alert": True,
             "narrow_therapeutic_index": True,
             "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"renal": "High", "neurological": "Moderate (ototoxicity)"}
+            "bleeding_risk": None,
+            "organ_toxicity": {"renal": "Nephrotoxicity (Black Box Warning - may be irreversible, especially with aminoglycosides)", "neurological": "Ototoxicity (rare, may be irreversible)", "hematologic": "Neutropenia, thrombocytopenia (rare, with prolonged use)", "dermatologic": "Red Man Syndrome (infusion-related)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["TDM required (trough 10-20 mg/L) - Black Box Warning", "Renal function (creatinine, eGFR - daily, Black Box Warning for nephrotoxicity)", "Audiometry (ototoxicity risk with prolonged use)", "CBC (neutropenia, thrombocytopenia with prolonged use)", "Red Man Syndrome signs (infusion rate critical)", "Dose adjustment required for renal function"],
+            "look_alike_sound_alike": ["Vancomycin", "Vincristine"]
         },
         "guideline_tags": [
+            "FDA Black Box Warning - Nephrotoxicity (may be irreversible)",
             "IDSA Guidelines - Methicillin-Resistant Staphylococcus aureus Infections",
             "IDSA Guidelines - Infective Endocarditis",
             "IDSA Guidelines - Hospital-Acquired Pneumonia",

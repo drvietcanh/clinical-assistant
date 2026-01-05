@@ -171,7 +171,21 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
                 "AHS Guidelines - Acute Migraine Treatment"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ] 
         }
     },
     "Rizatriptan": {'group': 'Analgesic - Antimigraine (5-HT1 Receptor Agonist)',
@@ -194,7 +208,7 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
         'Ergotamine/Dihydroergotamine: chống chỉ định (trong 24 giờ)',
         'MAO inhibitor: chống chỉ định (trong 14 ngày)',
         'Propranolol: tăng nồng độ rizatriptan (giảm liều rizatriptan 50%)',
-        'SSRI/SNRI: tăng nguy cơ hội chứng serotonin'], 'pregnancy': 'C',
+        'SSRI/SNRI: tăng nguy cơ hội chứng serotonin'],
         'mechanism_of_action':
         '5-HT1B/1D receptor agonist (selective serotonin receptor agonist, triptan). Tương tự sumatriptan nhưng có tác dụng nhanh hơn và hiệu quả hơn. Kích thích 5-HT1B receptors ở mạch máu não → co mạch (giảm giãn mạch trong migraine). Kích thích 5-HT1D receptors → ức chế phóng thích chất trung gian gây viêm (CGRP, substance P) từ dây thần kinh trigeminal. Giảm đau migraine thông qua cả hai cơ chế: co mạch và ức chế viêm thần kinh. Tác dụng nhanh (30-60 phút PO). Có dạng ODT (orally disintegrating tablet) - thuận tiện hơn, không cần nước.'
         , 'monitoring': [
@@ -298,7 +312,7 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
         'UpToDate: Triptans for acute migraine',
         'American Headache Society Guidelines',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Rizatriptan'], 'last_updated': '2025-02-05',
+        'Micromedex: Rizatriptan'],
         'evidence_level':
         'High - FDA approved, multiple RCTs, clinical guidelines'}},
     
@@ -324,7 +338,7 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
         'Ergotamine/Dihydroergotamine: chống chỉ định (trong 24 giờ)',
         'MAO inhibitor: chống chỉ định (trong 14 ngày)',
         'SSRI/SNRI: tăng nguy cơ hội chứng serotonin',
-        'Thuốc ức chế CYP2D6: tăng nồng độ sumatriptan'], 'pregnancy': 'C',
+        'Thuốc ức chế CYP2D6: tăng nồng độ sumatriptan'],
         'mechanism_of_action':
         '5-HT1B/1D receptor agonist (selective serotonin receptor agonist, triptan). Kích thích 5-HT1B receptors ở mạch máu não → co mạch (giảm giãn mạch trong migraine). Kích thích 5-HT1D receptors → ức chế phóng thích chất trung gian gây viêm (CGRP, substance P) từ dây thần kinh trigeminal. Giảm đau migraine thông qua cả hai cơ chế: co mạch và ức chế viêm thần kinh. Tác dụng nhanh (10-30 phút SC, 30-60 phút PO).'
         , 'monitoring': ['Đáp ứng lâm sàng (giảm đau migraine, triệu chứng)',
@@ -345,7 +359,7 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
         'Không vượt quá liều tối đa (200mg/ngày PO, 12mg/ngày SC, 40mg/ngày nasal)'
         ,
         'Nếu không đáp ứng sau 2 liều → không dùng thêm, đánh giá lại chẩn đoán'
-        ], 'pharmacokinetics': {'half_life': '2 giờ', 'onset':
+        ], 'onset':
         'SC: 10-15 phút; PO: 30-60 phút; Nasal: 15-30 phút', 'duration':
         '2-4 giờ', 'protein_binding': '14-21%', 'metabolism':
         'Gan (chuyển hóa qua MAO-A, một phần qua CYP2D6)', 'clearance':
@@ -436,9 +450,10 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
         'UpToDate: Triptans for acute migraine',
         'American Headache Society Guidelines',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Sumatriptan'], 'last_updated': '2025-02-03',
+        'Micromedex: Sumatriptan'],
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}},
+        'High - FDA approved, multiple RCTs, clinical guidelines'
+        }
 }
 
 __all__ = ['ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS']

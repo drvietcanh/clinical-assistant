@@ -14,6 +14,10 @@ from .diabetic_nephropathy import render as render_diabetic_nephropathy
 from .hypertensive_nephrosclerosis import render as render_hypertensive_nephrosclerosis
 from .hepatorenal_syndrome import render as render_hepatorenal_syndrome
 from .emergency_dialysis import render as render_emergency_dialysis
+from .ckd_anemia import render as render_ckd_anemia
+from .resistant_hypertension_ckd import render as render_resistant_hypertension_ckd
+from .blood_pressure_ckd import render as render_blood_pressure_ckd
+from .iga_nephropathy import render as render_iga_nephropathy
 
 
 __all__ = [
@@ -28,5 +32,9 @@ __all__ = [
     'render_hypertensive_nephrosclerosis',
     'render_hepatorenal_syndrome',
     'render_emergency_dialysis',
+    'render_ckd_anemia',
+    'render_resistant_hypertension_ckd',
+    'render_blood_pressure_ckd',
+    'render_iga_nephropathy',
 ]
 

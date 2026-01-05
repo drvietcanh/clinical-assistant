@@ -18,7 +18,7 @@ SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS = {
         'MAO inhibitor: chống chỉ định (nguy cơ hội chứng serotonin)',
         'Tramadol: tăng nguy cơ co giật và hội chứng serotonin',
         'Warfarin: tăng tác dụng chống đông',
-        'Triptans: tăng nguy cơ hội chứng serotonin'], 'pregnancy': 'C',
+        'Triptans: tăng nguy cơ hội chứng serotonin'],
         'mechanism_of_action':
         'Fluoxetine là SSRI (Selective Serotonin Reuptake Inhibitor) ức chế tái hấp thu serotonin ở synap thần kinh, tăng nồng độ serotonin trong khe synap. Tăng serotonin dẫn đến điều chỉnh thụ thể serotonin (desensitization) và tác dụng chống trầm cảm. Có tính chọn lọc cao với serotonin (ít ảnh hưởng đến norepinephrine, dopamine, hoặc các thụ thể khác). Ưu điểm: half-life dài (cả thuốc và chất chuyển hóa norfluoxetine), ít tác dụng phụ cholinergic và tim mạch hơn TCA. Tác dụng kéo dài sau khi ngừng thuốc'
         , 'monitoring': [
@@ -64,7 +64,7 @@ SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS = {
         {'drug': 'Triptans (sumatriptan, rizatriptan)', 'mechanism':
         'Tăng nồng độ serotonin', 'effect': 'Hội chứng serotonin', 'management':
         'Thận trọng. Dùng cách xa ít nhất 24 giờ. Theo dõi dấu hiệu hội chứng serotonin.'
-        }], 'moderate': [{'drug': 'Warfarin', 'mechanism':
+        }, {'drug': 'Warfarin', 'mechanism':
         'Fluoxetine ức chế CYP2C9, tăng nồng độ warfarin', 'effect':
         'Tăng INR, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần.'}, {
@@ -80,15 +80,7 @@ SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS = {
         [{'drug': 'CYP2D6 substrates (codeine, metoprolol)', 'mechanism':
         'Ức chế CYP2D6', 'effect':
         'Tăng nồng độ các thuốc chuyển hóa qua CYP2D6', 'management':
-        'Thận trọng. Điều chỉnh liều nếu cần.'}]},         'contraindications': {
-        'tuyệt_đối': ['Dùng MAO inhibitor (chống chỉ định tuyệt đối)',
-        'Dị ứng fluoxetine', 'Hội chứng serotonin đang diễn ra'], 'tương_đối':
-        ['Suy gan nặng - giảm liều', 'Suy thận nặng (CrCl <30) - giảm liều',
-        'Trẻ em <18 tuổi - tăng nguy cơ tự tử',
-        'Có ý định tự tử - chỉ kê đơn số lượng ít', 'Bệnh tim - thận trọng',
-        'Rối loạn đông máu - tăng nguy cơ chảy máu',
-        'Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin']},
-        'contraindications_detail': {
+        'Thận trọng. Điều chỉnh liều nếu cần.'}]}, 'contraindications_detail': {
         'tuyệt_đối': ['Dùng MAO inhibitor (chống chỉ định tuyệt đối)',
         'Dị ứng fluoxetine', 'Hội chứng serotonin đang diễn ra'], 'tương_đối':
         ['Suy gan nặng - giảm liều', 'Suy thận nặng (CrCl <30) - giảm liều',
@@ -130,12 +122,15 @@ SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS = {
         , 'timing':
         'Dùng 1 lần/ngày (buổi sáng hoặc tối tùy tác dụng phụ). Nếu gây mất ngủ → dùng buổi sáng. Nếu gây buồn ngủ → dùng buổi tối.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
+        'compatibility': [], 'incompatibility': [],
         }}, 'references': {'primary_sources': [
         'FDA Drug Label - Prozac (fluoxetine)',
         'UpToDate - Fluoxetine: Drug information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'American Psychiatric Association guidelines'], 'last_updated':
-        '2024-12-19', 'evidence_level': 'High - Multiple RCTs and systematic reviews'}}}
+        '2024-12-19', "evidence_level": "High - Multiple RCTs and systematic reviews"
+        }
+    }
+}
 
 __all__ = ['SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS']

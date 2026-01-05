@@ -128,11 +128,37 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-},
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "oncologic": "Black Box Warning - Osteosarcoma risk (increased in animal studies, unknown in humans - contraindicated in bone cancer, bone metastases, Paget's disease, prior bone radiation)",
+                "metabolic": "Hypercalcemia"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Black Box Warning - Maximum 24 months lifetime use (osteosarcoma risk) - CRITICAL",
+                "Black Box Warning - Contraindicated in bone cancer, bone metastases, Paget's disease, prior bone radiation - CRITICAL",
+                "Serum calcium (before and during treatment - hypercalcemia risk)",
+                "Renal function (creatinine, eGFR - not recommended if CrCl <30 ml/min)",
+                "Bone density (DEXA scan) before treatment and after 12-24 months",
+                "Calcium and vitamin D supplementation (required)"
+            ],
+            "look_alike_sound_alike": ["Abaloparatide", "Teriparatide", "Tymlos"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Osteosarcoma Risk (Maximum 24 Months Lifetime Use)",
+            "FDA Black Box Warning - Contraindicated in Bone Cancer/Bone Metastases/Paget's Disease",
+            "NOF Guidelines - Osteoporosis Treatment 2024",
+            "ASBMR Guidelines - PTH Analogs",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
+    },
 
     "Calcitonin": {
         "group": "Endocrinology - Calcitonin (Osteoporosis, Hypercalcemia)",
@@ -250,6 +276,32 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "last_updated": "2025-02-23",
             "evidence_level": "B – vai trò hạn chế, dùng chọn lọc",
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "oncologic": "Slight increased cancer risk with long-term nasal spray use (limited role, use only when benefits outweigh risks and no better alternatives)",
+                "allergic": "Allergic reactions, anaphylaxis (especially with salmon calcitonin)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Serum calcium (especially in hypercalcemia treatment)",
+                "Allergic reactions, anaphylaxis signs (urticaria, dyspnea) - CRITICAL",
+                "Bone pain/fracture pain (for pain relief assessment)",
+                "Cancer risk assessment (if long-term nasal spray use - limited role)"
+            ],
+            "look_alike_sound_alike": ["Calcitonin", "Calcitriol", "Calcium"]
+        },
+        "guideline_tags": [
+            "Endocrine Society Guidelines - Osteoporosis",
+            "FDA Drug Information - Calcitonin",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
     "Denosumab": {
         "group": "Endocrinology - RANKL Inhibitor (Osteoporosis)",
@@ -398,11 +450,46 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (FREEDOM)",
         },
-             "reversal_agents": {
-             "available": False,
-             "agents": []
-         },
-},
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "metabolic": "Black Box Warning - Hypocalcemia (common and serious, especially in renal impairment) - CRITICAL",
+                "dental": "Black Box Warning - Osteonecrosis of the jaw (ONJ) - especially in cancer patients, dental procedures",
+                "skeletal": "Black Box Warning - Atypical femur fractures - rare but serious",
+                "infectious": "Black Box Warning - Serious infections (increased risk)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Black Box Warning - Hypocalcemia signs (muscle cramps, numbness, seizures, arrhythmias) - CRITICAL, especially in renal impairment",
+                "Black Box Warning - Serum calcium, phosphorus, magnesium (before and during treatment) - CRITICAL",
+                "Black Box Warning - Calcium (1000-1200mg/day) and vitamin D (800-1000 IU/day) supplementation (before and during treatment) - CRITICAL",
+                "Black Box Warning - Dental evaluation before treatment (ONJ risk) - CRITICAL",
+                "Black Box Warning - Signs of ONJ (jaw pain, swelling, loose teeth, discharge) - CRITICAL",
+                "Black Box Warning - Atypical femur fracture signs (thigh, groin pain) - CRITICAL",
+                "Black Box Warning - Serious infections signs - CRITICAL",
+                "Renal function (creatinine, eGFR - increased hypocalcemia risk in renal impairment)",
+                "Bone density (DEXA scan) before treatment and after 1-2 years",
+                "Consider transition to bisphosphonate after stopping (rapid bone loss after discontinuation)"
+            ],
+            "look_alike_sound_alike": ["Denosumab", "Prolia", "Xgeva"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Hypocalcemia",
+            "FDA Black Box Warning - Osteonecrosis of the Jaw (ONJ)",
+            "FDA Black Box Warning - Atypical Femur Fractures",
+            "FDA Black Box Warning - Serious Infections",
+            "NOF Guidelines - Osteoporosis Treatment 2024",
+            "ASBMR Guidelines - RANKL Inhibitors",
+            "ASCO Guidelines - Cancer Bone Metastases",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
+    },
 
     "Raloxifene": {
         "group": "Endocrinology - SERM (Selective Estrogen Receptor Modulator)",
@@ -551,11 +638,37 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (MORE)",
         },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-},
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "cardiovascular": "Black Box Warning - Venous thromboembolism (DVT, PE) - CRITICAL",
+                "cardiovascular_other": "Black Box Warning - Fatal stroke risk"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Black Box Warning - Venous thromboembolism signs (DVT: leg swelling, pain; PE: dyspnea, chest pain) - CRITICAL",
+                "Black Box Warning - Stroke signs (weakness, speech disturbance) - CRITICAL",
+                "Black Box Warning - Discontinue at least 72 hours before major surgery or prolonged immobilization - CRITICAL",
+                "Black Box Warning - Contraindicated in history of DVT/PE - CRITICAL",
+                "INR (if co-administered with warfarin - increases anticoagulation)",
+                "Bone density (DEXA scan) before treatment and after 1-2 years"
+            ],
+            "look_alike_sound_alike": ["Raloxifene", "Evista"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Venous Thromboembolism (DVT, PE)",
+            "FDA Black Box Warning - Fatal Stroke Risk",
+            "NOF Guidelines - Osteoporosis Treatment 2024",
+            "ASBMR Guidelines - SERM Use",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
+    },
 
     "Romosozumab": {
         "group": "Endocrinology - Sclerostin Inhibitor (Osteoporosis - Anabolic)",
@@ -689,11 +802,36 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (FRAME)",
         },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-},
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "cardiovascular": "Black Box Warning - Myocardial infarction (MI) risk - contraindicated if MI in past year",
+                "cardiovascular_other": "Black Box Warning - Stroke risk - contraindicated if stroke/TIA in past year"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Black Box Warning - Cardiovascular events (MI, stroke) - contraindicated if MI/stroke/TIA in past year - CRITICAL",
+                "Black Box Warning - Maximum 12 months treatment duration - CRITICAL",
+                "Serum calcium (before and during treatment - hypercalcemia risk)",
+                "Bone density (DEXA scan) before treatment and after 12 months)",
+                "Calcium and vitamin D supplementation (required)"
+            ],
+            "look_alike_sound_alike": ["Romosozumab", "Evenity"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Myocardial Infarction Risk",
+            "FDA Black Box Warning - Stroke Risk",
+            "NOF Guidelines - Osteoporosis Treatment 2024",
+            "ASBMR Guidelines - Sclerostin Inhibitors",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
+    },
 
     "Teriparatide": {
         "group": "Endocrinology - PTH Analog (Osteoporosis - Anabolic)",
@@ -840,11 +978,39 @@ OSTEOPOROSIS_OTHER_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-},
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "oncologic": "Black Box Warning - Osteosarcoma risk (increased in animal studies, unknown in humans - contraindicated in bone cancer, bone metastases, Paget's disease, prior bone radiation, children/adolescents)",
+                "metabolic": "Hypercalcemia, hyperuricemia, gout"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Black Box Warning - Maximum 24 months lifetime use (osteosarcoma risk) - CRITICAL",
+                "Black Box Warning - Contraindicated in bone cancer, bone metastases, Paget's disease, prior bone radiation, children/adolescents - CRITICAL",
+                "Serum calcium (before and during treatment - hypercalcemia risk)",
+                "Serum uric acid (hyperuricemia, gout risk)",
+                "Renal function (creatinine, eGFR - not recommended if CrCl <30 ml/min)",
+                "Bone density (DEXA scan) before treatment and after 12-24 months",
+                "Calcium and vitamin D supplementation (required)",
+                "Digoxin interaction (increased hypercalcemia risk)"
+            ],
+            "look_alike_sound_alike": ["Teriparatide", "Abaloparatide", "Forteo"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Osteosarcoma Risk (Maximum 24 Months Lifetime Use)",
+            "FDA Black Box Warning - Contraindicated in Bone Cancer/Bone Metastases/Paget's Disease/Children",
+            "NOF Guidelines - Osteoporosis Treatment 2024",
+            "ASBMR Guidelines - PTH Analogs",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
+    },
 
 }
 

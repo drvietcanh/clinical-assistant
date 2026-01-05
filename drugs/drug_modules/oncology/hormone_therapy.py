@@ -571,7 +571,27 @@ HORMONE_THERAPY_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved, revolutionized ER-positive breast cancer treatment"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "High (with warfarin)",
+            "organ_toxicity": {"oncologic": "Black Box Warning - Uterine malignancy (endometrial cancer)", "cardiovascular": "Black Box Warning - Thromboembolic events (DVT, PE, stroke)", "ophthalmic": "Cataracts (common)", "metabolic": "Hypertriglyceridemia", "psychiatric": "Depression (common)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Black Box Warning - Uterine malignancy (gynecologic exam and ultrasound annually)", "Black Box Warning - Thromboembolic events (DVT, PE, stroke signs)", "Vaginal bleeding (abnormal bleeding - evaluate immediately)", "Ophthalmic exam (cataracts, every 1-2 years)", "Lipid panel (triglycerides, every 6-12 months)", "PT/INR (if used with warfarin)", "CYP2D6 inhibitors (avoid - reduces efficacy)"],
+            "look_alike_sound_alike": ["Tamoxifen", "Toremifene"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Uterine Malignancy (endometrial cancer)",
+            "FDA Black Box Warning - Thromboembolic Events (DVT, PE, stroke)",
+            "NCCN Guidelines - Breast Cancer",
+            "ASCO Guidelines - Breast Cancer",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
 
 }

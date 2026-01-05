@@ -3,49 +3,60 @@ Anticoagulants and Antiplatelets
 """
 
 ANTICOAGULANTS = {
-    "Apixaban": {
+    "Apixaban":     {
         "group": "Cardiovascular - Anticoagulant (Direct Factor Xa Inhibitor - DOAC)",
         "vietnamese_name": "Apixaban, Eliquis",
-        "administration": ["PO"],
+        "administration": [
+            "PO"
+    ],
         "indications": [
             "Phòng ngừa đột quỵ trong rung nhĩ không do van tim",
             "Phòng ngừa DVT/PE sau phẫu thuật thay khớp gối/háng",
             "Điều trị DVT/PE",
             "Phòng ngừa tái phát DVT/PE"
-        ],
-        "contraindications": [
-            "Dị ứng",
-            "Chảy máu đang hoạt động",
-            "Bệnh gan nặng (Child-Pugh C)"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng apixaban hoặc các thành phần khác",
+                "Chảy máu đang hoạt động",
+                "Bệnh gan nặng (Child-Pugh C) - tăng nguy cơ chảy máu",
+                "Mang thai - nguy cơ dị tật thai nhi, chảy máu thai nhi"
+    ],
+            "tương_đối": [
+                "Bệnh gan (Child-Pugh A, B) - thận trọng",
+                "Suy thận nặng - điều chỉnh liều",
+                "Dùng với CYP3A4/P-gp inhibitors mạnh - tránh dùng hoặc giảm liều",
+                "Dùng với CYP3A4/P-gp inducers mạnh - tránh dùng hoặc tăng liều"
+    ],
+        },
         "dosage": {
-            "adult_afib": "5mg x 2 lần/ngày, giảm xuống 2.5mg x 2 lần/ngày nếu có ≥2 yếu tố: tuổi ≥80, cân nặng ≤60kg, Cr ≥1.5mg/dL",
+            "adult_afib": """5mg x 2 lần/ngày, giảm xuống 2.5mg x 2 lần/ngày nếu có ≥2 yếu tố: tuổi ≥80, cân nặng ≤60kg, Cr ≥1.5mg/dL""",
             "adult_dvt_pe_treatment": "10mg x 2 lần/ngày x 7 ngày, sau đó 5mg x 2 lần/ngày",
             "adult_dvt_pe_prophylaxis": "2.5mg x 2 lần/ngày",
             "adult_surgery_prophylaxis": "2.5mg x 2 lần/ngày (bắt đầu 12-24 giờ sau phẫu thuật)",
             "adult_max": "10mg/ngày",
-            "notes": "DOAC (Direct Oral Anticoagulant). Uống với hoặc không có thức ăn. Không cần theo dõi INR. Điều chỉnh liều theo tuổi, cân nặng, Cr."
+            "notes": """DOAC (Direct Oral Anticoagulant). Uống với hoặc không có thức ăn. Không cần theo dõi INR. Điều chỉnh liều theo tuổi, cân nặng, Cr.""",
         },
         "side_effects": [
             "Chảy máu (nặng có thể tử vong)",
             "Buồn nôn",
             "Tăng ALT/AST (hiếm)",
             "Phản ứng dị ứng (hiếm)"
-        ],
+    ],
         "interactions": [
             "Aspirin/NSAID: tăng nguy cơ chảy máu",
             "Antiplatelets: tăng nguy cơ chảy máu",
             "CYP3A4/P-gp inhibitors mạnh (ketoconazole, ritonavir): tăng nồng độ apixaban",
             "CYP3A4/P-gp inducers mạnh (rifampin, carbamazepine): giảm nồng độ apixaban"
-        ],
+    ],
         "pregnancy": "X",
-        "mechanism_of_action": "Apixaban là direct factor Xa inhibitor (DOAC), ức chế trực tiếp yếu tố Xa, ngăn chặn sự hình thành thrombin và cục máu đông. Khác với warfarin, apixaban không cần antithrombin III, có tác dụng dự đoán được, không cần theo dõi INR, và ít tương tác thuốc hơn. Tác dụng: phòng ngừa đột quỵ trong rung nhĩ, phòng ngừa và điều trị DVT/PE. Tác dụng phụ: chảy máu (nặng có thể tử vong).",
+        "mechanism_of_action": """Apixaban là direct factor Xa inhibitor (DOAC), ức chế trực tiếp yếu tố Xa, ngăn chặn sự hình thành thrombin và cục máu đông. Khác với warfarin, apixaban không cần antithrombin III, có tác dụng dự đoán được, không cần theo dõi INR, và ít tương tác thuốc hơn. Tác dụng: phòng ngừa đột quỵ trong rung nhĩ, phòng ngừa và điều trị DVT/PE. Tác dụng phụ: chảy máu (nặng có thể tử vong).""",
         "monitoring": [
             "Dấu hiệu chảy máu: chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật",
             "Creatinine - điều chỉnh liều theo Cr (kết hợp với tuổi, cân nặng)",
             "ALT/AST - tăng men gan hiếm",
             "Không cần theo dõi INR (khác với warfarin)"
-        ],
+    ],
         "precautions": [
             "Chảy máu - nguy hiểm, có thể tử vong, theo dõi dấu hiệu chảy máu chặt chẽ",
             "Bệnh gan nặng (Child-Pugh C) - tránh dùng",
@@ -54,81 +65,68 @@ ANTICOAGULANTS = {
             "Tránh dùng với CYP3A4/P-gp inducers mạnh - giảm nồng độ apixaban, giảm hiệu quả",
             "Chuyển đổi từ warfarin - ngừng warfarin, bắt đầu apixaban khi INR <2.0",
             "Chuyển đổi sang warfarin - giảm liều apixaban 50%, bắt đầu warfarin, theo dõi INR"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "12 giờ",
             "onset": "1-3 giờ (PO)",
             "duration": "12-24 giờ",
             "protein_binding": "87%",
-            "clearance": "Gan: chuyển hóa qua CYP3A4. Thận: bài tiết một phần nguyên dạng (25%) và metabolites. Cần điều chỉnh liều ở suy thận nặng."
+            "clearance": """Gan: chuyển hóa qua CYP3A4. Thận: bài tiết một phần nguyên dạng (25%) và metabolites. Cần điều chỉnh liều ở suy thận nặng.""",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": "Chảy máu nặng có thể dẫn đến tử vong. Không có antidote đặc hiệu (trước khi có andexanet alfa). Ngừng ngay trước phẫu thuật có nguy cơ chảy máu cao.",
+        "black_box_warnings": """Chảy máu nặng có thể dẫn đến tử vong. Không có antidote đặc hiệu (trước khi có andexanet alfa). Ngừng ngay trước phẫu thuật có nguy cơ chảy máu cao.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "CYP3A4/P-gp inhibitors mạnh (Ketoconazole, Itraconazole, Ritonavir)",
                     "mechanism": "Ức chế chuyển hóa và bài tiết apixaban, tăng nồng độ apixaban",
                     "effect": "Tăng nồng độ apixaban, tăng nguy cơ chảy máu",
-                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: giảm liều apixaban 50% hoặc tránh dùng."
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: giảm liều apixaban 50% hoặc tránh dùng.",
                 },
-                {
+    {
                     "drug": "CYP3A4/P-gp inducers mạnh (Rifampin, Carbamazepine, Phenytoin)",
                     "mechanism": "Cảm ứng chuyển hóa và bài tiết apixaban, giảm nồng độ apixaban",
                     "effect": "Giảm nồng độ apixaban, giảm hiệu quả",
-                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: tăng liều apixaban hoặc chuyển sang warfarin."
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: tăng liều apixaban hoặc chuyển sang warfarin.",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Aspirin, NSAIDs",
                     "mechanism": "Tác dụng hiệp đồng ức chế đông máu",
                     "effect": "Tăng nguy cơ chảy máu",
-                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ."
+                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ.",
                 }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng apixaban hoặc các thành phần khác",
-                "Chảy máu đang hoạt động",
-                "Bệnh gan nặng (Child-Pugh C) - tăng nguy cơ chảy máu",
-                "Mang thai - nguy cơ dị tật thai nhi, chảy máu thai nhi"
-            ],
-            "tương_đối": [
-                "Bệnh gan (Child-Pugh A, B) - thận trọng",
-                "Suy thận nặng - điều chỉnh liều",
-                "Dùng với CYP3A4/P-gp inhibitors mạnh - tránh dùng hoặc giảm liều",
-                "Dùng với CYP3A4/P-gp inducers mạnh - tránh dùng hoặc tăng liều"
-            ]
+                ],
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "X",
-            "pregnancy_details": "Apixaban là FDA category X. Có nguy cơ dị tật thai nhi và chảy máu thai nhi. CHỐNG CHỈ ĐỊNH trong thai kỳ. Nếu có thai khi đang dùng: ngừng ngay, tư vấn di truyền.",
+            "pregnancy_details": """Apixaban là FDA category X. Có nguy cơ dị tật thai nhi và chảy máu thai nhi. CHỐNG CHỈ ĐỊNH trong thai kỳ. Nếu có thai khi đang dùng: ngừng ngay, tư vấn di truyền.""",
             "lactation": {
                 "safety": "Unknown",
                 "details": "Chưa biết apixaban có bài tiết vào sữa mẹ hay không. Không nên dùng khi cho con bú.",
-                "recommendation": "Tránh dùng khi cho con bú. Nếu cần: ngừng cho con bú hoặc chuyển sang thuốc khác."
-            }
+                "recommendation": "Tránh dùng khi cho con bú. Nếu cần: ngừng cho con bú hoặc chuyển sang thuốc khác.",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không đổi",
             "moderate": "Thận trọng, theo dõi tác dụng phụ",
             "severe": "CHỐNG CHỈ ĐỊNH (Child-Pugh C)",
-            "notes": "Apixaban chuyển hóa ở gan qua CYP3A4. Suy gan nặng (Child-Pugh C) làm tăng nguy cơ chảy máu."
+            "notes": "Apixaban chuyển hóa ở gan qua CYP3A4. Suy gan nặng (Child-Pugh C) làm tăng nguy cơ chảy máu.",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Điều chỉnh liều theo tuổi, cân nặng, Cr",
             "under_30": "Điều chỉnh liều theo tuổi, cân nặng, Cr",
-            "notes": "Apixaban bài tiết một phần qua thận (25% nguyên dạng). Suy thận nặng cần điều chỉnh liều (kết hợp với tuổi, cân nặng)."
+            "notes": """Apixaban bài tiết một phần qua thận (25% nguyên dạng). Suy thận nặng cần điều chỉnh liều (kết hợp với tuổi, cân nặng).""",
         },
         "overdose_management": {
             "symptoms": [
                 "Chảy máu nặng (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật)",
                 "Thiếu máu (mệt mỏi, khó thở, da xanh)"
-            ],
-            "antidote": "Andexanet alfa (Andexxa) - antidote đặc hiệu cho factor Xa inhibitors. Liều: 400-800mg IV bolus, sau đó truyền liên tục. Nếu không có: điều trị hỗ trợ.",
+    ],
+            "antidote": """Andexanet alfa (Andexxa) - antidote đặc hiệu cho factor Xa inhibitors. Liều: 400-800mg IV bolus, sau đó truyền liên tục. Nếu không có: điều trị hỗ trợ.""",
             "treatment": [
                 "Ngừng ngay apixaban",
                 "Andexanet alfa (nếu có): 400-800mg IV bolus, sau đó truyền liên tục",
@@ -142,27 +140,27 @@ ANTICOAGULANTS = {
                 "  - Theo dõi Hct, Hb",
                 "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
                 "Lưu ý: Half-life 12 giờ, tác dụng kéo dài sau khi ngừng."
-            ],
-            "monitoring": "Theo dõi dấu hiệu chảy máu (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật), công thức máu (thiếu máu), dấu hiệu sinh tồn trong ít nhất 24-48 giờ."
+    ],
+            "monitoring": """Theo dõi dấu hiệu chảy máu (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật), công thức máu (thiếu máu), dấu hiệu sinh tồn trong ít nhất 24-48 giờ.""",
         },
         "reversal_agents": {
             "available": True,
             "agents": [
-                {
+    {
                     "name": "Andexanet alfa (Andexxa)",
                     "dose": "400-800mg IV bolus, sau đó truyền liên tục",
                     "route": "IV",
-                    "notes": "Antidote đặc hiệu cho factor Xa inhibitors (rivaroxaban, apixaban, edoxaban). Có thể đảo ngược tác dụng chống đông."
+                    "notes": """Antidote đặc hiệu cho factor Xa inhibitors (rivaroxaban, apixaban, edoxaban). Có thể đảo ngược tác dụng chống đông.""",
                 }
-            ]
+                ],
         },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không có thức ăn.",
-                "timing": "Uống 2 lần/ngày (sáng và tối). Uống cùng thời điểm mỗi ngày. Không bỏ liều."
+                "timing": "Uống 2 lần/ngày (sáng và tối). Uống cùng thời điểm mỗi ngày. Không bỏ liều.",
             },
             "im": None,
-            "iv": None
+            "iv": None,
         },
         "references": {
             "primary_sources": [
@@ -170,16 +168,18 @@ ANTICOAGULANTS = {
                 "UpToDate - Apixaban: Drug information",
                 "Lexicomp - Apixaban monograph",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th ed"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved, multiple RCTs, clinical guidelines"
+            "evidence_level": "A - FDA-approved, multiple RCTs, clinical guidelines",
         },
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "High",
-            "organ_toxicity": {"hepatic": "Moderate"}
+            "organ_toxicity": {
+                "hepatic": "Moderate",
+            },
         },
         "guideline_tags": [
             "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
@@ -187,10 +187,9 @@ ANTICOAGULANTS = {
             "ESC Guidelines - Atrial Fibrillation",
             "ARISTOTLE Study - Atrial Fibrillation",
             "WHO Essential Medicines List"
-        ],
+    ],
         "last_updated": "2025-02-18",
     },
-
     "Aspirin": {
         "group": "Cardiovascular - Antiplatelet",
         "vietnamese_name": "Aspirin, Acetylsalicylic acid",
@@ -622,23 +621,34 @@ ANTICOAGULANTS = {
         }
     },
 
-    "Dabigatran": {
+    "Dabigatran":     {
         "group": "Cardiovascular - Anticoagulant (Direct Thrombin Inhibitor - DOAC)",
         "vietnamese_name": "Dabigatran, Pradaxa",
-        "administration": ["PO"],
+        "administration": [
+            "PO"
+    ],
         "indications": [
             "Phòng ngừa đột quỵ trong rung nhĩ không do van tim",
             "Phòng ngừa DVT/PE sau phẫu thuật thay khớp gối/háng",
             "Điều trị DVT/PE",
             "Phòng ngừa tái phát DVT/PE"
-        ],
-        "contraindications": [
-            "Dị ứng dabigatran hoặc bất kỳ thành phần nào",
-            "Chảy máu đang hoạt động",
-            "Bệnh van tim cơ học (cần warfarin)",
-            "Bệnh gan nặng (Child-Pugh C)",
-            "Suy thận nặng (CrCl <15 ml/min)"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng dabigatran hoặc các thành phần khác",
+                "Chảy máu đang hoạt động",
+                "Bệnh van tim cơ học (cần warfarin)",
+                "Bệnh gan nặng (Child-Pugh C)",
+                "Suy thận nặng (CrCl <15 ml/min) - CHỐNG CHỈ ĐỊNH",
+                "Mang thai - nguy cơ dị tật thai nhi, chảy máu thai nhi"
+    ],
+            "tương_đối": [
+                "Bệnh gan (Child-Pugh A, B) - thận trọng",
+                "Suy thận (CrCl 15-30) - giảm liều xuống 75mg x 2 lần/ngày",
+                "Dùng với P-gp inhibitors mạnh - tránh dùng hoặc giảm liều",
+                "Dùng với P-gp inducers mạnh - tránh dùng hoặc tăng liều"
+    ],
+        },
         "dosage": {
             "adult_afib": "150mg x 2 lần/ngày, giảm xuống 75mg x 2 lần/ngày nếu CrCl 15-30 ml/min",
             "adult_dvt_pe_treatment": "150mg x 2 lần/ngày (sau 5-10 ngày dùng heparin/LMWH)",
@@ -646,32 +656,32 @@ ANTICOAGULANTS = {
             "adult_surgery_prophylaxis": "110mg x 1 lần/ngày (bắt đầu 1-4 giờ sau phẫu thuật)",
             "adult_crcl_15_30": "75mg x 2 lần/ngày",
             "adult_crcl_<15": "CHỐNG CHỈ ĐỊNH",
-            "notes": "DOAC (Direct Oral Anticoagulant), ức chế thrombin trực tiếp. Uống với thức ăn. Không cần theo dõi INR. Điều chỉnh liều theo CrCl. Có antidote đặc hiệu (idarucizumab)."
+            "notes": """DOAC (Direct Oral Anticoagulant), ức chế thrombin trực tiếp. Uống với thức ăn. Không cần theo dõi INR. Điều chỉnh liều theo CrCl. Có antidote đặc hiệu (idarucizumab).""",
         },
         "renal_adjustment": {
             "normal": "Không đổi (CrCl >30: 150mg x 2 lần/ngày)",
             "30_60": "Không đổi (CrCl >30: 150mg x 2 lần/ngày)",
-            "under_30": "Giảm liều (CrCl 15-30: 75mg x 2 lần/ngày), CHỐNG CHỈ ĐỊNH nếu CrCl <15"
+            "under_30": "Giảm liều (CrCl 15-30: 75mg x 2 lần/ngày), CHỐNG CHỈ ĐỊNH nếu CrCl <15",
         },
         "side_effects": [
             "Chảy máu (nặng có thể tử vong)",
             "Rối loạn tiêu hóa (buồn nôn, đau bụng, tiêu chảy)",
             "Tăng nguy cơ nhồi máu cơ tim (nhẹ, so với warfarin)",
             "Phản ứng dị ứng (hiếm)"
-        ],
+    ],
         "interactions": [
             "P-gp inhibitors mạnh (ketoconazole, dronedarone): tăng nồng độ dabigatran",
             "P-gp inducers mạnh (rifampin): giảm nồng độ dabigatran",
             "Aspirin/NSAID: tăng nguy cơ chảy máu",
             "Antiplatelets: tăng nguy cơ chảy máu"
-        ],
+    ],
         "pregnancy": "X",
-        "mechanism_of_action": "Dabigatran là direct thrombin inhibitor (DOAC), ức chế trực tiếp thrombin (yếu tố IIa), ngăn chặn sự hình thành cục máu đông. Khác với warfarin, dabigatran không cần antithrombin III, có tác dụng dự đoán được, không cần theo dõi INR, và ít tương tác thuốc hơn. Dabigatran là prodrug (dabigatran etexilate), chuyển hóa thành dabigatran (hoạt chất) trong ruột. Tác dụng: phòng ngừa đột quỵ trong rung nhĩ, phòng ngừa và điều trị DVT/PE. Tác dụng phụ: chảy máu (nặng có thể tử vong), rối loạn tiêu hóa. ĐẶC ĐIỂM: Có antidote đặc hiệu (idarucizumab - Praxbind).",
+        "mechanism_of_action": """Dabigatran là direct thrombin inhibitor (DOAC), ức chế trực tiếp thrombin (yếu tố IIa), ngăn chặn sự hình thành cục máu đông. Khác với warfarin, dabigatran không cần antithrombin III, có tác dụng dự đoán được, không cần theo dõi INR, và ít tương tác thuốc hơn. Dabigatran là prodrug (dabigatran etexilate), chuyển hóa thành dabigatran (hoạt chất) trong ruột. Tác dụng: phòng ngừa đột quỵ trong rung nhĩ, phòng ngừa và điều trị DVT/PE. Tác dụng phụ: chảy máu (nặng có thể tử vong), rối loạn tiêu hóa. ĐẶC ĐIỂM: Có antidote đặc hiệu (idarucizumab - Praxbind).""",
         "monitoring": [
             "Dấu hiệu chảy máu: chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật",
             "Creatinine, CrCl - điều chỉnh liều theo CrCl (QUAN TRỌNG)",
             "Không cần theo dõi INR (khác với warfarin)"
-        ],
+    ],
         "precautions": [
             "Chảy máu - nguy hiểm, có thể tử vong, theo dõi dấu hiệu chảy máu chặt chẽ",
             "Suy thận nặng (CrCl <15) - CHỐNG CHỈ ĐỊNH",
@@ -682,77 +692,62 @@ ANTICOAGULANTS = {
             "Chuyển đổi sang warfarin - giảm liều dabigatran 50%, bắt đầu warfarin, theo dõi INR",
             "Uống với thức ăn để giảm rối loạn tiêu hóa",
             "Có antidote đặc hiệu (idarucizumab) - ưu điểm so với các DOAC khác"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "12-17 giờ",
             "onset": "1-2 giờ (PO)",
             "duration": "12-24 giờ",
             "protein_binding": "35%",
-            "clearance": "Thận: bài tiết chủ yếu nguyên dạng (80%). Cần điều chỉnh liều ở suy thận. Không chuyển hóa qua CYP450."
+            "clearance": """Thận: bài tiết chủ yếu nguyên dạng (80%). Cần điều chỉnh liều ở suy thận. Không chuyển hóa qua CYP450.""",
         },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Viên nang: bảo quản trong bao bì kín, không để trong hộp đựng thuốc hàng ngày (hút ẩm).",
-        "black_box_warnings": "Chảy máu nặng có thể dẫn đến tử vong. Có antidote đặc hiệu (idarucizumab). Ngừng ngay trước phẫu thuật có nguy cơ chảy máu cao. Tăng nguy cơ nhồi máu cơ tim nhẹ so với warfarin.",
+        "storage": """Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Viên nang: bảo quản trong bao bì kín, không để trong hộp đựng thuốc hàng ngày (hút ẩm).""",
+        "black_box_warnings": """Chảy máu nặng có thể dẫn đến tử vong. Có antidote đặc hiệu (idarucizumab). Ngừng ngay trước phẫu thuật có nguy cơ chảy máu cao. Tăng nguy cơ nhồi máu cơ tim nhẹ so với warfarin.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "P-gp inhibitors mạnh (Ketoconazole, Dronedarone)",
                     "mechanism": "Ức chế P-gp, tăng hấp thu dabigatran, tăng nồng độ dabigatran",
                     "effect": "Tăng nồng độ dabigatran, tăng nguy cơ chảy máu",
-                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: giảm liều dabigatran hoặc tránh dùng."
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: giảm liều dabigatran hoặc tránh dùng.",
                 },
-                {
+    {
                     "drug": "P-gp inducers mạnh (Rifampin, Carbamazepine)",
                     "mechanism": "Cảm ứng P-gp, giảm hấp thu dabigatran, giảm nồng độ dabigatran",
                     "effect": "Giảm nồng độ dabigatran, giảm hiệu quả",
-                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: tăng liều dabigatran hoặc chuyển sang warfarin."
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: tăng liều dabigatran hoặc chuyển sang warfarin.",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Aspirin, NSAIDs",
                     "mechanism": "Tác dụng hiệp đồng ức chế đông máu",
                     "effect": "Tăng nguy cơ chảy máu",
-                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ."
+                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ.",
                 }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng dabigatran hoặc các thành phần khác",
-                "Chảy máu đang hoạt động",
-                "Bệnh van tim cơ học (cần warfarin)",
-                "Bệnh gan nặng (Child-Pugh C)",
-                "Suy thận nặng (CrCl <15 ml/min) - CHỐNG CHỈ ĐỊNH",
-                "Mang thai - nguy cơ dị tật thai nhi, chảy máu thai nhi"
-            ],
-            "tương_đối": [
-                "Bệnh gan (Child-Pugh A, B) - thận trọng",
-                "Suy thận (CrCl 15-30) - giảm liều xuống 75mg x 2 lần/ngày",
-                "Dùng với P-gp inhibitors mạnh - tránh dùng hoặc giảm liều",
-                "Dùng với P-gp inducers mạnh - tránh dùng hoặc tăng liều"
-            ]
+                ],
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "X",
-            "pregnancy_details": "Dabigatran là FDA category X. Có nguy cơ dị tật thai nhi và chảy máu thai nhi. CHỐNG CHỈ ĐỊNH trong thai kỳ. Nếu có thai khi đang dùng: ngừng ngay, tư vấn di truyền.",
+            "pregnancy_details": """Dabigatran là FDA category X. Có nguy cơ dị tật thai nhi và chảy máu thai nhi. CHỐNG CHỈ ĐỊNH trong thai kỳ. Nếu có thai khi đang dùng: ngừng ngay, tư vấn di truyền.""",
             "lactation": {
                 "safety": "Unknown",
                 "details": "Chưa biết dabigatran có bài tiết vào sữa mẹ hay không. Không nên dùng khi cho con bú.",
-                "recommendation": "Tránh dùng khi cho con bú. Nếu cần: ngừng cho con bú hoặc chuyển sang thuốc khác."
-            }
+                "recommendation": "Tránh dùng khi cho con bú. Nếu cần: ngừng cho con bú hoặc chuyển sang thuốc khác.",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không đổi",
             "moderate": "Thận trọng, theo dõi tác dụng phụ",
             "severe": "CHỐNG CHỈ ĐỊNH (Child-Pugh C)",
-            "notes": "Dabigatran không chuyển hóa qua gan đáng kể. Tuy nhiên, suy gan nặng (Child-Pugh C) làm tăng nguy cơ chảy máu."
+            "notes": """Dabigatran không chuyển hóa qua gan đáng kể. Tuy nhiên, suy gan nặng (Child-Pugh C) làm tăng nguy cơ chảy máu.""",
         },
         "overdose_management": {
             "symptoms": [
                 "Chảy máu nặng (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật)",
                 "Thiếu máu (mệt mỏi, khó thở, da xanh)"
-            ],
-            "antidote": "Idarucizumab (Praxbind) - ANTIDOTE ĐẶC HIỆU cho dabigatran. Liều: 5g IV (2 lọ 2.5g). Tác dụng ngay lập tức. Nếu không có: điều trị hỗ trợ.",
+    ],
+            "antidote": """Idarucizumab (Praxbind) - ANTIDOTE ĐẶC HIỆU cho dabigatran. Liều: 5g IV (2 lọ 2.5g). Tác dụng ngay lập tức. Nếu không có: điều trị hỗ trợ.""",
             "treatment": [
                 "Ngừng ngay dabigatran",
                 "Idarucizumab (nếu có): 5g IV (2 lọ 2.5g) - ANTIDOTE ĐẶC HIỆU",
@@ -766,27 +761,27 @@ ANTICOAGULANTS = {
                 "  - Theo dõi Hct, Hb",
                 "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
                 "Lưu ý: Half-life 12-17 giờ, tác dụng kéo dài sau khi ngừng."
-            ],
-            "monitoring": "Theo dõi dấu hiệu chảy máu (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật), công thức máu (thiếu máu), dấu hiệu sinh tồn trong ít nhất 24-48 giờ."
+    ],
+            "monitoring": """Theo dõi dấu hiệu chảy máu (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật), công thức máu (thiếu máu), dấu hiệu sinh tồn trong ít nhất 24-48 giờ.""",
         },
         "reversal_agents": {
             "available": True,
             "agents": [
-                {
+    {
                     "name": "Idarucizumab (Praxbind)",
                     "dose": "5g IV (2 lọ 2.5g)",
                     "route": "IV",
-                    "notes": "ANTIDOTE ĐẶC HIỆU cho dabigatran. Tác dụng ngay lập tức. Có thể đảo ngược hoàn toàn tác dụng chống đông của dabigatran."
+                    "notes": """ANTIDOTE ĐẶC HIỆU cho dabigatran. Tác dụng ngay lập tức. Có thể đảo ngược hoàn toàn tác dụng chống đông của dabigatran.""",
                 }
-            ]
+                ],
         },
         "administration_instructions": {
             "oral": {
                 "with_food": "Nên uống với thức ăn để giảm rối loạn tiêu hóa.",
-                "timing": "Uống 2 lần/ngày (sáng và tối). Uống cùng thời điểm mỗi ngày. Không bỏ liều. Bảo quản viên nang trong bao bì kín, không để trong hộp đựng thuốc hàng ngày (hút ẩm)."
+                "timing": """Uống 2 lần/ngày (sáng và tối). Uống cùng thời điểm mỗi ngày. Không bỏ liều. Bảo quản viên nang trong bao bì kín, không để trong hộp đựng thuốc hàng ngày (hút ẩm).""",
             },
             "im": None,
-            "iv": None
+            "iv": None,
         },
         "references": {
             "primary_sources": [
@@ -795,16 +790,19 @@ ANTICOAGULANTS = {
                 "RE-LY Study - New England Journal of Medicine (2009) - Dabigatran vs Warfarin trong AF",
                 "RE-COVER Study - New England Journal of Medicine (2009) - Dabigatran trong DVT/PE",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th ed"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved, multiple large RCTs (RE-LY, RE-COVER), clinical guidelines"
+            "evidence_level": "A - FDA-approved, multiple large RCTs (RE-LY, RE-COVER), clinical guidelines",
         },
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "High",
-            "organ_toxicity": {"gastrointestinal": "Moderate", "cardiac": "Moderate (MI risk)"}
+            "organ_toxicity": {
+                "gastrointestinal": "Moderate",
+                "cardiac": "Moderate (MI risk)",
+            },
         },
         "guideline_tags": [
             "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
@@ -813,59 +811,70 @@ ANTICOAGULANTS = {
             "RE-LY Study - Atrial Fibrillation",
             "RE-COVER Study - VTE Treatment",
             "WHO Essential Medicines List"
-        ],
+    ],
         "last_updated": "2025-02-18",
     },
-
-    "Edoxaban": {
+    "Edoxaban":     {
         "group": "Cardiovascular - Anticoagulant (Direct Factor Xa Inhibitor - DOAC)",
         "vietnamese_name": "Edoxaban, Savaysa, Lixiana",
-        "administration": ["PO"],
+        "administration": [
+            "PO"
+    ],
         "indications": [
             "Phòng ngừa đột quỵ trong rung nhĩ không do van tim",
             "Điều trị DVT/PE",
             "Phòng ngừa tái phát DVT/PE"
-        ],
-        "contraindications": [
-            "Dị ứng edoxaban hoặc bất kỳ thành phần nào",
-            "Chảy máu đang hoạt động",
-            "Bệnh van tim cơ học (cần warfarin)",
-            "Bệnh gan nặng (Child-Pugh C)",
-            "Suy thận nặng (CrCl <15 ml/min)"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng edoxaban hoặc các thành phần khác",
+                "Chảy máu đang hoạt động",
+                "Bệnh van tim cơ học (cần warfarin)",
+                "Bệnh gan nặng (Child-Pugh C)",
+                "Suy thận nặng (CrCl <15 ml/min) - CHỐNG CHỈ ĐỊNH",
+                "Mang thai - nguy cơ dị tật thai nhi, chảy máu thai nhi"
+    ],
+            "tương_đối": [
+                "Bệnh gan (Child-Pugh A, B) - thận trọng",
+                "Suy thận (CrCl 15-50) - giảm liều xuống 30mg/ngày",
+                "Cân nặng ≤60kg - giảm liều xuống 30mg/ngày",
+                "Dùng với P-gp inhibitors mạnh - giảm liều xuống 30mg/ngày",
+                "Dùng với P-gp inducers mạnh - tránh dùng hoặc tăng liều"
+    ],
+        },
         "dosage": {
-            "adult_afib": "60mg x 1 lần/ngày, giảm xuống 30mg x 1 lần/ngày nếu có ≥1 yếu tố: CrCl 15-50 ml/min, cân nặng ≤60kg, dùng với P-gp inhibitors (verapamil, quinidine, dronedarone)",
+            "adult_afib": """60mg x 1 lần/ngày, giảm xuống 30mg x 1 lần/ngày nếu có ≥1 yếu tố: CrCl 15-50 ml/min, cân nặng ≤60kg, dùng với P-gp inhibitors (verapamil, quinidine, dronedarone)""",
             "adult_dvt_pe_treatment": "60mg x 1 lần/ngày (sau 5-10 ngày dùng heparin/LMWH)",
             "adult_dvt_pe_prophylaxis": "60mg x 1 lần/ngày",
             "adult_crcl_15_50": "30mg x 1 lần/ngày",
             "adult_crcl_<15": "CHỐNG CHỈ ĐỊNH",
-            "notes": "DOAC (Direct Oral Anticoagulant), ức chế factor Xa trực tiếp. Uống với hoặc không có thức ăn. Không cần theo dõi INR. Điều chỉnh liều theo CrCl, cân nặng, và P-gp inhibitors. Có antidote đặc hiệu (andexanet alfa)."
+            "notes": """DOAC (Direct Oral Anticoagulant), ức chế factor Xa trực tiếp. Uống với hoặc không có thức ăn. Không cần theo dõi INR. Điều chỉnh liều theo CrCl, cân nặng, và P-gp inhibitors. Có antidote đặc hiệu (andexanet alfa).""",
         },
         "renal_adjustment": {
             "normal": "Không đổi (CrCl >50: 60mg x 1 lần/ngày)",
             "30_60": "Giảm liều (CrCl 15-50: 30mg x 1 lần/ngày)",
-            "under_30": "Giảm liều (CrCl 15-50: 30mg x 1 lần/ngày), CHỐNG CHỈ ĐỊNH nếu CrCl <15"
+            "under_30": "Giảm liều (CrCl 15-50: 30mg x 1 lần/ngày), CHỐNG CHỈ ĐỊNH nếu CrCl <15",
         },
         "side_effects": [
             "Chảy máu (nặng có thể tử vong)",
             "Rối loạn tiêu hóa (buồn nôn, đau bụng)",
             "Tăng ALT/AST (hiếm)",
             "Phản ứng dị ứng (hiếm)"
-        ],
+    ],
         "interactions": [
             "P-gp inhibitors mạnh (verapamil, quinidine, dronedarone): tăng nồng độ edoxaban, giảm liều xuống 30mg/ngày",
             "P-gp inducers mạnh (rifampin): giảm nồng độ edoxaban",
             "Aspirin/NSAID: tăng nguy cơ chảy máu",
             "Antiplatelets: tăng nguy cơ chảy máu"
-        ],
+    ],
         "pregnancy": "X",
-        "mechanism_of_action": "Edoxaban là direct factor Xa inhibitor (DOAC), ức chế trực tiếp yếu tố Xa, ngăn chặn sự hình thành thrombin và cục máu đông. Khác với warfarin, edoxaban không cần antithrombin III, có tác dụng dự đoán được, không cần theo dõi INR, và ít tương tác thuốc hơn. Tác dụng: phòng ngừa đột quỵ trong rung nhĩ, điều trị và phòng ngừa tái phát DVT/PE. Tác dụng phụ: chảy máu (nặng có thể tử vong). ĐẶC ĐIỂM: Có antidote đặc hiệu (andexanet alfa - Andexxa).",
+        "mechanism_of_action": """Edoxaban là direct factor Xa inhibitor (DOAC), ức chế trực tiếp yếu tố Xa, ngăn chặn sự hình thành thrombin và cục máu đông. Khác với warfarin, edoxaban không cần antithrombin III, có tác dụng dự đoán được, không cần theo dõi INR, và ít tương tác thuốc hơn. Tác dụng: phòng ngừa đột quỵ trong rung nhĩ, điều trị và phòng ngừa tái phát DVT/PE. Tác dụng phụ: chảy máu (nặng có thể tử vong). ĐẶC ĐIỂM: Có antidote đặc hiệu (andexanet alfa - Andexxa).""",
         "monitoring": [
             "Dấu hiệu chảy máu: chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật",
             "Creatinine, CrCl - điều chỉnh liều theo CrCl, cân nặng, và P-gp inhibitors (QUAN TRỌNG)",
             "ALT/AST - tăng men gan hiếm",
             "Không cần theo dõi INR (khác với warfarin)"
-        ],
+    ],
         "precautions": [
             "Chảy máu - nguy hiểm, có thể tử vong, theo dõi dấu hiệu chảy máu chặt chẽ",
             "Suy thận nặng (CrCl <15) - CHỐNG CHỈ ĐỊNH",
@@ -875,78 +884,62 @@ ANTICOAGULANTS = {
             "Chuyển đổi từ warfarin - ngừng warfarin, bắt đầu edoxaban khi INR <2.5",
             "Chuyển đổi sang warfarin - giảm liều edoxaban 50%, bắt đầu warfarin, theo dõi INR",
             "Có antidote đặc hiệu (andexanet alfa) - ưu điểm"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "10-14 giờ",
             "onset": "1-2 giờ (PO)",
             "duration": "12-24 giờ",
             "protein_binding": "55%",
-            "clearance": "Thận: bài tiết một phần nguyên dạng (50%) và metabolites. Cần điều chỉnh liều ở suy thận. Chuyển hóa một phần qua CYP3A4."
+            "clearance": """Thận: bài tiết một phần nguyên dạng (50%) và metabolites. Cần điều chỉnh liều ở suy thận. Chuyển hóa một phần qua CYP3A4.""",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": "Chảy máu nặng có thể dẫn đến tử vong. Có antidote đặc hiệu (andexanet alfa). Ngừng ngay trước phẫu thuật có nguy cơ chảy máu cao.",
+        "black_box_warnings": """Chảy máu nặng có thể dẫn đến tử vong. Có antidote đặc hiệu (andexanet alfa). Ngừng ngay trước phẫu thuật có nguy cơ chảy máu cao.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "P-gp inhibitors mạnh (Verapamil, Quinidine, Dronedarone)",
                     "mechanism": "Ức chế P-gp, tăng hấp thu edoxaban, tăng nồng độ edoxaban",
                     "effect": "Tăng nồng độ edoxaban, tăng nguy cơ chảy máu",
-                    "management": "GIẢM LIỀU XUỐNG 30MG/NGÀY khi dùng với P-gp inhibitors mạnh. Theo dõi dấu hiệu chảy máu chặt chẽ."
+                    "management": "GIẢM LIỀU XUỐNG 30MG/NGÀY khi dùng với P-gp inhibitors mạnh. Theo dõi dấu hiệu chảy máu chặt chẽ.",
                 },
-                {
+    {
                     "drug": "P-gp inducers mạnh (Rifampin, Carbamazepine)",
                     "mechanism": "Cảm ứng P-gp, giảm hấp thu edoxaban, giảm nồng độ edoxaban",
                     "effect": "Giảm nồng độ edoxaban, giảm hiệu quả",
-                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: tăng liều edoxaban hoặc chuyển sang warfarin."
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: tăng liều edoxaban hoặc chuyển sang warfarin.",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Aspirin, NSAIDs",
                     "mechanism": "Tác dụng hiệp đồng ức chế đông máu",
                     "effect": "Tăng nguy cơ chảy máu",
-                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ."
+                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ.",
                 }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng edoxaban hoặc các thành phần khác",
-                "Chảy máu đang hoạt động",
-                "Bệnh van tim cơ học (cần warfarin)",
-                "Bệnh gan nặng (Child-Pugh C)",
-                "Suy thận nặng (CrCl <15 ml/min) - CHỐNG CHỈ ĐỊNH",
-                "Mang thai - nguy cơ dị tật thai nhi, chảy máu thai nhi"
-            ],
-            "tương_đối": [
-                "Bệnh gan (Child-Pugh A, B) - thận trọng",
-                "Suy thận (CrCl 15-50) - giảm liều xuống 30mg/ngày",
-                "Cân nặng ≤60kg - giảm liều xuống 30mg/ngày",
-                "Dùng với P-gp inhibitors mạnh - giảm liều xuống 30mg/ngày",
-                "Dùng với P-gp inducers mạnh - tránh dùng hoặc tăng liều"
-            ]
+                ],
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "X",
-            "pregnancy_details": "Edoxaban là FDA category X. Có nguy cơ dị tật thai nhi và chảy máu thai nhi. CHỐNG CHỈ ĐỊNH trong thai kỳ. Nếu có thai khi đang dùng: ngừng ngay, tư vấn di truyền.",
+            "pregnancy_details": """Edoxaban là FDA category X. Có nguy cơ dị tật thai nhi và chảy máu thai nhi. CHỐNG CHỈ ĐỊNH trong thai kỳ. Nếu có thai khi đang dùng: ngừng ngay, tư vấn di truyền.""",
             "lactation": {
                 "safety": "Unknown",
                 "details": "Chưa biết edoxaban có bài tiết vào sữa mẹ hay không. Không nên dùng khi cho con bú.",
-                "recommendation": "Tránh dùng khi cho con bú. Nếu cần: ngừng cho con bú hoặc chuyển sang thuốc khác."
-            }
+                "recommendation": "Tránh dùng khi cho con bú. Nếu cần: ngừng cho con bú hoặc chuyển sang thuốc khác.",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không đổi",
             "moderate": "Thận trọng, theo dõi tác dụng phụ",
             "severe": "CHỐNG CHỈ ĐỊNH (Child-Pugh C)",
-            "notes": "Edoxaban chuyển hóa một phần ở gan qua CYP3A4. Suy gan nặng (Child-Pugh C) làm tăng nguy cơ chảy máu."
+            "notes": """Edoxaban chuyển hóa một phần ở gan qua CYP3A4. Suy gan nặng (Child-Pugh C) làm tăng nguy cơ chảy máu.""",
         },
         "overdose_management": {
             "symptoms": [
                 "Chảy máu nặng (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật)",
                 "Thiếu máu (mệt mỏi, khó thở, da xanh)"
-            ],
-            "antidote": "Andexanet alfa (Andexxa) - antidote đặc hiệu cho factor Xa inhibitors. Liều: 400-800mg IV bolus, sau đó truyền liên tục. Nếu không có: điều trị hỗ trợ.",
+    ],
+            "antidote": """Andexanet alfa (Andexxa) - antidote đặc hiệu cho factor Xa inhibitors. Liều: 400-800mg IV bolus, sau đó truyền liên tục. Nếu không có: điều trị hỗ trợ.""",
             "treatment": [
                 "Ngừng ngay edoxaban",
                 "Andexanet alfa (nếu có): 400-800mg IV bolus, sau đó truyền liên tục",
@@ -960,27 +953,27 @@ ANTICOAGULANTS = {
                 "  - Theo dõi Hct, Hb",
                 "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
                 "Lưu ý: Half-life 10-14 giờ, tác dụng kéo dài sau khi ngừng."
-            ],
-            "monitoring": "Theo dõi dấu hiệu chảy máu (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật), công thức máu (thiếu máu), dấu hiệu sinh tồn trong ít nhất 24-48 giờ."
+    ],
+            "monitoring": """Theo dõi dấu hiệu chảy máu (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật), công thức máu (thiếu máu), dấu hiệu sinh tồn trong ít nhất 24-48 giờ.""",
         },
         "reversal_agents": {
             "available": True,
             "agents": [
-                {
+    {
                     "name": "Andexanet alfa (Andexxa)",
                     "dose": "400-800mg IV bolus, sau đó truyền liên tục",
                     "route": "IV",
-                    "notes": "Antidote đặc hiệu cho factor Xa inhibitors (rivaroxaban, apixaban, edoxaban). Có thể đảo ngược tác dụng chống đông."
+                    "notes": """Antidote đặc hiệu cho factor Xa inhibitors (rivaroxaban, apixaban, edoxaban). Có thể đảo ngược tác dụng chống đông.""",
                 }
-            ]
+                ],
         },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với hoặc không có thức ăn.",
-                "timing": "Uống 1 lần/ngày, cùng thời điểm mỗi ngày. Không bỏ liều."
+                "timing": "Uống 1 lần/ngày, cùng thời điểm mỗi ngày. Không bỏ liều.",
             },
             "im": None,
-            "iv": None
+            "iv": None,
         },
         "references": {
             "primary_sources": [
@@ -989,16 +982,18 @@ ANTICOAGULANTS = {
                 "ENGAGE AF-TIMI 48 Study - New England Journal of Medicine (2013) - Edoxaban vs Warfarin trong AF",
                 "Hokusai-VTE Study - New England Journal of Medicine (2013) - Edoxaban trong DVT/PE",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th ed"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved, multiple large RCTs (ENGAGE AF-TIMI 48, Hokusai-VTE), clinical guidelines"
+            "evidence_level": "A - FDA-approved, multiple large RCTs (ENGAGE AF-TIMI 48, Hokusai-VTE), clinical guidelines",
         },
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "High",
-            "organ_toxicity": {"hepatic": "Moderate"}
+            "organ_toxicity": {
+                "hepatic": "Moderate",
+            },
         },
         "guideline_tags": [
             "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
@@ -1007,32 +1002,42 @@ ANTICOAGULANTS = {
             "ENGAGE AF-TIMI 48 Study - Atrial Fibrillation",
             "Hokusai-VTE Study - VTE Treatment",
             "WHO Essential Medicines List"
-        ],
+    ],
         "last_updated": "2025-02-18",
     },
-    "Enoxaparin": {
+    "Enoxaparin":     {
         "group": "Cardiovascular - Anticoagulant (Low Molecular Weight Heparin)",
         "vietnamese_name": "Enoxaparin, Lovenox, Clexane",
-        "administration": ["SC"],
+        "administration": [
+            "SC"
+    ],
         "indications": [
             "Phòng ngừa DVT/PE sau phẫu thuật",
             "Điều trị DVT/PE",
             "Điều trị hội chứng mạch vành cấp (NSTEMI, STEMI)",
             "Phòng ngừa DVT/PE ở bệnh nhân nằm liệt giường"
-        ],
-        "contraindications": [
-            "Dị ứng heparin, LMWH, hoặc pork products",
-            "Chảy máu đang hoạt động",
-            "Giảm tiểu cầu do heparin (HIT) - hiện tại hoặc tiền sử",
-            "Suy thận nặng (CrCl <30) - tăng nguy cơ tích lũy"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng heparin, LMWH, hoặc pork products",
+                "Chảy máu đang hoạt động",
+                "Giảm tiểu cầu do heparin (HIT) - hiện tại hoặc tiền sử",
+                "Suy thận nặng (CrCl <30) - tăng nguy cơ tích lũy"
+    ],
+            "tương_đối": [
+                "Suy thận (CrCl 30-60) - tăng nguy cơ tích lũy, giảm liều hoặc theo dõi anti-Xa",
+                "Béo phì - có thể cần điều chỉnh liều, theo dõi anti-Xa",
+                "Mang thai - có thể dùng nhưng cần theo dõi anti-Xa",
+                "Dùng với aspirin/NSAID, antiplatelets - tăng nguy cơ chảy máu"
+    ],
+        },
         "dosage": {
             "adult_dvt_pe_treatment": "1mg/kg SC x 2 lần/ngày HOẶC 1.5mg/kg SC x 1 lần/ngày",
             "adult_dvt_pe_prophylaxis": "40mg SC x 1 lần/ngày",
             "adult_acs": "1mg/kg SC x 2 lần/ngày (kết hợp với aspirin)",
             "adult_surgery_prophylaxis": "40mg SC x 1 lần/ngày (bắt đầu 12 giờ trước phẫu thuật)",
             "adult_max": "Không có liều tối đa cố định, điều chỉnh theo cân nặng và chỉ định",
-            "notes": "Liều điều chỉnh theo cân nặng. Không cần theo dõi aPTT thường xuyên (khác với heparin). Theo dõi anti-Xa nếu cần."
+            "notes": """Liều điều chỉnh theo cân nặng. Không cần theo dõi aPTT thường xuyên (khác với heparin). Theo dõi anti-Xa nếu cần.""",
         },
         "side_effects": [
             "Chảy máu (nặng có thể tử vong)",
@@ -1040,22 +1045,22 @@ ANTICOAGULANTS = {
             "Tăng ALT/AST (hiếm)",
             "Phản ứng tại chỗ tiêm (đỏ, sưng, đau)",
             "Loãng xương (với dùng dài ngày)"
-        ],
+    ],
         "interactions": [
             "Aspirin/NSAID: tăng nguy cơ chảy máu",
             "Antiplatelets: tăng nguy cơ chảy máu",
             "Warfarin: tăng nguy cơ chảy máu (dùng chung trong quá trình chuyển đổi)",
             "Thrombolytics: tăng nguy cơ chảy máu nặng"
-        ],
+    ],
         "pregnancy": "B",
-        "mechanism_of_action": "Enoxaparin là low molecular weight heparin (LMWH), ức chế yếu tố Xa và yếu tố IIa (thrombin) thông qua antithrombin III. Khác với heparin không phân đoạn, enoxaparin ưu tiên ức chế yếu tố Xa hơn yếu tố IIa (tỷ lệ 3:1 đến 4:1), có tác dụng dự đoán được hơn, ít gây HIT hơn, và không cần theo dõi aPTT thường xuyên. Tác dụng: phòng ngừa và điều trị DVT/PE, điều trị hội chứng mạch vành cấp. Tác dụng phụ: chảy máu (nặng có thể tử vong), giảm tiểu cầu do heparin (HIT) - hiếm nhưng nguy hiểm.",
+        "mechanism_of_action": """Enoxaparin là low molecular weight heparin (LMWH), ức chế yếu tố Xa và yếu tố IIa (thrombin) thông qua antithrombin III. Khác với heparin không phân đoạn, enoxaparin ưu tiên ức chế yếu tố Xa hơn yếu tố IIa (tỷ lệ 3:1 đến 4:1), có tác dụng dự đoán được hơn, ít gây HIT hơn, và không cần theo dõi aPTT thường xuyên. Tác dụng: phòng ngừa và điều trị DVT/PE, điều trị hội chứng mạch vành cấp. Tác dụng phụ: chảy máu (nặng có thể tử vong), giảm tiểu cầu do heparin (HIT) - hiếm nhưng nguy hiểm.""",
         "monitoring": [
             "Dấu hiệu chảy máu: chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật",
             "Công thức máu (tiểu cầu) - giảm tiểu cầu do heparin (HIT), đặc biệt ngày 5-14",
             "Anti-Xa activity - nếu cần (thường không cần, trừ trường hợp đặc biệt: suy thận, béo phì, mang thai)",
             "Creatinine, CrCl - suy thận tăng nguy cơ tích lũy",
             "ALT/AST - tăng men gan hiếm"
-        ],
+    ],
         "precautions": [
             "Chảy máu - nguy hiểm, có thể tử vong, theo dõi dấu hiệu chảy máu chặt chẽ",
             "Giảm tiểu cầu do heparin (HIT) - hiếm nhưng nguy hiểm, thường xảy ra ngày 5-14, ngừng ngay nếu nghi ngờ",
@@ -1064,80 +1069,68 @@ ANTICOAGULANTS = {
             "Tránh dùng với aspirin/NSAID, antiplatelets - tăng nguy cơ chảy máu",
             "Chuyển đổi sang warfarin - dùng chung enoxaparin và warfarin trong quá trình chuyển đổi, theo dõi INR và dấu hiệu chảy máu",
             "Protamine sulfate - có thể đảo ngược một phần tác dụng enoxaparin (không hoàn toàn như heparin)"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "4-5 giờ",
             "onset": "1-2 giờ (SC)",
             "duration": "12-24 giờ (tùy liều)",
             "protein_binding": "Minimal",
-            "clearance": "Thận: bài tiết chủ yếu qua thận. Gan: chuyển hóa một phần. Suy thận làm giảm thải trừ, tăng nguy cơ tích lũy."
+            "clearance": """Thận: bài tiết chủ yếu qua thận. Gan: chuyển hóa một phần. Suy thận làm giảm thải trừ, tăng nguy cơ tích lũy.""",
         },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Không đông lạnh. Dạng tiêm: bảo quản trong bao bì kín.",
-        "black_box_warnings": "Chảy máu nặng có thể dẫn đến tử vong. Giảm tiểu cầu do heparin (HIT) có thể gây huyết khối nặng và tử vong. Ngừng ngay nếu nghi ngờ HIT.",
+        "storage": """Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Không đông lạnh. Dạng tiêm: bảo quản trong bao bì kín.""",
+        "black_box_warnings": """Chảy máu nặng có thể dẫn đến tử vong. Giảm tiểu cầu do heparin (HIT) có thể gây huyết khối nặng và tử vong. Ngừng ngay nếu nghi ngờ HIT.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Aspirin, NSAIDs (ibuprofen, naproxen)",
                     "mechanism": "Aspirin/NSAIDs ức chế kết tập tiểu cầu và gây loét dạ dày",
                     "effect": "Tăng nguy cơ chảy máu nặng, đặc biệt chảy máu dạ dày ruột",
-                    "management": "TRÁNH DÙNG CHUNG nếu có thể. Nếu cần: dùng liều thấp aspirin (75-100mg), cân nhắc dùng PPI, theo dõi dấu hiệu chảy máu chặt chẽ."
+                    "management": """TRÁNH DÙNG CHUNG nếu có thể. Nếu cần: dùng liều thấp aspirin (75-100mg), cân nhắc dùng PPI, theo dõi dấu hiệu chảy máu chặt chẽ.""",
                 },
-                {
+    {
                     "drug": "Antiplatelets (Clopidogrel, Ticagrelor, Prasugrel)",
                     "mechanism": "Tác dụng hiệp đồng ức chế đông máu",
                     "effect": "Tăng nguy cơ chảy máu nặng",
-                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ. Thường dùng trong ACS (kết hợp với aspirin)."
+                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ. Thường dùng trong ACS (kết hợp với aspirin).",
                 },
-                {
+    {
                     "drug": "Warfarin",
                     "mechanism": "Tác dụng hiệp đồng ức chế đông máu",
                     "effect": "Tăng nguy cơ chảy máu",
-                    "management": "Dùng chung trong quá trình chuyển đổi sang warfarin. Theo dõi INR và dấu hiệu chảy máu chặt chẽ. Ngừng enoxaparin khi INR đạt mục tiêu."
+                    "management": """Dùng chung trong quá trình chuyển đổi sang warfarin. Theo dõi INR và dấu hiệu chảy máu chặt chẽ. Ngừng enoxaparin khi INR đạt mục tiêu.""",
                 }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng heparin, LMWH, hoặc pork products",
-                "Chảy máu đang hoạt động",
-                "Giảm tiểu cầu do heparin (HIT) - hiện tại hoặc tiền sử",
-                "Suy thận nặng (CrCl <30) - tăng nguy cơ tích lũy"
-            ],
-            "tương_đối": [
-                "Suy thận (CrCl 30-60) - tăng nguy cơ tích lũy, giảm liều hoặc theo dõi anti-Xa",
-                "Béo phì - có thể cần điều chỉnh liều, theo dõi anti-Xa",
-                "Mang thai - có thể dùng nhưng cần theo dõi anti-Xa",
-                "Dùng với aspirin/NSAID, antiplatelets - tăng nguy cơ chảy máu"
-            ]
+                ],
+            "moderate": [],
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "B",
-            "pregnancy_details": "Enoxaparin là FDA category B. Các nghiên cứu trên động vật không cho thấy nguy cơ gây dị tật thai nhi. Có thể dùng trong thai kỳ, đặc biệt khi cần chống đông (ví dụ: van tim cơ học, huyết khối). Có thể tăng nguy cơ chảy máu thai nhi, chảy máu nhau thai. Theo dõi anti-Xa nếu cần. Cân nhắc lợi ích/nguy cơ.",
+            "pregnancy_details": """Enoxaparin là FDA category B. Các nghiên cứu trên động vật không cho thấy nguy cơ gây dị tật thai nhi. Có thể dùng trong thai kỳ, đặc biệt khi cần chống đông (ví dụ: van tim cơ học, huyết khối). Có thể tăng nguy cơ chảy máu thai nhi, chảy máu nhau thai. Theo dõi anti-Xa nếu cần. Cân nhắc lợi ích/nguy cơ.""",
             "lactation": {
                 "safety": "Compatible",
-                "details": "Enoxaparin bài tiết vào sữa mẹ ở nồng độ rất thấp. Không hấp thu qua đường tiêu hóa, nồng độ trong máu trẻ bú mẹ thường không đáng kể. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
-                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
-            }
+                "details": """Enoxaparin bài tiết vào sữa mẹ ở nồng độ rất thấp. Không hấp thu qua đường tiêu hóa, nồng độ trong máu trẻ bú mẹ thường không đáng kể. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.""",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường.",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không đổi",
             "moderate": "Không đổi",
             "severe": "Thận trọng, theo dõi tác dụng phụ",
-            "notes": "Enoxaparin chuyển hóa một phần ở gan. Suy gan ít ảnh hưởng đến nồng độ enoxaparin."
+            "notes": "Enoxaparin chuyển hóa một phần ở gan. Suy gan ít ảnh hưởng đến nồng độ enoxaparin.",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Giảm liều 25-50% hoặc theo dõi anti-Xa",
             "under_30": "Giảm liều 50% hoặc tránh dùng, theo dõi anti-Xa",
-            "notes": "Enoxaparin bài tiết chủ yếu qua thận. Suy thận làm giảm thải trừ, tăng nguy cơ tích lũy và tác dụng phụ (chảy máu)."
+            "notes": """Enoxaparin bài tiết chủ yếu qua thận. Suy thận làm giảm thải trừ, tăng nguy cơ tích lũy và tác dụng phụ (chảy máu).""",
         },
         "overdose_management": {
             "symptoms": [
                 "Chảy máu nặng (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật)",
                 "Thiếu máu (mệt mỏi, khó thở, da xanh)",
                 "Giảm tiểu cầu (hiếm)"
-            ],
-            "antidote": "Protamine sulfate - 1mg protamine cho mỗi 1mg enoxaparin (tối đa 100mg protamine). Lưu ý: Protamine chỉ đảo ngược một phần tác dụng enoxaparin (không hoàn toàn như heparin).",
+    ],
+            "antidote": """Protamine sulfate - 1mg protamine cho mỗi 1mg enoxaparin (tối đa 100mg protamine). Lưu ý: Protamine chỉ đảo ngược một phần tác dụng enoxaparin (không hoàn toàn như heparin).""",
             "treatment": [
                 "Ngừng ngay enoxaparin",
                 "Protamine sulfate: 1mg protamine cho mỗi 1mg enoxaparin (tối đa 100mg protamine), tiêm tĩnh mạch chậm (không quá 5mg/phút)",
@@ -1151,35 +1144,35 @@ ANTICOAGULANTS = {
                 "  - Theo dõi Hct, Hb",
                 "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
                 "Lưu ý: Protamine chỉ đảo ngược một phần tác dụng enoxaparin. Có thể cần điều trị hỗ trợ thêm."
-            ],
-            "monitoring": "Theo dõi dấu hiệu chảy máu (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật), công thức máu (thiếu máu, giảm tiểu cầu), dấu hiệu sinh tồn trong ít nhất 24 giờ."
+    ],
+            "monitoring": """Theo dõi dấu hiệu chảy máu (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật), công thức máu (thiếu máu, giảm tiểu cầu), dấu hiệu sinh tồn trong ít nhất 24 giờ.""",
         },
         "reversal_agents": {
             "available": True,
             "agents": [
-                {
+    {
                     "name": "Protamine sulfate",
                     "dose": "1mg protamine cho mỗi 1mg enoxaparin (tối đa 100mg protamine)",
                     "route": "IV",
-                    "notes": "Protamine chỉ đảo ngược một phần tác dụng enoxaparin (không hoàn toàn như heparin). Tiêm tĩnh mạch chậm (không quá 5mg/phút)."
+                    "notes": """Protamine chỉ đảo ngược một phần tác dụng enoxaparin (không hoàn toàn như heparin). Tiêm tĩnh mạch chậm (không quá 5mg/phút).""",
                 }
-            ]
+                ],
         },
         "administration_instructions": {
             "oral": None,
             "sc": {
-                "technique": "Tiêm dưới da (subcutaneous), thường ở bụng (cách rốn ít nhất 5cm), đùi, hoặc cánh tay. Thay đổi vị trí tiêm mỗi lần. KHÔNG tiêm vào cơ (tăng nguy cơ chảy máu).",
+                "technique": """Tiêm dưới da (subcutaneous), thường ở bụng (cách rốn ít nhất 5cm), đùi, hoặc cánh tay. Thay đổi vị trí tiêm mỗi lần. KHÔNG tiêm vào cơ (tăng nguy cơ chảy máu).""",
                 "timing": "Tiêm 1-2 lần/ngày tùy chỉ định. Liều điều chỉnh theo cân nặng. Tiêm cùng giờ mỗi ngày.",
                 "after_use": "Không xoa bóp vị trí tiêm (tăng nguy cơ chảy máu).",
-                "notes": "Tiêm dưới da, không tiêm vào cơ. Thay đổi vị trí tiêm mỗi lần. Không xoa bóp vị trí tiêm."
+                "notes": "Tiêm dưới da, không tiêm vào cơ. Thay đổi vị trí tiêm mỗi lần. Không xoa bóp vị trí tiêm.",
             },
             "iv": {
                 "reconstitution": "Enoxaparin chỉ có dạng SC, không có dạng IV",
                 "infusion_rate": "N/A",
                 "compatibility": [],
                 "incompatibility": [],
-                "notes": "Chỉ có dạng tiêm dưới da (SC)"
-            }
+                "notes": "Chỉ có dạng tiêm dưới da (SC)",
+            },
         },
         "references": {
             "primary_sources": [
@@ -1187,10 +1180,10 @@ ANTICOAGULANTS = {
                 "UpToDate - Enoxaparin: Drug information",
                 "Lexicomp - Enoxaparin monograph",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th ed"
-            ],
+    ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A - FDA-approved, multiple RCTs, clinical guidelines"
-        }
+            "evidence_level": "A - FDA-approved, multiple RCTs, clinical guidelines",
+        },
     },
     "Fondaparinux": {
         "group": "Cardiovascular - Anticoagulant (Factor Xa Inhibitor)",
@@ -1582,87 +1575,77 @@ ANTICOAGULANTS = {
         }
     },
     
-    "Rivaroxaban": {
+    "Rivaroxaban":     {
         "group": "Cardiovascular - Anticoagulant (Direct Factor Xa Inhibitor - DOAC)",
         "vietnamese_name": "Rivaroxaban, Xarelto",
-        "administration": ["PO"],
+        "administration": [
+            "PO"
+    ],
         "indications": [
             "Phòng ngừa đột quỵ trong rung nhĩ không do van tim",
             "Phòng ngừa DVT/PE sau phẫu thuật thay khớp gối/háng",
             "Điều trị DVT/PE",
             "Phòng ngừa tái phát DVT/PE"
-        ],
-        "contraindications": [
-            "Dị ứng",
-            "Chảy máu đang hoạt động",
-            "Suy thận nặng (CrCl <15)",
-            "Bệnh gan nặng (Child-Pugh C)",
-            "Mang thai"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng rivaroxaban hoặc các thành phần khác",
+                "Chảy máu đang hoạt động",
+                "Suy thận nặng (CrCl <15) - tăng nguy cơ tích lũy",
+                "Bệnh gan nặng (Child-Pugh C) - tăng nguy cơ chảy máu",
+                "Mang thai - nguy cơ dị tật thai nhi, chảy máu thai nhi"
+    ],
+            "tương_đối": [
+                "Suy thận (CrCl 15-50) - giảm liều",
+                "Bệnh gan (Child-Pugh A, B) - thận trọng",
+                "Dùng với CYP3A4/P-gp inhibitors mạnh - tránh dùng hoặc giảm liều",
+                "Dùng với CYP3A4/P-gp inducers mạnh - tránh dùng hoặc tăng liều"
+    ],
+        },
         "dosage": {
             "adult_afib": "20mg x 1 lần/ngày (với bữa ăn), giảm xuống 15mg x 1 lần/ngày nếu CrCl 15-50",
             "adult_dvt_pe_treatment": "15mg x 2 lần/ngày x 21 ngày, sau đó 20mg x 1 lần/ngày",
             "adult_dvt_pe_prophylaxis": "10mg x 1 lần/ngày",
             "adult_surgery_prophylaxis": "10mg x 1 lần/ngày (bắt đầu 6-10 giờ sau phẫu thuật)",
             "adult_max": "20mg/ngày",
-            "notes": "DOAC (Direct Oral Anticoagulant). Uống với bữa ăn để tăng hấp thu. Không cần theo dõi INR. Điều chỉnh liều theo CrCl."
+            "notes": """DOAC (Direct Oral Anticoagulant). Uống với bữa ăn để tăng hấp thu. Không cần theo dõi INR. Điều chỉnh liều theo CrCl.""",
         },
         "side_effects": [
             "Chảy máu (nặng có thể tử vong)",
             "Buồn nôn",
             "Tăng ALT/AST (hiếm)",
             "Phản ứng dị ứng (hiếm)"
-        ],
+    ],
         "interactions": [
             "Aspirin/NSAID: tăng nguy cơ chảy máu",
             "Antiplatelets: tăng nguy cơ chảy máu",
             "CYP3A4/P-gp inhibitors mạnh (ketoconazole, ritonavir): tăng nồng độ rivaroxaban",
             "CYP3A4/P-gp inducers mạnh (rifampin, carbamazepine): giảm nồng độ rivaroxaban"
-        ],
+    ],
         "pregnancy": "X",
         "risk_flags": {
             "high_alert": True,
-            "narrow_therapeutic_index": True,
-            "bleeding_risk": "High",
+            "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
-            "organ_toxicity": {"renal": True}
+            "bleeding_risk": "High",
+            "organ_toxicity": {
+                "hepatic": "Moderate",
+            },
         },
         "guideline_tags": [
-            "AHA/ACC/HRS AF stroke prevention",
-            "ISTH VTE treatment/prophylaxis",
-            "ESC AF guidelines"
-        ],
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": True,
-            "bleeding_risk": "High",
-            "icu_critical_care_only": False,
-            "organ_toxicity": {"hepatic": True, "renal": True}
-        },
-        "guideline_tags": [
-            "AHA/ACC/HRS AF stroke prevention",
-            "ISTH VTE treatment/prophylaxis",
-            "ESC AF guidelines"
-        ],
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": True,
-            "bleeding_risk": "High",
-            "icu_critical_care_only": False,
-            "organ_toxicity": {"hepatic": True, "renal": True}
-        },
-        "guideline_tags": [
-            "AHA/ACC/HRS AF stroke prevention",
-            "ISTH VTE treatment/prophylaxis",
-            "ESC AF guidelines"
-        ],
-        "mechanism_of_action": "Rivaroxaban là direct factor Xa inhibitor (DOAC), ức chế trực tiếp yếu tố Xa, ngăn chặn sự hình thành thrombin và cục máu đông. Khác với warfarin, rivaroxaban không cần antithrombin III, có tác dụng dự đoán được, không cần theo dõi INR, và ít tương tác thuốc hơn. Tác dụng: phòng ngừa đột quỵ trong rung nhĩ, phòng ngừa và điều trị DVT/PE. Tác dụng phụ: chảy máu (nặng có thể tử vong).",
+            "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
+            "CHEST Guidelines - VTE Treatment and Prophylaxis",
+            "ESC Guidelines - Atrial Fibrillation",
+            "ROCKET AF Study - Atrial Fibrillation",
+            "WHO Essential Medicines List"
+    ],
+        "mechanism_of_action": """Rivaroxaban là direct factor Xa inhibitor (DOAC), ức chế trực tiếp yếu tố Xa, ngăn chặn sự hình thành thrombin và cục máu đông. Khác với warfarin, rivaroxaban không cần antithrombin III, có tác dụng dự đoán được, không cần theo dõi INR, và ít tương tác thuốc hơn. Tác dụng: phòng ngừa đột quỵ trong rung nhĩ, phòng ngừa và điều trị DVT/PE. Tác dụng phụ: chảy máu (nặng có thể tử vong).""",
         "monitoring": [
             "Dấu hiệu chảy máu: chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật",
             "Creatinine, CrCl - điều chỉnh liều theo CrCl",
             "ALT/AST - tăng men gan hiếm",
             "Không cần theo dõi INR (khác với warfarin)"
-        ],
+    ],
         "precautions": [
             "Chảy máu - nguy hiểm, có thể tử vong, theo dõi dấu hiệu chảy máu chặt chẽ",
             "Suy thận (CrCl 15-50) - giảm liều, tránh dùng nếu CrCl <15",
@@ -1672,83 +1655,69 @@ ANTICOAGULANTS = {
             "Tránh dùng với CYP3A4/P-gp inducers mạnh - giảm nồng độ rivaroxaban, giảm hiệu quả",
             "Chuyển đổi từ warfarin - ngừng warfarin, bắt đầu rivaroxaban khi INR <3.0",
             "Chuyển đổi sang warfarin - giảm liều rivaroxaban 50%, bắt đầu warfarin, theo dõi INR"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "5-9 giờ (trẻ), 11-13 giờ (già)",
             "onset": "2-4 giờ (PO)",
             "duration": "12-24 giờ",
             "protein_binding": "92-95%",
-            "clearance": "Gan: chuyển hóa qua CYP3A4, CYP2J2. Thận: bài tiết một phần nguyên dạng (33%) và metabolites. Cần điều chỉnh liều ở suy thận."
+            "clearance": """Gan: chuyển hóa qua CYP3A4, CYP2J2. Thận: bài tiết một phần nguyên dạng (33%) và metabolites. Cần điều chỉnh liều ở suy thận.""",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
-        "black_box_warnings": "Chảy máu nặng có thể dẫn đến tử vong. Không có antidote đặc hiệu (trước khi có andexanet alfa). Ngừng ngay trước phẫu thuật có nguy cơ chảy máu cao.",
+        "black_box_warnings": """Chảy máu nặng có thể dẫn đến tử vong. Không có antidote đặc hiệu (trước khi có andexanet alfa). Ngừng ngay trước phẫu thuật có nguy cơ chảy máu cao.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "CYP3A4/P-gp inhibitors mạnh (Ketoconazole, Itraconazole, Ritonavir)",
                     "mechanism": "Ức chế chuyển hóa và bài tiết rivaroxaban, tăng nồng độ rivaroxaban",
                     "effect": "Tăng nồng độ rivaroxaban, tăng nguy cơ chảy máu",
-                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: giảm liều rivaroxaban 50% hoặc tránh dùng."
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: giảm liều rivaroxaban 50% hoặc tránh dùng.",
                 },
-                {
+    {
                     "drug": "CYP3A4/P-gp inducers mạnh (Rifampin, Carbamazepine, Phenytoin)",
                     "mechanism": "Cảm ứng chuyển hóa và bài tiết rivaroxaban, giảm nồng độ rivaroxaban",
                     "effect": "Giảm nồng độ rivaroxaban, giảm hiệu quả",
-                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: tăng liều rivaroxaban hoặc chuyển sang warfarin."
+                    "management": "TRÁNH DÙNG CHUNG. Nếu bắt buộc: tăng liều rivaroxaban hoặc chuyển sang warfarin.",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Aspirin, NSAIDs",
                     "mechanism": "Tác dụng hiệp đồng ức chế đông máu",
                     "effect": "Tăng nguy cơ chảy máu",
-                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ."
+                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ.",
                 }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng rivaroxaban hoặc các thành phần khác",
-                "Chảy máu đang hoạt động",
-                "Suy thận nặng (CrCl <15) - tăng nguy cơ tích lũy",
-                "Bệnh gan nặng (Child-Pugh C) - tăng nguy cơ chảy máu",
-                "Mang thai - nguy cơ dị tật thai nhi, chảy máu thai nhi"
-            ],
-            "tương_đối": [
-                "Suy thận (CrCl 15-50) - giảm liều",
-                "Bệnh gan (Child-Pugh A, B) - thận trọng",
-                "Dùng với CYP3A4/P-gp inhibitors mạnh - tránh dùng hoặc giảm liều",
-                "Dùng với CYP3A4/P-gp inducers mạnh - tránh dùng hoặc tăng liều"
-            ]
+                ],
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "X",
-            "pregnancy_details": "Rivaroxaban là FDA category X. Có nguy cơ dị tật thai nhi và chảy máu thai nhi. CHỐNG CHỈ ĐỊNH trong thai kỳ. Nếu có thai khi đang dùng: ngừng ngay, tư vấn di truyền.",
+            "pregnancy_details": """Rivaroxaban là FDA category X. Có nguy cơ dị tật thai nhi và chảy máu thai nhi. CHỐNG CHỈ ĐỊNH trong thai kỳ. Nếu có thai khi đang dùng: ngừng ngay, tư vấn di truyền.""",
             "lactation": {
                 "safety": "Unknown",
                 "details": "Chưa biết rivaroxaban có bài tiết vào sữa mẹ hay không. Không nên dùng khi cho con bú.",
-                "recommendation": "Tránh dùng khi cho con bú. Nếu cần: ngừng cho con bú hoặc chuyển sang thuốc khác."
-            }
+                "recommendation": "Tránh dùng khi cho con bú. Nếu cần: ngừng cho con bú hoặc chuyển sang thuốc khác.",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không đổi",
             "moderate": "Thận trọng, theo dõi tác dụng phụ",
             "severe": "CHỐNG CHỈ ĐỊNH (Child-Pugh C)",
-            "notes": "Rivaroxaban chuyển hóa ở gan qua CYP3A4, CYP2J2. Suy gan nặng (Child-Pugh C) làm tăng nguy cơ chảy máu."
+            "notes": """Rivaroxaban chuyển hóa ở gan qua CYP3A4, CYP2J2. Suy gan nặng (Child-Pugh C) làm tăng nguy cơ chảy máu.""",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Giảm liều 25-50% (tùy chỉ định)",
             "15_30": "Giảm liều 50% hoặc tránh dùng",
             "under_15": "CHỐNG CHỈ ĐỊNH",
-            "notes": "Rivaroxaban bài tiết một phần qua thận (33% nguyên dạng). Suy thận làm giảm thải trừ, tăng nguy cơ tích lũy và tác dụng phụ (chảy máu)."
+            "notes": """Rivaroxaban bài tiết một phần qua thận (33% nguyên dạng). Suy thận làm giảm thải trừ, tăng nguy cơ tích lũy và tác dụng phụ (chảy máu).""",
         },
         "overdose_management": {
             "symptoms": [
                 "Chảy máu nặng (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật)",
                 "Thiếu máu (mệt mỏi, khó thở, da xanh)"
-            ],
-            "antidote": "Andexanet alfa (Andexxa) - antidote đặc hiệu cho factor Xa inhibitors. Liều: 400-800mg IV bolus, sau đó truyền liên tục. Nếu không có: điều trị hỗ trợ.",
+    ],
+            "antidote": """Andexanet alfa (Andexxa) - antidote đặc hiệu cho factor Xa inhibitors. Liều: 400-800mg IV bolus, sau đó truyền liên tục. Nếu không có: điều trị hỗ trợ.""",
             "treatment": [
                 "Ngừng ngay rivaroxaban",
                 "Andexanet alfa (nếu có): 400-800mg IV bolus, sau đó truyền liên tục",
@@ -1762,27 +1731,27 @@ ANTICOAGULANTS = {
                 "  - Theo dõi Hct, Hb",
                 "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
                 "Lưu ý: Half-life 5-13 giờ, tác dụng kéo dài sau khi ngừng."
-            ],
-            "monitoring": "Theo dõi dấu hiệu chảy máu (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật), công thức máu (thiếu máu), dấu hiệu sinh tồn trong ít nhất 24-48 giờ."
+    ],
+            "monitoring": """Theo dõi dấu hiệu chảy máu (chảy máu dạ dày ruột, chảy máu nội sọ, chảy máu sau phẫu thuật), công thức máu (thiếu máu), dấu hiệu sinh tồn trong ít nhất 24-48 giờ.""",
         },
         "reversal_agents": {
             "available": True,
             "agents": [
-                {
+    {
                     "name": "Andexanet alfa (Andexxa)",
                     "dose": "400-800mg IV bolus, sau đó truyền liên tục",
                     "route": "IV",
-                    "notes": "Antidote đặc hiệu cho factor Xa inhibitors (rivaroxaban, apixaban, edoxaban). Có thể đảo ngược tác dụng chống đông."
+                    "notes": """Antidote đặc hiệu cho factor Xa inhibitors (rivaroxaban, apixaban, edoxaban). Có thể đảo ngược tác dụng chống đông.""",
                 }
-            ]
+                ],
         },
         "administration_instructions": {
             "oral": {
                 "with_food": "Uống với bữa ăn để tăng hấp thu, đặc biệt liều 15-20mg. Liều 10mg có thể uống không cần thức ăn.",
-                "timing": "Uống 1-2 lần/ngày tùy chỉ định. Uống cùng thời điểm mỗi ngày. Không bỏ liều."
+                "timing": "Uống 1-2 lần/ngày tùy chỉ định. Uống cùng thời điểm mỗi ngày. Không bỏ liều.",
             },
             "im": None,
-            "iv": None
+            "iv": None,
         },
         "references": {
             "primary_sources": [
@@ -1790,24 +1759,10 @@ ANTICOAGULANTS = {
                 "UpToDate - Rivaroxaban: Drug information",
                 "Lexicomp - Rivaroxaban monograph",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th ed"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved, multiple RCTs, clinical guidelines"
+            "evidence_level": "A - FDA-approved, multiple RCTs, clinical guidelines",
         },
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "High",
-            "organ_toxicity": {"hepatic": "Moderate"}
-        },
-        "guideline_tags": [
-            "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
-            "CHEST Guidelines - VTE Treatment and Prophylaxis",
-            "ESC Guidelines - Atrial Fibrillation",
-            "ROCKET AF Study - Atrial Fibrillation",
-            "WHO Essential Medicines List"
-        ],
         "last_updated": "2025-02-18",
     },
     "Ticagrelor": {

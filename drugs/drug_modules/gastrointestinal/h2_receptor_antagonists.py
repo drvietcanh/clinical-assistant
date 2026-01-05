@@ -347,7 +347,7 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
         'Yếu hơn PPI, nhưng rẻ hơn. Một số sản phẩm đã bị thu hồi do NDMA'},
         'side_effects': ['Nhức đầu', 'Rối loạn tiêu hóa', 'Tăng men gan (hiếm)'
         ], 'interactions': [
-        'Warfarin: có thể tăng tác dụng (ít hơn cimetidine)'], 'pregnancy': 'B',
+        'Warfarin: có thể tăng tác dụng (ít hơn cimetidine)'],
         'mechanism_of_action':
         'H2 (histamine-2) receptor antagonist. Ức chế histamine tại H2 receptors ở tế bào thành dạ dày, giảm tiết acid dạ dày (giảm acid kích thích và một phần acid cơ bản). Yếu hơn PPI (proton pump inhibitor) nhưng rẻ hơn. Tác dụng ngắn hơn PPI (cần dùng 2 lần/ngày). Ức chế nhẹ một số enzyme CYP450 (ít hơn cimetidine).'
         , 'monitoring': ['Đáp ứng lâm sàng (giảm đau, triệu chứng GERD)',
@@ -362,15 +362,15 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
         'Một số sản phẩm đã bị thu hồi do NDMA (chất gây ung thư) - kiểm tra nguồn gốc sản phẩm'
         ,
         'Không dùng với các thuốc cần acid để hấp thu (ketoconazole, itraconazole, iron salts) - cách 2 giờ'
-        ], 'pharmacokinetics': {'half_life': '2-3 giờ', 'onset': '1-3 giờ',
+        ], 'onset': '1-3 giờ',
         'duration': '8-12 giờ', 'protein_binding': '15%', 'metabolism':
         'Gan (chuyển hóa qua CYP450, một phần), thận (thải trừ)', 'clearance':
         'Gan (chuyển hóa), thận (30-50% thải nguyên dạng)'}, 'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Kiểm tra nguồn gốc sản phẩm (một số sản phẩm đã bị thu hồi do NDMA).'
         , 'black_box_warnings':
         'Một số sản phẩm ranitidine đã bị thu hồi do chứa NDMA (N-nitrosodimethylamine) - chất gây ung thư. NDMA có thể tích lũy trong sản phẩm theo thời gian, đặc biệt ở nhiệt độ cao. Kiểm tra nguồn gốc sản phẩm và cân nhắc dùng thuốc khác (PPI, famotidine) nếu có thể.'
-        , 'drug_interactions': {'major': [], 'moderate': [{'drug': 'Warfarin',
-        'mechanism': 'Ranitidine ức chế CYP450 nhẹ (ít hơn cimetidine)',
+        , 'drug_interactions': {'major': [{'drug': 'Warfarin', 'mechanism': 
+        'Ranitidine ức chế CYP450 nhẹ (ít hơn cimetidine)',
         'effect': 'Có thể tăng INR nhẹ, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên. Ranitidine ít ảnh hưởng hơn cimetidine.'},
         {'drug': 'Ketoconazole, Itraconazole', 'mechanism':
@@ -384,7 +384,7 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
         'Thận trọng, theo dõi nồng độ nếu cần'}]}, 'contraindications': {
         'tuyệt_đối': ['Dị ứng ranitidine hoặc H2 blocker khác',
         'Một số sản phẩm ranitidine đã bị thu hồi do NDMA - tránh dùng các sản phẩm bị thu hồi'
-        ], 'tương_đối': ['Suy thận nặng (CrCl <30) - giảm liều 50%',
+        ], 'tương_đối': [
         'Suy gan nặng (Child-Pugh C) - giảm liều 50%',
         'Người già - thận trọng, giảm liều nếu cần',
         'Nhiễm C. difficile - tăng nguy cơ nhẹ']}, 'pregnancy_lactation': {
@@ -424,8 +424,7 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
         'last_updated': '2024-12-19', 'evidence_level':
         'High - FDA approved, multiple RCTs (Note: Many products recalled due to NDMA contamination)'
-        }},
-    
+        }
 }
 
 __all__ = ['H2_RECEPTOR_ANTAGONISTS_DRUGS']

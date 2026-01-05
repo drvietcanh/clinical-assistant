@@ -6,10 +6,10 @@ Active module - contains all oncology drug data"""
 ANTIMETABOLITE_ANTIFOLATES_DRUGS = {
     "Methotrexate": {'group': 'Oncology - Antimetabolite (Antifolate)', 'vietnamese_name':
         'Methotrexate, MTX, Amethopterin', 'administration': ['PO', 'IV', 'IM',
-        'SC', 'IT'], 'indications': ['Bệnh bạch cầu cấp (leukemia)',
+        'SC', 'IT'],
         'U lympho (lymphoma)', 'U nguyên bào nuôi (choriocarcinoma)',
         'Ung thư đầu cổ', 'Ung thư phổi', 'Viêm khớp dạng thấp (liều thấp)',
-        'Vẩy nến (liều thấp)'], 'contraindications': ['Dị ứng methotrexate',
+        'Vẩy nến (liều thấp)'],
         'Suy thận nặng', 'Suy gan nặng', 'Giảm bạch cầu/tiểu cầu nặng',
         'Loét dạ dày tá tràng hoạt động', 'Có thai', 'Đang cho con bú'],
         'dosage': {'adult_cancer_high':
@@ -81,7 +81,7 @@ ANTIMETABOLITE_ANTIFOLATES_DRUGS = {
         'Tăng độc tính nghiêm trọng (giảm bạch cầu, thiếu máu megaloblastic)',
         'management':
         'TRÁNH DÙNG đồng thời. Nếu bắt buộc, theo dõi chặt chẽ công thức máu và bổ sung folic acid.'
-        }], 'moderate': [{'drug': 'Penicillin, Ampicillin', 'mechanism':
+        }], 'mechanism':
         'Penicillin có thể ức chế bài tiết ống thận của methotrexate.',
         'effect': 'Tăng nồng độ methotrexate, tăng độc tính', 'management':
         'Thận trọng khi dùng đồng thời. Theo dõi công thức máu và chức năng gan, thận.'
@@ -89,11 +89,11 @@ ANTIMETABOLITE_ANTIFOLATES_DRUGS = {
         'Folic acid đối kháng tác dụng của methotrexate, giảm hiệu quả điều trị.',
         'effect': 'Giảm hiệu quả điều trị methotrexate', 'management':
         'KHÔNG dùng folic acid cùng ngày với methotrexate. Dùng folic acid vào ngày khác (5-10mg/tuần) để giảm độc tính mà không giảm hiệu quả.'
-        }], 'minor': [{'drug': 'Acetaminophen', 'mechanism':
+        }], 'mechanism':
         'Acetaminophen có thể tăng độc tính gan khi dùng với methotrexate.',
         'effect': 'Tăng nguy cơ độc gan', 'management':
         'Thận trọng, tránh dùng liều cao acetaminophen. Theo dõi chức năng gan.'
-        }]}, 'contraindications': {'tuyệt_đối': ['Dị ứng methotrexate',
+        }],
         'Có thai (gây dị tật thai nhi, sảy thai)', 'Đang cho con bú',
         'Suy thận nặng (CrCl <30)', 'Suy gan nặng',
         'Giảm bạch cầu/tiểu cầu nặng', 'Loét dạ dày tá tràng hoạt động'],

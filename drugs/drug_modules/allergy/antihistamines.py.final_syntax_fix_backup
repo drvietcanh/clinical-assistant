@@ -1,0 +1,229 @@
+"""
+Antihistamines (Thuốc kháng Histamin H1)
+"""
+
+ANTIHISTAMINES_DRUGS = {
+    "Diphenhydramine": {
+        "group": "Allergy - Antihistamine H1 (1st Gen - Gây buồn ngủ)",
+        "vietnamese_name": "Diphenhydramine, Benadryl, Nautamine",
+        "brand_names": {
+            "common": ["Benadryl"],
+            "vietnam": ["Nautamine (trị say tàu xe)", "Dimedrol (tiêm)"]
+        },
+        "administration": ["PO", "IV", "IM"],
+        "indications": [
+            "Phản ứng dị ứng cấp tính (mày đay, phù mạch)",
+            "Chống say tàu xe",
+            "Mất ngủ (ngắn hạn)",
+            "Phản ứng ngoại tháp do thuốc (antipsychotics)"
+        ],
+        "contraindications": [
+            "Trẻ sơ sinh hoặc sinh non",
+            "Đang cho con bú (nguy cơ tác dụng phụ cao ở trẻ)",
+            "Bí tiểu, Phì đại tiền liệt tuyến (do kháng Cholinergic)",
+            "Glocom góc đóng"
+        ],
+        "dosage": {
+            "adult_allergy": "25-50 mg PO/IV/IM mỗi 4-6 giờ (max 400 mg/ngày).",
+            "pediatric_allergy": "5 mg/kg/ngày chia 3-4 lần.",
+            "insomnia": "50 mg trước khi ngủ.",
+            "notes": "Gây buồn ngủ mạnh. Hiệu quả cao trong giảm ngứa và phản ứng cấp."
+        },
+        "side_effects": [
+            "Buồn ngủ, an thần (Rất phổ biến)",
+            "Khô miệng, táo bón, bí tiểu (Kháng Cholinergic)",
+            "Rối loạn tâm thần (người già)"
+        ],
+        "mechanism_of_action": "Đối kháng thụ thể Histamin H1 (có qua hàng rào máu não -> gây buồn ngủ) & Kháng Cholinergic.",
+        "monitoring": ["Mức độ tỉnh táo", "Bí tiểu"],
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "FDA Warning - Gây buồn ngủ mạnh, tránh lái xe/vận hành máy móc",
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
+    },
+
+    "Chlorpheniramine": {
+        "group": "Allergy - Antihistamine H1 (1st Gen)",
+        "vietnamese_name": "Chlorpheniramine 4mg",
+        "brand_names": {
+            "common": ["Chlor-Trimeton"],
+            "vietnam": ["Chlorpheniramine 4mg"]
+        },
+        "administration": ["PO"],
+        "indications": ["Viêm mũi dị ứng", "Mày đay", "Sổ mũi (cảm cúm)"],
+        "dosage": {
+            "adult": "4 mg mỗi 4-6 giờ (max 24 mg/ngày).",
+            "pediatric_6_12": "2 mg mỗi 4-6 giờ.",
+            "notes": "Gây buồn ngủ (nhẹ hơn Diphenhydramine)."
+        },
+        "side_effects": ["Buồn ngủ", "Khô miệng"],
+        "pregnancy": "B (An toàn cho thai kỳ - thường dùng)",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
+    },
+
+    "Cetirizine": {
+        "group": "Allergy - Antihistamine H1 (2nd Gen - Ít gây buồn ngủ)",
+        "vietnamese_name": "Cetirizine, Zyrtec",
+        "brand_names": {
+            "common": ["Zyrtec"],
+            "vietnam": ["Zyrtec", "Cetirizine Stada", "Cezil"]
+        },
+        "administration": ["PO"],
+        "indications": ["Viêm mũi dị ứng", "Mày đay mạn tính"],
+        "dosage": {
+            "adult": "10 mg uống 1 lần/ngày.",
+            "pediatric_6_12": "5-10 mg/ngày.",
+            "pediatric_2_5": "2.5-5 mg/ngày.",
+            "notes": "Có thể gây buồn ngủ nhẹ ở một số người (dù là thế hệ 2). Chỉnh liều suy thận."
+        },
+        "renal_adjustment": {
+            "under_30": "5 mg mỗi 2 ngày hoặc 5 mg/ngày tùy mức độ."
+        },
+        "side_effects": ["Buồn ngủ nhẹ", "Khô miệng"],
+        "pregnancy": "B",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
+    },
+
+    "Loratadine": {
+        "group": "Allergy - Antihistamine H1 (2nd Gen - Không gây buồn ngủ)",
+        "vietnamese_name": "Loratadine, Clarityne",
+        "brand_names": {
+            "common": ["Claritin"],
+            "vietnam": ["Clarityne", "Lorastad"]
+        },
+        "administration": ["PO"],
+        "indications": ["Viêm mũi dị ứng", "Mày đay"],
+        "dosage": {
+            "adult": "10 mg uống 1 lần/ngày.",
+            "notes": "Thực sự không gây buồn ngủ (non-sedating). Chỉnh liều suy gan/thận (10 mg mỗi 2 ngày)."
+        },
+        "side_effects": ["Đau đầu", "Khô miệng (nhẹ)"],
+        "pregnancy": "B",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["LFT", "RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
+    },
+
+    "Fexofenadine": {
+        "group": "Allergy - Antihistamine H1 (3rd Gen - An toàn nhất)",
+        "vietnamese_name": "Fexofenadine, Telfast",
+        "brand_names": {
+            "common": ["Allegra"],
+            "vietnam": ["Telfast 60/120/180", "Fexostad"]
+        },
+        "administration": ["PO"],
+        "indications": ["Viêm mũi dị ứng (60mg x 2 hoặc 120mg x 1)", "Mày đay mạn tính (180mg x 1)"],
+        "dosage": {
+            "adult": "60 mg x 2 lần/ngày hoặc 180 mg x 1 lần/ngày.",
+            "renal_impairment": "60 mg x 1 lần/ngày.",
+            "notes": "KHÔNG uống cùng nước hoa quả (táo, cam, bưởi) - giảm hấp thu mạnh. An toàn nhất cho phi công/lái xe."
+        },
+        "side_effects": ["Đau đầu", "Buồn nôn"],
+        "pregnancy": "C (Thận trọng - Loratadine/Cetirizine ưu tiên hơn)",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["RFT"],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "FDA Warning - KHÔNG uống cùng nước hoa quả (táo, cam, bưởi) - giảm hấp thu mạnh",
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
+    },
+
+    "Desloratadine": {
+        "group": "Allergy - Antihistamine H1 (3rd Gen)",
+        "vietnamese_name": "Desloratadine, Aerius",
+        "brand_names": {
+            "common": ["Clarinex"],
+            "vietnam": ["Aerius", "Desbebe"]
+        },
+        "administration": ["PO"],
+        "indications": ["Viêm mũi dị ứng", "Mày đay"],
+        "dosage": {
+            "adult": "5 mg uống 1 lần/ngày.",
+            "notes": "Chất chuyển hóa hoạt tính của Loratadine. Tác dụng mạnh và kéo dài."
+        },
+        "pregnancy": "C",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [],
+            "look_alike_sound_alike": []
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Essential medicines for allergic reactions",
+            "ACAAI Guidelines - Allergic rhinitis and urticaria"
+        ]
+    }
+}

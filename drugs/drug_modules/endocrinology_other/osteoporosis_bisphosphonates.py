@@ -164,11 +164,41 @@ BISPHOSPHONATES_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (FIT)",
         },
-             "reversal_agents": {
-             "available": False,
-             "agents": []
-         },
-},
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "gastrointestinal": "CRITICAL - Esophageal irritation/ulceration (if not taken correctly - must take on empty stomach, remain upright 30 minutes)",
+                "dental": "Black Box Warning - Osteonecrosis of the jaw (ONJ) - rare but serious",
+                "skeletal": "Black Box Warning - Atypical femur fractures - rare but serious",
+                "metabolic": "Hypocalcemia, hypophosphatemia"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Black Box Warning - Dental evaluation before treatment (ONJ risk)",
+                "Black Box Warning - Signs of ONJ (jaw pain, swelling, loose teeth, discharge) - CRITICAL",
+                "Black Box Warning - Atypical femur fracture signs (thigh, groin pain) - CRITICAL",
+                "CRITICAL - Administration technique: empty stomach, ≥200ml water, remain upright 30 minutes",
+                "Serum calcium, phosphorus (before and during treatment)",
+                "Renal function (creatinine, eGFR - contraindicated if CrCl <35 ml/min)",
+                "Bone density (DEXA scan) before treatment and after 1-2 years",
+                "Calcium, iron, antacids interaction (take at least 30 minutes apart)"
+            ],
+            "look_alike_sound_alike": ["Alendronate", "Ibandronate", "Risedronate"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Osteonecrosis of the Jaw (ONJ)",
+            "FDA Black Box Warning - Atypical Femur Fractures",
+            "NOF Guidelines - Osteoporosis Treatment 2024",
+            "ASBMR Guidelines - Bisphosphonate Use",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
+    },
 
     "Ibandronate": {
         "group": "Endocrinology - Bisphosphonate (Osteoporosis)",
@@ -297,11 +327,43 @@ BISPHOSPHONATES_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-},
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "gastrointestinal": "CRITICAL - Esophageal irritation (PO - if not taken correctly - must take on empty stomach, remain upright 60 minutes)",
+                "dental": "Black Box Warning - Osteonecrosis of the jaw (ONJ) - rare but serious",
+                "skeletal": "Black Box Warning - Atypical femur fractures - rare but serious",
+                "metabolic": "Hypocalcemia",
+                "systemic": "Flu-like reaction (IV - common, usually self-limiting 24-48 hours)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Black Box Warning - Dental evaluation before treatment (ONJ risk)",
+                "Black Box Warning - Signs of ONJ (jaw pain, swelling, loose teeth, discharge) - CRITICAL",
+                "Black Box Warning - Atypical femur fracture signs (thigh, groin pain) - CRITICAL",
+                "CRITICAL - Administration technique (PO): empty stomach, ≥200ml water, remain upright 60 minutes",
+                "CRITICAL - IV: flu-like reaction (fever, chills, muscle pain - common, usually self-limiting)",
+                "Serum calcium, phosphorus (before and during treatment)",
+                "Renal function (creatinine, eGFR - contraindicated if CrCl <30 ml/min)",
+                "Bone density (DEXA scan) before treatment and after 1-2 years",
+                "Calcium, iron, antacids interaction (PO - take at least 60 minutes apart)"
+            ],
+            "look_alike_sound_alike": ["Ibandronate", "Alendronate", "Risedronate"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Osteonecrosis of the Jaw (ONJ)",
+            "FDA Black Box Warning - Atypical Femur Fractures",
+            "NOF Guidelines - Osteoporosis Treatment 2024",
+            "ASBMR Guidelines - Bisphosphonate Use",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
+    },
 
     "Risedronate": {
         "group": "Endocrinology - Bisphosphonate (Osteoporosis)",
@@ -433,11 +495,41 @@ BISPHOSPHONATES_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved",
         },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-},
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "gastrointestinal": "CRITICAL - Esophageal irritation/ulceration (if not taken correctly - must take on empty stomach, remain upright 30 minutes)",
+                "dental": "Black Box Warning - Osteonecrosis of the jaw (ONJ) - rare but serious",
+                "skeletal": "Black Box Warning - Atypical femur fractures - rare but serious",
+                "metabolic": "Hypocalcemia, hypophosphatemia"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [
+                "Black Box Warning - Dental evaluation before treatment (ONJ risk)",
+                "Black Box Warning - Signs of ONJ (jaw pain, swelling, loose teeth, discharge) - CRITICAL",
+                "Black Box Warning - Atypical femur fracture signs (thigh, groin pain) - CRITICAL",
+                "CRITICAL - Administration technique: empty stomach, ≥200ml water, remain upright 30 minutes",
+                "Serum calcium, phosphorus (before and during treatment)",
+                "Renal function (creatinine, eGFR - contraindicated if CrCl <30 ml/min)",
+                "Bone density (DEXA scan) before treatment and after 1-2 years",
+                "Calcium, iron, antacids interaction (take at least 30 minutes apart)"
+            ],
+            "look_alike_sound_alike": ["Risedronate", "Alendronate", "Ibandronate"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Osteonecrosis of the Jaw (ONJ)",
+            "FDA Black Box Warning - Atypical Femur Fractures",
+            "NOF Guidelines - Osteoporosis Treatment 2024",
+            "ASBMR Guidelines - Bisphosphonate Use",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
+    },
 
     "Zoledronic acid": {
         "group": "Endocrinology - Bisphosphonate (Osteoporosis/Cancer)",
@@ -598,11 +690,46 @@ BISPHOSPHONATES_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – FDA-approved, large RCTs (HORIZON-PFT)",
         },
-              "reversal_agents": {
-              "available": False,
-              "agents": []
-          },
-},
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": {
+                "dental": "Black Box Warning - Osteonecrosis of the jaw (ONJ) - especially in cancer patients, dental procedures",
+                "skeletal": "Black Box Warning - Atypical femur fractures - rare but serious",
+                "renal": "CRITICAL - Acute kidney injury (especially if infused too fast or inadequate hydration)",
+                "metabolic": "Hypocalcemia, hypophosphatemia, hypomagnesemia",
+                "cardiovascular": "Atrial fibrillation (rare)",
+                "systemic": "Flu-like reaction (common, usually self-limiting 24-48 hours)"
+            },
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": [
+                "Black Box Warning - Dental evaluation before treatment (ONJ risk) - CRITICAL",
+                "Black Box Warning - Signs of ONJ (jaw pain, swelling, loose teeth, discharge) - CRITICAL",
+                "Black Box Warning - Atypical femur fracture signs (thigh, groin pain) - CRITICAL",
+                "CRITICAL - Renal function (creatinine, eGFR) before and after infusion - contraindicated if CrCl <35 ml/min (Reclast) or <30 ml/min (Zometa)",
+                "CRITICAL - Infusion rate: at least 15 minutes (NOT faster) - CRITICAL to prevent acute kidney injury",
+                "CRITICAL - Adequate hydration before and after infusion - CRITICAL to prevent acute kidney injury",
+                "Serum calcium, phosphorus, magnesium (before and during treatment)",
+                "ECG (atrial fibrillation risk)",
+                "Flu-like reaction monitoring (fever, chills, muscle pain - common, usually self-limiting)"
+            ],
+            "look_alike_sound_alike": ["Zoledronic acid", "Zoledronate", "Zometa", "Reclast"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Osteonecrosis of the Jaw (ONJ)",
+            "FDA Black Box Warning - Atypical Femur Fractures",
+            "FDA Black Box Warning - Acute Kidney Injury",
+            "NOF Guidelines - Osteoporosis Treatment 2024",
+            "ASBMR Guidelines - Bisphosphonate Use",
+            "ASCO Guidelines - Cancer Bone Metastases",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
+    },
 }
 
 __all__ = ["BISPHOSPHONATES_DRUGS"]

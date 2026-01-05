@@ -1,56 +1,91 @@
 """
-Comprehensive script to find and fix all syntax errors
-Fixes missing commas after dict/list blocks
+Comprehensive fix for all syntax errors in drug files
 """
 import re
 from pathlib import Path
 
-def fix_all_missing_commas(file_path):
-    """Fix all missing comma patterns"""
+def fix_file(file_path):
+    """Fix all syntax errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
-            lines = f.readlines()
+            content = f.read()
         
-        original_lines = lines.copy()
-        fixed = False
+        original_content = content
+        changes = []
         
-        for i in range(len(lines) - 1):
-            line = lines[i]
-            next_line = lines[i + 1] if i + 1 < len(lines) else ""
+        # Fix 1: Unterminated evidence_level strings before risk_flags
+        pattern1 = r'"evidence_level":\s*"([^"]*?),\s*\n\s*"risk_flags"'
+        def repl1(m):
+            return f'"evidence_level": "{m.group(1)}",\n            "risk_flags"'
+        new_content = re.sub(pattern1, repl1, content)
+        if new_content != content:
+            changes.append("Fixed unterminated evidence_level before risk_flags")
+            content = new_content
+        
+        # Fix 2: Text after closing bracket of guideline_tags
+        pattern2 = r'(\]\s*)và dữ liệu lâm sàng từ nhiều nguồn"'
+        new_content = re.sub(pattern2, r'\1', content)
+        if new_content != content:
+            changes.append("Fixed leftover text after guideline_tags")
+            content = new_content
+        
+        # Fix 3: Unterminated evidence_level with "High - Multiple RCTs"
+        pattern3 = r'"evidence_level":\s*"High - Multiple RCTs \(([^"]*?),\s*\n\s*"risk_flags"'
+        def repl3(m):
+            return f'"evidence_level": "High - Multiple RCTs ({m.group(1)}",\n            "risk_flags"'
+        new_content = re.sub(pattern3, repl3, content)
+        if new_content != content:
+            changes.append("Fixed unterminated evidence_level with RCTs")
+            content = new_content
+        
+        # Fix 4: Any other unterminated evidence_level
+        pattern4 = r'"evidence_level":\s*"([^"]*?),\s*\n\s*"risk_flags"'
+        def repl4(m):
+            return f'"evidence_level": "{m.group(1)}",\n            "risk_flags"'
+        new_content = re.sub(pattern4, repl4, content)
+        if new_content != content:
+            changes.append("Fixed other unterminated evidence_level")
+            content = new_content
+        
+        if content != original_content:
+            # Create backup
+            backup_path = str(file_path) + ".comprehensive_fix_backup"
+            with open(backup_path, 'w', encoding='utf-8') as f:
+                f.write(original_content)
             
-            # Pattern 1: Line ends with ] or } and next line starts with "field" or 'field' without comma
-            if re.search(r'\]\s*$', line) or re.search(r'\}\s*$', line):
-                # Check if next line starts with a field name (quoted)
-                if re.match(r'\s*["\'](?:drug_interactions|overdose_management|reversal_agents|administration_instructions|pregnancy_lactation|hepatic_adjustment|contraindications|black_box_warnings|guideline_tags|references)["\']\s*:', next_line):
-                    # Add comma to current line
-                    lines[i] = line.rstrip() + ',\n'
-                    fixed = True
-            
-            # Pattern 2: Line has ] or } followed by "field" on same line
-            if re.search(r'(\]|\})\s+["\'](?:drug_interactions|overdose_management|reversal_agents|administration_instructions|pregnancy_lactation|hepatic_adjustment|contraindications|black_box_warnings|guideline_tags|references)["\']\s*:', line):
-                lines[i] = re.sub(r'(\]|\})\s+(["\'][^"\']+["\']\s*:)', r'\1,\n        \2', line)
-                fixed = True
-        
-        if fixed:
+            # Write fixed content
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.writelines(lines)
-            return True
-        return False
+                f.write(content)
+            
+            return True, changes
+        else:
+            return False, []
+            
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-        return False
+        return False, [f"Error: {str(e)}"]
 
-# Find all Python files
-base_path = Path("drugs/drug_modules")
-fixed_files = []
-
-for py_file in base_path.rglob("*.py"):
-    if py_file.name == "__init__.py" or py_file.name.endswith(".backup"):
-        continue
+def main():
+    """Fix syntax errors in all drug files"""
+    drugs_dir = Path("drugs/drug_modules")
     
-    if fix_all_missing_commas(py_file):
-        fixed_files.append(str(py_file))
-        print(f"Fixed: {py_file}")
+    fixed_files = []
+    error_files = []
+    
+    for file_path in sorted(drugs_dir.rglob("*.py")):
+        if file_path.name == "__init__.py" or file_path.name.endswith(".backup"):
+            continue
+        
+        success, changes = fix_file(file_path)
+        if success:
+            fixed_files.append((str(file_path), changes))
+            print(f"✅ Fixed: {file_path.name} - {', '.join(changes)}")
+        elif changes and "Error" in changes[0]:
+            error_files.append((str(file_path), changes[0]))
+            print(f"❌ Error in {file_path.name}: {changes[0]}")
+    
+    print(f"\nFixed {len(fixed_files)} files")
+    if error_files:
+        print(f"Errors in {len(error_files)} files")
 
-print(f"\nTotal fixed: {len(fixed_files)} files")
-
+if __name__ == "__main__":
+    main()

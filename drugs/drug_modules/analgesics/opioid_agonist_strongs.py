@@ -424,26 +424,39 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
         ]
     },
 
-    "Meperidine": {
+    "Meperidine":     {
         "group": "Analgesic - Opioid Agonist (Strong)",
         "vietnamese_name": "Meperidine, Pethidine, Demerol",
-        "administration": ["PO", "IV", "IM", "SC"],
+        "administration": [
+            "PO",
+            "IV",
+            "IM",
+            "SC"
+    ],
         "indications": [
             "Đau nặng",
             "Đau sau phẫu thuật",
             "Đau cấp tính"
-        ],
-        "contraindications": [
-            "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
-            "Suy hô hấp nặng",
-            "Dùng MAO inhibitor trong 14 ngày",
-            "Suy thận nặng",
-            "Suy gan nặng"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng meperidine hoặc opioid",
+                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+                "Suy hô hấp nặng",
+                "Dùng MAO inhibitor trong vòng 14 ngày - CHỐNG CHỈ ĐỊNH",
+                "Suy thận nặng - CHỐNG CHỈ ĐỊNH (tích lũy normeperidine)",
+                "Dùng lâu dài (>48 giờ) - CHỐNG CHỈ ĐỊNH (tích lũy normeperidine)"
+    ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng, tránh dùng",
+                "Suy gan nặng - thận trọng",
+                "Người cao tuổi - giảm liều"
+    ],
+        },
         "dosage": {
             "adult_po": "50-150mg mỗi 3-4 giờ (tối đa 600mg/ngày)",
             "adult_iv_im": "25-100mg IV/IM mỗi 3-4 giờ",
-            "notes": "Ít dùng hiện nay do tích lũy normeperidine (active metabolite độc, gây co giật). Chỉ dùng ngắn hạn (<48 giờ)."
+            "notes": """Ít dùng hiện nay do tích lũy normeperidine (active metabolite độc, gây co giật). Chỉ dùng ngắn hạn (<48 giờ).""",
         },
         "side_effects": [
             "Ức chế hô hấp",
@@ -453,21 +466,21 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
             "Buồn ngủ, lú lẫn",
             "Nguy cơ nghiện/lệ thuộc",
             "Tích lũy normeperidine ở suy thận → nguy cơ co giật cao"
-        ],
+    ],
         "interactions": [
             "MAO inhibitor: CHỐNG CHỈ ĐỊNH (nguy cơ phản ứng nghiêm trọng)",
             "Benzodiazepine: tăng nguy cơ ức chế hô hấp",
             "Rifampin: giảm nồng độ meperidine"
-        ],
+    ],
         "pregnancy": "C",
-        "mechanism_of_action": "Opioid mu-receptor agonist, tác dụng tương tự morphine nhưng ngắn hơn. Meperidine được chuyển hóa thành normeperidine (active metabolite) → tích lũy ở suy thận → gây co giật. ĐẶC ĐIỂM: (1) Ít dùng hiện nay do nguy cơ co giật (tích lũy normeperidine), (2) CHỈ dùng ngắn hạn (<48 giờ), (3) CHỐNG CHỈ ĐỊNH ở suy thận (tích lũy normeperidine), (4) CHỐNG CHỈ ĐỊNH với MAO inhibitor (phản ứng nghiêm trọng).",
+        "mechanism_of_action": """Opioid mu-receptor agonist, tác dụng tương tự morphine nhưng ngắn hơn. Meperidine được chuyển hóa thành normeperidine (active metabolite) → tích lũy ở suy thận → gây co giật. ĐẶC ĐIỂM: (1) Ít dùng hiện nay do nguy cơ co giật (tích lũy normeperidine), (2) CHỈ dùng ngắn hạn (<48 giờ), (3) CHỐNG CHỈ ĐỊNH ở suy thận (tích lũy normeperidine), (4) CHỐNG CHỈ ĐỊNH với MAO inhibitor (phản ứng nghiêm trọng).""",
         "monitoring": [
             "Nhịp thở và độ bão hòa oxy (SpO2)",
             "Mức độ đau",
             "Mức độ ý thức",
             "Dấu hiệu co giật (đặc biệt ở suy thận, dùng >48 giờ)",
             "Chức năng thận (creatinine, BUN) - QUAN TRỌNG (tích lũy normeperidine)"
-        ],
+    ],
         "precautions": [
             "CHỈ dùng ngắn hạn (<48 giờ) - CHỐNG CHỈ ĐỊNH dùng lâu dài",
             "CHỐNG CHỈ ĐỊNH ở suy thận (tích lũy normeperidine → co giật)",
@@ -476,54 +489,40 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
             "Ít dùng hiện nay - ưu tiên dùng morphine hoặc opioid khác",
             "Khởi đầu với liều thấp",
             "Tránh dùng với benzodiazepine, rượu"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "3-4 giờ (meperidine), 15-20 giờ (normeperidine - tích lũy)",
             "onset": "10-15 phút (IV), 30-45 phút (PO)",
             "duration": "2-4 giờ",
             "protein_binding": "60-80%",
-            "clearance": "Gan (chuyển hóa thành normeperidine), thận (thải trừ normeperidine - tích lũy ở suy thận)"
+            "clearance": "Gan (chuyển hóa thành normeperidine), thận (thải trừ normeperidine - tích lũy ở suy thận)",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Bảo quản an toàn, tránh xa tầm tay trẻ em.",
-        "black_box_warnings": "CHỐNG CHỈ ĐỊNH dùng lâu dài (>48 giờ) - tích lũy normeperidine gây co giật. CHỐNG CHỈ ĐỊNH ở suy thận - tích lũy normeperidine. CHỐNG CHỈ ĐỊNH với MAO inhibitor - phản ứng nghiêm trọng. Nguy cơ nghiện, lạm dụng, và lệ thuộc.",
+        "black_box_warnings": """CHỐNG CHỈ ĐỊNH dùng lâu dài (>48 giờ) - tích lũy normeperidine gây co giật. CHỐNG CHỈ ĐỊNH ở suy thận - tích lũy normeperidine. CHỐNG CHỈ ĐỊNH với MAO inhibitor - phản ứng nghiêm trọng. Nguy cơ nghiện, lạm dụng, và lệ thuộc.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "MAO inhibitors",
                     "mechanism": "Tăng nguy cơ phản ứng nghiêm trọng",
                     "effect": "Có thể gây tăng thân nhiệt, tăng huyết áp, co giật, nguy hiểm tính mạng",
-                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng MAOI ít nhất 14 ngày trước khi dùng meperidine."
+                    "management": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng MAOI ít nhất 14 ngày trước khi dùng meperidine.",
                 },
-                {
+    {
                     "drug": "Benzodiazepine, thuốc an thần, rượu",
                     "mechanism": "Tăng ức chế hệ thần kinh trung ương",
                     "effect": "Tăng nguy cơ ức chế hô hấp nặng",
-                    "management": "TRÁNH DÙNG ĐỒNG THỜI."
+                    "management": "TRÁNH DÙNG ĐỒNG THỜI.",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Rifampin",
                     "mechanism": "Cảm ứng enzyme chuyển hóa meperidine",
                     "effect": "Giảm nồng độ meperidine, giảm hiệu quả",
-                    "management": "Có thể cần tăng liều meperidine."
+                    "management": "Có thể cần tăng liều meperidine.",
                 }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng meperidine hoặc opioid",
-                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
-                "Suy hô hấp nặng",
-                "Dùng MAO inhibitor trong vòng 14 ngày - CHỐNG CHỈ ĐỊNH",
-                "Suy thận nặng - CHỐNG CHỈ ĐỊNH (tích lũy normeperidine)",
-                "Dùng lâu dài (>48 giờ) - CHỐNG CHỈ ĐỊNH (tích lũy normeperidine)"
-            ],
-            "tương_đối": [
-                "Suy thận trung bình - thận trọng, tránh dùng",
-                "Suy gan nặng - thận trọng",
-                "Người cao tuổi - giảm liều"
-            ]
+                ],
+            "minor": [],
         },
         "contraindications_detail": {
             "tuyệt_đối": [
@@ -533,19 +532,19 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
                 "Dùng MAO inhibitor trong vòng 14 ngày - CHỐNG CHỈ ĐỊNH",
                 "Suy thận nặng - CHỐNG CHỈ ĐỊNH (tích lũy normeperidine)",
                 "Dùng lâu dài (>48 giờ) - CHỐNG CHỈ ĐỊNH (tích lũy normeperidine)"
-            ],
+    ],
             "tương_đối": [
                 "Suy thận trung bình - thận trọng, tránh dùng",
                 "Suy gan nặng - thận trọng",
                 "Người cao tuổi - giảm liều"
-            ]
+    ],
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều",
             "30_60": "CHỐNG CHỈ ĐỊNH - tránh dùng (tích lũy normeperidine)",
             "under_30": "CHỐNG CHỈ ĐỊNH - tránh dùng (tích lũy normeperidine → co giật)",
             "dialysis": "CHỐNG CHỈ ĐỊNH - tránh dùng",
-            "notes": "CHỐNG CHỈ ĐỊNH ở suy thận. Meperidine chuyển hóa thành normeperidine (active metabolite) tích lũy ở suy thận và gây co giật. Dùng thuốc opioid khác (morphine, fentanyl) thay thế."
+            "notes": """CHỐNG CHỈ ĐỊNH ở suy thận. Meperidine chuyển hóa thành normeperidine (active metabolite) tích lũy ở suy thận và gây co giật. Dùng thuốc opioid khác (morphine, fentanyl) thay thế.""",
         },
         "pregnancy_lactation": {
             "fda_category": "C",
@@ -553,14 +552,14 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
             "lactation": {
                 "safety": "Caution",
                 "details": "Meperidine và normeperidine bài tiết vào sữa mẹ. Có thể gây tác dụng phụ ở trẻ.",
-                "recommendation": "Thận trọng khi cho con bú. Tránh dùng lâu dài."
-            }
+                "recommendation": "Thận trọng khi cho con bú. Tránh dùng lâu dài.",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không đổi",
             "moderate": "Thận trọng",
             "severe": "Thận trọng, giảm liều (chuyển hóa qua gan)",
-            "notes": "Meperidine chuyển hóa ở gan thành normeperidine. Suy gan có thể ảnh hưởng đến chuyển hóa."
+            "notes": "Meperidine chuyển hóa ở gan thành normeperidine. Suy gan có thể ảnh hưởng đến chuyển hóa.",
         },
         "overdose_management": {
             "symptoms": [
@@ -569,7 +568,7 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
                 "Co giật (do tích lũy normeperidine)",
                 "Đồng tử co nhỏ (miosis)",
                 "Hạ huyết áp"
-            ],
+    ],
             "antidote": "Naloxone (Narcan) - opioid antagonist, nhưng không đảo ngược co giật do normeperidine",
             "treatment": [
                 "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp ngay lập tức",
@@ -578,68 +577,99 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
                 "Theo dõi liên tục: ý thức, hô hấp, tim mạch",
                 "Hỗ trợ hô hấp: thở máy nếu suy hô hấp nặng",
                 "Lưu ý: Naloxone đảo ngược tác dụng opioid nhưng không đảo ngược co giật do normeperidine"
-            ],
-            "monitoring": "Theo dõi liên tục: ý thức, hô hấp (nhịp thở, SpO2), tim mạch, dấu hiệu co giật. Theo dõi ít nhất 4-6 giờ sau liều naloxone cuối."
+    ],
+            "monitoring": """Theo dõi liên tục: ý thức, hô hấp (nhịp thở, SpO2), tim mạch, dấu hiệu co giật. Theo dõi ít nhất 4-6 giờ sau liều naloxone cuối.""",
         },
         "reversal_agents": {
             "available": True,
             "agents": [
-                {
+    {
                     "agent": "Naloxone (Narcan)",
                     "mechanism": "Opioid antagonist, đảo ngược tác dụng opioid",
                     "indication": "Quá liều meperidine gây ức chế hô hấp",
                     "dose": "0.4-2mg IV/IM/SC, có thể lặp lại mỗi 2-3 phút",
-                    "caution": "Naloxone đảo ngược tác dụng opioid nhưng không đảo ngược co giật do normeperidine. Cần điều trị co giật riêng nếu có."
+                    "caution": """Naloxone đảo ngược tác dụng opioid nhưng không đảo ngược co giật do normeperidine. Cần điều trị co giật riêng nếu có.""",
                 }
-            ]
+                ],
         },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với thức ăn hoặc không",
-                "timing": "Mỗi 3-4 giờ. CHỈ dùng ngắn hạn (<48 giờ). Liều tối đa: 600mg/ngày."
+                "timing": "Mỗi 3-4 giờ. CHỈ dùng ngắn hạn (<48 giờ). Liều tối đa: 600mg/ngày.",
             },
             "iv": {
                 "reconstitution": "Pha với NS hoặc D5W",
                 "infusion_rate": "Tiêm IV chậm (2-3 phút)",
-                "compatibility": ["NS", "D5W"],
+                "compatibility": [
+                    "NS",
+                    "D5W"
+    ],
                 "incompatibility": [],
-                "notes": "CHỈ dùng ngắn hạn (<48 giờ). Theo dõi hô hấp chặt chẽ."
+                "notes": "CHỈ dùng ngắn hạn (<48 giờ). Theo dõi hô hấp chặt chẽ.",
             },
             "im": {
-                "notes": "Tiêm bắp sâu. CHỈ dùng ngắn hạn (<48 giờ)."
-            }
+                "notes": "Tiêm bắp sâu. CHỈ dùng ngắn hạn (<48 giờ).",
+            },
         },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Meperidine (Demerol)",
                 "UpToDate - Meperidine: Drug information"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "High - FDA-approved, nhưng ít dùng hiện nay"
-        }
+            "evidence_level": "High - FDA-approved, nhưng ít dùng hiện nay",
+        },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Respiratory rate", "Sedation", "Constipation"],
+            },
+            "guideline_tags": [
+                "CDC 2022 Opioid Prescribing Guidelines",
+                "FDA Black Box Warning - Opioid addiction, abuse, misuse",
+            ]
     },
-    "Methadone": {
+    "Methadone":     {
         "group": "Analgesic - Opioid Agonist (Strong)",
         "vietnamese_name": "Methadone, Dolophine",
-        "administration": ["PO", "IV", "IM"],
+        "administration": [
+            "PO",
+            "IV",
+            "IM"
+    ],
         "indications": [
             "Đau nặng",
             "Cai nghiện opioid (maintenance therapy)",
             "Đau mạn tính",
             "Đau ung thư"
-        ],
-        "contraindications": [
-            "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
-            "Suy hô hấp nặng",
-            "Dùng MAO inhibitor trong 14 ngày",
-            "Tắc ruột cơ học",
-            "Tăng áp lực nội sọ"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng methadone hoặc opioid",
+                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+                "Suy hô hấp nặng",
+                "Dùng MAO inhibitor trong vòng 14 ngày",
+                "Tắc ruột cơ học",
+                "Tăng áp lực nội sọ"
+    ],
+            "tương_đối": [
+                "Suy thận nặng - thận trọng, giảm liều",
+                "Suy gan nặng - thận trọng, giảm liều (chuyển hóa qua gan)",
+                "QT kéo dài - tránh dùng hoặc theo dõi ECG sát",
+                "Dùng với thuốc kéo dài QT - tránh dùng chung",
+                "Người cao tuổi - giảm liều (tăng nhạy cảm, tăng nguy cơ tích lũy)"
+    ],
+        },
         "dosage": {
             "adult_pain_po": "2.5-10mg mỗi 6-8 giờ (khởi đầu), điều chỉnh theo đáp ứng",
             "adult_pain_iv_im": "2.5-10mg IV/IM mỗi 6-8 giờ",
             "adult_maintenance": "20-120mg/ngày PO (cai nghiện opioid)",
-            "notes": "Half-life dài (15-60 giờ) → tích lũy, nguy cơ quá liều. Khởi đầu thấp, tăng dần chậm. QT kéo dài có thể xảy ra."
+            "notes": """Half-life dài (15-60 giờ) → tích lũy, nguy cơ quá liều. Khởi đầu thấp, tăng dần chậm. QT kéo dài có thể xảy ra.""",
         },
         "side_effects": [
             "Ức chế hô hấp (nguy hiểm, có thể kéo dài do half-life dài)",
@@ -649,16 +679,16 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
             "Buồn ngủ, lú lẫn",
             "Tích lũy (do half-life dài) → nguy cơ quá liều",
             "Nguy cơ nghiện/lệ thuộc"
-        ],
+    ],
         "interactions": [
             "Benzodiazepine: tăng nguy cơ ức chế hô hấp nặng",
             "MAO inhibitor: chống chỉ định",
             "Thuốc kéo dài QT: tăng nguy cơ torsades de pointes",
             "CYP3A4 inhibitors: tăng nồng độ methadone",
             "Rifampin: giảm nồng độ methadone"
-        ],
+    ],
         "pregnancy": "C",
-        "mechanism_of_action": "Opioid mu-receptor agonist mạnh, tương tự morphine. Methadone có đặc điểm: (1) Half-life dài (15-60 giờ) → tích lũy, nguy cơ quá liều, nhưng hiệu quả kéo dài, (2) Có thể kéo dài QT interval → nguy cơ torsades de pointes, (3) Chuyển hóa qua CYP3A4, CYP2B6, CYP2D6, (4) Dùng cho cai nghiện opioid (maintenance therapy) do tác dụng kéo dài và giảm craving. Được dùng cho đau nặng và cai nghiện opioid.",
+        "mechanism_of_action": """Opioid mu-receptor agonist mạnh, tương tự morphine. Methadone có đặc điểm: (1) Half-life dài (15-60 giờ) → tích lũy, nguy cơ quá liều, nhưng hiệu quả kéo dài, (2) Có thể kéo dài QT interval → nguy cơ torsades de pointes, (3) Chuyển hóa qua CYP3A4, CYP2B6, CYP2D6, (4) Dùng cho cai nghiện opioid (maintenance therapy) do tác dụng kéo dài và giảm craving. Được dùng cho đau nặng và cai nghiện opioid.""",
         "monitoring": [
             "Nhịp thở và độ bão hòa oxy (SpO2) liên tục - QUAN TRỌNG (nguy cơ tích lũy)",
             "ECG - theo dõi QT interval (nguy cơ kéo dài QT, torsades de pointes)",
@@ -666,7 +696,7 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
             "Mức độ ý thức",
             "Dấu hiệu tích lũy/quá liều (tăng buồn ngủ, giảm nhịp thở)",
             "Chức năng thận, gan (chuyển hóa qua gan)"
-        ],
+    ],
         "precautions": [
             "Half-life dài (15-60 giờ) → TÍCH LŨY, nguy cơ quá liều cao, đặc biệt trong vài ngày đầu",
             "Khởi đầu với liều thấp (2.5-10mg), tăng dần CHẬM (mỗi 5-7 ngày)",
@@ -677,68 +707,52 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
             "Tránh dùng với thuốc kéo dài QT khác",
             "Cần có naloxone sẵn sàng (nhưng half-life methadone dài → có thể cần nhiều liều naloxone)",
             "Dùng cho cai nghiện: phải được quản lý bởi chương trình điều trị chuyên khoa"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "15-60 giờ (rất dài, tích lũy)",
             "onset": "30-60 phút (PO), 10-20 phút (IV/IM)",
             "duration": "4-8 giờ (đau), nhưng tích lũy do half-life dài",
             "protein_binding": "85-90%",
-            "clearance": "Gan (chuyển hóa qua CYP3A4, CYP2B6, CYP2D6), thận (thải trừ)"
+            "clearance": "Gan (chuyển hóa qua CYP3A4, CYP2B6, CYP2D6), thận (thải trừ)",
         },
-        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Bảo quản an toàn, tránh xa tầm tay trẻ em (nguy cơ quá liều gây tử vong).",
-        "black_box_warnings": "Nguy cơ nghiện, lạm dụng, và lệ thuộc. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt khi dùng với benzodiazepine hoặc rượu. Half-life dài (15-60 giờ) → tích lũy, nguy cơ quá liều cao trong vài ngày đầu. Nguy cơ kéo dài QT interval và torsades de pointes.",
+        "storage": """Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Bảo quản an toàn, tránh xa tầm tay trẻ em (nguy cơ quá liều gây tử vong).""",
+        "black_box_warnings": """Nguy cơ nghiện, lạm dụng, và lệ thuộc. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt khi dùng với benzodiazepine hoặc rượu. Half-life dài (15-60 giờ) → tích lũy, nguy cơ quá liều cao trong vài ngày đầu. Nguy cơ kéo dài QT interval và torsades de pointes.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Benzodiazepine, thuốc an thần, rượu",
                     "mechanism": "Tăng ức chế hệ thần kinh trung ương",
                     "effect": "Tăng nguy cơ ức chế hô hấp nặng, có thể tử vong",
-                    "management": "TRÁNH DÙNG ĐỒNG THỜI. Nếu phải dùng, giảm liều methadone, theo dõi hô hấp liên tục."
+                    "management": "TRÁNH DÙNG ĐỒNG THỜI. Nếu phải dùng, giảm liều methadone, theo dõi hô hấp liên tục.",
                 },
-                {
+    {
                     "drug": "MAO inhibitors",
                     "mechanism": "Tăng nguy cơ phản ứng nghiêm trọng",
                     "effect": "Có thể gây hội chứng serotonin, tăng huyết áp, nguy hiểm tính mạng",
-                    "management": "CHỐNG CHỈ ĐỊNH. Ngừng MAOI ít nhất 14 ngày trước khi dùng methadone."
+                    "management": "CHỐNG CHỈ ĐỊNH. Ngừng MAOI ít nhất 14 ngày trước khi dùng methadone.",
                 },
-                {
+    {
                     "drug": "Thuốc kéo dài QT (Amiodarone, Sotalol, Haloperidol, Chlorpromazine, Macrolides)",
                     "mechanism": "Tác dụng hiệp đồng kéo dài QT interval",
                     "effect": "Tăng nguy cơ torsades de pointes",
-                    "management": "Tránh dùng chung. Nếu bắt buộc: theo dõi ECG sát, đảm bảo K+ và Mg2+ bình thường."
+                    "management": "Tránh dùng chung. Nếu bắt buộc: theo dõi ECG sát, đảm bảo K+ và Mg2+ bình thường.",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "CYP3A4 inhibitors (Ketoconazole, Clarithromycin, Erythromycin, Ritonavir)",
                     "mechanism": "Ức chế chuyển hóa methadone",
                     "effect": "Tăng nồng độ methadone, tăng tác dụng phụ",
-                    "management": "Giảm liều methadone. Theo dõi tác dụng phụ."
+                    "management": "Giảm liều methadone. Theo dõi tác dụng phụ.",
                 },
-                {
+    {
                     "drug": "Rifampin, Carbamazepine, Phenytoin",
                     "mechanism": "Cảm ứng enzyme chuyển hóa methadone",
                     "effect": "Giảm nồng độ methadone, giảm hiệu quả",
-                    "management": "Có thể cần tăng liều methadone. Theo dõi đáp ứng."
+                    "management": "Có thể cần tăng liều methadone. Theo dõi đáp ứng.",
                 }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng methadone hoặc opioid",
-                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
-                "Suy hô hấp nặng",
-                "Dùng MAO inhibitor trong vòng 14 ngày",
-                "Tắc ruột cơ học",
-                "Tăng áp lực nội sọ"
-            ],
-            "tương_đối": [
-                "Suy thận nặng - thận trọng, giảm liều",
-                "Suy gan nặng - thận trọng, giảm liều (chuyển hóa qua gan)",
-                "QT kéo dài - tránh dùng hoặc theo dõi ECG sát",
-                "Dùng với thuốc kéo dài QT - tránh dùng chung",
-                "Người cao tuổi - giảm liều (tăng nhạy cảm, tăng nguy cơ tích lũy)"
-            ]
+                ],
+            "minor": [],
         },
         "contraindications_detail": {
             "tuyệt_đối": [
@@ -748,36 +762,36 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
                 "Dùng MAO inhibitor trong vòng 14 ngày",
                 "Tắc ruột cơ học",
                 "Tăng áp lực nội sọ"
-            ],
+    ],
             "tương_đối": [
                 "Suy thận nặng - thận trọng, giảm liều",
                 "Suy gan nặng - thận trọng, giảm liều (chuyển hóa qua gan)",
                 "QT kéo dài - tránh dùng hoặc theo dõi ECG sát",
                 "Dùng với thuốc kéo dài QT - tránh dùng chung",
                 "Người cao tuổi - giảm liều (tăng nhạy cảm, tăng nguy cơ tích lũy)"
-            ]
+    ],
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều",
             "30_60": "Thận trọng, có thể cần giảm liều",
             "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
             "dialysis": "Thận trọng, giảm liều. Methadone không được lọc sạch hiệu quả qua thẩm phân máu.",
-            "notes": "Methadone thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy, đặc biệt khi kết hợp với half-life dài. Giảm liều và theo dõi chặt chẽ ở suy thận."
+            "notes": """Methadone thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy, đặc biệt khi kết hợp với half-life dài. Giảm liều và theo dõi chặt chẽ ở suy thận.""",
         },
         "pregnancy_lactation": {
             "fda_category": "C",
-            "pregnancy_details": "Category C. Có thể dùng nếu lợi ích > nguy cơ. Khi dùng cho cai nghiện opioid trong thai kỳ: có thể giảm nguy cơ hội chứng cai ở trẻ sơ sinh so với tiếp tục dùng heroin/opioid khác. Tuy nhiên, vẫn có nguy cơ hội chứng cai ở trẻ sơ sinh nếu dùng gần cuối thai kỳ.",
+            "pregnancy_details": """Category C. Có thể dùng nếu lợi ích > nguy cơ. Khi dùng cho cai nghiện opioid trong thai kỳ: có thể giảm nguy cơ hội chứng cai ở trẻ sơ sinh so với tiếp tục dùng heroin/opioid khác. Tuy nhiên, vẫn có nguy cơ hội chứng cai ở trẻ sơ sinh nếu dùng gần cuối thai kỳ.""",
             "lactation": {
                 "safety": "Caution",
-                "details": "Methadone bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ tương đương khoảng 1-3% liều mẹ. Có thể gây tác dụng phụ ở trẻ (buồn ngủ, bú kém, ức chế hô hấp).",
-                "recommendation": "Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém, ức chế hô hấp). Đặc biệt thận trọng ở trẻ sơ sinh."
-            }
+                "details": """Methadone bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ tương đương khoảng 1-3% liều mẹ. Có thể gây tác dụng phụ ở trẻ (buồn ngủ, bú kém, ức chế hô hấp).""",
+                "recommendation": """Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém, ức chế hô hấp). Đặc biệt thận trọng ở trẻ sơ sinh.""",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không đổi",
             "moderate": "Thận trọng, có thể cần giảm liều",
             "severe": "Thận trọng, giảm liều (chuyển hóa qua gan)",
-            "notes": "Methadone chuyển hóa ở gan qua CYP3A4, CYP2B6, CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+            "notes": """Methadone chuyển hóa ở gan qua CYP3A4, CYP2B6, CYP2D6. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ.""",
         },
         "overdose_management": {
             "symptoms": [
@@ -786,7 +800,7 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
                 "Đồng tử co nhỏ (miosis)",
                 "Hạ huyết áp, nhịp tim chậm",
                 "Kéo dài QT interval, torsades de pointes (hiếm)"
-            ],
+    ],
             "antidote": "Naloxone (Narcan) - opioid antagonist, nhưng có thể cần nhiều liều do half-life methadone dài",
             "treatment": [
                 "Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp ngay lập tức (quan trọng nhất)",
@@ -796,48 +810,50 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
                 "Hỗ trợ hô hấp: thở máy nếu suy hô hấp nặng",
                 "Điều trị hạ huyết áp: truyền dịch, vasopressors nếu cần",
                 "Theo dõi ít nhất 24-48 giờ do half-life methadone dài (15-60 giờ)"
-            ],
-            "monitoring": "Theo dõi liên tục: ý thức, hô hấp (nhịp thở, SpO2), tim mạch, ECG (QT interval). Theo dõi ít nhất 24-48 giờ do half-life dài."
+    ],
+            "monitoring": """Theo dõi liên tục: ý thức, hô hấp (nhịp thở, SpO2), tim mạch, ECG (QT interval). Theo dõi ít nhất 24-48 giờ do half-life dài.""",
         },
         "reversal_agents": {
             "available": True,
             "agents": [
-                {
+    {
                     "agent": "Naloxone (Narcan)",
                     "mechanism": "Opioid antagonist, đảo ngược tác dụng opioid",
                     "indication": "Quá liều methadone gây ức chế hô hấp",
-                    "dose": "0.4-2mg IV/IM/SC, có thể lặp lại mỗi 2-3 phút. Có thể cần truyền liên tục do half-life methadone dài.",
-                    "caution": "Half-life naloxone ngắn (30-90 phút) nhưng half-life methadone dài (15-60 giờ) → có thể cần nhiều liều hoặc truyền liên tục."
+                    "dose": """0.4-2mg IV/IM/SC, có thể lặp lại mỗi 2-3 phút. Có thể cần truyền liên tục do half-life methadone dài.""",
+                    "caution": """Half-life naloxone ngắn (30-90 phút) nhưng half-life methadone dài (15-60 giờ) → có thể cần nhiều liều hoặc truyền liên tục.""",
                 }
-            ]
+                ],
         },
         "administration_instructions": {
             "oral": {
                 "with_food": "Có thể uống với thức ăn hoặc không",
-                "timing": "Mỗi 6-8 giờ. Khởi đầu với liều thấp (2.5-10mg), tăng dần CHẬM (mỗi 5-7 ngày). Dùng cho cai nghiện: phải được quản lý bởi chương trình điều trị chuyên khoa."
+                "timing": """Mỗi 6-8 giờ. Khởi đầu với liều thấp (2.5-10mg), tăng dần CHẬM (mỗi 5-7 ngày). Dùng cho cai nghiện: phải được quản lý bởi chương trình điều trị chuyên khoa.""",
             },
             "iv": {
                 "reconstitution": "Pha với NS hoặc D5W",
                 "infusion_rate": "Tiêm IV chậm (2-3 phút). Hoặc truyền liên tục.",
-                "compatibility": ["NS", "D5W"],
+                "compatibility": [
+                    "NS",
+                    "D5W"
+    ],
                 "incompatibility": [],
-                "notes": "Theo dõi hô hấp chặt chẽ. Khởi đầu với liều thấp."
+                "notes": "Theo dõi hô hấp chặt chẽ. Khởi đầu với liều thấp.",
             },
             "im": {
-                "notes": "Tiêm bắp sâu. Theo dõi hô hấp chặt chẽ."
-            }
+                "notes": "Tiêm bắp sâu. Theo dõi hô hấp chặt chẽ.",
+            },
         },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Methadone (Dolophine)",
                 "UpToDate - Methadone: Drug information",
                 "SAMHSA Guidelines - Opioid Treatment Programs"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "High - FDA-approved, extensive clinical data"
-        }
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
     },
-
     "Morphine": {'group': 'Analgesic - Opioid Agonist (Strong)', 'vietnamese_name':
         'Morphine', 'administration': ['PO', 'IV', 'IM', 'SC'], 'indications':
         ['Đau nặng (ung thư, sau phẫu thuật)', 'Đau cấp tính nặng',
@@ -1156,8 +1172,705 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
                 "Lexicomp - Oxycodone monograph"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA-approved, extensive clinical data"
+            "evidence_level": "High - FDA-approved",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Respiratory rate", "Sedation", "Constipation"],
+            },
+            "guideline_tags": [
+                "CDC 2022 Opioid Prescribing Guidelines",
+                "FDA Black Box Warning - Opioid addiction, abuse, misuse",
+            ] 
+
         }
+    },
+
+    "Remifentanil": {
+        "group": "Analgesic - Opioid Agonist (Strong) - Ultra-short acting (ICU/Anesthesia)",
+        "vietnamese_name": "Remifentanil, Ultiva",
+        "brand_names": {
+            "common": ["Ultiva"],
+            "vietnam": ["Remifentanil", "Ultiva"]
+        },
+        "administration": ["IV"],
+        "indications": [
+            "Gây mê toàn thân (induction và maintenance)",
+            "Giảm đau trong phẫu thuật (intraoperative analgesia)",
+            "An thần và giảm đau cho bệnh nhân thở máy trong ICU",
+            "An thần cho thủ thuật (procedural sedation)"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với remifentanil hoặc opioid",
+                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+                "Suy hô hấp nặng không có hỗ trợ hô hấp",
+                "Dùng MAO inhibitor trong vòng 14 ngày"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - không cần chỉnh liều (chuyển hóa ngoài gan/thận)",
+                "Suy gan nặng - không cần chỉnh liều (chuyển hóa ngoài gan)",
+                "Người cao tuổi - giảm liều 25-50% (tăng nhạy cảm)",
+                "Bệnh nhân opioid-naive - khởi đầu liều thấp",
+                "Bệnh nhân béo phì - tính liều theo cân nặng lý tưởng (IBW)"
+            ]
+        },
+        "dosage": {
+            "adult_anesthesia_induction": "0.5-1 mcg/kg IV bolus (có thể dùng đến 2 mcg/kg cho intubation)",
+            "adult_anesthesia_maintenance": "0.05-2 mcg/kg/phút truyền liên tục (tùy mức độ đau và phẫu thuật)",
+            "adult_icu_sedation": "0.05-0.15 mcg/kg/phút truyền liên tục",
+            "adult_procedural_sedation": "0.5-1 mcg/kg bolus, sau đó 0.05-0.1 mcg/kg/phút",
+            "elderly": "Giảm liều 25-50%",
+            "obese": "Tính liều theo cân nặng lý tưởng (IBW), không theo cân nặng thực",
+            "notes": "Remifentanil có half-life rất ngắn (3-10 phút) do chuyển hóa nhanh bởi esterase trong máu và mô. Tác dụng kết thúc nhanh sau khi ngừng truyền (không tích lũy). Cần truyền liên tục, không dùng bolus đơn độc cho giảm đau kéo dài."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều (chuyển hóa ngoài gan/thận).",
+            "under_30": "Không cần chỉnh liều (chuyển hóa ngoài gan/thận).",
+            "notes": "Remifentanil được chuyển hóa bởi esterase trong máu và mô, không phụ thuộc gan/thận. Không tích lũy ở suy thận hoặc suy gan."
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Không cần chỉnh liều.",
+            "severe": "Không cần chỉnh liều (chuyển hóa ngoài gan).",
+            "notes": "Remifentanil được chuyển hóa bởi esterase trong máu và mô, không phụ thuộc chức năng gan. Không tích lũy ở suy gan."
+        },
+        "side_effects": [
+            "Ức chế hô hấp nặng (nguy hiểm, đặc biệt với bolus nhanh)",
+            "Rigid chest (co cứng ngực) - đặc biệt với bolus liều cao",
+            "Buồn nôn, nôn (thường gặp)",
+            "Hạ huyết áp, nhịp tim chậm (bradycardia)",
+            "Ngứa",
+            "Co đồng tử (miosis)",
+            "Buồn ngủ, lú lẫn",
+            "Tăng áp lực nội sọ (với liều cao)",
+            "Nguy cơ nghiện/lệ thuộc (nhưng ít hơn do dùng ngắn hạn)"
+        ],
+        "interactions": [
+            "Thuốc an thần/Benzodiazepine: tăng nguy cơ ức chế hô hấp nặng",
+            "Propofol: hiệp đồng an thần và ức chế hô hấp - giảm liều cả hai",
+            "MAO inhibitor: nguy hiểm - tránh dùng",
+            "Thuốc chẹn beta: tăng nguy cơ nhịp tim chậm",
+            "Rượu: tăng nguy cơ ức chế hô hấp"
+        ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Có thể dùng trong gây mê phẫu thuật nếu cần. Tam cá nguyệt 3: Nguy cơ ức chế hô hấp ở trẻ sơ sinh nếu dùng gần ngày sinh. Thường dùng trong gây mê phẫu thuật.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Remifentanil bài tiết vào sữa mẹ ở nồng độ thấp. Do half-life rất ngắn, nồng độ trong sữa giảm nhanh sau khi ngừng truyền.",
+                "recommendation": "Có thể cho con bú sau vài giờ khi mẹ tỉnh táo. Theo dõi trẻ sát (dấu hiệu ức chế hô hấp, buồn ngủ)."
+            }
+        },
+        "mechanism_of_action": (
+            "Remifentanil là opioid mu-receptor agonist mạnh, mạnh tương đương fentanyl. "
+            "Gắn với mu-opioid receptors trong hệ thần kinh trung ương và ngoại vi, "
+            "kích hoạt tín hiệu G-protein, dẫn đến giảm dẫn truyền đau, giảm nhận thức đau, an thần, và ức chế hô hấp. "
+            "Đặc điểm độc đáo: Remifentanil được chuyển hóa bởi esterase không đặc hiệu trong máu và mô, "
+            "không phụ thuộc gan/thận, có half-life rất ngắn (3-10 phút). "
+            "Tác dụng kết thúc nhanh sau khi ngừng truyền (không tích lũy), "
+            "làm cho remifentanil lý tưởng cho gây mê có kiểm soát và ICU sedation."
+        ),
+        "monitoring": [
+            "Nhịp thở và độ bão hòa oxy (SpO2) liên tục - QUAN TRỌNG NHẤT",
+            "EtCO2 (end-tidal CO2) trong gây mê",
+            "Mức độ đau (thang điểm đau)",
+            "Mức độ ý thức (dấu hiệu quá liều: giảm ý thức, thở chậm)",
+            "Huyết áp và nhịp tim (có thể gây hạ huyết áp, nhịp tim chậm)",
+            "Co đồng tử (miosis)",
+            "Dấu hiệu rigid chest (co cứng ngực) với bolus liều cao",
+            "Áp lực nội sọ (nếu có monitoring)"
+        ],
+        "precautions": [
+            "Nguy cơ ức chế hô hấp NẶNG - đặc biệt với bolus nhanh hoặc liều cao",
+            "Rigid chest (co cứng ngực) với bolus liều cao - có thể cần muscle relaxant",
+            "Cần có naloxone sẵn sàng để đảo ngược nếu quá liều",
+            "Tránh dùng với benzodiazepine, propofol, rượu (tăng nguy cơ ức chế hô hấp nặng)",
+            "Khởi đầu với liều thấp, tăng dần theo đáp ứng",
+            "Truyền liên tục - không dùng bolus đơn độc cho giảm đau kéo dài",
+            "Ở bệnh nhân béo phì: tính liều theo cân nặng lý tưởng (IBW), không theo cân nặng thực",
+            "Người cao tuổi: giảm liều 25-50% (tăng nhạy cảm)",
+            "Theo dõi huyết động chặt chẽ (có thể gây hạ huyết áp, nhịp tim chậm)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-10 phút (rất ngắn, không tích lũy)",
+            "onset": "Rất nhanh (30-60 giây với IV bolus)",
+            "duration": "Rất ngắn (3-10 phút sau khi ngừng truyền)",
+            "protein_binding": "~70%",
+            "metabolism": "Esterase không đặc hiệu trong máu và mô (không phụ thuộc gan/thận)",
+            "clearance": "Rất nhanh, không tích lũy. Chuyển hóa thành remifentanil acid (inactive), thải trừ qua thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh đông lạnh. Sau khi pha: ổn định trong 24 giờ ở nhiệt độ phòng. Bảo quản trong tủ lạnh (2-8°C) có thể kéo dài đến 4 giờ sau khi pha.",
+        "black_box_warnings": (
+            "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. "
+            "Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt với bolus nhanh hoặc liều cao. "
+            "Remifentanil có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng trong 3 tháng cuối thai kỳ."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Benzodiazepine, thuốc an thần, propofol, rượu",
+                    "mechanism": "Tăng ức chế hệ thần kinh trung ương, đặc biệt trung tâm hô hấp",
+                    "effect": "Tăng nguy cơ ức chế hô hấp nặng, có thể tử vong",
+                    "management": "Giảm liều remifentanil và thuốc an thần. Theo dõi hô hấp liên tục, có naloxone sẵn sàng."
+                },
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nguy cơ phản ứng tương tác nghiêm trọng",
+                    "effect": "Có thể gây hội chứng serotonin, tăng huyết áp, nguy hiểm tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH. Ngừng MAOI ít nhất 14 ngày trước khi dùng remifentanil"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc chẹn beta",
+                    "mechanism": "Cộng hưởng tác dụng làm chậm nhịp tim",
+                    "effect": "Tăng nguy cơ nhịp tim chậm nặng",
+                    "management": "Theo dõi nhịp tim chặt chẽ, có thể cần atropine hoặc glycopyrrolate"
+                }
+            ],
+            "minor": []
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp nặng (thở chậm <12 lần/phút, ngừng thở)",
+                "Giảm ý thức, hôn mê",
+                "Co đồng tử (miosis)",
+                "Hạ huyết áp",
+                "Nhịp tim chậm",
+                "Rigid chest (co cứng ngực) với bolus liều cao"
+            ],
+            "antidote": "Naloxone (opioid antagonist) - đảo ngược tác dụng opioid",
+            "treatment": [
+                "NGỪNG NGAY truyền remifentanil",
+                "Đảm bảo đường thở, hỗ trợ hô hấp (thở máy nếu cần) - QUAN TRỌNG NHẤT",
+                "Naloxone: 0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg)",
+                "Nếu không có IV: 0.4-2mg IM/SC, có thể lặp lại",
+                "Lưu ý: Do half-life remifentanil rất ngắn (3-10 phút), tác dụng có thể tự hồi phục nhanh sau khi ngừng truyền. Naloxone có thể không cần thiết nếu chỉ ngừng truyền.",
+                "Nếu rigid chest: có thể cần muscle relaxant (succinylcholine)",
+                "Hỗ trợ huyết động: truyền dịch, vasopressor nếu hạ huyết áp",
+                "Atropine hoặc glycopyrrolate nếu nhịp tim chậm nặng"
+            ],
+            "monitoring": "Nhịp thở, SpO2, EtCO2, ý thức, ECG, huyết áp, nhịp tim liên tục. Do half-life ngắn, theo dõi ít nhất 30-60 phút sau khi ngừng truyền."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Naloxone",
+                    "indication": "Đảo ngược tác dụng opioid (ức chế hô hấp, giảm ý thức, hạ huyết áp)",
+                    "dose": "0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg). IM/SC: 0.4-2mg nếu không có IV.",
+                    "notes": "Lưu ý: Do half-life remifentanil rất ngắn (3-10 phút), tác dụng có thể tự hồi phục nhanh sau khi ngừng truyền. Naloxone có thể không cần thiết nếu chỉ ngừng truyền và hỗ trợ hô hấp."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ thường dùng: 20-50 mcg/ml cho truyền liên tục.",
+                "infusion_rate": "Bolus: tiêm IV chậm trong 30-60 giây. Truyền liên tục: 0.05-2 mcg/kg/phút (tùy chỉnh theo đáp ứng).",
+                "compatibility": ["NS", "D5W", "Ringer's Lactate"],
+                "incompatibility": ["Alkaline solutions"],
+                "notes": "Theo dõi hô hấp chặt chẽ khi dùng IV. Cần có naloxone sẵn sàng. Khởi đầu với liều thấp, tăng dần. Với bolus liều cao: có thể gây rigid chest (co cứng ngực) - cần dùng muscle relaxant. Truyền liên tục - không dùng bolus đơn độc cho giảm đau kéo dài."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Remifentanil (Ultiva)",
+                "UpToDate - Remifentanil: Drug information",
+                "Lexicomp - Remifentanil monograph",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data, widely used in anesthesia and ICU"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Respiratory depression (life-threatening)", "Rigid chest syndrome (with high bolus doses)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Respiratory rate and SpO2 - CRITICAL", "EtCO2 (in anesthesia)", "Level of consciousness", "Blood pressure and heart rate", "Signs of rigid chest (with bolus doses)"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Opioid Addiction and Respiratory Depression",
+            "ISMP High Alert Medications - Opioids",
+            "ASA Guidelines - Anesthesia Practice",
+            "SCCM ICU Sedation Guidelines"
+        ]
+    },
+
+    "Sufentanil": {
+        "group": "Analgesic - Opioid Agonist (Strong) - Very potent (Anesthesia)",
+        "vietnamese_name": "Sufentanil, Sufenta",
+        "brand_names": {
+            "common": ["Sufenta"],
+            "vietnam": ["Sufentanil", "Sufenta"]
+        },
+        "administration": ["IV", "Epidural", "Intrathecal"],
+        "indications": [
+            "Gây mê toàn thân (induction và maintenance) - đặc biệt phẫu thuật tim mạch",
+            "Giảm đau trong phẫu thuật (intraoperative analgesia)",
+            "Giảm đau sau phẫu thuật (postoperative analgesia) - epidural/intrathecal",
+            "Giảm đau sản khoa (obstetric analgesia) - epidural"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với sufentanil hoặc opioid",
+                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+                "Suy hô hấp nặng không có hỗ trợ hô hấp",
+                "Dùng MAO inhibitor trong vòng 14 ngày"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - giảm liều 25-50% (tích lũy)",
+                "Suy gan nặng - giảm liều 25-50% (giảm chuyển hóa)",
+                "Người cao tuổi - giảm liều 25-50% (tăng nhạy cảm)",
+                "Bệnh nhân opioid-naive - khởi đầu liều thấp",
+                "Bệnh nhân béo phì - tính liều theo cân nặng lý tưởng (IBW)"
+            ]
+        },
+        "dosage": {
+            "adult_anesthesia_induction": "0.3-2 mcg/kg IV bolus (có thể dùng đến 8 mcg/kg cho phẫu thuật tim)",
+            "adult_anesthesia_maintenance": "0.3-1.5 mcg/kg/giờ truyền liên tục hoặc bolus 10-25 mcg khi cần",
+            "adult_epidural_analgesia": "10-50 mcg epidural, có thể lặp lại mỗi 6-12 giờ",
+            "adult_intrathecal_analgesia": "2.5-10 mcg intrathecal (một liều)",
+            "adult_obstetric_epidural": "10-15 mcg epidural với local anesthetic",
+            "elderly": "Giảm liều 25-50%",
+            "obese": "Tính liều theo cân nặng lý tưởng (IBW), không theo cân nặng thực",
+            "notes": "Sufentanil mạnh gấp 5-10 lần fentanyl. Tác dụng nhanh, kéo dài hơn fentanyl. Đặc biệt hữu ích trong phẫu thuật tim mạch do ổn định huyết động tốt."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Giảm liều 25-50% (tích lũy).",
+            "under_30": "Giảm liều 50% (tích lũy).",
+            "notes": "Sufentanil chuyển hóa ở gan, tích lũy ở suy thận. Cần giảm liều và theo dõi sát ở suy thận."
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Giảm liều 25-50%.",
+            "severe": "Giảm liều 50% hoặc tránh dùng.",
+            "notes": "Sufentanil chuyển hóa ở gan qua CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "side_effects": [
+            "Ức chế hô hấp nặng (nguy hiểm, đặc biệt với bolus nhanh)",
+            "Rigid chest (co cứng ngực) - đặc biệt với bolus liều cao",
+            "Buồn nôn, nôn (thường gặp)",
+            "Hạ huyết áp, nhịp tim chậm (bradycardia)",
+            "Ngứa (đặc biệt với epidural/intrathecal)",
+            "Co đồng tử (miosis)",
+            "Buồn ngủ, lú lẫn",
+            "Tăng áp lực nội sọ (với liều cao)",
+            "Ứ đọng nước tiểu (với epidural/intrathecal)",
+            "Nguy cơ nghiện/lệ thuộc"
+        ],
+        "interactions": [
+            "Thuốc an thần/Benzodiazepine: tăng nguy cơ ức chế hô hấp nặng",
+            "Propofol: hiệp đồng an thần và ức chế hô hấp - giảm liều cả hai",
+            "MAO inhibitor: nguy hiểm - tránh dùng",
+            "Thuốc chẹn beta: tăng nguy cơ nhịp tim chậm",
+            "CYP3A4 inhibitors: tăng nồng độ sufentanil",
+            "Rượu: tăng nguy cơ ức chế hô hấp"
+        ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Có thể dùng trong gây mê phẫu thuật nếu cần. Tam cá nguyệt 3: Nguy cơ ức chế hô hấp ở trẻ sơ sinh nếu dùng gần ngày sinh. Thường dùng trong gây mê phẫu thuật và giảm đau sản khoa (epidural).",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Sufentanil bài tiết vào sữa mẹ ở nồng độ thấp. Với epidural/intrathecal: nồng độ trong sữa rất thấp.",
+                "recommendation": "Có thể cho con bú sau vài giờ khi mẹ tỉnh táo. Theo dõi trẻ sát (dấu hiệu ức chế hô hấp, buồn ngủ)."
+            }
+        },
+        "mechanism_of_action": (
+            "Sufentanil là opioid mu-receptor agonist rất mạnh, mạnh gấp 5-10 lần fentanyl và 500-1000 lần morphine. "
+            "Gắn với mu-opioid receptors trong hệ thần kinh trung ương và ngoại vi, "
+            "kích hoạt tín hiệu G-protein, dẫn đến giảm dẫn truyền đau, giảm nhận thức đau, an thần, và ức chế hô hấp. "
+            "Sufentanil có tác dụng nhanh (IV: 1-3 phút), kéo dài hơn fentanyl (30-60 phút IV). "
+            "Đặc biệt hữu ích trong phẫu thuật tim mạch do ổn định huyết động tốt và giảm đau mạnh."
+        ),
+        "monitoring": [
+            "Nhịp thở và độ bão hòa oxy (SpO2) liên tục - QUAN TRỌNG NHẤT",
+            "EtCO2 (end-tidal CO2) trong gây mê",
+            "Mức độ đau (thang điểm đau)",
+            "Mức độ ý thức (dấu hiệu quá liều: giảm ý thức, thở chậm)",
+            "Huyết áp và nhịp tim (có thể gây hạ huyết áp, nhịp tim chậm)",
+            "Co đồng tử (miosis)",
+            "Dấu hiệu rigid chest (co cứng ngực) với bolus liều cao",
+            "Áp lực nội sọ (nếu có monitoring)",
+            "Với epidural/intrathecal: theo dõi ngứa, ứ đọng nước tiểu"
+        ],
+        "precautions": [
+            "Nguy cơ ức chế hô hấp NẶNG - đặc biệt với bolus nhanh hoặc liều cao",
+            "Rigid chest (co cứng ngực) với bolus liều cao - có thể cần muscle relaxant",
+            "Cần có naloxone sẵn sàng để đảo ngược nếu quá liều",
+            "Tránh dùng với benzodiazepine, propofol, rượu (tăng nguy cơ ức chế hô hấp nặng)",
+            "Khởi đầu với liều thấp, tăng dần theo đáp ứng",
+            "Ở bệnh nhân béo phì: tính liều theo cân nặng lý tưởng (IBW), không theo cân nặng thực",
+            "Người cao tuổi: giảm liều 25-50% (tăng nhạy cảm)",
+            "Theo dõi huyết động chặt chẽ (có thể gây hạ huyết áp, nhịp tim chậm)",
+            "Với epidural/intrathecal: theo dõi ngứa, ứ đọng nước tiểu, ức chế hô hấp"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ (IV), có thể kéo dài hơn với liều cao",
+            "onset": "Rất nhanh (1-3 phút với IV bolus)",
+            "duration": "30-60 phút (IV), kéo dài hơn với liều cao",
+            "protein_binding": "~93%",
+            "metabolism": "Gan (CYP3A4) - chuyển hóa thành N-dealkyl sufentanil (inactive)",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ). Tích lũy ở suy thận và suy gan."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh đông lạnh. Sau khi pha: ổn định trong 24 giờ ở nhiệt độ phòng.",
+        "black_box_warnings": (
+            "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. "
+            "Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt với bolus nhanh hoặc liều cao. "
+            "Sufentanil có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng trong 3 tháng cuối thai kỳ."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Benzodiazepine, thuốc an thần, propofol, rượu",
+                    "mechanism": "Tăng ức chế hệ thần kinh trung ương, đặc biệt trung tâm hô hấp",
+                    "effect": "Tăng nguy cơ ức chế hô hấp nặng, có thể tử vong",
+                    "management": "Giảm liều sufentanil và thuốc an thần. Theo dõi hô hấp liên tục, có naloxone sẵn sàng."
+                },
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nguy cơ phản ứng tương tác nghiêm trọng",
+                    "effect": "Có thể gây hội chứng serotonin, tăng huyết áp, nguy hiểm tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH. Ngừng MAOI ít nhất 14 ngày trước khi dùng sufentanil"
+                },
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir, clarithromycin)",
+                    "mechanism": "Ức chế chuyển hóa sufentanil qua CYP3A4, tăng nồng độ",
+                    "effect": "Tăng nồng độ sufentanil, tăng nguy cơ ức chế hô hấp nặng",
+                    "management": "Giảm liều sufentanil 50-75%. Theo dõi hô hấp chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc chẹn beta",
+                    "mechanism": "Cộng hưởng tác dụng làm chậm nhịp tim",
+                    "effect": "Tăng nguy cơ nhịp tim chậm nặng",
+                    "management": "Theo dõi nhịp tim chặt chẽ, có thể cần atropine hoặc glycopyrrolate"
+                },
+                {
+                    "drug": "CYP3A4 inducers (rifampin, carbamazepine, phenytoin)",
+                    "mechanism": "Cảm ứng enzyme chuyển hóa sufentanil, giảm nồng độ",
+                    "effect": "Giảm hiệu quả sufentanil",
+                    "management": "Có thể cần tăng liều sufentanil"
+                }
+            ],
+            "minor": []
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp nặng (thở chậm <12 lần/phút, ngừng thở)",
+                "Giảm ý thức, hôn mê",
+                "Co đồng tử (miosis)",
+                "Hạ huyết áp",
+                "Nhịp tim chậm",
+                "Rigid chest (co cứng ngực) với bolus liều cao"
+            ],
+            "antidote": "Naloxone (opioid antagonist) - đảo ngược tác dụng opioid",
+            "treatment": [
+                "NGỪNG NGAY truyền sufentanil",
+                "Đảm bảo đường thở, hỗ trợ hô hấp (thở máy nếu cần) - QUAN TRỌNG NHẤT",
+                "Naloxone: 0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg)",
+                "Nếu không có IV: 0.4-2mg IM/SC, có thể lặp lại",
+                "Nếu quá liều nặng: có thể cần truyền naloxone liên tục (0.4-0.8mg/giờ) do half-life ngắn (1 giờ) so với sufentanil",
+                "Nếu rigid chest: có thể cần muscle relaxant (succinylcholine)",
+                "Hỗ trợ huyết động: truyền dịch, vasopressor nếu hạ huyết áp",
+                "Atropine hoặc glycopyrrolate nếu nhịp tim chậm nặng"
+            ],
+            "monitoring": "Nhịp thở, SpO2, EtCO2, ý thức, ECG, huyết áp, nhịp tim liên tục. Theo dõi ít nhất 4-6 giờ sau khi ngừng truyền do half-life 2-3 giờ."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Naloxone",
+                    "indication": "Đảo ngược tác dụng opioid (ức chế hô hấp, giảm ý thức, hạ huyết áp)",
+                    "dose": "0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg). IM/SC: 0.4-2mg nếu không có IV. Truyền liên tục: 0.4-0.8mg/giờ nếu quá liều nặng",
+                    "notes": "Naloxone có half-life ngắn (1 giờ) so với sufentanil (2-3 giờ). Có thể cần truyền liên tục hoặc lặp lại liều để tránh tái phát ức chế hô hấp."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ thường dùng: 5-50 mcg/ml cho truyền liên tục.",
+                "infusion_rate": "Bolus: tiêm IV chậm trong 1-3 phút. Truyền liên tục: 0.3-1.5 mcg/kg/giờ (tùy chỉnh theo đáp ứng).",
+                "compatibility": ["NS", "D5W", "Ringer's Lactate"],
+                "incompatibility": ["Alkaline solutions"],
+                "notes": "Theo dõi hô hấp chặt chẽ khi dùng IV. Cần có naloxone sẵn sàng. Khởi đầu với liều thấp, tăng dần. Với bolus liều cao: có thể gây rigid chest (co cứng ngực) - cần dùng muscle relaxant."
+            },
+            "epidural": {
+                "technique": "Tiêm qua catheter epidural. Thường phối hợp với local anesthetic (bupivacaine, ropivacaine).",
+                "timing": "Có thể lặp lại mỗi 6-12 giờ nếu cần.",
+                "notes": "Theo dõi ngứa, ứ đọng nước tiểu, ức chế hô hấp. Cần có naloxone sẵn sàng."
+            },
+            "intrathecal": {
+                "technique": "Tiêm qua kim intrathecal. Thường dùng một liều duy nhất.",
+                "timing": "Một liều duy nhất, tác dụng kéo dài 12-24 giờ.",
+                "notes": "Theo dõi ngứa, ứ đọng nước tiểu, ức chế hô hấp. Cần có naloxone sẵn sàng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Sufentanil (Sufenta)",
+                "UpToDate - Sufentanil: Drug information",
+                "Lexicomp - Sufentanil monograph",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data, widely used in anesthesia, especially cardiac surgery"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Respiratory depression (life-threatening)", "Rigid chest syndrome (with high bolus doses)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Respiratory rate and SpO2 - CRITICAL", "EtCO2 (in anesthesia)", "Level of consciousness", "Blood pressure and heart rate", "Signs of rigid chest (with bolus doses)"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Opioid Addiction and Respiratory Depression",
+            "ISMP High Alert Medications - Opioids",
+            "ASA Guidelines - Anesthesia Practice",
+            "Cardiac Anesthesia Guidelines"
+        ]
+    },
+
+    "Alfentanil": {
+        "group": "Analgesic - Opioid Agonist (Strong) - Short-acting (Anesthesia)",
+        "vietnamese_name": "Alfentanil, Alfenta",
+        "brand_names": {
+            "common": ["Alfenta"],
+            "vietnam": ["Alfentanil", "Alfenta"]
+        },
+        "administration": ["IV"],
+        "indications": [
+            "Gây mê toàn thân (induction và maintenance)",
+            "Giảm đau trong phẫu thuật ngắn (intraoperative analgesia)",
+            "An thần cho thủ thuật ngắn (procedural sedation)"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với alfentanil hoặc opioid",
+                "Ngộ độc cấp tính rượu, thuốc an thần, opioid",
+                "Suy hô hấp nặng không có hỗ trợ hô hấp",
+                "Dùng MAO inhibitor trong vòng 14 ngày"
+            ],
+            "tương_đối": [
+                "Suy thận nặng - giảm liều 25-50% (tích lũy)",
+                "Suy gan nặng - giảm liều 25-50% (giảm chuyển hóa)",
+                "Người cao tuổi - giảm liều 25-50% (tăng nhạy cảm)",
+                "Bệnh nhân opioid-naive - khởi đầu liều thấp",
+                "Bệnh nhân béo phì - tính liều theo cân nặng lý tưởng (IBW)"
+            ]
+        },
+        "dosage": {
+            "adult_anesthesia_induction": "8-20 mcg/kg IV bolus (có thể dùng đến 50 mcg/kg cho intubation)",
+            "adult_anesthesia_maintenance": "0.5-3 mcg/kg/phút truyền liên tục hoặc bolus 5-10 mcg/kg khi cần",
+            "adult_procedural_sedation": "5-10 mcg/kg bolus, sau đó 0.5-1 mcg/kg/phút",
+            "elderly": "Giảm liều 25-50%",
+            "obese": "Tính liều theo cân nặng lý tưởng (IBW), không theo cân nặng thực",
+            "notes": "Alfentanil mạnh bằng 1/4 fentanyl (tỷ lệ 4:1 với fentanyl). Tác dụng nhanh, ngắn hơn fentanyl. Thích hợp cho phẫu thuật ngắn."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Giảm liều 25-50% (tích lũy).",
+            "under_30": "Giảm liều 50% (tích lũy).",
+            "notes": "Alfentanil chuyển hóa ở gan, tích lũy ở suy thận. Cần giảm liều và theo dõi sát ở suy thận."
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Giảm liều 25-50%.",
+            "severe": "Giảm liều 50% hoặc tránh dùng.",
+            "notes": "Alfentanil chuyển hóa ở gan qua CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "side_effects": [
+            "Ức chế hô hấp nặng (nguy hiểm, đặc biệt với bolus nhanh)",
+            "Rigid chest (co cứng ngực) - đặc biệt với bolus liều cao",
+            "Buồn nôn, nôn (thường gặp)",
+            "Hạ huyết áp, nhịp tim chậm (bradycardia)",
+            "Ngứa",
+            "Co đồng tử (miosis)",
+            "Buồn ngủ, lú lẫn",
+            "Tăng áp lực nội sọ (với liều cao)",
+            "Nguy cơ nghiện/lệ thuộc"
+        ],
+        "interactions": [
+            "Thuốc an thần/Benzodiazepine: tăng nguy cơ ức chế hô hấp nặng",
+            "Propofol: hiệp đồng an thần và ức chế hô hấp - giảm liều cả hai",
+            "MAO inhibitor: nguy hiểm - tránh dùng",
+            "Thuốc chẹn beta: tăng nguy cơ nhịp tim chậm",
+            "CYP3A4 inhibitors: tăng nồng độ alfentanil",
+            "Rượu: tăng nguy cơ ức chế hô hấp"
+        ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Có thể dùng trong gây mê phẫu thuật nếu cần. Tam cá nguyệt 3: Nguy cơ ức chế hô hấp ở trẻ sơ sinh nếu dùng gần ngày sinh. Thường dùng trong gây mê phẫu thuật.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Alfentanil bài tiết vào sữa mẹ ở nồng độ thấp.",
+                "recommendation": "Có thể cho con bú sau vài giờ khi mẹ tỉnh táo. Theo dõi trẻ sát (dấu hiệu ức chế hô hấp, buồn ngủ)."
+            }
+        },
+        "mechanism_of_action": (
+            "Alfentanil là opioid mu-receptor agonist mạnh, mạnh bằng 1/4 fentanyl (tỷ lệ 4:1 với fentanyl) và 25-50 lần morphine. "
+            "Gắn với mu-opioid receptors trong hệ thần kinh trung ương và ngoại vi, "
+            "kích hoạt tín hiệu G-protein, dẫn đến giảm dẫn truyền đau, giảm nhận thức đau, an thần, và ức chế hô hấp. "
+            "Alfentanil có tác dụng nhanh (IV: 1-2 phút), ngắn hơn fentanyl (15-30 phút IV). "
+            "Thích hợp cho phẫu thuật ngắn do tác dụng nhanh và ngắn."
+        ),
+        "monitoring": [
+            "Nhịp thở và độ bão hòa oxy (SpO2) liên tục - QUAN TRỌNG NHẤT",
+            "EtCO2 (end-tidal CO2) trong gây mê",
+            "Mức độ đau (thang điểm đau)",
+            "Mức độ ý thức (dấu hiệu quá liều: giảm ý thức, thở chậm)",
+            "Huyết áp và nhịp tim (có thể gây hạ huyết áp, nhịp tim chậm)",
+            "Co đồng tử (miosis)",
+            "Dấu hiệu rigid chest (co cứng ngực) với bolus liều cao",
+            "Áp lực nội sọ (nếu có monitoring)"
+        ],
+        "precautions": [
+            "Nguy cơ ức chế hô hấp NẶNG - đặc biệt với bolus nhanh hoặc liều cao",
+            "Rigid chest (co cứng ngực) với bolus liều cao - có thể cần muscle relaxant",
+            "Cần có naloxone sẵn sàng để đảo ngược nếu quá liều",
+            "Tránh dùng với benzodiazepine, propofol, rượu (tăng nguy cơ ức chế hô hấp nặng)",
+            "Khởi đầu với liều thấp, tăng dần theo đáp ứng",
+            "Ở bệnh nhân béo phì: tính liều theo cân nặng lý tưởng (IBW), không theo cân nặng thực",
+            "Người cao tuổi: giảm liều 25-50% (tăng nhạy cảm)",
+            "Theo dõi huyết động chặt chẽ (có thể gây hạ huyết áp, nhịp tim chậm)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-2 giờ (IV), ngắn hơn fentanyl",
+            "onset": "Rất nhanh (1-2 phút với IV bolus)",
+            "duration": "15-30 phút (IV), ngắn hơn fentanyl",
+            "protein_binding": "~92%",
+            "metabolism": "Gan (CYP3A4) - chuyển hóa thành noralfentanil (inactive)",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ). Tích lũy ở suy thận và suy gan."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh đông lạnh. Sau khi pha: ổn định trong 24 giờ ở nhiệt độ phòng.",
+        "black_box_warnings": (
+            "Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. "
+            "Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt với bolus nhanh hoặc liều cao. "
+            "Alfentanil có thể gây hội chứng cai ở trẻ sơ sinh nếu dùng trong 3 tháng cuối thai kỳ."
+        ),
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Benzodiazepine, thuốc an thần, propofol, rượu",
+                    "mechanism": "Tăng ức chế hệ thần kinh trung ương, đặc biệt trung tâm hô hấp",
+                    "effect": "Tăng nguy cơ ức chế hô hấp nặng, có thể tử vong",
+                    "management": "Giảm liều alfentanil và thuốc an thần. Theo dõi hô hấp liên tục, có naloxone sẵn sàng."
+                },
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Tăng nguy cơ phản ứng tương tác nghiêm trọng",
+                    "effect": "Có thể gây hội chứng serotonin, tăng huyết áp, nguy hiểm tính mạng",
+                    "management": "CHỐNG CHỈ ĐỊNH. Ngừng MAOI ít nhất 14 ngày trước khi dùng alfentanil"
+                },
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir, clarithromycin)",
+                    "mechanism": "Ức chế chuyển hóa alfentanil qua CYP3A4, tăng nồng độ",
+                    "effect": "Tăng nồng độ alfentanil, tăng nguy cơ ức chế hô hấp nặng",
+                    "management": "Giảm liều alfentanil 50-75%. Theo dõi hô hấp chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc chẹn beta",
+                    "mechanism": "Cộng hưởng tác dụng làm chậm nhịp tim",
+                    "effect": "Tăng nguy cơ nhịp tim chậm nặng",
+                    "management": "Theo dõi nhịp tim chặt chẽ, có thể cần atropine hoặc glycopyrrolate"
+                },
+                {
+                    "drug": "CYP3A4 inducers (rifampin, carbamazepine, phenytoin)",
+                    "mechanism": "Cảm ứng enzyme chuyển hóa alfentanil, giảm nồng độ",
+                    "effect": "Giảm hiệu quả alfentanil",
+                    "management": "Có thể cần tăng liều alfentanil"
+                }
+            ],
+            "minor": []
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế hô hấp nặng (thở chậm <12 lần/phút, ngừng thở)",
+                "Giảm ý thức, hôn mê",
+                "Co đồng tử (miosis)",
+                "Hạ huyết áp",
+                "Nhịp tim chậm",
+                "Rigid chest (co cứng ngực) với bolus liều cao"
+            ],
+            "antidote": "Naloxone (opioid antagonist) - đảo ngược tác dụng opioid",
+            "treatment": [
+                "NGỪNG NGAY truyền alfentanil",
+                "Đảm bảo đường thở, hỗ trợ hô hấp (thở máy nếu cần) - QUAN TRỌNG NHẤT",
+                "Naloxone: 0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg)",
+                "Nếu không có IV: 0.4-2mg IM/SC, có thể lặp lại",
+                "Nếu quá liều nặng: có thể cần truyền naloxone liên tục (0.4-0.8mg/giờ) do half-life ngắn (1 giờ) so với alfentanil",
+                "Nếu rigid chest: có thể cần muscle relaxant (succinylcholine)",
+                "Hỗ trợ huyết động: truyền dịch, vasopressor nếu hạ huyết áp",
+                "Atropine hoặc glycopyrrolate nếu nhịp tim chậm nặng"
+            ],
+            "monitoring": "Nhịp thở, SpO2, EtCO2, ý thức, ECG, huyết áp, nhịp tim liên tục. Theo dõi ít nhất 2-4 giờ sau khi ngừng truyền do half-life 1-2 giờ."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Naloxone",
+                    "indication": "Đảo ngược tác dụng opioid (ức chế hô hấp, giảm ý thức, hạ huyết áp)",
+                    "dose": "0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg). IM/SC: 0.4-2mg nếu không có IV. Truyền liên tục: 0.4-0.8mg/giờ nếu quá liều nặng",
+                    "notes": "Naloxone có half-life ngắn (1 giờ) so với alfentanil (1-2 giờ). Có thể cần truyền liên tục hoặc lặp lại liều để tránh tái phát ức chế hô hấp."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha với NS hoặc D5W. Nồng độ thường dùng: 50-500 mcg/ml cho truyền liên tục.",
+                "infusion_rate": "Bolus: tiêm IV chậm trong 1-2 phút. Truyền liên tục: 0.5-3 mcg/kg/phút (tùy chỉnh theo đáp ứng).",
+                "compatibility": ["NS", "D5W", "Ringer's Lactate"],
+                "incompatibility": ["Alkaline solutions"],
+                "notes": "Theo dõi hô hấp chặt chẽ khi dùng IV. Cần có naloxone sẵn sàng. Khởi đầu với liều thấp, tăng dần. Với bolus liều cao: có thể gây rigid chest (co cứng ngực) - cần dùng muscle relaxant."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Alfentanil (Alfenta)",
+                "UpToDate - Alfentanil: Drug information",
+                "Lexicomp - Alfentanil monograph",
+                "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data, widely used in anesthesia"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Respiratory depression (life-threatening)", "Rigid chest syndrome (with high bolus doses)"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Respiratory rate and SpO2 - CRITICAL", "EtCO2 (in anesthesia)", "Level of consciousness", "Blood pressure and heart rate", "Signs of rigid chest (with bolus doses)"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Opioid Addiction and Respiratory Depression",
+            "ISMP High Alert Medications - Opioids",
+            "ASA Guidelines - Anesthesia Practice"
+        ]
     },
 }
 

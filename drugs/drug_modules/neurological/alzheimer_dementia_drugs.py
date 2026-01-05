@@ -160,25 +160,27 @@ ALZHEIMER_DEMENTIA_DRUGS = {
             "evidence_level": "B - FDA-approved 2021 based on surrogate endpoint (amyloid reduction), controversial clinical benefit"
         }
     },
-    "Donanemab": {
+    "Donanemab":     {
         "group": "Neurology - Anti-amyloid Monoclonal Antibody",
         "vietnamese_name": "Donanemab, Kisunla",
-        "administration": ["IV"],
+        "administration": [
+            "IV"
+    ],
         "indications": [
             "Bệnh Alzheimer giai đoạn sớm (MCI hoặc mild dementia) với bằng chứng tích tụ amyloid và tau"
-        ],
+    ],
         "contraindications": [
             "Dị ứng donanemab hoặc thành phần thuốc",
             "Không có bằng chứng amyloid/tau (không nên dùng)"
-        ],
+    ],
         "dosage": {
-            "adult_standard": "Dùng IV mỗi 4 tuần, liều tăng dần theo phác đồ hãng (ví dụ 700 mg → 1400 mg mỗi 4 tuần). Có thể ngừng sau khi đạt mức giảm amyloid mục tiêu trên PET.",
-            "notes": "Cần theo đúng phác đồ từng giai đoạn; cần MRI baseline và theo dõi định kỳ ARIA."
+            "adult_standard": """Dùng IV mỗi 4 tuần, liều tăng dần theo phác đồ hãng (ví dụ 700 mg → 1400 mg mỗi 4 tuần). Có thể ngừng sau khi đạt mức giảm amyloid mục tiêu trên PET.""",
+            "notes": "Cần theo đúng phác đồ từng giai đoạn; cần MRI baseline và theo dõi định kỳ ARIA.",
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều",
             "30_60": "Không cần chỉnh liều; theo dõi",
-            "under_30": "Dữ liệu hạn chế; thận trọng"
+            "under_30": "Dữ liệu hạn chế; thận trọng",
         },
         "side_effects": [
             "ARIA-E, ARIA-H (phù/vi xuất huyết não liên quan amyloid)",
@@ -186,63 +188,63 @@ ALZHEIMER_DEMENTIA_DRUGS = {
             "Các triệu chứng giống cúm sau truyền",
             "Buồn nôn",
             "Phản ứng quá mẫn liên quan truyền"
-        ],
+    ],
         "interactions": [
             "Thuốc chống đông/kháng tiểu cầu: lý thuyết tăng nguy cơ xuất huyết khi ARIA-H"
-        ],
+    ],
         "pregnancy": "Chưa có dữ liệu, tránh dùng nếu có thể",
-        "mechanism_of_action": "Donanemab là kháng thể đơn dòng nhắm vào dạng amyloid-beta đã biến đổi (p3) trong mảng amyloid trưởng thành. Gắn và thúc đẩy thanh thải mảng amyloid khỏi não, làm giảm tín hiệu PET và làm chậm suy giảm nhận thức trong Alzheimer giai đoạn sớm.",
+        "mechanism_of_action": """Donanemab là kháng thể đơn dòng nhắm vào dạng amyloid-beta đã biến đổi (p3) trong mảng amyloid trưởng thành. Gắn và thúc đẩy thanh thải mảng amyloid khỏi não, làm giảm tín hiệu PET và làm chậm suy giảm nhận thức trong Alzheimer giai đoạn sớm.""",
         "monitoring": [
             "MRI não trước điều trị",
             "MRI định kỳ trong năm đầu (ví dụ trước vài liều đầu) để phát hiện ARIA",
             "Triệu chứng thần kinh khu trú, co giật, thay đổi ý thức",
             "Dấu hiệu xuất huyết nội sọ"
-        ],
+    ],
         "precautions": [
             "ARIA là biến chứng chính; nguy cơ tăng ở APOE ε4 carriers",
             "Tạm ngừng hoặc ngừng hẳn nếu ARIA mức độ vừa-nặng hoặc có triệu chứng",
             "Thận trọng với thuốc chống đông/kháng tiểu cầu liều cao",
             "Chỉ dùng cho bệnh nhân có xác nhận amyloid (và thường cả tau) trên chẩn đoán hình ảnh/dịch não tủy"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "Vài ngày đến ~2 tuần (kháng thể IgG)",
             "onset": "Giảm amyloid trên PET sau vài tháng; hiệu quả lâm sàng dần xuất hiện",
             "duration": "Hiệu ứng kéo dài sau khi dừng nếu amyloid đã giảm đáng kể",
             "protein_binding": "IgG1 monoclonal antibody",
             "metabolism": "Thoái hóa qua RES thành peptide/acid amin",
-            "clearance": "Không phụ thuộc gan thận đáng kể"
+            "clearance": "Không phụ thuộc gan thận đáng kể",
         },
-        "storage": "Bảo quản lọ trong tủ lạnh (2–8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng dùng trong thời gian khuyến cáo.",
+        "storage": """Bảo quản lọ trong tủ lạnh (2–8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng dùng trong thời gian khuyến cáo.""",
         "black_box_warnings": "ARIA (phù/ xuất huyết não) và xuất huyết nội sọ hiếm nhưng nghiêm trọng.",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Thuốc chống đông đường uống",
                     "mechanism": "Giảm dự trữ đông máu trong bối cảnh ARIA-H",
                     "effect": "Tăng nguy cơ chảy máu nội sọ",
-                    "management": "Tránh nếu có thể; nếu bắt buộc, theo dõi MRI/triệu chứng sát"
+                    "management": "Tránh nếu có thể; nếu bắt buộc, theo dõi MRI/triệu chứng sát",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Kháng tiểu cầu",
                     "mechanism": "Tăng nguy cơ xuất huyết",
                     "effect": "Tăng nguy cơ vi xuất huyết/máu tụ",
-                    "management": "Dùng liều thấp nhất, theo dõi lâm sàng/MRI"
+                    "management": "Dùng liều thấp nhất, theo dõi lâm sàng/MRI",
                 }
-            ],
-            "minor": []
+                ],
+            "minor": [],
         },
         "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng donanemab",
                 "Tiền sử phản vệ với kháng thể đơn dòng tương tự"
-            ],
+    ],
             "tương_đối": [
                 "Tiền sử xuất huyết nội sọ hoặc nhiều vi xuất huyết trên MRI",
                 "Đang dùng chống đông",
                 "Không có bằng chứng amyloid/tau"
-            ]
+    ],
         },
         "pregnancy_lactation": {
             "fda_category": "Chưa phân loại; tránh dùng",
@@ -250,51 +252,55 @@ ALZHEIMER_DEMENTIA_DRUGS = {
             "lactation": {
                 "safety": "Không rõ",
                 "details": "Chưa rõ bài tiết sữa mẹ; hấp thu ở trẻ có thể thấp.",
-                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
-            }
+                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc.",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không cần chỉnh liều",
             "moderate": "Không cần chỉnh; dữ liệu hạn chế",
-            "severe": "Thận trọng, dữ liệu hạn chế"
+            "severe": "Thận trọng, dữ liệu hạn chế",
+            "notes": "",
         },
         "overdose_management": {
             "symptoms": [
                 "Gia tăng nguy cơ ARIA",
                 "Triệu chứng thần kinh cấp"
-            ],
+    ],
             "antidote": "Không có antidote đặc hiệu",
             "treatment": [
                 "Ngừng thuốc",
                 "MRI não khẩn",
                 "Điều trị hỗ trợ, ICU nếu cần"
-            ],
-            "monitoring": "Triệu chứng thần kinh, MRI, dấu hiệu sinh tồn"
+    ],
+            "monitoring": "Triệu chứng thần kinh, MRI, dấu hiệu sinh tồn",
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
         },
         "administration_instructions": {
             "iv": {
                 "reconstitution": "Pha với NaCl 0.9% theo khuyến cáo hãng.",
                 "infusion_rate": "Truyền tĩnh mạch trong ≥30–60 phút (tùy liều); theo dõi trong và sau truyền.",
-                "compatibility": ["NaCl 0.9%"],
-                "incompatibility": ["Không pha chung với thuốc khác"],
-                "notes": "Theo dõi phản ứng truyền, ARIA; cần MRI baseline và định kỳ."
-            }
+                "compatibility": [
+                    "NaCl 0.9%"
+    ],
+                "incompatibility": [
+                    "Không pha chung với thuốc khác"
+    ],
+                "notes": "Theo dõi phản ứng truyền, ARIA; cần MRI baseline và định kỳ.",
+            },
         },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Donanemab (Kisunla)",
                 "NEJM 2024 - Phase 3 donanemab trial",
                 "AAN/Alzheimer Association practice updates"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved 2024, large phase 3 RCT"
-        }
+            "evidence_level": "A - FDA-approved 2024, large phase 3 RCT",
+        },
     },
-
     "Donepezil": {'group': 'Neurology - Cholinesterase Inhibitor',
         'vietnamese_name': 'Donepezil, Aricept', 'administration': ['PO'],
         'indications': [
@@ -311,7 +317,7 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Anticholinergics: đối kháng tác dụng donepezil',
         'Cholinergic drugs: tăng tác dụng, tăng tác dụng phụ',
         'Succinylcholine: tăng tác dụng, tăng nguy cơ kéo dài block thần kinh cơ',
-        'Beta-blockers: tăng nguy cơ chậm nhịp tim'], 'pregnancy': 'C',
+        'Beta-blockers: tăng nguy cơ chậm nhịp tim'],
         'mechanism_of_action':
         'Donepezil là thuốc ức chế cholinesterase (acetylcholinesterase inhibitor) có tính chọn lọc, không thể đảo ngược. Ức chế enzyme acetylcholinesterase ở synap thần kinh, làm giảm phân hủy acetylcholine và tăng nồng độ acetylcholine trong synap. Acetylcholine là chất dẫn truyền thần kinh quan trọng cho trí nhớ và nhận thức. Trong bệnh Alzheimer, có sự suy giảm cholinergic (giảm acetylcholine). Donepezil làm tăng nồng độ acetylcholine, cải thiện chức năng nhận thức (trí nhớ, suy nghĩ, hành vi) ở bệnh nhân Alzheimer. Tác dụng: cải thiện nhận thức, hành vi, và hoạt động hàng ngày. Donepezil có half-life dài (70 giờ), cho phép dùng 1 lần/ngày.'
         , 'monitoring': [
@@ -352,8 +358,8 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Donepezil ức chế cholinesterase, tăng tác dụng succinylcholine', 'effect':
         'Tăng tác dụng, tăng nguy cơ kéo dài block thần kinh cơ', 'management':
         'Ngừng donepezil ít nhất 2 tuần trước phẫu thuật nếu có thể. Nếu không thể, thông báo cho bác sĩ gây mê.'
-        }], 'moderate': [{'drug': 'Anticholinergics (atropine, scopolamine)',
-        'mechanism': 'Đối kháng tác dụng cholinergic của donepezil', 'effect':
+        }], 'moderate': [
+        {'drug': 'Anticholinergics (atropine, scopolamine, benztropine)', 'mechanism': 'Đối kháng tác dụng cholinergic của donepezil', 'effect':
         'Giảm hiệu quả donepezil', 'management':
         'Tránh dùng chung nếu có thể. Nếu phải dùng, theo dõi đáp ứng điều trị.'}, {
         'drug': 'Cholinergic drugs (bethanechol, pilocarpine)', 'mechanism':
@@ -400,7 +406,7 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         , 'Chậm nhịp tim (bradycardia) nghiêm trọng, block nhĩ thất',
         'Co thắt phế quản, suy hô hấp',
         'Co giật (hiếm)',
-        'Hôn mê (hiếm)'], 'antidote': 'Atropine (anticholinergic, đối kháng tác dụng cholinergic)',
+        'Hôn mê (hiếm)'],
         'treatment': [
         'Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần',
         'Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)',
@@ -420,33 +426,35 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Uống với thức ăn để giảm buồn nôn (tác dụng phụ phổ biến nhất)', 'timing':
         'Uống 1 lần/ngày vào buổi tối với thức ăn. Có thể chuyển sang buổi sáng nếu gây mất ngủ. Tăng liều chậm (5mg → 10mg sau 4-6 tuần).'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'}},
+        'compatibility': [], 'incompatibility': []}},
         'references': {'primary_sources': ['Lexicomp - Donepezil',
         'UpToDate - Donepezil: Drug information',
         'FDA - Aricept (donepezil) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'last_updated': '2024-12-19', 'evidence_level':
+        ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         }},
-    "Lecanemab": {
+    "Lecanemab":     {
         "group": "Neurology - Anti-amyloid Monoclonal Antibody",
         "vietnamese_name": "Lecanemab, Leqembi",
-        "administration": ["IV"],
+        "administration": [
+            "IV"
+    ],
         "indications": [
             "Bệnh Alzheimer giai đoạn đầu (mild cognitive impairment hoặc mild dementia) với bằng chứng tích tụ amyloid (PET hoặc CSF)"
-        ],
+    ],
         "contraindications": [
             "Dị ứng lecanemab hoặc thành phần thuốc",
             "Bệnh nhân không có bằng chứng amyloid (không nên dùng)"
-        ],
+    ],
         "dosage": {
             "adult_standard": "10 mg/kg IV mỗi 2 tuần",
-            "notes": "Truyền trong khoảng 1 giờ. Cần MRI nền (baseline) và theo dõi định kỳ để phát hiện ARIA."
+            "notes": "Truyền trong khoảng 1 giờ. Cần MRI nền (baseline) và theo dõi định kỳ để phát hiện ARIA.",
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều",
             "30_60": "Không cần chỉnh liều; dữ liệu hạn chế, theo dõi",
-            "under_30": "Dữ liệu hạn chế; thận trọng"
+            "under_30": "Dữ liệu hạn chế; thận trọng",
         },
         "side_effects": [
             "ARIA-E ( phù mạch não liên quan amyloid )",
@@ -455,116 +463,120 @@ ALZHEIMER_DEMENTIA_DRUGS = {
             "Đau tại vị trí truyền",
             "Buồn nôn",
             "Các triệu chứng giống cúm sau truyền"
-        ],
+    ],
         "interactions": [
-            "Thuốc chống đông/kháng tiểu cầu liều cao: có thể tăng nguy cơ xuất huyết não khi ARIA-H",
-        ],
+            "Thuốc chống đông/kháng tiểu cầu liều cao: có thể tăng nguy cơ xuất huyết não khi ARIA-H"
+    ],
         "pregnancy": "Chưa có dữ liệu, tránh dùng nếu có thể",
-        "mechanism_of_action": "Lecanemab là kháng thể đơn dòng người hóa, nhắm vào dạng protofibril hòa tan của amyloid-beta. Gắn kết và thúc đẩy thanh thải amyloid-beta khỏi não, làm giảm mảng amyloid trên PET và làm chậm suy giảm nhận thức trong Alzheimer giai đoạn sớm.",
+        "mechanism_of_action": """Lecanemab là kháng thể đơn dòng người hóa, nhắm vào dạng protofibril hòa tan của amyloid-beta. Gắn kết và thúc đẩy thanh thải amyloid-beta khỏi não, làm giảm mảng amyloid trên PET và làm chậm suy giảm nhận thức trong Alzheimer giai đoạn sớm.""",
         "monitoring": [
             "MRI não trước khi bắt đầu điều trị",
             "MRI não định kỳ (ví dụ sau 3, 6, 12 tháng hoặc khi có triệu chứng) để phát hiện ARIA",
             "Triệu chứng thần kinh mới: đau đầu nặng, lú lẫn, nhìn đôi, mất thăng bằng, co giật",
-            "Dấu hiệu xuất huyết nội sọ (đột ngột đau đầu, yếu liệt khu trú)",
-        ],
+            "Dấu hiệu xuất huyết nội sọ (đột ngột đau đầu, yếu liệt khu trú)"
+    ],
         "precautions": [
             "Nguy cơ ARIA cao hơn ở bệnh nhân mang APOE ε4 (đặc biệt đồng hợp tử)",
             "Ngừng hoặc hoãn liều nếu phát hiện ARIA-E/ARIA-H mức độ vừa-nặng trên MRI",
             "Thận trọng khi phối hợp thuốc chống đông hoặc kháng tiểu cầu liều cao",
             "Không khuyến cáo ở bệnh Alzheimer tiến triển (moderate-severe) hoặc không có bằng chứng amyloid"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "Khoảng 5–7 ngày",
             "onset": "Giảm amyloid trên PET trong vài tháng; hiệu quả lâm sàng sau nhiều tháng",
             "duration": "Dùng duy trì lâu dài mỗi 2 tuần",
             "protein_binding": "IgG1 monoclonal antibody",
             "metabolism": "Thoái hóa thành peptide/acid amin qua RES",
-            "clearance": "Không phụ thuộc gan thận đáng kể"
+            "clearance": "Không phụ thuộc gan thận đáng kể",
         },
-        "storage": "Bảo quản lọ thuốc trong tủ lạnh (2–8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng dùng trong thời gian theo khuyến cáo hãng (thường ≤24 giờ ở 2–8°C).",
-        "black_box_warnings": "Nguy cơ ARIA (phù mạch/mikro xuất huyết não); có báo cáo xuất huyết não nghiêm trọng, đặc biệt khi dùng cùng thuốc chống đông.",
+        "storage": """Bảo quản lọ thuốc trong tủ lạnh (2–8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng dùng trong thời gian theo khuyến cáo hãng (thường ≤24 giờ ở 2–8°C).""",
+        "black_box_warnings": """Nguy cơ ARIA (phù mạch/mikro xuất huyết não); có báo cáo xuất huyết não nghiêm trọng, đặc biệt khi dùng cùng thuốc chống đông.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Thuốc chống đông (warfarin, DOACs)",
                     "mechanism": "Kết hợp với ARIA-H làm tăng nguy cơ xuất huyết não",
                     "effect": "Tăng nguy cơ chảy máu nội sọ",
-                    "management": "Chỉ dùng khi thật cần; cân nhắc tránh phối hợp hoặc theo dõi MRI sát"
+                    "management": "Chỉ dùng khi thật cần; cân nhắc tránh phối hợp hoặc theo dõi MRI sát",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Kháng tiểu cầu liều cao",
                     "mechanism": "Tăng nguy cơ xuất huyết",
                     "effect": "Tăng nguy cơ vi xuất huyết/máu tụ",
-                    "management": "Dùng liều thấp nhất có hiệu quả; theo dõi lâm sàng và MRI"
+                    "management": "Dùng liều thấp nhất có hiệu quả; theo dõi lâm sàng và MRI",
                 }
-            ],
-            "minor": []
+                ],
+            "minor": [],
         },
         "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng lecanemab",
                 "Tiền sử phản vệ với kháng thể đơn dòng tương tự"
-            ],
+    ],
             "tương_đối": [
                 "Tiền sử xuất huyết nội sọ",
                 "Nhiều vi xuất huyết hoặc tổn thương hemosiderin lan tỏa trên MRI",
                 "Đang dùng chống đông",
                 "Bệnh Alzheimer không có amyloid trên PET/CSF"
-            ]
+    ],
         },
         "pregnancy_lactation": {
             "fda_category": "Chưa phân loại; tránh dùng",
-            "pregnancy_details": "Thiếu dữ liệu trên người; về lý thuyết có thể đi qua nhau thai như IgG khác, nên tránh trừ khi lợi ích vượt trội.",
+            "pregnancy_details": """Thiếu dữ liệu trên người; về lý thuyết có thể đi qua nhau thai như IgG khác, nên tránh trừ khi lợi ích vượt trội.""",
             "lactation": {
                 "safety": "Không rõ",
                 "details": "Chưa rõ bài tiết sữa mẹ; kháng thể lớn, hấp thu qua đường tiêu hóa trẻ có thể hạn chế.",
-                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
-            }
+                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc.",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không cần chỉnh liều",
             "moderate": "Không cần chỉnh liều; dữ liệu hạn chế",
-            "severe": "Dữ liệu hạn chế; dùng thận trọng"
+            "severe": "Dữ liệu hạn chế; dùng thận trọng",
+            "notes": "",
         },
         "overdose_management": {
             "symptoms": [
                 "Tăng nguy cơ ARIA",
                 "Triệu chứng thần kinh khu trú hoặc toàn thể"
-            ],
+    ],
             "antidote": "Không có antidote đặc hiệu",
             "treatment": [
                 "Ngừng thuốc",
                 "MRI não khẩn để tìm ARIA/ xuất huyết",
                 "Điều trị hỗ trợ thần kinh, ICU nếu cần"
-            ],
-            "monitoring": "Triệu chứng thần kinh, MRI, dấu hiệu sinh tồn"
+    ],
+            "monitoring": "Triệu chứng thần kinh, MRI, dấu hiệu sinh tồn",
         },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
         },
         "administration_instructions": {
             "iv": {
                 "reconstitution": "Pha loãng trong dung dịch NaCl 0.9% theo hướng dẫn hãng, đạt nồng độ khuyến cáo.",
                 "infusion_rate": "Truyền trong khoảng 1 giờ; theo dõi trong và sau truyền.",
-                "compatibility": ["NaCl 0.9%"],
-                "incompatibility": ["Không pha lẫn thuốc khác cùng đường truyền"],
-                "notes": "Theo dõi phản ứng quá mẫn, ARIA; cần MRI baseline và định kỳ."
-            }
+                "compatibility": [
+                    "NaCl 0.9%"
+    ],
+                "incompatibility": [
+                    "Không pha lẫn thuốc khác cùng đường truyền"
+    ],
+                "notes": "Theo dõi phản ứng quá mẫn, ARIA; cần MRI baseline và định kỳ.",
+            },
         },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Lecanemab (Leqembi)",
                 "NEJM 2023 - Phase 3 lecanemab trial",
                 "AAN/Alzheimer Association practice updates"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved 2023, large phase 3 RCT"
-        }
+            "evidence_level": "A - FDA-approved 2023, large phase 3 RCT",
+        },
     },
-
     "Memantine": {'group': 'Neurology - NMDA Receptor Antagonist',
         'vietnamese_name': 'Memantine, Namenda', 'administration': ['PO'],
         'indications': [
@@ -578,7 +590,7 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Lú lẫn (hiếm, thường khi tăng liều quá nhanh)'], 'interactions': [
         'Urine alkalinizers (sodium bicarbonate, carbonic anhydrase inhibitors): giảm thải trừ memantine, tăng nồng độ',
         'Acetazolamide: giảm thải trừ memantine',
-        'Cimetidine, ranitidine: có thể tăng nồng độ memantine nhẹ'], 'pregnancy': 'B',
+        'Cimetidine, ranitidine: có thể tăng nồng độ memantine nhẹ'],
         'mechanism_of_action':
         'Memantine là thuốc đối kháng thụ thể NMDA (N-methyl-D-aspartate receptor antagonist) không cạnh tranh, có ái lực thấp. Trong bệnh Alzheimer, có sự kích thích quá mức của thụ thể NMDA bởi glutamate (chất dẫn truyền thần kinh kích thích), dẫn đến độc tính thần kinh (excitotoxicity) và chết tế bào thần kinh. Memantine ức chế thụ thể NMDA, giảm kích thích quá mức và bảo vệ tế bào thần kinh. Khác với các thuốc đối kháng NMDA khác (như ketamine), memantine có ái lực thấp và không cạnh tranh, nên ít gây tác dụng phụ thần kinh (lú lẫn, ảo giác) hơn. Memantine được dùng trong bệnh Alzheimer moderate to severe, có thể dùng đơn độc hoặc kết hợp với donepezil. Tác dụng: cải thiện nhận thức, hành vi, và hoạt động hàng ngày.'
         , 'monitoring': [
@@ -635,7 +647,7 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Triệu chứng thần kinh: chóng mặt, nhức đầu, lú lẫn, mất điều hòa (ataxia)',
         'Rối loạn tiêu hóa: buồn nôn, nôn, táo bón',
         'Co giật (hiếm)',
-        'Hôn mê (hiếm)'], 'antidote': 'Không có antidote đặc hiệu. Điều trị hỗ trợ',
+        'Hôn mê (hiếm)'],
         'treatment': [
         'Đánh giá đường thở, hô hấp, tuần hoàn',
         'Rửa dạ dày nếu trong vòng 1-2 giờ sau uống',
@@ -651,12 +663,12 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Có thể dùng với hoặc không có thức ăn', 'timing':
         'Chia 2 lần/ngày (sáng, tối). Tăng liều chậm: 5mg/ngày x 1 tuần → 5mg x 2 lần/ngày x 1 tuần → 10mg buổi sáng + 5mg buổi tối x 1 tuần → 10mg x 2 lần/ngày. Có thể dùng kết hợp với donepezil.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'}},
+        'compatibility': [], 'incompatibility': []}},
         'references': {'primary_sources': ['Lexicomp - Memantine',
         'UpToDate - Memantine: Drug information',
         'FDA - Namenda (memantine) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'last_updated': '2024-12-19', 'evidence_level':
+        ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         },
         "renal_adjustment": {
@@ -665,6 +677,20 @@ ALZHEIMER_DEMENTIA_DRUGS = {
              "under_30": "Giảm liều hoặc tránh dùng",
              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
          },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
 },
 
     "Rivastigmine": {'group': 'Neurology - Cholinesterase Inhibitor',
@@ -684,7 +710,7 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Anticholinergics: đối kháng tác dụng rivastigmine',
         'Cholinergic drugs: tăng tác dụng, tăng tác dụng phụ',
         'Succinylcholine: tăng tác dụng, tăng nguy cơ kéo dài block thần kinh cơ',
-        'Beta-blockers: tăng nguy cơ chậm nhịp tim'], 'pregnancy': 'B',
+        'Beta-blockers: tăng nguy cơ chậm nhịp tim'],
         'mechanism_of_action':
         'Rivastigmine là thuốc ức chế cholinesterase (acetylcholinesterase và butyrylcholinesterase inhibitor) có tính chọn lọc, không thể đảo ngược. Ức chế cả acetylcholinesterase và butyrylcholinesterase ở synap thần kinh, làm giảm phân hủy acetylcholine và tăng nồng độ acetylcholine trong synap. Khác với donepezil, rivastigmine ức chế cả butyrylcholinesterase (có thể quan trọng trong bệnh Alzheimer). Rivastigmine có half-life ngắn (1.5 giờ), nhưng tác dụng kéo dài do gắn chặt với enzyme. Có dạng uống và dạng transdermal patch (ít tác dụng phụ tiêu hóa hơn). Tác dụng: cải thiện nhận thức, hành vi, và hoạt động hàng ngày ở bệnh nhân Alzheimer và dementia do bệnh Parkinson.'
         , 'monitoring': [
@@ -762,17 +788,17 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Theo dõi ý thức, hô hấp, tim mạch, dấu hiệu cholinergic quá mức'},
         'reversal_agents': {'available': True, 'agents': [{'agent': 'Atropine',
         'mechanism': 'Anticholinergic', 'indication': 'Quá liều gây triệu chứng cholinergic quá mức',
-        'caution': 'Dùng thận trọng'}], 'notes': 'Atropine là antidote cho quá liều rivastigmine.'},
+        'caution': 'Dùng thận trọng'}]},
         'administration_instructions': {'oral': {'with_food':
         'Uống với thức ăn để giảm buồn nôn', 'timing':
         'Chia 2 lần/ngày (sáng, tối) với thức ăn. Tăng liều chậm. Dạng transdermal patch: dán 1 lần/ngày, thay vị trí mỗi ngày.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống và transdermal'}},
+        'compatibility': [], 'incompatibility': []}},
         'references': {'primary_sources': ['Lexicomp - Rivastigmine',
         'UpToDate - Rivastigmine: Drug information',
         'FDA - Exelon (rivastigmine) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'last_updated': '2024-12-19', 'evidence_level':
+        ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         },
         "renal_adjustment": {
@@ -781,6 +807,20 @@ ALZHEIMER_DEMENTIA_DRUGS = {
              "under_30": "Giảm liều hoặc tránh dùng",
              "notes": "Cần tra cứu thêm thông tin chi tiết về điều chỉnh liều ở suy thận."
          },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
 },
 }
 

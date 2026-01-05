@@ -19,7 +19,7 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         'Ho', 'Kích ứng mắt (nếu vào mắt)', 'Tăng nhãn áp (nếu vào mắt)',
         'Bí tiểu (hiếm)'], 'interactions': [
         'Anticholinergic khác: tăng tác dụng phụ',
-        'Beta-agonist: hiệp đồng tốt'], 'pregnancy': 'B', 'mechanism_of_action':
+        'Beta-agonist: hiệp đồng tốt'], 'mechanism_of_action':
         'Anticholinergic - ức chế muscarinic receptors (M1, M2, M3) ở cơ trơn phế quản, giảm acetylcholine-mediated co thắt phế quản. Giãn cơ trơn phế quản, giảm tiết dịch đường hô hấp. Không hấp thu hệ thống đáng kể khi dùng dạng hít (do ion hóa) → ít tác dụng phụ hệ thống hơn atropine. Tác dụng ngắn (4-6 giờ). An toàn hơn beta-agonist cho bệnh nhân tim mạch (không kích thích beta-1 receptors).'
         , 'monitoring': ['Đáp ứng phế quản (peak flow, FEV1)',
         'Nhịp tim, huyết áp (ít tác dụng tim mạch hơn beta-agonist)',
@@ -38,7 +38,7 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         'Dạng hít: sử dụng đúng kỹ thuật để đạt hiệu quả tối đa',
         'Dạng nebulizer: phù hợp cho bệnh nhân không thể dùng dạng hít',
         'An toàn hơn beta-agonist cho bệnh nhân tim mạch (không kích thích tim)'
-        ], 'pharmacokinetics': {'half_life': '2 giờ', 'onset':
+        ], 'onset':
         '15-30 phút (chậm hơn SABA)', 'duration': '4-6 giờ', 'protein_binding':
         'Không đáng kể (ion hóa, không hấp thu hệ thống)', 'clearance':
         'Chủ yếu tại chỗ (phế quản), không chuyển hóa đáng kể'}, 'storage':
@@ -53,8 +53,7 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         'Tăng khô miệng, bí tiểu, táo bón, tăng nhãn áp, nhìn mờ, nhịp tim nhanh',
         'management':
         'Thận trọng khi dùng cùng. Theo dõi tác dụng phụ anticholinergic. Có thể cần giảm liều hoặc tránh dùng cùng.'
-        }], 'minor': [{'drug': 'Beta-agonist (Salbutamol, Salmeterol)',
-        'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
+        }], 'moderate': [{'drug': 'Beta-2 agonists (SABA, LABA)', 'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
         'Tăng hiệu quả giãn phế quản (tác dụng tích cực)', 'management':
         'Có thể dùng kết hợp để tăng hiệu quả. Không cần điều chỉnh liều.'}]},
         'contraindications': {'tuyệt_đối': [
@@ -125,7 +124,9 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         'UpToDate: Anticholinergic bronchodilators in COPD',
         'GOLD Guidelines 2024: COPD Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Ipratropium'], 'last_updated': '2025-02-03',
-        'evidence_level': 'High - FDA approved, multiple RCTs, clinical guidelines'}}}
+        'Micromedex: Ipratropium'],
+        "evidence_level": "High - FDA approved, multiple RCTs, clinical guidelines"
+        }
+    }
 
 __all__ = ['ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS']

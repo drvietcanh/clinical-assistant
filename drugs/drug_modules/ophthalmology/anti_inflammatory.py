@@ -175,7 +175,24 @@ ANTI_INFLAMMATORY_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Increased IOP (glaucoma) - CRITICAL", "Cataract formation (with prolonged use) - CRITICAL", "Corneal thinning/perforation (with prolonged use) - CRITICAL", "Infection (herpes, fungal) - increased risk"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["IOP (target <21 mmHg) - CRITICAL", "Vision and periodic eye exams", "Signs of eye irritation (redness, burning)", "Signs of increased IOP (headache, eye pain, blurred vision) - CRITICAL", "Signs of infection (pus, increased redness/swelling, herpes) - CRITICAL"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Uveitis",
+                "AAO Guidelines - Postoperative Inflammation",
+                "FDA Drug Information - Dexamethasone Eye Drops",
+                "FDA Black Box Warning - Dexamethasone and Increased IOP",
+                "UpToDate - Uveitis Treatment"
+            ]
         },
 
         "Diclofenac eye drops": {
@@ -387,7 +404,23 @@ ANTI_INFLAMMATORY_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["GI toxicity (rare, if systemic absorption occurs)", "Renal toxicity (rare, if systemic absorption occurs)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in inflammation, pain)", "Signs of eye irritation (redness, burning, itching)", "Visual acuity (temporary blurring after application)", "Signs of systemic side effects (rare): GI pain"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Postoperative Inflammation",
+                "AAO Guidelines - Cystoid Macular Edema",
+                "FDA Drug Information - Diclofenac Eye Drops",
+                "UpToDate - Postoperative Eye Inflammation"
+            ]
         },
 
         "Ketorolac eye drops": {
@@ -599,7 +632,24 @@ ANTI_INFLAMMATORY_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["GI toxicity (if systemic absorption occurs) - CRITICAL", "Renal toxicity (if systemic absorption occurs) - CRITICAL", "Bleeding risk (if systemic absorption occurs) - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in inflammation, pain)", "Signs of eye irritation (redness, burning, itching)", "Visual acuity (temporary blurring after application)", "Signs of systemic side effects (rare): GI pain, bleeding, renal impairment - CRITICAL"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Postoperative Inflammation",
+                "AAO Guidelines - Cystoid Macular Edema",
+                "FDA Drug Information - Ketorolac Eye Drops",
+                "FDA Black Box Warning - Ketorolac and GI/Renal Toxicity",
+                "UpToDate - Postoperative Eye Inflammation"
+            ]
         },
 
         "Nepafenac eye drops": {
@@ -806,7 +856,23 @@ ANTI_INFLAMMATORY_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["GI toxicity (rare, if systemic absorption occurs)", "Renal toxicity (rare, if systemic absorption occurs)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in inflammation, pain)", "Signs of eye irritation (redness, burning, itching)", "Visual acuity (temporary blurring after application)", "Signs of systemic side effects (rare): GI pain"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Postoperative Inflammation",
+                "AAO Guidelines - Cystoid Macular Edema",
+                "FDA Drug Information - Nepafenac Eye Drops",
+                "UpToDate - Postoperative Eye Inflammation"
+            ]
         },
 
         "Prednisolone eye drops": {

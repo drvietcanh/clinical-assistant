@@ -1,0 +1,356 @@
+"""
+Fluids & Colloids (Dịch truyền & Dung dịch keo)
+"""
+
+FLUIDS_DRUGS = {
+    "Sodium Chloride 0.9%":     {
+        "group": "Fluids - Crystalloid (Dịch tinh thể)",
+        "vietnamese_name": "Nước muối sinh lý 0.9% (Normal Saline)",
+        "brand_names": {
+            "common": [
+                "Normal Saline"
+    ],
+            "vietnam": [
+                "Natri Clorid 0.9% (nhiều hãng)"
+    ],
+        },
+        "administration": [
+            "IV (Truyền tĩnh mạch)"
+    ],
+        "indications": [
+            "Hồi sức dịch (Fluid resuscitation)",
+            "Mất nước (Dehydration)",
+            "Pha loãng thuốc",
+            "Rửa vết thương"
+    ],
+        "contraindications": [
+            "Tăng Natri máu (Hypernatremia)",
+            "Thừa dịch (Fluid overload), Suy tim sung huyết nặng"
+    ],
+        "dosage": {
+            "resuscitation_adult": "500-1000 ml bolus nhanh (nếu sốc).",
+            "maintenance": "30 ml/kg/24h (hoặc theo công thức 4-2-1).",
+            "notes": """Chứa Na+ 154 mEq/L, Cl- 154 mEq/L. Dùng lượng lớn gây toan chuyển hóa tăng Clo (Hyperchloremic acidosis).""",
+        },
+        "monitoring": [
+            "Điện giải (Na, Cl)",
+            "Cân bằng dịch",
+            "Dấu hiệu quá tải dịch"
+    ],
+        "side_effects": [],
+        "interactions": [],
+        "pregnancy": "",
+        "mechanism_of_action": "",
+        "precautions": [],
+        "pharmacokinetics": {
+        },
+        "storage": "",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": "",
+            "notes": "",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "",
+            "treatment": [],
+            "monitoring": "",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+        },
+        "references": {
+            "primary_sources": [],
+            "last_updated": "",
+            "evidence_level": "",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+    },
+    "Ringer Lactate":     {
+        "group": "Fluids - Crystalloid (Dịch tinh thể)",
+        "vietnamese_name": "Dung dịch Ringer Lactate (Hartmann)",
+        "brand_names": {
+            "common": [
+                "Lactated Ringer's",
+                "Hartmann's Solution"
+    ],
+            "vietnam": [
+                "Ringer Lactate"
+    ],
+        },
+        "administration": [
+            "IV"
+    ],
+        "indications": [
+            "Hồi sức dịch (ưu tiên trong chấn thương, bỏng, mất máu)",
+            "Mất nước"
+    ],
+        "contraindications": [
+            "Tăng Kali máu (chứa K+ 4 mEq/L - thận trọng, không chống chỉ định tuyệt đối trừ khi K+ rất cao)",
+            "Chấn thương sọ não (tranh cãi - do áp lực thẩm thấu hơi thấp hơn NS, có thể gây phù não nhẹ)"
+    ],
+        "dosage": {
+            "resuscitation": "Tương tự NaCl 0.9%.",
+            "notes": """Sinh lý hơn NaCl 0.9%. Chứa Lactate (chuyển hóa thành Bicarbonate) -> Giúp kiềm hóa máu nhẹ. KHÔNG dùng pha loãng máu (chứa Ca2+ gây đông máu nếu mixed).""",
+        },
+        "monitoring": [
+            "Điện giải",
+            "Lactate (không ảnh hưởng đáng kể lactate máu trừ khi suy gan nặng)"
+    ],
+        "side_effects": [],
+        "interactions": [],
+        "pregnancy": "",
+        "mechanism_of_action": "",
+        "precautions": [],
+        "pharmacokinetics": {
+        },
+        "storage": "",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": "",
+            "notes": "",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "",
+            "treatment": [],
+            "monitoring": "",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+        },
+        "references": {
+            "primary_sources": [],
+            "last_updated": "",
+            "evidence_level": "",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+    },
+    "Albumin (Human)":     {
+        "group": "Fluids - Colloid (Dung dịch keo)",
+        "vietnamese_name": "Albumin người (5%, 20%, 25%)",
+        "brand_names": {
+            "common": [
+                "Albuminar",
+                "Albuked"
+    ],
+            "vietnam": [
+                "Human Albumin (Baxalta/Grifols/Biotest)"
+    ],
+        },
+        "administration": [
+            "IV"
+    ],
+        "indications": [
+            "Giảm Albumin máu nặng có triệu chứng (phù, cổ trướng kháng trị)",
+            "Hồi sức dịch trong sốc (lựa chọn hàng 2 sau tinh thể)",
+            "Hội chứng gan thận (Hepatorenal syndrome) - kết hợp Terlipressin",
+            "Sốc bỏng (sau 24h đầu)"
+    ],
+        "contraindications": [
+            "Suy tim nặng (nguy cơ quá tải tuần hoàn cao)",
+            "Thiếu máu nặng (cần hồng cầu hơn)"
+    ],
+        "dosage": {
+            "hypoalbuminemia": "Albumin 20-25%: 50-100 ml (10-20g) IV chậm.",
+            "hepatorenal": "1g/kg (max 100g) ngày đầu, sau đó 20-40g/ngày.",
+            "notes": """Là chế phẩm máu -> Nguy cơ (dù thấp) lây nhiễm. Rất đắt tiền. Kéo nước vào lòng mạch mạnh (đặc biệt loại 20-25%).""",
+        },
+        "side_effects": [
+            "Quá tải dịch (Pulmonary edema)",
+            "Phản ứng dị ứng (hiếm)"
+    ],
+        "storage": "Nhiệt độ phòng (thường <30 độ C).",
+        "interactions": [],
+        "pregnancy": "",
+        "mechanism_of_action": "",
+        "monitoring": [],
+        "precautions": [],
+        "pharmacokinetics": {
+        },
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": "",
+            "notes": "",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "",
+            "treatment": [],
+            "monitoring": "",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+        },
+        "references": {
+            "primary_sources": [],
+            "last_updated": "",
+            "evidence_level": "",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+    },
+    "HES 130/0.4":     {
+        "group": "Fluids - Colloid (Cao phân tử tổng hợp)",
+        "vietnamese_name": "Hydroxyethyl Starch (Voluven, HES)",
+        "brand_names": {
+            "common": [
+                "Voluven",
+                "Tetraspan"
+    ],
+            "vietnam": [
+                "Voluven 6%",
+                "Tetraspan 6%"
+    ],
+        },
+        "administration": [
+            "IV"
+    ],
+        "indications": [
+            "Hồi sức dịch trong giảm thể tích tuần hoàn (Hypovolemia) do mất máu cấp (Chỉ dùng khi tinh thể không đủ)"
+    ],
+        "contraindications": [
+            "Nhiễm trùng huyết (Sepsis) - CHỐNG CHỈ ĐỊNH (tăng nguy cơ tổn thương thận và tử vong)",
+            "Suy thận",
+            "Bỏng nặng",
+            "Xuất huyết não"
+    ],
+        "dosage": {
+            "max_dose": "Tối đa 30-50 ml/kg/ngày (tùy loại).",
+            "notes": """CẢNH BÁO: Nguy cơ tổn thương thận (UKI) và rối loạn đông máu. Hạn chế sử dụng, đặc biệt ở ICU/Sepsis.""",
+        },
+        "black_box_warnings": """Tăng nguy cơ tử vong và tổn thương thận cần lọc máu ở bệnh nhân nhiễm trùng huyết và bệnh nhân nặng (ICU).""",
+        "monitoring": [
+            "Chức năng thận (Creatinine)",
+            "Đông máu"
+    ],
+        "side_effects": [],
+        "interactions": [],
+        "pregnancy": "",
+        "mechanism_of_action": "",
+        "precautions": [],
+        "pharmacokinetics": {
+        },
+        "storage": "",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": "",
+            "notes": "",
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "antidote": "",
+            "treatment": [],
+            "monitoring": "",
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+        },
+        "references": {
+            "primary_sources": [],
+            "last_updated": "",
+            "evidence_level": "",
+        },
+    },
+}

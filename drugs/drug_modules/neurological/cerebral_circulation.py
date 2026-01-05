@@ -173,22 +173,24 @@ CEREBRAL_CIRCULATION_DRUGS = {
               "black_box_warnings": "Không có",
 },
     
-    "Cerebroprotein hydrolysate (khác)": {
+    "Cerebroprotein hydrolysate (khác)":     {
         "group": "Neurology - Neuropeptide/cerebroprotein hydrolysate (adjunct, evidence limited)",
         "vietnamese_name": "Cerebroprotein hydrolysate (khác Cerebrolysin)",
-        "administration": ["IV"],
+        "administration": [
+            "IV"
+    ],
         "indications": [
             "Đột quỵ thiếu máu não giai đoạn bán cấp/phục hồi chức năng – thuốc hỗ trợ",
-            "Chấn thương sọ não (TBI) – hỗ trợ phục hồi",
-        ],
+            "Chấn thương sọ não (TBI) – hỗ trợ phục hồi"
+    ],
         "contraindications": [
             "Động kinh chưa kiểm soát hoặc trạng thái động kinh",
             "Suy thận nặng",
-            "Dị ứng với chế phẩm protein/peptide nguồn gốc động vật",
-        ],
+            "Dị ứng với chế phẩm protein/peptide nguồn gốc động vật"
+    ],
         "dosage": {
             "adult_iv": "10–30ml/ngày pha 100ml NaCl 0.9% truyền 30–60 phút x 10–20 ngày; có thể lặp lại đợt sau 1–2 tháng",
-            "notes": "Không tiêm bolus. Là thuốc hỗ trợ, KHÔNG thay thế tái tưới máu, chống kết tập tiểu cầu/chống đông hoặc statin liều cao.",
+            "notes": """Không tiêm bolus. Là thuốc hỗ trợ, KHÔNG thay thế tái tưới máu, chống kết tập tiểu cầu/chống đông hoặc statin liều cao.""",
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh",
@@ -200,27 +202,24 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "Buồn nôn, nôn",
             "Kích thích, mất ngủ nhẹ",
             "Phát ban, phản ứng quá mẫn (hiếm)",
-            "Co giật ở người có ngưỡng thấp (hiếm)",
-        ],
+            "Co giật ở người có ngưỡng thấp (hiếm)"
+    ],
         "interactions": [
             "Thuốc hướng thần (antidepressant/antipsychotic): có thể tăng kích thích nhẹ",
-            "Không ghi nhận tương tác dược động học rõ; chủ yếu thận trọng khi phối hợp nhiều thuốc tác động CNS.",
-        ],
+            "Không ghi nhận tương tác dược động học rõ; chủ yếu thận trọng khi phối hợp nhiều thuốc tác động CNS."
+    ],
         "pregnancy": "C – dữ liệu hạn chế, tránh dùng nếu không thật cần",
-        "mechanism_of_action": (
-            "Hỗn hợp peptide/amino acid trọng lượng phân tử thấp, được cho là có hoạt tính giống yếu tố dinh dưỡng thần kinh, "
-            "cải thiện chuyển hóa năng lượng neuron và giảm độc tính glutamate. Bằng chứng lâm sàng còn hạn chế và không đồng nhất."
-        ),
+        "mechanism_of_action": """Hỗn hợp peptide/amino acid trọng lượng phân tử thấp, được cho là có hoạt tính giống yếu tố dinh dưỡng thần kinh, cải thiện chuyển hóa năng lượng neuron và giảm độc tính glutamate. Bằng chứng lâm sàng còn hạn chế và không đồng nhất.""",
         "monitoring": [
             "Huyết áp, mạch trong khi truyền",
             "Triệu chứng thần kinh (chức năng vận động, thang điểm NIHSS/modified Rankin khi theo dõi phục hồi)",
-            "Dấu hiệu phản vệ hoặc kích thích thần kinh",
-        ],
+            "Dấu hiệu phản vệ hoặc kích thích thần kinh"
+    ],
         "precautions": [
             "Không trì hoãn hoặc thay thế điều trị chuẩn đột quỵ.",
             "Thận trọng ở bệnh nhân tiền sử co giật hoặc suy thận nặng.",
-            "Ngừng nếu có phản ứng quá mẫn hoặc co giật.",
-        ],
+            "Ngừng nếu có phản ứng quá mẫn hoặc co giật."
+    ],
         "pharmacokinetics": {
             "half_life": "Không xác định (hỗn hợp peptide), giả định thải trừ nhanh",
             "onset": "Vài ngày đến vài tuần (đánh giá qua phục hồi chức năng)",
@@ -229,7 +228,7 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "clearance": "Chuyển hóa bởi peptidase, thải trừ thận",
         },
         "storage": "Giữ 2–8°C, tránh ánh sáng. Dùng ngay sau pha loãng.",
-        "black_box_warnings": None,
+        "black_box_warnings": "Không có",
         "drug_interactions": {
             "major": [],
             "moderate": [],
@@ -239,13 +238,13 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "tuyệt_đối": [
                 "Động kinh chưa kiểm soát",
                 "Suy thận nặng",
-                "Dị ứng với chế phẩm protein/peptide nguồn gốc động vật",
-            ],
+                "Dị ứng với chế phẩm protein/peptide nguồn gốc động vật"
+    ],
             "tương_đối": [
                 "Tiền sử co giật",
                 "Bệnh thận mức độ trung bình",
-                "Đang dùng nhiều thuốc tác động thần kinh trung ương",
-            ],
+                "Đang dùng nhiều thuốc tác động thần kinh trung ương"
+    ],
         },
         "pregnancy_lactation": {
             "fda_category": "C",
@@ -260,55 +259,59 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "mild": "Không cần chỉnh",
             "moderate": "Thận trọng do dữ liệu hạn chế",
             "severe": "Tránh nếu có thể",
+            "notes": "",
         },
         "overdose_management": {
-            "symptoms": ["Kích thích, nhức đầu, nôn, phản ứng quá mẫn"],
+            "symptoms": [
+                "Kích thích, nhức đầu, nôn, phản ứng quá mẫn"
+    ],
             "antidote": "Không có antidote đặc hiệu",
-            "treatment": ["Ngừng truyền, điều trị triệu chứng, xử trí phản vệ nếu có"],
+            "treatment": [
+                "Ngừng truyền, điều trị triệu chứng, xử trí phản vệ nếu có"
+    ],
             "monitoring": "HA, mạch, hô hấp, dấu hiệu dị ứng",
         },
         "reversal_agents": {
             "available": False,
             "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng truyền ngay, điều trị triệu chứng (kích thích, nhức đầu, nôn), xử trí phản vệ nếu có (epinephrine, corticosteroids, antihistamines), theo dõi dấu hiệu sinh tồn."
+            "notes": """Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng truyền ngay, điều trị triệu chứng (kích thích, nhức đầu, nôn), xử trí phản vệ nếu có (epinephrine, corticosteroids, antihistamines), theo dõi dấu hiệu sinh tồn.""",
         },
         "administration_instructions": {
             "iv": {
                 "reconstitution": "Pha 10–30ml vào 100ml NaCl 0.9%",
                 "infusion_rate": "Truyền 30–60 phút, 1 lần/ngày",
-                "compatibility": ["NS"],
-                "incompatibility": ["Không trộn chung với thuốc khác trong cùng chai/truyền"],
+                "compatibility": [
+                    "NS"
+    ],
+                "incompatibility": [
+                    "Không trộn chung với thuốc khác trong cùng chai/truyền"
+    ],
                 "notes": "Theo dõi phản ứng trong 10–15 phút đầu mỗi lần truyền.",
-            }
+            },
         },
         "references": {
             "primary_sources": [
                 "Một số RCT/observational nhỏ về cerebroprotein hydrolysate trong AIS/TBI (kết quả không đồng nhất)",
-                "UpToDate/Drug monograph - Cerebroprotein hydrolysate",
-            ],
+                "UpToDate/Drug monograph - Cerebroprotein hydrolysate"
+    ],
             "last_updated": "2025-03-02",
             "evidence_level": "Low–Moderate (bằng chứng hạn chế, không phải chuẩn guideline)",
         },
-                  "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": "Không có",
-},
-    
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
+    },
     "Citicoline": {
         "group": "Neurology - Neuroprotective / Nootropic",
         "vietnamese_name": "Citicoline, CDP-choline",
@@ -432,21 +435,23 @@ CEREBRAL_CIRCULATION_DRUGS = {
           "black_box_warnings": "Không có",
 },
 
-    "Edaravone": {
+    "Edaravone":     {
         "group": "Neurology - Free-radical scavenger (AIS adjunct, Japan guideline)",
         "vietnamese_name": "Edaravone",
-        "administration": ["IV"],
+        "administration": [
+            "IV"
+    ],
         "indications": [
             "Đột quỵ thiếu máu não cấp (AIS) trong 24 giờ đầu – thuốc hỗ trợ, không thay thế tái tưới máu",
-            "Bệnh nhân đột quỵ có chống chỉ định tái tưới máu hoặc đang chờ can thiệp",
-        ],
+            "Bệnh nhân đột quỵ có chống chỉ định tái tưới máu hoặc đang chờ can thiệp"
+    ],
         "contraindications": [
             "Quá mẫn với edaravone hoặc sulfite",
             "Tiền sử phản vệ với edaravone",
-            "Suy thận nặng (nguy cơ tích lũy)",
-        ],
+            "Suy thận nặng (nguy cơ tích lũy)"
+    ],
         "dosage": {
-            "adult_ais_iv": "30mg IV truyền trong 30 phút, mỗi 12 giờ, liên tục 14 ngày (bắt đầu càng sớm càng tốt trong 24 giờ đầu)",
+            "adult_ais_iv": """30mg IV truyền trong 30 phút, mỗi 12 giờ, liên tục 14 ngày (bắt đầu càng sớm càng tốt trong 24 giờ đầu)""",
             "notes": "Pha 30mg vào 100ml NaCl 0.9%, truyền 30 phút; không pha chung với thuốc khác.",
         },
         "renal_adjustment": {
@@ -459,29 +464,25 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "Phản vệ, phù mạch (hiếm nhưng nghiêm trọng)",
             "Phát ban, mẩn đỏ",
             "Buồn nôn, nôn",
-            "Chóng mặt, nhức đầu",
-        ],
+            "Chóng mặt, nhức đầu"
+    ],
         "interactions": [
             "Thuốc chống kết tập tiểu cầu/kháng đông: lý thuyết tăng nguy cơ chảy máu khi phối hợp trong AIS",
-            "Thuốc độc thận (aminoglycoside, amphotericin B, NSAID liều cao): có thể tăng nguy cơ tổn thương thận",
-        ],
+            "Thuốc độc thận (aminoglycoside, amphotericin B, NSAID liều cao): có thể tăng nguy cơ tổn thương thận"
+    ],
         "pregnancy": "C – dữ liệu hạn chế; chỉ dùng nếu lợi ích vượt trội nguy cơ",
-        "mechanism_of_action": (
-            "Edaravone là chất quét gốc tự do (free-radical scavenger), giảm stress oxy hóa, "
-            "ức chế peroxid hóa lipid màng tế bào thần kinh sau thiếu máu, bảo vệ nội mô và hàng rào máu não. "
-            "Mục tiêu là hạn chế tiến triển vùng penumbra trong AIS."
-        ),
+        "mechanism_of_action": """Edaravone là chất quét gốc tự do (free-radical scavenger), giảm stress oxy hóa, ức chế peroxid hóa lipid màng tế bào thần kinh sau thiếu máu, bảo vệ nội mô và hàng rào máu não. Mục tiêu là hạn chế tiến triển vùng penumbra trong AIS.""",
         "monitoring": [
             "Chức năng thận (creatinine, BUN)",
             "Men gan",
             "Dấu hiệu phản vệ trong và sau truyền (mạch, HA, khó thở, phát ban)",
-            "Triệu chứng thần kinh (NIHSS, ý thức)",
-        ],
+            "Triệu chứng thần kinh (NIHSS, ý thức)"
+    ],
         "precautions": [
             "KHÔNG trì hoãn tái tưới máu (alteplase/tenecteplase, EVT) vì edaravone.",
             "Ngừng ngay nếu có dấu hiệu phản vệ hoặc tăng creatinine nhanh.",
-            "Thận trọng khi phối hợp nhiều thuốc độc thận.",
-        ],
+            "Thận trọng khi phối hợp nhiều thuốc độc thận."
+    ],
         "pharmacokinetics": {
             "half_life": "0.5–1.5 giờ",
             "onset": "Trong ngày đầu điều trị (tác dụng bảo vệ tế bào thần kinh lý thuyết)",
@@ -490,30 +491,30 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "clearance": "Gan và thận; chuyển hóa thành sulfate/glucuronide thải qua thận",
         },
         "storage": "Bảo quản 20–25°C, tránh ánh sáng. Dùng ngay sau khi pha loãng.",
-        "black_box_warnings": None,
+        "black_box_warnings": "Không có",
         "drug_interactions": {
             "major": [],
             "moderate": [
-                {
+    {
                     "drug": "Thuốc độc thận (aminoglycoside, amphotericin B, NSAID liều cao)",
                     "mechanism": "Cộng hưởng gây tổn thương thận",
                     "effect": "Tăng nguy cơ suy thận cấp",
                     "management": "Theo dõi creatinine; tránh phối hợp nếu có thể.",
                 }
-            ],
+                ],
             "minor": [],
         },
         "contraindications_detail": {
             "tuyệt_đối": [
                 "Quá mẫn với edaravone hoặc sulfite",
                 "Tiền sử phản vệ với edaravone",
-                "Suy thận nặng (CrCl <30 ml/phút) hoặc đang lọc máu",
-            ],
+                "Suy thận nặng (CrCl <30 ml/phút) hoặc đang lọc máu"
+    ],
             "tương_đối": [
                 "Suy gan trung bình-nặng",
                 "Đang dùng nhiều thuốc độc thận",
-                "Tiền sử dị ứng nhiều thuốc",
-            ],
+                "Tiền sử dị ứng nhiều thuốc"
+    ],
         },
         "pregnancy_lactation": {
             "fda_category": "C",
@@ -528,60 +529,48 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "mild": "Không cần chỉnh liều, theo dõi men gan",
             "moderate": "Thận trọng, theo dõi sát men gan",
             "severe": "Tránh do dữ liệu hạn chế",
+            "notes": "",
         },
         "overdose_management": {
-            "symptoms": ["Tụt huyết áp, buồn nôn, phản vệ, tăng creatinine"],
+            "symptoms": [
+                "Tụt huyết áp, buồn nôn, phản vệ, tăng creatinine"
+    ],
             "antidote": "Không có antidote đặc hiệu",
             "treatment": [
                 "Ngừng truyền ngay",
                 "Hỗ trợ hô hấp, tuần hoàn nếu phản vệ",
-                "Bù dịch, theo dõi creatinine; lọc máu nếu suy thận nặng",
-            ],
+                "Bù dịch, theo dõi creatinine; lọc máu nếu suy thận nặng"
+    ],
             "monitoring": "HA, mạch, SpO2, chức năng thận, men gan",
         },
         "reversal_agents": {
             "available": False,
             "agents": [],
-            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là ngừng truyền ngay, hỗ trợ hô hấp và tuần hoàn nếu phản vệ, bù dịch, theo dõi creatinine. Lọc máu nếu suy thận nặng."
+            "notes": """Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là ngừng truyền ngay, hỗ trợ hô hấp và tuần hoàn nếu phản vệ, bù dịch, theo dõi creatinine. Lọc máu nếu suy thận nặng.""",
         },
         "administration_instructions": {
             "iv": {
                 "reconstitution": "Pha 30mg vào 100ml NaCl 0.9%",
                 "infusion_rate": "Truyền tĩnh mạch trong 30 phút, mỗi 12 giờ",
-                "compatibility": ["NS"],
-                "incompatibility": ["Không pha chung với thuốc khác trong cùng đường truyền"],
+                "compatibility": [
+                    "NS"
+    ],
+                "incompatibility": [
+                    "Không pha chung với thuốc khác trong cùng đường truyền"
+    ],
                 "notes": "Bắt đầu càng sớm càng tốt trong 24 giờ đầu AIS; duy trì đủ 14 ngày nếu dung nạp.",
-            }
+            },
         },
         "references": {
             "primary_sources": [
                 "Japan Stroke Society Guidelines on edaravone (AIS adjunct)",
                 "Nghiên cứu MPSS/edaravone AIS tại Nhật (giảm tiến triển NIHSS ở một số phân tích)",
-                "UpToDate/Drug monograph - Edaravone",
-            ],
+                "UpToDate/Drug monograph - Edaravone"
+    ],
             "last_updated": "2025-03-02",
             "evidence_level": "Moderate (nhật có khuyến cáo, chưa phải chuẩn toàn cầu)",
         },
-                  "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": "Không có",
-},
-    
+    },
     "Ginkgo biloba extract": {
         "group": "Neurology - Herbal cerebral vasomodulator (Ginkgo biloba)",
         "vietnamese_name": "Chiết xuất Ginkgo biloba",
@@ -722,19 +711,21 @@ CEREBRAL_CIRCULATION_DRUGS = {
           "black_box_warnings": "Không có",
 },
     
-    "Nicergoline": {
+    "Nicergoline":     {
         "group": "Neurology - Ergot-derived cerebral vasodilator",
         "vietnamese_name": "Nicergoline",
-        "administration": ["PO"],
+        "administration": [
+            "PO"
+    ],
         "indications": [
             "Rối loạn tuần hoàn não mạn (chóng mặt, suy giảm nhận thức nhẹ) – bằng chứng hạn chế",
-            "Rối loạn tuần hoàn ngoại vi (Raynaud, bệnh mạch ngoại vi) – hỗ trợ",
-        ],
+            "Rối loạn tuần hoàn ngoại vi (Raynaud, bệnh mạch ngoại vi) – hỗ trợ"
+    ],
         "contraindications": [
             "Nhồi máu cơ tim cấp, xuất huyết cấp",
             "Tụt huyết áp nặng",
-            "Dị ứng ergot derivatives",
-        ],
+            "Dị ứng ergot derivatives"
+    ],
         "dosage": {
             "adult_po": "5–10mg x 3 lần/ngày, uống sau ăn",
             "notes": "Tăng liều dần; đánh giá sau 4–8 tuần.",
@@ -748,22 +739,22 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "Đỏ mặt, tụt huyết áp tư thế",
             "Rối loạn tiêu hóa",
             "Tăng acid uric (hiếm, do chuyển hóa) – thận trọng ở gout",
-            "Xơ hóa sau phúc mạc (rất hiếm, nguy cơ class ergot khi dùng kéo dài liều cao)",
-        ],
+            "Xơ hóa sau phúc mạc (rất hiếm, nguy cơ class ergot khi dùng kéo dài liều cao)"
+    ],
         "interactions": [
             "Thuốc hạ huyết áp: tăng nguy cơ tụt huyết áp",
-            "Chống đông/kháng tiểu cầu: lý thuyết tăng chảy máu (hiếm)",
-        ],
+            "Chống đông/kháng tiểu cầu: lý thuyết tăng chảy máu (hiếm)"
+    ],
         "pregnancy": "C – tránh dùng thường quy",
-        "mechanism_of_action": "Dẫn xuất ergot, gây giãn mạch não và cải thiện vi tuần hoàn, có thêm tác dụng đối kháng alpha-adrenergic nhẹ.",
+        "mechanism_of_action": """Dẫn xuất ergot, gây giãn mạch não và cải thiện vi tuần hoàn, có thêm tác dụng đối kháng alpha-adrenergic nhẹ.""",
         "monitoring": [
             "Huyết áp (tụt HA tư thế)",
-            "Acid uric nếu có tiền sử gout",
-        ],
+            "Acid uric nếu có tiền sử gout"
+    ],
         "precautions": [
             "Không dùng kéo dài liều cao; thận trọng nguy cơ xơ hóa (rất hiếm).",
-            "Đánh giá đáp ứng sau 1–2 tháng; ngừng nếu không cải thiện.",
-        ],
+            "Đánh giá đáp ứng sau 1–2 tháng; ngừng nếu không cải thiện."
+    ],
         "pharmacokinetics": {
             "half_life": "8–12 giờ (metabolites lâu hơn)",
             "onset": "vài ngày–tuần",
@@ -772,22 +763,29 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "clearance": "Gan (chuyển hóa), thận (thải trừ metabolites)",
         },
         "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm và ánh sáng.",
-        "black_box_warnings": None,
+        "black_box_warnings": "Không có",
         "drug_interactions_detail": {
             "major": [],
             "moderate": [
-                {
+    {
                     "drug": "Thuốc hạ huyết áp",
                     "mechanism": "Tác dụng giãn mạch cộng hưởng",
                     "effect": "Tụt huyết áp tư thế",
                     "management": "Theo dõi HA, giảm liều nếu cần.",
                 }
-            ],
+                ],
             "minor": [],
         },
         "contraindications_detail": {
-            "tuyệt_đối": ["NMCT cấp", "Xuất huyết cấp", "Dị ứng ergot"],
-            "tương_đối": ["Hạ HA tư thế", "Gout hoặc tăng acid uric"],
+            "tuyệt_đối": [
+                "NMCT cấp",
+                "Xuất huyết cấp",
+                "Dị ứng ergot"
+    ],
+            "tương_đối": [
+                "Hạ HA tư thế",
+                "Gout hoặc tăng acid uric"
+    ],
         },
         "pregnancy_lactation": {
             "fda_category": "C",
@@ -802,78 +800,67 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "mild": "Không cần chỉnh",
             "moderate": "Thận trọng",
             "severe": "Tránh hoặc giảm liều (dữ liệu hạn chế)",
+            "notes": "",
         },
         "overdose_management": {
-            "symptoms": ["Tụt HA, chóng mặt, buồn nôn"],
+            "symptoms": [
+                "Tụt HA, chóng mặt, buồn nôn"
+    ],
             "antidote": "Không có antidote đặc hiệu",
-            "treatment": ["Nâng HA, bù dịch, điều trị triệu chứng"],
+            "treatment": [
+                "Nâng HA, bù dịch, điều trị triệu chứng"
+    ],
             "monitoring": "HA, mạch, ý thức",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Nên uống sau ăn để giảm kích ứng dạ dày",
                 "timing": "Chia 2–3 lần/ngày; tránh dùng cùng rượu.",
-            }
+            },
         },
         "references": {
             "primary_sources": [
                 "Drug monographs nicergoline",
-                "Thực hành lâm sàng tại EU/Asia (bằng chứng hạn chế)",
-            ],
+                "Thực hành lâm sàng tại EU/Asia (bằng chứng hạn chế)"
+    ],
             "last_updated": "2025-02-23",
             "evidence_level": "Low–Moderate (bằng chứng hạn chế, không phải chuẩn guideline)",
         },
-                  "drug_interactions": {
-                  "major": [
-                      {
-                          "drug": "Chống đông/kháng tiểu cầu: lý thuyết tăng chảy máu (hiếm)",
-                          "mechanism": "Tăng nguy cơ chảy máu"
-                      }
-                  ],
-                  "moderate": [],
-                  "minor": [
-                      {
-                          "drug": "Thuốc hạ huyết áp: tăng nguy cơ tụt huyết áp",
-                          "mechanism": "Tương tác lâm sàng"
-                      }
-                  ]
-              },
-              "reversal_agents": {
-                  "available": False,
-                  "agents": []
-              },
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": "Không có",
-},
-    
-    "Nimodipine": {
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Chống đông/kháng tiểu cầu: lý thuyết tăng chảy máu (hiếm)",
+                    "mechanism": "Tăng nguy cơ chảy máu",
+                }
+                ],
+            "moderate": [],
+            "minor": [
+    {
+                    "drug": "Thuốc hạ huyết áp: tăng nguy cơ tụt huyết áp",
+                    "mechanism": "Tương tác lâm sàng",
+                }
+                ],
+        },
+    },
+    "Nimodipine":     {
         "group": "Neurology - Calcium channel blocker (cerebral vasospasm prophylaxis)",
         "vietnamese_name": "Nimodipine",
-        "administration": ["PO", "NG"],
+        "administration": [
+            "PO",
+            "NG"
+    ],
         "indications": [
-            "Phòng ngừa thiếu máu não chậm do co thắt mạch sau xuất huyết dưới nhện (aSAH) – điều trị chuẩn",
-        ],
+            "Phòng ngừa thiếu máu não chậm do co thắt mạch sau xuất huyết dưới nhện (aSAH) – điều trị chuẩn"
+    ],
         "contraindications": [
             "Hạ huyết áp nặng",
             "Sốc, suy tim mất bù",
-            "Dị ứng dihydropyridine CCB",
-        ],
+            "Dị ứng dihydropyridine CCB"
+    ],
         "dosage": {
             "adult_sah": "60mg PO/NG mỗi 4 giờ x 21 ngày (có thể 30mg mỗi 2 giờ nếu tụt HA)",
             "notes": "Dùng sớm sau chẩn đoán aSAH. Không dùng dạng IV (nguy cơ tụt HA nghiêm trọng, từng có cảnh báo).",
@@ -886,23 +873,23 @@ CEREBRAL_CIRCULATION_DRUGS = {
         "side_effects": [
             "Tụt huyết áp",
             "Đỏ bừng, nhức đầu",
-            "Chóng mặt",
-        ],
+            "Chóng mặt"
+    ],
         "interactions": [
             "CYP3A4 inhibitors (azole, macrolide, protease inhibitor): tăng nồng độ nimodipine",
             "CYP3A4 inducers (phenytoin, carbamazepine, rifampin): giảm nồng độ",
-            "Thuốc hạ huyết áp khác: cộng hưởng tụt HA",
-        ],
+            "Thuốc hạ huyết áp khác: cộng hưởng tụt HA"
+    ],
         "pregnancy": "C",
-        "mechanism_of_action": "Chẹn kênh Ca2+ typ L (dihydropyridine) ưu thế trên mạch não, giảm co thắt mạch sau xuất huyết dưới nhện, cải thiện tưới máu não.",
+        "mechanism_of_action": """Chẹn kênh Ca2+ typ L (dihydropyridine) ưu thế trên mạch não, giảm co thắt mạch sau xuất huyết dưới nhện, cải thiện tưới máu não.""",
         "monitoring": [
             "Huyết áp, mạch",
-            "Triệu chứng thiếu máu não chậm (nhức đầu, rối loạn ý thức, khu trú)",
-        ],
+            "Triệu chứng thiếu máu não chậm (nhức đầu, rối loạn ý thức, khu trú)"
+    ],
         "precautions": [
             "Không dùng đường IV; chỉ uống/NG. Theo dõi HA sát.",
-            "Giảm liều hoặc kéo dài khoảng cách nếu tụt HA.",
-        ],
+            "Giảm liều hoặc kéo dài khoảng cách nếu tụt HA."
+    ],
         "pharmacokinetics": {
             "half_life": "8–9 giờ",
             "onset": "Trong ngày đầu",
@@ -910,30 +897,36 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "protein_binding": ">95%",
             "clearance": "Gan (CYP3A4); thải trừ qua mật và phân",
         },
-        "storage": "Viên nang bảo quản nhiệt độ phòng, tránh ánh sáng. Nếu cho qua sonde, rút dung dịch từ viên và dùng ngay.",
-        "black_box_warnings": None,
+        "storage": """Viên nang bảo quản nhiệt độ phòng, tránh ánh sáng. Nếu cho qua sonde, rút dung dịch từ viên và dùng ngay.""",
+        "black_box_warnings": "Không có",
         "drug_interactions_detail": {
             "major": [
-                {
+    {
                     "drug": "CYP3A4 inhibitors (ketoconazole, clarithromycin, ritonavir)",
                     "mechanism": "Tăng nồng độ nimodipine",
                     "effect": "Tụt HA nghiêm trọng",
                     "management": "Tránh phối hợp hoặc giảm liều, theo dõi HA.",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "CYP3A4 inducers (rifampin, carbamazepine, phenytoin)",
                     "mechanism": "Giảm nồng độ nimodipine",
                     "effect": "Giảm hiệu quả phòng co thắt mạch",
                     "management": "Tránh hoặc tăng liều/giám sát sát nếu bắt buộc.",
                 }
-            ],
+                ],
             "minor": [],
         },
         "contraindications_detail": {
-            "tuyệt_đối": ["Hạ HA nặng", "Sốc", "Dị ứng dihydropyridine"],
-            "tương_đối": ["Suy gan (cần giảm liều/thận trọng)"],
+            "tuyệt_đối": [
+                "Hạ HA nặng",
+                "Sốc",
+                "Dị ứng dihydropyridine"
+    ],
+            "tương_đối": [
+                "Suy gan (cần giảm liều/thận trọng)"
+    ],
         },
         "pregnancy_lactation": {
             "fda_category": "C",
@@ -948,14 +941,22 @@ CEREBRAL_CIRCULATION_DRUGS = {
             "mild": "Thận trọng",
             "moderate": "Giảm liều/giãn cách liều",
             "severe": "Tránh nếu có thể (nguy cơ tích lũy, tụt HA)",
+            "notes": "",
         },
         "overdose_management": {
-            "symptoms": ["Tụt HA nặng, nhịp nhanh phản xạ"],
+            "symptoms": [
+                "Tụt HA nặng, nhịp nhanh phản xạ"
+    ],
             "antidote": "Không có antidote đặc hiệu",
-            "treatment": ["Truyền dịch, vận mạch nếu cần, than hoạt nếu uống quá liều sớm"],
+            "treatment": [
+                "Truyền dịch, vận mạch nếu cần, than hoạt nếu uống quá liều sớm"
+    ],
             "monitoring": "HA, mạch, ECG",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
         "administration_instructions": {
             "oral": {
                 "with_food": "Tốt nhất uống xa bữa để hấp thu tối đa",
@@ -969,52 +970,31 @@ CEREBRAL_CIRCULATION_DRUGS = {
         "references": {
             "primary_sources": [
                 "AHA/ASA guidelines for aneurysmal SAH – nimodipine là chuẩn phòng co thắt mạch",
-                "ESO guidelines on SAH",
-            ],
+                "ESO guidelines on SAH"
+    ],
             "last_updated": "2025-02-23",
             "evidence_level": "High (điều trị chuẩn trong aSAH)",
         },
-                  "drug_interactions": {
-                  "major": [],
-                  "moderate": [
-                      {
-                          "drug": "CYP3A4 inhibitors (azole, macrolide, protease inhibitor): tăng nồng độ nimodipine",
-                          "mechanism": "Tương tác chuyển hóa"
-                      },
-                      {
-                          "drug": "CYP3A4 inducers (phenytoin, carbamazepine, rifampin): giảm nồng độ",
-                          "mechanism": "Tương tác chuyển hóa"
-                      }
-                  ],
-                  "minor": [
-                      {
-                          "drug": "Thuốc hạ huyết áp khác: cộng hưởng tụt HA",
-                          "mechanism": "Tương tác lâm sàng"
-                      }
-                  ]
-              },
-              "reversal_agents": {
-                  "available": False,
-                  "agents": []
-              },
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": None,
-              "black_box_warnings": "Không có",
-},
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+    {
+                    "drug": "CYP3A4 inhibitors (azole, macrolide, protease inhibitor): tăng nồng độ nimodipine",
+                    "mechanism": "Tương tác chuyển hóa",
+                },
+    {
+                    "drug": "CYP3A4 inducers (phenytoin, carbamazepine, rifampin): giảm nồng độ",
+                    "mechanism": "Tương tác chuyển hóa",
+                }
+                ],
+            "minor": [
+    {
+                    "drug": "Thuốc hạ huyết áp khác: cộng hưởng tụt HA",
+                    "mechanism": "Tương tác lâm sàng",
+                }
+                ],
+        },
+    },
     "Piracetam": {
         "group": "Neurology - Nootropic / Cerebral circulation enhancer",
         "vietnamese_name": "Piracetam",
@@ -1137,6 +1117,20 @@ CEREBRAL_CIRCULATION_DRUGS = {
          "black_box_warnings": None,
          "black_box_warnings": None,
          "black_box_warnings": "Không có",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
 },
 
     "Vinpocetine": {
@@ -1264,6 +1258,20 @@ CEREBRAL_CIRCULATION_DRUGS = {
           "black_box_warnings": None,
           "black_box_warnings": None,
           "black_box_warnings": "Không có",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ]
 },
 
 }

@@ -702,6 +702,22 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Metabolic acidosis (if used with oral CAI) - CRITICAL", "Renal failure (if used with oral CAI or in renal impairment) - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["IOP (target <21 mmHg)", "Vision and periodic eye exams", "Signs of eye irritation (redness, burning, itching, stinging)", "Renal function (creatinine, eGFR) if used long-term or at risk - CRITICAL", "Acid-base balance if used with oral CAI - CRITICAL", "Signs of sulfonamide allergy (rash, difficulty breathing)"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Glaucoma",
+                "FDA Drug Information - Dorzolamide",
+                "FDA Black Box Warning - Dorzolamide and Renal Impairment",
+                "UpToDate - Glaucoma Treatment"
+            ],
             "black_box_warnings": "Cần xem xét black box warnings",
             "reversal_agents": {
                 "available": False,
@@ -849,6 +865,21 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Iris color change (permanent) - common", "Macular edema (rare, in patients with history)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["IOP (target <21 mmHg)", "Vision and periodic eye exams", "Iris color changes (permanent) - common", "Eyelash changes (longer, darker, color change) - common", "Signs of eye irritation (redness, burning)", "Signs of macular edema (rare, in patients with history)"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Glaucoma",
+                "FDA Drug Information - Latanoprost",
+                "UpToDate - Glaucoma Treatment"
+            ],
             "black_box_warnings": "Cần xem xét black box warnings",
             "reversal_agents": {
                 "available": False,
@@ -1041,6 +1072,22 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Systemic cholinergic effects (if systemic absorption occurs) - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["IOP (target <21 mmHg)", "Vision and periodic eye exams", "Blurred vision (lasts 4-8 hours)", "Signs of eye irritation (redness, burning)", "Signs of systemic cholinergic effects (if systemic absorption): salivation, sweating, nausea, vomiting, diarrhea, bradycardia - CRITICAL"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Glaucoma",
+                "AAO Guidelines - Acute Angle-Closure Glaucoma",
+                "FDA Drug Information - Pilocarpine",
+                "ISMP High Alert Medications - Cholinergic Medications"
+            ],
             "black_box_warnings": "Cần xem xét black box warnings",
         },
 
@@ -1247,7 +1294,24 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Bronchospasm (in asthma/COPD) - CRITICAL", "Bradycardia/AV block (in heart disease) - CRITICAL", "Heart failure exacerbation - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["IOP (target <21 mmHg)", "Vision and periodic eye exams", "Signs of eye irritation (redness, burning)", "Heart rate and blood pressure (if systemic absorption) - CRITICAL", "Signs of bronchospasm (wheezing, shortness of breath) - CRITICAL", "Signs of bradycardia/AV block - CRITICAL"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Glaucoma",
+                "FDA Black Box Warning - Timolol and Asthma/COPD",
+                "FDA Black Box Warning - Timolol and Heart Block",
+                "FDA Drug Information - Timolol",
+                "ISMP High Alert Medications - Beta-Blockers"
+            ]
         },
 
         "Travoprost": {
@@ -1389,6 +1453,21 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Iris color change (permanent) - common", "Macular edema (rare, in patients with history)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["IOP (target <21 mmHg)", "Vision and periodic eye exams", "Iris color changes (permanent) - common", "Eyelash changes (longer, darker, color change) - common", "Signs of eye irritation (redness, burning)", "Signs of macular edema (rare, in patients with history)"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Glaucoma",
+                "FDA Drug Information - Travoprost",
+                "UpToDate - Glaucoma Treatment"
+            ],
             "black_box_warnings": "Cần xem xét black box warnings",
             "reversal_agents": {
                 "available": False,

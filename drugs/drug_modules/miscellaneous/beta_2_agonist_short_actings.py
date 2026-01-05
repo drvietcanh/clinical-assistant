@@ -5,7 +5,7 @@
 BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
     "Salbutamol": {'group': 'Respiratory - Beta-2 Agonist (Short-acting)', 'vietnamese_name':
         'Salbutamol, Albuterol, Ventolin, Salbutamol', 'administration': ['INH',
-        'IV', 'PO', 'NEB'], 'indications': ['Hen phế quản', 'COPD',
+        'IV', 'PO', 'NEB'], 'COPD',
         'Co thắt phế quản', 'Phòng co thắt phế quản do gắng sức',
         'Cấp cứu hen (nebulizer/IV)'], 'contraindications': [
         'Dị ứng salbutamol', 'Nhịp tim nhanh nặng', 'Rối loạn nhịp tim nặng',
@@ -73,7 +73,7 @@ BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
         'Đối kháng tác dụng giãn phế quản, có thể gây co thắt phế quản nặng, suy hô hấp'
         , 'management':
         'TRÁNH DÙNG với beta-blocker không chọn lọc. Nếu bệnh nhân cần beta-blocker, dùng beta-blocker chọn lọc beta-1 (atenolol, metoprolol) với thận trọng. Theo dõi chặt chẽ đáp ứng phế quản.'
-        }], 'moderate': [{'drug': 'Digoxin', 'mechanism':
+        }], 'mechanism':
         'Salbutamol có thể gây hạ kali máu và tăng nhịp tim, tăng nguy cơ độc tính digoxin và loạn nhịp tim.'
         , 'effect':
         'Tăng nguy cơ loạn nhịp tim, tăng độc tính digoxin (đặc biệt khi hạ kali máu)'
@@ -97,7 +97,7 @@ BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
         'Tăng tác dụng phụ (run, tim đập nhanh, loạn nhịp), tăng nguy cơ độc tính theophylline'
         , 'management':
         'Theo dõi nồng độ theophylline. Theo dõi nhịp tim và triệu chứng. Có thể cần giảm liều theophylline.'
-        }], 'minor': [{'drug': 'Tricyclic Antidepressants (TCA)', 'mechanism':
+        }], 'mechanism':
         'TCA tăng nhạy cảm với catecholamine, có thể tăng tác dụng tim mạch.',
         'effect': 'Tăng nhịp tim, tăng huyết áp (nhẹ)', 'management':
         'Theo dõi nhịp tim và huyết áp. Không cần điều chỉnh liều thường quy.'}
@@ -169,7 +169,7 @@ BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
         'MDI: Lắc kỹ, thở ra hết, đặt ống ngậm vào miệng, bắt đầu hít vào chậm và sâu, bấm thuốc, tiếp tục hít vào đến khi đầy phổi, giữ hơi 10 giây, thở ra chậm. Đợi 30-60 giây trước khi bấm lần thứ 2. Spacer: Dùng với MDI để tăng hiệu quả và giảm tác dụng phụ (đặc biệt ở trẻ em và người cao tuổi).'
         , 'nebulizer':
         'Pha 2.5-5mg trong 2-4ml NS hoặc nước cất. Thở bình thường qua mask hoặc ống ngậm. Thời gian: 5-15 phút. Rửa miệng sau khi dùng.'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Albuterol (Salbutamol)',
         'GINA 2023 Guidelines - Global Initiative for Asthma',
         'UpToDate - Albuterol: Drug Information',
@@ -179,6 +179,36 @@ BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
         'Micromedex - Albuterol Drug Information'], 'last_updated':
         '2024-12-19', 'evidence_level':
         'A - Dựa trên FDA drug labels, GINA guidelines, và dữ liệu lâm sàng từ nhiều nguồn',
-        }}}
+        },
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': 'None',
+            'organ_toxicity': {
+                'cardiovascular': 'Moderate (tachycardia, arrhythmias, especially with high doses or IV)',
+                'metabolic': 'Moderate (hypokalemia with high doses, hyperglycemia)',
+                'respiratory': 'Rare (paradoxical bronchospasm - dangerous)'
+            },
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': [
+                'Heart rate, blood pressure (especially with IV or high doses) - can cause tachycardia, hypertension',
+                'Serum potassium (if high doses or prolonged use) - hypokalemia due to beta-2 stimulation',
+                'Bronchial response (peak flow, FEV1, clinical symptoms) to assess efficacy',
+                'Signs of overdose: heart rate >120 bpm, severe muscle tremor, arrhythmias, chest pain, worsening dyspnea',
+                'Signs of paradoxical bronchospasm: worsening dyspnea - CRITICAL (rare but dangerous, stop immediately)',
+                'Blood glucose (if high doses - can increase blood glucose)',
+                'Frequency of use (if need >4 times/day → need to reassess treatment and increase ICS)'
+            ],
+            'look_alike_sound_alike': ['Salbutamol', 'Albuterol', 'Salmeterol', 'Formoterol']
+        },
+        'guideline_tags': [
+            'GINA 2023 Guidelines - Global Initiative for Asthma',
+            'NAEPP Guidelines - Asthma Management',
+            'FDA Drug Information - Albuterol',
+            'WHO Essential Medicines List'
+        ]}}
 
 __all__ = ['BETA_2_AGONIST_SHORT_ACTING_DRUGS']

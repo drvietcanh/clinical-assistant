@@ -556,22 +556,65 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "High (bleeding - very common, can be severe and life-threatening, Black Box Warning)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (GI bleeding, intracranial hemorrhage, post-surgical bleeding) - CRITICAL (very common, can be severe and life-threatening, Black Box Warning)",
+                    "Creatinine - CRITICAL (for dose adjustment, contraindicated if CrCl >95, reduce dose if CrCl 50-95)",
+                    "Drug interactions (P-gp inhibitors - reduce dose if used with verapamil, quinidine, dronedarone) - CRITICAL",
+                    "Renal function - CRITICAL (contraindicated if CrCl >95, reduce dose in CrCl 50-95)"
+                ],
+                "look_alike_sound_alike": ["Edoxaban", "Savaysa", "Apixaban", "Rivaroxaban", "Dabigatran"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+                "FDA Black Box Warning - No Specific Antidote",
+                "FDA Drug Label - Edoxaban (Savaysa)",
+                "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
+                "CHEST Guidelines - VTE Treatment and Prophylaxis",
+                "ESC Guidelines - Atrial Fibrillation"
+            ]
         },
 
         "Enoxaparin": {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "High (bleeding - very common, can be severe and life-threatening, Black Box Warning; heparin-induced thrombocytopenia - HIT - rare but serious, can cause thrombosis)",
+                    "hepatic": "Low (elevated transaminases - rare)",
+                    "metabolic": "Moderate (hyperkalemia - can occur, especially with prolonged use)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Anti-Xa levels - CRITICAL (for therapeutic dosing, target 0.5-1.0 IU/mL 4 hours after dose, Black Box Warning)",
+                    "Platelet count - CRITICAL (before starting, then every 2-3 days for first 2 weeks, HIT risk, Black Box Warning)",
+                    "Signs of heparin-induced thrombocytopenia (HIT) - CRITICAL (thrombocytopenia, new thrombosis - rare but serious, can cause thrombosis, Black Box Warning)",
+                    "Signs of bleeding (GI bleeding, intracranial hemorrhage, injection site bleeding) - CRITICAL (very common, can be severe and life-threatening, Black Box Warning)",
+                    "Renal function (creatinine, eGFR) - CRITICAL (dose adjustment needed if CrCl <30, accumulation risk)",
+                    "Serum potassium - CRITICAL (hyperkalemia can occur, especially with prolonged use)",
+                    "Protamine sulfate availability - CRITICAL (antidote for bleeding, 1mg protamine per 1mg enoxaparin, partial reversal)"
+                ],
+                "look_alike_sound_alike": ["Enoxaparin", "Lovenox", "Heparin", "Dalteparin", "Fondaparinux"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+                "FDA Black Box Warning - Heparin-Induced Thrombocytopenia (HIT - Rare but Serious, Can Cause Thrombosis)",
+                "ISMP High Alert Medications",
+                "FDA Drug Label - Enoxaparin (Lovenox)",
+                "ACCP Guidelines - Antithrombotic Therapy",
+                "CHEST Guidelines - VTE Treatment and Prophylaxis"
+            ]
         },
 
         "Epinephrine": {
@@ -701,11 +744,36 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "High (bleeding - very common, can be severe and life-threatening, Black Box Warning; heparin-induced thrombocytopenia - HIT - rare but serious, can cause thrombosis)",
+                    "hepatic": "Low (elevated transaminases - rare)",
+                    "metabolic": "Moderate (hyperkalemia - can occur, especially with prolonged use)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "aPTT (activated partial thromboplastin time) - CRITICAL (for unfractionated heparin, target 1.5-2.5x control, Black Box Warning)",
+                    "Anti-Xa levels - CRITICAL (alternative monitoring for unfractionated heparin, target 0.3-0.7 IU/mL)",
+                    "Platelet count - CRITICAL (before starting, then every 2-3 days for first 2 weeks, HIT risk, Black Box Warning)",
+                    "Signs of heparin-induced thrombocytopenia (HIT) - CRITICAL (thrombocytopenia, new thrombosis - rare but serious, can cause thrombosis, Black Box Warning)",
+                    "Signs of bleeding (GI bleeding, intracranial hemorrhage, injection site bleeding) - CRITICAL (very common, can be severe and life-threatening, Black Box Warning)",
+                    "Serum potassium - CRITICAL (hyperkalemia can occur, especially with prolonged use)",
+                    "Protamine sulfate availability - CRITICAL (antidote for bleeding, 1mg protamine per 100 units heparin)",
+                    "Hepatic function (ALT, AST) - CRITICAL (rare elevated transaminases)"
+                ],
+                "look_alike_sound_alike": ["Heparin", "Hep-Lock", "Enoxaparin", "Dalteparin", "Fondaparinux"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+                "FDA Black Box Warning - Heparin-Induced Thrombocytopenia (HIT - Rare but Serious, Can Cause Thrombosis)",
+                "ISMP High Alert Medications",
+                "FDA Drug Label - Heparin",
+                "ACCP Guidelines - Antithrombotic Therapy",
+                "CHEST Guidelines - VTE Treatment and Prophylaxis"
+            ]
         },
 
         "Hydrocodone": {
@@ -800,22 +868,73 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": True,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "Moderate (arrhythmias - when used IV for arrhythmias, can cause bradycardia, AV block, asystole)",
+                    "neurologic": "High (local anesthetic systemic toxicity - LAST - CNS toxicity: perioral numbness, metallic taste, tinnitus, seizures, coma - with high doses or IV injection)",
+                    "hematologic": "Low (methemoglobinemia - rare, with prilocaine)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG - CRITICAL (when used IV for arrhythmias, monitor for bradycardia, AV block, asystole)",
+                    "Signs of LAST (local anesthetic systemic toxicity) - CRITICAL (CNS: perioral numbness, metallic taste, tinnitus, seizures, coma; Cardiac: hypotension, bradycardia, arrhythmias, cardiac arrest - with high doses or IV injection)",
+                    "Blood pressure and heart rate - CRITICAL (cardiotoxicity can occur with high doses or IV injection)",
+                    "Mental status - CRITICAL (CNS toxicity: seizures, coma with high doses)",
+                    "Maximum dose - CRITICAL (4.5 mg/kg without epinephrine, 7 mg/kg with epinephrine, do NOT use epinephrine in fingers, toes, penis, nose, ears)",
+                    "Lipid emulsion 20% (Intralipid) - CRITICAL (antidote for LAST, should be available when using high doses)",
+                    "Injection site - CRITICAL (pain on injection, can cause thrombophlebitis)"
+                ],
+                "look_alike_sound_alike": ["Lidocaine", "Xylocaine", "Bupivacaine", "Ropivacaine"]
             },
+            "guideline_tags": [
+                "ASA Guidelines - Local Anesthetic Systemic Toxicity (LAST)",
+                "AHA ACLS Guidelines - Antiarrhythmic Therapy",
+                "FDA Drug Label - Lidocaine (Xylocaine)"
+            ]
         },
 
         "Methotrexate": {
             "risk_flags": {
                 "high_alert": True,
-                "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
+                "narrow_therapeutic_index": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "hepatic": "High (hepatotoxicity - can be severe and fatal, especially with long-term use, Black Box Warning)",
+                    "hematologic": "High (myelosuppression - very common, can be severe and fatal, Black Box Warning)",
+                    "pulmonary": "High (pneumonitis - can be fatal, Black Box Warning)",
+                    "dermatologic": "High (severe skin reactions - SJS/TEN - rare but fatal, Black Box Warning)",
+                    "gastrointestinal": "High (mucositis, GI ulceration - very common, can be severe)",
+                    "renal": "Moderate (nephrotoxicity - can occur, especially with high doses)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "CBC (myelosuppression) - CRITICAL (very common, can be severe and fatal, Black Box Warning, weekly for first month, then monthly)",
+                    "Hepatic function (ALT, AST, bilirubin) - CRITICAL (hepatotoxicity can be severe and fatal, especially with long-term use, Black Box Warning, every 4-8 weeks)",
+                    "Pulmonary symptoms (cough, dyspnea, fever) - CRITICAL (pneumonitis can be fatal, Black Box Warning)",
+                    "Chest X-ray or CT - CRITICAL (if signs of pneumonitis)",
+                    "Signs of severe skin reactions (rash, fever, mucosal lesions) - CRITICAL (SJS/TEN - rare but fatal, Black Box Warning)",
+                    "Renal function (creatinine, eGFR) - CRITICAL (nephrotoxicity can occur, especially with high doses)",
+                    "Folic acid supplementation - CRITICAL (required to reduce toxicity, 1-5mg daily or weekly)",
+                    "Drug interactions (NSAIDs, probenecid, penicillins - increase methotrexate levels, increase toxicity) - CRITICAL",
+                    "Dose and frequency - CRITICAL (rheumatology: weekly dosing, oncology: different dosing, do NOT confuse)"
+                ],
+                "look_alike_sound_alike": ["Methotrexate", "MTX", "Methotrexate sodium", "Folic acid"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Hepatotoxicity (Can Be Severe and Fatal, Especially with Long-Term Use)",
+                "FDA Black Box Warning - Myelosuppression (Very Common, Can Be Severe and Fatal)",
+                "FDA Black Box Warning - Pneumonitis (Can Be Fatal)",
+                "FDA Black Box Warning - Severe Skin Reactions (SJS/TEN - Rare but Fatal)",
+                "ACR Guidelines - Rheumatoid Arthritis",
+                "ACR Guidelines - Psoriatic Arthritis",
+                "FDA Drug Label - Methotrexate"
+            ]
         },
 
         "Morphine": {
@@ -833,11 +952,37 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "teratogenic": "High (teratogenicity - severe birth defects, REMS program, Black Box Warning)",
+                    "hematologic": "High (myelosuppression - neutropenia, anemia, thrombocytopenia - very common, can be severe, Black Box Warning)",
+                    "oncologic": "High (increased risk of infections and malignancies - lymphoma, skin cancer, Black Box Warning)",
+                    "gastrointestinal": "High (severe diarrhea, nausea, vomiting - very common, dose-limiting)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Pregnancy test (REMS program) - CRITICAL (before treatment, teratogenicity risk, Black Box Warning)",
+                    "Contraception - CRITICAL (effective contraception required, teratogenicity risk, Black Box Warning)",
+                    "CBC (myelosuppression) - CRITICAL (very common, can be severe, Black Box Warning, weekly for first month, then monthly)",
+                    "Signs of infection (fever, chills, CMV, BK virus) - CRITICAL (increased risk of serious infections, Black Box Warning)",
+                    "Signs of malignancies (lymphoma, skin cancer) - CRITICAL (increased risk, Black Box Warning)",
+                    "Gastrointestinal symptoms (diarrhea, nausea, vomiting) - CRITICAL (very common, dose-limiting, may need dose reduction)",
+                    "Formulation - CRITICAL (CellCept and Myfortic are NOT interchangeable, different dosing)"
+                ],
+                "look_alike_sound_alike": ["Mycophenolate", "Mycophenolate mofetil", "CellCept", "Myfortic", "Azathioprine"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Teratogenicity (Severe Birth Defects, REMS Program)",
+                "FDA Black Box Warning - Myelosuppression (Very Common, Can Be Severe)",
+                "FDA Black Box Warning - Increased Risk of Infections and Malignancies",
+                "FDA Black Box Warning - CellCept and Myfortic NOT Interchangeable",
+                "FDA Drug Label - Mycophenolate (CellCept, Myfortic)",
+                "KDIGO Guidelines - Kidney Transplant",
+                "ACR Guidelines - Lupus Nephritis"
+            ]
         },
 
         "Naloxone": {
@@ -977,11 +1122,34 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "High (bleeding - very common, can be severe and life-threatening, Black Box Warning)",
+                    "hematologic_thrombotic": "Moderate (thrombotic thrombocytopenic purpura - TTP, rare but dangerous)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (epistaxis, gingival bleeding, melena, hematemesis, injection site bleeding) - CRITICAL (very common, can be severe and life-threatening, Black Box Warning)",
+                    "Major bleeding (GI bleeding, intracranial hemorrhage, post-surgical bleeding) - CRITICAL (Black Box Warning)",
+                    "Thrombotic thrombocytopenic purpura (TTP) - CRITICAL (fever, anemia, thrombocytopenia, neurological symptoms - rare but dangerous)",
+                    "Platelet count - CRITICAL (if signs of bleeding or TTP)",
+                    "Age and weight - CRITICAL (contraindicated if age ≥75 years or weight <60kg, Black Box Warning, increased bleeding risk)",
+                    "History of stroke/TIA - CRITICAL (contraindicated if history of stroke or TIA, Black Box Warning, increased bleeding risk)"
+                ],
+                "look_alike_sound_alike": ["Prasugrel", "Effient", "Clopidogrel", "Ticagrelor"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+                "FDA Black Box Warning - Contraindicated in Age ≥75 Years or Weight <60kg (Increased Bleeding Risk)",
+                "FDA Black Box Warning - Contraindicated in History of Stroke or TIA (Increased Bleeding Risk)",
+                "FDA Drug Label - Prasugrel (Effient)",
+                "ACC/AHA Guidelines - Acute Coronary Syndrome",
+                "ACC/AHA Guidelines - Dual Antiplatelet Therapy (DAPT)",
+                "ESC Guidelines - Cardiovascular Disease Prevention"
+            ]
         },
 
         "Pregabalin": {
@@ -1043,22 +1211,74 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "High (bleeding - very common, can be severe and life-threatening, Black Box Warning)",
+                    "hepatic": "Low (hepatotoxicity - elevated transaminases, rare)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (GI bleeding, intracranial hemorrhage, post-surgical bleeding) - CRITICAL (very common, can be severe and life-threatening, Black Box Warning)",
+                    "Creatinine - CRITICAL (for dose adjustment, contraindicated if CrCl <30, reduce dose if CrCl 15-30)",
+                    "Hepatic function (ALT, AST) - CRITICAL (rare hepatotoxicity, contraindicated in Child-Pugh C)",
+                    "Drug interactions (CYP3A4/P-gp inhibitors/inducers - CONTRAINDICATED/AVOID strong inhibitors) - CRITICAL",
+                    "Hepatic impairment - CRITICAL (contraindicated in Child-Pugh C)",
+                    "Andexanet alfa availability - CRITICAL (antidote for bleeding, if available)"
+                ],
+                "look_alike_sound_alike": ["Rivaroxaban", "Xarelto", "Apixaban", "Edoxaban", "Dabigatran"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+                "FDA Black Box Warning - No Specific Antidote (Before Andexanet Alfa)",
+                "FDA Drug Label - Rivaroxaban (Xarelto)",
+                "AHA/ACC/HRS Guidelines - Atrial Fibrillation Stroke Prevention",
+                "CHEST Guidelines - VTE Treatment and Prophylaxis",
+                "ESC Guidelines - Atrial Fibrillation"
+            ]
         },
 
         "Tacrolimus": {
             "risk_flags": {
                 "high_alert": True,
-                "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
+                "narrow_therapeutic_index": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "renal": "High (nephrotoxicity - very common, dose-dependent, can be severe and irreversible, Black Box Warning)",
+                    "neurologic": "High (neurotoxicity - seizures, encephalopathy, tremor, confusion - can be severe, Black Box Warning)",
+                    "metabolic": "High (post-transplant diabetes mellitus - NODAT - very common, Black Box Warning)",
+                    "oncologic": "High (increased risk of infections and malignancies - lymphoma, skin cancer, Black Box Warning)",
+                    "cardiovascular": "Moderate (hypertension, hyperkalemia - common)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Tacrolimus trough levels - CRITICAL (narrow therapeutic index, TDM required, target varies by indication, Black Box Warning)",
+                    "Renal function (CrCl, BUN, creatinine) - CRITICAL (nephrotoxicity very common, dose-dependent, can be severe and irreversible, Black Box Warning)",
+                    "Neurological status (seizures, encephalopathy, tremor, confusion) - CRITICAL (neurotoxicity can be severe, Black Box Warning)",
+                    "Blood glucose and HbA1c - CRITICAL (post-transplant diabetes - NODAT - very common, Black Box Warning)",
+                    "Blood pressure - CRITICAL (hypertension common)",
+                    "Serum potassium - CRITICAL (hyperkalemia common)",
+                    "Signs of infection (fever, chills) - CRITICAL (increased risk of serious infections, Black Box Warning)",
+                    "Signs of malignancies (lymphoma, skin cancer) - CRITICAL (increased risk, Black Box Warning)",
+                    "Drug interactions (CYP3A4 inhibitors/inducers - CRITICAL, grapefruit juice - increases levels, Black Box Warning)"
+                ],
+                "look_alike_sound_alike": ["Tacrolimus", "Prograf", "Advagraf", "Cyclosporine", "Pimecrolimus"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Nephrotoxicity (Very Common, Dose-Dependent, Can Be Severe and Irreversible)",
+                "FDA Black Box Warning - Neurotoxicity (Seizures, Encephalopathy - Can Be Severe)",
+                "FDA Black Box Warning - Post-Transplant Diabetes Mellitus (NODAT - Very Common)",
+                "FDA Black Box Warning - Increased Risk of Infections and Malignancies",
+                "FDA Black Box Warning - TDM Required (Narrow Therapeutic Index)",
+                "KDIGO Guidelines - Kidney Transplant",
+                "AST Guidelines - Solid Organ Transplant",
+                "FDA Drug Label - Tacrolimus (Prograf, Advagraf)"
+            ]
         },
 
         "Theophylline": {
@@ -1076,11 +1296,35 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
-                "look_alike_sound_alike": [],
-                "organ_toxicity": {'hepatic': 'unknown', 'renal': 'unknown', 'cardiac': 'unknown', 'hematologic': 'unknown'},
-                "requires_double_check": True,
                 "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "hematologic": "High (bleeding - very common, can be severe and life-threatening, Black Box Warning)",
+                    "respiratory": "Moderate (dyspnea - very common, usually mild but can be severe)",
+                    "cardiac": "Moderate (bradycardia - can occur, especially with AV block)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of bleeding (epistaxis, gingival bleeding, melena, hematemesis, injection site bleeding) - CRITICAL (very common, can be severe and life-threatening, Black Box Warning)",
+                    "Major bleeding (GI bleeding, intracranial hemorrhage, post-surgical bleeding) - CRITICAL (Black Box Warning)",
+                    "Respiratory symptoms (dyspnea) - CRITICAL (very common, usually mild but can be severe)",
+                    "ECG - CRITICAL (bradycardia, AV block can occur)",
+                    "Heart rate - CRITICAL (bradycardia can occur)",
+                    "Drug interactions (CYP3A4 inhibitors/inducers - CONTRAINDICATED strong inhibitors, avoid moderate inhibitors) - CRITICAL",
+                    "Aspirin dose - CRITICAL (do NOT exceed 100mg/day, Black Box Warning, increases bleeding risk)"
+                ],
+                "look_alike_sound_alike": ["Ticagrelor", "Brilinta", "Clopidogrel", "Prasugrel"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Bleeding (Very Common, Can Be Severe and Life-Threatening)",
+                "FDA Black Box Warning - Aspirin Dose (Do NOT Exceed 100mg/Day)",
+                "FDA Drug Label - Ticagrelor (Brilinta)",
+                "ACC/AHA Guidelines - Acute Coronary Syndrome",
+                "ACC/AHA Guidelines - Dual Antiplatelet Therapy (DAPT)",
+                "ESC Guidelines - Cardiovascular Disease Prevention"
+            ]
         },
 
         "Ticlopidine": {
@@ -3251,37 +3495,68 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
 
     # ======================== BATCH 5: ENDOCRINE DRUGS ========================
         "Levothyroxine": {
-            "contraindications_detail": {
-                "tuyệt_đối": [
-                    "Dị ứng với levothyroxine",
-                    "Cường giáp không được điều trị",
-                    "Nhồi máu cơ tim cấp",
-                    "Viêm cơ tim",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (cardiac events - angina, arrhythmias, myocardial infarction, cardiac failure - with over-replacement or in patients with cardiovascular disease, Black Box Warning)",
+                    "endocrine": "High (thyrotoxicosis - with over-replacement)",
+                    "skeletal": "Moderate (bone loss - with over-replacement in postmenopausal women)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "TSH levels - CRITICAL (target TSH 0.5-2.5 mIU/L, monitor 6-8 weeks after dose changes, then every 6-12 months)",
+                    "Free T4 levels - CRITICAL (monitor with TSH, target upper half of normal range)",
+                    "ECG - CRITICAL (if cardiac symptoms or in patients with cardiovascular disease, cardiac events risk with over-replacement, Black Box Warning)",
+                    "Signs of cardiac events (chest pain, palpitations, dyspnea) - CRITICAL (with over-replacement or in patients with cardiovascular disease, Black Box Warning)",
+                    "Signs of thyrotoxicosis (tachycardia, weight loss, heat intolerance, tremor) - CRITICAL (with over-replacement)",
+                    "Start with low dose in elderly or cardiovascular disease - CRITICAL (Black Box Warning, increased risk of cardiac events)",
+                    "Drug interactions (iron, calcium, antacids, PPIs, cholestyramine - separate by 4 hours) - CRITICAL (decrease absorption)",
+                    "Pregnancy - CRITICAL (dose usually needs to be increased by 25-50%)"
                 ],
-                "tương_đối": [
-                    "Bệnh tim mạch - bắt đầu với liều thấp",
-                    "Suy thượng thận - cần điều trị trước",
-                    "Đái tháo đường - có thể cần điều chỉnh liều insulin",
-                    "Có thai - cần tăng liều",
-                    "Đang cho con bú - thận trọng",
-                    "Người cao tuổi - bắt đầu với liều thấp",
-                ],
+                "look_alike_sound_alike": ["Levothyroxine", "Synthroid", "Levoxyl", "Liothyronine"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Cardiac Events (Angina, Arrhythmias, Myocardial Infarction, Cardiac Failure with Over-Replacement or in Cardiovascular Disease)",
+                "ATA Guidelines - Hypothyroidism Treatment",
+                "FDA Drug Label - Levothyroxine (Synthroid, Levoxyl)"
+            ]
         },
 
         "Methimazole": {
-            "contraindications_detail": {
-                "tuyệt_đối": [
-                    "Dị ứng với methimazole",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "hematologic": "High (agranulocytosis - rare but fatal, Black Box Warning)",
+                    "hepatic": "High (hepatotoxicity - rare but serious, can be fatal)",
+                    "dermatologic": "High (severe skin reactions - SJS/TEN - rare but fatal, Black Box Warning)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Complete blood count (CBC) - CRITICAL (before, every 2-4 weeks for first 3 months, then periodically, agranulocytosis risk, Black Box Warning)",
+                    "Signs of agranulocytosis (fever, sore throat, mouth ulcers, infection) - CRITICAL (rare but fatal, Black Box Warning, discontinue immediately if suspected)",
+                    "Liver function tests (ALT, AST, bilirubin) - CRITICAL (before, periodically, hepatotoxicity risk, can be fatal)",
+                    "Signs of severe skin reactions (rash, fever, mucosal lesions) - CRITICAL (SJS/TEN - rare but fatal, Black Box Warning, discontinue immediately if suspected)",
+                    "Thyroid function (TSH, T4, T3) - CRITICAL (monitor treatment response)",
+                    "Signs of hypothyroidism (fatigue, weight gain, cold intolerance) - CRITICAL (with over-treatment)"
                 ],
-                "tương_đối": [
-                    "Suy gan nặng - thận trọng",
-                    "Giảm bạch cầu - nguy cơ agranulocytosis",
-                    "Có thai (3 tháng đầu) - thận trọng, có thể gây dị tật",
-                    "Đang cho con bú - thận trọng",
-                    "Người cao tuổi - tăng nguy cơ tác dụng phụ",
-                ],
+                "look_alike_sound_alike": ["Methimazole", "Tapazole", "Propylthiouracil", "Carbimazole"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Agranulocytosis (Rare but Fatal)",
+                "FDA Black Box Warning - Severe Skin Reactions (SJS/TEN - Rare but Fatal)",
+                "ATA Guidelines - Hyperthyroidism Treatment",
+                "FDA Drug Label - Methimazole (Tapazole)"
+            ]
         },
 
         "Propylthiouracil": {
@@ -3300,47 +3575,79 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
         },
 
         "Hydrocortisone": {
-            "contraindications_detail": {
-                "tuyệt_đối": [
-                    "Dị ứng với hydrocortisone hoặc corticosteroid",
-                    "Nhiễm trùng hệ thống không được điều trị",
-                    "Nhiễm nấm toàn thân",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "endocrine": "High (adrenal insufficiency - can be fatal if stopped abruptly after long-term use, Black Box Warning)",
+                    "metabolic": "High (hyperglycemia - very common, can cause steroid-induced diabetes)",
+                    "cardiovascular": "High (hypertension - very common, fluid retention)",
+                    "skeletal": "High (osteoporosis - very common with long-term use)",
+                    "gastrointestinal": "High (peptic ulcer disease - increased risk, especially with NSAIDs)",
+                    "immunologic": "High (increased risk of serious infections - Black Box Warning)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (hyperglycemia very common, can cause steroid-induced diabetes)",
+                    "Blood pressure - CRITICAL (hypertension very common, fluid retention)",
+                    "Signs of infection - CRITICAL (increased risk of serious infections, Black Box Warning)",
+                    "Signs of adrenal insufficiency (fatigue, weakness, hypotension, hyponatremia) - CRITICAL (if stopped abruptly after >2 weeks use, can be fatal, Black Box Warning)",
+                    "Bone density (DEXA scan) - CRITICAL (if long-term use >3 months, osteoporosis risk)",
+                    "Signs of peptic ulcer (abdominal pain, melena, hematemesis) - CRITICAL (increased risk, especially with NSAIDs)",
+                    "Weight and fluid retention - CRITICAL (Cushingoid appearance - moon face, buffalo hump)",
+                    "Taper schedule - CRITICAL (must taper gradually if used >2 weeks to avoid adrenal insufficiency, Black Box Warning)"
                 ],
-                "tương_đối": [
-                    "Đái tháo đường - tăng đường huyết",
-                    "Tăng huyết áp",
-                    "Loãng xương",
-                    "Loét dạ dày tá tràng",
-                    "Suy tim nặng",
-                    "Suy gan nặng",
-                    "Suy thận nặng",
-                    "Có thai - thận trọng, có thể gây dị tật",
-                    "Đang cho con bú - thận trọng",
-                    "Trẻ em - ảnh hưởng đến tăng trưởng",
-                ],
+                "look_alike_sound_alike": ["Hydrocortisone", "Cortisol", "Prednisone", "Methylprednisolone"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Adrenal Insufficiency (Can Be Fatal If Stopped Abruptly After Long-Term Use)",
+                "FDA Black Box Warning - Increased Risk of Serious Infections",
+                "FDA Drug Label - Hydrocortisone",
+                "Endocrine Society Guidelines - Adrenal Insufficiency"
+            ]
         },
 
         "Dexamethasone": {
-            "contraindications_detail": {
-                "tuyệt_đối": [
-                    "Dị ứng với dexamethasone hoặc corticosteroid",
-                    "Nhiễm trùng hệ thống không được điều trị",
-                    "Nhiễm nấm toàn thân",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "endocrine": "High (adrenal insufficiency - can be fatal if stopped abruptly after long-term use, Black Box Warning)",
+                    "metabolic": "High (hyperglycemia - very common, can cause steroid-induced diabetes)",
+                    "cardiovascular": "High (hypertension - very common)",
+                    "skeletal": "High (osteoporosis - very common with long-term use)",
+                    "gastrointestinal": "High (peptic ulcer disease - increased risk, especially with NSAIDs)",
+                    "immunologic": "High (increased risk of serious infections - Black Box Warning)",
+                    "neuropsychiatric": "Moderate (psychosis, mania, depression - especially with high doses)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood glucose - CRITICAL (hyperglycemia very common, can cause steroid-induced diabetes)",
+                    "Blood pressure - CRITICAL (hypertension very common)",
+                    "Signs of infection - CRITICAL (increased risk of serious infections, Black Box Warning)",
+                    "Signs of adrenal insufficiency (fatigue, weakness, hypotension, hyponatremia) - CRITICAL (if stopped abruptly after >2 weeks use, can be fatal, Black Box Warning)",
+                    "Bone density (DEXA scan) - CRITICAL (if long-term use >3 months, osteoporosis risk)",
+                    "Signs of peptic ulcer (abdominal pain, melena, hematemesis) - CRITICAL (increased risk, especially with NSAIDs)",
+                    "Neuropsychiatric symptoms - CRITICAL (psychosis, mania, depression - especially with high doses)",
+                    "Taper schedule - CRITICAL (must taper gradually if used >2 weeks to avoid adrenal insufficiency, Black Box Warning)",
+                    "Long half-life - CRITICAL (36-72 hours, effects persist long after discontinuation)"
                 ],
-                "tương_đối": [
-                    "Đái tháo đường - tăng đường huyết",
-                    "Tăng huyết áp",
-                    "Loãng xương",
-                    "Loét dạ dày tá tràng",
-                    "Suy tim nặng",
-                    "Suy gan nặng",
-                    "Suy thận nặng",
-                    "Có thai - thận trọng, có thể gây dị tật",
-                    "Đang cho con bú - thận trọng",
-                    "Trẻ em - ảnh hưởng đến tăng trưởng",
-                ],
+                "look_alike_sound_alike": ["Dexamethasone", "Decadron", "Prednisone", "Methylprednisolone"]
             },
+            "guideline_tags": [
+                "FDA Black Box Warning - Adrenal Insufficiency (Can Be Fatal If Stopped Abruptly After Long-Term Use)",
+                "FDA Black Box Warning - Increased Risk of Serious Infections",
+                "FDA Drug Label - Dexamethasone (Decadron)",
+                "WHO Guidelines - COVID-19 Treatment (Severe Cases)"
+            ]
         },
 
     # ======================== BATCH 6: ANTIHISTAMINE & ANTIVIRAL ========================
@@ -4405,16 +4712,35 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
         },
 
         "Filgrastim": {
-            "contraindications_detail": {
-                "tuyệt_đối": [
-                    "Dị ứng với filgrastim hoặc G-CSF",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "hematologic": "Moderate (splenic rupture - rare but serious, can be fatal)",
+                    "pulmonary": "Moderate (acute respiratory distress syndrome - ARDS - rare but serious)",
+                    "skeletal": "Moderate (bone pain - very common, can be severe)",
+                    "hematologic_sickle": "High (sickle cell crisis - in patients with sickle cell disease, can be fatal)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "CBC (white blood cell count) - CRITICAL (monitor for leukocytosis, discontinue if WBC >100,000/mm³)",
+                    "Signs of splenic rupture (left upper quadrant pain, shoulder pain) - CRITICAL (rare but serious, can be fatal)",
+                    "Pulmonary symptoms (dyspnea, hypoxia) - CRITICAL (ARDS rare but serious)",
+                    "Bone pain - CRITICAL (very common, can be severe, may need analgesics)",
+                    "Sickle cell disease - CRITICAL (contraindicated, can cause sickle cell crisis, can be fatal)",
+                    "Signs of sickle cell crisis (severe pain, fever) - CRITICAL (if used in sickle cell disease, can be fatal)"
                 ],
-                "tương_đối": [
-                    "Bệnh bạch cầu cấp (AML) ở trẻ em",
-                    "Hội chứng rối loạn hô hấp cấp (ARDS)",
-                    "Lách to",
-                ],
+                "look_alike_sound_alike": ["Filgrastim", "Neupogen", "Pegfilgrastim", "Sargramostim"]
             },
+            "guideline_tags": [
+                "FDA Drug Label - Filgrastim (Neupogen)",
+                "ASCO Guidelines - Myeloid Growth Factors",
+                "NCCN Guidelines - Supportive Care"
+            ]
         },
 
         "Fludrocortisone": {
@@ -5500,6 +5826,836 @@ OTHER_ENHANCED_FIELDS: Dict[str, Dict[str, Any]] = {
                 "FDA Black Box Warning - Teratogenicity (Contraindicated in Pregnancy)",
                 "FDA Drug Label - Lovastatin (Mevacor)",
                 "ACC/AHA 2018 Cholesterol Guidelines"
+            ]
+        },
+
+        # ======================== PHASE 6: ANESTHESIA DRUGS ========================
+        "Propofol": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiovascular": "High (hypotension - very common, especially with rapid injection or hypovolemia)",
+                    "respiratory": "High (apnea - very common, requires immediate respiratory support)",
+                    "metabolic": "High (propofol infusion syndrome - rare but fatal, Black Box Warning: metabolic acidosis, rhabdomyolysis, cardiac failure, hyperlipidemia, hepatomegaly, with prolonged high-dose infusion >48 hours)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure - CRITICAL (hypotension very common, especially with rapid injection or hypovolemia)",
+                    "Respiratory rate and SpO2 - CRITICAL (apnea very common, requires immediate respiratory support)",
+                    "ECG - CRITICAL (monitor for arrhythmias, especially with propofol infusion syndrome)",
+                    "Signs of propofol infusion syndrome - CRITICAL (metabolic acidosis, rhabdomyolysis, cardiac failure, hyperlipidemia, hepatomegaly - Black Box Warning, with prolonged high-dose infusion >48 hours)",
+                    "Creatine kinase (CK) - CRITICAL (if prolonged infusion, monitor for rhabdomyolysis)",
+                    "Arterial blood gas (ABG) - CRITICAL (if prolonged infusion, monitor for metabolic acidosis)",
+                    "Liver function tests - CRITICAL (if prolonged infusion, monitor for hepatomegaly)",
+                    "Lipid panel - CRITICAL (if prolonged infusion, monitor for hyperlipidemia)",
+                    "Injection site - CRITICAL (pain on injection common, can mix with lidocaine)",
+                    "Do NOT exceed 4 mg/kg/hour for sedation - CRITICAL (Black Box Warning, increased risk of propofol infusion syndrome)"
+                ],
+                "look_alike_sound_alike": ["Propofol", "Diprivan", "Fospropofol"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Propofol Infusion Syndrome (Metabolic Acidosis, Rhabdomyolysis, Cardiac Failure with Prolonged High-Dose Infusion)",
+                "ISMP High Alert Medications",
+                "ASA Guidelines - Sedation and Anesthesia",
+                "FDA Drug Label - Propofol (Diprivan)"
+            ]
+        },
+
+        "Etomidate": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "endocrine": "High (adrenal suppression - inhibits cortisol synthesis, can cause adrenal insufficiency, especially with repeated doses or prolonged infusion)",
+                    "cardiovascular": "Low (minimal cardiovascular effects - advantage over other induction agents)",
+                    "respiratory": "Moderate (apnea - common but less than propofol)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Respiratory rate and SpO2 - CRITICAL (apnea common, requires respiratory support)",
+                    "Blood pressure - CRITICAL (minimal effects, but monitor)",
+                    "Adrenal function - CRITICAL (if repeated doses or prolonged infusion, monitor for adrenal insufficiency)",
+                    "Cortisol levels - CRITICAL (if repeated doses or prolonged infusion, especially in sepsis or critical illness)",
+                    "Signs of adrenal insufficiency (hypotension, hyponatremia, hyperkalemia) - CRITICAL (if repeated doses or prolonged infusion)",
+                    "Injection site - CRITICAL (pain on injection common, can cause thrombophlebitis)"
+                ],
+                "look_alike_sound_alike": ["Etomidate", "Amidate", "Propofol"]
+            },
+            "guideline_tags": [
+                "FDA Drug Label - Etomidate (Amidate)",
+                "ASA Guidelines - Sedation and Anesthesia",
+                "SCCM Guidelines - Critical Care Sedation (Note: Adrenal suppression concern)"
+            ]
+        },
+
+        "Ketamine": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiovascular": "Moderate (hypertension, tachycardia - common, due to sympathetic stimulation)",
+                    "neurologic": "High (emergence reactions - hallucinations, nightmares, delirium - common, especially in adults)",
+                    "respiratory": "Low (minimal respiratory depression - advantage, but can cause laryngospasm)",
+                    "ophthalmic": "Moderate (increased intraocular pressure - transient)",
+                    "intracranial": "Moderate (increased intracranial pressure - transient, controversial)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure - CRITICAL (hypertension common, due to sympathetic stimulation)",
+                    "Heart rate - CRITICAL (tachycardia common, due to sympathetic stimulation)",
+                    "Mental status - CRITICAL (emergence reactions - hallucinations, nightmares, delirium - common, especially in adults)",
+                    "Respiratory rate and SpO2 - CRITICAL (minimal respiratory depression, but can cause laryngospasm)",
+                    "Intraocular pressure - CRITICAL (increased IOP transient, avoid in open eye injury)",
+                    "Intracranial pressure - CRITICAL (increased ICP transient, controversial, avoid in increased ICP)",
+                    "Salivary secretions - CRITICAL (increased secretions, can use atropine or glycopyrrolate)",
+                    "Premedication with benzodiazepine - CRITICAL (to reduce emergence reactions, especially in adults)"
+                ],
+                "look_alike_sound_alike": ["Ketamine", "Ketalar", "Esketamine"]
+            },
+            "guideline_tags": [
+                "FDA Drug Label - Ketamine (Ketalar)",
+                "ASA Guidelines - Sedation and Anesthesia",
+                "ACEP Guidelines - Procedural Sedation"
+            ]
+        },
+
+        "Bupivacaine": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (cardiotoxicity - very high, ventricular arrhythmias, cardiac arrest - difficult to treat, Black Box Warning for IV use)",
+                    "neurologic": "High (local anesthetic systemic toxicity - LAST - CNS toxicity: perioral numbness, metallic taste, tinnitus, seizures, coma)",
+                    "hematologic": "Low (methemoglobinemia - rare, with prilocaine)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG - CRITICAL (cardiotoxicity very high, ventricular arrhythmias, cardiac arrest - difficult to treat, Black Box Warning)",
+                    "Signs of LAST (local anesthetic systemic toxicity) - CRITICAL (CNS: perioral numbness, metallic taste, tinnitus, seizures, coma; Cardiac: hypotension, bradycardia, ventricular arrhythmias, cardiac arrest)",
+                    "Blood pressure and heart rate - CRITICAL (cardiotoxicity can cause severe hypotension, bradycardia, cardiac arrest)",
+                    "Mental status - CRITICAL (CNS toxicity: seizures, coma)",
+                    "Lipid emulsion 20% (Intralipid) - CRITICAL (MUST be available when using bupivacaine, antidote for LAST)",
+                    "Maximum dose - CRITICAL (2 mg/kg without epinephrine, 3 mg/kg with epinephrine, Black Box Warning for IV use)",
+                    "Do NOT use for IV regional anesthesia (Bier block) - CRITICAL (Black Box Warning, very high risk of cardiotoxicity)"
+                ],
+                "look_alike_sound_alike": ["Bupivacaine", "Marcaine", "Lidocaine", "Ropivacaine"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Cardiotoxicity (Ventricular Arrhythmias, Cardiac Arrest - Difficult to Treat)",
+                "FDA Black Box Warning - Do NOT Use for IV Regional Anesthesia (Bier Block)",
+                "ISMP High Alert Medications",
+                "ASA Guidelines - Local Anesthetic Systemic Toxicity (LAST)",
+                "FDA Drug Label - Bupivacaine (Marcaine)"
+            ]
+        },
+
+        "Succinylcholine": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiac": "High (hyperkalemia - can cause cardiac arrest, Black Box Warning; bradycardia - common, especially with repeated doses or in children)",
+                    "metabolic": "High (malignant hyperthermia - rare but fatal, Black Box Warning)",
+                    "musculoskeletal": "Moderate (myalgia - common, especially in ambulatory patients)",
+                    "ophthalmic": "Moderate (increased intraocular pressure - transient)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG - CRITICAL (hyperkalemia can cause cardiac arrest, Black Box Warning)",
+                    "Serum potassium - CRITICAL (hyperkalemia can cause cardiac arrest, especially in burns, trauma, spinal cord injury, immobility, myopathies, Black Box Warning)",
+                    "Signs of malignant hyperthermia - CRITICAL (hyperthermia, muscle rigidity, hypercapnia, tachycardia, arrhythmias - rare but fatal, Black Box Warning)",
+                    "Temperature - CRITICAL (if signs of malignant hyperthermia)",
+                    "End-tidal CO2 - CRITICAL (if signs of malignant hyperthermia - increased CO2)",
+                    "Heart rate - CRITICAL (bradycardia common, especially with repeated doses or in children)",
+                    "Intraocular pressure - CRITICAL (increased IOP transient, avoid in open eye injury)",
+                    "Dantrolene availability - CRITICAL (antidote for malignant hyperthermia, must be available)",
+                    "Pseudocholinesterase deficiency screening - CRITICAL (if prolonged paralysis, genetic deficiency can cause prolonged block)"
+                ],
+                "look_alike_sound_alike": ["Succinylcholine", "Suxamethonium", "Anectine", "Rocuronium"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Hyperkalemia (Can Cause Cardiac Arrest)",
+                "FDA Black Box Warning - Malignant Hyperthermia (Rare but Fatal)",
+                "ISMP High Alert Medications",
+                "ASA Guidelines - Rapid Sequence Intubation",
+                "FDA Drug Label - Succinylcholine (Anectine)"
+            ]
+        },
+
+        "Rocuronium": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "respiratory": "High (apnea - complete paralysis, requires mechanical ventilation)",
+                    "allergic": "Moderate (anaphylaxis - rare but can occur)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Respiratory rate and SpO2 - CRITICAL (complete paralysis, requires mechanical ventilation)",
+                    "TOF (Train-of-Four) monitoring - CRITICAL (to assess neuromuscular blockade depth)",
+                    "Signs of anaphylaxis - CRITICAL (rare but can occur)",
+                    "Renal function - CRITICAL (prolonged duration in renal impairment)",
+                    "Hepatic function - CRITICAL (prolonged duration in hepatic impairment)",
+                    "Reversal agent availability - CRITICAL (Sugammadex or Neostigmine + Atropine must be available)"
+                ],
+                "look_alike_sound_alike": ["Rocuronium", "Zemuron", "Esmeron", "Vecuronium", "Succinylcholine"]
+            },
+            "guideline_tags": [
+                "ASA Guidelines - Neuromuscular Blockade",
+                "FDA Drug Label - Rocuronium (Zemuron, Esmeron)"
+            ]
+        },
+
+        "Vecuronium": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "respiratory": "High (apnea - complete paralysis, requires mechanical ventilation)",
+                    "allergic": "Moderate (anaphylaxis - rare but can occur)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Respiratory rate and SpO2 - CRITICAL (complete paralysis, requires mechanical ventilation)",
+                    "TOF (Train-of-Four) monitoring - CRITICAL (to assess neuromuscular blockade depth)",
+                    "Signs of anaphylaxis - CRITICAL (rare but can occur)",
+                    "Renal function - CRITICAL (prolonged duration in renal impairment)",
+                    "Hepatic function - CRITICAL (prolonged duration in hepatic impairment, vecuronium metabolized in liver)",
+                    "Reversal agent availability - CRITICAL (Neostigmine + Atropine must be available, Sugammadex can also be used)"
+                ],
+                "look_alike_sound_alike": ["Vecuronium", "Norcuron", "Rocuronium", "Succinylcholine"]
+            },
+            "guideline_tags": [
+                "ASA Guidelines - Neuromuscular Blockade",
+                "FDA Drug Label - Vecuronium (Norcuron)"
+            ]
+        },
+
+        # ======================== PHASE 6: PSYCHIATRY DRUGS ========================
+        "Haloperidol": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "neurologic": "High (extrapyramidal symptoms - EPS - very common; tardive dyskinesia - can be irreversible; neuroleptic malignant syndrome - NMS - rare but fatal)",
+                    "cardiac": "High (QT prolongation, torsades de pointes - can be fatal, especially with IV use or high doses)",
+                    "metabolic": "Moderate (increased mortality in elderly with dementia - Black Box Warning)"
+                },
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "ECG (QT interval) - CRITICAL (before and during treatment, especially with IV use or high doses, QT prolongation can cause torsades de pointes, can be fatal)",
+                    "Signs of extrapyramidal symptoms (EPS) - CRITICAL (dystonia, parkinsonism, akathisia - very common)",
+                    "Signs of tardive dyskinesia - CRITICAL (involuntary movements of face, tongue, limbs - can be irreversible, monitor periodically)",
+                    "Signs of neuroleptic malignant syndrome (NMS) - CRITICAL (hyperthermia, muscle rigidity, altered mental status, autonomic instability - rare but fatal)",
+                    "Temperature - CRITICAL (if signs of NMS)",
+                    "Creatine kinase (CK) - CRITICAL (if signs of NMS - elevated CK)",
+                    "Mortality in elderly with dementia - CRITICAL (Black Box Warning, increased risk of death)",
+                    "Complete blood count - CRITICAL (rare leukopenia, agranulocytosis)",
+                    "Drug interactions (QT-prolonging drugs - amiodarone, macrolides, ondansetron - increase QT prolongation risk) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Haloperidol", "Haldol", "Risperidone", "Olanzapine"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Increased Mortality in Elderly with Dementia",
+                "ISMP High Alert Medications",
+                "APA Guidelines - Schizophrenia Treatment",
+                "FDA Drug Label - Haloperidol (Haldol)"
+            ]
+        },
+
+        "Risperidone": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "metabolic": "High (increased mortality in elderly with dementia - Black Box Warning; hyperglycemia, diabetes - common; weight gain - common; hyperprolactinemia - common)",
+                    "neurologic": "Moderate (extrapyramidal symptoms - less than typical antipsychotics but can occur; tardive dyskinesia - can be irreversible)",
+                    "cardiac": "Moderate (QT prolongation - less than typical antipsychotics but can occur)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mortality in elderly with dementia - CRITICAL (Black Box Warning, increased risk of death)",
+                    "Blood glucose and HbA1c - CRITICAL (hyperglycemia, diabetes - common, monitor periodically)",
+                    "Weight - CRITICAL (weight gain - common, monitor periodically)",
+                    "Prolactin levels - CRITICAL (hyperprolactinemia - common, can cause galactorrhea, menstrual disorders)",
+                    "ECG (QT interval) - CRITICAL (if risk factors for QT prolongation)",
+                    "Signs of extrapyramidal symptoms (EPS) - CRITICAL (less common than typical antipsychotics but can occur)",
+                    "Signs of tardive dyskinesia - CRITICAL (can be irreversible, monitor periodically)",
+                    "Signs of neuroleptic malignant syndrome (NMS) - CRITICAL (rare but fatal)",
+                    "Lipid panel - CRITICAL (dyslipidemia can occur, monitor periodically)"
+                ],
+                "look_alike_sound_alike": ["Risperidone", "Risperdal", "Olanzapine", "Quetiapine"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Increased Mortality in Elderly with Dementia",
+                "APA Guidelines - Schizophrenia Treatment",
+                "FDA Drug Label - Risperidone (Risperdal)"
+            ]
+        },
+
+        "Olanzapine": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "metabolic": "High (increased mortality in elderly with dementia - Black Box Warning; hyperglycemia, diabetes - common; weight gain - very common; dyslipidemia - common)",
+                    "neurologic": "Low (extrapyramidal symptoms - less than typical antipsychotics; tardive dyskinesia - can occur)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mortality in elderly with dementia - CRITICAL (Black Box Warning, increased risk of death)",
+                    "Blood glucose and HbA1c - CRITICAL (hyperglycemia, diabetes - common, monitor periodically)",
+                    "Weight - CRITICAL (weight gain - very common, monitor periodically)",
+                    "Lipid panel - CRITICAL (dyslipidemia - common, monitor periodically)",
+                    "Signs of extrapyramidal symptoms (EPS) - CRITICAL (less common than typical antipsychotics)",
+                    "Signs of tardive dyskinesia - CRITICAL (can be irreversible, monitor periodically)",
+                    "Signs of neuroleptic malignant syndrome (NMS) - CRITICAL (rare but fatal)"
+                ],
+                "look_alike_sound_alike": ["Olanzapine", "Zyprexa", "Risperidone", "Quetiapine"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Increased Mortality in Elderly with Dementia",
+                "APA Guidelines - Schizophrenia Treatment",
+                "FDA Drug Label - Olanzapine (Zyprexa)"
+            ]
+        },
+
+        "Quetiapine": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "metabolic": "High (increased mortality in elderly with dementia - Black Box Warning; hyperglycemia, diabetes - common; weight gain - common; dyslipidemia - common)",
+                    "neurologic": "Low (extrapyramidal symptoms - less than typical antipsychotics; tardive dyskinesia - can occur)",
+                    "cardiac": "Moderate (QT prolongation - can occur, especially with high doses)",
+                    "ophthalmic": "Moderate (cataracts - rare but can occur)"
+                },
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mortality in elderly with dementia - CRITICAL (Black Box Warning, increased risk of death)",
+                    "ECG (QT interval) - CRITICAL (especially with high doses, QT prolongation can occur)",
+                    "Blood glucose and HbA1c - CRITICAL (hyperglycemia, diabetes - common, monitor periodically)",
+                    "Weight - CRITICAL (weight gain - common, monitor periodically)",
+                    "Lipid panel - CRITICAL (dyslipidemia - common, monitor periodically)",
+                    "Ophthalmic exam - CRITICAL (cataracts - rare but can occur, monitor periodically)",
+                    "Signs of extrapyramidal symptoms (EPS) - CRITICAL (less common than typical antipsychotics)",
+                    "Signs of tardive dyskinesia - CRITICAL (can be irreversible, monitor periodically)"
+                ],
+                "look_alike_sound_alike": ["Quetiapine", "Seroquel", "Olanzapine", "Risperidone"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Increased Mortality in Elderly with Dementia",
+                "APA Guidelines - Schizophrenia Treatment",
+                "FDA Drug Label - Quetiapine (Seroquel)"
+            ]
+        },
+
+        "Lithium": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "renal": "High (nephrogenic diabetes insipidus - common; chronic kidney disease - can occur with long-term use)",
+                    "neurologic": "High (neurotoxicity - tremor, ataxia, confusion, seizures, coma - with toxicity)",
+                    "thyroid": "High (hypothyroidism - common; goiter - can occur)",
+                    "cardiac": "Moderate (ECG changes - T-wave flattening/inversion, can occur)",
+                    "endocrine": "Moderate (hyperparathyroidism - can occur with long-term use)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Serum lithium levels - CRITICAL (therapeutic range 0.6-1.2 mEq/L, toxic >1.5 mEq/L, monitor every 3-6 months, more frequently during dose changes or if toxicity suspected)",
+                    "Renal function (creatinine, eGFR) - CRITICAL (nephrogenic diabetes insipidus - common, chronic kidney disease - can occur with long-term use, monitor every 6-12 months)",
+                    "Thyroid function (TSH, T4) - CRITICAL (hypothyroidism - common, goiter - can occur, monitor every 6-12 months)",
+                    "Signs of neurotoxicity - CRITICAL (tremor, ataxia, confusion, seizures, coma - with toxicity)",
+                    "ECG - CRITICAL (T-wave flattening/inversion can occur, monitor if cardiac symptoms)",
+                    "Parathyroid hormone and calcium - CRITICAL (hyperparathyroidism - can occur with long-term use, monitor periodically)",
+                    "Fluid and electrolyte balance - CRITICAL (dehydration increases lithium levels, risk of toxicity)",
+                    "Drug interactions (diuretics, ACE inhibitors, NSAIDs - increase lithium levels, risk of toxicity) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Lithium", "Lithobid", "Eskalith"]
+            },
+            "guideline_tags": [
+                "ISMP High Alert Medications",
+                "APA Guidelines - Bipolar Disorder Treatment",
+                "FDA Drug Label - Lithium (Lithobid, Eskalith)"
+            ]
+        },
+
+        # ======================== PHASE 6: ENDOCRINOLOGY - BISPHOSPHONATES ========================
+        "Alendronate": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "gastrointestinal": "High (esophageal irritation, ulceration - common if not taken correctly)",
+                    "skeletal": "High (osteonecrosis of the jaw - ONJ - rare but serious, Black Box Warning; atypical femur fractures - rare but serious, Black Box Warning)",
+                    "metabolic": "Moderate (hypocalcemia, hypophosphatemia - can occur)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Signs of esophageal irritation (dysphagia, odynophagia, retrosternal pain) - CRITICAL (common if not taken correctly, must take with full glass of water, remain upright 30 minutes)",
+                    "Dental exam - CRITICAL (before starting, ONJ risk, Black Box Warning)",
+                    "Signs of osteonecrosis of the jaw (ONJ) - CRITICAL (jaw pain, swelling, loose teeth, exposed bone - rare but serious, Black Box Warning)",
+                    "Signs of atypical femur fractures - CRITICAL (thigh or groin pain - rare but serious, Black Box Warning)",
+                    "Serum calcium and phosphorus - CRITICAL (before and periodically, hypocalcemia risk)",
+                    "Renal function (creatinine, eGFR) - CRITICAL (contraindicated if CrCl <35 ml/min)",
+                    "Bone density (DEXA scan) - CRITICAL (before and after 1-2 years, monitor treatment response)",
+                    "Administration technique - CRITICAL (must take on empty stomach, 30 minutes before food/medications, with full glass of water, remain upright 30 minutes)"
+                ],
+                "look_alike_sound_alike": ["Alendronate", "Fosamax", "Risedronate", "Ibandronate"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Osteonecrosis of the Jaw (ONJ - Rare but Serious)",
+                "FDA Black Box Warning - Atypical Femur Fractures (Rare but Serious)",
+                "NOF Guidelines - Osteoporosis Treatment",
+                "FDA Drug Label - Alendronate (Fosamax)"
+            ]
+        },
+
+        "Zoledronic acid": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "renal": "High (renal impairment - can be serious, Black Box Warning)",
+                    "skeletal": "High (osteonecrosis of the jaw - ONJ - rare but serious, Black Box Warning; atypical femur fractures - rare but serious, Black Box Warning)",
+                    "metabolic": "High (hypocalcemia - common, can be severe, Black Box Warning)",
+                    "neurologic": "Moderate (acute phase reaction - flu-like symptoms - very common after first infusion)",
+                    "ophthalmic": "Moderate (uveitis, scleritis - rare but can occur)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Renal function (creatinine, eGFR) - CRITICAL (before each infusion, renal impairment risk, Black Box Warning, do NOT use if CrCl <35 ml/min for osteoporosis, <30 ml/min for cancer)",
+                    "Serum calcium - CRITICAL (before and after infusion, hypocalcemia common and can be severe, Black Box Warning, ensure adequate calcium and vitamin D supplementation)",
+                    "Serum phosphorus and magnesium - CRITICAL (before and after infusion, can be decreased)",
+                    "Dental exam - CRITICAL (before starting, ONJ risk, Black Box Warning)",
+                    "Signs of osteonecrosis of the jaw (ONJ) - CRITICAL (jaw pain, swelling, loose teeth, exposed bone - rare but serious, Black Box Warning)",
+                    "Signs of atypical femur fractures - CRITICAL (thigh or groin pain - rare but serious, Black Box Warning)",
+                    "Acute phase reaction - CRITICAL (fever, chills, myalgia, arthralgia - very common after first infusion, usually resolves within 24-72 hours)",
+                    "Infusion rate - CRITICAL (must infuse over at least 15 minutes, Black Box Warning, rapid infusion increases renal impairment risk)",
+                    "Hydration - CRITICAL (ensure adequate hydration before and after infusion, reduces renal impairment risk)"
+                ],
+                "look_alike_sound_alike": ["Zoledronic acid", "Zoledronate", "Zometa", "Reclast", "Alendronate"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Renal Impairment (Can Be Serious)",
+                "FDA Black Box Warning - Hypocalcemia (Common, Can Be Severe)",
+                "FDA Black Box Warning - Osteonecrosis of the Jaw (ONJ - Rare but Serious)",
+                "FDA Black Box Warning - Atypical Femur Fractures (Rare but Serious)",
+                "NOF Guidelines - Osteoporosis Treatment",
+                "FDA Drug Label - Zoledronic acid (Zometa, Reclast)"
+            ]
+        },
+
+        # ======================== PHASE 6: OBSTETRICS & GYNECOLOGY ========================
+        "Oxytocin": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "reproductive": "High (uterine hyperstimulation - can cause uterine rupture, fetal distress, Black Box Warning)",
+                    "cardiovascular": "Moderate (hypotension - common with rapid IV bolus, tachycardia - reflex)",
+                    "metabolic": "High (water intoxication, hyponatremia - with prolonged high-dose infusion with hypotonic solutions, can cause seizures, coma, death)",
+                    "neurologic": "High (seizures, coma - with water intoxication/hyponatremia)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Uterine contractions (frequency, intensity, duration) - CRITICAL (monitor continuously, hyperstimulation can cause uterine rupture, fetal distress, Black Box Warning)",
+                    "Fetal heart rate - CRITICAL (if used during labor, monitor continuously, fetal distress risk with hyperstimulation)",
+                    "Blood pressure and heart rate - CRITICAL (hypotension common with rapid IV bolus, tachycardia can occur)",
+                    "Serum sodium - CRITICAL (if prolonged high-dose infusion, water intoxication/hyponatremia risk, can cause seizures, coma, death)",
+                    "Fluid intake/output - CRITICAL (if prolonged infusion, monitor for water intoxication)",
+                    "Signs of uterine rupture (severe abdominal pain, fetal distress, maternal shock) - CRITICAL (Black Box Warning)",
+                    "Infusion rate - CRITICAL (do NOT give rapid IV bolus, must use controlled infusion pump, Black Box Warning)",
+                    "Solution type - CRITICAL (do NOT use hypotonic solutions for prolonged infusion, use isotonic solutions to prevent hyponatremia)"
+                ],
+                "look_alike_sound_alike": ["Oxytocin", "Pitocin", "Syntocinon", "Vasopressin"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Uterine Hyperstimulation (Can Cause Uterine Rupture, Fetal Distress)",
+                "ACOG Guidelines - Postpartum Hemorrhage",
+                "ACOG Guidelines - Labor Induction and Augmentation",
+                "WHO Guidelines - Prevention and Treatment of Postpartum Hemorrhage",
+                "FDA Drug Label - Oxytocin (Pitocin)"
+            ]
+        },
+
+        # ======================== PHASE 7: UROLOGY DRUGS ========================
+        "Sildenafil": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiovascular": "High (hypotension - can be severe and fatal with nitrates, Black Box Warning)",
+                    "ophthalmic": "Moderate (non-arteritic anterior ischemic optic neuropathy - NAION - rare but can cause vision loss)",
+                    "otologic": "Moderate (sudden hearing loss - rare but can occur)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure - CRITICAL (hypotension can be severe and fatal with nitrates, Black Box Warning)",
+                    "Nitrate use - CRITICAL (ABSOLUTELY CONTRAINDICATED with nitrates - nitroglycerin, isosorbide - can cause severe hypotension, death, Black Box Warning)",
+                    "Signs of vision loss (NAION) - CRITICAL (sudden vision loss in one or both eyes - rare but can occur, stop immediately if present)",
+                    "Signs of hearing loss - CRITICAL (sudden hearing loss - rare but can occur, stop immediately if present)",
+                    "Cardiovascular status - CRITICAL (contraindicated in unstable cardiovascular disease, recent MI/stroke)",
+                    "Drug interactions (alpha-blockers - separate by 4-6 hours, CYP3A4 inhibitors - reduce dose) - CRITICAL",
+                    "Administration timing - CRITICAL (30-60 minutes before sexual activity, do NOT use more than once daily)"
+                ],
+                "look_alike_sound_alike": ["Sildenafil", "Viagra", "Tadalafil", "Vardenafil", "Avanafil"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Contraindicated with Nitrates (Can Cause Severe Hypotension, Death)",
+                "FDA Black Box Warning - Vision Loss (NAION - Rare but Can Occur)",
+                "FDA Black Box Warning - Hearing Loss (Sudden Hearing Loss - Rare but Can Occur)",
+                "AUA Guidelines - Erectile Dysfunction Management",
+                "FDA Drug Label - Sildenafil (Viagra)"
+            ]
+        },
+
+        "Tamsulosin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiovascular": "Moderate (orthostatic hypotension - common, syncope - rare but can occur)",
+                    "reproductive": "Moderate (retrograde ejaculation - common)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure (especially orthostatic hypotension) - CRITICAL (common, can cause syncope)",
+                    "BPH symptoms (difficulty urinating, weak stream, nocturia, urgency) - CRITICAL (monitor treatment response)",
+                    "Signs of syncope - CRITICAL (rare but can occur, especially with first dose or dose increase)",
+                    "Signs of retrograde ejaculation - CRITICAL (common, counsel patient)",
+                    "Drug interactions (PDE-5 inhibitors - separate by 4-6 hours, antihypertensives - monitor BP) - CRITICAL",
+                    "Administration - CRITICAL (take after same meal each day, do NOT crush or chew capsule)"
+                ],
+                "look_alike_sound_alike": ["Tamsulosin", "Flomax", "Alfuzosin", "Silodosin"]
+            },
+            "guideline_tags": [
+                "AUA Guidelines - Benign Prostatic Hyperplasia Management",
+                "FDA Drug Label - Tamsulosin (Flomax)"
+            ]
+        },
+
+        "Finasteride": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "reproductive": "High (sexual dysfunction - decreased libido, erectile dysfunction, ejaculation disorders - common; persistent sexual dysfunction - can persist after discontinuation)",
+                    "endocrine": "Moderate (decreased PSA - expected, can mask prostate cancer)",
+                    "psychiatric": "Low (depression - rare but can occur)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Sexual function (libido, erectile function, ejaculation) - CRITICAL (sexual dysfunction common, can persist after discontinuation)",
+                    "PSA levels - CRITICAL (decreased PSA expected, can mask prostate cancer, double PSA for interpretation)",
+                    "Prostate exam - CRITICAL (periodically, decreased PSA can mask prostate cancer)",
+                    "Mental health (depression) - CRITICAL (rare but can occur)",
+                    "Pregnancy exposure - CRITICAL (contraindicated in women, can cause birth defects if exposed to male semen)"
+                ],
+                "look_alike_sound_alike": ["Finasteride", "Propecia", "Proscar", "Dutasteride"]
+            },
+            "guideline_tags": [
+                "FDA Drug Label - Finasteride (Propecia, Proscar)",
+                "AUA Guidelines - Benign Prostatic Hyperplasia Management",
+                "FDA Warning - Sexual Dysfunction (Can Persist After Discontinuation)"
+            ]
+        },
+
+        "Tadalafil": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiovascular": "High (hypotension - can be severe and fatal with nitrates, Black Box Warning)",
+                    "ophthalmic": "Moderate (non-arteritic anterior ischemic optic neuropathy - NAION - rare but can cause vision loss)",
+                    "otologic": "Moderate (sudden hearing loss - rare but can occur)",
+                    "musculoskeletal": "Moderate (back pain, myalgia - common, especially with daily dosing)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Blood pressure - CRITICAL (hypotension can be severe and fatal with nitrates, Black Box Warning)",
+                    "Nitrate use - CRITICAL (ABSOLUTELY CONTRAINDICATED with nitrates - nitroglycerin, isosorbide - can cause severe hypotension, death, Black Box Warning)",
+                    "Signs of vision loss (NAION) - CRITICAL (sudden vision loss in one or both eyes - rare but can occur, stop immediately if present)",
+                    "Signs of hearing loss - CRITICAL (sudden hearing loss - rare but can occur, stop immediately if present)",
+                    "Musculoskeletal symptoms (back pain, myalgia) - CRITICAL (common, especially with daily dosing)",
+                    "Cardiovascular status - CRITICAL (contraindicated in unstable cardiovascular disease, recent MI/stroke)",
+                    "Drug interactions (alpha-blockers - separate by 4-6 hours, CYP3A4 inhibitors - reduce dose) - CRITICAL",
+                    "Long half-life - CRITICAL (17.5 hours, effects persist longer than sildenafil, do NOT use more than once daily)"
+                ],
+                "look_alike_sound_alike": ["Tadalafil", "Cialis", "Sildenafil", "Vardenafil"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Contraindicated with Nitrates (Can Cause Severe Hypotension, Death)",
+                "FDA Black Box Warning - Vision Loss (NAION - Rare but Can Occur)",
+                "FDA Black Box Warning - Hearing Loss (Sudden Hearing Loss - Rare but Can Occur)",
+                "AUA Guidelines - Erectile Dysfunction Management",
+                "FDA Drug Label - Tadalafil (Cialis)"
+            ]
+        },
+
+        "Oxybutynin": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "neurologic": "Moderate (cognitive impairment - especially in elderly, anticholinergic effects)",
+                    "ophthalmic": "Moderate (blurred vision, dry eyes - common)",
+                    "urinary": "Moderate (urinary retention - can occur, especially with BPH)",
+                    "gastrointestinal": "Moderate (constipation, dry mouth - very common)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Mental status (cognitive function) - CRITICAL (cognitive impairment especially in elderly, anticholinergic effects)",
+                    "Urinary symptoms - CRITICAL (urinary retention can occur, especially with BPH)",
+                    "Gastrointestinal symptoms (constipation, dry mouth) - CRITICAL (very common)",
+                    "Ophthalmic symptoms (blurred vision, dry eyes) - CRITICAL (common)",
+                    "Drug interactions (other anticholinergics - additive effects, cholinesterase inhibitors - antagonistic) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Oxybutynin", "Ditropan", "Tolterodine", "Solifenacin"]
+            },
+            "guideline_tags": [
+                "AUA Guidelines - Overactive Bladder Management",
+                "FDA Drug Label - Oxybutynin (Ditropan)"
+            ]
+        },
+
+        # ======================== PHASE 7: IMMUNOLOGY - mTOR INHIBITORS ========================
+        "Sirolimus": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "pulmonary": "High (pneumonitis - rare but serious, can be fatal, Black Box Warning)",
+                    "hematologic": "High (bone marrow suppression - thrombocytopenia, leukopenia - common, can be severe, Black Box Warning)",
+                    "metabolic": "High (hyperlipidemia - very common)",
+                    "oncologic": "High (increased risk of infections and malignancies - lymphoma, skin cancer, Black Box Warning)",
+                    "renal": "Moderate (nephrotoxicity - when used with cyclosporine)",
+                    "wound_healing": "Moderate (impaired wound healing - can occur)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Sirolimus trough levels - CRITICAL (narrow therapeutic index, TDM required, target 4-12 ng/ml, Black Box Warning)",
+                    "Pulmonary symptoms (cough, dyspnea, fever) - CRITICAL (pneumonitis rare but serious, can be fatal, Black Box Warning)",
+                    "Chest X-ray or CT - CRITICAL (if signs of pneumonitis)",
+                    "CBC (myelosuppression) - CRITICAL (thrombocytopenia, leukopenia common, can be severe, Black Box Warning)",
+                    "Lipid profile (cholesterol, triglycerides) - CRITICAL (hyperlipidemia very common)",
+                    "Renal function (creatinine, eGFR) - CRITICAL (nephrotoxicity risk, especially with cyclosporine)",
+                    "Signs of infection (fever, chills) - CRITICAL (increased risk of serious infections, Black Box Warning)",
+                    "Signs of malignancies (lymphoma, skin cancer) - CRITICAL (increased risk, Black Box Warning)",
+                    "Wound healing - CRITICAL (impaired wound healing can occur, especially after surgery)",
+                    "Drug interactions (CYP3A4 inhibitors/inducers - CRITICAL, grapefruit juice - increases levels, cyclosporine - increases nephrotoxicity) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Sirolimus", "Rapamune", "Tacrolimus", "Everolimus"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Increased Risk of Infections and Malignancies",
+                "FDA Black Box Warning - Pneumonitis (Rare but Serious, Can Be Fatal)",
+                "FDA Black Box Warning - Myelosuppression (Thrombocytopenia, Leukopenia - Common, Can Be Severe)",
+                "KDIGO Guidelines - Kidney Transplant",
+                "AST Guidelines - Solid Organ Transplant",
+                "FDA Drug Label - Sirolimus (Rapamune)"
+            ]
+        },
+
+        "Everolimus": {
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "icu_critical_care_only": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {
+                    "pulmonary": "High (pneumonitis - rare but serious, can be fatal, Black Box Warning)",
+                    "hematologic": "High (bone marrow suppression - thrombocytopenia, leukopenia - common, can be severe, Black Box Warning)",
+                    "metabolic": "High (hyperlipidemia - very common, hyperglycemia - common)",
+                    "oncologic": "High (increased risk of infections and malignancies - lymphoma, skin cancer, Black Box Warning)",
+                    "wound_healing": "Moderate (impaired wound healing - can occur)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Everolimus trough levels - CRITICAL (narrow therapeutic index, TDM required, target 3-8 ng/ml for transplant, Black Box Warning)",
+                    "Pulmonary symptoms (cough, dyspnea, fever) - CRITICAL (pneumonitis rare but serious, can be fatal, Black Box Warning)",
+                    "Chest X-ray or CT - CRITICAL (if signs of pneumonitis)",
+                    "CBC (myelosuppression) - CRITICAL (thrombocytopenia, leukopenia common, can be severe, Black Box Warning)",
+                    "Lipid profile (cholesterol, triglycerides) - CRITICAL (hyperlipidemia very common)",
+                    "Blood glucose and HbA1c - CRITICAL (hyperglycemia common)",
+                    "Signs of infection (fever, chills) - CRITICAL (increased risk of serious infections, Black Box Warning)",
+                    "Signs of malignancies (lymphoma, skin cancer) - CRITICAL (increased risk, Black Box Warning)",
+                    "Wound healing - CRITICAL (impaired wound healing can occur, especially after surgery)",
+                    "Drug interactions (CYP3A4 inhibitors/inducers - CRITICAL, grapefruit juice - increases levels) - CRITICAL"
+                ],
+                "look_alike_sound_alike": ["Everolimus", "Afinitor", "Zortress", "Sirolimus"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Increased Risk of Infections and Malignancies",
+                "FDA Black Box Warning - Pneumonitis (Rare but Serious, Can Be Fatal)",
+                "FDA Black Box Warning - Myelosuppression (Thrombocytopenia, Leukopenia - Common, Can Be Severe)",
+                "KDIGO Guidelines - Kidney Transplant",
+                "NCCN Guidelines - Renal Cell Carcinoma",
+                "NCCN Guidelines - Breast Cancer",
+                "FDA Drug Label - Everolimus (Afinitor, Zortress)"
+            ]
+        },
+
+        # ======================== PHASE 7: OTHER SPECIALIZED - GROWTH FACTORS ========================
+        "Pegfilgrastim": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "hematologic": "Moderate (splenic rupture - rare but serious, can be fatal)",
+                    "pulmonary": "Moderate (acute respiratory distress syndrome - ARDS - rare but serious)",
+                    "skeletal": "Moderate (bone pain - very common, can be severe)",
+                    "hematologic_sickle": "High (sickle cell crisis - in patients with sickle cell disease, can be fatal)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "CBC (white blood cell count) - CRITICAL (monitor for leukocytosis, discontinue if WBC >100,000/mm³)",
+                    "Signs of splenic rupture (left upper quadrant pain, shoulder pain) - CRITICAL (rare but serious, can be fatal)",
+                    "Pulmonary symptoms (dyspnea, hypoxia) - CRITICAL (ARDS rare but serious)",
+                    "Bone pain - CRITICAL (very common, can be severe, may need analgesics)",
+                    "Sickle cell disease - CRITICAL (contraindicated, can cause sickle cell crisis, can be fatal)",
+                    "Timing of administration - CRITICAL (give 24 hours after chemotherapy completion, do NOT give within 14 days before or 24 hours after chemotherapy)",
+                    "Signs of sickle cell crisis (severe pain, fever) - CRITICAL (if used in sickle cell disease, can be fatal)"
+                ],
+                "look_alike_sound_alike": ["Pegfilgrastim", "Neulasta", "Filgrastim", "Sargramostim"]
+            },
+            "guideline_tags": [
+                "FDA Drug Label - Pegfilgrastim (Neulasta)",
+                "ASCO Guidelines - Myeloid Growth Factors",
+                "NCCN Guidelines - Supportive Care"
+            ]
+        },
+
+        "Hydroxychloroquine": {
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "ophthalmic": "High (retinal toxicity - can be irreversible and lead to vision loss, Black Box Warning)",
+                    "cardiac": "High (QT prolongation, torsades de pointes, ventricular arrhythmias, cardiac arrest - can be fatal, Black Box Warning)",
+                    "neurologic": "Moderate (psychosis, seizures - rare but can occur)",
+                    "dermatologic": "Moderate (severe skin reactions - rare but can occur)",
+                    "hematologic": "Low (myelosuppression - rare)"
+                },
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Ophthalmologic exam - CRITICAL (baseline, then every 12 months, retinal toxicity can be irreversible and lead to vision loss, Black Box Warning)",
+                    "Visual field testing - CRITICAL (baseline, then every 12 months, retinal toxicity)",
+                    "ECG (QT interval) - CRITICAL (before and during treatment, QT prolongation can cause torsades de pointes, ventricular arrhythmias, cardiac arrest, can be fatal, Black Box Warning)",
+                    "Signs of cardiac events (palpitations, dizziness, syncope, irregular heartbeat) - CRITICAL (QT prolongation can cause fatal arrhythmias, Black Box Warning)",
+                    "Electrolytes (potassium, magnesium) - CRITICAL (must be normal before use, hypokalemia/hypomagnesemia increase arrhythmia risk)",
+                    "Mental status - CRITICAL (psychosis, seizures rare but can occur)",
+                    "Signs of severe skin reactions (rash, fever, mucosal lesions) - CRITICAL (rare but can occur)",
+                    "CBC - CRITICAL (rare myelosuppression)",
+                    "Drug interactions (QT-prolonging drugs - CONTRAINDICATED, digoxin - monitor levels) - CRITICAL",
+                    "Maximum daily dose - CRITICAL (do NOT exceed 5mg/kg actual body weight, Black Box Warning, increases retinal toxicity risk)"
+                ],
+                "look_alike_sound_alike": ["Hydroxychloroquine", "Plaquenil", "Chloroquine", "Quinine"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Retinal Toxicity (Can Be Irreversible and Lead to Vision Loss)",
+                "FDA Black Box Warning - QT Prolongation (Can Cause Fatal Arrhythmias)",
+                "FDA Black Box Warning - Maximum Daily Dose (Do NOT Exceed 5mg/kg Actual Body Weight)",
+                "ACR Guidelines - Systemic Lupus Erythematosus",
+                "ACR Guidelines - Rheumatoid Arthritis",
+                "FDA Drug Label - Hydroxychloroquine (Plaquenil)"
             ]
         },
 

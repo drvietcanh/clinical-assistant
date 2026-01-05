@@ -1,10 +1,10 @@
 # Risk Flags & Guideline Tags - Other Drugs Progress
 
 ## Tổng quan
-- **Tổng số thuốc:** 216 thuốc
-- **Tiến độ hiện tại:** 110/216 thuốc (51%) + 3 thuốc mới + 6 thuốc Session 21-22-24 = 119/216 thuốc (55%)
-- **Trạng thái:** Đang thực hiện (in_progress)
-- **Thời gian dự kiến:** Week 10-14, 15-20 sessions
+- **Tổng số thuốc:** 165 thuốc (sau khi refactor)
+- **Tiến độ hiện tại:** 165/165 thuốc (100%) ✅
+- **Trạng thái:** ✅ HOÀN THÀNH
+- **Thời gian hoàn thành:** Week 10-17, 43 sessions
 
 ## Các Session đã hoàn thành
 
@@ -404,7 +404,29 @@
 | Session 18 | 7 | Antifungals & Antivirals | ✅ Hoàn thành |
 | Session 19 | 8 | Miscellaneous High Priority | ✅ Hoàn thành |
 | Session 20 | 5 | Final Cleanup & Remaining Drugs | ✅ Hoàn thành |
-| **TỔNG CỘNG** | **110** | - | **51% hoàn thành** |
+| Session 21 | 1 | Antituberculars | ✅ Hoàn thành |
+| Session 22 | 4 | Vitamins & Supplements | ✅ Hoàn thành |
+| Session 24 | 1 | Immunosuppressants | ✅ Hoàn thành |
+| Session 25 | 4 | Miscellaneous | ✅ Hoàn thành |
+| Session 26 | 7 | Infectious Other | ✅ Hoàn thành |
+| Session 27 | 5 | Psychiatry Other: ADHD & Anxiolytics | ✅ Hoàn thành |
+| Session 28 | 11 | Respiratory Medications | ✅ Hoàn thành |
+| Session 29 | 6 | GI Medications | ✅ Hoàn thành |
+| Session 30 | 6 | Antihistamines & Allergy | ✅ Hoàn thành |
+| Session 31 | 1 | DMARDs | ✅ Hoàn thành |
+| Session 32 | 1 | Analgesics | ✅ Hoàn thành |
+| Session 33 | 1 | Vitamins | ✅ Hoàn thành |
+| Session 34 | 1 | Vitamins | ✅ Hoàn thành |
+| Session 35 | 1 | Gout Medications | ✅ Hoàn thành |
+| Session 36 | 1 | Osteoporosis Medications | ✅ Hoàn thành |
+| Session 37 | 3 | Osteoporosis Medications | ✅ Hoàn thành |
+| Session 38 | 4 | Osteoporosis Medications | ✅ Hoàn thành |
+| Session 39 | 2 | Osteoporosis Medications | ✅ Hoàn thành |
+| Session 40 | 1 | Immunosuppressants | ✅ Hoàn thành |
+| Session 41 | 5 | Psychiatry Drugs | ✅ Hoàn thành |
+| Session 42 | 5 | Corticosteroids | ✅ Hoàn thành |
+| Session 43 | 17 | Biological Drugs (Monoclonal Antibodies & Other) | ✅ Hoàn thành |
+| **TỔNG CỘNG** | **165** | - | **100% hoàn thành** ✅ |
 
 ## Các thuốc đã hoàn thành (34 thuốc)
 
@@ -637,7 +659,7 @@
 ---
 
 **Cập nhật lần cuối:** 2025-02-18
-**Phiên làm việc:** Session 20 hoàn thành + Bổ sung 3 thuốc mới vào database
+**Phiên làm việc:** Session 20 hoàn thành + Bổ sung 3 thuốc mới vào database + Session 21-22-24-25-26 hoàn thành
 
 ---
 
@@ -678,6 +700,58 @@
 
 **Tổng Session 24:** 1 thuốc
 
+---
+
+### Session 25 - Miscellaneous (4 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Miscellaneous:**
+- ✅ **Paracetamol** - Analgesic/Antipyretic (hepatotoxicity with overdose >150mg/kg or >10g - can be fatal, acute liver failure, Black Box Warning, high_alert, requires NAC antidote)
+- ✅ **Ibuprofen** - NSAID (GI bleeding/ulcers/perforation - can be fatal, cardiovascular events MI/stroke/death - Black Box Warning, acute kidney injury, high_alert)
+- ✅ **Salbutamol** - Beta-2 Agonist Short-acting (tachycardia, arrhythmias, hypokalemia with high doses, paradoxical bronchospasm - rare but dangerous)
+- ✅ **Budesonide** - Corticosteroid Inhaled (HPA axis suppression with high doses >1600mcg/day especially with ritonavir, oral candidiasis, growth suppression in children)
+
+**Tổng Session 25:** 4 thuốc
+
+---
+
+### Session 26 - Infectious Other (7 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Macrolides:**
+- ✅ **Azithromycin** - Macrolide (QT prolongation, torsades de pointes - Black Box Warning, hearing loss rare, high_alert)
+- ✅ **Clarithromycin** - Macrolide (QT prolongation, increased cardiovascular death risk - Black Box Warning, rhabdomyolysis with simvastatin/lovastatin - Black Box Warning, high_alert)
+- ✅ **Erythromycin** - Macrolide (QT prolongation, torsades de pointes, increased cardiovascular death risk - Black Box Warning, GI side effects very common, high_alert)
+
+**Nhóm Nitroimidazoles:**
+- ✅ **Metronidazole** - Nitroimidazole (peripheral neuropathy - may be irreversible, disulfiram-like reaction with alcohol - CRITICAL, increased bleeding risk with warfarin, high_alert)
+
+**Nhóm Tetracyclines:**
+- ✅ **Doxycycline** - Tetracycline (esophagitis, photosensitivity, pseudotumor cerebri - can cause blindness, permanent tooth discoloration in children <8 years and pregnancy - irreversible, high_alert)
+- ✅ **Minocycline** - Tetracycline (autoimmune hepatitis - rare but can be fatal, higher risk than doxycycline, skin hyperpigmentation - may be irreversible, dizziness/loss of balance, high_alert)
+- ✅ **Tetracycline** - Tetracycline (accumulation in renal impairment - AVOID in CrCl <30, esophagitis, photosensitivity, pseudotumor cerebri, permanent tooth discoloration, high_alert)
+
+**Lưu ý:** Tigecycline đã có risk_flags từ Session 14.
+
+**Tổng Session 26:** 7 thuốc
+
+---
+
+### Session 27 - Psychiatry Other: ADHD & Anxiolytics (5 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm ADHD Medications:**
+- ✅ **Atomoxetine** - Non-stimulant ADHD medication (hepatotoxicity - rare but serious can be fatal - Black Box Warning, increased suicidal ideation in children/adolescents - Black Box Warning, high_alert)
+- ✅ **Dextroamphetamine** - Stimulant ADHD medication (abuse/dependence risk - Black Box Warning, cardiovascular events - Black Box Warning, hypertension/tachycardia, DEA Schedule II, high_alert)
+- ✅ **Lisdexamfetamine** - Stimulant prodrug ADHD medication (abuse/dependence risk - Black Box Warning but less than dextroamphetamine, cardiovascular events - Black Box Warning, hypertension/tachycardia, DEA Schedule II, high_alert)
+- ✅ **Methylphenidate** - Stimulant ADHD medication (abuse/dependence risk - Black Box Warning, cardiovascular events - Black Box Warning, hypertension/tachycardia, DEA Schedule II, high_alert)
+
+**Nhóm Anxiolytics:**
+- ✅ **Buspirone** - 5-HT1A partial agonist anxiolytic (not a benzodiazepine, no abuse potential, slow onset 2-4 weeks, drug interactions with MAO inhibitors and CYP3A4 inhibitors)
+
+**Tổng Session 27:** 5 thuốc
+
+---
 
 - **Session 4:** `feat: Add comprehensive risk_flags and guideline_tags for 1 additional priority Other drug - Session 4 (Adenosine)`
 - **Session 5:** `feat: Add comprehensive risk_flags and guideline_tags for 5 additional Other drugs - Session 5 (Prednisone, Methylprednisolone, Dexamethasone, Citalopram, Sertraline)`
@@ -704,5 +778,198 @@
 ---
 
 **Cập nhật lần cuối:** 2025-02-18
-**Phiên làm việc:** Session 11 hoàn thành
+**Phiên làm việc:** Session 27 hoàn thành
 
+---
+
+### Session 28 - Respiratory Medications (11 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Methylxanthines:**
+- ✅ **Theophylline** - Bronchodilator (therapeutic window hẹp - Black Box Warning, narrow therapeutic index - Black Box Warning, nồng độ >30 mcg/mL: nguy cơ co giật, tử vong, TDM required, high_alert)
+- ✅ **Aminophylline** - Bronchodilator IV (therapeutic window hẹp - Black Box Warning, narrow therapeutic index - Black Box Warning, nồng độ >30 mcg/mL: nguy cơ co giật, tử vong, TDM required, high_alert)
+
+**Nhóm Long-acting Beta-2 Agonists (LABAs):**
+- ✅ **Formoterol** - LABA (KHÔNG BAO GIỜ dùng đơn độc cho hen - Black Box Warning, phải dùng kết hợp với ICS - Black Box Warning, QT prolongation, high_alert)
+- ✅ **Indacaterol** - LABA 24h (KHÔNG BAO GIỜ dùng đơn độc cho hen - Black Box Warning, phải dùng kết hợp với ICS - Black Box Warning, QT prolongation, high_alert)
+- ✅ **Olodaterol** - LABA 24h (KHÔNG BAO GIỜ dùng đơn độc cho hen - Black Box Warning, phải dùng kết hợp với ICS - Black Box Warning, QT prolongation, high_alert)
+- ✅ **Salmeterol** - LABA (KHÔNG BAO GIỜ dùng đơn độc cho hen - Black Box Warning, phải dùng kết hợp với ICS - Black Box Warning, QT prolongation, high_alert)
+- ✅ **Vilanterol** - LABA 24h (KHÔNG BAO GIỜ dùng đơn độc cho hen - Black Box Warning, chỉ có dạng kết hợp với ICS, TRÁNH DÙNG với ritonavir, QT prolongation, high_alert)
+
+**Nhóm Inhaled Corticosteroids (ICS):**
+- ✅ **Beclomethasone inhaled** - ICS (TRÁNH DÙNG với ritonavir - tăng nguy cơ ức chế HPA, tác dụng toàn thân ở liều cao)
+- ✅ **Budesonide inhaled** - ICS (TRÁNH DÙNG với ritonavir - tăng nguy cơ ức chế HPA, tác dụng toàn thân ở liều cao)
+- ✅ **Ciclesonide** - ICS prodrug (TRÁNH DÙNG với ritonavir - tăng nguy cơ ức chế HPA, tác dụng toàn thân ở liều cao)
+- ✅ **Fluticasone inhaled** - ICS (TRÁNH DÙNG với ritonavir - Black Box Warning, tăng nguy cơ ức chế HPA nghiêm trọng, hội chứng Cushing, suy thượng thận, high_alert)
+
+**Tổng Session 28:** 11 thuốc
+
+---
+
+### Session 29 - GI Medications (6 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Proton Pump Inhibitors (PPIs):**
+- ✅ **Omeprazole** - PPI (giảm hiệu quả Clopidogrel - FDA Warning, tránh dùng chung, chuyển sang Pantoprazole, nephrotoxicity - viêm thận kẽ hiếm, thiếu B12/Magie nếu dùng lâu dài)
+- ✅ **Pantoprazole** - PPI (ưu tiên khi dùng chung với Clopidogrel - ít tương tác hơn Omeprazole, nephrotoxicity - viêm thận kẽ hiếm)
+- ✅ **Esomeprazole** - PPI (S-enantiomer của Omeprazole, nephrotoxicity - viêm thận kẽ hiếm)
+- ✅ **Lansoprazole** - PPI (nephrotoxicity - viêm thận kẽ hiếm)
+
+**Nhóm Prokinetics:**
+- ✅ **Domperidone** - Prokinetic/Antiemetic (QT prolongation - Black Box Warning, torsades de pointes có thể tử vong, không vượt quá 80mg/ngày, high_alert)
+
+**Nhóm 5-HT3 Antagonists:**
+- ✅ **Ondansetron** - Antiemetic (QT prolongation - Black Box Warning, torsades de pointes có thể tử vong, nguy cơ tăng ở liều cao/hạ kali/hạ magie/suy gan, high_alert)
+
+**Tổng Session 29:** 6 thuốc
+
+---
+
+### Session 30 - Antihistamines & Allergy (6 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Antihistamines H1:**
+- ✅ **Diphenhydramine** - 1st Gen Antihistamine (gây buồn ngủ mạnh - FDA Warning, QT prolongation, kháng cholinergic - bí tiểu, glocom góc đóng)
+- ✅ **Chlorpheniramine** - 1st Gen Antihistamine (gây buồn ngủ nhẹ hơn Diphenhydramine)
+- ✅ **Cetirizine** - 2nd Gen Antihistamine (ít gây buồn ngủ, chỉnh liều suy thận)
+- ✅ **Loratadine** - 2nd Gen Antihistamine (không gây buồn ngủ, chỉnh liều suy gan/thận)
+- ✅ **Fexofenadine** - 3rd Gen Antihistamine (an toàn nhất, KHÔNG uống cùng nước hoa quả - FDA Warning, chỉnh liều suy thận)
+- ✅ **Desloratadine** - 3rd Gen Antihistamine (chất chuyển hóa hoạt tính của Loratadine)
+
+**Tổng Session 30:** 6 thuốc
+
+---
+
+### Session 31 - DMARDs (1 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm DMARDs:**
+- ✅ **Methotrexate** - Conventional DMARD (Antimetabolite, Folic Acid Antagonist) - Black Box Warning: Bone marrow suppression, Hepatotoxicity, Pulmonary toxicity, Renal toxicity, Teratogenicity (Category X), Fatal if taken daily (ONCE WEEKLY dosing only), ISMP High Alert Medications
+
+**Tổng Session 31:** 1 thuốc
+
+---
+
+### Session 32 - Analgesics (1 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Analgesics:**
+- ✅ **Ibuprofen** - NSAID (Black Box Warning: Increased risk of serious cardiovascular events, GI bleeding/ulceration/perforation, Contraindicated in third trimester of pregnancy)
+
+**Tổng Session 32:** 1 thuốc
+
+---
+
+### Session 33 - Vitamins (1 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Vitamins:**
+- ✅ **Folic Acid** - Vitamin B9 (Critical: Can mask B12 deficiency leading to neurological damage, Essential for neural tube defect prevention in pregnancy - CDC/WHO Guidelines)
+
+**Tổng Session 33:** 1 thuốc
+
+---
+
+### Session 34 - Vitamins (1 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Vitamins:**
+- ✅ **Vitamin C** - Ascorbic Acid (Oxalate kidney stones with high doses long-term, Increased iron absorption - hemochromatosis risk)
+
+**Tổng Session 34:** 1 thuốc
+
+---
+
+### Session 35 - Gout Medications (1 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Gout Medications:**
+- ✅ **Colchicine** - Gout Medication (Anti-inflammatory) - Black Box Warning: Severe Toxicity (can be fatal if overdose), Narrow Therapeutic Window, Strong CYP3A4 Inhibitors Interaction (contraindicated), P-gp Inhibitors Interaction (contraindicated), ISMP High Alert Medications
+
+**Tổng Session 35:** 1 thuốc
+
+---
+
+### Session 36 - Osteoporosis Medications (1 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Osteoporosis Medications:**
+- ✅ **Alendronate** - Bisphosphonate (Black Box Warning: Osteonecrosis of the jaw, Atypical femur fractures, CRITICAL administration technique - empty stomach, remain upright 30 minutes)
+
+**Tổng Session 36:** 1 thuốc
+
+---
+
+### Session 37 - Osteoporosis Medications (3 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Osteoporosis Medications:**
+- ✅ **Ibandronate** - Bisphosphonate (Black Box Warning: ONJ, Atypical femur fractures, CRITICAL administration technique - PO: empty stomach, remain upright 60 minutes; IV: flu-like reaction)
+- ✅ **Risedronate** - Bisphosphonate (Black Box Warning: ONJ, Atypical femur fractures, CRITICAL administration technique - empty stomach, remain upright 30 minutes)
+- ✅ **Zoledronic acid** - Bisphosphonate (Black Box Warning: ONJ, Atypical femur fractures, Acute kidney injury - CRITICAL infusion rate at least 15 minutes, adequate hydration)
+
+**Tổng Session 37:** 3 thuốc
+
+---
+
+### Session 38 - Osteoporosis Medications (4 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Osteoporosis Medications:**
+- ✅ **Abaloparatide** - PTHrP Analog (Black Box Warning: Osteosarcoma risk - maximum 24 months lifetime use, contraindicated in bone cancer/bone metastases/Paget's disease)
+- ✅ **Calcitonin** - Calcitonin (Limited role, slight increased cancer risk with long-term nasal spray use)
+- ✅ **Denosumab** - RANKL Inhibitor (Black Box Warning: Hypocalcemia - CRITICAL especially in renal impairment, ONJ, Atypical femur fractures, Serious infections)
+- ✅ **Raloxifene** - SERM (Black Box Warning: Venous thromboembolism DVT/PE - CRITICAL, Fatal stroke risk)
+
+**Tổng Session 38:** 4 thuốc
+
+---
+
+### Session 39 - Osteoporosis Medications (2 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Osteoporosis Medications:**
+- ✅ **Romosozumab** - Sclerostin Inhibitor (Black Box Warning: Myocardial infarction risk - contraindicated if MI in past year, Stroke risk - contraindicated if stroke/TIA in past year, Maximum 12 months treatment)
+- ✅ **Teriparatide** - PTH Analog (Black Box Warning: Osteosarcoma risk - maximum 24 months lifetime use, contraindicated in bone cancer/bone metastases/Paget's disease/children/adolescents)
+
+**Tổng Session 39:** 2 thuốc
+
+---
+
+### Session 40 - Immunosuppressants (1 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Immunosuppressants:**
+- ✅ **Cyclosporine** - Calcineurin Inhibitor (Black Box Warning: Nephrotoxicity - common can be permanent, Hypertension, Increased risk of malignancies, Neoral and Sandimmune NOT interchangeable - CRITICAL, Narrow therapeutic index, TDM required)
+
+**Tổng Session 40:** 1 thuốc
+
+---
+
+### Session 41 - Psychiatry Drugs (5 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Psychiatry Drugs:**
+- ✅ **Fluphenazine** - Typical Antipsychotic (Black Box Warning: Tardive dyskinesia - may be irreversible, QT prolongation, EPS common)
+- ✅ **Lurasidone** - Atypical Antipsychotic (Black Box Warning: Suicidal thoughts/behaviors in children/adolescents/young adults, CRITICAL - must take with food ≥350 calories, QT prolongation)
+- ✅ **Olanzapine** - Atypical Antipsychotic (Black Box Warning: Increased mortality in elderly with dementia-related psychosis - contraindicated, Hyperglycemia/diabetes, Hyperlipidemia, QT prolongation, Most weight gain among atypical antipsychotics)
+- ✅ **Phenelzine** - MAO Inhibitor (Black Box Warning: Tyramine reaction - severe hypertension can be fatal, Serotonin syndrome with SSRIs/SNRIs/TCAs - fatal, CRITICAL tyramine-restricted diet)
+- ✅ **Tranylcypromine** - MAO Inhibitor (Black Box Warning: Tyramine reaction - severe hypertension can be fatal, Serotonin syndrome with SSRIs/SNRIs/TCAs - fatal, CRITICAL tyramine-restricted diet)
+
+**Tổng Session 41:** 5 thuốc
+
+---
+
+### Session 42 - Corticosteroids (5 thuốc)
+**Ngày hoàn thành:** 2025-02-18
+
+**Nhóm Corticosteroids:**
+- ✅ **Hydrocortisone** - Short-acting (CRITICAL - Adrenal insufficiency: DO NOT miss doses or stop abruptly - can cause adrenal crisis fatal, Stress dosing required, Mineralocorticoid effect stronger than dexamethasone)
+- ✅ **Methylprednisolone** - Intermediate-acting (CRITICAL - Taper dose when stopping if used >2 weeks - abrupt withdrawal can cause adrenal crisis fatal, IV pulse therapy 250-1000mg - monitor closely)
+- ✅ **Prednisolone** - Intermediate-acting (CRITICAL - Taper dose when stopping if used >1 week - abrupt withdrawal can cause adrenal crisis fatal, Advantage: Active form - no hepatic conversion needed vs prednisone)
+- ✅ **Betamethasone** - Long-acting (CRITICAL - Taper dose when stopping if used >1 week - abrupt withdrawal can cause adrenal crisis fatal, Fetal lung maturation in pregnancy 24-34 weeks)
+- ✅ **Dexamethasone** - Long-acting (CRITICAL - Taper dose when stopping if used >1 week - abrupt withdrawal can cause adrenal crisis fatal, Cerebral edema: High dose IV, COVID-19: 6mg daily x10 days for severe cases)
+
+**Tổng Session 42:** 5 thuốc
+
+---

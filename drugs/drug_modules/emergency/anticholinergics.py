@@ -22,7 +22,7 @@ ANTICHOLINERGICS_DRUGS = {
         'Khô miệng', 'Giãn đồng tử', 'Táo bón', 'Bí tiểu', 'Lú lẫn (người già)',
         'Tăng nhãn áp'], 'interactions': [
         'Các anticholinergics khác: tăng tác dụng',
-        'Digoxin: có thể tăng nồng độ digoxin'], 'pregnancy': 'C - An toàn',
+        'Digoxin: có thể tăng nồng độ digoxin'],
         'mechanism_of_action':
         'Anticholinergic (antimuscarinic). Kháng chọn lọc thụ thể muscarinic acetylcholine (M1-M5), ức chế tác dụng của acetylcholine. Tăng nhịp tim (ức chế vagal tone), giảm tiết (nước bọt, mồ hôi, dịch tiêu hóa, phế quản), giãn đồng tử và giảm co thắt cơ trơn (phế quản, ruột, bàng quang). Được dùng trong emergency để điều trị nhịp tim chậm có triệu chứng, block nhĩ thất, và như một chất giải độc trong quá liều organophosphate.'
         , 'monitoring': ['Nhịp tim (ECG monitoring - mục tiêu tăng nhịp tim)',
@@ -55,7 +55,7 @@ ANTICHOLINERGICS_DRUGS = {
         'Tăng tác dụng phụ: khô miệng nặng, bí tiểu, lú lẫn, tăng nhãn áp',
         'management':
         'Thận trọng khi dùng đồng thời. Giảm liều hoặc tránh dùng nếu có thể. Theo dõi dấu hiệu kháng cholinergic quá mức.'
-        }], 'moderate': [{'drug': 'Digoxin', 'mechanism':
+        }], 'mechanism':
         'Atropine có thể làm chậm nhu động ruột, tăng hấp thu digoxin.',
         'effect': 'Tăng nồng độ digoxin, tăng nguy cơ độc tính', 'management':
         'Theo dõi nồng độ digoxin và dấu hiệu độc tính digoxin. Điều chỉnh liều digoxin nếu cần.'
@@ -65,7 +65,7 @@ ANTICHOLINERGICS_DRUGS = {
         'Tăng tác dụng phụ kháng cholinergic: khô miệng, bí tiểu, lú lẫn',
         'management':
         'Thận trọng khi dùng đồng thời. Theo dõi dấu hiệu kháng cholinergic quá mức.'
-        }], 'minor': [{'drug': 'Ketamine', 'mechanism':
+        }], 'mechanism':
         'Atropine có thể làm tăng nhịp tim, có thể tương tác với ketamine.',
         'effect': 'Tăng nhịp tim', 'management':
         'Theo dõi nhịp tim khi dùng đồng thời.'}]},         'contraindications': {
@@ -135,7 +135,7 @@ ANTICHOLINERGICS_DRUGS = {
         'ACLS Guidelines - Bradycardia Management',
         'UpToDate - Atropine drug information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
-        'Lexicomp Online - Atropine Monograph'], 'last_updated': '2024-12-19',
+        'Lexicomp Online - Atropine Monograph'],
         'evidence_level':
         'A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         },

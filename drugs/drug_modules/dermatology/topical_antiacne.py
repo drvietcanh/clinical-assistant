@@ -115,7 +115,23 @@ TOPICAL_ANTIACNE_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in acne, rosacea, melasma)", "Signs of skin irritation (redness, dryness, peeling) - common at start"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Acne Treatment",
+                "AAD Guidelines - Rosacea Treatment",
+                "FDA Drug Information - Azelaic Acid",
+                "UpToDate - Acne Treatment"
+            ]
         },
 
         "Azelaic acid topical": {

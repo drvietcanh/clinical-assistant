@@ -60,7 +60,8 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
         'Tăng nguy cơ suy hô hấp nghiêm trọng, có thể tử vong. Tăng buồn ngủ, chóng mặt.'
         , 'management':
         'Giảm liều opioid hoặc gabapentin. Theo dõi chặt chẽ dấu hiệu suy hô hấp. Cảnh báo bệnh nhân về nguy cơ.'
-        }], 'moderate': [{'drug': 'Antacids (aluminum, magnesium)', 'mechanism':
+        }], 'moderate': [
+        {'drug': 'Antacids (aluminum, magnesium)', 'mechanism':
         'Giảm hấp thu gabapentin', 'effect':
         'Giảm nồng độ gabapentin, giảm hiệu quả', 'management':
         'Uống gabapentin cách xa antacids ít nhất 2 giờ.'}, {'drug':
@@ -130,14 +131,34 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
         , 'timing':
         'Chia liều 3 lần/ngày (sáng, trưa, tối). Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều. QUAN TRỌNG: Uống cách xa antacids ít nhất 2 giờ (giảm hấp thu).'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': ['Lexicomp - Gabapentin',
+        'compatibility': [], 'incompatibility': [],
+        }},         'references': {'primary_sources': ['Lexicomp - Gabapentin',
         'UpToDate - Gabapentin: Drug information',
         'FDA - Neurontin (gabapentin) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'last_updated': '2024-12-19', 'evidence_level':
+        ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }},
+        },
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': None,
+            'organ_toxicity': {'respiratory': 'Black Box Warning (respiratory depression with opioids/benzodiazepines)', 'neurological': 'Suicidal ideation, withdrawal'},
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Renal function (dose adjustment required)', 'Respiratory depression signs (with opioids/benzodiazepines)', 'Suicidal ideation', 'Withdrawal signs'],
+            'look_alike_sound_alike': ['Gabapentin', 'Pregabalin']
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - Respiratory Depression',
+            'AAN Guidelines - Epilepsy Treatment',
+            'AAN Guidelines - Neuropathic Pain',
+            'ILAE Guidelines - Antiepileptic Drugs'
+        ],
+        'last_updated': '2025-02-18'
+    },
     "Pregabalin": {'group': 'Neurology - Anticonvulsant (Alpha-2-delta ligand)',
         'vietnamese_name': 'Pregabalin, Lyrica', 'administration': ['PO'],
         'indications': [
@@ -197,7 +218,8 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
         'Tăng nguy cơ suy hô hấp nghiêm trọng, có thể tử vong. Tăng buồn ngủ, chóng mặt.'
         , 'management':
         'Giảm liều opioid hoặc pregabalin. Theo dõi chặt chẽ dấu hiệu suy hô hấp. Cảnh báo bệnh nhân về nguy cơ.'
-        }], 'moderate': [{'drug': 'Benzodiazepines', 'mechanism':
+        }], 'moderate': [
+        {'drug': 'Benzodiazepines', 'mechanism':
         'Tăng tác dụng ức chế hệ thần kinh trung ương', 'effect':
         'Tăng buồn ngủ, chóng mặt, suy hô hấp', 'management':
         'Giảm liều một trong hai thuốc. Theo dõi dấu hiệu suy hô hấp.'}, {
@@ -209,7 +231,8 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
         'Cả hai đều có thể gây phù ngoại biên', 'effect':
         'Tăng nguy cơ phù ngoại biên', 'management':
         'Theo dõi dấu hiệu phù. Có thể cần giảm liều hoặc ngừng một trong hai thuốc.'
-        }], 'minor': [{'drug': 'Lorazepam, Oxcarbazepine', 'mechanism':
+        }], 'minor': [
+        {'drug': 'Benzodiazepines (anxiolytics)', 'mechanism':
         'Tăng nhẹ tác dụng an thần', 'effect': 'Tăng nhẹ buồn ngủ, chóng mặt',
         'management': 'Theo dõi tác dụng phụ. Có thể cần giảm liều.'}]},
         'contraindications': {'tuyệt_đối': [
@@ -242,7 +265,7 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
         'Rối loạn hô hấp: suy hô hấp (hiếm, thường khi dùng với opioids/benzodiazepines)'
         , 'Rối loạn tiêu hóa: buồn nôn, nôn, tiêu chảy',
         'Triệu chứng khác: nhìn mờ, phù ngoại biên, co giật (khi ngừng đột ngột)'
-        ], 'antidote': 'Không có antidote đặc hiệu', 'treatment': [
+        ], 'treatment': [
         'Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần (quan trọng nếu dùng với opioids)'
         , 'Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)',
         'Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ',
@@ -259,14 +282,34 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
         , 'timing':
         'Chia liều 2-3 lần/ngày (thường 2 lần/ngày). Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều. QUAN TRỌNG: Không ngừng đột ngột - giảm liều dần dần trong ít nhất 1 tuần.'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [], 'notes': 'Chỉ có dạng uống'
-        }}, 'references': {'primary_sources': ['Lexicomp - Pregabalin',
+        'compatibility': [], 'incompatibility': [],
+        }},         'references': {'primary_sources': ['Lexicomp - Pregabalin',
         'UpToDate - Pregabalin: Drug information',
         'FDA - Lyrica (pregabalin) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'last_updated': '2024-12-19', 'evidence_level':
+        ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         },
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': None,
+            'organ_toxicity': {'respiratory': 'Black Box Warning (respiratory depression with opioids/benzodiazepines)', 'neurological': 'Suicidal ideation, dependence (controlled substance)'},
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Renal function (dose adjustment required)', 'Respiratory depression signs (with opioids/benzodiazepines)', 'Suicidal ideation', 'Dependence/abuse signs (controlled substance)', 'Withdrawal signs'],
+            'look_alike_sound_alike': ['Pregabalin', 'Gabapentin']
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - Respiratory Depression',
+            'FDA Black Box Warning - Controlled Substance (Schedule V)',
+            'AAN Guidelines - Epilepsy Treatment',
+            'AAN Guidelines - Neuropathic Pain',
+            'ILAE Guidelines - Antiepileptic Drugs'
+        ],
+        'last_updated': '2025-02-18',
         "reversal_agents": {
              "available": False,
              "agents": []

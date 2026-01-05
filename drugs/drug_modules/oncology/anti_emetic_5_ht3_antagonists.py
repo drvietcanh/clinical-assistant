@@ -66,7 +66,7 @@ ANTI_EMETIC_5_HT3_ANTAGONISTS_DRUGS = {
         'Chóng mặt', 'QT kéo dài (hiếm)'], 'antidote':
         'Không có antidote đặc hiệu', 'treatment': ['Ngừng thuốc',
         'Supportive care', 'Theo dõi ECG nếu có QT kéo dài',
-        'Điều trị táo bón nếu cần'], 'monitoring': 'ECG, dấu hiệu lâm sàng'},
+        'Điều trị táo bón nếu cần']'},
         'reversal_agents': None, 'administration_instructions': {'oral': {
         'with_food': 'Có thể uống với hoặc không thức ăn', 'timing':
         'Uống 30 phút - 1 giờ trước hóa trị'}, 'iv': {'reconstitution':
@@ -137,7 +137,7 @@ ANTI_EMETIC_5_HT3_ANTAGONISTS_DRUGS = {
         'Chóng mặt', 'QT kéo dài (hiếm)'], 'antidote':
         'Không có antidote đặc hiệu', 'treatment': ['Ngừng thuốc',
         'Supportive care', 'Theo dõi ECG nếu có QT kéo dài',
-        'Điều trị táo bón nếu cần'], 'monitoring': 'ECG, dấu hiệu lâm sàng'},
+        'Điều trị táo bón nếu cần']'},
         'reversal_agents': None, 'administration_instructions': {'oral': {
         'with_food': 'Không áp dụng', 'timing':
         'Không có dạng uống (chỉ có IV)'}, 'iv': {'reconstitution':

@@ -141,7 +141,22 @@ TOPICAL_RETINOIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in acne)", "Signs of skin irritation (redness, burning, dryness, peeling)", "Signs of photosensitivity", "Signs of excessive irritation (stop if too severe)"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Acne Treatment",
+                "FDA Drug Information - Adapalene",
+                "UpToDate - Acne Treatment"
+            ]
         },
 
         "Tazarotene": {
@@ -283,7 +298,23 @@ TOPICAL_RETINOIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Teratogenicity (category X) - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in acne, psoriasis)", "Signs of skin irritation (redness, burning, dryness, peeling)", "Signs of photosensitivity", "Pregnancy status (contraindicated in pregnancy) - CRITICAL"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Tazarotene and Pregnancy (Category X)",
+                "AAD Guidelines - Acne Treatment",
+                "AAD Guidelines - Psoriasis Treatment",
+                "FDA Drug Information - Tazarotene"
+            ]
         },
 
         "Tretinoin topical": {
@@ -460,7 +491,23 @@ TOPICAL_RETINOIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Teratogenicity (category X) - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in acne) - improvement after 4-8 weeks", "Signs of skin irritation (redness, burning, dryness, peeling) - common in first few weeks", "Signs of photosensitivity (redness, burning when exposed to sunlight)", "Signs of allergic reaction (rash, itching)", "Pregnancy status (contraindicated in pregnancy) - CRITICAL"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Tretinoin and Pregnancy (Category X)",
+                "AAD Guidelines - Acne Treatment",
+                "FDA Drug Information - Tretinoin Topical",
+                "ISMP High Alert Medications - Teratogenic Medications"
+            ]
         },
 
 }

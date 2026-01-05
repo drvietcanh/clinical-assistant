@@ -22,10 +22,33 @@ def render():
     # Enhanced header with Phase 1 components
     render_protocol_header(
         protocol_name="Meningitis / Encephalitis",
-        guideline_source="IDSA 2016",
+        guideline_source="IDSA 2016, IDSA 2017",
         show_version=True,
         show_evidence_summary=True
     )
+    
+    # IDSA Guidelines Summary
+    with st.expander("📚 IDSA 2016 Guidelines - Key Recommendations", expanded=False):
+        st.markdown("""
+        **IDSA 2016 Guidelines for Bacterial Meningitis:**
+        
+        **Class I Recommendations (Strong Evidence):**
+        - Empiric antibiotics within 1 hour of presentation
+        - Dexamethasone before or with first dose of antibiotics (adults with suspected pneumococcal meningitis)
+        - CSF analysis (cell count, glucose, protein, Gram stain, culture)
+        - Blood cultures before antibiotics
+        
+        **IDSA 2017 Guidelines for Viral Meningitis/Encephalitis:**
+        - Empiric acyclovir for suspected HSV encephalitis
+        - CSF PCR for HSV, enterovirus, arboviruses
+        - MRI brain for encephalitis evaluation
+        
+        **Key Updates:**
+        - Time to antibiotics: <1 hour critical
+        - Dexamethasone: 10mg IV q6h × 4 days (start before antibiotics)
+        - Empiric coverage: Vancomycin + Ceftriaxone (or Cefotaxime)
+        - Acyclovir: 10mg/kg IV q8h for HSV encephalitis
+        """)
     
     st.error("""
     **⚠️ CRITICAL: Meningitis/Encephalitis là cấp cứu thần kinh!**

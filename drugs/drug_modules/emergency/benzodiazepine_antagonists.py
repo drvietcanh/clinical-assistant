@@ -87,7 +87,7 @@ BENZODIAZEPINE_ANTAGONISTS_DRUGS = {
         'Bệnh nhân có bệnh tim mạch - hội chứng cai có thể gây tăng huyết áp, nhịp tim nhanh'
         ,
         'Ngộ độc hỗn hợp (nhiều thuốc) - không chắc chắn thành phần → không dùng flumazenil'
-        ]}, 'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
+        ], 'pregnancy_details':
         'Flumazenil là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Flumazenil có thể qua nhau thai. Tuy nhiên, trong quá liều benzodiazepine, lợi ích cứu sống mẹ (và thai nhi) vượt quá nguy cơ. Quá liều benzodiazepine có thể gây tử vong cho cả mẹ và thai nhi (ức chế hô hấp, thiếu oxy). Flumazenil được sử dụng trong cấp cứu ở phụ nữ có thai và được coi là an toàn khi lợi ích vượt quá nguy cơ.'
         , 'lactation': {'safety': 'Compatible', 'details':
         'Flumazenil có thời gian bán thải ngắn (41-79 phút) và bị chuyển hóa nhanh. Không có khả năng bài tiết vào sữa mẹ ở nồng độ đáng kể. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.'

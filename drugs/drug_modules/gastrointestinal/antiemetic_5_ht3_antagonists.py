@@ -6,7 +6,7 @@ Active module - contains all gastrointestinal drug data"""
 ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS = {
     "Ondansetron": {'group': 'Gastrointestinal - Antiemetic (5-HT3 Antagonist)',
         'vietnamese_name': 'Ondansetron, Zofran', 'administration': ['PO', 'IV',
-        'IM'], 'indications': ['Buồn nôn, nôn sau hóa trị',
+        'IM'], 'indications': [
         'Buồn nôn, nôn sau phẫu thuật', 'Buồn nôn, nôn do xạ trị',
         'Buồn nôn, nôn do nhiều nguyên nhân'], 'contraindications': [
         'Dị ứng ondansetron', 'QT kéo dài', 'Dùng với apomorphine'], 'dosage':
@@ -20,7 +20,7 @@ ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS = {
         'Chóng mặt', 'Táo bón', 'Mệt mỏi'], 'interactions': [
         'Apomorphine: chống chỉ định',
         'Thuốc QT kéo dài: tăng nguy cơ loạn nhịp',
-        'CYP2D6 inhibitors: tăng nồng độ ondansetron'], 'pregnancy': 'B',
+        'CYP2D6 inhibitors: tăng nồng độ ondansetron'],
         'mechanism_of_action':
         '5-HT3 (serotonin) receptor antagonist. Ức chế chọn lọc receptor 5-HT3 ở ngoại vi (dây thần kinh phế vị) và trung ương (chemoreceptor trigger zone trong area postrema). Ngăn cản tác dụng của serotonin, dẫn đến giảm nôn và buồn nôn. Được dùng trong dự phòng và điều trị nôn do hóa trị, xạ trị, và sau phẫu thuật. Hiệu quả hơn metoclopramide và không gây tác dụng phụ ngoại tháp như metoclopramide.'
         , 'monitoring': ['Tần suất nôn và buồn nôn',
@@ -95,7 +95,25 @@ ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS = {
         'Dextrose 5%'], 'incompatibility': [
         'Không pha với các thuốc khác trong cùng đường truyền'], 'notes':
         'Có thể tiêm IV trực tiếp chậm (2-5 phút) hoặc truyền. Chỉ dùng IV khi không uống được. Chuyển sang PO sớm nhất có thể.'
-        }}, 'references': {'primary_sources': ['FDA Drug Label - Ondansetron',
+        }},         'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['cardiac'],
+            'qt_prolongation': True,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['ECG'],
+            'look_alike_sound_alike': []
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - Nguy cơ QT kéo dài, có thể gây rối loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Nguy cơ tăng ở liều cao, hạ kali, hạ magie, suy gan.',
+            'ISMP High Alert Medications',
+            'ASCO Guidelines - Antiemetic therapy for chemotherapy-induced nausea and vomiting',
+            'WHO Guidelines - Essential medicines for supportive care'
+        ],
+        'references': {'primary_sources': ['FDA Drug Label - Ondansetron',
         'UpToDate - Ondansetron: Drug information', 'Micromedex - Ondansetron',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'FDA Safety Communication - Ondansetron QT prolongation (2012)'],

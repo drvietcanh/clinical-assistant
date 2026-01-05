@@ -170,29 +170,31 @@ ARBS = {
         ],
         "last_updated": "2025-02-18",
     },
-    "Candesartan": {
+    "Candesartan":     {
         "group": "Cardiovascular - ARB (Angiotensin Receptor Blocker)",
         "vietnamese_name": "Candesartan, Atacand",
-        "administration": ["PO"],
+        "administration": [
+            "PO"
+    ],
         "indications": [
             "Tăng huyết áp",
             "Suy tim (không dung nạp ACE inhibitor)",
             "Bảo vệ thận trong đái tháo đường"
-        ],
+    ],
         "contraindications": [
             "Dị ứng ARB",
             "Có thai",
             "Hẹp động mạch thận 2 bên"
-        ],
+    ],
         "dosage": {
             "adult_htn": "8-32mg x 1 lần/ngày",
             "adult_heart_failure": "4mg x 1 lần/ngày, tăng đến 32mg x 1 lần/ngày",
-            "notes": "Ít gây ho hơn ACE inhibitor. Khởi đầu 8mg/ngày."
+            "notes": "Ít gây ho hơn ACE inhibitor. Khởi đầu 8mg/ngày.",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Liều khởi đầu 4mg/ngày",
-            "under_30": "Thận trọng, theo dõi sát"
+            "under_30": "Thận trọng, theo dõi sát",
         },
         "side_effects": [
             "Ít tác dụng phụ hơn ACE inhibitor",
@@ -200,34 +202,34 @@ ARBS = {
             "Tăng kali máu (ít hơn ACE)",
             "Hạ huyết áp",
             "Chóng mặt"
-        ],
+    ],
         "interactions": [
             "Kali: tăng kali máu",
             "NSAID: giảm hiệu quả",
             "Lithium: tăng nồng độ lithium"
-        ],
+    ],
         "pregnancy": "D",
-        "mechanism_of_action": "Candesartan là prodrug (candesartan cilexetil), chuyển hóa thành candesartan (hoạt chất) trong đường tiêu hóa. Ức chế thụ thể angiotensin II type 1 (AT1), ngăn chặn tác dụng của angiotensin II (giãn mạch, giảm aldosterone). Ít gây ho hơn ACE inhibitor vì không ảnh hưởng đến bradykinin.",
+        "mechanism_of_action": """Candesartan là prodrug (candesartan cilexetil), chuyển hóa thành candesartan (hoạt chất) trong đường tiêu hóa. Ức chế thụ thể angiotensin II type 1 (AT1), ngăn chặn tác dụng của angiotensin II (giãn mạch, giảm aldosterone). Ít gây ho hơn ACE inhibitor vì không ảnh hưởng đến bradykinin.""",
         "monitoring": [
             "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
             "Kali máu định kỳ",
             "Huyết áp",
             "Dấu hiệu phù mạch (hiếm hơn ACE inhibitor)"
-        ],
+    ],
         "precautions": [
             "Khởi đầu với liều thấp (8mg/ngày), tăng dần",
             "Ưu điểm: ít gây ho hơn ACE inhibitor",
             "Theo dõi sát creatinine khi bắt đầu",
             "Tránh dùng với NSAID",
             "Ngừng ngay nếu có phù mạch"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "9 giờ",
             "onset": "2-4 giờ",
             "duration": "24 giờ",
             "protein_binding": ">99%",
             "metabolism": "Candesartan cilexetil chuyển hóa thành candesartan trong đường tiêu hóa",
-            "clearance": "Chủ yếu qua thận (60%) và gan (40%)"
+            "clearance": "Chủ yếu qua thận (60%) và gan (40%)",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
         "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi.",
@@ -236,16 +238,19 @@ ARBS = {
                 "FDA Drug Label - Atacand (candesartan)",
                 "UpToDate - Candesartan: Drug Information",
                 "CHARM Study - The Lancet"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "High - CHARM Study showing benefit in heart failure"
+            "evidence_level": "High - CHARM Study showing benefit in heart failure",
         },
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate"}
+            "organ_toxicity": {
+                "metabolic": "Moderate (hyperkalemia)",
+                "renal": "Moderate",
+            },
         },
         "guideline_tags": [
             "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
@@ -253,63 +258,83 @@ ARBS = {
             "CHARM Study - Heart Failure",
             "ACC/AHA Guidelines - Hypertension",
             "WHO Essential Medicines List"
-        ],
+    ],
         "last_updated": "2025-02-18",
         "drug_interactions": {
             "major": [],
             "moderate": [],
-            "minor": []
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
-            "lactation_details": ""
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
         },
         "hepatic_adjustment": {
             "mild": "",
             "moderate": "",
-            "severe": ""
+            "severe": "",
+            "notes": "",
         },
         "overdose_management": {
             "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "antidote": "",
+            "treatment": [],
+            "monitoring": "",
         },
         "reversal_agents": {
             "available": False,
             "agents": [],
-            "notes": ""
+            "notes": "",
         },
         "administration_instructions": {
             "preparation": "",
             "administration": "",
-            "monitoring": []
+            "monitoring": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với candesartan hoặc ARB",
+                "Phụ nữ có thai (tháng 2-3, category D)",
+                "Hẹp động mạch thận hai bên hoặc một bên ở bệnh nhân một thận"
+    ],
+            "tương_đối": [
+                "Suy thận nặng (theo dõi chức năng thận)",
+                "Hạ huyết áp",
+                "Tăng kali máu",
+                "Hẹp động mạch thận một bên"
+    ],
         },
     },
-
-    "Irbesartan": {
+    "Irbesartan":     {
         "group": "Cardiovascular - ARB (Angiotensin Receptor Blocker)",
         "vietnamese_name": "Irbesartan, Avapro",
-        "administration": ["PO"],
+        "administration": [
+            "PO"
+    ],
         "indications": [
             "Tăng huyết áp",
             "Bảo vệ thận trong đái tháo đường type 2 với protein niệu",
             "Bệnh thận đái tháo đường"
-        ],
+    ],
         "contraindications": [
             "Dị ứng ARB",
             "Có thai",
             "Hẹp động mạch thận 2 bên"
-        ],
+    ],
         "dosage": {
             "adult_htn": "150-300mg x 1 lần/ngày",
             "adult_diabetic_nephropathy": "300mg x 1 lần/ngày",
-            "notes": "Ít gây ho hơn ACE inhibitor. Khởi đầu 150mg/ngày."
+            "notes": "Ít gây ho hơn ACE inhibitor. Khởi đầu 150mg/ngày.",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Liều khởi đầu 75mg/ngày",
-            "under_30": "Thận trọng, theo dõi sát"
+            "under_30": "Thận trọng, theo dõi sát",
         },
         "side_effects": [
             "Ít tác dụng phụ hơn ACE inhibitor",
@@ -318,21 +343,21 @@ ARBS = {
             "Hạ huyết áp",
             "Chóng mặt",
             "Mệt mỏi"
-        ],
+    ],
         "interactions": [
             "Kali: tăng kali máu",
             "NSAID: giảm hiệu quả",
             "Lithium: tăng nồng độ lithium"
-        ],
+    ],
         "pregnancy": "D",
-        "mechanism_of_action": "Ức chế thụ thể angiotensin II type 1 (AT1), ngăn chặn tác dụng của angiotensin II (giãn mạch, giảm aldosterone). Ít gây ho hơn ACE inhibitor vì không ảnh hưởng đến bradykinin. Không phải prodrug (tác dụng trực tiếp). Đặc biệt hiệu quả trong bảo vệ thận ở bệnh nhân đái tháo đường type 2 với protein niệu.",
+        "mechanism_of_action": """Ức chế thụ thể angiotensin II type 1 (AT1), ngăn chặn tác dụng của angiotensin II (giãn mạch, giảm aldosterone). Ít gây ho hơn ACE inhibitor vì không ảnh hưởng đến bradykinin. Không phải prodrug (tác dụng trực tiếp). Đặc biệt hiệu quả trong bảo vệ thận ở bệnh nhân đái tháo đường type 2 với protein niệu.""",
         "monitoring": [
             "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
             "Kali máu định kỳ",
             "Huyết áp",
             "Protein niệu (nếu dùng cho bệnh thận đái tháo đường)",
             "eGFR (nếu dùng cho bệnh thận đái tháo đường)"
-        ],
+    ],
         "precautions": [
             "Khởi đầu với liều thấp (150mg/ngày), tăng dần",
             "Ưu điểm: ít gây ho hơn ACE inhibitor",
@@ -340,14 +365,14 @@ ARBS = {
             "Tránh dùng với NSAID",
             "Ngừng ngay nếu có phù mạch",
             "Đặc biệt hiệu quả trong bệnh thận đái tháo đường với protein niệu"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "11-15 giờ",
             "onset": "1-2 giờ",
             "duration": "24 giờ",
             "protein_binding": "90%",
             "metabolism": "Chuyển hóa qua gan (CYP2C9)",
-            "clearance": "Chủ yếu qua gan (80%) và thận (20%)"
+            "clearance": "Chủ yếu qua gan (80%) và thận (20%)",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
         "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi.",
@@ -357,16 +382,19 @@ ARBS = {
                 "UpToDate - Irbesartan: Drug Information",
                 "IRMA-2 Study - The New England Journal of Medicine",
                 "IDNT Study - The New England Journal of Medicine"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "High - IRMA-2, IDNT studies showing benefit in diabetic nephropathy"
+            "evidence_level": "High - IRMA-2, IDNT studies showing benefit in diabetic nephropathy",
         },
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate"}
+            "organ_toxicity": {
+                "metabolic": "Moderate (hyperkalemia)",
+                "renal": "Moderate",
+            },
         },
         "guideline_tags": [
             "KDIGO Guidelines - Diabetic Kidney Disease",
@@ -374,40 +402,57 @@ ARBS = {
             "IDNT Study - Diabetic Nephropathy",
             "ACC/AHA Guidelines - Hypertension",
             "WHO Essential Medicines List"
-        ],
+    ],
         "last_updated": "2025-02-18",
         "drug_interactions": {
             "major": [],
             "moderate": [],
-            "minor": []
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
-            "lactation_details": ""
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
         },
         "hepatic_adjustment": {
             "mild": "",
             "moderate": "",
-            "severe": ""
+            "severe": "",
+            "notes": "",
         },
         "overdose_management": {
             "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "antidote": "",
+            "treatment": [],
+            "monitoring": "",
         },
         "reversal_agents": {
             "available": False,
             "agents": [],
-            "notes": ""
+            "notes": "",
         },
         "administration_instructions": {
             "preparation": "",
             "administration": "",
-            "monitoring": []
+            "monitoring": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với irbesartan hoặc ARB",
+                "Phụ nữ có thai (tháng 2-3, category D)",
+                "Hẹp động mạch thận hai bên hoặc một bên ở bệnh nhân một thận"
+    ],
+            "tương_đối": [
+                "Suy thận nặng (theo dõi chức năng thận)",
+                "Hạ huyết áp",
+                "Tăng kali máu"
+    ],
         },
     },
-
     "Losartan": {
         "group": "Cardiovascular - ARB (Angiotensin Receptor Blocker)",
         "vietnamese_name": "Losartan, Cozaar",
@@ -971,31 +1016,33 @@ ARBS = {
         "last_updated": "2025-02-18",
     },
 
-    "Valsartan": {
+    "Valsartan":     {
         "group": "Cardiovascular - ARB (Angiotensin Receptor Blocker)",
         "vietnamese_name": "Valsartan, Diovan",
-        "administration": ["PO"],
+        "administration": [
+            "PO"
+    ],
         "indications": [
             "Tăng huyết áp",
             "Suy tim (không dung nạp ACE inhibitor)",
             "Sau nhồi máu cơ tim",
             "Bảo vệ thận trong đái tháo đường"
-        ],
+    ],
         "contraindications": [
             "Dị ứng ARB",
             "Có thai",
             "Hẹp động mạch thận 2 bên"
-        ],
+    ],
         "dosage": {
             "adult_htn": "80-320mg x 1 lần/ngày",
             "adult_heart_failure": "40mg x 2 lần/ngày, tăng đến 160mg x 2 lần/ngày",
             "adult_post_mi": "20mg x 2 lần/ngày, tăng đến 160mg x 2 lần/ngày",
-            "notes": "Ít gây ho hơn ACE inhibitor"
+            "notes": "Ít gây ho hơn ACE inhibitor",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Liều khởi đầu 40mg/ngày",
-            "under_30": "Thận trọng, theo dõi sát"
+            "under_30": "Thận trọng, theo dõi sát",
         },
         "side_effects": [
             "Ít tác dụng phụ hơn ACE inhibitor",
@@ -1003,45 +1050,51 @@ ARBS = {
             "Tăng kali máu (ít hơn ACE)",
             "Hạ huyết áp",
             "Chóng mặt"
-        ],
+    ],
         "interactions": [
             "Kali: tăng kali máu",
             "NSAID: giảm hiệu quả",
             "Lithium: tăng nồng độ lithium"
-        ],
+    ],
         "pregnancy": "D - Chống chỉ định trong thai kỳ",
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": ["hyperkalemia", "renal_impairment", "angioedema"]
+            "organ_toxicity": {
+                "metabolic": "Moderate (hyperkalemia)",
+                "renal": "Moderate",
+            },
         },
         "guideline_tags": [
-            "ACC/AHA/HFSA HFrEF ARB Class I/IIa (ACEi intolerant)",
-            "ESC HFrEF ARB Class I/IIa (ACEi intolerant)"
-        ],
-        "mechanism_of_action": "Ức chế thụ thể angiotensin II type 1 (AT1), ngăn chặn tác dụng của angiotensin II (giãn mạch, giảm aldosterone). Ít gây ho hơn ACE inhibitor vì không ảnh hưởng đến bradykinin.",
+            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+            "ESC Guidelines - Heart Failure",
+            "ACC/AHA Guidelines - Hypertension",
+            "VALIANT Trial - Post-Myocardial Infarction",
+            "WHO Essential Medicines List"
+    ],
+        "mechanism_of_action": """Ức chế thụ thể angiotensin II type 1 (AT1), ngăn chặn tác dụng của angiotensin II (giãn mạch, giảm aldosterone). Ít gây ho hơn ACE inhibitor vì không ảnh hưởng đến bradykinin.""",
         "monitoring": [
             "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
             "Kali máu định kỳ",
             "Huyết áp",
             "Dấu hiệu phù mạch (hiếm hơn ACE inhibitor)"
-        ],
+    ],
         "precautions": [
             "Khởi đầu với liều thấp, tăng dần",
             "Ưu điểm: ít gây ho hơn ACE inhibitor",
             "Theo dõi sát creatinine khi bắt đầu",
             "Tránh dùng với NSAID",
             "Ngừng ngay nếu có phù mạch"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "6 giờ",
             "onset": "2 giờ",
             "duration": "24 giờ",
             "protein_binding": "95%",
             "metabolism": "Chuyển hóa ít",
-            "clearance": "Chủ yếu qua thận (70%), cần điều chỉnh thận"
+            "clearance": "Chủ yếu qua thận (70%), cần điều chỉnh thận",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
         "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi.",
@@ -1050,57 +1103,48 @@ ARBS = {
                 "FDA Drug Label - Valsartan (Diovan)",
                 "UpToDate - Valsartan: Drug Information",
                 "VALIANT Trial - The New England Journal of Medicine"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A"
+            "evidence_level": "A",
         },
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate"}
-        },
-        "guideline_tags": [
-            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
-            "ESC Guidelines - Heart Failure",
-            "ACC/AHA Guidelines - Hypertension",
-            "VALIANT Trial - Post-Myocardial Infarction",
-            "WHO Essential Medicines List"
-        ],
         "last_updated": "2025-02-18",
         "drug_interactions": {
             "major": [],
             "moderate": [],
-            "minor": []
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
-            "lactation_details": ""
+            "lactation": {
+                "safety": "",
+                "details": "",
+                "recommendation": "",
+            },
         },
         "hepatic_adjustment": {
             "mild": "",
             "moderate": "",
-            "severe": ""
+            "severe": "",
+            "notes": "",
         },
         "overdose_management": {
             "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "antidote": "",
+            "treatment": [],
+            "monitoring": "",
         },
         "reversal_agents": {
             "available": False,
             "agents": [],
-            "notes": ""
+            "notes": "",
         },
         "administration_instructions": {
             "preparation": "",
             "administration": "",
-            "monitoring": []
+            "monitoring": [],
         },
     },
-
 }
 
 __all__ = ['ARBS']

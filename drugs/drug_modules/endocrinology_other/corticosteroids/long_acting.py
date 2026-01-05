@@ -3,7 +3,7 @@
 LONG_ACTING = {
     "Betamethasone": {'group': 'Endocrinology - Corticosteroid', 'vietnamese_name':
     'Betamethasone, Celestone', 'administration': ['PO', 'IV', 'IM',
-    'Topical'], 'indications': ['Viêm khớp dạng thấp', 'Hen phế quản',
+    'Topical'], 'Hen phế quản',
     'Bệnh tự miễn', 'Viêm da', 'Thúc đẩy trưởng thành phổi thai nhi (IM)'],
     'contraindications': ['Nhiễm nấm hệ thống không điều trị', 'Dị ứng'],
     'dosage': {'adult_po': '0.6-7.2mg/ngày chia 1-4 lần', 'adult_im':
@@ -13,7 +13,7 @@ LONG_ACTING = {
     'Tăng huyết áp', 'Loãng xương', 'Ức chế miễn dịch', 'Tăng cân',
     'Loét dạ dày'], 'interactions': [
     'Warfarin: thay đổi tác dụng chống đông',
-    'NSAID: tăng nguy cơ loét dạ dày'], 'pregnancy': 'C',
+    'NSAID: tăng nguy cơ loét dạ dày'],
     'mechanism_of_action':
     'Glucocorticoid tổng hợp tác dụng dài và mạnh (tương đương 25-30mg hydrocortisone, mạnh hơn dexamethasone một chút). Gắn với glucocorticoid receptor trong tế bào, điều hòa biểu hiện gen, ức chế tổng hợp các cytokine gây viêm (TNF-α, IL-1, IL-6), giảm di chuyển bạch cầu đến vị trí viêm. Ức chế miễn dịch mạnh. Có tác dụng mineralocorticoid tối thiểu (ít hơn hydrocortisone và dexamethasone). Được dùng trong nhiều tình trạng viêm và tự miễn. Thường dùng để thúc đẩy trưởng thành phổi ở thai nhi (khi có nguy cơ sinh non).'
     , 'monitoring': ['Đường huyết (tăng đường huyết)',
@@ -58,7 +58,7 @@ LONG_ACTING = {
     'Thay đổi INR (có thể tăng hoặc giảm), tăng nguy cơ chảy máu hoặc huyết khối'
     , 'management':
     'Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng betamethasone. Điều chỉnh liều warfarin nếu cần.'
-    }], 'moderate': [{'drug': 'NSAID (Ibuprofen, Naproxen, Diclofenac)',
+    }]], 'moderate': [{'drug': 'Unknown',
     'mechanism':
     'Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.', 'effect':
     'Tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa nghiêm trọng',
@@ -74,7 +74,7 @@ LONG_ACTING = {
     'Tăng ức chế miễn dịch, tăng nguy cơ nhiễm trùng, tăng nguy cơ độc tính',
     'management':
     'Giảm liều cả hai thuốc. Theo dõi chức năng thận, dấu hiệu nhiễm trùng.'
-    }], 'minor': [{'drug': 'Diuretics (Thiazide, Furosemide)', 'mechanism':
+    }], 'mechanism':
     'Corticosteroid gây giữ natri, có thể đối kháng tác dụng lợi tiểu.',
     'effect': 'Giảm hiệu quả lợi tiểu, có thể gây giữ nước', 'management':
     'Theo dõi cân nặng, dấu hiệu giữ nước. Có thể cần điều chỉnh liều lợi tiểu.'
@@ -166,7 +166,47 @@ LONG_ACTING = {
     'Endocrine Society Guidelines - Corticosteroid Use'], 'last_updated':
     '2025-02-03', 'evidence_level':
     'A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-    }},
+    },
+    'risk_flags': {
+        'high_alert': True,
+        'narrow_therapeutic_index': False,
+        'icu_critical_care_only': False,
+        'bleeding_risk': False,
+        'organ_toxicity': {
+            'metabolic': 'Hyperglycemia, diabetes mellitus (common)',
+            'cardiovascular': 'Hypertension, fluid retention',
+            'gastrointestinal': 'Peptic ulcer, GI bleeding (common)',
+            'immunologic': 'Immunosuppression (increased infection risk, masks infection symptoms) - CRITICAL',
+            'endocrine': 'Adrenal suppression (if abrupt withdrawal after >1 week - can be fatal) - CRITICAL',
+            'skeletal': 'Osteoporosis (with long-term use)',
+            'ophthalmic': 'Glaucoma, cataracts (with long-term use)',
+            'psychiatric': 'Psychosis, mood changes (especially with high doses)',
+            'obstetric': 'Fetal lung maturation (used in pregnancy 24-34 weeks for preterm delivery risk)'
+        },
+        'qt_prolongation': False,
+        'hepatotoxicity': False,
+        'nephrotoxicity': False,
+        'requires_monitoring': [
+            'CRITICAL - Taper dose when stopping (if used >1 week) - abrupt withdrawal can cause adrenal crisis (fatal)',
+            'Blood glucose (hyperglycemia risk - common)',
+            'Blood pressure (hypertension)',
+            'Electrolytes (sodium, potassium)',
+            'Signs of infection (immunosuppression masks symptoms) - CRITICAL',
+            'GI signs (peptic ulcer, GI bleeding) - common',
+            'Psychiatric signs (psychosis, mood changes)',
+            'In pregnancy: Fetal monitoring if used for lung maturation (24-34 weeks)',
+            'CYP3A4 interactions (inhibitors increase levels, inducers decrease levels)'
+        ],
+        'look_alike_sound_alike': ['Betamethasone', 'Celestone', 'Dexamethasone']
+    },
+    'guideline_tags': [
+        'ACOG Guidelines - Antenatal Corticosteroid Therapy for Fetal Maturation',
+        'Endocrine Society Guidelines - Corticosteroid Use',
+        'ISMP High Alert Medications',
+        'WHO Essential Medicines List'
+    ],
+    'last_updated': '2025-02-18'
+    },
     "Dexamethasone": {'group': 'Endocrinology - Corticosteroid', 'vietnamese_name':
     'Dexamethasone, Decadron', 'administration': ['PO', 'IV', 'IM'],
     'indications': ['Viêm khớp dạng thấp', 'Hen phế quản', 'Phù não',
@@ -183,7 +223,7 @@ LONG_ACTING = {
     'Phù', 'Khó ngủ'], 'interactions': [
     'Warfarin: thay đổi tác dụng chống đông',
     'NSAID: tăng nguy cơ loét dạ dày', 'Insulin/OAD: tăng đường huyết',
-    'Vaccines: giảm hiệu quả vaccine'], 'pregnancy': 'C',
+    'Vaccines: giảm hiệu quả vaccine'],
     'mechanism_of_action':
     'Glucocorticoid tổng hợp tác dụng dài và mạnh (tương đương 25-30mg hydrocortisone). Gắn với glucocorticoid receptor trong tế bào, điều hòa biểu hiện gen, ức chế tổng hợp các cytokine gây viêm (TNF-α, IL-1, IL-6), giảm di chuyển bạch cầu đến vị trí viêm, ức chế phospholipase A2 → giảm prostaglandin và leukotriene. Ức chế miễn dịch mạnh. Tác dụng chống viêm và ức chế miễn dịch mạnh hơn hydrocortisone. Thời gian bán thải dài (36-72 giờ) do ít gắn với protein hơn hydrocortisone.'
     , 'monitoring': [
@@ -233,7 +273,7 @@ LONG_ACTING = {
     'Thay đổi INR (có thể tăng hoặc giảm), tăng nguy cơ chảy máu hoặc huyết khối'
     , 'management':
     'Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng dexamethasone. Điều chỉnh liều warfarin nếu cần.'
-    }], 'moderate': [{'drug': 'NSAID (Ibuprofen, Naproxen, Diclofenac)',
+    }]], 'moderate': [{'drug': 'Unknown',
     'mechanism':
     'Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.', 'effect':
     'Tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa nghiêm trọng',
@@ -249,7 +289,7 @@ LONG_ACTING = {
     'Tăng ức chế miễn dịch, tăng nguy cơ nhiễm trùng, tăng nguy cơ độc tính',
     'management':
     'Giảm liều cả hai thuốc. Theo dõi chức năng thận, dấu hiệu nhiễm trùng.'
-    }], 'minor': [{'drug': 'Diuretics (Thiazide, Furosemide)', 'mechanism':
+    }], 'mechanism':
     'Corticosteroid gây giữ natri, có thể đối kháng tác dụng lợi tiểu.',
     'effect': 'Giảm hiệu quả lợi tiểu, có thể gây giữ nước', 'management':
     'Theo dõi cân nặng, dấu hiệu giữ nước. Có thể cần điều chỉnh liều lợi tiểu.'
@@ -338,5 +378,46 @@ LONG_ACTING = {
     'Endocrine Society Guidelines - Corticosteroid Use'], 'last_updated':
     '2025-02-03', 'evidence_level':
     'A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-    }},
+    },
+    'risk_flags': {
+        'high_alert': True,
+        'narrow_therapeutic_index': False,
+        'icu_critical_care_only': False,
+        'bleeding_risk': False,
+        'organ_toxicity': {
+            'metabolic': 'Hyperglycemia, diabetes mellitus (common)',
+            'cardiovascular': 'Hypertension, fluid retention',
+            'gastrointestinal': 'Peptic ulcer, GI bleeding (common)',
+            'immunologic': 'Immunosuppression (increased infection risk, masks infection symptoms) - CRITICAL',
+            'endocrine': 'Adrenal suppression (if abrupt withdrawal after >1 week - can be fatal) - CRITICAL',
+            'skeletal': 'Osteoporosis (with long-term use)',
+            'ophthalmic': 'Glaucoma, cataracts (with long-term use)',
+            'psychiatric': 'Psychosis, mood changes (especially with high doses)',
+            'neurological': 'Cerebral edema treatment (high dose IV)'
+        },
+        'qt_prolongation': False,
+        'hepatotoxicity': False,
+        'nephrotoxicity': False,
+        'requires_monitoring': [
+            'CRITICAL - Taper dose when stopping (if used >1 week) - abrupt withdrawal can cause adrenal crisis (fatal)',
+            'Blood glucose (hyperglycemia risk - common)',
+            'Blood pressure (hypertension)',
+            'Electrolytes (sodium, potassium)',
+            'Signs of infection (immunosuppression masks symptoms) - CRITICAL',
+            'GI signs (peptic ulcer, GI bleeding) - common',
+            'Psychiatric signs (psychosis, mood changes)',
+            'Cerebral edema: High dose IV (10mg IV x1, then 4mg IV q6h) - monitor closely',
+            'COVID-19: 6mg daily x10 days (IV or PO) - for severe cases only',
+            'CYP3A4 interactions (inhibitors increase levels, inducers decrease levels)'
+        ],
+        'look_alike_sound_alike': ['Dexamethasone', 'Decadron', 'Betamethasone']
+    },
+    'guideline_tags': [
+        'Endocrine Society Guidelines - Corticosteroid Use',
+        'WHO Guidelines - COVID-19 Treatment (Severe Cases)',
+        'ISMP High Alert Medications',
+        'WHO Essential Medicines List'
+    ],
+    'last_updated': '2025-02-18'
+    },
 }

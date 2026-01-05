@@ -21,10 +21,38 @@ def render():
     # Enhanced header with Phase 1 components
     render_protocol_header(
         protocol_name="AKI Management",
-        guideline_source="KDIGO 2012",
+        guideline_source="KDIGO 2012, KDIGO 2024",
         show_version=True,
         show_evidence_summary=True
     )
+    
+    # KDIGO Guidelines Summary
+    with st.expander("📚 KDIGO 2012 & 2024 Guidelines - Key Recommendations", expanded=False):
+        st.markdown("""
+        **KDIGO 2012 Guidelines for AKI:**
+        
+        **AKI Definition (KDIGO):**
+        - ↑ SCr ≥0.3 mg/dL (≥26.5 µmol/L) within 48h OR
+        - ↑ SCr ≥1.5× baseline within 7 days OR
+        - Urine output <0.5 mL/kg/h for 6h
+        
+        **KDIGO 2024 Updates:**
+        - Expanded AKI staging and management
+        - Enhanced RRT timing recommendations
+        - Updated fluid management strategies
+        
+        **Class I Recommendations:**
+        - Identify and treat reversible causes
+        - Optimize volume status and hemodynamics
+        - Avoid nephrotoxic agents
+        - Consider RRT for Stage 3 AKI or complications
+        
+        **RRT Indications:**
+        - Refractory fluid overload
+        - Refractory hyperkalemia
+        - Severe acidosis (pH <7.15)
+        - Uremic complications
+        """)
     
     st.info("""
     **AKI Definition (KDIGO):**

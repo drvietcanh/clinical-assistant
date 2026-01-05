@@ -434,6 +434,22 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Tendon rupture (rare, if systemic absorption occurs)", "QT prolongation (rare, if systemic absorption occurs)"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in redness, discharge, pain)", "Signs of eye irritation (increased redness, burning, itching)", "Visual acuity (temporary blurring after application)", "Signs of infection (pus, increased redness/swelling) - if no improvement"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Bacterial Keratitis",
+                "AAO Guidelines - Bacterial Conjunctivitis",
+                "FDA Drug Information - Ciprofloxacin Eye Drops",
+                "UpToDate - Bacterial Eye Infections"
+            ],
             "black_box_warnings": "Cần xem xét black box warnings",
             "reversal_agents": {
                 "available": False,
@@ -577,6 +593,22 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Antibiotic resistance (if used long-term)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in redness, discharge, pain)", "Signs of eye irritation (increased redness, burning, itching)", "Visual acuity (temporary blurring after application)", "Signs of infection (pus, increased redness/swelling) - if no improvement"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Bacterial Conjunctivitis",
+                "AAO Guidelines - Ophthalmia Neonatorum",
+                "FDA Drug Information - Erythromycin Eye Ointment",
+                "UpToDate - Bacterial Eye Infections"
+            ],
             "black_box_warnings": "Cần xem xét black box warnings",
             "reversal_agents": {
                 "available": False,
@@ -879,6 +911,23 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Nephrotoxicity (if systemic absorption occurs) - CRITICAL", "Ototoxicity (if systemic absorption occurs) - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["Clinical response (reduction in redness, discharge, pain)", "Signs of eye irritation (increased redness, burning, itching)", "Visual acuity (temporary blurring after application)", "Renal function (if systemic absorption) - CRITICAL", "Hearing (if systemic absorption) - CRITICAL"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Bacterial Conjunctivitis",
+                "AAO Guidelines - Bacterial Keratitis",
+                "FDA Black Box Warning - Gentamicin and Nephrotoxicity/Ototoxicity",
+                "FDA Drug Information - Gentamicin Eye Drops",
+                "ISMP High Alert Medications - Aminoglycosides"
+            ],
             "black_box_warnings": "Cần xem xét black box warnings",
             "reversal_agents": {
                 "available": False,
@@ -1013,6 +1062,22 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Tendon rupture (rare, if systemic absorption occurs)", "QT prolongation (rare, if systemic absorption occurs)"],
+                "qt_prolongation": True,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in redness, discharge, pain)", "Signs of eye irritation (increased redness, burning, itching)", "Visual acuity (temporary blurring after application)", "Signs of infection (pus, increased redness/swelling) - if no improvement"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Bacterial Conjunctivitis",
+                "AAO Guidelines - Bacterial Keratitis",
+                "FDA Drug Information - Moxifloxacin Eye Drops",
+                "UpToDate - Bacterial Eye Infections"
+            ],
             "black_box_warnings": "Cần xem xét black box warnings",
             "reversal_agents": {
                 "available": False,
@@ -1160,7 +1225,23 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Antibiotic resistance (if used long-term)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in redness, discharge, pain)", "Signs of eye irritation (increased redness, burning, itching)", "Visual acuity (temporary blurring after application)", "Signs of infection (pus, increased redness/swelling) - if no improvement"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Bacterial Conjunctivitis",
+                "AAO Guidelines - Bacterial Keratitis",
+                "FDA Drug Information - Polymyxin B/Trimethoprim Eye Drops",
+                "UpToDate - Bacterial Eye Infections"
+            ]
         },
 
         "Tobramycin eye drops": {
@@ -1292,6 +1373,23 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Nephrotoxicity (if systemic absorption occurs) - CRITICAL", "Ototoxicity (if systemic absorption occurs) - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["Clinical response (reduction in redness, discharge, pain)", "Signs of eye irritation (increased redness, burning, itching)", "Visual acuity (temporary blurring after application)", "Renal function (if systemic absorption) - CRITICAL", "Hearing (if systemic absorption) - CRITICAL"]
+            },
+            "guideline_tags": [
+                "AAO Guidelines - Bacterial Conjunctivitis",
+                "AAO Guidelines - Bacterial Keratitis",
+                "FDA Black Box Warning - Tobramycin and Nephrotoxicity/Ototoxicity",
+                "FDA Drug Information - Tobramycin Eye Drops",
+                "ISMP High Alert Medications - Aminoglycosides"
+            ],
             "black_box_warnings": "Cần xem xét black box warnings",
             "reversal_agents": {
                 "available": False,

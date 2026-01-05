@@ -1260,7 +1260,41 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "psychiatric": "Black Box Warning - Suicidal ideation and behavior - CRITICAL",
+                    "immunologic": "Black Box Warning - Serious infections (tuberculosis reactivation, fungal infections) - CRITICAL",
+                    "gastrointestinal": "Black Box Warning - Inflammatory bowel disease (IBD), especially Crohn's disease - CRITICAL"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Suicidal ideation and behavior signs - CRITICAL (monitor mood, behavior closely, discontinue if suicidal ideation/behavior occurs)",
+                    "Black Box Warning - Tuberculosis screening (PPD or IGRA) before treatment - CRITICAL",
+                    "Black Box Warning - Signs of serious infections - CRITICAL (discontinue if serious infection occurs)",
+                    "Black Box Warning - Signs of IBD (especially Crohn's disease) - CRITICAL",
+                    "Signs of fungal infections (Candida - increased risk)",
+                    "Injection site reactions (common)",
+                    "Hepatic function (ALT, AST) - every 3-6 months",
+                    "CBC - every 3-6 months",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Brodalumab", "Siliq"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Suicidal Ideation and Behavior",
+                "FDA Black Box Warning - Serious Infections",
+                "FDA Black Box Warning - Inflammatory Bowel Disease",
+                "AAD Guidelines - Psoriasis",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Cemiplimab": {
@@ -1429,7 +1463,46 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "pulmonary": "Black Box Warning - Immune-mediated pneumonitis (can be fatal) - CRITICAL",
+                    "gastrointestinal": "Black Box Warning - Immune-mediated colitis (can be fatal) - CRITICAL",
+                    "hepatic": "Black Box Warning - Immune-mediated hepatitis (can be fatal) - CRITICAL",
+                    "endocrine": "Black Box Warning - Immune-mediated endocrinopathies (thyroiditis, hypophysitis, adrenal insufficiency - may be permanent) - CRITICAL",
+                    "cardiovascular": "Immune-mediated myocarditis (rare but serious)",
+                    "neurological": "Immune-mediated neuropathy",
+                    "dermatologic": "Immune-mediated dermatitis, rash"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Immune-related adverse events (irAEs) signs - CRITICAL (monitor closely, discontinue and treat immediately if Grade 3-4 irAEs)",
+                    "Black Box Warning - Pneumonitis signs (dyspnea, cough, chest pain) - CRITICAL (chest X-ray if symptoms, discontinue if suspected)",
+                    "Black Box Warning - Colitis signs (diarrhea, abdominal pain, bloody stools) - CRITICAL (discontinue if suspected, treat with corticosteroids/infliximab)",
+                    "Black Box Warning - Hepatitis signs (jaundice, fatigue, abdominal pain) - CRITICAL (ALT, AST, bilirubin every cycle, discontinue if ALT/AST >5x ULN)",
+                    "Black Box Warning - Endocrinopathies (TSH, T4, cortisol, glucose every cycle) - CRITICAL (may be permanent, requires hormone replacement)",
+                    "Myocarditis signs (chest pain, dyspnea, tachycardia) - troponin, ECG, echo if symptoms",
+                    "Infusion reactions (monitor during and after infusion)",
+                    "Renal function (creatinine, eGFR) - every cycle",
+                    "CBC - every cycle",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Cemiplimab", "Libtayo", "Pembrolizumab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Immune-Mediated Adverse Reactions",
+                "FDA Black Box Warning - Fetal Harm (Category D)",
+                "NCCN Guidelines - Cutaneous Squamous Cell Carcinoma",
+                "NCCN Guidelines - Non-Small Cell Lung Cancer",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Certolizumab pegol": {
@@ -1595,7 +1668,45 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "immunologic": "Black Box Warning - Serious infections (tuberculosis reactivation, opportunistic infections) - CRITICAL",
+                    "oncologic": "Black Box Warning - Increased risk of malignancies (lymphoma, skin cancer) - CRITICAL",
+                    "cardiovascular": "Black Box Warning - Heart failure (may worsen or cause new onset) - CRITICAL",
+                    "neurological": "Demyelinating disease (rare)",
+                    "hematologic": "Leukopenia, thrombocytopenia (rare)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Tuberculosis screening (PPD or IGRA) before treatment - CRITICAL",
+                    "Black Box Warning - Signs of serious infections (TB, opportunistic infections) - CRITICAL (discontinue if serious infection occurs)",
+                    "Black Box Warning - Signs of malignancies (lymphoma, skin cancer) - CRITICAL",
+                    "Black Box Warning - Signs of heart failure (dyspnea, edema, fatigue) - CRITICAL (discontinue if new or worsening heart failure)",
+                    "Injection site reactions (common)",
+                    "Hepatic function (ALT, AST) - every 3-6 months",
+                    "CBC (leukopenia, thrombocytopenia) - every 3-6 months",
+                    "Signs of demyelinating disease (if symptoms occur)",
+                    "Do not use live vaccines during and after treatment",
+                    "Advantage: No Fc region - safer in pregnancy (does not cross placenta)"
+                ],
+                "look_alike_sound_alike": ["Certolizumab pegol", "Cimzia", "Adalimumab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Serious Infections",
+                "FDA Black Box Warning - Malignancies",
+                "FDA Black Box Warning - Heart Failure",
+                "ACR Guidelines - Rheumatoid Arthritis",
+                "ACR Guidelines - Psoriatic Arthritis",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Dostarlimab": {
@@ -1768,7 +1879,43 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved (2021), clinical trial data, tumor-agnostic indication for dMMR/MSI-H"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "pulmonary": "Black Box Warning - Immune-mediated pneumonitis (can be fatal) - CRITICAL",
+                    "gastrointestinal": "Black Box Warning - Immune-mediated colitis (can be fatal) - CRITICAL",
+                    "hepatic": "Black Box Warning - Immune-mediated hepatitis (can be fatal) - CRITICAL",
+                    "endocrine": "Black Box Warning - Immune-mediated endocrinopathies (thyroiditis, hypophysitis, adrenal insufficiency - may be permanent) - CRITICAL",
+                    "cardiovascular": "Immune-mediated myocarditis (rare but serious)",
+                    "neurological": "Immune-mediated neuropathy"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Immune-related adverse events (irAEs) signs - CRITICAL (monitor closely, discontinue and treat immediately if Grade 3-4 irAEs)",
+                    "Black Box Warning - Pneumonitis signs (dyspnea, cough, chest pain) - CRITICAL",
+                    "Black Box Warning - Colitis signs (diarrhea, abdominal pain, bloody stools) - CRITICAL",
+                    "Black Box Warning - Hepatitis signs (jaundice, fatigue, abdominal pain) - CRITICAL (ALT, AST, bilirubin every cycle)",
+                    "Black Box Warning - Endocrinopathies (TSH, T4, cortisol, glucose every cycle) - CRITICAL",
+                    "Myocarditis signs (chest pain, dyspnea, tachycardia)",
+                    "Infusion reactions (monitor during and after infusion)",
+                    "Loading dose: 4 doses every 3 weeks, then maintenance every 6 weeks",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Dostarlimab", "Jemperli", "Pembrolizumab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Immune-Mediated Adverse Reactions",
+                "FDA Black Box Warning - Fetal Harm (Category D)",
+                "NCCN Guidelines - Endometrial Cancer",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Durvalumab": {
@@ -1950,7 +2097,40 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "pulmonary": "Black Box Warning - Immune-mediated pneumonitis (can be fatal, especially after chemoradiation) - CRITICAL",
+                    "gastrointestinal": "Black Box Warning - Immune-mediated colitis (can be fatal) - CRITICAL",
+                    "hepatic": "Black Box Warning - Immune-mediated hepatitis (can be fatal) - CRITICAL",
+                    "endocrine": "Black Box Warning - Immune-mediated endocrinopathies (may be permanent) - CRITICAL",
+                    "cardiovascular": "Immune-mediated myocarditis (rare but serious)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Immune-related adverse events (irAEs) signs - CRITICAL (monitor closely, especially pneumonitis after chemoradiation)",
+                    "Black Box Warning - Pneumonitis signs (dyspnea, cough, chest pain) - CRITICAL (chest X-ray if symptoms, discontinue if suspected)",
+                    "Black Box Warning - Colitis signs (diarrhea, abdominal pain, bloody stools) - CRITICAL",
+                    "Black Box Warning - Hepatitis signs (jaundice, fatigue, abdominal pain) - CRITICAL (ALT, AST, bilirubin every cycle)",
+                    "Black Box Warning - Endocrinopathies (TSH, T4, cortisol, glucose every cycle) - CRITICAL",
+                    "Infusion reactions (monitor during and after infusion, 60-minute infusion)",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Durvalumab", "Imfinzi", "Atezolizumab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Immune-Mediated Adverse Reactions",
+                "FDA Black Box Warning - Fetal Harm (Category D)",
+                "NCCN Guidelines - Lung Cancer",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Eculizumab": {
@@ -2114,7 +2294,41 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "immunologic": "Black Box Warning - Life-threatening and fatal meningococcal infections (Neisseria meningitidis) - CRITICAL",
+                    "immunologic_other": "Serious infections (increased risk due to complement inhibition)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Meningococcal vaccination required at least 2 weeks before first dose - CRITICAL",
+                    "Black Box Warning - Antibiotic prophylaxis if vaccination not completed or not effective - CRITICAL",
+                    "Black Box Warning - Signs of meningococcal infection (fever, headache, neck stiffness, rash) - CRITICAL (treat immediately with ceftriaxone if suspected)",
+                    "Signs of serious infections (increased risk due to complement inhibition)",
+                    "Infusion reactions (monitor during and after infusion, 25-45 minute infusion)",
+                    "CBC (in PNH - monitor hemolysis), LDH (in PNH - increased indicates hemolysis)",
+                    "Renal function (in aHUS - monitor kidney function)",
+                    "Hepatic function (in aHUS - monitor liver function)",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Eculizumab", "Soliris", "Ravulizumab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Life-Threatening and Fatal Meningococcal Infections",
+                "ASH Guidelines - Paroxysmal Nocturnal Hemoglobinuria",
+                "ASH Guidelines - Atypical Hemolytic Uremic Syndrome",
+                "AAN Guidelines - Myasthenia Gravis",
+                "ISMP High Alert Medications",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Golimumab": {
@@ -2952,7 +3166,31 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, clinical trial data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "CRITICAL - For prophylaxis only, NOT for acute HAE attacks (patients still need acute treatment medications)",
+                    "Frequency and severity of HAE attacks (assess treatment response)",
+                    "Use of acute treatment medications (decreased use indicates response)",
+                    "Injection site reactions (common)",
+                    "Signs of allergic reactions (rare)",
+                    "May increase dose to 300mg SC weekly if still having frequent attacks"
+                ],
+                "look_alike_sound_alike": ["Lanadelumab", "Takhzyro"]
+            },
+            "guideline_tags": [
+                "WAO Guidelines - Hereditary Angioedema",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Natalizumab": {
@@ -3115,7 +3353,40 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "neurological": "Black Box Warning - Progressive multifocal leukoencephalopathy (PML) - fatal or severe disability - CRITICAL"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - JCV antibody test before treatment and periodically - CRITICAL (increased PML risk if JCV positive)",
+                    "Black Box Warning - Brain MRI before treatment and periodically (every 6-12 months) to detect PML early - CRITICAL",
+                    "Black Box Warning - Neurological signs of PML (cognitive changes, weakness, vision loss, ataxia) - CRITICAL (discontinue immediately if suspected)",
+                    "Black Box Warning - PML risk increases with treatment duration and JCV antibody status - CRITICAL",
+                    "Black Box Warning - Must be used only in TOUCH Prescribing Program - CRITICAL",
+                    "Infusion reactions (monitor during and after 1-hour infusion)",
+                    "Delayed hypersensitivity reactions (3-12 days after infusion)",
+                    "Signs of serious infections (increased risk)",
+                    "Hepatic function (ALT, AST) - every 3-6 months",
+                    "CBC - every 3-6 months",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Natalizumab", "Tysabri"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Progressive Multifocal Leukoencephalopathy (PML)",
+                "AAN Guidelines - Multiple Sclerosis",
+                "ISMP High Alert Medications",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Nivolumab": {
@@ -3310,7 +3581,46 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "pulmonary": "Black Box Warning - Immune-mediated pneumonitis (can be fatal) - CRITICAL",
+                    "gastrointestinal": "Black Box Warning - Immune-mediated colitis (can be fatal) - CRITICAL",
+                    "hepatic": "Black Box Warning - Immune-mediated hepatitis (can be fatal) - CRITICAL",
+                    "renal": "Black Box Warning - Immune-mediated nephritis (can be fatal) - CRITICAL",
+                    "endocrine": "Black Box Warning - Immune-mediated endocrinopathies (may be permanent) - CRITICAL",
+                    "cardiovascular": "Immune-mediated myocarditis (rare but serious)",
+                    "neurological": "Immune-mediated neuropathy",
+                    "dermatologic": "Immune-mediated dermatitis, rash"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": True,
+                "requires_monitoring": [
+                    "Black Box Warning - Immune-related adverse events (irAEs) signs - CRITICAL (monitor closely, discontinue and treat immediately if Grade 3-4 irAEs)",
+                    "Black Box Warning - Pneumonitis signs (dyspnea, cough, chest pain) - CRITICAL",
+                    "Black Box Warning - Colitis signs (diarrhea, abdominal pain, bloody stools) - CRITICAL",
+                    "Black Box Warning - Hepatitis signs (jaundice, fatigue, abdominal pain) - CRITICAL (ALT, AST, bilirubin every cycle)",
+                    "Black Box Warning - Nephritis signs (decreased urine output, edema) - CRITICAL (creatinine, eGFR every cycle)",
+                    "Black Box Warning - Endocrinopathies (TSH, T4, cortisol, glucose every cycle) - CRITICAL",
+                    "Myocarditis signs (chest pain, dyspnea, tachycardia)",
+                    "Infusion reactions (monitor during and after 30-minute infusion)",
+                    "Combination with ipilimumab increases irAE risk - monitor closely",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Nivolumab", "Opdivo", "Pembrolizumab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Immune-Mediated Adverse Reactions",
+                "FDA Black Box Warning - Fetal Harm (Category D)",
+                "NCCN Guidelines - Multiple cancer types",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Ocrelizumab": {
@@ -3470,7 +3780,41 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "immunologic": "Black Box Warning - Hepatitis B reactivation (can be fatal) - CRITICAL",
+                    "hematologic": "Infusion reactions (common, especially first dose)",
+                    "immunologic_other": "Serious infections (increased risk due to B-cell depletion)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Hepatitis B screening (HBsAg, anti-HBc) before treatment - CRITICAL",
+                    "Black Box Warning - HBV reactivation signs - CRITICAL (treat with entecavir/tenofovir if history of HBV)",
+                    "Black Box Warning - Tuberculosis screening (PPD or IGRA) before treatment - CRITICAL",
+                    "Infusion reactions (monitor during and after infusion, 2.5-4 hours first dose, 2 hours subsequent doses) - CRITICAL",
+                    "Premedication with methylprednisolone, diphenhydramine, acetaminophen to reduce infusion reactions",
+                    "CBC (WBC, lymphocytes, platelets - may decrease for months after treatment)",
+                    "Signs of serious infections (increased risk due to B-cell depletion)",
+                    "Hepatic function (ALT, AST) - every 3-6 months",
+                    "Renal function (creatinine, eGFR) - every 3-6 months",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Ocrelizumab", "Ocrevus", "Rituximab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Hepatitis B Reactivation",
+                "AAN Guidelines - Multiple Sclerosis",
+                "ISMP High Alert Medications",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Pembrolizumab": {
@@ -3654,7 +3998,44 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "pulmonary": "Black Box Warning - Immune-mediated pneumonitis (can be fatal) - CRITICAL",
+                    "gastrointestinal": "Black Box Warning - Immune-mediated colitis (can be fatal) - CRITICAL",
+                    "hepatic": "Black Box Warning - Immune-mediated hepatitis (can be fatal) - CRITICAL",
+                    "endocrine": "Black Box Warning - Immune-mediated endocrinopathies (may be permanent) - CRITICAL",
+                    "cardiovascular": "Immune-mediated myocarditis (rare but serious)",
+                    "neurological": "Immune-mediated neuropathy",
+                    "dermatologic": "Immune-mediated dermatitis, rash"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Immune-related adverse events (irAEs) signs - CRITICAL (monitor closely, discontinue and treat immediately if Grade 3-4 irAEs)",
+                    "Black Box Warning - Pneumonitis signs (dyspnea, cough, chest pain) - CRITICAL",
+                    "Black Box Warning - Colitis signs (diarrhea, abdominal pain, bloody stools) - CRITICAL",
+                    "Black Box Warning - Hepatitis signs (jaundice, fatigue, abdominal pain) - CRITICAL (ALT, AST, bilirubin every cycle)",
+                    "Black Box Warning - Endocrinopathies (TSH, T4, cortisol, glucose every cycle) - CRITICAL",
+                    "Myocarditis signs (chest pain, dyspnea, tachycardia)",
+                    "Infusion reactions (monitor during and after 30-minute infusion)",
+                    "Can be used as monotherapy or in combination with chemotherapy",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Pembrolizumab", "Keytruda", "Nivolumab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Immune-Mediated Adverse Reactions",
+                "FDA Black Box Warning - Fetal Harm (Category D)",
+                "NCCN Guidelines - Multiple cancer types",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Ravulizumab": {
@@ -5000,7 +5381,43 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "immunologic": "Black Box Warning - Serious infections (tuberculosis reactivation, opportunistic infections) - CRITICAL",
+                    "hematologic": "Black Box Warning - Neutropenia, thrombocytopenia (common, can be severe) - CRITICAL",
+                    "hepatic": "Black Box Warning - Elevated liver enzymes (ALT, AST) - common, can be severe - CRITICAL"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": True,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Tuberculosis screening (PPD or IGRA) before treatment - CRITICAL",
+                    "Black Box Warning - Signs of serious infections - CRITICAL (discontinue if serious infection occurs)",
+                    "Black Box Warning - CBC (ANC, platelets) - CRITICAL (discontinue if ANC <500/mm³ or platelets <50,000/mm³)",
+                    "Black Box Warning - Hepatic function (ALT, AST) - CRITICAL (discontinue if ALT/AST >5x ULN)",
+                    "Infusion reactions (monitor during and after 1-hour IV infusion)",
+                    "Injection site reactions (when using SC formulation)",
+                    "Lipid panel (cholesterol, triglycerides - may increase)",
+                    "COVID-19: 8mg/kg IV once (max 800mg), may repeat after 8-24 hours if no improvement",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Tocilizumab", "Actemra", "Sarilumab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Serious Infections",
+                "FDA Black Box Warning - Neutropenia and Thrombocytopenia",
+                "FDA Black Box Warning - Elevated Liver Enzymes",
+                "ACR Guidelines - Rheumatoid Arthritis",
+                "WHO Guidelines - COVID-19 Treatment",
+                "ISMP High Alert Medications",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Trastuzumab": {
@@ -5159,7 +5576,40 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "cardiovascular": "Black Box Warning - Cardiomyopathy (heart failure, decreased LVEF) - common, can be permanent - CRITICAL",
+                    "hematologic": "Infusion reactions (can be fatal, especially first dose)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - LVEF before treatment and during treatment (every 3 months) - CRITICAL",
+                    "Black Box Warning - Discontinue if LVEF decreases >16% from baseline or LVEF <50% - CRITICAL",
+                    "Black Box Warning - Signs of heart failure (dyspnea, edema, fatigue) - CRITICAL",
+                    "Black Box Warning - AVOID concurrent use with anthracyclines (doxorubicin, epirubicin) - CRITICAL (increases cardiotoxicity risk)",
+                    "Infusion reactions (monitor during and after infusion, 90 minutes loading, 30 minutes maintenance) - CRITICAL (can be fatal)",
+                    "Premedication with corticosteroid, antihistamine to reduce infusion reactions",
+                    "CBC (may cause neutropenia)",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Trastuzumab", "Herceptin", "Pertuzumab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Cardiomyopathy",
+                "FDA Black Box Warning - Infusion Reactions",
+                "FDA Black Box Warning - Fetal Harm (Category D)",
+                "NCCN Guidelines - Breast Cancer",
+                "ISMP High Alert Medications",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Ustekinumab": {
@@ -5320,7 +5770,39 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "immunologic": "Black Box Warning - Serious infections (tuberculosis reactivation, opportunistic infections) - CRITICAL",
+                    "oncologic": "Increased risk of malignancies (lymphoma, skin cancer)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Tuberculosis screening (PPD or IGRA) before treatment - CRITICAL",
+                    "Black Box Warning - Signs of serious infections - CRITICAL (discontinue if serious infection occurs)",
+                    "Infusion reactions (monitor during and after infusion, 1 hour IV or SC injection)",
+                    "Premedication with corticosteroid, antihistamine, acetaminophen to reduce infusion reactions",
+                    "Hepatic function (ALT, AST) - every 3-6 months",
+                    "CBC - every 3-6 months",
+                    "Signs of malignancies (lymphoma, skin cancer)",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Ustekinumab", "Stelara", "Vedolizumab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Serious Infections",
+                "FDA Black Box Warning - Malignancies",
+                "AAD Guidelines - Psoriasis",
+                "ACR Guidelines - Psoriatic Arthritis",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
         "Vedolizumab": {
@@ -5475,7 +5957,40 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - FDA-approved, extensive clinical data, widely used"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": {
+                    "immunologic": "Black Box Warning - Serious infections (tuberculosis reactivation, opportunistic infections) - CRITICAL",
+                    "immunologic_other": "Infusion reactions (can be fatal, especially first dose)"
+                },
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Tuberculosis screening (PPD or IGRA) before treatment - CRITICAL",
+                    "Black Box Warning - Signs of serious infections - CRITICAL (discontinue if serious infection occurs)",
+                    "Black Box Warning - Infusion reactions (monitor during and after 30-minute infusion) - CRITICAL (can be fatal, especially first dose)",
+                    "Premedication with methylprednisolone, diphenhydramine, acetaminophen to reduce infusion reactions",
+                    "Hepatic function (ALT, AST) - every 3-6 months",
+                    "CBC - every 3-6 months",
+                    "Signs of disease progression (Crohn, UC)",
+                    "Do not use live vaccines during and after treatment",
+                    "Advantage: Gut-selective (less systemic immunosuppression than anti-TNF agents)"
+                ],
+                "look_alike_sound_alike": ["Vedolizumab", "Entyvio", "Natalizumab"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Serious Infections",
+                "FDA Black Box Warning - Infusion Reactions",
+                "ACG Guidelines - Inflammatory Bowel Disease",
+                "ISMP High Alert Medications",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-18"
         },
 
 }

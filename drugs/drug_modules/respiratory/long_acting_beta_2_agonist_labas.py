@@ -17,7 +17,7 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'under_30': 'Không đổi'}, 'side_effects': ['Tim đập nhanh', 'Run cơ',
         'Đau đầu', 'Co thắt phế quản nghịch lý (hiếm)', 'Loạn nhịp tim (hiếm)'],
         'interactions': ['Beta-blocker: đối kháng tác dụng',
-        'Theophylline: tăng tác dụng phụ'], 'pregnancy': 'C',
+        'Theophylline: tăng tác dụng phụ'],
         'mechanism_of_action':
         'Kích thích beta-2 adrenergic receptors ở cơ trơn phế quản, kích hoạt adenylate cyclase → tăng cAMP → giãn cơ trơn phế quản. Tác dụng dài (12 giờ) do liên kết chặt với receptor. Khác với salmeterol, formoterol có tác dụng nhanh hơn (5 phút vs 15-30 phút) do có ái lực cao hơn và giải phóng nhanh hơn từ receptor. Chọn lọc beta-2 hơn beta-1 nhưng vẫn có tác dụng tim mạch. Giảm phóng thích chất trung gian gây viêm từ mast cells. Dùng để phòng ngừa, nhưng có thể dùng để cắt cơn nhẹ do tác dụng nhanh (tuy nhiên vẫn nên dùng SABA cho cơn cấp).'
         , 'monitoring': [
@@ -50,7 +50,7 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'Đối kháng tác dụng giãn phế quản, có thể gây co thắt phế quản nặng, suy hô hấp'
         , 'management':
         'TRÁNH DÙNG với beta-blocker không chọn lọc. Nếu bệnh nhân cần beta-blocker, dùng beta-blocker chọn lọc beta-1 (atenolol, metoprolol) với thận trọng. Theo dõi chặt chẽ đáp ứng phế quản.'
-        }], 'moderate': [{'drug': 'Theophylline', 'mechanism':
+        }, {'drug': 'Theophylline', 'mechanism':
         'Cả hai đều kích thích beta-adrenergic, có thể tăng tác dụng phụ và độc tính'
         , 'effect':
         'Tăng tác dụng phụ (run, tim đập nhanh, loạn nhịp), tăng nguy cơ độc tính theophylline'
@@ -124,9 +124,27 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'UpToDate: Long-acting beta-2 agonists in asthma',
         'GINA Guidelines 2024: Asthma Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Formoterol'], 'last_updated': '2025-02-05',
+        'Micromedex: Formoterol'],
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}},
+        'High - FDA approved, multiple RCTs, clinical guidelines'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['cardiac'],
+            'qt_prolongation': True,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['ECG'],
+            'look_alike_sound_alike': []
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - KHÔNG BAO GIỜ dùng đơn độc cho hen phế quản - phải dùng kết hợp với ICS. Dùng đơn độc LABA có thể tăng nguy cơ tử vong do hen.',
+            'ISMP High Alert Medications',
+            'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',
+            'AHA/ACC Guidelines - Cardiovascular monitoring with beta-2 agonists'
+        ]},
     "Indacaterol": {'group': 'Respiratory - Long-acting Beta-2 Agonist (LABA)',
         'vietnamese_name': 'Indacaterol, Onbrez Breezhaler, Arcapta Neohaler',
         'administration': ['Inhalation (DPI)'], 'indications': [
@@ -174,7 +192,7 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'Đối kháng tác dụng giãn phế quản, có thể gây co thắt phế quản nặng, suy hô hấp'
         , 'management':
         'TRÁNH DÙNG với beta-blocker không chọn lọc. Nếu bệnh nhân cần beta-blocker, dùng beta-blocker chọn lọc beta-1 (atenolol, metoprolol) với thận trọng. Theo dõi chặt chẽ đáp ứng phế quản.'
-        }], 'moderate': [{'drug': 'Theophylline', 'mechanism':
+        }, {'drug': 'Theophylline', 'mechanism':
         'Cả hai đều kích thích beta-adrenergic, có thể tăng tác dụng phụ và độc tính'
         , 'effect':
         'Tăng tác dụng phụ (run, tim đập nhanh, loạn nhịp), tăng nguy cơ độc tính theophylline'
@@ -236,13 +254,31 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'Súc miệng và súc họng sau mỗi lần dùng để giảm kích ứng và tránh nấm miệng (đặc biệt nếu dùng với ICS).'
         , 'notes':
         'Không dùng để cắt cơn (tác dụng chậm). Luôn có SABA (salbutamol) sẵn sàng để cắt cơn. Nếu cần dùng SABA thường xuyên → cần đánh giá lại điều trị.'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Label: Arcapta Neohaler (Indacaterol)',
         'UpToDate: Long-acting beta-2 agonists in asthma and COPD',
         'GINA Guidelines 2024: Asthma Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Indacaterol'], 'last_updated': '2025-02-05',
-        'evidence_level': 'High - FDA approved, multiple RCTs, clinical guidelines'}},
+        'Micromedex: Indacaterol'],
+        'evidence_level': 'High - FDA approved, multiple RCTs, clinical guidelines'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['cardiac'],
+            'qt_prolongation': True,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['ECG'],
+            'look_alike_sound_alike': []
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - KHÔNG BAO GIỜ dùng đơn độc cho hen phế quản - phải dùng kết hợp với ICS. Dùng đơn độc LABA có thể tăng nguy cơ tử vong do hen.',
+            'ISMP High Alert Medications',
+            'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',
+            'GOLD Guidelines 2024 - COPD Management'
+        ]},
     "Olodaterol": {'group': 'Respiratory - Long-acting Beta-2 Agonist (LABA)',
         'vietnamese_name': 'Olodaterol, Striverdi', 'administration': [
         'Inhalation'], 'indications': [
@@ -255,7 +291,7 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'under_30': 'Không đổi'}, 'side_effects': ['Tim đập nhanh', 'Run cơ',
         'Đau đầu', 'Co thắt phế quản nghịch lý (hiếm)', 'Loạn nhịp tim (hiếm)'],
         'interactions': ['Beta-blocker: đối kháng tác dụng',
-        'Theophylline: tăng tác dụng phụ'], 'pregnancy': 'C',
+        'Theophylline: tăng tác dụng phụ'],
         'mechanism_of_action':
         'Kích thích beta-2 adrenergic receptors ở cơ trơn phế quản, kích hoạt adenylate cyclase → tăng cAMP → giãn cơ trơn phế quản. Tác dụng dài (24 giờ) do liên kết chặt với receptor và thời gian bán thải dài. Chọn lọc beta-2 cao hơn các LABA khác, ít tác dụng tim mạch hơn. Dùng 1 lần/ngày, tiện lợi hơn các LABA khác (2 lần/ngày). Dùng để phòng ngừa, không dùng để cắt cơn.'
         , 'monitoring': ['Nhịp tim, huyết áp (đặc biệt khi bắt đầu điều trị)',
@@ -282,8 +318,7 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'Beta-blockers (không chọn lọc)', 'mechanism':
         'Đối kháng tác dụng beta-2', 'effect':
         'Đối kháng tác dụng giãn phế quản', 'management':
-        'TRÁNH DÙNG với beta-blocker không chọn lọc.'}], 'moderate': [{'drug': 'Theophylline',
-        'mechanism': 'Cả hai đều kích thích beta-adrenergic', 'effect':
+        'TRÁNH DÙNG với beta-blocker không chọn lọc.'}, {'drug': 'Theophylline', 'mechanism': 'Cả hai đều kích thích beta-adrenergic', 'effect':
         'Tăng tác dụng phụ', 'management':
         'Theo dõi nồng độ theophylline và nhịp tim.'}], 'minor': []},
         'contraindications': {'tuyệt_đối': [
@@ -325,8 +360,26 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'references': {'primary_sources': [
         'FDA Label: Striverdi (Olodaterol)',
         'UpToDate: Long-acting beta-2 agonists in COPD',
-        'GOLD Guidelines 2024: COPD Management'], 'last_updated': '2025-02-05',
-        'evidence_level': 'High - FDA approved, clinical guidelines'}},
+        'GOLD Guidelines 2024: COPD Management'],
+        'evidence_level': 'High - FDA approved, clinical guidelines'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['cardiac'],
+            'qt_prolongation': True,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['ECG'],
+            'look_alike_sound_alike': []
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - KHÔNG BAO GIỜ dùng đơn độc cho hen phế quản - phải dùng kết hợp với ICS. Dùng đơn độc LABA có thể tăng nguy cơ tử vong do hen.',
+            'ISMP High Alert Medications',
+            'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',
+            'GOLD Guidelines 2024 - COPD Management'
+        ]},
     "Salmeterol": {'group': 'Respiratory - Long-acting Beta-2 Agonist (LABA)',
         'vietnamese_name': 'Salmeterol, Serevent', 'administration': [
         'Inhalation'], 'indications': [
@@ -340,7 +393,7 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'under_30': 'Không đổi'}, 'side_effects': ['Tim đập nhanh', 'Run cơ',
         'Đau đầu', 'Co thắt phế quản nghịch lý (hiếm)', 'Loạn nhịp tim (hiếm)'],
         'interactions': ['Beta-blocker: đối kháng tác dụng',
-        'Theophylline: tăng tác dụng phụ'], 'pregnancy': 'C',
+        'Theophylline: tăng tác dụng phụ'],
         'mechanism_of_action':
         'Kích thích beta-2 adrenergic receptors ở cơ trơn phế quản, kích hoạt adenylate cyclase → tăng cAMP → giãn cơ trơn phế quản. Tác dụng dài (12 giờ) do liên kết chặt với receptor, giải phóng chậm. Chọn lọc beta-2 hơn beta-1 nhưng vẫn có tác dụng tim mạch. Giảm phóng thích chất trung gian gây viêm từ mast cells. Dùng để phòng ngừa, không dùng để cắt cơn (tác dụng chậm).'
         , 'monitoring': ['Nhịp tim, huyết áp (đặc biệt khi bắt đầu điều trị)',
@@ -373,7 +426,7 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'Đối kháng tác dụng giãn phế quản, có thể gây co thắt phế quản nặng, suy hô hấp'
         , 'management':
         'TRÁNH DÙNG với beta-blocker không chọn lọc. Nếu bệnh nhân cần beta-blocker, dùng beta-blocker chọn lọc beta-1 (atenolol, metoprolol) với thận trọng. Theo dõi chặt chẽ đáp ứng phế quản.'
-        }], 'moderate': [{'drug': 'Theophylline', 'mechanism':
+        }, {'drug': 'Theophylline', 'mechanism':
         'Cả hai đều kích thích beta-adrenergic, có thể tăng tác dụng phụ và độc tính'
         , 'effect':
         'Tăng tác dụng phụ (run, tim đập nhanh, loạn nhịp), tăng nguy cơ độc tính theophylline'
@@ -391,7 +444,7 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'Tăng nguy cơ hạ kali máu nghiêm trọng, loạn nhịp tim, yếu cơ',
         'management':
         'Theo dõi kali máu thường xuyên. Bổ sung kali nếu cần. Có thể cần điều chỉnh liều diuretic.'
-        }], 'minor': [{'drug': 'Tricyclic Antidepressants (TCA)', 'mechanism':
+        }], 'moderate': [{'drug': 'Tricyclic antidepressants (TCA)', 'mechanism':
         'TCA tăng nhạy cảm với catecholamine, có thể tăng tác dụng tim mạch',
         'effect': 'Tăng nhịp tim, tăng huyết áp (nhẹ)', 'management':
         'Theo dõi nhịp tim và huyết áp. Không cần điều chỉnh liều thường quy.'}
@@ -454,14 +507,32 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'Súc miệng và súc họng sau mỗi lần dùng để giảm kích ứng và tránh nấm miệng (đặc biệt nếu dùng với ICS).'
         , 'notes':
         'Không dùng để cắt cơn (tác dụng chậm). Luôn có SABA (salbutamol) sẵn sàng để cắt cơn. Nếu cần dùng SABA thường xuyên → cần đánh giá lại điều trị.'
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Label: Serevent (Salmeterol)',
         'UpToDate: Long-acting beta-2 agonists in asthma',
         'GINA Guidelines 2024: Asthma Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
-        'Micromedex: Salmeterol'], 'last_updated': '2025-02-03',
+        'Micromedex: Salmeterol'],
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}},
+        'High - FDA approved, multiple RCTs, clinical guidelines'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['cardiac'],
+            'qt_prolongation': True,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['ECG'],
+            'look_alike_sound_alike': []
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - KHÔNG BAO GIỜ dùng đơn độc cho hen phế quản - phải dùng kết hợp với ICS. Dùng đơn độc LABA có thể tăng nguy cơ tử vong do hen.',
+            'ISMP High Alert Medications',
+            'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',
+            'AHA/ACC Guidelines - Cardiovascular monitoring with beta-2 agonists'
+        ]},
     "Vilanterol": {'group': 'Respiratory - Long-acting Beta-2 Agonist (LABA)',
         'vietnamese_name': 'Vilanterol, Breo Ellipta', 'administration': [
         'Inhalation'], 'indications': [
@@ -474,7 +545,7 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'under_30': 'Không đổi'}, 'side_effects': ['Tim đập nhanh', 'Run cơ',
         'Đau đầu', 'Nấm miệng (do ICS)', 'Co thắt phế quản nghịch lý (hiếm)'],
         'interactions': ['Beta-blocker: đối kháng tác dụng',
-        'Ritonavir: tăng nồng độ fluticasone (tránh dùng)'], 'pregnancy': 'C',
+        'Ritonavir: tăng nồng độ fluticasone (tránh dùng)'],
         'mechanism_of_action':
         'Kích thích beta-2 adrenergic receptors ở cơ trơn phế quản, kích hoạt adenylate cyclase → tăng cAMP → giãn cơ trơn phế quản. Tác dụng dài (24 giờ) do liên kết chặt với receptor. Chọn lọc beta-2 cao. Chỉ có dạng fixed-dose combination với fluticasone furoate (ICS) trong Breo Ellipta. Dùng 1 lần/ngày, tiện lợi.'
         , 'monitoring': ['Nhịp tim, huyết áp (đặc biệt khi bắt đầu điều trị)',
@@ -517,7 +588,7 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         , 'notes': 'Theo dõi chặt chẽ nhịp tim và tác dụng phụ ở suy gan nặng.'},
         'overdose_management': {'symptoms': [
         'Nhịp tim nhanh nghiêm trọng', 'Run cơ nặng', 'Loạn nhịp tim',
-        'Co thắt phế quản nghịch lý'], 'antidote': 'Không có antidote đặc hiệu',
+        'Co thắt phế quản nghịch lý'],
         'treatment': [
         'Ngừng ngay vilanterol/fluticasone', 'Hỗ trợ hô hấp nếu cần',
         'Theo dõi nhịp tim, huyết áp, ECG liên tục',
@@ -540,8 +611,26 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'references': {'primary_sources': [
         'FDA Label: Breo Ellipta (Vilanterol/Fluticasone)',
         'UpToDate: Long-acting beta-2 agonists in COPD',
-        'GOLD Guidelines 2024: COPD Management'], 'last_updated': '2025-02-05',
-        'evidence_level': 'High - FDA approved, clinical guidelines'}}}
+        'GOLD Guidelines 2024: COPD Management'],
+        'evidence_level': 'High - FDA approved, clinical guidelines'},
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['cardiac'],
+            'qt_prolongation': True,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['ECG'],
+            'look_alike_sound_alike': []
+        },
+        'guideline_tags': [
+            'FDA Black Box Warning - KHÔNG BAO GIỜ dùng đơn độc cho hen phế quản - chỉ có dạng kết hợp với ICS. TRÁNH DÙNG với ritonavir.',
+            'ISMP High Alert Medications',
+            'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',
+            'GOLD Guidelines 2024 - COPD Management'
+        ]}}
 
 
 __all__ = ['LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS']

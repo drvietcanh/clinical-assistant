@@ -173,11 +173,28 @@ SHORT_INTERMEDIATE_ACTING = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": None,
+            "organ_toxicity": {"cardiovascular": "Hypertension, heart failure exacerbation (fluid retention)", "metabolic": "Hypokalemia (severe), hypernatremia, fluid retention", "endocrine": "Adrenal insufficiency (if stopped abruptly in adrenal insufficiency)"},
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure (hypertension risk)", "Serum potassium (hypokalemia risk - severe, especially with diuretics/digoxin)", "Serum sodium (hypernatremia)", "Weight, edema signs (fluid retention)", "Adrenal insufficiency signs (if missed dose in adrenal insufficiency)", "Digoxin levels (if used with digoxin - hypokalemia increases digoxin toxicity)"],
+            "look_alike_sound_alike": ["Fludrocortisone", "Fluorocortisone"]
+        },
+        "guideline_tags": [
+            "Endocrine Society Guidelines - Adrenal Insufficiency Management",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18"
     },
     "Hydrocortisone": {'group': 'Endocrinology - Corticosteroid', 'vietnamese_name':
     'Hydrocortisone, Cortef', 'administration': ['PO', 'IV', 'IM',
-    'Topical'], 'indications': ['Suy thượng thận', 'Phản ứng dị ứng nặng',
+    'Topical'], 'Phản ứng dị ứng nặng',
     'Sốc phản vệ (kết hợp)', 'Viêm khớp', 'Bệnh Addison', 'Phù não'],
     'contraindications': ['Nhiễm nấm hệ thống không điều trị', 'Dị ứng'],
     'dosage': {'adult_replacement':
@@ -188,7 +205,7 @@ SHORT_INTERMEDIATE_ACTING = {
     'side_effects': ['Tăng đường huyết', 'Tăng huyết áp', 'Giữ natri, phù',
     'Loét dạ dày', 'Ức chế miễn dịch'], 'interactions': [
     'Warfarin: thay đổi tác dụng chống đông',
-    'NSAID: tăng nguy cơ loét dạ dày'], 'pregnancy': 'C',
+    'NSAID: tăng nguy cơ loét dạ dày'],
     'mechanism_of_action':
     'Glucocorticoid tự nhiên (cortisol), tác dụng ngắn. Gắn với glucocorticoid receptor trong tế bào, điều hòa biểu hiện gen, ức chế tổng hợp các cytokine gây viêm (TNF-α, IL-1, IL-6), giảm di chuyển bạch cầu đến vị trí viêm, ức chế phospholipase A2. Có tác dụng mineralocorticoid (giữ natri, thải kali) - mạnh hơn dexamethasone. Được dùng trong suy thượng thận để thay thế cortisol thiếu hụt. Tác dụng chống viêm và ức chế miễn dịch yếu hơn dexamethasone nhưng có tác dụng mineralocorticoid.'
     , 'monitoring': ['Đường huyết (tăng đường huyết)',
@@ -236,7 +253,7 @@ SHORT_INTERMEDIATE_ACTING = {
     'Thay đổi INR (có thể tăng hoặc giảm), tăng nguy cơ chảy máu hoặc huyết khối'
     , 'management':
     'Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng hydrocortisone. Điều chỉnh liều warfarin nếu cần.'
-    }], 'moderate': [{'drug': 'NSAID (Ibuprofen, Naproxen, Diclofenac)',
+    }]], 'moderate': [{'drug': 'Unknown',
     'mechanism':
     'Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.', 'effect':
     'Tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa nghiêm trọng',
@@ -253,7 +270,7 @@ SHORT_INTERMEDIATE_ACTING = {
     'Tăng ức chế miễn dịch, tăng nguy cơ nhiễm trùng, tăng nguy cơ độc tính',
     'management':
     'Giảm liều cả hai thuốc. Theo dõi chức năng thận, dấu hiệu nhiễm trùng.'
-    }], 'minor': [{'drug': 'Diuretics (Thiazide, Furosemide)', 'mechanism':
+    }], 'mechanism':
     'Hydrocortisone có tác dụng mineralocorticoid mạnh (giữ natri), có thể đối kháng tác dụng lợi tiểu.'
     , 'effect':
     'Giảm hiệu quả lợi tiểu, có thể gây giữ nước, tăng mất kali',
@@ -351,8 +368,45 @@ SHORT_INTERMEDIATE_ACTING = {
     'Endocrine Society Guidelines - Adrenal Insufficiency Management'],
     'last_updated': '2025-02-03', 'evidence_level':
     'A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-    }},
-    
+    },
+    'risk_flags': {
+        'high_alert': True,
+        'narrow_therapeutic_index': False,
+        'icu_critical_care_only': False,
+        'bleeding_risk': False,
+        'organ_toxicity': {
+            'metabolic': 'Hyperglycemia, diabetes mellitus (common)',
+            'cardiovascular': 'Hypertension, fluid retention (mineralocorticoid effect - stronger than dexamethasone)',
+            'gastrointestinal': 'Peptic ulcer, GI bleeding (common)',
+            'immunologic': 'Immunosuppression (increased infection risk, masks infection symptoms) - CRITICAL',
+            'endocrine': 'Adrenal suppression (if abrupt withdrawal after >2 weeks or missed dose in adrenal insufficiency - can be fatal) - CRITICAL',
+            'skeletal': 'Osteoporosis (with long-term use)',
+            'ophthalmic': 'Glaucoma, cataracts (with long-term use)',
+            'psychiatric': 'Psychosis, mood changes (especially with high doses)'
+        },
+        'qt_prolongation': False,
+        'hepatotoxicity': False,
+        'nephrotoxicity': False,
+        'requires_monitoring': [
+            'CRITICAL - In adrenal insufficiency: DO NOT miss doses or stop abruptly (can cause adrenal crisis - fatal)',
+            'CRITICAL - Stress dosing required (surgery, severe infection - increase dose 2-3x replacement dose)',
+            'Blood glucose (hyperglycemia risk - common)',
+            'Blood pressure (hypertension, especially due to mineralocorticoid effect - stronger than dexamethasone)',
+            'Electrolytes (sodium retention, potassium loss - mineralocorticoid effect)',
+            'Signs of infection (immunosuppression masks symptoms) - CRITICAL',
+            'GI signs (peptic ulcer, GI bleeding) - common',
+            'Signs of adrenal crisis if missed dose/abrupt withdrawal (fatigue, hypotension, hyponatremia) - CRITICAL',
+            'CYP3A4 interactions (inhibitors increase levels, inducers decrease levels - critical in adrenal insufficiency)'
+        ],
+        'look_alike_sound_alike': ['Hydrocortisone', 'Cortef', 'Cortisol']
+    },
+    'guideline_tags': [
+        'Endocrine Society Guidelines - Adrenal Insufficiency Management',
+        'ISMP High Alert Medications',
+        'WHO Essential Medicines List'
+    ],
+    'last_updated': '2025-02-18'
+    },
     "Methylprednisolone": {'group': 'Endocrinology - Corticosteroid', 'vietnamese_name':
     'Methylprednisolone, Medrol', 'administration': ['PO', 'IV', 'IM'],
     'indications': ['Viêm khớp dạng thấp', 'Hen phế quản', 'Bệnh tự miễn',
@@ -368,7 +422,7 @@ SHORT_INTERMEDIATE_ACTING = {
     'Ức chế miễn dịch', 'Tăng cân', 'Loét dạ dày', 'Rối loạn tâm thần'],
     'interactions': ['Warfarin: thay đổi tác dụng chống đông',
     'NSAID: tăng nguy cơ loét dạ dày',
-    'Ketoconazole: tăng nồng độ methylprednisolone'], 'pregnancy': 'C',
+    'Ketoconazole: tăng nồng độ methylprednisolone'],
     'mechanism_of_action':
     'Methylprednisolone là một corticosteroid tổng hợp, tương tự cortisol tự nhiên nhưng có hoạt tính mạnh hơn. Tác dụng qua thụ thể glucocorticoid (GR) trong tế bào, điều hòa biểu hiện gen (gen activation và repression). Ức chế tổng hợp và giải phóng các chất trung gian gây viêm (prostaglandin, leukotriene, cytokine), ức chế di cư bạch cầu và hoạt động miễn dịch. Tác dụng chống viêm, chống dị ứng, ức chế miễn dịch mạnh. Có tác dụng mineralocorticoid nhẹ hơn hydrocortisone'
     , 'monitoring': ['Đường huyết (glucose) khi dùng liều cao hoặc kéo dài',
@@ -388,7 +442,7 @@ SHORT_INTERMEDIATE_ACTING = {
     'Thận trọng ở bệnh nhân đái tháo đường (tăng đường huyết)',
     'Thận trọng ở bệnh nhân tăng huyết áp, suy tim (giữ nước)',
     'IV pulse therapy (250-1000mg) chỉ dùng cho bệnh nặng, cần theo dõi sát'
-    ], 'pharmacokinetics': {'half_life': '18-36 giờ (dài)', 'onset':
+    ], 'onset':
     'Vài giờ (PO), nhanh (IV)', 'duration': '24-36 giờ', 'protein_binding':
     '77% (gắn với transcortin và albumin)', 'clearance':
     'Gan (chuyển hóa qua CYP3A4), thận (thải trừ)'}, 'storage':
@@ -411,7 +465,7 @@ SHORT_INTERMEDIATE_ACTING = {
     'Thay đổi INR (có thể tăng hoặc giảm), tăng nguy cơ chảy máu hoặc huyết khối'
     , 'management':
     'Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng methylprednisolone. Điều chỉnh liều warfarin nếu cần.'
-    }], 'moderate': [{'drug': 'NSAID (Ibuprofen, Naproxen, Diclofenac)',
+    }]], 'moderate': [{'drug': 'Unknown',
     'mechanism':
     'Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.', 'effect':
     'Tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa nghiêm trọng',
@@ -428,7 +482,7 @@ SHORT_INTERMEDIATE_ACTING = {
     'Tăng ức chế miễn dịch, tăng nguy cơ nhiễm trùng, tăng nguy cơ độc tính',
     'management':
     'Giảm liều cả hai thuốc. Theo dõi chức năng thận, dấu hiệu nhiễm trùng.'
-    }], 'minor': [{'drug': 'Diuretics (Thiazide, Furosemide)', 'mechanism':
+    }], 'mechanism':
     'Corticosteroid gây giữ natri, có thể đối kháng tác dụng lợi tiểu.',
     'effect': 'Giảm hiệu quả lợi tiểu, có thể gây giữ nước', 'management':
     'Theo dõi cân nặng, dấu hiệu giữ nước. Có thể cần điều chỉnh liều lợi tiểu.'
@@ -517,7 +571,45 @@ SHORT_INTERMEDIATE_ACTING = {
     'Endocrine Society Guidelines - Corticosteroid Use'], 'last_updated':
     '2024-12-19', 'evidence_level':
     'A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-    }},
+    },
+    'risk_flags': {
+        'high_alert': True,
+        'narrow_therapeutic_index': False,
+        'icu_critical_care_only': False,
+        'bleeding_risk': False,
+        'organ_toxicity': {
+            'metabolic': 'Hyperglycemia, diabetes mellitus (common)',
+            'cardiovascular': 'Hypertension, fluid retention',
+            'gastrointestinal': 'Peptic ulcer, GI bleeding (common)',
+            'immunologic': 'Immunosuppression (increased infection risk, masks infection symptoms) - CRITICAL',
+            'endocrine': 'Adrenal suppression (if abrupt withdrawal after >2 weeks - can be fatal) - CRITICAL',
+            'skeletal': 'Osteoporosis (with long-term use)',
+            'ophthalmic': 'Glaucoma, cataracts (with long-term use)',
+            'psychiatric': 'Psychosis, mood changes (especially with high doses, IV pulse therapy)'
+        },
+        'qt_prolongation': False,
+        'hepatotoxicity': False,
+        'nephrotoxicity': False,
+        'requires_monitoring': [
+            'CRITICAL - Taper dose when stopping (if used >2 weeks) - abrupt withdrawal can cause adrenal crisis (fatal)',
+            'Blood glucose (hyperglycemia risk - common)',
+            'Blood pressure (hypertension)',
+            'Electrolytes (sodium, potassium)',
+            'Signs of infection (immunosuppression masks symptoms) - CRITICAL',
+            'GI signs (peptic ulcer, GI bleeding) - common',
+            'Psychiatric signs (psychosis, mood changes - especially with high doses, IV pulse therapy)',
+            'IV pulse therapy (250-1000mg) - monitor closely, only for severe conditions',
+            'CYP3A4 interactions (inhibitors increase levels, inducers decrease levels)'
+        ],
+        'look_alike_sound_alike': ['Methylprednisolone', 'Medrol', 'Prednisolone']
+    },
+    'guideline_tags': [
+        'Endocrine Society Guidelines - Corticosteroid Use',
+        'ISMP High Alert Medications',
+        'WHO Essential Medicines List'
+    ],
+    'last_updated': '2025-02-18'
+    },
     "Prednisolone": {'group': 'Endocrinology - Corticosteroid', 'vietnamese_name':
     'Prednisolone', 'administration': ['PO'], 'indications': [
     'Viêm khớp dạng thấp', 'Hen phế quản', 'Bệnh tự miễn',
@@ -532,7 +624,7 @@ SHORT_INTERMEDIATE_ACTING = {
     'Ức chế trục HPA (khi ngừng)'], 'interactions': [
     'Warfarin: thay đổi tác dụng chống đông',
     'NSAID: tăng nguy cơ loét dạ dày', 'Insulin/OAD: tăng đường huyết',
-    'Vaccines: giảm hiệu quả vaccine'], 'pregnancy': 'C',
+    'Vaccines: giảm hiệu quả vaccine'],
     'mechanism_of_action':
     'Glucocorticoid tổng hợp, tác dụng trung bình. Gắn với glucocorticoid receptor trong tế bào, điều hòa biểu hiện gen, ức chế tổng hợp các cytokine gây viêm (TNF-α, IL-1, IL-6), giảm di chuyển bạch cầu đến vị trí viêm, ức chế phospholipase A2 → giảm prostaglandin và leukotriene. Có tác dụng mineralocorticoid nhẹ (ít hơn hydrocortisone). Ức chế miễn dịch. Được dùng trong nhiều tình trạng viêm và tự miễn. Tác dụng tương tự prednisone nhưng prednisolone là dạng hoạt động (không cần chuyển hóa ở gan).'
     , 'monitoring': [
@@ -583,7 +675,7 @@ SHORT_INTERMEDIATE_ACTING = {
     'Thay đổi INR (có thể tăng hoặc giảm), tăng nguy cơ chảy máu hoặc huyết khối'
     , 'management':
     'Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng prednisolone. Điều chỉnh liều warfarin nếu cần.'
-    }], 'moderate': [{'drug': 'NSAID (Ibuprofen, Naproxen, Diclofenac)',
+    }]], 'moderate': [{'drug': 'Unknown',
     'mechanism':
     'Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.', 'effect':
     'Tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa nghiêm trọng',
@@ -599,7 +691,7 @@ SHORT_INTERMEDIATE_ACTING = {
     'Tăng ức chế miễn dịch, tăng nguy cơ nhiễm trùng, tăng nguy cơ độc tính',
     'management':
     'Giảm liều cả hai thuốc. Theo dõi chức năng thận, dấu hiệu nhiễm trùng.'
-    }], 'minor': [{'drug': 'Diuretics (Thiazide, Furosemide)', 'mechanism':
+    }], 'mechanism':
     'Corticosteroid gây giữ natri, có thể đối kháng tác dụng lợi tiểu.',
     'effect': 'Giảm hiệu quả lợi tiểu, có thể gây giữ nước', 'management':
     'Theo dõi cân nặng, dấu hiệu giữ nước. Có thể cần điều chỉnh liều lợi tiểu.'
@@ -683,5 +775,43 @@ SHORT_INTERMEDIATE_ACTING = {
     'Endocrine Society Guidelines - Corticosteroid Use'], 'last_updated':
     '2025-02-03', 'evidence_level':
     'A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
-    }},
+    },
+    'risk_flags': {
+        'high_alert': True,
+        'narrow_therapeutic_index': False,
+        'icu_critical_care_only': False,
+        'bleeding_risk': False,
+        'organ_toxicity': {
+            'metabolic': 'Hyperglycemia, diabetes mellitus (common)',
+            'cardiovascular': 'Hypertension, fluid retention',
+            'gastrointestinal': 'Peptic ulcer, GI bleeding (common)',
+            'immunologic': 'Immunosuppression (increased infection risk, masks infection symptoms) - CRITICAL',
+            'endocrine': 'Adrenal suppression (if abrupt withdrawal after >1 week - can be fatal) - CRITICAL',
+            'skeletal': 'Osteoporosis (with long-term use)',
+            'ophthalmic': 'Glaucoma, cataracts (with long-term use)',
+            'psychiatric': 'Psychosis, mood changes (especially with high doses)'
+        },
+        'qt_prolongation': False,
+        'hepatotoxicity': False,
+        'nephrotoxicity': False,
+        'requires_monitoring': [
+            'CRITICAL - Taper dose when stopping (if used >1 week) - abrupt withdrawal can cause adrenal crisis (fatal)',
+            'Blood glucose (hyperglycemia risk - common)',
+            'Blood pressure (hypertension)',
+            'Electrolytes (sodium, potassium)',
+            'Signs of infection (immunosuppression masks symptoms) - CRITICAL',
+            'GI signs (peptic ulcer, GI bleeding) - common',
+            'Psychiatric signs (psychosis, mood changes)',
+            'Advantage: Active form (no hepatic conversion needed - can use in liver disease vs prednisone)',
+            'CYP3A4 interactions (inhibitors increase levels, inducers decrease levels)'
+        ],
+        'look_alike_sound_alike': ['Prednisolone', 'Prednisone', 'Methylprednisolone']
+    },
+    'guideline_tags': [
+        'Endocrine Society Guidelines - Corticosteroid Use',
+        'ISMP High Alert Medications',
+        'WHO Essential Medicines List'
+    ],
+    'last_updated': '2025-02-18'
+    },
 }

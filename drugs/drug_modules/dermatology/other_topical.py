@@ -144,7 +144,22 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Hypercalcemia (if used in excess or on large areas) - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in psoriasis)", "Signs of skin irritation", "Serum calcium (if used on large areas or long-term) - CRITICAL", "Signs of hypercalcemia: fatigue, nausea, constipation"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Psoriasis Treatment",
+                "FDA Drug Information - Calcipotriol Topical",
+                "UpToDate - Psoriasis Treatment"
+            ]
         },
 
         "Calcitriol topical": {
@@ -281,7 +296,22 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Hypercalcemia (if used in excess or on large areas) - CRITICAL"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in psoriasis)", "Signs of skin irritation", "Serum calcium (if used on large areas or long-term) - CRITICAL", "Signs of hypercalcemia: fatigue, nausea, constipation"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Psoriasis Treatment",
+                "FDA Drug Information - Calcitriol Topical",
+                "UpToDate - Psoriasis Treatment"
+            ]
         },
 
         "Diclofenac gel": {
@@ -427,7 +457,22 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["GI toxicity (rare, if systemic absorption occurs)", "Renal toxicity (rare, if systemic absorption occurs)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in pain, inflammation)", "Signs of skin irritation", "Signs of systemic side effects (rare): GI pain, hypertension"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Topical NSAIDs",
+                "FDA Drug Information - Diclofenac Gel",
+                "UpToDate - Topical NSAIDs for Pain"
+            ]
         },
 
         "Ivermectin cream": {
@@ -538,7 +583,22 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in rosacea)", "Signs of skin irritation (redness, burning, dryness)", "Signs of excessive irritation (stop if too severe)"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Rosacea Treatment",
+                "FDA Drug Information - Ivermectin Cream",
+                "UpToDate - Rosacea Treatment"
+            ]
         },
 
         "Ketoprofen gel": {
@@ -683,7 +743,22 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["GI toxicity (rare, if systemic absorption occurs)", "Renal toxicity (rare, if systemic absorption occurs)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in pain, inflammation)", "Signs of skin irritation", "Signs of systemic side effects (rare): GI pain, hypertension"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Topical NSAIDs",
+                "FDA Drug Information - Ketoprofen Gel",
+                "UpToDate - Topical NSAIDs for Pain"
+            ]
         },
 
         "Permethrin topical": {
@@ -820,7 +895,23 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A - Dựa trên FDA drug labels, CDC guidelines, và dữ liệu lâm sàng"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in itching, reduction in skin lesions)", "Signs of skin irritation (increased redness, itching, burning)", "Signs of secondary skin infection (pus, increased redness/swelling)", "Continued itching (may be due to allergic reaction to dead parasites, not medication)"]
+            },
+            "guideline_tags": [
+                "CDC Guidelines - Scabies and Lice Treatment",
+                "AAD Guidelines - Scabies Treatment",
+                "FDA Drug Information - Permethrin Topical",
+                "UpToDate - Scabies and Lice Treatment"
+            ]
         },
 
         "Pimecrolimus": {
@@ -986,7 +1077,23 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-18",
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-            }
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Skin cancer (lymphoma, skin cancer) - slight increased risk (FDA warning) - CRITICAL", "Skin infections (herpes simplex, varicella zoster) - increased risk"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in redness, swelling, itching)", "Signs of skin irritation (increased redness, burning, itching, stinging)", "Signs of skin infection (pus, increased redness/swelling, herpes) - CRITICAL", "Signs of skin cancer (new lesions, changes in existing lesions) - CRITICAL", "Treatment area (avoid >20% body surface area)"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Atopic Dermatitis",
+                "FDA Black Box Warning - Pimecrolimus Topical and Skin Cancer",
+                "FDA Black Box Warning - Pimecrolimus Topical and Age Restriction (<2 years)",
+                "FDA Drug Information - Pimecrolimus Topical"
+            ]
         },
 
         "Salicylic Acid": {
@@ -1127,7 +1234,23 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "A"
-            }
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Salicylate toxicity (if used on large areas or high concentrations) - rare but dangerous"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Clinical response (reduction in warts, acne, psoriasis)", "Signs of skin irritation", "Signs of salicylate toxicity (if used on large areas): tinnitus, nausea, rapid breathing, altered consciousness"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Warts Treatment",
+                "AAD Guidelines - Acne Treatment",
+                "FDA Drug Information - Salicylic Acid Topical",
+                "UpToDate - Warts and Acne Treatment"
+            ]
         },
 
         "Tacrolimus topical": {

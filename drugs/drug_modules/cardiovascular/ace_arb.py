@@ -55,7 +55,20 @@ ACE_ARB_DRUGS = {
             "Thận trọng ở suy thận, tăng Kali máu",
             "Tránh dùng NSAIDs"
         ],
-        "black_box_warnings": "Gây quái thai. Chống chỉ định ở thai kỳ."
+        "black_box_warnings": "Gây quái thai. Chống chỉ định ở thai kỳ.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC/HFSA 2022 Heart Failure Guidelines",
+            "KDIGO 2021 Chronic Kidney Disease Guidelines",
+            "ACC/AHA 2013 Post-MI Guidelines"
+        ]
     },
 
     "Enalapril": {
@@ -76,7 +89,20 @@ ACE_ARB_DRUGS = {
         "side_effects": [
             "Tương tự Lisinopril"
         ],
-        "mechanism_of_action": "Tương tự Lisinopril. Có dạng IV (Enalaprilat) cho cấp cứu tăng huyết áp."
+        "mechanism_of_action": "Tương tự Lisinopril. Có dạng IV (Enalaprilat) cho cấp cứu tăng huyết áp.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC/HFSA 2022 Heart Failure Guidelines",
+            "KDIGO 2021 Chronic Kidney Disease Guidelines",
+            "ACC/AHA 2013 Post-MI Guidelines"
+        ]
     },
 
     "Losartan": {
@@ -120,7 +146,20 @@ ACE_ARB_DRUGS = {
             "Dùng thay thế ACE-I khi không dung nạp ho",
             "Tránh thai - Gây quái thai"
         ],
-        "black_box_warnings": "Gây quái thai. Chống chỉ định ở thai kỳ."
+        "black_box_warnings": "Gây quái thai. Chống chỉ định ở thai kỳ.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC/HFSA 2022 Heart Failure Guidelines",
+            "KDIGO 2021 Chronic Kidney Disease Guidelines",
+            "AHA/ASA 2021 Stroke Prevention Guidelines"
+        ]
     },
 
     "Valsartan": {
@@ -140,6 +179,18 @@ ACE_ARB_DRUGS = {
         },
         "side_effects": [
             "Tương tự Losartan"
+        ],
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC/HFSA 2022 Heart Failure Guidelines",
+            "KDIGO 2021 Chronic Kidney Disease Guidelines"
         ]
     },
 
@@ -160,6 +211,18 @@ ACE_ARB_DRUGS = {
         "side_effects": [
             "Tương tự Losartan"
         ],
-        "mechanism_of_action": "ARB tác dụng kéo dài nhất (half-life 24h). Có thêm tác dụng PPAR-gamma (tương tự Pioglitazone) - Cải thiện insulin resistance nhẹ."
-    }
+        "mechanism_of_action": "ARB tác dụng kéo dài nhất (half-life 24h). Có thêm tác dụng PPAR-gamma (tương tự Pioglitazone) - Cải thiện insulin resistance nhẹ.",
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC/HFSA 2022 Heart Failure Guidelines",
+            "KDIGO 2021 Chronic Kidney Disease Guidelines"
+        ]
+        }
 }

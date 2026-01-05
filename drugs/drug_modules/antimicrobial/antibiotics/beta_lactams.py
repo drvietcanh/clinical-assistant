@@ -1258,10 +1258,13 @@ BETA_LACTAM_ANTIBIOTICS = {
         "last_updated": "2025-02-18",
     },
 
-    "Penicillin G": {
+    "Penicillin G":     {
         "group": "Antibiotic - Penicillin (Natural)",
         "vietnamese_name": "Penicillin G, Benzylpenicillin",
-        "administration": ["IV", "IM"],
+        "administration": [
+            "IV",
+            "IM"
+    ],
         "indications": [
             "Nhiễm khuẩn do Streptococcus (viêm họng, viêm phổi, nhiễm khuẩn da)",
             "Nhiễm khuẩn do Treponema pallidum (giang mai)",
@@ -1269,33 +1272,40 @@ BETA_LACTAM_ANTIBIOTICS = {
             "Nhiễm khuẩn do Clostridium (uốn ván, hoại thư)",
             "Nhiễm khuẩn do Actinomyces",
             "Viêm nội tâm mạc do Streptococcus nhạy cảm"
-        ],
-        "contraindications": [
-            "Dị ứng penicillin",
-            "Dị ứng beta-lactam"
-        ],
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng penicillin (phản ứng nghiêm trọng, sốc phản vệ)",
+                "Dị ứng beta-lactam (phản ứng chéo)"
+    ],
+            "tương_đối": [
+                "Suy thận nặng (cần giảm liều đáng kể)",
+                "Tiền sử co giật (tăng nguy cơ co giật)",
+                "Suy tim (hàm lượng natri cao)"
+    ],
+        },
         "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng penicillin",
                 "Dị ứng beta-lactam",
                 "Tiền sử sốc phản vệ với penicillin"
-            ],
-            "tương_đối": []
+    ],
+            "tương_đối": [],
         },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."},
+        "reversal_agents": None,
         "dosage": {
             "adult_standard": "1-4 triệu đơn vị IV mỗi 4-6 giờ",
             "adult_severe": "4-6 triệu đơn vị IV mỗi 4 giờ",
             "adult_meningitis": "4 triệu đơn vị IV mỗi 4 giờ",
             "adult_syphilis": "2.4 triệu đơn vị IM x 1 liều (early), 2.4 triệu đơn vị IM mỗi tuần x 3 tuần (late)",
             "adult_endocarditis": "4-6 triệu đơn vị IV mỗi 4 giờ",
-            "notes": "1 triệu đơn vị = 600mg. Pha trong NS hoặc D5W, truyền IV trong 30-60 phút"
+            "notes": "1 triệu đơn vị = 600mg. Pha trong NS hoặc D5W, truyền IV trong 30-60 phút",
         },
         "renal_adjustment": {
             "normal": "Không đổi",
             "30_60": "Giảm liều 25-50%",
             "under_30": "Giảm liều 50-75%",
-            "hemodialysis": "Bổ sung liều sau lọc máu"
+            "hemodialysis": "Bổ sung liều sau lọc máu",
         },
         "side_effects": [
             "Phát ban dị ứng",
@@ -1304,15 +1314,15 @@ BETA_LACTAM_ANTIBIOTICS = {
             "Viêm tĩnh mạch tại vị trí tiêm",
             "Tiêu chảy",
             "Nhiễm nấm thứ phát"
-        ],
+    ],
         "interactions": [
             "Probenecid: tăng nồng độ penicillin G (giảm thải trừ qua thận)",
             "Warfarin: có thể tăng INR",
             "Methotrexate: tăng nồng độ methotrexate",
             "Aminoglycosides: có thể bị bất hoạt khi pha chung"
-        ],
+    ],
         "pregnancy": "B",
-        "mechanism_of_action": "Penicillin G (benzylpenicillin) là penicillin tự nhiên đầu tiên, ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs), ngăn cản quá trình cross-linking của peptidoglycan. Phổ kháng khuẩn: Gram-dương (Streptococcus, Staphylococcus nhạy cảm, Clostridium, Actinomyces), một số Gram-âm (Neisseria meningitidis, Neisseria gonorrhoeae nhạy cảm), và xoắn khuẩn (Treponema pallidum). Không hiệu quả với vi khuẩn sản xuất beta-lactamase. Phải dùng đường tiêm (IV/IM) vì bị phá hủy bởi acid dạ dày.",
+        "mechanism_of_action": """Penicillin G (benzylpenicillin) là penicillin tự nhiên đầu tiên, ức chế tổng hợp thành tế bào vi khuẩn bằng cách gắn với penicillin-binding proteins (PBPs), ngăn cản quá trình cross-linking của peptidoglycan. Phổ kháng khuẩn: Gram-dương (Streptococcus, Staphylococcus nhạy cảm, Clostridium, Actinomyces), một số Gram-âm (Neisseria meningitidis, Neisseria gonorrhoeae nhạy cảm), và xoắn khuẩn (Treponema pallidum). Không hiệu quả với vi khuẩn sản xuất beta-lactamase. Phải dùng đường tiêm (IV/IM) vì bị phá hủy bởi acid dạ dày.""",
         "monitoring": [
             "Dấu hiệu dị ứng (phát ban, sốc phản vệ) - đặc biệt quan trọng",
             "Dấu hiệu nhiễm trùng (sốt, WBC, CRP)",
@@ -1321,7 +1331,7 @@ BETA_LACTAM_ANTIBIOTICS = {
             "Dấu hiệu co giật (liều cao, suy thận)",
             "Đường huyết (có thể tăng hoặc giảm)",
             "Điện giải (natri - mỗi 1 triệu đơn vị chứa 1.7 mEq natri)"
-        ],
+    ],
         "precautions": [
             "Phải test dị ứng trước khi dùng (nếu có tiền sử dị ứng penicillin)",
             "Có thể gây sốc phản vệ - chuẩn bị epinephrine",
@@ -1331,71 +1341,61 @@ BETA_LACTAM_ANTIBIOTICS = {
             "Không pha chung với aminoglycosides (truyền riêng biệt)",
             "Pha trong NS hoặc D5W, truyền IV trong 30-60 phút",
             "Theo dõi nhiễm nấm thứ phát khi dùng kéo dài"
-        ],
+    ],
         "pharmacokinetics": {
             "half_life": "0.5-1 giờ (bình thường), 7-10 giờ (suy thận nặng)",
             "onset": "Ngay lập tức sau khi truyền IV",
             "duration": "Liều 1-4 triệu đơn vị q4-6h",
             "protein_binding": "45-65%",
-            "clearance": "Chủ yếu qua thận (60-90% bài tiết nguyên dạng), cần điều chỉnh thận"
+            "clearance": "Chủ yếu qua thận (60-90% bài tiết nguyên dạng), cần điều chỉnh thận",
         },
-        "storage": "Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày. Không đông lạnh.",
-        "black_box_warnings": "Có thể gây sốc phản vệ nghiêm trọng, đặc biệt ở bệnh nhân có tiền sử dị ứng penicillin. Co giật có thể xảy ra ở liều cao hoặc suy thận.",
+        "storage": """Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày. Không đông lạnh.""",
+        "black_box_warnings": """Có thể gây sốc phản vệ nghiêm trọng, đặc biệt ở bệnh nhân có tiền sử dị ứng penicillin. Co giật có thể xảy ra ở liều cao hoặc suy thận.""",
         "drug_interactions": {
             "major": [
-                {
+    {
                     "drug": "Probenecid",
-                    "mechanism": "Probenecid ức chế bài tiết ống thận của penicillin G, làm giảm thải trừ và tăng nồng độ penicillin G trong máu.",
+                    "mechanism": """Probenecid ức chế bài tiết ống thận của penicillin G, làm giảm thải trừ và tăng nồng độ penicillin G trong máu.""",
                     "effect": "Tăng nồng độ penicillin G, tăng thời gian bán hủy, tăng hiệu quả nhưng cũng tăng nguy cơ độc tính",
-                    "management": "Có thể dùng cùng để tăng nồng độ penicillin G (ví dụ: trong điều trị giang mai). Theo dõi dấu hiệu độc tính (co giật)."
+                    "management": """Có thể dùng cùng để tăng nồng độ penicillin G (ví dụ: trong điều trị giang mai). Theo dõi dấu hiệu độc tính (co giật).""",
                 },
-                {
+    {
                     "drug": "Methotrexate",
-                    "mechanism": "Penicillin G có thể ức chế bài tiết ống thận của methotrexate, làm giảm thải trừ và tăng nồng độ methotrexate.",
+                    "mechanism": """Penicillin G có thể ức chế bài tiết ống thận của methotrexate, làm giảm thải trừ và tăng nồng độ methotrexate.""",
                     "effect": "Tăng nồng độ methotrexate, tăng nguy cơ độc tính (giảm bạch cầu, độc thận, viêm niêm mạc)",
-                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ nồng độ methotrexate, công thức máu, chức năng thận. Có thể cần giảm liều methotrexate."
+                    "management": """TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ nồng độ methotrexate, công thức máu, chức năng thận. Có thể cần giảm liều methotrexate.""",
                 }
-            ],
+                ],
             "moderate": [
-                {
+    {
                     "drug": "Warfarin",
-                    "mechanism": "Penicillin G có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K.",
+                    "mechanism": """Penicillin G có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K.""",
                     "effect": "Tăng INR, tăng nguy cơ chảy máu",
-                    "management": "Theo dõi INR thường xuyên. Có thể cần giảm liều warfarin."
+                    "management": "Theo dõi INR thường xuyên. Có thể cần giảm liều warfarin.",
                 },
-                {
+    {
                     "drug": "Aminoglycosides (Gentamicin, Tobramycin, Amikacin)",
                     "mechanism": "Aminoglycosides có thể bị bất hoạt về mặt hóa học bởi penicillin G khi pha chung.",
                     "effect": "Giảm hiệu quả kháng khuẩn của aminoglycosides nếu pha chung",
-                    "management": "Không pha chung. Truyền riêng biệt. Tuy nhiên, có thể dùng cùng nhau (synergy) nếu truyền riêng."
+                    "management": "Không pha chung. Truyền riêng biệt. Tuy nhiên, có thể dùng cùng nhau (synergy) nếu truyền riêng.",
                 }
-            ]
-        },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng penicillin (phản ứng nghiêm trọng, sốc phản vệ)",
-                "Dị ứng beta-lactam (phản ứng chéo)"
-            ],
-            "tương_đối": [
-                "Suy thận nặng (cần giảm liều đáng kể)",
-                "Tiền sử co giật (tăng nguy cơ co giật)",
-                "Suy tim (hàm lượng natri cao)"
-            ]
+                ],
+            "minor": [],
         },
         "pregnancy_lactation": {
             "fda_category": "B",
-            "pregnancy_details": "Penicillin G được coi là an toàn trong thai kỳ. Đã được sử dụng rộng rãi trong nhiều thập kỷ. Lựa chọn đầu tay cho nhiều nhiễm khuẩn trong thai kỳ, đặc biệt giang mai.",
+            "pregnancy_details": """Penicillin G được coi là an toàn trong thai kỳ. Đã được sử dụng rộng rãi trong nhiều thập kỷ. Lựa chọn đầu tay cho nhiều nhiễm khuẩn trong thai kỳ, đặc biệt giang mai.""",
             "lactation": {
                 "safety": "Compatible",
-                "details": "Penicillin G bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
-                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu dị ứng hoặc tiêu chảy."
-            }
+                "details": """Penicillin G bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.""",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu dị ứng hoặc tiêu chảy.",
+            },
         },
         "hepatic_adjustment": {
             "mild": "Không đổi",
             "moderate": "Không đổi",
             "severe": "Không đổi",
-            "notes": "Penicillin G thải chủ yếu qua thận, không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
+            "notes": "Penicillin G thải chủ yếu qua thận, không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan.",
         },
         "overdose_management": {
             "symptoms": [
@@ -1403,7 +1403,7 @@ BETA_LACTAM_ANTIBIOTICS = {
                 "Rối loạn điện giải (natri cao)",
                 "Viêm tĩnh mạch tại vị trí tiêm",
                 "Phản ứng dị ứng nặng (sốc phản vệ)"
-            ],
+    ],
             "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: chống co giật, điều chỉnh điện giải",
             "treatment": [
                 "Ngừng thuốc ngay lập tức",
@@ -1412,31 +1412,34 @@ BETA_LACTAM_ANTIBIOTICS = {
                 "Điều trị sốc phản vệ nếu có: Epinephrine, corticosteroids, antihistamines",
                 "Theo dõi chức năng thận, điện giải",
                 "Theo dõi ít nhất 12-24 giờ"
-            ],
-            "monitoring": "Chức năng thận (creatinine, CrCl), điện giải (Na, K), dấu hiệu co giật, dấu hiệu dị ứng, huyết áp, nhịp tim"
+    ],
+            "monitoring": """Chức năng thận (creatinine, CrCl), điện giải (Na, K), dấu hiệu co giật, dấu hiệu dị ứng, huyết áp, nhịp tim""",
         },
-        "reversal_agents": None,
         "administration_instructions": {
             "oral": {
                 "with_food": "N/A - chỉ có dạng IV/IM",
-                "timing": "N/A - chỉ có dạng IV/IM"
+                "timing": "N/A - chỉ có dạng IV/IM",
             },
             "iv": {
-                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Thể tích pha: 50-100ml cho liều 1-4 triệu đơn vị. Lắc kỹ để hòa tan hoàn toàn.",
+                "reconstitution": """Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Thể tích pha: 50-100ml cho liều 1-4 triệu đơn vị. Lắc kỹ để hòa tan hoàn toàn.""",
                 "infusion_rate": "Truyền IV trong 30-60 phút. Tốc độ: 50ml/30-60 phút.",
-                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "Ringer's Lactate"],
+                "compatibility": [
+                    "NS (0.9% NaCl)",
+                    "D5W (5% Dextrose)",
+                    "Ringer's Lactate"
+    ],
                 "incompatibility": [
                     "Aminoglycosides - có thể bị bất hoạt khi pha chung, truyền riêng biệt",
                     "Amphotericin B - không tương thích",
                     "Các thuốc có tính kiềm hoặc acid mạnh"
-                ],
-                "notes": "Truyền IV trong 30-60 phút. Theo dõi phản ứng tại chỗ tiêm (viêm tĩnh mạch). Dùng ngay sau khi pha. Không bảo quản lâu sau khi pha."
+    ],
+                "notes": """Truyền IV trong 30-60 phút. Theo dõi phản ứng tại chỗ tiêm (viêm tĩnh mạch). Dùng ngay sau khi pha. Không bảo quản lâu sau khi pha.""",
             },
             "im": {
                 "reconstitution": "Pha với nước cất vô trùng. Thể tích: 1-2ml cho liều 2.4 triệu đơn vị.",
                 "injection_site": "Tiêm sâu vào cơ lớn (mông, đùi). Tránh tiêm vào mạch máu.",
-                "notes": "Tiêm sâu vào cơ. Không tiêm vào mạch máu. Có thể đau tại chỗ tiêm. Dùng cho điều trị giang mai."
-            }
+                "notes": "Tiêm sâu vào cơ. Không tiêm vào mạch máu. Có thể đau tại chỗ tiêm. Dùng cho điều trị giang mai.",
+            },
         },
         "references": {
             "primary_sources": [
@@ -1445,16 +1448,20 @@ BETA_LACTAM_ANTIBIOTICS = {
                 "UpToDate - Penicillin G: Drug Information",
                 "CDC Guidelines - Syphilis Treatment",
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-            ],
+    ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều thập kỷ"
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều thập kỷ",
         },
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"hepatic": "Low", "renal": "Low", "neurological": "Moderate (co giật ở liều cao/suy thận)"}
+            "organ_toxicity": {
+                "hepatic": "Low",
+                "renal": "Low",
+                "neurological": "Moderate (co giật ở liều cao/suy thận)",
+            },
         },
         "guideline_tags": [
             "IDSA Guidelines - Infective Endocarditis",
@@ -1462,10 +1469,9 @@ BETA_LACTAM_ANTIBIOTICS = {
             "CDC Guidelines - Syphilis Treatment",
             "WHO Essential Medicines List",
             "IDSA Guidelines - Skin and Soft Tissue Infections"
-        ],
+    ],
         "last_updated": "2025-02-18",
     },
-    
     "Piperacillin-tazobactam": {
     "group": "Antibiotic - Penicillin/Beta-lactamase Inhibitor",
     "vietnamese_name": "Piperacillin-tazobactam, Tazocin, Zosyn",

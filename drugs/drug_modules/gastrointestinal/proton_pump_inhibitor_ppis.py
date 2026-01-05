@@ -86,13 +86,27 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
                 "ACG GERD Guidelines 2022"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "High – FDA-approved"
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Magnesium (long-term use)"],
+            },
+            "guideline_tags": [
+                "ACG 2017 GERD Guidelines",
+                "FDA - Long-term PPI use monitoring"
+            ],
+            "evidence_level": "High - FDA-approved"
         }
     },
 
     "Esomeprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor (PPI)',
         'vietnamese_name': 'Esomeprazole, Nexium', 'administration': ['PO',
-        'IV'], 'indications': ['Loét dạ dày tá tràng',
+        'IV'], 'indications': [
         'Trào ngược dạ dày thực quản (GERD)', 'Hội chứng Zollinger-Ellison',
         'Tiệt trừ H. pylori (kết hợp)', 'Loét do NSAID (dự phòng)'],
         'contraindications': ['Dị ứng esomeprazole/PPI'], 'dosage': {'adult_po':
@@ -109,7 +123,7 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
         'Warfarin: tăng nhẹ nguy cơ chảy máu',
         'Ketoconazole/Itraconazole: giảm hấp thu',
         'Clopidogrel: có thể giảm hiệu quả (controversial)',
-        'Methotrexate: tăng nồng độ methotrexate'], 'pregnancy': 'B',
+        'Methotrexate: tăng nồng độ methotrexate'],
         'mechanism_of_action':
         'Enantiomer S của omeprazole. Ức chế không hồi phục enzyme H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, ức chế bước cuối cùng trong quá trình tiết acid dạ dày. Chuyển hóa qua CYP2C19 ít hơn omeprazole (racemic) → hiệu quả tốt hơn và ổn định hơn. Ức chế cả acid kích thích và acid cơ bản. Tác dụng mạnh hơn và ổn định hơn omeprazole do ít chuyển hóa qua CYP2C19.'
         , 'monitoring': ['Đáp ứng lâm sàng (giảm đau, triệu chứng GERD)',
@@ -148,7 +162,7 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
         'Giảm hiệu quả chống kết tập tiểu cầu của clopidogrel (controversial, nhưng nên thận trọng)'
         , 'management':
         'Thận trọng. Cân nhắc dùng pantoprazole (ít ảnh hưởng hơn) hoặc cách thời gian.'
-        }], 'moderate': [{'drug': 'Warfarin', 'mechanism':
+        }, {'drug': 'Warfarin', 'mechanism':
         'Esomeprazole ức chế CYP2C9 nhẹ', 'effect':
         'Tăng INR nhẹ, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần.'}, {
@@ -287,7 +301,22 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
                 "Comparative studies CYP2C19 vs omeprazole/esomeprazole"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "Moderate – approved in several countries, real-world data"
+            "evidence_level": "Moderate – approved in several countries",
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Magnesium (long-term use)"],
+            },
+            "guideline_tags": [
+                "ACG 2017 GERD Guidelines",
+                "FDA - Long-term PPI use monitoring",
+            ] 
+
         }
     },
     "Lansoprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor (PPI)',
@@ -308,7 +337,7 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
         'Warfarin: tăng nhẹ nguy cơ chảy máu',
         'Digoxin: tăng nhẹ nồng độ digoxin',
         'Ketoconazole/Itraconazole: giảm hấp thu (giảm acid dạ dày)',
-        'Methotrexate: tăng nồng độ methotrexate'], 'pregnancy': 'B',
+        'Methotrexate: tăng nồng độ methotrexate'],
         'mechanism_of_action':
         'Ức chế không hồi phục enzyme H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, ức chế bước cuối cùng trong quá trình tiết acid dạ dày. Ức chế cả acid kích thích và acid cơ bản. Cần chuyển hóa ở gan thành dạng hoạt động (sulfenamide). Tác dụng mạnh hơn H2 blocker. Thời gian bán thải ngắn nhưng tác dụng kéo dài do ức chế không hồi phục enzyme.'
         , 'monitoring': ['Đáp ứng lâm sàng (giảm đau, triệu chứng GERD)',
@@ -410,7 +439,7 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
         'Thiếu vitamin B12 (dùng lâu dài)', 'Thiếu magnesium (dùng lâu dài)'],
         'interactions': ['Clopidogrel: giảm hiệu quả clopidogrel',
         'Warfarin: có thể tăng tác dụng', 'Phenytoin: tăng nồng độ phenytoin',
-        'Methotrexate: tăng nồng độ methotrexate'], 'pregnancy': 'C',
+        'Methotrexate: tăng nồng độ methotrexate'],
         'mechanism_of_action':
         'Ức chế không hồi phục H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, giảm tiết acid dạ dày'
         , 'monitoring': ['Triệu chứng cải thiện (đau dạ dày, ợ chua)',
@@ -441,7 +470,7 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
         'Giảm nồng độ atazanavir, giảm hiệu quả điều trị HIV, tăng nguy cơ kháng thuốc'
         , 'management':
         'CHỐNG CHỈ ĐỊNH dùng cùng. Không dùng omeprazole với atazanavir. Dùng H2 blocker hoặc PPI khác cách thời gian (12 giờ).'
-        }], 'moderate': [{'drug': 'Warfarin', 'mechanism':
+        }, {'drug': 'Warfarin', 'mechanism':
         'Omeprazole ức chế CYP2C9 nhẹ, có thể tăng nồng độ warfarin', 'effect':
         'Tăng INR, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần.'}, {
@@ -471,7 +500,7 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
         'Giảm hấp thu B12, có thể gây thiếu máu thiếu B12 sau 2-3 năm dùng PPI',
         'management':
         'Bổ sung B12 định kỳ nếu dùng PPI lâu dài (>2 năm). Theo dõi B12 máu mỗi 1-2 năm.'
-        }], 'minor': [{'drug': 'Diazepam', 'mechanism': 'Ức chế CYP2C19 nhẹ',
+        }], 'moderate': [{'drug': 'Diazepam', 'mechanism': 'Ức chế CYP2C19 nhẹ',
         'effect': 'Tăng nồng độ diazepam nhẹ', 'management':
         'Thận trọng, không cần điều chỉnh liều thường quy'}, {'drug':
         'Citalopram, Escitalopram', 'mechanism': 'Ức chế CYP2C19', 'effect':

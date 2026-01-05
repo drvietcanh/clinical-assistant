@@ -6,7 +6,7 @@ CORTICOSTEROID_INHALED_DRUGS = {
     "Budesonide": {'group': 'Respiratory - Corticosteroid (Inhaled)', 'vietnamese_name':
         'Budesonide inhaled, Pulmicort', 'administration': ['INH', 'NEB'],
         'indications': ['Hen phế quản (duy trì)', 'COPD', 'Viêm mũi dị ứng',
-        'Hen phế quản (Trẻ em)'], 'contraindications': ['Dị ứng budesonide',
+        'Hen phế quản (Trẻ em)'],
         'Nhiễm trùng đường hô hấp không điều trị'], 'dosage': {'adult_inh':
         '200-800mcg x 2 lần/ngày', 'adult_neb':
         '0.5-1mg nebulizer x 2 lần/ngày', 'pediatric_inh':
@@ -18,7 +18,7 @@ CORTICOSTEROID_INHALED_DRUGS = {
         'Nấm miệng (candida - phổ biến nếu không súc miệng)', 'Khàn tiếng',
         'Ho', 'Kích ứng họng', 'Tác dụng toàn thân (hiếm với liều thường)'],
         'interactions': ['Ketoconazole/Itraconazole: tăng nồng độ budesonide',
-        'Ritonavir: tăng nồng độ budesonide'], 'pregnancy': 'C - An toàn',
+        'Ritonavir: tăng nồng độ budesonide'],
         'mechanism_of_action':
         'Budesonide là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Budesonide gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản, và tăng số lượng beta-2 receptors. Budesonide có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Tuy nhiên, một phần nhỏ vẫn được hấp thu và có thể gây tác dụng toàn thân ở liều cao. Budesonide được chuyển hóa nhanh ở gan (first-pass metabolism cao) nên tác dụng toàn thân ít hơn so với corticosteroid uống.'
         , 'monitoring': [
@@ -69,7 +69,7 @@ CORTICOSTEROID_INHALED_DRUGS = {
         }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
         'Dị ứng budesonide',
         'Nhiễm trùng đường hô hấp không điều trị (lao phổi, nhiễm nấm) - corticosteroid có thể làm nặng nhiễm trùng'
-        ], 'tương_đối': ['Lao phổi - cần điều trị lao trước, thận trọng',
+        ],
         'Nhiễm nấm đường hô hấp - cần điều trị trước',
         'Có thai - category C, thận trọng',
         'Đang dùng ritonavir - tăng nguy cơ ức chế HPA']},
@@ -120,6 +120,37 @@ CORTICOSTEROID_INHALED_DRUGS = {
         'FDA Drug Label - Budesonide (Pulmicort)',
         'UpToDate - Budesonide: Drug Information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ], 'last_updated': '2025-02-04', 'evidence_level': 'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'}}}
+        ], 'evidence_level': 'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'},
+        'risk_flags': {
+            'high_alert': False,
+            'narrow_therapeutic_index': False,
+            'icu_critical_care_only': False,
+            'bleeding_risk': 'None',
+            'organ_toxicity': {
+                'endocrine': 'Moderate (HPA axis suppression with high doses >1600mcg/day, especially with ritonavir)',
+                'respiratory': 'Low (oral candidiasis - common if not rinsing mouth, hoarseness, cough)',
+                'metabolic': 'Moderate (hyperglycemia, hypertension with high doses)',
+                'skeletal': 'Moderate (growth suppression in children with high doses, osteoporosis with long-term high doses)'
+            },
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': [
+                'Treatment response (reduced asthma symptoms, frequency of exacerbations, need for SABA)',
+                'Oral candidiasis - CRITICAL (check tongue, mouth, especially if not rinsing after use)',
+                'Hoarseness, cough, throat irritation - common local side effects',
+                'Systemic effects (only with high doses): HPA axis suppression, growth suppression in children, osteoporosis, hypertension',
+                'Hepatic function (if symptoms - rare)',
+                'Drug interactions with ritonavir, ketoconazole, itraconazole (increased budesonide levels) - CRITICAL'
+            ],
+            'look_alike_sound_alike': ['Budesonide', 'Beclomethasone', 'Fluticasone', 'Mometasone']
+        },
+        'guideline_tags': [
+            'GINA 2023 Guidelines - Global Initiative for Asthma',
+            'NAEPP Guidelines - Asthma Management',
+            'FDA Drug Information - Budesonide',
+            'FDA Warning - Budesonide and Ritonavir Interaction',
+            'WHO Essential Medicines List'
+        ]}}
 
 __all__ = ['CORTICOSTEROID_INHALED_DRUGS']
