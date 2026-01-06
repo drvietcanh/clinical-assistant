@@ -10,6 +10,7 @@ from config.calculators import ALL_CALCULATORS
 import re
 
 
+@st.cache_data(ttl=300, max_entries=200)
 def search_calculators(query: str, max_results: int = 5) -> List[Dict]:
     """Search calculators by name or category"""
     if not query:

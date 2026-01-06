@@ -7,6 +7,10 @@ Hỗ trợ infection_site, severity, setting, regimens, guideline_source, year
 from typing import List, Dict, Optional
 from dataclasses import dataclass, field
 from enum import Enum
+from .vietnamese_terms import (
+    INFECTION_SITE_VI, SEVERITY_VI, SETTING_VI, 
+    REGIMEN_TYPE_VI, RECOMMENDATION_LEVEL_VI
+)
 
 
 class InfectionSite(str, Enum):
@@ -22,6 +26,10 @@ class InfectionSite(str, Enum):
     SEPSIS = "SEPSIS"  # Sepsis
     OSTEOMYELITIS = "OSTEOMYELITIS"  # Bone infection
     ENDOCARDITIS = "ENDOCARDITIS"  # Endocarditis
+    
+    def get_vietnamese_label(self) -> str:
+        """Get Vietnamese label for this infection site"""
+        return INFECTION_SITE_VI.get(self.value, self.value)
 
 
 class Severity(str, Enum):
@@ -30,6 +38,10 @@ class Severity(str, Enum):
     MODERATE = "MODERATE"
     SEVERE = "SEVERE"
     ICU = "ICU"  # ICU-level care
+    
+    def get_vietnamese_label(self) -> str:
+        """Get Vietnamese label for this severity"""
+        return SEVERITY_VI.get(self.value, self.value)
 
 
 class Setting(str, Enum):
@@ -37,6 +49,10 @@ class Setting(str, Enum):
     OPD = "OPD"  # Outpatient
     WARD = "WARD"  # Inpatient ward
     ICU = "ICU"  # Intensive care unit
+    
+    def get_vietnamese_label(self) -> str:
+        """Get Vietnamese label for this setting"""
+        return SETTING_VI.get(self.value, self.value)
 
 
 class RecommendationLevel(str, Enum):
@@ -44,6 +60,10 @@ class RecommendationLevel(str, Enum):
     STRONG = "STRONG"
     WEAK = "WEAK"
     CONDITIONAL = "CONDITIONAL"
+    
+    def get_vietnamese_label(self) -> str:
+        """Get Vietnamese label for this recommendation level"""
+        return RECOMMENDATION_LEVEL_VI.get(self.value, self.value)
 
 
 class RegimenType(str, Enum):
@@ -52,6 +72,10 @@ class RegimenType(str, Enum):
     ALTERNATIVE = "ALTERNATIVE"
     RESCUE = "RESCUE"
     STEP_DOWN = "STEP_DOWN"  # IV to PO switch
+    
+    def get_vietnamese_label(self) -> str:
+        """Get Vietnamese label for this regimen type"""
+        return REGIMEN_TYPE_VI.get(self.value, self.value)
 
 
 @dataclass

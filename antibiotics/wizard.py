@@ -10,12 +10,13 @@ from .protocols_schema import (
     InfectionSite, Severity, Setting
 )
 from .protocols_data import get_antibiotic_protocols
+from .vietnamese_terms import get_vietnamese_label, COMMON_TERMS_VI
 
 
 def render_antibiotic_wizard():
     """Render the Antibiotic Wizard form and recommendations"""
     
-    st.markdown("### 🧙 Antibiotic Wizard")
+    st.markdown("### 🧙 Trợ lý Chọn Kháng Sinh")
     st.caption("Nhập thông tin lâm sàng để nhận đề xuất phác đồ kháng sinh")
     
     protocols_collection = get_antibiotic_protocols()
@@ -24,78 +25,78 @@ def render_antibiotic_wizard():
     col1, col2 = st.columns(2)
     
     with col1:
-        # Site of infection
+        # Site of infection with Vietnamese labels
         infection_sites = {
-            "CAP": InfectionSite.CAP,
-            "HAP": InfectionSite.HAP,
-            "VAP": InfectionSite.VAP,
-            "UTI": InfectionSite.UTI,
-            "SSTI": InfectionSite.SSTI,
-            "CNS": InfectionSite.CNS,
-            "IAI": InfectionSite.IAI,
-            "Bacteremia": InfectionSite.BACTEREMIA,
-            "Sepsis": InfectionSite.SEPSIS
+            InfectionSite.CAP.get_vietnamese_label(): InfectionSite.CAP,
+            InfectionSite.HAP.get_vietnamese_label(): InfectionSite.HAP,
+            InfectionSite.VAP.get_vietnamese_label(): InfectionSite.VAP,
+            InfectionSite.UTI.get_vietnamese_label(): InfectionSite.UTI,
+            InfectionSite.SSTI.get_vietnamese_label(): InfectionSite.SSTI,
+            InfectionSite.CNS.get_vietnamese_label(): InfectionSite.CNS,
+            InfectionSite.IAI.get_vietnamese_label(): InfectionSite.IAI,
+            InfectionSite.BACTEREMIA.get_vietnamese_label(): InfectionSite.BACTEREMIA,
+            InfectionSite.SEPSIS.get_vietnamese_label(): InfectionSite.SEPSIS
         }
         
         site_display = st.selectbox(
-            "🦠 Site of Infection",
+            f"🦠 {COMMON_TERMS_VI.get('Infection Site', 'Vị trí nhiễm trùng')}",
             list(infection_sites.keys()),
             key="wizard_site"
         )
         selected_site = infection_sites[site_display]
         
-        # Severity
+        # Severity with Vietnamese labels
         severities = {
-            "Mild": Severity.MILD,
-            "Moderate": Severity.MODERATE,
-            "Severe": Severity.SEVERE,
-            "ICU": Severity.ICU
+            Severity.MILD.get_vietnamese_label(): Severity.MILD,
+            Severity.MODERATE.get_vietnamese_label(): Severity.MODERATE,
+            Severity.SEVERE.get_vietnamese_label(): Severity.SEVERE,
+            Severity.ICU.get_vietnamese_label(): Severity.ICU
         }
         
         severity_display = st.selectbox(
-            "⚡ Severity",
+            f"⚡ {COMMON_TERMS_VI.get('Severity', 'Mức độ nặng')}",
             list(severities.keys()),
             key="wizard_severity"
         )
         selected_severity = severities[severity_display]
     
     with col2:
-        # Setting
+        # Setting with Vietnamese labels
         settings = {
-            "Outpatient": Setting.OPD,
-            "Ward": Setting.WARD,
-            "ICU": Setting.ICU
+            Setting.OPD.get_vietnamese_label(): Setting.OPD,
+            Setting.WARD.get_vietnamese_label(): Setting.WARD,
+            Setting.ICU.get_vietnamese_label(): Setting.ICU
         }
         
         setting_display = st.selectbox(
-            "🏥 Setting",
+            f"🏥 {COMMON_TERMS_VI.get('Setting', 'Môi trường điều trị')}",
             list(settings.keys()),
             key="wizard_setting"
         )
         selected_setting = settings[setting_display]
         
         # Comorbidities
-        st.markdown("**Comorbidities:**")
-        has_ckd = st.checkbox("CKD", key="wizard_ckd")
-        is_immunocompromised = st.checkbox("Immunocompromised", key="wizard_immuno")
-        is_pregnant = st.checkbox("Pregnancy", key="wizard_pregnant")
+        st.markdown(f"**{COMMON_TERMS_VI.get('Comorbidities', 'Bệnh kèm theo')}:**")
+        has_ckd = st.checkbox(COMMON_TERMS_VI.get("CKD", "Bệnh thận mạn"), key="wizard_ckd")
+        is_immunocompromised = st.checkbox(COMMON_TERMS_VI.get("Immunocompromised", "Suy giảm miễn dịch"), key="wizard_immuno")
+        is_pregnant = st.checkbox(COMMON_TERMS_VI.get("Pregnancy", "Mang thai"), key="wizard_pregnant")
     
     # Risk factors
-    st.markdown("**⚠️ Risk Factors:**")
+    st.markdown(f"**⚠️ {COMMON_TERMS_VI.get('Risk Factors', 'Yếu tố nguy cơ')}:**")
     col3, col4, col5 = st.columns(3)
     with col3:
-        risk_mrsa = st.checkbox("MRSA risk", key="wizard_mrsa")
-        risk_pseudomonas = st.checkbox("Pseudomonas risk", key="wizard_pseudomonas")
+        risk_mrsa = st.checkbox("Nguy cơ MRSA", key="wizard_mrsa")
+        risk_pseudomonas = st.checkbox("Nguy cơ Pseudomonas", key="wizard_pseudomonas")
     with col4:
-        risk_esbl = st.checkbox("ESBL risk", key="wizard_esbl")
-        recent_hospitalization = st.checkbox("Recent hospitalization", key="wizard_hosp")
+        risk_esbl = st.checkbox("Nguy cơ ESBL", key="wizard_esbl")
+        recent_hospitalization = st.checkbox("Nhập viện gần đây", key="wizard_hosp")
     with col5:
-        beta_lactam_allergy = st.checkbox("Beta-lactam allergy", key="wizard_allergy")
+        beta_lactam_allergy = st.checkbox("Dị ứng beta-lactam", key="wizard_allergy")
     
     st.markdown("---")
     
     # Generate recommendations
-    if st.button("🔍 Get Recommendations", type="primary", use_container_width=True):
+    if st.button(COMMON_TERMS_VI.get("Get Recommendations", "🔍 Nhận Đề xuất"), type="primary", use_container_width=True):
         recommendations = get_wizard_recommendations(
             protocols_collection,
             selected_site,
@@ -113,14 +114,14 @@ def render_antibiotic_wizard():
         )
         
         if recommendations:
-            st.success(f"✅ Found {len(recommendations)} recommendation(s)")
+            st.success(f"✅ {COMMON_TERMS_VI.get('Found', 'Tìm thấy')} {len(recommendations)} {COMMON_TERMS_VI.get('recommendation(s)', 'đề xuất')}")
             st.markdown("---")
             
             for idx, (protocol, regimen) in enumerate(recommendations[:3], 1):  # Show top 3
-                st.markdown(f"### Recommendation {idx}")
+                st.markdown(f"### {COMMON_TERMS_VI.get('Recommendation', 'Đề xuất')} {idx}")
                 
                 # Show protocol info
-                st.info(f"**{protocol.title}** - {protocol.guideline_source or 'Standard protocol'}")
+                st.info(f"**{protocol.title}** - {protocol.guideline_source or 'Phác đồ chuẩn'}")
                 
                 # Show regimen
                 from .ui_antibiotics_view import render_regimen_card
@@ -129,18 +130,18 @@ def render_antibiotic_wizard():
                 # Special considerations
                 considerations = []
                 if has_ckd:
-                    considerations.append("⚠️ Adjust dose for renal function")
+                    considerations.append(f"⚠️ {COMMON_TERMS_VI.get('Adjust dose for renal function', 'Điều chỉnh liều theo chức năng thận')}")
                 if is_pregnant:
-                    considerations.append("⚠️ Consider pregnancy safety")
+                    considerations.append(f"⚠️ {COMMON_TERMS_VI.get('Consider pregnancy safety', 'Cân nhắc an toàn khi mang thai')}")
                 if beta_lactam_allergy:
-                    considerations.append("⚠️ Beta-lactam allergy - alternative regimen")
+                    considerations.append(f"⚠️ {COMMON_TERMS_VI.get('Beta-lactam allergy - alternative regimen', 'Dị ứng beta-lactam - phác đồ thay thế')}")
                 
                 if considerations:
                     st.warning(" | ".join(considerations))
                 
                 st.markdown("---")
         else:
-            st.warning("No matching protocols found. Try adjusting your criteria.")
+            st.warning(COMMON_TERMS_VI.get("No matching protocols found. Try adjusting your criteria.", "Không tìm thấy phác đồ phù hợp. Vui lòng điều chỉnh tiêu chí."))
 
 
 def get_wizard_recommendations(
