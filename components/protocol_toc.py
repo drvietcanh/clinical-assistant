@@ -234,5 +234,4 @@ def render_simple_toc(protocol_sections: List[Tuple[str, str]] = None):
                 f'<a href="#{safe_anchor}">{html.escape(section_name)}</a>',
                 unsafe_allow_html=True
             )
-        st.markdown('</div>', unsafe_allow_html=True)
 

@@ -90,13 +90,9 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Hero Section
-render_hero(
-    title="🏥 Clinical Assistant",
-    subtitle="Công cụ hỗ trợ lâm sàng toàn diện",
-    description="Tìm kiếm, tính toán, và truy cập nhanh các công cụ lâm sàng"
-)
-
+# Hero Section (simplified to avoid raw HTML showing)
+st.markdown("### 🏥 Clinical Assistant")
+st.caption("Công cụ hỗ trợ lâm sàng toàn diện – Tìm kiếm, tính toán, và truy cập nhanh các công cụ lâm sàng")
 st.markdown("---")
 
 # Section 1: Global Search

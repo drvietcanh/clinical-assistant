@@ -399,7 +399,7 @@ elif setting_category == "About":
         st.markdown("**Features:** 50+")
         st.markdown("**Status:** Production Ready")
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown("---")
     
     st.markdown('<div class="settings-section">', unsafe_allow_html=True)
     st.markdown('<div class="settings-title">👥 Credits</div>', unsafe_allow_html=True)
@@ -416,7 +416,7 @@ elif setting_category == "About":
     - NumPy - Numerical computing
     """)
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown("---")
     
     st.markdown('<div class="settings-section">', unsafe_allow_html=True)
     st.markdown('<div class="settings-title">📄 License</div>', unsafe_allow_html=True)
@@ -431,7 +431,7 @@ elif setting_category == "About":
     - Individualize for each patient
     """)
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown("---")
     
     st.markdown('<div class="settings-section">', unsafe_allow_html=True)
     st.markdown('<div class="settings-title">📞 Support</div>', unsafe_allow_html=True)
@@ -443,7 +443,7 @@ elif setting_category == "About":
     **Feedback:** Submit via GitHub
     """)
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown("---")
 
 # Footer
 st.markdown("---")

@@ -276,15 +276,12 @@ with st.sidebar:
     # ========== FAVORITES SECTION ==========
     render_favorites_section_in_sidebar(SCORES_BY_SPECIALTY)
     
-    render_info_box(
-        """
-        **Chú thích trạng thái calculator:**
-        - ✅ Hoàn thành, có thể dùng lâm sàng
-        - 🚧 Đang cập nhật/hoàn thiện
-        - 📋 Đang trong kế hoạch
-        """,
-        type="info",
-        title="Trạng thái Calculator"
+    # Simple markdown to avoid any HTML rendering quirks
+    st.info(
+        "**Chú thích trạng thái calculator:**\n"
+        "- ✅ Hoàn thành, có thể dùng lâm sàng\n"
+        "- 🚧 Đang cập nhật/hoàn thiện\n"
+        "- 📋 Đang trong kế hoạch"
     )
     
     st.markdown("---")

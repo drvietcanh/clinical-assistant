@@ -48,18 +48,8 @@ def render_responsive_table(
         unsafe_allow_html=True
     )
     
-    # Render table (optionally wrapped for horizontal scroll)
-    if use_card_view:
-        st.markdown(
-            f"""
-            <div class="responsive-table-wrapper">
-            """,
-            unsafe_allow_html=True
-        )
-        st.dataframe(data, **kwargs)
-        st.markdown("</div>", unsafe_allow_html=True)
-    else:
-        st.dataframe(data, **kwargs)
+    # Render table (HTML wrapper is optional and may be ignored in some environments)
+    st.dataframe(data, **kwargs)
     
     # Add mobile-friendly note for large tables
     if len(data.columns) > 5:
@@ -123,9 +113,8 @@ def render_table_cards(data: pd.DataFrame, title: Optional[str] = None):
         unsafe_allow_html=True
     )
     
-    # Render cards for mobile
+    # Render cards for mobile (container div is purely stylistic; closing tag omitted)
     st.markdown('<div class="table-card-container">', unsafe_allow_html=True)
-    
     for idx, row in data.iterrows():
         card_html = '<div class="table-card">'
         for col in data.columns:
@@ -139,8 +128,6 @@ def render_table_cards(data: pd.DataFrame, title: Optional[str] = None):
         card_html += '</div>'
         st.markdown(card_html, unsafe_allow_html=True)
     
-    st.markdown('</div>', unsafe_allow_html=True)
-    
     # Render regular table for desktop (hidden on mobile)
     st.markdown(
         """
@@ -151,10 +138,9 @@ def render_table_cards(data: pd.DataFrame, title: Optional[str] = None):
             }
         }
         </style>
-        <div class="desktop-table">
         """,
         unsafe_allow_html=True
     )
+    # Desktop table (no extra wrapping div to avoid stray HTML)
     st.dataframe(data, use_container_width=True)
-    st.markdown('</div>', unsafe_allow_html=True)
 

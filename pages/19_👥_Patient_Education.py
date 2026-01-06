@@ -63,13 +63,11 @@ category_filter = filters.get("category", "Tất cả") if view_mode == "Theo ch
 
 # ========== MAIN CONTENT ==========
 
-# Use standard hero section
-render_hero(
-    title="Giáo dục Bệnh nhân",
-    subtitle="Patient Education",
-    description="Tài liệu giáo dục bệnh nhân với ngôn ngữ đơn giản, dễ hiểu. Giúp bệnh nhân hiểu rõ hơn về bệnh tật, thuốc men, và cách chăm sóc sức khỏe.",
-    icon="👥",
-    gradient=("#667eea", "#764ba2")
+# Simplified header to avoid any raw HTML issues
+st.markdown("### 👥 Giáo dục Bệnh nhân")
+st.caption(
+    "Tài liệu giáo dục bệnh nhân với ngôn ngữ đơn giản, dễ hiểu. "
+    "Giúp bệnh nhân hiểu rõ hơn về bệnh tật, thuốc men, và cách chăm sóc sức khỏe."
 )
 
 # Search

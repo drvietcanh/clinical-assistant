@@ -1172,7 +1172,6 @@ def render_article_card(article: dict, index: int):
             st.markdown(content)
         else:
             st.warning(f"Không tìm thấy nội dung tại {html.escape(article['path'].name)}.")
-        st.markdown('</div>', unsafe_allow_html=True)
 
 
 def filter_articles(articles: list[dict], search: str, specialties: list, selected_keywords: list):
