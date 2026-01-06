@@ -425,6 +425,188 @@ def inject_mobile_styles():
     """, unsafe_allow_html=True)
 
 
+def inject_pwa_support():
+    """
+    Inject PWA support - Service worker registration and install prompt
+    """
+    
+    st.markdown("""
+    <link rel="manifest" href="/static/manifest.json">
+    <meta name="theme-color" content="#4caf50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Antibiotics">
+    
+    <script>
+    (function() {
+        'use strict';
+        
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/static/service-worker.js')
+                    .then(function(registration) {
+                        console.log('[PWA] Service Worker registered:', registration.scope);
+                        
+                        // Check for updates
+                        registration.addEventListener('updatefound', function() {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', function() {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // New service worker available
+                                    if (confirm('Có phiên bản mới. Bạn có muốn cập nhật không?')) {
+                                        newWorker.postMessage({ type: 'SKIP_WAITING' });
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        });
+                    })
+                    .catch(function(error) {
+                        console.log('[PWA] Service Worker registration failed:', error);
+                    });
+            });
+        }
+        
+        // Install prompt
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', function(e) {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // Show install button
+            const installButton = document.getElementById('pwa-install-button');
+            if (installButton) {
+                installButton.style.display = 'block';
+                installButton.addEventListener('click', function() {
+                    deferredPrompt.prompt();
+                    deferredPrompt.userChoice.then(function(choiceResult) {
+                        if (choiceResult.outcome === 'accepted') {
+                            console.log('[PWA] User accepted install prompt');
+                        } else {
+                            console.log('[PWA] User dismissed install prompt');
+                        }
+                        deferredPrompt = null;
+                        installButton.style.display = 'none';
+                    });
+                });
+            }
+        });
+        
+        // App installed
+        window.addEventListener('appinstalled', function() {
+            console.log('[PWA] App installed');
+            const installButton = document.getElementById('pwa-install-button');
+            if (installButton) {
+                installButton.style.display = 'none';
+            }
+        });
+    })();
+    </script>
+    
+    <style>
+    @media (max-width: 768px) {
+        #pwa-install-button {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(76,175,80,0.4);
+            z-index: 9997;
+            display: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #pwa-install-button:active {
+            transform: scale(0.95);
+        }
+    }
+    </style>
+    
+    <button id="pwa-install-button" aria-label="Cài đặt ứng dụng">
+        📱 Cài đặt
+    </button>
+    """, unsafe_allow_html=True)
+
+
+def inject_offline_indicator():
+    """
+    Inject offline/online status indicator
+    """
+    
+    st.markdown("""
+    <style>
+    @media (max-width: 768px) {
+        .offline-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #f44336;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.85em;
+            font-weight: 500;
+            z-index: 10003;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .offline-indicator.show {
+            transform: translateY(0);
+        }
+        
+        .offline-indicator.online {
+            background: #4caf50;
+        }
+    }
+    </style>
+    
+    <div class="offline-indicator" id="offline-indicator">
+        <span id="offline-message">📡 Đang offline</span>
+    </div>
+    
+    <script>
+    (function() {
+        'use strict';
+        
+        const indicator = document.getElementById('offline-indicator');
+        const message = document.getElementById('offline-message');
+        
+        function updateOnlineStatus() {
+            if (navigator.onLine) {
+                indicator.classList.remove('show');
+                indicator.classList.add('online');
+                message.textContent = '✅ Đã kết nối lại';
+                setTimeout(function() {
+                    indicator.classList.remove('show', 'online');
+                    message.textContent = '📡 Đang offline';
+                }, 3000);
+            } else {
+                indicator.classList.add('show');
+                indicator.classList.remove('online');
+                message.textContent = '📡 Đang offline';
+            }
+        }
+        
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+        
+        // Initial check
+        updateOnlineStatus();
+    })();
+    </script>
+    """, unsafe_allow_html=True)
+
+
 def inject_swipe_gestures():
     """
     Inject JavaScript for swipe gesture support

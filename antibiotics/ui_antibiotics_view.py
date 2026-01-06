@@ -661,6 +661,19 @@ def render_antibiotics_by_infection_view():
             )
         st.markdown("---")
         
+        # Add lazy loading class to cards
+        st.markdown("""
+        <script>
+        // Add lazy-load-card class to all protocol cards
+        setTimeout(function() {
+            const cards = document.querySelectorAll('.protocol-card, .regimen-card');
+            cards.forEach(function(card) {
+                card.classList.add('lazy-load-card');
+            });
+        }, 100);
+        </script>
+        """, unsafe_allow_html=True)
+        
         render_protocols_by_infection(filtered_protocols)
     else:
         render_empty_state(

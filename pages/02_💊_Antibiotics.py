@@ -152,13 +152,26 @@ try:
         inject_swipe_gestures,
         inject_pull_to_refresh,
         inject_card_swipe_actions,
-        inject_quick_actions_menu
+        inject_quick_actions_menu,
+        inject_pwa_support,
+        inject_offline_indicator
     )
+    from antibiotics.performance import (
+        inject_lazy_loading,
+        inject_image_lazy_loading,
+        inject_performance_monitoring
+    )
+    
     inject_mobile_styles()
     inject_swipe_gestures()
     inject_pull_to_refresh()
     inject_card_swipe_actions()
     inject_quick_actions_menu()
+    inject_pwa_support()
+    inject_offline_indicator()
+    inject_lazy_loading()
+    inject_image_lazy_loading()
+    inject_performance_monitoring()
 except ImportError:
     pass
 
