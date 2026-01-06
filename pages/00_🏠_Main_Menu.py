@@ -6,6 +6,8 @@ Unified entry point with search, favorites, recently used, quick access, and sta
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
 from components.ui import render_info_box, render_hero
+from components.main_menu_styles import inject_main_menu_styles
+from utils.cache_helpers import compute_usage_stats_snapshot, get_popular_calculators
 
 # Import components
 from components.global_search import render_global_search_modal, search_calculators
@@ -32,63 +34,11 @@ if 'usage_stats' not in st.session_state:
     st.session_state.usage_stats = {
         'total_calculations': 0,
         'calculations_by_category': {},
-        'most_used_calculator': None
+        'most_used_calculator': None,
     }
 
-# Custom CSS
-st.markdown("""
-<style>
-.main-menu-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.search-section {
-    margin-bottom: 30px;
-}
-
-.stats-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
-    margin: 10px 0;
-}
-
-.stats-card h3 {
-    color: white;
-    margin: 0;
-}
-
-.stats-card p {
-    color: rgba(255, 255, 255, 0.9);
-    margin: 5px 0;
-}
-
-.quick-access-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
-}
-
-.category-card {
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.category-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    transform: translateY(-2px);
-}
-</style>
-""", unsafe_allow_html=True)
+# Custom CSS (centralized in component)
+inject_main_menu_styles()
 
 # Hero Section (simplified to avoid raw HTML showing)
 st.markdown("### 🏥 Clinical Assistant")
@@ -107,11 +57,25 @@ search_query = st.text_input(
 # Render global search modal (for keyboard shortcut)
 render_global_search_modal()
 
-# Search results
+# Search results with lightweight debouncing & result caching
 if search_query:
     st.session_state.global_search_query = search_query
-    results = search_calculators(search_query, max_results=10)
-    
+
+    if 'last_main_menu_search_query' not in st.session_state:
+        st.session_state.last_main_menu_search_query = ""
+    if 'main_menu_search_results' not in st.session_state:
+        st.session_state.main_menu_search_results = []
+
+    if (
+        search_query != st.session_state.last_main_menu_search_query
+        and len(search_query.strip()) >= 2
+    ):
+        results = search_calculators(search_query, max_results=10)
+        st.session_state.last_main_menu_search_query = search_query
+        st.session_state.main_menu_search_results = results
+    else:
+        results = st.session_state.main_menu_search_results
+
     if results:
         st.markdown(f"**Tìm thấy {len(results)} kết quả:**")
         for result in results:
@@ -133,12 +97,20 @@ if search_query:
                         st.switch_page(target_page)
                 st.markdown("---")
     else:
-        st.info("Không tìm thấy kết quả. Thử từ khóa khác.")
+        st.info("Không tìm thấy kết quả (cần tối thiểu 2 ký tự). Thử từ khóa khác.")
 
 st.markdown("---")
 
 # Section 2: Stats Dashboard
 st.markdown("### 📊 Thống kê sử dụng")
+usage_stats = st.session_state.usage_stats
+categories_dict = usage_stats.get('calculations_by_category', {})
+stats_snapshot = compute_usage_stats_snapshot(
+    usage_stats.get('total_calculations', 0),
+    usage_stats.get('most_used_calculator'),
+    tuple(categories_dict.items()),
+)
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -147,10 +119,10 @@ with col1:
         <h3>📈 Tổng số lần tính</h3>
         <p style="font-size: 24px; font-weight: bold;">{}</p>
     </div>
-    """.format(st.session_state.usage_stats.get('total_calculations', 0)), unsafe_allow_html=True)
+    """.format(stats_snapshot["total_calculations"]), unsafe_allow_html=True)
 
 with col2:
-    most_used = st.session_state.usage_stats.get('most_used_calculator')
+    most_used = stats_snapshot["most_used_id"]
     if most_used and most_used in ALL_CALCULATORS:
         calc_name = ALL_CALCULATORS[most_used].get('name', 'N/A')
     else:
@@ -163,8 +135,7 @@ with col2:
     """.format(calc_name), unsafe_allow_html=True)
 
 with col3:
-    categories = st.session_state.usage_stats.get('calculations_by_category', {})
-    top_category = max(categories.items(), key=lambda x: x[1])[0] if categories else "Chưa có"
+    top_category = stats_snapshot["top_category"]
     st.markdown("""
     <div class="stats-card">
         <h3>📚 Chuyên khoa phổ biến</h3>
@@ -174,27 +145,33 @@ with col3:
 
 st.markdown("---")
 
-# Section 3: Favorites & Recently Used (Two columns)
-col_left, col_right = st.columns(2)
+# Section 3: Favorites & Recently Used (lazy-ish via mode switch)
+view_mode = st.radio(
+    "Chọn danh sách hiển thị:",
+    ["⭐ Yêu thích", "🕐 Gần đây"],
+    horizontal=True,
+    key="main_menu_fav_recent_mode",
+)
 
-with col_left:
-    st.markdown("### ⭐ Yêu thích")
-    render_favorites(max_items=5)
-
-with col_right:
-    st.markdown("### 🕐 Sử dụng gần đây")
-    render_recently_used(max_items=5)
+with st.container():
+    if view_mode == "⭐ Yêu thích":
+        st.markdown("### ⭐ Yêu thích")
+        render_favorites(max_items=5)
+    else:
+        st.markdown("### 🕐 Sử dụng gần đây")
+        render_recently_used(max_items=5)
 
 st.markdown("---")
 
 # Section 4: Quick Access - Most Popular
 st.markdown("### ⚡ Truy cập nhanh - Calculator phổ biến")
 
-# Get most popular calculators (based on usage stats or default)
-popular_calculators = [
-    'ascvd', 'cha2ds2vasc', 'sofa', 'gcs', 'qsofa', 
-    'hasbled', 'heart', 'timi', 'grace'
-]
+# Get most popular calculators (based on usage stats or default) via cached helper
+default_popular = (
+    'ascvd', 'cha2ds2vasc', 'sofa', 'gcs', 'qsofa',
+    'hasbled', 'heart', 'timi', 'grace',
+)
+popular_calculators = get_popular_calculators(default_popular)
 
 cols = st.columns(min(4, len(popular_calculators)))
 for idx, calc_id in enumerate(popular_calculators[:8]):
@@ -210,27 +187,52 @@ for idx, calc_id in enumerate(popular_calculators[:8]):
 
 st.markdown("---")
 
-# Section 5: Browse by Category
-st.markdown("### 📚 Duyệt theo chuyên khoa")
+# Section 5: Browse by Category (Updated with new navigation structure)
+st.markdown("### 📚 Duyệt theo nhóm chính")
 
-categories = {
-    "❤️ Tim Mạch": {"icon": "❤️", "page": "pages/01_📊_Scores.py", "color": "#e74c3c"},
-    "🚨 Cấp cứu": {"icon": "🚨", "page": "pages/01_📊_Scores.py", "color": "#e67e22"},
-    "🧠 Thần Kinh": {"icon": "🧠", "page": "pages/01_📊_Scores.py", "color": "#3498db"},
-    "💊 Thuốc": {"icon": "💊", "page": "pages/07_💊_Drug_Database.py", "color": "#9b59b6"},
-    "🔬 Labs": {"icon": "🔬", "page": "pages/05_🔬_Labs_and_Calculators.py", "color": "#1abc9c"},
-    "📋 Protocols": {"icon": "📋", "page": "pages/04_📋_Protocols.py", "color": "#f39c12"},
-}
-
-cols = st.columns(3)
-for idx, (cat_name, cat_info) in enumerate(categories.items()):
-    with cols[idx % 3]:
-        if st.button(
-            f"{cat_info['icon']} {cat_name}",
-            key=f"cat_{cat_name}",
-            use_container_width=True
-        ):
-            st.switch_page(cat_info['page'])
+# Use new navigation categories
+try:
+    from config.navigation_config import get_all_categories
+    nav_categories = get_all_categories()
+    
+    # Display main categories (skip home_search as it's the current page)
+    main_categories = {
+        "drugs_dosing": {"icon": "💊", "title": "Thuốc & Liều dùng", "page": "pages/07_💊_Drug_Database.py"},
+        "calculators_scores": {"icon": "📊", "title": "Tính toán & Thang điểm", "page": "pages/01_📊_Scores.py"},
+        "critical_care_protocols": {"icon": "🫁", "title": "Hồi sức & Phác đồ", "page": "pages/09_🫁_Critical_Care.py"},
+        "diagnosis_reference": {"icon": "🩺", "title": "Chẩn đoán & Tham khảo", "page": "pages/06_🩺_Diagnosis.py"},
+        "support_tools": {"icon": "🧭", "title": "Hỗ trợ & Công cụ", "page": "pages/10_🧭_Decision_Support.py"},
+    }
+    
+    cols = st.columns(3)
+    for idx, (cat_id, cat_info) in enumerate(main_categories.items()):
+        with cols[idx % 3]:
+            if st.button(
+                f"{cat_info['icon']} {cat_info['title']}",
+                key=f"cat_{cat_id}",
+                use_container_width=True
+            ):
+                st.switch_page(cat_info['page'])
+except ImportError:
+    # Fallback to old categories
+    categories = {
+        "❤️ Tim Mạch": {"icon": "❤️", "page": "pages/01_📊_Scores.py", "color": "#e74c3c"},
+        "🚨 Cấp cứu": {"icon": "🚨", "page": "pages/01_📊_Scores.py", "color": "#e67e22"},
+        "🧠 Thần Kinh": {"icon": "🧠", "page": "pages/01_📊_Scores.py", "color": "#3498db"},
+        "💊 Thuốc": {"icon": "💊", "page": "pages/07_💊_Drug_Database.py", "color": "#9b59b6"},
+        "🔬 Labs": {"icon": "🔬", "page": "pages/05_🔬_Labs_and_Calculators.py", "color": "#1abc9c"},
+        "📋 Protocols": {"icon": "📋", "page": "pages/04_📋_Protocols.py", "color": "#f39c12"},
+    }
+    
+    cols = st.columns(3)
+    for idx, (cat_name, cat_info) in enumerate(categories.items()):
+        with cols[idx % 3]:
+            if st.button(
+                f"{cat_info['icon']} {cat_name}",
+                key=f"cat_{cat_name}",
+                use_container_width=True
+            ):
+                st.switch_page(cat_info['page'])
 
 st.markdown("---")
 

@@ -8,6 +8,17 @@ from dataclasses import dataclass
 
 
 @dataclass
+class NavigationItem:
+    """Single navigation item (page/module)"""
+    id: str
+    title: str
+    icon: str
+    page_path: str
+    is_sub_item: bool = False
+    parent_id: Optional[str] = None
+
+
+@dataclass
 class NavigationCategory:
     """Navigation category with sub-modules"""
     id: str
@@ -17,55 +28,83 @@ class NavigationCategory:
     module_ids: List[str]
     color: str
     border: str
+    default_expanded: bool = False
 
 
-# Navigation structure with 5-6 main categories
+# Navigation structure with 6 main categories (optimized)
+# Organized by clinical workflow for easier access
 NAVIGATION_CATEGORIES = {
-    "calculators_scores": NavigationCategory(
-        id="calculators_scores",
-        title="📊 Calculators & Scores",
-        icon="📊",
-        description="Clinical scores, lab calculators, and TDM",
-        module_ids=["scores", "labs", "tdm"],
-        color="linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)",
-        border="#1976d2"
+    "home_search": NavigationCategory(
+        id="home_search",
+        title="🏠 Trang chủ & Tìm kiếm",
+        icon="🏠",
+        description="Main menu and global search",
+        module_ids=["main_menu"],
+        color="linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)",
+        border="#757575",
+        default_expanded=True
     ),
     "drugs_dosing": NavigationCategory(
         id="drugs_dosing",
-        title="💊 Drugs & Dosing",
+        title="💊 Thuốc & Liều dùng",
         icon="💊",
-        description="Drug database, antibiotics, pill identifier, interactions",
-        module_ids=["drug_database", "antibiotics", "pill_identifier"],
+        description="Drug database, antibiotics, pill identifier, TDM",
+        module_ids=["drug_database", "antibiotics", "pill_identifier", "tdm"],
         color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
-        border="#4caf50"
+        border="#4caf50",
+        default_expanded=True
     ),
-    "critical_care": NavigationCategory(
-        id="critical_care",
-        title="🫁 Critical Care",
+    "calculators_scores": NavigationCategory(
+        id="calculators_scores",
+        title="📊 Tính toán & Thang điểm",
+        icon="📊",
+        description="Clinical scores, calculators, and lab tools",
+        module_ids=["scores", "labs"],
+        color="linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)",
+        border="#1976d2",
+        default_expanded=True
+    ),
+    "critical_care_protocols": NavigationCategory(
+        id="critical_care_protocols",
+        title="🫁 Hồi sức & Phác đồ",
         icon="🫁",
-        description="Ventilator, fluids, vasopressors, protocols, guidelines",
-        module_ids=["critical_care", "ventilator", "protocols", "guidelines_tracker"],
+        description="Critical care, protocols, guidelines, and medical news",
+        module_ids=["critical_care", "ventilator", "protocols", "guidelines_tracker", "guideline_viewer", "medical_news"],
         color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
-        border="#ff6f00"
+        border="#ff6f00",
+        default_expanded=False
     ),
     "diagnosis_reference": NavigationCategory(
         id="diagnosis_reference",
-        title="🩺 Diagnosis & Reference",
+        title="🩺 Chẩn đoán & Tham khảo",
         icon="🩺",
-        description="Differential diagnosis, disease encyclopedia, symptom checker, ICD-10, articles",
-        module_ids=["diagnosis", "disease_encyclopedia", "icd10_lookup", "in_depth_articles"],
+        description="Differential diagnosis, disease encyclopedia, ICD-10, articles, patient education",
+        module_ids=["diagnosis", "disease_encyclopedia", "icd10_lookup", "in_depth_articles", "patient_education"],
         color="linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%)",
-        border="#f44336"
+        border="#f44336",
+        default_expanded=False
     ),
-    "clinical_tools": NavigationCategory(
-        id="clinical_tools",
-        title="💉 Clinical Tools",
-        icon="💉",
-        description="Vaccination, decision support, patient education",
-        module_ids=["vaccination", "phase2_features", "patient_education"],
+    "support_tools": NavigationCategory(
+        id="support_tools",
+        title="🧭 Hỗ trợ & Công cụ",
+        icon="🧭",
+        description="Decision support, AI assistant, vaccination, settings, analytics",
+        module_ids=["phase2_features", "ai_assistant", "vaccination", "settings", "analytics"],
         color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
-        border="#0288d1"
+        border="#0288d1",
+        default_expanded=False
     ),
+}
+
+# Sub-item mappings (which items are sub-items of main items)
+# Format: {sub_item_id: parent_item_id}
+NAVIGATION_SUB_ITEMS = {
+    "antibiotics": "drug_database",
+    "pill_identifier": "drug_database",
+    "tdm": "drug_database",
+    "ventilator": "critical_care",
+    "guideline_viewer": "guidelines_tracker",
+    "medical_news": "guidelines_tracker",
 }
 
 
@@ -95,13 +134,76 @@ def get_category_info(category_id: str) -> Optional[NavigationCategory]:
     return NAVIGATION_CATEGORIES.get(category_id)
 
 
+def get_navigation_items_for_category(category_id: str) -> List[NavigationItem]:
+    """
+    Get navigation items for a category, including sub-items structure
+    
+    Returns:
+        List of NavigationItem objects with sub-item relationships
+    """
+    category = NAVIGATION_CATEGORIES.get(category_id)
+    if not category:
+        return []
+    
+    items = []
+    main_items = []
+    sub_items = {}
+    
+    # Separate main items and sub-items
+    for module_id in category.module_ids:
+        if module_id in NAVIGATION_SUB_ITEMS:
+            parent_id = NAVIGATION_SUB_ITEMS[module_id]
+            if parent_id not in sub_items:
+                sub_items[parent_id] = []
+            sub_items[parent_id].append(module_id)
+        else:
+            main_items.append(module_id)
+    
+    # Get module info from app_config
+    try:
+        from config.app_config import get_module_info
+    except ImportError:
+        return []
+    
+    # Create main items
+    for module_id in main_items:
+        module_info = get_module_info(module_id)
+        if module_info:
+            items.append(NavigationItem(
+                id=module_id,
+                title=module_info.title,
+                icon=module_info.icon,
+                page_path=module_info.page_path,
+                is_sub_item=False
+            ))
+            
+            # Add sub-items if any
+            if module_id in sub_items:
+                for sub_id in sub_items[module_id]:
+                    sub_info = get_module_info(sub_id)
+                    if sub_info:
+                        items.append(NavigationItem(
+                            id=sub_id,
+                            title=sub_info.title,
+                            icon=sub_info.icon,
+                            page_path=sub_info.page_path,
+                            is_sub_item=True,
+                            parent_id=module_id
+                        ))
+    
+    return items
+
+
 # Export
 __all__ = [
     'NavigationCategory',
+    'NavigationItem',
     'NAVIGATION_CATEGORIES',
+    'NAVIGATION_SUB_ITEMS',
     'get_category_by_module_id',
     'get_all_categories',
     'get_modules_by_category',
     'get_category_info',
+    'get_navigation_items_for_category',
 ]
 

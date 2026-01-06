@@ -35,7 +35,7 @@ def render_quick_access_menu():
     # Information resources
     with st.expander("📚 Resources", expanded=False):
         if st.button("📋 Guidelines", use_container_width=True, key="qa_guidelines"):
-            st.switch_page("pages/15_📋_Guidelines_Tracker.py")
+            st.switch_page("pages/15_📋_Guidelines.py")
         if st.button("📖 Diseases", use_container_width=True, key="qa_diseases"):
             st.switch_page("pages/16_📖_Disease_Encyclopedia.py")
         if st.button("📚 Articles", use_container_width=True, key="qa_articles"):

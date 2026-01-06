@@ -13,7 +13,8 @@ from pathlib import Path
 
 # Import configuration
 from config.calculators import ALL_CALCULATORS
-from config.app_config import get_module_list_for_navigation, APP_CONFIG
+from config.app_config import APP_CONFIG
+from utils.cache_helpers import get_module_list_for_navigation_cached
 from config.theme import get_module_style
 from utils.page_helper import inject_google_analytics
 
@@ -25,7 +26,6 @@ except ImportError:
     from components.search import render_search
 from components.favorites import render_favorites
 from components.recently_used import render_recently_used
-from components.stats import render_stats, render_updates, render_tips
 from components.homepage_doctor import render_homepage_doctor
 
 # Offline indicator (rendered at top level)
@@ -38,20 +38,23 @@ except ImportError:
 # Import Patient Context
 from components.patient_context import render_patient_context
 
-# Mobile navigation and optimizations
-try:
-    from components.mobile_navigation import (
-        render_mobile_bottom_nav,
-        render_mobile_swipe_gestures,
-        render_mobile_optimizations
-    )
-    from components.mobile_inputs import render_mobile_input_optimizations
-    render_mobile_bottom_nav()
-    render_mobile_swipe_gestures()
-    render_mobile_optimizations()
-    render_mobile_input_optimizations()
-except ImportError:
-    pass
+# Mobile navigation and optimizations (lazy-init via helper)
+def _init_mobile_features():
+    try:
+        from components.mobile_navigation import (
+            render_mobile_bottom_nav,
+            render_mobile_swipe_gestures,
+            render_mobile_optimizations,
+        )
+        from components.mobile_inputs import render_mobile_input_optimizations
+
+        render_mobile_bottom_nav()
+        render_mobile_swipe_gestures()
+        render_mobile_optimizations()
+        render_mobile_input_optimizations()
+    except ImportError:
+        # Mobile helpers are optional; ignore if not available
+        pass
 
 # ========== GOOGLE ANALYTICS (Must be before page config) ==========
 # Google Analytics 4 (GA4) tracking
@@ -130,6 +133,9 @@ else:
         unsafe_allow_html=True
     )
 
+# Initialize mobile features after basic config so it can use theme/state
+_init_mobile_features()
+
 # ========== HEADER ==========
 col1, col2 = st.columns([3, 1])
 
@@ -148,73 +154,36 @@ st.markdown("---")
 
 # ========== SIDEBAR ==========
 with st.sidebar:
-    st.header("📋 Điều hướng theo Modules")
+    st.header("📋 Điều hướng")
     
     # Patient Context (New 2025 Feature)
     render_patient_context()
     st.sidebar.markdown("---")
     
-    # Quick access to top-level modules
-    st.subheader("⚡ Truy cập nhanh Modules")
-    module_quick_links = [
-        ("📊 Calculators & Scores", "pages/01_📊_Scores.py"),
-        ("💊 Thuốc & Liều dùng", "pages/07_💊_Drug_Database.py"),
-        ("🫁 Hồi sức & Quy trình", "pages/09_🫁_Critical_Care.py"),
-        ("🧭 Hỗ trợ quyết định", "pages/10_🧭_Decision_Support.py"),
-        ("🩺 Chẩn đoán & Bài viết", "pages/06_🩺_Diagnosis.py"),
-        ("💉 Tiêm chủng", "pages/11_💉_Vaccination.py"),
-    ]
-    
-    for link_name, link_page in module_quick_links:
-        if st.button(link_name, key=f"quick_{link_name}", use_container_width=True):
-            st.switch_page(link_page)
-    
-    st.markdown("---")
-    
-    # Structured module overview
-    st.markdown("**📚 Cấu trúc Modules (phiên bản mới)**")
-    
-    with st.expander("📊 Calculators & Scores", expanded=True):
-        st.markdown("""
-        - **Calculators & Thang điểm chính** (`Calculators & Scores`)
-        - **Xét nghiệm & Calculators** (`Labs & Calculators`)
-        - **TDM - Theo dõi nồng độ thuốc** (`TDM`)
-        """)
-    
-    with st.expander("💊 Thuốc & Liều dùng", expanded=True):
-        st.markdown("""
-        - **Cơ sở dữ liệu thuốc (entry chính)** (`Drug Database`)
-        - **Kháng sinh (chuyên sâu)** (`Antibiotics`)
-        """)
-    
-    with st.expander("🫁 Hồi sức & Quy trình", expanded=True):
-        st.markdown("""
-        - **Hồi sức (bao gồm Ventilator)** (`Critical Care`)
-        - **Phác đồ điều trị** (`Protocols`)
-        """)
-    
-    with st.expander("🧭 Hỗ trợ quyết định", expanded=True):
-        st.markdown("""
-        - **Flowcharts quyết định lâm sàng**
-        - **Thai kỳ / cho con bú**
-        - **Liều Nhi khoa**
-        """)
-    
-    with st.expander("🩺 Chẩn đoán & Bài viết", expanded=False):
-        st.markdown("""
-        - **Chẩn đoán phân biệt** (`Diagnosis`)
-        - **Bài viết chuyên sâu** (`Chuyên sâu`)
-        """)
-    
-    with st.expander("💉 Tiêm chủng", expanded=False):
-        st.markdown("""
-        - **Vắc xin & lịch tiêm** (`Vaccination`)
-        """)
+    # New collapsible navigation
+    try:
+        from components.sidebar_navigation import render_sidebar_navigation_simple
+        render_sidebar_navigation_simple()
+    except ImportError:
+        # Fallback to old navigation
+        st.subheader("⚡ Truy cập nhanh Modules")
+        module_quick_links = [
+            ("📊 Calculators & Scores", "pages/01_📊_Scores.py"),
+            ("💊 Thuốc & Liều dùng", "pages/07_💊_Drug_Database.py"),
+            ("🫁 Hồi sức & Quy trình", "pages/09_🫁_Critical_Care.py"),
+            ("🧭 Hỗ trợ quyết định", "pages/10_🧭_Decision_Support.py"),
+            ("🩺 Chẩn đoán & Bài viết", "pages/06_🩺_Diagnosis.py"),
+            ("💉 Tiêm chủng", "pages/11_💉_Vaccination.py"),
+        ]
+        
+        for link_name, link_page in module_quick_links:
+            if st.button(link_name, key=f"quick_{link_name}", use_container_width=True):
+                st.switch_page(link_page)
     
     st.markdown("---")
     
     # Keyboard Shortcuts
-    with st.expander("⌨️ Phím tắt"):
+    with st.expander("⌨️ Phím tắt", expanded=False):
         st.markdown("""
         - **Ctrl+K** - Tập trung vào ô tìm kiếm
         - **Esc** - Xóa tìm kiếm
@@ -283,8 +252,8 @@ with tab1:
     st.markdown("### 📚 Tất cả modules")
     st.caption("Chọn module để bắt đầu. Modules được nhóm theo chức năng.")
     
-    # Group modules by category
-    modules = get_module_list_for_navigation()
+    # Group modules by category (cached)
+    modules = get_module_list_for_navigation_cached()
     # Ẩn module Kháng sinh (chuyên sâu) khỏi trang chủ, chỉ truy cập qua Cơ sở dữ liệu thuốc
     modules = [m for m in modules if m.get("id") != "antibiotics"]
     
@@ -344,7 +313,7 @@ with tab1:
             # Use responsive columns
             num_cols = min(3, len(cat_modules))
             cols = st.columns(num_cols)
-            
+
             for idx, module in enumerate(cat_modules):
                 with cols[idx % num_cols]:
                     # Get style from theme
@@ -373,9 +342,16 @@ with tab1:
                     </div>
                     """
                     components.html(card_html, height=200, scrolling=False)
-                    
-                    if st.button(f"▶️ Mở {module['title']}", key=f"{cat_name}_{module['key']}", use_container_width=True, type="primary"):
-                        st.switch_page(module['page'])
+
+                    # Use a dedicated container per card to minimize re-renders
+                    with st.container():
+                        if st.button(
+                            f"▶️ Mở {module['title']}",
+                            key=f"{cat_name}_{module['key']}",
+                            use_container_width=True,
+                            type="primary",
+                        ):
+                            st.switch_page(module['page'])
             
             st.markdown("---")
     
@@ -417,43 +393,49 @@ with tab1:
 with tab2:
     st.markdown("### ⭐ Yêu Thích & Gần Đây")
     st.caption("Các calculator bạn đã đánh dấu và sử dụng gần đây")
-    
-    # Favorites
-    render_favorites()
-    
-    # Recently Used
-    render_recently_used()
+
+    # Chỉ render nội dung khi người dùng thật sự mở tab 2
+    with st.container():
+        render_favorites()
+        render_recently_used()
 
 with tab3:
     st.markdown("### 📊 Thống kê & Thông tin")
     st.caption("Thống kê hệ thống, cập nhật mới nhất và mẹo sử dụng")
-    
-    # Analytics Dashboard Toggle
+
+    # Analytics Dashboard Toggle (imports kept local để giảm chi phí import global)
     try:
         from components.analytics import render_analytics_dashboard
+        from components.stats import render_stats, render_updates, render_tips
+
         analytics_tab, stats_tab = st.tabs(["📊 Phân tích sử dụng", "📈 Thống kê hệ thống"])
-        
+
         with analytics_tab:
             render_analytics_dashboard()
-        
+
         with stats_tab:
             # Stats
             render_stats()
-            
+
             # Updates
             render_updates()
-            
+
             # Tips
             render_tips()
     except ImportError:
-        # Stats
-        render_stats()
-        
-        # Updates
-        render_updates()
-        
-        # Tips
-        render_tips()
+        try:
+            from components.stats import render_stats, render_updates, render_tips
+
+            # Stats
+            render_stats()
+
+            # Updates
+            render_updates()
+
+            # Tips
+            render_tips()
+        except ImportError:
+            st.info("Stats module tạm thời không khả dụng.")
 
 # 8. Data source info
 with st.expander("📚 Nguồn dữ liệu & Tài liệu tham khảo"):

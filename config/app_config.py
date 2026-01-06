@@ -163,10 +163,10 @@ APP_CONFIG = {
         ),
         "guidelines_tracker": ModuleInfo(
             id="guidelines_tracker",
-            title="Theo dõi Guidelines",
+            title="Guidelines",
             icon="📋",
-            page_path="pages/15_📋_Guidelines_Tracker.py",
-            description="Theo dõi và cập nhật guidelines từ AHA/ACC, ESC, IDSA, KDIGO, GOLD, GINA",
+            page_path="pages/15_📋_Guidelines.py",
+            description="Theo dõi, xem và tìm kiếm guidelines từ AHA/ACC, ESC, IDSA, KDIGO, GOLD, GINA",
             color="linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)",
             border="#9c27b0"
         ),
@@ -196,6 +196,60 @@ APP_CONFIG = {
             description="Nhận diện thuốc qua đặc điểm vật lý: màu sắc, hình dạng, ký hiệu, kích thước",
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
+        ),
+        "main_menu": ModuleInfo(
+            id="main_menu",
+            title="Trang chủ",
+            icon="🏠",
+            page_path="pages/00_🏠_Main_Menu.py",
+            description="Trang chủ với tìm kiếm, yêu thích, và truy cập nhanh",
+            color="linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)",
+            border="#757575"
+        ),
+        "ai_assistant": ModuleInfo(
+            id="ai_assistant",
+            title="Trợ lý AI",
+            icon="🤖",
+            page_path="pages/09_🤖_AI_Assistant.py",
+            description="Hỏi đáp về thuốc và phác đồ điều trị với AI Assistant",
+            color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
+            border="#0288d1"
+        ),
+        "medical_news": ModuleInfo(
+            id="medical_news",
+            title="Tin tức Y khoa",
+            icon="📰",
+            page_path="pages/10_📰_Medical_News.py",
+            description="Cập nhật hướng dẫn điều trị và tin tức y tế mới nhất",
+            color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
+            border="#ff6f00"
+        ),
+        "guideline_viewer": ModuleInfo(
+            id="guideline_viewer",
+            title="Xem Guidelines",
+            icon="📖",
+            page_path="pages/18_📖_Guideline_Viewer.py",
+            description="Xem và tìm kiếm clinical guidelines với decision trees",
+            color="linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)",
+            border="#9c27b0"
+        ),
+        "settings": ModuleInfo(
+            id="settings",
+            title="Cài đặt",
+            icon="⚙️",
+            page_path="pages/23_⚙️_Settings.py",
+            description="Cài đặt và tùy chỉnh Clinical Assistant",
+            color="linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)",
+            border="#757575"
+        ),
+        "analytics": ModuleInfo(
+            id="analytics",
+            title="Phân tích",
+            icon="📈",
+            page_path="pages/24_📈_Analytics.py",
+            description="Usage statistics and insights",
+            color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
+            border="#0288d1"
         ),
     },
     

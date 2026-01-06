@@ -40,15 +40,8 @@ with st.sidebar:
     st.header("💊 Thuốc & Liều dùng")
     st.caption("**Cơ sở dữ liệu thuốc** – entry chính của nhóm *💊 Thuốc & Liều dùng*.")
     
-    # Liên kết nhanh tới các sub-module cùng nhóm
-    with st.expander("Liên kết trong nhóm Thuốc & Liều dùng", expanded=False):
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button("💊 Kháng sinh (chuyên sâu)", use_container_width=True):
-                st.switch_page("pages/02_💊_Antibiotics.py")
-        with col2:
-            if st.button("📊 TDM - Nồng độ thuốc", use_container_width=True):
-                st.switch_page("pages/08_📊_TDM.py")
+    # Note: Sub-modules are now integrated via tabs in main content
+    st.info("💡 **Lưu ý:** Các chức năng Antibiotics, Pill Identifier và TDM đã được tích hợp vào tabs ở nội dung chính.")
     
     st.markdown("---")
     st.subheader("⚙️ Chọn công cụ")
@@ -122,27 +115,99 @@ if st.session_state.get('switch_to_comparison', False):
         st.session_state['visual_preset_drugs'] = st.session_state['preset_comparison_drugs']
         del st.session_state['preset_comparison_drugs']
 
-# Route to appropriate function
-# Use case-insensitive matching to avoid Unicode case issues
-function_type_lower = function_type.lower()
+# Main tabs for integrated sub-modules
+tab1, tab2, tab3, tab4 = st.tabs([
+    "💊 Database", 
+    "💊 Antibiotics", 
+    "💊 Pill Identifier", 
+    "📊 TDM"
+])
 
-if "tra cứu thuốc" in function_type_lower:
-    render_drug_database()
+with tab1:
+    # Main Drug Database functionality
+    # Route to appropriate function
+    # Use case-insensitive matching to avoid Unicode case issues
+    function_type_lower = function_type.lower()
 
-elif "tính liều theo egfr" in function_type_lower or "crcl" in function_type_lower:
+    if "tra cứu thuốc" in function_type_lower:
+        render_drug_database()
+
+    elif "tính liều theo egfr" in function_type_lower or "crcl" in function_type_lower:
+        render_dosing_calculator()
+
+    elif "so sánh thuốc trực quan" in function_type_lower:
+        render_visual_comparison()
+
+    elif "lịch trình liều dùng" in function_type_lower:
+        render_dosing_schedule_generator()
+
+    elif "tương thích iv" in function_type_lower:
+        render_iv_compatibility_checker()
+
+    elif "tương tác" in function_type_lower:
+        render_interaction_checker()
+
+with tab2:
+    # Antibiotics sub-module
+    st.info("💊 **Kháng sinh (chuyên sâu)** - So sánh & phác đồ điều trị kháng sinh")
+    st.markdown("""
+    Chức năng Antibiotics cho phép bạn:
+    - So sánh các kháng sinh theo nhóm và phổ kháng khuẩn
+    - Xem phác đồ điều trị kháng sinh theo bệnh lý
+    - Tính liều kháng sinh theo chức năng thận
+    - Tư vấn về antibiotic stewardship
+    """)
+    
+    # Show quick access to antibiotics page
+    if st.button("Mở trang Antibiotics đầy đủ", use_container_width=True, type="primary"):
+        st.switch_page("pages/02_💊_Antibiotics.py")
+    
+    # Also show the dosing calculator here
+    st.markdown("---")
+    st.markdown("### 🧮 Tính liều kháng sinh theo eGFR/CrCl")
     render_dosing_calculator()
 
-elif "so sánh thuốc trực quan" in function_type_lower:
-    render_visual_comparison()
+with tab3:
+    # Pill Identifier sub-module
+    st.info("💊 **Pill Identifier** - Nhận diện thuốc qua đặc điểm vật lý")
+    st.markdown("""
+    Chức năng Pill Identifier cho phép bạn:
+    - Nhận diện thuốc qua màu sắc, hình dạng, ký hiệu
+    - Tìm kiếm thuốc theo đặc điểm vật lý
+    - Xem thông tin chi tiết về thuốc
+    """)
+    
+    if st.button("Mở Pill Identifier", use_container_width=True, type="primary"):
+        st.switch_page("pages/21_💊_Pill_Identifier.py")
+    
+    # Try to import and show pill identifier if available
+    try:
+        from pill_identifier import render_pill_identifier_search
+        st.markdown("---")
+        render_pill_identifier_search()
+    except ImportError:
+        st.info("Vui lòng truy cập trang Pill Identifier riêng biệt để sử dụng đầy đủ chức năng.")
 
-elif "lịch trình liều dùng" in function_type_lower:
-    render_dosing_schedule_generator()
-
-elif "tương thích iv" in function_type_lower:
-    render_iv_compatibility_checker()
-
-elif "tương tác" in function_type_lower:
-    render_interaction_checker()
+with tab4:
+    # TDM sub-module
+    st.info("📊 **TDM - Theo dõi nồng độ thuốc** - Tính toán và theo dõi nồng độ thuốc")
+    st.markdown("""
+    Chức năng TDM cho phép bạn:
+    - Tính toán nồng độ thuốc (Vancomycin, Aminoglycoside, etc.)
+    - Theo dõi nồng độ thuốc trong máu
+    - Điều chỉnh liều dựa trên nồng độ
+    """)
+    
+    if st.button("Mở trang TDM đầy đủ", use_container_width=True, type="primary"):
+        st.switch_page("pages/08_📊_TDM.py")
+    
+    # Try to import and show TDM calculator if available
+    try:
+        from tdm import render_tdm_calculator
+        st.markdown("---")
+        render_tdm_calculator()
+    except ImportError:
+        st.info("Vui lòng truy cập trang TDM riêng biệt để sử dụng đầy đủ chức năng.")
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)
