@@ -145,10 +145,20 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
-# Mobile styles injection
+# Mobile styles and advanced features injection
 try:
-    from antibiotics.mobile_ui import inject_mobile_styles
+    from antibiotics.mobile_ui import (
+        inject_mobile_styles,
+        inject_swipe_gestures,
+        inject_pull_to_refresh,
+        inject_card_swipe_actions,
+        inject_quick_actions_menu
+    )
     inject_mobile_styles()
+    inject_swipe_gestures()
+    inject_pull_to_refresh()
+    inject_card_swipe_actions()
+    inject_quick_actions_menu()
 except ImportError:
     pass
 

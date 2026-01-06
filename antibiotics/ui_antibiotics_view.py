@@ -27,7 +27,7 @@ def render_protocol_card(protocol: AntibioticProtocol, key_prefix: str = ""):
     
     # Card header with improved design
     st.markdown(f"""
-    <div style='
+    <div class="protocol-card" style='
         background: {bg_color};
         border-left: 4px solid {border_color};
         border-radius: 16px;
@@ -131,7 +131,7 @@ def render_regimen_card(regimen, key_prefix: str = ""):
         }}
     }}
     </style>
-    <div class="regimen-card-mobile">
+    <div class="regimen-card regimen-card-mobile">
         <div style='margin-bottom: 12px;'>
             <span style='
                 background: {badge_color};
