@@ -137,10 +137,19 @@ def render_drug_database():
         keywords_set = set(keywords_lower)  # Use set for faster lookup
         
         for drug_name, drug_data in DRUG_DATABASE.items():
+            # Check if drug_data is a dictionary before accessing keys
+            if not isinstance(drug_data, dict):
+                continue  # Skip if not a dictionary
+            
             if 'group' not in drug_data:
                 continue  # Early exit if no group
             
-            group_lower = drug_data['group'].lower()
+            # Ensure group is a string before calling .lower()
+            group_value = drug_data.get('group', '')
+            if not isinstance(group_value, str):
+                continue
+            
+            group_lower = group_value.lower()
             # Check if any keyword matches (optimized)
             if any(kw in group_lower for kw in keywords_set):
                 results.append((drug_name, drug_data))
