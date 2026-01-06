@@ -3,7 +3,8 @@
 LONG_ACTING = {
     "Betamethasone": {'group': 'Endocrinology - Corticosteroid', 'vietnamese_name':
     'Betamethasone, Celestone', 'administration': ['PO', 'IV', 'IM',
-    'Topical'], 'Hen phế quản',
+    'Topical'], 'indications': [
+    'Hen phế quản',
     'Bệnh tự miễn', 'Viêm da', 'Thúc đẩy trưởng thành phổi thai nhi (IM)'],
     'contraindications': ['Nhiễm nấm hệ thống không điều trị', 'Dị ứng'],
     'dosage': {'adult_po': '0.6-7.2mg/ngày chia 1-4 lần', 'adult_im':
@@ -58,7 +59,7 @@ LONG_ACTING = {
     'Thay đổi INR (có thể tăng hoặc giảm), tăng nguy cơ chảy máu hoặc huyết khối'
     , 'management':
     'Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng betamethasone. Điều chỉnh liều warfarin nếu cần.'
-    }]], 'moderate': [{'drug': 'Unknown',
+    }], 'moderate': [{'drug': 'NSAIDs',
     'mechanism':
     'Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.', 'effect':
     'Tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa nghiêm trọng',
@@ -74,7 +75,7 @@ LONG_ACTING = {
     'Tăng ức chế miễn dịch, tăng nguy cơ nhiễm trùng, tăng nguy cơ độc tính',
     'management':
     'Giảm liều cả hai thuốc. Theo dõi chức năng thận, dấu hiệu nhiễm trùng.'
-    }], 'mechanism':
+    }, {'drug': 'Diuretics', 'mechanism':
     'Corticosteroid gây giữ natri, có thể đối kháng tác dụng lợi tiểu.',
     'effect': 'Giảm hiệu quả lợi tiểu, có thể gây giữ nước', 'management':
     'Theo dõi cân nặng, dấu hiệu giữ nước. Có thể cần điều chỉnh liều lợi tiểu.'
@@ -273,7 +274,7 @@ LONG_ACTING = {
     'Thay đổi INR (có thể tăng hoặc giảm), tăng nguy cơ chảy máu hoặc huyết khối'
     , 'management':
     'Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng dexamethasone. Điều chỉnh liều warfarin nếu cần.'
-    }]], 'moderate': [{'drug': 'Unknown',
+    }], 'moderate': [{'drug': 'NSAIDs',
     'mechanism':
     'Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.', 'effect':
     'Tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa nghiêm trọng',
@@ -289,7 +290,7 @@ LONG_ACTING = {
     'Tăng ức chế miễn dịch, tăng nguy cơ nhiễm trùng, tăng nguy cơ độc tính',
     'management':
     'Giảm liều cả hai thuốc. Theo dõi chức năng thận, dấu hiệu nhiễm trùng.'
-    }], 'mechanism':
+    }, {'drug': 'Diuretics', 'mechanism':
     'Corticosteroid gây giữ natri, có thể đối kháng tác dụng lợi tiểu.',
     'effect': 'Giảm hiệu quả lợi tiểu, có thể gây giữ nước', 'management':
     'Theo dõi cân nặng, dấu hiệu giữ nước. Có thể cần điều chỉnh liều lợi tiểu.'

@@ -201,7 +201,23 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "High - FDA approved, multiple RCTs (Note: Less commonly used due to drug interactions)"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic", "neurological"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["LFT", "Renal function", "INR (if on warfarin)", "Serum levels (if on interacting drugs)"]
+        },
+        "guideline_tags": [
+            "ACG Guidelines - Peptic Ulcer Disease",
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "ISMP High Alert Medications - Drug Interactions"
+        ]
     },
     "Famotidine": {
         "group": "Gastrointestinal - H2 Receptor Antagonist",

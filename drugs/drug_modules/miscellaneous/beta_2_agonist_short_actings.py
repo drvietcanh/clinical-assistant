@@ -5,7 +5,8 @@
 BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
     "Salbutamol": {'group': 'Respiratory - Beta-2 Agonist (Short-acting)', 'vietnamese_name':
         'Salbutamol, Albuterol, Ventolin, Salbutamol', 'administration': ['INH',
-        'IV', 'PO', 'NEB'], 'COPD',
+        'IV', 'PO', 'NEB'], 'indications': [
+        'COPD',
         'Co thắt phế quản', 'Phòng co thắt phế quản do gắng sức',
         'Cấp cứu hen (nebulizer/IV)'], 'contraindications': [
         'Dị ứng salbutamol', 'Nhịp tim nhanh nặng', 'Rối loạn nhịp tim nặng',
@@ -66,42 +67,38 @@ BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
         'Gan: chuyển hóa qua sulfation và glucuronidation. Thận: bài tiết một phần nguyên dạng và metabolites. Dạng hít: tác dụng tại chỗ, hấp thu toàn thân ít. PO: hấp thu tốt nhưng tác dụng chậm hơn và nhiều tác dụng phụ hơn.'
         }, 'storage':
         'Dạng hít (MDI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng trực tiếp, tránh đông lạnh. Kiểm tra xem có còn thuốc (lắc, nghe tiếng). Nebulizer solution: bảo quản ở nhiệt độ phòng, tránh ánh sáng, dùng trong vòng 1 tháng sau khi mở. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi pha. Syrup: bảo quản ở nhiệt độ phòng, đậy kín sau khi dùng.'
-        , 'black_box_warnings': None, 'drug_interactions': {'major': [{'drug':
-        'Beta-blockers (không chọn lọc: Propranolol, Nadolol)', 'mechanism':
-        'Beta-blockers đối kháng tác dụng beta-2 của salbutamol, có thể gây co thắt phế quản nặng và làm giảm hiệu quả điều trị hen.'
-        , 'effect':
-        'Đối kháng tác dụng giãn phế quản, có thể gây co thắt phế quản nặng, suy hô hấp'
-        , 'management':
-        'TRÁNH DÙNG với beta-blocker không chọn lọc. Nếu bệnh nhân cần beta-blocker, dùng beta-blocker chọn lọc beta-1 (atenolol, metoprolol) với thận trọng. Theo dõi chặt chẽ đáp ứng phế quản.'
-        }], 'mechanism':
-        'Salbutamol có thể gây hạ kali máu và tăng nhịp tim, tăng nguy cơ độc tính digoxin và loạn nhịp tim.'
-        , 'effect':
-        'Tăng nguy cơ loạn nhịp tim, tăng độc tính digoxin (đặc biệt khi hạ kali máu)'
-        , 'management':
-        'Theo dõi nồng độ digoxin và kali máu. Theo dõi ECG nếu có triệu chứng. Có thể cần điều chỉnh liều digoxin.'
-        }, {'drug': 'Diuretics (Furosemide, Thiazide)', 'mechanism':
-        'Cả hai đều có thể gây hạ kali máu, tăng nguy cơ hạ kali máu nghiêm trọng.'
-        , 'effect':
-        'Tăng nguy cơ hạ kali máu nghiêm trọng, loạn nhịp tim, yếu cơ',
-        'management':
-        'Theo dõi kali máu thường xuyên, đặc biệt khi dùng liều cao salbutamol. Bổ sung kali nếu cần.'
-        }, {'drug': 'MAOIs (Phenelzine, Tranylcypromine)', 'mechanism':
-        'MAOIs ức chế chuyển hóa catecholamine, có thể tăng tác dụng và tác dụng phụ của salbutamol.'
-        , 'effect':
-        'Tăng tác dụng tim mạch, tăng huyết áp, tăng nguy cơ loạn nhịp',
-        'management':
-        'Thận trọng, dùng liều thấp salbutamol. Theo dõi huyết áp và nhịp tim chặt chẽ.'
-        }, {'drug': 'Theophylline', 'mechanism':
-        'Cả hai đều kích thích beta-adrenergic, có thể tăng tác dụng phụ và độc tính.'
-        , 'effect':
-        'Tăng tác dụng phụ (run, tim đập nhanh, loạn nhịp), tăng nguy cơ độc tính theophylline'
-        , 'management':
-        'Theo dõi nồng độ theophylline. Theo dõi nhịp tim và triệu chứng. Có thể cần giảm liều theophylline.'
-        }], 'mechanism':
-        'TCA tăng nhạy cảm với catecholamine, có thể tăng tác dụng tim mạch.',
-        'effect': 'Tăng nhịp tim, tăng huyết áp (nhẹ)', 'management':
-        'Theo dõi nhịp tim và huyết áp. Không cần điều chỉnh liều thường quy.'}
-        ]}, 'contraindications': {'tuyệt_đối': [
+        , 'black_box_warnings': None, 'drug_interactions': {
+            'major': [
+                {'drug': 'Beta-blockers (không chọn lọc: Propranolol, Nadolol)',
+                 'mechanism': 'Beta-blockers đối kháng tác dụng beta-2 của salbutamol, có thể gây co thắt phế quản nặng và làm giảm hiệu quả điều trị hen.',
+                 'effect': 'Đối kháng tác dụng giãn phế quản, có thể gây co thắt phế quản nặng, suy hô hấp',
+                 'management': 'TRÁNH DÙNG với beta-blocker không chọn lọc. Nếu bệnh nhân cần beta-blocker, dùng beta-blocker chọn lọc beta-1 (atenolol, metoprolol) với thận trọng. Theo dõi chặt chẽ đáp ứng phế quản.'}
+            ],
+            'moderate': [
+                {'drug': 'Digoxin',
+                 'mechanism': 'Salbutamol có thể gây hạ kali máu và tăng nhịp tim, tăng nguy cơ độc tính digoxin và loạn nhịp tim.',
+                 'effect': 'Tăng nguy cơ loạn nhịp tim, tăng độc tính digoxin (đặc biệt khi hạ kali máu)',
+                 'management': 'Theo dõi nồng độ digoxin và kali máu. Theo dõi ECG nếu có triệu chứng. Có thể cần điều chỉnh liều digoxin.'},
+                {'drug': 'Diuretics (Furosemide, Thiazide)',
+                 'mechanism': 'Cả hai đều có thể gây hạ kali máu, tăng nguy cơ hạ kali máu nghiêm trọng.',
+                 'effect': 'Tăng nguy cơ hạ kali máu nghiêm trọng, loạn nhịp tim, yếu cơ',
+                 'management': 'Theo dõi kali máu thường xuyên, đặc biệt khi dùng liều cao salbutamol. Bổ sung kali nếu cần.'},
+                {'drug': 'MAOIs (Phenelzine, Tranylcypromine)',
+                 'mechanism': 'MAOIs ức chế chuyển hóa catecholamine, có thể tăng tác dụng và tác dụng phụ của salbutamol.',
+                 'effect': 'Tăng tác dụng tim mạch, tăng huyết áp, tăng nguy cơ loạn nhịp',
+                 'management': 'Thận trọng, dùng liều thấp salbutamol. Theo dõi huyết áp và nhịp tim chặt chẽ.'},
+                {'drug': 'Theophylline',
+                 'mechanism': 'Cả hai đều kích thích beta-adrenergic, có thể tăng tác dụng phụ và độc tính.',
+                 'effect': 'Tăng tác dụng phụ (run, tim đập nhanh, loạn nhịp), tăng nguy cơ độc tính theophylline',
+                 'management': 'Theo dõi nồng độ theophylline. Theo dõi nhịp tim và triệu chứng. Có thể cần giảm liều theophylline.'}
+            ],
+            'minor': [
+                {'drug': 'Tricyclic Antidepressants (TCA)',
+                 'mechanism': 'TCA tăng nhạy cảm với catecholamine, có thể tăng tác dụng tim mạch.',
+                 'effect': 'Tăng nhịp tim, tăng huyết áp (nhẹ)',
+                 'management': 'Theo dõi nhịp tim và huyết áp. Không cần điều chỉnh liều thường quy.'}
+            ]
+        }, 'contraindications': {'tuyệt_đối': [
         'Dị ứng salbutamol hoặc các thành phần trong chế phẩm',
         'Nhịp tim nhanh nặng không kiểm soát (>120 bpm ở người lớn, >150 bpm ở trẻ em)'
         , 'Rối loạn nhịp tim nặng (rung nhĩ, rung thất không kiểm soát)',

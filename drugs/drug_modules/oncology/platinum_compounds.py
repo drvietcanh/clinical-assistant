@@ -23,6 +23,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Độc thận (ít hơn cisplatin nhưng vẫn có)', 'Rụng tóc (ít)',
         'Độc thần kinh (ít hơn cisplatin)', 'Phản ứng dị ứng (hiếm)',
         'Hạ magne máu'],
+        'interactions': [
         'Thuốc độc thận: tránh dùng đồng thời',
         'Phenytoin: giảm nồng độ phenytoin'],
         'mechanism_of_action':
@@ -63,7 +64,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Tăng độc thận tích lũy', 'effect': 'Tăng nguy cơ suy thận cấp',
         'management':
         'Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận.'}
-        ], 'mechanism':
+        ], 'moderate': [{'drug': 'Phenytoin', 'mechanism':
         'Carboplatin có thể giảm nồng độ phenytoin', 'effect':
         'Giảm nồng độ phenytoin, tăng nguy cơ co giật', 'management':
         'Theo dõi nồng độ phenytoin. Tăng liều phenytoin nếu cần.'}, {'drug':
@@ -184,7 +185,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'mechanism': 'Tăng độc thận tích lũy', 'effect':
         'Tăng nguy cơ suy thận cấp', 'management':
         'Tránh dùng cùng. Nếu bắt buộc, giảm liều và theo dõi chức năng thận chặt chẽ.'
-        }], 'mechanism':
+        }], 'moderate': [{'drug': 'Phenytoin', 'mechanism':
         'Cisplatin có thể giảm hấp thu phenytoin', 'effect':
         'Giảm nồng độ phenytoin, tăng nguy cơ co giật', 'management':
         'Theo dõi nồng độ phenytoin. Tăng liều phenytoin nếu cần.'}, {'drug':
@@ -238,8 +239,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Pha với NS 0.9% để nồng độ 0.5-1mg/mL. Không dùng D5W (không ổn định)',
         'infusion_rate':
         'Truyền 50-100mg/m² trong 1-2 giờ. Không quá 100mg/phút',
-        'compatibility': ['NS 0.9%'],
-        'Dung dịch chứa clorua', 'Các thuốc khác'], 'notes':
+        'compatibility': ['NS 0.9%', 'Dung dịch chứa clorua', 'Các thuốc khác'], 'notes':
         'PHẢI có pre-hydration (1-2L NS trước) và post-hydration (1-2L NS sau) để giảm độc thận. Truyền với NS 0.9% để tăng thải trừ. Theo dõi lượng nước tiểu (đảm bảo >100ml/giờ).'
         }}, 'references': {'primary_sources': [
         'FDA Drug Label - Platinol (cisplatin)',
@@ -301,7 +301,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Oxaliplatin có thể giảm nồng độ phenytoin trong máu.', 'effect':
         'Giảm nồng độ phenytoin, giảm hiệu quả chống co giật', 'management':
         'Theo dõi nồng độ phenytoin. Có thể cần tăng liều phenytoin.'}],
-        'minor': []},         'contraindications': {'tuyệt_đối': [
+        'minor': []}, 'contraindications': {'tuyệt_đối': [
         'Dị ứng oxaliplatin hoặc platinum compounds',
         'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
         'Đang cho con bú - chống chỉ định'], 'tương_đối': [
@@ -317,7 +317,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Suy thận nặng (CrCl <30) - giảm liều 25-50%, theo dõi chặt chẽ',
         'Suy gan nặng - thận trọng, có thể cần giảm liều',
         'Bệnh nhân có tiền sử độc thần kinh - tăng nguy cơ độc thần kinh nặng']
-        ', 'pregnancy_details':
+        }, 'pregnancy_lactation': {'fda_category': 'D', 'pregnancy_details':
         'Chống chỉ định trong thai kỳ. Oxaliplatin gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.'
         , 'lactation': {'safety': 'Incompatible', 'details':
         'Oxaliplatin bài tiết vào sữa mẹ. Thuốc có thể gây độc tính nghiêm trọng cho trẻ sơ sinh.'
@@ -355,5 +355,6 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'last_updated': '2025-01-15', "evidence_level": "High (FDA-approved, extensive clinical data)"
         }
     }
+}
 
 __all__ = ['PLATINUM_COMPOUNDS_DRUGS']

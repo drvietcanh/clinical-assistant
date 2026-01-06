@@ -5,7 +5,8 @@
 ANALGESIC_ANTIPYRETIC_DRUGS = {
     "Paracetamol": {'group': 'Analgesic/Antipyretic', 'vietnamese_name':
         'Paracetamol, Acetaminophen, Tylenol, Efferalgan', 'administration': [
-        'PO', 'IV', 'PR'], 'Đau nhẹ đến trung bình',
+        'PO', 'IV', 'PR'], 'indications': [
+        'Đau nhẹ đến trung bình',
         'Đau đầu', 'Đau cơ', 'Đau răng'], 'contraindications': [
         'Dị ứng paracetamol', 'Suy gan nặng', 'Bệnh gan tiến triển'], 'dosage':
         {'adult_po': '500-1000mg x 3-4 lần/ngày (tối đa 4g/ngày)', 'adult_iv':
@@ -62,7 +63,7 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
         'Tăng nguy cơ độc tính gan nghiêm trọng, đặc biệt ở liều paracetamol >4g/ngày'
         , 'management':
         'Tránh rượu hoặc giảm liều paracetamol khi uống rượu. Thận trọng ở bệnh nhân nghiện rượu.'
-        }], 'mechanism':
+        }], 'moderate': [{'drug': 'Rượu (Ethanol)', 'mechanism':
         'Tăng chuyển hóa qua CYP2E1', 'effect': 'Tăng nguy cơ độc tính gan',
         'management': 'Thận trọng, giảm liều paracetamol, theo dõi ALT/AST'}, {
         'drug': 'Phenytoin, Carbamazepine', 'mechanism':

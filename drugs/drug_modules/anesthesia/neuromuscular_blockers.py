@@ -109,8 +109,7 @@ NEUROMUSCULAR_BLOCKERS = {
             "guideline_tags": [
                 "FDA Drug Information",
                 "UpToDate Drug Information",
-            ]
-       
-monitoring": ["TOF monitoring"]
+            ],
+            "monitoring": ["TOF monitoring"]
         }
 }

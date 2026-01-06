@@ -6,9 +6,10 @@ Active module - contains all oncology drug data"""
 ANTIMETABOLITES_DRUGS = {
     "5-Fluorouracil": {'group': 'Oncology - Antimetabolite', 'vietnamese_name':
         '5-Fluorouracil, 5-FU, Fluorouracil', 'administration': ['IV'],
-        'indications': ['Ung thư đại trực tràng (adjuvant và metastatic)',
+        'indications': [        'Ung thư đại trực tràng (adjuvant và metastatic)',
         'Ung thư dạ dày', 'Ung thư đầu cổ', 'Ung thư tụy', 'Ung thư vú',
         'Ung thư da (topical)'],
+        'contraindications': [
         'Thiếu hụt DPD (dihydropyrimidine dehydrogenase)',
         'Giảm bạch cầu/tiểu cầu nặng', 'Có thai', 'Đang cho con bú'], 'dosage':
         {'adult_bolus':
@@ -56,27 +57,30 @@ ANTIMETABOLITES_DRUGS = {
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu'
         , 'black_box_warnings':
         'Thiếu hụt DPD (dihydropyrimidine dehydrogenase) có thể gây độc tính nặng và tử vong. Nên test DPD trước điều trị nếu có thể. Theo dõi sát độc tính và ngừng ngay nếu có dấu hiệu độc tính nặng'
-        , 'drug_interactions': {'major': [{'drug': 'Methotrexate', 'mechanism':
-        'Cả hai đều là antimetabolite, tác dụng cộng dồn làm tăng độc tính tủy xương và niêm mạc.'
-        , 'effect':
-        'Tăng nguy cơ giảm bạch cầu, tiểu cầu, loét miệng, tiêu chảy nghiêm trọng',
-        'management':
-        'Thận trọng khi dùng đồng thời. Theo dõi CBC và dấu hiệu độc tính chặt chẽ. Có thể cần giảm liều hoặc tránh dùng đồng thời.'
-        }], 'mechanism':
-        '5-FU có thể ức chế chuyển hóa warfarin, tăng nồng độ warfarin trong máu.',
-        'effect': 'Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu',
-        'management':
-        'Theo dõi INR chặt chẽ khi bắt đầu hoặc ngừng 5-FU. Có thể cần giảm liều warfarin.'
-        }, {'drug': 'Phenytoin', 'mechanism':
-        '5-FU có thể ức chế chuyển hóa phenytoin, tăng nồng độ phenytoin trong máu.'
-        , 'effect': 'Tăng nồng độ phenytoin, tăng độc tính phenytoin',
-        'management':
-        'Theo dõi nồng độ phenytoin và dấu hiệu độc tính. Có thể cần giảm liều phenytoin.'
-        }], 'mechanism':
-        'Leucovorin tăng hiệu quả của 5-FU bằng cách tăng ức chế thymidylate synthase, nhưng cũng tăng độc tính.'
-        , 'effect': 'Tăng hiệu quả và độc tính của 5-FU', 'management':
-        'Dùng kèm để tăng hiệu quả, nhưng cần theo dõi độc tính chặt chẽ hơn.'}
-        ],
+        , 'drug_interactions': {
+            'major': [
+                {'drug': 'Methotrexate',
+                 'mechanism': 'Cả hai đều là antimetabolite, tác dụng cộng dồn làm tăng độc tính tủy xương và niêm mạc.',
+                 'effect': 'Tăng nguy cơ giảm bạch cầu, tiểu cầu, loét miệng, tiêu chảy nghiêm trọng',
+                 'management': 'Thận trọng khi dùng đồng thời. Theo dõi CBC và dấu hiệu độc tính chặt chẽ. Có thể cần giảm liều hoặc tránh dùng đồng thời.'}
+            ],
+            'moderate': [
+                {'drug': 'Warfarin',
+                 'mechanism': '5-FU có thể ức chế chuyển hóa warfarin, tăng nồng độ warfarin trong máu.',
+                 'effect': 'Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu',
+                 'management': 'Theo dõi INR chặt chẽ khi bắt đầu hoặc ngừng 5-FU. Có thể cần giảm liều warfarin.'},
+                {'drug': 'Phenytoin',
+                 'mechanism': '5-FU có thể ức chế chuyển hóa phenytoin, tăng nồng độ phenytoin trong máu.',
+                 'effect': 'Tăng nồng độ phenytoin, tăng độc tính phenytoin',
+                 'management': 'Theo dõi nồng độ phenytoin và dấu hiệu độc tính. Có thể cần giảm liều phenytoin.'}
+            ],
+            'minor': [
+                {'drug': 'Leucovorin',
+                 'mechanism': 'Leucovorin tăng hiệu quả của 5-FU bằng cách tăng ức chế thymidylate synthase, nhưng cũng tăng độc tính.',
+                 'effect': 'Tăng hiệu quả và độc tính của 5-FU',
+                 'management': 'Dùng kèm để tăng hiệu quả, nhưng cần theo dõi độc tính chặt chẽ hơn.'}
+            ]
+        }, 'contraindications': {'tuyệt_đối': [
         'Thiếu hụt DPD (dihydropyrimidine dehydrogenase) nặng - chống chỉ định tuyệt đối, có thể gây tử vong'
         ,
         'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
@@ -132,7 +136,7 @@ ANTIMETABOLITES_DRUGS = {
         'Gemcitabine, Gemzar', 'administration': ['IV'], 'indications': [
         'Ung thư tụy (adjuvant và metastatic)', 'Ung thư phổi không tế bào nhỏ (NSCLC)',
         'Ung thư bàng quang', 'Ung thư vú (metastatic)',
-        'Ung thư buồng trứng'],
+        'Ung thư buồng trứng'], 'contraindications': [
         'Giảm bạch cầu/tiểu cầu nặng', 'Có thai', 'Đang cho con bú'], 'dosage': {
         'adult_standard': '1000mg/m² IV ngày 1, 8, 15 (mỗi 28 ngày) hoặc ngày 1, 8 (mỗi 21 ngày)',
         'adult_pancreatic': '1000mg/m² IV ngày 1, 8, 15 (mỗi 28 ngày)',

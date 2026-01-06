@@ -273,7 +273,22 @@ CORTICOSTEROIDS_DRUGS = {
             ],
             "last_updated": "2025-02-03",
             "evidence_level": "A - Dựa trên FDA drug labels, guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["metabolic", "gastrointestinal", "musculoskeletal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood Glucose", "Blood Pressure", "Electrolytes", "Bone Density"]
+        },
+        "guideline_tags": [
+            "FDA Drug Label - Prednisone (Deltasone)",
+            "Endocrine Society Guidelines - Corticosteroid Use",
+            "ISMP High Alert Medications - Immunosuppressants"
+        ]
     },
 }
 

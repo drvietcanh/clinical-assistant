@@ -98,6 +98,23 @@ DRUG_DATABASE = {
     #       to avoid duplicates
 }
 
+# Remove stray non-drug keys that may appear from malformed imports
+_NON_DRUG_KEYS = [
+    "administration_instructions",
+    "contraindications",
+    "contraindications_detail",
+    "drug_interactions",
+    "hepatic_adjustment",
+    "overdose_management",
+    "pharmacokinetics",
+    "pregnancy_lactation",
+    "renal_adjustment",
+    "reversal_agents",
+    "risk_flags",
+]
+for _k in _NON_DRUG_KEYS:
+    DRUG_DATABASE.pop(_k, None)
+
 # Apply enhanced-field overrides (bổ sung/chuẩn hóa 14 fields cho một số thuốc)
 for _name, _fields in EXTRA_ENHANCED_FIELDS.items():
     if _name in DRUG_DATABASE:

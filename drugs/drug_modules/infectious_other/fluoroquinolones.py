@@ -63,42 +63,42 @@ FLUOROQUINOLONES_DRUGS = {
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín, tránh ẩm. IV: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi pha. Dung dịch đã pha: bảo quản ở nhiệt độ phòng, dùng trong vòng 24 giờ.'
         , 'black_box_warnings':
         'Tăng nguy cơ viêm gân và đứt gân ở mọi lứa tuổi. Nguy cơ tăng ở bệnh nhân > 60 tuổi, dùng corticosteroid, ghép cơ quan. Nguy cơ tổn thương thần kinh ngoại biên không hồi phục. Nguy cơ tác dụng phụ nghiêm trọng về gân, cơ, khớp, và thần kinh có thể xảy ra cùng lúc. Nguy cơ làm nặng bệnh nhược cơ. Tăng nguy cơ rối loạn tâm thần và hành vi tự sát. Chỉ dùng khi không có lựa chọn khác.'
-        , 'drug_interactions': {'major': [{'drug':
-        'Antacids (Aluminum, Magnesium), Sucralfate, Sắt, Kẽm, Canxi',
-        'mechanism':
-        'Cation (Al3+, Mg2+, Fe2+, Zn2+, Ca2+) tạo phức hợp không hòa tan với ciprofloxacin, giảm hấp thu.'
-        , 'effect':
-        'Giảm hấp thu ciprofloxacin, giảm nồng độ trong máu, giảm hiệu quả điều trị'
-        , 'management':
-        'Cách ít nhất 2 giờ (tốt nhất 4 giờ) trước hoặc sau khi uống ciprofloxacin. Không uống cùng lúc.'
-        }, {'drug': 'Warfarin', 'mechanism':
-        'Ciprofloxacin ức chế CYP2C9, làm giảm chuyển hóa warfarin, tăng nồng độ warfarin.'
-        , 'effect':
-        'Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu nghiêm trọng',
-        'management':
-        'Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng ciprofloxacin. Giảm liều warfarin khi bắt đầu ciprofloxacin. Điều chỉnh liều warfarin theo INR.'
-        }, {'drug': 'Theophylline', 'mechanism':
-        'Ciprofloxacin ức chế CYP1A2, làm giảm chuyển hóa theophylline, tăng nồng độ theophylline.'
-        , 'effect':
-        'Tăng nồng độ theophylline, tăng độc tính theophylline (buồn nôn, nôn, co giật, rối loạn nhịp tim)'
-        , 'management':
-        'Giảm liều theophylline 25-50% khi bắt đầu ciprofloxacin. Theo dõi nồng độ theophylline. Theo dõi dấu hiệu độc tính.'
-        }], 'mechanism':
-        'Probenecid ức chế bài tiết ống thận của ciprofloxacin, tăng nồng độ.',
-        'effect': 'Tăng nồng độ ciprofloxacin, tăng tác dụng phụ', 'management':
-        'Theo dõi tác dụng phụ. Có thể cần giảm liều ciprofloxacin.'}, {'drug':
-        'NSAID (Ibuprofen, Naproxen)', 'mechanism':
-        'Cả hai đều có thể gây co giật, tác dụng cộng dồn.', 'effect':
-        'Tăng nguy cơ co giật', 'management':
-        'Tránh dùng đồng thời nếu có thể. Thận trọng ở bệnh nhân có tiền sử co giật.'
-        }, {'drug': 'Corticosteroid', 'mechanism':
-        'Cả hai đều tăng nguy cơ đứt gân, tác dụng cộng dồn.', 'effect':
-        'Tăng nguy cơ viêm gân, đứt gân', 'management':
-        'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ dấu hiệu đau, sưng gân. Ngừng ngay nếu có đau gân.'
-        }],
-        'mechanism': 'Ciprofloxacin có thể gây hạ đường huyết.', 'effect':
-        'Tăng nguy cơ hạ đường huyết', 'management':
-        'Theo dõi đường huyết. Điều chỉnh liều sulfonylurea nếu cần.'}]},
+        , 'drug_interactions': {
+            'major': [
+                {'drug': 'Antacids (Aluminum, Magnesium), Sucralfate, Sắt, Kẽm, Canxi',
+                 'mechanism': 'Cation (Al3+, Mg2+, Fe2+, Zn2+, Ca2+) tạo phức hợp không hòa tan với ciprofloxacin, giảm hấp thu.',
+                 'effect': 'Giảm hấp thu ciprofloxacin, giảm nồng độ trong máu, giảm hiệu quả điều trị',
+                 'management': 'Cách ít nhất 2 giờ (tốt nhất 4 giờ) trước hoặc sau khi uống ciprofloxacin. Không uống cùng lúc.'},
+                {'drug': 'Warfarin',
+                 'mechanism': 'Ciprofloxacin ức chế CYP2C9, làm giảm chuyển hóa warfarin, tăng nồng độ warfarin.',
+                 'effect': 'Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu nghiêm trọng',
+                 'management': 'Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng ciprofloxacin. Giảm liều warfarin khi bắt đầu ciprofloxacin. Điều chỉnh liều warfarin theo INR.'},
+                {'drug': 'Theophylline',
+                 'mechanism': 'Ciprofloxacin ức chế CYP1A2, làm giảm chuyển hóa theophylline, tăng nồng độ theophylline.',
+                 'effect': 'Tăng nồng độ theophylline, tăng độc tính theophylline (buồn nôn, nôn, co giật, rối loạn nhịp tim)',
+                 'management': 'Giảm liều theophylline 25-50% khi bắt đầu ciprofloxacin. Theo dõi nồng độ theophylline. Theo dõi dấu hiệu độc tính.'}
+            ],
+            'moderate': [
+                {'drug': 'Probenecid',
+                 'mechanism': 'Probenecid ức chế bài tiết ống thận của ciprofloxacin, tăng nồng độ.',
+                 'effect': 'Tăng nồng độ ciprofloxacin, tăng tác dụng phụ',
+                 'management': 'Theo dõi tác dụng phụ. Có thể cần giảm liều ciprofloxacin.'},
+                {'drug': 'NSAID (Ibuprofen, Naproxen)',
+                 'mechanism': 'Cả hai đều có thể gây co giật, tác dụng cộng dồn.',
+                 'effect': 'Tăng nguy cơ co giật',
+                 'management': 'Tránh dùng đồng thời nếu có thể. Thận trọng ở bệnh nhân có tiền sử co giật.'},
+                {'drug': 'Corticosteroid',
+                 'mechanism': 'Cả hai đều tăng nguy cơ đứt gân, tác dụng cộng dồn.',
+                 'effect': 'Tăng nguy cơ viêm gân, đứt gân',
+                 'management': 'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ dấu hiệu đau, sưng gân. Ngừng ngay nếu có đau gân.'}
+            ],
+            'minor': [
+                {'drug': 'Sulfonylureas',
+                 'mechanism': 'Ciprofloxacin có thể gây hạ đường huyết.',
+                 'effect': 'Tăng nguy cơ hạ đường huyết',
+                 'management': 'Theo dõi đường huyết. Điều chỉnh liều sulfonylurea nếu cần.'}
+            ]
+        },
         'contraindications': {'tuyệt_đối': [
         'Dị ứng ciprofloxacin hoặc các fluoroquinolone khác',
         'Có thai - chống chỉ định tuyệt đối, nguy cơ tổn thương sụn thai nhi',

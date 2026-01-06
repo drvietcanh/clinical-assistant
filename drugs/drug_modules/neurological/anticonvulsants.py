@@ -167,6 +167,22 @@ ANTICONVULSANTS_DRUGS = {
              "available": False,
              "agents": []
          },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic", "dermatologic", "hematologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood levels", "CBC", "LFT", "Sodium levels"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Stevens-Johnson Syndrome/TEN",
+            "FDA Black Box Warning - Aplastic Anemia/Agranulocytosis",
+            "AAN 2018 Epilepsy Guidelines",
+            "ISMP High Alert Medications - Anticonvulsants"
+        ]
 },
     "Ethosuximide": {
         "group": "Neurology - Anticonvulsant",
@@ -350,23 +366,23 @@ ANTICONVULSANTS_DRUGS = {
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
             ],
             "last_updated": "2025-02-05",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ]
-           ,
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood levels", "CBC"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "AAN 2018 Epilepsy Guidelines"
+        ]
     },
     
     "Fosphenytoin": {
@@ -557,22 +573,24 @@ ANTICONVULSANTS_DRUGS = {
                 "Medscape - Fosphenytoin Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, status epilepticus guidelines",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": ["hepatic", "dermatologic"],
-                "qt_prolongation": False,
-                "hepatotoxicity": True,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["LFT", "CBC", "Drug levels"],
-            },
-            "guideline_tags": [
-                "AAN 2018 Epilepsy Guidelines",
-                "FDA - Antiepileptic drug safety",
-            ] 
-        }
+            "evidence_level": "A - Dựa trên FDA drug labels, ACLS guidelines, status epilepticus guidelines"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic", "dermatologic", "hematologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Serum phenytoin levels", "Liver function", "CBC", "Skin rash"]
+        },
+        "guideline_tags": [
+            "AAN 2018 Epilepsy Guidelines",
+            "FDA Black Box Warning - Stevens-Johnson Syndrome",
+            "FDA Black Box Warning - Suicidal Behavior",
+            "ISMP High Alert Medications - Anticonvulsants"
+        ]
     },
     "Lacosamide": {
         "group": "Neurology - Anticonvulsant",
@@ -978,13 +996,28 @@ ANTICONVULSANTS_DRUGS = {
         'Truyền trong 15 phút (tốc độ tiêu chuẩn). Không truyền nhanh hơn.',
         'compatibility': ['0.9% NaCl', 'D5W'], 'incompatibility': [], 'notes':
         'Có thể truyền trực tiếp hoặc pha loãng. Theo dõi dấu hiệu phản ứng tại chỗ tiêm.'
-        }}, 'references': {'primary_sources': ['Lexicomp - Levetiracetam',
+        }},         'references': {'primary_sources': ['Lexicomp - Levetiracetam',
         'UpToDate - Levetiracetam: Drug information',
         'FDA - Keppra (levetiracetam) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
         ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }
+        },
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': ['neurological', 'psychiatric'],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Seizure frequency', 'Psychiatric symptoms', 'Renal function', 'CBC']
+        },
+        'guideline_tags': [
+            'AAN 2018 Epilepsy Guidelines',
+            'FDA Black Box Warning - Suicidal Behavior',
+            'ISMP High Alert Medications - Anticonvulsants'
+        ]
     },
     "Oxcarbazepine": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
         'Oxcarbazepine, Trileptal', 'administration': ['PO'], 'indications': [
@@ -1493,7 +1526,23 @@ ANTICONVULSANTS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
         ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }
+        },
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': True,
+            'bleeding_risk': False,
+            'organ_toxicity': ['hepatic', 'respiratory', 'bone'],
+            'qt_prolongation': False,
+            'hepatotoxicity': True,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Serum phenobarbital levels', 'Respiratory rate', 'Liver function', 'Bone density']
+        },
+        'guideline_tags': [
+            'AAN 2018 Epilepsy Guidelines',
+            'FDA Black Box Warning - Dependence and Addiction',
+            'FDA Black Box Warning - Respiratory Depression',
+            'ISMP High Alert Medications - Anticonvulsants'
+        ]
     },
     "Phenytoin": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
         'Phenytoin, Dilantin', 'administration': ['PO', 'IV'], 'indications': [
@@ -1668,7 +1717,23 @@ ANTICONVULSANTS_DRUGS = {
         ], 'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews',
         'last_updated': '2025-02-18'
-        }
+        },
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': True,
+            'bleeding_risk': False,
+            'organ_toxicity': ['hepatic', 'hematologic', 'dermatologic', 'bone'],
+            'qt_prolongation': False,
+            'hepatotoxicity': True,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Serum phenytoin levels', 'Liver function', 'CBC', 'Skin rash', 'Bone density']
+        },
+        'guideline_tags': [
+            'AAN 2018 Epilepsy Guidelines',
+            'FDA Black Box Warning - Stevens-Johnson Syndrome',
+            'FDA Black Box Warning - Suicidal Behavior',
+            'ISMP High Alert Medications - Anticonvulsants'
+        ]
     },
     "Primidone": {
         "group": "Neurology - Anticonvulsant",

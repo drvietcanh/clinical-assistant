@@ -160,7 +160,22 @@ ANTITHYROID_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "A - Dựa trên FDA drug labels, ATA guidelines, và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic", "hematologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["CBC", "LFT", "Thyroid Function Tests"]
+        },
+        "guideline_tags": [
+            "FDA Drug Label - Methimazole (Tapazole)",
+            "American Thyroid Association Guidelines - Hyperthyroidism",
+            "ISMP High Alert Medications - Antithyroid Drugs"
+        ]
     },
     "Propylthiouracil": {
         "group": "Endocrinology - Antithyroid (Thionamide)",
@@ -320,7 +335,22 @@ ANTITHYROID_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "A - Dựa trên FDA drug labels, ATA guidelines, và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic", "hematologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["CBC", "LFT", "Thyroid Function Tests"]
+        },
+        "guideline_tags": [
+            "FDA Drug Label - Propylthiouracil (PTU)",
+            "American Thyroid Association Guidelines - Hyperthyroidism",
+            "ISMP High Alert Medications - Antithyroid Drugs"
+        ]
     },
 }
 

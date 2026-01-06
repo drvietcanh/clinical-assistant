@@ -182,23 +182,24 @@ VASODILATORS = {
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "A - FDA approved",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-                "A-HeFT Trial - Large RCT for heart failure"
-            ]
-        }
+            "evidence_level": "A - FDA approved"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["autoimmune", "renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Blood pressure", "Heart rate", "ANA", "Renal function"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HFSA Heart Failure Guidelines",
+            "FDA Black Box Warning - Systemic Lupus Erythematosus",
+            "A-HeFT Trial - Large RCT for heart failure",
+            "ISMP High Alert Medications - Cardiovascular Medications"
+        ]
     },
     
     "Isosorbide mononitrate": {
@@ -377,22 +378,23 @@ VASODILATORS = {
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
             ],
             "last_updated": "2025-02-04",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ],
             "evidence_level": "A - Dựa trên FDA drug labels và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure", "Heart rate"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HFSA Heart Failure Guidelines",
+            "FDA Drug Information",
+            "UpToDate Drug Information"
+        ]
     },
     
     "Nesiritide":     {
@@ -771,7 +773,22 @@ VASODILATORS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiovascular", "hematologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure", "Heart rate", "Methemoglobin (if high dose IV)"]
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines for Stable Ischemic Heart Disease",
+            "FDA Black Box Warning - PDE-5 Inhibitor Interaction",
+            "ISMP High Alert Medications - Cardiovascular Medications"
+        ]
     },
     "Nitroprusside":     {
         "group": "Cardiovascular - Vasodilator (Hypertensive Emergency)",

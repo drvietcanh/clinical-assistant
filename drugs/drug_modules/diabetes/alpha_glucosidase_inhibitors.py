@@ -335,22 +335,23 @@ ALPHA_GLUCOSIDASE_INHIBITORS_DRUGS = {
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["LFT"],
-            },
-            "guideline_tags": [
-                "ADA 2024 Standards of Care - Diabetes",
-                "AACE/ACE 2023 Type 2 Diabetes Guidelines",
-            ]
-        }
+            "evidence_level": "High - FDA approved"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Renal function", "Blood glucose"]
+        },
+        "guideline_tags": [
+            "ADA 2024 Standards of Care - Diabetes",
+            "AACE/ACE 2023 Type 2 Diabetes Guidelines",
+            "UpToDate - Alpha-Glucosidase Inhibitors"
+        ]
     },
 }
 

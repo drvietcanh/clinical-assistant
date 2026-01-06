@@ -362,7 +362,23 @@ UTEROTONICS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, ACOG/WHO guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["pulmonary", "cardiovascular"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Vital Signs", "Respiratory", "Fetal Monitoring"]
+        },
+        "guideline_tags": [
+            "ACOG Practice Bulletin - Postpartum Hemorrhage",
+            "WHO Recommendations for the Prevention and Treatment of Postpartum Haemorrhage",
+            "FDA Drug Label - Carboprost (Hemabate)",
+            "ISMP High Alert Medications - Emergency Medications"
+        ]
     },
     "Methylergonovine":     {
         "group": "Emergency - Obstetric uterotonic (Ergot alkaloid)",
@@ -562,6 +578,22 @@ UTEROTONICS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, WHO/ACOG guidelines, và dữ liệu lâm sàng từ nhiều nguồn",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiovascular"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Vital Signs", "Blood Pressure"]
+        },
+        "guideline_tags": [
+            "WHO Recommendations for the Prevention and Treatment of Postpartum Haemorrhage",
+            "ACOG Practice Bulletin - Postpartum Hemorrhage",
+            "FDA Drug Label - Methylergonovine (Methergine)",
+            "ISMP High Alert Medications - Emergency Medications"
+        ]
     },
     "Oxytocin": {
         "group": "Emergency - Obstetric uterotonic (PPH prevention/treatment)",
@@ -738,6 +770,22 @@ UTEROTONICS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High – guideline-based",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Vital Signs", "Uterine Contractions", "Fetal Monitoring"]
+        },
+        "guideline_tags": [
+            "WHO Recommendations for the Prevention and Treatment of Postpartum Haemorrhage",
+            "FIGO/ICM guidelines on active management of third stage of labour",
+            "ACOG Practice Bulletin - Postpartum Hemorrhage",
+            "ISMP High Alert Medications - Emergency Medications"
+        ],
              "reversal_agents": {
              "available": False,
              "agents": []

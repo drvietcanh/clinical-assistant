@@ -85,6 +85,21 @@ ANTIDOTES = {
             "last_updated": "",
             "evidence_level": "",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["LFT", "PT/INR"]
+        },
+        "guideline_tags": [
+            "FDA Drug Label - Acetylcysteine (Acetadote)",
+            "Paracetamol Overdose Guidelines",
+            "ISMP High Alert Medications - Emergency Medications"
+        ]
     },
     "Atropine":     {
         "group": "Toxicology - Antidote (Organophosphate/Carbamate)",
@@ -165,6 +180,21 @@ ANTIDOTES = {
             "last_updated": "",
             "evidence_level": "",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "Vital Signs", "Respiratory"]
+        },
+        "guideline_tags": [
+            "ACLS Guidelines 2020 - American Heart Association",
+            "Organophosphate Poisoning Guidelines",
+            "ISMP High Alert Medications - Emergency Medications"
+        ]
     },
     "Pralidoxime":     {
         "group": "Toxicology - Antidote (Organophosphate)",
@@ -417,5 +447,20 @@ ANTIDOTES = {
             "last_updated": "",
             "evidence_level": "",
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic", "metabolic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Ethanol Levels", "Arterial Blood Gas", "Electrolytes"]
+        },
+        "guideline_tags": [
+            "Methanol/Ethylene Glycol Poisoning Guidelines",
+            "FDA Drug Information",
+            "ISMP High Alert Medications - Emergency Medications"
+        ]
     },
 }

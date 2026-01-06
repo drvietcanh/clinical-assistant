@@ -335,26 +335,26 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Uống 1 lần/ngày buổi tối (để giảm buồn ngủ ban ngày) hoặc bất kỳ lúc nào, cùng thời điểm mỗi ngày. Giảm liều nếu suy thận (CrCl 30-60: 5mg cách ngày, CrCl 10-30: 5mg mỗi 3 ngày).'
         }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
         'compatibility': [], 'incompatibility': [],
-        }}, 'references': {'primary_sources': [
+        }},         'references': {'primary_sources': [
         'FDA Drug Label - Levocetirizine (Xyzal)',
         'UpToDate - Levocetirizine: Drug Information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ],
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ]
-        }
+        ]},
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Renal function"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "ARIA Guidelines - Allergic Rhinitis"
+        ]
     },
     "Loratadine": {'group': 'Allergy - Antihistamine (H1 Antagonist, 2nd generation)',
         'vietnamese_name': 'Loratadine, Clarityne', 'administration': ['PO'],

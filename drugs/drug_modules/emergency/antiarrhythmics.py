@@ -60,7 +60,7 @@ ANTIARRHYTHMICS_DRUGS = {
         'Tăng tác dụng và thời gian tác dụng của adenosine, tăng nguy cơ tác dụng phụ (ngừng tim kéo dài, block AV)'
         , 'management':
         'GIẢM LIỀU adenosine xuống 50-75% (1.5-3mg thay vì 6mg). Theo dõi chặt chẽ ECG. Chuẩn bị sẵn thiết bị hồi sức.'
-        }], 'mechanism':
+        }], 'moderate': [{'drug': 'Carbamazepine', 'mechanism':
         'Carbamazepine có thể tăng tác dụng của adenosine (cơ chế không rõ ràng, có thể liên quan đến bắt giữ adenosine).'
         , 'effect':
         'Tăng tác dụng và thời gian tác dụng của adenosine, tăng nguy cơ tác dụng phụ'
@@ -143,6 +143,21 @@ ANTIARRHYTHMICS_DRUGS = {
         '2024-12-19', 'evidence_level':
         'A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG"]
+        },
+        "guideline_tags": [
+            "ACLS Guidelines 2020 - American Heart Association",
+            "FDA Drug Label - Adenosine",
+            "ISMP High Alert Medications - Emergency Medications"
+        ],
         "black_box_warnings": None,
 }}
 

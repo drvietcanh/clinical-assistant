@@ -624,6 +624,22 @@ ANTIPLATELETS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "last_updated": "2025-02-05",
                 "evidence_level": "A",
             },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["hematologic"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["CBC", "WBC", "Platelet count"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Agranulocytosis/Thrombocytopenia",
+                "FDA Black Box Warning - TTP (Thrombotic Thrombocytopenic Purpura)",
+                "AHA/ASA Stroke Secondary Prevention Guidelines",
+                "ISMP High Alert Medications - Antiplatelets"
+            ]
         },
 
 }

@@ -160,23 +160,24 @@ T1DM_PREVENTION_DRUGS = {
                 "ADA Guidelines - Type 1 Diabetes Prevention"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved (2022), clinical trial data",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ] 
-
-        }
+            "evidence_level": "A - FDA-approved (2022), clinical trial data"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hematologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["CBC", "Infusion reactions", "Blood glucose", "C-peptide"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "ADA Guidelines - Type 1 Diabetes Prevention",
+            "FDA Black Box Warning - Infusion Reactions"
+        ]
     },
 }
 

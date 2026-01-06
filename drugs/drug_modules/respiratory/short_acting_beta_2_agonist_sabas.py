@@ -7,8 +7,10 @@ SHORT_ACTING_BETA_2_AGONIST_SABA_DRUGS = {
     "Salbutamol": {'group': 'Respiratory - Short-acting Beta-2 Agonist (SABA)',
         'vietnamese_name': 'Salbutamol, Ventolin', 'administration': [
         'Inhalation', 'IV', 'PO'],
+        'indications': [
         'COPD (cắt cơn)', 'Co thắt phế quản cấp',
         'Dự phòng co thắt do vận động'],
+        'contraindications': [
         'Nhịp tim nhanh nặng'], 'dosage': {'adult_inhalation':
         '1-2 puffs (100-200mcg) mỗi 4-6 giờ khi cần', 'adult_nebulizer':
         '2.5-5mg mỗi 4-6 giờ', 'adult_iv':

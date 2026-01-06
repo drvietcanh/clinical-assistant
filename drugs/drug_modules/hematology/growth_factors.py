@@ -184,23 +184,24 @@ GROWTH_FACTORS_DRUGS: Dict[str, Dict[str, Any]] = {
                     "ASH Guidelines - ITP"
                 ],
                 "last_updated": "2025-02-18",
-                "evidence_level": "A - FDA-approved",
+                "evidence_level": "A - FDA-approved"
+            },
             "risk_flags": {
-                "high_alert": False,
+                "high_alert": True,
                 "narrow_therapeutic_index": False,
                 "bleeding_risk": False,
-                "organ_toxicity": [],
+                "organ_toxicity": ["hepatic"],
                 "qt_prolongation": False,
-                "hepatotoxicity": False,
+                "hepatotoxicity": True,
                 "nephrotoxicity": False,
-                "requires_monitoring": [],
+                "requires_monitoring": ["LFT", "Platelet count", "Bilirubin"]
             },
             "guideline_tags": [
                 "FDA Drug Information",
                 "UpToDate Drug Information",
-            ] 
-
-        }
+                "ASH Guidelines - ITP",
+                "FDA Black Box Warning - Hepatotoxicity"
+            ]
         },
 
         "Epoetin alfa": {

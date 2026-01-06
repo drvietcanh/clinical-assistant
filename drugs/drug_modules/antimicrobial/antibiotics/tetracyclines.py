@@ -5,6 +5,7 @@ Tetracycline, Doxycycline, Minocycline
 
 TETRACYCLINE_ANTIBIOTICS = {
     "Doxycycline": {
+        # === 14 STANDARD FIELDS ===
         "group": "Antibiotic - Tetracycline",
         "vietnamese_name": "Doxycycline, Vibramycin, Doxy",
         "administration": ["PO", "IV"],
@@ -100,6 +101,8 @@ TETRACYCLINE_ANTIBIOTICS = {
             "clearance": "Chủ yếu qua gan/mật (60-70%), một phần qua thận (30-40%), không cần điều chỉnh thận"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén/viên nang: bảo quản trong bao bì kín.",
+        
+        # === 8 ENHANCED FIELDS ===
         "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở trẻ em <8 tuổi (gây răng vàng và ức chế xương). CHỐNG CHỈ ĐỊNH ở phụ nữ có thai (gây răng vàng và ức chế xương ở thai nhi).",
         "drug_interactions": {
             "major": [
@@ -126,19 +129,6 @@ TETRACYCLINE_ANTIBIOTICS = {
             ],
             "minor": []
         },
-        "contraindications": {
-            "tuyệt_đối": [
-                "Dị ứng doxycycline hoặc tetracycline",
-                "Trẻ em <8 tuổi - CHỐNG CHỈ ĐỊNH (gây răng vàng và ức chế xương)",
-                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D, gây răng vàng và ức chế xương ở thai nhi)"
-            ],
-            "tương_đối": [
-                "Phụ nữ đang cho con bú - thận trọng (có thể gây răng vàng ở trẻ)",
-                "Suy gan nặng - thận trọng",
-                "Nhạy cảm với ánh sáng - tránh ánh nắng mặt trời",
-                "Tiền sử tăng áp lực nội sọ - tăng nguy cơ"
-            ]
-        },
         "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng doxycycline hoặc tetracycline",
@@ -152,7 +142,6 @@ TETRACYCLINE_ANTIBIOTICS = {
                 "Tiền sử tăng áp lực nội sọ - tăng nguy cơ"
             ]
         },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Hydration đầy đủ để tăng thải trừ."},
         "pregnancy_lactation": {
             "fda_category": "D",
             "pregnancy_details": "Doxycycline là thuốc phân loại D. CHỐNG CHỈ ĐỊNH trong thai kỳ. Tetracycline gây răng vàng và ức chế xương ở thai nhi. Không dùng trong thai kỳ.",
@@ -229,6 +218,8 @@ TETRACYCLINE_ANTIBIOTICS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A"
         },
+        
+        # === ADDITIONAL FIELDS ===
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
@@ -247,6 +238,7 @@ TETRACYCLINE_ANTIBIOTICS = {
     },
 
     "Minocycline": {
+        # === 14 STANDARD FIELDS ===
         "group": "Antibiotic - Tetracycline",
         "vietnamese_name": "Minocycline, Minocin",
         "administration": ["PO", "IV"],
@@ -265,17 +257,6 @@ TETRACYCLINE_ANTIBIOTICS = {
             "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)",
             "Phụ nữ đang cho con bú - thận trọng"
         ],
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng minocycline hoặc tetracycline",
-                "Trẻ em <8 tuổi - CHỐNG CHỈ ĐỊNH",
-                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)"
-            ],
-            "tương_đối": [
-                "Phụ nữ đang cho con bú - thận trọng"
-            ]
-        },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Hydration đầy đủ để tăng thải trừ."},
         "dosage": {
             "adult_standard": "100mg PO x 2 lần/ngày",
             "adult_severe": "100mg PO x 2 lần/ngày hoặc 200mg PO x 1 lần/ngày",
@@ -337,6 +318,8 @@ TETRACYCLINE_ANTIBIOTICS = {
             "clearance": "Chủ yếu qua gan/mật, một phần qua thận, không cần điều chỉnh thận"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        
+        # === 8 ENHANCED FIELDS ===
         "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở trẻ em <8 tuổi và phụ nữ có thai (gây răng vàng và ức chế xương).",
         "drug_interactions": {
             "major": [
@@ -357,11 +340,11 @@ TETRACYCLINE_ANTIBIOTICS = {
             ],
             "minor": []
         },
-        "contraindications": {
+        "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng minocycline hoặc tetracycline",
                 "Trẻ em <8 tuổi - CHỐNG CHỈ ĐỊNH",
-                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH"
+                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)"
             ],
             "tương_đối": [
                 "Phụ nữ đang cho con bú - thận trọng",
@@ -429,6 +412,8 @@ TETRACYCLINE_ANTIBIOTICS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A"
         },
+        
+        # === ADDITIONAL FIELDS ===
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
@@ -446,6 +431,7 @@ TETRACYCLINE_ANTIBIOTICS = {
     },
 
     "Tetracycline": {
+        # === 14 STANDARD FIELDS ===
         "group": "Antibiotic - Tetracycline",
         "vietnamese_name": "Tetracycline, Tetracyn",
         "administration": ["PO"],
@@ -464,18 +450,6 @@ TETRACYCLINE_ANTIBIOTICS = {
             "Phụ nữ đang cho con bú - thận trọng",
             "Suy thận nặng - CHỐNG CHỈ ĐỊNH (tích lũy, tăng độc tính)"
         ],
-        "contraindications_detail": {
-            "tuyệt_đối": [
-                "Dị ứng tetracycline",
-                "Trẻ em <8 tuổi - CHỐNG CHỈ ĐỊNH",
-                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)",
-                "Suy thận nặng - CHỐNG CHỈ ĐỊNH (tích lũy, tăng độc tính)"
-            ],
-            "tương_đối": [
-                "Phụ nữ đang cho con bú - thận trọng"
-            ]
-        },
-        "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Hydration đầy đủ để tăng thải trừ."},
         "dosage": {
             "adult_standard": "250-500mg PO x 4 lần/ngày",
             "adult_severe": "500mg PO x 4 lần/ngày",
@@ -537,6 +511,8 @@ TETRACYCLINE_ANTIBIOTICS = {
             "clearance": "Gan (60%) và thận (40%), tích lũy ở suy thận - CHỐNG CHỈ ĐỊNH ở suy thận nặng"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        
+        # === 8 ENHANCED FIELDS ===
         "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở trẻ em <8 tuổi và phụ nữ có thai (gây răng vàng và ức chế xương). CHỐNG CHỈ ĐỊNH ở suy thận nặng (tích lũy, tăng độc tính).",
         "drug_interactions": {
             "major": [
@@ -557,11 +533,11 @@ TETRACYCLINE_ANTIBIOTICS = {
             ],
             "minor": []
         },
-        "contraindications": {
+        "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng tetracycline",
                 "Trẻ em <8 tuổi - CHỐNG CHỈ ĐỊNH",
-                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH",
+                "Phụ nữ có thai - CHỐNG CHỈ ĐỊNH (category D)",
                 "Suy thận nặng (CrCl <30) - CHỐNG CHỈ ĐỊNH (tích lũy, tăng độc tính)"
             ],
             "tương_đối": [
@@ -624,12 +600,14 @@ TETRACYCLINE_ANTIBIOTICS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A"
         },
+        
+        # === ADDITIONAL FIELDS ===
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"dental": "High (children <8, pregnancy)", "hepatic": "Moderate"}
+            "organ_toxicity": {"dental": "High (children <8, pregnancy)", "hepatic": "Moderate", "renal": "High (accumulation in renal impairment)"}
         },
         "guideline_tags": [
             "IDSA Guidelines - Community-Acquired Pneumonia",
@@ -642,4 +620,3 @@ TETRACYCLINE_ANTIBIOTICS = {
 }
 
 __all__ = ['TETRACYCLINE_ANTIBIOTICS']
-

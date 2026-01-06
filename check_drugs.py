@@ -1,16 +1,29 @@
-"""Check if drugs are in all_drugs"""
-import sys
-sys.path.insert(0, '.')
-from check_missing_fields_final import load_all_drugs, check_drug_fields
+from drugs.drug_database import DRUG_DATABASE
 
-all_drugs = load_all_drugs()
-drugs = ['Bumetanide', 'Torsemide', 'Simvastatin', 'Norepinephrine', 'Dopamine', 'Dobutamine']
+drugs_to_check = [
+    'Azelastine/Fluticasone nasal spray',
+    'Cetirizine/Pseudoephedrine',
+    'Fexofenadine/Pseudoephedrine',
+    'Folic acid',
+    'Hydrocortisone topical',
+    'Insulin',
+    'Iron',
+    'Loratadine/Pseudoephedrine'
+]
 
-for d in drugs:
-    if d in all_drugs:
-        print(f"{d}: FOUND - fields: {all_drugs[d]}")
-        result = check_drug_fields(d, all_drugs[d])
-        print(f"  Missing enhanced: {result['missing_enhanced']}")
+for drug_name in drugs_to_check:
+    if drug_name in DRUG_DATABASE:
+        drug_data = DRUG_DATABASE[drug_name]
+        has_rf = 'risk_flags' in drug_data and drug_data.get('risk_flags') is not None
+        has_gt = 'guideline_tags' in drug_data and drug_data.get('guideline_tags') is not None
+        print(f"{drug_name}:")
+        print(f"  risk_flags: {has_rf}")
+        print(f"  guideline_tags: {has_gt}")
+        if has_rf:
+            print(f"  risk_flags value: {drug_data.get('risk_flags')}")
+        if has_gt:
+            print(f"  guideline_tags value: {drug_data.get('guideline_tags')}")
+        print()
     else:
-        print(f"{d}: NOT FOUND")
-
+        print(f"{drug_name}: NOT FOUND IN DATABASE")
+        print()

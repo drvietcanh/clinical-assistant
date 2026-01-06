@@ -315,22 +315,23 @@ OPIOID_AGONISTS_DRUGS = {
         'references': {'primary_sources': [
         'FDA Drug Label - Vicodin (Hydrocodone/Acetaminophen)',
         'UpToDate - Hydrocodone: Drug information'],
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["Respiratory rate", "Sedation", "Constipation"],
-            },
-            "guideline_tags": [
-                "CDC 2022 Opioid Prescribing Guidelines",
-                "FDA Black Box Warning - Opioid addiction, abuse, misuse"
-            ],
-            "evidence_level": "High - FDA approved"
-        }
+            'evidence_level': 'High - FDA approved'
+        },
+        'risk_flags': {
+            'high_alert': True,
+            'narrow_therapeutic_index': False,
+            'bleeding_risk': False,
+            'organ_toxicity': [],
+            'qt_prolongation': False,
+            'hepatotoxicity': False,
+            'nephrotoxicity': False,
+            'requires_monitoring': ['Respiratory rate', 'Sedation', 'Constipation']
+        },
+        'guideline_tags': [
+            'CDC 2022 Opioid Prescribing Guidelines',
+            'FDA Black Box Warning - Opioid addiction, abuse, misuse',
+            'ISMP High Alert Medications - Opioids'
+        ]
     },
     "Tapentadol":     {
         "group": "Analgesic - Opioid Agonist (Dual Mechanism)",

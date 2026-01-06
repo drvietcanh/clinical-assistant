@@ -40,4 +40,3 @@ if __name__ == "__main__":
             print()
     else:
         print("No syntax errors found!")
-

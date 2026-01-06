@@ -9,6 +9,7 @@ from .dic_score import render as render_dic_score
 from .padua import render as render_padua
 from .warfarin_dosing import render as render_warfarin_dosing
 from .inr_target import render as render_inr_target
+from .bleeding_risk import render as render_bleeding_risk
 
 
 def render_hematology_calculator(calculator_id):
@@ -27,6 +28,7 @@ def render_hematology_calculator(calculator_id):
         "DIC Score": render_dic_score,
         "Warfarin Dosing": render_warfarin_dosing,
         "INR Target": render_inr_target,
+        "Bleeding Risk": render_bleeding_risk,
     }
 
     calculator_func = calculators.get(calculator_id)
@@ -43,5 +45,6 @@ __all__ = [
     'render_dic_score',
     'render_warfarin_dosing',
     'render_inr_target',
+    'render_bleeding_risk',
 ]
 

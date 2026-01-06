@@ -86,22 +86,23 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
                 "ACG GERD Guidelines 2022"
             ],
             "last_updated": "2025-02-18",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["Magnesium (long-term use)"],
-            },
-            "guideline_tags": [
-                "ACG 2017 GERD Guidelines",
-                "FDA - Long-term PPI use monitoring"
-            ],
             "evidence_level": "High - FDA-approved"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Magnesium (long-term use)", "Vitamin B12 (long-term use)", "Bone density"]
+        },
+        "guideline_tags": [
+            "ACG 2017 GERD Guidelines",
+            "FDA - Long-term PPI use monitoring",
+            "UpToDate - Proton Pump Inhibitors"
+        ]
     },
 
     "Esomeprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor (PPI)',
@@ -301,23 +302,23 @@ PROTON_PUMP_INHIBITOR_PPIS_DRUGS = {
                 "Comparative studies CYP2C19 vs omeprazole/esomeprazole"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "Moderate – approved in several countries",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["Magnesium (long-term use)"],
-            },
-            "guideline_tags": [
-                "ACG 2017 GERD Guidelines",
-                "FDA - Long-term PPI use monitoring",
-            ] 
-
-        }
+            "evidence_level": "Moderate – approved in several countries"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Magnesium (long-term use)", "Vitamin B12 (long-term use)", "LFT", "Bone density"]
+        },
+        "guideline_tags": [
+            "ACG 2017 GERD Guidelines",
+            "FDA - Long-term PPI use monitoring",
+            "UpToDate - Proton Pump Inhibitors"
+        ]
     },
     "Lansoprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor (PPI)',
         'vietnamese_name': 'Lansoprazole, Prevacid', 'administration': ['PO'],

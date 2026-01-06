@@ -7,6 +7,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
         'Ibuprofen, Brufen, Advil', 'administration': ['PO', 'IV'],
         'indications': ['Sốt', 'Đau nhẹ đến trung bình', 'Viêm khớp',
         'Đau bụng kinh', 'Đau đầu'],
+        'contraindications': [
         'Loét dạ dày tá tràng hoạt động', 'Suy thận nặng', 'Suy tim nặng',
         'Có thai (3 tháng cuối)', 'Trẻ em <6 tháng'], 'dosage': {'adult_po':
         '200-400mg x 3-4 lần/ngày (tối đa 2.4g/ngày)', 'adult_iv':
@@ -21,6 +22,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
         'Kích ứng dạ dày', 'Đau đầu', 'Chóng mặt',
         'Tăng nguy cơ tim mạch (với dùng lâu dài)', 'Suy thận cấp (hiếm)',
         'Phát ban'],
+        'interactions': [
         'Warfarin: tăng nguy cơ chảy máu', 'Lithium: tăng nồng độ lithium',
         'Methotrexate: tăng độc tính', 'ACE inhibitors: giảm hiệu quả'],
         'pregnancy': 'C - Tránh dùng trong 3 tháng cuối (D)',
@@ -35,7 +37,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
         'Dấu hiệu suy tim (giữ nước, phù, khó thở) - NSAID có thể làm nặng suy tim'
         , 'INR nếu dùng với warfarin (tăng nguy cơ chảy máu)',
         'Triệu chứng tim mạch (đau ngực, khó thở) - tăng nguy cơ tim mạch với dùng lâu dài'
-        ],
+        ], 'precautions': [
         'Cân nhắc dùng PPI (omeprazole, pantoprazole) hoặc misoprostol nếu có nguy cơ loét dạ dày (tuổi >65, tiền sử loét, dùng corticosteroid, dùng aspirin)'
         ,
         'Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp (làm nặng bệnh)'
@@ -56,40 +58,41 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi pha.'
         , 'black_box_warnings':
         'Tăng nguy cơ biến cố tim mạch nghiêm trọng (nhồi máu cơ tim, đột quỵ) có thể xảy ra sớm và tăng nguy cơ tử vong. Nguy cơ tăng ở bệnh nhân có bệnh tim mạch hoặc các yếu tố nguy cơ tim mạch. NSAID tăng nguy cơ xuất huyết tiêu hóa, loét, thủng dạ dày có thể gây tử vong. Nguy cơ tăng ở người cao tuổi, tiền sử loét, dùng corticosteroid, aspirin, rượu, hút thuốc. Không dùng trong 3 tháng cuối thai kỳ (đóng ống động mạch sớm).'
-        , 'drug_interactions': {'major': [{'drug': 'Warfarin', 'mechanism':
-        'Ibuprofen ức chế kết tập tiểu cầu và có thể tăng nguy cơ chảy máu. Có thể ảnh hưởng đến chuyển hóa warfarin.'
-        , 'effect': 'Tăng nguy cơ chảy máu nghiêm trọng, tăng INR',
-        'management':
-        'Theo dõi INR chặt chẽ. Tránh dùng đồng thời nếu có thể. Nếu cần dùng, giảm liều ibuprofen và theo dõi dấu hiệu chảy máu.'
-        }, {'drug': 'ACE Inhibitors, ARB', 'mechanism':
-        'NSAID giảm tổng hợp prostaglandin, làm giảm tác dụng giãn mạch của ACE inhibitor/ARB. Có thể gây giữ natri và nước.'
-        , 'effect':
-        'Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp, tăng kali máu',
-        'management':
-        'Tránh dùng đồng thời nếu có thể. Nếu cần, theo dõi creatinine, BUN, kali máu. Cân nhắc dùng liều thấp NSAID và thời gian ngắn.'
-        }, {'drug': 'Aspirin (liều thấp tim mạch)', 'mechanism':
-        'Ibuprofen có thể cạnh tranh với aspirin tại vị trí gắn COX-1, làm giảm tác dụng ức chế kết tập tiểu cầu của aspirin.'
-        , 'effect': 'Giảm hiệu quả bảo vệ tim mạch của aspirin', 'management':
-        'Nếu dùng aspirin liều thấp để bảo vệ tim mạch, dùng ibuprofen ít nhất 30 phút sau aspirin hoặc 8 giờ trước aspirin. Hoặc cân nhắc dùng NSAID khác không ức chế COX-1.'
-        }], 'mechanism':
-        'NSAID giảm thải trừ methotrexate qua thận, tăng nồng độ methotrexate trong máu.'
-        , 'effect':
-        'Tăng độc tính methotrexate (giảm bạch cầu, suy tủy xương, độc gan)',
-        'management':
-        'Tránh dùng với liều cao methotrexate. Nếu dùng liều thấp, theo dõi công thức máu, chức năng gan. Có thể cần giảm liều methotrexate.'
-        }, {'drug': 'Lithium', 'mechanism':
-        'NSAID giảm thải trừ lithium qua thận, tăng nồng độ lithium.', 'effect':
-        'Tăng nồng độ lithium, tăng nguy cơ độc tính lithium', 'management':
-        'Theo dõi nồng độ lithium trong máu. Có thể cần giảm liều lithium khi bắt đầu dùng ibuprofen.'
-        }, {'drug': 'Corticosteroid', 'mechanism':
-        'Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.', 'effect':
-        'Tăng nguy cơ xuất huyết tiêu hóa, loét dạ dày', 'management':
-        'Cân nhắc dùng PPI hoặc misoprostol. Theo dõi dấu hiệu chảy máu dạ dày.'
-        }], 'mechanism':
-        'NSAID giảm tác dụng lợi tiểu, có thể gây giữ natri và nước.', 'effect':
-        'Giảm hiệu quả lợi tiểu, có thể gây phù', 'management':
-        'Theo dõi cân nặng, dấu hiệu giữ nước. Có thể cần điều chỉnh liều lợi tiểu.'
-        }]}, 'contraindications': {'tuyệt_đối': [
+        , 'drug_interactions': {
+            'major': [
+                {'drug': 'Warfarin',
+                 'mechanism': 'Ibuprofen ức chế kết tập tiểu cầu và có thể tăng nguy cơ chảy máu. Có thể ảnh hưởng đến chuyển hóa warfarin.',
+                 'effect': 'Tăng nguy cơ chảy máu nghiêm trọng, tăng INR',
+                 'management': 'Theo dõi INR chặt chẽ. Tránh dùng đồng thời nếu có thể. Nếu cần dùng, giảm liều ibuprofen và theo dõi dấu hiệu chảy máu.'},
+                {'drug': 'ACE Inhibitors, ARB',
+                 'mechanism': 'NSAID giảm tổng hợp prostaglandin, làm giảm tác dụng giãn mạch của ACE inhibitor/ARB. Có thể gây giữ natri và nước.',
+                 'effect': 'Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp, tăng kali máu',
+                 'management': 'Tránh dùng đồng thời nếu có thể. Nếu cần, theo dõi creatinine, BUN, kali máu. Cân nhắc dùng liều thấp NSAID và thời gian ngắn.'},
+                {'drug': 'Aspirin (liều thấp tim mạch)',
+                 'mechanism': 'Ibuprofen có thể cạnh tranh với aspirin tại vị trí gắn COX-1, làm giảm tác dụng ức chế kết tập tiểu cầu của aspirin.',
+                 'effect': 'Giảm hiệu quả bảo vệ tim mạch của aspirin',
+                 'management': 'Nếu dùng aspirin liều thấp để bảo vệ tim mạch, dùng ibuprofen ít nhất 30 phút sau aspirin hoặc 8 giờ trước aspirin. Hoặc cân nhắc dùng NSAID khác không ức chế COX-1.'}
+            ],
+            'moderate': [
+                {'drug': 'Methotrexate',
+                 'mechanism': 'NSAID giảm thải trừ methotrexate qua thận, tăng nồng độ methotrexate trong máu.',
+                 'effect': 'Tăng độc tính methotrexate (giảm bạch cầu, suy tủy xương, độc gan)',
+                 'management': 'Tránh dùng với liều cao methotrexate. Nếu dùng liều thấp, theo dõi công thức máu, chức năng gan. Có thể cần giảm liều methotrexate.'},
+                {'drug': 'Lithium',
+                 'mechanism': 'NSAID giảm thải trừ lithium qua thận, tăng nồng độ lithium.',
+                 'effect': 'Tăng nồng độ lithium, tăng nguy cơ độc tính lithium',
+                 'management': 'Theo dõi nồng độ lithium trong máu. Có thể cần giảm liều lithium khi bắt đầu dùng ibuprofen.'},
+                {'drug': 'Corticosteroid',
+                 'mechanism': 'Cả hai đều tăng nguy cơ loét dạ dày, xuất huyết tiêu hóa.',
+                 'effect': 'Tăng nguy cơ xuất huyết tiêu hóa, loét dạ dày',
+                 'management': 'Cân nhắc dùng PPI hoặc misoprostol. Theo dõi dấu hiệu chảy máu dạ dày.'},
+                {'drug': 'Diuretics',
+                 'mechanism': 'NSAID giảm tác dụng lợi tiểu, có thể gây giữ natri và nước.',
+                 'effect': 'Giảm hiệu quả lợi tiểu, có thể gây phù',
+                 'management': 'Theo dõi cân nặng, dấu hiệu giữ nước. Có thể cần điều chỉnh liều lợi tiểu.'}
+            ],
+            'minor': []
+        }, 'contraindications': {'tuyệt_đối': [
         'Dị ứng NSAID hoặc aspirin (quá mẫn cảm, phản ứng dị ứng nghiêm trọng)',
         'Loét dạ dày tá tràng hoạt động', 'Xuất huyết tiêu hóa đang hoạt động',
         'Suy thận nặng (CrCl <30 ml/min) hoặc đang lọc máu',

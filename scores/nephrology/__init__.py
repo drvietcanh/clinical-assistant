@@ -7,6 +7,7 @@ from .kdigo import render as render_kdigo
 from .rifle import render as render_rifle
 from .akin import render as render_akin
 from .egfr import render as render_egfr
+from .dialysis_adequacy import render as render_dialysis_adequacy
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -22,6 +23,7 @@ def render_nephrology_calculator(calculator_id):
         "RIFLE": render_rifle,
         "AKIN": render_akin,
         "eGFR": render_egfr,
+        "Dialysis Adequacy Calculator": render_dialysis_adequacy,
     }
 
     calculator_func = calculators.get(calculator_id)
@@ -36,5 +38,6 @@ __all__ = [
     'render_kdigo',
     'render_rifle',
     'render_akin',
+    'render_dialysis_adequacy',
 ]
 

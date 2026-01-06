@@ -1172,23 +1172,23 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
                 "Lexicomp - Oxycodone monograph"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA-approved",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["Respiratory rate", "Sedation", "Constipation"],
-            },
-            "guideline_tags": [
-                "CDC 2022 Opioid Prescribing Guidelines",
-                "FDA Black Box Warning - Opioid addiction, abuse, misuse",
-            ] 
-
-        }
+            "evidence_level": "High - FDA-approved"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Respiratory rate", "Sedation", "Constipation"]
+        },
+        "guideline_tags": [
+            "CDC 2022 Opioid Prescribing Guidelines",
+            "FDA Black Box Warning - Opioid addiction, abuse, misuse",
+            "ISMP High Alert Medications - Opioids"
+        ]
     },
 
     "Remifentanil": {

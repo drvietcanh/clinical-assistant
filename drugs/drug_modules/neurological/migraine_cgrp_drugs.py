@@ -830,22 +830,23 @@ MIGRAINE_CGRP_DRUGS = {
                 "AHS Guidelines - Acute Migraine Treatment"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ] 
-        }
+            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["LFT"]
+        },
+        "guideline_tags": [
+            "AHS Guidelines - Acute Migraine Treatment",
+            "FDA Drug Information",
+            "UpToDate Drug Information"
+        ]
     },
     
 }

@@ -62,7 +62,7 @@ ANTHRACYCLINES_DRUGS = {
         , 'effect': 'Tăng nguy cơ độc tim, suy tim không hồi phục',
         'management':
         'Thận trọng khi dùng đồng thời. Theo dõi chức năng tim chặt chẽ. Có thể cần giảm liều hoặc tránh dùng đồng thời.'
-        }], 'mechanism':
+        }], 'moderate': [{'drug': 'Unknown', 'mechanism':
         'Có thể tăng độc tính của doxorubicin.', 'effect':
         'Tăng độc tính tổng thể', 'management':
         'Thận trọng khi dùng đồng thời. Theo dõi độc tính chặt chẽ.'}, {'drug':
@@ -127,5 +127,6 @@ ANTHRACYCLINES_DRUGS = {
         'last_updated': '2025-01-15',        "evidence_level": "High (FDA-approved, extensive clinical data)"
         }
     }
+}
 
 __all__ = ['ANTHRACYCLINES_DRUGS']

@@ -50,37 +50,50 @@ SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS = {
         }, 'storage': 'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm',
         'black_box_warnings':
         'Tăng nguy cơ tự tử ở trẻ em, thanh thiếu niên, và thanh niên <24 tuổi trong vài tháng đầu điều trị. Chống chỉ định với MAO inhibitor - nguy cơ hội chứng serotonin nghiêm trọng'
-        , 'drug_interactions': {'major': [{'drug':
-        'MAO inhibitors (phenelzine, tranylcypromine, selegiline, linezolid)',
-        'mechanism': 'Ức chế chuyển hóa serotonin, tăng nồng độ serotonin',
-        'effect':
-        'Hội chứng serotonin nghiêm trọng: kích động, nhịp tim nhanh, tăng huyết áp, sốt cao, co giật, tử vong'
-        , 'management':
-        'CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng fluoxetine ít nhất 5 tuần trước khi bắt đầu MAO inhibitor (do half-life dài).'
-        }, {'drug': 'Tramadol', 'mechanism':
-        'Tăng nồng độ serotonin, tăng nguy cơ co giật', 'effect':
-        'Hội chứng serotonin, tăng nguy cơ co giật', 'management':
-        'Tránh dùng cùng. Nếu bắt buộc, giảm liều tramadol và theo dõi sát.'},
-        {'drug': 'Triptans (sumatriptan, rizatriptan)', 'mechanism':
-        'Tăng nồng độ serotonin', 'effect': 'Hội chứng serotonin', 'management':
-        'Thận trọng. Dùng cách xa ít nhất 24 giờ. Theo dõi dấu hiệu hội chứng serotonin.'
-        }, {'drug': 'Warfarin', 'mechanism':
-        'Fluoxetine ức chế CYP2C9, tăng nồng độ warfarin', 'effect':
-        'Tăng INR, tăng nguy cơ chảy máu', 'management':
-        'Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần.'}, {
-        'drug': 'Phenytoin, Carbamazepine', 'mechanism':
-        'Fluoxetine ức chế CYP2D6, CYP2C9, tăng nồng độ', 'effect':
-        'Tăng nồng độ phenytoin/carbamazepine, tăng nguy cơ độc tính',
-        'management':
-        'Theo dõi nồng độ. Giảm liều phenytoin/carbamazepine nếu cần.'}, {
-        'drug': 'Tricyclic antidepressants (TCA)', 'mechanism':
-        'Ức chế CYP2D6, tăng nồng độ TCA', 'effect':
-        'Tăng nồng độ TCA, tăng nguy cơ độc tính (rối loạn nhịp, block nhĩ thất)',
-        'management': 'Thận trọng. Giảm liều TCA 50%. Theo dõi ECG.'}], 'minor':
-        [{'drug': 'CYP2D6 substrates (codeine, metoprolol)', 'mechanism':
-        'Ức chế CYP2D6', 'effect':
-        'Tăng nồng độ các thuốc chuyển hóa qua CYP2D6', 'management':
-        'Thận trọng. Điều chỉnh liều nếu cần.'}]}, 'contraindications_detail': {
+        , 'drug_interactions': {
+            'major': [
+                {'drug': 'MAO inhibitors (phenelzine, tranylcypromine, selegiline, linezolid)',
+                 'mechanism': 'Ức chế chuyển hóa serotonin, tăng nồng độ serotonin',
+                 'effect': 'Hội chứng serotonin nghiêm trọng: kích động, nhịp tim nhanh, tăng huyết áp, sốt cao, co giật, tử vong',
+                 'management': 'CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI. Ngừng fluoxetine ít nhất 5 tuần trước khi bắt đầu MAO inhibitor (do half-life dài).'},
+                {'drug': 'Tramadol',
+                 'mechanism': 'Tăng nồng độ serotonin, tăng nguy cơ co giật',
+                 'effect': 'Hội chứng serotonin, tăng nguy cơ co giật',
+                 'management': 'Tránh dùng cùng. Nếu bắt buộc, giảm liều tramadol và theo dõi sát.'},
+                {'drug': 'Triptans (sumatriptan, rizatriptan)',
+                 'mechanism': 'Tăng nồng độ serotonin',
+                 'effect': 'Hội chứng serotonin',
+                 'management': 'Thận trọng. Dùng cách xa ít nhất 24 giờ. Theo dõi dấu hiệu hội chứng serotonin.'}
+            ],
+            'moderate': [
+                {'drug': 'Warfarin',
+                 'mechanism': 'Fluoxetine ức chế CYP2C9, tăng nồng độ warfarin',
+                 'effect': 'Tăng INR, tăng nguy cơ chảy máu',
+                 'management': 'Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần.'},
+                {'drug': 'Phenytoin, Carbamazepine',
+                 'mechanism': 'Fluoxetine ức chế CYP2D6, CYP2C9, tăng nồng độ',
+                 'effect': 'Tăng nồng độ phenytoin/carbamazepine, tăng nguy cơ độc tính',
+                 'management': 'Theo dõi nồng độ. Giảm liều phenytoin/carbamazepine nếu cần.'},
+                {'drug': 'Tricyclic antidepressants (TCA)',
+                 'mechanism': 'Ức chế CYP2D6, tăng nồng độ TCA',
+                 'effect': 'Tăng nồng độ TCA, tăng nguy cơ độc tính (rối loạn nhịp, block nhĩ thất)',
+                 'management': 'Thận trọng. Giảm liều TCA 50%. Theo dõi ECG.'}
+            ],
+            'minor': [
+                {'drug': 'CYP2D6 substrates (codeine, metoprolol)',
+                 'mechanism': 'Ức chế CYP2D6',
+                 'effect': 'Tăng nồng độ các thuốc chuyển hóa qua CYP2D6',
+                 'management': 'Thận trọng. Điều chỉnh liều nếu cần.'}
+            ]
+        }, 'contraindications': {
+        'tuyệt_đối': ['Dùng MAO inhibitor (chống chỉ định tuyệt đối)',
+        'Dị ứng fluoxetine', 'Hội chứng serotonin đang diễn ra'], 'tương_đối':
+        ['Suy gan nặng - giảm liều', 'Suy thận nặng (CrCl <30) - giảm liều',
+        'Trẻ em <18 tuổi - tăng nguy cơ tự tử',
+        'Có ý định tự tử - chỉ kê đơn số lượng ít', 'Bệnh tim - thận trọng',
+        'Rối loạn đông máu - tăng nguy cơ chảy máu',
+        'Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin']},
+        'contraindications_detail': {
         'tuyệt_đối': ['Dùng MAO inhibitor (chống chỉ định tuyệt đối)',
         'Dị ứng fluoxetine', 'Hội chứng serotonin đang diễn ra'], 'tương_đối':
         ['Suy gan nặng - giảm liều', 'Suy thận nặng (CrCl <30) - giảm liều',

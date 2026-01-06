@@ -7,6 +7,7 @@ CORTICOSTEROID_INHALED_DRUGS = {
         'Budesonide inhaled, Pulmicort', 'administration': ['INH', 'NEB'],
         'indications': ['Hen phế quản (duy trì)', 'COPD', 'Viêm mũi dị ứng',
         'Hen phế quản (Trẻ em)'],
+        'contraindications': [
         'Nhiễm trùng đường hô hấp không điều trị'], 'dosage': {'adult_inh':
         '200-800mcg x 2 lần/ngày', 'adult_neb':
         '0.5-1mg nebulizer x 2 lần/ngày', 'pediatric_inh':
@@ -69,7 +70,7 @@ CORTICOSTEROID_INHALED_DRUGS = {
         }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
         'Dị ứng budesonide',
         'Nhiễm trùng đường hô hấp không điều trị (lao phổi, nhiễm nấm) - corticosteroid có thể làm nặng nhiễm trùng'
-        ],
+        ], 'tương_đối': [
         'Nhiễm nấm đường hô hấp - cần điều trị trước',
         'Có thai - category C, thận trọng',
         'Đang dùng ritonavir - tăng nguy cơ ức chế HPA']},

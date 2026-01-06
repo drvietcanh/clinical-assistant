@@ -51,9 +51,8 @@ LOCAL_ANESTHETICS = {
             "guideline_tags": [
                 "FDA Drug Information",
                 "UpToDate Drug Information",
-            ]
-       
-antidote": "Lipid Emulsion 20% (Intralipid) - Cứu cánh trong ngộ độc thuốc tê toàn thân (LAST)."
+            ],
+            "antidote": "Lipid Emulsion 20% (Intralipid) - Cứu cánh trong ngộ độc thuốc tê toàn thân (LAST)."
     },
 
     "Bupivacaine":     {

@@ -229,6 +229,7 @@ BETA_LACTAMS_DRUGS = {
         'Liều thấp hơn, khoảng cách dài hơn'}, 'side_effects': ['Tiêu chảy',
         'Buồn nôn', 'Phát ban', 'Nhiễm trùng nấm Candida',
         'Giảm bạch cầu (hiếm)'],
+        'interactions': [
         'Methotrexate: tăng độc tính', 'Allopurinol: tăng nguy cơ phát ban',
         'Thuốc tránh thai: có thể giảm hiệu quả'],
         'mechanism_of_action':
@@ -273,7 +274,7 @@ BETA_LACTAMS_DRUGS = {
         'Tăng nguy cơ phát ban nghiêm trọng, SJS, TEN (đe dọa tính mạng)',
         'management':
         'Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu phát ban. Ngừng ngay nếu có phát ban.'
-        }], 'mechanism':
+        }], 'moderate': [{'drug': 'Warfarin', 'mechanism':
         'Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, ảnh hưởng đến chuyển hóa vitamin K, tăng tác dụng warfarin.'
         , 'effect': 'Tăng INR, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên khi dùng amoxicillin. Điều chỉnh liều warfarin nếu cần.'
@@ -426,7 +427,7 @@ BETA_LACTAMS_DRUGS = {
         'Tăng nồng độ methotrexate, tăng độc tính (giảm bạch cầu, thiếu máu, độc gan, độc thận)'
         , 'management':
         'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, giảm liều methotrexate, theo dõi chặt chẽ công thức máu, chức năng gan, thận. Ngừng methotrexate nếu có dấu hiệu độc tính.'
-        }], 'mechanism':
+        }], 'moderate': [{'drug': 'Allopurinol', 'mechanism':
         'Cơ chế chưa rõ ràng, có thể liên quan đến phản ứng miễn dịch.',
         'effect':
         'Tăng nguy cơ phát ban, phản ứng dị ứng (đặc biệt phát ban maculopapular)',
@@ -442,11 +443,11 @@ BETA_LACTAMS_DRUGS = {
         'Probenecid ức chế bài tiết amoxicillin ở ống thận, làm tăng nồng độ amoxicillin.'
         , 'effect': 'Tăng nồng độ amoxicillin, tăng tác dụng phụ', 'management':
         'Có thể dùng để tăng nồng độ amoxicillin nếu cần. Theo dõi tác dụng phụ. Giảm liều amoxicillin nếu cần.'
-        }], 'mechanism':
+        }], 'minor': [{'drug': 'Antacids', 'mechanism':
         'Antacids có thể giảm nhẹ hấp thu amoxicillin.', 'effect':
         'Giảm nhẹ hấp thu amoxicillin', 'management':
         'Cách 2 giờ nếu có thể. Không ảnh hưởng đáng kể ở liều điều trị thông thường.'
-        }]},         'contraindications': {'tuyệt_đối': [
+        }]}, 'contraindications': {'tuyệt_đối': [
         'Dị ứng amoxicillin, clavulanate, hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam'
         ,
         'Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao'

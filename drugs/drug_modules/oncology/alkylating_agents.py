@@ -192,12 +192,12 @@ ALKYLATING_AGENTS_DRUGS = {
         , 'effect': 'Tăng nguy cơ suy thận cấp, độc thận nghiêm trọng',
         'management':
         'Thận trọng khi dùng đồng thời. Theo dõi chức năng thận chặt chẽ. Duy trì đủ dịch. Có thể cần giảm liều hoặc tránh dùng đồng thời.'
-        }], 'mechanism':
+        }], 'moderate': [{'drug': 'Phenobarbital', 'mechanism':
         'Phenobarbital cảm ứng CYP450, làm tăng chuyển hóa ifosfamide, giảm nồng độ ifosfamide trong máu.'
         , 'effect': 'Giảm nồng độ ifosfamide, giảm hiệu quả điều trị',
         'management':
         'Theo dõi đáp ứng điều trị. Có thể cần tăng liều ifosfamide.'}],
-        'minor': [],
+        'minor': []}, 'contraindications': {'tuyệt_đối': [
         'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
         'Đang cho con bú - chống chỉ định',
         'Viêm bàng quang chảy máu nặng - chống chỉ định cho đến khi hồi phục'],

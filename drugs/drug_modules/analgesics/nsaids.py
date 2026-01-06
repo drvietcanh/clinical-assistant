@@ -308,22 +308,23 @@ NSAIDS_DRUGS = {
         'Lexicomp - Celecoxib monograph',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-02-05',
-        'evidence_level': 'High - FDA-approved',
+        'evidence_level': 'High - FDA-approved'
+        },
         "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": True,
-                "organ_toxicity": ["GI", "renal", "cardiac"],
-                "qt_prolongation": False,
-                "hepatotoxicity": True,
-                "nephrotoxicity": True,
-                "requires_monitoring": ["LFT", "RFT", "GI symptoms"],
-            },
-            "guideline_tags": [
-                "ACR 2021 Osteoarthritis Guidelines",
-                "FDA Black Box Warning - Cardiovascular and GI risks"
-            ]
-        }
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": True,
+            "organ_toxicity": ["GI", "renal", "cardiac"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["LFT", "RFT", "GI symptoms", "Blood pressure", "Cardiovascular symptoms"]
+        },
+        "guideline_tags": [
+            "ACR 2021 Osteoarthritis Guidelines",
+            "FDA Black Box Warning - Cardiovascular and GI risks",
+            "ISMP High Alert Medications - NSAIDs"
+        ]
     },
     "Diclofenac": {'group': 'Analgesic - NSAID', 'vietnamese_name': 'Diclofenac, Voltaren',
         'administration': ['PO', 'IM', 'Topical'], 'indications': [
@@ -556,22 +557,23 @@ NSAIDS_DRUGS = {
         'references': {'primary_sources': [
         'FDA Drug Label - Arcoxia (Etoricoxib)',
         'UpToDate - Etoricoxib: Drug information'],
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": True,
-                "organ_toxicity": ["GI", "renal", "cardiac"],
-                "qt_prolongation": False,
-                "hepatotoxicity": True,
-                "nephrotoxicity": True,
-                "requires_monitoring": ["LFT", "RFT", "GI symptoms"],
-            },
-            "guideline_tags": [
-                "ACR 2021 Osteoarthritis Guidelines",
-                "FDA Black Box Warning - Cardiovascular and GI risks"
-            ],
             "evidence_level": "High - FDA approved"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": True,
+            "organ_toxicity": ["GI", "renal", "cardiac"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["LFT", "RFT", "GI symptoms", "Blood pressure", "Cardiovascular symptoms"]
+        },
+        "guideline_tags": [
+            "ACR 2021 Osteoarthritis Guidelines",
+            "FDA Black Box Warning - Cardiovascular and GI risks",
+            "ISMP High Alert Medications - NSAIDs"
+        ]
     },
     "Ibuprofen": {'group': 'Analgesic - NSAID', 'vietnamese_name': 'Ibuprofen, Brufen',
         'administration': ['PO'], 'indications': [

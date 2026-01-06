@@ -100,6 +100,7 @@ ALL_CALCULATORS = {
     "mg_adl": {"name": "MG-ADL", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
     "mgfa": {"name": "MGFA", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
     "sudbury_vertigo": {"name": "Sudbury Vertigo", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
+    "canadian_stroke_scale": {"name": "Canadian Stroke Scale", "category": "Thần kinh", "icon": "🧠", "page": "Scores"},
     
     # Scores - GI/Hepatology
     "bisap": {"name": "BISAP Score", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
@@ -114,6 +115,7 @@ ALL_CALCULATORS = {
     "erefs": {"name": "Erefs", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
     "fib4": {"name": "FIB-4", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
     "safe_score": {"name": "SAFE Score", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
+    "lactulose_calculator": {"name": "Lactulose Calculator", "category": "Tiêu hóa", "icon": "🩸", "page": "Scores"},
     
     # Scores - Nephrology
     "egfr": {"name": "eGFR - CKD-EPI & MDRD", "category": "Thận", "icon": "🧪", "page": "Scores"},
@@ -121,6 +123,7 @@ ALL_CALCULATORS = {
     "rifle": {"name": "RIFLE Criteria", "category": "Thận", "icon": "🧪", "page": "Scores"},
     "akin": {"name": "AKIN Criteria", "category": "Thận", "icon": "🧪", "page": "Scores"},
     "egfr_bsa": {"name": "eGFR with BSA", "category": "Thận", "icon": "🧪", "page": "Scores"},
+    "dialysis_adequacy": {"name": "Dialysis Adequacy Calculator", "category": "Thận", "icon": "🧪", "page": "Scores"},
     
     # Scores - Hematology
     "padua": {"name": "Padua Prediction Score", "category": "Huyết học", "icon": "🩺", "page": "Scores"},
@@ -129,6 +132,7 @@ ALL_CALCULATORS = {
     "dic_score": {"name": "DIC Score (ISTH)", "category": "Huyết học", "icon": "🩺", "page": "Scores"},
     "warfarin_dosing": {"name": "Warfarin Dosing Calculator", "category": "Huyết học", "icon": "🩺", "page": "Scores"},
     "inr_target": {"name": "INR Target Calculator", "category": "Huyết học", "icon": "🩺", "page": "Scores"},
+    "bleeding_risk": {"name": "Bleeding Risk Calculator", "category": "Huyết học", "icon": "🩺", "page": "Scores"},
     
     # Scores - Trauma
     "rts": {"name": "RTS - Revised Trauma Score", "category": "Chấn thương", "icon": "🦴", "page": "Scores"},

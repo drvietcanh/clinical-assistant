@@ -425,22 +425,25 @@ ANTIARRHYTHMICS = {
                 "American Heart Association/American College of Cardiology guidelines - Arrhythmias"
             ],
             "last_updated": "2024-12-19",
-            "evidence_level": "High - Multiple RCTs (EMERALD, ARREST) and extensive clinical experience in life-threatening arrhythmias",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": True,
-                "bleeding_risk": False,
-                "organ_toxicity": ["cardiac"],
-                "qt_prolongation": True,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["ECG", "QT interval"]
-            },
-            "guideline_tags": [
-                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
-                "ESC 2020 Atrial Fibrillation Guidelines"
-            ]
-        }
+            "evidence_level": "High - Multiple RCTs (EMERALD, ARREST) and extensive clinical experience in life-threatening arrhythmias"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "pulmonary", "hepatic", "thyroid", "ophthalmic"],
+            "qt_prolongation": True,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "QT interval", "Pulmonary function", "Liver function", "Thyroid function", "Ophthalmology exam"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+            "ESC 2020 Atrial Fibrillation Guidelines",
+            "FDA Black Box Warning - Pulmonary Toxicity",
+            "FDA Black Box Warning - Hepatotoxicity",
+            "ISMP High Alert Medications - Antiarrhythmics"
+        ]
       },
     "Disopyramide": {
         "group": "Cardiovascular - Antiarrhythmic (Class IA)",
@@ -665,22 +668,24 @@ ANTIARRHYTHMICS = {
                 "Medscape - Disopyramide Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": True,
-                "bleeding_risk": False,
-                "organ_toxicity": ["cardiac"],
-                "qt_prolongation": True,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["ECG", "QT interval"],
-            },
-            "guideline_tags": [
-                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
-                "ESC 2020 Atrial Fibrillation Guidelines"
-            ]
-        }
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "ophthalmic", "gastrointestinal"],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "QT interval", "Electrolytes (K+, Mg2+)", "Serum levels", "Ophthalmic exam"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+            "ESC 2020 Atrial Fibrillation Guidelines",
+            "FDA Black Box Warning - Torsades de Pointes",
+            "ISMP High Alert Medications - Antiarrhythmics"
+        ]
     },
     "Dofetilide": {
         "group": "Cardiovascular - Antiarrhythmic (Class III)",
@@ -864,22 +869,23 @@ ANTIARRHYTHMICS = {
                 "Medscape - Dofetilide Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": True,
-                "bleeding_risk": False,
-                "organ_toxicity": ["cardiac"],
-                "qt_prolongation": True,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["ECG", "QT interval"],
-            },
-            "guideline_tags": [
-                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
-                "ESC 2020 Atrial Fibrillation Guidelines"
-            ]
-        }
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac"],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "QT interval", "Electrolytes (K+, Mg2+)", "Renal function"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+            "ESC 2020 Atrial Fibrillation Guidelines",
+            "FDA Black Box Warning - Torsades de Pointes"
+        ]
     },
 
     "Dronedarone": {
@@ -1048,22 +1054,25 @@ ANTIARRHYTHMICS = {
                 "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": True,
-                "bleeding_risk": False,
-                "organ_toxicity": ["cardiac"],
-                "qt_prolongation": True,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["ECG", "QT interval"],
-            },
-            "guideline_tags": [
-                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
-                "ESC 2020 Atrial Fibrillation Guidelines",
-            ]
-        }
+            "evidence_level": "High - FDA approved"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "hepatic", "pulmonary"],
+            "qt_prolongation": True,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "QT interval", "LFT", "Creatinine", "Pulmonary function"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+            "ESC 2020 Atrial Fibrillation Guidelines",
+            "FDA Black Box Warning - Heart Failure",
+            "FDA Black Box Warning - Hepatotoxicity",
+            "ISMP High Alert Medications - Antiarrhythmics"
+        ]
     },
 
     "Flecainide": {
@@ -1231,22 +1240,24 @@ ANTIARRHYTHMICS = {
                 "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
             ],
             "last_updated": "2025-02-05",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": True,
-                "bleeding_risk": False,
-                "organ_toxicity": ["cardiac"],
-                "qt_prolongation": True,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["ECG", "QT interval"],
-            },
-            "guideline_tags": [
-                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
-                "ESC 2020 Atrial Fibrillation Guidelines"
-            ],
             "evidence_level": "High - Multiple RCTs and clinical guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "QRS width", "Renal function"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+            "ESC 2020 Atrial Fibrillation Guidelines",
+            "FDA Black Box Warning - Proarrhythmia",
+            "ISMP High Alert Medications - Antiarrhythmics"
+        ]
     },
     "Ibutilide": {
         "group": "Cardiovascular - Antiarrhythmic (Class III)",
@@ -1422,22 +1433,24 @@ ANTIARRHYTHMICS = {
                 "Medscape - Ibutilide Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": True,
-                "bleeding_risk": False,
-                "organ_toxicity": ["cardiac"],
-                "qt_prolongation": True,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["ECG", "QT interval"],
-            },
-            "guideline_tags": [
-                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
-                "ESC 2020 Atrial Fibrillation Guidelines"
-            ]
-        }
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac"],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "QT interval", "Electrolytes (K+, Mg2+)"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+            "ESC 2020 Atrial Fibrillation Guidelines",
+            "FDA Black Box Warning - Torsades de Pointes",
+            "ISMP High Alert Medications - Antiarrhythmics"
+        ]
     },
 
     "Procainamide": {
@@ -1596,22 +1609,24 @@ ANTIARRHYTHMICS = {
                 "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
             ],
             "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": True,
-                "bleeding_risk": False,
-                "organ_toxicity": ["cardiac"],
-                "qt_prolongation": True,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["ECG", "QT interval"],
-            },
-            "guideline_tags": [
-                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
-                "ESC 2020 Atrial Fibrillation Guidelines",
-            ]
-        }
+            "evidence_level": "High - FDA approved"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "hematologic", "autoimmune"],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "QT interval", "CBC", "ANA", "Serum levels"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+            "ESC 2020 Atrial Fibrillation Guidelines",
+            "FDA Black Box Warning - Systemic Lupus Erythematosus",
+            "ISMP High Alert Medications - Antiarrhythmics"
+        ]
     },
     
     "Propafenone": {
@@ -1791,22 +1806,24 @@ ANTIARRHYTHMICS = {
                 "ACC/AHA/ESC Guidelines for Atrial Fibrillation"
             ],
             "last_updated": "2025-02-05",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": True,
-                "bleeding_risk": False,
-                "organ_toxicity": ["cardiac"],
-                "qt_prolongation": True,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["ECG", "QT interval"],
-            },
-            "guideline_tags": [
-                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
-                "ESC 2020 Atrial Fibrillation Guidelines"
-            ],
             "evidence_level": "High - Multiple RCTs and clinical guidelines"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "QRS width", "Hepatic function", "Renal function"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+            "ESC 2020 Atrial Fibrillation Guidelines",
+            "FDA Black Box Warning - Proarrhythmia",
+            "ISMP High Alert Medications - Antiarrhythmics"
+        ]
     },
 
     "Quinidine": {
@@ -2049,22 +2066,24 @@ ANTIARRHYTHMICS = {
                 "Medscape - Quinidine Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": True,
-                "bleeding_risk": False,
-                "organ_toxicity": ["cardiac"],
-                "qt_prolongation": True,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["ECG", "QT interval"],
-            },
-            "guideline_tags": [
-                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
-                "ESC 2020 Atrial Fibrillation Guidelines"
-            ]
-        }
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "hematologic", "gastrointestinal"],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "QT interval", "Electrolytes (K+, Mg2+)", "Serum levels", "CBC"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+            "ESC 2020 Atrial Fibrillation Guidelines",
+            "FDA Black Box Warning - Torsades de Pointes",
+            "ISMP High Alert Medications - Antiarrhythmics"
+        ]
     },
 
     "Sotalol": {
@@ -2305,22 +2324,25 @@ ANTIARRHYTHMICS = {
                 "Medscape - Sotalol Drug Reference"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": True,
-                "bleeding_risk": False,
-                "organ_toxicity": ["cardiac"],
-                "qt_prolongation": True,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["ECG", "QT interval"],
-            },
-            "guideline_tags": [
-                "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
-                "ESC 2020 Atrial Fibrillation Guidelines"
-            ]
-        }
+            "evidence_level": "A - Dựa trên FDA drug labels, ACC/AHA/ESC guidelines"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "respiratory"],
+            "qt_prolongation": True,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "QT interval", "Electrolytes (K+, Mg2+)", "Renal function", "Respiratory function"]
+        },
+        "guideline_tags": [
+            "AHA/ACC/HRS 2019 Arrhythmia Guidelines",
+            "ESC 2020 Atrial Fibrillation Guidelines",
+            "FDA Black Box Warning - Torsades de Pointes",
+            "FDA Black Box Warning - Hospital Initiation Required",
+            "ISMP High Alert Medications - Antiarrhythmics"
+        ]
     },
     
 }

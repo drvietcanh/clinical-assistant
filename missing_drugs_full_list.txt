@@ -1,0 +1,9 @@
+DRUGS MISSING RISK_FLAGS AND/OR GUIDELINE_TAGS
+================================================================================
+
+Total drugs: 722
+Complete: 722 (100.0%)
+Missing both: 0
+Missing only risk_flags: 0
+Missing only guideline_tags: 0
+

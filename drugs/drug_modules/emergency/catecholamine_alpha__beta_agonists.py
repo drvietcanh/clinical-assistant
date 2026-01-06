@@ -281,6 +281,7 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
     "Epinephrine": {'group': 'Emergency - Catecholamine (Alpha & Beta Agonist)',
         'vietnamese_name': 'Epinephrine, Adrenaline', 'administration': ['IV',
         'IM', 'SC', 'INH', 'IT'],
+        'indications': [
         'Sốc phản vệ (anaphylaxis)', 'Sốc (shock)',
         'Cơn hen nặng (IV/nebulizer)', 'Co thắt thanh quản'],
         'contraindications': ['Không có trong cấp cứu ngừng tim',
@@ -354,7 +355,7 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'Tăng tác dụng của epinephrine, tăng nguy cơ tăng huyết áp nặng, rối loạn nhịp tim'
         , 'management':
         'Thận trọng, giảm liều epinephrine. Theo dõi huyết áp và ECG chặt chẽ.'
-        }], 'mechanism':
+        }], 'moderate': [{'drug': 'Digoxin', 'mechanism':
         'Digoxin làm tăng nhạy cảm của cơ tim với catecholamine, tăng nguy cơ rối loạn nhịp tim.'
         , 'effect':
         'Tăng nguy cơ rối loạn nhịp tim (nhịp nhanh thất, rung thất), đặc biệt ở bệnh nhân digoxin độc tính'

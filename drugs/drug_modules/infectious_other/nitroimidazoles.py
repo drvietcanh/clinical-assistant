@@ -5,9 +5,11 @@
 NITROIMIDAZOLES_DRUGS = {
     "Metronidazole": {'group': 'Infectious Disease - Nitroimidazole Antibiotic',
         'vietnamese_name': 'Metronidazole, Flagyl', 'administration': ['PO',
-        'IV'], 'Giardia', 'Trichomonas',
+        'IV'], 'indications': [
+        'Giardia', 'Trichomonas',
         'Amebiasis', 'Bacterial vaginosis', 'H. pylori (kết hợp)',
         'C. difficile colitis'],
+        'contraindications': [
         'Có thai (3 tháng đầu)', 'Dùng disulfiram trong 14 ngày'], 'dosage': {
         'adult_anaerobic': '500mg x 3 lần/ngày PO hoặc 500mg mỗi 6-8 giờ IV',
         'adult_giardia': '250mg x 3 lần/ngày x 7 ngày', 'adult_trichomonas':
@@ -54,45 +56,42 @@ NITROIMIDAZOLES_DRUGS = {
         'Bảo quản ở nhiệt độ phòng (20-25°C), tránh ánh sáng. Viên nén: tránh ẩm. Dung dịch pha tiêm: sau khi pha, bảo quản ở nhiệt độ phòng 24 giờ, tránh ánh sáng.'
         , 'black_box_warnings':
         'Không có black box warning. Tuy nhiên, phản ứng Disulfiram-like với rượu có thể nặng. Tổn thương thần kinh có thể không hồi phục. Nguy cơ dị tật thai nhi nếu dùng trong 3 tháng đầu thai kỳ.'
-        , 'drug_interactions': {'major': [{'drug': 'Rượu (Ethanol)',
-        'mechanism':
-        'Metronidazole ức chế aldehyde dehydrogenase, enzyme chuyển hóa acetaldehyde (sản phẩm chuyển hóa của ethanol) thành acetate. Kết quả là tích lũy acetaldehyde, gây phản ứng Disulfiram-like.'
-        , 'effect':
-        'Phản ứng Disulfiram-like nặng: buồn nôn, nôn, đỏ bừng mặt, nhịp tim nhanh, hạ huyết áp, khó thở, có thể đe dọa tính mạng'
-        , 'management':
-        'TUYỆT ĐỐI KHÔNG uống rượu trong và ít nhất 3 ngày sau khi ngừng metronidazole. Tránh tất cả các sản phẩm chứa rượu (thuốc ho, nước súc miệng, thực phẩm có rượu). Nếu uống rượu, ngừng ngay metronidazole và điều trị hỗ trợ.'
-        }, {'drug': 'Disulfiram', 'mechanism':
-        'Cả hai đều ức chế aldehyde dehydrogenase, tác dụng cộng dồn làm tăng nguy cơ phản ứng Disulfiram-like và tổn thương thần kinh.'
-        , 'effect':
-        'Tăng nguy cơ phản ứng Disulfiram-like nặng, tăng nguy cơ tổn thương thần kinh'
-        , 'management':
-        'CHỐNG CHỈ ĐỊNH: Không dùng metronidazole trong vòng 14 ngày sau khi ngừng disulfiram. Nếu đang dùng disulfiram, không dùng metronidazole.'
-        }, {'drug': 'Warfarin', 'mechanism':
-        'Metronidazole ức chế chuyển hóa warfarin qua CYP2C9, làm tăng nồng độ warfarin và tăng tác dụng chống đông.'
-        , 'effect': 'Tăng INR, tăng nguy cơ chảy máu nghiêm trọng',
-        'management':
-        'Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng metronidazole). Giảm liều warfarin 30-50%. Đặc biệt thận trọng ở bệnh nhân suy gan, dùng kéo dài (>7 ngày).'
-        }], 'mechanism':
-        'Metronidazole có thể làm giảm thải trừ lithium, làm tăng nồng độ lithium trong máu.'
-        , 'effect':
-        'Tăng nồng độ lithium, tăng nguy cơ độc tính lithium (buồn nôn, run, lú lẫn, suy thận)'
-        , 'management':
-        'Theo dõi nồng độ lithium thường xuyên. Có thể cần giảm liều lithium. Theo dõi dấu hiệu độc tính lithium.'
-        }, {'drug': 'Phenytoin', 'mechanism':
-        'Metronidazole ức chế chuyển hóa phenytoin qua CYP2C9, làm tăng nồng độ phenytoin.'
-        , 'effect':
-        'Tăng nồng độ phenytoin, tăng nguy cơ độc tính (chóng mặt, rung giật nhãn cầu, lú lẫn, co giật)'
-        , 'management':
-        'Theo dõi nồng độ phenytoin. Có thể cần giảm liều phenytoin. Theo dõi dấu hiệu độc tính phenytoin.'
-        }, {'drug': 'Phenobarbital', 'mechanism':
-        'Phenobarbital có thể cảm ứng enzyme chuyển hóa metronidazole, làm giảm nồng độ metronidazole.'
-        , 'effect': 'Giảm nồng độ metronidazole, giảm hiệu quả kháng khuẩn',
-        'management':
-        'Có thể cần tăng liều metronidazole. Theo dõi đáp ứng điều trị.'}],
-        'minor': [{'drug': 'Cimetidine', 'mechanism':
-        'Cimetidine có thể ức chế chuyển hóa metronidazole, làm tăng nhẹ nồng độ metronidazole.'
-        , 'effect': 'Tăng nhẹ nồng độ metronidazole', 'management':
-        'Theo dõi dấu hiệu tác dụng phụ. Thường không cần điều chỉnh liều.'}]},
+        , 'drug_interactions': {
+            'major': [
+                {'drug': 'Rượu (Ethanol)',
+                 'mechanism': 'Metronidazole ức chế aldehyde dehydrogenase, enzyme chuyển hóa acetaldehyde (sản phẩm chuyển hóa của ethanol) thành acetate. Kết quả là tích lũy acetaldehyde, gây phản ứng Disulfiram-like.',
+                 'effect': 'Phản ứng Disulfiram-like nặng: buồn nôn, nôn, đỏ bừng mặt, nhịp tim nhanh, hạ huyết áp, khó thở, có thể đe dọa tính mạng',
+                 'management': 'TUYỆT ĐỐI KHÔNG uống rượu trong và ít nhất 3 ngày sau khi ngừng metronidazole. Tránh tất cả các sản phẩm chứa rượu (thuốc ho, nước súc miệng, thực phẩm có rượu). Nếu uống rượu, ngừng ngay metronidazole và điều trị hỗ trợ.'},
+                {'drug': 'Disulfiram',
+                 'mechanism': 'Cả hai đều ức chế aldehyde dehydrogenase, tác dụng cộng dồn làm tăng nguy cơ phản ứng Disulfiram-like và tổn thương thần kinh.',
+                 'effect': 'Tăng nguy cơ phản ứng Disulfiram-like nặng, tăng nguy cơ tổn thương thần kinh',
+                 'management': 'CHỐNG CHỈ ĐỊNH: Không dùng metronidazole trong vòng 14 ngày sau khi ngừng disulfiram. Nếu đang dùng disulfiram, không dùng metronidazole.'},
+                {'drug': 'Warfarin',
+                 'mechanism': 'Metronidazole ức chế chuyển hóa warfarin qua CYP2C9, làm tăng nồng độ warfarin và tăng tác dụng chống đông.',
+                 'effect': 'Tăng INR, tăng nguy cơ chảy máu nghiêm trọng',
+                 'management': 'Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng metronidazole). Giảm liều warfarin 30-50%. Đặc biệt thận trọng ở bệnh nhân suy gan, dùng kéo dài (>7 ngày).'}
+            ],
+            'moderate': [
+                {'drug': 'Lithium',
+                 'mechanism': 'Metronidazole có thể làm giảm thải trừ lithium, làm tăng nồng độ lithium trong máu.',
+                 'effect': 'Tăng nồng độ lithium, tăng nguy cơ độc tính lithium (buồn nôn, run, lú lẫn, suy thận)',
+                 'management': 'Theo dõi nồng độ lithium thường xuyên. Có thể cần giảm liều lithium. Theo dõi dấu hiệu độc tính lithium.'},
+                {'drug': 'Phenytoin',
+                 'mechanism': 'Metronidazole ức chế chuyển hóa phenytoin qua CYP2C9, làm tăng nồng độ phenytoin.',
+                 'effect': 'Tăng nồng độ phenytoin, tăng nguy cơ độc tính (chóng mặt, rung giật nhãn cầu, lú lẫn, co giật)',
+                 'management': 'Theo dõi nồng độ phenytoin. Có thể cần giảm liều phenytoin. Theo dõi dấu hiệu độc tính phenytoin.'},
+                {'drug': 'Phenobarbital',
+                 'mechanism': 'Phenobarbital có thể cảm ứng enzyme chuyển hóa metronidazole, làm giảm nồng độ metronidazole.',
+                 'effect': 'Giảm nồng độ metronidazole, giảm hiệu quả kháng khuẩn',
+                 'management': 'Có thể cần tăng liều metronidazole. Theo dõi đáp ứng điều trị.'}
+            ],
+            'minor': [
+                {'drug': 'Cimetidine',
+                 'mechanism': 'Cimetidine có thể ức chế chuyển hóa metronidazole, làm tăng nhẹ nồng độ metronidazole.',
+                 'effect': 'Tăng nhẹ nồng độ metronidazole',
+                 'management': 'Theo dõi dấu hiệu tác dụng phụ. Thường không cần điều chỉnh liều.'}
+            ]
+        },
         'contraindications': {'tuyệt_đối': [
         'Dị ứng metronidazole hoặc nitroimidazole',
         'Đang dùng disulfiram hoặc đã dùng disulfiram trong vòng 14 ngày - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI'

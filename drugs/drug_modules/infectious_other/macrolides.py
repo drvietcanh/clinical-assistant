@@ -48,34 +48,34 @@ MACROLIDES_DRUGS = {
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Bảo quản suspension trong tủ lạnh sau khi pha'
         , 'black_box_warnings':
         'Có thể gây QT kéo dài và torsades de pointes, đặc biệt ở bệnh nhân có yếu tố nguy cơ (suy tim, hạ kali máu, hạ magie máu, nhịp tim chậm, dùng thuốc QT kéo dài khác). Tránh dùng ở bệnh nhân QT kéo dài'
-        , 'drug_interactions': {'major': [{'drug': 'Warfarin', 'mechanism':
-        'Azithromycin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm tổng hợp vitamin K, tăng tác dụng warfarin. Cũng có thể ức chế nhẹ CYP450.'
-        , 'effect': 'Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu',
-        'management':
-        'Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng azithromycin. Điều chỉnh liều warfarin nếu cần.'
-        }, {'drug': 'Digoxin', 'mechanism':
-        'Azithromycin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm chuyển hóa digoxin, tăng hấp thu digoxin.'
-        , 'effect':
-        'Tăng nồng độ digoxin, tăng độc tính (buồn nôn, nôn, rối loạn nhịp tim, block AV)'
-        , 'management':
-        'Theo dõi nồng độ digoxin và dấu hiệu độc tính. Giảm liều digoxin nếu cần. Theo dõi ECG.'
-        }], 'mechanism':
-        'Azithromycin có thể ức chế nhẹ CYP3A4, làm giảm chuyển hóa cyclosporine và tacrolimus.'
-        , 'effect':
-        'Tăng nồng độ cyclosporine/tacrolimus, tăng độc tính (độc thận, tăng huyết áp, độc thần kinh)'
-        , 'management':
-        'Theo dõi nồng độ cyclosporine/tacrolimus, chức năng thận. Điều chỉnh liều nếu cần.'
-        }, {'drug': 'Thuốc kéo dài QT (Amiodarone, Sotalol, Antipsychotics)',
-        'mechanism': 'Cả hai đều kéo dài QT interval, tác dụng cộng dồn.',
-        'effect':
-        'Tăng nguy cơ QT kéo dài, torsades de pointes, rối loạn nhịp tim nghiêm trọng'
-        , 'management':
-        'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi ECG chặt chẽ. Đảm bảo kali, magie bình thường. Ngừng ngay nếu QT >500ms hoặc có triệu chứng.'
-        }], 'mechanism':
-        'Antacids có thể giảm nhẹ hấp thu azithromycin.', 'effect':
-        'Giảm nhẹ hấp thu azithromycin', 'management':
-        'Cách 2 giờ nếu có thể. Không ảnh hưởng đáng kể ở liều điều trị thông thường.'
-        }]}, 'contraindications': {'tuyệt_đối': [
+        , 'drug_interactions': {
+            'major': [
+                {'drug': 'Warfarin',
+                 'mechanism': 'Azithromycin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm tổng hợp vitamin K, tăng tác dụng warfarin. Cũng có thể ức chế nhẹ CYP450.',
+                 'effect': 'Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu',
+                 'management': 'Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng azithromycin. Điều chỉnh liều warfarin nếu cần.'},
+                {'drug': 'Digoxin',
+                 'mechanism': 'Azithromycin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm chuyển hóa digoxin, tăng hấp thu digoxin.',
+                 'effect': 'Tăng nồng độ digoxin, tăng độc tính (buồn nôn, nôn, rối loạn nhịp tim, block AV)',
+                 'management': 'Theo dõi nồng độ digoxin và dấu hiệu độc tính. Giảm liều digoxin nếu cần. Theo dõi ECG.'}
+            ],
+            'moderate': [
+                {'drug': 'Cyclosporine/Tacrolimus',
+                 'mechanism': 'Azithromycin có thể ức chế nhẹ CYP3A4, làm giảm chuyển hóa cyclosporine và tacrolimus.',
+                 'effect': 'Tăng nồng độ cyclosporine/tacrolimus, tăng độc tính (độc thận, tăng huyết áp, độc thần kinh)',
+                 'management': 'Theo dõi nồng độ cyclosporine/tacrolimus, chức năng thận. Điều chỉnh liều nếu cần.'},
+                {'drug': 'Thuốc kéo dài QT (Amiodarone, Sotalol, Antipsychotics)',
+                 'mechanism': 'Cả hai đều kéo dài QT interval, tác dụng cộng dồn.',
+                 'effect': 'Tăng nguy cơ QT kéo dài, torsades de pointes, rối loạn nhịp tim nghiêm trọng',
+                 'management': 'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi ECG chặt chẽ. Đảm bảo kali, magie bình thường. Ngừng ngay nếu QT >500ms hoặc có triệu chứng.'}
+            ],
+            'minor': [
+                {'drug': 'Antacids',
+                 'mechanism': 'Antacids có thể giảm nhẹ hấp thu azithromycin.',
+                 'effect': 'Giảm nhẹ hấp thu azithromycin',
+                 'management': 'Cách 2 giờ nếu có thể. Không ảnh hưởng đáng kể ở liều điều trị thông thường.'}
+            ]
+        }, 'contraindications': {'tuyệt_đối': [
         'Dị ứng azithromycin hoặc các macrolide khác (erythromycin, clarithromycin)'
         ,
         'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ torsades de pointes'
@@ -317,11 +317,12 @@ MACROLIDES_DRUGS = {
         'Tăng nguy cơ QT kéo dài, torsades de pointes, rối loạn nhịp tim nghiêm trọng'
         , 'management':
         'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi ECG chặt chẽ. Đảm bảo kali, magie bình thường. Ngừng ngay nếu QT >500ms hoặc có triệu chứng.'
-        }], 'mechanism':
+        }, {'drug': 'Rifampin', 'mechanism':
         'Rifampin cảm ứng CYP3A4, làm tăng chuyển hóa clarithromycin.',
         'effect': 'Giảm nồng độ clarithromycin, giảm hiệu quả điều trị',
         'management':
-        'Tăng liều clarithromycin nếu cần. Theo dõi đáp ứng điều trị.'}]},
+        'Tăng liều clarithromycin nếu cần. Theo dõi đáp ứng điều trị.'
+        }]},
         'contraindications': {'tuyệt_đối': [
         'Dị ứng clarithromycin hoặc các macrolide khác (erythromycin, azithromycin)'
         ,

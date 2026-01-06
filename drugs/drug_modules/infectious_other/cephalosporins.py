@@ -2072,7 +2072,7 @@ CEPHALOSPORINS_DRUGS = {
         'Ceftriaxone có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K. Ngoài ra, có thể đẩy warfarin khỏi albumin (protein binding cao).'
         , 'effect': 'Tăng INR, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng ceftriaxone). Có thể cần giảm liều warfarin. Đặc biệt thận trọng ở bệnh nhân suy gan, dùng kéo dài (>7 ngày).'
-        }], 'mechanism':
+        }], 'moderate': [{'drug': 'Probenecid', 'mechanism':
         'Probenecid ức chế bài tiết ống thận của ceftriaxone, làm giảm thải trừ và tăng nồng độ ceftriaxone.'
         , 'effect': 'Tăng nồng độ ceftriaxone, tăng thời gian bán thải',
         'management':
@@ -2088,7 +2088,7 @@ CEPHALOSPORINS_DRUGS = {
         , 'effect': 'Kết tủa khi pha chung, tăng nguy cơ độc thận',
         'management':
         'Không pha chung. Truyền riêng biệt. Theo dõi chức năng thận chặt chẽ.'
-        }], 'mechanism':
+        }], 'minor': [{'drug': 'Thuốc tránh thai đường uống', 'mechanism':
         'Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.'
         , 'effect':
         'Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)',

@@ -218,7 +218,22 @@ THYROID_HORMONES_DRUGS = {
             ],
             "last_updated": "2024-12-19",
             "evidence_level": "A - Dựa trên FDA drug labels, ATA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
-        }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "metabolic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["TSH", "Free T4", "ECG"]
+        },
+        "guideline_tags": [
+            "FDA Drug Label - Levothyroxine (Synthroid)",
+            "American Thyroid Association Guidelines - Hypothyroidism",
+            "Endocrine Society Clinical Practice Guidelines - Thyroid Hormone Replacement"
+        ]
     },
 }
 

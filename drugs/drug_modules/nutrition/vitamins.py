@@ -159,10 +159,29 @@ VITAMINS_DRUGS = {
         "administration_instructions": {
         },
         "references": {
-            "primary_sources": [],
-            "last_updated": "",
-            "evidence_level": "",
+            "primary_sources": [
+                "FDA Drug Label - Pyridoxine (Vitamin B6)",
+                "UpToDate - Pyridoxine: Drug information",
+                "WHO Essential Medicines List"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["neurologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Neurologic symptoms (high doses)"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "WHO Essential Medicines List"
+        ]
     },
     "Cyanocobalamin (Vitamin B12)":     {
         "group": "Nutrition - Vitamin B",
@@ -403,9 +422,28 @@ VITAMINS_DRUGS = {
         "administration_instructions": {
         },
         "references": {
-            "primary_sources": [],
-            "last_updated": "",
-            "evidence_level": "",
+            "primary_sources": [
+                "FDA Drug Label - Vitamin D3 (Cholecalciferol)",
+                "UpToDate - Vitamin D: Drug information",
+                "Endocrine Society Guidelines - Vitamin D Deficiency"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "A"
         },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Serum 25(OH)D", "Serum calcium", "Renal function"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "Endocrine Society Guidelines - Vitamin D Deficiency"
+        ]
     },
 }

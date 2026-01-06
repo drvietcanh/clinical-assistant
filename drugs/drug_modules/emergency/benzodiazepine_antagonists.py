@@ -147,6 +147,22 @@ BENZODIAZEPINE_ANTAGONISTS_DRUGS = {
         'Micromedex - Flumazenil Drug Information'], 'last_updated':
         '2025-02-03', 'evidence_level':
         'A - Dựa trên FDA drug labels, ACLS guidelines, benzodiazepine overdose guidelines, và dữ liệu lâm sàng từ nhiều nguồn',
-        }}}
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Vital Signs", "GCS", "Respiratory"]
+        },
+        "guideline_tags": [
+            "ACLS Guidelines 2020 - American Heart Association",
+            "FDA Drug Label - Flumazenil",
+            "Benzodiazepine Overdose Guidelines",
+            "ISMP High Alert Medications - Emergency Medications"
+        ]}}
 
 __all__ = ['BENZODIAZEPINE_ANTAGONISTS_DRUGS']

@@ -15,6 +15,7 @@ from .fib4 import render as render_fib4
 from .acute_pancreatitis import render as render_acute_pancreatitis
 from .safe_score import render as render_safe_score
 from .erefs import render as render_erefs
+from .lactulose_calculator import render as render_lactulose_calculator
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -38,6 +39,7 @@ def render_gi_calculator(calculator_id):
         "Acute Pancreatitis Prediction": render_acute_pancreatitis,
         "SAFE Score": render_safe_score,
         "EREFS": render_erefs,
+        "Lactulose Calculator": render_lactulose_calculator,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -56,5 +58,6 @@ __all__ = [
     'render_rockall',
     'render_glasgow_blatchford',
     'render_aims65',
+    'render_lactulose_calculator',
 ]
 

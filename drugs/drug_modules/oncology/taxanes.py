@@ -9,6 +9,7 @@ TAXANES_DRUGS = {
         'Ung thư vú (adjuvant và metastatic)', 'Ung thư phổi không tế bào nhỏ (NSCLC)',
         'Ung thư tuyến tiền liệt (castration-resistant)', 'Ung thư dạ dày',
         'Ung thư đầu cổ'],
+        'contraindications': [
         'Giảm bạch cầu nặng (ANC <1500)', 'Có thai', 'Đang cho con bú'], 'dosage': {
         'adult_standard': '60-100mg/m² IV mỗi 3 tuần (truyền 1 giờ)',
         'adult_weekly': '30-40mg/m² IV mỗi tuần (truyền 1 giờ)',

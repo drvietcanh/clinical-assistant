@@ -228,22 +228,23 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Glycopyrronium'],
         'evidence_level':
-        'High - FDA approved, multiple RCTs',
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ]
-        }},
+        'High - FDA approved, multiple RCTs'},
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["ophthalmic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Intraocular pressure", "Renal function"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "GOLD Guidelines - COPD Management"
+        ]
+    },
     "Tiotropium": {'group': 'Respiratory - Anticholinergic (Long-acting)', 'vietnamese_name':
         'Tiotropium, Spiriva', 'administration': [
         'Inhalation (HandiHaler hoặc Respimat)'], 'indications': [
@@ -490,21 +491,23 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'GOLD Guidelines 2024: COPD Management',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Umeclidinium'],
-        'evidence_level': 'High - FDA approved, multiple RCTs, clinical guidelines',
+        'evidence_level': 'High - FDA approved, multiple RCTs, clinical guidelines'},
         "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ]
-        }}}
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["ophthalmic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Intraocular pressure", "Renal function"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "GOLD Guidelines - COPD Management"
+        ]
+    }
+}
 
 __all__ = ['ANTICHOLINERGIC_LONG_ACTINGS_DRUGS']

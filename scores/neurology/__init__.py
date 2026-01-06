@@ -19,6 +19,7 @@ from .sudbury_vertigo import render as render_sudbury_vertigo
 from .mgfa import render as render_mgfa
 from .mg_adl import render as render_mg_adl
 from .ice_score import render as render_ice_score
+from .canadian_stroke_scale import render as render_canadian_stroke_scale
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -46,6 +47,7 @@ def render_neurology_calculator(calculator_id):
         "MGFA Clinical Classification": render_mgfa,
         "MG-ADL": render_mg_adl,
         "ICE Score": render_ice_score,
+        "Canadian Stroke Scale": render_canadian_stroke_scale,
     }
     
     calculator_func = calculators.get(calculator_id)
@@ -66,5 +68,6 @@ __all__ = [
     'render_abcd2',
     'render_barthel',
     'render_four_score',
+    'render_canadian_stroke_scale',
 ]
 

@@ -55,7 +55,7 @@ ANTICHOLINERGICS_DRUGS = {
         'Tăng tác dụng phụ: khô miệng nặng, bí tiểu, lú lẫn, tăng nhãn áp',
         'management':
         'Thận trọng khi dùng đồng thời. Giảm liều hoặc tránh dùng nếu có thể. Theo dõi dấu hiệu kháng cholinergic quá mức.'
-        }], 'mechanism':
+        }], 'moderate': [{'drug': 'Digoxin', 'mechanism':
         'Atropine có thể làm chậm nhu động ruột, tăng hấp thu digoxin.',
         'effect': 'Tăng nồng độ digoxin, tăng nguy cơ độc tính', 'management':
         'Theo dõi nồng độ digoxin và dấu hiệu độc tính digoxin. Điều chỉnh liều digoxin nếu cần.'
@@ -65,7 +65,7 @@ ANTICHOLINERGICS_DRUGS = {
         'Tăng tác dụng phụ kháng cholinergic: khô miệng, bí tiểu, lú lẫn',
         'management':
         'Thận trọng khi dùng đồng thời. Theo dõi dấu hiệu kháng cholinergic quá mức.'
-        }], 'mechanism':
+        }], 'minor': [{'drug': 'Ketamine', 'mechanism':
         'Atropine có thể làm tăng nhịp tim, có thể tương tác với ketamine.',
         'effect': 'Tăng nhịp tim', 'management':
         'Theo dõi nhịp tim khi dùng đồng thời.'}]},         'contraindications': {
@@ -139,6 +139,21 @@ ANTICHOLINERGICS_DRUGS = {
         'evidence_level':
         'A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "Vital Signs"]
+        },
+        "guideline_tags": [
+            "ACLS Guidelines - Bradycardia Management",
+            "FDA Drug Label - Atropine",
+            "ISMP High Alert Medications - Emergency Medications"
+        ],
         "black_box_warnings": None,
 }}
 

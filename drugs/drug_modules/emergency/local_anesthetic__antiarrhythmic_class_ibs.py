@@ -69,7 +69,7 @@ LOCAL_ANESTHETIC_ANTIARRHYTHMIC_CLASS_IB_DRUGS = {
         'Tăng nồng độ lidocaine, tăng nguy cơ độc tính thần kinh trung ương và độc tính tim mạch'
         , 'management':
         'GIẢM LIỀU lidocaine xuống 30-50% khi dùng với cimetidine. Theo dõi chặt chẽ dấu hiệu độc tính. Có thể dùng ranitidine hoặc famotidine thay thế cimetidine.'
-        }], 'mechanism':
+        }], 'moderate': [{'drug': 'Phenytoin', 'mechanism':
         'Phenytoin có thể tăng độc tính của lidocaine (cơ chế không rõ ràng, có thể liên quan đến tác dụng trên hệ thần kinh trung ương).'
         , 'effect':
         'Tăng nguy cơ độc tính thần kinh trung ương (co giật, lú lẫn)',
@@ -170,6 +170,21 @@ LOCAL_ANESTHETIC_ANTIARRHYTHMIC_CLASS_IB_DRUGS = {
         'Micromedex - Lidocaine Drug Information'], 'last_updated':
         '2025-02-03', 'evidence_level':
         'A - Dựa trên FDA drug labels, ACLS guidelines, và dữ liệu lâm sàng từ nhiều nguồn',
-        }}}
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": True,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "hepatic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "Vital Signs", "LFT"]
+        },
+        "guideline_tags": [
+            "ACLS Guidelines 2020 - American Heart Association",
+            "FDA Drug Label - Lidocaine",
+            "ISMP High Alert Medications - Emergency Medications"
+        ]}}
 
 __all__ = ['LOCAL_ANESTHETIC_ANTIARRHYTHMIC_CLASS_IB_DRUGS']

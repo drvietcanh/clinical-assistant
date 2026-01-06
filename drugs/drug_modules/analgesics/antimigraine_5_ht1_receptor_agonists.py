@@ -171,22 +171,24 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
                 "AHS Guidelines - Acute Migraine Treatment"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ] 
-        }
+            "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["neurological", "hepatic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["LFT", "Cognitive function", "Driving ability"]
+        },
+        "guideline_tags": [
+            "AHS Guidelines - Acute Migraine Treatment",
+            "FDA Black Box Warning - Driving Impairment",
+            "FDA Drug Information",
+            "UpToDate Drug Information"
+        ]
     },
     "Rizatriptan": {'group': 'Analgesic - Antimigraine (5-HT1 Receptor Agonist)',
         'vietnamese_name': 'Rizatriptan, Maxalt', 'administration': ['PO',

@@ -4,9 +4,10 @@
 
 XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
     "Allopurinol": {'group': 'Metabolism - Xanthine Oxidase Inhibitor', 'vietnamese_name':
-        'Allopurinol, Zyloric', 'administration': ['PO'], 'indications': [
+        'Allopurinol, Zyloric', 'administration': ['PO'],         'indications': [
         'Gout', 'Tăng acid uric máu', 'Phòng ngừa sỏi thận uric acid',
         'Hóa trị (phòng ngừa tăng acid uric)'],
+        'contraindications': [
         'Có thai', 'Cho con bú'], 'dosage': {'adult_standard':
         '100-300mg x 1 lần/ngày', 'adult_severe': '400-600mg/ngày chia 2-3 lần',
         'notes':
@@ -44,35 +45,33 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
         'black_box_warnings':
         'Có thể gây phản ứng da nghiêm trọng (ban da, SJS, TEN) đe dọa tính mạng. Ngừng ngay nếu có ban da. Nguy cơ tăng ở bệnh nhân suy thận, dùng đồng thời với ampicillin/amoxicillin, hoặc có tiền sử dị ứng allopurinol'
-        , 'drug_interactions': {'major': [{'drug':
-        'Azathioprine, 6-Mercaptopurine', 'mechanism':
-        'Allopurinol ức chế xanthine oxidase, enzyme chuyển hóa azathioprine và 6-mercaptopurine thành các chất không hoạt động. Ức chế enzyme này làm tăng nồng độ azathioprine/6-mercaptopurine trong máu.'
-        , 'effect':
-        'Tăng nồng độ azathioprine/6-mercaptopurine đáng kể, tăng độc tính (giảm bạch cầu, độc gan, độc tủy xương)'
-        , 'management':
-        'Giảm liều azathioprine/6-mercaptopurine 75% khi dùng với allopurinol. Theo dõi công thức máu và chức năng gan chặt chẽ. Hoặc tránh dùng đồng thời nếu có thể.'
-        }, {'drug': 'Ampicillin, Amoxicillin', 'mechanism':
-        'Cơ chế chưa rõ ràng, nhưng ampicillin/amoxicillin làm tăng nguy cơ phản ứng da nghiêm trọng với allopurinol.'
-        , 'effect':
-        'Tăng nguy cơ ban da nghiêm trọng, SJS, TEN (đe dọa tính mạng)',
-        'management':
-        'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu ban da. Ngừng ngay nếu có ban da.'
-        }, {'drug': 'Warfarin', 'mechanism':
-        'Allopurinol có thể ức chế chuyển hóa warfarin, làm tăng nồng độ warfarin.'
-        , 'effect': 'Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu',
-        'management':
-        'Theo dõi INR chặt chẽ khi bắt đầu hoặc điều chỉnh liều allopurinol. Điều chỉnh liều warfarin nếu cần.'
-        }], 'mechanism':
-        'Allopurinol có thể ức chế chuyển hóa theophylline, làm tăng nồng độ theophylline.'
-        , 'effect':
-        'Tăng nồng độ theophylline, tăng độc tính (nhịp tim nhanh, co giật)',
-        'management':
-        'Theo dõi nồng độ theophylline và điều chỉnh liều nếu cần.'}, {'drug':
-        'Cyclophosphamide', 'mechanism':
-        'Allopurinol có thể ức chế chuyển hóa cyclophosphamide, làm tăng độc tính.'
-        , 'effect': 'Tăng độc tính cyclophosphamide', 'management':
-        'Thận trọng khi dùng đồng thời. Theo dõi công thức máu và chức năng gan, thận.'
-        }], 'minor': []},         'contraindications': {'tuyệt_đối': [
+        , 'drug_interactions': {
+            'major': [
+                {'drug': 'Azathioprine, 6-Mercaptopurine',
+                 'mechanism': 'Allopurinol ức chế xanthine oxidase, enzyme chuyển hóa azathioprine và 6-mercaptopurine thành các chất không hoạt động. Ức chế enzyme này làm tăng nồng độ azathioprine/6-mercaptopurine trong máu.',
+                 'effect': 'Tăng nồng độ azathioprine/6-mercaptopurine đáng kể, tăng độc tính (giảm bạch cầu, độc gan, độc tủy xương)',
+                 'management': 'Giảm liều azathioprine/6-mercaptopurine 75% khi dùng với allopurinol. Theo dõi công thức máu và chức năng gan chặt chẽ. Hoặc tránh dùng đồng thời nếu có thể.'},
+                {'drug': 'Ampicillin, Amoxicillin',
+                 'mechanism': 'Cơ chế chưa rõ ràng, nhưng ampicillin/amoxicillin làm tăng nguy cơ phản ứng da nghiêm trọng với allopurinol.',
+                 'effect': 'Tăng nguy cơ ban da nghiêm trọng, SJS, TEN (đe dọa tính mạng)',
+                 'management': 'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu ban da. Ngừng ngay nếu có ban da.'},
+                {'drug': 'Warfarin',
+                 'mechanism': 'Allopurinol có thể ức chế chuyển hóa warfarin, làm tăng nồng độ warfarin.',
+                 'effect': 'Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu',
+                 'management': 'Theo dõi INR chặt chẽ khi bắt đầu hoặc điều chỉnh liều allopurinol. Điều chỉnh liều warfarin nếu cần.'}
+            ],
+            'moderate': [
+                {'drug': 'Theophylline',
+                 'mechanism': 'Allopurinol có thể ức chế chuyển hóa theophylline, làm tăng nồng độ theophylline.',
+                 'effect': 'Tăng nồng độ theophylline, tăng độc tính (nhịp tim nhanh, co giật)',
+                 'management': 'Theo dõi nồng độ theophylline và điều chỉnh liều nếu cần.'},
+                {'drug': 'Cyclophosphamide',
+                 'mechanism': 'Allopurinol có thể ức chế chuyển hóa cyclophosphamide, làm tăng độc tính.',
+                 'effect': 'Tăng độc tính cyclophosphamide',
+                 'management': 'Thận trọng khi dùng đồng thời. Theo dõi công thức máu và chức năng gan, thận.'}
+            ],
+            'minor': []
+        }, 'contraindications': {'tuyệt_đối': [
         'Dị ứng allopurinol', 'Có thai (category C)', 'Đang cho con bú',
         'Phản ứng da nghiêm trọng trước đây với allopurinol (SJS, TEN)'],
         'tương_đối': ['Suy thận (giảm liều theo CrCl)',

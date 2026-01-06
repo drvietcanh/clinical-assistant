@@ -921,6 +921,29 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "moderate": [],
                 "minor": []
             },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [
+                    "Skin atrophy (rare, only with prolonged use)",
+                    "Systemic absorption (rare, only with large surface area, prolonged use)"
+                ],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Clinical response (reduction in redness, swelling, itching)",
+                    "Signs of skin irritation",
+                    "Signs of skin infection",
+                    "Signs of skin atrophy (if used long-term)"
+                ]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Atopic Dermatitis",
+                "AAD Guidelines - Contact Dermatitis",
+                "FDA Drug Information - Hydrocortisone Topical"
+            ],
             "contraindications": {
                 "tuyệt_đối": [
                     "Dị ứng hydrocortisone hoặc corticosteroid",

@@ -285,23 +285,24 @@ RESPIRATORY_BIOLOGICS_DRUGS = {
                 "GINA Guidelines - Asthma"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved, extensive clinical data",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ] 
-
-        }
+            "evidence_level": "A - FDA-approved, extensive clinical data"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["ophthalmic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Eye exam", "Parasite screening"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "AAAAI/ACAAI Guidelines - Atopic Dermatitis",
+            "GINA Guidelines - Asthma"
+        ]
     },
     
     "Mepolizumab": {
@@ -439,23 +440,23 @@ RESPIRATORY_BIOLOGICS_DRUGS = {
                 "GINA Guidelines - Asthma"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved, extensive clinical data",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ] 
-
-        }
+            "evidence_level": "A - FDA-approved, extensive clinical data"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Eosinophil count", "FEV1"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "GINA Guidelines - Asthma"
+        ]
     },
     
     "Omalizumab": {

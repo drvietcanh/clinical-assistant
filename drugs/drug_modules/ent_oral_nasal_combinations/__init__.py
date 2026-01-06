@@ -132,24 +132,21 @@ ENT_ORAL_NASAL_COMBINATIONS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
-             "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": "Không có",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": []
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "ARIA Guidelines - Allergic Rhinitis"
+        ]
 },
     "Cetirizine/Pseudoephedrine": {
         "group": "ENT - Combination (Oral Antihistamine + Decongestant)",
@@ -289,24 +286,21 @@ ENT_ORAL_NASAL_COMBINATIONS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
-             "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": "Không có",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac"],
+            "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Blood pressure", "Heart rate"]
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+                "ARIA Guidelines - Allergic Rhinitis"
+            ]
 },
     "Fexofenadine/Pseudoephedrine": {
         "group": "ENT - Combination (Oral Antihistamine + Decongestant)",
@@ -445,24 +439,21 @@ ENT_ORAL_NASAL_COMBINATIONS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
-             "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": "Không có",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac"],
+            "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Blood pressure", "Heart rate"]
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+                "ARIA Guidelines - Allergic Rhinitis"
+            ]
 },
     "Loratadine/Pseudoephedrine": {
         "group": "ENT - Combination (Oral Antihistamine + Decongestant)",
@@ -605,23 +596,21 @@ ENT_ORAL_NASAL_COMBINATIONS_DRUGS = {
             "last_updated": "2025-02-05",
             "evidence_level": "A"
         },
-             "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": None,
-         "black_box_warnings": "Không có",
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Blood pressure", "Heart rate"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "ARIA Guidelines - Allergic Rhinitis"
+        ]
 },
 }
 

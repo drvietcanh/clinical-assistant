@@ -597,23 +597,23 @@ JAK_INHIBITORS_DRUGS = {
                 "ACG Guidelines - IBD"
             ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A - FDA-approved, large RCTs showing benefit in UC, Crohn",
-            "risk_flags": {
-                "high_alert": True,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": ["infectious", "thrombotic", "malignancy"],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": ["CBC", "LFT", "Lipids", "TB screening"],
-            },
-            "guideline_tags": [
-                "FDA Black Box Warning - Serious infections, thrombosis, malignancy, MACE",
-                "ACR 2021 Rheumatoid Arthritis Guidelines",
-            ] 
-
-        }
+            "evidence_level": "A - FDA-approved, large RCTs showing benefit in UC, Crohn"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["CBC", "LFT", "Lipids", "TB screening"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Serious infections, thrombosis, malignancy, MACE",
+            "ACR 2021 Rheumatoid Arthritis Guidelines",
+            "ACG Guidelines - IBD"
+        ]
     },
 
 }

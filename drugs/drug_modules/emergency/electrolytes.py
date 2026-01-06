@@ -178,7 +178,22 @@ ELECTROLYTES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên ACLS guidelines và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "Calcium Levels"]
+        },
+        "guideline_tags": [
+            "ACLS Guidelines 2020 - Hyperkalemia Management",
+            "FDA Drug Label - Calcium chloride",
+            "ISMP High Alert Medications - Emergency Medications"
+        ]
     },
     
     "Calcium chloride": {
@@ -522,7 +537,22 @@ ELECTROLYTES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên ACLS guidelines và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["ECG", "Calcium Levels"]
+        },
+        "guideline_tags": [
+            "ACLS Guidelines 2020 - Hyperkalemia Management",
+            "FDA Drug Label - Calcium gluconate",
+            "ISMP High Alert Medications - Emergency Medications"
+        ]
     },
     
     "Demeclocycline": {
@@ -677,23 +707,23 @@ ELECTROLYTES_DRUGS = {
                 "UpToDate - Treatment of SIADH"
             ],
             "last_updated": "2025-02-05",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ]
-           ,
-            "evidence_level"": "A"
-        }
+            "evidence_level": "A"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic", "renal", "dermatologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["LFT", "RFT", "Photosensitivity"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "IDSA Guidelines - SIADH Treatment"
+        ]
     },
     
     "Magnesium oxide": {
@@ -839,23 +869,23 @@ ELECTROLYTES_DRUGS = {
                 "UpToDate - Magnesium: Drug information"
             ],
             "last_updated": "2025-02-05",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "ACG 2017 GERD Guidelines",
-                "FDA - Over-the-counter antacids",
-            ]
-           ,
-            "evidence_level"": "A"
-        }
+            "evidence_level": "A"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Serum magnesium", "Renal function"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "KDIGO Guidelines - Electrolyte Management"
+        ]
     },
     
     "Magnesium sulfate": {
@@ -1217,23 +1247,24 @@ ELECTROLYTES_DRUGS = {
                 "ASCO Guidelines - Hypercalcemia of malignancy"
             ],
             "last_updated": "2025-02-05",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ]
-           ,
-            "evidence_level"": "A"
-        }
+            "evidence_level": "A"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["renal", "dental"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Serum calcium", "Serum phosphate", "Renal function", "Dental exam"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "ASCO Guidelines - Hypercalcemia of Malignancy",
+            "FDA Black Box Warning - Osteonecrosis of Jaw"
+        ]
     },
     "Potassium phosphate": {
         "group": "Emergency - Electrolyte (Phosphate Supplement)",
@@ -1396,23 +1427,24 @@ ELECTROLYTES_DRUGS = {
                 "UpToDate - Phosphate: Drug information"
             ],
             "last_updated": "2025-02-05",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ]
-           ,
-            "evidence_level"": "A"
-        }
+            "evidence_level": "A"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Serum potassium", "Serum phosphate", "Serum calcium", "ECG", "Renal function"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "KDIGO Guidelines - Electrolyte Management",
+            "FDA Black Box Warning - Precipitation with Calcium"
+        ]
     },
     
     "Sodium bicarbonate": {
@@ -1596,7 +1628,22 @@ ELECTROLYTES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A - Dựa trên ACLS guidelines và dữ liệu lâm sàng"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["metabolic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["pH", "Electrolytes", "ECG"]
+        },
+        "guideline_tags": [
+            "ACLS Guidelines 2020 - Hyperkalemia Management",
+            "FDA Drug Label - Sodium bicarbonate",
+            "ISMP High Alert Medications - Emergency Medications"
+        ]
     },
     
     "Sodium phosphate": {
@@ -1759,23 +1806,24 @@ ELECTROLYTES_DRUGS = {
                 "UpToDate - Phosphate: Drug information"
             ],
             "last_updated": "2025-02-05",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ]
-           ,
-            "evidence_level"": "A"
-        }
+            "evidence_level": "A"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["cardiac", "renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Serum phosphate", "Serum calcium", "ECG", "Renal function"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "KDIGO Guidelines - Electrolyte Management",
+            "FDA Black Box Warning - Precipitation with Calcium"
+        ]
     },
     
     "Sodium polystyrene sulfonate": {
@@ -1929,23 +1977,24 @@ ELECTROLYTES_DRUGS = {
                 "KDIGO Guidelines - Chronic Kidney Disease"
             ],
             "last_updated": "2025-02-05",
-            "risk_flags": {
-                "high_alert": False,
-                "narrow_therapeutic_index": False,
-                "bleeding_risk": False,
-                "organ_toxicity": [],
-                "qt_prolongation": False,
-                "hepatotoxicity": False,
-                "nephrotoxicity": False,
-                "requires_monitoring": [],
-            },
-            "guideline_tags": [
-                "FDA Drug Information",
-                "UpToDate Drug Information",
-            ]
-           ,
-            "evidence_level"": "A"
-        }
+            "evidence_level": "A"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["gastrointestinal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Serum potassium", "Serum sodium", "Bowel function"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "KDIGO Guidelines - Hyperkalemia Management",
+            "FDA Black Box Warning - Intestinal Necrosis"
+        ]
     },
     
     "Zoledronic acid": {
@@ -2112,7 +2161,22 @@ ELECTROLYTES_DRUGS = {
             ],
             "last_updated": "2025-02-05",
             "evidence_level": "A"
-        }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["Calcium Levels", "Phosphorus Levels", "RFT", "ECG"]
+        },
+        "guideline_tags": [
+            "FDA Drug Label - Zometa, Reclast (zoledronic acid)",
+            "ASCO Guidelines - Hypercalcemia of malignancy",
+            "ISMP High Alert Medications - Emergency Medications"
+        ]
     },
     
 }

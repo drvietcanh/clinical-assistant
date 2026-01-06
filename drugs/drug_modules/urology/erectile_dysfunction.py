@@ -870,22 +870,24 @@ ERECTILE_DYSFUNCTION_DRUGS: Dict[str, Dict[str, Any]] = {
                     "Medscape - Vardenafil Drug Reference"
                 ],
                 "last_updated": "2025-02-18",
-                "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines",
+                "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines"
+            },
             "risk_flags": {
-                "high_alert": False,
+                "high_alert": True,
                 "narrow_therapeutic_index": False,
                 "bleeding_risk": False,
-                "organ_toxicity": [],
+                "organ_toxicity": ["ophthalmic", "cardiac"],
                 "qt_prolongation": False,
                 "hepatotoxicity": False,
                 "nephrotoxicity": False,
-                "requires_monitoring": [],
+                "requires_monitoring": ["Blood pressure", "Visual changes", "Hearing changes"]
             },
             "guideline_tags": [
                 "FDA Drug Information",
                 "UpToDate Drug Information",
-            ] 
-        }
+                "AUA Guidelines - Erectile Dysfunction",
+                "FDA Black Box Warning - Nitrate Contraindication"
+            ]
         },
 
 }
