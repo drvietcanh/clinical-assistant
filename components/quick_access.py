@@ -41,13 +41,6 @@ def render_quick_access_menu():
         if st.button("📚 Articles", use_container_width=True, key="qa_articles"):
             st.switch_page("pages/12_📚_In_Depth_Articles.py")
     
-    # Management tools
-    with st.expander("🎯 Management", expanded=False):
-        if st.button("📊 Project", use_container_width=True, key="qa_project"):
-            st.switch_page("pages/16_📊_Project_Tracker.py")
-        if st.button("🎯 Dashboard", use_container_width=True, key="qa_unified"):
-            st.switch_page("pages/17_🎯_Unified_Dashboard.py")
-    
     # Utilities
     with st.expander("🔧 Utilities", expanded=False):
         if st.button("🔍 Search", use_container_width=True, key="qa_search"):

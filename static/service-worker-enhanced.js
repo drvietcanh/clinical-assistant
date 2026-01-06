@@ -20,7 +20,6 @@ const CACHE_RESOURCES = [
     '/pages/04_📋_Protocols.py',
     '/pages/07_💊_Drug_Database.py',
     '/pages/09_🫁_Critical_Care.py',
-    '/pages/17_🎯_Unified_Dashboard.py',
     
     // Data files (if available)
     '/config/calculators.py',
