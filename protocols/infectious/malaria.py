@@ -91,7 +91,7 @@ def render():
     st.markdown("---")
     
     # ========== SECTION 4: DOSING INFORMATION ==========
-    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    st.markdown("### 💉 Liều Thuốc Chi tiết")
     
     with st.expander("📋 Xem liều thuốc", expanded=False):
         import pandas as pd

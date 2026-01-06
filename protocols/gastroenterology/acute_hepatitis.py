@@ -164,7 +164,7 @@ def render_dili():
         - **Infection:** Prophylaxis nếu cần
         """)
     
-    st.markdown("#### 🔄 Bước 4: Tiên Lượng")
+    st.markdown("#### 🔄 Bước 4: Tiên lượng")
     
     col1, col2 = st.columns(2)
     

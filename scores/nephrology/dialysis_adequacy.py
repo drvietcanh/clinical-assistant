@@ -219,7 +219,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Tin Lọc Máu")
+        st.markdown("### 📋 Thông tin Lọc Máu")
         
         shared_inputs = st.session_state.get('shared_inputs', {})
         
@@ -243,7 +243,7 @@ def render():
             help="Số buổi lọc máu mỗi tuần"
         )
         
-        st.markdown("### 🔬 Kết Quả Xét Nghiệm")
+        st.markdown("### 🔬 Kết quả Xét Nghiệm")
         
         # Input method
         input_method = st.radio(
@@ -356,7 +356,7 @@ def render():
             
             # Display results
             st.markdown("---")
-            st.markdown("### 📊 Kết Quả")
+            st.markdown("### 📊 Kết quả")
             
             # Metrics
             col_res1, col_res2, col_res3 = st.columns(3)
@@ -398,7 +398,7 @@ def render():
                 st.error(f"🚨 **{result['adequacy_status']}**")
             
             # Recommendations
-            st.markdown("### 💡 Khuyến Nghị")
+            st.markdown("### 💡 Khuyến nghị")
             for i, rec in enumerate(result['recommendations'], 1):
                 st.markdown(f"{i}. {rec}")
             
@@ -446,7 +446,7 @@ def render():
             render_suggestions(calculator_id="dialysis_adequacy", result=result)
     
     with col2:
-        st.markdown("### 📚 Thông Tin")
+        st.markdown("### 📚 Thông tin")
         
         st.markdown("""
         **Dialysis Adequacy:**

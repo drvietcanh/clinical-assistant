@@ -409,7 +409,7 @@ def render():
             """)
         
         st.markdown("---")
-        st.markdown("##### 💉 Cisatracurium - Thuốc Ưu Tiên")
+        st.markdown("##### 💉 Cisatracurium - Thuốc Ưu tiên")
         
         st.info("""
         **Cisatracurium là thuốc ưu tiên cho ARDS:**

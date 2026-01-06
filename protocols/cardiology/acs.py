@@ -383,7 +383,7 @@ def render():
             """)
         
         st.markdown("---")
-        st.markdown("#### ⏱️ Early Invasive Strategy - Timing Chi Tiết (ESC 2020)")
+        st.markdown("#### ⏱️ Early Invasive Strategy - Timing Chi tiết (ESC 2020)")
         
         st.info("""
         **ESC 2020 Guidelines - Timing của Invasive Strategy:**

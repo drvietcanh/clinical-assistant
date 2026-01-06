@@ -254,9 +254,9 @@ print(f"Suggested file: {result['suggested_file']}")
 print(f"Validation: {result['validation']}")
 ```
 
-## Phân Tích Hệ Thống
+## Phân tích Hệ Thống
 
-### Chạy Phân Tích Toàn Diện
+### Chạy Phân tích Toàn Diện
 
 ```bash
 python analyze_drug_system_structure.py
@@ -329,7 +329,7 @@ fixed = standardizer.fix_field_format(drug_data)
 6. `drugs/field_validator.py` - Field validator
 7. `drugs/field_standardizer.py` - Field standardizer
 
-## Tài Liệu Tham Khảo
+## Tài liệu tham khảo
 
 - `MODULE_STRUCTURE.md` - Cấu trúc module
 - `FIELD_STRUCTURE.md` - Cấu trúc field

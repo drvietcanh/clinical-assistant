@@ -296,7 +296,7 @@ def render():
                 st.warning("⚠️ **Điều chỉnh:** " + " | ".join(result['adjustments']))
             
             # Detailed breakdown
-            with st.expander("📋 Chi Tiết", expanded=True):
+            with st.expander("📋 Chi tiết", expanded=True):
                 st.markdown(f"""
                 **Chỉ định:** {result['description']}
                 
@@ -320,7 +320,7 @@ def render():
             
             # Recommendations
             if result.get('recommendations'):
-                st.markdown("### 💡 Khuyến Nghị Lâm Sàng")
+                st.markdown("### 💡 Khuyến nghị Lâm Sàng")
                 for rec in result['recommendations']:
                     st.markdown(rec)
             
@@ -377,7 +377,7 @@ def render():
             render_suggestions(calculator_id="inr_target", result=result)
     
     with col2:
-        st.markdown("### 📚 Thông Tin")
+        st.markdown("### 📚 Thông tin")
         
         st.markdown("""
         **INR Target Ranges:**

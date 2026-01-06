@@ -108,7 +108,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Phác Đồ Chi Tiết")
+    st.markdown("### 📋 Phác Đồ Chi tiết")
     
     protocol_choice = st.selectbox(
         "**Chọn phác đồ:**",
@@ -196,7 +196,7 @@ def render():
     - **Không dùng:** Serology
     """)
     
-    st.markdown("#### Kết Quả")
+    st.markdown("#### Kết quả")
     
     col1, col2 = st.columns(2)
     

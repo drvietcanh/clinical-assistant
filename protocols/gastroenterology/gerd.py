@@ -100,7 +100,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Phác Đồ Điều trị Chi Tiết")
+    st.markdown("### 📋 Phác Đồ Điều trị Chi tiết")
     
     treatment_choice = st.selectbox(
         "**Chọn phác đồ:**",
@@ -370,7 +370,7 @@ def render_complicated_gerd():
 
 def render_ppi_standard():
     """PPI Standard Dose"""
-    st.success("## 💊 PPI - Liều Tiêu Chuẩn")
+    st.success("## 💊 PPI - Liều Tiêu chuẩn")
     
     st.markdown("### Liều Dùng")
     

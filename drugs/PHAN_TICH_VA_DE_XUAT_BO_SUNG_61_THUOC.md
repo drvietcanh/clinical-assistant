@@ -1,4 +1,4 @@
-# 📋 Phân Tích Yêu Cầu & Đề Xuất Bổ Sung 61 Thuốc
+# 📋 Phân tích Yêu Cầu & Đề Xuất Bổ Sung 61 Thuốc
 
 **Ngày:** 2025-02-05  
 **Kiến trúc sư:** Phân tích từ góc độ 30 năm kinh nghiệm  
@@ -29,7 +29,7 @@
 | Other | 2 | 0.8% | Cần bổ sung |
 | **TỔNG** | **239** | **100%** | **Cần thêm 61+** |
 
-### 1.2. Phân Tích Gaps (Khoảng Trống)
+### 1.2. Phân tích Gaps (Khoảng Trống)
 
 #### 🔴 **Nhóm Thiếu Nhiều Nhất (Ưu tiên cao):**
 1. **Emergency (7 → 15):** Thiếu 8 thuốc cấp cứu quan trọng
@@ -461,7 +461,7 @@ drugs/drug_modules/cardiovascular/
 
 ## 4. 🎯 THỨ TỰ TRIỂN KHAI ĐỀ XUẤT
 
-### 4.1. Nguyên tắc Ưu Tiên
+### 4.1. Nguyên tắc Ưu tiên
 
 1. **Ưu tiên theo mức độ quan trọng lâm sàng:**
    - 🔥🔥🔥 Cấp cứu, thường dùng, nguy cơ cao
@@ -603,7 +603,7 @@ drugs/drug_modules/cardiovascular/
 
 ### 4.3. Tổng Kết Thời Gian
 
-| Giai Đoạn | Số Thuốc | Thời Gian Ước Tính | Ưu Tiên |
+| Giai Đoạn | Số Thuốc | Thời Gian Ước Tính | Ưu tiên |
 |-----------|----------|-------------------|---------|
 | Giai đoạn 1 | 29 | 2-3 tuần | 🔥🔥🔥 |
 | Giai đoạn 2 | 18 | 2 tuần | 🔥🔥 |

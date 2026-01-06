@@ -618,7 +618,7 @@ def render_upper_gi_bleeding():
         """)
         
         st.markdown("---")
-        st.markdown("#### 🔧 Kỹ Thuật Cầm Máu Nội Soi Chi Tiết")
+        st.markdown("#### 🔧 Kỹ Thuật Cầm Máu Nội Soi Chi tiết")
         
         endo_tab1, endo_tab2, endo_tab3, endo_tab4, endo_tab5 = st.tabs([
             "📎 Hemostatic Clip", 

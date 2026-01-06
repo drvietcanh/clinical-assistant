@@ -156,7 +156,7 @@ def render():
     st.markdown("---")
     
     if total_burn_area > 0 and patient_weight > 0:
-        st.markdown("### 💧 Tính toán Dịch Truyền (Parkland Formula)")
+        st.markdown("### 💧 Tính toán Dịch truyền (Parkland Formula)")
         
         # Parkland Formula: 4 mL × %BSA × kg body weight
         # First 24 hours: 50% in first 8 hours, 50% in next 16 hours

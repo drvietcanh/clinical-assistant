@@ -431,7 +431,7 @@ def render_medication_list_with_checker():
             
             # Show detailed interactions with search/filter/sort
             if summary['interactions']:
-                st.markdown("### 📋 Chi Tiết Tương Tác")
+                st.markdown("### 📋 Chi tiết Tương Tác")
                 
                 # Search and Filter Section
                 with st.expander("🔍 Tìm Kiếm & Lọc", expanded=False):
@@ -569,7 +569,7 @@ def render_medication_list_with_checker():
                     st.info("Không tìm thấy tương tác nào phù hợp với bộ lọc.")
             
             # Show recommendations
-            st.markdown("### 💡 Khuyến Nghị Lâm Sàng")
+            st.markdown("### 💡 Khuyến nghị Lâm Sàng")
             recommendations = checker.get_recommendations(st.session_state.medication_list)
             for rec in recommendations:
                 st.markdown(f"- {rec}")
@@ -682,7 +682,7 @@ def render_quick_interaction_check():
             interaction = checker.check_pair(drug1, drug2)
             
             if interaction:
-                st.markdown(f"### Kết Quả: {drug1} + {drug2}")
+                st.markdown(f"### Kết quả: {drug1} + {drug2}")
                 render_interaction_warning({
                     'drug1': drug1,
                     'drug2': drug2,
@@ -803,7 +803,7 @@ def render_complete_interaction_checker():
         render_quick_interaction_check()
     
     # Database info
-    with st.expander("ℹ️ Thông Tin Database"):
+    with st.expander("ℹ️ Thông tin Database"):
         from drug_interactions import get_interaction_statistics
         stats = get_interaction_statistics()
         

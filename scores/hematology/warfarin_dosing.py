@@ -189,7 +189,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Thông Tin INR")
+        st.markdown("### 📋 Thông tin INR")
         
         shared_inputs = st.session_state.get('shared_inputs', {})
         
@@ -271,7 +271,7 @@ def render():
             help="Thời gian để INR ổn định sau điều chỉnh liều"
         )
         
-        st.markdown("### 👤 Thông Tin Bệnh Nhân (Tùy chọn)")
+        st.markdown("### 👤 Thông tin bệnh nhân (Tùy chọn)")
         
         col_age, col_weight = st.columns(2)
         with col_age:
@@ -335,7 +335,7 @@ def render():
             
             # Display results
             st.markdown("---")
-            st.markdown("### 📊 Kết Quả")
+            st.markdown("### 📊 Kết quả")
             
             # Risk badge
             risk_color = {
@@ -376,7 +376,7 @@ def render():
                 st.error(f"🚨 **{result['action']}** - {result['adjustment_reason']}")
             
             # Detailed breakdown
-            with st.expander("📋 Chi Tiết Điều Chỉnh Liều", expanded=True):
+            with st.expander("📋 Chi tiết Điều Chỉnh Liều", expanded=True):
                 st.markdown(f"""
                 **Lý do điều chỉnh:** {result['adjustment_reason']}
                 
@@ -443,7 +443,7 @@ def render():
             render_suggestions(calculator_id="warfarin_dosing", result=result)
     
     with col2:
-        st.markdown("### 📚 Thông Tin")
+        st.markdown("### 📚 Thông tin")
         
         st.markdown("""
         **Warfarin Dosing:**

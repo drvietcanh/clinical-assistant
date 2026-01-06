@@ -170,7 +170,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Đánh Giá Thần Kinh")
+        st.markdown("### 📋 Đánh giá Thần Kinh")
         
         shared_inputs = st.session_state.get('shared_inputs', {})
         
@@ -204,7 +204,7 @@ def render():
         )
         
         # Speech
-        st.markdown("#### Lời Nói")
+        st.markdown("#### Lời nói")
         speech = st.selectbox(
             "Lời nói",
             [0, 1, 2],
@@ -218,7 +218,7 @@ def render():
         )
         
         # Facial palsy
-        st.markdown("#### Liệt Mặt")
+        st.markdown("#### Liệt mặt")
         facial_palsy = st.selectbox(
             "Liệt mặt",
             [0, 1, 2],
@@ -232,7 +232,7 @@ def render():
         )
         
         # Motor function - Arms
-        st.markdown("#### Vận Động Tay")
+        st.markdown("#### Vận động tay")
         col_arm_l, col_arm_r = st.columns(2)
         with col_arm_l:
             motor_function_arm_left = st.selectbox(
@@ -260,7 +260,7 @@ def render():
             )
         
         # Motor function - Legs
-        st.markdown("#### Vận Động Chân")
+        st.markdown("#### Vận động chân")
         col_leg_l, col_leg_r = st.columns(2)
         with col_leg_l:
             motor_function_leg_left = st.selectbox(
@@ -319,7 +319,7 @@ def render():
             
             # Display results
             st.markdown("---")
-            st.markdown("### 📊 Kết Quả")
+            st.markdown("### 📊 Kết quả")
             
             # Score display
             col_res1, col_res2 = st.columns(2)
@@ -340,11 +340,11 @@ def render():
                 )
             
             # Score breakdown
-            st.markdown("### 📋 Chi Tiết Điểm Số")
+            st.markdown("### 📋 Chi tiết điểm số")
             render_score_breakdown(result['items'])
             
             # Recommendations
-            st.markdown("### 💡 Khuyến Nghị")
+            st.markdown("### 💡 Khuyến nghị")
             for i, rec in enumerate(result['recommendations'], 1):
                 st.markdown(f"{i}. {rec}")
             
@@ -404,7 +404,7 @@ def render():
             render_suggestions(calculator_id="canadian_stroke_scale", result=result)
     
     with col2:
-        st.markdown("### 📚 Thông Tin")
+        st.markdown("### 📚 Thông tin")
         
         st.markdown("""
         **Canadian Stroke Scale:**

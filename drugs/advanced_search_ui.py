@@ -151,7 +151,7 @@ def render_search_results(results: List[Tuple], query: str = ""):
         st.info("Không tìm thấy kết quả phù hợp.")
         return
     
-    st.markdown(f"### 📋 Kết Quả ({len(results)} thuốc)")
+    st.markdown(f"### 📋 Kết quả ({len(results)} thuốc)")
     
     # Sort options
     sort_by = st.radio(
@@ -291,7 +291,7 @@ def render_performance_comparison():
     """
     Render performance comparison between old and new search
     """
-    with st.expander("⚡ So Sánh Performance", expanded=False):
+    with st.expander("⚡ So sánh Performance", expanded=False):
         st.markdown("### Benchmark: Old vs New Search")
         
         test_query = st.text_input(

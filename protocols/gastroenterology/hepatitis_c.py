@@ -99,7 +99,7 @@ def render():
     
     st.markdown("---")
     
-    st.markdown("### 📋 Phác Đồ Chi Tiết")
+    st.markdown("### 📋 Phác Đồ Chi tiết")
     
     protocol_choice = st.selectbox(
         "**Chọn phác đồ:**",

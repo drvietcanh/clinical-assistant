@@ -147,7 +147,7 @@ def render_ascariasis():
     st.markdown("---")
     
     # ========== DOSING ==========
-    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    st.markdown("### 💉 Liều Thuốc Chi tiết")
     
     import pandas as pd
     dosing_data = {
@@ -273,7 +273,7 @@ def render_trichuriasis():
     st.markdown("---")
     
     # ========== DOSING ==========
-    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    st.markdown("### 💉 Liều Thuốc Chi tiết")
     
     import pandas as pd
     dosing_data = {
@@ -394,7 +394,7 @@ def render_hookworm():
     st.markdown("---")
     
     # ========== DOSING ==========
-    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    st.markdown("### 💉 Liều Thuốc Chi tiết")
     
     import pandas as pd
     dosing_data = {
@@ -538,7 +538,7 @@ def render_strongyloidiasis():
     st.markdown("---")
     
     # ========== DOSING ==========
-    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    st.markdown("### 💉 Liều Thuốc Chi tiết")
     
     import pandas as pd
     dosing_data = {
@@ -687,7 +687,7 @@ def render_liver_fluke():
     st.markdown("---")
     
     # ========== DOSING ==========
-    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    st.markdown("### 💉 Liều Thuốc Chi tiết")
     
     import pandas as pd
     dosing_data = {
@@ -806,7 +806,7 @@ def render_enterobiasis():
     st.markdown("---")
     
     # ========== DOSING ==========
-    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    st.markdown("### 💉 Liều Thuốc Chi tiết")
     
     import pandas as pd
     dosing_data = {
@@ -939,7 +939,7 @@ def render_taeniasis():
     st.markdown("---")
     
     # ========== DOSING ==========
-    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    st.markdown("### 💉 Liều Thuốc Chi tiết")
     
     import pandas as pd
     dosing_data = {
@@ -1066,7 +1066,7 @@ def render_paragonimiasis():
     st.markdown("---")
     
     # ========== DOSING ==========
-    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    st.markdown("### 💉 Liều Thuốc Chi tiết")
     
     import pandas as pd
     dosing_data = {
@@ -1192,7 +1192,7 @@ def render_amoebiasis():
     st.markdown("---")
     
     # ========== DOSING ==========
-    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    st.markdown("### 💉 Liều Thuốc Chi tiết")
     
     import pandas as pd
     dosing_data = {
@@ -1326,7 +1326,7 @@ def render_giardiasis():
     st.markdown("---")
     
     # ========== DOSING ==========
-    st.markdown("### 💉 Liều Thuốc Chi Tiết")
+    st.markdown("### 💉 Liều Thuốc Chi tiết")
     
     import pandas as pd
     dosing_data = {

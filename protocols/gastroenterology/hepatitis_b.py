@@ -477,7 +477,7 @@ def render_tenofovir_taf():
 
 def render_lamivudine():
     """Lamivudine Protocol (Not Recommended)"""
-    st.warning("## ⚠️ Lamivudine (LAM) - Không Khuyến Cáo")
+    st.warning("## ⚠️ Lamivudine (LAM) - Không Khuyến cáo")
     
     st.error("""
     **Lý do không khuyến cáo:**
@@ -494,7 +494,7 @@ def render_lamivudine():
 
 def render_adefovir():
     """Adefovir Protocol (Not Recommended)"""
-    st.warning("## ⚠️ Adefovir (ADV) - Không Khuyến Cáo")
+    st.warning("## ⚠️ Adefovir (ADV) - Không Khuyến cáo")
     
     st.error("""
     **Lý do không khuyến cáo:**

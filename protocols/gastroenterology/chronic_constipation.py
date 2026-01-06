@@ -359,7 +359,7 @@ def render_stimulant():
 
 def render_prokinetics():
     """Prokinetics"""
-    st.info("## 💊 Prokinetics (Tăng Vận Động Ruột)")
+    st.info("## 💊 Prokinetics (Tăng Vận động Ruột)")
     
     st.markdown("### Liều Dùng")
     

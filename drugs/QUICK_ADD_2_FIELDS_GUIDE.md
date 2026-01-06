@@ -114,7 +114,7 @@ grep -r "DrugName" drugs/
 },
 ```
 
-## ⚠️ Lưu Ý Quan Trọng
+## ⚠️ Lưu ý quan trọng
 
 1. **Luôn copy từ field có sẵn** - Nếu có `contraindications` dict, copy sang `contraindications_detail`
 2. **Kiểm tra syntax** - Đảm bảo dấu phẩy, ngoặc đúng

@@ -1070,7 +1070,7 @@ def render_ischemic_stroke():
     st.markdown("---")
     st.markdown("### 5️⃣ Hỗ trợ y tế & quản lý huyết áp")
     
-    st.markdown("#### 💊 Quản lý Huyết áp Chi Tiết (AHA/ASA Guidelines)")
+    st.markdown("#### 💊 Quản lý Huyết áp Chi tiết (AHA/ASA Guidelines)")
     
     bp_scenario = st.radio(
         "**Tình huống:**",

@@ -124,7 +124,7 @@ python find_drugs_missing_2_fields.py
 },
 ```
 
-## ⚠️ Lưu Ý Quan Trọng
+## ⚠️ Lưu ý quan trọng
 
 1. **Luôn copy từ field có sẵn** - Nếu có `contraindications` dict, copy sang `contraindications_detail`
 2. **Thay thế [Drug]** - Thay bằng tên thuốc thực tế trong notes

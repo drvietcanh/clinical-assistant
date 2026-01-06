@@ -3,7 +3,7 @@
 **Ngày:** 2025-02-18  
 **Mục tiêu:** Bổ sung đầy đủ 2 field còn thiếu cho các thuốc trong database
 
-## 📊 Kết Quả Phiên Này
+## 📊 Kết quả Phiên Này
 
 ### Tiến Độ
 - **Ban đầu:** 123 thuốc thiếu 2 field
@@ -179,7 +179,7 @@ python find_drugs_missing_2_fields.py
 - `drugs/drug_modules/psychiatry_other/ssris.py` - Paroxetine, Fluvoxamine
 - `drugs/drug_modules/psychiatry_other/antipsychotics.py` - Quetiapine, Haloperidol, etc.
 
-## 📚 Tài Liệu Tham Khảo
+## 📚 Tài liệu tham khảo
 
 - **File chính:** `drugs/README_ENHANCED_FIELDS.md`
 - **Tổng hợp:** `drugs/ENHANCED_FIELDS_COMPLETION_SUMMARY.md`

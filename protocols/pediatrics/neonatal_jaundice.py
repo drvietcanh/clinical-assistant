@@ -14,7 +14,7 @@ def render_neonatal_jaundice():
     if is_high_risk:
         st.error("👉 **Nhóm Nguy Cơ Cao** nhiễm độc thần kinh.")
     else:
-        st.success("👉 Nhóm Nguy Cơ Tiêu Chuẩn.")
+        st.success("👉 Nhóm Nguy Cơ Tiêu chuẩn.")
 
     st.markdown("### 2. Chỉ định Chiếu đèn (Phototherapy)")
     st.info("Tra cứu mức Bilirubin toàn phần (TSB) theo tuổi sau sinh (giờ).")
