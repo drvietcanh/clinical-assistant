@@ -254,8 +254,7 @@ if view_mode == "Overview":
         </div>
         """.format(implemented), unsafe_allow_html=True)
     
-    st.markdown('</div>', unsafe_allow_html=True)
-    
+    # End of metrics row
     st.markdown("---")
     
     # Project Progress Section

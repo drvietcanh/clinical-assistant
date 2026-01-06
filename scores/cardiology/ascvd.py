@@ -549,7 +549,7 @@ def render():
                         </div>
                         """, unsafe_allow_html=True)
                     
-                    st.markdown("</div>", unsafe_allow_html=True)
+                    # Card container is closed within the same HTML block above
                 
                 # Display input summary
                 st.markdown("### Tóm tắt thông tin đầu vào")

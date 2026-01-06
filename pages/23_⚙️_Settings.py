@@ -163,7 +163,8 @@ if setting_category == "Units":
         )
         settings['units']['glucose'] = glucose_unit
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # End of lab units section
+    st.markdown("---")
     
     st.markdown('<div class="settings-section">', unsafe_allow_html=True)
     st.markdown('<div class="settings-title">📐 Physical Measurements</div>', unsafe_allow_html=True)
@@ -188,7 +189,8 @@ if setting_category == "Units":
         )
         settings['units']['height'] = height_unit
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # End of physical measurements section
+    st.markdown("---")
     
     if st.button("💾 Save Unit Settings", type="primary"):
         save_settings(settings)
@@ -216,7 +218,8 @@ elif setting_category == "Display":
     )
     settings['display']['language'] = language
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # End of appearance section
+    st.markdown("---")
     
     st.markdown('<div class="settings-section">', unsafe_allow_html=True)
     st.markdown('<div class="settings-title">📄 Pagination</div>', unsafe_allow_html=True)
@@ -231,7 +234,8 @@ elif setting_category == "Display":
     )
     settings['display']['items_per_page'] = items_per_page
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # End of pagination section
+    st.markdown("---")
     
     if st.button("💾 Save Display Settings", type="primary"):
         save_settings(settings)
@@ -267,7 +271,8 @@ elif setting_category == "Notifications":
     settings['notifications']['system_notifications'] = system_notifications
     st.caption("App updates and maintenance")
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # End of notifications section
+    st.markdown("---")
     
     if st.button("💾 Save Notification Settings", type="primary"):
         save_settings(settings)
@@ -303,7 +308,8 @@ elif setting_category == "Privacy":
     settings['privacy']['analytics'] = analytics
     st.caption("Help improve the app by sharing anonymous usage data")
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # End of data privacy section
+    st.markdown("---")
     
     if st.button("💾 Save Privacy Settings", type="primary"):
         save_settings(settings)
@@ -324,7 +330,8 @@ elif setting_category == "Data Management":
             mime="application/json"
         )
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # End of export settings section
+    st.markdown("---")
     
     st.markdown('<div class="settings-section">', unsafe_allow_html=True)
     st.markdown('<div class="settings-title">📤 Import Settings</div>', unsafe_allow_html=True)
@@ -337,7 +344,8 @@ elif setting_category == "Data Management":
             st.success("✅ Settings imported successfully!")
             st.rerun()
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # End of import settings section
+    st.markdown("---")
     
     st.markdown('<div class="settings-section">', unsafe_allow_html=True)
     st.markdown('<div class="settings-title">🗑️ Clear Data</div>', unsafe_allow_html=True)
@@ -358,7 +366,8 @@ elif setting_category == "Data Management":
                 st.session_state.favorites = []
             st.success("✅ Favorites cleared!")
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # End of clear data section
+    st.markdown("---")
     
     st.markdown('<div class="settings-section">', unsafe_allow_html=True)
     st.markdown('<div class="settings-title">🔄 Reset Settings</div>', unsafe_allow_html=True)
@@ -370,7 +379,7 @@ elif setting_category == "Data Management":
             st.success("✅ Settings reset to default!")
             st.rerun()
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # End of reset settings section
 
 elif setting_category == "About":
     st.markdown("### ℹ️ About Clinical Assistant")

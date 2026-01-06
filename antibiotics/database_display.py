@@ -340,7 +340,7 @@ def display_antibiotic_info(ab_name, ab_data):
                 </div>
                 """, unsafe_allow_html=True)
         
-        st.markdown("</div>", unsafe_allow_html=True)
+        # End of antibiotic header card
         st.markdown("---")
         
         # Indications with enhanced styling

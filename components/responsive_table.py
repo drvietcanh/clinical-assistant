@@ -48,7 +48,7 @@ def render_responsive_table(
         unsafe_allow_html=True
     )
     
-    # For very small screens, show card view if enabled
+    # Render table (optionally wrapped for horizontal scroll)
     if use_card_view:
         st.markdown(
             f"""
@@ -56,12 +56,10 @@ def render_responsive_table(
             """,
             unsafe_allow_html=True
         )
-    
-    # Render table
-    st.dataframe(data, **kwargs)
-    
-    if use_card_view:
+        st.dataframe(data, **kwargs)
         st.markdown("</div>", unsafe_allow_html=True)
+    else:
+        st.dataframe(data, **kwargs)
     
     # Add mobile-friendly note for large tables
     if len(data.columns) > 5:
