@@ -21,10 +21,10 @@
         "Calcium chloride",
         "Calcium gluconate"
       ],
-      "conditional": [
+      "conditional": {
         "Dobutamine": "Có thể trộn nhưng cần theo dõi sát",
         "Milrinone": "Có thể trộn nhưng cần theo dõi sát"
-      ],
+      },
       "notes": "Không trộn với sodium bicarbonate hoặc các dung dịch kiềm. Có thể trộn với hầu hết các vasopressor khác.",
       "y_site": {
         "compatible": true,
@@ -106,10 +106,10 @@
         "Calcium gluconate",
         "Nitroglycerin"
       ],
-      "conditional": [
+      "conditional": {
         "Adrenaline": "Có thể trộn nhưng cần theo dõi sát",
         "Milrinone": "Có thể trộn nhưng cần theo dõi sát"
-      ],
+      },
       "notes": "Không tương thích với nitroglycerin. Có thể trộn với adrenaline và milrinone nhưng cần theo dõi.",
       "y_site": {
         "compatible": true,
@@ -158,10 +158,10 @@
         "Alkaline solutions",
         "Furosemide"
       ],
-      "conditional": [
+      "conditional": {
         "Adrenaline": "Có thể trộn nhưng cần theo dõi sát",
         "Dobutamine": "Có thể trộn nhưng cần theo dõi sát"
-      ],
+      },
       "notes": "Có thể trộn với hầu hết các vasopressor nhưng cần theo dõi. Tránh trộn với furosemide.",
       "y_site": {
         "compatible": true,
