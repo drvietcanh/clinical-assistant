@@ -691,7 +691,7 @@ def render_sticky_search_bar():
                     st.session_state['guidelines_quick_search_term'] = term
                     st.rerun()
     
-    st.markdown('</div>', unsafe_allow_html=True)
+    # Closing div tag no longer needed; removing avoids stray '</div>' rendering
     return search_query
 
 
@@ -975,8 +975,7 @@ def render_enhanced_guideline_card(guideline, index: int, is_mobile: bool = Fals
             st.session_state[f'share_url_{guideline.id}'] = f"?guideline={guideline.id}"
             st.info(f"Link: {st.session_state.get('_stcore_host', '')}/Guidelines_Tracker?guideline={guideline.id}")
     
-    # Close container div
-    st.markdown("</div>", unsafe_allow_html=True)
+    # Divider for next card
     st.markdown("---")
 
 

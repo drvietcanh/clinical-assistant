@@ -138,7 +138,7 @@ if protocol and protocol != "Không có protocol nào":
         </div>
     </div>
     """
-    st.markdown(header_html, unsafe_allow_html=True)
+    # Render header once (avoid duplicate cards on page)
     st.markdown(header_html, unsafe_allow_html=True)
 else:
     # Enhanced welcome message logic (unchanged)

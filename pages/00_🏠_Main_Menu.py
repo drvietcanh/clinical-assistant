@@ -231,7 +231,6 @@ for idx, (cat_name, cat_info) in enumerate(categories.items()):
     with cols[idx % 3]:
         if st.button(
             f"{cat_info['icon']} {cat_name}",
-            use_container_width=True,
             key=f"cat_{cat_name}",
             use_container_width=True
         ):
