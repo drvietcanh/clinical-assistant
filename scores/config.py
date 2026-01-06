@@ -261,5 +261,14 @@ SCORES_BY_SPECIALTY = {
         "Braden": {"name": "Braden Scale", "desc": "Đánh giá nguy cơ loét tì đè (DÙNG HÀNG NGÀY)", "status": "✅"},
         "Morse": {"name": "Morse Fall Scale", "desc": "Đánh giá nguy cơ té ngã (DÙNG HÀNG NGÀY)", "status": "✅"},
     },
+    
+    "👴 Lão khoa (Geriatrics)": {
+        "CFS": {"name": "Clinical Frailty Scale (CFS) ⭐⭐⭐", "desc": "Đánh giá frailty (1-9) - Quan trọng cho tiên lượng và quyết định điều trị (MỚI)", "status": "✅"},
+        "Morse Fall Scale": {"name": "Morse Fall Scale ⭐⭐⭐", "desc": "Đánh giá nguy cơ té ngã ở bệnh nhân nội trú (DÙNG HÀNG NGÀY) (MỚI)", "status": "✅"},
+        "MMSE": {"name": "MMSE - Mini-Mental State Examination ⭐⭐⭐", "desc": "Screening cognitive impairment ở bệnh nhân cao tuổi (MỚI)", "status": "✅"},
+        "MoCA": {"name": "MoCA - Montreal Cognitive Assessment ⭐⭐⭐", "desc": "Screening MCI và dementia - Nhạy hơn MMSE (MỚI)", "status": "✅"},
+        "Beers Criteria": {"name": "Beers Criteria ⭐⭐⭐", "desc": "Potentially inappropriate medications in elderly - AGS Beers Criteria 2023 (MỚI)", "status": "✅"},
+        "STOPP/START": {"name": "STOPP/START Criteria ⭐⭐⭐", "desc": "Screening Tool - Thuốc nên ngừng (STOPP) và thuốc nên bắt đầu (START) (MỚI)", "status": "✅"},
+    },
 }
 
