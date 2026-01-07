@@ -15,6 +15,8 @@ from config.navigation_config import (
 from config.app_config import get_module_info
 
 # Mobile-optimized CSS
+# Note: Sidebar drawer behavior is handled by mobile_drawer.py
+# This file only handles navigation item styling
 MOBILE_NAV_CSS = """
 <style>
 /* Mobile-optimized navigation */
@@ -24,6 +26,7 @@ MOBILE_NAV_CSS = """
         min-height: 48px;
         padding: 12px 16px;
         font-size: 1rem;
+        touch-action: manipulation;
     }
     
     /* Larger expander headers */
@@ -31,6 +34,7 @@ MOBILE_NAV_CSS = """
         min-height: 48px;
         padding: 12px 16px;
         font-size: 1rem;
+        touch-action: manipulation;
     }
     
     /* Better spacing for sub-items */
@@ -38,27 +42,17 @@ MOBILE_NAV_CSS = """
         padding-left: 32px !important;
     }
     
-    /* Hamburger menu indicator */
-    .nav-hamburger {
-        display: block;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 1000;
-        background: white;
-        border: 2px solid #e0e0e0;
-        border-radius: 8px;
-        padding: 8px;
-        cursor: pointer;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    /* Sub-item indentation container */
+    .sub-item-container {
+        margin-left: 16px;
+        padding-left: 8px;
+        border-left: 2px solid #e0e0e0;
     }
 }
 
 /* Desktop: Normal size */
 @media (min-width: 769px) {
-    .nav-hamburger {
-        display: none;
-    }
+    /* Desktop styles */
 }
 
 /* Smooth transitions */
@@ -72,6 +66,29 @@ MOBILE_NAV_CSS = """
     background-color: #e3f2fd !important;
     border-left: 4px solid #1976d2 !important;
     font-weight: 600;
+}
+
+[data-theme="dark"] .nav-item-active {
+    background-color: rgba(100, 181, 246, 0.1) !important;
+    border-left-color: #64b5f6 !important;
+}
+
+/* Sub-item styling */
+.sub-item-container {
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: 2px solid #e0e0e0;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.sub-item-button {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.sub-item-button:hover {
+    opacity: 1;
 }
 </style>
 """
@@ -215,10 +232,10 @@ def render_sidebar_navigation():
         expander_label = f"{icon} **{title}**"
         
         # Render category with expander
+        # Note: st.expander doesn't support key parameter in this Streamlit version
         with st.expander(
             expander_label,
-            expanded=should_expand,
-            key=f"nav_cat_{cat_id}"
+            expanded=should_expand
         ):
             # Render main items
             for item in main_items:
@@ -246,18 +263,18 @@ def render_sidebar_navigation_simple():
         icon = str(category.icon) if category.icon is not None else "📁"
         title = str(category.title) if category.title is not None else "Category"
         
+        # On mobile, collapse all categories by default except active one
         should_expand = (
-            category.default_expanded or 
-            (cat_id in ["home_search", "drugs_dosing", "calculators_scores"])
+            category.default_expanded if st.session_state.get('_is_desktop', True) else False
         )
         
         # Safely format the expander label
         expander_label = f"{icon} **{title}**"
         
+        # Note: st.expander doesn't support key parameter in this Streamlit version
         with st.expander(
             expander_label,
-            expanded=should_expand,
-            key=f"nav_cat_{cat_id}"
+            expanded=should_expand
         ):
             for module_id in category.module_ids:
                 # Skip sub-items (they'll be handled in main items)
@@ -295,9 +312,9 @@ def render_sidebar_navigation_simple():
                                 sub_icon = str(sub_info.icon) if sub_info.icon is not None else "📄"
                                 sub_title = str(sub_info.title) if sub_info.title is not None else sub_id
                                 
-                                # Use HTML for better indentation on mobile
+                                # Use HTML container for better indentation and visual hierarchy
                                 st.markdown(
-                                    f'<div class="sub-item-button" style="padding-left: 24px;">',
+                                    '<div class="sub-item-container">',
                                     unsafe_allow_html=True
                                 )
                                 if st.button(

@@ -55,6 +55,22 @@ def render_mobile_bottom_nav():
             .mobile-nav-item:active {
                 background: rgba(0,0,0,0.05);
                 transform: scale(0.95);
+                transition: transform 0.1s ease;
+            }
+            
+            .mobile-nav-item.active {
+                position: relative;
+            }
+            
+            .mobile-nav-item.active::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: var(--primary, #2D7DF6);
+                border-radius: 0 0 3px 3px;
             }
             
             [data-theme="dark"] .mobile-nav-item {
@@ -92,9 +108,26 @@ def render_mobile_bottom_nav():
             
             /* Add padding to main content to prevent overlap */
             .main .block-container {
-                padding-bottom: 80px !important;
+                padding-bottom: calc(80px + env(safe-area-inset-bottom)) !important;
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
+            }
+            
+            /* Better spacing for 7 items */
+            .mobile-nav-item {
+                flex: 1 1 calc(14.28% - 4px);
+                min-width: 0;
+            }
+            
+            .mobile-nav-label {
+                font-size: 10px;
+                line-height: 1.2;
+                margin-top: 2px;
+            }
+            
+            .mobile-nav-icon {
+                font-size: 22px;
+                margin-bottom: 2px;
             }
         }
         
@@ -117,15 +150,23 @@ def render_mobile_bottom_nav():
             </a>
             <a href="/pages/01_📊_Scores.py" class="mobile-nav-item" id="nav-scores">
                 <div class="mobile-nav-icon">📊</div>
-                <div class="mobile-nav-label">Thang điểm</div>
+                <div class="mobile-nav-label">Tính toán</div>
             </a>
-            <a href="/pages/04_📋_Protocols.py" class="mobile-nav-item" id="nav-guidelines">
-                <div class="mobile-nav-icon">📋</div>
-                <div class="mobile-nav-label">Guideline</div>
+            <a href="/pages/09_🫁_Critical_Care.py" class="mobile-nav-item" id="nav-critical">
+                <div class="mobile-nav-icon">🫁</div>
+                <div class="mobile-nav-label">Hồi sức</div>
             </a>
-            <a href="#" class="mobile-nav-item" id="nav-personal" onclick="toggleMobileMenu(event)">
-                <div class="mobile-nav-icon">⭐</div>
-                <div class="mobile-nav-label">Tủ cá nhân</div>
+            <a href="/pages/06_🩺_Diagnosis.py" class="mobile-nav-item" id="nav-diagnosis">
+                <div class="mobile-nav-icon">🩺</div>
+                <div class="mobile-nav-label">Chẩn đoán</div>
+            </a>
+            <a href="/pages/10_🧭_Decision_Support.py" class="mobile-nav-item" id="nav-support">
+                <div class="mobile-nav-icon">🧭</div>
+                <div class="mobile-nav-label">Hỗ trợ</div>
+            </a>
+            <a href="#" class="mobile-nav-item" id="nav-menu" onclick="toggleMobileMenu(event)">
+                <div class="mobile-nav-icon">☰</div>
+                <div class="mobile-nav-label">Menu</div>
             </a>
         </nav>
         
@@ -135,9 +176,26 @@ def render_mobile_bottom_nav():
             const currentPath = window.location.pathname;
             const navItems = {
                 '/': 'nav-home',
+                '/pages/00_🏠_Main_Menu.py': 'nav-home',
                 '/pages/07_💊_Drug_Database.py': 'nav-drugs',
+                '/pages/02_💊_Antibiotics.py': 'nav-drugs',
+                '/pages/21_💊_Pill_Identifier.py': 'nav-drugs',
+                '/pages/08_📊_TDM.py': 'nav-drugs',
                 '/pages/01_📊_Scores.py': 'nav-scores',
-                '/pages/04_📋_Protocols.py': 'nav-guidelines'
+                '/pages/05_🔬_Labs_and_Calculators.py': 'nav-scores',
+                '/pages/09_🫁_Critical_Care.py': 'nav-critical',
+                '/pages/03_🫁_Ventilator.py': 'nav-critical',
+                '/pages/04_📋_Protocols.py': 'nav-critical',
+                '/pages/15_📋_Guidelines_Tracker.py': 'nav-critical',
+                '/pages/10_📰_Medical_News.py': 'nav-critical',
+                '/pages/06_🩺_Diagnosis.py': 'nav-diagnosis',
+                '/pages/16_📖_Disease_Encyclopedia.py': 'nav-diagnosis',
+                '/pages/13_🏷️_ICD10_Lookup.py': 'nav-diagnosis',
+                '/pages/12_📚_In_Depth_Articles.py': 'nav-diagnosis',
+                '/pages/19_👥_Patient_Education.py': 'nav-diagnosis',
+                '/pages/10_🧭_Decision_Support.py': 'nav-support',
+                '/pages/09_🤖_AI_Assistant.py': 'nav-support',
+                '/pages/11_💉_Vaccination.py': 'nav-support'
             };
             
             // Find matching nav item
@@ -156,21 +214,40 @@ def render_mobile_bottom_nav():
             }
         })();
         
-        // Toggle mobile menu (for Tủ cá nhân)
+        // Toggle mobile menu (sidebar)
         function toggleMobileMenu(event) {
             event.preventDefault();
-            // Open sidebar (Streamlit's built-in sidebar)
-            const sidebarToggle = document.querySelector('[data-testid="stSidebar"]');
-            if (sidebarToggle) {
-                // Trigger sidebar open
-                window.parent.postMessage({type: 'streamlit:setFrameHeight', height: '100%'}, '*');
+            const sidebar = document.querySelector('[data-testid="stSidebar"]');
+            if (sidebar) {
+                const isExpanded = sidebar.getAttribute('aria-expanded') === 'true';
+                sidebar.setAttribute('aria-expanded', (!isExpanded).toString());
+                
+                // Add overlay
+                if (!isExpanded) {
+                    const overlay = document.createElement('div');
+                    overlay.id = 'mobile-sidebar-overlay';
+                    overlay.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.5);
+                        z-index: 998;
+                    `;
+                    overlay.onclick = () => toggleMobileMenu(event);
+                    document.body.appendChild(overlay);
+                } else {
+                    const overlay = document.getElementById('mobile-sidebar-overlay');
+                    if (overlay) overlay.remove();
+                }
             }
         }
         
         // Prevent default link behavior and use Streamlit navigation
         document.querySelectorAll('#mobile-bottom-nav a').forEach(link => {
             link.addEventListener('click', function(e) {
-                if (this.id === 'nav-personal') {
+                if (this.id === 'nav-menu') {
                     return; // Let toggleMobileMenu handle it
                 }
                 
@@ -182,6 +259,18 @@ def render_mobile_bottom_nav():
                 }
             });
         });
+        
+        // Haptic feedback (if supported)
+        function hapticFeedback() {
+            if ('vibrate' in navigator) {
+                navigator.vibrate(10);
+            }
+        }
+        
+        // Add haptic feedback to nav items
+        document.querySelectorAll('#mobile-bottom-nav .mobile-nav-item').forEach(item => {
+            item.addEventListener('touchstart', hapticFeedback, { passive: true });
+        });
         </script>
         """,
         unsafe_allow_html=True
@@ -191,28 +280,46 @@ def render_mobile_bottom_nav():
 def render_mobile_swipe_gestures():
     """
     Add swipe gesture support for mobile navigation
+    Enhanced with sidebar toggle and pull-to-refresh
     """
     st.markdown(
         """
         <script>
-        // Swipe gesture detection for mobile
+        // Enhanced swipe gesture detection for mobile
         (function() {
             let touchStartX = 0;
             let touchEndX = 0;
             let touchStartY = 0;
             let touchEndY = 0;
+            let touchStartTime = 0;
+            let isScrolling = false;
             
             const minSwipeDistance = 50;
+            const maxSwipeTime = 300; // ms
+            const maxVerticalDistance = 30; // px - ignore if scrolling
             
             document.addEventListener('touchstart', function(e) {
                 touchStartX = e.changedTouches[0].screenX;
                 touchStartY = e.changedTouches[0].screenY;
+                touchStartTime = Date.now();
+                isScrolling = false;
+            }, { passive: true });
+            
+            document.addEventListener('touchmove', function(e) {
+                const deltaY = Math.abs(e.changedTouches[0].screenY - touchStartY);
+                if (deltaY > maxVerticalDistance) {
+                    isScrolling = true;
+                }
             }, { passive: true });
             
             document.addEventListener('touchend', function(e) {
                 touchEndX = e.changedTouches[0].screenX;
                 touchEndY = e.changedTouches[0].screenY;
-                handleSwipe();
+                const touchDuration = Date.now() - touchStartTime;
+                
+                if (touchDuration < maxSwipeTime && !isScrolling) {
+                    handleSwipe();
+                }
             }, { passive: true });
             
             function handleSwipe() {
@@ -221,12 +328,24 @@ def render_mobile_swipe_gestures():
                 
                 // Only handle horizontal swipes (ignore vertical scrolling)
                 if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+                    const sidebar = document.querySelector('[data-testid="stSidebar"]');
+                    
                     if (deltaX > 0) {
-                        // Swipe right - could open sidebar or go back
-                        console.log('Swipe right detected');
+                        // Swipe right - open sidebar
+                        if (sidebar && sidebar.getAttribute('aria-expanded') !== 'true') {
+                            const menuBtn = document.querySelector('.mobile-drawer-trigger, #nav-menu');
+                            if (menuBtn) {
+                                menuBtn.click();
+                            }
+                        }
                     } else {
-                        // Swipe left - could close sidebar or go forward
-                        console.log('Swipe left detected');
+                        // Swipe left - close sidebar
+                        if (sidebar && sidebar.getAttribute('aria-expanded') === 'true') {
+                            const menuBtn = document.querySelector('.mobile-drawer-trigger, #nav-menu');
+                            if (menuBtn) {
+                                menuBtn.click();
+                            }
+                        }
                     }
                 }
             }

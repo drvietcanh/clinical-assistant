@@ -47,11 +47,13 @@ def _init_mobile_features():
             render_mobile_optimizations,
         )
         from components.mobile_inputs import render_mobile_input_optimizations
+        from components.mobile_drawer import render_mobile_drawer_styles
 
         render_mobile_bottom_nav()
         render_mobile_swipe_gestures()
         render_mobile_optimizations()
         render_mobile_input_optimizations()
+        render_mobile_drawer_styles()
     except ImportError:
         # Mobile helpers are optional; ignore if not available
         pass
@@ -69,6 +71,20 @@ st.set_page_config(
     page_icon="🩺",
     layout="wide",
     initial_sidebar_state="expanded"
+)
+
+# ========== VIEWPORT & META TAGS FOR MOBILE ==========
+st.markdown(
+    """
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#2D7DF6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Trợ lý lâm sàng">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    """,
+    unsafe_allow_html=True
 )
 
 # ========== INITIALIZE SESSION STATE ==========
@@ -101,10 +117,6 @@ if manifest_file.exists():
     st.markdown(
         """
         <link rel="manifest" href="/static/manifest.json">
-        <meta name="theme-color" content="#1976d2">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="default">
-        <meta name="apple-mobile-web-app-title" content="Trợ lý lâm sàng">
         """,
         unsafe_allow_html=True
     )
@@ -254,8 +266,15 @@ with tab1:
     
     # Group modules by category (cached)
     modules = get_module_list_for_navigation_cached()
-    # Ẩn module Kháng sinh (chuyên sâu) khỏi trang chủ, chỉ truy cập qua Cơ sở dữ liệu thuốc
-    modules = [m for m in modules if m.get("id") != "antibiotics"]
+    # Ẩn tất cả sub-items khỏi trang chủ, chỉ hiển thị các trang chính
+    # Sub-items có thể truy cập qua sidebar navigation hoặc từ trang chính của chúng
+    try:
+        from config.navigation_config import NAVIGATION_SUB_ITEMS
+        sub_item_ids = set(NAVIGATION_SUB_ITEMS.keys())
+        modules = [m for m in modules if m.get("id") not in sub_item_ids]
+    except ImportError:
+        # Fallback: chỉ ẩn antibiotics như trước
+        modules = [m for m in modules if m.get("id") != "antibiotics"]
     
     # Use new navigation structure if available
     try:

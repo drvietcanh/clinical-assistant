@@ -75,6 +75,7 @@ def mobile_text_input(
     key: Optional[str] = None,
     help: Optional[str] = None,
     placeholder: Optional[str] = None,
+    show_clear_button: bool = True,
     **kwargs
 ):
     """
@@ -84,28 +85,65 @@ def mobile_text_input(
         label: Input label
         value: Default value
         max_chars: Maximum characters
-        type: Input type ("default", "email", "tel", "url", "search")
+        type: Input type ("default", "email", "tel", "url", "search", "numeric", "decimal")
         key: Unique key
         help: Help text
         placeholder: Placeholder text
+        show_clear_button: Show clear button on mobile
         **kwargs: Additional st.text_input arguments
     
     Returns:
         Input value
     """
-    # Map input types to mobile keyboard types
+    # Map input types to mobile keyboard types and inputmode
     input_type_map = {
-        "email": "email",
-        "tel": "tel",
-        "url": "url",
-        "search": "search",
-        "default": "text"
+        "email": ("email", "email"),
+        "tel": ("tel", "tel"),
+        "url": ("url", "url"),
+        "search": ("search", "search"),
+        "numeric": ("text", "numeric"),
+        "decimal": ("text", "decimal"),
+        "default": ("text", "text")
     }
     
-    input_type = input_type_map.get(type, "text")
+    input_type, input_mode = input_type_map.get(type, ("text", "text"))
     
     # Add mobile-specific attributes via JavaScript
     if key:
+        clear_button_script = ""
+        if show_clear_button:
+            clear_button_script = f"""
+            // Add clear button
+            const clearBtn = document.createElement('button');
+            clearBtn.type = 'button';
+            clearBtn.innerHTML = '✕';
+            clearBtn.style.cssText = `
+                position: absolute;
+                right: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: transparent;
+                border: none;
+                font-size: 18px;
+                color: #999;
+                cursor: pointer;
+                padding: 4px 8px;
+                z-index: 10;
+                display: none;
+            `;
+            clearBtn.onclick = function() {{
+                input.value = '';
+                input.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                clearBtn.style.display = 'none';
+            }};
+            input.parentElement.style.position = 'relative';
+            input.parentElement.appendChild(clearBtn);
+            
+            input.addEventListener('input', function() {{
+                clearBtn.style.display = input.value ? 'block' : 'none';
+            }});
+            """
+        
         st.markdown(
             f"""
             <script>
@@ -114,8 +152,10 @@ def mobile_text_input(
                 const input = document.querySelector('input[data-testid*="{key}"]');
                 if (input && window.innerWidth <= 768) {{
                     input.type = "{input_type}";
-                    input.inputMode = "{input_type}";
+                    input.setAttribute('inputmode', "{input_mode}");
                     {'input.maxLength = ' + str(max_chars) + ';' if max_chars else ''}
+                    input.setAttribute('autocomplete', "{type if type in ['email', 'tel', 'url'] else 'off'}");
+                    {clear_button_script}
                 }}
             }})();
             </script>
@@ -159,6 +199,7 @@ def render_mobile_input_optimizations():
             input, select, textarea {
                 min-height: 48px;
                 padding: 12px 16px;
+                touch-action: manipulation;
             }
             
             /* Remove spinner buttons on number inputs (mobile) */
@@ -166,25 +207,48 @@ def render_mobile_input_optimizations():
             input[type="number"]::-webkit-outer-spin-button {
                 opacity: 1;
                 height: 48px;
+                width: 32px;
             }
             
             /* Better autocomplete styling */
             input:-webkit-autofill {
                 -webkit-box-shadow: 0 0 0 1000px white inset;
-                -webkit-text-fill-color: var(--text-primary);
+                -webkit-text-fill-color: var(--text-primary, #212529);
+                font-size: 16px !important;
             }
             
             [data-theme="dark"] input:-webkit-autofill {
                 -webkit-box-shadow: 0 0 0 1000px #1e1e1e inset;
-                -webkit-text-fill-color: var(--text-primary);
+                -webkit-text-fill-color: var(--text-primary, #E5E7EB);
             }
             
             /* Focus states */
             input:focus,
             select:focus,
             textarea:focus {
-                outline: 2px solid var(--primary);
+                outline: 2px solid var(--primary, #2D7DF6);
                 outline-offset: 2px;
+                border-color: var(--primary, #2D7DF6);
+            }
+            
+            /* Input container for clear button */
+            .stTextInput > div > div {
+                position: relative;
+            }
+            
+            /* Better select dropdown on mobile */
+            select {
+                appearance: none;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 12px center;
+                padding-right: 40px;
+            }
+            
+            /* Textarea optimization */
+            textarea {
+                resize: vertical;
+                min-height: 100px;
             }
         }
         </style>
