@@ -86,7 +86,53 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
             "Theophylline: tăng nồng độ theophylline",
             "NSAID: tăng nguy cơ co giật"
         ],
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Antacid/Sắt/Kẽm/Sucralfate",
+                    "mechanism": "Cation đa hóa trị tạo phức, giảm hấp thu ciprofloxacin",
+                    "effect": "Giảm nồng độ, giảm hiệu quả điều trị",
+                    "management": "Cách ≥2 giờ (tốt nhất 4 giờ) trước/sau ciprofloxacin"
+                },
+                {
+                    "drug": "Theophylline",
+                    "mechanism": "Ức chế chuyển hóa theophylline",
+                    "effect": "Tăng nồng độ theophylline → độc tính (run, loạn nhịp, co giật)",
+                    "management": "Tránh nếu có thể; theo dõi nồng độ/triệu chứng, giảm liều theophylline"
+                },
+                {
+                    "drug": "Thuốc kéo dài QT (amiodarone, sotalol, macrolide, antipsychotic)",
+                    "mechanism": "Cộng dồn kéo dài QT",
+                    "effect": "Tăng nguy cơ torsades de pointes",
+                    "management": "Tránh phối hợp; nếu bắt buộc, theo dõi ECG chặt"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Tác động vi khuẩn ruột, chuyển hóa/đạm gắn",
+                    "effect": "INR tăng, nguy cơ chảy máu",
+                    "management": "Theo dõi INR, điều chỉnh liều warfarin"
+                },
+                {
+                    "drug": "NSAID",
+                    "mechanism": "Cộng dồn nguy cơ kích thích CNS",
+                    "effect": "Tăng nguy cơ co giật",
+                    "management": "Tránh phối hợp nếu có thể; thận trọng bệnh nhân tiền sử co giật"
+                }
+            ],
+            "minor": []
+        },
         "pregnancy": "C",
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Tránh dùng; fluoroquinolone có nguy cơ tổn thương sụn thai nhi.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ ở mức thấp; cân nhắc tạm ngưng cho bú hoặc chọn thuốc khác.",
+                "recommendation": "Dùng thận trọng, theo dõi trẻ (tiêu chảy, tưa miệng)."
+            }
+        },
         "mechanism_of_action": "Fluoroquinolone thế hệ 2, ức chế DNA gyrase (Gram âm) và topoisomerase IV (Gram dương), ngăn sao chép và sửa chữa DNA. Phổ: Gram âm mạnh (Enterobacteriaceae, Pseudomonas aeruginosa), một số Gram dương và vi khuẩn không điển hình; Gram dương yếu hơn levo/moxi.",
         "monitoring": [
             "Dấu hiệu nhiễm trùng và đáp ứng điều trị",
@@ -110,6 +156,41 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
             "clearance": "Chủ yếu qua thận, cần chỉnh liều ở suy thận"
         },
         "storage": "Bảo quản ở nhiệt độ phòng, tránh ẩm và ánh sáng.",
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều; chuyển hóa tối thiểu.",
+            "moderate": "Không cần chỉnh liều; thận trọng vì dữ liệu hạn chế.",
+            "severe": "Thận trọng; ưu tiên liều thấp và theo dõi nếu phải dùng.",
+            "notes": "Chủ yếu thải trừ qua thận; ảnh hưởng gan không lớn nhưng thận trọng khi suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn, chóng mặt",
+                "Co giật, kích động",
+                "QT kéo dài, loạn nhịp",
+                "Rối loạn đường huyết"
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng ciprofloxacin; than hoạt/rửa dạ dày nếu sớm.",
+                "Theo dõi ECG, dấu hiệu sinh tồn.",
+                "Điều trị co giật: benzodiazepine.",
+                "Bù dịch; theo dõi đường huyết, điện giải.",
+                "Xem xét lọc máu: loại bỏ một phần thuốc nhưng không bắt buộc."
+            ],
+            "monitoring": "ECG (QT), đường huyết, thần kinh, điện giải trong 24-48h."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn.",
+                "timing": "Uống mỗi 12 giờ; cách antacid/sắt/kẽm/sucralfate ≥2 giờ."
+            },
+            "iv": {
+                "reconstitution": "Dung dịch sẵn dùng hoặc pha NS/D5W.",
+                "infusion_rate": "Truyền trong ≥60 phút (400mg/200ml ~3.3ml/phút).",
+                "compatibility": ["NS", "D5W"],
+                "notes": "Tránh truyền nhanh; theo dõi phản ứng tại chỗ và QT."
+            }
+        },
         "black_box_warnings": "Nguy cơ viêm gân/đứt gân, bệnh thần kinh ngoại biên, tác dụng phụ thần kinh trung ương, và làm nặng thêm nhược cơ.",
         "risk_flags": {
             "high_alert": True,
@@ -126,7 +207,7 @@ FLUOROQUINOLONE_ANTIBIOTICS = {
             "CDC Guidelines - Anthrax Treatment",
             "WHO Essential Medicines List"
         ],
-        "last_updated": "2025-02-18",
+        "last_updated": "2026-01-07",
     },
     
     "Norfloxacin": {

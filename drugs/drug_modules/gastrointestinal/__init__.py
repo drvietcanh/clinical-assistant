@@ -8,7 +8,7 @@ from .h2_receptor_antagonists import H2_RECEPTOR_ANTAGONISTS_DRUGS
 from .mucosal_protectants import MUCOSAL_PROTECTANTS_DRUGS
 from .proton_pump_inhibitors import PROTON_PUMP_INHIBITORS_DRUGS
 from .proton_pump_inhibitor_ppis import PROTON_PUMP_INHIBITOR_PPIS_DRUGS
-from .ppis import PPIS_DRUGS  # New simplified PPIs module
+# ppis.py đã được hợp nhất vào proton_pump_inhibitors.py
 from .prokinetic_antiemetics import PROKINETIC_ANTIEMETICS_DRUGS
 from .antiemetic_5_ht3_antagonists import ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS
 from .pcab import PCAB_DRUGS
@@ -26,7 +26,7 @@ GASTROINTESTINAL_DRUGS = {
     **MUCOSAL_PROTECTANTS_DRUGS,
     **PROTON_PUMP_INHIBITORS_DRUGS,
     **PROTON_PUMP_INHIBITOR_PPIS_DRUGS,
-    **PPIS_DRUGS,  # New PPIs (may have duplicates with above - need to verify)
+    # PPIS_DRUGS đã được hợp nhất vào PROTON_PUMP_INHIBITORS_DRUGS
     **PROKINETIC_ANTIEMETICS_DRUGS,
     **ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS,
     **PCAB_DRUGS,

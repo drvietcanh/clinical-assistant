@@ -44,6 +44,25 @@ STATINS_DRUGS = {
             "Có thai (Gây quái thai)",
             "Cho con bú"
     ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Bệnh gan hoạt động (active liver disease) - tăng men gan kéo dài, viêm gan",
+                "Có thai (pregnancy) - FDA category X, gây dị tật thai nhi",
+                "Cho con bú (lactation) - bài tiết vào sữa mẹ",
+                "Tiêu cơ vân đang hoạt động (active myopathy/rhabdomyolysis)",
+                "Dị ứng với atorvastatin hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Suy thận - thận trọng, theo dõi chức năng thận",
+                "Suy gan - thận trọng, theo dõi men gan thường xuyên",
+                "Uống rượu nhiều - tăng nguy cơ viêm gan",
+                "Người cao tuổi - tăng nguy cơ đau cơ, tiêu cơ vân",
+                "Đái tháo đường - statins có thể tăng đường huyết nhẹ",
+                "Bệnh tuyến giáp - tăng nguy cơ đau cơ",
+                "Dùng cùng thuốc ức chế CYP3A4 - tăng nồng độ atorvastatin",
+                "Dùng grapefruit juice - tăng nồng độ atorvastatin"
+            ]
+        },
         "interactions": [
             "Fibrate (Gemfibrozil): Tăng nguy cơ tan rã cơ (tránh dùng chung).",
             "Azole antifungals, Macrolide: Tăng nồng độ statin.",
@@ -100,31 +119,102 @@ STATINS_DRUGS = {
                 "recommendation": "Không sử dụng. Ngưng cho con bú hoặc ngưng thuốc.",
             },
         },
-        "pregnancy": "",
+        "pregnancy": "X - Chống chỉ định",
         "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": [],
+            "major": [
+                {
+                    "drug": "Gemfibrozil",
+                    "mechanism": "Hiệp đồng độc cơ, tăng nguy cơ tiêu cơ vân",
+                    "effect": "Tăng nguy cơ tiêu cơ vân nghiêm trọng",
+                    "management": "Tránh dùng chung. Nếu cần hạ triglyceride, cân nhắc fenofibrate."
+                },
+                {
+                    "drug": "Cyclosporine",
+                    "mechanism": "Ức chế CYP3A4 và OATP1B1, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ tiêu cơ vân",
+                    "management": "Giới hạn liều atorvastatin 10mg/ngày hoặc tránh dùng."
+                },
+                {
+                    "drug": "Azole antifungals (Ketoconazole, Itraconazole)",
+                    "mechanism": "Ức chế CYP3A4 mạnh, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ độc cơ",
+                    "management": "Tránh dùng cùng hoặc giảm liều atorvastatin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Macrolide antibiotics (Clarithromycin, Erythromycin)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ độc cơ",
+                    "management": "Giảm liều hoặc tạm ngừng atorvastatin trong thời gian dùng kháng sinh."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Atorvastatin có thể tăng nhẹ tác dụng chống đông",
+                    "effect": "Tăng INR",
+                    "management": "Theo dõi INR khi khởi atorvastatin hoặc thay đổi liều."
+                },
+                {
+                    "drug": "Grapefruit juice",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ atorvastatin",
+                    "effect": "Tăng nguy cơ độc cơ",
+                    "management": "Tránh uống grapefruit juice khi dùng atorvastatin."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Niacin",
+                    "mechanism": "Hiệp đồng độc cơ",
+                    "effect": "Tăng nguy cơ đau cơ",
+                    "management": "Theo dõi CK và triệu chứng cơ."
+                }
+            ],
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": "",
-            "notes": "",
+            "mild": "Thận trọng, theo dõi men gan",
+            "moderate": "Giảm liều hoặc tránh nếu men gan tăng kéo dài",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Suy gan làm tăng nồng độ atorvastatin do giảm chuyển hóa qua gan.",
         },
         "overdose_management": {
-            "symptoms": [],
-            "antidote": "",
-            "treatment": [],
-            "monitoring": "",
+            "symptoms": [
+                "Đau cơ nặng, CK tăng, tiêu cơ vân, tăng men gan"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng atorvastatin",
+                "Truyền dịch tích cực nếu nghi tiêu cơ vân; kiềm hóa nước tiểu nếu cần",
+                "Theo dõi CK, men gan, creatinine",
+                "Lọc máu nếu suy thận cấp do tiêu cơ vân"
+            ],
+            "monitoring": "CK, creatinine, AST/ALT, điện giải, lượng nước tiểu",
         },
-        "reversal_agents": None,
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều. Atorvastatin không thải trừ chủ yếu qua thận.",
+            "under_30": "Không cần chỉnh liều. Atorvastatin không thải trừ chủ yếu qua thận.",
+            "dialysis": "Không cần chỉnh liều. Atorvastatin không được lọc sạch qua thẩm phân máu.",
+            "notes": "Atorvastatin chủ yếu thải trừ qua gan và mật. Không cần điều chỉnh liều ở suy thận."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, điều trị tiêu cơ vân nếu có (truyền dịch, kiềm hóa nước tiểu), theo dõi CK và chức năng thận."
+        },
         "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn",
+                "timing": "Uống 1 lần/ngày, có thể uống bất kỳ lúc nào (khác với simvastatin phải uống buổi tối)"
+            }
         },
         "references": {
-            "primary_sources": [],
-            "last_updated": "",
-            "evidence_level": "",
+            "primary_sources": [
+                "FDA Drug Label - Lipitor (atorvastatin)",
+                "ACC/AHA 2018 Cholesterol Guidelines",
+                "ESC/EAS Guidelines for Dyslipidaemias 2019"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Multiple large RCTs (PROVE-IT, TNT, IDEAL)",
         },
     },
     "Simvastatin":     {
@@ -387,20 +477,62 @@ STATINS_DRUGS = {
     ],
             "monitoring": "",
         },
-        "contraindications": [],
-        "interactions": [],
-        "pregnancy": "",
+        "contraindications": [
+            "Bệnh gan hoạt động",
+            "Có thai (Gây quái thai)",
+            "Cho con bú"
+        ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Bệnh gan hoạt động (active liver disease) - tăng men gan kéo dài, viêm gan",
+                "Có thai (pregnancy) - FDA category X, gây dị tật thai nhi",
+                "Cho con bú (lactation) - bài tiết vào sữa mẹ",
+                "Tiêu cơ vân đang hoạt động (active myopathy/rhabdomyolysis)",
+                "Dị ứng với rosuvastatin hoặc bất kỳ thành phần nào",
+                "Dùng cùng cyclosporine (trừ khi liều rosuvastatin ≤5mg/ngày)"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (ClCr <30 mL/min) - khởi đầu 5mg, tối đa 10mg/ngày",
+                "Bệnh nhân châu Á - cân nhắc khởi đầu 5mg do tăng nồng độ",
+                "Suy gan - thận trọng, theo dõi men gan thường xuyên",
+                "Người cao tuổi - tăng nguy cơ đau cơ",
+                "Đái tháo đường - statins có thể tăng đường huyết nhẹ",
+                "Liều cao (40mg) - tăng nguy cơ protein niệu"
+            ]
+        },
+        "interactions": [
+            "Cyclosporine: Tăng nồng độ rosuvastatin 7 lần - Giới hạn liều 5mg/ngày.",
+            "Gemfibrozil: Tăng nồng độ rosuvastatin 2 lần - Tránh dùng chung.",
+            "Warfarin: Tăng INR - Theo dõi INR.",
+            "Thuốc kháng acid: Giảm hấp thu - Uống cách nhau 2 giờ."
+        ],
+        "pregnancy": "X - Chống chỉ định",
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
+            "fda_category": "X",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH. Statin can thiệp vào tổng hợp cholesterol cần thiết cho sự phát triển của thai nhi. Ngưng thuốc ngay lập tức nếu phát hiện có thai.",
             "lactation": {
-                "safety": "",
-                "details": "",
-                "recommendation": "",
+                "safety": "Avoid",
+                "details": "Có khả năng bài tiết vào sữa mẹ và gây ảnh hưởng đến chuyển hóa lipid của trẻ.",
+                "recommendation": "Không sử dụng. Ngưng cho con bú hoặc ngưng thuốc.",
             },
         },
-        "reversal_agents": None,
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, khởi đầu 5-10mg. Theo dõi chức năng thận.",
+            "under_30": "Khởi đầu 5mg, tối đa 10mg/ngày. Thận trọng, theo dõi chức năng thận.",
+            "dialysis": "Khởi đầu 5mg, tối đa 10mg/ngày. Rosuvastatin không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Rosuvastatin thải trừ một phần qua thận (10%). Cần điều chỉnh liều ở suy thận nặng."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, điều trị tiêu cơ vân nếu có (truyền dịch, kiềm hóa nước tiểu), theo dõi CK và chức năng thận."
+        },
         "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn",
+                "timing": "Uống 1 lần/ngày, có thể uống bất kỳ lúc nào"
+            }
         },
         "references": {
             "primary_sources": [],

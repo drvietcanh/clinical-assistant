@@ -49,6 +49,10 @@ VITAMINS_DRUGS = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -64,14 +68,29 @@ VITAMINS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều đáng kể; dùng thận trọng nếu suy thận trung bình.",
+            "under_30": "Thận trọng; cân nhắc giảm liều nếu dùng kéo dài.",
+            "dialysis": "Có thể dùng; không cần chỉnh liều đáng kể, theo dõi lâm sàng.",
+            "notes": "Thiamine được thải trừ một phần qua thận nhưng an toàn ở đa số bệnh nhân; điều chỉnh chủ yếu dựa trên lâm sàng.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí quá liều chủ yếu là hỗ trợ và điều trị triệu chứng.",
+        },
         "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn; thường dùng trước khi truyền glucose ở bệnh nhân nghiện rượu.",
+                "timing": "Dùng đúng liều, ưu tiên trước truyền glucose trong hội chứng Wernicke-Korsakoff.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -134,6 +153,10 @@ VITAMINS_DRUGS = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -149,14 +172,29 @@ VITAMINS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều đáng kể; dùng thận trọng nếu suy thận trung bình.",
+            "under_30": "Thận trọng; cân nhắc giảm liều nếu dùng kéo dài.",
+            "dialysis": "Có thể dùng; không cần chỉnh liều đáng kể, theo dõi lâm sàng.",
+            "notes": "Pyridoxine thải trừ chủ yếu qua thận nhưng an toàn ở đa số bệnh nhân; điều chỉnh chủ yếu dựa trên lâm sàng.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí quá liều chủ yếu là hỗ trợ và điều trị triệu chứng.",
+        },
         "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn.",
+                "timing": "Thường dùng 1–3 lần/ngày tùy chỉ định (dự phòng, điều trị, nôn nghén).",
+            },
         },
         "references": {
             "primary_sources": [
@@ -222,6 +260,10 @@ VITAMINS_DRUGS = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -237,14 +279,29 @@ VITAMINS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều đáng kể; dùng thận trọng nếu suy thận trung bình.",
+            "under_30": "Thận trọng; cân nhắc giảm liều nếu dùng kéo dài.",
+            "dialysis": "Có thể dùng; không cần chỉnh liều đáng kể, theo dõi lâm sàng.",
+            "notes": "Vitamin B12 tương đối an toàn ở bệnh nhân suy thận; điều chỉnh chủ yếu dựa trên lâm sàng.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí quá liều chủ yếu là hỗ trợ và điều trị triệu chứng.",
+        },
         "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn.",
+                "timing": "Dùng đều hàng ngày hoặc theo lịch tiêm/đường uống do bác sĩ chỉ định.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -311,6 +368,15 @@ VITAMINS_DRUGS = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Sỏi thận oxalate đang hoạt động (liều cao).",
+            ],
+            "tương_đối": [
+                "Tiền sử sỏi thận oxalate.",
+                "Thiếu G6PD (nguy cơ tan máu với liều cao đường IV).",
+            ],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -326,14 +392,29 @@ VITAMINS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều ở bệnh nhân chức năng thận bình thường.",
+            "30_60": "Dùng thận trọng với liều cao kéo dài; theo dõi nguy cơ sỏi thận.",
+            "under_30": "Thận trọng, tránh liều rất cao kéo dài; cân nhắc giảm liều.",
+            "dialysis": "Dùng thận trọng, theo dõi nguy cơ tích lũy và sỏi thận.",
+            "notes": "Vitamin C liều cao có thể tăng nguy cơ sỏi oxalate, đặc biệt ở bệnh nhân suy thận.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí quá liều chủ yếu là hỗ trợ, ngừng thuốc, bù dịch và theo dõi sỏi thận/tan máu.",
+        },
         "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng thức ăn để giảm kích ứng dạ dày khi dùng liều cao.",
+                "timing": "Chia liều trong ngày nếu dùng liều cao; tránh dùng liều rất cao kéo dài nếu có tiền sử sỏi thận.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -381,7 +462,7 @@ VITAMINS_DRUGS = {
         "monitoring": [
             "Nồng độ 25(OH)D máu",
             "Calci máu"
-    ],
+        ],
         "side_effects": [],
         "contraindications": [],
         "interactions": [],
@@ -396,6 +477,10 @@ VITAMINS_DRUGS = {
             "major": [],
             "moderate": [],
             "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [],
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -412,14 +497,29 @@ VITAMINS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều ở bệnh nhân chức năng thận bình thường.",
+            "30_60": "Thận trọng khi dùng liều tải cao kéo dài; theo dõi calci và chức năng thận.",
+            "under_30": "Thận trọng; cân nhắc giảm liều và theo dõi calci, đặc biệt nếu phối hợp calcium.",
+            "dialysis": "Thận trọng; ưu tiên dạng hoạt chất (calcitriol) nếu suy thận nặng.",
+            "notes": "Vitamin D3 cần chức năng thận để chuyển hóa thành dạng hoạt động; suy thận nặng có thể cần dùng calcitriol thay thế.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí quá liều chủ yếu là ngừng thuốc, điều trị tăng calci máu và hỗ trợ.",
+        },
         "administration_instructions": {
+            "oral": {
+                "with_food": "Thường dùng cùng thức ăn hoặc theo lịch hàng ngày/tuần theo chỉ định.",
+                "timing": "Tuân thủ liều nạp và liều duy trì; không tự ý tăng liều để tránh tăng calci máu.",
+            },
         },
         "references": {
             "primary_sources": [

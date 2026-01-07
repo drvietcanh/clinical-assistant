@@ -414,7 +414,11 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
         'Giảm liều 50% (Child-Pugh C). Ranitidine chuyển hóa ở gan một phần, thải trừ qua thận. Suy gan nặng làm giảm chuyển hóa.'
         , 'notes':
         'Giảm liều ở suy gan trung bình và nặng. Thận trọng theo dõi.'},
-        'overdose_management': {'symptoms': [
+        'renal_adjustment': {'normal': 'Không cần chỉnh liều',
+        '30_60': 'Giảm liều 50%. Ranitidine thải trừ một phần qua thận (30-50% thải nguyên dạng).',
+        'under_30': 'Giảm liều 50% hoặc tăng khoảng cách giữa các liều. Suy thận nặng làm giảm thải trừ ranitidine.',
+        'dialysis': 'Giảm liều 50% hoặc bổ sung liều sau lọc máu. Ranitidine được lọc một phần qua thẩm phân máu.',
+        'notes': 'Ranitidine thải trừ một phần qua thận (30-50% thải nguyên dạng). Suy thận làm giảm thải trừ, tăng nồng độ thuốc. Cần giảm liều ở suy thận.'}, 'overdose_management': {'symptoms': [
         'H2 blocker ít gây quá liều nghiêm trọng',
         'Triệu chứng nhẹ: nhức đầu, buồn nôn, chóng mặt',
         'Liều rất cao có thể gây: lú lẫn, co giật (hiếm)'], 'antidote':

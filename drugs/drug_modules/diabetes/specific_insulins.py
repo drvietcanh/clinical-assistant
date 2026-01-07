@@ -15,6 +15,20 @@ SPECIFIC_INSULINS_DRUGS = {
             "Hạ đường huyết",
             "Dị ứng insulin aspart"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Hạ đường huyết đang diễn ra (hypoglycemia)",
+                "Dị ứng với insulin aspart hoặc bất kỳ thành phần nào",
+                "Dị ứng với insulin nói chung"
+            ],
+            "tương_đối": [
+                "Suy thận - cần giảm liều insulin do giảm thải trừ, tăng nguy cơ hạ đường huyết",
+                "Suy gan - cần giảm liều insulin do giảm chuyển hóa glucose",
+                "Bệnh nhân cao tuổi - tăng nguy cơ hạ đường huyết, cần theo dõi chặt chẽ",
+                "Bệnh nhân có bệnh tim mạch - thận trọng với hạ đường huyết",
+                "Phụ nữ có thai - cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ"
+            ]
+        },
         "dosage": {
             "adult_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn",
             "notes": "Tiêm 15 phút TRƯỚC bữa ăn. Fiasp: có thể tiêm ngay trước ăn hoặc sau ăn 20 phút."
@@ -96,6 +110,13 @@ SPECIFIC_INSULINS_DRUGS = {
               "severe": "Không đổi",
               "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
           },
+          "renal_adjustment": {
+              "normal": "Không cần chỉnh liều",
+              "30_60": "Giảm liều 25-50%. Suy thận làm giảm thải trừ insulin, tăng nguy cơ hạ đường huyết.",
+              "under_30": "Giảm liều 50% hoặc hơn. Theo dõi đường huyết chặt chẽ. Tăng nguy cơ hạ đường huyết.",
+              "dialysis": "Giảm liều đáng kể. Insulin được lọc một phần qua thẩm phân máu. Theo dõi đường huyết chặt chẽ trước và sau lọc máu.",
+              "notes": "Insulin thải trừ qua thận. Suy thận làm giảm thải trừ insulin, tăng thời gian bán thải, tăng nguy cơ hạ đường huyết. Cần giảm liều và theo dõi đường huyết chặt chẽ."
+          },
           "overdose_management": {
               "symptoms": [
                   "Hạ đường huyết nặng",
@@ -158,6 +179,20 @@ SPECIFIC_INSULINS_DRUGS = {
             "Hạ đường huyết",
             "Dị ứng insulin degludec"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Hạ đường huyết đang diễn ra (hypoglycemia)",
+                "Dị ứng với degludec hoặc bất kỳ thành phần nào",
+                "Dị ứng với insulin nói chung"
+            ],
+            "tương_đối": [
+                "Suy thận - cần giảm liều insulin do giảm thải trừ, tăng nguy cơ hạ đường huyết",
+                "Suy gan - cần giảm liều insulin do giảm chuyển hóa glucose",
+                "Bệnh nhân cao tuổi - tăng nguy cơ hạ đường huyết, cần theo dõi chặt chẽ",
+                "Bệnh nhân có bệnh tim mạch - thận trọng với hạ đường huyết",
+                "Phụ nữ có thai - cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ"
+            ]
+        },
         "dosage": {
             "adult_basal": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày",
             "notes": "Tiêm 1 lần/ngày, bất kỳ giờ nào trong ngày (linh hoạt về thời gian). Tác dụng kéo dài >42 giờ → ít nguy cơ hạ đường huyết nhất."
@@ -241,6 +276,13 @@ SPECIFIC_INSULINS_DRUGS = {
               "severe": "Không đổi",
               "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
           },
+          "renal_adjustment": {
+              "normal": "Không cần chỉnh liều",
+              "30_60": "Giảm liều 25-50%. Suy thận làm giảm thải trừ insulin, tăng nguy cơ hạ đường huyết.",
+              "under_30": "Giảm liều 50% hoặc hơn. Theo dõi đường huyết chặt chẽ. Tăng nguy cơ hạ đường huyết.",
+              "dialysis": "Giảm liều đáng kể. Insulin được lọc một phần qua thẩm phân máu. Theo dõi đường huyết chặt chẽ trước và sau lọc máu.",
+              "notes": "Insulin thải trừ qua thận. Suy thận làm giảm thải trừ insulin, tăng thời gian bán thải, tăng nguy cơ hạ đường huyết. Cần giảm liều và theo dõi đường huyết chặt chẽ."
+          },
           "overdose_management": {
               "symptoms": [
                   "Hạ đường huyết nặng",
@@ -292,6 +334,20 @@ SPECIFIC_INSULINS_DRUGS = {
             "Hạ đường huyết",
             "Dị ứng insulin detemir"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Hạ đường huyết đang diễn ra (hypoglycemia)",
+                "Dị ứng với detemir hoặc bất kỳ thành phần nào",
+                "Dị ứng với insulin nói chung"
+            ],
+            "tương_đối": [
+                "Suy thận - cần giảm liều insulin do giảm thải trừ, tăng nguy cơ hạ đường huyết",
+                "Suy gan - cần giảm liều insulin do giảm chuyển hóa glucose",
+                "Bệnh nhân cao tuổi - tăng nguy cơ hạ đường huyết, cần theo dõi chặt chẽ",
+                "Bệnh nhân có bệnh tim mạch - thận trọng với hạ đường huyết",
+                "Phụ nữ có thai - cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ"
+            ]
+        },
         "dosage": {
             "adult_basal": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần",
             "notes": "Tiêm 1-2 lần/ngày. Có thể cần 2 lần/ngày ở một số bệnh nhân. KHÔNG có peak tác dụng."
@@ -375,6 +431,13 @@ SPECIFIC_INSULINS_DRUGS = {
               "severe": "Không đổi",
               "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
           },
+          "renal_adjustment": {
+              "normal": "Không cần chỉnh liều",
+              "30_60": "Giảm liều 25-50%. Suy thận làm giảm thải trừ insulin, tăng nguy cơ hạ đường huyết.",
+              "under_30": "Giảm liều 50% hoặc hơn. Theo dõi đường huyết chặt chẽ. Tăng nguy cơ hạ đường huyết.",
+              "dialysis": "Giảm liều đáng kể. Insulin được lọc một phần qua thẩm phân máu. Theo dõi đường huyết chặt chẽ trước và sau lọc máu.",
+              "notes": "Insulin thải trừ qua thận. Suy thận làm giảm thải trừ insulin, tăng thời gian bán thải, tăng nguy cơ hạ đường huyết. Cần giảm liều và theo dõi đường huyết chặt chẽ."
+          },
           "overdose_management": {
               "symptoms": [
                   "Hạ đường huyết nặng",
@@ -427,6 +490,20 @@ SPECIFIC_INSULINS_DRUGS = {
             "Hạ đường huyết",
             "Dị ứng insulin glargine"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Hạ đường huyết đang diễn ra (hypoglycemia)",
+                "Dị ứng với glargine hoặc bất kỳ thành phần nào",
+                "Dị ứng với insulin nói chung"
+            ],
+            "tương_đối": [
+                "Suy thận - cần giảm liều insulin do giảm thải trừ, tăng nguy cơ hạ đường huyết",
+                "Suy gan - cần giảm liều insulin do giảm chuyển hóa glucose",
+                "Bệnh nhân cao tuổi - tăng nguy cơ hạ đường huyết, cần theo dõi chặt chẽ",
+                "Bệnh nhân có bệnh tim mạch - thận trọng với hạ đường huyết",
+                "Phụ nữ có thai - cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ"
+            ]
+        },
         "dosage": {
             "adult_basal": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày",
             "toujeo": "Toujeo (U-300): liều cao hơn 20-30% so với Lantus",
@@ -513,6 +590,13 @@ SPECIFIC_INSULINS_DRUGS = {
               "severe": "Không đổi",
               "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
           },
+          "renal_adjustment": {
+              "normal": "Không cần chỉnh liều",
+              "30_60": "Giảm liều 25-50%. Suy thận làm giảm thải trừ insulin, tăng nguy cơ hạ đường huyết.",
+              "under_30": "Giảm liều 50% hoặc hơn. Theo dõi đường huyết chặt chẽ. Tăng nguy cơ hạ đường huyết.",
+              "dialysis": "Giảm liều đáng kể. Insulin được lọc một phần qua thẩm phân máu. Theo dõi đường huyết chặt chẽ trước và sau lọc máu.",
+              "notes": "Insulin thải trừ qua thận. Suy thận làm giảm thải trừ insulin, tăng thời gian bán thải, tăng nguy cơ hạ đường huyết. Cần giảm liều và theo dõi đường huyết chặt chẽ."
+          },
           "overdose_management": {
               "symptoms": [
                   "Hạ đường huyết nặng",
@@ -565,6 +649,20 @@ SPECIFIC_INSULINS_DRUGS = {
             "Hạ đường huyết",
             "Dị ứng insulin glulisine"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Hạ đường huyết đang diễn ra (hypoglycemia)",
+                "Dị ứng với glulisine hoặc bất kỳ thành phần nào",
+                "Dị ứng với insulin nói chung"
+            ],
+            "tương_đối": [
+                "Suy thận - cần giảm liều insulin do giảm thải trừ, tăng nguy cơ hạ đường huyết",
+                "Suy gan - cần giảm liều insulin do giảm chuyển hóa glucose",
+                "Bệnh nhân cao tuổi - tăng nguy cơ hạ đường huyết, cần theo dõi chặt chẽ",
+                "Bệnh nhân có bệnh tim mạch - thận trọng với hạ đường huyết",
+                "Phụ nữ có thai - cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ"
+            ]
+        },
         "dosage": {
             "adult_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn",
             "notes": "Tiêm 15 phút TRƯỚC bữa ăn hoặc ngay sau khi bắt đầu ăn."
@@ -645,6 +743,13 @@ SPECIFIC_INSULINS_DRUGS = {
               "severe": "Không đổi",
               "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
           },
+          "renal_adjustment": {
+              "normal": "Không cần chỉnh liều",
+              "30_60": "Giảm liều 25-50%. Suy thận làm giảm thải trừ insulin, tăng nguy cơ hạ đường huyết.",
+              "under_30": "Giảm liều 50% hoặc hơn. Theo dõi đường huyết chặt chẽ. Tăng nguy cơ hạ đường huyết.",
+              "dialysis": "Giảm liều đáng kể. Insulin được lọc một phần qua thẩm phân máu. Theo dõi đường huyết chặt chẽ trước và sau lọc máu.",
+              "notes": "Insulin thải trừ qua thận. Suy thận làm giảm thải trừ insulin, tăng thời gian bán thải, tăng nguy cơ hạ đường huyết. Cần giảm liều và theo dõi đường huyết chặt chẽ."
+          },
           "overdose_management": {
               "symptoms": [
                   "Hạ đường huyết nặng",
@@ -708,6 +813,20 @@ SPECIFIC_INSULINS_DRUGS = {
             "Hạ đường huyết",
             "Dị ứng insulin lispro"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Hạ đường huyết đang diễn ra (hypoglycemia)",
+                "Dị ứng với lispro hoặc bất kỳ thành phần nào",
+                "Dị ứng với insulin nói chung"
+            ],
+            "tương_đối": [
+                "Suy thận - cần giảm liều insulin do giảm thải trừ, tăng nguy cơ hạ đường huyết",
+                "Suy gan - cần giảm liều insulin do giảm chuyển hóa glucose",
+                "Bệnh nhân cao tuổi - tăng nguy cơ hạ đường huyết, cần theo dõi chặt chẽ",
+                "Bệnh nhân có bệnh tim mạch - thận trọng với hạ đường huyết",
+                "Phụ nữ có thai - cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ"
+            ]
+        },
         "dosage": {
             "adult_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn (điều chỉnh theo carbohydrate và đường huyết)",
             "adult_correction": "Điều chỉnh theo sliding scale hoặc insulin-to-carbohydrate ratio",
@@ -799,6 +918,13 @@ SPECIFIC_INSULINS_DRUGS = {
              "severe": "Không đổi",
              "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
          },
+          "renal_adjustment": {
+              "normal": "Không cần chỉnh liều",
+              "30_60": "Giảm liều 25-50%. Suy thận làm giảm thải trừ insulin, tăng nguy cơ hạ đường huyết.",
+              "under_30": "Giảm liều 50% hoặc hơn. Theo dõi đường huyết chặt chẽ. Tăng nguy cơ hạ đường huyết.",
+              "dialysis": "Giảm liều đáng kể. Insulin được lọc một phần qua thẩm phân máu. Theo dõi đường huyết chặt chẽ trước và sau lọc máu.",
+              "notes": "Insulin thải trừ qua thận. Suy thận làm giảm thải trừ insulin, tăng thời gian bán thải, tăng nguy cơ hạ đường huyết. Cần giảm liều và theo dõi đường huyết chặt chẽ."
+          },
          "overdose_management": {
              "symptoms": [
                  "Hạ đường huyết nặng",
@@ -861,6 +987,20 @@ SPECIFIC_INSULINS_DRUGS = {
             "Hạ đường huyết",
             "Dị ứng insulin"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Hạ đường huyết đang diễn ra (hypoglycemia)",
+                "Dị ứng với nph hoặc bất kỳ thành phần nào",
+                "Dị ứng với insulin nói chung"
+            ],
+            "tương_đối": [
+                "Suy thận - cần giảm liều insulin do giảm thải trừ, tăng nguy cơ hạ đường huyết",
+                "Suy gan - cần giảm liều insulin do giảm chuyển hóa glucose",
+                "Bệnh nhân cao tuổi - tăng nguy cơ hạ đường huyết, cần theo dõi chặt chẽ",
+                "Bệnh nhân có bệnh tim mạch - thận trọng với hạ đường huyết",
+                "Phụ nữ có thai - cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ"
+            ]
+        },
         "dosage": {
             "adult_basal": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần",
             "notes": "Tiêm 1-2 lần/ngày. Có peak tác dụng (2-8 giờ sau tiêm) → nguy cơ hạ đường huyết giữa các bữa ăn."
@@ -944,6 +1084,13 @@ SPECIFIC_INSULINS_DRUGS = {
               "severe": "Không đổi",
               "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
           },
+          "renal_adjustment": {
+              "normal": "Không cần chỉnh liều",
+              "30_60": "Giảm liều 25-50%. Suy thận làm giảm thải trừ insulin, tăng nguy cơ hạ đường huyết.",
+              "under_30": "Giảm liều 50% hoặc hơn. Theo dõi đường huyết chặt chẽ. Tăng nguy cơ hạ đường huyết.",
+              "dialysis": "Giảm liều đáng kể. Insulin được lọc một phần qua thẩm phân máu. Theo dõi đường huyết chặt chẽ trước và sau lọc máu.",
+              "notes": "Insulin thải trừ qua thận. Suy thận làm giảm thải trừ insulin, tăng thời gian bán thải, tăng nguy cơ hạ đường huyết. Cần giảm liều và theo dõi đường huyết chặt chẽ."
+          },
           "overdose_management": {
               "symptoms": [
                   "Hạ đường huyết nặng",
@@ -998,6 +1145,20 @@ SPECIFIC_INSULINS_DRUGS = {
             "Hạ đường huyết",
             "Dị ứng insulin"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Hạ đường huyết đang diễn ra (hypoglycemia)",
+                "Dị ứng với regular hoặc bất kỳ thành phần nào",
+                "Dị ứng với insulin nói chung"
+            ],
+            "tương_đối": [
+                "Suy thận - cần giảm liều insulin do giảm thải trừ, tăng nguy cơ hạ đường huyết",
+                "Suy gan - cần giảm liều insulin do giảm chuyển hóa glucose",
+                "Bệnh nhân cao tuổi - tăng nguy cơ hạ đường huyết, cần theo dõi chặt chẽ",
+                "Bệnh nhân có bệnh tim mạch - thận trọng với hạ đường huyết",
+                "Phụ nữ có thai - cần điều chỉnh liều theo nhu cầu tăng lên trong thai kỳ"
+            ]
+        },
         "dosage": {
             "sc_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn",
             "iv_dka": "0.1 đơn vị/kg/giờ IV truyền liên tục",
@@ -1080,6 +1241,13 @@ SPECIFIC_INSULINS_DRUGS = {
               "moderate": "Không đổi",
               "severe": "Không đổi",
               "notes": "Insulin không chuyển hóa qua gan, không cần điều chỉnh liều ở suy gan."
+          },
+          "renal_adjustment": {
+              "normal": "Không cần chỉnh liều",
+              "30_60": "Giảm liều 25-50%. Suy thận làm giảm thải trừ insulin, tăng nguy cơ hạ đường huyết.",
+              "under_30": "Giảm liều 50% hoặc hơn. Theo dõi đường huyết chặt chẽ. Tăng nguy cơ hạ đường huyết.",
+              "dialysis": "Giảm liều đáng kể. Insulin được lọc một phần qua thẩm phân máu. Theo dõi đường huyết chặt chẽ trước và sau lọc máu.",
+              "notes": "Insulin thải trừ qua thận. Suy thận làm giảm thải trừ insulin, tăng thời gian bán thải, tăng nguy cơ hạ đường huyết. Cần giảm liều và theo dõi đường huyết chặt chẽ."
           },
           "overdose_management": {
               "symptoms": [

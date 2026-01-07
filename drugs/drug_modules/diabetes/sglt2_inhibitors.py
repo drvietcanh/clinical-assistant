@@ -83,9 +83,36 @@ SGLT2_INHIBITORS_DRUGS = {
         },
         "storage": "",
         "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": [],
+            "major": [
+                {
+                    "drug": "Diuretics (Furosemide, Hydrochlorothiazide, etc.)",
+                    "mechanism": "Cả hai đều tăng thải nước và natri",
+                    "effect": "Tăng nguy cơ mất nước, hạ huyết áp, suy thận cấp",
+                    "management": "Theo dõi huyết áp và thể tích dịch. Có thể cần giảm liều diuretic hoặc tạm ngừng SGLT2i."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Insulin, Sulfonylureas",
+                    "mechanism": "SGLT2i tăng thải glucose qua nước tiểu, có thể tăng nguy cơ hạ đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Giảm liều insulin hoặc sulfonylurea khi bắt đầu SGLT2i. Theo dõi đường huyết chặt chẽ."
+                },
+                {
+                    "drug": "ACE inhibitors, ARBs",
+                    "mechanism": "Cả hai đều có thể ảnh hưởng đến chức năng thận",
+                    "effect": "Tăng nguy cơ suy thận cấp (hiếm)",
+                    "management": "Theo dõi eGFR và creatinine khi bắt đầu hoặc thay đổi liều."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "SGLT2i có thể ảnh hưởng nhẹ đến nồng độ digoxin",
+                    "effect": "Tăng nhẹ nồng độ digoxin",
+                    "management": "Theo dõi nồng độ digoxin nếu dùng cùng."
+                }
+            ]
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -102,13 +129,24 @@ SGLT2_INHIBITORS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Có thể dùng nhưng cần điều chỉnh liều. Không dùng nếu eGFR <30.",
+            "under_30": "CHỐNG CHỈ ĐỊNH nếu eGFR <20.",
+            "dialysis": "CHỐNG CHỈ ĐỊNH. Không dùng khi đang lọc máu.",
+            "notes": "Empagliflozin chống chỉ định ở suy thận nặng (eGFR <20). Cần kiểm tra eGFR trước khi bắt đầu và định kỳ. Ngừng thuốc nếu eGFR giảm xuống dưới 20."
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu mất nước, điều chỉnh đường huyết nếu hạ đường huyết, điều trị DKA nếu có."
+        },
         "administration_instructions": {
         },
         "references": {
@@ -195,9 +233,36 @@ SGLT2_INHIBITORS_DRUGS = {
         },
         "storage": "",
         "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": [],
+            "major": [
+                {
+                    "drug": "Diuretics (Furosemide, Hydrochlorothiazide, etc.)",
+                    "mechanism": "Cả hai đều tăng thải nước và natri",
+                    "effect": "Tăng nguy cơ mất nước, hạ huyết áp, suy thận cấp",
+                    "management": "Theo dõi huyết áp và thể tích dịch. Có thể cần giảm liều diuretic hoặc tạm ngừng SGLT2i."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Insulin, Sulfonylureas",
+                    "mechanism": "SGLT2i tăng thải glucose qua nước tiểu, có thể tăng nguy cơ hạ đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Giảm liều insulin hoặc sulfonylurea khi bắt đầu SGLT2i. Theo dõi đường huyết chặt chẽ."
+                },
+                {
+                    "drug": "ACE inhibitors, ARBs",
+                    "mechanism": "Cả hai đều có thể ảnh hưởng đến chức năng thận",
+                    "effect": "Tăng nguy cơ suy thận cấp (hiếm)",
+                    "management": "Theo dõi eGFR và creatinine khi bắt đầu hoặc thay đổi liều."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "SGLT2i có thể ảnh hưởng nhẹ đến nồng độ digoxin",
+                    "effect": "Tăng nhẹ nồng độ digoxin",
+                    "management": "Theo dõi nồng độ digoxin nếu dùng cùng."
+                }
+            ]
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -214,13 +279,24 @@ SGLT2_INHIBITORS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Có thể dùng nhưng cần điều chỉnh liều. Không dùng nếu eGFR <30.",
+            "under_30": "CHỐNG CHỈ ĐỊNH nếu eGFR <25.",
+            "dialysis": "CHỐNG CHỈ ĐỊNH. Không dùng khi đang lọc máu.",
+            "notes": "Dapagliflozin chống chỉ định ở suy thận nặng (eGFR <25). Cần kiểm tra eGFR trước khi bắt đầu và định kỳ. Ngừng thuốc nếu eGFR giảm xuống dưới 25."
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu mất nước, điều chỉnh đường huyết nếu hạ đường huyết, điều trị DKA nếu có."
+        },
         "administration_instructions": {
         },
         "references": {
@@ -303,9 +379,36 @@ SGLT2_INHIBITORS_DRUGS = {
         },
         "storage": "",
         "drug_interactions": {
-            "major": [],
-            "moderate": [],
-            "minor": [],
+            "major": [
+                {
+                    "drug": "Diuretics (Furosemide, Hydrochlorothiazide, etc.)",
+                    "mechanism": "Cả hai đều tăng thải nước và natri",
+                    "effect": "Tăng nguy cơ mất nước, hạ huyết áp, suy thận cấp",
+                    "management": "Theo dõi huyết áp và thể tích dịch. Có thể cần giảm liều diuretic hoặc tạm ngừng SGLT2i."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Insulin, Sulfonylureas",
+                    "mechanism": "SGLT2i tăng thải glucose qua nước tiểu, có thể tăng nguy cơ hạ đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Giảm liều insulin hoặc sulfonylurea khi bắt đầu SGLT2i. Theo dõi đường huyết chặt chẽ."
+                },
+                {
+                    "drug": "ACE inhibitors, ARBs",
+                    "mechanism": "Cả hai đều có thể ảnh hưởng đến chức năng thận",
+                    "effect": "Tăng nguy cơ suy thận cấp (hiếm)",
+                    "management": "Theo dõi eGFR và creatinine khi bắt đầu hoặc thay đổi liều."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "SGLT2i có thể ảnh hưởng nhẹ đến nồng độ digoxin",
+                    "effect": "Tăng nhẹ nồng độ digoxin",
+                    "management": "Theo dõi nồng độ digoxin nếu dùng cùng."
+                }
+            ]
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -322,13 +425,24 @@ SGLT2_INHIBITORS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Có thể dùng nhưng cần điều chỉnh liều. Không tăng liều lên 300mg nếu eGFR <60.",
+            "under_30": "CHỐNG CHỈ ĐỊNH nếu eGFR <30.",
+            "dialysis": "CHỐNG CHỈ ĐỊNH. Không dùng khi đang lọc máu.",
+            "notes": "Canagliflozin chống chỉ định ở suy thận nặng (eGFR <30). Không tăng liều lên 300mg nếu eGFR <60. Cần kiểm tra eGFR trước khi bắt đầu và định kỳ. Ngừng thuốc nếu eGFR giảm xuống dưới 30."
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu mất nước, điều chỉnh đường huyết nếu hạ đường huyết, điều trị DKA nếu có."
+        },
         "administration_instructions": {
         },
         "references": {

@@ -111,6 +111,12 @@ TETRACYCLINE_ANTIBIOTICS = {
                     "mechanism": "Các cation (Al3+, Mg2+, Ca2+, Fe2+) tạo phức hợp không hòa tan với doxycycline, giảm hấp thu",
                     "effect": "Giảm hấp thu doxycycline, giảm nồng độ trong máu, giảm hiệu quả điều trị",
                     "management": "Cách ít nhất 2 giờ (tốt nhất 4 giờ) trước hoặc sau khi uống doxycycline. Không uống cùng lúc."
+                },
+                {
+                    "drug": "Penicillin",
+                    "mechanism": "Tác dụng kìm khuẩn của doxycycline có thể đối kháng tác dụng diệt khuẩn của penicillin",
+                    "effect": "Giảm hiệu quả điều trị của penicillin trên một số vi khuẩn nhạy cảm",
+                    "management": "Tránh phối hợp khi có thể; nếu buộc dùng, theo dõi đáp ứng lâm sàng."
                 }
             ],
             "moderate": [
@@ -125,6 +131,12 @@ TETRACYCLINE_ANTIBIOTICS = {
                     "mechanism": "Tetracycline có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen",
                     "effect": "Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)",
                     "management": "Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng doxycycline và 7 ngày sau khi ngừng."
+                },
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Doxycycline có thể làm tăng nồng độ hoặc độc tính methotrexate",
+                    "effect": "Tăng nguy cơ độc tính (ức chế tủy, viêm miệng, độc gan)",
+                    "management": "Theo dõi độc tính methotrexate; cân nhắc giảm liều hoặc chọn kháng sinh khác."
                 }
             ],
             "minor": []
@@ -154,8 +166,8 @@ TETRACYCLINE_ANTIBIOTICS = {
         "hepatic_adjustment": {
             "mild": "Không cần điều chỉnh liều",
             "moderate": "Thận trọng (chuyển hóa một phần ở gan)",
-            "severe": "Thận trọng, có thể tích lũy (chuyển hóa giảm)",
-            "notes": "Doxycycline chuyển hóa một phần ở gan và thải trừ chủ yếu qua gan/mật. Suy gan có thể giảm chuyển hóa và tích lũy. Thận trọng ở suy gan nặng."
+            "severe": "Thận trọng, cân nhắc giảm liều nếu dùng kéo dài",
+            "notes": "Doxycycline chuyển hóa một phần ở gan và thải trừ chủ yếu qua gan/mật. Suy gan có thể giảm chuyển hóa và tích lũy; ưu tiên liều thấp và theo dõi lâm sàng/men gan."
         },
         "overdose_management": {
             "symptoms": [
@@ -215,7 +227,7 @@ TETRACYCLINE_ANTIBIOTICS = {
                 "UpToDate - Doxycycline: Drug Information",
                 "Medscape - Doxycycline Drug Reference"
             ],
-            "last_updated": "2025-02-18",
+            "last_updated": "2026-01-07",
             "evidence_level": "A"
         },
         
@@ -328,6 +340,12 @@ TETRACYCLINE_ANTIBIOTICS = {
                     "mechanism": "Các cation tạo phức hợp không hòa tan với minocycline, giảm hấp thu",
                     "effect": "Giảm hấp thu minocycline",
                     "management": "Cách ít nhất 2 giờ trước hoặc sau khi uống minocycline."
+                },
+                {
+                    "drug": "Penicillin",
+                    "mechanism": "Tác dụng kìm khuẩn của minocycline có thể đối kháng tác dụng diệt khuẩn của penicillin",
+                    "effect": "Giảm hiệu quả penicillin",
+                    "management": "Tránh phối hợp nếu có thể; theo dõi đáp ứng lâm sàng."
                 }
             ],
             "moderate": [
@@ -336,6 +354,18 @@ TETRACYCLINE_ANTIBIOTICS = {
                     "mechanism": "Minocycline có thể ảnh hưởng đến hệ vi khuẩn đường ruột",
                     "effect": "Tăng INR",
                     "management": "Theo dõi INR thường xuyên."
+                },
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Có thể tăng nồng độ/độc tính methotrexate",
+                    "effect": "Tăng nguy cơ ức chế tủy/độc gan",
+                    "management": "Theo dõi độc tính; cân nhắc kháng sinh khác."
+                },
+                {
+                    "drug": "Thuốc tránh thai đường uống",
+                    "mechanism": "Giảm tái hấp thu estrogen do thay đổi hệ vi khuẩn ruột",
+                    "effect": "Giảm hiệu quả tránh thai (hiếm)",
+                    "management": "Khuyên dùng biện pháp tránh thai bổ sung trong và 7 ngày sau điều trị."
                 }
             ],
             "minor": []
@@ -362,9 +392,9 @@ TETRACYCLINE_ANTIBIOTICS = {
         },
         "hepatic_adjustment": {
             "mild": "Không cần điều chỉnh liều",
-            "moderate": "Thận trọng",
-            "severe": "Thận trọng, có thể tích lũy",
-            "notes": "Minocycline chuyển hóa một phần ở gan. Suy gan có thể tích lũy."
+            "moderate": "Thận trọng; cân nhắc giảm liều nếu dùng kéo dài",
+            "severe": "Thận trọng cao; tránh liều cao/kéo dài",
+            "notes": "Minocycline chuyển hóa một phần ở gan. Suy gan có thể tích lũy; dùng liều thấp và theo dõi men gan nếu kéo dài."
         },
         "overdose_management": {
             "symptoms": [
@@ -409,7 +439,7 @@ TETRACYCLINE_ANTIBIOTICS = {
                 "UpToDate - Minocycline: Drug Information",
                 "Medscape - Minocycline Drug Reference"
             ],
-            "last_updated": "2025-02-18",
+            "last_updated": "2026-01-07",
             "evidence_level": "A"
         },
         
@@ -521,6 +551,12 @@ TETRACYCLINE_ANTIBIOTICS = {
                     "mechanism": "Các cation tạo phức hợp không hòa tan với tetracycline, giảm hấp thu",
                     "effect": "Giảm hấp thu tetracycline",
                     "management": "Cách ít nhất 2 giờ trước hoặc sau khi uống tetracycline."
+                },
+                {
+                    "drug": "Penicillin",
+                    "mechanism": "Tác dụng kìm khuẩn của tetracycline có thể đối kháng tác dụng diệt khuẩn của penicillin",
+                    "effect": "Giảm hiệu quả penicillin",
+                    "management": "Tránh phối hợp nếu có thể; theo dõi đáp ứng lâm sàng."
                 }
             ],
             "moderate": [
@@ -529,6 +565,18 @@ TETRACYCLINE_ANTIBIOTICS = {
                     "mechanism": "Tetracycline có thể ảnh hưởng đến hệ vi khuẩn đường ruột",
                     "effect": "Tăng INR",
                     "management": "Theo dõi INR thường xuyên."
+                },
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Có thể tăng nồng độ/độc tính methotrexate",
+                    "effect": "Tăng nguy cơ ức chế tủy/độc gan",
+                    "management": "Theo dõi độc tính; cân nhắc kháng sinh khác."
+                },
+                {
+                    "drug": "Thuốc tránh thai đường uống",
+                    "mechanism": "Giảm tái hấp thu estrogen do thay đổi hệ vi khuẩn ruột",
+                    "effect": "Giảm hiệu quả tránh thai (hiếm)",
+                    "management": "Khuyên dùng biện pháp tránh thai bổ sung trong và 7 ngày sau điều trị."
                 }
             ],
             "minor": []
@@ -557,9 +605,9 @@ TETRACYCLINE_ANTIBIOTICS = {
         },
         "hepatic_adjustment": {
             "mild": "Không cần điều chỉnh liều",
-            "moderate": "Thận trọng",
-            "severe": "Thận trọng, có thể tích lũy",
-            "notes": "Tetracycline chuyển hóa một phần ở gan. Suy gan có thể tích lũy."
+            "moderate": "Thận trọng; cân nhắc giảm liều nếu dùng kéo dài",
+            "severe": "Thận trọng cao; tránh liều cao/kéo dài",
+            "notes": "Tetracycline chuyển hóa một phần ở gan. Suy gan có thể tích lũy; ưu tiên liều thấp và theo dõi men gan nếu phải dùng."
         },
         "overdose_management": {
             "symptoms": [
@@ -597,7 +645,7 @@ TETRACYCLINE_ANTIBIOTICS = {
                 "UpToDate - Tetracycline: Drug Information",
                 "Medscape - Tetracycline Drug Reference"
             ],
-            "last_updated": "2025-02-18",
+            "last_updated": "2026-01-07",
             "evidence_level": "A"
         },
         

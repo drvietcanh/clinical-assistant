@@ -47,6 +47,14 @@ ANTISERA_DRUGS = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng nặng với huyết thanh nguồn gốc ngựa (sau khi đã test và/hoặc giải mẫn cảm thất bại).",
+            ],
+            "tương_đối": [
+                "Tiền sử bệnh huyết thanh nặng với SAT hoặc các huyết thanh nguồn gốc ngựa khác.",
+            ],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -62,14 +70,29 @@ ANTISERA_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều; theo dõi sát phản vệ và bệnh huyết thanh.",
+            "under_30": "Không cần chỉnh liều; ưu tiên điều trị uốn ván, theo dõi sát.",
+            "dialysis": "Không cần chỉnh liều; dùng theo phác đồ, theo dõi sát.",
+            "notes": "Huyết thanh kháng độc được dùng theo IU cố định; không chỉnh theo chức năng thận.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí biến chứng bằng adrenalin, dịch truyền, corticosteroid, và hỗ trợ hô hấp.",
+        },
         "administration_instructions": {
+            "im_sc": {
+                "site": "Tiêm bắp (IM) hoặc dưới da (SC) theo phác đồ.",
+                "notes": "BẮT BUỘC test trong da trước khi tiêm; chuẩn bị sẵn bộ cấp cứu phản vệ.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -134,6 +157,12 @@ ANTISERA_DRUGS = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [
+                "Tiền sử phản vệ nặng với huyết thanh kháng dại nguồn gốc ngựa (SAR/Favirab).",
+            ],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -149,14 +178,29 @@ ANTISERA_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều; tiêm đủ liều theo cân nặng (IU/kg).",
+            "under_30": "Không cần chỉnh liều; ưu tiên điều trị dại, theo dõi sát phản vệ và chức năng thận.",
+            "dialysis": "Không cần chỉnh liều; dùng theo phác đồ chuẩn.",
+            "notes": "Huyết thanh kháng dại dùng liều theo IU/kg, không chỉnh theo mức lọc cầu thận.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí biến chứng bằng adrenalin, dịch truyền, corticosteroid, và hỗ trợ hô hấp.",
+        },
         "administration_instructions": {
+            "local_im": {
+                "with_food": "",
+                "timing": "Tiêm thấm nhiễm tối đa quanh vết thương; phần còn lại tiêm bắp xa vị trí vắc xin.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -214,6 +258,12 @@ ANTISERA_DRUGS = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [
+                "Tiền sử phản vệ nặng với huyết thanh kháng nọc rắn Lục Tre hoặc thành phần chế phẩm.",
+            ],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -229,14 +279,29 @@ ANTISERA_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều; ưu tiên điều trị rối loạn đông máu do nọc rắn.",
+            "under_30": "Không cần chỉnh liều; theo dõi sát chức năng thận và đông máu.",
+            "dialysis": "Không cần chỉnh liều; xử trí theo phác đồ hồi sức nhiễm độc.",
+            "notes": "Liều huyết thanh kháng nọc rắn dựa trên mức độ nhiễm độc, không dựa trên chức năng thận.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí biến chứng bằng adrenalin, dịch truyền, corticosteroid, và hỗ trợ hô hấp.",
+        },
         "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha loãng theo hướng dẫn nhà sản xuất; truyền chậm, theo dõi sát dấu hiệu sinh tồn.",
+                "infusion_rate": "Truyền tĩnh mạch chậm; ngừng ngay nếu có dấu hiệu phản vệ.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -292,6 +357,12 @@ ANTISERA_DRUGS = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [
+                "Tiền sử phản vệ nặng với huyết thanh kháng nọc rắn Hổ Đất hoặc thành phần chế phẩm.",
+            ],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -307,14 +378,29 @@ ANTISERA_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều; ưu tiên điều trị suy hô hấp/liệt do nọc rắn.",
+            "under_30": "Không cần chỉnh liều; theo dõi sát chức năng thận.",
+            "dialysis": "Không cần chỉnh liều; xử trí theo phác đồ hồi sức nhiễm độc.",
+            "notes": "Liều huyết thanh kháng nọc rắn dựa trên mức độ nhiễm độc, không dựa trên chức năng thận.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí biến chứng bằng adrenalin, dịch truyền, corticosteroid, và hỗ trợ hô hấp.",
+        },
         "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha loãng theo hướng dẫn nhà sản xuất; truyền chậm, theo dõi sát dấu hiệu sinh tồn.",
+                "infusion_rate": "Truyền tĩnh mạch chậm; ngừng ngay nếu có dấu hiệu phản vệ.",
+            },
         },
         "references": {
             "primary_sources": [],

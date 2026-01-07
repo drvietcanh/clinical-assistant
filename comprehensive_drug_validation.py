@@ -89,6 +89,9 @@ class DrugValidator:
     
     def validate_basic_fields(self, drug_name: str, drug_data: Dict) -> List[str]:
         """Kiểm tra các field cơ bản bắt buộc"""
+        if drug_data is None or not isinstance(drug_data, dict):
+            return REQUIRED_BASIC_FIELDS.copy()
+        
         missing = []
         for field in REQUIRED_BASIC_FIELDS:
             if field not in drug_data:
@@ -105,6 +108,9 @@ class DrugValidator:
         """Kiểm tra các enhanced fields - Tối ưu tốc độ"""
         missing = []
         complete_count = 0
+        
+        if drug_data is None or not isinstance(drug_data, dict):
+            return ENHANCED_FIELDS.copy(), 0
         
         # Tối ưu: sử dụng .get() thay vì 'in' check + access
         for field in ENHANCED_FIELDS:
@@ -124,6 +130,9 @@ class DrugValidator:
     
     def validate_data_types(self, drug_name: str, drug_data: Dict):
         """Kiểm tra kiểu dữ liệu của các field - Tối ưu tốc độ"""
+        if drug_data is None or not isinstance(drug_data, dict):
+            return
+        
         # Cache type_checks để tránh tạo lại mỗi lần (move to __init__ nếu cần)
         type_checks = {
             "group": str,
@@ -330,6 +339,9 @@ class DrugValidator:
         
         # Tối ưu: single pass với .get() thay vì 'in' checks
         for drug_name, drug_data in DRUG_DATABASE.items():
+            if drug_data is None or not isinstance(drug_data, dict):
+                continue
+            
             # Kiểm tra field cơ bản
             missing_basic = self.validate_basic_fields(drug_name, drug_data)
             

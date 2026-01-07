@@ -53,6 +53,76 @@ THYROID_DRUGS = {
             "Không ngừng đột ngột",
             "Thai kỳ: Tăng nhu cầu levothyroxine ~30-50%"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Cường giáp chưa điều trị",
+                "Nhồi máu cơ tim cấp",
+                "Suy thượng thận chưa điều trị"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch (bệnh mạch vành, loạn nhịp)",
+                "Người cao tuổi - cần tăng liều rất chậm",
+                "Bệnh nhân có nguy cơ loãng xương (tránh ức chế TSH quá mức)"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều; chuẩn độ theo TSH.",
+            "30_60": "Không cần chỉnh liều; tăng/giảm liều chậm, theo dõi nhịp tim và TSH.",
+            "under_30": "Không cần chỉnh liều; thận trọng bệnh tim/suy thận, chuẩn độ rất chậm."
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều.",
+            "moderate": "Không cần chỉnh liều; theo dõi TSH sát.",
+            "severe": "Không cần chỉnh liều; chuẩn độ chậm và theo dõi lâm sàng.",
+            "notes": "Liều điều chỉnh chủ yếu dựa trên TSH hơn là chức năng gan/thận."
+        },
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Sắt, Calci, antacid, sucralfate, PPI",
+                    "mechanism": "Giảm hấp thu levothyroxine (tạo phức hoặc thay đổi pH).",
+                    "effect": "Giảm nồng độ/TSH tăng.",
+                    "management": "Uống levothyroxine cách xa ≥4 giờ."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Tăng nhạy cảm với warfarin khi đạt trạng thái eutyroid.",
+                    "effect": "INR có thể tăng.",
+                    "management": "Theo dõi INR; giảm liều warfarin nếu cần."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Amiodarone",
+                    "mechanism": "Ức chế chuyển T4→T3, chứa iod.",
+                    "effect": "Có thể cần điều chỉnh liều levothyroxine.",
+                    "management": "Theo dõi TSH/FT4 sát."
+                }
+            ],
+            "minor": []
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Cường giáp iatrogenic: tim nhanh, loạn nhịp, run, sốt",
+                "Bão giáp (hiếm): sốt cao, mê sảng, suy tim"
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng levothyroxine; than hoạt nếu mới uống.",
+                "Chẹn beta (propranolol) để kiểm soát nhịp tim/lo âu.",
+                "Điều trị hỗ trợ (dịch, hạ sốt).",
+                "Trường hợp nặng: PTU + iod + steroid theo phác đồ bão giáp."
+            ],
+            "monitoring": "Mạch, huyết áp, ECG, TSH/FT4 nếu cần."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống lúc đói, 30-60 phút trước ăn sáng.",
+                "timing": "Uống buổi sáng với nước lọc; tách sắt/calci/antacid/PPI ≥4 giờ.",
+                "notes": "Nếu uống ban đêm, cần nhịn ăn ≥3-4 giờ trước."
+            }
+        },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Levothyroxine (Synthroid, Levoxyl)",
@@ -130,6 +200,72 @@ THYROID_DRUGS = {
             "Tác dụng chậm (4-6 tuần) - Cần kiên nhẫn",
             "Dùng kèm beta-blocker (Propranolol) để kiểm soát triệu chứng cường giáp"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với methimazole",
+                "Thai kỳ tam cá nguyệt 1 (ưu tiên PTU)",
+                "Tiền sử viêm gan nặng do methimazole",
+                "Bạch cầu trung tính <1500/mm3"
+            ],
+            "tương_đối": [
+                "Bệnh gan mạn/men gan tăng sẵn",
+                "Suy tủy, giảm bạch cầu hạt",
+                "Người cao tuổi hoặc có bệnh tim nặng (titrate chậm)"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều; theo dõi độc tính.",
+            "under_30": "Không cần chỉnh liều; theo dõi sát CBC/men gan."
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng; theo dõi men gan.",
+            "moderate": "Tránh hoặc dùng liều thấp, theo dõi sát.",
+            "severe": "Tránh nếu có thể (nguy cơ độc gan).",
+            "notes": "Ngừng thuốc nếu men gan tăng đáng kể hoặc vàng da."
+        },
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Điều chỉnh cường giáp làm giảm độ nhạy với warfarin.",
+                    "effect": "INR giảm khi trạng thái cường giáp được kiểm soát.",
+                    "management": "Theo dõi INR và điều chỉnh liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Clozapine hoặc thuốc gây giảm bạch cầu",
+                    "mechanism": "Cộng gộp nguy cơ giảm bạch cầu hạt.",
+                    "effect": "Tăng nguy cơ agranulocytosis.",
+                    "management": "Tránh phối hợp nếu có thể; theo dõi CBC sát."
+                }
+            ],
+            "minor": []
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Giảm bạch cầu hạt, sốt, đau họng",
+                "Vàng da, tăng men gan",
+                "Buồn nôn, đau bụng"
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng methimazole ngay.",
+                "Hỗ trợ: truyền dịch, kiểm soát triệu chứng.",
+                "CBC/men gan khẩn; G-CSF nếu agranulocytosis nặng.",
+                "Kháng sinh nếu nhiễm trùng."
+            ],
+            "monitoring": "CBC, men gan, dấu hiệu nhiễm trùng."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn.",
+                "timing": "Thường 1 lần/ngày; chia 2-3 lần nếu liều cao.",
+                "notes": "Uống cùng giờ mỗi ngày; không tự ý ngừng."
+            }
+        },
         "black_box_warnings": "Nguy cơ suy tủy (Agranulocytosis) nghiêm trọng, có thể tử vong. Ngừng thuốc ngay nếu có sốt, đau họng, nhiễm trùng.",
         "references": {
             "primary_sources": [
@@ -200,6 +336,71 @@ THYROID_DRUGS = {
             "Thai kỳ: Ưu tiên cho tam cá nguyệt 1, chuyển sang Methimazole ở tam cá nguyệt 2-3",
             "Ít được dùng hơn Methimazole (trừ thai kỳ và bão giáp)"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với PTU",
+                "Tiền sử suy gan nặng do PTU",
+                "Bạch cầu trung tính <1500/mm3"
+            ],
+            "tương_đối": [
+                "Bệnh gan mạn/men gan tăng",
+                "Suy tủy, giảm bạch cầu hạt",
+                "Người cao tuổi/bệnh tim (titrate chậm)"
+            ]
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều; theo dõi độc tính.",
+            "under_30": "Không cần chỉnh liều; theo dõi sát CBC/men gan."
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng; theo dõi men gan.",
+            "moderate": "Tránh nếu có lựa chọn khác; theo dõi sát.",
+            "severe": "Chống chỉ định do nguy cơ suy gan.",
+            "notes": "Ngừng thuốc ngay nếu men gan tăng đáng kể hoặc vàng da."
+        },
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Điều chỉnh cường giáp làm thay đổi nhạy cảm với warfarin.",
+                    "effect": "INR giảm khi kiểm soát cường giáp.",
+                    "management": "Theo dõi INR; điều chỉnh liều warfarin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Clozapine/thuốc gây giảm bạch cầu",
+                    "mechanism": "Cộng gộp nguy cơ giảm bạch cầu hạt.",
+                    "effect": "Tăng nguy cơ agranulocytosis.",
+                    "management": "Tránh phối hợp; nếu dùng, theo dõi CBC sát."
+                }
+            ],
+            "minor": []
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Độc gan (vàng da, tăng men gan)",
+                "Giảm bạch cầu hạt, sốt, đau họng",
+                "Buồn nôn, đau bụng"
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng PTU ngay.",
+                "Hỗ trợ: truyền dịch, kiểm soát triệu chứng.",
+                "CBC/men gan khẩn; G-CSF nếu agranulocytosis nặng.",
+                "Cân nhắc ghép gan trong suy gan tối cấp."
+            ],
+            "monitoring": "CBC, men gan, dấu hiệu nhiễm trùng, dấu hiệu suy gan."
+        },
+        "reversal_agents": None,
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn.",
+                "timing": "Chia 3 lần/ngày do T1/2 ngắn; ưu tiên giờ cố định.",
+                "notes": "Không tự ý ngừng; báo ngay nếu sốt/đau họng."
+            }
+        },
         "black_box_warnings": "Nguy cơ suy gan cấp nghiêm trọng, có thể tử vong. Nguy cơ suy tủy (Agranulocytosis).",
         "references": {
             "primary_sources": [

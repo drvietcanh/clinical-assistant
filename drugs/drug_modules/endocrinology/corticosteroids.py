@@ -1,237 +1,176 @@
 """
-Corticosteroids (Thuốc Corticoid)
-Nhóm thuốc kháng viêm mạnh, ức chế miễn dịch, dùng rất phổ biến trong lâm sàng.
+Corticosteroids (Thuốc Corticoid) - sử dụng bộ dữ liệu đầy đủ từ
+`endocrinology_other.corticosteroids` và bổ sung Prednisone với enhanced fields.
 """
 
-CORTICOSTEROIDS_DRUGS = {
-    "Prednisone": {
-        "group": "Endocrinology - Corticosteroid (Oral)",
-        "vietnamese_name": "Prednisone, Prednisolone",
-        "brand_names": {
-            "common": ["Deltasone", "Prednisolone"],
-            "vietnam": ["Prednisone 5mg", "Prednisolone 5mg"]
-        },
-        "administration": ["PO"],
-        "indications": [
-            "Viêm khớp dạng thấp (Rheumatoid Arthritis)",
-            "Lupus ban đỏ hệ thống (SLE)",
-            "Hen phế quản cấp",
-            "COPD cấp",
-            "Bệnh viêm ruột (IBD)",
-            "Phản ứng dị ứng nặng",
-            "Bệnh thận (Hội chứng thận hư)",
-            "Bệnh da (Pemphigus, Dermatitis nặng)"
+from ..endocrinology_other.corticosteroids.long_acting import LONG_ACTING
+from ..endocrinology_other.corticosteroids.short_intermediate_acting import (
+    SHORT_INTERMEDIATE_ACTING,
+)
+
+PREDNISONE_ENHANCED = {
+    "group": "Endocrinology - Corticosteroid (Oral)",
+    "vietnamese_name": "Prednisone (tiền dược của prednisolone)",
+    "brand_names": {
+        "common": ["Deltasone", "Prednisone"],
+        "vietnam": ["Prednisone 5mg", "Prednisolone 5mg"],
+    },
+    "administration": ["PO"],
+    "indications": [
+        "Viêm khớp dạng thấp, lupus",
+        "Hen phế quản/COPD đợt cấp",
+        "Bệnh viêm ruột (IBD)",
+        "Dị ứng nặng",
+        "Hội chứng thận hư",
+        "Điều trị thay thế trong suy thượng thận (khi không có hydrocortisone)",
+    ],
+    "contraindications_detail": {
+        "tuyệt_đối": [
+            "Nhiễm nấm toàn thân chưa điều trị",
+            "Dị ứng với prednisone/corticosteroid",
+            "Tiêm vaccine sống liều cao khi đang dùng liều ức chế miễn dịch",
         ],
-        "contraindications": [
-            "Nhiễm trùng nấm toàn thân",
-            "Tiêm vắc-xin sống (khi dùng liều cao)"
-        ],
-        "dosage": {
-            "ra_sle": "5-60mg/ngày, tùy mức độ nặng. Giảm liều dần khi đáp ứng.",
-            "asthma_exacerbation": "40-60mg/ngày x 5-7 ngày.",
-            "copd_exacerbation": "40mg/ngày x 5 ngày.",
-            "notes": "Uống buổi sáng để giảm ức chế trục HPA. Giảm liều từ từ khi dùng >2 tuần để tránh suy thượng thận."
-        },
-        "side_effects": [
-            "Tăng đường huyết (Đái tháo đường do steroid)",
-            "Tăng huyết áp",
-            "Tăng cân, mặt trăng (Cushingoid)",
-            "Loãng xương (Osteoporosis)",
-            "Tăng nguy cơ nhiễm trùng",
-            "Loét dạ dày",
-            "Rối loạn tâm thần (Psychosis, Mania)",
-            "Suy thượng thận (nếu ngừng đột ngột sau dùng lâu dài)"
-        ],
-        "interactions": [
-            "NSAIDs: Tăng nguy cơ loét dạ dày.",
-            "Warfarin: Có thể tăng hoặc giảm INR.",
-            "Thuốc hạ đường huyết: Giảm hiệu quả (steroid tăng đường huyết).",
-            "Vaccine sống: Tăng nguy cơ nhiễm trùng từ vaccine."
-        ],
-        "mechanism_of_action": "Corticosteroid tổng hợp, chống viêm mạnh bằng cách ức chế phospholipase A2, giảm tổng hợp prostaglandin và leukotriene. Ức chế miễn dịch bằng cách giảm hoạt động lymphocyte và macrophage.",
-        "monitoring": [
-            "Đường huyết (đặc biệt ở bệnh nhân đái tháo đường)",
-            "Huyết áp",
-            "Cân nặng",
-            "Mật độ xương (DEXA scan nếu dùng lâu dài)",
-            "Dấu hiệu nhiễm trùng",
-            "Dấu hiệu loét dạ dày"
-        ],
-        "precautions": [
-            "Uống buổi sáng với thức ăn để giảm kích ứng dạ dày",
-            "KHÔNG NGỪNG ĐỘT NGỘT nếu dùng >2 tuần (nguy cơ suy thượng thận)",
-            "Giảm liều từ từ (taper) khi ngừng",
-            "Tăng đường huyết - Theo dõi glucose máu",
-            "Tăng nguy cơ nhiễm trùng - Tránh tiếp xúc người bệnh",
-            "Loãng xương - Bổ sung Calci + Vitamin D",
-            "Cân nhắc dùng PPI để bảo vệ dạ dày"
-        ],
-        "black_box_warnings": "Suy thượng thận nghiêm trọng nếu ngừng đột ngột sau dùng lâu dài. Tăng nguy cơ nhiễm trùng nghiêm trọng.",
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["endocrine", "metabolic", "gastrointestinal", "skeletal"],
-            "qt_prolongation": False,
-            "hepatotoxicity": False,
-            "nephrotoxicity": False,
-            "requires_monitoring": ["Blood glucose", "Blood pressure", "Bone density (DEXA if long-term)", "Signs of infection", "Adrenal insufficiency signs"]
-        },
-        "guideline_tags": [
-            "FDA Black Box Warning - Adrenal Insufficiency (if stopped abruptly after long-term use)",
-            "FDA Black Box Warning - Serious Infections",
-            "ACR Guidelines - Rheumatoid Arthritis",
-            "WHO Essential Medicines List"
+        "tương_đối": [
+            "Nhiễm trùng đang hoạt động",
+            "Đái tháo đường, tăng huyết áp, suy tim",
+            "Loãng xương, loét dạ dày",
+            "Rối loạn tâm thần",
+            "Suy gan nặng (giảm khả năng chuyển hóa thành prednisolone)",
         ],
     },
-
-    "Dexamethasone": {
-        "group": "Endocrinology - Corticosteroid (Oral/IV)",
-        "vietnamese_name": "Dexamethasone",
-        "brand_names": {
-            "common": ["Decadron"],
-            "vietnam": ["Dexamethasone 0.5mg/4mg", "Dexamethasone injection"]
-        },
-        "administration": ["PO", "IV", "IM"],
-        "dosage": {
-            "cerebral_edema": "10mg IV, sau đó 4mg IV/IM mỗi 6h.",
-            "covid19_severe": "6mg PO/IV x 1 lần/ngày x 10 ngày (RECOVERY trial).",
-            "antiemetic_chemo": "8-20mg IV trước hóa trị.",
-            "croup": "0.6mg/kg PO/IM x 1 liều (trẻ em).",
-            "notes": "Corticoid mạnh nhất, tác dụng kéo dài (36-72h). Không có tác dụng mineralocorticoid."
-        },
-        "indications": [
-            "Phù não (Cerebral edema)",
-            "COVID-19 nặng cần oxy (Chỉ định mới từ 2020)",
-            "Chống nôn do hóa trị",
-            "Viêm thanh quản cấp (Croup) ở trẻ em",
-            "Viêm khớp, Lupus (tương tự Prednisone)"
+    "dosage": {
+        "antiinflammatory": "5-60mg/ngày tùy chỉ định; giảm dần khi đáp ứng.",
+        "asthma_exacerbation": "40-60mg/ngày x 5-7 ngày.",
+        "copd_exacerbation": "40mg/ngày x 5 ngày.",
+        "notes": "Uống buổi sáng; nếu dùng >2 tuần phải taper để tránh suy thượng thận.",
+    },
+    "side_effects": [
+        "Tăng đường huyết, tăng huyết áp",
+        "Tăng cân, Cushingoid",
+        "Loãng xương, đau dạ dày/loét",
+        "Ức chế miễn dịch, tăng nguy cơ nhiễm trùng",
+        "Rối loạn tâm thần, mất ngủ",
+        "Ức chế trục HPA (ngừng đột ngột gây suy thượng thận)",
+    ],
+    "mechanism_of_action": "Glucocorticoid tổng hợp; prednisone là tiền dược, chuyển hóa thành prednisolone tại gan; ức chế phospholipase A2, giảm cytokine viêm, ức chế miễn dịch.",
+    "monitoring": [
+        "Đường huyết, huyết áp",
+        "Cân nặng, phù",
+        "Mật độ xương nếu dùng kéo dài",
+        "Dấu hiệu nhiễm trùng, loét dạ dày",
+        "Dấu hiệu suy thượng thận khi giảm/ngừng",
+    ],
+    "precautions": [
+        "Không ngừng đột ngột nếu dùng >2 tuần; taper dần.",
+        "Dùng với thức ăn vào buổi sáng để giảm kích ứng dạ dày và ức chế HPA.",
+        "Bổ sung calci + vitamin D nếu dùng dài ngày; cân nhắc PPI nếu nguy cơ loét.",
+        "Theo dõi đường huyết chặt ở bệnh nhân đái tháo đường.",
+    ],
+    "drug_interactions": {
+        "major": [
+            {
+                "drug": "Ketoconazole/itraconazole",
+                "mechanism": "Ức chế CYP3A4 → tăng nồng độ prednisone/prednisolone.",
+                "effect": "Tăng nguy cơ Cushing, tăng đường huyết.",
+                "management": "Cân nhắc giảm liều steroid; theo dõi tác dụng phụ.",
+            },
+            {
+                "drug": "Rifampin, carbamazepine, phenytoin",
+                "mechanism": "Cảm ứng CYP3A4 → giảm nồng độ steroid.",
+                "effect": "Giảm hiệu quả; nguy cơ suy thượng thận.",
+                "management": "Có thể cần tăng liều; theo dõi lâm sàng.",
+            },
+            {
+                "drug": "Warfarin",
+                "mechanism": "Thay đổi chuyển hóa/vitamin K phụ thuộc.",
+                "effect": "INR có thể tăng hoặc giảm.",
+                "management": "Theo dõi INR chặt khi bắt đầu/ngừng steroid.",
+            },
         ],
-        "side_effects": [
-            "Tương tự Prednisone nhưng mạnh hơn",
-            "Tăng đường huyết cao hơn",
-            "Ức chế miễn dịch mạnh hơn"
+        "moderate": [
+            {
+                "drug": "NSAIDs",
+                "mechanism": "Tăng nguy cơ loét/xuất huyết tiêu hóa.",
+                "effect": "Nguy cơ loét/ xuất huyết GI tăng.",
+                "management": "Tránh/giảm thời gian dùng; cân nhắc PPI.",
+            },
         ],
-        "mechanism_of_action": "Corticoid tổng hợp mạnh nhất, tác dụng kéo dài. Không có tác dụng mineralocorticoid (không giữ nước/natri). Chống viêm và ức chế miễn dịch mạnh.",
-        "monitoring": [
-            "Đường huyết (tăng cao)",
-            "Dấu hiệu nhiễm trùng",
-            "Huyết áp"
-        ],
-        "black_box_warnings": "Tương tự Prednisone. Suy thượng thận nếu ngừng đột ngột.",
-        "risk_flags": {
-            "high_alert": True,
-            "narrow_therapeutic_index": False,
-            "bleeding_risk": False,
-            "organ_toxicity": ["endocrine", "metabolic", "gastrointestinal", "skeletal"],
-            "qt_prolongation": False,
-            "hepatotoxicity": False,
-            "nephrotoxicity": False,
-            "requires_monitoring": ["Blood glucose", "Blood pressure", "Bone density (DEXA if long-term)", "Signs of infection", "Adrenal insufficiency signs"]
-        },
-        "guideline_tags": [
-            "FDA Black Box Warning - Adrenal Insufficiency (if stopped abruptly after long-term use)",
-            "FDA Black Box Warning - Serious Infections",
-            "WHO Guidelines - COVID-19 Treatment (RECOVERY trial)",
-            "ACR Guidelines - Rheumatoid Arthritis",
-            "WHO Essential Medicines List"
+        "minor": [
+            {
+                "drug": "Thuốc hạ đường huyết",
+                "mechanism": "Steroid tăng đường huyết, giảm hiệu quả.",
+                "effect": "Tăng glucose máu.",
+                "management": "Điều chỉnh liều thuốc đái tháo đường; theo dõi đường huyết.",
+            }
         ],
     },
-
-    "Hydrocortisone": {
-        "group": "Endocrinology - Corticosteroid (IV/PO/Topical)",
-        "vietnamese_name": "Hydrocortisone, Cortisol",
-        "brand_names": {
-            "common": ["Solu-Cortef (IV)", "Hydrocortisone cream"],
-            "vietnam": ["Hydrocortisone 100mg injection", "Hydrocortisone cream 1%"]
-        },
-        "administration": ["PO", "IV", "IM", "Topical"],
-        "indications": [
-            "Suy thượng thận cấp (Adrenal crisis)",
-            "Sốc nhiễm trùng (Septic shock) không đáp ứng với vasopressor",
-            "Viêm da (Topical)",
-            "Thay thế hormone ở suy thượng thận mạn"
-        ],
-        "dosage": {
-            "adrenal_crisis": "100mg IV bolus, sau đó 50-100mg IV mỗi 6-8h.",
-            "septic_shock": "50mg IV mỗi 6h hoặc 200mg/ngày truyền liên tục.",
-            "replacement_therapy": "15-25mg/ngày PO chia 2-3 lần (buổi sáng liều cao hơn).",
-            "topical": "Bôi 1-2 lần/ngày.",
-            "notes": "Có cả tác dụng glucocorticoid và mineralocorticoid (giữ nước/natri)."
-        },
-        "side_effects": [
-            "Tương tự Prednisone",
-            "Giữ nước, phù (do tác dụng mineralocorticoid)"
-        ],
-        "mechanism_of_action": "Corticoid tự nhiên (cortisol sinh tổng hợp). Có cả tác dụng glucocorticoid (chống viêm) và mineralocorticoid (giữ nước/natri). Dùng thay thế hormone ở suy thượng thận.",
-        "monitoring": [
-            "Đường huyết, huyết áp",
-            "Natri, Kali (do tác dụng mineralocorticoid)",
-            "Dấu hiệu phù"
-        ],
-        "references": {
-            "primary_sources": [
-                "FDA Drug Label - Hydrocortisone (Solu-Cortef)",
-                "UpToDate - Hydrocortisone: Drug information",
-                "Endocrine Society Guidelines - Adrenal Insufficiency",
-                "SCCM Guidelines - Septic Shock"
-            ],
-            "last_updated": "2025-02-05",
-            "evidence_level": "High - FDA approved, extensive clinical experience"
-        },
-        "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": None,
-            "organ_toxicity": {"endocrine": "Black Box Warning - Adrenal insufficiency (if stopped abruptly)", "metabolic": "Hyperglycemia, fluid retention (mineralocorticoid effect)", "cardiovascular": "Hypertension, hypokalemia", "oncologic": "Black Box Warning - Increased risk of infection"},
-            "qt_prolongation": False,
-            "hepatotoxicity": False,
-            "nephrotoxicity": False,
-            "requires_monitoring": ["Black Box Warning - Adrenal insufficiency (do not stop abruptly)", "Blood glucose (hyperglycemia)", "Blood pressure (hypertension)", "Serum sodium, potassium (mineralocorticoid effect)", "Infection signs (Black Box Warning - increased risk)", "Fluid retention signs (edema)"],
-            "look_alike_sound_alike": ["Hydrocortisone", "Hydrochlorothiazide"]
-        },
-        "guideline_tags": [
-            "FDA Black Box Warning - Adrenal Insufficiency (if stopped abruptly)",
-            "FDA Black Box Warning - Increased Risk of Infection",
-            "Endocrine Society Guidelines - Adrenal Insufficiency",
-            "SCCM Guidelines - Septic Shock",
-            "WHO Essential Medicines List"
-        ],
-        "last_updated": "2025-02-18"
+    "renal_adjustment": {
+        "normal": "Không cần chỉnh liều.",
+        "30_60": "Không cần chỉnh liều; theo dõi giữ nước/điện giải.",
+        "under_30": "Không cần chỉnh liều; thận trọng giữ nước và hạ kali.",
     },
-
-    "Methylprednisolone": {
-        "group": "Endocrinology - Corticosteroid (IV/PO)",
-        "vietnamese_name": "Methylprednisolone, Medrol",
-        "brand_names": {
-            "common": ["Solu-Medrol (IV)", "Medrol (PO)"],
-            "vietnam": ["Solu-Medrol 40mg/125mg", "Medrol 16mg"]
-        },
-        "administration": ["PO", "IV"],
-        "indications": [
-            "Chấn thương tủy sống cấp (Spinal cord injury) - Liều cao",
-            "Lupus thận nặng (Lupus nephritis)",
-            "Viêm khớp dạng thấp",
-            "Hen phế quản cấp, COPD cấp",
-            "Thải ghép cấp"
+    "hepatic_adjustment": {
+        "mild": "Không cần chỉnh liều đáng kể.",
+        "moderate": "Thận trọng; prednisone cần chuyển hóa thành prednisolone.",
+        "severe": "Cân nhắc dùng prednisolone thay vì prednisone.",
+        "notes": "Theo dõi dấu hiệu đáp ứng; prednisone là tiền dược.",
+    },
+    "overdose_management": {
+        "symptoms": [
+            "Cushingoid, tăng đường huyết, loét dạ dày",
+            "Rối loạn tâm thần, giữ nước, hạ kali",
+            "Suy thượng thận cấp nếu ngừng đột ngột sau dùng dài",
         ],
-        "dosage": {
-            "spinal_cord_injury": "30mg/kg IV bolus, sau đó 5.4mg/kg/h x 23h (trong 8h đầu sau chấn thương).",
-            "lupus_nephritis": "500-1000mg IV x 3 ngày (pulse therapy).",
-            "asthma_copd": "40-125mg IV/PO mỗi 6h.",
-            "notes": "Methylprednisolone mạnh hơn Prednisone ~1.25 lần. Dạng IV (Solu-Medrol) dùng cho cấp cứu."
-        },
-        "side_effects": [
-            "Tương tự Prednisone",
-            "Liều cao (pulse therapy): Tăng đường huyết nặng, rối loạn tâm thần"
+        "antidote": "Không có antidote đặc hiệu.",
+        "treatment": [
+            "Giảm/ngừng thuốc từ từ (không ngừng đột ngột).",
+            "Điều trị hỗ trợ: kiểm soát đường huyết, PPI nếu loét.",
+            "Bổ sung kali nếu hạ kali; lợi tiểu nếu phù.",
+            "Steroid stress dose nếu có dấu hiệu suy thượng thận.",
         ],
-        "mechanism_of_action": "Corticoid tổng hợp, mạnh hơn Prednisone. Dùng cho các tình huống cấp cứu (IV) hoặc bệnh nặng.",
-        "monitoring": [
-            "Đường huyết (đặc biệt với liều cao)",
-            "Huyết áp",
-            "Dấu hiệu nhiễm trùng",
-            "Tâm thần (với liều cao)"
-        ]
+        "monitoring": "Dấu hiệu sinh tồn, đường huyết, điện giải, triệu chứng suy thượng thận.",
+    },
+    "reversal_agents": None,
+    "administration_instructions": {
+        "oral": {
+            "with_food": "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày.",
+            "timing": "Ưu tiên buổi sáng; chia liều nếu liều cao.",
+            "notes": "Nếu dùng dài ngày, taper dần khi ngừng.",
         }
+    },
+    "black_box_warnings": "Ngừng đột ngột sau dùng kéo dài có thể gây suy thượng thận; tăng nguy cơ nhiễm trùng nghiêm trọng khi dùng liều ức chế miễn dịch.",
+    "risk_flags": {
+        "high_alert": True,
+        "narrow_therapeutic_index": False,
+        "bleeding_risk": False,
+        "organ_toxicity": {
+            "metabolic": "Tăng đường huyết, giữ nước",
+            "gastrointestinal": "Loét dạ dày/ xuất huyết",
+            "endocrine": "Ức chế trục HPA nếu ngừng đột ngột",
+            "skeletal": "Loãng xương nếu dùng kéo dài",
+        },
+        "qt_prolongation": False,
+        "hepatotoxicity": False,
+        "nephrotoxicity": False,
+        "requires_monitoring": [
+            "Đường huyết, huyết áp",
+            "Điện giải (natri/kali) nếu liều cao",
+            "Dấu hiệu nhiễm trùng",
+            "Dấu hiệu suy thượng thận khi giảm/ngừng",
+            "INR khi dùng kèm warfarin",
+        ],
+    },
+    "guideline_tags": [
+        "FDA Black Box Warning - Adrenal Insufficiency (nếu ngừng đột ngột)",
+        "FDA Black Box Warning - Serious Infections (liều cao/ức chế miễn dịch)",
+        "ACR Guidelines - Rheumatoid Arthritis",
+        "WHO Essential Medicines List",
+    ],
+    "last_updated": "2025-02-19",
+}
+
+CORTICOSTEROIDS_DRUGS = {
+    **SHORT_INTERMEDIATE_ACTING,
+    **LONG_ACTING,
+    "Prednisone": PREDNISONE_ENHANCED,
 }

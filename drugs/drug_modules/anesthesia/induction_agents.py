@@ -21,6 +21,20 @@ INDUCTION_AGENTS = {
                 "Rối loạn chuyển hóa chất béo nặng"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với Propofol hoặc thành phần (dầu đậu nành, trứng, lecithin)",
+                "Rối loạn chuyển hóa chất béo nặng",
+                "Sốc nặng không kiểm soát được"
+            ],
+            "tương_đối": [
+                "Suy gan nặng - thận trọng, có thể cần giảm liều",
+                "Suy thận nặng - thận trọng, theo dõi chức năng thận",
+                "Bệnh nhân cao tuổi - giảm liều, tăng nguy cơ tụt huyết áp",
+                "Bệnh nhân có bệnh tim mạch - tăng nguy cơ tụt huyết áp",
+                "Phụ nữ có thai - thận trọng, chỉ dùng khi thực sự cần thiết"
+            ]
+        },
         "dosage": {
             "induction_adult": "2-2.5 mg/kg IV (người già/suy kiệt: 1-1.5 mg/kg). Tiêm chậm 40mg/10s.",
             "maintenance_anesthesia": "100-200 mcg/kg/phút (6-12 mg/kg/giờ).",
@@ -40,7 +54,38 @@ INDUCTION_AGENTS = {
             "elimination": "Thận"
         },
         "is_vesicant": False,
-        "monitoring": ["Huyết áp (dễ tụt HA)", "Hô hấp (SpO2, EtCO2)", "Dấu hiệu PRIS nếu truyền lâu"]
+        "monitoring": ["Huyết áp (dễ tụt HA)", "Hô hấp (SpO2, EtCO2)", "Dấu hiệu PRIS nếu truyền lâu"],
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều. Propofol chủ yếu chuyển hóa qua gan.",
+            "under_30": "Không cần chỉnh liều. Propofol chủ yếu chuyển hóa qua gan.",
+            "dialysis": "Không cần chỉnh liều. Propofol không được lọc sạch qua thẩm phân máu.",
+            "notes": "Propofol chủ yếu chuyển hóa qua gan. Không cần điều chỉnh liều ở suy thận. Tuy nhiên, cần thận trọng ở bệnh nhân suy thận nặng do tăng nguy cơ tụt huyết áp."
+        },
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Benzodiazepines, Opioids",
+                    "mechanism": "Tăng cường tác dụng an thần và ức chế hô hấp",
+                    "effect": "Tăng nguy cơ ức chế hô hấp, tụt huyết áp",
+                    "management": "Giảm liều Propofol khi dùng cùng. Theo dõi hô hấp và huyết áp chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc ức chế CYP450 (Cimetidine, Erythromycin)",
+                    "mechanism": "Ức chế chuyển hóa Propofol",
+                    "effect": "Tăng nồng độ Propofol, kéo dài tác dụng",
+                    "management": "Giảm liều Propofol khi dùng cùng."
+                }
+            ],
+            "minor": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, hỗ trợ hô hấp, điều chỉnh huyết áp. Flumazenil không có tác dụng với Propofol."
+        }
     },
 
     "Ketamine": {
@@ -63,6 +108,21 @@ INDUCTION_AGENTS = {
                 "Tâm thần phân liệt (có thể gây ảo giác)"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tăng huyết áp nặng không kiểm soát",
+                "Phình mạch não, tăng áp lực nội sọ (tranh cãi, nhưng thường thận trọng)",
+                "Tâm thần phân liệt (có thể gây ảo giác)",
+                "Dị ứng với Ketamine"
+            ],
+            "tương_đối": [
+                "Suy gan - thận trọng, có thể cần giảm liều",
+                "Suy thận - thận trọng, theo dõi chức năng thận",
+                "Bệnh nhân cao tuổi - thận trọng với tác dụng tâm thần",
+                "Bệnh nhân có bệnh tim mạch - thận trọng với tác dụng tăng huyết áp",
+                "Phụ nữ có thai - thận trọng, chỉ dùng khi thực sự cần thiết"
+            ]
+        },
         "dosage": {
             "induction_iv": "1-2 mg/kg IV.",
             "induction_im": "4-6 mg/kg IM.",
@@ -77,7 +137,38 @@ INDUCTION_AGENTS = {
             "Tăng tiết nước bọt"
         ],
         "mechanism_of_action": "NMDA Receptor Antagonist. Gây mê phân ly (Dissociative anesthesia) - bệnh nhân có thể mở mắt nhưng không nhận thức đau.",
-        "monitoring": ["Huyết áp (có thể tăng)", "Nhịp tim", "Trạng thái tâm thần khi tỉnh"]
+        "monitoring": ["Huyết áp (có thể tăng)", "Nhịp tim", "Trạng thái tâm thần khi tỉnh"],
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều. Ketamine chủ yếu chuyển hóa qua gan.",
+            "under_30": "Không cần chỉnh liều. Ketamine chủ yếu chuyển hóa qua gan.",
+            "dialysis": "Không cần chỉnh liều. Ketamine không được lọc sạch qua thẩm phân máu.",
+            "notes": "Ketamine chủ yếu chuyển hóa qua gan. Không cần điều chỉnh liều ở suy thận."
+        },
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Benzodiazepines",
+                    "mechanism": "Giảm ảo giác và ác mộng khi tỉnh",
+                    "effect": "Giảm tác dụng phụ tâm thần của Ketamine",
+                    "management": "Có thể dùng cùng để giảm ảo giác. Thường dùng Midazolam trước hoặc sau Ketamine."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc ức chế CYP450",
+                    "mechanism": "Ức chế chuyển hóa Ketamine",
+                    "effect": "Tăng nồng độ Ketamine, kéo dài tác dụng",
+                    "management": "Giảm liều Ketamine khi dùng cùng."
+                }
+            ],
+            "minor": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, hỗ trợ hô hấp nếu cần. Benzodiazepines có thể giúp giảm ảo giác."
+        }
     },
 
     "Etomidate": {
@@ -97,6 +188,19 @@ INDUCTION_AGENTS = {
                 "Suy vỏ thượng thận (Adrenal suppression) - Etomidate ức chế tổng hợp Cortisol"
             ]
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng với Etomidate",
+                "Suy vỏ thượng thận (Adrenal suppression) - Etomidate ức chế tổng hợp Cortisol",
+                "Sốc nhiễm khuẩn - CHỐNG CHỈ ĐỊNH do ức chế tổng hợp Cortisol"
+            ],
+            "tương_đối": [
+                "Suy gan - thận trọng, có thể cần giảm liều",
+                "Suy thận - thận trọng, theo dõi chức năng thận",
+                "Bệnh nhân cao tuổi - thận trọng",
+                "Phụ nữ có thai - thận trọng, chỉ dùng khi thực sự cần thiết"
+            ]
+        },
         "dosage": {
             "induction": "0.2-0.3 mg/kg IV.",
             "notes": "Tiêm chậm. Rất ổn định huyết động."
@@ -108,6 +212,30 @@ INDUCTION_AGENTS = {
             "Đau tại chỗ tiêm"
         ],
         "mechanism_of_action": "GABA Modulator.",
-        "monitoring": ["Huyết áp", "Dấu hiệu suy thượng thận (nếu dùng truyền liên tục - Không khuyến cáo)"]
+        "monitoring": ["Huyết áp", "Dấu hiệu suy thượng thận (nếu dùng truyền liên tục - Không khuyến cáo)"],
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều. Etomidate chủ yếu chuyển hóa qua gan.",
+            "under_30": "Không cần chỉnh liều. Etomidate chủ yếu chuyển hóa qua gan.",
+            "dialysis": "Không cần chỉnh liều. Etomidate không được lọc sạch qua thẩm phân máu.",
+            "notes": "Etomidate chủ yếu chuyển hóa qua gan. Không cần điều chỉnh liều ở suy thận."
+        },
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Thuốc ức chế CYP450",
+                    "mechanism": "Ức chế chuyển hóa Etomidate",
+                    "effect": "Tăng nồng độ Etomidate, kéo dài tác dụng",
+                    "management": "Giảm liều Etomidate khi dùng cùng."
+                }
+            ],
+            "minor": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, hỗ trợ hô hấp nếu cần. Có thể cần bổ sung Corticosteroid nếu có dấu hiệu suy thượng thận."
         }
+    }
 }

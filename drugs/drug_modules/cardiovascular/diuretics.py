@@ -949,9 +949,17 @@ DIURETICS = {
               ],
               "monitoring": "Điện giải (K, Na, Mg, Cl), chức năng thận (creatinine, BUN, nước tiểu), huyết áp, nhịp tim, ECG, cân bằng dịch, ý thức"
           },
+          "renal_adjustment": {
+              "normal": "Không cần chỉnh liều",
+              "30_60": "Thận trọng. HCTZ kém hiệu quả ở suy thận trung bình. Có thể cần tăng liều hoặc chuyển sang loop diuretic.",
+              "under_30": "Kém hiệu quả. Nên tránh dùng. Chuyển sang loop diuretic (furosemide) nếu cần lợi tiểu.",
+              "dialysis": "Kém hiệu quả. HCTZ không được lọc sạch qua thẩm phân máu. Chuyển sang loop diuretic nếu cần.",
+              "notes": "HCTZ thải trừ qua thận (không chuyển hóa). Kém hiệu quả ở suy thận nặng (eGFR <30). Ở suy thận trung bình-nặng, nên chuyển sang loop diuretic."
+          },
           "reversal_agents": {
               "available": False,
-              "agents": []
+              "agents": [],
+              "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch và điện giải (đặc biệt kali, natri), theo dõi chức năng thận."
           },
           "administration_instructions": {
               "oral": {
@@ -1076,7 +1084,7 @@ DIURETICS = {
             ],
             "minor": []
         },
-        "contraindications": {
+        "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng sulfonamide",
                 "Vô niệu",
@@ -1124,9 +1132,17 @@ DIURETICS = {
             ],
             "monitoring": "Điện giải (K, Na), chức năng thận, huyết áp, nhịp tim"
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng. Indapamide kém hiệu quả ở suy thận trung bình. Có thể cần tăng liều hoặc chuyển sang loop diuretic.",
+            "under_30": "Kém hiệu quả. Nên tránh dùng. Chuyển sang loop diuretic nếu cần lợi tiểu.",
+            "dialysis": "Kém hiệu quả. Indapamide không được lọc sạch qua thẩm phân máu. Chuyển sang loop diuretic nếu cần.",
+            "notes": "Indapamide thải trừ qua cả thận (70%) và gan (30%). Kém hiệu quả ở suy thận nặng (eGFR <30)."
+        },
         "reversal_agents": {
             "available": False,
-            "agents": []
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch và điện giải (đặc biệt kali, natri), theo dõi chức năng thận."
         },
         "administration_instructions": {
             "oral": {

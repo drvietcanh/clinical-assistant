@@ -53,6 +53,14 @@ STANDARD_VACCINES = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng nặng với liều tiêm VAT trước đó.",
+            ],
+            "tương_đối": [
+                "Đang sốt cao hoặc bệnh cấp tính (nên hoãn tiêm đến khi ổn định).",
+            ],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -68,14 +76,29 @@ STANDARD_VACCINES = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều; tiêm theo lịch khuyến cáo.",
+            "under_30": "Không cần chỉnh liều; tiêm theo lịch khuyến cáo.",
+            "dialysis": "Không cần chỉnh liều; tiêm theo lịch khuyến cáo.",
+            "notes": "Vắc xin không thải trừ qua thận như thuốc; suy thận không làm thay đổi liều.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí phản ứng nặng bằng hỗ trợ, adrenalin, và điều trị cấp cứu.",
+        },
         "administration_instructions": {
+            "im": {
+                "site": "Tiêm bắp cơ Delta (người lớn) hoặc mặt trước ngoài đùi (trẻ em).",
+                "notes": "Lắc kỹ trước khi tiêm; luôn chuẩn bị sẵn bộ cấp cứu phản vệ.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -146,6 +169,15 @@ STANDARD_VACCINES = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Không có chống chỉ định tuyệt đối trong điều trị dự phòng sau phơi nhiễm (PEP) vì bệnh Dại tử vong 100%.",
+            ],
+            "tương_đối": [
+                "Dị ứng nặng với liều tiêm trước hoặc thành phần vắc xin (cân nhắc thay loại, tiêm tại cơ sở có khả năng cấp cứu).",
+                "Đang sốt cao hoặc bệnh cấp tính (có thể hoãn tiêm trong chương trình dự phòng trước phơi nhiễm - PrEP).",
+            ],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -161,14 +193,33 @@ STANDARD_VACCINES = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều; ưu tiên hoàn tất lịch tiêm PEP.",
+            "under_30": "Không cần chỉnh liều; ưu tiên hoàn tất lịch tiêm PEP.",
+            "dialysis": "Không cần chỉnh liều; tiêm theo phác đồ chuẩn.",
+            "notes": "Vắc xin dại không cần chỉnh theo mức lọc cầu thận; lợi ích vượt trội so với nguy cơ.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí phản ứng nặng bằng hỗ trợ, adrenalin, và điều trị cấp cứu.",
+        },
         "administration_instructions": {
+            "im": {
+                "site": "Tiêm bắp cơ Delta; KHÔNG tiêm mông.",
+                "notes": "Tuân thủ phác đồ Essen hoặc phác đồ IM khuyến cáo.",
+            },
+            "id": {
+                "site": "Tiêm trong da theo phác đồ Thai Red Cross.",
+                "notes": "Chia liều đúng số điểm tiêm; dùng kim tiêm trong da.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -237,6 +288,14 @@ STANDARD_VACCINES = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [
+                "Dị ứng nặng với thành phần vắc xin (trứng gà/ovalbumin hoặc các tá dược).",
+                "Hội chứng Guillain–Barré trong vòng 6 tuần sau tiêm vắc xin cúm trước đó.",
+                "Đang sốt cao hoặc bệnh cấp tính nặng (hoãn tiêm).",
+            ],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -252,14 +311,29 @@ STANDARD_VACCINES = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều; tiêm theo lịch hàng năm.",
+            "under_30": "Không cần chỉnh liều; ưu tiên tiêm cho bệnh nhân nguy cơ cao.",
+            "dialysis": "Không cần chỉnh liều; khuyến cáo tiêm ngừa cúm hàng năm.",
+            "notes": "Vắc xin cúm không thải trừ qua thận như thuốc; suy thận không làm thay đổi liều.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí phản ứng nặng bằng hỗ trợ, adrenalin, và điều trị cấp cứu.",
+        },
         "administration_instructions": {
+            "im": {
+                "site": "Tiêm bắp cơ Delta hoặc SC sâu theo hướng dẫn nhà sản xuất.",
+                "notes": "Không tiêm trong da; tiêm nhắc lại hàng năm trước mùa cúm.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -324,6 +398,13 @@ STANDARD_VACCINES = {
             "moderate": [],
             "minor": [],
         },
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [
+                "Dị ứng nặng với thành phần vắc xin hoặc liều tiêm trước.",
+                "Đang sốt cao hoặc bệnh cấp tính nặng (có thể hoãn tiêm).",
+            ],
+        },
         "pregnancy_lactation": {
             "fda_category": "",
             "pregnancy_details": "",
@@ -339,14 +420,29 @@ STANDARD_VACCINES = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều.",
+            "30_60": "Không cần chỉnh liều; tiêm theo lịch khuyến cáo.",
+            "under_30": "Không cần chỉnh liều; ưu tiên tiêm ở nhóm nguy cơ cao.",
+            "dialysis": "Không cần chỉnh liều; khuyến cáo tiêm cho bệnh nhân lọc máu.",
+            "notes": "Vắc xin viêm gan B không yêu cầu chỉnh liều theo mức lọc cầu thận.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí phản ứng nặng bằng hỗ trợ, adrenalin, và điều trị cấp cứu.",
+        },
         "administration_instructions": {
+            "im": {
+                "site": "Tiêm bắp cơ Delta (người lớn) hoặc mặt trước ngoài đùi (trẻ sơ sinh/trẻ nhỏ).",
+                "notes": "Không tiêm mông; tuân thủ lịch tiêm 0–1–6 tháng hoặc theo chương trình tiêm chủng mở rộng.",
+            },
         },
         "references": {
             "primary_sources": [],

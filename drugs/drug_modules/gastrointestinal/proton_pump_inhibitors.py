@@ -4,6 +4,131 @@ Active module - contains all gastrointestinal drug data"""
 # Proton Pump Inhibitors
 
 PROTON_PUMP_INHIBITORS_DRUGS = {
+    "Omeprazole": {
+        "group": "Gastrointestinal - Proton Pump Inhibitor",
+        "vietnamese_name": "Omeprazole, Losec",
+        "brand_names": {
+            "common": ["Prilosec", "Losec"],
+            "vietnam": ["Omeprazole 20mg/40mg", "Losec MUPS"]
+        },
+        "administration": ["PO", "IV"],
+        "indications": [
+            "Loét dạ dày - tá tràng (Peptic ulcer)",
+            "Trào ngược dạ dày - thực quản (GERD)",
+            "Diệt H. pylori (phối hợp kháng sinh)",
+            "Hội chứng Zollinger-Ellison",
+            "Phòng ngừa loét dạ dày do NSAID"
+        ],
+        "contraindications": ["Dị ứng omeprazole hoặc PPI"],
+        "dosage": {
+            "adult_standard": "20-40mg x 1 lần/ngày",
+            "adult_gerd": "20mg x 1 lần/ngày x 4-8 tuần",
+            "adult_ulcer": "20-40mg x 1 lần/ngày x 4-8 tuần",
+            "adult_h_pylori": "20mg x 2 lần/ngày (kết hợp với amoxicillin + clarithromycin)",
+            "adult_iv": "20-40mg IV x 1-2 lần/ngày",
+            "notes": "Uống 30-60 phút trước bữa ăn. Không nhai viên (enteric-coated)."
+        },
+        "side_effects": [
+            "Đau đầu",
+            "Tiêu chảy, táo bón",
+            "Đau bụng",
+            "Thiếu Vitamin B12 (nếu dùng lâu dài >3 năm)",
+            "Thiếu Magie (nếu dùng lâu dài)",
+            "Tăng nguy cơ gãy xương (dùng lâu dài)",
+            "Viêm thận kẽ (Hiếm)",
+            "Nhiễm C. difficile (tăng nguy cơ)"
+        ],
+        "interactions": [
+            "Clopidogrel: Giảm hiệu quả (tránh dùng chung, chuyển sang Pantoprazole)",
+            "Warfarin: Tăng INR",
+            "Methotrexate: Tăng nồng độ MTX",
+            "Ketoconazole, Itraconazole: Giảm hấp thu (cần môi trường acid)"
+        ],
+        "mechanism_of_action": "Ức chế bơm H+/K+ ATPase ở tế bào thành dạ dày → Giảm tiết acid mạnh (90%). Tác dụng kéo dài (24h). Omeprazole ức chế CYP2C19 mạnh, có thể giảm hiệu quả clopidogrel.",
+        "monitoring": [
+            "Triệu chứng GERD, loét",
+            "Magie máu (nếu dùng lâu dài)",
+            "Vitamin B12 (nếu dùng >3 năm)",
+            "Dấu hiệu nhiễm C. difficile"
+        ],
+        "precautions": [
+            "Chỉ dùng khi có chỉ định rõ ràng - Tránh lạm dụng",
+            "Dùng liều thấp nhất, thời gian ngắn nhất",
+            "Uống trước ăn sáng 30-60 phút",
+            "Không nhai viên (enteric-coated)",
+            "Tránh dùng chung với Clopidogrel (chuyển sang Pantoprazole)",
+            "Nguy cơ thiếu B12, Magie nếu dùng lâu dài",
+            "Tăng nguy cơ nhiễm C. difficile"
+        ],
+        "pharmacokinetics": {
+            "half_life": "0.5-1 giờ (ngắn), nhưng tác dụng kéo dài 24h do ức chế không thuận nghịch proton pump",
+            "onset": "1-3 ngày (tác dụng đầy đủ)",
+            "duration": "24 giờ",
+            "protein_binding": "95%",
+            "metabolism": "Gan (CYP2C19, CYP3A4) - ức chế mạnh CYP2C19",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ chất chuyển hóa)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể tăng nguy cơ gãy xương khi dùng lâu dài (≥1 năm) và liều cao. Nguy cơ nhiễm C. difficile tăng. Giảm hấp thu vitamin B12 và magnesium khi dùng lâu dài. Giảm hiệu quả clopidogrel (tránh dùng chung).",
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều, nhưng thận trọng",
+            "severe": "Thận trọng ở suy gan nặng (Child-Pugh C). Có thể giảm liều.",
+            "notes": "Omeprazole chuyển hóa ở gan qua CYP2C19 và CYP3A4. Thận trọng ở suy gan nặng."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều. Omeprazole chủ yếu chuyển hóa qua gan.",
+            "under_30": "Không cần chỉnh liều. Omeprazole chủ yếu chuyển hóa qua gan.",
+            "dialysis": "Không cần chỉnh liều. Omeprazole không được lọc sạch qua thẩm phân máu.",
+            "notes": "Omeprazole chủ yếu chuyển hóa qua gan (CYP2C19, CYP3A4). Không cần điều chỉnh liều ở suy thận."
+        },
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Clopidogrel",
+                    "mechanism": "Omeprazole ức chế CYP2C19 mạnh, làm giảm chuyển hóa clopidogrel thành dạng hoạt động",
+                    "effect": "Giảm hiệu quả chống kết tập tiểu cầu của clopidogrel, tăng nguy cơ biến cố tim mạch",
+                    "management": "TRÁNH DÙNG CÙNG. Chuyển sang pantoprazole hoặc H2 blocker nếu cần PPI."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Omeprazole ức chế CYP2C9, có thể ảnh hưởng đến chuyển hóa warfarin",
+                    "effect": "Có thể tăng INR",
+                    "management": "Theo dõi INR thường xuyên. Điều chỉnh liều warfarin nếu cần."
+                },
+                {
+                    "drug": "Ketoconazole, Itraconazole, Posaconazole",
+                    "mechanism": "PPI tăng pH dạ dày, giảm hấp thu azole antifungals (cần môi trường acid)",
+                    "effect": "Giảm nồng độ azole, giảm hiệu quả điều trị",
+                    "management": "Cách thời gian ít nhất 2 giờ. Hoặc dùng dạng lỏng posaconazole."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng omeprazole hoặc PPI khác",
+                "Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối"
+            ],
+            "tương_đối": [
+                "Suy gan nặng (Child-Pugh C) - thận trọng, có thể giảm liều",
+                "Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng",
+                "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
+                "Nhiễm C. difficile - tăng nguy cơ",
+                "Thiếu vitamin B12 - bổ sung nếu dùng lâu dài",
+                "Thiếu magnesium - bổ sung nếu dùng lâu dài",
+                "Dùng với clopidogrel - CHỐNG CHỈ ĐỊNH tương đối (tránh dùng cùng)"
+            ]
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ triệu chứng."
+        }
+    },
     "Esomeprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor', 'vietnamese_name':
         'Esomeprazole, Nexium', 'administration': ['PO', 'IV'], 'indications':
         ['Loét dạ dày tá tràng', 'GERD', 'Phòng ngừa loét do stress', 'Zollinger-Ellison syndrome'],
@@ -245,7 +370,8 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'Ít ảnh hưởng đến clopidogrel hơn omeprazole, nhưng vẫn thận trọng',
         'management':
         'Pantoprazole là lựa chọn tốt hơn omeprazole khi cần dùng với clopidogrel. Vẫn nên tránh dùng cùng nếu có thể.'
-        }]}, 'contraindications': {'tuyệt_đối': [
+        }]},         'contraindications': ['Dị ứng'],
+        'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng pantoprazole hoặc PPI khác',
         'Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối'
         ], 'tương_đối': [
@@ -266,13 +392,18 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'Thận trọng ở suy gan nặng (Child-Pugh C). Có thể giảm liều. Pantoprazole chuyển hóa ở gan qua CYP2C19 và CYP3A4, nhưng ít phụ thuộc vào CYP2C19 hơn omeprazole.'
         , 'notes':
         'Pantoprazole ít tương tác với CYP450 hơn omeprazole, nên ít ảnh hưởng hơn ở suy gan. Tuy nhiên, vẫn thận trọng ở suy gan nặng.'
-        }, 'overdose_management': {'symptoms': [
+        }, 'renal_adjustment': {'normal': 'Không cần chỉnh liều',
+        '30_60': 'Không cần chỉnh liều. Pantoprazole chủ yếu chuyển hóa qua gan.',
+        'under_30': 'Không cần chỉnh liều. Pantoprazole chủ yếu chuyển hóa qua gan.',
+        'dialysis': 'Không cần chỉnh liều. Pantoprazole không được lọc sạch qua thẩm phân máu.',
+        'notes': 'Pantoprazole chủ yếu chuyển hóa qua gan (CYP2C19, CYP3A4). Không cần điều chỉnh liều ở suy thận.'}, 'overdose_management': {'symptoms': [
         'PPI ít gây quá liều nghiêm trọng',
         'Triệu chứng nhẹ: nhức đầu, buồn nôn, tiêu chảy, chóng mặt'],
         'antidote': 'Không có antidote đặc hiệu', 'treatment': [
         'Hỗ trợ triệu chứng', 'Theo dõi dấu hiệu sinh tồn',
         'Hầu hết trường hợp tự khỏi'], 'monitoring':
-        'Theo dõi dấu hiệu sinh tồn, triệu chứng nhẹ'}, 'reversal_agents': None,
+        'Theo dõi dấu hiệu sinh tồn, triệu chứng nhẹ'}, 'reversal_agents': {'available': False, 'agents': [],
+        'notes': 'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ triệu chứng.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống 30-60 phút TRƯỚC bữa ăn (quan trọng - để PPI hoạt động khi proton pump được kích hoạt)'
         , 'timing':
@@ -321,6 +452,20 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         "contraindications": [
             "Dị ứng rabeprazole"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng rabeprazole hoặc PPI khác",
+                "Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối"
+            ],
+            "tương_đối": [
+                "Suy gan nặng (Child-Pugh C) - thận trọng, có thể giảm liều",
+                "Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng",
+                "Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài",
+                "Nhiễm C. difficile - tăng nguy cơ",
+                "Thiếu vitamin B12 - bổ sung nếu dùng lâu dài",
+                "Thiếu magnesium - bổ sung nếu dùng lâu dài"
+            ]
+        },
         "dosage": {
             "adult_po": "20mg x 1-2 lần/ngày",
             "adult_gerd": "20mg x 1 lần/ngày x 4-8 tuần",
@@ -329,9 +474,11 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
             "notes": "Uống 30-60 phút trước bữa ăn. Ít phụ thuộc CYP2C19 hơn omeprazole."
         },
         "renal_adjustment": {
-            "normal": "Không đổi",
-            "30_60": "Không đổi",
-            "under_30": "Không đổi"
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều. Rabeprazole chủ yếu chuyển hóa qua gan.",
+            "under_30": "Không cần chỉnh liều. Rabeprazole chủ yếu chuyển hóa qua gan.",
+            "dialysis": "Không cần chỉnh liều. Rabeprazole không được lọc sạch qua thẩm phân máu.",
+            "notes": "Rabeprazole chủ yếu chuyển hóa qua gan (CYP3A4 chủ yếu, ít phụ thuộc CYP2C19). Không cần điều chỉnh liều ở suy thận."
         },
         "side_effects": [
             "Nhức đầu",
@@ -431,7 +578,8 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
               },
               "reversal_agents": {
                   "available": False,
-                  "agents": []
+                  "agents": [],
+                  "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ triệu chứng."
               },
               "administration_instructions": {
                   "oral": {

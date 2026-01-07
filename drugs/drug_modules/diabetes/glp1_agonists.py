@@ -30,6 +30,22 @@ GLP1_AGONISTS_DRUGS = {
             "Đái tháo đường type 1",
             "Nhiễm toan ceton đái tháo đường"
     ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tiền sử ung thư tuyến giáp tủy (MTC) hoặc hội chứng u nội tiết đa tuyến type 2 (MEN 2)",
+                "Tiền sử viêm tụy cấp",
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Dị ứng với liraglutide hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Suy thận - thận trọng, có thể cần giảm liều",
+                "Suy gan - thận trọng, theo dõi chức năng gan",
+                "Bệnh nhân cao tuổi - tăng nguy cơ buồn nôn, mất nước",
+                "Bệnh nhân có bệnh dạ dày - tăng nguy cơ buồn nôn, nôn",
+                "Phụ nữ có thai - không có dữ liệu đầy đủ về an toàn"
+            ]
+        },
         "dosage": {
             "dm_t2": """Khởi đầu 0.6mg SC x 1 lần/ngày x 1 tuần, sau đó tăng lên 1.2mg x 1 lần/ngày. Có thể tăng lên 1.8mg nếu cần.""",
             "weight_loss": "Saxenda: Khởi đầu 0.6mg, tăng dần mỗi tuần đến 3mg x 1 lần/ngày.",
@@ -71,8 +87,28 @@ GLP1_AGONISTS_DRUGS = {
         "storage": "",
         "drug_interactions": {
             "major": [],
-            "moderate": [],
-            "minor": [],
+            "moderate": [
+                {
+                    "drug": "Insulin, Sulfonylureas",
+                    "mechanism": "GLP-1 agonists tăng tiết insulin, có thể tăng nguy cơ hạ đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Giảm liều insulin hoặc sulfonylurea khi bắt đầu GLP-1 agonist. Theo dõi đường huyết chặt chẽ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Thuốc uống (nói chung)",
+                    "mechanism": "GLP-1 agonists làm chậm làm rỗng dạ dày, có thể ảnh hưởng hấp thu thuốc uống",
+                    "effect": "Có thể giảm hấp thu hoặc làm chậm tác dụng của thuốc uống",
+                    "management": "Theo dõi tác dụng của thuốc uống. Có thể cần điều chỉnh liều hoặc thời gian uống."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "GLP-1 agonists có thể ảnh hưởng nhẹ đến chuyển hóa warfarin",
+                    "effect": "Có thể thay đổi INR nhẹ",
+                    "management": "Theo dõi INR khi bắt đầu hoặc thay đổi liều GLP-1 agonist."
+                }
+            ]
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -89,13 +125,24 @@ GLP1_AGONISTS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Có thể dùng nhưng thận trọng. Theo dõi chức năng thận.",
+            "under_30": "Thận trọng, có thể cần giảm liều. GLP-1 agonists thải trừ qua thận một phần.",
+            "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu.",
+            "notes": "GLP-1 agonists thải trừ một phần qua thận. Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, điều chỉnh đường huyết nếu hạ đường huyết, điều trị viêm tụy nếu có."
+        },
         "administration_instructions": {
         },
         "references": {
@@ -153,7 +200,28 @@ GLP1_AGONISTS_DRUGS = {
             "Giảm cân mạnh - Rất phổ biến hiện nay (Ozempic, Wegovy)"
     ],
         "black_box_warnings": "Nguy cơ ung thư tuyến giáp tủy (MTC). Chống chỉ định nếu có tiền sử MTC hoặc MEN 2.",
-        "contraindications": [],
+        "contraindications": [
+            "Tiền sử ung thư tuyến giáp tủy (MTC) hoặc hội chứng u nội tiết đa tuyến type 2 (MEN 2)",
+            "Tiền sử viêm tụy cấp",
+            "Đái tháo đường type 1",
+            "Nhiễm toan ceton đái tháo đường"
+        ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tiền sử ung thư tuyến giáp tủy (MTC) hoặc hội chứng u nội tiết đa tuyến type 2 (MEN 2)",
+                "Tiền sử viêm tụy cấp",
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Dị ứng với semaglutide hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Suy thận - thận trọng, có thể cần giảm liều",
+                "Suy gan - thận trọng, theo dõi chức năng gan",
+                "Bệnh nhân cao tuổi - tăng nguy cơ buồn nôn, mất nước",
+                "Bệnh nhân có bệnh dạ dày - tăng nguy cơ buồn nôn, nôn",
+                "Phụ nữ có thai - không có dữ liệu đầy đủ về an toàn"
+            ]
+        },
         "interactions": [],
         "pregnancy": "",
         "pharmacokinetics": {
@@ -161,8 +229,28 @@ GLP1_AGONISTS_DRUGS = {
         "storage": "",
         "drug_interactions": {
             "major": [],
-            "moderate": [],
-            "minor": [],
+            "moderate": [
+                {
+                    "drug": "Insulin, Sulfonylureas",
+                    "mechanism": "GLP-1 agonists tăng tiết insulin, có thể tăng nguy cơ hạ đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Giảm liều insulin hoặc sulfonylurea khi bắt đầu GLP-1 agonist. Theo dõi đường huyết chặt chẽ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Thuốc uống (nói chung)",
+                    "mechanism": "GLP-1 agonists làm chậm làm rỗng dạ dày, có thể ảnh hưởng hấp thu thuốc uống",
+                    "effect": "Có thể giảm hấp thu hoặc làm chậm tác dụng của thuốc uống",
+                    "management": "Theo dõi tác dụng của thuốc uống. Có thể cần điều chỉnh liều hoặc thời gian uống."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "GLP-1 agonists có thể ảnh hưởng nhẹ đến chuyển hóa warfarin",
+                    "effect": "Có thể thay đổi INR nhẹ",
+                    "management": "Theo dõi INR khi bắt đầu hoặc thay đổi liều GLP-1 agonist."
+                }
+            ]
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -179,13 +267,24 @@ GLP1_AGONISTS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Có thể dùng nhưng thận trọng. Theo dõi chức năng thận.",
+            "under_30": "Thận trọng, có thể cần giảm liều. GLP-1 agonists thải trừ qua thận một phần.",
+            "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu.",
+            "notes": "GLP-1 agonists thải trừ một phần qua thận. Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, điều chỉnh đường huyết nếu hạ đường huyết, điều trị viêm tụy nếu có."
+        },
         "administration_instructions": {
         },
         "references": {
@@ -238,8 +337,28 @@ GLP1_AGONISTS_DRUGS = {
         "storage": "",
         "drug_interactions": {
             "major": [],
-            "moderate": [],
-            "minor": [],
+            "moderate": [
+                {
+                    "drug": "Insulin, Sulfonylureas",
+                    "mechanism": "GLP-1 agonists tăng tiết insulin, có thể tăng nguy cơ hạ đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Giảm liều insulin hoặc sulfonylurea khi bắt đầu GLP-1 agonist. Theo dõi đường huyết chặt chẽ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Thuốc uống (nói chung)",
+                    "mechanism": "GLP-1 agonists làm chậm làm rỗng dạ dày, có thể ảnh hưởng hấp thu thuốc uống",
+                    "effect": "Có thể giảm hấp thu hoặc làm chậm tác dụng của thuốc uống",
+                    "management": "Theo dõi tác dụng của thuốc uống. Có thể cần điều chỉnh liều hoặc thời gian uống."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "GLP-1 agonists có thể ảnh hưởng nhẹ đến chuyển hóa warfarin",
+                    "effect": "Có thể thay đổi INR nhẹ",
+                    "management": "Theo dõi INR khi bắt đầu hoặc thay đổi liều GLP-1 agonist."
+                }
+            ]
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -256,13 +375,24 @@ GLP1_AGONISTS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Có thể dùng nhưng thận trọng. Theo dõi chức năng thận.",
+            "under_30": "Thận trọng, có thể cần giảm liều. GLP-1 agonists thải trừ qua thận một phần.",
+            "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu.",
+            "notes": "GLP-1 agonists thải trừ một phần qua thận. Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, điều chỉnh đường huyết nếu hạ đường huyết, điều trị viêm tụy nếu có."
+        },
         "administration_instructions": {
         },
         "references": {
@@ -305,7 +435,28 @@ GLP1_AGONISTS_DRUGS = {
             "Đường huyết",
             "Dấu hiệu viêm tụy"
     ],
-        "contraindications": [],
+        "contraindications": [
+            "Tiền sử ung thư tuyến giáp tủy (MTC) hoặc hội chứng u nội tiết đa tuyến type 2 (MEN 2)",
+            "Tiền sử viêm tụy cấp",
+            "Đái tháo đường type 1",
+            "Nhiễm toan ceton đái tháo đường"
+        ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tiền sử ung thư tuyến giáp tủy (MTC) hoặc hội chứng u nội tiết đa tuyến type 2 (MEN 2)",
+                "Tiền sử viêm tụy cấp",
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Dị ứng với exenatide hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Suy thận - thận trọng, có thể cần giảm liều",
+                "Suy gan - thận trọng, theo dõi chức năng gan",
+                "Bệnh nhân cao tuổi - tăng nguy cơ buồn nôn, mất nước",
+                "Bệnh nhân có bệnh dạ dày - tăng nguy cơ buồn nôn, nôn",
+                "Phụ nữ có thai - không có dữ liệu đầy đủ về an toàn"
+            ]
+        },
         "interactions": [],
         "pregnancy": "",
         "precautions": [],
@@ -315,8 +466,28 @@ GLP1_AGONISTS_DRUGS = {
         "black_box_warnings": None,
         "drug_interactions": {
             "major": [],
-            "moderate": [],
-            "minor": [],
+            "moderate": [
+                {
+                    "drug": "Insulin, Sulfonylureas",
+                    "mechanism": "GLP-1 agonists tăng tiết insulin, có thể tăng nguy cơ hạ đường huyết",
+                    "effect": "Tăng nguy cơ hạ đường huyết",
+                    "management": "Giảm liều insulin hoặc sulfonylurea khi bắt đầu GLP-1 agonist. Theo dõi đường huyết chặt chẽ."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Thuốc uống (nói chung)",
+                    "mechanism": "GLP-1 agonists làm chậm làm rỗng dạ dày, có thể ảnh hưởng hấp thu thuốc uống",
+                    "effect": "Có thể giảm hấp thu hoặc làm chậm tác dụng của thuốc uống",
+                    "management": "Theo dõi tác dụng của thuốc uống. Có thể cần điều chỉnh liều hoặc thời gian uống."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "GLP-1 agonists có thể ảnh hưởng nhẹ đến chuyển hóa warfarin",
+                    "effect": "Có thể thay đổi INR nhẹ",
+                    "management": "Theo dõi INR khi bắt đầu hoặc thay đổi liều GLP-1 agonist."
+                }
+            ]
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -333,13 +504,24 @@ GLP1_AGONISTS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Có thể dùng nhưng thận trọng. Theo dõi chức năng thận.",
+            "under_30": "Thận trọng, có thể cần giảm liều. GLP-1 agonists thải trừ qua thận một phần.",
+            "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu.",
+            "notes": "GLP-1 agonists thải trừ một phần qua thận. Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, điều chỉnh đường huyết nếu hạ đường huyết, điều trị viêm tụy nếu có."
+        },
         "administration_instructions": {
         },
         "references": {

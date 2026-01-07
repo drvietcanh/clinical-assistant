@@ -35,11 +35,60 @@ ACE_ARB_DRUGS = {
             "Tiền sử phù mạch (Angioedema)",
             "Hẹp động mạch thận 2 bên"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Có thai (Gây quái thai, tổn thương thai nhi)",
+                "Tiền sử phù mạch (Angioedema)",
+                "Hẹp động mạch thận 2 bên"
+            ],
+            "tương_đối": [
+                "Suy thận - thận trọng, theo dõi creatinine",
+                "Tăng Kali máu - thận trọng",
+                "Bệnh nhân cao tuổi - khởi đầu liều thấp"
+            ]
+        },
         "interactions": [
             "Thuốc giữ Kali (Spironolactone, Amiloride), Bổ sung Kali: Tăng nguy cơ tăng Kali máu.",
             "NSAIDs: Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận.",
             "Lithium: Tăng nồng độ Lithium."
         ],
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Spironolactone, Amiloride, Triamterene",
+                    "mechanism": "Cả hai đều giữ Kali",
+                    "effect": "Tăng nguy cơ tăng Kali máu nghiêm trọng",
+                    "management": "Tránh dùng cùng. Nếu cần, theo dõi Kali máu thường xuyên."
+                },
+                {
+                    "drug": "NSAIDs (Ibuprofen, Naproxen, etc.)",
+                    "mechanism": "Giảm tác dụng hạ huyết áp, tăng nguy cơ suy thận",
+                    "effect": "Giảm hiệu quả điều trị, suy thận cấp",
+                    "management": "Tránh dùng thường xuyên. Theo dõi chức năng thận."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ACE-I giảm thải trừ Lithium",
+                    "effect": "Tăng nồng độ Lithium, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ Lithium. Có thể cần giảm liều Lithium."
+                }
+            ],
+            "minor": []
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều. Khởi đầu liều thấp hơn.",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Lisinopril không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Lisinopril thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy và tăng Kali máu."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu hạ huyết áp, điều chỉnh điện giải."
+        },
         "mechanism_of_action": "Ức chế ACE (Angiotensin Converting Enzyme) → Giảm Angiotensin II → Giãn mạch, giảm huyết áp. Giảm Aldosterone → Giảm giữ nước/natri. Bảo vệ tim, thận.",
         "monitoring": [
             "Huyết áp",
@@ -89,6 +138,65 @@ ACE_ARB_DRUGS = {
         "side_effects": [
             "Tương tự Lisinopril"
         ],
+        "contraindications": [
+            "Có thai (Gây quái thai, tổn thương thai nhi)",
+            "Tiền sử phù mạch (Angioedema)",
+            "Hẹp động mạch thận 2 bên"
+        ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Có thai (Gây quái thai, tổn thương thai nhi)",
+                "Tiền sử phù mạch (Angioedema)",
+                "Hẹp động mạch thận 2 bên"
+            ],
+            "tương_đối": [
+                "Suy thận - thận trọng, theo dõi creatinine",
+                "Tăng Kali máu - thận trọng",
+                "Bệnh nhân cao tuổi - khởi đầu liều thấp"
+            ]
+        },
+        "interactions": [
+            "Thuốc giữ Kali (Spironolactone, Amiloride), Bổ sung Kali: Tăng nguy cơ tăng Kali máu.",
+            "NSAIDs: Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận.",
+            "Lithium: Tăng nồng độ Lithium."
+        ],
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Spironolactone, Amiloride, Triamterene",
+                    "mechanism": "Cả hai đều giữ Kali",
+                    "effect": "Tăng nguy cơ tăng Kali máu nghiêm trọng",
+                    "management": "Tránh dùng cùng. Nếu cần, theo dõi Kali máu thường xuyên."
+                },
+                {
+                    "drug": "NSAIDs (Ibuprofen, Naproxen, etc.)",
+                    "mechanism": "Giảm tác dụng hạ huyết áp, tăng nguy cơ suy thận",
+                    "effect": "Giảm hiệu quả điều trị, suy thận cấp",
+                    "management": "Tránh dùng thường xuyên. Theo dõi chức năng thận."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ACE-I giảm thải trừ Lithium",
+                    "effect": "Tăng nồng độ Lithium, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ Lithium. Có thể cần giảm liều Lithium."
+                }
+            ],
+            "minor": []
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều. Khởi đầu liều thấp hơn.",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Enalapril không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Enalapril thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy và tăng Kali máu."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu hạ huyết áp, điều chỉnh điện giải."
+        },
         "mechanism_of_action": "Tương tự Lisinopril. Có dạng IV (Enalaprilat) cho cấp cứu tăng huyết áp.",
         "risk_flags": {
             "high_alert": True,
@@ -134,6 +242,59 @@ ACE_ARB_DRUGS = {
             "Có thai (Gây quái thai)",
             "Hẹp động mạch thận 2 bên"
         ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Có thai (Gây quái thai)",
+                "Hẹp động mạch thận 2 bên"
+            ],
+            "tương_đối": [
+                "Suy thận - thận trọng, theo dõi creatinine",
+                "Tăng Kali máu - thận trọng",
+                "Bệnh nhân cao tuổi - khởi đầu liều thấp"
+            ]
+        },
+        "interactions": [
+            "Thuốc giữ Kali (Spironolactone, Amiloride), Bổ sung Kali: Tăng nguy cơ tăng Kali máu.",
+            "NSAIDs: Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận.",
+            "Lithium: Tăng nồng độ Lithium."
+        ],
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Spironolactone, Amiloride, Triamterene",
+                    "mechanism": "Cả hai đều giữ Kali",
+                    "effect": "Tăng nguy cơ tăng Kali máu nghiêm trọng",
+                    "management": "Tránh dùng cùng. Nếu cần, theo dõi Kali máu thường xuyên."
+                },
+                {
+                    "drug": "NSAIDs (Ibuprofen, Naproxen, etc.)",
+                    "mechanism": "Giảm tác dụng hạ huyết áp, tăng nguy cơ suy thận",
+                    "effect": "Giảm hiệu quả điều trị, suy thận cấp",
+                    "management": "Tránh dùng thường xuyên. Theo dõi chức năng thận."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ARB có thể giảm thải trừ Lithium",
+                    "effect": "Tăng nồng độ Lithium, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ Lithium. Có thể cần giảm liều Lithium."
+                }
+            ],
+            "minor": []
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều. Khởi đầu liều thấp hơn.",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Losartan không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Losartan thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy và tăng Kali máu."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu hạ huyết áp, điều chỉnh điện giải."
+        },
         "mechanism_of_action": "Chẹn thụ thể Angiotensin II (AT1) → Giãn mạch, giảm huyết áp. Tác dụng tương tự ACE-I nhưng KHÔNG gây ho khan. Thường dùng thay thế ACE-I khi không dung nạp ho.",
         "monitoring": [
             "Huyết áp",
@@ -180,6 +341,55 @@ ACE_ARB_DRUGS = {
         "side_effects": [
             "Tương tự Losartan"
         ],
+        "contraindications": [
+            "Có thai (Gây quái thai)",
+            "Hẹp động mạch thận 2 bên"
+        ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Có thai (Gây quái thai)",
+                "Hẹp động mạch thận 2 bên"
+            ],
+            "tương_đối": [
+                "Suy thận - thận trọng, theo dõi creatinine",
+                "Tăng Kali máu - thận trọng",
+                "Bệnh nhân cao tuổi - khởi đầu liều thấp"
+            ]
+        },
+        "interactions": [
+            "Thuốc giữ Kali (Spironolactone, Amiloride), Bổ sung Kali: Tăng nguy cơ tăng Kali máu.",
+            "NSAIDs: Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận."
+        ],
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Spironolactone, Amiloride, Triamterene",
+                    "mechanism": "Cả hai đều giữ Kali",
+                    "effect": "Tăng nguy cơ tăng Kali máu nghiêm trọng",
+                    "management": "Tránh dùng cùng. Nếu cần, theo dõi Kali máu thường xuyên."
+                },
+                {
+                    "drug": "NSAIDs (Ibuprofen, Naproxen, etc.)",
+                    "mechanism": "Giảm tác dụng hạ huyết áp, tăng nguy cơ suy thận",
+                    "effect": "Giảm hiệu quả điều trị, suy thận cấp",
+                    "management": "Tránh dùng thường xuyên. Theo dõi chức năng thận."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều. Khởi đầu liều thấp hơn.",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Valsartan không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Valsartan thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy và tăng Kali máu."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu hạ huyết áp, điều chỉnh điện giải."
+        },
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": False,
@@ -211,6 +421,55 @@ ACE_ARB_DRUGS = {
         "side_effects": [
             "Tương tự Losartan"
         ],
+        "contraindications": [
+            "Có thai (Gây quái thai)",
+            "Hẹp động mạch thận 2 bên"
+        ],
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Có thai (Gây quái thai)",
+                "Hẹp động mạch thận 2 bên"
+            ],
+            "tương_đối": [
+                "Suy thận - thận trọng, theo dõi creatinine",
+                "Tăng Kali máu - thận trọng",
+                "Bệnh nhân cao tuổi - khởi đầu liều thấp"
+            ]
+        },
+        "interactions": [
+            "Thuốc giữ Kali (Spironolactone, Amiloride), Bổ sung Kali: Tăng nguy cơ tăng Kali máu.",
+            "NSAIDs: Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận."
+        ],
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Spironolactone, Amiloride, Triamterene",
+                    "mechanism": "Cả hai đều giữ Kali",
+                    "effect": "Tăng nguy cơ tăng Kali máu nghiêm trọng",
+                    "management": "Tránh dùng cùng. Nếu cần, theo dõi Kali máu thường xuyên."
+                },
+                {
+                    "drug": "NSAIDs (Ibuprofen, Naproxen, etc.)",
+                    "mechanism": "Giảm tác dụng hạ huyết áp, tăng nguy cơ suy thận",
+                    "effect": "Giảm hiệu quả điều trị, suy thận cấp",
+                    "management": "Tránh dùng thường xuyên. Theo dõi chức năng thận."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, có thể cần giảm liều. Khởi đầu liều thấp hơn.",
+            "under_30": "Thận trọng, giảm liều (thải trừ qua thận)",
+            "dialysis": "Thận trọng, giảm liều. Telmisartan không được lọc sạch hiệu quả qua thẩm phân máu.",
+            "notes": "Telmisartan thải trừ qua thận. Suy thận có thể tăng nguy cơ tích lũy và tăng Kali máu."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu hạ huyết áp, điều chỉnh điện giải."
+        },
         "mechanism_of_action": "ARB tác dụng kéo dài nhất (half-life 24h). Có thêm tác dụng PPAR-gamma (tương tự Pioglitazone) - Cải thiện insulin resistance nhẹ.",
         "risk_flags": {
             "high_alert": True,

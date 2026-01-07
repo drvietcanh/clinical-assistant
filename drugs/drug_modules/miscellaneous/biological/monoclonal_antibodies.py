@@ -5995,4 +5995,96 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
 
 }
 
-__all__ = ['{category.upper()}_DRUGS']
+def _ensure_enhanced_fields(drugs):
+    """Fill missing enhanced fields with safe defaults for all monoclonal antibodies."""
+    for _, drug_data in drugs.items():
+        if not isinstance(drug_data, dict):
+            continue
+
+        # contraindications_detail
+        if not drug_data.get("contraindications_detail"):
+            abs_list, rel_list = [], []
+            contraind = drug_data.get("contraindications")
+            if isinstance(contraind, dict):
+                for key in ("tuyệt_đối", "absolute"):
+                    if isinstance(contraind.get(key), list):
+                        abs_list.extend(contraind[key])
+                for key in ("tương_đối", "relative"):
+                    if isinstance(contraind.get(key), list):
+                        rel_list.extend(contraind[key])
+            elif isinstance(contraind, list):
+                abs_list = contraind
+            drug_data["contraindications_detail"] = {
+                "tuyệt_đối": abs_list,
+                "tương_đối": rel_list,
+            }
+
+        # drug_interactions
+        if not drug_data.get("drug_interactions"):
+            drug_data["drug_interactions"] = {"major": [], "moderate": [], "minor": []}
+
+        # renal_adjustment
+        if not drug_data.get("renal_adjustment"):
+            drug_data["renal_adjustment"] = {
+                "normal": "Không cần chỉnh liều.",
+                "30_60": "Không cần chỉnh liều đáng kể; theo dõi lâm sàng.",
+                "under_30": "Thận trọng; theo dõi tích lũy và tác dụng phụ.",
+                "dialysis": "Thận trọng; chưa có dữ liệu, theo dõi lâm sàng.",
+                "notes": "Các mAb không thải trừ qua thận đáng kể; thường không cần chỉnh liều theo eGFR.",
+            }
+
+        # hepatic_adjustment
+        if not drug_data.get("hepatic_adjustment"):
+            drug_data["hepatic_adjustment"] = {
+                "mild": "Không cần chỉnh liều.",
+                "moderate": "Không cần chỉnh liều; theo dõi lâm sàng.",
+                "severe": "Thận trọng; dữ liệu hạn chế.",
+                "notes": "Các mAb chuyển hóa qua hệ RES, không qua CYP; thường không cần chỉnh liều ở suy gan.",
+            }
+
+        # pregnancy_lactation
+        if not drug_data.get("pregnancy_lactation"):
+            drug_data["pregnancy_lactation"] = {
+                "fda_category": drug_data.get("pregnancy") or "",
+                "pregnancy_details": "",
+                "lactation": {
+                    "safety": "",
+                    "details": "",
+                    "recommendation": "",
+                },
+            }
+
+        # overdose_management
+        if not drug_data.get("overdose_management"):
+            drug_data["overdose_management"] = {
+                "symptoms": [],
+                "antidote": "",
+                "treatment": [],
+                "monitoring": "",
+            }
+
+        # reversal_agents
+        if not drug_data.get("reversal_agents"):
+            drug_data["reversal_agents"] = {
+                "available": False,
+                "agents": [],
+                "notes": "Không có antidote đặc hiệu; xử trí quá liều chủ yếu là hỗ trợ và theo dõi.",
+            }
+
+        # administration_instructions
+        if not drug_data.get("administration_instructions"):
+            drug_data["administration_instructions"] = {}
+
+        # storage
+        if not drug_data.get("storage"):
+            drug_data["storage"] = "Bảo quản 2-8°C, tránh đông lạnh/ánh sáng; dùng ngay sau pha loãng."
+
+        # black_box_warnings
+        if "black_box_warnings" not in drug_data or drug_data["black_box_warnings"] is None:
+            drug_data["black_box_warnings"] = ""
+
+
+# Bổ sung các field còn thiếu cho tất cả mAbs trong file
+_ensure_enhanced_fields(MONOCLONAL_ANTIBODIES_DRUGS)
+
+__all__ = ['MONOCLONAL_ANTIBODIES_DRUGS']

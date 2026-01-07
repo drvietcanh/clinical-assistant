@@ -36,7 +36,7 @@ FLUIDS_DRUGS = {
             "Điện giải (Na, Cl)",
             "Cân bằng dịch",
             "Dấu hiệu quá tải dịch"
-    ],
+        ],
         "side_effects": [],
         "interactions": [],
         "pregnancy": "",
@@ -50,6 +50,15 @@ FLUIDS_DRUGS = {
             "major": [],
             "moderate": [],
             "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tăng natri máu nặng (hypernatremia).",
+                "Quá tải dịch nặng/suy tim sung huyết mất bù.",
+            ],
+            "tương_đối": [
+                "Suy tim, suy thận, xơ gan với cổ trướng (nguy cơ quá tải dịch).",
+            ],
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -66,14 +75,29 @@ FLUIDS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều; điều chỉnh theo tình trạng huyết động và cân bằng dịch.",
+            "30_60": "Thận trọng; giảm tốc độ/khối lượng truyền, theo dõi sát dấu hiệu quá tải dịch.",
+            "under_30": "Thận trọng cao; ưu tiên bolus nhỏ, theo dõi lâm sàng và siêu âm tại giường.",
+            "dialysis": "Thận trọng; phối hợp với đội lọc máu để điều chỉnh dịch.",
+            "notes": "NaCl 0.9% có thể gây toan chuyển hóa tăng Cl nếu dùng lượng lớn, đặc biệt ở bệnh nhân suy thận.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí quá liều bằng ngừng truyền, lợi tiểu, và hỗ trợ hô hấp/tuần hoàn.",
+        },
         "administration_instructions": {
+            "iv": {
+                "infusion_rate": "Tùy mục tiêu hồi sức; bolus nhanh trong sốc, chậm hơn trong bù dịch thông thường.",
+                "notes": "Theo dõi áp lực tĩnh mạch trung tâm, siêu âm tại giường, và dấu hiệu quá tải dịch.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -125,7 +149,7 @@ FLUIDS_DRUGS = {
         "monitoring": [
             "Điện giải",
             "Lactate (không ảnh hưởng đáng kể lactate máu trừ khi suy gan nặng)"
-    ],
+        ],
         "side_effects": [],
         "interactions": [],
         "pregnancy": "",
@@ -139,6 +163,14 @@ FLUIDS_DRUGS = {
             "major": [],
             "moderate": [],
             "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [],
+            "tương_đối": [
+                "Tăng kali máu đáng kể.",
+                "Chấn thương sọ não nặng (tranh cãi; có thể ưu tiên NaCl 0.9%).",
+                "Suy thận nặng (nguy cơ tích lũy kali).",
+            ],
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -155,14 +187,29 @@ FLUIDS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều; điều chỉnh theo huyết động.",
+            "30_60": "Thận trọng do chứa K+; giảm tổng lượng dịch nếu nguy cơ quá tải.",
+            "under_30": "Thận trọng cao; giới hạn liều và theo dõi sát K+ và cân bằng dịch.",
+            "dialysis": "Dùng thận trọng; phối hợp với đội lọc máu.",
+            "notes": "Ringer Lactate chứa kali và lactate; cần thận trọng ở bệnh nhân suy thận/suy gan nặng.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí quá liều bằng ngừng truyền, lợi tiểu, và hỗ trợ hô hấp/tuần hoàn.",
+        },
         "administration_instructions": {
+            "iv": {
+                "infusion_rate": "Tương tự NaCl 0.9%; điều chỉnh theo huyết động và cân bằng dịch.",
+                "notes": "Tránh dùng để pha máu do chứa Ca2+; không phối hợp trực tiếp với chế phẩm máu.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -217,7 +264,7 @@ FLUIDS_DRUGS = {
         "side_effects": [
             "Quá tải dịch (Pulmonary edema)",
             "Phản ứng dị ứng (hiếm)"
-    ],
+        ],
         "storage": "Nhiệt độ phòng (thường <30 độ C).",
         "interactions": [],
         "pregnancy": "",
@@ -231,6 +278,14 @@ FLUIDS_DRUGS = {
             "major": [],
             "moderate": [],
             "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Suy tim sung huyết nặng hoặc quá tải tuần hoàn rõ rệt.",
+            ],
+            "tương_đối": [
+                "Thiếu máu nặng cần truyền khối hồng cầu thay vì albumin đơn thuần.",
+            ],
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -247,14 +302,29 @@ FLUIDS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều; điều chỉnh theo huyết động và mục tiêu lâm sàng.",
+            "30_60": "Thận trọng; theo dõi dấu hiệu quá tải dịch và chức năng thận.",
+            "under_30": "Thận trọng; giảm tốc độ truyền, theo dõi sát nước tiểu và dấu hiệu phù phổi.",
+            "dialysis": "Thận trọng; phối hợp với đội lọc máu để tránh quá tải thể tích.",
+            "notes": "Albumin kéo nước vào lòng mạch mạnh, dễ gây quá tải tuần hoàn nếu truyền nhanh/liều cao.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí quá liều bằng ngừng truyền, lợi tiểu, hỗ trợ hô hấp/tuần hoàn.",
+        },
         "administration_instructions": {
+            "iv": {
+                "infusion_rate": "Truyền tĩnh mạch chậm, đặc biệt ở bệnh nhân suy tim/suy thận.",
+                "notes": "Theo dõi sát huyết áp, nhịp tim, SpO₂, và dấu hiệu phù phổi trong và sau truyền.",
+            },
         },
         "references": {
             "primary_sources": [],
@@ -309,7 +379,7 @@ FLUIDS_DRUGS = {
         "monitoring": [
             "Chức năng thận (Creatinine)",
             "Đông máu"
-    ],
+        ],
         "side_effects": [],
         "interactions": [],
         "pregnancy": "",
@@ -322,6 +392,16 @@ FLUIDS_DRUGS = {
             "major": [],
             "moderate": [],
             "minor": [],
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Nhiễm trùng huyết (sepsis) cần hồi sức dịch.",
+                "Bệnh nhân ICU nặng cần hồi sức dịch (trừ một số chỉ định rất chọn lọc).",
+            ],
+            "tương_đối": [
+                "Suy thận cấp hoặc mạn.",
+                "Bỏng nặng, xuất huyết não.",
+            ],
         },
         "pregnancy_lactation": {
             "fda_category": "",
@@ -338,14 +418,29 @@ FLUIDS_DRUGS = {
             "severe": "",
             "notes": "",
         },
+        "renal_adjustment": {
+            "normal": "Thận trọng; dùng liều thấp nhất có hiệu quả trong thời gian ngắn nhất.",
+            "30_60": "Tránh nếu có lựa chọn khác; nếu buộc phải dùng thì theo dõi sát chức năng thận và đông máu.",
+            "under_30": "Tránh sử dụng do nguy cơ tổn thương thận rất cao.",
+            "dialysis": "Chống chỉ định thực tế; tránh dùng.",
+            "notes": "HES liên quan rõ với tăng nguy cơ tổn thương thận cấp và nhu cầu lọc máu, đặc biệt ở bệnh nhân sepsis/ICU.",
+        },
         "overdose_management": {
             "symptoms": [],
             "antidote": "",
             "treatment": [],
             "monitoring": "",
         },
-        "reversal_agents": None,
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu; xử trí bằng ngừng truyền, hỗ trợ huyết động, điều trị rối loạn đông máu, và lọc máu nếu cần.",
+        },
         "administration_instructions": {
+            "iv": {
+                "infusion_rate": "Truyền tĩnh mạch theo phác đồ; không vượt quá liều tối đa/ngày.",
+                "notes": "Chỉ dùng khi tinh thể không đủ; tuân thủ khuyến cáo an toàn mới nhất.",
+            },
         },
         "references": {
             "primary_sources": [],

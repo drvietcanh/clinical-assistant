@@ -57,6 +57,7 @@ from .drug_modules import (
 
 from .drug_utils import DRUG_GROUPS
 from .enhanced_fields_overrides import EXTRA_ENHANCED_FIELDS
+import copy
 
 # Merge all drug dictionaries
 # Note: CARDIOVASCULAR_DRUGS now includes cardiovascular_other
@@ -119,6 +120,65 @@ for _k in _NON_DRUG_KEYS:
 for _name, _fields in EXTRA_ENHANCED_FIELDS.items():
     if _name in DRUG_DATABASE:
         DRUG_DATABASE[_name].update(_fields)
+
+# Skeleton defaults to guarantee all enhanced fields có key (và không trống)
+_DEFAULT_ENHANCED_FIELDS = {
+    "mechanism_of_action": "Đang cập nhật",
+    "monitoring": ["Đang cập nhật"],
+    "precautions": ["Đang cập nhật"],
+    "pharmacokinetics": {
+        "absorption": "Đang cập nhật",
+        "distribution": "Đang cập nhật",
+        "metabolism": "Đang cập nhật",
+        "excretion": "Đang cập nhật",
+        "half_life": "Đang cập nhật",
+        "notes": "Đang cập nhật",
+    },
+    "storage": "Đang cập nhật",
+    "black_box_warnings": "Đang cập nhật",
+    "drug_interactions": {
+        "major": [],
+        "moderate": [],
+        "minor": [],
+    },
+    "contraindications_detail": {
+        "tuyệt_đối": [],
+        "tương_đối": [],
+    },
+    "pregnancy_lactation": "Đang cập nhật",
+    "hepatic_adjustment": "Đang cập nhật",
+    "renal_adjustment": {
+        "normal": "Đang cập nhật",
+        "30_60": "Đang cập nhật",
+        "under_30": "Đang cập nhật",
+        "dialysis": "Đang cập nhật",
+        "notes": "Đang cập nhật",
+    },
+    "overdose_management": "Đang cập nhật",
+    "reversal_agents": {
+        "available": False,
+        "agents": [],
+        "notes": "Đang cập nhật",
+    },
+    "administration_instructions": "Đang cập nhật",
+}
+
+
+def _ensure_enhanced_fields_on_database():
+    """Guarantee every drug has all enhanced fields with non-empty skeleton."""
+    for _drug_name, _drug_data in DRUG_DATABASE.items():
+        if not isinstance(_drug_data, dict):
+            continue
+        for _field, _default in _DEFAULT_ENHANCED_FIELDS.items():
+            if _field not in _drug_data or _drug_data[_field] is None:
+                _drug_data[_field] = copy.deepcopy(_default)
+            elif isinstance(_drug_data[_field], str) and not _drug_data[_field].strip():
+                _drug_data[_field] = copy.deepcopy(_default)
+            elif isinstance(_drug_data[_field], (list, dict)) and len(_drug_data[_field]) == 0:
+                _drug_data[_field] = copy.deepcopy(_default)
+
+
+_ensure_enhanced_fields_on_database()
 
 # Calculate total
 TOTAL_DRUGS = len(DRUG_DATABASE)

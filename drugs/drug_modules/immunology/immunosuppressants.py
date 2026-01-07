@@ -32,7 +32,102 @@ IMMUNOSUPPRESSANTS_DRUGS = {
             "Thuốc ức chế CYP3A4 (Macrolides, Azole antifungals, Nước bưởi) -> Tăng nồng độ Tacrolimus mạnh -> Ngộ độc.",
             "Thuốc cảm ứng CYP3A4 (Rifampin, Carbamazepine, Phenytoin) -> Giảm nồng độ Tacrolimus -> Thải ghép."
         ],
+        "mechanism_of_action": "Tacrolimus là calcineurin inhibitor. Gắn với FKBP-12 trong tế bào T, phức hợp này ức chế calcineurin phosphatase, ngăn khử phosphoryl hóa NFAT và giảm sản xuất IL-2 cùng các cytokine khác, từ đó ức chế hoạt hóa và tăng sinh tế bào T.",
         "monitoring": ["Nồng độ Tacrolimus máu (Trough)", "Chức năng thận", "Đường huyết", "Kali máu"],
+        "precautions": [
+            "Khoảng điều trị hẹp, bắt buộc theo dõi TDM.",
+            "Nguy cơ độc tính thận và thần kinh, cần theo dõi creatinine và triệu chứng thần kinh.",
+            "Tăng nguy cơ nhiễm trùng và ung thư, cần giáo dục bệnh nhân nhận biết dấu hiệu.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 12 giờ (biến thiên rộng theo cá thể).",
+            "onset": "Vài ngày đến vài tuần để đạt hiệu quả tối ưu.",
+            "duration": "24 giờ với dạng dùng 2 lần/ngày hoặc 1 lần/ngày (tác dụng phụ thuộc nồng độ đáy).",
+            "protein_binding": "≈ 99%.",
+            "metabolism": "Chuyển hóa mạnh qua gan bởi CYP3A4.",
+            "clearance": "Chủ yếu qua mật/phân; thải trừ qua thận rất ít dưới dạng không đổi."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm và ánh sáng. Không để đông lạnh dung dịch truyền.",
+        "black_box_warnings": "Nguy cơ độc tính thận và thần kinh nặng, tăng nguy cơ nhiễm trùng nghiêm trọng và ác tính (lymphoma, các ung thư khác). Chỉ sử dụng bởi bác sĩ có kinh nghiệm trong ghép tạng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Azole antifungals, Macrolides, Nước bưởi",
+                    "mechanism": "Ức chế CYP3A4 → giảm chuyển hóa tacrolimus.",
+                    "effect": "Tăng mạnh nồng độ tacrolimus, nguy cơ độc tính thận/thần kinh.",
+                    "management": "Giảm liều tacrolimus và theo dõi TDM sát hoặc tránh phối hợp nếu có thể."
+                },
+                {
+                    "drug": "Rifampin, Carbamazepine, Phenytoin",
+                    "mechanism": "Cảm ứng CYP3A4 → tăng chuyển hóa tacrolimus.",
+                    "effect": "Giảm nồng độ tacrolimus, nguy cơ thải ghép.",
+                    "management": "Tránh phối hợp nếu có thể; nếu bắt buộc, tăng liều tacrolimus theo TDM."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Quá mẫn với tacrolimus hoặc bất kỳ tá dược nào."
+            ],
+            "tương_đối": [
+                "Suy thận nặng trước ghép.",
+                "Suy gan trung bình–nặng.",
+                "Nhiễm trùng không kiểm soát.",
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng trong thai kỳ khi lợi ích vượt nguy cơ, thường trong bệnh nhân ghép tạng; cần theo dõi sát mẹ và thai.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Bài tiết một phần vào sữa; cân nhắc lợi ích–nguy cơ và theo dõi trẻ.",
+                "recommendation": "Dùng được nếu cần thiết, ưu tiên liều thấp nhất có hiệu quả, theo dõi tác dụng phụ ở trẻ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Cân nhắc giảm liều và theo dõi TDM.",
+            "moderate": "Giảm liều rõ rệt; theo dõi TDM sát.",
+            "severe": "Thận trọng tối đa; chỉ dùng khi không có lựa chọn khác, theo dõi sát.",
+            "notes": "Tacrolimus chuyển hóa gần như hoàn toàn qua gan (CYP3A4); suy gan làm tăng đáng kể nồng độ thuốc."
+        },
+        "renal_adjustment": {
+            "normal": "Không chỉnh liều theo eGFR nhưng theo dõi sát độc tính thận.",
+            "30_60": "Thận trọng; cân nhắc giảm mục tiêu nồng độ đáy nếu độc tính thận.",
+            "under_30": "Thận trọng cao; giảm liều và cân nhắc chuyển phác đồ nếu độc tính thận kéo dài.",
+            "dialysis": "Tacrolimus không loại đáng kể qua lọc máu; chỉnh liều theo TDM và lâm sàng.",
+            "notes": "Độc tính thận chủ yếu do cơ chế co mạch thận hơn là tích lũy do giảm thải trừ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng creatinine, thiểu niệu.",
+                "Run, co giật, lơ mơ.",
+                "Tăng huyết áp, loạn nhịp.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng hoặc giảm mạnh liều tacrolimus.",
+                "Điều trị hỗ trợ (hạ áp, kiểm soát co giật, bù dịch thận trọng).",
+                "Cân nhắc dùng than hoạt nếu uống quá liều mới xảy ra.",
+                "Theo dõi nồng độ thuốc, chức năng thận, điện giải."
+            ],
+            "monitoring": "Nồng độ tacrolimus máu, creatinine/eGFR, huyết áp, điện giải, tình trạng thần kinh."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; điều trị chủ yếu là giảm/hủy liều và hỗ trợ."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống thống nhất trước hoặc sau ăn; tránh thay đổi kiểu dùng đột ngột.",
+                "timing": "Uống cùng thời điểm mỗi ngày (ví dụ sáng–tối cho dạng chia liều)."
+            },
+            "iv": {
+                "notes": "Chỉ dùng khi không uống được; chuyển sang đường uống sớm nhất có thể."
+            }
+        },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Tacrolimus (Prograf, Advagraf)",
@@ -96,8 +191,89 @@ IMMUNOSUPPRESSANTS_DRUGS = {
         "features": {
              "comparison_tacrolimus": "Cyclosporine gây phì đại lợi và rậm lông, Tacrolimus gây rụng tóc và đái tháo đường nhiều hơn."
         },
+        "mechanism_of_action": "Cyclosporine là calcineurin inhibitor. Gắn với cyclophilin trong tế bào T, phức hợp này ức chế calcineurin phosphatase, làm giảm hoạt hóa NFAT, giảm sản xuất IL-2 và các cytokine khác, ức chế hoạt hóa và tăng sinh tế bào T.",
         "monitoring": ["Nồng độ Cyclosporine máu", "Chức năng thận", "Huyết áp"],
-        "black_box_warnings": "Nguy cơ độc tính thận (nephrotoxicity) có thể không hồi phục. Tăng nguy cơ nhiễm trùng và ung thư. Tăng huyết áp. Cần theo dõi nồng độ thuốc trong máu (TDM) nghiêm ngặt.",
+        "black_box_warnings": "Nephrotoxicity có thể không hồi phục, tăng nguy cơ nhiễm trùng và ác tính, tăng huyết áp. Chỉ dùng bởi bác sĩ có kinh nghiệm trong ghép tạng và bệnh tự miễn nặng.",
+        "precautions": [
+            "Khoảng điều trị hẹp, bắt buộc theo dõi TDM.",
+            "Nguy cơ độc tính thận và tăng huyết áp cao, cần theo dõi creatinine và huyết áp.",
+            "Có nhiều tương tác qua CYP3A4 và P-gp; cần rà soát thuốc kỹ.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 8–20 giờ (biến thiên rộng).",
+            "onset": "Vài ngày đến vài tuần.",
+            "duration": "24 giờ (dùng chia 2 lần/ngày).",
+            "protein_binding": "≈ 90%.",
+            "metabolism": "Chuyển hóa mạnh qua gan (CYP3A4) và P-gp.",
+            "clearance": "Chủ yếu qua mật/phân; thải trừ qua thận rất ít."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Quá mẫn với cyclosporine hoặc tá dược.",
+            ],
+            "tương_đối": [
+                "Suy thận nặng chưa ổn định.",
+                "Tăng huyết áp không kiểm soát.",
+                "Tiền sử ác tính chưa điều trị ổn định.",
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Có thể dùng trong thai kỳ ở bệnh nhân ghép tạng khi lợi ích vượt nguy cơ; cần theo dõi sát mẹ và thai.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Bài tiết vào sữa ở mức thấp–trung bình; cần theo dõi chức năng thận và huyết áp ở trẻ.",
+                "recommendation": "Dùng được nếu cần thiết, sau khi cân nhắc kỹ lợi ích–nguy cơ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Giảm liều theo TDM.",
+            "moderate": "Giảm liều đáng kể, theo dõi TDM sát.",
+            "severe": "Thận trọng tối đa hoặc tránh dùng nếu có lựa chọn khác.",
+            "notes": "Chuyển hóa mạnh qua gan; suy gan làm tăng nồng độ và độc tính."
+        },
+        "renal_adjustment": {
+            "normal": "Không chỉnh liều theo eGFR, nhưng theo dõi sát độc tính thận.",
+            "30_60": "Giảm liều nếu creatinine tăng kéo dài.",
+            "under_30": "Thận trọng cao; cân nhắc phác đồ khác nếu độc tính thận tiến triển.",
+            "dialysis": "Không loại đáng kể qua lọc máu; chỉnh liều theo TDM và lâm sàng.",
+            "notes": "Độc tính thận chủ yếu do co mạch thận hơn là giảm thải trừ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Suy thận cấp, tăng creatinine.",
+                "Tăng huyết áp nặng.",
+                "Run, nhức đầu, rối loạn thần kinh.",
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng hoặc giảm mạnh liều cyclosporine.",
+                "Điều trị hỗ trợ: kiểm soát huyết áp, bù dịch thận trọng.",
+                "Cân nhắc than hoạt nếu uống quá liều mới xảy ra.",
+                "Theo dõi TDM, chức năng thận, huyết áp."
+            ],
+            "monitoring": "Nồng độ cyclosporine, creatinine/eGFR, huyết áp, triệu chứng thần kinh."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc đặc hiệu; xử trí chủ yếu bằng giảm/hủy liều và hỗ trợ."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống nhất quán trước hoặc sau ăn; tránh thay đổi kiểu dùng vì ảnh hưởng hấp thu.",
+                "timing": "Chia 2 lần/ngày, uống cùng thời điểm mỗi ngày."
+            },
+            "iv": {
+                "notes": "Chỉ dùng khi không uống được; chuyển sang đường uống sớm nhất có thể."
+            }
+        },
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": True,
@@ -144,6 +320,84 @@ IMMUNOSUPPRESSANTS_DRUGS = {
         ],
         "mechanism_of_action": "Ức chế IMPDH, ức chế tổng hợp Purine de novo, ức chế chọn lọc tăng sinh tế bào Lympho T và B.",
         "monitoring": ["Công thức máu (CBC)", "Dấu hiệu nhiễm trùng"],
+        "precautions": [
+            "Teratogenic mạnh; bắt buộc chương trình REMS và tránh thai hiệu quả.",
+            "Tăng nguy cơ nhiễm trùng nặng (CMV, BK virus).",
+            "Rối loạn tiêu hóa giới hạn liều, cần theo dõi mất nước.",
+        ],
+        "pharmacokinetics": {
+            "half_life": "≈ 16–18 giờ (MMF).",
+            "onset": "Vài ngày đến vài tuần.",
+            "duration": "24 giờ (dùng chia 2 lần/ngày).",
+            "protein_binding": "≈ 97%.",
+            "metabolism": "Chuyển hóa ở gan thành MPA và các glucuronid.",
+            "clearance": "Thải trừ chủ yếu qua mật/phân, một phần qua thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Nguy cơ dị tật bẩm sinh và sẩy thai (teratogenic mạnh), nguy cơ nhiễm trùng nghiêm trọng và ác tính, suy tủy (giảm bạch cầu, thiếu máu, giảm tiểu cầu).",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Phụ nữ mang thai hoặc đang chuẩn bị mang thai.",
+                "Quá mẫn với mycophenolate hoặc tá dược."
+            ],
+            "tương_đối": [
+                "Suy tủy nặng (bạch cầu, tiểu cầu thấp).",
+                "Nhiễm trùng nặng đang tiến triển.",
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D/X (ở một số hướng dẫn, xem là chống chỉ định trong thai kỳ)",
+            "pregnancy_details": "Gây dị tật bẩm sinh nghiêm trọng và sẩy thai; chống chỉ định trừ khi không có lựa chọn khác và lợi ích vượt xa nguy cơ.",
+            "lactation": {
+                "safety": "Contraindicated",
+                "details": "Bài tiết vào sữa; nguy cơ ức chế miễn dịch và suy tủy ở trẻ.",
+                "recommendation": "Không nên cho con bú khi đang dùng mycophenolate."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều đáng kể, theo dõi lâm sàng.",
+            "moderate": "Thận trọng; theo dõi độc tính và cân nhắc giảm liều.",
+            "severe": "Thận trọng cao; cân nhắc liệu pháp thay thế.",
+            "notes": "Chuyển hóa chủ yếu qua gan; dữ liệu cụ thể hạn chế, điều chỉnh chủ yếu dựa trên lâm sàng và độc tính."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều ở ghép tạng có chức năng thận ổn định.",
+            "30_60": "Thận trọng; theo dõi MPA nếu có, chức năng thận và tác dụng phụ.",
+            "under_30": "Thận trọng; cân nhắc giảm liều nếu tích lũy hoặc độc tính tăng.",
+            "dialysis": "Không loại đáng kể qua lọc máu; chỉnh liều theo lâm sàng.",
+            "notes": "Mycophenolate và các chất chuyển hóa được thải trừ một phần qua thận; suy thận có thể làm tăng phơi nhiễm."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nặng, nôn, mất nước.",
+                "Nhiễm trùng nặng, sốt cao.",
+                "Giảm bạch cầu, giảm tiểu cầu rõ."
+            ],
+            "antidote": "Không có antidote đặc hiệu.",
+            "treatment": [
+                "Ngừng hoặc giảm liều mycophenolate.",
+                "Bù dịch và điện giải.",
+                "Điều trị nhiễm trùng theo kháng sinh đồ.",
+                "Hỗ trợ huyết học (truyền máu, G-CSF nếu cần)."
+            ],
+            "monitoring": "CBC, chức năng thận, điện giải, dấu hiệu nhiễm trùng và mất nước."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có thuốc giải độc; xử trí bằng giảm liều/ngừng thuốc và hỗ trợ tích cực."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống cùng hoặc không cùng thức ăn; ưu tiên uống nhất quán để giảm dao động hấp thu.",
+                "timing": "Chia 2 lần/ngày; nuốt nguyên viên, không nghiền bẻ (đặc biệt với Myfortic)."
+            }
+        },
         "references": {
             "primary_sources": [
                 "FDA Drug Label - Mycophenolate (CellCept, Myfortic)",

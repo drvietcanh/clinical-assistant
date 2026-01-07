@@ -1,224 +1,716 @@
 BÁO CÁO KIỂM TRA DỮ LIỆU THUỐC
 ====================================================================================================
 
-Tổng số thuốc: 666
-Thuốc hoàn chỉnh: 160
-Thuốc chưa hoàn chỉnh: 506
-Tổng số lỗi: 19
-Tổng số cảnh báo: 971
+Tổng số thuốc: 722
+Thuốc hoàn chỉnh: 224
+Thuốc chưa hoàn chỉnh: 491
+Tổng số lỗi: 265
+Tổng số cảnh báo: 1649
 
 HOÀN THÀNH CÁC ENHANCED FIELDS:
-  mechanism_of_action: 666/666 (100.0%)
-  monitoring: 666/666 (100.0%)
-  precautions: 666/666 (100.0%)
-  pharmacokinetics: 666/666 (100.0%)
-  storage: 666/666 (100.0%)
-  black_box_warnings: 528/666 (79.3%)
-  drug_interactions: 634/666 (95.2%)
-  contraindications_detail: 320/666 (48.0%)
-  pregnancy_lactation: 637/666 (95.6%)
-  hepatic_adjustment: 633/666 (95.0%)
-  renal_adjustment: 623/666 (93.5%)
-  overdose_management: 637/666 (95.6%)
-  reversal_agents: 491/666 (73.7%)
-  administration_instructions: 637/666 (95.6%)
+  mechanism_of_action: 679/722 (94.0%)
+  monitoring: 684/722 (94.7%)
+  precautions: 649/722 (89.9%)
+  pharmacokinetics: 625/722 (86.6%)
+  storage: 642/722 (88.9%)
+  black_box_warnings: 552/722 (76.5%)
+  drug_interactions: 671/722 (92.9%)
+  contraindications_detail: 379/722 (52.5%)
+  pregnancy_lactation: 668/722 (92.5%)
+  hepatic_adjustment: 668/722 (92.5%)
+  renal_adjustment: 601/722 (83.2%)
+  overdose_management: 667/722 (92.4%)
+  reversal_agents: 547/722 (75.8%)
+  administration_instructions: 616/722 (85.3%)
 
-THUỐC CÓ LỖI (14):
+THUỐC CÓ LỖI (127):
 
-  Abaloparatide:
+  Acetylcysteine:
     ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
 
-  Alirocumab:
-    ❌ overdose_management phải là dictionary
-    ❌ administration_instructions phải là dictionary
-
-  Amlodipine/Olmesartan:
+  Albumin (Human):
     ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
 
-  Calcitonin:
+  Alendronate:
     ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Allopurinol:
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Amoxicillin suspension:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Amoxicillin-clavulanate:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Anastrozole:
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Atorvastatin:
+    ⚠️  Field rỗng: pregnancy
+
+  Atropine:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Azithromycin:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Beclomethasone inhaled:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Betamethasone:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Bismuth subsalicylate:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Budesonide inhaled:
+    ❌ Thiếu field bắt buộc: dosage
+    ❌ Thiếu field bắt buộc: side_effects
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Bupivacaine:
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Calcium:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Canagliflozin:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Carbamazepine:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Carboprost:
+    ⚠️  Field rỗng: interactions
+    ❌ Kiểu dữ liệu sai: side_effects (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: precautions (mong đợi list, nhận được dict)
+
+  Ceftriaxone:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Cetirizine:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+
+  Chlorpheniramine:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+
+  Ciclesonide:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Cisatracurium:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Clarithromycin:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Codeine:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Colchicine:
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Cyanocobalamin (Vitamin B12):
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Cyclosporine:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Dapagliflozin:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Desloratadine:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: side_effects
+    ❌ Thiếu field bắt buộc: interactions
+
+  Dexamethasone:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Dinoprostone:
+    ❌ Kiểu dữ liệu sai: side_effects (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: interactions (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: precautions (mong đợi list, nhận được dict)
+
+  Diphenhydramine:
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Domperidone:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Donepezil:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Dulaglutide:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Empagliflozin:
+    ⚠️  Field rỗng: pregnancy
 
   Enalapril:
-    ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+    ❌ Thiếu field bắt buộc: pregnancy
 
-  Evolocumab:
-    ❌ overdose_management phải là dictionary
-    ❌ administration_instructions phải là dictionary
+  Erlotinib:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: pregnancy
 
-  Inclisiran:
-    ❌ overdose_management phải là dictionary
-    ❌ administration_instructions phải là dictionary
+  Esomeprazole:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Estradiol:
+    ❌ Kiểu dữ liệu sai: side_effects (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: interactions (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: precautions (mong đợi list, nhận được dict)
+
+  Ethanol:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Ethinyl estradiol + Levonorgestrel:
+    ❌ Kiểu dữ liệu sai: side_effects (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: interactions (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: precautions (mong đợi list, nhận được dict)
+
+  Etomidate:
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Exenatide:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Febuxostat:
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Fexofenadine:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+
+  Fluoxetine:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Fluticasone inhaled:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Formoterol:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Gliclazide:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  HES 130/0.4:
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Hepatitis B Vaccine:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Hydrocodone:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Hydrocortisone:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Hydroxychloroquine:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: pregnancy
+
+  Imatinib:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Influenza Vaccine:
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Insulin:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Ipratropium:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Ketamine:
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Lansoprazole:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Leflunomide:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Levobupivacaine:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Levothyroxine:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Lidocaine:
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Liraglutide:
+    ⚠️  Field rỗng: pregnancy
 
   Lisinopril:
-    ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Loratadine:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
 
   Losartan:
-    ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Medroxyprogesterone:
+    ❌ Kiểu dữ liệu sai: side_effects (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: interactions (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: precautions (mong đợi list, nhận được dict)
+
+  Memantine:
+    ❌ Thiếu field bắt buộc: pregnancy
 
   Metformin:
-    ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+    ❌ Thiếu field bắt buộc: pregnancy
 
-  Romosozumab:
+  Methimazole:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Methotrexate:
+    ⚠️  Field rỗng: pregnancy
+
+  Methylergonovine:
+    ❌ Kiểu dữ liệu sai: side_effects (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: interactions (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: precautions (mong đợi list, nhận được dict)
+
+  Methylprednisolone:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Montelukast:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Mycophenolate:
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Nedocromil:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Olodaterol:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Omeprazole:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Ondansetron:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Pantoprazole:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Pioglitazone:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Pralidoxime:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Pravastatin:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Prednisone:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Progesterone:
+    ❌ Kiểu dữ liệu sai: side_effects (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: interactions (mong đợi list, nhận được dict)
+    ❌ Kiểu dữ liệu sai: precautions (mong đợi list, nhận được dict)
+
+  Propofol:
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Propylthiouracil:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Pyridoxine (Vitamin B6):
+    ⚠️  Field rỗng: contraindications
     ⚠️  Field rỗng: interactions
 
-  Spironolactone:
-    ❌ Kiểu dữ liệu sai: guideline_tags (mong đợi list, nhận được dict)
+  Ranitidine:
+    ❌ Thiếu field bắt buộc: pregnancy
 
-  Tegoprazan:
-    ❌ overdose_management phải là dictionary
-    ❌ administration_instructions phải là dictionary
+  Ringer Lactate:
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
 
-  Vonoprazan:
-    ❌ overdose_management phải là dictionary
-    ❌ administration_instructions phải là dictionary
+  Rivastigmine:
+    ❌ Thiếu field bắt buộc: pregnancy
 
-THUỐC CÓ CẢNH BÁO (526):
+  Rizatriptan:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: pregnancy
 
-  5-Fluorouracil:
-    ⚠️  Thiếu enhanced field: contraindications_detail
+  Rocuronium:
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Rosuvastatin:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  SAR (Rabies Antiserum):
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  SAT (Tetanus Antitoxin):
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Salmeterol:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Semaglutide:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Simvastatin:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: pregnancy
+
+  Snake Antivenom (Ho Dat):
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Snake Antivenom (Luc Tre):
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Sodium Chloride 0.9%:
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Succinylcholine:
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Sucralfate:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Sulfasalazine:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Sumatriptan:
+    ⚠️  Field rỗng: pregnancy
+
+  Tacrolimus:
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Tamoxifen:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Telmisartan:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Thiamine (Vitamin B1):
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Topiramate:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Umeclidinium:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  VAT (Tetanus Vaccine):
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Valsartan:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Verorab (Rabies Vaccine):
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Vilanterol:
+    ❌ Thiếu field bắt buộc: pregnancy
+
+  Vitamin C (Ascorbic Acid):
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Vitamin D3 (Cholecalciferol):
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Vitamin K1:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Zoledronic Acid:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: interactions
+    ⚠️  Field rỗng: pregnancy
+
+  Zolmitriptan:
+    ⚠️  Field rỗng: contraindications
+    ⚠️  Field rỗng: side_effects
+    ⚠️  Field rỗng: pregnancy
+
+  references:
+    ❌ Thiếu field bắt buộc: group
+    ❌ Thiếu field bắt buộc: vietnamese_name
+    ❌ Thiếu field bắt buộc: administration
+    ❌ Thiếu field bắt buộc: indications
+    ❌ Thiếu field bắt buộc: contraindications
+    ❌ Thiếu field bắt buộc: dosage
+    ❌ Thiếu field bắt buộc: side_effects
+    ❌ Thiếu field bắt buộc: interactions
+    ❌ Thiếu field bắt buộc: pregnancy
+
+THUỐC CÓ CẢNH BÁO (570):
 
   Abaloparatide:
-    ⚠️  Enhanced field rỗng: reversal_agents
-
-  Abiraterone:
-    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Thiếu enhanced field: reversal_agents
 
   Acarbose:
-    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  Thiếu enhanced field: black_box_warnings
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Acebutolol:
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Acetylcysteine:
+    ⚠️  Enhanced field rỗng: precautions
+    ⚠️  Enhanced field rỗng: pharmacokinetics
+    ⚠️  Enhanced field rỗng: storage
+    ⚠️  Thiếu enhanced field: black_box_warnings
     ⚠️  Thiếu enhanced field: contraindications_detail
 
   Aclidinium:
     ⚠️  Thiếu enhanced field: contraindications_detail
 
   Acyclovir:
-    ⚠️  Enhanced field rỗng: black_box_warnings
-    ⚠️  Thiếu enhanced field: contraindications_detail
-    ⚠️  Enhanced field rỗng: reversal_agents
-    ⚠️  risk_flags thiếu key: icu_critical_care_only
+    ⚠️  Thiếu enhanced field: black_box_warnings
+    ⚠️  Thiếu enhanced field: reversal_agents
 
   Acyclovir eye drops:
-    ⚠️  Enhanced field rỗng: black_box_warnings
-    ⚠️  Thiếu enhanced field: contraindications_detail
-    ⚠️  Enhanced field rỗng: reversal_agents
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Acyclovir eye ointment:
-    ⚠️  Enhanced field rỗng: black_box_warnings
-    ⚠️  Thiếu enhanced field: contraindications_detail
-    ⚠️  Enhanced field rỗng: reversal_agents
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Adalimumab:
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Adapalene:
     ⚠️  Thiếu enhanced field: contraindications_detail
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Adenosine:
-    ⚠️  Enhanced field rỗng: black_box_warnings
-
-  Albendazole:
-    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Thiếu enhanced field: black_box_warnings
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
+  Albumin (Human):
+    ⚠️  Enhanced field rỗng: mechanism_of_action
+    ⚠️  Enhanced field rỗng: monitoring
+    ⚠️  Enhanced field rỗng: precautions
+    ⚠️  Enhanced field rỗng: pharmacokinetics
+    ⚠️  Thiếu enhanced field: black_box_warnings
+
   Alemtuzumab:
-    ⚠️  Thiếu enhanced field: contraindications_detail
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Alendronate:
-    ⚠️  Enhanced field rỗng: reversal_agents
+    ⚠️  Enhanced field rỗng: precautions
+    ⚠️  Enhanced field rỗng: pharmacokinetics
+    ⚠️  Enhanced field rỗng: storage
+    ⚠️  Thiếu enhanced field: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Alfentanil:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Alfuzosin:
-    ⚠️  Enhanced field rỗng: black_box_warnings
-    ⚠️  Thiếu enhanced field: contraindications_detail
-    ⚠️  Enhanced field rỗng: reversal_agents
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Alirocumab:
-    ⚠️  pregnancy_lactation thiếu fda_category
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Thiếu enhanced field: renal_adjustment
 
   Allopurinol:
-    ⚠️  risk_flags thiếu key: icu_critical_care_only
+    ⚠️  Enhanced field rỗng: precautions
+    ⚠️  Enhanced field rỗng: pharmacokinetics
+    ⚠️  Enhanced field rỗng: storage
+    ⚠️  Thiếu enhanced field: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
 
   Alogliptin:
-    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  Thiếu enhanced field: black_box_warnings
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Alteplase:
-    ⚠️  Thiếu enhanced field: drug_interactions
     ⚠️  Thiếu enhanced field: contraindications_detail
-    ⚠️  Thiếu enhanced field: pregnancy_lactation
-    ⚠️  Thiếu enhanced field: hepatic_adjustment
     ⚠️  Thiếu enhanced field: renal_adjustment
 
   Aluminum hydroxide/Magnesium hydroxide:
-    ⚠️  Enhanced field rỗng: black_box_warnings
-
-  Amikacin:
-    ⚠️  Enhanced field rỗng: reversal_agents
-
-  Amlodipine/Olmesartan:
-    ⚠️  Enhanced field rỗng: reversal_agents
-
-  Amlodipine/Valsartan:
-    ⚠️  Enhanced field rỗng: reversal_agents
-
-  Amoxicillin suspension:
-    ⚠️  Enhanced field rỗng: black_box_warnings
-
-  Amphotericin B:
-    ⚠️  Enhanced field rỗng: reversal_agents
-
-  Anastrozole:
-    ⚠️  Thiếu enhanced field: contraindications_detail
-
-  Andexanet alfa:
-    ⚠️  Enhanced field rỗng: reversal_agents
-
-  Anidulafungin:
-    ⚠️  Enhanced field rỗng: black_box_warnings
-    ⚠️  Thiếu enhanced field: contraindications_detail
-    ⚠️  Enhanced field rỗng: reversal_agents
-
-  Anifrolumab:
-    ⚠️  Thiếu enhanced field: contraindications_detail
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
-  Aripiprazole:
+  Amikacin:
+    ⚠️  Thiếu enhanced field: reversal_agents
+
+  Amiodarone:
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Amlodipine:
     ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Thiếu enhanced field: renal_adjustment
+
+  Amlodipine/Olmesartan:
+    ⚠️  Thiếu enhanced field: reversal_agents
+
+  Amlodipine/Valsartan:
+    ⚠️  Thiếu enhanced field: reversal_agents
+
+  Amoxicillin suspension:
+    ⚠️  Thiếu enhanced field: black_box_warnings
+
+  Amphotericin B:
+    ⚠️  Thiếu enhanced field: reversal_agents
+
+  Anastrozole:
+    ⚠️  Thiếu enhanced field: precautions
+    ⚠️  Thiếu enhanced field: pharmacokinetics
+    ⚠️  Thiếu enhanced field: storage
+    ⚠️  Thiếu enhanced field: black_box_warnings
+    ⚠️  Thiếu enhanced field: drug_interactions
+
+  Andexanet alfa:
+    ⚠️  Thiếu enhanced field: reversal_agents
+
+  Anidulafungin:
+    ⚠️  Thiếu enhanced field: black_box_warnings
+    ⚠️  Thiếu enhanced field: reversal_agents
+
+  Anifrolumab:
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Artemether-lumefantrine:
-    ⚠️  Thiếu enhanced field: contraindications_detail
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Artesunate:
-    ⚠️  Thiếu enhanced field: contraindications_detail
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Artificial tears (Carboxymethylcellulose):
-    ⚠️  Enhanced field rỗng: black_box_warnings
-    ⚠️  Thiếu enhanced field: contraindications_detail
-    ⚠️  Enhanced field rỗng: reversal_agents
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Aspirin:
     ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Thiếu enhanced field: overdose_management
 
   Aspirin/Carisoprodol:
     ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Atazanavir (boosted with ritonavir/cobicistat):
-    ⚠️  Enhanced field rỗng: black_box_warnings
-
-  Atenolol:
-    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Thiếu enhanced field: black_box_warnings
 
   Atezolizumab:
     ⚠️  Thiếu enhanced field: contraindications_detail
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
+  Atomoxetine:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Atorvastatin:
+    ⚠️  Thiếu enhanced field: contraindications_detail
+    ⚠️  Thiếu enhanced field: renal_adjustment
+    ⚠️  Thiếu enhanced field: reversal_agents
+    ⚠️  Enhanced field rỗng: administration_instructions
+
   Atropine:
-    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  Enhanced field rỗng: precautions
+    ⚠️  Enhanced field rỗng: pharmacokinetics
+    ⚠️  Enhanced field rỗng: storage
+    ⚠️  Thiếu enhanced field: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
 
   Atropine eye drops:
     ⚠️  Thiếu enhanced field: contraindications_detail
@@ -229,34 +721,24 @@ THUỐC CÓ CẢNH BÁO (526):
 
   Azathioprine:
     ⚠️  Thiếu enhanced field: contraindications_detail
+
+  Azelaic Acid:
+    ⚠️  Thiếu enhanced field: black_box_warnings
+    ⚠️  Thiếu enhanced field: contraindications_detail
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Azelaic acid topical:
-    ⚠️  Enhanced field rỗng: black_box_warnings
-    ⚠️  Thiếu enhanced field: contraindications_detail
-    ⚠️  Enhanced field rỗng: reversal_agents
+    ⚠️  Thiếu enhanced field: black_box_warnings
+    ⚠️  Thiếu enhanced field: reversal_agents
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Azelastine eye drops:
-    ⚠️  Enhanced field rỗng: black_box_warnings
+    ⚠️  risk_flags thiếu key: icu_critical_care_only
+
+  Azelastine/Fluticasone nasal spray:
+    ⚠️  Thiếu enhanced field: black_box_warnings
     ⚠️  Thiếu enhanced field: contraindications_detail
-    ⚠️  Enhanced field rỗng: reversal_agents
     ⚠️  risk_flags thiếu key: icu_critical_care_only
 
   Azilsartan medoxomil:
     ⚠️  Thiếu enhanced field: contraindications_detail
-
-  Aztreonam:
-    ⚠️  Enhanced field rỗng: black_box_warnings
-
-  Baclofen:
-    ⚠️  Thiếu enhanced field: contraindications_detail
-
-  Baricitinib:
-    ⚠️  Thiếu enhanced field: drug_interactions
-
-  Beclomethasone inhaled:
-    ⚠️  Enhanced field rỗng: black_box_warnings
-
-  Bedaquiline:
-    ⚠️  Enhanced field rỗng: reversal_agents
