@@ -10,6 +10,7 @@ Date: 2025-01-30
 import streamlit as st
 import streamlit.components.v1 as components
 from pathlib import Path
+import os
 
 # Import configuration
 from config.calculators import ALL_CALCULATORS
@@ -218,6 +219,51 @@ with st.sidebar:
             render_pwa_info()
     except ImportError:
         pass
+    
+    # Developer Tools và Clear Cache (luôn hiện trên Streamlit Cloud)
+    # Check URL parameter để clear cache
+    if st.query_params.get("clear_cache") == "true":
+        st.cache_data.clear()
+        st.cache_resource.clear()
+        st.query_params.clear()
+        st.rerun()
+    
+    # Developer Tools (hiện khi development hoặc khi enable trong secrets)
+    show_dev_tools = (
+        os.getenv("STREAMLIT_ENV") == "development" or 
+        st.secrets.get("show_dev_tools", False) or
+        st.query_params.get("dev_tools") == "true"  # Enable từ URL: ?dev_tools=true
+    )
+    
+    if show_dev_tools:
+        st.markdown("---")
+        with st.expander("🛠️ Developer Tools", expanded=False):
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                if st.button("🔄 Rerun App"):
+                    st.rerun()
+            with col2:
+                if st.button("🗑️ Clear Cache"):
+                    st.cache_data.clear()
+                    st.cache_resource.clear()
+                    st.success("✅ Cache cleared!")
+                    st.rerun()
+            with col3:
+                if st.button("🔄 Reset Session"):
+                    for key in list(st.session_state.keys()):
+                        del st.session_state[key]
+                    st.cache_data.clear()
+                    st.cache_resource.clear()
+                    st.success("✅ Session reset!")
+                    st.rerun()
+    
+    # Nút Clear Cache luôn hiện (không cần dev tools)
+    st.markdown("---")
+    if st.sidebar.button("🗑️ Clear Cache", help="Xóa cache của Streamlit"):
+        st.cache_data.clear()
+        st.cache_resource.clear()
+        st.success("✅ Cache cleared!")
+        st.rerun()
     
     # Footer
     st.markdown("---")
