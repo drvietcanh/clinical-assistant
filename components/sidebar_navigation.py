@@ -134,8 +134,12 @@ def render_navigation_item(item, is_sub_item: bool = False, parent_id: Optional[
     # Combine styles
     item_style = f"{active_style} {sub_item_style}"
     
+    # Defensive check: ensure icon and title are strings
+    item_icon = str(item.icon) if item.icon is not None else "📄"
+    item_title = str(item.title) if item.title is not None else item.id
+    
     # Button or link
-    button_text = f"{item.icon} {item.title}"
+    button_text = f"{item_icon} {item_title}"
     
     if st.button(
         button_text,
@@ -203,9 +207,16 @@ def render_sidebar_navigation():
             else:
                 main_items.append(item)
         
+        # Defensive check: ensure icon and title are strings
+        icon = str(category.icon) if category.icon is not None else "📁"
+        title = str(category.title) if category.title is not None else "Category"
+        
+        # Safely format the expander label
+        expander_label = f"{icon} **{title}**"
+        
         # Render category with expander
         with st.expander(
-            f"{category.icon} **{category.title}**",
+            expander_label,
             expanded=should_expand,
             key=f"nav_cat_{cat_id}"
         ):
@@ -231,13 +242,20 @@ def render_sidebar_navigation_simple():
     categories = get_all_categories()
     
     for cat_id, category in categories.items():
+        # Defensive check: ensure icon and title are strings
+        icon = str(category.icon) if category.icon is not None else "📁"
+        title = str(category.title) if category.title is not None else "Category"
+        
         should_expand = (
             category.default_expanded or 
             (cat_id in ["home_search", "drugs_dosing", "calculators_scores"])
         )
         
+        # Safely format the expander label
+        expander_label = f"{icon} **{title}**"
+        
         with st.expander(
-            f"{category.icon} **{category.title}**",
+            expander_label,
             expanded=should_expand,
             key=f"nav_cat_{cat_id}"
         ):
@@ -250,11 +268,15 @@ def render_sidebar_navigation_simple():
                 if module_info:
                     active = is_page_active(module_info.page_path)
                     
+                    # Defensive check: ensure icon and title are strings
+                    module_icon = str(module_info.icon) if module_info.icon is not None else "📄"
+                    module_title = str(module_info.title) if module_info.title is not None else module_id
+                    
                     # Add active class styling
                     button_class = "nav-item-active" if active else ""
                     
                     if st.button(
-                        f"{module_info.icon} {module_info.title}",
+                        f"{module_icon} {module_title}",
                         key=f"nav_{module_id}",
                         use_container_width=True,
                         type="primary" if active else "secondary"
@@ -268,13 +290,18 @@ def render_sidebar_navigation_simple():
                             sub_info = get_module_info(sub_id)
                             if sub_info:
                                 sub_active = is_page_active(sub_info.page_path)
+                                
+                                # Defensive check: ensure icon and title are strings
+                                sub_icon = str(sub_info.icon) if sub_info.icon is not None else "📄"
+                                sub_title = str(sub_info.title) if sub_info.title is not None else sub_id
+                                
                                 # Use HTML for better indentation on mobile
                                 st.markdown(
                                     f'<div class="sub-item-button" style="padding-left: 24px;">',
                                     unsafe_allow_html=True
                                 )
                                 if st.button(
-                                    f"└ {sub_info.icon} {sub_info.title}",
+                                    f"└ {sub_icon} {sub_title}",
                                     key=f"nav_{sub_id}",
                                     use_container_width=True,
                                     type="primary" if sub_active else "secondary"

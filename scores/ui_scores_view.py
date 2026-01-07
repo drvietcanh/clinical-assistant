@@ -80,6 +80,12 @@ def render_calculator_card(score_id: str, score_info: dict, specialty: str, key_
     </style>
     """, unsafe_allow_html=True)
     
+    # Defensive check: ensure score_info fields are strings
+    score_name = str(score_info.get('name', score_id)) if score_info.get('name') is not None else str(score_id)
+    score_desc = str(score_info.get('desc', '')) if score_info.get('desc') is not None else ''
+    if len(score_desc) > 100:
+        score_desc = score_desc[:100] + "..."
+    
     # Card container
     with st.container():
         # Card HTML
@@ -88,8 +94,8 @@ def render_calculator_card(score_id: str, score_info: dict, specialty: str, key_
             <div style='display: flex; align-items: start; gap: 12px; margin-bottom: 8px;'>
                 <div class="icon" style='font-size: 2em; flex-shrink: 0;'>{specialty_icon}</div>
                 <div style='flex: 1; min-width: 0;'>
-                    <h4 style='margin: 0 0 4px 0; color: #212121; font-size: 1.1em; font-weight: 600; word-wrap: break-word;'>{score_info['name']}</h4>
-                    <p style='margin: 0; color: #666; font-size: 0.85em; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;'>{score_info.get('desc', '')[:100]}...</p>
+                    <h4 style='margin: 0 0 4px 0; color: #212121; font-size: 1.1em; font-weight: 600; word-wrap: break-word;'>{score_name}</h4>
+                    <p style='margin: 0; color: #666; font-size: 0.85em; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;'>{score_desc}</p>
                 </div>
             </div>
             <div style='display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;'>
@@ -110,7 +116,7 @@ def render_calculator_card(score_id: str, score_info: dict, specialty: str, key_
         
         # Button to use calculator - mobile optimized
         button_key = f"{key_prefix}_use_{score_id}_{specialty}"
-        button_text = "▶️ Use" if len(score_info['name']) > 20 else f"▶️ {score_info['name'][:15]}..."
+        button_text = "▶️ Use" if len(score_name) > 20 else f"▶️ {score_name[:15]}..."
         
         if st.button(button_text, key=button_key, use_container_width=True):
             # Store selection and rerun
@@ -120,7 +126,7 @@ def render_calculator_card(score_id: str, score_info: dict, specialty: str, key_
             # Track recent
             try:
                 from components.scores_recent import add_to_recent
-                add_to_recent(specialty, score_id, score_info['name'])
+                add_to_recent(specialty, score_id, score_name)
             except ImportError:
                 pass
             
@@ -146,9 +152,16 @@ def render_specialty_group(group_id: str, group_info: dict, specialty_grouping: 
     if not all_calculators:
         return
     
+    # Defensive check: ensure icon and name are strings
+    group_icon = str(group_info.get('icon', '📁')) if group_info.get('icon') is not None else "📁"
+    group_name = str(group_info.get('name', 'Category')) if group_info.get('name') is not None else "Category"
+    
+    # Safely format the expander label
+    expander_label = f"{group_icon} **{group_name}** ({len(all_calculators)} calculators)"
+    
     # Render group header
     with st.expander(
-        f"{group_info['icon']} **{group_info['name']}** ({len(all_calculators)} calculators)",
+        expander_label,
         expanded=group_info.get("default_expanded", False),
         key=f"group_{group_id}"
     ):
