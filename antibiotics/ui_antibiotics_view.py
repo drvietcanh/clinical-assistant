@@ -685,32 +685,242 @@ def render_antibiotics_by_infection_view():
 def render_antibiotics_by_drug_class_view():
     """View for 'By Drug Class' tab"""
     
-    st.info(f"💊 **{COMMON_TERMS_VI.get('By Drug Class', 'Theo Nhóm Thuốc')}** - Đang phát triển")
-    st.markdown(f"""
-    {COMMON_TERMS_VI.get('This view will organize antibiotics by drug class:', 'Chế độ xem này sẽ tổ chức kháng sinh theo nhóm thuốc:')}
-    - Beta-lactams (Penicillins, Cephalosporins, Carbapenems)
-    - Fluoroquinolones
-    - Macrolides
-    - Glycopeptides
-    - Others
+    try:
+        from .drug_classes_data import ALL_DRUG_CLASSES, DrugClass
+        from .mic_breakpoints import get_common_susceptibility
+        from .resistance_patterns import RESISTANCE_PATTERNS_VN
+    except ImportError:
+        st.error("Không thể tải dữ liệu nhóm thuốc. Vui lòng kiểm tra lại.")
+        return
     
-    Each class will show:
-    - Spectrum of activity
-    - Common indications
-    - Dosing guidelines
-    - Resistance patterns
-    """)
+    # Add responsive CSS
+    st.markdown("""
+    <style>
+    .drug-class-card {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border-left: 4px solid #1976D2;
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .drug-item-card {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 12px;
+        border-left: 3px solid #4caf50;
+    }
+    
+    @media (max-width: 768px) {
+        .drug-class-card {
+            padding: 16px !important;
+            margin-bottom: 16px !important;
+        }
+        
+        .drug-item-card {
+            padding: 12px !important;
+        }
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    st.markdown(f"### 💊 {COMMON_TERMS_VI.get('By Drug Class', 'Theo Nhóm Thuốc')}")
+    st.caption("Tổ chức kháng sinh theo nhóm thuốc với thông tin về phổ tác dụng, chỉ định, liều dùng và mô hình kháng thuốc")
+    
+    # Search/filter
+    search_query = st.text_input(
+        "🔍 Tìm kiếm nhóm thuốc hoặc thuốc",
+        placeholder="Ví dụ: Beta-lactam, Vancomycin, Ciprofloxacin...",
+        key="drug_class_search"
+    )
+    
+    # Filter drug classes
+    filtered_classes = ALL_DRUG_CLASSES
+    if search_query:
+        search_lower = search_query.lower()
+        filtered_classes = [
+            dc for dc in ALL_DRUG_CLASSES
+            if (search_lower in dc.class_name.lower() or
+                search_lower in dc.class_name_vi.lower() or
+                search_lower in dc.description.lower() or
+                any(search_lower in drug.name.lower() or 
+                    (drug.vietnamese_name and search_lower in drug.vietnamese_name.lower())
+                    for drug in dc.drugs))
+        ]
+    
+    if not filtered_classes:
+        render_empty_state(
+            "Không tìm thấy nhóm thuốc phù hợp. Vui lòng thử từ khóa khác.",
+            "🔍"
+        )
+        return
+    
+    st.markdown(f"**Tìm thấy {len(filtered_classes)} nhóm thuốc**")
+    st.markdown("---")
+    
+    # Render each drug class
+    for drug_class in filtered_classes:
+        # Class header card
+        st.markdown(f"""
+        <div class="drug-class-card">
+            <h2 style='margin: 0 0 8px 0; color: #1976D2; font-size: 1.8em; font-weight: 600;'>
+                💊 {drug_class.class_name_vi} ({drug_class.class_name})
+            </h2>
+            <p style='margin: 0 0 12px 0; color: #666; font-size: 1em; line-height: 1.6;'>
+                {drug_class.description}
+            </p>
+            <p style='margin: 0 0 16px 0; color: #555; font-size: 0.95em;'>
+                <strong>Cơ chế:</strong> {drug_class.mechanism}
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Spectrum summary
+        with st.expander(f"📊 Phổ tác dụng", expanded=False):
+            st.markdown(f"**{drug_class.spectrum_summary}**")
+            
+            # Show individual drug spectrums
+            st.markdown("**Chi tiết theo từng thuốc:**")
+            for drug in drug_class.drugs:
+                if drug.spectrum:
+                    st.markdown(f"- **{drug.name}**: {drug.spectrum}")
+        
+        # Common indications
+        with st.expander(f"🎯 Chỉ định thường gặp", expanded=True):
+            for indication in drug_class.common_indications:
+                st.markdown(f"- {indication}")
+        
+        # Resistance patterns
+        with st.expander(f"🦠 Mô hình kháng thuốc", expanded=False):
+            st.markdown(f"**{drug_class.resistance_patterns}**")
+            
+            # Show resistance notes for individual drugs
+            st.markdown("**Chi tiết theo từng thuốc:**")
+            for drug in drug_class.drugs:
+                if drug.resistance_notes:
+                    st.markdown(f"- **{drug.name}**: {drug.resistance_notes}")
+        
+        # Clinical notes
+        if drug_class.clinical_notes:
+            st.info(f"💡 **Lưu ý lâm sàng:** {drug_class.clinical_notes}")
+        
+        # Individual drugs in this class
+        st.markdown("### 📋 Thuốc trong nhóm")
+        
+        for drug in drug_class.drugs:
+            st.markdown(f"""
+            <div class="drug-item-card">
+                <h3 style='margin: 0 0 8px 0; color: #212121; font-size: 1.3em; font-weight: 600;'>
+                    {drug.name}
+                </h3>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            col_drug1, col_drug2 = st.columns([2, 1])
+            
+            with col_drug1:
+                if drug.vietnamese_name:
+                    st.caption(f"Tên tiếng Việt: {drug.vietnamese_name}")
+                
+                if drug.common_indications:
+                    st.markdown("**Chỉ định:**")
+                    for ind in drug.common_indications:
+                        st.markdown(f"- {ind}")
+                
+                if drug.dosing_summary:
+                    st.markdown(f"**Liều dùng:** {drug.dosing_summary}")
+                
+                if drug.spectrum:
+                    st.markdown(f"**Phổ tác dụng:** {drug.spectrum}")
+                
+                if drug.resistance_notes:
+                    st.warning(f"⚠️ **Kháng thuốc:** {drug.resistance_notes}")
+                
+                # AWaRe classification
+                if drug.aware_classification:
+                    aware_colors = {
+                        "ACCESS": "#4caf50",
+                        "WATCH": "#ffc107",
+                        "RESERVE": "#f44336"
+                    }
+                    aware_color = aware_colors.get(drug.aware_classification, "#757575")
+                    st.markdown(f"""
+                    <span style='
+                        background: {aware_color};
+                        color: white;
+                        padding: 4px 12px;
+                        border-radius: 8px;
+                        font-size: 0.85em;
+                        font-weight: 600;
+                    '>AWaRe: {drug.aware_classification}</span>
+                    """, unsafe_allow_html=True)
+            
+            with col_drug2:
+                # Link to Drug Database
+                if st.button("📖 Chi tiết", key=f"drug_detail_{drug.name}_{drug_class.class_name}", use_container_width=True):
+                    st.session_state.drug_search_query = drug.name
+                    st.switch_page("pages/07_💊_Drug_Database.py")
+                
+                # Link to TDM if applicable
+                tdm_drugs = ["vancomycin", "gentamicin", "tobramycin", "amikacin"]
+                if any(tdm in drug.name.lower() for tdm in tdm_drugs):
+                    if st.button("📊 TDM", key=f"tdm_{drug.name}_{drug_class.class_name}", use_container_width=True):
+                        st.switch_page("pages/08_📊_TDM.py")
+                
+                # Show MIC/susceptibility if available
+                suscept_data = get_common_susceptibility(drug.name)
+                if suscept_data:
+                    with st.expander("🔬 Độ nhạy cảm", expanded=False):
+                        for org, pattern in list(suscept_data.items())[:3]:
+                            if org != "notes":
+                                st.caption(f"**{org}**: {pattern}")
+        
+            st.markdown("---")
+        
+        st.markdown("<br>", unsafe_allow_html=True)
 
 
 def render_stewardship_view():
     """View for 'Stewardship & Dosing' tab"""
     
-    st.info(f"🔄 **{COMMON_TERMS_VI.get('Stewardship', 'Quản lý Kháng Sinh')}** - Đang phát triển")
-    st.markdown(f"""
-    {COMMON_TERMS_VI.get('This view will include:', 'Chế độ xem này sẽ bao gồm:')}
-    - {COMMON_TERMS_VI.get('De-escalation guidelines', 'Hướng dẫn giảm liều')}
-    - {COMMON_TERMS_VI.get('IV → PO switch criteria', 'Tiêu chí chuyển IV → PO')}
-    - {COMMON_TERMS_VI.get('Renal dosing summary', 'Tóm tắt liều theo thận')}
-    - {COMMON_TERMS_VI.get('Duration of therapy recommendations', 'Khuyến cáo thời gian điều trị')}
-    - {COMMON_TERMS_VI.get('Antibiotic stewardship principles', 'Nguyên tắc quản lý kháng sinh')}
-    """)
+    try:
+        from .stewardship import (
+            render_de_escalation_view,
+            render_iv_to_po_view,
+            render_renal_dosing_view,
+            render_treatment_duration_view,
+            render_principles_view
+        )
+    except ImportError:
+        st.error("Không thể tải các module quản lý kháng sinh. Vui lòng kiểm tra lại.")
+        return
+    
+    st.markdown(f"### 🔄 {COMMON_TERMS_VI.get('Stewardship', 'Quản lý Kháng Sinh')}")
+    st.caption("Các công cụ và hướng dẫn để quản lý kháng sinh hiệu quả")
+    
+    # Create tabs for different stewardship topics
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "🔄 De-escalation",
+        "💊 IV → PO",
+        "🫘 Liều theo Thận",
+        "⏱️ Thời gian Điều trị",
+        "📋 Nguyên tắc"
+    ])
+    
+    with tab1:
+        render_de_escalation_view()
+    
+    with tab2:
+        render_iv_to_po_view()
+    
+    with tab3:
+        render_renal_dosing_view()
+    
+    with tab4:
+        render_treatment_duration_view()
+    
+    with tab5:
+        render_principles_view()

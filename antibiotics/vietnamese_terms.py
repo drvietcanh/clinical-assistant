@@ -114,7 +114,37 @@ COMMON_TERMS_VI = {
     "IV → PO switch criteria": "Tiêu chí chuyển IV → PO",
     "Renal dosing summary": "Tóm tắt liều theo thận",
     "Duration of therapy recommendations": "Khuyến cáo thời gian điều trị",
-    "Antibiotic stewardship principles": "Nguyên tắc quản lý kháng sinh"
+    "Antibiotic stewardship principles": "Nguyên tắc quản lý kháng sinh",
+    # Drug classes
+    "Beta-lactams": "Beta-lactam",
+    "Fluoroquinolones": "Fluoroquinolone",
+    "Macrolides": "Macrolide",
+    "Glycopeptides": "Glycopeptide",
+    "Aminoglycosides": "Aminoglycoside",
+    "Lincosamides": "Lincosamide",
+    "Tetracyclines": "Tetracycline",
+    "Others": "Khác",
+    "Drug Class": "Nhóm Thuốc",
+    "Spectrum of activity": "Phổ tác dụng",
+    "Common indications": "Chỉ định thường gặp",
+    "Dosing guidelines": "Hướng dẫn liều",
+    "Resistance patterns": "Mô hình kháng thuốc",
+    "Mechanism of action": "Cơ chế tác dụng",
+    # Stewardship terms
+    "De-escalation": "Giảm liều",
+    "IV to PO": "Chuyển IV → PO",
+    "Renal dosing": "Liều theo thận",
+    "Treatment duration": "Thời gian điều trị",
+    "Stewardship principles": "Nguyên tắc quản lý",
+    "Clinical criteria": "Tiêu chí lâm sàng",
+    "Microbiological criteria": "Tiêu chí vi sinh",
+    "Bioavailability": "Độ hấp thu",
+    "CrCl": "CrCl",
+    "eGFR": "eGFR",
+    "Normal dose": "Liều bình thường",
+    "Standard duration": "Thời gian chuẩn",
+    "Short duration": "Rút ngắn",
+    "Extended duration": "Kéo dài"
 }
 
 def get_vietnamese_label(term: str, category: str = "common") -> str:

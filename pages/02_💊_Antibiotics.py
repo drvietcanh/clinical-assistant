@@ -95,10 +95,109 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+# ========== TOP MENU ACTIONS ==========
+# Top menu actions bar (desktop only, hidden on mobile)
+st.markdown("""
+<style>
+@media (min-width: 769px) {
+    .top-menu-actions {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 20px;
+        padding: 12px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-menu-actions {
+        display: none;
+    }
+}
+
+.top-menu-button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s;
+}
+
+.top-menu-button:hover {
+    background: #e3f2fd;
+    border-color: #1976D2;
+}
+</style>
+<div class="top-menu-actions">
+""", unsafe_allow_html=True)
+
+col_menu1, col_menu2, col_menu3, col_menu4, col_menu5, col_menu6, col_menu7 = st.columns(7)
+
+with col_menu1:
+    if st.button("🔄", key="top_refresh", help="Làm mới trang", use_container_width=True):
+        st.rerun()
+
+with col_menu2:
+    if st.button("⭐", key="top_favorite", help="Yêu thích", use_container_width=True):
+        st.session_state.favorite_antibiotics_page = True
+        st.success("Đã thêm vào yêu thích!")
+
+with col_menu3:
+    if st.button("📤", key="top_share", help="Chia sẻ", use_container_width=True):
+        st.info("💡 Sử dụng URL hiện tại để chia sẻ trang này")
+
+with col_menu4:
+    if st.button("📋", key="top_copy", help="Sao chép", use_container_width=True):
+        st.info("💡 Sử dụng Ctrl+C để sao chép nội dung")
+
+with col_menu5:
+    if st.button("🖨️", key="top_print", help="In", use_container_width=True):
+        st.info("💡 Sử dụng Ctrl+P (Windows) hoặc Cmd+P (Mac) để in trang")
+
+with col_menu6:
+    if st.button("⚙️", key="top_settings", help="Cài đặt", use_container_width=True, type="primary"):
+        st.info("💡 Cài đặt sẽ được thêm trong phiên bản tương lai")
+
+with col_menu7:
+    offline_status = st.session_state.get("offline_mode", False)
+    if st.button("📴" if offline_status else "📡", key="top_offline", help="Chế độ offline", use_container_width=True):
+        st.session_state.offline_mode = not offline_status
+        st.rerun()
+
+st.markdown("</div>", unsafe_allow_html=True)
+
 # ========== SIDEBAR ==========
 with st.sidebar:
     st.header("💊 Kháng sinh")
     st.caption("Module chuyên sâu về kháng sinh")
+    
+    # Quick navigation to tabs
+    st.markdown("### 🧭 Điều hướng")
+    nav_col1, nav_col2 = st.columns(2)
+    with nav_col1:
+        if st.button("🦠 Nhiễm trùng", use_container_width=True, help="Tab Theo Nhiễm Trùng"):
+            st.session_state.antibiotics_tab = 0
+            st.rerun()
+    with nav_col2:
+        if st.button("💊 Thuốc", use_container_width=True, help="Tab Theo Nhóm Thuốc"):
+            st.session_state.antibiotics_tab = 1
+            st.rerun()
+    
+    nav_col3, nav_col4 = st.columns(2)
+    with nav_col3:
+        if st.button("🔄 Quản lý", use_container_width=True, help="Tab Quản lý Kháng Sinh"):
+            st.session_state.antibiotics_tab = 2
+            st.rerun()
+    with nav_col4:
+        if st.button("🔍 Tìm kiếm", use_container_width=True, help="Tab Công cụ"):
+            st.session_state.antibiotics_tab = 3
+            st.rerun()
+    
+    st.markdown("---")
     
     # Quick links
     with st.expander("🔗 Liên kết nhanh", expanded=False):
@@ -112,17 +211,17 @@ with st.sidebar:
     
     st.markdown("---")
     
-    # Legacy tools (for backward compatibility)
-    st.subheader("⚙️ Công cụ khác")
+    # Legacy tools (for backward compatibility, hidden but functional)
     legacy_tools = st.selectbox(
-        "Công cụ:",
+        "⚙️ Công cụ (Legacy):",
         [
             "🔍 Tra cứu & dữ liệu",
             "🔬 So sánh nhiều kháng sinh",
             "📊 So sánh Side-by-Side",
             "🔄 Phác đồ điều trị (Legacy)"
         ],
-        key="legacy_tool_selector"
+        key="legacy_tool_selector",
+        label_visibility="collapsed"
     )
     
     st.markdown("---")
@@ -249,20 +348,166 @@ if NEW_UI_AVAILABLE:
             render_mobile_bottom_nav(current_tab="search")
         except ImportError:
             pass
-        # Legacy tools in separate tab
+        
+        # Optimized Tools tab with card-based layout
         st.markdown("### 🔧 Công cụ")
-        st.info("Các công cụ tra cứu và so sánh kháng sinh")
+        st.caption("Các công cụ tra cứu, so sánh và tính toán kháng sinh")
         
-        function_type_lower = legacy_tools.lower()
+        # Card-based layout for tools
+        st.markdown("""
+        <style>
+        .tool-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #e0e0e0;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
         
-        if "tra cứu" in function_type_lower and "dữ liệu" in function_type_lower:
-            render_database()
-        elif "so sánh nhiều" in function_type_lower:
-            render_multi_comparison()
-        elif "side-by-side" in function_type_lower:
-            render_comparison()
-        elif "phác đồ" in function_type_lower:
-            render_algorithms_page()
+        .tool-card:hover {
+            border-color: #1976D2;
+            box-shadow: 0 6px 16px rgba(25,118,210,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .tool-card h3 {
+            margin: 0 0 8px 0;
+            color: #1976D2;
+            font-size: 1.4em;
+        }
+        
+        .tool-card p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        @media (max-width: 768px) {
+            .tool-card {
+                padding: 16px !important;
+                margin-bottom: 16px !important;
+            }
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
+        # Section 1: Tra cứu & Dữ liệu
+        st.markdown("#### 🔍 Tra cứu & Dữ liệu")
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            <div class="tool-card">
+                <h3>💊 Drug Database</h3>
+                <p>Tra cứu thông tin chi tiết về kháng sinh: chỉ định, liều dùng, tương tác, chống chỉ định</p>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("Mở Drug Database", key="tool_db", use_container_width=True):
+                render_database()
+        
+        with col2:
+            st.markdown("""
+            <div class="tool-card">
+                <h3>🔍 Global Search</h3>
+                <p>Tìm kiếm toàn cục trong toàn bộ hệ thống: thuốc, phác đồ, bài viết</p>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("Mở Global Search", key="tool_global_search", use_container_width=True):
+                st.switch_page("pages/20_🔍_Global_Search.py")
+        
+        st.markdown("---")
+        
+        # Section 2: So sánh
+        st.markdown("#### 🔬 So sánh")
+        col3, col4 = st.columns(2)
+        
+        with col3:
+            st.markdown("""
+            <div class="tool-card">
+                <h3>📊 So sánh Nhiều Kháng Sinh</h3>
+                <p>So sánh nhiều kháng sinh cùng lúc: phổ tác dụng, liều dùng, tác dụng phụ</p>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("Mở Multi Comparison", key="tool_multi", use_container_width=True):
+                render_multi_comparison()
+        
+        with col4:
+            st.markdown("""
+            <div class="tool-card">
+                <h3>⚖️ So sánh Side-by-Side</h3>
+                <p>So sánh chi tiết 2 kháng sinh: bảng so sánh đầy đủ các thông số</p>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("Mở Side-by-Side", key="tool_side_by_side", use_container_width=True):
+                render_comparison()
+        
+        st.markdown("---")
+        
+        # Section 3: Tính toán
+        st.markdown("#### 🧮 Tính toán")
+        col5, col6 = st.columns(2)
+        
+        with col5:
+            st.markdown("""
+            <div class="tool-card">
+                <h3>📊 TDM Calculator</h3>
+                <p>Tính toán liều và theo dõi nồng độ: Vancomycin, Aminoglycoside</p>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("Mở TDM", key="tool_tdm", use_container_width=True):
+                st.switch_page("pages/08_📊_TDM.py")
+        
+        with col6:
+            st.markdown("""
+            <div class="tool-card">
+                <h3>🧮 Dosing Calculator</h3>
+                <p>Tính liều kháng sinh: theo cân nặng, chức năng thận, tuổi</p>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("Mở Dosing Calculator", key="tool_dosing", use_container_width=True):
+                st.switch_page("pages/07_💊_Drug_Database.py")
+        
+        st.markdown("---")
+        
+        # Section 4: Phác đồ
+        st.markdown("#### 📋 Phác đồ")
+        col7, col8 = st.columns(2)
+        
+        with col7:
+            st.markdown("""
+            <div class="tool-card">
+                <h3>🔄 Treatment Algorithms</h3>
+                <p>Phác đồ điều trị theo từng loại nhiễm trùng: CAP, HAP, UTI, Sepsis</p>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("Mở Algorithms", key="tool_algorithms", use_container_width=True):
+                render_algorithms_page()
+        
+        with col8:
+            st.markdown("""
+            <div class="tool-card">
+                <h3>🧙 Antibiotic Wizard</h3>
+                <p>Trợ lý chọn kháng sinh: nhập thông tin lâm sàng để nhận đề xuất</p>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("Mở Wizard", key="tool_wizard", use_container_width=True):
+                st.session_state.show_wizard = True
+                st.rerun()
+        
+        # Legacy selector (hidden but functional for backward compatibility)
+        if legacy_tools:
+            function_type_lower = legacy_tools.lower()
+            if "tra cứu" in function_type_lower and "dữ liệu" in function_type_lower:
+                render_database()
+            elif "so sánh nhiều" in function_type_lower:
+                render_multi_comparison()
+            elif "side-by-side" in function_type_lower:
+                render_comparison()
+            elif "phác đồ" in function_type_lower:
+                render_algorithms_page()
 else:
     # Fallback to old UI if new components not available
     st.warning("⚠️ New UI components not available. Using legacy interface.")
