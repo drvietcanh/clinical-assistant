@@ -43,31 +43,39 @@ def render_standard_page_sidebar(
         if show_category_links:
             # Find category for this module
             current_category = None
-            for cat_name, cat_data in NAVIGATION_CATEGORIES.items():
-                if module_group in cat_data.get("modules", []):
-                    current_category = cat_name
+            for cat_id, cat_data in NAVIGATION_CATEGORIES.items():
+                # Support both old dict format and new NavigationCategory dataclass
+                module_ids = cat_data.module_ids if hasattr(cat_data, 'module_ids') else cat_data.get("modules", [])
+                if module_group in module_ids:
+                    current_category = cat_id
                     break
             
             if current_category:
-                st.markdown(f"**📁 Nhóm:** {current_category}")
+                cat_info = NAVIGATION_CATEGORIES[current_category]
+                cat_title = cat_info.title if hasattr(cat_info, 'title') else str(current_category)
+                st.markdown(f"**📁 Nhóm:** {cat_title}")
                 with st.expander("🔗 Liên kết trong nhóm", expanded=False):
-                    for cat_name, cat_data in NAVIGATION_CATEGORIES.items():
-                        if cat_name == current_category:
-                            for module_id in cat_data.get("modules", []):
-                                if module_id != module_group:
-                                    # Get module info
-                                    try:
-                                        from config.app_config import get_module_info
-                                        module_info = get_module_info(module_id)
-                                        if module_info:
-                                            if st.button(
-                                                f"{module_info.icon} {module_info.title}",
-                                                key=f"sidebar_link_{module_id}",
-                                                use_container_width=True
-                                            ):
-                                                st.switch_page(module_info.page_path)
-                                    except ImportError:
-                                        pass
+                    cat_data = NAVIGATION_CATEGORIES[current_category]
+                    # Support both old dict format and new NavigationCategory dataclass
+                    module_ids = cat_data.module_ids if hasattr(cat_data, 'module_ids') else cat_data.get("modules", [])
+                    for module_id in module_ids:
+                        if module_id != module_group:
+                            # Get module info
+                            try:
+                                from config.app_config import get_module_info
+                                from config.navigation_config import NAVIGATION_SUB_ITEMS
+                                # Skip sub-items in category links (they're accessible from parent page)
+                                if module_id not in NAVIGATION_SUB_ITEMS:
+                                    module_info = get_module_info(module_id)
+                                    if module_info:
+                                        if st.button(
+                                            f"{module_info.icon} {module_info.title}",
+                                            key=f"sidebar_link_{module_id}",
+                                            use_container_width=True
+                                        ):
+                                            st.switch_page(module_info.page_path)
+                            except ImportError:
+                                pass
                 st.markdown("---")
         
         # Quick links
