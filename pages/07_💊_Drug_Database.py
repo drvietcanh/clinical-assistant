@@ -130,68 +130,204 @@ with tab1:
     function_type_lower = function_type.lower()
 
     if "tra cứu thuốc" in function_type_lower:
-        # Master-Detail Layout: List on left, Detail on right
+        # Full-width Detail View Layout (Epocrates/Micromedex style)
         # Get selected drug from session state
         selected_drug_name = st.session_state.get('view_drug_name') or st.session_state.get('selected_drug')
         
-        # Add CSS for responsive layout
+        # Add CSS for responsive layout and full-width detail view
         st.markdown("""
         <style>
+        /* Full-width detail view styling */
+        .drug-detail-container {
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        /* Improve spacing for tabs */
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .stTabs [data-baseweb="tab"] {
+            padding: 10px 16px;
+            font-size: 0.95em;
+            white-space: nowrap;
+        }
+        
+        /* Better card spacing */
+        .drug-info-card {
+            margin-bottom: 20px;
+        }
+        
+        /* Responsive design for mobile */
         @media (max-width: 768px) {
-            /* Mobile: Stack columns vertically */
-            .drug-detail-column {
-                margin-top: 1rem;
+            .drug-detail-container {
+                padding: 10px;
+            }
+            
+            .drug-detail-header {
+                padding: 15px !important;
+            }
+            
+            .drug-detail-header h2 {
+                font-size: 1.5em !important;
+            }
+            
+            /* Scrollable tabs with visual indicator */
+            .stTabs [data-baseweb="tab-list"] {
+                gap: 4px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
+                position: relative;
+            }
+            
+            /* Visual indicator for scrollable tabs */
+            .stTabs [data-baseweb="tab-list"]::after {
+                content: '→';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background: linear-gradient(to right, transparent, rgba(255,255,255,0.9));
+                padding: 0 10px;
+                pointer-events: none;
+                color: #666;
+                font-size: 1.2em;
+            }
+            
+            .stTabs [data-baseweb="tab"] {
+                padding: 10px 14px;
+                font-size: 0.85em;
+                min-width: auto;
+                white-space: nowrap;
+            }
+            
+            /* Stack quick actions on mobile */
+            .quick-actions-container {
+                flex-direction: column;
+            }
+            
+            /* Better spacing on mobile */
+            .drug-info-section {
+                margin-bottom: 20px;
+            }
+            
+            /* Improve button sizes on mobile - larger touch targets */
+            button {
+                min-height: 44px;
+                font-size: 0.95em;
+                padding: 10px 16px;
+            }
+            
+            /* Larger input fields on mobile */
+            input, select, textarea {
+                font-size: 16px; /* Prevents zoom on iOS */
+                min-height: 44px;
+            }
+            
+            /* Better card spacing on mobile */
+            .drug-info-card {
+                margin-bottom: 15px;
+                padding: 12px;
+            }
+        }
+        
+        /* Tablet optimization */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .stTabs [data-baseweb="tab"] {
+                padding: 10px 14px;
+                font-size: 0.9em;
+            }
+        }
+        
+        /* Better print styles */
+        @media print {
+            .stTabs [data-baseweb="tab-list"] {
+                display: none;
+            }
+            
+            .drug-detail-header {
+                page-break-after: avoid;
             }
         }
         </style>
         """, unsafe_allow_html=True)
         
-        # For desktop with drug selected, use 2-column layout
-        # For mobile or when no drug selected, use single column
+        # Full-width detail view when drug is selected
         if selected_drug_name:
-            # Two-column layout (desktop with drug selected)
-            col_list, col_detail = st.columns([3, 2])
+            # Back button and navigation bar
+            col_back, col_title, col_actions = st.columns([1, 3, 1])
             
-            with col_list:
-                render_drug_database()
+            with col_back:
+                if st.button("← Quay lại", key="back_to_list", use_container_width=True, type="secondary"):
+                    # Use pop() instead of del for safer session state management
+                    st.session_state.pop('view_drug_name', None)
+                    st.session_state.pop('selected_drug', None)
+                    st.rerun()
             
-            with col_detail:
+            with col_title:
                 st.markdown("### 📖 Chi tiết thuốc")
-                try:
-                    from drugs.drug_database import DRUG_DATABASE
-                    from drugs.drug_info_components.detail_view import display_drug_info
+            
+            with col_actions:
+                st.empty()  # Reserved for future quick actions
+            
+            st.markdown("---")
+            
+            # Full-width detail view
+            try:
+                from drugs.drug_database import DRUG_DATABASE
+                from drugs.drug_info_components.detail_view import display_drug_info
+                
+                # Try case-insensitive lookup
+                drug_found = selected_drug_name in DRUG_DATABASE
+                drug_name_normalized = selected_drug_name
+                
+                if not drug_found:
+                    for db_drug_name in DRUG_DATABASE.keys():
+                        if str(db_drug_name).lower() == str(selected_drug_name).lower():
+                            drug_name_normalized = db_drug_name
+                            drug_found = True
+                            break
+                
+                if drug_found and drug_name_normalized in DRUG_DATABASE:
+                    drug_data = DRUG_DATABASE[drug_name_normalized]
+                    # Display full-width drug info
+                    display_drug_info(drug_name_normalized, drug_data, show_header=True)
                     
-                    # Try case-insensitive lookup
-                    drug_found = selected_drug_name in DRUG_DATABASE
-                    drug_name_normalized = selected_drug_name
-                    
-                    if not drug_found:
-                        for db_drug_name in DRUG_DATABASE.keys():
-                            if str(db_drug_name).lower() == str(selected_drug_name).lower():
-                                drug_name_normalized = db_drug_name
-                                drug_found = True
-                                break
-                    
-                    if drug_found and drug_name_normalized in DRUG_DATABASE:
-                        drug_data = DRUG_DATABASE[drug_name_normalized]
-                        # Add clear button
-                        if st.button("❌ Đóng", key="close_drug_detail", use_container_width=True):
-                            if 'view_drug_name' in st.session_state:
-                                del st.session_state['view_drug_name']
-                            if 'selected_drug' in st.session_state:
-                                del st.session_state['selected_drug']
-                            st.rerun()
-                        display_drug_info(drug_name_normalized, drug_data, show_header=True)
-                    else:
-                        st.warning(f"Không tìm thấy thuốc: {selected_drug_name}")
-                        if st.button("🔙 Quay lại", key="back_from_detail", use_container_width=True):
-                            if 'view_drug_name' in st.session_state:
-                                del st.session_state['view_drug_name']
-                            if 'selected_drug' in st.session_state:
-                                del st.session_state['selected_drug']
-                            st.rerun()
-                except Exception as e:
-                    st.error(f"Lỗi hiển thị chi tiết: {str(e)}")
+                    # Navigation hint at bottom
+                    st.markdown("---")
+                    st.info("💡 Tìm kiếm thuốc khác? Sử dụng nút '← Quay lại' ở trên hoặc chọn thuốc từ danh sách")
+                else:
+                    st.warning(f"Không tìm thấy thuốc: {selected_drug_name}")
+                    if st.button("🔙 Quay lại danh sách", key="back_from_detail", use_container_width=True):
+                        st.session_state.pop('view_drug_name', None)
+                        st.session_state.pop('selected_drug', None)
+                        st.rerun()
+            except ImportError as e:
+                st.error(f"Lỗi import module: {str(e)}")
+                st.info("💡 Vui lòng kiểm tra lại cấu hình hệ thống")
+                if st.button("🔙 Quay lại", key="back_from_import_error", use_container_width=True):
+                    st.session_state.pop('view_drug_name', None)
+                    st.session_state.pop('selected_drug', None)
+                    st.rerun()
+            except KeyError as e:
+                st.error(f"Lỗi truy cập dữ liệu: Không tìm thấy key '{str(e)}' trong database")
+                st.info("💡 Thuốc này có thể thiếu một số thông tin")
+                if st.button("🔙 Quay lại", key="back_from_key_error", use_container_width=True):
+                    st.session_state.pop('view_drug_name', None)
+                    st.session_state.pop('selected_drug', None)
+                    st.rerun()
+            except Exception as e:
+                import traceback
+                st.error(f"Lỗi hiển thị chi tiết: {str(e)}")
+                with st.expander("🔍 Chi tiết lỗi (dành cho developer)", expanded=False):
+                    st.code(traceback.format_exc())
+                if st.button("🔙 Quay lại", key="back_from_error", use_container_width=True):
+                    st.session_state.pop('view_drug_name', None)
+                    st.session_state.pop('selected_drug', None)
+                    st.rerun()
         else:
             # Single column layout when no drug selected
             render_drug_database()
@@ -210,6 +346,13 @@ with tab1:
 
     elif "tương tác" in function_type_lower:
         render_interaction_checker()
+    
+    # Handle switch to interaction checker from quick actions
+    if st.session_state.get('switch_to_interaction', False):
+        st.session_state['switch_to_interaction'] = False
+        if 'drug_db_function_type' not in st.session_state:
+            st.session_state['drug_db_function_type'] = str("🔍 Kiểm tra tương tác thuốc")
+        st.rerun()
 
 with tab2:
     # Antibiotics sub-module

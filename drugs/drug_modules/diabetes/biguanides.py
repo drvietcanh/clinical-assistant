@@ -143,6 +143,50 @@ BIGUANIDES_DRUGS = {
             'EASD Guidelines',
             'UKPDS Study',
             'FDA Drug Safety Communication - Metformin and Contrast Media',
-        ]}}
+        ],
+        # Sample data for new features
+        'image_url': 'https://www.drugs.com/images/pills/fio/MET01.JPG',  # Sample image URL
+        'image_source': 'Drugs.com',
+        'evidence_levels': {
+            'mechanism_of_action': 'A',  # Strong evidence
+            'indications': 'A',  # Strong evidence from UKPDS
+            'dosing': 'A',  # Strong evidence
+            'safety': 'A',  # Strong evidence
+        },
+        'toxicity_management': {
+            'symptoms': [
+                'Buồn nôn, nôn, tiêu chảy',
+                'Đau bụng',
+                'Nhiễm toan lactic (pH <7.35, lactate >5 mmol/L) - nguy hiểm',
+                'Hạ đường huyết (hiếm)',
+                'Suy thận cấp',
+                'Hôn mê, tử vong (nếu nhiễm toan lactic nặng)'
+            ],
+            'antidote': {
+                'name': 'Không có antidote đặc hiệu',
+                'dose': 'Điều trị hỗ trợ và lọc máu'
+            },
+            'treatment': [
+                'Rửa dạ dày nếu uống trong vòng 1-2 giờ',
+                'Than hoạt tính (hiệu quả hạn chế)',
+                'Điều trị nhiễm toan lactic: Bicarbonate IV, lọc máu (hemodialysis) để loại bỏ metformin',
+                'Hỗ trợ hô hấp và tuần hoàn',
+                'Theo dõi lactate, pH máu, điện giải, chức năng thận',
+                'Lọc máu nếu lactate >5 mmol/L hoặc nhiễm toan lactic nặng',
+                'Điều trị hạ đường huyết nếu có: Glucose IV',
+                'Theo dõi ít nhất 24-48 giờ'
+            ],
+            'monitoring': [
+                'Lactate máu, pH máu',
+                'Điện giải (Na, K, Cl, HCO3)',
+                'Chức năng thận (creatinine, BUN)',
+                'Glucose máu',
+                'Dấu hiệu sống (BP, HR, RR, SpO2)',
+                'Ý thức, Glasgow Coma Scale'
+            ],
+            'lethal_dose': 'LD50: >5g/kg (chuột). Ở người: >50g có thể gây tử vong do nhiễm toan lactic'
+        }
+    }
+}
 
 __all__ = ['BIGUANIDES_DRUGS']

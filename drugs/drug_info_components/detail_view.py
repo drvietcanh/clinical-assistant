@@ -41,6 +41,332 @@ except ImportError:
     ANTIBIOTICS_DATABASE = {}
 from .card_components import _render_quick_facts_box, _render_black_box_warning
 
+def _get_evidence_badge(evidence_level):
+    """Get evidence rating badge HTML"""
+    if not evidence_level:
+        return ''
+    
+    evidence_map = {
+        'A': {'label': 'Level A - Strong Evidence', 'color': '#10B981', 'icon': '🟢'},
+        'B': {'label': 'Level B - Moderate Evidence', 'color': '#F59E0B', 'icon': '🟡'},
+        'C': {'label': 'Level C - Limited Evidence', 'color': '#F97316', 'icon': '🟠'},
+        'D': {'label': 'Level D - Weak Evidence', 'color': '#EF4444', 'icon': '🔴'},
+        'E': {'label': 'Expert Opinion', 'color': '#8B5CF6', 'icon': '💜'},
+    }
+    
+    evidence_info = evidence_map.get(evidence_level.upper(), {})
+    if not evidence_info:
+        return ''
+    
+    return f"""
+    <div style='background: {evidence_info["color"]}15; border-left: 3px solid {evidence_info["color"]}; padding: 8px 12px; border-radius: 6px; margin-bottom: 12px; display: inline-block;'>
+        <span style='color: {evidence_info["color"]}; font-size: 0.85em; font-weight: 600;'>
+            {evidence_info["icon"]} {evidence_info["label"]}
+        </span>
+    </div>
+    """
+
+def _render_toxicity_management(drug_name, drug_data):
+    """Render toxicity management section (overdose, antidote, treatment)"""
+    toxicity_data = drug_data.get('toxicity_management', None)
+    
+    if toxicity_data:
+        st.markdown('### ☠️ Xử trí Ngộ độc / Quá liều')
+        
+        # Structure: toxicity_management can be dict or string
+        if isinstance(toxicity_data, dict):
+            # Structured format
+            overdose_symptoms = toxicity_data.get('symptoms', [])
+            antidote = toxicity_data.get('antidote', None)
+            treatment = toxicity_data.get('treatment', [])
+            monitoring = toxicity_data.get('monitoring', [])
+            lethal_dose = toxicity_data.get('lethal_dose', None)
+            
+            # Symptoms
+            if overdose_symptoms:
+                st.markdown('#### 🚨 Triệu chứng ngộ độc:')
+                symptoms_html = '<ul style="margin: 10px 0; padding-left: 20px;">'
+                for symptom in overdose_symptoms if isinstance(overdose_symptoms, list) else [overdose_symptoms]:
+                    symptoms_html += f'<li style="margin: 8px 0; color: #dc2626; font-size: 1em; line-height: 1.6; font-weight: 500;">{safe_render_html(str(symptom))}</li>'
+                symptoms_html += '</ul>'
+                st.markdown(
+                    f"""
+                    <div style='background: #fef2f2; border-left: 4px solid #dc2626; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                        {symptoms_html}
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            
+            # Antidote
+            if antidote:
+                st.markdown('#### 💉 Antidote / Giải độc:')
+                antidote_info = antidote if isinstance(antidote, str) else antidote.get('name', '')
+                antidote_dose = antidote.get('dose', '') if isinstance(antidote, dict) else ''
+                st.markdown(
+                    f"""
+                    <div style='background: #f0fdf4; border-left: 4px solid #10B981; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                        <p style='color: #166534; font-size: 1em; font-weight: 600; margin: 0 0 5px 0;'>{safe_render_html(str(antidote_info))}</p>
+                        {f"<p style='color: #15803d; font-size: 0.9em; margin: 0;'>Liều: {safe_render_html(str(antidote_dose))}</p>" if antidote_dose else ''}
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            
+            # Treatment
+            if treatment:
+                st.markdown('#### 🏥 Xử trí:')
+                treatment_html = '<ul style="margin: 10px 0; padding-left: 20px;">'
+                for tx in treatment if isinstance(treatment, list) else [treatment]:
+                    treatment_html += f'<li style="margin: 8px 0; color: #1e293b; font-size: 1em; line-height: 1.6;">{safe_render_html(str(tx))}</li>'
+                treatment_html += '</ul>'
+                st.markdown(
+                    f"""
+                    <div style='background: #f8fafc; border-left: 4px solid #3B82F6; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                        {treatment_html}
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            
+            # Monitoring
+            if monitoring:
+                st.markdown('#### 📊 Theo dõi:')
+                monitoring_html = '<ul style="margin: 10px 0; padding-left: 20px;">'
+                for mon in monitoring if isinstance(monitoring, list) else [monitoring]:
+                    monitoring_html += f'<li style="margin: 8px 0; color: #475569; font-size: 0.95em; line-height: 1.6;">{safe_render_html(str(mon))}</li>'
+                monitoring_html += '</ul>'
+                st.markdown(
+                    f"""
+                    <div style='background: #fef3c7; border-left: 4px solid #F59E0B; padding: 15px; border-radius: 8px; margin: 10px 0;'>
+                        {monitoring_html}
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+            
+            # Lethal dose
+            if lethal_dose:
+                st.markdown('#### ⚠️ Liều gây chết (LD50):')
+                st.warning(f'**{safe_render_html(str(lethal_dose))}**')
+        
+        else:
+            # Simple string format
+            st.markdown(
+                f"""
+                <div style='background: #fef2f2; border-left: 4px solid #dc2626; padding: 20px; border-radius: 10px; margin: 15px 0;'>
+                    <p style='color: #991b1b; font-size: 1em; line-height: 1.8; margin: 0;'>{safe_render_html(str(toxicity_data))}</p>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        
+        st.markdown('---')
+    else:
+        # Empty state for toxicity management
+        st.markdown('### ☠️ Xử trí Ngộ độc / Quá liều')
+        st.markdown("""
+        <div style='
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin: 15px 0;
+        '>
+            <div style='font-size: 2.5em; margin-bottom: 10px;'>☠️</div>
+            <p style='color: #64748b; margin: 0 0 10px 0; font-size: 0.95em;'>
+                Thông tin xử trí ngộ độc chưa có trong database
+            </p>
+            <p style='color: #94a3b8; margin: 0; font-size: 0.85em;'>
+                💡 Trong trường hợp ngộ độc, vui lòng liên hệ trung tâm chống độc hoặc cấp cứu ngay
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+        st.markdown('---')
+
+def _render_drug_images(drug_name, drug_data):
+    """Render drug images section if available"""
+    # Check if drug has image data
+    has_image = False
+    image_url = None
+    image_source = None
+    
+    # Check for image in drug_data
+    if 'image_url' in drug_data and drug_data.get('image_url'):
+        has_image = True
+        image_url = drug_data['image_url']
+        image_source = drug_data.get('image_source', 'Database')
+    elif 'images' in drug_data and drug_data.get('images'):
+        # Handle multiple images
+        images = drug_data['images']
+        if isinstance(images, list) and len(images) > 0:
+            has_image = True
+            image_url = images[0] if isinstance(images[0], str) else images[0].get('url', '')
+            image_source = images[0].get('source', 'Database') if isinstance(images[0], dict) else 'Database'
+        elif isinstance(images, dict):
+            has_image = True
+            image_url = images.get('url', '')
+            image_source = images.get('source', 'Database')
+    
+    if has_image and image_url:
+        st.markdown('### 📷 Hình ảnh thuốc')
+        try:
+            # Try to display image from URL
+            st.image(image_url, caption=f'{drug_name} - {image_source}', use_container_width=True)
+            if image_source and image_source != 'Database':
+                st.caption(f'📸 Nguồn: {image_source}')
+        except Exception as e:
+            # Fallback: show placeholder with link to pill identifier
+            st.markdown("""
+            <div style='
+                background: #f8fafc;
+                border: 2px dashed #cbd5e1;
+                border-radius: 12px;
+                padding: 30px;
+                text-align: center;
+                margin: 15px 0;
+            '>
+                <div style='font-size: 3em; margin-bottom: 10px;'>💊</div>
+                <p style='color: #64748b; margin: 0;'>Hình ảnh thuốc đang được cập nhật</p>
+            </div>
+            """, unsafe_allow_html=True)
+            # Link to pill identifier if available
+            try:
+                if st.button('🔍 Mở Pill Identifier', key=f'pill_id_{drug_name}', use_container_width=True):
+                    st.switch_page("pages/21_💊_Pill_Identifier.py")
+            except:
+                pass
+        st.markdown('---')
+    else:
+        # Show placeholder with link to pill identifier
+        st.markdown("""
+        <div style='
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin: 15px 0;
+        '>
+            <div style='font-size: 2.5em; margin-bottom: 10px;'>📷</div>
+            <p style='color: #64748b; margin: 0 0 10px 0; font-size: 0.95em;'>
+                Hình ảnh thuốc chưa có trong database
+            </p>
+            <p style='color: #94a3b8; margin: 0; font-size: 0.85em;'>
+                💡 Sử dụng Pill Identifier để nhận diện thuốc qua đặc điểm vật lý
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+        # Link to pill identifier
+        try:
+            col1, col2 = st.columns([1, 1])
+            with col1:
+                if st.button('🔍 Pill Identifier', key=f'pill_id_btn_{drug_name}', use_container_width=True):
+                    st.switch_page("pages/21_💊_Pill_Identifier.py")
+            with col2:
+                st.empty()
+        except:
+            pass
+        st.markdown('---')
+
+def _render_quick_actions_bar(drug_name, drug_data):
+    """Render quick actions bar with common actions (compare, dosing calculator, interactions)"""
+    # Check if drug is antibiotic
+    is_antibiotic = drug_name in ANTIBIOTICS_DATABASE
+    
+    # Check if TDM is available
+    has_tdm_available = False
+    try:
+        from drugs.drug_utils.tdm_mapping import has_tdm
+        has_tdm_available = has_tdm(drug_name)
+    except ImportError:
+        pass
+    
+    # Responsive columns: more columns on desktop, fewer on mobile
+    # Use 5 columns on desktop, will stack on mobile via CSS
+    action_cols = st.columns([1, 1, 1, 1, 2])
+    
+    with action_cols[0]:
+        # Compare button
+        safe_compare_key = f"quick_compare_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+        if st.button("🔄 So sánh", key=safe_compare_key, use_container_width=True, type="secondary"):
+            if 'drug_comparison_list' not in st.session_state:
+                st.session_state['drug_comparison_list'] = []
+            if drug_name not in st.session_state['drug_comparison_list']:
+                if len(st.session_state['drug_comparison_list']) >= 5:
+                    st.warning('⚠️ Danh sách so sánh đã đầy (tối đa 5 thuốc). Vui lòng xóa một thuốc trước khi thêm mới.')
+                else:
+                    st.session_state['drug_comparison_list'].append(drug_name)
+                    st.success(f'✅ Đã thêm {drug_name} vào danh sách so sánh ({len(st.session_state["drug_comparison_list"])}/5)')
+                    st.rerun()
+            else:
+                st.info(f'ℹ️ {drug_name} đã có trong danh sách so sánh')
+    
+    with action_cols[1]:
+        # Dosing calculator button (if antibiotic)
+        if is_antibiotic:
+            safe_calc_key = f"quick_calc_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+            if st.button("🧮 Tính liều", key=safe_calc_key, use_container_width=True, type="secondary"):
+                st.session_state['preset_antibiotic_name'] = drug_name
+                st.session_state['switch_to_dosing_calculator'] = True
+                st.rerun()
+        else:
+            st.empty()
+    
+    with action_cols[2]:
+        # Interaction checker button
+        safe_inter_key = f"quick_inter_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+        if st.button("🔗 Tương tác", key=safe_inter_key, use_container_width=True, type="secondary"):
+            st.session_state['switch_to_interaction'] = True
+            if 'preset_interaction_drugs' not in st.session_state:
+                st.session_state['preset_interaction_drugs'] = []
+            if drug_name not in st.session_state['preset_interaction_drugs']:
+                st.session_state['preset_interaction_drugs'].append(drug_name)
+            st.rerun()
+    
+    with action_cols[3]:
+        # TDM calculator button (if available)
+        if has_tdm_available:
+            safe_tdm_key = f"quick_tdm_{str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')}"
+            if st.button("📊 TDM", key=safe_tdm_key, use_container_width=True, type="secondary", help="Theo dõi nồng độ thuốc"):
+                st.session_state['preset_tdm_drug'] = drug_name
+                st.session_state['switch_to_tdm'] = True
+                st.rerun()
+        else:
+            # Show disabled button with tooltip instead of empty
+            st.button("📊 TDM", key=f"tdm_disabled_{drug_name}", use_container_width=True, disabled=True, help="TDM không khả dụng cho thuốc này")
+    
+    with action_cols[4]:
+        st.empty()  # Spacer
+    
+    # Add responsive styling for quick actions
+    st.markdown("""
+    <style>
+    @media (max-width: 768px) {
+        /* Stack quick action buttons vertically on mobile if needed */
+        [data-testid="column"] {
+            margin-bottom: 10px;
+        }
+        
+        /* Larger buttons on mobile for better touch targets */
+        .quick-action-button {
+            min-height: 48px;
+            font-size: 1em;
+            padding: 12px 16px;
+        }
+        
+        /* Better spacing between action buttons */
+        .stButton > button {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("---")
+
 def display_drug_info(drug_name, drug_data, show_header=True):
     """Display detailed drug information in tab-based format (Epocrates style)
     
@@ -55,23 +381,87 @@ def display_drug_info(drug_name, drug_data, show_header=True):
         <div class="drug-detail-header" style='
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         '>
-            <h2 style='margin: 0; color: white; font-size: 1.8em;'>💊 {drug_name}</h2>
-            {f"<p style='margin: 8px 0 0 0; color: rgba(255,255,255,0.9); font-size: 1em;'>{escape_html(str(drug_data.get('vietnamese_name', '')))}</p>" if drug_data.get('vietnamese_name') else ''}
+            <h2 style='margin: 0; color: white; font-size: 2em; font-weight: 600;'>💊 {escape_html(str(drug_name))}</h2>
+            {f"<p style='margin: 10px 0 0 0; color: rgba(255,255,255,0.95); font-size: 1.1em;'>{escape_html(str(drug_data.get('vietnamese_name', '')))}</p>" if drug_data.get('vietnamese_name') else ''}
         </div>
         """
             , unsafe_allow_html=True)
+    
+    # Quick Actions Bar (inspired by Epocrates)
+    _render_quick_actions_bar(drug_name, drug_data)
+    
     # Enhanced tabs with better styling (added Pricing & Formulary)
+    # Add CSS for better tab spacing and visual hierarchy
+    st.markdown("""
+    <style>
+    /* Better tab spacing */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 8px;
+        padding: 0;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        padding: 12px 20px;
+        font-size: 1em;
+        font-weight: 500;
+    }
+    
+    /* Better section spacing */
+    .drug-info-section {
+        margin-bottom: 30px;
+    }
+    
+    /* Improved card design */
+    .drug-info-card {
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .drug-info-card:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+    
+    /* Better typography */
+    h3 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-size: 1.4em;
+        font-weight: 600;
+        color: #1e293b;
+    }
+    
+    h4 {
+        margin-top: 20px;
+        margin-bottom: 12px;
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #334155;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
     tab_names = ['📋 Overview', '💊 Dosing', '⚠️ Safety', '🔗 Interactions', '📊 Monitoring', '💰 Pricing & BHYT']
     (tab_overview, tab_dosing, tab_safety, tab_interactions, tab_monitoring, tab_pricing) = st.tabs(tab_names)
     with tab_overview:
+        # Add spacing wrapper
+        st.markdown('<div class="drug-info-section">', unsafe_allow_html=True)
+        
         if 'black_box_warnings' in drug_data:
             _render_black_box_warning(drug_data['black_box_warnings'])
+        
+        # Drug Images Section (if available)
+        _render_drug_images(drug_name, drug_data)
+        
         _render_quick_facts_box(drug_data)
-        # Enhanced info cards layout
+        
+        # Enhanced info cards layout with better spacing
+        st.markdown('<div style="margin: 25px 0;">', unsafe_allow_html=True)
         info_cols = st.columns(3)
         with info_cols[0]:
             if 'vietnamese_name' in drug_data:
@@ -164,8 +554,12 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     """,
                     unsafe_allow_html=True
                 )
+        st.markdown('</div>', unsafe_allow_html=True)  # Close margin wrapper
+        
         st.markdown('---')
+        
         if 'indications' in drug_data:
+            st.markdown('<div class="drug-info-section">', unsafe_allow_html=True)
             st.markdown('### 📋 Chỉ định')
             indications_html = '<ul style="margin: 10px 0; padding-left: 20px;">'
             for ind in drug_data['indications']:
@@ -179,19 +573,31 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                 """,
                 unsafe_allow_html=True
             )
+            st.markdown('</div>', unsafe_allow_html=True)  # Close section wrapper
+        
         if 'mechanism_of_action' in drug_data:
             st.markdown('---')
+            st.markdown('<div class="drug-info-section">', unsafe_allow_html=True)
             st.markdown('### 🔬 Cơ chế tác động')
+            
+            # Get evidence rating if available
+            evidence_level = drug_data.get('evidence_levels', {}).get('mechanism_of_action', None) if isinstance(drug_data.get('evidence_levels'), dict) else None
+            evidence_badge = _get_evidence_badge(evidence_level) if evidence_level else ''
+            
             st.markdown(
                 f"""
                 <div style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 10px; border-left: 4px solid #0EA5E9; margin: 15px 0;'>
+                    {evidence_badge}
                     <p style='color: #0c4a6e; font-size: 1em; line-height: 1.8; margin: 0;'>{safe_render_html(drug_data['mechanism_of_action'])}</p>
                 </div>
                 """,
                 unsafe_allow_html=True
             )
+            st.markdown('</div>', unsafe_allow_html=True)  # Close section wrapper
+        
         if 'pharmacokinetics' in drug_data:
             st.markdown('---')
+            st.markdown('<div class="drug-info-section">', unsafe_allow_html=True)
             st.markdown('### 📈 Dược động học (Pharmacokinetics):')
             pk = drug_data['pharmacokinetics']
             pk_data = []
@@ -232,13 +638,18 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                     ),
                     unsafe_allow_html=True
                 )
+            st.markdown('</div>', unsafe_allow_html=True)  # Close section wrapper
+        
         if 'storage' in drug_data:
             st.markdown('---')
+            st.markdown('<div class="drug-info-section">', unsafe_allow_html=True)
             st.markdown('### 📦 Bảo quản:')
             st.info(drug_data['storage'])
+            st.markdown('</div>', unsafe_allow_html=True)
         
         # References section
         st.markdown('---')
+        st.markdown('<div class="drug-info-section">', unsafe_allow_html=True)
         drug_group = drug_data.get('group', '')
         references = get_drug_references(drug_class=drug_group)
         if references:
@@ -249,7 +660,11 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                 show_evidence_level=True,
                 show_links=True
             )
+        st.markdown('</div>', unsafe_allow_html=True)  # Close section wrapper
+        st.markdown('</div>', unsafe_allow_html=True)  # Close main section wrapper
+    
     with tab_dosing:
+        st.markdown('<div class="drug-info-section">', unsafe_allow_html=True)
         if 'dosage' in drug_data:
             st.markdown('### 👤 Liều dùng người lớn:')
             dosage = drug_data['dosage']
@@ -500,10 +915,13 @@ def display_drug_info(drug_name, drug_data, show_header=True):
                 st.session_state['preset_antibiotic_name'] = drug_name
                 st.session_state['switch_to_dosing_calculator'] = True
                 st.rerun()
-            st.caption(
+                st.caption(
                 '💡 Click nút trên để mở calculator với thuốc này đã được chọn sẵn'
                 )
+        st.markdown('</div>', unsafe_allow_html=True)  # Close section wrapper
+    
     with tab_safety:
+        st.markdown('<div class="drug-info-section">', unsafe_allow_html=True)
         if 'contraindications' in drug_data:
             st.markdown('### ⛔ Chống chỉ định')
             contraindications = drug_data['contraindications']
@@ -819,16 +1237,52 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             if 'lactation' in drug_data:
                 st.markdown(
                     f"### 🤱 **An toàn cho con bú:** {escape_html(str(drug_data['lactation']))}")
+        st.markdown('</div>', unsafe_allow_html=True)  # Close section wrapper
+    
     with tab_interactions:
-        if 'interactions' in drug_data:
+        st.markdown('<div class="drug-info-section">', unsafe_allow_html=True)
+        if 'interactions' in drug_data and drug_data['interactions']:
             st.markdown('### 🔗 Tương tác thuốc:')
-            for inter in drug_data['interactions']:
-                st.markdown(f'- {inter}')
+            interactions = drug_data['interactions']
+            if isinstance(interactions, list) and len(interactions) > 0:
+                for inter in interactions:
+                    st.markdown(f'- {safe_render_html(inter)}')
+            else:
+                st.markdown(f'- {safe_render_html(str(interactions))}')
         else:
-            st.info(
-                "Không có thông tin về tương tác thuốc. Sử dụng công cụ 'Kiểm tra Tương tác Thuốc' để kiểm tra chi tiết."
-                )
+            # Enhanced empty state for interactions
+            st.markdown("""
+            <div style='
+                background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+                border: 2px solid #bae6fd;
+                border-radius: 12px;
+                padding: 30px;
+                text-align: center;
+                margin: 20px 0;
+            '>
+                <div style='font-size: 3em; margin-bottom: 15px;'>🔗</div>
+                <h3 style='color: #0c4a6e; margin: 0 0 10px 0;'>Chưa có thông tin tương tác</h3>
+                <p style='color: #075985; margin: 0 0 20px 0;'>
+                    Thông tin tương tác thuốc cho <strong>{}</strong> chưa được cập nhật trong database.
+                </p>
+                <p style='color: #0369a1; margin: 0;'>
+                    💡 Sử dụng công cụ <strong>"Kiểm tra Tương tác Thuốc"</strong> để kiểm tra chi tiết tương tác với các thuốc khác.
+                </p>
+            </div>
+            """.format(escape_html(str(drug_name))), unsafe_allow_html=True)
+            
+            # Quick action to open interaction checker
+            if st.button('🔍 Mở Kiểm tra Tương tác', use_container_width=True, type='primary'):
+                st.session_state['switch_to_interaction'] = True
+                if 'preset_interaction_drugs' not in st.session_state:
+                    st.session_state['preset_interaction_drugs'] = []
+                if drug_name not in st.session_state['preset_interaction_drugs']:
+                    st.session_state['preset_interaction_drugs'].append(drug_name)
+                st.rerun()
+        st.markdown('</div>', unsafe_allow_html=True)  # Close section wrapper
+    
     with tab_monitoring:
+        st.markdown('<div class="drug-info-section">', unsafe_allow_html=True)
         if 'monitoring' in drug_data:
             st.markdown('### 📊 Theo dõi (Monitoring)')
             monitoring_list = drug_data['monitoring']
@@ -901,9 +1355,11 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             pass
         except Exception as e:
             pass
+        st.markdown('</div>', unsafe_allow_html=True)  # Close section wrapper
     
     # Pricing & Formulary Tab
     with tab_pricing:
+        st.markdown('<div class="drug-info-section">', unsafe_allow_html=True)
         st.markdown('### 💰 Giá & BHYT')
         
         # Try to get pricing info
@@ -978,5 +1434,6 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             else:
                 st.info("Chưa có thông tin BHYT cho thuốc này")
         except ImportError:
-            st.info("Module formulary chưa được tích hợp đầy đủ")
+                st.info("Module formulary chưa được tích hợp đầy đủ")
+        st.markdown('</div>', unsafe_allow_html=True)  # Close section wrapper
 

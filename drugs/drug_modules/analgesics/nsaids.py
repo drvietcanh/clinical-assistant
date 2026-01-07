@@ -132,7 +132,16 @@ NSAIDS_DRUGS = {
             "severe": "Thận trọng, có thể giảm liều",
             "notes": "Aspirin chuyển hóa ở gan. Suy gan có thể ảnh hưởng đến chuyển hóa.",
         },
-        "overdose_management": {
+        # Sample data for new features
+        "image_url": "https://www.drugs.com/images/pills/fio/ASA01.JPG",  # Sample image URL
+        "image_source": "Drugs.com",
+        "evidence_levels": {
+            "mechanism_of_action": "A",  # Strong evidence
+            "indications": "A",  # Strong evidence for cardiovascular protection
+            "dosing": "A",  # Strong evidence
+            "safety": "B",  # Moderate evidence (bleeding risk)
+        },
+        "toxicity_management": {
             "symptoms": [
                 "Tinnitus (ù tai) - dấu hiệu sớm",
                 "Buồn nôn, nôn",
@@ -143,8 +152,11 @@ NSAIDS_DRUGS = {
                 "Hạ đường huyết",
                 "Co giật (liều rất cao)",
                 "Suy hô hấp, tử vong"
-    ],
-            "antidote": """Không có antidote đặc hiệu. Điều trị hỗ trợ. Sodium bicarbonate để kiềm hóa nước tiểu (tăng thải trừ).""",
+            ],
+            "antidote": {
+                "name": "Không có antidote đặc hiệu",
+                "dose": "Sodium bicarbonate để kiềm hóa nước tiểu (tăng thải trừ salicylate)"
+            },
             "treatment": [
                 "Ngừng aspirin ngay",
                 "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
@@ -156,8 +168,17 @@ NSAIDS_DRUGS = {
                 "Điều trị sốt: làm mát, paracetamol",
                 "Hỗ trợ hô hấp nếu suy hô hấp",
                 "Lọc máu (hemodialysis) nếu nồng độ salicylate rất cao (>100mg/dL)"
-    ],
-            "monitoring": "Nồng độ salicylate trong máu, pH máu, điện giải, glucose, dấu hiệu sinh tồn, dấu hiệu chảy máu",
+            ],
+            "monitoring": [
+                "Nồng độ salicylate trong máu (nếu có thể)",
+                "pH máu, HCO3",
+                "Điện giải (Na, K, Cl)",
+                "Glucose máu",
+                "Dấu hiệu sống (BP, HR, RR, SpO2)",
+                "Dấu hiệu chảy máu",
+                "Chức năng thận (creatinine, BUN)"
+            ],
+            "lethal_dose": "LD50: 175mg/kg (chuột). Ở người: >150mg/kg có thể gây tử vong. Liều gây chết thường >10g ở người lớn."
         },
         "reversal_agents": {
             "available": False,
