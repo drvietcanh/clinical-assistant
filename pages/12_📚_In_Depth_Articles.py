@@ -972,7 +972,11 @@ def markdown_to_safe_html(text: str) -> str:
 
 def render_article_card(article: dict, index: int):
     """Hiển thị thẻ bài viết với thiết kế đẹp và khoa học."""
-    specialty = article["specialty"]
+    # Defensive checks: ensure all required fields are strings
+    article_id = str(article.get('id', f'article_{index}')) if article.get('id') is not None else f'article_{index}'
+    article_title = str(article.get('title', 'Untitled Article')) if article.get('title') is not None else 'Untitled Article'
+    specialty = str(article.get("specialty", "General")) if article.get("specialty") is not None else "General"
+    article_path = article.get("path")
     
     # Xử lý các text items: convert markdown thành HTML an toàn
     safe_summary_items = [markdown_to_safe_html(item) for item in article.get("summary", [])]
@@ -990,12 +994,12 @@ def render_article_card(article: dict, index: int):
     gradient, border_color = get_specialty_color(specialty)
     
     # Tính toán reading time
-    content = load_article_content(article["path"])
+    content = load_article_content(article_path) if article_path else None
     reading_time = estimate_reading_time(content) if content else 0
     
     # Tạo card HTML với thiết kế đẹp - tối ưu mobile
     # Sanitize ID để đảm bảo an toàn cho HTML ID attribute
-    safe_id = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in str(article['id']))
+    safe_id = "".join(c if c.isalnum() or c in ('_', '-') else '_' for c in str(article_id))
     card_id = f"article_card_{safe_id}"
     
     card_html = f"""
@@ -1020,7 +1024,7 @@ def render_article_card(article: dict, index: int):
         ">
             <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; width: 100%;">
                 <h3 class="article-card-title" style="margin: 0; font-size: 1.3rem; font-weight: 600; color: white; line-height: 1.4; flex: 1;">
-                    {html.escape(article['title'])}
+                    {html.escape(article_title)}
                 </h3>
                 <span class="article-card-specialty" style="
                     background: rgba(255,255,255,0.2);
@@ -1141,11 +1145,12 @@ def render_article_card(article: dict, index: int):
     if protocol_info:
         col1, col2 = st.columns([1, 3])
         with col1:
+            protocol_display = str(protocol_info.get('protocol_display', '')) if protocol_info.get('protocol_display') is not None else ''
             if st.button(
                 "📋 Mở Protocol",
-                key=f"protocol_btn_{article['id']}_{index}",
+                key=f"protocol_btn_{article_id}_{index}",
                 use_container_width=True,
-                help=f"Mở protocol: {html.escape(protocol_info.get('protocol_display', ''))}",
+                help=f"Mở protocol: {html.escape(protocol_display)}",
                 type="primary"
             ):
                 # Store protocol selection in session state for Protocols page
@@ -1154,24 +1159,27 @@ def render_article_card(article: dict, index: int):
                 st.session_state['protocol_function'] = protocol_info.get("protocol_function")
                 st.switch_page("pages/04_📋_Protocols.py")
         with col2:
-            st.caption(f"💡 Có protocol tương ứng: **{html.escape(protocol_info.get('protocol_display', ''))}**")
+            protocol_display = str(protocol_info.get('protocol_display', '')) if protocol_info.get('protocol_display') is not None else ''
+            st.caption(f"💡 Có protocol tương ứng: **{html.escape(protocol_display)}**")
     
     # Score links
     try:
         from components.score_links_from_content import render_score_links_from_article
-        render_score_links_from_article(article['id'])
+        render_score_links_from_article(article_id)
     except ImportError:
         pass
     
     # Streamlit expander cho nội dung đầy đủ - với class cho mobile optimization
-    expand_key = f"article_expand_{article['id']}_{index}"
-    expanded = st.session_state.get(f"expand_article_{article['id']}", False)
-    with st.expander(f"📖 Đọc toàn bộ: {html.escape(article['title'])}", expanded=expanded, key=expand_key):
+    expand_key = f"article_expand_{article_id}_{index}"
+    expanded = st.session_state.get(f"expand_article_{article_id}", False)
+    expander_label = f"📖 Đọc toàn bộ: {html.escape(article_title)}"
+    with st.expander(expander_label, expanded=expanded, key=expand_key):
         st.markdown('<div class="article-expander-content">', unsafe_allow_html=True)
         if content:
             st.markdown(content)
         else:
-            st.warning(f"Không tìm thấy nội dung tại {html.escape(article['path'].name)}.")
+            path_name = str(article_path.name) if article_path and hasattr(article_path, 'name') else 'unknown'
+            st.warning(f"Không tìm thấy nội dung tại {html.escape(path_name)}.")
 
 
 def filter_articles(articles: list[dict], search: str, specialties: list, selected_keywords: list):
@@ -1180,23 +1188,27 @@ def filter_articles(articles: list[dict], search: str, specialties: list, select
     filtered = []
     
     for article in articles:
+        # Defensive checks: ensure fields are strings
+        article_specialty = str(article.get("specialty", "")) if article.get("specialty") is not None else ""
+        article_title = str(article.get("title", "")) if article.get("title") is not None else ""
+        
         # Filter by specialty
-        if specialties and article["specialty"] not in specialties:
+        if specialties and article_specialty not in specialties:
             continue
         
         # Filter by keywords
         if selected_keywords:
-            article_keywords = [k.lower() for k in article.get("keywords", [])]
+            article_keywords = [str(k).lower() for k in article.get("keywords", []) if k is not None]
             if not any(kw.lower() in article_keywords for kw in selected_keywords):
                 continue
         
         # Filter by search text
         if search_lower:
             haystack = " ".join([
-                article["title"],
-                article["specialty"],
-                " ".join(article.get("keywords", [])),
-                " ".join(article.get("summary", [])),
+                article_title,
+                article_specialty,
+                " ".join([str(k) for k in article.get("keywords", []) if k is not None]),
+                " ".join([str(s) for s in article.get("summary", []) if s is not None]),
             ]).lower()
             if search_lower not in haystack:
                 continue
@@ -1436,7 +1448,11 @@ def main():
         st.markdown("---")
         
         st.subheader("🩺 Chuyên khoa")
-        all_specialties = sorted({article["specialty"] for article in articles})
+        all_specialties = sorted({
+            str(article.get("specialty", "")) 
+            for article in articles 
+            if article.get("specialty") is not None
+        })
         selected_specialties = st.multiselect(
             "Chọn chuyên khoa",
             options=all_specialties,
@@ -1484,10 +1500,11 @@ def main():
     article_to_open = st.session_state.get('article_to_open')
     if article_to_open:
         # Find and highlight the article
-        target_article = next((a for a in articles if a['id'] == article_to_open), None)
+        target_article = next((a for a in articles if a.get('id') == article_to_open), None)
         if target_article:
+            target_title = str(target_article.get('title', 'Untitled Article')) if target_article.get('title') is not None else 'Untitled Article'
             render_info_box(
-                f"**Đang hiển thị bài viết:** {html.escape(target_article['title'])}",
+                f"**Đang hiển thị bài viết:** {html.escape(target_title)}",
                 type="success",
                 title="📚 Bài viết",
                 icon="📚"
@@ -1552,7 +1569,8 @@ def main():
         # Nhóm bài viết theo chuyên ngành
         grouped_by_specialty = defaultdict(list)
         for article in filtered:
-            grouped_by_specialty[article["specialty"]].append(article)
+            article_specialty = str(article.get("specialty", "General")) if article.get("specialty") is not None else "General"
+            grouped_by_specialty[article_specialty].append(article)
         specs = sorted(grouped_by_specialty.keys())
 
         with tab_overview:

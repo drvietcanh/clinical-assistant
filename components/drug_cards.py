@@ -169,8 +169,9 @@ def render_drug_list_cards(drugs_dict: Dict, layout: str = "list", max_items: Op
                         render_drug_card(drug_name, drug_data, compact=False)
                         # Add clickable button
                         if st.button(f"Xem chi tiết", key=f"drug_detail_{drug_name}_{i}_{j}", use_container_width=True):
-                            st.session_state.selected_drug = drug_name
-                            st.switch_page("pages/_Drug_Detail.py")
+                            st.session_state['view_drug_name'] = drug_name
+                            st.session_state['selected_drug'] = drug_name  # Keep for backward compatibility
+                            st.rerun()
     
     elif layout == "list":
         # List layout (vertical, compact cards)
@@ -178,8 +179,9 @@ def render_drug_list_cards(drugs_dict: Dict, layout: str = "list", max_items: Op
             render_drug_card(drug_name, drug_data, compact=True)
             # Add clickable button (visually hidden but functional)
             if st.button(f"→ {drug_name}", key=f"drug_list_{drug_name}", use_container_width=True):
-                st.session_state.selected_drug = drug_name
-                st.switch_page("pages/_Drug_Detail.py")
+                st.session_state['view_drug_name'] = drug_name
+                st.session_state['selected_drug'] = drug_name  # Keep for backward compatibility
+                st.rerun()
 
 
 def render_drug_filters() -> Dict:

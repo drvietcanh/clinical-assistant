@@ -118,7 +118,7 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
             f'view_{safe_drug_name}{unique_suffix}')
         # Primary action button - more prominent
         if st.button('📖 Xem chi tiết', key=view_key, use_container_width=True, type='primary'):
-            # Navigate to dedicated drug detail page
+            # Show drug detail in master-detail layout (no page switch)
             # Ensure drug_name is a valid string and exists in database
             try:
                 drug_name_str = str(drug_name).strip()
@@ -132,9 +132,10 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
                     st.info(f"💡 Tên thuốc bạn đang tìm: **{drug_name_str}**")
                     return
                 
-                # Set session state and navigate
+                # Set session state and rerun to show detail in same page
                 st.session_state['view_drug_name'] = drug_name_str
-                st.switch_page("pages/_Drug_Detail.py")
+                st.session_state['selected_drug'] = drug_name_str  # Keep for backward compatibility
+                st.rerun()
             except Exception as e:
                 st.error(f"❌ Lỗi khi mở chi tiết thuốc: {str(e)}")
                 st.info("💡 Vui lòng thử lại hoặc liên hệ admin nếu lỗi tiếp tục xảy ra")

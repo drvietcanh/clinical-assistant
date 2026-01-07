@@ -156,10 +156,21 @@ st.markdown(
 )
 
 # ========== CRITICAL: Get and validate drug_name FIRST ==========
-# Get drug name from session state - MUST be at the very top to avoid NameError
+# Get drug name from session state or query params - MUST be at the very top to avoid NameError
 drug_name = None
 try:
-    drug_name = st.session_state.get('view_drug_name', None)
+    # Try to get from view_drug_name first (preferred), then fallback to selected_drug
+    drug_name = st.session_state.get('view_drug_name') or st.session_state.get('selected_drug')
+    
+    # Also check query params for backward compatibility
+    if not drug_name:
+        try:
+            query_params = st.query_params
+            if 'drug' in query_params:
+                drug_name = query_params['drug']
+        except:
+            pass
+    
     # Ensure it's a string and strip whitespace
     if drug_name:
         drug_name = str(drug_name).strip()
@@ -173,6 +184,14 @@ except Exception as e:
         icon="❌"
     )
     drug_name = None
+
+# If drug_name found, redirect to Drug_Database with master-detail layout
+if drug_name:
+    # Set session state and redirect to Drug_Database
+    st.session_state['view_drug_name'] = drug_name
+    st.session_state['selected_drug'] = drug_name
+    st.switch_page("pages/07_💊_Drug_Database.py")
+    st.stop()
 
 # Validate drug_name early - show error page if invalid
 if not drug_name:
@@ -207,7 +226,19 @@ if not drug_name:
     st.stop()
 
 # Validate drug exists in database
-if drug_name not in DRUG_DATABASE:
+# Try case-insensitive lookup first
+drug_name_normalized = drug_name
+drug_found = drug_name in DRUG_DATABASE
+
+# If not found, try case-insensitive search
+if not drug_found:
+    for db_drug_name in DRUG_DATABASE.keys():
+        if str(db_drug_name).lower() == str(drug_name).lower():
+            drug_name_normalized = db_drug_name
+            drug_found = True
+            break
+
+if not drug_found:
     from components.ui import render_hero
     render_hero(
         title=f"Không tìm thấy: {drug_name}",
@@ -236,6 +267,10 @@ if drug_name not in DRUG_DATABASE:
         if st.button("🏠 Về trang chủ", use_container_width=True):
             st.switch_page("Home")
     st.stop()
+
+# Use normalized drug name if found
+if drug_found:
+    drug_name = drug_name_normalized
 
 # Get drug data - drug_name is now validated
 drug_data = DRUG_DATABASE.get(drug_name)

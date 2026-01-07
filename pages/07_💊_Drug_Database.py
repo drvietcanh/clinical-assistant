@@ -130,7 +130,71 @@ with tab1:
     function_type_lower = function_type.lower()
 
     if "tra cứu thuốc" in function_type_lower:
-        render_drug_database()
+        # Master-Detail Layout: List on left, Detail on right
+        # Get selected drug from session state
+        selected_drug_name = st.session_state.get('view_drug_name') or st.session_state.get('selected_drug')
+        
+        # Add CSS for responsive layout
+        st.markdown("""
+        <style>
+        @media (max-width: 768px) {
+            /* Mobile: Stack columns vertically */
+            .drug-detail-column {
+                margin-top: 1rem;
+            }
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
+        # For desktop with drug selected, use 2-column layout
+        # For mobile or when no drug selected, use single column
+        if selected_drug_name:
+            # Two-column layout (desktop with drug selected)
+            col_list, col_detail = st.columns([3, 2])
+            
+            with col_list:
+                render_drug_database()
+            
+            with col_detail:
+                st.markdown("### 📖 Chi tiết thuốc")
+                try:
+                    from drugs.drug_database import DRUG_DATABASE
+                    from drugs.drug_info_components.detail_view import display_drug_info
+                    
+                    # Try case-insensitive lookup
+                    drug_found = selected_drug_name in DRUG_DATABASE
+                    drug_name_normalized = selected_drug_name
+                    
+                    if not drug_found:
+                        for db_drug_name in DRUG_DATABASE.keys():
+                            if str(db_drug_name).lower() == str(selected_drug_name).lower():
+                                drug_name_normalized = db_drug_name
+                                drug_found = True
+                                break
+                    
+                    if drug_found and drug_name_normalized in DRUG_DATABASE:
+                        drug_data = DRUG_DATABASE[drug_name_normalized]
+                        # Add clear button
+                        if st.button("❌ Đóng", key="close_drug_detail", use_container_width=True):
+                            if 'view_drug_name' in st.session_state:
+                                del st.session_state['view_drug_name']
+                            if 'selected_drug' in st.session_state:
+                                del st.session_state['selected_drug']
+                            st.rerun()
+                        display_drug_info(drug_name_normalized, drug_data, show_header=True)
+                    else:
+                        st.warning(f"Không tìm thấy thuốc: {selected_drug_name}")
+                        if st.button("🔙 Quay lại", key="back_from_detail", use_container_width=True):
+                            if 'view_drug_name' in st.session_state:
+                                del st.session_state['view_drug_name']
+                            if 'selected_drug' in st.session_state:
+                                del st.session_state['selected_drug']
+                            st.rerun()
+                except Exception as e:
+                    st.error(f"Lỗi hiển thị chi tiết: {str(e)}")
+        else:
+            # Single column layout when no drug selected
+            render_drug_database()
 
     elif "tính liều theo egfr" in function_type_lower or "crcl" in function_type_lower:
         render_dosing_calculator()

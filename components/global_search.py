@@ -259,7 +259,8 @@ def render_search_results(query: str, max_results_per_category: int = 5, show_lo
             with col2:
                 safe_name = str(drug_name).replace(' ', '_').replace('-', '_').replace('/', '_')
                 if st.button('📖 Xem', key=f'search_drug_{safe_name}', use_container_width=True):
-                    st.session_state['selected_drug'] = str(drug_name)
+                    st.session_state['view_drug_name'] = str(drug_name)
+                    st.session_state['selected_drug'] = str(drug_name)  # Keep for backward compatibility
                     st.session_state['show_detail'] = True
                     st.session_state['switch_to_drugs'] = True
                     st.rerun()
