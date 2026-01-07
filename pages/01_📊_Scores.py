@@ -107,165 +107,172 @@ with col_toggle2:
 
 st.markdown("---")
 
-# Render based on view mode
-if st.session_state.scores_view_mode == 'modern':
-    # Import modern view components
-    try:
-        from scores.ui_scores_view import (
-            render_calculator_card,
-            render_specialty_group,
-            render_quick_access_section,
-            is_daily_use
-        )
-        from scores.specialty_groups import get_all_groups
-        
-        # Modern View Layout
-        st.title("📊 Calculators & Scores")
-        st.markdown("**Clinical calculators và thang điểm lâm sàng**")
-        
-        # Enhanced Search
-        col_search1, col_search2 = st.columns([4, 1])
-        with col_search1:
-            global_search_query = render_search_with_autocomplete(
-                label="🔍 Tìm kiếm calculators",
-                placeholder="Nhập tên, viết tắt hoặc từ khóa...",
-                key="global_search_modern"
+# Main tabs: Scores and Labs
+main_tab1, main_tab2 = st.tabs(["📊 Clinical Scores", "🔬 Labs & Calculators"])
+
+# Render Scores content based on view mode (inside Scores tab)
+with main_tab1:
+    if st.session_state.scores_view_mode == 'modern':
+        # Import modern view components
+        try:
+            from scores.ui_scores_view import (
+                render_calculator_card,
+                render_specialty_group,
+                render_quick_access_section,
+                is_daily_use
             )
-        with col_search2:
-            st.markdown("<br>", unsafe_allow_html=True)
-            if st.button("🔄 Clear", use_container_width=True):
-                st.session_state.global_search_modern = ""
-                st.rerun()
-        
-        # Search results
-        global_results = []
-        if global_search_query:
-            global_results = global_search(global_search_query)
-            if global_results:
-                st.success(f"✅ Tìm thấy {len(global_results)} kết quả")
-                with st.expander(f"Kết quả tìm kiếm ({len(global_results)})", expanded=True):
-                    cols = st.columns(min(3, len(global_results[:9])))
-                    for idx, (spec, sid, sinfo) in enumerate(global_results[:9]):
-                        with cols[idx % 3]:
-                            if st.button(
-                                f"**{sinfo['name']}**\n\n{spec}",
-                                key=f"search_result_modern_{idx}",
-                                use_container_width=True
-                            ):
-                                st.session_state.selected_specialty = spec
-                                st.session_state.selected_score_id = sid
-                                if RECENT_TRACKING_AVAILABLE:
-                                    add_to_recent(spec, sid, sinfo['name'])
-                                st.rerun()
-        
-        st.markdown("---")
-        
-        # Main Content Tabs
-        tab1, tab2, tab3 = st.tabs(["📋 By Specialty Groups", "⭐ Quick Access", "🔍 All Calculators"])
-        
-        with tab1:
-            st.markdown("### Chọn nhóm chuyên khoa")
-            specialty_groups = get_all_groups()
-            for group_id, group_info in sorted(specialty_groups.items(), key=lambda x: x[1].get("priority", 99)):
-                render_specialty_group(group_id, group_info, SCORES_BY_SPECIALTY)
-        
-        with tab2:
-            render_quick_access_section()
-        
-        with tab3:
-            st.markdown("### Tất cả Calculators")
-            # Filters
-            col_filter1, col_filter2 = st.columns(2)
-            with col_filter1:
-                filter_status = st.multiselect(
-                    "Status:",
-                    ["✅", "🚧", "📋"],
-                    default=["✅"],
-                    key="filter_status_all_modern"
+            from scores.specialty_groups import get_all_groups
+            
+            # Modern View Layout
+            st.title("📊 Calculators & Scores")
+            st.markdown("**Clinical calculators và thang điểm lâm sàng**")
+            
+            # Enhanced Search
+            col_search1, col_search2 = st.columns([4, 1])
+            with col_search1:
+                global_search_query = render_search_with_autocomplete(
+                    label="🔍 Tìm kiếm calculators",
+                    placeholder="Nhập tên, viết tắt hoặc từ khóa...",
+                    key="global_search_modern"
                 )
-            with col_filter2:
-                filter_usage = st.multiselect(
-                    "Usage:",
-                    ["⭐ Daily Use", "🆕 New"],
-                    default=[],
-                    key="filter_usage_all_modern"
-                )
+            with col_search2:
+                st.markdown("<br>", unsafe_allow_html=True)
+                if st.button("🔄 Clear", use_container_width=True):
+                    st.session_state.global_search_modern = ""
+                    st.rerun()
             
-            # Get all calculators
-            all_calculators = get_all_scores_flat()
+            # Search results
+            global_results = []
+            if global_search_query:
+                global_results = global_search(global_search_query)
+                if global_results:
+                    st.success(f"✅ Tìm thấy {len(global_results)} kết quả")
+                    with st.expander(f"Kết quả tìm kiếm ({len(global_results)})", expanded=True):
+                        cols = st.columns(min(3, len(global_results[:9])))
+                        for idx, (spec, sid, sinfo) in enumerate(global_results[:9]):
+                            with cols[idx % 3]:
+                                if st.button(
+                                    f"**{sinfo['name']}**\n\n{spec}",
+                                    key=f"search_result_modern_{idx}",
+                                    use_container_width=True
+                                ):
+                                    st.session_state.selected_specialty = spec
+                                    st.session_state.selected_score_id = sid
+                                    if RECENT_TRACKING_AVAILABLE:
+                                        add_to_recent(spec, sid, sinfo['name'])
+                                    st.rerun()
             
-            # Apply filters
-            if filter_status:
-                all_calculators = [c for c in all_calculators if c["score_info"].get("status") in filter_status]
-            
-            if filter_usage:
-                filtered = []
-                for calc in all_calculators:
-                    if "⭐ Daily Use" in filter_usage and is_daily_use(calc["score_info"]):
-                        filtered.append(calc)
-                    elif "🆕 New" in filter_usage and ("🆕" in calc["score_info"].get("name", "") or "MỚI" in calc["score_info"].get("desc", "")):
-                        filtered.append(calc)
-                if filtered:
-                    all_calculators = filtered
-            
-            st.markdown(f"**Hiển thị {len(all_calculators)} calculators**")
-            
-            # Display in grid
-            num_cols = 3
-            for i in range(0, len(all_calculators), num_cols):
-                cols = st.columns(num_cols)
-                for j, col in enumerate(cols):
-                    if i + j < len(all_calculators):
-                        calc = all_calculators[i + j]
-                        with col:
-                            render_calculator_card(
-                                calc["score_id"],
-                                calc["score_info"],
-                                calc["specialty"],
-                                key_prefix=f"all_modern_{calc['score_id']}"
-                            )
-        
-        # Calculator Display for Modern View
-        selected_specialty = st.session_state.get("selected_specialty")
-        selected_score_id = st.session_state.get("selected_score_id")
-        
-        if selected_specialty and selected_score_id:
-            st.markdown("---")
             st.markdown("---")
             
-            # Track recent
-            if RECENT_TRACKING_AVAILABLE:
+            # Main Content Tabs
+            tab1, tab2, tab3 = st.tabs(["📋 By Specialty Groups", "⭐ Quick Access", "🔍 All Calculators"])
+            
+            with tab1:
+                st.markdown("### Chọn nhóm chuyên khoa")
+                specialty_groups = get_all_groups()
+                for group_id, group_info in sorted(specialty_groups.items(), key=lambda x: x[1].get("priority", 99)):
+                    render_specialty_group(group_id, group_info, SCORES_BY_SPECIALTY)
+            
+            with tab2:
+                render_quick_access_section()
+            
+            with tab3:
+                st.markdown("### Tất cả Calculators")
+                # Filters
+                col_filter1, col_filter2 = st.columns(2)
+                with col_filter1:
+                    filter_status = st.multiselect(
+                        "Status:",
+                        ["✅", "🚧", "📋"],
+                        default=["✅"],
+                        key="filter_status_all_modern"
+                    )
+                with col_filter2:
+                    filter_usage = st.multiselect(
+                        "Usage:",
+                        ["⭐ Daily Use", "🆕 New"],
+                        default=[],
+                        key="filter_usage_all_modern"
+                    )
+                
+                # Get all calculators
+                all_calculators = get_all_scores_flat()
+                
+                # Apply filters
+                if filter_status:
+                    all_calculators = [c for c in all_calculators if c["score_info"].get("status") in filter_status]
+                
+                if filter_usage:
+                    filtered = []
+                    for calc in all_calculators:
+                        if "⭐ Daily Use" in filter_usage and is_daily_use(calc["score_info"]):
+                            filtered.append(calc)
+                        elif "🆕 New" in filter_usage and ("🆕" in calc["score_info"].get("name", "") or "MỚI" in calc["score_info"].get("desc", "")):
+                            filtered.append(calc)
+                    if filtered:
+                        all_calculators = filtered
+                
+                st.markdown(f"**Hiển thị {len(all_calculators)} calculators**")
+                
+                # Display in grid
+                num_cols = 3
+                for i in range(0, len(all_calculators), num_cols):
+                    cols = st.columns(num_cols)
+                    for j, col in enumerate(cols):
+                        if i + j < len(all_calculators):
+                            calc = all_calculators[i + j]
+                            with col:
+                                render_calculator_card(
+                                    calc["score_id"],
+                                    calc["score_info"],
+                                    calc["specialty"],
+                                    key_prefix=f"all_modern_{calc['score_id']}"
+                                )
+            
+            # Calculator Display for Modern View
+            selected_specialty = st.session_state.get("selected_specialty")
+            selected_score_id = st.session_state.get("selected_score_id")
+            
+            if selected_specialty and selected_score_id:
+                st.markdown("---")
+                st.markdown("---")
+                
+                # Track recent
+                if RECENT_TRACKING_AVAILABLE:
+                    score_info = SCORES_BY_SPECIALTY[selected_specialty][selected_score_id]
+                    add_to_recent(selected_specialty, selected_score_id, score_info['name'])
+                
+                # Display calculator header
                 score_info = SCORES_BY_SPECIALTY[selected_specialty][selected_score_id]
-                add_to_recent(selected_specialty, selected_score_id, score_info['name'])
-            
-            # Display calculator header
-            score_info = SCORES_BY_SPECIALTY[selected_specialty][selected_score_id]
-            col_header1, col_header2 = st.columns([4, 1])
-            with col_header1:
-                st.markdown(f"""
-                <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                        <span style="background: #e8f0fe; color: #1967d2; padding: 4px 12px; border-radius: 16px; font-size: 0.8em; font-weight: 600;">{selected_specialty}</span>
-                        {'<span style="background: #e6fffa; color: #047481; padding: 4px 12px; border-radius: 16px; font-size: 0.8em; font-weight: 600;">⭐ Dùng hàng ngày</span>' if is_daily_use(score_info) else ''}
+                col_header1, col_header2 = st.columns([4, 1])
+                with col_header1:
+                    st.markdown(f"""
+                    <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <span style="background: #e8f0fe; color: #1967d2; padding: 4px 12px; border-radius: 16px; font-size: 0.8em; font-weight: 600;">{selected_specialty}</span>
+                            {'<span style="background: #e6fffa; color: #047481; padding: 4px 12px; border-radius: 16px; font-size: 0.8em; font-weight: 600;">⭐ Dùng hàng ngày</span>' if is_daily_use(score_info) else ''}
+                        </div>
+                        <h2 style="color: #1a73e8; margin: 0 0 10px 0; font-size: 1.5em;">{score_info['name']}</h2>
+                        <p style="color: #5f6368; margin: 0; line-height: 1.5;">{score_info.get('desc', '')}</p>
                     </div>
-                    <h2 style="color: #1a73e8; margin: 0 0 10px 0; font-size: 1.5em;">{score_info['name']}</h2>
-                    <p style="color: #5f6368; margin: 0; line-height: 1.5;">{score_info.get('desc', '')}</p>
-                </div>
-                """, unsafe_allow_html=True)
-            with col_header2:
-                render_favorite_button(selected_specialty, selected_score_id, score_info['name'], key_suffix="header_modern")
-            
-            # Route to calculator - will be handled at the end of file
-            st.session_state.modern_view_calculator_selected = True
-            st.session_state.modern_view_specialty = selected_specialty
-            st.session_state.modern_view_score_id = selected_score_id
-            
-    except ImportError as e:
-        st.error(f"Modern View components chưa sẵn sàng: {e}")
-        st.session_state.scores_view_mode = 'classic'
-        st.session_state.modern_view_calculator_selected = False
-else:
-    st.session_state.modern_view_calculator_selected = False
+                    """, unsafe_allow_html=True)
+                with col_header2:
+                    render_favorite_button(selected_specialty, selected_score_id, score_info['name'], key_suffix="header_modern")
+                
+                # Route to calculator - will be handled at the end of file
+                st.session_state.modern_view_calculator_selected = True
+                st.session_state.modern_view_specialty = selected_specialty
+                st.session_state.modern_view_score_id = selected_score_id
+                
+        except ImportError as e:
+            st.error(f"Modern View components chưa sẵn sàng: {e}")
+            st.session_state.scores_view_mode = 'classic'
+            st.session_state.modern_view_calculator_selected = False
+        else:
+            st.session_state.modern_view_calculator_selected = False
+    
+    # Classic View content (only render if not modern view)
+    if st.session_state.scores_view_mode != 'modern':
 
 # Initialize dark mode (runs for both views)
 init_theme()
@@ -292,8 +299,7 @@ with st.sidebar:
     with st.expander("Liên kết trong nhóm Calculators & Scores", expanded=False):
         col_a, col_b = st.columns(2)
         with col_a:
-            if st.button("🔬 Labs & Calculators", use_container_width=True):
-                st.switch_page("pages/05_🔬_Labs_and_Calculators.py")
+            st.info("🔬 Labs & Calculators đã tích hợp vào tab Labs")
         with col_b:
             if st.button("📊 TDM - Nồng độ thuốc", use_container_width=True):
                 st.switch_page("pages/08_📊_TDM.py")
@@ -485,15 +491,13 @@ with st.sidebar:
     st.caption(f"**{len([s for specialty_scores in SCORES_BY_SPECIALTY.values() for s in specialty_scores])}** calculators")
     st.caption("**Dựa trên bằng chứng**")
 
-# ========== MAIN CONTENT ==========
+        # Display specialty overview with enhanced UI
+        current_name = SCORES_BY_SPECIALTY[specialty][selected_score_id]['name'] if selected_score_id else "Chọn calculator bên trái"
+    current_desc = SCORES_BY_SPECIALTY[specialty][selected_score_id].get('desc', '') if selected_score_id else ""
 
-# Display specialty overview with enhanced UI
-current_name = SCORES_BY_SPECIALTY[specialty][selected_score_id]['name'] if selected_score_id else "Chọn calculator bên trái"
-current_desc = SCORES_BY_SPECIALTY[specialty][selected_score_id].get('desc', '') if selected_score_id else ""
-
-# Enhanced header with favorite button using Modern UI
-col_header1, col_header2 = st.columns([4, 1])
-with col_header1:
+    # Enhanced header with favorite button using Modern UI
+    col_header1, col_header2 = st.columns([4, 1])
+    with col_header1:
     if selected_score_id:
         st.markdown(f"""
         <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
@@ -516,14 +520,14 @@ with col_header1:
         </div>
         """, unsafe_allow_html=True)
 
-with col_header2:
-    if selected_score_id:
-        render_favorite_button(specialty, selected_score_id, current_name, key_suffix="header")
+    with col_header2:
+        if selected_score_id:
+            render_favorite_button(specialty, selected_score_id, current_name, key_suffix="header")
 
-# ========== ROUTE TO APPROPRIATE MODULE ==========
+    # ========== ROUTE TO APPROPRIATE MODULE ==========
 
-# Helper function to render calculator and related
-def render_calculator_with_related(specialty_name: str, score_id: str, render_func):
+    # Helper function to render calculator and related
+    def render_calculator_with_related(specialty_name: str, score_id: str, render_func):
     """Render calculator and show related calculators"""
     if score_id:
         # Track recent
@@ -540,112 +544,112 @@ def render_calculator_with_related(specialty_name: str, score_id: str, render_fu
             score_info = SCORES_BY_SPECIALTY[specialty_name][score_id]
             render_references(score_info)
             
-        # Show related calculators
-        render_related_calculators(specialty_name, score_id)
+            # Show related calculators
+            render_related_calculators(specialty_name, score_id)
 
-# Track recent when calculator is selected
-if selected_score_id and RECENT_TRACKING_AVAILABLE:
-    score_info = SCORES_BY_SPECIALTY[specialty][selected_score_id]
-    add_to_recent(specialty, selected_score_id, score_info['name'])
+    # Track recent when calculator is selected
+    if selected_score_id and RECENT_TRACKING_AVAILABLE:
+        score_info = SCORES_BY_SPECIALTY[specialty][selected_score_id]
+        add_to_recent(specialty, selected_score_id, score_info['name'])
 
-# Emergency & Critical Care
-if "Cấp cứu" in specialty:
-    if selected_score_id:
-        emergency.render_emergency_calculator(selected_score_id)
-        render_related_calculators(specialty, selected_score_id)
+    # Emergency & Critical Care
+    if "Cấp cứu" in specialty:
+        if selected_score_id:
+            emergency.render_emergency_calculator(selected_score_id)
+            render_related_calculators(specialty, selected_score_id)
 
-# Cardiology
-elif "Tim mạch" in specialty:
-    cardiology.render_cardiology_calculator(selected_score_id)
+    # Cardiology
+    elif "Tim mạch" in specialty:
+        cardiology.render_cardiology_calculator(selected_score_id)
 
-# Respiratory
-elif "Hô hấp" in specialty:
-    respiratory.render_respiratory_calculator(selected_score_id)
+    # Respiratory
+    elif "Hô hấp" in specialty:
+        respiratory.render_respiratory_calculator(selected_score_id)
 
-# Neurology
-elif "Thần kinh" in specialty:
-    neurology.render_neurology_calculator(selected_score_id)
+    # Neurology
+    elif "Thần kinh" in specialty:
+        neurology.render_neurology_calculator(selected_score_id)
 
-# GI/Hepatology
-elif "Tiêu Hóa" in specialty or "Gan" in specialty:
-    gi.render_gi_calculator(selected_score_id)
+    # GI/Hepatology
+    elif "Tiêu Hóa" in specialty or "Gan" in specialty:
+        gi.render_gi_calculator(selected_score_id)
 
-# Metabolism/Endocrinology
-elif "Nội tiết" in specialty or "Chuyển hóa" in specialty:
-    metabolism.render_metabolism_calculator(selected_score_id)
+    # Metabolism/Endocrinology
+    elif "Nội tiết" in specialty or "Chuyển hóa" in specialty:
+        metabolism.render_metabolism_calculator(selected_score_id)
 
-# Hematology
-elif "Huyết học" in specialty or "Đông máu" in specialty:
-    hematology.render_hematology_calculator(selected_score_id)
+    # Hematology
+    elif "Huyết học" in specialty or "Đông máu" in specialty:
+        hematology.render_hematology_calculator(selected_score_id)
 
-# Nephrology
-elif "Thận" in specialty or "Điện giải" in specialty:
-    nephrology.render_nephrology_calculator(selected_score_id)
+    # Nephrology
+    elif "Thận" in specialty or "Điện giải" in specialty:
+        nephrology.render_nephrology_calculator(selected_score_id)
 
-# Trauma
-elif "Chấn Thương" in specialty or "Chỉnh Hình" in specialty:
-    trauma.render_trauma_calculator(selected_score_id)
+    # Trauma
+    elif "Chấn Thương" in specialty or "Chỉnh Hình" in specialty:
+        trauma.render_trauma_calculator(selected_score_id)
 
-# Psychiatry
-elif "Tâm Thần" in specialty or "Tâm Lý" in specialty:
-    psychiatry.render_psychiatry_calculator(selected_score_id)
+    # Psychiatry
+    elif "Tâm Thần" in specialty or "Tâm Lý" in specialty:
+        psychiatry.render_psychiatry_calculator(selected_score_id)
 
-# Oncology
-elif "Ung thư" in specialty:
-    oncology.render_oncology_calculator(selected_score_id)
+    # Oncology
+    elif "Ung thư" in specialty:
+        oncology.render_oncology_calculator(selected_score_id)
 
-# Surgery
-elif "Phẫu Thuật" in specialty or "Gây Mê" in specialty:
-    surgery.render_surgery_calculator(selected_score_id)
+    # Surgery
+    elif "Phẫu Thuật" in specialty or "Gây Mê" in specialty:
+        surgery.render_surgery_calculator(selected_score_id)
 
-# Pediatrics
-elif "Nhi Khoa" in specialty:
-    pediatrics.render_pediatrics_calculator(selected_score_id)
+    # Pediatrics
+    elif "Nhi Khoa" in specialty:
+        pediatrics.render_pediatrics_calculator(selected_score_id)
 
-# Infectious Disease
-elif "Nhiễm khuẩn" in specialty:
-    infectious.render_infectious_calculator(selected_score_id)
+    # Infectious Disease
+    elif "Nhiễm khuẩn" in specialty:
+        infectious.render_infectious_calculator(selected_score_id)
 
-# ENT
-elif "Tai Mũi Họng" in specialty or "ENT" in specialty:
-    ent.render_ent_calculator(selected_score_id)
+    # ENT
+    elif "Tai Mũi Họng" in specialty or "ENT" in specialty:
+        ent.render_ent_calculator(selected_score_id)
 
-# Obstetrics
-elif "Sản khoa" in specialty or "Obstetrics" in specialty:
-    obstetrics.render_obstetrics_calculator(selected_score_id)
+    # Obstetrics
+    elif "Sản khoa" in specialty or "Obstetrics" in specialty:
+        obstetrics.render_obstetrics_calculator(selected_score_id)
 
-# Dermatology
-elif "Da Liễu" in specialty or "Dermatology" in specialty:
-    dermatology.render_dermatology_calculator(selected_score_id)
+    # Dermatology
+    elif "Da Liễu" in specialty or "Dermatology" in specialty:
+        dermatology.render_dermatology_calculator(selected_score_id)
 
-# Rheumatology
-elif "Thấp Khớp" in specialty or "Miễn Dịch" in specialty:
-    rheumatology.render_rheumatology_calculator(selected_score_id)
+    # Rheumatology
+    elif "Thấp Khớp" in specialty or "Miễn Dịch" in specialty:
+        rheumatology.render_rheumatology_calculator(selected_score_id)
 
-# Ophthalmology
-elif "Mắt" in specialty or "Ophthalmology" in specialty:
-    ophthalmology.render_ophthalmology_calculator(selected_score_id)
+    # Ophthalmology
+    elif "Mắt" in specialty or "Ophthalmology" in specialty:
+        ophthalmology.render_ophthalmology_calculator(selected_score_id)
 
-# Pain Assessment
-elif "Đánh giá đau" in specialty or "Pain" in specialty:
-    pain.render_pain_calculator(selected_score_id)
+    # Pain Assessment
+    elif "Đánh giá đau" in specialty or "Pain" in specialty:
+        pain.render_pain_calculator(selected_score_id)
 
-# Nursing Care
-elif "Chăm sóc điều dưỡng" in specialty or "Nursing" in specialty:
-    if selected_score_id:
-        nursing.render_nursing_calculator(selected_score_id)
-        render_related_calculators(specialty, selected_score_id)
+    # Nursing Care
+    elif "Chăm sóc điều dưỡng" in specialty or "Nursing" in specialty:
+        if selected_score_id:
+            nursing.render_nursing_calculator(selected_score_id)
+            render_related_calculators(specialty, selected_score_id)
 
-# Geriatrics
-elif "Lão khoa" in specialty or "Geriatrics" in specialty:
-    if selected_score_id and GERIATRICS_AVAILABLE:
-        geriatrics.render_geriatrics_calculator(selected_score_id)
-        render_related_calculators(specialty, selected_score_id)
+    # Geriatrics
+    elif "Lão khoa" in specialty or "Geriatrics" in specialty:
+        if selected_score_id and GERIATRICS_AVAILABLE:
+            geriatrics.render_geriatrics_calculator(selected_score_id)
+            render_related_calculators(specialty, selected_score_id)
 
-# Show related calculators for all rendered calculators
-if selected_score_id and specialty in SCORES_BY_SPECIALTY:
-    # Check if calculator was rendered (not in "Other specialties" case)
-    if (("Cấp cứu" in specialty) or ("Tim mạch" in specialty) or 
+    # Show related calculators for all rendered calculators
+    if selected_score_id and specialty in SCORES_BY_SPECIALTY:
+        # Check if calculator was rendered (not in "Other specialties" case)
+        if (("Cấp cứu" in specialty) or ("Tim mạch" in specialty) or 
         ("Hô hấp" in specialty) or ("Thần kinh" in specialty) or
         ("Tiêu Hóa" in specialty or "Gan" in specialty) or
         ("Nội tiết" in specialty or "Chuyển hóa" in specialty) or
@@ -663,37 +667,37 @@ if selected_score_id and specialty in SCORES_BY_SPECIALTY:
         ("Thấp Khớp" in specialty or "Miễn Dịch" in specialty) or
         ("Mắt" in specialty or "Ophthalmology" in specialty) or
         ("Đánh giá đau" in specialty or "Pain" in specialty) or
-        ("Chăm sóc điều dưỡng" in specialty or "Nursing" in specialty)):
-        # Related calculators already shown in individual sections above
-        pass
+            ("Chăm sóc điều dưỡng" in specialty or "Nursing" in specialty)):
+            # Related calculators already shown in individual sections above
+            pass
 
-# Other specialties - show placeholder for now
-else:
-    score_info = scores_in_specialty[selected_score_id]
-    st.subheader(f"📋 {score_info['name']}")
-    st.caption(score_info['desc'])
-    
-    if score_info['status'] == "✅":
-        st.success("✅ Đã hoàn thành - Đang trong module riêng")
-    elif score_info['status'] == "🚧":
-        st.warning("🚧 Đang phát triển - Sắp ra mắt")
+    # Other specialties - show placeholder for now
     else:
-        st.info("📋 Trong kế hoạch phát triển")
+        score_info = scores_in_specialty[selected_score_id]
+        st.subheader(f"📋 {score_info['name']}")
+        st.caption(score_info['desc'])
+        
+        if score_info['status'] == "✅":
+            st.success("✅ Đã hoàn thành - Đang trong module riêng")
+        elif score_info['status'] == "🚧":
+            st.warning("🚧 Đang phát triển - Sắp ra mắt")
+        else:
+            st.info("📋 Trong kế hoạch phát triển")
+        
+        st.markdown("---")
+        st.markdown(f"""
+        **Mô tả:** {score_info['desc']}
+        
+        Calculator này sẽ sớm được triển khai trong module chuyên khoa tương ứng.
+        """)
+        
+        # Show related calculators
+        if selected_score_id:
+            render_related_calculators(specialty, selected_score_id)
     
-    st.markdown("---")
-    st.markdown(f"""
-    **Mô tả:** {score_info['desc']}
-    
-    Calculator này sẽ sớm được triển khai trong module chuyên khoa tương ứng.
-    """)
-    
-    # Show related calculators
-    if selected_score_id:
-        render_related_calculators(specialty, selected_score_id)
-
-# ========== MODERN VIEW CALCULATOR ROUTING ==========
-# Handle calculator rendering for Modern View
-if st.session_state.get('modern_view_calculator_selected', False):
+    # ========== MODERN VIEW CALCULATOR ROUTING ==========
+    # Handle calculator rendering for Modern View
+    if st.session_state.get('modern_view_calculator_selected', False):
     modern_specialty = st.session_state.get('modern_view_specialty')
     modern_score_id = st.session_state.get('modern_view_score_id')
     
@@ -800,6 +804,174 @@ if st.session_state.get('modern_view_calculator_selected', False):
             if selected_score_id and GERIATRICS_AVAILABLE:
                 geriatrics.render_geriatrics_calculator(selected_score_id)
                 render_related_calculators(specialty, selected_score_id)
+    
+    # End of Classic View content in main_tab1
+
+# ========== LABS TAB CONTENT ==========
+with main_tab2:
+    # Import Labs functionality
+    try:
+        from labs import (
+            render_cbc,
+            render_bmp,
+            render_cmp,
+            render_lft,
+            render_lipid,
+            render_cardiac_markers,
+            render_coag,
+            render_thyroid,
+            render_abg,
+            render_trend_analysis,
+            render_panel_calculator
+        )
+        from scores.metabolism.bmi_ibw_bsa import render as render_bmi_ibw_bsa
+        from scores.metabolism.osmolality import render as render_osmolality
+        from scores.metabolism.anion_gap import render as render_anion_gap
+        from scores.metabolism.corrected_calcium import render as render_corrected_calcium
+        from scores.metabolism.fena import render as render_fena
+        from scores.metabolism.hba1c_eag import render as render_hba1c_eag
+        from scores.metabolism.winter_formula import render as render_winter_formula
+        from scores.metabolism.free_t4_index import render as render_free_t4_index
+        from scores.nephrology.egfr import render as render_egfr
+        
+        st.title("🔬 Labs & Calculators")
+        st.markdown("**Tra cứu giá trị xét nghiệm, giải thích kết quả và tính toán công thức lâm sàng**")
+        
+        # Sidebar for Labs
+        with st.sidebar:
+            st.markdown("---")
+            st.subheader("🔬 Labs & Calculators")
+            st.caption("Module **Xét nghiệm & Calculators** – đã tích hợp vào Scores.")
+            
+            category = st.radio(
+                "Loại công cụ:",
+                [
+                    "🧮 Calculators",
+                    "🔬 Lab Panels",
+                    "📈 Lab Enhancement",
+                    "🔄 Unit Converter"
+                ],
+                index=0,
+                key="labs_category"
+            )
+            
+            st.markdown("---")
+            
+            if category == "🧮 Calculators":
+                calculator_type = st.selectbox(
+                    "Calculator:",
+                    [
+                        "📏 BMI | IBW | BSA",
+                        "🧪 eGFR/GFR Calculator",
+                        "💧 Osmolality & Gap",
+                        "⚖️ Anion Gap",
+                        "🦴 Corrected Calcium",
+                        "🧪 FENa",
+                        "📊 HbA1c ↔ eAG",
+                        "🌡️ Winter Formula",
+                        "🔬 Free T4 Index",
+                        "💊 Lipid Panel Calculator"
+                    ],
+                    key="labs_calculator"
+                )
+            elif category == "🔬 Lab Panels":
+                lab_panel = st.selectbox(
+                    "Lab Panel:",
+                    [
+                        "🩸 CBC - Complete Blood Count",
+                        "🧪 BMP - Basic Metabolic Panel",
+                        "🧪 CMP - Comprehensive Metabolic Panel",
+                        "🫀 LFT - Liver Function Tests",
+                        "❤️ Cardiac Markers",
+                        "🩸 Coagulation Panel",
+                        "🦋 Thyroid Function Tests",
+                        "💨 ABG - Arterial Blood Gas"
+                    ],
+                    key="labs_panel"
+                )
+            elif category == "📈 Lab Enhancement":
+                enhancement_type = st.selectbox(
+                    "Tính năng:",
+                    [
+                        "📈 Lab Trend Analysis",
+                        "🧮 Lab Panel Calculator"
+                    ],
+                    key="labs_enhancement"
+                )
+        
+        # Main content routing
+        if category == "🧮 Calculators":
+            st.info(f"**Calculator:** {calculator_type}")
+            st.markdown("---")
+            
+            if "BMI" in calculator_type or "IBW" in calculator_type or "BSA" in calculator_type:
+                render_bmi_ibw_bsa()
+            elif "eGFR" in calculator_type or "GFR" in calculator_type:
+                render_egfr()
+            elif "Osmolality" in calculator_type:
+                render_osmolality()
+            elif "Anion Gap" in calculator_type:
+                render_anion_gap()
+            elif "Corrected" in calculator_type or "Calcium" in calculator_type:
+                render_corrected_calcium()
+            elif "FENa" in calculator_type:
+                render_fena()
+            elif "HbA1c" in calculator_type or "eAG" in calculator_type:
+                render_hba1c_eag()
+            elif "Winter" in calculator_type:
+                render_winter_formula()
+            elif "T4" in calculator_type or "Free" in calculator_type:
+                render_free_t4_index()
+            elif "Lipid" in calculator_type:
+                render_lipid()
+        
+        elif category == "🔬 Lab Panels":
+            st.info(f"**Lab Panel:** {lab_panel.split(' - ')[1] if ' - ' in lab_panel else lab_panel}")
+            st.markdown("---")
+            
+            if "CBC" in lab_panel:
+                render_cbc()
+            elif "BMP" in lab_panel and "CMP" not in lab_panel:
+                render_bmp()
+            elif "CMP" in lab_panel:
+                render_cmp()
+            elif "LFT" in lab_panel or "Liver" in lab_panel:
+                render_lft()
+            elif "Cardiac" in lab_panel:
+                render_cardiac_markers()
+            elif "Coag" in lab_panel:
+                render_coag()
+            elif "Thyroid" in lab_panel:
+                render_thyroid()
+            elif "ABG" in lab_panel:
+                render_abg()
+        
+        elif category == "📈 Lab Enhancement":
+            if "Trend Analysis" in enhancement_type:
+                render_trend_analysis()
+            elif "Panel Calculator" in enhancement_type:
+                render_panel_calculator()
+        
+        elif category == "🔄 Unit Converter":
+            try:
+                from components.unit_converter_enhanced import render_enhanced_unit_converter
+                render_enhanced_unit_converter()
+            except ImportError:
+                st.info("Unit Converter đang được phát triển")
+        
+        st.markdown("---")
+        st.warning("""
+        **⚠️ Lưu ý quan trọng về Lab:**
+        - Khoảng giá trị tham chiếu có thể khác nhau giữa các phòng xét nghiệm
+        - Luôn so sánh với khoảng giá trị của phòng xét nghiệm địa phương bạn
+        - Giá trị nguy kịch cần đối chiếu lâm sàng ngay lập tức
+        """)
+        
+    except ImportError as e:
+        st.error(f"Không thể tải module Labs: {e}")
+        st.info("Vui lòng kiểm tra module labs hoặc truy cập trang Labs riêng biệt.")
+        if st.button("Mở trang Labs riêng"):
+            st.switch_page("pages/05_🔬_Labs_and_Calculators.py")
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)

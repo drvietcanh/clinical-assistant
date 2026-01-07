@@ -33,7 +33,7 @@ class NavigationCategory:
 
 # Navigation structure with 6 main categories (optimized)
 # Organized by clinical workflow for easier access
-# Reduced from 23+ top-level pages to 7 main pages + 11 sub-items
+# Reduced from 26+ top-level pages to 6 main pages with integrated sub-modules via tabs
 NAVIGATION_CATEGORIES = {
     "home_search": NavigationCategory(
         id="home_search",
@@ -49,7 +49,7 @@ NAVIGATION_CATEGORIES = {
         id="drugs_dosing",
         title="💊 Thuốc & Liều dùng",
         icon="💊",
-        description="Drug database with sub-modules: antibiotics, pill identifier, TDM",
+        description="Drug database with integrated tabs: antibiotics, pill identifier, TDM",
         module_ids=["drug_database", "antibiotics", "pill_identifier", "tdm"],
         color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
         border="#4caf50",
@@ -59,7 +59,7 @@ NAVIGATION_CATEGORIES = {
         id="calculators_scores",
         title="📊 Tính toán & Thang điểm",
         icon="📊",
-        description="Clinical scores, calculators, and lab tools",
+        description="Clinical scores, calculators, and lab tools (merged)",
         module_ids=["scores", "labs"],
         color="linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)",
         border="#1976d2",
@@ -69,7 +69,7 @@ NAVIGATION_CATEGORIES = {
         id="critical_care_protocols",
         title="🫁 Hồi sức & Phác đồ",
         icon="🫁",
-        description="Critical care with sub-modules: ventilator, protocols, guidelines, medical news",
+        description="Critical care with integrated tabs: ventilator, protocols, guidelines, medical news",
         module_ids=["critical_care", "ventilator", "protocols", "guidelines_tracker", "medical_news"],
         color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
         border="#ff6f00",
@@ -79,7 +79,7 @@ NAVIGATION_CATEGORIES = {
         id="diagnosis_reference",
         title="🩺 Chẩn đoán & Tham khảo",
         icon="🩺",
-        description="Differential diagnosis with sub-modules: disease encyclopedia, ICD-10, articles, patient education",
+        description="Differential diagnosis with integrated tabs: disease encyclopedia, ICD-10, articles, patient education",
         module_ids=["diagnosis", "disease_encyclopedia", "icd10_lookup", "in_depth_articles", "patient_education"],
         color="linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%)",
         border="#f44336",
@@ -89,7 +89,7 @@ NAVIGATION_CATEGORIES = {
         id="support_tools",
         title="🧭 Hỗ trợ & Công cụ",
         icon="🧭",
-        description="Decision support with sub-modules: AI assistant, vaccination, settings, analytics",
+        description="Decision support with integrated tabs: AI assistant, vaccination, settings, analytics",
         module_ids=["phase2_features", "ai_assistant", "vaccination", "settings", "analytics"],
         color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
         border="#0288d1",
@@ -99,26 +99,30 @@ NAVIGATION_CATEGORIES = {
 
 # Sub-item mappings (which items are sub-items of main items)
 # Format: {sub_item_id: parent_item_id}
-# Organized to reduce top-level menu items from 23+ to 7 main pages
+# Organized to reduce top-level menu items from 26+ to 6 main pages with tabs
+# Sub-items are now integrated as tabs within main pages, but kept here for navigation
 NAVIGATION_SUB_ITEMS = {
-    # Drugs & Dosing: 3 sub-items under drug_database
+    # Drugs & Dosing: 3 sub-items under drug_database (integrated as tabs)
     "antibiotics": "drug_database",
     "pill_identifier": "drug_database",
     "tdm": "drug_database",
     
-    # Critical Care & Protocols: 4 sub-items under critical_care
+    # Calculators & Scores: labs merged into scores (integrated as tabs)
+    "labs": "scores",
+    
+    # Critical Care & Protocols: 4 sub-items under critical_care (integrated as tabs)
     "ventilator": "critical_care",
     "protocols": "critical_care",
     "guidelines_tracker": "critical_care",
     "medical_news": "critical_care",
     
-    # Diagnosis & Reference: 4 sub-items under diagnosis
+    # Diagnosis & Reference: 4 sub-items under diagnosis (integrated as tabs)
     "disease_encyclopedia": "diagnosis",
     "icd10_lookup": "diagnosis",
     "in_depth_articles": "diagnosis",
     "patient_education": "diagnosis",
     
-    # Support & Tools: 4 sub-items under phase2_features
+    # Support & Tools: 4 sub-items under phase2_features (integrated as tabs)
     "ai_assistant": "phase2_features",
     "vaccination": "phase2_features",
     "settings": "phase2_features",

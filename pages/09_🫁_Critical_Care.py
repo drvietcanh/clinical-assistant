@@ -138,16 +138,31 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
-# Route to appropriate calculator
-if "Dashboard" in tool_type:
-    render_critical_care_dashboard()
+# Main tabs for organizing sub-modules
+main_tabs = st.tabs([
+    "🫁 Critical Care Tools",
+    "🫁 Ventilator",
+    "📋 Protocols",
+    "📋 Guidelines",
+    "📰 Medical News"
+])
+
+# Tab 1: Critical Care Tools (Dashboard, Scoring, etc.)
+with main_tabs[0]:
+    # Route to appropriate calculator
+    if "Dashboard" in tool_type:
+        render_critical_care_dashboard()
     
 elif "Scoring" in tool_type:
     render_scoring_calculator()
     
-elif "Ventilator Management" in tool_type:
-    st.header("🫁 Ventilator Management")
-    st.caption("Công cụ quản lý máy thở cho ICU")
+    elif "Ventilator Management" in tool_type:
+        st.header("🫁 Ventilator Management")
+        st.caption("Công cụ quản lý máy thở cho ICU")
+        st.info("💡 **Lưu ý:** Ventilator tools đã được tổ chức trong tab 'Ventilator' phía trên.")
+        if st.button("Mở tab Ventilator", use_container_width=True):
+            st.session_state['critical_care_open_ventilator_tab'] = True
+            st.rerun()
     
     # Check if specific tool should be opened
     vent_tool_to_open = st.session_state.get('ventilator_tool_to_open', None)
@@ -367,8 +382,108 @@ elif "Transfusion" in tool_type:
 elif "Sedation" in tool_type or "Analgesia" in tool_type:
     render_sedation_calculator()
 
-elif "Drug Infusion" in tool_type or "DIRC" in tool_type:
-    render_dirc_calculator()
+    elif "Drug Infusion" in tool_type or "DIRC" in tool_type:
+        render_dirc_calculator()
+
+# Tab 2: Ventilator (integrated from Ventilator page)
+with main_tabs[1]:
+    st.header("🫁 Ventilator Management")
+    st.caption("Công cụ quản lý máy thở cho ICU")
+    
+    # Check if should open from redirect
+    if st.session_state.get('critical_care_open_ventilator', False):
+        st.session_state['critical_care_open_ventilator'] = False
+    
+    # Check if specific tool should be opened
+    vent_tool_to_open = st.session_state.get('ventilator_tool_to_open', None)
+    default_vent_tab = 0
+    default_sub_tab = 0
+    is_rsbi = False
+    
+    if vent_tool_to_open:
+        if vent_tool_to_open == 'rsbi':
+            default_vent_tab = 0
+            default_sub_tab = 4
+            is_rsbi = True
+        elif vent_tool_to_open in ['weaning', 'sbt']:
+            default_vent_tab = 3
+        elif vent_tool_to_open == 'peep_fio2':
+            default_vent_tab = 2
+            default_sub_tab = 2
+        if 'ventilator_tool_to_open' in st.session_state:
+            del st.session_state['ventilator_tool_to_open']
+    
+    # Sub-menu for ventilator tools
+    if VENTILATOR_ADVANCED_AVAILABLE:
+        vent_tab_labels = [
+            "🚀 Quick Tools",
+            "🫁 Comprehensive Analysis",
+            "📊 Protocols & Settings",
+            "🔄 Weaning & Extubation"
+        ]
+        if default_vent_tab is not None and 0 <= default_vent_tab < len(vent_tab_labels):
+            vent_tabs = st.tabs(vent_tab_labels, selected=default_vent_tab)
+        else:
+            vent_tabs = st.tabs(vent_tab_labels)
+        
+        with vent_tabs[0]:
+            st.markdown("### 🚀 Quick Tools")
+            quick_tools_tabs = st.tabs([
+                "📏 IBW", "💨 Tidal Volume", "📊 PEEP",
+                "📈 Plateau Pressure", "🔄 RSBI (Quick)"
+            ], selected=default_sub_tab if is_rsbi else None)
+            with quick_tools_tabs[0]:
+                render_ibw_calculator()
+            with quick_tools_tabs[1]:
+                render_tidal_volume_calculator()
+            with quick_tools_tabs[2]:
+                render_peep_calculator()
+            with quick_tools_tabs[3]:
+                render_plateau_pressure_calculator()
+            with quick_tools_tabs[4]:
+                render_weaning_calculator_basic()
+        
+        with vent_tabs[1]:
+            st.markdown("### 🫁 Comprehensive Analysis")
+            render_comprehensive_calculator()
+        
+        with vent_tabs[2]:
+            st.markdown("### 📊 Protocols & Settings")
+            protocol_tabs = st.tabs([
+                "🫁 ARDSNet Protocol",
+                "⚙️ Initial Settings",
+                "📊 PEEP/FiO2 Table"
+            ], selected=default_sub_tab if default_vent_tab == 2 else None)
+            with protocol_tabs[0]:
+                render_ardsnet()
+            with protocol_tabs[1]:
+                render_initial_settings()
+            with protocol_tabs[2]:
+                render_peep_fio2_table()
+        
+        with vent_tabs[3]:
+            st.markdown("### 🔄 Weaning & Extubation")
+            render_weaning_calculator_advanced()
+    else:
+        render_ventilator_calculator()
+
+# Tab 3: Protocols
+with main_tabs[2]:
+    st.info("📋 **Protocols** - Đang tích hợp. Vui lòng sử dụng sidebar để truy cập.")
+    if st.button("Mở trang Protocols", use_container_width=True):
+        st.switch_page("pages/04_📋_Protocols.py")
+
+# Tab 4: Guidelines
+with main_tabs[3]:
+    st.info("📋 **Guidelines Tracker** - Đang tích hợp. Vui lòng sử dụng sidebar để truy cập.")
+    if st.button("Mở Guidelines Tracker", use_container_width=True):
+        st.switch_page("pages/15_📋_Guidelines_Tracker.py")
+
+# Tab 5: Medical News
+with main_tabs[4]:
+    st.info("📰 **Medical News** - Đang tích hợp. Vui lòng sử dụng sidebar để truy cập.")
+    if st.button("Mở Medical News", use_container_width=True):
+        st.switch_page("pages/10_📰_Medical_News.py")
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)

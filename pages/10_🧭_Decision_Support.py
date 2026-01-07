@@ -83,8 +83,19 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
-if selected_feature == feature_options[0]:
-    st.header("🔄 Flowcharts quyết định lâm sàng")
+# Main tabs for organizing sub-modules
+main_tabs = st.tabs([
+    "🧭 Decision Support",
+    "🤖 AI Assistant",
+    "💉 Vaccination",
+    "⚙️ Settings",
+    "📈 Analytics"
+])
+
+# Tab 1: Decision Support (Flowcharts, Pregnancy/Lactation, Pediatric Dosing)
+with main_tabs[0]:
+    if selected_feature == feature_options[0]:
+        st.header("🔄 Flowcharts quyết định lâm sàng")
     st.caption("Flowcharts tương tác cho các clinical decision rules quan trọng")
     
     # Algorithm selector
@@ -508,31 +519,55 @@ if selected_feature == feature_options[0]:
                 - **AACE/ACE Consensus Statement** on Type 1 Diabetes Management
                 """)
 
-elif selected_feature == feature_options[1]:
-    st.header("🤰 An toàn thai kỳ & cho con bú")
-    st.caption("Thông tin an toàn thai kỳ và cho con bú cho thuốc")
-    
-    # Drug search
-    from drugs.pregnancy_lactation_safety import PREGNANCY_SAFETY, LACTATION_SAFETY
-    
-    all_drugs = sorted(set(list(PREGNANCY_SAFETY.keys()) + list(LACTATION_SAFETY.keys())))
-    
-    selected_drug = st.selectbox(
-        "Chọn thuốc:",
-        all_drugs,
-        key="pregnancy_drug_selector"
-    )
-    
-    if selected_drug:
-        render_pregnancy_lactation_section(selected_drug)
-    
-    # Add new drug form
-    st.markdown("---")
-    with st.expander("➕ Thêm thuốc mới (Admin)"):
-        st.info("💡 Tính năng này sẽ được mở rộng để thêm thuốc mới vào database.")
+    elif selected_feature == feature_options[1]:
+        st.header("🤰 An toàn thai kỳ & cho con bú")
+        st.caption("Thông tin an toàn thai kỳ và cho con bú cho thuốc")
+        
+        # Drug search
+        from drugs.pregnancy_lactation_safety import PREGNANCY_SAFETY, LACTATION_SAFETY
+        
+        all_drugs = sorted(set(list(PREGNANCY_SAFETY.keys()) + list(LACTATION_SAFETY.keys())))
+        
+        selected_drug = st.selectbox(
+            "Chọn thuốc:",
+            all_drugs,
+            key="pregnancy_drug_selector"
+        )
+        
+        if selected_drug:
+            render_pregnancy_lactation_section(selected_drug)
+        
+        # Add new drug form
+        st.markdown("---")
+        with st.expander("➕ Thêm thuốc mới (Admin)"):
+            st.info("💡 Tính năng này sẽ được mở rộng để thêm thuốc mới vào database.")
 
-elif selected_feature == feature_options[2]:
-    render_pediatric_dosing_calculator()
+    elif selected_feature == feature_options[2]:
+        render_pediatric_dosing_calculator()
+
+# Tab 2: AI Assistant
+with main_tabs[1]:
+    st.info("🤖 **AI Assistant** - Đang tích hợp.")
+    if st.button("Mở AI Assistant", use_container_width=True):
+        st.switch_page("pages/09_🤖_AI_Assistant.py")
+
+# Tab 3: Vaccination
+with main_tabs[2]:
+    st.info("💉 **Vaccination** - Đang tích hợp.")
+    if st.button("Mở Vaccination", use_container_width=True):
+        st.switch_page("pages/11_💉_Vaccination.py")
+
+# Tab 4: Settings
+with main_tabs[3]:
+    st.info("⚙️ **Settings** - Đang tích hợp.")
+    if st.button("Mở Settings", use_container_width=True):
+        st.switch_page("pages/23_⚙️_Settings.py")
+
+# Tab 5: Analytics
+with main_tabs[4]:
+    st.info("📈 **Analytics** - Đang tích hợp.")
+    if st.button("Mở Analytics", use_container_width=True):
+        st.switch_page("pages/24_📈_Analytics.py")
 
 # Footer
 render_standard_footer()

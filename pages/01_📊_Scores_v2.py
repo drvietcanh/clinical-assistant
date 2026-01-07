@@ -1,43 +1,16 @@
 """
-Scores Module - Clinical Scoring Systems
-Modern UI Version with Specialty Groups and Calculator Cards
+Scores v2 - Redirect to Scores
+This page has been merged into Scores.py with Modern View option
+Keeping for backward compatibility - redirects to Scores with Modern View enabled
 """
 
 import streamlit as st
-from utils.page_helper import setup_page, render_standard_footer
-from components.ui import render_info_box, render_hero
 
-from scores.config import SCORES_BY_SPECIALTY
-from scores.specialty_groups import get_all_groups, get_specialties_in_group
-from scores.ui_scores_view import (
-    render_calculator_card,
-    render_specialty_group,
-    render_quick_access_section,
-    render_filters_sidebar,
-    filter_calculators,
-    is_daily_use
-)
+# Set session state to enable Modern View
+st.session_state['scores_view_mode'] = 'modern'
 
-# Import all specialty modules
-from scores import cardiology, emergency, respiratory, neurology, gi, metabolism, hematology, nephrology, trauma, psychiatry, oncology, surgery, pediatrics, infectious, ent, obstetrics, dermatology, rheumatology, ophthalmology, pain, nursing
-
-# Import Geriatrics module
-try:
-    from scores import geriatrics
-    GERIATRICS_AVAILABLE = True
-except ImportError:
-    GERIATRICS_AVAILABLE = False
-
-from components.scores_favorites import (
-    render_favorites_section_in_sidebar,
-    render_favorite_button,
-    is_favorite
-)
-from components.scores_dark_mode import init_theme, render_theme_toggle
-from components.scores_autocomplete import render_search_with_autocomplete, add_to_recent_searches
-from components.scores_related import render_related_calculators
-from components.scores_mobile import init_mobile_optimizations
-from components.scores_references import render_references
+# Redirect to the unified Scores page
+st.switch_page("pages/01_📊_Scores.py")
 
 # ========== HELPER FUNCTIONS ==========
 

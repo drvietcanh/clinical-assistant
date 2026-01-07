@@ -1,11 +1,16 @@
 """
-Labs & Calculators Module - Combined
-Main Router - Lab panels, reference ranges, and clinical calculators
+Labs & Calculators Module - Redirect to Scores
+This page has been merged into Scores.py with tabs
+Keeping for backward compatibility - redirects to Scores with Labs tab open
 """
 
 import streamlit as st
-from utils.page_helper import setup_page, render_standard_footer
-from components.ui import render_info_box, render_hero
+
+# Set session state to open Labs tab
+st.session_state['scores_open_labs_tab'] = True
+
+# Redirect to the unified Scores page
+st.switch_page("pages/01_📊_Scores.py")
 
 # Import lab panels
 from labs import (

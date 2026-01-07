@@ -45,8 +45,42 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
-# Render DDx interface
-render_ddx_interface()
+# Main tabs for organizing sub-modules
+main_tabs = st.tabs([
+    "🩺 Differential Diagnosis",
+    "📖 Disease Encyclopedia",
+    "🏷️ ICD-10 Lookup",
+    "📚 In-Depth Articles",
+    "👥 Patient Education"
+])
+
+# Tab 1: Differential Diagnosis
+with main_tabs[0]:
+    render_ddx_interface()
+
+# Tab 2: Disease Encyclopedia
+with main_tabs[1]:
+    st.info("📖 **Disease Encyclopedia** - Đang tích hợp.")
+    if st.button("Mở Disease Encyclopedia", use_container_width=True):
+        st.switch_page("pages/16_📖_Disease_Encyclopedia.py")
+
+# Tab 3: ICD-10 Lookup
+with main_tabs[2]:
+    st.info("🏷️ **ICD-10 Lookup** - Đang tích hợp.")
+    if st.button("Mở ICD-10 Lookup", use_container_width=True):
+        st.switch_page("pages/13_🏷️_ICD10_Lookup.py")
+
+# Tab 4: In-Depth Articles
+with main_tabs[3]:
+    st.info("📚 **In-Depth Articles** - Đang tích hợp.")
+    if st.button("Mở In-Depth Articles", use_container_width=True):
+        st.switch_page("pages/12_📚_In_Depth_Articles.py")
+
+# Tab 5: Patient Education
+with main_tabs[4]:
+    st.info("👥 **Patient Education** - Đang tích hợp.")
+    if st.button("Mở Patient Education", use_container_width=True):
+        st.switch_page("pages/19_👥_Patient_Education.py")
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=True)

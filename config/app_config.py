@@ -58,7 +58,7 @@ APP_CONFIG = {
             title="Kháng sinh (chuyên sâu)",
             icon="💊",
             page_path="pages/02_💊_Antibiotics.py",
-            description="So sánh & phác đồ điều trị kháng sinh",
+            description="So sánh & phác đồ điều trị kháng sinh (Integrated as tab in Drug Database)",
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
         ),
@@ -67,7 +67,7 @@ APP_CONFIG = {
             title="Thở máy",
             icon="🫁",
             page_path="pages/03_🫁_Ventilator.py",
-            description="Đã tích hợp vào Critical Care - Redirect",
+            description="Đã tích hợp vào Critical Care với tabs - Redirect",
             color="linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)",
             border="#e91e63"
         ),
@@ -76,7 +76,7 @@ APP_CONFIG = {
             title="Phác đồ điều trị",
             icon="📋",
             page_path="pages/04_📋_Protocols.py",
-            description="5 protocols, Evidence-based",
+            description="5 protocols, Evidence-based (Integrated as tab in Critical Care)",
             color="linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)",
             border="#9c27b0"
         ),
@@ -85,7 +85,7 @@ APP_CONFIG = {
             title="Xét nghiệm & Calculators",
             icon="🔬",
             page_path="pages/05_🔬_Labs_and_Calculators.py",
-            description="9 panels + Calculators, Integrated workflow",
+            description="9 panels + Calculators, Integrated workflow (Merged into Scores page)",
             color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
             border="#ff9800"
         ),
@@ -112,7 +112,7 @@ APP_CONFIG = {
             title="TDM - Theo dõi nồng độ",
             icon="📊",
             page_path="pages/08_📊_TDM.py",
-            description="Tính toán và theo dõi nồng độ thuốc (5 thuốc)",
+            description="Tính toán và theo dõi nồng độ thuốc (5 thuốc) (Integrated as tab in Drug Database)",
             color="linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%)",
             border="#7b1fa2"
         ),
@@ -139,7 +139,7 @@ APP_CONFIG = {
             title="Tiêm chủng và Vắc xin",
             icon="💉",
             page_path="pages/11_💉_Vaccination.py",
-            description="Lịch tiêm, giá cả, phác đồ tiêm các loại vắc xin tại Việt Nam",
+            description="Lịch tiêm, giá cả, phác đồ tiêm các loại vắc xin tại Việt Nam (Integrated as tab in Decision Support)",
             color="linear-gradient(135deg, #fff9c4 0%, #fff59d 100%)",
             border="#fbc02d"
         ),
@@ -148,7 +148,7 @@ APP_CONFIG = {
             title="Bài viết chuyên sâu",
             icon="📚",
             page_path="pages/12_📚_In_Depth_Articles.py",
-            description="Bài viết chuyên sâu theo guideline, phân tích điều trị",
+            description="Bài viết chuyên sâu theo guideline, phân tích điều trị (Integrated as tab in Diagnosis)",
             color="linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)",
             border="#1e88e5"
         ),
@@ -157,7 +157,7 @@ APP_CONFIG = {
             title="Tra cứu mã ICD-10",
             icon="🏷️",
             page_path="pages/13_🏷️_ICD10_Lookup.py",
-            description="Tra cứu mã ICD-10 theo tên bệnh, mã code, hoặc chuyên khoa",
+            description="Tra cứu mã ICD-10 theo tên bệnh, mã code, hoặc chuyên khoa (Integrated as tab in Diagnosis)",
             color="linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%)",
             border="#689f38"
         ),
@@ -166,7 +166,7 @@ APP_CONFIG = {
             title="Guidelines",
             icon="📋",
             page_path="pages/15_📋_Guidelines_Tracker.py",
-            description="Theo dõi, xem và tìm kiếm guidelines từ AHA/ACC, ESC, IDSA, KDIGO, GOLD, GINA",
+            description="Theo dõi, xem và tìm kiếm guidelines từ AHA/ACC, ESC, IDSA, KDIGO, GOLD, GINA (Integrated as tab in Critical Care)",
             color="linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)",
             border="#9c27b0"
         ),
@@ -175,7 +175,7 @@ APP_CONFIG = {
             title="Bách khoa Bệnh lý",
             icon="📖",
             page_path="pages/16_📖_Disease_Encyclopedia.py",
-            description="Thông tin toàn diện về các bệnh lý phổ biến: định nghĩa, nguyên nhân, triệu chứng, chẩn đoán, điều trị",
+            description="Thông tin toàn diện về các bệnh lý phổ biến: định nghĩa, nguyên nhân, triệu chứng, chẩn đoán, điều trị (Integrated as tab in Diagnosis)",
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
         ),
@@ -184,7 +184,7 @@ APP_CONFIG = {
             title="Giáo dục Bệnh nhân",
             icon="👥",
             page_path="pages/19_👥_Patient_Education.py",
-            description="Tài liệu giáo dục bệnh nhân với ngôn ngữ đơn giản, dễ hiểu, có thể in",
+            description="Tài liệu giáo dục bệnh nhân với ngôn ngữ đơn giản, dễ hiểu, có thể in (Integrated as tab in Diagnosis)",
             color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
             border="#0288d1"
         ),
@@ -193,7 +193,7 @@ APP_CONFIG = {
             title="Nhận diện Thuốc",
             icon="💊",
             page_path="pages/21_💊_Pill_Identifier.py",
-            description="Nhận diện thuốc qua đặc điểm vật lý: màu sắc, hình dạng, ký hiệu, kích thước",
+            description="Nhận diện thuốc qua đặc điểm vật lý: màu sắc, hình dạng, ký hiệu, kích thước (Integrated as tab in Drug Database)",
             color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
             border="#4caf50"
         ),
@@ -211,7 +211,7 @@ APP_CONFIG = {
             title="Trợ lý AI",
             icon="🤖",
             page_path="pages/09_🤖_AI_Assistant.py",
-            description="Hỏi đáp về thuốc và phác đồ điều trị với AI Assistant",
+            description="Hỏi đáp về thuốc và phác đồ điều trị với AI Assistant (Integrated as tab in Decision Support)",
             color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
             border="#0288d1"
         ),
@@ -220,7 +220,7 @@ APP_CONFIG = {
             title="Tin tức Y khoa",
             icon="📰",
             page_path="pages/10_📰_Medical_News.py",
-            description="Cập nhật hướng dẫn điều trị và tin tức y tế mới nhất",
+            description="Cập nhật hướng dẫn điều trị và tin tức y tế mới nhất (Integrated as tab in Critical Care)",
             color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
             border="#ff6f00"
         ),
@@ -239,7 +239,7 @@ APP_CONFIG = {
             title="Cài đặt",
             icon="⚙️",
             page_path="pages/23_⚙️_Settings.py",
-            description="Cài đặt và tùy chỉnh Clinical Assistant",
+            description="Cài đặt và tùy chỉnh Clinical Assistant (Integrated as tab in Decision Support)",
             color="linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)",
             border="#757575"
         ),
@@ -248,7 +248,7 @@ APP_CONFIG = {
             title="Phân tích",
             icon="📈",
             page_path="pages/24_📈_Analytics.py",
-            description="Usage statistics and insights",
+            description="Usage statistics and insights (Integrated as tab in Decision Support)",
             color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
             border="#0288d1"
         ),
