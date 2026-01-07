@@ -1110,20 +1110,29 @@ with st.sidebar:
 
 # Compact Hero
 render_hero(
-    title="Clinical Guidelines Tracker",
-    subtitle="📋 Theo dõi hướng dẫn lâm sàng",
+    title="Clinical Guidelines",
+    subtitle="📋 Theo dõi, xem và tìm kiếm hướng dẫn lâm sàng",
     description="Theo dõi và cập nhật các hướng dẫn thực hành lâm sàng từ các tổ chức uy tín",
     icon="📋",
     gradient=("#667eea", "#764ba2")
 )
 
-# Sticky Search Bar
-search_query = render_sticky_search_bar()
+# Tabs for different views
+tab_tracker, tab_viewer, tab_news = st.tabs(["📋 Tracker", "📖 Viewer", "📰 News"])
 
-# Quick Filters
-render_quick_filters()
+# Clear redirect flag if set
+if st.session_state.get('guidelines_open_viewer_tab', False):
+    st.session_state['guidelines_open_viewer_tab'] = False
 
-st.markdown("---")
+# ========== TAB 1: TRACKER ==========
+with tab_tracker:
+    # Sticky Search Bar
+    search_query = render_sticky_search_bar()
+
+    # Quick Filters
+    render_quick_filters()
+
+    st.markdown("---")
 
 # Initialize filter variables
 category_filter = None
@@ -1408,23 +1417,121 @@ else:  # Tìm kiếm
     else:
         st.info("💡 Nhập từ khóa vào thanh tìm kiếm phía trên để bắt đầu")
 
-# Additional information
-st.markdown("---")
-st.markdown("### 📚 Thông tin về Guidelines")
-st.markdown("""
-**Các tổ chức guidelines chính:**
+    # Additional information
+    st.markdown("---")
+    st.markdown("### 📚 Thông tin về Guidelines")
+    st.markdown("""
+    **Các tổ chức guidelines chính:**
 
-1. **AHA/ACC** - American Heart Association / American College of Cardiology
-2. **ESC** - European Society of Cardiology
-3. **IDSA** - Infectious Diseases Society of America
-4. **KDIGO** - Kidney Disease: Improving Global Outcomes
-5. **GOLD** - Global Initiative for Chronic Obstructive Lung Disease
-6. **GINA** - Global Initiative for Asthma
-7. **SSC** - Surviving Sepsis Campaign
-8. **ADA** - American Diabetes Association
+    1. **AHA/ACC** - American Heart Association / American College of Cardiology
+    2. **ESC** - European Society of Cardiology
+    3. **IDSA** - Infectious Diseases Society of America
+    4. **KDIGO** - Kidney Disease: Improving Global Outcomes
+    5. **GOLD** - Global Initiative for Chronic Obstructive Lung Disease
+    6. **GINA** - Global Initiative for Asthma
+    7. **SSC** - Surviving Sepsis Campaign
+    8. **ADA** - American Diabetes Association
 
-**Lưu ý:** Guidelines được cập nhật thường xuyên. Luôn tham khảo phiên bản mới nhất từ website chính thức.
-""")
+    **Lưu ý:** Guidelines được cập nhật thường xuyên. Luôn tham khảo phiên bản mới nhất từ website chính thức.
+    """)
+
+# ========== TAB 2: VIEWER ==========
+with tab_viewer:
+    # Import viewer components
+    try:
+        from components.guideline_viewer import (
+            render_guideline_viewer,
+            render_guideline_filters,
+            render_guideline_search_bar,
+            render_guideline_statistics
+        )
+        from components.decision_tree import render_guideline_decision_tree
+        
+        # Initialize session state for viewer
+        if 'guideline_viewer_show_details' not in st.session_state:
+            st.session_state.guideline_viewer_show_details = False
+        
+        # Statistics Section
+        render_guideline_statistics()
+        
+        st.markdown("---")
+        
+        # Filters - Use sidebar filters
+        try:
+            filters = render_guideline_filters()
+        except Exception as e:
+            # Fallback to default filters if sidebar filters fail
+            st.warning(f"Không thể load filters từ sidebar: {e}")
+            filters = {
+                "category": st.session_state.get("guideline_category_filter", "All"),
+                "organization": st.session_state.get("guideline_organization_filter", "All"),
+                "year_min": st.session_state.get("guideline_year_min"),
+                "year_max": st.session_state.get("guideline_year_max"),
+                "high_impact_only": st.session_state.get("guideline_high_impact", False)
+            }
+        
+        st.markdown("---")
+        
+        # Search Bar
+        viewer_search_query = render_guideline_search_bar()
+        
+        st.markdown("---")
+        
+        # Main Content: Guideline Viewer
+        render_guideline_viewer(
+            search_query=viewer_search_query,
+            category_filter=filters.get("category", "All"),
+            organization_filter=filters.get("organization", "All"),
+            year_min=filters.get("year_min"),
+            year_max=filters.get("year_max"),
+            show_details=st.session_state.guideline_viewer_show_details
+        )
+        
+        st.markdown("---")
+        
+        # Decision Trees Section
+        st.markdown("### 🌳 Clinical Decision Trees")
+        st.info("💡 Decision trees sẽ được hiển thị khi xem chi tiết guideline có sẵn decision tree.")
+        
+        # Example: Show decision tree for heart failure guidelines
+        example_guideline_id = "acc_aha_heart_failure_2022"
+        if st.checkbox("Hiển thị ví dụ Decision Tree (Heart Failure)", key="show_example_tree"):
+            render_guideline_decision_tree(example_guideline_id)
+            
+    except ImportError as e:
+        st.error(f"Lỗi import viewer components: {e}")
+        st.info("💡 Vui lòng kiểm tra lại các components cần thiết.")
+
+# ========== TAB 3: NEWS ==========
+with tab_news:
+    # Medical News (integrated from Medical News page)
+    st.markdown("### 📰 Tin tức Y khoa")
+    st.caption("Cập nhật từ Bộ Y Tế, WHO và các tổ chức uy tín")
+    
+    try:
+        from components.news_logic import get_medical_news
+        
+        with st.spinner("Đang tải tin tức..."):
+            news_data = get_medical_news()
+        
+        if news_data:
+            for item in news_data[:10]:  # Show top 10
+                with st.expander(f"📰 {item.get('title', 'Không có tiêu đề')}"):
+                    st.markdown(f"**Nguồn:** {item.get('source', 'N/A')}")
+                    st.markdown(f"**Ngày:** {item.get('date', 'N/A')}")
+                    st.markdown(item.get('summary', 'Không có tóm tắt'))
+                    if item.get('link'):
+                        st.markdown(f"[Đọc thêm →]({item['link']})")
+        else:
+            st.info("Không có tin tức mới.")
+    except ImportError:
+        st.warning("Component news_logic không khả dụng.")
+        if st.button("Mở Medical News", use_container_width=True):
+            st.switch_page("pages/10_📰_Medical_News.py")
+    except Exception as e:
+        st.error(f"Lỗi tải tin tức: {e}")
+        if st.button("Mở Medical News", use_container_width=True):
+            st.switch_page("pages/10_📰_Medical_News.py")
 
 # Footer
 render_standard_footer(disclaimer=True)

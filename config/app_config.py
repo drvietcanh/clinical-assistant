@@ -165,7 +165,7 @@ APP_CONFIG = {
             id="guidelines_tracker",
             title="Guidelines",
             icon="📋",
-            page_path="pages/15_📋_Guidelines.py",
+            page_path="pages/15_📋_Guidelines_Tracker.py",
             description="Theo dõi, xem và tìm kiếm guidelines từ AHA/ACC, ESC, IDSA, KDIGO, GOLD, GINA",
             color="linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)",
             border="#9c27b0"
@@ -224,15 +224,16 @@ APP_CONFIG = {
             color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
             border="#ff6f00"
         ),
-        "guideline_viewer": ModuleInfo(
-            id="guideline_viewer",
-            title="Xem Guidelines",
-            icon="📖",
-            page_path="pages/18_📖_Guideline_Viewer.py",
-            description="Xem và tìm kiếm clinical guidelines với decision trees",
-            color="linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)",
-            border="#9c27b0"
-        ),
+        # guideline_viewer merged into guidelines_tracker - kept for backward compatibility
+        # "guideline_viewer": ModuleInfo(
+        #     id="guideline_viewer",
+        #     title="Xem Guidelines",
+        #     icon="📖",
+        #     page_path="pages/18_📖_Guideline_Viewer.py",
+        #     description="Xem và tìm kiếm clinical guidelines với decision trees",
+        #     color="linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)",
+        #     border="#9c27b0"
+        # ),
         "settings": ModuleInfo(
             id="settings",
             title="Cài đặt",

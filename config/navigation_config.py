@@ -33,6 +33,7 @@ class NavigationCategory:
 
 # Navigation structure with 6 main categories (optimized)
 # Organized by clinical workflow for easier access
+# Reduced from 23+ top-level pages to 7 main pages + 11 sub-items
 NAVIGATION_CATEGORIES = {
     "home_search": NavigationCategory(
         id="home_search",
@@ -48,7 +49,7 @@ NAVIGATION_CATEGORIES = {
         id="drugs_dosing",
         title="💊 Thuốc & Liều dùng",
         icon="💊",
-        description="Drug database, antibiotics, pill identifier, TDM",
+        description="Drug database with sub-modules: antibiotics, pill identifier, TDM",
         module_ids=["drug_database", "antibiotics", "pill_identifier", "tdm"],
         color="linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
         border="#4caf50",
@@ -68,8 +69,8 @@ NAVIGATION_CATEGORIES = {
         id="critical_care_protocols",
         title="🫁 Hồi sức & Phác đồ",
         icon="🫁",
-        description="Critical care, protocols, guidelines, and medical news",
-        module_ids=["critical_care", "ventilator", "protocols", "guidelines_tracker", "guideline_viewer", "medical_news"],
+        description="Critical care with sub-modules: ventilator, protocols, guidelines, medical news",
+        module_ids=["critical_care", "ventilator", "protocols", "guidelines_tracker", "medical_news"],
         color="linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)",
         border="#ff6f00",
         default_expanded=False
@@ -78,7 +79,7 @@ NAVIGATION_CATEGORIES = {
         id="diagnosis_reference",
         title="🩺 Chẩn đoán & Tham khảo",
         icon="🩺",
-        description="Differential diagnosis, disease encyclopedia, ICD-10, articles, patient education",
+        description="Differential diagnosis with sub-modules: disease encyclopedia, ICD-10, articles, patient education",
         module_ids=["diagnosis", "disease_encyclopedia", "icd10_lookup", "in_depth_articles", "patient_education"],
         color="linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%)",
         border="#f44336",
@@ -88,7 +89,7 @@ NAVIGATION_CATEGORIES = {
         id="support_tools",
         title="🧭 Hỗ trợ & Công cụ",
         icon="🧭",
-        description="Decision support, AI assistant, vaccination, settings, analytics",
+        description="Decision support with sub-modules: AI assistant, vaccination, settings, analytics",
         module_ids=["phase2_features", "ai_assistant", "vaccination", "settings", "analytics"],
         color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
         border="#0288d1",
@@ -98,13 +99,30 @@ NAVIGATION_CATEGORIES = {
 
 # Sub-item mappings (which items are sub-items of main items)
 # Format: {sub_item_id: parent_item_id}
+# Organized to reduce top-level menu items from 23+ to 7 main pages
 NAVIGATION_SUB_ITEMS = {
+    # Drugs & Dosing: 3 sub-items under drug_database
     "antibiotics": "drug_database",
     "pill_identifier": "drug_database",
     "tdm": "drug_database",
+    
+    # Critical Care & Protocols: 4 sub-items under critical_care
     "ventilator": "critical_care",
-    "guideline_viewer": "guidelines_tracker",
-    "medical_news": "guidelines_tracker",
+    "protocols": "critical_care",
+    "guidelines_tracker": "critical_care",
+    "medical_news": "critical_care",
+    
+    # Diagnosis & Reference: 4 sub-items under diagnosis
+    "disease_encyclopedia": "diagnosis",
+    "icd10_lookup": "diagnosis",
+    "in_depth_articles": "diagnosis",
+    "patient_education": "diagnosis",
+    
+    # Support & Tools: 4 sub-items under phase2_features
+    "ai_assistant": "phase2_features",
+    "vaccination": "phase2_features",
+    "settings": "phase2_features",
+    "analytics": "phase2_features",
 }
 
 
