@@ -125,27 +125,27 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
 with tab1:
     # Main Drug Database functionality
-# Route to appropriate function
-# Use case-insensitive matching to avoid Unicode case issues
-function_type_lower = function_type.lower()
+    # Route to appropriate function
+    # Use case-insensitive matching to avoid Unicode case issues
+    function_type_lower = function_type.lower()
 
-if "tra cứu thuốc" in function_type_lower:
-    render_drug_database()
+    if "tra cứu thuốc" in function_type_lower:
+        render_drug_database()
 
-elif "tính liều theo egfr" in function_type_lower or "crcl" in function_type_lower:
-    render_dosing_calculator()
+    elif "tính liều theo egfr" in function_type_lower or "crcl" in function_type_lower:
+        render_dosing_calculator()
 
-elif "so sánh thuốc trực quan" in function_type_lower:
-    render_visual_comparison()
+    elif "so sánh thuốc trực quan" in function_type_lower:
+        render_visual_comparison()
 
-elif "lịch trình liều dùng" in function_type_lower:
-    render_dosing_schedule_generator()
+    elif "lịch trình liều dùng" in function_type_lower:
+        render_dosing_schedule_generator()
 
-elif "tương thích iv" in function_type_lower:
-    render_iv_compatibility_checker()
+    elif "tương thích iv" in function_type_lower:
+        render_iv_compatibility_checker()
 
-elif "tương tác" in function_type_lower:
-    render_interaction_checker()
+    elif "tương tác" in function_type_lower:
+        render_interaction_checker()
 
 with tab2:
     # Antibiotics sub-module
