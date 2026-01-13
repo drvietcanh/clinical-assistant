@@ -359,6 +359,30 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "has_article": False,
         "priority": 8
     },
+    "acute_pulmonary_edema": {
+        "keywords": ["Phù Phổi Cấp", "Acute Pulmonary Edema", "acute pulmonary edema", "phù phổi cấp"],
+        "render": render_acute_pulmonary_edema,
+        "has_article": False,
+        "priority": 8
+    },
+    "tca_overdose": {
+        "keywords": ["Ngộ Độc TCA", "TCA Overdose", "Tricyclic Antidepressant", "tca overdose", "ngộ độc tca"],
+        "render": render_tca_overdose,
+        "has_article": False,
+        "priority": 8
+    },
+    "digoxin_toxicity": {
+        "keywords": ["Ngộ Độc Digoxin", "Digoxin Toxicity", "digoxin toxicity", "ngộ độc digoxin"],
+        "render": render_digoxin_toxicity,
+        "has_article": False,
+        "priority": 8
+    },
+    "severe_hypoglycemia": {
+        "keywords": ["Hạ Đường Huyết Cấp Cứu", "Severe Hypoglycemia", "severe hypoglycemia", "hạ đường huyết cấp cứu"],
+        "render": render_severe_hypoglycemia,
+        "has_article": False,
+        "priority": 8
+    },
     "chest_trauma": {
         "keywords": ["Chấn thương ngực", "Chest Trauma", "chest trauma", "chấn thương ngực"],
         "render": render_chest_trauma,
@@ -558,42 +582,49 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "keywords": ["Thiếu Máu Trong CKD", "KDIGO 2026", "thiếu máu", "anemia", "CKD anemia"],
         "render": render_ckd_anemia,
         "has_article": True,
+        "article_function": "render_ckd_anemia",
         "priority": 8
     },
     "resistant_hypertension_ckd": {
         "keywords": ["Tăng Huyết Áp Kháng Trị", "resistant hypertension", "CKD", "tăng huyết áp kháng trị"],
         "render": render_resistant_hypertension_ckd,
         "has_article": True,
+        "article_function": "render_resistant_hypertension_ckd",
         "priority": 8
     },
     "blood_pressure_ckd": {
         "keywords": ["Quản Lý Huyết Áp Trong CKD", "Blood Pressure", "KDIGO 2021", "huyết áp trong CKD"],
         "render": render_blood_pressure_ckd,
         "has_article": True,
+        "article_function": "render_blood_pressure_ckd",
         "priority": 8
     },
     "iga_nephropathy": {
         "keywords": ["IgA Nephropathy", "IgAN", "Bệnh thận IgA", "KDIGO 2021", "glomerulonephritis"],
         "render": render_iga_nephropathy,
         "has_article": True,
+        "article_function": "render_iga_nephropathy",
         "priority": 8
     },
     "lupus_nephritis": {
         "keywords": ["Lupus Nephritis", "viêm thận lupus", "SLE nephritis", "KDIGO 2021", "lupus nephritis"],
         "render": render_lupus_nephritis,
         "has_article": True,
+        "article_function": "render_lupus_nephritis",
         "priority": 8
     },
     "anca_vasculitis": {
         "keywords": ["ANCA vasculitis", "viêm mạch ANCA", "GPA", "MPA", "EGPA", "KDIGO 2021", "ANCA"],
         "render": render_anca_vasculitis,
         "has_article": True,
+        "article_function": "render_anca_vasculitis",
         "priority": 8
     },
     "heart_failure_ckd": {
         "keywords": ["Suy Tim Trong CKD", "Heart Failure CKD", "cardiorenal", "KDIGO 2025", "suy tim CKD"],
         "render": render_heart_failure_ckd,
         "has_article": True,
+        "article_function": "render_heart_failure_ckd",
         "priority": 9
     },
     "diabetic_nephropathy": {
@@ -945,6 +976,7 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "keywords": ["Gout", "gout"],
         "render": render_acute_gout,
         "has_article": True,
+        "article_function": "render_acute_gout",
         "priority": 8
     },
     "ra_flare": {
