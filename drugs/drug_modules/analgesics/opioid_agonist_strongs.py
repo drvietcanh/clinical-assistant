@@ -854,28 +854,34 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
             "evidence_level": "High - FDA-approved, extensive clinical data",
         },
     },
-    "Morphine": {'group': 'Analgesic - Opioid Agonist (Strong)', 'vietnamese_name':
-        'Morphine', 'administration': ['PO', 'IV', 'IM', 'SC'], 'indications':
+    "Morphine": {'group': 'Analgesic - Opioid Agonist (Strong)',
+        'vietnamese_name':
+        'Morphine', 'administration': ['PO', 'IV', 'IM', 'SC'],
+        'indications':
         ['Đau nặng (ung thư, sau phẫu thuật)', 'Đau cấp tính nặng',
         'Đau mạn tính nặng', 'Khó thở do suy tim', 'Cơn đau do hồi sức'],
         'contraindications': ['Ngộ độc cấp tính rượu, thuốc an thần, opioid',
         'Suy hô hấp nặng', 'Hen phế quản nặng', 'Tắc ruột cơ học',
-        'Tăng áp lực nội sọ', 'Suy gan nặng'], 'dosage': {'adult_po_immediate':
+        'Tăng áp lực nội sọ', 'Suy gan nặng'],
+        'dosage': {'adult_po_immediate':
         '10-30mg mỗi 4 giờ khi cần', 'adult_po_extended':
         '15-30mg x 2 lần/ngày (MS Contin)', 'adult_iv':
         '2.5-5mg IV mỗi 3-4 giờ hoặc 0.8-10mg/giờ truyền liên tục',
         'adult_im_sc': '5-15mg mỗi 4 giờ', 'elderly': 'Giảm liều 25-50%',
         'notes': 'Thuốc chuẩn vàng cho đau nặng. Theo dõi hô hấp chặt chẽ'},
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Giảm liều 25-50%',
-        'under_30': 'Giảm liều 50-75%, tăng khoảng cách liều'}, 'side_effects':
+        'under_30': 'Giảm liều 50-75%, tăng khoảng cách liều'},
+        'side_effects':
         ['Ức chế hô hấp (nguy hiểm)', 'Buồn nôn, nôn',
         'Táo bón (rất thường gặp)', 'Ngứa', 'Buồn ngủ, lú lẫn',
         'Co đồng tử (miosis)', 'Hạ huyết áp', 'Ức chế tiết ADH (SIADH)',
-        'Nguy cơ nghiện, lệ thuộc'], 'interactions': [
+        'Nguy cơ nghiện, lệ thuộc'],
+        'interactions': [
         'Thuốc an thần/Benzodiazepine: tăng nguy cơ ức chế hô hấp',
         'MAO inhibitor: nguy hiểm - tránh dùng',
         'Rượu: tăng nguy cơ ức chế hô hấp', 'Cimetidine: tăng nồng độ morphine'
-        ], 'pregnancy':
+        ],
+        'pregnancy':
         'C - D trong 3 tháng cuối (gây hội chứng cai ở trẻ sơ sinh)',
         'mechanism_of_action':
         'Opioid mu-receptor agonist mạnh. Gắn với mu-opioid receptors trong hệ thần kinh trung ương và ngoại vi, kích hoạt tín hiệu G-protein, dẫn đến giảm dẫn truyền đau, giảm nhận thức đau, an thần, và ức chế hô hấp. Tăng ngưỡng đau, giảm đáp ứng cảm xúc với đau. Tác động lên brainstem → giảm trung tâm hô hấp. Tác động lên đường tiêu hóa → giảm nhu động ruột, tăng trương lực cơ thắt.'
@@ -928,13 +934,15 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
         }, {'drug': 'Phenothiazine, haloperidol', 'mechanism':
         'Tăng ức chế hệ thần kinh trung ương', 'effect':
         'Tăng nguy cơ ức chế hô hấp, hạ huyết áp', 'management':
-        'Thận trọng. Giảm liều morphine, theo dõi hô hấp'}], 'minor': []},
+        'Thận trọng. Giảm liều morphine, theo dõi hô hấp'}],
+        'minor': []},
         'contraindications': {'tuyệt_đối': ['Dị ứng morphine hoặc opioid',
         'Ngộ độc cấp tính rượu, thuốc an thần, opioid',
         'Suy hô hấp nặng hoặc suy hô hấp cấp tính',
         'Hen phế quản nặng không kiểm soát', 'Tắc ruột cơ học',
         'Tăng áp lực nội sọ (do tăng CO2)',
-        'Dùng MAO inhibitor trong vòng 14 ngày'], 'tương_đối': [
+        'Dùng MAO inhibitor trong vòng 14 ngày'],
+        'tương_đối': [
         'Suy thận nặng (CrCl <30) - giảm liều 50-75%, tăng khoảng cách liều (tích lũy morphine-6-glucuronide)'
         , 'Suy gan nặng - giảm liều 25-50% (giảm chuyển hóa)',
         'Người cao tuổi - giảm liều 25-50% (tăng nhạy cảm)',
@@ -949,48 +957,59 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
         'Morphine bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ tương đương khoảng 0.8-3% liều mẹ. Có thể gây ức chế hô hấp và buồn ngủ ở trẻ bú mẹ, đặc biệt ở trẻ sơ sinh.'
         , 'recommendation':
         'Thận trọng khi cho con bú. Nếu dùng, theo dõi trẻ sát (dấu hiệu ức chế hô hấp, buồn ngủ, bú kém). Tránh dùng liều cao hoặc kéo dài. Dùng liều thấp nhất hiệu quả.'
-        }}, 'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
+        }},
+        'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
         'Giảm liều 25-50%', 'severe': 'Giảm liều 50% hoặc tránh dùng', 'notes':
         'Morphine chuyển hóa ở gan qua glucuronidation thành morphine-6-glucuronide (active, mạnh hơn morphine) và morphine-3-glucuronide (inactive). Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Ức chế hô hấp nặng (thở chậm <12 lần/phút, ngừng thở)',
         'Giảm ý thức, hôn mê', 'Co đồng tử (miosis) - dấu hiệu đặc trưng',
         'Hạ huyết áp', 'Nhịp tim chậm', 'Táo bón nặng',
-        'Co giật (hiếm, ở trẻ em hoặc liều rất cao)'], 'antidote':
+        'Co giật (hiếm, ở trẻ em hoặc liều rất cao)'],
+        'antidote':
         'Naloxone (opioid antagonist) - đảo ngược tác dụng opioid', 'treatment':
         ['Đảm bảo đường thở, hỗ trợ hô hấp (thở máy nếu cần) - QUAN TRỌNG NHẤT',
         'Naloxone: 0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg)',
         'Nếu không có IV: 0.4-2mg IM/SC, có thể lặp lại',
         'Nếu quá liều nặng: có thể cần truyền naloxone liên tục (0.4-0.8mg/giờ) do half-life ngắn (1 giờ) so với morphine (2-4 giờ)'
-        ,
         'Theo dõi hô hấp liên tục ít nhất 24 giờ (do half-life dài của morphine-6-glucuronide)'
         , 'Hỗ trợ huyết động: truyền dịch, vasopressor nếu hạ huyết áp',
         'Than hoạt tính nếu uống trong vòng 1-2 giờ (nhưng cần cẩn thận về nguy cơ hôn mê)'
-        , 'Theo dõi ECG, huyết áp, nhịp tim liên tục'], 'monitoring':
+        , 'Theo dõi ECG, huyết áp, nhịp tim liên tục'],
+        'monitoring':
         'Nhịp thở, SpO2, ý thức, ECG, huyết áp, nhịp tim liên tục. Theo dõi ít nhất 24 giờ do half-life dài của active metabolite morphine-6-glucuronide'
-        }, 'reversal_agents': {'available': True, 'agents': [{'name':
+        },
+        'reversal_agents': {'available': True, 'agents': [{'name':
         'Naloxone', 'indication':
         'Đảo ngược tác dụng opioid (ức chế hô hấp, giảm ý thức, hạ huyết áp)',
         'dose':
         '0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg). IM/SC: 0.4-2mg nếu không có IV. Truyền liên tục: 0.4-0.8mg/giờ nếu quá liều nặng'
         , 'notes':
         'Naloxone có half-life ngắn (1 giờ) so với morphine (2-4 giờ) và morphine-6-glucuronide (dài hơn). Có thể cần truyền liên tục hoặc lặp lại liều để tránh tái phát ức chế hô hấp.'
-        }]}, 'administration_instructions': {'oral': {'with_food':
+        }]},
+        'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn. Uống với thức ăn có thể giảm buồn nôn'
         , 'timing':
         'Mỗi 4 giờ khi cần (immediate release) hoặc 2 lần/ngày (extended release MS Contin)'
-        }, 'iv': {'reconstitution':
+        },
+        'iv': {'reconstitution':
         'Pha với 50-100ml NS hoặc D5W cho truyền liên tục. Hoặc tiêm trực tiếp IV',
         'infusion_rate':
         'Tiêm IV chậm trong 2-5 phút. Truyền liên tục: 0.8-10mg/giờ (tùy liều)',
-        'compatibility': ['NS', 'D5W', "Ringer's Lactate"], 'incompatibility':
-        ['Alkaline solutions'], 'notes':
+        'compatibility': ['NS', 'D5W', "Ringer's Lactate"],
+        'incompatibility':
+        ['Alkaline solutions'],
+        'notes':
         'Theo dõi hô hấp chặt chẽ khi dùng IV. Cần có naloxone sẵn sàng. Khởi đầu với liều thấp, tăng dần.'
-        }, 'im': {'notes':
+        },
+        'im': {'notes':
         'Tiêm bắp sâu. Có thể gây đau tại chỗ tiêm. Tác dụng bắt đầu 15-30 phút.'
-        }, 'sc': {'notes':
+        },
+        'sc': {'notes':
         'Tiêm dưới da. Có thể gây kích ứng tại chỗ. Tác dụng bắt đầu 15-30 phút.'
-        }},         'references': {'primary_sources': [
+        }},
+        'references': {'primary_sources': [
         'FDA Drug Label - Morphine sulfate',
         'UpToDate - Morphine: Drug information',
         'Lexicomp - Morphine monograph',
@@ -1003,12 +1022,11 @@ OPIOID_AGONIST_STRONGS_DRUGS = {
             'narrow_therapeutic_index': False,
             'bleeding_risk': False,
             'organ_toxicity': ['Respiratory depression (life-threatening)', 'Accumulation of active metabolite (morphine-6-glucuronide) in renal failure'],
-            'qt_prolongation': False,
+        'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Respiratory rate and SpO2 - CRITICAL', 'Level of consciousness', 'Blood pressure', 'Renal function (CrCl) - accumulation risk']
-        },
-        'guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Black Box Warning - Opioid Addiction and Respiratory Depression',
             'ISMP High Alert Medications - Opioids',
             'WHO Guidelines - Cancer Pain Management',

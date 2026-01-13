@@ -6,6 +6,7 @@ Active module - contains all analgesic drug data"""
 OPIOID_AGONIST_WEAKS_DRUGS = {
     "Codeine": {
         'group': 'Analgesic - Opioid Agonist (Weak)',
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Tránh trong thai kỳ nếu có thể",
         'vietnamese_name': 'Codeine',
         'administration': ['PO'],
         'indications': [
@@ -70,11 +71,14 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
             'Trẻ em <12 tuổi: không dùng cho ho (nguy cơ ức chế hô hấp)',
             'Trẻ em <18 tuổi sau cắt amidan/VA: chống chỉ định (nguy cơ ức chế hô hấp nghiêm trọng)'
         ],
-        'onset': '30-60 phút',
-        'duration': '4-6 giờ',
-        'protein_binding': '7-25%',
-        'metabolism': 'Gan: chuyển hóa qua CYP2D6 thành morphine (10% codeine → morphine), CYP3A4 thành norcodeine (không hoạt động)',
-        'clearance': 'Chủ yếu qua thận (thải trừ)',
+        'pharmacokinetics': {
+            'half_life': '2.5-3 giờ',
+            'onset': '30-60 phút',
+            'duration': '4-6 giờ',
+            'protein_binding': '7-25%',
+            'metabolism': 'Gan: chuyển hóa qua CYP2D6 thành morphine (10% codeine → morphine), CYP3A4 thành norcodeine (không hoạt động)',
+            'clearance': 'Chủ yếu qua thận (thải trừ)'
+        },
         'storage': 'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Để xa tầm tay trẻ em (nguy cơ quá liều).',
         'black_box_warnings': 'Nguy cơ nghiện, lạm dụng, và lệ thuộc - chỉ dùng khi thực sự cần thiết. Nguy cơ ức chế hô hấp nặng có thể dẫn đến tử vong, đặc biệt ở ultra-rapid metabolizers (tạo nhiều morphine) hoặc khi dùng với benzodiazepine/rượu. Trẻ em <12 tuổi: không dùng cho ho. Trẻ em <18 tuổi sau cắt amidan/VA: chống chỉ định (nguy cơ ức chế hô hấp nghiêm trọng, có thể tử vong).',
         'drug_interactions': {
@@ -86,7 +90,7 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
                     'management': 'TRÁNH DÙNG ĐỒNG THỜI. Nếu phải dùng, giảm liều codeine, theo dõi hô hấp liên tục, có naloxone sẵn sàng'
                 }
             ],
-            'moderate': [
+        'moderate': [
                 {
                     'drug': 'CYP2D6 inhibitors (quinidine, fluoxetine, paroxetine)',
                     'mechanism': 'Ức chế CYP2D6, giảm chuyển hóa codeine thành morphine',
@@ -106,7 +110,7 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
                     'management': 'Thận trọng. Ngừng MAOI ít nhất 14 ngày trước khi dùng codeine'
                 }
             ],
-            'minor': []
+        'minor': []
         },
         'contraindications': {
             'tuyệt_đối': [
@@ -118,7 +122,7 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
                 'Trẻ em <12 tuổi (khi dùng cho ho)',
                 'Trẻ em <18 tuổi sau cắt amidan/VA (chống chỉ định tuyệt đối)'
             ],
-            'tương_đối': [
+        'tương_đối': [
                 'Suy thận nặng (CrCl <30) - tránh dùng hoặc giảm liều 50%',
                 'Suy gan nặng - giảm liều (giảm chuyển hóa)',
                 'Người cao tuổi - giảm liều (tăng nhạy cảm)',
@@ -153,7 +157,7 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
                 'Táo bón nặng',
                 'Co giật (hiếm, ở trẻ em hoặc liều rất cao)'
             ],
-            'antidote': 'Naloxone (opioid antagonist) - đảo ngược tác dụng opioid',
+        'antidote': 'Naloxone (opioid antagonist) - đảo ngược tác dụng opioid',
             'treatment': [
                 'Đảm bảo đường thở, hỗ trợ hô hấp (thở máy nếu cần) - QUAN TRỌNG NHẤT',
                 'Naloxone: 0.4-2mg IV, lặp lại mỗi 2-3 phút đến khi đáp ứng (tối đa 10mg)',
@@ -164,7 +168,7 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
                 'Than hoạt tính nếu uống trong vòng 1-2 giờ (nhưng cần cẩn thận về nguy cơ hôn mê)',
                 'Theo dõi ECG, huyết áp, nhịp tim liên tục'
             ],
-            'monitoring': 'Nhịp thở, SpO2, ý thức, ECG, huyết áp, nhịp tim liên tục. Theo dõi ít nhất 12-24 giờ. Đặc biệt chú ý ở ultra-rapid metabolizers (tạo nhiều morphine)'
+        'monitoring': 'Nhịp thở, SpO2, ý thức, ECG, huyết áp, nhịp tim liên tục. Theo dõi ít nhất 12-24 giờ. Đặc biệt chú ý ở ultra-rapid metabolizers (tạo nhiều morphine)'
         },
         'reversal_agents': {
             'available': True,
@@ -182,11 +186,11 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
                 'with_food': 'Có thể dùng với hoặc không có thức ăn. Uống với thức ăn có thể giảm buồn nôn',
                 'timing': 'Mỗi 4-6 giờ khi cần. Liều tối đa: 360mg/ngày (đau), 120mg/ngày (ho)'
             },
-            'iv': {
+        'iv': {
                 'reconstitution': 'Không có dạng IV',
                 'infusion_rate': 'N/A',
                 'compatibility': [],
-                'incompatibility': []
+        'incompatibility': []
             }
         },
         'references': {
@@ -196,7 +200,7 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
                 'Lexicomp - Codeine monograph',
                 "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"
             ],
-            'last_updated': '2025-01-06',
+        'last_updated': '2025-01-06',
             'evidence_level': 'High - FDA-approved, extensive clinical data. Note: efficacy depends on CYP2D6 genotype'
         },
         'risk_flags': {
@@ -204,12 +208,11 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
             'narrow_therapeutic_index': False,
             'bleeding_risk': False,
             'organ_toxicity': [],
-            'qt_prolongation': False,
+        'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Respiratory rate', 'Sedation', 'Constipation']
-        },
-        'guideline_tags': [
+        }, 'guideline_tags': [
             'CDC 2022 Opioid Prescribing Guidelines',
             'FDA Black Box Warning - Opioid addiction, abuse, misuse',
             'ISMP High Alert Medications - Opioids'
