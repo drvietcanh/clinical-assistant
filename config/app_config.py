@@ -66,8 +66,8 @@ APP_CONFIG = {
             id="ventilator",
             title="Thở máy",
             icon="🫁",
-            page_path="pages/03_🫁_Ventilator.py",
-            description="Đã tích hợp vào Critical Care với tabs - Redirect",
+            page_path="pages/09_🫁_Critical_Care.py",
+            description="Đã tích hợp vào Critical Care (Tab Thở máy)",
             color="linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)",
             border="#e91e63"
         ),

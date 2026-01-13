@@ -184,7 +184,6 @@ def render_mobile_bottom_nav():
                 '/pages/01_📊_Scores.py': 'nav-scores',
                 '/pages/05_🔬_Labs_and_Calculators.py': 'nav-scores',
                 '/pages/09_🫁_Critical_Care.py': 'nav-critical',
-                '/pages/03_🫁_Ventilator.py': 'nav-critical',
                 '/pages/04_📋_Protocols.py': 'nav-critical',
                 '/pages/15_📋_Guidelines_Tracker.py': 'nav-critical',
                 '/pages/10_📰_Medical_News.py': 'nav-critical',

@@ -522,7 +522,7 @@ def render_search_enhanced():
                         'Labs': 'pages/05_🔬_Labs_and_Calculators.py',
                         'Antibiotics': 'pages/02_💊_Antibiotics.py',
                         'Drugs': 'pages/07_💊_Drug_Database.py',
-                        'Ventilator': 'pages/03_🫁_Ventilator.py',
+                        'Ventilator': 'pages/09_🫁_Critical_Care.py',
                         'Critical Care': 'pages/09_🫁_Critical_Care.py',
                         'Protocols': 'pages/04_📋_Protocols.py',
                         'Diagnosis': 'pages/06_🩺_Diagnosis.py',
