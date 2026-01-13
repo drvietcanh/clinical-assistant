@@ -13,6 +13,10 @@ from .ards_berlin import render as render_ards_berlin
 from .pesi import render as render_pesi
 from .mmrc import render as render_mmrc
 from .act import render as render_act
+from .murray_lung_injury import render as render_murray_lung_injury
+from .gold import render as render_gold
+from .spesi import render as render_spesi
+from .hestia import render as render_hestia
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -34,6 +38,10 @@ def render_respiratory_calculator(calculator_id):
         "PESI": render_pesi,
         "mMRC": render_mmrc,
         "ACT": render_act,
+        "Murray Lung Injury": render_murray_lung_injury,
+        "GOLD": render_gold,
+        "sPESI": render_spesi,
+        "Hestia": render_hestia,
     }
     
     calculator_func = calculators.get(calculator_id)

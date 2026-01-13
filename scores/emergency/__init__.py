@@ -25,6 +25,8 @@ from .charlson import render as render_charlson
 from .crb65 import render as render_crb65
 from .scorten import render as render_scorten
 from .rdos import render as render_rdos
+from .cpis import render as render_cpis
+from .sf_syncope import render as render_sf_syncope
 
 
 def render_emergency_calculator(calculator_id):
@@ -59,6 +61,8 @@ def render_emergency_calculator(calculator_id):
         "CRB-65 Score": render_crb65,
         "SCORTEN Score": render_scorten,
         "RDOS": render_rdos,
+        "CPIS": render_cpis,
+        "San Francisco Syncope": render_sf_syncope,
     }
     
     from utils.errors import safe_render_calculator, CalculatorNotFoundError

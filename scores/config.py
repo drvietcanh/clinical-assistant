@@ -26,6 +26,8 @@ SCORES_BY_SPECIALTY = {
         "CRB-65 Score": {"name": "CRB-65 Score ⭐", "desc": "Phân tầng mức độ nặng viêm phổi cộng đồng - Quyết định nội trú/ngoại trú (DÙNG HÀNG NGÀY)", "status": "✅"},
         "SCORTEN Score": {"name": "SCORTEN Score ⭐", "desc": "Ước tính nguy cơ tử vong ở bệnh nhân SJS/TEN", "status": "✅"},
         "RDOS": {"name": "RDOS ⭐", "desc": "Định lượng suy hô hấp ở bệnh nhân không thể tự báo cáo triệu chứng", "status": "✅"},
+        "CPIS": {"name": "CPIS ⭐⭐", "desc": "Đánh giá khả năng viêm phổi liên quan thở máy (VAP)", "status": "✅"},
+        "San Francisco Syncope": {"name": "San Francisco Syncope Rule ⭐⭐", "desc": "Đánh giá nguy cơ biến cố nghiêm trọng sau ngất", "status": "✅"},
     },
     
     "❤️ Tim mạch (Cardiology)": {
@@ -53,6 +55,11 @@ SCORES_BY_SPECIALTY = {
         "HFA-ICOS VEGF": {"name": "HFA-ICOS VEGF Inhibitors Risk ⭐⭐⭐", "desc": "Đánh giá nguy cơ tim mạch trước điều trị VEGF inhibitors (MỚI 2024-2025)", "status": "✅"},
         "HFA-ICOS HER2": {"name": "HFA-ICOS HER2-Targeted Therapies Risk ⭐⭐⭐", "desc": "Đánh giá nguy cơ tim mạch trước điều trị HER2-targeted therapies (MỚI 2024-2025)", "status": "✅"},
         "HFA-ICOS Anthracycline": {"name": "HFA-ICOS Anthracycline Risk ⭐⭐⭐", "desc": "Đánh giá nguy cơ tim mạch trước điều trị anthracycline (MỚI 2024-2025)", "status": "✅"},
+        "EuroSCORE II": {"name": "EuroSCORE II ⭐⭐⭐", "desc": "Dự đoán tử vong 30 ngày sau phẫu thuật tim (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "ATRIA Bleeding Risk": {"name": "ATRIA Bleeding Risk Score ⭐⭐", "desc": "Nguy cơ chảy máu ở rung nhĩ (alternative to HAS-BLED)", "status": "✅"},
+        "ORBIT Bleeding Risk": {"name": "ORBIT Bleeding Risk Score ⭐⭐", "desc": "Nguy cơ chảy máu ở rung nhĩ (alternative to HAS-BLED, đơn giản hơn)", "status": "✅"},
+        "SAMe-TT₂R₂": {"name": "SAMe-TT₂R₂ Score ⭐⭐", "desc": "Dự đoán khả năng đạt INR mục tiêu với warfarin (hướng dẫn chọn warfarin vs NOAC)", "status": "✅"},
+        "Duke Treadmill": {"name": "Duke Treadmill Score ⭐⭐", "desc": "Đánh giá nguy cơ bệnh động mạch vành dựa trên nghiệm pháp gắng sức", "status": "✅"},
     },
     
     "🫁 Hô hấp (Respiratory)": {
@@ -66,6 +73,10 @@ SCORES_BY_SPECIALTY = {
         "ARDS Berlin": {"name": "ARDS Berlin Definition", "desc": "Tiêu chuẩn chẩn đoán ARDS (Berlin 2012)", "status": "✅"},
         "mMRC": {"name": "mMRC Dyspnea Scale ⭐", "desc": "Đánh giá mức độ khó thở ở COPD (DÙNG HÀNG NGÀY)", "status": "✅"},
         "ACT": {"name": "Asthma Control Test (ACT) ⭐", "desc": "Đánh giá mức độ kiểm soát hen phế quản (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "Murray Lung Injury": {"name": "Murray Lung Injury Score ⭐⭐", "desc": "Đánh giá mức độ nặng của tổn thương phổi cấp/ARDS", "status": "✅"},
+        "GOLD": {"name": "GOLD Criteria ⭐⭐", "desc": "Phân loại mức độ nặng COPD (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "sPESI": {"name": "sPESI ⭐⭐", "desc": "Đánh giá nguy cơ tử vong 30 ngày ở bệnh nhân thuyên tắc phổi (phiên bản đơn giản của PESI)", "status": "✅"},
+        "Hestia": {"name": "Hestia Score ⭐⭐", "desc": "Đánh giá khả năng điều trị thuyên tắc phổi ngoại trú", "status": "✅"},
     },
     
     "🧠 Thần kinh (Neurology)": {
@@ -85,6 +96,10 @@ SCORES_BY_SPECIALTY = {
         "MGFA Clinical Classification": {"name": "MGFA Clinical Classification ⭐", "desc": "Phân loại mức độ nặng của bệnh nhược cơ", "status": "✅"},
         "MG-ADL": {"name": "MG-ADL ⭐", "desc": "Đánh giá mức độ nặng bệnh ở bệnh nhân nhược cơ (MG)", "status": "✅"},
         "ICE Score": {"name": "ICE Score ⭐", "desc": "Đánh giá độc tính thần kinh ở bệnh nhân điều trị CAR T-cell (Immune Effector Cell Encephalopathy)", "status": "✅"},
+        "Fisher Scale": {"name": "Fisher Scale ⭐⭐", "desc": "Đánh giá nguy cơ co thắt mạch sau xuất huyết dưới nhện", "status": "✅"},
+        "GOS": {"name": "Glasgow Outcome Scale (GOS) ⭐⭐", "desc": "Đánh giá kết quả chức năng sau chấn thương não", "status": "✅"},
+        "ABC/2": {"name": "ABC/2 Method ⭐⭐", "desc": "Ước tính thể tích xuất huyết não (ICH)", "status": "✅"},
+        "HINTS": {"name": "HINTS Exam ⭐⭐", "desc": "Phân biệt nguyên nhân trung ương vs ngoại biên của chóng mặt", "status": "✅"},
     },
     
     "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)": {
@@ -100,6 +115,8 @@ SCORES_BY_SPECIALTY = {
         "Acute Pancreatitis Prediction": {"name": "Acute Pancreatitis Prediction Model ⭐", "desc": "Ước tính khả năng viêm tụy cấp ở bệnh nhân có lipase tăng cao trước khi xác nhận bằng hình ảnh", "status": "✅"},
         "SAFE Score": {"name": "SAFE Score ⭐", "desc": "Ước tính nguy cơ xơ hóa gan trung bình đến tiến triển (F2+) ở bệnh nhân MASLD", "status": "✅"},
         "EREFS": {"name": "EREFS ⭐", "desc": "Đánh giá mức độ nặng của các phát hiện nội soi ở bệnh nhân viêm thực quản tăng bạch cầu ái toan (EoE)", "status": "✅"},
+        "APRI": {"name": "APRI Score ⭐⭐", "desc": "Đánh giá mức độ xơ hóa gan không xâm lấn", "status": "✅"},
+        "GAHS": {"name": "GAHS ⭐⭐", "desc": "Tiên lượng tử vong ở bệnh nhân viêm gan do rượu", "status": "✅"},
     },
     
     "🩺 Huyết học & Đông máu (Hematology)": {

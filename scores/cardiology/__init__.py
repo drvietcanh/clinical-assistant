@@ -21,6 +21,11 @@ from .killip import render as render_killip
 from .duke import render as render_duke
 from .arc_hbr import render as render_arc_hbr
 from .pcp_hf import render as render_pcp_hf
+from .euroscore2 import render as render_euroscore2
+from .atria import render as render_atria
+from .orbit import render as render_orbit
+from .same_tt2r2 import render as render_same_tt2r2
+from .duke_treadmill import render as render_duke_treadmill
 # Cardio-Oncology calculators
 from .cardio_oncology.hfa_icos_multiple_myeloma import render as render_hfa_icos_multiple_myeloma
 from .cardio_oncology.hfa_icos_cml import render as render_hfa_icos_cml
@@ -58,6 +63,11 @@ def render_cardiology_calculator(calculator_id):
         "DAPT Score": render_dapt_score,
         "ARC-HBR Criteria": render_arc_hbr,
         "PCP-HF Risk Score": render_pcp_hf,
+        "EuroSCORE II": render_euroscore2,
+        "ATRIA Bleeding Risk": render_atria,
+        "ORBIT Bleeding Risk": render_orbit,
+        "SAMe-TT₂R₂": render_same_tt2r2,
+        "Duke Treadmill": render_duke_treadmill,
         # Cardio-Oncology
         "HFA-ICOS Multiple Myeloma": render_hfa_icos_multiple_myeloma,
         "HFA-ICOS CML TKI": render_hfa_icos_cml,

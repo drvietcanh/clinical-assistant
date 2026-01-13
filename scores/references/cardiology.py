@@ -340,4 +340,90 @@ CARDIOLOGY_REFERENCES: Dict[str, List[Dict[str, Any]]] = {
             }
         ],
 
+        "EuroSCORE II": [
+            {
+                "type": "primary",
+                "title": "EuroSCORE II",
+                "authors": "Nashef SA, Roques F, Sharples LD, et al.",
+                "journal": "European Journal of Cardio-Thoracic Surgery",
+                "year": 2012,
+                "volume": "41",
+                "issue": "4",
+                "pages": "734-744",
+                "doi": "10.1093/ejcts/ezs043",
+                "pmid": "22378855",
+                "evidence_level": EVIDENCE_LEVEL_I,
+                "strength": STRENGTH_STRONG,
+                "url": "https://academic.oup.com/ejcts/article/41/4/734/284200"
+            }
+        ],
+
+        "ATRIA Bleeding Risk": [
+            {
+                "type": "primary",
+                "title": "A new risk scheme to predict warfarin-associated hemorrhage: The ATRIA (Anticoagulation and Risk Factors in Atrial Fibrillation) Study",
+                "authors": "Fang MC, Go AS, Chang Y, et al.",
+                "journal": "Journal of the American College of Cardiology",
+                "year": 2011,
+                "volume": "58",
+                "issue": "4",
+                "pages": "395-401",
+                "doi": "10.1016/j.jacc.2011.03.031",
+                "pmid": "21757117",
+                "evidence_level": EVIDENCE_LEVEL_I,
+                "strength": STRENGTH_STRONG
+            }
+        ],
+
+        "ORBIT Bleeding Risk": [
+            {
+                "type": "primary",
+                "title": "The ORBIT bleeding score: a simple bedside score to assess bleeding risk in atrial fibrillation",
+                "authors": "O'Brien EC, Simon DN, Thomas LE, et al.",
+                "journal": "European Heart Journal",
+                "year": 2015,
+                "volume": "36",
+                "issue": "46",
+                "pages": "3258-3264",
+                "doi": "10.1093/eurheartj/ehv476",
+                "pmid": "26330425",
+                "evidence_level": EVIDENCE_LEVEL_I,
+                "strength": STRENGTH_STRONG
+            }
+        ],
+
+        "SAMe-TT₂R₂": [
+            {
+                "type": "primary",
+                "title": "The SAMe-TT2R2 score: a predictor of poor response to warfarin anticoagulation in patients with atrial fibrillation",
+                "authors": "Apostolakis S, Sullivan RM, Olshansky B, Lip GY",
+                "journal": "American Journal of Medicine",
+                "year": 2013,
+                "volume": "126",
+                "issue": "5",
+                "pages": "423.e9-423.e15",
+                "doi": "10.1016/j.amjmed.2012.10.020",
+                "pmid": "23561641",
+                "evidence_level": EVIDENCE_LEVEL_I,
+                "strength": STRENGTH_STRONG
+            }
+        ],
+
+        "Duke Treadmill": [
+            {
+                "type": "primary",
+                "title": "Prognostic value of a treadmill exercise score in outpatients with suspected coronary artery disease",
+                "authors": "Mark DB, Shaw L, Harrell FE Jr, et al.",
+                "journal": "New England Journal of Medicine",
+                "year": 1991,
+                "volume": "325",
+                "issue": "12",
+                "pages": "849-853",
+                "doi": "10.1056/NEJM199109193251204",
+                "pmid": "1875969",
+                "evidence_level": EVIDENCE_LEVEL_I,
+                "strength": STRENGTH_STRONG
+            }
+        ],
+
 }

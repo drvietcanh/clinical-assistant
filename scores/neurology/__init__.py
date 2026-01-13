@@ -20,6 +20,10 @@ from .mgfa import render as render_mgfa
 from .mg_adl import render as render_mg_adl
 from .ice_score import render as render_ice_score
 from .canadian_stroke_scale import render as render_canadian_stroke_scale
+from .fisher_scale import render as render_fisher_scale
+from .gos import render as render_gos
+from .abc2 import render as render_abc2
+from .hints import render as render_hints
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -48,6 +52,10 @@ def render_neurology_calculator(calculator_id):
         "MG-ADL": render_mg_adl,
         "ICE Score": render_ice_score,
         "Canadian Stroke Scale": render_canadian_stroke_scale,
+        "Fisher Scale": render_fisher_scale,
+        "GOS": render_gos,
+        "ABC/2": render_abc2,
+        "HINTS": render_hints,
     }
     
     calculator_func = calculators.get(calculator_id)
