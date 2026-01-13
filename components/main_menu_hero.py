@@ -33,44 +33,41 @@ def render_hero_section():
     total_fav = len(st.session_state.get('favorites', []))
     total_calculators = len(ALL_CALCULATORS)
     
-    # Hero section HTML
-    html_content = f"""
-    <div class="hero-section">
-        <div class="hero-content">
-            <p class="hero-date">{day_of_week}, {date_str}</p>
-            <h1 class="hero-greeting">{emoji} {greeting}, Bác sĩ!</h1>
-            <div class="hero-stats-grid">
-                <div class="hero-stat-card">
-                    <p class="hero-stat-label">Tổng Calculators</p>
-                    <p class="hero-stat-value">{total_calculators}</p>
-                </div>
-                <div class="hero-stat-card">
-                    <p class="hero-stat-label">Tính toán hôm nay</p>
-                    <p class="hero-stat-value">{total_calc}</p>
-                </div>
-                <div class="hero-stat-card">
-                    <p class="hero-stat-label">Yêu thích</p>
-                    <p class="hero-stat-value">{total_fav}</p>
-                </div>
-                <div class="hero-stat-card">
-                    <p class="hero-stat-label">Phiên bản</p>
-                    <p class="hero-stat-value" style="font-size: 1.5rem;">{APP_CONFIG.get('version', '2.0')}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    """
+    # Hero section HTML - properly formatted
+    html_content = f"""<div class="hero-section">
+<div class="hero-content">
+<p class="hero-date">{day_of_week}, {date_str}</p>
+<h1 class="hero-greeting">{emoji} {greeting}, Bác sĩ!</h1>
+<div class="hero-stats-grid">
+<div class="hero-stat-card">
+<p class="hero-stat-label">Tổng Calculators</p>
+<p class="hero-stat-value">{total_calculators}</p>
+</div>
+<div class="hero-stat-card">
+<p class="hero-stat-label">Tính toán hôm nay</p>
+<p class="hero-stat-value">{total_calc}</p>
+</div>
+<div class="hero-stat-card">
+<p class="hero-stat-label">Yêu thích</p>
+<p class="hero-stat-value">{total_fav}</p>
+</div>
+<div class="hero-stat-card">
+<p class="hero-stat-label">Phiên bản</p>
+<p class="hero-stat-value" style="font-size: 1.5rem;">{APP_CONFIG.get('version', '2.0')}</p>
+</div>
+</div>
+</div>
+</div>"""
     st.markdown(html_content, unsafe_allow_html=True)
 
 
 def render_announcement_banner(announcement_text: str = None, dismissible: bool = True):
     """Render announcement banner with optional dismiss functionality"""
     if announcement_text is None:
-        announcement_text = """
-        <strong>🆕 Cập nhật mới:</strong> Đã thêm 712 thuốc với dữ liệu đầy đủ. 
-        Giao diện mới hiện đại hơn, tối ưu cho mobile. 
-        <a href="#" style="color: white; text-decoration: underline;">Xem chi tiết</a>
-        """
+        announcement_text = '<strong>🆕 Cập nhật mới:</strong> Đã thêm 712 thuốc với dữ liệu đầy đủ. Giao diện mới hiện đại hơn, tối ưu cho mobile. <a href="#" style="color: white; text-decoration: underline;">Xem chi tiết</a>'
+    
+    # Clean up announcement text - remove extra whitespace
+    announcement_text = announcement_text.strip()
     
     banner_key = "announcement_banner_dismissed"
     
@@ -80,16 +77,9 @@ def render_announcement_banner(announcement_text: str = None, dismissible: bool 
     col1, col2 = st.columns([10, 1])
     
     with col1:
-        st.markdown(
-            f"""
-            <div class="announcement-banner">
-                <div class="announcement-content">
-                    {announcement_text}
-                </div>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+        # Properly formatted HTML without extra whitespace
+        html_content = f'<div class="announcement-banner"><span class="announcement-badge">NEW</span><div class="announcement-content">{announcement_text}</div></div>'
+        st.markdown(html_content, unsafe_allow_html=True)
     
     with col2:
         if dismissible:

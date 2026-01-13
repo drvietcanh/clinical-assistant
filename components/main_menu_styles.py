@@ -442,13 +442,27 @@ def inject_main_menu_styles() -> None:
     border-radius: var(--radius-md);
     margin-bottom: 1.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     box-shadow: var(--shadow-sm);
+}
+
+.announcement-badge {
+    background: #4FC3F7;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .announcement-content {
     flex: 1;
+    line-height: 1.6;
 }
 
 .announcement-close {

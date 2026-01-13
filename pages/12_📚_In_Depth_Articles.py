@@ -941,7 +941,7 @@ def render_statistics_dashboard(articles: list):
 def markdown_to_safe_html(text: str) -> str:
     """
     Convert markdown syntax cơ bản thành HTML an toàn.
-    Xử lý: **bold**, *italic*, \< escape sequences, và escape HTML nguy hiểm.
+    Xử lý: **bold**, *italic*, \\< escape sequences, và escape HTML nguy hiểm.
     """
     if not text:
         return ""

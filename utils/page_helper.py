@@ -228,7 +228,7 @@ def inject_global_font_css():
             codeBlocks.forEach(block => {
                 const text = (block.textContent || '').trim();
                 // Hide if it's just HTML tags
-                if (text.match(/^<[^>]+>[\s\S]*<\/[^>]+>$/)) {
+                if (text.match(/^<[^>]+>[\\s\\S]*<\/[^>]+>$/)) {
                     const pre = block.closest('pre');
                     if (pre) {
                         pre.style.display = 'none';
