@@ -152,9 +152,8 @@ with main_tabs[0]:
     # Route to appropriate calculator
     if "Dashboard" in tool_type:
         render_critical_care_dashboard()
-    
-elif "Scoring" in tool_type:
-    render_scoring_calculator()
+    elif "Scoring" in tool_type:
+        render_scoring_calculator()
     
     elif "Ventilator Management" in tool_type:
         st.header("🫁 Ventilator Management")
@@ -264,123 +263,123 @@ elif "Scoring" in tool_type:
         # Fallback to basic calculator if advanced not available
         render_ventilator_calculator()
     
-elif "ARDS" in tool_type:
-    render_ards_protocols()
-    
-elif "Sepsis" in tool_type:
-    render_sepsis_protocols()
-    
-elif "Shock" in tool_type:
-    render_shock_management()
-    
-elif "RRT" in tool_type:
-    render_rrt_calculator()
-    
-elif "Clinical Scenarios" in tool_type or "Scenarios" in tool_type:
-    render_scenarios_calculator()
-    
-elif "Fluid" in tool_type:
-    st.header("💧 Fluid Therapy Calculator")
-    st.caption("Tính toán dịch truyền, bù dịch, và điều chỉnh điện giải")
-    render_fluid_calculator()
-    
-elif "Vasopressor" in tool_type:
-    st.header("💉 Vasopressor Dosing Guide")
-    st.caption("Hướng dẫn liều và titration vasopressor")
-    render_vasopressor_guide()
-
-elif "Enhanced Infusion" in tool_type:
-    try:
-        from components.enhanced_infusion_calculator import render_enhanced_infusion_calculator
-        render_enhanced_infusion_calculator()
-    except ImportError as e:
-        st.error(f"Không thể tải Enhanced Infusion Calculator: {str(e)}")
-        st.info("Vui lòng kiểm tra file components/enhanced_infusion_calculator.py")
-
-elif "Multiple Infusions" in tool_type:
-    try:
-        from components.multiple_infusions_calculator import render_multiple_infusions_calculator
-        render_multiple_infusions_calculator()
-    except ImportError as e:
-        st.error(f"Không thể tải Multiple Infusions Calculator: {str(e)}")
-        st.info("Vui lòng kiểm tra file components/multiple_infusions_calculator.py")
-
-elif "Electrolyte Calculator" in tool_type:
-    try:
-        from components.electrolyte_calculator import render_electrolyte_calculator
-        render_electrolyte_calculator()
-    except ImportError as e:
-        st.error(f"Không thể tải Electrolyte Calculator: {str(e)}")
-        st.info("Vui lòng kiểm tra file components/electrolyte_calculator.py")
-
-elif "Titration Guide" in tool_type:
-    try:
-        from components.titration_calculator import render_titration_calculator
-        render_titration_calculator()
-    except ImportError as e:
-        st.error(f"Không thể tải Titration Guide: {str(e)}")
-        st.info("Vui lòng kiểm tra file components/titration_calculator.py")
-
-elif "Safety Checker" in tool_type:
-    try:
-        from components.safety_checker import render_safety_checker
-        render_safety_checker()
-    except ImportError as e:
-        st.error(f"Không thể tải Safety Checker: {str(e)}")
-        st.info("Vui lòng kiểm tra file components/safety_checker.py")
-
-elif "Custom Presets" in tool_type:
-    try:
-        from components.custom_presets_manager import render_custom_presets_manager
-        render_custom_presets_manager()
-    except ImportError as e:
-        st.error(f"Không thể tải Custom Presets Manager: {str(e)}")
-        st.info("Vui lòng kiểm tra file components/custom_presets_manager.py")
-
-elif "Shock Index" in tool_type:
-    try:
-        from components.shock_index_calculator import render_shock_index_calculator
-        render_shock_index_calculator()
-    except ImportError as e:
-        st.error(f"Không thể tải Shock Index Calculator: {str(e)}")
-        st.info("Vui lòng kiểm tra file components/shock_index_calculator.py")
-
-elif "Links to Scores" in tool_type:
-    try:
-        from components.score_links import (
-            render_gcs_link,
-            render_rass_link,
-            render_anion_gap_link,
-            render_qtc_link,
-            render_sofa_link
-        )
+    if "ARDS" in tool_type:
+        render_ards_protocols()
         
-        st.markdown("## 🔗 Links to Existing Scores")
-        st.markdown("""
-        Các calculator đã có sẵn trong **Scores** module.
-        Click vào link để mở trực tiếp.
-        """)
+    elif "Sepsis" in tool_type:
+        render_sepsis_protocols()
         
-        st.markdown("---")
-        render_gcs_link()
-        st.markdown("---")
-        render_rass_link()
-        st.markdown("---")
-        render_anion_gap_link()
-        st.markdown("---")
-        render_qtc_link()
-        st.markdown("---")
-        render_sofa_link()
+    elif "Shock" in tool_type:
+        render_shock_management()
         
-    except ImportError as e:
-        st.error(f"Không thể tải Score Links: {str(e)}")
-        st.info("Vui lòng kiểm tra file components/score_links.py")
+    elif "RRT" in tool_type:
+        render_rrt_calculator()
+        
+    elif "Clinical Scenarios" in tool_type or "Scenarios" in tool_type:
+        render_scenarios_calculator()
+        
+    elif "Fluid" in tool_type:
+        st.header("💧 Fluid Therapy Calculator")
+        st.caption("Tính toán dịch truyền, bù dịch, và điều chỉnh điện giải")
+        render_fluid_calculator()
+        
+    elif "Vasopressor" in tool_type:
+        st.header("💉 Vasopressor Dosing Guide")
+        st.caption("Hướng dẫn liều và titration vasopressor")
+        render_vasopressor_guide()
+
+    elif "Enhanced Infusion" in tool_type:
+        try:
+            from components.enhanced_infusion_calculator import render_enhanced_infusion_calculator
+            render_enhanced_infusion_calculator()
+        except ImportError as e:
+            st.error(f"Không thể tải Enhanced Infusion Calculator: {str(e)}")
+            st.info("Vui lòng kiểm tra file components/enhanced_infusion_calculator.py")
+
+    elif "Multiple Infusions" in tool_type:
+        try:
+            from components.multiple_infusions_calculator import render_multiple_infusions_calculator
+            render_multiple_infusions_calculator()
+        except ImportError as e:
+            st.error(f"Không thể tải Multiple Infusions Calculator: {str(e)}")
+            st.info("Vui lòng kiểm tra file components/multiple_infusions_calculator.py")
+
+    elif "Electrolyte Calculator" in tool_type:
+        try:
+            from components.electrolyte_calculator import render_electrolyte_calculator
+            render_electrolyte_calculator()
+        except ImportError as e:
+            st.error(f"Không thể tải Electrolyte Calculator: {str(e)}")
+            st.info("Vui lòng kiểm tra file components/electrolyte_calculator.py")
+
+    elif "Titration Guide" in tool_type:
+        try:
+            from components.titration_calculator import render_titration_calculator
+            render_titration_calculator()
+        except ImportError as e:
+            st.error(f"Không thể tải Titration Guide: {str(e)}")
+            st.info("Vui lòng kiểm tra file components/titration_calculator.py")
+
+    elif "Safety Checker" in tool_type:
+        try:
+            from components.safety_checker import render_safety_checker
+            render_safety_checker()
+        except ImportError as e:
+            st.error(f"Không thể tải Safety Checker: {str(e)}")
+            st.info("Vui lòng kiểm tra file components/safety_checker.py")
+
+    elif "Custom Presets" in tool_type:
+        try:
+            from components.custom_presets_manager import render_custom_presets_manager
+            render_custom_presets_manager()
+        except ImportError as e:
+            st.error(f"Không thể tải Custom Presets Manager: {str(e)}")
+            st.info("Vui lòng kiểm tra file components/custom_presets_manager.py")
+
+    elif "Shock Index" in tool_type:
+        try:
+            from components.shock_index_calculator import render_shock_index_calculator
+            render_shock_index_calculator()
+        except ImportError as e:
+            st.error(f"Không thể tải Shock Index Calculator: {str(e)}")
+            st.info("Vui lòng kiểm tra file components/shock_index_calculator.py")
+
+    elif "Links to Scores" in tool_type:
+        try:
+            from components.score_links import (
+                render_gcs_link,
+                render_rass_link,
+                render_anion_gap_link,
+                render_qtc_link,
+                render_sofa_link
+            )
+            
+            st.markdown("## 🔗 Links to Existing Scores")
+            st.markdown("""
+            Các calculator đã có sẵn trong **Scores** module.
+            Click vào link để mở trực tiếp.
+            """)
+            
+            st.markdown("---")
+            render_gcs_link()
+            st.markdown("---")
+            render_rass_link()
+            st.markdown("---")
+            render_anion_gap_link()
+            st.markdown("---")
+            render_qtc_link()
+            st.markdown("---")
+            render_sofa_link()
+            
+        except ImportError as e:
+            st.error(f"Không thể tải Score Links: {str(e)}")
+            st.info("Vui lòng kiểm tra file components/score_links.py")
+        
+    elif "Transfusion" in tool_type:
+        render_transfusion_calculator()
     
-elif "Transfusion" in tool_type:
-    render_transfusion_calculator()
-    
-elif "Sedation" in tool_type or "Analgesia" in tool_type:
-    render_sedation_calculator()
+    elif "Sedation" in tool_type or "Analgesia" in tool_type:
+        render_sedation_calculator()
 
     elif "Drug Infusion" in tool_type or "DIRC" in tool_type:
         render_dirc_calculator()
