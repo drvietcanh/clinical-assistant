@@ -19,7 +19,14 @@ ADDITIONAL_8_FIELDS = [
     "administration_instructions", "references"
 ]
 
+# Các field bổ sung khác được sử dụng rộng rãi (không trong ADDITIONAL_8_FIELDS nhưng quan trọng)
+ADDITIONAL_COMMON_FIELDS = [
+    "renal_adjustment",  # Điều chỉnh liều suy thận - được sử dụng rộng rãi
+    "contraindications_detail",  # Chống chỉ định chi tiết - được sử dụng rộng rãi
+]
+
 ALL_FIELDS = STANDARD_14_FIELDS + ADDITIONAL_8_FIELDS
+ALL_FIELDS_WITH_COMMON = ALL_FIELDS + ADDITIONAL_COMMON_FIELDS
 
 # Field types
 FIELD_TYPES = {
@@ -45,6 +52,9 @@ FIELD_TYPES = {
     "reversal_agents": (dict, type(None)),
     "administration_instructions": dict,
     "references": dict,
+    # Additional common fields
+    "renal_adjustment": dict,
+    "contraindications_detail": dict,
 }
 
 class FieldValidator:
