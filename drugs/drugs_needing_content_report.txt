@@ -1,0 +1,31 @@
+================================================================================
+DANH SÁCH THUỐC CẦN BỔ SUNG NỘI DUNG FIELD
+================================================================================
+
+Ngày tạo: 2026-01-13T21:02:29.262912
+Tổng số thuốc: 722
+
+PHÂN LOẠI THEO ƯU TIÊN:
+  Priority 1 (<50%): 2 thuốc
+  Priority 2 (50-80%): 62 thuốc
+  Priority 3 (>80%): 55 thuốc
+  Low Priority: 596 thuốc
+
+PRIORITY 1 DRUGS (Cần bổ sung nhiều nhất):
+--------------------------------------------------------------------------------
+
+references:
+  File: drugs\drug_modules\ent_oral_nasal_combinations.py
+  Độ hoàn thiện: 22%
+  Thiếu STANDARD fields: group, vietnamese_name, administration, indications, dosage, side_effects, contraindications, interactions, pregnancy
+  Rỗng STANDARD fields: mechanism_of_action, storage
+  Thiếu ADDITIONAL fields: references
+  Rỗng ADDITIONAL fields: black_box_warnings, pregnancy_lactation, hepatic_adjustment, overdose_management, administration_instructions
+
+Budesonide inhaled:
+  File: drugs\drug_modules\respiratory\inhaled_corticosteroid_icss.py
+  Độ hoàn thiện: 45%
+  Thiếu STANDARD fields: dosage, side_effects, interactions, pregnancy
+  Rỗng STANDARD fields: mechanism_of_action, storage
+  Thiếu ADDITIONAL fields: references
+  Rỗng ADDITIONAL fields: black_box_warnings, pregnancy_lactation, hepatic_adjustment, overdose_management, administration_instructions

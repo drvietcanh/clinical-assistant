@@ -1,0 +1,215 @@
+================================================================================
+BÁO CÁO PHÂN TÍCH THỨ TỰ FIELD THUỐC
+================================================================================
+
+Ngày phân tích: 2026-01-13T21:06:12.330642
+Tổng số thuốc: 722
+
+THỨ TỰ FIELD:
+  ✅ Đúng thứ tự: 13 (1.8%)
+  ❌ Sai thứ tự: 702 (97.2%)
+
+THUỐC SAI THỨ TỰ FIELD:
+  - Insulin: interactions, mechanism_of_action, monitoring, precautions, pharmacokinetics, storage, black_box_warnings, drug_interactions, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\diabetes\insulins.py
+  - Codeine: interactions, mechanism_of_action, monitoring, precautions, storage, black_box_warnings, drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\analgesics\opioid_agonist_weaks.py
+  - Folic acid: contraindications, storage, black_box_warnings, drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\supportive\folates.py
+  - Iron: contraindications, storage, black_box_warnings, drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\supportive\irons.py
+  - Rosuvastatin: mechanism_of_action, monitoring, precautions, pharmacokinetics, storage, black_box_warnings, drug_interactions, hepatic_adjustment, overdose_management
+    File: drugs\drug_modules\cardiovascular\statins.py
+  - Fludrocortisone: interactions, pregnancy, mechanism_of_action, monitoring, precautions, pharmacokinetics, storage, black_box_warnings, drug_interactions
+    File: drugs\drug_modules\endocrinology_other\corticosteroids\short_intermediate_acting.py
+  - Tigecycline: contraindications, storage, black_box_warnings, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+    File: drugs\drug_modules\infectious_other\tetracyclines.py
+  - Methimazole: contraindications, black_box_warnings, drug_interactions, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\endocrinology\thyroid.py
+  - Carboprost: contraindications, pregnancy, mechanism_of_action, monitoring, precautions, pharmacokinetics, storage, references
+    File: drugs\drug_modules\emergency\uterotonics.py
+  - Atorvastatin: mechanism_of_action, monitoring, precautions, pharmacokinetics, storage, black_box_warnings, pregnancy_lactation
+    File: drugs\drug_modules\cardiovascular\statins.py
+  - Simvastatin: interactions, mechanism_of_action, monitoring, precautions, pharmacokinetics, storage, black_box_warnings
+    File: drugs\drug_modules\cardiovascular\statins.py
+  - Baricitinib: contraindications, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\gastrointestinal\jak_inhibitors.py
+  - Lactulose: contraindications, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\gastrointestinal\laxatives.py
+  - Polyethylene glycol 3350: contraindications, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\gastrointestinal\laxatives.py
+  - Cerebrolysin: contraindications, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\neurological\cerebral_circulation.py
+  - Nicergoline: contraindications, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\neurological\cerebral_circulation.py
+  - Nimodipine: contraindications, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\neurological\cerebral_circulation.py
+  - Levothyroxine: contraindications, drug_interactions, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\endocrinology\thyroid.py
+  - Propylthiouracil: black_box_warnings, drug_interactions, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\endocrinology\thyroid.py
+  - Valsartan: drug_interactions, pregnancy_lactation, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+    File: drugs\drug_modules\cardiovascular\ace_arb.py
+  - Pravastatin: mechanism_of_action, monitoring, precautions, pharmacokinetics, storage, black_box_warnings
+    File: drugs\drug_modules\cardiovascular\statins.py
+  - Esomeprazole: contraindications, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\gastrointestinal\proton_pump_inhibitors.py
+  - Lansoprazole: contraindications, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\gastrointestinal\proton_pump_inhibitors.py
+  - Hydrocodone: contraindications, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\analgesics\opioid_agonists.py
+  - Levocetirizine: contraindications, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\supportive\antihistamine_h1_antagonist_2nd_generations.py
+  - Prednisone: black_box_warnings, drug_interactions, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions
+    File: drugs\drug_modules\endocrinology\corticosteroids.py
+  - Flumazenil: contraindications, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\emergency\benzodiazepine_antagonists.py
+  - Epinephrine: contraindications, hepatic_adjustment, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\emergency\catecholamine_alpha__beta_agonists.py
+  - Empagliflozin: contraindications, mechanism_of_action, monitoring, precautions, black_box_warnings
+    File: drugs\drug_modules\diabetes\sglt2_inhibitors.py
+  - Liraglutide: contraindications, mechanism_of_action, monitoring, precautions, black_box_warnings
+    File: drugs\drug_modules\diabetes\glp1_agonists.py
+  - Propofol: contraindications, monitoring, pharmacokinetics, drug_interactions, reversal_agents
+    File: drugs\drug_modules\anesthesia\induction_agents.py
+  - Minocycline: contraindications, precautions, storage, black_box_warnings, pregnancy_lactation
+    File: drugs\drug_modules\infectious_other\tetracyclines.py
+  - Betamethasone/Clotrimazole topical: contraindications, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\dermatology\topical_corticosteroids.py
+  - Fusidic acid/Betamethasone topical: contraindications, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\dermatology\topical_corticosteroids.py
+  - Gentamicin/Betamethasone/Clotrimazole topical: contraindications, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\dermatology\topical_corticosteroids.py
+  - Miconazole/Hydrocortisone topical: contraindications, overdose_management, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\dermatology\topical_corticosteroids.py
+  - Methotrexate: contraindications, mechanism_of_action, monitoring, precautions, black_box_warnings
+    File: drugs\drug_modules\miscellaneous\dmards_rheumatology.py
+  - Methyldopa: contraindications, pregnancy_lactation, hepatic_adjustment, references
+    File: drugs\drug_modules\cardiovascular\other_cv.py
+  - Aspirin: contraindications, reversal_agents, administration_instructions, references
+    File: drugs\drug_modules\analgesics\nsaids.py
+  - Alirocumab: contraindications, overdose_management, administration_instructions, references
+    File: drugs\drug_modules\cardiovascular\pcsk9_inhibitors.py
+  - Evolocumab: contraindications, overdose_management, administration_instructions, references
+    File: drugs\drug_modules\cardiovascular\pcsk9_inhibitors.py
+  - Inclisiran: contraindications, overdose_management, administration_instructions, references
+    File: drugs\drug_modules\cardiovascular\pcsk9_inhibitors.py
+  - Semaglutide: mechanism_of_action, monitoring, precautions, black_box_warnings
+    File: drugs\drug_modules\diabetes\glp1_agonists.py
+  - Tegoprazan: contraindications, overdose_management, administration_instructions, references
+    File: drugs\drug_modules\gastrointestinal\pcab.py
+  - Vonoprazan: contraindications, overdose_management, administration_instructions, references
+    File: drugs\drug_modules\gastrointestinal\pcab.py
+  - Sumatriptan: contraindications, mechanism_of_action, monitoring, pregnancy_lactation
+    File: drugs\drug_modules\analgesics\antimigraine_5_ht1_receptor_agonists.py
+  - Doxycycline: contraindications, storage, black_box_warnings, pregnancy_lactation
+    File: drugs\drug_modules\infectious_other\tetracyclines.py
+  - Tetracycline: contraindications, storage, black_box_warnings, pregnancy_lactation
+    File: drugs\drug_modules\infectious_other\tetracyclines.py
+  - Hydroxychloroquine: interactions, mechanism_of_action, monitoring, precautions
+    File: drugs\drug_modules\infectious_other\antimalarials.py
+  - Dinoprostone: contraindications, pregnancy, storage, references
+    File: drugs\drug_modules\emergency\uterotonics.py
+
+
+THUỐC THIẾU FIELD:
+  - references: group, vietnamese_name, administration, indications, dosage, side_effects, contraindications, interactions, pregnancy, references
+    File: drugs\drug_modules\ent_oral_nasal_combinations.py
+  - Budesonide inhaled: dosage, side_effects, interactions, pregnancy, references
+    File: drugs\drug_modules\respiratory\inhaled_corticosteroid_icss.py
+  - Desloratadine: side_effects, contraindications, interactions, references
+    File: drugs\drug_modules\allergy\antihistamines.py
+  - Prednisone: contraindications, interactions, pregnancy, references
+    File: drugs\drug_modules\endocrinology\corticosteroids.py
+  - Cyclosporine: contraindications, interactions, pregnancy, references
+    File: drugs\drug_modules\immunology\immunosuppressants.py
+  - Cetirizine: contraindications, interactions, references
+    File: drugs\drug_modules\allergy\antihistamines.py
+  - Fexofenadine: contraindications, interactions, references
+    File: drugs\drug_modules\allergy\antihistamines.py
+  - Loratadine: contraindications, interactions, references
+    File: drugs\drug_modules\allergy\antihistamines.py
+  - Chlorpheniramine: contraindications, interactions, references
+    File: drugs\drug_modules\allergy\antihistamines.py
+  - Diphenhydramine: interactions, pregnancy, references
+    File: drugs\drug_modules\allergy\antihistamines.py
+  - Etomidate: interactions, pregnancy, references
+    File: drugs\drug_modules\anesthesia\induction_agents.py
+  - Ketamine: interactions, pregnancy, references
+    File: drugs\drug_modules\anesthesia\induction_agents.py
+  - Propofol: interactions, pregnancy, references
+    File: drugs\drug_modules\anesthesia\induction_agents.py
+  - Cisatracurium: interactions, pregnancy, references
+    File: drugs\drug_modules\anesthesia\neuromuscular_blockers.py
+  - Rocuronium: interactions, pregnancy, references
+    File: drugs\drug_modules\anesthesia\neuromuscular_blockers.py
+  - Succinylcholine: interactions, pregnancy, references
+    File: drugs\drug_modules\anesthesia\neuromuscular_blockers.py
+  - Propylthiouracil: contraindications, interactions, pregnancy
+    File: drugs\drug_modules\endocrinology\thyroid.py
+  - Anastrozole: interactions, pregnancy, references
+    File: drugs\drug_modules\oncology\basic_oncology.py
+  - Imatinib: contraindications, pregnancy, references
+    File: drugs\drug_modules\oncology\basic_oncology.py
+  - Erlotinib: contraindications, pregnancy, references
+    File: drugs\drug_modules\oncology\basic_oncology.py
+  - Lidocaine: interactions, pregnancy, references
+    File: drugs\drug_modules\anesthesia\local_anesthetics.py
+  - Enalapril: pregnancy, references
+    File: drugs\drug_modules\cardiovascular\ace_arb.py
+  - Lisinopril: pregnancy, references
+    File: drugs\drug_modules\cardiovascular\ace_arb.py
+  - Losartan: pregnancy, references
+    File: drugs\drug_modules\cardiovascular\ace_arb.py
+  - Telmisartan: pregnancy, references
+    File: drugs\drug_modules\cardiovascular\ace_arb.py
+  - Valsartan: pregnancy, references
+    File: drugs\drug_modules\cardiovascular\ace_arb.py
+  - Ranitidine: pregnancy, references
+    File: drugs\drug_modules\gastrointestinal\h2_receptor_antagonists.py
+  - Omeprazole: pregnancy, references
+    File: drugs\drug_modules\gastrointestinal\proton_pump_inhibitors.py
+  - Ipratropium: pregnancy, references
+    File: drugs\drug_modules\respiratory\anticholinergic_short_actings.py
+  - Tamoxifen: pregnancy, references
+    File: drugs\drug_modules\oncology\basic_oncology.py
+  - Mycophenolate: interactions, pregnancy
+    File: drugs\drug_modules\immunology\immunosuppressants.py
+  - Tacrolimus: contraindications, pregnancy
+    File: drugs\drug_modules\immunology\immunosuppressants.py
+  - Diltiazem: references
+    File: drugs\drug_modules\cardiovascular\calcium_blockers\non_dihydropyridines.py
+  - Verapamil: references
+    File: drugs\drug_modules\cardiovascular\calcium_blockers\non_dihydropyridines.py
+  - Metformin: pregnancy
+    File: drugs\drug_modules\diabetes\biguanides.py
+  - Insulin: pregnancy
+    File: drugs\drug_modules\diabetes\insulins.py
+  - Gliclazide: pregnancy
+    File: drugs\drug_modules\diabetes\sulfonylureas.py
+  - Pioglitazone: pregnancy
+    File: drugs\drug_modules\diabetes\thiazolidinedione_tzds.py
+  - Bismuth subsalicylate: pregnancy
+    File: drugs\drug_modules\gastrointestinal\antidiarrheals.py
+  - Sucralfate: pregnancy
+    File: drugs\drug_modules\gastrointestinal\mucosal_protectants.py
+  - Esomeprazole: pregnancy
+    File: drugs\drug_modules\gastrointestinal\proton_pump_inhibitors.py
+  - Lansoprazole: pregnancy
+    File: drugs\drug_modules\gastrointestinal\proton_pump_inhibitors.py
+  - Pantoprazole: pregnancy
+    File: drugs\drug_modules\gastrointestinal\proton_pump_inhibitors.py
+  - Domperidone: pregnancy
+    File: drugs\drug_modules\gastrointestinal\prokinetic_antiemetics.py
+  - Ondansetron: pregnancy
+    File: drugs\drug_modules\gastrointestinal\antiemetic_5_ht3_antagonists.py
+  - Hydrocodone: pregnancy
+    File: drugs\drug_modules\analgesics\opioid_agonists.py
+  - Codeine: pregnancy
+    File: drugs\drug_modules\analgesics\opioid_agonist_weaks.py
+  - Montelukast: pregnancy
+    File: drugs\drug_modules\respiratory\leukotriene_receptor_antagonists.py
+  - Nedocromil: pregnancy
+    File: drugs\drug_modules\respiratory\leukotriene_receptor_antagonists.py
+  - Formoterol: pregnancy
+    File: drugs\drug_modules\respiratory\long_acting_beta_2_agonist_labas.py

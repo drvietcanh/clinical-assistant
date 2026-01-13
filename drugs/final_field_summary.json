@@ -1,0 +1,290 @@
+{
+  "generation_date": "2026-01-13T20:34:57.461702",
+  "total_drugs": 722,
+  "summary": {
+    "drugs_with_all_standard": 583,
+    "drugs_with_all_standard_pct": 80.74792243767313,
+    "drugs_with_all_additional": 219,
+    "drugs_with_all_additional_pct": 30.332409972299168,
+    "avg_completeness": 88.05401662049861,
+    "drugs_100_percent": 118,
+    "drugs_90_plus_percent": 535,
+    "drugs_under_50_percent": 43
+  },
+  "field_statistics": {
+    "group": {
+      "has": 714,
+      "missing": 8,
+      "empty": 0,
+      "has_content": 714
+    },
+    "vietnamese_name": {
+      "has": 714,
+      "missing": 8,
+      "empty": 0,
+      "has_content": 714
+    },
+    "administration": {
+      "has": 714,
+      "missing": 8,
+      "empty": 0,
+      "has_content": 714
+    },
+    "indications": {
+      "has": 714,
+      "missing": 8,
+      "empty": 0,
+      "has_content": 714
+    },
+    "dosage": {
+      "has": 713,
+      "missing": 9,
+      "empty": 0,
+      "has_content": 713
+    },
+    "side_effects": {
+      "has": 712,
+      "missing": 10,
+      "empty": 12,
+      "has_content": 700
+    },
+    "contraindications": {
+      "has": 703,
+      "missing": 19,
+      "empty": 33,
+      "has_content": 670
+    },
+    "interactions": {
+      "has": 695,
+      "missing": 27,
+      "empty": 38,
+      "has_content": 657
+    },
+    "pregnancy": {
+      "has": 649,
+      "missing": 73,
+      "empty": 44,
+      "has_content": 605
+    },
+    "mechanism_of_action": {
+      "has": 715,
+      "missing": 7,
+      "empty": 33,
+      "has_content": 682
+    },
+    "monitoring": {
+      "has": 715,
+      "missing": 7,
+      "empty": 28,
+      "has_content": 687
+    },
+    "precautions": {
+      "has": 715,
+      "missing": 7,
+      "empty": 58,
+      "has_content": 657
+    },
+    "pharmacokinetics": {
+      "has": 715,
+      "missing": 7,
+      "empty": 80,
+      "has_content": 635
+    },
+    "storage": {
+      "has": 715,
+      "missing": 7,
+      "empty": 63,
+      "has_content": 652
+    },
+    "black_box_warnings": {
+      "has": 715,
+      "missing": 7,
+      "empty": 155,
+      "has_content": 560
+    },
+    "drug_interactions": {
+      "has": 715,
+      "missing": 7,
+      "empty": 150,
+      "has_content": 565
+    },
+    "pregnancy_lactation": {
+      "has": 715,
+      "missing": 7,
+      "empty": 40,
+      "has_content": 675
+    },
+    "hepatic_adjustment": {
+      "has": 715,
+      "missing": 7,
+      "empty": 90,
+      "has_content": 625
+    },
+    "overdose_management": {
+      "has": 715,
+      "missing": 7,
+      "empty": 89,
+      "has_content": 626
+    },
+    "reversal_agents": {
+      "has": 715,
+      "missing": 7,
+      "empty": 401,
+      "has_content": 314
+    },
+    "administration_instructions": {
+      "has": 715,
+      "missing": 7,
+      "empty": 73,
+      "has_content": 642
+    },
+    "references": {
+      "has": 680,
+      "missing": 42,
+      "empty": 42,
+      "has_content": 638
+    },
+    "renal_adjustment": {
+      "has": 715,
+      "missing": 7,
+      "empty": 63,
+      "has_content": 652
+    },
+    "contraindications_detail": {
+      "has": 715,
+      "missing": 7,
+      "empty": 268,
+      "has_content": 447
+    }
+  },
+  "priority_fields": {
+    "standard_missing": [
+      [
+        "pregnancy",
+        117
+      ],
+      [
+        "pharmacokinetics",
+        87
+      ],
+      [
+        "storage",
+        70
+      ],
+      [
+        "interactions",
+        65
+      ],
+      [
+        "precautions",
+        65
+      ],
+      [
+        "contraindications",
+        52
+      ],
+      [
+        "mechanism_of_action",
+        40
+      ],
+      [
+        "monitoring",
+        35
+      ],
+      [
+        "side_effects",
+        22
+      ],
+      [
+        "dosage",
+        9
+      ],
+      [
+        "group",
+        8
+      ],
+      [
+        "vietnamese_name",
+        8
+      ],
+      [
+        "administration",
+        8
+      ],
+      [
+        "indications",
+        8
+      ]
+    ],
+    "safety_fields": [
+      [
+        "reversal_agents",
+        408
+      ],
+      [
+        "contraindications_detail",
+        275
+      ],
+      [
+        "black_box_warnings",
+        162
+      ],
+      [
+        "overdose_management",
+        96
+      ]
+    ],
+    "dosing_adjustments": [
+      [
+        "hepatic_adjustment",
+        97
+      ],
+      [
+        "renal_adjustment",
+        70
+      ]
+    ]
+  },
+  "top_missing_fields": [
+    [
+      "reversal_agents",
+      408
+    ],
+    [
+      "contraindications_detail",
+      275
+    ],
+    [
+      "black_box_warnings",
+      162
+    ],
+    [
+      "drug_interactions",
+      157
+    ],
+    [
+      "pregnancy",
+      117
+    ],
+    [
+      "hepatic_adjustment",
+      97
+    ],
+    [
+      "overdose_management",
+      96
+    ],
+    [
+      "pharmacokinetics",
+      87
+    ],
+    [
+      "references",
+      84
+    ],
+    [
+      "administration_instructions",
+      80
+    ]
+  ]
+}

@@ -1,0 +1,2070 @@
+{
+  "fix_date": "2026-01-13T20:45:45.233981",
+  "dry_run": false,
+  "results": {
+    "administration_instructions": [],
+    "pregnancy_lactation": [],
+    "overdose_management": [],
+    "hepatic_adjustment": [],
+    "already_correct": [
+      {
+        "drug": "Clonidine"
+      },
+      {
+        "drug": "Digoxin"
+      },
+      {
+        "drug": "Doxazosin"
+      },
+      {
+        "drug": "Finerenone"
+      },
+      {
+        "drug": "Ivabradine"
+      },
+      {
+        "drug": "Labetalol"
+      },
+      {
+        "drug": "Methyldopa"
+      },
+      {
+        "drug": "Sacubitril-valsartan"
+      },
+      {
+        "drug": "Sotagliflozin"
+      },
+      {
+        "drug": "Vericiguat"
+      },
+      {
+        "drug": "Hydralazine"
+      },
+      {
+        "drug": "Isosorbide mononitrate"
+      },
+      {
+        "drug": "Nesiritide"
+      },
+      {
+        "drug": "Nitroglycerin"
+      },
+      {
+        "drug": "Nitroprusside"
+      },
+      {
+        "drug": "Benazepril"
+      },
+      {
+        "drug": "Captopril"
+      },
+      {
+        "drug": "Perindopril"
+      },
+      {
+        "drug": "Ramipril"
+      },
+      {
+        "drug": "Azilsartan medoxomil"
+      },
+      {
+        "drug": "Candesartan"
+      },
+      {
+        "drug": "Irbesartan"
+      },
+      {
+        "drug": "Olmesartan"
+      },
+      {
+        "drug": "Valsartan"
+      },
+      {
+        "drug": "Acebutolol"
+      },
+      {
+        "drug": "Atenolol"
+      },
+      {
+        "drug": "Betaxolol"
+      },
+      {
+        "drug": "Bisoprolol"
+      },
+      {
+        "drug": "Metoprolol"
+      },
+      {
+        "drug": "Nebivolol"
+      },
+      {
+        "drug": "Timolol"
+      },
+      {
+        "drug": "Carvedilol"
+      },
+      {
+        "drug": "Nadolol"
+      },
+      {
+        "drug": "Propranolol"
+      },
+      {
+        "drug": "Atorvastatin"
+      },
+      {
+        "drug": "Simvastatin"
+      },
+      {
+        "drug": "Rosuvastatin"
+      },
+      {
+        "drug": "Pravastatin"
+      },
+      {
+        "drug": "Bempedoic acid"
+      },
+      {
+        "drug": "Ezetimibe"
+      },
+      {
+        "drug": "Adenosine"
+      },
+      {
+        "drug": "Amiodarone"
+      },
+      {
+        "drug": "Disopyramide"
+      },
+      {
+        "drug": "Dofetilide"
+      },
+      {
+        "drug": "Dronedarone"
+      },
+      {
+        "drug": "Flecainide"
+      },
+      {
+        "drug": "Ibutilide"
+      },
+      {
+        "drug": "Procainamide"
+      },
+      {
+        "drug": "Propafenone"
+      },
+      {
+        "drug": "Quinidine"
+      },
+      {
+        "drug": "Sotalol"
+      },
+      {
+        "drug": "Amlodipine"
+      },
+      {
+        "drug": "Clevidipine"
+      },
+      {
+        "drug": "Felodipine"
+      },
+      {
+        "drug": "Isradipine"
+      },
+      {
+        "drug": "Lacidipine"
+      },
+      {
+        "drug": "Nicardipine"
+      },
+      {
+        "drug": "Nifedipine"
+      },
+      {
+        "drug": "Nisoldipine"
+      },
+      {
+        "drug": "Bumetanide"
+      },
+      {
+        "drug": "Chlorthalidone"
+      },
+      {
+        "drug": "Eplerenone"
+      },
+      {
+        "drug": "Furosemide"
+      },
+      {
+        "drug": "Hydrochlorothiazide"
+      },
+      {
+        "drug": "Indapamide"
+      },
+      {
+        "drug": "Spironolactone"
+      },
+      {
+        "drug": "Torsemide"
+      },
+      {
+        "drug": "Apixaban"
+      },
+      {
+        "drug": "Aspirin"
+      },
+      {
+        "drug": "Clopidogrel"
+      },
+      {
+        "drug": "Dabigatran"
+      },
+      {
+        "drug": "Edoxaban"
+      },
+      {
+        "drug": "Enoxaparin"
+      },
+      {
+        "drug": "Fondaparinux"
+      },
+      {
+        "drug": "Prasugrel"
+      },
+      {
+        "drug": "Rivaroxaban"
+      },
+      {
+        "drug": "Ticagrelor"
+      },
+      {
+        "drug": "Warfarin"
+      },
+      {
+        "drug": "Alirocumab"
+      },
+      {
+        "drug": "Evolocumab"
+      },
+      {
+        "drug": "Inclisiran"
+      },
+      {
+        "drug": "Evinacumab"
+      },
+      {
+        "drug": "Fenofibrate"
+      },
+      {
+        "drug": "Gemfibrozil"
+      },
+      {
+        "drug": "Icosapent ethyl"
+      },
+      {
+        "drug": "Niacin"
+      },
+      {
+        "drug": "Omega-3 acid ethyl esters"
+      },
+      {
+        "drug": "Pemafibrate"
+      },
+      {
+        "drug": "Plozasiran"
+      },
+      {
+        "drug": "Amlodipine/Olmesartan"
+      },
+      {
+        "drug": "Amlodipine/Valsartan"
+      },
+      {
+        "drug": "Lisinopril/Hydrochlorothiazide"
+      },
+      {
+        "drug": "Losartan/Hydrochlorothiazide"
+      },
+      {
+        "drug": "Dipyridamole"
+      },
+      {
+        "drug": "Ticlopidine"
+      },
+      {
+        "drug": "High-intensity statin (đột quỵ/TIA)"
+      },
+      {
+        "drug": "Enalaprilat"
+      },
+      {
+        "drug": "Metformin"
+      },
+      {
+        "drug": "Alogliptin"
+      },
+      {
+        "drug": "Linagliptin"
+      },
+      {
+        "drug": "Saxagliptin"
+      },
+      {
+        "drug": "Sitagliptin"
+      },
+      {
+        "drug": "Vildagliptin"
+      },
+      {
+        "drug": "Insulin"
+      },
+      {
+        "drug": "Insulin Aspart"
+      },
+      {
+        "drug": "Insulin Degludec"
+      },
+      {
+        "drug": "Insulin Detemir"
+      },
+      {
+        "drug": "Insulin Glargine"
+      },
+      {
+        "drug": "Insulin Glulisine"
+      },
+      {
+        "drug": "Insulin Lispro"
+      },
+      {
+        "drug": "Insulin NPH"
+      },
+      {
+        "drug": "Insulin Regular"
+      },
+      {
+        "drug": "Empagliflozin"
+      },
+      {
+        "drug": "Dapagliflozin"
+      },
+      {
+        "drug": "Canagliflozin"
+      },
+      {
+        "drug": "Glibenclamide"
+      },
+      {
+        "drug": "Gliclazide"
+      },
+      {
+        "drug": "Glimepiride"
+      },
+      {
+        "drug": "Pioglitazone"
+      },
+      {
+        "drug": "Rosiglitazone"
+      },
+      {
+        "drug": "Nateglinide"
+      },
+      {
+        "drug": "Repaglinide"
+      },
+      {
+        "drug": "Acarbose"
+      },
+      {
+        "drug": "Miglitol"
+      },
+      {
+        "drug": "Liraglutide"
+      },
+      {
+        "drug": "Semaglutide"
+      },
+      {
+        "drug": "Dulaglutide"
+      },
+      {
+        "drug": "Exenatide"
+      },
+      {
+        "drug": "Metformin/Dapagliflozin"
+      },
+      {
+        "drug": "Metformin/Empagliflozin"
+      },
+      {
+        "drug": "Metformin/Glibenclamide"
+      },
+      {
+        "drug": "Metformin/Pioglitazone"
+      },
+      {
+        "drug": "Metformin/Sitagliptin"
+      },
+      {
+        "drug": "Teplizumab"
+      },
+      {
+        "drug": "Bromocriptine"
+      },
+      {
+        "drug": "Colesevelam"
+      },
+      {
+        "drug": "Aluminum hydroxide/Magnesium hydroxide"
+      },
+      {
+        "drug": "Calcium carbonate"
+      },
+      {
+        "drug": "Bismuth subsalicylate"
+      },
+      {
+        "drug": "Cimetidine"
+      },
+      {
+        "drug": "Famotidine"
+      },
+      {
+        "drug": "Misoprostol"
+      },
+      {
+        "drug": "Sucralfate"
+      },
+      {
+        "drug": "Omeprazole"
+      },
+      {
+        "drug": "Esomeprazole"
+      },
+      {
+        "drug": "Lansoprazole"
+      },
+      {
+        "drug": "Pantoprazole"
+      },
+      {
+        "drug": "Rabeprazole"
+      },
+      {
+        "drug": "Dexlansoprazole"
+      },
+      {
+        "drug": "Ilaprazole"
+      },
+      {
+        "drug": "Domperidone"
+      },
+      {
+        "drug": "Ondansetron"
+      },
+      {
+        "drug": "Tegoprazan"
+      },
+      {
+        "drug": "Vonoprazan"
+      },
+      {
+        "drug": "Baricitinib"
+      },
+      {
+        "drug": "Tofacitinib"
+      },
+      {
+        "drug": "Upadacitinib"
+      },
+      {
+        "drug": "Bisacodyl"
+      },
+      {
+        "drug": "Lactulose"
+      },
+      {
+        "drug": "Polyethylene glycol 3350"
+      },
+      {
+        "drug": "Senna (sennosides)"
+      },
+      {
+        "drug": "Hyoscine butylbromide"
+      },
+      {
+        "drug": "Mebeverine"
+      },
+      {
+        "drug": "Trimebutine"
+      },
+      {
+        "drug": "Simethicone"
+      },
+      {
+        "drug": "Mesalazine"
+      },
+      {
+        "drug": "Sulfasalazine"
+      },
+      {
+        "drug": "Celecoxib"
+      },
+      {
+        "drug": "Diclofenac"
+      },
+      {
+        "drug": "Etoricoxib"
+      },
+      {
+        "drug": "Ibuprofen"
+      },
+      {
+        "drug": "Indomethacin"
+      },
+      {
+        "drug": "Ketoprofen"
+      },
+      {
+        "drug": "Ketorolac"
+      },
+      {
+        "drug": "Meloxicam"
+      },
+      {
+        "drug": "Naproxen"
+      },
+      {
+        "drug": "Nimesulide"
+      },
+      {
+        "drug": "Buprenorphine"
+      },
+      {
+        "drug": "Hydrocodone"
+      },
+      {
+        "drug": "Tapentadol"
+      },
+      {
+        "drug": "Fentanyl"
+      },
+      {
+        "drug": "Hydromorphone"
+      },
+      {
+        "drug": "Meperidine"
+      },
+      {
+        "drug": "Methadone"
+      },
+      {
+        "drug": "Morphine"
+      },
+      {
+        "drug": "Oxycodone"
+      },
+      {
+        "drug": "Remifentanil"
+      },
+      {
+        "drug": "Sufentanil"
+      },
+      {
+        "drug": "Alfentanil"
+      },
+      {
+        "drug": "Codeine"
+      },
+      {
+        "drug": "Paracetamol"
+      },
+      {
+        "drug": "Lasmiditan"
+      },
+      {
+        "drug": "Rizatriptan"
+      },
+      {
+        "drug": "Sumatriptan"
+      },
+      {
+        "drug": "Aspirin/Carisoprodol"
+      },
+      {
+        "drug": "Paracetamol/Carisoprodol"
+      },
+      {
+        "drug": "Paracetamol/Chlorzoxazone"
+      },
+      {
+        "drug": "Paracetamol/Methocarbamol"
+      },
+      {
+        "drug": "Paracetamol/Orphenadrine"
+      },
+      {
+        "drug": "Cromolyn"
+      },
+      {
+        "drug": "Montelukast"
+      },
+      {
+        "drug": "Nedocromil"
+      },
+      {
+        "drug": "Zafirlukast"
+      },
+      {
+        "drug": "Salbutamol"
+      },
+      {
+        "drug": "Formoterol"
+      },
+      {
+        "drug": "Indacaterol"
+      },
+      {
+        "drug": "Olodaterol"
+      },
+      {
+        "drug": "Salmeterol"
+      },
+      {
+        "drug": "Vilanterol"
+      },
+      {
+        "drug": "Aclidinium"
+      },
+      {
+        "drug": "Glycopyrronium"
+      },
+      {
+        "drug": "Tiotropium"
+      },
+      {
+        "drug": "Umeclidinium"
+      },
+      {
+        "drug": "Beclomethasone inhaled"
+      },
+      {
+        "drug": "Ciclesonide"
+      },
+      {
+        "drug": "Fluticasone inhaled"
+      },
+      {
+        "drug": "Aminophylline"
+      },
+      {
+        "drug": "Theophylline"
+      },
+      {
+        "drug": "Benralizumab"
+      },
+      {
+        "drug": "Dupilumab"
+      },
+      {
+        "drug": "Mepolizumab"
+      },
+      {
+        "drug": "Omalizumab"
+      },
+      {
+        "drug": "Tezepelumab"
+      },
+      {
+        "drug": "Roflumilast"
+      },
+      {
+        "drug": "Budesonide/Formoterol inhaler"
+      },
+      {
+        "drug": "Fluticasone/Salmeterol inhaler"
+      },
+      {
+        "drug": "Fluticasone/Umeclidinium/Vilanterol inhaler"
+      },
+      {
+        "drug": "Ipratropium/Salbutamol inhaler"
+      },
+      {
+        "drug": "Tiotropium/Olodaterol inhaler"
+      },
+      {
+        "drug": "Umeclidinium/Vilanterol inhaler"
+      },
+      {
+        "drug": "Carbamazepine"
+      },
+      {
+        "drug": "Ethosuximide"
+      },
+      {
+        "drug": "Fosphenytoin"
+      },
+      {
+        "drug": "Lacosamide"
+      },
+      {
+        "drug": "Lamotrigine"
+      },
+      {
+        "drug": "Levetiracetam"
+      },
+      {
+        "drug": "Oxcarbazepine"
+      },
+      {
+        "drug": "Perampanel"
+      },
+      {
+        "drug": "Phenobarbital"
+      },
+      {
+        "drug": "Phenytoin"
+      },
+      {
+        "drug": "Primidone"
+      },
+      {
+        "drug": "Topiramate"
+      },
+      {
+        "drug": "Valproate"
+      },
+      {
+        "drug": "Zonisamide"
+      },
+      {
+        "drug": "Fluoxetine"
+      },
+      {
+        "drug": "Gabapentin"
+      },
+      {
+        "drug": "Pregabalin"
+      },
+      {
+        "drug": "Aducanumab"
+      },
+      {
+        "drug": "Donanemab"
+      },
+      {
+        "drug": "Donepezil"
+      },
+      {
+        "drug": "Lecanemab"
+      },
+      {
+        "drug": "Memantine"
+      },
+      {
+        "drug": "Rivastigmine"
+      },
+      {
+        "drug": "Clonazepam"
+      },
+      {
+        "drug": "Diazepam"
+      },
+      {
+        "drug": "Lorazepam"
+      },
+      {
+        "drug": "Baclofen"
+      },
+      {
+        "drug": "Carisoprodol"
+      },
+      {
+        "drug": "Cyclobenzaprine"
+      },
+      {
+        "drug": "Metaxalone"
+      },
+      {
+        "drug": "Methocarbamol"
+      },
+      {
+        "drug": "Tizanidine"
+      },
+      {
+        "drug": "Deutetrabenazine"
+      },
+      {
+        "drug": "Istradefylline"
+      },
+      {
+        "drug": "Levodopa/Carbidopa"
+      },
+      {
+        "drug": "Opicapone"
+      },
+      {
+        "drug": "Pimavanserin"
+      },
+      {
+        "drug": "Pramipexole"
+      },
+      {
+        "drug": "Ropinirole"
+      },
+      {
+        "drug": "Safinamide"
+      },
+      {
+        "drug": "Tetrabenazine"
+      },
+      {
+        "drug": "Cerebrolysin"
+      },
+      {
+        "drug": "Cerebroprotein hydrolysate (khác)"
+      },
+      {
+        "drug": "Citicoline"
+      },
+      {
+        "drug": "Edaravone"
+      },
+      {
+        "drug": "Ginkgo biloba extract"
+      },
+      {
+        "drug": "Nicergoline"
+      },
+      {
+        "drug": "Nimodipine"
+      },
+      {
+        "drug": "Piracetam"
+      },
+      {
+        "drug": "Vinpocetine"
+      },
+      {
+        "drug": "Citicoline/Piracetam"
+      },
+      {
+        "drug": "Ginkgo biloba/Vinpocetine"
+      },
+      {
+        "drug": "Olanzapine/Fluoxetine"
+      },
+      {
+        "drug": "Piracetam/Vinpocetine"
+      },
+      {
+        "drug": "Eptinezumab"
+      },
+      {
+        "drug": "Erenumab"
+      },
+      {
+        "drug": "Fremanezumab"
+      },
+      {
+        "drug": "Galcanezumab"
+      },
+      {
+        "drug": "Rimegepant"
+      },
+      {
+        "drug": "Ubrogepant"
+      },
+      {
+        "drug": "Zolmitriptan"
+      },
+      {
+        "drug": "Dimethyl fumarate"
+      },
+      {
+        "drug": "Fingolimod"
+      },
+      {
+        "drug": "Ofatumumab"
+      },
+      {
+        "drug": "Citalopram"
+      },
+      {
+        "drug": "Escitalopram"
+      },
+      {
+        "drug": "Fluvoxamine"
+      },
+      {
+        "drug": "Paroxetine"
+      },
+      {
+        "drug": "Sertraline"
+      },
+      {
+        "drug": "Desvenlafaxine"
+      },
+      {
+        "drug": "Duloxetine"
+      },
+      {
+        "drug": "Venlafaxine"
+      },
+      {
+        "drug": "Amitriptyline"
+      },
+      {
+        "drug": "Clomipramine"
+      },
+      {
+        "drug": "Aripiprazole"
+      },
+      {
+        "drug": "Chlorpromazine"
+      },
+      {
+        "drug": "Clozapine"
+      },
+      {
+        "drug": "Fluphenazine"
+      },
+      {
+        "drug": "Haloperidol"
+      },
+      {
+        "drug": "Lurasidone"
+      },
+      {
+        "drug": "Olanzapine"
+      },
+      {
+        "drug": "Pimozide"
+      },
+      {
+        "drug": "Quetiapine"
+      },
+      {
+        "drug": "Risperidone"
+      },
+      {
+        "drug": "Ziprasidone"
+      },
+      {
+        "drug": "Bupropion"
+      },
+      {
+        "drug": "Mirtazapine"
+      },
+      {
+        "drug": "Phenelzine"
+      },
+      {
+        "drug": "Tranylcypromine"
+      },
+      {
+        "drug": "Trazodone"
+      },
+      {
+        "drug": "Atomoxetine"
+      },
+      {
+        "drug": "Buspirone"
+      },
+      {
+        "drug": "Dextroamphetamine"
+      },
+      {
+        "drug": "Lisdexamfetamine"
+      },
+      {
+        "drug": "Methylphenidate"
+      },
+      {
+        "drug": "Heparin"
+      },
+      {
+        "drug": "Eltrombopag"
+      },
+      {
+        "drug": "Epoetin alfa"
+      },
+      {
+        "drug": "Filgrastim"
+      },
+      {
+        "drug": "Romiplostim"
+      },
+      {
+        "drug": "Tranexamic acid"
+      },
+      {
+        "drug": "Emicizumab"
+      },
+      {
+        "drug": "Andexanet alfa"
+      },
+      {
+        "drug": "Idarucizumab"
+      },
+      {
+        "drug": "Protamine"
+      },
+      {
+        "drug": "Vitamin K"
+      },
+      {
+        "drug": "Alteplase"
+      },
+      {
+        "drug": "Tenecteplase"
+      },
+      {
+        "drug": "Calcium"
+      },
+      {
+        "drug": "Folic acid"
+      },
+      {
+        "drug": "Iron"
+      },
+      {
+        "drug": "Vitamin B12"
+      },
+      {
+        "drug": "Vitamin D"
+      },
+      {
+        "drug": "Levocetirizine"
+      },
+      {
+        "drug": "Loratadine"
+      },
+      {
+        "drug": "Hydroxyzine"
+      },
+      {
+        "drug": "Dexmedetomidine"
+      },
+      {
+        "drug": "Midazolam (IV/ICU)"
+      },
+      {
+        "drug": "Thiopental"
+      },
+      {
+        "drug": "Vecuronium"
+      },
+      {
+        "drug": "Aztreonam"
+      },
+      {
+        "drug": "Cefiderocol"
+      },
+      {
+        "drug": "Doripenem"
+      },
+      {
+        "drug": "Ertapenem"
+      },
+      {
+        "drug": "Imipenem-cilastatin"
+      },
+      {
+        "drug": "Meropenem"
+      },
+      {
+        "drug": "Penicillin G"
+      },
+      {
+        "drug": "Piperacillin-tazobactam"
+      },
+      {
+        "drug": "Amoxicillin"
+      },
+      {
+        "drug": "Amoxicillin-clavulanate"
+      },
+      {
+        "drug": "Ampicillin"
+      },
+      {
+        "drug": "Ampicillin-sulbactam"
+      },
+      {
+        "drug": "Nafcillin"
+      },
+      {
+        "drug": "Oxacillin"
+      },
+      {
+        "drug": "Cefazolin"
+      },
+      {
+        "drug": "Cefepime"
+      },
+      {
+        "drug": "Ceftriaxone"
+      },
+      {
+        "drug": "Cephalexin"
+      },
+      {
+        "drug": "Azithromycin"
+      },
+      {
+        "drug": "Clarithromycin"
+      },
+      {
+        "drug": "Erythromycin"
+      },
+      {
+        "drug": "Doxycycline"
+      },
+      {
+        "drug": "Minocycline"
+      },
+      {
+        "drug": "Tetracycline"
+      },
+      {
+        "drug": "Clindamycin"
+      },
+      {
+        "drug": "Trimethoprim-sulfamethoxazole"
+      },
+      {
+        "drug": "Levofloxacin"
+      },
+      {
+        "drug": "Moxifloxacin"
+      },
+      {
+        "drug": "Amikacin"
+      },
+      {
+        "drug": "Gentamicin"
+      },
+      {
+        "drug": "Plazomicin"
+      },
+      {
+        "drug": "Tobramycin"
+      },
+      {
+        "drug": "Daptomycin"
+      },
+      {
+        "drug": "Teicoplanin"
+      },
+      {
+        "drug": "Vancomycin"
+      },
+      {
+        "drug": "Linezolid"
+      },
+      {
+        "drug": "Colistin"
+      },
+      {
+        "drug": "Polymyxin B"
+      },
+      {
+        "drug": "Eravacycline"
+      },
+      {
+        "drug": "Fidaxomicin"
+      },
+      {
+        "drug": "Fosfomycin"
+      },
+      {
+        "drug": "Lefamulin"
+      },
+      {
+        "drug": "Nitrofurantoin"
+      },
+      {
+        "drug": "Omadacycline"
+      },
+      {
+        "drug": "Acyclovir"
+      },
+      {
+        "drug": "Valacyclovir"
+      },
+      {
+        "drug": "Favipiravir"
+      },
+      {
+        "drug": "Oseltamivir"
+      },
+      {
+        "drug": "Remdesivir"
+      },
+      {
+        "drug": "Zanamivir"
+      },
+      {
+        "drug": "Ganciclovir"
+      },
+      {
+        "drug": "Entecavir"
+      },
+      {
+        "drug": "Ledipasvir"
+      },
+      {
+        "drug": "Ribavirin"
+      },
+      {
+        "drug": "Sofosbuvir"
+      },
+      {
+        "drug": "Sofosbuvir/Velpatasvir"
+      },
+      {
+        "drug": "Tenofovir"
+      },
+      {
+        "drug": "Cobicistat (COBI)"
+      },
+      {
+        "drug": "Ritonavir (low-dose booster)"
+      },
+      {
+        "drug": "Bictegravir (BIC)"
+      },
+      {
+        "drug": "Bictegravir/Emtricitabine/Tenofovir alafenamide (BIC/FTC/TAF)"
+      },
+      {
+        "drug": "Cabotegravir + Rilpivirine (Long-acting IM)"
+      },
+      {
+        "drug": "Dolutegravir (DTG)"
+      },
+      {
+        "drug": "Efavirenz (EFV)"
+      },
+      {
+        "drug": "Efavirenz/Tenofovir disoproxil fumarate/Emtricitabine (EFV/TDF/FTC)"
+      },
+      {
+        "drug": "Rilpivirine (RPV)"
+      },
+      {
+        "drug": "Emtricitabine (FTC)"
+      },
+      {
+        "drug": "Lamivudine (3TC)"
+      },
+      {
+        "drug": "Tenofovir alafenamide (TAF)"
+      },
+      {
+        "drug": "Tenofovir alafenamide/Emtricitabine (TAF/FTC)"
+      },
+      {
+        "drug": "Tenofovir disoproxil fumarate (TDF)"
+      },
+      {
+        "drug": "Tenofovir disoproxil fumarate/Emtricitabine (TDF/FTC)"
+      },
+      {
+        "drug": "Atazanavir (boosted with ritonavir/cobicistat)"
+      },
+      {
+        "drug": "Darunavir (boosted with ritonavir/cobicistat)"
+      },
+      {
+        "drug": "Fluconazole"
+      },
+      {
+        "drug": "Isavuconazole"
+      },
+      {
+        "drug": "Itraconazole"
+      },
+      {
+        "drug": "Posaconazole"
+      },
+      {
+        "drug": "Voriconazole"
+      },
+      {
+        "drug": "Amphotericin B"
+      },
+      {
+        "drug": "Nystatin"
+      },
+      {
+        "drug": "Anidulafungin"
+      },
+      {
+        "drug": "Caspofungin"
+      },
+      {
+        "drug": "Micafungin"
+      },
+      {
+        "drug": "Albendazole"
+      },
+      {
+        "drug": "Ivermectin"
+      },
+      {
+        "drug": "Levamisole"
+      },
+      {
+        "drug": "Mebendazole"
+      },
+      {
+        "drug": "Praziquantel"
+      },
+      {
+        "drug": "Artemether-lumefantrine"
+      },
+      {
+        "drug": "Artesunate"
+      },
+      {
+        "drug": "Chloroquine"
+      },
+      {
+        "drug": "Hydroxychloroquine"
+      },
+      {
+        "drug": "Primaquine"
+      },
+      {
+        "drug": "Amoxicillin suspension"
+      },
+      {
+        "drug": "Dicloxacillin"
+      },
+      {
+        "drug": "Penicillin V"
+      },
+      {
+        "drug": "Cefaclor"
+      },
+      {
+        "drug": "Cefadroxil"
+      },
+      {
+        "drug": "Cefdinir"
+      },
+      {
+        "drug": "Cefixime"
+      },
+      {
+        "drug": "Cefoperazone"
+      },
+      {
+        "drug": "Cefotaxime"
+      },
+      {
+        "drug": "Cefotetan"
+      },
+      {
+        "drug": "Cefoxitin"
+      },
+      {
+        "drug": "Cefpirome"
+      },
+      {
+        "drug": "Ceftazidime"
+      },
+      {
+        "drug": "Cefuroxime"
+      },
+      {
+        "drug": "Ciprofloxacin"
+      },
+      {
+        "drug": "Gemifloxacin"
+      },
+      {
+        "drug": "Norfloxacin"
+      },
+      {
+        "drug": "Ofloxacin"
+      },
+      {
+        "drug": "Sparfloxacin"
+      },
+      {
+        "drug": "Metronidazole"
+      },
+      {
+        "drug": "Tigecycline"
+      },
+      {
+        "drug": "Bedaquiline"
+      },
+      {
+        "drug": "Clofazimine"
+      },
+      {
+        "drug": "Cycloserine / Terizidone"
+      },
+      {
+        "drug": "Delamanid"
+      },
+      {
+        "drug": "Ethambutol"
+      },
+      {
+        "drug": "Isoniazid"
+      },
+      {
+        "drug": "Linezolid (lao MDR/XDR)"
+      },
+      {
+        "drug": "PAS (para-aminosalicylic acid)"
+      },
+      {
+        "drug": "Pyrazinamide"
+      },
+      {
+        "drug": "Rifabutin"
+      },
+      {
+        "drug": "Rifampin"
+      },
+      {
+        "drug": "Rifapentine"
+      },
+      {
+        "drug": "Streptomycin"
+      },
+      {
+        "drug": "Levothyroxine"
+      },
+      {
+        "drug": "Methimazole"
+      },
+      {
+        "drug": "Propylthiouracil"
+      },
+      {
+        "drug": "Prednisone"
+      },
+      {
+        "drug": "Fludrocortisone"
+      },
+      {
+        "drug": "Hydrocortisone"
+      },
+      {
+        "drug": "Methylprednisolone"
+      },
+      {
+        "drug": "Prednisolone"
+      },
+      {
+        "drug": "Betamethasone"
+      },
+      {
+        "drug": "Dexamethasone"
+      },
+      {
+        "drug": "Testosterone"
+      },
+      {
+        "drug": "Alendronate"
+      },
+      {
+        "drug": "Ibandronate"
+      },
+      {
+        "drug": "Risedronate"
+      },
+      {
+        "drug": "Zoledronic acid"
+      },
+      {
+        "drug": "Abaloparatide"
+      },
+      {
+        "drug": "Calcitonin"
+      },
+      {
+        "drug": "Denosumab"
+      },
+      {
+        "drug": "Raloxifene"
+      },
+      {
+        "drug": "Romosozumab"
+      },
+      {
+        "drug": "Teriparatide"
+      },
+      {
+        "drug": "Atropine"
+      },
+      {
+        "drug": "Flumazenil"
+      },
+      {
+        "drug": "Naloxone"
+      },
+      {
+        "drug": "Naltrexone"
+      },
+      {
+        "drug": "Dobutamine"
+      },
+      {
+        "drug": "Dopamine"
+      },
+      {
+        "drug": "Epinephrine"
+      },
+      {
+        "drug": "Milrinone"
+      },
+      {
+        "drug": "Norepinephrine"
+      },
+      {
+        "drug": "Phenylephrine"
+      },
+      {
+        "drug": "Vasopressin"
+      },
+      {
+        "drug": "Calcium chloride"
+      },
+      {
+        "drug": "Calcium gluconate"
+      },
+      {
+        "drug": "Demeclocycline"
+      },
+      {
+        "drug": "Magnesium oxide"
+      },
+      {
+        "drug": "Magnesium sulfate"
+      },
+      {
+        "drug": "Pamidronate"
+      },
+      {
+        "drug": "Potassium phosphate"
+      },
+      {
+        "drug": "Sodium bicarbonate"
+      },
+      {
+        "drug": "Sodium phosphate"
+      },
+      {
+        "drug": "Sodium polystyrene sulfonate"
+      },
+      {
+        "drug": "Carboprost"
+      },
+      {
+        "drug": "Dinoprostone"
+      },
+      {
+        "drug": "Methylergonovine"
+      },
+      {
+        "drug": "Oxytocin"
+      },
+      {
+        "drug": "Sodium Chloride 0.9%"
+      },
+      {
+        "drug": "Ringer Lactate"
+      },
+      {
+        "drug": "Albumin (Human)"
+      },
+      {
+        "drug": "HES 130/0.4"
+      },
+      {
+        "drug": "Dutasteride"
+      },
+      {
+        "drug": "Finasteride"
+      },
+      {
+        "drug": "Alfuzosin"
+      },
+      {
+        "drug": "Silodosin"
+      },
+      {
+        "drug": "Tamsulosin"
+      },
+      {
+        "drug": "Avanafil"
+      },
+      {
+        "drug": "Sildenafil"
+      },
+      {
+        "drug": "Tadalafil"
+      },
+      {
+        "drug": "Vardenafil"
+      },
+      {
+        "drug": "Fesoterodine"
+      },
+      {
+        "drug": "Mirabegron"
+      },
+      {
+        "drug": "Oxybutynin"
+      },
+      {
+        "drug": "Solifenacin"
+      },
+      {
+        "drug": "Tolterodine"
+      },
+      {
+        "drug": "Calcipotriol"
+      },
+      {
+        "drug": "Calcitriol topical"
+      },
+      {
+        "drug": "Diclofenac gel"
+      },
+      {
+        "drug": "Ivermectin cream"
+      },
+      {
+        "drug": "Ketoprofen gel"
+      },
+      {
+        "drug": "Permethrin topical"
+      },
+      {
+        "drug": "Pimecrolimus"
+      },
+      {
+        "drug": "Salicylic Acid"
+      },
+      {
+        "drug": "Tacrolimus topical"
+      },
+      {
+        "drug": "Azelaic Acid"
+      },
+      {
+        "drug": "Azelaic acid topical"
+      },
+      {
+        "drug": "Benzoyl peroxide topical"
+      },
+      {
+        "drug": "Clindamycin topical"
+      },
+      {
+        "drug": "Erythromycin topical"
+      },
+      {
+        "drug": "Fusidic Acid"
+      },
+      {
+        "drug": "Metronidazole topical"
+      },
+      {
+        "drug": "Mupirocin topical"
+      },
+      {
+        "drug": "Clotrimazole topical"
+      },
+      {
+        "drug": "Econazole topical"
+      },
+      {
+        "drug": "Ketoconazole topical"
+      },
+      {
+        "drug": "Miconazole topical"
+      },
+      {
+        "drug": "Terbinafine topical"
+      },
+      {
+        "drug": "Betamethasone topical"
+      },
+      {
+        "drug": "Betamethasone/Clotrimazole topical"
+      },
+      {
+        "drug": "Clobetasol"
+      },
+      {
+        "drug": "Fusidic acid/Betamethasone topical"
+      },
+      {
+        "drug": "Gentamicin/Betamethasone/Clotrimazole topical"
+      },
+      {
+        "drug": "Hydrocortisone topical"
+      },
+      {
+        "drug": "Miconazole/Hydrocortisone topical"
+      },
+      {
+        "drug": "Mometasone topical"
+      },
+      {
+        "drug": "Triamcinolone topical"
+      },
+      {
+        "drug": "Adapalene"
+      },
+      {
+        "drug": "Tazarotene"
+      },
+      {
+        "drug": "Tretinoin topical"
+      },
+      {
+        "drug": "Bimatoprost"
+      },
+      {
+        "drug": "Brimonidine"
+      },
+      {
+        "drug": "Brinzolamide"
+      },
+      {
+        "drug": "Dorzolamide"
+      },
+      {
+        "drug": "Latanoprost"
+      },
+      {
+        "drug": "Pilocarpine eye drops"
+      },
+      {
+        "drug": "Timolol eye drops"
+      },
+      {
+        "drug": "Travoprost"
+      },
+      {
+        "drug": "Acyclovir eye drops"
+      },
+      {
+        "drug": "Acyclovir eye ointment"
+      },
+      {
+        "drug": "Ciprofloxacin eye drops"
+      },
+      {
+        "drug": "Erythromycin eye ointment"
+      },
+      {
+        "drug": "Ganciclovir eye drops"
+      },
+      {
+        "drug": "Gentamicin eye drops"
+      },
+      {
+        "drug": "Moxifloxacin eye drops"
+      },
+      {
+        "drug": "Polymyxin B/Trimethoprim eye drops"
+      },
+      {
+        "drug": "Tobramycin eye drops"
+      },
+      {
+        "drug": "Dexamethasone eye drops"
+      },
+      {
+        "drug": "Diclofenac eye drops"
+      },
+      {
+        "drug": "Ketorolac eye drops"
+      },
+      {
+        "drug": "Nepafenac eye drops"
+      },
+      {
+        "drug": "Prednisolone eye drops"
+      },
+      {
+        "drug": "Azelastine eye drops"
+      },
+      {
+        "drug": "Ketotifen eye drops"
+      },
+      {
+        "drug": "Olopatadine eye drops"
+      },
+      {
+        "drug": "Artificial tears (Carboxymethylcellulose)"
+      },
+      {
+        "drug": "Atropine eye drops"
+      },
+      {
+        "drug": "Cyclopentolate eye drops"
+      },
+      {
+        "drug": "Phenylephrine eye drops"
+      },
+      {
+        "drug": "Tropicamide eye drops"
+      },
+      {
+        "drug": "Ethinyl estradiol + Levonorgestrel"
+      },
+      {
+        "drug": "Levonorgestrel"
+      },
+      {
+        "drug": "Medroxyprogesterone"
+      },
+      {
+        "drug": "Estradiol"
+      },
+      {
+        "drug": "Progesterone"
+      },
+      {
+        "drug": "Clotrimazole (vaginal)"
+      },
+      {
+        "drug": "Metronidazole (vaginal gel)"
+      },
+      {
+        "drug": "Miconazole (vaginal)"
+      },
+      {
+        "drug": "Azelastine/Fluticasone nasal spray"
+      },
+      {
+        "drug": "Cetirizine/Pseudoephedrine"
+      },
+      {
+        "drug": "Fexofenadine/Pseudoephedrine"
+      },
+      {
+        "drug": "Loratadine/Pseudoephedrine"
+      },
+      {
+        "drug": "Calcium (elemental)"
+      },
+      {
+        "drug": "Folic Acid"
+      },
+      {
+        "drug": "Vitamin C"
+      },
+      {
+        "drug": "Vitamin D3 (Cholecalciferol)"
+      },
+      {
+        "drug": "Vitamin E"
+      },
+      {
+        "drug": "Allopurinol"
+      },
+      {
+        "drug": "Colchicine"
+      },
+      {
+        "drug": "Febuxostat"
+      },
+      {
+        "drug": "Probenecid"
+      },
+      {
+        "drug": "Azathioprine"
+      },
+      {
+        "drug": "Cyclosporine"
+      },
+      {
+        "drug": "Mycophenolate"
+      },
+      {
+        "drug": "Tacrolimus"
+      },
+      {
+        "drug": "Etanercept"
+      },
+      {
+        "drug": "Adalimumab"
+      },
+      {
+        "drug": "Alemtuzumab"
+      },
+      {
+        "drug": "Anifrolumab"
+      },
+      {
+        "drug": "Atezolizumab"
+      },
+      {
+        "drug": "Belimumab"
+      },
+      {
+        "drug": "Bevacizumab"
+      },
+      {
+        "drug": "Brodalumab"
+      },
+      {
+        "drug": "Cemiplimab"
+      },
+      {
+        "drug": "Certolizumab pegol"
+      },
+      {
+        "drug": "Dostarlimab"
+      },
+      {
+        "drug": "Durvalumab"
+      },
+      {
+        "drug": "Eculizumab"
+      },
+      {
+        "drug": "Golimumab"
+      },
+      {
+        "drug": "Guselkumab"
+      },
+      {
+        "drug": "Infliximab"
+      },
+      {
+        "drug": "Ixekizumab"
+      },
+      {
+        "drug": "Lanadelumab"
+      },
+      {
+        "drug": "Natalizumab"
+      },
+      {
+        "drug": "Nivolumab"
+      },
+      {
+        "drug": "Ocrelizumab"
+      },
+      {
+        "drug": "Pembrolizumab"
+      },
+      {
+        "drug": "Ravulizumab"
+      },
+      {
+        "drug": "Reslizumab"
+      },
+      {
+        "drug": "Risankizumab"
+      },
+      {
+        "drug": "Rituximab"
+      },
+      {
+        "drug": "Sarilumab"
+      },
+      {
+        "drug": "Secukinumab"
+      },
+      {
+        "drug": "Tocilizumab"
+      },
+      {
+        "drug": "Trastuzumab"
+      },
+      {
+        "drug": "Ustekinumab"
+      },
+      {
+        "drug": "Vedolizumab"
+      },
+      {
+        "drug": "Caplacizumab"
+      },
+      {
+        "drug": "Efgartigimod"
+      },
+      {
+        "drug": "Leflunomide"
+      },
+      {
+        "drug": "Methotrexate"
+      },
+      {
+        "drug": "Bupivacaine"
+      },
+      {
+        "drug": "Levobupivacaine"
+      },
+      {
+        "drug": "VAT (Tetanus Vaccine)"
+      },
+      {
+        "drug": "Verorab (Rabies Vaccine)"
+      },
+      {
+        "drug": "Influenza Vaccine"
+      },
+      {
+        "drug": "Hepatitis B Vaccine"
+      },
+      {
+        "drug": "SAT (Tetanus Antitoxin)"
+      },
+      {
+        "drug": "SAR (Rabies Antiserum)"
+      },
+      {
+        "drug": "Snake Antivenom (Luc Tre)"
+      },
+      {
+        "drug": "Snake Antivenom (Ho Dat)"
+      },
+      {
+        "drug": "Acetylcysteine"
+      },
+      {
+        "drug": "Pralidoxime"
+      },
+      {
+        "drug": "Vitamin K1"
+      },
+      {
+        "drug": "Ethanol"
+      },
+      {
+        "drug": "Thiamine (Vitamin B1)"
+      },
+      {
+        "drug": "Pyridoxine (Vitamin B6)"
+      },
+      {
+        "drug": "Cyanocobalamin (Vitamin B12)"
+      },
+      {
+        "drug": "Vitamin C (Ascorbic Acid)"
+      },
+      {
+        "drug": "Zoledronic Acid"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1101 @@
+{
+  "fix_date": "2026-01-13T20:44:32.383113",
+  "dry_run": false,
+  "results": {
+    "fixed_from_lactation": [
+      {
+        "drug": "Enalapril",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Lisinopril",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Losartan",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Telmisartan",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Valsartan",
+        "value": "D - Chống chỉ định trong thai kỳ do nguy cơ gây độc cho thai (giảm sản thận, thiểu ối, tử vong thai)."
+      },
+      {
+        "drug": "Metformin",
+        "value": "B - Thường được xem là an toàn và hiệu quả trong thai kỳ, đặc biệt cho đái tháo đường thai kỳ (GDM) và P"
+      },
+      {
+        "drug": "Insulin",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Gliclazide",
+        "value": "C - Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ, nhưng THƯỜNG TRÁNH DÙNG. Sulfonylureas có thể gây h"
+      },
+      {
+        "drug": "Pioglitazone",
+        "value": "C - Pioglitazone là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Dùng được nếu lợi ích > ngu"
+      },
+      {
+        "drug": "Bismuth subsalicylate",
+        "value": "C - Loperamide là FDA category C. Nghiên cứu trên động vật cho thấy có thể gây độc tính cho thai nhi ở l"
+      },
+      {
+        "drug": "Ranitidine",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "references",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Sucralfate",
+        "value": "B - Sucralfate là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi. Không hấ"
+      },
+      {
+        "drug": "Omeprazole",
+        "value": "C - Dữ liệu lớn trên người không cho thấy nguy cơ dị tật. Tuy nhiên FDA xếp loại C do một số nghiên cứu "
+      },
+      {
+        "drug": "Esomeprazole",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Lansoprazole",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Pantoprazole",
+        "value": "B - Pantoprazole là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi, nhưng "
+      },
+      {
+        "drug": "Domperidone",
+        "value": "C - Domperidone là FDA category C. Nghiên cứu trên động vật cho thấy có thể gây độc tính cho thai nhi. K"
+      },
+      {
+        "drug": "Ondansetron",
+        "value": "B - Ondansetron là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi. Một số "
+      },
+      {
+        "drug": "Hydrocodone",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Codeine",
+        "value": "C - Có thể dùng nếu lợi ích > nguy cơ. Nguy cơ ức chế hô hấp ở trẻ sơ sinh nếu dùng gần ngày sinh. Có th"
+      },
+      {
+        "drug": "Rizatriptan",
+        "value": "A - Kém an toàn hơn Sumatriptan (ít dữ liệu hơn)."
+      },
+      {
+        "drug": "Sumatriptan",
+        "value": "C - Nhiều dữ liệu (Sumatriptan Registry) cho thấy tương đối an toàn, không tăng nguy cơ dị tật lớn. Ưu t"
+      },
+      {
+        "drug": "Montelukast",
+        "value": "B - Montelukast là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi, "
+      },
+      {
+        "drug": "Nedocromil",
+        "value": "B - Nedocromil là thuốc phân loại B. Có thể dùng khi lợi ích vượt quá nguy cơ."
+      },
+      {
+        "drug": "Formoterol",
+        "value": "C - Formoterol là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên t"
+      },
+      {
+        "drug": "Olodaterol",
+        "value": "C - Olodaterol là thuốc phân loại C. Có thể dùng khi lợi ích vượt quá nguy cơ, nhưng PHẢI dùng kết hợp v"
+      },
+      {
+        "drug": "Salmeterol",
+        "value": "C - Salmeterol là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên t"
+      },
+      {
+        "drug": "Vilanterol",
+        "value": "C - Vilanterol/fluticasone là thuốc phân loại C. Có thể dùng khi lợi ích vượt quá nguy cơ."
+      },
+      {
+        "drug": "Ipratropium",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Umeclidinium",
+        "value": "C - Umeclidinium là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên"
+      },
+      {
+        "drug": "Beclomethasone inhaled",
+        "value": "C - Beclomethasone là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ tr"
+      },
+      {
+        "drug": "Budesonide inhaled",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Ciclesonide",
+        "value": "C - Ciclesonide là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên "
+      },
+      {
+        "drug": "Fluticasone inhaled",
+        "value": "C - Fluticasone là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên "
+      },
+      {
+        "drug": "Carbamazepine",
+        "value": "D - Carbamazepine có nguy cơ dị tật bẩm sinh (neural tube defects, dị tật tim, sứt môi/hà ếch). Nguy cơ "
+      },
+      {
+        "drug": "Topiramate",
+        "value": "D - Topiramate có nguy cơ dị tật bẩm sinh cao (cleft lip/palate, dị tật tim, dị tật hệ thần kinh). Nguy "
+      },
+      {
+        "drug": "Fluoxetine",
+        "value": "C - Dùng được trong thai kỳ nếu lợi ích > nguy cơ. Một số nghiên cứu gợi ý tăng nguy cơ dị tật thai nhi "
+      },
+      {
+        "drug": "Donepezil",
+        "value": "C - Chứng cứ về an toàn trong thai kỳ còn hạn chế. Donepezil thường không được dùng trong thai kỳ vì bện"
+      },
+      {
+        "drug": "Memantine",
+        "value": "B - Chứng cứ về an toàn trong thai kỳ còn hạn chế. Memantine thường không được dùng trong thai kỳ vì bện"
+      },
+      {
+        "drug": "Rivastigmine",
+        "value": "B - Chứng cứ về an toàn trong thai kỳ còn hạn chế. Rivastigmine thường không được dùng trong thai kỳ vì "
+      },
+      {
+        "drug": "Calcium",
+        "value": "A - Calcium an toàn và cần thiết trong thai kỳ. Thiếu calcium trong thai kỳ có thể gây loãng xương ở mẹ,"
+      },
+      {
+        "drug": "Diphenhydramine",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Etomidate",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Ketamine",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Propofol",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Cisatracurium",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Rocuronium",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Succinylcholine",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Amoxicillin-clavulanate",
+        "value": "B - Amoxicillin-clavulanate phân loại B - an toàn trong thai kỳ. Các nghiên cứu trên động vật không cho "
+      },
+      {
+        "drug": "Ceftriaxone",
+        "value": "B - Ceftriaxone là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sin"
+      },
+      {
+        "drug": "Azithromycin",
+        "value": "B - Azithromycin phân loại B - an toàn trong thai kỳ. Các nghiên cứu trên động vật không cho thấy nguy c"
+      },
+      {
+        "drug": "Clarithromycin",
+        "value": "C - Clarithromycin phân loại C - thận trọng trong thai kỳ. Các nghiên cứu trên động vật cho thấy một số "
+      },
+      {
+        "drug": "Amoxicillin suspension",
+        "value": "B - Amoxicillin là category B - an toàn trong thai kỳ. Penicillin là một trong những kháng sinh an toàn "
+      },
+      {
+        "drug": "Levothyroxine",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Methimazole",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Propylthiouracil",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Prednisone",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Betamethasone",
+        "value": "C - Betamethasone là thuốc phân loại C. Corticosteroid có thể đi qua nhau thai và có thể ảnh hưởng đến t"
+      },
+      {
+        "drug": "Dexamethasone",
+        "value": "C - Dexamethasone là thuốc phân loại C. Corticosteroid có thể đi qua nhau thai và có thể ảnh hưởng đến t"
+      },
+      {
+        "drug": "Tamoxifen",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Anastrozole",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Imatinib",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Erlotinib",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Lidocaine",
+        "value": "Đang cập nhật"
+      },
+      {
+        "drug": "Cyclosporine",
+        "value": "C - Có thể dùng trong thai kỳ ở bệnh nhân ghép tạng khi lợi ích vượt nguy cơ; cần theo dõi sát mẹ và tha"
+      },
+      {
+        "drug": "Mycophenolate",
+        "value": "D/X (ở một số hướng dẫn, xem là chống chỉ định trong thai kỳ) - Gây dị tật bẩm sinh nghiêm trọng và sẩy thai; chống chỉ định trừ khi không có lựa chọn khác và lợi í"
+      },
+      {
+        "drug": "Tacrolimus",
+        "value": "C - Có thể dùng trong thai kỳ khi lợi ích vượt nguy cơ, thường trong bệnh nhân ghép tạng; cần theo dõi s"
+      }
+    ],
+    "fixed_from_group": [
+      {
+        "drug": "Simvastatin",
+        "group": "Cardiovascular - Statin",
+        "value": "X - Chống chỉ định trong thai kỳ"
+      },
+      {
+        "drug": "Pravastatin",
+        "group": "Cardiovascular - Statin",
+        "value": "X - Chống chỉ định trong thai kỳ"
+      },
+      {
+        "drug": "Empagliflozin",
+        "group": "Diabetes - SGLT2 Inhibitor",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Dapagliflozin",
+        "group": "Diabetes - SGLT2 Inhibitor",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Canagliflozin",
+        "group": "Diabetes - SGLT2 Inhibitor",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Liraglutide",
+        "group": "Diabetes - GLP-1 Receptor Agonist",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Semaglutide",
+        "group": "Diabetes - GLP-1 Receptor Agonist",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Dulaglutide",
+        "group": "Diabetes - GLP-1 Receptor Agonist",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Exenatide",
+        "group": "Diabetes - GLP-1 Receptor Agonist",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Sulfasalazine",
+        "group": "Rheumatology - DMARD",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Zolmitriptan",
+        "group": "Neurology - Migraine (Triptan)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Hydroxychloroquine",
+        "group": "Rheumatology - DMARD (Antimalarial)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Alendronate",
+        "group": "Rheumatology - Bisphosphonate (Oral)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Atropine",
+        "group": "Toxicology - Antidote (Organophosphate/Carbamate)",
+        "value": "D - Chống chỉ định trong thai kỳ"
+      },
+      {
+        "drug": "Sodium Chloride 0.9%",
+        "group": "Fluids - Crystalloid (Dịch tinh thể)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Ringer Lactate",
+        "group": "Fluids - Crystalloid (Dịch tinh thể)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Albumin (Human)",
+        "group": "Fluids - Colloid (Dung dịch keo)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "HES 130/0.4",
+        "group": "Fluids - Colloid (Cao phân tử tổng hợp)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Vitamin D3 (Cholecalciferol)",
+        "group": "Nutrition - Vitamin",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Allopurinol",
+        "group": "Rheumatology - Gout (Xanthine Oxidase Inhibitor)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Colchicine",
+        "group": "Rheumatology - Gout (Anti-inflammatory)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Febuxostat",
+        "group": "Rheumatology - Gout (Xanthine Oxidase Inhibitor)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Leflunomide",
+        "group": "Rheumatology - DMARD",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Methotrexate",
+        "group": "Rheumatology - DMARD (Immunosuppressant)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Bupivacaine",
+        "group": "Anesthesia - Local Anesthetic (Amide)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Levobupivacaine",
+        "group": "Anesthesia - Local Anesthetic (Amide)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "VAT (Tetanus Vaccine)",
+        "group": "Vaccines - Tetanus (Uốn ván)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Verorab (Rabies Vaccine)",
+        "group": "Vaccines - Rabies (Dại)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Influenza Vaccine",
+        "group": "Vaccines - Influenza (Cúm)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Hepatitis B Vaccine",
+        "group": "Vaccines - Hepatitis B (Viêm gan B)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "SAT (Tetanus Antitoxin)",
+        "group": "Antisera - Tetanus (Huyết thanh kháng uốn ván)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "SAR (Rabies Antiserum)",
+        "group": "Antisera - Rabies (Huyết thanh kháng dại)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Snake Antivenom (Luc Tre)",
+        "group": "Antivenom - Snake (Kháng nọc rắn)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Snake Antivenom (Ho Dat)",
+        "group": "Antivenom - Snake (Kháng nọc rắn)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Acetylcysteine",
+        "group": "Toxicology - Antidote (Paracetamol)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Pralidoxime",
+        "group": "Toxicology - Antidote (Organophosphate)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Vitamin K1",
+        "group": "Toxicology - Antidote (Warfarin/Rodenticide)",
+        "value": "D - Chống chỉ định trong thai kỳ (nguy cơ dị tật)"
+      },
+      {
+        "drug": "Ethanol",
+        "group": "Toxicology - Antidote (Methanol/Ethylene Glycol)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Thiamine (Vitamin B1)",
+        "group": "Nutrition - Vitamin B",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Cyanocobalamin (Vitamin B12)",
+        "group": "Nutrition - Vitamin B",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Vitamin C (Ascorbic Acid)",
+        "group": "Nutrition - Vitamin",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      },
+      {
+        "drug": "Zoledronic Acid",
+        "group": "Rheumatology - Bisphosphonate (IV)",
+        "value": "C - Thận trọng trong thai kỳ, cân nhắc lợi ích/nguy cơ"
+      }
+    ],
+    "already_has": [
+      "Clonidine",
+      "Digoxin",
+      "Doxazosin",
+      "Finerenone",
+      "Ivabradine",
+      "Labetalol",
+      "Methyldopa",
+      "Sacubitril-valsartan",
+      "Sotagliflozin",
+      "Vericiguat",
+      "Hydralazine",
+      "Isosorbide mononitrate",
+      "Nesiritide",
+      "Nitroglycerin",
+      "Nitroprusside",
+      "Benazepril",
+      "Captopril",
+      "Perindopril",
+      "Ramipril",
+      "Azilsartan medoxomil",
+      "Candesartan",
+      "Irbesartan",
+      "Olmesartan",
+      "Acebutolol",
+      "Atenolol",
+      "Betaxolol",
+      "Bisoprolol",
+      "Metoprolol",
+      "Nebivolol",
+      "Timolol",
+      "Carvedilol",
+      "Nadolol",
+      "Propranolol",
+      "Atorvastatin",
+      "Rosuvastatin",
+      "Bempedoic acid",
+      "Ezetimibe",
+      "Adenosine",
+      "Amiodarone",
+      "Disopyramide",
+      "Dofetilide",
+      "Dronedarone",
+      "Flecainide",
+      "Ibutilide",
+      "Procainamide",
+      "Propafenone",
+      "Quinidine",
+      "Sotalol",
+      "Amlodipine",
+      "Clevidipine",
+      "Felodipine",
+      "Isradipine",
+      "Lacidipine",
+      "Nicardipine",
+      "Nifedipine",
+      "Nisoldipine",
+      "Diltiazem",
+      "Verapamil",
+      "Bumetanide",
+      "Chlorthalidone",
+      "Eplerenone",
+      "Furosemide",
+      "Hydrochlorothiazide",
+      "Indapamide",
+      "Spironolactone",
+      "Torsemide",
+      "Apixaban",
+      "Aspirin",
+      "Clopidogrel",
+      "Dabigatran",
+      "Edoxaban",
+      "Enoxaparin",
+      "Fondaparinux",
+      "Prasugrel",
+      "Rivaroxaban",
+      "Ticagrelor",
+      "Warfarin",
+      "Alirocumab",
+      "Evolocumab",
+      "Inclisiran",
+      "Evinacumab",
+      "Fenofibrate",
+      "Gemfibrozil",
+      "Icosapent ethyl",
+      "Niacin",
+      "Omega-3 acid ethyl esters",
+      "Pemafibrate",
+      "Plozasiran",
+      "Amlodipine/Olmesartan",
+      "Amlodipine/Valsartan",
+      "Lisinopril/Hydrochlorothiazide",
+      "Losartan/Hydrochlorothiazide",
+      "Dipyridamole",
+      "Ticlopidine",
+      "High-intensity statin (đột quỵ/TIA)",
+      "Enalaprilat",
+      "Alogliptin",
+      "Linagliptin",
+      "Saxagliptin",
+      "Sitagliptin",
+      "Vildagliptin",
+      "Insulin Aspart",
+      "Insulin Degludec",
+      "Insulin Detemir",
+      "Insulin Glargine",
+      "Insulin Glulisine",
+      "Insulin Lispro",
+      "Insulin NPH",
+      "Insulin Regular",
+      "Glibenclamide",
+      "Glimepiride",
+      "Rosiglitazone",
+      "Nateglinide",
+      "Repaglinide",
+      "Acarbose",
+      "Miglitol",
+      "Metformin/Dapagliflozin",
+      "Metformin/Empagliflozin",
+      "Metformin/Glibenclamide",
+      "Metformin/Pioglitazone",
+      "Metformin/Sitagliptin",
+      "Teplizumab",
+      "Bromocriptine",
+      "Colesevelam",
+      "Aluminum hydroxide/Magnesium hydroxide",
+      "Calcium carbonate",
+      "Cimetidine",
+      "Famotidine",
+      "Misoprostol",
+      "Rabeprazole",
+      "Dexlansoprazole",
+      "Ilaprazole",
+      "Tegoprazan",
+      "Vonoprazan",
+      "Baricitinib",
+      "Tofacitinib",
+      "Upadacitinib",
+      "Bisacodyl",
+      "Lactulose",
+      "Polyethylene glycol 3350",
+      "Senna (sennosides)",
+      "Hyoscine butylbromide",
+      "Mebeverine",
+      "Trimebutine",
+      "Simethicone",
+      "Mesalazine",
+      "Celecoxib",
+      "Diclofenac",
+      "Etoricoxib",
+      "Ibuprofen",
+      "Indomethacin",
+      "Ketoprofen",
+      "Ketorolac",
+      "Meloxicam",
+      "Naproxen",
+      "Nimesulide",
+      "Buprenorphine",
+      "Tapentadol",
+      "Fentanyl",
+      "Hydromorphone",
+      "Meperidine",
+      "Methadone",
+      "Morphine",
+      "Oxycodone",
+      "Remifentanil",
+      "Sufentanil",
+      "Alfentanil",
+      "Paracetamol",
+      "Lasmiditan",
+      "Aspirin/Carisoprodol",
+      "Paracetamol/Carisoprodol",
+      "Paracetamol/Chlorzoxazone",
+      "Paracetamol/Methocarbamol",
+      "Paracetamol/Orphenadrine",
+      "Cromolyn",
+      "Zafirlukast",
+      "Salbutamol",
+      "Indacaterol",
+      "Aclidinium",
+      "Glycopyrronium",
+      "Tiotropium",
+      "Aminophylline",
+      "Theophylline",
+      "Benralizumab",
+      "Dupilumab",
+      "Mepolizumab",
+      "Omalizumab",
+      "Tezepelumab",
+      "Roflumilast",
+      "Budesonide/Formoterol inhaler",
+      "Fluticasone/Salmeterol inhaler",
+      "Fluticasone/Umeclidinium/Vilanterol inhaler",
+      "Ipratropium/Salbutamol inhaler",
+      "Tiotropium/Olodaterol inhaler",
+      "Umeclidinium/Vilanterol inhaler",
+      "Ethosuximide",
+      "Fosphenytoin",
+      "Lacosamide",
+      "Lamotrigine",
+      "Levetiracetam",
+      "Oxcarbazepine",
+      "Perampanel",
+      "Phenobarbital",
+      "Phenytoin",
+      "Primidone",
+      "Valproate",
+      "Zonisamide",
+      "Gabapentin",
+      "Pregabalin",
+      "Aducanumab",
+      "Donanemab",
+      "Lecanemab",
+      "Clonazepam",
+      "Diazepam",
+      "Lorazepam",
+      "Baclofen",
+      "Carisoprodol",
+      "Cyclobenzaprine",
+      "Metaxalone",
+      "Methocarbamol",
+      "Tizanidine",
+      "Deutetrabenazine",
+      "Istradefylline",
+      "Levodopa/Carbidopa",
+      "Opicapone",
+      "Pimavanserin",
+      "Pramipexole",
+      "Ropinirole",
+      "Safinamide",
+      "Tetrabenazine",
+      "Cerebrolysin",
+      "Cerebroprotein hydrolysate (khác)",
+      "Citicoline",
+      "Edaravone",
+      "Ginkgo biloba extract",
+      "Nicergoline",
+      "Nimodipine",
+      "Piracetam",
+      "Vinpocetine",
+      "Citicoline/Piracetam",
+      "Ginkgo biloba/Vinpocetine",
+      "Olanzapine/Fluoxetine",
+      "Piracetam/Vinpocetine",
+      "Eptinezumab",
+      "Erenumab",
+      "Fremanezumab",
+      "Galcanezumab",
+      "Rimegepant",
+      "Ubrogepant",
+      "Dimethyl fumarate",
+      "Fingolimod",
+      "Ofatumumab",
+      "Citalopram",
+      "Escitalopram",
+      "Fluvoxamine",
+      "Paroxetine",
+      "Sertraline",
+      "Desvenlafaxine",
+      "Duloxetine",
+      "Venlafaxine",
+      "Amitriptyline",
+      "Clomipramine",
+      "Aripiprazole",
+      "Chlorpromazine",
+      "Clozapine",
+      "Fluphenazine",
+      "Haloperidol",
+      "Lurasidone",
+      "Olanzapine",
+      "Pimozide",
+      "Quetiapine",
+      "Risperidone",
+      "Ziprasidone",
+      "Bupropion",
+      "Mirtazapine",
+      "Phenelzine",
+      "Tranylcypromine",
+      "Trazodone",
+      "Atomoxetine",
+      "Buspirone",
+      "Dextroamphetamine",
+      "Lisdexamfetamine",
+      "Methylphenidate",
+      "Heparin",
+      "Eltrombopag",
+      "Epoetin alfa",
+      "Filgrastim",
+      "Romiplostim",
+      "Tranexamic acid",
+      "Emicizumab",
+      "Andexanet alfa",
+      "Idarucizumab",
+      "Protamine",
+      "Vitamin K",
+      "Alteplase",
+      "Tenecteplase",
+      "Folic acid",
+      "Iron",
+      "Vitamin B12",
+      "Vitamin D",
+      "Cetirizine",
+      "Desloratadine",
+      "Fexofenadine",
+      "Levocetirizine",
+      "Loratadine",
+      "Chlorpheniramine",
+      "Hydroxyzine",
+      "Dexmedetomidine",
+      "Midazolam (IV/ICU)",
+      "Thiopental",
+      "Vecuronium",
+      "Aztreonam",
+      "Cefiderocol",
+      "Doripenem",
+      "Ertapenem",
+      "Imipenem-cilastatin",
+      "Meropenem",
+      "Penicillin G",
+      "Piperacillin-tazobactam",
+      "Amoxicillin",
+      "Ampicillin",
+      "Ampicillin-sulbactam",
+      "Nafcillin",
+      "Oxacillin",
+      "Cefazolin",
+      "Cefepime",
+      "Cephalexin",
+      "Erythromycin",
+      "Doxycycline",
+      "Minocycline",
+      "Tetracycline",
+      "Clindamycin",
+      "Trimethoprim-sulfamethoxazole",
+      "Levofloxacin",
+      "Moxifloxacin",
+      "Amikacin",
+      "Gentamicin",
+      "Plazomicin",
+      "Tobramycin",
+      "Daptomycin",
+      "Teicoplanin",
+      "Vancomycin",
+      "Linezolid",
+      "Colistin",
+      "Polymyxin B",
+      "Eravacycline",
+      "Fidaxomicin",
+      "Fosfomycin",
+      "Lefamulin",
+      "Nitrofurantoin",
+      "Omadacycline",
+      "Acyclovir",
+      "Valacyclovir",
+      "Favipiravir",
+      "Oseltamivir",
+      "Remdesivir",
+      "Zanamivir",
+      "Ganciclovir",
+      "Entecavir",
+      "Ledipasvir",
+      "Ribavirin",
+      "Sofosbuvir",
+      "Sofosbuvir/Velpatasvir",
+      "Tenofovir",
+      "Cobicistat (COBI)",
+      "Ritonavir (low-dose booster)",
+      "Bictegravir (BIC)",
+      "Bictegravir/Emtricitabine/Tenofovir alafenamide (BIC/FTC/TAF)",
+      "Cabotegravir + Rilpivirine (Long-acting IM)",
+      "Dolutegravir (DTG)",
+      "Efavirenz (EFV)",
+      "Efavirenz/Tenofovir disoproxil fumarate/Emtricitabine (EFV/TDF/FTC)",
+      "Rilpivirine (RPV)",
+      "Emtricitabine (FTC)",
+      "Lamivudine (3TC)",
+      "Tenofovir alafenamide (TAF)",
+      "Tenofovir alafenamide/Emtricitabine (TAF/FTC)",
+      "Tenofovir disoproxil fumarate (TDF)",
+      "Tenofovir disoproxil fumarate/Emtricitabine (TDF/FTC)",
+      "Atazanavir (boosted with ritonavir/cobicistat)",
+      "Darunavir (boosted with ritonavir/cobicistat)",
+      "Fluconazole",
+      "Isavuconazole",
+      "Itraconazole",
+      "Posaconazole",
+      "Voriconazole",
+      "Amphotericin B",
+      "Nystatin",
+      "Anidulafungin",
+      "Caspofungin",
+      "Micafungin",
+      "Albendazole",
+      "Ivermectin",
+      "Levamisole",
+      "Mebendazole",
+      "Praziquantel",
+      "Artemether-lumefantrine",
+      "Artesunate",
+      "Chloroquine",
+      "Primaquine",
+      "Dicloxacillin",
+      "Penicillin V",
+      "Cefaclor",
+      "Cefadroxil",
+      "Cefdinir",
+      "Cefixime",
+      "Cefoperazone",
+      "Cefotaxime",
+      "Cefotetan",
+      "Cefoxitin",
+      "Cefpirome",
+      "Ceftazidime",
+      "Cefuroxime",
+      "Ciprofloxacin",
+      "Gemifloxacin",
+      "Norfloxacin",
+      "Ofloxacin",
+      "Sparfloxacin",
+      "Metronidazole",
+      "Tigecycline",
+      "Bedaquiline",
+      "Clofazimine",
+      "Cycloserine / Terizidone",
+      "Delamanid",
+      "Ethambutol",
+      "Isoniazid",
+      "Linezolid (lao MDR/XDR)",
+      "PAS (para-aminosalicylic acid)",
+      "Pyrazinamide",
+      "Rifabutin",
+      "Rifampin",
+      "Rifapentine",
+      "Streptomycin",
+      "Fludrocortisone",
+      "Hydrocortisone",
+      "Methylprednisolone",
+      "Prednisolone",
+      "Testosterone",
+      "Ibandronate",
+      "Risedronate",
+      "Zoledronic acid",
+      "Abaloparatide",
+      "Calcitonin",
+      "Denosumab",
+      "Raloxifene",
+      "Romosozumab",
+      "Teriparatide",
+      "Desmopressin",
+      "Flumazenil",
+      "Naloxone",
+      "Naltrexone",
+      "Dobutamine",
+      "Dopamine",
+      "Epinephrine",
+      "Milrinone",
+      "Norepinephrine",
+      "Phenylephrine",
+      "Vasopressin",
+      "Calcium chloride",
+      "Calcium gluconate",
+      "Demeclocycline",
+      "Magnesium oxide",
+      "Magnesium sulfate",
+      "Pamidronate",
+      "Potassium phosphate",
+      "Sodium bicarbonate",
+      "Sodium phosphate",
+      "Sodium polystyrene sulfonate",
+      "Carboprost",
+      "Dinoprostone",
+      "Methylergonovine",
+      "Oxytocin",
+      "Dutasteride",
+      "Finasteride",
+      "Alfuzosin",
+      "Silodosin",
+      "Tamsulosin",
+      "Avanafil",
+      "Sildenafil",
+      "Tadalafil",
+      "Vardenafil",
+      "Fesoterodine",
+      "Mirabegron",
+      "Oxybutynin",
+      "Solifenacin",
+      "Tolterodine",
+      "Calcipotriol",
+      "Calcitriol topical",
+      "Diclofenac gel",
+      "Ivermectin cream",
+      "Ketoprofen gel",
+      "Permethrin topical",
+      "Pimecrolimus",
+      "Salicylic Acid",
+      "Tacrolimus topical",
+      "Azelaic Acid",
+      "Azelaic acid topical",
+      "Benzoyl peroxide topical",
+      "Clindamycin topical",
+      "Erythromycin topical",
+      "Fusidic Acid",
+      "Metronidazole topical",
+      "Mupirocin topical",
+      "Clotrimazole topical",
+      "Econazole topical",
+      "Ketoconazole topical",
+      "Miconazole topical",
+      "Terbinafine topical",
+      "Betamethasone topical",
+      "Betamethasone/Clotrimazole topical",
+      "Clobetasol",
+      "Fusidic acid/Betamethasone topical",
+      "Gentamicin/Betamethasone/Clotrimazole topical",
+      "Hydrocortisone topical",
+      "Miconazole/Hydrocortisone topical",
+      "Mometasone topical",
+      "Triamcinolone topical",
+      "Adapalene",
+      "Tazarotene",
+      "Tretinoin topical",
+      "Bimatoprost",
+      "Brimonidine",
+      "Brinzolamide",
+      "Dorzolamide",
+      "Latanoprost",
+      "Pilocarpine eye drops",
+      "Timolol eye drops",
+      "Travoprost",
+      "Acyclovir eye drops",
+      "Acyclovir eye ointment",
+      "Ciprofloxacin eye drops",
+      "Erythromycin eye ointment",
+      "Ganciclovir eye drops",
+      "Gentamicin eye drops",
+      "Moxifloxacin eye drops",
+      "Polymyxin B/Trimethoprim eye drops",
+      "Tobramycin eye drops",
+      "Dexamethasone eye drops",
+      "Diclofenac eye drops",
+      "Ketorolac eye drops",
+      "Nepafenac eye drops",
+      "Prednisolone eye drops",
+      "Azelastine eye drops",
+      "Ketotifen eye drops",
+      "Olopatadine eye drops",
+      "Artificial tears (Carboxymethylcellulose)",
+      "Atropine eye drops",
+      "Cyclopentolate eye drops",
+      "Phenylephrine eye drops",
+      "Tropicamide eye drops",
+      "Ethinyl estradiol + Levonorgestrel",
+      "Levonorgestrel",
+      "Medroxyprogesterone",
+      "Estradiol",
+      "Progesterone",
+      "Clotrimazole (vaginal)",
+      "Metronidazole (vaginal gel)",
+      "Miconazole (vaginal)",
+      "Azelastine/Fluticasone nasal spray",
+      "Cetirizine/Pseudoephedrine",
+      "Fexofenadine/Pseudoephedrine",
+      "Loratadine/Pseudoephedrine",
+      "Calcium (elemental)",
+      "Folic Acid",
+      "Vitamin C",
+      "Vitamin E",
+      "Probenecid",
+      "Azathioprine",
+      "Etanercept",
+      "Adalimumab",
+      "Alemtuzumab",
+      "Anifrolumab",
+      "Atezolizumab",
+      "Belimumab",
+      "Bevacizumab",
+      "Brodalumab",
+      "Cemiplimab",
+      "Certolizumab pegol",
+      "Dostarlimab",
+      "Durvalumab",
+      "Eculizumab",
+      "Golimumab",
+      "Guselkumab",
+      "Infliximab",
+      "Ixekizumab",
+      "Lanadelumab",
+      "Natalizumab",
+      "Nivolumab",
+      "Ocrelizumab",
+      "Pembrolizumab",
+      "Ravulizumab",
+      "Reslizumab",
+      "Risankizumab",
+      "Rituximab",
+      "Sarilumab",
+      "Secukinumab",
+      "Tocilizumab",
+      "Trastuzumab",
+      "Ustekinumab",
+      "Vedolizumab",
+      "Caplacizumab",
+      "Efgartigimod",
+      "Pyridoxine (Vitamin B6)",
+      "Sirolimus",
+      "Everolimus"
+    ],
+    "still_missing": [],
+    "invalid_entry": []
+  }
+}
