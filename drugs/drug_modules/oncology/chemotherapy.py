@@ -8,6 +8,7 @@ CHEMOTHERAPY_DRUGS = {
         "group": "Oncology - Platinum-based Chemotherapy",
         "vietnamese_name": "Cisplatin, Platinol",
         "brand_names": "Platinol, Platinol-AQ",
+        "administration": ["IV"],
         "indications": [
             "Ung thư tinh hoàn (Testicular cancer)",
             "Ung thư buồng trứng (Ovarian cancer)",
@@ -39,7 +40,8 @@ CHEMOTHERAPY_DRUGS = {
             "Aminoglycosides, Loop diuretics: Tăng độc thận và độc tai",
             "Phenytoin: Giảm nồng độ phenytoin",
             "Thuốc độc thận khác: Tăng nguy cơ suy thận"
-    ],
+        ],
+        "pregnancy": "D - Chống chỉ định trong thai kỳ. Gây dị tật thai nhi nghiêm trọng. Tránh thai trong và sau điều trị.",
         "mechanism_of_action": """Platinum compound tạo DNA crosslinks, ngăn cản DNA replication và transcription → Chết tế bào ung thư.""",
         "monitoring": [
             "Chức năng thận (Cr, BUN, CrCl) - Trước mỗi liều",
@@ -56,13 +58,67 @@ CHEMOTHERAPY_DRUGS = {
             "Độc tính tích lũy - Giới hạn liều tích lũy"
     ],
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "Pregnancy Category D - Gây dị tật thai nhi. Tránh thai trong và sau điều trị.",
-            "lactation": {
-                "safety": "",
-                "details": "",
-                "recommendation": "",
-            },
+            "fda_category": "D",
+            "pregnancy_details": "Pregnancy Category D - Gây dị tật thai nhi nghiêm trọng. Chống chỉ định trong thai kỳ. Tránh thai trong và sau điều trị. Cần biện pháp tránh thai hiệu quả.",
+            "lactation_details": "Không nên cho con bú trong thời gian điều trị. Cisplatin có thể bài tiết vào sữa mẹ và gây hại cho trẻ."
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều. Cisplatin chuyển hóa một phần qua gan."
+        },
+        "overdose_management": {
+            "symptoms": ["Suy thận cấp nghiêm trọng", "Suy tủy xương", "Mất thính giác", "Neuropathy", "Phản ứng dị ứng/phản vệ"],
+            "treatment": "Ngừng thuốc ngay. Hydration tích cực với NS. Điều chỉnh điện giải (Mg, K). Hỗ trợ suy tủy (truyền máu, G-CSF nếu cần). Điều trị phản ứng dị ứng nếu có.",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "Pha loãng trong NS hoặc D5W. Nồng độ cuối cùng không quá 1 mg/mL.",
+            "administration": "Truyền IV trong 1-2 giờ. BẮT BUỘC hydration: 1-2L NS trước và sau truyền để bảo vệ thận. Không truyền nhanh.",
+            "monitoring": ["Chức năng thận trước và sau", "Điện giải (Mg, K) thường xuyên", "Dấu hiệu phản ứng dị ứng trong 15 phút đầu"]
+        },
+        "pharmacokinetics": {
+            "half_life": "30-100 giờ (tùy thuộc vào liều và chức năng thận)",
+            "onset": "Ngay sau truyền",
+            "duration": "Tác dụng kéo dài, độc tính tích lũy",
+            "protein_binding": "90%",
+            "clearance": "Thải trừ chủ yếu qua thận (90%). Suy thận kéo dài thời gian bán hủy đáng kể."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C). Tránh ánh sáng. Dung dịch pha loãng ổn định trong 20 giờ ở nhiệt độ phòng.",
+        "references": {
+            "primary": ["FDA Label - Cisplatin", "NCCN Guidelines - Chemotherapy"],
+            "guidelines": ["NCCN Guidelines", "ASCO Guidelines"],
+            "other": []
+        },
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Aminoglycosides (Gentamicin, Amikacin)",
+                    "mechanism": "Cả hai đều độc thận và độc tai",
+                    "effect": "Tăng nguy cơ suy thận và mất thính giác nghiêm trọng",
+                    "management": "Tránh dùng cùng. Nếu cần, theo dõi chức năng thận và thính lực chặt chẽ."
+                },
+                {
+                    "drug": "Loop diuretics (Furosemide)",
+                    "mechanism": "Tăng độc tai",
+                    "effect": "Tăng nguy cơ mất thính giác",
+                    "management": "Tránh dùng cùng nếu có thể."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Phenytoin",
+                    "mechanism": "Cisplatin giảm nồng độ phenytoin",
+                    "effect": "Giảm hiệu quả chống động kinh",
+                    "management": "Theo dõi nồng độ phenytoin, có thể cần tăng liều."
+                }
+            ],
+            "minor": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: hydration tích cực, điều chỉnh điện giải, hỗ trợ suy tủy."
         },
         "black_box_warnings": """Phản ứng dị ứng nghiêm trọng (anaphylaxis). Suy tủy xương. Độc thận. Độc tai. Chỉ sử dụng bởi bác sĩ có kinh nghiệm hóa trị.""",
     },
@@ -70,6 +126,7 @@ CHEMOTHERAPY_DRUGS = {
         "group": "Oncology - Platinum-based Chemotherapy",
         "vietnamese_name": "Carboplatin, Paraplatin",
         "brand_names": "Paraplatin",
+        "administration": ["IV"],
         "indications": [
             "Ung thư buồng trứng (Ovarian cancer) - First-line",
             "Ung thư phổi (NSCLC, SCLC)",
@@ -96,28 +153,76 @@ CHEMOTHERAPY_DRUGS = {
         "interactions": [
             "Thuốc suy tủy khác: Tăng nguy cơ nhiễm trùng, chảy máu",
             "Nephrotoxic drugs: Tăng độc thận"
-    ],
+        ],
+        "pregnancy": "D - Chống chỉ định trong thai kỳ. Gây dị tật thai nhi nghiêm trọng. Tránh thai trong và sau điều trị.",
         "mechanism_of_action": "Tương tự Cisplatin - Platinum compound tạo DNA crosslinks.",
         "monitoring": [
             "CBC với platelet - Trước mỗi liều và thường xuyên",
             "Chức năng thận (Cr, CrCl)",
             "Chức năng gan (AST, ALT)",
             "Dấu hiệu nhiễm trùng, chảy máu"
-    ],
+        ],
         "precautions": [
             "Ưu tiên hơn Cisplatin nếu lo ngại độc thận/tai",
             "Giảm liều nếu suy thận (dùng Calvert formula)",
             "Theo dõi platelet chặt chẽ - Nadir thường ngày 14-21",
             "Có thể cần truyền platelet nếu <20,000"
-    ],
+        ],
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "Pregnancy Category D - Gây dị tật.",
-            "lactation": {
-                "safety": "",
-                "details": "",
-                "recommendation": "",
-            },
+            "fda_category": "D",
+            "pregnancy_details": "Pregnancy Category D - Gây dị tật thai nhi nghiêm trọng. Chống chỉ định trong thai kỳ. Tránh thai trong và sau điều trị.",
+            "lactation_details": "Không nên cho con bú trong thời gian điều trị. Carboplatin có thể bài tiết vào sữa mẹ và gây hại cho trẻ."
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều. Carboplatin chuyển hóa một phần qua gan."
+        },
+        "overdose_management": {
+            "symptoms": ["Suy tủy xương nghiêm trọng (đặc biệt thrombocytopenia)", "Suy thận cấp", "Phản ứng dị ứng/phản vệ", "Độc gan"],
+            "treatment": "Ngừng thuốc ngay. Hỗ trợ suy tủy (truyền máu, platelet, G-CSF). Điều chỉnh chức năng thận. Điều trị phản ứng dị ứng nếu có.",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "Pha loãng trong D5W hoặc NS. Nồng độ cuối cùng 0.5-2 mg/mL.",
+            "administration": "Truyền IV trong 15-60 phút. Không cần hydration tích cực như Cisplatin nhưng vẫn nên bù dịch đầy đủ.",
+            "monitoring": ["CBC với platelet trước và sau", "Chức năng thận", "Dấu hiệu phản ứng dị ứng"]
+        },
+        "pharmacokinetics": {
+            "half_life": "2-6 giờ (ngắn hơn Cisplatin)",
+            "onset": "Ngay sau truyền",
+            "duration": "Tác dụng kéo dài, độc tính tích lũy",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Thải trừ chủ yếu qua thận (70-80%). Suy thận kéo dài thời gian bán hủy. Dùng Calvert formula để tính liều."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C). Tránh ánh sáng. Dung dịch pha loãng ổn định trong 8 giờ ở nhiệt độ phòng.",
+        "references": {
+            "primary": ["FDA Label - Carboplatin", "NCCN Guidelines - Chemotherapy"],
+            "guidelines": ["NCCN Guidelines", "ASCO Guidelines"],
+            "other": []
+        },
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc suy tủy khác (Cyclophosphamide, Doxorubicin)",
+                    "mechanism": "Cả hai đều gây suy tủy",
+                    "effect": "Tăng nguy cơ nhiễm trùng và chảy máu nghiêm trọng",
+                    "management": "Theo dõi CBC chặt chẽ. Có thể cần delay liều hoặc giảm liều."
+                },
+                {
+                    "drug": "Nephrotoxic drugs (Aminoglycosides)",
+                    "mechanism": "Tăng độc thận",
+                    "effect": "Tăng nguy cơ suy thận",
+                    "management": "Tránh dùng cùng nếu có thể. Theo dõi chức năng thận chặt chẽ."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: hỗ trợ suy tủy (truyền máu, platelet), điều chỉnh chức năng thận."
         },
         "black_box_warnings": "Suy tủy xương nghiêm trọng. Phản ứng dị ứng. Chỉ sử dụng bởi bác sĩ có kinh nghiệm hóa trị.",
     },

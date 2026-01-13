@@ -5,6 +5,8 @@ Immunosuppressants (Thuốc ức chế miễn dịch)
 IMMUNOSUPPRESSANTS_DRUGS = {
     "Tacrolimus": {
         "group": "Immunology - Calcineurin Inhibitor",
+
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Có thể sử dụng khi cần thiết",
         "vietnamese_name": "Tacrolimus, FK506",
         "brand_names": {
             "common": ["Prograf", "Advagraf"],
@@ -295,6 +297,8 @@ IMMUNOSUPPRESSANTS_DRUGS = {
 
     "Mycophenolate": {
         "group": "Immunology - Antimetabolite",
+
+        "pregnancy": "D - Có bằng chứng về nguy cơ dị tật bẩm sinh. Chống chỉ định trong thai kỳ",
         "vietnamese_name": "Mycophenolate Mofetil (MMF), CellCept",
         "brand_names": {
             "common": ["CellCept", "Myfortic"],
@@ -476,7 +480,43 @@ IMMUNOSUPPRESSANTS_DRUGS = {
             "Cyclosporine: Tăng độc tính thận (tránh dùng cùng nếu có thể)",
             "Grapefruit juice: Tăng nồng độ Sirolimus"
         ],
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Azole antifungals (Ketoconazole, Voriconazole), Macrolides (Clarithromycin), Diltiazem",
+                    "mechanism": "Ức chế CYP3A4 → giảm chuyển hóa sirolimus",
+                    "effect": "Tăng mạnh nồng độ sirolimus, nguy cơ độc tính",
+                    "management": "Giảm liều sirolimus và theo dõi TDM sát hoặc tránh phối hợp nếu có thể."
+                },
+                {
+                    "drug": "Rifampin, Carbamazepine, Phenytoin",
+                    "mechanism": "Cảm ứng CYP3A4 → tăng chuyển hóa sirolimus",
+                    "effect": "Giảm nồng độ sirolimus, nguy cơ thải ghép",
+                    "management": "Tránh phối hợp nếu có thể; nếu bắt buộc, tăng liều sirolimus theo TDM."
+                },
+                {
+                    "drug": "Cyclosporine",
+                    "mechanism": "Tăng độc tính thận khi dùng cùng",
+                    "effect": "Tăng nguy cơ suy thận",
+                    "management": "Tránh dùng cùng nếu có thể. Nếu cần, theo dõi chức năng thận chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Grapefruit juice",
+                    "mechanism": "Ức chế CYP3A4",
+                    "effect": "Tăng nồng độ sirolimus",
+                    "management": "Tránh uống nước bưởi khi dùng sirolimus."
+                }
+            ],
+            "minor": []
+        },
         "pregnancy": "C - D (với thải ghép)",
+        "pregnancy_lactation": {
+            "fda_category": "C (D nếu dùng để dự phòng thải ghép)",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Gây dị tật thai nhi. Tránh thai trong và sau điều trị. Cần biện pháp tránh thai hiệu quả.",
+            "lactation_details": "Không nên cho con bú trong thời gian điều trị. Sirolimus có thể bài tiết vào sữa mẹ và gây hại cho trẻ."
+        },
         "mechanism_of_action": "Sirolimus là mTOR (mammalian target of rapamycin) inhibitor, ức chế tín hiệu mTOR, ngăn chặn sự tăng sinh và hoạt hóa tế bào T và B. Khác với calcineurin inhibitors (tacrolimus, cyclosporine), sirolimus không gây độc tính thận trực tiếp nhưng có thể tăng độc tính thận khi dùng với cyclosporine. Sirolimus có tác dụng chống tăng sinh mạnh, ức chế sự phát triển của tế bào ung thư và tế bào miễn dịch.",
         "monitoring": [
             "Nồng độ Sirolimus máu (Trough level) - Mục tiêu 4-12 ng/ml",
@@ -506,6 +546,26 @@ IMMUNOSUPPRESSANTS_DRUGS = {
             "clearance": "Gan: chuyển hóa qua CYP3A4. Thận: bài tiết một phần. Hấp thu tốt qua đường uống nhưng bị ảnh hưởng bởi thức ăn."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng solution: bảo quản trong tủ lạnh (2-8°C) sau khi mở.",
+        "hepatic_adjustment": {
+            "mild": "Thận trọng, có thể cần giảm liều",
+            "moderate": "Giảm liều rõ rệt, theo dõi TDM sát",
+            "severe": "Thận trọng tối đa, chỉ dùng khi không có lựa chọn khác. Sirolimus chuyển hóa qua gan (CYP3A4)."
+        },
+        "overdose_management": {
+            "symptoms": ["Tăng lipid máu nghiêm trọng", "Giảm tiểu cầu, giảm bạch cầu", "Viêm phổi (pneumonitis)", "Tăng nguy cơ nhiễm trùng", "Rối loạn vết thương"],
+            "treatment": "Ngừng hoặc giảm mạnh liều sirolimus. Điều trị hỗ trợ: điều trị viêm phổi nếu có, hỗ trợ nhiễm trùng, điều chỉnh lipid máu. Theo dõi nồng độ sirolimus, chức năng thận, CBC.",
+            "antidote": None
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là ngừng/hủy liều và hỗ trợ."
+        },
+        "administration_instructions": {
+            "preparation": "Viên nén hoặc dung dịch uống",
+            "administration": "Uống cùng thời điểm mỗi ngày (quan trọng cho TDM). Có thể uống với hoặc không với thức ăn nhưng phải thống nhất. Dạng solution: pha với nước hoặc nước cam, khuấy đều, uống ngay.",
+            "monitoring": ["Nồng độ sirolimus máu (TDM)", "Chức năng thận", "Lipid máu", "CBC", "Dấu hiệu viêm phổi"]
+        },
         "black_box_warnings": "Tăng nguy cơ nhiễm trùng và ung thư. Có thể gây viêm phổi (pneumonitis) nghiêm trọng. Tăng lipid máu phổ biến. Rối loạn vết thương sau phẫu thuật. Chống chỉ định trong thai kỳ.",
         "references": {
             "primary_sources": [
@@ -584,7 +644,37 @@ IMMUNOSUPPRESSANTS_DRUGS = {
             "Thuốc cảm ứng CYP3A4 (Rifampin, Carbamazepine, Phenytoin) -> Giảm nồng độ Everolimus -> Thải ghép hoặc giảm hiệu quả",
             "Grapefruit juice: Tăng nồng độ Everolimus"
         ],
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Azole antifungals (Ketoconazole, Voriconazole), Macrolides (Clarithromycin), Diltiazem",
+                    "mechanism": "Ức chế CYP3A4 → giảm chuyển hóa everolimus",
+                    "effect": "Tăng mạnh nồng độ everolimus, nguy cơ độc tính",
+                    "management": "Giảm liều everolimus và theo dõi TDM sát hoặc tránh phối hợp nếu có thể."
+                },
+                {
+                    "drug": "Rifampin, Carbamazepine, Phenytoin",
+                    "mechanism": "Cảm ứng CYP3A4 → tăng chuyển hóa everolimus",
+                    "effect": "Giảm nồng độ everolimus, nguy cơ thải ghép hoặc giảm hiệu quả",
+                    "management": "Tránh phối hợp nếu có thể; nếu bắt buộc, tăng liều everolimus theo TDM."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Grapefruit juice",
+                    "mechanism": "Ức chế CYP3A4",
+                    "effect": "Tăng nồng độ everolimus",
+                    "management": "Tránh uống nước bưởi khi dùng everolimus."
+                }
+            ],
+            "minor": []
+        },
         "pregnancy": "D",
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định trong thai kỳ. Gây dị tật thai nhi. Tránh thai trong và sau điều trị. Cần biện pháp tránh thai hiệu quả.",
+            "lactation_details": "Không nên cho con bú trong thời gian điều trị. Everolimus có thể bài tiết vào sữa mẹ và gây hại cho trẻ."
+        },
         "mechanism_of_action": "Everolimus là mTOR (mammalian target of rapamycin) inhibitor, tương tự sirolimus nhưng có thời gian bán thải ngắn hơn. Ức chế tín hiệu mTOR, ngăn chặn sự tăng sinh và hoạt hóa tế bào T và B. Trong ung thư, everolimus ức chế sự phát triển của tế bào ung thư và tạo mạch máu. Everolimus được sử dụng cả trong ghép tạng (Zortress) và điều trị ung thư (Afinitor).",
         "monitoring": [
             "Nồng độ Everolimus máu (Trough level) - Mục tiêu 3-8 ng/ml (transplant)",
@@ -615,6 +705,26 @@ IMMUNOSUPPRESSANTS_DRUGS = {
             "clearance": "Gan: chuyển hóa qua CYP3A4. Thận: bài tiết một phần. Hấp thu tốt qua đường uống."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "hepatic_adjustment": {
+            "mild": "Thận trọng, có thể cần giảm liều",
+            "moderate": "Giảm liều rõ rệt, theo dõi TDM sát",
+            "severe": "Thận trọng tối đa, chỉ dùng khi không có lựa chọn khác. Everolimus chuyển hóa qua gan (CYP3A4)."
+        },
+        "overdose_management": {
+            "symptoms": ["Tăng lipid máu nghiêm trọng", "Giảm tiểu cầu, giảm bạch cầu", "Viêm phổi (pneumonitis)", "Tăng nguy cơ nhiễm trùng", "Rối loạn vết thương", "Tăng đường huyết"],
+            "treatment": "Ngừng hoặc giảm mạnh liều everolimus. Điều trị hỗ trợ: điều trị viêm phổi nếu có, hỗ trợ nhiễm trùng, điều chỉnh lipid máu và đường huyết. Theo dõi nồng độ everolimus, chức năng thận, CBC.",
+            "antidote": None
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là ngừng/hủy liều và hỗ trợ."
+        },
+        "administration_instructions": {
+            "preparation": "Viên nén, uống nguyên viên với nước",
+            "administration": "Uống cùng thời điểm mỗi ngày (quan trọng cho TDM). Có thể uống với hoặc không với thức ăn nhưng phải thống nhất. Tránh uống nước bưởi.",
+            "monitoring": ["Nồng độ everolimus máu (TDM)", "Chức năng thận", "Lipid máu", "Đường huyết", "CBC", "Dấu hiệu viêm phổi"]
+        },
         "black_box_warnings": "Tăng nguy cơ nhiễm trùng và ung thư. Có thể gây viêm phổi (pneumonitis) nghiêm trọng. Tăng lipid máu và tăng đường huyết phổ biến. Rối loạn vết thương sau phẫu thuật. Chống chỉ định trong thai kỳ (Category D).",
         "references": {
             "primary_sources": [

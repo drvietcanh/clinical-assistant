@@ -73,10 +73,13 @@ IRONS_DRUGS = {
             "IV cho thiếu máu nặng hoặc không dung nạp PO (có thể gây phản ứng dị ứng nặng)",
             "Tiếp tục điều trị 3-6 tháng sau khi hemoglobin bình thường (để bổ sung dự trữ)",
         ],
-        "onset": "Vài ngày đến vài tuần (tác dụng tích tụ)",
-        "duration": "Phụ thuộc vào dự trữ trong cơ thể",
-        "protein_binding": "Gắn với transferrin (vận chuyển) và ferritin (dự trữ)",
-        "clearance": "Dự trữ trong gan, lách, tủy xương; thải trừ qua phân, mồ hôi, nước tiểu (ít)",
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (sắt được dự trữ trong cơ thể)",
+            "onset": "Vài ngày đến vài tuần (tác dụng tích tụ)",
+            "duration": "Phụ thuộc vào dự trữ trong cơ thể",
+            "protein_binding": "Gắn với transferrin (vận chuyển) và ferritin (dự trữ)",
+            "clearance": "Dự trữ trong gan, lách, tủy xương; thải trừ qua phân, mồ hôi, nước tiểu (ít)"
+        },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
         "black_box_warnings": "Quá tải sắt có thể gây tổn thương gan, tim, và các cơ quan khác. Tránh dùng ở bệnh nhân hemochromatosis",
         "drug_interactions": {

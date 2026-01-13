@@ -53,7 +53,37 @@ ANTIDIURETIC_HORMONE_DRUGS = {
             "Corticosteroid: Có thể ảnh hưởng tác dụng",
             "Lithium, Demeclocycline: Đối kháng tác dụng (dùng trong SIADH)"
         ],
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc lợi tiểu (Furosemide, Thiazide)",
+                    "mechanism": "Cả hai đều ảnh hưởng đến cân bằng nước và điện giải",
+                    "effect": "Tăng nguy cơ hạ natri máu nghiêm trọng",
+                    "management": "Tránh dùng cùng. Nếu cần, theo dõi natri máu rất chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Corticosteroid",
+                    "mechanism": "Có thể ảnh hưởng đến tác dụng của desmopressin",
+                    "effect": "Giảm hiệu quả điều trị",
+                    "management": "Theo dõi đáp ứng lâm sàng."
+                },
+                {
+                    "drug": "Lithium, Demeclocycline",
+                    "mechanism": "Đối kháng tác dụng của desmopressin",
+                    "effect": "Giảm hiệu quả điều trị",
+                    "management": "Tránh dùng cùng. Lithium và demeclocycline được dùng để điều trị SIADH."
+                }
+            ],
+            "minor": []
+        },
         "pregnancy": "B",
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Không có bằng chứng về nguy cơ ở người. Có thể dùng trong thai kỳ nếu cần. Theo dõi natri máu chặt chẽ.",
+            "lactation_details": "Không rõ liệu có bài tiết vào sữa mẹ. Thận trọng khi cho con bú. Có thể dùng nếu lợi ích vượt trội nguy cơ."
+        },
         "mechanism_of_action": "Desmopressin là chất tương tự tổng hợp của vasopressin (ADH), có tác dụng chống bài niệu mạnh hơn vasopressin tự nhiên nhưng ít tác dụng co mạch. Desmopressin gắn vào thụ thể V2 ở ống thận xa và ống góp, làm tăng tái hấp thu nước tự do, giảm bài tiết nước tiểu và tăng độ cô đặc nước tiểu. Trong rối loạn đông máu, desmopressin làm tăng giải phóng factor VIII và von Willebrand factor từ nội mô mạch máu.",
         "monitoring": [
             "Natri máu (Serum sodium) - CRITICAL, theo dõi thường xuyên để phát hiện hạ natri máu",
@@ -83,6 +113,26 @@ ANTIDIURETIC_HORMONE_DRUGS = {
             "clearance": "Thận: bài tiết qua nước tiểu. Chuyển hóa ở gan một phần."
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng intranasal: bảo quản trong tủ lạnh (2-8°C) sau khi mở.",
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều. Desmopressin chuyển hóa một phần qua gan."
+        },
+        "overdose_management": {
+            "symptoms": ["Hạ natri máu nghiêm trọng", "Co giật", "Hôn mê", "Giữ nước", "Tăng huyết áp", "Phù phổi"],
+            "treatment": "Ngừng thuốc ngay. Điều trị hạ natri máu: hạn chế nước, có thể cần truyền natri chloride 3% nếu hạ natri máu nặng. Điều trị co giật nếu có. Hỗ trợ hô hấp nếu cần.",
+            "antidote": None
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là ngừng thuốc và điều trị hạ natri máu. Có thể dùng demeclocycline hoặc lithium để đối kháng tác dụng trong trường hợp cần thiết."
+        },
+        "administration_instructions": {
+            "preparation": "PO: Viên nén, uống nguyên viên với nước. IV/SC: Dung dịch tiêm. Intranasal: Dung dịch xịt mũi.",
+            "administration": "PO: Uống với nước, điều chỉnh liều theo đáp ứng. IV/SC: Tiêm chậm, theo dõi natri máu. Intranasal: Xịt vào mũi theo hướng dẫn. QUAN TRỌNG: Giới hạn lượng nước uống để tránh hạ natri máu.",
+            "monitoring": ["Natri máu (CRITICAL - thường xuyên)", "Lượng nước tiểu", "Cân nặng", "Dấu hiệu hạ natri máu"]
+        },
         "black_box_warnings": "Hạ natri máu nghiêm trọng, có thể gây co giật, hôn mê, tử vong. Cần theo dõi natri máu thường xuyên. Tránh uống quá nhiều nước. Ngừng ngay nếu có dấu hiệu hạ natri máu.",
         "references": {
             "primary_sources": [

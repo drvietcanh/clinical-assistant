@@ -5,6 +5,8 @@ Antihistamines (Thuốc kháng Histamin H1)
 ANTIHISTAMINES_DRUGS = {
     "Diphenhydramine": {
         "group": "Allergy - Antihistamine H1 (1st Gen - Gây buồn ngủ)",
+
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
         "vietnamese_name": "Diphenhydramine, Benadryl, Nautamine",
         "brand_names": {
             "common": ["Benadryl"],
@@ -34,6 +36,11 @@ ANTIHISTAMINES_DRUGS = {
             "Khô miệng, táo bón, bí tiểu (Kháng Cholinergic)",
             "Rối loạn tâm thần (người già)"
         ],
+        "interactions": [
+            "Rượu, thuốc an thần khác: Tăng tác dụng an thần, nguy cơ ức chế hô hấp",
+            "MAOIs: Tăng tác dụng kháng Cholinergic và an thần",
+            "Thuốc kháng Cholinergic khác: Tăng tác dụng phụ kháng Cholinergic"
+        ],
         "mechanism_of_action": "Đối kháng thụ thể Histamin H1 (có qua hàng rào máu não -> gây buồn ngủ) & Kháng Cholinergic.",
         "monitoring": ["Mức độ tỉnh táo", "Bí tiểu"],
         "risk_flags": {
@@ -52,7 +59,52 @@ ANTIHISTAMINES_DRUGS = {
             "FDA Warning - Gây buồn ngủ mạnh, tránh lái xe/vận hành máy móc",
             "WHO Guidelines - Essential medicines for allergic reactions",
             "ACAAI Guidelines - Allergic rhinitis and urticaria"
-        ]
+        ],
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation_details": ""
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": ""
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "treatment": "",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "",
+            "administration": "",
+            "monitoring": []
+        },
+        "storage": "",
+        "references": {
+            "primary": [],
+            "guidelines": [],
+            "other": []
+        },
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": ""
+        },
+        "black_box_warnings": None,
+        "precautions": [],
+        "pharmacokinetics": {
+            "half_life": "2-8 giờ",
+            "onset": "15-30 phút (PO), 5-10 phút (IV/IM)",
+            "duration": "4-6 giờ",
+            "protein_binding": "78-99%",
+            "clearance": "Chuyển hóa qua gan (CYP2D6), thải trừ qua thận"
+        },
     },
 
     "Chlorpheniramine": {
@@ -86,7 +138,56 @@ ANTIHISTAMINES_DRUGS = {
         "guideline_tags": [
             "WHO Guidelines - Essential medicines for allergic reactions",
             "ACAAI Guidelines - Allergic rhinitis and urticaria"
-        ]
+        ],
+        "contraindications": [],
+        "interactions": [],
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation_details": ""
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": ""
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "treatment": "",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "",
+            "administration": "",
+            "monitoring": []
+        },
+        "pharmacokinetics": {
+            "half_life": "",
+            "onset": "",
+            "duration": "",
+            "protein_binding": "",
+            "clearance": ""
+        },
+        "storage": "",
+        "references": {
+            "primary": [],
+            "guidelines": [],
+            "other": []
+        },
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": ""
+        },
+        "black_box_warnings": None,
+        "precautions": [],
+        "monitoring": [],
+        "mechanism_of_action": "",
     },
 
     "Cetirizine": {
@@ -124,7 +225,56 @@ ANTIHISTAMINES_DRUGS = {
         "guideline_tags": [
             "WHO Guidelines - Essential medicines for allergic reactions",
             "ACAAI Guidelines - Allergic rhinitis and urticaria"
-        ]
+        ],
+        "contraindications": [],
+        "interactions": [],
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation_details": ""
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": ""
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "treatment": "",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "",
+            "administration": "",
+            "monitoring": []
+        },
+        "pharmacokinetics": {
+            "half_life": "",
+            "onset": "",
+            "duration": "",
+            "protein_binding": "",
+            "clearance": ""
+        },
+        "storage": "",
+        "references": {
+            "primary": [],
+            "guidelines": [],
+            "other": []
+        },
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": ""
+        },
+        "black_box_warnings": None,
+        "precautions": [],
+        "monitoring": [],
+        "mechanism_of_action": "",
     },
 
     "Loratadine": {
@@ -157,7 +307,56 @@ ANTIHISTAMINES_DRUGS = {
         "guideline_tags": [
             "WHO Guidelines - Essential medicines for allergic reactions",
             "ACAAI Guidelines - Allergic rhinitis and urticaria"
-        ]
+        ],
+        "contraindications": [],
+        "interactions": [],
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation_details": ""
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": ""
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "treatment": "",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "",
+            "administration": "",
+            "monitoring": []
+        },
+        "pharmacokinetics": {
+            "half_life": "",
+            "onset": "",
+            "duration": "",
+            "protein_binding": "",
+            "clearance": ""
+        },
+        "storage": "",
+        "references": {
+            "primary": [],
+            "guidelines": [],
+            "other": []
+        },
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": ""
+        },
+        "black_box_warnings": None,
+        "precautions": [],
+        "monitoring": [],
+        "mechanism_of_action": "",
     },
 
     "Fexofenadine": {
@@ -192,7 +391,56 @@ ANTIHISTAMINES_DRUGS = {
             "FDA Warning - KHÔNG uống cùng nước hoa quả (táo, cam, bưởi) - giảm hấp thu mạnh",
             "WHO Guidelines - Essential medicines for allergic reactions",
             "ACAAI Guidelines - Allergic rhinitis and urticaria"
-        ]
+        ],
+        "contraindications": [],
+        "interactions": [],
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation_details": ""
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": ""
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "treatment": "",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "",
+            "administration": "",
+            "monitoring": []
+        },
+        "pharmacokinetics": {
+            "half_life": "",
+            "onset": "",
+            "duration": "",
+            "protein_binding": "",
+            "clearance": ""
+        },
+        "storage": "",
+        "references": {
+            "primary": [],
+            "guidelines": [],
+            "other": []
+        },
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": ""
+        },
+        "black_box_warnings": None,
+        "precautions": [],
+        "monitoring": [],
+        "mechanism_of_action": "",
     },
 
     "Desloratadine": {
@@ -224,6 +472,56 @@ ANTIHISTAMINES_DRUGS = {
         "guideline_tags": [
             "WHO Guidelines - Essential medicines for allergic reactions",
             "ACAAI Guidelines - Allergic rhinitis and urticaria"
-        ]
+        ],
+        "side_effects": [],
+        "contraindications": [],
+        "interactions": [],
+        "pregnancy_lactation": {
+            "fda_category": "",
+            "pregnancy_details": "",
+            "lactation_details": ""
+        },
+        "hepatic_adjustment": {
+            "mild": "",
+            "moderate": "",
+            "severe": ""
+        },
+        "overdose_management": {
+            "symptoms": [],
+            "treatment": "",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "",
+            "administration": "",
+            "monitoring": []
+        },
+        "pharmacokinetics": {
+            "half_life": "",
+            "onset": "",
+            "duration": "",
+            "protein_binding": "",
+            "clearance": ""
+        },
+        "storage": "",
+        "references": {
+            "primary": [],
+            "guidelines": [],
+            "other": []
+        },
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": ""
+        },
+        "black_box_warnings": None,
+        "precautions": [],
+        "monitoring": [],
+        "mechanism_of_action": "",
         }
 }

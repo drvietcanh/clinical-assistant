@@ -6,6 +6,13 @@ Active module - contains all diabetes drug data"""
 INSULINS_DRUGS = {
     "Insulin": {
         "group": "Diabetes - Insulin",
+
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người. An toàn trong thai kỳ",
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "An toàn trong thai kỳ. Insulin là hormone tự nhiên, không qua nhau thai. Được sử dụng rộng rãi trong thai kỳ để kiểm soát đái tháo đường. Nhu cầu insulin tăng trong thai kỳ, cần điều chỉnh liều thường xuyên.",
+            "lactation_details": "An toàn khi cho con bú. Insulin không bài tiết vào sữa mẹ. Không ảnh hưởng đến trẻ bú mẹ. Có thể dùng bình thường khi cho con bú."
+        },
         "vietnamese_name": "Insulin",
         "administration": ["SC", "IV"],
         "indications": [

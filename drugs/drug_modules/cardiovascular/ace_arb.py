@@ -52,6 +52,7 @@ ACE_ARB_DRUGS = {
             "NSAIDs: Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận.",
             "Lithium: Tăng nồng độ Lithium."
         ],
+        "pregnancy": "D - Chống chỉ định tuyệt đối trong thai kỳ. Gây quái thai, oligohydramnios, suy thận và dị tật xương thai nhi.",
         "drug_interactions": {
             "major": [
                 {
@@ -110,14 +111,47 @@ ACE_ARB_DRUGS = {
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "D - Chống chỉ định trong thai kỳ do nguy cơ gây hại cho thai nhi (oligohydramnios, thận suy, dị tật xương)"}
         },
         "guideline_tags": [
             "AHA/ACC 2017 Hypertension Guidelines",
             "AHA/ACC/HFSA 2022 Heart Failure Guidelines",
             "KDIGO 2021 Chronic Kidney Disease Guidelines",
             "ACC/AHA 2013 Post-MI Guidelines"
-        ]
+        ],
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định tuyệt đối trong thai kỳ. Gây quái thai, oligohydramnios (thiếu ối), suy thận và dị tật xương thai nhi. Ngừng ngay khi phát hiện có thai.",
+            "lactation_details": "Không rõ liệu có bài tiết vào sữa mẹ. Thận trọng khi cho con bú. Có thể gây hạ huyết áp ở trẻ bú mẹ."
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều. Lisinopril chuyển hóa một phần qua gan."
+        },
+        "overdose_management": {
+            "symptoms": ["Hạ huyết áp nghiêm trọng", "Tăng Kali máu", "Suy thận cấp", "Chóng mặt", "Ngất"],
+            "treatment": "Ngừng thuốc ngay. Bù dịch IV nếu hạ huyết áp. Điều chỉnh Kali máu nếu tăng. Lọc máu nếu cần.",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "Viên nén, uống nguyên viên với nước",
+            "administration": "Uống buổi sáng, có thể uống trước hoặc sau ăn. Không cần uống cùng thức ăn.",
+            "monitoring": ["Huyết áp sau 1-2 tuần", "Kali máu sau 1-2 tuần", "Creatinine sau 1-2 tuần"]
+        },
+        "pharmacokinetics": {
+            "half_life": "12 giờ",
+            "onset": "1 giờ (đạt đỉnh sau 6-8 giờ)",
+            "duration": "24 giờ",
+            "protein_binding": "25%",
+            "clearance": "Thải trừ qua thận (không chuyển hóa). Suy thận kéo dài thời gian bán hủy."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Giữ trong bao bì gốc.",
+        "references": {
+            "primary": ["FDA Label - Lisinopril", "Micromedex - Lisinopril"],
+            "guidelines": ["AHA/ACC 2017 Hypertension Guidelines", "AHA/ACC/HFSA 2022 Heart Failure Guidelines", "KDIGO 2021 CKD Guidelines"],
+            "other": []
+        },
     },
 
     "Enalapril": {
@@ -160,6 +194,7 @@ ACE_ARB_DRUGS = {
             "NSAIDs: Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận.",
             "Lithium: Tăng nồng độ Lithium."
         ],
+        "pregnancy": "D - Chống chỉ định tuyệt đối trong thai kỳ. Gây quái thai, oligohydramnios, suy thận và dị tật xương thai nhi.",
         "drug_interactions": {
             "major": [
                 {
@@ -203,14 +238,62 @@ ACE_ARB_DRUGS = {
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "D - Chống chỉ định trong thai kỳ do nguy cơ gây hại cho thai nhi (oligohydramnios, thận suy, dị tật xương)"}
         },
         "guideline_tags": [
             "AHA/ACC 2017 Hypertension Guidelines",
             "AHA/ACC/HFSA 2022 Heart Failure Guidelines",
             "KDIGO 2021 Chronic Kidney Disease Guidelines",
             "ACC/AHA 2013 Post-MI Guidelines"
-        ]
+        ],
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định tuyệt đối trong thai kỳ. Gây quái thai, oligohydramnios (thiếu ối), suy thận và dị tật xương thai nhi. Ngừng ngay khi phát hiện có thai.",
+            "lactation_details": "Không rõ liệu có bài tiết vào sữa mẹ. Thận trọng khi cho con bú. Có thể gây hạ huyết áp ở trẻ bú mẹ."
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều. Enalapril chuyển hóa qua gan thành enalaprilat."
+        },
+        "overdose_management": {
+            "symptoms": ["Hạ huyết áp nghiêm trọng", "Tăng Kali máu", "Suy thận cấp", "Chóng mặt", "Ngất"],
+            "treatment": "Ngừng thuốc ngay. Bù dịch IV nếu hạ huyết áp. Điều chỉnh Kali máu nếu tăng. Lọc máu nếu cần.",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "Viên nén PO hoặc dung dịch IV (Enalaprilat)",
+            "administration": "PO: Uống buổi sáng, có thể uống trước hoặc sau ăn. IV: Enalaprilat 1.25mg mỗi 6 giờ cho cấp cứu tăng huyết áp.",
+            "monitoring": ["Huyết áp sau 1-2 tuần", "Kali máu sau 1-2 tuần", "Creatinine sau 1-2 tuần"]
+        },
+        "pharmacokinetics": {
+            "half_life": "11 giờ (Enalaprilat - chất chuyển hóa hoạt tính)",
+            "onset": "1 giờ PO (đạt đỉnh sau 4-6 giờ), 15 phút IV",
+            "duration": "24 giờ",
+            "protein_binding": "50-60%",
+            "clearance": "Chuyển hóa qua gan thành Enalaprilat (hoạt tính), thải trừ qua thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Giữ trong bao bì gốc.",
+        "references": {
+            "primary": ["FDA Label - Enalapril", "Micromedex - Enalapril"],
+            "guidelines": ["AHA/ACC 2017 Hypertension Guidelines", "AHA/ACC/HFSA 2022 Heart Failure Guidelines", "KDIGO 2021 CKD Guidelines"],
+            "other": []
+        },
+        "precautions": [
+            "Kiểm tra Kali, Creatinine sau 1-2 tuần điều trị",
+            "Tránh thai - Gây quái thai (ngừng ngay nếu mang thai)",
+            "Ho khan (10-20%) - Nếu không dung nạp, chuyển sang ARB",
+            "Nguy cơ phù mạch - Ngừng thuốc ngay nếu sưng môi, lưỡi, khó thở",
+            "Thận trọng ở suy thận, tăng Kali máu",
+            "Tránh dùng NSAIDs"
+        ],
+        "black_box_warnings": "Gây quái thai. Chống chỉ định ở thai kỳ.",
+        "monitoring": [
+            "Huyết áp",
+            "Kali máu - Sau 1-2 tuần điều trị",
+            "Creatinine, eGFR - Sau 1-2 tuần",
+            "Dấu hiệu ho khan"
+        ],
     },
 
     "Losartan": {
@@ -258,6 +341,7 @@ ACE_ARB_DRUGS = {
             "NSAIDs: Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận.",
             "Lithium: Tăng nồng độ Lithium."
         ],
+        "pregnancy": "D - Chống chỉ định tuyệt đối trong thai kỳ. Gây quái thai, oligohydramnios, suy thận và dị tật xương thai nhi.",
         "drug_interactions": {
             "major": [
                 {
@@ -313,14 +397,47 @@ ACE_ARB_DRUGS = {
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "D - Chống chỉ định trong thai kỳ do nguy cơ gây hại cho thai nhi (oligohydramnios, thận suy, dị tật xương)"}
         },
         "guideline_tags": [
             "AHA/ACC 2017 Hypertension Guidelines",
             "AHA/ACC/HFSA 2022 Heart Failure Guidelines",
             "KDIGO 2021 Chronic Kidney Disease Guidelines",
             "AHA/ASA 2021 Stroke Prevention Guidelines"
-        ]
+        ],
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định tuyệt đối trong thai kỳ. Gây quái thai, oligohydramnios (thiếu ối), suy thận và dị tật xương thai nhi. Ngừng ngay khi phát hiện có thai.",
+            "lactation_details": "Không rõ liệu có bài tiết vào sữa mẹ. Thận trọng khi cho con bú. Có thể gây hạ huyết áp ở trẻ bú mẹ."
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều. Losartan chuyển hóa qua gan thành chất chuyển hóa hoạt tính."
+        },
+        "overdose_management": {
+            "symptoms": ["Hạ huyết áp nghiêm trọng", "Tăng Kali máu", "Suy thận cấp", "Chóng mặt", "Ngất"],
+            "treatment": "Ngừng thuốc ngay. Bù dịch IV nếu hạ huyết áp. Điều chỉnh Kali máu nếu tăng. Lọc máu nếu cần.",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "Viên nén, uống nguyên viên với nước",
+            "administration": "Uống buổi sáng, có thể uống trước hoặc sau ăn. Không cần uống cùng thức ăn.",
+            "monitoring": ["Huyết áp sau 1-2 tuần", "Kali máu sau 1-2 tuần", "Creatinine sau 1-2 tuần"]
+        },
+        "pharmacokinetics": {
+            "half_life": "2 giờ (Losartan), 6-9 giờ (chất chuyển hóa hoạt tính)",
+            "onset": "1 giờ (đạt đỉnh sau 1 giờ)",
+            "duration": "24 giờ",
+            "protein_binding": "98.7%",
+            "clearance": "Chuyển hóa qua gan (CYP2C9, CYP3A4) thành chất chuyển hóa hoạt tính, thải trừ qua thận và phân."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Giữ trong bao bì gốc.",
+        "references": {
+            "primary": ["FDA Label - Losartan", "Micromedex - Losartan"],
+            "guidelines": ["AHA/ACC 2017 Hypertension Guidelines", "AHA/ACC/HFSA 2022 Heart Failure Guidelines", "KDIGO 2021 CKD Guidelines"],
+            "other": []
+        },
     },
 
     "Valsartan": {
@@ -360,6 +477,7 @@ ACE_ARB_DRUGS = {
             "Thuốc giữ Kali (Spironolactone, Amiloride), Bổ sung Kali: Tăng nguy cơ tăng Kali máu.",
             "NSAIDs: Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận."
         ],
+        "pregnancy": "D - Chống chỉ định tuyệt đối trong thai kỳ. Gây quái thai, oligohydramnios, suy thận và dị tật xương thai nhi.",
         "drug_interactions": {
             "major": [
                 {
@@ -390,18 +508,65 @@ ACE_ARB_DRUGS = {
             "agents": [],
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu hạ huyết áp, điều chỉnh điện giải."
         },
+        "mechanism_of_action": "Chẹn thụ thể Angiotensin II (AT1) → Giãn mạch, giảm huyết áp. Tác dụng tương tự Losartan nhưng có thời gian bán hủy dài hơn.",
+        "monitoring": [
+            "Huyết áp",
+            "Kali máu - Sau 1-2 tuần điều trị",
+            "Creatinine, eGFR - Sau 1-2 tuần"
+        ],
+        "precautions": [
+            "Kiểm tra Kali, Creatinine sau 1-2 tuần điều trị",
+            "Tránh thai - Gây quái thai (ngừng ngay nếu mang thai)",
+            "KHÔNG gây ho khan - Ưu điểm so với ACE-I",
+            "Thận trọng ở suy thận, tăng Kali máu",
+            "Tránh dùng NSAIDs"
+        ],
+        "black_box_warnings": "Gây quái thai. Chống chỉ định ở thai kỳ.",
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "D - Chống chỉ định trong thai kỳ do nguy cơ gây hại cho thai nhi"}
         },
         "guideline_tags": [
             "AHA/ACC 2017 Hypertension Guidelines",
             "AHA/ACC/HFSA 2022 Heart Failure Guidelines",
             "KDIGO 2021 Chronic Kidney Disease Guidelines"
-        ]
+        ],
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định tuyệt đối trong thai kỳ. Gây quái thai, oligohydramnios (thiếu ối), suy thận và dị tật xương thai nhi. Ngừng ngay khi phát hiện có thai.",
+            "lactation_details": "Không rõ liệu có bài tiết vào sữa mẹ. Thận trọng khi cho con bú. Có thể gây hạ huyết áp ở trẻ bú mẹ."
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều. Valsartan chuyển hóa một phần qua gan."
+        },
+        "overdose_management": {
+            "symptoms": ["Hạ huyết áp nghiêm trọng", "Tăng Kali máu", "Suy thận cấp", "Chóng mặt", "Ngất"],
+            "treatment": "Ngừng thuốc ngay. Bù dịch IV nếu hạ huyết áp. Điều chỉnh Kali máu nếu tăng. Lọc máu nếu cần.",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "Viên nén, uống nguyên viên với nước",
+            "administration": "Uống buổi sáng, có thể uống trước hoặc sau ăn. Không cần uống cùng thức ăn.",
+            "monitoring": ["Huyết áp sau 1-2 tuần", "Kali máu sau 1-2 tuần", "Creatinine sau 1-2 tuần"]
+        },
+        "pharmacokinetics": {
+            "half_life": "6 giờ",
+            "onset": "2 giờ (đạt đỉnh sau 2-4 giờ)",
+            "duration": "24 giờ",
+            "protein_binding": "94-97%",
+            "clearance": "Chuyển hóa qua gan (CYP2C9), thải trừ qua thận và phân."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Giữ trong bao bì gốc.",
+        "references": {
+            "primary": ["FDA Label - Valsartan", "Micromedex - Valsartan"],
+            "guidelines": ["AHA/ACC 2017 Hypertension Guidelines", "AHA/ACC/HFSA 2022 Heart Failure Guidelines", "KDIGO 2021 CKD Guidelines"],
+            "other": []
+        },
     },
 
     "Telmisartan": {
@@ -440,6 +605,7 @@ ACE_ARB_DRUGS = {
             "Thuốc giữ Kali (Spironolactone, Amiloride), Bổ sung Kali: Tăng nguy cơ tăng Kali máu.",
             "NSAIDs: Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận."
         ],
+        "pregnancy": "D - Chống chỉ định tuyệt đối trong thai kỳ. Gây quái thai, oligohydramnios, suy thận và dị tật xương thai nhi.",
         "drug_interactions": {
             "major": [
                 {
@@ -476,12 +642,59 @@ ACE_ARB_DRUGS = {
             "narrow_therapeutic_index": False,
             "icu_critical_care_only": False,
             "bleeding_risk": "Low",
-            "organ_toxicity": {"renal": "Moderate", "pregnancy": "High (teratogenic)"}
+            "organ_toxicity": {"renal": "Moderate", "pregnancy": "D - Chống chỉ định trong thai kỳ do nguy cơ gây hại cho thai nhi"}
         },
         "guideline_tags": [
             "AHA/ACC 2017 Hypertension Guidelines",
             "AHA/ACC/HFSA 2022 Heart Failure Guidelines",
             "KDIGO 2021 Chronic Kidney Disease Guidelines"
-        ]
-        }
+        ],
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "Chống chỉ định tuyệt đối trong thai kỳ. Gây quái thai, oligohydramnios (thiếu ối), suy thận và dị tật xương thai nhi. Ngừng ngay khi phát hiện có thai.",
+            "lactation_details": "Không rõ liệu có bài tiết vào sữa mẹ. Thận trọng khi cho con bú. Có thể gây hạ huyết áp ở trẻ bú mẹ."
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều. Telmisartan chuyển hóa qua gan."
+        },
+        "overdose_management": {
+            "symptoms": ["Hạ huyết áp nghiêm trọng", "Tăng Kali máu", "Suy thận cấp", "Chóng mặt", "Ngất"],
+            "treatment": "Ngừng thuốc ngay. Bù dịch IV nếu hạ huyết áp. Điều chỉnh Kali máu nếu tăng. Lọc máu nếu cần.",
+            "antidote": None
+        },
+        "administration_instructions": {
+            "preparation": "Viên nén, uống nguyên viên với nước",
+            "administration": "Uống buổi sáng, có thể uống trước hoặc sau ăn. Không cần uống cùng thức ăn.",
+            "monitoring": ["Huyết áp sau 1-2 tuần", "Kali máu sau 1-2 tuần", "Creatinine sau 1-2 tuần"]
+        },
+        "pharmacokinetics": {
+            "half_life": "24 giờ (dài nhất trong nhóm ARB)",
+            "onset": "3 giờ (đạt đỉnh sau 0.5-1 giờ)",
+            "duration": "24 giờ",
+            "protein_binding": ">99%",
+            "clearance": "Chuyển hóa qua gan (glucuronidation), thải trừ qua phân (98%), thận (1%)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Giữ trong bao bì gốc.",
+        "references": {
+            "primary": ["FDA Label - Telmisartan", "Micromedex - Telmisartan"],
+            "guidelines": ["AHA/ACC 2017 Hypertension Guidelines", "AHA/ACC/HFSA 2022 Heart Failure Guidelines", "KDIGO 2021 CKD Guidelines"],
+            "other": []
+        },
+        "precautions": [
+            "Kiểm tra Kali, Creatinine sau 1-2 tuần điều trị",
+            "Tránh thai - Gây quái thai (ngừng ngay nếu mang thai)",
+            "KHÔNG gây ho khan - Ưu điểm so với ACE-I",
+            "Tác dụng kéo dài nhất trong nhóm ARB",
+            "Thận trọng ở suy thận, tăng Kali máu",
+            "Tránh dùng NSAIDs"
+        ],
+        "black_box_warnings": "Gây quái thai. Chống chỉ định ở thai kỳ.",
+        "monitoring": [
+            "Huyết áp",
+            "Kali máu - Sau 1-2 tuần điều trị",
+            "Creatinine, eGFR - Sau 1-2 tuần"
+        ],
+    }
 }
