@@ -526,18 +526,34 @@ with main_tab1:
             st.caption("**Dựa trên bằng chứng**")
 
         # Display specialty overview with enhanced UI
-        current_name = SCORES_BY_SPECIALTY[specialty][selected_score_id]['name'] if selected_score_id else "Chọn calculator bên trái"
-        current_desc = SCORES_BY_SPECIALTY[specialty][selected_score_id].get('desc', '') if selected_score_id else ""
+        # Ensure specialty and scores_in_specialty are defined (they should be from sidebar)
+        if 'specialty' not in locals():
+            # Fallback: use first specialty if not defined
+            specialty = list(SCORES_BY_SPECIALTY.keys())[0] if SCORES_BY_SPECIALTY else ""
+        
+        if 'scores_in_specialty' not in locals():
+            scores_in_specialty = SCORES_BY_SPECIALTY.get(specialty, {}) if specialty else {}
+        
+        if not selected_score_id:
+            current_name = "Chọn calculator bên trái"
+            current_desc = ""
+        elif specialty and specialty in SCORES_BY_SPECIALTY and selected_score_id and selected_score_id in SCORES_BY_SPECIALTY[specialty]:
+            current_name = SCORES_BY_SPECIALTY[specialty][selected_score_id]['name']
+            current_desc = SCORES_BY_SPECIALTY[specialty][selected_score_id].get('desc', '')
+        else:
+            current_name = "Chọn calculator bên trái"
+            current_desc = ""
 
         # Enhanced header with favorite button using Modern UI
         col_header1, col_header2 = st.columns([4, 1])
         with col_header1:
-            if selected_score_id:
+            if selected_score_id and specialty and specialty in SCORES_BY_SPECIALTY and selected_score_id in SCORES_BY_SPECIALTY[specialty]:
+                daily_use_badge = '<span style="background: #e6fffa; color: #047481; padding: 4px 12px; border-radius: 16px; font-size: 0.8em; font-weight: 600;">⭐ Dùng hàng ngày</span>' if is_daily_use(SCORES_BY_SPECIALTY[specialty][selected_score_id]) else ''
                 st.markdown(f"""
                 <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
                     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
                         <span style="background: #e8f0fe; color: #1967d2; padding: 4px 12px; border-radius: 16px; font-size: 0.8em; font-weight: 600;">{specialty}</span>
-                        {'<span style="background: #e6fffa; color: #047481; padding: 4px 12px; border-radius: 16px; font-size: 0.8em; font-weight: 600;">⭐ Dùng hàng ngày</span>' if is_daily_use(SCORES_BY_SPECIALTY[specialty][selected_score_id]) else ''}
+                        {daily_use_badge}
                     </div>
                     <h2 style="color: #1a73e8; margin: 0 0 10px 0; font-size: 1.5em;">{current_name}</h2>
                     <p style="color: #5f6368; margin: 0; line-height: 1.5;">{current_desc}</p>
@@ -548,24 +564,24 @@ with main_tab1:
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px dashed #ced4da; margin-bottom: 20px; text-align: center;">
                     <p style="color: #6c757d; margin: 0;">👈 Chọn một calculator từ danh sách bên trái để bắt đầu</p>
                     <div style="margin-top: 10px;">
-                        <span style="background: #e9ecef; color: #495057; padding: 4px 12px; border-radius: 16px; font-size: 0.85em;">{len(scores_in_specialty)} calculators</span>
-                        <span style="background: #e9ecef; color: #495057; padding: 4px 12px; border-radius: 16px; font-size: 0.85em;">{specialty}</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 4px 12px; border-radius: 16px; font-size: 0.85em;">{len(scores_in_specialty) if 'scores_in_specialty' in locals() else 0} calculators</span>
+                        <span style="background: #e9ecef; color: #495057; padding: 4px 12px; border-radius: 16px; font-size: 0.85em;">{specialty if specialty else 'N/A'}</span>
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
 
         with col_header2:
-            if selected_score_id:
+            if selected_score_id and specialty and specialty in SCORES_BY_SPECIALTY and selected_score_id in SCORES_BY_SPECIALTY[specialty]:
                 render_favorite_button(specialty, selected_score_id, current_name, key_suffix="header")
 
         # ========== ROUTE TO APPROPRIATE MODULE ==========
         # Track recent when calculator is selected
-        if selected_score_id and RECENT_TRACKING_AVAILABLE:
+        if selected_score_id and specialty and specialty in SCORES_BY_SPECIALTY and selected_score_id in SCORES_BY_SPECIALTY[specialty] and RECENT_TRACKING_AVAILABLE:
             score_info = SCORES_BY_SPECIALTY[specialty][selected_score_id]
             add_to_recent(specialty, selected_score_id, score_info['name'])
 
         # Route to calculator
-        if selected_score_id:
+        if selected_score_id and specialty and specialty in SCORES_BY_SPECIALTY:
             _render_calculator_by_specialty(specialty, selected_score_id)
 
 # Helper function to route calculators by specialty
