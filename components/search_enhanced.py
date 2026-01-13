@@ -5,6 +5,7 @@ Real-time suggestions, search history, fuzzy matching, and smart ranking
 
 import streamlit as st
 from config.calculators import ALL_CALCULATORS
+from config.user_profile import get_current_profile
 from typing import List, Tuple, Dict, Optional
 from difflib import SequenceMatcher
 import re
@@ -49,17 +50,25 @@ def _track_search(query: str):
     
     if query:
         query_lower = query.lower().strip()
-        
+
         # Track in popular searches
         if query_lower not in st.session_state.popular_searches:
             st.session_state.popular_searches[query_lower] = 0
         st.session_state.popular_searches[query_lower] += 1
-        
+
         # Track in search history (max 20)
         if query_lower not in st.session_state.search_history:
             st.session_state.search_history.insert(0, query_lower)
             if len(st.session_state.search_history) > 20:
                 st.session_state.search_history = st.session_state.search_history[:20]
+
+        # Persist to analytics (if available)
+        try:
+            from utils.analytics_events import track_search as track_search_analytics
+
+            track_search_analytics(query_lower)
+        except Exception:
+            pass
 
 
 def _track_calculator_usage(calc_id: str):
@@ -274,23 +283,45 @@ def get_search_suggestions_enhanced(
         suggestion_type: 'calculator', 'popular', 'history', 'category'
     """
     if not query or len(query) < 1:
-        # Return popular searches and categories
+        # Return popular searches and categories (biased by profile)
         suggestions = []
-        
-        # Popular searches
+
+        profile = get_current_profile()
+
+        # Popular searches from history
         if include_popular:
             _init_popular_searches()
-            popular = st.session_state.get('popular_searches', {})
+            popular = st.session_state.get("popular_searches", {})
             sorted_popular = sorted(popular.items(), key=lambda x: x[1], reverse=True)
             for pop_query, count in sorted_popular[:5]:
-                suggestions.append((pop_query, 'popular', count))
-        
-        # Default popular calculators
-        default_popular = ["SOFA", "CHA2DS2VASc", "APACHE", "NEWS2", "ASCVD", "eGFR", "CrCl", "HEART Score"]
+                suggestions.append((pop_query, "popular", count))
+
+        # Default popular calculators by profile
+        if profile == "icu":
+            default_popular = [
+                "SOFA",
+                "qSOFA",
+                "APACHE",
+                "NEWS2",
+                "Lactate",
+                "Shock",
+                "Sepsis",
+            ]
+        else:
+            default_popular = [
+                "CHA2DS2VASc",
+                "HAS-BLED",
+                "ASCVD",
+                "HEART Score",
+                "eGFR",
+                "CrCl",
+                "BMI",
+            ]
+
         for pop in default_popular:
             if not any(s[0].lower() == pop.lower() for s in suggestions):
-                suggestions.append((pop, 'popular', 10))
-        
+                suggestions.append((pop, "popular", 10))
+
         return suggestions[:max_suggestions]
     
     query_lower = query.lower().strip()
@@ -436,13 +467,19 @@ def render_search_enhanced():
     with col_filter:
         # Category filter
         all_categories = ["Tất cả"] + get_all_categories()
+        profile = get_current_profile()
+        help_text = (
+            "Lọc theo chuyên khoa (ưu tiên ICU)"
+            if profile == "icu"
+            else "Lọc theo chuyên khoa (ưu tiên Nội)"
+        )
         selected_category = st.selectbox(
             "Lọc:",
             all_categories,
             index=0,
             key="search_category_filter_enhanced",
             label_visibility="collapsed",
-            help="Lọc theo chuyên khoa"
+            help=help_text,
         )
         category_filter = None if selected_category == "Tất cả" else selected_category
     

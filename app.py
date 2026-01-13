@@ -15,6 +15,8 @@ import os
 # Import configuration
 from config.calculators import ALL_CALCULATORS
 from config.app_config import APP_CONFIG
+from config.user_profile import get_current_profile, set_current_profile, get_profile_label
+from utils.analytics_events import track_feature_usage
 from utils.cache_helpers import get_module_list_for_navigation_cached
 from config.theme import get_module_style
 from utils.page_helper import inject_google_analytics
@@ -150,18 +152,42 @@ else:
 _init_mobile_features()
 
 # ========== HEADER ==========
-col1, col2 = st.columns([3, 1])
+col1, col2 = st.columns([3, 2])
 
 with col1:
     st.markdown('<p class="main-title">🩺 Trợ lý lâm sàng</p>', unsafe_allow_html=True)
     st.markdown('<p class="subtitle">Hệ thống công cụ hỗ trợ lâm sàng toàn diện</p>', unsafe_allow_html=True)
 
 with col2:
+    header_col1, header_col2 = st.columns(2)
+
+    # Profile toggle: Nội / ICU
+    with header_col1:
+        current_profile = get_current_profile()
+        profile_label_to_value = {"Nội": "noi", "ICU": "icu"}
+        value_to_profile_label = {v: k for k, v in profile_label_to_value.items()}
+        selected_label = st.selectbox(
+            "Chuyên khoa",
+            options=list(profile_label_to_value.keys()),
+            index=list(profile_label_to_value.values()).index(current_profile),
+            key="profile_select",
+        )
+        selected_profile = profile_label_to_value[selected_label]
+        if selected_profile != current_profile:
+            set_current_profile(selected_profile)
+            # Track profile switch for analytics
+            try:
+                track_feature_usage(f"profile_switch_{selected_profile}")
+            except Exception:
+                pass
+            st.rerun()
+
     # Dark mode toggle
-    dark_mode_label = "🌙 Dark" if not st.session_state.dark_mode else "☀️ Light"
-    if st.button(dark_mode_label, key="dark_mode_toggle"):
-        st.session_state.dark_mode = not st.session_state.dark_mode
-        st.rerun()
+    with header_col2:
+        dark_mode_label = "🌙 Dark" if not st.session_state.dark_mode else "☀️ Light"
+        if st.button(dark_mode_label, key="dark_mode_toggle", use_container_width=True):
+            st.session_state.dark_mode = not st.session_state.dark_mode
+            st.rerun()
 
 st.markdown("---")
 

@@ -7,6 +7,7 @@ import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
 from components.ui import render_info_box, render_hero
 from guidelines.data import get_all_guidelines
+from config.user_profile import get_current_profile
 import json
 from pathlib import Path
 
@@ -137,15 +138,34 @@ with col2:
         if search_query and search_query not in st.session_state.recent_searches:
             st.session_state.recent_searches.append(search_query)
 
-# Quick search suggestions
+# Quick search suggestions (biased by profile)
 if not search_query:
     st.markdown("### 💡 Popular Searches")
-    
-    popular = [
-        "Aspirin", "Sepsis", "CHA2DS2-VASc", "Heart Failure", 
-        "Diabetes", "Hypertension", "Antibiotics", "COPD"
-    ]
-    
+
+    profile = get_current_profile()
+    if profile == "icu":
+        popular = [
+            "Sepsis",
+            "Septic shock",
+            "SOFA",
+            "qSOFA",
+            "ARDS",
+            "Ventilator",
+            "Vasopressors",
+            "AKI",
+        ]
+    else:
+        popular = [
+            "CHA2DS2-VASc",
+            "HAS-BLED",
+            "ASCVD",
+            "Heart Failure",
+            "CKD",
+            "Diabetes",
+            "Hypertension",
+            "Antibiotics",
+        ]
+
     cols = st.columns(4)
     for idx, term in enumerate(popular):
         with cols[idx % 4]:
@@ -221,36 +241,74 @@ if search_query:
         if 'cha2ds2' in search_query.lower() or 'stroke' in search_query.lower():
             results.extend(score_results)
     
-    # Display results
+    # Display results (grouped by type/section)
     if results:
         st.markdown(f"""
         <div class="search-stats">
             <strong>Found {len(results)} results</strong>
         </div>
         """, unsafe_allow_html=True)
-        
+
+        # Group results by type
+        results_by_type = {}
         for result in results:
-            type_class = f"type-{result['type'].lower()}"
-            
-            st.markdown(f"""
-            <div class="search-result">
-                <div>
-                    <span class="result-type {type_class}">{result['type']}</span>
-                </div>
-                <div class="result-title">{result['title']}</div>
-                <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
-                    {result['subtitle']}
-                </div>
-                <div style="color: #333; font-size: 0.95rem;">
-                    {result['description']}
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-            
-            col1, col2 = st.columns([1, 4])
-            with col1:
-                if st.button("Open →", key=f"open_{result['title']}", use_container_width=True):
-                    st.switch_page(result['link'])
+            results_by_type.setdefault(result["type"], []).append(result)
+
+        # Define display order and section headers (biased by profile)
+        profile = get_current_profile()
+        if profile == "icu":
+            section_order = [
+                ("Guideline", "📋 Guidelines (ICU)"),
+                ("Protocol", "📋 Protocols / Sepsis bundles"),
+                ("Score", "📊 Scores (ICU)"),
+                ("Drug", "💊 Drugs"),
+                ("Article", "📚 Articles"),
+            ]
+        else:
+            section_order = [
+                ("Score", "📊 Scores"),
+                ("Drug", "💊 Drugs"),
+                ("Guideline", "📋 Guidelines"),
+                ("Article", "📚 Articles"),
+                ("Protocol", "📋 Protocols"),
+            ]
+
+        for type_key, section_title in section_order:
+            section_results = results_by_type.get(type_key, [])
+            if not section_results:
+                continue
+
+            st.markdown(f"#### {section_title}")
+
+            for result in section_results:
+                type_class = f"type-{result['type'].lower()}"
+
+                st.markdown(
+                    f"""
+                    <div class="search-result">
+                        <div>
+                            <span class="result-type {type_class}">{result['type']}</span>
+                        </div>
+                        <div class="result-title">{result['title']}</div>
+                        <div style="color: #666; font-size: 0.9rem; margin-bottom: 8px;">
+                            {result['subtitle']}
+                        </div>
+                        <div style="color: #333; font-size: 0.95rem;">
+                            {result['description']}
+                        </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
+
+                col1, col2 = st.columns([1, 4])
+                with col1:
+                    if st.button(
+                        "Open →",
+                        key=f"open_{result['type']}_{result['title']}",
+                        use_container_width=True,
+                    ):
+                        st.switch_page(result["link"])
     else:
         st.warning(f"No results found for '{search_query}'")
         st.info("💡 Try different search terms or filters")

@@ -4,49 +4,163 @@ Add to sidebar for easy access
 """
 
 import streamlit as st
+from config.app_config import get_module_info
+from config.user_profile import get_current_profile
+
+
+def _get_module(module_id: str):
+    """Safely get module info, returning None on error."""
+    try:
+        return get_module_info(module_id)
+    except Exception:
+        return None
+
 
 def render_quick_access_menu():
     """
     Render quick access menu in sidebar
-    Provides shortcuts to most used features
+    Provides shortcuts to most used features, customized by profile (Nội / ICU)
     """
     st.markdown("### ⚡ Quick Access")
-    
-    # Most used clinical tools
+
+    profile = get_current_profile()  # "noi" or "icu"
+
+    # -------- Clinical tools (Scores, Labs, Critical care, Protocols, Drug DB) --------
     with st.expander("🩺 Clinical Tools", expanded=False):
         col1, col2 = st.columns(2)
-        
-        with col1:
-            if st.button("📊 Scores", use_container_width=True, key="qa_scores"):
-                st.switch_page("pages/01_📊_Scores.py")
-            if st.button("🔬 Labs", use_container_width=True, key="qa_labs"):
-                st.switch_page("pages/05_🔬_Labs_and_Calculators.py")
-            if st.button("💊 Drugs", use_container_width=True, key="qa_drugs"):
-                st.switch_page("pages/07_💊_Drug_Database.py")
-        
-        with col2:
-            if st.button("📋 Protocols", use_container_width=True, key="qa_protocols"):
-                st.switch_page("pages/04_📋_Protocols.py")
-            if st.button("🧭 Decision", use_container_width=True, key="qa_decision"):
-                st.switch_page("pages/10_🧭_Decision_Support.py")
-            if st.button("🫁 Critical", use_container_width=True, key="qa_critical"):
-                st.switch_page("pages/09_🫁_Critical_Care.py")
-    
-    # Information resources
-    with st.expander("📚 Resources", expanded=False):
-        if st.button("📋 Guidelines", use_container_width=True, key="qa_guidelines"):
-            st.switch_page("pages/15_📋_Guidelines_Tracker.py")
-        if st.button("📖 Diseases", use_container_width=True, key="qa_diseases"):
-            st.switch_page("pages/16_📖_Disease_Encyclopedia.py")
-        if st.button("📚 Articles", use_container_width=True, key="qa_articles"):
-            st.switch_page("pages/12_📚_In_Depth_Articles.py")
-    
-    # Utilities
-    with st.expander("🔧 Utilities", expanded=False):
-        if st.button("🔍 Search", use_container_width=True, key="qa_search"):
-            st.switch_page("pages/20_🔍_Global_Search.py")
-        if st.button("⚙️ Settings", use_container_width=True, key="qa_settings"):
-            st.switch_page("pages/23_⚙️_Settings.py")
+
+        scores = _get_module("scores")
+        labs = _get_module("labs")
+        critical = _get_module("critical_care")
+        protocols = _get_module("protocols")
+        decision = _get_module("phase2_features")
+        drug_db = _get_module("drug_database")
+        tdm = _get_module("tdm")
+        antibiotics = _get_module("antibiotics")
+        icu_bundles = _get_module("icu_bundles")  # optional, if added to APP_CONFIG
+
+        if profile == "icu":
+            # ICU: ưu tiên Hồi sức, Sepsis bundle, Scores ICU, Labs
+            with col1:
+                if critical and st.button(
+                    f"{critical.icon} {critical.title}", use_container_width=True, key="qa_critical"
+                ):
+                    st.switch_page(critical.page_path)
+                if scores and st.button(
+                    f"{scores.icon} {scores.title}", use_container_width=True, key="qa_scores_icu"
+                ):
+                    st.switch_page(scores.page_path)
+                if labs and st.button(
+                    f"{labs.icon} {labs.title}", use_container_width=True, key="qa_labs_icu"
+                ):
+                    st.switch_page(labs.page_path)
+
+            with col2:
+                if icu_bundles and st.button(
+                    f"🧵 Bundles ICU", use_container_width=True, key="qa_icu_bundles"
+                ):
+                    st.switch_page(icu_bundles.page_path)
+                if protocols and st.button(
+                    f"{protocols.icon} {protocols.title}",
+                    use_container_width=True,
+                    key="qa_protocols_icu",
+                ):
+                    st.switch_page(protocols.page_path)
+                if antibiotics and st.button(
+                    f"{antibiotics.icon} Kháng sinh",
+                    use_container_width=True,
+                    key="qa_antibiotics_icu",
+                ):
+                    st.switch_page(antibiotics.page_path)
+                if tdm and st.button(
+                    f"{tdm.icon} {tdm.title}", use_container_width=True, key="qa_tdm_icu"
+                ):
+                    st.switch_page(tdm.page_path)
+        else:
+            # Nội: ưu tiên Scores nội khoa, Drug DB, Decision Support, Labs
+            with col1:
+                if scores and st.button(
+                    f"{scores.icon} {scores.title}", use_container_width=True, key="qa_scores_noi"
+                ):
+                    st.switch_page(scores.page_path)
+                if drug_db and st.button(
+                    f"{drug_db.icon} {drug_db.title}", use_container_width=True, key="qa_drugs_noi"
+                ):
+                    st.switch_page(drug_db.page_path)
+                if labs and st.button(
+                    f"{labs.icon} {labs.title}", use_container_width=True, key="qa_labs_noi"
+                ):
+                    st.switch_page(labs.page_path)
+
+            with col2:
+                if decision and st.button(
+                    f"{decision.icon} {decision.title}",
+                    use_container_width=True,
+                    key="qa_decision_noi",
+                ):
+                    st.switch_page(decision.page_path)
+                if protocols and st.button(
+                    f"{protocols.icon} {protocols.title}",
+                    use_container_width=True,
+                    key="qa_protocols_noi",
+                ):
+                    st.switch_page(protocols.page_path)
+                if critical and st.button(
+                    f"{critical.icon} {critical.title}",
+                    use_container_width=True,
+                    key="qa_critical_noi",
+                ):
+                    st.switch_page(critical.page_path)
+
+    # -------- Information resources (Diagnosis, Guidelines, ICD, Articles, Patient education) --------
+    with st.expander("📚 Reference & Knowledge", expanded=False):
+        guidelines = _get_module("guidelines_tracker")
+        diagnosis = _get_module("diagnosis")
+        disease_ency = _get_module("disease_encyclopedia")
+        icd10 = _get_module("icd10_lookup")
+        articles = _get_module("in_depth_articles")
+        patient_edu = _get_module("patient_education")
+
+        # Nội: nhấn mạnh tim mạch, nội tiết, bệnh mạn (Diagnosis + Articles)
+        # ICU: nhấn mạnh Critical Care guidelines & disease encyclopedia
+        order = []
+        if profile == "icu":
+            order = [guidelines, diagnosis, disease_ency, icd10, articles, patient_edu]
+        else:
+            order = [diagnosis, guidelines, icd10, disease_ency, articles, patient_edu]
+
+        for idx, module in enumerate(order):
+            if not module:
+                continue
+            key = f"qa_ref_{idx}_{module.id}"
+            if st.button(f"{module.icon} {module.title}", use_container_width=True, key=key):
+                st.switch_page(module.page_path)
+
+    # -------- Utilities & system tools --------
+    with st.expander("🔧 Utilities & System", expanded=False):
+        global_search = _get_module("global_search")
+        settings = _get_module("settings")
+        analytics = _get_module("analytics")
+        ai_assistant = _get_module("ai_assistant")
+
+        if global_search and st.button(
+            f"{global_search.icon} Global Search", use_container_width=True, key="qa_search"
+        ):
+            st.switch_page(global_search.page_path)
+        if ai_assistant and st.button(
+            f"{ai_assistant.icon} {ai_assistant.title}",
+            use_container_width=True,
+            key="qa_ai",
+        ):
+            st.switch_page(ai_assistant.page_path)
+        if settings and st.button(
+            f"{settings.icon} {settings.title}", use_container_width=True, key="qa_settings"
+        ):
+            st.switch_page(settings.page_path)
+        if analytics and st.button(
+            f"{analytics.icon} {analytics.title}", use_container_width=True, key="qa_analytics"
+        ):
+            st.switch_page(analytics.page_path)
 
 
 def render_recent_items():

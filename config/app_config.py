@@ -46,12 +46,21 @@ APP_CONFIG = {
     "pages": {
         "scores": ModuleInfo(
             id="scores",
-            title="Calculators & Thang điểm",
+            title="Tính toán & Đánh giá nguy cơ",
             icon="📊",
             page_path="pages/01_📊_Scores.py",
             description="110 calculators, 19 specialties",
             color="linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)",
             border="#1976d2"
+        ),
+        "global_search": ModuleInfo(
+            id="global_search",
+            title="Global Search",
+            icon="🔍",
+            page_path="pages/20_🔍_Global_Search.py",
+            description="Tìm kiếm toàn bộ Clinical Assistant: calculators, thuốc, phác đồ, bài viết",
+            color="linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%)",
+            border="#3f51b5"
         ),
         "antibiotics": ModuleInfo(
             id="antibiotics",
@@ -91,16 +100,16 @@ APP_CONFIG = {
         ),
         "diagnosis": ModuleInfo(
             id="diagnosis",
-            title="Chẩn đoán phân biệt",
+            title="Chẩn đoán & Tham khảo",
             icon="🩺",
             page_path="pages/06_🩺_Diagnosis.py",
-            description="DDx Generator, Clinical decision support",
+            description="Chẩn đoán phân biệt và hỗ trợ quyết định lâm sàng",
             color="linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%)",
             border="#f44336"
         ),
         "drug_database": ModuleInfo(
             id="drug_database",
-            title="Cơ sở dữ liệu thuốc",
+            title="Thuốc & Liều dùng",
             icon="💊",
             page_path="pages/07_💊_Drug_Database.py",
             description="Database thuốc, tính liều theo thận, tương tác, IV",
@@ -118,7 +127,7 @@ APP_CONFIG = {
         ),
         "critical_care": ModuleInfo(
             id="critical_care",
-            title="Hồi sức",
+            title="Hồi sức & ICU",
             icon="🫁",
             page_path="pages/09_🫁_Critical_Care.py",
             description="Ventilator, Fluids, Vasopressors, Transfusion, Sedation",
@@ -127,7 +136,7 @@ APP_CONFIG = {
         ),
         "phase2_features": ModuleInfo(
             id="phase2_features",
-            title="Hỗ trợ quyết định",
+            title="Hỗ trợ quyết định điều trị",
             icon="🧭",
             page_path="pages/10_🧭_Decision_Support.py",
             description="Flowcharts, thai kỳ/cho bú, liều Nhi khoa",
@@ -251,6 +260,15 @@ APP_CONFIG = {
             description="Usage statistics and insights (Integrated as tab in Decision Support)",
             color="linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)",
             border="#0288d1"
+        ),
+        "icu_bundles": ModuleInfo(
+            id="icu_bundles",
+            title="ICU & Nội Bundles",
+            icon="🧵",
+            page_path="pages/25_🧵_ICU_Bundles.py",
+            description="Workflow gộp sẵn cho Sepsis/Shock và Khó thở cấp",
+            color="linear-gradient(135deg, #ffe0e0 0%, #ffcdd2 100%)",
+            border="#e57373",
         ),
     },
     

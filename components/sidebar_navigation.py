@@ -10,9 +10,10 @@ from config.navigation_config import (
     get_all_categories,
     get_navigation_items_for_category,
     NAVIGATION_CATEGORIES,
-    NAVIGATION_SUB_ITEMS
+    NAVIGATION_SUB_ITEMS,
 )
 from config.app_config import get_module_info
+from config.user_profile import get_current_profile
 
 # Mobile-optimized CSS
 # Note: Sidebar drawer behavior is handled by mobile_drawer.py
@@ -257,8 +258,21 @@ def render_sidebar_navigation_simple():
     st.markdown(MOBILE_NAV_CSS, unsafe_allow_html=True)
     
     categories = get_all_categories()
-    
-    for cat_id, category in categories.items():
+    profile = get_current_profile()
+
+    # Reorder categories slightly based on profile:
+    # ICU: đưa nhóm Hồi sức & Phác đồ lên ngay sau Trang chủ
+    ordered_items = list(categories.items())
+    if profile == "icu":
+        ordered_items.sort(
+            key=lambda kv: 0
+            if kv[0] == "home_search"
+            else 1
+            if kv[0] == "critical_care_protocols"
+            else 2
+        )
+
+    for cat_id, category in ordered_items:
         # Defensive check: ensure icon and title are strings
         icon = str(category.icon) if category.icon is not None else "📁"
         title = str(category.title) if category.title is not None else "Category"

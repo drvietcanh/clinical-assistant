@@ -5,17 +5,17 @@ Track app usage, popular features, and user engagement
 
 import streamlit as st
 import json
-from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime
 from collections import Counter
 from utils.page_helper import setup_page, render_standard_footer
 from components.ui import render_info_box, render_hero
+from utils.analytics_events import load_analytics, save_analytics
 
 # Standard page setup
 setup_page(
     page_title="Analytics",
     page_icon="📈",
-    description="Usage statistics and insights"
+    description="Usage statistics and insights",
 )
 
 # Custom CSS
@@ -51,60 +51,6 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
-
-# Analytics data file
-ANALYTICS_FILE = Path("analytics_data.json")
-
-# Load analytics data
-def load_analytics():
-    if ANALYTICS_FILE.exists():
-        with open(ANALYTICS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return {
-        'page_views': {},
-        'feature_usage': {},
-        'search_queries': [],
-        'user_sessions': [],
-        'errors': []
-    }
-
-# Save analytics data
-def save_analytics(data):
-    with open(ANALYTICS_FILE, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-# Track page view
-def track_page_view(page_name: str):
-    analytics = load_analytics()
-    
-    if page_name not in analytics['page_views']:
-        analytics['page_views'][page_name] = 0
-    
-    analytics['page_views'][page_name] += 1
-    save_analytics(analytics)
-
-# Track feature usage
-def track_feature_usage(feature_name: str):
-    analytics = load_analytics()
-    
-    if feature_name not in analytics['feature_usage']:
-        analytics['feature_usage'][feature_name] = 0
-    
-    analytics['feature_usage'][feature_name] += 1
-    save_analytics(analytics)
-
-# Track search query
-def track_search(query: str):
-    analytics = load_analytics()
-    
-    analytics['search_queries'].append({
-        'query': query,
-        'timestamp': datetime.now().isoformat()
-    })
-    
-    # Keep only last 1000 searches
-    analytics['search_queries'] = analytics['search_queries'][-1000:]
-    save_analytics(analytics)
 
 # Load data
 analytics_data = load_analytics()

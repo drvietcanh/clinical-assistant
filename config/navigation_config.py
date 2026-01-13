@@ -40,7 +40,7 @@ NAVIGATION_CATEGORIES = {
         title="🏠 Trang chủ & Tìm kiếm",
         icon="🏠",
         description="Main menu and global search",
-        module_ids=["main_menu"],
+        module_ids=["main_menu", "global_search"],
         color="linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)",
         border="#757575",
         default_expanded=True
@@ -102,6 +102,9 @@ NAVIGATION_CATEGORIES = {
 # Organized to reduce top-level menu items from 26+ to 6 main pages with tabs
 # Sub-items are now integrated as tabs within main pages, but kept here for navigation
 NAVIGATION_SUB_ITEMS = {
+    # Home & Search: Global Search dưới Trang chủ
+    "global_search": "main_menu",
+    
     # Drugs & Dosing: 3 sub-items under drug_database (integrated as tabs)
     "antibiotics": "drug_database",
     "pill_identifier": "drug_database",

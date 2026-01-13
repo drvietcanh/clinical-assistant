@@ -8,6 +8,7 @@ Imports calculators from individual specialty modules
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
 from components.ui import render_info_box, render_hero
+from config.user_profile import get_current_profile
 
 from scores.config import SCORES_BY_SPECIALTY
 from scores import cardiology, emergency, respiratory, neurology, gi, metabolism, hematology, nephrology, trauma, psychiatry, oncology, surgery, pediatrics, infectious, ent, obstetrics, dermatology, rheumatology, ophthalmology, pain, nursing
@@ -187,7 +188,28 @@ with main_tab1:
             with tab1:
                 st.markdown("### Chọn nhóm chuyên khoa")
                 specialty_groups = get_all_groups()
-                for group_id, group_info in sorted(specialty_groups.items(), key=lambda x: x[1].get("priority", 99)):
+
+                # Ưu tiên nhóm phù hợp theo profile (Nội / ICU)
+                profile = get_current_profile()
+                for group_id, group_info in specialty_groups.items():
+                    title = str(group_info.get("title", "")).lower()
+                    base_priority = group_info.get("priority", 99)
+                    if profile == "icu":
+                        if any(
+                            kw in title
+                            for kw in ["icu", "cấp cứu", "hồi sức", "hô hấp", "thận", "điện giải", "sepsis"]
+                        ):
+                            group_info["priority"] = min(base_priority, 1)
+                    else:
+                        if any(
+                            kw in title
+                            for kw in ["tim mạch", "cardiology", "nội tiết", "chuyển hóa", "thận", "ckd"]
+                        ):
+                            group_info["priority"] = min(base_priority, 1)
+
+                for group_id, group_info in sorted(
+                    specialty_groups.items(), key=lambda x: x[1].get("priority", 99)
+                ):
                     render_specialty_group(group_id, group_info, SCORES_BY_SPECIALTY)
             
             with tab2:
@@ -368,6 +390,21 @@ with main_tab1:
                     suggested_specialty = max(specialty_counts.items(), key=lambda x: x[1])[0]
             
             specialty_list = list(SCORES_BY_SPECIALTY.keys())
+
+            # Ưu tiên chuyên khoa theo profile khi gợi ý
+            profile = get_current_profile()
+            if profile == "icu":
+                specialty_list.sort(
+                    key=lambda name: 0
+                    if "Cấp cứu" in name or "Hồi sức" in name or "ICU" in name
+                    else 1
+                )
+            else:
+                specialty_list.sort(
+                    key=lambda name: 0
+                    if "Tim mạch" in name or "Nội tiết" in name or "Thận" in name
+                    else 1
+                )
             default_index = 0
             if suggested_specialty and suggested_specialty in specialty_list:
                 default_index = specialty_list.index(suggested_specialty)
