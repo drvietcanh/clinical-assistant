@@ -71,6 +71,128 @@ def get_all_scores_flat():
             })
     return all_scores
 
+# Helper function to route calculators by specialty
+def _render_calculator_by_specialty(specialty: str, selected_score_id: str):
+    """Route to appropriate calculator module based on specialty"""
+    
+    # Emergency & Critical Care
+    if "Cấp cứu" in specialty:
+        if selected_score_id:
+            emergency.render_emergency_calculator(selected_score_id)
+            render_related_calculators(specialty, selected_score_id)
+
+    # Cardiology
+    elif "Tim mạch" in specialty:
+        cardiology.render_cardiology_calculator(selected_score_id)
+
+    # Respiratory
+    elif "Hô hấp" in specialty:
+        respiratory.render_respiratory_calculator(selected_score_id)
+
+    # Neurology
+    elif "Thần kinh" in specialty:
+        neurology.render_neurology_calculator(selected_score_id)
+
+    # GI/Hepatology
+    elif "Tiêu Hóa" in specialty or "Gan" in specialty:
+        gi.render_gi_calculator(selected_score_id)
+
+    # Metabolism/Endocrinology
+    elif "Nội tiết" in specialty or "Chuyển hóa" in specialty:
+        metabolism.render_metabolism_calculator(selected_score_id)
+
+    # Hematology
+    elif "Huyết học" in specialty or "Đông máu" in specialty:
+        hematology.render_hematology_calculator(selected_score_id)
+
+    # Nephrology
+    elif "Thận" in specialty or "Điện giải" in specialty:
+        nephrology.render_nephrology_calculator(selected_score_id)
+
+    # Trauma
+    elif "Chấn Thương" in specialty or "Chỉnh Hình" in specialty:
+        trauma.render_trauma_calculator(selected_score_id)
+
+    # Psychiatry
+    elif "Tâm Thần" in specialty or "Tâm Lý" in specialty:
+        psychiatry.render_psychiatry_calculator(selected_score_id)
+
+    # Oncology
+    elif "Ung thư" in specialty:
+        oncology.render_oncology_calculator(selected_score_id)
+
+    # Surgery
+    elif "Phẫu Thuật" in specialty or "Gây Mê" in specialty:
+        surgery.render_surgery_calculator(selected_score_id)
+
+    # Pediatrics
+    elif "Nhi Khoa" in specialty:
+        pediatrics.render_pediatrics_calculator(selected_score_id)
+
+    # Infectious Disease
+    elif "Nhiễm khuẩn" in specialty:
+        infectious.render_infectious_calculator(selected_score_id)
+
+    # ENT
+    elif "Tai Mũi Họng" in specialty or "ENT" in specialty:
+        ent.render_ent_calculator(selected_score_id)
+
+    # Obstetrics
+    elif "Sản khoa" in specialty or "Obstetrics" in specialty:
+        obstetrics.render_obstetrics_calculator(selected_score_id)
+
+    # Dermatology
+    elif "Da Liễu" in specialty or "Dermatology" in specialty:
+        dermatology.render_dermatology_calculator(selected_score_id)
+
+    # Rheumatology
+    elif "Thấp Khớp" in specialty or "Miễn Dịch" in specialty:
+        rheumatology.render_rheumatology_calculator(selected_score_id)
+
+    # Ophthalmology
+    elif "Mắt" in specialty or "Ophthalmology" in specialty:
+        ophthalmology.render_ophthalmology_calculator(selected_score_id)
+
+    # Pain Assessment
+    elif "Đánh giá đau" in specialty or "Pain" in specialty:
+        pain.render_pain_calculator(selected_score_id)
+
+    # Nursing Care
+    elif "Chăm sóc điều dưỡng" in specialty or "Nursing" in specialty:
+        if selected_score_id:
+            nursing.render_nursing_calculator(selected_score_id)
+            render_related_calculators(specialty, selected_score_id)
+
+    # Geriatrics
+    elif "Lão khoa" in specialty or "Geriatrics" in specialty:
+        if selected_score_id and GERIATRICS_AVAILABLE:
+            geriatrics.render_geriatrics_calculator(selected_score_id)
+            render_related_calculators(specialty, selected_score_id)
+
+    # Other specialties - show placeholder
+    else:
+        if selected_score_id:
+            score_info = SCORES_BY_SPECIALTY[specialty][selected_score_id]
+            st.subheader(f"📋 {score_info['name']}")
+            st.caption(score_info['desc'])
+            
+            if score_info['status'] == "✅":
+                st.success("✅ Đã hoàn thành - Đang trong module riêng")
+            elif score_info['status'] == "🚧":
+                st.warning("🚧 Đang phát triển - Sắp ra mắt")
+            else:
+                st.info("📋 Trong kế hoạch phát triển")
+            
+            st.markdown("---")
+            st.markdown(f"""
+            **Mô tả:** {score_info['desc']}
+            
+            Calculator này sẽ sớm được triển khai trong module chuyên khoa tương ứng.
+            """)
+            
+            # Show related calculators
+            render_related_calculators(specialty, selected_score_id)
+
 # Standard page setup with mobile optimizations
 setup_page(
     page_title="Calculators & Thang điểm",
@@ -583,128 +705,6 @@ with main_tab1:
         # Route to calculator
         if selected_score_id and specialty and specialty in SCORES_BY_SPECIALTY:
             _render_calculator_by_specialty(specialty, selected_score_id)
-
-# Helper function to route calculators by specialty
-def _render_calculator_by_specialty(specialty: str, selected_score_id: str):
-    """Route to appropriate calculator module based on specialty"""
-    
-    # Emergency & Critical Care
-    if "Cấp cứu" in specialty:
-        if selected_score_id:
-            emergency.render_emergency_calculator(selected_score_id)
-            render_related_calculators(specialty, selected_score_id)
-
-    # Cardiology
-    elif "Tim mạch" in specialty:
-        cardiology.render_cardiology_calculator(selected_score_id)
-
-    # Respiratory
-    elif "Hô hấp" in specialty:
-        respiratory.render_respiratory_calculator(selected_score_id)
-
-    # Neurology
-    elif "Thần kinh" in specialty:
-        neurology.render_neurology_calculator(selected_score_id)
-
-    # GI/Hepatology
-    elif "Tiêu Hóa" in specialty or "Gan" in specialty:
-        gi.render_gi_calculator(selected_score_id)
-
-    # Metabolism/Endocrinology
-    elif "Nội tiết" in specialty or "Chuyển hóa" in specialty:
-        metabolism.render_metabolism_calculator(selected_score_id)
-
-    # Hematology
-    elif "Huyết học" in specialty or "Đông máu" in specialty:
-        hematology.render_hematology_calculator(selected_score_id)
-
-    # Nephrology
-    elif "Thận" in specialty or "Điện giải" in specialty:
-        nephrology.render_nephrology_calculator(selected_score_id)
-
-    # Trauma
-    elif "Chấn Thương" in specialty or "Chỉnh Hình" in specialty:
-        trauma.render_trauma_calculator(selected_score_id)
-
-    # Psychiatry
-    elif "Tâm Thần" in specialty or "Tâm Lý" in specialty:
-        psychiatry.render_psychiatry_calculator(selected_score_id)
-
-    # Oncology
-    elif "Ung thư" in specialty:
-        oncology.render_oncology_calculator(selected_score_id)
-
-    # Surgery
-    elif "Phẫu Thuật" in specialty or "Gây Mê" in specialty:
-        surgery.render_surgery_calculator(selected_score_id)
-
-    # Pediatrics
-    elif "Nhi Khoa" in specialty:
-        pediatrics.render_pediatrics_calculator(selected_score_id)
-
-    # Infectious Disease
-    elif "Nhiễm khuẩn" in specialty:
-        infectious.render_infectious_calculator(selected_score_id)
-
-    # ENT
-    elif "Tai Mũi Họng" in specialty or "ENT" in specialty:
-        ent.render_ent_calculator(selected_score_id)
-
-    # Obstetrics
-    elif "Sản khoa" in specialty or "Obstetrics" in specialty:
-        obstetrics.render_obstetrics_calculator(selected_score_id)
-
-    # Dermatology
-    elif "Da Liễu" in specialty or "Dermatology" in specialty:
-        dermatology.render_dermatology_calculator(selected_score_id)
-
-    # Rheumatology
-    elif "Thấp Khớp" in specialty or "Miễn Dịch" in specialty:
-        rheumatology.render_rheumatology_calculator(selected_score_id)
-
-    # Ophthalmology
-    elif "Mắt" in specialty or "Ophthalmology" in specialty:
-        ophthalmology.render_ophthalmology_calculator(selected_score_id)
-
-    # Pain Assessment
-    elif "Đánh giá đau" in specialty or "Pain" in specialty:
-        pain.render_pain_calculator(selected_score_id)
-
-    # Nursing Care
-    elif "Chăm sóc điều dưỡng" in specialty or "Nursing" in specialty:
-        if selected_score_id:
-            nursing.render_nursing_calculator(selected_score_id)
-            render_related_calculators(specialty, selected_score_id)
-
-    # Geriatrics
-    elif "Lão khoa" in specialty or "Geriatrics" in specialty:
-        if selected_score_id and GERIATRICS_AVAILABLE:
-            geriatrics.render_geriatrics_calculator(selected_score_id)
-            render_related_calculators(specialty, selected_score_id)
-
-    # Other specialties - show placeholder
-    else:
-        if selected_score_id:
-            score_info = SCORES_BY_SPECIALTY[specialty][selected_score_id]
-            st.subheader(f"📋 {score_info['name']}")
-            st.caption(score_info['desc'])
-            
-            if score_info['status'] == "✅":
-                st.success("✅ Đã hoàn thành - Đang trong module riêng")
-            elif score_info['status'] == "🚧":
-                st.warning("🚧 Đang phát triển - Sắp ra mắt")
-            else:
-                st.info("📋 Trong kế hoạch phát triển")
-            
-            st.markdown("---")
-            st.markdown(f"""
-            **Mô tả:** {score_info['desc']}
-            
-            Calculator này sẽ sớm được triển khai trong module chuyên khoa tương ứng.
-            """)
-            
-            # Show related calculators
-            render_related_calculators(specialty, selected_score_id)
 
 # ========== LABS TAB CONTENT ==========
 with main_tab2:
