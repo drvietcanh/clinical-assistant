@@ -27,6 +27,8 @@ from .scorten import render as render_scorten
 from .rdos import render as render_rdos
 from .cpis import render as render_cpis
 from .sf_syncope import render as render_sf_syncope
+from .shock_index import render as render_shock_index
+from .marshall_score import render as render_marshall_score
 
 
 def render_emergency_calculator(calculator_id):
@@ -63,6 +65,8 @@ def render_emergency_calculator(calculator_id):
         "RDOS": render_rdos,
         "CPIS": render_cpis,
         "San Francisco Syncope": render_sf_syncope,
+        "Shock Index": render_shock_index,
+        "Marshall Score": render_marshall_score,
     }
     
     from utils.errors import safe_render_calculator, CalculatorNotFoundError

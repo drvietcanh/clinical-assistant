@@ -24,6 +24,9 @@ from .fisher_scale import render as render_fisher_scale
 from .gos import render as render_gos
 from .abc2 import render as render_abc2
 from .hints import render as render_hints
+from .dragon_score import render as render_dragon_score
+from .thrive_score import render as render_thrive_score
+from .sedan_score import render as render_sedan_score
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -56,6 +59,9 @@ def render_neurology_calculator(calculator_id):
         "GOS": render_gos,
         "ABC/2": render_abc2,
         "HINTS": render_hints,
+        "DRAGON Score": render_dragon_score,
+        "THRIVE Score": render_thrive_score,
+        "SEDAN Score": render_sedan_score,
     }
     
     calculator_func = calculators.get(calculator_id)

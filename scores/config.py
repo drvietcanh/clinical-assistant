@@ -28,6 +28,8 @@ SCORES_BY_SPECIALTY = {
         "RDOS": {"name": "RDOS ⭐", "desc": "Định lượng suy hô hấp ở bệnh nhân không thể tự báo cáo triệu chứng", "status": "✅"},
         "CPIS": {"name": "CPIS ⭐⭐", "desc": "Đánh giá khả năng viêm phổi liên quan thở máy (VAP)", "status": "✅"},
         "San Francisco Syncope": {"name": "San Francisco Syncope Rule ⭐⭐", "desc": "Đánh giá nguy cơ biến cố nghiêm trọng sau ngất", "status": "✅"},
+        "Shock Index": {"name": "Shock Index ⭐", "desc": "Chỉ số sốc = Nhịp tim/Huyết áp tâm thu - Đánh giá nhanh tình trạng huyết động (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "Marshall Score": {"name": "Marshall Score ⭐⭐", "desc": "Phân loại mức độ nặng chấn thương sọ não dựa trên CT scan", "status": "✅"},
     },
     
     "❤️ Tim mạch (Cardiology)": {
@@ -60,6 +62,8 @@ SCORES_BY_SPECIALTY = {
         "ORBIT Bleeding Risk": {"name": "ORBIT Bleeding Risk Score ⭐⭐", "desc": "Nguy cơ chảy máu ở rung nhĩ (alternative to HAS-BLED, đơn giản hơn)", "status": "✅"},
         "SAMe-TT₂R₂": {"name": "SAMe-TT₂R₂ Score ⭐⭐", "desc": "Dự đoán khả năng đạt INR mục tiêu với warfarin (hướng dẫn chọn warfarin vs NOAC)", "status": "✅"},
         "Duke Treadmill": {"name": "Duke Treadmill Score ⭐⭐", "desc": "Đánh giá nguy cơ bệnh động mạch vành dựa trên nghiệm pháp gắng sức", "status": "✅"},
+        "BARC Classification": {"name": "BARC Classification ⭐⭐", "desc": "Phân loại chảy máu chuẩn hóa sau PCI và điều trị kháng đông (Bleeding Academic Research Consortium)", "status": "✅"},
+        "SYNTAX Score": {"name": "SYNTAX Score ⭐⭐", "desc": "Đánh giá độ phức tạp bệnh động mạch vành - Quyết định PCI vs CABG", "status": "✅"},
     },
     
     "🫁 Hô hấp (Respiratory)": {
@@ -77,6 +81,8 @@ SCORES_BY_SPECIALTY = {
         "GOLD": {"name": "GOLD Criteria ⭐⭐", "desc": "Phân loại mức độ nặng COPD (DÙNG HÀNG NGÀY)", "status": "✅"},
         "sPESI": {"name": "sPESI ⭐⭐", "desc": "Đánh giá nguy cơ tử vong 30 ngày ở bệnh nhân thuyên tắc phổi (phiên bản đơn giản của PESI)", "status": "✅"},
         "Hestia": {"name": "Hestia Score ⭐⭐", "desc": "Đánh giá khả năng điều trị thuyên tắc phổi ngoại trú", "status": "✅"},
+        "MuLBSTA Score": {"name": "MuLBSTA Score ⭐⭐", "desc": "Dự đoán nguy cơ tử vong trong viêm phổi do virus (COVID-19, cúm) - Quan trọng cho Việt Nam", "status": "✅"},
+        "HACOR Score": {"name": "HACOR Score ⭐⭐", "desc": "Dự đoán thất bại thở máy không xâm lấn (NIV) trong suy hô hấp cấp", "status": "✅"},
     },
     
     "🧠 Thần kinh (Neurology)": {
@@ -100,6 +106,10 @@ SCORES_BY_SPECIALTY = {
         "GOS": {"name": "Glasgow Outcome Scale (GOS) ⭐⭐", "desc": "Đánh giá kết quả chức năng sau chấn thương não", "status": "✅"},
         "ABC/2": {"name": "ABC/2 Method ⭐⭐", "desc": "Ước tính thể tích xuất huyết não (ICH)", "status": "✅"},
         "HINTS": {"name": "HINTS Exam ⭐⭐", "desc": "Phân biệt nguyên nhân trung ương vs ngoại biên của chóng mặt", "status": "✅"},
+        "Canadian Stroke Scale": {"name": "Canadian Stroke Scale ⭐", "desc": "Đánh giá mức độ nặng đột quỵ - Thang điểm Canada", "status": "✅"},
+        "DRAGON Score": {"name": "DRAGON Score ⭐⭐", "desc": "Dự đoán kết cục xấu (mRS 4-6) ở bệnh nhân đột quỵ thiếu máu cục bộ điều trị tPA", "status": "✅"},
+        "THRIVE Score": {"name": "THRIVE Score ⭐⭐", "desc": "Dự đoán kết cục chức năng sau thrombectomy ở bệnh nhân đột quỵ thiếu máu cục bộ", "status": "✅"},
+        "SEDAN Score": {"name": "SEDAN Score ⭐⭐", "desc": "Dự đoán nguy cơ xuất huyết nội sọ có triệu chứng (sICH) sau điều trị tPA", "status": "✅"},
     },
     
     "🩸 Tiêu hóa - Gan Mật (GI/Hepatology)": {
@@ -117,6 +127,10 @@ SCORES_BY_SPECIALTY = {
         "EREFS": {"name": "EREFS ⭐", "desc": "Đánh giá mức độ nặng của các phát hiện nội soi ở bệnh nhân viêm thực quản tăng bạch cầu ái toan (EoE)", "status": "✅"},
         "APRI": {"name": "APRI Score ⭐⭐", "desc": "Đánh giá mức độ xơ hóa gan không xâm lấn", "status": "✅"},
         "GAHS": {"name": "GAHS ⭐⭐", "desc": "Tiên lượng tử vong ở bệnh nhân viêm gan do rượu", "status": "✅"},
+        "Lactulose Calculator": {"name": "Lactulose Calculator ⭐", "desc": "Tính liều lactulose cho bệnh não gan (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "MELD 3.0": {"name": "MELD 3.0 ⭐⭐⭐", "desc": "Dự đoán tử vong 90 ngày ở bệnh nhân bệnh gan giai đoạn cuối (Phiên bản cập nhật 2021 - Chính xác hơn MELD cũ)", "status": "✅"},
+        "ALBI Score": {"name": "ALBI Score ⭐⭐", "desc": "Đánh giá chức năng gan và tiên lượng ở bệnh nhân ung thư biểu mô tế bào gan (HCC)", "status": "✅"},
+        "NAFLD Fibrosis Score": {"name": "NAFLD Fibrosis Score ⭐⭐", "desc": "Dự đoán xơ hóa tiến triển ở bệnh nhân bệnh gan nhiễm mỡ không do rượu (NAFLD)", "status": "✅"},
     },
     
     "🩺 Huyết học & Đông máu (Hematology)": {
@@ -124,6 +138,9 @@ SCORES_BY_SPECIALTY = {
         "Wells DVT": {"name": "Wells DVT Score", "desc": "Nguy cơ huyết khối tĩnh mạch sâu", "status": "✅"},
         "4Ts Score": {"name": "4Ts Score - HIT", "desc": "Giảm tiểu cầu do heparin", "status": "✅"},
         "DIC Score": {"name": "DIC Score (ISTH)", "desc": "Đông máu rải rác trong lòng mạch", "status": "✅"},
+        "Warfarin Dosing": {"name": "Warfarin Dosing Calculator ⭐", "desc": "Tính liều warfarin dựa trên INR hiện tại và mục tiêu (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "INR Target": {"name": "INR Target Calculator ⭐", "desc": "Xác định khoảng INR mục tiêu cho các chỉ định khác nhau (DÙNG HÀNG NGÀY)", "status": "✅"},
+        "Bleeding Risk": {"name": "Bleeding Risk Assessment ⭐", "desc": "Đánh giá nguy cơ chảy máu ở bệnh nhân dùng kháng đông/kháng tiểu cầu", "status": "✅"},
     },
     
     "🧪 Thận - Điện giải (Nephrology)": {
@@ -229,6 +246,8 @@ SCORES_BY_SPECIALTY = {
         "CIWA-Ar": {"name": "CIWA-Ar", "desc": "Cai rượu - mức độ nặng", "status": "✅"},
         "COWS": {"name": "COWS - Clinical Opiate Withdrawal", "desc": "Cai opioid", "status": "✅"},
         "GMAWS": {"name": "GMAWS ⭐", "desc": "Đánh giá và theo dõi mức độ nặng của các triệu chứng cai rượu (AWS)", "status": "✅"},
+        "DASS-21": {"name": "DASS-21 ⭐⭐", "desc": "Thang đo Trầm cảm, Lo âu và Stress - 21 mục (Đã được nghiên cứu tại Việt Nam)", "status": "✅"},
+        "GAF": {"name": "GAF - Global Assessment of Functioning ⭐⭐", "desc": "Đánh giá tổng quát chức năng tâm thần, xã hội và nghề nghiệp (Đã được nghiên cứu tại Việt Nam)", "status": "✅"},
     },
     
     "🔪 Phẫu thuật & Gây mê (Surgery/Anesthesia)": {
@@ -282,8 +301,8 @@ SCORES_BY_SPECIALTY = {
     "👴 Lão khoa (Geriatrics)": {
         "CFS": {"name": "Clinical Frailty Scale (CFS) ⭐⭐⭐", "desc": "Đánh giá frailty (1-9) - Quan trọng cho tiên lượng và quyết định điều trị (MỚI)", "status": "✅"},
         "Morse Fall Scale": {"name": "Morse Fall Scale ⭐⭐⭐", "desc": "Đánh giá nguy cơ té ngã ở bệnh nhân nội trú (DÙNG HÀNG NGÀY) (MỚI)", "status": "✅"},
-        "MMSE": {"name": "MMSE - Mini-Mental State Examination ⭐⭐⭐", "desc": "Screening cognitive impairment ở bệnh nhân cao tuổi (MỚI)", "status": "✅"},
-        "MoCA": {"name": "MoCA - Montreal Cognitive Assessment ⭐⭐⭐", "desc": "Screening MCI và dementia - Nhạy hơn MMSE (MỚI)", "status": "✅"},
+        "MMSE Geriatrics": {"name": "MMSE - Mini-Mental State Examination ⭐⭐⭐", "desc": "Screening cognitive impairment ở bệnh nhân cao tuổi (MỚI)", "status": "✅"},
+        "MoCA Geriatrics": {"name": "MoCA - Montreal Cognitive Assessment ⭐⭐⭐", "desc": "Screening MCI và dementia - Nhạy hơn MMSE (MỚI)", "status": "✅"},
         "Beers Criteria": {"name": "Beers Criteria ⭐⭐⭐", "desc": "Potentially inappropriate medications in elderly - AGS Beers Criteria 2023 (MỚI)", "status": "✅"},
         "STOPP/START": {"name": "STOPP/START Criteria ⭐⭐⭐", "desc": "Screening Tool - Thuốc nên ngừng (STOPP) và thuốc nên bắt đầu (START) (MỚI)", "status": "✅"},
     },

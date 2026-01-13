@@ -11,6 +11,8 @@ from .cam import render as render_cam
 from .ciwa import render as render_ciwa
 from .cows import render as render_cows
 from .gmaws import render as render_gmaws
+from .dass21 import render as render_dass21
+from .gaf import render as render_gaf
 
 
 def render_psychiatry_calculator(calculator_id):
@@ -31,6 +33,8 @@ def render_psychiatry_calculator(calculator_id):
         "CIWA-Ar": render_ciwa,
         "COWS": render_cows,
         "GMAWS": render_gmaws,
+        "DASS-21": render_dass21,
+        "GAF": render_gaf,
     }
     
     calculator_func = calculators.get(calculator_id)

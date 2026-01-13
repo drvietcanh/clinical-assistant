@@ -17,6 +17,8 @@ from .murray_lung_injury import render as render_murray_lung_injury
 from .gold import render as render_gold
 from .spesi import render as render_spesi
 from .hestia import render as render_hestia
+from .mulbsta import render as render_mulbsta
+from .hacor import render as render_hacor
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -42,6 +44,8 @@ def render_respiratory_calculator(calculator_id):
         "GOLD": render_gold,
         "sPESI": render_spesi,
         "Hestia": render_hestia,
+        "MuLBSTA Score": render_mulbsta,
+        "HACOR Score": render_hacor,
     }
     
     calculator_func = calculators.get(calculator_id)

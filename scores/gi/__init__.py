@@ -18,6 +18,9 @@ from .erefs import render as render_erefs
 from .lactulose_calculator import render as render_lactulose_calculator
 from .apri import render as render_apri
 from .gahs import render as render_gahs
+from .meld3 import render as render_meld3
+from .albi import render as render_albi
+from .nafld_fibrosis import render as render_nafld_fibrosis
 from utils.errors import CalculatorNotFoundError, safe_render_calculator
 
 
@@ -44,6 +47,9 @@ def render_gi_calculator(calculator_id):
         "Lactulose Calculator": render_lactulose_calculator,
         "APRI": render_apri,
         "GAHS": render_gahs,
+        "MELD 3.0": render_meld3,
+        "ALBI Score": render_albi,
+        "NAFLD Fibrosis Score": render_nafld_fibrosis,
     }
     
     calculator_func = calculators.get(calculator_id)

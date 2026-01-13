@@ -26,6 +26,8 @@ from .atria import render as render_atria
 from .orbit import render as render_orbit
 from .same_tt2r2 import render as render_same_tt2r2
 from .duke_treadmill import render as render_duke_treadmill
+from .barc import render as render_barc
+from .syntax_score import render as render_syntax_score
 # Cardio-Oncology calculators
 from .cardio_oncology.hfa_icos_multiple_myeloma import render as render_hfa_icos_multiple_myeloma
 from .cardio_oncology.hfa_icos_cml import render as render_hfa_icos_cml
@@ -68,6 +70,8 @@ def render_cardiology_calculator(calculator_id):
         "ORBIT Bleeding Risk": render_orbit,
         "SAMe-TT₂R₂": render_same_tt2r2,
         "Duke Treadmill": render_duke_treadmill,
+        "BARC Classification": render_barc,
+        "SYNTAX Score": render_syntax_score,
         # Cardio-Oncology
         "HFA-ICOS Multiple Myeloma": render_hfa_icos_multiple_myeloma,
         "HFA-ICOS CML TKI": render_hfa_icos_cml,

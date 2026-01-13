@@ -18,7 +18,9 @@ def render_geriatrics_calculator(score_id: str):
         "CFS": render_cfs,
         "Morse Fall Scale": render_morse_fall,
         "MMSE": render_mmse,
+        "MMSE Geriatrics": render_mmse,
         "MoCA": render_moca,
+        "MoCA Geriatrics": render_moca,
         "Beers Criteria": render_beers,
         "STOPP/START": render_stopp_start,
     }
