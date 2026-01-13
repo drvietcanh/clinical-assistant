@@ -16,6 +16,118 @@ def _get_module(module_id: str):
         return None
 
 
+def render_quick_access_cards(max_items: int = 8, layout: str = "grid"):
+    """
+    Render quick access cards for main menu
+    Provides visual cards with smart recommendations based on usage
+    """
+    from config.user_profile import get_current_profile
+    from utils.cache_helpers import get_popular_calculators
+    from config.calculators import ALL_CALCULATORS
+    
+    profile = get_current_profile()
+    usage_stats = st.session_state.get('usage_stats', {})
+    calculations_by_calc = usage_stats.get('calculations_by_calculator', {})
+    
+    # Get popular calculators based on usage or defaults
+    default_popular = (
+        'ascvd', 'cha2ds2vasc', 'sofa', 'gcs', 'qsofa',
+        'hasbled', 'heart', 'timi', 'grace',
+    )
+    
+    # If we have usage data, prioritize those
+    if calculations_by_calc:
+        sorted_by_usage = sorted(
+            calculations_by_calc.items(),
+            key=lambda x: x[1],
+            reverse=True
+        )
+        popular_ids = [calc_id for calc_id, _ in sorted_by_usage[:max_items]]
+        # Fill remaining with defaults if needed
+        for calc_id in default_popular:
+            if calc_id not in popular_ids and len(popular_ids) < max_items:
+                popular_ids.append(calc_id)
+    else:
+        popular_ids = list(default_popular[:max_items])
+    
+    # Get calculator info
+    popular_calculators = []
+    for calc_id in popular_ids:
+        if calc_id in ALL_CALCULATORS:
+            calc_info = ALL_CALCULATORS[calc_id]
+            usage_count = calculations_by_calc.get(calc_id, 0)
+            popular_calculators.append({
+                'id': calc_id,
+                'name': calc_info.get('name', ''),
+                'icon': calc_info.get('icon', '📊'),
+                'category': calc_info.get('category', ''),
+                'page': calc_info.get('page', 'Scores'),
+                'usage_count': usage_count
+            })
+    
+    if layout == "grid":
+        # Grid layout with cards
+        num_cols = min(4, len(popular_calculators))
+        cols = st.columns(num_cols)
+        
+        for idx, calc in enumerate(popular_calculators[:max_items]):
+            with cols[idx % num_cols]:
+                is_favorite = calc['id'] in st.session_state.get('favorites', [])
+                star_icon = "⭐" if is_favorite else "☆"
+                
+                st.markdown(
+                    f"""
+                    <div class="calculator-card" style="text-align: center; padding: 20px; margin-bottom: 12px; cursor: pointer;">
+                        <div style="font-size: 3rem; margin-bottom: 8px;">{calc['icon']}</div>
+                        <div style="font-weight: 600; font-size: 1rem; margin-bottom: 4px; color: var(--text-primary);">
+                            {calc['name']}
+                        </div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 8px;">
+                            {calc['category']}
+                        </div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">
+                            {star_icon} {calc['usage_count']} lần
+                        </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+                
+                page_path_map = {
+                    'Scores': 'pages/01_📊_Scores.py',
+                    'Labs': 'pages/05_🔬_Labs_and_Calculators.py',
+                    'Drugs': 'pages/07_💊_Drug_Database.py',
+                    'Protocols': 'pages/04_📋_Protocols.py',
+                }
+                page_path = page_path_map.get(calc['page'], 'pages/01_📊_Scores.py')
+                
+                if st.button(f"Mở {calc['name'][:15]}", key=f"qa_card_{calc['id']}", use_container_width=True, type="primary"):
+                    st.session_state['preset_calculator'] = calc['id']
+                    st.session_state['switch_to_scores'] = True
+                    st.rerun()
+    else:
+        # List layout
+        for calc in popular_calculators[:max_items]:
+            col1, col2, col3 = st.columns([1, 4, 2])
+            with col1:
+                st.markdown(f"<div style='font-size: 2rem; text-align: center;'>{calc['icon']}</div>", unsafe_allow_html=True)
+            with col2:
+                st.markdown(f"**{calc['name']}**")
+                st.caption(calc['category'])
+            with col3:
+                page_path_map = {
+                    'Scores': 'pages/01_📊_Scores.py',
+                    'Labs': 'pages/05_🔬_Labs_and_Calculators.py',
+                    'Drugs': 'pages/07_💊_Drug_Database.py',
+                    'Protocols': 'pages/04_📋_Protocols.py',
+                }
+                page_path = page_path_map.get(calc['page'], 'pages/01_📊_Scores.py')
+                if st.button("Mở", key=f"qa_list_{calc['id']}", use_container_width=True):
+                    st.session_state['preset_calculator'] = calc['id']
+                    st.session_state['switch_to_scores'] = True
+                    st.rerun()
+
+
 def render_quick_access_menu():
     """
     Render quick access menu in sidebar
