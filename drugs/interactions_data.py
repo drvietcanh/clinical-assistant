@@ -7,6 +7,14 @@ Based on clinical guidelines and Vietnamese drug availability
 from difflib import SequenceMatcher
 from typing import Optional, List, Tuple, Dict
 
+from .interaction_schema import (
+    normalize_interaction_record,
+    validate_interactions_db,
+    SEVERITY_VALUES as CANONICAL_SEVERITIES,
+    ONSET_VALUES as CANONICAL_ONSETS,
+    EVIDENCE_LEVELS as CANONICAL_EVIDENCE,
+)
+
 # Interaction severity levels
 SEVERITY_MAJOR = "Major"
 SEVERITY_MODERATE = "Moderate"
@@ -279,6 +287,285 @@ DRUG_INTERACTIONS = {
         "references": "Micromedex, AHFS Drug Information"
     },
     
+    # QT prolongation clusters
+    ("QT Prolonging", "QT Prolonging"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cộng hưởng kéo dài QT, tăng nguy cơ xoắn đỉnh",
+        "description": "Kết hợp ≥2 thuốc kéo dài QT làm tăng mạnh nguy cơ xoắn đỉnh",
+        "clinical_significance": "Nguy cơ cao hơn khi K+/Mg2+ thấp, nhịp chậm, suy tim, suy gan/thận.",
+        "management": "Tránh nếu có thể. Nếu bắt buộc: theo dõi ECG trước và sau, điều chỉnh điện giải, giảm liều/cách khoảng, chọn thuốc thay thế ít kéo dài QT.",
+        "monitoring": ["ECG (QTc)", "Điện giải (K, Mg)", "Nhịp tim"],
+        "onset": "rapid",
+        "evidence_level": "high",
+        "references": ["CredibleMeds", "ACC/AHA", "Micromedex"],
+    },
+    ("Amiodarone", "Macrolide"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Amiodarone + macrolide đều kéo dài QT; macrolide còn ức chế CYP3A4",
+        "description": "Tăng nguy cơ xoắn đỉnh và loạn nhịp thất",
+        "management": "Tránh. Nếu bắt buộc: theo dõi ECG, điện giải, cân nhắc azithromycin (ít kéo dài QT hơn) hoặc kháng sinh khác.",
+        "monitoring": ["ECG (QTc)", "Điện giải"],
+        "onset": "rapid",
+        "evidence_level": "high",
+        "references": ["CredibleMeds", "ACC/AHA", "Lexicomp"],
+    },
+    ("Amiodarone", "Quinolone"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tác dụng cộng hưởng kéo dài QT",
+        "description": "Nguy cơ xoắn đỉnh khi phối hợp amiodarone với fluoroquinolon",
+        "management": "Tránh phối hợp. Nếu cần: chọn kháng sinh khác, theo dõi ECG, bổ sung Mg/K.",
+        "monitoring": ["ECG (QTc)", "Điện giải"],
+        "onset": "rapid",
+        "references": ["CredibleMeds", "Micromedex"],
+    },
+    ("Haloperidol", "Macrolide"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cộng hưởng kéo dài QT, nguy cơ xoắn đỉnh",
+        "description": "Tăng nguy cơ loạn nhịp thất nghiêm trọng",
+        "management": "Tránh nếu có thể. Nếu bắt buộc: dùng liều thấp, theo dõi ECG liên tục ở ICU.",
+        "monitoring": ["ECG (QTc)", "Điện giải"],
+        "onset": "rapid",
+        "references": ["Micromedex", "APA Guidelines"],
+    },
+    ("Haloperidol", "Quinolone"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cộng hưởng kéo dài QT",
+        "description": "Nguy cơ xoắn đỉnh tăng rõ rệt",
+        "management": "Tránh. Nếu cần: theo dõi ECG, điều chỉnh yếu tố nguy cơ.",
+        "monitoring": ["ECG (QTc)", "Điện giải"],
+        "onset": "rapid",
+        "references": ["CredibleMeds", "Micromedex"],
+    },
+    ("Ondansetron", "Quinolone"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Cộng hưởng kéo dài QT",
+        "description": "Tăng nguy cơ kéo dài QTc, đặc biệt IV và liều cao",
+        "management": "Hạn chế phối hợp. Nếu cần: dùng liều thấp ondansetron, theo dõi ECG ở bệnh nhân nguy cơ.",
+        "monitoring": ["ECG (QTc)", "Điện giải"],
+        "onset": "rapid",
+        "references": ["FDA Warning", "Micromedex"],
+    },
+
+    # ICU sedatives/anesthetics
+    ("Propofol", "Opioid"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cộng hưởng ức chế thần kinh trung ương và hô hấp",
+        "description": "Tăng nguy cơ suy hô hấp, hạ huyết áp sâu khi phối hợp truyền propofol với opioid",
+        "management": "Giảm liều từng thuốc, chuẩn bị hỗ trợ hô hấp, theo dõi huyết áp liên tục.",
+        "monitoring": ["Huyết áp", "SpO2/EtCO2", "Mức an thần"],
+        "onset": "rapid",
+        "references": ["ICU Sedation Guidelines", "Micromedex"],
+    },
+    ("Propofol", "Benzodiazepine"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cộng hưởng ức chế thần kinh trung ương/hô hấp",
+        "description": "Nguy cơ tụt huyết áp và suy hô hấp tăng rõ khi phối hợp propofol và benzodiazepine",
+        "management": "Tránh chồng thuốc nếu không cần. Nếu phối hợp: giảm liều, theo dõi sát, chuẩn bị thông khí hỗ trợ.",
+        "monitoring": ["Huyết áp", "SpO2/EtCO2"],
+        "onset": "rapid",
+        "references": ["ICU Sedation Guidelines"],
+    },
+    ("Midazolam", "Azole Antifungal"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Azole ức chế CYP3A4 → tăng nồng độ midazolam",
+        "description": "Tăng kéo dài an thần, suy hô hấp, đặc biệt đường IV/ICU",
+        "management": "Giảm mạnh liều midazolam hoặc chọn thuốc khác (ví dụ lorazepam). Theo dõi hô hấp/HA.",
+        "monitoring": ["SpO2/EtCO2", "Huyết áp"],
+        "onset": "rapid",
+        "references": ["Lexicomp", "Micromedex"],
+    },
+    ("Midazolam", "Macrolide"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Macrolide ức chế CYP3A4 → tăng nồng độ midazolam",
+        "description": "Kéo dài an thần, nguy cơ ức chế hô hấp",
+        "management": "Giảm liều midazolam hoặc chọn kháng sinh khác; theo dõi hô hấp.",
+        "monitoring": ["SpO2/EtCO2"],
+        "onset": "rapid",
+        "references": ["Micromedex"],
+    },
+    ("Dexmedetomidine", "Beta-blocker"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Cộng hưởng giảm nhịp tim/huyết áp",
+        "description": "Tăng nguy cơ nhịp chậm, tụt huyết áp",
+        "management": "Theo dõi huyết áp/nhịp tim sát; cân nhắc giảm liều một trong hai thuốc.",
+        "monitoring": ["Huyết áp", "Nhịp tim"],
+        "onset": "rapid",
+        "references": ["ICU Sedation Guidelines"],
+    },
+
+    # DOACs + Boosted PI (ritonavir/cobicistat)
+    ("Rivaroxaban", "Boosted PI"): {
+        "severity": "Contraindicated",
+        "mechanism": "Ritonavir/cobicistat ức chế mạnh CYP3A4/P-gp → tăng nồng độ DOAC",
+        "description": "Nguy cơ xuất huyết nặng",
+        "management": "TRÁNH phối hợp. Cân nhắc LMWH hoặc warfarin (theo dõi INR) thay thế.",
+        "onset": "rapid",
+        "references": ["FDA Label", "EHRA Guide"],
+    },
+    ("Apixaban", "Boosted PI"): {
+        "severity": "Contraindicated",
+        "mechanism": "Ức chế mạnh CYP3A4/P-gp → tăng nồng độ apixaban",
+        "description": "Nguy cơ xuất huyết nặng",
+        "management": "Tránh. Nếu bắt buộc: giảm 50% liều chỉ khi dùng 5–10 mg BID; ưu tiên LMWH/warfarin.",
+        "onset": "rapid",
+        "references": ["FDA Label", "EHRA Guide"],
+    },
+    ("Dabigatran", "Boosted PI"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ức chế P-gp → tăng nồng độ dabigatran",
+        "description": "Tăng nguy cơ xuất huyết, đặc biệt nếu suy thận",
+        "management": "Tránh nếu CrCl <50. Nếu dùng: giảm liều và theo dõi xuất huyết.",
+        "onset": "rapid",
+        "references": ["EHRA Guide"],
+    },
+
+    # INSTI + Rifampin (cảm ứng mạnh UGT/CYP)
+    ("Bictegravir", "Rifampin"): {
+        "severity": "Contraindicated",
+        "mechanism": "Rifampin cảm ứng UGT/CYP → giảm mạnh nồng độ bictegravir",
+        "description": "Mất hiệu lực kháng virus, nguy cơ kháng thuốc",
+        "management": "Tránh phối hợp. Nếu cần rifamycin: dùng rifabutin và điều chỉnh phác đồ ARV.",
+        "onset": "rapid",
+        "references": ["FDA Label", "WHO HIV/TB"],
+    },
+    ("Cabotegravir", "Rifampin"): {
+        "severity": "Contraindicated",
+        "mechanism": "Cảm ứng UGT1A1/1A9 → giảm nồng độ cabotegravir (kể cả LA IM)",
+        "description": "Giảm hiệu quả điều trị HIV",
+        "management": "Tránh. Nếu cần rifamycin: đổi phác đồ ARV, cân nhắc rifabutin.",
+        "onset": "rapid",
+        "references": ["FDA Label"],
+    },
+    ("Rilpivirine", "Rifampin"): {
+        "severity": "Contraindicated",
+        "mechanism": "Cảm ứng CYP3A → giảm nồng độ rilpivirine",
+        "description": "Mất hiệu lực kháng virus",
+        "management": "Tránh. Nếu cần rifamycin: chọn phác đồ khác (dolutegravir + rifabutin...).",
+        "onset": "rapid",
+        "references": ["FDA Label"],
+    },
+    ("Lopinavir/ritonavir", "Rifampin"): {
+        "severity": "Contraindicated",
+        "mechanism": "Rifampin cảm ứng mạnh CYP3A → giảm nồng độ PI; ritonavir cũng bị ảnh hưởng",
+        "description": "Mất hiệu lực điều trị HIV, nguy cơ kháng thuốc",
+        "management": "Tránh. Dùng rifabutin (liều giảm) hoặc đổi phác đồ HIV.",
+        "onset": "rapid",
+        "references": ["WHO HIV/TB", "FDA Label"],
+    },
+    ("Atazanavir (boosted)", "Rifampin"): {
+        "severity": "Contraindicated",
+        "mechanism": "Cảm ứng CYP3A → giảm mạnh nồng độ atazanavir",
+        "description": "Mất hiệu lực điều trị HIV",
+        "management": "Tránh. Nếu cần rifamycin: rifabutin liều giảm hoặc đổi phác đồ.",
+        "onset": "rapid",
+        "references": ["WHO HIV/TB"],
+    },
+
+    # Atazanavir + PPI
+    ("Atazanavir (boosted)", "PPI"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Tăng pH dạ dày giảm hấp thu atazanavir",
+        "description": "Giảm nồng độ atazanavir, nguy cơ thất bại điều trị",
+        "management": "Tránh PPI liều cao; omeprazole ≤20mg nên uống cách ≥12h. Ưu tiên H2 blocker.",
+        "onset": "rapid",
+        "references": ["FDA Label"],
+    },
+
+    # PDE5 inhibitors
+    ("PDE5 Inhibitor", "Nitrate"): {
+        "severity": "Contraindicated",
+        "mechanism": "Cộng hưởng tăng cGMP → tụt huyết áp nghiêm trọng",
+        "description": "Tụt huyết áp, ngất, nhồi máu cơ tim",
+        "management": "CHỐNG CHỈ ĐỊNH. Không dùng đồng thời hoặc trong vòng 24–48h tùy PDE5i.",
+        "onset": "rapid",
+        "references": ["ACC/AHA", "FDA"],
+    },
+    ("PDE5 Inhibitor", "sGC Stimulator"): {
+        "severity": "Contraindicated",
+        "mechanism": "Tăng cGMP mạnh",
+        "description": "Hạ huyết áp nguy hiểm",
+        "management": "Chống chỉ định phối hợp với riociguat.",
+        "onset": "rapid",
+        "references": ["FDA Label"],
+    },
+    ("PDE5 Inhibitor", "Alpha-blocker"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Cộng hưởng giãn mạch",
+        "description": "Hạ huyết áp tư thế, chóng mặt/ngất",
+        "management": "Bắt đầu PDE5i liều thấp, dùng cách thời gian với alpha-blocker, theo dõi HA.",
+        "onset": "rapid",
+        "references": ["ACC/AHA"],
+    },
+
+    # Statins + Boosted PI
+    ("Simvastatin", "Boosted PI"): {
+        "severity": "Contraindicated",
+        "mechanism": "Ức chế CYP3A4 mạnh → tăng nồng độ simvastatin",
+        "description": "Nguy cơ tiêu cơ vân nghiêm trọng",
+        "management": "Tránh. Chọn pravastatin/rosuvastatin liều thấp.",
+        "onset": "rapid",
+        "references": ["FDA", "ACC/AHA"],
+    },
+    ("Lovastatin", "Boosted PI"): {
+        "severity": "Contraindicated",
+        "mechanism": "Ức chế CYP3A4 mạnh → tăng nồng độ lovastatin",
+        "description": "Nguy cơ tiêu cơ vân",
+        "management": "Tránh. Chọn pravastatin/rosuvastatin liều thấp.",
+        "onset": "rapid",
+        "references": ["FDA", "ACC/AHA"],
+    },
+    # DOACs + mạnh ức chế/cảm ứng
+    ("Rivaroxaban", "Ketoconazole"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ketoconazole ức chế mạnh CYP3A4/P-gp → tăng nồng độ rivaroxaban",
+        "description": "Nguy cơ xuất huyết nặng",
+        "management": "Tránh phối hợp. Nếu buộc dùng azole: cân nhắc đổi sang LMWH.",
+        "monitoring": ["Dấu hiệu xuất huyết", "Hb/Hct nếu điều trị dài ngày"],
+        "onset": "rapid",
+        "references": ["FDA Label", "Micromedex"],
+    },
+    ("Apixaban", "Ketoconazole"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Ức chế CYP3A4/P-gp → tăng nồng độ apixaban",
+        "description": "Nguy cơ xuất huyết nặng",
+        "management": "Tránh phối hợp. Nếu dùng: giảm liều apixaban 50% và theo dõi sát.",
+        "monitoring": ["Dấu hiệu xuất huyết"],
+        "onset": "rapid",
+        "references": ["FDA Label", "Micromedex"],
+    },
+    ("Rivaroxaban", "Rifampin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Rifampin cảm ứng CYP3A4/P-gp → giảm nồng độ rivaroxaban",
+        "description": "Giảm hiệu quả chống đông, tăng nguy cơ huyết khối",
+        "management": "Tránh phối hợp; chọn warfarin hoặc LMWH khi cần dùng rifampin.",
+        "onset": "delayed",
+        "references": ["FDA Label"],
+    },
+    ("Apixaban", "Rifampin"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cảm ứng CYP3A4/P-gp → giảm nồng độ apixaban",
+        "description": "Giảm hiệu quả chống đông",
+        "management": "Tránh; cân nhắc warfarin/LMWH trong thời gian dùng rifampin.",
+        "onset": "delayed",
+        "references": ["FDA Label"],
+    },
+    ("Dabigatran", "Amiodarone"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Amiodarone ức chế P-gp → tăng nồng độ dabigatran",
+        "description": "Tăng nguy cơ xuất huyết, đặc biệt ở bệnh nhân suy thận",
+        "management": "Giảm liều dabigatran nếu CrCl 30-50 mL/phút; theo dõi xuất huyết.",
+        "onset": "rapid",
+        "references": ["EHRA Practical Guide", "Micromedex"],
+    },
+    ("Dabigatran", "Verapamil"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Verapamil ức chế P-gp → tăng hấp thu dabigatran",
+        "description": "Nguy cơ xuất huyết tăng nhẹ-trung bình",
+        "management": "Dùng dabigatran 2 giờ trước verapamil hoặc giảm liều; theo dõi xuất huyết.",
+        "onset": "rapid",
+        "references": ["EHRA Practical Guide"],
+    },
+
     # Statins + Macrolides
     ("Statins", "Macrolide"): {
         "severity": SEVERITY_MAJOR,
@@ -547,7 +834,8 @@ DRUG_CLASS_MAPPINGS = {
     
     # Beta-blockers
     "Beta-blocker": ["Metoprolol", "Propranolol", "Atenolol", "Bisoprolol", "Carvedilol",
-                     "Labetalol", "Nadolol", "Pindolol", "Timolol", "Esmolol", "Nebivolol"],
+                     "Labetalol", "Nadolol", "Pindolol", "Timolol", "Esmolol", "Nebivolol",
+                     "Acebutolol", "Betaxolol"],
     
     # Calcium Channel Blockers
     "CCB": ["Amlodipine", "Nifedipine", "Felodipine", "Isradipine", "Nicardipine", 
@@ -683,6 +971,34 @@ DRUG_CLASS_MAPPINGS = {
     
     # Contrast Media
     "Contrast Media": ["Iodinated contrast", "Gadolinium contrast", "Barium contrast"],
+
+    # Alpha-blockers (uroselective / không chọn lọc)
+    "Alpha-blocker": ["Tamsulosin", "Alfuzosin", "Doxazosin", "Terazosin", "Silodosin"],
+
+    # PDE5 Inhibitors
+    "PDE5 Inhibitor": ["Sildenafil", "Tadalafil", "Vardenafil", "Avanafil"],
+
+    # Nitrates
+    "Nitrate": ["Nitroglycerin", "Isosorbide dinitrate", "Isosorbide mononitrate"],
+
+    # Soluble guanylate cyclase stimulator
+    "sGC Stimulator": ["Riociguat"],
+
+    # Protease inhibitors (boosted)
+    "Boosted PI": ["Lopinavir/ritonavir", "Darunavir/ritonavir", "Atazanavir (boosted)", "Saquinavir/ritonavir"],
+
+    # Integrase inhibitors
+    "INSTI": ["Bictegravir", "Dolutegravir", "Cabotegravir"],
+
+    # QT prolonging agents (high-risk cluster)
+    "QT Prolonging": [
+        "Amiodarone", "Sotalol", "Dofetilide", "Ibutilide",
+        "Haloperidol", "Ziprasidone", "Quetiapine",
+        "Ondansetron", "Granisetron",
+        "Methadone",
+        "Ciprofloxacin", "Levofloxacin", "Moxifloxacin",
+        "Clarithromycin", "Erythromycin",
+    ],
 }
 
 
@@ -1021,11 +1337,11 @@ def get_interaction(drug1: str, drug2: str, check_classes: bool = True) -> Optio
     # 1. Check direct drug-drug interaction (both orders)
     interaction = DRUG_INTERACTIONS.get((norm1, norm2))
     if interaction:
-        return interaction
+        return normalize_interaction_record(interaction, drug1, drug2)
     
     interaction = DRUG_INTERACTIONS.get((norm2, norm1))
     if interaction:
-        return interaction
+        return normalize_interaction_record(interaction, drug1, drug2)
     
     # 2. Check class-based interactions
     if check_classes:
@@ -1035,31 +1351,31 @@ def get_interaction(drug1: str, drug2: str, check_classes: bool = True) -> Optio
         
         # Check drug1 vs drug2's classes
         for class2 in classes2:
-            interaction = DRUG_INTERACTIONS.get((norm1, class2))
-            if interaction:
-                return interaction
-            interaction = DRUG_INTERACTIONS.get((class2, norm1))
-            if interaction:
-                return interaction
+                interaction = DRUG_INTERACTIONS.get((norm1, class2))
+                if interaction:
+                    return normalize_interaction_record(interaction, drug1, drug2)
+                interaction = DRUG_INTERACTIONS.get((class2, norm1))
+                if interaction:
+                    return normalize_interaction_record(interaction, drug1, drug2)
         
         # Check drug2 vs drug1's classes
         for class1 in classes1:
-            interaction = DRUG_INTERACTIONS.get((norm2, class1))
-            if interaction:
-                return interaction
-            interaction = DRUG_INTERACTIONS.get((class1, norm2))
-            if interaction:
-                return interaction
+                interaction = DRUG_INTERACTIONS.get((norm2, class1))
+                if interaction:
+                    return normalize_interaction_record(interaction, drug1, drug2)
+                interaction = DRUG_INTERACTIONS.get((class1, norm2))
+                if interaction:
+                    return normalize_interaction_record(interaction, drug1, drug2)
         
         # Check class1 vs class2
         for class1 in classes1:
             for class2 in classes2:
                 interaction = DRUG_INTERACTIONS.get((class1, class2))
                 if interaction:
-                    return interaction
+                    return normalize_interaction_record(interaction, drug1, drug2)
                 interaction = DRUG_INTERACTIONS.get((class2, class1))
                 if interaction:
-                    return interaction
+                    return normalize_interaction_record(interaction, drug1, drug2)
     
     return None
 
@@ -1096,9 +1412,14 @@ def check_interactions(drug_list: list) -> list:
                 interaction['drug2'] = drug2
                 interactions.append(interaction)
     
-    # Sort by severity (Major > Moderate > Minor)
-    severity_order = {SEVERITY_MAJOR: 0, SEVERITY_MODERATE: 1, SEVERITY_MINOR: 2}
-    interactions.sort(key=lambda x: severity_order.get(x['severity'], 3))
+    # Sort by severity (Contraindicated > Major > Moderate > Minor > others)
+    severity_order = {
+        "Contraindicated": 0,
+        SEVERITY_MAJOR: 1,
+        SEVERITY_MODERATE: 2,
+        SEVERITY_MINOR: 3,
+    }
+    interactions.sort(key=lambda x: severity_order.get(x.get('severity'), 9))
     
     return interactions
 
@@ -1180,4 +1501,9 @@ def get_drug_autocomplete_suggestions(query: str, max_results: int = 10) -> List
             suggestions.append(drug_name)
     
     return suggestions[:max_results]
+
+
+def validate_interaction_dataset() -> Dict[str, List[str]]:
+    """Validate the interaction dictionary against the canonical schema."""
+    return validate_interactions_db(DRUG_INTERACTIONS)
 

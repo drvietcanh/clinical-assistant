@@ -359,6 +359,20 @@ def render_interaction_checker():
                             
                             st.markdown("**📋 Hướng xử trí:**")
                             st.warning(interaction['management'])
+
+                        # Timing & monitoring
+                        onset = interaction.get('onset')
+                        if onset:
+                            st.caption(f"⏱️ Khởi phát: {onset}")
+                        monitoring = interaction.get('monitoring')
+                        if monitoring:
+                            st.caption("🩺 Theo dõi: " + ", ".join(monitoring))
+                        special = interaction.get('special_populations')
+                        if special:
+                            st.caption("👥 Bối cảnh đặc biệt: " + ", ".join(special))
+                        evidence = interaction.get('evidence_level')
+                        if evidence:
+                            st.caption(f"📖 Mức độ chứng cứ: {evidence}")
                             
                             if 'references' in interaction:
                                 st.caption(f"📚 **Tài liệu tham khảo:** {interaction['references']}")
@@ -402,6 +416,19 @@ def render_interaction_checker():
                         
                         st.markdown("**📋 Hướng xử trí:**")
                         st.info(interaction['management'])
+
+                        onset = interaction.get('onset')
+                        if onset:
+                            st.caption(f"⏱️ Khởi phát: {onset}")
+                        monitoring = interaction.get('monitoring')
+                        if monitoring:
+                            st.caption("🩺 Theo dõi: " + ", ".join(monitoring))
+                        special = interaction.get('special_populations')
+                        if special:
+                            st.caption("👥 Bối cảnh đặc biệt: " + ", ".join(special))
+                        evidence = interaction.get('evidence_level')
+                        if evidence:
+                            st.caption(f"📖 Mức độ chứng cứ: {evidence}")
                         
                         # Alternatives
                         if 'alternatives' in interaction:
@@ -435,6 +462,19 @@ def render_interaction_checker():
                         
                         st.markdown("**📋 Hướng xử trí:**")
                         st.info(interaction['management'])
+
+                        onset = interaction.get('onset')
+                        if onset:
+                            st.caption(f"⏱️ Khởi phát: {onset}")
+                        monitoring = interaction.get('monitoring')
+                        if monitoring:
+                            st.caption("🩺 Theo dõi: " + ", ".join(monitoring))
+                        special = interaction.get('special_populations')
+                        if special:
+                            st.caption("👥 Bối cảnh đặc biệt: " + ", ".join(special))
+                        evidence = interaction.get('evidence_level')
+                        if evidence:
+                            st.caption(f"📖 Mức độ chứng cứ: {evidence}")
                         
                         if 'references' in interaction:
                             st.caption(f"📚 **Tài liệu tham khảo:** {interaction['references']}")

@@ -63,6 +63,24 @@ PSYCHIATRY_INTERACTIONS = {
         "management": "Tránh dùng chung",
         "references": "Micromedex"
     },
+
+    ("SSRI", "NSAID"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "Cộng hưởng ức chế tiểu cầu + loét dạ dày do NSAID",
+        "description": "Tăng nguy cơ xuất huyết tiêu hóa",
+        "management": "Cân nhắc PPI, tránh dùng kéo dài; theo dõi dấu hiệu xuất huyết.",
+        "monitoring": ["Dấu hiệu xuất huyết", "Hb/Hct nếu kéo dài"],
+        "references": "Micromedex, ACC/AHA",
+    },
+
+    ("SSRI", "Antiplatelet"): {
+        "severity": SEVERITY_MODERATE,
+        "mechanism": "SSRI ức chế thu hồi serotonin tiểu cầu → giảm kết tập tiểu cầu",
+        "description": "Tăng nguy cơ xuất huyết, nhất là phối hợp aspirin/clopidogrel",
+        "management": "Theo dõi xuất huyết. Cân nhắc PPI bảo vệ dạ dày nếu phải phối hợp dài ngày.",
+        "monitoring": ["Dấu hiệu xuất huyết"],
+        "references": "Micromedex, ESC",
+    },
     
     ("Paroxetine", "Warfarin"): {
         "severity": SEVERITY_MODERATE,

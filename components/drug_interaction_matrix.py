@@ -133,17 +133,20 @@ def render_interaction_matrix(
                     severity = interaction.get("severity", SEVERITY_MINOR)
                     mechanism = interaction.get("mechanism", "")
                     description = interaction.get("description", "")
+                    management = interaction.get("management", "")
                 else:
                     # Check if interaction exists in database
                     interaction_data = get_interaction(drug1, drug2)
-                    if interaction_data:
-                        severity = interaction_data.get("severity", SEVERITY_MINOR)
-                        mechanism = interaction_data.get("mechanism", "")
-                        description = interaction_data.get("description", "")
-                    else:
-                        severity = "none"
-                        mechanism = ""
-                        description = "Không có tương tác được ghi nhận"
+                if interaction_data:
+                    severity = interaction_data.get("severity", SEVERITY_MINOR)
+                    mechanism = interaction_data.get("mechanism", "")
+                    description = interaction_data.get("description", "")
+                    management = interaction_data.get("management", "")
+                else:
+                    severity = "none"
+                    mechanism = ""
+                    description = "Không có tương tác được ghi nhận"
+                    management = ""
                 
                 colors = get_severity_color(severity)
                 
@@ -153,6 +156,8 @@ def render_interaction_matrix(
                     tooltip_text += f"\n{colors['label']}: {mechanism}"
                 if description:
                     tooltip_text += f"\n{description}"
+                if management:
+                    tooltip_text += f"\nXử trí: {management}"
                 
                 # Cell with tooltip
                 cell_html = f"""

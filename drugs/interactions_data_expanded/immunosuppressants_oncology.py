@@ -121,6 +121,30 @@ IMMUNOSUPPRESSANTS_ONCOLOGY_INTERACTIONS = {
         "references": "FDA, Micromedex"
     },
 
+    ("Rifampin", "Cyclosporine"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Rifampin cảm ứng CYP3A4/P-gp → giảm mạnh nồng độ cyclosporine",
+        "description": "Nguy cơ thải ghép hoặc bùng phát bệnh nền",
+        "management": "Tránh phối hợp; nếu bắt buộc, tăng liều và theo dõi nồng độ cyclosporine rất sát.",
+        "references": "Micromedex, Transplant Guidelines"
+    },
+
+    ("Rifampin", "Tacrolimus"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cảm ứng CYP3A4/P-gp → giảm mạnh nồng độ tacrolimus",
+        "description": "Tăng nguy cơ thải ghép/đợt cấp",
+        "management": "Tránh phối hợp; nếu bắt buộc dùng rifampin, cần tăng liều tacrolimus đáng kể và theo dõi nồng độ huyết tương.",
+        "references": "Micromedex, Transplant Guidelines"
+    },
+
+    ("Rifampin", "Lopinavir/ritonavir"): {
+        "severity": SEVERITY_MAJOR,
+        "mechanism": "Cảm ứng CYP3A4 mạnh → giảm nồng độ PI; rifampin cũng bị ảnh hưởng",
+        "description": "Giảm hiệu quả điều trị HIV, nguy cơ kháng thuốc",
+        "management": "Tránh phối hợp. Dùng rifabutin (liều giảm) hoặc đổi phác đồ ARV phù hợp.",
+        "references": "WHO HIV/TB Guidelines"
+    },
+
     # ========== METHOTREXATE ==========
     
     ("Methotrexate", "NSAID"): {
