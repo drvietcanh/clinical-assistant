@@ -173,7 +173,7 @@ if search_query:
                     'title': g.title_vn,
                     'subtitle': f"{g.organization} {g.year}",
                     'description': g.description[:200] if g.description else "",
-                    'link': "pages/15_📋_Guidelines.py"
+                    'link': "pages/15_📋_Guidelines_Tracker.py"
                 })
     except Exception as e:
         pass
@@ -271,7 +271,7 @@ with col1:
 with col2:
     st.markdown("**📚 Resources**")
     if st.button("Guidelines", use_container_width=True):
-        st.switch_page("pages/15_📋_Guidelines.py")
+        st.switch_page("pages/15_📋_Guidelines_Tracker.py")
     if st.button("Protocols", use_container_width=True):
         st.switch_page("pages/04_📋_Protocols.py")
 
