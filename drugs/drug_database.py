@@ -102,16 +102,24 @@ DRUG_DATABASE = {
 # Remove stray non-drug keys that may appear from malformed imports
 _NON_DRUG_KEYS = [
     "administration_instructions",
+    "black_box_warnings",
     "contraindications",
     "contraindications_detail",
     "drug_interactions",
     "hepatic_adjustment",
+    "interactions",
+    "mechanism_of_action",
+    "monitoring",
     "overdose_management",
     "pharmacokinetics",
+    "precautions",
     "pregnancy_lactation",
+    "references",
     "renal_adjustment",
     "reversal_agents",
     "risk_flags",
+    "side_effects",
+    "storage",
 ]
 for _k in _NON_DRUG_KEYS:
     DRUG_DATABASE.pop(_k, None)
