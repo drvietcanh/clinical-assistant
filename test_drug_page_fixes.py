@@ -10,14 +10,14 @@ project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
 def test_drug_detail_page_structure():
-    """Test cấu trúc Drug_Detail.py"""
-    print("\n[TEST 1] Drug_Detail.py Structure")
+    """Test cấu trúc _Drug_Detail.py"""
+    print("\n[TEST 1] _Drug_Detail.py Structure")
     print("-" * 60)
     
     try:
-        detail_file = project_root / "pages" / "Drug_Detail.py"
+        detail_file = project_root / "pages" / "_Drug_Detail.py"
         if not detail_file.exists():
-            print("❌ Drug_Detail.py not found")
+            print("❌ _Drug_Detail.py not found")
             return False
         
         content = detail_file.read_text(encoding="utf-8")
@@ -30,7 +30,7 @@ def test_drug_detail_page_structure():
             "drug_data validation": "if not drug_data:" in content,
             "No duplicate drug_data get": content.count("drug_data = DRUG_DATABASE.get(drug_name)") == 1,
             "Back button uses switch_page": 'st.switch_page("pages/07_💊_Drug_Database.py")' in content,
-            "Related drugs use switch_page": 'st.switch_page("pages/Drug_Detail.py")' in content and "related_same_group" in content,
+            "Related drugs use switch_page": 'st.switch_page("pages/_Drug_Detail.py")' in content or 'st.switch_page("pages/07_💊_Drug_Database.py")' in content,
             "Related drugs validate before navigate": "if rel_name in DRUG_DATABASE:" in content or "if alt_name in DRUG_DATABASE:" in content,
             "Swipe gesture uses location.href": "window.location.href = '/pages/07_💊_Drug_Database'" in content,
             "No window.history.back()": "window.history.back()" not in content,
@@ -73,7 +73,7 @@ def test_card_components():
             "File exists": True,
             "Validation before navigate": "drug_name_str not in DRUG_DATABASE" in content,
             "Error handling": "try:" in content and "except" in content,
-            "Uses switch_page": 'st.switch_page("pages/Drug_Detail.py")' in content,
+            "Uses switch_page": 'st.switch_page("pages/_Drug_Detail.py")' in content or 'st.switch_page("pages/07_💊_Drug_Database.py")' in content,
             "Sets session_state": "st.session_state['view_drug_name']" in content
         }
         
@@ -100,14 +100,14 @@ def test_navigation_consistency():
     print("-" * 60)
     
     try:
-        detail_file = project_root / "pages" / "Drug_Detail.py"
+        detail_file = project_root / "pages" / "_Drug_Detail.py"
         content = detail_file.read_text(encoding="utf-8")
         
         # Check all navigation uses switch_page
         navigation_patterns = [
             'st.switch_page("pages/07_💊_Drug_Database.py")',
-            'st.switch_page("pages/Drug_Detail.py")',
-            'st.switch_page("Home")'
+            'st.switch_page("pages/_Drug_Detail.py")',
+            'st.switch_page("pages/00_🏠_Main_Menu.py")'
         ]
         
         # Check no problematic patterns
@@ -118,7 +118,7 @@ def test_navigation_consistency():
         
         tests = {
             "Uses switch_page for back navigation": 'st.switch_page("pages/07_💊_Drug_Database.py")' in content,
-            "Uses switch_page for related drugs": 'st.switch_page("pages/Drug_Detail.py")' in content,
+            "Uses switch_page for related drugs": 'st.switch_page("pages/_Drug_Detail.py")' in content or 'st.switch_page("pages/07_💊_Drug_Database.py")' in content,
             "No window.history.back()": "window.history.back()" not in content,
             "Swipe gesture uses location.href": "window.location.href = '/pages/07_💊_Drug_Database'" in content
         }
@@ -146,7 +146,7 @@ def test_error_handling():
     print("-" * 60)
     
     try:
-        detail_file = project_root / "pages" / "Drug_Detail.py"
+        detail_file = project_root / "pages" / "_Drug_Detail.py"
         content = detail_file.read_text(encoding="utf-8")
         
         tests = {

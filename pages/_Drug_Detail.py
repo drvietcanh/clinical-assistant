@@ -222,7 +222,8 @@ if not drug_name:
             st.switch_page("pages/07_💊_Drug_Database.py")
     with col2:
         if st.button("🏠 Về trang chủ", use_container_width=True):
-            st.switch_page("Home")
+            # Điều hướng về trang chủ chuẩn thay vì chuỗi "Home" không tồn tại
+            st.switch_page("pages/00_🏠_Main_Menu.py")
     st.stop()
 
 # Validate drug exists in database
@@ -265,7 +266,8 @@ if not drug_found:
             st.switch_page("pages/07_💊_Drug_Database.py")
     with col2:
         if st.button("🏠 Về trang chủ", use_container_width=True):
-            st.switch_page("Home")
+            # Điều hướng chuẩn về trang chủ để tránh link chết
+            st.switch_page("pages/00_🏠_Main_Menu.py")
     st.stop()
 
 # Use normalized drug name if found
@@ -290,7 +292,7 @@ if not drug_data:
             st.switch_page("pages/07_💊_Drug_Database.py")
     with col2:
         if st.button("🏠 Về trang chủ", use_container_width=True):
-            st.switch_page("Home")
+            st.switch_page("pages/00_🏠_Main_Menu.py")
     st.stop()
 
 # Breadcrumb navigation - cleaner and more intuitive
