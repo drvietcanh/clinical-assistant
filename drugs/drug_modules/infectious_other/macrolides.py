@@ -5,7 +5,7 @@
 MACROLIDES_DRUGS = {
     "Azithromycin": {'group': 'Infectious Disease - Macrolide Antibiotic',
         "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Azithromycin, Zithromax', 'administration': ['PO', 'IV'],
         'indications': ['Nhiễm trùng đường hô hấp trên (viêm họng, viêm xoang)',
         'Nhiễm trùng đường hô hấp dưới (viêm phổi, viêm phế quản)',
@@ -221,7 +221,7 @@ MACROLIDES_DRUGS = {
                 'Digoxin levels (if co-administered) - increased digoxin toxicity',
                 'Cyclosporine/tacrolimus levels (if co-administered) - increased toxicity'
             ],look_alike_sound_alike': ['Azithromycin', 'Clarithromycin', 'Erythromycin', 'Aztreonam']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Black Box Warning - Azithromycin and QT Prolongation',
             'FDA Black Box Warning - Azithromycin and Torsades de Pointes',
             'IDSA Guidelines - Community-Acquired Pneumonia',
@@ -230,7 +230,7 @@ MACROLIDES_DRUGS = {
         ]},
     "Clarithromycin": {'group': 'Infectious Disease - Macrolide Antibiotic',
         "pregnancy": "C - Nguy cơ không thể loại trừ. Tránh trong thai kỳ nếu có thể",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Clarithromycin, Klacid', 'administration': ['PO', 'IV'],
         'indications':
         ['Nhiễm trùng đường hô hấp (viêm phổi, viêm phế quản)',
@@ -461,7 +461,7 @@ MACROLIDES_DRUGS = {
                 'Renal function (creatinine, eGFR) - dose adjustment required in renal impairment (CrCl <30)',
                 'Hearing loss symptoms (tinnitus, hearing loss) - rare, may be irreversible'
             ],look_alike_sound_alike': ['Clarithromycin', 'Azithromycin', 'Erythromycin', 'Clindamycin']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Black Box Warning - Clarithromycin and Cardiovascular Death Risk',
             'FDA Black Box Warning - Clarithromycin and QT Prolongation',
             'FDA Black Box Warning - Clarithromycin and Rhabdomyolysis with Statins',

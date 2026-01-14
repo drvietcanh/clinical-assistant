@@ -804,7 +804,7 @@ NSAIDS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': True,
             'requires_monitoring': ['Signs of GI bleeding', 'Renal function (CrCl, BUN) if long-term use', 'Blood pressure', 'Signs of heart failure']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Drug Safety Communication - NSAIDs and Cardiovascular Risk',
             'ACR Guidelines - NSAID Use in Arthritis',
             'FDA Black Box Warning - NSAIDs and Pregnancy (3rd trimester)',
@@ -1302,7 +1302,7 @@ NSAIDS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': True,
             'requires_monitoring': ['Renal function (CrCl, BUN) - CRITICAL (max 5 days use)', 'Signs of GI bleeding', 'Blood pressure', 'Signs of acute kidney injury']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Drug Safety Communication - NSAIDs and Renal Risk',
             'ISMP High Alert Medications - Ketorolac',
             'FDA Black Box Warning - Ketorolac and Renal/GI Toxicity',
@@ -1431,7 +1431,7 @@ NSAIDS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': True,
             'requires_monitoring': ['Signs of GI bleeding', 'Renal function (CrCl, BUN)', 'Blood pressure', 'Signs of cardiovascular events']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Drug Safety Communication - NSAIDs and Cardiovascular Risk',
             'FDA Drug Safety Communication - COX-2 Inhibitors and Cardiovascular Risk',
             'ACR Guidelines - NSAID Use in Arthritis',
@@ -1583,7 +1583,7 @@ NSAIDS_DRUGS = {
             'hepatotoxicity': True,
             'nephrotoxicity': True,
             'requires_monitoring': ['Signs of GI bleeding', 'Hepatic function (ALT, AST) - CRITICAL', 'Renal function (CrCl, BUN)', 'Blood pressure']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Drug Safety Communication - NSAIDs and Cardiovascular Risk',
             'FDA Drug Safety Communication - Diclofenac and Hepatotoxicity',
             'ACR Guidelines - NSAID Use in Arthritis',

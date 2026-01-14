@@ -6,7 +6,7 @@ Active module - contains all diabetes drug data"""
 THIAZOLIDINEDIONE_TZDS_DRUGS = {
     "Pioglitazone": {'group': 'Diabetes - Thiazolidinedione (TZD)',
         "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Pioglitazone, Actos', 'administration': ['PO'],
         'indications': [
         'Đái tháo đường type 2'],

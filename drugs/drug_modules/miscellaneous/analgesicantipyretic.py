@@ -166,7 +166,7 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
                 'Blood glucose (hypoglycemia can occur with overdose)',
                 'King\'s College Criteria for liver transplantation (if acute liver failure)'
             ],look_alike_sound_alike': ['Paracetamol', 'Acetaminophen', 'Acetylcysteine', 'N-acetylcysteine']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Black Box Warning - Acetaminophen and Hepatotoxicity',
             'Rumack-Matthew Nomogram - Acetaminophen Overdose Treatment',
             "King's College Criteria - Liver Transplantation in Acute Liver Failure",

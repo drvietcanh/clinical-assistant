@@ -134,7 +134,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': [],look_alike_sound_alike': []
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'GINA Guidelines 2024 - Asthma Management - Inhaled corticosteroids',
             'FDA Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ beclomethasone, tăng nguy cơ ức chế HPA)',
             'WHO Guidelines - Essential medicines for asthma'
@@ -142,7 +142,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
 },
     "Budesonide inhaled": {'group': 'Respiratory - Inhaled Corticosteroid (ICS)',
         "pregnancy": "B - Corticosteroid, có thể sử dụng trong thai kỳ",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Budesonide, Pulmicort', 'administration': ['Inhalation', 'Nebulizer'],
         'indications': ['Hen phế quản (kiểm soát, phòng ngừa)',
         'COPD (nếu có nhiều đợt cấp)', 'Viêm phế quản co thắt'],
@@ -280,7 +280,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': [],look_alike_sound_alike': []
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'GINA Guidelines 2024 - Asthma Management - Inhaled corticosteroids',
             'FDA Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ budesonide, tăng nguy cơ ức chế HPA)',
             'WHO Guidelines - Essential medicines for asthma'
@@ -421,7 +421,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': [],look_alike_sound_alike': []
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'GINA Guidelines 2024 - Asthma Management - Inhaled corticosteroids',
             'FDA Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ ciclesonide, tăng nguy cơ ức chế HPA)',
             'WHO Guidelines - Essential medicines for asthma'
@@ -429,7 +429,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
     },
     "Fluticasone inhaled": {'group': 'Respiratory - Inhaled Corticosteroid (ICS)',
         "pregnancy": "C - Corticosteroid, thận trọng trong thai kỳ",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Fluticasone, Flixotide', 'administration': ['Inhalation'],
         'indications': ['Hen phế quản (kiểm soát, phòng ngừa)',
         'COPD (kết hợp với LABA nếu nhiều đợt cấp)'],
@@ -560,7 +560,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': [],look_alike_sound_alike': []
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Black Box Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ fluticasone, tăng nguy cơ ức chế trục HPA nghiêm trọng, có thể gây hội chứng Cushing, suy thượng thận)',
             'ISMP High Alert Medications',
             'GINA Guidelines 2024 - Asthma Management - Inhaled corticosteroids',

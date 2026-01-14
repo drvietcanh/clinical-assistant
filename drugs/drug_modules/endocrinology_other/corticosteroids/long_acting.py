@@ -3,7 +3,7 @@
 LONG_ACTING = {
     "Betamethasone": {'group': 'Endocrinology - Corticosteroid',
         "pregnancy": "C - Nguy cơ không thể loại trừ. Có thể sử dụng khi cần thiết",
-        ', 'vietnamese_name':
+        'vietnamese_name':
     'Betamethasone, Celestone', 'administration': ['PO', 'IV', 'IM',
     'Topical'],
         'indications': [
@@ -216,7 +216,7 @@ LONG_ACTING = {
             'In pregnancy: Fetal monitoring if used for lung maturation (24-34 weeks)',
             'CYP3A4 interactions (inhibitors increase levels, inducers decrease levels)'
         ],look_alike_sound_alike': ['Betamethasone', 'Celestone', 'Dexamethasone']
-    },guideline_tags': [
+        }, 'guideline_tags': [
         'ACOG Guidelines - Antenatal Corticosteroid Therapy for Fetal Maturation',
         'Endocrine Society Guidelines - Corticosteroid Use',
         'ISMP High Alert Medications',
@@ -438,7 +438,7 @@ LONG_ACTING = {
             'COVID-19: 6mg daily x10 days (IV or PO) - for severe cases only',
             'CYP3A4 interactions (inhibitors increase levels, inducers decrease levels)'
         ],look_alike_sound_alike': ['Dexamethasone', 'Decadron', 'Betamethasone']
-    },guideline_tags': [
+        }, 'guideline_tags': [
         'Endocrine Society Guidelines - Corticosteroid Use',
         'WHO Guidelines - COVID-19 Treatment (Severe Cases)',
         'ISMP High Alert Medications',

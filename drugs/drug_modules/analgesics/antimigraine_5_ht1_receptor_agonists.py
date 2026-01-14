@@ -228,7 +228,7 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
         'Không dùng để phòng ngừa - chỉ dùng để cắt cơn',
         'CHỐNG CHỈ ĐỊNH trong bệnh mạch vành, nhồi máu cơ tim, đột quỵ, TIA, bệnh mạch máu ngoại biên'
         , 'CHỐNG CHỈ ĐỊNH trong tăng huyết áp không kiểm soát',
-        'Không dùng với ergotamine/dihydroergotamine trong 24 giờ - tăng nguy cơ co mạch nặng'
+        'Không dùng với ergotamine/dihydroergotamine trong 24 giờ - tăng nguy cơ co mạch nặng',
         'Không dùng với MAO inhibitor trong 14 ngày - tăng nguy cơ tác dụng phụ',
         'Nếu dùng với propranolol: GIẢM LIỀU RIZATRIPTAN 50% (5mg thay vì 10mg) - propranolol tăng nồng độ rizatriptan'
         , 'Thận trọng khi dùng với SSRI/SNRI - tăng nguy cơ hội chứng serotonin',
@@ -370,7 +370,7 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
         'Không dùng để phòng ngừa - chỉ dùng để cắt cơn',
         'CHỐNG CHỈ ĐỊNH trong bệnh mạch vành, nhồi máu cơ tim, đột quỵ, TIA, bệnh mạch máu ngoại biên'
         , 'CHỐNG CHỈ ĐỊNH trong tăng huyết áp không kiểm soát',
-        'Không dùng với ergotamine/dihydroergotamine trong 24 giờ - tăng nguy cơ co mạch nặng'
+        'Không dùng với ergotamine/dihydroergotamine trong 24 giờ - tăng nguy cơ co mạch nặng',
         'Không dùng với MAO inhibitor trong 14 ngày - tăng nguy cơ tác dụng phụ',
         'Thận trọng khi dùng với SSRI/SNRI - tăng nguy cơ hội chứng serotonin',
         'Nếu đau ngực, khó thở → ngừng ngay và đánh giá',

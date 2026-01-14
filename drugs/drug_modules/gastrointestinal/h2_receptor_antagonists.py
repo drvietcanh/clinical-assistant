@@ -356,7 +356,7 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
     
     "Ranitidine": {'group': 'Gastrointestinal - H2 Receptor Antagonist',
         "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Ranitidine, Zantac', 'administration': ['PO', 'IV'],
         'indications': [
         'Loét dạ dày tá tràng', 'GERD', 'Phòng ngừa loét do stress'],
@@ -378,10 +378,10 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
         'precautions': ['Uống với thức ăn hoặc trước bữa ăn (tăng hiệu quả)',
         'Yếu hơn PPI - cân nhắc dùng PPI nếu không đáp ứng',
         'Thận trọng ở suy thận (giảm liều)', 'Thận trọng ở suy gan (giảm liều)',
-        'Cân nhắc ngừng sau 4-8 tuần nếu không cần thiết (giảm nguy cơ tác dụng phụ)'
-        'Một số sản phẩm đã bị thu hồi do NDMA (chất gây ung thư) - kiểm tra nguồn gốc sản phẩm'
+        'Cân nhắc ngừng sau 4-8 tuần nếu không cần thiết (giảm nguy cơ tác dụng phụ)',
+        'Một số sản phẩm đã bị thu hồi do NDMA (chất gây ung thư) - kiểm tra nguồn gốc sản phẩm',
         'Không dùng với các thuốc cần acid để hấp thu (ketoconazole, itraconazole, iron salts) - cách 2 giờ'
-        ],onset': '1-3 giờ',
+        ], 'onset': '1-3 giờ',
         'duration': '8-12 giờ', 'protein_binding': '15%', 'metabolism':
         'Gan (chuyển hóa qua CYP450, một phần), thận (thải trừ)', 'clearance':
         'Gan (chuyển hóa), thận (30-50% thải nguyên dạng)'},

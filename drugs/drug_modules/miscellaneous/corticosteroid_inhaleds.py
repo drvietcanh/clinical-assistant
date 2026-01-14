@@ -156,7 +156,7 @@ CORTICOSTEROID_INHALED_DRUGS = {
                 'Hepatic function (if symptoms - rare)',
                 'Drug interactions with ritonavir, ketoconazole, itraconazole (increased budesonide levels) - CRITICAL'
             ],look_alike_sound_alike': ['Budesonide', 'Beclomethasone', 'Fluticasone', 'Mometasone']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'GINA 2023 Guidelines - Global Initiative for Asthma',
             'NAEPP Guidelines - Asthma Management',
             'FDA Drug Information - Budesonide',

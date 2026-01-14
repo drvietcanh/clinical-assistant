@@ -121,8 +121,8 @@ ANTIEMETIC_5_HT3_ANTAGONISTS_DRUGS = {
         'qt_prolongation': True,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
-            'requires_monitoring': ['ECG'],look_alike_sound_alike': []
-        },guideline_tags': [
+            'requires_monitoring': ['ECG'], 'look_alike_sound_alike': []
+        }, 'guideline_tags': [
             'FDA Black Box Warning - Nguy cơ QT kéo dài, có thể gây rối loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Nguy cơ tăng ở liều cao, hạ kali, hạ magie, suy gan.',
             'ISMP High Alert Medications',
             'ASCO Guidelines - Antiemetic therapy for chemotherapy-induced nausea and vomiting',

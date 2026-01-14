@@ -199,7 +199,7 @@ BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
                 'Blood glucose (if high doses - can increase blood glucose)',
                 'Frequency of use (if need >4 times/day → need to reassess treatment and increase ICS)'
             ],look_alike_sound_alike': ['Salbutamol', 'Albuterol', 'Salmeterol', 'Formoterol']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'GINA 2023 Guidelines - Global Initiative for Asthma',
             'NAEPP Guidelines - Asthma Management',
             'FDA Drug Information - Albuterol',

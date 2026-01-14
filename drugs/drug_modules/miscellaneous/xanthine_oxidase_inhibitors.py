@@ -155,7 +155,7 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
             'hepatotoxicity': True,
             'nephrotoxicity': False,
             'requires_monitoring': ['Skin rash - CRITICAL (stop immediately if rash occurs)', 'Hepatic function (ALT, AST)', 'CBC if long-term use', 'Uric acid levels']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'ACR Guidelines - Gout Management',
             'FDA Black Box Warning - Allopurinol and Severe Skin Reactions',
             'EULAR Guidelines - Gout',

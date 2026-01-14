@@ -156,7 +156,7 @@ MUCOSAL_PROTECTANTS_DRUGS = {
     },
     "Sucralfate": {'group': 'Gastrointestinal - Mucosal Protectant',
         "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Sucralfate, Carafate', 'administration': ['PO'],
         'indications': [
         'Loét dạ dày tá tràng', 'Viêm dạ dày', 'Trào ngược dạ dày thực quản',

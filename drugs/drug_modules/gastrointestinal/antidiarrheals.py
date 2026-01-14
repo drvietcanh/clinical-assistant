@@ -136,7 +136,7 @@ ANTIDIARRHEALS_DRUGS = {
         'Tiêu chảy cấp', 'Tiêu chảy mạn tính'],
         'contraindications': [
         'Tiêu chảy do nhiễm khuẩn (nặng)', 'Viêm đại tràng giả mạc', 'Tắc ruột',
-        'Trẻ em <2 tuổi'],adult_maintenance': '2mg sau mỗi lần đi ngoài (tối đa 16mg/ngày)',
+        'Trẻ em <2 tuổi'], 'adult_maintenance': '2mg sau mỗi lần đi ngoài (tối đa 16mg/ngày)',
         'notes': 'Không dùng quá 48 giờ nếu không cải thiện'},
         'side_effects':
         ['Táo bón', 'Buồn nôn', 'Đau bụng', 'Buồn ngủ'],

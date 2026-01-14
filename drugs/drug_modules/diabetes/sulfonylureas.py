@@ -26,24 +26,24 @@ SULFONYLUREAS_DRUGS = {
         'C - Tránh dùng trong thai kỳ', 'mechanism_of_action':
         'Glibenclamide (glyburide) là thuốc sulfonylurea thế hệ thứ hai, kích thích tế bào beta tuyến tụy tiết insulin. Glibenclamide gắn vào SUR1 (sulfonylurea receptor 1) trên kênh KATP (ATP-sensitive K+ channel) ở màng tế bào beta, làm đóng kênh KATP. Điều này ngăn chặn dòng kali ra ngoài, làm khử cực màng tế bào (depolarization), mở kênh canxi phụ thuộc điện thế, tăng dòng canxi vào tế bào, và kích thích giải phóng insulin từ các hạt tiết. Glibenclamide chỉ hoạt động khi còn chức năng tế bào beta (cần có insulin nội sinh). Glibenclamide có tác dụng mạnh và thời gian bán thải dài, dẫn đến nguy cơ hạ đường huyết cao hơn các sulfonylurea khác, đặc biệt ở người cao tuổi và suy thận. Glibenclamide cũng có thể làm giảm đề kháng insulin ngoại vi và giảm sản xuất glucose ở gan.'
         , 'monitoring': [
-        'Đường huyết: HbA1c (mỗi 3 tháng), đường huyết đói, đường huyết sau ăn - đánh giá hiệu quả'
+        'Đường huyết: HbA1c (mỗi 3 tháng), đường huyết đói, đường huyết sau ăn - đánh giá hiệu quả',
         'Dấu hiệu hạ đường huyết: run, vã mồ hôi, nhịp tim nhanh, đói, lú lẫn, co giật, hôn mê - QUAN TRỌNG'
         , 'Đường huyết khi nghi ngờ hạ đường huyết - đo ngay',
         'Cân nặng - sulfonylureas có thể gây tăng cân',
-        'Chức năng thận (creatinine, eGFR) - suy thận tăng nguy cơ hạ đường huyết (tăng thời gian bán thải)'
+        'Chức năng thận (creatinine, eGFR) - suy thận tăng nguy cơ hạ đường huyết (tăng thời gian bán thải)',
         'Chức năng gan (ALT, AST) - nếu có bệnh gan (tăng nguy cơ hạ đường huyết)',
         'Tương tác với warfarin (tăng INR), rượu (tăng nguy cơ hạ đường huyết), beta-blocker (che dấu triệu chứng hạ đường huyết)'
         ],
         'precautions': [
-        'Hạ đường huyết là tác dụng phụ phổ biến nhất và nghiêm trọng - bệnh nhân cần biết dấu hiệu và cách xử trí (uống nước đường, nước ngọt, hoặc glucose)'
-        'Nguy cơ hạ đường huyết cao hơn các sulfonylurea khác do thời gian bán thải dài'
-        'Nguy cơ tăng ở: người cao tuổi, suy thận, suy gan, bỏ bữa, uống rượu, tập luyện quá mức'
-        'KHÔNG dùng ở đái tháo đường type 1 hoặc nhiễm toan ceton (không có insulin nội sinh)'
+        'Hạ đường huyết là tác dụng phụ phổ biến nhất và nghiêm trọng - bệnh nhân cần biết dấu hiệu và cách xử trí (uống nước đường, nước ngọt, hoặc glucose)',
+        'Nguy cơ hạ đường huyết cao hơn các sulfonylurea khác do thời gian bán thải dài',
+        'Nguy cơ tăng ở: người cao tuổi, suy thận, suy gan, bỏ bữa, uống rượu, tập luyện quá mức',
+        'KHÔNG dùng ở đái tháo đường type 1 hoặc nhiễm toan ceton (không có insulin nội sinh)',
         'Thận trọng ở bệnh nhân suy thận - tăng nguy cơ hạ đường huyết (có thể cần giảm liều hoặc tránh dùng)'
         , 'Thận trọng ở bệnh nhân suy gan - tăng nguy cơ hạ đường huyết',
         'Uống với thức ăn hoặc trước bữa ăn để tránh hạ đường huyết',
         'Tránh bỏ bữa - tăng nguy cơ hạ đường huyết',
-        'Tránh rượu - tăng nguy cơ hạ đường huyết (có thể gây hạ đường huyết kéo dài)'
+        'Tránh rượu - tăng nguy cơ hạ đường huyết (có thể gây hạ đường huyết kéo dài)',
         'Beta-blocker có thể che dấu triệu chứng hạ đường huyết (nhịp tim nhanh, run) - chỉ còn vã mồ hôi, lú lẫn'
         , 'Có thể tăng cân - cần tư vấn chế độ ăn và tập luyện',
         'Không dùng trong thai kỳ (có thể gây hạ đường huyết ở trẻ sơ sinh)',
@@ -116,10 +116,10 @@ SULFONYLUREAS_DRUGS = {
         ],
         'treatment': [
         'Nếu tỉnh táo: Glucose 15-20g PO (nước đường, nước ngọt, kẹo)',
-        'Nếu hôn mê hoặc không thể uống: Dextrose 50% 50ml IV hoặc glucagon 1mg SC/IM'
+        'Nếu hôn mê hoặc không thể uống: Dextrose 50% 50ml IV hoặc glucagon 1mg SC/IM',
         'Theo dõi đường huyết mỗi 15-30 phút trong ít nhất 4-6 giờ (do thời gian bán thải dài)'
-        , 'Duy trì glucose IV nếu cần (dextrose 5% hoặc 10% truyền liên tục)',
-        'Theo dõi ít nhất 24 giờ (do thời gian bán thải dài, có thể tái phát hạ đường huyết)'
+        ,         'Duy trì glucose IV nếu cần (dextrose 5% hoặc 10% truyền liên tục)',
+        'Theo dõi ít nhất 24 giờ (do thời gian bán thải dài, có thể tái phát hạ đường huyết)',
         'Rửa dạ dày nếu uống trong vòng 1-2 giờ (nhưng ưu tiên điều trị hạ đường huyết)'
         , 'Than hoạt tính (hiệu quả hạn chế do hấp thu nhanh)',
         'Hỗ trợ hô hấp và tuần hoàn nếu cần', 'Theo dõi ý thức, dấu hiệu sống'],
@@ -181,7 +181,7 @@ SULFONYLUREAS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Blood glucose (frequent)', 'Signs of hypoglycemia', 'Renal function (CrCl, eGFR)']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'ADA Diabetes Guidelines',
             'AACE/ACE Diabetes Guidelines',
             'UKPDS Study',
@@ -196,7 +196,7 @@ SULFONYLUREAS_DRUGS = {
 },
     "Gliclazide": {'group': 'Diabetes - Sulfonylurea',
         "pregnancy": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Gliclazide, Diamicron', 'administration': ['PO'],
         'indications': [
         'Đái tháo đường type 2'],
@@ -285,7 +285,7 @@ SULFONYLUREAS_DRUGS = {
         'Gliclazide chuyển hóa ở gan qua CYP2C9. Suy gan làm giảm chuyển hóa, tăng nồng độ, tăng nguy cơ hạ đường huyết. Không dùng ở suy gan nặng.'
         },
         'overdose_management': {'symptoms': [
-        'Hạ đường huyết: run, vã mồ hôi, nhịp tim nhanh, đói, lú lẫn, co giật, hôn mê'
+        'Hạ đường huyết: run, vã mồ hôi, nhịp tim nhanh, đói, lú lẫn, co giật, hôn mê',
         'Hạ đường huyết ít kéo dài hơn glibenclamide (do thời gian bán thải ngắn hơn)'
         ],
         'treatment': [
@@ -355,7 +355,7 @@ SULFONYLUREAS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Blood glucose (frequent)', 'Signs of hypoglycemia', 'Renal function (CrCl, eGFR)']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'ADA Diabetes Guidelines',
             'AACE/ACE Diabetes Guidelines',
             'UKPDS Study',

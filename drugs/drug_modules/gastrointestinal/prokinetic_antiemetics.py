@@ -6,7 +6,7 @@ Active module - contains all gastrointestinal drug data"""
 PROKINETIC_ANTIEMETICS_DRUGS = {
     "Domperidone": {'group': 'Gastrointestinal - Prokinetic, Antiemetic',
         "pregnancy": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Domperidone, Motilium', 'administration': ['PO'],
         'indications': [
         'Buồn nôn, nôn', 'Liệt dạ dày (gastroparesis)', 'Ợ nóng',
@@ -122,8 +122,8 @@ PROKINETIC_ANTIEMETICS_DRUGS = {
         'qt_prolongation': True,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
-            'requires_monitoring': ['ECG'],look_alike_sound_alike': []
-        },guideline_tags': [
+            'requires_monitoring': ['ECG'], 'look_alike_sound_alike': []
+        }, 'guideline_tags': [
             'FDA Black Box Warning - Nguy cơ QT kéo dài và loạn nhịp tim nghiêm trọng (torsades de pointes), có thể tử vong. Không vượt quá 80mg/ngày.',
             'ISMP High Alert Medications',
             'ACG Guidelines - Gastroparesis and Nausea/Vomiting',
@@ -158,7 +158,7 @@ PROKINETIC_ANTIEMETICS_DRUGS = {
         'Rối loạn vận động muộn (dùng lâu dài)'],
         'interactions': [
         'SSRI/SNRI: tăng nguy cơ hội chứng serotonin',
-        'Antipsychotics: tăng nguy cơ rối loạn vận động'],renal_adjustment': {'normal': 'Không đổi', '30_60': 'Giảm liều 25-50%',
+        'Antipsychotics: tăng nguy cơ rối loạn vận động'], 'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Giảm liều 25-50%',
         'under_30': 'Giảm liều 50-75%'},
         'mechanism_of_action':
         'Dopamine D2 receptor antagonist và 5-HT3 receptor antagonist. Ức chế dopamine ở chemoreceptor trigger zone (CTZ), giảm buồn nôn, nôn. Tăng co bóp dạ dày, tăng trương lực cơ thắt môn vị, tăng nhu động ruột (prokinetic effect). Cũng ức chế 5-HT3 receptor (giống ondansetron).'

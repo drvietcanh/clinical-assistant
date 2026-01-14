@@ -215,7 +215,7 @@ BETA_LACTAMS_DRUGS = {
     
     "Amoxicillin suspension": {'group': 'Antibiotic - Beta-lactam (Penicillin)',
         "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Amoxicillin suspension, Amoxicillin sirô', 'administration': ['PO'],
         'indications': ['Nhiễm khuẩn đường hô hấp', 'Nhiễm khuẩn tai mũi họng',
         'Nhiễm khuẩn đường tiết niệu', 'Nhiễm khuẩn da mô mềm',
@@ -372,7 +372,7 @@ BETA_LACTAMS_DRUGS = {
             'hepatotoxicity': 'Rare',
             'nephrotoxicity': False,
             'requires_monitoring': ['Allergic reactions (penicillin allergy - cross-reactivity with cephalosporins)', 'C. difficile infection signs', 'SJS/TEN signs (especially with allopurinol)', 'Hepatic function (rare hepatotoxicity)', 'CBC (neutropenia risk)', 'Renal function (dose adjustment required)'],look_alike_sound_alike': ['Amoxicillin', 'Amoxicillin-clavulanate']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'IDSA Guidelines - Community-Acquired Pneumonia',
             'IDSA Guidelines - Urinary Tract Infections',
             'IDSA Guidelines - Skin and Soft Tissue Infections',

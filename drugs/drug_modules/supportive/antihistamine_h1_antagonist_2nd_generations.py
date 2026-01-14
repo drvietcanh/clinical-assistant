@@ -115,7 +115,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Renal function (CrCl) - dose adjustment needed', 'Sedation (10-15% of users)']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Cetirizine'
@@ -303,7 +303,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Clinical response (reduction in allergy symptoms)', 'Interaction with fruit juices and antacids (decreased absorption)']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Fexofenadine'

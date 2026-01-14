@@ -6,7 +6,7 @@ Active module - contains all respiratory drug data"""
 ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
     "Ipratropium": {'group': 'Respiratory - Anticholinergic (Short-acting)',
         "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Ipratropium, Atrovent', 'administration': ['Inhalation', 'Nebulizer'],
         'indications': ['COPD (cắt cơn và phòng ngừa)',
         'Hen phế quản (kết hợp với SABA)', 'Co thắt phế quản',

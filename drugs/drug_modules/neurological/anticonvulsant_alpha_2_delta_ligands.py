@@ -164,7 +164,7 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Renal function (dose adjustment required)', 'Respiratory depression signs (with opioids/benzodiazepines)', 'Suicidal ideation', 'Withdrawal signs'],look_alike_sound_alike': ['Gabapentin', 'Pregabalin']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Black Box Warning - Respiratory Depression',
             'AAN Guidelines - Epilepsy Treatment',
             'AAN Guidelines - Neuropathic Pain',
@@ -323,7 +323,7 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Renal function (dose adjustment required)', 'Respiratory depression signs (with opioids/benzodiazepines)', 'Suicidal ideation', 'Dependence/abuse signs (controlled substance)', 'Withdrawal signs'],look_alike_sound_alike': ['Pregabalin', 'Gabapentin']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Black Box Warning - Respiratory Depression',
             'FDA Black Box Warning - Controlled Substance (Schedule V)',
             'AAN Guidelines - Epilepsy Treatment',

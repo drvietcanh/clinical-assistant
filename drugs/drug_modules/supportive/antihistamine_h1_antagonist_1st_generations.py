@@ -182,7 +182,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Sedation/drowsiness (especially when driving or operating machinery)', 'Anticholinergic symptoms (dry mouth, blurred vision, urinary retention)', 'Blood pressure (especially with IM administration)', 'Heart rate']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Hydroxyzine'
@@ -576,7 +576,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Sedation/drowsiness (especially when driving or operating machinery) - CRITICAL', 'Anticholinergic symptoms (dry mouth, blurred vision, urinary retention)', 'Blood pressure (especially with IM administration)', 'Heart rate']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Hydroxyzine'

@@ -184,7 +184,7 @@ FOLATES_DRUGS = {
                 'Folate levels (if needed)',
                 'Clinical response'
             ]
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'CDC Guidelines - Folic Acid for Prevention of Neural Tube Defects',
             'ACOG Guidelines - Folic Acid Supplementation',
             'WHO Guidelines - Folic Acid Supplementation',

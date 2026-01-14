@@ -205,7 +205,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
                 'Cardiovascular symptoms (chest pain, dyspnea) - increased CV risk with long-term use',
                 'Renal function (creatinine, eGFR) if co-administered with ACE inhibitors/ARBs or diuretics'
             ],look_alike_sound_alike': ['Ibuprofen', 'Naproxen', 'Indomethacin', 'Ketoprofen']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Black Box Warning - Ibuprofen and Cardiovascular Risk',
             'FDA Black Box Warning - Ibuprofen and GI Bleeding',
             'FDA Black Box Warning - Ibuprofen and Pregnancy (3rd trimester)',

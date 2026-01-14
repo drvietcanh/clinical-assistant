@@ -131,7 +131,7 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
     },
     "Esomeprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor',
         "pregnancy": "B - Không có bằng chứng về nguy cơ ở người. Có thể sử dụng trong thai kỳ",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Esomeprazole, Nexium', 'administration': ['PO', 'IV'],
         'indications':
         ['Loét dạ dày tá tràng', 'GERD', 'Phòng ngừa loét do stress', 'Zollinger-Ellison syndrome'],
@@ -240,7 +240,7 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
     
     "Lansoprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor',
         "pregnancy": "B - Không có bằng chứng về nguy cơ ở người. Có thể sử dụng trong thai kỳ",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Lansoprazole, Prevacid', 'administration': ['PO'],
         'indications':
         ['Loét dạ dày tá tràng', 'GERD', 'Phòng ngừa loét do stress', 'Zollinger-Ellison syndrome'],
@@ -341,7 +341,7 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         '2025-02-04', 'evidence_level': 'High - FDA approved, multiple RCTs'}},
     "Pantoprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor',
         "pregnancy": "B - Không có bằng chứng về nguy cơ ở người. Có thể sử dụng trong thai kỳ",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Pantoprazole, Pantoloc', 'administration': ['PO', 'IV'],
         'indications':
         ['Loét dạ dày tá tràng', 'GERD', 'Phòng ngừa loét do stress'],
@@ -408,7 +408,7 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'management':
         'Pantoprazole là lựa chọn tốt hơn omeprazole khi cần dùng với clopidogrel. Vẫn nên tránh dùng cùng nếu có thể.'
         }]},
-        'contraindications': ['Dị ứng'],contraindications_detail': {'tuyệt_đối': [
+        'contraindications': ['Dị ứng'], 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng pantoprazole hoặc PPI khác',
         'Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối'
         ],

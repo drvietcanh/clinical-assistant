@@ -46,7 +46,6 @@ IBD_5ASA_DRUGS = {
             "Azathioprine/6-MP: tăng nguy cơ giảm bạch cầu (cộng hưởng ức chế tủy)",
         ],
         "pregnancy": "B",
-        ',
         "mechanism_of_action": (
             "Mesalazine (5-aminosalicylic acid, 5-ASA) là thuốc chống viêm tại chỗ ở niêm mạc ruột, đặc biệt là đại tràng. "
             "Cơ chế chính: ức chế tổng hợp prostaglandin và leukotriene (COX và LOX), "

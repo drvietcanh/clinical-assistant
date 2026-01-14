@@ -313,7 +313,7 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
             'narrow_therapeutic_index': False,
             'organ_toxicity': {'cardiac': True},icu_critical_care_only': False,
             'look_alike_sound_alike': []
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'AHA ACLS Guidelines',
             'Anaphylaxis Guidelines (WAO, AAAAI)',
             'SCCM Shock Management Guidelines'

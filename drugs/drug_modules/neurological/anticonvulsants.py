@@ -1056,7 +1056,7 @@ ANTICONVULSANTS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Seizure frequency', 'Psychiatric symptoms', 'Renal function', 'CBC']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'AAN 2018 Epilepsy Guidelines',
             'FDA Black Box Warning - Suicidal Behavior',
             'ISMP High Alert Medications - Anticonvulsants'
@@ -1619,7 +1619,7 @@ ANTICONVULSANTS_DRUGS = {
             'hepatotoxicity': True,
             'nephrotoxicity': False,
             'requires_monitoring': ['Serum phenobarbital levels', 'Respiratory rate', 'Liver function', 'Bone density']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'AAN 2018 Epilepsy Guidelines',
             'FDA Black Box Warning - Dependence and Addiction',
             'FDA Black Box Warning - Respiratory Depression',
@@ -1828,7 +1828,7 @@ ANTICONVULSANTS_DRUGS = {
             'hepatotoxicity': True,
             'nephrotoxicity': False,
             'requires_monitoring': ['Serum phenytoin levels', 'Liver function', 'CBC', 'Skin rash', 'Bone density']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'AAN 2018 Epilepsy Guidelines',
             'FDA Black Box Warning - Stevens-Johnson Syndrome',
             'FDA Black Box Warning - Suicidal Behavior',
@@ -2040,7 +2040,7 @@ ANTICONVULSANTS_DRUGS = {
     
     "Topiramate": {'group': 'Neurology - Anticonvulsant',
         "pregnancy": "D - Có bằng chứng về nguy cơ dị tật bẩm sinh",
-        ', 'vietnamese_name':
+        'vietnamese_name':
         'Topiramate, Topamax', 'administration': ['PO'],
         'indications': [
         'Động kinh cục bộ', 'Động kinh tổng quát', 'Migraine phòng ngừa',
@@ -2190,7 +2190,7 @@ ANTICONVULSANTS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': 'Kidney stones risk',
             'requires_monitoring': ['Renal function (kidney stones risk)', 'Bicarbonate (metabolic acidosis)', 'Cognitive function', 'Weight', 'Teratogenicity (pregnancy - Black Box Warning)'],look_alike_sound_alike': ['Topiramate', 'Topotecan']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Black Box Warning - Teratogenicity (Cleft Lip/Palate)',
             'AAN Guidelines - Epilepsy Treatment',
             'AAN Guidelines - Migraine Prevention',
@@ -2388,7 +2388,7 @@ ANTICONVULSANTS_DRUGS = {
             'hepatotoxicity': 'Black Box Warning (fatal)',
             'nephrotoxicity': False,
             'requires_monitoring': ['Liver function (Black Box Warning - first 6 months)', 'Platelet count', 'Serum valproate levels (50-100 mcg/mL)', 'Pancreatitis signs (Black Box Warning)', 'Ammonia levels', 'Teratogenicity (pregnancy - Black Box Warning)'],look_alike_sound_alike': ['Valproate', 'Valproic acid', 'Divalproex']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'FDA Black Box Warning - Fatal Hepatitis',
             'FDA Black Box Warning - Fatal Pancreatitis',
             'FDA Black Box Warning - Teratogenicity (Neural Tube Defects)',
