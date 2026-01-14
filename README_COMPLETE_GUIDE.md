@@ -51,6 +51,15 @@
 - ✅ **Recent Items** - History tracking
 - ✅ **Favorites** - Bookmark system
 
+### 🆕 What's New (2026-01)
+- ✅ **Updates / Changelog**: `pages/26_🆕_Updates.py` (nội bộ, khác với Medical News)
+- ✅ **Collaboration (Export/Import)**: `pages/27_🤝_Collaboration.py` (chia sẻ user-state qua JSON)
+- ✅ **Integrations (File-based)**: `pages/28_🔗_Integrations.py` (export JSON cho hệ ngoài, chưa cần server)
+- ✅ **Admin (Local)**: `pages/29_🛠️_Admin.py`
+  - Quản trị `data/app_updates.json`
+  - Quản trị `data/news_config.json` + `data/rss_sources.json`
+  - Có thể bật khóa bằng biến môi trường `ADMIN_PIN`
+
 ---
 
 ## 📄 ALL PAGES (25 Total)

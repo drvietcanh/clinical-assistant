@@ -104,6 +104,41 @@
 - **Last Updated:** 2025-02-18
 - **Description:** Bài viết chuyên sâu
 
+#### 12. 📰 Medical News
+- **File:** `docs/PAGE_MEDICAL_NEWS.md` (to be created)
+- **Page:** `pages/10_📰_Medical_News.py`
+- **Status:** ⚠️ Active
+- **Last Updated:** 2026-01-14
+- **Description:** Tin tức y khoa (RSS + lịch sử lưu trữ)
+
+#### 13. 🆕 Updates / Changelog
+- **File:** `docs/PAGE_UPDATES.md` (to be created)
+- **Page:** `pages/26_🆕_Updates.py`
+- **Status:** ⚠️ Active
+- **Last Updated:** 2026-01-14
+- **Description:** Changelog nội bộ (khác với tin tức y khoa)
+
+#### 14. 🤝 Collaboration
+- **File:** `docs/PAGE_COLLABORATION.md` (to be created)
+- **Page:** `pages/27_🤝_Collaboration.py`
+- **Status:** ⚠️ Active
+- **Last Updated:** 2026-01-14
+- **Description:** Export/Import user-state (favorites, saved searches…)
+
+#### 15. 🔗 Integrations
+- **File:** `docs/PAGE_INTEGRATIONS.md` (to be created)
+- **Page:** `pages/28_🔗_Integrations.py`
+- **Status:** ⚠️ Active
+- **Last Updated:** 2026-01-14
+- **Description:** Export JSON (MVP) để tích hợp ngoài app
+
+#### 16. 🛠️ Admin
+- **File:** `docs/PAGE_ADMIN.md` (to be created)
+- **Page:** `pages/29_🛠️_Admin.py`
+- **Status:** ⚠️ Active
+- **Last Updated:** 2026-01-14
+- **Description:** CRUD Updates + quản trị RSS/news_config (local)
+
 ---
 
 ### ⏳ Pending (To be created)
