@@ -6,10 +6,9 @@ Integrated with existing database and comparison tools
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
-from components.ui import render_info_box, render_hero
+from components.ui import render_info_box
 
 from antibiotics import (
-    render_antibiotic_lookup,
     render_database,
     render_multi_comparison
 )
@@ -34,15 +33,15 @@ setup_page(
     description="Module chuyên sâu về kháng sinh: phác đồ điều trị, so sánh và dữ liệu chi tiết"
 )
 
-# Hero section with improved design and mobile optimization
+# Hero section - optimized design
 st.markdown("""
 <style>
 .hero-section {
     background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
     color: white;
-    padding: 35px 30px;
+    padding: 25px 30px;
     border-radius: 20px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     text-align: center;
     box-shadow: 0 8px 24px rgba(76,175,80,0.25), 0 4px 8px rgba(0,0,0,0.1);
     position: relative;
@@ -51,7 +50,7 @@ st.markdown("""
 
 @media (max-width: 768px) {
     .hero-section {
-        padding: 20px 15px !important;
+        padding: 15px 15px !important;
         margin-bottom: 20px !important;
     }
     
@@ -64,111 +63,18 @@ st.markdown("""
         font-size: 1em !important;
         margin: 12px 0 0 0 !important;
     }
-    
-    .hero-decoration {
-        display: none; /* Hide decorative elements on mobile for performance */
-    }
-}
-
-@media (min-width: 769px) {
-    .hero-decoration {
-        position: absolute;
-        top: -50%;
-        right: -10%;
-        width: 300px;
-        height: 300px;
-        background: rgba(255,255,255,0.1);
-        border-radius: 50%;
-        filter: blur(60px);
-    }
 }
 </style>
 
 <div class="hero-section">
-    <div class="hero-decoration"></div>
     <div style='position: relative; z-index: 1;'>
-        <h1 style='margin: 0; color: white; font-size: 2.8em; font-weight: 700; letter-spacing: -0.5px; text-shadow: 0 2px 8px rgba(0,0,0,0.2);'>💊 Kháng sinh (Chuyên sâu)</h1>
+        <h1 style='margin: 0; color: white; font-size: 2.4em; font-weight: 700; letter-spacing: -0.5px; text-shadow: 0 2px 8px rgba(0,0,0,0.2);'>💊 Kháng sinh (Chuyên sâu)</h1>
         <p style='margin: 15px 0 0 0; color: rgba(255,255,255,0.95); font-size: 1.2em; font-weight: 400; line-height: 1.6;'>
             Phác đồ điều trị • So sánh kháng sinh • Dữ liệu chi tiết
         </p>
     </div>
 </div>
 """, unsafe_allow_html=True)
-
-# ========== TOP MENU ACTIONS ==========
-# Top menu actions bar (desktop only, hidden on mobile)
-st.markdown("""
-<style>
-@media (min-width: 769px) {
-    .top-menu-actions {
-        display: flex;
-        gap: 8px;
-        margin-bottom: 20px;
-        padding: 12px;
-        background: #f8f9fa;
-        border-radius: 12px;
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 768px) {
-    .top-menu-actions {
-        display: none;
-    }
-}
-
-.top-menu-button {
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    background: white;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: all 0.2s;
-}
-
-.top-menu-button:hover {
-    background: #e3f2fd;
-    border-color: #1976D2;
-}
-</style>
-<div class="top-menu-actions">
-""", unsafe_allow_html=True)
-
-col_menu1, col_menu2, col_menu3, col_menu4, col_menu5, col_menu6, col_menu7 = st.columns(7)
-
-with col_menu1:
-    if st.button("🔄", key="top_refresh", help="Làm mới trang", use_container_width=True):
-        st.rerun()
-
-with col_menu2:
-    if st.button("⭐", key="top_favorite", help="Yêu thích", use_container_width=True):
-        st.session_state.favorite_antibiotics_page = True
-        st.success("Đã thêm vào yêu thích!")
-
-with col_menu3:
-    if st.button("📤", key="top_share", help="Chia sẻ", use_container_width=True):
-        st.info("💡 Sử dụng URL hiện tại để chia sẻ trang này")
-
-with col_menu4:
-    if st.button("📋", key="top_copy", help="Sao chép", use_container_width=True):
-        st.info("💡 Sử dụng Ctrl+C để sao chép nội dung")
-
-with col_menu5:
-    if st.button("🖨️", key="top_print", help="In", use_container_width=True):
-        st.info("💡 Sử dụng Ctrl+P (Windows) hoặc Cmd+P (Mac) để in trang")
-
-with col_menu6:
-    if st.button("⚙️", key="top_settings", help="Cài đặt", use_container_width=True, type="primary"):
-        st.info("💡 Cài đặt sẽ được thêm trong phiên bản tương lai")
-
-with col_menu7:
-    offline_status = st.session_state.get("offline_mode", False)
-    if st.button("📴" if offline_status else "📡", key="top_offline", help="Chế độ offline", use_container_width=True):
-        st.session_state.offline_mode = not offline_status
-        st.rerun()
-
-st.markdown("</div>", unsafe_allow_html=True)
 
 # ========== SIDEBAR ==========
 with st.sidebar:
@@ -211,20 +117,7 @@ with st.sidebar:
     
     st.markdown("---")
     
-    # Legacy tools (for backward compatibility, hidden but functional)
-    legacy_tools = st.selectbox(
-        "⚙️ Công cụ (Legacy):",
-        [
-            "🔍 Tra cứu & dữ liệu",
-            "🔬 So sánh nhiều kháng sinh",
-            "📊 So sánh Side-by-Side",
-            "🔄 Phác đồ điều trị (Legacy)"
-        ],
-        key="legacy_tool_selector",
-        label_visibility="collapsed"
-    )
-    
-    st.markdown("---")
+    # Info box - optimized
     render_info_box(
         """
     **📚 Căn cứ khoa học:**
@@ -232,11 +125,6 @@ with st.sidebar:
     - Sanford Guide 2025
     - Surviving Sepsis Campaign 2021
     - WHO AWaRe Classification
-    
-    **💊 Tính năng:**
-    - Phác đồ điều trị theo guideline mới nhất
-    - So sánh kháng sinh
-    - Dữ liệu chi tiết và tính liều
         """,
         type="info",
         title="Thông tin"
@@ -657,32 +545,12 @@ if NEW_UI_AVAILABLE:
                 - Trên Chrome/Edge: Nhấn menu → "Cài đặt ứng dụng"
                 - Trên Safari iOS: Nhấn Share → "Thêm vào Màn hình chính"
                 """)
-        
-        # Legacy selector (hidden but functional for backward compatibility)
-        if legacy_tools:
-            function_type_lower = legacy_tools.lower()
-            if "tra cứu" in function_type_lower and "dữ liệu" in function_type_lower:
-                render_database()
-            elif "so sánh nhiều" in function_type_lower:
-                render_multi_comparison()
-            elif "side-by-side" in function_type_lower:
-                render_comparison()
-            elif "phác đồ" in function_type_lower:
-                render_algorithms_page()
 else:
     # Fallback to old UI if new components not available
     st.warning("⚠️ New UI components not available. Using legacy interface.")
     
-    function_type_lower = legacy_tools.lower()
-    
-    if "tra cứu" in function_type_lower and "dữ liệu" in function_type_lower:
-        render_database()
-    elif "so sánh nhiều" in function_type_lower:
-        render_multi_comparison()
-    elif "side-by-side" in function_type_lower:
-        render_comparison()
-    elif "phác đồ" in function_type_lower:
-        render_algorithms_page()
+    # Default to database view if new UI not available
+    render_database()
 
 # ========== FOOTER ==========
 render_standard_footer(disclaimer=False)
