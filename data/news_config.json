@@ -1,0 +1,13 @@
+{
+  "update_on_page_load": true,
+  "cache_ttl_minutes": 5,
+  "max_items_per_feed": 10,
+  "max_total_items": 50,
+  "keep_history_days": 30,
+  "auto_cleanup": true,
+  "feeds": {
+    "enabled": true,
+    "timeout_seconds": 10,
+    "retry_attempts": 2
+  }
+}
