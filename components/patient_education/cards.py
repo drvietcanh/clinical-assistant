@@ -142,10 +142,7 @@ def render_topic_card(
     display: flex;
     flex-direction: column;
     cursor: pointer;
-" 
-onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'; this.style.transform='translateY(-2px)'"
-onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'; this.style.transform='translateY(0)'"
->
+">
     <div style="display: flex; align-items: center; margin-bottom: 12px;">
         <span style="font-size: 2rem; margin-right: 12px;">{config['icon']}</span>
         <h3 style="
