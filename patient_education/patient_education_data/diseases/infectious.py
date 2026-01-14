@@ -4095,4 +4095,48 @@ INFECTIOUS_TOPICS = [
             printable=True
         ),
 
+        PatientEducationTopic(
+            id="dengue_basics_vn",
+            title="Understanding Dengue Fever",
+            title_vn="Sốt xuất huyết Dengue: Nhận biết và khi nào cần nhập viện",
+            category="Infectious",
+            content="""
+# Sốt xuất huyết Dengue là gì?
+- Bệnh do virus Dengue, lây qua muỗi vằn (Aedes).
+- Thường gặp mùa mưa; có thể nhẹ nhưng cũng có nguy cơ sốc, chảy máu nặng.
+
+## 🩺 Triệu chứng thường gặp
+- Sốt cao 39–40°C, đau đầu, đau hốc mắt, đau cơ/khớp.
+- Buồn nôn, nôn, mệt; có thể phát ban.
+- Có thể chấm xuất huyết da, chảy máu cam/chan răng nhẹ.
+
+## ⚠️ Dấu hiệu cảnh báo (cần đi viện ngay)
+- Đau bụng nhiều, nôn nhiều.
+- Vật vã/li bì; tay chân lạnh, da nổi bông.
+- Chảy máu nhiều (cam, ói ra máu, đi phân đen).
+- Tiểu ít rõ rệt; chóng mặt, tụt huyết áp.
+
+## Chăm sóc tại nhà khi CHƯA có cảnh báo
+- **Hạ sốt:** Paracetamol đúng liều; **không dùng** Ibuprofen/aspirin/NSAID.
+- **Uống nhiều nước:** oresol, nước lọc, nước hoa quả; tránh nước ngọt quá mức.
+- Nghỉ ngơi; theo dõi nhiệt độ, mạch, lượng nước tiểu.
+- Khám/tái khám hằng ngày theo dặn, đặc biệt ngày 3–7.
+
+## Khi nào nhập viện?
+- Có **bất kỳ** dấu cảnh báo.
+- Không uống được, nôn nhiều; tiểu rất ít.
+- Phụ nữ mang thai, người bệnh nền, trẻ nhỏ mà sốt cao kéo dài.
+
+## Phòng bệnh
+- Diệt muỗi, lăng quăng: đậy kín dụng cụ chứa nước, bỏ nước đọng.
+- Ngủ màn, dùng kem chống muỗi; mặc quần áo dài.
+- Hiện chưa có vaccine phổ cập; phòng muỗi là chính.
+
+____ Bác sĩ có thể ghi thêm lời dặn riêng tại đây ____ 
+""",
+            related_disease="dengue",
+            related_drugs=["Paracetamol"],
+            printable=True
+        ),
+
 ]

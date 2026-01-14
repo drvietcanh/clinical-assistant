@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import os
 import json
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -29,6 +30,30 @@ from components.news_logic import (
 ADMIN_PASSWORD = "canh1234"
 
 
+#region agent log
+def _agent_debug_log(hypothesis_id: str, message: str, data: dict) -> None:
+    """
+    Lightweight NDJSON logger for debug-session.
+    Note: do NOT log secrets (passwords, tokens, PII).
+    """
+    try:
+        payload = {
+            "sessionId": "debug-session",
+            "runId": "pre-fix",
+            "hypothesisId": hypothesis_id,
+            "location": "pages/29_Admin.py",
+            "message": message,
+            "data": data,
+            "timestamp": int(time.time() * 1000),
+        }
+        with open(r"d:\1app\medical\.cursor\debug.log", "a", encoding="utf-8") as f:
+            f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+    except Exception:
+        # Logging must never break the app
+        pass
+#endregion
+
+
 setup_page(
     page_title="Admin",
     page_icon="🛠️",
@@ -47,6 +72,16 @@ st.caption(
 if "admin_logged_in" not in st.session_state:
     st.session_state.admin_logged_in = False
 
+#region agent log
+_agent_debug_log(
+    "H2_session_state",
+    "Admin page load - current session_state",
+    {
+        "admin_logged_in": bool(st.session_state.get("admin_logged_in", False)),
+    },
+)
+#endregion
+
 if not st.session_state.admin_logged_in:
     st.subheader("🔒 Đăng nhập Admin")
     with st.form("admin_login_form"):
@@ -54,11 +89,43 @@ if not st.session_state.admin_logged_in:
         submitted = st.form_submit_button("Đăng nhập")
 
     if submitted:
+        #region agent log
+        _agent_debug_log(
+            "H1_password_check",
+            "Admin login form submitted",
+            {
+                "submitted": True,
+                "password_length": len(password or ""),
+            },
+        )
+        #endregion
+
         if password == ADMIN_PASSWORD:
             st.session_state.admin_logged_in = True
+
+            #region agent log
+            _agent_debug_log(
+                "H1_password_check",
+                "Admin login success, session_state updated",
+                {
+                    "admin_logged_in": True,
+                },
+            )
+            #endregion
+
             st.success("Đăng nhập thành công.")
-            st.experimental_rerun()
+            st.rerun()
         else:
+            #region agent log
+            _agent_debug_log(
+                "H1_password_check",
+                "Admin login failed - wrong password",
+                {
+                    "password_length": len(password or ""),
+                },
+            )
+            #endregion
+
             st.error("Sai mật khẩu. Vui lòng thử lại.")
 
     render_standard_footer()
@@ -271,7 +338,7 @@ with tab_news:
             if st.button("🗑️ Xóa feed này", key=f"rss_del_{idx}"):
                 rss_sources.pop(idx)
                 track_feature_usage("admin_rss_delete")
-                st.experimental_rerun()
+                st.rerun()
 
     st.markdown("##### Thêm feed mới")
     new_name = st.text_input("Tên feed mới", key="rss_new_name")

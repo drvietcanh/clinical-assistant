@@ -44,7 +44,7 @@ filters = render_standard_sidebar(
     - Tờ rơi/tài liệu giải thích bệnh, thuốc, lối sống
     - Dùng ngôn ngữ đơn giản, dễ hiểu
     - Có thể in phát cho bệnh nhân
-
+    
     **💡 Lưu ý:**
     - Không thay thế tư vấn trực tiếp của bác sĩ
     - Cần cá nhân hóa giải thích cho từng bệnh nhân
@@ -77,13 +77,13 @@ if "pe_selected_topic" not in st.session_state:
 
 col_search, col_space = st.columns([3, 1])
 with col_search:
-    search_query = render_enhanced_search(
-        all_topics,
+search_query = render_enhanced_search(
+    all_topics,
         placeholder="Nhập tên bệnh, thuốc, lối sống... (VD: Tăng huyết áp, Amoxicillin, chế độ ăn đái tháo đường)",
-        show_filters=True,
-        show_suggestions=True,
+    show_filters=True,
+    show_suggestions=True,
         key="patient_edu_search",
-    )
+)
 
 # Nếu có search → ưu tiên chế độ search
 if search_query and search_query.strip():
@@ -108,10 +108,10 @@ if st.session_state.pe_view == "search":
     # Lọc theo search (trên toàn bộ topics)
     topics = filter_topics_by_search(all_topics, search_query)
 
-    if topics:
+if topics:
         st.info(f"📊 Tìm thấy **{len(topics)}** tài liệu phù hợp.")
-        st.markdown("")
-
+    st.markdown("")
+    
         # Lưới thẻ kết quả – ưu tiên scan nhanh
         render_topic_grid(
             topics,
@@ -119,11 +119,11 @@ if st.session_state.pe_view == "search":
             show_preview=True,
             search_query=search_query,
         )
-
+        
         st.markdown("---")
         st.markdown("### 📖 Xem chi tiết")
         st.caption("Chọn tài liệu bên dưới để xem nội dung đầy đủ.")
-
+        
         for idx, topic in enumerate(topics):
             with st.expander(
                 f"**{topic.title_vn}** ({topic.category})", expanded=(idx == 0)
@@ -182,7 +182,7 @@ elif st.session_state.pe_view == "category":
                 )
                 render_related_topics(topic, all_topics)
                 render_patient_education_content(topic)
-    else:
+else:
         st.info("Hiện chưa có tài liệu cho chủ đề này.")
 
 elif st.session_state.pe_view == "detail":
@@ -244,7 +244,7 @@ else:
                     st.rerun()
 
     # B. Lưới chuyên khoa / chủ đề
-    st.markdown("---")
+st.markdown("---")
     st.markdown("### 📂 Duyệt theo Chuyên khoa / Chủ đề")
 
     categories = get_category_list()

@@ -153,4 +153,68 @@ RESPIRATORY_DISEASES: List[Disease] = [
         related_protocols=["Asthma Exacerbation"],
         icd10_codes=["J45.9", "J45.0", "J45.1"]
     ),
+
+    Disease(
+        id="acute_bronchitis",
+        name="Acute Bronchitis",
+        name_vn="Viêm phế quản cấp",
+        category="Respiratory",
+        definition="Viêm phế quản cấp là tình trạng viêm cấp các phế quản, thường sau nhiễm virus đường hô hấp trên, rất hay gặp tại Việt Nam.",
+        causes=[
+            "Virus: Influenza, Parainfluenza, RSV, Rhinovirus",
+            "Vi khuẩn (ít hơn): Mycoplasma pneumoniae, Bordetella pertussis",
+            "Yếu tố nguy cơ: hút thuốc, ô nhiễm không khí, bệnh phổi nền"
+        ],
+        symptoms=[
+            "Ho khan hoặc ho có đờm, thường kéo dài 1-3 tuần",
+            "Đau ngực kiểu rát sau xương ức khi ho",
+            "Sốt nhẹ, mệt mỏi",
+            "Khò khè nhẹ",
+            "Có thể còn ho kéo dài sau khi hết triệu chứng khác"
+        ],
+        diagnosis={
+            "criteria": [
+                "Lâm sàng: ho cấp < 3 tuần, nghe phổi có ran rít, ran ngáy",
+                "Không có dấu viêm phổi (không thở nhanh nhiều, không hội chứng đông đặc)",
+                "X-quang ngực bình thường hoặc chỉ tăng đậm phế quản"
+            ],
+            "tests": [
+                "Thường không cần xét nghiệm ở ca nhẹ",
+                "X-quang ngực nếu sốt cao, khó thở, nghi viêm phổi",
+                "Xét nghiệm cúm, COVID-19 (nếu cần)"
+            ],
+            "imaging": [
+                "X-quang ngực (loại trừ viêm phổi)"
+            ]
+        },
+        treatment={
+            "general": "Chủ yếu điều trị triệu chứng; kháng sinh không dùng thường quy vì đa số do virus.",
+            "medications": [
+                "Thuốc giảm ho, long đờm (Bromhexine, Acetylcysteine)",
+                "Hạ sốt, giảm đau: Paracetamol, Ibuprofen",
+                "Thuốc giãn phế quản dạng hít nếu khò khè nhiều",
+                "Kháng sinh chỉ dùng nếu nghi bội nhiễm vi khuẩn hoặc bệnh nền nặng"
+            ],
+            "procedures": [
+                "Uống nhiều nước, nghỉ ngơi",
+                "Tránh hút thuốc và khói thuốc",
+                "Theo dõi dấu hiệu nặng lên (sốt cao kéo dài, khó thở)"
+            ]
+        },
+        prevention=[
+            "Tiêm vắc xin cúm, COVID-19",
+            "Bỏ thuốc lá",
+            "Giảm tiếp xúc khói, bụi, ô nhiễm",
+            "Rửa tay, vệ sinh đường hô hấp"
+        ],
+        complications=[
+            "Viêm phổi",
+            "Đợt cấp COPD hoặc hen ở bệnh nhân có bệnh nền",
+            "Ho kéo dài gây mất ngủ, mệt mỏi"
+        ],
+        related_scores=[],
+        related_drugs=["Paracetamol", "Ibuprofen", "Bromhexine", "Salbutamol"],
+        related_protocols=["Acute Bronchitis Management"],
+        icd10_codes=["J20.9"]
+    ),
 ]

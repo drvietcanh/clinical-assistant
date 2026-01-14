@@ -282,4 +282,123 @@ ENT_DISEASES: List[Disease] = [
         related_protocols=[],
         icd10_codes=["J03.9", "J35.0"]
     ),
+
+    Disease(
+        id="allergic_rhinitis",
+        name="Allergic Rhinitis",
+        name_vn="Viêm mũi dị ứng",
+        category="ENT",
+        definition="Viêm mũi dị ứng là tình trạng viêm niêm mạc mũi qua trung gian IgE do tiếp xúc dị nguyên hô hấp, rất thường gặp tại Việt Nam.",
+        causes=[
+            "Dị nguyên hít phải: bụi nhà, phấn hoa, lông thú, nấm mốc, gián",
+            "Yếu tố nguy cơ: tiền sử cơ địa dị ứng (hen, eczema), gia đình có người bị dị ứng, môi trường ô nhiễm"
+        ],
+        symptoms=[
+            "Hắt hơi thành tràng",
+            "Ngạt mũi, chảy mũi nước trong",
+            "Ngứa mũi, ngứa mắt, đỏ mắt",
+            "Giảm ngửi, đau đầu, mệt mỏi (nếu kéo dài)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng điển hình, tái diễn theo mùa hoặc quanh năm",
+                "Khám mũi: niêm mạc nhợt, phù nề, nhiều dịch trong",
+                "Test dị ứng da hoặc IgE đặc hiệu (nếu cần xác định dị nguyên)"
+            ],
+            "tests": [
+                "Test lẩy da (skin prick test) với dị nguyên hít",
+                "Định lượng IgE tổng và IgE đặc hiệu",
+                "Nội soi mũi xoang (loại trừ polyp, viêm xoang mạn)"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Mục tiêu là kiểm soát triệu chứng, cải thiện chất lượng sống và giảm nguy cơ hen.",
+            "medications": [
+                "Kháng histamine uống thế hệ 2: Cetirizine, Loratadine, Fexofenadine",
+                "Corticosteroid xịt mũi: Fluticasone, Mometasone (hiệu quả nhất dài hạn)",
+                "Thuốc co mạch mũi (ngắn hạn, tối đa 5-7 ngày) nếu nghẹt nhiều",
+                "Kháng leukotriene (Montelukast) nếu kèm hen",
+                "Rửa mũi bằng dung dịch nước muối"
+            ],
+            "procedures": [
+                "Tránh, giảm tiếp xúc dị nguyên (giặt chăn ga, hút bụi, dùng máy lọc không khí)",
+                "Liệu pháp giải mẫn cảm đặc hiệu (AIT) nếu có điều kiện"
+            ]
+        },
+        prevention=[
+            "Giảm bụi nhà, nấm mốc, lông thú trong môi trường sống",
+            "Đóng cửa sổ khi mùa phấn hoa nhiều, dùng khẩu trang",
+            "Không hút thuốc, tránh khói thuốc"
+        ],
+        complications=[
+            "Viêm xoang mạn tính",
+            "Polyp mũi",
+            "Khởi phát hoặc làm nặng hen phế quản",
+            "Rối loạn giấc ngủ, giảm tập trung"
+        ],
+        related_scores=["ARIA Classification"],
+        related_drugs=["Cetirizine", "Loratadine", "Fluticasone", "Montelukast"],
+        related_protocols=["Allergic Rhinitis Management"],
+        icd10_codes=["J30.4", "J30.1"]
+    ),
+
+    Disease(
+        id="acute_laryngitis",
+        name="Acute Laryngitis",
+        name_vn="Viêm thanh quản cấp",
+        category="ENT",
+        definition="Viêm thanh quản cấp là tình trạng viêm niêm mạc thanh quản, thường do virus, biểu hiện khàn tiếng, mất tiếng, ho khan.",
+        causes=[
+            "Nhiễm virus đường hô hấp trên",
+            "Quá dùng giọng nói (la hét, nói nhiều)",
+            "Hít khói thuốc, khí kích thích",
+            "Trào ngược dạ dày thực quản"
+        ],
+        symptoms=[
+            "Khàn tiếng hoặc mất tiếng",
+            "Ho khan, đau rát họng",
+            "Cảm giác vướng ở họng",
+            "Sốt nhẹ, mệt mỏi (nếu do nhiễm trùng)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Lâm sàng: khàn tiếng cấp sau nhiễm virus hoặc quá dùng giọng",
+                "Nội soi thanh quản (nếu cần): niêm mạc đỏ, phù nề",
+                "Loại trừ các nguyên nhân nghiêm trọng (u, liệt dây thanh) nếu khàn tiếng kéo dài > 3 tuần"
+            ],
+            "tests": [
+                "Thường không cần xét nghiệm",
+                "Nội soi thanh quản sợi mềm nếu khàn tiếng kéo dài hoặc cảnh báo"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Điều trị chủ yếu là nghỉ giọng và điều chỉnh yếu tố thuận lợi.",
+            "medications": [
+                "Hạ sốt, giảm đau: Paracetamol, Ibuprofen",
+                "Thuốc ho, siro làm dịu họng",
+                "PPI hoặc thuốc kháng acid nếu kèm GERD",
+                "Kháng sinh chỉ dùng khi có bằng chứng nhiễm khuẩn"
+            ],
+            "procedures": [
+                "Nghỉ nói, tránh la hét, tránh thì thầm kéo dài",
+                "Uống đủ nước, làm ẩm không khí"
+            ]
+        },
+        prevention=[
+            "Hạn chế lạm dụng giọng nói",
+            "Tránh hút thuốc, khói thuốc và khí kích thích",
+            "Điều trị trào ngược dạ dày thực quản nếu có"
+        ],
+        complications=[
+            "Viêm thanh quản mạn",
+            "Nốt dây thanh do quá dùng giọng",
+            "Ảnh hưởng công việc với người dùng giọng nhiều (giáo viên, ca sĩ)"
+        ],
+        related_scores=[],
+        related_drugs=["Paracetamol", "Ibuprofen"],
+        related_protocols=["Acute Laryngitis Management"],
+        icd10_codes=["J04.0"]
+    ),
 ]

@@ -11,6 +11,7 @@ from .hematology import HEMATOLOGY_TOPICS
 from .infectious import INFECTIOUS_TOPICS
 from .mental_health import MENTAL_HEALTH_TOPICS
 from .metabolic import METABOLIC_TOPICS
+from .nephrology import NEPHROLOGY_TOPICS
 from .neurological import NEUROLOGICAL_TOPICS
 from .obstetrics_gynecology import OBSTETRICS_GYNECOLOGY_TOPICS
 from .ophthalmology import OPHTHALMOLOGY_TOPICS
@@ -28,6 +29,7 @@ DISEASE_TOPICS = [
     *INFECTIOUS_TOPICS,
     *MENTAL_HEALTH_TOPICS,
     *METABOLIC_TOPICS,
+    *NEPHROLOGY_TOPICS,
     *NEUROLOGICAL_TOPICS,
     *OBSTETRICS_GYNECOLOGY_TOPICS,
     *OPHTHALMOLOGY_TOPICS,

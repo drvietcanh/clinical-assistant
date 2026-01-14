@@ -760,4 +760,134 @@ CARDIOLOGY_DISEASES: List[Disease] = [
         related_protocols=["Dyslipidemia Management"],
         icd10_codes=["E78.0", "E78.1", "E78.2", "E78.4", "E78.5"]
     ),
+
+    Disease(
+        id="peripheral_artery_disease",
+        name="Peripheral Artery Disease",
+        name_vn="Bệnh động mạch ngoại biên",
+        category="Cardiology",
+        definition="Bệnh động mạch ngoại biên là tình trạng hẹp hoặc tắc động mạch chi (thường chi dưới) do xơ vữa, gây đau cách hồi và tăng nguy cơ tim mạch.",
+        causes=[
+            "Xơ vữa động mạch chi dưới",
+            "Yếu tố nguy cơ: hút thuốc lá, đái tháo đường, tăng huyết áp, rối loạn lipid máu, tuổi cao"
+        ],
+        symptoms=[
+            "Đau bắp chân khi đi bộ, giảm khi nghỉ (đau cách hồi)",
+            "Lạnh chân, tê bì, yếu cơ",
+            "Mạch mu chân, chày sau yếu hoặc mất",
+            "Loét, hoại tử đầu chi ở giai đoạn muộn"
+        ],
+        diagnosis={
+            "criteria": [
+                "Chỉ số ABI (ankle-brachial index) < 0.9",
+                "Khám mạch ngoại biên giảm hoặc mất",
+                "Siêu âm Doppler mạch chi cho thấy hẹp/tắc"
+            ],
+            "tests": [
+                "Đo ABI",
+                "Siêu âm Doppler mạch chi",
+                "CTA/MRA chi dưới nếu cần can thiệp"
+            ],
+            "imaging": [
+                "Siêu âm Doppler mạch chi",
+                "CTA/MRA, DSA trong trường hợp cần can thiệp"
+            ]
+        },
+        treatment={
+            "general": "Điều trị kết hợp thay đổi lối sống, thuốc và can thiệp mạch khi cần.",
+            "medications": [
+                "Ngừng hút thuốc lá",
+                "Aspirin hoặc Clopidogrel",
+                "Statin liều cao",
+                "Kiểm soát huyết áp và đường huyết"
+            ],
+            "procedures": [
+                "Tập đi bộ có kiểm soát",
+                "Can thiệp nong, đặt stent mạch chi",
+                "Phẫu thuật bắc cầu động mạch (bypass) trong trường hợp nặng"
+            ]
+        },
+        prevention=[
+            "Bỏ thuốc lá",
+            "Kiểm soát tốt tăng huyết áp, đái tháo đường, rối loạn lipid",
+            "Tập thể dục đều đặn",
+            "Chế độ ăn lành mạnh"
+        ],
+        complications=[
+            "Loét, hoại tử chi",
+            "Cắt cụt chi",
+            "Tăng nguy cơ nhồi máu cơ tim và đột quỵ",
+            "Tử vong tim mạch"
+        ],
+        related_scores=["ABI", "Fontaine Stage"],
+        related_drugs=["Aspirin", "Clopidogrel", "Atorvastatin"],
+        related_protocols=["Peripheral Artery Disease Management"],
+        icd10_codes=["I73.9", "I70.2"]
+    ),
+
+    Disease(
+        id="pulmonary_embolism",
+        name="Pulmonary Embolism",
+        name_vn="Thuyên tắc phổi",
+        category="Cardiology",
+        definition="Thuyên tắc phổi là tình trạng cục máu đông (thường từ tĩnh mạch chi dưới) di chuyển lên gây tắc động mạch phổi, có thể đe dọa tính mạng.",
+        causes=[
+            "Huyết khối tĩnh mạch sâu chi dưới (DVT)",
+            "Bất động kéo dài, hậu phẫu, gãy xương lớn",
+            "Ung thư, thai kỳ, thuốc tránh thai, liệu pháp hormone",
+            "Bệnh lý tăng đông bẩm sinh hoặc mắc phải"
+        ],
+        symptoms=[
+            "Khó thở đột ngột",
+            "Đau ngực kiểu màng phổi",
+            "Ho khan hoặc ho ra máu",
+            "Nhịp tim nhanh, tụt huyết áp (nếu PE lớn)",
+            "Ngất trong trường hợp nặng"
+        ],
+        diagnosis={
+            "criteria": [
+                "Đánh giá xác suất lâm sàng (thang điểm Wells, Geneva)",
+                "D-dimer tăng ở bệnh nhân nguy cơ thấp/trung bình",
+                "CTPA (CT mạch phổi) thấy huyết khối trong động mạch phổi"
+            ],
+            "tests": [
+                "D-dimer",
+                "Khí máu động mạch",
+                "ECG (có thể S1Q3T3, nhịp nhanh xoang)",
+                "Siêu âm tim (tăng gánh thất phải trong PE nặng)",
+                "Siêu âm Doppler tĩnh mạch chi dưới tìm DVT"
+            ],
+            "imaging": [
+                "CTPA (chuẩn vàng hình ảnh)",
+                "X-quang ngực (thường không đặc hiệu)"
+            ]
+        },
+        treatment={
+            "general": "Khởi trị chống đông sớm; trường hợp nguy kịch cân nhắc tiêu sợi huyết hoặc can thiệp.",
+            "medications": [
+                "Heparin không phân đoạn hoặc LMWH (Enoxaparin)",
+                "Kháng đông đường uống: Warfarin, Rivaroxaban, Apixaban, Dabigatran",
+                "Alteplase (tiêu sợi huyết) trong PE nguy kịch"
+            ],
+            "procedures": [
+                "Oxy liệu pháp, hỗ trợ hô hấp tuần hoàn",
+                "Can thiệp lấy huyết khối qua catheter hoặc phẫu thuật (embolectomy) trong PE nguy kịch",
+                "Đặt lưới lọc tĩnh mạch chủ dưới (IVC filter) nếu chống chỉ định chống đông"
+            ]
+        },
+        prevention=[
+            "Dự phòng huyết khối bằng Heparin/LMWH ở bệnh nhân nằm viện, hậu phẫu",
+            "Vận động sớm sau phẫu thuật, tránh bất động kéo dài",
+            "Mang vớ ép tĩnh mạch ở bệnh nhân nguy cơ cao"
+        ],
+        complications=[
+            "Sốc, suy hô hấp cấp",
+            "Tăng áp động mạch phổi mạn tính sau PE",
+            "Tử vong đột ngột"
+        ],
+        related_scores=["Wells Score", "PESI"],
+        related_drugs=["Heparin", "Enoxaparin", "Warfarin", "Rivaroxaban", "Apixaban"],
+        related_protocols=["Pulmonary Embolism Management"],
+        icd10_codes=["I26.9"]
+    ),
 ]
