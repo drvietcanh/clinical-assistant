@@ -6,6 +6,7 @@ Card-based layout for patient education topics
 import streamlit as st
 import html
 import re
+import textwrap
 from typing import List, Optional, Callable
 from patient_education.models import PatientEducationTopic
 
@@ -50,12 +51,16 @@ def extract_preview(content: str, max_length: int = 150) -> str:
     lines = content.split("\n")
     stripped_lines = [line.lstrip() for line in lines]
     text = "\n".join(stripped_lines)
-
+    
     # Remove markdown headers and formatting
     text = re.sub(r'^\s*#{1,6}\s+', '', text, flags=re.MULTILINE)
     text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
     text = re.sub(r'`([^`]+)`', r'\1', text)
     text = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', text)
+    
+    # Remove any raw HTML tags to avoid broken HTML when embedding into <p>
+    # (phòng trường hợp nội dung chứa <div>, <span>, ... được nhập thủ công)
+    text = re.sub(r'<[^>]+>', '', text)
 
     # Get first non-empty paragraph
     paragraphs = [p.strip() for p in text.split('\n\n') if p.strip()]
@@ -98,80 +103,83 @@ def render_topic_card(
     
     # Badges
     badges_html = f"""
-    <span style="
-        background: {config['bg']};
-        color: {config['color']};
-        padding: 4px 12px;
-        border-radius: 12px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        margin-right: 8px;
-    ">{config['icon']} {html.escape(topic.category)}</span>
-    """
+<span style="
+    background: {config['bg']};
+    color: {config['color']};
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 8px;
+">{config['icon']} {html.escape(topic.category)}</span>
+"""
     
     if topic.printable:
         badges_html += """
-        <span style="
-            background: #E8F5E9;
-            color: #2E7D32;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        ">🖨️ Có thể in</span>
-        """
+<span style="
+    background: #E8F5E9;
+    color: #2E7D32;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+">🖨️ Có thể in</span>
+"""
     
     # Card HTML
     card_height = "auto" if not compact else "200px"
     card_html = f"""
-    <div style="
-        background: white;
-        border: 1px solid #e0e0e0;
-        border-left: 4px solid {config['color']};
-        border-radius: 12px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-        height: {card_height};
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-    " 
-    onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'; this.style.transform='translateY(-2px)'"
-    onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'; this.style.transform='translateY(0)'"
-    >
-        <div style="display: flex; align-items: center; margin-bottom: 12px;">
-            <span style="font-size: 2rem; margin-right: 12px;">{config['icon']}</span>
-            <h3 style="
-                margin: 0;
-                font-size: 1.2rem;
-                font-weight: 700;
-                color: #1a1a1a;
-                flex: 1;
-            ">{title_display}</h3>
-        </div>
-        
-        <div style="margin-bottom: 12px;">
-            {badges_html}
-        </div>
-        
-        {f'<p style="color: #616161; font-size: 0.9rem; line-height: 1.6; margin: 0 0 16px 0;">{preview_display}</p>' if preview and show_preview else ''}
-        
-        <div style="margin-top: auto; display: flex; gap: 8px; padding-top: 12px; border-top: 1px solid #f0f0f0;">
-            <span style="
-                background: {config['color']};
-                color: white;
-                padding: 8px 16px;
-                border-radius: 8px;
-                font-size: 0.85rem;
-                font-weight: 600;
-                display: inline-block;
-            ">📖 Đọc thêm</span>
-            {f'<span style="background: #F5F5F5; color: #616161; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem;">🖨️ In</span>' if topic.printable else ''}
-        </div>
+<div style="
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid {config['color']};
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: {card_height};
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+" 
+onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'; this.style.transform='translateY(-2px)'"
+onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'; this.style.transform='translateY(0)'"
+>
+    <div style="display: flex; align-items: center; margin-bottom: 12px;">
+        <span style="font-size: 2rem; margin-right: 12px;">{config['icon']}</span>
+        <h3 style="
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            flex: 1;
+        ">{title_display}</h3>
     </div>
-    """
+    
+    <div style="margin-bottom: 12px;">
+        {badges_html}
+    </div>
+    
+    {f'<p style="color: #616161; font-size: 0.9rem; line-height: 1.6; margin: 0 0 16px 0;">{preview_display}</p>' if preview and show_preview else ''}
+    
+    <div style="margin-top: auto; display: flex; gap: 8px; padding-top: 12px; border-top: 1px solid #f0f0f0;">
+        <span style="
+            background: {config['color']};
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+        ">📖 Đọc thêm</span>
+        {f'<span style="background: #F5F5F5; color: #616161; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem;">🖨️ In</span>' if topic.printable else ''}
+    </div>
+</div>
+"""
+    # Đảm bảo không còn thụt lề đầu dòng để Markdown không xem như code block
+    card_html = textwrap.dedent(card_html).strip()
+    badges_html = textwrap.dedent(badges_html).strip()
     
     st.markdown(card_html, unsafe_allow_html=True)
 
