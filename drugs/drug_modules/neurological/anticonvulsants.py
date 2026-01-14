@@ -167,7 +167,8 @@ ANTICONVULSANTS_DRUGS = {
         'brand_names': {'vietnam': [
         'Carbamazepine', 'Tegretol', 'Carbamazepine Stada', 'Carba'],
         'common': [
-        'Tegretol', 'Carbamazepine'],
+        'Tegretol', 'Carbamazepine']},
+        'cost_estimate': {'unit': 'VND',
         'range': '8,000 - 30,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
         'Giá thay đổi theo thương hiệu và nhà thuốc. Carbamazepine generic thường rẻ hơn (8,000-20,000 VND/viên 200mg). Tegretol (brand) thường đắt hơn (20,000-30,000 VND/viên 200mg).'},
@@ -606,7 +607,28 @@ ANTICONVULSANTS_DRUGS = {
             "FDA Black Box Warning - Stevens-Johnson Syndrome",
             "FDA Black Box Warning - Suicidal Behavior",
             "ISMP High Alert Medications - Anticonvulsants"
-        ]
+        ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế). Nếu cần: 15-20 mg PE/kg IV hoặc IM cho status epilepticus, theo dõi chặt chẽ.",
+            "infants": "1 tháng - 2 tuổi: 15-20 mg PE/kg IV hoặc IM cho status epilepticus. Maintenance: 4-6 mg PE/kg/ngày chia 2-3 lần. Theo dõi nồng độ phenytoin trong máu.",
+            "children_2_12": "15-20 mg PE/kg IV hoặc IM cho status epilepticus (tối đa 1.5g PE). Maintenance: 4-6 mg PE/kg/ngày chia 2-3 lần. Theo dõi nồng độ phenytoin trong máu (therapeutic range: 10-20 mcg/ml).",
+            "adolescents_12_18": "Liều người lớn: 15-20 mg PE/kg IV hoặc IM cho status epilepticus. Maintenance: 4-6 mg PE/kg/ngày chia 2-3 lần. Theo dõi nồng độ phenytoin trong máu.",
+            "notes": "Fosphenytoin là prodrug của phenytoin. Liều tính theo PE (phenytoin equivalents): 1.5mg fosphenytoin = 1mg phenytoin. Ưu điểm: có thể dùng IM (phenytoin không dùng được), truyền nhanh hơn, ít kích ứng mạch máu hơn. Theo dõi nồng độ phenytoin trong máu sau khi chuyển đổi."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (chóng mặt, ataxia, lú lẫn). Suy gan, suy thận phổ biến hơn. Non-linear kinetics của phenytoin → khó dự đoán nồng độ.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (10-15 mg PE/kg cho status epilepticus). Maintenance: 3-5 mg PE/kg/ngày. Điều chỉnh liều theo chức năng gan, thận. Theo dõi nồng độ phenytoin trong máu thường xuyên.",
+            "monitoring": "Theo dõi nồng độ phenytoin trong máu thường xuyên (non-linear kinetics). Theo dõi dấu hiệu độc tính (nystagmus, ataxia, lú lẫn). Theo dõi huyết áp, nhịp tim. Theo dõi chức năng gan, thận. Theo dõi dấu hiệu hội chứng Stevens-Johnson (phát ban nặng)."
+        },
+        "brand_names": {
+            "vietnam": ["Cerebyx", "Fosphenytoin"],
+            "common": ["Cerebyx", "Fosphenytoin"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "200,000 - 500,000 VND/lọ (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Fosphenytoin thường đắt hơn phenytoin. Dạng IV/IM: 200,000-500,000 VND/lọ (tương đương 750mg PE)."
+        }
     },
     "Lacosamide": {
         "group": "Neurology - Anticonvulsant",
@@ -786,7 +808,28 @@ ANTICONVULSANTS_DRUGS = {
         "guideline_tags": [
             "AAN 2018 Epilepsy Guidelines",
             "FDA - Antiepileptic drug safety"
-        ]
+        ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "1 tháng - 2 tuổi: 2-4mg/kg/ngày PO chia 2 lần, tăng dần. IV: 2-4mg/kg IV mỗi 12 giờ. Theo dõi ECG chặt chẽ.",
+            "children_2_12": "2-6mg/kg/ngày PO chia 2 lần (tối đa 12mg/kg/ngày). IV: 2-6mg/kg IV mỗi 12 giờ. Theo dõi ECG trước và sau khi bắt đầu điều trị.",
+            "adolescents_12_18": "50mg x 2 lần/ngày PO, tăng dần đến 100-200mg x 2 lần/ngày (tối đa 400mg/ngày). IV: 200-400mg IV mỗi 12 giờ. Liều tương tự người lớn. Theo dõi ECG.",
+            "notes": "Thuốc mới, cơ chế độc đáo. Ít tương tác thuốc hơn các anticonvulsants cổ điển. QUAN TRỌNG: Theo dõi ECG (nguy cơ PR kéo dài, block AV). Điều chỉnh liều theo chức năng thận. KHÔNG ngừng đột ngột."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (chóng mặt, nhức đầu, mệt mỏi). Suy thận phổ biến hơn → cần điều chỉnh liều. Tăng nguy cơ rối loạn nhịp tim (block AV).",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (50mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng thận (CrCl 30-60: giảm 25%, CrCl <30: giảm 50%). Theo dõi ECG chặt chẽ.",
+            "monitoring": "Theo dõi ECG trước và sau khi bắt đầu điều trị (nguy cơ PR kéo dài, block AV). Theo dõi chức năng thận (creatinine, eGFR) - cần điều chỉnh liều. Theo dõi tác dụng phụ (chóng mặt, nhức đầu, mệt mỏi)."
+        },
+        "brand_names": {
+            "vietnam": ["Vimpat", "Lacosamide"],
+            "common": ["Vimpat", "Lacosamide"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "80,000 - 200,000 VND/viên PO (tùy hàm lượng và thương hiệu). Dạng IV: 300,000 - 800,000 VND/lọ.",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Lacosamide là thuốc mới, giá cao. Vimpat (brand) thường đắt (80,000-200,000 VND/viên 100mg PO). Dạng IV: 300,000-800,000 VND/lọ 200mg."
+        }
     },
     
     "Lamotrigine": {'group': 'Neurology - Anticonvulsant',
@@ -924,7 +967,28 @@ ANTICONVULSANTS_DRUGS = {
         "guideline_tags": [
             "AAN 2018 Epilepsy Guidelines",
             "FDA - Antiepileptic drug safety"
-        ]
+        ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "1 tháng - 2 tuổi: 0.15mg/kg/ngày PO, tăng dần rất chậm (mỗi 1-2 tuần). Nếu dùng với valproate: giảm liều 50%. Theo dõi chặt chẽ ban da.",
+            "children_2_12": "0.3mg/kg/ngày PO, tăng dần rất chậm đến 1-5mg/kg/ngày (tối đa 200mg/ngày). Nếu dùng với valproate: giảm liều 50%. TĂNG LIỀU RẤT CHẬM để tránh ban da (SJS/TEN).",
+            "adolescents_12_18": "25mg x 2 lần/ngày PO, tăng dần rất chậm đến 100-200mg x 2 lần/ngày (tối đa 400mg/ngày). Nếu dùng với valproate: giảm liều 50%. Liều tương tự người lớn.",
+            "notes": "TĂNG LIỀU RẤT CHẬM để tránh ban da nghiêm trọng (SJS/TEN) - đây là tác dụng phụ nguy hiểm nhất. NGỪNG NGAY nếu có ban da, đặc biệt kèm sốt, mệt mỏi, đau khớp. Nếu dùng với valproate: giảm liều lamotrigine 50%. Nguy cơ ban da cao nhất trong 8 tuần đầu."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (nhức đầu, chóng mặt, buồn nôn). Tăng liều rất chậm để tránh ban da. Suy gan, suy thận phổ biến hơn.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (12.5mg/ngày). Tăng dần rất chậm (mỗi 2 tuần). Nếu dùng với valproate: giảm liều lamotrigine 50%. Điều chỉnh liều theo chức năng gan, thận.",
+            "monitoring": "Theo dõi dấu hiệu ban da chặt chẽ (RẤT QUAN TRỌNG) - ngừng ngay nếu có ban da, đặc biệt kèm sốt, mệt mỏi, đau khớp. Theo dõi tác dụng phụ (nhức đầu, chóng mặt, buồn nôn). Theo dõi đáp ứng điều trị."
+        },
+        "brand_names": {
+            "vietnam": ["Lamictal", "Lamotrigine", "Lamotrigine Stada"],
+            "common": ["Lamictal", "Lamotrigine"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "15,000 - 60,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Lamotrigine generic thường rẻ hơn (15,000-35,000 VND/viên 100mg). Lamictal (brand) thường đắt hơn (35,000-60,000 VND/viên 100mg)."
+        }
     },
     "Levetiracetam": {'group': 'Neurology - Anticonvulsant',
         'vietnamese_name':
@@ -1056,11 +1120,32 @@ ANTICONVULSANTS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Seizure frequency', 'Psychiatric symptoms', 'Renal function', 'CBC']
-        }, 'guideline_tags': [
+        },         'guideline_tags': [
             'AAN 2018 Epilepsy Guidelines',
             'FDA Black Box Warning - Suicidal Behavior',
             'ISMP High Alert Medications - Anticonvulsants'
-        ]
+        ],
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế). Nếu cần: 10-20mg/kg/ngày PO chia 2 lần, tăng dần.',
+            'infants': '1 tháng - 2 tuổi: 10-20mg/kg/ngày PO chia 2 lần, tăng dần đến 20-30mg/kg/ngày (tối đa 50mg/kg/ngày). IV: 10-20mg/kg IV mỗi 12 giờ. Theo dõi tác dụng phụ thần kinh tâm thần.',
+            'children_2_12': '20-30mg/kg/ngày PO chia 2 lần (tối đa 60mg/kg/ngày). IV: 20-30mg/kg IV mỗi 12 giờ. Theo dõi tác dụng phụ thần kinh tâm thần (kích động, lo âu, trầm cảm) - QUAN TRỌNG.',
+            'adolescents_12_18': '500-1000mg x 2 lần/ngày PO, tăng đến 1000-3000mg/ngày. IV: 500-1000mg IV mỗi 12 giờ. Liều tương tự người lớn. Theo dõi tác dụng phụ thần kinh tâm thần chặt chẽ.',
+            'notes': 'Ít tương tác thuốc, an toàn cho trẻ em. QUAN TRỌNG: Theo dõi tác dụng phụ thần kinh tâm thần (kích động, lo âu, trầm cảm, suy nghĩ tự sát) - đặc biệt ở trẻ em và thanh thiếu niên. Điều chỉnh liều theo chức năng thận. KHÔNG ngừng đột ngột.'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, chóng mặt, mệt mỏi). Suy thận phổ biến hơn → cần điều chỉnh liều. Tăng nguy cơ tác dụng phụ thần kinh tâm thần.',
+            'dose_adjustment': 'Khởi đầu với liều thấp hơn (250-500mg x 2 lần/ngày). Điều chỉnh liều theo chức năng thận (CrCl 50-80: giảm 25%, CrCl 30-50: giảm 50%, CrCl <30: giảm 75%). Tăng khoảng cách liều nếu suy thận nặng.',
+            'monitoring': 'Theo dõi tác dụng phụ thần kinh tâm thần (kích động, lo âu, trầm cảm, suy nghĩ tự sát) - QUAN TRỌNG. Theo dõi chức năng thận (creatinine, eGFR) - cần điều chỉnh liều. Theo dõi tác dụng phụ (buồn ngủ, chóng mặt, mệt mỏi).'
+        },
+        'brand_names': {
+            'vietnam': ['Keppra', 'Levetiracetam', 'Levetiracetam Stada'],
+            'common': ['Keppra', 'Levetiracetam']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '20,000 - 80,000 VND/viên PO (tùy hàm lượng và thương hiệu). Dạng IV: 100,000 - 300,000 VND/lọ.',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Levetiracetam generic thường rẻ hơn (20,000-50,000 VND/viên 500mg PO). Keppra (brand) thường đắt hơn (50,000-80,000 VND/viên 500mg PO). Dạng IV: 100,000-300,000 VND/lọ 500mg.'
+        }
     },
     "Oxcarbazepine": {'group': 'Neurology - Anticonvulsant',
         'vietnamese_name':
@@ -1201,7 +1286,8 @@ ANTICONVULSANTS_DRUGS = {
         'brand_names': {'vietnam': [
         'Oxcarbazepine', 'Trileptal', 'Oxcarbazepine Stada'],
         'common': [
-        'Trileptal', 'Oxcarbazepine'],
+        'Trileptal', 'Oxcarbazepine']},
+        'cost_estimate': {'unit': 'VND',
         'range': '15,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
         'Giá thay đổi theo thương hiệu và nhà thuốc. Oxcarbazepine generic thường rẻ hơn (15,000-30,000 VND/viên 300mg). Trileptal (brand) thường đắt hơn (30,000-50,000 VND/viên 300mg).'},
@@ -1806,7 +1892,8 @@ ANTICONVULSANTS_DRUGS = {
         'brand_names': {'vietnam': [
         'Phenytoin', 'Dilantin', 'Phenytoin Stada', 'Phenyto'],
         'common': [
-        'Dilantin', 'Phenytoin'],
+        'Dilantin', 'Phenytoin']},
+        'cost_estimate': {'unit': 'VND',
         'range': '5,000 - 20,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
         'Giá thay đổi theo thương hiệu và nhà thuốc. Phenytoin generic thường rẻ hơn (5,000-12,000 VND/viên 100mg). Dilantin (brand) thường đắt hơn (12,000-20,000 VND/viên 100mg). Dạng IV: 50,000-100,000 VND/lọ 250mg.'},
@@ -2035,7 +2122,28 @@ ANTICONVULSANTS_DRUGS = {
         "guideline_tags": [
             "FDA Drug Information",
             "UpToDate Drug Information"
-        ]
+        ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "1 tháng - 2 tuổi: 10-15mg/kg/ngày PO chia 3-4 lần, tăng dần. Theo dõi nồng độ phenobarbital trong máu.",
+            "children_2_12": "10-15mg/kg/ngày PO chia 3-4 lần, tăng đến 20-25mg/kg/ngày nếu cần (tối đa 1000mg/ngày). Theo dõi nồng độ phenobarbital trong máu (therapeutic range: 15-40 mcg/mL).",
+            "adolescents_12_18": "250mg x 3-4 lần/ngày PO, tăng đến 750-1500mg/ngày. Liều tương tự người lớn. Theo dõi nồng độ phenobarbital trong máu.",
+            "notes": "Primidone chuyển đổi thành phenobarbital trong cơ thể. Theo dõi nồng độ phenobarbital trong máu (therapeutic range: 15-40 mcg/mL). Tăng liều chậm để giảm tác dụng phụ (buồn ngủ, chóng mặt). KHÔNG ngừng đột ngột (có thể gây co giật, lo âu, mất ngủ, status epilepticus)."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, chóng mặt, lú lẫn). Suy gan, suy thận phổ biến hơn → tăng nguy cơ tích lũy phenobarbital. Tăng nguy cơ té ngã.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (125mg x 2-3 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng gan, thận. Theo dõi nồng độ phenobarbital trong máu thường xuyên.",
+            "monitoring": "Theo dõi nồng độ phenobarbital trong máu thường xuyên (therapeutic range: 15-40 mcg/mL). Theo dõi dấu hiệu độc tính (buồn ngủ quá mức, lú lẫn, ataxia). Theo dõi chức năng gan, thận. Theo dõi nguy cơ té ngã."
+        },
+        "brand_names": {
+            "vietnam": ["Mysoline", "Primidone"],
+            "common": ["Mysoline", "Primidone"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "8,000 - 25,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Primidone generic thường rẻ hơn (8,000-15,000 VND/viên 250mg). Mysoline (brand) thường đắt hơn (15,000-25,000 VND/viên 250mg)."
+        }
     },
     
     "Topiramate": {'group': 'Neurology - Anticonvulsant',
@@ -2195,7 +2303,28 @@ ANTICONVULSANTS_DRUGS = {
             'AAN Guidelines - Epilepsy Treatment',
             'AAN Guidelines - Migraine Prevention',
             'ILAE Guidelines - Antiepileptic Drugs'
-        ]
+        ],
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)',
+            'infants': '1 tháng - 2 tuổi: 1-3mg/kg/ngày PO chia 2 lần, tăng dần. Theo dõi chặt chẽ tác dụng phụ nhận thức.',
+            'children_2_12': '1-3mg/kg/ngày PO chia 2 lần, tăng dần đến 5-9mg/kg/ngày (tối đa 400mg/ngày). Theo dõi chặt chẽ tác dụng phụ nhận thức (khó tập trung, chậm suy nghĩ). Uống nhiều nước (2-3L/ngày) để giảm nguy cơ sỏi thận.',
+            'adolescents_12_18': '25-50mg x 2 lần/ngày PO, tăng dần đến 200-400mg/ngày (chia 2 lần). Liều tương tự người lớn. Theo dõi tác dụng phụ nhận thức. Uống nhiều nước.',
+            'notes': 'Tăng liều chậm để giảm tác dụng phụ nhận thức (khó tập trung, chậm suy nghĩ) - phổ biến. Uống nhiều nước (2-3L/ngày) để giảm nguy cơ sỏi thận - QUAN TRỌNG. Theo dõi dấu hiệu sỏi thận. CHỐNG CHỈ ĐỊNH trong glaucoma góc hẹp và sỏi thận tái phát. KHÔNG ngừng đột ngột.'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ nhận thức (khó tập trung, chậm suy nghĩ, suy giảm trí nhớ). Tăng nguy cơ sỏi thận. Suy thận phổ biến hơn → cần điều chỉnh liều.',
+            'dose_adjustment': 'Khởi đầu với liều thấp hơn (25mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng thận (CrCl <30: giảm liều, tăng khoảng cách liều). Uống nhiều nước.',
+            'monitoring': 'Theo dõi tác dụng phụ nhận thức (khó tập trung, chậm suy nghĩ) - phổ biến. Theo dõi dấu hiệu sỏi thận (đau lưng, đau bụng, tiểu máu). Theo dõi chức năng thận (creatinine, eGFR). Theo dõi toan chuyển hóa (bicarbonate, pH).'
+        },
+        'brand_names': {
+            'vietnam': ['Topamax', 'Topiramate', 'Topiramate Stada'],
+            'common': ['Topamax', 'Topiramate']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '25,000 - 80,000 VND/viên (tùy hàm lượng và thương hiệu)',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Topiramate generic thường rẻ hơn (25,000-50,000 VND/viên 100mg). Topamax (brand) thường đắt hơn (50,000-80,000 VND/viên 100mg).'
+        }
     },
     "Valproate": {'group': 'Neurology - Anticonvulsant',
         'vietnamese_name':
@@ -2366,7 +2495,8 @@ ANTICONVULSANTS_DRUGS = {
         'brand_names': {'vietnam': [
         'Valproate', 'Valproic Acid', 'Depakote', 'Valproate Stada'],
         'common': [
-        'Depakote', 'Valproate', 'Valproic Acid'],
+        'Depakote', 'Valproate', 'Valproic Acid']},
+        'cost_estimate': {'unit': 'VND',
         'range': '10,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
         'Giá thay đổi theo thương hiệu và nhà thuốc. Valproate generic thường rẻ hơn (10,000-25,000 VND/viên 500mg). Depakote (brand) thường đắt hơn (25,000-40,000 VND/viên 500mg). Dạng IV: 100,000-200,000 VND/lọ 500mg.'},
@@ -2586,7 +2716,28 @@ ANTICONVULSANTS_DRUGS = {
             "FDA Drug Information",
             "UpToDate Drug Information",
             "ILAE Guidelines - Antiepileptic Drugs"
-        ]
+        ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "1 tháng - 2 tuổi: 2-4mg/kg/ngày PO x 1 lần/ngày, tăng dần mỗi 2 tuần. TĂNG NGUY CƠ GIẢM TIẾT MỒ HÔI, TĂNG THÂN NHIỆT - theo dõi thân nhiệt chặt chẽ.",
+            "children_2_12": "2-4mg/kg/ngày PO x 1 lần/ngày, tăng dần mỗi 2 tuần đến 4-8mg/kg/ngày (tối đa 12mg/kg/ngày). TĂNG NGUY CƠ GIẢM TIẾT MỒ HÔI, TĂNG THÂN NHIỆT - theo dõi thân nhiệt chặt chẽ. Tăng lượng nước uống để giảm nguy cơ sỏi thận.",
+            "adolescents_12_18": "100mg x 1 lần/ngày PO, tăng dần mỗi 2 tuần đến 200-400mg/ngày (tối đa 600mg/ngày). Liều tương tự người lớn. Theo dõi thân nhiệt. Tăng lượng nước uống.",
+            "notes": "TĂNG NGUY CƠ GIẢM TIẾT MỒ HÔI, TĂNG THÂN NHIỆT ở trẻ em - nguy hiểm, có thể gây sốc nhiệt, tử vong. Theo dõi thân nhiệt chặt chẽ, đặc biệt trong thời tiết nóng. Tăng lượng nước uống (ít nhất 1.5-2L/ngày) để giảm nguy cơ sỏi thận. Điều chỉnh liều theo chức năng thận. KHÔNG ngừng đột ngột."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, chóng mặt, mất điều hòa). Suy thận phổ biến hơn → cần điều chỉnh liều. Tăng nguy cơ sỏi thận.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (50mg/ngày). Tăng dần chậm hơn (mỗi 3-4 tuần). Điều chỉnh liều theo chức năng thận (CrCl 30-60: giảm 25-50%, CrCl <30: giảm 75% hoặc chống chỉ định). Tăng lượng nước uống.",
+            "monitoring": "Theo dõi chức năng thận (creatinine, eGFR) - cần điều chỉnh liều. Theo dõi dấu hiệu sỏi thận (đau lưng, đau bụng, tiểu máu). Theo dõi tác dụng phụ (buồn ngủ, chóng mặt, mất điều hòa)."
+        },
+        "brand_names": {
+            "vietnam": ["Zonegran", "Zonisamide"],
+            "common": ["Zonegran", "Zonisamide"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "60,000 - 150,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Zonisamide generic thường rẻ hơn (60,000-100,000 VND/viên 100mg). Zonegran (brand) thường đắt hơn (100,000-150,000 VND/viên 100mg)."
+        }
     }
 }
 

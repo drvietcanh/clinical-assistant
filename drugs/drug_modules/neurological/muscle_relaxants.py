@@ -211,7 +211,28 @@ MUSCLE_RELAXANTS_DRUGS = {
             "guideline_tags": [
                 "FDA Drug Information",
                 "UpToDate Drug Information",
-            ]
+            ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "1 tháng - 2 tuổi: 2.5-5mg x 3 lần/ngày PO, tăng dần. Intrathecal: bắt đầu với test dose rất thấp. Theo dõi chặt chẽ suy hô hấp.",
+            "children_2_12": "2.5-5mg x 3 lần/ngày PO, tăng dần đến 10-15mg x 3-4 lần/ngày (tối đa 40mg/ngày). Intrathecal: bắt đầu với test dose, sau đó truyền liên tục qua pump. Theo dõi chặt chẽ suy hô hấp.",
+            "adolescents_12_18": "5mg x 3 lần/ngày PO, tăng dần đến 15-20mg x 3-4 lần/ngày (tối đa 80mg/ngày). Liều tương tự người lớn. Theo dõi chặt chẽ suy hô hấp.",
+            "notes": "GABA-B receptor agonist. Tăng liều chậm để giảm tác dụng phụ. QUAN TRỌNG: KHÔNG ngừng đột ngột (có thể gây co giật, ảo giác, suy hô hấp). Điều chỉnh liều theo chức năng thận. Theo dõi chặt chẽ suy hô hấp, đặc biệt khi dùng intrathecal."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, lú lẫn, suy hô hấp). Tăng nguy cơ té ngã. Suy thận phổ biến hơn → cần điều chỉnh liều.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (5mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng thận (CrCl 30-60: giảm 25-50%, CrCl <30: giảm 50% hoặc tránh dùng). Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi chặt chẽ suy hô hấp - QUAN TRỌNG. Theo dõi tác dụng phụ (buồn ngủ, lú lẫn, yếu cơ). Theo dõi nguy cơ té ngã. Theo dõi chức năng thận. KHÔNG ngừng đột ngột."
+        },
+        "brand_names": {
+            "vietnam": ["Lioresal", "Baclofen", "Baclofen Stada"],
+            "common": ["Lioresal", "Baclofen", "Gablofen (intrathecal)"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "3,000 - 20,000 VND/viên PO (tùy hàm lượng và thương hiệu). Intrathecal: giá rất cao.",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Baclofen generic thường rẻ hơn (3,000-10,000 VND/viên 10mg PO). Lioresal (brand) thường đắt hơn (10,000-20,000 VND/viên 10mg PO). Dạng intrathecal: giá rất cao, cần thiết bị đặc biệt."
+        }
     },
     "Carisoprodol":     {
         "group": "Neurology - Muscle Relaxant (Skeletal)",
@@ -362,6 +383,27 @@ MUSCLE_RELAXANTS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved, controlled substance",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <16 tuổi (dữ liệu hạn chế, nguy cơ nghiện)",
+            "children_2_12": "Không khuyến cáo cho trẻ <16 tuổi (dữ liệu hạn chế, nguy cơ nghiện)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <16 tuổi (dữ liệu hạn chế, nguy cơ nghiện). Nếu cần: 250-350mg x 3-4 lần/ngày PO. CHỈ dùng ngắn hạn (2-3 tuần).",
+            "notes": "Chủ yếu dùng cho người lớn. QUAN TRỌNG: Nguy cơ nghiện, lạm dụng. CHỈ dùng ngắn hạn (2-3 tuần). Tránh dùng với alcohol hoặc opioids (tăng nguy cơ suy hô hấp)."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, chóng mặt, lú lẫn). Tăng nguy cơ té ngã. Nguy cơ nghiện.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (250mg x 2-3 lần/ngày). CHỈ dùng ngắn hạn (2-3 tuần). Theo dõi chặt chẽ tác dụng phụ và nguy cơ nghiện.",
+            "monitoring": "Theo dõi tác dụng phụ (buồn ngủ, chóng mặt, lú lẫn). Theo dõi nguy cơ té ngã. Theo dõi dấu hiệu nghiện, lạm dụng. CHỈ dùng ngắn hạn."
+        },
+        "brand_names": {
+            "vietnam": ["Soma", "Carisoprodol"],
+            "common": ["Soma", "Carisoprodol"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "10,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Carisoprodol generic thường rẻ hơn (10,000-25,000 VND/viên 350mg). Soma (brand) thường đắt hơn (25,000-40,000 VND/viên 350mg)."
+        }
     },
     "Cyclobenzaprine":     {
         "group": "Neurology - Muscle Relaxant (Skeletal)",
@@ -537,6 +579,27 @@ MUSCLE_RELAXANTS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <15 tuổi (dữ liệu hạn chế)",
+            "children_2_12": "Không khuyến cáo cho trẻ <15 tuổi (dữ liệu hạn chế)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <15 tuổi (dữ liệu hạn chế). Nếu cần: 5mg x 3 lần/ngày PO. CHỈ dùng ngắn hạn (2-3 tuần).",
+            "notes": "Chủ yếu dùng cho người lớn. CHỈ dùng ngắn hạn (2-3 tuần). Tránh dùng với MAO inhibitors (tăng nguy cơ serotonin syndrome)."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, khô miệng, chóng mặt). Tăng nguy cơ té ngã. Suy gan, suy thận phổ biến hơn.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (5mg x 2 lần/ngày). CHỈ dùng ngắn hạn (2-3 tuần). Điều chỉnh liều theo chức năng gan, thận. Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi tác dụng phụ (buồn ngủ, khô miệng, chóng mặt). Theo dõi nguy cơ té ngã. CHỈ dùng ngắn hạn."
+        },
+        "brand_names": {
+            "vietnam": ["Flexeril", "Cyclobenzaprine"],
+            "common": ["Flexeril", "Cyclobenzaprine"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "5,000 - 25,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Cyclobenzaprine generic thường rẻ hơn (5,000-15,000 VND/viên 10mg). Flexeril (brand) thường đắt hơn (15,000-25,000 VND/viên 10mg)."
+        }
     },
     "Metaxalone":     {
         "group": "Neurology - Muscle Relaxant (Skeletal)",
@@ -659,6 +722,27 @@ MUSCLE_RELAXANTS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế)",
+            "children_2_12": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế). Nếu cần: 400-800mg x 3-4 lần/ngày PO. CHỈ dùng ngắn hạn.",
+            "notes": "Chủ yếu dùng cho người lớn. CHỈ dùng ngắn hạn. CHỐNG CHỈ ĐỊNH ở suy gan nặng và suy thận nặng."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, chóng mặt, mệt mỏi). Suy gan, suy thận phổ biến hơn → CHỐNG CHỈ ĐỊNH nếu suy gan/thận nặng.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (400mg x 2-3 lần/ngày). CHỈ dùng ngắn hạn. CHỐNG CHỈ ĐỊNH nếu suy gan/thận nặng. Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi tác dụng phụ (buồn ngủ, chóng mặt, mệt mỏi). Theo dõi chức năng gan, thận. CHỈ dùng ngắn hạn."
+        },
+        "brand_names": {
+            "vietnam": ["Skelaxin", "Metaxalone"],
+            "common": ["Skelaxin", "Metaxalone"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "8,000 - 30,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Metaxalone generic thường rẻ hơn (8,000-20,000 VND/viên 400mg). Skelaxin (brand) thường đắt hơn (20,000-30,000 VND/viên 400mg)."
+        }
     },
     "Methocarbamol":     {
         "group": "Neurology - Muscle Relaxant (Skeletal)",
@@ -795,6 +879,27 @@ MUSCLE_RELAXANTS_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "High - FDA-approved",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <16 tuổi (dữ liệu hạn chế)",
+            "children_2_12": "Không khuyến cáo cho trẻ <16 tuổi (dữ liệu hạn chế)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <16 tuổi (dữ liệu hạn chế). Nếu cần: 400-600mg x 3-4 lần/ngày PO. CHỈ dùng ngắn hạn.",
+            "notes": "Chủ yếu dùng cho người lớn. CHỈ dùng ngắn hạn. Có dạng IV/IM cho trường hợp nặng. Tránh dùng với alcohol hoặc opioids (tăng nguy cơ suy hô hấp)."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, chóng mặt, mệt mỏi). Tăng nguy cơ té ngã. Suy gan, suy thận phổ biến hơn.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (400mg x 2-3 lần/ngày). CHỈ dùng ngắn hạn. Điều chỉnh liều theo chức năng gan, thận. Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi tác dụng phụ (buồn ngủ, chóng mặt, mệt mỏi). Theo dõi nguy cơ té ngã. CHỈ dùng ngắn hạn."
+        },
+        "brand_names": {
+            "vietnam": ["Robaxin", "Methocarbamol"],
+            "common": ["Robaxin", "Methocarbamol"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "4,000 - 20,000 VND/viên PO (tùy hàm lượng và thương hiệu). Dạng IV/IM: 15,000 - 50,000 VND/ống.",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Methocarbamol generic thường rẻ hơn (4,000-12,000 VND/viên 500mg PO). Robaxin (brand) thường đắt hơn (12,000-20,000 VND/viên 500mg PO). Dạng IV/IM: 15,000-50,000 VND/ống 500mg."
+        }
     },
     "Tizanidine":     {
         "group": "Neurology - Muscle Relaxant (Alpha-2 Adrenergic Agonist)",
@@ -1026,7 +1131,28 @@ MUSCLE_RELAXANTS_DRUGS = {
             "guideline_tags": [
                 "FDA Drug Information",
                 "UpToDate Drug Information",
-            ]
+            ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "1 tháng - 2 tuổi: 0.5-1mg x 2-3 lần/ngày PO, tăng dần. Theo dõi chặt chẽ hạ huyết áp và suy hô hấp.",
+            "children_2_12": "0.5-1mg x 2-3 lần/ngày PO, tăng dần đến 2-4mg x 3-4 lần/ngày (tối đa 36mg/ngày). Theo dõi chặt chẽ hạ huyết áp và suy hô hấp.",
+            "adolescents_12_18": "2mg x 2-3 lần/ngày PO, tăng dần đến 4-8mg x 3-4 lần/ngày (tối đa 36mg/ngày). Liều tương tự người lớn. Theo dõi chặt chẽ hạ huyết áp.",
+            "notes": "Alpha-2 adrenergic agonist. Tăng liều chậm để giảm tác dụng phụ. QUAN TRỌNG: Theo dõi hạ huyết áp tư thế - phổ biến. Điều chỉnh liều theo chức năng gan, thận. Giảm liều 50% nếu dùng với oral contraceptives hoặc CYP1A2 inhibitors."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, hạ huyết áp, suy hô hấp). Tăng nguy cơ té ngã. Suy gan, suy thận phổ biến hơn → cần điều chỉnh liều.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (2mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng gan, thận (CrCl <30: giảm liều, suy gan: giảm liều). Giảm liều 50% nếu dùng với oral contraceptives. Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi hạ huyết áp tư thế - QUAN TRỌNG. Theo dõi tác dụng phụ (buồn ngủ, suy hô hấp, mệt mỏi). Theo dõi nguy cơ té ngã. Theo dõi chức năng gan, thận."
+        },
+        "brand_names": {
+            "vietnam": ["Zanaflex", "Tizanidine", "Tizanidine Stada"],
+            "common": ["Zanaflex", "Tizanidine"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "8,000 - 35,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Tizanidine generic thường rẻ hơn (8,000-20,000 VND/viên 4mg). Zanaflex (brand) thường đắt hơn (20,000-35,000 VND/viên 4mg)."
+        }
     },
 }
 

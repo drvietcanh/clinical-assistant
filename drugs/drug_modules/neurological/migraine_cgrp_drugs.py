@@ -129,6 +129,27 @@ MIGRAINE_CGRP_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, large RCTs showing benefit in migraine prevention"
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Migraine phổ biến ở người lớn hơn.",
+            "notes": "Chủ yếu dùng cho người lớn với migraine prevention. Liều: 100mg IV mỗi 3 tháng. Truyền trong 30 phút. Theo dõi phản ứng truyền."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ. Migraine phổ biến ở người trẻ-trung niên hơn.",
+            "dose_adjustment": "Liều tương tự người trẻ (100mg IV mỗi 3 tháng). Theo dõi chặt chẽ tác dụng phụ và phản ứng truyền.",
+            "monitoring": "Theo dõi phản ứng truyền. Theo dõi tác dụng phụ. Theo dõi đáp ứng điều trị (giảm tần suất migraine)."
+        },
+        "brand_names": {
+            "vietnam": ["Vyepti", "Eptinezumab"],
+            "common": ["Vyepti", "Eptinezumab"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "15,000,000 - 30,000,000 VND/lần truyền IV (tùy thương hiệu và nhà cung cấp)",
+            "note": "Giá rất cao do là thuốc mới, monoclonal antibody. Vyepti (brand) thường đắt (15,000,000-30,000,000 VND/lần truyền IV 100mg). Cần truyền mỗi 3 tháng."
         }
     },
     
@@ -257,6 +278,27 @@ MIGRAINE_CGRP_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, large RCTs showing benefit in migraine prevention"
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Migraine phổ biến ở người lớn hơn.",
+            "notes": "Chủ yếu dùng cho người lớn với migraine prevention. Liều: 70mg SC mỗi tháng (hoặc 140mg SC mỗi tháng). Theo dõi phản ứng tại chỗ tiêm."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ. Migraine phổ biến ở người trẻ-trung niên hơn.",
+            "dose_adjustment": "Liều tương tự người trẻ (70mg hoặc 140mg SC mỗi tháng). Theo dõi chặt chẽ tác dụng phụ và phản ứng tại chỗ tiêm.",
+            "monitoring": "Theo dõi phản ứng tại chỗ tiêm. Theo dõi tác dụng phụ. Theo dõi đáp ứng điều trị (giảm tần suất migraine)."
+        },
+        "brand_names": {
+            "vietnam": ["Aimovig", "Erenumab"],
+            "common": ["Aimovig", "Erenumab"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "8,000,000 - 18,000,000 VND/lần tiêm SC (tùy thương hiệu và nhà cung cấp)",
+            "note": "Giá rất cao do là thuốc mới, monoclonal antibody. Aimovig (brand) thường đắt (8,000,000-18,000,000 VND/lần tiêm SC 70mg). Cần tiêm mỗi tháng."
         }
     },
 
@@ -382,6 +424,27 @@ MIGRAINE_CGRP_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, large RCTs showing benefit in migraine prevention"
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Migraine phổ biến ở người lớn hơn.",
+            "notes": "Chủ yếu dùng cho người lớn với migraine prevention. Liều: 225mg SC mỗi tháng hoặc 675mg SC mỗi 3 tháng. Theo dõi phản ứng tại chỗ tiêm."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ. Migraine phổ biến ở người trẻ-trung niên hơn.",
+            "dose_adjustment": "Liều tương tự người trẻ (225mg SC mỗi tháng hoặc 675mg SC mỗi 3 tháng). Theo dõi chặt chẽ tác dụng phụ và phản ứng tại chỗ tiêm.",
+            "monitoring": "Theo dõi phản ứng tại chỗ tiêm. Theo dõi tác dụng phụ. Theo dõi đáp ứng điều trị (giảm tần suất migraine)."
+        },
+        "brand_names": {
+            "vietnam": ["Ajovy", "Fremanezumab"],
+            "common": ["Ajovy", "Fremanezumab"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "10,000,000 - 25,000,000 VND/lần tiêm SC (tùy thương hiệu và nhà cung cấp)",
+            "note": "Giá rất cao do là thuốc mới, monoclonal antibody. Ajovy (brand) thường đắt (10,000,000-25,000,000 VND/lần tiêm SC). Cần tiêm mỗi tháng hoặc mỗi 3 tháng."
         }
     },
 
@@ -473,6 +536,27 @@ MIGRAINE_CGRP_DRUGS = {
             "moderate": "Không cần chỉnh liều",
             "severe": "Không cần chỉnh liều",
             "notes": "Galcanezumab chuyển hóa qua RES, không phụ thuộc gan đáng kể."
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Migraine phổ biến ở người lớn hơn.",
+            "notes": "Chủ yếu dùng cho người lớn với migraine prevention hoặc cluster headache prevention. Liều: 240mg SC liều đầu, sau đó 120mg SC mỗi tháng. Theo dõi phản ứng tại chỗ tiêm."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ. Migraine phổ biến ở người trẻ-trung niên hơn.",
+            "dose_adjustment": "Liều tương tự người trẻ (240mg SC liều đầu, sau đó 120mg SC mỗi tháng). Theo dõi chặt chẽ tác dụng phụ và phản ứng tại chỗ tiêm.",
+            "monitoring": "Theo dõi phản ứng tại chỗ tiêm. Theo dõi tác dụng phụ. Theo dõi đáp ứng điều trị (giảm tần suất migraine/cluster headache)."
+        },
+        "brand_names": {
+            "vietnam": ["Emgality", "Galcanezumab"],
+            "common": ["Emgality", "Galcanezumab"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "12,000,000 - 28,000,000 VND/lần tiêm SC (tùy thương hiệu và nhà cung cấp)",
+            "note": "Giá rất cao do là thuốc mới, monoclonal antibody. Emgality (brand) thường đắt (12,000,000-28,000,000 VND/lần tiêm SC). Cần tiêm mỗi tháng."
         },
         "overdose_management": {
             "symptoms": [
@@ -682,7 +766,28 @@ MIGRAINE_CGRP_DRUGS = {
             "guideline_tags": [
                 "FDA Drug Information",
                 "UpToDate Drug Information",
-            ]
+            ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Migraine phổ biến ở người lớn hơn.",
+            "notes": "Chủ yếu dùng cho người lớn với acute migraine treatment hoặc migraine prevention. Liều: 75mg PO khi cần (acute) hoặc 75mg PO mỗi ngày (prevention). CHỐNG CHỈ ĐỊNH với suy gan nặng và CYP3A4 inhibitors mạnh."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ. Suy gan phổ biến hơn → CHỐNG CHỈ ĐỊNH nếu suy gan nặng. Migraine phổ biến ở người trẻ-trung niên hơn.",
+            "dose_adjustment": "Liều tương tự người trẻ (75mg PO). CHỐNG CHỈ ĐỊNH nếu suy gan nặng. Giảm liều nếu suy gan nhẹ-trung bình. CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh. Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi chức năng gan (ALT, AST) - QUAN TRỌNG. Theo dõi tác dụng phụ. CHỐNG CHỈ ĐỊNH nếu suy gan nặng."
+        },
+        "brand_names": {
+            "vietnam": ["Nurtec ODT", "Rimegepant"],
+            "common": ["Nurtec ODT", "Rimegepant"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "150,000 - 400,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá cao do là thuốc mới. Nurtec ODT (brand) thường đắt (150,000-400,000 VND/viên 75mg)."
+        }
 },
     "Ubrogepant": {
         "group": "Neurology - Anti-CGRP Receptor Antagonist (Gepant)",
@@ -846,7 +951,28 @@ MIGRAINE_CGRP_DRUGS = {
             "AHS Guidelines - Acute Migraine Treatment",
             "FDA Drug Information",
             "UpToDate Drug Information"
-        ]
+        ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Migraine phổ biến ở người lớn hơn.",
+            "notes": "Chủ yếu dùng cho người lớn với acute migraine treatment. Liều: 50-100mg PO khi cần. CHỐNG CHỈ ĐỊNH với suy gan nặng và CYP3A4 inhibitors mạnh."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ. Suy gan phổ biến hơn → CHỐNG CHỈ ĐỊNH nếu suy gan nặng. Migraine phổ biến ở người trẻ-trung niên hơn.",
+            "dose_adjustment": "Liều tương tự người trẻ (50-100mg PO). CHỐNG CHỈ ĐỊNH nếu suy gan nặng. Giảm liều nếu suy gan nhẹ-trung bình. CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh. Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi chức năng gan (ALT, AST) - QUAN TRỌNG. Theo dõi tác dụng phụ. CHỐNG CHỈ ĐỊNH nếu suy gan nặng."
+        },
+        "brand_names": {
+            "vietnam": ["Ubrelvy", "Ubrogepant"],
+            "common": ["Ubrelvy", "Ubrogepant"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "180,000 - 450,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá cao do là thuốc mới. Ubrelvy (brand) thường đắt (180,000-450,000 VND/viên 50-100mg)."
+        }
     },
     
 }

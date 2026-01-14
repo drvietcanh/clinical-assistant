@@ -177,6 +177,27 @@ ANTIPARKINSONIAN_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, clinical trial data, widely used"
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Nếu cần: bắt đầu với liều rất thấp, tăng dần chậm. Theo dõi chặt chẽ trầm cảm và QT interval.",
+            "adolescents_12_18": "Bắt đầu với liều thấp hơn (6mg/ngày PO, chia 2 lần). Tăng dần mỗi tuần đến liều hiệu quả (tối đa 36mg/ngày cho Huntington, 24mg/ngày cho tardive dyskinesia). Theo dõi chặt chẽ trầm cảm và QT interval.",
+            "notes": "Chủ yếu dùng cho người lớn. QUAN TRỌNG: Theo dõi chặt chẽ trầm cảm và ý tưởng tự tử - đặc biệt ở thanh thiếu niên. Theo dõi ECG (QT interval). CHỐNG CHỈ ĐỊNH với MAO inhibitors. KHÔNG ngừng đột ngột."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, mệt mỏi, trầm cảm). Tăng nguy cơ QT kéo dài. Suy gan, suy thận phổ biến hơn.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (6mg/ngày PO, chia 2 lần). Tăng dần chậm hơn (mỗi 2 tuần). Giảm liều 50% nếu dùng với CYP2D6 inhibitors mạnh. Theo dõi chặt chẽ trầm cảm và QT interval.",
+            "monitoring": "Theo dõi chặt chẽ trầm cảm và ý tưởng tự tử - QUAN TRỌNG. Theo dõi ECG (QT interval) trước và trong điều trị. Theo dõi tác dụng phụ (buồn ngủ, mệt mỏi, parkinsonism). Theo dõi chức năng gan."
+        },
+        "brand_names": {
+            "vietnam": ["Austedo", "Deutetrabenazine"],
+            "common": ["Austedo", "Deutetrabenazine"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "150,000 - 400,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Deutetrabenazine là thuốc mới, giá cao. Austedo (brand) thường đắt (150,000-400,000 VND/viên 6mg)."
         }
     },
     
@@ -338,7 +359,28 @@ ANTIPARKINSONIAN_DRUGS = {
             "guideline_tags": [
                 "FDA Drug Information",
                 "UpToDate Drug Information",
-            ]
+            ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Parkinson's disease hiếm ở trẻ em.",
+            "notes": "Chủ yếu dùng cho người lớn với Parkinson's disease. Parkinson's disease hiếm ở trẻ em. Nếu cần: bắt đầu với liều thấp (20mg/ngày), tăng dần. Theo dõi chặt chẽ tác dụng phụ."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, mệt mỏi, chóng mặt). Suy gan, suy thận phổ biến hơn. Parkinson's disease phổ biến ở người cao tuổi.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (20mg/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng gan, thận. Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi tác dụng phụ (buồn ngủ, mệt mỏi, chóng mặt). Theo dõi đáp ứng điều trị (giảm 'off' time). Theo dõi chức năng gan, thận."
+        },
+        "brand_names": {
+            "vietnam": ["Nourianz", "Istradefylline"],
+            "common": ["Nourianz", "Istradefylline"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "80,000 - 200,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Istradefylline là thuốc mới, giá cao. Nourianz (brand) thường đắt (80,000-200,000 VND/viên 20mg)."
+        }
 },
     "Levodopa/Carbidopa":     {
         "group": "Neurology - Antiparkinsonian (Dopamine Precursor + DOPA Decarboxylase Inhibitor)",
@@ -532,6 +574,27 @@ ANTIPARKINSONIAN_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Parkinson's disease hiếm ở trẻ em.",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Parkinson's disease hiếm ở trẻ em. Nếu cần: bắt đầu với liều thấp (25/100mg x 2-3 lần/ngày), tăng dần.",
+            "notes": "Chủ yếu dùng cho người lớn với Parkinson's disease. Liều tính theo levodopa. Bắt đầu với liều thấp, tăng dần. CHỐNG CHỈ ĐỊNH với MAO inhibitors không chọn lọc trong 14 ngày. Tránh thức ăn giàu protein (giảm hấp thu)."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn nôn, chóng mặt, ảo giác, lú lẫn). Tăng nguy cơ rối loạn vận động (dyskinesia). Suy gan, suy thận phổ biến hơn. Parkinson's disease phổ biến ở người cao tuổi.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (25/100mg x 2-3 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo đáp ứng và tác dụng phụ. Giảm liều nếu có rối loạn vận động nặng. Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi đáp ứng điều trị (giảm triệu chứng Parkinson). Theo dõi tác dụng phụ (buồn nôn, chóng mặt, ảo giác, lú lẫn, rối loạn vận động). Theo dõi chức năng gan, thận. Theo dõi huyết áp."
+        },
+        "brand_names": {
+            "vietnam": ["Sinemet", "Levodopa/Carbidopa", "Stalevo (với entacapone)"],
+            "common": ["Sinemet", "Sinemet CR", "Stalevo", "Levodopa/Carbidopa"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "5,000 - 30,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Levodopa/Carbidopa generic thường rẻ hơn (5,000-15,000 VND/viên 25/100mg). Sinemet (brand) thường đắt hơn (15,000-30,000 VND/viên 25/100mg). Dạng CR: 20,000-40,000 VND/viên."
+        },
         "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng với levodopa, carbidopa hoặc bất kỳ thành phần nào",
@@ -567,7 +630,28 @@ ANTIPARKINSONIAN_DRUGS = {
             "guideline_tags": [
                 "FDA Drug Information",
                 "UpToDate Drug Information",
-            ]
+            ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Parkinson's disease hiếm ở trẻ em.",
+            "notes": "Chủ yếu dùng cho người lớn với Parkinson's disease. Dùng kèm với levodopa/carbidopa. Liều: 50mg x 1 lần/ngày trước khi ngủ. Theo dõi chặt chẽ tác dụng phụ."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, mệt mỏi, chóng mặt). Suy gan, suy thận phổ biến hơn. Parkinson's disease phổ biến ở người cao tuổi.",
+            "dose_adjustment": "Liều tương tự người trẻ (50mg x 1 lần/ngày trước khi ngủ). Điều chỉnh liều levodopa/carbidopa nếu cần. Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi tác dụng phụ (buồn ngủ, mệt mỏi, chóng mặt, rối loạn vận động). Theo dõi đáp ứng điều trị (giảm 'off' time). Theo dõi chức năng gan, thận."
+        },
+        "brand_names": {
+            "vietnam": ["Ongentys", "Opicapone"],
+            "common": ["Ongentys", "Opicapone"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "100,000 - 250,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Opicapone là thuốc mới, giá cao. Ongentys (brand) thường đắt (100,000-250,000 VND/viên 50mg)."
+        }
     },
     "Opicapone": {
         "group": "Neurology - Antiparkinsonian (COMT Inhibitor)",
@@ -913,6 +997,27 @@ ANTIPARKINSONIAN_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, clinical trial data, widely used"
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Parkinson's disease hiếm ở trẻ em.",
+            "notes": "Chủ yếu dùng cho người lớn với Parkinson's disease psychosis. Liều: 34mg PO mỗi ngày. QUAN TRỌNG: Theo dõi ECG (QT interval). Tăng nguy cơ tử vong ở bệnh nhân sa sút trí tuệ."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (lú lẫn, ảo giác, phù ngoại biên). Tăng nguy cơ QT kéo dài. Tăng nguy cơ tử vong ở bệnh nhân sa sút trí tuệ. Suy gan, suy thận phổ biến hơn.",
+            "dose_adjustment": "Liều tương tự người trẻ (34mg/ngày). Giảm liều 50% (17mg/ngày) nếu suy thận vừa (eGFR 30-60). CHỐNG CHỈ ĐỊNH nếu suy thận nặng (eGFR <30) hoặc suy gan nặng. Theo dõi chặt chẽ ECG và tác dụng phụ.",
+            "monitoring": "Theo dõi ECG (QT interval) trước và trong điều trị - QUAN TRỌNG. Theo dõi tác dụng phụ (lú lẫn, ảo giác, phù ngoại biên). Theo dõi chức năng gan, thận. Theo dõi dấu hiệu tử vong ở bệnh nhân sa sút trí tuệ."
+        },
+        "brand_names": {
+            "vietnam": ["Nuplazid", "Pimavanserin"],
+            "common": ["Nuplazid", "Pimavanserin"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "200,000 - 500,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Pimavanserin là thuốc mới, giá cao. Nuplazid (brand) thường đắt (200,000-500,000 VND/viên 34mg)."
         }
     },
     
@@ -1100,6 +1205,27 @@ ANTIPARKINSONIAN_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Parkinson's disease hiếm ở trẻ em. Nếu cần: bắt đầu với liều rất thấp (0.125mg x 3 lần/ngày), tăng dần chậm.",
+            "notes": "Chủ yếu dùng cho người lớn với Parkinson's disease hoặc restless legs syndrome. QUAN TRỌNG: Theo dõi buồn ngủ đột ngột (sleep attacks) - nguy hiểm. Theo dõi ảo giác, lú lẫn. Theo dõi rối loạn hành vi (impulse control disorders). Điều chỉnh liều theo chức năng thận."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, ảo giác, lú lẫn). Tăng nguy cơ hạ huyết áp tư thế. Suy thận phổ biến hơn → cần điều chỉnh liều. Parkinson's disease phổ biến ở người cao tuổi.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (0.125mg x 2-3 lần/ngày). Tăng dần chậm hơn (mỗi 7-10 ngày). Điều chỉnh liều theo chức năng thận (CrCl 35-60: giảm 25%, CrCl 15-35: giảm 50%, CrCl <15: giảm 75%). Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi buồn ngủ đột ngột (sleep attacks) - QUAN TRỌNG. Theo dõi ảo giác, lú lẫn - đặc biệt ở người cao tuổi. Theo dõi hạ huyết áp tư thế. Theo dõi rối loạn hành vi (impulse control disorders). Theo dõi chức năng thận."
+        },
+        "brand_names": {
+            "vietnam": ["Mirapex", "Pramipexole", "Pramipexole Stada"],
+            "common": ["Mirapex", "Mirapex ER", "Pramipexole"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "15,000 - 60,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Pramipexole generic thường rẻ hơn (15,000-35,000 VND/viên 0.25mg). Mirapex (brand) thường đắt hơn (35,000-60,000 VND/viên 0.25mg). Dạng ER: 40,000-80,000 VND/viên."
+        }
     },
     "Ropinirole":     {
         "group": "Neurology - Antiparkinsonian (Dopamine Agonist)",
@@ -1290,6 +1416,27 @@ ANTIPARKINSONIAN_DRUGS = {
     ],
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews",
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Parkinson's disease hiếm ở trẻ em. Nếu cần: bắt đầu với liều rất thấp (0.25mg x 3 lần/ngày), tăng dần chậm.",
+            "notes": "Chủ yếu dùng cho người lớn với Parkinson's disease hoặc restless legs syndrome. QUAN TRỌNG: Theo dõi buồn ngủ đột ngột (sleep attacks) - nguy hiểm. Theo dõi ảo giác, lú lẫn. Theo dõi rối loạn hành vi (impulse control disorders). Điều chỉnh liều theo chức năng gan, thận."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, ảo giác, lú lẫn). Tăng nguy cơ hạ huyết áp tư thế. Suy gan, suy thận phổ biến hơn → cần điều chỉnh liều. Parkinson's disease phổ biến ở người cao tuổi.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (0.25mg x 2-3 lần/ngày). Tăng dần chậm hơn (mỗi 7-10 ngày). Điều chỉnh liều theo chức năng gan, thận. Giảm liều 50% nếu dùng với CYP1A2 inhibitors. Theo dõi chặt chẽ tác dụng phụ.",
+            "monitoring": "Theo dõi buồn ngủ đột ngột (sleep attacks) - QUAN TRỌNG. Theo dõi ảo giác, lú lẫn - đặc biệt ở người cao tuổi. Theo dõi hạ huyết áp tư thế. Theo dõi rối loạn hành vi (impulse control disorders). Theo dõi chức năng gan, thận."
+        },
+        "brand_names": {
+            "vietnam": ["Requip", "Ropinirole", "Ropinirole Stada"],
+            "common": ["Requip", "Requip XL", "Ropinirole"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "12,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Ropinirole generic thường rẻ hơn (12,000-30,000 VND/viên 0.25mg). Requip (brand) thường đắt hơn (30,000-50,000 VND/viên 0.25mg). Dạng XL: 35,000-70,000 VND/viên."
         },
         "contraindications_detail": {
             "tuyệt_đối": [
@@ -1517,6 +1664,27 @@ ANTIPARKINSONIAN_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Parkinson's disease hiếm ở trẻ em.",
+            "notes": "Chủ yếu dùng cho người lớn với Parkinson's disease. Dùng kèm với levodopa/carbidopa. Liều: 50-100mg x 1 lần/ngày. QUAN TRỌNG: CHỐNG CHỈ ĐỊNH với MAO inhibitors không chọn lọc và một số thuốc (meperidine, tramadol, methadone, propoxyphene, dextromethorphan) trong 14 ngày. Theo dõi serotonin syndrome."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn nôn, chóng mặt, mệt mỏi). Suy gan, suy thận phổ biến hơn. Parkinson's disease phổ biến ở người cao tuổi.",
+            "dose_adjustment": "Liều tương tự người trẻ (50-100mg x 1 lần/ngày). CHỐNG CHỈ ĐỊNH nếu suy gan nặng. Giảm liều nếu suy thận nặng. Theo dõi chặt chẽ tác dụng phụ và serotonin syndrome.",
+            "monitoring": "Theo dõi tác dụng phụ (buồn nôn, chóng mặt, mệt mỏi). Theo dõi đáp ứng điều trị (giảm 'off' time). Theo dõi serotonin syndrome (khi dùng với SSRI/SNRI). Theo dõi chức năng gan, thận."
+        },
+        "brand_names": {
+            "vietnam": ["Xadago", "Safinamide"],
+            "common": ["Xadago", "Safinamide"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "120,000 - 300,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Safinamide là thuốc mới, giá cao. Xadago (brand) thường đắt (120,000-300,000 VND/viên 50mg)."
         }
     },
     
@@ -1693,6 +1861,27 @@ ANTIPARKINSONIAN_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, clinical trial data, widely used"
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Nếu cần: bắt đầu với liều rất thấp, tăng dần chậm. Theo dõi chặt chẽ trầm cảm và QT interval.",
+            "adolescents_12_18": "Bắt đầu với liều thấp hơn (12.5mg x 2-3 lần/ngày). Tăng dần mỗi tuần đến liều hiệu quả (tối đa 100mg/ngày). Theo dõi chặt chẽ trầm cảm và QT interval.",
+            "notes": "Chủ yếu dùng cho người lớn. QUAN TRỌNG: Theo dõi chặt chẽ trầm cảm và ý tưởng tự tử - đặc biệt ở thanh thiếu niên. Theo dõi ECG (QT interval). CHỐNG CHỈ ĐỊNH với MAO inhibitors. KHÔNG ngừng đột ngột."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, mệt mỏi, trầm cảm). Tăng nguy cơ QT kéo dài. Suy gan, suy thận phổ biến hơn.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (12.5mg x 2 lần/ngày). Tăng dần chậm hơn (mỗi 2 tuần). Giảm liều 50% nếu dùng với CYP2D6 inhibitors mạnh. Theo dõi chặt chẽ trầm cảm và QT interval.",
+            "monitoring": "Theo dõi chặt chẽ trầm cảm và ý tưởng tự tử - QUAN TRỌNG. Theo dõi ECG (QT interval) trước và trong điều trị. Theo dõi tác dụng phụ (buồn ngủ, mệt mỏi, parkinsonism). Theo dõi chức năng gan."
+        },
+        "brand_names": {
+            "vietnam": ["Xenazine", "Tetrabenazine"],
+            "common": ["Xenazine", "Tetrabenazine"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "100,000 - 350,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Tetrabenazine là thuốc hiếm, giá cao. Xenazine (brand) thường đắt (100,000-350,000 VND/viên 25mg)."
         }
     },
     

@@ -231,6 +231,27 @@ BENZODIAZEPINES_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "1 tháng - 2 tuổi: 0.01-0.03mg/kg/ngày PO chia 2-3 lần. Bắt đầu với liều thấp, tăng dần. Theo dõi chặt chẽ tác dụng phụ (buồn ngủ, ataxia, tăng tiết nước bọt).",
+            "children_2_12": "0.01-0.03mg/kg/ngày PO chia 2-3 lần (tối đa 0.1-0.2mg/kg/ngày). Bắt đầu với liều thấp, tăng dần. Dùng cho động kinh, panic disorder. Theo dõi chặt chẽ tác dụng phụ.",
+            "adolescents_12_18": "0.5mg x 2-3 lần/ngày, tăng đến 1-4mg/ngày (chia 2-3 lần). Liều tương tự người lớn. Theo dõi chặt chẽ tác dụng phụ và nguy cơ phụ thuộc.",
+            "notes": "Benzodiazepine có nguy cơ phụ thuộc, nghiện. Tăng liều chậm để giảm tác dụng phụ (đặc biệt ataxia, buồn ngủ). Không ngừng đột ngột (có thể gây co giật, lo âu, mất ngủ, status epilepticus). Theo dõi tác dụng phụ chặt chẽ ở trẻ em."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, lú lẫn, ataxia, té ngã). Half-life dài (18-50 giờ) → tích lũy ở người cao tuổi. Tăng nguy cơ té ngã, gãy xương. Tăng nguy cơ phụ thuộc.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (0.25mg x 1-2 lần/ngày). Tăng liều chậm hơn. Giảm liều 50% so với người trẻ. Tránh dùng lâu dài nếu có thể. Giảm liều nếu có suy gan, suy thận.",
+            "monitoring": "Theo dõi dấu hiệu té ngã sát hơn. Theo dõi lú lẫn, ataxia. Theo dõi dấu hiệu phụ thuộc. Theo dõi tác dụng phụ (buồn ngủ quá mức). Tránh lái xe hoặc vận hành máy móc."
+        },
+        "brand_names": {
+            "vietnam": ["Klonopin", "Clonazepam", "Clonazepam Stada", "Rivotril"],
+            "common": ["Klonopin", "Clonazepam", "Rivotril"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "5,000 - 25,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Clonazepam generic thường rẻ hơn (5,000-15,000 VND/viên 0.5mg). Klonopin (brand) thường đắt hơn (15,000-25,000 VND/viên 0.5mg)."
+        }
     },
     "Diazepam":     {
         "group": "Neurology - Benzodiazepine",
@@ -471,6 +492,27 @@ BENZODIAZEPINES_DRUGS = {
             "last_updated": "2024-12-19",
             "evidence_level": "A - Evidence from well-designed randomized controlled trials and systematic reviews",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế). Nếu cần: 0.1-0.2mg/kg IV cho co giật, theo dõi hô hấp chặt chẽ.",
+            "infants": "1 tháng - 2 tuổi: 0.1-0.3mg/kg PO x 3-4 lần/ngày (lo âu, co giật). IV: 0.1-0.3mg/kg cho status epilepticus. Rectal: 0.2-0.5mg/kg. Theo dõi hô hấp chặt chẽ.",
+            "children_2_12": "2-5mg PO x 2-4 lần/ngày (lo âu, co giật). IV: 0.1-0.3mg/kg cho status epilepticus (tối đa 10mg). Rectal: 0.2-0.5mg/kg. Theo dõi hô hấp chặt chẽ.",
+            "adolescents_12_18": "2-10mg PO x 2-4 lần/ngày (lo âu). IV: 5-10mg cho status epilepticus. Liều tương tự người lớn. Theo dõi hô hấp chặt chẽ, đặc biệt khi dùng IV.",
+            "notes": "Benzodiazepine có nguy cơ phụ thuộc, nghiện. Dạng IV: nguy cơ suy hô hấp cao, theo dõi hô hấp chặt chẽ. Dạng rectal: dùng cho co giật ở trẻ em. Không ngừng đột ngột (có thể gây co giật, lo âu, mất ngủ)."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, lú lẫn, té ngã, suy hô hấp). Half-life dài (20-50 giờ) và active metabolite (20-100 giờ) → tích lũy mạnh ở người cao tuổi. Tăng nguy cơ té ngã, gãy xương. Tăng nguy cơ phụ thuộc.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (2mg x 1-2 lần/ngày). Tăng liều chậm hơn. Giảm liều 50% so với người trẻ. Tránh dùng lâu dài nếu có thể. Giảm liều nếu có suy gan, suy thận. Đặc biệt thận trọng với dạng IV (nguy cơ suy hô hấp cao).",
+            "monitoring": "Theo dõi dấu hiệu té ngã sát hơn. Theo dõi lú lẫn, buồn ngủ quá mức. Theo dõi hô hấp chặt chẽ (đặc biệt khi dùng IV). Theo dõi dấu hiệu phụ thuộc. Tránh lái xe hoặc vận hành máy móc."
+        },
+        "brand_names": {
+            "vietnam": ["Valium", "Diazepam", "Diazepam Stada", "Seduxen"],
+            "common": ["Valium", "Diazepam", "Diastat (rectal)"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "3,000 - 20,000 VND/viên PO (tùy hàm lượng và thương hiệu). Dạng IV: 15,000 - 50,000 VND/ống. Dạng rectal: 20,000 - 60,000 VND/ống.",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Diazepam generic thường rẻ hơn (3,000-10,000 VND/viên 5mg PO). Valium (brand) thường đắt hơn (10,000-20,000 VND/viên 5mg PO). Dạng IV: 15,000-50,000 VND/ống 10mg. Dạng rectal: 20,000-60,000 VND/ống."
+        }
     },
     "Lorazepam":     {
         "group": "Neurology - Benzodiazepine",
@@ -706,7 +748,28 @@ BENZODIAZEPINES_DRUGS = {
             "guideline_tags": [
                 "FDA Drug Information",
                 "UpToDate Drug Information",
-            ]
+            ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế). Nếu cần: 0.05-0.1mg/kg IV cho status epilepticus, theo dõi hô hấp chặt chẽ.",
+            "infants": "1 tháng - 2 tuổi: 0.05-0.1mg/kg PO x 2-3 lần/ngày (lo âu, co giật). IV: 0.05-0.1mg/kg cho status epilepticus. Theo dõi hô hấp chặt chẽ.",
+            "children_2_12": "0.05-0.1mg/kg PO x 2-3 lần/ngày (lo âu, co giật). IV: 0.05-0.1mg/kg cho status epilepticus (tối đa 4mg). Theo dõi hô hấp chặt chẽ.",
+            "adolescents_12_18": "1-2mg PO x 2-3 lần/ngày (lo âu). IV: 2-4mg cho status epilepticus. Liều tương tự người lớn. Theo dõi hô hấp chặt chẽ, đặc biệt khi dùng IV.",
+            "notes": "Benzodiazepine có nguy cơ phụ thuộc, nghiện. Dạng IV: nguy cơ suy hô hấp cao, theo dõi hô hấp chặt chẽ. Không có active metabolite, ít tích lũy hơn diazepam. Không ngừng đột ngột (có thể gây co giật, lo âu, mất ngủ)."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn ngủ, lú lẫn, té ngã, suy hô hấp). Không có active metabolite, ít tích lũy hơn diazepam nhưng vẫn có nguy cơ. Tăng nguy cơ té ngã, gãy xương. Tăng nguy cơ phụ thuộc.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (0.5-1mg x 1-2 lần/ngày). Tăng liều chậm hơn. Giảm liều 50% so với người trẻ. Tránh dùng lâu dài nếu có thể. Giảm liều nếu có suy gan, suy thận. Đặc biệt thận trọng với dạng IV (nguy cơ suy hô hấp cao).",
+            "monitoring": "Theo dõi dấu hiệu té ngã sát hơn. Theo dõi lú lẫn, buồn ngủ quá mức. Theo dõi hô hấp chặt chẽ (đặc biệt khi dùng IV). Theo dõi dấu hiệu phụ thuộc. Tránh lái xe hoặc vận hành máy móc."
+        },
+        "brand_names": {
+            "vietnam": ["Ativan", "Lorazepam", "Lorazepam Stada", "Temesta"],
+            "common": ["Ativan", "Lorazepam", "Temesta"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "4,000 - 25,000 VND/viên PO (tùy hàm lượng và thương hiệu). Dạng IV: 20,000 - 60,000 VND/ống.",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Lorazepam generic thường rẻ hơn (4,000-12,000 VND/viên 1mg PO). Ativan (brand) thường đắt hơn (12,000-25,000 VND/viên 1mg PO). Dạng IV: 20,000-60,000 VND/ống 2mg."
+        }
     },
 }
 

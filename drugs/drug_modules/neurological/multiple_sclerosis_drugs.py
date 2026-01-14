@@ -178,6 +178,27 @@ MULTIPLE_SCLEROSIS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, large RCTs showing benefit in RRMS and active SPMS"
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Multiple sclerosis hiếm ở trẻ em.",
+            "notes": "Chủ yếu dùng cho người lớn với relapsing-remitting MS hoặc active secondary progressive MS. Liều: 120mg x 2 lần/ngày PO, tăng đến 240mg x 2 lần/ngày. QUAN TRỌNG: Theo dõi chức năng gan (nguy cơ viêm gan). Theo dõi số lượng bạch cầu lympho (giảm)."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn nôn, đau bụng, tiêu chảy, đỏ mặt). Suy gan, suy thận phổ biến hơn. Multiple sclerosis phổ biến ở người trẻ-trung niên hơn.",
+            "dose_adjustment": "Liều tương tự người trẻ (240mg x 2 lần/ngày PO). Điều chỉnh liều theo chức năng gan, thận. Theo dõi chặt chẽ tác dụng phụ và chức năng gan.",
+            "monitoring": "Theo dõi chức năng gan (ALT, AST) - QUAN TRỌNG. Theo dõi số lượng bạch cầu lympho (giảm). Theo dõi tác dụng phụ (buồn nôn, đau bụng, tiêu chảy, đỏ mặt)."
+        },
+        "brand_names": {
+            "vietnam": ["Tecfidera", "Dimethyl fumarate"],
+            "common": ["Tecfidera", "Dimethyl fumarate"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "200,000 - 500,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Dimethyl fumarate là thuốc mới, giá cao. Tecfidera (brand) thường đắt (200,000-500,000 VND/viên 240mg)."
         }
     },
     "Fingolimod": {
@@ -390,6 +411,27 @@ MULTIPLE_SCLEROSIS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, large RCTs showing benefit in RRMS and active SPMS"
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <10 tuổi (dữ liệu hạn chế, nguy cơ chậm nhịp tim)",
+            "children_2_12": "Không khuyến cáo cho trẻ <10 tuổi (dữ liệu hạn chế, nguy cơ chậm nhịp tim). Nếu cần: 0.25mg/ngày PO (10-18 tuổi, cân nặng <40kg) hoặc 0.5mg/ngày PO (≥18 tuổi hoặc cân nặng ≥40kg).",
+            "adolescents_12_18": "10-18 tuổi, cân nặng <40kg: 0.25mg/ngày PO. ≥18 tuổi hoặc cân nặng ≥40kg: 0.5mg/ngày PO. QUAN TRỌNG: Theo dõi tim mạch trong 6 giờ đầu sau liều đầu tiên.",
+            "notes": "QUAN TRỌNG: Theo dõi tim mạch (ECG, huyết áp, nhịp tim) trong 6 giờ đầu sau liều đầu tiên - nguy cơ chậm nhịp tim và block nhĩ thất. CHỐNG CHỈ ĐỊNH với bệnh tim mạch. Theo dõi nhiễm trùng (giảm bạch cầu lympho)."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi tăng nguy cơ bệnh tim mạch → CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch. Tăng nguy cơ nhiễm trùng (giảm bạch cầu lympho). Multiple sclerosis phổ biến ở người trẻ-trung niên hơn.",
+            "dose_adjustment": "Liều tương tự người trẻ (0.5mg/ngày PO). CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch. Theo dõi chặt chẽ tim mạch trong 6 giờ đầu sau liều đầu tiên. Theo dõi nhiễm trùng.",
+            "monitoring": "Theo dõi tim mạch (ECG, huyết áp, nhịp tim) trong 6 giờ đầu sau liều đầu tiên - QUAN TRỌNG. Theo dõi nhiễm trùng (giảm bạch cầu lympho). Theo dõi chức năng gan. CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch."
+        },
+        "brand_names": {
+            "vietnam": ["Gilenya", "Fingolimod"],
+            "common": ["Gilenya", "Fingolimod"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "500,000 - 1,500,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá rất cao do là thuốc mới, monoclonal antibody. Gilenya (brand) thường đắt (500,000-1,500,000 VND/viên 0.5mg)."
         }
     },
 
@@ -567,6 +609,27 @@ MULTIPLE_SCLEROSIS_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved, large RCTs showing benefit in RRMS and active SPMS"
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Multiple sclerosis hiếm ở trẻ em.",
+            "notes": "Chủ yếu dùng cho người lớn với relapsing-remitting MS hoặc active secondary progressive MS. Liều: 20mg SC tuần đầu (3 lần), sau đó 20mg SC mỗi 4 tuần. QUAN TRỌNG: Kiểm tra viêm gan B/C trước khi bắt đầu. Theo dõi nhiễm trùng (giảm bạch cầu lympho, giảm immunoglobulin)."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi tăng nguy cơ nhiễm trùng (giảm bạch cầu lympho, giảm immunoglobulin). Multiple sclerosis phổ biến ở người trẻ-trung niên hơn.",
+            "dose_adjustment": "Liều tương tự người trẻ (20mg SC mỗi 4 tuần). Không cần điều chỉnh liều theo chức năng gan, thận. Theo dõi chặt chẽ nhiễm trùng.",
+            "monitoring": "Kiểm tra viêm gan B/C trước khi bắt đầu - QUAN TRỌNG. Theo dõi nhiễm trùng (giảm bạch cầu lympho, giảm immunoglobulin). Theo dõi phản ứng tại chỗ tiêm. Theo dõi chức năng gan."
+        },
+        "brand_names": {
+            "vietnam": ["Kesimpta", "Ofatumumab"],
+            "common": ["Kesimpta", "Ofatumumab"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "8,000,000 - 15,000,000 VND/lần tiêm SC (tùy thương hiệu và nhà cung cấp)",
+            "note": "Giá rất cao do là thuốc mới, monoclonal antibody. Kesimpta (brand) thường đắt (8,000,000-15,000,000 VND/lần tiêm SC 20mg). Cần tiêm mỗi 4 tuần."
         }
     },
 

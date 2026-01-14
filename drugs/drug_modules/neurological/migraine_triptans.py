@@ -98,6 +98,23 @@ MIGRAINE_TRIPTANS = {
             "last_updated": "",
             "evidence_level": "",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế)",
+            "children_2_12": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế). Migraine hiếm ở trẻ em dưới 12 tuổi.",
+            "adolescents_12_18": "12-17 tuổi: 25mg PO hoặc 6mg SC. Có thể lặp lại sau 2 giờ (PO) hoặc 1 giờ (SC). Tối đa 200mg/24h (PO) hoặc 12mg/24h (SC).",
+            "notes": "CHỐNG CHỈ ĐỊNH với bệnh tim mạch, tăng huyết áp không kiểm soát, đột quỵ/TIA tiền sử. CHỐNG CHỈ ĐỊNH với MAO inhibitors trong 14 ngày. Dùng càng sớm càng tốt khi bắt đầu cơn đau."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi tăng nguy cơ bệnh tim mạch → CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch. Tăng nguy cơ tác dụng phụ (cảm giác nặng/thắt ngực). Suy gan phổ biến hơn → CHỐNG CHỈ ĐỊNH nếu suy gan nặng.",
+            "dose_adjustment": "Liều tương tự người trẻ nhưng thận trọng hơn. CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch, tăng huyết áp không kiểm soát. Theo dõi chặt chẽ tác dụng phụ tim mạch.",
+            "monitoring": "Theo dõi tác dụng phụ tim mạch (cảm giác nặng/thắt ngực) - QUAN TRỌNG. Phân biệt với triệu chứng tim mạch thật. Theo dõi huyết áp. CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch."
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "30,000 - 150,000 VND/viên PO hoặc ống SC (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Sumatriptan generic thường rẻ hơn (30,000-80,000 VND/viên 50mg PO). Imitrex/Imigran (brand) thường đắt hơn (80,000-150,000 VND/viên 50mg PO). Dạng SC: 100,000-200,000 VND/ống 6mg."
+        }
     },
     "Rizatriptan":     {
         "group": "Neurology - Migraine (Triptan)",
@@ -174,6 +191,23 @@ MIGRAINE_TRIPTANS = {
             "last_updated": "",
             "evidence_level": "",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế)",
+            "children_2_12": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế). Migraine hiếm ở trẻ em dưới 12 tuổi.",
+            "adolescents_12_18": "12-17 tuổi: 5mg PO. Có thể lặp lại sau 2 giờ. Tối đa 15mg/24h.",
+            "notes": "CHỐNG CHỈ ĐỊNH với bệnh tim mạch, tăng huyết áp không kiểm soát, đột quỵ/TIA tiền sử. CHỐNG CHỈ ĐỊNH với MAO inhibitors trong 14 ngày. Dùng càng sớm càng tốt khi bắt đầu cơn đau."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi tăng nguy cơ bệnh tim mạch → CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch. Tăng nguy cơ tác dụng phụ (cảm giác nặng/thắt ngực). Suy gan phổ biến hơn → CHỐNG CHỈ ĐỊNH nếu suy gan nặng.",
+            "dose_adjustment": "Liều tương tự người trẻ nhưng thận trọng hơn. CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch, tăng huyết áp không kiểm soát. Giảm liều 50% nếu dùng với propranolol. Theo dõi chặt chẽ tác dụng phụ tim mạch.",
+            "monitoring": "Theo dõi tác dụng phụ tim mạch (cảm giác nặng/thắt ngực) - QUAN TRỌNG. Phân biệt với triệu chứng tim mạch thật. Theo dõi huyết áp. CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch."
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "40,000 - 180,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Rizatriptan generic thường rẻ hơn (40,000-100,000 VND/viên 10mg). Maxalt (brand) thường đắt hơn (100,000-180,000 VND/viên 10mg)."
+        }
     },
     "Zolmitriptan":     {
         "group": "Neurology - Migraine (Triptan)",
@@ -246,5 +280,22 @@ MIGRAINE_TRIPTANS = {
             "last_updated": "",
             "evidence_level": "",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế)",
+            "children_2_12": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế). Migraine hiếm ở trẻ em dưới 12 tuổi.",
+            "adolescents_12_18": "12-17 tuổi: 2.5mg PO hoặc nasal spray. Có thể lặp lại sau 2 giờ. Tối đa 10mg/24h.",
+            "notes": "CHỐNG CHỈ ĐỊNH với bệnh tim mạch, tăng huyết áp không kiểm soát, đột quỵ/TIA tiền sử. CHỐNG CHỈ ĐỊNH với MAO inhibitors trong 14 ngày. Dùng càng sớm càng tốt khi bắt đầu cơn đau."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi tăng nguy cơ bệnh tim mạch → CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch. Tăng nguy cơ tác dụng phụ (cảm giác nặng/thắt ngực). Suy gan phổ biến hơn → CHỐNG CHỈ ĐỊNH nếu suy gan nặng.",
+            "dose_adjustment": "Liều tương tự người trẻ nhưng thận trọng hơn. CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch, tăng huyết áp không kiểm soát. Theo dõi chặt chẽ tác dụng phụ tim mạch.",
+            "monitoring": "Theo dõi tác dụng phụ tim mạch (cảm giác nặng/thắt ngực) - QUAN TRỌNG. Phân biệt với triệu chứng tim mạch thật. Theo dõi huyết áp. CHỐNG CHỈ ĐỊNH nếu có bệnh tim mạch."
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "50,000 - 200,000 VND/viên PO hoặc nasal spray (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Zolmitriptan generic thường rẻ hơn (50,000-120,000 VND/viên 2.5mg PO). Zomig (brand) thường đắt hơn (120,000-200,000 VND/viên 2.5mg PO). Dạng nasal spray: 150,000-250,000 VND/lọ."
+        }
     },
 }

@@ -170,7 +170,28 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
             'AAN Guidelines - Neuropathic Pain',
             'ILAE Guidelines - Antiepileptic Drugs'
         ],
-        'last_updated': '2025-02-18'
+        'last_updated': '2025-02-18',
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)',
+            'infants': '1 tháng - 2 tuổi: 10-15mg/kg/ngày PO chia 3 lần, tăng dần. Theo dõi chặt chẽ tác dụng phụ.',
+            'children_2_12': '10-15mg/kg/ngày PO chia 3 lần, tăng dần đến 25-40mg/kg/ngày (tối đa 3600mg/ngày). Theo dõi chặt chẽ tác dụng phụ thần kinh tâm thần.',
+            'adolescents_12_18': '300mg x 3 lần/ngày PO, tăng dần đến 600-900mg x 3 lần/ngày (tối đa 3600mg/ngày). Liều tương tự người lớn. Theo dõi chặt chẽ tác dụng phụ thần kinh tâm thần.',
+            'notes': 'Alpha-2-delta ligand. QUAN TRỌNG: Theo dõi tác dụng phụ thần kinh tâm thần (kích động, lo âu, trầm cảm, suy nghĩ tự sát). Điều chỉnh liều theo chức năng thận. KHÔNG ngừng đột ngột. Tránh dùng với opioids hoặc benzodiazepines (tăng nguy cơ suy hô hấp).'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ (chóng mặt, buồn ngủ, lú lẫn). Suy thận phổ biến hơn → cần điều chỉnh liều. Tăng nguy cơ té ngã. Tăng nguy cơ tác dụng phụ thần kinh tâm thần.',
+            'dose_adjustment': 'Khởi đầu với liều thấp hơn (100mg x 3 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng thận (CrCl 30-60: giảm liều, CrCl <30: giảm liều đáng kể). Theo dõi chặt chẽ tác dụng phụ.',
+            'monitoring': 'Theo dõi tác dụng phụ thần kinh tâm thần (kích động, lo âu, trầm cảm, suy nghĩ tự sát) - QUAN TRỌNG. Theo dõi ngã (do chóng mặt, buồn ngủ). Theo dõi chức năng thận (creatinine, eGFR) - cần điều chỉnh liều. Theo dõi suy hô hấp nếu dùng với opioids/benzodiazepines.'
+        },
+        'brand_names': {
+            'vietnam': ['Neurontin', 'Gabapentin', 'Gabapentin Stada'],
+            'common': ['Neurontin', 'Gabapentin']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '8,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Gabapentin generic thường rẻ hơn (8,000-25,000 VND/viên 300mg). Neurontin (brand) thường đắt hơn (25,000-40,000 VND/viên 300mg).'
+        }
     },
     "Pregabalin": {'group': 'Neurology - Anticonvulsant (Alpha-2-delta ligand)',
         'vietnamese_name': 'Pregabalin, Lyrica', 'administration': ['PO'],
@@ -335,6 +356,27 @@ ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS = {
              "available": False,
              "agents": []
          },
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)',
+            'infants': '1 tháng - 2 tuổi: 3.5mg/kg/ngày PO chia 2-3 lần, tăng dần. Theo dõi chặt chẽ tác dụng phụ.',
+            'children_2_12': '3.5mg/kg/ngày PO chia 2-3 lần, tăng dần đến 7-14mg/kg/ngày (tối đa 600mg/ngày). Theo dõi chặt chẽ tác dụng phụ thần kinh tâm thần.',
+            'adolescents_12_18': '75mg x 2 lần/ngày PO, tăng dần đến 150-300mg x 2 lần/ngày (tối đa 600mg/ngày). Liều tương tự người lớn. Theo dõi chặt chẽ tác dụng phụ thần kinh tâm thần.',
+            'notes': 'Alpha-2-delta ligand. QUAN TRỌNG: Theo dõi tác dụng phụ thần kinh tâm thần (kích động, lo âu, trầm cảm, suy nghĩ tự sát). Điều chỉnh liều theo chức năng thận. KHÔNG ngừng đột ngột. Tránh dùng với opioids hoặc benzodiazepines (tăng nguy cơ suy hô hấp).'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ (chóng mặt, buồn ngủ, lú lẫn). Suy thận phổ biến hơn → cần điều chỉnh liều. Tăng nguy cơ té ngã. Tăng nguy cơ tác dụng phụ thần kinh tâm thần.',
+            'dose_adjustment': 'Khởi đầu với liều thấp hơn (50mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng thận (CrCl 30-60: giảm liều, CrCl <30: giảm liều đáng kể). Theo dõi chặt chẽ tác dụng phụ.',
+            'monitoring': 'Theo dõi tác dụng phụ thần kinh tâm thần (kích động, lo âu, trầm cảm, suy nghĩ tự sát) - QUAN TRỌNG. Theo dõi ngã (do chóng mặt, buồn ngủ). Theo dõi chức năng thận (creatinine, eGFR) - cần điều chỉnh liều. Theo dõi suy hô hấp nếu dùng với opioids/benzodiazepines.'
+        },
+        'brand_names': {
+            'vietnam': ['Lyrica', 'Pregabalin', 'Pregabalin Stada'],
+            'common': ['Lyrica', 'Pregabalin']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '30,000 - 120,000 VND/viên (tùy hàm lượng và thương hiệu)',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Pregabalin generic thường rẻ hơn (30,000-70,000 VND/viên 75mg). Lyrica (brand) thường đắt hơn (70,000-120,000 VND/viên 75mg).'
+        }
 }}
 
 __all__ = ['ANTICONVULSANT_ALPHA_2_DELTA_LIGANDS_DRUGS']

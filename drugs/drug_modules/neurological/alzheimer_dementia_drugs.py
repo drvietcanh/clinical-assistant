@@ -158,6 +158,27 @@ ALZHEIMER_DEMENTIA_DRUGS = {
             ],
             "last_updated": "2025-02-18",
             "evidence_level": "B - FDA-approved 2021 based on surrogate endpoint (amyloid reduction), controversial clinical benefit"
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Alzheimer's disease hiếm ở trẻ em.",
+            "notes": "Chủ yếu dùng cho người lớn với Alzheimer's disease giai đoạn sớm. Liều: 10mg/kg IV mỗi 4 tuần. QUAN TRỌNG: Cần MRI baseline và theo dõi định kỳ để phát hiện ARIA (ARIA-E, ARIA-H). Theo dõi chặt chẽ phản ứng truyền."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (ARIA, nhức đầu, lú lẫn). Alzheimer's disease phổ biến ở người cao tuổi. Suy thận phổ biến hơn nhưng không cần điều chỉnh liều.",
+            "dose_adjustment": "Liều tương tự người trẻ (10mg/kg IV mỗi 4 tuần). Không cần điều chỉnh liều theo chức năng thận. Theo dõi chặt chẽ ARIA và tác dụng phụ.",
+            "monitoring": "Theo dõi MRI định kỳ để phát hiện ARIA (ARIA-E, ARIA-H) - QUAN TRỌNG. Theo dõi phản ứng truyền. Theo dõi tác dụng phụ (nhức đầu, lú lẫn, co giật). Theo dõi chức năng nhận thức."
+        },
+        "brand_names": {
+            "vietnam": ["Aduhelm", "Aducanumab"],
+            "common": ["Aduhelm", "Aducanumab"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "50,000,000 - 100,000,000 VND/lần truyền (tùy thương hiệu và nhà cung cấp)",
+            "note": "Giá rất cao do là thuốc mới, monoclonal antibody. Aduhelm (brand) thường đắt (50,000,000-100,000,000 VND/lần truyền 10mg/kg). Cần truyền mỗi 4 tuần."
         }
     },
     "Donanemab":     {
@@ -300,6 +321,27 @@ ALZHEIMER_DEMENTIA_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved 2024, large phase 3 RCT",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Alzheimer's disease hiếm ở trẻ em.",
+            "notes": "Chủ yếu dùng cho người lớn với Alzheimer's disease giai đoạn sớm. Liều: 700mg IV mỗi 4 tuần x 3 lần, sau đó 1400mg IV mỗi 4 tuần. QUAN TRỌNG: Cần MRI baseline và theo dõi định kỳ để phát hiện ARIA. Theo dõi chặt chẽ phản ứng truyền."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (ARIA, nhức đầu, lú lẫn). Alzheimer's disease phổ biến ở người cao tuổi. Suy thận phổ biến hơn nhưng không cần điều chỉnh liều.",
+            "dose_adjustment": "Liều tương tự người trẻ. Không cần điều chỉnh liều theo chức năng thận. Theo dõi chặt chẽ ARIA và tác dụng phụ.",
+            "monitoring": "Theo dõi MRI định kỳ để phát hiện ARIA (ARIA-E, ARIA-H) - QUAN TRỌNG. Theo dõi phản ứng truyền. Theo dõi tác dụng phụ (nhức đầu, lú lẫn, co giật). Theo dõi chức năng nhận thức."
+        },
+        "brand_names": {
+            "vietnam": ["Kisunla", "Donanemab"],
+            "common": ["Kisunla", "Donanemab"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "60,000,000 - 120,000,000 VND/lần truyền (tùy thương hiệu và nhà cung cấp)",
+            "note": "Giá rất cao do là thuốc mới, monoclonal antibody. Kisunla (brand) thường đắt (60,000,000-120,000,000 VND/lần truyền). Cần truyền mỗi 4 tuần."
+        }
     },
     "Donepezil": {'group': 'Neurology - Cholinesterase Inhibitor',
         "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
@@ -449,7 +491,29 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         ],
         'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
-        }},
+        },
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)',
+            'infants': 'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)',
+            'children_2_12': 'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)',
+            'adolescents_12_18': 'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Alzheimer\'s disease hiếm ở trẻ em.',
+            'notes': 'Chủ yếu dùng cho người lớn với Alzheimer\'s disease. Liều: 5mg/ngày, tăng đến 10mg/ngày sau 4-6 tuần. Điều chỉnh liều theo chức năng gan, thận.'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn nôn, tiêu chảy, chậm nhịp tim). Alzheimer\'s disease phổ biến ở người cao tuổi. Suy gan, suy thận phổ biến hơn → cần điều chỉnh liều.',
+            'dose_adjustment': 'Khởi đầu với liều thấp hơn (5mg/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng gan, thận (CrCl <30: giảm liều). Theo dõi chặt chẽ tác dụng phụ.',
+            'monitoring': 'Theo dõi tác dụng phụ (buồn nôn, tiêu chảy, chậm nhịp tim). Theo dõi đáp ứng điều trị (cải thiện nhận thức). Theo dõi chức năng gan, thận.'
+        },
+        'brand_names': {
+            'vietnam': ['Aricept', 'Donepezil', 'Donepezil Stada'],
+            'common': ['Aricept', 'Donepezil']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '20,000 - 80,000 VND/viên (tùy hàm lượng và thương hiệu)',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Donepezil generic thường rẻ hơn (20,000-50,000 VND/viên 10mg). Aricept (brand) thường đắt hơn (50,000-80,000 VND/viên 10mg).'
+        }
+    },
     "Lecanemab":     {
         "group": "Neurology - Anti-amyloid Monoclonal Antibody",
         "vietnamese_name": "Lecanemab, Leqembi",
@@ -592,6 +656,27 @@ ALZHEIMER_DEMENTIA_DRUGS = {
             "last_updated": "2025-02-18",
             "evidence_level": "A - FDA-approved 2023, large phase 3 RCT",
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "children_2_12": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)",
+            "adolescents_12_18": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Alzheimer's disease hiếm ở trẻ em.",
+            "notes": "Chủ yếu dùng cho người lớn với Alzheimer's disease giai đoạn sớm. Liều: 10mg/kg IV mỗi 2 tuần. QUAN TRỌNG: Cần MRI baseline và theo dõi định kỳ để phát hiện ARIA (ARIA-E, ARIA-H). Theo dõi chặt chẽ phản ứng truyền."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (ARIA, nhức đầu, lú lẫn). Alzheimer's disease phổ biến ở người cao tuổi. Suy thận phổ biến hơn nhưng không cần điều chỉnh liều.",
+            "dose_adjustment": "Liều tương tự người trẻ (10mg/kg IV mỗi 2 tuần). Không cần điều chỉnh liều theo chức năng thận. Theo dõi chặt chẽ ARIA và tác dụng phụ.",
+            "monitoring": "Theo dõi MRI định kỳ để phát hiện ARIA (ARIA-E, ARIA-H) - QUAN TRỌNG. Theo dõi phản ứng truyền. Theo dõi tác dụng phụ (nhức đầu, lú lẫn, co giật). Theo dõi chức năng nhận thức."
+        },
+        "brand_names": {
+            "vietnam": ["Leqembi", "Lecanemab"],
+            "common": ["Leqembi", "Lecanemab"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "55,000,000 - 110,000,000 VND/lần truyền (tùy thương hiệu và nhà cung cấp)",
+            "note": "Giá rất cao do là thuốc mới, monoclonal antibody. Leqembi (brand) thường đắt (55,000,000-110,000,000 VND/lần truyền 10mg/kg). Cần truyền mỗi 2 tuần."
+        }
     },
     "Memantine": {'group': 'Neurology - NMDA Receptor Antagonist',
         "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
@@ -701,6 +786,27 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         ],
         'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
+        },
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)',
+            'infants': 'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)',
+            'children_2_12': 'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)',
+            'adolescents_12_18': 'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Alzheimer\'s disease hiếm ở trẻ em.',
+            'notes': 'Chủ yếu dùng cho người lớn với Alzheimer\'s disease moderate to severe. Liều: 5mg/ngày, tăng dần đến 10mg x 2 lần/ngày. Điều chỉnh liều theo chức năng thận.'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ (chóng mặt, lú lẫn, mệt mỏi). Alzheimer\'s disease phổ biến ở người cao tuổi. Suy thận phổ biến hơn → cần điều chỉnh liều.',
+            'dose_adjustment': 'Khởi đầu với liều thấp hơn (5mg/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng thận (CrCl 30-60: giảm liều, CrCl <30: giảm liều 50%). Theo dõi chặt chẽ tác dụng phụ.',
+            'monitoring': 'Theo dõi tác dụng phụ (chóng mặt, lú lẫn, mệt mỏi). Theo dõi đáp ứng điều trị (cải thiện nhận thức). Theo dõi chức năng thận.'
+        },
+        'brand_names': {
+            'vietnam': ['Namenda', 'Memantine', 'Memantine Stada'],
+            'common': ['Namenda', 'Memantine']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '15,000 - 60,000 VND/viên (tùy hàm lượng và thương hiệu)',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Memantine generic thường rẻ hơn (15,000-35,000 VND/viên 10mg). Namenda (brand) thường đắt hơn (35,000-60,000 VND/viên 10mg).'
         },
         "renal_adjustment": {
              "normal": "Không đổi",
@@ -848,6 +954,27 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         ],
         'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
+        },
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế)',
+            'infants': 'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)',
+            'children_2_12': 'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn)',
+            'adolescents_12_18': 'Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế, chủ yếu dùng cho người lớn). Alzheimer\'s disease hiếm ở trẻ em.',
+            'notes': 'Chủ yếu dùng cho người lớn với Alzheimer\'s disease hoặc Parkinson\'s disease dementia. Liều: 1.5mg x 2 lần/ngày, tăng dần đến 6mg x 2 lần/ngày. Dạng transdermal patch: 4.6mg/24h, tăng đến 9.5mg/24h hoặc 13.3mg/24h.'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn nôn, tiêu chảy, chậm nhịp tim). Alzheimer\'s disease phổ biến ở người cao tuổi. Suy gan, suy thận phổ biến hơn → cần điều chỉnh liều.',
+            'dose_adjustment': 'Khởi đầu với liều thấp hơn (1.5mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng gan, thận. Dạng transdermal patch có thể giảm tác dụng phụ tiêu hóa. Theo dõi chặt chẽ tác dụng phụ.',
+            'monitoring': 'Theo dõi tác dụng phụ (buồn nôn, tiêu chảy, chậm nhịp tim). Theo dõi đáp ứng điều trị (cải thiện nhận thức). Theo dõi chức năng gan, thận. Theo dõi kích ứng da nếu dùng patch.'
+        },
+        'brand_names': {
+            'vietnam': ['Exelon', 'Rivastigmine', 'Rivastigmine Stada'],
+            'common': ['Exelon', 'Exelon Patch', 'Rivastigmine']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '25,000 - 100,000 VND/viên PO hoặc patch (tùy hàm lượng và thương hiệu)',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Rivastigmine generic thường rẻ hơn (25,000-60,000 VND/viên 3mg PO). Exelon (brand) thường đắt hơn (60,000-100,000 VND/viên 3mg PO). Dạng patch: 80,000-150,000 VND/patch.'
         },
         "renal_adjustment": {
              "normal": "Không đổi",
