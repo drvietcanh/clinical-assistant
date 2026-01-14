@@ -17,6 +17,10 @@ class BadgeType(str, Enum):
     STRONG = "strong"
     WEAK = "weak"
     CONDITIONAL = "conditional"
+    EVIDENCE_A = "evidence-a"
+    EVIDENCE_B = "evidence-b"
+    EVIDENCE_C = "evidence-c"
+    EVIDENCE_D = "evidence-d"
 
 
 class BadgeSize(str, Enum):
@@ -35,6 +39,10 @@ BADGE_ICONS = {
     BadgeType.STRONG: "✅",
     BadgeType.WEAK: "⚠️",
     BadgeType.CONDITIONAL: "🔶",
+    BadgeType.EVIDENCE_A: "🟢",
+    BadgeType.EVIDENCE_B: "🔵",
+    BadgeType.EVIDENCE_C: "🟠",
+    BadgeType.EVIDENCE_D: "🔴",
 }
 
 

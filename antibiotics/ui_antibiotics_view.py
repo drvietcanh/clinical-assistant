@@ -101,6 +101,20 @@ def render_regimen_card(regimen, key_prefix: str = ""):
         rec_text = regimen.recommendation_level.get_vietnamese_label()
         rec_badge_html = render_badge(rec_text, rec_type, BadgeSize.SMALL)
     
+    # Evidence level badge
+    evidence_badge_html = ""
+    if hasattr(regimen, 'evidence_level') and regimen.evidence_level:
+        from .protocols_schema import EvidenceLevel
+        evidence_type_map = {
+            EvidenceLevel.A: BadgeType.EVIDENCE_A,
+            EvidenceLevel.B: BadgeType.EVIDENCE_B,
+            EvidenceLevel.C: BadgeType.EVIDENCE_C,
+            EvidenceLevel.D: BadgeType.EVIDENCE_D,
+        }
+        evidence_type = evidence_type_map.get(regimen.evidence_level, BadgeType.EVIDENCE_C)
+        evidence_text = f"Evidence: {regimen.evidence_level.value}"
+        evidence_badge_html = render_badge(evidence_text, evidence_type, BadgeSize.SMALL)
+    
     # Render indication text using component
     indication_html = render_indication_text(
         regimen.indication,
@@ -113,6 +127,7 @@ def render_regimen_card(regimen, key_prefix: str = ""):
         <div class="card-badges">
             {badge_html}
             {rec_badge_html}
+            {evidence_badge_html}
         </div>
         {indication_html}
     </div>
@@ -249,16 +264,66 @@ def render_regimen_card(regimen, key_prefix: str = ""):
         if st.button(COMMON_TERMS_VI.get("Drug Database", "💊 Thuốc"), key=f"{key_prefix}_drug_db", use_container_width=True):
             st.switch_page("pages/07_💊_Drug_Database.py")
     with col_link4:
-        # Print-friendly button - use Streamlit components approach
-        try:
-            from components.print_friendly import inject_print_styles
-            if st.button("📄 In", key=f"{key_prefix}_print", use_container_width=True, help="In phác đồ"):
-                inject_print_styles()
-                st.info("💡 Sử dụng Ctrl+P (Windows) hoặc Cmd+P (Mac) để in trang")
-        except ImportError:
-            # Fallback: just show info
-            if st.button("📄 In", key=f"{key_prefix}_print", use_container_width=True, help="In phác đồ"):
-                st.info("💡 Sử dụng Ctrl+P (Windows) hoặc Cmd+P (Mac) để in trang")
+        # Export buttons dropdown
+        export_col1, export_col2 = st.columns(2)
+        with export_col1:
+            # Print button
+            try:
+                from components.print_friendly import inject_print_styles
+                if st.button("📄 In", key=f"{key_prefix}_print", use_container_width=True, help="In phác đồ"):
+                    inject_print_styles()
+                    st.info("💡 Sử dụng Ctrl+P (Windows) hoặc Cmd+P (Mac) để in trang")
+            except ImportError:
+                if st.button("📄 In", key=f"{key_prefix}_print", use_container_width=True, help="In phác đồ"):
+                    st.info("💡 Sử dụng Ctrl+P (Windows) hoặc Cmd+P (Mac) để in trang")
+        
+        with export_col2:
+            # Export dropdown
+            try:
+                from antibiotics.export import render_export_buttons
+                export_type = st.selectbox(
+                    "📥 Xuất",
+                    ["PDF", "Copy", "Excel"],
+                    key=f"{key_prefix}_export_type",
+                    label_visibility="collapsed"
+                )
+                
+                if export_type == "PDF":
+                    # Format regimen for export
+                    regimen_data = {
+                        "title": f"{regimen.indication} - {regimen.regimen_type.get_vietnamese_label()}",
+                        "infection_site": "N/A",
+                        "severity": "N/A",
+                        "guideline": "N/A",
+                        "regimens": [{
+                            "name": regimen.indication,
+                            "drugs": [f"{d.drug_name} {d.dose} {d.route} {d.frequency}" for d in regimen.drugs],
+                            "duration": regimen.duration if hasattr(regimen, 'duration') else None,
+                            "notes": regimen.rationale if regimen.rationale else None
+                        }]
+                    }
+                    render_export_buttons(
+                        content_type='protocol',
+                        content_data=regimen_data,
+                        title=f"Phác đồ: {regimen.indication}",
+                        filename=f"phac_do_{regimen.indication.replace(' ', '_')}.pdf"
+                    )
+                elif export_type == "Copy":
+                    # Copy regimen info to clipboard
+                    regimen_text = f"""
+Phác đồ: {regimen.indication}
+Loại: {regimen.regimen_type.get_vietnamese_label()}
+Thuốc:
+"""
+                    for drug in regimen.drugs:
+                        regimen_text += f"- {drug.drug_name} {drug.dose} {drug.route} {drug.frequency}\n"
+                    if regimen.rationale:
+                        regimen_text += f"\nLý do: {regimen.rationale}\n"
+                    
+                    from antibiotics.export import copy_to_clipboard
+                    copy_to_clipboard(regimen_text, "📋 Copy")
+            except ImportError:
+                pass
     
     st.markdown("</div>", unsafe_allow_html=True)
 

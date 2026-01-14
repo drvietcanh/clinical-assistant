@@ -321,6 +321,22 @@ def render_comparison():
                 st.caption("Không cần điều chỉnh hoặc không có dữ liệu")
             st.markdown("---")
     
+    # Visual comparison charts
+    st.markdown("---")
+    try:
+        from .visual_comparison import render_visual_comparison_tabs
+        
+        # Prepare comparison data for visual charts
+        visual_comparison_data = []
+        for ab_name in selected_antibiotics:
+            if ab_name not in ANTIBIOTICS_DATABASE:
+                continue
+            visual_comparison_data.append(ANTIBIOTICS_DATABASE[ab_name])
+        
+        render_visual_comparison_tabs(visual_comparison_data, selected_antibiotics)
+    except ImportError as e:
+        st.info("💡 Tính năng so sánh trực quan đang được cập nhật")
+    
     # Export buttons
     st.markdown("---")
     st.markdown("### 📥 Xuất Kết Quả So Sánh")

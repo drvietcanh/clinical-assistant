@@ -66,6 +66,34 @@ class RecommendationLevel(str, Enum):
         return RECOMMENDATION_LEVEL_VI.get(self.value, self.value)
 
 
+class EvidenceLevel(str, Enum):
+    """Evidence quality level (A/B/C/D)"""
+    A = "A"  # High-quality evidence (RCTs, meta-analyses)
+    B = "B"  # Moderate-quality evidence (observational studies)
+    C = "C"  # Low-quality evidence (case series, expert opinion)
+    D = "D"  # Very low-quality evidence
+    
+    def get_vietnamese_label(self) -> str:
+        """Get Vietnamese label for evidence level"""
+        labels = {
+            "A": "Chất lượng cao (RCT, meta-analysis)",
+            "B": "Chất lượng trung bình (Nghiên cứu quan sát)",
+            "C": "Chất lượng thấp (Case series, ý kiến chuyên gia)",
+            "D": "Chất lượng rất thấp"
+        }
+        return labels.get(self.value, self.value)
+    
+    def get_color(self) -> str:
+        """Get color for evidence level badge"""
+        colors = {
+            "A": "#4caf50",  # Green
+            "B": "#2196f3",  # Blue
+            "C": "#ff9800",  # Orange
+            "D": "#f44336"   # Red
+        }
+        return colors.get(self.value, "#666")
+
+
 class RegimenType(str, Enum):
     """Type of regimen"""
     FIRST_LINE = "FIRST_LINE"
@@ -97,6 +125,7 @@ class Regimen:
     indication: str  # Brief indication
     rationale: Optional[str] = None  # Why this regimen
     recommendation_level: Optional[RecommendationLevel] = None
+    evidence_level: Optional[EvidenceLevel] = None  # Evidence quality (A/B/C/D)
     special_populations: Optional[Dict[str, str]] = None  # e.g., {"pregnancy": "Safe", "renal": "Adjust if CrCl <30"}
     warnings: Optional[List[str]] = None  # e.g., ["QT prolongation risk", "C. difficile risk"]
     step_down_options: Optional[List[DrugDose]] = None  # IV to PO options

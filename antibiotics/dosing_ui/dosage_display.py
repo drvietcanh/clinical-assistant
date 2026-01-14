@@ -5,6 +5,7 @@ Hiển thị kết quả tính liều chi tiết
 
 import streamlit as st
 import pandas as pd
+from datetime import datetime
 from ..dosing_calculator import calculate_detailed_dose
 
 
@@ -199,6 +200,39 @@ def render_detailed_dose(selected_ab, weight, ibw, abw, crcl, indication_code, i
             if detailed_dose.get('infusion_details'):
                 schedule_text += f" (truyền {detailed_dose['infusion_details']['infusion_time_minutes']:.0f} phút)"
             st.info(schedule_text)
+            
+            # Generate and render full dosing schedule
+            try:
+                from ..dosing_schedule import render_dosing_schedule
+                from datetime import datetime, timedelta
+                
+                # Calculate frequency string from interval_hours
+                interval = detailed_dose.get('interval_hours', 12)
+                frequency_map = {
+                    6: "q6h",
+                    8: "q8h",
+                    12: "q12h",
+                    24: "q24h",
+                    48: "q48h"
+                }
+                frequency = frequency_map.get(interval, f"q{int(interval)}h")
+                
+                # Patient info for schedule
+                schedule_patient_info = {
+                    'weight': patient_data['weight'],
+                    'crcl': crcl
+                }
+                
+                render_dosing_schedule(
+                    drug_name=selected_ab,
+                    dose=f"{detailed_dose['calculated_dose_mg']:.0f}mg",
+                    frequency=frequency,
+                    start_time=None,  # Will default to next hour
+                    duration_days=7,
+                    patient_info=schedule_patient_info
+                )
+            except ImportError:
+                pass  # Schedule generator not available
     
     return detailed_dose
 
@@ -338,6 +372,40 @@ def render_dosage_results(result, selected_ab, ab_data, crcl, renal_category, pa
     
     # Side effects
     render_side_effects(ab_data)
+    
+    # Export buttons
+    st.markdown("---")
+    st.markdown("### 📥 Xuất Kết Quả")
+    try:
+        from ..export import render_export_buttons
+        
+        # Prepare export data
+        export_data = {
+            'drug_name': selected_ab,
+            'result': {
+                'dose': result.get('adjustment', 'N/A'),
+                'frequency': detailed_dose.get('frequency', 'N/A') if 'detailed_dose' in locals() else 'N/A',
+                'route': ab_data.get('administration', ['N/A'])[0] if ab_data.get('administration') else 'N/A',
+                'total_daily_dose': detailed_dose.get('total_daily_dose', 'N/A') if 'detailed_dose' in locals() else 'N/A',
+                'warnings': result.get('warnings', []),
+                'notes': result.get('notes', '')
+            },
+            'patient_info': {
+                'Cân nặng': f"{patient_data['weight']:.1f} kg",
+                'CrCl': f"{crcl:.1f} mL/min",
+                'Phân loại thận': renal_category,
+                'Chỉ định': indication_code if indication_code else 'N/A'
+            }
+        }
+        
+        render_export_buttons(
+            content_type='dosing',
+            content_data=export_data,
+            title=f"Kết Quả Tính Liều - {selected_ab}",
+            filename=f"dosing_{selected_ab.replace(' ', '_')}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
+        )
+    except ImportError:
+        st.info("💡 Tính năng xuất sẽ được thêm trong phiên bản tương lai")
     
     # Link to full antibiotic info
     st.markdown("---")

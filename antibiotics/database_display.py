@@ -575,6 +575,20 @@ def display_antibiotic_info(ab_name, ab_data):
             from .iv_compatibility import render_iv_compatibility_checker
             render_iv_compatibility_checker(ab_name)
         
+        # Patient Education (New Feature)
+        try:
+            from .patient_education import render_patient_education
+            render_patient_education(ab_name)
+        except ImportError:
+            pass
+        
+        # Toxicity Management (New Feature)
+        try:
+            from .toxicity_management import render_toxicity_management
+            render_toxicity_management(ab_name)
+        except ImportError:
+            pass
+        
         # Export section
         if show_export:
             st.markdown("---")

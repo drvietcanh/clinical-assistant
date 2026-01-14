@@ -7,21 +7,49 @@ import streamlit as st
 from typing import Dict, List, Optional
 from .antibiotics_data import ANTIBIOTICS_DATABASE
 
+# Hospital list
+VIETNAM_HOSPITALS = {
+    "BACH_MAI": "Bệnh viện Bạch Mai",
+    "CHO_RAY": "Bệnh viện Chợ Rẫy",
+    "108": "Bệnh viện 108",
+    "NHI_DONG": "Bệnh viện Nhi Đồng",
+    "Y_DUOC_HCM": "Bệnh viện Đại học Y Dược TP.HCM",
+    "GENERAL": "Bệnh viện đa khoa tỉnh/thành phố"
+}
+
 # Formulary database - Hospital formulary status
-# Format: {antibiotic_name: {"available": bool, "formulary": bool, "notes": str}}
+# Format: {antibiotic_name: {"available": bool, "formulary": bool, "notes": str, "cost_vnd": float, "hospitals": {hospital_id: status}}}
 HOSPITAL_FORMULARY = {
     "Vancomycin": {
         "available": True,
         "formulary": True,
         "restricted": True,
         "restriction_level": "Restricted - ID approval",
-        "notes": "Cần phê duyệt của khoa Nhiễm"
+        "notes": "Cần phê duyệt của khoa Nhiễm",
+        "cost_vnd": 150000,  # Per 500mg vial (approximate)
+        "hospitals": {
+            "BACH_MAI": {"available": True, "restricted": True},
+            "CHO_RAY": {"available": True, "restricted": True},
+            "108": {"available": True, "restricted": True},
+            "NHI_DONG": {"available": True, "restricted": True},
+            "Y_DUOC_HCM": {"available": True, "restricted": True},
+            "GENERAL": {"available": True, "restricted": True}
+        }
     },
     "Ceftriaxone": {
         "available": True,
         "formulary": True,
         "restricted": False,
-        "notes": "Có sẵn, không hạn chế"
+        "notes": "Có sẵn, không hạn chế",
+        "cost_vnd": 45000,  # Per 1g vial (approximate)
+        "hospitals": {
+            "BACH_MAI": {"available": True, "restricted": False},
+            "CHO_RAY": {"available": True, "restricted": False},
+            "108": {"available": True, "restricted": False},
+            "NHI_DONG": {"available": True, "restricted": False},
+            "Y_DUOC_HCM": {"available": True, "restricted": False},
+            "GENERAL": {"available": True, "restricted": False}
+        }
     },
     "Piperacillin-Tazobactam": {
         "available": True,
@@ -172,12 +200,22 @@ def render_formulary_checker():
     - Dữ liệu formulary có thể khác nhau giữa các bệnh viện
     - Luôn kiểm tra với khoa Dược để xác nhận tình trạng thực tế
     - Các kháng sinh hạn chế cần phê duyệt trước khi sử dụng
+    - Chi phí là ước tính, có thể thay đổi theo từng bệnh viện
     """)
+    
+    # Hospital selection
+    selected_hospital = st.selectbox(
+        "🏥 Chọn bệnh viện:",
+        options=list(VIETNAM_HOSPITALS.keys()),
+        format_func=lambda x: VIETNAM_HOSPITALS[x],
+        key="formulary_hospital",
+        help="Chọn bệnh viện để kiểm tra formulary cụ thể"
+    )
     
     # Mode selection
     mode = st.radio(
         "Chế độ:",
-        ["🔍 Kiểm tra đơn lẻ", "📋 Kiểm tra nhiều kháng sinh", "📊 Danh sách hạn chế"],
+        ["🔍 Kiểm tra đơn lẻ", "📋 Kiểm tra nhiều kháng sinh", "📊 Danh sách hạn chế", "💰 So sánh chi phí"],
         key="formulary_mode"
     )
     
@@ -193,12 +231,17 @@ def render_formulary_checker():
         if st.button("🔍 Kiểm tra", type="primary", use_container_width=True):
             status = get_formulary_status(antibiotic_name)
             
+            # Check hospital-specific status
+            hospital_status = None
+            if "hospitals" in status and selected_hospital in status["hospitals"]:
+                hospital_status = status["hospitals"][selected_hospital]
+            
             st.markdown("---")
             st.markdown("#### 📊 Kết Quả")
             
             # Status display
             if status["available"] and status["formulary"]:
-                if status.get("restricted", False):
+                if status.get("restricted", False) or (hospital_status and hospital_status.get("restricted", False)):
                     color = "#ff9800"
                     icon = "⚠️"
                     message = "Có sẵn nhưng HẠN CHẾ"
@@ -215,6 +258,11 @@ def render_formulary_checker():
                 icon = "❓"
                 message = "Không rõ"
             
+            # Cost information
+            cost_info = ""
+            if "cost_vnd" in status and status["cost_vnd"]:
+                cost_info = f'<p style="margin: 5px 0;"><strong>Chi phí (ước tính):</strong> {status["cost_vnd"]:,.0f} VNĐ</p>'
+            
             st.markdown(f"""
             <div style='
                 background: {color};
@@ -225,7 +273,9 @@ def render_formulary_checker():
             '>
                 <h2 style='margin: 0 0 10px 0; color: white;'>{icon} {message}</h2>
                 <p style='margin: 5px 0;'><strong>Kháng sinh:</strong> {antibiotic_name}</p>
-                {f'<p style="margin: 5px 0;"><strong>Mức độ hạn chế:</strong> {status.get("restriction_level", "N/A")}</p>' if status.get("restricted") else ""}
+                <p style='margin: 5px 0;'><strong>Bệnh viện:</strong> {VIETNAM_HOSPITALS[selected_hospital]}</p>
+                {f'<p style="margin: 5px 0;"><strong>Mức độ hạn chế:</strong> {status.get("restriction_level", "N/A")}</p>' if status.get("restricted") or (hospital_status and hospital_status.get("restricted")) else ""}
+                {cost_info}
                 {f'<p style="margin: 5px 0;"><strong>Ghi chú:</strong> {status.get("notes", "")}</p>' if status.get("notes") else ""}
             </div>
             """, unsafe_allow_html=True)
@@ -297,6 +347,62 @@ def render_formulary_checker():
                         if alternative:
                             st.caption(f"  💡 Gợi ý thay thế: {alternative}")
     
+    elif mode == "💰 So sánh chi phí":
+        st.markdown("#### 💰 So Sánh Chi Phí")
+        
+        antibiotic_names = st.multiselect(
+            "Chọn kháng sinh để so sánh chi phí:",
+            options=sorted(list(ANTIBIOTICS_DATABASE.keys())),
+            key="formulary_cost_comparison"
+        )
+        
+        if st.button("💰 So Sánh Chi Phí", type="primary", use_container_width=True):
+            if not antibiotic_names:
+                st.warning("⚠️ Vui lòng chọn ít nhất một kháng sinh")
+            else:
+                import pandas as pd
+                
+                cost_data = []
+                for ab_name in antibiotic_names:
+                    status = get_formulary_status(ab_name)
+                    cost_data.append({
+                        "Kháng sinh": ab_name,
+                        "Chi phí (VNĐ)": status.get("cost_vnd", 0) if status.get("cost_vnd") else 0,
+                        "Có sẵn": "✅" if status.get("available") and status.get("formulary") else "❌",
+                        "Hạn chế": "⚠️" if status.get("restricted") else "✅",
+                        "Ghi chú": status.get("notes", "")
+                    })
+                
+                df_cost = pd.DataFrame(cost_data)
+                df_cost = df_cost[df_cost["Chi phí (VNĐ)"] > 0]  # Only show drugs with cost data
+                
+                if not df_cost.empty:
+                    st.dataframe(df_cost, use_container_width=True, hide_index=True)
+                    
+                    # Visual comparison
+                    try:
+                        import plotly.graph_objects as go
+                        fig = go.Figure(data=[
+                            go.Bar(
+                                x=df_cost["Kháng sinh"],
+                                y=df_cost["Chi phí (VNĐ)"],
+                                marker_color='#4CAF50',
+                                text=[f"{cost:,.0f} VNĐ" for cost in df_cost["Chi phí (VNĐ)"]],
+                                textposition='outside'
+                            )
+                        ])
+                        fig.update_layout(
+                            title='So Sánh Chi Phí Kháng Sinh',
+                            xaxis_title='Kháng sinh',
+                            yaxis_title='Chi phí (VNĐ)',
+                            height=400
+                        )
+                        st.plotly_chart(fig, use_container_width=True)
+                    except ImportError:
+                        pass
+                else:
+                    st.info("💡 Chưa có dữ liệu chi phí cho các kháng sinh được chọn")
+    
     else:  # Restricted list
         st.markdown("#### 📊 Danh sách Kháng Sinh Hạn Chế")
         
@@ -309,6 +415,8 @@ def render_formulary_checker():
                 status = get_formulary_status(ab_name)
                 with st.expander(f"🔒 {ab_name}", expanded=False):
                     st.markdown(f"**Mức độ hạn chế:** {status.get('restriction_level', 'Cần phê duyệt')}")
+                    if status.get("cost_vnd"):
+                        st.markdown(f"**Chi phí (ước tính):** {status.get('cost_vnd'):,.0f} VNĐ")
                     st.markdown(f"**Ghi chú:** {status.get('notes', '')}")
                     st.info("💡 Liên hệ khoa Nhiễm hoặc khoa Dược để được phê duyệt")
         else:

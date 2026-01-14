@@ -137,6 +137,13 @@ st.markdown("""
 <link rel="stylesheet" href="static/antibiotics_styles.css">
 """, unsafe_allow_html=True)
 
+# Inject print-friendly CSS
+try:
+    from antibiotics.export import inject_print_css
+    inject_print_css()
+except ImportError:
+    pass
+
 # Mobile styles and advanced features injection
 try:
     from antibiotics.mobile_ui import (
@@ -491,6 +498,40 @@ if NEW_UI_AVAILABLE:
                     render_case_studies()
                 except ImportError:
                     st.error("Tính năng Case Studies chưa khả dụng")
+        
+        st.markdown("---")
+        
+        # Section 9: Patient Education & Toxicity Management
+        st.markdown("#### 👥 Giáo Dục Bệnh Nhân & Xử Trí Độc Tính")
+        col15, col16 = st.columns(2)
+        
+        with col15:
+            st.markdown("""
+            <div class="tool-card">
+                <h3>📚 Patient Education</h3>
+                <p>Tài liệu hướng dẫn dùng thuốc cho bệnh nhân: cách dùng, tác dụng phụ, cảnh báo</p>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("Mở Patient Education", key="tool_patient_edu", use_container_width=True):
+                try:
+                    from antibiotics.patient_education import render_patient_education_checker
+                    render_patient_education_checker()
+                except ImportError:
+                    st.error("Tính năng Patient Education chưa khả dụng")
+        
+        with col16:
+            st.markdown("""
+            <div class="tool-card">
+                <h3>⚠️ Toxicity Management</h3>
+                <p>Hướng dẫn xử trí độc tính: triệu chứng, theo dõi, xử trí, phòng ngừa</p>
+            </div>
+            """, unsafe_allow_html=True)
+            if st.button("Mở Toxicity Management", key="tool_toxicity", use_container_width=True):
+                try:
+                    from antibiotics.toxicity_management import render_toxicity_checker
+                    render_toxicity_checker()
+                except ImportError:
+                    st.error("Tính năng Toxicity Management chưa khả dụng")
         
         st.markdown("---")
         
