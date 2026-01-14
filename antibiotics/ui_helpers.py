@@ -1,10 +1,17 @@
 """
 UI Helper Functions for Antibiotics Module
-Common UI components, colors, badges, and styling helpers
+Common UI components, colors, badges, key helpers and styling utilities
 """
 
 from typing import Dict, Tuple
-from .protocols_schema import Severity, RegimenType, RecommendationLevel
+import re
+
+from .protocols_schema import (
+    Severity,
+    RegimenType,
+    RecommendationLevel,
+    AntibioticProtocol,
+)
 
 # Color schemes
 SEVERITY_COLORS: Dict[Severity, Tuple[str, str]] = {
@@ -32,6 +39,66 @@ AWARE_COLORS = {
     "WATCH": "#ffc107",   # Yellow
     "RESERVE": "#f44336"  # Red
 }
+
+
+def slugify_for_key(value: str, max_length: int = 40) -> str:
+    """
+    Convert an arbitrary string into a safe, compact slug for use in Streamlit keys.
+
+    - Lowercase
+    - Replace whitespace with underscores
+    - Remove characters outside [a-z0-9_]
+    - Trim to max_length, falling back to 'item' if empty
+    """
+    if not value:
+        return "item"
+
+    slug = value.strip().lower()
+    slug = re.sub(r"\s+", "_", slug)
+    slug = re.sub(r"[^a-z0-9_]+", "", slug)
+
+    if not slug:
+        slug = "item"
+
+    return slug[:max_length]
+
+
+def make_protocol_key(prefix: str, protocol: AntibioticProtocol, index: int) -> str:
+    """
+    Build a stable, unique key prefix for a protocol and its children.
+
+    Using only site + severity was causing DuplicateElementKey when multiple
+    protocols shared the same combination. We include:
+    - prefix (e.g. 'infection')
+    - infection_site value
+    - severity value
+    - slugified title
+    - protocol index within its group
+    """
+    parts = [
+        prefix,
+        getattr(protocol.infection_site, "value", None),
+        getattr(protocol.severity, "value", None),
+        slugify_for_key(getattr(protocol, "title", "") or "protocol"),
+        str(index),
+    ]
+
+    key = "_".join(p for p in parts if p)
+    # Hard cap to keep keys reasonably short
+    return key[:120]
+
+
+def make_drug_key(base_prefix: str, drug_name: str) -> str:
+    """
+    Build a safe key prefix for drug-level widgets under a regimen.
+
+    This keeps drug names (often có dấu / khoảng trắng) khỏi làm trùng hoặc
+    phá vỡ key của Streamlit.
+    """
+    slug = slugify_for_key(drug_name or "drug")
+    if base_prefix:
+        return f"{base_prefix}_drug_{slug}"
+    return f"drug_{slug}"
 
 
 def get_card_style() -> str:

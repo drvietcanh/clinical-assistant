@@ -12,8 +12,14 @@ from .protocols_schema import (
 from .protocols_data import get_antibiotic_protocols
 from .vietnamese_terms import get_vietnamese_label, COMMON_TERMS_VI
 from .ui_helpers import (
-    SEVERITY_COLORS, REGIMEN_BADGE_COLORS, RECOMMENDATION_COLORS,
-    render_skeleton_loader, render_empty_state
+    SEVERITY_COLORS,
+    REGIMEN_BADGE_COLORS,
+    RECOMMENDATION_COLORS,
+    render_skeleton_loader,
+    render_empty_state,
+    slugify_for_key,
+    make_protocol_key,
+    make_drug_key,
 )
 from .mic_breakpoints import get_common_susceptibility
 from .resistance_patterns import get_antibiotic_resistance_summary
@@ -197,14 +203,23 @@ def render_regimen_card(regimen, key_prefix: str = ""):
             # Empty for spacing
             pass
         with col_drug2:
+            drug_key_base = make_drug_key(key_prefix, getattr(drug, "drug_name", ""))
             # Link to Drug Detail
-            if st.button(COMMON_TERMS_VI.get("Detail", "📖 Chi tiết"), key=f"{key_prefix}_drug_{drug.drug_name}_detail", use_container_width=True):
+            if st.button(
+                COMMON_TERMS_VI.get("Detail", "📖 Chi tiết"),
+                key=f"{drug_key_base}_detail",
+                use_container_width=True,
+            ):
                 st.session_state.drug_search_query = drug.drug_name
                 st.switch_page("pages/07_💊_Drug_Database.py")
             
             # Link to TDM if needed
             if needs_tdm:
-                if st.button(COMMON_TERMS_VI.get("TDM", "📊 TDM"), key=f"{key_prefix}_drug_{drug.drug_name}_tdm", use_container_width=True):
+                if st.button(
+                    COMMON_TERMS_VI.get("TDM", "📊 TDM"),
+                    key=f"{drug_key_base}_tdm",
+                    use_container_width=True,
+                ):
                     st.switch_page("pages/08_📊_TDM.py")
     
     # Rationale
@@ -289,27 +304,6 @@ def render_regimen_card(regimen, key_prefix: str = ""):
     # Integration links and actions - Mobile: Stack, Desktop: 4 columns
     st.markdown("---")
     
-    # Mobile: Stack vertically, Desktop: 4 columns
-    st.markdown("""
-    <style>
-    @media (max-width: 768px) {
-        .action-buttons-container {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-    }
-    @media (min-width: 769px) {
-        .action-buttons-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
-        }
-    }
-    </style>
-    <div class="action-buttons-container">
-    """, unsafe_allow_html=True)
-    
     # Buttons sẽ tự động stack trên mobile nhờ CSS
     col_link1, col_link2, col_link3, col_link4 = st.columns(4)
     with col_link1:
@@ -383,8 +377,6 @@ Thuốc:
                     copy_to_clipboard(regimen_text, "📋 Copy")
             except ImportError:
                 pass
-    
-    st.markdown("</div>", unsafe_allow_html=True)
 
 
 def render_protocols_by_infection(protocols: List[AntibioticProtocol]):
@@ -402,8 +394,9 @@ def render_protocols_by_infection(protocols: List[AntibioticProtocol]):
     for site, site_protocols in sites.items():
         site_vi = InfectionSite(site).get_vietnamese_label()
         with st.expander(f"🦠 {site_vi}", expanded=True):
-            for protocol in site_protocols:
-                render_protocol_card(protocol, key_prefix=f"{site}_{protocol.severity.value}")
+            for idx, protocol in enumerate(site_protocols):
+                key_prefix = make_protocol_key("infection", protocol, idx)
+                render_protocol_card(protocol, key_prefix=key_prefix)
 
 
 def render_filters_sidebar(protocols: ProtocolCollection):
@@ -487,64 +480,10 @@ def filter_protocols(protocols: ProtocolCollection, filters: dict) -> List[Antib
 def render_antibiotics_by_infection_view():
     """Main view for 'By Infection' tab"""
     
-    # Add responsive CSS for mobile optimization and print-friendly styles
-    st.markdown("""
+    # Add print-friendly styles (mobile layout tối ưu đã được xử lý qua CSS chung)
+    st.markdown(
+        """
     <style>
-    /* Mobile optimizations */
-    @media (max-width: 768px) {
-        /* Buttons */
-        .stButton > button {
-            min-height: 48px !important;
-            font-size: 1em !important;
-            padding: 12px 16px !important;
-            width: 100% !important;
-            margin-bottom: 8px !important;
-        }
-        
-        .stButton > button:active {
-            transform: scale(0.98);
-            opacity: 0.9;
-        }
-        
-        /* Expanders */
-        .stExpander {
-            font-size: 0.95em !important;
-        }
-        
-        /* Cards - Full width */
-        .protocol-card,
-        .regimen-card {
-            width: 100% !important;
-            margin-left: 0 !important;
-            margin-right: 0 !important;
-            padding: 16px !important;
-        }
-        
-        /* Columns - Stack on mobile */
-        .stColumns {
-            flex-direction: column !important;
-        }
-        
-        .stColumns > div {
-            width: 100% !important;
-            margin-bottom: 12px !important;
-        }
-        
-        /* Search bar */
-        .stTextInput > div > div > input {
-            font-size: 1em !important;
-            padding: 12px !important;
-        }
-        
-        /* Quick suggestions - Stack vertically on very small screens */
-        @media (max-width: 480px) {
-            .quick-suggestions {
-                flex-direction: column !important;
-            }
-        }
-    }
-    
-    /* Print styles */
     @media print {
         .stButton, .stSidebar, .stHeader {
             display: none !important;
@@ -562,7 +501,9 @@ def render_antibiotics_by_infection_view():
         }
     }
     </style>
-    """, unsafe_allow_html=True)
+    """,
+        unsafe_allow_html=True,
+    )
     
     protocols_collection = get_antibiotic_protocols()
     
@@ -581,36 +522,13 @@ def render_antibiotics_by_infection_view():
             st.rerun()
         return
     
-    # Enhanced search bar with autocomplete suggestions - Sticky on mobile
-    st.markdown("""
-    <style>
-    @media (max-width: 768px) {
-        .sticky-search-container {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: white;
-            padding: 12px 0;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        [data-theme="dark"] .sticky-search-container {
-            background: #1e1e1e;
-        }
-    }
-    </style>
-    <div class="sticky-search-container">
-    """, unsafe_allow_html=True)
-    
+    # Enhanced search bar with autocomplete suggestions
     search_query = st.text_input(
         COMMON_TERMS_VI.get("Search protocols", "🔍 Tìm kiếm phác đồ"),
         placeholder=COMMON_TERMS_VI.get("Search by infection, drug, or guideline...", "Tìm theo nhiễm trùng, thuốc hoặc hướng dẫn..."),
         key="ab_search_protocols",
         help="Tìm kiếm theo tên nhiễm trùng, tên thuốc, hoặc nguồn hướng dẫn"
     )
-    
-    st.markdown("</div>", unsafe_allow_html=True)
     
     # Quick filter chips (only show when no search query)
     if not search_query:

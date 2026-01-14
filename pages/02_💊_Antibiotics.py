@@ -160,68 +160,8 @@ try:
 except ImportError:
     pass
 
-# Mobile styles and advanced features injection
-try:
-    from antibiotics.mobile_ui import (
-        inject_mobile_styles,
-        inject_swipe_gestures,
-        inject_pull_to_refresh,
-        inject_card_swipe_actions,
-        inject_quick_actions_menu,
-        inject_pwa_support,
-        inject_offline_indicator
-    )
-    from antibiotics.performance import (
-        inject_lazy_loading,
-        inject_image_lazy_loading,
-        inject_performance_monitoring
-    )
-    
-    inject_mobile_styles()
-    inject_swipe_gestures()
-    inject_pull_to_refresh()
-    inject_card_swipe_actions()
-    inject_quick_actions_menu()
-    inject_pwa_support()
-    inject_offline_indicator()
-    inject_lazy_loading()
-    inject_image_lazy_loading()
-    inject_performance_monitoring()
-except ImportError:
-    pass
-
-# Main tabs for new UI with mobile optimization
+# Main tabs for new UI
 if NEW_UI_AVAILABLE:
-    # Mobile-optimized tabs
-    st.markdown("""
-    <style>
-    @media (max-width: 768px) {
-        .stTabs {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE/Edge */
-        }
-        
-        .stTabs::-webkit-scrollbar {
-            display: none; /* Chrome/Safari */
-        }
-        
-        .stTabs [role="tab"] {
-            min-width: 120px;
-            padding: 12px 16px;
-            font-size: 0.95em;
-            white-space: nowrap;
-        }
-        
-        .stTabs [role="tab"][aria-selected="true"] {
-            border-bottom: 3px solid #1976D2;
-            font-weight: 600;
-        }
-    }
-    </style>
-    """, unsafe_allow_html=True)
-    
     tab1, tab2, tab3, tab4 = st.tabs([
         "🦠 Theo Nhiễm Trùng",
         "💊 Theo Nhóm Thuốc",
@@ -230,32 +170,12 @@ if NEW_UI_AVAILABLE:
     ])
     
     with tab1:
-        # Mobile bottom nav và FAB
-        try:
-            from antibiotics.mobile_ui import render_mobile_bottom_nav, render_mobile_fab
-            render_mobile_bottom_nav(current_tab="infection")
-            render_mobile_fab()
-        except ImportError:
-            pass
-        
         render_antibiotics_by_infection_view()
     
     with tab2:
-        try:
-            from antibiotics.mobile_ui import render_mobile_bottom_nav
-            render_mobile_bottom_nav(current_tab="drugs")
-        except ImportError:
-            pass
-        
         render_antibiotics_by_drug_class_view()
     
     with tab3:
-        try:
-            from antibiotics.mobile_ui import render_mobile_bottom_nav
-            render_mobile_bottom_nav(current_tab="stewardship")
-        except ImportError:
-            pass
-        
         render_stewardship_view()
     
     with tab4:
@@ -265,7 +185,7 @@ if NEW_UI_AVAILABLE:
         except ImportError:
             pass
         
-        # Optimized Tools tab with card-based layout
+        # Optimized Tools tab with compact, card-based layout
         st.markdown("### 🔧 Công cụ")
         st.caption("Các công cụ tra cứu, so sánh và tính toán kháng sinh")
         
@@ -387,244 +307,246 @@ if NEW_UI_AVAILABLE:
                 st.switch_page("pages/07_💊_Drug_Database.py")
         
         st.markdown("---")
-        
-        # Section 4: Phác đồ
-        st.markdown("#### 📋 Phác đồ")
-        col7, col8 = st.columns(2)
-        
-        with col7:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>🔄 Treatment Algorithms</h3>
-                <p>Phác đồ điều trị theo từng loại nhiễm trùng: CAP, HAP, UTI, Sepsis</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở Algorithms", key="tool_algorithms", use_container_width=True):
-                render_algorithms_page()
-        
-        with col8:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>🧙 Antibiotic Wizard</h3>
-                <p>Trợ lý chọn kháng sinh: nhập thông tin lâm sàng để nhận đề xuất</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở Wizard", key="tool_wizard", use_container_width=True):
-                st.session_state.show_wizard = True
-                st.rerun()
-        
-        st.markdown("---")
-        
-        # Section 5: Phase 1 New Features
-        st.markdown("#### 🆕 Tính Năng Mới (Phase 1)")
-        col9, col10 = st.columns(2)
-        
-        with col9:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>🔍 Allergy Checker</h3>
-                <p>Kiểm tra phản ứng chéo giữa các beta-lactam và kháng sinh khác</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở Allergy Checker", key="tool_allergy", use_container_width=True):
-                try:
-                    from antibiotics.allergy_checker import render_allergy_checker
-                    render_allergy_checker()
-                except ImportError:
-                    st.error("Tính năng Allergy Checker chưa khả dụng")
-        
-        with col10:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>📊 Spectrum Charts</h3>
-                <p>Biểu đồ phổ tác dụng trực quan cho kháng sinh</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở Spectrum Charts", key="tool_spectrum", use_container_width=True):
-                try:
-                    from antibiotics.spectrum_charts import render_spectrum_charts
-                    render_spectrum_charts()
-                except ImportError:
-                    st.error("Tính năng Spectrum Charts chưa khả dụng")
-        
-        st.markdown("---")
-        
-        # Section 6: Phase 2 Advanced Features
-        st.markdown("#### 🚀 Tính Năng Nâng Cao (Phase 2)")
-        col11, col12 = st.columns(2)
-        
-        with col11:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>🧮 PK/PD Calculator</h3>
-                <p>Tính toán AUC/MIC, Time above MIC, Cmax/MIC</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở PK/PD Calculator", key="tool_pkpd", use_container_width=True):
-                try:
-                    from antibiotics.pkpd_calculators import render_pkpd_calculator
-                    render_pkpd_calculator()
-                except ImportError:
-                    st.error("Tính năng PK/PD Calculator chưa khả dụng")
-        
-        with col12:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>💰 Cost Comparison</h3>
-                <p>So sánh chi phí điều trị giữa các kháng sinh</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở Cost Comparison", key="tool_cost", use_container_width=True):
-                try:
-                    from antibiotics.cost_comparison import render_cost_comparison
-                    render_cost_comparison()
-                except ImportError:
-                    st.error("Tính năng Cost Comparison chưa khả dụng")
-        
-        st.markdown("---")
 
-        # Section: What's New specific to Antibiotics
-        st.markdown("#### 🆕 Có gì mới trong Module Kháng sinh?")
-        st.caption("Xem nhanh các cập nhật gần đây cho riêng module Kháng sinh.")
-        if st.button("Mở danh sách cập nhật", key="tool_antibiotics_whats_new", use_container_width=True):
-            try:
-                render_whats_new()
-            except Exception:
-                st.error("Không thể tải danh sách cập nhật.")
-        
-        st.markdown("---")
-        
-        # Section 7: Phase 3 Educational Features
-        st.markdown("#### 📚 Tính Năng Giáo Dục (Phase 3)")
-        col13, col14 = st.columns(2)
-        
-        with col13:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>📝 Quizzes</h3>
-                <p>Câu hỏi trắc nghiệm về kháng sinh: liều dùng, phổ tác dụng, PK/PD</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở Quizzes", key="tool_quizzes", use_container_width=True):
-                try:
-                    from antibiotics.education.quizzes import render_quizzes
-                    render_quizzes()
-                except ImportError:
-                    st.error("Tính năng Quizzes chưa khả dụng")
-        
-        with col14:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>📚 Case Studies</h3>
-                <p>Tình huống lâm sàng thực tế để học cách sử dụng kháng sinh</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở Case Studies", key="tool_cases", use_container_width=True):
-                try:
-                    from antibiotics.education.case_studies import render_case_studies
-                    render_case_studies()
-                except ImportError:
-                    st.error("Tính năng Case Studies chưa khả dụng")
-        
-        st.markdown("---")
-        
-        # Section 9: Patient Education & Toxicity Management
-        st.markdown("#### 👥 Giáo Dục Bệnh Nhân & Xử Trí Độc Tính")
-        col15, col16 = st.columns(2)
-        
-        with col15:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>📚 Patient Education</h3>
-                <p>Tài liệu hướng dẫn dùng thuốc cho bệnh nhân: cách dùng, tác dụng phụ, cảnh báo</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở Patient Education", key="tool_patient_edu", use_container_width=True):
-                try:
-                    from antibiotics.patient_education import render_patient_education_checker
-                    render_patient_education_checker()
-                except ImportError:
-                    st.error("Tính năng Patient Education chưa khả dụng")
-        
-        with col16:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>⚠️ Toxicity Management</h3>
-                <p>Hướng dẫn xử trí độc tính: triệu chứng, theo dõi, xử trí, phòng ngừa</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở Toxicity Management", key="tool_toxicity", use_container_width=True):
-                try:
-                    from antibiotics.toxicity_management import render_toxicity_checker
-                    render_toxicity_checker()
-                except ImportError:
-                    st.error("Tính năng Toxicity Management chưa khả dụng")
-        
-        st.markdown("---")
-        
-        # Section 8: Phase 4 Integration Features
-        st.markdown("#### 🔗 Tích Hợp & Phân tích (Phase 4)")
-        col15, col16, col17 = st.columns(3)
-        
-        with col15:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>🏥 Formulary Checker</h3>
-                <p>Kiểm tra kháng sinh có trong formulary và tình trạng hạn chế</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở Formulary", key="tool_formulary", use_container_width=True):
-                try:
-                    from antibiotics.formulary import render_formulary_checker
-                    render_formulary_checker()
-                except ImportError:
-                    st.error("Tính năng Formulary chưa khả dụng")
-        
-        with col16:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>📊 Analytics</h3>
-                <p>Theo dõi lịch sử sử dụng và thống kê về kháng sinh</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("Mở Analytics", key="tool_analytics", use_container_width=True):
-                try:
-                    from antibiotics.analytics import render_analytics
-                    render_analytics()
-                except ImportError:
-                    st.error("Tính năng Analytics chưa khả dụng")
-        
-        with col17:
-            st.markdown("""
-            <div class="tool-card">
-                <h3>📴 Offline Mode</h3>
-                <p>Chế độ offline và PWA support</p>
-            </div>
-            """, unsafe_allow_html=True)
-            if st.button("ℹ️ Thông tin PWA", key="tool_pwa_info", use_container_width=True):
-                st.info("""
-                **PWA (Progressive Web App) Features:**
-                - Cài đặt như ứng dụng trên điện thoại
-                - Hoạt động offline (một phần)
-                - Tải nhanh hơn với caching
-                - Thông báo khi có cập nhật
-                
-                **Để cài đặt:**
-                - Trên Chrome/Edge: Nhấn menu → "Cài đặt ứng dụng"
-                - Trên Safari iOS: Nhấn Share → "Thêm vào Màn hình chính"
-                """)
+        # Các tính năng nâng cao gom gọn trong một expander
+        with st.expander("🧪 Tính năng nâng cao (Phase 1–4, Giáo dục, Tích hợp)", expanded=False):
+            # Section 4: Phác đồ
+            st.markdown("#### 📋 Phác đồ")
+            col7, col8 = st.columns(2)
+            
+            with col7:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>🔄 Treatment Algorithms</h3>
+                    <p>Phác đồ điều trị theo từng loại nhiễm trùng: CAP, HAP, UTI, Sepsis</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở Algorithms", key="tool_algorithms", use_container_width=True):
+                    render_algorithms_page()
+            
+            with col8:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>🧙 Antibiotic Wizard</h3>
+                    <p>Trợ lý chọn kháng sinh: nhập thông tin lâm sàng để nhận đề xuất</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở Wizard", key="tool_wizard", use_container_width=True):
+                    st.session_state.show_wizard = True
+                    st.rerun()
+            
+            st.markdown("---")
+            
+            # Section 5: Phase 1 New Features
+            st.markdown("#### 🆕 Tính Năng Mới (Phase 1)")
+            col9, col10 = st.columns(2)
+            
+            with col9:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>🔍 Allergy Checker</h3>
+                    <p>Kiểm tra phản ứng chéo giữa các beta-lactam và kháng sinh khác</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở Allergy Checker", key="tool_allergy", use_container_width=True):
+                    try:
+                        from antibiotics.allergy_checker import render_allergy_checker
+                        render_allergy_checker()
+                    except ImportError:
+                        st.error("Tính năng Allergy Checker chưa khả dụng")
+            
+            with col10:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>📊 Spectrum Charts</h3>
+                    <p>Biểu đồ phổ tác dụng trực quan cho kháng sinh</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở Spectrum Charts", key="tool_spectrum", use_container_width=True):
+                    try:
+                        from antibiotics.spectrum_charts import render_spectrum_charts
+                        render_spectrum_charts()
+                    except ImportError:
+                        st.error("Tính năng Spectrum Charts chưa khả dụng")
+            
+            st.markdown("---")
+            
+            # Section 6: Phase 2 Advanced Features
+            st.markdown("#### 🚀 Tính Năng Nâng Cao (Phase 2)")
+            col11, col12 = st.columns(2)
+            
+            with col11:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>🧮 PK/PD Calculator</h3>
+                    <p>Tính toán AUC/MIC, Time above MIC, Cmax/MIC</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở PK/PD Calculator", key="tool_pkpd", use_container_width=True):
+                    try:
+                        from antibiotics.pkpd_calculators import render_pkpd_calculator
+                        render_pkpd_calculator()
+                    except ImportError:
+                        st.error("Tính năng PK/PD Calculator chưa khả dụng")
+            
+            with col12:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>💰 Cost Comparison</h3>
+                    <p>So sánh chi phí điều trị giữa các kháng sinh</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở Cost Comparison", key="tool_cost", use_container_width=True):
+                    try:
+                        from antibiotics.cost_comparison import render_cost_comparison
+                        render_cost_comparison()
+                    except ImportError:
+                        st.error("Tính năng Cost Comparison chưa khả dụng")
+            
+            st.markdown("---")
 
-        st.markdown("---")
+            # Section: What's New specific to Antibiotics
+            st.markdown("#### 🆕 Có gì mới trong Module Kháng sinh?")
+            st.caption("Xem nhanh các cập nhật gần đây cho riêng module Kháng sinh.")
+            if st.button("Mở danh sách cập nhật", key="tool_antibiotics_whats_new", use_container_width=True):
+                try:
+                    render_whats_new()
+                except Exception:
+                    st.error("Không thể tải danh sách cập nhật.")
+            
+            st.markdown("---")
+            
+            # Section 7: Phase 3 Educational Features
+            st.markdown("#### 📚 Tính Năng Giáo Dục (Phase 3)")
+            col13, col14 = st.columns(2)
+            
+            with col13:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>📝 Quizzes</h3>
+                    <p>Câu hỏi trắc nghiệm về kháng sinh: liều dùng, phổ tác dụng, PK/PD</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở Quizzes", key="tool_quizzes", use_container_width=True):
+                    try:
+                        from antibiotics.education.quizzes import render_quizzes
+                        render_quizzes()
+                    except ImportError:
+                        st.error("Tính năng Quizzes chưa khả dụng")
+            
+            with col14:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>📚 Case Studies</h3>
+                    <p>Tình huống lâm sàng thực tế để học cách sử dụng kháng sinh</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở Case Studies", key="tool_cases", use_container_width=True):
+                    try:
+                        from antibiotics.education.case_studies import render_case_studies
+                        render_case_studies()
+                    except ImportError:
+                        st.error("Tính năng Case Studies chưa khả dụng")
+            
+            st.markdown("---")
+            
+            # Section 9: Patient Education & Toxicity Management
+            st.markdown("#### 👥 Giáo Dục Bệnh Nhân & Xử Trí Độc Tính")
+            col15, col16 = st.columns(2)
+            
+            with col15:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>📚 Patient Education</h3>
+                    <p>Tài liệu hướng dẫn dùng thuốc cho bệnh nhân: cách dùng, tác dụng phụ, cảnh báo</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở Patient Education", key="tool_patient_edu", use_container_width=True):
+                    try:
+                        from antibiotics.patient_education import render_patient_education_checker
+                        render_patient_education_checker()
+                    except ImportError:
+                        st.error("Tính năng Patient Education chưa khả dụng")
+            
+            with col16:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>⚠️ Toxicity Management</h3>
+                    <p>Hướng dẫn xử trí độc tính: triệu chứng, theo dõi, xử trí, phòng ngừa</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở Toxicity Management", key="tool_toxicity", use_container_width=True):
+                    try:
+                        from antibiotics.toxicity_management import render_toxicity_checker
+                        render_toxicity_checker()
+                    except ImportError:
+                        st.error("Tính năng Toxicity Management chưa khả dụng")
+            
+            st.markdown("---")
+            
+            # Section 8: Phase 4 Integration Features
+            st.markdown("#### 🔗 Tích Hợp & Phân tích (Phase 4)")
+            col15, col16, col17 = st.columns(3)
+            
+            with col15:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>🏥 Formulary Checker</h3>
+                    <p>Kiểm tra kháng sinh có trong formulary và tình trạng hạn chế</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở Formulary", key="tool_formulary", use_container_width=True):
+                    try:
+                        from antibiotics.formulary import render_formulary_checker
+                        render_formulary_checker()
+                    except ImportError:
+                        st.error("Tính năng Formulary chưa khả dụng")
+            
+            with col16:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>📊 Analytics</h3>
+                    <p>Theo dõi lịch sử sử dụng và thống kê về kháng sinh</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("Mở Analytics", key="tool_analytics", use_container_width=True):
+                    try:
+                        from antibiotics.analytics import render_analytics
+                        render_analytics()
+                    except ImportError:
+                        st.error("Tính năng Analytics chưa khả dụng")
+            
+            with col17:
+                st.markdown("""
+                <div class="tool-card">
+                    <h3>📴 Offline Mode</h3>
+                    <p>Chế độ offline và PWA support</p>
+                </div>
+                """, unsafe_allow_html=True)
+                if st.button("ℹ️ Thông tin PWA", key="tool_pwa_info", use_container_width=True):
+                    st.info("""
+                    **PWA (Progressive Web App) Features:**
+                    - Cài đặt như ứng dụng trên điện thoại
+                    - Hoạt động offline (một phần)
+                    - Tải nhanh hơn với caching
+                    - Thông báo khi có cập nhật
+                    
+                    **Để cài đặt:**
+                    - Trên Chrome/Edge: Nhấn menu → "Cài đặt ứng dụng"
+                    - Trên Safari iOS: Nhấn Share → "Thêm vào Màn hình chính"
+                    """)
+           
+            st.markdown("---")
 
-        # Section 10: Antibiogram (Phase 1)
-        st.markdown("#### 🧫 Antibiogram (Phase 1)")
-        st.caption("Kháng thuốc theo bệnh viện (demo) để hỗ trợ chọn kháng sinh kinh nghiệm")
-        if st.button("Mở Antibiogram", key="tool_antibiogram", use_container_width=True):
-            try:
-                from antibiotics.antibiogram import render_antibiogram_view
-                render_antibiogram_view()
-            except ImportError:
-                st.error("Tính năng Antibiogram chưa khả dụng")
+            # Section 10: Antibiogram (Phase 1)
+            st.markdown("#### 🧫 Antibiogram (Phase 1)")
+            st.caption("Kháng thuốc theo bệnh viện (demo) để hỗ trợ chọn kháng sinh kinh nghiệm")
+            if st.button("Mở Antibiogram", key="tool_antibiogram", use_container_width=True):
+                try:
+                    from antibiotics.antibiogram import render_antibiogram_view
+                    render_antibiogram_view()
+                except ImportError:
+                    st.error("Tính năng Antibiogram chưa khả dụng")
 else:
     # Fallback to old UI if new components not available
     st.warning("⚠️ New UI components not available. Using legacy interface.")

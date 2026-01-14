@@ -26,6 +26,9 @@ from components.news_logic import (
 )
 
 
+ADMIN_PASSWORD = "canh1234"
+
+
 setup_page(
     page_title="Admin",
     page_icon="🛠️",
@@ -36,18 +39,30 @@ setup_page(
 track_page_view("Admin")
 
 st.title("🛠️ Admin (Local)")
-st.caption(f"Profile hiện tại: **{get_profile_label(get_current_profile())}** • Lưu ý: mọi thay đổi ghi vào file local `data/`.")
+st.caption(
+    f"Profile hiện tại: **{get_profile_label(get_current_profile())}** • Lưu ý: mọi thay đổi ghi vào file local `data/`."
+)
 
-# Optional PIN protection via env var ADMIN_PIN
-required_pin = os.getenv("ADMIN_PIN", "").strip()
-if required_pin:
-    pin = st.text_input("🔒 Nhập ADMIN_PIN", type="password")
-    if pin != required_pin:
-        st.warning("Cần ADMIN_PIN để truy cập Admin.")
-        render_standard_footer()
-        st.stop()
-else:
-    st.info("Chưa set `ADMIN_PIN` → Admin đang mở. (Khuyến nghị set biến môi trường ADMIN_PIN khi deploy)")
+# Simple login screen for Admin
+if "admin_logged_in" not in st.session_state:
+    st.session_state.admin_logged_in = False
+
+if not st.session_state.admin_logged_in:
+    st.subheader("🔒 Đăng nhập Admin")
+    with st.form("admin_login_form"):
+        password = st.text_input("Mật khẩu", type="password")
+        submitted = st.form_submit_button("Đăng nhập")
+
+    if submitted:
+        if password == ADMIN_PASSWORD:
+            st.session_state.admin_logged_in = True
+            st.success("Đăng nhập thành công.")
+            st.experimental_rerun()
+        else:
+            st.error("Sai mật khẩu. Vui lòng thử lại.")
+
+    render_standard_footer()
+    st.stop()
 
 tab_updates, tab_news = st.tabs(["🆕 Manage Updates", "📰 News / RSS Config"])
 
