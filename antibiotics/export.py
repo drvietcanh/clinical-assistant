@@ -13,6 +13,11 @@ import base64
 from components.export_pdf import generate_pdf_html, render_pdf_export_button
 
 
+# Global counters to ensure unique widget keys across the app lifetime
+EXPORT_BUTTON_COUNTER = 0
+COPY_BUTTON_COUNTER = 0
+
+
 def format_dosing_result_for_export(
     drug_name: str,
     dose_result: Dict[str, Any],
@@ -259,10 +264,13 @@ def copy_to_clipboard(text: str, button_label: str = "📋 Copy", key: Optional[
     Args:
         text: Text to copy
         button_label: Button label
-        key: Unique key for the button
+        key: Unique key for the button (if None, a unique key will be generated)
     """
+    global COPY_BUTTON_COUNTER
     if key is None:
-        key = f"copy_{hash(text) % 10000}"
+        # Use a monotonic counter instead of hash(text) to avoid duplicate keys
+        COPY_BUTTON_COUNTER += 1
+        key = f"copy_{COPY_BUTTON_COUNTER}"
     
     # Use Streamlit's download button approach for better compatibility
     # Create a text file in memory and use download button
@@ -375,8 +383,10 @@ def render_export_buttons(
         content_type: Type of content ('dosing', 'protocol', 'comparison')
         content_data: Data to export
         title: Document title
-        filename: Suggested filename
+        filename: Suggested filename (also used as part of widget key generation)
     """
+    global EXPORT_BUTTON_COUNTER
+
     col1, col2, col3 = st.columns(3)
     
     # Format content based on type
@@ -422,8 +432,16 @@ So Sánh Kháng Sinh: {', '.join(content_data.get('drugs', []))}
         )
     
     with col2:
-        # Generate unique key based on filename or title to avoid duplicate keys
-        unique_key = filename if filename else f"{content_type}_{hash(title) % 100000}"
+        # Generate a globally unique key to avoid StreamlitDuplicateElementKey
+        EXPORT_BUTTON_COUNTER += 1
+        instance_id = EXPORT_BUTTON_COUNTER
+
+        if filename:
+            base_key = filename
+        else:
+            base_key = f"{content_type}_{hash(title) % 100000}"
+
+        unique_key = f"{base_key}_{instance_id}"
         copy_to_clipboard(text_content, "📋 Copy", key=unique_key)
     
     with col3:
