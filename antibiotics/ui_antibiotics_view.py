@@ -17,7 +17,12 @@ from .ui_helpers import (
 )
 from .mic_breakpoints import get_common_susceptibility
 from .resistance_patterns import get_antibiotic_resistance_summary
-from .antibiogram import get_antibiogram, get_available_hospitals
+from .antibiogram import (
+    get_antibiogram,
+    get_available_hospitals,
+    get_default_hospital_id,
+    set_default_hospital_id,
+)
 from .components.badges import render_badge, BadgeType, BadgeSize
 from .components.typography import render_guideline_badge, render_indication_text
 from .protocol_versioning import get_protocol_version_info
@@ -227,13 +232,15 @@ def render_regimen_card(regimen, key_prefix: str = ""):
         # Antibiogram quick view (hospital-based, Phase 1)
         with st.expander("🧫 Antibiogram theo bệnh viện (demo)", expanded=False):
             hospitals = get_available_hospitals()
+            default_hospital = get_default_hospital_id(hospitals)
             hospital_id = st.selectbox(
                 "Bệnh viện",
                 options=list(hospitals.keys()),
                 format_func=lambda k: hospitals.get(k, k),
-                index=list(hospitals.keys()).index("GENERAL") if "GENERAL" in hospitals else 0,
+                index=list(hospitals.keys()).index(default_hospital),
                 key=f"{key_prefix}_antibiogram_hospital",
             )
+            set_default_hospital_id(hospital_id)
             metric = st.radio(
                 "Chỉ số",
                 options=["S (%)", "I (%)", "R (%)"],

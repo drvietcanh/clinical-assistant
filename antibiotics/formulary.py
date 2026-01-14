@@ -6,6 +6,7 @@ Tích hợp với danh mục thuốc bệnh viện và kiểm tra tình trạng 
 import streamlit as st
 from typing import Dict, List, Optional
 from .antibiotics_data import ANTIBIOTICS_DATABASE
+from .antibiogram import get_default_hospital_id, set_default_hospital_id
 
 # Hospital list
 VIETNAM_HOSPITALS = {
@@ -203,14 +204,17 @@ def render_formulary_checker():
     - Chi phí là ước tính, có thể thay đổi theo từng bệnh viện
     """)
     
-    # Hospital selection
+    # Hospital selection (personalized default)
+    default_hospital = get_default_hospital_id(VIETNAM_HOSPITALS)
     selected_hospital = st.selectbox(
         "🏥 Chọn bệnh viện:",
         options=list(VIETNAM_HOSPITALS.keys()),
         format_func=lambda x: VIETNAM_HOSPITALS[x],
+        index=list(VIETNAM_HOSPITALS.keys()).index(default_hospital),
         key="formulary_hospital",
         help="Chọn bệnh viện để kiểm tra formulary cụ thể"
     )
+    set_default_hospital_id(selected_hospital)
     
     # Mode selection
     mode = st.radio(

@@ -6,16 +6,73 @@ Test all features from Phase 1-5
 import sys
 from pathlib import Path
 import os
+import types
 
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-# Mock streamlit to avoid import errors
-class MockStreamlit:
-    def __getattr__(self, name):
-        return lambda *args, **kwargs: None
+# Mock streamlit to avoid import errors when running in bare Python.
+# We need real module objects for `import streamlit.components.v1 as components`
+# and decorator st.cache_data usage.
+def _make_streamlit_mock() -> None:
+    st_mod = types.ModuleType("streamlit")
 
-sys.modules['streamlit'] = MockStreamlit()
+    # Basic UI functions used across modules
+    def _noop(*args, **kwargs):
+        return None
+
+    # Common streamlit API st.* should exist
+    for name in [
+        "markdown",
+        "caption",
+        "info",
+        "success",
+        "warning",
+        "error",
+        "write",
+        "dataframe",
+        "image",
+        "button",
+        "selectbox",
+        "multiselect",
+        "radio",
+        "text_input",
+        "text_area",
+        "columns",
+        "expander",
+        "container",
+        "spinner",
+        "rerun",
+        "switch_page",
+        "tabs",
+        "toggle",
+        "slider",
+        "checkbox",
+    ]:
+        setattr(st_mod, name, _noop)
+
+    # session_state used as dict-like
+    st_mod.session_state = {}
+
+    # Decorators: cache_data should return a decorator that returns the function unchanged
+    def cache_data(*args, **kwargs):
+        def _decorator(fn):
+            return fn
+        return _decorator
+
+    st_mod.cache_data = cache_data
+
+    # streamlit.components.v1 shim
+    components_pkg = types.ModuleType("streamlit.components")
+    components_v1 = types.ModuleType("streamlit.components.v1")
+    components_v1.html = _noop
+
+    sys.modules["streamlit"] = st_mod
+    sys.modules["streamlit.components"] = components_pkg
+    sys.modules["streamlit.components.v1"] = components_v1
+
+
+_make_streamlit_mock()
 os.environ['STREAMLIT_TESTING'] = '1'
 
 def test_phase_1_vial_management():
@@ -169,6 +226,112 @@ def test_phase_3_enhanced_infusion():
     except Exception as e:
         print(f"\n[FAIL] Phase 3: Test failed - {str(e)}")
         import traceback
+        traceback.print_exc()
+        return False
+
+
+def test_phase_antibiotics_antibiogram_rrt():
+    """Test Antibiotics: antibiogram parsing and RRT dosing guidance"""
+    print("\n" + "=" * 60)
+    print("TESTING ANTIBIOTICS: ANTIBIOGRAM & RRT DOSING")
+    print("=" * 60)
+
+    try:
+        import pandas as pd
+
+        from antibiotics.antibiogram import parse_antibiogram_df, get_antibiogram
+        from antibiotics.rrt_dosing import get_rrt_guidance
+
+        # Test antibiogram parsing from a small DataFrame
+        df = pd.DataFrame(
+            [
+                {
+                    "hospital": "TEST_HOSP",
+                    "organism": "E. coli",
+                    "antibiotic": "Ceftriaxone",
+                    "s": 60,
+                    "i": 5,
+                    "r": 35,
+                    "n": 100,
+                    "notes": "Demo",
+                }
+            ]
+        )
+        parsed = parse_antibiogram_df(df)
+        assert "TEST_HOSP" in parsed, "Parsed antibiogram should contain TEST_HOSP"
+        assert "E. coli" in parsed["TEST_HOSP"], "Parsed antibiogram should contain organism"
+        assert (
+            "Ceftriaxone" in parsed["TEST_HOSP"]["E. coli"]
+        ), "Parsed antibiogram should contain antibiotic"
+        print("   [OK] Pass: parse_antibiogram_df")
+
+        # Test built-in antibiogram demo data
+        abg = get_antibiogram("BACH_MAI")
+        assert isinstance(abg, dict) and abg, "get_antibiogram should return non-empty dict"
+        print("   [OK] Pass: get_antibiogram demo data")
+
+        # Test RRT dosing guidance for a known drug
+        guidance = get_rrt_guidance("Meropenem")
+        assert guidance is not None, "Should return RRT guidance for Meropenem"
+        assert guidance.crtt_summary, "CRRT summary should not be empty"
+        print("   [OK] Pass: get_rrt_guidance for Meropenem")
+
+        print("\n[PASS] Antibiotics: antibiogram & RRT dosing tests passed!")
+        return True
+    except Exception as e:
+        print(f"\n[FAIL] Antibiotics: Test failed - {str(e)}")
+        import traceback
+
+        traceback.print_exc()
+        return False
+
+
+def test_phase_antibiotics_dosing_calculator():
+    """Test Antibiotics: dosing calculator core functions"""
+    print("\n" + "=" * 60)
+    print("TESTING ANTIBIOTICS: DOSING CALCULATOR")
+    print("=" * 60)
+
+    try:
+        from antibiotics.dosing_calculations import (
+            calculate_detailed_dose,
+            calculate_adjusted_dose,
+        )
+
+        # Basic detailed dose calculation for a known antibiotic
+        detailed = calculate_detailed_dose(
+            "Ceftriaxone",
+            weight_kg=70,
+            ibw=70,
+            abw=70,
+            crcl=90,
+            indication="standard",
+            is_pediatric=False,
+        )
+        assert detailed is not None, "calculate_detailed_dose should return a result"
+        assert detailed.get("calculated_dose_mg", 0) > 0, "Dose should be > 0"
+        print("   [OK] Pass: calculate_detailed_dose for Ceftriaxone")
+
+        # Adjusted dose with CRRT/ECMO flags to ensure hooks work
+        adjusted = calculate_adjusted_dose(
+            "Meropenem",
+            crcl=80,
+            egfr=90,
+            indication="severe",
+            is_icu=True,
+            is_continuous_hd=True,
+            is_ecmo=True,
+        )
+        assert "adjustment" in adjusted, "Adjusted dose should contain adjustment text"
+        assert "notes" in adjusted, "Adjusted dose should contain notes"
+        print("   [OK] Pass: calculate_adjusted_dose for Meropenem (CRRT/ECMO)")
+
+        print("\n[PASS] Antibiotics: dosing calculator tests passed!")
+        return True
+    except Exception as e:
+        print(f"\n[FAIL] Antibiotics dosing: Test failed - {str(e)}")
+        import traceback
+
         traceback.print_exc()
         return False
 
@@ -413,6 +576,8 @@ def main():
     results.append(("Phase 5.1: Multiple Infusions", test_phase_5_multiple_infusions()))
     results.append(("Phase 5.2: Compatibility", test_phase_5_compatibility()))
     results.append(("Phase 5.3: Electrolyte", test_phase_5_electrolyte()))
+    results.append(("Antibiotics: Antibiogram & RRT", test_phase_antibiotics_antibiogram_rrt()))
+    results.append(("Antibiotics: Dosing Calculator", test_phase_antibiotics_dosing_calculator()))
     
     # Summary
     print("\n" + "="*60)

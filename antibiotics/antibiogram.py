@@ -17,6 +17,7 @@ from typing import Dict, Optional, Tuple, List, Any
 
 import streamlit as st
 import pandas as pd
+from config.user_profile import get_current_profile
 
 
 @dataclass(frozen=True)
@@ -198,6 +199,35 @@ def get_available_hospitals() -> Dict[str, str]:
     return dict(VIETNAM_HOSPITALS)
 
 
+def _get_default_hospital_key() -> str:
+    """Session-state key for default hospital, scoped by user profile."""
+    profile = get_current_profile()
+    return f"default_hospital_{profile}"
+
+
+def get_default_hospital_id(hospitals: Dict[str, str]) -> str:
+    """
+    Get default hospital id for current user/profile.
+    Falls back to GENERAL or first entry.
+    """
+    key = _get_default_hospital_key()
+    stored = st.session_state.get(key)
+    if isinstance(stored, str) and stored in hospitals:
+        return stored
+    if "GENERAL" in hospitals:
+        return "GENERAL"
+    # Fallback to first key
+    return next(iter(hospitals.keys()))
+
+
+def set_default_hospital_id(hospital_id: str) -> None:
+    """Persist default hospital id in session_state for current profile."""
+    if not hospital_id:
+        return
+    key = _get_default_hospital_key()
+    st.session_state[key] = hospital_id
+
+
 def _normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
     """Normalize column names for CSV import."""
     col_map = {
@@ -322,7 +352,12 @@ def render_antibiogram_view() -> None:
     if "abx_custom_antibiogram" in st.session_state:
         hospitals = {"CUSTOM_UPLOAD": "📂 Dữ liệu tải lên"} | hospitals
 
-    default_idx = list(hospitals.keys()).index("CUSTOM_UPLOAD") if "CUSTOM_UPLOAD" in hospitals else (list(hospitals.keys()).index("GENERAL") if "GENERAL" in hospitals else 0)
+    # Personalization: default hospital per user/profile
+    default_hospital = get_default_hospital_id(hospitals)
+    if "CUSTOM_UPLOAD" in hospitals and "abx_custom_antibiogram" in st.session_state:
+        default_hospital = "CUSTOM_UPLOAD"
+
+    default_idx = list(hospitals.keys()).index(default_hospital)
 
     hospital_id = st.selectbox(
         "Chọn bệnh viện",
@@ -331,6 +366,10 @@ def render_antibiogram_view() -> None:
         index=default_idx,
         key="abx_antibiogram_hospital",
     )
+
+    # Update default preference (ignore CUSTOM_UPLOAD to avoid surprises)
+    if hospital_id != "CUSTOM_UPLOAD":
+        set_default_hospital_id(hospital_id)
 
     year = st.selectbox("Năm", options=["2025"], index=0, key="abx_antibiogram_year")
     if hospital_id == "CUSTOM_UPLOAD" and "abx_custom_antibiogram" in st.session_state:

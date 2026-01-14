@@ -10,7 +10,12 @@ from datetime import datetime
 from .antibiotics_data import ANTIBIOTICS_DATABASE
 from .mic_breakpoints import get_common_susceptibility
 from .resistance_patterns import get_antibiotic_resistance_summary
-from .antibiogram import get_antibiogram, get_available_hospitals
+from .antibiogram import (
+    get_antibiogram,
+    get_available_hospitals,
+    get_default_hospital_id,
+    set_default_hospital_id,
+)
 
 
 def render_comparison():
@@ -76,13 +81,15 @@ def render_comparison():
     # Antibiogram (Phase 1) - optional context for empiric choices
     with st.expander("🧫 Antibiogram theo bệnh viện (tham khảo nhanh)", expanded=False):
         hospitals = get_available_hospitals()
+        default_hospital = get_default_hospital_id(hospitals)
         hospital_id = st.selectbox(
             "Chọn bệnh viện",
             options=list(hospitals.keys()),
             format_func=lambda k: hospitals.get(k, k),
-            index=list(hospitals.keys()).index("GENERAL") if "GENERAL" in hospitals else 0,
+            index=list(hospitals.keys()).index(default_hospital),
             key="compare_antibiogram_hospital",
         )
+        set_default_hospital_id(hospital_id)
         metric = st.radio(
             "Chỉ số hiển thị",
             options=["S (%)", "I (%)", "R (%)"],
