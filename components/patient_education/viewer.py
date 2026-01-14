@@ -5,6 +5,7 @@ Content display with TOC, reading progress, and navigation
 
 import streamlit as st
 import re
+import textwrap
 from typing import List, Optional
 from patient_education.models import PatientEducationTopic
 
@@ -120,8 +121,12 @@ def render_enhanced_content(
         show_progress: Show reading progress
         search_query: Search query for highlighting
     """
-    # Extract headings
-    headings = extract_headings(topic.content)
+    # Chuẩn hóa nội dung: loại bỏ thụt lề chung và khoảng trắng dư
+    raw_content = topic.content or ""
+    normalized_content = textwrap.dedent(raw_content).strip()
+
+    # Extract headings từ nội dung đã chuẩn hóa
+    headings = extract_headings(normalized_content)
     
     # Show TOC in sidebar
     if show_toc and headings:
@@ -166,14 +171,14 @@ def render_enhanced_content(
     # Content with highlighted search terms
     if search_query and search_query.strip():
         from components.patient_education.search import highlight_search_terms
-        highlighted_content = highlight_search_terms(topic.content, search_query)
+        highlighted_content = highlight_search_terms(normalized_content, search_query)
         # Nội dung đã được highlight chứa HTML (<mark>, v.v.) nên cần cho phép render HTML
         st.markdown(highlighted_content, unsafe_allow_html=True)
     else:
         # Một số topic Patient Education có thể chứa HTML (ví dụ snippet badge, layout)
         # Nếu không bật unsafe_allow_html, Streamlit sẽ hiển thị thô các thẻ <div>, </span>, ...
         # Đây là nguyên nhân gây lỗi hiển thị trên trang Patient_Education.
-        st.markdown(topic.content, unsafe_allow_html=True)
+        st.markdown(normalized_content, unsafe_allow_html=True)
     
     # Reading progress
     if show_progress and headings:

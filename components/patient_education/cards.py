@@ -126,50 +126,23 @@ def render_topic_card(
 ">🖨️ Có thể in</span>
 """
     
-    # Card HTML
+    # Card HTML (đưa style về một dòng để tránh markdown hiểu nhầm là code/HTML lỗi)
     card_height = "auto" if not compact else "200px"
     card_html = f"""
-<div style="
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-left: 4px solid {config['color']};
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    height: {card_height};
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-">
+<div style="background: white; border: 1px solid #e0e0e0; border-left: 4px solid {config['color']}; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: {card_height}; display: flex; flex-direction: column; cursor: pointer;">
     <div style="display: flex; align-items: center; margin-bottom: 12px;">
         <span style="font-size: 2rem; margin-right: 12px;">{config['icon']}</span>
-        <h3 style="
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            flex: 1;
-        ">{title_display}</h3>
+        <h3 style="margin: 0; font-size: 1.2rem; font-weight: 700; color: #1a1a1a; flex: 1;">{title_display}</h3>
     </div>
-    
+
     <div style="margin-bottom: 12px;">
         {badges_html}
     </div>
-    
+
     {f'<p style="color: #616161; font-size: 0.9rem; line-height: 1.6; margin: 0 0 16px 0;">{preview_display}</p>' if preview and show_preview else ''}
-    
+
     <div style="margin-top: auto; display: flex; gap: 8px; padding-top: 12px; border-top: 1px solid #f0f0f0;">
-        <span style="
-            background: {config['color']};
-            color: white;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-block;
-        ">📖 Đọc thêm</span>
+        <span style="background: {config['color']}; color: white; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; display: inline-block;">📖 Đọc thêm</span>
         {f'<span style="background: #F5F5F5; color: #616161; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem;">🖨️ In</span>' if topic.printable else ''}
     </div>
 </div>

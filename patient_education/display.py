@@ -4,6 +4,7 @@ Render patient education content
 """
 
 import streamlit as st
+import textwrap
 from typing import Optional
 from patient_education.data import PatientEducationTopic
 
@@ -12,14 +13,15 @@ def render_patient_education_content(topic: PatientEducationTopic):
     """
     Render patient education content and related resources.
 
-    Lịch sử:
-    - Ban đầu hàm này chỉ dùng `st.markdown(topic.content)` (không cho phép HTML),
-      dẫn đến các topic chứa HTML (ví dụ `<div style=\"...\">`) bị hiển thị thô.
-    - Hiện tại chúng ta cho phép HTML để nội dung luôn hiển thị đúng.
+    - Chuẩn hóa nội dung (bỏ thụt lề chung, khoảng trắng dư) để Markdown không
+      hiểu nhầm là code block.
+    - Cho phép HTML trong nội dung topic để các đoạn được format bằng HTML
+      (ví dụ badges, layout) hiển thị đúng thay vì bị escape.
     """
-    # Cho phép HTML trong nội dung topic để các đoạn được format bằng HTML
-    # (ví dụ badges, layout) không bị escape thành text thô.
-    st.markdown(topic.content, unsafe_allow_html=True)
+    raw_content = topic.content or ""
+    normalized_content = textwrap.dedent(raw_content).strip()
+
+    st.markdown(normalized_content, unsafe_allow_html=True)
 
     # Related resources
     if topic.related_disease or topic.related_drugs:
