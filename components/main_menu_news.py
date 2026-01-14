@@ -10,46 +10,29 @@ from datetime import datetime
 def render_news_updates_section():
     """Render news and updates section"""
     st.markdown("### 📰 Cập nhật & Tin tức")
-    
-    # Manual updates (can be replaced with RSS feed later)
-    updates = [
-        {
-            'date': '2025-01-06',
-            'title': '🆕 Giao diện Main Menu mới',
-            'content': 'Trang chủ đã được tối ưu hóa với thiết kế hiện đại, tìm kiếm nâng cao, và nhiều tính năng tiện dụng hơn.',
-            'type': 'feature'
-        },
-        {
-            'date': '2025-01-05',
-            'title': '💊 Database thuốc mở rộng',
-            'content': 'Đã thêm 712 thuốc với dữ liệu đầy đủ về liều dùng, tương tác, và chống chỉ định.',
-            'type': 'update'
-        },
-        {
-            'date': '2025-01-04',
-            'title': '📊 Thống kê sử dụng mới',
-            'content': 'Thêm dashboard thống kê với biểu đồ và phân tích xu hướng sử dụng.',
-            'type': 'feature'
-        },
-        {
-            'date': '2025-01-03',
-            'title': '🎨 Tối ưu mobile',
-            'content': 'Giao diện đã được tối ưu hóa cho thiết bị di động với responsive design.',
-            'type': 'improvement'
-        },
-    ]
-    
-    # Display updates in expandable sections
-    for update in updates[:3]:  # Show latest 3
-        with st.expander(f"{update['title']} - {update['date']}", expanded=False):
-            st.markdown(update['content'])
-            type_emoji = {
-                'feature': '✨',
-                'update': '🔄',
-                'improvement': '🎨',
-                'bugfix': '🐛'
-            }.get(update['type'], '📌')
-            st.caption(f"{type_emoji} {update['type'].title()}")
+
+    # App updates (local changelog feed)
+    try:
+        from components.app_updates import load_updates
+        updates = load_updates()
+    except Exception:
+        updates = []
+
+    if updates:
+        for update in updates[:3]:  # Show latest 3
+            with st.expander(f"{update.title} - {update.date}", expanded=False):
+                st.markdown(update.content)
+                type_emoji = {
+                    'feature': '✨',
+                    'update': '🔄',
+                    'improvement': '🎨',
+                    'bugfix': '🐛',
+                    'announcement': '📣'
+                }.get(getattr(update, "type", "update"), '📌')
+                st.caption(f"{type_emoji} {getattr(update, 'type', 'update').title()}")
+        st.caption("Xem thêm trong trang Updates/Changelog (nếu có).")
+    else:
+        st.info("Chưa có cập nhật nội bộ.")
     
     # Try to load RSS news if available
     try:

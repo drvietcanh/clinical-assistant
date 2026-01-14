@@ -10,6 +10,7 @@ from datetime import datetime
 from .antibiotics_data import ANTIBIOTICS_DATABASE
 from .mic_breakpoints import get_common_susceptibility
 from .resistance_patterns import get_antibiotic_resistance_summary
+from .antibiogram import get_antibiogram, get_available_hospitals
 
 
 def render_comparison():
@@ -69,6 +70,41 @@ def render_comparison():
     if len(selected_antibiotics) < 2:
         st.warning("⚠️ Vui lòng chọn ít nhất 2 kháng sinh khác nhau")
         return
+    
+    st.markdown("---")
+    
+    # Antibiogram (Phase 1) - optional context for empiric choices
+    with st.expander("🧫 Antibiogram theo bệnh viện (tham khảo nhanh)", expanded=False):
+        hospitals = get_available_hospitals()
+        hospital_id = st.selectbox(
+            "Chọn bệnh viện",
+            options=list(hospitals.keys()),
+            format_func=lambda k: hospitals.get(k, k),
+            index=list(hospitals.keys()).index("GENERAL") if "GENERAL" in hospitals else 0,
+            key="compare_antibiogram_hospital",
+        )
+        metric = st.radio(
+            "Chỉ số hiển thị",
+            options=["S (%)", "I (%)", "R (%)"],
+            horizontal=True,
+            key="compare_antibiogram_metric",
+        )
+        abg = get_antibiogram(hospital_id)
+        # Build table focusing on selected antibiotics
+        organisms = sorted(abg.keys())
+        cols_to_show = selected_antibiotics[:4]  # limit width
+        rows = []
+        for org in organisms:
+            row = {"Vi khuẩn": org}
+            for ab in cols_to_show:
+                entry = abg.get(org, {}).get(ab)
+                row[ab] = entry.as_dict().get(metric) if entry else None
+            rows.append(row)
+        if rows and cols_to_show:
+            df_abg = pd.DataFrame(rows)
+            st.dataframe(df_abg, use_container_width=True, hide_index=True)
+        else:
+            st.caption("Chọn kháng sinh để xem độ nhạy theo antibiogram của BV.")
     
     st.markdown("---")
     

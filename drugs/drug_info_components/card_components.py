@@ -5,6 +5,7 @@ import pandas as pd
 import html
 import textwrap
 from ..drug_database import DRUG_DATABASE
+from ..formulary_vn import get_formulary_info
 
 # Helper function to safely escape HTML
 def escape_html(text):
@@ -67,6 +68,13 @@ def render_compact_drug_card(drug_name, drug_data, key_prefix='',
     # Renal adjustment indicator
     if 'renal_adjustment' in drug_data and drug_data.get('renal_adjustment'):
         indicators.append('<span style="background: #0EA5E9; color: white; padding: 2px 6px; border-radius: 8px; font-size: 0.7em; margin-right: 4px;" title="Có điều chỉnh theo thận">🫘 Renal</span>')
+    
+    # BHYT / formulary indicator (VN)
+    formulary = get_formulary_info(drug_name)
+    if formulary:
+        bhyt_badge = "BHYT" if formulary.get("bhyt") else "Đồng chi trả"
+        bhyt_color = "#10B981" if formulary.get("bhyt") else "#F59E0B"
+        indicators.append(f'<span style="background: {bhyt_color}; color: white; padding: 2px 6px; border-radius: 8px; font-size: 0.7em; margin-right: 4px;" title="BHYT/Formulary VN">{bhyt_badge}</span>')
     
     indicators_html = ''.join(indicators) if indicators else ''
     

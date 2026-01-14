@@ -14,6 +14,7 @@ from antibiotics import (
 )
 from antibiotics.comparison import render_comparison
 from antibiotics.treatment_algorithms import render_algorithms_page
+from antibiotics.update_notifications import get_unread_updates_count, render_whats_new
 
 # Import new UI components
 try:
@@ -79,7 +80,15 @@ st.markdown("""
 # ========== SIDEBAR ==========
 with st.sidebar:
     st.header("💊 Kháng sinh")
-    st.caption("Module chuyên sâu về kháng sinh")
+    # Show unread updates badge if any
+    try:
+        unread_count = get_unread_updates_count()
+    except Exception:
+        unread_count = 0
+    if unread_count > 0:
+        st.caption(f"Module chuyên sâu về kháng sinh  •  🆕 {unread_count} cập nhật mới")
+    else:
+        st.caption("Module chuyên sâu về kháng sinh")
     
     # Quick navigation to tabs
     st.markdown("### 🧭 Điều hướng")
@@ -104,6 +113,13 @@ with st.sidebar:
             st.rerun()
     
     st.markdown("---")
+
+    # Quick view: What's new for Antibiotics
+    with st.expander("🆕 Có gì mới trong Kháng sinh?", expanded=False):
+        try:
+            render_whats_new()
+        except Exception:
+            st.info("Không thể tải danh sách cập nhật.")
     
     # Quick links
     with st.expander("🔗 Liên kết nhanh", expanded=False):
@@ -466,6 +482,17 @@ if NEW_UI_AVAILABLE:
                     st.error("Tính năng Cost Comparison chưa khả dụng")
         
         st.markdown("---")
+
+        # Section: What's New specific to Antibiotics
+        st.markdown("#### 🆕 Có gì mới trong Module Kháng sinh?")
+        st.caption("Xem nhanh các cập nhật gần đây cho riêng module Kháng sinh.")
+        if st.button("Mở danh sách cập nhật", key="tool_antibiotics_whats_new", use_container_width=True):
+            try:
+                render_whats_new()
+            except Exception:
+                st.error("Không thể tải danh sách cập nhật.")
+        
+        st.markdown("---")
         
         # Section 7: Phase 3 Educational Features
         st.markdown("#### 📚 Tính Năng Giáo Dục (Phase 3)")
@@ -586,6 +613,18 @@ if NEW_UI_AVAILABLE:
                 - Trên Chrome/Edge: Nhấn menu → "Cài đặt ứng dụng"
                 - Trên Safari iOS: Nhấn Share → "Thêm vào Màn hình chính"
                 """)
+
+        st.markdown("---")
+
+        # Section 10: Antibiogram (Phase 1)
+        st.markdown("#### 🧫 Antibiogram (Phase 1)")
+        st.caption("Kháng thuốc theo bệnh viện (demo) để hỗ trợ chọn kháng sinh kinh nghiệm")
+        if st.button("Mở Antibiogram", key="tool_antibiogram", use_container_width=True):
+            try:
+                from antibiotics.antibiogram import render_antibiogram_view
+                render_antibiogram_view()
+            except ImportError:
+                st.error("Tính năng Antibiogram chưa khả dụng")
 else:
     # Fallback to old UI if new components not available
     st.warning("⚠️ New UI components not available. Using legacy interface.")

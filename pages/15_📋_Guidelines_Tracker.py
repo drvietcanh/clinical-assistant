@@ -11,6 +11,7 @@ from collections import Counter
 from datetime import datetime
 from utils.page_helper import setup_page, render_standard_footer
 from components.ui import render_info_box, render_hero, render_pagination
+from components.evidence_badge import render_evidence_level_badge
 from guidelines.tracker import (
     search_guidelines,
     get_recent_guidelines,
@@ -838,6 +839,12 @@ def render_enhanced_guideline_card(guideline, index: int, is_mobile: bool = Fals
             st.markdown('<span style="background: #e8f5e9; padding: 4px 8px; border-radius: 4px; font-weight: 600; color: #2e7d32;">🆕 NEW</span>', unsafe_allow_html=True)
         elif guideline.year >= 2020:
             st.markdown('<span style="background: #fff3e0; padding: 4px 8px; border-radius: 4px; font-weight: 600; color: #ef6c00;">🔄 UPDATED</span>', unsafe_allow_html=True)
+
+        # Evidence triage badge (high/moderate/low -> A/B/C)
+        level_map = {"high": "A", "moderate": "B", "low": "C"}
+        ev_raw = getattr(guideline, "evidence_level", "moderate") or "moderate"
+        ev_level = level_map.get(str(ev_raw).strip().lower(), "B")
+        render_evidence_level_badge(ev_level, size="small")
     
     with meta_col3:
         # Category with color coding

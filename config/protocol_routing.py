@@ -47,6 +47,7 @@ from protocols import (
     render_asthma,
     render_acute_respiratory_failure,
     render_pulmonary_tb,
+    render_pulmonary_tb_vn,
     render_severe_influenza,
     render_bronchiolitis,
     render_acs,
@@ -85,6 +86,7 @@ from protocols import (
     render_endocarditis,
     render_parasitic_worms,
     render_dengue_fever,
+    render_dengue_fever_vn,
     render_scrub_typhus,
     render_malaria,
     render_thyrotoxic_crisis,
@@ -441,6 +443,12 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "has_article": False,
         "priority": 8
     },
+    "pulmonary_tb_vn": {
+        "keywords": ["Lao phổi VN", "Lao phổi (VN)", "tuberculosis vn", "tb vn", "bộ y tế lao"],
+        "render": render_pulmonary_tb_vn,
+        "has_article": False,
+        "priority": 8
+    },
     "bronchiolitis": {
         "keywords": ["Tiểu phế quản", "bronchiolitis"],
         "render": render_bronchiolitis,
@@ -668,6 +676,12 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
     "dengue": {
         "keywords": ["Dengue", "dengue", "Sốt Xuất huyết", "sốt xuất huyết"],
         "render": render_dengue_fever,
+        "has_article": False,
+        "priority": 8
+    },
+    "dengue_vn": {
+        "keywords": ["Dengue VN", "SXH VN", "Sốt Xuất huyết VN", "sốt xuất huyết vn", "bộ y tế dengue"],
+        "render": render_dengue_fever_vn,
         "has_article": False,
         "priority": 8
     },

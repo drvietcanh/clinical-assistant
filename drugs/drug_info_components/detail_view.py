@@ -6,6 +6,7 @@ import html
 import re
 import textwrap
 from ..drug_database import DRUG_DATABASE
+from ..formulary_vn import get_formulary_info
 from drugs.references_config import get_drug_references
 from components.references import render_references_section
 
@@ -648,6 +649,29 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             st.markdown('### 📦 Bảo quản:')
             st.info(drug_data['storage'])
             st.markdown('</div>', unsafe_allow_html=True)
+
+        # VN Drug Formulary (BHYT / availability) if available
+        formulary_info = get_formulary_info(drug_name)
+        if formulary_info:
+            st.markdown('---')
+            st.markdown('### 🇻🇳 Drug Formulary VN / BHYT')
+            bhyt_status = "✅ Có BHYT" if formulary_info.get("bhyt") else "⚠️ Có thể đồng chi trả / tự chi"
+            generic_status = "✅ Chấp nhận generic substitution" if formulary_info.get("generic_substitution") else "ℹ️ Kiểm tra biệt dược cụ thể"
+            cost = formulary_info.get("cost_vnd")
+            cost_text = f"~ {cost:,} VND" if isinstance(cost, (int, float)) else "N/A"
+            cost_range = formulary_info.get("cost_range_vnd")
+            hospitals = formulary_info.get("hospital_formulary") or []
+            generic_examples = formulary_info.get("generic_examples") or []
+            brand_examples = formulary_info.get("brand_examples") or []
+            st.info(
+                f"- {bhyt_status}\n"
+                f"- {generic_status}\n"
+                f"- 💰 Giá tham khảo: {cost_text}{f' (khung: {cost_range})' if cost_range else ''}\n"
+                f"- 🏥 Formulary: {', '.join(hospitals) if hospitals else 'Đang cập nhật'}\n"
+                f"- 🏷️ Generic: {', '.join(generic_examples) if generic_examples else 'Đang cập nhật'}\n"
+                f"- 🏷️ Brand: {', '.join(brand_examples) if brand_examples else 'Đang cập nhật'}\n"
+                f"- 📝 {formulary_info.get('note', 'Đang cập nhật')}"
+            )
         
         # References section
         st.markdown('---')
@@ -729,6 +753,10 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             st.markdown('---')
             st.markdown('### 🫘 Điều chỉnh theo chức năng thận:')
             renal = drug_data['renal_adjustment']
+            # Evidence level badge (if available)
+            renal_ev = drug_data.get('evidence_levels', {}).get('renal_adjustment', None) if isinstance(drug_data.get('evidence_levels'), dict) else None
+            if renal_ev:
+                st.markdown(_get_evidence_badge(renal_ev), unsafe_allow_html=True)
             renal_data = []
             if 'normal' in renal:
                 renal_data.append({'CrCl (mL/min)': '≥ 60', 'Điều chỉnh':
@@ -799,6 +827,10 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             st.markdown('---')
             st.markdown('### 🔶 Điều chỉnh theo chức năng gan:')
             hepatic = drug_data['hepatic_adjustment']
+            # Evidence level badge (if available)
+            hepatic_ev = drug_data.get('evidence_levels', {}).get('hepatic_adjustment', None) if isinstance(drug_data.get('evidence_levels'), dict) else None
+            if hepatic_ev:
+                st.markdown(_get_evidence_badge(hepatic_ev), unsafe_allow_html=True)
             hepatic_data = []
             
             # Handle different formats (dict or simple structure)

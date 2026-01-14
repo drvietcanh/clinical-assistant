@@ -69,6 +69,7 @@ PROTOCOL_LISTS = {
         "🫁 Viêm phổi cộng đồng (CAP)",
         "🦠 Cúm mùa nặng / Viêm phổi do cúm",
         "🫁 Lao phổi (Pulmonary TB)",
+        "🫁 Lao phổi (VN Protocol)",
         "👶 Viêm tiểu phế quản (Bronchiolitis)"
     ],
     "Tim mạch": [
@@ -111,6 +112,7 @@ PROTOCOL_LISTS = {
         "🧠 Meningitis / Encephalitis",
         "🦠 Viêm nội tâm mạc (Endocarditis)",
         "🦟 Sốt Xuất huyết Dengue",
+        "🦟 Sốt Xuất huyết Dengue (VN Protocol)",
         "🦟 Sốt Mò (Scrub Typhus)",
         "🦟 Sốt Rét (Malaria)",
         "🪱 Nhiễm Ký sinh Trùng Giun Sán (Parasitic Worms)"

@@ -83,6 +83,14 @@ def render_patient_inputs():
         patient_data['is_hemodialysis'] = is_hemodialysis
         patient_data['is_continuous_hd'] = is_continuous_hd
         patient_data['is_peritoneal_dialysis'] = is_peritoneal_dialysis
+
+        # ECMO flag (Phase 1)
+        is_ecmo = st.checkbox(
+            "🫁 ECMO",
+            key="dosing_ecmo",
+            help="ECMO có thể làm thay đổi Vd/clearance của một số kháng sinh. Tính năng này sẽ bổ sung guidance và nhắc TDM khi phù hợp."
+        )
+        patient_data['is_ecmo'] = is_ecmo
         
         if is_hemodialysis:
             hd_schedule = st.selectbox(

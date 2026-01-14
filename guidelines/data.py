@@ -17,6 +17,9 @@ class Guideline:
     organization: str  # AHA, ACC, ESC, IDSA, etc.
     year: int
     category: str  # Cardiology, Infectious, etc.
+    # Evidence level for the guideline as a whole (coarse triage for UI/alerts)
+    # Use: "high" | "moderate" | "low" (default: "moderate")
+    evidence_level: str = "moderate"
     version: str = "1.0"
     last_updated: str = ""  # Date string
     url: str = ""
@@ -1803,6 +1806,20 @@ GUIDELINES_DATABASE: List[Guideline] = [
         ]
     ),
 ]
+
+# --- Vietnam-specific guidelines (Bộ Y tế / Hội chuyên khoa VN) ---
+# Loaded as an extension list to keep the main international database stable.
+try:
+    from .data_vn import GUIDELINES_VN  # type: ignore
+
+    # Avoid duplicates if this module gets reloaded
+    existing_ids = {g.id for g in GUIDELINES_DATABASE}
+    for g in GUIDELINES_VN:
+        if g.id not in existing_ids:
+            GUIDELINES_DATABASE.append(g)
+except Exception:
+    # Optional module – safe to ignore if missing or during partial installs
+    pass
 
 
 def get_all_guidelines() -> List[Guideline]:

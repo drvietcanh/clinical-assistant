@@ -47,6 +47,7 @@ from .respiratory import (
     render_asthma,
     render_acute_respiratory_failure,
     render_pulmonary_tb,
+    render_pulmonary_tb_vn,
     render_severe_influenza,
     render_bronchiolitis
 )
@@ -71,7 +72,7 @@ from .nephrology import (
     render_heart_failure_ckd,
     render_anca_vasculitis
 )
-from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis, render_parasitic_worms, render_dengue_fever, render_scrub_typhus, render_malaria
+from .infectious import render_cap, render_hap_vap, render_cdiff, render_meningitis, render_endocarditis, render_parasitic_worms, render_dengue_fever, render_dengue_fever_vn, render_scrub_typhus, render_malaria
 from .endocrinology import (
     render_thyrotoxic_crisis,
     render_myxedema_coma,

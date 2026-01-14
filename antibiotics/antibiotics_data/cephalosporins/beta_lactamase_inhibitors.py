@@ -131,3 +131,58 @@ BETA_LACTAMASE_INHIBITORS = {
     },
 }
 
+# Phase 1 additions (VN hospital ICU relevance)
+# Note: Dữ liệu tóm tắt, không thay thế guideline đầy đủ.
+BETA_LACTAMASE_INHIBITORS.update({
+    "Ceftazidime-Avibactam": {
+        "group": "Beta-lactam - Cephalosporin + Beta-lactamase inhibitor",
+        "vietnamese_name": "Ceftazidime-Avibactam, Avycaz",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn do CRE/KPC (ưu tiên khi phù hợp)",
+            "HAP/VAP do Gram âm đa kháng (khi KSĐ phù hợp)",
+            "cUTI, cIAI (kết hợp metronidazole nếu cần kỵ khí)"
+        ],
+        "contraindications": ["Dị ứng cephalosporin/beta-lactam nặng"],
+        "dosage": {
+            "adult_iv": "2.5g (2g/0.5g) IV mỗi 8 giờ (truyền 2 giờ)",
+            "adult_iv_severe": "2.5g IV mỗi 8 giờ (ưu tiên truyền kéo dài nếu nhiễm nặng)",
+            "notes": "Cân nhắc theo MIC/KSĐ. Không bao phủ MBL (NDM) tốt."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều theo CrCl (tham khảo hướng dẫn/KSĐ)",
+            "15_30": "Giảm liều mạnh hơn theo CrCl",
+            "under_15": "Tham khảo chuyên khoa/HD"
+        },
+        "side_effects": ["Tiêu chảy", "Buồn nôn", "Tăng men gan", "Phản ứng dị ứng"],
+        "interactions": ["Warfarin: theo dõi INR nếu dùng kéo dài"],
+        "aware_classification": "RESERVE",
+        "pregnancy": "B - dữ liệu hạn chế",
+    },
+    "Ceftolozane-Tazobactam": {
+        "group": "Beta-lactam - Cephalosporin + Beta-lactamase inhibitor",
+        "vietnamese_name": "Ceftolozane-Tazobactam, Zerbaxa",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm P. aeruginosa khó điều trị (khi KSĐ phù hợp)",
+            "cUTI, cIAI (kết hợp metronidazole nếu cần)"
+        ],
+        "contraindications": ["Dị ứng cephalosporin/beta-lactam nặng"],
+        "dosage": {
+            "adult_iv": "1.5g IV mỗi 8 giờ (truyền 1 giờ)",
+            "adult_hap_vap": "3g IV mỗi 8 giờ (truyền 1 giờ) - HAP/VAP",
+            "notes": "Ưu tiên theo KSĐ, đặc biệt Pseudomonas MDR."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều theo CrCl",
+            "15_30": "Giảm liều theo CrCl",
+            "under_15": "Tham khảo hướng dẫn/HD"
+        },
+        "side_effects": ["Tiêu chảy", "Buồn nôn", "Đau đầu", "Phản ứng dị ứng"],
+        "interactions": [],
+        "aware_classification": "RESERVE",
+        "pregnancy": "B - dữ liệu hạn chế",
+    },
+})

@@ -30,6 +30,7 @@ except ImportError:
 from components.favorites import render_favorites
 from components.recently_used import render_recently_used
 from components.homepage_doctor import render_homepage_doctor
+from components.app_updates import get_unseen_updates, mark_updates_seen
 
 # Offline indicator (rendered at top level)
 try:
@@ -103,6 +104,20 @@ if 'total_calculations' not in st.session_state:
 # ========== DARK MODE STATE ==========
 if 'dark_mode' not in st.session_state:
     st.session_state.dark_mode = False
+
+# ========== IN-APP UPDATES TOAST ==========
+# Show a lightweight toast for unseen internal updates (once per session)
+if "updates_toast_shown" not in st.session_state:
+    try:
+        unseen_updates = get_unseen_updates(limit=1)
+        if unseen_updates:
+            u = unseen_updates[0]
+            st.toast(f"🆕 {u.title} ({u.date})", icon="🆕")
+            # Do not auto-mark as seen; user can review on Updates page.
+            track_feature_usage("updates_toast_shown")
+    except Exception:
+        pass
+    st.session_state["updates_toast_shown"] = True
 
 # ========== LOAD CUSTOM CSS ==========
 css_file = Path(__file__).parent / "static" / "styles.css"

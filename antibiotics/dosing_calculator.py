@@ -160,7 +160,9 @@ def render_dosing_calculator():
             indication=indication_code,
             albumin_gdl=patient_data.get('albumin_gdl') if patient_data.get('is_icu', False) else None,
             shock_type=patient_data.get('shock_type') if patient_data.get('is_icu', False) else None,
-            is_icu=patient_data.get('is_icu', False)
+            is_icu=patient_data.get('is_icu', False),
+            is_ecmo=patient_data.get('is_ecmo', False),
+            is_continuous_hd=patient_data.get('is_continuous_hd', False)
         )
         
         if "error" in result:

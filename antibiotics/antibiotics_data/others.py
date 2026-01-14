@@ -549,6 +549,44 @@ OTHER_ANTIBIOTICS = {
         "notes": "Thay thế Linezolid với ưu điểm: liều cố định, ít tác dụng phụ tủy xương hơn, dùng 1 lần/ngày"
     },
 
+    # ===== Phase 1 additions (ICU/CRE/XDR focused) =====
+    "Cefiderocol": {
+        "group": "Siderophore Cephalosporin",
+        "vietnamese_name": "Cefiderocol, Fetroja",
+        "administration": ["IV"],
+        "indications": [
+            "Nhiễm khuẩn Gram âm đa kháng (XDR) khi KSĐ phù hợp",
+            "CRE, P. aeruginosa, A. baumannii (tùy cơ chế kháng)",
+            "cUTI, HAP/VAP (khi có chỉ định và KSĐ phù hợp)"
+        ],
+        "contraindications": [
+            "Dị ứng cephalosporin/beta-lactam nặng"
+        ],
+        "dosage": {
+            "adult_iv": "2g IV mỗi 8 giờ (truyền 3 giờ)",
+            "adult_iv_severe": "2g IV mỗi 8 giờ (ưu tiên truyền kéo dài 3 giờ trong nhiễm nặng)",
+            "notes": "Thuốc mới, dùng theo KSĐ. Cân nhắc phối hợp trong nhiễm nặng/XDR theo hội chẩn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều theo CrCl (tham khảo hướng dẫn/KSĐ)",
+            "15_30": "Giảm liều theo CrCl",
+            "under_15": "Tham khảo hướng dẫn/HD/CRRT"
+        },
+        "side_effects": [
+            "Tiêu chảy",
+            "Buồn nôn",
+            "Tăng men gan",
+            "Phản ứng tại chỗ truyền",
+            "Phản ứng dị ứng"
+        ],
+        "interactions": [],
+        "monitoring": "Theo dõi lâm sàng, cấy/KSĐ, chức năng thận/gan; cân nhắc TDM beta-lactam nếu có.",
+        "aware_classification": "RESERVE",
+        "pregnancy": "B - dữ liệu hạn chế",
+        "notes": "Siderophore cephalosporin, thâm nhập Gram âm đa kháng. Cần kiểm soát sử dụng (AMS)."
+    },
+
 }
 
 __all__ = ['OTHER_ANTIBIOTICS']

@@ -6,6 +6,7 @@ Displays curated medical news and updates.
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
 from components.news_logic import get_medical_news, check_for_new_news, load_news_config
+from utils.analytics_events import track_page_view, track_feature_usage
 from datetime import datetime
 import os
 
@@ -23,6 +24,7 @@ setup_page(
     description="Cập nhật hướng dẫn điều trị và tin tức y tế mới nhất",
     mobile_header=True
 )
+track_page_view("Medical News")
 
 # Load configuration
 config = load_news_config()
@@ -39,6 +41,7 @@ with col_refresh:
     if st.button("🔄 Làm mới", use_container_width=True, help="Làm mới tất cả tin tức"):
         # Clear cache
         st.cache_data.clear()
+        track_feature_usage("news_refresh")
         st.rerun()
 
 # Check if we should auto-refresh

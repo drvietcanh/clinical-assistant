@@ -1,0 +1,26 @@
+{
+  "updates": [
+    {
+      "id": "2026-01-14-formulary-vn",
+      "date": "2026-01-14",
+      "title": "🇻🇳 Formulary VN (BHYT/Generic/Giá tham khảo)",
+      "content": "Bổ sung khối Formulary VN trong chi tiết thuốc và badge BHYT/Đồng chi trả trong danh sách thuốc. Có thể mở rộng thêm dữ liệu theo bệnh viện/tuyến.",
+      "type": "feature"
+    },
+    {
+      "id": "2026-01-14-evidence-grading",
+      "date": "2026-01-14",
+      "title": "📊 Evidence Grading (A/B/C/D) + badges",
+      "content": "Chuẩn hóa hệ Evidence Grading và áp dụng cho protocols, guidelines tracker và một số mục thuốc (thận/gan).",
+      "type": "update"
+    },
+    {
+      "id": "2026-01-14-diagnosis-tabs",
+      "date": "2026-01-14",
+      "title": "🩺 Diagnosis: tích hợp trực tiếp các sub-module vào tabs",
+      "content": "Disease Encyclopedia / ICD-10 / In-depth Articles / Patient Education được render trực tiếp trong tabs thay vì điều hướng sang trang khác.",
+      "type": "improvement"
+    }
+  ]
+}
+

@@ -142,8 +142,18 @@ def calculate_detailed_dose(antibiotic_name, weight_kg, ibw, abw, crcl, indicati
 
 
 
-def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, indication="standard",
-                            albumin_gdl=None, shock_type=None, is_icu=False):
+def calculate_adjusted_dose(
+    antibiotic_name,
+    crcl,
+    egfr=None,
+    base_dose=None,
+    indication="standard",
+    albumin_gdl=None,
+    shock_type=None,
+    is_icu=False,
+    is_ecmo: bool = False,
+    is_continuous_hd: bool = False,
+):
     """
     Calculate adjusted antibiotic dose based on renal function AND ICU factors
     
@@ -189,7 +199,8 @@ def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, in
             egfr = 200
     
     ab_data = ANTIBIOTICS_DATABASE[antibiotic_name]
-    renal_category = get_renal_category(crcl, egfr)
+    # Preserve existing renal category logic; allow caller hint for CRRT
+    renal_category = get_renal_category(crcl, egfr, is_continuous_hd=is_continuous_hd)
     
     # Get base dosage information
     dosage = ab_data.get('dosage', {})
@@ -243,9 +254,28 @@ def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, in
             adjustment_text = f"{adjustment_text} + Điều chỉnh ICU (x{icu_factor:.2f})"
         else:
             adjustment_text = f"{adjustment_text} + ICU: Tăng liều (x{icu_factor:.2f})"
+
+    # CRRT/ECMO guidance (Phase 1): add clinical note (does not override renal adjustment text)
+    try:
+        from .rrt_dosing import get_rrt_guidance
+        guidance = get_rrt_guidance(antibiotic_name)
+    except Exception:
+        guidance = None
+
+    extra_notes = []
+    if renal_category == "continuous_hd" and guidance:
+        extra_notes.append(f"💉 **CRRT:** {guidance.crtt_summary}")
+        extra_notes.append(f"🔬 **Theo dõi:** {guidance.monitoring}")
+    if is_ecmo and guidance:
+        extra_notes.append(f"🫁 **ECMO:** {guidance.ecmo_summary}")
+        extra_notes.append(f"🔬 **Theo dõi:** {guidance.monitoring}")
+    if (renal_category == "continuous_hd" or is_ecmo) and guidance and guidance.caveats:
+        extra_notes.append(f"⚠️ **Lưu ý:** {guidance.caveats}")
     
     # Additional notes
     notes = dosage.get('notes', '')
+    if extra_notes:
+        notes = (notes + "\n" if notes else "") + "\n".join(extra_notes)
     monitoring = ab_data.get('monitoring', '')
     
     # Thêm cảnh báo từ eGFR database nếu có

@@ -17,8 +17,10 @@ from .ui_helpers import (
 )
 from .mic_breakpoints import get_common_susceptibility
 from .resistance_patterns import get_antibiotic_resistance_summary
+from .antibiogram import get_antibiogram, get_available_hospitals
 from .components.badges import render_badge, BadgeType, BadgeSize
 from .components.typography import render_guideline_badge, render_indication_text
+from .protocol_versioning import get_protocol_version_info
 
 
 def render_protocol_card(protocol: AntibioticProtocol, key_prefix: str = ""):
@@ -47,6 +49,21 @@ def render_protocol_card(protocol: AntibioticProtocol, key_prefix: str = ""):
             protocol.last_reviewed
         )
         st.markdown(guideline_html, unsafe_allow_html=True)
+
+    # Version + changelog (lightweight)
+    try:
+        vinfo = get_protocol_version_info(protocol)
+        st.caption(f"🔖 Version: **{vinfo.version}** · Cập nhật: **{vinfo.last_updated}**")
+        if vinfo.changelog_md:
+            with st.expander("🕘 Lịch sử cập nhật (changelog)", expanded=False):
+                if vinfo.author:
+                    st.markdown(f"**Tác giả:** {vinfo.author}")
+                if vinfo.reason:
+                    st.markdown(f"**Lý do:** {vinfo.reason}")
+                st.markdown(vinfo.changelog_md)
+    except Exception:
+        # Never break protocol rendering due to version info issues
+        pass
     
     # Link to Critical Care for sepsis/severe infections
     if protocol.infection_site == InfectionSite.SEPSIS or protocol.severity == Severity.ICU:
@@ -207,6 +224,41 @@ def render_regimen_card(regimen, key_prefix: str = ""):
                         st.markdown(f"<span style='color: {color}; font-weight: 600;'>{org}:</span> {pattern}", unsafe_allow_html=True)
                 if "notes" in suscept_data:
                     st.caption(f"💡 {suscept_data['notes']}")
+        # Antibiogram quick view (hospital-based, Phase 1)
+        with st.expander("🧫 Antibiogram theo bệnh viện (demo)", expanded=False):
+            hospitals = get_available_hospitals()
+            hospital_id = st.selectbox(
+                "Bệnh viện",
+                options=list(hospitals.keys()),
+                format_func=lambda k: hospitals.get(k, k),
+                index=list(hospitals.keys()).index("GENERAL") if "GENERAL" in hospitals else 0,
+                key=f"{key_prefix}_antibiogram_hospital",
+            )
+            metric = st.radio(
+                "Chỉ số",
+                options=["S (%)", "I (%)", "R (%)"],
+                horizontal=True,
+                key=f"{key_prefix}_antibiogram_metric",
+            )
+            abg = get_antibiogram(hospital_id)
+            rows = []
+            for org, ab_map in abg.items():
+                entry = ab_map.get(first_drug)
+                if entry:
+                    rows.append({
+                        "Vi khuẩn": org,
+                        metric: entry.as_dict().get(metric),
+                        "N": entry.n,
+                        "Ghi chú": entry.notes or ""
+                    })
+            if rows:
+                df_abg = st.dataframe(
+                    rows,
+                    use_container_width=True,
+                    hide_index=True,
+                )
+            else:
+                st.caption("Chưa có dữ liệu cho kháng sinh này trong antibiogram demo.")
     
     # Warnings
     if regimen.warnings:
