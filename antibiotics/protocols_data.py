@@ -15,7 +15,15 @@ def get_antibiotic_protocols() -> ProtocolCollection:
     """
     Get all antibiotic protocols
     Returns ProtocolCollection with standardized protocols
+    Cached in session state for performance
     """
+    # Check cache first
+    import streamlit as st
+    cache_key = '_antibiotic_protocols_cache'
+    
+    if cache_key in st.session_state:
+        return st.session_state[cache_key]
+    
     protocols = []
     
     # ========== CAP (Community-Acquired Pneumonia) ==========
@@ -365,4 +373,416 @@ def get_antibiotic_protocols() -> ProtocolCollection:
         ]
     ))
     
-    return ProtocolCollection(protocols=protocols)
+    # ========== CNS INFECTIONS ==========
+    
+    # Bacterial Meningitis
+    protocols.append(AntibioticProtocol(
+        infection_site=InfectionSite.CNS,
+        severity=Severity.SEVERE,
+        setting=Setting.ICU,
+        title="Viêm màng não do vi khuẩn",
+        description="Bacterial meningitis - empiric therapy based on age and risk factors",
+        regimens=[
+            Regimen(
+                regimen_type=RegimenType.FIRST_LINE,
+                drugs=[
+                    DrugDose("Ceftriaxone", "2g", "IV", "q12h", "7-14 days"),
+                    DrugDose("Vancomycin", "15-20 mg/kg", "IV", "q8-12h", "7-14 days")
+                ],
+                indication="Empiric therapy for suspected bacterial meningitis",
+                rationale="Covers S. pneumoniae, N. meningitidis, H. influenzae, and resistant S. pneumoniae",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.ALTERNATIVE,
+                drugs=[
+                    DrugDose("Cefotaxime", "2g", "IV", "q6h", "7-14 days"),
+                    DrugDose("Vancomycin", "15-20 mg/kg", "IV", "q8-12h", "7-14 days")
+                ],
+                indication="Alternative to Ceftriaxone",
+                rationale="Similar spectrum, alternative cephalosporin",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.RESCUE,
+                drugs=[
+                    DrugDose("Meropenem", "2g", "IV", "q8h", "7-14 days"),
+                    DrugDose("Vancomycin", "15-20 mg/kg", "IV", "q8-12h", "7-14 days")
+                ],
+                indication="Penicillin allergy or resistant organisms",
+                rationale="Carbapenem for beta-lactam allergy or ESBL-producing organisms",
+                recommendation_level=RecommendationLevel.WEAK
+            )
+        ],
+        guideline_source="IDSA 2016",
+        guideline_year=2016,
+        notes=[
+            "Add Ampicillin if Listeria risk (age >50, immunocompromised, pregnancy)",
+            "Dexamethasone before or with first dose if S. pneumoniae suspected",
+            "Adjust Vancomycin dose based on TDM"
+        ]
+    ))
+    
+    # Brain Abscess
+    protocols.append(AntibioticProtocol(
+        infection_site=InfectionSite.CNS,
+        severity=Severity.SEVERE,
+        setting=Setting.ICU,
+        title="Áp xe não",
+        description="Brain abscess - empiric therapy covering common pathogens",
+        regimens=[
+            Regimen(
+                regimen_type=RegimenType.FIRST_LINE,
+                drugs=[
+                    DrugDose("Ceftriaxone", "2g", "IV", "q12h", "4-8 weeks"),
+                    DrugDose("Metronidazole", "500mg", "IV", "q8h", "4-8 weeks")
+                ],
+                indication="Empiric therapy for brain abscess",
+                rationale="Covers aerobic and anaerobic bacteria",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.ALTERNATIVE,
+                drugs=[
+                    DrugDose("Meropenem", "2g", "IV", "q8h", "4-8 weeks")
+                ],
+                indication="Single agent alternative",
+                rationale="Broad spectrum including anaerobes",
+                recommendation_level=RecommendationLevel.WEAK
+            )
+        ],
+        guideline_source="IDSA 2017",
+        guideline_year=2017,
+        notes=[
+            "Duration typically 4-8 weeks",
+            "Surgical drainage often required",
+            "Add Vancomycin if MRSA suspected"
+        ]
+    ))
+    
+    # ========== INTRA-ABDOMINAL INFECTIONS ==========
+    
+    # Peritonitis (Secondary)
+    protocols.append(AntibioticProtocol(
+        infection_site=InfectionSite.IAI,
+        severity=Severity.SEVERE,
+        setting=Setting.WARD,
+        title="Viêm phúc mạc thứ phát",
+        description="Secondary peritonitis - community or hospital-acquired",
+        regimens=[
+            Regimen(
+                regimen_type=RegimenType.FIRST_LINE,
+                drugs=[
+                    DrugDose("Piperacillin-Tazobactam", "4.5g", "IV", "q8h", "5-7 days")
+                ],
+                indication="Community-acquired secondary peritonitis",
+                rationale="Broad spectrum including anaerobes and Enterobacteriaceae",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.ALTERNATIVE,
+                drugs=[
+                    DrugDose("Ceftriaxone", "2g", "IV", "q24h", "5-7 days"),
+                    DrugDose("Metronidazole", "500mg", "IV", "q8h", "5-7 days")
+                ],
+                indication="Alternative regimen",
+                rationale="Covers Gram-negative and anaerobes",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.RESCUE,
+                drugs=[
+                    DrugDose("Meropenem", "1g", "IV", "q8h", "5-7 days")
+                ],
+                indication="Hospital-acquired or ESBL risk",
+                rationale="Carbapenem for resistant organisms",
+                recommendation_level=RecommendationLevel.WEAK
+            )
+        ],
+        guideline_source="IDSA/SIS 2017",
+        guideline_year=2017,
+        notes=[
+            "Source control is critical",
+            "Duration typically 5-7 days if source controlled",
+            "Consider ESBL risk in hospital-acquired cases"
+        ]
+    ))
+    
+    # Cholecystitis
+    protocols.append(AntibioticProtocol(
+        infection_site=InfectionSite.IAI,
+        severity=Severity.MODERATE,
+        setting=Setting.WARD,
+        title="Viêm túi mật",
+        description="Acute cholecystitis - biliary tract infection",
+        regimens=[
+            Regimen(
+                regimen_type=RegimenType.FIRST_LINE,
+                drugs=[
+                    DrugDose("Piperacillin-Tazobactam", "4.5g", "IV", "q8h", "3-5 days")
+                ],
+                indication="Empiric therapy for cholecystitis",
+                rationale="Covers Enterobacteriaceae and anaerobes",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.ALTERNATIVE,
+                drugs=[
+                    DrugDose("Ceftriaxone", "2g", "IV", "q24h", "3-5 days"),
+                    DrugDose("Metronidazole", "500mg", "IV", "q8h", "3-5 days")
+                ],
+                indication="Alternative regimen",
+                rationale="Covers common biliary pathogens",
+                recommendation_level=RecommendationLevel.STRONG
+            )
+        ],
+        guideline_source="Tokyo Guidelines 2018",
+        guideline_year=2018,
+        notes=[
+            "Cholecystectomy is definitive treatment",
+            "Antibiotics typically 3-5 days if source controlled",
+            "Consider ESBL risk in severe cases"
+        ]
+    ))
+    
+    # Appendicitis
+    protocols.append(AntibioticProtocol(
+        infection_site=InfectionSite.IAI,
+        severity=Severity.MODERATE,
+        setting=Setting.WARD,
+        title="Viêm ruột thừa",
+        description="Acute appendicitis - uncomplicated or complicated",
+        regimens=[
+            Regimen(
+                regimen_type=RegimenType.FIRST_LINE,
+                drugs=[
+                    DrugDose("Ceftriaxone", "2g", "IV", "q24h", "1-3 days"),
+                    DrugDose("Metronidazole", "500mg", "IV", "q8h", "1-3 days")
+                ],
+                indication="Uncomplicated appendicitis",
+                rationale="Covers Enterobacteriaceae and anaerobes",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.ALTERNATIVE,
+                drugs=[
+                    DrugDose("Piperacillin-Tazobactam", "4.5g", "IV", "q8h", "3-5 days")
+                ],
+                indication="Complicated appendicitis",
+                rationale="Broader spectrum for perforated appendicitis",
+                recommendation_level=RecommendationLevel.STRONG
+            )
+        ],
+        guideline_source="WSES 2020",
+        guideline_year=2020,
+        notes=[
+            "Appendectomy is definitive treatment",
+            "Uncomplicated: 1-3 days antibiotics",
+            "Complicated: 3-5 days if source controlled"
+        ]
+    ))
+    
+    # ========== ENDOCARDITIS ==========
+    
+    # Native Valve Endocarditis
+    protocols.append(AntibioticProtocol(
+        infection_site=InfectionSite.ENDOCARDITIS,
+        severity=Severity.SEVERE,
+        setting=Setting.ICU,
+        title="Viêm nội tâm mạc van tự nhiên",
+        description="Native valve endocarditis - empiric therapy",
+        regimens=[
+            Regimen(
+                regimen_type=RegimenType.FIRST_LINE,
+                drugs=[
+                    DrugDose("Vancomycin", "15-20 mg/kg", "IV", "q8-12h", "4-6 weeks"),
+                    DrugDose("Gentamicin", "1mg/kg", "IV", "q8h", "2 weeks")
+                ],
+                indication="Empiric therapy pending culture",
+                rationale="Covers MRSA, MSSA, and Enterococcus",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.ALTERNATIVE,
+                drugs=[
+                    DrugDose("Ceftriaxone", "2g", "IV", "q24h", "4-6 weeks"),
+                    DrugDose("Gentamicin", "1mg/kg", "IV", "q8h", "2 weeks")
+                ],
+                indication="MSSA or Streptococcus if no MRSA risk",
+                rationale="Narrower spectrum if organism known",
+                recommendation_level=RecommendationLevel.STRONG
+            )
+        ],
+        guideline_source="AHA/IDSA 2015",
+        guideline_year=2015,
+        notes=[
+            "Obtain blood cultures BEFORE starting antibiotics",
+            "Duration typically 4-6 weeks",
+            "TDM required for Vancomycin and Gentamicin",
+            "Consider surgical evaluation"
+        ]
+    ))
+    
+    # Prosthetic Valve Endocarditis
+    protocols.append(AntibioticProtocol(
+        infection_site=InfectionSite.ENDOCARDITIS,
+        severity=Severity.SEVERE,
+        setting=Setting.ICU,
+        title="Viêm nội tâm mạc van nhân tạo",
+        description="Prosthetic valve endocarditis - early (<1 year) or late (>1 year)",
+        regimens=[
+            Regimen(
+                regimen_type=RegimenType.FIRST_LINE,
+                drugs=[
+                    DrugDose("Vancomycin", "15-20 mg/kg", "IV", "q8-12h", "6 weeks"),
+                    DrugDose("Gentamicin", "1mg/kg", "IV", "q8h", "2 weeks"),
+                    DrugDose("Rifampin", "300mg", "PO", "q8h", "6 weeks")
+                ],
+                indication="Empiric therapy for prosthetic valve endocarditis",
+                rationale="Covers coagulase-negative staphylococci and other pathogens",
+                recommendation_level=RecommendationLevel.STRONG
+            )
+        ],
+        guideline_source="AHA/IDSA 2015",
+        guideline_year=2015,
+        notes=[
+            "Early PVE (<1 year): Usually coagulase-negative staphylococci",
+            "Late PVE (>1 year): Similar to native valve",
+            "Surgical evaluation often required",
+            "TDM required for all antibiotics"
+        ]
+    ))
+    
+    # ========== OSTEOMYELITIS ==========
+    
+    # Acute Osteomyelitis
+    protocols.append(AntibioticProtocol(
+        infection_site=InfectionSite.OSTEOMYELITIS,
+        severity=Severity.MODERATE,
+        setting=Setting.WARD,
+        title="Viêm xương tủy cấp",
+        description="Acute osteomyelitis - hematogenous or contiguous spread",
+        regimens=[
+            Regimen(
+                regimen_type=RegimenType.FIRST_LINE,
+                drugs=[
+                    DrugDose("Ceftriaxone", "2g", "IV", "q24h", "4-6 weeks"),
+                    DrugDose("Vancomycin", "15-20 mg/kg", "IV", "q8-12h", "4-6 weeks")
+                ],
+                indication="Empiric therapy pending culture",
+                rationale="Covers S. aureus (including MRSA) and Gram-negative",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.ALTERNATIVE,
+                drugs=[
+                    DrugDose("Cefazolin", "2g", "IV", "q8h", "4-6 weeks")
+                ],
+                indication="MSSA confirmed",
+                rationale="Narrower spectrum if organism known",
+                recommendation_level=RecommendationLevel.STRONG
+            )
+        ],
+        guideline_source="IDSA 2012",
+        guideline_year=2012,
+        notes=[
+            "Obtain bone culture if possible",
+            "Duration typically 4-6 weeks",
+            "Consider surgical debridement",
+            "Step-down to PO after 2-4 weeks if improving"
+        ]
+    ))
+    
+    # Chronic Osteomyelitis
+    protocols.append(AntibioticProtocol(
+        infection_site=InfectionSite.OSTEOMYELITIS,
+        severity=Severity.SEVERE,
+        setting=Setting.WARD,
+        title="Viêm xương tủy mạn",
+        description="Chronic osteomyelitis - requires prolonged therapy",
+        regimens=[
+            Regimen(
+                regimen_type=RegimenType.FIRST_LINE,
+                drugs=[
+                    DrugDose("Vancomycin", "15-20 mg/kg", "IV", "q8-12h", "6-12 weeks"),
+                    DrugDose("Ciprofloxacin", "400mg", "IV", "q12h", "6-12 weeks")
+                ],
+                indication="Empiric therapy for chronic osteomyelitis",
+                rationale="Covers MRSA and Gram-negative including Pseudomonas",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.ALTERNATIVE,
+                drugs=[
+                    DrugDose("Linezolid", "600mg", "IV/PO", "q12h", "6-12 weeks")
+                ],
+                indication="MRSA with vancomycin intolerance",
+                rationale="Oral option for long-term therapy",
+                recommendation_level=RecommendationLevel.WEAK
+            )
+        ],
+        guideline_source="IDSA 2012",
+        guideline_year=2012,
+        notes=[
+            "Surgical debridement usually required",
+            "Duration typically 6-12 weeks",
+            "Consider suppressive therapy after initial course",
+            "TDM required for Vancomycin"
+        ]
+    ))
+    
+    # Diabetic Foot Infection
+    protocols.append(AntibioticProtocol(
+        infection_site=InfectionSite.OSTEOMYELITIS,
+        severity=Severity.MODERATE,
+        setting=Setting.WARD,
+        title="Nhiễm trùng bàn chân đái tháo đường",
+        description="Diabetic foot infection - soft tissue and/or bone",
+        regimens=[
+            Regimen(
+                regimen_type=RegimenType.FIRST_LINE,
+                drugs=[
+                    DrugDose("Ceftriaxone", "2g", "IV", "q24h", "2-4 weeks"),
+                    DrugDose("Metronidazole", "500mg", "IV", "q8h", "2-4 weeks")
+                ],
+                indication="Mild to moderate infection",
+                rationale="Covers Gram-negative and anaerobes",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.ALTERNATIVE,
+                drugs=[
+                    DrugDose("Piperacillin-Tazobactam", "4.5g", "IV", "q8h", "2-4 weeks")
+                ],
+                indication="Moderate to severe infection",
+                rationale="Broader spectrum including Pseudomonas",
+                recommendation_level=RecommendationLevel.STRONG
+            ),
+            Regimen(
+                regimen_type=RegimenType.RESCUE,
+                drugs=[
+                    DrugDose("Vancomycin", "15-20 mg/kg", "IV", "q8-12h", "2-4 weeks"),
+                    DrugDose("Meropenem", "1g", "IV", "q8h", "2-4 weeks")
+                ],
+                indication="Severe infection or MRSA risk",
+                rationale="Covers MRSA and resistant Gram-negative",
+                recommendation_level=RecommendationLevel.WEAK
+            )
+        ],
+        guideline_source="IDSA 2012",
+        guideline_year=2012,
+        notes=[
+            "Wound care and debridement critical",
+            "Duration: 2 weeks for soft tissue, 4 weeks if bone involved",
+            "Step-down to PO after improvement",
+            "Consider surgical evaluation"
+        ]
+    ))
+    
+    collection = ProtocolCollection(protocols=protocols)
+    
+    # Cache in session state
+    import streamlit as st
+    st.session_state['_antibiotic_protocols_cache'] = collection
+    
+    return collection

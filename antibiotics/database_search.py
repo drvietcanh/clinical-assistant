@@ -27,8 +27,20 @@ from .dosing_calculator import (
 
 
 def search_antibiotics(query, max_results=None):
-    """Enhanced search antibiotics by name, Vietnamese name, group, or indication with scoring"""
-    query_lower = query.lower()
+    """
+    Enhanced search antibiotics by name, Vietnamese name, group, or indication with scoring
+    Results are cached for performance
+    """
+    if not query or len(query.strip()) == 0:
+        return []
+    
+    query_lower = query.lower().strip()
+    
+    # Check cache
+    cache_key = f'_search_cache_{query_lower}_{max_results}'
+    if cache_key in st.session_state:
+        return st.session_state[cache_key]
+    
     results = []
     
     for ab_name, ab_data in ANTIBIOTICS_DATABASE.items():
@@ -73,9 +85,26 @@ def search_antibiotics(query, max_results=None):
     results.sort(key=lambda x: x[2], reverse=True)
     
     # Return just (name, data) tuples for backward compatibility
+    final_results = [(name, data) for name, data, score in results]
     if max_results:
-        return [(name, data) for name, data, score in results[:max_results]]
-    return [(name, data) for name, data, score in results]
+        final_results = final_results[:max_results]
+    
+    # Cache results (limit cache size to prevent memory issues)
+    if len(st.session_state.get('_search_cache_keys', [])) < 50:
+        st.session_state[cache_key] = final_results
+        if '_search_cache_keys' not in st.session_state:
+            st.session_state['_search_cache_keys'] = []
+        st.session_state['_search_cache_keys'].append(cache_key)
+    elif cache_key not in st.session_state:
+        # Remove oldest cache entry
+        if st.session_state.get('_search_cache_keys'):
+            oldest_key = st.session_state['_search_cache_keys'].pop(0)
+            if oldest_key in st.session_state:
+                del st.session_state[oldest_key]
+            st.session_state[cache_key] = final_results
+            st.session_state['_search_cache_keys'].append(cache_key)
+    
+    return final_results
 
 
 def get_antibiotic_autocomplete_suggestions(query, max_suggestions=5):
@@ -141,20 +170,51 @@ def add_to_recent_searches(query):
     st.session_state.recent_antibiotic_searches = recent[:10]
 
 
-def filter_antibiotics(group_filter="Tất cả", route_filter="Tất cả", aware_filter="Tất cả", pregnancy_filter="Tất cả"):
+def highlight_search_terms(text, query):
     """
-    Filter antibiotics by group, route, AWaRe classification, and pregnancy safety
+    Highlight search terms in text using HTML
+    Returns HTML string with highlighted terms
+    """
+    if not text or not query:
+        return str(text) if text else ""
+    
+    import re
+    import html
+    
+    # Escape HTML in text
+    text_escaped = html.escape(str(text))
+    query_escaped = html.escape(query)
+    
+    # Case-insensitive search and replace
+    pattern = re.compile(re.escape(query_escaped), re.IGNORECASE)
+    highlighted = pattern.sub(
+        lambda m: f'<mark style="background-color: #FFEB3B; padding: 2px 4px; border-radius: 3px; font-weight: 600;">{m.group()}</mark>',
+        text_escaped
+    )
+    
+    return highlighted
+
+
+def filter_antibiotics(group_filter="Tất cả", route_filter="Tất cả", aware_filter="Tất cả", 
+                      pregnancy_filter="Tất cả", tdm_filter="Tất cả", frequency_filter="Tất cả"):
+    """
+    Filter antibiotics by group, route, AWaRe classification, pregnancy safety, TDM requirement, and dosing frequency
     
     Args:
         group_filter: Filter by antibiotic group
         route_filter: Filter by administration route (IV, IM, PO)
         aware_filter: Filter by AWaRe classification (ACCESS, WATCH, RESERVE)
         pregnancy_filter: Filter by FDA pregnancy category (A, B, C, D, X)
+        tdm_filter: Filter by TDM requirement (Có, Không)
+        frequency_filter: Filter by dosing frequency (q24h, q12h, q8h, q6h, Liên tục)
     
     Returns:
         Dict of filtered antibiotics
     """
     filtered = {}
+    
+    # TDM-requiring antibiotics (common ones)
+    tdm_antibiotics = {"Vancomycin", "Gentamicin", "Tobramycin", "Amikacin", "Teicoplanin"}
     
     for ab_name, ab_data in ANTIBIOTICS_DATABASE.items():
         # Group filter
@@ -172,12 +232,10 @@ def filter_antibiotics(group_filter="Tất cả", route_filter="Tất cả", awa
             if ab_data.get('aware_classification', '') != aware_filter:
                 continue
         
-        # Pregnancy filter (Phase 4 enhancement)
+        # Pregnancy filter
         if pregnancy_filter != "Tất cả":
-            # Check in pregnancy field (could be 'pregnancy' or in enhanced_fields)
             pregnancy_cat = ab_data.get('pregnancy', '')
             if not pregnancy_cat:
-                # Try enhanced_fields
                 enhanced = ab_data.get('enhanced_fields', {})
                 if enhanced:
                     preg_lact = enhanced.get('pregnancy_lactation', {})
@@ -185,6 +243,42 @@ def filter_antibiotics(group_filter="Tất cả", route_filter="Tất cả", awa
             
             if pregnancy_cat != pregnancy_filter:
                 continue
+        
+        # TDM filter (Phase 3)
+        if tdm_filter != "Tất cả":
+            requires_tdm = ab_name in tdm_antibiotics or ab_data.get('has_dosing_calculator', False)
+            if tdm_filter == "Có" and not requires_tdm:
+                continue
+            if tdm_filter == "Không" and requires_tdm:
+                continue
+        
+        # Frequency filter (Phase 3) - check in dosing info
+        if frequency_filter != "Tất cả":
+            # Check in dosing information
+            dosing_info = ab_data.get('dosing', {})
+            if isinstance(dosing_info, dict):
+                # Check adult dosing
+                adult_dosing = dosing_info.get('adult', {})
+                if isinstance(adult_dosing, dict):
+                    standard_dosing = adult_dosing.get('standard', {})
+                    if isinstance(standard_dosing, dict):
+                        interval = standard_dosing.get('interval', '')
+                        frequency_lower = interval.lower()
+                        
+                        # Map frequency filter to intervals
+                        frequency_map = {
+                            "q24h": ["q24h", "24h", "once daily", "once"],
+                            "q12h": ["q12h", "12h", "bid", "twice daily"],
+                            "q8h": ["q8h", "8h", "tid", "three times daily"],
+                            "q6h": ["q6h", "6h", "qid", "four times daily"],
+                            "Liên tục": ["continuous", "infusion", "liên tục"]
+                        }
+                        
+                        filter_intervals = frequency_map.get(frequency_filter, [])
+                        if not any(freq in frequency_lower for freq in filter_intervals):
+                            continue
+            
+            # If no dosing info found, skip this filter (don't exclude)
         
         filtered[ab_name] = ab_data
     

@@ -369,6 +369,39 @@ def render_database():
                     help="Lọc theo độ an toàn trong thai kỳ (FDA category)"
                 )
             
+            # Additional advanced filters (Phase 3)
+            st.markdown("---")
+            col5, col6, col7 = st.columns(3)
+            
+            with col5:
+                # TDM required filter
+                filter_tdm = st.selectbox(
+                    "📊 TDM:",
+                    ["Tất cả", "Có", "Không"],
+                    key="filter_tdm_main",
+                    help="Lọc theo yêu cầu theo dõi nồng độ thuốc (TDM)"
+                )
+            
+            with col6:
+                # Dosing frequency filter
+                filter_frequency = st.selectbox(
+                    "⏱️ Tần suất:",
+                    ["Tất cả", "q24h", "q12h", "q8h", "q6h", "Liên tục"],
+                    key="filter_frequency_main",
+                    help="Lọc theo tần suất dùng thuốc"
+                )
+            
+            with col7:
+                # Clear all filters button
+                if st.button("🗑️ Xóa tất cả bộ lọc", key="clear_all_filters", use_container_width=True):
+                    st.session_state.filter_group_main = "Tất cả"
+                    st.session_state.filter_route_main = "Tất cả"
+                    st.session_state.filter_aware_main = "Tất cả"
+                    st.session_state.filter_pregnancy_main = "Tất cả"
+                    st.session_state.filter_tdm_main = "Tất cả"
+                    st.session_state.filter_frequency_main = "Tất cả"
+                    st.rerun()
+            
             # Filter summary
             active_filters = []
             if filter_group != "Tất cả":
@@ -379,6 +412,10 @@ def render_database():
                 active_filters.append(f"AWaRe: {filter_aware}")
             if filter_pregnancy != "Tất cả":
                 active_filters.append(f"Thai kỳ: {filter_pregnancy}")
+            if filter_tdm != "Tất cả":
+                active_filters.append(f"TDM: {filter_tdm}")
+            if filter_frequency != "Tất cả":
+                active_filters.append(f"Tần suất: {filter_frequency}")
             
             if active_filters:
                 st.info(f"🔍 **Đang lọc:** {', '.join(active_filters)}")
@@ -518,7 +555,9 @@ def render_database():
             filter_group if view_mode == "📋 Duyệt tất cả" else "Tất cả",
             filter_route if view_mode == "📋 Duyệt tất cả" else "Tất cả",
             filter_aware if view_mode == "📋 Duyệt tất cả" else "Tất cả",
-            filter_pregnancy if view_mode == "📋 Duyệt tất cả" else "Tất cả"
+            filter_pregnancy if view_mode == "📋 Duyệt tất cả" else "Tất cả",
+            filter_tdm if view_mode == "📋 Duyệt tất cả" else "Tất cả",
+            filter_frequency if view_mode == "📋 Duyệt tất cả" else "Tất cả"
         )
         
         if filtered_ab:

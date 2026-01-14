@@ -399,6 +399,73 @@ def render_scenario_dosing_calculator(antibiotic_name):
     if indication_meningitis:
         indications_list.append("meningitis")
     
+    # Other drugs input for interaction checking
+    st.markdown("---")
+    with st.expander("💊 Thuốc khác đang dùng (để kiểm tra tương tác)", expanded=False):
+        all_antibiotics = sorted(list(ANTIBIOTICS_DATABASE.keys()))
+        
+        other_drugs = st.multiselect(
+            "Chọn các thuốc khác đang dùng:",
+            all_antibiotics,
+            default=[],
+            key=f"scenario_other_drugs_{antibiotic_name}",
+            help="Chọn các kháng sinh hoặc thuốc khác đang dùng để kiểm tra tương tác"
+        )
+        
+        # Check interactions if other drugs selected
+        if other_drugs:
+            try:
+                from .drug_interactions import (
+                    check_interactions,
+                    InteractionSeverity
+                )
+                
+                # Check interactions with current antibiotic
+                all_drugs = [antibiotic_name] + other_drugs
+                interactions = check_interactions(all_drugs)
+                
+                if interactions:
+                    # Filter only interactions involving the current antibiotic
+                    relevant_interactions = [
+                        i for i in interactions
+                        if i.get('drug1') == antibiotic_name or i.get('drug2') == antibiotic_name
+                    ]
+                    
+                    if relevant_interactions:
+                        major = [i for i in relevant_interactions if i.get('severity') == InteractionSeverity.MAJOR]
+                        minor = [i for i in relevant_interactions if i.get('severity') == InteractionSeverity.MINOR]
+                        info = [i for i in relevant_interactions if i.get('severity') == InteractionSeverity.INFO]
+                        
+                        if major:
+                            st.error(f"🔴 **Tương tác nghiêm trọng ({len(major)}):**")
+                            for interaction in major:
+                                other_drug = interaction.get('drug2') if interaction.get('drug1') == antibiotic_name else interaction.get('drug1')
+                                st.error(f"""
+                                **{antibiotic_name} + {other_drug}**
+                                
+                                **Mô tả:** {interaction.get('description', 'N/A')}
+                                
+                                **Khuyến cáo:** {interaction.get('recommendation', 'N/A')}
+                                """)
+                        
+                        if minor:
+                            st.warning(f"🟡 **Tương tác nhẹ ({len(minor)}):**")
+                            for interaction in minor:
+                                other_drug = interaction.get('drug2') if interaction.get('drug1') == antibiotic_name else interaction.get('drug1')
+                                st.warning(f"**{antibiotic_name} + {other_drug}:** {interaction.get('description', 'N/A')}")
+                        
+                        if info:
+                            for interaction in info:
+                                other_drug = interaction.get('drug2') if interaction.get('drug1') == antibiotic_name else interaction.get('drug1')
+                                st.info(f"ℹ️ **{antibiotic_name} + {other_drug}:** {interaction.get('description', 'N/A')}")
+                    else:
+                        st.success("✅ Không phát hiện tương tác với thuốc đang tính liều")
+                else:
+                    st.success("✅ Không phát hiện tương tác")
+                    
+            except ImportError:
+                st.warning("⚠️ Không thể tải drug interaction checker")
+    
     if not scenarios_list or not indications_list:
         st.warning("⚠️ Vui lòng chọn ít nhất 1 scenario và 1 chỉ định")
         return
@@ -469,6 +536,58 @@ def render_scenario_dosing_calculator(antibiotic_name):
         display_df['Khoảng cách (giờ)'] = display_df['Khoảng cách (giờ)'].apply(lambda x: f"{x:.0f}" if x > 0 else "N/A")
         
         st.dataframe(display_df, use_container_width=True, hide_index=True)
+        
+        # Interaction warnings in results
+        other_drugs_key = f"scenario_other_drugs_{antibiotic_name}"
+        if other_drugs_key in st.session_state and st.session_state[other_drugs_key]:
+            other_drugs = st.session_state[other_drugs_key]
+            if other_drugs:
+                st.markdown("---")
+                st.markdown("### ⚠️ Cảnh báo tương tác:")
+                try:
+                    from .drug_interactions import (
+                        check_interactions,
+                        InteractionSeverity
+                    )
+                    
+                    all_drugs = [antibiotic_name] + other_drugs
+                    interactions = check_interactions(all_drugs)
+                    
+                    if interactions:
+                        relevant_interactions = [
+                            i for i in interactions
+                            if i.get('drug1') == antibiotic_name or i.get('drug2') == antibiotic_name
+                        ]
+                        
+                        if relevant_interactions:
+                            major = [i for i in relevant_interactions if i.get('severity') == InteractionSeverity.MAJOR]
+                            minor = [i for i in relevant_interactions if i.get('severity') == InteractionSeverity.MINOR]
+                            
+                            if major:
+                                st.error(f"🔴 **{len(major)} tương tác nghiêm trọng:**")
+                                for interaction in major:
+                                    other_drug = interaction.get('drug2') if interaction.get('drug1') == antibiotic_name else interaction.get('drug1')
+                                    st.error(f"""
+                                    **{antibiotic_name} + {other_drug}**
+                                    
+                                    **Mô tả:** {interaction.get('description', 'N/A')}
+                                    
+                                    **Khuyến cáo:** {interaction.get('recommendation', 'N/A')}
+                                    
+                                    **Theo dõi:** {interaction.get('monitoring', 'N/A')}
+                                    """)
+                            
+                            if minor:
+                                st.warning(f"🟡 **{len(minor)} tương tác nhẹ:**")
+                                for interaction in minor:
+                                    other_drug = interaction.get('drug2') if interaction.get('drug1') == antibiotic_name else interaction.get('drug1')
+                                    st.warning(f"**{antibiotic_name} + {other_drug}:** {interaction.get('description', 'N/A')}")
+                        else:
+                            st.success("✅ Không phát hiện tương tác với thuốc đang tính liều")
+                    else:
+                        st.success("✅ Không phát hiện tương tác")
+                except ImportError:
+                    pass
         
         # Visual Charts
         st.markdown("---")

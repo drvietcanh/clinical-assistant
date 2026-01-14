@@ -220,64 +220,78 @@ def render_multi_comparison():
         
         # Import drug interaction checker
         try:
-            from drugs.interactions_data import check_interactions, normalize_drug_name, SEVERITY_MAJOR, SEVERITY_MODERATE
-            
-            # Normalize antibiotic names for interaction checking
-            normalized_abs = [normalize_drug_name(ab) for ab in selected_antibiotics]
+            from .drug_interactions import (
+                check_interactions,
+                InteractionSeverity,
+                get_severity_icon,
+                get_severity_label_vi
+            )
             
             # Check all pairwise interactions
-            interactions_found = check_interactions(normalized_abs)
+            interactions_found = check_interactions(selected_antibiotics)
             
             if interactions_found:
                 # Group by severity
-                major_interactions = [i for i in interactions_found if i.get('severity') == SEVERITY_MAJOR]
-                moderate_interactions = [i for i in interactions_found if i.get('severity') == SEVERITY_MODERATE]
-                minor_interactions = [i for i in interactions_found if i.get('severity') == 'Minor']
+                major_interactions = [i for i in interactions_found if i.get('severity') == InteractionSeverity.MAJOR]
+                minor_interactions = [i for i in interactions_found if i.get('severity') == InteractionSeverity.MINOR]
+                info_interactions = [i for i in interactions_found if i.get('severity') == InteractionSeverity.INFO]
                 
                 # Display major interactions
                 if major_interactions:
-                    st.error("🚨 **Tương tác nghiêm trọng (Major):**")
+                    st.error(f"🔴 **Tương tác nghiêm trọng ({len(major_interactions)}):**")
                     for interaction in major_interactions:
+                        drug1 = interaction.get('drug1', '')
+                        drug2 = interaction.get('drug2', '')
+                        description = interaction.get('description', 'N/A')
+                        recommendation = interaction.get('recommendation', 'N/A')
+                        monitoring = interaction.get('monitoring', '')
+                        alternatives = interaction.get('alternatives', '')
+                        
                         st.error(f"""
-                        **{interaction.get('drug1', '')} + {interaction.get('drug2', '')}**
-                        - **Cơ chế:** {interaction.get('mechanism', 'N/A')}
-                        - **Mô tả:** {interaction.get('description', 'N/A')}
-                        - **Xử trí:** {interaction.get('management', 'N/A')}
+                        **{drug1} + {drug2}**
+                        
+                        **Mô tả:** {description}
+                        
+                        **Khuyến cáo:** {recommendation}
                         """)
+                        
+                        if monitoring:
+                            st.info(f"📊 **Theo dõi:** {monitoring}")
+                        
+                        if alternatives:
+                            st.warning(f"💡 **Lựa chọn thay thế:** {alternatives}")
                 
-                # Display moderate interactions
-                if moderate_interactions:
-                    st.warning("⚠️ **Tương tác trung bình (Moderate):**")
-                    for interaction in moderate_interactions:
-                        st.warning(f"""
-                        **{interaction.get('drug1', '')} + {interaction.get('drug2', '')}**
-                        - **Cơ chế:** {interaction.get('mechanism', 'N/A')}
-                        - **Mô tả:** {interaction.get('description', 'N/A')}
-                        - **Xử trí:** {interaction.get('management', 'N/A')}
-                        """)
-                
-                # Display minor interactions (collapsed)
+                # Display minor interactions
                 if minor_interactions:
-                    with st.expander(f"ℹ️ Tương tác nhẹ (Minor) - {len(minor_interactions)} tương tác"):
-                        for interaction in minor_interactions:
-                            st.info(f"**{interaction.get('drug1', '')} + {interaction.get('drug2', '')}:** {interaction.get('description', 'N/A')}")
+                    st.warning(f"🟡 **Tương tác nhẹ ({len(minor_interactions)}):**")
+                    for interaction in minor_interactions:
+                        drug1 = interaction.get('drug1', '')
+                        drug2 = interaction.get('drug2', '')
+                        description = interaction.get('description', 'N/A')
+                        recommendation = interaction.get('recommendation', 'N/A')
+                        
+                        st.warning(f"""
+                        **{drug1} + {drug2}**
+                        
+                        **Mô tả:** {description}
+                        
+                        **Khuyến cáo:** {recommendation}
+                        """)
+                
+                # Display info interactions (collapsed)
+                if info_interactions:
+                    with st.expander(f"ℹ️ Tương tác thông tin ({len(info_interactions)}):"):
+                        for interaction in info_interactions:
+                            drug1 = interaction.get('drug1', '')
+                            drug2 = interaction.get('drug2', '')
+                            description = interaction.get('description', 'N/A')
+                            st.info(f"**{drug1} + {drug2}:** {description}")
             else:
                 st.success("✅ Không phát hiện tương tác thuốc trong database")
-                
-            # Also check for hardcoded dangerous combinations (as backup)
-            dangerous_combos = []
-            if "Vancomycin" in selected_antibiotics:
-                nephrotoxic = ["Gentamicin", "Amikacin", "Tobramycin"]
-                if any(drug in selected_antibiotics for drug in nephrotoxic):
-                    dangerous_combos.append("🚨 **Vancomycin + Aminoglycoside:** Tăng nguy cơ độc thận rất cao! (Cảnh báo bổ sung)")
-            
-            if dangerous_combos:
-                for combo in dangerous_combos:
-                    st.error(combo)
                     
-        except ImportError:
+        except ImportError as e:
             # Fallback to hardcoded interactions if import fails
-            st.warning("⚠️ Không thể tải drug interaction checker. Sử dụng cảnh báo cơ bản.")
+            st.warning(f"⚠️ Không thể tải drug interaction checker: {e}. Sử dụng cảnh báo cơ bản.")
             dangerous_combos = []
             if "Vancomycin" in selected_antibiotics:
                 nephrotoxic = ["Gentamicin", "Amikacin", "Tobramycin"]

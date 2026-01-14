@@ -17,14 +17,21 @@ ANALYTICS_KEYS = {
 }
 
 
-def log_usage(action: str, antibiotic_name: str, details: Optional[Dict] = None):
-    """Log antibiotic usage action"""
+def log_usage(action: str, antibiotic_name: str = None, details: Optional[Dict] = None):
+    """
+    Log antibiotic usage action
+    
+    Args:
+        action: Type of action ("view", "calculate", "search", "compare", "protocol_view", "favorite")
+        antibiotic_name: Name of antibiotic (optional for some actions)
+        details: Additional details dict
+    """
     if ANALYTICS_KEYS["usage_history"] not in st.session_state:
         st.session_state[ANALYTICS_KEYS["usage_history"]] = []
     
     entry = {
         "timestamp": datetime.now().isoformat(),
-        "action": action,  # "view", "calculate", "search", "compare"
+        "action": action,  # "view", "calculate", "search", "compare", "protocol_view", "favorite"
         "antibiotic": antibiotic_name,
         "details": details or {}
     }
@@ -32,9 +39,9 @@ def log_usage(action: str, antibiotic_name: str, details: Optional[Dict] = None)
     history = st.session_state[ANALYTICS_KEYS["usage_history"]]
     history.append(entry)
     
-    # Keep only last 1000 entries
-    if len(history) > 1000:
-        history = history[-1000:]
+    # Keep only last 2000 entries (increased for better analytics)
+    if len(history) > 2000:
+        history = history[-2000:]
     
     st.session_state[ANALYTICS_KEYS["usage_history"]] = history
 
@@ -63,17 +70,25 @@ def get_usage_stats(days: int = 30) -> Dict:
     actions_by_type = {}
     antibiotic_views = {}
     antibiotic_calculations = {}
+    protocol_views = {}
+    favorites_count = {}
     
     for entry in recent_history:
         action = entry["action"]
         actions_by_type[action] = actions_by_type.get(action, 0) + 1
         
-        if action == "view":
+        if action == "view" and entry.get("antibiotic"):
             ab_name = entry["antibiotic"]
             antibiotic_views[ab_name] = antibiotic_views.get(ab_name, 0) + 1
-        elif action == "calculate":
+        elif action == "calculate" and entry.get("antibiotic"):
             ab_name = entry["antibiotic"]
             antibiotic_calculations[ab_name] = antibiotic_calculations.get(ab_name, 0) + 1
+        elif action == "protocol_view":
+            protocol_name = entry.get("details", {}).get("protocol", "Unknown")
+            protocol_views[protocol_name] = protocol_views.get(protocol_name, 0) + 1
+        elif action == "favorite" and entry.get("antibiotic"):
+            ab_name = entry["antibiotic"]
+            favorites_count[ab_name] = favorites_count.get(ab_name, 0) + 1
     
     # Get most viewed
     most_viewed = sorted(
@@ -100,10 +115,26 @@ def get_usage_stats(days: int = 30) -> Dict:
         for date, count in sorted(daily_usage.items())
     ]
     
+    # Get most viewed protocols
+    most_viewed_protocols = sorted(
+        protocol_views.items(),
+        key=lambda x: x[1],
+        reverse=True
+    )[:10]
+    
+    # Get most favorited
+    most_favorited = sorted(
+        favorites_count.items(),
+        key=lambda x: x[1],
+        reverse=True
+    )[:10]
+    
     return {
         "total_actions": len(recent_history),
         "most_viewed": most_viewed,
         "most_calculated": most_calculated,
+        "most_viewed_protocols": most_viewed_protocols,
+        "most_favorited": most_favorited,
         "actions_by_type": actions_by_type,
         "daily_usage": daily_usage_list,
         "period_days": days
@@ -179,6 +210,24 @@ def render_analytics():
     else:
         st.info("Chưa có dữ liệu")
     
+    # Most viewed protocols
+    if stats.get("most_viewed_protocols"):
+        st.markdown("---")
+        st.markdown("#### 📋 Phác Đồ Được Xem Nhiều Nhất")
+        
+        for idx, (protocol_name, count) in enumerate(stats["most_viewed_protocols"], 1):
+            medal = "🥇" if idx == 1 else "🥈" if idx == 2 else "🥉" if idx == 3 else f"{idx}."
+            st.markdown(f"{medal} **{protocol_name}**: {count} lượt xem")
+    
+    # Most favorited
+    if stats.get("most_favorited"):
+        st.markdown("---")
+        st.markdown("#### ⭐ Kháng Sinh Được Yêu Thích Nhiều Nhất")
+        
+        for idx, (ab_name, count) in enumerate(stats["most_favorited"], 1):
+            medal = "🥇" if idx == 1 else "🥈" if idx == 2 else "🥉" if idx == 3 else f"{idx}."
+            st.markdown(f"{medal} **{ab_name}**: {count} lần yêu thích")
+    
     # Actions by type chart
     st.markdown("---")
     st.markdown("#### 📊 Phân Bố Theo Loại Thao Tác")
@@ -233,15 +282,37 @@ def render_analytics():
     st.markdown("---")
     st.markdown("#### 💾 Xuất Dữ Liệu")
     
-    if st.button("📥 Xuất dữ liệu JSON", use_container_width=True):
+    col_export1, col_export2 = st.columns(2)
+    
+    with col_export1:
         json_data = json.dumps(stats, indent=2, ensure_ascii=False)
         st.download_button(
-            label="💾 Tải JSON",
+            label="📥 Tải JSON",
             data=json_data,
             file_name=f"antibiotic_analytics_{datetime.now().strftime('%Y%m%d')}.json",
             mime="application/json",
             use_container_width=True
         )
+    
+    with col_export2:
+        # Export CSV
+        try:
+            import pandas as pd
+            
+            # Create CSV from daily usage
+            if stats["daily_usage"]:
+                df_daily = pd.DataFrame(stats["daily_usage"])
+                csv_daily = df_daily.to_csv(index=False, encoding='utf-8-sig')
+                
+                st.download_button(
+                    label="📊 Tải CSV (Daily Usage)",
+                    data=csv_daily,
+                    file_name=f"antibiotic_daily_usage_{datetime.now().strftime('%Y%m%d')}.csv",
+                    mime="text/csv",
+                    use_container_width=True
+                )
+        except ImportError:
+            st.info("💡 Cần pandas để xuất CSV")
     
     # Clear data option
     st.markdown("---")

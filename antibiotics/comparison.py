@@ -6,6 +6,7 @@ Compare 2-4 antibiotics side by side
 import streamlit as st
 import pandas as pd
 import html
+from datetime import datetime
 from .antibiotics_data import ANTIBIOTICS_DATABASE
 from .mic_breakpoints import get_common_susceptibility
 from .resistance_patterns import get_antibiotic_resistance_summary
@@ -132,6 +133,56 @@ def render_comparison():
     if comparison_data:
         df_comparison = pd.DataFrame(comparison_data)
         st.dataframe(df_comparison, use_container_width=True, hide_index=True)
+    
+    st.markdown("---")
+    
+    # Visual comparison (if available)
+    # Visual comparison (Phase 4 - Enhanced)
+    try:
+        from .visual_comparison import (
+            render_spectrum_chart,
+            render_dosing_comparison_chart,
+            render_side_effects_heatmap
+        )
+        
+        st.markdown("---")
+        st.markdown("### 📊 So Sánh Trực Quan")
+        
+        # Prepare data for visual comparison
+        visual_comparison_data = []
+        for ab_name in selected_antibiotics:
+            if ab_name not in ANTIBIOTICS_DATABASE:
+                continue
+            
+            ab_data = ANTIBIOTICS_DATABASE[ab_name]
+            visual_comparison_data.append({
+                'name': ab_name,
+                'dose': ab_data.get('dosage', {}).get('adult_standard', 'N/A') if isinstance(ab_data.get('dosage'), dict) else str(ab_data.get('dosage', 'N/A')),
+                'frequency': 'N/A',  # Will be extracted if available
+                'route': ' / '.join(ab_data.get('administration', [])) if ab_data.get('administration') else 'N/A',
+                'spectrum': ab_data.get('spectrum', []),
+                'side_effects': ab_data.get('side_effects', []),
+                'notes': ab_data.get('notes', 'N/A')
+            })
+        
+        if visual_comparison_data:
+            # Create tabs for visual comparisons
+            visual_tabs = st.tabs([
+                "📊 Phổ Tác Dụng",
+                "💉 Liều Dùng",
+                "⚠️ Tác Dụng Phụ"
+            ])
+            
+            with visual_tabs[0]:
+                render_spectrum_chart(visual_comparison_data, selected_antibiotics)
+            
+            with visual_tabs[1]:
+                render_dosing_comparison_chart(visual_comparison_data, selected_antibiotics)
+            
+            with visual_tabs[2]:
+                render_side_effects_heatmap(visual_comparison_data, selected_antibiotics)
+    except ImportError as e:
+        st.info(f"💡 Tính năng so sánh trực quan sẽ được cải thiện trong phiên bản tương lai. ({e})")
     
     st.markdown("---")
     
@@ -269,6 +320,41 @@ def render_comparison():
             else:
                 st.caption("Không cần điều chỉnh hoặc không có dữ liệu")
             st.markdown("---")
+    
+    # Export buttons
+    st.markdown("---")
+    st.markdown("### 📥 Xuất Kết Quả So Sánh")
+    try:
+        from .export import render_export_buttons
+        
+        # Prepare comparison data for export
+        comparison_data = []
+        for ab_name in selected_antibiotics:
+            if ab_name not in ANTIBIOTICS_DATABASE:
+                continue
+            
+            ab_data = ANTIBIOTICS_DATABASE[ab_name]
+            comparison_data.append({
+                'name': ab_name,
+                'dose': ab_data.get('dosing', {}).get('adult', 'N/A') if isinstance(ab_data.get('dosing'), dict) else str(ab_data.get('dosing', 'N/A')),
+                'frequency': 'N/A',  # Will be extracted from dosing if available
+                'spectrum': ', '.join(ab_data.get('spectrum', [])) if ab_data.get('spectrum') else 'N/A',
+                'notes': ab_data.get('notes', 'N/A')
+            })
+        
+        export_data = {
+            'comparison_data': comparison_data,
+            'drugs': selected_antibiotics
+        }
+        
+        render_export_buttons(
+            content_type='comparison',
+            content_data=export_data,
+            title=f"So Sánh Kháng Sinh - {', '.join(selected_antibiotics)}",
+            filename=f"comparison_{'_'.join([ab.replace(' ', '_') for ab in selected_antibiotics])}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
+        )
+    except ImportError:
+        st.info("💡 Tính năng xuất sẽ được thêm trong phiên bản tương lai")
     
     # Quick actions
     st.markdown("---")
