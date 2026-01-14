@@ -118,11 +118,11 @@ CORTICOSTEROID_INHALED_DRUGS = {
         'N/A - chỉ có dạng hít', 'infusion_rate': 'N/A', 'compatibility': [],
         'incompatibility': [],
         'notes':
-        'Chỉ có dạng hít (MDI/DPI) và nebulizer'},inhaled': {'technique':
+        'Chỉ có dạng hít (MDI/DPI) và nebulizer'}, 'inhaled': {'technique':
         'MDI: Lắc kỹ, thở ra hoàn toàn, đặt ống ngậm vào miệng, bấm và hít sâu chậm, giữ hơi 10 giây. DPI: Thở ra hoàn toàn, đặt ống ngậm vào miệng, hít mạnh và sâu, giữ hơi 10 giây.'
         , 'after_use':
         'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng - QUAN TRỌNG',
-        'frequency': '2 lần/ngày (sáng và tối), cách đều'},nebulizer': {
+        'frequency': '2 lần/ngày (sáng và tối), cách đều'}, 'nebulizer': {
         'preparation':
         'Lắc kỹ suspension trước khi dùng. Đổ vào buồng nebulizer. Dùng trong vòng 2 giờ sau khi mở gói.'
         , 'administration':
@@ -145,7 +145,7 @@ CORTICOSTEROID_INHALED_DRUGS = {
                 'respiratory': 'Low (oral candidiasis - common if not rinsing mouth, hoarseness, cough)',
                 'metabolic': 'Moderate (hyperglycemia, hypertension with high doses)',
                 'skeletal': 'Moderate (growth suppression in children with high doses, osteoporosis with long-term high doses)'
-            },qt_prolongation': False,
+            }, 'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': [
@@ -155,7 +155,7 @@ CORTICOSTEROID_INHALED_DRUGS = {
                 'Systemic effects (only with high doses): HPA axis suppression, growth suppression in children, osteoporosis, hypertension',
                 'Hepatic function (if symptoms - rare)',
                 'Drug interactions with ritonavir, ketoconazole, itraconazole (increased budesonide levels) - CRITICAL'
-            ],look_alike_sound_alike': ['Budesonide', 'Beclomethasone', 'Fluticasone', 'Mometasone']
+            ], 'look_alike_sound_alike': ['Budesonide', 'Beclomethasone', 'Fluticasone', 'Mometasone']
         }, 'guideline_tags': [
             'GINA 2023 Guidelines - Global Initiative for Asthma',
             'NAEPP Guidelines - Asthma Management',

@@ -91,7 +91,7 @@ ANTHRACYCLINES_DRUGS = {
         'Tổng liều tích lũy >450-550mg/m² - nguy cơ độc tim cao, nên ngừng',
         'Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục',
         'Suy gan - thận trọng, có thể cần giảm liều',
-        'Suy thận - thận trọng, có thể cần giảm liều']},contraindications_detail': {
+        'Suy thận - thận trọng, có thể cần giảm liều']}, 'contraindications_detail': {
         'tuyệt_đối': [
         'Dị ứng doxorubicin', 'Suy tim nặng - chống chỉ định tuyệt đối',
         'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',

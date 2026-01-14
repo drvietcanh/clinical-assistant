@@ -192,7 +192,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
                 'cardiovascular': 'High (increased risk of serious cardiovascular events: MI, stroke, death - Black Box Warning)',
                 'renal': 'Moderate (acute kidney injury, especially with dehydration, ACE inhibitors, diuretics)',
                 'hepatic': 'Moderate (hepatotoxicity rare)'
-            },qt_prolongation': False,
+            }, 'qt_prolongation': False,
             'hepatotoxicity': True,
             'nephrotoxicity': True,
             'requires_monitoring': [
@@ -204,7 +204,7 @@ ANALGESIC_ANTIPYRETIC_NSAID_DRUGS = {
                 'INR (if co-administered with warfarin) - CRITICAL (increased bleeding risk)',
                 'Cardiovascular symptoms (chest pain, dyspnea) - increased CV risk with long-term use',
                 'Renal function (creatinine, eGFR) if co-administered with ACE inhibitors/ARBs or diuretics'
-            ],look_alike_sound_alike': ['Ibuprofen', 'Naproxen', 'Indomethacin', 'Ketoprofen']
+            ], 'look_alike_sound_alike': ['Ibuprofen', 'Naproxen', 'Indomethacin', 'Ketoprofen']
         }, 'guideline_tags': [
             'FDA Black Box Warning - Ibuprofen and Cardiovascular Risk',
             'FDA Black Box Warning - Ibuprofen and GI Bleeding',

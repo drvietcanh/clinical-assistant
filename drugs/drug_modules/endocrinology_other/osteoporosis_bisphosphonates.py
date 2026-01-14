@@ -44,7 +44,8 @@ BISPHOSPHONATES_DRUGS = {
             "Calcium, sắt, antacids: giảm hấp thu alendronate - dùng cách xa ít nhất 30 phút.",
             "NSAIDs: tăng nguy cơ kích ứng dạ dày.",
         ],
-        "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ""mechanism_of_action": (
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
+    "mechanism_of_action": (
             "Alendronate là bisphosphonate thế hệ 2, ức chế hủy xương bằng cách gắn vào hydroxyapatite "
             "trong xương và ức chế enzyme farnesyl pyrophosphate synthase (FPPS) trong tế bào hủy xương (osteoclasts). "
             "FPPS cần thiết cho quá trình prenylation protein, giúp tế bào hủy xương hoạt động. "

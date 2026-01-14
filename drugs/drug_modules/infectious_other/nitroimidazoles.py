@@ -106,7 +106,7 @@ NITROIMIDAZOLES_DRUGS = {
         'Bệnh thần kinh ngoại biên - tăng nguy cơ tổn thương thần kinh',
         'Bệnh nhân đang dùng warfarin - tăng nguy cơ chảy máu',
         'Bệnh nhân đang dùng lithium - tăng nguy cơ độc tính lithium',
-        'Nhiễm trùng do vi khuẩn hiếu khí - không hiệu quả']},contraindications_detail': {'tuyệt_đối': [
+        'Nhiễm trùng do vi khuẩn hiếu khí - không hiệu quả']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng metronidazole hoặc nitroimidazole',
         'Đang dùng disulfiram hoặc đã dùng disulfiram trong vòng 14 ngày - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI'
         ],

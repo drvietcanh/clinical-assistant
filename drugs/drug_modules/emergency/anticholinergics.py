@@ -85,7 +85,7 @@ ANTICHOLINERGICS_DRUGS = {
         'tương_đối': ['Sốt (có thể làm tăng nhiệt độ do giảm tiết mồ hôi)',
         'Người già (tăng nguy cơ lú lẫn, bí tiểu)',
         'Bệnh mạch vành (tăng nhịp tim có thể làm nặng thêm)',
-        'Bệnh phổi tắc nghẽn mạn tính (COPD) - có thể làm tăng độ nhớt đờm']},contraindications_detail': {
+        'Bệnh phổi tắc nghẽn mạn tính (COPD) - có thể làm tăng độ nhớt đờm']}, 'contraindications_detail': {
         'tuyệt_đối': [
         'Glaucoma góc đóng (có thể gây tăng nhãn áp đe dọa thị giác)',
         'Tắc nghẽn đường tiểu (có thể làm nặng thêm bí tiểu)',

@@ -26,14 +26,14 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Buồn ngủ (10-15% người dùng, mặc dù là thế hệ thứ hai)',
         'Chức năng thận (creatinine) - cần điều chỉnh liều ở suy thận',
         'Tác dụng phụ (khô miệng, nhức đầu, mệt mỏi)',
-        'Tương tác với alcohol (có thể tăng buồn ngủ)'],contraindications_detail': {
+        'Tương tác với alcohol (có thể tăng buồn ngủ)'], 'contraindications_detail': {
         'tuyệt_đối': [
         'Dị ứng cetirizine hoặc hydroxyzine',
         'Suy thận nặng (CrCl <30) - chống chỉ định hoặc dùng liều rất thấp'],
         'tương_đối': [
         'Suy thận nhẹ đến trung bình (CrCl 30-60) - giảm liều 50%',
         'Người cao tuổi - có thể tăng nguy cơ buồn ngủ',
-        'Bệnh nhân có nguy cơ bí tiểu - tăng nguy cơ']},precautions': [
+        'Bệnh nhân có nguy cơ bí tiểu - tăng nguy cơ']}, 'precautions': [
         'Có thể gây buồn ngủ ở một số người (10-15%) - thận trọng khi lái xe hoặc vận hành máy móc'
         'Cần điều chỉnh liều ở suy thận: CrCl 30-60 → 5mg/ngày, CrCl <30 → 5mg cách ngày'
         , 'Có thể dùng với thức ăn hoặc không',
@@ -350,7 +350,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_2ND_GENERATIONS_DRUGS = {
         'Suy thận (CrCl 30-60) - giảm liều (5mg cách ngày)',
         'Suy thận (CrCl 10-30) - giảm liều (5mg mỗi 3 ngày)',
         'Có thai - category B, thận trọng', 'Trẻ em <6 tuổi - không khuyến cáo'
-        ]},drug_interactions': {'major': [],
+        ]}, 'drug_interactions': {'major': [],
         'moderate': [{'drug':
         'Alcohol', 'mechanism':
         'Cả hai đều ức chế hệ thần kinh trung ương, tác dụng cộng dồn.',

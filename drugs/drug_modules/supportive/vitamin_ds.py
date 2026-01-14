@@ -82,7 +82,7 @@ VITAMIN_DS_DRUGS = {
         , 'Sỏi thận calci (tiền sử) - thận trọng, theo dõi calci niệu',
         'Bệnh sarcoidosis - tăng nhạy cảm với vitamin D, tăng nguy cơ tăng calci máu'
         'Bệnh cường cận giáp (hyperparathyroidism) - có thể làm nặng tăng calci máu'
-        , 'Dùng thiazide diuretics - tăng nguy cơ tăng calci máu']},drug_interactions': {'major': [{'drug':
+        , 'Dùng thiazide diuretics - tăng nguy cơ tăng calci máu']}, 'drug_interactions': {'major': [{'drug':
         'Thiazide diuretics (Hydrochlorothiazide, Chlorthalidone)', 'mechanism':
         'Thiazide diuretics giảm bài tiết calcium qua thận, kết hợp với vitamin D tăng hấp thu calcium, dẫn đến tăng calci máu.'
         , 'effect':

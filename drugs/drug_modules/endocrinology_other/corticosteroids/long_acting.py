@@ -202,7 +202,7 @@ LONG_ACTING = {
             'ophthalmic': 'Glaucoma, cataracts (with long-term use)',
             'psychiatric': 'Psychosis, mood changes (especially with high doses)',
             'obstetric': 'Fetal lung maturation (used in pregnancy 24-34 weeks for preterm delivery risk)'
-        },qt_prolongation': False,
+        }, 'qt_prolongation': False,
         'hepatotoxicity': False,
         'nephrotoxicity': False,
         'requires_monitoring': [
@@ -215,7 +215,7 @@ LONG_ACTING = {
             'Psychiatric signs (psychosis, mood changes)',
             'In pregnancy: Fetal monitoring if used for lung maturation (24-34 weeks)',
             'CYP3A4 interactions (inhibitors increase levels, inducers decrease levels)'
-        ],look_alike_sound_alike': ['Betamethasone', 'Celestone', 'Dexamethasone']
+        ], 'look_alike_sound_alike': ['Betamethasone', 'Celestone', 'Dexamethasone']
         }, 'guideline_tags': [
         'ACOG Guidelines - Antenatal Corticosteroid Therapy for Fetal Maturation',
         'Endocrine Society Guidelines - Corticosteroid Use',
@@ -423,7 +423,7 @@ LONG_ACTING = {
             'ophthalmic': 'Glaucoma, cataracts (with long-term use)',
             'psychiatric': 'Psychosis, mood changes (especially with high doses)',
             'neurological': 'Cerebral edema treatment (high dose IV)'
-        },qt_prolongation': False,
+        }, 'qt_prolongation': False,
         'hepatotoxicity': False,
         'nephrotoxicity': False,
         'requires_monitoring': [
@@ -437,7 +437,7 @@ LONG_ACTING = {
             'Cerebral edema: High dose IV (10mg IV x1, then 4mg IV q6h) - monitor closely',
             'COVID-19: 6mg daily x10 days (IV or PO) - for severe cases only',
             'CYP3A4 interactions (inhibitors increase levels, inducers decrease levels)'
-        ],look_alike_sound_alike': ['Dexamethasone', 'Decadron', 'Betamethasone']
+        ], 'look_alike_sound_alike': ['Dexamethasone', 'Decadron', 'Betamethasone']
         }, 'guideline_tags': [
         'Endocrine Society Guidelines - Corticosteroid Use',
         'WHO Guidelines - COVID-19 Treatment (Severe Cases)',

@@ -155,7 +155,7 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
             'organ_toxicity': {
                 'hepatic': 'CRITICAL (hepatotoxicity with overdose >150mg/kg or >10g - can be fatal, acute liver failure)',
                 'metabolic': 'Moderate (hypoglycemia with overdose)'
-            },qt_prolongation': False,
+            }, 'qt_prolongation': False,
             'hepatotoxicity': True,
             'nephrotoxicity': False,
             'requires_monitoring': [
@@ -165,7 +165,7 @@ ANALGESIC_ANTIPYRETIC_DRUGS = {
                 'Signs of hepatotoxicity: nausea, vomiting, abdominal pain, jaundice (appears 24-48h after overdose) - CRITICAL',
                 'Blood glucose (hypoglycemia can occur with overdose)',
                 'King\'s College Criteria for liver transplantation (if acute liver failure)'
-            ],look_alike_sound_alike': ['Paracetamol', 'Acetaminophen', 'Acetylcysteine', 'N-acetylcysteine']
+            ], 'look_alike_sound_alike': ['Paracetamol', 'Acetaminophen', 'Acetylcysteine', 'N-acetylcysteine']
         }, 'guideline_tags': [
             'FDA Black Box Warning - Acetaminophen and Hepatotoxicity',
             'Rumack-Matthew Nomogram - Acetaminophen Overdose Treatment',

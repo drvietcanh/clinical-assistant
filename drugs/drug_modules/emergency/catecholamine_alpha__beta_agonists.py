@@ -311,7 +311,7 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'C - An toàn trong cấp cứu', 'risk_flags': {
             'high_alert': True,
             'narrow_therapeutic_index': False,
-            'organ_toxicity': {'cardiac': True},icu_critical_care_only': False,
+            'organ_toxicity': {'cardiac': True}, 'icu_critical_care_only': False,
             'look_alike_sound_alike': []
         }, 'guideline_tags': [
             'AHA ACLS Guidelines',
@@ -468,7 +468,7 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'Đùi ngoài (vastus lateralis) - hấp thu nhanh nhất. Có thể dùng cánh tay nhưng hấp thu chậm hơn.'
         , 'notes':
         'Anaphylaxis: 0.3-0.5mg IM ở đùi ngoài. Trẻ em: 0.01mg/kg IM ở đùi ngoài (tối đa 0.5mg). Tiêm sâu vào cơ, không tiêm vào mỡ dưới da.'
-        },inhaled': {'reconstitution':
+        }, 'inhaled': {'reconstitution':
         'Dùng dung dịch 1:1000 (1mg/ml) pha trong 3-5ml NS cho nebulizer.',
         'dose':
         '0.5-1mg (0.5-1ml 1:1000) pha trong 3-5ml NS, khí dung mỗi 15-20 phút nếu cần.'

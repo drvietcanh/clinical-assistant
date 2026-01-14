@@ -572,7 +572,7 @@ VITAMINS_DRUGS = {
             "Digitalis (digoxin): tăng nguy cơ loạn nhịp nếu tăng calci máu",
         ],
         "pregnancy": "A - Không có nguy cơ trong các nghiên cứu có đối chứng",
-        '"mechanism_of_action": (
+        "mechanism_of_action": (
             "Vitamin D3 được chuyển hóa ở gan thành 25-hydroxyvitamin D [25(OH)D], sau đó ở thận thành dạng hoạt động "
             "1,25-dihydroxyvitamin D [1,25(OH)2D]. Dạng hoạt động tăng hấp thu calci và phospho tại ruột, "
             "tăng tái hấp thu calci tại thận và điều hòa chuyển hóa xương, giúp duy trì nồng độ calci, phospho và sức khỏe xương."

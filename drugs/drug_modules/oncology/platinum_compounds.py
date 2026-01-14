@@ -358,7 +358,7 @@ PLATINUM_COMPOUNDS_DRUGS = {
         'Suy thận nặng (CrCl <30) - giảm liều 25-50%, theo dõi chặt chẽ',
         'Suy gan nặng - thận trọng, có thể cần giảm liều',
         'Bệnh nhân có tiền sử độc thần kinh - tăng nguy cơ độc thần kinh nặng']
-        },contraindications_detail': {'tuyệt_đối': [
+        }, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng oxaliplatin hoặc platinum compounds',
         'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
         'Đang cho con bú - chống chỉ định'],

@@ -116,7 +116,7 @@ ANTIMALARIALS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['ECG (QTc) if risk factors or co-administered QT-prolonging drugs', 'Parasite count (blood smear)', 'Clinical symptoms', 'Electrolytes (K+, Mg2+)']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'WHO Guidelines - Malaria Treatment',
             'CDC Guidelines - Malaria Treatment',
             'FDA Drug Safety Communication - QT Prolongation'
@@ -750,7 +750,7 @@ ANTIMALARIALS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['G6PD test before treatment - CRITICAL (MANDATORY)', 'CBC and hemoglobin (every 1-2 weeks) - CRITICAL', 'Urine color (dark urine, jaundice - signs of hemolysis) - CRITICAL', 'Methemoglobin if symptoms of cyanosis, dyspnea', 'Parasitemia for gametocyte clearance']
-        },guideline_tags': [
+        }, 'guideline_tags': [
             'WHO Guidelines - Treatment of Malaria (Vivax/Ovale Radical Cure)',
             'CDC Guidelines - Malaria Treatment',
             'FDA Black Box Warning - Primaquine and G6PD Deficiency',

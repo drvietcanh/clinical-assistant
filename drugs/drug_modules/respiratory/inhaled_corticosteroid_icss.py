@@ -72,7 +72,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Lao phổi - cần điều trị lao trước, thận trọng',
         'Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
         'Dùng với ritonavir - tránh dùng',
-        'Dùng với ketoconazole, itraconazole - thận trọng']},contraindications_detail': {'tuyệt_đối': [
+        'Dùng với ketoconazole, itraconazole - thận trọng']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng với beclomethasone hoặc các thành phần khác',
         'Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)'],
         'tương_đối': [
@@ -133,7 +133,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
-            'requires_monitoring': [],look_alike_sound_alike': []
+            'requires_monitoring': [], 'look_alike_sound_alike': []
         }, 'guideline_tags': [
             'GINA Guidelines 2024 - Asthma Management - Inhaled corticosteroids',
             'FDA Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ beclomethasone, tăng nguy cơ ức chế HPA)',
@@ -147,7 +147,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'indications': ['Hen phế quản (kiểm soát, phòng ngừa)',
         'COPD (nếu có nhiều đợt cấp)', 'Viêm phế quản co thắt'],
         'contraindications': ['Nhiễm trùng đường hô hấp nặng chưa điều trị',
-        'Dị ứng'],adult_inhalation_medium': '400-800mcg x 2 lần/ngày',
+        'Dị ứng'], 'adult_inhalation_medium': '400-800mcg x 2 lần/ngày',
         'adult_inhalation_high': '800-1600mcg x 2 lần/ngày', 'adult_nebulizer':
         '0.5-1mg x 2 lần/ngày', 'notes':
         'Súc miệng sau khi dùng để tránh nấm miệng. Không dùng cho cắt cơn cấp'
@@ -208,7 +208,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'tương_đối': ['Lao phổi - cần điều trị lao trước, thận trọng',
         'Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
         'Dùng với ritonavir - tránh dùng',
-        'Dùng với ketoconazole, itraconazole - thận trọng']},contraindications_detail': {'tuyệt_đối': [
+        'Dùng với ketoconazole, itraconazole - thận trọng']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng với budesonide hoặc các thành phần khác',
         'Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)'],
         'tương_đối': ['Lao phổi - cần điều trị lao trước, thận trọng',
@@ -255,7 +255,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG.'
         , 'notes':
         'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần.'
-        },nebulizer': {'reconstitution':
+        }, 'nebulizer': {'reconstitution':
         'Dùng budesonide nebulizer suspension. Lắc kỹ trước khi dùng.',
         'administration':
         'Dùng qua nebulizer, thở bình thường trong 10-15 phút.', 'timing':
@@ -279,7 +279,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
-            'requires_monitoring': [],look_alike_sound_alike': []
+            'requires_monitoring': [], 'look_alike_sound_alike': []
         }, 'guideline_tags': [
             'GINA Guidelines 2024 - Asthma Management - Inhaled corticosteroids',
             'FDA Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ budesonide, tăng nguy cơ ức chế HPA)',
@@ -354,7 +354,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Lao phổi - cần điều trị lao trước, thận trọng',
         'Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
         'Dùng với ritonavir - tránh dùng',
-        'Dùng với ketoconazole, itraconazole - thận trọng']},contraindications_detail': {'tuyệt_đối': [
+        'Dùng với ketoconazole, itraconazole - thận trọng']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng với ciclesonide hoặc các thành phần khác',
         'Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)'],
         'tương_đối': [
@@ -420,7 +420,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
-            'requires_monitoring': [],look_alike_sound_alike': []
+            'requires_monitoring': [], 'look_alike_sound_alike': []
         }, 'guideline_tags': [
             'GINA Guidelines 2024 - Asthma Management - Inhaled corticosteroids',
             'FDA Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ ciclesonide, tăng nguy cơ ức chế HPA)',
@@ -559,7 +559,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
-            'requires_monitoring': [],look_alike_sound_alike': []
+            'requires_monitoring': [], 'look_alike_sound_alike': []
         }, 'guideline_tags': [
             'FDA Black Box Warning - TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ fluticasone, tăng nguy cơ ức chế trục HPA nghiêm trọng, có thể gây hội chứng Cushing, suy thượng thận)',
             'ISMP High Alert Medications',

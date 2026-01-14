@@ -328,7 +328,9 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Micromedex: Rizatriptan'],
         'evidence_level':
-        'High - FDA approved, multiple RCTs, clinical guidelines'}},
+        'High - FDA approved, multiple RCTs, clinical guidelines'
+        }
+    },
     
     "Sumatriptan": {'group': 'Analgesic - Antimigraine (5-HT1 Receptor Agonist)',
         "pregnancy": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ",
@@ -485,6 +487,7 @@ ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS = {
         'evidence_level':
         'High - FDA approved, multiple RCTs, clinical guidelines'
         }
+    }
 }
 
 __all__ = ['ANTIMIGRAINE_5_HT1_RECEPTOR_AGONISTS_DRUGS']

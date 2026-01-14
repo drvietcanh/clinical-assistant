@@ -77,7 +77,7 @@ CALCIUMS_DRUGS = {
         'Bệnh sarcoidosis - tăng nhạy cảm với calcium, tăng nguy cơ tăng calci máu'
         'Bệnh cường cận giáp (hyperparathyroidism) - có thể làm nặng tăng calci máu'
         , 'Dùng thiazide diuretics - tăng nguy cơ tăng calci máu',
-        'Suy tim - calcium carbonate có thể gây đầy hơi, táo bón']},drug_interactions': {'major': [{'drug':
+        'Suy tim - calcium carbonate có thể gây đầy hơi, táo bón']}, 'drug_interactions': {'major': [{'drug':
         'Levothyroxine', 'mechanism':
         'Calcium gắn với levothyroxine trong ruột, tạo phức hợp không hấp thu được, giảm hấp thu levothyroxine.'
         , 'effect':

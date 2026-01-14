@@ -60,7 +60,7 @@ FOLATES_DRUGS = {
             'An toàn trong thai kỳ và cho con bú',
             'Hiếm khi có tác dụng phụ',
             'Thận trọng ở bệnh nhân ung thư (folic acid có thể kích thích tế bào ung thư)'
-        ],onset': 'Vài ngày đến vài tuần (tác dụng tích tụ)',
+        ], 'onset': 'Vài ngày đến vài tuần (tác dụng tích tụ)',
         'duration': 'Phụ thuộc vào dự trữ trong cơ thể',
         'protein_binding': 'Không đáng kể',
         'clearance': 'Thận (thải trừ qua nước tiểu), một phần dự trữ trong gan',
@@ -75,7 +75,7 @@ FOLATES_DRUGS = {
                 'Ung thư (không điều trị) - folic acid có thể kích thích tế bào ung thư',
                 'Thiếu B12 chưa được điều trị - folic acid có thể che dấu thiếu B12'
             ]
-        },drug_interactions': {
+        }, 'drug_interactions': {
             'major': [
                 {
                     'drug': 'Methotrexate',

@@ -44,7 +44,7 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         'Dạng hít: sử dụng đúng kỹ thuật để đạt hiệu quả tối đa',
         'Dạng nebulizer: phù hợp cho bệnh nhân không thể dùng dạng hít',
         'An toàn hơn beta-agonist cho bệnh nhân tim mạch (không kích thích tim)'
-        ],onset':
+        ], 'onset':
         '15-30 phút (chậm hơn SABA)', 'duration': '4-6 giờ', 'protein_binding':
         'Không đáng kể (ion hóa, không hấp thu hệ thống)', 'clearance':
         'Chủ yếu tại chỗ (phế quản), không chuyển hóa đáng kể'},
@@ -129,7 +129,7 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         'Có thể dùng kết hợp với beta-agonist (SABA) cho hiệu quả tốt hơn - hiệp đồng tác dụng.'
         , 'notes':
         'Tránh để thuốc vào mắt - rửa tay sau khi dùng. Nếu thuốc vào mắt, rửa ngay bằng nước sạch. Dạng nebulizer: phù hợp cho bệnh nhân không thể dùng dạng hít.'
-        },nebulizer': {'reconstitution':
+        }, 'nebulizer': {'reconstitution':
         'Dùng dung dịch ipratropium 0.025% (250mcg/ml). Liều thường: 0.5-1ml (125-250mcg) pha với 2-4ml nước muối sinh lý.'
         , 'administration':
         'Dùng qua nebulizer, thở bình thường trong 10-15 phút cho đến khi hết thuốc.'

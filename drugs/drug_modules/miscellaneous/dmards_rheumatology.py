@@ -194,7 +194,8 @@ DMARDS_RHEUMATOLOGY_DRUGS = {
             "Warfarin: có thể tăng INR",
             "Cholestyramine: tăng thanh thải leflunomide (dùng để 'rửa thuốc')",
         ],
-        "pregnancy": "X - Chống chỉ định tuyệt đối trong thai kỳ do nguy cơ dị tật bẩm sinh""mechanism_of_action": (
+        "pregnancy": "X - Chống chỉ định tuyệt đối trong thai kỳ do nguy cơ dị tật bẩm sinh",
+        "mechanism_of_action": (
             "Leflunomide là tiền chất, chuyển hóa thành A77 1726 (teriflunomide), "
             "ức chế dihydroorotate dehydrogenase, enzym then chốt trong tổng hợp de novo pyrimidine. "
             "Điều này làm giảm tăng sinh tế bào lympho T/N kích hoạt và điều hòa đáp ứng miễn dịch trong RA."

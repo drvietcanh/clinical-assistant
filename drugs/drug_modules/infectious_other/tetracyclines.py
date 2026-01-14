@@ -93,7 +93,7 @@ TETRACYCLINES_DRUGS = {
         'contraindications': {
             'tuyệt_đối': ['Dị ứng tigecycline hoặc tetracycline'],
         'tương_đối': ['Có thai (category D)', 'Trẻ <8 tuổi', 'Suy gan nặng']
-        },dosage': {
+        }, 'dosage': {
             'adult_standard': '100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ',
             'notes': 'CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác.'
         },

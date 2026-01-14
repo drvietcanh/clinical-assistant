@@ -395,7 +395,7 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'Dùng 1 lần/ngày, tốt nhất vào buổi sáng, cách nhau 24 giờ.',
         'after_use':
         'Súc miệng và súc họng sau mỗi lần dùng để giảm kích ứng và QUAN TRỌNG: tránh thuốc vào mắt (có thể gây tăng nhãn áp).'
-        },respimat': {'technique':
+        }, 'respimat': {'technique':
         'Respimat: Xoay nắp để mở, xoay base để nạp thuốc, nhấn nút để phun thuốc, hít sâu và giữ hơi thở 10 giây. Dùng 2 lần/ngày (5mcg mỗi lần).'
         , 'timing': 'Dùng 2 lần/ngày (sáng và tối), cách nhau khoảng 12 giờ.',
         'after_use':

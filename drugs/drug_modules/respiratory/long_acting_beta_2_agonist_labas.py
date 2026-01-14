@@ -150,8 +150,8 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'qt_prolongation': True,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
-            'requires_monitoring': ['ECG'],look_alike_sound_alike': []
-        },guideline_tags': [
+            'requires_monitoring': ['ECG'], 'look_alike_sound_alike': []
+        }, 'guideline_tags': [
             'FDA Black Box Warning - KHÔNG BAO GIỜ dùng đơn độc cho hen phế quản - phải dùng kết hợp với ICS. Dùng đơn độc LABA có thể tăng nguy cơ tử vong do hen.',
             'ISMP High Alert Medications',
             'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',
@@ -296,8 +296,8 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'qt_prolongation': True,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
-            'requires_monitoring': ['ECG'],look_alike_sound_alike': []
-        },guideline_tags': [
+            'requires_monitoring': ['ECG'], 'look_alike_sound_alike': []
+        }, 'guideline_tags': [
             'FDA Black Box Warning - KHÔNG BAO GIỜ dùng đơn độc cho hen phế quản - phải dùng kết hợp với ICS. Dùng đơn độc LABA có thể tăng nguy cơ tử vong do hen.',
             'ISMP High Alert Medications',
             'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',
@@ -409,8 +409,8 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'qt_prolongation': True,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
-            'requires_monitoring': ['ECG'],look_alike_sound_alike': []
-        },guideline_tags': [
+            'requires_monitoring': ['ECG'], 'look_alike_sound_alike': []
+        }, 'guideline_tags': [
             'FDA Black Box Warning - KHÔNG BAO GIỜ dùng đơn độc cho hen phế quản - phải dùng kết hợp với ICS. Dùng đơn độc LABA có thể tăng nguy cơ tử vong do hen.',
             'ISMP High Alert Medications',
             'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',
@@ -576,8 +576,8 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'qt_prolongation': True,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
-            'requires_monitoring': ['ECG'],look_alike_sound_alike': []
-        },guideline_tags': [
+            'requires_monitoring': ['ECG'], 'look_alike_sound_alike': []
+        }, 'guideline_tags': [
             'FDA Black Box Warning - KHÔNG BAO GIỜ dùng đơn độc cho hen phế quản - phải dùng kết hợp với ICS. Dùng đơn độc LABA có thể tăng nguy cơ tử vong do hen.',
             'ISMP High Alert Medications',
             'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',
@@ -687,8 +687,8 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'qt_prolongation': True,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
-            'requires_monitoring': ['ECG'],look_alike_sound_alike': []
-        },guideline_tags': [
+            'requires_monitoring': ['ECG'], 'look_alike_sound_alike': []
+        }, 'guideline_tags': [
             'FDA Black Box Warning - KHÔNG BAO GIỜ dùng đơn độc cho hen phế quản - chỉ có dạng kết hợp với ICS. TRÁNH DÙNG với ritonavir.',
             'ISMP High Alert Medications',
             'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',

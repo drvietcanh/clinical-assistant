@@ -386,7 +386,7 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy',
         'Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy',
         'Dùng với beta-blockers - tăng nguy cơ chậm nhịp tim',
-        'Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ']},contraindications_detail': {'tuyệt_đối': [
+        'Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng donepezil hoặc các thành phần khác',
         'Bệnh tim nặng (block nhĩ thất độ II-III, rối loạn nhịp nặng)'],
         'tương_đối': [

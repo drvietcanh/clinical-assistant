@@ -96,7 +96,7 @@ SSRI_SELECTIVE_SEROTONIN_REUPTAKE_INHIBITORS_DRUGS = {
         'Trẻ em <18 tuổi - tăng nguy cơ tự tử',
         'Có ý định tự tử - chỉ kê đơn số lượng ít', 'Bệnh tim - thận trọng',
         'Rối loạn đông máu - tăng nguy cơ chảy máu',
-        'Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin']},contraindications_detail': {
+        'Dùng với tramadol, triptans - tăng nguy cơ hội chứng serotonin']}, 'contraindications_detail': {
         'tuyệt_đối': ['Dùng MAO inhibitor (chống chỉ định tuyệt đối)',
         'Dị ứng fluoxetine', 'Hội chứng serotonin đang diễn ra'],
         'tương_đối':

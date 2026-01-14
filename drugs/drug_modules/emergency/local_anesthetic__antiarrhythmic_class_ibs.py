@@ -167,7 +167,7 @@ LOCAL_ANESTHETIC_ANTIARRHYTHMIC_CLASS_IB_DRUGS = {
         ],
         'notes':
         'QUAN TRỌNG: 1) PHẢI điều chỉnh liều ở suy gan (giảm 30-70%), 2) PHẢI điều chỉnh liều ở suy tim (giảm 20-30%), 3) PHẢI điều chỉnh liều khi dùng với beta-blockers hoặc cimetidine (giảm 30-50%), 4) Độc tính thần kinh trung ương là dấu hiệu CẢNH BÁO SỚM - ngừng ngay nếu có, 5) Tiêm IV chậm (không quá 25-50mg/phút) để tránh độc tính, 6) Theo dõi ECG chặt chẽ, 7) Giảm liều ở người cao tuổi.'
-        },local_anesthesia': {'reconstitution':
+        }, 'local_anesthesia': {'reconstitution':
         'Dùng trực tiếp từ lọ (1% = 10mg/ml, 2% = 20mg/ml). Có thể pha với epinephrine để kéo dài tác dụng và giảm hấp thu.'
         , 'max_dose':
         'Không có epinephrine: 4.5mg/kg (tối đa 300mg). Có epinephrine: 7mg/kg (tối đa 500mg).'

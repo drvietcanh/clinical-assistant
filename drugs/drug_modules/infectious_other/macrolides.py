@@ -92,7 +92,7 @@ MACROLIDES_DRUGS = {
         'Dùng với thuốc kéo dài QT khác - tác dụng cộng dồn',
         'Suy gan nặng - thận trọng, có thể giảm chuyển hóa',
         'Suy thận nặng - thận trọng, mặc dù không cần điều chỉnh liều thường quy'
-        ]},contraindications_detail': {'tuyệt_đối': [
+        ]}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng azithromycin hoặc các macrolide khác (erythromycin, clarithromycin)'
         'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ torsades de pointes'
         'Dùng với pimozide, terfenadine, astemizole - tăng nguy cơ loạn nhịp tim nghiêm trọng'
@@ -208,7 +208,7 @@ MACROLIDES_DRUGS = {
                 'cardiac': 'High (QT prolongation, torsades de pointes - Black Box Warning, especially with risk factors)',
                 'hepatic': 'Low (hepatotoxicity rare)',
                 'auditory': 'Moderate (hearing loss rare, may be irreversible)'
-            },qt_prolongation': True,
+            }, 'qt_prolongation': True,
             'hepatotoxicity': True,
             'nephrotoxicity': False,
             'requires_monitoring': [
@@ -220,7 +220,7 @@ MACROLIDES_DRUGS = {
                 'INR (if co-administered with warfarin) - increased bleeding risk',
                 'Digoxin levels (if co-administered) - increased digoxin toxicity',
                 'Cyclosporine/tacrolimus levels (if co-administered) - increased toxicity'
-            ],look_alike_sound_alike': ['Azithromycin', 'Clarithromycin', 'Erythromycin', 'Aztreonam']
+            ], 'look_alike_sound_alike': ['Azithromycin', 'Clarithromycin', 'Erythromycin', 'Aztreonam']
         }, 'guideline_tags': [
             'FDA Black Box Warning - Azithromycin and QT Prolongation',
             'FDA Black Box Warning - Azithromycin and Torsades de Pointes',
@@ -350,7 +350,7 @@ MACROLIDES_DRUGS = {
         'Dùng với warfarin - tăng nguy cơ chảy máu',
         'Dùng với digoxin - tăng độc tính digoxin',
         'Suy thận nặng (CrCl <30) - cần giảm liều 50-75%',
-        'Suy gan - thận trọng, có thể giảm chuyển hóa']},contraindications_detail': {'tuyệt_đối': [
+        'Suy gan - thận trọng, có thể giảm chuyển hóa']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng clarithromycin hoặc các macrolide khác (erythromycin, azithromycin)'
         'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ tử vong do tim mạch'
         'Dùng với pimozide, terfenadine, astemizole - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI, tăng nguy cơ loạn nhịp tim nghiêm trọng, tử vong'
@@ -446,7 +446,7 @@ MACROLIDES_DRUGS = {
                 'musculoskeletal': 'High (rhabdomyolysis when co-administered with simvastatin/lovastatin - Black Box Warning)',
                 'hepatic': 'Low (hepatotoxicity rare)',
                 'auditory': 'Moderate (hearing loss rare, may be irreversible)'
-            },qt_prolongation': True,
+            }, 'qt_prolongation': True,
             'hepatotoxicity': True,
             'nephrotoxicity': False,
             'requires_monitoring': [
@@ -460,7 +460,7 @@ MACROLIDES_DRUGS = {
                 'Hepatic function (ALT, AST) - rare hepatotoxicity',
                 'Renal function (creatinine, eGFR) - dose adjustment required in renal impairment (CrCl <30)',
                 'Hearing loss symptoms (tinnitus, hearing loss) - rare, may be irreversible'
-            ],look_alike_sound_alike': ['Clarithromycin', 'Azithromycin', 'Erythromycin', 'Clindamycin']
+            ], 'look_alike_sound_alike': ['Clarithromycin', 'Azithromycin', 'Erythromycin', 'Clindamycin']
         }, 'guideline_tags': [
             'FDA Black Box Warning - Clarithromycin and Cardiovascular Death Risk',
             'FDA Black Box Warning - Clarithromycin and QT Prolongation',

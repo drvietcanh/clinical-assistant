@@ -196,7 +196,7 @@ ALKYLATING_AGENTS_DRUGS = {
         'Tránh dùng với các thuốc độc thận (cisplatin)',
         'Có thể gây vô sinh (cần tư vấn trước điều trị)',
         'Mesna phải được dùng đúng liều và thời điểm (trước, trong, và sau ifosfamide)'
-        ],onset': '1-2 tuần (tác dụng lâm sàng)', 'duration':
+        ], 'onset': '1-2 tuần (tác dụng lâm sàng)', 'duration':
         'Kéo dài (tích lũy)', 'protein_binding': '<20%', 'clearance':
         'Gan (chuyển hóa chủ yếu qua CYP2B6, CYP3A4), thận (thải trừ)'},
         'storage':

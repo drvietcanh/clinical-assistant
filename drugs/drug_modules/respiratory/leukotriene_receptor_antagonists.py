@@ -212,7 +212,7 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'tương_đối': [
         'Rối loạn tâm thần (trầm cảm, lo âu, rối loạn hành vi) - thận trọng, theo dõi chặt chẽ'
         , 'Tiền sử tự sát - thận trọng, theo dõi chặt chẽ',
-        'Dùng với phenobarbital, rifampin - có thể giảm hiệu quả']},contraindications_detail': {'tuyệt_đối': [
+        'Dùng với phenobarbital, rifampin - có thể giảm hiệu quả']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng với montelukast hoặc các thành phần khác'],
         'tương_đối': [
         'Rối loạn tâm thần (trầm cảm, lo âu, rối loạn hành vi) - thận trọng, theo dõi chặt chẽ'
@@ -303,7 +303,7 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'contraindications': {'tuyệt_đối': [
         'Dị ứng với nedocromil hoặc các thành phần khác'],
         'tương_đối': [
-        'Trẻ em <6 tuổi - an toàn từ 6 tuổi trở lên']},contraindications_detail': {'tuyệt_đối': [
+        'Trẻ em <6 tuổi - an toàn từ 6 tuổi trở lên']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng với nedocromil hoặc các thành phần khác'],
         'tương_đối': [
         'Trẻ em <6 tuổi - an toàn từ 6 tuổi trở lên']},

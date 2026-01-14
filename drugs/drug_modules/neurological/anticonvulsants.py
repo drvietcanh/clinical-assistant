@@ -2186,10 +2186,10 @@ ANTICONVULSANTS_DRUGS = {
             'narrow_therapeutic_index': False,
             'icu_critical_care_only': False,
             'bleeding_risk': None,
-            'organ_toxicity': {'renal': 'Kidney stones (contraindicated in recurrent stones)', 'ophthalmic': 'Glaucoma (narrow-angle - contraindicated)', 'metabolic': 'Metabolic acidosis', 'teratogenic': 'Black Box Warning (cleft lip/palate)'},qt_prolongation': False,
+            'organ_toxicity': {'renal': 'Kidney stones (contraindicated in recurrent stones)', 'ophthalmic': 'Glaucoma (narrow-angle - contraindicated)', 'metabolic': 'Metabolic acidosis', 'teratogenic': 'Black Box Warning (cleft lip/palate)'}, 'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': 'Kidney stones risk',
-            'requires_monitoring': ['Renal function (kidney stones risk)', 'Bicarbonate (metabolic acidosis)', 'Cognitive function', 'Weight', 'Teratogenicity (pregnancy - Black Box Warning)'],look_alike_sound_alike': ['Topiramate', 'Topotecan']
+            'requires_monitoring': ['Renal function (kidney stones risk)', 'Bicarbonate (metabolic acidosis)', 'Cognitive function', 'Weight', 'Teratogenicity (pregnancy - Black Box Warning)'], 'look_alike_sound_alike': ['Topiramate', 'Topotecan']
         }, 'guideline_tags': [
             'FDA Black Box Warning - Teratogenicity (Cleft Lip/Palate)',
             'AAN Guidelines - Epilepsy Treatment',
@@ -2384,10 +2384,10 @@ ANTICONVULSANTS_DRUGS = {
             'narrow_therapeutic_index': False,
             'icu_critical_care_only': False,
             'bleeding_risk': 'Moderate (thrombocytopenia)',
-            'organ_toxicity': {'hepatic': 'Black Box Warning (fatal hepatitis)', 'pancreatic': 'Black Box Warning (fatal pancreatitis)', 'hematologic': 'Thrombocytopenia', 'teratogenic': 'Black Box Warning (neural tube defects)'},qt_prolongation': False,
+            'organ_toxicity': {'hepatic': 'Black Box Warning (fatal hepatitis)', 'pancreatic': 'Black Box Warning (fatal pancreatitis)', 'hematologic': 'Thrombocytopenia', 'teratogenic': 'Black Box Warning (neural tube defects)'}, 'qt_prolongation': False,
             'hepatotoxicity': 'Black Box Warning (fatal)',
             'nephrotoxicity': False,
-            'requires_monitoring': ['Liver function (Black Box Warning - first 6 months)', 'Platelet count', 'Serum valproate levels (50-100 mcg/mL)', 'Pancreatitis signs (Black Box Warning)', 'Ammonia levels', 'Teratogenicity (pregnancy - Black Box Warning)'],look_alike_sound_alike': ['Valproate', 'Valproic acid', 'Divalproex']
+            'requires_monitoring': ['Liver function (Black Box Warning - first 6 months)', 'Platelet count', 'Serum valproate levels (50-100 mcg/mL)', 'Pancreatitis signs (Black Box Warning)', 'Ammonia levels', 'Teratogenicity (pregnancy - Black Box Warning)'], 'look_alike_sound_alike': ['Valproate', 'Valproic acid', 'Divalproex']
         }, 'guideline_tags': [
             'FDA Black Box Warning - Fatal Hepatitis',
             'FDA Black Box Warning - Fatal Pancreatitis',

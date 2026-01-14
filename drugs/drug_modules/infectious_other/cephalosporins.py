@@ -2113,7 +2113,7 @@ CEPHALOSPORINS_DRUGS = {
         'Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát',
         'Rối loạn đông máu - tăng nguy cơ chảy máu khi dùng với warfarin',
         'Sỏi mật - tăng nguy cơ sỏi mật (ceftriaxone-calcium complex), đặc biệt ở trẻ em, dùng liều cao'
-        ]},contraindications_detail': {'tuyệt_đối': [
+        ]}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng cephalosporin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)'
         'Trẻ sơ sinh < 28 ngày tuổi đang dùng calci IV - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ kết tủa tử vong)'
         ],

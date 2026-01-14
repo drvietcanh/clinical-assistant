@@ -115,7 +115,7 @@ FLUOROQUINOLONES_DRUGS = {
         'Suy gan - thận trọng, có thể giảm chuyển hóa',
         'Dùng với warfarin - tăng nguy cơ chảy máu',
         'Dùng với theophylline - tăng độc tính theophylline',
-        'Hoạt động thể lực nặng - tăng nguy cơ đứt gân']},contraindications_detail': {'tuyệt_đối': [
+        'Hoạt động thể lực nặng - tăng nguy cơ đứt gân']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng ciprofloxacin hoặc các fluoroquinolone khác',
         'Có thai - chống chỉ định tuyệt đối, nguy cơ tổn thương sụn thai nhi',
         'Trẻ em < 18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác) - nguy cơ tổn thương sụn, viêm khớp'

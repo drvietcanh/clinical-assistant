@@ -62,7 +62,7 @@ VITAMIN_B12S_DRUGS = {
         ],
         'tương_đối': [
         'Thiếu B12 do thiếu intrinsic factor (pernicious anemia) - cần dùng IM, không dùng PO'
-        , 'Thiếu hấp thu ở ruột - cần dùng IM, không dùng PO']},drug_interactions': {'major': [],
+        , 'Thiếu hấp thu ở ruột - cần dùng IM, không dùng PO']}, 'drug_interactions': {'major': [],
         'moderate': [{'drug': 'Metformin', 'mechanism':
         'Metformin dùng lâu dài có thể giảm hấp thu vitamin B12 ở ruột, dẫn đến thiếu B12.'
         , 'effect': 'Giảm nồng độ B12, tăng nguy cơ thiếu B12', 'management':

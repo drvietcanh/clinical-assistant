@@ -83,7 +83,7 @@ XANTHINE_OXIDASE_INHIBITORS_DRUGS = {
         'tương_đối': ['Suy thận (giảm liều theo CrCl)',
         'Suy gan (thận trọng, theo dõi chức năng gan)',
         'Đang dùng azathioprine/6-mercaptopurine (cần giảm liều 75%)',
-        'Đang dùng ampicillin/amoxicillin (tăng nguy cơ ban da)']},contraindications_detail': {'tuyệt_đối': [
+        'Đang dùng ampicillin/amoxicillin (tăng nguy cơ ban da)']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng allopurinol', 'Có thai (category C)', 'Đang cho con bú',
         'Phản ứng da nghiêm trọng trước đây với allopurinol (SJS, TEN)'],
         'tương_đối': ['Suy thận (giảm liều theo CrCl)',

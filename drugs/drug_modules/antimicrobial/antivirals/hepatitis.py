@@ -294,7 +294,6 @@ HEPATITIS_ANTIVIRALS = {
             "evidence_level": "A - Hướng dẫn chuyên ngành và dữ liệu pha 3"
         }
     },
-
     "Ribavirin": {
         "group": "Infectious Disease - Antiviral",
         "vietnamese_name": "Ribavirin, Rebetol",
@@ -496,8 +495,7 @@ HEPATITIS_ANTIVIRALS = {
             "last_updated": "2025-12-24",
             "evidence_level": "High (FDA-approved, extensive clinical data)"
         }
-    }
-
+    },
     "Sofosbuvir": {
         "group": "Infectious Disease - Antiviral (HCV NS5B inhibitor)",
         "vietnamese_name": "Sofosbuvir, Sovaldi",

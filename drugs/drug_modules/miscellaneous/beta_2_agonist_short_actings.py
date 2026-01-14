@@ -161,7 +161,7 @@ BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
         ],
         'notes':
         'Chỉ dùng IV trong cấp cứu hen nặng. Theo dõi chặt chẽ nhịp tim, huyết áp, ECG. Dùng liều thấp nhất hiệu quả. Có thể gây hạ kali máu với liều cao - theo dõi kali máu.'
-        },inhalation': {'technique':
+        }, 'inhalation': {'technique':
         'MDI: Lắc kỹ, thở ra hết, đặt ống ngậm vào miệng, bắt đầu hít vào chậm và sâu, bấm thuốc, tiếp tục hít vào đến khi đầy phổi, giữ hơi 10 giây, thở ra chậm. Đợi 30-60 giây trước khi bấm lần thứ 2. Spacer: Dùng với MDI để tăng hiệu quả và giảm tác dụng phụ (đặc biệt ở trẻ em và người cao tuổi).'
         , 'nebulizer':
         'Pha 2.5-5mg trong 2-4ml NS hoặc nước cất. Thở bình thường qua mask hoặc ống ngậm. Thời gian: 5-15 phút. Rửa miệng sau khi dùng.'
@@ -187,7 +187,7 @@ BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
                 'cardiovascular': 'Moderate (tachycardia, arrhythmias, especially with high doses or IV)',
                 'metabolic': 'Moderate (hypokalemia with high doses, hyperglycemia)',
                 'respiratory': 'Rare (paradoxical bronchospasm - dangerous)'
-            },qt_prolongation': False,
+            }, 'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': [
@@ -198,7 +198,7 @@ BETA_2_AGONIST_SHORT_ACTING_DRUGS = {
                 'Signs of paradoxical bronchospasm: worsening dyspnea - CRITICAL (rare but dangerous, stop immediately)',
                 'Blood glucose (if high doses - can increase blood glucose)',
                 'Frequency of use (if need >4 times/day → need to reassess treatment and increase ICS)'
-            ],look_alike_sound_alike': ['Salbutamol', 'Albuterol', 'Salmeterol', 'Formoterol']
+            ], 'look_alike_sound_alike': ['Salbutamol', 'Albuterol', 'Salmeterol', 'Formoterol']
         }, 'guideline_tags': [
             'GINA 2023 Guidelines - Global Initiative for Asthma',
             'NAEPP Guidelines - Asthma Management',

@@ -302,7 +302,7 @@ BETA_LACTAMS_DRUGS = {
         'Nhiễm C. difficile trước đây - tăng nguy cơ tái phát',
         'Suy thận nặng - giảm liều hoặc tăng khoảng cách',
         'Đang dùng methotrexate - tăng độc tính methotrexate',
-        'Đang dùng allopurinol - tăng nguy cơ phát ban']},contraindications_detail': {'tuyệt_đối': [
+        'Đang dùng allopurinol - tăng nguy cơ phát ban']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng penicillin - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (phản ứng chéo với cephalosporin ~5-10%)'
         , 'Dị ứng beta-lactam', 'Sốc phản vệ với penicillin trước đây'],
         'tương_đối': [
@@ -368,10 +368,10 @@ BETA_LACTAMS_DRUGS = {
             'narrow_therapeutic_index': False,
             'icu_critical_care_only': False,
             'bleeding_risk': None,
-            'organ_toxicity': {'dermatologic': 'SJS/TEN (rare, especially with allopurinol)', 'gastrointestinal': 'C. difficile infection', 'hepatic': 'Hepatotoxicity (rare)', 'hematologic': 'Neutropenia (rare)'},qt_prolongation': False,
+            'organ_toxicity': {'dermatologic': 'SJS/TEN (rare, especially with allopurinol)', 'gastrointestinal': 'C. difficile infection', 'hepatic': 'Hepatotoxicity (rare)', 'hematologic': 'Neutropenia (rare)'}, 'qt_prolongation': False,
             'hepatotoxicity': 'Rare',
             'nephrotoxicity': False,
-            'requires_monitoring': ['Allergic reactions (penicillin allergy - cross-reactivity with cephalosporins)', 'C. difficile infection signs', 'SJS/TEN signs (especially with allopurinol)', 'Hepatic function (rare hepatotoxicity)', 'CBC (neutropenia risk)', 'Renal function (dose adjustment required)'],look_alike_sound_alike': ['Amoxicillin', 'Amoxicillin-clavulanate']
+            'requires_monitoring': ['Allergic reactions (penicillin allergy - cross-reactivity with cephalosporins)', 'C. difficile infection signs', 'SJS/TEN signs (especially with allopurinol)', 'Hepatic function (rare hepatotoxicity)', 'CBC (neutropenia risk)', 'Renal function (dose adjustment required)'], 'look_alike_sound_alike': ['Amoxicillin', 'Amoxicillin-clavulanate']
         }, 'guideline_tags': [
             'IDSA Guidelines - Community-Acquired Pneumonia',
             'IDSA Guidelines - Urinary Tract Infections',
@@ -486,7 +486,7 @@ BETA_LACTAMS_DRUGS = {
         'Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)',
         'Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát',
         'Dùng với methotrexate - tăng độc tính methotrexate',
-        'Dùng với allopurinol - tăng nguy cơ phát ban']},contraindications_detail': {'tuyệt_đối': [
+        'Dùng với allopurinol - tăng nguy cơ phát ban']}, 'contraindications_detail': {'tuyệt_đối': [
         'Dị ứng amoxicillin, clavulanate, hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam'
         'Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao'
         'Viêm gan do amoxicillin-clavulanate trước đây - nguy cơ tái phát cao, có thể nặng hơn'
