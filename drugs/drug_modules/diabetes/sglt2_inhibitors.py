@@ -228,7 +228,6 @@ SGLT2_INHIBITORS_DRUGS = {
         "contraindications": [],
         "interactions": [],
         "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
-        ',
         "precautions": [],
         "pharmacokinetics": {
         },
