@@ -64,7 +64,7 @@ def render_homepage_doctor():
     col_left, col_right = st.columns(2)
     
     with col_left:
-        st.markdown("### 🕐 Đã xem gần đây")
+        st.markdown("### 🕐 Gần Đây")
         if render_recently_used:
             render_recently_used(max_items=5)
         else:
@@ -77,7 +77,7 @@ def render_homepage_doctor():
                 st.info("Chưa có lịch sử xem")
     
     with col_right:
-        st.markdown("### ⭐ Yêu thích")
+        st.markdown("### ⭐ Yêu Thích")
         if render_favorites:
             render_favorites(max_items=5)
         else:

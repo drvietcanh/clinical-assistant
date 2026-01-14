@@ -491,7 +491,7 @@ with tab2:
         render_recently_used()
 
 with tab3:
-    st.markdown("### 📊 Thống kê & Thông tin")
+    st.markdown("### 📊 Thống Kê & Cập Nhật")
     st.caption("Thống kê hệ thống, cập nhật mới nhất và mẹo sử dụng")
 
     # Analytics Dashboard Toggle (imports kept local để giảm chi phí import global)

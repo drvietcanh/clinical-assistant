@@ -64,7 +64,7 @@ def render_database():
     """, unsafe_allow_html=True)
     
     # Quick info and tabs
-    tab_info, tab_favorites, tab_recent = st.tabs(["ℹ️ Database", "⭐ Yêu thích", "🕐 Gần đây"])
+    tab_info, tab_favorites, tab_recent = st.tabs(["ℹ️ Database", "⭐ Yêu Thích", "🕐 Gần Đây"])
     
     with tab_info:
         st.info(f"""

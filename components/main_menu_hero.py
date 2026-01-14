@@ -48,7 +48,7 @@ def render_hero_section():
 <p class="hero-stat-value">{total_calc}</p>
 </div>
 <div class="hero-stat-card">
-<p class="hero-stat-label">Yêu thích</p>
+<p class="hero-stat-label">Yêu Thích</p>
 <p class="hero-stat-value">{total_fav}</p>
 </div>
 <div class="hero-stat-card">
@@ -107,10 +107,10 @@ def render_quick_stats_summary():
         st.metric("📊 Calculators", total_calculators, f"{len(categories)} nhóm")
     
     with col2:
-        st.metric("⭐ Yêu thích", total_favorites, "Đã lưu" if total_favorites > 0 else "Thêm thêm")
+        st.metric("⭐ Yêu Thích", total_favorites, "Đã lưu" if total_favorites > 0 else "Thêm thêm")
     
     with col3:
-        st.metric("🕐 Gần đây", total_recent, "Đã dùng" if total_recent > 0 else "Chưa có")
+        st.metric("🕐 Gần Đây", total_recent, "Đã dùng" if total_recent > 0 else "Chưa có")
     
     with col4:
         st.metric("🔢 Tính toán", session_calcs, "Phiên này")

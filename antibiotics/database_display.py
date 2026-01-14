@@ -203,7 +203,7 @@ def render_compact_antibiotic_card(ab_name, ab_data, key_prefix=""):
     card_html += f'<strong class="drug-name" style="font-size: 1.25em; margin-right: 6px; letter-spacing: -0.3px;">{ab_name_escaped}</strong>'
     card_html += aware_badge
     card_html += calc_badge
-    card_html += f'<span class="favorite-icon" style="color: #999; font-size: 1.1em; margin-left: auto; cursor: pointer;" title="Yêu thích" id="fav_{safe_key_prefix}_{safe_ab_name_for_id}">{favorite_icon}</span>'
+    card_html += f'<span class="favorite-icon" style="color: #999; font-size: 1.1em; margin-left: auto; cursor: pointer;" title="Yêu Thích" id="fav_{safe_key_prefix}_{safe_ab_name_for_id}">{favorite_icon}</span>'
     card_html += '</div>'
     card_html += vn_name_html
     card_html += '<div class="drug-info">'

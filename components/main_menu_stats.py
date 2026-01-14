@@ -58,10 +58,10 @@ def render_main_menu_stats():
         st.metric("Calculators", total_calculators, delta="Sẵn sàng")
     
     with col3:
-        st.metric("Yêu thích", total_favorites, delta=f"+{total_favorites}" if total_favorites > 0 else "Thêm thêm")
+        st.metric("Yêu Thích", total_favorites, delta=f"+{total_favorites}" if total_favorites > 0 else "Thêm thêm")
     
     with col4:
-        st.metric("Gần đây", total_recent, delta="Đã dùng" if total_recent > 0 else "Chưa có")
+        st.metric("Gần Đây", total_recent, delta="Đã dùng" if total_recent > 0 else "Chưa có")
     
     st.markdown("---")
     

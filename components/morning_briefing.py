@@ -44,7 +44,7 @@ def render_morning_briefing():
                 <p style="font-size: 2rem; font-weight: 700; margin: 0.25rem 0 0 0;">{total_calc}</p>
             </div>
             <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 12px; backdrop-filter: blur(10px);">
-                <p style="font-size: 0.85rem; opacity: 0.9; margin: 0;">Yêu thích</p>
+                <p style="font-size: 0.85rem; opacity: 0.9; margin: 0;">Yêu Thích</p>
                 <p style="font-size: 2rem; font-weight: 700; margin: 0.25rem 0 0 0;">{total_fav}</p>
             </div>
             <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 12px; backdrop-filter: blur(10px);">

@@ -25,14 +25,33 @@ from critical_care import (
 )
 
 # Import advanced ventilator functions if available
+# Use local variable to track availability after import attempt
+ventilator_advanced_available = VENTILATOR_ADVANCED_AVAILABLE
+
 if VENTILATOR_ADVANCED_AVAILABLE:
-    from ventilator import (
-        render_comprehensive_calculator,
-        render_ardsnet,
-        render_initial_settings,
-        render_peep_fio2_table
-    )
-    from ventilator.weaning import render_weaning_calculator as render_weaning_calculator_advanced
+    try:
+        from ventilator import (
+            render_comprehensive_calculator,
+            render_ardsnet,
+            render_initial_settings,
+            render_peep_fio2_table
+        )
+        from ventilator.weaning import render_weaning_calculator as render_weaning_calculator_advanced
+    except ImportError as e:
+        # Fallback if import fails even though VENTILATOR_ADVANCED_AVAILABLE is True
+        ventilator_advanced_available = False
+        render_comprehensive_calculator = None
+        render_ardsnet = None
+        render_initial_settings = None
+        render_peep_fio2_table = None
+        render_weaning_calculator_advanced = None
+else:
+    # Initialize as None if not available
+    render_comprehensive_calculator = None
+    render_ardsnet = None
+    render_initial_settings = None
+    render_peep_fio2_table = None
+    render_weaning_calculator_advanced = None
 
 # Import individual quick tools from critical_care/ventilator
 from critical_care.ventilator import (
@@ -184,7 +203,7 @@ with main_tabs[0]:
             del st.session_state['ventilator_tool_to_open']
     
     # Sub-menu for ventilator tools - Organized into 4 clear tabs
-    if VENTILATOR_ADVANCED_AVAILABLE:
+    if ventilator_advanced_available:
         vent_tab_labels = [
             "🚀 Quick Tools",
             "🫁 Comprehensive Analysis",
@@ -227,7 +246,10 @@ with main_tabs[0]:
             st.markdown("### 🫁 Comprehensive Analysis")
             st.caption("Phân tích tổng hợp với ABG integration, alerts, history, và trends")
             st.info("💡 **Sử dụng khi:** Cần đánh giá chi tiết, theo dõi dài hạn, có ABG results")
-            render_comprehensive_calculator()
+            if render_comprehensive_calculator:
+                render_comprehensive_calculator()
+            else:
+                st.error("Comprehensive calculator không khả dụng. Vui lòng kiểm tra module ventilator.")
         
         # Tab 3: Protocols & Settings - Standard protocols
         with vent_tabs[2]:
@@ -242,20 +264,33 @@ with main_tabs[0]:
             ])
             
             with protocol_tabs[0]:
-                render_ardsnet()
+                if render_ardsnet:
+                    render_ardsnet()
+                else:
+                    st.error("ARDSNet protocol không khả dụng.")
             
             with protocol_tabs[1]:
-                render_initial_settings()
+                if render_initial_settings:
+                    render_initial_settings()
+                else:
+                    st.error("Initial settings không khả dụng.")
             
             with protocol_tabs[2]:
-                render_peep_fio2_table()
+                if render_peep_fio2_table:
+                    render_peep_fio2_table()
+                else:
+                    st.error("PEEP/FiO2 table không khả dụng.")
         
         # Tab 4: Weaning & Extubation - For weaning assessment
         with vent_tabs[3]:
             st.markdown("### 🔄 Weaning & Extubation")
             st.caption("Đánh giá sẵn sàng cai máy thở và extubation")
             st.info("💡 **Sử dụng khi:** Đánh giá khả năng cai máy thở, chuẩn bị extubation")
-            render_weaning_calculator_advanced()
+            if render_weaning_calculator_advanced:
+                render_weaning_calculator_advanced()
+            else:
+                st.error("Advanced weaning calculator không khả dụng. Sử dụng basic calculator.")
+                render_weaning_calculator_basic()
     else:
         # Fallback to basic calculator if advanced not available
         render_ventilator_calculator()
@@ -410,7 +445,7 @@ with main_tabs[1]:
             del st.session_state['ventilator_tool_to_open']
     
     # Sub-menu for ventilator tools
-    if VENTILATOR_ADVANCED_AVAILABLE:
+    if ventilator_advanced_available:
         vent_tab_labels = [
             "🚀 Quick Tools",
             "🫁 Comprehensive Analysis",
@@ -438,7 +473,10 @@ with main_tabs[1]:
         
         with vent_tabs[1]:
             st.markdown("### 🫁 Comprehensive Analysis")
-            render_comprehensive_calculator()
+            if render_comprehensive_calculator:
+                render_comprehensive_calculator()
+            else:
+                st.error("Comprehensive calculator không khả dụng.")
         
         with vent_tabs[2]:
             st.markdown("### 📊 Protocols & Settings")
@@ -448,15 +486,28 @@ with main_tabs[1]:
                 "📊 PEEP/FiO2 Table"
             ])
             with protocol_tabs[0]:
-                render_ardsnet()
+                if render_ardsnet:
+                    render_ardsnet()
+                else:
+                    st.error("ARDSNet protocol không khả dụng.")
             with protocol_tabs[1]:
-                render_initial_settings()
+                if render_initial_settings:
+                    render_initial_settings()
+                else:
+                    st.error("Initial settings không khả dụng.")
             with protocol_tabs[2]:
-                render_peep_fio2_table()
+                if render_peep_fio2_table:
+                    render_peep_fio2_table()
+                else:
+                    st.error("PEEP/FiO2 table không khả dụng.")
         
         with vent_tabs[3]:
             st.markdown("### 🔄 Weaning & Extubation")
-            render_weaning_calculator_advanced()
+            if render_weaning_calculator_advanced:
+                render_weaning_calculator_advanced()
+            else:
+                st.error("Advanced weaning calculator không khả dụng.")
+                render_weaning_calculator_basic()
     else:
         render_ventilator_calculator()
 

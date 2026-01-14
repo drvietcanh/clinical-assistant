@@ -5,7 +5,14 @@ Visualize clinical decision trees and flowcharts for guidelines
 
 import streamlit as st
 from typing import List, Dict, Optional
-import graphviz
+
+# Optional import for graphviz (not currently used, but may be needed in future)
+try:
+    import graphviz
+    GRAPHVIZ_AVAILABLE = True
+except ImportError:
+    GRAPHVIZ_AVAILABLE = False
+    graphviz = None
 
 
 class DecisionNode:

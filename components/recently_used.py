@@ -15,7 +15,7 @@ def add_to_recently_used(calc_id):
 
 def render_recently_used(max_items=5, show_empty_state=True):
     """Render enhanced recently used section with visual cards"""
-    st.markdown("### 🕐 Sử dụng Gần Đây")
+    st.markdown("### 🕐 Gần Đây")
     
     recently_used = st.session_state.get('recently_used', [])
     if recently_used:

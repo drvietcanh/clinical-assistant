@@ -23,6 +23,59 @@ from config.article_protocol_mapping import (
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONTENT_ARTICLES_DIR = BASE_DIR / "content" / "articles"
 
+
+def _sanitize_key(text):
+    """
+    Sanitize text for use in Streamlit session state keys and widget keys.
+    Removes or replaces special characters that are not allowed in keys.
+    Streamlit keys must: start with letter/underscore, contain only alphanumeric/underscore.
+    
+    Args:
+        text: Text to sanitize
+        
+    Returns:
+        Sanitized string safe for use in keys
+    """
+    if not text:
+        return "key"
+    
+    # Convert to string and normalize Unicode
+    safe = str(text)
+    
+    # Remove all non-ASCII characters first (Unicode normalization)
+    safe = safe.encode('ascii', 'ignore').decode('ascii')
+    
+    # Replace all non-alphanumeric characters with underscore
+    safe = re.sub(r'[^a-zA-Z0-9]', '_', safe)
+    
+    # Remove multiple consecutive underscores
+    safe = re.sub(r'_+', '_', safe)
+    
+    # Remove leading/trailing underscores
+    safe = safe.strip('_')
+    
+    # Ensure it doesn't start with a number (Streamlit requirement)
+    if safe and safe[0].isdigit():
+        safe = f"key_{safe}"
+    
+    # Ensure minimum length and valid characters only
+    if not safe or len(safe) == 0:
+        safe = "key"
+    
+    # Limit length to prevent issues (Streamlit has key length limits, typically 200 chars)
+    # Use 80 chars to be safe and leave room for suffixes
+    if len(safe) > 80:
+        safe = safe[:80]
+    
+    # Final validation: ensure only valid characters (should already be done, but double-check)
+    safe = re.sub(r'[^a-zA-Z0-9_]', '', safe)
+    
+    # Final check: ensure it starts with letter or underscore
+    if safe and safe[0].isdigit():
+        safe = f"key_{safe}"
+    
+    return safe
+
 # Legacy (docs/articles) registry is kept for backward compatibility/reference only.
 # The app runtime now uses auto-discovery from `content/articles/`.
 LEGACY_ARTICLES = [
@@ -1141,6 +1194,10 @@ def render_article_card(article: dict, index: int):
     st.markdown(card_html, unsafe_allow_html=True)
     
     # Protocol deep link button (Streamlit button)
+    # Sanitize keys for Streamlit widgets (reuse for both button and expander)
+    safe_article_id = _sanitize_key(article_id)
+    safe_index = _sanitize_key(str(index))
+    
     protocol_info = article.get("protocol_info")
     if protocol_info:
         col1, col2 = st.columns([1, 3])
@@ -1148,7 +1205,7 @@ def render_article_card(article: dict, index: int):
             protocol_display = str(protocol_info.get('protocol_display', '')) if protocol_info.get('protocol_display') is not None else ''
             if st.button(
                 "📋 Mở Protocol",
-                key=f"protocol_btn_{article_id}_{index}",
+                key=f"protocol_btn_{safe_article_id}_{safe_index}",
                 use_container_width=True,
                 help=f"Mở protocol: {html.escape(protocol_display)}",
                 type="primary"
@@ -1170,8 +1227,9 @@ def render_article_card(article: dict, index: int):
         pass
     
     # Streamlit expander cho nội dung đầy đủ - với class cho mobile optimization
-    expand_key = f"article_expand_{article_id}_{index}"
-    expanded = st.session_state.get(f"expand_article_{article_id}", False)
+    # Use sanitized keys (already created above for protocol button)
+    expand_key = f"article_expand_{safe_article_id}_{safe_index}"
+    expanded = st.session_state.get(f"expand_article_{safe_article_id}", False)
     expander_label = f"📖 Đọc toàn bộ: {html.escape(article_title)}"
     with st.expander(expander_label, expanded=expanded, key=expand_key):
         st.markdown('<div class="article-expander-content">', unsafe_allow_html=True)
