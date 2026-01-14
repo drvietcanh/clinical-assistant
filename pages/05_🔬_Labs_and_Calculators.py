@@ -1,16 +1,11 @@
 """
-Labs & Calculators Module - Redirect to Scores
-This page has been merged into Scores.py with tabs
-Keeping for backward compatibility - redirects to Scores with Labs tab open
+Labs & Calculators Module
+Tra cứu giá trị xét nghiệm, giải thích kết quả và tính toán công thức lâm sàng
 """
 
 import streamlit as st
-
-# Set session state to open Labs tab
-st.session_state['scores_open_labs_tab'] = True
-
-# Redirect to the unified Scores page
-st.switch_page("pages/01_📊_Scores.py")
+from utils.page_helper import setup_page, render_standard_footer
+from components.ui import render_info_box
 
 # Import lab panels
 from labs import (
