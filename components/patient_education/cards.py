@@ -37,20 +37,34 @@ def get_category_config(category: str) -> dict:
 
 
 def extract_preview(content: str, max_length: int = 150) -> str:
-    """Extract preview text from markdown content"""
+    """Extract preview text from markdown content.
+
+    - Loại bỏ tiêu đề markdown (kể cả khi có thụt lề).
+    - Loại bỏ định dạng **bold**, `code`, [link](url).
+    - Lấy đoạn văn bản đầu tiên làm preview.
+    """
+    if not content:
+        return "Không có mô tả."
+
+    # Chuẩn hoá dòng: bỏ thụt lề chung để regex nhận diện đúng tiêu đề
+    lines = content.split("\n")
+    stripped_lines = [line.lstrip() for line in lines]
+    text = "\n".join(stripped_lines)
+
     # Remove markdown headers and formatting
-    text = re.sub(r'^#+\s+', '', content, flags=re.MULTILINE)
+    text = re.sub(r'^\s*#{1,6}\s+', '', text, flags=re.MULTILINE)
     text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
     text = re.sub(r'`([^`]+)`', r'\1', text)
     text = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', text)
-    
-    # Get first paragraph
+
+    # Get first non-empty paragraph
     paragraphs = [p.strip() for p in text.split('\n\n') if p.strip()]
     if paragraphs:
         preview = paragraphs[0]
         if len(preview) > max_length:
             preview = preview[:max_length].rsplit(' ', 1)[0] + '...'
         return preview
+
     return "Không có mô tả."
 
 

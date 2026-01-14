@@ -4,6 +4,7 @@ Comprehensive information about diseases and conditions
 """
 
 import streamlit as st
+from collections import Counter
 from utils.page_helper import setup_page, render_standard_footer
 from components.ui import render_info_box, render_hero, render_info_card, get_paginated_items
 from components.page_sidebar import render_standard_sidebar
@@ -348,6 +349,10 @@ else:
     
     categories = get_category_list()
     
+    # Pre-calculate number of diseases per category
+    all_diseases = get_all_diseases()
+    category_counts = Counter(d.category for d in all_diseases)
+    
     # Comprehensive Category Mapping (Icon + Vietnamese Name)
     category_metadata = {
         "Cardiology": {"icon": "❤️", "name_vn": "Tim mạch"},
@@ -378,8 +383,10 @@ else:
     for i, cat in enumerate(categories):
         with cols[i % 4]:
             meta = category_metadata.get(cat, {"icon": "📁", "name_vn": cat})
-            display_name = meta["name_vn"]
+            base_name = meta["name_vn"]
             icon = meta["icon"]
+            count = category_counts.get(cat, 0)
+            display_name = f"{base_name} ({count})" if count else base_name
             
             if st.button(f"{icon} {display_name}", use_container_width=True, key=f"cat_{i}"):
                 st.session_state.enc_category = cat
