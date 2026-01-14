@@ -1738,4 +1738,660 @@ RESPIRATORY_TOPICS = [
             printable=True
         ),
 
+        PatientEducationTopic(
+            id="laryngitis_basics",
+            title="Understanding Laryngitis",
+            title_vn="Hiểu về Viêm thanh quản",
+            category="Disease",
+            content="""
+            # Hiểu về Viêm thanh quản
+
+            ## Viêm thanh quản là gì?
+
+            Viêm thanh quản (Laryngitis) là tình trạng viêm của thanh quản (dây thanh âm), gây khàn giọng, mất giọng. Bệnh rất phổ biến, đặc biệt khi thay đổi thời tiết, thường tự khỏi trong vài ngày đến 1 tuần.
+
+            **⚠️ Đặc điểm:**
+            - Viêm thanh quản (dây thanh âm)
+            - Khàn giọng, mất giọng
+            - Rất phổ biến
+            - Thường tự khỏi
+
+            **Phân loại:**
+            - **Viêm thanh quản cấp:** Viêm đột ngột, < 3 tuần
+            - **Viêm thanh quản mạn:** Viêm kéo dài, > 3 tuần
+
+            **Thanh quản:**
+            - Cơ quan ở cổ, chứa dây thanh âm
+            - Chức năng: Phát âm, bảo vệ đường thở
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Khàn giọng:** Giọng khàn, yếu
+            - **Mất giọng:** Mất giọng hoàn toàn (nếu nặng)
+            - **Đau họng:** Đau họng, khó chịu
+            - **Ho khan:** Ho khan, có thể ho nhiều
+            - **Cảm giác vướng:** Cảm giác có gì đó ở cổ họng
+
+            **Triệu chứng khác:**
+            - Sốt nhẹ (nếu do nhiễm trùng)
+            - Mệt mỏi
+            - Khó nuốt (nếu nặng)
+
+            **⚠️ Dấu hiệu báo động (cần khám ngay!):**
+            - Khó thở (có thể tắc nghẽn đường thở)
+            - Nuốt đau nặng
+            - Ho ra máu
+            - Khàn giọng > 3 tuần (cần loại trừ ung thư)
+
+            ## Nguyên nhân:
+
+            **Viêm thanh quản cấp:**
+            - **Nhiễm virus:** Cảm lạnh, cúm (phổ biến nhất)
+            - **Nhiễm vi khuẩn:** Hiếm
+            - **Lạm dụng giọng:** Nói nhiều, hát, la hét
+            - **Hút thuốc lá:** Kích thích thanh quản
+            - **Rượu bia:** Kích thích thanh quản
+
+            **Viêm thanh quản mạn:**
+            - **Hút thuốc lá:** Phổ biến nhất
+            - **Lạm dụng giọng:** Nói nhiều, nghề nghiệp
+            - **Trào ngược dạ dày (GERD):** Axit kích thích thanh quản
+            - **Dị ứng:** Dị ứng
+            - **Nhiễm trùng mạn:** Nhiễm trùng mạn tính
+
+            **Yếu tố nguy cơ:**
+            - Hút thuốc lá
+            - Uống rượu bia
+            - Nghề nghiệp (giáo viên, ca sĩ, MC)
+            - Nhiễm trùng đường hô hấp trên
+            - Thay đổi thời tiết
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám họng
+
+            **Khám:**
+            - **Soi thanh quản:** Quan sát dây thanh âm (đỏ, sưng)
+            - **Khám họng:** Đỏ, sưng
+
+            **Xét nghiệm:**
+            - Thường không cần
+            - Cấy dịch (nếu nghi ngờ vi khuẩn)
+
+            **⚠️ Phân biệt:**
+            - Ung thư thanh quản (nếu khàn giọng > 3 tuần)
+            - Liệt dây thanh âm
+            - Polyp, u dây thanh âm
+
+            ## Điều trị:
+
+            **Viêm thanh quản cấp:**
+
+            **1. Điều trị hỗ trợ:**
+            - **Nghỉ giọng:** Nghỉ nói, không nói (quan trọng nhất!)
+            - **Uống nhiều nước:** Uống nhiều nước ấm
+            - **Súc miệng:** Súc miệng bằng nước muối
+            - **Xông hơi:** Xông hơi nước ấm
+            - **Tránh:** Hút thuốc lá, rượu bia, đồ lạnh
+
+            **2. Thuốc:**
+            - **Giảm đau:** Paracetamol (nếu đau)
+            - **Kháng sinh:** Chỉ dùng nếu do vi khuẩn (hiếm)
+
+            **Viêm thanh quản mạn:**
+
+            **1. Điều trị nguyên nhân:**
+            - **Bỏ thuốc lá:** Bỏ thuốc lá HOÀN TOÀN
+            - **Điều trị GERD:** Nếu có trào ngược
+            - **Nghỉ giọng:** Nghỉ nói, giảm nói
+
+            **2. Thuốc:**
+            - **Corticosteroid:** Xịt hoặc uống (ngắn hạn)
+            - **Điều trị GERD:** PPI, H2 blocker
+
+            **3. Vật lý trị liệu:**
+            - Tập luyện giọng nói
+            - Kỹ thuật nói đúng
+
+            **⚠️ Lưu ý:**
+            - Viêm thanh quản cấp: Thường tự khỏi
+            - Viêm thanh quản mạn: Cần điều trị nguyên nhân
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Thực phẩm nên ăn:**
+            - **Thức ăn mềm, lỏng:** Cháo, súp (khi đau họng)
+            - **Thức ăn ấm:** Thức ăn ấm (không nóng)
+            - **Uống nhiều nước:** Nước ấm, trà ấm
+            - **Mật ong:** Mật ong + chanh (giảm đau họng)
+
+            **2. Thực phẩm nên tránh:**
+            - **Đồ cay nóng:** Kích thích thanh quản
+            - **Đồ lạnh:** Đồ lạnh, kem
+            - **Rượu bia:** Kích thích thanh quản
+            - **Caffeine:** Có thể làm khô
+
+            **3. Thực đơn mẫu:**
+            - **Sáng:** Cháo ấm + trái cây
+            - **Trưa:** Súp ấm + thức ăn mềm
+            - **Chiều:** Súp ấm + thức ăn mềm
+            - **Uống:** Nước ấm, trà ấm
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Khi đang viêm:**
+            - Nghỉ ngơi
+            - Tránh gắng sức
+            - Tránh nói nhiều
+
+            **2. Khi đã khỏi:**
+            - Tập thể dục bình thường
+            - Tập luyện giọng nói (nếu nghề nghiệp)
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Thuốc giảm đau:**
+            - **Paracetamol:** 500-1000mg, 3-4 lần/ngày
+
+            **2. Corticosteroid:**
+            - **Xịt hoặc uống:** Ngắn hạn (nếu cần)
+            - **Theo chỉ định bác sĩ**
+
+            **3. Lưu ý:**
+            - Không tự ý dùng kháng sinh
+            - Nghỉ giọng quan trọng hơn thuốc
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Dấu hiệu báo động:**
+            - Khó thở (có thể tắc nghẽn đường thở)
+            - Nuốt đau nặng
+            - Ho ra máu
+            - **Cấp cứu ngay!**
+
+            **2. Khàn giọng > 3 tuần:**
+            - Cần khám để loại trừ ung thư
+            - Soi thanh quản
+
+            **3. Không đáp ứng điều trị:**
+            - Điều trị > 1 tuần không cải thiện
+            - Tái phát nhiều lần
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Bỏ thuốc lá:**
+            - **Bỏ thuốc lá HOÀN TOÀN** (quan trọng nhất!)
+            - Giảm nguy cơ viêm thanh quản mạn
+
+            **2. Tránh lạm dụng giọng:**
+            - Nghỉ nói khi mệt
+            - Không la hét, nói to
+            - Uống nước khi nói nhiều
+
+            **3. Điều trị GERD:**
+            - Điều trị trào ngược dạ dày
+            - Giảm kích thích thanh quản
+
+            **4. Tránh:**
+            - Rượu bia
+            - Đồ lạnh
+            - Môi trường khô, bụi
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - **Bỏ thuốc lá** (quan trọng nhất!)
+            - Tránh lạm dụng giọng
+            - Điều trị GERD
+
+            **2. Khi bị viêm thanh quản:**
+            - **Nghỉ giọng** (quan trọng nhất!)
+            - Uống nhiều nước ấm
+            - Tránh hút thuốc lá, rượu bia
+
+            **3. Sống tích cực:**
+            - Viêm thanh quản cấp thường tự khỏi
+            - Điều trị đúng → Khỏi nhanh
+            - Phòng ngừa tốt → Không tái phát
+            """,
+            related_disease="laryngitis",
+            related_drugs=["Paracetamol", "Prednisolone"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="lung_abscess_basics",
+            title="Understanding Lung Abscess",
+            title_vn="Hiểu về Áp xe phổi",
+            category="Disease",
+            content="""
+            # Hiểu về Áp xe phổi
+
+            ## Áp xe phổi là gì?
+
+            Áp xe phổi (Lung Abscess) là tình trạng hình thành ổ mủ trong phổi, thường do nhiễm trùng. Áp xe phổi có thể là biến chứng của viêm phổi hoặc do nhiễm trùng trực tiếp.
+
+            **⚠️ Đặc điểm:**
+            - Ổ mủ trong phổi
+            - Thường do nhiễm trùng
+            - Có thể là biến chứng viêm phổi
+            - Cần điều trị kháng sinh lâu dài
+
+            **Phân loại:**
+            - **Áp xe phổi nguyên phát:** Nhiễm trùng trực tiếp phổi
+            - **Áp xe phổi thứ phát:** Biến chứng viêm phổi, tắc nghẽn
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Sốt:** Sốt cao, ớn lạnh
+            - **Ho:** Ho có đờm, đờm mủ, có thể có mùi hôi
+            - **Ho ra máu:** Có thể ho ra máu
+            - **Đau ngực:** Đau ngực, tăng khi ho
+            - **Khó thở:** Khó thở, đặc biệt khi gắng sức
+            - **Mệt mỏi:** Mệt mỏi, suy nhược
+            - **Sụt cân:** Sụt cân
+
+            **Triệu chứng khác:**
+            - Đổ mồ hôi đêm
+            - Chán ăn
+            - Hơi thở hôi
+
+            **⚠️ Biến chứng:**
+            - Vỡ vào màng phổi (tràn mủ màng phổi)
+            - Nhiễm trùng huyết
+            - Suy hô hấp
+            - Tử vong (nếu không điều trị)
+
+            ## Nguyên nhân:
+
+            **1. Nhiễm trùng:**
+            - **Vi khuẩn:** Staphylococcus, Klebsiella, Pseudomonas
+            - **Kỵ khí:** Bacteroides, Peptostreptococcus (phổ biến)
+            - **Nấm:** Aspergillus, Candida (hiếm)
+
+            **2. Yếu tố nguy cơ:**
+            - **Viêm phổi:** Biến chứng viêm phổi
+            - **Hút thuốc lá:** Tăng nguy cơ
+            - **Rượu bia:** Tăng nguy cơ
+            - **Suy giảm miễn dịch:** HIV, thuốc ức chế miễn dịch
+            - **Tắc nghẽn đường thở:** Khối u, dị vật
+            - **Nằm liệt giường:** Tăng nguy cơ
+
+            **3. Đường lây:**
+            - Hít phải vi khuẩn từ miệng, họng
+            - Nhiễm trùng từ nơi khác (hiếm)
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám phổi
+
+            **Xét nghiệm:**
+            - **Xét nghiệm máu:**
+              - Bạch cầu tăng
+              - CRP tăng
+              - Cấy máu (nếu sốt cao)
+            - **Cấy đờm:** Xác định vi khuẩn
+            - **Cấy dịch mủ:** Nếu có
+
+            **Hình ảnh:**
+            - **X-quang ngực:** Phát hiện ổ mủ (hình tròn, có mức nước-khí)
+            - **CT ngực:** Đánh giá chính xác, kích thước, vị trí
+
+            **⚠️ Phân biệt:**
+            - Viêm phổi
+            - Ung thư phổi (hoại tử)
+            - Lao phổi
+
+            ## Điều trị:
+
+            **1. Kháng sinh:**
+            - **Kháng sinh phổ rộng:** Clindamycin, Amoxicillin-Clavulanate
+            - **Kháng sinh kỵ khí:** Metronidazole (nếu nghi ngờ kỵ khí)
+            - **Đường tĩnh mạch:** Ban đầu (1-2 tuần)
+            - **Đường uống:** Sau khi ổn định (4-8 tuần)
+            - **Thời gian:** 4-8 tuần (quan trọng!)
+
+            **2. Dẫn lưu:**
+            - **Dẫn lưu qua da:** Nếu áp xe lớn, không đáp ứng kháng sinh
+            - **Nội soi phế quản:** Dẫn lưu qua nội soi
+
+            **3. Phẫu thuật:**
+            - **Chỉ định:**
+              - Áp xe lớn (> 6cm)
+              - Không đáp ứng điều trị > 6 tuần
+              - Biến chứng (vỡ, tràn mủ màng phổi)
+            - **Phương pháp:** Cắt thùy phổi, cắt phân thùy
+
+            **4. Điều trị hỗ trợ:**
+            - **Vật lý trị liệu:** Vỗ rung, dẫn lưu tư thế (giúp đờm ra)
+            - **Oxy:** Nếu khó thở
+            - **Dinh dưỡng:** Đủ dinh dưỡng
+
+            **⚠️ Lưu ý:**
+            - Điều trị kháng sinh lâu dài (4-8 tuần)
+            - Không tự ý ngừng kháng sinh
+            - Theo dõi sát
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Khi đang điều trị:**
+            - **Đủ dinh dưỡng:** Đủ calo, protein, vitamin
+            - **Dễ tiêu:** Thức ăn mềm, dễ tiêu
+            - **Uống nhiều nước:** Uống nhiều nước (giúp đờm loãng)
+
+            **2. Thực phẩm nên ăn:**
+            - Protein nạc (thịt, cá, đậu)
+            - Rau xanh, trái cây
+            - Cháo, súp
+            - Uống nhiều nước
+
+            **3. Thực phẩm nên tránh:**
+            - Đồ cay nóng
+            - Rượu bia
+            - Thức ăn khó tiêu
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Khi đang điều trị:**
+            - Nghỉ ngơi
+            - Vật lý trị liệu (vỗ rung, dẫn lưu tư thế)
+            - Tập thở (nếu có thể)
+
+            **2. Sau khi khỏi:**
+            - Tập thể dục từ từ
+            - Tăng dần cường độ
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Kháng sinh:**
+            - **Uống đều đặn:** Theo chỉ định bác sĩ
+            - **Đủ thời gian:** 4-8 tuần (quan trọng!)
+            - **Không tự ý ngừng:** Nguy cơ tái phát
+
+            **2. Thuốc giảm đau:**
+            - **Paracetamol:** Nếu đau, sốt
+
+            **3. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Báo bác sĩ nếu có tác dụng phụ
+            - Xét nghiệm máu định kỳ (nếu cần)
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Triệu chứng nặng:**
+            - Sốt cao, ớn lạnh
+            - Khó thở nặng
+            - Ho ra máu nhiều
+            - **Cấp cứu ngay!**
+
+            **2. Biến chứng:**
+            - Tràn mủ màng phổi
+            - Nhiễm trùng huyết
+            - Suy hô hấp
+
+            **3. Không đáp ứng điều trị:**
+            - Điều trị > 6 tuần không cải thiện
+            - Sốt tái phát
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Điều trị viêm phổi:**
+            - Điều trị viêm phổi đúng cách
+            - Giảm nguy cơ biến chứng
+
+            **2. Bỏ thuốc lá:**
+            - **Bỏ thuốc lá HOÀN TOÀN**
+            - Giảm nguy cơ
+
+            **3. Vệ sinh răng miệng:**
+            - Vệ sinh răng miệng sạch sẽ
+            - Giảm vi khuẩn trong miệng
+
+            **4. Tránh:**
+            - Rượu bia
+            - Suy giảm miễn dịch
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - Điều trị viêm phổi đúng cách
+            - Bỏ thuốc lá
+            - Vệ sinh răng miệng
+
+            **2. Khi bị áp xe phổi:**
+            - Điều trị kháng sinh lâu dài (4-8 tuần)
+            - Tuân thủ điều trị
+            - Vật lý trị liệu
+
+            **3. Sống tích cực:**
+            - Áp xe phổi có thể điều trị khỏi
+            - Điều trị đúng → Khỏi
+            - Phòng ngừa tốt → Không tái phát
+            """,
+            related_disease="lung_abscess",
+            related_drugs=["Clindamycin", "Amoxicillin-Clavulanate", "Metronidazole", "Paracetamol"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="pneumothorax_basics",
+            title="Understanding Pneumothorax",
+            title_vn="Hiểu về Tràn khí màng phổi",
+            category="Disease",
+            content="""
+            # Hiểu về Tràn khí màng phổi
+
+            ## Tràn khí màng phổi là gì?
+
+            Tràn khí màng phổi (Pneumothorax) là tình trạng khí tích tụ trong khoang màng phổi (giữa phổi và thành ngực), gây xẹp phổi, khó thở. Đây là cấp cứu hô hấp, cần điều trị ngay.
+
+            **⚠️ Đặc điểm:**
+            - Khí tích tụ trong khoang màng phổi
+            - Gây xẹp phổi
+            - Cấp cứu hô hấp
+            - Cần điều trị ngay
+
+            **Phân loại:**
+            - **Tràn khí màng phổi tự phát nguyên phát:** Không có bệnh nền (phổ biến ở nam trẻ, cao, gầy)
+            - **Tràn khí màng phổi tự phát thứ phát:** Có bệnh nền (COPD, hen, lao)
+            - **Tràn khí màng phổi do chấn thương:** Chấn thương ngực
+            - **Tràn khí màng phổi áp lực:** Khí tích tụ, tăng áp lực (cấp cứu!)
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Đau ngực:** Đau ngực đột ngột, dữ dội, một bên, tăng khi thở, ho
+            - **Khó thở:** Khó thở, tăng khi gắng sức
+            - **Ho:** Ho khan
+            - **Mạch nhanh:** Mạch nhanh
+            - **Huyết áp tụt:** Huyết áp tụt (nếu nặng)
+
+            **Triệu chứng khác:**
+            - Da xanh, tím (nếu nặng)
+            - Mệt mỏi
+            - Lo âu
+
+            **⚠️ Tràn khí màng phổi áp lực (CẤP CỨU!):**
+            - Khó thở nặng
+            - Tụt huyết áp
+            - Mạch nhanh
+            - Tím tái
+            - **Cấp cứu ngay!**
+
+            ## Nguyên nhân:
+
+            **1. Tràn khí màng phổi tự phát nguyên phát:**
+            - **Vỡ bóng khí (Bleb):** Vỡ bóng khí nhỏ trên phổi
+            - **Nam trẻ, cao, gầy:** Yếu tố nguy cơ
+            - **Hút thuốc lá:** Tăng nguy cơ
+
+            **2. Tràn khí màng phổi tự phát thứ phát:**
+            - **COPD:** Bệnh phổi tắc nghẽn mạn tính
+            - **Hen phế quản:** Hen phế quản
+            - **Lao phổi:** Lao phổi
+            - **Xơ phổi:** Xơ phổi
+            - **Ung thư phổi:** Ung thư phổi
+
+            **3. Tràn khí màng phổi do chấn thương:**
+            - **Chấn thương ngực:** Gãy xương sườn, đâm thủng
+            - **Sau phẫu thuật:** Sau phẫu thuật ngực
+            - **Thủ thuật:** Chọc dò màng phổi, đặt catheter
+
+            **4. Yếu tố nguy cơ:**
+            - Nam, trẻ (20-40 tuổi)
+            - Cao, gầy
+            - Hút thuốc lá
+            - Có bệnh phổi
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám phổi (giảm rì rào phế nang, gõ vang)
+
+            **Xét nghiệm:**
+            - **X-quang ngực:** Phát hiện tràn khí (phổi xẹp, không có mạch máu phổi)
+            - **CT ngực:** Đánh giá chính xác, tìm nguyên nhân
+
+            **⚠️ Phân biệt:**
+            - Nhồi máu phổi
+            - Viêm màng phổi
+            - Đau ngực do tim
+
+            ## Điều trị:
+
+            **1. Tràn khí màng phổi nhỏ (< 20%):**
+            - **Theo dõi:** Theo dõi, tự hấp thu
+            - **Oxy:** Thở oxy (tăng tốc độ hấp thu)
+            - **Nghỉ ngơi:** Nghỉ ngơi
+
+            **2. Tràn khí màng phổi vừa-nặng (> 20%):**
+            - **Chọc hút khí:** Chọc hút khí bằng kim
+            - **Dẫn lưu màng phổi:** Đặt ống dẫn lưu màng phổi
+            - **Theo dõi:** Theo dõi sát
+
+            **3. Tràn khí màng phổi áp lực (CẤP CỨU!):**
+            - **Chọc kim giải áp:** Chọc kim giải áp ngay
+            - **Dẫn lưu màng phổi:** Đặt ống dẫn lưu
+            - **Cấp cứu ngay!**
+
+            **4. Phẫu thuật:**
+            - **Chỉ định:**
+              - Tái phát nhiều lần (> 2 lần)
+              - Không đáp ứng dẫn lưu
+              - Tràn khí màng phổi hai bên
+            - **Phương pháp:**
+              - Nội soi lồng ngực (VATS)
+              - Cắt bóng khí, dính màng phổi
+
+            **⚠️ Lưu ý:**
+            - Tràn khí màng phổi áp lực: Cấp cứu ngay!
+            - Tái phát: Cần phẫu thuật
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Khi đang điều trị:**
+            - **Đủ dinh dưỡng:** Đủ calo, protein
+            - **Dễ tiêu:** Thức ăn mềm, dễ tiêu
+            - **Uống nhiều nước:** Uống nhiều nước
+
+            **2. Thực phẩm nên ăn:**
+            - Protein nạc (thịt, cá, đậu)
+            - Rau xanh, trái cây
+            - Cháo, súp
+            - Uống nhiều nước
+
+            **3. Thực phẩm nên tránh:**
+            - Đồ cay nóng
+            - Rượu bia
+            - Thức ăn khó tiêu
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Khi đang điều trị:**
+            - Nghỉ ngơi
+            - Tránh gắng sức
+            - Tập thở nhẹ (nếu có thể)
+
+            **2. Sau khi khỏi:**
+            - Tập thể dục từ từ
+            - Tăng dần cường độ
+            - Tránh lặn, bay (nếu có nguy cơ tái phát)
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Thuốc giảm đau:**
+            - **Paracetamol:** Nếu đau
+            - **NSAID:** Ibuprofen (nếu không chống chỉ định)
+
+            **2. Oxy:**
+            - Thở oxy (nếu khó thở)
+
+            **3. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Báo bác sĩ nếu đau không giảm
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Tràn khí màng phổi áp lực:**
+            - Khó thở nặng
+            - Tụt huyết áp
+            - Tím tái
+            - **Cấp cứu ngay!**
+
+            **2. Triệu chứng nặng:**
+            - Đau ngực dữ dội
+            - Khó thở nặng
+            - **Cấp cứu ngay!**
+
+            **3. Tái phát:**
+            - Tái phát nhiều lần
+            - Cần phẫu thuật
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Bỏ thuốc lá:**
+            - **Bỏ thuốc lá HOÀN TOÀN**
+            - Giảm nguy cơ
+
+            **2. Điều trị bệnh phổi:**
+            - Điều trị COPD, hen
+            - Giảm nguy cơ
+
+            **3. Tránh:**
+            - Lặn (nếu có nguy cơ tái phát)
+            - Bay (nếu có nguy cơ tái phát)
+            - Gắng sức quá mức
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - Bỏ thuốc lá
+            - Điều trị bệnh phổi
+
+            **2. Khi bị tràn khí màng phổi:**
+            - Đến bệnh viện ngay
+            - Tuân thủ điều trị
+            - Nghỉ ngơi
+
+            **3. Sống tích cực:**
+            - Tràn khí màng phổi có thể điều trị khỏi
+            - Điều trị đúng → Khỏi
+            - Phẫu thuật → Giảm nguy cơ tái phát
+
+            **4. Lâu dài:**
+            - Nếu tái phát nhiều lần → Cần phẫu thuật
+            - Tránh lặn, bay (nếu có nguy cơ)
+            """,
+            related_disease="pneumothorax",
+            related_drugs=["Paracetamol", "Ibuprofen"],
+            printable=True
+        ),
+
 ]

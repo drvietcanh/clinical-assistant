@@ -3642,4 +3642,457 @@ INFECTIOUS_TOPICS = [
             printable=True
         ),
 
+        PatientEducationTopic(
+            id="bacterial_meningitis_basics",
+            title="Understanding Bacterial Meningitis",
+            title_vn="Hiểu về Viêm màng não mủ",
+            category="Disease",
+            content="""
+            # Hiểu về Viêm màng não mủ
+
+            ## Viêm màng não mủ là gì?
+
+            Viêm màng não mủ (Bacterial Meningitis) là tình trạng viêm màng não do vi khuẩn, rất nguy hiểm, có thể dẫn đến tử vong hoặc di chứng nặng nếu không điều trị kịp thời. Đây là cấp cứu thần kinh, cần điều trị ngay lập tức.
+
+            **⚠️ Đặc điểm:**
+            - Viêm màng não do vi khuẩn
+            - Rất nguy hiểm, có thể tử vong
+            - Cấp cứu thần kinh
+            - Cần điều trị ngay lập tức
+
+            **Phân loại:**
+            - **Viêm màng não do Meningococcus:** Phổ biến, có thể gây dịch
+            - **Viêm màng não do Pneumococcus:** Phổ biến
+            - **Viêm màng não do Hib:** Phổ biến (trước khi có vắc xin)
+            - **Viêm màng não do Listeria:** Ở trẻ sơ sinh, người cao tuổi
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Sốt:** Sốt cao, ớn lạnh
+            - **Đau đầu:** Đau đầu dữ dội
+            - **Cứng gáy:** Cứng gáy, không cúi được đầu
+            - **Buồn nôn, nôn:** Buồn nôn, nôn (kiểu vọt)
+            - **Nhạy cảm ánh sáng:** Nhạy cảm ánh sáng (photophobia)
+            - **Lú lẫn:** Lú lẫn, rối loạn ý thức
+            - **Phát ban:** Phát ban (đặc biệt Meningococcus)
+
+            **Triệu chứng ở trẻ em:**
+            - Sốt cao
+            - Quấy khóc, bỏ bú
+            - Thóp phồng (trẻ nhỏ)
+            - Co giật
+            - Cứng gáy (trẻ lớn)
+
+            **⚠️ Dấu hiệu nặng:**
+            - Hôn mê
+            - Co giật
+            - Sốc
+            - Tử vong (nếu không điều trị)
+            - **Cấp cứu ngay!**
+
+            ## Nguyên nhân:
+
+            **1. Vi khuẩn:**
+            - **Neisseria meningitidis (Meningococcus):** Phổ biến, có thể gây dịch
+            - **Streptococcus pneumoniae (Pneumococcus):** Phổ biến
+            - **Haemophilus influenzae type B (Hib):** Phổ biến (trước khi có vắc xin)
+            - **Listeria monocytogenes:** Ở trẻ sơ sinh, người cao tuổi, suy giảm miễn dịch
+
+            **2. Đường lây:**
+            - **Đường hô hấp:** Ho, hắt hơi, tiếp xúc gần
+            - **Máu:** Từ nhiễm trùng nơi khác
+
+            **3. Yếu tố nguy cơ:**
+            - Trẻ em, người cao tuổi
+            - Suy giảm miễn dịch
+            - Chưa tiêm vắc xin
+            - Tiếp xúc người bệnh
+            - Nhiễm trùng đường hô hấp trên
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám thần kinh
+
+            **Xét nghiệm:**
+            - **Chọc dò tủy sống (LP):** Quan trọng nhất!
+              - Dịch não tủy: Tăng bạch cầu, protein, giảm glucose
+              - Cấy dịch não tủy: Xác định vi khuẩn
+            - **Xét nghiệm máu:**
+              - Bạch cầu tăng
+              - CRP tăng
+              - Cấy máu
+            - **PCR:** Phát hiện vi khuẩn nhanh
+
+            **Hình ảnh:**
+            - **CT não:** Trước khi chọc dò tủy sống (nếu có dấu hiệu tăng áp lực nội sọ)
+
+            **⚠️ Phân biệt:**
+            - Viêm màng não do virus (thường nhẹ hơn)
+            - Viêm não
+            - Áp xe não
+
+            ## Điều trị:
+
+            **1. Kháng sinh đường tĩnh mạch (NGAY LẬP TỨC!):**
+            - **Ceftriaxone + Vancomycin:** Phổ biến
+            - **Penicillin G:** Nếu Meningococcus
+            - **Ampicillin:** Nếu Listeria
+            - **Thời gian:** 7-14 ngày (tùy vi khuẩn)
+
+            **2. Corticosteroid:**
+            - **Dexamethasone:** Giảm biến chứng (điếc, tổn thương thần kinh)
+            - **Trước hoặc cùng với kháng sinh:** Quan trọng!
+
+            **3. Điều trị hỗ trợ:**
+            - **Truyền dịch:** Truyền dịch đường tĩnh mạch
+            - **Oxy:** Nếu khó thở
+            - **Chống co giật:** Nếu co giật
+            - **Hạ sốt:** Paracetamol
+
+            **4. Cách ly:**
+            - Cách ly trong 24 giờ đầu điều trị
+            - Đeo khẩu trang
+
+            **⚠️ Lưu ý:**
+            - Điều trị ngay lập tức (quan trọng nhất!)
+            - Không trì hoãn (nguy cơ tử vong, di chứng)
+            - Tỷ lệ tử vong: 10-15% (nếu không điều trị)
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Khi đang điều trị:**
+            - **Nuôi ăn:** Nuôi ăn qua ống hoặc tĩnh mạch (nếu hôn mê)
+            - **Khi đã tỉnh:** Ăn lỏng → Mềm → Bình thường
+
+            **2. Thực phẩm nên ăn:**
+            - Cháo, súp
+            - Thức ăn mềm, dễ tiêu
+            - Uống nhiều nước
+
+            **3. Thực phẩm nên tránh:**
+            - Đồ cay nóng
+            - Thức ăn khó tiêu
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Khi đang điều trị:**
+            - Nghỉ ngơi hoàn toàn
+            - Tránh gắng sức
+
+            **2. Sau khi khỏi:**
+            - Tập thể dục từ từ
+            - Vật lý trị liệu (nếu có di chứng)
+            - Tăng dần cường độ
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Kháng sinh:**
+            - **Đường tĩnh mạch:** Ngay lập tức
+            - **Uống đều đặn:** Theo chỉ định bác sĩ
+            - **Đủ thời gian:** 7-14 ngày
+
+            **2. Corticosteroid:**
+            - **Dexamethasone:** Giảm biến chứng
+            - **Theo chỉ định bác sĩ**
+
+            **3. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Không tự ý ngừng thuốc
+            - Báo bác sĩ nếu có tác dụng phụ
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Triệu chứng viêm màng não mủ:**
+            - Sốt cao + Đau đầu dữ dội + Cứng gáy
+            - **Cấp cứu ngay!**
+
+            **2. Dấu hiệu nặng:**
+            - Hôn mê
+            - Co giật
+            - Sốc
+            - **Cấp cứu ngay!**
+
+            **3. Trẻ em:**
+            - Sốt cao + Quấy khóc + Bỏ bú
+            - **Cấp cứu ngay!**
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Tiêm vắc xin (QUAN TRỌNG NHẤT!):**
+            - **Vắc xin Meningococcus:** Bảo vệ viêm màng não do Meningococcus
+            - **Vắc xin Pneumococcus:** Bảo vệ viêm màng não do Pneumococcus
+            - **Vắc xin Hib:** Bảo vệ viêm màng não do Hib
+            - **Tiêm đầy đủ:** Theo lịch tiêm chủng
+
+            **2. Tránh tiếp xúc:**
+            - Tránh tiếp xúc người bệnh
+            - Đeo khẩu trang
+            - Rửa tay thường xuyên
+
+            **3. Kháng sinh dự phòng:**
+            - Nếu tiếp xúc người bệnh (Meningococcus)
+            - Rifampicin, Ciprofloxacin
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - **Tiêm vắc xin** (quan trọng nhất!)
+            - Tránh tiếp xúc người bệnh
+            - Rửa tay thường xuyên
+
+            **2. Khi có triệu chứng:**
+            - **Đến bệnh viện ngay!** (quan trọng nhất!)
+            - Không trì hoãn
+            - Điều trị sớm → Giảm tử vong, di chứng
+
+            **3. Sống tích cực:**
+            - Viêm màng não mủ rất nguy hiểm
+            - Điều trị sớm → Tỷ lệ sống cao
+            - Một số trường hợp có thể có di chứng (điếc, liệt, chậm phát triển)
+
+            **4. Di chứng:**
+            - Cần vật lý trị liệu, phục hồi chức năng
+            - Theo dõi định kỳ
+            """,
+            related_disease="bacterial_meningitis",
+            related_drugs=["Ceftriaxone", "Vancomycin", "Penicillin G", "Ampicillin", "Dexamethasone", "Rifampicin"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="helminthiasis_basics",
+            title="Understanding Helminthiasis",
+            title_vn="Hiểu về Nhiễm giun sán",
+            category="Disease",
+            content="""
+            # Hiểu về Nhiễm giun sán
+
+            ## Nhiễm giun sán là gì?
+
+            Nhiễm giun sán (Helminthiasis) là tình trạng nhiễm ký sinh trùng giun sán trong cơ thể, rất phổ biến ở nông thôn Việt Nam, đặc biệt trẻ em. Nhiễm giun sán có thể gây thiếu máu, suy dinh dưỡng, ảnh hưởng đến sự phát triển.
+
+            **⚠️ Đặc điểm:**
+            - Nhiễm ký sinh trùng giun sán
+            - Rất phổ biến ở nông thôn Việt Nam
+            - Đặc biệt trẻ em
+            - Có thể gây thiếu máu, suy dinh dưỡng
+
+            **Phân loại:**
+            - **Giun đũa (Ascaris):** Phổ biến nhất
+            - **Giun móc (Hookworm):** Gây thiếu máu
+            - **Giun tóc (Trichuris):** Phổ biến
+            - **Giun kim (Pinworm):** Phổ biến ở trẻ em
+            - **Sán lá gan (Liver fluke):** Phổ biến ở vùng ăn gỏi cá
+            - **Sán dây (Tapeworm):** Phổ biến ở vùng ăn thịt sống
+
+            ## Triệu chứng:
+
+            **Triệu chứng chung:**
+            - **Đau bụng:** Đau bụng, đặc biệt quanh rốn
+            - **Rối loạn tiêu hóa:** Tiêu chảy, táo bón
+            - **Sụt cân:** Sụt cân, chậm tăng cân
+            - **Thiếu máu:** Thiếu máu (đặc biệt giun móc)
+            - **Mệt mỏi:** Mệt mỏi, suy nhược
+            - **Ngứa hậu môn:** Ngứa hậu môn (giun kim)
+
+            **Triệu chứng theo loại:**
+            - **Giun đũa:** Đau bụng, nôn, có thể nôn ra giun
+            - **Giun móc:** Thiếu máu nặng, phù
+            - **Giun kim:** Ngứa hậu môn, đặc biệt ban đêm
+            - **Sán lá gan:** Đau bụng trên, vàng da
+            - **Sán dây:** Đau bụng, sụt cân, có thể thấy đốt sán trong phân
+
+            **⚠️ Biến chứng:**
+            - **Tắc ruột:** Giun đũa tắc ruột
+            - **Thiếu máu nặng:** Giun móc (có thể tử vong)
+            - **Suy dinh dưỡng:** Suy dinh dưỡng nặng
+            - **Chậm phát triển:** Chậm phát triển ở trẻ em
+
+            ## Nguyên nhân:
+
+            **1. Đường lây:**
+            - **Phân-miệng:** Từ phân người bệnh
+            - **Ăn thực phẩm sống:** Rau sống, thịt sống, cá sống
+            - **Nước bị nhiễm:** Nước uống bị nhiễm
+            - **Đi chân đất:** Giun móc xâm nhập qua da
+
+            **2. Yếu tố nguy cơ:**
+            - **Vệ sinh kém:** Vệ sinh cá nhân, môi trường kém
+            - **Ăn thực phẩm sống:** Rau sống, thịt sống, cá sống
+            - **Đi chân đất:** Đi chân đất ở nơi có phân
+            - **Trẻ em:** Trẻ em dễ mắc hơn
+            - **Nông thôn:** Phổ biến ở nông thôn
+
+            **3. Môi trường:**
+            - Đất, nước bị nhiễm
+            - Vệ sinh môi trường kém
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám bụng
+
+            **Xét nghiệm:**
+            - **Xét nghiệm phân:** Tìm trứng giun, giun (quan trọng nhất!)
+            - **Xét nghiệm máu:** Thiếu máu, tăng bạch cầu ái toan
+            - **Xét nghiệm huyết thanh:** Nếu nghi ngờ sán
+
+            **⚠️ Phân biệt:**
+            - Bệnh tiêu hóa khác
+            - Thiếu máu do nguyên nhân khác
+
+            ## Điều trị:
+
+            **1. Thuốc tẩy giun:**
+            - **Albendazole:** 400mg, 1 lần (giun đũa, giun móc, giun tóc)
+            - **Mebendazole:** 100mg, 2 lần/ngày, 3 ngày (giun đũa, giun móc, giun tóc)
+            - **Pyrantel:** 10mg/kg, 1 lần (giun đũa, giun móc)
+            - **Praziquantel:** 25mg/kg, 3 lần/ngày, 1 ngày (sán)
+
+            **2. Điều trị thiếu máu:**
+            - **Bổ sung sắt:** Nếu thiếu máu
+            - **Bổ sung acid folic:** Nếu thiếu máu
+
+            **3. Điều trị suy dinh dưỡng:**
+            - Bổ sung dinh dưỡng
+            - Tẩy giun định kỳ
+
+            **4. Tẩy giun định kỳ:**
+            - **Trẻ em:** 6 tháng/lần
+            - **Người lớn:** 1 năm/lần (nếu có nguy cơ)
+
+            **⚠️ Lưu ý:**
+            - Tẩy giun định kỳ quan trọng
+            - Điều trị cả gia đình (nếu giun kim)
+            - Vệ sinh sau tẩy giun
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Khi đang nhiễm giun:**
+            - **Đủ dinh dưỡng:** Đủ calo, protein, vitamin
+            - **Bổ sung sắt:** Nếu thiếu máu
+            - **Tránh:** Thực phẩm sống
+
+            **2. Thực phẩm nên ăn:**
+            - Protein nạc (thịt, cá nấu chín)
+            - Rau xanh (nấu chín)
+            - Trái cây
+            - Uống nhiều nước
+
+            **3. Thực phẩm nên tránh:**
+            - **Rau sống:** Rau sống (có thể có trứng giun)
+            - **Thịt sống:** Thịt sống, gỏi (có thể có sán)
+            - **Cá sống:** Cá sống, gỏi cá (có thể có sán lá gan)
+            - **Nước không đun sôi:** Nước không đun sôi
+
+            **4. Thực đơn mẫu:**
+            - **Sáng:** Cháo thịt + trái cây
+            - **Trưa:** Cơm + thịt/cá nấu chín + rau xanh nấu chín
+            - **Chiều:** Cơm + thịt/cá nấu chín + rau xanh nấu chín
+            - **Bữa phụ:** Trái cây
+
+            **5. Lưu ý:**
+            - Ăn thực phẩm nấu chín
+            - Rửa tay trước khi ăn
+            - Uống nước đun sôi
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Tập thể dục:**
+            - Bình thường, đều đặn
+            - Tăng sức khỏe
+
+            **2. Lưu ý:**
+            - Tránh gắng sức nếu thiếu máu nặng
+            - Tập từ từ khi đã cải thiện
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Thuốc tẩy giun:**
+            - **Albendazole:** 400mg, 1 lần (uống với bữa ăn)
+            - **Mebendazole:** 100mg, 2 lần/ngày, 3 ngày
+            - **Pyrantel:** 10mg/kg, 1 lần
+            - **Uống đều đặn:** Theo chỉ định bác sĩ
+
+            **2. Bổ sung sắt:**
+            - **Ferrous sulfate:** Nếu thiếu máu
+            - **Uống với vitamin C:** Tăng hấp thu
+
+            **3. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Tẩy giun định kỳ (6 tháng/lần cho trẻ em)
+            - Điều trị cả gia đình (nếu giun kim)
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Biến chứng:**
+            - Tắc ruột (đau bụng dữ dội, nôn)
+            - Thiếu máu nặng (mệt mỏi nặng, phù)
+            - **Cấp cứu ngay!**
+
+            **2. Nhiễm giun nặng:**
+            - Nhiễm nhiều loại giun
+            - Không đáp ứng điều trị
+
+            **3. Trẻ em:**
+            - Suy dinh dưỡng nặng
+            - Chậm phát triển
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Vệ sinh cá nhân:**
+            - **Rửa tay:** Rửa tay bằng xà phòng trước khi ăn, sau khi đi vệ sinh
+            - **Cắt móng tay:** Cắt móng tay ngắn
+            - **Tắm rửa:** Tắm rửa thường xuyên
+
+            **2. Vệ sinh thực phẩm:**
+            - **Nấu chín:** Nấu chín thực phẩm
+            - **Rửa rau:** Rửa rau sạch, nấu chín
+            - **Tránh:** Rau sống, thịt sống, cá sống
+
+            **3. Vệ sinh môi trường:**
+            - **Nhà vệ sinh:** Nhà vệ sinh sạch sẽ
+            - **Xử lý phân:** Xử lý phân đúng cách
+            - **Nước:** Uống nước đun sôi
+
+            **4. Tẩy giun định kỳ:**
+            - **Trẻ em:** 6 tháng/lần
+            - **Người lớn:** 1 năm/lần (nếu có nguy cơ)
+
+            **5. Tránh:**
+            - Đi chân đất (giun móc)
+            - Ăn thực phẩm sống
+            - Uống nước không đun sôi
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - **Vệ sinh sạch sẽ** (quan trọng nhất!)
+            - **Tẩy giun định kỳ**
+            - **Ăn thực phẩm nấu chín**
+
+            **2. Khi bị nhiễm giun:**
+            - Tẩy giun ngay
+            - Điều trị thiếu máu (nếu có)
+            - Bổ sung dinh dưỡng
+
+            **3. Sống tích cực:**
+            - Nhiễm giun sán có thể điều trị khỏi
+            - Tẩy giun định kỳ → Không tái phát
+            - Phòng ngừa tốt → Không mắc bệnh
+
+            **4. Trẻ em:**
+            - Tẩy giun định kỳ 6 tháng/lần
+            - Giáo dục vệ sinh
+            - Theo dõi tăng trưởng
+            """,
+            related_disease="helminthiasis",
+            related_drugs=["Albendazole", "Mebendazole", "Pyrantel", "Praziquantel", "Ferrous sulfate"],
+            printable=True
+        ),
+
 ]

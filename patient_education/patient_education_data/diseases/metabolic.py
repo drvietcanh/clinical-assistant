@@ -1089,4 +1089,739 @@ METABOLIC_TOPICS = [
             printable=True
         ),
 
+        PatientEducationTopic(
+            id="cushing_syndrome_basics",
+            title="Understanding Cushing's Syndrome",
+            title_vn="Hiểu về Hội chứng Cushing",
+            category="Disease",
+            content="""
+            # Hiểu về Hội chứng Cushing
+
+            ## Hội chứng Cushing là gì?
+
+            Hội chứng Cushing là tình trạng tăng cortisol trong máu kéo dài, gây tăng cân, tăng huyết áp, đái tháo đường, loãng xương. Bệnh có thể do dùng corticosteroid lâu dài hoặc do khối u.
+
+            **⚠️ Đặc điểm:**
+            - Tăng cortisol trong máu kéo dài
+            - Gây nhiều biến chứng
+            - Có thể do thuốc hoặc khối u
+            - Cần điều trị
+
+            **Phân loại:**
+            - **Hội chứng Cushing do thuốc:** Dùng corticosteroid lâu dài (phổ biến nhất)
+            - **Hội chứng Cushing nội sinh:** Do khối u (hiếm)
+              - Khối u tuyến yên (bệnh Cushing)
+              - Khối u thượng thận
+              - Khối u ngoài tuyến yên (ACTH)
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Tăng cân:** Tăng cân, đặc biệt ở mặt, cổ, bụng
+            - **Mặt tròn (moon face):** Mặt tròn, đỏ
+            - **Bướu mỡ sau gáy (buffalo hump):** Bướu mỡ sau gáy
+            - **Tăng huyết áp:** Tăng huyết áp
+            - **Đái tháo đường:** Đái tháo đường hoặc rối loạn đường huyết
+            - **Yếu cơ:** Yếu cơ, đặc biệt cơ đùi
+
+            **Triệu chứng khác:**
+            - **Da mỏng:** Da mỏng, dễ bầm tím
+            - **Vết rạn da:** Vết rạn da màu tím (bụng, đùi)
+            - **Mụn:** Mụn trứng cá
+            - **Rậm lông:** Rậm lông (phụ nữ)
+            - **Loãng xương:** Loãng xương, gãy xương
+            - **Rối loạn kinh nguyệt:** Rối loạn kinh nguyệt (phụ nữ)
+            - **Giảm ham muốn:** Giảm ham muốn tình dục
+            - **Trầm cảm:** Trầm cảm, lo âu
+
+            **⚠️ Biến chứng:**
+            - Đái tháo đường
+            - Tăng huyết áp
+            - Loãng xương
+            - Nhiễm trùng
+            - Huyết khối
+
+            ## Nguyên nhân:
+
+            **1. Dùng corticosteroid lâu dài (phổ biến nhất):**
+            - **Prednisolone, Dexamethasone:** Dùng lâu dài
+            - **Điều trị:** Hen, viêm khớp, bệnh tự miễn
+            - **Liều cao, lâu dài:** Tăng nguy cơ
+
+            **2. Khối u tuyến yên (bệnh Cushing):**
+            - Khối u tuyến yên tiết ACTH
+            - Kích thích thượng thận tiết cortisol
+
+            **3. Khối u thượng thận:**
+            - Khối u thượng thận tiết cortisol trực tiếp
+
+            **4. Khối u ngoài tuyến yên:**
+            - Khối u phổi, tụy tiết ACTH (hiếm)
+
+            **5. Yếu tố nguy cơ:**
+            - Dùng corticosteroid lâu dài
+            - Khối u tuyến yên, thượng thận
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám lâm sàng
+
+            **Xét nghiệm:**
+            - **Cortisol máu:** Tăng (nhưng thay đổi theo thời gian)
+            - **Cortisol nước tiểu 24h:** Tăng
+            - **Test ức chế Dexamethasone:** Không ức chế được
+            - **ACTH:** Đánh giá nguyên nhân
+
+            **Hình ảnh:**
+            - **MRI tuyến yên:** Phát hiện khối u tuyến yên
+            - **CT thượng thận:** Phát hiện khối u thượng thận
+            - **CT ngực, bụng:** Tìm khối u ngoài tuyến yên
+
+            **⚠️ Phân biệt:**
+            - Béo phì đơn thuần
+            - Hội chứng buồng trứng đa nang
+            - Trầm cảm
+
+            ## Điều trị:
+
+            **1. Hội chứng Cushing do thuốc:**
+            - **Giảm liều corticosteroid:** Giảm liều từ từ
+            - **Không tự ý ngừng:** Nguy cơ suy thượng thận
+            - **Thay thế:** Thay bằng thuốc khác (nếu có thể)
+
+            **2. Hội chứng Cushing nội sinh:**
+            - **Phẫu thuật:**
+              - Cắt khối u tuyến yên (nếu có)
+              - Cắt khối u thượng thận (nếu có)
+            - **Xạ trị:** Nếu không phẫu thuật được
+            - **Thuốc:** Ketoconazole, Metyrapone (ức chế sản xuất cortisol)
+
+            **3. Điều trị biến chứng:**
+            - **Đái tháo đường:** Thuốc hạ đường huyết
+            - **Tăng huyết áp:** Thuốc hạ huyết áp
+            - **Loãng xương:** Bổ sung canxi, vitamin D, Bisphosphonate
+
+            **⚠️ Lưu ý:**
+            - Sau phẫu thuật: Cần bổ sung corticosteroid (suy thượng thận)
+            - Giảm liều từ từ (nếu do thuốc)
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Giảm cân:**
+            - **Giảm calo:** Giảm calo để giảm cân
+            - **Giảm đường:** Giảm đường, tinh bột
+            - **Tăng protein:** Tăng protein nạc
+            - **Tăng chất xơ:** Rau xanh, trái cây
+
+            **2. Thực phẩm nên ăn:**
+            - Protein nạc (thịt, cá, đậu)
+            - Rau xanh, trái cây
+            - Ngũ cốc nguyên hạt
+            - Uống nhiều nước
+
+            **3. Thực phẩm nên tránh:**
+            - Đường, đồ ngọt
+            - Tinh bột tinh chế
+            - Đồ chiên rán
+            - Rượu bia
+
+            **4. Thực đơn mẫu:**
+            - **Sáng:** Cháo yến mạch + trứng + trái cây
+            - **Trưa:** Cơm gạo lứt + cá/thịt nạc + rau xanh
+            - **Chiều:** Cơm gạo lứt + cá/thịt nạc + rau xanh
+            - **Bữa phụ:** Trái cây, hạt
+
+            **5. Lưu ý:**
+            - Ăn đủ dinh dưỡng
+            - Giảm cân từ từ
+            - Kiểm soát đường huyết (nếu đái tháo đường)
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Tập thể dục:**
+            - **Tăng cường cơ:** Tập sức mạnh (chống yếu cơ)
+            - **Tập tim mạch:** Đi bộ, chạy bộ (giảm cân)
+            - **30 phút/ngày, 5 ngày/tuần**
+
+            **2. Lưu ý:**
+            - Tránh gắng sức quá mức (yếu cơ)
+            - Tập từ từ, tăng dần
+            - Nghỉ ngơi nếu mệt
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Giảm liều corticosteroid:**
+            - **Giảm từ từ:** Không tự ý ngừng
+            - **Theo chỉ định bác sĩ**
+            - **Theo dõi:** Theo dõi triệu chứng suy thượng thận
+
+            **2. Điều trị biến chứng:**
+            - **Đái tháo đường:** Metformin, Insulin
+            - **Tăng huyết áp:** Thuốc hạ huyết áp
+            - **Loãng xương:** Canxi, vitamin D, Bisphosphonate
+
+            **3. Thuốc ức chế cortisol:**
+            - **Ketoconazole, Metyrapone:** Nếu không phẫu thuật được
+            - **Theo chỉ định bác sĩ**
+
+            **4. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Không tự ý ngừng corticosteroid
+            - Báo bác sĩ nếu có tác dụng phụ
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Suy thượng thận cấp:**
+            - Sau phẫu thuật hoặc ngừng corticosteroid đột ngột
+            - Tụt huyết áp, sốc
+            - **Cấp cứu ngay!**
+
+            **2. Biến chứng:**
+            - Đái tháo đường nặng
+            - Tăng huyết áp nặng
+            - Gãy xương
+
+            **3. Triệu chứng nặng:**
+            - Yếu cơ nặng
+            - Trầm cảm nặng
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Tránh dùng corticosteroid lâu dài:**
+            - Chỉ dùng khi cần thiết
+            - Dùng liều thấp nhất có thể
+            - Giảm liều từ từ khi ngừng
+
+            **2. Theo dõi:**
+            - Theo dõi triệu chứng khi dùng corticosteroid
+            - Khám định kỳ
+
+            **3. Điều trị sớm:**
+            - Phát hiện sớm
+            - Điều trị sớm → Giảm biến chứng
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - **Tránh dùng corticosteroid lâu dài** (quan trọng nhất!)
+            - Chỉ dùng khi cần thiết
+            - Dùng liều thấp nhất có thể
+
+            **2. Khi bị hội chứng Cushing:**
+            - Điều trị nguyên nhân
+            - Điều trị biến chứng
+            - Giảm cân
+            - Tập thể dục
+
+            **3. Sống tích cực:**
+            - Hội chứng Cushing có thể điều trị
+            - Điều trị đúng → Cải thiện triệu chứng
+            - Có thể sống bình thường
+
+            **4. Lâu dài:**
+            - Cần điều trị lâu dài
+            - Theo dõi định kỳ
+            - Điều trị biến chứng
+            """,
+            related_disease="cushing_syndrome",
+            related_drugs=["Prednisolone", "Ketoconazole", "Metyrapone", "Metformin"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="addison_disease_basics",
+            title="Understanding Addison's Disease",
+            title_vn="Hiểu về Bệnh Addison",
+            category="Disease",
+            content="""
+            # Hiểu về Bệnh Addison
+
+            ## Bệnh Addison là gì?
+
+            Bệnh Addison (Suy thượng thận nguyên phát) là tình trạng suy giảm chức năng tuyến thượng thận, không sản xuất đủ cortisol và aldosterone. Bệnh hiếm nhưng nguy hiểm, có thể dẫn đến suy thượng thận cấp, tử vong.
+
+            **⚠️ Đặc điểm:**
+            - Suy giảm chức năng tuyến thượng thận
+            - Thiếu cortisol và aldosterone
+            - Hiếm nhưng nguy hiểm
+            - Cần điều trị suốt đời
+
+            **Phân loại:**
+            - **Suy thượng thận nguyên phát (Addison):** Tổn thương tuyến thượng thận
+            - **Suy thượng thận thứ phát:** Tổn thương tuyến yên (hiếm)
+
+            **Tuyến thượng thận:**
+            - Tuyến nhỏ trên thận
+            - Chức năng: Tiết cortisol, aldosterone, androgen
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Mệt mỏi:** Mệt mỏi, suy nhược nặng
+            - **Sụt cân:** Sụt cân không rõ nguyên nhân
+            - **Sạm da:** Sạm da, đặc biệt nếp gấp, vết sẹo
+            - **Hạ huyết áp:** Hạ huyết áp, chóng mặt
+            - **Buồn nôn, nôn:** Buồn nôn, nôn
+            - **Đau bụng:** Đau bụng
+            - **Thèm muối:** Thèm muối (do thiếu aldosterone)
+
+            **Triệu chứng khác:**
+            - Yếu cơ
+            - Trầm cảm, lo âu
+            - Rối loạn kinh nguyệt (phụ nữ)
+            - Giảm ham muốn tình dục
+
+            **⚠️ Suy thượng thận cấp (CẤP CỨU!):**
+            - Tụt huyết áp nặng, sốc
+            - Mất nước nặng
+            - Rối loạn điện giải
+            - Hôn mê
+            - **Cấp cứu ngay!**
+
+            ## Nguyên nhân:
+
+            **1. Tự miễn (phổ biến nhất, 80-90%):**
+            - Hệ miễn dịch tấn công tuyến thượng thận
+            - Phá hủy tuyến thượng thận
+
+            **2. Nhiễm trùng:**
+            - **Lao:** Phổ biến ở vùng lưu hành lao
+            - **Nấm:** Histoplasmosis, Cryptococcus
+
+            **3. Ung thư:**
+            - Ung thư di căn đến thượng thận
+
+            **4. Chảy máu:**
+            - Chảy máu thượng thận (hiếm)
+
+            **5. Yếu tố nguy cơ:**
+            - Bệnh tự miễn khác
+            - Nhiễm trùng
+            - Ung thư
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Sạm da đặc trưng
+
+            **Xét nghiệm:**
+            - **Cortisol máu:** Giảm
+            - **ACTH:** Tăng (do thiếu cortisol)
+            - **Test kích thích ACTH:** Không đáp ứng
+            - **Aldosterone:** Giảm
+            - **Điện giải:** Natri giảm, kali tăng
+
+            **Hình ảnh:**
+            - **CT thượng thận:** Đánh giá tổn thương
+
+            **⚠️ Phân biệt:**
+            - Suy thượng thận thứ phát
+            - Bệnh khác gây mệt mỏi
+
+            ## Điều trị:
+
+            **1. Bổ sung hormone:**
+            - **Hydrocortisone:** 15-25mg/ngày (thay thế cortisol)
+              - Chia 2-3 lần/ngày
+              - Liều cao buổi sáng, thấp buổi tối
+            - **Fludrocortisone:** 0.1-0.2mg/ngày (thay thế aldosterone)
+            - **Dùng suốt đời:** Quan trọng!
+
+            **2. Điều trị suy thượng thận cấp:**
+            - **Hydrocortisone đường tĩnh mạch:** Ngay lập tức
+            - **Truyền dịch:** Truyền dịch muối
+            - **Cấp cứu ngay!**
+
+            **3. Tăng liều khi stress:**
+            - **Bệnh, sốt:** Tăng liều 2-3 lần
+            - **Phẫu thuật:** Tăng liều
+            - **Chấn thương:** Tăng liều
+            - **Mang thai:** Tăng liều
+
+            **⚠️ Lưu ý:**
+            - Dùng thuốc suốt đời
+            - Không được quên thuốc (nguy hiểm!)
+            - Tăng liều khi stress
+            - Mang theo thuốc dự phòng
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Tăng muối:**
+            - **Tăng muối:** 3-5g/ngày (nếu hạ huyết áp)
+            - **Thực phẩm mặn:** Nước mắm, muối
+
+            **2. Đủ dinh dưỡng:**
+            - Đủ calo, protein
+            - Rau xanh, trái cây
+            - Uống nhiều nước
+
+            **3. Thực phẩm nên ăn:**
+            - Protein nạc (thịt, cá, đậu)
+            - Rau xanh, trái cây
+            - Ngũ cốc nguyên hạt
+            - Thực phẩm mặn (nếu cần)
+
+            **4. Thực đơn mẫu:**
+            - **Sáng:** Cháo thịt + muối/nước mắm
+            - **Trưa:** Cơm + thịt/cá + rau xanh + canh (có thể mặn hơn)
+            - **Chiều:** Cơm + thịt/cá + rau xanh + canh
+            - **Bữa phụ:** Trái cây
+
+            **5. Lưu ý:**
+            - Ăn đủ dinh dưỡng
+            - Tăng muối nếu hạ huyết áp
+            - Uống nhiều nước
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Tập thể dục:**
+            - Bình thường, đều đặn
+            - 30 phút/ngày, 5 ngày/tuần
+
+            **2. Lưu ý:**
+            - Tránh gắng sức quá mức
+            - Tăng liều thuốc nếu tập nặng
+            - Nghỉ ngơi nếu mệt
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Hydrocortisone:**
+            - **Uống đều đặn:** 2-3 lần/ngày
+            - **Liều:** 15-25mg/ngày (chia 2-3 lần)
+            - **Không được quên:** Nguy hiểm!
+            - **Tăng liều khi stress:** Bệnh, sốt, phẫu thuật
+
+            **2. Fludrocortisone:**
+            - **Uống buổi sáng:** 0.1-0.2mg/ngày
+            - **Theo chỉ định bác sĩ**
+
+            **3. Thuốc dự phòng:**
+            - **Mang theo:** Hydrocortisone tiêm (nếu suy thượng thận cấp)
+            - **Đeo vòng cảnh báo y tế:** Thông báo bệnh
+
+            **4. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Không được quên thuốc
+            - Tăng liều khi stress
+            - Báo bác sĩ tất cả thuốc đang dùng
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Suy thượng thận cấp (CẤP CỨU!):**
+            - Tụt huyết áp nặng, sốc
+            - Mất nước nặng
+            - Hôn mê
+            - **Tiêm Hydrocortisone ngay, cấp cứu!**
+
+            **2. Triệu chứng nặng:**
+            - Mệt mỏi nặng
+            - Buồn nôn, nôn nhiều
+            - Tụt huyết áp
+
+            **3. Stress:**
+            - Bệnh, sốt
+            - Phẫu thuật
+            - Chấn thương
+            - Cần tăng liều
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Không có cách phòng ngừa:**
+            - Nguyên nhân tự miễn, nhiễm trùng
+
+            **2. Phát hiện sớm:**
+            - Nhận biết triệu chứng
+            - Khám ngay khi có triệu chứng
+            - Điều trị sớm → Giảm biến chứng
+
+            **3. Điều trị đúng:**
+            - Uống thuốc đều đặn
+            - Tăng liều khi stress
+            - Mang theo thuốc dự phòng
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Khi bị bệnh Addison:**
+            - **Uống thuốc đều đặn** (quan trọng nhất!)
+            - Không được quên thuốc
+            - Tăng liều khi stress
+            - Mang theo thuốc dự phòng
+
+            **2. Đeo vòng cảnh báo y tế:**
+            - Thông báo bệnh
+            - Quan trọng trong cấp cứu
+
+            **3. Sống tích cực:**
+            - Bệnh Addison có thể kiểm soát
+            - Điều trị đúng → Sống bình thường
+            - Có thể sống lâu, chất lượng cuộc sống tốt
+
+            **4. Giáo dục:**
+            - Giáo dục bản thân, gia đình
+            - Nhận biết suy thượng thận cấp
+            - Cách tiêm Hydrocortisone (nếu cần)
+
+            **5. Lâu dài:**
+            - Cần điều trị suốt đời
+            - Khám định kỳ
+            - Theo dõi triệu chứng
+            """,
+            related_disease="addison_disease",
+            related_drugs=["Hydrocortisone", "Fludrocortisone"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="gestational_diabetes_basics",
+            title="Understanding Gestational Diabetes",
+            title_vn="Hiểu về Đái tháo đường thai kỳ",
+            category="Disease",
+            content="""
+            # Hiểu về Đái tháo đường thai kỳ
+
+            ## Đái tháo đường thai kỳ là gì?
+
+            Đái tháo đường thai kỳ (Gestational Diabetes) là tình trạng tăng đường huyết xuất hiện lần đầu trong thai kỳ, thường ở tam cá nguyệt thứ 2-3. Bệnh phổ biến, ảnh hưởng đến 5-10% phụ nữ mang thai.
+
+            **⚠️ Đặc điểm:**
+            - Tăng đường huyết xuất hiện lần đầu trong thai kỳ
+            - Thường ở tam cá nguyệt thứ 2-3
+            - Phổ biến (5-10% phụ nữ mang thai)
+            - Thường khỏi sau sinh
+
+            **Phân loại:**
+            - **Đái tháo đường thai kỳ:** Tăng đường huyết chỉ trong thai kỳ
+            - **Đái tháo đường type 2:** Đã có trước khi mang thai
+
+            ## Triệu chứng:
+
+            **Triệu chứng:**
+            - Thường không có triệu chứng
+            - Phát hiện khi xét nghiệm đường huyết
+
+            **Triệu chứng nếu đường huyết cao:**
+            - Khát nước nhiều
+            - Tiểu nhiều
+            - Mệt mỏi
+            - Mờ mắt (hiếm)
+
+            **⚠️ Biến chứng cho mẹ:**
+            - Tăng huyết áp thai kỳ
+            - Tiền sản giật
+            - Đái tháo đường type 2 sau sinh (tăng nguy cơ 50%)
+
+            **⚠️ Biến chứng cho con:**
+            - **Thai to:** Thai to (> 4kg) → Khó sinh
+            - **Hạ đường huyết sau sinh:** Hạ đường huyết ở trẻ sơ sinh
+            - **Vàng da:** Vàng da ở trẻ sơ sinh
+            - **Suy hô hấp:** Suy hô hấp ở trẻ sơ sinh
+            - **Đái tháo đường:** Tăng nguy cơ đái tháo đường ở trẻ
+
+            ## Nguyên nhân:
+
+            **1. Hormone thai kỳ:**
+            - **Hormone nhau thai:** Hormone nhau thai làm giảm tác dụng insulin
+            - **Kháng insulin:** Tăng kháng insulin trong thai kỳ
+            - **Tăng đường huyết:** Tăng đường huyết
+
+            **2. Yếu tố nguy cơ:**
+            - **Tuổi:** > 25 tuổi
+            - **Béo phì:** BMI > 30
+            - **Tiền sử gia đình:** Có người thân bị đái tháo đường
+            - **Tiền sử:** Đái tháo đường thai kỳ lần trước
+            - **Đa thai:** Mang thai đôi, ba
+            - **Đái tháo đường thai kỳ trước:** Tăng nguy cơ
+
+            **3. Yếu tố khác:**
+            - Hội chứng buồng trứng đa nang (PCOS)
+            - Tăng huyết áp
+
+            ## Chẩn đoán:
+
+            **Tầm soát:**
+            - **Tam cá nguyệt thứ 2:** 24-28 tuần
+            - **Test dung nạp glucose (OGTT):**
+              - Uống 75g glucose
+              - Đo đường huyết trước, 1 giờ, 2 giờ sau
+            - **Chẩn đoán:**
+              - Đường huyết lúc đói ≥ 92 mg/dL
+              - Đường huyết 1 giờ ≥ 180 mg/dL
+              - Đường huyết 2 giờ ≥ 153 mg/dL
+
+            **Xét nghiệm:**
+            - **HbA1c:** Đánh giá đường huyết trung bình
+            - **Theo dõi đường huyết:** Đo đường huyết tại nhà
+
+            ## Điều trị:
+
+            **1. Chế độ ăn (QUAN TRỌNG NHẤT!):**
+            - **Giảm đường, tinh bột:** Giảm đường, tinh bột tinh chế
+            - **Tăng chất xơ:** Rau xanh, trái cây
+            - **Chia nhỏ bữa:** Ăn nhiều bữa nhỏ
+            - **Carbohydrate:** 40-50% tổng calo
+
+            **2. Tập thể dục:**
+            - **Đi bộ:** 30 phút/ngày, 5 ngày/tuần
+            - **Tập nhẹ:** Tập thể dục nhẹ
+            - **Giảm đường huyết:** Tập thể dục giảm đường huyết
+
+            **3. Thuốc:**
+            - **Insulin:** Nếu chế độ ăn + tập thể dục không đủ
+              - Insulin tác dụng nhanh (trước bữa ăn)
+              - Insulin tác dụng chậm (buổi tối)
+            - **Metformin:** Có thể dùng (an toàn trong thai kỳ)
+
+            **4. Theo dõi:**
+            - **Đo đường huyết:** 4 lần/ngày (trước ăn, 2 giờ sau ăn)
+            - **Mục tiêu:**
+              - Đường huyết lúc đói: < 95 mg/dL
+              - Đường huyết 2 giờ sau ăn: < 120 mg/dL
+
+            **⚠️ Lưu ý:**
+            - Điều trị quan trọng để tránh biến chứng
+            - Kiểm soát đường huyết tốt → Giảm biến chứng
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Giảm đường, tinh bột:**
+            - **Giảm đường:** Đường, bánh kẹo, nước ngọt
+            - **Giảm tinh bột tinh chế:** Bánh mì trắng, gạo trắng
+            - **Tăng tinh bột phức tạp:** Gạo lứt, yến mạch
+
+            **2. Tăng chất xơ:**
+            - Rau xanh, trái cây
+            - Ngũ cốc nguyên hạt
+            - Đậu
+
+            **3. Chia nhỏ bữa:**
+            - **3 bữa chính + 2-3 bữa phụ**
+            - Giảm đường huyết sau ăn
+            - Tránh hạ đường huyết
+
+            **4. Thực phẩm nên ăn:**
+            - Protein nạc (thịt, cá, đậu)
+            - Rau xanh, trái cây (ít đường)
+            - Ngũ cốc nguyên hạt
+            - Sữa ít béo
+
+            **5. Thực phẩm nên tránh:**
+            - Đường, bánh kẹo, nước ngọt
+            - Tinh bột tinh chế
+            - Đồ chiên rán
+            - Rượu bia
+
+            **6. Thực đơn mẫu:**
+            - **Sáng:** Cháo yến mạch + trứng + trái cây
+            - **Bữa phụ:** Sữa chua + hạt
+            - **Trưa:** Cơm gạo lứt + cá/thịt nạc + rau xanh
+            - **Bữa phụ:** Trái cây
+            - **Chiều:** Cơm gạo lứt + cá/thịt nạc + rau xanh
+            - **Bữa phụ:** Sữa ít béo
+
+            **7. Lưu ý:**
+            - Ăn đủ dinh dưỡng cho mẹ và con
+            - Không nhịn ăn
+            - Chia nhỏ bữa
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Tập thể dục:**
+            - **Đi bộ:** 30 phút/ngày, 5 ngày/tuần
+            - **Bơi lội:** Tốt cho phụ nữ mang thai
+            - **Yoga:** Yoga cho bà bầu
+            - **Giảm đường huyết:** Tập thể dục giảm đường huyết
+
+            **2. Lưu ý:**
+            - Tập nhẹ, an toàn
+            - Tránh gắng sức quá mức
+            - Nghỉ ngơi nếu mệt
+            - Theo chỉ định bác sĩ
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Insulin:**
+            - **Tiêm trước bữa ăn:** Insulin tác dụng nhanh
+            - **Tiêm buổi tối:** Insulin tác dụng chậm
+            - **Liều:** Theo chỉ định bác sĩ
+            - **Theo dõi:** Đo đường huyết trước và sau ăn
+
+            **2. Metformin:**
+            - **Uống 2 lần/ngày:** Sáng, tối
+            - **Theo chỉ định bác sĩ**
+
+            **3. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Đo đường huyết thường xuyên
+            - Báo bác sĩ nếu đường huyết cao/thấp
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Đường huyết cao:**
+            - Đường huyết > 200 mg/dL
+            - Không đáp ứng điều trị
+
+            **2. Hạ đường huyết:**
+            - Đường huyết < 70 mg/dL
+            - Run tay, vã mồ hôi, lú lẫn
+            - **Uống nước đường ngay!**
+
+            **3. Biến chứng:**
+            - Tăng huyết áp thai kỳ
+            - Tiền sản giật
+            - Thai to
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Duy trì cân nặng hợp lý:**
+            - Trước khi mang thai
+            - Giảm nguy cơ
+
+            **2. Tập thể dục:**
+            - Trước và trong thai kỳ
+            - Giảm nguy cơ
+
+            **3. Chế độ ăn:**
+            - Chế độ ăn lành mạnh
+            - Trước và trong thai kỳ
+
+            **4. Khám định kỳ:**
+            - Khám thai định kỳ
+            - Tầm soát đái tháo đường thai kỳ
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - **Duy trì cân nặng hợp lý** (quan trọng nhất!)
+            - Tập thể dục
+            - Chế độ ăn lành mạnh
+
+            **2. Khi bị đái tháo đường thai kỳ:**
+            - **Chế độ ăn** (quan trọng nhất!)
+            - Tập thể dục
+            - Đo đường huyết thường xuyên
+            - Uống thuốc (nếu cần)
+
+            **3. Sống tích cực:**
+            - Đái tháo đường thai kỳ có thể kiểm soát
+            - Điều trị đúng → Giảm biến chứng
+            - Thường khỏi sau sinh
+
+            **4. Sau sinh:**
+            - Xét nghiệm đường huyết sau sinh (6-12 tuần)
+            - Tăng nguy cơ đái tháo đường type 2
+            - Cần kiểm soát cân nặng, tập thể dục
+
+            **5. Lâu dài:**
+            - Tăng nguy cơ đái tháo đường type 2 (50%)
+            - Cần kiểm soát cân nặng, tập thể dục
+            - Khám định kỳ
+            """,
+            related_disease="gestational_diabetes",
+            related_drugs=["Insulin", "Metformin"],
+            printable=True
+        ),
+
 ]

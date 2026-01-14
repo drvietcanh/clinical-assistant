@@ -1750,4 +1750,469 @@ CARDIOVASCULAR_TOPICS = [
             printable=True
         ),
 
+        PatientEducationTopic(
+            id="pericarditis_basics",
+            title="Understanding Pericarditis",
+            title_vn="Hiểu về Viêm màng ngoài tim",
+            category="Disease",
+            content="""
+            # Hiểu về Viêm màng ngoài tim
+
+            ## Viêm màng ngoài tim là gì?
+
+            Viêm màng ngoài tim (Pericarditis) là tình trạng viêm của màng ngoài tim (màng bao quanh tim), gây đau ngực, có thể dẫn đến tràn dịch màng ngoài tim, chèn ép tim.
+
+            **⚠️ Đặc điểm:**
+            - Viêm màng ngoài tim
+            - Đau ngực đặc trưng
+            - Có thể tràn dịch, chèn ép tim
+            - Thường tự khỏi (cấp tính)
+
+            **Phân loại:**
+            - **Viêm màng ngoài tim cấp:** Viêm đột ngột, < 6 tuần
+            - **Viêm màng ngoài tim mạn:** Viêm kéo dài, > 3 tháng
+            - **Viêm màng ngoài tim tái phát:** Tái phát nhiều lần
+
+            **Màng ngoài tim:**
+            - Màng bao quanh tim
+            - Chức năng: Bảo vệ tim, giảm ma sát
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Đau ngực:** Đau ngực đặc trưng
+              - Đau sau xương ức, lan ra cổ, vai, lưng
+              - Đau nhói, như dao đâm
+              - Đau tăng khi nằm ngửa, thở sâu, ho, nuốt
+              - Đau giảm khi ngồi, cúi người về phía trước
+            - **Sốt:** Sốt nhẹ đến vừa
+            - **Mệt mỏi:** Mệt mỏi, suy nhược
+
+            **Triệu chứng khác:**
+            - Khó thở (nếu có tràn dịch)
+            - Ho khan
+            - Đánh trống ngực
+
+            **⚠️ Chèn ép tim (Tamponade) - CẤP CỨU!**
+            - Tràn dịch màng ngoài tim nhiều
+            - Chèn ép tim → Giảm cung lượng tim
+            - **Triệu chứng:**
+              - Khó thở nặng
+              - Tụt huyết áp
+              - Mạch nghịch (mạch yếu khi hít vào)
+              - Tím tái
+            - **Cấp cứu ngay!**
+
+            ## Nguyên nhân:
+
+            **1. Nhiễm trùng:**
+            - **Virus:** Coxsackie, Echo, Influenza (phổ biến nhất)
+            - **Vi khuẩn:** Staphylococcus, Streptococcus (hiếm)
+            - **Nấm:** Hiếm
+            - **Lao:** Phổ biến ở vùng lưu hành lao
+
+            **2. Bệnh tự miễn:**
+            - Lupus ban đỏ hệ thống
+            - Viêm khớp dạng thấp
+            - Scleroderma
+
+            **3. Nhồi máu cơ tim:**
+            - Viêm màng ngoài tim sau nhồi máu (Dressler syndrome)
+
+            **4. Ung thư:**
+            - Ung thư di căn đến màng ngoài tim
+
+            **5. Nguyên nhân khác:**
+            - Chấn thương ngực
+            - Sau phẫu thuật tim
+            - Suy thận mạn (uremic pericarditis)
+            - Thuốc (Hydralazine, Procainamide)
+
+            **6. Vô căn:**
+            - Không tìm thấy nguyên nhân (phổ biến)
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Tiếng cọ màng ngoài tim (rubbing sound)
+
+            **Xét nghiệm:**
+            - **Xét nghiệm máu:**
+              - Bạch cầu tăng
+              - CRP, ESR tăng (dấu hiệu viêm)
+              - Troponin tăng (nếu viêm cơ tim kèm theo)
+            - **Cấy máu:** Nếu nghi ngờ nhiễm trùng
+
+            **Hình ảnh:**
+            - **X-quang ngực:** Tim to (nếu có tràn dịch)
+            - **ECG:** Thay đổi đặc trưng (ST chênh lên, PR chênh xuống)
+            - **Siêu âm tim:** Phát hiện tràn dịch màng ngoài tim (quan trọng!)
+
+            **⚠️ Phân biệt:**
+            - Nhồi máu cơ tim
+            - Viêm phổi
+            - Tràn khí màng phổi
+
+            ## Điều trị:
+
+            **1. Điều trị cấp tính:**
+            - **NSAID:** Ibuprofen 600-800mg, 3 lần/ngày (điều trị chính)
+            - **Colchicine:** 0.5-1mg/ngày (giảm tái phát)
+            - **Corticosteroid:** Prednisolone (chỉ khi không đáp ứng NSAID)
+            - **Nghỉ ngơi:** Nghỉ ngơi, tránh gắng sức
+
+            **2. Điều trị nguyên nhân:**
+            - **Nhiễm trùng:** Kháng sinh (nếu do vi khuẩn)
+            - **Lao:** Điều trị lao
+            - **Bệnh tự miễn:** Điều trị bệnh nền
+
+            **3. Điều trị chèn ép tim:**
+            - **Chọc dò màng ngoài tim:** Chọc hút dịch (cấp cứu!)
+            - **Dẫn lưu màng ngoài tim:** Đặt ống dẫn lưu
+            - **Phẫu thuật:** Cắt màng ngoài tim (nếu tái phát nhiều lần)
+
+            **⚠️ Lưu ý:**
+            - Viêm màng ngoài tim cấp: Thường tự khỏi (1-3 tuần)
+            - Tránh dùng corticosteroid sớm (tăng nguy cơ tái phát)
+            - Chèn ép tim: Cấp cứu ngay!
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Khi đang viêm:**
+            - **Đủ dinh dưỡng:** Đủ calo, protein
+            - **Dễ tiêu:** Thức ăn mềm, dễ tiêu
+            - **Uống nhiều nước:** Uống nhiều nước
+
+            **2. Thực phẩm nên ăn:**
+            - Protein nạc (thịt, cá, đậu)
+            - Rau xanh, trái cây
+            - Cháo, súp
+            - Uống nhiều nước
+
+            **3. Thực phẩm nên tránh:**
+            - Đồ cay nóng
+            - Rượu bia
+            - Thức ăn khó tiêu
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Khi đang viêm:**
+            - **Nghỉ ngơi:** Nghỉ ngơi, tránh gắng sức
+            - **Tránh tập thể dục:** Cho đến khi khỏi
+
+            **2. Sau khi khỏi:**
+            - Tập thể dục từ từ
+            - Tăng dần cường độ
+            - Theo chỉ định bác sĩ
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. NSAID:**
+            - **Ibuprofen:** 600-800mg, 3 lần/ngày (sau ăn)
+            - **Aspirin:** 2-4g/ngày (nếu không dùng Ibuprofen)
+            - **Thời gian:** 1-2 tuần
+            - **Tác dụng phụ:** Đau dạ dày (uống sau ăn)
+
+            **2. Colchicine:**
+            - **0.5-1mg/ngày:** Giảm tái phát
+            - **Thời gian:** 3 tháng
+            - **Tác dụng phụ:** Tiêu chảy, buồn nôn
+
+            **3. Corticosteroid:**
+            - **Prednisolone:** Chỉ khi không đáp ứng NSAID
+            - **Giảm liều từ từ:** Tránh tái phát
+
+            **4. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Báo bác sĩ nếu có tác dụng phụ
+            - Không tự ý ngừng thuốc
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Chèn ép tim (CẤP CỨU!):**
+            - Khó thở nặng
+            - Tụt huyết áp
+            - Mạch nghịch
+            - Tím tái
+            - **Cấp cứu ngay!**
+
+            **2. Đau ngực dữ dội:**
+            - Đau ngực dữ dội, không chịu được
+            - Không đáp ứng thuốc giảm đau
+
+            **3. Không đáp ứng điều trị:**
+            - Điều trị > 1 tuần không cải thiện
+            - Tái phát nhiều lần
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Điều trị nhiễm trùng:**
+            - Điều trị nhiễm trùng đúng cách
+            - Giảm nguy cơ
+
+            **2. Điều trị bệnh nền:**
+            - Điều trị bệnh tự miễn
+            - Điều trị suy thận
+
+            **3. Tránh:**
+            - Chấn thương ngực
+            - Thuốc gây viêm màng ngoài tim
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Khi bị viêm màng ngoài tim:**
+            - Nghỉ ngơi, tránh gắng sức
+            - Uống thuốc đều đặn
+            - Theo dõi triệu chứng
+
+            **2. Sống tích cực:**
+            - Viêm màng ngoài tim cấp thường tự khỏi
+            - Điều trị đúng → Khỏi nhanh
+            - Phòng ngừa tốt → Không tái phát
+
+            **3. Lâu dài:**
+            - Nếu tái phát nhiều lần → Cần điều trị lâu dài
+            - Có thể cần phẫu thuật
+            """,
+            related_disease="pericarditis",
+            related_drugs=["Ibuprofen", "Aspirin", "Colchicine", "Prednisolone"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="myocarditis_basics",
+            title="Understanding Myocarditis",
+            title_vn="Hiểu về Viêm cơ tim",
+            category="Disease",
+            content="""
+            # Hiểu về Viêm cơ tim
+
+            ## Viêm cơ tim là gì?
+
+            Viêm cơ tim (Myocarditis) là tình trạng viêm của cơ tim, thường do nhiễm trùng (đặc biệt virus), gây suy tim, rối loạn nhịp tim, có thể dẫn đến tử vong.
+
+            **⚠️ Đặc điểm:**
+            - Viêm cơ tim
+            - Thường do virus
+            - Gây suy tim, rối loạn nhịp tim
+            - Có thể dẫn đến tử vong
+
+            **Phân loại:**
+            - **Viêm cơ tim cấp:** Viêm đột ngột
+            - **Viêm cơ tim mạn:** Viêm kéo dài, dẫn đến bệnh cơ tim giãn
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Đau ngực:** Đau ngực, có thể như nhồi máu cơ tim
+            - **Khó thở:** Khó thở, tăng khi gắng sức, nặng hơn khi nằm
+            - **Mệt mỏi:** Mệt mỏi, suy nhược
+            - **Đánh trống ngực:** Nhịp tim nhanh, không đều
+            - **Sốt:** Sốt (nếu do nhiễm trùng)
+
+            **Triệu chứng khác:**
+            - Phù chân, mắt cá chân (suy tim)
+            - Ho khan
+            - Chóng mặt, ngất xỉu (rối loạn nhịp tim)
+
+            **⚠️ Suy tim nặng:**
+            - Khó thở nặng
+            - Phù nhiều
+            - Không nằm được
+            - **Cấp cứu ngay!**
+
+            **⚠️ Rối loạn nhịp tim nặng:**
+            - Đánh trống ngực nhiều
+            - Ngất xỉu
+            - **Cấp cứu ngay!**
+
+            ## Nguyên nhân:
+
+            **1. Nhiễm virus (phổ biến nhất):**
+            - **Coxsackie B:** Phổ biến nhất
+            - **Adenovirus:** Phổ biến
+            - **Influenza:** Cúm
+            - **COVID-19:** Có thể gây viêm cơ tim
+            - **Parvovirus B19:** Phổ biến
+
+            **2. Nhiễm vi khuẩn:**
+            - **Staphylococcus:** Hiếm
+            - **Streptococcus:** Hiếm
+            - **Borrelia:** Bệnh Lyme
+
+            **3. Bệnh tự miễn:**
+            - Lupus ban đỏ hệ thống
+            - Viêm khớp dạng thấp
+
+            **4. Thuốc:**
+            - **Chemotherapy:** Doxorubicin
+            - **Antibiotic:** Penicillin, Sulfonamide
+
+            **5. Yếu tố nguy cơ:**
+            - Nhiễm virus gần đây
+            - Suy giảm miễn dịch
+            - Bệnh tự miễn
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám tim
+
+            **Xét nghiệm:**
+            - **Xét nghiệm máu:**
+              - Troponin tăng (tổn thương cơ tim)
+              - BNP tăng (suy tim)
+              - Bạch cầu tăng (nếu nhiễm trùng)
+            - **Cấy máu:** Nếu nghi ngờ nhiễm trùng
+
+            **Hình ảnh:**
+            - **ECG:** Thay đổi (ST chênh, rối loạn nhịp)
+            - **Siêu âm tim:** Giảm chức năng tim, giãn buồng tim
+            - **MRI tim:** Phát hiện viêm cơ tim (tiêu chuẩn vàng)
+            - **Sinh thiết cơ tim:** Xác định chẩn đoán (hiếm dùng)
+
+            **⚠️ Phân biệt:**
+            - Nhồi máu cơ tim
+            - Bệnh cơ tim giãn
+            - Viêm màng ngoài tim
+
+            ## Điều trị:
+
+            **1. Điều trị hỗ trợ:**
+            - **Nghỉ ngơi:** Nghỉ ngơi, tránh gắng sức (quan trọng!)
+            - **Hạn chế hoạt động:** 3-6 tháng
+            - **Oxy:** Nếu khó thở
+
+            **2. Điều trị suy tim:**
+            - **ACE inhibitor:** Làm chậm tiến triển
+            - **Beta-blocker:** Giảm nhịp tim, cải thiện chức năng
+            - **Lợi tiểu:** Furosemide (giảm phù)
+            - **Digoxin:** Nếu cần (thận trọng)
+
+            **3. Điều trị rối loạn nhịp tim:**
+            - **Antiarrhythmic:** Amiodarone (nếu cần)
+            - **Máy tạo nhịp:** Nếu block tim
+
+            **4. Điều trị nguyên nhân:**
+            - **Nhiễm virus:** Hỗ trợ (không có thuốc đặc hiệu)
+            - **Nhiễm vi khuẩn:** Kháng sinh
+            - **Bệnh tự miễn:** Corticosteroid, Immunosuppressant
+
+            **5. Corticosteroid:**
+            - Chỉ dùng trong một số trường hợp (bệnh tự miễn, viêm nặng)
+            - Không dùng thường quy
+
+            **⚠️ Lưu ý:**
+            - Nghỉ ngơi quan trọng nhất!
+            - Tránh gắng sức (nguy cơ đột tử)
+            - Điều trị suy tim, rối loạn nhịp tim
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Chế độ ăn tim mạch:**
+            - **Giảm muối:** < 5g/ngày (nếu suy tim)
+            - **Giảm chất béo bão hòa:** Thịt đỏ, mỡ động vật
+            - **Tăng chất xơ:** Rau xanh, trái cây
+            - **Uống đủ nước:** Nhưng không quá nhiều (nếu suy tim)
+
+            **2. Thực phẩm nên ăn:**
+            - Cá béo (omega-3)
+            - Rau xanh, trái cây
+            - Ngũ cốc nguyên hạt
+            - Protein nạc
+
+            **3. Thực phẩm nên tránh:**
+            - Đồ mặn
+            - Thịt đỏ, mỡ động vật
+            - Rượu bia
+            - Caffeine (nếu rối loạn nhịp tim)
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Khi đang viêm:**
+            - **Nghỉ ngơi HOÀN TOÀN:** Nghỉ ngơi, tránh gắng sức
+            - **Tránh tập thể dục:** Cho đến khi khỏi (3-6 tháng)
+            - **Nguy cơ đột tử:** Gắng sức có thể gây đột tử
+
+            **2. Sau khi khỏi:**
+            - Tập thể dục từ từ
+            - Tăng dần cường độ
+            - Theo chỉ định bác sĩ
+            - Test gắng sức trước khi tập
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. ACE inhibitor:**
+            - Uống đều đặn
+            - Theo dõi huyết áp, chức năng thận
+
+            **2. Beta-blocker:**
+            - Uống đều đặn
+            - Theo dõi nhịp tim, huyết áp
+
+            **3. Lợi tiểu:**
+            - Furosemide: Uống buổi sáng
+            - Theo dõi cân nặng
+
+            **4. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Không tự ý ngừng thuốc
+            - Báo bác sĩ nếu có tác dụng phụ
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Suy tim nặng:**
+            - Khó thở nặng
+            - Phù nhiều
+            - Không nằm được
+            - **Cấp cứu ngay!**
+
+            **2. Rối loạn nhịp tim nặng:**
+            - Đánh trống ngực nhiều
+            - Ngất xỉu
+            - **Cấp cứu ngay!**
+
+            **3. Đau ngực dữ dội:**
+            - Đau ngực dữ dội
+            - Không đáp ứng thuốc giảm đau
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Điều trị nhiễm trùng:**
+            - Điều trị nhiễm virus đúng cách
+            - Tiêm vắc xin (cúm, COVID-19)
+
+            **2. Tránh:**
+            - Nhiễm trùng
+            - Thuốc gây viêm cơ tim
+
+            **3. Phát hiện sớm:**
+            - Nhận biết triệu chứng
+            - Khám ngay khi có triệu chứng
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Khi bị viêm cơ tim:**
+            - **Nghỉ ngơi HOÀN TOÀN** (quan trọng nhất!)
+            - Tránh gắng sức (nguy cơ đột tử)
+            - Uống thuốc đều đặn
+            - Theo dõi sát
+
+            **2. Sống tích cực:**
+            - Viêm cơ tim có thể khỏi hoàn toàn
+            - Nghỉ ngơi đúng cách → Khỏi
+            - Một số trường hợp có thể dẫn đến bệnh cơ tim giãn
+
+            **3. Lâu dài:**
+            - Cần nghỉ ngơi 3-6 tháng
+            - Theo dõi chức năng tim định kỳ
+            - Tránh gắng sức cho đến khi khỏi
+            """,
+            related_disease="myocarditis",
+            related_drugs=["ACE Inhibitor", "Beta-blocker", "Furosemide", "Amiodarone"],
+            printable=True
+        ),
+
 ]

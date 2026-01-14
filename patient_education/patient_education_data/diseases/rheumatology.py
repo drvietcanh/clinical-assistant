@@ -572,4 +572,245 @@ RHEUMATOLOGY_TOPICS = [
             printable=True
         ),
 
+        PatientEducationTopic(
+            id="psoriatic_arthritis_basics",
+            title="Understanding Psoriatic Arthritis",
+            title_vn="Hiểu về Viêm khớp vẩy nến",
+            category="Disease",
+            content="""
+            # Hiểu về Viêm khớp vẩy nến
+
+            ## Viêm khớp vẩy nến là gì?
+
+            Viêm khớp vẩy nến (Psoriatic Arthritis - PsA) là bệnh viêm khớp mạn tính, xảy ra ở khoảng 30% bệnh nhân vẩy nến. Bệnh có thể ảnh hưởng đến khớp, da, móng, và các cơ quan khác.
+
+            **⚠️ Đặc điểm:**
+            - Viêm khớp mạn tính
+            - Xảy ra ở 30% bệnh nhân vẩy nến
+            - Ảnh hưởng khớp, da, móng
+            - Bệnh tự miễn, không chữa khỏi
+
+            **Phân loại:**
+            - **Theo vị trí:**
+              - Viêm khớp ngoại biên (tay, chân)
+              - Viêm cột sống (cột sống)
+              - Viêm khớp hỗn hợp
+            - **Theo mức độ:**
+              - Nhẹ: 1-4 khớp
+              - Trung bình: 5-10 khớp
+              - Nặng: > 10 khớp
+
+            ## Triệu chứng:
+
+            **Triệu chứng khớp:**
+            - **Đau khớp:** Đau khớp, sưng khớp
+            - **Cứng khớp:** Cứng khớp buổi sáng (> 30 phút)
+            - **Sưng ngón tay/chân:** Sưng toàn bộ ngón (ngón xúc xích)
+            - **Đau gân:** Đau gân, viêm gân (Achilles, gân bàn chân)
+            - **Đau lưng:** Đau lưng, cứng lưng (nếu viêm cột sống)
+
+            **Triệu chứng da:**
+            - **Vẩy nến:** Mảng đỏ, có vẩy trắng
+            - **Móng:** Móng dày, rỗ, tách móng
+
+            **Triệu chứng khác:**
+            - **Mệt mỏi:** Mệt mỏi, suy nhược
+            - **Viêm mắt:** Viêm mắt, đỏ mắt
+            - **Viêm ruột:** Có thể có
+
+            **⚠️ Biến chứng:**
+            - **Tổn thương khớp:** Tổn thương khớp vĩnh viễn
+            - **Mất chức năng:** Mất chức năng khớp
+            - **Bệnh tim mạch:** Tăng nguy cơ
+
+            ## Nguyên nhân:
+
+            **1. Nguyên nhân chưa rõ hoàn toàn:**
+            - Có nhiều yếu tố
+
+            **2. Yếu tố:**
+            - **Tự miễn:** Hệ miễn dịch tấn công khớp, da
+            - **Di truyền:** Có người thân bị bệnh (tăng nguy cơ)
+            - **Vẩy nến:** 30% bệnh nhân vẩy nến bị viêm khớp
+            - **Nhiễm trùng:** Có thể kích hoạt bệnh
+
+            **3. Yếu tố nguy cơ:**
+            - **Vẩy nến:** Có vẩy nến
+            - **Tuổi:** 30-50 tuổi (phổ biến nhất)
+            - **Di truyền:** Có người thân bị bệnh
+            - **Béo phì:** Tăng nguy cơ
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám khớp, da
+
+            **Xét nghiệm:**
+            - **Xét nghiệm máu:**
+              - Tăng bạch cầu, CRP (dấu hiệu viêm)
+              - RF âm tính (phân biệt với viêm khớp dạng thấp)
+              - Anti-CCP âm tính
+            - **X-quang:** Tổn thương khớp, xương
+
+            **⚠️ Phân biệt:**
+            - Viêm khớp dạng thấp
+            - Viêm khớp do gout
+            - Viêm cột sống dính khớp
+
+            ## Điều trị:
+
+            **1. Điều trị cấp tính:**
+            - **NSAID:** Ibuprofen, Naproxen (giảm đau, viêm)
+            - **Corticosteroid:** Prednisolone (nếu nặng)
+
+            **2. Điều trị duy trì:**
+            - **DMARD:**
+              - **Methotrexate:** Phổ biến nhất
+              - **Sulfasalazine:** Nếu viêm khớp ngoại biên
+              - **Leflunomide:** Thay thế Methotrexate
+            - **Biological:**
+              - **TNF-α inhibitors:** Etanercept, Adalimumab, Infliximab
+              - **IL-17 inhibitors:** Secukinumab, Ixekizumab
+              - **IL-12/23 inhibitors:** Ustekinumab
+
+            **3. Điều trị da:**
+            - **Topical:** Corticosteroid, Vitamin D
+            - **Phototherapy:** UVB, PUVA
+            - **Systemic:** Methotrexate, Biological
+
+            **⚠️ Lưu ý:**
+            - Bệnh không chữa khỏi, cần điều trị lâu dài
+            - Điều trị sớm → Giảm tổn thương khớp
+            - Điều trị cả da và khớp
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Chế độ ăn chống viêm:**
+            - **Cá béo:** Cá hồi, cá thu (omega-3, chống viêm, 2-3 lần/tuần)
+            - **Rau xanh:** Nhiều (rau cải, rau muống, bông cải)
+            - **Trái cây:** Tất cả (cam, bưởi, táo)
+            - **Ngũ cốc nguyên hạt:** Gạo lứt, yến mạch
+            - **Các loại hạt:** Hạnh nhân, óc chó (nếu có)
+
+            **2. Thực phẩm nên tránh:**
+            - **Thực phẩm chế biến sẵn:** Đồ hộp, thức ăn nhanh
+            - **Đồ chiên, nhiều dầu mỡ:** Chất béo bão hòa (gây viêm)
+            - **Đường nhiều:** Bánh kẹo, nước ngọt (gây viêm)
+            - **Rượu bia:** Có thể làm nặng
+
+            **3. Giảm cân (Nếu thừa cân):**
+            - Thừa cân → Tăng áp lực lên khớp → Đau khớp
+            - Giảm cân → Giảm đau khớp
+
+            **4. Thực đơn mẫu:**
+            - **Sáng:** Cháo yến mạch + trái cây
+            - **Trưa:** Cơm + cá hồi + rau xanh + canh
+            - **Chiều:** Cơm + thịt nạc + rau xanh + canh
+            - **Bữa phụ:** Trái cây, hạt
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Tập thể dục:**
+            - **Quan trọng!** Giúp duy trì chức năng khớp
+            - **Đi bộ:** 30 phút/ngày, 5 ngày/tuần
+            - **Bơi lội:** Tốt cho khớp (ít áp lực)
+            - **Yoga:** Tăng linh hoạt, giảm cứng khớp
+            - **Tập tạ nhẹ:** Tăng sức mạnh cơ
+
+            **2. Tránh:**
+            - Tập quá sức khi đang đợt cấp
+            - Tập khi đau nặng
+
+            **3. Lưu ý:**
+            - Khởi động kỹ
+            - Tăng dần cường độ
+            - Nghỉ ngơi nếu đau
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. NSAID:**
+            - **Ibuprofen, Naproxen:** Giảm đau, viêm
+            - **Uống với thức ăn:** Tránh kích thích dạ dày
+
+            **2. DMARD:**
+            - **Methotrexate:** Uống hoặc tiêm, 1 lần/tuần
+            - **Sulfasalazine:** Uống đều đặn
+            - **Leflunomide:** Uống đều đặn
+            - **Tác dụng phụ:** Giảm bạch cầu, nhiễm trùng, tổn thương gan
+            - **Lưu ý:** Xét nghiệm máu định kỳ
+
+            **3. Biological:**
+            - **Etanercept, Adalimumab:** Tiêm dưới da
+            - **Infliximab:** Truyền tĩnh mạch
+            - **Tác dụng phụ:** Nhiễm trùng, phản ứng dị ứng
+            - **Lưu ý:** Theo dõi sát
+
+            **4. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Không tự ý ngừng thuốc
+            - Báo bác sĩ nếu có tác dụng phụ
+            - Xét nghiệm máu định kỳ
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Đợt cấp nặng:**
+            - Đau khớp dữ dội
+            - Sưng khớp nhiều
+            - Sốt
+
+            **2. Tác dụng phụ:**
+            - Sốt, ớn lạnh (nhiễm trùng)
+            - Phát ban, ngứa (dị ứng)
+            - Khó thở
+
+            **3. Biến chứng:**
+            - Mất chức năng khớp
+            - Tổn thương khớp nặng
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Điều trị vẩy nến:**
+            - Điều trị vẩy nến sớm
+            - Giảm nguy cơ viêm khớp
+
+            **2. Chế độ ăn:**
+            - Chế độ ăn chống viêm
+            - Giảm cân nếu thừa cân
+
+            **3. Tập thể dục:**
+            - Tập thể dục đều đặn
+            - Duy trì chức năng khớp
+
+            **4. Tránh:**
+            - Chấn thương khớp
+            - Nhiễm trùng
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Khi bị viêm khớp vẩy nến:**
+            - Điều trị đều đặn, lâu dài
+            - Tuân thủ điều trị
+            - Điều trị cả da và khớp
+
+            **2. Sống tích cực:**
+            - Bệnh không chữa khỏi nhưng có thể kiểm soát
+            - Điều trị đúng → Giảm triệu chứng, tổn thương khớp
+            - Có thể sống bình thường
+
+            **3. Tập thể dục:**
+            - Tập thể dục đều đặn
+            - Duy trì chức năng khớp
+            - Giảm cứng khớp
+
+            **4. Lâu dài:**
+            - Cần điều trị lâu dài
+            - Theo dõi định kỳ
+            - Tầm soát bệnh tim mạch
+            """,
+            related_disease="psoriatic_arthritis",
+            related_drugs=["Ibuprofen", "Naproxen", "Methotrexate", "Sulfasalazine", "Etanercept", "Adalimumab", "Infliximab"],
+            printable=True
+        ),
+
 ]

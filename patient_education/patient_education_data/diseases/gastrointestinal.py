@@ -1607,4 +1607,2198 @@ GASTROINTESTINAL_TOPICS = [
             printable=True
         ),
 
+        PatientEducationTopic(
+            id="hemorrhoids_basics",
+            title="Understanding Hemorrhoids",
+            title_vn="Hiểu về Trĩ",
+            category="Disease",
+            content="""
+            # Hiểu về Trĩ
+
+            ## Trĩ là gì?
+
+            Trĩ là tình trạng giãn tĩnh mạch ở vùng hậu môn-trực tràng, gây đau, chảy máu, khó chịu. Trĩ rất phổ biến ở Việt Nam, ảnh hưởng đến 50-70% dân số ở một thời điểm nào đó.
+
+            **⚠️ Đặc điểm:**
+            - Giãn tĩnh mạch vùng hậu môn-trực tràng
+            - Rất phổ biến (50-70% dân số)
+            - Có thể điều trị và phòng ngừa
+            - Không nguy hiểm nhưng gây khó chịu
+
+            **Phân loại:**
+            - **Trĩ nội:** Bên trong hậu môn, không nhìn thấy
+            - **Trĩ ngoại:** Bên ngoài hậu môn, có thể nhìn thấy, sờ thấy
+            - **Trĩ hỗn hợp:** Cả trĩ nội và ngoại
+
+            **Độ trĩ nội:**
+            - **Độ 1:** Chỉ chảy máu, không sa
+            - **Độ 2:** Sa khi rặn, tự co lên
+            - **Độ 3:** Sa khi rặn, phải đẩy lên
+            - **Độ 4:** Sa thường xuyên, không đẩy lên được
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Chảy máu:** Máu đỏ tươi khi đi cầu, dính trên giấy vệ sinh, nhỏ giọt hoặc phun thành tia
+            - **Sa búi trĩ:** Búi trĩ sa ra ngoài khi đi cầu, rặn
+            - **Đau:** Đau khi đi cầu, ngồi (đặc biệt trĩ ngoại)
+            - **Ngứa, khó chịu:** Vùng hậu môn ngứa, ẩm ướt
+            - **Cảm giác nặng:** Cảm giác nặng, tức ở hậu môn
+
+            **Triệu chứng khác:**
+            - Tiết dịch nhầy
+            - Khó chịu khi ngồi
+            - Cảm giác đi cầu không hết
+
+            **⚠️ Biến chứng:**
+            - **Nghẹt búi trĩ:** Búi trĩ sa, không đẩy lên được, sưng đau
+            - **Tắc mạch:** Cục máu đông trong búi trĩ, đau dữ dội
+            - **Thiếu máu:** Chảy máu nhiều, kéo dài
+
+            ## Nguyên nhân:
+
+            **1. Tăng áp lực vùng chậu:**
+            - **Táo bón:** Rặn nhiều, lâu
+            - **Tiêu chảy mạn tính:** Đi cầu nhiều lần
+            - **Ngồi lâu:** Ngồi toilet lâu, đọc sách khi đi cầu
+            - **Mang thai:** Tăng áp lực ổ bụng
+            - **Sinh đẻ:** Rặn khi sinh
+
+            **2. Yếu tố nguy cơ:**
+            - **Tuổi:** Tăng theo tuổi (mạch máu yếu)
+            - **Di truyền:** Có người thân bị trĩ
+            - **Béo phì:** Tăng áp lực ổ bụng
+            - **Ít vận động:** Ngồi nhiều
+            - **Chế độ ăn:** Ít chất xơ, uống ít nước
+            - **Lao động nặng:** Khuân vác, đứng lâu
+
+            **3. Bệnh khác:**
+            - Tăng áp lực tĩnh mạch cửa (xơ gan)
+            - Khối u vùng chậu
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám hậu môn-trực tràng
+
+            **Khám:**
+            - **Nhìn:** Quan sát vùng hậu môn (trĩ ngoại)
+            - **Thăm trực tràng:** Phát hiện trĩ nội
+            - **Soi hậu môn:** Đánh giá độ trĩ, loại trừ bệnh khác
+
+            **Xét nghiệm:**
+            - **Soi đại tràng sigma:** Nếu chảy máu nhiều, tuổi > 50
+            - **Xét nghiệm máu:** Nếu thiếu máu
+
+            ## Điều trị:
+
+            **1. Điều trị không phẫu thuật (Trĩ độ 1-2):**
+            - **Thay đổi lối sống:** Quan trọng nhất!
+              - Tăng chất xơ, uống nhiều nước
+              - Tránh rặn, ngồi lâu
+              - Tập thể dục đều đặn
+            - **Thuốc:**
+              - **Bôi tại chỗ:** Kem, mỡ chứa hydrocortisone, lidocaine (giảm đau, ngứa)
+              - **Đặt hậu môn:** Viên đạn chứa thuốc
+              - **Thuốc uống:** Daflon, Rutin (tăng sức bền mạch máu)
+
+            **2. Thủ thuật (Trĩ độ 2-3):**
+            - **Thắt búi trĩ:** Dùng vòng cao su thắt búi trĩ, búi trĩ teo và rụng
+            - **Tiêm xơ:** Tiêm thuốc làm xơ hóa búi trĩ
+            - **Quang đông hồng ngoại:** Dùng nhiệt làm teo búi trĩ
+            - **Đông máu bằng laser:** Dùng laser đông máu
+
+            **3. Phẫu thuật (Trĩ độ 3-4, không đáp ứng điều trị khác):**
+            - **Cắt trĩ:** Cắt bỏ búi trĩ
+            - **Khâu treo búi trĩ (PPH):** Khâu treo niêm mạc, giảm lưu lượng máu
+            - **Cắt trĩ bằng sóng radio (RFA):** Dùng sóng radio cắt búi trĩ
+
+            **⚠️ Lưu ý:**
+            - Điều trị tùy theo độ trĩ, triệu chứng
+            - Thay đổi lối sống là quan trọng nhất
+            - Phẫu thuật chỉ khi cần thiết
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Tăng chất xơ (QUAN TRỌNG NHẤT!):**
+            - **Rau xanh:** Rau muống, rau lang, rau cải, rau dền
+            - **Trái cây:** Chuối, táo, lê, cam, bưởi
+            - **Ngũ cốc nguyên hạt:** Gạo lứt, yến mạch, bánh mì đen
+            - **Đậu:** Đậu xanh, đậu đỏ, đậu đen
+            - **Mục tiêu:** 25-30g chất xơ/ngày
+
+            **2. Uống nhiều nước:**
+            - **Lượng nước:** 2-3 lít/ngày (8-12 cốc)
+            - **Nước lọc:** Tốt nhất
+            - **Nước trái cây:** Nước ép trái cây tươi
+            - **Tránh:** Rượu bia, cà phê (có thể gây táo bón)
+
+            **3. Thực phẩm nên ăn:**
+            - Rau xanh, trái cây
+            - Ngũ cốc nguyên hạt
+            - Đậu, hạt
+            - Sữa chua (probiotic)
+            - Cá, thịt nạc
+
+            **4. Thực phẩm nên tránh:**
+            - **Đồ cay nóng:** Ớt, tiêu, gừng (kích thích hậu môn)
+            - **Rượu bia:** Làm giãn mạch máu
+            - **Đồ chiên rán:** Khó tiêu
+            - **Thức ăn nhanh:** Ít chất xơ
+            - **Thực phẩm chế biến:** Thịt nguội, xúc xích
+
+            **5. Thực đơn mẫu 1 ngày:**
+            - **Sáng:** Cháo yến mạch + chuối + sữa chua
+            - **Trưa:** Cơm gạo lứt + canh rau muống + thịt/cá + rau xanh
+            - **Chiều:** Cơm gạo lứt + canh rau cải + thịt/cá + rau xanh
+            - **Bữa phụ:** Trái cây (táo, lê, cam)
+            - **Uống:** 2-3 lít nước/ngày
+
+            **6. Lưu ý:**
+            - Ăn đều đặn, không bỏ bữa
+            - Nhai kỹ, ăn chậm
+            - Tăng chất xơ từ từ (tránh đầy hơi)
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Tập thể dục đều đặn:**
+            - **Đi bộ:** 30 phút/ngày, 5 ngày/tuần
+            - **Bơi lội:** Tốt cho tuần hoàn
+            - **Yoga:** Tư thế giúp giảm áp lực vùng chậu
+            - **Tập Kegel:** Tăng cường cơ sàn chậu
+
+            **2. Tránh:**
+            - Ngồi lâu (đứng dậy mỗi 30-60 phút)
+            - Đứng lâu
+            - Khuân vác nặng
+            - Tập quá sức
+
+            **3. Tư thế đúng:**
+            - Ngồi thẳng lưng
+            - Không ngồi xổm lâu
+            - Đi cầu đúng tư thế (chân kê cao)
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Thuốc bôi tại chỗ:**
+            - **Kem, mỡ:** Bôi sau khi rửa sạch hậu môn
+            - **Thành phần:** Hydrocortisone (giảm viêm), Lidocaine (giảm đau)
+            - **Cách dùng:** Bôi 2-3 lần/ngày, sau khi đi cầu
+            - **Lưu ý:** Không dùng quá 7 ngày (tránh teo da)
+
+            **2. Viên đạn đặt hậu môn:**
+            - **Thành phần:** Thuốc giảm đau, chống viêm
+            - **Cách dùng:** Đặt vào hậu môn, tốt nhất trước khi ngủ
+            - **Lưu ý:** Rửa tay trước và sau
+
+            **3. Thuốc uống:**
+            - **Daflon, Rutin:** Tăng sức bền mạch máu
+            - **Uống đều đặn:** Theo chỉ định bác sĩ
+            - **Thời gian:** 2-4 tuần
+
+            **4. Lưu ý:**
+            - Không tự ý dùng thuốc lâu dài
+            - Báo bác sĩ nếu không cải thiện
+            - Tránh thuốc nhuận tràng (có thể gây phụ thuộc)
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Chảy máu nhiều:**
+            - Chảy máu thành tia, nhiều
+            - Chảy máu kéo dài, không cầm
+            - Thiếu máu (mệt mỏi, xanh xao, khó thở)
+
+            **2. Nghẹt búi trĩ:**
+            - Búi trĩ sa, không đẩy lên được
+            - Sưng đau dữ dội
+            - **Cấp cứu ngay!**
+
+            **3. Tắc mạch:**
+            - Đau dữ dội vùng hậu môn
+            - Búi trĩ sưng, cứng
+            - **Cấp cứu ngay!**
+
+            **4. Triệu chứng nặng:**
+            - Đau không chịu được
+            - Sốt, ớn lạnh (nhiễm trùng)
+            - Không đi cầu được
+
+            **5. Không đáp ứng điều trị:**
+            - Điều trị > 1 tuần không cải thiện
+            - Tái phát nhiều lần
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Chế độ ăn:**
+            - **Tăng chất xơ:** 25-30g/ngày
+            - **Uống nhiều nước:** 2-3 lít/ngày
+            - **Tránh:** Đồ cay nóng, rượu bia
+
+            **2. Thói quen đi cầu:**
+            - **Đi cầu đều đặn:** Mỗi ngày, cùng giờ
+            - **Không rặn:** Đi cầu tự nhiên, không gắng sức
+            - **Không ngồi lâu:** < 5 phút
+            - **Không đọc sách:** Khi đi cầu
+            - **Vệ sinh sạch:** Rửa bằng nước, lau nhẹ
+
+            **3. Tập thể dục:**
+            - Đều đặn, 30 phút/ngày
+            - Tránh ngồi lâu, đứng lâu
+
+            **4. Tư thế:**
+            - Ngồi thẳng lưng
+            - Chân kê cao khi đi cầu (góc 35°)
+            - Đứng dậy mỗi 30-60 phút nếu ngồi lâu
+
+            **5. Tránh:**
+            - Táo bón (quan trọng nhất!)
+            - Tiêu chảy mạn tính
+            - Khuân vác nặng
+            - Mang thai (cần chăm sóc đặc biệt)
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - **Chế độ ăn giàu chất xơ** (quan trọng nhất!)
+            - **Uống nhiều nước**
+            - **Tập thể dục đều đặn**
+            - **Thói quen đi cầu đúng**
+
+            **2. Khi bị trĩ:**
+            - Thay đổi lối sống ngay
+            - Dùng thuốc theo chỉ định
+            - Tránh rặn, ngồi lâu
+            - Vệ sinh sạch sẽ
+
+            **3. Sống tích cực:**
+            - Trĩ rất phổ biến, không nguy hiểm
+            - Điều trị đúng → Cải thiện triệu chứng
+            - Phòng ngừa tốt → Không tái phát
+            - Có thể sống bình thường
+
+            **4. Tư vấn:**
+            - Khám bác sĩ nếu triệu chứng nặng
+            - Không tự ý dùng thuốc lâu dài
+            - Theo dõi định kỳ nếu cần
+            """,
+            related_disease="hemorrhoids",
+            related_drugs=["Hydrocortisone", "Lidocaine", "Daflon", "Rutin"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="chronic_constipation_basics",
+            title="Understanding Chronic Constipation",
+            title_vn="Hiểu về Táo bón mạn tính",
+            category="Disease",
+            content="""
+            # Hiểu về Táo bón mạn tính
+
+            ## Táo bón mạn tính là gì?
+
+            Táo bón mạn tính là tình trạng đi cầu khó khăn, ít hơn 3 lần/tuần, kéo dài > 3 tháng. Táo bón rất phổ biến, ảnh hưởng đến 15-20% dân số, đặc biệt phụ nữ và người cao tuổi.
+
+            **⚠️ Đặc điểm:**
+            - Đi cầu < 3 lần/tuần
+            - Phân cứng, khó đi
+            - Kéo dài > 3 tháng
+            - Rất phổ biến (15-20% dân số)
+
+            **Phân loại:**
+            - **Táo bón chức năng:** Không có nguyên nhân rõ ràng (90%)
+            - **Táo bón thứ phát:** Do bệnh khác, thuốc (10%)
+
+            **Tiêu chuẩn chẩn đoán (Rome IV):**
+            - Đi cầu < 3 lần/tuần
+            - Phân cứng > 25% thời gian
+            - Rặn > 25% thời gian
+            - Cảm giác tắc nghẽn > 25% thời gian
+            - Phải dùng tay hỗ trợ > 25% thời gian
+            - Cảm giác đi không hết > 25% thời gian
+            - Ít nhất 2 tiêu chuẩn, kéo dài > 3 tháng
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Đi cầu ít:** < 3 lần/tuần
+            - **Phân cứng:** Phân khô, cứng, nhỏ
+            - **Khó đi:** Phải rặn nhiều, lâu
+            - **Cảm giác tắc nghẽn:** Cảm giác phân bị tắc
+            - **Cảm giác đi không hết:** Sau khi đi cầu vẫn cảm thấy chưa hết
+            - **Phải dùng tay hỗ trợ:** Phải đẩy vùng hậu môn, bụng
+
+            **Triệu chứng khác:**
+            - Đau bụng, đầy hơi
+            - Chán ăn
+            - Mệt mỏi
+            - Đau đầu
+            - Khó chịu, cáu gắt
+
+            **⚠️ Dấu hiệu báo động (cần khám ngay):**
+            - Sụt cân không rõ nguyên nhân
+            - Chảy máu trực tràng
+            - Thiếu máu
+            - Tiền sử gia đình ung thư đại tràng
+            - Tuổi > 50, táo bón mới xuất hiện
+
+            ## Nguyên nhân:
+
+            **1. Chế độ ăn:**
+            - **Ít chất xơ:** Ăn ít rau, trái cây
+            - **Uống ít nước:** < 1.5 lít/ngày
+            - **Ăn nhiều thịt, đồ chế biến:** Ít chất xơ
+
+            **2. Lối sống:**
+            - **Ít vận động:** Ngồi nhiều, ít tập thể dục
+            - **Nhịn đi cầu:** Không đi khi có nhu cầu
+            - **Thay đổi thói quen:** Du lịch, thay đổi môi trường
+            - **Stress:** Căng thẳng, lo âu
+
+            **3. Thuốc:**
+            - **Thuốc giảm đau:** Opioid (morphine, codeine)
+            - **Thuốc kháng acid:** Chứa nhôm, canxi
+            - **Thuốc chống trầm cảm:** Tricyclic, SSRI
+            - **Thuốc hạ huyết áp:** Chẹn canxi
+            - **Bổ sung sắt, canxi**
+            - **Thuốc kháng cholinergic**
+
+            **4. Bệnh khác:**
+            - **Bệnh nội tiết:** Đái tháo đường, suy giáp, cường giáp
+            - **Bệnh thần kinh:** Parkinson, đột quỵ, tổn thương tủy sống
+            - **Bệnh ruột:** Hội chứng ruột kích thích, bệnh viêm ruột
+            - **Bệnh chuyển hóa:** Tăng canxi máu, giảm kali máu
+
+            **5. Yếu tố nguy cơ:**
+            - **Tuổi:** Người cao tuổi (nhu động ruột chậm)
+            - **Giới tính:** Phụ nữ (hormone, mang thai)
+            - **Mang thai:** Tăng progesterone, tử cung chèn ép
+            - **Sau phẫu thuật:** Phẫu thuật ổ bụng
+            - **Nằm liệt giường**
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Tiêu chuẩn Rome IV
+
+            **Khám:**
+            - **Khám bụng:** Sờ thấy phân cứng
+            - **Thăm trực tràng:** Phân cứng, búi trĩ
+            - **Đánh giá cơ thắt hậu môn**
+
+            **Xét nghiệm:**
+            - **Xét nghiệm máu:** Chức năng tuyến giáp, canxi, đường huyết
+            - **Chụp X-quang bụng:** Phân ứ đọng
+            - **Đo thời gian vận chuyển ruột:** Đánh dấu phóng xạ
+            - **Đo áp lực hậu môn-trực tràng:** Đánh giá chức năng
+
+            **Soi đại tràng:**
+            - Nếu có dấu hiệu báo động
+            - Tuổi > 50, táo bón mới xuất hiện
+
+            ## Điều trị:
+
+            **1. Thay đổi lối sống (QUAN TRỌNG NHẤT!):**
+            - **Tăng chất xơ:** 25-30g/ngày
+            - **Uống nhiều nước:** 2-3 lít/ngày
+            - **Tập thể dục:** 30 phút/ngày
+            - **Thói quen đi cầu:** Đi đều đặn, cùng giờ
+
+            **2. Thuốc nhuận tràng:**
+            - **Chất xơ (Psyllium, Methylcellulose):** Tăng khối lượng phân
+            - **Osmotic (Lactulose, Polyethylene glycol):** Giữ nước trong ruột
+            - **Kích thích (Bisacodyl, Senna):** Kích thích nhu động ruột (dùng ngắn hạn)
+            - **Làm mềm phân (Docusate):** Làm mềm phân
+
+            **3. Thuốc khác:**
+            - **Lubiprostone:** Tăng tiết dịch ruột
+            - **Linaclotide, Plecanatide:** Kích thích nhu động ruột
+            - **Prucalopride:** Kích thích thụ thể serotonin
+
+            **4. Điều trị nguyên nhân:**
+            - Điều trị bệnh nền (đái tháo đường, suy giáp)
+            - Thay đổi thuốc (nếu có thể)
+
+            **5. Vật lý trị liệu:**
+            - Tập cơ sàn chậu
+            - Biofeedback (phản hồi sinh học)
+
+            **⚠️ Lưu ý:**
+            - Bắt đầu với thay đổi lối sống
+            - Thuốc nhuận tràng chỉ hỗ trợ
+            - Tránh lạm dụng thuốc kích thích
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Tăng chất xơ (QUAN TRỌNG NHẤT!):**
+            - **Rau xanh:** Rau muống, rau lang, rau cải, rau dền, rau mồng tơi
+            - **Trái cây:** Chuối, táo, lê, cam, bưởi, đu đủ, thanh long
+            - **Ngũ cốc nguyên hạt:** Gạo lứt, yến mạch, bánh mì đen
+            - **Đậu:** Đậu xanh, đậu đỏ, đậu đen, đậu nành
+            - **Hạt:** Hạt chia, hạt lanh
+            - **Mục tiêu:** 25-30g chất xơ/ngày
+
+            **2. Uống nhiều nước:**
+            - **Lượng nước:** 2-3 lít/ngày (8-12 cốc)
+            - **Nước lọc:** Tốt nhất
+            - **Nước trái cây:** Nước ép trái cây tươi (đu đủ, thanh long)
+            - **Tránh:** Rượu bia, cà phê (có thể gây mất nước)
+
+            **3. Thực phẩm nên ăn:**
+            - Rau xanh, trái cây
+            - Ngũ cốc nguyên hạt
+            - Đậu, hạt
+            - Sữa chua (probiotic)
+            - Cá, thịt nạc
+            - Dầu thực vật (dầu oliu, dầu dừa)
+
+            **4. Thực phẩm nên tránh:**
+            - **Thức ăn chế biến:** Thịt nguội, xúc xích, đồ hộp
+            - **Thức ăn nhanh:** Hamburger, pizza
+            - **Đồ chiên rán:** Khó tiêu
+            - **Sữa (nếu không dung nạp):** Có thể gây táo bón
+            - **Thức ăn ít chất xơ:** Bánh mì trắng, gạo trắng
+
+            **5. Thực đơn mẫu 1 ngày:**
+            - **Sáng:** Cháo yến mạch + chuối + sữa chua + hạt chia
+            - **Trưa:** Cơm gạo lứt + canh rau muống + thịt/cá + rau xanh + đu đủ
+            - **Chiều:** Cơm gạo lứt + canh rau cải + thịt/cá + rau xanh + thanh long
+            - **Bữa phụ:** Trái cây (táo, lê, cam), sữa chua
+            - **Uống:** 2-3 lít nước/ngày
+
+            **6. Lưu ý:**
+            - Tăng chất xơ từ từ (tránh đầy hơi)
+            - Uống nhiều nước khi tăng chất xơ
+            - Ăn đều đặn, không bỏ bữa
+            - Nhai kỹ, ăn chậm
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Tập thể dục đều đặn:**
+            - **Đi bộ:** 30 phút/ngày, 5 ngày/tuần (kích thích nhu động ruột)
+            - **Chạy bộ:** 20-30 phút/ngày
+            - **Bơi lội:** Tốt cho tuần hoàn
+            - **Yoga:** Tư thế xoắn, gập người (kích thích ruột)
+            - **Tập bụng:** Tăng cường cơ bụng
+
+            **2. Tập cơ sàn chậu:**
+            - Tập Kegel (co thắt cơ sàn chậu)
+            - 10-15 lần, 3 lần/ngày
+
+            **3. Massage bụng:**
+            - Massage bụng theo chiều kim đồng hồ
+            - 5-10 phút, 2 lần/ngày
+
+            **4. Tránh:**
+            - Ngồi lâu, ít vận động
+            - Tập quá sức
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Thuốc nhuận tràng chất xơ:**
+            - **Psyllium, Methylcellulose:** 1-2 muỗng/ngày, uống với nhiều nước
+            - **Uống trước bữa ăn:** 30 phút
+            - **Tăng dần liều:** Từ 1 muỗng → 2 muỗng
+            - **Lưu ý:** Uống nhiều nước (quan trọng!)
+
+            **2. Thuốc nhuận tràng thẩm thấu:**
+            - **Lactulose:** 15-30ml/ngày
+            - **Polyethylene glycol:** 1-2 gói/ngày
+            - **Uống với nhiều nước**
+            - **Tác dụng phụ:** Đầy hơi, chướng bụng
+
+            **3. Thuốc nhuận tràng kích thích:**
+            - **Bisacodyl, Senna:** Dùng ngắn hạn (3-7 ngày)
+            - **Tránh dùng lâu dài:** Có thể gây phụ thuộc
+            - **Dùng khi cần:** Táo bón nặng, cấp tính
+
+            **4. Lưu ý:**
+            - Bắt đầu với thay đổi lối sống
+            - Thuốc chỉ hỗ trợ
+            - Không lạm dụng thuốc kích thích
+            - Báo bác sĩ nếu không cải thiện
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Dấu hiệu báo động:**
+            - Sụt cân không rõ nguyên nhân
+            - Chảy máu trực tràng
+            - Thiếu máu
+            - Tuổi > 50, táo bón mới xuất hiện
+
+            **2. Táo bón nặng:**
+            - Không đi cầu > 7 ngày
+            - Đau bụng dữ dội
+            - Nôn, buồn nôn
+            - Sốt
+
+            **3. Phân cứng gây tắc:**
+            - Không đi cầu được
+            - Đau bụng, chướng bụng
+            - Cần thụt tháo, lấy phân
+
+            **4. Biến chứng:**
+            - Trĩ (do rặn nhiều)
+            - Nứt hậu môn
+            - Sa trực tràng
+
+            **5. Không đáp ứng điều trị:**
+            - Điều trị > 1 tháng không cải thiện
+            - Cần đánh giá thêm
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Chế độ ăn:**
+            - **Tăng chất xơ:** 25-30g/ngày
+            - **Uống nhiều nước:** 2-3 lít/ngày
+            - **Ăn đều đặn:** Không bỏ bữa
+
+            **2. Tập thể dục:**
+            - Đều đặn, 30 phút/ngày
+            - Kích thích nhu động ruột
+
+            **3. Thói quen đi cầu:**
+            - **Đi đều đặn:** Mỗi ngày, cùng giờ (sau bữa sáng)
+            - **Không nhịn:** Đi ngay khi có nhu cầu
+            - **Không rặn:** Đi cầu tự nhiên
+            - **Tư thế đúng:** Chân kê cao (góc 35°)
+
+            **4. Tránh:**
+            - Thuốc gây táo bón (nếu có thể)
+            - Stress, căng thẳng
+            - Thay đổi thói quen đột ngột
+
+            **5. Khám định kỳ:**
+            - Khám nếu táo bón kéo dài
+            - Điều trị bệnh nền (nếu có)
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - **Chế độ ăn giàu chất xơ** (quan trọng nhất!)
+            - **Uống nhiều nước**
+            - **Tập thể dục đều đặn**
+            - **Thói quen đi cầu đúng**
+
+            **2. Khi bị táo bón:**
+            - Thay đổi lối sống ngay
+            - Tăng chất xơ từ từ
+            - Uống nhiều nước
+            - Dùng thuốc nhuận tràng (nếu cần)
+
+            **3. Sống tích cực:**
+            - Táo bón rất phổ biến
+            - Điều trị đúng → Cải thiện
+            - Phòng ngừa tốt → Không tái phát
+            - Có thể sống bình thường
+
+            **4. Kiên nhẫn:**
+            - Điều trị cần thời gian (2-4 tuần)
+            - Không nản lòng
+            - Kết hợp nhiều biện pháp
+            """,
+            related_disease="chronic_constipation",
+            related_drugs=["Psyllium", "Lactulose", "Polyethylene glycol", "Bisacodyl", "Senna", "Linaclotide"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="appendicitis_basics",
+            title="Understanding Appendicitis",
+            title_vn="Hiểu về Viêm ruột thừa",
+            category="Disease",
+            content="""
+            # Hiểu về Viêm ruột thừa
+
+            ## Viêm ruột thừa là gì?
+
+            Viêm ruột thừa (Appendicitis) là tình trạng viêm cấp tính của ruột thừa, một cơ quan nhỏ ở đầu manh tràng. Đây là cấp cứu ngoại khoa phổ biến nhất, cần phẫu thuật ngay để tránh biến chứng nguy hiểm.
+
+            **⚠️ Đặc điểm:**
+            - Viêm cấp tính ruột thừa
+            - Cấp cứu ngoại khoa phổ biến nhất
+            - Cần phẫu thuật ngay
+            - Có thể vỡ → Viêm phúc mạc → Nguy hiểm tính mạng
+
+            **Ruột thừa:**
+            - Cơ quan nhỏ, hình ống, dài 5-10cm
+            - Ở đầu manh tràng (góc hồi-manh tràng)
+            - Chức năng: Chưa rõ (có thể miễn dịch)
+
+            **Phân loại:**
+            - **Viêm ruột thừa cấp:** Viêm cấp tính, cần phẫu thuật ngay
+            - **Viêm ruột thừa mạn:** Viêm tái phát, ít gặp
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Đau bụng:**
+              - Bắt đầu quanh rốn, sau đó di chuyển xuống hố chậu phải
+              - Đau liên tục, tăng dần
+              - Đau tăng khi ho, hắt hơi, di chuyển
+            - **Sốt:** Sốt nhẹ đến vừa (37.5-38.5°C)
+            - **Buồn nôn, nôn:** Thường có
+            - **Chán ăn:** Chán ăn, không muốn ăn
+            - **Rối loạn tiêu hóa:** Có thể táo bón hoặc tiêu chảy
+
+            **Triệu chứng khác:**
+            - Đau tăng khi ấn hố chậu phải
+            - Phản ứng thành bụng (co cứng)
+            - Dấu hiệu Blumberg (đau tăng khi thả tay)
+
+            **⚠️ Triệu chứng khi vỡ:**
+            - Đau bụng dữ dội, lan toàn bụng
+            - Sốt cao
+            - Mạch nhanh
+            - Tụt huyết áp
+            - **Cấp cứu ngay!**
+
+            **⚠️ Lưu ý:**
+            - Trẻ em, người cao tuổi có thể không có triệu chứng điển hình
+            - Phụ nữ mang thai: Đau có thể ở vị trí khác
+
+            ## Nguyên nhân:
+
+            **1. Tắc nghẽn lòng ruột thừa:**
+            - **Phân cứng (Fecalith):** Phân cứng tắc lòng ruột thừa (phổ biến nhất)
+            - **Sỏi phân:** Sỏi phân
+            - **Phì đại nang bạch huyết:** Nang bạch huyết phì đại
+            - **Khối u:** Khối u ruột thừa, manh tràng
+            - **Ký sinh trùng:** Giun đũa, giun kim
+
+            **2. Nhiễm trùng:**
+            - **Vi khuẩn:** E. coli, Bacteroides, Streptococcus
+            - Nhiễm trùng từ đường tiêu hóa
+
+            **3. Yếu tố nguy cơ:**
+            - **Tuổi:** 10-30 tuổi (phổ biến nhất)
+            - **Giới tính:** Nam > Nữ (nhẹ)
+            - **Tiền sử gia đình:** Có người thân bị viêm ruột thừa
+            - **Chế độ ăn:** Ít chất xơ (có thể)
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám bụng
+
+            **Khám:**
+            - **Đau hố chậu phải:** Đau khi ấn
+            - **Phản ứng thành bụng:** Co cứng thành bụng
+            - **Dấu hiệu Blumberg:** Đau tăng khi thả tay
+            - **Dấu hiệu Rovsing:** Đau hố chậu phải khi ấn hố chậu trái
+
+            **Xét nghiệm:**
+            - **Xét nghiệm máu:**
+              - Bạch cầu tăng (10-20.000/μL)
+              - CRP tăng (dấu hiệu viêm)
+            - **Siêu âm bụng:** Phát hiện ruột thừa viêm, dày thành
+            - **CT bụng:** Chẩn đoán chính xác (95-98%)
+            - **X-quang bụng:** Ít dùng, có thể thấy sỏi phân
+
+            **⚠️ Phân biệt:**
+            - Viêm dạ dày-ruột
+            - Viêm túi thừa
+            - Sỏi thận
+            - Viêm vùng chậu (phụ nữ)
+            - Thai ngoài tử cung (phụ nữ)
+
+            ## Điều trị:
+
+            **1. Phẫu thuật (Điều trị chính):**
+            - **Cắt ruột thừa (Appendectomy):**
+              - **Mổ mở:** Mổ mở bụng (truyền thống)
+              - **Mổ nội soi:** Mổ nội soi (ưu tiên, ít xâm lấn)
+            - **Thời gian:** Càng sớm càng tốt (trong 24-48 giờ)
+            - **Trước phẫu thuật:** Kháng sinh đường tĩnh mạch
+
+            **2. Kháng sinh:**
+            - **Trước phẫu thuật:** Kháng sinh phổ rộng (Cefazolin, Metronidazole)
+            - **Sau phẫu thuật:** Tiếp tục 24-48 giờ
+            - **Nếu vỡ:** Kháng sinh 5-7 ngày
+
+            **3. Điều trị không phẫu thuật (Hiếm, chỉ khi chống chỉ định phẫu thuật):**
+            - Kháng sinh đường tĩnh mạch
+            - Theo dõi sát
+            - Có thể tái phát
+
+            **⚠️ Lưu ý:**
+            - Phẫu thuật là điều trị chính
+            - Không được trì hoãn (nguy cơ vỡ)
+            - Vỡ ruột thừa → Viêm phúc mạc → Nguy hiểm tính mạng
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Trước phẫu thuật:**
+            - **Nhịn ăn:** Nhịn ăn, uống (chuẩn bị phẫu thuật)
+            - **Truyền dịch:** Truyền dịch đường tĩnh mạch
+
+            **2. Sau phẫu thuật:**
+            - **Ngày 1:** Uống nước, nước đường (nếu không nôn)
+            - **Ngày 2-3:** Ăn lỏng (cháo, súp)
+            - **Ngày 4-5:** Ăn mềm (cơm mềm, thịt/cá nấu chín)
+            - **Sau 1 tuần:** Ăn bình thường
+
+            **3. Thực phẩm nên ăn:**
+            - Cháo, súp (sau phẫu thuật)
+            - Thức ăn mềm, dễ tiêu
+            - Rau xanh, trái cây (khi đã ổn)
+            - Uống nhiều nước
+
+            **4. Thực phẩm nên tránh:**
+            - Đồ cay nóng (sau phẫu thuật)
+            - Đồ chiên rán (khó tiêu)
+            - Thức ăn cứng
+
+            **5. Lưu ý:**
+            - Ăn từ từ, tăng dần
+            - Theo chỉ định bác sĩ
+            - Báo nếu đau bụng, nôn
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Sau phẫu thuật:**
+            - **Ngày 1:** Nghỉ ngơi tại giường, đi lại nhẹ
+            - **Ngày 2-3:** Đi lại trong phòng
+            - **Ngày 4-5:** Đi lại bình thường
+            - **Sau 1 tuần:** Tập thể dục nhẹ
+            - **Sau 2-4 tuần:** Tập thể dục bình thường
+
+            **2. Tránh:**
+            - Gắng sức trong 2-4 tuần đầu
+            - Khuân vác nặng
+            - Tập thể dục mạnh
+
+            **3. Lưu ý:**
+            - Theo chỉ định bác sĩ
+            - Báo nếu đau, khó chịu
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Kháng sinh:**
+            - **Trước phẫu thuật:** Kháng sinh đường tĩnh mạch
+            - **Sau phẫu thuật:** Tiếp tục 24-48 giờ
+            - **Nếu vỡ:** Kháng sinh 5-7 ngày
+
+            **2. Thuốc giảm đau:**
+            - **Paracetamol:** 500-1000mg, 3-4 lần/ngày
+            - **NSAID:** Ibuprofen (nếu không chống chỉ định)
+            - **Opioid:** Morphine (nếu đau nặng, ngắn hạn)
+
+            **3. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Báo bác sĩ nếu đau không giảm
+            - Không tự ý ngừng kháng sinh
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Triệu chứng viêm ruột thừa:**
+            - Đau bụng quanh rốn → Hố chậu phải
+            - Sốt, buồn nôn, nôn
+            - **Đến bệnh viện ngay!**
+
+            **2. Đau bụng dữ dội:**
+            - Đau bụng dữ dội, lan toàn bụng
+            - Sốt cao
+            - **Cấp cứu ngay!** (Có thể vỡ)
+
+            **3. Sau phẫu thuật:**
+            - Sốt cao
+            - Đau bụng tăng
+            - Vết mổ sưng, đỏ, chảy mủ
+            - Nôn, không đi cầu được
+
+            **4. Biến chứng:**
+            - Viêm phúc mạc
+            - Áp xe ổ bụng
+            - Tắc ruột
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Không có cách phòng ngừa chắc chắn:**
+            - Nguyên nhân chưa rõ hoàn toàn
+
+            **2. Có thể giảm nguy cơ:**
+            - **Chế độ ăn giàu chất xơ:** Có thể giảm nguy cơ
+            - **Uống nhiều nước:** Tránh táo bón
+            - **Tập thể dục:** Tăng nhu động ruột
+
+            **3. Phát hiện sớm:**
+            - Nhận biết triệu chứng
+            - Đến bệnh viện ngay khi có triệu chứng
+            - Không tự ý dùng thuốc giảm đau (che dấu triệu chứng)
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Nhận biết triệu chứng:**
+            - Đau bụng quanh rốn → Hố chậu phải
+            - Sốt, buồn nôn, nôn
+            - **Đến bệnh viện ngay!**
+
+            **2. Không trì hoãn:**
+            - Viêm ruột thừa cần phẫu thuật ngay
+            - Trì hoãn → Vỡ → Nguy hiểm tính mạng
+            - Không tự ý dùng thuốc giảm đau
+
+            **3. Sau phẫu thuật:**
+            - Nghỉ ngơi, ăn uống theo chỉ định
+            - Theo dõi vết mổ
+            - Báo bác sĩ nếu có bất thường
+
+            **4. Sống tích cực:**
+            - Phẫu thuật cắt ruột thừa an toàn
+            - Hồi phục nhanh (1-2 tuần)
+            - Không ảnh hưởng chức năng tiêu hóa
+            """,
+            related_disease="appendicitis",
+            related_drugs=["Cefazolin", "Metronidazole", "Paracetamol", "Ibuprofen"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="gallstones_basics",
+            title="Understanding Gallstones",
+            title_vn="Hiểu về Sỏi mật",
+            category="Disease",
+            content="""
+            # Hiểu về Sỏi mật
+
+            ## Sỏi mật là gì?
+
+            Sỏi mật (Gallstones) là những viên sỏi hình thành trong túi mật hoặc ống mật, do kết tinh của các thành phần trong dịch mật. Sỏi mật rất phổ biến, ảnh hưởng đến 10-15% dân số, đặc biệt phụ nữ, người cao tuổi.
+
+            **⚠️ Đặc điểm:**
+            - Sỏi hình thành trong túi mật hoặc ống mật
+            - Rất phổ biến (10-15% dân số)
+            - Nhiều người không có triệu chứng
+            - Có thể gây viêm túi mật, tắc ống mật
+
+            **Phân loại:**
+            - **Sỏi cholesterol:** Sỏi cholesterol (80% ở phương Tây)
+            - **Sỏi sắc tố:** Sỏi bilirubin (phổ biến ở châu Á)
+            - **Sỏi hỗn hợp:** Cả cholesterol và sắc tố
+
+            **Vị trí:**
+            - **Túi mật:** Phổ biến nhất
+            - **Ống mật chủ:** Tắc ống mật
+            - **Ống gan:** Tắc ống gan
+
+            ## Triệu chứng:
+
+            **1. Không có triệu chứng (80%):**
+            - Phát hiện tình cờ khi siêu âm
+            - Không cần điều trị
+
+            **2. Cơn đau quặn mật (Biliary Colic):**
+            - **Đau bụng:** Đau vùng hạ sườn phải, lan ra sau lưng, vai phải
+            - **Đặc điểm:** Đau quặn, dữ dội, đau từng cơn
+            - **Thời gian:** 30 phút đến vài giờ
+            - **Kích thích:** Sau ăn nhiều chất béo
+            - **Triệu chứng khác:** Buồn nôn, nôn, đầy bụng
+
+            **3. Viêm túi mật cấp:**
+            - **Đau bụng:** Đau vùng hạ sườn phải, liên tục, tăng dần
+            - **Sốt:** Sốt 38-39°C
+            - **Buồn nôn, nôn**
+            - **Đau tăng:** Khi ấn vùng hạ sườn phải
+            - **Dấu hiệu Murphy:** Đau khi ấn vùng túi mật, hít sâu
+
+            **4. Tắc ống mật:**
+            - **Vàng da:** Vàng da, vàng mắt
+            - **Phân bạc màu:** Phân màu trắng, xám
+            - **Nước tiểu sẫm:** Nước tiểu màu vàng đậm
+            - **Sốt, ớn lạnh:** Nhiễm trùng đường mật
+            - **Đau bụng:** Đau vùng hạ sườn phải
+
+            **5. Viêm tụy cấp:**
+            - Đau bụng trên, lan ra sau lưng
+            - Buồn nôn, nôn
+            - Sốt
+
+            **⚠️ Biến chứng:**
+            - Viêm túi mật cấp
+            - Tắc ống mật
+            - Viêm tụy cấp
+            - Viêm phúc mạc mật (hiếm, nguy hiểm)
+
+            ## Nguyên nhân:
+
+            **1. Sỏi cholesterol:**
+            - **Dịch mật bão hòa cholesterol:** Quá nhiều cholesterol trong dịch mật
+            - **Giảm muối mật:** Giảm muối mật (không đủ để hòa tan cholesterol)
+            - **Ứ đọng dịch mật:** Túi mật không co bóp tốt
+
+            **2. Sỏi sắc tố:**
+            - **Tăng bilirubin:** Tăng bilirubin trong dịch mật
+            - **Nhiễm trùng:** Nhiễm trùng đường mật
+            - **Thiếu máu tan máu:** Tan máu → Tăng bilirubin
+
+            **3. Yếu tố nguy cơ:**
+            - **Tuổi:** > 40 tuổi
+            - **Giới tính:** Phụ nữ (gấp 2-3 lần nam)
+            - **Mang thai:** Tăng nguy cơ
+            - **Béo phì:** Tăng cholesterol
+            - **Giảm cân nhanh:** Giảm cân > 1.5kg/tuần
+            - **Chế độ ăn:** Ăn nhiều chất béo, ít chất xơ
+            - **Di truyền:** Có người thân bị sỏi mật
+            - **Bệnh khác:** Đái tháo đường, xơ gan, bệnh Crohn
+
+            **4. Yếu tố bảo vệ:**
+            - **Cà phê:** Uống cà phê (giảm nguy cơ)
+            - **Chế độ ăn giàu chất xơ:** Giảm nguy cơ
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám bụng
+
+            **Xét nghiệm:**
+            - **Siêu âm bụng:** Phát hiện sỏi mật (độ nhạy 95%)
+            - **Xét nghiệm máu:**
+              - Bilirubin tăng (nếu tắc ống mật)
+              - Men gan tăng (ALT, AST)
+              - Bạch cầu tăng (nếu viêm)
+            - **CT bụng:** Đánh giá biến chứng
+            - **MRCP:** Đánh giá ống mật (nếu cần)
+
+            **⚠️ Phân biệt:**
+            - Viêm dạ dày
+            - Loét dạ dày-tá tràng
+            - Viêm tụy
+            - Sỏi thận
+
+            ## Điều trị:
+
+            **1. Sỏi mật không có triệu chứng:**
+            - **Theo dõi:** Không cần điều trị
+            - **Chỉ điều trị nếu:**
+              - Sỏi lớn (> 2cm) → Nguy cơ ung thư túi mật
+              - Túi mật vôi hóa → Nguy cơ ung thư
+              - Bệnh nhân đái tháo đường → Nguy cơ biến chứng
+
+            **2. Cơn đau quặn mật:**
+            - **Thuốc giảm đau:** NSAID (Ibuprofen, Diclofenac)
+            - **Thuốc giãn cơ:** Hyoscine
+            - **Theo dõi:** Nếu tái phát → Cân nhắc phẫu thuật
+
+            **3. Viêm túi mật cấp:**
+            - **Kháng sinh:** Kháng sinh đường tĩnh mạch
+            - **Phẫu thuật:** Cắt túi mật (trong 24-72 giờ)
+            - **Nếu không phẫu thuật:** Cắt túi mật sau khi ổn định
+
+            **4. Phẫu thuật:**
+            - **Cắt túi mật:**
+              - **Mổ nội soi:** Ưu tiên (ít xâm lấn, hồi phục nhanh)
+              - **Mổ mở:** Nếu mổ nội soi không được
+            - **Lấy sỏi ống mật:** Nội soi mật-tụy ngược dòng (ERCP)
+
+            **5. Điều trị không phẫu thuật (Hiếm dùng):**
+            - **Tán sỏi bằng sóng:** Tán sỏi bằng sóng siêu âm
+            - **Hòa tan sỏi:** Ursodeoxycholic acid (chỉ sỏi cholesterol nhỏ)
+            - **Hiệu quả thấp, tái phát cao**
+
+            **⚠️ Lưu ý:**
+            - Phẫu thuật là điều trị chính
+            - Cắt túi mật không ảnh hưởng chức năng tiêu hóa (mật vẫn tiết từ gan)
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Khi có sỏi mật:**
+            - **Giảm chất béo:** Giảm chất béo bão hòa, cholesterol
+            - **Tăng chất xơ:** Rau xanh, trái cây
+            - **Tránh:** Đồ chiên rán, thức ăn nhiều chất béo
+            - **Ăn nhiều bữa nhỏ:** Thay vì 3 bữa lớn
+
+            **2. Thực phẩm nên ăn:**
+            - Rau xanh, trái cây
+            - Ngũ cốc nguyên hạt
+            - Protein nạc (thịt, cá, đậu)
+            - Cá béo (Omega-3)
+            - Dầu thực vật (dầu oliu, dầu hướng dương)
+
+            **3. Thực phẩm nên tránh:**
+            - **Đồ chiên rán:** Gà rán, khoai tây chiên
+            - **Thức ăn nhiều chất béo:** Thịt mỡ, nội tạng
+            - **Thức ăn nhanh:** Hamburger, pizza
+            - **Rượu bia:** Có thể kích thích túi mật
+
+            **4. Thực đơn mẫu:**
+            - **Sáng:** Cháo yến mạch + trái cây
+            - **Trưa:** Cơm + canh rau + cá/thịt nạc + rau xanh
+            - **Chiều:** Cơm + canh rau + cá/thịt nạc + rau xanh
+            - **Bữa phụ:** Trái cây, hạt
+
+            **5. Lưu ý:**
+            - Ăn nhiều bữa nhỏ (giảm kích thích túi mật)
+            - Tránh ăn quá no
+            - Uống nhiều nước
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Tập thể dục:**
+            - Bình thường, đều đặn
+            - Giảm cân (nếu béo phì) → Giảm nguy cơ
+
+            **2. Sau phẫu thuật:**
+            - Nghỉ ngơi 1-2 tuần
+            - Tập thể dục nhẹ sau 2 tuần
+            - Tập thể dục bình thường sau 4-6 tuần
+
+            **3. Lưu ý:**
+            - Tránh gắng sức sau phẫu thuật
+            - Theo chỉ định bác sĩ
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Thuốc giảm đau:**
+            - **NSAID:** Ibuprofen, Diclofenac (cơn đau quặn mật)
+            - **Opioid:** Morphine (nếu đau nặng, ngắn hạn)
+
+            **2. Kháng sinh:**
+            - **Viêm túi mật:** Kháng sinh đường tĩnh mạch
+            - **Nhiễm trùng đường mật:** Kháng sinh phổ rộng
+
+            **3. Thuốc giãn cơ:**
+            - **Hyoscine:** Giảm co thắt túi mật
+
+            **4. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Báo bác sĩ nếu đau không giảm
+            - Không tự ý ngừng kháng sinh
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Cơn đau quặn mật:**
+            - Đau bụng dữ dội vùng hạ sườn phải
+            - Không giảm sau 1-2 giờ
+            - **Đến bệnh viện ngay!**
+
+            **2. Viêm túi mật cấp:**
+            - Đau bụng + Sốt
+            - **Cấp cứu ngay!**
+
+            **3. Tắc ống mật:**
+            - Vàng da, vàng mắt
+            - Sốt, ớn lạnh
+            - **Cấp cứu ngay!**
+
+            **4. Sau phẫu thuật:**
+            - Sốt cao
+            - Đau bụng tăng
+            - Vết mổ sưng, đỏ, chảy mủ
+            - Vàng da
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Chế độ ăn:**
+            - **Giảm chất béo:** Giảm chất béo bão hòa, cholesterol
+            - **Tăng chất xơ:** Rau xanh, trái cây
+            - **Uống cà phê:** Có thể giảm nguy cơ
+
+            **2. Duy trì cân nặng:**
+            - Duy trì cân nặng hợp lý
+            - Tránh béo phì
+            - Giảm cân từ từ (không quá 1.5kg/tuần)
+
+            **3. Tập thể dục:**
+            - Đều đặn, 30 phút/ngày
+            - Giảm nguy cơ
+
+            **4. Tránh:**
+            - Giảm cân quá nhanh
+            - Ăn nhiều chất béo
+            - Bỏ bữa
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - **Chế độ ăn lành mạnh** (quan trọng nhất!)
+            - **Duy trì cân nặng hợp lý**
+            - **Tập thể dục đều đặn**
+
+            **2. Khi có sỏi mật:**
+            - Nếu không có triệu chứng → Theo dõi
+            - Nếu có triệu chứng → Cân nhắc phẫu thuật
+            - Tránh ăn nhiều chất béo
+
+            **3. Sống tích cực:**
+            - Sỏi mật rất phổ biến
+            - Nhiều người không có triệu chứng
+            - Phẫu thuật an toàn, hiệu quả
+            - Cắt túi mật không ảnh hưởng chức năng tiêu hóa
+
+            **4. Sau phẫu thuật:**
+            - Hồi phục nhanh (1-2 tuần)
+            - Có thể sống bình thường
+            - Ăn uống bình thường (có thể giảm chất béo ban đầu)
+            """,
+            related_disease="gallstones",
+            related_drugs=["Ibuprofen", "Diclofenac", "Hyoscine", "Ursodeoxycholic acid"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="pancreatitis_basics",
+            title="Understanding Pancreatitis",
+            title_vn="Hiểu về Viêm tụy",
+            category="Disease",
+            content="""
+            # Hiểu về Viêm tụy
+
+            ## Viêm tụy là gì?
+
+            Viêm tụy (Pancreatitis) là tình trạng viêm của tuyến tụy, gây đau bụng dữ dội, có thể dẫn đến biến chứng nặng. Viêm tụy có thể cấp tính (đột ngột) hoặc mạn tính (kéo dài, tái phát).
+
+            **⚠️ Đặc điểm:**
+            - Viêm tuyến tụy
+            - Đau bụng dữ dội
+            - Có thể cấp tính hoặc mạn tính
+            - Có thể dẫn đến biến chứng nặng
+
+            **Phân loại:**
+            - **Viêm tụy cấp:** Viêm đột ngột, thường tự khỏi
+            - **Viêm tụy mạn:** Viêm kéo dài, tái phát, tổn thương vĩnh viễn
+
+            **Tuyến tụy:**
+            - Tuyến nằm sau dạ dày
+            - Chức năng: Tiết enzyme tiêu hóa, insulin
+
+            ## Triệu chứng:
+
+            **Viêm tụy cấp:**
+            - **Đau bụng:** Đau bụng trên, lan ra sau lưng, đau dữ dội, liên tục
+            - **Buồn nôn, nôn:** Nôn nhiều, không giảm đau
+            - **Sốt:** Sốt nhẹ đến vừa
+            - **Đầy bụng, chướng bụng**
+            - **Đau tăng:** Khi nằm ngửa, giảm khi ngồi, cúi người
+
+            **Viêm tụy mạn:**
+            - **Đau bụng:** Đau bụng trên, tái phát, có thể mạn tính
+            - **Sụt cân:** Sụt cân do kém hấp thu
+            - **Tiêu chảy mỡ:** Phân mỡ, nổi trên nước (kém hấp thu chất béo)
+            - **Đái tháo đường:** Do tổn thương tế bào beta (tiết insulin)
+
+            **⚠️ Biến chứng viêm tụy cấp:**
+            - **Hoại tử tụy:** Tụy bị hoại tử
+            - **Áp xe tụy:** Áp xe trong tụy
+            - **Giả nang tụy:** Nang giả sau viêm
+            - **Suy đa tạng:** Suy thận, phổi, tim
+            - **Tử vong:** 5-10% (nếu nặng)
+
+            ## Nguyên nhân:
+
+            **Viêm tụy cấp:**
+            - **Sỏi mật (40%):** Sỏi mật tắc ống tụy
+            - **Rượu bia (30%):** Uống nhiều rượu bia
+            - **Nguyên nhân khác (30%):**
+              - Tăng triglyceride máu
+              - Thuốc (Azathioprine, Thiazide, Furosemide)
+              - Nhiễm trùng (virus, vi khuẩn)
+              - Chấn thương
+              - Sau ERCP
+              - Tự phát (không rõ nguyên nhân)
+
+            **Viêm tụy mạn:**
+            - **Rượu bia (70%):** Uống nhiều rượu bia lâu dài
+            - **Sỏi mật:** Tái phát nhiều lần
+            - **Tăng canxi máu:** Tăng canxi máu
+            - **Tự miễn:** Viêm tụy tự miễn
+            - **Di truyền:** Đột biến gen (hiếm)
+
+            **Yếu tố nguy cơ:**
+            - Uống nhiều rượu bia
+            - Sỏi mật
+            - Tăng triglyceride máu
+            - Béo phì
+            - Đái tháo đường
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám bụng
+
+            **Xét nghiệm:**
+            - **Amylase máu:** Tăng > 3 lần bình thường (độ nhạy 85%)
+            - **Lipase máu:** Tăng > 3 lần bình thường (độ nhạy 95%, đặc hiệu hơn)
+            - **Xét nghiệm máu khác:**
+              - Bạch cầu tăng
+              - Glucose tăng
+              - Canxi giảm (nếu nặng)
+              - Bilirubin tăng (nếu tắc ống mật)
+
+            **Hình ảnh:**
+            - **CT bụng:** Đánh giá mức độ, biến chứng (tiêu chuẩn vàng)
+            - **Siêu âm bụng:** Phát hiện sỏi mật, dịch ổ bụng
+            - **MRI/MRCP:** Đánh giá ống tụy, ống mật
+
+            **⚠️ Phân biệt:**
+            - Loét dạ dày-tá tràng thủng
+            - Viêm túi mật cấp
+            - Tắc ruột
+            - Nhồi máu cơ tim
+
+            ## Điều trị:
+
+            **Viêm tụy cấp:**
+
+            **1. Điều trị hỗ trợ:**
+            - **Nhịn ăn:** Nhịn ăn, uống (giảm kích thích tụy)
+            - **Truyền dịch:** Truyền dịch đường tĩnh mạch (quan trọng!)
+            - **Giảm đau:** Morphine, Fentanyl (giảm đau dữ dội)
+            - **Nuôi ăn:** Nuôi ăn qua ống mũi-dạ dày hoặc tĩnh mạch (nếu nặng)
+
+            **2. Điều trị nguyên nhân:**
+            - **Sỏi mật:** ERCP lấy sỏi (nếu tắc ống mật)
+            - **Rượu bia:** Bỏ rượu bia HOÀN TOÀN
+            - **Tăng triglyceride:** Giảm triglyceride
+
+            **3. Kháng sinh:**
+            - Chỉ dùng nếu có nhiễm trùng, hoại tử
+
+            **4. Phẫu thuật:**
+            - Chỉ khi có biến chứng (hoại tử nhiễm trùng, áp xe)
+
+            **Viêm tụy mạn:**
+
+            **1. Điều trị đau:**
+            - **Thuốc giảm đau:** NSAID, Opioid (nếu cần)
+            - **Phẫu thuật:** Cắt dây thần kinh, cắt tụy (nếu đau nặng)
+
+            **2. Điều trị kém hấp thu:**
+            - **Enzyme tụy:** Pancreatin (bổ sung enzyme)
+            - **Vitamin:** Bổ sung vitamin tan trong dầu (A, D, E, K)
+
+            **3. Điều trị đái tháo đường:**
+            - Insulin, thuốc hạ đường huyết
+
+            **4. Bỏ rượu bia:**
+            - Bỏ rượu bia HOÀN TOÀN (quan trọng nhất!)
+
+            **⚠️ Lưu ý:**
+            - Viêm tụy cấp: Điều trị hỗ trợ, tự khỏi (nhẹ)
+            - Viêm tụy mạn: Điều trị lâu dài, không chữa khỏi
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **Viêm tụy cấp:**
+            - **Nhịn ăn:** Nhịn ăn, uống (1-3 ngày đầu)
+            - **Truyền dịch:** Truyền dịch đường tĩnh mạch
+            - **Khi đã ổn:** Ăn lỏng → Mềm → Bình thường (từ từ)
+
+            **Viêm tụy mạn:**
+            - **Giảm chất béo:** Giảm chất béo (kém hấp thu)
+            - **Tăng protein:** Tăng protein nạc
+            - **Chia nhỏ bữa:** Ăn nhiều bữa nhỏ
+            - **Bổ sung enzyme:** Uống enzyme tụy trước bữa ăn
+
+            **Thực phẩm nên ăn:**
+            - Protein nạc (thịt, cá, đậu)
+            - Rau xanh, trái cây
+            - Ngũ cốc nguyên hạt
+            - Uống nhiều nước
+
+            **Thực phẩm nên tránh:**
+            - **Rượu bia:** HOÀN TOÀN (quan trọng nhất!)
+            - **Đồ chiên rán:** Nhiều chất béo
+            - **Thức ăn nhiều chất béo:** Thịt mỡ, nội tạng
+            - **Đồ cay nóng:** Kích thích
+
+            **Thực đơn mẫu:**
+            - **Sáng:** Cháo yến mạch + trái cây
+            - **Trưa:** Cơm + canh rau + cá/thịt nạc + rau xanh
+            - **Chiều:** Cơm + canh rau + cá/thịt nạc + rau xanh
+            - **Bữa phụ:** Trái cây, sữa chua
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **Viêm tụy cấp:**
+            - Nghỉ ngơi hoàn toàn
+            - Tập thể dục sau khi khỏi
+
+            **Viêm tụy mạn:**
+            - Tập thể dục nhẹ, đều đặn
+            - Tránh gắng sức
+            - Giảm cân (nếu béo phì)
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Thuốc giảm đau:**
+            - **Morphine, Fentanyl:** Viêm tụy cấp (đau dữ dội)
+            - **NSAID:** Viêm tụy mạn (đau nhẹ-vừa)
+
+            **2. Enzyme tụy:**
+            - **Pancreatin:** Uống trước bữa ăn (viêm tụy mạn)
+            - **Liều:** Theo chỉ định bác sĩ
+
+            **3. Vitamin:**
+            - **Vitamin A, D, E, K:** Bổ sung (nếu kém hấp thu)
+
+            **4. Insulin:**
+            - Nếu có đái tháo đường
+
+            **5. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Báo bác sĩ nếu có tác dụng phụ
+            - Không tự ý ngừng thuốc
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Viêm tụy cấp:**
+            - Đau bụng dữ dội, lan ra sau lưng
+            - Buồn nôn, nôn nhiều
+            - Sốt
+            - **Cấp cứu ngay!**
+
+            **2. Biến chứng:**
+            - Sốt cao, ớn lạnh (nhiễm trùng)
+            - Khó thở (suy phổi)
+            - Vàng da (tắc ống mật)
+            - Lú lẫn (suy đa tạng)
+
+            **3. Viêm tụy mạn:**
+            - Đau nặng, không chịu được
+            - Sụt cân nhiều
+            - Tiêu chảy mỡ nặng
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Bỏ rượu bia:**
+            - **Bỏ rượu bia HOÀN TOÀN** (quan trọng nhất!)
+            - Giảm nguy cơ viêm tụy cấp, mạn
+
+            **2. Điều trị sỏi mật:**
+            - Điều trị sỏi mật (nếu có)
+            - Giảm nguy cơ viêm tụy cấp
+
+            **3. Chế độ ăn:**
+            - Giảm chất béo
+            - Ăn đủ dinh dưỡng
+            - Duy trì cân nặng hợp lý
+
+            **4. Kiểm soát bệnh:**
+            - Kiểm soát triglyceride máu
+            - Kiểm soát đái tháo đường
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - **Bỏ rượu bia HOÀN TOÀN** (quan trọng nhất!)
+            - Điều trị sỏi mật
+            - Chế độ ăn lành mạnh
+
+            **2. Khi bị viêm tụy:**
+            - Đến bệnh viện ngay
+            - Tuân thủ điều trị
+            - Bỏ rượu bia HOÀN TOÀN
+
+            **3. Sống tích cực:**
+            - Viêm tụy cấp: Thường tự khỏi (nhẹ)
+            - Viêm tụy mạn: Cần điều trị lâu dài
+            - Bỏ rượu bia → Giảm nguy cơ tái phát
+
+            **4. Lâu dài:**
+            - Cần điều trị lâu dài (viêm tụy mạn)
+            - Bổ sung enzyme, vitamin
+            - Theo dõi định kỳ
+            """,
+            related_disease="pancreatitis",
+            related_drugs=["Morphine", "Fentanyl", "Ibuprofen", "Pancreatin", "Insulin"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="cholecystitis_basics",
+            title="Understanding Cholecystitis",
+            title_vn="Hiểu về Viêm túi mật",
+            category="Disease",
+            content="""
+            # Hiểu về Viêm túi mật
+
+            ## Viêm túi mật là gì?
+
+            Viêm túi mật (Cholecystitis) là tình trạng viêm của túi mật, thường do sỏi mật tắc ống túi mật. Đây là cấp cứu ngoại khoa phổ biến, cần điều trị ngay để tránh biến chứng.
+
+            **⚠️ Đặc điểm:**
+            - Viêm túi mật
+            - Thường do sỏi mật
+            - Cấp cứu ngoại khoa
+            - Cần điều trị ngay
+
+            **Phân loại:**
+            - **Viêm túi mật cấp:** Viêm đột ngột, do sỏi mật (90%)
+            - **Viêm túi mật mạn:** Viêm tái phát, do sỏi mật
+            - **Viêm túi mật không do sỏi:** Không có sỏi mật (10%, thường nặng hơn)
+
+            **Túi mật:**
+            - Cơ quan nhỏ, hình quả lê, dưới gan
+            - Chức năng: Dự trữ, cô đặc dịch mật
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Đau bụng:** Đau vùng hạ sườn phải, lan ra sau lưng, vai phải, đau liên tục, tăng dần
+            - **Sốt:** Sốt 38-39°C
+            - **Buồn nôn, nôn:** Thường có
+            - **Đau tăng:** Khi ấn vùng hạ sườn phải
+            - **Dấu hiệu Murphy:** Đau khi ấn vùng túi mật, hít sâu (đặc trưng)
+
+            **Triệu chứng khác:**
+            - Đầy bụng, chướng bụng
+            - Chán ăn
+            - Vàng da (nếu tắc ống mật)
+
+            **⚠️ Biến chứng:**
+            - **Hoại tử túi mật:** Túi mật bị hoại tử
+            - **Thủng túi mật:** Túi mật bị thủng
+            - **Viêm phúc mạc mật:** Dịch mật rò vào ổ bụng
+            - **Áp xe túi mật:** Áp xe trong túi mật
+            - **Nhiễm trùng huyết:** Nhiễm trùng toàn thân
+
+            ## Nguyên nhân:
+
+            **1. Sỏi mật (90%):**
+            - Sỏi mật tắc ống túi mật
+            - Dịch mật ứ đọng → Viêm
+            - Nhiễm trùng thứ phát
+
+            **2. Viêm túi mật không do sỏi (10%):**
+            - **Nhiễm trùng:** Nhiễm trùng trực tiếp
+            - **Chấn thương:** Chấn thương bụng
+            - **Sau phẫu thuật:** Sau phẫu thuật lớn
+            - **Nuôi ăn tĩnh mạch:** Nuôi ăn tĩnh mạch lâu dài
+            - **Bệnh khác:** Đái tháo đường, xơ gan
+
+            **3. Yếu tố nguy cơ:**
+            - Sỏi mật
+            - Phụ nữ, > 40 tuổi
+            - Béo phì
+            - Giảm cân nhanh
+            - Mang thai
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Dấu hiệu Murphy
+            - Khám bụng
+
+            **Xét nghiệm:**
+            - **Xét nghiệm máu:**
+              - Bạch cầu tăng (10-15.000/μL)
+              - Bilirubin tăng (nếu tắc ống mật)
+              - Men gan tăng (ALT, AST)
+              - Amylase, Lipase (nếu viêm tụy)
+            - **Siêu âm bụng:** Phát hiện sỏi mật, túi mật dày thành, dịch quanh túi mật (tiêu chuẩn vàng)
+            - **CT bụng:** Đánh giá biến chứng
+            - **HIDA scan:** Đánh giá chức năng túi mật
+
+            **⚠️ Phân biệt:**
+            - Viêm tụy cấp
+            - Loét dạ dày-tá tràng thủng
+            - Viêm gan
+            - Sỏi thận
+
+            ## Điều trị:
+
+            **1. Điều trị cấp cứu:**
+            - **Nhịn ăn:** Nhịn ăn, uống (giảm kích thích túi mật)
+            - **Truyền dịch:** Truyền dịch đường tĩnh mạch
+            - **Kháng sinh:** Kháng sinh đường tĩnh mạch (Cefazolin + Metronidazole)
+            - **Giảm đau:** Morphine, NSAID
+
+            **2. Phẫu thuật:**
+            - **Cắt túi mật:**
+              - **Mổ nội soi:** Ưu tiên (trong 24-72 giờ)
+              - **Mổ mở:** Nếu mổ nội soi không được
+            - **Thời gian:** Càng sớm càng tốt (trong 24-72 giờ)
+            - **Nếu không phẫu thuật:** Cắt túi mật sau khi ổn định (4-6 tuần)
+
+            **3. Điều trị không phẫu thuật (Hiếm, chỉ khi chống chỉ định):**
+            - Kháng sinh
+            - Dẫn lưu túi mật qua da (nếu có áp xe)
+            - Cắt túi mật sau khi ổn định
+
+            **⚠️ Lưu ý:**
+            - Phẫu thuật là điều trị chính
+            - Cắt túi mật không ảnh hưởng chức năng tiêu hóa (mật vẫn tiết từ gan)
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Trước phẫu thuật:**
+            - **Nhịn ăn:** Nhịn ăn, uống (chuẩn bị phẫu thuật)
+            - **Truyền dịch:** Truyền dịch đường tĩnh mạch
+
+            **2. Sau phẫu thuật:**
+            - **Ngày 1:** Uống nước, nước đường (nếu không nôn)
+            - **Ngày 2-3:** Ăn lỏng (cháo, súp)
+            - **Ngày 4-5:** Ăn mềm (cơm mềm, thịt/cá nấu chín)
+            - **Sau 1 tuần:** Ăn bình thường
+
+            **3. Thực phẩm nên ăn:**
+            - Cháo, súp (sau phẫu thuật)
+            - Thức ăn mềm, dễ tiêu
+            - Rau xanh, trái cây (khi đã ổn)
+            - Uống nhiều nước
+
+            **4. Thực phẩm nên tránh:**
+            - **Đồ chiên rán:** Nhiều chất béo (trước và sau phẫu thuật)
+            - **Thức ăn nhiều chất béo:** Thịt mỡ, nội tạng
+            - **Rượu bia:** Có thể kích thích
+
+            **5. Lưu ý:**
+            - Ăn từ từ, tăng dần
+            - Theo chỉ định bác sĩ
+            - Báo nếu đau bụng, nôn
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Sau phẫu thuật:**
+            - **Ngày 1:** Nghỉ ngơi tại giường, đi lại nhẹ
+            - **Ngày 2-3:** Đi lại trong phòng
+            - **Ngày 4-5:** Đi lại bình thường
+            - **Sau 1 tuần:** Tập thể dục nhẹ
+            - **Sau 2-4 tuần:** Tập thể dục bình thường
+
+            **2. Tránh:**
+            - Gắng sức trong 2-4 tuần đầu
+            - Khuân vác nặng
+            - Tập thể dục mạnh
+
+            **3. Lưu ý:**
+            - Theo chỉ định bác sĩ
+            - Báo nếu đau, khó chịu
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Kháng sinh:**
+            - **Cefazolin + Metronidazole:** Đường tĩnh mạch
+            - **Thời gian:** 3-5 ngày (nếu nhẹ), 7-10 ngày (nếu nặng)
+
+            **2. Thuốc giảm đau:**
+            - **Morphine:** Nếu đau nặng
+            - **NSAID:** Ibuprofen, Diclofenac (nếu đau nhẹ-vừa)
+
+            **3. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Báo bác sĩ nếu đau không giảm
+            - Không tự ý ngừng kháng sinh
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Triệu chứng viêm túi mật:**
+            - Đau bụng vùng hạ sườn phải
+            - Sốt, buồn nôn, nôn
+            - **Cấp cứu ngay!**
+
+            **2. Biến chứng:**
+            - Sốt cao, ớn lạnh (nhiễm trùng nặng)
+            - Đau bụng dữ dội, lan toàn bụng (thủng)
+            - Vàng da (tắc ống mật)
+            - Tụt huyết áp (sốc)
+
+            **3. Sau phẫu thuật:**
+            - Sốt cao
+            - Đau bụng tăng
+            - Vết mổ sưng, đỏ, chảy mủ
+            - Vàng da
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Điều trị sỏi mật:**
+            - Điều trị sỏi mật (nếu có)
+            - Giảm nguy cơ viêm túi mật
+
+            **2. Chế độ ăn:**
+            - Giảm chất béo
+            - Tăng chất xơ
+            - Duy trì cân nặng hợp lý
+
+            **3. Tránh:**
+            - Giảm cân quá nhanh
+            - Ăn nhiều chất béo
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Nhận biết triệu chứng:**
+            - Đau bụng vùng hạ sườn phải
+            - Sốt, buồn nôn, nôn
+            - **Cấp cứu ngay!**
+
+            **2. Không trì hoãn:**
+            - Viêm túi mật cần điều trị ngay
+            - Trì hoãn → Biến chứng → Nguy hiểm
+
+            **3. Sau phẫu thuật:**
+            - Hồi phục nhanh (1-2 tuần)
+            - Có thể sống bình thường
+            - Cắt túi mật không ảnh hưởng chức năng tiêu hóa
+
+            **4. Sống tích cực:**
+            - Phẫu thuật an toàn, hiệu quả
+            - Phòng ngừa tốt → Không tái phát
+            """,
+            related_disease="cholecystitis",
+            related_drugs=["Cefazolin", "Metronidazole", "Morphine", "Ibuprofen", "Diclofenac"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="crohn_disease_basics",
+            title="Understanding Crohn's Disease",
+            title_vn="Hiểu về Bệnh Crohn",
+            category="Disease",
+            content="""
+            # Hiểu về Bệnh Crohn
+
+            ## Bệnh Crohn là gì?
+
+            Bệnh Crohn là bệnh viêm ruột mạn tính, có thể ảnh hưởng đến bất kỳ phần nào của đường tiêu hóa (từ miệng đến hậu môn), đặc trưng bởi viêm từng đoạn, có thể dẫn đến biến chứng nặng.
+
+            **⚠️ Đặc điểm:**
+            - Viêm ruột mạn tính
+            - Có thể ảnh hưởng toàn bộ đường tiêu hóa
+            - Viêm từng đoạn (không liên tục)
+            - Bệnh tự miễn, không chữa khỏi
+
+            **Phân loại:**
+            - **Theo vị trí:**
+              - Crohn hồi tràng (30%): Chỉ ảnh hưởng hồi tràng
+              - Crohn đại tràng (20%): Chỉ ảnh hưởng đại tràng
+              - Crohn hồi-đại tràng (50%): Ảnh hưởng cả hồi tràng và đại tràng
+            - **Theo mức độ:**
+              - Nhẹ: Triệu chứng nhẹ, không ảnh hưởng cuộc sống
+              - Trung bình: Triệu chứng vừa, ảnh hưởng cuộc sống
+              - Nặng: Triệu chứng nặng, biến chứng
+
+            ## Triệu chứng:
+
+            **Triệu chứng đường tiêu hóa:**
+            - **Đau bụng:** Đau bụng, thường vùng hố chậu phải (hồi tràng)
+            - **Tiêu chảy:** Tiêu chảy mạn tính, có thể có máu
+            - **Sụt cân:** Sụt cân do kém hấp thu, chán ăn
+            - **Mệt mỏi:** Mệt mỏi, suy nhược
+            - **Sốt:** Sốt nhẹ (khi đang viêm)
+
+            **Triệu chứng khác:**
+            - **Loét miệng:** Loét miệng tái phát
+            - **Đau khớp:** Đau khớp, viêm khớp
+            - **Tổn thương da:** Nốt đỏ, loét da
+            - **Viêm mắt:** Viêm mắt, đỏ mắt
+            - **Thiếu máu:** Thiếu máu do mất máu, kém hấp thu
+
+            **⚠️ Biến chứng:**
+            - **Hẹp ruột:** Hẹp ruột do sẹo
+            - **Rò ruột:** Rò ruột (fistula)
+            - **Áp xe:** Áp xe ổ bụng
+            - **Ung thư đại tràng:** Tăng nguy cơ (nếu viêm đại tràng lâu dài)
+            - **Suy dinh dưỡng:** Suy dinh dưỡng nặng
+
+            ## Nguyên nhân:
+
+            **1. Nguyên nhân chưa rõ hoàn toàn:**
+            - Có nhiều yếu tố
+
+            **2. Yếu tố:**
+            - **Tự miễn:** Hệ miễn dịch tấn công ruột
+            - **Di truyền:** Có người thân bị bệnh (tăng nguy cơ 10-20 lần)
+            - **Môi trường:** Chế độ ăn, nhiễm trùng, stress
+            - **Hút thuốc lá:** Tăng nguy cơ, làm nặng bệnh
+
+            **3. Yếu tố nguy cơ:**
+            - **Tuổi:** 15-35 tuổi (phổ biến nhất)
+            - **Di truyền:** Có người thân bị bệnh
+            - **Hút thuốc lá:** Tăng nguy cơ 2-3 lần
+            - **Chế độ ăn:** Chế độ ăn nhiều chất béo, ít chất xơ
+            - **Dùng NSAID:** Có thể làm nặng bệnh
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám bụng
+
+            **Xét nghiệm:**
+            - **Xét nghiệm máu:**
+              - Thiếu máu
+              - Tăng bạch cầu, CRP (dấu hiệu viêm)
+              - Giảm albumin (suy dinh dưỡng)
+            - **Xét nghiệm phân:** Tìm máu, vi khuẩn, ký sinh trùng
+            - **Calprotectin phân:** Tăng (dấu hiệu viêm ruột)
+
+            **Hình ảnh:**
+            - **Nội soi đại tràng:** Quan sát tổn thương, sinh thiết (tiêu chuẩn vàng)
+            - **Nội soi ruột non:** Quan sát ruột non
+            - **CT/MRI:** Đánh giá biến chứng (hẹp, rò)
+            - **X-quang:** Ít dùng
+
+            **⚠️ Phân biệt:**
+            - Viêm loét đại tràng (UC)
+            - Hội chứng ruột kích thích
+            - Nhiễm trùng đường ruột
+
+            ## Điều trị:
+
+            **1. Điều trị cấp tính (Đợt cấp):**
+            - **Corticosteroid:** Prednisolone (giảm viêm nhanh)
+            - **Kháng sinh:** Metronidazole, Ciprofloxacin (nếu có nhiễm trùng)
+            - **Nuôi ăn:** Nuôi ăn tĩnh mạch (nếu nặng)
+
+            **2. Điều trị duy trì:**
+            - **5-ASA:** Mesalamine (nhẹ)
+            - **Immunosuppressant:**
+              - **Azathioprine, 6-MP:** Ức chế miễn dịch
+              - **Methotrexate:** Ức chế miễn dịch
+            - **Biological:**
+              - **Infliximab, Adalimumab:** Kháng TNF-α
+              - **Vedolizumab:** Kháng integrin
+            - **Ustekinumab:** Kháng IL-12/23
+
+            **3. Điều trị triệu chứng:**
+            - **Thuốc chống tiêu chảy:** Loperamide (thận trọng)
+            - **Thuốc giảm đau:** Paracetamol (tránh NSAID)
+            - **Bổ sung sắt:** Nếu thiếu máu
+            - **Bổ sung vitamin:** Vitamin B12, D, canxi
+
+            **4. Phẫu thuật:**
+            - **Chỉ định:**
+              - Hẹp ruột, tắc ruột
+              - Rò ruột không đáp ứng điều trị
+              - Áp xe
+              - Ung thư
+            - **Phương pháp:**
+              - Cắt đoạn ruột bị bệnh
+              - Nối ruột
+
+            **⚠️ Lưu ý:**
+            - Bệnh không chữa khỏi, cần điều trị lâu dài
+            - Điều trị tùy theo mức độ, vị trí
+            - Bỏ thuốc lá (quan trọng!)
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Khi đang đợt cấp:**
+            - **Nhịn ăn:** Nhịn ăn, uống (nếu nặng)
+            - **Nuôi ăn:** Nuôi ăn tĩnh mạch hoặc qua ống
+            - **Khi đã ổn:** Ăn lỏng → Mềm → Bình thường (từ từ)
+
+            **2. Khi ổn định:**
+            - **Chế độ ăn đủ dinh dưỡng:** Đủ calo, protein, vitamin
+            - **Chia nhỏ bữa:** Ăn nhiều bữa nhỏ
+            - **Tránh:** Thức ăn gây kích thích
+
+            **3. Thực phẩm nên ăn:**
+            - Protein nạc (thịt, cá, đậu)
+            - Rau xanh, trái cây (nếu dung nạp)
+            - Ngũ cốc nguyên hạt (nếu dung nạp)
+            - Sữa chua (probiotic)
+            - Uống nhiều nước
+
+            **4. Thực phẩm nên tránh:**
+            - **Thức ăn nhiều chất xơ:** Nếu không dung nạp
+            - **Đồ cay nóng:** Kích thích ruột
+            - **Đồ chiên rán:** Khó tiêu
+            - **Sữa:** Nếu không dung nạp lactose
+            - **Rượu bia:** Có thể làm nặng
+
+            **5. Thực đơn mẫu:**
+            - **Sáng:** Cháo yến mạch + trái cây
+            - **Trưa:** Cơm + canh rau + cá/thịt nạc + rau xanh
+            - **Chiều:** Cơm + canh rau + cá/thịt nạc + rau xanh
+            - **Bữa phụ:** Trái cây, sữa chua
+
+            **6. Lưu ý:**
+            - Ghi nhật ký thức ăn để tìm yếu tố kích thích
+            - Tránh thức ăn gây triệu chứng
+            - Bổ sung vitamin, khoáng chất
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Khi đang đợt cấp:**
+            - Nghỉ ngơi
+            - Tập thể dục nhẹ (nếu có thể)
+
+            **2. Khi ổn định:**
+            - Tập thể dục đều đặn, 30 phút/ngày
+            - Giảm stress (có thể làm nặng bệnh)
+            - Yoga, thiền (thư giãn)
+
+            **3. Tránh:**
+            - Tập quá sức khi đang đợt cấp
+            - Tập khi mệt mỏi
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Corticosteroid:**
+            - **Prednisolone:** Uống đều đặn, giảm liều từ từ
+            - **Tác dụng phụ:** Tăng cân, loãng xương, tăng huyết áp
+            - **Lưu ý:** Không tự ý ngừng (nguy hiểm!)
+
+            **2. Immunosuppressant:**
+            - **Azathioprine, 6-MP:** Uống đều đặn
+            - **Tác dụng phụ:** Giảm bạch cầu, nhiễm trùng
+            - **Lưu ý:** Xét nghiệm máu định kỳ
+
+            **3. Biological:**
+            - **Infliximab, Adalimumab:** Tiêm, theo chỉ định
+            - **Tác dụng phụ:** Nhiễm trùng, phản ứng dị ứng
+            - **Lưu ý:** Theo dõi sát
+
+            **4. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Không tự ý ngừng thuốc
+            - Báo bác sĩ nếu có tác dụng phụ
+            - Xét nghiệm máu định kỳ
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Đợt cấp nặng:**
+            - Tiêu chảy nhiều, có máu
+            - Đau bụng dữ dội
+            - Sốt cao
+            - **Cấp cứu ngay!**
+
+            **2. Biến chứng:**
+            - Tắc ruột (đau bụng, nôn, không đi cầu)
+            - Rò ruột (dịch chảy ra ngoài)
+            - Áp xe (sốt, đau bụng)
+            - **Cấp cứu ngay!**
+
+            **3. Tác dụng phụ:**
+            - Sốt, ớn lạnh (nhiễm trùng)
+            - Phát ban, ngứa (dị ứng)
+            - Khó thở
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Bỏ thuốc lá:**
+            - **Bỏ thuốc lá HOÀN TOÀN** (quan trọng nhất!)
+            - Giảm nguy cơ, làm nặng bệnh
+
+            **2. Chế độ ăn:**
+            - Ăn đủ dinh dưỡng
+            - Tránh thức ăn gây kích thích
+            - Ghi nhật ký thức ăn
+
+            **3. Quản lý stress:**
+            - Stress có thể làm nặng bệnh
+            - Thư giãn, yoga, thiền
+
+            **4. Tránh:**
+            - NSAID (có thể làm nặng)
+            - Nhiễm trùng
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Phòng ngừa:**
+            - **Bỏ thuốc lá HOÀN TOÀN** (quan trọng nhất!)
+            - Chế độ ăn lành mạnh
+            - Quản lý stress
+
+            **2. Khi bị Crohn:**
+            - Điều trị đều đặn, lâu dài
+            - Tuân thủ điều trị
+            - Theo dõi định kỳ
+
+            **3. Sống tích cực:**
+            - Bệnh không chữa khỏi nhưng có thể kiểm soát
+            - Điều trị đúng → Giảm triệu chứng, biến chứng
+            - Có thể sống bình thường
+
+            **4. Hỗ trợ:**
+            - Tham gia nhóm hỗ trợ
+            - Giáo dục gia đình
+            - Tư vấn tâm lý (nếu cần)
+
+            **5. Lâu dài:**
+            - Cần điều trị lâu dài
+            - Theo dõi định kỳ
+            - Tầm soát ung thư đại tràng (nếu viêm đại tràng lâu dài)
+            """,
+            related_disease="crohn_disease",
+            related_drugs=["Prednisolone", "Mesalamine", "Azathioprine", "Infliximab", "Adalimumab", "Metronidazole"],
+            printable=True
+        ),
+
+        PatientEducationTopic(
+            id="ulcerative_colitis_basics",
+            title="Understanding Ulcerative Colitis",
+            title_vn="Hiểu về Viêm loét đại tràng",
+            category="Disease",
+            content="""
+            # Hiểu về Viêm loét đại tràng
+
+            ## Viêm loét đại tràng là gì?
+
+            Viêm loét đại tràng (Ulcerative Colitis - UC) là bệnh viêm ruột mạn tính, chỉ ảnh hưởng đến đại tràng và trực tràng, đặc trưng bởi viêm liên tục từ trực tràng lên trên. Bệnh tự miễn, không chữa khỏi, nhưng có thể kiểm soát.
+
+            **⚠️ Đặc điểm:**
+            - Viêm ruột mạn tính
+            - Chỉ ảnh hưởng đại tràng và trực tràng
+            - Viêm liên tục (từ trực tràng lên)
+            - Bệnh tự miễn, không chữa khỏi
+
+            **Phân loại:**
+            - **Theo mức độ:**
+              - Nhẹ: < 4 lần đi cầu/ngày, không có triệu chứng toàn thân
+              - Trung bình: 4-6 lần đi cầu/ngày, có triệu chứng toàn thân nhẹ
+              - Nặng: > 6 lần đi cầu/ngày, có triệu chứng toàn thân nặng
+            - **Theo vị trí:**
+              - Proctitis: Chỉ trực tràng
+              - Left-sided: Đến góc lách
+              - Extensive: Toàn bộ đại tràng
+
+            ## Triệu chứng:
+
+            **Triệu chứng đường tiêu hóa:**
+            - **Tiêu chảy:** Tiêu chảy mạn tính, có máu, mủ
+            - **Đau bụng:** Đau bụng dưới, quặn bụng
+            - **Mót rặn:** Mót rặn, đi cầu nhiều lần
+            - **Phân nhầy máu:** Phân có máu, mủ, nhầy
+            - **Táo bón:** Có thể có (nếu chỉ viêm trực tràng)
+
+            **Triệu chứng toàn thân:**
+            - **Sụt cân:** Sụt cân do kém hấp thu, chán ăn
+            - **Mệt mỏi:** Mệt mỏi, suy nhược
+            - **Sốt:** Sốt nhẹ (khi đang đợt cấp)
+            - **Thiếu máu:** Thiếu máu do mất máu
+
+            **Triệu chứng ngoài ruột:**
+            - **Đau khớp:** Đau khớp, viêm khớp
+            - **Tổn thương da:** Nốt đỏ, loét da
+            - **Viêm mắt:** Viêm mắt, đỏ mắt
+            - **Viêm gan:** Viêm gan, xơ gan mật
+
+            **⚠️ Biến chứng:**
+            - **Megacolon độc:** Đại tràng giãn, nguy hiểm
+            - **Thủng đại tràng:** Thủng đại tràng
+            - **Ung thư đại tràng:** Tăng nguy cơ (nếu viêm lâu dài)
+            - **Xuất huyết nặng:** Mất máu nhiều
+
+            ## Nguyên nhân:
+
+            **1. Nguyên nhân chưa rõ hoàn toàn:**
+            - Có nhiều yếu tố
+
+            **2. Yếu tố:**
+            - **Tự miễn:** Hệ miễn dịch tấn công đại tràng
+            - **Di truyền:** Có người thân bị bệnh (tăng nguy cơ 10-20 lần)
+            - **Môi trường:** Chế độ ăn, nhiễm trùng, stress
+            - **Hút thuốc lá:** Giảm nguy cơ (khác với Crohn)
+
+            **3. Yếu tố nguy cơ:**
+            - **Tuổi:** 15-35 tuổi (phổ biến nhất)
+            - **Di truyền:** Có người thân bị bệnh
+            - **Chế độ ăn:** Chế độ ăn nhiều chất béo, ít chất xơ
+            - **Dùng NSAID:** Có thể làm nặng bệnh
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám bụng
+
+            **Xét nghiệm:**
+            - **Xét nghiệm máu:**
+              - Thiếu máu
+              - Tăng bạch cầu, CRP (dấu hiệu viêm)
+              - Giảm albumin (suy dinh dưỡng)
+            - **Xét nghiệm phân:** Tìm máu, vi khuẩn, ký sinh trùng
+            - **Calprotectin phân:** Tăng (dấu hiệu viêm ruột)
+
+            **Hình ảnh:**
+            - **Nội soi đại tràng:** Quan sát tổn thương, sinh thiết (tiêu chuẩn vàng)
+            - **CT/MRI:** Đánh giá biến chứng
+
+            **⚠️ Phân biệt:**
+            - Bệnh Crohn
+            - Hội chứng ruột kích thích
+            - Nhiễm trùng đường ruột
+
+            ## Điều trị:
+
+            **1. Điều trị cấp tính (Đợt cấp):**
+            - **Corticosteroid:** Prednisolone (giảm viêm nhanh)
+            - **5-ASA:** Mesalamine (nhẹ-trung bình)
+            - **Nuôi ăn:** Nuôi ăn tĩnh mạch (nếu nặng)
+
+            **2. Điều trị duy trì:**
+            - **5-ASA:** Mesalamine (uống, đặt hậu môn)
+            - **Immunosuppressant:**
+              - **Azathioprine, 6-MP:** Ức chế miễn dịch
+            - **Biological:**
+              - **Infliximab, Adalimumab:** Kháng TNF-α
+              - **Vedolizumab:** Kháng integrin
+            - **Ustekinumab:** Kháng IL-12/23
+
+            **3. Điều trị triệu chứng:**
+            - **Thuốc chống tiêu chảy:** Loperamide (thận trọng)
+            - **Thuốc giảm đau:** Paracetamol (tránh NSAID)
+            - **Bổ sung sắt:** Nếu thiếu máu
+            - **Bổ sung vitamin:** Vitamin B12, D, canxi
+
+            **4. Phẫu thuật:**
+            - **Chỉ định:**
+              - Megacolon độc
+              - Thủng đại tràng
+              - Xuất huyết nặng
+              - Ung thư
+              - Không đáp ứng điều trị
+            - **Phương pháp:**
+              - Cắt toàn bộ đại tràng, trực tràng
+              - Tạo hậu môn nhân tạo (ileostomy)
+              - Hoặc nối hồi tràng-hậu môn (ileoanal pouch)
+
+            **⚠️ Lưu ý:**
+            - Bệnh không chữa khỏi, cần điều trị lâu dài
+            - Điều trị tùy theo mức độ, vị trí
+            - Phẫu thuật có thể chữa khỏi (khác với Crohn)
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Khi đang đợt cấp:**
+            - **Nhịn ăn:** Nhịn ăn, uống (nếu nặng)
+            - **Nuôi ăn:** Nuôi ăn tĩnh mạch hoặc qua ống
+            - **Khi đã ổn:** Ăn lỏng → Mềm → Bình thường (từ từ)
+
+            **2. Khi ổn định:**
+            - **Chế độ ăn đủ dinh dưỡng:** Đủ calo, protein, vitamin
+            - **Chia nhỏ bữa:** Ăn nhiều bữa nhỏ
+            - **Tránh:** Thức ăn gây kích thích
+
+            **3. Thực phẩm nên ăn:**
+            - Protein nạc (thịt, cá, đậu)
+            - Rau xanh, trái cây (nếu dung nạp)
+            - Ngũ cốc nguyên hạt (nếu dung nạp)
+            - Sữa chua (probiotic)
+            - Uống nhiều nước
+
+            **4. Thực phẩm nên tránh:**
+            - **Thức ăn nhiều chất xơ:** Nếu không dung nạp
+            - **Đồ cay nóng:** Kích thích ruột
+            - **Đồ chiên rán:** Khó tiêu
+            - **Sữa:** Nếu không dung nạp lactose
+            - **Rượu bia:** Có thể làm nặng
+
+            **5. Thực đơn mẫu:**
+            - **Sáng:** Cháo yến mạch + trái cây
+            - **Trưa:** Cơm + canh rau + cá/thịt nạc + rau xanh
+            - **Chiều:** Cơm + canh rau + cá/thịt nạc + rau xanh
+            - **Bữa phụ:** Trái cây, sữa chua
+
+            **6. Lưu ý:**
+            - Ghi nhật ký thức ăn để tìm yếu tố kích thích
+            - Tránh thức ăn gây triệu chứng
+            - Bổ sung vitamin, khoáng chất
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Khi đang đợt cấp:**
+            - Nghỉ ngơi
+            - Tập thể dục nhẹ (nếu có thể)
+
+            **2. Khi ổn định:**
+            - Tập thể dục đều đặn, 30 phút/ngày
+            - Giảm stress (có thể làm nặng bệnh)
+            - Yoga, thiền (thư giãn)
+
+            **3. Tránh:**
+            - Tập quá sức khi đang đợt cấp
+            - Tập khi mệt mỏi
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Corticosteroid:**
+            - **Prednisolone:** Uống đều đặn, giảm liều từ từ
+            - **Tác dụng phụ:** Tăng cân, loãng xương, tăng huyết áp
+            - **Lưu ý:** Không tự ý ngừng (nguy hiểm!)
+
+            **2. 5-ASA:**
+            - **Mesalamine:** Uống, đặt hậu môn
+            - **Uống đều đặn:** Theo chỉ định bác sĩ
+
+            **3. Immunosuppressant:**
+            - **Azathioprine, 6-MP:** Uống đều đặn
+            - **Tác dụng phụ:** Giảm bạch cầu, nhiễm trùng
+            - **Lưu ý:** Xét nghiệm máu định kỳ
+
+            **4. Biological:**
+            - **Infliximab, Adalimumab:** Tiêm, theo chỉ định
+            - **Tác dụng phụ:** Nhiễm trùng, phản ứng dị ứng
+            - **Lưu ý:** Theo dõi sát
+
+            **5. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Không tự ý ngừng thuốc
+            - Báo bác sĩ nếu có tác dụng phụ
+            - Xét nghiệm máu định kỳ
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Đợt cấp nặng:**
+            - Tiêu chảy nhiều, có máu
+            - Đau bụng dữ dội
+            - Sốt cao
+            - **Cấp cứu ngay!**
+
+            **2. Biến chứng:**
+            - Megacolon độc (đau bụng dữ dội, sốt, chướng bụng)
+            - Thủng đại tràng (đau bụng dữ dội, sốt)
+            - Xuất huyết nặng (mất máu nhiều)
+            - **Cấp cứu ngay!**
+
+            **3. Tác dụng phụ:**
+            - Sốt, ớn lạnh (nhiễm trùng)
+            - Phát ban, ngứa (dị ứng)
+            - Khó thở
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Chế độ ăn:**
+            - Ăn đủ dinh dưỡng
+            - Tránh thức ăn gây kích thích
+            - Ghi nhật ký thức ăn
+
+            **2. Quản lý stress:**
+            - Stress có thể làm nặng bệnh
+            - Thư giãn, yoga, thiền
+
+            **3. Tránh:**
+            - NSAID (có thể làm nặng)
+            - Nhiễm trùng
+
+            **4. Theo dõi:**
+            - Nội soi định kỳ (tầm soát ung thư)
+            - Xét nghiệm máu định kỳ
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Khi bị viêm loét đại tràng:**
+            - Điều trị đều đặn, lâu dài
+            - Tuân thủ điều trị
+            - Theo dõi định kỳ
+
+            **2. Sống tích cực:**
+            - Bệnh không chữa khỏi nhưng có thể kiểm soát
+            - Điều trị đúng → Giảm triệu chứng, biến chứng
+            - Có thể sống bình thường
+            - Phẫu thuật có thể chữa khỏi (nếu cần)
+
+            **3. Hỗ trợ:**
+            - Tham gia nhóm hỗ trợ
+            - Giáo dục gia đình
+            - Tư vấn tâm lý (nếu cần)
+
+            **4. Lâu dài:**
+            - Cần điều trị lâu dài
+            - Theo dõi định kỳ
+            - Tầm soát ung thư đại tràng (nếu viêm lâu dài)
+            """,
+            related_disease="ulcerative_colitis",
+            related_drugs=["Prednisolone", "Mesalamine", "Azathioprine", "Infliximab", "Adalimumab"],
+            printable=True
+        ),
+
 ]

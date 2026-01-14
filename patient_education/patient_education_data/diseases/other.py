@@ -919,4 +919,253 @@ OTHER_TOPICS = [
             printable=True
         ),
 
+        PatientEducationTopic(
+            id="behcet_disease_basics",
+            title="Understanding Behçet's Disease",
+            title_vn="Hiểu về Bệnh Behçet",
+            category="Disease",
+            content="""
+            # Hiểu về Bệnh Behçet
+
+            ## Bệnh Behçet là gì?
+
+            Bệnh Behçet là bệnh viêm mạch máu mạn tính, hiếm gặp, đặc trưng bởi loét miệng, loét sinh dục, và viêm mắt. Bệnh có thể ảnh hưởng đến nhiều cơ quan, bao gồm da, khớp, hệ thần kinh, và mạch máu.
+
+            **⚠️ Đặc điểm:**
+            - Viêm mạch máu mạn tính
+            - Hiếm gặp
+            - Đặc trưng: Loét miệng, loét sinh dục, viêm mắt
+            - Ảnh hưởng nhiều cơ quan
+            - Bệnh tự miễn, không chữa khỏi
+
+            **Phân loại:**
+            - **Theo mức độ:**
+              - Nhẹ: Chỉ loét miệng, sinh dục
+              - Trung bình: Có viêm mắt, da, khớp
+              - Nặng: Có viêm mạch máu, thần kinh
+
+            **Phổ biến:**
+            - Phổ biến ở Thổ Nhĩ Kỳ, Trung Đông, Nhật Bản
+            - Hiếm ở Việt Nam
+
+            ## Triệu chứng:
+
+            **Triệu chứng điển hình:**
+            - **Loét miệng:** Loét miệng tái phát, đau (100%)
+            - **Loét sinh dục:** Loét sinh dục, đau (60-80%)
+            - **Viêm mắt:** Viêm màng bồ đào, đỏ mắt, giảm thị lực (50-70%)
+            - **Tổn thương da:** Nốt đỏ, mụn mủ, viêm nang lông (50-80%)
+            - **Viêm khớp:** Đau khớp, sưng khớp (50%)
+
+            **Triệu chứng khác:**
+            - **Viêm mạch máu:** Viêm tĩnh mạch, động mạch
+            - **Viêm hệ thần kinh:** Đau đầu, lú lẫn, co giật
+            - **Viêm ruột:** Đau bụng, tiêu chảy
+            - **Sốt:** Sốt nhẹ (khi đang đợt cấp)
+
+            **⚠️ Biến chứng:**
+            - **Mù:** Nếu viêm mắt nặng, không điều trị
+            - **Tổn thương thần kinh:** Nếu viêm hệ thần kinh
+            - **Tắc mạch máu:** Nếu viêm mạch máu nặng
+
+            ## Nguyên nhân:
+
+            **1. Nguyên nhân chưa rõ hoàn toàn:**
+            - Có nhiều yếu tố
+
+            **2. Yếu tố:**
+            - **Tự miễn:** Hệ miễn dịch tấn công mạch máu
+            - **Di truyền:** HLA-B51 (tăng nguy cơ)
+            - **Nhiễm trùng:** Có thể kích hoạt bệnh
+            - **Môi trường:** Có thể đóng vai trò
+
+            **3. Yếu tố nguy cơ:**
+            - **Tuổi:** 20-40 tuổi (phổ biến nhất)
+            - **Giới tính:** Nam (nặng hơn)
+            - **Di truyền:** HLA-B51
+            - **Địa lý:** Thổ Nhĩ Kỳ, Trung Đông, Nhật Bản
+
+            ## Chẩn đoán:
+
+            **Chẩn đoán lâm sàng:**
+            - Triệu chứng điển hình
+            - Khám da, mắt, khớp
+
+            **Tiêu chuẩn chẩn đoán (ICBD):**
+            - **Loét miệng:** Tái phát ≥ 3 lần/năm
+            - **Loét sinh dục:** Tái phát
+            - **Viêm mắt:** Viêm màng bồ đào
+            - **Tổn thương da:** Nốt đỏ, mụn mủ
+            - **Test Pathergy:** Dương tính (chích da → mụn mủ sau 24-48 giờ)
+
+            **Xét nghiệm:**
+            - **Xét nghiệm máu:**
+              - Tăng bạch cầu, CRP (dấu hiệu viêm)
+              - HLA-B51 (nếu có)
+            - **Chẩn đoán hình ảnh:**
+              - MRI não (nếu viêm hệ thần kinh)
+              - Siêu âm mạch máu (nếu viêm mạch máu)
+
+            **⚠️ Phân biệt:**
+            - Viêm loét miệng tái phát
+            - Bệnh Crohn
+            - Viêm khớp dạng thấp
+
+            ## Điều trị:
+
+            **1. Điều trị loét miệng, sinh dục:**
+            - **Topical:** Corticosteroid, thuốc gây tê
+            - **Colchicine:** Giảm tái phát
+            - **Thalidomide:** Nếu nặng (thận trọng!)
+
+            **2. Điều trị viêm mắt:**
+            - **Corticosteroid:** Tiêm mắt, uống
+            - **Immunosuppressant:**
+              - **Azathioprine:** Phổ biến
+              - **Cyclosporine:** Nếu nặng
+              - **Methotrexate:** Thay thế
+            - **Biological:**
+              - **Infliximab, Adalimumab:** Nếu không đáp ứng
+
+            **3. Điều trị viêm khớp:**
+            - **NSAID:** Ibuprofen, Naproxen
+            - **Colchicine:** Giảm viêm
+            - **Corticosteroid:** Nếu nặng
+
+            **4. Điều trị viêm mạch máu, thần kinh:**
+            - **Corticosteroid:** Liều cao
+            - **Cyclophosphamide:** Nếu nặng
+            - **Biological:** Infliximab
+
+            **⚠️ Lưu ý:**
+            - Bệnh không chữa khỏi, cần điều trị lâu dài
+            - Điều trị tùy theo mức độ, cơ quan bị ảnh hưởng
+            - Viêm mắt cần điều trị ngay (tránh mù)
+
+            ## 🍽️ CHẾ ĐỘ ĂN:
+
+            **1. Khi có loét miệng:**
+            - **Thức ăn mềm:** Cháo, súp, sữa
+            - **Tránh:** Đồ cay nóng, cứng, chua
+
+            **2. Khi ổn định:**
+            - **Chế độ ăn đủ dinh dưỡng:** Đủ calo, protein, vitamin
+            - **Chống viêm:** Cá béo, rau xanh, trái cây
+
+            **3. Thực phẩm nên ăn:**
+            - Protein nạc (thịt, cá, đậu)
+            - Rau xanh, trái cây
+            - Ngũ cốc nguyên hạt
+            - Uống nhiều nước
+
+            **4. Thực phẩm nên tránh:**
+            - **Đồ cay nóng:** Kích thích loét
+            - **Đồ cứng:** Làm tổn thương loét
+            - **Rượu bia:** Có thể làm nặng
+
+            ## 🏃 TẬP THỂ DỤC:
+
+            **1. Khi đang đợt cấp:**
+            - Nghỉ ngơi
+            - Tập thể dục nhẹ (nếu có thể)
+
+            **2. Khi ổn định:**
+            - Tập thể dục đều đặn, 30 phút/ngày
+            - Đi bộ, bơi lội, yoga
+
+            **3. Tránh:**
+            - Tập quá sức khi đang đợt cấp
+            - Tập khi đau khớp nặng
+
+            ## 💊 QUẢN LÝ THUỐC:
+
+            **1. Colchicine:**
+            - **Uống đều đặn:** Giảm tái phát loét
+            - **Tác dụng phụ:** Tiêu chảy, buồn nôn
+            - **Lưu ý:** Uống với thức ăn
+
+            **2. Corticosteroid:**
+            - **Prednisolone:** Uống đều đặn, giảm liều từ từ
+            - **Tác dụng phụ:** Tăng cân, loãng xương, tăng huyết áp
+            - **Lưu ý:** Không tự ý ngừng (nguy hiểm!)
+
+            **3. Immunosuppressant:**
+            - **Azathioprine, Cyclosporine:** Uống đều đặn
+            - **Tác dụng phụ:** Giảm bạch cầu, nhiễm trùng, tổn thương gan, thận
+            - **Lưu ý:** Xét nghiệm máu định kỳ
+
+            **4. Biological:**
+            - **Infliximab, Adalimumab:** Tiêm, theo chỉ định
+            - **Tác dụng phụ:** Nhiễm trùng, phản ứng dị ứng
+            - **Lưu ý:** Theo dõi sát
+
+            **5. Lưu ý:**
+            - Uống đúng liều, đúng giờ
+            - Không tự ý ngừng thuốc
+            - Báo bác sĩ nếu có tác dụng phụ
+            - Xét nghiệm máu định kỳ
+
+            ## 🚨 KHI NÀO CẦN ĐẾN BỆNH VIỆN:
+
+            **1. Viêm mắt:**
+            - Đỏ mắt, đau mắt
+            - Giảm thị lực
+            - **Cấp cứu ngay!** (tránh mù)
+
+            **2. Viêm hệ thần kinh:**
+            - Đau đầu dữ dội
+            - Lú lẫn, co giật
+            - **Cấp cứu ngay!**
+
+            **3. Viêm mạch máu:**
+            - Đau, sưng tay/chân
+            - Tắc mạch máu
+            - **Cấp cứu ngay!**
+
+            **4. Tác dụng phụ:**
+            - Sốt, ớn lạnh (nhiễm trùng)
+            - Phát ban, ngứa (dị ứng)
+            - Khó thở
+
+            ## 💡 PHÒNG NGỪA:
+
+            **1. Điều trị đều đặn:**
+            - Uống thuốc đều đặn
+            - Giảm tái phát
+
+            **2. Tránh:**
+            - Chấn thương (có thể kích hoạt test Pathergy)
+            - Nhiễm trùng
+
+            **3. Theo dõi:**
+            - Khám mắt định kỳ (nếu có viêm mắt)
+            - Xét nghiệm máu định kỳ
+
+            ## 💡 LỜI KHUYÊN THỰC TẾ:
+
+            **1. Khi bị bệnh Behçet:**
+            - Điều trị đều đặn, lâu dài
+            - Tuân thủ điều trị
+            - Theo dõi định kỳ
+
+            **2. Viêm mắt:**
+            - **Điều trị ngay!** (quan trọng nhất!)
+            - Khám mắt định kỳ
+            - Tránh mù
+
+            **3. Sống tích cực:**
+            - Bệnh không chữa khỏi nhưng có thể kiểm soát
+            - Điều trị đúng → Giảm triệu chứng, biến chứng
+            - Có thể sống bình thường
+
+            **4. Lâu dài:**
+            - Cần điều trị lâu dài
+            - Theo dõi định kỳ
+            - Khám mắt định kỳ (nếu có viêm mắt)
+            """,
+            related_disease="behcet_disease",
+            related_drugs=["Colchicine", "Prednisolone", "Azathioprine", "Cyclosporine", "Infliximab", "Adalimumab", "Ibuprofen"],
+            printable=True
+        ),
+
 ]

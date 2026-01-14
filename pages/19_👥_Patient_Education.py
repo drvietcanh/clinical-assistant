@@ -5,7 +5,7 @@ Educational materials for patients in simple language
 
 import streamlit as st
 from utils.page_helper import setup_page, render_standard_footer
-from components.ui import render_info_box, render_hero, get_paginated_items
+from components.ui import render_info_box
 from components.page_sidebar import render_standard_sidebar
 from patient_education.data import (
     get_all_topics,
@@ -13,6 +13,15 @@ from patient_education.data import (
     get_category_list
 )
 from patient_education.display import render_patient_education_content
+from components.patient_education import (
+    render_topic_grid,
+    render_enhanced_search,
+    render_category_filters,
+    render_enhanced_content,
+    render_related_topics,
+    render_hero_section,
+    filter_topics_by_search
+)
 
 # Standard page setup
 setup_page(
@@ -31,8 +40,8 @@ filters = render_standard_sidebar(
         "view_mode": {
             "type": "radio",
             "label": "Chế độ xem:",
-            "options": ["Tất cả", "Theo chủ đề"],
-            "default": "Tất cả",
+            "options": ["Thẻ", "Danh sách"],
+            "default": "Thẻ",
             "key": "patient_edu_view_mode"
         },
         "category": {
@@ -41,7 +50,6 @@ filters = render_standard_sidebar(
             "options": ["Tất cả"] + get_category_list(),
             "default": "Tất cả",
             "key": "patient_edu_category_filter",
-            "conditional": "view_mode == 'Theo chủ đề'"
         }
     },
     info_text="""
@@ -58,66 +66,130 @@ filters = render_standard_sidebar(
     """
 )
 
-view_mode = filters.get("view_mode", "Tất cả")
-category_filter = filters.get("category", "Tất cả") if view_mode == "Theo chủ đề" else None
+view_mode = filters.get("view_mode", "Thẻ")
+category_filter = filters.get("category", "Tất cả")
 
 # ========== MAIN CONTENT ==========
 
-# Simplified header to avoid any raw HTML issues
-st.markdown("### 👥 Giáo dục Bệnh nhân")
-st.caption(
-    "Tài liệu giáo dục bệnh nhân với ngôn ngữ đơn giản, dễ hiểu. "
-    "Giúp bệnh nhân hiểu rõ hơn về bệnh tật, thuốc men, và cách chăm sóc sức khỏe."
-)
+# Hero Section
+all_topics = get_all_topics()
+render_hero_section(all_topics, show_featured=True)
 
-# Search
-search_query = st.text_input(
-    "🔍 Tìm kiếm tài liệu:",
-    placeholder="Ví dụ: Đái tháo đường, Tăng huyết áp, Kháng sinh...",
+# Search Section
+st.markdown("### 🔍 Tìm kiếm")
+search_query = render_enhanced_search(
+    all_topics,
+    placeholder="Tìm kiếm bệnh, thuốc, hướng dẫn...",
+    show_filters=True,
+    show_suggestions=True,
     key="patient_edu_search"
 )
 
-# Get topics
-if view_mode == "Theo chủ đề":
-    category = None if category_filter == "Tất cả" else category_filter
-    topics = get_topics_by_category(category)
-else:
-    topics = get_all_topics()
+# Category Filters
+st.markdown("---")
+selected_category = render_category_filters(
+    all_topics,
+    active_category=None if category_filter == "Tất cả" else category_filter,
+    show_counts=True,
+    key="patient_edu_category_buttons"
+)
 
-# Filter by search
-if search_query:
-    search_lower = search_query.lower()
-    topics = [t for t in topics if 
-              search_lower in t.title.lower() or 
-              search_lower in t.title_vn.lower() or
-              search_lower in t.content.lower()]
+# Use selected category from buttons or sidebar
+if selected_category is not None:
+    category_filter = selected_category
+
+# Get topics based on filters
+if category_filter == "Tất cả":
+    topics = get_all_topics()
+else:
+    topics = get_topics_by_category(category_filter)
+
+# Apply search filter
+if search_query and search_query.strip():
+    topics = filter_topics_by_search(topics, search_query)
 
 # Display topics
+st.markdown("---")
+st.markdown("### 📚 Tài liệu")
+
 if topics:
-    # Use pagination
-    paginated_topics = get_paginated_items(topics, items_per_page=10, page_key="patient_edu_page")
+    # Show stats
+    st.info(f"📊 Tìm thấy **{len(topics)}** tài liệu" + (f" cho '{search_query}'" if search_query else ""))
     
-    render_info_box(
-        f"Tìm thấy {len(topics)} tài liệu",
-        type="success",
-        title="Kết quả"
-    )
+    st.markdown("")
     
-    for topic in paginated_topics:
-        with st.expander(f"**{topic.title_vn}** ({topic.category})", expanded=False):
-            render_patient_education_content(topic)
-            
-            # Print button
-            if topic.printable:
-                st.markdown("---")
-                render_info_box(
-                    "Bạn có thể in tài liệu này để phát cho bệnh nhân. Nhấn Ctrl+P hoặc Cmd+P để in.",
-                    type="info",
-                    icon="🖨️"
+    # View mode: Cards or List
+    if view_mode == "Thẻ":
+        # Card grid layout
+        # Determine columns based on screen size (responsive)
+        cols = 3  # Default for desktop
+        
+        render_topic_grid(
+            topics,
+            columns=cols,
+            show_preview=True,
+            search_query=search_query
+        )
+        
+        # Add expandable content below for detailed view
+        st.markdown("---")
+        st.markdown("### 📖 Xem chi tiết")
+        st.caption("Chọn tài liệu bên dưới để xem nội dung đầy đủ:")
+        
+        # Show topics in expanders for detailed view
+        for topic in topics:
+            with st.expander(f"**{topic.title_vn}** ({topic.category})", expanded=False):
+                # Use enhanced content viewer
+                render_enhanced_content(
+                    topic,
+                    show_toc=True,
+                    show_progress=True,
+                    search_query=search_query
                 )
+                
+                # Related topics
+                render_related_topics(topic, all_topics)
+                
+                # Related resources
+                render_patient_education_content(topic)
+                
+                # Print button
+                if topic.printable:
+                    st.markdown("---")
+                    render_info_box(
+                        "Bạn có thể in tài liệu này để phát cho bệnh nhân. Nhấn Ctrl+P hoặc Cmd+P để in.",
+                        type="info",
+                        icon="🖨️"
+                    )
+    else:
+        # List view with expanders (original)
+        for topic in topics:
+            with st.expander(f"**{topic.title_vn}** ({topic.category})", expanded=False):
+                # Use enhanced content viewer
+                render_enhanced_content(
+                    topic,
+                    show_toc=True,
+                    show_progress=False,
+                    search_query=search_query
+                )
+                
+                # Related topics
+                render_related_topics(topic, all_topics)
+                
+                # Original content
+                render_patient_education_content(topic)
+                
+                # Print button
+                if topic.printable:
+                    st.markdown("---")
+                    render_info_box(
+                        "Bạn có thể in tài liệu này để phát cho bệnh nhân. Nhấn Ctrl+P hoặc Cmd+P để in.",
+                        type="info",
+                        icon="🖨️"
+                    )
 else:
     render_info_box(
-        "Không tìm thấy tài liệu. Vui lòng thử lại với từ khóa khác.",
+        "Không tìm thấy tài liệu. Vui lòng thử lại với từ khóa khác hoặc chọn chủ đề khác.",
         type="warning"
     )
 
@@ -145,4 +217,3 @@ st.markdown("""
 
 # Footer
 render_standard_footer(disclaimer=True)
-
