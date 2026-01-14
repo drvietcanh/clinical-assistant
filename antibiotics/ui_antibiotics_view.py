@@ -3,11 +3,20 @@ Antibiotics UI View Component
 Modern UI for displaying antibiotic protocols with filters and cards
 """
 
-import streamlit as st
+import json
+import time
 from typing import List, Optional
+
+import streamlit as st
+
 from .protocols_schema import (
-    AntibioticProtocol, ProtocolCollection,
-    InfectionSite, Severity, Setting, RegimenType, RecommendationLevel
+    AntibioticProtocol,
+    ProtocolCollection,
+    InfectionSite,
+    Severity,
+    Setting,
+    RegimenType,
+    RecommendationLevel,
 )
 from .protocols_data import get_antibiotic_protocols
 from .vietnamese_terms import get_vietnamese_label, COMMON_TERMS_VI
@@ -32,6 +41,27 @@ from .antibiogram import (
 from .components.badges import render_badge, BadgeType, BadgeSize
 from .components.typography import render_guideline_badge, render_indication_text
 from .protocol_versioning import get_protocol_version_info
+
+
+#region agent log
+def _agent_debug_log_ab(hypothesis_id: str, message: str, data: dict) -> None:
+    """Lightweight NDJSON logger for antibiotics debug-session."""
+    try:
+        payload = {
+            "sessionId": "debug-session",
+            "runId": "pre-fix-ab",
+            "hypothesisId": hypothesis_id,
+            "location": "antibiotics/ui_antibiotics_view.py",
+            "message": message,
+            "data": data,
+            "timestamp": int(time.time() * 1000),
+        }
+        with open(r"d:\1app\medical\.cursor\debug.log", "a", encoding="utf-8") as f:
+            f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+    except Exception:
+        # Never break UI due to logging
+        pass
+#endregion
 
 
 def render_protocol_card(protocol: AntibioticProtocol, key_prefix: str = ""):
@@ -506,6 +536,18 @@ def render_antibiotics_by_infection_view():
     )
     
     protocols_collection = get_antibiotic_protocols()
+
+    #region agent log
+    _agent_debug_log_ab(
+        "H_ab_state",
+        "render_antibiotics_by_infection_view entry",
+        {
+            "has_protocols": bool(protocols_collection and protocols_collection.protocols),
+            "session_keys": list(getattr(st.session_state, "keys", lambda: [])()),
+            "ab_search_protocols": st.session_state.get("ab_search_protocols", None),
+        },
+    )
+    #endregion
     
     # Wizard button (prominent on mobile)
     col_wiz1, col_wiz2, col_wiz3 = st.columns([1, 2, 1])
@@ -523,12 +565,32 @@ def render_antibiotics_by_infection_view():
         return
     
     # Enhanced search bar with autocomplete suggestions
+    # Use a separate widget key to avoid directly mutating widget-managed session_state
+    current_search_state = st.session_state.get("ab_search_protocols", "")
     search_query = st.text_input(
         COMMON_TERMS_VI.get("Search protocols", "🔍 Tìm kiếm phác đồ"),
-        placeholder=COMMON_TERMS_VI.get("Search by infection, drug, or guideline...", "Tìm theo nhiễm trùng, thuốc hoặc hướng dẫn..."),
-        key="ab_search_protocols",
-        help="Tìm kiếm theo tên nhiễm trùng, tên thuốc, hoặc nguồn hướng dẫn"
+        value=current_search_state,
+        placeholder=COMMON_TERMS_VI.get(
+            "Search by infection, drug, or guideline...",
+            "Tìm theo nhiễm trùng, thuốc hoặc hướng dẫn...",
+        ),
+        key="ab_search_protocols_input",
+        help="Tìm kiếm theo tên nhiễm trùng, tên thuốc, hoặc nguồn hướng dẫn",
     )
+
+    # Mirror widget value into our own state key (not bound to any widget)
+    st.session_state.ab_search_protocols = search_query
+
+    #region agent log
+    _agent_debug_log_ab(
+        "H_ab_state",
+        "After search_input",
+        {
+            "search_query": search_query,
+            "ab_search_protocols": st.session_state.get("ab_search_protocols", None),
+        },
+    )
+    #endregion
     
     # Quick filter chips (only show when no search query)
     if not search_query:
@@ -602,6 +664,20 @@ def render_antibiotics_by_infection_view():
                 """
                 
                 if st.button(f"{icon} {label}", key=chip_key, use_container_width=True):
+                    #region agent log
+                    _agent_debug_log_ab(
+                        "H_ab_state",
+                        "Quick filter chip clicked",
+                        {
+                            "chip_value": value,
+                            "prev_ab_search_protocols": st.session_state.get(
+                                "ab_search_protocols", None
+                            ),
+                        },
+                    )
+                    #endregion
+
+                    # Update our own state key (safe, not a widget key)
                     st.session_state.ab_search_protocols = value
                     st.rerun()
         

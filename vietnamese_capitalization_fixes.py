@@ -175,7 +175,7 @@ VIETNAMESE_CAPITALIZATION_FIXES = {
     # ========== OTHER ==========
     "Cai Rượu Cấp": "Cai rượu cấp",
     "Giao Thức Cấp cứu Điện Giải": "Giao thức cấp cứu điện giải",
-    "Máy Tính Giao Thức": "Máy tính giao thức",
+    "Máy Tính Giao Thức": "Tính toán giao thức",
     "Giải thích Chuyên Sâu Các Thuật Ngữ": "Giải thích chuyên sâu các thuật ngữ",
     "Suy Thận Cấp": "Suy thận cấp",
     "Suy Thận Cấp Tiền Thận": "Suy thận cấp tiền thận",

@@ -160,10 +160,11 @@ def render_specialty_group(group_id: str, group_info: dict, specialty_grouping: 
     expander_label = f"{group_icon} **{group_name}** ({len(all_calculators)} calculators)"
     
     # Render group header
+    # Note: `st.expander` does not support `key` in some Streamlit versions,
+    # so we avoid passing a key here to prevent TypeError.
     with st.expander(
         expander_label,
         expanded=group_info.get("default_expanded", False),
-        key=f"group_{group_id}"
     ):
         st.caption(group_info.get("description", ""))
         

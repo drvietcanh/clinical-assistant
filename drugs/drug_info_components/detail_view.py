@@ -6,7 +6,13 @@ import html
 import re
 import textwrap
 from ..drug_database import DRUG_DATABASE
-from ..formulary_vn import get_formulary_info
+# Formulary VN integration is optional – provide safe fallback if import fails
+try:
+    from ..formulary_vn import get_formulary_info  # type: ignore
+except ImportError:  # pragma: no cover - defensive fallback
+    def get_formulary_info(drug_name: str):
+        """Fallback when VN formulary module is not available."""
+        return None
 from drugs.references_config import get_drug_references
 from components.references import render_references_section
 
