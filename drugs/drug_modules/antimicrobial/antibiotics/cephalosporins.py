@@ -111,10 +111,10 @@ CEPHALOSPORIN_ANTIBIOTICS = {
             },
         },
         "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Không cần điều chỉnh liều",
-            "severe": "Không cần điều chỉnh liều (thải trừ chủ yếu qua thận)",
-            "notes": "",
+            "mild": "Không cần điều chỉnh liều. Cefazolin không chuyển hóa qua gan, thải trừ chủ yếu qua thận.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Cefazolin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (80-100% bài tiết nguyên dạng). Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận.",
+            "notes": "Cefazolin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (80-100% bài tiết nguyên dạng). Không cần điều chỉnh liều ở suy gan. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
         },
         "overdose_management": {
             "symptoms": [
@@ -288,34 +288,49 @@ CEPHALOSPORIN_ANTIBIOTICS = {
         },
         "pregnancy_lactation": {
             "fda_category": "B",
-            "pregnancy_details": "Cefepime là thuốc phân loại B. An toàn trong thai kỳ.",
+            "pregnancy_details": "Cefepime là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật thai nhi. Không có nghiên cứu đầy đủ trên phụ nữ có thai, nhưng cefepime được sử dụng trong thai kỳ và có vẻ an toàn. Cephalosporin nói chung được coi là an toàn trong thai kỳ. Có thể dùng khi lợi ích vượt quá nguy cơ, đặc biệt trong nhiễm khuẩn nặng.",
             "lactation": {
                 "safety": "Compatible",
-                "details": "Cefepime bài tiết vào sữa mẹ ở nồng độ thấp. An toàn khi cho con bú.",
-                "recommendation": "Có thể dùng khi cho con bú.",
+                "details": "Cefepime bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ. Nồng độ trong sữa mẹ thấp và không đáng kể.",
+                "recommendation": "Có thể dùng khi cho con bú. Cefepime bài tiết vào sữa mẹ ở nồng độ thấp và không gây tác dụng phụ ở trẻ bú mẹ."
             },
         },
         "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Không cần điều chỉnh liều",
-            "severe": "Không cần điều chỉnh liều (thải trừ chủ yếu qua thận)",
-            "notes": "",
+            "mild": "Không cần điều chỉnh liều. Cefepime thải trừ chủ yếu qua thận, không phụ thuộc vào chức năng gan.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Cefepime thải trừ chủ yếu qua thận (85% bài tiết nguyên dạng), không tích lũy ở suy gan. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận.",
+            "notes": "Cefepime thải trừ chủ yếu qua thận (85% bài tiết nguyên dạng), chỉ một phần nhỏ chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
         },
         "overdose_management": {
             "symptoms": [
-                "Co giật (đặc biệt ở suy thận nặng)",
-                "Rối loạn thần kinh (lú lẫn, kích động)",
-                "Phản ứng dị ứng nặng"
-    ],
-            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+                "Triệu chứng thần kinh: Co giật (đặc biệt ở suy thận nặng), rối loạn thần kinh (lú lẫn, kích động)",
+                "Triệu chứng dị ứng: Phát ban, phù mạch, sốc phản vệ",
+                "Triệu chứng thận: Suy thận cấp, tăng creatinine (hiếm với liều thông thường)",
+                "Triệu chứng tiêu hóa: Tiêu chảy, buồn nôn, nôn",
+                "Triệu chứng da: Phát ban, mày đay"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho quá liều cefepime. Điều trị hỗ trợ và điều trị triệu chứng.",
             "treatment": [
-                "Ngừng cefepime",
-                "Điều trị co giật nếu có: Benzodiazepine",
-                "Điều trị dị ứng nếu có: Epinephrine, antihistamine, corticosteroid",
-                "Lọc máu nếu suy thận nặng",
-                "Theo dõi chức năng thận, thần kinh"
-    ],
-            "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng thận, thần kinh trong 24-48 giờ.",
+                "Ngừng ngay cefepime nếu đang truyền",
+                "Điều trị co giật (QUAN TRỌNG, đặc biệt ở suy thận nặng):",
+                "  - Benzodiazepine (diazepam 5-10mg IV, lorazepam 2-4mg IV) - điều trị chính",
+                "  - Nếu không đáp ứng: Phenytoin, phenobarbital",
+                "  - Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Điều trị rối loạn thần kinh (lú lẫn, kích động):",
+                "  - Hỗ trợ tâm lý, an ủi bệnh nhân",
+                "  - Theo dõi chặt chẽ, thường tự hồi phục sau khi ngừng thuốc",
+                "Điều trị dị ứng nếu có:",
+                "  - Epinephrine nếu sốc phản vệ",
+                "  - Antihistamine, corticosteroid",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "Điều trị suy thận cấp nếu có:",
+                "  - Bù dịch đầy đủ",
+                "  - Điều chỉnh điện giải",
+                "  - Lọc máu nếu cần (hemodialysis có thể loại bỏ cefepime)",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis có thể loại bỏ cefepime nếu suy thận nặng"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn (huyết áp, nhịp tim, nhịp thở, SpO2) liên tục trong ít nhất 24-48 giờ sau khi ngừng cefepime. Đặc biệt theo dõi dấu hiệu co giật và rối loạn thần kinh (nguy cơ cao ở suy thận nặng). Theo dõi chức năng thận, dấu hiệu dị ứng. Theo dõi lâu hơn nếu có biến chứng (co giật, độc tính thần kinh, suy thận)."
         },
         "reversal_agents": None,
         "administration_instructions": {
@@ -343,11 +358,14 @@ CEPHALOSPORIN_ANTIBIOTICS = {
             "primary_sources": [
                 "FDA Drug Label - Cefepime (Maxipime)",
                 "IDSA Guidelines - Hospital-Acquired Pneumonia",
+                "IDSA Guidelines - Ventilator-Associated Pneumonia",
+                "IDSA Guidelines - Complicated Urinary Tract Infections",
                 "UpToDate - Cefepime: Drug Information",
-                "Medscape - Cefepime Drug Reference"
-    ],
+                "Medscape - Cefepime Drug Reference",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
+            ],
             "last_updated": "2025-02-18",
-            "evidence_level": "A",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         },
         "risk_flags": {
             "high_alert": True,
@@ -503,10 +521,10 @@ CEPHALOSPORIN_ANTIBIOTICS = {
             },
         },
         "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Không cần điều chỉnh liều",
-            "severe": "Thận trọng (thải trừ một phần qua gan)",
-            "notes": "",
+            "mild": "Không cần điều chỉnh liều. Ceftriaxone thải trừ qua cả gan và thận, không tích lũy ở suy gan nhẹ.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Thận trọng. Ceftriaxone thải trừ một phần qua gan (40-50%), một phần qua thận (50-60%). Suy gan nặng có thể làm giảm thải trừ qua gan, nhưng thải trừ qua thận vẫn đủ để không cần điều chỉnh liều. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần theo dõi chức năng thận.",
+            "notes": "Ceftriaxone thải trừ qua cả gan (40-50%) và thận (50-60%), không tích lũy ở suy gan hoặc suy thận đơn độc. Không cần điều chỉnh liều ở suy gan hoặc suy thận. Đây là ưu điểm của ceftriaxone so với các cephalosporin khác."
         },
         "overdose_management": {
             "symptoms": [
@@ -681,10 +699,10 @@ CEPHALOSPORIN_ANTIBIOTICS = {
             },
         },
         "hepatic_adjustment": {
-            "mild": "Không cần điều chỉnh liều",
-            "moderate": "Không cần điều chỉnh liều",
-            "severe": "Không cần điều chỉnh liều (thải trừ chủ yếu qua thận)",
-            "notes": "",
+            "mild": "Không cần điều chỉnh liều. Cephalexin không chuyển hóa qua gan, thải trừ chủ yếu qua thận.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Cephalexin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (80-90% bài tiết nguyên dạng). Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận.",
+            "notes": "Cephalexin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (80-90% bài tiết nguyên dạng). Không cần điều chỉnh liều ở suy gan. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
         },
         "overdose_management": {
             "symptoms": [

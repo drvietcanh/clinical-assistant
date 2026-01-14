@@ -113,28 +113,95 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
         "last_updated": "2025-02-18",
         "drug_interactions": {
             "major": [],
-            "moderate": [],
+            "moderate": [
+                {
+                    "drug": "Vancomycin",
+                    "mechanism": "Cả hai đều có độc tính thận, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ độc thận",
+                    "management": "Theo dõi chức năng thận chặt chẽ (creatinine, BUN). Có thể cần giảm liều hoặc tăng khoảng cách giữa các liều."
+                },
+                {
+                    "drug": "Furosemide",
+                    "mechanism": "Furosemide làm tăng nồng độ aminoglycoside trong tai trong, tăng độc tính thần kinh thính giác",
+                    "effect": "Tăng nguy cơ độc thận và độc thính giác",
+                    "management": "TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi chức năng thận và thính giác chặt chẽ."
+                },
+                {
+                    "drug": "Cisplatin",
+                    "mechanism": "Cả hai đều có độc tính thận, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ độc thận",
+                    "management": "Theo dõi chức năng thận chặt chẽ. Có thể cần giảm liều hoặc tăng khoảng cách giữa các liều."
+                }
+            ],
             "minor": []
         },
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
-            "lactation_details": ""
+            "fda_category": "D",
+            "pregnancy_details": "Amikacin là thuốc phân loại D - có nguy cơ gây độc cho thai nhi. Aminoglycoside có thể gây độc tính thận và thần kinh thính giác ở thai nhi. Các nghiên cứu trên động vật cho thấy độc tính thận và thần kinh. Không nên dùng trong thai kỳ trừ khi lợi ích vượt quá nguy cơ rõ ràng và không có lựa chọn thay thế an toàn hơn. Nếu phải dùng, cần TDM chặt chẽ và theo dõi chức năng thận.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Amikacin bài tiết vào sữa mẹ ở nồng độ thấp. Hấp thu qua đường tiêu hóa kém, nên nồng độ trong máu trẻ bú mẹ thường rất thấp. Tuy nhiên, có thể gây thay đổi hệ vi khuẩn đường ruột ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú. Amikacin bài tiết vào sữa mẹ ở nồng độ thấp và hấp thu kém qua đường tiêu hóa, nên không gây độc tính đáng kể ở trẻ bú mẹ. Theo dõi trẻ về dấu hiệu tiêu chảy hoặc thay đổi hệ vi khuẩn đường ruột."
+            }
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": ""
+            "mild": "Không cần điều chỉnh liều. Amikacin không chuyển hóa qua gan, thải trừ chủ yếu qua thận.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Amikacin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (90-100% bài tiết nguyên dạng). Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận.",
+            "notes": "Amikacin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (90-100% bài tiết nguyên dạng). Không cần điều chỉnh liều ở suy gan. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
         },
         "overdose_management": {
-            "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "symptoms": [
+                "Triệu chứng thận: Suy thận cấp, tăng creatinine, giảm lượng nước tiểu, protein niệu",
+                "Triệu chứng thần kinh thính giác: Ù tai, giảm thính lực, điếc (có thể không hồi phục)",
+                "Triệu chứng tiền đình: Chóng mặt, mất thăng bằng, rung giật nhãn cầu",
+                "Triệu chứng thần kinh-cơ: Yếu cơ, khó thở (block thần kinh-cơ)",
+                "Triệu chứng khác: Phát ban, sốt"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho quá liều amikacin. Điều trị hỗ trợ và điều trị triệu chứng. Hemodialysis có thể loại bỏ amikacin. Calcium gluconate có thể đối kháng block thần kinh-cơ.",
+            "treatment": [
+                "Ngừng ngay amikacin nếu đang truyền",
+                "Điều trị block thần kinh-cơ nếu có (NGUY HIỂM):",
+                "  - Calcium gluconate 1-3g IV (antidote cho block thần kinh-cơ)",
+                "  - Neostigmine 0.5-2mg IV (nếu cần)",
+                "  - Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Điều trị suy thận cấp:",
+                "  - Bù dịch đầy đủ",
+                "  - Điều chỉnh điện giải (natri, kali, magie)",
+                "  - Lọc máu (hemodialysis) - có thể loại bỏ amikacin",
+                "  - Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)",
+                "Điều trị độc tính thần kinh thính giác:",
+                "  - Không có điều trị đặc hiệu",
+                "  - Đánh giá thính giác (audiometry)",
+                "  - Độc tính có thể không hồi phục",
+                "Điều trị độc tính tiền đình:",
+                "  - Hỗ trợ tâm lý",
+                "  - Đánh giá tiền đình",
+                "  - Độc tính có thể không hồi phục",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis có thể loại bỏ amikacin nếu suy thận nặng"
+            ],
+            "monitoring": "Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu) hàng ngày trong ít nhất 7-14 ngày sau khi ngừng amikacin. Theo dõi dấu hiệu độc tính thần kinh thính giác (ù tai, giảm thính lực) và tiền đình (chóng mặt, mất thăng bằng). Đánh giá thính giác (audiometry) nếu có triệu chứng. Theo dõi dấu hiệu block thần kinh-cơ (yếu cơ, khó thở). Theo dõi lâu hơn nếu có suy thận cấp hoặc độc tính thần kinh."
         },
         "administration_instructions": {
-            "preparation": "",
-            "administration": "",
-            "monitoring": []
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 50mg/ml (tối đa). Pha 500mg trong 10ml = 50mg/ml, sau đó pha loãng trong 50-200ml NS hoặc D5W để truyền.",
+                "infusion_rate": "Truyền IV trong 30-60 phút. Tốc độ: 50ml/30-60 phút. KHÔNG truyền nhanh hơn (tăng nguy cơ độc tính thần kinh-cơ). Liều một lần/ngày: 15-20mg/kg IV x 1 lần/ngày.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "Ringer's Lactate"],
+                "incompatibility": [
+                    "Beta-lactams (penicillin, cephalosporin, carbapenem) - bất hoạt khi pha chung, truyền riêng biệt",
+                    "Vancomycin - có thể tăng độc thận, truyền riêng biệt",
+                    "Amphotericin B - không tương thích",
+                    "Các thuốc có tính kiềm hoặc acid mạnh"
+                ],
+                "notes": "QUAN TRỌNG: 1) TDM BẮT BUỘC (Peak và Trough), 2) KHÔNG pha chung với beta-lactams (truyền riêng biệt), 3) Điều chỉnh liều theo CrCl, 4) Liều một lần/ngày được ưa chuộng, 5) Truyền trong 30-60 phút (không nhanh hơn), 6) Độc thận và độc thính giác - không hồi phục."
+            },
+            "im": {
+                "reconstitution": "Pha với NS (0.9% NaCl). Nồng độ pha: 250mg/ml (tối đa).",
+                "injection_site": "Cơ lớn (mông, đùi). Tiêm sâu vào cơ, không tiêm vào mạch máu.",
+                "notes": "IM: 15-20mg/kg x 1 lần/ngày hoặc chia 2-3 lần. Tiêm sâu vào cơ. Có thể đau tại chỗ tiêm. TDM BẮT BUỘC."
+            }
         },
     },
     "Gentamicin": {
@@ -281,24 +348,72 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
             "WHO Essential Medicines List"
         ],
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
-            "lactation_details": ""
+            "fda_category": "D",
+            "pregnancy_details": "Gentamicin là thuốc phân loại D - có nguy cơ gây độc cho thai nhi. Aminoglycoside có thể gây độc tính thận và thần kinh thính giác ở thai nhi. Các nghiên cứu trên động vật cho thấy độc tính thận và thần kinh. Không nên dùng trong thai kỳ trừ khi lợi ích vượt quá nguy cơ rõ ràng và không có lựa chọn thay thế an toàn hơn. Nếu phải dùng, cần TDM chặt chẽ và theo dõi chức năng thận. Độc tính có thể không hồi phục.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Gentamicin bài tiết vào sữa mẹ ở nồng độ thấp. Hấp thu qua đường tiêu hóa kém, nên nồng độ trong máu trẻ bú mẹ thường rất thấp. Tuy nhiên, có thể gây thay đổi hệ vi khuẩn đường ruột ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú. Gentamicin bài tiết vào sữa mẹ ở nồng độ thấp và hấp thu kém qua đường tiêu hóa, nên không gây độc tính đáng kể ở trẻ bú mẹ. Theo dõi trẻ về dấu hiệu tiêu chảy hoặc thay đổi hệ vi khuẩn đường ruột."
+            }
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": ""
+            "mild": "Không cần điều chỉnh liều. Gentamicin không chuyển hóa qua gan, thải trừ chủ yếu qua thận.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Gentamicin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (90-100% bài tiết nguyên dạng). Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận.",
+            "notes": "Gentamicin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (90-100% bài tiết nguyên dạng). Không cần điều chỉnh liều ở suy gan. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
         },
         "overdose_management": {
-            "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "symptoms": [
+                "Triệu chứng thận: Suy thận cấp, tăng creatinine, giảm lượng nước tiểu, protein niệu",
+                "Triệu chứng thần kinh thính giác: Ù tai, giảm thính lực, điếc (có thể không hồi phục)",
+                "Triệu chứng tiền đình: Chóng mặt, mất thăng bằng, rung giật nhãn cầu",
+                "Triệu chứng thần kinh-cơ: Yếu cơ, khó thở (block thần kinh-cơ)",
+                "Triệu chứng khác: Phát ban, sốt"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho quá liều gentamicin. Điều trị hỗ trợ và điều trị triệu chứng. Hemodialysis có thể loại bỏ gentamicin. Calcium gluconate có thể đối kháng block thần kinh-cơ.",
+            "treatment": [
+                "Ngừng ngay gentamicin nếu đang truyền",
+                "Điều trị block thần kinh-cơ nếu có (NGUY HIỂM):",
+                "  - Calcium gluconate 1-3g IV (antidote cho block thần kinh-cơ)",
+                "  - Neostigmine 0.5-2mg IV (nếu cần)",
+                "  - Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Điều trị suy thận cấp:",
+                "  - Bù dịch đầy đủ",
+                "  - Điều chỉnh điện giải (natri, kali, magie)",
+                "  - Lọc máu (hemodialysis) - có thể loại bỏ gentamicin",
+                "  - Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)",
+                "Điều trị độc tính thần kinh thính giác:",
+                "  - Không có điều trị đặc hiệu",
+                "  - Đánh giá thính giác (audiometry)",
+                "  - Độc tính có thể không hồi phục",
+                "Điều trị độc tính tiền đình:",
+                "  - Hỗ trợ tâm lý",
+                "  - Đánh giá tiền đình",
+                "  - Độc tính có thể không hồi phục",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis có thể loại bỏ gentamicin nếu suy thận nặng"
+            ],
+            "monitoring": "Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu) hàng ngày trong ít nhất 7-14 ngày sau khi ngừng gentamicin. Theo dõi dấu hiệu độc tính thần kinh thính giác (ù tai, giảm thính lực) và tiền đình (chóng mặt, mất thăng bằng). Đánh giá thính giác (audiometry) nếu có triệu chứng. Theo dõi dấu hiệu block thần kinh-cơ (yếu cơ, khó thở). Theo dõi lâu hơn nếu có suy thận cấp hoặc độc tính thần kinh."
         },
         "administration_instructions": {
-            "preparation": "",
-            "administration": "",
-            "monitoring": []
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 40mg/ml (tối đa). Pha 80mg trong 2ml = 40mg/ml, sau đó pha loãng trong 50-200ml NS hoặc D5W để truyền.",
+                "infusion_rate": "Truyền IV trong 30-60 phút. Tốc độ: 50ml/30-60 phút. KHÔNG truyền nhanh hơn (tăng nguy cơ độc tính thần kinh-cơ). Liều một lần/ngày (extended interval): 5-7mg/kg IV x 1 lần/ngày.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "Ringer's Lactate"],
+                "incompatibility": [
+                    "Beta-lactams (penicillin, cephalosporin, carbapenem) - bất hoạt khi pha chung, truyền riêng biệt",
+                    "Vancomycin - có thể tăng độc thận, truyền riêng biệt",
+                    "Amphotericin B - không tương thích",
+                    "Các thuốc có tính kiềm hoặc acid mạnh"
+                ],
+                "notes": "QUAN TRỌNG: 1) TDM BẮT BUỘC (Peak và Trough), 2) KHÔNG pha chung với beta-lactams (truyền riêng biệt), 3) Điều chỉnh liều theo CrCl, 4) Liều một lần/ngày được ưa chuộng, 5) Truyền trong 30-60 phút (không nhanh hơn), 6) Độc thận và độc thính giác - không hồi phục."
+            },
+            "im": {
+                "reconstitution": "Pha với NS (0.9% NaCl). Nồng độ pha: 40mg/ml (tối đa).",
+                "injection_site": "Cơ lớn (mông, đùi). Tiêm sâu vào cơ, không tiêm vào mạch máu.",
+                "notes": "IM: 5-7mg/kg x 1 lần/ngày hoặc chia 2-3 lần. Tiêm sâu vào cơ. Có thể đau tại chỗ tiêm. TDM BẮT BUỘC."
+            }
         },
     },
     "Plazomicin": {
@@ -669,24 +784,77 @@ AMINOGLYCOSIDE_ANTIBIOTICS = {
         ],
         "last_updated": "2025-02-18",
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
-            "lactation_details": ""
+            "fda_category": "D",
+            "pregnancy_details": "Tobramycin là thuốc phân loại D - có nguy cơ gây độc cho thai nhi. Aminoglycoside có thể gây độc tính thận và thần kinh thính giác ở thai nhi. Các nghiên cứu trên động vật cho thấy độc tính thận và thần kinh. Không nên dùng trong thai kỳ trừ khi lợi ích vượt quá nguy cơ rõ ràng và không có lựa chọn thay thế an toàn hơn. Nếu phải dùng, cần TDM chặt chẽ và theo dõi chức năng thận. Độc tính có thể không hồi phục.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Tobramycin bài tiết vào sữa mẹ ở nồng độ thấp. Hấp thu qua đường tiêu hóa kém, nên nồng độ trong máu trẻ bú mẹ thường rất thấp. Tuy nhiên, có thể gây thay đổi hệ vi khuẩn đường ruột ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú. Tobramycin bài tiết vào sữa mẹ ở nồng độ thấp và hấp thu kém qua đường tiêu hóa, nên không gây độc tính đáng kể ở trẻ bú mẹ. Theo dõi trẻ về dấu hiệu tiêu chảy hoặc thay đổi hệ vi khuẩn đường ruột."
+            }
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": ""
+            "mild": "Không cần điều chỉnh liều. Tobramycin không chuyển hóa qua gan, thải trừ chủ yếu qua thận.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Tobramycin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (90-100% bài tiết nguyên dạng). Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận.",
+            "notes": "Tobramycin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (90-100% bài tiết nguyên dạng). Không cần điều chỉnh liều ở suy gan. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
         },
         "overdose_management": {
-            "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "symptoms": [
+                "Triệu chứng thận: Suy thận cấp, tăng creatinine, giảm lượng nước tiểu, protein niệu",
+                "Triệu chứng thần kinh thính giác: Ù tai, giảm thính lực, điếc (có thể không hồi phục)",
+                "Triệu chứng tiền đình: Chóng mặt, mất thăng bằng, rung giật nhãn cầu",
+                "Triệu chứng thần kinh-cơ: Yếu cơ, khó thở (block thần kinh-cơ)",
+                "Triệu chứng khác: Phát ban, sốt"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho quá liều tobramycin. Điều trị hỗ trợ và điều trị triệu chứng. Hemodialysis có thể loại bỏ tobramycin. Calcium gluconate có thể đối kháng block thần kinh-cơ.",
+            "treatment": [
+                "Ngừng ngay tobramycin nếu đang truyền",
+                "Điều trị block thần kinh-cơ nếu có (NGUY HIỂM):",
+                "  - Calcium gluconate 1-3g IV (antidote cho block thần kinh-cơ)",
+                "  - Neostigmine 0.5-2mg IV (nếu cần)",
+                "  - Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học",
+                "Điều trị suy thận cấp:",
+                "  - Bù dịch đầy đủ",
+                "  - Điều chỉnh điện giải (natri, kali, magie)",
+                "  - Lọc máu (hemodialysis) - có thể loại bỏ tobramycin",
+                "  - Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)",
+                "Điều trị độc tính thần kinh thính giác:",
+                "  - Không có điều trị đặc hiệu",
+                "  - Đánh giá thính giác (audiometry)",
+                "  - Độc tính có thể không hồi phục",
+                "Điều trị độc tính tiền đình:",
+                "  - Hỗ trợ tâm lý",
+                "  - Đánh giá tiền đình",
+                "  - Độc tính có thể không hồi phục",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis có thể loại bỏ tobramycin nếu suy thận nặng"
+            ],
+            "monitoring": "Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu) hàng ngày trong ít nhất 7-14 ngày sau khi ngừng tobramycin. Theo dõi dấu hiệu độc tính thần kinh thính giác (ù tai, giảm thính lực) và tiền đình (chóng mặt, mất thăng bằng). Đánh giá thính giác (audiometry) nếu có triệu chứng. Theo dõi dấu hiệu block thần kinh-cơ (yếu cơ, khó thở). Theo dõi lâu hơn nếu có suy thận cấp hoặc độc tính thần kinh."
         },
         "administration_instructions": {
-            "preparation": "",
-            "administration": "",
-            "monitoring": []
+            "oral": None,
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 40mg/ml (tối đa). Pha 80mg trong 2ml = 40mg/ml, sau đó pha loãng trong 50-200ml NS hoặc D5W để truyền.",
+                "infusion_rate": "Truyền IV trong 30-60 phút. Tốc độ: 50ml/30-60 phút. KHÔNG truyền nhanh hơn (tăng nguy cơ độc tính thần kinh-cơ). Liều một lần/ngày (extended interval): 5-7mg/kg IV x 1 lần/ngày.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)", "Ringer's Lactate"],
+                "incompatibility": [
+                    "Beta-lactams (penicillin, cephalosporin, carbapenem) - bất hoạt khi pha chung, truyền riêng biệt",
+                    "Vancomycin - có thể tăng độc thận, truyền riêng biệt",
+                    "Amphotericin B - không tương thích",
+                    "Các thuốc có tính kiềm hoặc acid mạnh"
+                ],
+                "notes": "QUAN TRỌNG: 1) TDM BẮT BUỘC (Peak và Trough), 2) KHÔNG pha chung với beta-lactams (truyền riêng biệt), 3) Điều chỉnh liều theo CrCl, 4) Liều một lần/ngày được ưa chuộng, 5) Truyền trong 30-60 phút (không nhanh hơn), 6) Độc thận và độc thính giác - không hồi phục, 7) Đặc biệt hiệu quả với Pseudomonas aeruginosa."
+            },
+            "im": {
+                "reconstitution": "Pha với NS (0.9% NaCl). Nồng độ pha: 40mg/ml (tối đa).",
+                "injection_site": "Cơ lớn (mông, đùi). Tiêm sâu vào cơ, không tiêm vào mạch máu.",
+                "notes": "IM: 5-7mg/kg x 1 lần/ngày hoặc chia 2-3 lần. Tiêm sâu vào cơ. Có thể đau tại chỗ tiêm. TDM BẮT BUỘC."
+            },
+            "inhaled": {
+                "reconstitution": "Dùng dạng hít sẵn có (nebule).",
+                "dose": "300mg x 2 lần/ngày (dạng hít).",
+                "notes": "Dạng hít: dùng cho bệnh nhân xơ nang (CF) để điều trị nhiễm Pseudomonas mãn tính. Ít độc tính toàn thân hơn so với IV/IM. Có thể gây ho, khó thở tại chỗ."
+            }
         },
     },
 }

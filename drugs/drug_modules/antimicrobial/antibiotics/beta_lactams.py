@@ -766,7 +766,7 @@ BETA_LACTAM_ANTIBIOTICS = {
                 "Lexicomp Online - Ertapenem Monograph",
                 "Micromedex - Ertapenem Drug Information"
             ],
-            "last_updated": "2025-02-05",
+            "last_updated": "2025-02-18",
             "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
         },
         "risk_flags": {

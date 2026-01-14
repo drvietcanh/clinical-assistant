@@ -546,24 +546,77 @@ GLYCOPEPTIDE_ANTIBIOTICS = {
         ],
         "last_updated": "2025-02-18",
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
-            "lactation_details": ""
+            "fda_category": "C",
+            "pregnancy_details": "Vancomycin là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Vancomycin có thể qua nhau thai. Các nghiên cứu trên động vật không cho thấy nguy cơ dị tật bẩm sinh, nhưng có thể gây độc tính thận và thần kinh thính giác ở thai nhi. Nhiễm khuẩn nặng (đặc biệt MRSA) có thể gây nguy hiểm cho cả mẹ và thai nhi nếu không điều trị. Vancomycin được sử dụng trong thai kỳ khi cần thiết, đặc biệt trong nhiễm khuẩn nặng do MRSA. Tuy nhiên, cần TDM chặt chẽ và theo dõi chức năng thận.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Vancomycin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Tuy nhiên, có thể gây thay đổi hệ vi khuẩn đường ruột ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú. Vancomycin bài tiết vào sữa mẹ ở nồng độ thấp và không gây tác dụng phụ ở trẻ bú mẹ. Theo dõi trẻ về dấu hiệu tiêu chảy hoặc thay đổi hệ vi khuẩn đường ruột."
+            }
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": ""
+            "mild": "Không cần điều chỉnh liều. Vancomycin không chuyển hóa qua gan, thải trừ chủ yếu qua thận.",
+            "moderate": "Không cần điều chỉnh liều.",
+            "severe": "Không cần điều chỉnh liều. Vancomycin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (80-90% bài tiết nguyên dạng). Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận.",
+            "notes": "Vancomycin không chuyển hóa qua gan, thải trừ chủ yếu qua thận (80-90% bài tiết nguyên dạng). Không cần điều chỉnh liều ở suy gan. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận."
         },
         "overdose_management": {
-            "symptoms": [],
-            "treatment": "",
-            "antidote": None
+            "symptoms": [
+                "Triệu chứng thận: Suy thận cấp, tăng creatinine, giảm lượng nước tiểu, protein niệu (có thể không hồi phục)",
+                "Triệu chứng thần kinh thính giác: Ù tai, giảm thính lực, điếc (hiếm, thường kết hợp với độc thận, có thể không hồi phục)",
+                "Triệu chứng Red Man Syndrome: Đỏ bừng mặt, cổ, ngực, hạ huyết áp, có thể nguy hiểm (do truyền quá nhanh)",
+                "Triệu chứng huyết học: Giảm bạch cầu, giảm tiểu cầu (hiếm, thường khi dùng kéo dài)",
+                "Triệu chứng dị ứng: Phát ban, phù mạch, sốc phản vệ (nếu dị ứng)"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho quá liều vancomycin. Điều trị hỗ trợ và điều trị triệu chứng. Hemodialysis có thể loại bỏ vancomycin một phần.",
+            "treatment": [
+                "Ngừng ngay vancomycin nếu đang truyền",
+                "Điều trị Red Man Syndrome nếu có:",
+                "  - Ngừng ngay truyền vancomycin",
+                "  - Antihistamine (diphenhydramine 25-50mg IV)",
+                "  - Hỗ trợ huyết áp nếu hạ huyết áp (truyền dịch, vasopressor nếu cần)",
+                "  - Theo dõi dấu hiệu sinh tồn",
+                "Điều trị suy thận cấp:",
+                "  - Bù dịch đầy đủ",
+                "  - Điều chỉnh điện giải",
+                "  - Lọc máu (hemodialysis) - có thể loại bỏ vancomycin một phần",
+                "  - Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu)",
+                "  - Tránh thuốc độc thận khác",
+                "Điều trị độc tính thần kinh thính giác:",
+                "  - Không có điều trị đặc hiệu",
+                "  - Đánh giá thính giác (audiometry)",
+                "  - Độc tính có thể không hồi phục",
+                "Điều trị giảm bạch cầu/tiểu cầu nếu có:",
+                "  - Theo dõi CBC",
+                "  - Truyền tiểu cầu nếu giảm tiểu cầu nặng và có chảy máu",
+                "  - G-CSF nếu giảm bạch cầu nặng",
+                "Điều trị dị ứng nếu có:",
+                "  - Epinephrine nếu sốc phản vệ",
+                "  - Antihistamine, corticosteroid",
+                "  - Hỗ trợ hô hấp nếu cần",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2",
+                "Lọc máu: Hemodialysis có thể loại bỏ vancomycin một phần nếu suy thận nặng"
+            ],
+            "monitoring": "Theo dõi chức năng thận (creatinine, BUN, lượng nước tiểu) hàng ngày trong ít nhất 7-14 ngày sau khi ngừng vancomycin. Theo dõi dấu hiệu độc tính thần kinh thính giác (ù tai, giảm thính lực). Đánh giá thính giác (audiometry) nếu có triệu chứng. Theo dõi dấu hiệu Red Man Syndrome (đỏ bừng, hạ huyết áp). Theo dõi CBC nếu dùng kéo dài. Theo dõi lâu hơn nếu có suy thận cấp hoặc độc tính thần kinh."
         },
         "administration_instructions": {
-            "preparation": "",
-            "administration": "",
-            "monitoring": []
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Vancomycin PO không hấp thu đáng kể, chỉ dùng cho viêm đại tràng do C. difficile.",
+                "timing": "PO: 125-500mg x 4 lần/ngày x 10-14 ngày (chỉ dùng cho C. difficile). Uống đều đặn, cách đều nhau trong ngày."
+            },
+            "iv": {
+                "reconstitution": "Pha với NS (0.9% NaCl) hoặc D5W (5% Dextrose). Nồng độ pha: 5mg/ml (tối đa). Pha 500mg trong 100ml = 5mg/ml. Pha 1g trong 200ml = 5mg/ml. Lắc kỹ để hòa tan hoàn toàn.",
+                "infusion_rate": "Truyền IV trong ít nhất 60 phút (liều chuẩn). KHÔNG truyền nhanh hơn - nguy cơ Red Man Syndrome. Tốc độ: 100ml/60 phút = ~1.7ml/phút. Liều cao (>1g): truyền trong 90-120 phút. Liều: 15-20mg/kg IV mỗi 8-12 giờ.",
+                "compatibility": ["NS (0.9% NaCl)", "D5W (5% Dextrose)"],
+                "incompatibility": [
+                    "Aminoglycosides - có thể tăng độc thận, truyền riêng biệt",
+                    "Furosemide - có thể tăng độc thận, truyền riêng biệt",
+                    "Cisplatin - có thể tăng độc thận, truyền riêng biệt",
+                    "Amphotericin B - không tương thích",
+                    "Các thuốc có tính kiềm hoặc acid mạnh"
+                ],
+                "notes": "QUAN TRỌNG: 1) TDM BẮT BUỘC (Trough 10-20 mg/L), 2) Truyền trong ít nhất 60 phút (KHÔNG nhanh hơn - nguy cơ Red Man Syndrome), 3) Điều chỉnh liều theo CrCl, 4) KHÔNG pha chung với aminoglycosides, 5) Độc thận - có thể không hồi phục, 6) Theo dõi chức năng thận hàng ngày."
+            }
         },
     },
     

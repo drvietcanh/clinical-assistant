@@ -139,11 +139,46 @@ PENICILLIN_ANTIBIOTICS = {
             "Điều chỉnh liều ở suy thận",
         ],
         "pharmacokinetics": {
-            "half_life": "1-1.5 giờ",
-            "clearance": "Thận (cả hai thành phần)",
+            "half_life": "1-1.5 giờ (amoxicillin), 1 giờ (clavulanate)",
+            "onset": "1-2 giờ sau khi uống",
+            "duration": "q8-12h",
+            "protein_binding": "17-20% (amoxicillin), 25% (clavulanate)",
+            "metabolism": "Amoxicillin: không chuyển hóa đáng kể. Clavulanate: chuyển hóa một phần ở gan.",
+            "clearance": "Thận (cả hai thành phần), cần điều chỉnh thận"
         },
         "storage": "Bảo quản viên ở nhiệt độ phòng, tránh ẩm. Dung dịch pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 7 ngày.",
         "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Probenecid ức chế bài tiết amoxicillin ở thận, làm tăng nồng độ amoxicillin",
+                    "effect": "Tăng nồng độ amoxicillin, tăng thời gian bán thải",
+                    "management": "Có thể dùng cùng để tăng nồng độ amoxicillin. Theo dõi dấu hiệu độc tính."
+                },
+                {
+                    "drug": "Allopurinol",
+                    "mechanism": "Tăng nguy cơ phát ban dị ứng (cơ chế không rõ ràng)",
+                    "effect": "Tăng nguy cơ phát ban, đặc biệt ở bệnh nhân có tiền sử dị ứng",
+                    "management": "Thận trọng khi dùng cùng. Theo dõi dấu hiệu phát ban. Ngừng ngay nếu có phát ban."
+                },
+                {
+                    "drug": "Warfarin",
+                    "mechanism": "Amoxicillin-clavulanate có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm sản xuất vitamin K",
+                    "effect": "Tăng INR, tăng nguy cơ chảy máu",
+                    "management": "Theo dõi INR thường xuyên. Có thể cần giảm liều warfarin."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Thuốc tránh thai",
+                    "mechanism": "Amoxicillin-clavulanate có thể ảnh hưởng đến hệ vi khuẩn đường ruột, làm giảm hấp thu estrogen",
+                    "effect": "Có thể giảm hiệu quả thuốc tránh thai (hiếm)",
+                    "management": "Sử dụng biện pháp tránh thai bổ sung trong thời gian dùng amoxicillin-clavulanate và 7 ngày sau khi ngừng."
+                }
+            ]
+        },
         "contraindications_detail": {
             "tuyệt_đối": [
                 "Dị ứng penicillin/beta-lactam",
@@ -152,6 +187,75 @@ PENICILLIN_ANTIBIOTICS = {
             "tương_đối": []
         },
         "reversal_agents": {"available": False, "agents": [], "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng."},
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Amoxicillin-clavulanate là thuốc phân loại B. Amoxicillin và clavulanate đều được coi là an toàn trong thai kỳ. Đã được sử dụng rộng rãi trong thai kỳ. Không có bằng chứng về nguy cơ dị tật thai nhi. Nhiễm khuẩn nặng có thể gây nguy hiểm cho cả mẹ và thai nhi nếu không điều trị.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Amoxicillin và clavulanate bài tiết vào sữa mẹ ở nồng độ thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ. Có thể gây tiêu chảy nhẹ ở trẻ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu dị ứng hoặc tiêu chảy."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Clavulanate chuyển hóa một phần ở gan nhưng không đáng kể.",
+            "moderate": "Thận trọng. Clavulanate chuyển hóa một phần ở gan, có thể tích lũy nhẹ ở suy gan trung bình. Theo dõi chức năng gan.",
+            "severe": "Thận trọng, có thể cần giảm liều hoặc tránh dùng. Clavulanate chuyển hóa ở gan, có thể tích lũy ở suy gan nặng. Nguy cơ vàng da ứ mật tăng. Theo dõi chức năng gan chặt chẽ.",
+            "notes": "Clavulanate chuyển hóa một phần ở gan. Suy gan có thể làm giảm chuyển hóa clavulanate, nhưng ảnh hưởng ít hơn so với suy thận (thải trừ chủ yếu qua thận). Nguy cơ vàng da ứ mật tăng ở suy gan nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy nặng",
+                "Triệu chứng thần kinh: Co giật (hiếm, thường ở suy thận nặng)",
+                "Triệu chứng gan: Vàng da ứ mật, tăng men gan",
+                "Triệu chứng thận: Suy thận cấp (hiếm)",
+                "Triệu chứng dị ứng: Phát ban, sốc phản vệ"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho quá liều amoxicillin-clavulanate. Điều trị hỗ trợ và điều trị triệu chứng.",
+            "treatment": [
+                "Ngừng ngay amoxicillin-clavulanate nếu đang dùng",
+                "Điều trị triệu chứng tiêu hóa:",
+                "  - Chống nôn nếu cần",
+                "  - Truyền dịch nếu mất nước do tiêu chảy",
+                "  - Theo dõi điện giải",
+                "Điều trị co giật nếu có:",
+                "  - Benzodiazepine (diazepam, lorazepam) IV",
+                "  - Phenytoin hoặc fosphenytoin IV nếu cần",
+                "Điều trị vàng da ứ mật nếu có:",
+                "  - Ngừng amoxicillin-clavulanate",
+                "  - Theo dõi chức năng gan (ALT, AST, bilirubin)",
+                "  - Thường tự hồi phục sau khi ngừng thuốc",
+                "Điều trị suy thận cấp nếu có:",
+                "  - Bù dịch đầy đủ",
+                "  - Điều chỉnh điện giải",
+                "  - Lọc máu nếu cần",
+                "Điều trị sốc phản vệ nếu có:",
+                "  - Epinephrine",
+                "  - Antihistamines",
+                "  - Corticosteroids",
+                "Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn (huyết áp, nhịp tim, nhịp thở, SpO2) trong ít nhất 24-48 giờ sau khi ngừng amoxicillin-clavulanate. Theo dõi chức năng gan, thận, và dấu hiệu dị ứng. Theo dõi lâu hơn nếu có biến chứng (vàng da ứ mật, suy thận)."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Nên uống cùng thức ăn để giảm kích ứng dạ dày và tăng hấp thu. Có thể uống trước hoặc sau ăn, nhưng uống cùng thức ăn được khuyến cáo.",
+                "timing": "Uống mỗi 8-12 giờ tùy theo liều. Liều chuẩn: 875/125mg mỗi 12 giờ hoặc 500/125mg mỗi 8 giờ. Liều cao: 2000/125mg mỗi 12 giờ.",
+                "notes": "QUAN TRỌNG: 1) Uống cùng thức ăn để giảm kích ứng dạ dày, 2) Tiêu chảy phổ biến do clavulanate - có thể cần điều trị hỗ trợ, 3) Theo dõi chức năng gan (nguy cơ vàng da ứ mật), 4) Điều chỉnh liều ở suy thận, 5) Dùng khi cần ức chế beta-lactamase (H. influenzae, Moraxella, cắn động vật)."
+            },
+            "iv": None,
+            "im": None
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Amoxicillin-clavulanate (Augmentin)",
+                "IDSA Guidelines - Community-Acquired Pneumonia",
+                "IDSA Guidelines - Acute Bacterial Sinusitis",
+                "UpToDate - Amoxicillin-clavulanate: Drug Information",
+                "Medscape - Amoxicillin-clavulanate Drug Reference"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+        },
         "risk_flags": {
             "high_alert": False,
             "narrow_therapeutic_index": False,
