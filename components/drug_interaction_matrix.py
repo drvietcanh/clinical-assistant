@@ -12,6 +12,7 @@ from drugs.interactions_data import (
     SEVERITY_MINOR,
     get_interaction
 )
+from config.medical_terms_mapping import INTERACTION_SEVERITY
 
 
 def get_severity_color(severity: str) -> Dict[str, str]:
@@ -27,35 +28,35 @@ def get_severity_color(severity: str) -> Dict[str, str]:
             "border_color": "#dc3545",
             "text_color": "#721c24",
             "icon": "🔴",
-            "label": "Major"
+            "label": INTERACTION_SEVERITY.get("Major", "Nghiêm trọng")
         },
         SEVERITY_MODERATE: {
             "bg_color": "#fff3cd",
             "border_color": "#ffc107",
             "text_color": "#856404",
             "icon": "🟡",
-            "label": "Moderate"
+            "label": INTERACTION_SEVERITY.get("Moderate", "Trung bình")
         },
         SEVERITY_MINOR: {
             "bg_color": "#d1ecf1",
             "border_color": "#17a2b8",
             "text_color": "#0c5460",
             "icon": "🔵",
-            "label": "Minor"
+            "label": INTERACTION_SEVERITY.get("Minor", "Nhẹ")
         },
         "none": {
             "bg_color": "#d4edda",
             "border_color": "#28a745",
             "text_color": "#155724",
             "icon": "✅",
-            "label": "No Interaction"
+            "label": INTERACTION_SEVERITY.get("No Interaction", "Không có tương tác")
         },
         "same": {
             "bg_color": "#f8f9fa",
             "border_color": "#dee2e6",
             "text_color": "#6c757d",
             "icon": "—",
-            "label": "Same Drug"
+            "label": INTERACTION_SEVERITY.get("Same Drug", "Cùng thuốc")
         }
     }
     return color_map.get(severity, color_map["none"])
@@ -232,7 +233,7 @@ def render_interaction_matrix(
     
     for severity in [SEVERITY_MAJOR, SEVERITY_MODERATE, SEVERITY_MINOR, "none"]:
         colors = get_severity_color(severity)
-        label = "Không tương tác" if severity == "none" else colors["label"]
+        label = colors["label"]
         legend_html += f'''<div style="display: flex; align-items: center; gap: 0.5rem;"><div style="width: 28px; height: 28px; background: {colors["bg_color"]}; border: 2px solid {colors["border_color"]}; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">{colors["icon"]}</div><span style="font-size: 0.9rem; color: #495057; font-weight: 500;">{label}</span></div>'''
     
     legend_html += '</div>'
@@ -270,7 +271,7 @@ def render_interaction_summary(
     
     with col1:
         st.metric(
-            "🔴 Major",
+            f"🔴 {INTERACTION_SEVERITY.get('Major', 'Nghiêm trọng')}",
             counts[SEVERITY_MAJOR],
             delta=f"{counts[SEVERITY_MAJOR]/total*100:.1f}%" if total > 0 else "0%",
             delta_color="inverse"
@@ -278,14 +279,14 @@ def render_interaction_summary(
     
     with col2:
         st.metric(
-            "🟡 Moderate",
+            f"🟡 {INTERACTION_SEVERITY.get('Moderate', 'Trung bình')}",
             counts[SEVERITY_MODERATE],
             delta=f"{counts[SEVERITY_MODERATE]/total*100:.1f}%" if total > 0 else "0%"
         )
     
     with col3:
         st.metric(
-            "🔵 Minor",
+            f"🔵 {INTERACTION_SEVERITY.get('Minor', 'Nhẹ')}",
             counts[SEVERITY_MINOR],
             delta=f"{counts[SEVERITY_MINOR]/total*100:.1f}%" if total > 0 else "0%"
         )

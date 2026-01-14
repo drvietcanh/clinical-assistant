@@ -6,6 +6,7 @@ Display references with GRADE system, PubMed links, and evidence levels
 import streamlit as st
 from typing import List, Dict, Any, Optional
 from datetime import datetime
+from config.medical_terms_mapping import EVIDENCE_LEVELS
 
 
 # GRADE Evidence Levels
@@ -40,43 +41,43 @@ def get_evidence_level_info(level: str) -> Dict[str, Any]:
         # GRADE system
         GRADE_HIGH: {
             "color": "#28a745",
-            "label": "High Quality",
+            "label": EVIDENCE_LEVELS.get("High Quality", "Chất lượng cao"),
             "description": "Further research is very unlikely to change our confidence in the estimate of effect."
         },
         GRADE_MODERATE: {
             "color": "#17a2b8",
-            "label": "Moderate Quality",
+            "label": EVIDENCE_LEVELS.get("Moderate Quality", "Chất lượng trung bình"),
             "description": "Further research is likely to have an important impact on our confidence."
         },
         GRADE_LOW: {
             "color": "#ffc107",
-            "label": "Low Quality",
+            "label": EVIDENCE_LEVELS.get("Low Quality", "Chất lượng thấp"),
             "description": "Further research is very likely to have an important impact."
         },
         GRADE_VERY_LOW: {
             "color": "#dc3545",
-            "label": "Very Low Quality",
+            "label": EVIDENCE_LEVELS.get("Very Low Quality", "Chất lượng rất thấp"),
             "description": "Any estimate of effect is very uncertain."
         },
         # AHA/ACC style
         EVIDENCE_LEVEL_I: {
             "color": "#28a745",
-            "label": "Level I (High Quality)",
+            "label": EVIDENCE_LEVELS.get("Level I (High Quality)", "Mức I (Chất lượng cao)"),
             "description": "Multiple randomized trials or meta-analyses"
         },
         EVIDENCE_LEVEL_IIA: {
             "color": "#17a2b8",
-            "label": "Level IIa (Moderate Quality)",
+            "label": EVIDENCE_LEVELS.get("Level IIa (Moderate Quality)", "Mức IIa (Chất lượng trung bình)"),
             "description": "Single randomized trial or nonrandomized studies"
         },
         EVIDENCE_LEVEL_IIB: {
             "color": "#ffc107",
-            "label": "Level IIb (Low Quality)",
+            "label": EVIDENCE_LEVELS.get("Level IIb (Low Quality)", "Mức IIb (Chất lượng thấp)"),
             "description": "Single well-designed nonrandomized study"
         },
         EVIDENCE_LEVEL_III: {
             "color": "#dc3545",
-            "label": "Level III (Very Low Quality)",
+            "label": EVIDENCE_LEVELS.get("Level III (Very Low Quality)", "Mức III (Chất lượng rất thấp)"),
             "description": "Expert opinion, case studies, or standard of care"
         }
     }

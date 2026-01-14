@@ -46,12 +46,14 @@ def _get_evidence_badge(evidence_level):
     if not evidence_level:
         return ''
     
+    from config.medical_terms_mapping import EVIDENCE_LEVELS
+    
     evidence_map = {
-        'A': {'label': 'Level A - Strong Evidence', 'color': '#10B981', 'icon': '🟢'},
-        'B': {'label': 'Level B - Moderate Evidence', 'color': '#F59E0B', 'icon': '🟡'},
-        'C': {'label': 'Level C - Limited Evidence', 'color': '#F97316', 'icon': '🟠'},
-        'D': {'label': 'Level D - Weak Evidence', 'color': '#EF4444', 'icon': '🔴'},
-        'E': {'label': 'Expert Opinion', 'color': '#8B5CF6', 'icon': '💜'},
+        'A': {'label': EVIDENCE_LEVELS.get('Level A - Strong Evidence', 'Mức A - Bằng chứng mạnh'), 'color': '#10B981', 'icon': '🟢'},
+        'B': {'label': EVIDENCE_LEVELS.get('Level B - Moderate Evidence', 'Mức B - Bằng chứng trung bình'), 'color': '#F59E0B', 'icon': '🟡'},
+        'C': {'label': EVIDENCE_LEVELS.get('Level C - Limited Evidence', 'Mức C - Bằng chứng hạn chế'), 'color': '#F97316', 'icon': '🟠'},
+        'D': {'label': EVIDENCE_LEVELS.get('Level D - Weak Evidence', 'Mức D - Bằng chứng yếu'), 'color': '#EF4444', 'icon': '🔴'},
+        'E': {'label': EVIDENCE_LEVELS.get('Expert Opinion', 'Ý kiến chuyên gia'), 'color': '#8B5CF6', 'icon': '💜'},
     }
     
     evidence_info = evidence_map.get(evidence_level.upper(), {})

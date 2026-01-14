@@ -5,6 +5,7 @@ Phase 3 UI Modernization - Card-based layout for drug database
 
 import streamlit as st
 from typing import Dict, List, Optional
+from config.medical_terms_mapping import FIELD_LABELS
 
 
 def render_drug_card(drug_name: str, drug_data: Dict, compact: bool = False) -> None:
@@ -118,7 +119,7 @@ def render_drug_card(drug_name: str, drug_data: Dict, compact: bool = False) -> 
             
             <div style="margin-bottom: 0.75rem;">
                 <div style="font-size: 0.75rem; color: #90A4AE; font-weight: 600; margin-bottom: 0.25rem;">
-                    ADMINISTRATION
+                    {FIELD_LABELS.get("ADMINISTRATION", "Đường dùng")}
                 </div>
                 <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                     {' '.join([f'<span style="background: #E3F2FD; color: #1976D2; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem;">{route}</span>' for route in administration[:4]])}
@@ -127,7 +128,7 @@ def render_drug_card(drug_name: str, drug_data: Dict, compact: bool = False) -> 
             
             <div>
                 <div style="font-size: 0.75rem; color: #90A4AE; font-weight: 600; margin-bottom: 0.25rem;">
-                    INDICATIONS
+                    {FIELD_LABELS.get("INDICATIONS", "Chỉ định")}
                 </div>
                 <div style="font-size: 0.85rem; color: #546E7A; line-height: 1.4;">
                     {indications_text}

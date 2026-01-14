@@ -175,13 +175,24 @@ def _render_quick_facts_box(drug_data):
     
     # Lactation
     if 'pregnancy_lactation' in drug_data and 'lactation' in drug_data['pregnancy_lactation']:
+        from config.medical_terms_mapping import PREGNANCY_TERMS
+        
         lactation = drug_data['pregnancy_lactation']['lactation']
         safety = lactation.get('safety', 'Unknown') if isinstance(lactation, dict) else str(lactation)
+        
+        # Translate safety labels
+        safety_translations = {
+            'Compatible': 'Tương thích',
+            'Compatible with monitoring': PREGNANCY_TERMS.get('Compatible with monitoring', 'Tương thích khi theo dõi'),
+            'Unknown': 'Chưa rõ'
+        }
+        safety_display = safety_translations.get(safety, safety)
+        
         safety_icons = {'Compatible': '✅', 'Compatible with monitoring': '⚠️', 'Unknown': '❓'}
         facts_cards.append(f"""
             <div style='background: white; padding: 12px 15px; border-radius: 8px; border-left: 3px solid #8B5CF6; flex: 1; min-width: 150px;'>
                 <div style='color: #64748b; font-size: 0.8em; font-weight: bold; margin-bottom: 4px;'>🤱 Cho con bú</div>
-                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{safety_icons.get(safety, '❓')} {escape_html(str(safety))}</div>
+                <div style='color: #1e293b; font-size: 1em; font-weight: 600;'>{safety_icons.get(safety, '❓')} {escape_html(str(safety_display))}</div>
             </div>
         """)
     elif 'lactation' in drug_data:

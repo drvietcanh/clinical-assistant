@@ -14,6 +14,7 @@ from drugs.pregnancy_lactation_safety import (
     PregnancyRiskLevel,
     LactationRiskLevel
 )
+from config.medical_terms_mapping import PREGNANCY_TERMS
 
 
 def get_risk_color(risk_level: str) -> str:
@@ -61,6 +62,7 @@ def render_pregnancy_safety(drug_name: str) -> None:
         }
         fda_color = fda_colors.get(fda_value, "#6c757d")
         
+        fda_label = PREGNANCY_TERMS.get("FDA Pregnancy Category", "Phân loại FDA thai kỳ")
         st.markdown(f"""
         <div style="
             padding: 1rem;
@@ -69,7 +71,7 @@ def render_pregnancy_safety(drug_name: str) -> None:
             border-radius: 4px;
             margin-bottom: 1rem;
         ">
-            <strong>FDA Pregnancy Category: {fda_value}</strong>
+            <strong>{fda_label}: {fda_value}</strong>
         </div>
         """, unsafe_allow_html=True)
     
@@ -99,9 +101,9 @@ def render_pregnancy_safety(drug_name: str) -> None:
         
         trimesters = ["first", "second", "third"]
         trimester_labels = {
-            "first": "Tam cá nguyệt 1 (0-12 tuần)",
-            "second": "Tam cá nguyệt 2 (13-27 tuần)",
-            "third": "Tam cá nguyệt 3 (28-40 tuần)"
+            "first": f"{PREGNANCY_TERMS.get('first trimester', 'Tam cá nguyệt đầu')} (0-12 tuần)",
+            "second": f"{PREGNANCY_TERMS.get('second trimester', 'Tam cá nguyệt giữa')} (13-27 tuần)",
+            "third": f"{PREGNANCY_TERMS.get('third trimester', 'Tam cá nguyệt cuối')} (28-40 tuần)"
         }
         
         for trimester in trimesters:
@@ -152,11 +154,11 @@ def render_lactation_safety(drug_name: str) -> None:
         briggs_color = briggs_colors.get(briggs_value, "#6c757d")
         
         briggs_labels = {
-            "L1": "Safest",
-            "L2": "Safer",
-            "L3": "Moderately Safe",
-            "L4": "Possibly Hazardous",
-            "L5": "Contraindicated"
+            "L1": "An toàn nhất",
+            "L2": "Tương đối an toàn",
+            "L3": PREGNANCY_TERMS.get("Moderately Safe", "Tương đối an toàn"),
+            "L4": "Có thể nguy hiểm",
+            "L5": "Chống chỉ định"
         }
         
         st.markdown(f"""
