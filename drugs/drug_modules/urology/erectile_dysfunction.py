@@ -6,9 +6,13 @@ from typing import Dict, Any
 
 ERECTILE_DYSFUNCTION_DRUGS: Dict[str, Dict[str, Any]] = {
         "Avanafil": {
-            "group": "Urology - PDE-5 Inhibitor (Erectile Dysfunction)",
-            "vietnamese_name": "Avanafil, Stendra",
-            "administration": ["PO"],
+        "group": "Urology - PDE-5 Inhibitor (Erectile Dysfunction)",
+        "vietnamese_name": "Avanafil, Stendra",
+        "brand_names": {
+            "common": ["Stendra"],
+            "vietnam": ["Avanafil 50/100/200mg"]
+        },
+        "administration": ["PO"],
             "indications": [
                 "Rối loạn cương dương (erectile dysfunction - ED)",
                 "Cải thiện khả năng đạt và duy trì cương dương"
@@ -235,6 +239,10 @@ ERECTILE_DYSFUNCTION_DRUGS: Dict[str, Dict[str, Any]] = {
         "Sildenafil": {
             "group": "Urology - PDE-5 Inhibitor (Erectile Dysfunction)",
             "vietnamese_name": "Sildenafil, Viagra",
+            "brand_names": {
+                "common": ["Viagra", "Revatio"],
+                "vietnam": ["Viagra 25/50/100mg", "Sildenafil"]
+            },
             "administration": ["PO"],
             "indications": [
                 "Rối loạn cương dương (erectile dysfunction - ED)",
@@ -453,6 +461,10 @@ ERECTILE_DYSFUNCTION_DRUGS: Dict[str, Dict[str, Any]] = {
         "Tadalafil": {
             "group": "Urology - PDE-5 Inhibitor (Erectile Dysfunction/BPH)",
             "vietnamese_name": "Tadalafil, Cialis",
+            "brand_names": {
+                "common": ["Cialis", "Adcirca"],
+                "vietnam": ["Cialis 5/10/20mg", "Tadalafil"]
+            },
             "administration": ["PO"],
             "indications": [
                 "Rối loạn cương dương (erectile dysfunction - ED)",
@@ -679,6 +691,10 @@ ERECTILE_DYSFUNCTION_DRUGS: Dict[str, Dict[str, Any]] = {
         "Vardenafil": {
             "group": "Urology - PDE-5 Inhibitor (Erectile Dysfunction)",
             "vietnamese_name": "Vardenafil, Levitra",
+            "brand_names": {
+                "common": ["Levitra", "Staxyn"],
+                "vietnam": ["Levitra 5/10/20mg", "Vardenafil"]
+            },
             "administration": ["PO"],
             "indications": [
                 "Rối loạn cương dương (erectile dysfunction - ED)"
@@ -889,6 +905,242 @@ ERECTILE_DYSFUNCTION_DRUGS: Dict[str, Dict[str, Any]] = {
                 "FDA Black Box Warning - Nitrate Contraindication"
             ]
         },
+
+        "Alprostadil": {
+            "group": "Urology - Prostaglandin E1 (Erectile Dysfunction)",
+            "vietnamese_name": "Alprostadil, Caverject, Muse",
+            "brand_names": {
+                "common": ["Caverject", "Muse", "Edex"],
+                "vietnam": ["Caverject", "Alprostadil"]
+            },
+            "administration": ["Intracavernosal", "Urethral"],
+            "indications": [
+                "Rối loạn cương dương (erectile dysfunction - ED)",
+                "Điều trị ED khi không đáp ứng hoặc chống chỉ định với PDE-5 inhibitors",
+                "Chẩn đoán ED (test injection)"
+            ],
+            "contraindications": [
+                "Dị ứng alprostadil",
+                "Priapism (cương cứng kéo dài >4 giờ)",
+                "Tiền sử priapism",
+                "Bệnh hồng cầu hình liềm (sickle cell disease)",
+                "Đa hồng cầu (polycythemia)",
+                "Bệnh bạch cầu (leukemia)",
+                "Rối loạn đông máu",
+                "Dị dạng dương vật (Peyronie's disease nặng)",
+                "Không được dùng cho phụ nữ"
+            ],
+            "dosage": {
+                "intracavernosal_start": "2.5mcg tiêm vào thể hang (corpus cavernosum), tăng dần đến 5mcg, 10mcg, 20mcg nếu cần",
+                "intracavernosal_max": "Tối đa 40mcg/lần, tối đa 3 lần/tuần",
+                "urethral_start": "125mcg đặt vào niệu đạo, tăng dần đến 250mcg, 500mcg, 1000mcg nếu cần",
+                "urethral_max": "Tối đa 1000mcg/lần, tối đa 2 lần/ngày",
+                "notes": "Liều khởi đầu thấp, tăng dần theo đáp ứng. Tiêm vào thể hang hoặc đặt vào niệu đạo trước hoạt động tình dục. Tác dụng trong 5-60 phút. NGỪNG NGAY nếu cương cứng >4 giờ (priapism - cấp cứu)."
+            },
+            "renal_adjustment": {
+                "normal": "Không đổi",
+                "30_60": "Không cần điều chỉnh đáng kể",
+                "under_30": "Không cần điều chỉnh đáng kể"
+            },
+            "side_effects": [
+                "Đau tại chỗ tiêm (intracavernosal) - phổ biến",
+                "Đau niệu đạo (urethral) - phổ biến",
+                "Priapism (cương cứng kéo dài >4 giờ) - NGUY HIỂM, cần điều trị ngay",
+                "Chảy máu tại chỗ tiêm",
+                "Sưng, bầm tím tại chỗ tiêm",
+                "Chóng mặt",
+                "Ngất",
+                "Đau lưng",
+                "Viêm niệu đạo (urethral)",
+                "Nhiễm trùng tại chỗ tiêm (hiếm)",
+                "Xơ hóa thể hang (sau nhiều lần tiêm)"
+            ],
+            "interactions": [
+                "Thuốc chống đông máu: tăng nguy cơ chảy máu tại chỗ tiêm",
+                "Thuốc chống kết tập tiểu cầu: tăng nguy cơ chảy máu"
+            ],
+            "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
+            "mechanism_of_action": "Alprostadil là prostaglandin E1 (PGE1) tổng hợp. Gắn với prostaglandin receptor trong cơ trơn mạch máu thể hang, kích hoạt adenylate cyclase, tăng cAMP (cyclic adenosine monophosphate). cAMP gây giãn cơ trơn mạch máu, tăng lưu lượng máu đến thể hang, và gây cương dương. Alprostadil tác dụng trực tiếp tại chỗ, không qua hệ thống như PDE-5 inhibitors. ĐẶC ĐIỂM: (1) Tác dụng tại chỗ (tiêm hoặc đặt niệu đạo), (2) Tác dụng nhanh (5-60 phút), (3) Nguy cơ priapism (cương cứng >4 giờ) - NGUY HIỂM, (4) Đau tại chỗ tiêm/niệu đạo phổ biến, (5) Không tương tác với nitrate (an toàn hơn PDE-5 inhibitors ở bệnh nhân dùng nitrate).",
+            "monitoring": [
+                "Thời gian cương cứng - NGỪNG NGAY nếu >4 giờ (priapism)",
+                "Đau tại chỗ tiêm/niệu đạo",
+                "Dấu hiệu chảy máu tại chỗ tiêm",
+                "Dấu hiệu nhiễm trùng tại chỗ tiêm",
+                "Xơ hóa thể hang (sau nhiều lần tiêm)"
+            ],
+            "precautions": {
+                "quan_trọng": [
+                    "PRIAPISM (cương cứng >4 giờ) - CẤP CỨU, cần điều trị ngay để tránh tổn thương dương vật vĩnh viễn",
+                    "NGỪNG NGAY nếu cương cứng >4 giờ - đến bệnh viện ngay",
+                    "Điều trị priapism: hút máu từ thể hang, tiêm phenylephrine vào thể hang",
+                    "CHỐNG CHỈ ĐỊNH ở tiền sử priapism",
+                    "CHỐNG CHỈ ĐỊNH ở bệnh hồng cầu hình liềm, đa hồng cầu, bệnh bạch cầu",
+                    "Thận trọng ở bệnh nhân rối loạn đông máu",
+                    "Không dùng quá 3 lần/tuần (intracavernosal) hoặc 2 lần/ngày (urethral)",
+                    "Xoay vị trí tiêm để tránh xơ hóa thể hang",
+                    "Hướng dẫn bệnh nhân kỹ thuật tiêm/đặt đúng cách"
+                ],
+                "khác": [
+                    "Đau tại chỗ tiêm/niệu đạo - phổ biến, thường giảm sau vài lần sử dụng",
+                    "Bảo quản trong tủ lạnh (2-8°C), không đông lạnh",
+                    "Dùng ngay sau khi pha (intracavernosal)"
+                ]
+            },
+            "pharmacokinetics": {
+                "half_life": "5-10 phút (rất ngắn)",
+                "onset": "5-60 phút",
+                "duration": "30-60 phút",
+                "protein_binding": "Không áp dụng (tác dụng tại chỗ)",
+                "metabolism": "Chuyển hóa nhanh tại chỗ và trong máu",
+                "clearance": "Chuyển hóa nhanh, không tích lũy"
+            },
+            "storage": "Bảo quản trong tủ lạnh (2-8°C), không đông lạnh. Tránh ánh sáng. Dùng ngay sau khi pha (intracavernosal).",
+            "black_box_warnings": "Nguy cơ PRIAPISM (cương cứng kéo dài >4 giờ) - có thể gây tổn thương dương vật vĩnh viễn. NGỪNG NGAY nếu cương cứng >4 giờ và đến bệnh viện ngay. CHỐNG CHỈ ĐỊNH ở tiền sử priapism, bệnh hồng cầu hình liềm, đa hồng cầu, bệnh bạch cầu.",
+            "drug_interactions": {
+                "major": [
+                    {
+                        "drug": "Thuốc chống đông máu (Warfarin, Heparin, DOACs)",
+                        "mechanism": "Tăng nguy cơ chảy máu tại chỗ tiêm",
+                        "effect": "Tăng nguy cơ chảy máu, bầm tím tại chỗ tiêm",
+                        "management": "Thận trọng. Theo dõi chảy máu tại chỗ tiêm. Có thể cần giảm liều thuốc chống đông tạm thời."
+                    }
+                ],
+                "moderate": [
+                    {
+                        "drug": "Thuốc chống kết tập tiểu cầu (Aspirin, Clopidogrel)",
+                        "mechanism": "Tăng nguy cơ chảy máu tại chỗ tiêm",
+                        "effect": "Tăng nguy cơ chảy máu, bầm tím",
+                        "management": "Thận trọng. Theo dõi chảy máu tại chỗ tiêm."
+                    }
+                ],
+                "minor": []
+            },
+            "contraindications": {
+                "tuyệt_đối": [
+                    "Dị ứng alprostadil",
+                    "Priapism (cương cứng kéo dài >4 giờ) - CHỐNG CHỈ ĐỊNH",
+                    "Tiền sử priapism - CHỐNG CHỈ ĐỊNH",
+                    "Bệnh hồng cầu hình liềm (sickle cell disease) - CHỐNG CHỈ ĐỊNH",
+                    "Đa hồng cầu (polycythemia) - CHỐNG CHỈ ĐỊNH",
+                    "Bệnh bạch cầu (leukemia) - CHỐNG CHỈ ĐỊNH",
+                    "Rối loạn đông máu nặng - CHỐNG CHỈ ĐỊNH",
+                    "Dị dạng dương vật nặng (Peyronie's disease nặng) - CHỐNG CHỈ ĐỊNH"
+                ],
+                "tương_đối": [
+                    "Rối loạn đông máu nhẹ - thận trọng",
+                    "Dùng thuốc chống đông máu - thận trọng",
+                    "Dị dạng dương vật nhẹ - thận trọng"
+                ]
+            },
+            "contraindications_detail": {
+                "tuyệt_đối": [
+                    "Dị ứng alprostadil",
+                    "Priapism (cương cứng kéo dài >4 giờ) - CHỐNG CHỈ ĐỊNH",
+                    "Tiền sử priapism - CHỐNG CHỈ ĐỊNH",
+                    "Bệnh hồng cầu hình liềm (sickle cell disease) - CHỐNG CHỈ ĐỊNH",
+                    "Đa hồng cầu (polycythemia) - CHỐNG CHỈ ĐỊNH",
+                    "Bệnh bạch cầu (leukemia) - CHỐNG CHỈ ĐỊNH",
+                    "Rối loạn đông máu nặng - CHỐNG CHỈ ĐỊNH",
+                    "Dị dạng dương vật nặng (Peyronie's disease nặng) - CHỐNG CHỈ ĐỊNH"
+                ],
+                "tương_đối": [
+                    "Rối loạn đông máu nhẹ - thận trọng",
+                    "Dùng thuốc chống đông máu - thận trọng",
+                    "Dị dạng dương vật nhẹ - thận trọng"
+                ]
+            },
+            "pregnancy_lactation": {
+                "fda_category": "Không áp dụng",
+                "pregnancy_details": "Alprostadil chỉ dùng cho nam giới. Không áp dụng cho phụ nữ có thai.",
+                "lactation": {
+                    "safety": "Không áp dụng",
+                    "details": "Alprostadil chỉ dùng cho nam giới. Không áp dụng cho phụ nữ cho con bú.",
+                    "recommendation": "Không áp dụng."
+                }
+            },
+            "hepatic_adjustment": {
+                "mild": "Không cần điều chỉnh liều",
+                "moderate": "Không cần điều chỉnh liều",
+                "severe": "Không cần điều chỉnh liều",
+                "notes": "Alprostadil tác dụng tại chỗ, không qua chuyển hóa gan đáng kể."
+            },
+            "overdose_management": {
+                "symptoms": [
+                    "Priapism (cương cứng kéo dài >4 giờ) - CẤP CỨU",
+                    "Đau dương vật nặng",
+                    "Chảy máu tại chỗ tiêm nặng"
+                ],
+                "antidote": "Phenylephrine (tiêm vào thể hang) để điều trị priapism.",
+                "treatment": [
+                    "Nếu PRIAPISM (>4 giờ):",
+                    "  - CẤP CỨU - đến bệnh viện ngay",
+                    "  - Hút máu từ thể hang bằng kim lớn",
+                    "  - Tiêm phenylephrine 100-200mcg vào thể hang mỗi 5-10 phút cho đến khi hết cương cứng",
+                    "  - Tối đa 1mg phenylephrine",
+                    "  - Nếu không đáp ứng: phẫu thuật shunt",
+                    "Nếu chảy máu tại chỗ tiêm:",
+                    "  - Ép tại chỗ",
+                    "  - Theo dõi lượng máu mất"
+                ],
+                "monitoring": "Thời gian cương cứng, dấu hiệu sinh tồn, lượng máu mất, đáp ứng với điều trị priapism."
+            },
+            "reversal_agents": {
+                "available": True,
+                "agents": [
+                    {
+                        "name": "Phenylephrine",
+                        "indication": "Điều trị priapism (cương cứng >4 giờ)",
+                        "dose": "100-200mcg tiêm vào thể hang mỗi 5-10 phút",
+                        "max_dose": "1mg tổng liều",
+                        "mechanism": "Co mạch, giảm lưu lượng máu đến thể hang"
+                    }
+                ],
+                "notes": "Phenylephrine là thuốc điều trị priapism. Tiêm vào thể hang để co mạch và giảm cương cứng. CẤP CỨU nếu cương cứng >4 giờ."
+            },
+            "administration_instructions": {
+                "intracavernosal": {
+                    "reconstitution": "Pha với nước cất vô trùng theo hướng dẫn. Dùng ngay sau khi pha.",
+                    "injection_site": "Tiêm vào thể hang (corpus cavernosum) ở mặt bên dương vật, cách gốc dương vật 1-2cm, tránh đường giữa và mặt trên.",
+                    "injection_technique": "Sử dụng kim nhỏ (27-30G), tiêm sâu vào thể hang. Xoay vị trí tiêm mỗi lần để tránh xơ hóa.",
+                    "timing": "Tiêm 5-10 phút trước hoạt động tình dục. Tác dụng trong 5-60 phút.",
+                    "frequency": "Tối đa 3 lần/tuần, cách nhau ít nhất 24 giờ.",
+                    "notes": "QUAN TRỌNG: 1) NGỪNG NGAY nếu cương cứng >4 giờ (priapism - cấp cứu), 2) Xoay vị trí tiêm để tránh xơ hóa, 3) Hướng dẫn bệnh nhân kỹ thuật tiêm đúng cách, 4) Bảo quản trong tủ lạnh, 5) Đau tại chỗ tiêm phổ biến."
+                },
+                "urethral": {
+                    "technique": "Đặt viên alprostadil vào niệu đạo bằng dụng cụ đặc biệt. Massage dương vật nhẹ nhàng để thuốc hấp thu.",
+                    "timing": "Đặt 5-10 phút trước hoạt động tình dục. Tác dụng trong 5-60 phút.",
+                    "frequency": "Tối đa 2 lần/ngày, cách nhau ít nhất 24 giờ.",
+                    "notes": "QUAN TRỌNG: 1) NGỪNG NGAY nếu cương cứng >4 giờ (priapism - cấp cứu), 2) Đau niệu đạo phổ biến, 3) Có thể gây viêm niệu đạo."
+                }
+            },
+            "references": {
+                "primary_sources": [
+                    "FDA Drug Label - Alprostadil (Caverject, Muse)",
+                    "AUA Guidelines - Management of Erectile Dysfunction",
+                    "UpToDate - Alprostadil: Drug Information",
+                    "Medscape - Alprostadil Drug Reference"
+                ],
+                "last_updated": "2025-02-18",
+                "evidence_level": "A - Dựa trên FDA drug labels, AUA guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": {"urologic": "Black Box Warning - Priapism (prolonged erection >4 hours, may cause permanent penile damage)", "urologic_other": "Penile fibrosis (after multiple injections)"},
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Black Box Warning - Priapism (prolonged erection >4 hours - EMERGENCY, stop immediately and seek medical attention)", "Injection site pain/bleeding", "Signs of infection at injection site", "Penile fibrosis (after multiple injections)"],
+                "look_alike_sound_alike": ["Alprostadil", "Alprostadil"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Priapism (Prolonged Erection >4 Hours)",
+                "AUA Guidelines - Erectile Dysfunction",
+                "EAU Guidelines - Erectile Dysfunction"
+            ],
+            "last_updated": "2025-02-18"
+        }
 
 }
 
