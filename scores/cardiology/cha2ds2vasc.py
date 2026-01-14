@@ -39,7 +39,38 @@ try:
     CALCULATOR_METADATA_AVAILABLE = True
 except ImportError:
     CALCULATOR_METADATA_AVAILABLE = False
-# ===================================================
+def calculate_cha2ds2vasc_score(
+    chf: bool,
+    htn: bool,
+    age_group: str,
+    dm: bool,
+    stroke: bool,
+    vasc: bool,
+    sex: str,
+) -> int:
+    """
+    Pure score calculation for CHA₂DS₂-VASc.
+
+    Hàm này tách phần tính điểm khỏi UI để dễ test tự động.
+    """
+    score = 0
+    if chf:
+        score += 1
+    if htn:
+        score += 1
+    if age_group == "65-74 tuổi":
+        score += 1
+    elif age_group == "≥ 75 tuổi":
+        score += 2
+    if dm:
+        score += 1
+    if stroke:
+        score += 2
+    if vasc:
+        score += 1
+    if sex == "Nữ":
+        score += 1
+    return score
 
 
 def render():
@@ -183,32 +214,32 @@ def render():
             )
         
         if st.button("🧮 Tính Điểm", type="primary", key="cha2ds2vasc_calc"):
-            score = 0
+            score = calculate_cha2ds2vasc_score(
+                chf=chf,
+                htn=htn,
+                age_group=age_group,
+                dm=dm,
+                stroke=stroke,
+                vasc=vasc,
+                sex=sex,
+            )
             details = []
             
             if chf:
-                score += 1
                 details.append("✓ Suy tim (+1)")
             if htn:
-                score += 1
                 details.append("✓ Tăng huyết áp (+1)")
             if age_group == "65-74 tuổi":
-                score += 1
                 details.append("✓ Tuổi 65-74 (+1)")
             elif age_group == "≥ 75 tuổi":
-                score += 2
                 details.append("✓ Tuổi ≥75 (+2)")
             if dm:
-                score += 1
                 details.append("✓ Đái tháo đường (+1)")
             if stroke:
-                score += 2
                 details.append("✓ Tiền sử đột quỵ/TIA (+2)")
             if vasc:
-                score += 1
                 details.append("✓ Bệnh mạch máu (+1)")
             if sex == "Nữ":
-                score += 1
                 details.append("✓ Giới tính nữ (+1)")
             
             # Determine risk level for color coding

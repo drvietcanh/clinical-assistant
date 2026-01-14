@@ -65,7 +65,7 @@ def render():
     """Render BMI/IBW/BSA calculator interface"""
     
     st.markdown(f"""
-    <h2 style='text-align: center; color: {COLORS['success']};'>📏 Máy tính BMI | IBW | BSA</h2>
+    <h2 style='text-align: center; color: {COLORS['success']};'>📏 Tính toán BMI | IBW | BSA</h2>
     <p style='text-align: center;'><em>Chỉ số cơ thể - BMI, cân nặng lý tưởng, diện tích da cơ thể</em></p>
     """, unsafe_allow_html=True)
     shared = load_shared_result_from_url()

@@ -50,7 +50,7 @@ TRANSLATIONS: Dict[str, Dict[str, str]] = {
         "not_found": "Không tìm thấy",
         
         # ========== CALCULATORS & SCORES ==========
-        "calculator": "Máy tính",
+        "calculator": "Tính toán",
         "score": "Thang điểm",
         "scores": "Thang điểm",
         "result": "Kết quả",

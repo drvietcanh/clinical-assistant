@@ -167,9 +167,13 @@ def render_enhanced_content(
     if search_query and search_query.strip():
         from components.patient_education.search import highlight_search_terms
         highlighted_content = highlight_search_terms(topic.content, search_query)
+        # Nội dung đã được highlight chứa HTML (<mark>, v.v.) nên cần cho phép render HTML
         st.markdown(highlighted_content, unsafe_allow_html=True)
     else:
-        st.markdown(topic.content)
+        # Một số topic Patient Education có thể chứa HTML (ví dụ snippet badge, layout)
+        # Nếu không bật unsafe_allow_html, Streamlit sẽ hiển thị thô các thẻ <div>, </span>, ...
+        # Đây là nguyên nhân gây lỗi hiển thị trên trang Patient_Education.
+        st.markdown(topic.content, unsafe_allow_html=True)
     
     # Reading progress
     if show_progress and headings:

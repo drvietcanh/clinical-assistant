@@ -14,6 +14,77 @@ def _format_num(value: float, decimals: int = 1) -> str:
     return f"{rounded:.{decimals}f}".rstrip('0').rstrip('.')
 
 
+def calculate_vancomycin_dose(
+    age: int,
+    weight_kg: float,
+    height_cm: float,
+    sex: str,
+    scr_mgdl: float,
+    indication: str,
+) -> dict:
+    """
+    Hàm tính liều Vancomycin thuần (không phụ thuộc UI) để tiện test.
+    Trả về:
+      - ibw, dosing_weight, crcl, loading_dose_mg_kg, loading_dose_mg,
+        maintenance_dose_mg, interval_h
+    """
+    # IBW
+    if sex == "Nam":
+        ibw = 50 + 2.3 * ((height_cm - 152.4) / 2.54)
+    else:
+        ibw = 45.5 + 2.3 * ((height_cm - 152.4) / 2.54)
+
+    # Obesity check & dosing weight
+    if weight_kg > ibw * 1.25:
+        dosing_weight = ibw + 0.4 * (weight_kg - ibw)
+    else:
+        dosing_weight = weight_kg
+
+    # CrCl (Cockcroft-Gault) với trọng lượng dùng để tính liều
+    crcl = ((140 - age) * dosing_weight) / (72 * scr_mgdl)
+    if sex == "Nữ":
+        crcl *= 0.85
+
+    # Loading dose
+    if "nặng" in indication or "nội tâm mạc" in indication or "màng não" in indication:
+        loading_dose_mg_kg = 30
+    else:
+        loading_dose_mg_kg = 25
+    loading_dose_mg = round((dosing_weight * loading_dose_mg_kg) / 250) * 250
+
+    # Maintenance dose
+    if crcl >= 90:
+        maint_mg = 15 * dosing_weight
+        interval = 12
+    elif crcl >= 60:
+        maint_mg = 15 * dosing_weight
+        interval = 12
+    elif crcl >= 40:
+        maint_mg = 12.5 * dosing_weight
+        interval = 12
+    elif crcl >= 20:
+        maint_mg = 10 * dosing_weight
+        interval = 24
+    elif crcl >= 10:
+        maint_mg = 7.5 * dosing_weight
+        interval = 24
+    else:
+        maint_mg = 5 * dosing_weight
+        interval = 48
+
+    maint_mg = round(maint_mg / 250) * 250
+
+    return {
+        "ibw": ibw,
+        "dosing_weight": dosing_weight,
+        "crcl": round(crcl, 1),
+        "loading_dose_mg_kg": loading_dose_mg_kg,
+        "loading_dose_mg": loading_dose_mg,
+        "maintenance_dose_mg": maint_mg,
+        "interval_h": interval,
+    }
+
+
 def render():
     """Vancomycin Dosing Calculator"""
     st.subheader("💉 Vancomycin - Tính liều")
@@ -69,22 +140,6 @@ def render():
             key="vanco_sex"
         )
         
-        # Calculate IBW
-        if sex == "Nam":
-            ibw = 50 + 2.3 * ((height - 152.4) / 2.54)
-        else:
-            ibw = 45.5 + 2.3 * ((height - 152.4) / 2.54)
-        
-        # Check if obese
-        is_obese = weight > ibw * 1.25
-        if is_obese:
-            abw = ibw + 0.4 * (weight - ibw)
-            st.info(f"**Béo phì:** IBW = {ibw:.1f} kg → Dùng ABW = {abw:.1f} kg để tính liều")
-            dosing_weight = abw
-        else:
-            st.caption(f"IBW = {_format_num(ibw, 1)} kg")
-            dosing_weight = weight
-        
         # Creatinine
         st.markdown("#### Creatinine máu")
         scr_unit = st.radio(
@@ -119,12 +174,31 @@ def render():
             )
             st.caption(f"≈ {round(scr_mgdl * 88.4)} µmol/L")
         
-        # Calculate CrCl
-        crcl = ((140 - age) * dosing_weight) / (72 * scr_mgdl)
-        if sex == "Nữ":
-            crcl *= 0.85
-        crcl = round(crcl, 1)
-        
+        # Tính liều bằng hàm thuần để tái sử dụng & test
+        dose_result = calculate_vancomycin_dose(
+            age=age,
+            weight_kg=weight,
+            height_cm=height,
+            sex=sex,
+            scr_mgdl=scr_mgdl,
+            indication=indication,
+        )
+
+        ibw = dose_result["ibw"]
+        dosing_weight = dose_result["dosing_weight"]
+        crcl = dose_result["crcl"]
+        loading_dose_mg_kg = dose_result["loading_dose_mg_kg"]
+        loading_dose = dose_result["loading_dose_mg"]
+        maint_dose = dose_result["maintenance_dose_mg"]
+        interval = dose_result["interval_h"]
+
+        # Hiển thị IBW/ABW thông tin
+        if weight > ibw * 1.25:
+            abw = dosing_weight
+            st.info(f"**Béo phì:** IBW = {ibw:.1f} kg → Dùng ABW = {abw:.1f} kg để tính liều")
+        else:
+            st.caption(f"IBW = {_format_num(ibw, 1)} kg")
+
         st.metric("CrCl (Cockcroft-Gault)", f"{crcl} mL/phút")
         
         # Indication
@@ -144,38 +218,6 @@ def render():
         )
         
         if st.button("🧮 Tính liều Vancomycin", type="primary", key="vanco_calc"):
-            # Loading dose calculation
-            # Standard: 25-30 mg/kg for serious infections
-            if "nặng" in indication or "nội tâm mạc" in indication or "màng não" in indication:
-                loading_dose_mg_kg = 30
-            else:
-                loading_dose_mg_kg = 25
-            
-            loading_dose = dosing_weight * loading_dose_mg_kg
-            loading_dose = round(loading_dose / 250) * 250  # Round to nearest 250mg
-            
-            # Maintenance dose based on CrCl
-            if crcl >= 90:
-                maint_dose = 15 * dosing_weight
-                interval = 12
-            elif crcl >= 60:
-                maint_dose = 15 * dosing_weight
-                interval = 12
-            elif crcl >= 40:
-                maint_dose = 12.5 * dosing_weight
-                interval = 12
-            elif crcl >= 20:
-                maint_dose = 10 * dosing_weight
-                interval = 24
-            elif crcl >= 10:
-                maint_dose = 7.5 * dosing_weight
-                interval = 24
-            else:
-                maint_dose = 5 * dosing_weight
-                interval = 48
-            
-            maint_dose = round(maint_dose / 250) * 250  # Round to nearest 250mg
-            
             with col2:
                 st.markdown("### 📊 Liều Khuyến cáo")
                 st.success(f"## Loading Dose")

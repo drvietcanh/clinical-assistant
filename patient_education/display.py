@@ -10,13 +10,17 @@ from patient_education.data import PatientEducationTopic
 
 def render_patient_education_content(topic: PatientEducationTopic):
     """
-    Render patient education content
-    
-    Args:
-        topic: PatientEducationTopic object
+    Render patient education content and related resources.
+
+    Lịch sử:
+    - Ban đầu hàm này chỉ dùng `st.markdown(topic.content)` (không cho phép HTML),
+      dẫn đến các topic chứa HTML (ví dụ `<div style=\"...\">`) bị hiển thị thô.
+    - Hiện tại chúng ta cho phép HTML để nội dung luôn hiển thị đúng.
     """
-    st.markdown(topic.content)
-    
+    # Cho phép HTML trong nội dung topic để các đoạn được format bằng HTML
+    # (ví dụ badges, layout) không bị escape thành text thô.
+    st.markdown(topic.content, unsafe_allow_html=True)
+
     # Related resources
     if topic.related_disease or topic.related_drugs:
         st.markdown("---")
