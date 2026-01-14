@@ -1243,21 +1243,6 @@ CEREBRAL_CIRCULATION_DRUGS = {
               "available": False,
               "agents": []
           },
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": None,
-          "black_box_warnings": "Không có",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -1273,7 +1258,569 @@ CEREBRAL_CIRCULATION_DRUGS = {
                 "UpToDate Drug Information",
             ]
 },
-
+    "Cinnarizine":     {
+        "group": "Neurology - Calcium channel blocker (cerebral vasodilator)",
+        "vietnamese_name": "Cinnarizine, Stugeron",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Chóng mặt do rối loạn tiền đình",
+            "Say tàu xe",
+            "Thiếu máu não mạn tính",
+            "Đau đầu do co thắt mạch máu",
+            "Rối loạn tuần hoàn ngoại vi"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng cinnarizine",
+                "Parkinson",
+                "Trầm cảm nặng",
+                "Phụ nữ có thai (3 tháng đầu)"
+    ],
+            "tương_đối": [
+                "Suy gan nặng",
+                "Suy thận nặng",
+                "Người cao tuổi - tăng nguy cơ parkinsonism"
+    ],
+        },
+        "dosage": {
+            "adult_vertigo": "25mg x 3 lần/ngày",
+            "adult_motion_sickness": "25mg x 2-3 lần/ngày, bắt đầu 2 giờ trước khi đi",
+            "adult_cerebral_ischemia": "25-50mg x 3 lần/ngày",
+            "notes": "Cinnarizine là calcium channel blocker, có tác dụng giãn mạch và chống say tàu xe. Có tác dụng kháng histamine H1. Nguy cơ parkinsonism ở người cao tuổi khi dùng kéo dài.",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng",
+            "under_30": "Thận trọng, giảm liều"
+        },
+        "side_effects": [
+            "Buồn ngủ",
+            "Khô miệng",
+            "Parkinsonism (đặc biệt ở người cao tuổi khi dùng kéo dài)",
+            "Trầm cảm",
+            "Rối loạn tiêu hóa",
+            "Tăng cân"
+    ],
+        "interactions": [
+            "Thuốc ức chế CNS (Benzodiazepines, Opioids) -> Tăng tác dụng an thần",
+            "Thuốc kháng cholinergic -> Tăng tác dụng phụ anticholinergic",
+            "Alcohol -> Tăng tác dụng an thần"
+    ],
+        "pregnancy": "C - D trong 3 tháng đầu",
+        "mechanism_of_action": """Cinnarizine là calcium channel blocker, ức chế dòng Ca2+ vào tế bào cơ trơn mạch máu, gây giãn mạch, đặc biệt ở tuần hoàn não và ngoại vi. Cinnarizine cũng có tác dụng kháng histamine H1, giải thích tác dụng chống say tàu xe. Tác dụng giãn mạch cải thiện tuần hoàn não và giảm chóng mặt. Nguy cơ parkinsonism ở người cao tuổi khi dùng kéo dài do tác dụng kháng dopamine.""",
+        "monitoring": [
+            "Triệu chứng chóng mặt, rối loạn tiền đình",
+            "Dấu hiệu parkinsonism (đặc biệt ở người cao tuổi)",
+            "Dấu hiệu trầm cảm",
+            "Buồn ngủ"
+    ],
+        "precautions": [
+            "Nguy cơ parkinsonism ở người cao tuổi khi dùng kéo dài - tránh dùng kéo dài",
+            "CHỐNG CHỈ ĐỊNH ở bệnh nhân Parkinson",
+            "CHỐNG CHỈ ĐỊNH ở trầm cảm nặng",
+            "Buồn ngủ - không lái xe sau khi uống",
+            "Tránh dùng trong 3 tháng đầu thai kỳ",
+            "Thận trọng ở suy gan, suy thận"
+    ],
+        "pharmacokinetics": {
+            "half_life": "3-6 giờ",
+            "onset": "1-2 giờ",
+            "duration": "6-8 giờ",
+            "protein_binding": "91%",
+            "clearance": "Gan: chuyển hóa. Thận: thải trừ.",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Nguy cơ parkinsonism ở người cao tuổi khi dùng kéo dài. CHỐNG CHỈ ĐỊNH ở bệnh nhân Parkinson.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+    {
+                    "drug": "Thuốc ức chế CNS (Benzodiazepines, Opioids, Alcohol)",
+                    "mechanism": "Tác dụng cộng dồn ức chế CNS",
+                    "effect": "Tăng buồn ngủ, tăng nguy cơ ức chế hô hấp",
+                    "management": "Thận trọng. Giảm liều nếu cần.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 1",
+            "pregnancy_details": "Tam cá nguyệt 1: Category D - CHỐNG CHỈ ĐỊNH. Tam cá nguyệt 2-3: Category C - thận trọng.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Có thể gây buồn ngủ ở trẻ.",
+                "recommendation": "Thận trọng khi cho con bú.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Tránh dùng",
+            "notes": "Cinnarizine chuyển hóa ở gan. Tránh dùng ở suy gan nặng.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Hạ huyết áp",
+                "Parkinsonism",
+                "Trầm cảm"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Điều trị hỗ trợ",
+                "Theo dõi huyết áp, nhịp tim",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ",
+                "Than hoạt tính"
+    ],
+            "monitoring": "Theo dõi ý thức, huyết áp, nhịp tim",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn",
+                "timing": "25-50mg x 2-3 lần/ngày. Đối với say tàu xe: 25mg x 2-3 lần/ngày, bắt đầu 2 giờ trước khi đi.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Stugeron (Cinnarizine)",
+                "UpToDate - Cinnarizine: Drug information"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["neurological"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Parkinsonism signs", "CNS status"],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+            ],
+        "brand_names": {
+            "common": [
+                "Stugeron",
+                "Stugeron Forte"
+            ],
+            "vietnam": [
+                "Cinnarizine",
+                "Stugeron",
+                "Stugeron Forte",
+                "Cinnarizine Stada"
+            ]
+        },
+        "pediatric_dosing": {
+            "children_5_12": "12.5mg x 2-3 lần/ngày (chóng mặt, say tàu xe). Tối đa 37.5mg/ngày.",
+            "children_under_5": "Không khuyến cáo dùng cho trẻ em <5 tuổi. Dữ liệu an toàn còn hạn chế.",
+            "adolescents_12_18": "25mg x 2-3 lần/ngày (liều người lớn). Tối đa 75mg/ngày.",
+            "notes": "Cinnarizine có thể dùng cho trẻ em ≥5 tuổi với liều giảm. Thận trọng ở trẻ em do nguy cơ buồn ngủ và tác dụng phụ anticholinergic. Theo dõi chặt chẽ dấu hiệu buồn ngủ, khô miệng."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi có nguy cơ cao parkinsonism khi dùng kéo dài. Tăng nguy cơ buồn ngủ, trầm cảm. CHỐNG CHỈ ĐỊNH ở bệnh nhân Parkinson. Thận trọng với tác dụng phụ anticholinergic.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (25mg x 2 lần/ngày). Tránh dùng kéo dài (>3 tháng) để giảm nguy cơ parkinsonism. Giảm liều nếu có buồn ngủ nặng hoặc dấu hiệu parkinsonism.",
+            "monitoring": "Theo dõi chặt chẽ: Dấu hiệu parkinsonism (run, cứng cơ, chậm vận động) - NGUY HIỂM, dấu hiệu trầm cảm, buồn ngủ, khô miệng, cân nặng. Ngừng ngay nếu có dấu hiệu parkinsonism. Tránh dùng kéo dài."
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "5,000 - 20,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Cinnarizine generic thường rẻ (5,000-10,000 VND/viên 25mg). Stugeron (brand) thường đắt hơn (15,000-20,000 VND/viên 25mg). Stugeron Forte (75mg) thường 20,000-30,000 VND/viên."
+        }
+    },
+    "Flunarizine":     {
+        "group": "Neurology - Calcium channel blocker (cerebral vasodilator, migraine prophylaxis)",
+        "vietnamese_name": "Flunarizine, Sibelium",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Dự phòng đau nửa đầu (migraine prophylaxis)",
+            "Chóng mặt do rối loạn tiền đình",
+            "Thiếu máu não mạn tính",
+            "Rối loạn tuần hoàn ngoại vi"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng flunarizine",
+                "Parkinson",
+                "Trầm cảm nặng",
+                "Phụ nữ có thai (3 tháng đầu)"
+    ],
+            "tương_đối": [
+                "Suy gan nặng",
+                "Suy thận nặng",
+                "Người cao tuổi - tăng nguy cơ parkinsonism"
+    ],
+        },
+        "dosage": {
+            "adult_migraine_prophylaxis": "5-10mg x 1 lần/ngày (buổi tối)",
+            "adult_vertigo": "10mg x 1 lần/ngày (buổi tối)",
+            "adult_cerebral_ischemia": "10mg x 1 lần/ngày (buổi tối)",
+            "notes": "Flunarizine là calcium channel blocker, tương tự cinnarizine nhưng có t1/2 dài hơn. Dùng 1 lần/ngày vào buổi tối. Nguy cơ parkinsonism ở người cao tuổi khi dùng kéo dài. Hiệu quả trong dự phòng đau nửa đầu.",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng",
+            "under_30": "Thận trọng, giảm liều"
+        },
+        "side_effects": [
+            "Buồn ngủ",
+            "Tăng cân",
+            "Parkinsonism (đặc biệt ở người cao tuổi khi dùng kéo dài)",
+            "Trầm cảm",
+            "Rối loạn tiêu hóa",
+            "Mệt mỏi"
+    ],
+        "interactions": [
+            "Thuốc ức chế CNS (Benzodiazepines, Opioids) -> Tăng tác dụng an thần",
+            "Thuốc kháng cholinergic -> Tăng tác dụng phụ anticholinergic",
+            "Alcohol -> Tăng tác dụng an thần"
+    ],
+        "pregnancy": "C - D trong 3 tháng đầu",
+        "mechanism_of_action": """Flunarizine là calcium channel blocker, ức chế dòng Ca2+ vào tế bào cơ trơn mạch máu, gây giãn mạch, đặc biệt ở tuần hoàn não. Flunarizine cũng có tác dụng ổn định màng tế bào và chống co thắt mạch máu. Tác dụng giãn mạch và ổn định màng tế bào giải thích hiệu quả trong dự phòng đau nửa đầu và điều trị chóng mặt. T1/2 dài (18 ngày) cho phép dùng 1 lần/ngày. Nguy cơ parkinsonism ở người cao tuổi khi dùng kéo dài do tác dụng kháng dopamine.""",
+        "monitoring": [
+            "Tần suất và mức độ đau nửa đầu (nếu dùng để dự phòng)",
+            "Triệu chứng chóng mặt, rối loạn tiền đình",
+            "Dấu hiệu parkinsonism (đặc biệt ở người cao tuổi)",
+            "Dấu hiệu trầm cảm",
+            "Cân nặng",
+            "Buồn ngủ"
+    ],
+        "precautions": [
+            "Nguy cơ parkinsonism ở người cao tuổi khi dùng kéo dài - tránh dùng kéo dài",
+            "CHỐNG CHỈ ĐỊNH ở bệnh nhân Parkinson",
+            "CHỐNG CHỈ ĐỊNH ở trầm cảm nặng",
+            "Tăng cân - theo dõi cân nặng",
+            "Buồn ngủ - dùng buổi tối, không lái xe sau khi uống",
+            "Tránh dùng trong 3 tháng đầu thai kỳ",
+            "Thận trọng ở suy gan, suy thận",
+            "T1/2 dài - cần thời gian để đạt nồng độ ổn định và để thuốc thải trừ hoàn toàn"
+    ],
+        "pharmacokinetics": {
+            "half_life": "18 ngày (rất dài)",
+            "onset": "2-4 tuần",
+            "duration": "Kéo dài sau khi ngừng thuốc",
+            "protein_binding": "99%",
+            "clearance": "Gan: chuyển hóa. Thận: thải trừ.",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "Nguy cơ parkinsonism ở người cao tuổi khi dùng kéo dài. CHỐNG CHỈ ĐỊNH ở bệnh nhân Parkinson.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+    {
+                    "drug": "Thuốc ức chế CNS (Benzodiazepines, Opioids, Alcohol)",
+                    "mechanism": "Tác dụng cộng dồn ức chế CNS",
+                    "effect": "Tăng buồn ngủ, tăng nguy cơ ức chế hô hấp",
+                    "management": "Thận trọng. Giảm liều nếu cần.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 1",
+            "pregnancy_details": "Tam cá nguyệt 1: Category D - CHỐNG CHỈ ĐỊNH. Tam cá nguyệt 2-3: Category C - thận trọng.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Có thể gây buồn ngủ ở trẻ.",
+                "recommendation": "Thận trọng khi cho con bú.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Tránh dùng",
+            "notes": "Flunarizine chuyển hóa ở gan. Tránh dùng ở suy gan nặng.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Hạ huyết áp",
+                "Parkinsonism",
+                "Trầm cảm"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Điều trị hỗ trợ",
+                "Theo dõi huyết áp, nhịp tim",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ",
+                "Than hoạt tính"
+    ],
+            "monitoring": "Theo dõi ý thức, huyết áp, nhịp tim",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn",
+                "timing": "5-10mg x 1 lần/ngày, uống buổi tối. Đối với dự phòng đau nửa đầu: thường bắt đầu 5mg/ngày, tăng dần đến 10mg/ngày nếu cần.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Sibelium (Flunarizine)",
+                "UpToDate - Flunarizine: Drug information",
+                "AAN Guidelines - Migraine Prophylaxis"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["neurological"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Parkinsonism signs", "CNS status", "Weight"],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+                "AAN Guidelines - Migraine Prophylaxis",
+            ],
+        "brand_names": {
+            "common": [
+                "Sibelium",
+                "Flunarizine"
+            ],
+            "vietnam": [
+                "Flunarizine",
+                "Sibelium",
+                "Flunarizine Stada"
+            ]
+        },
+        "pediatric_dosing": {
+            "children_5_12": "5mg x 1 lần/ngày (buổi tối) cho dự phòng đau nửa đầu. Tối đa 5mg/ngày.",
+            "children_under_5": "Không khuyến cáo dùng cho trẻ em <5 tuổi. Dữ liệu an toàn còn hạn chế.",
+            "adolescents_12_18": "5-10mg x 1 lần/ngày (buổi tối) cho dự phòng đau nửa đầu. Tối đa 10mg/ngày.",
+            "notes": "Flunarizine có thể dùng cho trẻ em ≥5 tuổi với liều giảm. Thận trọng ở trẻ em do nguy cơ buồn ngủ, tăng cân, và parkinsonism khi dùng kéo dài. Theo dõi chặt chẽ dấu hiệu buồn ngủ, tăng cân, parkinsonism."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi có nguy cơ cao parkinsonism khi dùng kéo dài. Tăng nguy cơ buồn ngủ, trầm cảm, tăng cân. CHỐNG CHỈ ĐỊNH ở bệnh nhân Parkinson. T1/2 rất dài (18 ngày) → tích lũy ở người cao tuổi.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (5mg/ngày). Tránh dùng kéo dài (>3-6 tháng) để giảm nguy cơ parkinsonism. Giảm liều hoặc ngừng nếu có buồn ngủ nặng, tăng cân, hoặc dấu hiệu parkinsonism. Do T1/2 dài, cần thời gian lâu để đạt nồng độ ổn định và thải trừ.",
+            "monitoring": "Theo dõi chặt chẽ: Dấu hiệu parkinsonism (run, cứng cơ, chậm vận động) - NGUY HIỂM, dấu hiệu trầm cảm, buồn ngủ, tăng cân, mệt mỏi. Ngừng ngay nếu có dấu hiệu parkinsonism. Tránh dùng kéo dài. Theo dõi lâu hơn do T1/2 dài."
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "10,000 - 30,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Flunarizine generic thường rẻ (10,000-15,000 VND/viên 5mg). Sibelium (brand) thường đắt hơn (20,000-30,000 VND/viên 5mg). Do T1/2 dài, dùng 1 lần/ngày nên chi phí hàng ngày thấp hơn."
+        }
+    },
+    "Cilostazol":     {
+        "group": "Neurology - Phosphodiesterase-3 inhibitor (antiplatelet, vasodilator)",
+        "vietnamese_name": "Cilostazol, Pletal",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Bệnh động mạch ngoại vi (PAD) - giảm triệu chứng claudication",
+            "Thiếu máu não mạn tính (off-label)",
+            "Dự phòng tái phát đột quỵ (off-label, bằng chứng hạn chế)"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng cilostazol",
+                "Suy tim nặng (NYHA class III-IV)",
+                "Rối loạn nhịp tim nặng",
+                "Xuất huyết đang hoạt động",
+                "Phụ nữ có thai"
+    ],
+            "tương_đối": [
+                "Suy tim nhẹ đến trung bình (NYHA class I-II) - thận trọng",
+                "Rối loạn nhịp tim nhẹ - thận trọng",
+                "Đang dùng thuốc chống đông/kháng tiểu cầu - tăng nguy cơ chảy máu"
+    ],
+        },
+        "dosage": {
+            "adult_pad": "100mg x 2 lần/ngày (trước bữa ăn 30 phút hoặc sau bữa ăn 2 giờ)",
+            "adult_cerebral_ischemia_offlabel": "100mg x 2 lần/ngày",
+            "notes": "Cilostazol là phosphodiesterase-3 inhibitor, có tác dụng chống kết tập tiểu cầu và giãn mạch. Uống trước bữa ăn 30 phút hoặc sau bữa ăn 2 giờ để tăng hấp thu. CHỐNG CHỈ ĐỊNH ở suy tim nặng.",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng"
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Chóng mặt",
+            "Đánh trống ngực, tăng nhịp tim",
+            "Rối loạn tiêu hóa (tiêu chảy, đau bụng)",
+            "Chảy máu (tăng nguy cơ khi dùng với thuốc chống đông/kháng tiểu cầu)",
+            "Phù ngoại vi"
+    ],
+        "interactions": [
+            "Thuốc chống đông (Warfarin, DOACs) -> Tăng nguy cơ chảy máu",
+            "Thuốc kháng tiểu cầu (Aspirin, Clopidogrel) -> Tăng nguy cơ chảy máu",
+            "Thuốc ức chế CYP3A4 (Ketoconazole, Clarithromycin) -> Tăng nồng độ cilostazol, giảm liều 50%",
+            "Thuốc ức chế CYP2C19 (Omeprazole, Fluoxetine) -> Tăng nồng độ cilostazol",
+            "Thuốc cảm ứng CYP3A4 (Carbamazepine, Rifampin) -> Giảm nồng độ cilostazol"
+    ],
+        "pregnancy": "X (chống chỉ định)",
+        "mechanism_of_action": """Cilostazol là phosphodiesterase-3 (PDE-3) inhibitor, ức chế phân hủy cAMP trong tiểu cầu và tế bào cơ trơn mạch máu. Tăng cAMP dẫn đến: (1) Ức chế kết tập tiểu cầu, (2) Giãn mạch, đặc biệt ở tuần hoàn ngoại vi và não, (3) Tăng lưu lượng máu. Cilostazol cải thiện triệu chứng claudication ở bệnh nhân PAD và có thể cải thiện tuần hoàn não. CHỐNG CHỈ ĐỊNH ở suy tim nặng do nguy cơ tăng tử vong (tương tự milrinone).""",
+        "monitoring": [
+            "Triệu chứng claudication (nếu dùng cho PAD)",
+            "Dấu hiệu chảy máu",
+            "Nhịp tim (tăng nhịp tim)",
+            "Chức năng tim (nếu có suy tim)",
+            "Triệu chứng thần kinh (nếu dùng cho thiếu máu não)"
+    ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH ở suy tim nặng (NYHA class III-IV) - nguy cơ tăng tử vong",
+            "Nguy cơ chảy máu - thận trọng khi dùng với thuốc chống đông/kháng tiểu cầu",
+            "Tăng nhịp tim - thận trọng ở bệnh nhân có rối loạn nhịp tim",
+            "Uống trước bữa ăn 30 phút hoặc sau bữa ăn 2 giờ - tăng hấp thu",
+            "CHỐNG CHỈ ĐỊNH ở phụ nữ có thai",
+            "Thận trọng ở suy thận nặng"
+    ],
+        "pharmacokinetics": {
+            "half_life": "11-13 giờ",
+            "onset": "2-4 tuần",
+            "duration": "Kéo dài sau khi ngừng thuốc",
+            "protein_binding": "95-98%",
+            "clearance": "Gan: chuyển hóa (CYP3A4, CYP2C19). Thận: thải trừ.",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở suy tim nặng (NYHA class III-IV) - nguy cơ tăng tử vong. CHỐNG CHỈ ĐỊNH ở phụ nữ có thai.",
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Thuốc chống đông (Warfarin, DOACs)",
+                    "mechanism": "Tác dụng cộng dồn chống đông",
+                    "effect": "Tăng nguy cơ chảy máu nặng",
+                    "management": "Thận trọng. Theo dõi chảy máu chặt chẽ.",
+                },
+    {
+                    "drug": "Thuốc kháng tiểu cầu (Aspirin, Clopidogrel)",
+                    "mechanism": "Tác dụng cộng dồn chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu",
+                    "management": "Thận trọng. Theo dõi chảy máu chặt chẽ.",
+                },
+    {
+                    "drug": "Thuốc ức chế CYP3A4 mạnh (Ketoconazole, Clarithromycin, Itraconazole)",
+                    "mechanism": "Ức chế chuyển hóa cilostazol",
+                    "effect": "Tăng nồng độ cilostazol, tăng tác dụng phụ",
+                    "management": "Giảm liều cilostazol 50%.",
+                }
+                ],
+            "moderate": [
+    {
+                    "drug": "Thuốc cảm ứng CYP3A4 (Carbamazepine, Rifampin, St. John's Wort)",
+                    "mechanism": "Tăng chuyển hóa cilostazol",
+                    "effect": "Giảm nồng độ cilostazol, giảm hiệu quả",
+                    "management": "Tăng liều cilostazol nếu cần.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "X (chống chỉ định)",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH ở phụ nữ có thai. Có thể gây hại cho thai nhi.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Bài tiết vào sữa mẹ. Có thể gây tác dụng phụ ở trẻ.",
+                "recommendation": "KHÔNG dùng khi cho con bú.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, giảm liều 50%",
+            "severe": "Tránh dùng",
+            "notes": "Cilostazol chuyển hóa ở gan (CYP3A4, CYP2C19). Giảm liều ở suy gan trung bình. Tránh dùng ở suy gan nặng.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Chảy máu",
+                "Đánh trống ngực, tăng nhịp tim",
+                "Hạ huyết áp",
+                "Nhức đầu"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Điều trị hỗ trợ",
+                "Theo dõi chảy máu",
+                "Theo dõi huyết áp, nhịp tim",
+                "Rửa dạ dày nếu trong vòng 1-2 giờ",
+                "Than hoạt tính"
+    ],
+            "monitoring": "Theo dõi chảy máu, huyết áp, nhịp tim, ECG",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống trước bữa ăn 30 phút hoặc sau bữa ăn 2 giờ (tăng hấp thu)",
+                "timing": "100mg x 2 lần/ngày, uống trước bữa ăn 30 phút hoặc sau bữa ăn 2 giờ.",
+            },
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Pletal (Cilostazol)",
+                "UpToDate - Cilostazol: Drug information",
+                "AHA/ASA Guidelines - Peripheral Artery Disease"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved for PAD, limited evidence for cerebral ischemia",
+        },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["cardiac"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Bleeding signs", "Heart rate", "Cardiac function"],
+            },
+            "guideline_tags": [
+                "FDA Drug Information",
+                "UpToDate Drug Information",
+                "AHA/ASA Guidelines - Peripheral Artery Disease",
+            ],
+        "brand_names": {
+            "common": [
+                "Pletal",
+                "Cilostazol"
+            ],
+            "vietnam": [
+                "Cilostazol",
+                "Pletal",
+                "Cilostazol Stada",
+                "Cilostazol Takeda"
+            ]
+        },
+        "pediatric_dosing": {
+            "children_under_18": "CHỐNG CHỈ ĐỊNH ở trẻ em <18 tuổi. Chưa được nghiên cứu về an toàn và hiệu quả ở trẻ em. Cilostazol chỉ được FDA phê duyệt cho người lớn.",
+            "adolescents_18plus": "Liều người lớn: 100mg x 2 lần/ngày (trước bữa ăn 30 phút hoặc sau bữa ăn 2 giờ).",
+            "notes": "Cilostazol chỉ được FDA phê duyệt cho người lớn ≥18 tuổi với bệnh động mạch ngoại vi (PAD). Không có dữ liệu an toàn và hiệu quả ở trẻ em."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ. Tăng nguy cơ chảy máu, rối loạn nhịp tim. CHỐNG CHỈ ĐỊNH ở suy tim nặng (nguy cơ tăng tử vong). Thận trọng với tác dụng phụ tim mạch. Suy gan trung bình: giảm liều 50%.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (50mg x 2 lần/ngày) nếu có nguy cơ cao. Điều chỉnh liều theo chức năng gan (suy gan trung bình: giảm 50%, suy gan nặng: tránh dùng). CHỐNG CHỈ ĐỊNH ở suy tim nặng.",
+            "monitoring": "Theo dõi chặt chẽ: Dấu hiệu chảy máu (chảy máu cam, chảy máu nướu, vết bầm tím), nhịp tim, chức năng tim (ECG nếu cần), dấu hiệu suy tim. CHỐNG CHỈ ĐỊNH ở suy tim nặng. Theo dõi chức năng gan nếu có suy gan."
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "15,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Cilostazol generic thường rẻ (15,000-25,000 VND/viên 100mg). Pletal (brand) thường đắt hơn (30,000-40,000 VND/viên 100mg). Dùng 2 lần/ngày nên chi phí hàng ngày: 30,000-80,000 VND/ngày."
+        }
+    },
 }
 
 __all__ = ["CEREBRAL_CIRCULATION_DRUGS"]
