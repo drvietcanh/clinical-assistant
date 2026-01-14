@@ -177,7 +177,7 @@ def calculate_rsbi(rr: float, vt_liters: float) -> dict:
     }
 
 
-def render_ibw_calculator():
+def render_ibw_calculator(key_prefix=""):
     """Render Ideal Body Weight calculator"""
     st.subheader("📏 Tính toán cân nặng lý tưởng (IBW)")
     st.caption("Tính trọng lượng cơ thể lý tưởng để tính thể tích khí lưu thông")
@@ -196,7 +196,7 @@ def render_ibw_calculator():
             "Giới tính:",
             ["Nam", "Nữ"],
             horizontal=True,
-            key="cc_ibw_sex"
+            key=f"{key_prefix}cc_ibw_sex"
         )
     
     with col2:
@@ -207,10 +207,10 @@ def render_ibw_calculator():
             value=160,
             step=1,
             format="%d",
-            key="cc_ibw_height"
+            key=f"{key_prefix}cc_ibw_height"
         )
     
-    if st.button("Tính toán", type="primary", key="cc_calc_ibw"):
+    if st.button("Tính toán", type="primary", key=f"{key_prefix}cc_calc_ibw"):
         ibw = calculate_ibw(sex, height_cm)
         
         st.markdown("### 📊 Kết quả")
@@ -240,7 +240,7 @@ def render_ibw_calculator():
             st.latex(r"IBW = 45.5 + 2.3 \times (height_{inches} - 60)")
 
 
-def render_tidal_volume_calculator():
+def render_tidal_volume_calculator(key_prefix=""):
     """Render Tidal Volume calculator"""
     st.subheader("💨 Tính toán thể tích khí lưu thông")
     st.caption("Tính thể tích khí lưu thông dựa trên IBW (ARDSNet protocol)")
@@ -261,7 +261,7 @@ def render_tidal_volume_calculator():
             value=50.0,
             step=0.1,
             format="%.1f",
-            key="tidal_ibw",
+            key=f"{key_prefix}tidal_ibw",
             help="Sử dụng IBW, không dùng cân nặng thực tế"
         )
     
@@ -273,11 +273,11 @@ def render_tidal_volume_calculator():
             value=6.0,
             step=0.5,
             format="%.1f",
-            key="tidal_ml_per_kg",
+            key=f"{key_prefix}tidal_ml_per_kg",
             help="ARDSNet: 6 ml/kg IBW"
         )
     
-    if st.button("Tính toán", type="primary", key="calc_tidal"):
+    if st.button("Tính toán", type="primary", key=f"{key_prefix}calc_tidal"):
         results = calculate_tidal_volume(ibw_kg, ml_per_kg)
         
         st.markdown("### 📊 Kết quả")
@@ -329,7 +329,7 @@ def render_tidal_volume_calculator():
         """)
 
 
-def render_peep_calculator():
+def render_peep_calculator(key_prefix=""):
     """Render PEEP calculator"""
     st.subheader("📊 Tính toán PEEP")
     st.caption("Khuyến nghị PEEP dựa trên FiO2 (ARDSNet protocol)")
@@ -346,12 +346,12 @@ def render_peep_calculator():
         max_value=100,
         value=50,
         step=5,
-        key="peep_fio2_percent"
+        key=f"{key_prefix}peep_fio2_percent"
     )
     
     fio2_decimal = fio2_percent / 100
     
-    if st.button("Tính toán", type="primary", key="calc_peep"):
+    if st.button("Tính toán", type="primary", key=f"{key_prefix}calc_peep"):
         recommendation = recommend_peep(fio2_decimal)
         
         st.markdown("### 📊 Kết quả")
@@ -391,7 +391,7 @@ def render_peep_calculator():
         """)
 
 
-def render_plateau_pressure_calculator():
+def render_plateau_pressure_calculator(key_prefix=""):
     """Render Plateau Pressure calculator"""
     st.subheader("📈 Tính toán áp lực cao nguyên")
     st.caption("Tính plateau pressure và driving pressure")
@@ -413,7 +413,7 @@ def render_plateau_pressure_calculator():
             value=420,
             step=10,
             format="%d",
-            key="plateau_vt"
+            key=f"{key_prefix}plateau_vt"
         )
         
         compliance = st.number_input(
@@ -423,7 +423,7 @@ def render_plateau_pressure_calculator():
             value=50,
             step=1,
             format="%d",
-            key="plateau_compliance",
+            key=f"{key_prefix}plateau_compliance",
             help="C_static = Vt / (Plateau - PEEP)"
         )
     
@@ -435,10 +435,10 @@ def render_plateau_pressure_calculator():
             value=10,
             step=1,
             format="%d",
-            key="plateau_peep"
+            key=f"{key_prefix}plateau_peep"
         )
     
-    if st.button("Tính toán", type="primary", key="calc_plateau"):
+    if st.button("Tính toán", type="primary", key=f"{key_prefix}calc_plateau"):
         results = calculate_plateau_pressure(vt_ml, compliance, peep)
         
         if results["plateau"] is None:
@@ -498,7 +498,7 @@ def render_plateau_pressure_calculator():
             """)
 
 
-def render_weaning_calculator():
+def render_weaning_calculator(key_prefix=""):
     """Render Ventilator Weaning calculator"""
     st.subheader("🔄 Tính toán cai máy thở")
     st.caption("Đánh giá sẵn sàng cai máy thở (RSBI)")
@@ -523,7 +523,7 @@ def render_weaning_calculator():
             value=20,
             step=1,
             format="%d",
-            key="weaning_rr"
+            key=f"{key_prefix}weaning_rr"
         )
     
     with col2:
@@ -534,11 +534,11 @@ def render_weaning_calculator():
             value=0.5,
             step=0.05,
             format="%.2f",
-            key="weaning_vt",
+            key=f"{key_prefix}weaning_vt",
             help="Thể tích khí lưu thông trong thở tự nhiên"
         )
     
-    if st.button("Tính toán", type="primary", key="calc_weaning"):
+    if st.button("Tính toán", type="primary", key=f"{key_prefix}calc_weaning"):
         results = calculate_rsbi(rr, vt_liters)
         
         if results["rsbi"] is None:
@@ -570,7 +570,7 @@ def render_weaning_calculator():
             """)
 
 
-def render_ventilator_calculator():
+def render_ventilator_calculator(key_prefix=""):
     """Main function to render ventilator management tools"""
     
     st.markdown("## 🫁 Công Cụ Quản lý Máy Thở")
@@ -595,19 +595,19 @@ def render_ventilator_calculator():
     ])
     
     with tab1:
-        render_ibw_calculator()
+        render_ibw_calculator(f"{key_prefix}vent_main_")
     
     with tab2:
-        render_tidal_volume_calculator()
+        render_tidal_volume_calculator(f"{key_prefix}vent_main_")
     
     with tab3:
-        render_peep_calculator()
+        render_peep_calculator(f"{key_prefix}vent_main_")
     
     with tab4:
-        render_plateau_pressure_calculator()
+        render_plateau_pressure_calculator(f"{key_prefix}vent_main_")
     
     with tab5:
-        render_weaning_calculator()
+        render_weaning_calculator(f"{key_prefix}vent_main_")
     
     st.markdown("---")
     st.warning("""

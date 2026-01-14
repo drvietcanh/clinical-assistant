@@ -227,19 +227,19 @@ with main_tabs[0]:
             ])
             
             with quick_tools_tabs[0]:
-                render_ibw_calculator()
+                render_ibw_calculator("tab0_")
             
             with quick_tools_tabs[1]:
-                render_tidal_volume_calculator()
+                render_tidal_volume_calculator("tab0_")
             
             with quick_tools_tabs[2]:
-                render_peep_calculator()
+                render_peep_calculator("tab0_")
             
             with quick_tools_tabs[3]:
-                render_plateau_pressure_calculator()
+                render_plateau_pressure_calculator("tab0_")
             
             with quick_tools_tabs[4]:
-                render_weaning_calculator_basic()
+                render_weaning_calculator_basic("tab0_")
         
         # Tab 2: Comprehensive Analysis - For detailed assessment
         with vent_tabs[1]:
@@ -290,10 +290,10 @@ with main_tabs[0]:
                 render_weaning_calculator_advanced()
             else:
                 st.error("Advanced weaning calculator không khả dụng. Sử dụng basic calculator.")
-                render_weaning_calculator_basic()
+                render_weaning_calculator_basic("tab0_weaning_")
     else:
         # Fallback to basic calculator if advanced not available
-        render_ventilator_calculator()
+        render_ventilator_calculator("tab0_")
     
     if "ARDS" in tool_type:
         render_ards_protocols()
@@ -461,15 +461,15 @@ with main_tabs[1]:
                 "📈 Plateau Pressure", "🔄 RSBI (Quick)"
             ])
             with quick_tools_tabs[0]:
-                render_ibw_calculator()
+                render_ibw_calculator("tab1_")
             with quick_tools_tabs[1]:
-                render_tidal_volume_calculator()
+                render_tidal_volume_calculator("tab1_")
             with quick_tools_tabs[2]:
-                render_peep_calculator()
+                render_peep_calculator("tab1_")
             with quick_tools_tabs[3]:
-                render_plateau_pressure_calculator()
+                render_plateau_pressure_calculator("tab1_")
             with quick_tools_tabs[4]:
-                render_weaning_calculator_basic()
+                render_weaning_calculator_basic("tab1_")
         
         with vent_tabs[1]:
             st.markdown("### 🫁 Comprehensive Analysis")
@@ -507,9 +507,9 @@ with main_tabs[1]:
                 render_weaning_calculator_advanced()
             else:
                 st.error("Advanced weaning calculator không khả dụng.")
-                render_weaning_calculator_basic()
+                render_weaning_calculator_basic("tab1_weaning_")
     else:
-        render_ventilator_calculator()
+        render_ventilator_calculator("tab1_")
 
 # Tab 3: Protocols
 with main_tabs[2]:
