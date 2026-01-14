@@ -57,7 +57,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Adalimumab là kháng thể đơn dòng kháng TNF-α (tumor necrosis factor-alpha, fully human monoclonal antibody). TNF-α là cytokine tiền viêm quan trọng, được sản xuất bởi đại thực bào và tế bào T, đóng vai trò trong quá trình viêm. Trong các bệnh tự miễn (RA, Crohn, UC, psoriasis), TNF-α tăng cao → gây viêm mạn tính → tổn thương mô. Adalimumab gắn với TNF-α (cả dạng hòa tan và dạng màng) → ngăn chặn TNF-α gắn với thụ thể → ức chế tín hiệu viêm → giảm viêm và tổn thương mô. Dẫn đến: giảm triệu chứng và làm chậm tiến triển bệnh. Adalimumab được dùng để điều trị nhiều bệnh tự miễn qua trung gian TNF-α.",
             "monitoring": [
                 "Nhiễm trùng - QUAN TRỌNG: theo dõi dấu hiệu nhiễm trùng trong và sau điều trị",
@@ -236,7 +236,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng và bệnh tự miễn khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Alemtuzumab là kháng thể đơn dòng kháng CD52 (humanized monoclonal antibody). CD52 là kháng nguyên bề mặt trên nhiều loại tế bào miễn dịch: tế bào T, tế bào B, NK cells, monocytes, macrophages. Trong MS, các tế bào miễn dịch này đóng vai trò quan trọng trong quá trình viêm và tổn thương myelin. Alemtuzumab gắn với CD52 → kích hoạt CDC và ADCC → tiêu diệt các tế bào miễn dịch. Dẫn đến: giảm số lượng tế bào T và B trong máu và mô, giảm viêm trong MS. Tuy nhiên, sau khi tế bào miễn dịch được tái tạo, hệ miễn dịch có thể tự điều chỉnh và giảm hoạt động gây bệnh. Alemtuzumab được dùng để điều trị MS relapsing-remitting, đặc biệt hiệu quả nhưng có nhiều tác dụng phụ nghiêm trọng.",
             "monitoring": [
                 "Phản ứng truyền (infusion reaction) - QUAN TRỌNG: theo dõi trong và sau truyền",
@@ -422,7 +422,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Anifrolumab là kháng thể đơn dòng kháng IFN-α receptor type I (interferon-alpha receptor type I, fully human monoclonal antibody). IFN-α là cytokine quan trọng trong quá trình viêm và tự miễn. IFN-α tăng cao trong SLE → kích hoạt các tế bào miễn dịch → tăng sản xuất autoantibodies và cytokines khác → gây viêm mạn tính → tổn thương mô. Anifrolumab gắn với IFN-α receptor type I → ngăn chặn IFN-α gắn với receptor → ức chế signaling → giảm viêm và tổn thương mô. Dẫn đến: giảm hoạt động bệnh và cải thiện triệu chứng trong SLE. Anifrolumab được dùng để điều trị SLE trung bình đến nặng, tự kháng thể dương tính.",
             "monitoring": [
                 "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị, đặc biệt herpes zoster",
@@ -598,7 +598,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ phản ứng miễn dịch khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "D",
+        "pregnancy": "D",
             "mechanism_of_action": "Atezolizumab là kháng thể đơn dòng kháng PD-L1 (programmed death-ligand 1, humanized monoclonal antibody). PD-L1 là ligand trên tế bào ung thư và tế bào miễn dịch, khi gắn với PD-1 trên tế bào T → ức chế hoạt động tế bào T → tế bào T không thể tiêu diệt tế bào ung thư (immune evasion). Atezolizumab gắn với PD-L1 → ngăn chặn PD-L1 gắn với PD-1 → giải phóng ức chế tế bào T → tế bào T hoạt động trở lại → tiêu diệt tế bào ung thư. Dẫn đến: tăng đáp ứng miễn dịch chống ung thư. Atezolizumab được dùng để điều trị nhiều loại ung thư có PD-L1 dương tính, có thể dùng đơn trị hoặc kết hợp với chemotherapy.",
             "monitoring": [
                 "Phản ứng miễn dịch (irAEs) - QUAN TRỌNG: theo dõi chặt chẽ trong và sau điều trị",
@@ -778,7 +778,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Belimumab là kháng thể đơn dòng kháng BAFF (B-cell activating factor, fully human monoclonal antibody). BAFF là cytokine quan trọng cho sự sống và hoạt động của tế bào B. BAFF tăng cao trong SLE → tăng số lượng và hoạt động tế bào B → tăng sản xuất autoantibodies → gây bệnh tự miễn. Belimumab gắn với BAFF → ngăn chặn BAFF gắn với receptor trên tế bào B → giảm số lượng và hoạt động tế bào B → giảm sản xuất autoantibodies → giảm viêm và tổn thương mô. Dẫn đến: giảm hoạt động bệnh và cải thiện triệu chứng trong SLE. Belimumab được dùng để điều trị SLE hoạt động, tự kháng thể dương tính.",
             "monitoring": [
                 "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị",
@@ -963,7 +963,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác dược động học quan trọng",
                 "Tăng nguy cơ chảy máu khi dùng với thuốc chống đông, kháng tiểu cầu"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Bevacizumab là kháng thể đơn dòng kháng VEGF (vascular endothelial growth factor, humanized monoclonal antibody). VEGF là cytokine quan trọng trong quá trình tạo mạch (angiogenesis). VEGF gắn với VEGFR (VEGF receptor) trên tế bào nội mô → kích hoạt signaling → tăng sinh tế bào nội mô, tạo mạch mới. Tạo mạch cần thiết cho sự phát triển của khối u (ung thư cần mạch máu để cung cấp oxy và chất dinh dưỡng). Bevacizumab gắn với VEGF → ngăn chặn VEGF gắn với VEGFR → ức chế tạo mạch → giảm cung cấp máu cho khối u → ức chế tăng trưởng khối u. Dẫn đến: giảm tăng trưởng và di căn của khối u. Bevacizumab được dùng để điều trị nhiều loại ung thư (đại trực tràng, phổi, thận, buồng trứng, v.v.) kết hợp với chemotherapy.",
             "monitoring": [
                 "Huyết áp - tăng huyết áp phổ biến, theo dõi mỗi 2-3 tuần",
@@ -1143,7 +1143,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Brodalumab là kháng thể đơn dòng kháng IL-17RA (interleukin-17 receptor A, fully human monoclonal antibody). IL-17RA là thụ thể của IL-17A, IL-17F, và các cytokine IL-17 khác. IL-17A/IL-17F gắn với IL-17RA → kích hoạt signaling → tăng sản xuất các cytokine và chemokine → gây viêm mạn tính → tổn thương mô. Trong vảy nến, IL-17A tăng cao → gây viêm da. Brodalumab gắn với IL-17RA → ngăn chặn IL-17A/IL-17F gắn với receptor → ức chế signaling → giảm viêm. Dẫn đến: giảm triệu chứng trong vảy nến. Brodalumab được dùng để điều trị vảy nến trung bình đến nặng.",
             "monitoring": [
                 "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị",
@@ -1340,7 +1340,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ phản ứng miễn dịch khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "D",
+        "pregnancy": "D",
             "mechanism_of_action": "Cemiplimab là kháng thể đơn dòng kháng PD-1 (programmed death-1, fully human monoclonal antibody). PD-1 là thụ thể ức chế trên tế bào T, khi gắn với PD-L1/PD-L2 (ligands trên tế bào ung thư và tế bào miễn dịch) → ức chế hoạt động tế bào T → tế bào T không thể tiêu diệt tế bào ung thư (immune evasion). Cemiplimab gắn với PD-1 → ngăn chặn PD-1 gắn với PD-L1/PD-L2 → giải phóng ức chế tế bào T → tế bào T hoạt động trở lại → tiêu diệt tế bào ung thư. Dẫn đến: tăng đáp ứng miễn dịch chống ung thư. Cemiplimab được dùng để điều trị ung thư da tế bào vảy và các loại ung thư khác có PD-L1 dương tính.",
             "monitoring": [
                 "Phản ứng miễn dịch (irAEs) - QUAN TRỌNG: theo dõi chặt chẽ trong và sau điều trị",
@@ -1550,7 +1550,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Certolizumab pegol là kháng thể đơn dòng kháng TNF-α được pegylated (Fab fragment của anti-TNF-α gắn với polyethylene glycol, không có Fc region). TNF-α là cytokine tiền viêm quan trọng, được sản xuất bởi đại thực bào và tế bào T, đóng vai trò trong quá trình viêm. Trong các bệnh tự miễn (RA, Crohn, PsA, AS), TNF-α tăng cao → gây viêm mạn tính → tổn thương mô. Certolizumab pegol gắn với TNF-α → ngăn chặn TNF-α gắn với thụ thể → ức chế tín hiệu viêm → giảm viêm và tổn thương mô. Pegylation làm tăng half-life. Không có Fc region nên không qua nhau thai, an toàn hơn trong thai kỳ. Dẫn đến: giảm triệu chứng và làm chậm tiến triển bệnh.",
             "monitoring": [
                 "Phản ứng tại chỗ tiêm",
@@ -1754,7 +1754,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ phản ứng miễn dịch khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "D",
+        "pregnancy": "D",
             "mechanism_of_action": "Dostarlimab là kháng thể đơn dòng kháng PD-1 (programmed death-1, humanized monoclonal antibody). PD-1 là thụ thể ức chế trên tế bào T, khi gắn với PD-L1/PD-L2 (ligands trên tế bào ung thư và tế bào miễn dịch) → ức chế hoạt động tế bào T → tế bào T không thể tiêu diệt tế bào ung thư (immune evasion). Dostarlimab gắn với PD-1 → ngăn chặn PD-1 gắn với PD-L1/PD-L2 → giải phóng ức chế tế bào T → tế bào T hoạt động trở lại → tiêu diệt tế bào ung thư. Dẫn đến: tăng đáp ứng miễn dịch chống ung thư. Dostarlimab được FDA phê duyệt đặc biệt cho ung thư có dMMR/MSI-H (deficient mismatch repair/microsatellite instability-high), một biomarker cho thấy đáp ứng tốt với immunotherapy. ĐẶC ĐIỂM: (1) FDA phê duyệt 2021, (2) Chỉ định đặc biệt cho dMMR/MSI-H tumors (tumor-agnostic), (3) Loading dose: 4 liều đầu mỗi 3 tuần, sau đó maintenance mỗi 6 tuần, (4) Hiệu quả cao ở ung thư nội mạc tử cung dMMR/MSI-H.",
             "monitoring": [
                 "Phản ứng miễn dịch (irAEs) - QUAN TRỌNG: theo dõi chặt chẽ trong và sau điều trị",
@@ -1966,7 +1966,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ viêm phổi khi dùng sau hóa xạ trị"
             ],
-            "pregnancy": "D",
+        "pregnancy": "D",
             "mechanism_of_action": "Durvalumab là kháng thể đơn dòng kháng PD-L1 (programmed death-ligand 1, human monoclonal antibody). PD-L1 là ligand trên tế bào ung thư và tế bào miễn dịch, khi gắn với PD-1 trên tế bào T → ức chế hoạt động tế bào T → tế bào T không thể tiêu diệt tế bào ung thư (immune evasion). Durvalumab gắn với PD-L1 → ngăn chặn PD-L1 gắn với PD-1 → giải phóng ức chế tế bào T → tế bào T hoạt động trở lại → tiêu diệt tế bào ung thư. Dẫn đến: tăng đáp ứng miễn dịch chống ung thư. Durvalumab được dùng để điều trị ung thư phổi giai đoạn III sau hóa xạ trị (consolidation therapy) và nhiều loại ung thư khác có PD-L1 dương tính.",
             "monitoring": [
                 "Phản ứng miễn dịch (irAEs) - QUAN TRỌNG: theo dõi chặt chẽ trong và sau điều trị",
@@ -2176,7 +2176,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Eculizumab là kháng thể đơn dòng kháng C5 (complement component 5, humanized monoclonal antibody). Complement system là một phần quan trọng của hệ miễn dịch bẩm sinh, giúp tiêu diệt vi khuẩn và tế bào lạ. C5 là thành phần quan trọng trong complement cascade, khi được kích hoạt → tạo thành C5a (anaphylatoxin) và C5b (bắt đầu hình thành MAC - membrane attack complex) → MAC tạo lỗ trên màng tế bào → tiêu diệt tế bào. Trong PNH, aHUS, MG, và NMOSD, complement system hoạt động quá mức → gây tổn thương tế bào. Eculizumab gắn với C5 → ngăn chặn C5 được chia cắt thành C5a và C5b → ức chế hình thành MAC → giảm tổn thương tế bào. Dẫn đến: giảm tan máu trong PNH, giảm tổn thương thận trong aHUS, giảm tổn thương thần kinh trong MG và NMOSD.",
             "monitoring": [
                 "Nhiễm trùng Neisseria meningitidis - QUAN TRỌNG: theo dõi dấu hiệu viêm màng não (sốt, đau đầu, cứng cổ, phát ban)",
@@ -2377,7 +2377,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Golimumab là kháng thể đơn dòng kháng TNF-α (tumor necrosis factor-alpha, fully human monoclonal antibody). TNF-α là cytokine tiền viêm quan trọng, được sản xuất bởi đại thực bào và tế bào T, đóng vai trò trong quá trình viêm. Trong các bệnh tự miễn (RA, AS, UC, PsA), TNF-α tăng cao → gây viêm mạn tính → tổn thương mô. Golimumab gắn với TNF-α (cả dạng hòa tan và dạng màng) → ngăn chặn TNF-α gắn với thụ thể → ức chế tín hiệu viêm → giảm viêm và tổn thương mô. Dẫn đến: giảm triệu chứng và làm chậm tiến triển bệnh. Golimumab được dùng để điều trị nhiều bệnh tự miễn qua trung gian TNF-α.",
             "monitoring": [
                 "Phản ứng tại chỗ tiêm hoặc phản ứng truyền",
@@ -2557,7 +2557,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Guselkumab là kháng thể đơn dòng kháng IL-23 (interleukin-23, fully human monoclonal antibody). IL-23 là cytokine quan trọng trong quá trình viêm qua trung gian Th17 cells. IL-23 kích hoạt Th17 cells → sản xuất IL-17A và các cytokine khác → gây viêm mạn tính → tổn thương mô. Trong vảy nến và viêm khớp vảy nến, IL-23 tăng cao → gây viêm da và khớp. Guselkumab gắn với p19 subunit của IL-23 → ngăn chặn IL-23 gắn với receptor → ức chế signaling → giảm viêm. Dẫn đến: giảm triệu chứng và cải thiện chức năng trong vảy nến và viêm khớp vảy nến. Guselkumab được dùng để điều trị vảy nến và viêm khớp vảy nến.",
             "monitoring": [
                 "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị",
@@ -2731,7 +2731,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Infliximab là kháng thể đơn dòng kháng TNF-α (tumor necrosis factor-alpha, chimeric mouse-human monoclonal antibody). TNF-α là cytokine tiền viêm quan trọng, được sản xuất bởi đại thực bào và tế bào T, đóng vai trò trong quá trình viêm. Trong các bệnh tự miễn (RA, Crohn, UC, psoriasis), TNF-α tăng cao → gây viêm mạn tính → tổn thương mô. Infliximab gắn với TNF-α (cả dạng hòa tan và dạng màng) → ngăn chặn TNF-α gắn với thụ thể → ức chế tín hiệu viêm → giảm viêm và tổn thương mô. Dẫn đến: giảm triệu chứng và làm chậm tiến triển bệnh. Infliximab được dùng để điều trị nhiều bệnh tự miễn qua trung gian TNF-α, đặc biệt hiệu quả trong Crohn và UC.",
             "monitoring": [
                 "Phản ứng truyền (infusion reaction) - QUAN TRỌNG: theo dõi trong và sau truyền",
@@ -2918,7 +2918,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Ixekizumab là kháng thể đơn dòng kháng IL-17A (interleukin-17A, humanized monoclonal antibody). IL-17A là cytokine quan trọng trong quá trình viêm qua trung gian Th17 cells. IL-17A kích hoạt các tế bào viêm → tăng sản xuất các cytokine và chemokine khác → gây viêm mạn tính → tổn thương mô. Trong vảy nến và viêm khớp, IL-17A tăng cao → gây viêm da và khớp. Ixekizumab gắn với IL-17A → ngăn chặn IL-17A gắn với receptor → ức chế signaling → giảm viêm. Dẫn đến: giảm triệu chứng và cải thiện chức năng trong vảy nến và viêm khớp. Ixekizumab được dùng để điều trị vảy nến, viêm khớp vảy nến, và viêm cột sống dính khớp.",
             "monitoring": [
                 "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị",
@@ -3081,7 +3081,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác dược động học quan trọng"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Lanadelumab là kháng thể đơn dòng kháng plasma kallikrein (fully human monoclonal antibody). Plasma kallikrein là enzyme quan trọng trong hệ thống contact system. Kích hoạt contact system → tạo plasma kallikrein → chuyển đổi kininogen thành bradykinin → bradykinin tăng tính thấm mạch máu → phù mạch. Trong HAE, thiếu hoặc rối loạn C1 esterase inhibitor (C1-INH) → không ức chế plasma kallikrein → tăng bradykinin → phù mạch. Lanadelumab gắn với plasma kallikrein → ngăn chặn plasma kallikrein chuyển đổi kininogen thành bradykinin → giảm bradykinin → giảm phù mạch. Dẫn đến: giảm tần suất và mức độ cơn HAE. Lanadelumab được dùng để dự phòng cơn HAE type I và II.",
             "monitoring": [
                 "Phản ứng tại chỗ tiêm",
@@ -3231,7 +3231,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ PML khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Natalizumab là kháng thể đơn dòng kháng integrin α4 (humanized monoclonal antibody). Integrin α4 là phân tử kết dính trên tế bào T và B, giúp các tế bào này di chuyển từ máu vào mô thần kinh trung ương (CNS) và ruột. Tế bào T/B gắn với VCAM-1 (vascular cell adhesion molecule-1) trên tế bào nội mô qua integrin α4 → di chuyển vào mô CNS và ruột → gây viêm trong MS và Crohn. Natalizumab gắn với integrin α4 → ngăn chặn integrin α4 gắn với VCAM-1 → ức chế di chuyển tế bào T/B vào mô CNS và ruột → giảm viêm. Dẫn đến: giảm tái phát và làm chậm tiến triển bệnh trong MS và Crohn. Tuy nhiên, ức chế di chuyển tế bào T vào CNS cũng làm giảm khả năng chống lại JC virus → tăng nguy cơ PML.",
             "monitoring": [
                 "PML (progressive multifocal leukoencephalopathy) - QUAN TRỌNG: theo dõi dấu hiệu thần kinh (thay đổi nhận thức, yếu, mất thị lực, mất điều hòa)",
@@ -3445,7 +3445,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ phản ứng miễn dịch khi dùng với ipilimumab"
             ],
-            "pregnancy": "D",
+        "pregnancy": "D",
             "mechanism_of_action": "Nivolumab là kháng thể đơn dòng kháng PD-1 (programmed death-1, fully human monoclonal antibody). PD-1 là thụ thể ức chế trên tế bào T, khi gắn với PD-L1/PD-L2 (ligands trên tế bào ung thư và tế bào miễn dịch) → ức chế hoạt động tế bào T → tế bào T không thể tiêu diệt tế bào ung thư (immune evasion). Nivolumab gắn với PD-1 → ngăn chặn PD-1 gắn với PD-L1/PD-L2 → giải phóng ức chế tế bào T → tế bào T hoạt động trở lại → tiêu diệt tế bào ung thư. Dẫn đến: tăng đáp ứng miễn dịch chống ung thư. Nivolumab được dùng để điều trị nhiều loại ung thư, có thể dùng đơn trị hoặc kết hợp với ipilimumab (anti-CTLA-4) để tăng hiệu quả.",
             "monitoring": [
                 "Phản ứng miễn dịch (irAEs) - QUAN TRỌNG: theo dõi chặt chẽ trong và sau điều trị",
@@ -3660,7 +3660,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Ocrelizumab là kháng thể đơn dòng kháng CD20 (humanized monoclonal antibody). CD20 là kháng nguyên bề mặt trên tế bào B trưởng thành (pre-B cells đến memory B cells, nhưng không có trên plasma cells và stem cells). Trong MS, tế bào B đóng vai trò quan trọng trong quá trình viêm và tổn thương myelin. Ocrelizumab gắn với CD20 → kích hoạt complement-dependent cytotoxicity (CDC) và antibody-dependent cell-mediated cytotoxicity (ADCC) → tiêu diệt tế bào B. Dẫn đến: giảm số lượng tế bào B trong máu và mô, giảm sản xuất autoantibodies, và giảm viêm trong MS. Ocrelizumab được dùng để điều trị cả RRMS và PPMS, là thuốc đầu tiên được FDA phê duyệt cho PPMS.",
             "monitoring": [
                 "Phản ứng truyền (infusion reaction) - QUAN TRỌNG: theo dõi trong và sau truyền, đặc biệt lần đầu",
@@ -3875,7 +3875,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ phản ứng miễn dịch khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "D",
+        "pregnancy": "D",
             "mechanism_of_action": "Pembrolizumab là kháng thể đơn dòng kháng PD-1 (programmed death-1, humanized monoclonal antibody). PD-1 là thụ thể ức chế trên tế bào T, khi gắn với PD-L1/PD-L2 (ligands trên tế bào ung thư và tế bào miễn dịch) → ức chế hoạt động tế bào T → tế bào T không thể tiêu diệt tế bào ung thư (immune evasion). Pembrolizumab gắn với PD-1 → ngăn chặn PD-1 gắn với PD-L1/PD-L2 → giải phóng ức chế tế bào T → tế bào T hoạt động trở lại → tiêu diệt tế bào ung thư. Dẫn đến: tăng đáp ứng miễn dịch chống ung thư. Pembrolizumab được dùng để điều trị nhiều loại ung thư có PD-L1 dương tính hoặc MSI-H/dMMR.",
             "monitoring": [
                 "Phản ứng miễn dịch (irAEs) - QUAN TRỌNG: theo dõi chặt chẽ trong và sau điều trị",
@@ -4077,7 +4077,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác dược động học quan trọng",
                 "Có thể làm giảm đáp ứng vaccine (sống)"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Ravulizumab là kháng thể đơn dòng kháng C5 (complement component 5, humanized monoclonal antibody). C5 là thành phần quan trọng của hệ thống bổ thể (complement system). Kích hoạt bổ thể → tạo C5a và C5b → C5b tạo membrane attack complex (MAC) → phá hủy tế bào. Trong PNH và aHUS, kích hoạt bổ thể bất thường → phá hủy tế bào hồng cầu và tế bào nội mô → thiếu máu tan máu và tổn thương thận. Ravulizumab gắn với C5 → ngăn chặn C5 tạo C5a và C5b → ức chế MAC → giảm phá hủy tế bào. Dẫn đến: giảm thiếu máu tan máu và tổn thương thận trong PNH và aHUS. Ravulizumab được dùng để điều trị PNH và aHUS. Lưu ý: Ravulizumab là dạng cải tiến của eculizumab với half-life dài hơn (8 tuần so với 2 tuần).",
             "monitoring": [
                 "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị, ĐẶC BIỆT Neisseria meningitidis",
@@ -4233,7 +4233,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác dược động học quan trọng",
                 "Có thể làm giảm đáp ứng vaccine (sống)"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Reslizumab là kháng thể đơn dòng kháng IL-5 (interleukin-5, humanized monoclonal antibody). IL-5 là cytokine quan trọng cho sự sống và hoạt động của eosinophil. IL-5 được giải phóng từ Th2 cells và mast cells → gắn với IL-5R trên eosinophil → kích hoạt eosinophil → tăng số lượng và hoạt động eosinophil → gây viêm đường hô hấp và hen suyễn eosinophilic. Reslizumab gắn với IL-5 → ngăn chặn IL-5 gắn với receptor → ức chế signaling → giảm số lượng và hoạt động eosinophil. Dẫn đến: giảm eosinophil trong máu và mô, giảm cơn hen và cải thiện chức năng hô hấp trong hen suyễn eosinophilic. Reslizumab được dùng để điều trị hen suyễn eosinophilic nặng.",
             "monitoring": [
                 "Phản ứng truyền - QUAN TRỌNG: theo dõi trong và sau truyền, đặc biệt lần đầu",
@@ -4394,7 +4394,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Risankizumab là kháng thể đơn dòng kháng IL-23 (interleukin-23, humanized monoclonal antibody). IL-23 là cytokine quan trọng trong quá trình viêm qua trung gian Th17 cells. IL-23 kích hoạt Th17 cells → sản xuất IL-17A và các cytokine khác → gây viêm mạn tính → tổn thương mô. Trong vảy nến, viêm khớp vảy nến, và Crohn, IL-23 tăng cao → gây viêm da, khớp, và ruột. Risankizumab gắn với p19 subunit của IL-23 → ngăn chặn IL-23 gắn với receptor → ức chế signaling → giảm viêm. Dẫn đến: giảm triệu chứng và cải thiện chức năng trong vảy nến, viêm khớp vảy nến, và Crohn. Risankizumab được dùng để điều trị vảy nến, viêm khớp vảy nến, và Crohn.",
             "monitoring": [
                 "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị",
@@ -4573,7 +4573,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Rituximab là kháng thể đơn dòng kháng CD20 (chimeric mouse-human monoclonal antibody). CD20 là kháng nguyên bề mặt trên tế bào B trưởng thành (pre-B cells đến memory B cells, nhưng không có trên plasma cells và stem cells). Rituximab gắn với CD20 → kích hoạt complement-dependent cytotoxicity (CDC) và antibody-dependent cell-mediated cytotoxicity (ADCC) → tiêu diệt tế bào B. Dẫn đến: giảm số lượng tế bào B trong máu và mô, giảm sản xuất autoantibodies (trong bệnh tự miễn), và tiêu diệt tế bào B ác tính (trong lymphoma). Rituximab được dùng để điều trị B-cell lymphoma, CLL, và các bệnh tự miễn qua trung gian tế bào B (RA, vasculitis).",
             "monitoring": [
                 "Phản ứng truyền (infusion reaction) - QUAN TRỌNG: theo dõi trong và sau truyền, đặc biệt lần đầu",
@@ -4749,7 +4749,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Sarilumab là kháng thể đơn dòng kháng IL-6R (interleukin-6 receptor, fully human monoclonal antibody). IL-6 là cytokine quan trọng trong quá trình viêm, được sản xuất bởi đại thực bào, tế bào T, và các tế bào khác. IL-6 gắn với IL-6R (có thể là membrane-bound hoặc soluble) → kích hoạt signaling (JAK/STAT pathway) → tăng sản xuất các cytokine và chemokine khác → gây viêm mạn tính → tổn thương mô. Trong RA, IL-6 tăng cao → gây viêm khớp nặng. Sarilumab gắn với cả membrane-bound và soluble IL-6R → ngăn chặn IL-6 gắn với receptor → ức chế signaling → giảm viêm. Dẫn đến: giảm triệu chứng và làm chậm tiến triển bệnh. Sarilumab được dùng để điều trị RA trung bình đến nặng.",
             "monitoring": [
                 "Công thức máu (CBC) - QUAN TRỌNG: giảm bạch cầu, tiểu cầu phổ biến, theo dõi mỗi 4-8 tuần",
@@ -4931,7 +4931,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Secukinumab là kháng thể đơn dòng kháng IL-17A (interleukin-17A, fully human monoclonal antibody). IL-17A là cytokine quan trọng trong quá trình viêm qua trung gian Th17 cells. IL-17A kích hoạt các tế bào viêm → tăng sản xuất các cytokine và chemokine khác → gây viêm mạn tính → tổn thương mô. Trong vảy nến và viêm khớp, IL-17A tăng cao → gây viêm da và khớp. Secukinumab gắn với IL-17A → ngăn chặn IL-17A gắn với receptor → ức chế signaling → giảm viêm. Dẫn đến: giảm triệu chứng và cải thiện chức năng trong vảy nến và viêm khớp. Secukinumab được dùng để điều trị vảy nến, viêm khớp vảy nến, và viêm cột sống dính khớp.",
             "monitoring": [
                 "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị",
@@ -5093,7 +5093,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác dược động học quan trọng",
                 "Có thể làm giảm đáp ứng vaccine (sống)"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Tezepelumab là kháng thể đơn dòng kháng TSLP (thymic stromal lymphopoietin, fully human monoclonal antibody). TSLP là cytokine quan trọng trong quá trình viêm dị ứng và hen suyễn. TSLP được giải phóng từ tế bào biểu mô đường hô hấp khi có kích thích (dị ứng, nhiễm trùng, ô nhiễm) → kích hoạt các tế bào miễn dịch (dendritic cells, Th2 cells) → tăng sản xuất các cytokine viêm (IL-4, IL-5, IL-13) → gây viêm đường hô hấp và hen suyễn. Tezepelumab gắn với TSLP → ngăn chặn TSLP gắn với receptor → ức chế signaling → giảm viêm đường hô hấp. Dẫn đến: giảm cơn hen và cải thiện chức năng hô hấp trong hen suyễn nặng. Tezepelumab được dùng để điều trị hen suyễn nặng, không phụ thuộc vào phenotype (eosinophilic hoặc non-eosinophilic).",
             "monitoring": [
                 "Phản ứng tại chỗ tiêm",
@@ -5251,7 +5251,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Tocilizumab là kháng thể đơn dòng kháng IL-6R (interleukin-6 receptor, humanized monoclonal antibody). IL-6 là cytokine quan trọng trong quá trình viêm, được sản xuất bởi đại thực bào, tế bào T, và các tế bào khác. IL-6 gắn với IL-6R (có thể là membrane-bound hoặc soluble) → kích hoạt signaling (JAK/STAT pathway) → tăng sản xuất các cytokine và chemokine khác → gây viêm mạn tính → tổn thương mô. Trong RA, GCA, và COVID-19, IL-6 tăng cao → gây viêm nặng. Tocilizumab gắn với cả membrane-bound và soluble IL-6R → ngăn chặn IL-6 gắn với receptor → ức chế signaling → giảm viêm. Dẫn đến: giảm triệu chứng và làm chậm tiến triển bệnh. Tocilizumab được dùng để điều trị RA, JIA, GCA, và COVID-19 nặng.",
             "monitoring": [
                 "Công thức máu (CBC) - QUAN TRỌNG: giảm bạch cầu, tiểu cầu phổ biến, theo dõi mỗi 4-8 tuần",
@@ -5459,7 +5459,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Anthracyclines (doxorubicin, epirubicin) - tăng nguy cơ tổn thương tim",
                 "Cyclophosphamide - tăng nguy cơ tổn thương tim"
             ],
-            "pregnancy": "D",
+        "pregnancy": "D",
             "mechanism_of_action": "Trastuzumab là kháng thể đơn dòng kháng HER2 (humanized monoclonal antibody). HER2 (human epidermal growth factor receptor 2, còn gọi là ErbB2) là thụ thể tyrosine kinase, thường overexpressed trong 15-20% ung thư vú. HER2 overactivation → tăng tín hiệu tăng trưởng → tăng sinh tế bào ung thư. Trastuzumab gắn với domain ngoại bào của HER2 → ức chế dimerization và signaling → giảm tăng sinh tế bào ung thư. Ngoài ra, trastuzumab kích hoạt ADCC → tiêu diệt tế bào ung thư. Dẫn đến: ức chế tăng trưởng và tiêu diệt tế bào ung thư HER2 dương tính. Trastuzumab được dùng để điều trị ung thư vú, dạ dày, thực quản HER2 dương tính.",
             "monitoring": [
                 "LVEF (echocardiogram hoặc MUGA scan) - QUAN TRỌNG: trước điều trị, mỗi 3 tháng trong năm đầu, sau đó mỗi 6 tháng",
@@ -5653,7 +5653,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Ustekinumab là kháng thể đơn dòng kháng IL-12 và IL-23 (interleukin-12/23, fully human monoclonal antibody). IL-12 và IL-23 là cytokines quan trọng trong quá trình viêm qua trung gian Th1 và Th17 cells. IL-12 kích hoạt Th1 cells → sản xuất IFN-γ → gây viêm. IL-23 kích hoạt Th17 cells → sản xuất IL-17A → gây viêm. Trong vảy nến và IBD, IL-12/IL-23 tăng cao → gây viêm mạn tính → tổn thương mô. Ustekinumab gắn với p40 subunit chung của IL-12 và IL-23 → ngăn chặn cả IL-12 và IL-23 gắn với receptor → ức chế signaling → giảm viêm. Dẫn đến: giảm triệu chứng và cải thiện chức năng trong vảy nến và IBD. Ustekinumab được dùng để điều trị vảy nến, viêm khớp vảy nến, Crohn, và UC.",
             "monitoring": [
                 "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị",
@@ -5842,7 +5842,7 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Vedolizumab là kháng thể đơn dòng kháng integrin α4β7 (humanized monoclonal antibody). Integrin α4β7 là phân tử kết dính trên tế bào T và B, giúp các tế bào này di chuyển từ máu vào mô ruột. Tế bào T/B gắn với MAdCAM-1 (mucosal addressin cell adhesion molecule-1) trên tế bào nội mô ruột qua integrin α4β7 → di chuyển vào mô ruột → gây viêm trong IBD. Vedolizumab gắn với integrin α4β7 → ngăn chặn integrin α4β7 gắn với MAdCAM-1 → ức chế di chuyển tế bào T/B vào mô ruột → giảm viêm ruột. Dẫn đến: giảm triệu chứng và làm chậm tiến triển bệnh trong Crohn và UC. Vedolizumab được dùng để điều trị Crohn và UC trung bình đến nặng, đặc biệt hiệu quả khi các thuốc khác không đáp ứng.",
             "monitoring": [
                 "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị",

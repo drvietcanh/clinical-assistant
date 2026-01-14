@@ -378,7 +378,7 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "priority": 8
     },
     "severe_hypoglycemia": {
-        "keywords": ["Hạ Đường Huyết Cấp Cứu", "Severe Hypoglycemia", "severe hypoglycemia", "hạ đường huyết cấp cứu"],
+        "keywords": ["Hạ Đường Huyết Cấp cứu", "Severe Hypoglycemia", "severe hypoglycemia", "hạ đường huyết cấp cứu"],
         "render": render_severe_hypoglycemia,
         "has_article": False,
         "priority": 8
@@ -404,7 +404,7 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
     
     # Respiratory
     "acute_respiratory_failure": {
-        "keywords": ["Respiratory Failure", "Suy Hô Hấp", "respiratory failure"],
+        "keywords": ["Respiratory Failure", "Suy Hô hấp", "respiratory failure"],
         "render": render_acute_respiratory_failure,
         "has_article": False,
         "priority": 8
@@ -537,7 +537,7 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "priority": 9
     },
     "emergency_dialysis": {
-        "keywords": ["Lọc Máu Cấp Cứu", "Emergency Dialysis", "emergency dialysis", "lọc máu"],
+        "keywords": ["Lọc Máu Cấp cứu", "Emergency Dialysis", "emergency dialysis", "lọc máu"],
         "render": render_emergency_dialysis,
         "has_article": False,
         "priority": 9
@@ -593,7 +593,7 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "priority": 8
     },
     "blood_pressure_ckd": {
-        "keywords": ["Quản Lý Huyết Áp Trong CKD", "Blood Pressure", "KDIGO 2021", "huyết áp trong CKD"],
+        "keywords": ["Quản lý Huyết Áp Trong CKD", "Blood Pressure", "KDIGO 2021", "huyết áp trong CKD"],
         "render": render_blood_pressure_ckd,
         "has_article": True,
         "article_function": "render_blood_pressure_ckd",
@@ -621,7 +621,7 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "priority": 8
     },
     "heart_failure_ckd": {
-        "keywords": ["Suy Tim Trong CKD", "Heart Failure CKD", "cardiorenal", "KDIGO 2025", "suy tim CKD"],
+        "keywords": ["Suy tim Trong CKD", "Heart Failure CKD", "cardiorenal", "KDIGO 2025", "suy tim CKD"],
         "render": render_heart_failure_ckd,
         "has_article": True,
         "article_function": "render_heart_failure_ckd",
@@ -666,7 +666,7 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "priority": 8
     },
     "dengue": {
-        "keywords": ["Dengue", "dengue", "Sốt Xuất Huyết", "sốt xuất huyết"],
+        "keywords": ["Dengue", "dengue", "Sốt Xuất huyết", "sốt xuất huyết"],
         "render": render_dengue_fever,
         "has_article": False,
         "priority": 8
@@ -836,13 +836,13 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "priority": 8
     },
     "acute_diarrhea": {
-        "keywords": ["Tiêu Chảy", "Diarrhea", "tiêu chảy", "diarrhea"],
+        "keywords": ["Tiêu chảy", "Diarrhea", "tiêu chảy", "diarrhea"],
         "render": render_acute_diarrhea,
         "has_article": False,
         "priority": 8
     },
     "lower_gi_bleeding": {
-        "keywords": ["Xuất Huyết Tiêu Hóa Dưới", "Lower GI Bleeding", "lower gi bleeding", "xuất huyết tiêu hóa dưới"],
+        "keywords": ["Xuất huyết Tiêu hóa Dưới", "Lower GI Bleeding", "lower gi bleeding", "xuất huyết tiêu hóa dưới"],
         "render": render_lower_gi_bleeding,
         "has_article": False,
         "priority": 9
@@ -899,7 +899,7 @@ PROTOCOL_ROUTING: Dict[str, Dict] = {
         "priority": 8
     },
     "icp_management": {
-        "keywords": ["Quản Lý Áp Lực Nội Sọ", "ICP Management", "icp management", "áp lực nội sọ"],
+        "keywords": ["Quản lý Áp Lực Nội Sọ", "ICP Management", "icp management", "áp lực nội sọ"],
         "render": render_icp_management,
         "has_article": False,
         "priority": 10

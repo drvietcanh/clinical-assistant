@@ -144,7 +144,7 @@ OSTEOPOROSIS_DRUGS = {
     ],
         "contraindications": [],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "D - Có bằng chứng về nguy cơ. Không khuyến nghị trong thai kỳ",
         "mechanism_of_action": "",
         "precautions": [],
         "pharmacokinetics": {

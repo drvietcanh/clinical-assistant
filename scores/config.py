@@ -203,7 +203,7 @@ SCORES_BY_SPECIALTY = {
         "Weight-based Levothyroxine": {"name": "Weight-based Levothyroxine Dose Calculator ⭐", "desc": "Xác định liều levothyroxine dựa trên cân nặng để điều trị suy giáp nguyên phát ở người lớn", "status": "✅"},
     },
     
-    "🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)": {
+    "🦴 Thấp khớp - Miễn dịch (Rheumatology/Immunology)": {
         "DAS28": {"name": "DAS28 - Disease Activity Score", "desc": "Hoạt động bệnh viêm khớp dạng thấp", "status": "✅"},
         "CDAI": {"name": "CDAI - Clinical Disease Activity Index", "desc": "Chỉ số hoạt động lâm sàng RA", "status": "✅"},
         "SDAI": {"name": "SDAI - Simplified Disease Activity Index", "desc": "Chỉ số đơn giản hóa RA", "status": "✅"},

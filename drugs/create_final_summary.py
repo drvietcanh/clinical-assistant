@@ -112,7 +112,7 @@ def generate_markdown_report(summary: Dict[str, Any]) -> str:
     """Generate markdown report"""
     
     lines = []
-    lines.append("# Báo Cáo Tổng Kết - Kiểm Tra và Bổ Sung Fields")
+    lines.append("# Báo Cáo Tổng Kết - Kiểm tra và Bổ sung Fields")
     lines.append("")
     lines.append(f"**Ngày tạo:** {summary['generation_date']}")
     lines.append(f"**Tổng số thuốc:** {summary['total_drugs']}")
@@ -145,7 +145,7 @@ def generate_markdown_report(summary: Dict[str, Any]) -> str:
     lines.append("")
     
     # Priority actions
-    lines.append("## Ưu Tiên Hành Động")
+    lines.append("## Ưu tiên Hành Động")
     lines.append("")
     
     priorities = summary["priority_fields"]

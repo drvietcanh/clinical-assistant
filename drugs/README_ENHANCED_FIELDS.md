@@ -1,4 +1,4 @@
-# 📚 Hướng Dẫn Bổ Sung Enhanced Fields
+# 📚 Hướng dẫn Bổ sung Enhanced Fields
 
 ## 🎯 Mục Đích
 
@@ -32,7 +32,7 @@ Bổ sung đầy đủ **14 enhanced fields** cho tất cả thuốc trong datab
 - Ví dụ cụ thể
 - Tips tối ưu
 
-## 🛠️ Scripts Hỗ Trợ
+## 🛠️ Scripts Hỗ trợ
 
 ### 1. `find_drugs_missing_2_fields.py`
 **Tìm tất cả thuốc thiếu 2 field**

@@ -38,7 +38,7 @@ REVERSAL_AGENTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác thuốc đáng kể",
                 "Sau khi đảo ngược: có thể dùng lại DOAC sau 24 giờ nếu cần"
             ],
-            "pregnancy": "C - Dữ liệu hạn chế; chỉ dùng khi lợi ích vượt nguy cơ",
+        "pregnancy": "C - Dữ liệu hạn chế; chỉ dùng khi lợi ích vượt nguy cơ",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
@@ -180,7 +180,7 @@ REVERSAL_AGENTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác thuốc đáng kể",
                 "Sau khi đảo ngược: có thể dùng lại dabigatran sau 24 giờ nếu cần"
             ],
-            "pregnancy": "C - Dữ liệu hạn chế; chỉ dùng khi lợi ích vượt nguy cơ",
+        "pregnancy": "C - Dữ liệu hạn chế; chỉ dùng khi lợi ích vượt nguy cơ",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
@@ -320,7 +320,7 @@ REVERSAL_AGENTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Heparin: đảo ngược tác dụng",
                 "LMWH: đảo ngược một phần (không hoàn toàn)"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Protamine là protein có nguồn gốc từ tinh trùng cá hồi, có điện tích dương mạnh. Protamine gắn với heparin (có điện tích âm) tạo thành phức hợp không hoạt động, đảo ngược tác dụng chống đông của heparin. Protamine gắn với heparin theo tỷ lệ 1:1 (1mg protamine cho 100 units heparin). Protamine đảo ngược hoàn toàn unfractionated heparin (UFH) nhưng chỉ đảo ngược một phần low molecular weight heparin (LMWH) do LMWH có chuỗi ngắn hơn. Protamine có thể gây phản ứng dị ứng, đặc biệt ở bệnh nhân dị ứng cá hoặc đã dùng protamine trước đó.",
             "monitoring": [
                 "Huyết áp (có thể hạ huyết áp)",
@@ -502,7 +502,7 @@ REVERSAL_AGENTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Cholestyramine: giảm hấp thu vitamin K",
                 "Antibiotics: có thể giảm vitamin K (do giảm vi khuẩn đường ruột)"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Vitamin K là vitamin tan trong chất béo, cần thiết cho tổng hợp các yếu tố đông máu phụ thuộc vitamin K (II, VII, IX, X) và các protein chống đông (protein C, protein S). Vitamin K hoạt động như cofactor cho enzyme gamma-glutamyl carboxylase, tham gia vào quá trình carboxyl hóa các yếu tố đông máu. Warfarin ức chế vitamin K epoxide reductase, ngăn chặn tái chế vitamin K, dẫn đến giảm tổng hợp các yếu tố đông máu. Bổ sung vitamin K đảo ngược tác dụng của warfarin bằng cách cung cấp vitamin K để tổng hợp lại các yếu tố đông máu. Vitamin K có thể dùng đường uống (tác dụng chậm, 6-12 giờ), tiêm dưới da, tiêm bắp, hoặc tiêm tĩnh mạch (tác dụng nhanh hơn nhưng nguy hiểm hơn).",
             "monitoring": [
                 "INR (sau 6-12 giờ với PO, sau 2-4 giờ với IV) - theo dõi đảo ngược warfarin",

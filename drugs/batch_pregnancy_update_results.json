@@ -1,0 +1,651 @@
+{
+  "updated": [
+    {
+      "drug": "Enalapril",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\ace_arb.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\.backups\\ace_arb_20260113_214422.py",
+      "category": "D - Chống chỉ định trong thai kỳ do nguy cơ gây hại cho thai nhi (oligohydramnios, thận suy, dị tật xương)"
+    },
+    {
+      "drug": "Lisinopril",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\ace_arb.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\.backups\\ace_arb_20260113_214422.py",
+      "category": "D - Chống chỉ định trong thai kỳ do nguy cơ gây hại cho thai nhi (oligohydramnios, thận suy, dị tật xương)"
+    },
+    {
+      "drug": "Losartan",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\ace_arb.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\.backups\\ace_arb_20260113_214422.py",
+      "category": "D - Chống chỉ định trong thai kỳ do nguy cơ gây hại cho thai nhi (oligohydramnios, thận suy, dị tật xương)"
+    },
+    {
+      "drug": "Telmisartan",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\ace_arb.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\.backups\\ace_arb_20260113_214422.py",
+      "category": "D - Chống chỉ định trong thai kỳ do nguy cơ gây hại cho thai nhi"
+    },
+    {
+      "drug": "Valsartan",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\ace_arb.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\.backups\\ace_arb_20260113_214422.py",
+      "category": "D - Chống chỉ định trong thai kỳ do nguy cơ gây hại cho thai nhi"
+    },
+    {
+      "drug": "Simvastatin",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\statins.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\.backups\\statins_20260113_214422.py",
+      "category": "X - Chống chỉ định tuyệt đối trong thai kỳ do nguy cơ dị tật bẩm sinh"
+    },
+    {
+      "drug": "Pravastatin",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\statins.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\.backups\\statins_20260113_214422.py",
+      "category": "X - Chống chỉ định tuyệt đối trong thai kỳ do nguy cơ dị tật bẩm sinh"
+    },
+    {
+      "drug": "Metformin",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\biguanides.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\.backups\\biguanides_20260113_214422.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người. Có thể sử dụng trong thai kỳ cho đái tháo đường thai kỳ"
+    },
+    {
+      "drug": "Insulin",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\insulins.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\.backups\\insulins_20260113_214422.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người. An toàn trong thai kỳ"
+    },
+    {
+      "drug": "Empagliflozin",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\sglt2_inhibitors.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\.backups\\sglt2_inhibitors_20260113_214422.py",
+      "category": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Dapagliflozin",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\sglt2_inhibitors.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\.backups\\sglt2_inhibitors_20260113_214422.py",
+      "category": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Canagliflozin",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\sglt2_inhibitors.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\.backups\\sglt2_inhibitors_20260113_214422.py",
+      "category": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Gliclazide",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\sulfonylureas.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\.backups\\sulfonylureas_20260113_214422.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Pioglitazone",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\thiazolidinedione_tzds.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\.backups\\thiazolidinedione_tzds_20260113_214422.py",
+      "category": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Liraglutide",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\glp1_agonists.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\.backups\\glp1_agonists_20260113_214422.py",
+      "category": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Semaglutide",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\glp1_agonists.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\.backups\\glp1_agonists_20260113_214423.py",
+      "category": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Dulaglutide",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\glp1_agonists.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\.backups\\glp1_agonists_20260113_214423.py",
+      "category": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Exenatide",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\glp1_agonists.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\.backups\\glp1_agonists_20260113_214423.py",
+      "category": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Bismuth subsalicylate",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\antidiarrheals.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\.backups\\antidiarrheals_20260113_214423.py",
+      "category": "C - Chứa salicylate, tránh trong thai kỳ"
+    },
+    {
+      "drug": "Ranitidine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\h2_receptor_antagonists.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\.backups\\h2_receptor_antagonists_20260113_214423.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Sucralfate",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\mucosal_protectants.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\.backups\\mucosal_protectants_20260113_214423.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Esomeprazole",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\proton_pump_inhibitors.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\.backups\\proton_pump_inhibitors_20260113_214423.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người. Có thể sử dụng trong thai kỳ"
+    },
+    {
+      "drug": "Lansoprazole",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\proton_pump_inhibitors.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\.backups\\proton_pump_inhibitors_20260113_214423.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người. Có thể sử dụng trong thai kỳ"
+    },
+    {
+      "drug": "Pantoprazole",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\proton_pump_inhibitors.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\.backups\\proton_pump_inhibitors_20260113_214423.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người. Có thể sử dụng trong thai kỳ"
+    },
+    {
+      "drug": "Domperidone",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\prokinetic_antiemetics.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\.backups\\prokinetic_antiemetics_20260113_214423.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Ondansetron",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\antiemetic_5_ht3_antagonists.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\.backups\\antiemetic_5_ht3_antagonists_20260113_214423.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người. Sử dụng phổ biến trong thai kỳ"
+    },
+    {
+      "drug": "Sulfasalazine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\ibd_5asa.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\.backups\\ibd_5asa_20260113_214424.py",
+      "category": "B - Có thể sử dụng trong thai kỳ với bổ sung folic acid"
+    },
+    {
+      "drug": "Hydrocodone",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\opioid_agonists.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\.backups\\opioid_agonists_20260113_214424.py",
+      "category": "C - Nguy cơ không thể loại trừ. Tránh trong thai kỳ nếu có thể"
+    },
+    {
+      "drug": "Codeine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\opioid_agonist_weaks.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\.backups\\opioid_agonist_weaks_20260113_214424.py",
+      "category": "C - Nguy cơ không thể loại trừ. Tránh trong thai kỳ nếu có thể"
+    },
+    {
+      "drug": "Rizatriptan",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\antimigraine_5_ht1_receptor_agonists.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\.backups\\antimigraine_5_ht1_receptor_agonists_20260113_214424.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Sumatriptan",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\antimigraine_5_ht1_receptor_agonists.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\.backups\\antimigraine_5_ht1_receptor_agonists_20260113_214424.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Montelukast",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\leukotriene_receptor_antagonists.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\leukotriene_receptor_antagonists_20260113_214424.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Nedocromil",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\leukotriene_receptor_antagonists.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\leukotriene_receptor_antagonists_20260113_214424.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Formoterol",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\long_acting_beta_2_agonist_labas.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\long_acting_beta_2_agonist_labas_20260113_214424.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Olodaterol",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\long_acting_beta_2_agonist_labas.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\long_acting_beta_2_agonist_labas_20260113_214425.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Salmeterol",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\long_acting_beta_2_agonist_labas.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\long_acting_beta_2_agonist_labas_20260113_214425.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Vilanterol",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\long_acting_beta_2_agonist_labas.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\long_acting_beta_2_agonist_labas_20260113_214425.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Ipratropium",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\anticholinergic_short_actings.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\anticholinergic_short_actings_20260113_214425.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Umeclidinium",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\anticholinergic_long_actings.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\anticholinergic_long_actings_20260113_214425.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Beclomethasone inhaled",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\inhaled_corticosteroid_icss.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\inhaled_corticosteroid_icss_20260113_214425.py",
+      "category": "C - Corticosteroid, thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Budesonide inhaled",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\inhaled_corticosteroid_icss.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\inhaled_corticosteroid_icss_20260113_214426.py",
+      "category": "B - Corticosteroid, có thể sử dụng trong thai kỳ"
+    },
+    {
+      "drug": "Ciclesonide",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\inhaled_corticosteroid_icss.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\inhaled_corticosteroid_icss_20260113_214426.py",
+      "category": "C - Corticosteroid, thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Fluticasone inhaled",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\inhaled_corticosteroid_icss.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\.backups\\inhaled_corticosteroid_icss_20260113_214426.py",
+      "category": "C - Corticosteroid, thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Topiramate",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\anticonvulsants.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\.backups\\anticonvulsants_20260113_214426.py",
+      "category": "D - Có bằng chứng về nguy cơ dị tật bẩm sinh"
+    },
+    {
+      "drug": "Fluoxetine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\ssri_selective_serotonin_reuptake_inhibitors.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\.backups\\ssri_selective_serotonin_reuptake_inhibitors_20260113_214426.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Donepezil",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\alzheimer_dementia_drugs.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\.backups\\alzheimer_dementia_drugs_20260113_214426.py",
+      "category": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Memantine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\alzheimer_dementia_drugs.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\.backups\\alzheimer_dementia_drugs_20260113_214426.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Rivastigmine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\alzheimer_dementia_drugs.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\.backups\\alzheimer_dementia_drugs_20260113_214426.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Zolmitriptan",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\migraine_triptans.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\.backups\\migraine_triptans_20260113_214427.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Diphenhydramine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\allergy\\antihistamines.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\allergy\\.backups\\antihistamines_20260113_214427.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Etomidate",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\induction_agents.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\.backups\\induction_agents_20260113_214427.py",
+      "category": "C - Nguy cơ không thể loại trừ"
+    },
+    {
+      "drug": "Ketamine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\induction_agents.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\.backups\\induction_agents_20260113_214427.py",
+      "category": "C - Nguy cơ không thể loại trừ"
+    },
+    {
+      "drug": "Propofol",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\induction_agents.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\.backups\\induction_agents_20260113_214427.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Cisatracurium",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\neuromuscular_blockers.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\.backups\\neuromuscular_blockers_20260113_214427.py",
+      "category": "C - Nguy cơ không thể loại trừ"
+    },
+    {
+      "drug": "Rocuronium",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\neuromuscular_blockers.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\.backups\\neuromuscular_blockers_20260113_214427.py",
+      "category": "C - Nguy cơ không thể loại trừ"
+    },
+    {
+      "drug": "Succinylcholine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\neuromuscular_blockers.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\.backups\\neuromuscular_blockers_20260113_214427.py",
+      "category": "C - Nguy cơ không thể loại trừ"
+    },
+    {
+      "drug": "Amoxicillin-clavulanate",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\beta_lactams.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\.backups\\beta_lactams_20260113_214427.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Azithromycin",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\macrolides.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\.backups\\macrolides_20260113_214428.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Clarithromycin",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\macrolides.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\.backups\\macrolides_20260113_214428.py",
+      "category": "C - Nguy cơ không thể loại trừ. Tránh trong thai kỳ nếu có thể"
+    },
+    {
+      "drug": "Hydroxychloroquine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\antimalarials.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\.backups\\antimalarials_20260113_214429.py",
+      "category": "C - Nguy cơ không thể loại trừ. Có thể sử dụng cho bệnh tự miễn"
+    },
+    {
+      "drug": "Amoxicillin suspension",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\beta_lactams.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\.backups\\beta_lactams_20260113_214429.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Levothyroxine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology\\thyroid.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology\\.backups\\thyroid_20260113_214429.py",
+      "category": "A - Không có nguy cơ trong các nghiên cứu có đối chứng. An toàn trong thai kỳ"
+    },
+    {
+      "drug": "Methimazole",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology\\thyroid.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology\\.backups\\thyroid_20260113_214429.py",
+      "category": "D - Có bằng chứng về nguy cơ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Propylthiouracil",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology\\thyroid.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology\\.backups\\thyroid_20260113_214430.py",
+      "category": "D - Có bằng chứng về nguy cơ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Betamethasone",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology_other\\corticosteroids\\long_acting.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology_other\\corticosteroids\\.backups\\long_acting_20260113_214430.py",
+      "category": "C - Nguy cơ không thể loại trừ. Có thể sử dụng khi cần thiết"
+    },
+    {
+      "drug": "Alendronate",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology_other\\osteoporosis_bisphosphonates.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology_other\\.backups\\osteoporosis_bisphosphonates_20260113_214431.py",
+      "category": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Tamoxifen",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\basic_oncology.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\.backups\\basic_oncology_20260113_214431.py",
+      "category": "D - Có bằng chứng về nguy cơ. Chống chỉ định trong thai kỳ"
+    },
+    {
+      "drug": "Anastrozole",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\basic_oncology.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\.backups\\basic_oncology_20260113_214431.py",
+      "category": "X - Chống chỉ định tuyệt đối trong thai kỳ"
+    },
+    {
+      "drug": "Imatinib",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\basic_oncology.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\.backups\\basic_oncology_20260113_214431.py",
+      "category": "D - Có bằng chứng về nguy cơ. Chống chỉ định trong thai kỳ"
+    },
+    {
+      "drug": "Erlotinib",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\basic_oncology.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\.backups\\basic_oncology_20260113_214431.py",
+      "category": "D - Có bằng chứng về nguy cơ. Chống chỉ định trong thai kỳ"
+    },
+    {
+      "drug": "Lidocaine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\local_anesthetics.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\.backups\\local_anesthetics_20260113_214431.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\fluids.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\.backups\\fluids_20260113_214432.py",
+      "category": "C - Nguy cơ không thể loại trừ. An toàn khi sử dụng đúng chỉ định"
+    },
+    {
+      "drug": "Ringer Lactate",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\fluids.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\.backups\\fluids_20260113_214432.py",
+      "category": "C - Nguy cơ không thể loại trừ. An toàn khi sử dụng đúng chỉ định"
+    },
+    {
+      "drug": "Albumin (Human)",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\fluids.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\.backups\\fluids_20260113_214432.py",
+      "category": "C - Nguy cơ không thể loại trừ. An toàn khi sử dụng đúng chỉ định"
+    },
+    {
+      "drug": "HES 130/0.4",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\fluids.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\.backups\\fluids_20260113_214432.py",
+      "category": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ"
+    },
+    {
+      "drug": "Vitamin D3 (Cholecalciferol)",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\vitamins.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\.backups\\vitamins_20260113_214432.py",
+      "category": "A - Không có nguy cơ trong các nghiên cứu có đối chứng"
+    },
+    {
+      "drug": "Colchicine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\gout_medications.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\.backups\\gout_medications_20260113_214432.py",
+      "category": "D - Có bằng chứng về nguy cơ. Tránh trong thai kỳ"
+    },
+    {
+      "drug": "Febuxostat",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\gout_medications.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\.backups\\gout_medications_20260113_214432.py",
+      "category": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Mycophenolate",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\immunology\\immunosuppressants.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\immunology\\.backups\\immunosuppressants_20260113_214432.py",
+      "category": "D - Có bằng chứng về nguy cơ dị tật bẩm sinh. Chống chỉ định trong thai kỳ"
+    },
+    {
+      "drug": "Tacrolimus",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\immunology\\immunosuppressants.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\immunology\\.backups\\immunosuppressants_20260113_214432.py",
+      "category": "C - Nguy cơ không thể loại trừ. Có thể sử dụng khi cần thiết"
+    },
+    {
+      "drug": "Leflunomide",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\dmards_rheumatology.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\.backups\\dmards_rheumatology_20260113_214432.py",
+      "category": "X - Chống chỉ định tuyệt đối trong thai kỳ do nguy cơ dị tật bẩm sinh"
+    },
+    {
+      "drug": "Bupivacaine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\local_anesthetics.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\.backups\\local_anesthetics_20260113_214432.py",
+      "category": "C - Nguy cơ không thể loại trừ"
+    },
+    {
+      "drug": "Levobupivacaine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\local_anesthetics.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\anesthesia\\.backups\\local_anesthetics_20260113_214432.py",
+      "category": "C - Nguy cơ không thể loại trừ"
+    },
+    {
+      "drug": "VAT (Tetanus Vaccine)",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\standard_vaccines.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\.backups\\standard_vaccines_20260113_214432.py",
+      "category": "C - Nguy cơ không thể loại trừ. Khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Verorab (Rabies Vaccine)",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\standard_vaccines.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\.backups\\standard_vaccines_20260113_214432.py",
+      "category": "C - Nguy cơ không thể loại trừ. Khuyến nghị khi có chỉ định"
+    },
+    {
+      "drug": "Influenza Vaccine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\standard_vaccines.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\.backups\\standard_vaccines_20260113_214433.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người. Khuyến nghị trong thai kỳ"
+    },
+    {
+      "drug": "Hepatitis B Vaccine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\standard_vaccines.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\.backups\\standard_vaccines_20260113_214433.py",
+      "category": "C - Nguy cơ không thể loại trừ. Khuyến nghị khi có chỉ định"
+    },
+    {
+      "drug": "SAT (Tetanus Antitoxin)",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\antisera.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\.backups\\antisera_20260113_214433.py",
+      "category": "C - Nguy cơ không thể loại trừ"
+    },
+    {
+      "drug": "SAR (Rabies Antiserum)",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\antisera.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\.backups\\antisera_20260113_214433.py",
+      "category": "C - Nguy cơ không thể loại trừ"
+    },
+    {
+      "drug": "Snake Antivenom (Luc Tre)",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\antisera.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\.backups\\antisera_20260113_214433.py",
+      "category": "C - Nguy cơ không thể loại trừ. Sử dụng khi cần thiết"
+    },
+    {
+      "drug": "Snake Antivenom (Ho Dat)",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\antisera.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\vaccines\\.backups\\antisera_20260113_214433.py",
+      "category": "C - Nguy cơ không thể loại trừ. Sử dụng khi cần thiết"
+    },
+    {
+      "drug": "Acetylcysteine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\toxicology\\antidotes.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\toxicology\\.backups\\antidotes_20260113_214433.py",
+      "category": "B - Không có bằng chứng về nguy cơ ở người"
+    },
+    {
+      "drug": "Pralidoxime",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\toxicology\\antidotes.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\toxicology\\.backups\\antidotes_20260113_214433.py",
+      "category": "C - Nguy cơ không thể loại trừ"
+    },
+    {
+      "drug": "Vitamin K1",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\toxicology\\antidotes.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\toxicology\\.backups\\antidotes_20260113_214434.py",
+      "category": "C - Nguy cơ không thể loại trừ. An toàn khi sử dụng đúng chỉ định"
+    },
+    {
+      "drug": "Thiamine (Vitamin B1)",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\nutrition\\vitamins.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\nutrition\\.backups\\vitamins_20260113_214434.py",
+      "category": "A - Không có nguy cơ trong các nghiên cứu có đối chứng"
+    },
+    {
+      "drug": "Cyanocobalamin (Vitamin B12)",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\nutrition\\vitamins.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\nutrition\\.backups\\vitamins_20260113_214434.py",
+      "category": "A - Không có nguy cơ trong các nghiên cứu có đối chứng"
+    },
+    {
+      "drug": "Vitamin C (Ascorbic Acid)",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\nutrition\\vitamins.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\nutrition\\.backups\\vitamins_20260113_214434.py",
+      "category": "A - Không có nguy cơ trong các nghiên cứu có đối chứng"
+    },
+    {
+      "drug": "Zoledronic Acid",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\rheumatology\\osteoporosis.py",
+      "backup": "D:\\1app\\medical\\drugs\\drug_modules\\rheumatology\\.backups\\osteoporosis_20260113_214434.py",
+      "category": "D - Có bằng chứng về nguy cơ. Không khuyến nghị trong thai kỳ"
+    }
+  ],
+  "not_found_file": [],
+  "no_category": [],
+  "errors": [
+    {
+      "drug": "Omeprazole",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\anticoagulants.py",
+      "error": "Update failed"
+    },
+    {
+      "drug": "Carbamazepine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\antiarrhythmics.py",
+      "error": "Update failed"
+    },
+    {
+      "drug": "Calcium",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\other_cv.py",
+      "error": "Update failed"
+    },
+    {
+      "drug": "Ceftriaxone",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\electrolytes.py",
+      "error": "Update failed"
+    },
+    {
+      "drug": "Prednisone",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology\\corticosteroids.py",
+      "error": "Update failed"
+    },
+    {
+      "drug": "Dexamethasone",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\anthelmintics.py",
+      "error": "Update failed"
+    },
+    {
+      "drug": "Atropine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\other_cv.py",
+      "error": "Update failed"
+    },
+    {
+      "drug": "Allopurinol",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\ace_inhibitors.py",
+      "error": "Update failed"
+    },
+    {
+      "drug": "Cyclosporine",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\cholesterol_absorption_inhibitors.py",
+      "error": "Update failed"
+    },
+    {
+      "drug": "Methotrexate",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\cardiovascular\\anticoagulants.py",
+      "error": "Update failed"
+    },
+    {
+      "drug": "Ethanol",
+      "file": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\anticonvulsants.py",
+      "error": "Update failed"
+    }
+  ]
+}

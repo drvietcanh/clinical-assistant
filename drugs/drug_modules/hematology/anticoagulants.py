@@ -38,7 +38,7 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "CYP3A4 và P-gp inducers (rifampin): giảm nồng độ",
                 "Aspirin/NSAID: tăng nguy cơ chảy máu"
             ],
-            "pregnancy": "C - Tránh dùng",
+        "pregnancy": "C - Tránh dùng",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": True,
@@ -209,7 +209,7 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "P-gp inducers (rifampin): giảm nồng độ",
                 "Aspirin/NSAID: tăng nguy cơ chảy máu"
             ],
-            "pregnancy": "C - Tránh dùng",
+        "pregnancy": "C - Tránh dùng",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": True,
@@ -380,7 +380,7 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "P-gp inducers (rifampin): giảm nồng độ",
                 "Aspirin/NSAID: tăng nguy cơ chảy máu"
             ],
-            "pregnancy": "C - Tránh dùng",
+        "pregnancy": "C - Tránh dùng",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": True,
@@ -546,7 +546,7 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Aspirin/NSAID: tăng nguy cơ chảy máu",
                 "Thrombolytics: tăng nguy cơ chảy máu"
             ],
-            "pregnancy": "B - Tương đối an toàn",
+        "pregnancy": "B - Tương đối an toàn",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
@@ -732,7 +732,7 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Aspirin/NSAID: tăng nguy cơ chảy máu",
                 "Thrombolytics: tăng nguy cơ chảy máu"
             ],
-            "pregnancy": "B - Tương đối an toàn",
+        "pregnancy": "B - Tương đối an toàn",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
@@ -905,7 +905,7 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Aspirin/NSAID: tăng nguy cơ chảy máu",
                 "Thrombolytics: tăng nguy cơ chảy máu"
             ],
-            "pregnancy": "C - Tương đối an toàn",
+        "pregnancy": "C - Tương đối an toàn",
             "mechanism_of_action": "Heparin là glycosaminoglycan, tăng cường hoạt động của antithrombin III (ATIII), ức chế yếu tố Xa và yếu tố IIa (thrombin). Heparin gắn với ATIII, làm thay đổi cấu trúc ATIII, tăng khả năng ức chế Xa và IIa. Heparin có tác dụng nhanh, có thể đảo ngược bằng protamine. Thuốc cần theo dõi aPTT thường xuyên do dự đoán kém. Heparin có thể gây HIT (heparin-induced thrombocytopenia) do tạo kháng thể chống heparin-PF4 complex.",
             "monitoring": [
                 "aPTT (activated partial thromboplastin time) - mỗi 6 giờ cho đến khi ổn định, sau đó mỗi 24 giờ (target: 1.5-2.5 x baseline)",
@@ -1093,7 +1093,7 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "CYP3A4 và P-gp inducers (rifampin): giảm nồng độ",
                 "Aspirin/NSAID: tăng nguy cơ chảy máu"
             ],
-            "pregnancy": "C - Tránh dùng",
+        "pregnancy": "C - Tránh dùng",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": True,

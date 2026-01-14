@@ -1,0 +1,1442 @@
+{
+  "audit_date": "2026-01-13T21:22:35.361205",
+  "total_entries": 714,
+  "invalid_entries": [],
+  "missing_critical_fields": {
+    "pregnancy": [
+      "Enalapril",
+      "Lisinopril",
+      "Losartan",
+      "Telmisartan",
+      "Valsartan",
+      "Simvastatin",
+      "Pravastatin",
+      "Metformin",
+      "Insulin",
+      "Empagliflozin",
+      "Dapagliflozin",
+      "Canagliflozin",
+      "Gliclazide",
+      "Pioglitazone",
+      "Liraglutide",
+      "Semaglutide",
+      "Dulaglutide",
+      "Exenatide",
+      "Bismuth subsalicylate",
+      "Ranitidine",
+      "Sucralfate",
+      "Omeprazole",
+      "Esomeprazole",
+      "Lansoprazole",
+      "Pantoprazole",
+      "Domperidone",
+      "Ondansetron",
+      "Sulfasalazine",
+      "Hydrocodone",
+      "Codeine",
+      "Rizatriptan",
+      "Sumatriptan",
+      "Montelukast",
+      "Nedocromil",
+      "Formoterol",
+      "Olodaterol",
+      "Salmeterol",
+      "Vilanterol",
+      "Ipratropium",
+      "Umeclidinium",
+      "Beclomethasone inhaled",
+      "Budesonide inhaled",
+      "Ciclesonide",
+      "Fluticasone inhaled",
+      "Carbamazepine",
+      "Topiramate",
+      "Fluoxetine",
+      "Donepezil",
+      "Memantine",
+      "Rivastigmine",
+      "Zolmitriptan",
+      "Calcium",
+      "Diphenhydramine",
+      "Etomidate",
+      "Ketamine",
+      "Propofol",
+      "Cisatracurium",
+      "Rocuronium",
+      "Succinylcholine",
+      "Amoxicillin-clavulanate",
+      "Ceftriaxone",
+      "Azithromycin",
+      "Clarithromycin",
+      "Hydroxychloroquine",
+      "Amoxicillin suspension",
+      "Levothyroxine",
+      "Methimazole",
+      "Propylthiouracil",
+      "Prednisone",
+      "Betamethasone",
+      "Dexamethasone",
+      "Alendronate",
+      "Tamoxifen",
+      "Anastrozole",
+      "Imatinib",
+      "Erlotinib",
+      "Atropine",
+      "Lidocaine",
+      "Sodium Chloride 0.9%",
+      "Ringer Lactate",
+      "Albumin (Human)",
+      "HES 130/0.4",
+      "Vitamin D3 (Cholecalciferol)",
+      "Allopurinol",
+      "Colchicine",
+      "Febuxostat",
+      "Cyclosporine",
+      "Mycophenolate",
+      "Tacrolimus",
+      "Leflunomide",
+      "Methotrexate",
+      "Bupivacaine",
+      "Levobupivacaine",
+      "VAT (Tetanus Vaccine)",
+      "Verorab (Rabies Vaccine)",
+      "Influenza Vaccine",
+      "Hepatitis B Vaccine",
+      "SAT (Tetanus Antitoxin)",
+      "SAR (Rabies Antiserum)",
+      "Snake Antivenom (Luc Tre)",
+      "Snake Antivenom (Ho Dat)",
+      "Acetylcysteine",
+      "Pralidoxime",
+      "Vitamin K1",
+      "Ethanol",
+      "Thiamine (Vitamin B1)",
+      "Cyanocobalamin (Vitamin B12)",
+      "Vitamin C (Ascorbic Acid)",
+      "Zoledronic Acid"
+    ],
+    "contraindications": [
+      "Simvastatin",
+      "Pravastatin",
+      "Dapagliflozin",
+      "Canagliflozin",
+      "Dulaglutide",
+      "Sulfasalazine",
+      "Rizatriptan",
+      "Zolmitriptan",
+      "Cetirizine",
+      "Desloratadine",
+      "Fexofenadine",
+      "Loratadine",
+      "Chlorpheniramine",
+      "Hydroxychloroquine",
+      "Propylthiouracil",
+      "Prednisone",
+      "Imatinib",
+      "Erlotinib",
+      "Atropine",
+      "Vitamin D3 (Cholecalciferol)",
+      "Cyclosporine",
+      "Tacrolimus",
+      "Leflunomide",
+      "Levobupivacaine",
+      "Hepatitis B Vaccine",
+      "SAR (Rabies Antiserum)",
+      "Snake Antivenom (Luc Tre)",
+      "Snake Antivenom (Ho Dat)",
+      "Pralidoxime",
+      "Vitamin K1",
+      "Ethanol",
+      "Thiamine (Vitamin B1)",
+      "Pyridoxine (Vitamin B6)",
+      "Cyanocobalamin (Vitamin B12)",
+      "Zoledronic Acid"
+    ],
+    "dosage": [
+      "Budesonide inhaled"
+    ],
+    "side_effects": [
+      "Budesonide inhaled",
+      "Zolmitriptan",
+      "Desloratadine",
+      "Sodium Chloride 0.9%",
+      "Ringer Lactate",
+      "HES 130/0.4",
+      "Vitamin D3 (Cholecalciferol)",
+      "Febuxostat",
+      "Levobupivacaine",
+      "Snake Antivenom (Ho Dat)",
+      "Pralidoxime",
+      "Ethanol",
+      "Cyanocobalamin (Vitamin B12)",
+      "Vitamin C (Ascorbic Acid)"
+    ]
+  },
+  "format_errors": {
+    "Enalapril": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Lisinopril": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Losartan": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Telmisartan": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Simvastatin": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Pravastatin": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Diltiazem": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Verapamil": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Aspirin": [
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ]
+    ],
+    "Insulin": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ]
+    ],
+    "Empagliflozin": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Dapagliflozin": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Canagliflozin": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Liraglutide": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Semaglutide": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Dulaglutide": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Exenatide": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Ranitidine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Omeprazole": [
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Esomeprazole": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ]
+    ],
+    "Lansoprazole": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ]
+    ],
+    "Sulfasalazine": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Hydrocodone": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ]
+    ],
+    "Paracetamol": [
+      [
+        "reversal_agents",
+        "Expected (<class 'dict'>, <class 'NoneType'>), got list"
+      ]
+    ],
+    "Rizatriptan": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Sumatriptan": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Ipratropium": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Budesonide inhaled": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Fluticasone/Salmeterol inhaler": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Fluticasone/Umeclidinium/Vilanterol inhaler": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Zolmitriptan": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Cetirizine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Desloratadine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Fexofenadine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Levocetirizine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ]
+    ],
+    "Loratadine": [
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Chlorpheniramine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Diphenhydramine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Etomidate": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Ketamine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Propofol": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Cisatracurium": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Rocuronium": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Succinylcholine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Doxycycline": [
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Minocycline": [
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Tetracycline": [
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Hydroxychloroquine": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Levothyroxine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ]
+    ],
+    "Methimazole": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ]
+    ],
+    "Propylthiouracil": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ]
+    ],
+    "Prednisone": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ]
+    ],
+    "Alendronate": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Desmopressin": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Tamoxifen": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Anastrozole": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Imatinib": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Erlotinib": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Atropine": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Flumazenil": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ]
+    ],
+    "Epinephrine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ]
+    ],
+    "Lidocaine": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Carboprost": [
+      [
+        "side_effects",
+        "Expected list, got dict"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Dinoprostone": [
+      [
+        "side_effects",
+        "Expected list, got dict"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Methylergonovine": [
+      [
+        "side_effects",
+        "Expected list, got dict"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Ethinyl estradiol + Levonorgestrel": [
+      [
+        "side_effects",
+        "Expected list, got dict"
+      ]
+    ],
+    "Medroxyprogesterone": [
+      [
+        "side_effects",
+        "Expected list, got dict"
+      ]
+    ],
+    "Estradiol": [
+      [
+        "side_effects",
+        "Expected list, got dict"
+      ]
+    ],
+    "Progesterone": [
+      [
+        "side_effects",
+        "Expected list, got dict"
+      ]
+    ],
+    "Allopurinol": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Colchicine": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Febuxostat": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Leflunomide": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Methotrexate": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Bupivacaine": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Levobupivacaine": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Acetylcysteine": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Pralidoxime": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Vitamin K1": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Ethanol": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Zoledronic Acid": [
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Sirolimus": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ],
+    "Everolimus": [
+      [
+        "pregnancy_lactation",
+        "Expected dict, got str"
+      ],
+      [
+        "hepatic_adjustment",
+        "Expected dict, got str"
+      ],
+      [
+        "overdose_management",
+        "Expected dict, got str"
+      ],
+      [
+        "administration_instructions",
+        "Expected dict, got str"
+      ]
+    ]
+  },
+  "empty_important_fields": {
+    "black_box_warnings": [
+      "Nesiritide",
+      "Enalapril",
+      "Telmisartan",
+      "Valsartan",
+      "Nebivolol",
+      "Pravastatin",
+      "Ezetimibe",
+      "Adenosine",
+      "Clevidipine",
+      "Lacidipine",
+      "Hydrochlorothiazide",
+      "Indapamide",
+      "Alogliptin",
+      "Linagliptin",
+      "Saxagliptin",
+      "Sitagliptin",
+      "Empagliflozin",
+      "Dapagliflozin",
+      "Acarbose",
+      "Miglitol",
+      "Exenatide",
+      "Bromocriptine",
+      "Colesevelam",
+      "Ranitidine",
+      "Lactulose",
+      "Polyethylene glycol 3350",
+      "Sulfasalazine",
+      "Rizatriptan",
+      "Sumatriptan",
+      "Nedocromil",
+      "Ipratropium",
+      "Beclomethasone inhaled",
+      "Budesonide inhaled",
+      "Ciclesonide",
+      "Metaxalone",
+      "Methocarbamol",
+      "Piracetam",
+      "Vinpocetine",
+      "Zolmitriptan",
+      "Filgrastim",
+      "Calcium",
+      "Folic acid",
+      "Vitamin B12",
+      "Vitamin D",
+      "Cetirizine",
+      "Desloratadine",
+      "Fexofenadine",
+      "Levocetirizine",
+      "Loratadine",
+      "Chlorpheniramine",
+      "Diphenhydramine",
+      "Hydroxyzine",
+      "Etomidate",
+      "Ketamine",
+      "Propofol",
+      "Cisatracurium",
+      "Rocuronium",
+      "Succinylcholine",
+      "Aztreonam",
+      "Cephalexin",
+      "Fidaxomicin",
+      "Fosfomycin",
+      "Acyclovir",
+      "Valacyclovir",
+      "Oseltamivir",
+      "Cobicistat (COBI)",
+      "Ritonavir (low-dose booster)",
+      "Bictegravir (BIC)",
+      "Cabotegravir + Rilpivirine (Long-acting IM)",
+      "Dolutegravir (DTG)",
+      "Efavirenz (EFV)",
+      "Rilpivirine (RPV)",
+      "Atazanavir (boosted with ritonavir/cobicistat)",
+      "Darunavir (boosted with ritonavir/cobicistat)",
+      "Isavuconazole",
+      "Nystatin",
+      "Anidulafungin",
+      "Ivermectin",
+      "Levamisole",
+      "Praziquantel",
+      "Hydroxychloroquine",
+      "Amoxicillin suspension",
+      "Levothyroxine",
+      "Alendronate",
+      "Tamoxifen",
+      "Anastrozole",
+      "Imatinib",
+      "Erlotinib",
+      "Atropine",
+      "Vasopressin",
+      "Lidocaine",
+      "Carboprost",
+      "Dinoprostone",
+      "Sodium Chloride 0.9%",
+      "Ringer Lactate",
+      "Albumin (Human)",
+      "Fesoterodine",
+      "Ivermectin cream",
+      "Permethrin topical",
+      "Azelaic Acid",
+      "Azelaic acid topical",
+      "Benzoyl peroxide topical",
+      "Erythromycin topical",
+      "Fusidic Acid",
+      "Metronidazole topical",
+      "Mupirocin topical",
+      "Clotrimazole topical",
+      "Econazole topical",
+      "Ketoconazole topical",
+      "Miconazole topical",
+      "Terbinafine topical",
+      "Betamethasone topical",
+      "Betamethasone/Clotrimazole topical",
+      "Clobetasol",
+      "Fusidic acid/Betamethasone topical",
+      "Gentamicin/Betamethasone/Clotrimazole topical",
+      "Hydrocortisone topical",
+      "Miconazole/Hydrocortisone topical",
+      "Mometasone topical",
+      "Triamcinolone topical",
+      "Polymyxin B/Trimethoprim eye drops",
+      "Metronidazole (vaginal gel)",
+      "Azelastine/Fluticasone nasal spray",
+      "Cetirizine/Pseudoephedrine",
+      "Fexofenadine/Pseudoephedrine",
+      "Loratadine/Pseudoephedrine",
+      "Calcium (elemental)",
+      "Folic Acid",
+      "Vitamin C",
+      "Vitamin D3 (Cholecalciferol)",
+      "Vitamin E",
+      "Allopurinol",
+      "Colchicine",
+      "Febuxostat",
+      "Probenecid",
+      "Bupivacaine",
+      "Levobupivacaine",
+      "VAT (Tetanus Vaccine)",
+      "Verorab (Rabies Vaccine)",
+      "Influenza Vaccine",
+      "Hepatitis B Vaccine",
+      "SAT (Tetanus Antitoxin)",
+      "SAR (Rabies Antiserum)",
+      "Snake Antivenom (Luc Tre)",
+      "Snake Antivenom (Ho Dat)",
+      "Acetylcysteine",
+      "Pralidoxime",
+      "Vitamin K1",
+      "Ethanol",
+      "Thiamine (Vitamin B1)",
+      "Pyridoxine (Vitamin B6)",
+      "Cyanocobalamin (Vitamin B12)",
+      "Vitamin C (Ascorbic Acid)",
+      "Zoledronic Acid"
+    ],
+    "storage": [
+      "Enalapril",
+      "Lisinopril",
+      "Losartan",
+      "Telmisartan",
+      "Valsartan",
+      "Empagliflozin",
+      "Dapagliflozin",
+      "Canagliflozin",
+      "Liraglutide",
+      "Semaglutide",
+      "Dulaglutide",
+      "Exenatide",
+      "Ranitidine",
+      "Sulfasalazine",
+      "Rizatriptan",
+      "Sumatriptan",
+      "Ipratropium",
+      "Budesonide inhaled",
+      "Zolmitriptan",
+      "Cetirizine",
+      "Desloratadine",
+      "Fexofenadine",
+      "Loratadine",
+      "Chlorpheniramine",
+      "Diphenhydramine",
+      "Etomidate",
+      "Ketamine",
+      "Propofol",
+      "Cisatracurium",
+      "Rocuronium",
+      "Succinylcholine",
+      "Hydroxychloroquine",
+      "Levothyroxine",
+      "Methimazole",
+      "Propylthiouracil",
+      "Prednisone",
+      "Alendronate",
+      "Tamoxifen",
+      "Anastrozole",
+      "Imatinib",
+      "Erlotinib",
+      "Atropine",
+      "Lidocaine",
+      "Sodium Chloride 0.9%",
+      "Ringer Lactate",
+      "HES 130/0.4",
+      "Vitamin D3 (Cholecalciferol)",
+      "Allopurinol",
+      "Colchicine",
+      "Febuxostat",
+      "Leflunomide",
+      "Methotrexate",
+      "Bupivacaine",
+      "Levobupivacaine",
+      "Acetylcysteine",
+      "Pralidoxime",
+      "Vitamin K1",
+      "Ethanol",
+      "Pyridoxine (Vitamin B6)",
+      "Cyanocobalamin (Vitamin B12)",
+      "Vitamin C (Ascorbic Acid)",
+      "Zoledronic Acid"
+    ],
+    "administration_instructions": [
+      "Enalapril",
+      "Lisinopril",
+      "Losartan",
+      "Telmisartan",
+      "Simvastatin",
+      "Pravastatin",
+      "Diltiazem",
+      "Verapamil",
+      "Empagliflozin",
+      "Dapagliflozin",
+      "Canagliflozin",
+      "Liraglutide",
+      "Semaglutide",
+      "Dulaglutide",
+      "Exenatide",
+      "Ranitidine",
+      "Omeprazole",
+      "Sulfasalazine",
+      "Rizatriptan",
+      "Sumatriptan",
+      "Ipratropium",
+      "Budesonide inhaled",
+      "Fluticasone/Salmeterol inhaler",
+      "Fluticasone/Umeclidinium/Vilanterol inhaler",
+      "Zolmitriptan",
+      "Cetirizine",
+      "Desloratadine",
+      "Fexofenadine",
+      "Loratadine",
+      "Chlorpheniramine",
+      "Diphenhydramine",
+      "Etomidate",
+      "Ketamine",
+      "Propofol",
+      "Cisatracurium",
+      "Rocuronium",
+      "Succinylcholine",
+      "Doxycycline",
+      "Minocycline",
+      "Tetracycline",
+      "Hydroxychloroquine",
+      "Alendronate",
+      "Desmopressin",
+      "Tamoxifen",
+      "Anastrozole",
+      "Imatinib",
+      "Erlotinib",
+      "Atropine",
+      "Lidocaine",
+      "Carboprost",
+      "Dinoprostone",
+      "Methylergonovine",
+      "Allopurinol",
+      "Colchicine",
+      "Febuxostat",
+      "Leflunomide",
+      "Methotrexate",
+      "Bupivacaine",
+      "Levobupivacaine",
+      "Acetylcysteine",
+      "Pralidoxime",
+      "Vitamin K1",
+      "Ethanol",
+      "Zoledronic Acid",
+      "Sirolimus",
+      "Everolimus"
+    ],
+    "pregnancy_lactation": [
+      "Enalapril",
+      "Lisinopril",
+      "Losartan",
+      "Telmisartan",
+      "Diltiazem",
+      "Verapamil",
+      "Insulin",
+      "Ranitidine",
+      "Esomeprazole",
+      "Lansoprazole",
+      "Hydrocodone",
+      "Ipratropium",
+      "Budesonide inhaled",
+      "Cetirizine",
+      "Desloratadine",
+      "Fexofenadine",
+      "Levocetirizine",
+      "Chlorpheniramine",
+      "Diphenhydramine",
+      "Etomidate",
+      "Ketamine",
+      "Propofol",
+      "Cisatracurium",
+      "Rocuronium",
+      "Succinylcholine",
+      "Levothyroxine",
+      "Methimazole",
+      "Propylthiouracil",
+      "Prednisone",
+      "Desmopressin",
+      "Tamoxifen",
+      "Anastrozole",
+      "Imatinib",
+      "Erlotinib",
+      "Flumazenil",
+      "Epinephrine",
+      "Lidocaine",
+      "Sirolimus",
+      "Everolimus"
+    ],
+    "pregnancy": [
+      "Simvastatin",
+      "Pravastatin",
+      "Empagliflozin",
+      "Dapagliflozin",
+      "Canagliflozin",
+      "Liraglutide",
+      "Semaglutide",
+      "Dulaglutide",
+      "Exenatide",
+      "Sulfasalazine",
+      "Rizatriptan",
+      "Sumatriptan",
+      "Zolmitriptan",
+      "Hydroxychloroquine",
+      "Alendronate",
+      "Atropine",
+      "Sodium Chloride 0.9%",
+      "Ringer Lactate",
+      "Albumin (Human)",
+      "HES 130/0.4",
+      "Vitamin D3 (Cholecalciferol)",
+      "Allopurinol",
+      "Colchicine",
+      "Febuxostat",
+      "Leflunomide",
+      "Methotrexate",
+      "Bupivacaine",
+      "Levobupivacaine",
+      "VAT (Tetanus Vaccine)",
+      "Verorab (Rabies Vaccine)",
+      "Influenza Vaccine",
+      "Hepatitis B Vaccine",
+      "SAT (Tetanus Antitoxin)",
+      "SAR (Rabies Antiserum)",
+      "Snake Antivenom (Luc Tre)",
+      "Snake Antivenom (Ho Dat)",
+      "Acetylcysteine",
+      "Pralidoxime",
+      "Vitamin K1",
+      "Ethanol",
+      "Thiamine (Vitamin B1)",
+      "Cyanocobalamin (Vitamin B12)",
+      "Vitamin C (Ascorbic Acid)",
+      "Zoledronic Acid"
+    ]
+  },
+  "summary": {
+    "valid_drugs": 714,
+    "invalid_entries": 0,
+    "drugs_with_missing_critical_fields": 115,
+    "drugs_with_format_errors": 83,
+    "drugs_with_empty_important_fields": 185
+  }
+}

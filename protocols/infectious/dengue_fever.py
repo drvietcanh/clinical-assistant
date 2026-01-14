@@ -1,5 +1,5 @@
 """
-Dengue Fever Protocol (Sốt Xuất Huyết Dengue)
+Dengue Fever Protocol (Sốt Xuất huyết Dengue)
 Very common in Vietnam, especially during rainy season
 WHO 2009, 2012 guidelines
 """
@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Dengue Fever Protocol"""
-    st.subheader("🦟 Sốt Xuất Huyết Dengue (Dengue Fever)")
+    st.subheader("🦟 Sốt Xuất huyết Dengue (Dengue Fever)")
     st.caption("WHO Guidelines 2009, 2012 - Bệnh phổ biến tại Việt Nam, đặc biệt mùa mưa")
     
     st.error("""

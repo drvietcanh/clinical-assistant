@@ -1,4 +1,4 @@
-# Tổng Hợp Tiến Trình Bổ Sung Enhanced Fields
+# Tổng Hợp Tiến Trình Bổ sung Enhanced Fields
 
 **Ngày cập nhật:** 2025-02-18  
 **Trạng thái:** Đang tiến hành  
@@ -313,7 +313,7 @@
 3. **Kiểm tra thường xuyên** - Chạy `find_drugs_missing_2_fields.py` sau mỗi nhóm
 4. **Sử dụng template** - Copy template và thay thế tên thuốc
 
-## ⚡ Lệnh Kiểm Tra
+## ⚡ Lệnh Kiểm tra
 
 ```bash
 # Kiểm tra số thuốc còn thiếu

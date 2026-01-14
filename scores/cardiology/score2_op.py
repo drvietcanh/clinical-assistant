@@ -239,7 +239,7 @@ def render():
     render_suggestions(
         calculator_id="score2_op",
         calculator_name="SCORE2-OP",
-        category="Tim Mạch",
+        category="Tim mạch",
         show_related=True,
         show_category=True,
         limit=3

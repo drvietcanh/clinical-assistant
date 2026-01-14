@@ -44,7 +44,7 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Bimatoprost là prostaglandin analog. Gắn với thụ thể prostaglandin F trên cơ trơn mống mắt và cơ thể mi, dẫn đến: (1) Tăng dẫn lưu thủy dịch qua đường uveoscleral (tăng outflow), (2) Giảm sản xuất thủy dịch (nhẹ), (3) Giảm nhãn áp. Bimatoprost tương tự latanoprost, tác dụng mạnh (giảm nhãn áp 25-35%), dùng 1 lần/ngày. ĐẶC ĐIỂM: (1) Tác dụng mạnh, giảm nhãn áp 25-35%, (2) Dùng 1 lần/ngày (buổi tối), (3) Thay đổi màu mắt (tăng sắc tố mống mắt) - vĩnh viễn, phổ biến, (4) Thay đổi lông mi (dài, đậm, đổi màu) - phổ biến, (5) Nguy cơ phù hoàng điểm ở bệnh nhân có tiền sử.",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - mục tiêu: <21 mmHg",
@@ -212,7 +212,7 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc an thần, thuốc ngủ: tăng nguy cơ buồn ngủ, mệt mỏi",
                 "Thuốc ức chế hệ thần kinh trung ương: tăng nguy cơ ức chế hệ thần kinh trung ương"
             ],
-            "pregnancy": "B - An toàn",
+        "pregnancy": "B - An toàn",
             "mechanism_of_action": "Brimonidine là alpha-2 adrenergic receptor agonist. Kích thích alpha-2 receptors trong cơ thể mi (ciliary body) và màng bồ đào (uvea), dẫn đến: (1) Giảm sản xuất thủy dịch (ức chế cơ thể mi), (2) Tăng dẫn lưu thủy dịch qua đường uveoscleral (tăng outflow), (3) Giảm nhãn áp. Brimonidine cũng có tác dụng bảo vệ thần kinh (neuroprotective) - bảo vệ tế bào hạch võng mạc. ĐẶC ĐIỂM: (1) Giảm nhãn áp 20-27%, (2) Dùng 2-3 lần/ngày, (3) Có thể hấp thu toàn thân và gây buồn ngủ, mệt mỏi, (4) CHỐNG CHỈ ĐỊNH ở trẻ em <2 tuổi (nguy cơ ức chế hệ thần kinh trung ương nặng), (5) Dị ứng mắt phổ biến sau vài tháng sử dụng, (6) CHỐNG CHỈ ĐỊNH với MAO inhibitors, (7) Tác dụng bảo vệ thần kinh (neuroprotective).",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - mục tiêu: <21 mmHg",
@@ -404,7 +404,7 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Acetazolamide (carbonic anhydrase inhibitor đường uống): tăng nguy cơ toan chuyển hóa",
                 "Dorzolamide (carbonic anhydrase inhibitor tại chỗ): tăng nguy cơ toan chuyển hóa"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Brinzolamide là carbonic anhydrase inhibitor tại chỗ. Ức chế enzyme carbonic anhydrase trong cơ thể mi (ciliary body), ngăn chặn chuyển đổi CO2 và H2O thành HCO3- và H+, dẫn đến giảm sản xuất thủy dịch và giảm nhãn áp. Brinzolamide ức chế cả carbonic anhydrase II (trong cơ thể mi) và carbonic anhydrase IV (trong màng tế bào). ĐẶC ĐIỂM: (1) Giảm sản xuất thủy dịch (giảm nhãn áp 15-20%), (2) Dùng 3 lần/ngày, (3) Có thể dùng kết hợp với thuốc khác, (4) Nguy cơ toan chuyển hóa nếu dùng với carbonic anhydrase inhibitor đường uống (acetazolamide), (5) Vị đắng trong miệng do hấp thu toàn thân - phổ biến, (6) CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30).",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - mục tiêu: <21 mmHg",
@@ -585,7 +585,7 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Acetazolamide (carbonic anhydrase inhibitor đường uống): tăng nguy cơ toan chuyển hóa",
                 "Brinzolamide (carbonic anhydrase inhibitor tại chỗ): tăng nguy cơ toan chuyển hóa"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Dorzolamide là carbonic anhydrase inhibitor tại chỗ. Ức chế enzyme carbonic anhydrase trong cơ thể mi (ciliary body), ngăn chặn chuyển đổi CO2 và H2O thành HCO3- và H+, dẫn đến giảm sản xuất thủy dịch và giảm nhãn áp. Dorzolamide ức chế carbonic anhydrase II (trong cơ thể mi). Tương tự brinzolamide nhưng có thể gây kích ứng mắt nhiều hơn. ĐẶC ĐIỂM: (1) Giảm sản xuất thủy dịch (giảm nhãn áp 15-20%), (2) Dùng 3 lần/ngày, (3) Có thể dùng kết hợp với thuốc khác, (4) Nguy cơ toan chuyển hóa nếu dùng với carbonic anhydrase inhibitor đường uống (acetazolamide), (5) Vị đắng trong miệng do hấp thu toàn thân - phổ biến, (6) CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30), (7) Kích ứng mắt phổ biến hơn brinzolamide.",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - mục tiêu: <21 mmHg",
@@ -763,7 +763,7 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Latanoprost là prostaglandin F2-alpha (PGF2α) analog. Gắn với thụ thể prostaglandin F trên cơ trơn mống mắt và cơ thể mi, dẫn đến: (1) Tăng dẫn lưu thủy dịch qua đường uveoscleral (tăng outflow), (2) Giảm sản xuất thủy dịch (nhẹ), (3) Giảm nhãn áp. Latanoprost là thuốc first-line cho tăng nhãn áp, tác dụng mạnh (giảm nhãn áp 25-35%), dùng 1 lần/ngày. ĐẶC ĐIỂM: (1) Tác dụng mạnh, giảm nhãn áp 25-35%, (2) Dùng 1 lần/ngày (buổi tối), (3) Thay đổi màu mắt (tăng sắc tố mống mắt) - vĩnh viễn, phổ biến, (4) Thay đổi lông mi (dài, đậm, đổi màu) - phổ biến, (5) Nguy cơ phù hoàng điểm ở bệnh nhân có tiền sử (viêm màng bồ đào, đái tháo đường, phẫu thuật mắt).",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - mục tiêu: <21 mmHg",
@@ -929,7 +929,7 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Anticholinergic đường uống: đối kháng tác dụng của pilocarpine",
                 "Beta-blocker: có thể tăng hiệu quả giảm nhãn áp"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Pilocarpine là cholinergic (muscarinic receptor agonist). Kích hoạt muscarinic receptors trên cơ vòng mống mắt (sphincter pupillae) và cơ thể mi (ciliary muscle), dẫn đến: (1) Co đồng tử (miosis) - cơ vòng mống mắt co, (2) Co cơ thể mi - tăng dẫn lưu thủy dịch qua trabecular meshwork, giảm nhãn áp. Dẫn đến: co đồng tử và giảm nhãn áp. Pilocarpine tác dụng nhanh (10-30 phút), kéo dài 4-8 giờ. ĐẶC ĐIỂM: (1) Cholinergic, co đồng tử và giảm nhãn áp, (2) Tác dụng nhanh (10-30 phút), kéo dài 4-8 giờ, (3) Dùng thường xuyên trong tăng nhãn áp cấp tính, (4) Nhìn mờ do co đồng tử - phổ biến, kéo dài 4-8 giờ, (5) Có thể hấp thu toàn thân và gây tác dụng phụ (buồn nôn, nôn, co thắt phế quản, nhịp chậm).",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - QUAN TRỌNG: kiểm tra trước và sau khi dùng",
@@ -1134,7 +1134,7 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Calcium channel blockers (verapamil, diltiazem): tăng nguy cơ block AV, nhịp chậm",
                 "Digoxin: tăng nguy cơ block AV, nhịp chậm"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Timolol là non-selective beta-blocker (ức chế cả beta-1 và beta-2 receptors). Khi dùng tại mắt, timolol ức chế beta-2 receptors trên cơ thể mi (ciliary body), giảm sản xuất thủy dịch (aqueous humor production), dẫn đến giảm nhãn áp. Timolol là thuốc first-line cho tăng nhãn áp, tác dụng mạnh (giảm nhãn áp 20-30%), dùng 1-2 lần/ngày. ĐẶC ĐIỂM: (1) Giảm sản xuất thủy dịch (giảm nhãn áp 20-30%), (2) Dùng 1-2 lần/ngày (gel: 1 lần/ngày), (3) Có thể hấp thu toàn thân và gây tác dụng phụ hệ thống (nhịp chậm, block AV, co thắt phế quản, suy tim), (4) CHỐNG CHỈ ĐỊNH ở bệnh nhân hen/COPD nặng, block AV, suy tim nặng, (5) Non-selective beta-blocker (ức chế cả beta-1 và beta-2).",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - mục tiêu: <21 mmHg",
@@ -1352,7 +1352,7 @@ ANTI_GLAUCOMA_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Travoprost là prostaglandin analog. Gắn với thụ thể prostaglandin F trên cơ trơn mống mắt và cơ thể mi, dẫn đến: (1) Tăng dẫn lưu thủy dịch qua đường uveoscleral (tăng outflow), (2) Giảm sản xuất thủy dịch (nhẹ), (3) Giảm nhãn áp. Travoprost tương tự latanoprost và bimatoprost, tác dụng mạnh (giảm nhãn áp 25-35%), dùng 1 lần/ngày. ĐẶC ĐIỂM: (1) Tác dụng mạnh, giảm nhãn áp 25-35%, (2) Dùng 1 lần/ngày (buổi tối), (3) Thay đổi màu mắt (tăng sắc tố mống mắt) - vĩnh viễn, phổ biến, (4) Thay đổi lông mi (dài, đậm, đổi màu) - phổ biến, (5) Nguy cơ phù hoàng điểm ở bệnh nhân có tiền sử.",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - mục tiêu: <21 mmHg",

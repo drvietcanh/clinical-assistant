@@ -94,7 +94,7 @@ def _render_calculator_by_specialty(specialty: str, selected_score_id: str):
         neurology.render_neurology_calculator(selected_score_id)
 
     # GI/Hepatology
-    elif "Tiêu Hóa" in specialty or "Gan" in specialty:
+    elif "Tiêu hóa" in specialty or "Gan" in specialty:
         gi.render_gi_calculator(selected_score_id)
 
     # Metabolism/Endocrinology
@@ -122,7 +122,7 @@ def _render_calculator_by_specialty(specialty: str, selected_score_id: str):
         oncology.render_oncology_calculator(selected_score_id)
 
     # Surgery
-    elif "Phẫu Thuật" in specialty or "Gây Mê" in specialty:
+    elif "Phẫu Thuật" in specialty or "Gây mê" in specialty:
         surgery.render_surgery_calculator(selected_score_id)
 
     # Pediatrics
@@ -146,7 +146,7 @@ def _render_calculator_by_specialty(specialty: str, selected_score_id: str):
         dermatology.render_dermatology_calculator(selected_score_id)
 
     # Rheumatology
-    elif "Thấp Khớp" in specialty or "Miễn Dịch" in specialty:
+    elif "Thấp Khớp" in specialty or "Miễn dịch" in specialty:
         rheumatology.render_rheumatology_calculator(selected_score_id)
 
     # Ophthalmology

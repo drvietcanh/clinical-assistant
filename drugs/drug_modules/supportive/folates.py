@@ -60,8 +60,7 @@ FOLATES_DRUGS = {
             'An toàn trong thai kỳ và cho con bú',
             'Hiếm khi có tác dụng phụ',
             'Thận trọng ở bệnh nhân ung thư (folic acid có thể kích thích tế bào ung thư)'
-        ],
-        'onset': 'Vài ngày đến vài tuần (tác dụng tích tụ)',
+        ],onset': 'Vài ngày đến vài tuần (tác dụng tích tụ)',
         'duration': 'Phụ thuộc vào dự trữ trong cơ thể',
         'protein_binding': 'Không đáng kể',
         'clearance': 'Thận (thải trừ qua nước tiểu), một phần dự trữ trong gan',
@@ -72,12 +71,11 @@ FOLATES_DRUGS = {
                 'Dị ứng folic acid',
                 'Ung thư đang điều trị bằng methotrexate (trừ khi dùng để điều trị độc tính methotrexate)'
             ],
-            'tương_đối': [
+        'tương_đối': [
                 'Ung thư (không điều trị) - folic acid có thể kích thích tế bào ung thư',
                 'Thiếu B12 chưa được điều trị - folic acid có thể che dấu thiếu B12'
             ]
-        },
-        'drug_interactions': {
+        },drug_interactions': {
             'major': [
                 {
                     'drug': 'Methotrexate',
@@ -86,7 +84,7 @@ FOLATES_DRUGS = {
                     'management': 'KHÔNG dùng folic acid cùng lúc với methotrexate trong điều trị ung thư/viêm khớp. Chỉ dùng folic acid để điều trị độc tính methotrexate, và phải dùng 24 giờ sau methotrexate.'
                 }
             ],
-            'moderate': [
+        'moderate': [
                 {
                     'drug': 'Phenytoin',
                     'mechanism': 'Folic acid có thể giảm nồng độ phenytoin trong máu.',
@@ -100,7 +98,7 @@ FOLATES_DRUGS = {
                     'management': 'Bổ sung folic acid khi dùng sulfasalazine lâu dài. Theo dõi nồng độ folate.'
                 }
             ],
-            'minor': [
+        'minor': [
                 {
                     'drug': 'Chloramphenicol',
                     'mechanism': 'Chloramphenicol có thể giảm đáp ứng với folic acid trong điều trị thiếu máu.',
@@ -136,30 +134,30 @@ FOLATES_DRUGS = {
                 'Phản ứng dị ứng (hiếm): phát ban, ngứa',
                 'Che dấu thiếu B12 (với liều cao >1mg/ngày) - cải thiện thiếu máu nhưng không cải thiện tổn thương thần kinh'
             ],
-            'treatment': [
+        'treatment': [
                 'Ngừng folic acid nếu có phản ứng dị ứng',
                 'Điều trị phản ứng dị ứng: antihistamine nếu cần',
                 'Kiểm tra B12 nếu nghi ngờ che dấu thiếu B12',
                 'Theo dõi dấu hiệu sinh tồn'
             ],
-            'monitoring': 'Dấu hiệu phản ứng dị ứng, nồng độ B12 nếu nghi ngờ che dấu thiếu B12'
+        'monitoring': 'Dấu hiệu phản ứng dị ứng, nồng độ B12 nếu nghi ngờ che dấu thiếu B12'
         },
         'reversal_agents': {
             'available': False,
             'agents': [],
-            'notes': 'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng.'
+        'notes': 'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng.'
         },
         'administration_instructions': {
             'oral': {
                 'with_food': 'Có thể uống với hoặc không thức ăn. Hấp thu tốt trong cả hai trường hợp.',
                 'timing': 'Uống 1 lần/ngày, bất kỳ lúc nào trong ngày. Uống cùng thời điểm mỗi ngày để dễ nhớ. Với methotrexate: dùng 24 giờ sau methotrexate (không dùng cùng lúc).'
             },
-            'iv': {
+        'iv': {
                 'reconstitution': 'Folic acid chủ yếu dùng đường uống. IV chỉ dùng trong trường hợp đặc biệt.',
                 'infusion_rate': 'N/A - chủ yếu dùng đường uống',
                 'compatibility': ['N/A'],
-                'incompatibility': ['N/A'],
-                'notes': 'Folic acid chủ yếu dùng đường uống. IV chỉ dùng trong trường hợp đặc biệt.'
+        'incompatibility': ['N/A'],
+        'notes': 'Folic acid chủ yếu dùng đường uống. IV chỉ dùng trong trường hợp đặc biệt.'
             }
         },
         'references': {
@@ -170,14 +168,14 @@ FOLATES_DRUGS = {
                 'UpToDate - Folic acid deficiency',
                 "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
             ],
-            'evidence_level': 'A - Dựa trên FDA drug labels, CDC/ACOG guidelines, và dữ liệu lâm sàng'
+        'evidence_level': 'A - Dựa trên FDA drug labels, CDC/ACOG guidelines, và dữ liệu lâm sàng'
         },
         'risk_flags': {
             'high_alert': False,
             'narrow_therapeutic_index': False,
             'bleeding_risk': False,
             'organ_toxicity': ['May mask vitamin B12 deficiency (high doses >1mg/day)'],
-            'qt_prolongation': False,
+        'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': [
@@ -186,8 +184,7 @@ FOLATES_DRUGS = {
                 'Folate levels (if needed)',
                 'Clinical response'
             ]
-        },
-        'guideline_tags': [
+        },guideline_tags': [
             'CDC Guidelines - Folic Acid for Prevention of Neural Tube Defects',
             'ACOG Guidelines - Folic Acid Supplementation',
             'WHO Guidelines - Folic Acid Supplementation',

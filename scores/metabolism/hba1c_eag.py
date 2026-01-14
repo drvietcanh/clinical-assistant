@@ -128,7 +128,7 @@ def render():
         render_suggestions(
             calculator_id="hba1c_eag",
             calculator_name="HbA1c - eAG Converter",
-            category="Chuyển Hóa",
+            category="Chuyển hóa",
             show_related=True,
             show_category=True,
             limit=3

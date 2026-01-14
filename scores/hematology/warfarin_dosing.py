@@ -203,7 +203,7 @@ def render():
             help="INR hiện tại của bệnh nhân"
         )
         
-        st.markdown("### 🎯 INR Mục Tiêu")
+        st.markdown("### 🎯 INR Mục tiêu")
         
         indication = st.selectbox(
             "Chỉ định dùng warfarin",
@@ -376,7 +376,7 @@ def render():
                 st.error(f"🚨 **{result['action']}** - {result['adjustment_reason']}")
             
             # Detailed breakdown
-            with st.expander("📋 Chi tiết Điều Chỉnh Liều", expanded=True):
+            with st.expander("📋 Chi tiết Điều chỉnh Liều", expanded=True):
                 st.markdown(f"""
                 **Lý do điều chỉnh:** {result['adjustment_reason']}
                 
@@ -388,7 +388,7 @@ def render():
                 """)
             
             # Clinical guidance
-            st.markdown("### 💡 Hướng Dẫn Lâm Sàng")
+            st.markdown("### 💡 Hướng dẫn Lâm Sàng")
             
             if result['inr_status'] == "subtherapeutic":
                 st.info("""
@@ -452,7 +452,7 @@ def render():
         - Điều chỉnh liều từng bước
         - Kiểm tra INR thường xuyên
         
-        **INR Mục Tiêu:**
+        **INR Mục tiêu:**
         - Rung nhĩ: 2.0-3.0
         - Van cơ học: 2.5-3.5
         - DVT/PE: 2.0-3.0

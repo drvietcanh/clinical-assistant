@@ -1,0 +1,2840 @@
+{
+  "total_checked": 714,
+  "format_errors_found": [
+    {
+      "drug": "Enalapril",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Lisinopril",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Losartan",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Telmisartan",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Simvastatin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Pravastatin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Diltiazem",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Verapamil",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Aspirin",
+      "errors": [
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Insulin",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Empagliflozin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Dapagliflozin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Canagliflozin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Liraglutide",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Semaglutide",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Dulaglutide",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Exenatide",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Ranitidine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Omeprazole",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Esomeprazole",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Lansoprazole",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Sulfasalazine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Hydrocodone",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Rizatriptan",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Sumatriptan",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Ipratropium",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Budesonide inhaled",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Fluticasone/Salmeterol inhaler",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Fluticasone/Umeclidinium/Vilanterol inhaler",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Zolmitriptan",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Cetirizine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Desloratadine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Fexofenadine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Levocetirizine",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Loratadine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Chlorpheniramine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Diphenhydramine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Etomidate",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Ketamine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Propofol",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Cisatracurium",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Rocuronium",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Succinylcholine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Doxycycline",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Minocycline",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Tetracycline",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Hydroxychloroquine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Levothyroxine",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Methimazole",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Propylthiouracil",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Prednisone",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Alendronate",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Desmopressin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Tamoxifen",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Anastrozole",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Imatinib",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Erlotinib",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Atropine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Flumazenil",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Epinephrine",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Lidocaine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Carboprost",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Dinoprostone",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Methylergonovine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Allopurinol",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Colchicine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Febuxostat",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Leflunomide",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Methotrexate",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Bupivacaine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Levobupivacaine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Acetylcysteine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Pralidoxime",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Vitamin K1",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Ethanol",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Zoledronic Acid",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Sirolimus",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Everolimus",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    }
+  ],
+  "fixed": [],
+  "needs_manual_review": [
+    {
+      "drug": "Enalapril",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Lisinopril",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Losartan",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Telmisartan",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Simvastatin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Pravastatin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Diltiazem",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Verapamil",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Aspirin",
+      "errors": [
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Insulin",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Empagliflozin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Dapagliflozin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Canagliflozin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Liraglutide",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Semaglutide",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Dulaglutide",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Exenatide",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Ranitidine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Omeprazole",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Esomeprazole",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Lansoprazole",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Sulfasalazine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Hydrocodone",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Rizatriptan",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Sumatriptan",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Ipratropium",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Budesonide inhaled",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Fluticasone/Salmeterol inhaler",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Fluticasone/Umeclidinium/Vilanterol inhaler",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Zolmitriptan",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Cetirizine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Desloratadine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Fexofenadine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Levocetirizine",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Loratadine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Chlorpheniramine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Diphenhydramine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Etomidate",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Ketamine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Propofol",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Cisatracurium",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Rocuronium",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Succinylcholine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Doxycycline",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Minocycline",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Tetracycline",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Hydroxychloroquine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Levothyroxine",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Methimazole",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Propylthiouracil",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Prednisone",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Alendronate",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Desmopressin",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Tamoxifen",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Anastrozole",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Imatinib",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Erlotinib",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Atropine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Flumazenil",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Epinephrine",
+      "errors": [
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Lidocaine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Carboprost",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Dinoprostone",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Methylergonovine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Allopurinol",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Colchicine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Febuxostat",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Leflunomide",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Methotrexate",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Bupivacaine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Levobupivacaine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Acetylcysteine",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Pralidoxime",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Vitamin K1",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Ethanol",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Zoledronic Acid",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Sirolimus",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    },
+    {
+      "drug": "Everolimus",
+      "errors": [
+        {
+          "field": "administration_instructions",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "pregnancy_lactation",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "overdose_management",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        },
+        {
+          "field": "hepatic_adjustment",
+          "current_type": "str",
+          "expected_type": "dict",
+          "value": "Đang cập nhật"
+        }
+      ]
+    }
+  ]
+}

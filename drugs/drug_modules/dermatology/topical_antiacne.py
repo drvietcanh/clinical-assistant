@@ -35,7 +35,7 @@ TOPICAL_ANTIACNE_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Ít tương tác thuốc"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Azelaic acid có nhiều tác dụng: (1) Ức chế Propionibacterium acnes (vi khuẩn gây mụn trứng cá), (2) Ức chế tyrosinase (enzyme tạo melanin) → làm sáng da, giảm melasma, (3) Chống viêm, (4) Ức chế tăng sinh tế bào sừng. Được dùng cho mụn trứng cá, rosacea, và melasma. Đặc điểm: kích ứng da nhẹ hơn retinoid, an toàn cho da nhạy cảm, có thể dùng khi mang thai (category B).",
             "monitoring": [
                 "Đáp ứng điều trị (giảm mụn trứng cá, rosacea, melasma)",
@@ -166,7 +166,7 @@ TOPICAL_ANTIACNE_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Các sản phẩm làm khô da: tăng kích ứng da"
             ],
-            "pregnancy": "B - An toàn",
+        "pregnancy": "B - An toàn",
             "mechanism_of_action": "Azelaic acid là dicarboxylic acid, có tác dụng: (1) Kháng khuẩn - ức chế Propionibacterium acnes và Staphylococcus epidermidis, (2) Chống viêm - ức chế sản xuất reactive oxygen species, (3) Tẩy tế bào chết - làm bong lớp sừng, giảm bít tắc nang lông, (4) Giảm tăng sắc tố - ức chế tyrosinase. Dẫn đến: giảm mụn trứng cá, giảm rosacea, giảm tăng sắc tố da. ĐẶC ĐIỂM: (1) Kháng khuẩn và chống viêm, (2) Dùng 2 lần/ngày, (3) Kích ứng da phổ biến trong vài tuần đầu, (4) An toàn trong thai kỳ (category B), (5) Phù hợp cho mụn trứng cá và rosacea.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm mụn, giảm rosacea) - cải thiện sau 4-8 tuần",
@@ -309,7 +309,7 @@ TOPICAL_ANTIACNE_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Tretinoin: tăng kích ứng da nếu dùng cùng lúc",
                 "Các sản phẩm làm khô da: tăng kích ứng da"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Benzoyl peroxide là thuốc kháng khuẩn và tẩy tế bào chết. Tác dụng: (1) Kháng khuẩn - tiêu diệt Propionibacterium acnes (vi khuẩn gây mụn), (2) Tẩy tế bào chết - làm bong lớp sừng, giảm bít tắc nang lông, (3) Giảm viêm. Dẫn đến: giảm mụn trứng cá. ĐẶC ĐIỂM: (1) Kháng khuẩn và tẩy tế bào chết, (2) Bắt đầu với nồng độ thấp (2.5-5%), tăng dần nếu cần, (3) Khô da và kích ứng da phổ biến, (4) Làm bạc màu vải, tóc - phổ biến, (5) Có thể dùng kết hợp với tretinoin (dùng cách nhau ít nhất 1 giờ).",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm mụn) - cải thiện sau 4-8 tuần",

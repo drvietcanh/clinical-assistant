@@ -170,7 +170,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Đánh giá Thần Kinh")
+        st.markdown("### 📋 Đánh giá Thần kinh")
         
         shared_inputs = st.session_state.get('shared_inputs', {})
         
@@ -349,7 +349,7 @@ def render():
                 st.markdown(f"{i}. {rec}")
             
             # Clinical guidance
-            st.markdown("### 📋 Hướng Dẫn Lâm Sàng")
+            st.markdown("### 📋 Hướng dẫn Lâm Sàng")
             
             if result['severity_level'] == "Severe":
                 st.error("""

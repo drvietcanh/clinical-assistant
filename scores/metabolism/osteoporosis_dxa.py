@@ -81,7 +81,7 @@ def render():
         render_suggestions(
             calculator_id="osteoporosis_dxa",
             calculator_name="Đo loãng xương (DXA)",
-            category="Nội Tiết",
+            category="Nội tiết",
             show_related=True,
             show_category=True,
             limit=3,

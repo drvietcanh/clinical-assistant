@@ -571,8 +571,8 @@ VITAMINS_DRUGS = {
             "Thiazide: tăng nguy cơ tăng calci máu khi dùng kèm vitamin D liều cao và calcium",
             "Digitalis (digoxin): tăng nguy cơ loạn nhịp nếu tăng calci máu",
         ],
-        "pregnancy": "A/B – thường an toàn ở liều sinh lý (400–2000 IU/ngày)",
-        "mechanism_of_action": (
+        "pregnancy": "A - Không có nguy cơ trong các nghiên cứu có đối chứng",
+        '"mechanism_of_action": (
             "Vitamin D3 được chuyển hóa ở gan thành 25-hydroxyvitamin D [25(OH)D], sau đó ở thận thành dạng hoạt động "
             "1,25-dihydroxyvitamin D [1,25(OH)2D]. Dạng hoạt động tăng hấp thu calci và phospho tại ruột, "
             "tăng tái hấp thu calci tại thận và điều hòa chuyển hóa xương, giúp duy trì nồng độ calci, phospho và sức khỏe xương."
@@ -760,7 +760,7 @@ VITAMINS_DRUGS = {
                     'management': 'CHỐNG CHỈ ĐỊNH dùng với warfarin. Nếu cần dùng, theo dõi INR chặt chẽ và giảm liều warfarin.'
                 }
             ],
-            'moderate': [
+        'moderate': [
                 {
                     'drug': 'Aspirin, NSAIDs, Clopidogrel',
                     'mechanism': 'Cả hai đều ảnh hưởng đến đông máu',
@@ -768,14 +768,14 @@ VITAMINS_DRUGS = {
                     'management': 'Thận trọng. Theo dõi dấu hiệu chảy máu.'
                 }
             ],
-            'minor': []
+        'minor': []
         },
         'contraindications': {
             'tuyệt_đối': [
                 'Dị ứng vitamin E',
                 'Đang dùng warfarin - CHỐNG CHỈ ĐỊNH'
             ],
-            'tương_đối': [
+        'tương_đối': [
                 'Đang dùng aspirin, NSAIDs, clopidogrel - thận trọng (tăng nguy cơ chảy máu)',
                 'Bệnh nhân có nguy cơ chảy máu - thận trọng',
                 'Liều cao >400 IU/ngày - tăng nguy cơ đột quỵ xuất huyết'
@@ -804,14 +804,14 @@ VITAMINS_DRUGS = {
                 'Mệt mỏi',
                 'Tăng nguy cơ đột quỵ xuất huyết'
             ],
-            'antidote': 'Không có antidote đặc hiệu',
+        'antidote': 'Không có antidote đặc hiệu',
             'treatment': [
                 'Ngừng thuốc nếu có triệu chứng chảy máu',
                 'Điều trị chảy máu nếu có (vitamin K, FFP nếu cần)',
                 'Theo dõi INR nếu dùng với warfarin',
                 'Điều trị hỗ trợ: truyền dịch nếu cần'
             ],
-            'monitoring': 'Dấu hiệu chảy máu, INR, huyết áp, dấu hiệu đột quỵ'
+        'monitoring': 'Dấu hiệu chảy máu, INR, huyết áp, dấu hiệu đột quỵ'
         },
         'reversal_agents': {
             'available': False,
@@ -846,12 +846,12 @@ VITAMINS_DRUGS = {
                 'with_food': 'NÊN dùng với thức ăn có chất béo để tăng hấp thu. Vitamin E tan trong chất béo, hấp thu tốt hơn khi có chất béo.',
                 'timing': 'Dùng 1 lần/ngày với thức ăn. Tránh dùng liều cao >400 IU/ngày.'
             },
-            'iv': {
+        'iv': {
                 'reconstitution': 'Không có dạng IV thường dùng',
                 'infusion_rate': 'N/A',
                 'compatibility': [],
-                'incompatibility': [],
-                'notes': 'Vitamin E chủ yếu dùng đường uống.'
+        'incompatibility': [],
+        'notes': 'Vitamin E chủ yếu dùng đường uống.'
             }
         },
         'references': {
@@ -860,7 +860,7 @@ VITAMINS_DRUGS = {
                 'UpToDate - Vitamin E drug information',
                 'WHO Guidelines for vitamin E supplementation'
             ],
-            'last_updated': '2025-02-05',
+        'last_updated': '2025-02-05',
             'evidence_level': 'High - Guidelines dựa trên chứng cứ từ WHO và FDA'
         },
         "black_box_warnings": None,

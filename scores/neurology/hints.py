@@ -166,7 +166,7 @@ def render():
         render_suggestions(
             calculator_id="hints",
             calculator_name="HINTS Exam",
-            category="Thần Kinh",
+            category="Thần kinh",
             show_related=True,
             show_category=True,
             limit=3

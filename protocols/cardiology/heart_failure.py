@@ -381,7 +381,7 @@ def render():
     
     with col_mon2:
         st.info("""
-        **Tiêu Chuẩn Xuất Viện:**
+        **Tiêu chuẩn Xuất Viện:**
         - ✅ Euvolemic (không tắc nghẽn)
         - ✅ Huyết động ổn định
         - ✅ Không cần IV meds ≥24h

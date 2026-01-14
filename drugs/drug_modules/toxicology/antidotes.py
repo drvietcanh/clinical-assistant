@@ -45,7 +45,7 @@ ANTIDOTES = {
             "Dấu hiệu phản vệ"
     ],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
         "precautions": [],
         "pharmacokinetics": {
         },
@@ -228,7 +228,7 @@ ANTIDOTES = {
         "side_effects": [],
         "contraindications": [],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ",
         "precautions": [],
         "pharmacokinetics": {
         },
@@ -320,7 +320,7 @@ ANTIDOTES = {
     ],
         "contraindications": [],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. An toàn khi sử dụng đúng chỉ định",
         "mechanism_of_action": "",
         "precautions": [],
         "pharmacokinetics": {

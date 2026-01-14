@@ -39,7 +39,7 @@ FLUIDS_DRUGS = {
         ],
         "side_effects": [],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. An toàn khi sử dụng đúng chỉ định",
         "mechanism_of_action": "",
         "precautions": [],
         "pharmacokinetics": {
@@ -152,7 +152,7 @@ FLUIDS_DRUGS = {
         ],
         "side_effects": [],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. An toàn khi sử dụng đúng chỉ định",
         "mechanism_of_action": "",
         "precautions": [],
         "pharmacokinetics": {
@@ -267,7 +267,7 @@ FLUIDS_DRUGS = {
         ],
         "storage": "Nhiệt độ phòng (thường <30 độ C).",
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. An toàn khi sử dụng đúng chỉ định",
         "mechanism_of_action": "",
         "monitoring": [],
         "precautions": [],
@@ -382,7 +382,7 @@ FLUIDS_DRUGS = {
         ],
         "side_effects": [],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ",
         "mechanism_of_action": "",
         "precautions": [],
         "pharmacokinetics": {

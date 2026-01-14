@@ -42,7 +42,7 @@ NON_SELECTIVE_BETA_BLOCKERS = {
           "Insulin: che dấu triệu chứng hạ đường huyết",
           "CYP2D6 inhibitors: tăng nồng độ carvedilol"
       ],
-      "pregnancy": "C",
+        "pregnancy": "C",
       "risk_flags": {
           "high_alert": False,
           "narrow_therapeutic_index": False,
@@ -494,7 +494,7 @@ NON_SELECTIVE_BETA_BLOCKERS = {
               "Verapamil: tăng nguy cơ block nhĩ thất",
               "Insulin: che dấu triệu chứng hạ đường huyết"
           ],
-          "pregnancy": "C",
+        "pregnancy": "C",
           "mechanism_of_action": "Non-selective beta-adrenergic receptor blocker (beta1 và beta2). Ức chế tác dụng của catecholamines (epinephrine, norepinephrine), giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp, giảm nhu cầu oxy cơ tim. Ức chế renin-angiotensin system. Có tác dụng chống loạn nhịp (class II antiarrhythmic).",
           "monitoring": [
               "Nhịp tim và huyết áp (trước và sau khi bắt đầu)",

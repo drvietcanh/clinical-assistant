@@ -49,7 +49,7 @@ def render_homepage_doctor():
             if st.button("🧮 Tính CrCl", use_container_width=True):
                 st.switch_page("pages/01_📊_Scores.py")
         with col2:
-            if st.button("💊 Kháng Sinh", use_container_width=True):
+            if st.button("💊 Kháng sinh", use_container_width=True):
                 st.switch_page("pages/02_💊_Antibiotics.py")
         with col3:
             if st.button("⚠️ Tương tác", use_container_width=True):

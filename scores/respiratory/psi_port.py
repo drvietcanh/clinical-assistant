@@ -363,7 +363,7 @@ def render():
         render_suggestions(
             calculator_id="psi_port",
             calculator_name="PSI/PORT Score",
-            category="Hô Hấp",
+            category="Hô hấp",
             show_related=True,
             show_category=True,
             limit=3

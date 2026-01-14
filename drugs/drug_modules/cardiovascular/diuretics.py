@@ -810,7 +810,7 @@ DIURETICS = {
               "Lithium: tăng nồng độ lithium",
               "NSAID: giảm hiệu quả"
           ],
-          "pregnancy": "C",
+        "pregnancy": "C",
           "mechanism_of_action": "Thiazide diuretic. Ức chế Na+/Cl- cotransporter ở đoạn xa của ống thận (distal convoluted tubule), tăng bài tiết Na+, Cl-, và nước, gây lợi tiểu. Giảm thể tích máu và giảm huyết áp. Tăng bài tiết K+, Mg2+, nhưng giữ lại Ca2+ (khác với loop diuretics).",
           "monitoring": [
               "Kali máu (mỗi 1-3 tháng, đặc biệt khi bắt đầu) - HCTZ gây hạ kali máu",
@@ -1218,7 +1218,7 @@ DIURETICS = {
         "Kali bổ sung: tăng kali máu",
         "Digoxin: tăng nồng độ digoxin"
     ],
-    "pregnancy": "D",
+        "pregnancy": "D",
     "risk_flags": {
         "high_alert": False,
         "narrow_therapeutic_index": False,

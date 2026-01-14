@@ -27,7 +27,7 @@ def render():
     st.markdown("---")
 
     # ========== SECTION 1: ĐÁNH GIÁ TOAN – KHOẢNG TRỐNG ========== #
-    st.markdown("### 📊 Đánh giá Toan Chuyển Hóa")
+    st.markdown("### 📊 Đánh giá Toan Chuyển hóa")
 
     na = st.number_input("Na (mEq/L)", min_value=100.0, max_value=180.0, value=140.0, step=0.5)
     cl = st.number_input("Cl (mEq/L)", min_value=70.0, max_value=140.0, value=103.0, step=0.5)

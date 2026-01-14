@@ -3,18 +3,22 @@
 # Macrolides
 
 MACROLIDES_DRUGS = {
-    "Azithromycin": {'group': 'Infectious Disease - Macrolide Antibiotic', 'vietnamese_name':
+    "Azithromycin": {'group': 'Infectious Disease - Macrolide Antibiotic',
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
+        ', 'vietnamese_name':
         'Azithromycin, Zithromax', 'administration': ['PO', 'IV'],
         'indications': ['Nhiễm trùng đường hô hấp trên (viêm họng, viêm xoang)',
         'Nhiễm trùng đường hô hấp dưới (viêm phổi, viêm phế quản)',
         'Nhiễm trùng da và mô mềm', 'Chlamydia',
-        'Nhiễm trùng đường tiết niệu không biến chứng'], 'contraindications': [
+        'Nhiễm trùng đường tiết niệu không biến chứng'],
+        'contraindications': [
         'Dị ứng azithromycin/macrolide', 'QT kéo dài', 'Rối loạn nhịp tim'],
         'dosage': {'adult_respiratory':
         '500mg x 1 lần/ngày x 3 ngày hoặc 500mg ngày đầu, sau đó 250mg x 1 lần/ngày x 4 ngày'
         , 'adult_chlamydia': '1g x 1 lần (đơn liều)', 'adult_iv':
         '500mg x 1 lần/ngày IV', 'notes':
-        'Tác dụng kéo dài, uống ít lần hơn erythromycin'}, 'renal_adjustment':
+        'Tác dụng kéo dài, uống ít lần hơn erythromycin'},
+        'renal_adjustment':
         {'normal': 'Không đổi', '30_60': 'Không đổi', 'under_30': 'Thận trọng'},
         'side_effects': ['Buồn nôn, nôn, tiêu chảy', 'Đau bụng', 'QT kéo dài',
         'Loạn nhịp tim (torsades de pointes)', 'Rối loạn thính giác (hiếm)'],
@@ -26,25 +30,25 @@ MACROLIDES_DRUGS = {
         'Macrolide antibiotic. Ức chế tổng hợp protein vi khuẩn bằng cách gắn vào 50S ribosomal subunit, ức chế peptide chain elongation. Phổ tác dụng: Gram-positive (Streptococcus, Staphylococcus), một số Gram-negative (Haemophilus influenzae), atypical pathogens (Mycoplasma, Chlamydia, Legionella). Có tác dụng kéo dài do thời gian bán hủy dài (68 giờ), cho phép phác đồ ngắn (3-5 ngày).'
         , 'monitoring': [
         'ECG: QT interval (có thể gây QT kéo dài, đặc biệt ở bệnh nhân có yếu tố nguy cơ)'
-        ,
         'Triệu chứng rối loạn nhịp tim (torsades de pointes - hiếm nhưng nguy hiểm)'
         , 'Chức năng gan: ALT, AST (hiếm gây độc gan)',
         'Triệu chứng tiêu hóa: buồn nôn, nôn, tiêu chảy (phổ biến)',
         'Rối loạn thính giác (hiếm, thường ở liều cao hoặc dùng lâu dài)'],
         'precautions': [
         'Tránh dùng ở bệnh nhân QT kéo dài hoặc có yếu tố nguy cơ (suy tim, hạ kali máu, hạ magie máu, dùng thuốc QT kéo dài khác)'
-        ,
         'Thận trọng khi dùng với warfarin (tăng nguy cơ chảy máu - theo dõi INR)',
         'Thận trọng khi dùng với digoxin (tăng nồng độ digoxin - theo dõi nồng độ)'
         , 'Thận trọng khi dùng với cyclosporine (tăng nồng độ cyclosporine)',
         'Có thể gây tiêu chảy (phổ biến) - có thể dẫn đến C. difficile colitis nếu nặng'
-        , 'Thận trọng ở bệnh nhân suy gan nặng'], 'pharmacokinetics': {
+        , 'Thận trọng ở bệnh nhân suy gan nặng'],
+        'pharmacokinetics': {
         'half_life': '68 giờ (RẤT DÀI - cho phép phác đồ ngắn 3-5 ngày)',
         'onset': '2-3 giờ (PO), 1 giờ (IV)', 'duration':
         '5-7 ngày sau liều cuối (do half-life dài)', 'protein_binding':
         '7-50% (thay đổi theo nồng độ)', 'clearance':
         'Chủ yếu qua phân (không đổi), một phần qua gan. Không phụ thuộc vào chức năng thận (không cần điều chỉnh liều ở suy thận)'
-        }, 'storage':
+        },
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Bảo quản suspension trong tủ lạnh sau khi pha'
         , 'black_box_warnings':
         'Có thể gây QT kéo dài và torsades de pointes, đặc biệt ở bệnh nhân có yếu tố nguy cơ (suy tim, hạ kali máu, hạ magie máu, nhịp tim chậm, dùng thuốc QT kéo dài khác). Tránh dùng ở bệnh nhân QT kéo dài'
@@ -59,7 +63,7 @@ MACROLIDES_DRUGS = {
                  'effect': 'Tăng nồng độ digoxin, tăng độc tính (buồn nôn, nôn, rối loạn nhịp tim, block AV)',
                  'management': 'Theo dõi nồng độ digoxin và dấu hiệu độc tính. Giảm liều digoxin nếu cần. Theo dõi ECG.'}
             ],
-            'moderate': [
+        'moderate': [
                 {'drug': 'Cyclosporine/Tacrolimus',
                  'mechanism': 'Azithromycin có thể ức chế nhẹ CYP3A4, làm giảm chuyển hóa cyclosporine và tacrolimus.',
                  'effect': 'Tăng nồng độ cyclosporine/tacrolimus, tăng độc tính (độc thận, tăng huyết áp, độc thần kinh)',
@@ -69,33 +73,31 @@ MACROLIDES_DRUGS = {
                  'effect': 'Tăng nguy cơ QT kéo dài, torsades de pointes, rối loạn nhịp tim nghiêm trọng',
                  'management': 'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi ECG chặt chẽ. Đảm bảo kali, magie bình thường. Ngừng ngay nếu QT >500ms hoặc có triệu chứng.'}
             ],
-            'minor': [
+        'minor': [
                 {'drug': 'Antacids',
                  'mechanism': 'Antacids có thể giảm nhẹ hấp thu azithromycin.',
                  'effect': 'Giảm nhẹ hấp thu azithromycin',
                  'management': 'Cách 2 giờ nếu có thể. Không ảnh hưởng đáng kể ở liều điều trị thông thường.'}
             ]
-        }, 'contraindications': {'tuyệt_đối': [
+        },
+        'contraindications': {'tuyệt_đối': [
         'Dị ứng azithromycin hoặc các macrolide khác (erythromycin, clarithromycin)'
-        ,
         'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ torsades de pointes'
-        ,
         'Dùng với pimozide, terfenadine, astemizole - tăng nguy cơ loạn nhịp tim nghiêm trọng'
-        ], 'tương_đối': [
+        ],
+        'tương_đối': [
         'Suy tim - tăng nguy cơ QT kéo dài, torsades de pointes',
         'Hạ kali máu, hạ magie máu - tăng nguy cơ QT kéo dài, torsades de pointes',
         'Nhịp tim chậm - tăng nguy cơ QT kéo dài',
         'Dùng với thuốc kéo dài QT khác - tác dụng cộng dồn',
         'Suy gan nặng - thận trọng, có thể giảm chuyển hóa',
         'Suy thận nặng - thận trọng, mặc dù không cần điều chỉnh liều thường quy'
-        ]},
-        'contraindications_detail': {'tuyệt_đối': [
+        ]},contraindications_detail': {'tuyệt_đối': [
         'Dị ứng azithromycin hoặc các macrolide khác (erythromycin, clarithromycin)'
-        ,
         'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ torsades de pointes'
-        ,
         'Dùng với pimozide, terfenadine, astemizole - tăng nguy cơ loạn nhịp tim nghiêm trọng'
-        ], 'tương_đối': [
+        ],
+        'tương_đối': [
         'Suy tim - tăng nguy cơ QT kéo dài, torsades de pointes',
         'Hạ kali máu, hạ magie máu - tăng nguy cơ QT kéo dài, torsades de pointes',
         'Nhịp tim chậm - tăng nguy cơ QT kéo dài',
@@ -109,7 +111,8 @@ MACROLIDES_DRUGS = {
         'Azithromycin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Macrolide là một trong những kháng sinh an toàn nhất khi cho con bú.'
         , 'recommendation':
         'Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh nếu dùng liều cao hoặc kéo dài (tiêu chảy, phát ban).'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều. Azithromycin chuyển hóa một phần qua gan nhưng không đáng kể.'
         , 'moderate':
         'Thận trọng, có thể cần giảm liều nhẹ. Chuyển hóa có thể giảm ở suy gan trung bình, nhưng thải trừ chủ yếu qua phân nên ít ảnh hưởng.'
@@ -117,14 +120,15 @@ MACROLIDES_DRUGS = {
         'Thận trọng, có thể cần giảm liều. Chuyển hóa có thể giảm ở suy gan nặng, nhưng thải trừ chủ yếu qua phân nên ít ảnh hưởng. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần theo dõi chặt chẽ.'
         , 'notes':
         'Azithromycin chuyển hóa một phần qua gan nhưng thải trừ chủ yếu qua phân (không đổi), một phần qua gan. Suy gan có thể giảm chuyển hóa nhẹ nhưng không đáng kể do thải trừ chủ yếu qua phân. Không cần điều chỉnh liều thường quy ở suy gan.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng',
         'Triệu chứng tim mạch: QT kéo dài, torsades de pointes, rối loạn nhịp tim (hiếm nhưng nguy hiểm)'
         , 'Triệu chứng thần kinh: Đau đầu, chóng mặt, mệt mỏi',
         'Triệu chứng thính giác: Giảm thính lực, ù tai (hiếm, thường ở liều cao hoặc dùng lâu dài)'
-        ,
         'Triệu chứng nghiêm trọng: Torsades de pointes, rối loạn nhịp tim nghiêm trọng, mất thính lực'
-        ], 'antidote':
+        ],
+        'antidote':
         'Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.',
         'treatment': ['Ngừng ngay azithromycin',
         'Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)'
@@ -141,24 +145,29 @@ MACROLIDES_DRUGS = {
         'monitoring':
         'Theo dõi dấu hiệu sinh tồn, ECG (QT interval), điện giải (kali, magie), dấu hiệu thính giác trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (QT kéo dài, torsades de pointes, rối loạn thính giác).'
         },
-        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes':
         'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay azithromycin, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn và ECG, điều trị triệu chứng tiêu hóa, điều trị QT kéo dài/torsades de pointes nếu có (magnesium sulfate IV, pacing), điều trị rối loạn thính giác nếu có.'},
         'administration_instructions': {'oral': {
         'with_food':
         'Có thể uống với hoặc không thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày và buồn nôn. Có thể uống không thức ăn nếu cần.'
         , 'timing':
         'Uống 1 lần/ngày (phác đồ 3-5 ngày) hoặc theo chỉ định. Uống đều đặn, cách đều nhau trong ngày. Không bỏ liều. Có thể uống trước hoặc sau bữa ăn.'
-        }, 'iv': {'reconstitution':
+        },
+        'iv': {'reconstitution':
         'Pha theo hướng dẫn nhà sản xuất. Thường pha với nước cất vô trùng hoặc NaCl 0.9%. Lắc kỹ để hòa tan hoàn toàn.'
         , 'infusion_rate':
         'Truyền IV trong 60 phút (không truyền nhanh hơn). Có thể truyền trong 30 phút nếu cần nhưng không khuyến nghị.'
         , 'compatibility': ['NaCl 0.9%', 'D5W (Dextrose 5%)',
-        'Nước cất vô trùng'], 'incompatibility': [
+        'Nước cất vô trùng'],
+        'incompatibility': [
         'Không trộn với các thuốc khác trong cùng một bơm tiêm hoặc chai truyền',
         "Lactated Ringer's (LR) - không tương thích",
-        'Các dung dịch có cation (Al3+, Mg2+) - có thể tạo phức hợp'], 'notes':
+        'Các dung dịch có cation (Al3+, Mg2+) - có thể tạo phức hợp'],
+        'notes':
         'Truyền IV trong 60 phút. Không truyền nhanh hơn. Theo dõi phản ứng tại chỗ tiêm (viêm tĩnh mạch). Dùng ngay sau khi pha. Không bảo quản lâu sau khi pha.'
-        }}, 'pediatric_dosing': {'neonates':
+        }},
+        'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ sơ sinh <6 tháng tuổi (dữ liệu hạn chế). Nếu cần: 10mg/kg/ngày PO x 3 ngày hoặc theo chỉ định bác sĩ.',
         'infants':
         '6 tháng - 2 tuổi: 10mg/kg/ngày PO x 3 ngày (tối đa 500mg/ngày). Hoặc 10mg/kg ngày đầu, sau đó 5mg/kg/ngày x 4 ngày. Có dạng suspension.',
@@ -167,17 +176,21 @@ MACROLIDES_DRUGS = {
         'adolescents':
         '≥12 tuổi: Liều người lớn. 500mg x 1 lần/ngày x 3 ngày hoặc 500mg ngày đầu, sau đó 250mg x 1 lần/ngày x 4 ngày. Chlamydia: 1g x 1 lần (đơn liều).',
         'notes':
-        'Có dạng suspension cho trẻ em. Uống với hoặc không thức ăn. Theo dõi dấu hiệu tiêu chảy, QT kéo dài. An toàn hơn nhiều kháng sinh khác ở trẻ em.'}, 'geriatric_dosing': {'considerations':
+        'Có dạng suspension cho trẻ em. Uống với hoặc không thức ăn. Theo dõi dấu hiệu tiêu chảy, QT kéo dài. An toàn hơn nhiều kháng sinh khác ở trẻ em.'},
+        'geriatric_dosing': {'considerations':
         'Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ (tiêu chảy, QT kéo dài). Suy thận, suy gan phổ biến hơn. Tăng nguy cơ QT kéo dài, torsades de pointes ở bệnh nhân có yếu tố nguy cơ.',
         'dose_adjustment':
         'Không cần điều chỉnh liều ở suy thận (thải trừ chủ yếu qua phân). Thận trọng ở suy gan nặng. Tránh dùng ở bệnh nhân QT kéo dài hoặc có yếu tố nguy cơ.',
         'monitoring':
-        'Theo dõi ECG (QT interval) nếu có yếu tố nguy cơ. Theo dõi dấu hiệu tiêu chảy (có thể dẫn đến C. difficile colitis). Theo dõi dấu hiệu rối loạn nhịp tim. Theo dõi chức năng gan nếu có bệnh gan.'}, 'brand_names': {'vietnam': [
-        'Azithromycin', 'Zithromax', 'Azithromycin Stada', 'Azitromax'], 'common': [
+        'Theo dõi ECG (QT interval) nếu có yếu tố nguy cơ. Theo dõi dấu hiệu tiêu chảy (có thể dẫn đến C. difficile colitis). Theo dõi dấu hiệu rối loạn nhịp tim. Theo dõi chức năng gan nếu có bệnh gan.'},
+        'brand_names': {'vietnam': [
+        'Azithromycin', 'Zithromax', 'Azithromycin Stada', 'Azitromax'],
+        'common': [
         'Zithromax', 'Azithromycin'],
         'range': '10,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Azithromycin generic thường rẻ hơn (10,000-30,000 VND/viên 500mg). Dạng suspension: 80,000-150,000 VND/lọ 15ml (200mg/5ml).'},         'references': {'primary_sources': [
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Azithromycin generic thường rẻ hơn (10,000-30,000 VND/viên 500mg). Dạng suspension: 80,000-150,000 VND/lọ 15ml (200mg/5ml).'},
+        'references': {'primary_sources': [
         'FDA Label: Zithromax (azithromycin)',
         'UpToDate: Azithromycin drug information',
         'Lexicomp: Azithromycin monograph',
@@ -195,8 +208,7 @@ MACROLIDES_DRUGS = {
                 'cardiac': 'High (QT prolongation, torsades de pointes - Black Box Warning, especially with risk factors)',
                 'hepatic': 'Low (hepatotoxicity rare)',
                 'auditory': 'Moderate (hearing loss rare, may be irreversible)'
-            },
-            'qt_prolongation': True,
+            },qt_prolongation': True,
             'hepatotoxicity': True,
             'nephrotoxicity': False,
             'requires_monitoring': [
@@ -208,29 +220,34 @@ MACROLIDES_DRUGS = {
                 'INR (if co-administered with warfarin) - increased bleeding risk',
                 'Digoxin levels (if co-administered) - increased digoxin toxicity',
                 'Cyclosporine/tacrolimus levels (if co-administered) - increased toxicity'
-            ],
-            'look_alike_sound_alike': ['Azithromycin', 'Clarithromycin', 'Erythromycin', 'Aztreonam']
-        },
-        'guideline_tags': [
+            ],look_alike_sound_alike': ['Azithromycin', 'Clarithromycin', 'Erythromycin', 'Aztreonam']
+        },guideline_tags': [
             'FDA Black Box Warning - Azithromycin and QT Prolongation',
             'FDA Black Box Warning - Azithromycin and Torsades de Pointes',
             'IDSA Guidelines - Community-Acquired Pneumonia',
             'CDC Guidelines - Sexually Transmitted Infections',
             'WHO Essential Medicines List'
         ]},
-    "Clarithromycin": {'group': 'Infectious Disease - Macrolide Antibiotic', 'vietnamese_name':
-        'Clarithromycin, Klacid', 'administration': ['PO', 'IV'], 'indications':
+    "Clarithromycin": {'group': 'Infectious Disease - Macrolide Antibiotic',
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Tránh trong thai kỳ nếu có thể",
+        ', 'vietnamese_name':
+        'Clarithromycin, Klacid', 'administration': ['PO', 'IV'],
+        'indications':
         ['Nhiễm trùng đường hô hấp (viêm phổi, viêm phế quản)',
         'Nhiễm trùng da và mô mềm', 'Tiệt trừ H. pylori (kết hợp)',
-        'Mycobacterium avium complex (MAC)'], 'contraindications': [
+        'Mycobacterium avium complex (MAC)'],
+        'contraindications': [
         'Dị ứng clarithromycin/macrolide', 'QT kéo dài',
-        'Dùng pimozide, terfenadine, astemizole'], 'dosage': {
+        'Dùng pimozide, terfenadine, astemizole'],
+        'dosage': {
         'adult_respiratory': '250-500mg x 2 lần/ngày x 7-14 ngày',
         'adult_h_pylori': '500mg x 2 lần/ngày (với amoxicillin + PPI)',
         'adult_mac': '500mg x 2 lần/ngày', 'notes':
-        'Mạnh hơn azithromycin nhưng nhiều tương tác hơn'}, 'renal_adjustment':
+        'Mạnh hơn azithromycin nhưng nhiều tương tác hơn'},
+        'renal_adjustment':
         {'normal': 'Không đổi', '30_60': 'Giảm liều 50%', 'under_30':
-        'Giảm liều 50-75%'}, 'side_effects': ['Buồn nôn, nôn', 'Tiêu chảy',
+        'Giảm liều 50-75%'},
+        'side_effects': ['Buồn nôn, nôn', 'Tiêu chảy',
         'Vị kim loại trong miệng', 'QT kéo dài', 'Rối loạn thính giác (hiếm)'],
         'interactions': [
         'CYP3A4 substrates: tăng đáng kể nồng độ (simvastatin, lovastatin, midazolam)'
@@ -240,20 +257,16 @@ MACROLIDES_DRUGS = {
         'Clarithromycin là kháng sinh macrolide bán tổng hợp, thuộc nhóm azalide. Ức chế tổng hợp protein của vi khuẩn bằng cách gắn vào tiểu đơn vị 50S của ribosome vi khuẩn, ngăn chặn quá trình dịch mã (translocation) và kéo dài chuỗi peptide. Dẫn đến ngừng tổng hợp protein và ức chế sự phát triển của vi khuẩn. Clarithromycin có phổ kháng khuẩn rộng: Gram-dương (Streptococcus pneumoniae, Staphylococcus aureus - không phải MRSA), một số Gram-âm (H. influenzae, Moraxella catarrhalis), và vi khuẩn không điển hình (Mycoplasma pneumoniae, Chlamydia pneumoniae, Legionella pneumophila). Clarithromycin cũng có tác dụng với Helicobacter pylori và một số vi khuẩn không điển hình khác. Mạnh hơn azithromycin nhưng có nhiều tương tác thuốc hơn do ức chế CYP3A4.'
         , 'monitoring': [
         'Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng) để đánh giá đáp ứng điều trị'
-        ,
         'Cấy máu và cấy từ vị trí nhiễm trùng (nếu có) để xác định vi khuẩn và độ nhạy cảm'
-        ,
         'ECG - QT kéo dài (đặc biệt ở bệnh nhân có nguy cơ, dùng với thuốc kéo dài QT khác)'
-        ,
         'Rối loạn thính giác (giảm thính lực, ù tai) - hiếm nhưng có thể không hồi phục'
         , 'Chức năng gan (ALT, AST) nếu dùng lâu dài hoặc có triệu chứng',
         'Chức năng thận (creatinine) - điều chỉnh liều ở suy thận',
         'Tương tác với CYP3A4 substrates (simvastatin, lovastatin, midazolam, warfarin, digoxin, theophylline) - theo dõi tác dụng phụ và nồng độ nếu có'
-        ], 'precautions': [
+        ],
+        'precautions': [
         'QT kéo dài - không dùng với các thuốc kéo dài QT khác (amiodarone, sotalol, antipsychotics), bệnh nhân có tiền sử rối loạn nhịp'
-        ,
         'Không dùng với pimozide, terfenadine, astemizole (tăng nguy cơ loạn nhịp nghiêm trọng)'
-        ,
         'Nhiều tương tác thuốc do ức chế CYP3A4 - tăng nồng độ simvastatin, lovastatin (nguy cơ tiêu cơ vân), midazolam, warfarin (tăng INR), digoxin (tăng nồng độ), theophylline (tăng nồng độ)'
         , 'Giảm liều ở suy thận (CrCl <30: giảm 50-75%)',
         'Uống với thức ăn để giảm buồn nôn, nôn',
@@ -265,7 +278,8 @@ MACROLIDES_DRUGS = {
         '2-4 giờ', 'duration': 'q12h (dùng 2 lần/ngày)', 'protein_binding':
         '70%', 'clearance':
         'Gan: chuyển hóa qua CYP3A4 thành 14-hydroxyclarithromycin (metabolite hoạt động, mạnh hơn với H. influenzae). Thận: bài tiết một phần nguyên dạng và metabolites. Cần điều chỉnh liều ở suy thận (CrCl <30).'
-        }, 'storage':
+        },
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Dạng suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng, dùng trong vòng 14 ngày sau khi pha. IV: bảo quản trong tủ lạnh, để nhiệt độ phòng trước khi pha.'
         , 'black_box_warnings':
         'Tăng nguy cơ tử vong do tim mạch ở bệnh nhân có bệnh tim mạch. Không dùng ở bệnh nhân có QT kéo dài, loạn nhịp tim, hoặc dùng với các thuốc kéo dài QT. Tăng nguy cơ tiêu cơ vân khi dùng với simvastatin, lovastatin.'
@@ -325,11 +339,10 @@ MACROLIDES_DRUGS = {
         }]},
         'contraindications': {'tuyệt_đối': [
         'Dị ứng clarithromycin hoặc các macrolide khác (erythromycin, azithromycin)'
-        ,
         'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ tử vong do tim mạch'
-        ,
         'Dùng với pimozide, terfenadine, astemizole - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI, tăng nguy cơ loạn nhịp tim nghiêm trọng, tử vong'
-        , 'Bệnh tim mạch nặng - tăng nguy cơ tử vong do tim mạch'], 'tương_đối':
+        , 'Bệnh tim mạch nặng - tăng nguy cơ tử vong do tim mạch'],
+        'tương_đối':
         ['Suy tim - tăng nguy cơ QT kéo dài, tử vong do tim mạch',
         'Hạ kali máu, hạ magie máu - tăng nguy cơ QT kéo dài, torsades de pointes',
         'Dùng với thuốc kéo dài QT khác - tác dụng cộng dồn',
@@ -337,14 +350,12 @@ MACROLIDES_DRUGS = {
         'Dùng với warfarin - tăng nguy cơ chảy máu',
         'Dùng với digoxin - tăng độc tính digoxin',
         'Suy thận nặng (CrCl <30) - cần giảm liều 50-75%',
-        'Suy gan - thận trọng, có thể giảm chuyển hóa']},
-        'contraindications_detail': {'tuyệt_đối': [
+        'Suy gan - thận trọng, có thể giảm chuyển hóa']},contraindications_detail': {'tuyệt_đối': [
         'Dị ứng clarithromycin hoặc các macrolide khác (erythromycin, azithromycin)'
-        ,
         'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ tử vong do tim mạch'
-        ,
         'Dùng với pimozide, terfenadine, astemizole - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI, tăng nguy cơ loạn nhịp tim nghiêm trọng, tử vong'
-        , 'Bệnh tim mạch nặng - tăng nguy cơ tử vong do tim mạch'], 'tương_đối':
+        , 'Bệnh tim mạch nặng - tăng nguy cơ tử vong do tim mạch'],
+        'tương_đối':
         ['Suy tim - tăng nguy cơ QT kéo dài, tử vong do tim mạch',
         'Hạ kali máu, hạ magie máu - tăng nguy cơ QT kéo dài, torsades de pointes',
         'Dùng với thuốc kéo dài QT khác - tác dụng cộng dồn',
@@ -360,7 +371,8 @@ MACROLIDES_DRUGS = {
         'Clarithromycin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Macrolide là một trong những kháng sinh an toàn nhất khi cho con bú.'
         , 'recommendation':
         'Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh nếu dùng liều cao hoặc kéo dài (tiêu chảy, phát ban).'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều. Clarithromycin chuyển hóa qua gan nhưng không đáng kể ở suy gan nhẹ.'
         , 'moderate':
         'Thận trọng, có thể cần giảm liều nhẹ. Chuyển hóa có thể giảm ở suy gan trung bình.'
@@ -368,15 +380,15 @@ MACROLIDES_DRUGS = {
         'Thận trọng, có thể cần giảm liều. Chuyển hóa có thể giảm đáng kể ở suy gan nặng, tăng nồng độ clarithromycin và nguy cơ tác dụng phụ.'
         , 'notes':
         'Clarithromycin chuyển hóa qua CYP3A4 thành 14-hydroxyclarithromycin (metabolite hoạt động). Suy gan có thể giảm chuyển hóa, tăng nồng độ clarithromycin. Tuy nhiên, thải trừ một phần qua thận nên cần điều chỉnh liều theo cả chức năng gan và thận. Theo dõi chặt chẽ tác dụng phụ ở suy gan.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng, vị kim loại trong miệng'
-        ,
         'Triệu chứng tim mạch: QT kéo dài, torsades de pointes, rối loạn nhịp tim, tử vong do tim mạch (hiếm nhưng nguy hiểm)'
         , 'Triệu chứng thần kinh: Đau đầu, chóng mặt, mệt mỏi',
         'Triệu chứng thính giác: Giảm thính lực, ù tai (hiếm, có thể không hồi phục)'
-        ,
         'Triệu chứng nghiêm trọng: Torsades de pointes, rối loạn nhịp tim nghiêm trọng, tử vong do tim mạch, mất thính lực'
-        ], 'antidote':
+        ],
+        'antidote':
         'Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.',
         'treatment': ['Ngừng ngay clarithromycin',
         'Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)'
@@ -393,24 +405,29 @@ MACROLIDES_DRUGS = {
         'monitoring':
         'Theo dõi dấu hiệu sinh tồn, ECG (QT interval), điện giải (kali, magie), dấu hiệu thính giác trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (QT kéo dài, torsades de pointes, rối loạn thính giác).'
         },
-        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes':
         'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay clarithromycin, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn và ECG, điều trị triệu chứng tiêu hóa, điều trị QT kéo dài/torsades de pointes nếu có (magnesium sulfate IV, pacing), điều trị rối loạn thính giác nếu có.'},
         'administration_instructions': {'oral': {
         'with_food':
         'Uống với thức ăn để giảm kích ứng dạ dày, giảm buồn nôn, nôn. Có thể uống không thức ăn nếu cần nhưng không khuyến nghị.'
         , 'timing':
         'Uống 2 lần/ngày (q12h), thường 250-500mg x 2 lần/ngày. Uống đều đặn, cách đều nhau trong ngày (12 giờ). Không bỏ liều.'
-        }, 'iv': {'reconstitution':
+        },
+        'iv': {'reconstitution':
         'Pha theo hướng dẫn nhà sản xuất. Thường pha với nước cất vô trùng hoặc NaCl 0.9%. Lắc kỹ để hòa tan hoàn toàn.'
         , 'infusion_rate':
         'Truyền IV trong 60 phút (không truyền nhanh hơn). Có thể truyền trong 30 phút nếu cần nhưng không khuyến nghị.'
         , 'compatibility': ['NaCl 0.9%', 'D5W (Dextrose 5%)',
-        'Nước cất vô trùng'], 'incompatibility': [
+        'Nước cất vô trùng'],
+        'incompatibility': [
         'Không trộn với các thuốc khác trong cùng một bơm tiêm hoặc chai truyền',
         "Lactated Ringer's (LR) - không tương thích",
-        'Các dung dịch có cation (Al3+, Mg2+) - có thể tạo phức hợp'], 'notes':
+        'Các dung dịch có cation (Al3+, Mg2+) - có thể tạo phức hợp'],
+        'notes':
         'Truyền IV trong 60 phút. Không truyền nhanh hơn. Theo dõi phản ứng tại chỗ tiêm (viêm tĩnh mạch). Dùng ngay sau khi pha. Không bảo quản lâu sau khi pha.'
-        }},         'references': {'primary_sources': [
+        }},
+        'references': {'primary_sources': [
         'FDA Label: Klacid (clarithromycin)',
         'UpToDate: Clarithromycin drug information',
         'Lexicomp: Clarithromycin monograph',
@@ -429,8 +446,7 @@ MACROLIDES_DRUGS = {
                 'musculoskeletal': 'High (rhabdomyolysis when co-administered with simvastatin/lovastatin - Black Box Warning)',
                 'hepatic': 'Low (hepatotoxicity rare)',
                 'auditory': 'Moderate (hearing loss rare, may be irreversible)'
-            },
-            'qt_prolongation': True,
+            },qt_prolongation': True,
             'hepatotoxicity': True,
             'nephrotoxicity': False,
             'requires_monitoring': [
@@ -444,10 +460,8 @@ MACROLIDES_DRUGS = {
                 'Hepatic function (ALT, AST) - rare hepatotoxicity',
                 'Renal function (creatinine, eGFR) - dose adjustment required in renal impairment (CrCl <30)',
                 'Hearing loss symptoms (tinnitus, hearing loss) - rare, may be irreversible'
-            ],
-            'look_alike_sound_alike': ['Clarithromycin', 'Azithromycin', 'Erythromycin', 'Clindamycin']
-        },
-        'guideline_tags': [
+            ],look_alike_sound_alike': ['Clarithromycin', 'Azithromycin', 'Erythromycin', 'Clindamycin']
+        },guideline_tags': [
             'FDA Black Box Warning - Clarithromycin and Cardiovascular Death Risk',
             'FDA Black Box Warning - Clarithromycin and QT Prolongation',
             'FDA Black Box Warning - Clarithromycin and Rhabdomyolysis with Statins',

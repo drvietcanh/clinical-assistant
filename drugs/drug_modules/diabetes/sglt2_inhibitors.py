@@ -78,7 +78,7 @@ SGLT2_INHIBITORS_DRUGS = {
                 "Nhiễm trùng đường sinh dục tái phát - tăng nguy cơ nhiễm trùng"
     ],
         },
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
         "pharmacokinetics": {
         },
         "storage": "",
@@ -227,7 +227,8 @@ SGLT2_INHIBITORS_DRUGS = {
         },
         "contraindications": [],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
+        ',
         "precautions": [],
         "pharmacokinetics": {
         },
@@ -373,7 +374,7 @@ SGLT2_INHIBITORS_DRUGS = {
         },
         "contraindications": [],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
         "precautions": [],
         "pharmacokinetics": {
         },

@@ -31,7 +31,7 @@ def render():
     render_suggestions(
         calculator_id="barthel",
         calculator_name="Barthel Index",
-        category="Thần Kinh",
+        category="Thần kinh",
         show_related=True,
         show_category=True,
         limit=3
@@ -322,7 +322,7 @@ def render():
             """)
         else:
             st.success("""
-            **✅ Độc Lập Hoàn Toàn (Barthel 100):**
+            **✅ Độc lập Hoàn Toàn (Barthel 100):**
             
             - Tự thực hiện tất cả hoạt động độc lập
             - Không cần hỗ trợ

@@ -1,0 +1,2708 @@
+{
+  "created_date": "2026-01-13T21:38:44.033032",
+  "total_drugs": 121,
+  "statistics": {
+    "by_priority": {
+      "P0": 109,
+      "P1": 6,
+      "P3": 6
+    },
+    "by_status": {
+      "pending": 121
+    },
+    "by_field": {
+      "pregnancy": 109,
+      "references": 34,
+      "contraindications": 35,
+      "dosage": 1,
+      "side_effects": 14
+    }
+  },
+  "templates": {
+    "Acetylcysteine": {
+      "drug_name": "Acetylcysteine",
+      "group": "Toxicology - Antidote (Paracetamol)",
+      "vietnamese_name": "Acetylcysteine, NAC",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.027821",
+      "last_updated": "2026-01-13T21:38:44.027831",
+      "completed_by": ""
+    },
+    "Albumin (Human)": {
+      "drug_name": "Albumin (Human)",
+      "group": "Fluids - Colloid (Dung dịch keo)",
+      "vietnamese_name": "Albumin người (5%, 20%, 25%)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.027875",
+      "last_updated": "2026-01-13T21:38:44.027878",
+      "completed_by": ""
+    },
+    "Alendronate": {
+      "drug_name": "Alendronate",
+      "group": "Rheumatology - Bisphosphonate (Oral)",
+      "vietnamese_name": "Alendronate, Fosamax",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.027917",
+      "last_updated": "2026-01-13T21:38:44.027932",
+      "completed_by": ""
+    },
+    "Allopurinol": {
+      "drug_name": "Allopurinol",
+      "group": "Rheumatology - Gout (Xanthine Oxidase Inhibitor)",
+      "vietnamese_name": "Allopurinol, Zyloric",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.027973",
+      "last_updated": "2026-01-13T21:38:44.027975",
+      "completed_by": ""
+    },
+    "Amoxicillin suspension": {
+      "drug_name": "Amoxicillin suspension",
+      "group": "Antibiotic - Beta-lactam (Penicillin)",
+      "vietnamese_name": "Amoxicillin suspension, Amoxicillin sirô",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028081",
+      "last_updated": "2026-01-13T21:38:44.028301",
+      "completed_by": ""
+    },
+    "Amoxicillin-clavulanate": {
+      "drug_name": "Amoxicillin-clavulanate",
+      "group": "Antibiotic - Beta-lactam (Penicillin + Beta-lactamase inhibitor)",
+      "vietnamese_name": "Amoxicillin-clavulanate, Augmentin, Amoclav",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028381",
+      "last_updated": "2026-01-13T21:38:44.028385",
+      "completed_by": ""
+    },
+    "Anastrozole": {
+      "drug_name": "Anastrozole",
+      "group": "Oncology - Hormonal Therapy (Aromatase Inhibitor)",
+      "vietnamese_name": "Anastrozole, Arimidex",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028514",
+      "last_updated": "2026-01-13T21:38:44.028528",
+      "completed_by": ""
+    },
+    "Atropine": {
+      "drug_name": "Atropine",
+      "group": "Toxicology - Antidote (Organophosphate/Carbamate)",
+      "vietnamese_name": "Atropine Sulfate",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028573",
+      "last_updated": "2026-01-13T21:38:44.028575",
+      "completed_by": ""
+    },
+    "Azithromycin": {
+      "drug_name": "Azithromycin",
+      "group": "Infectious Disease - Macrolide Antibiotic",
+      "vietnamese_name": "Azithromycin, Zithromax",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028608",
+      "last_updated": "2026-01-13T21:38:44.028610",
+      "completed_by": ""
+    },
+    "Beclomethasone inhaled": {
+      "drug_name": "Beclomethasone inhaled",
+      "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+      "vietnamese_name": "Beclomethasone, Beclovent, Qvar",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028639",
+      "last_updated": "2026-01-13T21:38:44.028641",
+      "completed_by": ""
+    },
+    "Betamethasone": {
+      "drug_name": "Betamethasone",
+      "group": "Endocrinology - Corticosteroid",
+      "vietnamese_name": "Betamethasone, Celestone",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028676",
+      "last_updated": "2026-01-13T21:38:44.028678",
+      "completed_by": ""
+    },
+    "Bismuth subsalicylate": {
+      "drug_name": "Bismuth subsalicylate",
+      "group": "Gastrointestinal - Antidiarrheal",
+      "vietnamese_name": "Bismuth subsalicylate, Pepto-Bismol",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028704",
+      "last_updated": "2026-01-13T21:38:44.028706",
+      "completed_by": ""
+    },
+    "Budesonide inhaled": {
+      "drug_name": "Budesonide inhaled",
+      "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+      "vietnamese_name": "Budesonide, Pulmicort",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "dosage",
+        "side_effects",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "dosage": null,
+        "side_effects": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028732",
+      "last_updated": "2026-01-13T21:38:44.028734",
+      "completed_by": ""
+    },
+    "Bupivacaine": {
+      "drug_name": "Bupivacaine",
+      "group": "Anesthesia - Local Anesthetic (Amide)",
+      "vietnamese_name": "Bupivacaine, Marcaine",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028774",
+      "last_updated": "2026-01-13T21:38:44.028776",
+      "completed_by": ""
+    },
+    "Calcium": {
+      "drug_name": "Calcium",
+      "group": "Vitamins/Supplements - Calcium",
+      "vietnamese_name": "Calcium, Calcium carbonate, Calcium citrate",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028812",
+      "last_updated": "2026-01-13T21:38:44.028815",
+      "completed_by": ""
+    },
+    "Canagliflozin": {
+      "drug_name": "Canagliflozin",
+      "group": "Diabetes - SGLT2 Inhibitor",
+      "vietnamese_name": "Canagliflozin, Invokana",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028922",
+      "last_updated": "2026-01-13T21:38:44.028928",
+      "completed_by": ""
+    },
+    "Carbamazepine": {
+      "drug_name": "Carbamazepine",
+      "group": "Neurology - Anticonvulsant",
+      "vietnamese_name": "Carbamazepine, Tegretol",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.028992",
+      "last_updated": "2026-01-13T21:38:44.028996",
+      "completed_by": ""
+    },
+    "Ceftriaxone": {
+      "drug_name": "Ceftriaxone",
+      "group": "Antibiotic - Cephalosporin (3rd Generation)",
+      "vietnamese_name": "Ceftriaxone, Rocephin",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029049",
+      "last_updated": "2026-01-13T21:38:44.029053",
+      "completed_by": ""
+    },
+    "Cetirizine": {
+      "drug_name": "Cetirizine",
+      "group": "Allergy - Antihistamine H1 (2nd Gen - Ít gây buồn ngủ)",
+      "vietnamese_name": "Cetirizine, Zyrtec",
+      "priority": "P1",
+      "status": "pending",
+      "fields_to_supplement": [
+        "contraindications",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "contraindications": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029130",
+      "last_updated": "2026-01-13T21:38:44.029134",
+      "completed_by": ""
+    },
+    "Chlorpheniramine": {
+      "drug_name": "Chlorpheniramine",
+      "group": "Allergy - Antihistamine H1 (1st Gen)",
+      "vietnamese_name": "Chlorpheniramine 4mg",
+      "priority": "P1",
+      "status": "pending",
+      "fields_to_supplement": [
+        "contraindications",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "contraindications": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029201",
+      "last_updated": "2026-01-13T21:38:44.029205",
+      "completed_by": ""
+    },
+    "Ciclesonide": {
+      "drug_name": "Ciclesonide",
+      "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+      "vietnamese_name": "Ciclesonide, Alvesco",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029253",
+      "last_updated": "2026-01-13T21:38:44.029257",
+      "completed_by": ""
+    },
+    "Cisatracurium": {
+      "drug_name": "Cisatracurium",
+      "group": "Anesthesia - Neuromuscular Blocker (Non-depolarizing)",
+      "vietnamese_name": "Cisatracurium, Nimbex",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029325",
+      "last_updated": "2026-01-13T21:38:44.029327",
+      "completed_by": ""
+    },
+    "Clarithromycin": {
+      "drug_name": "Clarithromycin",
+      "group": "Infectious Disease - Macrolide Antibiotic",
+      "vietnamese_name": "Clarithromycin, Klacid",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029360",
+      "last_updated": "2026-01-13T21:38:44.029362",
+      "completed_by": ""
+    },
+    "Codeine": {
+      "drug_name": "Codeine",
+      "group": "Analgesic - Opioid Agonist (Weak)",
+      "vietnamese_name": "Codeine",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029388",
+      "last_updated": "2026-01-13T21:38:44.029390",
+      "completed_by": ""
+    },
+    "Colchicine": {
+      "drug_name": "Colchicine",
+      "group": "Rheumatology - Gout (Anti-inflammatory)",
+      "vietnamese_name": "Colchicine",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029427",
+      "last_updated": "2026-01-13T21:38:44.029429",
+      "completed_by": ""
+    },
+    "Cyanocobalamin (Vitamin B12)": {
+      "drug_name": "Cyanocobalamin (Vitamin B12)",
+      "group": "Nutrition - Vitamin B",
+      "vietnamese_name": "Vitamin B12",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": [],
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029843",
+      "last_updated": "2026-01-13T21:38:44.029845",
+      "completed_by": ""
+    },
+    "Cyclosporine": {
+      "drug_name": "Cyclosporine",
+      "group": "Immunology - Calcineurin Inhibitor",
+      "vietnamese_name": "Cyclosporine, Cyclosporin A",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "contraindications": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029888",
+      "last_updated": "2026-01-13T21:38:44.029891",
+      "completed_by": ""
+    },
+    "Dapagliflozin": {
+      "drug_name": "Dapagliflozin",
+      "group": "Diabetes - SGLT2 Inhibitor",
+      "vietnamese_name": "Dapagliflozin, Forxiga",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029910",
+      "last_updated": "2026-01-13T21:38:44.029915",
+      "completed_by": ""
+    },
+    "Desloratadine": {
+      "drug_name": "Desloratadine",
+      "group": "Allergy - Antihistamine H1 (3rd Gen)",
+      "vietnamese_name": "Desloratadine, Aerius",
+      "priority": "P1",
+      "status": "pending",
+      "fields_to_supplement": [
+        "side_effects",
+        "contraindications",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "side_effects": null,
+        "contraindications": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029953",
+      "last_updated": "2026-01-13T21:38:44.029955",
+      "completed_by": ""
+    },
+    "Dexamethasone": {
+      "drug_name": "Dexamethasone",
+      "group": "Endocrinology - Corticosteroid",
+      "vietnamese_name": "Dexamethasone, Decadron",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.029988",
+      "last_updated": "2026-01-13T21:38:44.029990",
+      "completed_by": ""
+    },
+    "Diltiazem": {
+      "drug_name": "Diltiazem",
+      "group": "Cardiovascular - Calcium Channel Blocker (Non-dihydropyridine)",
+      "vietnamese_name": "Diltiazem, Cardizem",
+      "priority": "P3",
+      "status": "pending",
+      "fields_to_supplement": [
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030036",
+      "last_updated": "2026-01-13T21:38:44.030038",
+      "completed_by": ""
+    },
+    "Diphenhydramine": {
+      "drug_name": "Diphenhydramine",
+      "group": "Allergy - Antihistamine H1 (1st Gen - Gây buồn ngủ)",
+      "vietnamese_name": "Diphenhydramine, Benadryl, Nautamine",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030066",
+      "last_updated": "2026-01-13T21:38:44.030068",
+      "completed_by": ""
+    },
+    "Domperidone": {
+      "drug_name": "Domperidone",
+      "group": "Gastrointestinal - Prokinetic, Antiemetic",
+      "vietnamese_name": "Domperidone, Motilium",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030092",
+      "last_updated": "2026-01-13T21:38:44.030094",
+      "completed_by": ""
+    },
+    "Donepezil": {
+      "drug_name": "Donepezil",
+      "group": "Neurology - Cholinesterase Inhibitor",
+      "vietnamese_name": "Donepezil, Aricept",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030123",
+      "last_updated": "2026-01-13T21:38:44.030125",
+      "completed_by": ""
+    },
+    "Doxycycline": {
+      "drug_name": "Doxycycline",
+      "group": "Infectious Disease - Tetracycline Antibiotic",
+      "vietnamese_name": "Doxycycline, Vibramycin",
+      "priority": "P3",
+      "status": "pending",
+      "fields_to_supplement": [
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030185",
+      "last_updated": "2026-01-13T21:38:44.030187",
+      "completed_by": ""
+    },
+    "Dulaglutide": {
+      "drug_name": "Dulaglutide",
+      "group": "Diabetes - GLP-1 Receptor Agonist",
+      "vietnamese_name": "Dulaglutide, Trulicity",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030207",
+      "last_updated": "2026-01-13T21:38:44.030209",
+      "completed_by": ""
+    },
+    "Empagliflozin": {
+      "drug_name": "Empagliflozin",
+      "group": "Diabetes - SGLT2 Inhibitor",
+      "vietnamese_name": "Empagliflozin, Jardiance",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030234",
+      "last_updated": "2026-01-13T21:38:44.030236",
+      "completed_by": ""
+    },
+    "Enalapril": {
+      "drug_name": "Enalapril",
+      "group": "Cardiovascular - ACE Inhibitor",
+      "vietnamese_name": "Enalapril, Vasotec",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030251",
+      "last_updated": "2026-01-13T21:38:44.030253",
+      "completed_by": ""
+    },
+    "Erlotinib": {
+      "drug_name": "Erlotinib",
+      "group": "Oncology - Targeted Therapy (EGFR Inhibitor)",
+      "vietnamese_name": "Erlotinib, Tarceva",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "contraindications": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030286",
+      "last_updated": "2026-01-13T21:38:44.030288",
+      "completed_by": ""
+    },
+    "Esomeprazole": {
+      "drug_name": "Esomeprazole",
+      "group": "Gastrointestinal - Proton Pump Inhibitor",
+      "vietnamese_name": "Esomeprazole, Nexium",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030311",
+      "last_updated": "2026-01-13T21:38:44.030313",
+      "completed_by": ""
+    },
+    "Ethanol": {
+      "drug_name": "Ethanol",
+      "group": "Toxicology - Antidote (Methanol/Ethylene Glycol)",
+      "vietnamese_name": "Ethanol 20% (Rượu uống)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": [],
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030353",
+      "last_updated": "2026-01-13T21:38:44.030355",
+      "completed_by": ""
+    },
+    "Etomidate": {
+      "drug_name": "Etomidate",
+      "group": "Anesthesia - Induction Agent",
+      "vietnamese_name": "Etomidate, Amidate",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030384",
+      "last_updated": "2026-01-13T21:38:44.030386",
+      "completed_by": ""
+    },
+    "Exenatide": {
+      "drug_name": "Exenatide",
+      "group": "Diabetes - GLP-1 Receptor Agonist",
+      "vietnamese_name": "Exenatide, Byetta, Bydureon",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030408",
+      "last_updated": "2026-01-13T21:38:44.030410",
+      "completed_by": ""
+    },
+    "Febuxostat": {
+      "drug_name": "Febuxostat",
+      "group": "Rheumatology - Gout (Xanthine Oxidase Inhibitor)",
+      "vietnamese_name": "Febuxostat, Feburic",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030451",
+      "last_updated": "2026-01-13T21:38:44.030453",
+      "completed_by": ""
+    },
+    "Fexofenadine": {
+      "drug_name": "Fexofenadine",
+      "group": "Allergy - Antihistamine H1 (3rd Gen - An toàn nhất)",
+      "vietnamese_name": "Fexofenadine, Telfast",
+      "priority": "P1",
+      "status": "pending",
+      "fields_to_supplement": [
+        "contraindications",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "contraindications": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030494",
+      "last_updated": "2026-01-13T21:38:44.030496",
+      "completed_by": ""
+    },
+    "Fluoxetine": {
+      "drug_name": "Fluoxetine",
+      "group": "Psychiatry - SSRI (Selective Serotonin Reuptake Inhibitor)",
+      "vietnamese_name": "Fluoxetine, Prozac",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030525",
+      "last_updated": "2026-01-13T21:38:44.030527",
+      "completed_by": ""
+    },
+    "Fluticasone inhaled": {
+      "drug_name": "Fluticasone inhaled",
+      "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+      "vietnamese_name": "Fluticasone, Flixotide",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030557",
+      "last_updated": "2026-01-13T21:38:44.030559",
+      "completed_by": ""
+    },
+    "Formoterol": {
+      "drug_name": "Formoterol",
+      "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)",
+      "vietnamese_name": "Formoterol, Foradil, Oxeze",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030586",
+      "last_updated": "2026-01-13T21:38:44.030588",
+      "completed_by": ""
+    },
+    "Gliclazide": {
+      "drug_name": "Gliclazide",
+      "group": "Diabetes - Sulfonylurea",
+      "vietnamese_name": "Gliclazide, Diamicron",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030609",
+      "last_updated": "2026-01-13T21:38:44.030611",
+      "completed_by": ""
+    },
+    "HES 130/0.4": {
+      "drug_name": "HES 130/0.4",
+      "group": "Fluids - Colloid (Cao phân tử tổng hợp)",
+      "vietnamese_name": "Hydroxyethyl Starch (Voluven, HES)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030647",
+      "last_updated": "2026-01-13T21:38:44.030649",
+      "completed_by": ""
+    },
+    "Hepatitis B Vaccine": {
+      "drug_name": "Hepatitis B Vaccine",
+      "group": "Vaccines - Hepatitis B (Viêm gan B)",
+      "vietnamese_name": "Vắc xin Viêm gan B (Engerix B, Euvax B)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030686",
+      "last_updated": "2026-01-13T21:38:44.030688",
+      "completed_by": ""
+    },
+    "Hydrocodone": {
+      "drug_name": "Hydrocodone",
+      "group": "Analgesic - Opioid Agonist",
+      "vietnamese_name": "Hydrocodone, Vicodin (với acetaminophen)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030714",
+      "last_updated": "2026-01-13T21:38:44.030716",
+      "completed_by": ""
+    },
+    "Hydroxychloroquine": {
+      "drug_name": "Hydroxychloroquine",
+      "group": "Rheumatology - DMARD (Antimalarial)",
+      "vietnamese_name": "Hydroxychloroquine",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030749",
+      "last_updated": "2026-01-13T21:38:44.030751",
+      "completed_by": ""
+    },
+    "Imatinib": {
+      "drug_name": "Imatinib",
+      "group": "Oncology - Targeted Therapy (TKI)",
+      "vietnamese_name": "Imatinib, Gleevec, Glivec",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "contraindications": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030786",
+      "last_updated": "2026-01-13T21:38:44.030788",
+      "completed_by": ""
+    },
+    "Influenza Vaccine": {
+      "drug_name": "Influenza Vaccine",
+      "group": "Vaccines - Influenza (Cúm)",
+      "vietnamese_name": "Vắc xin Cúm (Vaxigrip, Influvac)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030826",
+      "last_updated": "2026-01-13T21:38:44.030828",
+      "completed_by": ""
+    },
+    "Insulin": {
+      "drug_name": "Insulin",
+      "group": "Diabetes - Insulin",
+      "vietnamese_name": "Insulin",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030849",
+      "last_updated": "2026-01-13T21:38:44.030851",
+      "completed_by": ""
+    },
+    "Ipratropium": {
+      "drug_name": "Ipratropium",
+      "group": "Respiratory - Anticholinergic (Short-acting)",
+      "vietnamese_name": "Ipratropium, Atrovent",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030877",
+      "last_updated": "2026-01-13T21:38:44.030879",
+      "completed_by": ""
+    },
+    "Ketamine": {
+      "drug_name": "Ketamine",
+      "group": "Anesthesia - Dissociative Anesthetic",
+      "vietnamese_name": "Ketamine, Ketalar",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030907",
+      "last_updated": "2026-01-13T21:38:44.030909",
+      "completed_by": ""
+    },
+    "Lansoprazole": {
+      "drug_name": "Lansoprazole",
+      "group": "Gastrointestinal - Proton Pump Inhibitor",
+      "vietnamese_name": "Lansoprazole, Prevacid",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030933",
+      "last_updated": "2026-01-13T21:38:44.030935",
+      "completed_by": ""
+    },
+    "Leflunomide": {
+      "drug_name": "Leflunomide",
+      "group": "Rheumatology - DMARD",
+      "vietnamese_name": "Leflunomide",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.030971",
+      "last_updated": "2026-01-13T21:38:44.030973",
+      "completed_by": ""
+    },
+    "Levobupivacaine": {
+      "drug_name": "Levobupivacaine",
+      "group": "Anesthesia - Local Anesthetic (Amide)",
+      "vietnamese_name": "Levobupivacaine, Chirocaine",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": [],
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031009",
+      "last_updated": "2026-01-13T21:38:44.031011",
+      "completed_by": ""
+    },
+    "Levothyroxine": {
+      "drug_name": "Levothyroxine",
+      "group": "Endocrinology - Thyroid Hormone",
+      "vietnamese_name": "Levothyroxine, L-Thyroxine, T4",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031053",
+      "last_updated": "2026-01-13T21:38:44.031055",
+      "completed_by": ""
+    },
+    "Lidocaine": {
+      "drug_name": "Lidocaine",
+      "group": "Anesthesia - Local Anesthetic (Amide)",
+      "vietnamese_name": "Lidocaine, Xylocaine",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031090",
+      "last_updated": "2026-01-13T21:38:44.031092",
+      "completed_by": ""
+    },
+    "Liraglutide": {
+      "drug_name": "Liraglutide",
+      "group": "Diabetes - GLP-1 Receptor Agonist",
+      "vietnamese_name": "Liraglutide, Victoza, Saxenda",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031114",
+      "last_updated": "2026-01-13T21:38:44.031116",
+      "completed_by": ""
+    },
+    "Lisinopril": {
+      "drug_name": "Lisinopril",
+      "group": "Cardiovascular - ACE Inhibitor",
+      "vietnamese_name": "Lisinopril, Zestril",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031131",
+      "last_updated": "2026-01-13T21:38:44.031133",
+      "completed_by": ""
+    },
+    "Loratadine": {
+      "drug_name": "Loratadine",
+      "group": "Allergy - Antihistamine H1 (2nd Gen - Không gây buồn ngủ)",
+      "vietnamese_name": "Loratadine, Clarityne",
+      "priority": "P1",
+      "status": "pending",
+      "fields_to_supplement": [
+        "contraindications",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "contraindications": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031174",
+      "last_updated": "2026-01-13T21:38:44.031176",
+      "completed_by": ""
+    },
+    "Losartan": {
+      "drug_name": "Losartan",
+      "group": "Cardiovascular - ARB (Angiotensin Receptor Blocker)",
+      "vietnamese_name": "Losartan, Cozaar",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031199",
+      "last_updated": "2026-01-13T21:38:44.031201",
+      "completed_by": ""
+    },
+    "Memantine": {
+      "drug_name": "Memantine",
+      "group": "Neurology - NMDA Receptor Antagonist",
+      "vietnamese_name": "Memantine, Namenda",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031230",
+      "last_updated": "2026-01-13T21:38:44.031232",
+      "completed_by": ""
+    },
+    "Metformin": {
+      "drug_name": "Metformin",
+      "group": "Diabetes - Biguanide",
+      "vietnamese_name": "Metformin, Glucophage",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031253",
+      "last_updated": "2026-01-13T21:38:44.031255",
+      "completed_by": ""
+    },
+    "Methimazole": {
+      "drug_name": "Methimazole",
+      "group": "Endocrinology - Antithyroid Drug",
+      "vietnamese_name": "Methimazole, Thiamazole",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031287",
+      "last_updated": "2026-01-13T21:38:44.031289",
+      "completed_by": ""
+    },
+    "Methotrexate": {
+      "drug_name": "Methotrexate",
+      "group": "Rheumatology - DMARD (Immunosuppressant)",
+      "vietnamese_name": "Methotrexate",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031328",
+      "last_updated": "2026-01-13T21:38:44.031330",
+      "completed_by": ""
+    },
+    "Minocycline": {
+      "drug_name": "Minocycline",
+      "group": "Infectious Disease - Tetracycline Antibiotic",
+      "vietnamese_name": "Minocycline, Minocin",
+      "priority": "P3",
+      "status": "pending",
+      "fields_to_supplement": [
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031381",
+      "last_updated": "2026-01-13T21:38:44.031383",
+      "completed_by": ""
+    },
+    "Montelukast": {
+      "drug_name": "Montelukast",
+      "group": "Respiratory - Leukotriene Receptor Antagonist",
+      "vietnamese_name": "Montelukast, Singulair",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031409",
+      "last_updated": "2026-01-13T21:38:44.031411",
+      "completed_by": ""
+    },
+    "Mycophenolate": {
+      "drug_name": "Mycophenolate",
+      "group": "Immunology - Antimetabolite",
+      "vietnamese_name": "Mycophenolate Mofetil (MMF), CellCept",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031447",
+      "last_updated": "2026-01-13T21:38:44.031449",
+      "completed_by": ""
+    },
+    "Nedocromil": {
+      "drug_name": "Nedocromil",
+      "group": "Respiratory - Mast Cell Stabilizer",
+      "vietnamese_name": "Nedocromil, Tilade",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031474",
+      "last_updated": "2026-01-13T21:38:44.031476",
+      "completed_by": ""
+    },
+    "Olodaterol": {
+      "drug_name": "Olodaterol",
+      "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)",
+      "vietnamese_name": "Olodaterol, Striverdi",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031502",
+      "last_updated": "2026-01-13T21:38:44.031504",
+      "completed_by": ""
+    },
+    "Omeprazole": {
+      "drug_name": "Omeprazole",
+      "group": "Gastrointestinal - Proton Pump Inhibitor",
+      "vietnamese_name": "Omeprazole, Losec",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031527",
+      "last_updated": "2026-01-13T21:38:44.031529",
+      "completed_by": ""
+    },
+    "Ondansetron": {
+      "drug_name": "Ondansetron",
+      "group": "Gastrointestinal - Antiemetic (5-HT3 Antagonist)",
+      "vietnamese_name": "Ondansetron, Zofran",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031553",
+      "last_updated": "2026-01-13T21:38:44.031555",
+      "completed_by": ""
+    },
+    "Pantoprazole": {
+      "drug_name": "Pantoprazole",
+      "group": "Gastrointestinal - Proton Pump Inhibitor",
+      "vietnamese_name": "Pantoprazole, Pantoloc",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031579",
+      "last_updated": "2026-01-13T21:38:44.031582",
+      "completed_by": ""
+    },
+    "Pioglitazone": {
+      "drug_name": "Pioglitazone",
+      "group": "Diabetes - Thiazolidinedione (TZD)",
+      "vietnamese_name": "Pioglitazone, Actos",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031606",
+      "last_updated": "2026-01-13T21:38:44.031608",
+      "completed_by": ""
+    },
+    "Pralidoxime": {
+      "drug_name": "Pralidoxime",
+      "group": "Toxicology - Antidote (Organophosphate)",
+      "vietnamese_name": "Pralidoxime, PAM",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": [],
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031647",
+      "last_updated": "2026-01-13T21:38:44.031649",
+      "completed_by": ""
+    },
+    "Pravastatin": {
+      "drug_name": "Pravastatin",
+      "group": "Cardiovascular - Statin",
+      "vietnamese_name": "Pravastatin, Pravachol",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031667",
+      "last_updated": "2026-01-13T21:38:44.031669",
+      "completed_by": ""
+    },
+    "Prednisone": {
+      "drug_name": "Prednisone",
+      "group": "Endocrinology - Corticosteroid (Oral)",
+      "vietnamese_name": "Prednisone (tiền dược của prednisolone)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "contraindications": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031699",
+      "last_updated": "2026-01-13T21:38:44.031701",
+      "completed_by": ""
+    },
+    "Propofol": {
+      "drug_name": "Propofol",
+      "group": "Anesthesia - Induction Agent (IV)",
+      "vietnamese_name": "Propofol, Diprivan",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031730",
+      "last_updated": "2026-01-13T21:38:44.031732",
+      "completed_by": ""
+    },
+    "Propylthiouracil": {
+      "drug_name": "Propylthiouracil",
+      "group": "Endocrinology - Antithyroid Drug",
+      "vietnamese_name": "Propylthiouracil, PTU",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "contraindications": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031762",
+      "last_updated": "2026-01-13T21:38:44.031764",
+      "completed_by": ""
+    },
+    "Pyridoxine (Vitamin B6)": {
+      "drug_name": "Pyridoxine (Vitamin B6)",
+      "group": "Nutrition - Vitamin B",
+      "vietnamese_name": "Vitamin B6, Pyridoxine",
+      "priority": "P1",
+      "status": "pending",
+      "fields_to_supplement": [
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031811",
+      "last_updated": "2026-01-13T21:38:44.031813",
+      "completed_by": ""
+    },
+    "Ranitidine": {
+      "drug_name": "Ranitidine",
+      "group": "Gastrointestinal - H2 Receptor Antagonist",
+      "vietnamese_name": "Ranitidine, Zantac",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031838",
+      "last_updated": "2026-01-13T21:38:44.031840",
+      "completed_by": ""
+    },
+    "Ringer Lactate": {
+      "drug_name": "Ringer Lactate",
+      "group": "Fluids - Crystalloid (Dịch tinh thể)",
+      "vietnamese_name": "Dung dịch Ringer Lactate (Hartmann)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031873",
+      "last_updated": "2026-01-13T21:38:44.031875",
+      "completed_by": ""
+    },
+    "Rivastigmine": {
+      "drug_name": "Rivastigmine",
+      "group": "Neurology - Cholinesterase Inhibitor",
+      "vietnamese_name": "Rivastigmine, Exelon",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031906",
+      "last_updated": "2026-01-13T21:38:44.031908",
+      "completed_by": ""
+    },
+    "Rizatriptan": {
+      "drug_name": "Rizatriptan",
+      "group": "Neurology - Migraine (Triptan)",
+      "vietnamese_name": "Rizatriptan, Maxalt",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031931",
+      "last_updated": "2026-01-13T21:38:44.031933",
+      "completed_by": ""
+    },
+    "Rocuronium": {
+      "drug_name": "Rocuronium",
+      "group": "Anesthesia - Neuromuscular Blocker (Non-depolarizing)",
+      "vietnamese_name": "Rocuronium, Esmeron",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.031962",
+      "last_updated": "2026-01-13T21:38:44.031964",
+      "completed_by": ""
+    },
+    "SAR (Rabies Antiserum)": {
+      "drug_name": "SAR (Rabies Antiserum)",
+      "group": "Antisera - Rabies (Huyết thanh kháng dại)",
+      "vietnamese_name": "Huyết thanh kháng dại (SAR)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032001",
+      "last_updated": "2026-01-13T21:38:44.032003",
+      "completed_by": ""
+    },
+    "SAT (Tetanus Antitoxin)": {
+      "drug_name": "SAT (Tetanus Antitoxin)",
+      "group": "Antisera - Tetanus (Huyết thanh kháng uốn ván)",
+      "vietnamese_name": "Huyết thanh kháng độc tố uốn ván (SAT)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032041",
+      "last_updated": "2026-01-13T21:38:44.032043",
+      "completed_by": ""
+    },
+    "Salmeterol": {
+      "drug_name": "Salmeterol",
+      "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)",
+      "vietnamese_name": "Salmeterol, Serevent",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032069",
+      "last_updated": "2026-01-13T21:38:44.032071",
+      "completed_by": ""
+    },
+    "Semaglutide": {
+      "drug_name": "Semaglutide",
+      "group": "Diabetes - GLP-1 Receptor Agonist",
+      "vietnamese_name": "Semaglutide, Ozempic, Wegovy, Rybelsus",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032095",
+      "last_updated": "2026-01-13T21:38:44.032097",
+      "completed_by": ""
+    },
+    "Simvastatin": {
+      "drug_name": "Simvastatin",
+      "group": "Cardiovascular - Statin",
+      "vietnamese_name": "Simvastatin, Zocor",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032114",
+      "last_updated": "2026-01-13T21:38:44.032116",
+      "completed_by": ""
+    },
+    "Snake Antivenom (Ho Dat)": {
+      "drug_name": "Snake Antivenom (Ho Dat)",
+      "group": "Antivenom - Snake (Kháng nọc rắn)",
+      "vietnamese_name": "Huyết thanh kháng nọc rắn Hổ Đất",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": [],
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032155",
+      "last_updated": "2026-01-13T21:38:44.032158",
+      "completed_by": ""
+    },
+    "Snake Antivenom (Luc Tre)": {
+      "drug_name": "Snake Antivenom (Luc Tre)",
+      "group": "Antivenom - Snake (Kháng nọc rắn)",
+      "vietnamese_name": "Huyết thanh kháng nọc rắn Lục Tre",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032195",
+      "last_updated": "2026-01-13T21:38:44.032197",
+      "completed_by": ""
+    },
+    "Sodium Chloride 0.9%": {
+      "drug_name": "Sodium Chloride 0.9%",
+      "group": "Fluids - Crystalloid (Dịch tinh thể)",
+      "vietnamese_name": "Nước muối sinh lý 0.9% (Normal Saline)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032234",
+      "last_updated": "2026-01-13T21:38:44.032236",
+      "completed_by": ""
+    },
+    "Succinylcholine": {
+      "drug_name": "Succinylcholine",
+      "group": "Anesthesia - Neuromuscular Blocker (Depolarizing)",
+      "vietnamese_name": "Succinylcholine, Suxamethonium",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032266",
+      "last_updated": "2026-01-13T21:38:44.032268",
+      "completed_by": ""
+    },
+    "Sucralfate": {
+      "drug_name": "Sucralfate",
+      "group": "Gastrointestinal - Mucosal Protectant",
+      "vietnamese_name": "Sucralfate, Carafate",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032290",
+      "last_updated": "2026-01-13T21:38:44.032293",
+      "completed_by": ""
+    },
+    "Sulfasalazine": {
+      "drug_name": "Sulfasalazine",
+      "group": "Rheumatology - DMARD",
+      "vietnamese_name": "Sulfasalazine",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032314",
+      "last_updated": "2026-01-13T21:38:44.032316",
+      "completed_by": ""
+    },
+    "Sumatriptan": {
+      "drug_name": "Sumatriptan",
+      "group": "Neurology - Migraine (Triptan)",
+      "vietnamese_name": "Sumatriptan, Imigran",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032341",
+      "last_updated": "2026-01-13T21:38:44.032343",
+      "completed_by": ""
+    },
+    "Tacrolimus": {
+      "drug_name": "Tacrolimus",
+      "group": "Immunology - Calcineurin Inhibitor",
+      "vietnamese_name": "Tacrolimus, FK506",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "contraindications": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032379",
+      "last_updated": "2026-01-13T21:38:44.032381",
+      "completed_by": ""
+    },
+    "Tamoxifen": {
+      "drug_name": "Tamoxifen",
+      "group": "Oncology - Hormonal Therapy (SERM)",
+      "vietnamese_name": "Tamoxifen, Nolvadex",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032415",
+      "last_updated": "2026-01-13T21:38:44.032419",
+      "completed_by": ""
+    },
+    "Telmisartan": {
+      "drug_name": "Telmisartan",
+      "group": "Cardiovascular - ARB",
+      "vietnamese_name": "Telmisartan, Micardis",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032437",
+      "last_updated": "2026-01-13T21:38:44.032439",
+      "completed_by": ""
+    },
+    "Tetracycline": {
+      "drug_name": "Tetracycline",
+      "group": "Infectious Disease - Tetracycline Antibiotic",
+      "vietnamese_name": "Tetracycline, Tetracyn",
+      "priority": "P3",
+      "status": "pending",
+      "fields_to_supplement": [
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032491",
+      "last_updated": "2026-01-13T21:38:44.032493",
+      "completed_by": ""
+    },
+    "Thiamine (Vitamin B1)": {
+      "drug_name": "Thiamine (Vitamin B1)",
+      "group": "Nutrition - Vitamin B",
+      "vietnamese_name": "Vitamin B1, Thiamine",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032534",
+      "last_updated": "2026-01-13T21:38:44.032536",
+      "completed_by": ""
+    },
+    "Tigecycline": {
+      "drug_name": "Tigecycline",
+      "group": "Antibiotic - Glycylcycline (Tetracycline derivative)",
+      "vietnamese_name": "Tigecycline, Tygacil",
+      "priority": "P3",
+      "status": "pending",
+      "fields_to_supplement": [
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032587",
+      "last_updated": "2026-01-13T21:38:44.032589",
+      "completed_by": ""
+    },
+    "Topiramate": {
+      "drug_name": "Topiramate",
+      "group": "Neurology - Anticonvulsant",
+      "vietnamese_name": "Topiramate, Topamax",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032617",
+      "last_updated": "2026-01-13T21:38:44.032619",
+      "completed_by": ""
+    },
+    "Umeclidinium": {
+      "drug_name": "Umeclidinium",
+      "group": "Respiratory - Anticholinergic (Long-acting)",
+      "vietnamese_name": "Umeclidinium, Incruse Ellipta",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032645",
+      "last_updated": "2026-01-13T21:38:44.032647",
+      "completed_by": ""
+    },
+    "VAT (Tetanus Vaccine)": {
+      "drug_name": "VAT (Tetanus Vaccine)",
+      "group": "Vaccines - Tetanus (Uốn ván)",
+      "vietnamese_name": "Vắc xin Uốn ván hấp phụ (VAT)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032684",
+      "last_updated": "2026-01-13T21:38:44.032686",
+      "completed_by": ""
+    },
+    "Valsartan": {
+      "drug_name": "Valsartan",
+      "group": "Cardiovascular - ARB",
+      "vietnamese_name": "Valsartan, Diovan",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null,
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032702",
+      "last_updated": "2026-01-13T21:38:44.032704",
+      "completed_by": ""
+    },
+    "Verapamil": {
+      "drug_name": "Verapamil",
+      "group": "Cardiovascular - Calcium Channel Blocker (Non-dihydropyridine)",
+      "vietnamese_name": "Verapamil, Isoptin",
+      "priority": "P3",
+      "status": "pending",
+      "fields_to_supplement": [
+        "references"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "references": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032750",
+      "last_updated": "2026-01-13T21:38:44.032752",
+      "completed_by": ""
+    },
+    "Verorab (Rabies Vaccine)": {
+      "drug_name": "Verorab (Rabies Vaccine)",
+      "group": "Vaccines - Rabies (Dại)",
+      "vietnamese_name": "Vắc xin phòng Dại (Verorab, Abhayrab)",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": ""
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032788",
+      "last_updated": "2026-01-13T21:38:44.032790",
+      "completed_by": ""
+    },
+    "Vilanterol": {
+      "drug_name": "Vilanterol",
+      "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)",
+      "vietnamese_name": "Vilanterol, Breo Ellipta",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": null
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032817",
+      "last_updated": "2026-01-13T21:38:44.032819",
+      "completed_by": ""
+    },
+    "Vitamin C (Ascorbic Acid)": {
+      "drug_name": "Vitamin C (Ascorbic Acid)",
+      "group": "Nutrition - Vitamin",
+      "vietnamese_name": "Vitamin C, Ascorbic Acid",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032862",
+      "last_updated": "2026-01-13T21:38:44.032864",
+      "completed_by": ""
+    },
+    "Vitamin D3 (Cholecalciferol)": {
+      "drug_name": "Vitamin D3 (Cholecalciferol)",
+      "group": "Nutrition - Vitamin",
+      "vietnamese_name": "Vitamin D3",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": [],
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032897",
+      "last_updated": "2026-01-13T21:38:44.032899",
+      "completed_by": ""
+    },
+    "Vitamin K1": {
+      "drug_name": "Vitamin K1",
+      "group": "Toxicology - Antidote (Warfarin/Rodenticide)",
+      "vietnamese_name": "Vitamin K1, Phytomenadione",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032939",
+      "last_updated": "2026-01-13T21:38:44.032941",
+      "completed_by": ""
+    },
+    "Zoledronic Acid": {
+      "drug_name": "Zoledronic Acid",
+      "group": "Rheumatology - Bisphosphonate (IV)",
+      "vietnamese_name": "Zoledronic Acid, Aclasta, Zometa",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.032980",
+      "last_updated": "2026-01-13T21:38:44.032982",
+      "completed_by": ""
+    },
+    "Zolmitriptan": {
+      "drug_name": "Zolmitriptan",
+      "group": "Neurology - Migraine (Triptan)",
+      "vietnamese_name": "Zolmitriptan, Zomig",
+      "priority": "P0",
+      "status": "pending",
+      "fields_to_supplement": [
+        "pregnancy",
+        "side_effects",
+        "contraindications"
+      ],
+      "fields_completed": [],
+      "fields_skipped": [],
+      "current_data": {
+        "pregnancy": "",
+        "side_effects": [],
+        "contraindications": []
+      },
+      "supplementation_data": {},
+      "sources_checked": [],
+      "notes": "",
+      "created_date": "2026-01-13T21:38:44.033008",
+      "last_updated": "2026-01-13T21:38:44.033010",
+      "completed_by": ""
+    }
+  }
+}

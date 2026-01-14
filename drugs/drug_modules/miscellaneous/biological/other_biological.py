@@ -39,7 +39,7 @@ OTHER_BIOLOGICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc chống đông (warfarin, heparin): tăng nguy cơ chảy máu - TRÁNH hoặc thận trọng",
                 "Thuốc chống kết tập tiểu cầu (aspirin, clopidogrel): tăng nguy cơ chảy máu - TRÁNH hoặc thận trọng"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Caplacizumab là nanobody (single-domain antibody) kháng vWF (von Willebrand factor). vWF là protein quan trọng cho quá trình kết tập tiểu cầu và đông máu. Trong TTP, thiếu ADAMTS13 (enzyme phân hủy vWF) → vWF không được phân hủy → tăng vWF → tăng kết tập tiểu cầu → hình thành huyết khối → tổn thương vi mạch → TTP. Caplacizumab gắn với vWF → ngăn chặn vWF gắn với platelet receptor (GPIb) → ức chế kết tập tiểu cầu → giảm hình thành huyết khối. Dẫn đến: giảm tổn thương vi mạch và cải thiện triệu chứng trong TTP. Caplacizumab được dùng để điều trị TTP kết hợp với plasma exchange và immunosuppression.",
             "monitoring": [
                 "Chảy máu - QUAN TRỌNG: theo dõi chặt chẽ, đặc biệt chảy máu nặng",
@@ -215,7 +215,7 @@ OTHER_BIOLOGICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Có thể làm giảm hiệu quả immunoglobulin therapy"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Efgartigimod là kháng thể đơn dòng kháng FcRn (neonatal Fc receptor, humanized monoclonal antibody). FcRn là receptor quan trọng cho sự sống của IgG trong cơ thể. FcRn bảo vệ IgG khỏi bị phân hủy → kéo dài half-life của IgG. Trong myasthenia gravis, autoantibodies (IgG) tấn công acetylcholine receptor → gây yếu cơ. Efgartigimod gắn với FcRn → ngăn chặn FcRn bảo vệ IgG → tăng phân hủy IgG (bao gồm cả autoantibodies) → giảm nồng độ autoantibodies → giảm tấn công acetylcholine receptor → cải thiện yếu cơ. Dẫn đến: giảm triệu chứng và cải thiện chức năng trong myasthenia gravis. Efgartigimod được dùng để điều trị myasthenia gravis generalized, kháng AChR dương tính.",
             "monitoring": [
                 "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị",

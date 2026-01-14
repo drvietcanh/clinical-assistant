@@ -284,7 +284,7 @@ def render():
         render_suggestions(
             calculator_id="bmi_ibw_bsa",
             calculator_name="BMI | IBW | BSA",
-            category="Nội Tiết",
+            category="Nội tiết",
             show_related=True,
             show_category=True,
             limit=3

@@ -146,7 +146,7 @@ def render():
         render_suggestions(
             calculator_id="apri",
             calculator_name="APRI Score",
-            category="Tiêu Hóa",
+            category="Tiêu hóa",
             show_related=True,
             show_category=True,
             limit=3

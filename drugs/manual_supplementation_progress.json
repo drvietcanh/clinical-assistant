@@ -1,0 +1,11 @@
+{
+  "created_date": "2026-01-13T00:00:00",
+  "last_updated": "2026-01-13T00:00:00",
+  "total_drugs": 0,
+  "statistics": {
+    "completed": 0,
+    "in_progress": 0,
+    "pending": 0,
+    "skipped": 0
+  }
+}

@@ -87,7 +87,7 @@ def render():
         render_suggestions(
             calculator_id="hasbled",
             calculator_name="HAS-BLED Score",
-            category="Tim Mạch",
+            category="Tim mạch",
             show_related=True,
             show_category=True,
             limit=3
@@ -220,7 +220,7 @@ def render():
             
             # Visual Charts
             st.markdown("---")
-            st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+            st.markdown("### 📊 Biểu Đồ Nguy cơ")
             col_chart1, col_chart2 = st.columns(2)
             
             with col_chart1:

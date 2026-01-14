@@ -203,7 +203,7 @@ def generate_detailed_report(output_file: str = "drug_fields_detailed_report.md"
             report_lines.append("")
     
     # Priority action items
-    report_lines.append("## Ưu Tiên Hành Động")
+    report_lines.append("## Ưu tiên Hành Động")
     report_lines.append("")
     report_lines.append("### Priority 1: Bổ sung STANDARD fields thiếu")
     report_lines.append("")

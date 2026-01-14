@@ -128,7 +128,7 @@ def render_conservative():
     """Conservative management"""
     st.warning("## 💊 Điều trị Bảo Tồn")
     
-    st.markdown("### 1. Kiểm Soát Huyết Áp")
+    st.markdown("### 1. Kiểm soát Huyết Áp")
     st.success("""
     **Mục tiêu:**
     - <130/80 mmHg (nếu protein niệu <30 mg/g)

@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Lower GI Bleeding Management Protocol"""
-    st.subheader("🩸 Xuất Huyết Tiêu Hóa Dưới (Lower GI Bleeding)")
+    st.subheader("🩸 Xuất huyết Tiêu hóa Dưới (Lower GI Bleeding)")
     st.caption("ACG Guidelines 2024, UpToDate 2024 - Acute lower gastrointestinal bleeding")
     
     st.error("""

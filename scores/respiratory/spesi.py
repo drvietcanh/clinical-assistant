@@ -199,7 +199,7 @@ def render():
         render_suggestions(
             calculator_id="spesi",
             calculator_name="sPESI",
-            category="Hô Hấp",
+            category="Hô hấp",
             show_related=True,
             show_category=True,
             limit=3

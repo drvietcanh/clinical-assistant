@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Blood Pressure Management in CKD Protocol - KDIGO 2021"""
-    st.subheader("📊 Quản Lý Huyết Áp Trong CKD (KDIGO 2021)")
+    st.subheader("📊 Quản lý Huyết Áp Trong CKD (KDIGO 2021)")
     st.caption("KDIGO 2021 Clinical Practice Guideline for the Management of Blood Pressure in Chronic Kidney Disease")
     
     st.info("""

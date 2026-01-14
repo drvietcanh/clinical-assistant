@@ -32,6 +32,8 @@ def render_database():
     # Initialize session state
     if 'antibiotic_favorites' not in st.session_state:
         st.session_state.antibiotic_favorites = []
+    if 'antibiotic_notes' not in st.session_state:
+        st.session_state.antibiotic_notes = {}  # {antibiotic_name: note_text}
     
     # Initialize search state safely
     if 'ab_search_main' not in st.session_state:
@@ -88,13 +90,44 @@ def render_database():
     
     with tab_favorites:
         favorites = st.session_state.antibiotic_favorites
+        notes = st.session_state.antibiotic_notes
+        
         if favorites:
             st.success(f"Bạn có **{len(favorites)}** kháng sinh yêu thích")
             st.markdown("---")
+            
             for ab_name in favorites:
                 if ab_name in ANTIBIOTICS_DATABASE:
                     # Sanitize ab_name for key_prefix to avoid session state errors
                     safe_ab_name = _sanitize_key(ab_name)
+                    
+                    # Show note if exists
+                    if ab_name in notes and notes[ab_name]:
+                        with st.expander(f"📝 Ghi chú cho {ab_name}", expanded=False):
+                            note_text = st.text_area(
+                                "Ghi chú:",
+                                value=notes[ab_name],
+                                key=f"note_edit_{safe_ab_name}",
+                                height=100
+                            )
+                            col_n1, col_n2 = st.columns(2)
+                            with col_n1:
+                                if st.button("💾 Lưu", key=f"save_note_{safe_ab_name}"):
+                                    st.session_state.antibiotic_notes[ab_name] = note_text
+                                    st.success("Đã lưu!")
+                                    st.rerun()
+                            with col_n2:
+                                if st.button("🗑️ Xóa", key=f"delete_note_{safe_ab_name}"):
+                                    if ab_name in st.session_state.antibiotic_notes:
+                                        del st.session_state.antibiotic_notes[ab_name]
+                                    st.rerun()
+                    else:
+                        # Add note button
+                        if st.button(f"➕ Thêm ghi chú cho {ab_name}", key=f"add_note_{safe_ab_name}"):
+                            if ab_name not in st.session_state.antibiotic_notes:
+                                st.session_state.antibiotic_notes[ab_name] = ""
+                            st.rerun()
+                    
                     render_compact_antibiotic_card(ab_name, ANTIBIOTICS_DATABASE[ab_name], key_prefix=f"fav_{safe_ab_name}_")
                     st.markdown("<br>", unsafe_allow_html=True)
         else:
@@ -368,6 +401,13 @@ def render_database():
     if 'view_antibiotic' in st.session_state:
         selected_ab = st.session_state['view_antibiotic']
         if selected_ab in ANTIBIOTICS_DATABASE:
+            # Log view usage
+            try:
+                from .analytics import log_usage
+                log_usage("view", selected_ab)
+            except ImportError:
+                pass
+            
             st.markdown("### 📖 Thông tin chi tiết")
             display_antibiotic_info(selected_ab, ANTIBIOTICS_DATABASE[selected_ab])
             st.markdown("---")
@@ -383,6 +423,13 @@ def render_database():
             add_to_recent_searches(search_query)
             
             results = search_antibiotics(search_query)
+            
+            # Log search usage
+            try:
+                from .analytics import log_usage
+                log_usage("search", search_query, {"result_count": len(results)})
+            except ImportError:
+                pass
             
             if results:
                 st.success(f"✅ Tìm thấy **{len(results)}** kết quả cho '{search_query}'")

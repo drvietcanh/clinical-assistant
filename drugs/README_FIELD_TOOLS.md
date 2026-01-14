@@ -1,4 +1,4 @@
-# Hướng Dẫn Sử Dụng Công Cụ Kiểm Tra và Bổ Sung Fields
+# Hướng dẫn Sử Dụng Công Cụ Kiểm tra và Bổ sung Fields
 
 ## Tổng Quan
 
@@ -6,7 +6,7 @@ Bộ công cụ này giúp kiểm tra và bổ sung các field còn thiếu cho 
 
 ## Các Script Có Sẵn
 
-### 1. Kiểm Tra Fields (`check_all_drug_fields.py`)
+### 1. Kiểm tra Fields (`check_all_drug_fields.py`)
 
 **Mục đích:** Kiểm tra toàn diện tất cả thuốc và fields
 
@@ -23,7 +23,7 @@ python drugs/check_all_drug_fields.py
 - Top 10 pattern thiếu field phổ biến
 - Phân tích độ hoàn thiện
 
-### 2. Bổ Sung Fields (`supplement_missing_fields.py`)
+### 2. Bổ sung Fields (`supplement_missing_fields.py`)
 
 **Mục đích:** Bổ sung skeleton fields cho thuốc thiếu
 
@@ -93,7 +93,7 @@ python drugs/create_final_summary.py
 
 ## Quy Trình Sử Dụng
 
-### Bước 1: Kiểm Tra Hiện Trạng
+### Bước 1: Kiểm tra Hiện Trạng
 ```bash
 python drugs/check_all_drug_fields.py
 ```
@@ -103,14 +103,14 @@ Xem kết quả để biết:
 - Thuốc nào cần bổ sung
 - Pattern thiếu field phổ biến
 
-### Bước 2: Xem Trước Bổ Sung
+### Bước 2: Xem Trước Bổ sung
 ```bash
 python drugs/supplement_missing_fields.py --dry-run
 ```
 
 Xem trước những gì sẽ được bổ sung mà không thay đổi database.
 
-### Bước 3: Bổ Sung Fields (Nếu Cần)
+### Bước 3: Bổ sung Fields (Nếu Cần)
 ```bash
 python drugs/supplement_missing_fields.py --execute
 ```
@@ -176,7 +176,7 @@ print(f"File chứa thuốc: {file_path}")
 23. `renal_adjustment` - Điều chỉnh liều suy thận
 24. `contraindications_detail` - Chống chỉ định chi tiết
 
-## Tài Liệu Tham Khảo
+## Tài liệu Tham khảo
 
 - `IMPLEMENTATION_COMPLETE.md` - Tổng kết triển khai
 - `FIELD_SUPPLEMENTATION_PLAN.md` - Kế hoạch chi tiết
@@ -190,7 +190,7 @@ print(f"File chứa thuốc: {file_path}")
 3. **Validation:** Chạy validation sau mỗi lần thay đổi
 4. **Incremental:** Bổ sung từng nhóm, kiểm tra sau mỗi nhóm
 
-## Hỗ Trợ
+## Hỗ trợ
 
 Nếu gặp vấn đề, kiểm tra:
 1. File có tồn tại không

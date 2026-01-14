@@ -40,7 +40,7 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Erythromycin tại chỗ: đối kháng, tránh dùng cùng",
                 "Benzoyl peroxide: có thể dùng kết hợp (tăng hiệu quả)"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Clindamycin là lincosamide antibiotic, ức chế tổng hợp protein vi khuẩn bằng cách gắn với 50S ribosomal subunit. Tác dụng với Propionibacterium acnes (vi khuẩn gây mụn trứng cá) và các vi khuẩn Gram-dương khác. Dạng tại chỗ hấp thu toàn thân tối thiểu, giảm nguy cơ tác dụng phụ toàn thân. Được dùng cho mụn trứng cá, đặc biệt mụn viêm.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm mụn trứng cá)",
@@ -186,7 +186,7 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Clindamycin tại chỗ: đối kháng, tránh dùng cùng",
                 "Benzoyl peroxide: có thể dùng kết hợp (tăng hiệu quả)"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Erythromycin là macrolide antibiotic, ức chế tổng hợp protein vi khuẩn bằng cách gắn với 50S ribosomal subunit. Tác dụng với Propionibacterium acnes (vi khuẩn gây mụn trứng cá) và các vi khuẩn Gram-dương khác. Dạng tại chỗ hấp thu toàn thân tối thiểu, giảm nguy cơ tác dụng phụ toàn thân. Được dùng cho mụn trứng cá, đặc biệt mụn viêm.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm mụn trứng cá)",
@@ -326,7 +326,7 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Ít tương tác thuốc"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Fusidic acid là antibiotic, ức chế tổng hợp protein vi khuẩn bằng cách gắn với elongation factor G (EF-G) trên ribosome. Tác dụng chủ yếu với Staphylococcus (bao gồm MRSA) và một số vi khuẩn Gram-dương khác. Đặc điểm: hiệu quả với MRSA, ít kháng thuốc, hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm nhiễm khuẩn)",
@@ -457,7 +457,7 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác đáng kể với thuốc khác (topical)",
                 "Metronidazole đường uống: không dùng cùng lúc (tăng nguy cơ tác dụng phụ)"
             ],
-            "pregnancy": "B - An toàn",
+        "pregnancy": "B - An toàn",
             "mechanism_of_action": "Metronidazole là kháng sinh nitroimidazole tại chỗ. Tác dụng: (1) Kháng khuẩn - ức chế DNA synthesis của vi khuẩn (Propionibacterium acnes, Demodex mites), (2) Chống viêm - ức chế sản xuất reactive oxygen species, giảm viêm. Dẫn đến: giảm rosacea. ĐẶC ĐIỂM: (1) Kháng khuẩn và chống viêm, (2) Dùng 1-2 lần/ngày tùy theo nồng độ, (3) Điều trị thường 8-12 tuần, (4) Có thể dùng kéo dài để duy trì, (5) An toàn trong thai kỳ (category B), (6) Kích ứng da phổ biến.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, giảm mụn rosacea) - cải thiện sau 4-8 tuần",
@@ -602,7 +602,7 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Rượu: có thể gây phản ứng disulfiram-like (hiếm với dạng tại chỗ)",
                 "Warfarin: có thể tăng INR (hiếm với dạng tại chỗ)"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Metronidazole là nitroimidazole antibiotic/antiparasitic. Ức chế DNA synthesis của vi khuẩn kỵ khí và ký sinh trùng. Tác dụng với Demodex mites (có thể liên quan đến rosacea) và vi khuẩn kỵ khí. Dạng tại chỗ hấp thu toàn thân tối thiểu, giảm nguy cơ tác dụng phụ toàn thân. Được dùng chủ yếu cho rosacea (đỏ mặt, mụn mủ).",
             "monitoring": [
                 "Đáp ứng điều trị (giảm rosacea)",
@@ -743,7 +743,7 @@ TOPICAL_ANTIBIOTICS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (topical)"
             ],
-            "pregnancy": "B - An toàn",
+        "pregnancy": "B - An toàn",
             "mechanism_of_action": "Mupirocin là kháng sinh tại chỗ, ức chế enzyme isoleucyl-tRNA synthetase của vi khuẩn, ngăn chặn sự tổng hợp protein, dẫn đến tiêu diệt vi khuẩn (bactericidal). Mupirocin hiệu quả với Staphylococcus aureus (kể cả MRSA - methicillin-resistant S. aureus) và Streptococcus pyogenes. ĐẶC ĐIỂM: (1) Hiệu quả với S. aureus (kể cả MRSA) và S. pyogenes, (2) Bactericidal (tiêu diệt vi khuẩn), (3) Dùng 3 lần/ngày trong 5-10 ngày, (4) Nguy cơ kháng thuốc nếu dùng kéo dài hoặc không đúng cách, (5) An toàn, ít tác dụng phụ.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, mủ) - cải thiện sau 2-3 ngày",

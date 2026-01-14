@@ -212,7 +212,7 @@ def render():
     
     with col2:
         st.markdown("""
-        **Trẻ Em:**
+        **Trẻ em:**
         - Nguyên nhân thường khác
         - **PEG:** An toàn, liều tính theo kg
         - **Lactulose:** Có thể dùng

@@ -52,7 +52,7 @@ FUSION_PROTEINS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Có thể làm giảm đáp ứng vaccine (sống)",
                 "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Etanercept là fusion protein gồm thụ thể TNF-α (p75) gắn với Fc của IgG1. TNF-α là cytokine tiền viêm quan trọng, được sản xuất bởi đại thực bào và tế bào T, đóng vai trò trong quá trình viêm. Trong các bệnh tự miễn (RA, AS, psoriasis), TNF-α tăng cao → gây viêm mạn tính → tổn thương mô. Etanercept gắn với TNF-α (cả TNF-α và lymphotoxin-α) → ngăn chặn TNF-α gắn với thụ thể trên tế bào → ức chế tín hiệu viêm → giảm viêm và tổn thương mô. Dẫn đến: giảm triệu chứng và làm chậm tiến triển bệnh. Etanercept được dùng để điều trị nhiều bệnh tự miễn qua trung gian TNF-α, đặc biệt hiệu quả trong RA và AS.",
             "monitoring": [
                 "Phản ứng tại chỗ tiêm",

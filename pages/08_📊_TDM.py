@@ -94,11 +94,11 @@ with st.sidebar:
     
     # Add existing drugs that might not be in config yet
     existing_drugs = [
-        "💚 TDM - Digoxin (Tim Mạch)",
+        "💚 TDM - Digoxin (Tim mạch)",
         "🧠 TDM - Phenytoin (Thần kinh)",
         "💊 TDM - Lithium (Tâm Thần)",
-        "🫁 TDM - Theophylline (Hô Hấp)",
-        "🩸 TDM - Tacrolimus/Cyclosporine (Miễn Dịch)"
+        "🫁 TDM - Theophylline (Hô hấp)",
+        "🩸 TDM - Tacrolimus/Cyclosporine (Miễn dịch)"
     ]
     
     # Combine lists

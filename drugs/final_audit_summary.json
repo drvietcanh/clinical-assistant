@@ -1,0 +1,188 @@
+{
+  "audit_date": "2026-01-13T21:23:58.183011",
+  "total_drugs": 714,
+  "field_completeness": {
+    "group": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "vietnamese_name": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "administration": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "indications": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "dosage": {
+      "present": 713,
+      "empty": 1,
+      "completeness_percent": 99.86
+    },
+    "side_effects": {
+      "present": 700,
+      "empty": 14,
+      "completeness_percent": 98.04
+    },
+    "contraindications": {
+      "present": 679,
+      "empty": 35,
+      "completeness_percent": 95.1
+    },
+    "interactions": {
+      "present": 657,
+      "empty": 57,
+      "completeness_percent": 92.02
+    },
+    "pregnancy": {
+      "present": 605,
+      "empty": 109,
+      "completeness_percent": 84.73
+    },
+    "mechanism_of_action": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "monitoring": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "precautions": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "pharmacokinetics": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "storage": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "black_box_warnings": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "drug_interactions": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "pregnancy_lactation": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "hepatic_adjustment": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "overdose_management": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "reversal_agents": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "administration_instructions": {
+      "present": 714,
+      "empty": 0,
+      "completeness_percent": 100.0
+    },
+    "references": {
+      "present": 680,
+      "empty": 34,
+      "completeness_percent": 95.24
+    }
+  },
+  "critical_fields_status": {
+    "group": {
+      "missing_count": 0,
+      "missing_drugs": []
+    },
+    "vietnamese_name": {
+      "missing_count": 0,
+      "missing_drugs": []
+    },
+    "administration": {
+      "missing_count": 0,
+      "missing_drugs": []
+    },
+    "indications": {
+      "missing_count": 0,
+      "missing_drugs": []
+    },
+    "dosage": {
+      "missing_count": 1,
+      "missing_drugs": [
+        "Budesonide inhaled"
+      ]
+    },
+    "side_effects": {
+      "missing_count": 14,
+      "missing_drugs": [
+        "Budesonide inhaled",
+        "Zolmitriptan",
+        "Desloratadine",
+        "Sodium Chloride 0.9%",
+        "Ringer Lactate",
+        "HES 130/0.4",
+        "Vitamin D3 (Cholecalciferol)",
+        "Febuxostat",
+        "Levobupivacaine",
+        "Snake Antivenom (Ho Dat)"
+      ]
+    },
+    "contraindications": {
+      "missing_count": 35,
+      "missing_drugs": [
+        "Simvastatin",
+        "Pravastatin",
+        "Dapagliflozin",
+        "Canagliflozin",
+        "Dulaglutide",
+        "Sulfasalazine",
+        "Rizatriptan",
+        "Zolmitriptan",
+        "Cetirizine",
+        "Desloratadine"
+      ]
+    },
+    "pregnancy": {
+      "missing_count": 109,
+      "missing_drugs": [
+        "Enalapril",
+        "Lisinopril",
+        "Losartan",
+        "Telmisartan",
+        "Valsartan",
+        "Simvastatin",
+        "Pravastatin",
+        "Metformin",
+        "Insulin",
+        "Empagliflozin"
+      ]
+    }
+  },
+  "recommendations": [
+    "Cần bổ sung field pregnancy cho 109 thuốc"
+  ]
+}

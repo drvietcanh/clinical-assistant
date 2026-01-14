@@ -314,7 +314,7 @@ STATINS_DRUGS = {
             "hemodialysis": "Có thể cần bổ sung sau lọc máu (tùy thuốc)",
         },
         "contraindications": [],
-        "pregnancy": "",
+        "pregnancy": "X - Chống chỉ định tuyệt đối trong thai kỳ do nguy cơ dị tật bẩm sinh",
         "drug_interactions": {
             "major": [],
             "moderate": [],
@@ -619,7 +619,7 @@ STATINS_DRUGS = {
         },
         "contraindications": [],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "X - Chống chỉ định tuyệt đối trong thai kỳ do nguy cơ dị tật bẩm sinh",
         "drug_interactions": {
             "major": [],
             "moderate": [],

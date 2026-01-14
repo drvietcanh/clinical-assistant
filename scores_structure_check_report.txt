@@ -1,0 +1,86 @@
+SCORES STRUCTURE CHECK REPORT
+================================================================================
+
+Total specialties: 22
+Total calculators: 201
+
+INFO (76 items):
+  ✓ Specialty module 'cardiology' exists
+  ✓ Specialty module 'emergency' exists
+  ✓ Specialty module 'respiratory' exists
+  ✓ Specialty module 'neurology' exists
+  ✓ Specialty module 'gi' exists
+  ✓ Specialty module 'metabolism' exists
+  ✓ Specialty module 'hematology' exists
+  ✓ Specialty module 'nephrology' exists
+  ✓ Specialty module 'trauma' exists
+  ✓ Specialty module 'psychiatry' exists
+  ✓ Specialty module 'oncology' exists
+  ✓ Specialty module 'surgery' exists
+  ✓ Specialty module 'pediatrics' exists
+  ✓ Specialty module 'infectious' exists
+  ✓ Specialty module 'ent' exists
+  ✓ Specialty module 'obstetrics' exists
+  ✓ Specialty module 'dermatology' exists
+  ✓ Specialty module 'rheumatology' exists
+  ✓ Specialty module 'ophthalmology' exists
+  ✓ Specialty module 'pain' exists
+  ✓ Specialty module 'nursing' exists
+  ✓ Component 'scores_favorites' exists
+  ✓ Component 'scores_dark_mode' exists
+  ✓ Component 'scores_autocomplete' exists
+  ✓ Component 'scores_related' exists
+  ✓ Component 'scores_mobile' exists
+  ✓ Component 'scores_references' exists
+  ✓ Component 'scores_recent' exists
+  ✓ Component 'scores_css_fix' exists
+  ✓ Component 'scores_export' exists
+  ✓ Found 22 specialties in config
+  ✓ Specialty '🚨 Cấp cứu & Hồi sức (Emergency & Critical Care)' has 21 calculators
+  ✓ Specialty '❤️ Tim mạch (Cardiology)' has 24 calculators
+  ✓ Specialty '🫁 Hô hấp (Respiratory)' has 10 calculators
+  ✓ Specialty '🧠 Thần kinh (Neurology)' has 16 calculators
+  ✓ Specialty '🩸 Tiêu hóa - Gan Mật (GI/Hepatology)' has 12 calculators
+  ✓ Specialty '🩺 Huyết học & Đông máu (Hematology)' has 4 calculators
+  ✓ Specialty '🧪 Thận - Điện giải (Nephrology)' has 4 calculators
+  ✓ Specialty '🦴 Chấn thương & Chỉnh Hình (Trauma/Orthopedics)' has 5 calculators
+  ✓ Specialty '👂 Tai Mũi Họng (ENT)' has 2 calculators
+  ✓ Specialty '👶 Nhi khoa (Pediatrics)' has 10 calculators
+  ✓ Specialty '🤰 Sản khoa (Obstetrics)' has 3 calculators
+  ✓ Specialty '💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)' has 18 calculators
+  ✓ Specialty '🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)' has 7 calculators
+  ✓ Specialty '🦠 Nhiễm khuẩn (Infectious Disease)' has 5 calculators
+  ✓ Specialty '🩹 Da liễu (Dermatology)' has 5 calculators
+  ✓ Specialty '🎗️ Ung thư (Oncology)' has 5 calculators
+  ✓ Specialty '🧠 Tâm thần - Tâm Lý (Psychiatry/Psychology)' has 8 calculators
+  ✓ Specialty '🔪 Phẫu thuật & Gây mê (Surgery/Anesthesia)' has 27 calculators
+  ✓ Specialty '👁️ Mắt (Ophthalmology)' has 1 calculators
+  ✓ Specialty '😣 Đánh giá đau (Pain Assessment)' has 6 calculators
+  ✓ Specialty '🛏️ Chăm sóc điều dưỡng (Nursing Care)' has 2 calculators
+  ✓ Specialty '👴 Lão khoa (Geriatrics)' has 6 calculators
+  ✓ Module 'cardiology' has function 'render_cardiology_calculator'
+  ✓ Module 'emergency' has function 'render_emergency_calculator'
+  ✓ Module 'respiratory' has function 'render_respiratory_calculator'
+  ✓ Module 'neurology' has function 'render_neurology_calculator'
+  ✓ Module 'gi' has function 'render_gi_calculator'
+  ✓ Module 'metabolism' has function 'render_metabolism_calculator'
+  ✓ Module 'hematology' has function 'render_hematology_calculator'
+  ✓ Module 'nephrology' has function 'render_nephrology_calculator'
+  ✓ Module 'trauma' has function 'render_trauma_calculator'
+  ✓ Module 'psychiatry' has function 'render_psychiatry_calculator'
+  ✓ Module 'oncology' has function 'render_oncology_calculator'
+  ✓ Module 'surgery' has function 'render_surgery_calculator'
+  ✓ Module 'pediatrics' has function 'render_pediatrics_calculator'
+  ✓ Module 'infectious' has function 'render_infectious_calculator'
+  ✓ Module 'ent' has function 'render_ent_calculator'
+  ✓ Module 'obstetrics' has function 'render_obstetrics_calculator'
+  ✓ Module 'dermatology' has function 'render_dermatology_calculator'
+  ✓ Module 'rheumatology' has function 'render_rheumatology_calculator'
+  ✓ Module 'ophthalmology' has function 'render_ophthalmology_calculator'
+  ✓ Module 'pain' has function 'render_pain_calculator'
+  ✓ Module 'nursing' has function 'render_nursing_calculator'
+  ✓ Routing patterns cover 22 specialties
+  ✓ Total calculators in config: 201
+
+WARNINGS (1 items):
+  Manual verification needed: Check each score_id has implementation in specialty module

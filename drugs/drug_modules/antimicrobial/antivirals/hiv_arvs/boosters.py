@@ -33,7 +33,7 @@ BOOSTERS_ARVS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Ức chế mạnh CYP3A, P-gp, OATP1B1/3: nhiều tương tác thuốc.",
             ],
-            "pregnancy": "Tránh dùng trong thai kỳ (nồng độ giảm, ưu tiên ritonavir hoặc không booster).",
+        "pregnancy": "Tránh dùng trong thai kỳ (nồng độ giảm, ưu tiên ritonavir hoặc không booster).",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
@@ -177,7 +177,7 @@ BOOSTERS_ARVS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Ức chế mạnh CYP3A/CYP2D6/P-gp → rất nhiều tương tác.",
             ],
-            "pregnancy": "Có thể dùng; được kinh nghiệm lâu dài hơn COBI.",
+        "pregnancy": "Có thể dùng; được kinh nghiệm lâu dài hơn COBI.",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,

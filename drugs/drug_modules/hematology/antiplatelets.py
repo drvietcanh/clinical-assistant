@@ -33,7 +33,7 @@ ANTIPLATELETS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Aspirin: dùng kèm để tăng hiệu quả",
                 "Warfarin: tăng nguy cơ chảy máu"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -153,7 +153,7 @@ ANTIPLATELETS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Aspirin: dùng kèm (dual antiplatelet therapy)",
                 "Warfarin: tăng nguy cơ chảy máu"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -337,7 +337,7 @@ ANTIPLATELETS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Warfarin: tăng nguy cơ chảy máu",
                 "Strong CYP3A4 inhibitors: tăng nồng độ (tránh dùng)"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -525,7 +525,7 @@ ANTIPLATELETS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Warfarin: tăng nguy cơ chảy máu",
                 "Antacids: giảm hấp thu"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Ticlopidine là thienopyridine, ức chế P2Y12 receptor trên tiểu cầu, ngăn chặn kích hoạt tiểu cầu bởi ADP. Thuốc ức chế aggregation tiểu cầu và giải phóng các chất tiểu cầu, làm giảm hình thành huyết khối. Ticlopidine là prodrug, chuyển hóa trong gan thành chất hoạt động. Thuốc ức chế mạnh hơn clopidogrel nhưng có nhiều tác dụng phụ nghiêm trọng, đặc biệt giảm bạch cầu và giảm tiểu cầu, nên ít dùng, thay bằng clopidogrel. Thường dùng để phòng ngừa đột quỵ sau TIA, nhưng hiện tại clopidogrel là lựa chọn ưu tiên.",
             "monitoring": [
                 "Công thức máu (CBC) - mỗi 2 tuần trong 3 tháng đầu (nguy cơ giảm bạch cầu cao nhất)",

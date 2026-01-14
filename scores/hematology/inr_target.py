@@ -190,7 +190,7 @@ def render():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📋 Chỉ Định Lâm Sàng")
+        st.markdown("### 📋 Chỉ định Lâm Sàng")
         
         shared_inputs = st.session_state.get('shared_inputs', {})
         
@@ -221,7 +221,7 @@ def render():
             index=0
         )
         
-        st.markdown("### 👤 Yếu Tố Bổ Sung (Tùy chọn)")
+        st.markdown("### 👤 Yếu Tố Bổ sung (Tùy chọn)")
         
         col_age, col_bleeding = st.columns(2)
         with col_age:
@@ -247,7 +247,7 @@ def render():
             )
         
         # Calculate
-        if st.button("🔄 Xác Định INR Mục Tiêu", type="primary", use_container_width=True):
+        if st.button("🔄 Xác Định INR Mục tiêu", type="primary", use_container_width=True):
             additional_factors = {
                 "age": age if age else None,
                 "bleeding_risk": bleeding_risk
@@ -259,7 +259,7 @@ def render():
             
             # Display results
             st.markdown("---")
-            st.markdown("### 📊 INR Mục Tiêu")
+            st.markdown("### 📊 INR Mục tiêu")
             
             col_res1, col_res2, col_res3 = st.columns(3)
             
@@ -272,7 +272,7 @@ def render():
             
             with col_res2:
                 st.metric(
-                    "INR Mục Tiêu",
+                    "INR Mục tiêu",
                     f"{result['target']:.1f}",
                     delta=f"Range: {result['min']:.1f}-{result['max']:.1f}",
                     help="INR mục tiêu trung tâm"
@@ -310,7 +310,7 @@ def render():
                 """)
             
             # Monitoring
-            st.markdown("### 📅 Theo Dõi INR")
+            st.markdown("### 📅 Theo dõi INR")
             
             col_mon1, col_mon2 = st.columns(2)
             with col_mon1:
@@ -325,7 +325,7 @@ def render():
                     st.markdown(rec)
             
             # Clinical guidance
-            st.markdown("### 🎯 Hướng Dẫn Lâm Sàng")
+            st.markdown("### 🎯 Hướng dẫn Lâm Sàng")
             
             if indication.startswith("mechanical_valve"):
                 st.warning("""

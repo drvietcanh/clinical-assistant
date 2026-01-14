@@ -54,7 +54,7 @@ MYDRIATICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc gây QT kéo dài: tăng nguy cơ rối loạn nhịp tim",
                 "Thuốc ức chế acetylcholinesterase (neostigmine, pyridostigmine): đối kháng tác dụng"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Atropine là anticholinergic (muscarinic receptor antagonist). Ức chế muscarinic receptors trong cơ trơn mống mắt (iris sphincter) và cơ thể mi (ciliary muscle), dẫn đến: (1) Giãn đồng tử (mydriasis) - ức chế cơ co đồng tử, (2) Liệt điều tiết (cycloplegia) - ức chế cơ thể mi, mất khả năng điều tiết, (3) Giảm đau trong viêm màng bồ đào (giảm co thắt cơ), (4) Dự phòng dính mống mắt (giữ đồng tử giãn). Atropine có tác dụng kéo dài (7-14 ngày) do thời gian bán thải dài. ĐẶC ĐIỂM: (1) Tác dụng kéo dài (7-14 ngày), (2) CHỐNG CHỈ ĐỊNH ở glaucoma góc đóng, (3) Có thể hấp thu toàn thân và gây tác dụng phụ hệ thống, (4) Nhìn mờ kéo dài - bệnh nhân không nên lái xe, (5) Nhạy cảm với ánh sáng - cần đeo kính râm, (6) Lú lẫn, mê sảng ở người cao tuổi - cần theo dõi sát.",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - QUAN TRỌNG (nguy cơ tăng nhãn áp nếu có glaucoma góc đóng)",
@@ -257,7 +257,7 @@ MYDRIATICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc gây QT kéo dài: tăng nguy cơ rối loạn nhịp tim",
                 "Thuốc ức chế acetylcholinesterase (neostigmine, pyridostigmine): đối kháng tác dụng"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Cyclopentolate là anticholinergic (muscarinic receptor antagonist). Ức chế muscarinic receptors trong cơ trơn mống mắt (iris sphincter) và cơ thể mi (ciliary muscle), dẫn đến: (1) Giãn đồng tử (mydriasis) - ức chế cơ co đồng tử, (2) Liệt điều tiết (cycloplegia) - ức chế cơ thể mi, mất khả năng điều tiết, (3) Giảm đau trong viêm màng bồ đào (giảm co thắt cơ), (4) Dự phòng dính mống mắt (giữ đồng tử giãn). Cyclopentolate có tác dụng ngắn (6-24 giờ) so với atropine (7-14 ngày), phù hợp cho khám mắt và khám khúc xạ. ĐẶC ĐIỂM: (1) Tác dụng ngắn (6-24 giờ), (2) CHỐNG CHỈ ĐỊNH ở glaucoma góc đóng, (3) Có thể hấp thu toàn thân nhưng ít hơn atropine, (4) Nhìn mờ 6-24 giờ - bệnh nhân không nên lái xe, (5) Nhạy cảm với ánh sáng - cần đeo kính râm, (6) Lú lẫn, mê sảng ở trẻ em, người cao tuổi - cần theo dõi sát.",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - QUAN TRỌNG (nguy cơ tăng nhãn áp nếu có glaucoma góc đóng)",
@@ -463,7 +463,7 @@ MYDRIATICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Tricyclic antidepressants: tăng nguy cơ tăng huyết áp nặng",
                 "Cocaine: tăng nguy cơ tăng huyết áp nặng, loạn nhịp tim"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Phenylephrine là alpha-1 adrenergic receptor agonist. Kích thích alpha-1 receptors trong cơ trơn mống mắt (iris dilator muscle), gây co cơ giãn đồng tử (dilator muscle contraction), dẫn đến giãn đồng tử (mydriasis). Phenylephrine KHÔNG ảnh hưởng đến cơ thể mi (ciliary muscle), do đó KHÔNG gây liệt điều tiết (cycloplegia). Phenylephrine cũng có tác dụng co mạch (vasoconstriction), giảm đỏ mắt. ĐẶC ĐIỂM: (1) Tác dụng ngắn (2-6 giờ), (2) CHỈ gây giãn đồng tử, KHÔNG gây liệt điều tiết, (3) CHỐNG CHỈ ĐỊNH ở glaucoma góc đóng, bệnh tim mạch nặng, tăng huyết áp không kiểm soát, (4) Có thể hấp thu toàn thân và gây tăng huyết áp, nhịp tim nhanh, đau ngực, (5) CHỐNG CHỈ ĐỊNH với MAO inhibitors, (6) Thường dùng kết hợp với cycloplegic để tăng hiệu quả giãn đồng tử.",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - QUAN TRỌNG (nguy cơ tăng nhãn áp nếu có glaucoma góc đóng)",
@@ -686,7 +686,7 @@ MYDRIATICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Anticholinergic đường uống: tăng nguy cơ tác dụng phụ toàn thân",
                 "Thuốc chống trầm cảm ba vòng: tăng nguy cơ tác dụng phụ toàn thân"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Tropicamide là anticholinergic (muscarinic receptor antagonist). Ức chế muscarinic receptors trên cơ vòng mống mắt (sphincter pupillae) và cơ thể mi (ciliary muscle), dẫn đến: (1) Giãn đồng tử (mydriasis) - cơ vòng mống mắt giãn, cơ giãn mống mắt co, (2) Liệt điều tiết (cycloplegia) - cơ thể mi giãn, thủy tinh thể phẳng, không thể điều tiết. Dẫn đến: giãn đồng tử và liệt điều tiết, cho phép khám mắt tốt hơn. Tropicamide tác dụng nhanh (15-30 phút), kéo dài 4-6 giờ. ĐẶC ĐIỂM: (1) Anticholinergic, giãn đồng tử và liệt điều tiết, (2) Tác dụng nhanh (15-30 phút), kéo dài 4-6 giờ, (3) CHỐNG CHỈ ĐỊNH ở tăng nhãn áp góc đóng (có thể gây tăng nhãn áp cấp tính), (4) Nhìn mờ và nhạy cảm với ánh sáng kéo dài 4-6 giờ, (5) Có thể hấp thu toàn thân và gây tác dụng phụ (khô miệng, nhịp nhanh).",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - QUAN TRỌNG: kiểm tra trước và sau khi dùng, đặc biệt ở bệnh nhân có nguy cơ",

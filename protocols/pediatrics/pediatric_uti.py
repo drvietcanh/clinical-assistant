@@ -1,7 +1,7 @@
 import streamlit as st
 
 def render_pediatric_uti():
-    st.header("👶 Nhiễm Trùng Tiểu Trẻ Em (Pediatric UTI)")
+    st.header("👶 Nhiễm Trùng Tiểu Trẻ em (Pediatric UTI)")
     st.caption("Dựa trên hướng dẫn AAP 2011 (Reaffirmed 2016/2021)")
 
     st.warning("⚠️ Cần chẩn đoán và điều trị sớm để ngăn ngừa sẹo thận (Renal Scarring).")

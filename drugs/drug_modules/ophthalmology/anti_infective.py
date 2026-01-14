@@ -42,7 +42,7 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "B - An toàn",
+        "pregnancy": "B - An toàn",
             "mechanism_of_action": "Acyclovir là thuốc kháng virus, ức chế DNA polymerase của virus Herpes simplex. Acyclovir được phosphoryl hóa bởi thymidine kinase của virus (chỉ có trong tế bào nhiễm virus) thành acyclovir monophosphate, sau đó được phosphoryl hóa tiếp thành acyclovir triphosphate. Acyclovir triphosphate gắn với DNA polymerase của virus, ngăn chặn sự tổng hợp DNA virus, dẫn đến ức chế sự nhân lên của virus. Dẫn đến: giảm viêm giác mạc, viêm kết mạc do Herpes simplex. ĐẶC ĐIỂM: (1) Kháng virus Herpes simplex, (2) Dùng 5 lần/ngày (mỗi 3 giờ khi thức) cho viêm giác mạc, (3) Có thể dùng kéo dài để dự phòng tái phát, (4) Kích ứng mắt phổ biến, (5) An toàn trong thai kỳ (category B), (6) An toàn, ít tác dụng phụ toàn thân.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, loét giác mạc) - cải thiện sau 3-5 ngày",
@@ -192,7 +192,7 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "B - An toàn",
+        "pregnancy": "B - An toàn",
             "mechanism_of_action": "Acyclovir là thuốc kháng virus, ức chế DNA polymerase của virus herpes, ngăn chặn sự tổng hợp DNA virus, dẫn đến ức chế sự nhân lên của virus. Hiệu quả với herpes simplex và herpes zoster. ĐẶC ĐIỂM: (1) Kháng virus, hiệu quả với herpes simplex và herpes zoster, (2) Dùng 5 lần/ngày cho điều trị, 3 lần/ngày cho dự phòng, (3) Nhìn mờ tạm thời sau khi bôi - phổ biến, (4) An toàn trong thai kỳ (category B), (5) Kích ứng mắt phổ biến.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, đau) - cải thiện sau 2-3 ngày",
@@ -339,7 +339,7 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Ciprofloxacin là fluoroquinolone (kháng sinh phổ rộng). Ức chế DNA gyrase và topoisomerase IV của vi khuẩn, ngăn chặn sự sao chép DNA và phân chia tế bào vi khuẩn, dẫn đến tiêu diệt vi khuẩn (bactericidal). Ciprofloxacin hiệu quả với nhiều vi khuẩn Gram-dương (Staphylococcus, Streptococcus) và Gram-âm (Pseudomonas, Haemophilus, Neisseria). ĐẶC ĐIỂM: (1) Phổ rộng, hiệu quả với nhiều vi khuẩn, (2) Bactericidal (tiêu diệt vi khuẩn), (3) Dùng thường xuyên trong giai đoạn đầu, (4) Điều trị thường 7-14 ngày, (5) Vị đắng trong miệng do hấp thu toàn thân - phổ biến.",
             "monitoring": [
                 "Dấu hiệu nhiễm trùng (đỏ mắt, chảy mủ, đau) - cải thiện sau 24-48 giờ",
@@ -494,7 +494,7 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)",
                 "Erythromycin đường uống: không dùng cùng lúc (tăng nguy cơ tác dụng phụ)"
             ],
-            "pregnancy": "B - An toàn",
+        "pregnancy": "B - An toàn",
             "mechanism_of_action": "Erythromycin là macrolide, ức chế tổng hợp protein của vi khuẩn bằng cách gắn với ribosome 50S, ngăn chặn sự tổng hợp protein, dẫn đến ức chế sự nhân lên của vi khuẩn (bacteriostatic). Phổ rộng, hiệu quả với nhiều vi khuẩn Gram-dương (Staphylococcus, Streptococcus) và một số Gram-âm. ĐẶC ĐIỂM: (1) Macrolide, phổ rộng, (2) Bacteriostatic (ức chế sự nhân lên của vi khuẩn), (3) Dùng 2-4 lần/ngày, (4) Nhìn mờ tạm thời sau khi bôi - phổ biến, (5) An toàn cho trẻ sơ sinh (dự phòng ophthalmia neonatorum), (6) Kích ứng mắt phổ biến.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, mủ) - cải thiện sau 2-3 ngày",
@@ -652,7 +652,7 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Ganciclovir là thuốc kháng virus, ức chế DNA polymerase của virus CMV và Herpes simplex. Ganciclovir được phosphoryl hóa bởi kinase của virus (UL97 cho CMV, thymidine kinase cho Herpes simplex) thành ganciclovir monophosphate, sau đó được phosphoryl hóa tiếp thành ganciclovir triphosphate. Ganciclovir triphosphate gắn với DNA polymerase của virus, ngăn chặn sự tổng hợp DNA virus, dẫn đến ức chế sự nhân lên của virus. Dẫn đến: giảm viêm võng mạc do CMV, viêm giác mạc do Herpes simplex. ĐẶC ĐIỂM: (1) Kháng virus CMV và Herpes simplex, (2) Dùng 5 lần/ngày (mỗi 3 giờ khi thức) cho điều trị ban đầu, (3) Có thể dùng kéo dài để duy trì, (4) Dạng gel - nhìn mờ tạm thời, (5) Kích ứng mắt phổ biến, (6) An toàn, ít tác dụng phụ toàn thân.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, loét giác mạc) - cải thiện sau 3-5 ngày",
@@ -808,7 +808,7 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)",
                 "Gentamicin đường tiêm: không dùng cùng lúc (tăng nguy cơ độc tính)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Gentamicin là aminoglycoside, ức chế tổng hợp protein của vi khuẩn bằng cách gắn với ribosome 30S, ngăn chặn sự tổng hợp protein, dẫn đến tiêu diệt vi khuẩn (bactericidal). Phổ rộng, hiệu quả với nhiều vi khuẩn Gram-dương và Gram-âm (Staphylococcus, Streptococcus, Pseudomonas, Enterobacteriaceae). ĐẶC ĐIỂM: (1) Aminoglycoside, phổ rộng, (2) Bactericidal (tiêu diệt vi khuẩn), (3) Dùng 4-6 lần/ngày cho viêm kết mạc, thường xuyên hơn cho viêm giác mạc, (4) Kích ứng mắt phổ biến, (5) Hấp thu toàn thân hiếm nhưng có thể gây độc tính thận, độc tính thần kinh thính giác.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, mủ) - cải thiện sau 2-3 ngày",
@@ -969,7 +969,7 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Moxifloxacin là fluoroquinolone thế hệ 4, ức chế DNA gyrase và topoisomerase IV của vi khuẩn, ngăn chặn sự tổng hợp DNA, dẫn đến tiêu diệt vi khuẩn (bactericidal). Phổ rộng, hiệu quả với nhiều vi khuẩn Gram-dương và Gram-âm. ĐẶC ĐIỂM: (1) Fluoroquinolone thế hệ 4, phổ rộng, (2) Bactericidal (tiêu diệt vi khuẩn), (3) Dùng 3-4 lần/ngày, (4) Kích ứng mắt phổ biến, (5) Hấp thu toàn thân hiếm nhưng có thể gây nhạy cảm ánh sáng, rối loạn gân.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, mủ) - cải thiện sau 2-3 ngày",
@@ -1122,7 +1122,7 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)",
                 "Trimethoprim đường uống: không dùng cùng lúc (tăng nguy cơ tác dụng phụ)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Polymyxin B/Trimethoprim là kháng sinh kết hợp. Polymyxin B: gắn với lipopolysaccharide (LPS) trong màng ngoài của vi khuẩn Gram-âm, phá vỡ tính toàn vẹn màng tế bào, dẫn đến tiêu diệt vi khuẩn (bactericidal). Hiệu quả với vi khuẩn Gram-âm (Pseudomonas, Enterobacteriaceae). Trimethoprim: ức chế enzyme dihydrofolate reductase (DHFR), ngăn chặn sự tổng hợp tetrahydrofolate, dẫn đến ức chế sự tổng hợp DNA và protein, tiêu diệt vi khuẩn (bactericidal). Hiệu quả với vi khuẩn Gram-dương và Gram-âm. Kết hợp hai thuốc tạo phổ rộng, hiệu quả với nhiều vi khuẩn. ĐẶC ĐIỂM: (1) Kháng sinh kết hợp, phổ rộng, (2) Bactericidal (tiêu diệt vi khuẩn), (3) Dùng 4 lần/ngày, (4) Kích ứng mắt phổ biến, (5) Hấp thu toàn thân hiếm nhưng có thể gây độc tính thận (polymyxin B), rối loạn máu (trimethoprim).",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, mủ) - cải thiện sau 2-3 ngày",
@@ -1279,7 +1279,7 @@ ANTI_INFECTIVE_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "D - Thận trọng",
+        "pregnancy": "D - Thận trọng",
             "mechanism_of_action": "Tobramycin là aminoglycoside (kháng sinh). Gắn với ribosome 30S của vi khuẩn, ngăn chặn sự tổng hợp protein, dẫn đến tiêu diệt vi khuẩn (bactericidal). Tobramycin hiệu quả với nhiều vi khuẩn Gram-âm (Pseudomonas aeruginosa, E. coli, Klebsiella, Proteus) và một số Gram-dương (Staphylococcus). ĐẶC ĐIỂM: (1) Aminoglycoside, hiệu quả với nhiều vi khuẩn Gram-âm, (2) Bactericidal (tiêu diệt vi khuẩn), (3) Dùng thường xuyên trong giai đoạn đầu, (4) Điều trị thường 7-14 ngày, (5) Nguy cơ độc tính thận nếu hấp thu toàn thân nhiều.",
             "monitoring": [
                 "Dấu hiệu nhiễm trùng (đỏ mắt, chảy mủ, đau) - cải thiện sau 24-48 giờ",

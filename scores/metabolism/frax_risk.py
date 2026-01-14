@@ -82,7 +82,7 @@ def render():
         render_suggestions(
             calculator_id="frax",
             calculator_name="Ước tính nguy cơ gãy xương (FRAX)",
-            category="Nội Tiết",
+            category="Nội tiết",
             show_related=True,
             show_category=True,
             limit=3,

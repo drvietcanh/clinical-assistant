@@ -160,7 +160,7 @@ def render():
         render_suggestions(
             calculator_id="gold",
             calculator_name="GOLD Criteria",
-            category="Hô Hấp",
+            category="Hô hấp",
             show_related=True,
             show_category=True,
             limit=3

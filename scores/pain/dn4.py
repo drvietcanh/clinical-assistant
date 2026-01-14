@@ -178,7 +178,7 @@ def render():
         
         if is_neuropathic:
             st.error("""
-            **🚨 Chẩn đoán Đau Thần Kinh (DN4 ≥ 4)**
+            **🚨 Chẩn đoán Đau Thần kinh (DN4 ≥ 4)**
             
             **Điều trị:**
             
@@ -210,7 +210,7 @@ def render():
             """)
         else:
             st.info("""
-            **✅ Không Đủ Tiêu chí Đau Thần Kinh (DN4 < 4)**
+            **✅ Không Đủ Tiêu chí Đau Thần kinh (DN4 < 4)**
             
             **Có thể là:**
             - Đau nội tạng

@@ -237,7 +237,7 @@ def render():
         render_suggestions(
             calculator_id="cpis",
             calculator_name="CPIS",
-            category="Hồi Sức Cấp Cứu",
+            category="Hồi sức Cấp cứu",
             show_related=True,
             show_category=True,
             limit=3

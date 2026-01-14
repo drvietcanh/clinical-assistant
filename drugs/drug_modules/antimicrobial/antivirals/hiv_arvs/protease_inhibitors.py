@@ -40,7 +40,7 @@ PROTEASE_INHIBITORS_ARVS: Dict[str, Dict[str, Any]] = {
                 "Thuốc tăng pH dạ dày (PPI/H2/antacid) giảm hấp thu atazanavir.",
                 "Inducer mạnh (rifampin, carbamazepine) giảm nồng độ → tránh."
             ],
-            "pregnancy": "Có thể dùng; ưu tiên ritonavir booster. Tránh PPI, quản lý H2/antacid theo khuyến cáo.",
+        "pregnancy": "Có thể dùng; ưu tiên ritonavir booster. Tránh PPI, quản lý H2/antacid theo khuyến cáo.",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
@@ -203,7 +203,7 @@ PROTEASE_INHIBITORS_ARVS: Dict[str, Dict[str, Any]] = {
                 "Ức chế mạnh CYP3A (qua booster) → rất nhiều tương tác (statin, DOAC, benzo, kháng loạn nhịp).",
                 "Inducers mạnh (rifampin, carbamazepine) giảm nồng độ darunavir → tránh."
             ],
-            "pregnancy": "Có thể dùng; kinh nghiệm với ritonavir nhiều hơn cobicistat trong thai kỳ.",
+        "pregnancy": "Có thể dùng; kinh nghiệm với ritonavir nhiều hơn cobicistat trong thai kỳ.",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,

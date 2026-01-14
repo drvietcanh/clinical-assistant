@@ -48,7 +48,7 @@ def render():
         render_suggestions(
             calculator_id="hunt_hess",
             calculator_name="Hunt & Hess Scale",
-            category="Thần Kinh",
+            category="Thần kinh",
             show_related=True,
             show_category=True,
             limit=3

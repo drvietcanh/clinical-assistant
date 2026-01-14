@@ -130,7 +130,7 @@ Mỗi thuốc trong hệ thống có cấu trúc field chuẩn gồm:
 **Mô tả:** Bảo quản  
 **Ví dụ:** `"Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm"`
 
-## 8 Field Bổ Sung
+## 8 Field Bổ sung
 
 ### 15. black_box_warnings
 **Type:** `str` hoặc `None`  

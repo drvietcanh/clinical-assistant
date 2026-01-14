@@ -178,7 +178,7 @@ def render():
         render_suggestions(
             calculator_id="wells_pe",
             calculator_name="Wells PE Score",
-            category="Hô Hấp",
+            category="Hô hấp",
             show_related=True,
             show_category=True,
             limit=3

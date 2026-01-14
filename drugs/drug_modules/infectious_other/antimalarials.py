@@ -4,7 +4,8 @@
 
 ANTIMALARIALS_DRUGS = {
     "Artemether-lumefantrine": {'group':
-        'Infectious Disease - Antimalarial (ACT)', 'vietnamese_name':
+        'Infectious Disease - Antimalarial (ACT)',
+        'vietnamese_name':
         'Artemether-lumefantrine, Coartem', 'administration': ['PO'],
         'indications': [
         'Sốt rét P. falciparum không biến chứng (first-line ACT)',
@@ -12,7 +13,8 @@ ANTIMALARIALS_DRUGS = {
         'contraindications': [
         'Dị ứng artemether hoặc lumefantrine',
         'Sốt rét nặng cần artesunate IV',
-        'Kéo dài QT nặng hoặc loạn nhịp thất đang tồn tại'], 'dosage': {
+        'Kéo dài QT nặng hoặc loạn nhịp thất đang tồn tại'],
+        'dosage': {
         'adult_uncomplicated':
         '4 viên (20mg/120mg) lúc 0, 8, 24, 36, 48, 60 giờ (tổng 6 liều). Uống với thức ăn có chất béo để tăng hấp thu'
         , 'pediatric_weight_based':
@@ -20,7 +22,8 @@ ANTIMALARIALS_DRUGS = {
         , 'notes':
         'KHÔNG dùng dự phòng dài ngày. Nếu nôn trong 1 giờ sau uống, nhắc lại liều.'},
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
-        'under_30': 'Thận trọng, theo dõi ECG và điện giải'}, 'side_effects': [
+        'under_30': 'Thận trọng, theo dõi ECG và điện giải'},
+        'side_effects': [
         'Nhức đầu', 'Chóng mặt', 'Buồn nôn/nôn', 'Đau bụng', 'Mất ngủ',
         'Kéo dài QT (hiếm, liên quan lumefantrine)', 'Hồi hộp, đánh trống ngực'],
         'interactions': [
@@ -36,7 +39,8 @@ ANTIMALARIALS_DRUGS = {
         'ECG (QTc) nếu có yếu tố nguy cơ hoặc dùng thuốc kéo dài QT',
         'Triệu chứng lâm sàng (sốt, nôn, đau đầu)',
         'Điện giải (K+, Mg2+) nếu nôn nhiều hoặc tiêu chảy',
-        'Dấu hiệu tái phát trong 28 ngày'], 'precautions': [
+        'Dấu hiệu tái phát trong 28 ngày'],
+        'precautions': [
         'Uống cùng bữa ăn giàu chất béo (sữa, thức ăn chứa dầu) để tăng hấp thu',
         'Không dùng để dự phòng dài hạn',
         'Tránh dùng cùng thuốc kéo dài QT hoặc hạ K+/Mg2+',
@@ -47,7 +51,8 @@ ANTIMALARIALS_DRUGS = {
         'Artemether: 1-3 giờ; Lumefantrine: 3-6 ngày', 'onset': '1-2 giờ',
         'duration': 'Lumefantrine kéo dài tác dụng vài ngày', 'protein_binding':
         'Artemether ~95%, Lumefantrine >99%', 'clearance':
-        'Gan (CYP3A4 chuyển hóa cả hai), thải trừ mật/ phân'}, 'storage':
+        'Gan (CYP3A4 chuyển hóa cả hai), thải trừ mật/ phân'},
+        'storage':
         'Bảo quản nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
         'black_box_warnings':
         'Nguy cơ kéo dài QT nếu dùng cùng thuốc kéo dài QT hoặc rối loạn điện giải. Phải uống đủ 6 liều và uống với thức ăn chứa chất béo để tránh thất bại điều trị.',
@@ -68,7 +73,8 @@ ANTIMALARIALS_DRUGS = {
         'contraindications': {'tuyệt_đối': [
         'Dị ứng artemether, lumefantrine hoặc dẫn xuất artemisinin',
         'Kéo dài QT rõ rệt/loạn nhịp thất đang hoạt động',
-        'Sốt rét nặng cần artesunate IV'], 'tương_đối': [
+        'Sốt rét nặng cần artesunate IV'],
+        'tương_đối': [
         'Hạ kali/magie chưa chỉnh',
         'Dùng thuốc kéo dài QT', 'Suy gan nặng', 'Suy thận nặng (ít dữ liệu)']},
         'pregnancy_lactation': {'fda_category': 'C', 'pregnancy_details':
@@ -85,7 +91,8 @@ ANTIMALARIALS_DRUGS = {
         'antidote': 'Không có antidote đặc hiệu', 'treatment': [
         'Than hoạt tính nếu uống trong 1 giờ', 'Theo dõi ECG liên tục',
         'Sửa điện giải (K+, Mg2+)', 'Điều trị loạn nhịp theo ACLS',
-        'Điều trị hỗ trợ huyết động'], 'monitoring':
+        'Điều trị hỗ trợ huyết động'],
+        'monitoring':
         'ECG, điện giải, huyết áp, nhịp tim ít nhất 24 giờ nếu quá liều'},
         'reversal_agents': {'available': False, 'agents': None, 'notes':
         'Không có thuốc giải độc; xử trí hỗ trợ và theo dõi ECG'},
@@ -105,12 +112,11 @@ ANTIMALARIALS_DRUGS = {
             'narrow_therapeutic_index': False,
             'bleeding_risk': False,
             'organ_toxicity': ['QT prolongation (lumefantrine component)', 'Hepatotoxicity (rare)'],
-            'qt_prolongation': True,
+        'qt_prolongation': True,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['ECG (QTc) if risk factors or co-administered QT-prolonging drugs', 'Parasite count (blood smear)', 'Clinical symptoms', 'Electrolytes (K+, Mg2+)']
-        },
-        'guideline_tags': [
+        },guideline_tags': [
             'WHO Guidelines - Malaria Treatment',
             'CDC Guidelines - Malaria Treatment',
             'FDA Drug Safety Communication - QT Prolongation'
@@ -542,15 +548,18 @@ ANTIMALARIALS_DRUGS = {
     },
     "Hydroxychloroquine": {'group':
         'Infectious Disease - Antimalarial/Antirheumatic',
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Có thể sử dụng cho bệnh tự miễn",
         'vietnamese_name': 'Hydroxychloroquine, Plaquenil', 'administration': [
-        'PO'], 'indications': [
+        'PO'],
+        'indications': [
         'Sốt rét nhạy chloroquine (phòng ngừa và điều trị)',
         'Lupus ban đỏ hệ thống', 'Viêm khớp dạng thấp',
         'Sốt rét do P. vivax/ovale (phối hợp primaquine để diệt thể ngủ)'],
         'contraindications': [
         'Dị ứng hydroxychloroquine/4-aminoquinoline',
         'Bệnh võng mạc tiến triển', 'Thiếu G6PD nặng (nguy cơ tan máu)',
-        'Kéo dài QT có ý nghĩa'], 'dosage': {'adult_malaria_treatment':
+        'Kéo dài QT có ý nghĩa'],
+        'dosage': {'adult_malaria_treatment':
         '800mg base (620mg) ngày 1, sau đó 400mg base (310mg) sau 6-8 giờ, sau đó 400mg base/ngày x 2 ngày'
         , 'adult_malaria_prophylaxis':
         '400mg base (310mg) 1 lần/tuần, bắt đầu 1-2 tuần trước khi đi, tiếp tục trong khi ở vùng dịch và 4 tuần sau khi về'
@@ -561,10 +570,12 @@ ANTIMALARIALS_DRUGS = {
         'side_effects': [
         'Rối loạn thị giác/độc võng mạc (ít hơn chloroquine nhưng vẫn có)',
         'Rối loạn tiêu hóa', 'Ngứa, phát ban', 'Đau đầu, chóng mặt',
-        'Hạ đường huyết (hiếm)', 'Kéo dài QT/loạn nhịp (hiếm)'], 'interactions': [
+        'Hạ đường huyết (hiếm)', 'Kéo dài QT/loạn nhịp (hiếm)'],
+        'interactions': [
         'Digoxin: tăng nồng độ digoxin', 'Thuốc kéo dài QT',
         'Antacid/kaolin: giảm hấp thu (dùng cách 4 giờ)',
-        'CYP2D6 inhibitors/inducers: thay đổi nồng độ'], 'pregnancy':
+        'CYP2D6 inhibitors/inducers: thay đổi nồng độ'],
+        'pregnancy':
         'C - Dùng được cho lupus/RA; có thể dùng cho sốt rét nếu lợi ích > nguy cơ',
         'mechanism_of_action':
         '4-aminoquinoline, tích lũy trong lysosome ký sinh trùng, tăng pH và ức chế tiêu hóa hemoglobin → diệt thể vô tính trong hồng cầu. Với lupus/RA: ổn định lysosome, giảm trình diện kháng nguyên, giảm sản xuất cytokine, tác dụng điều hòa miễn dịch.',
@@ -579,18 +590,21 @@ ANTIMALARIALS_DRUGS = {
         'Thận trọng G6PD (nguy cơ tan máu nhẹ)',
         'Theo dõi mắt định kỳ, ngừng nếu có dấu hiệu độc võng mạc',
         'Cân nhắc điều chỉnh liều ở suy thận nặng',
-        'Theo dõi QT nếu dùng kèm thuốc kéo dài QT'], 'pharmacokinetics': {
+        'Theo dõi QT nếu dùng kèm thuốc kéo dài QT'],
+        'pharmacokinetics': {
         'half_life': '40-50 ngày (tích lũy mô cao)', 'onset':
         'Malaria: vài giờ; Lupus/RA: 4-12 tuần', 'duration':
         'Kéo dài do tích lũy mô', 'protein_binding': '45%', 'clearance':
-        'Gan (chuyển hóa), thận (thải trừ ~40%)'}, 'storage':
+        'Gan (chuyển hóa), thận (thải trừ ~40%)'},
+        'storage':
         'Bảo quản nhiệt độ phòng, tránh ẩm và ánh sáng',
         'black_box_warnings':
         'Nguy cơ độc võng mạc không hồi phục tăng khi dùng liều cao, kéo dài >5 năm, suy thận, hoặc bệnh võng mạc nền. Cần khám mắt định kỳ.',
         'drug_interactions': {'major': [{'drug': 'Digoxin', 'mechanism':
         'Tăng hấp thu/giảm thải trừ digoxin', 'effect':
         'Tăng nồng độ digoxin, nguy cơ độc tính', 'management':
-        'Theo dõi digoxin level, điều chỉnh liều'}], 'moderate': [{'drug':
+        'Theo dõi digoxin level, điều chỉnh liều'}],
+        'moderate': [{'drug':
         'Thuốc kéo dài QT (macrolide, fluoroquinolone, antipsychotic)',
         'mechanism': 'Cộng hưởng kéo dài QT', 'effect': 'Nguy cơ loạn nhịp',
         'management': 'Tránh hoặc theo dõi ECG'}, {'drug': 'Kaolin/antacid',
@@ -602,7 +616,8 @@ ANTIMALARIALS_DRUGS = {
         'Theo dõi tác dụng phụ, điều chỉnh nếu cần'}]},
         'contraindications': {'tuyệt_đối': [
         'Dị ứng hydroxychloroquine hoặc 4-aminoquinoline',
-        'Bệnh võng mạc tiến triển/không hồi phục'], 'tương_đối': [
+        'Bệnh võng mạc tiến triển/không hồi phục'],
+        'tương_đối': [
         'Thiếu G6PD (tan máu nhẹ)', 'Suy thận nặng', 'Tiền sử kéo dài QT',
         'Dùng thuốc kéo dài QT'],
         'pregnancy_details':
@@ -613,12 +628,14 @@ ANTIMALARIALS_DRUGS = {
         'hepatic_adjustment': {'mild': 'Không đổi', 'moderate':
         'Thận trọng, có thể giảm 25%', 'severe':
         'Giảm liều hoặc giãn cách; theo dõi chức năng gan', 'notes':
-        'Chuyển hóa qua gan; suy gan có thể tăng tích lũy'}, 'overdose_management':
+        'Chuyển hóa qua gan; suy gan có thể tăng tích lũy'},
+        'overdose_management':
         {'symptoms': ['Buồn nôn, nôn', 'Loạn nhịp, kéo dài QT', 'Co giật',
         'Rối loạn thị giác'],
         'treatment': ['Than hoạt tính sớm', 'Theo dõi ECG liên tục',
         'Điều chỉnh điện giải', 'Điều trị loạn nhịp theo ACLS',
-        'Hỗ trợ hô hấp tuần hoàn'], 'monitoring':
+        'Hỗ trợ hô hấp tuần hoàn'],
+        'monitoring':
         'ECG, huyết áp, điện giải, dấu hiệu thần kinh tối thiểu 24 giờ'},
         'reversal_agents': {'available': False, 'agents': None, 'notes':
         'Không có thuốc giải độc; điều trị hỗ trợ'},
@@ -650,9 +667,11 @@ ANTIMALARIALS_DRUGS = {
         'notes':
         'BẮT BUỘC xét nghiệm G6PD trước điều trị. Uống cùng thức ăn để giảm đau bụng.'},
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
-        'under_30': 'Thận trọng, theo dõi hemolysis'}, 'side_effects': [
+        'under_30': 'Thận trọng, theo dõi hemolysis'},
+        'side_effects': [
         'Tan máu (đặc biệt nếu thiếu G6PD)', 'Methemoglobinemia (tím tái)',
-        'Đau bụng, buồn nôn', 'Nhức đầu', 'Sốt nhẹ'], 'interactions': [
+        'Đau bụng, buồn nôn', 'Nhức đầu', 'Sốt nhẹ'],
+        'interactions': [
         'Thuốc gây tan máu khác (dapsone, nitrofurantoin)', 'Thuốc gây methemoglobinemia (benzocaine, nitrates)'],
         'pregnancy':
         'X - Chống chỉ định khi mang thai (nguy cơ tan máu cho thai do chưa biết G6PD)',
@@ -662,7 +681,8 @@ ANTIMALARIALS_DRUGS = {
         'Xét nghiệm G6PD trước khi dùng', 'CBC và hemoglobin mỗi 1-2 tuần',
         'Quan sát nước tiểu sẫm màu, vàng da (dấu tan máu)',
         'Methemoglobin nếu có triệu chứng tím tái, khó thở',
-        'Theo dõi ký sinh trùng máu cho gametocyte clearance'], 'precautions': [
+        'Theo dõi ký sinh trùng máu cho gametocyte clearance'],
+        'precautions': [
         'KHÔNG dùng nếu thiếu G6PD hoặc nghi ngờ chưa xét nghiệm',
         'Ngừng ngay nếu có dấu hiệu tan máu (vàng da, nước tiểu sẫm)',
         'Dùng với thức ăn để giảm khó chịu tiêu hóa',
@@ -682,9 +702,11 @@ ANTIMALARIALS_DRUGS = {
         'mechanism': 'Tăng methemoglobin', 'effect':
         'Tím tái, khó thở, giảm SpO2', 'management':
         'Tránh phối hợp hoặc theo dõi, cân nhắc methylene blue nếu triệu chứng và G6PD bình thường'}],
-        'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'minor': []},
+        'contraindications': {'tuyệt_đối': [
         'Thiếu G6PD', 'Mang thai', 'Cho con bú trẻ chưa xét nghiệm G6PD',
-        'Thiếu máu tán huyết hoặc methemoglobinemia'], 'tương_đối': [
+        'Thiếu máu tán huyết hoặc methemoglobinemia'],
+        'tương_đối': [
         'Suy thận nặng', 'Suy gan nặng', 'Thiếu máu nhẹ (cần theo dõi CBC)']},
         'pregnancy_lactation': {'fda_category': 'X', 'pregnancy_details':
         'Chống chỉ định trong thai kỳ do nguy cơ tan máu cho thai nhi (không biết tình trạng G6PD).',
@@ -698,11 +720,13 @@ ANTIMALARIALS_DRUGS = {
         'Chuyển hóa qua gan; suy gan có thể tăng tích lũy và độc tính'},
         'overdose_management': {'symptoms': [
         'Tan máu cấp (nước tiểu cola, vàng da)', 'Methemoglobinemia (tím tái)',
-        'Buồn nôn, nôn', 'Rối loạn nhịp (hiếm)'], 'antidote':
+        'Buồn nôn, nôn', 'Rối loạn nhịp (hiếm)'],
+        'antidote':
         'Không có antidote đặc hiệu', 'treatment': [
         'Ngừng thuốc, truyền dịch', 'Truyền máu nếu tan máu nặng',
         'Methylene blue nếu methemoglobinemia và G6PD bình thường',
-        'Theo dõi và điều chỉnh điện giải'], 'monitoring':
+        'Theo dõi và điều chỉnh điện giải'],
+        'monitoring':
         'CBC, hemoglobin, bilirubin, LDH, methemoglobin, dấu hiệu sinh tồn'},
         'reversal_agents': {'available': False, 'agents': None, 'notes':
         'Không có thuốc giải độc; điều trị hỗ trợ, có thể dùng methylene blue nếu methemoglobinemia và G6PD bình thường'},
@@ -722,12 +746,11 @@ ANTIMALARIALS_DRUGS = {
             'narrow_therapeutic_index': False,
             'bleeding_risk': False,
             'organ_toxicity': ['Hemolysis (life-threatening in G6PD deficiency) - CRITICAL', 'Methemoglobinemia'],
-            'qt_prolongation': False,
+        'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['G6PD test before treatment - CRITICAL (MANDATORY)', 'CBC and hemoglobin (every 1-2 weeks) - CRITICAL', 'Urine color (dark urine, jaundice - signs of hemolysis) - CRITICAL', 'Methemoglobin if symptoms of cyanosis, dyspnea', 'Parasitemia for gametocyte clearance']
-        },
-        'guideline_tags': [
+        },guideline_tags': [
             'WHO Guidelines - Treatment of Malaria (Vivax/Ovale Radical Cure)',
             'CDC Guidelines - Malaria Treatment',
             'FDA Black Box Warning - Primaquine and G6PD Deficiency',

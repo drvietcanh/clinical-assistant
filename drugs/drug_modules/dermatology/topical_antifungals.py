@@ -37,7 +37,7 @@ TOPICAL_ANTIFUNGALS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Ít tương tác thuốc"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Clotrimazole là imidazole antifungal, ức chế tổng hợp ergosterol (thành phần chính của màng tế bào nấm) bằng cách ức chế enzyme lanosterol 14-alpha-demethylase (CYP51). Thiếu ergosterol làm màng tế bào nấm bị rò rỉ, dẫn đến chết tế bào. Tác dụng với Candida, dermatophytes (Trichophyton, Microsporum, Epidermophyton), và một số nấm khác. Dạng tại chỗ hấp thu toàn thân tối thiểu.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm nấm)",
@@ -161,7 +161,7 @@ TOPICAL_ANTIFUNGALS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Ít tương tác thuốc"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Econazole là imidazole antifungal, ức chế tổng hợp ergosterol (thành phần chính của màng tế bào nấm) bằng cách ức chế enzyme lanosterol 14-alpha-demethylase (CYP51). Thiếu ergosterol làm màng tế bào nấm bị rò rỉ, dẫn đến chết tế bào. Tác dụng với Candida, dermatophytes, và một số nấm khác. Dạng tại chỗ hấp thu toàn thân tối thiểu.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm nấm)",
@@ -288,7 +288,7 @@ TOPICAL_ANTIFUNGALS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Ít tương tác thuốc (dạng tại chỗ)"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Ketoconazole là imidazole antifungal, ức chế tổng hợp ergosterol (thành phần chính của màng tế bào nấm) bằng cách ức chế enzyme lanosterol 14-alpha-demethylase (CYP51). Thiếu ergosterol làm màng tế bào nấm bị rò rỉ, dẫn đến chết tế bào. Tác dụng với Candida, dermatophytes, Malassezia (gây gàu, viêm da tiết bã), và một số nấm khác. Dạng tại chỗ hấp thu toàn thân tối thiểu. Có dạng kem và dầu gội.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm nấm, gàu)",
@@ -416,7 +416,7 @@ TOPICAL_ANTIFUNGALS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Warfarin: có thể tăng INR (hiếm với dạng tại chỗ)"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Miconazole là imidazole antifungal, ức chế tổng hợp ergosterol (thành phần chính của màng tế bào nấm) bằng cách ức chế enzyme lanosterol 14-alpha-demethylase (CYP51). Thiếu ergosterol làm màng tế bào nấm bị rò rỉ, dẫn đến chết tế bào. Tác dụng với Candida, dermatophytes, và một số nấm khác. Dạng tại chỗ hấp thu toàn thân tối thiểu.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm nấm)",
@@ -552,7 +552,7 @@ TOPICAL_ANTIFUNGALS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (topical)"
             ],
-            "pregnancy": "B - An toàn khi dùng tại chỗ",
+        "pregnancy": "B - An toàn khi dùng tại chỗ",
             "mechanism_of_action": "Terbinafine là allylamine antifungal, ức chế enzyme squalene epoxidase trong quá trình tổng hợp ergosterol (thành phần màng tế bào nấm). Ức chế squalene epoxidase → tích tụ squalene (độc cho nấm) và giảm ergosterol → màng tế bào nấm bị tổn thương → chết tế bào nấm. Terbinafine có ái lực cao với enzyme của nấm, ít ảnh hưởng đến enzyme của người. Hiệu quả cao với dermatophytes (Trichophyton, Microsporum, Epidermophyton). ĐẶC ĐIỂM: (1) Allylamine antifungal, (2) Hiệu quả cao với dermatophytes, (3) Dùng 1-2 lần/ngày trong 1-4 tuần, (4) Ít tác dụng phụ, (5) An toàn khi dùng tại chỗ.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, ngứa, vảy da)",

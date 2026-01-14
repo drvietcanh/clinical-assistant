@@ -1,0 +1,196 @@
+======================================================================
+BAO CAO CAC THUOC THIEU FIELDS
+======================================================================
+
+1. THIEU CORE FIELDS (27 thuoc)
+======================================================================
+
+
+DOSAGE (1 thuoc):
+----------------------------------------------------------------------
+  - Budesonide inhaled
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+    Thieu: dosage
+
+
+
+======================================================================
+2. THIEU EXTENDED FIELDS (50 thuoc)
+======================================================================
+
+
+SIDE_EFFECTS (1 thuoc):
+----------------------------------------------------------------------
+  - Budesonide inhaled
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+
+
+INTERACTIONS (1 thuoc):
+----------------------------------------------------------------------
+  - Budesonide inhaled
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+
+
+PREGNANCY (16 thuoc):
+----------------------------------------------------------------------
+  - Cetirizine
+    File: drugs\drug_modules\supportive\.backups\antihistamine_h1_antagonist_2nd_generations_remove_commas_20260113_215328.py
+  - Loratadine
+    File: drugs\drug_modules\supportive\.backups\antihistamine_h1_antagonist_2nd_generations_remove_commas_20260113_215328.py
+  - Fexofenadine
+    File: drugs\drug_modules\supportive\.backups\antihistamine_h1_antagonist_2nd_generations_remove_commas_20260113_215328.py
+  - Desloratadine
+    File: drugs\drug_modules\supportive\.backups\antihistamine_h1_antagonist_2nd_generations_remove_commas_20260113_215328.py
+  - Atropine
+    File: drugs\drug_modules\emergency\.backups\anticholinergics_remove_commas_20260113_215328.py
+  - Sucralfate
+    File: drugs\drug_modules\gastrointestinal\.backups\mucosal_protectants_20260113_214423.py
+  - Domperidone
+    File: drugs\drug_modules\gastrointestinal\.backups\prokinetic_antiemetics_20260113_214423.py
+  - Omeprazole
+    File: drugs\drug_modules\gastrointestinal\.backups\.backups\.backups\.backups\.backups\.backups\.backups\.backups\proton_pump_inhibitors_syntax_fix_20260113_215014_syntax_fix_20260113_215018_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019.py
+  - Ceftriaxone
+    File: drugs\drug_modules\infectious_other\.backups\cephalosporins_final_fix_20260113_215601.py
+  - Budesonide
+    File: drugs\drug_modules\miscellaneous\.backups\corticosteroid_inhaleds_remove_commas_20260113_215328.py
+  - Ipratropium
+    File: drugs\drug_modules\respiratory\.backups\anticholinergic_short_actings_20260113_214425.py
+  - Beclomethasone inhaled
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+  - Budesonide inhaled
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+  - Ciclesonide
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+  - Fluticasone inhaled
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+  - Calcium
+    File: drugs\drug_modules\supportive\.backups\calciums_remove_commas_20260113_215328.py
+
+
+
+======================================================================
+3. THIEU ENHANCED FIELDS (303 thuoc) - TOP 5 FIELD THIEU NHIEU NHAT
+======================================================================
+
+
+PHARMACOKINETICS (11 thuoc):
+----------------------------------------------------------------------
+  - Sumatriptan
+    File: drugs\drug_modules\analgesics\.backups\antimigraine_5_ht1_receptor_agonists_final_fix_20260113_215601.py
+  - Codeine
+    File: drugs\drug_modules\analgesics\.backups\opioid_agonist_weaks_final_fix_20260113_215601.py
+  - Ranitidine
+    File: drugs\drug_modules\gastrointestinal\.backups\.backups\.backups\.backups\.backups\.backups\.backups\.backups\h2_receptor_antagonists_syntax_fix_20260113_215014_syntax_fix_20260113_215018_syntax_fix_20260113_215018_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019.py
+  - Doxycycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Minocycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Tetracycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Tigecycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Ifosfamide
+    File: drugs\drug_modules\oncology\.backups\alkylating_agents_remove_commas_20260113_215328.py
+  - Ipratropium
+    File: drugs\drug_modules\respiratory\.backups\anticholinergic_short_actings_20260113_214425.py
+  - Budesonide inhaled
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+
+    ... va 1 thuoc khac
+
+
+PREGNANCY_LACTATION (11 thuoc):
+----------------------------------------------------------------------
+  - Sumatriptan
+    File: drugs\drug_modules\analgesics\.backups\antimigraine_5_ht1_receptor_agonists_final_fix_20260113_215601.py
+  - Hydrocodone
+    File: drugs\drug_modules\analgesics\.backups\opioid_agonists_final_fix_20260113_215601.py
+  - Epinephrine
+    File: drugs\drug_modules\emergency\.backups\catecholamine_alpha__beta_agonists_final_fix_20260113_215601.py
+  - Ranitidine
+    File: drugs\drug_modules\gastrointestinal\.backups\.backups\.backups\.backups\.backups\.backups\.backups\.backups\h2_receptor_antagonists_syntax_fix_20260113_215014_syntax_fix_20260113_215018_syntax_fix_20260113_215018_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019.py
+  - Omeprazole
+    File: drugs\drug_modules\gastrointestinal\.backups\.backups\.backups\.backups\.backups\.backups\.backups\.backups\proton_pump_inhibitors_syntax_fix_20260113_215014_syntax_fix_20260113_215018_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019.py
+  - Esomeprazole
+    File: drugs\drug_modules\gastrointestinal\.backups\.backups\.backups\.backups\.backups\.backups\.backups\.backups\proton_pump_inhibitors_syntax_fix_20260113_215014_syntax_fix_20260113_215018_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019.py
+  - Lansoprazole
+    File: drugs\drug_modules\gastrointestinal\.backups\.backups\.backups\.backups\.backups\.backups\.backups\.backups\proton_pump_inhibitors_syntax_fix_20260113_215014_syntax_fix_20260113_215018_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019.py
+  - Ifosfamide
+    File: drugs\drug_modules\oncology\.backups\alkylating_agents_remove_commas_20260113_215328.py
+  - Ipratropium
+    File: drugs\drug_modules\respiratory\.backups\anticholinergic_short_actings_20260113_214425.py
+  - Budesonide inhaled
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+
+    ... va 1 thuoc khac
+
+
+OVERDOSE_MANAGEMENT (10 thuoc):
+----------------------------------------------------------------------
+  - Sumatriptan
+    File: drugs\drug_modules\analgesics\.backups\antimigraine_5_ht1_receptor_agonists_final_fix_20260113_215601.py
+  - Ranitidine
+    File: drugs\drug_modules\gastrointestinal\.backups\.backups\.backups\.backups\.backups\.backups\.backups\.backups\h2_receptor_antagonists_syntax_fix_20260113_215014_syntax_fix_20260113_215018_syntax_fix_20260113_215018_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019.py
+  - Omeprazole
+    File: drugs\drug_modules\gastrointestinal\.backups\.backups\.backups\.backups\.backups\.backups\.backups\.backups\proton_pump_inhibitors_syntax_fix_20260113_215014_syntax_fix_20260113_215018_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019.py
+  - Doxycycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Minocycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Tetracycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Tigecycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Ifosfamide
+    File: drugs\drug_modules\oncology\.backups\alkylating_agents_remove_commas_20260113_215328.py
+  - Ipratropium
+    File: drugs\drug_modules\respiratory\.backups\anticholinergic_short_actings_20260113_214425.py
+  - Budesonide inhaled
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+
+
+REFERENCES (10 thuoc):
+----------------------------------------------------------------------
+  - Sumatriptan
+    File: drugs\drug_modules\analgesics\.backups\antimigraine_5_ht1_receptor_agonists_final_fix_20260113_215601.py
+  - Ranitidine
+    File: drugs\drug_modules\gastrointestinal\.backups\.backups\.backups\.backups\.backups\.backups\.backups\.backups\h2_receptor_antagonists_syntax_fix_20260113_215014_syntax_fix_20260113_215018_syntax_fix_20260113_215018_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019.py
+  - Omeprazole
+    File: drugs\drug_modules\gastrointestinal\.backups\.backups\.backups\.backups\.backups\.backups\.backups\.backups\proton_pump_inhibitors_syntax_fix_20260113_215014_syntax_fix_20260113_215018_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019.py
+  - Doxycycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Minocycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Tetracycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Tigecycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Ifosfamide
+    File: drugs\drug_modules\oncology\.backups\alkylating_agents_remove_commas_20260113_215328.py
+  - Ipratropium
+    File: drugs\drug_modules\respiratory\.backups\anticholinergic_short_actings_20260113_214425.py
+  - Budesonide inhaled
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+
+
+DRUG_INTERACTIONS (9 thuoc):
+----------------------------------------------------------------------
+  - Sumatriptan
+    File: drugs\drug_modules\analgesics\.backups\antimigraine_5_ht1_receptor_agonists_final_fix_20260113_215601.py
+  - Ranitidine
+    File: drugs\drug_modules\gastrointestinal\.backups\.backups\.backups\.backups\.backups\.backups\.backups\.backups\h2_receptor_antagonists_syntax_fix_20260113_215014_syntax_fix_20260113_215018_syntax_fix_20260113_215018_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019_syntax_fix_20260113_215019.py
+  - Doxycycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Minocycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Tetracycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Tigecycline
+    File: drugs\drug_modules\infectious_other\.backups\tetracyclines_bracket_fix_20260113_220119.py
+  - Ifosfamide
+    File: drugs\drug_modules\oncology\.backups\alkylating_agents_remove_commas_20260113_215328.py
+  - Ipratropium
+    File: drugs\drug_modules\respiratory\.backups\anticholinergic_short_actings_20260113_214425.py
+  - Budesonide inhaled
+    File: drugs\drug_modules\respiratory\.backups\inhaled_corticosteroid_icss_20260113_214425.py
+

@@ -11,13 +11,15 @@ SHORT_ACTING_BETA_2_AGONIST_SABA_DRUGS = {
         'COPD (cắt cơn)', 'Co thắt phế quản cấp',
         'Dự phòng co thắt do vận động'],
         'contraindications': [
-        'Nhịp tim nhanh nặng'], 'dosage': {'adult_inhalation':
+        'Nhịp tim nhanh nặng'],
+        'dosage': {'adult_inhalation':
         '1-2 puffs (100-200mcg) mỗi 4-6 giờ khi cần', 'adult_nebulizer':
         '2.5-5mg mỗi 4-6 giờ', 'adult_iv':
         '0.5mg IV, sau đó 5-20mcg/phút truyền liên tục', 'notes':
         'Dùng khi cần (PRN) cho cắt cơn, không dùng thường xuyên'},
         'side_effects': ['Tim đập nhanh', 'Run cơ', 'Đau đầu',
-        'Hạ kali máu (liều cao)', 'Loạn nhịp tim (hiếm)'], 'interactions': [
+        'Hạ kali máu (liều cao)', 'Loạn nhịp tim (hiếm)'],
+        'interactions': [
         'Beta-blocker: đối kháng tác dụng (tránh dùng)'],
         'mechanism_of_action':
         'Kích thích beta-2 adrenergic receptors ở cơ trơn phế quản, kích hoạt adenylate cyclase → tăng cAMP → giãn cơ trơn phế quản. Tác dụng nhanh, ngắn (4-6 giờ). Chọn lọc beta-2 hơn beta-1 nhưng vẫn có tác dụng tim mạch ở liều cao. Giảm phóng thích chất trung gian gây viêm từ mast cells.'

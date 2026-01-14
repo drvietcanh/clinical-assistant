@@ -304,7 +304,7 @@ def render():
         render_suggestions(
             calculator_id="crcl",
             calculator_name="Creatinine Clearance (CrCl)",
-            category="Nội Tiết",
+            category="Nội tiết",
             show_related=True,
             show_category=True,
             limit=3

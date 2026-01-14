@@ -213,20 +213,26 @@ BETA_LACTAMS_DRUGS = {
         }
     },
     
-    "Amoxicillin suspension": {'group': 'Antibiotic - Beta-lactam (Penicillin)', 'vietnamese_name':
+    "Amoxicillin suspension": {'group': 'Antibiotic - Beta-lactam (Penicillin)',
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
+        ', 'vietnamese_name':
         'Amoxicillin suspension, Amoxicillin sirô', 'administration': ['PO'],
         'indications': ['Nhiễm khuẩn đường hô hấp', 'Nhiễm khuẩn tai mũi họng',
         'Nhiễm khuẩn đường tiết niệu', 'Nhiễm khuẩn da mô mềm',
-        'Helicobacter pylori (phối hợp)'], 'contraindications': [
-        'Dị ứng penicillin', 'Dị ứng beta-lactam'], 'dosage': {
+        'Helicobacter pylori (phối hợp)'],
+        'contraindications': [
+        'Dị ứng penicillin', 'Dị ứng beta-lactam'],
+        'dosage': {
         'pediatric_otitis': '80-90mg/kg/ngày chia 2 lần (10 ngày)',
         'pediatric_pneumonia': '80-100mg/kg/ngày chia 3-4 lần', 'pediatric_uti':
         '25-50mg/kg/ngày chia 3 lần', 'pediatric_suspension_common':
         '20-40mg/kg/ngày chia 2-3 lần', 'notes':
         'Có dạng suspension 125mg/5ml, 250mg/5ml cho trẻ em. Uống với hoặc không thức ăn'
-        }, 'renal_adjustment': {'normal': 'Không đổi', '30_60':
+        },
+        'renal_adjustment': {'normal': 'Không đổi', '30_60':
         'Giảm liều hoặc tăng khoảng cách', 'under_30':
-        'Liều thấp hơn, khoảng cách dài hơn'}, 'side_effects': ['Tiêu chảy',
+        'Liều thấp hơn, khoảng cách dài hơn'},
+        'side_effects': ['Tiêu chảy',
         'Buồn nôn', 'Phát ban', 'Nhiễm trùng nấm Candida',
         'Giảm bạch cầu (hiếm)'],
         'interactions': [
@@ -243,7 +249,8 @@ BETA_LACTAMS_DRUGS = {
         'Dấu hiệu nhiễm C. difficile: tiêu chảy nặng, đau bụng, sốt (cần ngừng và điều trị)'
         , 'Chức năng gan (ALT, AST) nếu có triệu chứng (hiếm)',
         'Công thức máu (giảm bạch cầu, thiếu máu hiếm)',
-        'INR nếu dùng với warfarin (tăng nguy cơ chảy máu)'], 'precautions': [
+        'INR nếu dùng với warfarin (tăng nguy cơ chảy máu)'],
+        'precautions': [
         'Không dùng ở bệnh nhân dị ứng penicillin hoặc beta-lactam (phản ứng chéo với cephalosporin ~5-10%)'
         , 'Lắc kỹ suspension trước khi dùng (thuốc lắng xuống đáy)',
         'Có thể uống với hoặc không thức ăn (hấp thu tốt)',
@@ -259,7 +266,8 @@ BETA_LACTAMS_DRUGS = {
         '1-2 giờ (đạt nồng độ đỉnh trong máu)', 'duration':
         '6-8 giờ (dùng 2-3 lần/ngày)', 'protein_binding': '20%', 'clearance':
         'Thận: bài tiết chủ yếu qua nước tiểu (không thay đổi, 60-70% trong 6-8 giờ). Một phần nhỏ qua mật. Hấp thu tốt qua đường uống (75-90%), không bị ảnh hưởng bởi thức ăn. Dạng suspension hấp thu tương tự viên nén.'
-        }, 'storage':
+        },
+        'storage':
         'Bảo quản suspension ở nhiệt độ phòng (15-30°C) hoặc trong tủ lạnh (2-8°C) - theo hướng dẫn trên nhãn. Lắc kỹ trước khi dùng. Sau khi pha (nếu là bột pha nước): bảo quản trong tủ lạnh (2-8°C), dùng trong vòng 7-14 ngày (theo hướng dẫn). Tránh đông lạnh. Để nơi khô ráo, tránh ánh sáng trực tiếp, tránh xa tầm tay trẻ em.'
         , 'black_box_warnings': None, 'drug_interactions': {'major': [{'drug':
         'Methotrexate', 'mechanism':
@@ -274,7 +282,8 @@ BETA_LACTAMS_DRUGS = {
         'Tăng nguy cơ phát ban nghiêm trọng, SJS, TEN (đe dọa tính mạng)',
         'management':
         'Tránh dùng cùng nếu có thể. Nếu bắt buộc, theo dõi sát dấu hiệu phát ban. Ngừng ngay nếu có phát ban.'
-        }], 'moderate': [{'drug': 'Warfarin', 'mechanism':
+        }],
+        'moderate': [{'drug': 'Warfarin', 'mechanism':
         'Amoxicillin có thể ảnh hưởng đến hệ vi khuẩn đường ruột, ảnh hưởng đến chuyển hóa vitamin K, tăng tác dụng warfarin.'
         , 'effect': 'Tăng INR, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên khi dùng amoxicillin. Điều chỉnh liều warfarin nếu cần.'
@@ -283,7 +292,9 @@ BETA_LACTAMS_DRUGS = {
         , 'effect': 'Giảm hiệu quả thuốc tránh thai, tăng nguy cơ có thai',
         'management':
         'Dùng biện pháp tránh thai dự phòng (bao cao su) trong thời gian dùng amoxicillin và 7 ngày sau.'
-        }], 'minor': []}, 'contraindications': {'tuyệt_đối': [
+        }],
+        'minor': []},
+        'contraindications': {'tuyệt_đối': [
         'Dị ứng penicillin - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (phản ứng chéo với cephalosporin ~5-10%)'
         , 'Dị ứng beta-lactam', 'Sốc phản vệ với penicillin trước đây'],
         'tương_đối': [
@@ -291,8 +302,7 @@ BETA_LACTAMS_DRUGS = {
         'Nhiễm C. difficile trước đây - tăng nguy cơ tái phát',
         'Suy thận nặng - giảm liều hoặc tăng khoảng cách',
         'Đang dùng methotrexate - tăng độc tính methotrexate',
-        'Đang dùng allopurinol - tăng nguy cơ phát ban']},
-        'contraindications_detail': {'tuyệt_đối': [
+        'Đang dùng allopurinol - tăng nguy cơ phát ban']},contraindications_detail': {'tuyệt_đối': [
         'Dị ứng penicillin - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (phản ứng chéo với cephalosporin ~5-10%)'
         , 'Dị ứng beta-lactam', 'Sốc phản vệ với penicillin trước đây'],
         'tương_đối': [
@@ -307,7 +317,8 @@ BETA_LACTAMS_DRUGS = {
         'Amoxicillin bài tiết vào sữa mẹ ở nồng độ thấp. An toàn cho trẻ bú mẹ. Có thể gây tiêu chảy nhẹ hoặc phát ban ở trẻ, nhưng hiếm.'
         , 'recommendation':
         'Có thể dùng khi cho con bú. An toàn cho trẻ bú mẹ. Theo dõi dấu hiệu tiêu chảy hoặc phát ban ở trẻ.'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận, không chuyển hóa ở gan.'
         , 'moderate':
         'Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.',
@@ -315,47 +326,53 @@ BETA_LACTAMS_DRUGS = {
         'Không cần điều chỉnh liều. Amoxicillin chủ yếu thải qua thận.',
         'notes':
         'Amoxicillin chủ yếu thải qua thận (60-70% trong 6-8 giờ), không chuyển hóa ở gan. Suy gan không ảnh hưởng đến nồng độ amoxicillin.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Tiêu chảy nặng (có thể là nhiễm C. difficile)', 'Buồn nôn, nôn',
         'Phát ban, mề đay', 'Sốc phản vệ (hiếm nhưng nguy hiểm)',
         'Co giật (với liều rất cao, suy thận)',
-        'Rối loạn điện giải (natri cao nếu dùng liều lớn)'], 'antidote':
+        'Rối loạn điện giải (natri cao nếu dùng liều lớn)'],
+        'antidote':
         'Không có antidote đặc hiệu. Điều trị hỗ trợ.', 'treatment': [
         'Ngừng amoxicillin ngay lập tức',
         'Nếu sốc phản vệ: epinephrine, corticosteroids, antihistamines, hỗ trợ hô hấp'
-        ,
         'Nếu tiêu chảy nặng: điều trị C. difficile nếu xác định (metronidazole, vancomycin)'
         , 'Nếu co giật: benzodiazepines (diazepam, lorazepam)',
         'Điều chỉnh điện giải nếu cần', 'Hỗ trợ hô hấp và tuần hoàn nếu cần',
-        'Theo dõi dấu hiệu sinh tồn'], 'monitoring':
+        'Theo dõi dấu hiệu sinh tồn'],
+        'monitoring':
         'Dấu hiệu sinh tồn, dấu hiệu dị ứng, tiêu chảy, điện giải, dấu hiệu nhiễm C. difficile'
-        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        },
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes':
         'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có phản ứng dị ứng nghiêm trọng.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể uống với hoặc không thức ăn. Hấp thu tốt, không bị ảnh hưởng bởi thức ăn. Uống với thức ăn có thể giảm kích ứng dạ dày.'
         , 'timing':
         'Uống 2-3 lần/ngày tùy chỉ định, cách đều. Lắc kỹ suspension trước khi dùng (thuốc lắng xuống đáy). Dùng đúng liều theo cân nặng ở trẻ em (tính theo mg/kg).'
-        }, 'iv': {'reconstitution': 'N/A - chỉ có dạng uống', 'infusion_rate':
-        'N/A', 'compatibility': [], 'incompatibility': [], 'notes':
-        'Chỉ có dạng uống (suspension)'}},         'references': {'primary_sources': [
+        },
+        'iv': {'reconstitution': 'N/A - chỉ có dạng uống', 'infusion_rate':
+        'N/A', 'compatibility': [],
+        'incompatibility': [],
+        'notes':
+        'Chỉ có dạng uống (suspension)'}},
+        'references': {'primary_sources': [
         'FDA Drug Label - Amoxicillin',
         'UpToDate - Amoxicillin: Drug Information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)"
-        ],         'evidence_level':
+        ],
+        'evidence_level':
         'A - Dựa trên FDA drug labels và dữ liệu lâm sàng'},
         'risk_flags': {
             'high_alert': False,
             'narrow_therapeutic_index': False,
             'icu_critical_care_only': False,
             'bleeding_risk': None,
-            'organ_toxicity': {'dermatologic': 'SJS/TEN (rare, especially with allopurinol)', 'gastrointestinal': 'C. difficile infection', 'hepatic': 'Hepatotoxicity (rare)', 'hematologic': 'Neutropenia (rare)'},
-            'qt_prolongation': False,
+            'organ_toxicity': {'dermatologic': 'SJS/TEN (rare, especially with allopurinol)', 'gastrointestinal': 'C. difficile infection', 'hepatic': 'Hepatotoxicity (rare)', 'hematologic': 'Neutropenia (rare)'},qt_prolongation': False,
             'hepatotoxicity': 'Rare',
             'nephrotoxicity': False,
-            'requires_monitoring': ['Allergic reactions (penicillin allergy - cross-reactivity with cephalosporins)', 'C. difficile infection signs', 'SJS/TEN signs (especially with allopurinol)', 'Hepatic function (rare hepatotoxicity)', 'CBC (neutropenia risk)', 'Renal function (dose adjustment required)'],
-            'look_alike_sound_alike': ['Amoxicillin', 'Amoxicillin-clavulanate']
-        },
-        'guideline_tags': [
+            'requires_monitoring': ['Allergic reactions (penicillin allergy - cross-reactivity with cephalosporins)', 'C. difficile infection signs', 'SJS/TEN signs (especially with allopurinol)', 'Hepatic function (rare hepatotoxicity)', 'CBC (neutropenia risk)', 'Renal function (dose adjustment required)'],look_alike_sound_alike': ['Amoxicillin', 'Amoxicillin-clavulanate']
+        },guideline_tags': [
             'IDSA Guidelines - Community-Acquired Pneumonia',
             'IDSA Guidelines - Urinary Tract Infections',
             'IDSA Guidelines - Skin and Soft Tissue Infections',
@@ -367,13 +384,17 @@ BETA_LACTAMS_DRUGS = {
     "Amoxicillin-clavulanate": {
         'group':
         'Antibiotic - Beta-lactam (Penicillin + Beta-lactamase inhibitor)',
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
         'vietnamese_name': 'Amoxicillin-clavulanate, Augmentin, Amoclav',
-        'administration': ['PO', 'IV'], 'indications': [
+        'administration': ['PO', 'IV'],
+        'indications': [
         'Nhiễm khuẩn đường hô hấp trên/dưới', 'Nhiễm khuẩn đường tiết niệu',
         'Nhiễm khuẩn da mô mềm', 'Nhiễm khuẩn răng miệng',
-        'Nhiễm khuẩn tai mũi họng (Trẻ em)'], 'contraindications': [
+        'Nhiễm khuẩn tai mũi họng (Trẻ em)'],
+        'contraindications': [
         'Dị ứng penicillin', 'Viêm gan do amoxicillin-clavulanate trước đây',
-        'Dị ứng beta-lactam'], 'dosage': {'adult_po':
+        'Dị ứng beta-lactam'],
+        'dosage': {'adult_po':
         '875/125mg x 2 lần/ngày hoặc 500/125mg x 3 lần/ngày',
         'pediatric_po_suspension':
         '20-40mg amoxicillin/kg/ngày chia 2-3 lần (tối đa 875mg/125mg)',
@@ -385,7 +406,8 @@ BETA_LACTAMS_DRUGS = {
         'Có dạng suspension cho trẻ em. Uống với thức ăn để giảm tiêu chảy'},
         'renal_adjustment': {'normal': 'Không đổi', '30_60':
         'Giảm liều hoặc tăng khoảng cách', 'under_30':
-        'Liều thấp hơn, khoảng cách dài hơn'}, 'side_effects': [
+        'Liều thấp hơn, khoảng cách dài hơn'},
+        'side_effects': [
         'Tiêu chảy (phổ biến)', 'Buồn nôn', 'Phát ban',
         'Viêm gan (hiếm nhưng nguy hiểm)', 'Nhiễm trùng nấm Candida'],
         'interactions': ['Warfarin: tăng INR',
@@ -399,7 +421,8 @@ BETA_LACTAMS_DRUGS = {
         'Chức năng gan (ALT, AST) - tăng men gan (thường nhất thời), hiếm viêm gan (đặc biệt với clavulanate)'
         , 'Dấu hiệu nhiễm C. difficile',
         'Phát ban (đặc biệt ở bệnh nhân nhiễm virus như EBV)',
-        'Chức năng thận (creatinine) - hiếm viêm thận kẽ'], 'precautions': [
+        'Chức năng thận (creatinine) - hiếm viêm thận kẽ'],
+        'precautions': [
         'Không dùng ở bệnh nhân dị ứng penicillins (phản ứng chéo cao)',
         'Nguy cơ viêm gan (đặc biệt do clavulanate) - thường nhất thời, hiếm nặng, tăng ở nam giới, dùng kéo dài'
         , 'Theo dõi men gan, ngừng nếu tăng nặng',
@@ -412,7 +435,8 @@ BETA_LACTAMS_DRUGS = {
         'onset': '1-2 giờ (PO)', 'duration': 'q8h hoặc q12h tùy công thức',
         'protein_binding': '17-20% (amoxicillin), 22-30% (clavulanate)',
         'metabolism': 'Một phần trong gan', 'clearance':
-        'Chủ yếu qua thận, cần điều chỉnh thận ở suy thận nặng'}, 'storage':
+        'Chủ yếu qua thận, cần điều chỉnh thận ở suy thận nặng'},
+        'storage':
         'Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Sau khi pha (suspension): bảo quản trong tủ lạnh 10 ngày, sau đó vứt bỏ.'
         , 'black_box_warnings':
         'Không có black box warning. Tuy nhiên, nguy cơ viêm gan (đặc biệt do clavulanate) có thể nặng, đặc biệt ở nam giới và dùng kéo dài. Phát ban thường gặp và có thể nhầm với dị ứng.'
@@ -427,7 +451,8 @@ BETA_LACTAMS_DRUGS = {
         'Tăng nồng độ methotrexate, tăng độc tính (giảm bạch cầu, thiếu máu, độc gan, độc thận)'
         , 'management':
         'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, giảm liều methotrexate, theo dõi chặt chẽ công thức máu, chức năng gan, thận. Ngừng methotrexate nếu có dấu hiệu độc tính.'
-        }], 'moderate': [{'drug': 'Allopurinol', 'mechanism':
+        }],
+        'moderate': [{'drug': 'Allopurinol', 'mechanism':
         'Cơ chế chưa rõ ràng, có thể liên quan đến phản ứng miễn dịch.',
         'effect':
         'Tăng nguy cơ phát ban, phản ứng dị ứng (đặc biệt phát ban maculopapular)',
@@ -443,31 +468,30 @@ BETA_LACTAMS_DRUGS = {
         'Probenecid ức chế bài tiết amoxicillin ở ống thận, làm tăng nồng độ amoxicillin.'
         , 'effect': 'Tăng nồng độ amoxicillin, tăng tác dụng phụ', 'management':
         'Có thể dùng để tăng nồng độ amoxicillin nếu cần. Theo dõi tác dụng phụ. Giảm liều amoxicillin nếu cần.'
-        }], 'minor': [{'drug': 'Antacids', 'mechanism':
+        }],
+        'minor': [{'drug': 'Antacids', 'mechanism':
         'Antacids có thể giảm nhẹ hấp thu amoxicillin.', 'effect':
         'Giảm nhẹ hấp thu amoxicillin', 'management':
         'Cách 2 giờ nếu có thể. Không ảnh hưởng đáng kể ở liều điều trị thông thường.'
-        }]}, 'contraindications': {'tuyệt_đối': [
+        }]},
+        'contraindications': {'tuyệt_đối': [
         'Dị ứng amoxicillin, clavulanate, hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam'
-        ,
         'Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao'
-        ,
         'Viêm gan do amoxicillin-clavulanate trước đây - nguy cơ tái phát cao, có thể nặng hơn'
-        ], 'tương_đối': [
+        ],
+        'tương_đối': [
         'Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng',
         'Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách',
         'Suy gan - thận trọng, có thể giảm chuyển hóa',
         'Nhiễm virus (EBV, CMV) - tăng nguy cơ phát ban (không phải dị ứng thật)',
         'Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát',
         'Dùng với methotrexate - tăng độc tính methotrexate',
-        'Dùng với allopurinol - tăng nguy cơ phát ban']},
-        'contraindications_detail': {'tuyệt_đối': [
+        'Dùng với allopurinol - tăng nguy cơ phát ban']},contraindications_detail': {'tuyệt_đối': [
         'Dị ứng amoxicillin, clavulanate, hoặc các penicillin khác - phản ứng chéo cao với tất cả beta-lactam'
-        ,
         'Dị ứng beta-lactam (penicillin, cephalosporin, carbapenem) - phản ứng chéo cao'
-        ,
         'Viêm gan do amoxicillin-clavulanate trước đây - nguy cơ tái phát cao, có thể nặng hơn'
-        ], 'tương_đối': [
+        ],
+        'tương_đối': [
         'Dị ứng cephalosporin - phản ứng chéo 5-10%, thận trọng',
         'Suy thận nặng (CrCl <30) - cần điều chỉnh liều, tăng khoảng cách',
         'Suy gan - thận trọng, có thể giảm chuyển hóa',
@@ -482,7 +506,8 @@ BETA_LACTAMS_DRUGS = {
         'Amoxicillin và clavulanate bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Penicillin là một trong những kháng sinh an toàn nhất khi cho con bú.'
         , 'recommendation':
         'Có thể dùng khi cho con bú. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh nếu dùng liều cao hoặc kéo dài (tiêu chảy, phát ban).'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều. Amoxicillin và clavulanate chuyển hóa một phần qua gan nhưng không đáng kể.'
         , 'moderate':
         'Thận trọng, có thể cần giảm liều nhẹ. Chuyển hóa có thể giảm ở suy gan trung bình, nhưng thải trừ chủ yếu qua thận nên ít ảnh hưởng.'
@@ -490,7 +515,8 @@ BETA_LACTAMS_DRUGS = {
         'Thận trọng, có thể cần giảm liều. Chuyển hóa có thể giảm ở suy gan nặng, nhưng thải trừ chủ yếu qua thận nên ít ảnh hưởng. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận.'
         , 'notes':
         'Amoxicillin và clavulanate chuyển hóa một phần qua gan nhưng thải trừ chủ yếu qua thận (60-70% bài tiết nguyên dạng qua nước tiểu). Suy gan có thể giảm chuyển hóa nhẹ nhưng không đáng kể. Tuy nhiên, nguy cơ viêm gan do clavulanate tăng ở bệnh nhân có bệnh gan, đặc biệt nam giới và dùng kéo dài. Theo dõi chặt chẽ chức năng gan.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng',
         'Triệu chứng thần kinh: Kích động, co giật (hiếm, thường ở liều rất cao)',
         'Triệu chứng thận: Tăng creatinine, suy thận cấp (hiếm)',
@@ -516,25 +542,30 @@ BETA_LACTAMS_DRUGS = {
         'monitoring':
         'Theo dõi dấu hiệu sinh tồn, chức năng gan (ALT, AST, bilirubin), chức năng thận (creatinine, BUN, lượng nước tiểu), dấu hiệu da trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (suy gan, suy thận, co giật).'
         },
-        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes':
         'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay amoxicillin-clavulanate, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn, điều trị triệu chứng tiêu hóa và thần kinh, điều trị tăng men gan/viêm gan nếu có, lọc máu có thể loại bỏ một phần nhưng không được khuyến nghị thường quy.'},
         'administration_instructions': {'oral': {
         'with_food':
         'Uống với thức ăn để giảm kích ứng dạ dày, giảm tiêu chảy, và tăng hấp thu. Có thể uống không thức ăn nếu cần nhưng không khuyến nghị.'
         , 'timing':
         'Uống 2-3 lần/ngày tùy công thức (875/125mg x 2 lần/ngày hoặc 500/125mg x 3 lần/ngày). Uống đều đặn, cách đều nhau trong ngày. Không bỏ liều.'
-        }, 'iv': {'reconstitution':
+        },
+        'iv': {'reconstitution':
         'Pha theo hướng dẫn nhà sản xuất. Thường pha với nước cất vô trùng hoặc NaCl 0.9%. Lắc kỹ để hòa tan hoàn toàn.'
         , 'infusion_rate':
         'Truyền IV trong 30 phút (không truyền nhanh hơn). Có thể truyền trong 15-20 phút nếu cần nhưng không khuyến nghị.'
         , 'compatibility': ['NaCl 0.9%', 'D5W (Dextrose 5%)',
         "Lactated Ringer's (LR) - thận trọng, kiểm tra tương thích",
-        'Nước cất vô trùng'], 'incompatibility': [
+        'Nước cất vô trùng'],
+        'incompatibility': [
         'Không trộn với các thuốc khác trong cùng một bơm tiêm hoặc chai truyền',
         'Aminoglycosides (mất hoạt tính nếu trộn trực tiếp)',
-        'Probenecid (không trộn, dùng riêng)'], 'notes':
+        'Probenecid (không trộn, dùng riêng)'],
+        'notes':
         'Truyền IV trong 30 phút. Không truyền nhanh hơn. Theo dõi phản ứng tại chỗ tiêm (viêm tĩnh mạch). Dùng ngay sau khi pha. Không bảo quản lâu sau khi pha.'
-        }}, 'pediatric_dosing': {'neonates':
+        }},
+        'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ sơ sinh <3 tháng tuổi (dữ liệu hạn chế). Nếu cần: 30mg amoxicillin/kg/ngày IV chia 3 lần.',
         'infants':
         '3 tháng - 2 tuổi: 20-40mg amoxicillin/kg/ngày PO chia 2-3 lần (dạng suspension). Hoặc 90mg amoxicillin/kg/ngày IV chia 3 lần. Có dạng suspension 125mg/5ml, 250mg/5ml.',
@@ -543,17 +574,21 @@ BETA_LACTAMS_DRUGS = {
         'adolescents':
         '≥12 tuổi hoặc >40kg: Liều người lớn. 875/125mg x 2 lần/ngày hoặc 500/125mg x 3 lần/ngày PO. Hoặc 1000/200mg IV mỗi 8 giờ.',
         'notes':
-        'Có dạng suspension cho trẻ em (125mg/5ml, 250mg/5ml). Uống với thức ăn để giảm tiêu chảy. Tính liều theo amoxicillin (không tính clavulanate). Theo dõi dấu hiệu viêm gan (hiếm nhưng nguy hiểm).'}, 'geriatric_dosing': {'considerations':
+        'Có dạng suspension cho trẻ em (125mg/5ml, 250mg/5ml). Uống với thức ăn để giảm tiêu chảy. Tính liều theo amoxicillin (không tính clavulanate). Theo dõi dấu hiệu viêm gan (hiếm nhưng nguy hiểm).'},
+        'geriatric_dosing': {'considerations':
         'Người cao tuổi có thể có suy thận phổ biến hơn, cần điều chỉnh liều. Tăng nguy cơ viêm gan (đặc biệt do clavulanate) ở nam giới, dùng kéo dài. Suy gan phổ biến hơn.',
         'dose_adjustment':
         'Điều chỉnh liều theo chức năng thận: CrCl 30-60 → giảm liều hoặc tăng khoảng cách, CrCl <30 → liều thấp hơn, khoảng cách dài hơn. Thận trọng ở suy gan.',
         'monitoring':
-        'Theo dõi chức năng gan (ALT, AST) thường xuyên, đặc biệt ở nam giới, dùng kéo dài. Theo dõi chức năng thận (creatinine, CrCl). Theo dõi dấu hiệu viêm gan (vàng da, mệt mỏi). Theo dõi tiêu chảy (có thể là nhiễm C. difficile).'}, 'brand_names': {'vietnam': [
-        'Amoxicillin-clavulanate', 'Augmentin', 'Amoclav', 'Clavulanate Stada'], 'common': [
+        'Theo dõi chức năng gan (ALT, AST) thường xuyên, đặc biệt ở nam giới, dùng kéo dài. Theo dõi chức năng thận (creatinine, CrCl). Theo dõi dấu hiệu viêm gan (vàng da, mệt mỏi). Theo dõi tiêu chảy (có thể là nhiễm C. difficile).'},
+        'brand_names': {'vietnam': [
+        'Amoxicillin-clavulanate', 'Augmentin', 'Amoclav', 'Clavulanate Stada'],
+        'common': [
         'Augmentin', 'Amoxicillin-clavulanate', 'Amoclav'],
         'range': '8,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Amoxicillin-clavulanate generic thường rẻ hơn (8,000-20,000 VND/viên 625mg). Augmentin (brand) thường đắt hơn (20,000-40,000 VND/viên 625mg). Dạng suspension: 100,000-200,000 VND/lọ 100ml (250mg/5ml).'}, 'references': {'primary_sources': [
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Amoxicillin-clavulanate generic thường rẻ hơn (8,000-20,000 VND/viên 625mg). Augmentin (brand) thường đắt hơn (20,000-40,000 VND/viên 625mg). Dạng suspension: 100,000-200,000 VND/lọ 100ml (250mg/5ml).'},
+        'references': {'primary_sources': [
         'FDA Label: Augmentin (amoxicillin-clavulanate)',
         'UpToDate: Amoxicillin-clavulanate drug information',
         'Lexicomp: Amoxicillin-clavulanate monograph',

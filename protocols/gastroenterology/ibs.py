@@ -129,7 +129,7 @@ def render():
     
     st.markdown("### 📋 Phác Đồ Điều trị Theo Loại")
     
-    st.markdown("#### IBS-D (Tiêu Chảy)")
+    st.markdown("#### IBS-D (Tiêu chảy)")
     
     st.info("""
     **Bước 1: Thay đổi lối sống**
@@ -194,7 +194,7 @@ def render():
     
     with col2:
         st.markdown("""
-        **Trẻ Em:**
+        **Trẻ em:**
         - Chẩn đoán khó hơn
         - Triệu chứng có thể khác
         - Điều trị tương tự nhưng liều điều chỉnh
@@ -258,7 +258,7 @@ def render():
 
 def render_ibs_d():
     """IBS-D Protocol"""
-    st.success("## 💊 IBS-D (Tiêu Chảy)")
+    st.success("## 💊 IBS-D (Tiêu chảy)")
     
     st.markdown("### Điều trị")
     
@@ -367,7 +367,7 @@ def render_antispasmodics():
 
 def render_antidiarrheals():
     """Antidiarrheals"""
-    st.info("## 💊 Antidiarrheals (Chống Tiêu Chảy)")
+    st.info("## 💊 Antidiarrheals (Chống Tiêu chảy)")
     
     st.markdown("### Liều Dùng")
     

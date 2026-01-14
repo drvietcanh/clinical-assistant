@@ -426,7 +426,7 @@ def render_sepsis_protocols():
     
     st.markdown("## 🦠 Sepsis Protocols & Management")
     st.markdown("""
-    Hướng Dẫn Quản Lý Sepsis và Septic Shock:
+    Hướng dẫn Quản lý Sepsis và Septic Shock:
     - Sepsis recognition (SIRS, qSOFA, Sepsis-3)
     - 1-hour bundle checklist
     - Antibiotic selection guide
@@ -459,10 +459,7 @@ def render_sepsis_protocols():
         "💧 Fluid Resuscitation",
         "📊 Lactate Monitoring"
     ]
-    if default_tab is not None and 0 <= default_tab < len(tab_labels):
-        tab1, tab2, tab3, tab4, tab5 = st.tabs(tab_labels, selected=default_tab)
-    else:
-        tab1, tab2, tab3, tab4, tab5 = st.tabs(tab_labels)
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(tab_labels)
     
     with tab1:
         render_sepsis_recognition()

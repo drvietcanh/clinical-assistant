@@ -40,7 +40,7 @@ GOUT_MEDICATIONS_DRUGS = {
             "Statins: tăng nguy cơ tiêu cơ vân",
             "Fibrates: tăng nguy cơ tiêu cơ vân"
         ],
-        "pregnancy": "D",
+        "pregnancy": "D - Có bằng chứng về nguy cơ. Tránh trong thai kỳ",
         "mechanism_of_action": "Colchicine là alkaloid có nguồn gốc từ cây colchicum, có tác dụng chống viêm mạnh trong gout cấp. Colchicine gắn với tubulin, ngăn chặn sự polymer hóa microtubule, ức chế sự di chuyển của bạch cầu đến vị trí viêm và ức chế thực bào các tinh thể urate. Colchicine cũng ức chế giải phóng các chất trung gian gây viêm từ bạch cầu. Colchicine không làm giảm nồng độ acid uric máu, chỉ có tác dụng chống viêm trong cơn gout cấp. Colchicine có phạm vi điều trị hẹp (narrow therapeutic window), dễ gây độc tính nếu quá liều.",
         "monitoring": [
             "Dấu hiệu độc tính: tiêu chảy, nôn (dấu hiệu sớm - NGỪNG NGAY)",
@@ -274,7 +274,7 @@ GOUT_MEDICATIONS_DRUGS = {
             "Azathioprine/6-mercaptopurine: tăng độc tính (chống chỉ định)",
             "Theophylline: tăng nồng độ theophylline"
         ],
-        "pregnancy": "C",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
         "mechanism_of_action": "Febuxostat là xanthine oxidase inhibitor không purine, ức chế enzyme xanthine oxidase (cả dạng oxy hóa và khử), ngăn chặn sự chuyển đổi hypoxanthine thành xanthine và xanthine thành acid uric. Khác với allopurinol (purine analog), febuxostat không phải purine analog nên ít tương tác với các enzyme khác. Febuxostat có hiệu quả mạnh hơn allopurinol trong việc giảm acid uric máu và có thể dùng ở bệnh nhân suy thận mà không cần điều chỉnh liều. Tuy nhiên, febuxostat có thể tăng nguy cơ tim mạch so với allopurinol.",
         "monitoring": [
             "Nồng độ acid uric máu (mục tiêu <6 mg/dL)",

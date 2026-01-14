@@ -202,7 +202,7 @@ def render():
         render_suggestions(
             calculator_id="abcd2",
             calculator_name="ABCD2 Score",
-            category="Thần Kinh",
+            category="Thần kinh",
             show_related=True,
             show_category=True,
             limit=3

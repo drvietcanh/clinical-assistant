@@ -204,7 +204,7 @@ MIGRAINE_TRIPTANS = {
     ],
         "side_effects": [],
         "contraindications": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ",
         "mechanism_of_action": "",
         "monitoring": [],
         "precautions": [],

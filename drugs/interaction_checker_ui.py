@@ -653,7 +653,7 @@ def render_quick_interaction_check():
     """
     Quick interaction checker for 2 drugs with enhanced search
     """
-    st.markdown("### ⚡ Kiểm Tra Nhanh (2 Thuốc)")
+    st.markdown("### ⚡ Kiểm tra Nhanh (2 Thuốc)")
     
     try:
         from .interactions_data import get_drug_autocomplete_suggestions
@@ -676,7 +676,7 @@ def render_quick_interaction_check():
             if suggestions2:
                 st.caption("💡 " + " | ".join(suggestions2[:3]))
     
-    if st.button("🔍 Kiểm Tra", use_container_width=True, type="primary"):
+    if st.button("🔍 Kiểm tra", use_container_width=True, type="primary"):
         if drug1 and drug2:
             checker = DrugInteractionChecker()
             interaction = checker.check_pair(drug1, drug2)
@@ -722,7 +722,7 @@ def render_complete_interaction_checker():
         unsafe_allow_html=True
     )
     
-    st.title("⚠️ Kiểm Tra Tương Tác Thuốc")
+    st.title("⚠️ Kiểm tra Tương Tác Thuốc")
     
     st.markdown(
         """
@@ -794,7 +794,7 @@ def render_complete_interaction_checker():
         )
     
     # Tabs
-    tab1, tab2 = st.tabs(["📋 Danh Sách Thuốc", "⚡ Kiểm Tra Nhanh"])
+    tab1, tab2 = st.tabs(["📋 Danh Sách Thuốc", "⚡ Kiểm tra Nhanh"])
     
     with tab1:
         render_medication_list_with_checker()

@@ -141,7 +141,7 @@ def render():
         render_suggestions(
             calculator_id="abc2",
             calculator_name="ABC/2 Method",
-            category="Thần Kinh",
+            category="Thần kinh",
             show_related=True,
             show_category=True,
             limit=3

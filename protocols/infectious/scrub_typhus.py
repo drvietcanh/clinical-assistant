@@ -87,13 +87,13 @@ def render():
                 "Chloramphenicol",
                 "Rifampin"
             ],
-            "Liều Người Lớn": [
+            "Liều Người lớn": [
                 "100mg PO BID x 7-15 ngày",
                 "500mg PO QD x 3-5 ngày",
                 "500mg PO QID x 7-14 ngày",
                 "600-900mg PO QD x 7-10 ngày"
             ],
-            "Liều Trẻ Em": [
+            "Liều Trẻ em": [
                 "2.2mg/kg PO BID x 7-15 ngày (max 200mg/ngày)",
                 "10mg/kg PO QD x 3-5 ngày (max 500mg)",
                 "25-50mg/kg/ngày PO chia 4 lần x 7-14 ngày",

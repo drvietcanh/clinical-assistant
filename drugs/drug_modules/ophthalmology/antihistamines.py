@@ -42,7 +42,7 @@ ANTIHISTAMINES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)",
                 "Thuốc an thần, thuốc ngủ: có thể tăng nguy cơ buồn ngủ nếu hấp thu toàn thân"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Azelastine là antihistamine thế hệ 2, đối kháng thụ thể H1. Ngăn chặn tác dụng của histamine (chất trung gian gây viêm trong phản ứng dị ứng), dẫn đến: (1) Giảm ngứa, (2) Giảm đỏ, (3) Giảm sưng, (4) Giảm chảy nước mắt. Azelastine cũng có tác dụng ức chế giải phóng histamine từ mast cells (mast cell stabilizer nhẹ). ĐẶC ĐIỂM: (1) Antihistamine thế hệ 2, đối kháng H1, (2) Tác dụng nhanh, (3) Dùng 2 lần/ngày, (4) Có thể dùng kéo dài, (5) Kích ứng mắt phổ biến, (6) Vị đắng trong miệng do hấp thu toàn thân - phổ biến, (7) An toàn cho trẻ em ≥3 tuổi, (8) Ít gây buồn ngủ hơn antihistamine thế hệ 1.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm ngứa, đỏ, sưng) - cải thiện sau vài giờ đến 1 ngày",
@@ -201,7 +201,7 @@ ANTIHISTAMINES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)",
                 "Thuốc an thần, thuốc ngủ: có thể tăng nguy cơ buồn ngủ nếu hấp thu toàn thân"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Ketotifen là antihistamine và mast cell stabilizer. Tác dụng kép: (1) Mast cell stabilizer - ức chế giải phóng histamine và các chất trung gian gây viêm (leukotrienes, prostaglandins) từ mast cells, (2) Antihistamine - đối kháng thụ thể H1, ngăn chặn tác dụng của histamine. Dẫn đến: giảm ngứa, giảm đỏ, giảm sưng trong viêm kết mạc dị ứng. ĐẶC ĐIỂM: (1) Tác dụng kép: mast cell stabilizer + antihistamine, (2) Dùng 2 lần/ngày, (3) Có thể dùng kéo dài, (4) Kích ứng mắt phổ biến trong vài ngày đầu, (5) An toàn cho trẻ em ≥3 tuổi, (6) Hấp thu toàn thân hiếm nhưng có thể gây buồn ngủ.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm ngứa, đỏ, sưng) - cải thiện sau 2-3 ngày",
@@ -356,7 +356,7 @@ ANTIHISTAMINES_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Olopatadine là thuốc kép: (1) Antihistamine - ức chế H1 receptor trên tế bào, ngăn chặn tác dụng của histamine (giảm ngứa, giảm đỏ, giảm sưng), (2) Mast cell stabilizer - ổn định màng tế bào mast, ngăn chặn giải phóng histamine và các chất trung gian viêm khác. Dẫn đến: giảm ngứa, giảm đỏ, giảm sưng, giảm chảy nước mắt trong viêm kết mạc dị ứng. Olopatadine hiệu quả với cả triệu chứng cấp tính (antihistamine) và phòng ngừa (mast cell stabilizer). ĐẶC ĐIỂM: (1) Thuốc kép: antihistamine + mast cell stabilizer, (2) Hiệu quả với viêm kết mạc dị ứng, (3) Dùng 1-2 lần/ngày tùy theo nồng độ, (4) An toàn, ít tác dụng phụ, (5) Nhìn mờ tạm thời ngay sau khi nhỏ - phổ biến.",
             "monitoring": [
                 "Dấu hiệu viêm kết mạc dị ứng (ngứa, đỏ, chảy nước mắt) - cải thiện sau vài ngày",

@@ -272,7 +272,7 @@ def render():
             
             # Visual Charts
             st.markdown("---")
-            st.markdown("### 📊 Biểu Đồ Nguy Cơ")
+            st.markdown("### 📊 Biểu Đồ Nguy cơ")
             col_chart1, col_chart2 = st.columns(2)
             
             with col_chart1:

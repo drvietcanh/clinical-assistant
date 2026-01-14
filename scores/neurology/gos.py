@@ -141,7 +141,7 @@ def render():
         render_suggestions(
             calculator_id="gos",
             calculator_name="Glasgow Outcome Scale",
-            category="Thần Kinh",
+            category="Thần kinh",
             show_related=True,
             show_category=True,
             limit=3

@@ -229,7 +229,7 @@ def render():
             """)
         
         st.info("""
-        **📊 So Sánh RIFLE vs AKIN vs KDIGO:**
+        **📊 So sánh RIFLE vs AKIN vs KDIGO:**
         
         | Đặc Điểm | RIFLE (2004) | AKIN (2007) | KDIGO (2012) |
         |----------|--------------|-------------|--------------|

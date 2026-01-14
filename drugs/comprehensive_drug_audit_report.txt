@@ -1,0 +1,317 @@
+================================================================================
+BÁO CÁO KIỂM TRA TOÀN DIỆN DỮ LIỆU THUỐC
+================================================================================
+
+Ngày kiểm tra: 2026-01-13T21:22:35.361205
+Tổng số entries: 714
+
+1. ENTRIES KHÔNG HỢP LỆ:
+--------------------------------------------------------------------------------
+  Không có
+
+2. THUỐC THIẾU FIELD QUAN TRỌNG:
+--------------------------------------------------------------------------------
+
+pregnancy (109 thuốc):
+  - Enalapril
+  - Lisinopril
+  - Losartan
+  - Telmisartan
+  - Valsartan
+  - Simvastatin
+  - Pravastatin
+  - Metformin
+  - Insulin
+  - Empagliflozin
+  - Dapagliflozin
+  - Canagliflozin
+  - Gliclazide
+  - Pioglitazone
+  - Liraglutide
+  - Semaglutide
+  - Dulaglutide
+  - Exenatide
+  - Bismuth subsalicylate
+  - Ranitidine
+  ... và 89 thuốc khác
+
+contraindications (35 thuốc):
+  - Simvastatin
+  - Pravastatin
+  - Dapagliflozin
+  - Canagliflozin
+  - Dulaglutide
+  - Sulfasalazine
+  - Rizatriptan
+  - Zolmitriptan
+  - Cetirizine
+  - Desloratadine
+  - Fexofenadine
+  - Loratadine
+  - Chlorpheniramine
+  - Hydroxychloroquine
+  - Propylthiouracil
+  - Prednisone
+  - Imatinib
+  - Erlotinib
+  - Atropine
+  - Vitamin D3 (Cholecalciferol)
+  ... và 15 thuốc khác
+
+dosage (1 thuốc):
+  - Budesonide inhaled
+
+side_effects (14 thuốc):
+  - Budesonide inhaled
+  - Zolmitriptan
+  - Desloratadine
+  - Sodium Chloride 0.9%
+  - Ringer Lactate
+  - HES 130/0.4
+  - Vitamin D3 (Cholecalciferol)
+  - Febuxostat
+  - Levobupivacaine
+  - Snake Antivenom (Ho Dat)
+  - Pralidoxime
+  - Ethanol
+  - Cyanocobalamin (Vitamin B12)
+  - Vitamin C (Ascorbic Acid)
+
+3. LỖI FORMAT:
+--------------------------------------------------------------------------------
+
+Enalapril:
+  - pregnancy_lactation: Expected dict, got str
+  - hepatic_adjustment: Expected dict, got str
+  - overdose_management: Expected dict, got str
+  - administration_instructions: Expected dict, got str
+
+Lisinopril:
+  - pregnancy_lactation: Expected dict, got str
+  - hepatic_adjustment: Expected dict, got str
+  - overdose_management: Expected dict, got str
+  - administration_instructions: Expected dict, got str
+
+Losartan:
+  - pregnancy_lactation: Expected dict, got str
+  - hepatic_adjustment: Expected dict, got str
+  - overdose_management: Expected dict, got str
+  - administration_instructions: Expected dict, got str
+
+Telmisartan:
+  - pregnancy_lactation: Expected dict, got str
+  - hepatic_adjustment: Expected dict, got str
+  - overdose_management: Expected dict, got str
+  - administration_instructions: Expected dict, got str
+
+Simvastatin:
+  - administration_instructions: Expected dict, got str
+
+Pravastatin:
+  - administration_instructions: Expected dict, got str
+
+Diltiazem:
+  - pregnancy_lactation: Expected dict, got str
+  - hepatic_adjustment: Expected dict, got str
+  - overdose_management: Expected dict, got str
+  - administration_instructions: Expected dict, got str
+
+Verapamil:
+  - pregnancy_lactation: Expected dict, got str
+  - hepatic_adjustment: Expected dict, got str
+  - overdose_management: Expected dict, got str
+  - administration_instructions: Expected dict, got str
+
+Aspirin:
+  - overdose_management: Expected dict, got str
+
+Insulin:
+  - pregnancy_lactation: Expected dict, got str
+
+Empagliflozin:
+  - administration_instructions: Expected dict, got str
+
+Dapagliflozin:
+  - administration_instructions: Expected dict, got str
+
+Canagliflozin:
+  - administration_instructions: Expected dict, got str
+
+Liraglutide:
+  - administration_instructions: Expected dict, got str
+
+Semaglutide:
+  - administration_instructions: Expected dict, got str
+
+Dulaglutide:
+  - administration_instructions: Expected dict, got str
+
+Exenatide:
+  - administration_instructions: Expected dict, got str
+
+Ranitidine:
+  - pregnancy_lactation: Expected dict, got str
+  - hepatic_adjustment: Expected dict, got str
+  - overdose_management: Expected dict, got str
+  - administration_instructions: Expected dict, got str
+
+Omeprazole:
+  - overdose_management: Expected dict, got str
+  - administration_instructions: Expected dict, got str
+
+Esomeprazole:
+  - pregnancy_lactation: Expected dict, got str
+
+Lansoprazole:
+  - pregnancy_lactation: Expected dict, got str
+
+Sulfasalazine:
+  - administration_instructions: Expected dict, got str
+
+Hydrocodone:
+  - pregnancy_lactation: Expected dict, got str
+
+Paracetamol:
+  - reversal_agents: Expected (<class 'dict'>, <class 'NoneType'>), got list
+
+Rizatriptan:
+  - administration_instructions: Expected dict, got str
+
+Sumatriptan:
+  - administration_instructions: Expected dict, got str
+
+Ipratropium:
+  - pregnancy_lactation: Expected dict, got str
+  - hepatic_adjustment: Expected dict, got str
+  - overdose_management: Expected dict, got str
+  - administration_instructions: Expected dict, got str
+
+Budesonide inhaled:
+  - pregnancy_lactation: Expected dict, got str
+  - hepatic_adjustment: Expected dict, got str
+  - overdose_management: Expected dict, got str
+  - administration_instructions: Expected dict, got str
+
+Fluticasone/Salmeterol inhaler:
+  - administration_instructions: Expected dict, got str
+
+Fluticasone/Umeclidinium/Vilanterol inhaler:
+  - administration_instructions: Expected dict, got str
+
+4. FIELD QUAN TRỌNG CÒN RỖNG:
+--------------------------------------------------------------------------------
+
+black_box_warnings (154 thuốc):
+  - Nesiritide
+  - Enalapril
+  - Telmisartan
+  - Valsartan
+  - Nebivolol
+  - Pravastatin
+  - Ezetimibe
+  - Adenosine
+  - Clevidipine
+  - Lacidipine
+  - Hydrochlorothiazide
+  - Indapamide
+  - Alogliptin
+  - Linagliptin
+  - Saxagliptin
+  - Sitagliptin
+  - Empagliflozin
+  - Dapagliflozin
+  - Acarbose
+  - Miglitol
+  ... và 134 thuốc khác
+
+storage (62 thuốc):
+  - Enalapril
+  - Lisinopril
+  - Losartan
+  - Telmisartan
+  - Valsartan
+  - Empagliflozin
+  - Dapagliflozin
+  - Canagliflozin
+  - Liraglutide
+  - Semaglutide
+  - Dulaglutide
+  - Exenatide
+  - Ranitidine
+  - Sulfasalazine
+  - Rizatriptan
+  - Sumatriptan
+  - Ipratropium
+  - Budesonide inhaled
+  - Zolmitriptan
+  - Cetirizine
+  ... và 42 thuốc khác
+
+administration_instructions (66 thuốc):
+  - Enalapril
+  - Lisinopril
+  - Losartan
+  - Telmisartan
+  - Simvastatin
+  - Pravastatin
+  - Diltiazem
+  - Verapamil
+  - Empagliflozin
+  - Dapagliflozin
+  - Canagliflozin
+  - Liraglutide
+  - Semaglutide
+  - Dulaglutide
+  - Exenatide
+  - Ranitidine
+  - Omeprazole
+  - Sulfasalazine
+  - Rizatriptan
+  - Sumatriptan
+  ... và 46 thuốc khác
+
+pregnancy_lactation (39 thuốc):
+  - Enalapril
+  - Lisinopril
+  - Losartan
+  - Telmisartan
+  - Diltiazem
+  - Verapamil
+  - Insulin
+  - Ranitidine
+  - Esomeprazole
+  - Lansoprazole
+  - Hydrocodone
+  - Ipratropium
+  - Budesonide inhaled
+  - Cetirizine
+  - Desloratadine
+  - Fexofenadine
+  - Levocetirizine
+  - Chlorpheniramine
+  - Diphenhydramine
+  - Etomidate
+  ... và 19 thuốc khác
+
+pregnancy (44 thuốc):
+  - Simvastatin
+  - Pravastatin
+  - Empagliflozin
+  - Dapagliflozin
+  - Canagliflozin
+  - Liraglutide
+  - Semaglutide
+  - Dulaglutide
+  - Exenatide
+  - Sulfasalazine
+  - Rizatriptan
+  - Sumatriptan
+  - Zolmitriptan
+  - Hydroxychloroquine
+  - Alendronate
+  - Atropine
+  - Sodium Chloride 0.9%
+  - Ringer Lactate
+  - Albumin (Human)
+  - HES 130/0.4
+  ... và 24 thuốc khác

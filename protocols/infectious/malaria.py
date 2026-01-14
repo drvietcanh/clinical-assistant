@@ -105,7 +105,7 @@ def render():
                 "Quinine IV",
                 "Primaquine (radical cure)"
             ],
-            "Liều Người Lớn": [
+            "Liều Người lớn": [
                 "4 viên PO (80/480mg) ngày 1, sau đó 4 viên sau 8h, sau đó 4 viên BID x 2 ngày",
                 "Artesunate 100mg + Amodiaquine 270mg PO QD x 3 ngày",
                 "Artesunate 100mg + Mefloquine 250mg PO QD x 3 ngày",
@@ -114,7 +114,7 @@ def render():
                 "20mg/kg IV loading, sau đó 10mg/kg q8h",
                 "15mg base PO QD x 14 ngày (P. vivax/ovale)"
             ],
-            "Liều Trẻ Em": [
+            "Liều Trẻ em": [
                 "Theo cân nặng: 5-15kg, 15-25kg, 25-35kg, >35kg",
                 "Theo cân nặng",
                 "Theo cân nặng",

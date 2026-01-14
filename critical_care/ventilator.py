@@ -323,7 +323,7 @@ def render_tidal_volume_calculator():
         st.info(f"""
         **💡 Khuyến nghị:**
         - **ARDSNet protocol:** 6 ml/kg IBW = **{ibw_kg * 6:.0f} ml**
-        - **Mục Tiêu:** Plateau pressure < 30 cmH2O
+        - **Mục tiêu:** Plateau pressure < 30 cmH2O
         - **Driving pressure:** < 15 cmH2O
         - **Lưu ý:** Sử dụng IBW, không dùng cân nặng thực tế
         """)
@@ -575,7 +575,7 @@ def render_ventilator_calculator():
     
     st.markdown("## 🫁 Công Cụ Quản lý Máy Thở")
     st.markdown("""
-    Công Cụ Quản Lý Máy Thở cho ICU:
+    Công Cụ Quản lý Máy Thở cho ICU:
     - Cân nặng lý tưởng (IBW) - Tính trọng lượng lý tưởng
     - Thể tích khí lưu thông - Tính thể tích khí lưu thông
     - Tính toán PEEP - Khuyến nghị PEEP dựa trên FiO2

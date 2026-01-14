@@ -538,7 +538,7 @@ def render():
         render_suggestions(
             calculator_id="bode",
             calculator_name="BODE Index",
-            category="Hô Hấp",
+            category="Hô hấp",
             show_related=True,
             show_category=True,
             limit=3

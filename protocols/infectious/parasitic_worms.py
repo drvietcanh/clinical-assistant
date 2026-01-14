@@ -157,13 +157,13 @@ def render_ascariasis():
             "Pyrantel pamoate",
             "Piperazine citrate"
         ],
-        "Liều Người Lớn": [
+        "Liều Người lớn": [
             "400mg PO x 1",
             "100mg PO BID x 3 ngày",
             "11mg/kg PO x 1 (max 1g)",
             "75mg/kg PO x 1 (max 3.5g)"
         ],
-        "Liều Trẻ Em": [
+        "Liều Trẻ em": [
             "400mg PO x 1 (>1 tuổi)",
             "100mg PO BID x 3 ngày (>2 tuổi)",
             "11mg/kg PO x 1 (>2 tuổi)",
@@ -282,12 +282,12 @@ def render_trichuriasis():
             "Mebendazole",
             "Ivermectin"
         ],
-        "Liều Người Lớn": [
+        "Liều Người lớn": [
             "400mg PO QD x 3 ngày",
             "100mg PO BID x 3 ngày",
             "200mcg/kg PO QD x 3 ngày"
         ],
-        "Liều Trẻ Em": [
+        "Liều Trẻ em": [
             "400mg PO QD x 3 ngày (>1 tuổi)",
             "100mg PO BID x 3 ngày (>2 tuổi)",
             "200mcg/kg PO QD x 3 ngày (>15kg)"
@@ -403,12 +403,12 @@ def render_hookworm():
             "Mebendazole",
             "Pyrantel pamoate"
         ],
-        "Liều Người Lớn": [
+        "Liều Người lớn": [
             "400mg PO x 1",
             "100mg PO BID x 3 ngày",
             "11mg/kg PO QD x 3 ngày (max 1g/ngày)"
         ],
-        "Liều Trẻ Em": [
+        "Liều Trẻ em": [
             "400mg PO x 1 (>1 tuổi)",
             "100mg PO BID x 3 ngày (>2 tuổi)",
             "11mg/kg PO QD x 3 ngày (>2 tuổi)"
@@ -547,12 +547,12 @@ def render_strongyloidiasis():
             "Albendazole",
             "Thiabendazole"
         ],
-        "Liều Người Lớn": [
+        "Liều Người lớn": [
             "200mcg/kg PO QD x 2 ngày",
             "400mg PO BID x 7 ngày",
             "25mg/kg PO BID x 2-3 ngày"
         ],
-        "Liều Trẻ Em": [
+        "Liều Trẻ em": [
             "200mcg/kg PO QD x 2 ngày (>15kg)",
             "400mg PO BID x 7 ngày (>1 tuổi)",
             "25mg/kg PO BID x 2-3 ngày"
@@ -695,11 +695,11 @@ def render_liver_fluke():
             "Praziquantel",
             "Triclabendazole"
         ],
-        "Liều Người Lớn": [
+        "Liều Người lớn": [
             "25mg/kg PO TID x 2 ngày",
             "10mg/kg PO x 1-2 liều"
         ],
-        "Liều Trẻ Em": [
+        "Liều Trẻ em": [
             "25mg/kg PO TID x 2 ngày (>4 tuổi)",
             "10mg/kg PO x 1-2 liều"
         ],
@@ -815,12 +815,12 @@ def render_enterobiasis():
             "Mebendazole",
             "Pyrantel pamoate"
         ],
-        "Liều Người Lớn": [
+        "Liều Người lớn": [
             "400mg PO x 1, lặp lại sau 2 tuần",
             "100mg PO x 1, lặp lại sau 2 tuần",
             "11mg/kg PO x 1 (max 1g), lặp lại sau 2 tuần"
         ],
-        "Liều Trẻ Em": [
+        "Liều Trẻ em": [
             "400mg PO x 1 (>1 tuổi), lặp lại sau 2 tuần",
             "100mg PO x 1 (>2 tuổi), lặp lại sau 2 tuần",
             "11mg/kg PO x 1 (>2 tuổi), lặp lại sau 2 tuần"
@@ -948,12 +948,12 @@ def render_taeniasis():
             "Niclosamide",
             "Albendazole"
         ],
-        "Liều Người Lớn": [
+        "Liều Người lớn": [
             "5-10mg/kg PO x 1",
             "2g PO x 1 (nhai kỹ, lúc đói)",
             "400mg PO BID x 3 ngày"
         ],
-        "Liều Trẻ Em": [
+        "Liều Trẻ em": [
             "5-10mg/kg PO x 1 (>4 tuổi)",
             "1-1.5g PO x 1 (theo cân nặng)",
             "400mg PO BID x 3 ngày (>1 tuổi)"
@@ -1074,11 +1074,11 @@ def render_paragonimiasis():
             "Praziquantel",
             "Triclabendazole"
         ],
-        "Liều Người Lớn": [
+        "Liều Người lớn": [
             "25mg/kg PO TID x 2 ngày",
             "10mg/kg PO BID x 1 ngày"
         ],
-        "Liều Trẻ Em": [
+        "Liều Trẻ em": [
             "25mg/kg PO TID x 2 ngày (>4 tuổi)",
             "10mg/kg PO BID x 1 ngày"
         ],
@@ -1202,13 +1202,13 @@ def render_amoebiasis():
             "Paromomycin",
             "Nitazoxanide"
         ],
-        "Liều Người Lớn": [
+        "Liều Người lớn": [
             "750mg PO TID x 10 ngày",
             "2g PO QD x 3-5 ngày",
             "25-30mg/kg/ngày PO chia 3 lần x 5-10 ngày",
             "500mg PO BID x 3 ngày"
         ],
-        "Liều Trẻ Em": [
+        "Liều Trẻ em": [
             "35-50mg/kg/ngày PO chia 3 lần x 10 ngày",
             "50mg/kg/ngày PO (max 2g) x 3-5 ngày",
             "25-30mg/kg/ngày PO chia 3 lần x 5-10 ngày",
@@ -1308,7 +1308,7 @@ def render_giardiasis():
     
     with col2:
         st.warning("""
-        **Điều trị Thất Bại/Tái Phát:**
+        **Điều trị Thất Bại/Tái phát:**
         
         **Lần 1 thất bại:**
         - Thử **Tinidazole** 2g PO x 1 liều
@@ -1336,13 +1336,13 @@ def render_giardiasis():
             "Nitazoxanide",
             "Albendazole"
         ],
-        "Liều Người Lớn": [
+        "Liều Người lớn": [
             "250mg PO TID x 5-7 ngày",
             "2g PO x 1 liều",
             "500mg PO BID x 3 ngày",
             "400mg PO BID x 5-7 ngày"
         ],
-        "Liều Trẻ Em": [
+        "Liều Trẻ em": [
             "15mg/kg/ngày PO chia 3 lần x 5-7 ngày",
             "50mg/kg PO x 1 liều (max 2g)",
             "100-200mg PO BID x 3 ngày (tùy tuổi)",

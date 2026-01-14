@@ -232,7 +232,7 @@ def render():
         - **PPI:** Omeprazole, Pantoprazole (Category B)
         - **Phác đồ:** Amoxicillin + Metronidazole + PPI (14 ngày)
         
-        **Trẻ Em:**
+        **Trẻ em:**
         - **Liều:** Tính theo kg
         - **Phác đồ:** Triple therapy (Amoxicillin + Clarithromycin + PPI)
         - **Thời gian:** 14 ngày
@@ -241,7 +241,7 @@ def render():
     
     with col2:
         st.markdown("""
-        **Suy Thận:**
+        **Suy thận:**
         - **Amoxicillin:** Điều chỉnh liều nếu CrCl <30
         - **Clarithromycin:** Thận trọng
         - **Metronidazole:** Giảm liều nếu CrCl <10

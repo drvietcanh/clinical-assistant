@@ -186,7 +186,7 @@ def render():
         render_suggestions(
             calculator_id="sf_syncope",
             calculator_name="San Francisco Syncope Rule",
-            category="Hồi Sức Cấp Cứu",
+            category="Hồi sức Cấp cứu",
             show_related=True,
             show_category=True,
             limit=3

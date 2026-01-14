@@ -673,7 +673,7 @@
 - **Zolmitriptan** (29.2%) - Thiếu/rỗng 17 fields
 - ... và 13 thuốc khác
 
-## Ưu Tiên Hành Động
+## Ưu tiên Hành Động
 
 ### Priority 1: Bổ sung STANDARD fields thiếu
 

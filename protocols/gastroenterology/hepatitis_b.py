@@ -238,7 +238,7 @@ def render():
     
     with col1:
         st.markdown("""
-        **Suy Thận:**
+        **Suy thận:**
         - **ETV:** Điều chỉnh liều nếu CrCl <50 mL/min
         - **TDF:** Tránh hoặc giảm liều nếu CrCl <50 mL/min
         - **TAF:** An toàn hơn TDF ở suy thận
@@ -249,7 +249,7 @@ def render():
         - **LAM:** Có thể dùng
         - **Tránh:** ADV, TAF (dữ liệu hạn chế)
         
-        **Trẻ Em:**
+        **Trẻ em:**
         - **ETV:** ≥2 tuổi, ≥10 kg
         - **TDF:** ≥12 tuổi
         - **LAM:** ≥2 tuổi

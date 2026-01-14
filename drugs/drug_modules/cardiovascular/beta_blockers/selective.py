@@ -239,7 +239,7 @@ SELECTIVE_BETA_BLOCKERS = {
           "Verapamil/Diltiazem: tăng nguy cơ block nhĩ thất",
           "Insulin: che dấu triệu chứng hạ đường huyết"
       ],
-      "pregnancy": "D",
+        "pregnancy": "D",
       "mechanism_of_action": "Selective beta-1 adrenergic receptor blocker. Ức chế tác dụng của catecholamines (epinephrine, norepinephrine) trên beta-1 receptors ở tim, giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp, giảm nhu cầu oxy cơ tim. Chọn lọc beta-1 hơn metoprolol, ít tác dụng trên beta-2 (ít gây co thắt phế quản hơn propranolol). Thải chủ yếu qua thận (khác với metoprolol - thải qua gan).",
       "monitoring": [
           "Nhịp tim và huyết áp (trước và sau khi bắt đầu)",
@@ -692,7 +692,7 @@ SELECTIVE_BETA_BLOCKERS = {
           "Verapamil/Diltiazem: tăng nguy cơ block nhĩ thất",
           "Insulin: che dấu triệu chứng hạ đường huyết"
       ],
-      "pregnancy": "C",
+        "pregnancy": "C",
 
       "guideline_tags": [
           "ACC/AHA/HFSA HFrEF GDMT",

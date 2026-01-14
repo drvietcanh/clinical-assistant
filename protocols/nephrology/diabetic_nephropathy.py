@@ -139,7 +139,7 @@ def render_early_stage():
     """Early stage management (CKD G1-G2)"""
     st.warning("## 💊 Điều trị Bảo Tồn (Giai Đoạn Sớm)")
     
-    st.markdown("### 1. Kiểm Soát Đường Huyết")
+    st.markdown("### 1. Kiểm soát Đường Huyết")
     st.success("""
     **Mục tiêu:**
     - HbA1c <7% (nếu không có nguy cơ hạ đường huyết)
@@ -164,7 +164,7 @@ def render_early_stage():
     """)
     
     st.markdown("---")
-    st.markdown("### 2. Kiểm Soát Huyết Áp")
+    st.markdown("### 2. Kiểm soát Huyết Áp")
     st.info("""
     **Mục tiêu:**
     - <130/80 mmHg (nếu ACR <30 mg/g)
@@ -217,7 +217,7 @@ def render_advanced():
     """Advanced stage management (CKD G3-5)"""
     st.error("## 🩸 Điều trị Giai Đoạn Tiến Triển (CKD G3-5)")
     
-    st.markdown("### 1. Điều Chỉnh Thuốc Đái Tháo Đường")
+    st.markdown("### 1. Điều chỉnh Thuốc Đái Tháo Đường")
     st.warning("""
     **eGFR 30-45:**
     - SGLT2 inhibitors: Có thể dùng (Dapagliflozin, Empagliflozin)

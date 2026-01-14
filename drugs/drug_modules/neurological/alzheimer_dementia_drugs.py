@@ -302,18 +302,22 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         },
     },
     "Donepezil": {'group': 'Neurology - Cholinesterase Inhibitor',
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
         'vietnamese_name': 'Donepezil, Aricept', 'administration': ['PO'],
         'indications': [
         'Bệnh Alzheimer (mild to moderate dementia)',
-        'Bệnh Alzheimer (moderate to severe dementia)'], 'contraindications': [
+        'Bệnh Alzheimer (moderate to severe dementia)'],
+        'contraindications': [
         'Dị ứng', 'Bệnh tim nặng (block nhĩ thất, rối loạn nhịp nặng)'],
         'dosage': {'adult_mild_moderate': '5mg/ngày, tăng đến 10mg/ngày sau 4-6 tuần',
         'adult_moderate_severe': '10mg/ngày, có thể tăng đến 23mg/ngày (extended release)',
         'adult_max': '23mg/ngày (extended release)', 'notes':
-        'Uống buổi tối với thức ăn. Tăng liều chậm để giảm tác dụng phụ'}, 'side_effects': [
+        'Uống buổi tối với thức ăn. Tăng liều chậm để giảm tác dụng phụ'},
+        'side_effects': [
         'Buồn nôn, nôn', 'Tiêu chảy', 'Mất ngủ', 'Chóng mặt', 'Nhức đầu',
         'Chán ăn, giảm cân', 'Co thắt cơ (muscle cramps)', 'Mệt mỏi',
-        'Chậm nhịp tim (bradycardia)', 'Ngất (syncope)'], 'interactions': [
+        'Chậm nhịp tim (bradycardia)', 'Ngất (syncope)'],
+        'interactions': [
         'Anticholinergics: đối kháng tác dụng donepezil',
         'Cholinergic drugs: tăng tác dụng, tăng tác dụng phụ',
         'Succinylcholine: tăng tác dụng, tăng nguy cơ kéo dài block thần kinh cơ',
@@ -327,11 +331,11 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         , 'Ngất (syncope) - có thể xảy ra do chậm nhịp tim',
         'Cân nặng: chán ăn, giảm cân - theo dõi cân nặng',
         'Giấc ngủ: mất ngủ - có thể cần dùng buổi sáng thay vì buổi tối',
-        'Tương tác với anticholinergics (đối kháng), cholinergic drugs (tăng tác dụng)'], 'precautions': [
+        'Tương tác với anticholinergics (đối kháng), cholinergic drugs (tăng tác dụng)'],
+        'precautions': [
         'Uống buổi tối với thức ăn để giảm buồn nôn (tác dụng phụ phổ biến nhất)',
         'Tăng liều chậm (5mg → 10mg sau 4-6 tuần) để giảm tác dụng phụ',
         'Buồn nôn, nôn, tiêu chảy - phổ biến, thường tự khỏi sau vài tuần, có thể giảm bằng cách uống với thức ăn'
-        ,
         'CHẬM NHỊP TIM (bradycardia) - nguy hiểm, đặc biệt ở bệnh nhân có bệnh tim, block nhĩ thất, dùng beta-blockers'
         , 'Ngất (syncope) - có thể xảy ra do chậm nhịp tim, thận trọng',
         'Mất ngủ - có thể cần dùng buổi sáng thay vì buổi tối',
@@ -341,12 +345,14 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Thận trọng khi dùng với anticholinergics (đối kháng tác dụng donepezil)',
         'Thận trọng khi dùng với cholinergic drugs (tăng tác dụng, tăng tác dụng phụ)',
         'Thận trọng với bệnh nhân có tiền sử loét dạ dày (tăng acid dạ dày)',
-        'Không ngừng đột ngột (có thể làm tăng triệu chứng)'], 'pharmacokinetics': {
+        'Không ngừng đột ngột (có thể làm tăng triệu chứng)'],
+        'pharmacokinetics': {
         'half_life': '70 giờ (rất dài, cho phép dùng 1 lần/ngày)', 'onset':
         'Vài tuần (tác dụng chậm)', 'duration': 'Dài (do half-life rất dài)',
         'protein_binding': '96% (rất cao)', 'metabolism':
         'Gan (chuyển hóa qua CYP2D6, CYP3A4), thận (thải trừ)', 'clearance':
-        'Gan (chuyển hóa), thận (thải trừ). Half-life rất dài (70 giờ) do gắn chặt với acetylcholinesterase.'}, 'storage':
+        'Gan (chuyển hóa), thận (thải trừ). Half-life rất dài (70 giờ) do gắn chặt với acetylcholinesterase.'},
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.'
         , 'black_box_warnings':
         'Nguy cơ chậm nhịp tim (bradycardia) nghiêm trọng, có thể gây ngất, block nhĩ thất, rối loạn nhịp tim. Nguy cơ tăng ở bệnh nhân có bệnh tim, dùng beta-blockers, hoặc có block nhĩ thất. CHỐNG CHỈ ĐỊNH trong bệnh tim nặng. Theo dõi nhịp tim. Nguy cơ tăng acid dạ dày, có thể làm nặng loét dạ dày.'
@@ -358,29 +364,32 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Donepezil ức chế cholinesterase, tăng tác dụng succinylcholine', 'effect':
         'Tăng tác dụng, tăng nguy cơ kéo dài block thần kinh cơ', 'management':
         'Ngừng donepezil ít nhất 2 tuần trước phẫu thuật nếu có thể. Nếu không thể, thông báo cho bác sĩ gây mê.'
-        }], 'moderate': [
+        }],
+        'moderate': [
         {'drug': 'Anticholinergics (atropine, scopolamine, benztropine)', 'mechanism': 'Đối kháng tác dụng cholinergic của donepezil', 'effect':
         'Giảm hiệu quả donepezil', 'management':
         'Tránh dùng chung nếu có thể. Nếu phải dùng, theo dõi đáp ứng điều trị.'}, {
         'drug': 'Cholinergic drugs (bethanechol, pilocarpine)', 'mechanism':
         'Tăng tác dụng cholinergic', 'effect': 'Tăng tác dụng phụ (buồn nôn, nôn, tiêu chảy)',
-        'management': 'Thận trọng. Có thể cần giảm liều một trong hai thuốc.'}], 'minor': [
+        'management': 'Thận trọng. Có thể cần giảm liều một trong hai thuốc.'}],
+        'minor': [
         {'drug': 'CYP2D6, CYP3A4 inhibitors', 'mechanism':
         'Ức chế chuyển hóa donepezil', 'effect': 'Tăng nồng độ donepezil, tăng tác dụng phụ',
         'management': 'Thận trọng. Có thể cần giảm liều donepezil.'}]},
         'contraindications': {'tuyệt_đối': [
         'Dị ứng donepezil hoặc các thành phần khác',
-        'Bệnh tim nặng (block nhĩ thất độ II-III, rối loạn nhịp nặng)'], 'tương_đối': [
+        'Bệnh tim nặng (block nhĩ thất độ II-III, rối loạn nhịp nặng)'],
+        'tương_đối': [
         'Bệnh tim mạch (suy tim, block nhĩ thất độ I) - tăng nguy cơ chậm nhịp tim',
         'Loét dạ dày - tăng acid dạ dày, có thể làm nặng loét',
         'Bệnh phổi (COPD, hen) - tăng co thắt phế quản',
         'Suy gan nặng - giảm chuyển hóa, tăng nguy cơ tích lũy',
         'Suy thận nặng (CrCl <30) - giảm thải trừ, tăng nguy cơ tích lũy',
         'Dùng với beta-blockers - tăng nguy cơ chậm nhịp tim',
-        'Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ']},
-        'contraindications_detail': {'tuyệt_đối': [
+        'Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ']},contraindications_detail': {'tuyệt_đối': [
         'Dị ứng donepezil hoặc các thành phần khác',
-        'Bệnh tim nặng (block nhĩ thất độ II-III, rối loạn nhịp nặng)'], 'tương_đối': [
+        'Bệnh tim nặng (block nhĩ thất độ II-III, rối loạn nhịp nặng)'],
+        'tương_đối': [
         'Bệnh tim mạch (suy tim, block nhĩ thất độ I) - tăng nguy cơ chậm nhịp tim',
         'Loét dạ dày - tăng acid dạ dày, có thể làm nặng loét',
         'Bệnh phổi (COPD, hen) - tăng co thắt phế quản',
@@ -390,14 +399,16 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ']},
         'renal_adjustment': {'normal': 'Không cần chỉnh liều', '30_60': 'Thận trọng, có thể cần giảm liều',
         'under_30': 'Thận trọng, giảm liều (thải trừ qua thận)', 'dialysis': 'Thận trọng, giảm liều. Donepezil không được lọc sạch hiệu quả qua thẩm phân máu.',
-        'notes': 'Donepezil thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy, đặc biệt với half-life dài (70 giờ). Giảm liều và theo dõi chặt chẽ ở suy thận.'}, 'pregnancy_lactation': {
+        'notes': 'Donepezil thải trừ một phần qua thận. Suy thận có thể tăng nguy cơ tích lũy, đặc biệt với half-life dài (70 giờ). Giảm liều và theo dõi chặt chẽ ở suy thận.'},
+        'pregnancy_lactation': {
         'fda_category': 'C', 'pregnancy_details':
         'Chứng cứ về an toàn trong thai kỳ còn hạn chế. Donepezil thường không được dùng trong thai kỳ vì bệnh Alzheimer chủ yếu ở người già. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ.'
         , 'lactation': {'safety': 'Unknown', 'details':
         'Không có dữ liệu về bài tiết donepezil vào sữa mẹ. Thận trọng khi dùng khi cho con bú.'
         , 'recommendation':
         'Tránh dùng khi cho con bú nếu có thể. Nếu phải dùng, theo dõi trẻ sát về dấu hiệu tác dụng phụ cholinergic.'
-        }}, 'hepatic_adjustment': {'mild': 'Không đổi hoặc giảm liều nhẹ',
+        }},
+        'hepatic_adjustment': {'mild': 'Không đổi hoặc giảm liều nhẹ',
         'moderate': 'Giảm liều 25-50%. Theo dõi chức năng gan', 'severe':
         'Giảm liều 50% hoặc tránh dùng. Theo dõi chức năng gan chặt chẽ', 'notes':
         'Donepezil chuyển hóa ở gan qua CYP2D6, CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ.'},
@@ -415,23 +426,28 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Theo dõi liên tục: ý thức, hô hấp, tim mạch (nhịp tim)',
         'Xử trí chậm nhịp tim: atropine, pacemaker nếu cần',
         'Xử trí co thắt phế quản: albuterol, ipratropium',
-        'Hỗ trợ hô hấp: thở máy nếu suy hô hấp'], 'monitoring':
+        'Hỗ trợ hô hấp: thở máy nếu suy hô hấp'],
+        'monitoring':
         'Theo dõi ý thức, hô hấp, tim mạch (nhịp tim), dấu hiệu cholinergic quá mức'},
         'reversal_agents': {'available': True, 'agents': [{'agent': 'Atropine',
         'mechanism': 'Anticholinergic, đối kháng tác dụng cholinergic', 'indication':
         'Quá liều gây triệu chứng cholinergic quá mức, chậm nhịp tim', 'caution':
-        'Dùng thận trọng, theo dõi nhịp tim'}], 'notes':
+        'Dùng thận trọng, theo dõi nhịp tim'}],
+        'notes':
         'Atropine là antidote cho quá liều donepezil. Dùng để đối kháng tác dụng cholinergic quá mức.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống với thức ăn để giảm buồn nôn (tác dụng phụ phổ biến nhất)', 'timing':
         'Uống 1 lần/ngày vào buổi tối với thức ăn. Có thể chuyển sang buổi sáng nếu gây mất ngủ. Tăng liều chậm (5mg → 10mg sau 4-6 tuần).'
-        }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': []}},
+        },
+        'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
+        'compatibility': [],
+        'incompatibility': []}},
         'references': {'primary_sources': ['Lexicomp - Donepezil',
         'UpToDate - Donepezil: Drug information',
         'FDA - Aricept (donepezil) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'evidence_level':
+        ],
+        'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         }},
     "Lecanemab":     {
@@ -578,16 +594,21 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         },
     },
     "Memantine": {'group': 'Neurology - NMDA Receptor Antagonist',
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
         'vietnamese_name': 'Memantine, Namenda', 'administration': ['PO'],
         'indications': [
         'Bệnh Alzheimer (moderate to severe dementia)',
-        'Bệnh Alzheimer (có thể dùng kết hợp với donepezil)'], 'contraindications': [
-        'Dị ứng', 'Suy thận nặng (CrCl <30)'], 'dosage': {'adult_standard':
+        'Bệnh Alzheimer (có thể dùng kết hợp với donepezil)'],
+        'contraindications': [
+        'Dị ứng', 'Suy thận nặng (CrCl <30)'],
+        'dosage': {'adult_standard':
         '5mg/ngày, tăng dần đến 10mg x 2 lần/ngày (tối đa 20mg/ngày)', 'adult_max':
         '20mg/ngày', 'notes':
-        'Tăng liều chậm (5mg → 10mg → 15mg → 20mg, mỗi tuần tăng 5mg)'}, 'side_effects': [
+        'Tăng liều chậm (5mg → 10mg → 15mg → 20mg, mỗi tuần tăng 5mg)'},
+        'side_effects': [
         'Chóng mặt', 'Nhức đầu', 'Táo bón', 'Buồn nôn', 'Mệt mỏi',
-        'Lú lẫn (hiếm, thường khi tăng liều quá nhanh)'], 'interactions': [
+        'Lú lẫn (hiếm, thường khi tăng liều quá nhanh)'],
+        'interactions': [
         'Urine alkalinizers (sodium bicarbonate, carbonic anhydrase inhibitors): giảm thải trừ memantine, tăng nồng độ',
         'Acetazolamide: giảm thải trừ memantine',
         'Cimetidine, ranitidine: có thể tăng nồng độ memantine nhẹ'],
@@ -597,22 +618,24 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Đáp ứng điều trị: cải thiện nhận thức, hành vi, hoạt động hàng ngày',
         'Tác dụng phụ thần kinh: chóng mặt, nhức đầu, lú lẫn (thường khi tăng liều quá nhanh)'
         , 'Chức năng thận (creatinine, eGFR) - điều chỉnh liều ở suy thận (quan trọng)'
-        , 'Tương tác với urine alkalinizers (giảm thải trừ, tăng nồng độ)'], 'precautions': [
+        , 'Tương tác với urine alkalinizers (giảm thải trừ, tăng nồng độ)'],
+        'precautions': [
         'Tăng liều chậm (5mg → 10mg → 15mg → 20mg, mỗi tuần tăng 5mg) để giảm tác dụng phụ'
-        ,
         'Chóng mặt, nhức đầu - phổ biến, thường tự khỏi sau vài tuần, có thể giảm bằng cách tăng liều chậm'
         , 'Lú lẫn - hiếm, thường khi tăng liều quá nhanh, giảm liều nếu có',
         'Điều chỉnh liều ở suy thận QUAN TRỌNG: CrCl 30-60: giảm liều 50%; CrCl <30: chống chỉ định'
         , 'Thận trọng khi dùng với urine alkalinizers (sodium bicarbonate, acetazolamide) - giảm thải trừ, tăng nồng độ'
         , 'Thận trọng với bệnh nhân có tiền sử co giật (memantine có thể tăng nguy cơ co giật nhẹ)'
         , 'Có thể dùng kết hợp với donepezil (tác dụng bổ sung)',
-        'Không ngừng đột ngột (có thể làm tăng triệu chứng)'], 'pharmacokinetics': {
+        'Không ngừng đột ngột (có thể làm tăng triệu chứng)'],
+        'pharmacokinetics': {
         'half_life': '60-80 giờ (rất dài, cho phép dùng 1-2 lần/ngày)', 'onset':
         'Vài tuần (tác dụng chậm)', 'duration': 'Dài (do half-life rất dài)',
         'protein_binding': '45%', 'metabolism':
         'Thận (thải trừ chủ yếu nguyên dạng, ít chuyển hóa), gan (chuyển hóa một phần)',
         'clearance':
-        'Thận: thải trừ chủ yếu nguyên dạng (80%), phụ thuộc pH nước tiểu (tăng thải trừ ở pH acid, giảm ở pH kiềm). Gan: chuyển hóa một phần. Half-life rất dài (60-80 giờ).'}, 'storage':
+        'Thận: thải trừ chủ yếu nguyên dạng (80%), phụ thuộc pH nước tiểu (tăng thải trừ ở pH acid, giảm ở pH kiềm). Gan: chuyển hóa một phần. Half-life rất dài (60-80 giờ).'},
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.'
         , 'black_box_warnings':
         'Không có black box warning. Tuy nhiên, cần điều chỉnh liều ở suy thận (quan trọng). Nguy cơ lú lẫn khi tăng liều quá nhanh.'
@@ -624,15 +647,18 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Giảm liều memantine 50% khi dùng với urine alkalinizers. Theo dõi tác dụng phụ.'}],
         'moderate': [{'drug': 'Cimetidine, Ranitidine', 'mechanism':
         'Có thể giảm thải trừ memantine nhẹ', 'effect': 'Tăng nhẹ nồng độ memantine',
-        'management': 'Thận trọng. Có thể cần giảm liều memantine nhẹ.'}], 'minor': []},
+        'management': 'Thận trọng. Có thể cần giảm liều memantine nhẹ.'}],
+        'minor': []},
         'contraindications': {'tuyệt_đối': [
         'Dị ứng memantine hoặc các thành phần khác',
-        'Suy thận nặng (CrCl <30) - chống chỉ định do giảm thải trừ'], 'tương_đối': [
+        'Suy thận nặng (CrCl <30) - chống chỉ định do giảm thải trừ'],
+        'tương_đối': [
         'Suy thận (CrCl 30-60) - giảm liều 50%',
         'Suy gan nặng - giảm liều',
         'Tiền sử co giật - tăng nguy cơ co giật nhẹ',
         'Dùng với urine alkalinizers - giảm thải trừ, tăng nồng độ',
-        'Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ']}, 'pregnancy_lactation': {
+        'Bệnh nhân lớn tuổi - tăng nguy cơ tác dụng phụ']},
+        'pregnancy_lactation': {
         'fda_category': 'B', 'pregnancy_details':
         'Chứng cứ về an toàn trong thai kỳ còn hạn chế. Memantine thường không được dùng trong thai kỳ vì bệnh Alzheimer chủ yếu ở người già. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ.'
         , 'lactation': {'safety': 'Unknown', 'details':
@@ -655,20 +681,25 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Theo dõi liên tục: ý thức, hô hấp, tim mạch',
         'Xử trí co giật: benzodiazepine nếu có',
         'Acid hóa nước tiểu (vitamin C, ammonium chloride) để tăng thải trừ memantine'
-        , 'Hỗ trợ hô hấp nếu cần'], 'monitoring':
+        , 'Hỗ trợ hô hấp nếu cần'],
+        'monitoring':
         'Theo dõi ý thức, hô hấp, tim mạch, dấu hiệu co giật'},
-        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes':
         'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Acid hóa nước tiểu có thể tăng thải trừ.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn', 'timing':
         'Chia 2 lần/ngày (sáng, tối). Tăng liều chậm: 5mg/ngày x 1 tuần → 5mg x 2 lần/ngày x 1 tuần → 10mg buổi sáng + 5mg buổi tối x 1 tuần → 10mg x 2 lần/ngày. Có thể dùng kết hợp với donepezil.'
-        }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': []}},
+        },
+        'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
+        'compatibility': [],
+        'incompatibility': []}},
         'references': {'primary_sources': ['Lexicomp - Memantine',
         'UpToDate - Memantine: Drug information',
         'FDA - Namenda (memantine) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'evidence_level':
+        ],
+        'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         },
         "renal_adjustment": {
@@ -694,19 +725,24 @@ ALZHEIMER_DEMENTIA_DRUGS = {
 },
 
     "Rivastigmine": {'group': 'Neurology - Cholinesterase Inhibitor',
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
         'vietnamese_name': 'Rivastigmine, Exelon', 'administration': ['PO',
-        'Transdermal'], 'indications': [
+        'Transdermal'],
+        'indications': [
         'Bệnh Alzheimer (mild to moderate dementia)',
         'Bệnh Alzheimer (moderate to severe dementia)',
-        'Dementia do bệnh Parkinson'], 'contraindications': [
+        'Dementia do bệnh Parkinson'],
+        'contraindications': [
         'Dị ứng', 'Bệnh tim nặng (block nhĩ thất, rối loạn nhịp nặng)'],
         'dosage': {'adult_po': '1.5mg x 2 lần/ngày, tăng dần đến 6-12mg/ngày (chia 2 lần)',
         'adult_transdermal': '4.6mg/24h patch, tăng đến 9.5mg/24h patch', 'adult_max':
         '12mg/ngày (PO) hoặc 13.3mg/24h (transdermal)', 'notes':
-        'Uống với thức ăn. Dạng transdermal: ít tác dụng phụ hơn'}, 'side_effects': [
+        'Uống với thức ăn. Dạng transdermal: ít tác dụng phụ hơn'},
+        'side_effects': [
         'Buồn nôn, nôn (phổ biến hơn donepezil)', 'Tiêu chảy', 'Chán ăn, giảm cân',
         'Chóng mặt', 'Nhức đầu', 'Mệt mỏi', 'Chậm nhịp tim (bradycardia)',
-        'Kích ứng da (transdermal patch)'], 'interactions': [
+        'Kích ứng da (transdermal patch)'],
+        'interactions': [
         'Anticholinergics: đối kháng tác dụng rivastigmine',
         'Cholinergic drugs: tăng tác dụng, tăng tác dụng phụ',
         'Succinylcholine: tăng tác dụng, tăng nguy cơ kéo dài block thần kinh cơ',
@@ -719,7 +755,8 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         , 'Nhịp tim: chậm nhịp tim (bradycardia) - nguy hiểm',
         'Cân nặng: chán ăn, giảm cân - theo dõi cân nặng',
         'Kích ứng da (nếu dùng transdermal patch) - thay vị trí dán patch',
-        'Tương tác với anticholinergics (đối kháng), cholinergic drugs (tăng tác dụng)'], 'precautions': [
+        'Tương tác với anticholinergics (đối kháng), cholinergic drugs (tăng tác dụng)'],
+        'precautions': [
         'Uống với thức ăn để giảm buồn nôn (tác dụng phụ phổ biến nhất, đặc biệt với dạng uống)'
         , 'Dạng transdermal patch: ít tác dụng phụ tiêu hóa hơn dạng uống - nên dùng nếu có thể'
         , 'Tăng liều chậm để giảm tác dụng phụ',
@@ -730,14 +767,16 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Thận trọng khi dùng với anticholinergics (đối kháng tác dụng)',
         'Thận trọng với bệnh nhân có tiền sử loét dạ dày',
         'Kích ứng da (transdermal patch) - thay vị trí dán patch mỗi ngày',
-        'Không ngừng đột ngột (có thể làm tăng triệu chứng)'], 'pharmacokinetics': {
+        'Không ngừng đột ngột (có thể làm tăng triệu chứng)'],
+        'pharmacokinetics': {
         'half_life': '1.5 giờ (ngắn), nhưng tác dụng kéo dài do gắn chặt với enzyme',
         'onset': 'Vài tuần (tác dụng chậm)', 'duration':
         'Dài (do gắn chặt với enzyme, mặc dù half-life ngắn)', 'protein_binding':
         '40%', 'metabolism':
         'Gan (chuyển hóa qua esterase, không phụ thuộc CYP450), thận (thải trừ)',
         'clearance':
-        'Gan (chuyển hóa qua esterase, không phụ thuộc CYP450 - ít tương tác enzyme hơn), thận (thải trừ). Half-life ngắn nhưng tác dụng kéo dài do gắn chặt với enzyme.'}, 'storage':
+        'Gan (chuyển hóa qua esterase, không phụ thuộc CYP450 - ít tương tác enzyme hơn), thận (thải trừ). Half-life ngắn nhưng tác dụng kéo dài do gắn chặt với enzyme.'},
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín. Transdermal patch: bảo quản trong bao bì kín, tránh nhiệt độ cao.'
         , 'black_box_warnings':
         'Nguy cơ chậm nhịp tim (bradycardia) nghiêm trọng, có thể gây ngất, block nhĩ thất, rối loạn nhịp tim. Nguy cơ tăng ở bệnh nhân có bệnh tim, dùng beta-blockers. CHỐNG CHỈ ĐỊNH trong bệnh tim nặng. Theo dõi nhịp tim. Nguy cơ tăng acid dạ dày, có thể làm nặng loét dạ dày.'
@@ -748,15 +787,19 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Succinylcholine', 'mechanism':
         'Rivastigmine ức chế cholinesterase, tăng tác dụng succinylcholine', 'effect':
         'Tăng tác dụng, tăng nguy cơ kéo dài block thần kinh cơ', 'management':
-        'Ngừng rivastigmine ít nhất 2 tuần trước phẫu thuật nếu có thể.'}], 'moderate': [
+        'Ngừng rivastigmine ít nhất 2 tuần trước phẫu thuật nếu có thể.'}],
+        'moderate': [
         {'drug': 'Anticholinergics', 'mechanism': 'Đối kháng tác dụng cholinergic',
         'effect': 'Giảm hiệu quả rivastigmine', 'management':
         'Tránh dùng chung nếu có thể.'}, {'drug': 'Cholinergic drugs', 'mechanism':
         'Tăng tác dụng cholinergic', 'effect': 'Tăng tác dụng phụ', 'management':
-        'Thận trọng. Có thể cần giảm liều.'}], 'minor': []}, 'contraindications': {
+        'Thận trọng. Có thể cần giảm liều.'}],
+        'minor': []},
+        'contraindications': {
         'tuyệt_đối': [
         'Dị ứng rivastigmine hoặc các thành phần khác',
-        'Bệnh tim nặng (block nhĩ thất độ II-III, rối loạn nhịp nặng)'], 'tương_đối': [
+        'Bệnh tim nặng (block nhĩ thất độ II-III, rối loạn nhịp nặng)'],
+        'tương_đối': [
         'Bệnh tim mạch - tăng nguy cơ chậm nhịp tim',
         'Loét dạ dày - tăng acid dạ dày',
         'Bệnh phổi (COPD, hen) - tăng co thắt phế quản',
@@ -776,7 +819,8 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'overdose_management': {'symptoms': [
         'Triệu chứng cholinergic quá mức: buồn nôn, nôn, tiêu chảy, tăng tiết nước bọt'
         , 'Chậm nhịp tim (bradycardia) nghiêm trọng',
-        'Co thắt phế quản, suy hô hấp', 'Co giật (hiếm)'], 'antidote':
+        'Co thắt phế quản, suy hô hấp', 'Co giật (hiếm)'],
+        'antidote':
         'Atropine (anticholinergic)', 'treatment': [
         'Đánh giá đường thở, hô hấp, tuần hoàn',
         'Rửa dạ dày nếu trong vòng 1-2 giờ sau uống',
@@ -784,7 +828,8 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'Atropine: 0.5-1mg IV (có thể lặp)',
         'Theo dõi liên tục: ý thức, hô hấp, tim mạch',
         'Xử trí chậm nhịp tim: atropine, pacemaker nếu cần',
-        'Hỗ trợ hô hấp nếu cần'], 'monitoring':
+        'Hỗ trợ hô hấp nếu cần'],
+        'monitoring':
         'Theo dõi ý thức, hô hấp, tim mạch, dấu hiệu cholinergic quá mức'},
         'reversal_agents': {'available': True, 'agents': [{'agent': 'Atropine',
         'mechanism': 'Anticholinergic', 'indication': 'Quá liều gây triệu chứng cholinergic quá mức',
@@ -792,13 +837,16 @@ ALZHEIMER_DEMENTIA_DRUGS = {
         'administration_instructions': {'oral': {'with_food':
         'Uống với thức ăn để giảm buồn nôn', 'timing':
         'Chia 2 lần/ngày (sáng, tối) với thức ăn. Tăng liều chậm. Dạng transdermal patch: dán 1 lần/ngày, thay vị trí mỗi ngày.'
-        }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': []}},
+        },
+        'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
+        'compatibility': [],
+        'incompatibility': []}},
         'references': {'primary_sources': ['Lexicomp - Rivastigmine',
         'UpToDate - Rivastigmine: Drug information',
         'FDA - Exelon (rivastigmine) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'evidence_level':
+        ],
+        'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         },
         "renal_adjustment": {

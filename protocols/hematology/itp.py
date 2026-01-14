@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """ITP Management Protocol"""
-    st.subheader("🩸 Xuất Huyết Giảm Tiểu Cầu Miễn Dịch (ITP)")
+    st.subheader("🩸 Xuất huyết Giảm Tiểu Cầu Miễn dịch (ITP)")
     st.caption("ASH Guidelines 2024, UpToDate 2024 - Autoimmune disorder")
     
     st.error("""

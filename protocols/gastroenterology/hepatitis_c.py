@@ -198,7 +198,7 @@ def render():
     
     with col2:
         st.markdown("""
-        **Suy Thận:**
+        **Suy thận:**
         - **Sofosbuvir:** Tránh nếu eGFR <30
         - **Glecaprevir/Pibrentasvir:** An toàn ở suy thận
         - **Elbasvir/Grazoprevir:** An toàn ở suy thận
@@ -208,7 +208,7 @@ def render():
         - Cân nhắc hoãn điều trị sau sinh
         - Tư vấn về nguy cơ/lợi ích
         
-        **Trẻ Em:**
+        **Trẻ em:**
         - Một số DAA được phê duyệt cho trẻ em
         - Liều tính theo kg
         - Tỷ lệ thành công cao

@@ -1069,7 +1069,7 @@ def render_upper_gi_bleeding():
             """)
             
             st.info("""
-            **📊 Tiêu Chuẩn Chọn Lựa:**
+            **📊 Tiêu chuẩn Chọn Lựa:**
             
             **Bệnh nhân phù hợp:**
             - ✅ Child-Pugh score: B hoặc C

@@ -4,14 +4,16 @@ Active module - contains all oncology drug data"""
 # Antimetabolites
 
 ANTIMETABOLITES_DRUGS = {
-    "5-Fluorouracil": {'group': 'Oncology - Antimetabolite', 'vietnamese_name':
+    "5-Fluorouracil": {'group': 'Oncology - Antimetabolite',
+        'vietnamese_name':
         '5-Fluorouracil, 5-FU, Fluorouracil', 'administration': ['IV'],
         'indications': [        'Ung thư đại trực tràng (adjuvant và metastatic)',
         'Ung thư dạ dày', 'Ung thư đầu cổ', 'Ung thư tụy', 'Ung thư vú',
         'Ung thư da (topical)'],
         'contraindications': [
         'Thiếu hụt DPD (dihydropyrimidine dehydrogenase)',
-        'Giảm bạch cầu/tiểu cầu nặng', 'Có thai', 'Đang cho con bú'], 'dosage':
+        'Giảm bạch cầu/tiểu cầu nặng', 'Có thai', 'Đang cho con bú'],
+        'dosage':
         {'adult_bolus':
         '400-600mg/m² IV bolus ngày 1, sau đó 400-600mg/m²/ngày x 4 ngày (mỗi 4 tuần)'
         , 'adult_infusion':
@@ -21,12 +23,14 @@ ANTIMETABOLITES_DRUGS = {
         'Phối hợp với leucovorin để tăng hiệu quả. Cần test DPD nếu có thể'},
         'renal_adjustment': {'normal': 'Không đổi', '30_60':
         'Thận trọng, có thể giảm liều 25%', 'under_30':
-        'Thận trọng, giảm liều 25-50%'}, 'side_effects': [
+        'Thận trọng, giảm liều 25-50%'},
+        'side_effects': [
         'Loét miệng (stomatitis - phổ biến)',
         'Tiêu chảy (phổ biến, có thể nặng)',
         'Giảm bạch cầu, tiểu cầu (myelosuppression)', 'Ban da', 'Rụng tóc',
         'Độc tim (hiếm nhưng nguy hiểm)', 'Rối loạn thần kinh (hiếm)',
-        'Tăng bilirubin'], 'interactions': [
+        'Tăng bilirubin'],
+        'interactions': [
         'Leucovorin: tăng hiệu quả và độc tính', 'Methotrexate: tăng độc tính',
         'Warfarin: tăng nguy cơ chảy máu', 'Phenytoin: tăng nồng độ phenytoin'],
         'pregnancy': 'D - Chống chỉ định', 'mechanism_of_action':
@@ -37,7 +41,6 @@ ANTIMETABOLITES_DRUGS = {
         'Dấu hiệu loét miệng (stomatitis) - phổ biến, có thể nặng',
         'Dấu hiệu tiêu chảy - phổ biến, có thể nặng (cần điều trị sớm)',
         'Dấu hiệu độc tim (đau ngực, khó thở, rối loạn nhịp) - hiếm nhưng nguy hiểm'
-        ,
         'Test DPD (dihydropyrimidine dehydrogenase) trước điều trị nếu có thể (thiếu hụt DPD gây độc tính nặng)'
         , 'Dấu hiệu nhiễm trùng (sốt, ớn lạnh) do giảm bạch cầu'],
         'precautions': [
@@ -48,12 +51,14 @@ ANTIMETABOLITES_DRUGS = {
         'Tránh dùng nếu thiếu hụt DPD nặng',
         'Có thể gây độc tim (hiếm - cần theo dõi triệu chứng)',
         'Tương tác với warfarin (tăng nguy cơ chảy máu)',
-        'Giảm liều 25-50% nếu suy thận'], 'pharmacokinetics': {'half_life':
+        'Giảm liều 25-50% nếu suy thận'],
+        'pharmacokinetics': {'half_life':
         '10-20 phút (ngắn)', 'onset': '1-2 tuần (tác dụng lâm sàng)',
         'duration': '4-6 giờ (tác dụng sinh học)', 'protein_binding': 'Minimal',
         'clearance':
         'Gan (chuyển hóa qua DPD - dihydropyrimidine dehydrogenase), thận (thải trừ)'
-        }, 'storage':
+        },
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu'
         , 'black_box_warnings':
         'Thiếu hụt DPD (dihydropyrimidine dehydrogenase) có thể gây độc tính nặng và tử vong. Nên test DPD trước điều trị nếu có thể. Theo dõi sát độc tính và ngừng ngay nếu có dấu hiệu độc tính nặng'
@@ -64,7 +69,7 @@ ANTIMETABOLITES_DRUGS = {
                  'effect': 'Tăng nguy cơ giảm bạch cầu, tiểu cầu, loét miệng, tiêu chảy nghiêm trọng',
                  'management': 'Thận trọng khi dùng đồng thời. Theo dõi CBC và dấu hiệu độc tính chặt chẽ. Có thể cần giảm liều hoặc tránh dùng đồng thời.'}
             ],
-            'moderate': [
+        'moderate': [
                 {'drug': 'Warfarin',
                  'mechanism': '5-FU có thể ức chế chuyển hóa warfarin, tăng nồng độ warfarin trong máu.',
                  'effect': 'Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu',
@@ -74,21 +79,23 @@ ANTIMETABOLITES_DRUGS = {
                  'effect': 'Tăng nồng độ phenytoin, tăng độc tính phenytoin',
                  'management': 'Theo dõi nồng độ phenytoin và dấu hiệu độc tính. Có thể cần giảm liều phenytoin.'}
             ],
-            'minor': [
+        'minor': [
                 {'drug': 'Leucovorin',
                  'mechanism': 'Leucovorin tăng hiệu quả của 5-FU bằng cách tăng ức chế thymidylate synthase, nhưng cũng tăng độc tính.',
                  'effect': 'Tăng hiệu quả và độc tính của 5-FU',
                  'management': 'Dùng kèm để tăng hiệu quả, nhưng cần theo dõi độc tính chặt chẽ hơn.'}
             ]
-        }, 'contraindications': {'tuyệt_đối': [
+        },
+        'contraindications': {'tuyệt_đối': [
         'Thiếu hụt DPD (dihydropyrimidine dehydrogenase) nặng - chống chỉ định tuyệt đối, có thể gây tử vong'
-        ,
         'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
-        'Đang cho con bú - chống chỉ định'], 'tương_đối': [
+        'Đang cho con bú - chống chỉ định'],
+        'tương_đối': [
         'Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục',
         'Suy thận (CrCl <30) - giảm liều 25-50%, theo dõi chặt chẽ',
         'Suy gan - thận trọng, có thể cần giảm liều',
-        'Bệnh nhân cao tuổi - tăng nguy cơ độc tính']}, 'pregnancy_lactation':
+        'Bệnh nhân cao tuổi - tăng nguy cơ độc tính']},
+        'pregnancy_lactation':
         {'fda_category': 'D', 'pregnancy_details':
         'Chống chỉ định trong thai kỳ. 5-FU gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.'
         , 'lactation': {'safety': 'Incompatible', 'details':
@@ -99,7 +106,8 @@ ANTIMETABOLITES_DRUGS = {
         'Thận trọng, có thể cần giảm liều', 'severe':
         'Thận trọng, giảm liều 25-50%', 'notes':
         '5-FU chuyển hóa chủ yếu qua gan (DPD - dihydropyrimidine dehydrogenase). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và độc tính chặt chẽ.'
-        }, 'overdose_management': {'symptoms': ['Loét miệng nặng (stomatitis)',
+        },
+        'overdose_management': {'symptoms': ['Loét miệng nặng (stomatitis)',
         'Tiêu chảy nặng, mất nước',
         'Giảm bạch cầu, tiểu cầu nặng (nhiễm trùng, chảy máu)',
         'Độc tim (hiếm)', 'Rối loạn thần kinh (hiếm)', 'Tăng bilirubin'],
@@ -111,45 +119,58 @@ ANTIMETABOLITES_DRUGS = {
         'Theo dõi CBC, chức năng gan, chức năng thận',
         'Điều trị loét miệng (súc miệng, thuốc giảm đau)',
         'Điều trị tiêu chảy (loperamide, bù dịch)',
-        'Theo dõi và điều trị độc tim nếu có'], 'monitoring':
+        'Theo dõi và điều trị độc tim nếu có'],
+        'monitoring':
         'CBC mỗi ngày, chức năng gan, chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu độc tim'
-        }, 'reversal_agents': {'available': True, 'agents': [{'name':
+        },
+        'reversal_agents': {'available': True, 'agents': [{'name':
         'Uridine triacetate (Vistogard)', 'indication':
         'Quá liều 5-FU do thiếu hụt DPD hoặc quá liều do lỗi dùng thuốc',
         'dose': '10g PO x 3 lần/ngày x 5 ngày (bắt đầu càng sớm càng tốt)',
         'notes':
         'Antidote đặc hiệu cho quá liều 5-FU. Hiệu quả nhất khi dùng trong vòng 96 giờ sau quá liều.'
-        }]}, 'administration_instructions': {'oral': {'with_food':
+        }]},
+        'administration_instructions': {'oral': {'with_food':
         'Không áp dụng', 'timing': 'Không có dạng uống (chỉ có IV và topical)'},
         'iv': {'reconstitution':
         'Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất', 'infusion_rate':
         'Bolus: tiêm trực tiếp. Infusion: truyền trong 4-24 giờ tùy phác đồ',
-        'compatibility': ['NS', 'D5W'], 'incompatibility': [], 'notes':
+        'compatibility': ['NS', 'D5W'],
+        'incompatibility': [],
+        'notes':
         'Bolus: 400-600mg/m² tiêm trực tiếp. Infusion: 1000mg/m²/ngày truyền trong 4-24 giờ. Theo dõi extravasation.'
-        }}, 'references': {'primary_sources': [
+        }},
+        'references': {'primary_sources': [
         'FDA Drug Label - 5-Fluorouracil',
         'UpToDate - 5-Fluorouracil Drug Information',
         "Goodman & Gilman's Pharmacological Basis of Therapeutics, 14th ed"],
         'last_updated': '2025-01-15', 'evidence_level':
         'High (FDA-approved, extensive clinical data)'}},
-    "Gemcitabine": {'group': 'Oncology - Antimetabolite', 'vietnamese_name':
-        'Gemcitabine, Gemzar', 'administration': ['IV'], 'indications': [
+    "Gemcitabine": {'group': 'Oncology - Antimetabolite',
+        'vietnamese_name':
+        'Gemcitabine, Gemzar', 'administration': ['IV'],
+        'indications': [
         'Ung thư tụy (adjuvant và metastatic)', 'Ung thư phổi không tế bào nhỏ (NSCLC)',
         'Ung thư bàng quang', 'Ung thư vú (metastatic)',
-        'Ung thư buồng trứng'], 'contraindications': [
-        'Giảm bạch cầu/tiểu cầu nặng', 'Có thai', 'Đang cho con bú'], 'dosage': {
+        'Ung thư buồng trứng'],
+        'contraindications': [
+        'Giảm bạch cầu/tiểu cầu nặng', 'Có thai', 'Đang cho con bú'],
+        'dosage': {
         'adult_standard': '1000mg/m² IV ngày 1, 8, 15 (mỗi 28 ngày) hoặc ngày 1, 8 (mỗi 21 ngày)',
         'adult_pancreatic': '1000mg/m² IV ngày 1, 8, 15 (mỗi 28 ngày)',
         'adult_bladder': '1000mg/m² IV ngày 1, 8, 15 (mỗi 28 ngày)',
         'notes':
-        'Truyền trong 30 phút. Có thể phối hợp với cisplatin, carboplatin, hoặc paclitaxel'}, 'renal_adjustment': {
+        'Truyền trong 30 phút. Có thể phối hợp với cisplatin, carboplatin, hoặc paclitaxel'},
+        'renal_adjustment': {
         'normal': 'Không đổi', '30_60': 'Thận trọng, có thể giảm liều 25%',
-        'under_30': 'Thận trọng, giảm liều 25-50%'}, 'side_effects': [
+        'under_30': 'Thận trọng, giảm liều 25-50%'},
+        'side_effects': [
         'Giảm bạch cầu, tiểu cầu (myelosuppression - phổ biến)',
         'Buồn nôn, nôn (nhẹ đến trung bình)', 'Phát ban, ngứa',
         'Sốt, ớn lạnh (flu-like syndrome - phổ biến)',
         'Phù ngoại biên (hiếm)', 'Độc phổi (viêm phổi kẽ - hiếm nhưng nguy hiểm)',
-        'Độc gan (tăng transaminase - hiếm)', 'Rụng tóc (nhẹ)'], 'interactions': [
+        'Độc gan (tăng transaminase - hiếm)', 'Rụng tóc (nhẹ)'],
+        'interactions': [
         'Cisplatin: tăng độc tính tủy xương',
         'Warfarin: có thể tăng tác dụng chống đông',
         'Live vaccines: tránh dùng trong điều trị'],
@@ -161,7 +182,8 @@ ANTIMETABOLITES_DRUGS = {
         'Dấu hiệu nhiễm trùng (sốt, ớn lạnh) do giảm bạch cầu',
         'Dấu hiệu độc phổi (khó thở, ho, đau ngực) - viêm phổi kẽ hiếm nhưng nguy hiểm'
         , 'Dấu hiệu flu-like syndrome (sốt, ớn lạnh, đau cơ) - phổ biến, thường tự khỏi'
-        , 'Dấu hiệu phát ban, ngứa'], 'precautions': [
+        , 'Dấu hiệu phát ban, ngứa'],
+        'precautions': [
         'Theo dõi sát công thức máu (nguy cơ giảm bạch cầu, tiểu cầu cao)',
         'Giảm liều hoặc trì hoãn điều trị nếu giảm bạch cầu/tiểu cầu nặng',
         'Flu-like syndrome (sốt, ớn lạnh) - phổ biến, thường tự khỏi, có thể dùng acetaminophen'
@@ -169,11 +191,13 @@ ANTIMETABOLITES_DRUGS = {
         'Tương tác với cisplatin (tăng độc tính tủy xương)',
         'Tương tác với warfarin (tăng nguy cơ chảy máu)',
         'Tránh dùng live vaccines trong điều trị',
-        'Giảm liều 25-50% nếu suy thận'], 'pharmacokinetics': {'half_life':
+        'Giảm liều 25-50% nếu suy thận'],
+        'pharmacokinetics': {'half_life':
         '42-94 phút (ngắn)', 'onset': '1-2 tuần (tác dụng lâm sàng)',
         'duration': '4-6 giờ (tác dụng sinh học)', 'protein_binding': 'Minimal',
         'clearance':
-        'Gan (chuyển hóa qua deamination), thận (thải trừ - 92% nguyên dạng)'}, 'storage':
+        'Gan (chuyển hóa qua deamination), thận (thải trừ - 92% nguyên dạng)'},
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ánh sáng. Bảo quản ở tủ lạnh (2-8°C) nếu yêu cầu. Pha với NS hoặc D5W.'
         , 'black_box_warnings':
         'Giảm bạch cầu, tiểu cầu (myelosuppression) phổ biến. Theo dõi CBC trước mỗi chu kỳ. Độc phổi (viêm phổi kẽ) hiếm nhưng nguy hiểm - ngừng ngay nếu có dấu hiệu.'
@@ -184,7 +208,8 @@ ANTIMETABOLITES_DRUGS = {
         'moderate': [{'drug': 'Warfarin', 'mechanism':
         'Gemcitabine có thể tăng tác dụng chống đông', 'effect':
         'Tăng INR, tăng nguy cơ chảy máu', 'management':
-        'Theo dõi INR chặt chẽ. Có thể cần giảm liều warfarin.'}], 'minor': [{'drug':
+        'Theo dõi INR chặt chẽ. Có thể cần giảm liều warfarin.'}],
+        'minor': [{'drug':
         'Live vaccines', 'mechanism':
         'Gemcitabine ức chế miễn dịch, tăng nguy cơ nhiễm trùng từ vaccine', 'effect':
         'Tăng nguy cơ nhiễm trùng từ live vaccine', 'management':
@@ -192,12 +217,14 @@ ANTIMETABOLITES_DRUGS = {
         'contraindications': {'tuyệt_đối': [
         'Dị ứng gemcitabine hoặc các thành phần khác',
         'Có thai - chống chỉ định tuyệt đối, gây dị tật thai nhi (category D)',
-        'Đang cho con bú - chống chỉ định'], 'tương_đối': [
+        'Đang cho con bú - chống chỉ định'],
+        'tương_đối': [
         'Giảm bạch cầu/tiểu cầu nặng - trì hoãn điều trị cho đến khi hồi phục',
         'Suy thận (CrCl <30) - giảm liều 25-50%, theo dõi chặt chẽ',
         'Suy gan - thận trọng, có thể cần giảm liều',
         'Bệnh phổi - tăng nguy cơ độc phổi',
-        'Bệnh nhân cao tuổi - tăng nguy cơ độc tính']}, 'pregnancy_lactation': {
+        'Bệnh nhân cao tuổi - tăng nguy cơ độc tính']},
+        'pregnancy_lactation': {
         'fda_category': 'D', 'pregnancy_details':
         'Chống chỉ định trong thai kỳ. Gemcitabine gây dị tật thai nhi, sẩy thai, và tử vong thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội rõ ràng so với nguy cơ.'
         , 'lactation': {'safety': 'Incompatible', 'details':
@@ -211,20 +238,25 @@ ANTIMETABOLITES_DRUGS = {
         'overdose_management': {'symptoms': [
         'Giảm bạch cầu, tiểu cầu nặng (nhiễm trùng, chảy máu)',
         'Độc phổi (viêm phổi kẽ - khó thở, ho, đau ngực)',
-        'Buồn nôn, nôn nặng', 'Độc gan (tăng transaminase)'], 'antidote':
+        'Buồn nôn, nôn nặng', 'Độc gan (tăng transaminase)'],
+        'antidote':
         'Không có antidote đặc hiệu. Điều trị hỗ trợ', 'treatment': [
         'Ngừng ngay gemcitabine',
         'Supportive care: bù dịch, điều trị nhiễm trùng, truyền máu nếu cần',
         'Theo dõi CBC, chức năng gan, chức năng thận',
         'Điều trị độc phổi: corticosteroid nếu có viêm phổi kẽ',
-        'Theo dõi và điều trị triệu chứng'], 'monitoring':
+        'Theo dõi và điều trị triệu chứng'],
+        'monitoring':
         'CBC mỗi ngày, chức năng gan, chức năng thận, dấu hiệu nhiễm trùng, dấu hiệu chảy máu, dấu hiệu độc phổi'},
-        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes':
         'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc phổi (corticosteroid nếu có viêm phổi kẽ), độc tính máu, và nhiễm trùng hỗ trợ.'},
         'administration_instructions': {'oral': None, 'iv': {'reconstitution':
         'Pha với NS hoặc D5W theo hướng dẫn nhà sản xuất. Nồng độ cuối: ≤40mg/ml.',
         'infusion_rate': 'Truyền trong 30 phút (tốc độ tiêu chuẩn)',
-        'compatibility': ['NS', 'D5W'], 'incompatibility': [], 'notes':
+        'compatibility': ['NS', 'D5W'],
+        'incompatibility': [],
+        'notes':
         'Truyền trong 30 phút. Theo dõi extravasation. Có thể phối hợp với cisplatin, carboplatin, hoặc paclitaxel.'}},
         'references': {'primary_sources': ['FDA Drug Label - Gemcitabine (Gemzar)',
         'UpToDate - Gemcitabine Drug Information',

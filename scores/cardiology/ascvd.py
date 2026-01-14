@@ -324,7 +324,7 @@ def render():
         render_suggestions(
             calculator_id="ascvd",
             calculator_name="ASCVD Risk Calculator",
-            category="Tim Mạch",
+            category="Tim mạch",
             show_related=True,
             show_category=True,
             limit=3

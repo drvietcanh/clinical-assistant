@@ -92,9 +92,8 @@ TETRACYCLINES_DRUGS = {
         'indications': ['Nhiễm khuẩn da và mô mềm phức tạp (cSSTI)', 'Nhiễm khuẩn ổ bụng phức tạp (cIAI)', 'Viêm phổi cộng đồng (CAP)', 'Nhiễm khuẩn do vi khuẩn kháng đa thuốc (MDR)', 'MRSA', 'VRE', 'CRE'],
         'contraindications': {
             'tuyệt_đối': ['Dị ứng tigecycline hoặc tetracycline'],
-            'tương_đối': ['Có thai (category D)', 'Trẻ <8 tuổi', 'Suy gan nặng']
-        },
-        'dosage': {
+        'tương_đối': ['Có thai (category D)', 'Trẻ <8 tuổi', 'Suy gan nặng']
+        },dosage': {
             'adult_standard': '100mg IV x 1 lần (loading dose), sau đó 50mg IV mỗi 12 giờ',
             'notes': 'CẢNH BÁO: Tăng tỷ lệ tử vong so với các kháng sinh khác - chỉ dùng khi không còn lựa chọn khác.'
         },

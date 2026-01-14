@@ -106,7 +106,7 @@ def render():
         render_suggestions(
             calculator_id="bisap",
             calculator_name="BISAP Score",
-            category="Tiêu Hóa",
+            category="Tiêu hóa",
             show_related=True,
             show_category=True,
             limit=3

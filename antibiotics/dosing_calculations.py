@@ -31,8 +31,34 @@ except ImportError:
 def calculate_detailed_dose(antibiotic_name, weight_kg, ibw, abw, crcl, indication="standard", is_pediatric=False, height_cm=None):
     """
     Calculate detailed dose (mg, interval, infusion time, concentration)
+    
+    Args:
+        antibiotic_name: Name of antibiotic
+        weight_kg: Weight in kg
+        ibw: Ideal body weight in kg
+        abw: Adjusted body weight in kg
+        crcl: Creatinine clearance (optional, for validation)
+        indication: Type of infection
+        is_pediatric: Whether patient is pediatric
+        height_cm: Height in cm (optional)
+    
+    Returns:
+        dict with dose details, or None if invalid
     """
-    if antibiotic_name not in ANTIBIOTICS_DATABASE:
+    # Validation
+    if not antibiotic_name or antibiotic_name not in ANTIBIOTICS_DATABASE:
+        return None
+    
+    if weight_kg is None or weight_kg <= 0:
+        return None
+    
+    if weight_kg > 500:  # Unreasonably high
+        return None
+    
+    if ibw is not None and ibw <= 0:
+        return None
+    
+    if abw is not None and abw <= 0:
         return None
     
     ab_data = ANTIBIOTICS_DATABASE[antibiotic_name]
@@ -61,15 +87,22 @@ def calculate_detailed_dose(antibiotic_name, weight_kg, ibw, abw, crcl, indicati
     parsed = parse_dosage_text(base_text)
     
     # Calculate actual dose
-    # Need height for BMI calculation - using a default for now if not provided
-    # In actual use, height should be passed as parameter
+    # Determine dosing weight (use ABW if obese, otherwise actual weight)
     try:
-        # Try to calculate BMI if height available (would need to pass height parameter)
-        # For now, use simplified logic
-        is_obese_simple = weight_kg > ibw * 1.25
-        dosing_weight = abw if is_obese_simple else weight_kg
-    except:
+        if ibw is not None and ibw > 0:
+            is_obese_simple = weight_kg > ibw * 1.25
+            if is_obese_simple and abw is not None and abw > 0:
+                dosing_weight = abw
+            else:
+                dosing_weight = weight_kg
+        else:
+            dosing_weight = weight_kg
+    except (TypeError, ValueError):
         dosing_weight = weight_kg
+    
+    # Final validation
+    if dosing_weight <= 0:
+        return None
     
     if parsed['dose_per_kg']:
         calculated_dose_mg = parsed['dose_per_kg'] * dosing_weight
@@ -127,11 +160,33 @@ def calculate_adjusted_dose(antibiotic_name, crcl, egfr=None, base_dose=None, in
     Returns:
         dict with adjusted dose information
     """
+    # Validation
+    if not antibiotic_name:
+        return {
+            "error": "Tên kháng sinh không hợp lệ",
+            "recommendation": "Vui lòng chọn kháng sinh từ danh sách"
+        }
+    
     if antibiotic_name not in ANTIBIOTICS_DATABASE:
         return {
             "error": f"Kháng sinh '{antibiotic_name}' không có trong database",
             "recommendation": "Vui lòng tra cứu hướng dẫn riêng"
         }
+    
+    # Validate CrCl
+    if crcl is None:
+        crcl = 90  # Default to normal if not provided
+    elif crcl < 0:
+        crcl = 0
+    elif crcl > 300:
+        crcl = 300  # Cap at reasonable maximum
+    
+    # Validate eGFR if provided
+    if egfr is not None:
+        if egfr < 0:
+            egfr = 0
+        elif egfr > 200:
+            egfr = 200
     
     ab_data = ANTIBIOTICS_DATABASE[antibiotic_name]
     renal_category = get_renal_category(crcl, egfr)

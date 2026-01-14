@@ -38,7 +38,7 @@ BPH_5_ALPHA_REDUCTASE_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể"
             ],
-            "pregnancy": "X - Chống chỉ định trong thai kỳ",
+        "pregnancy": "X - Chống chỉ định trong thai kỳ",
             "mechanism_of_action": "Dutasteride là 5-alpha reductase inhibitor (ức chế cả type I và type II). Ức chế enzyme 5-alpha reductase, ngăn chặn chuyển đổi testosterone thành dihydrotestosterone (DHT). DHT là hormone chính kích thích phì đại tuyến tiền liệt. Giảm DHT dẫn đến: (1) Giảm kích thước tuyến tiền liệt (giảm 20-30% sau 6-12 tháng), (2) Cải thiện triệu chứng BPH, (3) Giảm nguy cơ cấp cứu tiết niệu và phẫu thuật BPH. ĐẶC ĐIỂM: (1) Ức chế cả type I và type II 5-alpha reductase (mạnh hơn finasteride chỉ ức chế type II), (2) Tác dụng chậm (3-6 tháng), (3) Cần dùng liên tục để duy trì hiệu quả, (4) Nguy cơ rối loạn chức năng tình dục, (5) CHỐNG CHỈ ĐỊNH ở phụ nữ có thai (nguy cơ dị tật thai nhi nam), (6) Nguy cơ ung thư tuyến tiền liệt thể xâm lấn cao tăng nhẹ.",
             "monitoring": [
                 "Triệu chứng BPH (tiểu khó, tiểu yếu, tiểu đêm, tiểu gấp)",
@@ -197,7 +197,7 @@ BPH_5_ALPHA_REDUCTASE_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể"
             ],
-            "pregnancy": "X - Chống chỉ định trong thai kỳ",
+        "pregnancy": "X - Chống chỉ định trong thai kỳ",
             "mechanism_of_action": "Finasteride là 5-alpha reductase inhibitor (type II). Ức chế enzyme 5-alpha reductase, ngăn chặn chuyển đổi testosterone thành dihydrotestosterone (DHT). DHT là hormone chính kích thích phì đại tuyến tiền liệt. Giảm DHT dẫn đến: (1) Giảm kích thước tuyến tiền liệt (giảm 20-30% sau 6-12 tháng), (2) Cải thiện triệu chứng BPH, (3) Giảm nguy cơ cấp cứu tiết niệu và phẫu thuật BPH. ĐẶC ĐIỂM: (1) Tác dụng chậm (3-6 tháng), (2) Cần dùng liên tục để duy trì hiệu quả, (3) Nguy cơ rối loạn chức năng tình dục, (4) CHỐNG CHỈ ĐỊNH ở phụ nữ có thai (nguy cơ dị tật thai nhi nam), (5) Nguy cơ ung thư tuyến tiền liệt thể xâm lấn cao tăng nhẹ.",
             "monitoring": [
                 "Triệu chứng BPH (tiểu khó, tiểu yếu, tiểu đêm, tiểu gấp)",

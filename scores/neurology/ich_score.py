@@ -58,7 +58,7 @@ def render():
         render_suggestions(
             calculator_id="ich_score",
             calculator_name="ICH Score",
-            category="Thần Kinh",
+            category="Thần kinh",
             show_related=True,
             show_category=True,
             limit=3
@@ -372,7 +372,7 @@ def render():
         # Score breakdown
         with st.expander("📊 Chi tiết điểm số"):
             st.markdown(f"""
-            | Thành Phần | Giá trị | Điểm |
+            | Thành phần | Giá trị | Điểm |
             |------------|---------|------|
             | **GCS Score** | {gcs_selection} | {gcs_score} |
             | **ICH Volume** | {volume_selection} | {volume_score} |

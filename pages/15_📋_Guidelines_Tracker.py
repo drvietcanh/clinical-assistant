@@ -1120,10 +1120,6 @@ render_hero(
 # Tabs for different views
 tab_tracker, tab_viewer, tab_news = st.tabs(["📋 Tracker", "📖 Viewer", "📰 News"])
 
-# Clear redirect flag if set
-if st.session_state.get('guidelines_open_viewer_tab', False):
-    st.session_state['guidelines_open_viewer_tab'] = False
-
 # ========== TAB 1: TRACKER ==========
 with tab_tracker:
     # Sticky Search Bar

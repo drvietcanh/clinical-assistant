@@ -1,4 +1,4 @@
-# 📋 Kế Hoạch Bổ Sung Thuốc Mới - Drug Database Expansion
+# 📋 Kế Hoạch Bổ sung Thuốc Mới - Drug Database Expansion
 
 **Ngày tạo:** 2025-02-04  
 **Hiện trạng:** 74 thuốc  
@@ -50,7 +50,7 @@
 
 ## 📋 KẾ HOẠCH CHI TIẾT
 
-### **GIAI ĐOẠN 1: Bổ Sung 26 Thuốc (74 → 100)**
+### **GIAI ĐOẠN 1: Bổ sung 26 Thuốc (74 → 100)**
 
 #### **Nhóm 1: Thuốc Cấp cứu & Thường Dùng (Ưu tiên cao nhất)** 🔥🔥🔥
 
@@ -222,9 +222,9 @@
 
 ---
 
-### **GIAI ĐOẠN 2: Bổ Sung 50 Thuốc (100 → 150)**
+### **GIAI ĐOẠN 2: Bổ sung 50 Thuốc (100 → 150)**
 
-#### **Nhóm 6: Kháng Sinh Bổ Sung (Ưu tiên cao)** 🔥🔥
+#### **Nhóm 6: Kháng sinh Bổ sung (Ưu tiên cao)** 🔥🔥
 
 **Mục tiêu:** 10 thuốc
 
@@ -280,7 +280,7 @@
 
 ---
 
-#### **Nhóm 7: Tim Mạch Bổ Sung (Ưu tiên trung bình)** ⚡
+#### **Nhóm 7: Tim mạch Bổ sung (Ưu tiên trung bình)** ⚡
 
 **Mục tiêu:** 5 thuốc
 
@@ -311,7 +311,7 @@
 
 ---
 
-#### **Nhóm 8: Thần Kinh & Tâm Thần Bổ Sung (Ưu tiên trung bình)** ⚡
+#### **Nhóm 8: Thần kinh & Tâm Thần Bổ sung (Ưu tiên trung bình)** ⚡
 
 **Mục tiêu:** 8 thuốc
 
@@ -357,7 +357,7 @@
 
 ---
 
-#### **Nhóm 9: Hô Hấp Bổ Sung (Ưu tiên trung bình)** ⚡
+#### **Nhóm 9: Hô hấp Bổ sung (Ưu tiên trung bình)** ⚡
 
 **Mục tiêu:** 5 thuốc
 
@@ -388,7 +388,7 @@
 
 ---
 
-#### **Nhóm 10: Tiêu Hóa Bổ Sung (Ưu tiên trung bình)** ⚡
+#### **Nhóm 10: Tiêu hóa Bổ sung (Ưu tiên trung bình)** ⚡
 
 **Mục tiêu:** 5 thuốc
 
@@ -419,7 +419,7 @@
 
 ---
 
-#### **Nhóm 11: Ung Thư Bổ Sung (Ưu tiên trung bình)** ⚡
+#### **Nhóm 11: Ung thư Bổ sung (Ưu tiên trung bình)** ⚡
 
 **Mục tiêu:** 5 thuốc
 
@@ -450,7 +450,7 @@
 
 ---
 
-#### **Nhóm 12: Nội Tiết & Khác (Ưu tiên thấp)** 📋
+#### **Nhóm 12: Nội tiết & Khác (Ưu tiên thấp)** 📋
 
 **Mục tiêu:** 12 thuốc
 
@@ -516,9 +516,9 @@
 
 ---
 
-### **GIAI ĐOẠN 3: Bổ Sung 50 Thuốc (150 → 200)**
+### **GIAI ĐOẠN 3: Bổ sung 50 Thuốc (150 → 200)**
 
-#### **Nhóm 13-20: Các Nhóm Bổ Sung**
+#### **Nhóm 13-20: Các Nhóm Bổ sung**
 
 **Mục tiêu:** 50 thuốc
 

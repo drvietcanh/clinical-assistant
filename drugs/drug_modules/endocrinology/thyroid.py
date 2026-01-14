@@ -6,6 +6,8 @@ Bao gồm: Hormone tuyến giáp, thuốc kháng giáp.
 THYROID_DRUGS = {
     "Levothyroxine": {
         "group": "Endocrinology - Thyroid Hormone",
+
+        "pregnancy": "A - Không có nguy cơ trong các nghiên cứu có đối chứng. An toàn trong thai kỳ",
         "vietnamese_name": "Levothyroxine, L-Thyroxine, T4",
         "brand_names": {
             "common": ["Synthroid", "Levoxyl", "Euthyrox"],
@@ -156,6 +158,8 @@ THYROID_DRUGS = {
 
     "Methimazole": {
         "group": "Endocrinology - Antithyroid Drug",
+
+        "pregnancy": "D - Có bằng chứng về nguy cơ. Thận trọng trong thai kỳ",
         "vietnamese_name": "Methimazole, Thiamazole",
         "brand_names": {
             "common": ["Tapazole"],
@@ -301,6 +305,8 @@ THYROID_DRUGS = {
 
     "Propylthiouracil": {
         "group": "Endocrinology - Antithyroid Drug",
+
+        "pregnancy": "D - Có bằng chứng về nguy cơ. Thận trọng trong thai kỳ",
         "vietnamese_name": "Propylthiouracil, PTU",
         "brand_names": {
             "common": ["PTU"],

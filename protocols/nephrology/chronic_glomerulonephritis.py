@@ -132,7 +132,7 @@ def render_conservative():
     """Conservative management"""
     st.warning("## 💊 Điều trị Bảo Tồn (Nền Tảng)")
     
-    st.markdown("### 1. Kiểm Soát Huyết Áp (KDIGO 2024/2025)")
+    st.markdown("### 1. Kiểm soát Huyết Áp (KDIGO 2024/2025)")
     st.success("""
     **Mục tiêu:**
     - <130/80 mmHg (nếu protein niệu <1 g/24h)
@@ -201,7 +201,7 @@ def render_conservative():
 
 def render_immunosuppression():
     """Immunosuppressive therapy"""
-    st.error("## 💉 Điều trị Ức Chế Miễn Dịch")
+    st.error("## 💉 Điều trị Ức Chế Miễn dịch")
     
     st.markdown("### Chỉ định")
     st.warning("""

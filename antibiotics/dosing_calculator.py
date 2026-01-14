@@ -140,6 +140,18 @@ def render_dosing_calculator():
     
     # Calculate dose button
     if st.button("🧮 Tính liều", type="primary", use_container_width=True):
+        # Log calculation usage
+        try:
+            from .analytics import log_usage
+            log_usage("calculate", selected_ab, {
+                "crcl": crcl,
+                "egfr": egfr,
+                "indication": indication_code,
+                "is_icu": patient_data.get('is_icu', False)
+            })
+        except ImportError:
+            pass
+        
         # Calculate adjusted dose
         result = calculate_adjusted_dose(
             selected_ab,

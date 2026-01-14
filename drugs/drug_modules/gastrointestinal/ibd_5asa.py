@@ -46,6 +46,7 @@ IBD_5ASA_DRUGS = {
             "Azathioprine/6-MP: tăng nguy cơ giảm bạch cầu (cộng hưởng ức chế tủy)",
         ],
         "pregnancy": "B",
+        ',
         "mechanism_of_action": (
             "Mesalazine (5-aminosalicylic acid, 5-ASA) là thuốc chống viêm tại chỗ ở niêm mạc ruột, đặc biệt là đại tràng. "
             "Cơ chế chính: ức chế tổng hợp prostaglandin và leukotriene (COX và LOX), "
@@ -218,7 +219,7 @@ IBD_5ASA_DRUGS = {
             "Folate/acid folic: cần bổ sung để phòng thiếu hụt do sulfasalazine giảm hấp thu folate",
             "Warfarin: có thể tăng tác dụng chống đông (gắn protein và chuyển hóa)"
     ],
-        "pregnancy": "B",
+        "pregnancy": "B - Có thể sử dụng trong thai kỳ với bổ sung folic acid",
         "mechanism_of_action": """Sulfasalazine là prodrug gồm sulfapyridine + 5-ASA (mesalazine) gắn với nhau qua liên kết azo. Tại đại tràng, vi khuẩn phân cắt liên kết azo → giải phóng 5-ASA (tác dụng chống viêm tại chỗ) và sulfapyridine (nhiều tác dụng phụ toàn thân). 5-ASA: ức chế COX/LOX, giảm prostaglandin/leukotriene, quét gốc tự do, ức chế NF-κB và cytokine tiền viêm. Sulfapyridine: mang đặc tính sulfonamide, liên quan đến nhiều tác dụng phụ (dị ứng, tán huyết, giảm bạch cầu).""",
         "monitoring": [
             "Công thức máu (CBC) trước điều trị, sau 2–4 tuần, rồi mỗi 3 tháng trong năm đầu, sau đó mỗi 6–12 tháng (theo dõi thiếu máu, giảm bạch cầu, giảm tiểu cầu)",

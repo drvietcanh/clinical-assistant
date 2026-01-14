@@ -161,7 +161,7 @@ def render():
         render_suggestions(
             calculator_id="aims65",
             calculator_name="AIMS65 Score",
-            category="Tiêu Hóa",
+            category="Tiêu hóa",
             show_related=True,
             show_category=True,
             limit=3
@@ -334,7 +334,7 @@ def render():
                 
                 **Khuyến nghị:**
                 
-                1. **NHẬP VIỆN - Khoa Tiêu Hóa:**
+                1. **NHẬP VIỆN - Khoa Tiêu hóa:**
                    - Theo dõi sát
                    - Cân nhắc High-Dependency Unit nếu không ổn định
                 

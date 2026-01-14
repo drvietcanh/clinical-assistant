@@ -1,0 +1,632 @@
+[
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\antimigraine_5_ht1_receptor_agonists.py",
+    "errors": [
+      {
+        "line": 242,
+        "message": "unterminated string literal (detected at line 242)",
+        "text": "        'Gan (chuyển hóa), thận (thải trừ). Propranolol ức chế MAO-A, tăng nồng độ rizatriptan.'},storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\nsaids.py",
+    "errors": [
+      {
+        "line": 250,
+        "message": "unterminated string literal (detected at line 250)",
+        "text": "        'Methotrexate: tăng độc tính methotrexate'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\opioid_agonists.py",
+    "errors": [
+      {
+        "line": 249,
+        "message": "unterminated string literal (detected at line 249)",
+        "text": "        },storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\opioid_agonist_strongs.py",
+    "errors": [
+      {
+        "line": 883,
+        "message": "unterminated string literal (detected at line 883)",
+        "text": "        ],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\analgesics\\opioid_agonist_weaks.py",
+    "errors": [
+      {
+        "line": 73,
+        "message": "unterminated string literal (detected at line 73)",
+        "text": "        ],onset': '30-60 phút',"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\biguanides.py",
+    "errors": [
+      {
+        "line": 23,
+        "message": "unterminated string literal (detected at line 23)",
+        "text": "        'Khởi đầu với liều thấp, tăng dần. Tạm ngừng khi dùng thuốc cản quang'},renal_adjustment': {'normal': 'Không đổi', '30_60':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\dpp_4_inhibitors.py",
+    "errors": [
+      {
+        "line": 522,
+        "message": "unterminated string literal (detected at line 522)",
+        "text": "        'Digoxin: tăng nhẹ nồng độ digoxin'],pregnancy': 'B',"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\sglt2_inhibitors.py",
+    "errors": [
+      {
+        "line": 231,
+        "message": "unterminated string literal (detected at line 231)",
+        "text": "        ',"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\sulfonylureas.py",
+    "errors": [
+      {
+        "line": 24,
+        "message": "unterminated string literal (detected at line 24)",
+        "text": "        'Beta-blocker: che dấu triệu chứng hạ đường huyết'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\diabetes\\thiazolidinedione_tzds.py",
+    "errors": [
+      {
+        "line": 9,
+        "message": "unterminated string literal (detected at line 9)",
+        "text": "        ', 'vietnamese_name':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\antiarrhythmics.py",
+    "errors": [
+      {
+        "line": 32,
+        "message": "unterminated string literal (detected at line 32)",
+        "text": "        'Dipyridamole: tăng tác dụng', 'Carbamazepine: tăng tác dụng'],pregnancy': 'C - An toàn', 'mechanism_of_action':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\anticholinergics.py",
+    "errors": [
+      {
+        "line": 54,
+        "message": "unterminated string literal (detected at line 54)",
+        "text": "        },storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\benzodiazepine_antagonists.py",
+    "errors": [
+      {
+        "line": 32,
+        "message": "unterminated string literal (detected at line 32)",
+        "text": "        'Tricyclic antidepressants: tăng nguy cơ co giật'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\catecholamine_alpha__beta_agonists.py",
+    "errors": [
+      {
+        "line": 309,
+        "message": "unterminated string literal (detected at line 309)",
+        "text": "        'Digoxin: tăng nguy cơ loạn nhịp'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\emergency\\local_anesthetic__antiarrhythmic_class_ibs.py",
+    "errors": [
+      {
+        "line": 31,
+        "message": "unterminated string literal (detected at line 31)",
+        "text": "        'Cimetidine: tăng nồng độ lidocaine', 'Phenytoin: tăng độc tính'],pregnancy': 'B - An toàn', 'mechanism_of_action':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology_other\\osteoporosis_bisphosphonates.py",
+    "errors": [
+      {
+        "line": 47,
+        "message": "invalid syntax",
+        "text": "        \"pregnancy\": \"C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ\"\"mechanism_of_action\": (\n"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\antidiarrheals.py",
+    "errors": [
+      {
+        "line": 54,
+        "message": "unterminated string literal (detected at line 54)",
+        "text": "        'Bismuth: không hấp thu, thải trừ qua phân. Salicylate: thận (thải trừ, giống aspirin).'},storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\antiemetic_5_ht3_antagonists.py",
+    "errors": [
+      {
+        "line": 51,
+        "message": "unterminated string literal (detected at line 51)",
+        "text": "        'Chủ yếu qua gan, cần điều chỉnh ở suy gan'},storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\h2_receptor_antagonists.py",
+    "errors": [
+      {
+        "line": 359,
+        "message": "unterminated string literal (detected at line 359)",
+        "text": "        ', 'vietnamese_name':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\ibd_5asa.py",
+    "errors": [
+      {
+        "line": 49,
+        "message": "unterminated string literal (detected at line 49)",
+        "text": "        ',"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\mucosal_protectants.py",
+    "errors": [
+      {
+        "line": 159,
+        "message": "unterminated string literal (detected at line 159)",
+        "text": "        ', 'vietnamese_name':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\prokinetic_antiemetics.py",
+    "errors": [
+      {
+        "line": 9,
+        "message": "unterminated string literal (detected at line 9)",
+        "text": "        ', 'vietnamese_name':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\gastrointestinal\\proton_pump_inhibitors.py",
+    "errors": [
+      {
+        "line": 134,
+        "message": "unterminated string literal (detected at line 134)",
+        "text": "        ', 'vietnamese_name':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\antimalarials.py",
+    "errors": [
+      {
+        "line": 32,
+        "message": "unterminated string literal (detected at line 32)",
+        "text": "        'CYP3A4 inducers (rifampin, carbamazepine, phenytoin): giảm hiệu quả'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\beta_lactams.py",
+    "errors": [
+      {
+        "line": 218,
+        "message": "unterminated string literal (detected at line 218)",
+        "text": "        ', 'vietnamese_name':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\cephalosporins.py",
+    "errors": [
+      {
+        "line": 2065,
+        "message": "unterminated string literal (detected at line 2065)",
+        "text": "        },storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\fluoroquinolones.py",
+    "errors": [
+      {
+        "line": 30,
+        "message": "unterminated string literal (detected at line 30)",
+        "text": "        'Probenecid: tăng nồng độ ciprofloxacin'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\macrolides.py",
+    "errors": [
+      {
+        "line": 8,
+        "message": "unterminated string literal (detected at line 8)",
+        "text": "        ', 'vietnamese_name':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\nitroimidazoles.py",
+    "errors": [
+      {
+        "line": 31,
+        "message": "unterminated string literal (detected at line 31)",
+        "text": "        'Phenytoin: tăng nồng độ phenytoin', 'Disulfiram: chống chỉ định'],pregnancy': 'B - D trong 3 tháng đầu', 'mechanism_of_action':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\infectious_other\\tetracyclines.py",
+    "errors": [
+      {
+        "line": 21,
+        "message": "unterminated string literal (detected at line 21)",
+        "text": "        'interactions': ['Antacid/Sắt/Calcium: giảm hấp thu - cách 2 giờ', 'Warfarin: tăng tác dụng chống đông', 'Digoxin: tăng nồng độ digoxin', 'Phenytoin/Carbamazepine: giảm nồng độ doxycycline'],pregnancy': 'D - Chống chỉ định trong 3 tháng cuối',"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\analgesicantipyretic.py",
+    "errors": [
+      {
+        "line": 32,
+        "message": "unterminated string literal (detected at line 32)",
+        "text": "        'Phenytoin/Carbamazepine: tăng nguy cơ độc gan'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\analgesicantipyreticnsaid.py",
+    "errors": [
+      {
+        "line": 31,
+        "message": "unterminated string literal (detected at line 31)",
+        "text": "        'Methotrexate: tăng độc tính', 'ACE inhibitors: giảm hiệu quả'],pregnancy': 'C - Tránh dùng trong 3 tháng cuối (D)',"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\beta_2_agonist_short_actings.py",
+    "errors": [
+      {
+        "line": 34,
+        "message": "unterminated string literal (detected at line 34)",
+        "text": "        'Diuretics: tăng nguy cơ hạ kali máu', 'MAOIs: thận trọng'],pregnancy': 'C - An toàn', 'mechanism_of_action':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\corticosteroid_inhaleds.py",
+    "errors": [
+      {
+        "line": 54,
+        "message": "unterminated string literal (detected at line 54)",
+        "text": "        },storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\dmards_rheumatology.py",
+    "errors": [
+      {
+        "line": 197,
+        "message": "invalid syntax",
+        "text": "        \"pregnancy\": \"X - Chống chỉ định tuyệt đối trong thai kỳ do nguy cơ dị tật bẩm sinh\"\"mechanism_of_action\": (\n"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\vitamins.py",
+    "errors": [
+      {
+        "line": 575,
+        "message": "unterminated string literal (detected at line 575)",
+        "text": "        '\"mechanism_of_action\": ("
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\miscellaneous\\xanthine_oxidase_inhibitors.py",
+    "errors": [
+      {
+        "line": 48,
+        "message": "unterminated string literal (detected at line 48)",
+        "text": "        },storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\alzheimer_dementia_drugs.py",
+    "errors": [
+      {
+        "line": 354,
+        "message": "unterminated string literal (detected at line 354)",
+        "text": "        'Gan (chuyển hóa), thận (thải trừ). Half-life rất dài (70 giờ) do gắn chặt với acetylcholinesterase.'},storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\anticonvulsants.py",
+    "errors": [
+      {
+        "line": 53,
+        "message": "unterminated string literal (detected at line 53)",
+        "text": "        'clearance': 'Gan, bị ảnh hưởng bởi tự cảm ứng và các thuốc tương tác'},storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\anticonvulsant_alpha_2_delta_ligands.py",
+    "errors": [
+      {
+        "line": 25,
+        "message": "unterminated string literal (detected at line 25)",
+        "text": "        'Morphine: tăng tác dụng an thần', 'Ít tương tác khác'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\neurological\\ssri_selective_serotonin_reuptake_inhibitors.py",
+    "errors": [
+      {
+        "line": 51,
+        "message": "invalid character '°' (U+00B0)",
+        "text": "        },storage': 'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm',"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\alkylating_agents.py",
+    "errors": [
+      {
+        "line": 32,
+        "message": "unterminated string literal (detected at line 32)",
+        "text": "        'Mesna: bảo vệ chống viêm bàng quang'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\anthracyclines.py",
+    "errors": [
+      {
+        "line": 32,
+        "message": "unterminated string literal (detected at line 32)",
+        "text": "        'Các anthracyclines khác: tăng độc tim'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\antimetabolites.py",
+    "errors": [
+      {
+        "line": 35,
+        "message": "unterminated string literal (detected at line 35)",
+        "text": "        'Warfarin: tăng nguy cơ chảy máu', 'Phenytoin: tăng nồng độ phenytoin'],pregnancy': 'D - Chống chỉ định', 'mechanism_of_action':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\antimetabolite_antifolates.py",
+    "errors": [
+      {
+        "line": 37,
+        "message": "unterminated string literal (detected at line 37)",
+        "text": "        'Folinic acid: giải độc (rescue therapy)'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\anti_emetic_5_ht3_antagonists.py",
+    "errors": [
+      {
+        "line": 25,
+        "message": "unterminated string literal (detected at line 25)",
+        "text": "        'Các 5-HT3 antagonists khác: không nên dùng đồng thời'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\platinum_compounds.py",
+    "errors": [
+      {
+        "line": 62,
+        "message": "unterminated string literal (detected at line 62)",
+        "text": "        'Thận (chủ yếu, thải trừ nhanh hơn cisplatin)'},storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\taxanes.py",
+    "errors": [
+      {
+        "line": 36,
+        "message": "unterminated string literal (detected at line 36)",
+        "text": "        'CYP3A4 inducers: giảm nồng độ docetaxel'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\oncology\\topoisomerase_inhibitors.py",
+    "errors": [
+      {
+        "line": 217,
+        "message": "unterminated string literal (detected at line 217)",
+        "text": "        'Atropine: giảm cholinergic syndrome (dùng kèm)'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\anticholinergic_long_actings.py",
+    "errors": [
+      {
+        "line": 24,
+        "message": "unterminated string literal (detected at line 24)",
+        "text": "        'Anticholinergic khác: tăng tác dụng phụ', 'Beta-agonist: hiệp đồng'],pregnancy': 'C', 'mechanism_of_action':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\anticholinergic_short_actings.py",
+    "errors": [
+      {
+        "line": 9,
+        "message": "unterminated string literal (detected at line 9)",
+        "text": "        ', 'vietnamese_name':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\inhaled_corticosteroid_icss.py",
+    "errors": [
+      {
+        "line": 54,
+        "message": "unterminated string literal (detected at line 54)",
+        "text": "        'Gan: chuyển hóa nhanh qua CYP3A4 (first-pass metabolism cao, ~85-90% bị chuyển hóa). Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản).'},storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\leukotriene_receptor_antagonists.py",
+    "errors": [
+      {
+        "line": 191,
+        "message": "unterminated string literal (detected at line 191)",
+        "text": "        },storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\long_acting_beta_2_agonist_labas.py",
+    "errors": [
+      {
+        "line": 48,
+        "message": "unterminated string literal (detected at line 48)",
+        "text": "        'Gan (chuyển hóa qua CYP2D6, CYP2C19, glucuronidation), thận (thải trừ)'},storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\respiratory\\short_acting_beta_2_agonist_sabas.py",
+    "errors": [
+      {
+        "line": 43,
+        "message": "unterminated string literal (detected at line 43)",
+        "text": "        'Gan (chuyển hóa qua sulfation, một phần qua CYP450), thận (thải trừ)'},storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\supportive\\antihistamine_h1_antagonist_1st_generations.py",
+    "errors": [
+      {
+        "line": 49,
+        "message": "unterminated string literal (detected at line 49)",
+        "text": "        ],pregnancy': 'B',"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\supportive\\antihistamine_h1_antagonist_2nd_generations.py",
+    "errors": [
+      {
+        "line": 29,
+        "message": "unterminated string literal (detected at line 29)",
+        "text": "        'Tương tác với alcohol (có thể tăng buồn ngủ)'],contraindications_detail': {"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\supportive\\calciums.py",
+    "errors": [
+      {
+        "line": 65,
+        "message": "unterminated string literal (detected at line 65)",
+        "text": "        },storage':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\supportive\\folates.py",
+    "errors": [
+      {
+        "line": 44,
+        "message": "unterminated string literal (detected at line 44)",
+        "text": "        ],pregnancy': 'A - An toàn, cần thiết (dự phòng dị tật ống thần kinh)',"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\supportive\\vitamin_b12s.py",
+    "errors": [
+      {
+        "line": 32,
+        "message": "unterminated string literal (detected at line 32)",
+        "text": "        'PPI/H2 blocker: giảm hấp thu B12'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\supportive\\vitamin_ds.py",
+    "errors": [
+      {
+        "line": 35,
+        "message": "unterminated string literal (detected at line 35)",
+        "text": "        'Cholestyramine: giảm hấp thu vitamin D'],pregnancy':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\endocrinology_other\\corticosteroids\\long_acting.py",
+    "errors": [
+      {
+        "line": 6,
+        "message": "unterminated string literal (detected at line 6)",
+        "text": "        ', 'vietnamese_name':"
+      }
+    ]
+  },
+  {
+    "file": "D:\\1app\\medical\\drugs\\drug_modules\\antimicrobial\\antivirals\\hepatitis.py",
+    "errors": [
+      {
+        "line": 298,
+        "message": "invalid syntax. Perhaps you forgot a comma?",
+        "text": "    \"Ribavirin\": {"
+      }
+    ]
+  }
+]

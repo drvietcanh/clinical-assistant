@@ -184,7 +184,7 @@ def render():
         render_suggestions(
             calculator_id="orbit",
             calculator_name="ORBIT Bleeding Risk Score",
-            category="Tim Mạch",
+            category="Tim mạch",
             show_related=True,
             show_category=True,
             limit=3

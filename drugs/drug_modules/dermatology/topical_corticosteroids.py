@@ -38,7 +38,7 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Betamethasone là corticosteroid tổng hợp, high potency (nhóm II). Gắn với thụ thể glucocorticoid, ức chế viêm, ức chế miễn dịch, co mạch. Đặc điểm: high potency, hiệu quả với tổn thương nặng, nhưng có nguy cơ teo da cao nếu dùng kéo dài.",
             "monitoring": [
                 "Đáp ứng lâm sàng",
@@ -168,7 +168,7 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Corticosteroid tại chỗ khác: tăng nguy cơ teo da"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Betamethasone là corticosteroid mạnh, kháng viêm, giảm ngứa; clotrimazole là kháng nấm azole, ức chế tổng hợp ergosterol. Phối hợp giúp vừa điều trị nấm vừa giảm nhanh triệu chứng viêm, nhưng nguy cơ che lấp nhiễm nấm nếu lạm dụng.",
             "monitoring": [
                 "Đáp ứng triệu chứng (giảm ngứa, đỏ, bong vảy)",
@@ -316,7 +316,7 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (topical)"
             ],
-            "pregnancy": "C - Thận trọng, tránh dùng diện rộng",
+        "pregnancy": "C - Thận trọng, tránh dùng diện rộng",
             "mechanism_of_action": "Clobetasol là corticosteroid tổng hợp, ultra-high potency (nhóm I - mạnh nhất). Gắn với thụ thể glucocorticoid trong tế bào, điều hòa biểu hiện gen, dẫn đến: (1) Ức chế viêm (giảm cytokine, chemokine, adhesion molecules), (2) Ức chế miễn dịch (giảm T-cell activation, cytokine production), (3) Co mạch (giảm đỏ, sưng), (4) Ức chế tăng sinh tế bào (giảm vảy nến). Clobetasol có độ mạnh cao nhất trong các corticosteroid tại chỗ, hiệu quả nhanh và mạnh, nhưng nguy cơ tác dụng phụ cao (teo da, ức chế HPA). ĐẶC ĐIỂM: (1) Ultra-high potency (nhóm I), (2) Chỉ dùng cho tổn thương nặng, diện tích nhỏ, (3) Không dùng >2 tuần liên tục, (4) Tránh dùng trên mặt, nách, bẹn, (5) Nguy cơ hấp thu toàn thân nếu dùng diện rộng, kéo dài.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, ngứa)",
@@ -475,7 +475,7 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Kháng sinh tại chỗ khác: tăng nguy cơ kháng thuốc"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Fusidic acid là kháng sinh ức chế tổng hợp protein Gram dương (đặc biệt Staphylococcus aureus); betamethasone kháng viêm mạnh. Phối hợp dùng ngắn ngày cho tổn thương viêm da bội nhiễm.",
             "monitoring": [
                 "Cải thiện đỏ, tiết dịch, mụn mủ",
@@ -611,7 +611,7 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Corticosteroid tại chỗ khác: tăng nguy cơ teo da",
                 "Kháng sinh tại chỗ khác: tăng nguy cơ kháng thuốc hoặc kích ứng",
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Gentamicin (aminoglycoside) kháng khuẩn Gram âm/Gram dương; clotrimazole kháng nấm azole; betamethasone kháng viêm mạnh. Phối hợp nhằm xử trí tổn thương viêm/nấm có bội nhiễm vi khuẩn và ngứa nhiều, dùng ngắn hạn.",
             "monitoring": [
                 "Cải thiện đỏ, ngứa, tiết dịch hoặc mụn mủ",
@@ -749,7 +749,7 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (topical)"
             ],
-            "pregnancy": "C - An toàn cho vùng da nhạy cảm",
+        "pregnancy": "C - An toàn cho vùng da nhạy cảm",
             "mechanism_of_action": "Hydrocortisone là corticosteroid tự nhiên (cortisol), low potency (nhóm VII - yếu nhất). Gắn với thụ thể glucocorticoid trong tế bào, điều hòa biểu hiện gen, dẫn đến: (1) Ức chế viêm (giảm cytokine, chemokine, adhesion molecules), (2) Ức chế miễn dịch (giảm T-cell activation, cytokine production), (3) Co mạch (giảm đỏ, sưng), (4) Ức chế tăng sinh tế bào. Hydrocortisone có độ mạnh thấp nhất trong các corticosteroid tại chỗ, an toàn cho vùng da nhạy cảm (mặt, nách, bẹn, vùng sinh dục), và có thể dùng kéo dài hơn các corticosteroid mạnh hơn. ĐẶC ĐIỂM: (1) Low potency (nhóm VII - yếu nhất), (2) An toàn cho vùng da nhạy cảm, (3) Có thể dùng kéo dài, (4) Nguy cơ tác dụng phụ thấp (teo da, ức chế HPA rất hiếm), (5) Phù hợp cho trẻ em và phụ nữ có thai.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, ngứa)",
@@ -893,7 +893,7 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Hydrocortisone là corticosteroid tự nhiên, low potency (nhóm VII - yếu nhất). Gắn với thụ thể glucocorticoid, ức chế viêm, ức chế miễn dịch, co mạch. Đặc điểm: yếu nhất, an toàn cho vùng da nhạy cảm (mặt, nách, bẹn), có thể dùng kéo dài hơn các corticosteroid mạnh, ít nguy cơ teo da.",
             "monitoring": [
                 "Đáp ứng lâm sàng",
@@ -1030,7 +1030,7 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Warfarin (với miconazole bôi diện rộng/ở vùng rộng): lý thuyết tăng INR – rất hiếm nhưng nên thận trọng."
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Miconazole là kháng nấm azole ức chế tổng hợp ergosterol; hydrocortisone là corticoid yếu, giúp giảm viêm/ngứa. Phối hợp phù hợp cho tổn thương nấm nhẹ kèm viêm, dùng ngắn hạn.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, ngứa, bong vảy)",
@@ -1157,7 +1157,7 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Mometasone là corticosteroid tổng hợp, high potency (nhóm II). Gắn với thụ thể glucocorticoid, ức chế viêm, ức chế miễn dịch, co mạch. Đặc điểm: high potency, dùng 1 lần/ngày (ưu điểm), hiệu quả với nhiều bệnh da, nhưng có nguy cơ teo da nếu dùng kéo dài.",
             "monitoring": [
                 "Đáp ứng lâm sàng",
@@ -1298,7 +1298,7 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (topical)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Triamcinolone là corticosteroid tổng hợp, medium potency (nhóm III-V). Gắn với thụ thể glucocorticoid trong tế bào, điều hòa biểu hiện gen, dẫn đến: (1) Ức chế viêm (giảm cytokine, chemokine, adhesion molecules), (2) Ức chế miễn dịch (giảm T-cell activation, cytokine production), (3) Co mạch (giảm đỏ, sưng), (4) Ức chế tăng sinh tế bào (giảm vảy nến). Triamcinolone có độ mạnh trung bình, phù hợp cho tổn thương trung bình. ĐẶC ĐIỂM: (1) Medium potency (nhóm III-V), (2) Phù hợp cho tổn thương trung bình, (3) Không dùng >2-4 tuần liên tục, (4) Tránh dùng trên mặt, nách, bẹn, (5) Nguy cơ teo da và ức chế HPA nếu dùng kéo dài.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, ngứa)",
@@ -1453,7 +1453,7 @@ TOPICAL_CORTICOSTEROIDS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Triamcinolone là corticosteroid tổng hợp, medium-high potency (nhóm III-IV). Gắn với thụ thể glucocorticoid, ức chế viêm, ức chế miễn dịch, co mạch. Đặc điểm: medium-high potency, hiệu quả với nhiều bệnh da, nhưng có nguy cơ teo da nếu dùng kéo dài.",
             "monitoring": [
                 "Đáp ứng lâm sàng",

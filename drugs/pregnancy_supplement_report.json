@@ -1,0 +1,598 @@
+{
+  "total_checked": 714,
+  "missing_pregnancy": [
+    "Enalapril",
+    "Lisinopril",
+    "Losartan",
+    "Telmisartan",
+    "Valsartan",
+    "Simvastatin",
+    "Pravastatin",
+    "Metformin",
+    "Insulin",
+    "Empagliflozin",
+    "Dapagliflozin",
+    "Canagliflozin",
+    "Gliclazide",
+    "Pioglitazone",
+    "Liraglutide",
+    "Semaglutide",
+    "Dulaglutide",
+    "Exenatide",
+    "Bismuth subsalicylate",
+    "Ranitidine",
+    "Sucralfate",
+    "Omeprazole",
+    "Esomeprazole",
+    "Lansoprazole",
+    "Pantoprazole",
+    "Domperidone",
+    "Ondansetron",
+    "Sulfasalazine",
+    "Hydrocodone",
+    "Codeine",
+    "Rizatriptan",
+    "Sumatriptan",
+    "Montelukast",
+    "Nedocromil",
+    "Formoterol",
+    "Olodaterol",
+    "Salmeterol",
+    "Vilanterol",
+    "Ipratropium",
+    "Umeclidinium",
+    "Beclomethasone inhaled",
+    "Budesonide inhaled",
+    "Ciclesonide",
+    "Fluticasone inhaled",
+    "Carbamazepine",
+    "Topiramate",
+    "Fluoxetine",
+    "Donepezil",
+    "Memantine",
+    "Rivastigmine",
+    "Zolmitriptan",
+    "Calcium",
+    "Diphenhydramine",
+    "Etomidate",
+    "Ketamine",
+    "Propofol",
+    "Cisatracurium",
+    "Rocuronium",
+    "Succinylcholine",
+    "Amoxicillin-clavulanate",
+    "Ceftriaxone",
+    "Azithromycin",
+    "Clarithromycin",
+    "Hydroxychloroquine",
+    "Amoxicillin suspension",
+    "Levothyroxine",
+    "Methimazole",
+    "Propylthiouracil",
+    "Prednisone",
+    "Betamethasone",
+    "Dexamethasone",
+    "Alendronate",
+    "Tamoxifen",
+    "Anastrozole",
+    "Imatinib",
+    "Erlotinib",
+    "Atropine",
+    "Lidocaine",
+    "Sodium Chloride 0.9%",
+    "Ringer Lactate",
+    "Albumin (Human)",
+    "HES 130/0.4",
+    "Vitamin D3 (Cholecalciferol)",
+    "Allopurinol",
+    "Colchicine",
+    "Febuxostat",
+    "Cyclosporine",
+    "Mycophenolate",
+    "Tacrolimus",
+    "Leflunomide",
+    "Methotrexate",
+    "Bupivacaine",
+    "Levobupivacaine",
+    "VAT (Tetanus Vaccine)",
+    "Verorab (Rabies Vaccine)",
+    "Influenza Vaccine",
+    "Hepatitis B Vaccine",
+    "SAT (Tetanus Antitoxin)",
+    "SAR (Rabies Antiserum)",
+    "Snake Antivenom (Luc Tre)",
+    "Snake Antivenom (Ho Dat)",
+    "Acetylcysteine",
+    "Pralidoxime",
+    "Vitamin K1",
+    "Ethanol",
+    "Thiamine (Vitamin B1)",
+    "Cyanocobalamin (Vitamin B12)",
+    "Vitamin C (Ascorbic Acid)",
+    "Zoledronic Acid"
+  ],
+  "supplemented": [
+    {
+      "drug": "Enalapril",
+      "category": "D - Chống chỉ định trong thai kỳ. Có thể gây dị tật và tử vong thai nhi.",
+      "group": "Cardiovascular - ACE Inhibitor"
+    },
+    {
+      "drug": "Lisinopril",
+      "category": "D - Chống chỉ định trong thai kỳ. Có thể gây dị tật và tử vong thai nhi.",
+      "group": "Cardiovascular - ACE Inhibitor"
+    },
+    {
+      "drug": "Losartan",
+      "category": "D - Chống chỉ định trong thai kỳ. Có thể gây dị tật và tử vong thai nhi.",
+      "group": "Cardiovascular - ARB (Angiotensin Receptor Blocker)"
+    },
+    {
+      "drug": "Telmisartan",
+      "category": "D - Chống chỉ định trong thai kỳ. Có thể gây dị tật và tử vong thai nhi.",
+      "group": "Cardiovascular - ARB"
+    },
+    {
+      "drug": "Valsartan",
+      "category": "D - Chống chỉ định trong thai kỳ. Có thể gây dị tật và tử vong thai nhi.",
+      "group": "Cardiovascular - ARB"
+    },
+    {
+      "drug": "Simvastatin",
+      "category": "X - Chống chỉ định trong thai kỳ và phụ nữ có thể mang thai.",
+      "group": "Cardiovascular - Statin"
+    },
+    {
+      "drug": "Pravastatin",
+      "category": "X - Chống chỉ định trong thai kỳ và phụ nữ có thể mang thai.",
+      "group": "Cardiovascular - Statin"
+    },
+    {
+      "drug": "Metformin",
+      "category": "B - Không có bằng chứng về nguy cơ gây dị tật. Có thể dùng trong thai kỳ.",
+      "group": "Diabetes - Biguanide"
+    },
+    {
+      "drug": "Insulin",
+      "category": "B - An toàn trong thai kỳ. Được khuyến nghị cho đái tháo đường thai kỳ.",
+      "group": "Diabetes - Insulin"
+    },
+    {
+      "drug": "Empagliflozin",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Diabetes - SGLT2 Inhibitor"
+    },
+    {
+      "drug": "Dapagliflozin",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Diabetes - SGLT2 Inhibitor"
+    },
+    {
+      "drug": "Canagliflozin",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Diabetes - SGLT2 Inhibitor"
+    },
+    {
+      "drug": "Omeprazole",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Gastrointestinal - Proton Pump Inhibitor"
+    },
+    {
+      "drug": "Esomeprazole",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Gastrointestinal - Proton Pump Inhibitor"
+    },
+    {
+      "drug": "Lansoprazole",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Gastrointestinal - Proton Pump Inhibitor"
+    },
+    {
+      "drug": "Pantoprazole",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Gastrointestinal - Proton Pump Inhibitor"
+    },
+    {
+      "drug": "Hydrocodone",
+      "category": "C - Nguy cơ không thể loại trừ. Chỉ dùng nếu lợi ích > nguy cơ.",
+      "group": "Analgesic - Opioid Agonist"
+    },
+    {
+      "drug": "Codeine",
+      "category": "C - Nguy cơ không thể loại trừ. Chỉ dùng nếu lợi ích > nguy cơ.",
+      "group": "Analgesic - Opioid Agonist (Weak)"
+    },
+    {
+      "drug": "Beclomethasone inhaled",
+      "category": "C - Nguy cơ không thể loại trừ. Có thể dùng nếu lợi ích > nguy cơ.",
+      "group": "Respiratory - Inhaled Corticosteroid (ICS)"
+    },
+    {
+      "drug": "Budesonide inhaled",
+      "category": "C - Nguy cơ không thể loại trừ. Có thể dùng nếu lợi ích > nguy cơ.",
+      "group": "Respiratory - Inhaled Corticosteroid (ICS)"
+    },
+    {
+      "drug": "Ciclesonide",
+      "category": "C - Nguy cơ không thể loại trừ. Có thể dùng nếu lợi ích > nguy cơ.",
+      "group": "Respiratory - Inhaled Corticosteroid (ICS)"
+    },
+    {
+      "drug": "Fluticasone inhaled",
+      "category": "C - Nguy cơ không thể loại trừ. Có thể dùng nếu lợi ích > nguy cơ.",
+      "group": "Respiratory - Inhaled Corticosteroid (ICS)"
+    },
+    {
+      "drug": "Carbamazepine",
+      "category": "D - Nguy cơ dị tật thai nhi. Chỉ dùng nếu lợi ích > nguy cơ.",
+      "group": "Neurology - Anticonvulsant"
+    },
+    {
+      "drug": "Topiramate",
+      "category": "D - Nguy cơ dị tật thai nhi. Chỉ dùng nếu lợi ích > nguy cơ.",
+      "group": "Neurology - Anticonvulsant"
+    },
+    {
+      "drug": "Fluoxetine",
+      "category": "C - Nguy cơ không thể loại trừ. Có thể dùng nếu lợi ích > nguy cơ.",
+      "group": "Psychiatry - SSRI (Selective Serotonin Reuptake Inhibitor)"
+    },
+    {
+      "drug": "Donepezil",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Neurology - Cholinesterase Inhibitor"
+    },
+    {
+      "drug": "Rivastigmine",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Neurology - Cholinesterase Inhibitor"
+    },
+    {
+      "drug": "Diphenhydramine",
+      "category": "B - Không có bằng chứng về nguy cơ gây dị tật.",
+      "group": "Allergy - Antihistamine H1 (1st Gen - Gây buồn ngủ)"
+    },
+    {
+      "drug": "Amoxicillin-clavulanate",
+      "category": "B - An toàn trong thai kỳ.",
+      "group": "Antibiotic - Beta-lactam (Penicillin + Beta-lactamase inhibitor)"
+    },
+    {
+      "drug": "Ceftriaxone",
+      "category": "B - An toàn trong thai kỳ.",
+      "group": "Antibiotic - Cephalosporin (3rd Generation)"
+    },
+    {
+      "drug": "Azithromycin",
+      "category": "B - An toàn trong thai kỳ (trừ clarithromycin - C).",
+      "group": "Infectious Disease - Macrolide Antibiotic"
+    },
+    {
+      "drug": "Clarithromycin",
+      "category": "B - An toàn trong thai kỳ (trừ clarithromycin - C).",
+      "group": "Infectious Disease - Macrolide Antibiotic"
+    },
+    {
+      "drug": "Amoxicillin suspension",
+      "category": "B - An toàn trong thai kỳ.",
+      "group": "Antibiotic - Beta-lactam (Penicillin)"
+    },
+    {
+      "drug": "Prednisone",
+      "category": "C - Nguy cơ không thể loại trừ. Có thể dùng nếu lợi ích > nguy cơ.",
+      "group": "Endocrinology - Corticosteroid (Oral)"
+    },
+    {
+      "drug": "Betamethasone",
+      "category": "C - Nguy cơ không thể loại trừ. Có thể dùng nếu lợi ích > nguy cơ.",
+      "group": "Endocrinology - Corticosteroid"
+    },
+    {
+      "drug": "Dexamethasone",
+      "category": "C - Nguy cơ không thể loại trừ. Có thể dùng nếu lợi ích > nguy cơ.",
+      "group": "Endocrinology - Corticosteroid"
+    },
+    {
+      "drug": "Anastrozole",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Oncology - Hormonal Therapy (Aromatase Inhibitor)"
+    },
+    {
+      "drug": "Erlotinib",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Oncology - Targeted Therapy (EGFR Inhibitor)"
+    },
+    {
+      "drug": "Atropine",
+      "category": "D - Chống chỉ định trong thai kỳ. Có thể gây dị tật và tử vong thai nhi.",
+      "group": "Toxicology - Antidote (Organophosphate/Carbamate)"
+    },
+    {
+      "drug": "Allopurinol",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Rheumatology - Gout (Xanthine Oxidase Inhibitor)"
+    },
+    {
+      "drug": "Febuxostat",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Rheumatology - Gout (Xanthine Oxidase Inhibitor)"
+    },
+    {
+      "drug": "Cyclosporine",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Immunology - Calcineurin Inhibitor"
+    },
+    {
+      "drug": "Tacrolimus",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Immunology - Calcineurin Inhibitor"
+    },
+    {
+      "drug": "Acetylcysteine",
+      "category": "D - Chống chỉ định trong thai kỳ.",
+      "group": "Toxicology - Antidote (Paracetamol)"
+    }
+  ],
+  "needs_manual_review": [
+    {
+      "drug": "Gliclazide",
+      "group": "Diabetes - Sulfonylurea"
+    },
+    {
+      "drug": "Pioglitazone",
+      "group": "Diabetes - Thiazolidinedione (TZD)"
+    },
+    {
+      "drug": "Liraglutide",
+      "group": "Diabetes - GLP-1 Receptor Agonist"
+    },
+    {
+      "drug": "Semaglutide",
+      "group": "Diabetes - GLP-1 Receptor Agonist"
+    },
+    {
+      "drug": "Dulaglutide",
+      "group": "Diabetes - GLP-1 Receptor Agonist"
+    },
+    {
+      "drug": "Exenatide",
+      "group": "Diabetes - GLP-1 Receptor Agonist"
+    },
+    {
+      "drug": "Bismuth subsalicylate",
+      "group": "Gastrointestinal - Antidiarrheal"
+    },
+    {
+      "drug": "Ranitidine",
+      "group": "Gastrointestinal - H2 Receptor Antagonist"
+    },
+    {
+      "drug": "Sucralfate",
+      "group": "Gastrointestinal - Mucosal Protectant"
+    },
+    {
+      "drug": "Domperidone",
+      "group": "Gastrointestinal - Prokinetic, Antiemetic"
+    },
+    {
+      "drug": "Ondansetron",
+      "group": "Gastrointestinal - Antiemetic (5-HT3 Antagonist)"
+    },
+    {
+      "drug": "Sulfasalazine",
+      "group": "Rheumatology - DMARD"
+    },
+    {
+      "drug": "Rizatriptan",
+      "group": "Neurology - Migraine (Triptan)"
+    },
+    {
+      "drug": "Sumatriptan",
+      "group": "Neurology - Migraine (Triptan)"
+    },
+    {
+      "drug": "Montelukast",
+      "group": "Respiratory - Leukotriene Receptor Antagonist"
+    },
+    {
+      "drug": "Nedocromil",
+      "group": "Respiratory - Mast Cell Stabilizer"
+    },
+    {
+      "drug": "Formoterol",
+      "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)"
+    },
+    {
+      "drug": "Olodaterol",
+      "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)"
+    },
+    {
+      "drug": "Salmeterol",
+      "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)"
+    },
+    {
+      "drug": "Vilanterol",
+      "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)"
+    },
+    {
+      "drug": "Ipratropium",
+      "group": "Respiratory - Anticholinergic (Short-acting)"
+    },
+    {
+      "drug": "Umeclidinium",
+      "group": "Respiratory - Anticholinergic (Long-acting)"
+    },
+    {
+      "drug": "Memantine",
+      "group": "Neurology - NMDA Receptor Antagonist"
+    },
+    {
+      "drug": "Zolmitriptan",
+      "group": "Neurology - Migraine (Triptan)"
+    },
+    {
+      "drug": "Calcium",
+      "group": "Vitamins/Supplements - Calcium"
+    },
+    {
+      "drug": "Etomidate",
+      "group": "Anesthesia - Induction Agent"
+    },
+    {
+      "drug": "Ketamine",
+      "group": "Anesthesia - Dissociative Anesthetic"
+    },
+    {
+      "drug": "Propofol",
+      "group": "Anesthesia - Induction Agent (IV)"
+    },
+    {
+      "drug": "Cisatracurium",
+      "group": "Anesthesia - Neuromuscular Blocker (Non-depolarizing)"
+    },
+    {
+      "drug": "Rocuronium",
+      "group": "Anesthesia - Neuromuscular Blocker (Non-depolarizing)"
+    },
+    {
+      "drug": "Succinylcholine",
+      "group": "Anesthesia - Neuromuscular Blocker (Depolarizing)"
+    },
+    {
+      "drug": "Hydroxychloroquine",
+      "group": "Rheumatology - DMARD (Antimalarial)"
+    },
+    {
+      "drug": "Levothyroxine",
+      "group": "Endocrinology - Thyroid Hormone"
+    },
+    {
+      "drug": "Methimazole",
+      "group": "Endocrinology - Antithyroid Drug"
+    },
+    {
+      "drug": "Propylthiouracil",
+      "group": "Endocrinology - Antithyroid Drug"
+    },
+    {
+      "drug": "Alendronate",
+      "group": "Rheumatology - Bisphosphonate (Oral)"
+    },
+    {
+      "drug": "Tamoxifen",
+      "group": "Oncology - Hormonal Therapy (SERM)"
+    },
+    {
+      "drug": "Imatinib",
+      "group": "Oncology - Targeted Therapy (TKI)"
+    },
+    {
+      "drug": "Lidocaine",
+      "group": "Anesthesia - Local Anesthetic (Amide)"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "group": "Fluids - Crystalloid (Dịch tinh thể)"
+    },
+    {
+      "drug": "Ringer Lactate",
+      "group": "Fluids - Crystalloid (Dịch tinh thể)"
+    },
+    {
+      "drug": "Albumin (Human)",
+      "group": "Fluids - Colloid (Dung dịch keo)"
+    },
+    {
+      "drug": "HES 130/0.4",
+      "group": "Fluids - Colloid (Cao phân tử tổng hợp)"
+    },
+    {
+      "drug": "Vitamin D3 (Cholecalciferol)",
+      "group": "Nutrition - Vitamin"
+    },
+    {
+      "drug": "Colchicine",
+      "group": "Rheumatology - Gout (Anti-inflammatory)"
+    },
+    {
+      "drug": "Mycophenolate",
+      "group": "Immunology - Antimetabolite"
+    },
+    {
+      "drug": "Leflunomide",
+      "group": "Rheumatology - DMARD"
+    },
+    {
+      "drug": "Methotrexate",
+      "group": "Rheumatology - DMARD (Immunosuppressant)"
+    },
+    {
+      "drug": "Bupivacaine",
+      "group": "Anesthesia - Local Anesthetic (Amide)"
+    },
+    {
+      "drug": "Levobupivacaine",
+      "group": "Anesthesia - Local Anesthetic (Amide)"
+    },
+    {
+      "drug": "VAT (Tetanus Vaccine)",
+      "group": "Vaccines - Tetanus (Uốn ván)"
+    },
+    {
+      "drug": "Verorab (Rabies Vaccine)",
+      "group": "Vaccines - Rabies (Dại)"
+    },
+    {
+      "drug": "Influenza Vaccine",
+      "group": "Vaccines - Influenza (Cúm)"
+    },
+    {
+      "drug": "Hepatitis B Vaccine",
+      "group": "Vaccines - Hepatitis B (Viêm gan B)"
+    },
+    {
+      "drug": "SAT (Tetanus Antitoxin)",
+      "group": "Antisera - Tetanus (Huyết thanh kháng uốn ván)"
+    },
+    {
+      "drug": "SAR (Rabies Antiserum)",
+      "group": "Antisera - Rabies (Huyết thanh kháng dại)"
+    },
+    {
+      "drug": "Snake Antivenom (Luc Tre)",
+      "group": "Antivenom - Snake (Kháng nọc rắn)"
+    },
+    {
+      "drug": "Snake Antivenom (Ho Dat)",
+      "group": "Antivenom - Snake (Kháng nọc rắn)"
+    },
+    {
+      "drug": "Pralidoxime",
+      "group": "Toxicology - Antidote (Organophosphate)"
+    },
+    {
+      "drug": "Vitamin K1",
+      "group": "Toxicology - Antidote (Warfarin/Rodenticide)"
+    },
+    {
+      "drug": "Ethanol",
+      "group": "Toxicology - Antidote (Methanol/Ethylene Glycol)"
+    },
+    {
+      "drug": "Thiamine (Vitamin B1)",
+      "group": "Nutrition - Vitamin B"
+    },
+    {
+      "drug": "Cyanocobalamin (Vitamin B12)",
+      "group": "Nutrition - Vitamin B"
+    },
+    {
+      "drug": "Vitamin C (Ascorbic Acid)",
+      "group": "Nutrition - Vitamin"
+    },
+    {
+      "drug": "Zoledronic Acid",
+      "group": "Rheumatology - Bisphosphonate (IV)"
+    }
+  ]
+}

@@ -34,7 +34,7 @@ NNRTI_ARVS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Cảm ứng và ức chế CYP3A4/CYP2B6 (phức tạp): ảnh hưởng nhiều thuốc (rifampin, azole, statin, CCB, thuốc an thần).",
             ],
-            "pregnancy": "Khuyến cáo tránh trong quý 1 do dữ liệu dị tật ống thần kinh cũ; hiện có thể dùng nếu lợi ích vượt trội (WHO cho phép).",
+        "pregnancy": "Khuyến cáo tránh trong quý 1 do dữ liệu dị tật ống thần kinh cũ; hiện có thể dùng nếu lợi ích vượt trội (WHO cho phép).",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -184,7 +184,7 @@ NNRTI_ARVS: Dict[str, Dict[str, Any]] = {
                 "EFV cảm ứng/ức chế CYP3A/2B6: tương tác nhiều thuốc (rifampin, azole, statin, CCB, thuốc an thần).",
                 "TDF độc thận; tăng nguy cơ với thuốc độc thận."
             ],
-            "pregnancy": "Tránh quý 1 nếu có lựa chọn khác; có thể dùng từ quý 2 trở đi.",
+        "pregnancy": "Tránh quý 1 nếu có lựa chọn khác; có thể dùng từ quý 2 trở đi.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -325,7 +325,7 @@ NNRTI_ARVS: Dict[str, Dict[str, Any]] = {
                 "PPI/antacid/H2: giảm hấp thu do tăng pH.",
                 "Macrolide/azole/clarithromycin: có thể tăng nồng độ (ức chế CYP3A)."
             ],
-            "pregnancy": "Có thể dùng; INSTI-first vẫn ưu tiên.",
+        "pregnancy": "Có thể dùng; INSTI-first vẫn ưu tiên.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,

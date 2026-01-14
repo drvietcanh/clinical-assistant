@@ -394,7 +394,7 @@ def render():
                 st.markdown(f"{i}. {rec}")
             
             # Clinical guidance
-            st.markdown("### 📋 Hướng Dẫn Lâm Sàng")
+            st.markdown("### 📋 Hướng dẫn Lâm Sàng")
             
             st.info("""
             **Mục tiêu điều trị:**

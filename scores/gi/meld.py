@@ -128,7 +128,7 @@ def render():
         render_suggestions(
             calculator_id="meld",
             calculator_name="MELD Score",
-            category="Tiêu Hóa",
+            category="Tiêu hóa",
             show_related=True,
             show_category=True,
             limit=3

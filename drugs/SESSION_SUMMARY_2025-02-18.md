@@ -1,4 +1,4 @@
-# Tóm Tắt Phiên Làm Việc - Bổ Sung 2 Field Còn Thiếu
+# Tóm Tắt Phiên Làm Việc - Bổ sung 2 Field Còn Thiếu
 
 **Ngày:** 2025-02-18  
 **Mục tiêu:** Bổ sung đầy đủ 2 field còn thiếu cho các thuốc trong database

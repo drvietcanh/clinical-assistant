@@ -3,51 +3,51 @@
 # Fluoroquinolones
 
 FLUOROQUINOLONES_DRUGS = {
-    "Ciprofloxacin": {'group': 'Antibiotic - Fluoroquinolone', 'vietnamese_name':
-        'Ciprofloxacin, Cipro', 'administration': ['PO', 'IV'], 'indications':
+    "Ciprofloxacin": {'group': 'Antibiotic - Fluoroquinolone',
+        'vietnamese_name':
+        'Ciprofloxacin, Cipro', 'administration': ['PO', 'IV'],
+        'indications':
         ['Nhiễm khuẩn đường tiết niệu', 'Nhiễm khuẩn đường tiêu hóa',
         'Nhiễm khuẩn da mô mềm', 'Nhiễm khuẩn xương khớp',
-        'Viêm phổi (một số loại)'], 'contraindications': [
+        'Viêm phổi (một số loại)'],
+        'contraindications': [
         'Dị ứng fluoroquinolone', 'Có thai',
-        'Trẻ em <18 tuổi (trừ trường hợp đặc biệt)', 'QT kéo dài'], 'dosage': {
+        'Trẻ em <18 tuổi (trừ trường hợp đặc biệt)', 'QT kéo dài'],
+        'dosage': {
         'adult_uti': '250-500mg PO x 2 lần/ngày', 'adult_uti_complicated':
         '500-750mg PO x 2 lần/ngày', 'adult_iv': '200-400mg IV mỗi 12 giờ',
         'adult_severe': '400mg IV mỗi 8 giờ', 'notes':
-        'Uống cách xa antacid 2 giờ. Không dùng với sữa'}, 'renal_adjustment':
+        'Uống cách xa antacid 2 giờ. Không dùng với sữa'},
+        'renal_adjustment':
         {'normal': 'Không đổi', '30_60': 'Giảm liều 25-50%', 'under_30':
-        'Giảm liều 50-75%'}, 'side_effects': ['Rối loạn tiêu hóa',
+        'Giảm liều 50-75%'},
+        'side_effects': ['Rối loạn tiêu hóa',
         'Đau gân, viêm gân (có thể đứt gân)', 'QT kéo dài', 'Co giật (hiếm)',
-        'Nhạy cảm ánh sáng', 'Rối loạn tâm thần (hiếm)'], 'interactions': [
+        'Nhạy cảm ánh sáng', 'Rối loạn tâm thần (hiếm)'],
+        'interactions': [
         'Antacid: giảm hấp thu', 'Warfarin: tăng INR',
         'Theophylline: tăng nồng độ theophylline',
-        'Probenecid: tăng nồng độ ciprofloxacin'], 'pregnancy':
+        'Probenecid: tăng nồng độ ciprofloxacin'],
+        'pregnancy':
         'C - Tránh dùng', 'mechanism_of_action':
         'Ciprofloxacin là fluoroquinolone kháng sinh phổ rộng thuộc thế hệ thứ hai. Ức chế DNA gyrase (topoisomerase II) ở vi khuẩn Gram-âm và topoisomerase IV ở vi khuẩn Gram-dương, các enzyme cần thiết cho quá trình sao chép, phiên mã, sửa chữa, và tái tổ hợp DNA. Dẫn đến tổn thương DNA không thể sửa chữa và chết tế bào vi khuẩn. Phổ kháng khuẩn: Gram-âm mạnh (Enterobacteriaceae, Pseudomonas aeruginosa, H. influenzae, Neisseria, Moraxella), một số Gram-dương (không phải MRSA), và một số vi khuẩn không điển hình (Legionella, Mycoplasma, Chlamydia). Kháng thuốc phát triển nhanh nếu dùng không đúng hoặc không đủ liều.'
         , 'monitoring': [
         'Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng) để đánh giá đáp ứng điều trị'
-        ,
         'Cấy máu và cấy từ vị trí nhiễm trùng (nếu có) để xác định vi khuẩn và độ nhạy cảm'
-        ,
         'Tendon (gân) - đau, sưng, đứt gân (đặc biệt gân Achilles) - có thể xảy ra bất cứ lúc nào, kể cả sau khi ngừng thuốc'
-        ,
         'Thần kinh trung ương (co giật, kích động, mất ngủ, lo âu, trầm cảm, rối loạn tâm thần)'
-        ,
         'Tim mạch (ECG - QT kéo dài, rối loạn nhịp tim) - đặc biệt ở bệnh nhân có nguy cơ'
         , 'Đường huyết (tăng hoặc hạ đường huyết - đặc biệt với sulfonylurea)',
         'Chức năng thận (creatinine, BUN) - điều chỉnh liều ở suy thận',
-        'Chức năng gan (ALT, AST) - hiếm viêm gan nặng'], 'precautions': [
+        'Chức năng gan (ALT, AST) - hiếm viêm gan nặng'],
+        'precautions': [
         'Nguy cơ đứt gân, viêm gân (đặc biệt gân Achilles) - có thể xảy ra bất cứ lúc nào, kể cả sau khi ngừng thuốc'
-        ,
         'Nguy cơ tăng ở: > 60 tuổi, dùng corticosteroid, ghép thận, ghép tim, ghép phổi, hoạt động thể lực'
         , 'NGỪNG NGAY nếu có đau, sưng gân - nghỉ ngơi, không vận động',
         'QT kéo dài → không dùng với các thuốc kéo dài QT khác (amiodarone, sotalol, antipsychotics), bệnh nhân có tiền sử rối loạn nhịp'
-        ,
         'Co giật → không dùng ở bệnh nhân có tiền sử co giật, tránh dùng với NSAID (tăng nguy cơ)'
-        ,
         'Tăng độ nhạy cảm với ánh sáng → tránh ánh nắng trực tiếp, dùng kem chống nắng, mặc quần áo che'
-        ,
         'Tương tác với nhiều thuốc: giảm hấp thu với antacid, sucralfate, sắt, kẽm, canxi (cách ít nhất 2 giờ)'
-        ,
         'Hạ đường huyết → thận trọng với sulfonylurea (glibenclamide, gliclazide)',
         'Không dùng cho trẻ em < 18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác) - nguy cơ tổn thương sụn, viêm khớp'
         , 'Tránh dùng với sữa, sản phẩm sữa (giảm hấp thu)',
@@ -59,7 +59,8 @@ FLUOROQUINOLONES_DRUGS = {
         'q12h (PO/IV), q8h cho Pseudomonas hoặc nhiễm trùng nặng',
         'protein_binding': '20-40%', 'clearance':
         'Chủ yếu qua thận (40-60% bài tiết nguyên dạng), một phần qua gan (CYP1A2). Cần điều chỉnh liều ở suy thận (CrCl <30).'
-        }, 'storage':
+        },
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín, tránh ẩm. IV: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi pha. Dung dịch đã pha: bảo quản ở nhiệt độ phòng, dùng trong vòng 24 giờ.'
         , 'black_box_warnings':
         'Tăng nguy cơ viêm gân và đứt gân ở mọi lứa tuổi. Nguy cơ tăng ở bệnh nhân > 60 tuổi, dùng corticosteroid, ghép cơ quan. Nguy cơ tổn thương thần kinh ngoại biên không hồi phục. Nguy cơ tác dụng phụ nghiêm trọng về gân, cơ, khớp, và thần kinh có thể xảy ra cùng lúc. Nguy cơ làm nặng bệnh nhược cơ. Tăng nguy cơ rối loạn tâm thần và hành vi tự sát. Chỉ dùng khi không có lựa chọn khác.'
@@ -78,7 +79,7 @@ FLUOROQUINOLONES_DRUGS = {
                  'effect': 'Tăng nồng độ theophylline, tăng độc tính theophylline (buồn nôn, nôn, co giật, rối loạn nhịp tim)',
                  'management': 'Giảm liều theophylline 25-50% khi bắt đầu ciprofloxacin. Theo dõi nồng độ theophylline. Theo dõi dấu hiệu độc tính.'}
             ],
-            'moderate': [
+        'moderate': [
                 {'drug': 'Probenecid',
                  'mechanism': 'Probenecid ức chế bài tiết ống thận của ciprofloxacin, tăng nồng độ.',
                  'effect': 'Tăng nồng độ ciprofloxacin, tăng tác dụng phụ',
@@ -92,7 +93,7 @@ FLUOROQUINOLONES_DRUGS = {
                  'effect': 'Tăng nguy cơ viêm gân, đứt gân',
                  'management': 'TRÁNH DÙNG đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ dấu hiệu đau, sưng gân. Ngừng ngay nếu có đau gân.'}
             ],
-            'minor': [
+        'minor': [
                 {'drug': 'Sulfonylureas',
                  'mechanism': 'Ciprofloxacin có thể gây hạ đường huyết.',
                  'effect': 'Tăng nguy cơ hạ đường huyết',
@@ -103,9 +104,9 @@ FLUOROQUINOLONES_DRUGS = {
         'Dị ứng ciprofloxacin hoặc các fluoroquinolone khác',
         'Có thai - chống chỉ định tuyệt đối, nguy cơ tổn thương sụn thai nhi',
         'Trẻ em < 18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác) - nguy cơ tổn thương sụn, viêm khớp'
-        ,
         'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ loạn nhịp tim nghiêm trọng'
-        , 'Bệnh nhược cơ nặng - có thể làm nặng bệnh'], 'tương_đối': [
+        , 'Bệnh nhược cơ nặng - có thể làm nặng bệnh'],
+        'tương_đối': [
         'Bệnh nhân > 60 tuổi - tăng nguy cơ đứt gân, viêm gân',
         'Dùng corticosteroid - tăng nguy cơ đứt gân',
         'Ghép cơ quan - tăng nguy cơ đứt gân',
@@ -114,14 +115,13 @@ FLUOROQUINOLONES_DRUGS = {
         'Suy gan - thận trọng, có thể giảm chuyển hóa',
         'Dùng với warfarin - tăng nguy cơ chảy máu',
         'Dùng với theophylline - tăng độc tính theophylline',
-        'Hoạt động thể lực nặng - tăng nguy cơ đứt gân']},
-        'contraindications_detail': {'tuyệt_đối': [
+        'Hoạt động thể lực nặng - tăng nguy cơ đứt gân']},contraindications_detail': {'tuyệt_đối': [
         'Dị ứng ciprofloxacin hoặc các fluoroquinolone khác',
         'Có thai - chống chỉ định tuyệt đối, nguy cơ tổn thương sụn thai nhi',
         'Trẻ em < 18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác) - nguy cơ tổn thương sụn, viêm khớp'
-        ,
         'QT kéo dài hoặc rối loạn nhịp tim nặng - tăng nguy cơ loạn nhịp tim nghiêm trọng'
-        , 'Bệnh nhược cơ nặng - có thể làm nặng bệnh'], 'tương_đối': [
+        , 'Bệnh nhược cơ nặng - có thể làm nặng bệnh'],
+        'tương_đối': [
         'Bệnh nhân > 60 tuổi - tăng nguy cơ đứt gân, viêm gân',
         'Dùng corticosteroid - tăng nguy cơ đứt gân',
         'Ghép cơ quan - tăng nguy cơ đứt gân',
@@ -137,7 +137,8 @@ FLUOROQUINOLONES_DRUGS = {
         'Ciprofloxacin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Tuy nhiên, fluoroquinolone có thể gây tổn thương sụn ở trẻ sơ sinh.'
         , 'recommendation':
         'Có thể dùng khi cho con bú với thận trọng. Dùng liều thấp nhất hiệu quả. Theo dõi trẻ sơ sinh. Tránh dùng nếu có lựa chọn khác.'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều. Ciprofloxacin chuyển hóa một phần qua gan nhưng không phụ thuộc nhiều vào chức năng gan.'
         , 'moderate':
         'Không cần điều chỉnh liều. Thận trọng nếu có suy thận kèm theo.',
@@ -145,14 +146,16 @@ FLUOROQUINOLONES_DRUGS = {
         'Thận trọng, có thể cần giảm liều nhẹ. Chuyển hóa có thể giảm ở suy gan nặng, nhưng thải trừ chủ yếu qua thận nên ít ảnh hưởng.'
         , 'notes':
         'Ciprofloxacin chuyển hóa một phần qua gan (CYP1A2), thải trừ chủ yếu qua thận (40-60% nguyên dạng). Suy gan có thể giảm chuyển hóa nhẹ nhưng không đáng kể. Tuy nhiên, suy gan có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Triệu chứng tiêu hóa: Buồn nôn, nôn, tiêu chảy, đau bụng',
         'Triệu chứng thần kinh: Co giật, kích động, lo âu, mất ngủ, trầm cảm, rối loạn tâm thần, hành vi tự sát'
         , 'Triệu chứng gân: Đau gân, viêm gân, đứt gân (đặc biệt gân Achilles)',
         'Triệu chứng tim mạch: QT kéo dài, rối loạn nhịp tim, có thể gây tử vong',
         'Triệu chứng chuyển hóa: Hạ hoặc tăng đường huyết',
         'Triệu chứng nghiêm trọng: Tổn thương thần kinh ngoại biên không hồi phục, rối loạn nhịp tim nghiêm trọng, đứt gân'
-        ], 'antidote':
+        ],
+        'antidote':
         'Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.',
         'treatment': ['Ngừng ngay ciprofloxacin',
         'Rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ (nếu không có chống chỉ định)'
@@ -170,23 +173,27 @@ FLUOROQUINOLONES_DRUGS = {
         'monitoring':
         'Theo dõi dấu hiệu sinh tồn, ECG, dấu hiệu thần kinh, dấu hiệu gân, đường huyết trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có biến chứng (loạn nhịp, co giật, đứt gân).'
         },
-        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes':
         'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay ciprofloxacin, rửa dạ dày hoặc than hoạt nếu uống trong vòng 1-2 giờ, theo dõi dấu hiệu sinh tồn và ECG, điều trị co giật nếu có (benzodiazepine), điều trị rối loạn nhịp tim nếu có, điều trị đau gân nếu có (nghỉ ngơi, chườm lạnh), điều trị hạ đường huyết nếu có (truyền glucose), điều trị triệu chứng tiêu hóa.'},
         'administration_instructions': {'oral': {
         'with_food':
         'Có thể uống với hoặc không thức ăn. Uống với nước đầy đủ (ít nhất 1-2 ly nước) để tránh kết tinh trong nước tiểu. KHÔNG uống với sữa hoặc sản phẩm sữa (giảm hấp thu).'
         , 'timing':
         'Uống 2 lần/ngày (q12h), cách đều 12 giờ. Cách ít nhất 2 giờ (tốt nhất 4 giờ) trước hoặc sau khi uống antacid, sucralfate, sắt, kẽm, canxi. Không uống cùng lúc với các cation này.'
-        }, 'iv': {'reconstitution':
+        },
+        'iv': {'reconstitution':
         'Pha với NS hoặc D5W. Nồng độ pha: 1-2mg/ml (tối đa). Pha 200mg trong 100ml dịch = 2mg/ml. Pha 400mg trong 200ml dịch = 2mg/ml.'
         , 'infusion_rate':
         'Truyền trong 60 phút (ít nhất 60 phút). Không truyền quá nhanh. Tốc độ: 100ml/60 phút = ~1.7ml/phút. 200ml/60 phút = ~3.3ml/phút.'
         , 'compatibility': ['NS (0.9% NaCl)', 'D5W (5% Dextrose)'],
         'incompatibility': [
         'Không trộn với các thuốc khác trong cùng một ống truyền. Kiểm tra tương thích trước khi pha. Tránh pha với cation (Al3+, Mg2+, Ca2+).'
-        ], 'notes':
+        ],
+        'notes':
         'Theo dõi chức năng thận, dấu hiệu gân, thần kinh trong quá trình truyền. Có thể gây kích ứng tĩnh mạch - thay đổi vị trí tiêm nếu cần. Liều: 200-400mg mỗi 12 giờ (q12h), hoặc 400mg mỗi 8 giờ (q8h) cho Pseudomonas hoặc nhiễm trùng nặng.'
-        }}, 'pediatric_dosing': {'neonates':
+        }},
+        'pediatric_dosing': {'neonates':
         'CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác). Nguy cơ tổn thương sụn, viêm khớp.',
         'infants':
         'CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác). Nguy cơ tổn thương sụn, viêm khớp.',
@@ -195,24 +202,29 @@ FLUOROQUINOLONES_DRUGS = {
         'adolescents':
         'CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi (trừ trường hợp đặc biệt như nhiễm trùng nặng không có lựa chọn khác). Nếu bắt buộc: liều người lớn (250-500mg PO x 2 lần/ngày hoặc 200-400mg IV mỗi 12 giờ). Theo dõi chặt chẽ dấu hiệu đau gân, viêm gân.',
         'notes':
-        'CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi do nguy cơ tổn thương sụn, viêm khớp. Chỉ dùng trong trường hợp đặc biệt như nhiễm trùng nặng (ví dụ: nhiễm trùng Pseudomonas nặng) không có lựa chọn khác. Nếu dùng, theo dõi chặt chẽ dấu hiệu đau gân, viêm gân, đứt gân. Ngừng ngay nếu có đau gân.'}, 'geriatric_dosing': {'considerations':
+        'CHỐNG CHỈ ĐỊNH ở trẻ <18 tuổi do nguy cơ tổn thương sụn, viêm khớp. Chỉ dùng trong trường hợp đặc biệt như nhiễm trùng nặng (ví dụ: nhiễm trùng Pseudomonas nặng) không có lựa chọn khác. Nếu dùng, theo dõi chặt chẽ dấu hiệu đau gân, viêm gân, đứt gân. Ngừng ngay nếu có đau gân.'},
+        'geriatric_dosing': {'considerations':
         'Người cao tuổi (>60 tuổi) có nguy cơ cao hơn đứt gân, viêm gân (đặc biệt gân Achilles). Suy thận phổ biến hơn, cần điều chỉnh liều. Tăng nguy cơ QT kéo dài, rối loạn nhịp tim. Tăng nguy cơ co giật.',
         'dose_adjustment':
         'Điều chỉnh liều theo chức năng thận: CrCl 30-60 → giảm liều 25-50%, CrCl <30 → giảm liều 50-75%. Khởi đầu với liều thấp hơn. Thận trọng với liều cao.',
         'monitoring':
-        'Theo dõi chặt chẽ dấu hiệu đau gân, viêm gân, đứt gân (đặc biệt gân Achilles). Theo dõi ECG (QT interval). Theo dõi chức năng thận (creatinine, CrCl). Theo dõi dấu hiệu thần kinh (co giật, kích động). Ngừng ngay nếu có đau gân.'}, 'brand_names': {'vietnam': [
-        'Ciprofloxacin', 'Cipro', 'Ciprobay', 'Ciproxin', 'Ciprofloxacin Stada'], 'common': [
+        'Theo dõi chặt chẽ dấu hiệu đau gân, viêm gân, đứt gân (đặc biệt gân Achilles). Theo dõi ECG (QT interval). Theo dõi chức năng thận (creatinine, CrCl). Theo dõi dấu hiệu thần kinh (co giật, kích động). Ngừng ngay nếu có đau gân.'},
+        'brand_names': {'vietnam': [
+        'Ciprofloxacin', 'Cipro', 'Ciprobay', 'Ciproxin', 'Ciprofloxacin Stada'],
+        'common': [
         'Cipro', 'Ciprofloxacin', 'Ciprobay'],
         'range': '5,000 - 25,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Ciprofloxacin generic thường rẻ hơn (5,000-15,000 VND/viên 500mg). Dạng IV: 50,000-150,000 VND/lọ 200mg.'}, 'references': {'primary_sources': [
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Ciprofloxacin generic thường rẻ hơn (5,000-15,000 VND/viên 500mg). Dạng IV: 50,000-150,000 VND/lọ 200mg.'},
+        'references': {'primary_sources': [
         'FDA Drug Label - Ciprofloxacin (Cipro)',
         'UpToDate - Ciprofloxacin: Drug Information',
         'Medscape - Ciprofloxacin Drug Reference',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
         'Lexicomp Online - Ciprofloxacin Monograph',
         'Micromedex - Ciprofloxacin Drug Information',
-        'IDSA Guidelines - Antimicrobial Therapy'], 'last_updated':
+        'IDSA Guidelines - Antimicrobial Therapy'],
+        'last_updated':
         '2024-12-19', 'evidence_level':
         'A - Dựa trên FDA drug labels, IDSA guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         }},

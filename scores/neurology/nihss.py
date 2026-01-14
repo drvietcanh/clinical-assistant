@@ -63,7 +63,7 @@ def render():
         render_suggestions(
             calculator_id="nihss",
             calculator_name="NIHSS",
-            category="Thần Kinh",
+            category="Thần kinh",
             show_related=True,
             show_category=True,
             limit=3

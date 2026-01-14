@@ -27,7 +27,7 @@ def render():
     st.markdown(f"""
     <h3 style='text-align: center; color: {COLORS['success']};'>📈 Framingham Risk Score</h3>
     """, unsafe_allow_html=True)
-    st.caption("Nguy cơ Bệnh Tim Mạch 10 Năm")
+    st.caption("Nguy cơ Bệnh Tim mạch 10 Năm")
     
     # Load shared result if available
     shared = load_shared_result_from_url()
@@ -153,7 +153,7 @@ def render():
         render_suggestions(
             calculator_id="framingham",
             calculator_name="Framingham Risk Score",
-            category="Tim Mạch",
+            category="Tim mạch",
             show_related=True,
             show_category=True,
             limit=3

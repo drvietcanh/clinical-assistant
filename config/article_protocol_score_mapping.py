@@ -112,7 +112,7 @@ ARTICLE_TO_SCORES: Dict[str, List[Dict[str, str]]] = {
     ],
 
     "beo-phi-nguoi-lon-danh-gia-va-dieu-tri": [
-        {"score_id": "Gout Diagnostic", "specialty": "🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)", "reason": "Được đề cập trong bài viết"},
+        {"score_id": "Gout Diagnostic", "specialty": "🦴 Thấp khớp - Miễn dịch (Rheumatology/Immunology)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "HbA1c", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "DIC Score", "specialty": "🩺 Huyết học & Đông máu (Hematology)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "BMI/IBW/BSA", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Được đề cập trong bài viết"},
@@ -230,7 +230,7 @@ ARTICLE_TO_SCORES: Dict[str, List[Dict[str, str]]] = {
     ],
 
     "gout-chan-doan-va-dieu-tri-acr-eular": [
-        {"score_id": "Gout Diagnostic", "specialty": "🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)", "reason": "Được đề cập trong bài viết"},
+        {"score_id": "Gout Diagnostic", "specialty": "🦴 Thấp khớp - Miễn dịch (Rheumatology/Immunology)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "AKIN", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "DIC Score", "specialty": "🩺 Huyết học & Đông máu (Hematology)", "reason": "Được đề cập trong bài viết"},
@@ -268,7 +268,7 @@ ARTICLE_TO_SCORES: Dict[str, List[Dict[str, str]]] = {
     ],
 
     "hypertension": [
-        {"score_id": "Gout Diagnostic", "specialty": "🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)", "reason": "Được đề cập trong bài viết"},
+        {"score_id": "Gout Diagnostic", "specialty": "🦴 Thấp khớp - Miễn dịch (Rheumatology/Immunology)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "CrCl", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "KDIGO", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "SCORE2-OP", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Được đề cập trong bài viết"},
@@ -429,7 +429,7 @@ ARTICLE_TO_SCORES: Dict[str, List[Dict[str, str]]] = {
     ],
 
     "tang-huyet-ap-chan-doan-dieu-tri-esc-aha-2024": [
-        {"score_id": "Gout Diagnostic", "specialty": "🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)", "reason": "Được đề cập trong bài viết"},
+        {"score_id": "Gout Diagnostic", "specialty": "🦴 Thấp khớp - Miễn dịch (Rheumatology/Immunology)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "KDIGO", "specialty": "🧪 Thận - Điện giải (Nephrology)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "SCORE2-OP", "specialty": "❤️ Tim mạch (Cardiology)", "reason": "Được đề cập trong bài viết"},
         {"score_id": "BMI/IBW/BSA", "specialty": "💉 Nội tiết - Chuyển hóa (Endocrinology/Metabolism)", "reason": "Được đề cập trong bài viết"},
@@ -554,7 +554,7 @@ PROTOCOL_TO_SCORES: Dict[str, List[Dict[str, str]]] = {
     ],
 
     "render_acute_gout": [
-        {"score_id": "Gout Diagnostic", "specialty": "🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)", "reason": "Liên quan đến protocol"},
+        {"score_id": "Gout Diagnostic", "specialty": "🦴 Thấp khớp - Miễn dịch (Rheumatology/Immunology)", "reason": "Liên quan đến protocol"},
     ],
 
     "render_acute_liver_failure": [

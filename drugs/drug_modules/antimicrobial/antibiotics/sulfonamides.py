@@ -45,7 +45,7 @@ SULFONAMIDE_ANTIBIOTICS = {
         "ACE inhibitor: tăng kali máu",
         "Methotrexate: tăng độc tính"
     ],
-    "pregnancy": "C - D gần sinh",
+        "pregnancy": "C - D gần sinh",
     "mechanism_of_action": "Trimethoprim-sulfamethoxazole (TMP-SMX, cotrimoxazole) là kháng sinh kết hợp với tác dụng hiệp đồng (synergistic). Sulfamethoxazole (SMX) là sulfonamide ức chế tổng hợp acid folic ở vi khuẩn bằng cách ức chế enzyme dihydropteroate synthase, ngăn chặn tổng hợp dihydrofolic acid. Trimethoprim (TMP) ức chế enzyme dihydrofolate reductase, ngăn chặn chuyển đổi dihydrofolic acid thành tetrahydrofolic acid, một cofactor cần thiết cho tổng hợp DNA, RNA, và protein. Cả hai chất cùng ức chế con đường tổng hợp acid folic ở hai bước khác nhau, tạo ra tác dụng hiệp đồng mạnh. Tỷ lệ TMP:SMX = 1:5 (160mg TMP : 800mg SMX). Phổ kháng khuẩn: Gram-dương (một số Staphylococcus, Streptococcus), Gram-âm (Enterobacteriaceae, H. influenzae), và một số vi khuẩn không điển hình (Pneumocystis jirovecii, Toxoplasma gondii, Nocardia).",
     "monitoring": [
         "Dấu hiệu nhiễm trùng (sốt, WBC, triệu chứng lâm sàng) để đánh giá đáp ứng điều trị",

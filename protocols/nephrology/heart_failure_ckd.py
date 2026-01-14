@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Heart Failure in CKD Protocol - KDIGO 2025"""
-    st.subheader("❤️ Suy Tim Trong CKD (Heart Failure in CKD)")
+    st.subheader("❤️ Suy tim Trong CKD (Heart Failure in CKD)")
     st.caption("KDIGO 2025 Clinical Practice Guideline for Heart Failure in CKD - Guideline đầu tiên")
     
     st.info("""
@@ -136,7 +136,7 @@ def render_diagnosis(egfr: float, ef: float, nyha_class: str) -> None:
     """Diagnosis and evaluation"""
     st.success("## 🔍 Chẩn đoán & Đánh giá")
     
-    st.markdown("### Chẩn đoán Suy Tim")
+    st.markdown("### Chẩn đoán Suy tim")
     
     st.info("""
     **Triệu chứng:**

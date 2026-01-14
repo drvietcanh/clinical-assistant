@@ -53,7 +53,7 @@ ERECTILE_DYSFUNCTION_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Ritonavir, saquinavir: tăng nồng độ avanafil",
                 "Erythromycin, clarithromycin: tăng nồng độ avanafil"
             ],
-            "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
+        "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
             "mechanism_of_action": "Avanafil là phosphodiesterase-5 (PDE-5) inhibitor. Ức chế enzyme PDE-5, làm tăng nồng độ cGMP (cyclic guanosine monophosphate) trong cơ trơn mạch máu dương vật. cGMP gây giãn mạch, tăng lưu lượng máu đến dương vật, và gây cương dương. Avanafil KHÔNG gây cương dương tự phát, cần kích thích tình dục để có tác dụng. Avanafil là PDE-5 inhibitor mới nhất, tác dụng nhanh (15-30 phút), thời gian bán thải ngắn (3-5 giờ), ít tác dụng phụ hơn sildenafil và tadalafil. ĐẶC ĐIỂM: (1) Tác dụng nhanh (15-30 phút), thời gian bán thải ngắn (3-5 giờ), (2) Ít tác dụng phụ hơn sildenafil và tadalafil, (3) CHỐNG CHỈ ĐỊNH tuyệt đối với nitrate (nguy cơ hạ huyết áp nặng, tử vong), (4) Nguy cơ rối loạn thị giác và mất thị lực (NAION), (5) Tương tác với nhiều thuốc (alpha-blockers, protease inhibitors, macrolides).",
             "monitoring": [
                 "Đáp ứng lâm sàng (khả năng đạt và duy trì cương dương)",
@@ -278,7 +278,7 @@ ERECTILE_DYSFUNCTION_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Ritonavir, saquinavir: tăng nồng độ sildenafil",
                 "Erythromycin, clarithromycin: tăng nồng độ sildenafil"
             ],
-            "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
+        "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
             "mechanism_of_action": "Sildenafil là phosphodiesterase-5 (PDE-5) inhibitor. Ức chế enzyme PDE-5, làm tăng nồng độ cGMP (cyclic guanosine monophosphate) trong cơ trơn mạch máu dương vật. cGMP gây giãn mạch, tăng lưu lượng máu đến dương vật, và gây cương dương. Sildenafil KHÔNG gây cương dương tự phát, cần kích thích tình dục để có tác dụng. ĐẶC ĐIỂM: (1) Tác dụng nhanh (30-60 phút), kéo dài 4-6 giờ, (2) CHỐNG CHỈ ĐỊNH với nitrate (nguy cơ hạ huyết áp nặng, tử vong), (3) Nguy cơ rối loạn thị giác và mất thị lực (NAION), (4) Tương tác với nhiều thuốc (alpha-blockers, protease inhibitors, macrolides).",
             "monitoring": [
                 "Dấu hiệu hạ huyết áp (chóng mặt, ngất)",
@@ -498,7 +498,7 @@ ERECTILE_DYSFUNCTION_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Ritonavir, saquinavir: tăng nồng độ tadalafil",
                 "Erythromycin, clarithromycin: tăng nồng độ tadalafil"
             ],
-            "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
+        "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
             "mechanism_of_action": "Tadalafil là phosphodiesterase-5 (PDE-5) inhibitor. Ức chế enzyme PDE-5, làm tăng nồng độ cGMP trong cơ trơn mạch máu dương vật và tuyến tiền liệt. cGMP gây giãn mạch, tăng lưu lượng máu đến dương vật (gây cương dương) và giảm sức cản đường tiểu (cải thiện triệu chứng BPH). Tadalafil KHÔNG gây cương dương tự phát, cần kích thích tình dục để có tác dụng. ĐẶC ĐIỂM: (1) Tác dụng dài hơn sildenafil (36 giờ vs 4-6 giờ), (2) Có thể dùng cho cả ED và BPH, (3) CHỐNG CHỈ ĐỊNH với nitrate (nguy cơ hạ huyết áp nặng, tử vong), (4) Nguy cơ rối loạn thị giác và mất thị lực (NAION), (5) Đau lưng, đau cơ phổ biến hơn sildenafil.",
             "monitoring": [
                 "Dấu hiệu hạ huyết áp (chóng mặt, ngất)",
@@ -718,7 +718,7 @@ ERECTILE_DYSFUNCTION_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Ritonavir, saquinavir: tăng nồng độ vardenafil",
                 "Erythromycin, clarithromycin: tăng nồng độ vardenafil"
             ],
-            "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
+        "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
             "mechanism_of_action": "Vardenafil là phosphodiesterase-5 (PDE-5) inhibitor. Ức chế enzyme PDE-5, làm tăng nồng độ cGMP (cyclic guanosine monophosphate) trong cơ trơn mạch máu dương vật. cGMP gây giãn mạch, tăng lưu lượng máu đến dương vật, và gây cương dương. Vardenafil KHÔNG gây cương dương tự phát, cần kích thích tình dục để có tác dụng. ĐẶC ĐIỂM: (1) Tác dụng nhanh (30-60 phút), kéo dài 4-5 giờ, (2) CHỐNG CHỈ ĐỊNH với nitrate (nguy cơ hạ huyết áp nặng, tử vong), (3) Nguy cơ rối loạn thị giác và mất thị lực (NAION), (4) Tương tác với nhiều thuốc (alpha-blockers, protease inhibitors, macrolides), (5) Tương tự sildenafil nhưng có thể hiệu quả hơn ở một số bệnh nhân.",
             "monitoring": [
                 "Dấu hiệu hạ huyết áp (chóng mặt, ngất)",

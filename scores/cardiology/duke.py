@@ -34,7 +34,7 @@ def render():
     render_suggestions(
         calculator_id="duke",
         calculator_name="Duke Criteria",
-        category="Tim Mạch",
+        category="Tim mạch",
         show_related=True,
         show_category=True,
         limit=3

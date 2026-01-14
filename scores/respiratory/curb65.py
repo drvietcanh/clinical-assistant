@@ -156,7 +156,7 @@ def render():
         render_suggestions(
             calculator_id="curb65",
             calculator_name="CURB-65",
-            category="Hô Hấp",
+            category="Hô hấp",
             show_related=True,
             show_category=True,
             limit=3

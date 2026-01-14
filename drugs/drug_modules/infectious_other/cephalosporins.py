@@ -2009,20 +2009,26 @@ CEPHALOSPORINS_DRUGS = {
               },
 },
     
-    "Ceftriaxone": {'group': 'Antibiotic - Cephalosporin (3rd Generation)', 'vietnamese_name':
-        'Ceftriaxone, Rocephin', 'administration': ['IV', 'IM'], 'indications':
+    "Ceftriaxone": {'group': 'Antibiotic - Cephalosporin (3rd Generation)',
+        'vietnamese_name':
+        'Ceftriaxone, Rocephin', 'administration': ['IV', 'IM'],
+        'indications':
         ['Nhiễm khuẩn nặng', 'Viêm màng não', 'Nhiễm khuẩn bệnh viện',
-        'Nhiễm khuẩn đường tiết niệu', 'Viêm phổi'], 'contraindications': [
+        'Nhiễm khuẩn đường tiết niệu', 'Viêm phổi'],
+        'contraindications': [
         'Dị ứng cephalosporin hoặc penicillin (thận trọng)',
-        'Trẻ sơ sinh <28 ngày với Ca IV'], 'dosage': {'adult_standard':
+        'Trẻ sơ sinh <28 ngày với Ca IV'],
+        'dosage': {'adult_standard':
         '1-2g IV/IM mỗi 24 giờ', 'adult_severe': '2-4g IV mỗi 24 giờ',
         'adult_meningitis': '2g IV mỗi 12 giờ', 'pediatric_standard':
         '50-75mg/kg IV/IM mỗi 24 giờ (tối đa 2g)', 'pediatric_meningitis':
         '80-100mg/kg IV mỗi 12-24 giờ (tối đa 4g/ngày)', 'notes':
         'Thời gian bán hủy dài, dùng 1 lần/ngày. Có thể gây kết tủa với Ca ở trẻ sơ sinh'
-        }, 'renal_adjustment': {'normal': 'Không đổi', '30_60':
+        },
+        'renal_adjustment': {'normal': 'Không đổi', '30_60':
         'Không đổi (thải qua mật)', 'under_30':
-        'Giảm liều nếu CrCl <10 và suy gan'}, 'side_effects': ['Tiêu chảy',
+        'Giảm liều nếu CrCl <10 và suy gan'},
+        'side_effects': ['Tiêu chảy',
         'Phát ban', 'Tăng transaminase', 'Viêm túi mật (hiếm)',
         'Giảm bạch cầu (hiếm)', 'Sỏi mật (với liều cao dài ngày)'],
         'interactions': ['Warfarin: tăng INR',
@@ -2037,27 +2043,27 @@ CEPHALOSPORINS_DRUGS = {
         'Chức năng thận (creatinine) - không cần điều chỉnh thận nhưng theo dõi',
         'Dấu hiệu nhiễm C. difficile',
         'Co giật (hiếm, nhưng có thể ở suy thận nặng)',
-        'Phản ứng tại chỗ tiêm (đau, viêm tĩnh mạch)'], 'precautions': [
+        'Phản ứng tại chỗ tiêm (đau, viêm tĩnh mạch)'],
+        'precautions': [
         'KHÔNG dùng ở trẻ sơ sinh < 28 ngày tuổi nếu đang dùng calci IV (nguy cơ kết tủa ceftriaxone-calcium trong phổi, thận) - có thể tử vong'
-        ,
         'Nguy cơ sỏi mật (ceftriaxone-calcium complex) - đặc biệt ở trẻ em, dùng liều cao, dùng kéo dài'
-        ,
         'Không dùng ở bệnh nhân dị ứng penicillins hoặc cephalosporins (phản ứng chéo ~5-10%)'
         , 'Nguy cơ nhiễm C. difficile - theo dõi tiêu chảy',
         'Có thể gây tăng bilirubin (nhất thời, do đẩy bilirubin khỏi albumin)',
         'Pha trong NS, D5W, hoặc LR, tiêm IV hoặc IM',
         'Tiêm IM: pha với lidocaine 1% để giảm đau',
         'Không pha trộn với các thuốc khác (tương kỵ với nhiều thuốc, đặc biệt vancomycin, calcium)'
-        ,
         'Thời gian bán thải dài → chỉ cần 1 lần/ngày (trừ viêm màng não: q12h)'
-        ], 'pharmacokinetics': {'half_life':
+        ],
+        'pharmacokinetics': {'half_life':
         '6-9 giờ (rất dài cho cephalosporin)', 'onset':
         'Ngay lập tức sau khi tiêm IV', 'duration':
         '24 giờ (liều 1-2g q24h), 12 giờ (viêm màng não: 2g q12h)',
         'protein_binding': '85-95% (rất cao)', 'metabolism':
         'Không chuyển hóa, bài tiết nguyên dạng', 'clearance':
         '40% qua thận, 60% qua mật (độc nhất trong cephalosporin) → không cần điều chỉnh thận'
-        }, 'storage':
+        },
+        'storage':
         'Bảo quản bột khô ở nhiệt độ phòng (20-25°C). Sau khi pha: bảo quản ở nhiệt độ phòng 24 giờ, hoặc trong tủ lạnh 10 ngày. Không đông lạnh.'
         , 'black_box_warnings':
         'KHÔNG dùng ở trẻ sơ sinh < 28 ngày tuổi nếu đang dùng calci IV - có thể gây kết tủa ceftriaxone-calcium trong phổi, thận, có thể tử vong. Tránh dùng calci IV trong 48 giờ sau liều ceftriaxone cuối cùng ở trẻ sơ sinh.'
@@ -2072,7 +2078,8 @@ CEPHALOSPORINS_DRUGS = {
         'Ceftriaxone có thể ức chế tổng hợp vitamin K phụ thuộc vào hệ vi khuẩn đường ruột, làm giảm sản xuất các yếu tố đông máu phụ thuộc vitamin K. Ngoài ra, có thể đẩy warfarin khỏi albumin (protein binding cao).'
         , 'effect': 'Tăng INR, tăng nguy cơ chảy máu', 'management':
         'Theo dõi INR thường xuyên (ít nhất 2-3 lần/tuần khi bắt đầu dùng ceftriaxone). Có thể cần giảm liều warfarin. Đặc biệt thận trọng ở bệnh nhân suy gan, dùng kéo dài (>7 ngày).'
-        }], 'moderate': [{'drug': 'Probenecid', 'mechanism':
+        }],
+        'moderate': [{'drug': 'Probenecid', 'mechanism':
         'Probenecid ức chế bài tiết ống thận của ceftriaxone, làm giảm thải trừ và tăng nồng độ ceftriaxone.'
         , 'effect': 'Tăng nồng độ ceftriaxone, tăng thời gian bán thải',
         'management':
@@ -2088,28 +2095,29 @@ CEPHALOSPORINS_DRUGS = {
         , 'effect': 'Kết tủa khi pha chung, tăng nguy cơ độc thận',
         'management':
         'Không pha chung. Truyền riêng biệt. Theo dõi chức năng thận chặt chẽ.'
-        }], 'minor': [{'drug': 'Thuốc tránh thai đường uống', 'mechanism':
+        }],
+        'minor': [{'drug': 'Thuốc tránh thai đường uống', 'mechanism':
         'Kháng sinh phổ rộng có thể làm giảm hệ vi khuẩn đường ruột, làm giảm tái hấp thu estrogen từ đường ruột.'
         , 'effect':
         'Giảm hiệu quả thuốc tránh thai (hiếm, nhưng có thể xảy ra)',
         'management':
         'Khuyến cáo sử dụng biện pháp tránh thai bổ sung (bao cao su) trong khi dùng kháng sinh và 7 ngày sau khi ngừng.'
-        }]},         'contraindications': {'tuyệt_đối': [
+        }]},
+        'contraindications': {'tuyệt_đối': [
         'Dị ứng cephalosporin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)'
-        ,
         'Trẻ sơ sinh < 28 ngày tuổi đang dùng calci IV - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ kết tủa tử vong)'
-        ], 'tương_đối': [
+        ],
+        'tương_đối': [
         'Dị ứng penicillin (phản ứng chéo ~5-10%) - thận trọng, có thể dùng nếu phản ứng nhẹ'
         , 'Suy gan nặng kèm suy thận (CrCl <10) - cần giảm liều',
         'Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát',
         'Rối loạn đông máu - tăng nguy cơ chảy máu khi dùng với warfarin',
         'Sỏi mật - tăng nguy cơ sỏi mật (ceftriaxone-calcium complex), đặc biệt ở trẻ em, dùng liều cao'
-        ]},
-        'contraindications_detail': {'tuyệt_đối': [
+        ]},contraindications_detail': {'tuyệt_đối': [
         'Dị ứng cephalosporin hoặc beta-lactam (phản ứng type I - sốc phản vệ, phù mạch, phát ban nặng)'
-        ,
         'Trẻ sơ sinh < 28 ngày tuổi đang dùng calci IV - CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI (nguy cơ kết tủa tử vong)'
-        ], 'tương_đối': [
+        ],
+        'tương_đối': [
         'Dị ứng penicillin (phản ứng chéo ~5-10%) - thận trọng, có thể dùng nếu phản ứng nhẹ'
         , 'Suy gan nặng kèm suy thận (CrCl <10) - cần giảm liều',
         'Tiền sử nhiễm C. difficile - tăng nguy cơ tái phát',
@@ -2122,7 +2130,8 @@ CEPHALOSPORINS_DRUGS = {
         'Ceftriaxone bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ. Cephalosporins nói chung được coi là an toàn khi cho con bú.'
         , 'recommendation':
         'Có thể dùng khi cho con bú. Theo dõi trẻ sơ sinh về dấu hiệu tiêu chảy, phát ban, hoặc các tác dụng phụ khác. Dùng liều thấp nhất hiệu quả.'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều. Ceftriaxone thải trừ 40% qua thận, 60% qua mật, không chuyển hóa qua gan.'
         , 'moderate':
         'Không cần điều chỉnh liều. Tuy nhiên, cần thận trọng với nguy cơ tăng bilirubin (nhất thời, do đẩy bilirubin khỏi albumin).'
@@ -2130,7 +2139,8 @@ CEPHALOSPORINS_DRUGS = {
         'Không cần điều chỉnh liều. Tuy nhiên, nếu kèm theo suy thận nặng (CrCl <10), có thể cần giảm liều. Theo dõi bilirubin và chức năng gan.'
         , 'notes':
         'Ceftriaxone không chuyển hóa qua gan, thải trừ 40% qua thận và 60% qua mật (độc nhất trong cephalosporin). Không cần điều chỉnh liều ở bệnh nhân suy gan. Tuy nhiên, suy gan nặng có thể kèm theo suy thận, nên cần điều chỉnh liều theo chức năng thận nếu CrCl <10. Ngoài ra, ceftriaxone có protein binding cao (85-95%), có thể đẩy bilirubin khỏi albumin, gây tăng bilirubin nhất thời.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Triệu chứng thần kinh: Co giật, rối loạn ý thức (hiếm, thường chỉ với liều rất cao hoặc suy thận nặng)'
         , 'Triệu chứng gan: Tăng bilirubin, tăng transaminase (nhất thời)',
         'Triệu chứng sỏi mật: Đau bụng, buồn nôn, nôn (do kết tủa ceftriaxone-calcium)'
@@ -2138,7 +2148,8 @@ CEPHALOSPORINS_DRUGS = {
         'Triệu chứng tiêu hóa: Tiêu chảy nặng, buồn nôn, nôn',
         'Triệu chứng dị ứng: Phát ban, phù mạch, sốc phản vệ (nếu dị ứng)',
         'Triệu chứng chảy máu: Chảy máu kéo dài, tăng INR (khi dùng với warfarin)'
-        ], 'antidote':
+        ],
+        'antidote':
         'Không có antidote đặc hiệu. Điều trị hỗ trợ và điều trị triệu chứng.',
         'treatment': ['Ngừng ngay ceftriaxone',
         'Điều trị co giật nếu có: Benzodiazepine (diazepam, lorazepam), phenobarbital'
@@ -2155,32 +2166,39 @@ CEPHALOSPORINS_DRUGS = {
         '  - Antihistamine, corticosteroid', '  - Hỗ trợ hô hấp nếu cần',
         'Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, nhịp thở, SpO2',
         'Lọc máu: Hemodialysis có thể loại bỏ ceftriaxone một phần (40% thải qua thận), nhưng không hiệu quả bằng các cephalosporin khác do thải trừ chủ yếu qua mật.'
-        ], 'monitoring':
+        ],
+        'monitoring':
         'Theo dõi dấu hiệu thần kinh (co giật, ý thức), chức năng gan (bilirubin, ALT, AST), dấu hiệu sỏi mật (đau bụng), chức năng thận (creatinine, BUN, lượng nước tiểu), PT/INR (nếu dùng với warfarin), dấu hiệu chảy máu, dấu hiệu sinh tồn trong ít nhất 24-48 giờ. Theo dõi lâu hơn nếu có suy thận cấp hoặc sỏi mật.'
         },
-        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes':
         'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là điều trị hỗ trợ: ngừng ngay ceftriaxone, điều trị co giật nếu có, điều trị sỏi mật nếu có, điều trị chảy máu nếu có (bổ sung vitamin K, FFP), điều trị suy thận cấp nếu có, điều trị dị ứng nếu có (epinephrine nếu sốc phản vệ), lọc máu có thể loại bỏ một phần nhưng không hiệu quả bằng các cephalosporin khác do thải trừ chủ yếu qua mật.'},
         'administration_instructions': {'oral': {
         'with_food': 'Không áp dụng - chỉ có dạng IV và IM', 'timing':
-        'Không áp dụng - chỉ có dạng IV và IM'}, 'iv': {'reconstitution':
+        'Không áp dụng - chỉ có dạng IV và IM'},
+        'iv': {'reconstitution':
         "Pha với NS (0.9% NaCl), D5W (5% Dextrose), hoặc Ringer's Lactate. Nồng độ pha: 10-40mg/ml. Pha 1g trong 10ml = 100mg/ml (quá đậm, không dùng). Pha 1g trong 50ml = 20mg/ml. Pha 2g trong 50ml = 40mg/ml. Lắc kỹ để hòa tan hoàn toàn. KHÔNG pha với calci IV."
         , 'infusion_rate':
         'Truyền IV trong 30 phút. Tốc độ: 50ml/30 phút = ~1.7ml/phút. Có thể truyền nhanh hơn (bolus) nếu cần, nhưng thường truyền trong 30 phút để giảm đau tại chỗ.'
         , 'compatibility': ['NS (0.9% NaCl)', 'D5W (5% Dextrose)',
-        "Ringer's Lactate"], 'incompatibility': [
+        "Ringer's Lactate"],
+        'incompatibility': [
         'Calcium IV - KHÔNG pha chung, nguy cơ kết tủa tử vong (đặc biệt ở trẻ sơ sinh)'
         , 'Vancomycin - tạo kết tủa, không pha chung',
         'Aminoglycosides - có thể tạo kết tủa, truyền riêng biệt',
         'Amphotericin B - không tương thích',
-        'Các thuốc có tính kiềm hoặc acid mạnh'], 'notes':
+        'Các thuốc có tính kiềm hoặc acid mạnh'],
+        'notes':
         'QUAN TRỌNG: 1) KHÔNG pha chung với calci IV (nguy cơ kết tủa tử vong ở trẻ sơ sinh), 2) Không pha chung với vancomycin hoặc aminoglycosides, 3) Thời gian bán thải dài (6-9 giờ) → chỉ cần 1 lần/ngày (trừ viêm màng não: q12h), 4) Tiêm IM: pha với lidocaine 1% để giảm đau, 5) Theo dõi sỏi mật ở trẻ em, dùng liều cao, dùng kéo dài.'
-        }, 'im': {'reconstitution':
+        },
+        'im': {'reconstitution':
         'Pha với lidocaine 1% (không có epinephrine) để giảm đau. Nồng độ pha: 250mg/ml (1g trong 3.5ml lidocaine 1%). Pha 1g trong 3.5ml lidocaine 1% = 250mg/ml. Lắc kỹ để hòa tan hoàn toàn.'
         , 'injection_site':
         'Tiêm sâu vào cơ (gluteus maximus hoặc vastus lateralis). Tránh tiêm vào mạch máu.'
         , 'notes':
         'Pha với lidocaine 1% để giảm đau tại chỗ. Tiêm sâu vào cơ. Có thể gây đau tại chỗ, nhưng thường nhẹ khi pha với lidocaine.'
-        }}, 'pediatric_dosing': {'neonates':
+        }},
+        'pediatric_dosing': {'neonates':
         '<28 ngày: 50mg/kg IV/IM mỗi 24 giờ. CHỐNG CHỈ ĐỊNH pha chung với calci IV (nguy cơ kết tủa tử vong).',
         'infants':
         '1-3 tháng: 50-75mg/kg IV/IM mỗi 24 giờ. Viêm màng não: 80-100mg/kg IV mỗi 12-24 giờ (tối đa 4g/ngày). CHỐNG CHỈ ĐỊNH pha chung với calci IV.',
@@ -2189,17 +2207,21 @@ CEPHALOSPORINS_DRUGS = {
         'adolescents':
         '≥12 tuổi: Liều người lớn. 1-2g IV/IM mỗi 24 giờ. Viêm màng não: 2g IV mỗi 12 giờ. Nhiễm trùng nặng: 2-4g IV mỗi 24 giờ.',
         'notes':
-        'CHỐNG CHỈ ĐỊNH pha chung với calci IV ở trẻ sơ sinh <28 ngày (nguy cơ kết tủa tử vong). Thời gian bán thải dài → chỉ cần 1 lần/ngày (trừ viêm màng não: q12h). Theo dõi sỏi mật ở trẻ em, dùng liều cao, dùng kéo dài.'}, 'geriatric_dosing': {'considerations':
+        'CHỐNG CHỈ ĐỊNH pha chung với calci IV ở trẻ sơ sinh <28 ngày (nguy cơ kết tủa tử vong). Thời gian bán thải dài → chỉ cần 1 lần/ngày (trừ viêm màng não: q12h). Theo dõi sỏi mật ở trẻ em, dùng liều cao, dùng kéo dài.'},
+        'geriatric_dosing': {'considerations':
         'Người cao tuổi có thể có suy thận, suy gan phổ biến hơn. Tuy nhiên, ceftriaxone thải qua mật nên không cần điều chỉnh liều ở suy thận (trừ khi CrCl <10 và suy gan kèm theo).',
         'dose_adjustment':
         'Không cần điều chỉnh liều ở suy thận (thải qua mật). Chỉ giảm liều nếu CrCl <10 và suy gan kèm theo. Thận trọng ở suy gan nặng.',
         'monitoring':
-        'Theo dõi chức năng gan (ALT, AST) nếu có bệnh gan. Theo dõi chức năng thận (creatinine, CrCl) nếu có suy thận nặng kèm suy gan. Theo dõi dấu hiệu nhiễm trùng (sốt, WBC). Theo dõi sỏi mật nếu dùng liều cao, dùng kéo dài.'}, 'brand_names': {'vietnam': [
-        'Ceftriaxone', 'Rocephin', 'Ceftriaxone Stada', 'Ceftriax'], 'common': [
+        'Theo dõi chức năng gan (ALT, AST) nếu có bệnh gan. Theo dõi chức năng thận (creatinine, CrCl) nếu có suy thận nặng kèm suy gan. Theo dõi dấu hiệu nhiễm trùng (sốt, WBC). Theo dõi sỏi mật nếu dùng liều cao, dùng kéo dài.'},
+        'brand_names': {'vietnam': [
+        'Ceftriaxone', 'Rocephin', 'Ceftriaxone Stada', 'Ceftriax'],
+        'common': [
         'Rocephin', 'Ceftriaxone'],
         'range': '50,000 - 200,000 VND/lọ (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Ceftriaxone generic thường rẻ hơn (50,000-100,000 VND/lọ 1g). Rocephin (brand) thường đắt hơn (100,000-200,000 VND/lọ 1g).'}, 'references': {'primary_sources': [
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Ceftriaxone generic thường rẻ hơn (50,000-100,000 VND/lọ 1g). Rocephin (brand) thường đắt hơn (100,000-200,000 VND/lọ 1g).'},
+        'references': {'primary_sources': [
         'FDA Drug Label - Ceftriaxone (Rocephin)',
         'UpToDate - Ceftriaxone: Drug Information',
         'Medscape - Ceftriaxone Drug Reference',

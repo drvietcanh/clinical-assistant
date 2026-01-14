@@ -1,4 +1,4 @@
-# Kế Hoạch Bổ Sung 8 Fields Tùy chọn (Phase 2)
+# Kế Hoạch Bổ sung 8 Fields Tùy chọn (Phase 2)
 
 ## Tổng Quan
 
@@ -6,7 +6,7 @@
 **Tổng số:** 140 thuốc
 **Thời gian ước tính:** Làm theo từng nhóm, mỗi nhóm 5-10 thuốc
 
-## 8 Fields Cần Bổ Sung
+## 8 Fields Cần Bổ sung
 
 1. `drug_interactions` - Tương tác thuốc chi tiết (major, moderate, minor)
 2. `contraindications` - Chống chỉ định phân loại (absolute, relative) - **CHUYỂN ĐỔI TỪ LIST SANG DICT**
@@ -154,7 +154,7 @@
   - ✅ administration_instructions: 74/74 (100%)
   - ✅ references: 74/74 (100%)
 
-## Lưu ý Khi Bổ Sung
+## Lưu ý Khi Bổ sung
 
 1. **contraindications**: Chuyển đổi từ list sang dict với `absolute` và `relative`
 2. **drug_interactions**: Phân loại major, moderate, minor với đầy đủ mechanism, effect, management

@@ -1,0 +1,362 @@
+"""Diabetes Medications
+Active module - contains all diabetes drug data"""
+
+# Alpha-Glucosidase Inhibitors
+
+ALPHA_GLUCOSIDASE_INHIBITORS_DRUGS = {
+    "Acarbose": {
+        "group": "Diabetes - Alpha-Glucosidase Inhibitor",
+        "vietnamese_name": "Acarbose, Glucobay",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2",
+            "Kết hợp với metformin hoặc sulfonylurea"
+        ],
+        "contraindications": [
+            "Đái tháo đường type 1",
+            "Nhiễm toan ceton",
+            "Bệnh viêm ruột",
+            "Tắc ruột",
+            "Suy gan nặng",
+            "Suy thận nặng (CrCl <25)"
+        ],
+        "dosage": {
+            "adult_start": "25mg x 3 lần/ngày với bữa ăn",
+            "adult_usual": "50-100mg x 3 lần/ngày với bữa ăn",
+            "adult_max": "100mg x 3 lần/ngày (300mg/ngày)",
+            "notes": "Uống với bữa ăn (ngay trước hoặc trong bữa ăn). Bắt đầu với liều thấp để giảm tác dụng phụ tiêu hóa. Tác dụng chậm (2-4 tuần)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "CHỐNG CHỈ ĐỊNH - không dùng nếu CrCl <25"
+        },
+        "side_effects": [
+            "Đầy hơi, chướng bụng (phổ biến, 30-50%)",
+            "Tiêu chảy (phổ biến)",
+            "Đau bụng",
+            "Buồn nôn",
+            "Tăng men gan (hiếm)",
+            "Hạ đường huyết (khi dùng với insulin hoặc sulfonylurea)"
+        ],
+        "interactions": [
+            "Digoxin: có thể giảm hấp thu digoxin",
+            "Cholestyramine: giảm hấp thu acarbose",
+            "Enzyme tiêu hóa (pancreatin): giảm hiệu quả acarbose"
+        ],
+        "pregnancy": "B",
+        "mechanism_of_action": "Acarbose là chất ức chế alpha-glucosidase, các enzyme ở ruột non (đặc biệt là alpha-amylase và alpha-glucosidase) chịu trách nhiệm phân hủy carbohydrate phức tạp (tinh bột, disaccharides) thành monosaccharides (glucose) để hấp thu. Bằng cách ức chế các enzyme này, acarbose làm chậm quá trình tiêu hóa và hấp thu carbohydrate, dẫn đến giảm đường huyết sau ăn (postprandial glucose). Acarbose không ảnh hưởng đến đường huyết đói. Do làm chậm tiêu hóa carbohydrate, một phần carbohydrate không được tiêu hóa sẽ đi xuống ruột già, nơi vi khuẩn lên men tạo ra khí (gây đầy hơi, chướng bụng) và acid béo chuỗi ngắn. Acarbose có tác dụng chậm (2-4 tuần) và chủ yếu giảm đường huyết sau ăn.",
+        "monitoring": [
+            "Đường huyết sau ăn (postprandial glucose) - đánh giá hiệu quả",
+            "HbA1c mỗi 3 tháng",
+            "Dấu hiệu tác dụng phụ tiêu hóa (đầy hơi, chướng bụng, tiêu chảy) - phổ biến",
+            "Chức năng gan (ALT, AST) - hiếm tăng men gan",
+            "Chức năng thận (creatinine, CrCl) - không dùng nếu CrCl <25",
+            "Dấu hiệu hạ đường huyết (khi dùng với insulin hoặc sulfonylurea) - cần dùng glucose (không dùng sucrose)"
+        ],
+        "precautions": [
+            "Uống với bữa ăn (ngay trước hoặc trong bữa ăn) - quan trọng",
+            "Bắt đầu với liều thấp (25mg x 3 lần/ngày) để giảm tác dụng phụ tiêu hóa",
+            "Tác dụng phụ tiêu hóa phổ biến (đầy hơi, chướng bụng, tiêu chảy) - thường giảm sau 2-4 tuần",
+            "Tác dụng chậm (2-4 tuần) - cần kiên nhẫn",
+            "CHỐNG CHỈ ĐỊNH ở bệnh viêm ruột, tắc ruột, suy gan nặng, suy thận nặng (CrCl <25)",
+            "Hạ đường huyết khi dùng với insulin hoặc sulfonylurea - cần dùng glucose (không dùng sucrose vì acarbose ức chế phân hủy sucrose)",
+            "Có thể giảm hấp thu digoxin - theo dõi nồng độ digoxin",
+            "Tránh dùng với cholestyramine (giảm hấp thu acarbose)",
+            "An toàn trong thai kỳ (category B)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2 giờ (acarbose), 8-10 giờ (metabolites)",
+            "onset": "2-4 tuần (tác dụng lâm sàng)",
+            "duration": "2-4 giờ (tác dụng trên enzyme)",
+            "protein_binding": "Minimal",
+            "clearance": "Ruột: chuyển hóa một phần bởi vi khuẩn ruột. Thận: bài tiết một phần. Chủ yếu tác dụng tại chỗ ở ruột non."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Acarbose có thể giảm hấp thu digoxin",
+                    "effect": "Giảm nồng độ digoxin, giảm hiệu quả",
+                    "management": "Theo dõi nồng độ digoxin. Có thể cần tăng liều digoxin hoặc dùng cách xa acarbose."
+                },
+                {
+                    "drug": "Cholestyramine",
+                    "mechanism": "Cholestyramine có thể giảm hấp thu acarbose",
+                    "effect": "Giảm hiệu quả acarbose",
+                    "management": "Tránh dùng cùng. Dùng cách xa ít nhất 2 giờ."
+                },
+                {
+                    "drug": "Enzyme tiêu hóa (pancreatin)",
+                    "mechanism": "Enzyme tiêu hóa có thể giảm hiệu quả acarbose",
+                    "effect": "Giảm hiệu quả acarbose",
+                    "management": "Tránh dùng cùng. Dùng cách xa ít nhất 2 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Bệnh viêm ruột (Crohn, viêm loét đại tràng)",
+                "Tắc ruột",
+                "Suy gan nặng",
+                "Suy thận nặng (CrCl <25) - CHỐNG CHỈ ĐỊNH",
+                "Dị ứng acarbose"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 25-60) - thận trọng, có thể cần giảm liều",
+                "Suy gan nhẹ-trung bình - thận trọng",
+                "Có thai - category B, an toàn"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "An toàn trong thai kỳ. Acarbose là category B. Không có bằng chứng về dị tật thai nhi. Có thể dùng nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Acarbose hấp thu rất ít vào máu (tác dụng tại chỗ ở ruột), nên ít bài tiết vào sữa mẹ. Ít có nguy cơ gây tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng, có thể cần giảm liều. Theo dõi men gan.",
+            "moderate": "Thận trọng, giảm liều. Theo dõi men gan.",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Acarbose chuyển hóa một phần ở gan. Suy gan có thể làm tăng nồng độ, tăng nguy cơ tác dụng phụ. CHỐNG CHỈ ĐỊNH ở suy gan nặng. Theo dõi men gan định kỳ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Đầy hơi, chướng bụng nặng",
+                "Tiêu chảy nặng",
+                "Đau bụng",
+                "Hạ đường huyết (nếu dùng với insulin hoặc sulfonylurea)"
+            ],
+            "antidote": "Glucose (nếu hạ đường huyết) - KHÔNG dùng sucrose vì acarbose ức chế phân hủy sucrose",
+            "treatment": [
+                "Ngừng acarbose nếu cần",
+                "Điều trị hạ đường huyết nếu có (glucose, KHÔNG dùng sucrose)",
+                "Điều trị triệu chứng tiêu hóa (đầy hơi, tiêu chảy)",
+                "Theo dõi tại bệnh viện nếu cần"
+            ],
+            "monitoring": "Đường huyết, dấu hiệu sinh tồn, dấu hiệu tiêu hóa"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "NÊN uống với bữa ăn (ngay trước hoặc trong bữa ăn) - quan trọng để có hiệu quả",
+                "timing": "Uống 3 lần/ngày, với mỗi bữa ăn chính. Bắt đầu với liều thấp (25mg x 3 lần/ngày) để giảm tác dụng phụ tiêu hóa."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Acarbose (Glucobay)",
+                "UpToDate - Acarbose: Drug Information",
+                "STOP-NIDDM Study - The Lancet",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved, multiple RCTs (STOP-NIDDM)"
+        },
+        "black_box_warnings": None,
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["LFT"],
+            },
+            "guideline_tags": [
+                "ADA 2024 Standards of Care - Diabetes",
+                "AACE/ACE 2023 Type 2 Diabetes Guidelines",
+            ]
+},
+    
+    "Miglitol": {
+        "group": "Diabetes - Alpha-Glucosidase Inhibitor",
+        "vietnamese_name": "Miglitol, Glyset",
+        "administration": ["PO"],
+        "indications": [
+            "Đái tháo đường type 2",
+            "Kết hợp với metformin hoặc sulfonylurea"
+        ],
+        "contraindications": [
+            "Đái tháo đường type 1",
+            "Nhiễm toan ceton",
+            "Bệnh viêm ruột",
+            "Tắc ruột",
+            "Suy thận nặng (CrCl <25)"
+        ],
+        "dosage": {
+            "adult_start": "25mg x 3 lần/ngày với bữa ăn",
+            "adult_usual": "50-100mg x 3 lần/ngày với bữa ăn",
+            "adult_max": "100mg x 3 lần/ngày (300mg/ngày)",
+            "notes": "Uống với bữa ăn (ngay trước hoặc trong bữa ăn). Bắt đầu với liều thấp để giảm tác dụng phụ tiêu hóa. Tác dụng chậm (2-4 tuần)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "CHỐNG CHỈ ĐỊNH - không dùng nếu CrCl <25"
+        },
+        "side_effects": [
+            "Đầy hơi, chướng bụng (phổ biến, 30-50%)",
+            "Tiêu chảy (phổ biến)",
+            "Đau bụng",
+            "Buồn nôn",
+            "Hạ đường huyết (khi dùng với insulin hoặc sulfonylurea)"
+        ],
+        "interactions": [
+            "Digoxin: có thể giảm hấp thu digoxin",
+            "Cholestyramine: giảm hấp thu miglitol",
+            "Enzyme tiêu hóa (pancreatin): giảm hiệu quả miglitol"
+        ],
+        ',
+        "pregnancy": "B",
+        ',
+        "mechanism_of_action": "Miglitol là chất ức chế alpha-glucosidase, các enzyme ở ruột non (đặc biệt là alpha-amylase và alpha-glucosidase) chịu trách nhiệm phân hủy carbohydrate phức tạp (tinh bột, disaccharides) thành monosaccharides (glucose) để hấp thu. Bằng cách ức chế các enzyme này, miglitol làm chậm quá trình tiêu hóa và hấp thu carbohydrate, dẫn đến giảm đường huyết sau ăn (postprandial glucose). Miglitol không ảnh hưởng đến đường huyết đói. Do làm chậm tiêu hóa carbohydrate, một phần carbohydrate không được tiêu hóa sẽ đi xuống ruột già, nơi vi khuẩn lên men tạo ra khí (gây đầy hơi, chướng bụng) và acid béo chuỗi ngắn. Miglitol có tác dụng chậm (2-4 tuần) và chủ yếu giảm đường huyết sau ăn. Miglitol hấp thu vào máu nhiều hơn acarbose (50-60% so với <2%), nhưng không có tác dụng toàn thân đáng kể.",
+        "monitoring": [
+            "Đường huyết sau ăn (postprandial glucose) - đánh giá hiệu quả",
+            "HbA1c mỗi 3 tháng",
+            "Dấu hiệu tác dụng phụ tiêu hóa (đầy hơi, chướng bụng, tiêu chảy) - phổ biến",
+            "Chức năng thận (creatinine, CrCl) - không dùng nếu CrCl <25",
+            "Dấu hiệu hạ đường huyết (khi dùng với insulin hoặc sulfonylurea) - cần dùng glucose (không dùng sucrose)"
+        ],
+        "precautions": [
+            "Uống với bữa ăn (ngay trước hoặc trong bữa ăn) - quan trọng",
+            "Bắt đầu với liều thấp (25mg x 3 lần/ngày) để giảm tác dụng phụ tiêu hóa",
+            "Tác dụng phụ tiêu hóa phổ biến (đầy hơi, chướng bụng, tiêu chảy) - thường giảm sau 2-4 tuần",
+            "Tác dụng chậm (2-4 tuần) - cần kiên nhẫn",
+            "CHỐNG CHỈ ĐỊNH ở bệnh viêm ruột, tắc ruột, suy thận nặng (CrCl <25)",
+            "Hạ đường huyết khi dùng với insulin hoặc sulfonylurea - cần dùng glucose (không dùng sucrose vì miglitol ức chế phân hủy sucrose)",
+            "Có thể giảm hấp thu digoxin - theo dõi nồng độ digoxin",
+            "Tránh dùng với cholestyramine (giảm hấp thu miglitol)",
+            "An toàn trong thai kỳ (category B)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2 giờ",
+            "onset": "2-4 tuần (tác dụng lâm sàng)",
+            "duration": "2-4 giờ (tác dụng trên enzyme)",
+            "protein_binding": "Minimal",
+            "clearance": "Thận: bài tiết chủ yếu qua thận (95% nguyên dạng). Gan: ít chuyển hóa. Hấp thu vào máu nhiều hơn acarbose (50-60% so với <2%)."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Digoxin",
+                    "mechanism": "Miglitol có thể giảm hấp thu digoxin",
+                    "effect": "Giảm nồng độ digoxin, giảm hiệu quả",
+                    "management": "Theo dõi nồng độ digoxin. Có thể cần tăng liều digoxin hoặc dùng cách xa miglitol."
+                },
+                {
+                    "drug": "Cholestyramine",
+                    "mechanism": "Cholestyramine có thể giảm hấp thu miglitol",
+                    "effect": "Giảm hiệu quả miglitol",
+                    "management": "Tránh dùng cùng. Dùng cách xa ít nhất 2 giờ."
+                },
+                {
+                    "drug": "Enzyme tiêu hóa (pancreatin)",
+                    "mechanism": "Enzyme tiêu hóa có thể giảm hiệu quả miglitol",
+                    "effect": "Giảm hiệu quả miglitol",
+                    "management": "Tránh dùng cùng. Dùng cách xa ít nhất 2 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Đái tháo đường type 1",
+                "Nhiễm toan ceton do đái tháo đường",
+                "Bệnh viêm ruột (Crohn, viêm loét đại tràng)",
+                "Tắc ruột",
+                "Suy thận nặng (CrCl <25) - CHỐNG CHỈ ĐỊNH",
+                "Dị ứng miglitol"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 25-60) - thận trọng, có thể cần giảm liều",
+                "Có thai - category B, an toàn"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "An toàn trong thai kỳ. Miglitol là category B. Không có bằng chứng về dị tật thai nhi. Có thể dùng nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Miglitol bài tiết vào sữa mẹ ở nồng độ thấp. Ít có nguy cơ gây tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú với theo dõi chặt chẽ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Miglitol chuyển hóa ít qua gan.",
+            "moderate": "Không cần điều chỉnh liều thường quy. Theo dõi đáp ứng điều trị.",
+            "severe": "Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị và độc tính.",
+            "notes": "Miglitol chuyển hóa ít qua gan, chủ yếu bài tiết qua thận. Suy gan thường không ảnh hưởng đáng kể đến nồng độ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Đầy hơi, chướng bụng nặng",
+                "Tiêu chảy nặng",
+                "Đau bụng",
+                "Hạ đường huyết (nếu dùng với insulin hoặc sulfonylurea)"
+            ],
+            "antidote": "Glucose (nếu hạ đường huyết) - KHÔNG dùng sucrose vì miglitol ức chế phân hủy sucrose",
+            "treatment": [
+                "Ngừng miglitol nếu cần",
+                "Điều trị hạ đường huyết nếu có (glucose, KHÔNG dùng sucrose)",
+                "Điều trị triệu chứng tiêu hóa (đầy hơi, tiêu chảy)",
+                "Theo dõi tại bệnh viện nếu cần"
+            ],
+            "monitoring": "Đường huyết, dấu hiệu sinh tồn, dấu hiệu tiêu hóa"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "NÊN uống với bữa ăn (ngay trước hoặc trong bữa ăn) - quan trọng để có hiệu quả",
+                "timing": "Uống 3 lần/ngày, với mỗi bữa ăn chính. Bắt đầu với liều thấp (25mg x 3 lần/ngày) để giảm tác dụng phụ tiêu hóa."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Miglitol (Glyset)",
+                "UpToDate - Miglitol: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-05",
+            "evidence_level": "High - FDA approved"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Renal function", "Blood glucose"]
+        },
+        "guideline_tags": [
+            "ADA 2024 Standards of Care - Diabetes",
+            "AACE/ACE 2023 Type 2 Diabetes Guidelines",
+            "UpToDate - Alpha-Glucosidase Inhibitors"
+        ]
+    },
+}
+
+__all__ = ['ALPHA_GLUCOSIDASE_INHIBITORS_DRUGS']
+
+

@@ -285,7 +285,8 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'Sốc phản vệ (anaphylaxis)', 'Sốc (shock)',
         'Cơn hen nặng (IV/nebulizer)', 'Co thắt thanh quản'],
         'contraindications': ['Không có trong cấp cứu ngừng tim',
-        'Sốc phản vệ: không có chống chỉ định tuyệt đối'], 'dosage': {
+        'Sốc phản vệ: không có chống chỉ định tuyệt đối'],
+        'dosage': {
         'adult_cardiac_arrest_iv': '1mg IV mỗi 3-5 phút (hoặc 0.1mg/kg)',
         'adult_cardiac_arrest_it': '2-2.5mg IT', 'adult_anaphylaxis_im':
         '0.3-0.5mg IM (0.3-0.5ml 1:1000) ở đùi ngoài', 'adult_anaphylaxis_iv':
@@ -295,25 +296,29 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'pediatric_anaphylaxis_im':
         '0.01mg/kg IM (0.01ml/kg 1:1000) ở đùi ngoài (tối đa 0.5mg)', 'notes':
         '1:1000 = 1mg/ml (dùng IM/SC), 1:10000 = 0.1mg/ml (dùng IV). Đùi ngoài cho anaphylaxis'
-        }, 'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
-        'under_30': 'Không đổi'}, 'side_effects': ['Tim đập nhanh',
+        },
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
+        'under_30': 'Không đổi'},
+        'side_effects': ['Tim đập nhanh',
         'Tăng huyết áp', 'Lo lắng, run tay', 'Đau đầu',
         'Nhồi máu cơ tim (với liều cao)', 'Rối loạn nhịp tim',
-        'Hoại tử (nếu tiêm ngoài mạch)'], 'interactions': [
+        'Hoại tử (nếu tiêm ngoài mạch)'],
+        'interactions': [
         'Beta-blockers: đối kháng tác dụng', 'MAOIs: tăng tác dụng',
         'Tricyclic antidepressants: tăng tác dụng',
-        'Digoxin: tăng nguy cơ loạn nhịp'],         'pregnancy':
+        'Digoxin: tăng nguy cơ loạn nhịp'],
+        'pregnancy':
         'C - An toàn trong cấp cứu', 'risk_flags': {
             'high_alert': True,
             'narrow_therapeutic_index': False,
-            'organ_toxicity': {'cardiac': True},
-            'icu_critical_care_only': False,
+            'organ_toxicity': {'cardiac': True},icu_critical_care_only': False,
             'look_alike_sound_alike': []
-        }, 'guideline_tags': [
+        },guideline_tags': [
             'AHA ACLS Guidelines',
             'Anaphylaxis Guidelines (WAO, AAAAI)',
             'SCCM Shock Management Guidelines'
-        ], 'mechanism_of_action':
+        ],
+        'mechanism_of_action':
         'Non-selective alpha và beta-adrenergic receptor agonist. Kích thích alpha-1 receptors → co mạch ngoại vi, tăng huyết áp. Kích thích beta-1 receptors → tăng nhịp tim, tăng co bóp cơ tim, tăng cung lượng tim. Kích thích beta-2 receptors → giãn phế quản, giãn mạch cơ xương. Trong ngừng tim: tăng áp lực tưới máu vành, tăng khả năng khử rung thành công.'
         , 'monitoring': ['Nhịp tim và huyết áp liên tục',
         'Điện tâm đồ (ECG) - theo dõi rối loạn nhịp',
@@ -355,7 +360,8 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'Tăng tác dụng của epinephrine, tăng nguy cơ tăng huyết áp nặng, rối loạn nhịp tim'
         , 'management':
         'Thận trọng, giảm liều epinephrine. Theo dõi huyết áp và ECG chặt chẽ.'
-        }], 'moderate': [{'drug': 'Digoxin', 'mechanism':
+        }],
+        'moderate': [{'drug': 'Digoxin', 'mechanism':
         'Digoxin làm tăng nhạy cảm của cơ tim với catecholamine, tăng nguy cơ rối loạn nhịp tim.'
         , 'effect':
         'Tăng nguy cơ rối loạn nhịp tim (nhịp nhanh thất, rung thất), đặc biệt ở bệnh nhân digoxin độc tính'
@@ -373,7 +379,8 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'Theo dõi nhịp tim. Không cần điều chỉnh liều thường quy.'}]},
         'contraindications': {'tuyệt_đối': [
         'Không có chống chỉ định tuyệt đối trong cấp cứu ngừng tim',
-        'Dị ứng epinephrine (hiếm nhưng nguy hiểm)'], 'tương_đối': [
+        'Dị ứng epinephrine (hiếm nhưng nguy hiểm)'],
+        'tương_đối': [
         'Bệnh mạch vành - tăng nguy cơ nhồi máu cơ tim, đau thắt ngực',
         'Tăng huyết áp nặng không kiểm soát - có thể làm tăng huyết áp hơn nữa',
         'Rối loạn nhịp tim nặng - có thể làm nặng rối loạn nhịp',
@@ -384,23 +391,27 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'Dùng với TCAs - tăng tác dụng, cần thận trọng',
         'Bệnh nhân cao tuổi - tăng nhạy cảm với tác dụng phụ',
         'Bệnh nhân có bệnh mạch máu ngoại biên - tăng nguy cơ thiếu máu cục bộ'
-        ], 'pregnancy_details':
+        ],
+        'pregnancy_details':
         'Epinephrine là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Epinephrine có thể qua nhau thai và có thể gây co mạch, giảm tưới máu nhau thai. Tuy nhiên, trong cấp cứu (sốc phản vệ, ngừng tim), lợi ích cứu sống mẹ vượt quá nguy cơ cho thai nhi. Sốc phản vệ và ngừng tim có thể gây tử vong cho cả mẹ và thai nhi nếu không điều trị. Epinephrine được sử dụng trong cấp cứu ở phụ nữ có thai và được coi là an toàn khi lợi ích vượt quá nguy cơ.'
         , 'lactation': {'safety': 'Compatible', 'details':
         'Epinephrine có thời gian bán thải rất ngắn (2-3 phút) và bị chuyển hóa nhanh. Không có khả năng bài tiết vào sữa mẹ ở nồng độ đáng kể. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.'
         , 'recommendation':
         'Có thể dùng khi cho con bú. Epinephrine có thời gian bán thải rất ngắn và không bài tiết vào sữa mẹ.'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều. Epinephrine chuyển hóa nhanh bởi MAO và COMT, nhưng không phụ thuộc vào chức năng gan.'
         , 'moderate': 'Không cần điều chỉnh liều.', 'severe':
         'Không cần điều chỉnh liều. Epinephrine chuyển hóa nhanh, không tích lũy ở suy gan.'
         , 'notes':
         'Epinephrine bị chuyển hóa nhanh bởi enzyme MAO và COMT trong gan và mô, nhưng không phụ thuộc vào chức năng gan. Không cần điều chỉnh liều ở bệnh nhân suy gan.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Tăng huyết áp nặng (có thể >200/120 mmHg)',
         'Nhịp tim nhanh nặng (>150-200 bpm)', 'Nhồi máu cơ tim', 'Đột quỵ',
         'Phù phổi cấp', 'Rối loạn nhịp tim (rung nhĩ, rung thất)', 'Co giật',
-        'Hoại tử mô (nếu tiêm ngoài mạch)'], 'antidote':
+        'Hoại tử mô (nếu tiêm ngoài mạch)'],
+        'antidote':
         'Không có antidote đặc hiệu. Có thể dùng thuốc giãn mạch (phentolamine, nitroglycerin) để đối kháng tác dụng alpha. Beta-blockers có thể đối kháng tác dụng beta nhưng nguy hiểm (tăng huyết áp nặng).'
         , 'treatment': ['Ngừng ngay epinephrine nếu đang truyền',
         'Theo dõi ECG và huyết áp liên tục', 'Nếu tăng huyết áp nặng:',
@@ -419,9 +430,11 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         , '  - Chườm ấm', '  - Có thể cần phẫu thuật nếu hoại tử nặng',
         'Hỗ trợ hô hấp: Thở oxy, nếu cần hỗ trợ thông khí cơ học',
         'Theo dõi dấu hiệu sinh tồn: Huyết áp, nhịp tim, ECG trong ít nhất 2-4 giờ'
-        ], 'monitoring':
+        ],
+        'monitoring':
         'Theo dõi ECG, huyết áp, nhịp tim liên tục trong ít nhất 2-4 giờ sau khi dùng. Theo dõi lâu hơn nếu có biến chứng (nhồi máu cơ tim, đột quỵ, rối loạn nhịp).'
-        }, 'reversal_agents': {'available': True, 'agents': [{'agent':
+        },
+        'reversal_agents': {'available': True, 'agents': [{'agent':
         'Phentolamine', 'mechanism':
         'Alpha-blocker, đối kháng tác dụng alpha của epinephrine (co mạch, tăng huyết áp)'
         , 'indication':
@@ -437,7 +450,8 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'Nhịp tim nhanh nặng do quá liều epinephrine (CHỈ dùng nếu không có tăng huyết áp nặng)'
         , 'dose':
         'Metoprolol 5mg IV hoặc Esmolol 0.5mg/kg IV bolus, sau đó 50-200mcg/kg/phút IV infusion'
-        }]}, 'administration_instructions': {'oral': None, 'iv': {
+        }]},
+        'administration_instructions': {'oral': None, 'iv': {
         'reconstitution':
         'Pha loãng: 1mg epinephrine (1ml 1:1000) trong 9ml NS = 0.1mg/ml (1:10000). Hoặc dùng trực tiếp dung dịch 1:10000 nếu có.'
         , 'infusion_rate':
@@ -445,14 +459,16 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         , 'compatibility': ['NS (0.9% NaCl)', 'D5W (5% Dextrose)'],
         'incompatibility': [
         'Không trộn với các thuốc khác. Tiêm bolus riêng biệt hoặc dùng đường truyền riêng cho infusion.'
-        ], 'notes':
+        ],
+        'notes':
         'QUAN TRỌNG: 1) Pha đúng nồng độ: 1:1000 (1mg/ml) cho IM/SC, 1:10000 (0.1mg/ml) cho IV, 2) TUYỆT ĐỐI KHÔNG tiêm ngoài mạch (hoại tử), 3) Trong anaphylaxis: tiêm IM ở đùi ngoài (hấp thu nhanh hơn), 4) Theo dõi huyết áp và ECG chặt chẽ, 5) Kiểm tra màu sắc trước dùng (hóa nâu = hỏng).'
-        }, 'im': {'reconstitution': 'Dùng trực tiếp dung dịch 1:1000 (1mg/ml).',
+        },
+        'im': {'reconstitution': 'Dùng trực tiếp dung dịch 1:1000 (1mg/ml).',
         'injection_site':
         'Đùi ngoài (vastus lateralis) - hấp thu nhanh nhất. Có thể dùng cánh tay nhưng hấp thu chậm hơn.'
         , 'notes':
         'Anaphylaxis: 0.3-0.5mg IM ở đùi ngoài. Trẻ em: 0.01mg/kg IM ở đùi ngoài (tối đa 0.5mg). Tiêm sâu vào cơ, không tiêm vào mỡ dưới da.'
-        }, 'inhaled': {'reconstitution':
+        },inhaled': {'reconstitution':
         'Dùng dung dịch 1:1000 (1mg/ml) pha trong 3-5ml NS cho nebulizer.',
         'dose':
         '0.5-1mg (0.5-1ml 1:1000) pha trong 3-5ml NS, khí dung mỗi 15-20 phút nếu cần.'
@@ -464,7 +480,8 @@ CATECHOLAMINE_ALPHA_BETA_AGONISTS_DRUGS = {
         'Medscape - Epinephrine Drug Reference',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics (14th ed)",
         'Lexicomp Online - Epinephrine Monograph',
-        'Micromedex - Epinephrine Drug Information'], 'last_updated':
+        'Micromedex - Epinephrine Drug Information'],
+        'last_updated':
         '2025-02-03', 'evidence_level':
         'A - Dựa trên FDA drug labels, ACLS guidelines, anaphylaxis guidelines, và dữ liệu lâm sàng từ nhiều nguồn'
         }},

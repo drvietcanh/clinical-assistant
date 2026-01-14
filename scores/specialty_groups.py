@@ -58,7 +58,7 @@ SPECIALTY_GROUPS = {
             "🦠 Nhiễm khuẩn (Infectious Disease)",
             "🎗️ Ung thư (Oncology)",
             "🧠 Tâm thần - Tâm Lý (Psychiatry/Psychology)",
-            "🦴 Thấp khớp - Miễn Dịch (Rheumatology/Immunology)",
+            "🦴 Thấp khớp - Miễn dịch (Rheumatology/Immunology)",
             "🩹 Da liễu (Dermatology)",
             "👂 Tai Mũi Họng (ENT)",
             "👁️ Mắt (Ophthalmology)",

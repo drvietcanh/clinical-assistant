@@ -1,4 +1,4 @@
-# Tiến Trình Sửa Lỗi và Bổ Sung Fields
+# Tiến Trình Sửa Lỗi và Bổ sung Fields
 
 **Ngày cập nhật:** 2026-01-13  
 **Trạng thái:** Đã hoàn thành phân tích và tạo công cụ
@@ -7,7 +7,7 @@
 
 Đã kiểm tra lại toàn bộ 722 thuốc và tạo các công cụ để sửa lỗi và bổ sung fields còn thiếu.
 
-## Kết Quả Kiểm Tra Chi Tiết
+## Kết Quả Kiểm tra Chi Tiết
 
 ### Thống Kê Tổng Quan
 - **Tổng số thuốc:** 722
@@ -114,7 +114,7 @@ python drugs/comprehensive_field_fix.py
 1. ✅ Sửa format errors (175 thuốc)
 2. ✅ Chuẩn hóa thứ tự fields (702 thuốc)
 
-### Phase 3: Bổ Sung Fields Quan Trọng ⏳
+### Phase 3: Bổ sung Fields Quan Trọng ⏳
 1. ⏳ Bổ sung `pregnancy` content cho các thuốc còn rỗng (44 thuốc)
 2. ⏳ Bổ sung safety fields:
    - `reversal_agents` (408 thuốc)
@@ -159,7 +159,7 @@ Sau khi hoàn thành tất cả phases:
 7. `fix_formats_report.json` - Báo cáo sửa formats
 8. `reorder_fields_report.json` - Báo cáo reorder
 
-## Tài Liệu Tham Khảo
+## Tài liệu Tham khảo
 
 - `FIELD_SUPPLEMENTATION_PLAN.md` - Kế hoạch ban đầu
 - `IMPLEMENTATION_COMPLETE.md` - Tổng kết triển khai

@@ -336,7 +336,7 @@ def render():
         render_suggestions(
             calculator_id="euroscore2",
             calculator_name="EuroSCORE II",
-            category="Tim Mạch",
+            category="Tim mạch",
             show_related=True,
             show_category=True,
             limit=3

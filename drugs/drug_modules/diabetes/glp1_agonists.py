@@ -81,7 +81,7 @@ GLP1_AGONISTS_DRUGS = {
             "Tiêm mỗi ngày - Tuân thủ điều trị có thể khó"
     ],
         "black_box_warnings": """Nguy cơ ung thư tuyến giáp tủy (MTC) ở động vật thí nghiệm. Chống chỉ định ở bệnh nhân có tiền sử MTC hoặc MEN 2.""",
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
         "pharmacokinetics": {
         },
         "storage": "",
@@ -223,7 +223,7 @@ GLP1_AGONISTS_DRUGS = {
             ]
         },
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
         "pharmacokinetics": {
         },
         "storage": "",
@@ -330,7 +330,7 @@ GLP1_AGONISTS_DRUGS = {
         "black_box_warnings": "Nguy cơ ung thư tuyến giáp tủy (MTC).",
         "contraindications": [],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
         "precautions": [],
         "pharmacokinetics": {
         },
@@ -458,7 +458,7 @@ GLP1_AGONISTS_DRUGS = {
             ]
         },
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
         "precautions": [],
         "pharmacokinetics": {
         },

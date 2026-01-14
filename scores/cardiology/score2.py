@@ -285,7 +285,7 @@ def render():
         render_suggestions(
             calculator_id="score2",
             calculator_name="SCORE2",
-            category="Tim Mạch",
+            category="Tim mạch",
             show_related=True,
             show_category=True,
             limit=3

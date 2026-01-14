@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """ICP Management Protocol"""
-    st.subheader("🧠 Quản Lý Áp Lực Nội Sọ (ICP Management)")
+    st.subheader("🧠 Quản lý Áp Lực Nội Sọ (ICP Management)")
     st.caption("Brain Trauma Foundation Guidelines 2024, AANS Guidelines 2024 - Increased ICP")
     
     st.error("""

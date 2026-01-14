@@ -39,7 +39,7 @@ OTHER_HEMATOLOGY_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Activated prothrombin complex concentrate (aPCC): tăng nguy cơ huyết khối nghiêm trọng",
                 "Recombinant factor VIIa: có thể tăng nguy cơ huyết khối"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": (
                 "Emicizumab là bispecific monoclonal antibody (humanized) gắn đồng thời với factor IXa và factor X. "
                 "Trong hemophilia A, thiếu factor VIII dẫn đến không thể hình thành phức hợp tenase (factor VIIIa/factor IXa) "

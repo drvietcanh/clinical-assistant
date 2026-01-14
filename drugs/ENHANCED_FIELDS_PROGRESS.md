@@ -1,6 +1,6 @@
 ---
 
-## Ưu tiên Bổ Sung (Đề Xuất)
+## Ưu tiên Bổ sung (Đề Xuất)
 
 ### Nhóm 1 - Thuốc Cấp cứu & Thường Dùng (Ưu tiên cao)
 - Paracetamol (thuốc giảm đau phổ biến nhất)
@@ -31,7 +31,7 @@
 
 ---
 
-# Tiến Trình Bổ Sung Enhanced Fields
+# Tiến Trình Bổ sung Enhanced Fields
 
 ## Tổng Quan
 
@@ -87,7 +87,7 @@
 5. ✅ `storage` - Điều kiện bảo quản
 6. ✅ `black_box_warnings` - Cảnh báo hộp đen
 
-### 8 Fields Bổ Sung (Tùy chọn)
+### 8 Fields Bổ sung (Tùy chọn)
 7. `drug_interactions` - Tương tác thuốc chi tiết
 8. `contraindications` - Chống chỉ định phân loại
 9. `pregnancy_lactation` - Thai kỳ và cho con bú
@@ -99,7 +99,7 @@
 
 ## Danh Sách Thuốc Đã Có Enhanced Fields (112 thuốc)
 
-### ✅ Mới Bổ Sung (45 thuốc - 2024-12-19)
+### ✅ Mới Bổ sung (45 thuốc - 2024-12-19)
 - **Anthelmintic**: Albendazole, Mebendazole
 - **Antifungal**: Nystatin
 - **Antiviral**: Ribavirin
@@ -107,7 +107,7 @@
 - **Vitamins**: Folic Acid, Folic acid, Vitamin B12
 - **Minerals**: Iron
 
-### ✅ Đã Bổ Sung Trước (36 thuốc - 2024-12-19)
+### ✅ Đã Bổ sung Trước (36 thuốc - 2024-12-19)
 - **Emergency/Cấp cứu**: Adenosine
 - **Antiviral**: Acyclovir, Valacyclovir
 - **Corticosteroid**: Methylprednisolone
@@ -181,7 +181,7 @@
 
 ---
 
-## Danh Sách Thuốc CẦN Bổ Sung Enhanced Fields
+## Danh Sách Thuốc CẦN Bổ sung Enhanced Fields
 
 ### ✅ HOÀN THÀNH PHASE 1 (141/141 thuốc - 100%)
 - ✅ **Tất cả 141 thuốc đã có đủ 6 fields cơ bản!**
@@ -368,7 +368,7 @@ python check_enhanced_fields.py
 - **Phase 2:** Bổ sung 8 fields tùy chọn cho 32 thuốc còn lại
 - **Ưu tiên tiếp theo:** Endocrine & Others (Levothyroxine, Methimazole, Propylthiouracil, Methotrexate, Allopurinol, Atropine, Ticlopidine, Dipyridamole, Isosorbide mononitrate, Enalaprilat, Amoxicillin suspension, Budesonide)
 
-### 📋 Công Cụ Hỗ Trợ
+### 📋 Công Cụ Hỗ trợ
 - **Kiểm tra Phase 1 (6 fields cơ bản):** `python check_enhanced_fields.py`
 - **Kiểm tra Phase 2 (8 fields tùy chọn):** `python track_phase2_progress.py`
 - **Schema & Template:** `drugs/enhanced_fields_schema.py`

@@ -262,7 +262,7 @@ def render_iv_protocol():
     
     st.markdown("""
     **Liều:**
-    - **Người Lớn:** 0.4-2 mg IV bolus
+    - **Người lớn:** 0.4-2 mg IV bolus
     - **Trẻ em:** 0.01 mg/kg IV (max 2 mg)
     
     **Ưu điểm:**
@@ -283,7 +283,7 @@ def render_im_protocol():
     
     st.markdown("""
     **Liều:**
-    - **Người Lớn:** 0.4-2 mg IM
+    - **Người lớn:** 0.4-2 mg IM
     - **Trẻ em:** 0.01 mg/kg IM (max 2 mg)
     
     **Ưu điểm:**
@@ -304,7 +304,7 @@ def render_in_protocol():
     
     st.markdown("""
     **Liều:**
-    - **Người Lớn:** 2-4 mg IN (mỗi bên mũi)
+    - **Người lớn:** 2-4 mg IN (mỗi bên mũi)
     - **Trẻ em:** 0.1 mg/kg IN (max 4 mg)
     
     **Ưu điểm:**

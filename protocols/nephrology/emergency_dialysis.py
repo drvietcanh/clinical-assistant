@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Emergency Dialysis Management Protocol"""
-    st.subheader("🧪 Lọc Máu Cấp Cứu (Emergency Dialysis)")
+    st.subheader("🧪 Lọc Máu Cấp cứu (Emergency Dialysis)")
     st.caption("KDIGO Guidelines 2024, UpToDate 2024 - Indications and management")
     
     st.error("""

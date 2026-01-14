@@ -36,7 +36,7 @@ LUBRICANTS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác"
             ],
-            "pregnancy": "Không phân loại - An toàn",
+        "pregnancy": "Không phân loại - An toàn",
             "mechanism_of_action": "Carboxymethylcellulose là polymer tổng hợp, tạo thành lớp màng bảo vệ trên bề mặt mắt, giữ ẩm và bôi trơn. Carboxymethylcellulose có khả năng giữ nước cao, tạo thành gel trong nước mắt, dẫn đến: (1) Bôi trơn bề mặt mắt, (2) Giữ ẩm, giảm khô mắt, (3) Bảo vệ giác mạc và kết mạc, (4) Giảm kích ứng. Nước mắt nhân tạo không có tác dụng điều trị bệnh, chỉ có tác dụng hỗ trợ và bôi trơn. ĐẶC ĐIỂM: (1) Thuốc bôi trơn, không có tác dụng điều trị bệnh, (2) Dùng khi cần, không có giới hạn số lần dùng, (3) An toàn, ít tác dụng phụ, (4) Có thể dùng với thuốc nhỏ mắt khác (đợi 5-10 phút giữa các thuốc), (5) Nhìn mờ tạm thời ngay sau khi nhỏ - phổ biến.",
             "monitoring": [
                 "Dấu hiệu khô mắt (khô, rát, ngứa) - cải thiện sau khi nhỏ",

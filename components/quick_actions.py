@@ -23,7 +23,7 @@ def get_quick_actions() -> List[Dict]:
         },
         {
             "id": "antibiotic_dosing",
-            "label": "Liều Kháng Sinh",
+            "label": "Liều Kháng sinh",
             "desc": "Tra cứu liều và điều chỉnh theo thận",
             "icon": "💊",
             "page": "pages/02_💊_Antibiotics.py",

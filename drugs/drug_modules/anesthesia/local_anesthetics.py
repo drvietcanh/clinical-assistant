@@ -5,6 +5,8 @@ Local Anesthetics (Amides & Esters)
 LOCAL_ANESTHETICS = {
     "Lidocaine": {
         "group": "Anesthesia - Local Anesthetic (Amide)",
+
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
         "vietnamese_name": "Lidocaine, Xylocaine",
         "brand_names": {
             "common": ["Xylocaine"],
@@ -95,7 +97,7 @@ LOCAL_ANESTHETICS = {
         "mechanism_of_action": "Chẹn kênh Natri (mạnh hơn và kéo dài hơn Lidocaine).",
         "antidote": "Lipid Emulsion 20% (Intralipid) - Bắt buộc phải có sẵn khi dùng Bupivacaine.",
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ",
         "monitoring": [],
         "precautions": [],
         "pharmacokinetics": {
@@ -163,7 +165,7 @@ LOCAL_ANESTHETICS = {
         "side_effects": [],
         "contraindications": [],
         "interactions": [],
-        "pregnancy": "",
+        "pregnancy": "C - Nguy cơ không thể loại trừ",
         "mechanism_of_action": "",
         "monitoring": [],
         "precautions": [],

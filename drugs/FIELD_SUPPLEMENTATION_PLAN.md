@@ -1,9 +1,9 @@
-# Kế Hoạch Bổ Sung Field Cho Tất Cả Thuốc
+# Kế Hoạch Bổ sung Field Cho Tất Cả Thuốc
 
 **Ngày tạo:** 2026-01-13  
 **Trạng thái:** Đã hoàn thành phân tích, sẵn sàng triển khai
 
-## Tổng Quan Kết Quả Phân Tích
+## Tổng Quan Kết Quả Phân tích
 
 ### Thống Kê Tổng Quan
 - **Tổng số thuốc:** 722
@@ -88,7 +88,7 @@ python drugs/generate_field_report.py
 
 ## Kế Hoạch Triển Khai
 
-### Bước 1: Bổ Sung Skeleton Fields (Ưu tiên cao)
+### Bước 1: Bổ sung Skeleton Fields (Ưu tiên cao)
 Sử dụng `supplement_missing_fields.py` để bổ sung skeleton cho tất cả field thiếu:
 
 ```bash
@@ -99,7 +99,7 @@ python drugs/supplement_missing_fields.py --execute
 - Tất cả thuốc có đủ 24 fields (14 standard + 8 additional + 2 common)
 - Các field rỗng được thay bằng template phù hợp
 
-### Bước 2: Bổ Sung Nội Dung Thực Tế (Ưu tiên trung bình)
+### Bước 2: Bổ sung Nội Dung Thực Tế (Ưu tiên trung bình)
 
 #### Priority 1: STANDARD Fields
 Đảm bảo 100% thuốc có đủ 14 STANDARD fields với nội dung thực tế:
@@ -116,12 +116,12 @@ Bổ sung các field an toàn quan trọng:
 - `overdose_management` - 103 thuốc cần bổ sung
 - `reversal_agents` - 415 thuốc cần bổ sung
 
-#### Priority 3: Điều Chỉnh Liều
+#### Priority 3: Điều chỉnh Liều
 Bổ sung thông tin điều chỉnh liều:
 - `renal_adjustment` - 77 thuốc cần bổ sung
 - `hepatic_adjustment` - 104 thuốc cần bổ sung
 
-#### Priority 4: Field Bổ Sung Khác
+#### Priority 4: Field Bổ sung Khác
 - `drug_interactions` - 164 thuốc cần bổ sung
 - `pregnancy_lactation` - 54 thuốc cần bổ sung
 - `administration_instructions` - 87 thuốc cần bổ sung
@@ -164,7 +164,7 @@ for drug_name, drug_data in DRUG_DATABASE.items():
 4. **Testing:** Test với một vài thuốc trước khi áp dụng hàng loạt
 5. **Documentation:** Cập nhật tài liệu tiến trình
 
-## Tài Liệu Tham Khảo
+## Tài liệu Tham khảo
 
 - `drugs/field_validator.py` - Định nghĩa fields chuẩn
 - `drugs/field_standardizer.py` - Chuẩn hóa fields

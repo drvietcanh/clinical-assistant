@@ -1,4 +1,4 @@
-# Tiến Trình Bổ Sung 2 Field Còn Thiếu
+# Tiến Trình Bổ sung 2 Field Còn Thiếu
 
 **Ngày bắt đầu:** 2025-02-18  
 **Tổng số thuốc ban đầu:** 123  
@@ -136,7 +136,7 @@
 }
 ```
 
-## 🔧 Code Mẫu Bổ Sung Nhanh
+## 🔧 Code Mẫu Bổ sung Nhanh
 
 ### Mẫu 1: Bổ sung `contraindications_detail` từ `contraindications` có sẵn
 ```python

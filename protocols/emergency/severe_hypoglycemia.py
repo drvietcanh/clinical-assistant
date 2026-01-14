@@ -16,7 +16,7 @@ from components.evidence_badge import (
 
 def render():
     """Severe Hypoglycemia Management Protocol"""
-    st.subheader("🍭 Hạ Đường Huyết Cấp Cứu (Severe Hypoglycemia)")
+    st.subheader("🍭 Hạ Đường Huyết Cấp cứu (Severe Hypoglycemia)")
     st.caption("ADA Guidelines 2024, Endocrine Society 2023 - Life-threatening condition")
     
     # Evidence summary

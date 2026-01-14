@@ -175,7 +175,7 @@ def render():
         render_suggestions(
             calculator_id="perc",
             calculator_name="PERC Rule",
-            category="Hô Hấp",
+            category="Hô hấp",
             show_related=True,
             show_category=True,
             limit=3

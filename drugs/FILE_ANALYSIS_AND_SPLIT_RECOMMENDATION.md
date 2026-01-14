@@ -192,7 +192,7 @@ DRUG_GROUPS = {
 }
 ```
 
-### Option 2: Tách Theo Mức Độ Chi tiết (Alternative)
+### Option 2: Tách Theo Mức độ Chi tiết (Alternative)
 
 ```
 drugs/

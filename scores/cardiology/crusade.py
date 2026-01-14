@@ -275,7 +275,7 @@ def render():
         render_suggestions(
             calculator_id="crusade",
             calculator_name="CRUSADE Score",
-            category="Tim Mạch",
+            category="Tim mạch",
             show_related=True,
             show_category=True,
             limit=3

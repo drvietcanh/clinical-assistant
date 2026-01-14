@@ -144,7 +144,7 @@ def render_supportive():
     """Supportive care and symptom management"""
     st.warning("## 💊 Điều trị Triệu chứng & Hỗ trợ")
     
-    st.markdown("### 1. Kiểm Soát Phù")
+    st.markdown("### 1. Kiểm soát Phù")
     st.success("""
     **Lợi tiểu:**
     - Furosemide 40-80 mg/ngày (có thể tăng đến 160-240 mg/ngày)
@@ -162,7 +162,7 @@ def render_supportive():
     """)
     
     st.markdown("---")
-    st.markdown("### 2. Kiểm Soát Protein Niệu")
+    st.markdown("### 2. Kiểm soát Protein Niệu")
     st.info("""
     **ACEi/ARB:**
     - Giảm protein niệu 30-50%
@@ -215,7 +215,7 @@ def render_supportive():
 
 def render_immunosuppression():
     """Immunosuppressive therapy based on cause"""
-    st.error("## 💉 Điều trị Nguyên nhân (Ức Chế Miễn Dịch)")
+    st.error("## 💉 Điều trị Nguyên nhân (Ức Chế Miễn dịch)")
     
     st.markdown("### Chỉ định Điều trị")
     st.warning("""
@@ -440,7 +440,7 @@ def render_complications():
     """)
     
     st.markdown("---")
-    st.markdown("#### 3. Suy Thận Cấp")
+    st.markdown("#### 3. Suy thận Cấp")
     st.info("""
     **Nguyên nhân:**
     - Giảm thể tích (lợi tiểu quá mức)

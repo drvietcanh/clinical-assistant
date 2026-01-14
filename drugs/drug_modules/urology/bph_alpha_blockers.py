@@ -42,7 +42,7 @@ BPH_ALPHA_BLOCKERS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "PDE-5 inhibitors (sildenafil, tadalafil): tăng nguy cơ hạ huyết áp",
                 "CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir): tăng nồng độ alfuzosin - CHỐNG CHỈ ĐỊNH"
             ],
-            "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
+        "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
             "mechanism_of_action": "Alfuzosin là alpha-1 adrenergic blocker không chọn lọc. Ức chế alpha-1 receptors trên cơ trơn tuyến tiền liệt và cổ bàng quang, gây giãn cơ, giảm sức cản đường tiểu, và cải thiện dòng nước tiểu. Khác với tamsulosin (chọn lọc alpha-1A), alfuzosin ít chọn lọc hơn, có thể ảnh hưởng nhiều hơn đến alpha-1B receptors ở mạch máu, do đó có thể gây hạ huyết áp nhiều hơn. ĐẶC ĐIỂM: (1) Không chọn lọc (ít chọn lọc hơn tamsulosin), (2) Cải thiện triệu chứng BPH nhanh (1-2 tuần), (3) Nguy cơ hạ huyết áp tư thế và rối loạn xuất tinh, (4) Uống sau bữa ăn để giảm nguy cơ hạ huyết áp, (5) CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh.",
             "monitoring": [
                 "Huyết áp (đặc biệt hạ huyết áp tư thế) - QUAN TRỌNG",
@@ -215,7 +215,7 @@ BPH_ALPHA_BLOCKERS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "PDE-5 inhibitors (sildenafil, tadalafil): tăng nguy cơ hạ huyết áp",
                 "CYP3A4 inhibitors (ketoconazole, clarithromycin): tăng nồng độ silodosin"
             ],
-            "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
+        "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
             "mechanism_of_action": "Silodosin là alpha-1 adrenergic blocker chọn lọc cao nhất (ưu tiên alpha-1A receptors ở tuyến tiền liệt và cổ bàng quang). Ức chế alpha-1A receptors trên cơ trơn tuyến tiền liệt và cổ bàng quang, gây giãn cơ, giảm sức cản đường tiểu, và cải thiện dòng nước tiểu. Silodosin chọn lọc hơn tamsulosin, ít ảnh hưởng đến alpha-1B receptors ở mạch máu, do đó ít gây hạ huyết áp hơn. ĐẶC ĐIỂM: (1) Chọn lọc alpha-1A cao nhất (ít hạ huyết áp nhất), (2) Rối loạn xuất tinh phổ biến hơn tamsulosin, (3) CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30 mL/min), (4) Uống sau bữa ăn để giảm nguy cơ hạ huyết áp.",
             "monitoring": [
                 "Huyết áp (đặc biệt hạ huyết áp tư thế)",
@@ -387,7 +387,7 @@ BPH_ALPHA_BLOCKERS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "PDE-5 inhibitors (sildenafil, tadalafil): tăng nguy cơ hạ huyết áp",
                 "Cimetidine: tăng nồng độ tamsulosin"
             ],
-            "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
+        "pregnancy": "Không áp dụng (chỉ dùng cho nam giới)",
             "mechanism_of_action": "Tamsulosin là alpha-1 adrenergic blocker chọn lọc (ưu tiên alpha-1A receptors ở tuyến tiền liệt và cổ bàng quang). Ức chế alpha-1 receptors trên cơ trơn tuyến tiền liệt và cổ bàng quang, gây giãn cơ, giảm sức cản đường tiểu, và cải thiện dòng nước tiểu. Khác với các alpha-blocker không chọn lọc (prazosin, terazosin), tamsulosin ít ảnh hưởng đến alpha-1B receptors ở mạch máu, do đó ít gây hạ huyết áp hơn. ĐẶC ĐIỂM: (1) Chọn lọc alpha-1A (ít hạ huyết áp hơn), (2) Cải thiện triệu chứng BPH nhanh (1-2 tuần), (3) Nguy cơ hạ huyết áp tư thế và rối loạn xuất tinh, (4) Uống sau bữa ăn để giảm nguy cơ hạ huyết áp.",
             "monitoring": [
                 "Huyết áp (đặc biệt hạ huyết áp tư thế) - QUAN TRỌNG",

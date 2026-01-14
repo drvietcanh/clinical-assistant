@@ -39,7 +39,7 @@ LINCOSAMIDE_ANTIBIOTICS = {
         "Erythromycin: đối kháng",
         "Neuromuscular blockers: tăng tác dụng"
     ],
-    "pregnancy": "B",
+        "pregnancy": "B",
         "mechanism_of_action": "Lincosamide kháng sinh. Ức chế tổng hợp protein vi khuẩn bằng cách gắn với tiểu phần 50S của ribosome, ngăn cản quá trình dịch mã. Phổ kháng khuẩn: Gram-dương mạnh (Staphylococcus, Streptococcus, bao gồm một số MRSA), kỵ khí (Bacteroides, Clostridium), và một số vi khuẩn không điển hình. Không hiệu quả với Enterobacteriaceae (Gram-âm). Đặc biệt hiệu quả với kỵ khí và được dùng trong nhiễm trùng răng miệng, xương, và mô mềm.",
         "monitoring": [
             "Dấu hiệu nhiễm trùng (sốt, WBC)",

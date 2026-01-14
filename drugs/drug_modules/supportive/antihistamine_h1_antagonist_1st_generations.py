@@ -83,7 +83,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                     'management': 'Thận trọng. Tránh dùng với rượu. Giảm liều nếu cần.'
                 }
             ],
-            'moderate': [
+        'moderate': [
                 {
                     'drug': 'MAOIs, Anticholinergics khác',
                     'mechanism': 'Tăng tác dụng anticholinergic',
@@ -91,7 +91,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                     'management': 'Thận trọng. Theo dõi tác dụng phụ.'
                 }
             ],
-            'minor': []
+        'minor': []
         },
         'contraindications': {
             'tuyệt_đối': [
@@ -100,7 +100,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'Bí tiểu do tắc nghẽn',
                 'Trẻ sơ sinh <1 tháng tuổi'
             ],
-            'tương_đối': [
+        'tương_đối': [
                 'Người cao tuổi - tăng nguy cơ té ngã, lú lẫn',
                 'Bệnh nhân có tiền sử bí tiểu - tăng nguy cơ',
                 'Bệnh nhân có tiền sử glaucoma - thận trọng',
@@ -131,7 +131,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'Suy hô hấp',
                 'Bí tiểu, nhìn mờ, khô miệng nặng'
             ],
-            'antidote': 'Không có antidote đặc hiệu. Điều trị hỗ trợ.',
+        'antidote': 'Không có antidote đặc hiệu. Điều trị hỗ trợ.',
             'treatment': [
                 'Rửa dạ dày nếu uống trong vòng 1-2 giờ',
                 'Than hoạt tính nếu uống trong vòng 1-2 giờ',
@@ -140,7 +140,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'Truyền dịch nếu hạ huyết áp',
                 'Theo dõi ít nhất 24-48 giờ (half-life 20-24 giờ)'
             ],
-            'monitoring': 'Ý thức, huyết áp, nhịp tim, hô hấp'
+        'monitoring': 'Ý thức, huyết áp, nhịp tim, hô hấp'
         },
         'reversal_agents': {
             'available': False,
@@ -151,14 +151,14 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'with_food': 'Có thể dùng với hoặc không có thức ăn.',
                 'timing': 'Dùng 3-4 lần/ngày. Thận trọng khi lái xe sau khi dùng.'
             },
-            'iv': {
+        'iv': {
                 'reconstitution': 'Dùng trực tiếp từ lọ, không cần pha loãng',
                 'infusion_rate': 'Tiêm tĩnh mạch chậm (10-20mg trong 1-2 phút)',
                 'compatibility': ['NS', 'D5W'],
-                'incompatibility': [],
-                'notes': 'Dùng cho phản ứng dị ứng cấp tính. Theo dõi huyết áp.'
+        'incompatibility': [],
+        'notes': 'Dùng cho phản ứng dị ứng cấp tính. Theo dõi huyết áp.'
             },
-            'im': {
+        'im': {
                 'reconstitution': 'Dùng trực tiếp từ lọ',
                 'injection_site': 'Tiêm bắp sâu',
                 'notes': 'Dùng cho phản ứng dị ứng cấp tính nếu không có đường IV.'
@@ -170,7 +170,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'UpToDate - Chlorpheniramine: Drug information',
                 'Allergy & Clinical Immunology guidelines'
             ],
-            'last_updated': '2025-02-05',
+        'last_updated': '2025-02-05',
             'evidence_level': 'High - Multiple RCTs and systematic reviews'
         },
         'risk_flags': {
@@ -178,12 +178,11 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             'narrow_therapeutic_index': False,
             'bleeding_risk': False,
             'organ_toxicity': ['CNS depression (sedation, drowsiness)', 'Anticholinergic effects (dry mouth, blurred vision, urinary retention)'],
-            'qt_prolongation': False,
+        'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Sedation/drowsiness (especially when driving or operating machinery)', 'Anticholinergic symptoms (dry mouth, blurred vision, urinary retention)', 'Blood pressure (especially with IM administration)', 'Heart rate']
-        },
-        'guideline_tags': [
+        },guideline_tags': [
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Hydroxyzine'
@@ -280,7 +279,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                     'management': 'Thận trọng. Giảm liều nếu cần. Theo dõi hô hấp.'
                 }
             ],
-            'moderate': [
+        'moderate': [
                 {
                     'drug': 'MAOIs',
                     'mechanism': 'Tăng tác dụng anticholinergic',
@@ -294,7 +293,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                     'management': 'Thận trọng. Theo dõi tác dụng phụ.'
                 }
             ],
-            'minor': []
+        'minor': []
         },
         'contraindications': {
             'tuyệt_đối': [
@@ -303,7 +302,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'Bí tiểu do tắc nghẽn',
                 'Trẻ sơ sinh <6 tháng tuổi'
             ],
-            'tương_đối': [
+        'tương_đối': [
                 'Người cao tuổi - tăng nguy cơ té ngã, lú lẫn, bí tiểu',
                 'Bệnh nhân có tiền sử bí tiểu - tăng nguy cơ',
                 'Bệnh nhân có tiền sử glaucoma - thận trọng',
@@ -338,7 +337,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'Tăng thân nhiệt',
                 'Bí tiểu, nhìn mờ, khô miệng nặng'
             ],
-            'antidote': 'Không có antidote đặc hiệu. Điều trị hỗ trợ.',
+        'antidote': 'Không có antidote đặc hiệu. Điều trị hỗ trợ.',
             'treatment': [
                 'Rửa dạ dày nếu uống trong vòng 1-2 giờ',
                 'Than hoạt tính nếu uống trong vòng 1-2 giờ',
@@ -349,7 +348,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'Truyền dịch nếu hạ huyết áp',
                 'Theo dõi ít nhất 24 giờ (half-life 2-8 giờ)'
             ],
-            'monitoring': 'Ý thức, huyết áp, nhịp tim, hô hấp, thân nhiệt, điện tâm đồ'
+        'monitoring': 'Ý thức, huyết áp, nhịp tim, hô hấp, thân nhiệt, điện tâm đồ'
         },
         'reversal_agents': {
             'available': False,
@@ -360,14 +359,14 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'with_food': 'Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn.',
                 'timing': 'Dùng 3-4 lần/ngày tùy chỉ định. Dùng trước khi ngủ nếu dùng để điều trị mất ngủ. KHÔNG lái xe sau khi dùng.'
             },
-            'iv': {
+        'iv': {
                 'reconstitution': 'Dùng trực tiếp từ lọ, không cần pha loãng',
                 'infusion_rate': 'Tiêm tĩnh mạch chậm (10-50mg trong 1-2 phút)',
                 'compatibility': ['NS', 'D5W'],
-                'incompatibility': [],
-                'notes': 'Dùng cho phản ứng dị ứng cấp tính. Theo dõi huyết áp trong khi tiêm.'
+        'incompatibility': [],
+        'notes': 'Dùng cho phản ứng dị ứng cấp tính. Theo dõi huyết áp trong khi tiêm.'
             },
-            'im': {
+        'im': {
                 'reconstitution': 'Dùng trực tiếp từ lọ',
                 'injection_site': 'Tiêm bắp sâu',
                 'notes': 'Dùng cho phản ứng dị ứng cấp tính nếu không có đường IV.'
@@ -379,7 +378,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'UpToDate - Diphenhydramine: Drug information',
                 'Allergy & Clinical Immunology guidelines'
             ],
-            'last_updated': '2025-02-05',
+        'last_updated': '2025-02-05',
             'evidence_level': 'High - Multiple RCTs and systematic reviews'
         },
         "black_box_warnings": None,
@@ -479,7 +478,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                     'management': 'TRÁNH dùng với MAO inhibitors.'
                 }
             ],
-            'moderate': [
+        'moderate': [
                 {
                     'drug': 'Anticholinergics khác (atropine, scopolamine)',
                     'mechanism': 'Tác dụng cộng dồn anticholinergic',
@@ -487,7 +486,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                     'management': 'Thận trọng. Theo dõi tác dụng phụ.'
                 }
             ],
-            'minor': []
+        'minor': []
         },
         'contraindications': {
             'tuyệt_đối': [
@@ -497,7 +496,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'Trẻ sơ sinh <6 tháng tuổi',
                 'Dùng MAO inhibitor'
             ],
-            'tương_đối': [
+        'tương_đối': [
                 'Người cao tuổi - tăng nguy cơ té ngã, lú lẫn, bí tiểu',
                 'Bệnh nhân có tiền sử bí tiểu - tăng nguy cơ',
                 'Bệnh nhân có tiền sử glaucoma - thận trọng',
@@ -531,7 +530,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'Suy hô hấp',
                 'Bí tiểu, nhìn mờ, khô miệng nặng'
             ],
-            'antidote': 'Không có antidote đặc hiệu. Điều trị hỗ trợ.',
+        'antidote': 'Không có antidote đặc hiệu. Điều trị hỗ trợ.',
             'treatment': [
                 'Rửa dạ dày nếu uống trong vòng 1-2 giờ',
                 'Than hoạt tính nếu uống trong vòng 1-2 giờ',
@@ -542,7 +541,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'Truyền dịch nếu hạ huyết áp',
                 'Theo dõi ít nhất 24-48 giờ (half-life 20-25 giờ)'
             ],
-            'monitoring': 'Ý thức, huyết áp, nhịp tim, hô hấp, thân nhiệt, điện tâm đồ'
+        'monitoring': 'Ý thức, huyết áp, nhịp tim, hô hấp, thân nhiệt, điện tâm đồ'
         },
         'reversal_agents': {
             'available': False,
@@ -553,7 +552,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'with_food': 'Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn.',
                 'timing': 'Dùng 3-4 lần/ngày tùy chỉ định. Dùng trước khi ngủ nếu dùng để điều trị mất ngủ. KHÔNG lái xe sau khi dùng.'
             },
-            'im': {
+        'im': {
                 'reconstitution': 'Dùng trực tiếp từ lọ',
                 'injection_site': 'Tiêm bắp sâu',
                 'notes': 'Dùng cho buồn nôn, nôn. Theo dõi huyết áp. Không quá 100mg/lần.'
@@ -565,7 +564,7 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
                 'UpToDate - Hydroxyzine: Drug information',
                 'Allergy & Clinical Immunology guidelines'
             ],
-            'last_updated': '2025-02-05',
+        'last_updated': '2025-02-05',
             'evidence_level': 'High - Multiple RCTs and systematic reviews'
         },
         'risk_flags': {
@@ -573,12 +572,11 @@ ANTIHISTAMINE_H1_ANTAGONIST_1ST_GENERATIONS_DRUGS = {
             'narrow_therapeutic_index': False,
             'bleeding_risk': False,
             'organ_toxicity': ['CNS depression (sedation, drowsiness)', 'Anticholinergic effects (dry mouth, blurred vision, urinary retention)'],
-            'qt_prolongation': False,
+        'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Sedation/drowsiness (especially when driving or operating machinery) - CRITICAL', 'Anticholinergic symptoms (dry mouth, blurred vision, urinary retention)', 'Blood pressure (especially with IM administration)', 'Heart rate']
-        },
-        'guideline_tags': [
+        },guideline_tags': [
             'EAACI Guidelines - Allergic Rhinitis',
             'AAAAI Guidelines - Urticaria',
             'FDA Drug Information - Hydroxyzine'

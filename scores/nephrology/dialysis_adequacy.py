@@ -403,7 +403,7 @@ def render():
                 st.markdown(f"{i}. {rec}")
             
             # Clinical guidance
-            st.markdown("### 📋 Hướng Dẫn Lâm Sàng")
+            st.markdown("### 📋 Hướng dẫn Lâm Sàng")
             
             st.info("""
             **Tiêu chuẩn đánh giá (KDOQI/KDIGO):**

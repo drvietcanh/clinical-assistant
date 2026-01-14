@@ -4,20 +4,24 @@ Active module - contains all neurological and psychiatric drug data"""
 # Anticonvulsants
 
 ANTICONVULSANTS_DRUGS = {
-    "Carbamazepine": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
-        'Carbamazepine, Tegretol', 'administration': ['PO'], 'indications': [
+    "Carbamazepine": {'group': 'Neurology - Anticonvulsant',
+        'vietnamese_name':
+        'Carbamazepine, Tegretol', 'administration': ['PO'],
+        'indications': [
         'Động kinh', 'Đau dây thần kinh sinh ba', 'Rối loạn lưỡng cực',
         'Rối loạn nhân cách'],
         'contraindications': [
         'Bệnh gan nặng', 'Porphyria', 'Dùng MAO inhibitor',
-        'Giảm bạch cầu/giảm tiểu cầu'], 'dosage': {'adult_epilepsy':
+        'Giảm bạch cầu/giảm tiểu cầu'],
+        'dosage': {'adult_epilepsy':
         '200-400mg x 2-3 lần/ngày, tăng dần đến 800-1600mg/ngày',
         'adult_neuralgia':
         '100-200mg x 2 lần/ngày, tăng đến 200-400mg x 3-4 lần/ngày', 'notes':
         'Theo dõi nồng độ trong máu, công thức máu, chức năng gan'},
         'side_effects': ['Chóng mặt', 'Buồn nôn', 'Giảm bạch cầu',
         'Ban da (nặng có thể SJS/TEN)', 'Rối loạn chức năng gan',
-        'Hạ natri máu'], 'interactions': [
+        'Hạ natri máu'],
+        'interactions': [
         'Nhiều thuốc: cảm ứng enzyme CYP450, giảm nồng độ nhiều thuốc',
         'Warfarin: giảm tác dụng warfarin',
         'Oral contraceptives: giảm hiệu quả'],
@@ -39,7 +43,6 @@ ANTICONVULSANTS_DRUGS = {
         'Hạ natri máu thường gặp - theo dõi natri',
         'Tự cảm ứng enzyme → liều cần tăng dần theo thời gian',
         'Tương tác với nhiều thuốc: giảm hiệu quả thuốc tránh thai, warfarin, và các thuốc khác (do cảm ứng enzyme)'
-        ,
         'Tương tác với nhiều thuốc: tăng nồng độ với erythromycin, cimetidine (do ức chế enzyme)'
         , 'Uống với thức ăn để giảm kích ứng dạ dày', 'Thận trọng ở suy gan'],
         'pharmacokinetics': {'half_life':
@@ -79,7 +82,8 @@ ANTICONVULSANTS_DRUGS = {
         'Theo dõi nồng độ trong máu, tăng liều nếu cần để đạt mức điều trị.'},
         {'drug': 'Cimetidine', 'mechanism': 'Ức chế CYP3A4', 'effect':
         'Tăng nồng độ carbamazepine', 'management':
-        'Giảm liều carbamazepine, theo dõi nồng độ trong máu.'}], 'minor': [{
+        'Giảm liều carbamazepine, theo dõi nồng độ trong máu.'}],
+        'minor': [{
         'drug': 'Grapefruit juice', 'mechanism': 'Ức chế nhẹ CYP3A4', 'effect':
         'Tăng nhẹ nồng độ carbamazepine', 'management':
         'Tránh uống nhiều, hoặc tránh hoàn toàn nếu có thể.'}]},
@@ -103,7 +107,8 @@ ANTICONVULSANTS_DRUGS = {
         'Carbamazepine bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình (nồng độ trong sữa mẹ khoảng 40-50% nồng độ trong huyết thanh mẹ). Nồng độ trong máu trẻ sơ sinh khoảng 5-10% nồng độ trong máu mẹ. Một số trẻ có thể có các tác dụng phụ nhẹ (buồn ngủ, bú kém).'
         , 'recommendation':
         'Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém, chậm tăng cân). Nếu trẻ có dấu hiệu ảnh hưởng, cân nhắc giảm liều hoặc ngừng cho con bú. Đo nồng độ carbamazepine trong máu trẻ nếu có triệu chứng.'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều, nhưng theo dõi chặt chẽ chức năng gan và nồng độ trong máu'
         , 'moderate':
         'Giảm liều 25-50%, theo dõi nồng độ trong máu thường xuyên, theo dõi ALT/AST'
@@ -111,13 +116,14 @@ ANTICONVULSANTS_DRUGS = {
         'Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ. Theo dõi nồng độ trong máu và ALT/AST thường xuyên. Nguy cơ tích lũy và độc tính cao.'
         , 'notes':
         'Carbamazepine chuyển hóa ở gan qua CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính. Đặc biệt thận trọng vì carbamazepine có thể gây viêm gan.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Triệu chứng thần kinh: chóng mặt, ataxia, lú lẫn, buồn ngủ, hôn mê, co giật'
-        ,
         'Rối loạn tim mạch: nhịp nhanh, hạ huyết áp, block nhĩ thất, rối loạn nhịp'
         , 'Rối loạn hô hấp: suy hô hấp, ngừng thở',
         'Rối loạn tiêu hóa: buồn nôn, nôn',
-        'Triệu chứng khác: sốt, giảm bạch cầu, rối loạn điện giải'], 'antidote':
+        'Triệu chứng khác: sốt, giảm bạch cầu, rối loạn điện giải'],
+        'antidote':
         'Không có antidote đặc hiệu', 'treatment': [
         'Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần',
         'Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)',
@@ -128,16 +134,21 @@ ANTICONVULSANTS_DRUGS = {
         'Xử trí block nhĩ thất: atropine, pacemaker nếu cần',
         'Hỗ trợ hô hấp: thở máy nếu suy hô hấp',
         'Lọc máu: không hiệu quả (gắn protein cao), nhưng có thể xem xét ở trường hợp nặng'
-        , 'Theo dõi công thức máu (nguy cơ giảm bạch cầu)'], 'monitoring':
+        , 'Theo dõi công thức máu (nguy cơ giảm bạch cầu)'],
+        'monitoring':
         'Theo dõi liên tục ý thức, hô hấp, tim mạch, điện tâm đồ, nồng độ carbamazepine trong máu, công thức máu, chức năng gan, điện giải'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        },
+        'reversal_agents': None, 'administration_instructions': {'oral': {
         'with_food':
         'Uống với thức ăn hoặc ngay sau bữa ăn để giảm kích ứng dạ dày và tăng hấp thu'
         , 'timing':
         'Chia liều 2-3 lần/ngày. Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều.'
-        }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [],
-        }}, 'pediatric_dosing': {'neonates':
+        },
+        'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
+        'compatibility': [],
+        'incompatibility': [],
+        }},
+        'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế). Nếu cần: 5-10mg/kg/ngày PO chia 2-3 lần, tăng dần. Theo dõi nồng độ chặt chẽ.',
         'infants':
         '1 tháng - 2 tuổi: 10-20mg/kg/ngày PO chia 2-3 lần. Theo dõi nồng độ chặt chẽ. Tự cảm ứng enzyme → liều cần tăng dần theo thời gian.',
@@ -146,21 +157,26 @@ ANTICONVULSANTS_DRUGS = {
         'adolescents':
         '≥12 tuổi: Liều người lớn. 200-400mg x 2-3 lần/ngày, tăng dần đến 800-1600mg/ngày. Theo dõi nồng độ trong máu. Tự cảm ứng enzyme → liều cần tăng dần sau 2-4 tuần.',
         'notes':
-        'Theo dõi nồng độ trong máu chặt chẽ (therapeutic range: 4-12 mcg/mL). Tự cảm ứng enzyme (auto-induction) → nồng độ có thể giảm sau 2-4 tuần, cần tăng liều. Theo dõi công thức máu (giảm bạch cầu, giảm tiểu cầu, thiếu máu bất sản). Theo dõi dấu hiệu hội chứng Stevens-Johnson (phát ban nặng).'}, 'geriatric_dosing': {'considerations':
+        'Theo dõi nồng độ trong máu chặt chẽ (therapeutic range: 4-12 mcg/mL). Tự cảm ứng enzyme (auto-induction) → nồng độ có thể giảm sau 2-4 tuần, cần tăng liều. Theo dõi công thức máu (giảm bạch cầu, giảm tiểu cầu, thiếu máu bất sản). Theo dõi dấu hiệu hội chứng Stevens-Johnson (phát ban nặng).'},
+        'geriatric_dosing': {'considerations':
         'Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ (chóng mặt, ataxia, lú lẫn). Tăng nguy cơ hạ natri máu. Suy gan, suy thận phổ biến hơn. Tự cảm ứng enzyme có thể chậm hơn.',
         'dose_adjustment':
         'Khởi đầu với liều thấp hơn (100-200mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng gan, thận: CrCl <30 → giảm liều, theo dõi nồng độ. Theo dõi natri máu (hạ natri máu thường gặp).',
         'monitoring':
-        'Theo dõi nồng độ trong máu thường xuyên (đặc biệt sau 2-4 tuần khi tự cảm ứng enzyme). Theo dõi công thức máu (giảm bạch cầu, giảm tiểu cầu). Theo dõi natri máu (hạ natri máu thường gặp). Theo dõi chức năng gan (ALT, AST). Theo dõi dấu hiệu hội chứng Stevens-Johnson (phát ban nặng).'}, 'brand_names': {'vietnam': [
-        'Carbamazepine', 'Tegretol', 'Carbamazepine Stada', 'Carba'], 'common': [
+        'Theo dõi nồng độ trong máu thường xuyên (đặc biệt sau 2-4 tuần khi tự cảm ứng enzyme). Theo dõi công thức máu (giảm bạch cầu, giảm tiểu cầu). Theo dõi natri máu (hạ natri máu thường gặp). Theo dõi chức năng gan (ALT, AST). Theo dõi dấu hiệu hội chứng Stevens-Johnson (phát ban nặng).'},
+        'brand_names': {'vietnam': [
+        'Carbamazepine', 'Tegretol', 'Carbamazepine Stada', 'Carba'],
+        'common': [
         'Tegretol', 'Carbamazepine'],
         'range': '8,000 - 30,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Carbamazepine generic thường rẻ hơn (8,000-20,000 VND/viên 200mg). Tegretol (brand) thường đắt hơn (20,000-30,000 VND/viên 200mg).'}, 'references': {'primary_sources': ['Lexicomp - Carbamazepine',
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Carbamazepine generic thường rẻ hơn (8,000-20,000 VND/viên 200mg). Tegretol (brand) thường đắt hơn (20,000-30,000 VND/viên 200mg).'},
+        'references': {'primary_sources': ['Lexicomp - Carbamazepine',
         'UpToDate - Carbamazepine: Drug information',
         'FDA - Tegretol (carbamazepine) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'evidence_level':
+        ],
+        'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         },
         "reversal_agents": {
@@ -773,8 +789,10 @@ ANTICONVULSANTS_DRUGS = {
         ]
     },
     
-    "Lamotrigine": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
-        'Lamotrigine, Lamictal', 'administration': ['PO'], 'indications': [
+    "Lamotrigine": {'group': 'Neurology - Anticonvulsant',
+        'vietnamese_name':
+        'Lamotrigine, Lamictal', 'administration': ['PO'],
+        'indications': [
         'Động kinh cục bộ', 'Động kinh tổng quát',
         'Rối loạn lưỡng cực (phòng ngừa tái phát trầm cảm)'],
         'contraindications': ['Dị ứng', 'Ban da nặng trước đây (SJS/TEN)'],
@@ -783,7 +801,8 @@ ANTICONVULSANTS_DRUGS = {
         'adult_bipolar': '25mg/ngày, tăng chậm đến 100-200mg/ngày', 'adult_max':
         '400mg/ngày', 'notes':
         'Tăng liều rất chậm để tránh ban da. Nếu dùng với valproate: giảm liều 50%'
-        }, 'side_effects': [
+        },
+        'side_effects': [
         'Ban da (có thể nặng - SJS/TEN, đặc biệt khi tăng liều nhanh)',
         'Nhức đầu', 'Chóng mặt', 'Buồn nôn', 'Mất ngủ', 'Rối loạn thị giác'],
         'interactions': [
@@ -794,21 +813,16 @@ ANTICONVULSANTS_DRUGS = {
         'Lamotrigine ức chế kênh natri voltage-gated, làm giảm giải phóng glutamate (chất dẫn truyền thần kinh kích thích) và làm giảm tính kích thích của tế bào thần kinh. Cũng có thể ức chế kênh calci. Tác dụng: chống động kinh (cục bộ và tổng quát), ổn định tâm trạng trong rối loạn lưỡng cực (phòng ngừa tái phát trầm cảm). Cơ chế chính xác chưa rõ hoàn toàn nhưng có liên quan đến ức chế giải phóng glutamate'
         , 'monitoring': [
         'Dấu hiệu ban da (RẤT QUAN TRỌNG) - ngừng ngay nếu có ban da, đặc biệt khi kèm sốt, mệt mỏi, đau khớp'
-        ,
         'Ban da có thể tiến triển thành Stevens-Johnson syndrome (SJS) hoặc toxic epidermal necrolysis (TEN) - nguy hiểm tính mạng'
-        ,
         'Nguy cơ ban da cao nhất trong 8 tuần đầu, đặc biệt khi tăng liều nhanh hoặc dùng với valproate'
         , 'Triệu chứng lâm sàng: nhức đầu, chóng mặt, buồn nôn (thường nhẹ)',
         'Chức năng gan nếu có triệu chứng (hiếm gây độc gan)',
-        'Đáp ứng điều trị (động kinh hoặc tâm trạng)'], 'precautions': [
+        'Đáp ứng điều trị (động kinh hoặc tâm trạng)'],
+        'precautions': [
         'TĂNG LIỀU RẤT CHẬM để tránh ban da nghiêm trọng (SJS/TEN) - đây là tác dụng phụ nguy hiểm nhất'
-        ,
         'NGỪNG NGAY nếu có ban da, đặc biệt kèm sốt, mệt mỏi, đau khớp (dấu hiệu SJS/TEN)'
-        ,
         'Nếu dùng với valproate: giảm liều khởi đầu và tăng liều lamotrigine 50% (valproate tăng nồng độ lamotrigine)'
-        ,
         'Nếu dùng với carbamazepine: tăng liều lamotrigine (carbamazepine giảm nồng độ)'
-        ,
         'Nếu dùng với oral contraceptives: tăng liều lamotrigine (OCP giảm nồng độ)'
         , 'Không ngừng đột ngột (tăng nguy cơ co giật)',
         'Giảm liều dần nếu cần ngừng',
@@ -819,7 +833,8 @@ ANTICONVULSANTS_DRUGS = {
         'Vài tuần (tác dụng chậm)', 'duration': 'Dài (do half-life dài)',
         'protein_binding': '55%', 'clearance':
         'Gan (chuyển hóa qua glucuronidation, không qua CYP450), thận (thải trừ)'
-        }, 'storage':
+        },
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
         'black_box_warnings':
         'Nguy cơ ban da nghiêm trọng (Stevens-Johnson syndrome, toxic epidermal necrolysis) - có thể gây tử vong. Nguy cơ tăng khi tăng liều nhanh, dùng với valproate, hoặc vi phạm phác đồ tăng liều. Ngừng ngay nếu có ban da, đặc biệt kèm sốt, mệt mỏi, đau khớp'
@@ -841,10 +856,12 @@ ANTICONVULSANTS_DRUGS = {
         {'drug': 'Rifampin', 'mechanism': 'Cảm ứng glucuronidation mạnh',
         'effect': 'Giảm nồng độ lamotrigine đáng kể', 'management':
         'Tăng liều lamotrigine. Theo dõi nồng độ và điều chỉnh liều.'}],
-        'minor': []}, 'contraindications': {'tuyệt_đối': [
+        'minor': []},
+        'contraindications': {'tuyệt_đối': [
         'Dị ứng lamotrigine hoặc các thành phần khác',
         'Ban da nặng trước đây (SJS/TEN) với lamotrigine',
-        'Tăng liều quá nhanh (vi phạm phác đồ tăng liều)'], 'tương_đối': [
+        'Tăng liều quá nhanh (vi phạm phác đồ tăng liều)'],
+        'tương_đối': [
         'Dùng với valproate - giảm liều khởi đầu 50%',
         'Trẻ em <16 tuổi - tăng nguy cơ ban da', 'Suy gan nặng - giảm liều',
         'Suy thận nặng (CrCl <30) - giảm liều',
@@ -855,12 +872,14 @@ ANTICONVULSANTS_DRUGS = {
         'Lamotrigine bài tiết vào sữa mẹ ở nồng độ đáng kể (40-50% liều mẹ). Nồng độ trong máu trẻ bú mẹ có thể đạt 20-30% nồng độ mẹ. Có thể gây tác dụng phụ ở trẻ (ban da, buồn ngủ). Cần theo dõi trẻ sát.'
         , 'recommendation':
         'Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu ban da, buồn ngủ, bú kém ở trẻ. Nếu trẻ có dấu hiệu bất thường, cân nhắc ngừng cho con bú hoặc giảm liều.'
-        }}, 'hepatic_adjustment': {'mild': 'Không đổi hoặc giảm liều nhẹ',
+        }},
+        'hepatic_adjustment': {'mild': 'Không đổi hoặc giảm liều nhẹ',
         'moderate': 'Giảm liều 25-50%. Theo dõi chức năng gan', 'severe':
         'Giảm liều 50-75% hoặc tránh dùng. Theo dõi chức năng gan chặt chẽ',
         'notes':
         'Lamotrigine chuyển hóa ở gan qua glucuronidation. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy. Tuy nhiên, ít gây độc gan hơn valproate.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Ban da (có thể tiến triển thành SJS/TEN)', 'Buồn nôn, nôn',
         'Chóng mặt, nhức đầu', 'Lú lẫn, co giật', 'Rung nhĩ', 'Hôn mê (hiếm)'],
         'antidote': 'Không có antidote đặc hiệu. Điều trị hỗ trợ', 'treatment':
@@ -869,20 +888,26 @@ ANTICONVULSANTS_DRUGS = {
         'Theo dõi sát dấu hiệu ban da (SJS/TEN) - nguy hiểm nhất',
         'Điều trị hỗ trợ: chống nôn, truyền dịch, theo dõi điện giải',
         'Theo dõi ECG nếu có triệu chứng tim mạch', 'Điều trị co giật nếu có',
-        'Hỗ trợ hô hấp và tuần hoàn nếu cần'], 'monitoring':
+        'Hỗ trợ hô hấp và tuần hoàn nếu cần'],
+        'monitoring':
         'Dấu hiệu ban da (SJS/TEN), ECG, ý thức, dấu hiệu co giật, điện giải'},
-        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes':
         'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay nếu có SJS/TEN. Điều trị SJS/TEN tại ICU nếu có.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn', 'timing':
         'Chia 2 lần/ngày (do half-life dài). Có thể dùng cùng bữa ăn để giảm kích ứng dạ dày'
-        }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [],
-        }}, 'references': {'primary_sources': [
+        },
+        'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
+        'compatibility': [],
+        'incompatibility': [],
+        }},
+        'references': {'primary_sources': [
         'FDA Drug Label - Lamictal (lamotrigine)',
         'UpToDate - Lamotrigine: Drug information',
         'Epilepsia - ILAE treatment guidelines',
-        'American Academy of Neurology guidelines'], 'last_updated':
+        'American Academy of Neurology guidelines'],
+        'last_updated':
         '2024-12-19', 'evidence_level':
         'High - Multiple RCTs and systematic reviews'
         },
@@ -901,15 +926,19 @@ ANTICONVULSANTS_DRUGS = {
             "FDA - Antiepileptic drug safety"
         ]
     },
-    "Levetiracetam": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
-        'Levetiracetam, Keppra', 'administration': ['PO', 'IV'], 'indications':
+    "Levetiracetam": {'group': 'Neurology - Anticonvulsant',
+        'vietnamese_name':
+        'Levetiracetam, Keppra', 'administration': ['PO', 'IV'],
+        'indications':
         ['Động kinh cục bộ', 'Động kinh tổng quát', 'Status epilepticus (IV)'],
-        'contraindications': ['Dị ứng'], 'dosage': {'adult_po':
+        'contraindications': ['Dị ứng'],
+        'dosage': {'adult_po':
         '500-1000mg x 2 lần/ngày, tăng đến 1000-3000mg/ngày', 'adult_iv':
         '500-1000mg IV mỗi 12 giờ', 'adult_max': '3000mg/ngày', 'notes':
         'Ít tương tác thuốc, an toàn cho trẻ em và người già'},
         'renal_adjustment': {'normal': 'Không đổi', '50_80': 'Giảm liều 25%',
-        '30_50': 'Giảm liều 50%', 'under_30': 'Giảm liều 75%'}, 'side_effects':
+        '30_50': 'Giảm liều 50%', 'under_30': 'Giảm liều 75%'},
+        'side_effects':
         ['Buồn ngủ', 'Chóng mặt', 'Kích động, hành vi bất thường', 'Nhức đầu',
         'Mệt mỏi', 'Ít tác dụng phụ hơn các anticonvulsants khác'],
         'interactions': ['Ít tương tác - không cảm ứng hoặc ức chế CYP450'],
@@ -922,7 +951,8 @@ ANTICONVULSANTS_DRUGS = {
         'Công thức máu (hiếm giảm bạch cầu, giảm tiểu cầu)',
         'Chức năng gan (ALT, AST) - hiếm viêm gan',
         'Mệt mỏi, chóng mặt (thường gặp)',
-        'Dấu hiệu nhiễm trùng (hiếm giảm bạch cầu)'], 'precautions': [
+        'Dấu hiệu nhiễm trùng (hiếm giảm bạch cầu)'],
+        'precautions': [
         'Tác dụng phụ thần kinh tâm thần: kích động, lo âu, trầm cảm, suy nghĩ tự sát - theo dõi sát, đặc biệt ở trẻ em và thanh thiếu niên'
         , 'Nguy cơ hành vi tự sát - cảnh báo bệnh nhân và gia đình',
         'KHÔNG được ngừng đột ngột (nguy cơ co giật)',
@@ -932,7 +962,8 @@ ANTICONVULSANTS_DRUGS = {
         'Tương tác thuốc ít hơn các thuốc chống co giật cổ điển (không ức chế CYP450)'
         , 'Có thể dùng với hoặc không có thức ăn',
         'Thận trọng ở bệnh nhân có tiền sử bệnh tâm thần',
-        'Giảm liều ở người cao tuổi (nếu có suy thận)'], 'pharmacokinetics': {
+        'Giảm liều ở người cao tuổi (nếu có suy thận)'],
+        'pharmacokinetics': {
         'half_life': '6-8 giờ (bình thường), 10-11 giờ (suy thận nặng)',
         'onset': 'Nhanh (vài giờ đến vài ngày)', 'duration':
         'Dài (phụ thuộc liều)', 'protein_binding': '< 10% (rất thấp)',
@@ -943,14 +974,17 @@ ANTICONVULSANTS_DRUGS = {
         'Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Viên nén: tránh ẩm.',
         'black_box_warnings':
         'Nguy cơ hành vi tự sát và ý tưởng tự sát. Cảnh báo bệnh nhân và gia đình về các dấu hiệu kích động, lo âu, trầm cảm, thay đổi tâm trạng, và hành vi bất thường. Ngừng đột ngột có thể gây co giật.'
-        , 'drug_interactions': {'major': [], 'moderate': [{'drug':
+        , 'drug_interactions': {'major': [],
+        'moderate': [{'drug':
         'Carbamazepine, Phenytoin, Phenobarbital', 'mechanism':
         'Cảm ứng enzyme, tăng chuyển hóa levetiracetam', 'effect':
         'Giảm nhẹ nồng độ levetiracetam', 'management':
-        'Có thể cần tăng liều levetiracetam nếu không đạt hiệu quả.'}], 'minor':
+        'Có thể cần tăng liều levetiracetam nếu không đạt hiệu quả.'}],
+        'minor':
         [{'drug': 'Probenecid', 'mechanism': 'Ức chế bài tiết qua thận',
         'effect': 'Tăng nhẹ nồng độ levetiracetam', 'management':
-        'Giảm liều levetiracetam 50% nếu dùng chung.'}]}, 'contraindications':
+        'Giảm liều levetiracetam 50% nếu dùng chung.'}]},
+        'contraindications':
         {'tuyệt_đối': ['Dị ứng levetiracetam hoặc các thành phần khác'],
         'tương_đối': [
         'Suy thận (CrCl <30) - giảm liều 75%, tăng khoảng cách liều',
@@ -963,7 +997,8 @@ ANTICONVULSANTS_DRUGS = {
         'Levetiracetam bài tiết vào sữa mẹ ở nồng độ thấp (nồng độ trong sữa mẹ khoảng 50-100% nồng độ trong huyết thanh mẹ). Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm.'
         , 'recommendation':
         'Có thể cho con bú. Theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém).'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều (levetiracetam không chuyển hóa ở gan)',
         'moderate':
         'Không cần điều chỉnh liều (levetiracetam không chuyển hóa ở gan)',
@@ -971,11 +1006,13 @@ ANTICONVULSANTS_DRUGS = {
         'Không cần điều chỉnh liều (levetiracetam không chuyển hóa ở gan). Tuy nhiên, thận trọng ở bệnh nhân suy gan kèm suy thận.'
         , 'notes':
         'Levetiracetam không chuyển hóa ở gan, bài tiết chủ yếu qua thận. Không cần điều chỉnh liều ở suy gan. Chỉ cần điều chỉnh liều ở suy thận.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Triệu chứng thần kinh: buồn ngủ, chóng mặt, lú lẫn, mất điều hòa (ataxia)'
         , 'Rối loạn hô hấp: suy hô hấp (hiếm)',
         'Rối loạn tiêu hóa: buồn nôn, nôn',
-        'Triệu chứng khác: mệt mỏi, kích động'], 'antidote':
+        'Triệu chứng khác: mệt mỏi, kích động'],
+        'antidote':
         'Không có antidote đặc hiệu', 'treatment': [
         'Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần',
         'Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)',
@@ -983,24 +1020,31 @@ ANTICONVULSANTS_DRUGS = {
         'Theo dõi liên tục: ý thức, hô hấp',
         'Hỗ trợ hô hấp: thở máy nếu suy hô hấp',
         'Lọc máu: có thể hiệu quả (không gắn protein, bài tiết qua thận), xem xét ở trường hợp nặng'
-        ], 'monitoring':
+        ],
+        'monitoring':
         'Theo dõi ý thức, hô hấp, dấu hiệu thần kinh. Có thể đo nồng độ levetiracetam trong máu nếu có sẵn.'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        },
+        'reversal_agents': None, 'administration_instructions': {'oral': {
         'with_food':
         'Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đến hấp thu.',
         'timing':
         'Chia liều 2 lần/ngày (sáng và tối). Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều.'
-        }, 'iv': {'reconstitution':
+        },
+        'iv': {'reconstitution':
         'Dùng trực tiếp từ lọ, không cần pha. Có thể pha loãng trong 0.9% NaCl hoặc D5W đến nồng độ 15mg/ml.'
         , 'infusion_rate':
         'Truyền trong 15 phút (tốc độ tiêu chuẩn). Không truyền nhanh hơn.',
-        'compatibility': ['0.9% NaCl', 'D5W'], 'incompatibility': [], 'notes':
+        'compatibility': ['0.9% NaCl', 'D5W'],
+        'incompatibility': [],
+        'notes':
         'Có thể truyền trực tiếp hoặc pha loãng. Theo dõi dấu hiệu phản ứng tại chỗ tiêm.'
-        }},         'references': {'primary_sources': ['Lexicomp - Levetiracetam',
+        }},
+        'references': {'primary_sources': ['Lexicomp - Levetiracetam',
         'UpToDate - Levetiracetam: Drug information',
         'FDA - Keppra (levetiracetam) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'evidence_level':
+        ],
+        'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         },
         'risk_flags': {
@@ -1008,31 +1052,36 @@ ANTICONVULSANTS_DRUGS = {
             'narrow_therapeutic_index': False,
             'bleeding_risk': False,
             'organ_toxicity': ['neurological', 'psychiatric'],
-            'qt_prolongation': False,
+        'qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': False,
             'requires_monitoring': ['Seizure frequency', 'Psychiatric symptoms', 'Renal function', 'CBC']
-        },
-        'guideline_tags': [
+        },guideline_tags': [
             'AAN 2018 Epilepsy Guidelines',
             'FDA Black Box Warning - Suicidal Behavior',
             'ISMP High Alert Medications - Anticonvulsants'
         ]
     },
-    "Oxcarbazepine": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
-        'Oxcarbazepine, Trileptal', 'administration': ['PO'], 'indications': [
+    "Oxcarbazepine": {'group': 'Neurology - Anticonvulsant',
+        'vietnamese_name':
+        'Oxcarbazepine, Trileptal', 'administration': ['PO'],
+        'indications': [
         'Động kinh cục bộ', 'Động kinh tổng quát',
         'Đau dây thần kinh sinh ba'],
         'contraindications': [
-        'Dị ứng carbamazepine (cross-reactivity)'], 'dosage': {'adult_epilepsy':
+        'Dị ứng carbamazepine (cross-reactivity)'],
+        'dosage': {'adult_epilepsy':
         '300mg x 2 lần/ngày, tăng đến 600-1200mg x 2 lần/ngày',
         'adult_max': '2400mg/ngày', 'notes':
         'Tương tự carbamazepine nhưng ít tương tác thuốc hơn, ít tác dụng phụ hơn'
-        }, 'side_effects': ['Chóng mặt', 'Buồn nôn', 'Buồn ngủ', 'Ataxia',
+        },
+        'side_effects': ['Chóng mặt', 'Buồn nôn', 'Buồn ngủ', 'Ataxia',
         'Hạ natri máu (thường gặp)', 'Ban da (ít hơn carbamazepine)',
-        'Rối loạn thị giác'], 'interactions': [
+        'Rối loạn thị giác'],
+        'interactions': [
         'Oral contraceptives: có thể giảm hiệu quả',
-        'Ít tương tác hơn carbamazepine (không cảm ứng CYP450 mạnh)'], 'pregnancy':
+        'Ít tương tác hơn carbamazepine (không cảm ứng CYP450 mạnh)'],
+        'pregnancy':
         'C', 'mechanism_of_action':
         'Oxcarbazepine là dẫn xuất của carbamazepine, được chuyển hóa thành chất hoạt động 10-monohydroxy derivative (MHD). Cơ chế tương tự carbamazepine: ức chế kênh natri voltage-gated, ngăn cản sự lan truyền của các xung động bất thường. Khác với carbamazepine, oxcarbazepine không cảm ứng enzyme CYP450 mạnh, ít tương tác thuốc hơn. Cũng có thể ức chế kênh calci. Tác dụng: chống động kinh (cục bộ và tổng quát), điều trị đau dây thần kinh sinh ba. Ít tác dụng phụ hơn carbamazepine, đặc biệt ít ban da nghiêm trọng (SJS/TEN).'
         , 'monitoring': [
@@ -1041,7 +1090,8 @@ ANTICONVULSANTS_DRUGS = {
         'Nồng độ natri (hạ natri máu - thường gặp, có thể nặng)',
         'Chức năng thận (creatinine)',
         'Dấu hiệu ban da (ít hơn carbamazepine nhưng vẫn có thể xảy ra)',
-        'Rối loạn thị giác'], 'precautions': [
+        'Rối loạn thị giác'],
+        'precautions': [
         'Hạ natri máu thường gặp - theo dõi natri định kỳ, đặc biệt ở người cao tuổi và phụ nữ'
         , 'Ít tương tác thuốc hơn carbamazepine (không cảm ứng CYP450 mạnh)',
         'Vẫn có thể giảm hiệu quả thuốc tránh thai - sử dụng biện pháp bổ sung',
@@ -1049,14 +1099,16 @@ ANTICONVULSANTS_DRUGS = {
         'Giảm liều dần dần nếu cần ngừng',
         'Thận trọng ở bệnh nhân suy thận (giảm thải trừ MHD)',
         'Thận trọng ở bệnh nhân có tiền sử dị ứng carbamazepine (cross-reactivity)'
-        , 'Uống với thức ăn để giảm kích ứng dạ dày'], 'pharmacokinetics': {
+        , 'Uống với thức ăn để giảm kích ứng dạ dày'],
+        'pharmacokinetics': {
         'half_life': '2 giờ (oxcarbazepine), 9 giờ (MHD - chất hoạt động)',
         'onset': 'Vài giờ đến vài ngày', 'duration': 'Dài (phụ thuộc liều)',
         'protein_binding': '40% (MHD)', 'metabolism':
         'Gan (chuyển hóa thành MHD, không qua CYP450 chính) - ít tương tác enzyme'
         , 'clearance':
         'Gan (chuyển hóa), thận (thải trừ MHD). Không cảm ứng CYP450 mạnh như carbamazepine.'
-        }, 'storage':
+        },
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: tránh ẩm.'
         , 'black_box_warnings':
         'Nguy cơ hạ natri máu nghiêm trọng (có thể <125 mEq/L), đặc biệt ở người cao tuổi và phụ nữ. Nguy cơ ban da nghiêm trọng (SJS/TEN) - ít hơn carbamazepine nhưng vẫn có thể xảy ra. Ngừng đột ngột có thể gây co giật.'
@@ -1072,10 +1124,12 @@ ANTICONVULSANTS_DRUGS = {
         {'drug': 'Felodipine, Verapamil', 'mechanism':
         'Có thể giảm nồng độ MHD', 'effect': 'Giảm hiệu quả oxcarbazepine',
         'management':
-        'Theo dõi nồng độ và điều chỉnh liều nếu cần.'}], 'minor': [{'drug':
+        'Theo dõi nồng độ và điều chỉnh liều nếu cần.'}],
+        'minor': [{'drug':
         'Cimetidine', 'mechanism': 'Có thể tăng nhẹ nồng độ MHD', 'effect':
         'Tăng nhẹ nồng độ MHD', 'management':
-        'Theo dõi tác dụng phụ. Có thể cần giảm liều.'}]}, 'contraindications': {
+        'Theo dõi tác dụng phụ. Có thể cần giảm liều.'}]},
+        'contraindications': {
         'tuyệt_đối': ['Dị ứng oxcarbazepine hoặc carbamazepine',
         'Ban da nặng trước đây (SJS/TEN) với oxcarbazepine hoặc carbamazepine'],
         'tương_đối': [
@@ -1083,24 +1137,28 @@ ANTICONVULSANTS_DRUGS = {
         'Suy gan nặng - giảm liều',
         'Mang thai (chứng cứ hạn chế) - chỉ dùng nếu lợi ích > nguy cơ',
         'Người cao tuổi - tăng nguy cơ hạ natri máu',
-        'Phụ nữ - tăng nguy cơ hạ natri máu']}, 'pregnancy_lactation': {
+        'Phụ nữ - tăng nguy cơ hạ natri máu']},
+        'pregnancy_lactation': {
         'fda_category': 'C', 'pregnancy_details':
         'Chứng cứ về an toàn trong thai kỳ còn hạn chế. Một số nghiên cứu gợi ý tăng nhẹ nguy cơ dị tật bẩm sinh, nhưng chứng cứ không rõ ràng. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền và theo dõi chặt chẽ.'
         , 'lactation': {'safety': 'Compatible with monitoring', 'details':
         'Oxcarbazepine và MHD bài tiết vào sữa mẹ ở nồng độ thấp đến trung bình. Nồng độ trong máu trẻ bú mẹ có thể đạt 10-20% nồng độ mẹ. Có thể gây tác dụng phụ ở trẻ (buồn ngủ, bú kém). Cần theo dõi trẻ sát.'
         , 'recommendation':
         'Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu buồn ngủ, bú kém, chậm tăng cân ở trẻ. Nếu trẻ có dấu hiệu bất thường, cân nhắc ngừng cho con bú hoặc giảm liều.'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều, nhưng theo dõi chặt chẽ chức năng gan'
         , 'moderate':
         'Giảm liều 25-50%, theo dõi chức năng gan thường xuyên', 'severe':
         'Giảm liều 50% hoặc tránh dùng. Theo dõi chức năng gan chặt chẽ', 'notes':
         'Oxcarbazepine chuyển hóa ở gan thành MHD. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy. Tuy nhiên, ít gây độc gan hơn carbamazepine.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Triệu chứng thần kinh: chóng mặt, ataxia, lú lẫn, buồn ngủ, hôn mê, co giật'
         , 'Hạ natri máu: lú lẫn, co giật, hôn mê (có thể nặng)',
         'Rối loạn tiêu hóa: buồn nôn, nôn',
-        'Rối loạn tim mạch: nhịp tim chậm, hạ huyết áp (hiếm)'], 'antidote':
+        'Rối loạn tim mạch: nhịp tim chậm, hạ huyết áp (hiếm)'],
+        'antidote':
         'Không có antidote đặc hiệu', 'treatment': [
         'Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần',
         'Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)',
@@ -1110,16 +1168,21 @@ ANTICONVULSANTS_DRUGS = {
         , 'Xử trí co giật: benzodiazepine (diazepam, lorazepam) nếu có',
         'Hỗ trợ hô hấp: thở máy nếu suy hô hấp',
         'Lọc máu: có thể hiệu quả (gắn protein 40%), xem xét ở trường hợp nặng'
-        ], 'monitoring':
+        ],
+        'monitoring':
         'Theo dõi liên tục ý thức, hô hấp, tim mạch, điện tâm đồ, nồng độ natri (quan trọng), chức năng thận'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        },
+        'reversal_agents': None, 'administration_instructions': {'oral': {
         'with_food':
         'Uống với thức ăn hoặc ngay sau bữa ăn để giảm kích ứng dạ dày và tăng hấp thu'
         , 'timing':
         'Chia liều 2 lần/ngày (sáng và tối). Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều.'
-        }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': [],
-        }}, 'pediatric_dosing': {'neonates':
+        },
+        'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
+        'compatibility': [],
+        'incompatibility': [],
+        }},
+        'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế). Nếu cần: 8-10mg/kg/ngày PO chia 2 lần, tăng dần. Theo dõi chặt chẽ.'
         , 'infants':
         '1 tháng - 2 tuổi: 8-10mg/kg/ngày PO chia 2 lần, tăng đến 20-30mg/kg/ngày nếu cần. Theo dõi chặt chẽ.'
@@ -1128,21 +1191,26 @@ ANTICONVULSANTS_DRUGS = {
         , 'adolescents':
         '≥12 tuổi: Liều người lớn. 300mg x 2 lần/ngày, tăng đến 600-1200mg x 2 lần/ngày. Theo dõi nồng độ natri định kỳ.'
         , 'notes':
-        'Theo dõi nồng độ natri định kỳ (hạ natri máu thường gặp). Theo dõi dấu hiệu độc tính (chóng mặt, ataxia, lú lẫn). KHÔNG ngừng đột ngột - giảm liều dần dần.'}, 'geriatric_dosing': {'considerations':
+        'Theo dõi nồng độ natri định kỳ (hạ natri máu thường gặp). Theo dõi dấu hiệu độc tính (chóng mặt, ataxia, lú lẫn). KHÔNG ngừng đột ngột - giảm liều dần dần.'},
+        'geriatric_dosing': {'considerations':
         'Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ (chóng mặt, ataxia, lú lẫn). Tăng nguy cơ hạ natri máu. Suy gan, suy thận phổ biến hơn.'
         , 'dose_adjustment':
         'Khởi đầu với liều thấp hơn (150mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng gan, thận: CrCl <30 → giảm liều. Theo dõi natri máu thường xuyên.'
         , 'monitoring':
-        'Theo dõi nồng độ natri thường xuyên (hạ natri máu thường gặp, có thể nặng). Theo dõi dấu hiệu độc tính (chóng mặt, ataxia, lú lẫn). Theo dõi chức năng gan, thận.'}, 'brand_names': {'vietnam': [
-        'Oxcarbazepine', 'Trileptal', 'Oxcarbazepine Stada'], 'common': [
+        'Theo dõi nồng độ natri thường xuyên (hạ natri máu thường gặp, có thể nặng). Theo dõi dấu hiệu độc tính (chóng mặt, ataxia, lú lẫn). Theo dõi chức năng gan, thận.'},
+        'brand_names': {'vietnam': [
+        'Oxcarbazepine', 'Trileptal', 'Oxcarbazepine Stada'],
+        'common': [
         'Trileptal', 'Oxcarbazepine'],
         'range': '15,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Oxcarbazepine generic thường rẻ hơn (15,000-30,000 VND/viên 300mg). Trileptal (brand) thường đắt hơn (30,000-50,000 VND/viên 300mg).'}, 'references': {'primary_sources': ['Lexicomp - Oxcarbazepine',
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Oxcarbazepine generic thường rẻ hơn (15,000-30,000 VND/viên 300mg). Trileptal (brand) thường đắt hơn (30,000-50,000 VND/viên 300mg).'},
+        'references': {'primary_sources': ['Lexicomp - Oxcarbazepine',
         'UpToDate - Oxcarbazepine: Drug information',
         'FDA - Trileptal (oxcarbazepine) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'evidence_level':
+        ],
+        'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         },
         "reversal_agents": {
@@ -1353,23 +1421,27 @@ ANTICONVULSANTS_DRUGS = {
         ]
     },
     
-    "Phenobarbital": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
+    "Phenobarbital": {'group': 'Neurology - Anticonvulsant',
+        'vietnamese_name':
         'Phenobarbital, Luminal', 'administration': ['PO', 'IV', 'IM'],
         'indications': ['Động kinh (nhiều loại)', 'Status epilepticus',
         'An thần', 'Cai nghiện rượu', 'Cai nghiện benzodiazepine'],
         'contraindications': ['Porphyria', 'Suy hô hấp nặng',
-        'Suy gan nặng', 'Dị ứng barbiturates'], 'dosage': {'adult_epilepsy':
+        'Suy gan nặng', 'Dị ứng barbiturates'],
+        'dosage': {'adult_epilepsy':
         '60-180mg/ngày PO chia 2-3 lần/ngày', 'adult_status_epilepticus':
         '15-20mg/kg IV x 1 lần (tối đa 1g), sau đó 1-3mg/kg mỗi 6-8 giờ',
         'adult_sedation': '30-120mg/ngày PO chia 2-3 lần/ngày', 'adult_max':
         '300mg/ngày', 'notes':
         'Theo dõi nồng độ trong máu (mục tiêu 15-40 mcg/mL). Half-life rất dài (80-120 giờ)'},
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Giảm liều 25%',
-        'under_30': 'Giảm liều 50%'}, 'side_effects': ['Buồn ngủ, an thần',
+        'under_30': 'Giảm liều 50%'},
+        'side_effects': ['Buồn ngủ, an thần',
         'Chóng mặt', 'Ataxia', 'Rối loạn nhận thức', 'Ức chế hô hấp (liều cao)',
         'Phụ thuộc, nghiện', 'Hội chứng cai (ngừng đột ngột)',
         'Rối loạn chức năng gan (hiếm)', 'Ban da (hiếm)',
-        'Loãng xương (dùng lâu dài)'], 'interactions': [
+        'Loãng xương (dùng lâu dài)'],
+        'interactions': [
         'Nhiều thuốc: cảm ứng enzyme CYP450 mạnh, giảm nồng độ nhiều thuốc',
         'Warfarin: giảm tác dụng warfarin (cảm ứng enzyme)',
         'Oral contraceptives: giảm hiệu quả',
@@ -1386,7 +1458,8 @@ ANTICONVULSANTS_DRUGS = {
         'Chức năng thận (creatinine)',
         'Dấu hiệu phụ thuộc/nghiện (tăng liều, tìm kiếm thuốc)',
         'Dấu hiệu hội chứng cai (kích động, mất ngủ, co giật) nếu ngừng đột ngột',
-        'Mật độ xương nếu dùng lâu dài (tăng nguy cơ loãng xương)'], 'precautions': [
+        'Mật độ xương nếu dùng lâu dài (tăng nguy cơ loãng xương)'],
+        'precautions': [
         'THEO DÕI NỒNG ĐỘ TRONG MÁU định kỳ (therapeutic range: 15-40 mcg/mL)',
         'KHÔNG được ngừng đột ngột (nguy cơ hội chứng cai, co giật) - giảm liều dần dần',
         'Cảm ứng enzyme CYP450 mạnh → giảm nồng độ nhiều thuốc (warfarin, OCP, corticosteroids, valproate)',
@@ -1397,7 +1470,8 @@ ANTICONVULSANTS_DRUGS = {
         'Thận trọng ở suy thận (giảm thải trừ)',
         'CHỐNG CHỈ ĐỊNH trong porphyria (có thể gây cơn porphyria cấp)',
         'Tăng nguy cơ loãng xương khi dùng lâu dài - bổ sung vitamin D, canxi',
-        'Tương tác với alcohol, benzodiazepines → tăng ức chế hô hấp nguy hiểm'], 'pharmacokinetics': {
+        'Tương tác với alcohol, benzodiazepines → tăng ức chế hô hấp nguy hiểm'],
+        'pharmacokinetics': {
         'half_life': '80-120 giờ (rất dài, cho phép dùng 1-2 lần/ngày)',
         'onset': '30-60 phút (PO), 5-15 phút (IV)', 'duration':
         'Rất dài (do half-life rất dài)', 'protein_binding': '20-45% (thấp)',
@@ -1446,21 +1520,24 @@ ANTICONVULSANTS_DRUGS = {
         'contraindications': {'tuyệt_đối': ['Porphyria (có thể gây cơn porphyria cấp)',
         'Suy hô hấp nặng (ức chế hô hấp)', 'Suy gan nặng (Child-Pugh C)',
         'Dị ứng phenobarbital hoặc barbiturates',
-        'Tiền sử nghiện chất (tăng nguy cơ phụ thuộc)'], 'tương_đối': [
+        'Tiền sử nghiện chất (tăng nguy cơ phụ thuộc)'],
+        'tương_đối': [
         'Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều, theo dõi chặt chẽ'
         , 'Suy thận (CrCl <30) - giảm liều 50%, theo dõi nồng độ',
         'COPD, suy hô hấp nhẹ - tăng nguy cơ ức chế hô hấp',
         'Mang thai (nguy cơ dị tật bẩm sinh) - phân loại D, chỉ dùng nếu lợi ích > nguy cơ'
         , 'Bệnh nhân lớn tuổi - tăng nguy cơ tích lũy, độc tính, ngã',
         'Tiền sử nghiện rượu, chất - tăng nguy cơ phụ thuộc',
-        'Trầm cảm - có thể làm nặng thêm']}, 'pregnancy_lactation': {
+        'Trầm cảm - có thể làm nặng thêm']},
+        'pregnancy_lactation': {
         'fda_category': 'D', 'pregnancy_details':
         'Phenobarbital có nguy cơ dị tật bẩm sinh (dị tật tim, sứt môi/hà ếch, dị tật ngón tay, chậm phát triển). Nguy cơ dị tật bẩm sinh khoảng 5-10%. Nguy cơ rối loạn phát triển thần kinh ở trẻ (IQ thấp hơn, chậm phát triển). Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền, siêu âm chi tiết, và theo dõi chặt chẽ. Cần bổ sung acid folic 4-5mg/ngày trước và trong thai kỳ. Theo dõi nồng độ phenobarbital trong thai kỳ (có thể thay đổi).'
         , 'lactation': {'safety': 'Compatible with monitoring', 'details':
         'Phenobarbital bài tiết vào sữa mẹ ở nồng độ đáng kể (nồng độ trong sữa mẹ khoảng 30-50% nồng độ trong huyết thanh mẹ). Nồng độ trong máu trẻ bú mẹ có thể đạt 20-40% nồng độ mẹ. Có thể gây tác dụng phụ ở trẻ (buồn ngủ, bú kém, chậm tăng cân, an thần). Cần theo dõi trẻ sát.'
         , 'recommendation':
         'Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu buồn ngủ, bú kém, chậm tăng cân, an thần ở trẻ. Nếu trẻ có dấu hiệu bất thường, cân nhắc ngừng cho con bú hoặc giảm liều. Đo nồng độ phenobarbital trong máu trẻ nếu có triệu chứng.'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều, nhưng theo dõi chặt chẽ chức năng gan và nồng độ trong máu'
         , 'moderate':
         'Giảm liều 25-50%, theo dõi nồng độ trong máu thường xuyên, theo dõi ALT/AST'
@@ -1470,12 +1547,12 @@ ANTICONVULSANTS_DRUGS = {
         'Phenobarbital chuyển hóa ở gan qua nhiều enzyme CYP450. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính. Đặc biệt thận trọng vì phenobarbital có thể gây viêm gan (hiếm).'},
         'overdose_management': {'symptoms': [
         'Triệu chứng thần kinh: buồn ngủ sâu, hôn mê, mất phản xạ, co giật (paradoxical)'
-        ,
         'Ức chế hô hấp: suy hô hấp, ngừng thở (nguy hiểm nhất)',
         'Rối loạn tim mạch: nhịp chậm, hạ huyết áp, shock',
         'Rối loạn tiêu hóa: buồn nôn, nôn',
         'Hạ thân nhiệt (do ức chế trung tâm điều nhiệt)',
-        'Phù phổi (hiếm)'], 'treatment': [
+        'Phù phổi (hiếm)'],
+        'treatment': [
         'Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp NGAY LẬP TỨC nếu cần (ưu tiên cao nhất)'
         , 'Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)',
         'Than hoạt tính: 1g/kg (tối đa 50-100g) nếu trong vòng 1-2 giờ, có thể lặp lại mỗi 4-6 giờ (phenobarbital có enterohepatic circulation)'
@@ -1484,19 +1561,24 @@ ANTICONVULSANTS_DRUGS = {
         'Điều trị hạ huyết áp: truyền dịch, vận mạch nếu cần',
         'Lọc máu (hemodialysis) hoặc lọc máu liên tục: có thể hiệu quả (protein binding thấp, bài tiết qua thận), xem xét ở trường hợp nặng'
         , 'Theo dõi nồng độ phenobarbital trong máu (nguy hiểm nếu >60-80 mcg/mL)',
-        'Điều trị hỗ trợ: giữ ấm, theo dõi điện giải'], 'monitoring':
+        'Điều trị hỗ trợ: giữ ấm, theo dõi điện giải'],
+        'monitoring':
         'Theo dõi liên tục ý thức, hô hấp (quan trọng nhất), tim mạch, điện tâm đồ, nồng độ phenobarbital trong máu, chức năng gan, điện giải, thân nhiệt'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        },
+        'reversal_agents': None, 'administration_instructions': {'oral': {
         'with_food':
         'Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm kích ứng dạ dày'
         , 'timing':
         'Chia 1-2 lần/ngày (do half-life rất dài). Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. KHÔNG ngừng đột ngột - giảm liều dần dần.'
-        }, 'iv': {'reconstitution':
+        },
+        'iv': {'reconstitution':
         'Pha trong 0.9% NaCl hoặc D5W. Nồng độ tối đa 130mg/ml. Không trộn với các thuốc khác.'
         , 'infusion_rate':
         'Truyền chậm: không quá 60mg/phút (tối đa 60mg/phút) để tránh ức chế hô hấp, hạ huyết áp. Theo dõi hô hấp, huyết áp, nhịp tim liên tục trong khi truyền.'
-        , 'compatibility': ['0.9% NaCl', 'D5W'], 'incompatibility': [
-        'Không trộn với các thuốc khác'], 'notes':
+        , 'compatibility': ['0.9% NaCl', 'D5W'],
+        'incompatibility': [
+        'Không trộn với các thuốc khác'],
+        'notes':
         'Truyền qua đường tĩnh mạch lớn. Theo dõi hô hấp, huyết áp, nhịp tim, điện tâm đồ trong khi truyền. Có thể gây kích ứng tĩnh mạch. Ức chế hô hấp là nguy cơ chính - sẵn sàng hỗ trợ hô hấp.'}},
         'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế, tăng nguy cơ ức chế hô hấp). Nếu cần: 3-5mg/kg/ngày PO chia 1-2 lần/ngày, tăng dần. Theo dõi nồng độ chặt chẽ.'
@@ -1524,7 +1606,8 @@ ANTICONVULSANTS_DRUGS = {
         'UpToDate - Phenobarbital: Drug information',
         'FDA - Luminal (phenobarbital) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'evidence_level':
+        ],
+        'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews'
         },
         'risk_flags': {
@@ -1532,60 +1615,63 @@ ANTICONVULSANTS_DRUGS = {
             'narrow_therapeutic_index': True,
             'bleeding_risk': False,
             'organ_toxicity': ['hepatic', 'respiratory', 'bone'],
-            'qt_prolongation': False,
+        'qt_prolongation': False,
             'hepatotoxicity': True,
             'nephrotoxicity': False,
             'requires_monitoring': ['Serum phenobarbital levels', 'Respiratory rate', 'Liver function', 'Bone density']
-        },
-        'guideline_tags': [
+        },guideline_tags': [
             'AAN 2018 Epilepsy Guidelines',
             'FDA Black Box Warning - Dependence and Addiction',
             'FDA Black Box Warning - Respiratory Depression',
             'ISMP High Alert Medications - Anticonvulsants'
         ]
     },
-    "Phenytoin": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
-        'Phenytoin, Dilantin', 'administration': ['PO', 'IV'], 'indications': [
+    "Phenytoin": {'group': 'Neurology - Anticonvulsant',
+        'vietnamese_name':
+        'Phenytoin, Dilantin', 'administration': ['PO', 'IV'],
+        'indications': [
         'Động kinh (tổng quát, cục bộ)', 'Status epilepticus',
         'Đau dây thần kinh sinh ba', 'Rối loạn nhịp tim (hiếm)'],
         'contraindications': ['Dị ứng', 'Suy gan nặng', 'Block nhĩ thất',
-        'Hội chứng bệnh lympho'], 'dosage': {'adult_po':
+        'Hội chứng bệnh lympho'],
+        'dosage': {'adult_po':
         '100mg x 3 lần/ngày, tăng đến 200-400mg/ngày', 'adult_iv_loading':
         '15-20mg/kg IV (tối đa 1.5g)', 'adult_iv_maintenance':
         '100mg IV mỗi 6-8 giờ sau loading', 'status_epilepticus':
         '15-20mg/kg IV x 1 lần', 'notes':
         'Theo dõi nồng độ trong máu (mục tiêu 10-20 mcg/mL). Non-linear kinetics'
-        }, 'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Giảm liều 25%',
-        'under_30': 'Giảm liều 50%'}, 'side_effects': ['Rối loạn tiêu hóa',
+        },
+        'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Giảm liều 25%',
+        'under_30': 'Giảm liều 50%'},
+        'side_effects': ['Rối loạn tiêu hóa',
         'Nystagmus (liều cao)', 'Ataxia (liều cao)',
         'Ban da (có thể nặng - SJS/TEN)', 'Hạ bạch cầu', 'Tăng men gan',
         'Loãng xương (dùng lâu dài)', 'Tăng acid uric',
-        'Rối loạn chức năng nhận thức'], 'interactions': [
+        'Rối loạn chức năng nhận thức'],
+        'interactions': [
         'Warfarin: giảm tác dụng warfarin (cảm ứng enzyme)',
         'Oral contraceptives: giảm hiệu quả',
         'Folic acid: giảm nồng độ phenytoin',
-        'Many drugs: cảm ứng CYP450, giảm nồng độ nhiều thuốc'], 'pregnancy':
+        'Many drugs: cảm ứng CYP450, giảm nồng độ nhiều thuốc'],
+        'pregnancy':
         'D - Nguy cơ dị tật thai nhi', 'mechanism_of_action':
         'Thuốc chống co giật, ổn định màng tế bào. Ức chế kênh natri voltage-gated trong màng tế bào thần kinh, ngăn cản sự lan truyền của các xung động bất thường. Chỉ tác động lên các tế bào đang hoạt động mạnh (như trong co giật), không ảnh hưởng đến hoạt động bình thường. Điều hòa dòng calci và có thể ức chế giải phóng glutamate. Được dùng trong điều trị co giật cục bộ, co giật toàn thể, và status epilepticus. Cũng được dùng trong rối loạn nhịp tim (nhưng ít dùng hơn).'
         , 'monitoring': [
         'Nồng độ phenytoin trong máu (therapeutic range: 10-20 mcg/ml, free: 1-2 mcg/ml) - QUAN TRỌNG'
         , 'Tần suất và mức độ co giật',
         'Dấu hiệu độc tính (nystagmus ở >20 mcg/ml, ataxia ở >30 mcg/ml, lú lẫn ở >40 mcg/ml)'
-        ,
         'Chức năng gan (ALT, AST, bilirubin) - có thể tăng men gan, hiếm viêm gan nặng'
-        ,
         'Công thức máu (giảm bạch cầu, giảm tiểu cầu, thiếu máu megaloblastic do thiếu folate)'
         , 'Nồng độ folate và vitamin D (phenytoin làm giảm)',
         'Chức năng thận (creatinine)',
         'Dấu hiệu hội chứng Stevens-Johnson (phát ban nặng) - nguy hiểm',
         'Răng và nướu (tăng sản nướu)', 'Xương (loãng xương do giảm vitamin D)'
-        ], 'precautions': [
+        ],
+        'precautions': [
         'Tuân thủ chặt chẽ liều và lịch dùng - bỏ liều có thể gây co giật',
         'KHÔNG được ngừng đột ngột (nguy cơ status epilepticus)',
         'Nồng độ trong máu cần được theo dõi định kỳ - có mối quan hệ không tuyến tính (saturable kinetics)'
-        ,
         'Liều tăng nhỏ có thể làm nồng độ tăng rất nhiều ở liều cao (Michaelis-Menten kinetics)'
-        ,
         'Tương tác với nhiều thuốc: giảm hiệu quả thuốc tránh thai, warfarin (cả hai đều tăng hoặc giảm tùy thuốc)'
         , 'Uống với thức ăn để giảm kích ứng dạ dày',
         'Không nghiền viên nang hoặc viên nén (giảm hấp thu)',
@@ -1593,7 +1679,8 @@ ANTICONVULSANTS_DRUGS = {
         'Nguy cơ hội chứng Stevens-Johnson - ngừng ngay nếu có phát ban',
         'Thận trọng ở suy gan (giảm chuyển hóa)',
         'Liều IV: truyền chậm (không quá 50mg/phút) để tránh hạ huyết áp, rối loạn nhịp'
-        , 'Không pha trong D5W (kết tủa), chỉ dùng NS'], 'pharmacokinetics': {
+        , 'Không pha trong D5W (kết tủa), chỉ dùng NS'],
+        'pharmacokinetics': {
         'half_life':
         '22 giờ (bình thường), dài hơn ở liều cao (saturable kinetics)',
         'onset': '30-60 phút (PO), 15-30 phút (IV)', 'duration':
@@ -1633,26 +1720,30 @@ ANTICONVULSANTS_DRUGS = {
         'Corticosteroids', 'mechanism':
         'Phenytoin cảm ứng enzyme, tăng chuyển hóa', 'effect':
         'Giảm hiệu quả corticosteroid', 'management':
-        'Tăng liều corticosteroid nếu cần.'}], 'minor': [{'drug': 'Antacids', 'mechanism': 'Giảm hấp thu phenytoin', 'effect':
+        'Tăng liều corticosteroid nếu cần.'}],
+        'minor': [{'drug': 'Antacids', 'mechanism': 'Giảm hấp thu phenytoin', 'effect':
         'Giảm nhẹ nồng độ phenytoin', 'management': 'Uống cách nhau 2-3 giờ.'}]},
         'contraindications': {'tuyệt_đối': [
         'Suy gan nặng (Child-Pugh C)', 'Block nhĩ thất độ II hoặc III',
         'Hội chứng bệnh lympho (lymphoma-like syndrome)',
-        'Tiền sử hội chứng Stevens-Johnson do phenytoin'], 'tương_đối': [
+        'Tiền sử hội chứng Stevens-Johnson do phenytoin'],
+        'tương_đối': [
         'Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều, theo dõi chặt chẽ'
         , 'Suy thận (CrCl <30) - giảm liều 50%, theo dõi nồng độ',
         'Bệnh tim mạch (rối loạn nhịp, block nhĩ thất độ I)',
         'Mang thai (nguy cơ dị tật bẩm sinh) - chỉ dùng nếu lợi ích > nguy cơ',
         'Bệnh nhân lớn tuổi (tăng nguy cơ độc tính, giảm chuyển hóa)',
         'Thiếu hụt folate (tăng nguy cơ thiếu máu megaloblastic)',
-        'Loãng xương (tăng nguy cơ gãy xương)']}, 'pregnancy_lactation': {
+        'Loãng xương (tăng nguy cơ gãy xương)']},
+        'pregnancy_lactation': {
         'fda_category': 'D', 'pregnancy_details':
         'Phenytoin có nguy cơ dị tật bẩm sinh (fetal hydantoin syndrome: dị tật tim, sứt môi/hà ếch, chậm phát triển, dị tật ngón tay). Nguy cơ dị tật bẩm sinh khoảng 5-10%. Cần bổ sung acid folic 4-5mg/ngày trước và trong thai kỳ. Chỉ dùng nếu lợi ích điều trị vượt trội nguy cơ. Nếu dùng trong thai kỳ, cần tư vấn di truyền, siêu âm chi tiết, và theo dõi chặt chẽ. Theo dõi nồng độ phenytoin thường xuyên (thay đổi trong thai kỳ).'
         , 'lactation': {'safety': 'Compatible with monitoring', 'details':
         'Phenytoin bài tiết vào sữa mẹ ở nồng độ thấp (nồng độ trong sữa mẹ khoảng 10-20% nồng độ trong huyết thanh mẹ). Nồng độ trong máu trẻ sơ sinh rất thấp (<5% nồng độ trong máu mẹ). Tác dụng phụ ở trẻ rất hiếm nhưng có thể có buồn ngủ nhẹ.'
         , 'recommendation':
         'Có thể cho con bú nhưng cần theo dõi trẻ về dấu hiệu tác dụng phụ (buồn ngủ, bú kém). Đo nồng độ phenytoin trong máu trẻ nếu có triệu chứng.'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Không cần điều chỉnh liều, nhưng theo dõi chặt chẽ chức năng gan và nồng độ trong máu'
         , 'moderate':
         'Giảm liều 25-50%, theo dõi nồng độ trong máu thường xuyên, theo dõi ALT/AST'
@@ -1660,13 +1751,14 @@ ANTICONVULSANTS_DRUGS = {
         'Tránh dùng hoặc dùng liều rất thấp dưới sự giám sát chặt chẽ. Theo dõi nồng độ trong máu và ALT/AST thường xuyên. Nguy cơ tích lũy và độc tính cao.'
         , 'notes':
         'Phenytoin chuyển hóa ở gan qua CYP2C9 và CYP2C19. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính. Đặc biệt thận trọng vì phenytoin có thể gây viêm gan.'
-        }, 'overdose_management': {'symptoms': [
+        },
+        'overdose_management': {'symptoms': [
         'Triệu chứng thần kinh: nystagmus (dấu hiệu sớm nhất), ataxia, lú lẫn, buồn ngủ, hôn mê, co giật'
-        ,
         'Rối loạn tim mạch: nhịp chậm, block nhĩ thất, hạ huyết áp, rối loạn nhịp',
         'Rối loạn hô hấp: suy hô hấp, ngừng thở',
         'Rối loạn tiêu hóa: buồn nôn, nôn',
-        'Triệu chứng khác: sốt, giảm bạch cầu, rối loạn điện giải'], 'antidote':
+        'Triệu chứng khác: sốt, giảm bạch cầu, rối loạn điện giải'],
+        'antidote':
         'Không có antidote đặc hiệu', 'treatment': [
         'Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần',
         'Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)',
@@ -1677,20 +1769,25 @@ ANTICONVULSANTS_DRUGS = {
         'Xử trí block nhĩ thất: atropine, pacemaker nếu cần',
         'Hỗ trợ hô hấp: thở máy nếu suy hô hấp',
         'Lọc máu: không hiệu quả (gắn protein cao), nhưng có thể xem xét ở trường hợp nặng'
-        , 'Theo dõi công thức máu (nguy cơ giảm bạch cầu)'], 'monitoring':
+        , 'Theo dõi công thức máu (nguy cơ giảm bạch cầu)'],
+        'monitoring':
         'Theo dõi liên tục ý thức, hô hấp, tim mạch, điện tâm đồ, nồng độ phenytoin trong máu (total và free), công thức máu, chức năng gan, điện giải'
-        }, 'reversal_agents': None, 'administration_instructions': {'oral': {
+        },
+        'reversal_agents': None, 'administration_instructions': {'oral': {
         'with_food':
         'Uống với thức ăn hoặc ngay sau bữa ăn để giảm kích ứng dạ dày và tăng hấp thu'
         , 'timing':
         'Chia liều 2-3 lần/ngày. Uống cùng thời điểm mỗi ngày để duy trì nồng độ ổn định. Không bỏ liều. KHÔNG nghiền viên nang hoặc viên nén (giảm hấp thu).'
-        }, 'iv': {'reconstitution':
+        },
+        'iv': {'reconstitution':
         'Pha trong 0.9% NaCl (không dùng D5W - kết tủa). Nồng độ tối đa 10mg/ml. Không trộn với các thuốc khác.'
         , 'infusion_rate':
         'Truyền chậm: không quá 50mg/phút (tối đa 50mg/phút) để tránh hạ huyết áp, rối loạn nhịp, ngừng tim. Theo dõi huyết áp, nhịp tim liên tục trong khi truyền.'
-        , 'compatibility': ['0.9% NaCl', 'Không trộn với các thuốc khác']}, 'notes':
+        , 'compatibility': ['0.9% NaCl', 'Không trộn với các thuốc khác']},
+        'notes':
         'Chỉ dùng NS để pha. Truyền qua đường tĩnh mạch lớn. Theo dõi huyết áp, nhịp tim, điện tâm đồ trong khi truyền. Không dùng filter trong dây truyền (có thể làm giảm nồng độ).'
-        }, 'pediatric_dosing': {'neonates':
+        },
+        'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế). Nếu cần: 5mg/kg/ngày PO chia 2-3 lần, tăng dần. Theo dõi nồng độ chặt chẽ.',
         'infants':
         '1 tháng - 2 tuổi: 5-8mg/kg/ngày PO chia 2-3 lần. IV loading: 15-20mg/kg IV (tối đa 1.5g). Theo dõi nồng độ chặt chẽ. Non-linear kinetics - tăng liều nhỏ có thể làm nồng độ tăng rất nhiều.',
@@ -1699,13 +1796,16 @@ ANTICONVULSANTS_DRUGS = {
         'adolescents':
         '≥12 tuổi: Liều người lớn. 100mg x 3 lần/ngày, tăng đến 200-400mg/ngày. IV loading: 15-20mg/kg IV (tối đa 1.5g). Theo dõi nồng độ trong máu. Bổ sung folate và vitamin D.',
         'notes':
-        'Theo dõi nồng độ trong máu chặt chẽ (therapeutic range: 10-20 mcg/mL). Non-linear kinetics - tăng liều nhỏ có thể làm nồng độ tăng rất nhiều ở liều cao. Bổ sung folate và vitamin D khi dùng kéo dài. Theo dõi dấu hiệu độc tính (nystagmus, ataxia, lú lẫn).'}, 'geriatric_dosing': {'considerations':
+        'Theo dõi nồng độ trong máu chặt chẽ (therapeutic range: 10-20 mcg/mL). Non-linear kinetics - tăng liều nhỏ có thể làm nồng độ tăng rất nhiều ở liều cao. Bổ sung folate và vitamin D khi dùng kéo dài. Theo dõi dấu hiệu độc tính (nystagmus, ataxia, lú lẫn).'},
+        'geriatric_dosing': {'considerations':
         'Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ (nystagmus, ataxia, lú lẫn). Chuyển hóa có thể giảm, tăng nguy cơ tích lũy. Suy gan, suy thận phổ biến hơn. Tăng nguy cơ loãng xương.',
         'dose_adjustment':
         'Khởi đầu với liều thấp hơn (100mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng gan, thận: CrCl 30-60 → giảm liều 25%, CrCl <30 → giảm liều 50%. Theo dõi nồng độ chặt chẽ.',
         'monitoring':
-        'Theo dõi nồng độ trong máu thường xuyên hơn (non-linear kinetics). Theo dõi dấu hiệu độc tính (nystagmus, ataxia, lú lẫn). Theo dõi chức năng gan (ALT, AST). Theo dõi chức năng thận (creatinine, CrCl). Bổ sung folate và vitamin D. Theo dõi mật độ xương nếu dùng lâu dài.'}, 'brand_names': {'vietnam': [
-        'Phenytoin', 'Dilantin', 'Phenytoin Stada', 'Phenyto'], 'common': [
+        'Theo dõi nồng độ trong máu thường xuyên hơn (non-linear kinetics). Theo dõi dấu hiệu độc tính (nystagmus, ataxia, lú lẫn). Theo dõi chức năng gan (ALT, AST). Theo dõi chức năng thận (creatinine, CrCl). Bổ sung folate và vitamin D. Theo dõi mật độ xương nếu dùng lâu dài.'},
+        'brand_names': {'vietnam': [
+        'Phenytoin', 'Dilantin', 'Phenytoin Stada', 'Phenyto'],
+        'common': [
         'Dilantin', 'Phenytoin'],
         'range': '5,000 - 20,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
@@ -1714,7 +1814,8 @@ ANTICONVULSANTS_DRUGS = {
         'UpToDate - Phenytoin: Drug information',
         'FDA - Dilantin (phenytoin) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'evidence_level':
+        ],
+        'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews',
         'last_updated': '2025-02-18'
         },
@@ -1723,12 +1824,11 @@ ANTICONVULSANTS_DRUGS = {
             'narrow_therapeutic_index': True,
             'bleeding_risk': False,
             'organ_toxicity': ['hepatic', 'hematologic', 'dermatologic', 'bone'],
-            'qt_prolongation': False,
+        'qt_prolongation': False,
             'hepatotoxicity': True,
             'nephrotoxicity': False,
             'requires_monitoring': ['Serum phenytoin levels', 'Liver function', 'CBC', 'Skin rash', 'Bone density']
-        },
-        'guideline_tags': [
+        },guideline_tags': [
             'AAN 2018 Epilepsy Guidelines',
             'FDA Black Box Warning - Stevens-Johnson Syndrome',
             'FDA Black Box Warning - Suicidal Behavior',
@@ -1938,20 +2038,27 @@ ANTICONVULSANTS_DRUGS = {
         ]
     },
     
-    "Topiramate": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
-        'Topiramate, Topamax', 'administration': ['PO'], 'indications': [
+    "Topiramate": {'group': 'Neurology - Anticonvulsant',
+        "pregnancy": "D - Có bằng chứng về nguy cơ dị tật bẩm sinh",
+        ', 'vietnamese_name':
+        'Topiramate, Topamax', 'administration': ['PO'],
+        'indications': [
         'Động kinh cục bộ', 'Động kinh tổng quát', 'Migraine phòng ngừa',
-        'Rối loạn lưỡng cực (off-label)'], 'contraindications': [
-        'Dị ứng', 'Sỏi thận tái phát', 'Glaucoma góc hẹp'], 'dosage': {
+        'Rối loạn lưỡng cực (off-label)'],
+        'contraindications': [
+        'Dị ứng', 'Sỏi thận tái phát', 'Glaucoma góc hẹp'],
+        'dosage': {
         'adult_epilepsy':
         '25-50mg x 2 lần/ngày, tăng dần đến 200-400mg/ngày (chia 2 lần)',
         'adult_migraine': '25mg/ngày, tăng đến 100mg/ngày (chia 2 lần)',
         'adult_max': '400mg/ngày', 'notes':
-        'Tăng liều chậm. Uống nhiều nước để tránh sỏi thận'}, 'side_effects': [
+        'Tăng liều chậm. Uống nhiều nước để tránh sỏi thận'},
+        'side_effects': [
         'Sỏi thận (tăng nguy cơ)', 'Giảm cân', 'Chóng mặt', 'Buồn ngủ',
         'Rối loạn nhận thức (khó tập trung, chậm suy nghĩ)', 'Dị cảm (tê, ngứa)',
         'Mất vị giác (metallic taste)', 'Tăng nhãn áp (glaucoma góc hẹp)',
-        'Toan chuyển hóa (metabolic acidosis)'], 'interactions': [
+        'Toan chuyển hóa (metabolic acidosis)'],
+        'interactions': [
         'Phenytoin, Carbamazepine: giảm nồng độ topiramate',
         'Valproate: tăng nguy cơ tăng amoniac máu',
         'Oral contraceptives: có thể giảm hiệu quả (cần liều cao hơn)',
@@ -1966,11 +2073,11 @@ ANTICONVULSANTS_DRUGS = {
         'Rối loạn nhận thức: khó tập trung, chậm suy nghĩ, suy giảm trí nhớ (phổ biến)'
         , 'Giảm cân - theo dõi cân nặng',
         'Nhãn áp (nếu có triệu chứng glaucoma)',
-        'Dấu hiệu dị cảm (tê, ngứa) - phổ biến'], 'precautions': [
+        'Dấu hiệu dị cảm (tê, ngứa) - phổ biến'],
+        'precautions': [
         'Uống nhiều nước (2-3L/ngày) để giảm nguy cơ sỏi thận - QUAN TRỌNG',
         'Tăng liều chậm để giảm tác dụng phụ nhận thức',
         'Rối loạn nhận thức (khó tập trung, chậm suy nghĩ) - phổ biến, có thể ảnh hưởng công việc, học tập'
-        ,
         'Giảm cân - có thể là tác dụng phụ hoặc lợi ích tùy bệnh nhân, theo dõi cân nặng'
         , 'Dị cảm (tê, ngứa) - phổ biến, thường tự khỏi',
         'Mất vị giác (metallic taste) - có thể ảnh hưởng ăn uống',
@@ -1980,13 +2087,15 @@ ANTICONVULSANTS_DRUGS = {
         'Thận trọng khi dùng với phenytoin, carbamazepine (giảm nồng độ topiramate)',
         'Thận trọng khi dùng với valproate (tăng nguy cơ tăng amoniac máu)',
         'Thận trọng với oral contraceptives (có thể giảm hiệu quả)',
-        'Không ngừng đột ngột (tăng nguy cơ co giật)'], 'pharmacokinetics': {
+        'Không ngừng đột ngột (tăng nguy cơ co giật)'],
+        'pharmacokinetics': {
         'half_life': '19-25 giờ (dài, cho phép dùng 2 lần/ngày)', 'onset':
         'Vài ngày đến vài tuần', 'duration': 'Dài (do half-life dài)',
         'protein_binding': '15-41% (thấp)', 'metabolism':
         'Gan (một phần, không phụ thuộc CYP450 chính), thận (thải trừ 70% nguyên dạng)'
         , 'clearance':
-        'Thận (70% nguyên dạng), gan (30% chuyển hóa). Không phụ thuộc CYP450 chính nên ít tương tác enzyme hơn.'}, 'storage':
+        'Thận (70% nguyên dạng), gan (30% chuyển hóa). Không phụ thuộc CYP450 chính nên ít tương tác enzyme hơn.'},
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.'
         , 'black_box_warnings':
         'Nguy cơ dị tật bẩm sinh (cleft lip/palate) khi dùng trong thai kỳ - phân loại D. Nguy cơ toan chuyển hóa có thể gây hậu quả nghiêm trọng. Nguy cơ tăng nhãn áp (glaucoma góc hẹp) - chống chỉ định. Nguy cơ sỏi thận - chống chỉ định trong sỏi thận tái phát.'
@@ -2005,7 +2114,8 @@ ANTICONVULSANTS_DRUGS = {
         }, {'drug': 'Digoxin', 'mechanism':
         'Topiramate có thể giảm nồng độ digoxin', 'effect':
         'Giảm tác dụng digoxin, có thể mất kiểm soát nhịp tim', 'management':
-        'Theo dõi nồng độ digoxin, điều chỉnh liều nếu cần.'}], 'minor': [{
+        'Theo dõi nồng độ digoxin, điều chỉnh liều nếu cần.'}],
+        'minor': [{
         'drug': 'Metformin', 'mechanism':
         'Cả hai đều có thể gây toan chuyển hóa', 'effect':
         'Tăng nguy cơ toan chuyển hóa', 'management':
@@ -2013,7 +2123,8 @@ ANTICONVULSANTS_DRUGS = {
         'contraindications': {'tuyệt_đối': [
         'Dị ứng topiramate hoặc các thành phần khác',
         'Glaucoma góc hẹp (tăng nhãn áp)',
-        'Sỏi thận tái phát (tăng nguy cơ)'], 'tương_đối': [
+        'Sỏi thận tái phát (tăng nguy cơ)'],
+        'tương_đối': [
         'Suy thận nặng (CrCl <30) - giảm liều, tăng khoảng cách liều',
         'Suy gan nặng - giảm liều',
         'Mang thai (nguy cơ dị tật bẩm sinh) - phân loại D, chỉ dùng nếu lợi ích > nguy cơ'
@@ -2035,7 +2146,8 @@ ANTICONVULSANTS_DRUGS = {
         , 'Rối loạn tiêu hóa: buồn nôn, nôn',
         'Rối loạn thị giác: nhìn mờ, rối loạn thị giác',
         'Toan chuyển hóa: giảm bicarbonate, tăng anion gap',
-        'Rối loạn tim mạch: nhịp tim chậm, hạ huyết áp (hiếm)'], 'antidote':
+        'Rối loạn tim mạch: nhịp tim chậm, hạ huyết áp (hiếm)'],
+        'antidote':
         'Không có antidote đặc hiệu. Điều trị hỗ trợ', 'treatment': [
         'Đánh giá đường thở, hô hấp, tuần hoàn. Hỗ trợ hô hấp nếu cần',
         'Rửa dạ dày nếu trong vòng 1-2 giờ sau uống (nếu bệnh nhân tỉnh táo)',
@@ -2045,22 +2157,27 @@ ANTICONVULSANTS_DRUGS = {
         'Xử trí co giật: benzodiazepine nếu có',
         'Hỗ trợ hô hấp: thở máy nếu suy hô hấp',
         'Lọc máu: có thể hiệu quả (70% bài tiết qua thận nguyên dạng), xem xét ở trường hợp nặng'
-        ], 'monitoring':
+        ],
+        'monitoring':
         'Theo dõi ý thức, hô hấp, tim mạch, điện giải (bicarbonate, anion gap), chức năng thận'},
-        'reversal_agents': {'available': False, 'agents': [], 'notes':
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes':
         'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Lọc máu có thể hiệu quả (70% bài tiết qua thận nguyên dạng) ở trường hợp nặng.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn', 'timing':
         'Chia 2 lần/ngày (sáng, tối). Tăng liều chậm để giảm tác dụng phụ. Uống nhiều nước (2-3L/ngày) để giảm nguy cơ sỏi thận. KHÔNG ngừng đột ngột - giảm liều dần dần.'
-        }, 'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': []
+        },
+        'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
+        'compatibility': [],
+        'incompatibility': []
         }
         },
         'references': {'primary_sources': ['Lexicomp - Topiramate',
         'UpToDate - Topiramate: Drug information',
         'FDA - Topamax (topiramate) prescribing information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 13th ed."
-        ], 'evidence_level':
+        ],
+        'evidence_level':
         'A - Evidence from well-designed randomized controlled trials and systematic reviews',
         'last_updated': '2025-02-18'
         },
@@ -2069,26 +2186,26 @@ ANTICONVULSANTS_DRUGS = {
             'narrow_therapeutic_index': False,
             'icu_critical_care_only': False,
             'bleeding_risk': None,
-            'organ_toxicity': {'renal': 'Kidney stones (contraindicated in recurrent stones)', 'ophthalmic': 'Glaucoma (narrow-angle - contraindicated)', 'metabolic': 'Metabolic acidosis', 'teratogenic': 'Black Box Warning (cleft lip/palate)'},
-            'qt_prolongation': False,
+            'organ_toxicity': {'renal': 'Kidney stones (contraindicated in recurrent stones)', 'ophthalmic': 'Glaucoma (narrow-angle - contraindicated)', 'metabolic': 'Metabolic acidosis', 'teratogenic': 'Black Box Warning (cleft lip/palate)'},qt_prolongation': False,
             'hepatotoxicity': False,
             'nephrotoxicity': 'Kidney stones risk',
-            'requires_monitoring': ['Renal function (kidney stones risk)', 'Bicarbonate (metabolic acidosis)', 'Cognitive function', 'Weight', 'Teratogenicity (pregnancy - Black Box Warning)'],
-            'look_alike_sound_alike': ['Topiramate', 'Topotecan']
-        },
-        'guideline_tags': [
+            'requires_monitoring': ['Renal function (kidney stones risk)', 'Bicarbonate (metabolic acidosis)', 'Cognitive function', 'Weight', 'Teratogenicity (pregnancy - Black Box Warning)'],look_alike_sound_alike': ['Topiramate', 'Topotecan']
+        },guideline_tags': [
             'FDA Black Box Warning - Teratogenicity (Cleft Lip/Palate)',
             'AAN Guidelines - Epilepsy Treatment',
             'AAN Guidelines - Migraine Prevention',
             'ILAE Guidelines - Antiepileptic Drugs'
         ]
     },
-    "Valproate": {'group': 'Neurology - Anticonvulsant', 'vietnamese_name':
+    "Valproate": {'group': 'Neurology - Anticonvulsant',
+        'vietnamese_name':
         'Valproate, Valproic Acid, Depakote', 'administration': ['PO', 'IV'],
         'indications': ['Động kinh (nhiều loại)', 'Rối loạn lưỡng cực',
-        'Migraine phòng ngừa', 'Status epilepticus'], 'contraindications': [
+        'Migraine phòng ngừa', 'Status epilepticus'],
+        'contraindications': [
         'Bệnh gan hoạt động', 'Rối loạn chuyển hóa chu trình urea',
-        'Suy gan nặng', 'Có thai (cho rối loạn lưỡng cực)'], 'dosage': {
+        'Suy gan nặng', 'Có thai (cho rối loạn lưỡng cực)'],
+        'dosage': {
         'adult_po': '250-500mg x 2-3 lần/ngày, tăng đến 1000-3000mg/ngày',
         'adult_iv': '15-20mg/kg IV x 1 lần, sau đó 5-10mg/kg mỗi 6 giờ',
         'adult_max': '60mg/kg/ngày (không quá 3000mg/ngày)', 'notes':
@@ -2096,7 +2213,8 @@ ANTICONVULSANTS_DRUGS = {
         'side_effects': ['Buồn nôn, nôn', 'Tăng cân', 'Rụng tóc',
         'Tăng men gan', 'Viêm tụy (hiếm nhưng nguy hiểm)', 'Thiếu tiểu cầu',
         'Dị tật thai nhi (neural tube defects)', 'Loãng xương (dùng lâu dài)',
-        'Tăng ammonia máu'], 'interactions': [
+        'Tăng ammonia máu'],
+        'interactions': [
         'Phenytoin/Carbamazepine: giảm nồng độ valproate',
         'Lamotrigine: tăng nồng độ lamotrigine',
         'Aspirin: tăng nồng độ valproate', 'Warfarin: có thể tăng tác dụng'],
@@ -2105,7 +2223,6 @@ ANTICONVULSANTS_DRUGS = {
         'Valproate (valproic acid) ức chế enzyme GABA transaminase, tăng nồng độ GABA (gamma-aminobutyric acid) - chất dẫn truyền thần kinh ức chế chính trong não. Cũng ức chế kênh natri voltage-gated và kênh calci T-type, làm giảm tính kích thích của tế bào thần kinh. Có thể ức chế histone deacetylase. Tác dụng: chống động kinh (nhiều loại), ổn định tâm trạng (bipolar), phòng ngừa migraine. Cơ chế phức tạp, tác dụng trên nhiều hệ thống'
         , 'monitoring': [
         'Nồng độ valproate trong máu (mục tiêu 50-100 mcg/mL, hoặc 350-700 μmol/L) - định kỳ'
-        ,
         'Chức năng gan (ALT, AST, bilirubin) trước khi bắt đầu, sau 2 tuần, sau 1 tháng, sau đó mỗi 3-6 tháng'
         , 'Tiểu cầu (platelet count) - định kỳ (có thể gây giảm tiểu cầu)',
         'Ammonia máu nếu có triệu chứng lú lẫn, buồn nôn, nôn (dấu hiệu tăng ammonia)'
@@ -2116,15 +2233,10 @@ ANTICONVULSANTS_DRUGS = {
         'Mật độ xương nếu dùng lâu dài (tăng nguy cơ loãng xương)'],
         'precautions': [
         'THEO DÕI CHẶT CHẼ chức năng gan, đặc biệt trong 6 tháng đầu (nguy cơ viêm gan nặng, có thể tử vong)'
-        ,
         'NGỪNG NGAY nếu có dấu hiệu viêm tụy (đau bụng nặng) hoặc độc gan (vàng da)'
-        ,
         'Theo dõi nồng độ trong máu để điều chỉnh liều (therapeutic drug monitoring)'
-        ,
         'Bổ sung acid folic trước và trong thai kỳ (giảm nguy cơ neural tube defects)'
-        ,
         'Tránh dùng trong thai kỳ nếu có thể (nguy cơ dị tật thai nhi cao - neural tube defects, dị tật tim, dị tật mặt)'
-        ,
         'Điều chỉnh liều khi dùng với lamotrigine (tăng nồng độ lamotrigine → giảm liều lamotrigine 50%)'
         , 'Thận trọng ở bệnh nhân suy gan, suy thận (giảm liều)',
         'Có thể gây tăng cân (cần theo dõi và tư vấn chế độ ăn)',
@@ -2136,7 +2248,8 @@ ANTICONVULSANTS_DRUGS = {
         'Ngắn (cần dùng 2-3 lần/ngày)', 'protein_binding':
         '80-95% (cao, tăng ở liều cao do bão hòa)', 'clearance':
         'Gan (chuyển hóa qua glucuronidation, beta-oxidation, CYP450), thận (thải trừ)'
-        }, 'storage':
+        },
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nang: không làm lạnh'
         , 'black_box_warnings':
         'Viêm gan nặng có thể gây tử vong - nguy cơ cao nhất ở trẻ em <2 tuổi, dùng nhiều thuốc chống động kinh, bệnh gan. Viêm tụy có thể gây tử vong. Dị tật thai nhi (neural tube defects) - chống chỉ định trong thai kỳ cho rối loạn lưỡng cực. Giảm tiểu cầu có thể gây chảy máu'
@@ -2164,16 +2277,19 @@ ANTICONVULSANTS_DRUGS = {
         'Tăng liều valproate nếu cần. Theo dõi nồng độ.'}, {'drug': 'Rifampin',
         'mechanism': 'Cảm ứng CYP450, tăng chuyển hóa valproate', 'effect':
         'Giảm nồng độ valproate đáng kể', 'management':
-        'Tăng liều valproate. Theo dõi nồng độ và điều chỉnh liều.'}], 'minor':
+        'Tăng liều valproate. Theo dõi nồng độ và điều chỉnh liều.'}],
+        'minor':
         [{'drug': 'Metronidazole', 'mechanism':
         'Có thể ức chế chuyển hóa valproate', 'effect':
         'Tăng nhẹ nồng độ valproate', 'management':
-        'Theo dõi nồng độ nếu dùng lâu dài'}]}, 'contraindications': {
+        'Theo dõi nồng độ nếu dùng lâu dài'}]},
+        'contraindications': {
         'tuyệt_đối': ['Bệnh gan hoạt động (viêm gan cấp hoặc mạn)',
         'Rối loạn chuyển hóa chu trình urea (urea cycle disorders)',
         'Suy gan nặng (Child-Pugh C)',
         'Có thai (cho rối loạn lưỡng cực) - nguy cơ dị tật thai nhi cao',
-        'Dị ứng valproate'], 'tương_đối': [
+        'Dị ứng valproate'],
+        'tương_đối': [
         'Suy gan nhẹ đến trung bình (Child-Pugh A-B) - giảm liều, theo dõi chặt chẽ'
         , 'Suy thận nặng (CrCl <30) - giảm liều',
         'Thiếu hụt tiểu cầu - tăng nguy cơ chảy máu',
@@ -2187,14 +2303,16 @@ ANTICONVULSANTS_DRUGS = {
         'Valproate bài tiết vào sữa mẹ ở nồng độ thấp (1-10% liều mẹ). Nồng độ trong máu trẻ bú mẹ thường <5% nồng độ mẹ. Ít báo cáo về tác dụng phụ ở trẻ bú mẹ. Tuy nhiên, cần theo dõi trẻ về dấu hiệu buồn ngủ, tăng cân chậm, tăng men gan.'
         , 'recommendation':
         'Có thể dùng khi cho con bú với theo dõi chặt chẽ trẻ. Theo dõi dấu hiệu buồn ngủ, tăng cân chậm, vàng da ở trẻ. Nếu trẻ có dấu hiệu bất thường, cân nhắc ngừng cho con bú hoặc giảm liều.'
-        }}, 'hepatic_adjustment': {'mild':
+        }},
+        'hepatic_adjustment': {'mild':
         'Giảm liều 25-50%. Theo dõi chức năng gan mỗi 3 tháng', 'moderate':
         'Giảm liều 50%. Theo dõi chức năng gan mỗi 1-2 tháng. Tránh dùng nếu có thể'
         , 'severe':
         'Không dùng (chống chỉ định). Nếu bắt buộc, dùng liều rất thấp dưới sự giám sát chặt chẽ, theo dõi chức năng gan hàng tuần'
         , 'notes':
         'Valproate chuyển hóa ở gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và độc tính gan. Nguy cơ viêm gan nặng cao nhất ở trẻ em <2 tuổi và bệnh nhân dùng nhiều thuốc chống động kinh. Theo dõi ALT/AST, bilirubin định kỳ.'
-        }, 'overdose_management': {'symptoms': ['Buồn nôn, nôn, tiêu chảy',
+        },
+        'overdose_management': {'symptoms': ['Buồn nôn, nôn, tiêu chảy',
         'An thần, lú lẫn, hôn mê', 'Rối loạn nhịp tim, block nhĩ thất',
         'Tăng ammonia máu (lú lẫn, hôn mê)', 'Hạ huyết áp', 'Suy hô hấp',
         'Độc gan (tăng ALT/AST, vàng da)', 'Giảm tiểu cầu, chảy máu'],
@@ -2205,26 +2323,31 @@ ANTICONVULSANTS_DRUGS = {
         , 'Theo dõi nồng độ valproate trong máu',
         'Điều trị hạ huyết áp: truyền dịch, vận mạch nếu cần',
         'Điều trị tăng ammonia: L-carnitine (100mg/kg/ngày IV hoặc PO), có thể dùng L-arginine'
-        ,
         'Lọc máu (hemodialysis) nếu nồng độ >850 mcg/mL hoặc có triệu chứng nặng (hiệu quả do protein binding thấp ở liều cao)'
         , 'Theo dõi chức năng gan, tiểu cầu, ammonia máu',
         'Điều trị hỗ trợ: chống nôn, truyền dịch, theo dõi điện giải'],
         'monitoring':
         'Nồng độ valproate trong máu, ALT/AST, bilirubin, tiểu cầu, ammonia máu, điện giải, ECG, huyết áp, nhịp tim, ý thức'
-        }, 'reversal_agents': {'available': False, 'agents': [], 'notes':
+        },
+        'reversal_agents': {'available': False, 'agents': [],
+        'notes':
         'Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay. Điều trị độc tính gan và hạ tiểu cầu nếu có. Có thể cần lọc máu để loại bỏ thuốc.'},
         'administration_instructions': {'oral': {'with_food':
         'Có thể dùng với hoặc không có thức ăn. Dùng với thức ăn có thể giảm buồn nôn'
         , 'timing':
         'Chia 2-3 lần/ngày (do half-life ngắn). Có thể dùng cùng bữa ăn để giảm kích ứng dạ dày'
-        }, 'iv': {'reconstitution':
+        },
+        'iv': {'reconstitution':
         'Pha với D5W hoặc NS để nồng độ 1-4mg/mL. Không pha với các dung dịch khác'
         , 'infusion_rate':
         'Truyền 15-20mg/kg trong 60 phút (không quá 20mg/phút)',
-        'compatibility': ['D5W', 'NS', "Ringer's lactate"], 'incompatibility':
-        ['Không pha với các thuốc khác trong cùng chai'], 'notes':
+        'compatibility': ['D5W', 'NS', "Ringer's lactate"],
+        'incompatibility':
+        ['Không pha với các thuốc khác trong cùng chai'],
+        'notes':
         'Truyền chậm để tránh kích ứng. Theo dõi huyết áp, nhịp tim trong khi truyền. Có thể gây kích ứng tĩnh mạch.'
-        }}, 'pediatric_dosing': {'neonates':
+        }},
+        'pediatric_dosing': {'neonates':
         'Không khuyến cáo cho trẻ sơ sinh <1 tháng tuổi (dữ liệu hạn chế, tăng nguy cơ viêm gan). Nếu cần: 10-15mg/kg/ngày PO chia 2-3 lần, tăng dần. Theo dõi chức năng gan chặt chẽ.',
         'infants':
         '1 tháng - 2 tuổi: 10-15mg/kg/ngày PO chia 2-3 lần, tăng đến 20-30mg/kg/ngày nếu cần. TĂNG NGUY CƠ VIÊM GAN NẶNG ở trẻ <2 tuổi - theo dõi chức năng gan chặt chẽ. Theo dõi nồng độ trong máu (mục tiêu 50-100 mcg/mL).',
@@ -2233,22 +2356,27 @@ ANTICONVULSANTS_DRUGS = {
         'adolescents':
         '≥12 tuổi: Liều người lớn. 250-500mg x 2-3 lần/ngày, tăng đến 1000-3000mg/ngày. Theo dõi nồng độ trong máu (mục tiêu 50-100 mcg/mL). Theo dõi chức năng gan, tiểu cầu.',
         'notes':
-        'TĂNG NGUY CƠ VIÊM GAN NẶNG ở trẻ <2 tuổi, đặc biệt khi dùng nhiều thuốc chống động kinh. Theo dõi chức năng gan chặt chẽ trong 6 tháng đầu. Theo dõi nồng độ trong máu (therapeutic range: 50-100 mcg/mL). Theo dõi tiểu cầu. Bổ sung acid folic trước và trong thai kỳ. NGỪNG NGAY nếu có dấu hiệu viêm gan (vàng da) hoặc viêm tụy (đau bụng nặng).'}, 'geriatric_dosing': {'considerations':
+        'TĂNG NGUY CƠ VIÊM GAN NẶNG ở trẻ <2 tuổi, đặc biệt khi dùng nhiều thuốc chống động kinh. Theo dõi chức năng gan chặt chẽ trong 6 tháng đầu. Theo dõi nồng độ trong máu (therapeutic range: 50-100 mcg/mL). Theo dõi tiểu cầu. Bổ sung acid folic trước và trong thai kỳ. NGỪNG NGAY nếu có dấu hiệu viêm gan (vàng da) hoặc viêm tụy (đau bụng nặng).'},
+        'geriatric_dosing': {'considerations':
         'Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ (buồn nôn, an thần, lú lẫn). Suy gan, suy thận phổ biến hơn. Tăng nguy cơ tích lũy và độc tính gan. Tăng nguy cơ loãng xương.',
         'dose_adjustment':
         'Khởi đầu với liều thấp hơn (250mg x 2 lần/ngày). Tăng dần chậm hơn. Điều chỉnh liều theo chức năng gan, thận: CrCl <30 → giảm liều. Theo dõi chức năng gan chặt chẽ.',
         'monitoring':
-        'Theo dõi chức năng gan thường xuyên hơn (ALT, AST, bilirubin) - đặc biệt trong 6 tháng đầu. Theo dõi nồng độ trong máu (mục tiêu 50-100 mcg/mL). Theo dõi tiểu cầu. Theo dõi ammonia máu nếu có triệu chứng lú lẫn. Theo dõi dấu hiệu viêm tụy (đau bụng nặng). Theo dõi mật độ xương nếu dùng lâu dài.'}, 'brand_names': {'vietnam': [
-        'Valproate', 'Valproic Acid', 'Depakote', 'Valproate Stada'], 'common': [
+        'Theo dõi chức năng gan thường xuyên hơn (ALT, AST, bilirubin) - đặc biệt trong 6 tháng đầu. Theo dõi nồng độ trong máu (mục tiêu 50-100 mcg/mL). Theo dõi tiểu cầu. Theo dõi ammonia máu nếu có triệu chứng lú lẫn. Theo dõi dấu hiệu viêm tụy (đau bụng nặng). Theo dõi mật độ xương nếu dùng lâu dài.'},
+        'brand_names': {'vietnam': [
+        'Valproate', 'Valproic Acid', 'Depakote', 'Valproate Stada'],
+        'common': [
         'Depakote', 'Valproate', 'Valproic Acid'],
         'range': '10,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note':
-        'Giá thay đổi theo thương hiệu và nhà thuốc. Valproate generic thường rẻ hơn (10,000-25,000 VND/viên 500mg). Depakote (brand) thường đắt hơn (25,000-40,000 VND/viên 500mg). Dạng IV: 100,000-200,000 VND/lọ 500mg.'},         'references': {'primary_sources': [
+        'Giá thay đổi theo thương hiệu và nhà thuốc. Valproate generic thường rẻ hơn (10,000-25,000 VND/viên 500mg). Depakote (brand) thường đắt hơn (25,000-40,000 VND/viên 500mg). Dạng IV: 100,000-200,000 VND/lọ 500mg.'},
+        'references': {'primary_sources': [
         'FDA Drug Label - Depakote (valproate sodium)',
         'UpToDate - Valproate: Drug information',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",
         'Epilepsia - ILAE treatment guidelines',
-        'American Academy of Neurology guidelines'], 'last_updated':
+        'American Academy of Neurology guidelines'],
+        'last_updated':
         '2024-12-19', 'evidence_level':
         'High - Multiple RCTs and systematic reviews'},
         'risk_flags': {
@@ -2256,14 +2384,11 @@ ANTICONVULSANTS_DRUGS = {
             'narrow_therapeutic_index': False,
             'icu_critical_care_only': False,
             'bleeding_risk': 'Moderate (thrombocytopenia)',
-            'organ_toxicity': {'hepatic': 'Black Box Warning (fatal hepatitis)', 'pancreatic': 'Black Box Warning (fatal pancreatitis)', 'hematologic': 'Thrombocytopenia', 'teratogenic': 'Black Box Warning (neural tube defects)'},
-            'qt_prolongation': False,
+            'organ_toxicity': {'hepatic': 'Black Box Warning (fatal hepatitis)', 'pancreatic': 'Black Box Warning (fatal pancreatitis)', 'hematologic': 'Thrombocytopenia', 'teratogenic': 'Black Box Warning (neural tube defects)'},qt_prolongation': False,
             'hepatotoxicity': 'Black Box Warning (fatal)',
             'nephrotoxicity': False,
-            'requires_monitoring': ['Liver function (Black Box Warning - first 6 months)', 'Platelet count', 'Serum valproate levels (50-100 mcg/mL)', 'Pancreatitis signs (Black Box Warning)', 'Ammonia levels', 'Teratogenicity (pregnancy - Black Box Warning)'],
-            'look_alike_sound_alike': ['Valproate', 'Valproic acid', 'Divalproex']
-        },
-        'guideline_tags': [
+            'requires_monitoring': ['Liver function (Black Box Warning - first 6 months)', 'Platelet count', 'Serum valproate levels (50-100 mcg/mL)', 'Pancreatitis signs (Black Box Warning)', 'Ammonia levels', 'Teratogenicity (pregnancy - Black Box Warning)'],look_alike_sound_alike': ['Valproate', 'Valproic acid', 'Divalproex']
+        },guideline_tags': [
             'FDA Black Box Warning - Fatal Hepatitis',
             'FDA Black Box Warning - Fatal Pancreatitis',
             'FDA Black Box Warning - Teratogenicity (Neural Tube Defects)',

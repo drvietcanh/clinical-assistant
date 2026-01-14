@@ -46,7 +46,7 @@ GROWTH_FACTORS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Cholestyramine: giảm hấp thu",
                 "Thuốc chống đông/kháng tiểu cầu: tăng nguy cơ huyết khối do tăng số lượng tiểu cầu"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": (
                 "Eltrombopag là chất chủ vận thụ thể thrombopoietin (TPO receptor agonist, non-peptide). "
                 "Thrombopoietin là hormone tự nhiên kích thích sản xuất tiểu cầu từ megakaryocytes trong tủy xương. "
@@ -233,7 +233,7 @@ GROWTH_FACTORS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc làm tăng nguy cơ huyết khối (estrogen, thuốc tránh thai, thalidomide, lenalidomide)",
                 "Thiếu sắt, folate, B12: làm giảm đáp ứng với epoetin (cần bổ sung khi thiếu)"
             ],
-            "pregnancy": "C - Có thể dùng nếu cần thiết trong CKD sau khi cân nhắc lợi ích/nguy cơ",
+        "pregnancy": "C - Có thể dùng nếu cần thiết trong CKD sau khi cân nhắc lợi ích/nguy cơ",
             "mechanism_of_action": "Epoetin alfa là dạng tái tổ hợp của erythropoietin, kích thích tủy xương tăng sinh và biệt hóa dòng hồng cầu. Tăng số lượng hồng cầu, cải thiện vận chuyển oxy nhưng đồng thời làm tăng độ nhớt máu và nguy cơ huyết khối nếu Hb tăng quá cao.",
             "monitoring": [
                 "Hemoglobin mỗi 1–2 tuần khi khởi trị, sau đó mỗi 1–3 tháng",
@@ -360,7 +360,7 @@ GROWTH_FACTORS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác thuốc-được biết rõ ràng, nhưng nên tránh dùng quá gần thời điểm hóa trị gây ức chế tủy (theo khuyến cáo từng regimen)."
             ],
-            "pregnancy": "C - Dữ liệu hạn chế; cân nhắc nếu lợi ích > nguy cơ",
+        "pregnancy": "C - Dữ liệu hạn chế; cân nhắc nếu lợi ích > nguy cơ",
             "mechanism_of_action": "Filgrastim là dạng tái tổ hợp của yếu tố kích thích cụm bạch cầu hạt (G-CSF). Kích thích tủy xương tăng sinh, biệt hóa và giải phóng bạch cầu trung tính ra máu ngoại vi, rút ngắn thời gian giảm bạch cầu và giảm nguy cơ nhiễm trùng.",
             "monitoring": [
                 "Công thức máu (đặc biệt ANC) thường xuyên trong khi điều trị",
@@ -515,7 +515,7 @@ GROWTH_FACTORS_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Thuốc chống đông/kháng tiểu cầu: tăng nguy cơ huyết khối do tăng số lượng tiểu cầu"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": (
                 "Romiplostim là TPO mimetic (thrombopoietin mimetic peptide) - một protein tái tổ hợp có cấu trúc tương tự thrombopoietin. "
                 "Thrombopoietin là hormone tự nhiên kích thích sản xuất tiểu cầu từ megakaryocytes trong tủy xương. "

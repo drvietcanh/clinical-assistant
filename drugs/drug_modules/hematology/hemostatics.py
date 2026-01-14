@@ -44,7 +44,7 @@ HEMOSTATICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Estrogen: tăng nguy cơ huyết khối",
                 "Factor IX concentrates: tăng nguy cơ huyết khối"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Tranexamic acid là chất ức chế plasmin (antifibrinolytic), ngăn chặn quá trình tiêu sợi huyết (fibrinolysis). Tranexamic acid gắn với plasminogen và plasmin, ngăn chặn plasmin gắn với fibrin, do đó ức chế sự phân hủy fibrin và cục máu đông. Tranexamic acid được sử dụng để giảm chảy máu trong các tình huống chảy máu nặng, đặc biệt khi có tăng tiêu sợi huyết (hyperfibrinolysis). Thuốc có hiệu quả trong chảy máu kinh nguyệt nặng, chảy máu do trauma, và chảy máu trong phẫu thuật. Tuy nhiên, tranexamic acid làm tăng nguy cơ huyết khối do ức chế tiêu sợi huyết, nên không dùng ở bệnh nhân có nguy cơ huyết khối.",
             "monitoring": [
                 "Dấu hiệu chảy máu (xem có giảm chảy máu)",

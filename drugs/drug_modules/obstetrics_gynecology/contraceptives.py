@@ -86,7 +86,7 @@ CONTRACEPTIVES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc gây QT kéo dài: tăng nguy cơ rối loạn nhịp tim"
     ],
         },
-        "pregnancy": "X - CHỐNG CHỈ ĐỊNH nếu đã mang thai",
+"pregnancy": "X - CHỐNG CHỈ ĐỊNH nếu đã mang thai",
         "mechanism_of_action": """Ethinyl estradiol + Levonorgestrel là thuốc tránh thai kết hợp (combined oral contraceptive - COC). Cơ chế: (1) Ức chế rụng trứng (ovulation) - cơ chế chính, (2) Làm dày chất nhầy cổ tử cung (cervical mucus) - ngăn tinh trùng vào tử cung, (3) Làm mỏng niêm mạc tử cung (endometrium) - giảm khả năng làm tổ của trứng đã thụ tinh. Hiệu quả tránh thai >99% nếu dùng đúng cách. ĐẶC ĐIỂM: (1) Hiệu quả tránh thai >99% nếu dùng đúng cách, (2) Nhiều chế phẩm với tỷ lệ khác nhau, (3) Nguy cơ huyết khối tĩnh mạch (DVT, PE) - tăng nguy cơ, đặc biệt ở hút thuốc lá, (4) Nguy cơ đột quỵ, nhồi máu cơ tim - tăng nguy cơ, (5) Cần uống đều đặn mỗi ngày vào cùng một thời điểm.""",
         "monitoring": [
             "Huyết áp - định kỳ",
@@ -469,7 +469,7 @@ CONTRACEPTIVES_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc ức chế CYP3A4 (ketoconazole, ritonavir): tăng nồng độ medroxyprogesterone"
     ],
         },
-        "pregnancy": "X - CHỐNG CHỈ ĐỊNH nếu đã mang thai",
+"pregnancy": "X - CHỐNG CHỈ ĐỊNH nếu đã mang thai",
         "mechanism_of_action": """Medroxyprogesterone là progestin tổng hợp. Cơ chế tránh thai: (1) Ức chế rụng trứng (ovulation) - cơ chế chính, (2) Làm dày chất nhầy cổ tử cung (cervical mucus) - ngăn tinh trùng vào tử cung, (3) Làm mỏng niêm mạc tử cung (endometrium) - giảm khả năng làm tổ của trứng đã thụ tinh. Hiệu quả tránh thai >99%. Tác dụng kéo dài 12 tuần (3 tháng). ĐẶC ĐIỂM: (1) Hiệu quả tránh thai >99%, (2) Tiêm mỗi 12 tuần (3 tháng), (3) Có thể gây mất kinh (amenorrhea) - không nguy hiểm, (4) Có thể gây giảm mật độ xương - hồi phục sau khi ngừng, (5) Tăng cân phổ biến, (6) Có thể gây trầm cảm.""",
         "monitoring": [
             "Dấu hiệu mang thai (nếu chậm kinh >3 tháng, cần test thai)",

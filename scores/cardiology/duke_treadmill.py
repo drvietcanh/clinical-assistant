@@ -173,7 +173,7 @@ def render():
         render_suggestions(
             calculator_id="duke_treadmill",
             calculator_name="Duke Treadmill Score",
-            category="Tim Mạch",
+            category="Tim mạch",
             show_related=True,
             show_category=True,
             limit=3

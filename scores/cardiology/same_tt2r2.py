@@ -198,7 +198,7 @@ def render():
         render_suggestions(
             calculator_id="same_tt2r2",
             calculator_name="SAMe-TT₂R₂ Score",
-            category="Tim Mạch",
+            category="Tim mạch",
             show_related=True,
             show_category=True,
             limit=3

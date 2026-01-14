@@ -1,0 +1,1202 @@
+{
+  "analysis_date": "2026-01-13T21:37:29.193920",
+  "total_drugs": 714,
+  "priorities": {
+    "P0": {
+      "pregnancy": {
+        "count": 109,
+        "drugs": [
+          {
+            "name": "Enalapril",
+            "group": "Cardiovascular - ACE Inhibitor",
+            "vietnamese_name": "Enalapril, Vasotec",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Lisinopril",
+            "group": "Cardiovascular - ACE Inhibitor",
+            "vietnamese_name": "Lisinopril, Zestril",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Losartan",
+            "group": "Cardiovascular - ARB (Angiotensin Receptor Blocker)",
+            "vietnamese_name": "Losartan, Cozaar",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Telmisartan",
+            "group": "Cardiovascular - ARB",
+            "vietnamese_name": "Telmisartan, Micardis",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Valsartan",
+            "group": "Cardiovascular - ARB",
+            "vietnamese_name": "Valsartan, Diovan",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Simvastatin",
+            "group": "Cardiovascular - Statin",
+            "vietnamese_name": "Simvastatin, Zocor",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Pravastatin",
+            "group": "Cardiovascular - Statin",
+            "vietnamese_name": "Pravastatin, Pravachol",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Metformin",
+            "group": "Diabetes - Biguanide",
+            "vietnamese_name": "Metformin, Glucophage",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Insulin",
+            "group": "Diabetes - Insulin",
+            "vietnamese_name": "Insulin",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Empagliflozin",
+            "group": "Diabetes - SGLT2 Inhibitor",
+            "vietnamese_name": "Empagliflozin, Jardiance",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Dapagliflozin",
+            "group": "Diabetes - SGLT2 Inhibitor",
+            "vietnamese_name": "Dapagliflozin, Forxiga",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Canagliflozin",
+            "group": "Diabetes - SGLT2 Inhibitor",
+            "vietnamese_name": "Canagliflozin, Invokana",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Gliclazide",
+            "group": "Diabetes - Sulfonylurea",
+            "vietnamese_name": "Gliclazide, Diamicron",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Pioglitazone",
+            "group": "Diabetes - Thiazolidinedione (TZD)",
+            "vietnamese_name": "Pioglitazone, Actos",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Liraglutide",
+            "group": "Diabetes - GLP-1 Receptor Agonist",
+            "vietnamese_name": "Liraglutide, Victoza, Saxenda",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Semaglutide",
+            "group": "Diabetes - GLP-1 Receptor Agonist",
+            "vietnamese_name": "Semaglutide, Ozempic, Wegovy, Rybelsus",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Dulaglutide",
+            "group": "Diabetes - GLP-1 Receptor Agonist",
+            "vietnamese_name": "Dulaglutide, Trulicity",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Exenatide",
+            "group": "Diabetes - GLP-1 Receptor Agonist",
+            "vietnamese_name": "Exenatide, Byetta, Bydureon",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Bismuth subsalicylate",
+            "group": "Gastrointestinal - Antidiarrheal",
+            "vietnamese_name": "Bismuth subsalicylate, Pepto-Bismol",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Ranitidine",
+            "group": "Gastrointestinal - H2 Receptor Antagonist",
+            "vietnamese_name": "Ranitidine, Zantac",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Sucralfate",
+            "group": "Gastrointestinal - Mucosal Protectant",
+            "vietnamese_name": "Sucralfate, Carafate",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Omeprazole",
+            "group": "Gastrointestinal - Proton Pump Inhibitor",
+            "vietnamese_name": "Omeprazole, Losec",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Esomeprazole",
+            "group": "Gastrointestinal - Proton Pump Inhibitor",
+            "vietnamese_name": "Esomeprazole, Nexium",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Lansoprazole",
+            "group": "Gastrointestinal - Proton Pump Inhibitor",
+            "vietnamese_name": "Lansoprazole, Prevacid",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Pantoprazole",
+            "group": "Gastrointestinal - Proton Pump Inhibitor",
+            "vietnamese_name": "Pantoprazole, Pantoloc",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Domperidone",
+            "group": "Gastrointestinal - Prokinetic, Antiemetic",
+            "vietnamese_name": "Domperidone, Motilium",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Ondansetron",
+            "group": "Gastrointestinal - Antiemetic (5-HT3 Antagonist)",
+            "vietnamese_name": "Ondansetron, Zofran",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Sulfasalazine",
+            "group": "Rheumatology - DMARD",
+            "vietnamese_name": "Sulfasalazine",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Hydrocodone",
+            "group": "Analgesic - Opioid Agonist",
+            "vietnamese_name": "Hydrocodone, Vicodin (với acetaminophen)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Codeine",
+            "group": "Analgesic - Opioid Agonist (Weak)",
+            "vietnamese_name": "Codeine",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Rizatriptan",
+            "group": "Neurology - Migraine (Triptan)",
+            "vietnamese_name": "Rizatriptan, Maxalt",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Sumatriptan",
+            "group": "Neurology - Migraine (Triptan)",
+            "vietnamese_name": "Sumatriptan, Imigran",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Montelukast",
+            "group": "Respiratory - Leukotriene Receptor Antagonist",
+            "vietnamese_name": "Montelukast, Singulair",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Nedocromil",
+            "group": "Respiratory - Mast Cell Stabilizer",
+            "vietnamese_name": "Nedocromil, Tilade",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Formoterol",
+            "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)",
+            "vietnamese_name": "Formoterol, Foradil, Oxeze",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Olodaterol",
+            "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)",
+            "vietnamese_name": "Olodaterol, Striverdi",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Salmeterol",
+            "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)",
+            "vietnamese_name": "Salmeterol, Serevent",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Vilanterol",
+            "group": "Respiratory - Long-acting Beta-2 Agonist (LABA)",
+            "vietnamese_name": "Vilanterol, Breo Ellipta",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Ipratropium",
+            "group": "Respiratory - Anticholinergic (Short-acting)",
+            "vietnamese_name": "Ipratropium, Atrovent",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Umeclidinium",
+            "group": "Respiratory - Anticholinergic (Long-acting)",
+            "vietnamese_name": "Umeclidinium, Incruse Ellipta",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Beclomethasone inhaled",
+            "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+            "vietnamese_name": "Beclomethasone, Beclovent, Qvar",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Budesonide inhaled",
+            "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+            "vietnamese_name": "Budesonide, Pulmicort",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Ciclesonide",
+            "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+            "vietnamese_name": "Ciclesonide, Alvesco",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Fluticasone inhaled",
+            "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+            "vietnamese_name": "Fluticasone, Flixotide",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Carbamazepine",
+            "group": "Neurology - Anticonvulsant",
+            "vietnamese_name": "Carbamazepine, Tegretol",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Topiramate",
+            "group": "Neurology - Anticonvulsant",
+            "vietnamese_name": "Topiramate, Topamax",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Fluoxetine",
+            "group": "Psychiatry - SSRI (Selective Serotonin Reuptake Inhibitor)",
+            "vietnamese_name": "Fluoxetine, Prozac",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Donepezil",
+            "group": "Neurology - Cholinesterase Inhibitor",
+            "vietnamese_name": "Donepezil, Aricept",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Memantine",
+            "group": "Neurology - NMDA Receptor Antagonist",
+            "vietnamese_name": "Memantine, Namenda",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Rivastigmine",
+            "group": "Neurology - Cholinesterase Inhibitor",
+            "vietnamese_name": "Rivastigmine, Exelon",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Zolmitriptan",
+            "group": "Neurology - Migraine (Triptan)",
+            "vietnamese_name": "Zolmitriptan, Zomig",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Calcium",
+            "group": "Vitamins/Supplements - Calcium",
+            "vietnamese_name": "Calcium, Calcium carbonate, Calcium citrate",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Diphenhydramine",
+            "group": "Allergy - Antihistamine H1 (1st Gen - Gây buồn ngủ)",
+            "vietnamese_name": "Diphenhydramine, Benadryl, Nautamine",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Etomidate",
+            "group": "Anesthesia - Induction Agent",
+            "vietnamese_name": "Etomidate, Amidate",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Ketamine",
+            "group": "Anesthesia - Dissociative Anesthetic",
+            "vietnamese_name": "Ketamine, Ketalar",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Propofol",
+            "group": "Anesthesia - Induction Agent (IV)",
+            "vietnamese_name": "Propofol, Diprivan",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Cisatracurium",
+            "group": "Anesthesia - Neuromuscular Blocker (Non-depolarizing)",
+            "vietnamese_name": "Cisatracurium, Nimbex",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Rocuronium",
+            "group": "Anesthesia - Neuromuscular Blocker (Non-depolarizing)",
+            "vietnamese_name": "Rocuronium, Esmeron",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Succinylcholine",
+            "group": "Anesthesia - Neuromuscular Blocker (Depolarizing)",
+            "vietnamese_name": "Succinylcholine, Suxamethonium",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Amoxicillin-clavulanate",
+            "group": "Antibiotic - Beta-lactam (Penicillin + Beta-lactamase inhibitor)",
+            "vietnamese_name": "Amoxicillin-clavulanate, Augmentin, Amoclav",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Ceftriaxone",
+            "group": "Antibiotic - Cephalosporin (3rd Generation)",
+            "vietnamese_name": "Ceftriaxone, Rocephin",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Azithromycin",
+            "group": "Infectious Disease - Macrolide Antibiotic",
+            "vietnamese_name": "Azithromycin, Zithromax",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Clarithromycin",
+            "group": "Infectious Disease - Macrolide Antibiotic",
+            "vietnamese_name": "Clarithromycin, Klacid",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Hydroxychloroquine",
+            "group": "Rheumatology - DMARD (Antimalarial)",
+            "vietnamese_name": "Hydroxychloroquine",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Amoxicillin suspension",
+            "group": "Antibiotic - Beta-lactam (Penicillin)",
+            "vietnamese_name": "Amoxicillin suspension, Amoxicillin sirô",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Levothyroxine",
+            "group": "Endocrinology - Thyroid Hormone",
+            "vietnamese_name": "Levothyroxine, L-Thyroxine, T4",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Methimazole",
+            "group": "Endocrinology - Antithyroid Drug",
+            "vietnamese_name": "Methimazole, Thiamazole",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Propylthiouracil",
+            "group": "Endocrinology - Antithyroid Drug",
+            "vietnamese_name": "Propylthiouracil, PTU",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Prednisone",
+            "group": "Endocrinology - Corticosteroid (Oral)",
+            "vietnamese_name": "Prednisone (tiền dược của prednisolone)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Betamethasone",
+            "group": "Endocrinology - Corticosteroid",
+            "vietnamese_name": "Betamethasone, Celestone",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Dexamethasone",
+            "group": "Endocrinology - Corticosteroid",
+            "vietnamese_name": "Dexamethasone, Decadron",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Alendronate",
+            "group": "Rheumatology - Bisphosphonate (Oral)",
+            "vietnamese_name": "Alendronate, Fosamax",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Tamoxifen",
+            "group": "Oncology - Hormonal Therapy (SERM)",
+            "vietnamese_name": "Tamoxifen, Nolvadex",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Anastrozole",
+            "group": "Oncology - Hormonal Therapy (Aromatase Inhibitor)",
+            "vietnamese_name": "Anastrozole, Arimidex",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Imatinib",
+            "group": "Oncology - Targeted Therapy (TKI)",
+            "vietnamese_name": "Imatinib, Gleevec, Glivec",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Erlotinib",
+            "group": "Oncology - Targeted Therapy (EGFR Inhibitor)",
+            "vietnamese_name": "Erlotinib, Tarceva",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Atropine",
+            "group": "Toxicology - Antidote (Organophosphate/Carbamate)",
+            "vietnamese_name": "Atropine Sulfate",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Lidocaine",
+            "group": "Anesthesia - Local Anesthetic (Amide)",
+            "vietnamese_name": "Lidocaine, Xylocaine",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Sodium Chloride 0.9%",
+            "group": "Fluids - Crystalloid (Dịch tinh thể)",
+            "vietnamese_name": "Nước muối sinh lý 0.9% (Normal Saline)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Ringer Lactate",
+            "group": "Fluids - Crystalloid (Dịch tinh thể)",
+            "vietnamese_name": "Dung dịch Ringer Lactate (Hartmann)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Albumin (Human)",
+            "group": "Fluids - Colloid (Dung dịch keo)",
+            "vietnamese_name": "Albumin người (5%, 20%, 25%)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "HES 130/0.4",
+            "group": "Fluids - Colloid (Cao phân tử tổng hợp)",
+            "vietnamese_name": "Hydroxyethyl Starch (Voluven, HES)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Vitamin D3 (Cholecalciferol)",
+            "group": "Nutrition - Vitamin",
+            "vietnamese_name": "Vitamin D3",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Allopurinol",
+            "group": "Rheumatology - Gout (Xanthine Oxidase Inhibitor)",
+            "vietnamese_name": "Allopurinol, Zyloric",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Colchicine",
+            "group": "Rheumatology - Gout (Anti-inflammatory)",
+            "vietnamese_name": "Colchicine",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Febuxostat",
+            "group": "Rheumatology - Gout (Xanthine Oxidase Inhibitor)",
+            "vietnamese_name": "Febuxostat, Feburic",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Cyclosporine",
+            "group": "Immunology - Calcineurin Inhibitor",
+            "vietnamese_name": "Cyclosporine, Cyclosporin A",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Mycophenolate",
+            "group": "Immunology - Antimetabolite",
+            "vietnamese_name": "Mycophenolate Mofetil (MMF), CellCept",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Tacrolimus",
+            "group": "Immunology - Calcineurin Inhibitor",
+            "vietnamese_name": "Tacrolimus, FK506",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Leflunomide",
+            "group": "Rheumatology - DMARD",
+            "vietnamese_name": "Leflunomide",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Methotrexate",
+            "group": "Rheumatology - DMARD (Immunosuppressant)",
+            "vietnamese_name": "Methotrexate",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Bupivacaine",
+            "group": "Anesthesia - Local Anesthetic (Amide)",
+            "vietnamese_name": "Bupivacaine, Marcaine",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Levobupivacaine",
+            "group": "Anesthesia - Local Anesthetic (Amide)",
+            "vietnamese_name": "Levobupivacaine, Chirocaine",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "VAT (Tetanus Vaccine)",
+            "group": "Vaccines - Tetanus (Uốn ván)",
+            "vietnamese_name": "Vắc xin Uốn ván hấp phụ (VAT)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Verorab (Rabies Vaccine)",
+            "group": "Vaccines - Rabies (Dại)",
+            "vietnamese_name": "Vắc xin phòng Dại (Verorab, Abhayrab)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Influenza Vaccine",
+            "group": "Vaccines - Influenza (Cúm)",
+            "vietnamese_name": "Vắc xin Cúm (Vaxigrip, Influvac)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Hepatitis B Vaccine",
+            "group": "Vaccines - Hepatitis B (Viêm gan B)",
+            "vietnamese_name": "Vắc xin Viêm gan B (Engerix B, Euvax B)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "SAT (Tetanus Antitoxin)",
+            "group": "Antisera - Tetanus (Huyết thanh kháng uốn ván)",
+            "vietnamese_name": "Huyết thanh kháng độc tố uốn ván (SAT)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "SAR (Rabies Antiserum)",
+            "group": "Antisera - Rabies (Huyết thanh kháng dại)",
+            "vietnamese_name": "Huyết thanh kháng dại (SAR)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Snake Antivenom (Luc Tre)",
+            "group": "Antivenom - Snake (Kháng nọc rắn)",
+            "vietnamese_name": "Huyết thanh kháng nọc rắn Lục Tre",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Snake Antivenom (Ho Dat)",
+            "group": "Antivenom - Snake (Kháng nọc rắn)",
+            "vietnamese_name": "Huyết thanh kháng nọc rắn Hổ Đất",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Acetylcysteine",
+            "group": "Toxicology - Antidote (Paracetamol)",
+            "vietnamese_name": "Acetylcysteine, NAC",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Pralidoxime",
+            "group": "Toxicology - Antidote (Organophosphate)",
+            "vietnamese_name": "Pralidoxime, PAM",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Vitamin K1",
+            "group": "Toxicology - Antidote (Warfarin/Rodenticide)",
+            "vietnamese_name": "Vitamin K1, Phytomenadione",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Ethanol",
+            "group": "Toxicology - Antidote (Methanol/Ethylene Glycol)",
+            "vietnamese_name": "Ethanol 20% (Rượu uống)",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Thiamine (Vitamin B1)",
+            "group": "Nutrition - Vitamin B",
+            "vietnamese_name": "Vitamin B1, Thiamine",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Cyanocobalamin (Vitamin B12)",
+            "group": "Nutrition - Vitamin B",
+            "vietnamese_name": "Vitamin B12",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Vitamin C (Ascorbic Acid)",
+            "group": "Nutrition - Vitamin",
+            "vietnamese_name": "Vitamin C, Ascorbic Acid",
+            "missing_field": "pregnancy"
+          },
+          {
+            "name": "Zoledronic Acid",
+            "group": "Rheumatology - Bisphosphonate (IV)",
+            "vietnamese_name": "Zoledronic Acid, Aclasta, Zometa",
+            "missing_field": "pregnancy"
+          }
+        ]
+      },
+      "dosage": {
+        "count": 1,
+        "drugs": [
+          {
+            "name": "Budesonide inhaled",
+            "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+            "vietnamese_name": "Budesonide, Pulmicort",
+            "missing_field": "dosage"
+          }
+        ]
+      }
+    },
+    "P1": {
+      "side_effects": {
+        "count": 14,
+        "drugs": [
+          {
+            "name": "Budesonide inhaled",
+            "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+            "vietnamese_name": "Budesonide, Pulmicort",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Zolmitriptan",
+            "group": "Neurology - Migraine (Triptan)",
+            "vietnamese_name": "Zolmitriptan, Zomig",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Desloratadine",
+            "group": "Allergy - Antihistamine H1 (3rd Gen)",
+            "vietnamese_name": "Desloratadine, Aerius",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Sodium Chloride 0.9%",
+            "group": "Fluids - Crystalloid (Dịch tinh thể)",
+            "vietnamese_name": "Nước muối sinh lý 0.9% (Normal Saline)",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Ringer Lactate",
+            "group": "Fluids - Crystalloid (Dịch tinh thể)",
+            "vietnamese_name": "Dung dịch Ringer Lactate (Hartmann)",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "HES 130/0.4",
+            "group": "Fluids - Colloid (Cao phân tử tổng hợp)",
+            "vietnamese_name": "Hydroxyethyl Starch (Voluven, HES)",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Vitamin D3 (Cholecalciferol)",
+            "group": "Nutrition - Vitamin",
+            "vietnamese_name": "Vitamin D3",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Febuxostat",
+            "group": "Rheumatology - Gout (Xanthine Oxidase Inhibitor)",
+            "vietnamese_name": "Febuxostat, Feburic",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Levobupivacaine",
+            "group": "Anesthesia - Local Anesthetic (Amide)",
+            "vietnamese_name": "Levobupivacaine, Chirocaine",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Snake Antivenom (Ho Dat)",
+            "group": "Antivenom - Snake (Kháng nọc rắn)",
+            "vietnamese_name": "Huyết thanh kháng nọc rắn Hổ Đất",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Pralidoxime",
+            "group": "Toxicology - Antidote (Organophosphate)",
+            "vietnamese_name": "Pralidoxime, PAM",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Ethanol",
+            "group": "Toxicology - Antidote (Methanol/Ethylene Glycol)",
+            "vietnamese_name": "Ethanol 20% (Rượu uống)",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Cyanocobalamin (Vitamin B12)",
+            "group": "Nutrition - Vitamin B",
+            "vietnamese_name": "Vitamin B12",
+            "missing_field": "side_effects"
+          },
+          {
+            "name": "Vitamin C (Ascorbic Acid)",
+            "group": "Nutrition - Vitamin",
+            "vietnamese_name": "Vitamin C, Ascorbic Acid",
+            "missing_field": "side_effects"
+          }
+        ]
+      },
+      "contraindications": {
+        "count": 35,
+        "drugs": [
+          {
+            "name": "Simvastatin",
+            "group": "Cardiovascular - Statin",
+            "vietnamese_name": "Simvastatin, Zocor",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Pravastatin",
+            "group": "Cardiovascular - Statin",
+            "vietnamese_name": "Pravastatin, Pravachol",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Dapagliflozin",
+            "group": "Diabetes - SGLT2 Inhibitor",
+            "vietnamese_name": "Dapagliflozin, Forxiga",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Canagliflozin",
+            "group": "Diabetes - SGLT2 Inhibitor",
+            "vietnamese_name": "Canagliflozin, Invokana",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Dulaglutide",
+            "group": "Diabetes - GLP-1 Receptor Agonist",
+            "vietnamese_name": "Dulaglutide, Trulicity",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Sulfasalazine",
+            "group": "Rheumatology - DMARD",
+            "vietnamese_name": "Sulfasalazine",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Rizatriptan",
+            "group": "Neurology - Migraine (Triptan)",
+            "vietnamese_name": "Rizatriptan, Maxalt",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Zolmitriptan",
+            "group": "Neurology - Migraine (Triptan)",
+            "vietnamese_name": "Zolmitriptan, Zomig",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Cetirizine",
+            "group": "Allergy - Antihistamine H1 (2nd Gen - Ít gây buồn ngủ)",
+            "vietnamese_name": "Cetirizine, Zyrtec",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Desloratadine",
+            "group": "Allergy - Antihistamine H1 (3rd Gen)",
+            "vietnamese_name": "Desloratadine, Aerius",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Fexofenadine",
+            "group": "Allergy - Antihistamine H1 (3rd Gen - An toàn nhất)",
+            "vietnamese_name": "Fexofenadine, Telfast",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Loratadine",
+            "group": "Allergy - Antihistamine H1 (2nd Gen - Không gây buồn ngủ)",
+            "vietnamese_name": "Loratadine, Clarityne",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Chlorpheniramine",
+            "group": "Allergy - Antihistamine H1 (1st Gen)",
+            "vietnamese_name": "Chlorpheniramine 4mg",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Hydroxychloroquine",
+            "group": "Rheumatology - DMARD (Antimalarial)",
+            "vietnamese_name": "Hydroxychloroquine",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Propylthiouracil",
+            "group": "Endocrinology - Antithyroid Drug",
+            "vietnamese_name": "Propylthiouracil, PTU",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Prednisone",
+            "group": "Endocrinology - Corticosteroid (Oral)",
+            "vietnamese_name": "Prednisone (tiền dược của prednisolone)",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Imatinib",
+            "group": "Oncology - Targeted Therapy (TKI)",
+            "vietnamese_name": "Imatinib, Gleevec, Glivec",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Erlotinib",
+            "group": "Oncology - Targeted Therapy (EGFR Inhibitor)",
+            "vietnamese_name": "Erlotinib, Tarceva",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Atropine",
+            "group": "Toxicology - Antidote (Organophosphate/Carbamate)",
+            "vietnamese_name": "Atropine Sulfate",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Vitamin D3 (Cholecalciferol)",
+            "group": "Nutrition - Vitamin",
+            "vietnamese_name": "Vitamin D3",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Cyclosporine",
+            "group": "Immunology - Calcineurin Inhibitor",
+            "vietnamese_name": "Cyclosporine, Cyclosporin A",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Tacrolimus",
+            "group": "Immunology - Calcineurin Inhibitor",
+            "vietnamese_name": "Tacrolimus, FK506",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Leflunomide",
+            "group": "Rheumatology - DMARD",
+            "vietnamese_name": "Leflunomide",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Levobupivacaine",
+            "group": "Anesthesia - Local Anesthetic (Amide)",
+            "vietnamese_name": "Levobupivacaine, Chirocaine",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Hepatitis B Vaccine",
+            "group": "Vaccines - Hepatitis B (Viêm gan B)",
+            "vietnamese_name": "Vắc xin Viêm gan B (Engerix B, Euvax B)",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "SAR (Rabies Antiserum)",
+            "group": "Antisera - Rabies (Huyết thanh kháng dại)",
+            "vietnamese_name": "Huyết thanh kháng dại (SAR)",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Snake Antivenom (Luc Tre)",
+            "group": "Antivenom - Snake (Kháng nọc rắn)",
+            "vietnamese_name": "Huyết thanh kháng nọc rắn Lục Tre",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Snake Antivenom (Ho Dat)",
+            "group": "Antivenom - Snake (Kháng nọc rắn)",
+            "vietnamese_name": "Huyết thanh kháng nọc rắn Hổ Đất",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Pralidoxime",
+            "group": "Toxicology - Antidote (Organophosphate)",
+            "vietnamese_name": "Pralidoxime, PAM",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Vitamin K1",
+            "group": "Toxicology - Antidote (Warfarin/Rodenticide)",
+            "vietnamese_name": "Vitamin K1, Phytomenadione",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Ethanol",
+            "group": "Toxicology - Antidote (Methanol/Ethylene Glycol)",
+            "vietnamese_name": "Ethanol 20% (Rượu uống)",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Thiamine (Vitamin B1)",
+            "group": "Nutrition - Vitamin B",
+            "vietnamese_name": "Vitamin B1, Thiamine",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Pyridoxine (Vitamin B6)",
+            "group": "Nutrition - Vitamin B",
+            "vietnamese_name": "Vitamin B6, Pyridoxine",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Cyanocobalamin (Vitamin B12)",
+            "group": "Nutrition - Vitamin B",
+            "vietnamese_name": "Vitamin B12",
+            "missing_field": "contraindications"
+          },
+          {
+            "name": "Zoledronic Acid",
+            "group": "Rheumatology - Bisphosphonate (IV)",
+            "vietnamese_name": "Zoledronic Acid, Aclasta, Zometa",
+            "missing_field": "contraindications"
+          }
+        ]
+      }
+    },
+    "P2": {},
+    "P3": {
+      "references": {
+        "count": 34,
+        "drugs": [
+          {
+            "name": "Enalapril",
+            "group": "Cardiovascular - ACE Inhibitor",
+            "vietnamese_name": "Enalapril, Vasotec",
+            "missing_field": "references"
+          },
+          {
+            "name": "Lisinopril",
+            "group": "Cardiovascular - ACE Inhibitor",
+            "vietnamese_name": "Lisinopril, Zestril",
+            "missing_field": "references"
+          },
+          {
+            "name": "Losartan",
+            "group": "Cardiovascular - ARB (Angiotensin Receptor Blocker)",
+            "vietnamese_name": "Losartan, Cozaar",
+            "missing_field": "references"
+          },
+          {
+            "name": "Telmisartan",
+            "group": "Cardiovascular - ARB",
+            "vietnamese_name": "Telmisartan, Micardis",
+            "missing_field": "references"
+          },
+          {
+            "name": "Valsartan",
+            "group": "Cardiovascular - ARB",
+            "vietnamese_name": "Valsartan, Diovan",
+            "missing_field": "references"
+          },
+          {
+            "name": "Diltiazem",
+            "group": "Cardiovascular - Calcium Channel Blocker (Non-dihydropyridine)",
+            "vietnamese_name": "Diltiazem, Cardizem",
+            "missing_field": "references"
+          },
+          {
+            "name": "Verapamil",
+            "group": "Cardiovascular - Calcium Channel Blocker (Non-dihydropyridine)",
+            "vietnamese_name": "Verapamil, Isoptin",
+            "missing_field": "references"
+          },
+          {
+            "name": "Ranitidine",
+            "group": "Gastrointestinal - H2 Receptor Antagonist",
+            "vietnamese_name": "Ranitidine, Zantac",
+            "missing_field": "references"
+          },
+          {
+            "name": "Omeprazole",
+            "group": "Gastrointestinal - Proton Pump Inhibitor",
+            "vietnamese_name": "Omeprazole, Losec",
+            "missing_field": "references"
+          },
+          {
+            "name": "Ipratropium",
+            "group": "Respiratory - Anticholinergic (Short-acting)",
+            "vietnamese_name": "Ipratropium, Atrovent",
+            "missing_field": "references"
+          },
+          {
+            "name": "Budesonide inhaled",
+            "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+            "vietnamese_name": "Budesonide, Pulmicort",
+            "missing_field": "references"
+          },
+          {
+            "name": "Cetirizine",
+            "group": "Allergy - Antihistamine H1 (2nd Gen - Ít gây buồn ngủ)",
+            "vietnamese_name": "Cetirizine, Zyrtec",
+            "missing_field": "references"
+          },
+          {
+            "name": "Desloratadine",
+            "group": "Allergy - Antihistamine H1 (3rd Gen)",
+            "vietnamese_name": "Desloratadine, Aerius",
+            "missing_field": "references"
+          },
+          {
+            "name": "Fexofenadine",
+            "group": "Allergy - Antihistamine H1 (3rd Gen - An toàn nhất)",
+            "vietnamese_name": "Fexofenadine, Telfast",
+            "missing_field": "references"
+          },
+          {
+            "name": "Loratadine",
+            "group": "Allergy - Antihistamine H1 (2nd Gen - Không gây buồn ngủ)",
+            "vietnamese_name": "Loratadine, Clarityne",
+            "missing_field": "references"
+          },
+          {
+            "name": "Chlorpheniramine",
+            "group": "Allergy - Antihistamine H1 (1st Gen)",
+            "vietnamese_name": "Chlorpheniramine 4mg",
+            "missing_field": "references"
+          },
+          {
+            "name": "Diphenhydramine",
+            "group": "Allergy - Antihistamine H1 (1st Gen - Gây buồn ngủ)",
+            "vietnamese_name": "Diphenhydramine, Benadryl, Nautamine",
+            "missing_field": "references"
+          },
+          {
+            "name": "Etomidate",
+            "group": "Anesthesia - Induction Agent",
+            "vietnamese_name": "Etomidate, Amidate",
+            "missing_field": "references"
+          },
+          {
+            "name": "Ketamine",
+            "group": "Anesthesia - Dissociative Anesthetic",
+            "vietnamese_name": "Ketamine, Ketalar",
+            "missing_field": "references"
+          },
+          {
+            "name": "Propofol",
+            "group": "Anesthesia - Induction Agent (IV)",
+            "vietnamese_name": "Propofol, Diprivan",
+            "missing_field": "references"
+          },
+          {
+            "name": "Cisatracurium",
+            "group": "Anesthesia - Neuromuscular Blocker (Non-depolarizing)",
+            "vietnamese_name": "Cisatracurium, Nimbex",
+            "missing_field": "references"
+          },
+          {
+            "name": "Rocuronium",
+            "group": "Anesthesia - Neuromuscular Blocker (Non-depolarizing)",
+            "vietnamese_name": "Rocuronium, Esmeron",
+            "missing_field": "references"
+          },
+          {
+            "name": "Succinylcholine",
+            "group": "Anesthesia - Neuromuscular Blocker (Depolarizing)",
+            "vietnamese_name": "Succinylcholine, Suxamethonium",
+            "missing_field": "references"
+          },
+          {
+            "name": "Doxycycline",
+            "group": "Infectious Disease - Tetracycline Antibiotic",
+            "vietnamese_name": "Doxycycline, Vibramycin",
+            "missing_field": "references"
+          },
+          {
+            "name": "Minocycline",
+            "group": "Infectious Disease - Tetracycline Antibiotic",
+            "vietnamese_name": "Minocycline, Minocin",
+            "missing_field": "references"
+          },
+          {
+            "name": "Tetracycline",
+            "group": "Infectious Disease - Tetracycline Antibiotic",
+            "vietnamese_name": "Tetracycline, Tetracyn",
+            "missing_field": "references"
+          },
+          {
+            "name": "Tigecycline",
+            "group": "Antibiotic - Glycylcycline (Tetracycline derivative)",
+            "vietnamese_name": "Tigecycline, Tygacil",
+            "missing_field": "references"
+          },
+          {
+            "name": "Prednisone",
+            "group": "Endocrinology - Corticosteroid (Oral)",
+            "vietnamese_name": "Prednisone (tiền dược của prednisolone)",
+            "missing_field": "references"
+          },
+          {
+            "name": "Tamoxifen",
+            "group": "Oncology - Hormonal Therapy (SERM)",
+            "vietnamese_name": "Tamoxifen, Nolvadex",
+            "missing_field": "references"
+          },
+          {
+            "name": "Anastrozole",
+            "group": "Oncology - Hormonal Therapy (Aromatase Inhibitor)",
+            "vietnamese_name": "Anastrozole, Arimidex",
+            "missing_field": "references"
+          },
+          {
+            "name": "Imatinib",
+            "group": "Oncology - Targeted Therapy (TKI)",
+            "vietnamese_name": "Imatinib, Gleevec, Glivec",
+            "missing_field": "references"
+          },
+          {
+            "name": "Erlotinib",
+            "group": "Oncology - Targeted Therapy (EGFR Inhibitor)",
+            "vietnamese_name": "Erlotinib, Tarceva",
+            "missing_field": "references"
+          },
+          {
+            "name": "Lidocaine",
+            "group": "Anesthesia - Local Anesthetic (Amide)",
+            "vietnamese_name": "Lidocaine, Xylocaine",
+            "missing_field": "references"
+          },
+          {
+            "name": "Cyclosporine",
+            "group": "Immunology - Calcineurin Inhibitor",
+            "vietnamese_name": "Cyclosporine, Cyclosporin A",
+            "missing_field": "references"
+          }
+        ]
+      }
+    }
+  },
+  "summary": {
+    "P0": 109,
+    "P1": 41,
+    "P2": 0,
+    "P3": 34
+  }
+}

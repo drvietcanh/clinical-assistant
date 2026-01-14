@@ -254,11 +254,23 @@ def render_compact_antibiotic_card(ab_name, ab_data, key_prefix=""):
             if st.button("⭐", key=fav_key, use_container_width=True, help="Bỏ yêu thích"):
                 favorites.remove(ab_name)
                 st.session_state.antibiotic_favorites = favorites
+                # Log usage
+                try:
+                    from .analytics import log_usage
+                    log_usage("unfavorite", ab_name)
+                except ImportError:
+                    pass
                 st.rerun()
         else:
             if st.button("☆", key=fav_key, use_container_width=True, help="Thêm yêu thích"):
                 favorites.append(ab_name)
                 st.session_state.antibiotic_favorites = favorites
+                # Log usage
+                try:
+                    from .analytics import log_usage
+                    log_usage("favorite", ab_name)
+                except ImportError:
+                    pass
                 st.rerun()
     
     return ab_name
@@ -497,6 +509,15 @@ def display_antibiotic_info(ab_name, ab_data):
                 if mic_table_data:
                     df_mic = pd.DataFrame(mic_table_data)
                     st.dataframe(df_mic, use_container_width=True, hide_index=True)
+        
+        # Spectrum Chart (Phase 1 Feature)
+        st.markdown("---")
+        try:
+            from .spectrum_charts import render_spectrum_chart_inline
+            st.markdown("### 📊 Phổ Tác Dụng (Biểu Đồ)")
+            render_spectrum_chart_inline(ab_name)
+        except ImportError:
+            pass
         
         # Resistance Patterns (Vietnam)
         st.markdown("---")

@@ -5,6 +5,8 @@ Anesthesia Neuromuscular Blockers (Paralytics)
 NEUROMUSCULAR_BLOCKERS = {
     "Succinylcholine": {
         "group": "Anesthesia - Neuromuscular Blocker (Depolarizing)",
+
+        "pregnancy": "C - Nguy cơ không thể loại trừ",
         "vietnamese_name": "Succinylcholine, Suxamethonium",
         "brand_names": {
             "common": ["Anectine", "Quelicin"],
@@ -87,6 +89,8 @@ NEUROMUSCULAR_BLOCKERS = {
 
     "Rocuronium": {
         "group": "Anesthesia - Neuromuscular Blocker (Non-depolarizing)",
+
+        "pregnancy": "C - Nguy cơ không thể loại trừ",
         "vietnamese_name": "Rocuronium, Esmeron",
         "brand_names": {
             "common": ["Zemuron", "Esmeron"],
@@ -174,6 +178,8 @@ NEUROMUSCULAR_BLOCKERS = {
 
     "Cisatracurium": {
         "group": "Anesthesia - Neuromuscular Blocker (Non-depolarizing)",
+
+        "pregnancy": "C - Nguy cơ không thể loại trừ",
         "vietnamese_name": "Cisatracurium, Nimbex",
         "brand_names": {
             "common": ["Nimbex"],

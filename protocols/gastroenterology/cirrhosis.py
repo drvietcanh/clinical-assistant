@@ -421,7 +421,7 @@ def render_spontaneous_bacterial_peritonitis():
 
 def render_hcc():
     """HCC Screening and Management"""
-    st.error("## 🔴 Ung Thư Gan (HCC)")
+    st.error("## 🔴 Ung thư Gan (HCC)")
     
     st.markdown("### Tầm Soát")
     

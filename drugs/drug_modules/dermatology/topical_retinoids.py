@@ -40,7 +40,7 @@ TOPICAL_RETINOIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Benzoyl peroxide: có thể dùng kết hợp (tăng hiệu quả)",
                 "Ánh nắng mặt trời: tăng nhạy cảm"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Adapalene là retinoid tại chỗ thế hệ 3, gắn với retinoic acid receptors (RAR-beta, RAR-gamma). Kích thích tế bào sừng biệt hóa, giảm sự dính kết của tế bào sừng, giảm hình thành microcomedone (tiền thân của mụn). Cũng có tác dụng chống viêm. Đặc điểm: ít kích ứng da hơn tretinoin, ổn định hơn với ánh nắng, có thể dùng kết hợp với benzoyl peroxide. Tác dụng phát huy sau vài tuần.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm mụn trứng cá)",
@@ -195,7 +195,7 @@ TOPICAL_RETINOIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Benzoyl peroxide: có thể dùng kết hợp (tăng hiệu quả)",
                 "Ánh nắng mặt trời: tăng nhạy cảm"
             ],
-            "pregnancy": "X - CHỐNG CHỈ ĐỊNH",
+        "pregnancy": "X - CHỐNG CHỈ ĐỊNH",
             "mechanism_of_action": "Tazarotene là retinoid tại chỗ thế hệ 3, là prodrug của tazarotenic acid. Gắn với retinoic acid receptors (RAR-beta, RAR-gamma). Kích thích tế bào sừng biệt hóa, giảm sự dính kết của tế bào sừng, giảm hình thành microcomedone (tiền thân của mụn). Cũng có tác dụng chống viêm và ức chế tăng sinh tế bào (cho vảy nến). Đặc điểm: mạnh hơn tretinoin và adapalene, kích ứng da nhiều hơn, CHỐNG CHỈ ĐỊNH khi mang thai (category X).",
             "monitoring": [
                 "Đáp ứng điều trị (giảm mụn trứng cá, vảy nến)",
@@ -362,7 +362,7 @@ TOPICAL_RETINOIDS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Các sản phẩm chứa cồn: tăng kích ứng da",
                 "Các sản phẩm chứa sulfur, resorcinol: tăng kích ứng da"
             ],
-            "pregnancy": "X - CHỐNG CHỈ ĐỊNH",
+        "pregnancy": "X - CHỐNG CHỈ ĐỊNH",
             "mechanism_of_action": "Tretinoin là retinoid (vitamin A derivative) tại chỗ. Gắn với thụ thể retinoic acid (RAR) trong tế bào, điều hòa biểu hiện gen, dẫn đến: (1) Tăng tẩy tế bào chết (desquamation), giảm bít tắc nang lông, (2) Giảm sản xuất bã nhờn (sebum), (3) Giảm viêm, (4) Tăng tổng hợp collagen (làm mịn nếp nhăn). Dẫn đến: giảm mụn trứng cá, làm mịn nếp nhăn. ĐẶC ĐIỂM: (1) Retinoid tại chỗ, điều trị mụn trứng cá, (2) Bắt đầu với nồng độ thấp (0.025%), tăng dần nếu cần, (3) Dùng buổi tối, tránh ánh nắng mặt trời, (4) Kích ứng da phổ biến trong vài tuần đầu, (5) CHỐNG CHỈ ĐỊNH ở phụ nữ có thai (category X), (6) Nhạy cảm với ánh sáng - phổ biến.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm mụn) - cải thiện sau 4-8 tuần",

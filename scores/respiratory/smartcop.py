@@ -660,7 +660,7 @@ def render():
         render_suggestions(
             calculator_id="smartcop",
             calculator_name="SMART-COP",
-            category="Hô Hấp",
+            category="Hô hấp",
             show_related=True,
             show_category=True,
             limit=3

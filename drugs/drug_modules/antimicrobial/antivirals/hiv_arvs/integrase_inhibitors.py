@@ -35,7 +35,7 @@ INTEGRASE_INHIBITORS_ARVS: Dict[str, Dict[str, Any]] = {
                 "Antacid/Fe/Ca: giảm hấp thu, cần tách liều.",
                 "Carbamazepine/phenytoin: cảm ứng, giảm nồng độ.",
             ],
-            "pregnancy": "Có thể dùng; dữ liệu đang tăng, DTG có nhiều bằng chứng hơn.",
+        "pregnancy": "Có thể dùng; dữ liệu đang tăng, DTG có nhiều bằng chứng hơn.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -179,7 +179,7 @@ INTEGRASE_INHIBITORS_ARVS: Dict[str, Dict[str, Any]] = {
                 "Antacid/Fe/Ca: giảm hấp thu BIC, cần tách liều.",
                 "Carbamazepine/phenytoin: cảm ứng, giảm nồng độ."
             ],
-            "pregnancy": "Có thể dùng; DTG có bằng chứng rộng hơn, nhưng BIC đang được chấp nhận dần.",
+        "pregnancy": "Có thể dùng; DTG có bằng chứng rộng hơn, nhưng BIC đang được chấp nhận dần.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -320,7 +320,7 @@ INTEGRASE_INHIBITORS_ARVS: Dict[str, Dict[str, Any]] = {
                 "RPV tương tác pH: tránh PPI nếu dùng lead-in hoặc oral bridge; antacid/H2 tách thời gian.",
                 "CYP3A inhibitors mạnh có thể tăng RPV (ít ý nghĩa lâm sàng với IM nhưng lưu ý)."
             ],
-            "pregnancy": "Dữ liệu hạn chế; cân nhắc chuyển sang phác đồ uống đã biết an toàn.",
+        "pregnancy": "Dữ liệu hạn chế; cân nhắc chuyển sang phác đồ uống đã biết an toàn.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -467,7 +467,7 @@ INTEGRASE_INHIBITORS_ARVS: Dict[str, Dict[str, Any]] = {
                 "Antacid chứa Al/Mg, sắt, calcium: giảm hấp thu (uống cách thời gian).",
                 "Carbamazepine/phenytoin: cảm ứng, giảm nồng độ DTG.",
             ],
-            "pregnancy": "Safe/Preferred: WHO khuyến cáo DTG cho phụ nữ mang thai và tuổi sinh sản.",
+        "pregnancy": "Safe/Preferred: WHO khuyến cáo DTG cho phụ nữ mang thai và tuổi sinh sản.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,

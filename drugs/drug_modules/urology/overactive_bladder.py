@@ -51,7 +51,7 @@ OVERACTIVE_BLADDER_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc kháng cholinergic khác: tăng nguy cơ tác dụng phụ",
                 "Thuốc gây QT kéo dài: tăng nguy cơ rối loạn nhịp tim"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Fesoterodine là anticholinergic (muscarinic receptor antagonist). Fesoterodine là prodrug, chuyển hóa thành tolterodine (active metabolite) trong cơ thể bởi esterase. Tolterodine ức chế muscarinic receptors (M2, M3) trên cơ trơn bàng quang, gây giãn cơ bàng quang, tăng dung tích bàng quang, và giảm tần suất co bóp bàng quang. Dẫn đến: giảm tiểu gấp, giảm tiểu nhiều lần, giảm tiểu không kiểm soát. Fesoterodine hấp thu tốt hơn tolterodine, ít biến đổi giữa các cá nhân. ĐẶC ĐIỂM: (1) Prodrug của tolterodine, hấp thu tốt hơn, (2) Tác dụng tương tự tolterodine, (3) Nguy cơ khô miệng, táo bón, khô mắt, (4) Nguy cơ rối loạn nhận thức ở người cao tuổi, (5) CHỐNG CHỈ ĐỊNH với CYP3A4 inhibitors mạnh, (6) CHỐNG CHỈ ĐỊNH ở suy thận nặng.",
             "monitoring": [
                 "Triệu chứng OAB (tiểu gấp, tiểu nhiều lần, tiểu không kiểm soát)",
@@ -236,7 +236,7 @@ OVERACTIVE_BLADDER_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Digoxin: tăng nồng độ digoxin - theo dõi nồng độ digoxin",
                 "CYP2D6 substrates (metoprolol, desipramine): tăng nồng độ các thuốc này"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Mirabegron là beta-3 adrenergic receptor agonist. Kích thích beta-3 receptors trên cơ trơn bàng quang, gây giãn cơ bàng quang, tăng dung tích bàng quang, và giảm tần suất tiểu tiện. Khác với anticholinergic (oxybutynin, tolterodine, solifenacin), mirabegron không ức chế muscarinic receptors, do đó không gây khô miệng, táo bón, mờ mắt, hoặc rối loạn nhận thức. ĐẶC ĐIỂM: (1) Cơ chế khác với anticholinergic (beta-3 agonist), (2) Ít tác dụng phụ hơn anticholinergic (không khô miệng, không táo bón, không rối loạn nhận thức), (3) Tăng huyết áp nhẹ (2-4 mmHg) - cần theo dõi, (4) Có thể dùng kết hợp với anticholinergic để tăng hiệu quả, (5) Tương tác với digoxin và CYP2D6 substrates.",
             "monitoring": [
                 "Triệu chứng OAB (tiểu gấp, tiểu nhiều lần, tiểu không kiểm soát)",
@@ -428,7 +428,7 @@ OVERACTIVE_BLADDER_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc ức chế CYP3A4: tăng nồng độ oxybutynin",
                 "Thuốc kích thích CYP3A4: giảm nồng độ oxybutynin"
             ],
-            "pregnancy": "B",
+        "pregnancy": "B",
             "mechanism_of_action": "Oxybutynin là anticholinergic (muscarinic receptor antagonist). Ức chế muscarinic receptors (M1, M2, M3) trên cơ trơn bàng quang, giảm co thắt bàng quang không tự chủ, tăng dung tích bàng quang, và giảm tần suất tiểu tiện. Oxybutynin cũng có tác dụng gây tê cục bộ và giãn cơ trơn. ĐẶC ĐIỂM: (1) Anticholinergic không chọn lọc (ảnh hưởng nhiều cơ quan), (2) Tác dụng phụ phổ biến: khô miệng, táo bón, mờ mắt, (3) Nguy cơ rối loạn nhận thức ở người cao tuổi, (4) Extended-release và transdermal ít tác dụng phụ hơn immediate-release, (5) CHỐNG CHỈ ĐỊNH ở bí tiểu và tăng nhãn áp góc đóng.",
             "monitoring": [
                 "Triệu chứng OAB (tiểu gấp, tiểu nhiều lần, tiểu không kiểm soát)",
@@ -623,7 +623,7 @@ OVERACTIVE_BLADDER_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc anticholinergic khác: tăng tác dụng phụ",
                 "CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir): tăng nồng độ solifenacin - không vượt quá 5mg/ngày"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Solifenacin là anticholinergic (muscarinic receptor antagonist) chọn lọc M3 receptors. M3 receptors là thụ thể chính trên cơ trơn bàng quang. Ức chế M3 receptors, giảm co thắt bàng quang không tự chủ, tăng dung tích bàng quang, và giảm tần suất tiểu tiện. Solifenacin chọn lọc M3 hơn oxybutynin và tolterodine, do đó ít ảnh hưởng đến các cơ quan khác (ít khô miệng, ít rối loạn nhận thức hơn). ĐẶC ĐIỂM: (1) Chọn lọc M3 receptors (chọn lọc nhất), (2) Tác dụng phụ: khô miệng, táo bón (ít hơn oxybutynin và tolterodine), (3) Nguy cơ rối loạn nhận thức ít hơn oxybutynin và tolterodine, (4) CHỐNG CHỈ ĐỊNH ở bí tiểu, tăng nhãn áp góc đóng, và suy thận nặng (CrCl <30).",
             "monitoring": [
                 "Triệu chứng OAB (tiểu gấp, tiểu nhiều lần, tiểu không kiểm soát)",
@@ -822,7 +822,7 @@ OVERACTIVE_BLADDER_DRUGS: Dict[str, Dict[str, Any]] = {
                 "CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir): tăng nồng độ tolterodine - giảm liều",
                 "CYP2D6 inhibitors (fluoxetine, paroxetine): tăng nồng độ tolterodine"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Tolterodine là anticholinergic (muscarinic receptor antagonist) chọn lọc hơn oxybutynin. Ức chế muscarinic receptors trên cơ trơn bàng quang, giảm co thắt bàng quang không tự chủ, tăng dung tích bàng quang, và giảm tần suất tiểu tiện. Tolterodine chọn lọc hơn oxybutynin, ít ảnh hưởng đến các cơ quan khác (ít khô miệng, ít rối loạn nhận thức hơn). ĐẶC ĐIỂM: (1) Chọn lọc hơn oxybutynin (ít tác dụng phụ hơn), (2) Tác dụng phụ: khô miệng, táo bón (ít hơn oxybutynin), (3) Nguy cơ rối loạn nhận thức ít hơn oxybutynin, (4) Extended-release ít tác dụng phụ hơn immediate-release, (5) CHỐNG CHỈ ĐỊNH ở bí tiểu và tăng nhãn áp góc đóng.",
             "monitoring": [
                 "Triệu chứng OAB (tiểu gấp, tiểu nhiều lần, tiểu không kiểm soát)",

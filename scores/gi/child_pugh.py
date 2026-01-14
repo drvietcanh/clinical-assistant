@@ -85,7 +85,7 @@ def render():
         render_suggestions(
             calculator_id="child_pugh",
             calculator_name="Child-Pugh Score",
-            category="Tiêu Hóa",
+            category="Tiêu hóa",
             show_related=True,
             show_category=True,
             limit=3
@@ -612,7 +612,7 @@ def render():
         # Comparison table
         with st.expander("📊 So sánh Child-Pugh Classes"):
             st.markdown("""
-            | Class | Điểm | Mức Độ | Sống sót 1 năm | Sống sót 2 năm | Tử vong PT |
+            | Class | Điểm | Mức độ | Sống sót 1 năm | Sống sót 2 năm | Tử vong PT |
             |-------|------|---------|----------------|----------------|------------|
             | **A** | 5-6 | Bù trừ tốt | 100% | 85% | 10% |
             | **B** | 7-9 | Suy chức năng | 81% | 57% | 30% |

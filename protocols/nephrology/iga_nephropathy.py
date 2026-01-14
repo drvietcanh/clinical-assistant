@@ -251,7 +251,7 @@ def render_supportive_care(egfr, proteinuria_24h, acr, current_sbp):
     **Phác đồ:**
     - ACEi/ARB là nền tảng
     - Phối hợp với CCB hoặc lợi tiểu nếu cần
-    - Xem protocol "Quản Lý Huyết Áp Trong CKD"
+    - Xem protocol "Quản lý Huyết Áp Trong CKD"
     """)
     
     if current_sbp >= 130:

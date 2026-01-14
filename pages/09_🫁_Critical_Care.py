@@ -191,10 +191,7 @@ with main_tabs[0]:
             "📊 Protocols & Settings",
             "🔄 Weaning & Extubation"
         ]
-        if default_vent_tab is not None and 0 <= default_vent_tab < len(vent_tab_labels):
-            vent_tabs = st.tabs(vent_tab_labels, selected=default_vent_tab)
-        else:
-            vent_tabs = st.tabs(vent_tab_labels)
+        vent_tabs = st.tabs(vent_tab_labels)
         
         # Tab 1: Quick Tools - For fast decisions
         with vent_tabs[0]:
@@ -208,7 +205,7 @@ with main_tabs[0]:
                 "📊 PEEP",
                 "📈 Plateau Pressure",
                 "🔄 RSBI (Quick)"
-            ], selected=default_sub_tab if is_rsbi else None)
+            ])
             
             with quick_tools_tabs[0]:
                 render_ibw_calculator()
@@ -242,7 +239,7 @@ with main_tabs[0]:
                 "🫁 ARDSNet Protocol",
                 "⚙️ Initial Settings",
                 "📊 PEEP/FiO2 Table"
-            ], selected=default_sub_tab if default_vent_tab == 2 else None)
+            ])
             
             with protocol_tabs[0]:
                 render_ardsnet()
@@ -420,17 +417,14 @@ with main_tabs[1]:
             "📊 Protocols & Settings",
             "🔄 Weaning & Extubation"
         ]
-        if default_vent_tab is not None and 0 <= default_vent_tab < len(vent_tab_labels):
-            vent_tabs = st.tabs(vent_tab_labels, selected=default_vent_tab)
-        else:
-            vent_tabs = st.tabs(vent_tab_labels)
+        vent_tabs = st.tabs(vent_tab_labels)
         
         with vent_tabs[0]:
             st.markdown("### 🚀 Quick Tools")
             quick_tools_tabs = st.tabs([
                 "📏 IBW", "💨 Tidal Volume", "📊 PEEP",
                 "📈 Plateau Pressure", "🔄 RSBI (Quick)"
-            ], selected=default_sub_tab if is_rsbi else None)
+            ])
             with quick_tools_tabs[0]:
                 render_ibw_calculator()
             with quick_tools_tabs[1]:
@@ -452,7 +446,7 @@ with main_tabs[1]:
                 "🫁 ARDSNet Protocol",
                 "⚙️ Initial Settings",
                 "📊 PEEP/FiO2 Table"
-            ], selected=default_sub_tab if default_vent_tab == 2 else None)
+            ])
             with protocol_tabs[0]:
                 render_ardsnet()
             with protocol_tabs[1]:

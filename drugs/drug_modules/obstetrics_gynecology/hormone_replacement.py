@@ -83,7 +83,7 @@ HORMONE_REPLACEMENT_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc ức chế CYP3A4 (ketoconazole, ritonavir): tăng nồng độ estradiol"
     ],
         },
-        "pregnancy": "X - CHỐNG CHỈ ĐỊNH nếu đã mang thai",
+"pregnancy": "X - CHỐNG CHỈ ĐỊNH nếu đã mang thai",
         "mechanism_of_action": """Estradiol là estrogen tự nhiên. Bổ sung estrogen cho phụ nữ mãn kinh hoặc thiếu hụt estrogen. Tác dụng: (1) Giảm triệu chứng mãn kinh (hot flashes, night sweats), (2) Cải thiện khô âm đạo, (3) Phòng ngừa loãng xương, (4) Cải thiện tình trạng da và tóc. ĐẶC ĐIỂM: (1) Nhiều chế phẩm và đường dùng (PO, transdermal, vaginal), (2) Dùng liều thấp nhất hiệu quả, (3) Nếu còn tử cung, cần dùng kết hợp với progestin, (4) Nguy cơ ung thư vú, huyết khối tĩnh mạch, đột quỵ - tăng nguy cơ, (5) Nguy cơ ung thư nội mạc tử cung nếu dùng đơn độc không có progestin.""",
         "monitoring": [
             "Triệu chứng mãn kinh (hot flashes, night sweats, vaginal dryness)",
@@ -322,7 +322,7 @@ HORMONE_REPLACEMENT_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc ức chế CYP3A4 (ketoconazole, ritonavir): tăng nồng độ progesterone"
     ],
         },
-        "pregnancy": "B - An toàn trong thai kỳ (dùng cho hỗ trợ giai đoạn hoàng thể)",
+"pregnancy": "B - An toàn trong thai kỳ (dùng cho hỗ trợ giai đoạn hoàng thể)",
         "mechanism_of_action": """Progesterone là progestin tự nhiên. Tác dụng: (1) Chuẩn bị niêm mạc tử cung (endometrium) cho thai làm tổ, (2) Duy trì thai kỳ sớm (hỗ trợ giai đoạn hoàng thể), (3) Ức chế co bóp tử cung, (4) Giảm nguy cơ ung thư nội mạc tử cung khi dùng kết hợp với estrogen trong HRT. ĐẶC ĐIỂM: (1) Nhiều chế phẩm và đường dùng (PO, vaginal, IM), (2) Đường âm đạo thường được ưa chuộng cho hỗ trợ giai đoạn hoàng thể (ít tác dụng phụ toàn thân), (3) Buồn ngủ, mệt mỏi phổ biến với PO, (4) An toàn trong thai kỳ (category B), (5) Dùng kết hợp với estrogen trong HRT để giảm nguy cơ ung thư nội mạc tử cung.""",
         "monitoring": [
             "Triệu chứng (buồn ngủ, mệt mỏi, chóng mặt)",

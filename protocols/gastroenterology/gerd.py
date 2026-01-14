@@ -202,7 +202,7 @@ def render():
     
     with col2:
         st.markdown("""
-        **Trẻ Em:**
+        **Trẻ em:**
         - Triệu chứng có thể khác (nôn, quấy khóc)
         - **PPI:** Omeprazole, Lansoprazole (liều tính theo kg)
         - **H2 blocker:** Ranitidine (liều tính theo kg)

@@ -11,7 +11,7 @@ from components.references import render_references_section
 
 def render():
     """Acute Diarrhea Treatment Protocol"""
-    st.subheader("🫀 Điều trị Tiêu Chảy Cấp (Acute Diarrhea)")
+    st.subheader("🫀 Điều trị Tiêu chảy Cấp (Acute Diarrhea)")
     st.caption("ACG 2016, IDSA 2017, WHO - Management of acute diarrhea")
     
     st.info("""
@@ -245,7 +245,7 @@ def render():
         - Tránh Bismuth (dữ liệu hạn chế)
         - Kháng sinh: Chọn an toàn (Azithromycin)
         
-        **Suy Giảm Miễn Dịch:**
+        **Suy Giảm Miễn dịch:**
         - Nguy cơ nhiễm trùng nặng
         - Cần đánh giá sớm
         - Kháng sinh phù hợp
@@ -357,7 +357,7 @@ def render_adult_rehydration(dehydration_level):
 
 def render_viral_diarrhea():
     """Viral Diarrhea Treatment"""
-    st.info("## 🦠 Tiêu Chảy Do Virus")
+    st.info("## 🦠 Tiêu chảy Do Virus")
     
     st.markdown("### Điều trị")
     
@@ -382,7 +382,7 @@ def render_viral_diarrhea():
 
 def render_bacterial_diarrhea():
     """Bacterial Diarrhea Treatment"""
-    st.warning("## 🦠 Tiêu Chảy Do Vi Khuẩn")
+    st.warning("## 🦠 Tiêu chảy Do Vi Khuẩn")
     
     st.markdown("### Điều trị")
     
@@ -413,7 +413,7 @@ def render_bacterial_diarrhea():
 
 def render_parasitic_diarrhea():
     """Parasitic Diarrhea Treatment"""
-    st.info("## 🪱 Tiêu Chảy Do Ký Sinh Trùng")
+    st.info("## 🪱 Tiêu chảy Do Ký Sinh Trùng")
     
     st.markdown("### Điều trị")
     
@@ -436,7 +436,7 @@ def render_parasitic_diarrhea():
 
 def render_drug_induced_diarrhea():
     """Drug-Induced Diarrhea Treatment"""
-    st.info("## 💊 Tiêu Chảy Do Thuốc")
+    st.info("## 💊 Tiêu chảy Do Thuốc")
     
     st.markdown("### Điều trị")
     
@@ -460,7 +460,7 @@ def render_drug_induced_diarrhea():
 
 def render_unknown_diarrhea():
     """Unknown Etiology Diarrhea Treatment"""
-    st.info("## ❓ Tiêu Chảy Chưa Xác Định Nguyên nhân")
+    st.info("## ❓ Tiêu chảy Chưa Xác Định Nguyên nhân")
     
     st.markdown("### Điều trị")
     

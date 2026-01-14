@@ -6,6 +6,8 @@ Bao gồm: Hormonal Therapy, Targeted Therapy đường uống.
 ONCOLOGY_DRUGS = {
     "Tamoxifen": {
         "group": "Oncology - Hormonal Therapy (SERM)",
+
+        "pregnancy": "D - Có bằng chứng về nguy cơ. Chống chỉ định trong thai kỳ",
         "vietnamese_name": "Tamoxifen, Nolvadex",
         "brand_names": {
             "common": ["Nolvadex", "Soltamox"],
@@ -43,6 +45,8 @@ ONCOLOGY_DRUGS = {
 
     "Anastrozole": {
         "group": "Oncology - Hormonal Therapy (Aromatase Inhibitor)",
+
+        "pregnancy": "X - Chống chỉ định tuyệt đối trong thai kỳ",
         "vietnamese_name": "Anastrozole, Arimidex",
         "brand_names": {
             "common": ["Arimidex"],
@@ -88,6 +92,8 @@ ONCOLOGY_DRUGS = {
 
     "Imatinib": {
         "group": "Oncology - Targeted Therapy (TKI)",
+
+        "pregnancy": "D - Có bằng chứng về nguy cơ. Chống chỉ định trong thai kỳ",
         "vietnamese_name": "Imatinib, Gleevec, Glivec",
         "brand_names": {
             "common": ["Gleevec"],
@@ -119,6 +125,8 @@ ONCOLOGY_DRUGS = {
 
     "Erlotinib": {
         "group": "Oncology - Targeted Therapy (EGFR Inhibitor)",
+
+        "pregnancy": "D - Có bằng chứng về nguy cơ. Chống chỉ định trong thai kỳ",
         "vietnamese_name": "Erlotinib, Tarceva",
         "brand_names": {
             "common": ["Tarceva"],

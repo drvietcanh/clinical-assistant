@@ -1,4 +1,4 @@
-# Hướng Dẫn Workflow Quản Lý Thuốc
+# Hướng dẫn Workflow Quản lý Thuốc
 
 ## Tổng Quan
 
@@ -6,7 +6,7 @@ Hướng dẫn này mô tả quy trình làm việc khi thêm, sửa, và quản
 
 ## Thêm Thuốc Mới
 
-### Bước 1: Kiểm Tra Thuốc Đã Tồn Tại
+### Bước 1: Kiểm tra Thuốc Đã Tồn Tại
 
 ```bash
 python -m drugs.drug_cli search "Drug Name"
@@ -74,7 +74,7 @@ ACE_ARB_DRUGS: Dict[str, Dict[str, Any]] = {
 }
 ```
 
-### Bước 6: Kiểm Tra Lại
+### Bước 6: Kiểm tra Lại
 
 ```bash
 # Kiểm tra field
@@ -124,7 +124,7 @@ if not result['valid']:
     print("Errors:", result['errors'])
 ```
 
-## Kiểm Tra Field
+## Kiểm tra Field
 
 ### Sử dụng CLI
 
@@ -210,7 +210,7 @@ standardized = standardizer.standardize_multiple_drugs(
 #     # Update trong file tương ứng
 ```
 
-## Kiểm Tra Trùng Lặp
+## Kiểm tra Trùng Lặp
 
 ```python
 from drugs.drug_manager_tool import get_drug_manager
@@ -268,7 +268,7 @@ Kết quả:
 - `missing_fields_report.json` - Thuốc thiếu field
 - `duplicate_drugs_report.json` - Thuốc trùng lặp
 
-### Kiểm Tra Field Toàn Diện
+### Kiểm tra Field Toàn Diện
 
 ```bash
 python check_all_drug_fields_comprehensive.py

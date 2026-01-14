@@ -170,7 +170,7 @@ def render():
             
             # Display corrected calcium with interpretation
             render_result_box(
-                title="Calcium Điều Chỉnh",
+                title="Calcium Điều chỉnh",
                 value=f"{ca_corrected_mgdl:.1f} mg/dL",
                 subtitle=f"{interpretation} ({ca_corrected_mmol:.2f} mmol/L)",
                 color=color,
@@ -221,7 +221,7 @@ def render():
             render_suggestions(
                 calculator_id="corrected_calcium",
                 calculator_name="Corrected Calcium",
-                category="Nội Tiết",
+                category="Nội tiết",
                 show_related=True,
                 show_category=True,
                 limit=3

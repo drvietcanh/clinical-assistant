@@ -37,7 +37,7 @@ THROMBOLYTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Heparin, enoxaparin, DOACs, warfarin: tăng mạnh nguy cơ chảy máu",
                 "Thuốc kháng tiểu cầu (aspirin, clopidogrel): tăng nguy cơ chảy máu"
             ],
-            "pregnancy": "C - Cân nhắc rất thận trọng, chỉ dùng khi lợi ích vượt xa nguy cơ",
+        "pregnancy": "C - Cân nhắc rất thận trọng, chỉ dùng khi lợi ích vượt xa nguy cơ",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,
@@ -166,7 +166,7 @@ THROMBOLYTICS_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Heparin, enoxaparin, DOACs, warfarin: tăng nguy cơ chảy máu",
                 "Thuốc kháng tiểu cầu (aspirin, clopidogrel): tăng nguy cơ chảy máu",
             ],
-            "pregnancy": "C - Cân nhắc thận trọng, chỉ dùng khi lợi ích vượt trội nguy cơ",
+        "pregnancy": "C - Cân nhắc thận trọng, chỉ dùng khi lợi ích vượt trội nguy cơ",
             "risk_flags": {
                 "high_alert": True,
                 "narrow_therapeutic_index": False,

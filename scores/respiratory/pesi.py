@@ -290,7 +290,7 @@ def render():
         render_suggestions(
             calculator_id="pesi",
             calculator_name="PESI Score",
-            category="Hô Hấp",
+            category="Hô hấp",
             show_related=True,
             show_category=True,
             limit=3

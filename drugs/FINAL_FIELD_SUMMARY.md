@@ -1,4 +1,4 @@
-# Báo Cáo Tổng Kết - Kiểm Tra và Bổ Sung Fields
+# Báo Cáo Tổng Kết - Kiểm tra và Bổ sung Fields
 
 **Ngày tạo:** 2026-01-13T20:34:57.461702
 **Tổng số thuốc:** 722
@@ -27,7 +27,7 @@
 | references | 84 | 88.4% |
 | administration_instructions | 80 | 88.9% |
 
-## Ưu Tiên Hành Động
+## Ưu tiên Hành Động
 
 ### Priority 1: Bổ sung STANDARD Fields
 

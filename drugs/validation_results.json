@@ -1,9 +1,9 @@
 {
-  "validation_date": "2026-01-13T21:05:52.232625",
+  "validation_date": "2026-01-13T21:22:47.833138",
   "summary": {
-    "total_drugs": 722,
+    "total_drugs": 714,
     "valid_drugs": 644,
-    "invalid_drugs": 71,
+    "invalid_drugs": 70,
     "drugs_with_errors": [
       {
         "drug": "Enalapril",
@@ -68,20 +68,6 @@
       {
         "drug": "Ranitidine",
         "errors": [
-          "Missing required field: pregnancy"
-        ]
-      },
-      {
-        "drug": "references",
-        "errors": [
-          "Missing required field: group",
-          "Missing required field: vietnamese_name",
-          "Missing required field: administration",
-          "Missing required field: indications",
-          "Missing required field: dosage",
-          "Missing required field: side_effects",
-          "Missing required field: contraindications",
-          "Missing required field: interactions",
           "Missing required field: pregnancy"
         ]
       },
@@ -1434,17 +1420,6 @@
           "Field 'overdose_management' should be dict, got str",
           "Field 'administration_instructions' should be dict, got str",
           "Fields out of order: contraindications"
-        ]
-      },
-      {
-        "drug": "references",
-        "warnings": [
-          "Missing additional field: references",
-          "Field 'pregnancy_lactation' should be dict, got str",
-          "Field 'hepatic_adjustment' should be dict, got str",
-          "Field 'overdose_management' should be dict, got str",
-          "Field 'administration_instructions' should be dict, got str",
-          "Fields out of order: black_box_warnings"
         ]
       },
       {
@@ -5117,16 +5092,16 @@
       }
     ],
     "error_types": {
-      "Missing required field": 107
+      "Missing required field": 98
     },
     "warning_types": {
-      "Fields out of order": 702,
+      "Fields out of order": 701,
       "Field 'pregnancy' should contain FDA category (A, B, C, D, or X)": 58,
-      "Missing additional field": 35,
-      "Field 'pregnancy_lactation' should be dict, got str": 40,
-      "Field 'hepatic_adjustment' should be dict, got str": 33,
-      "Field 'overdose_management' should be dict, got str": 35,
-      "Field 'administration_instructions' should be dict, got str": 67,
+      "Missing additional field": 34,
+      "Field 'pregnancy_lactation' should be dict, got str": 39,
+      "Field 'hepatic_adjustment' should be dict, got str": 32,
+      "Field 'overdose_management' should be dict, got str": 34,
+      "Field 'administration_instructions' should be dict, got str": 66,
       "Field 'contraindications' is empty": 24,
       "Field 'pregnancy' is empty": 44,
       "Field 'interactions' is empty": 38,
@@ -7705,53 +7680,6 @@
       "empty_fields": [],
       "order_issues": [
         "contraindications"
-      ],
-      "format_issues": []
-    },
-    "references": {
-      "valid": false,
-      "errors": [
-        "Missing required field: group",
-        "Missing required field: vietnamese_name",
-        "Missing required field: administration",
-        "Missing required field: indications",
-        "Missing required field: dosage",
-        "Missing required field: side_effects",
-        "Missing required field: contraindications",
-        "Missing required field: interactions",
-        "Missing required field: pregnancy"
-      ],
-      "warnings": [
-        "Missing additional field: references",
-        "Field 'pregnancy_lactation' should be dict, got str",
-        "Field 'hepatic_adjustment' should be dict, got str",
-        "Field 'overdose_management' should be dict, got str",
-        "Field 'administration_instructions' should be dict, got str",
-        "Fields out of order: black_box_warnings"
-      ],
-      "missing_standard_fields": [
-        "group",
-        "vietnamese_name",
-        "administration",
-        "indications",
-        "dosage",
-        "side_effects",
-        "contraindications",
-        "interactions",
-        "pregnancy"
-      ],
-      "missing_additional_fields": [
-        "references"
-      ],
-      "type_errors": [
-        "Field 'pregnancy_lactation' should be dict, got str",
-        "Field 'hepatic_adjustment' should be dict, got str",
-        "Field 'overdose_management' should be dict, got str",
-        "Field 'administration_instructions' should be dict, got str"
-      ],
-      "empty_fields": [],
-      "order_issues": [
-        "black_box_warnings"
       ],
       "format_issues": []
     },

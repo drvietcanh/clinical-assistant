@@ -241,7 +241,7 @@ def render():
         render_suggestions(
             calculator_id="murray_lung_injury",
             calculator_name="Murray Lung Injury Score",
-            category="Hô Hấp",
+            category="Hô hấp",
             show_related=True,
             show_category=True,
             limit=3

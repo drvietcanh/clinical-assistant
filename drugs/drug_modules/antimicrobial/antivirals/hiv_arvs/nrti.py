@@ -33,7 +33,7 @@ NRTI_ARVS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Ít qua CYP; tránh phối hợp 3TC (trùng cơ chế).",
             ],
-            "pregnancy": "B: an toàn, khuyến cáo trong thai kỳ.",
+        "pregnancy": "B: an toàn, khuyến cáo trong thai kỳ.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -155,7 +155,7 @@ NRTI_ARVS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Ít tương tác qua CYP; chú ý phối hợp với emtricitabine (trùng cơ chế, không dùng chung).",
             ],
-            "pregnancy": "B: an toàn, được khuyến cáo trong thai kỳ.",
+        "pregnancy": "B: an toàn, được khuyến cáo trong thai kỳ.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -281,7 +281,7 @@ NRTI_ARVS: Dict[str, Dict[str, Any]] = {
                 "P-gp inducers (rifampin, carbamazepine) giảm nồng độ.",
                 "Boosted PIs/cobicistat có thể tăng phơi nhiễm TAF (theo nhãn).",
             ],
-            "pregnancy": "Có thể dùng; dữ liệu đang tăng, ưu tiên TDF nếu cần bằng chứng lâu dài.",
+        "pregnancy": "Có thể dùng; dữ liệu đang tăng, ưu tiên TDF nếu cần bằng chứng lâu dài.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -415,7 +415,7 @@ NRTI_ARVS: Dict[str, Dict[str, Any]] = {
                 "P-gp inducers (rifampin, carbamazepine) giảm nồng độ TAF.",
                 "Boosted PI/cobicistat tăng phơi nhiễm TAF; theo dõi thận."
             ],
-            "pregnancy": "Có thể dùng; dữ liệu ít hơn TDF, TDF vẫn chuẩn trong thai kỳ.",
+        "pregnancy": "Có thể dùng; dữ liệu ít hơn TDF, TDF vẫn chuẩn trong thai kỳ.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -547,7 +547,7 @@ NRTI_ARVS: Dict[str, Dict[str, Any]] = {
                 "Thuốc độc thận (aminoglycoside, NSAID liều cao): tăng nguy cơ độc thận.",
                 "Didanosine: tăng nồng độ didanosine, tăng độc tính; tránh nếu có thể.",
             ],
-            "pregnancy": "B: có thể dùng trong thai kỳ khi lợi ích vượt nguy cơ; an toàn trong PrEP/điều trị HIV/HBV.",
+        "pregnancy": "B: có thể dùng trong thai kỳ khi lợi ích vượt nguy cơ; an toàn trong PrEP/điều trị HIV/HBV.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,
@@ -690,7 +690,7 @@ NRTI_ARVS: Dict[str, Dict[str, Any]] = {
                 "Thuốc độc thận (aminoglycoside, NSAID liều cao): tăng độc thận.",
                 "Boosted PI/cobicistat: tăng phơi nhiễm TDF → tăng nguy cơ thận/xương."
             ],
-            "pregnancy": "TDF/FTC được khuyến cáo an toàn trong thai kỳ và PrEP.",
+        "pregnancy": "TDF/FTC được khuyến cáo an toàn trong thai kỳ và PrEP.",
             "risk_flags": {
                 "high_alert": False,
                 "narrow_therapeutic_index": False,

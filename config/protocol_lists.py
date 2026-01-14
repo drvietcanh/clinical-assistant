@@ -57,13 +57,13 @@ PROTOCOL_LISTS = {
         "🫁 Phù Phổi Cấp (Acute Pulmonary Edema)",
         "💊 Ngộ Độc TCA (Tricyclic Antidepressant)",
         "💊 Ngộ Độc Digoxin (Digoxin Toxicity)",
-        "🍭 Hạ Đường Huyết Cấp Cứu (Severe Hypoglycemia)",
+        "🍭 Hạ Đường Huyết Cấp cứu (Severe Hypoglycemia)",
         "🫁 Chấn Thương Ngực (Chest Trauma)",
         "🫀 Chấn Thương Bụng (Abdominal Trauma)",
         "🔥 Bỏng (Burn Management)"
     ],
     "Hô hấp": [
-        "🫁 Suy Hô Hấp Cấp (Acute Respiratory Failure)",
+        "🫁 Suy Hô hấp Cấp (Acute Respiratory Failure)",
         "🫁 COPD Exacerbation",
         "🫁 Cơn hen cấp",
         "🫁 Viêm phổi cộng đồng (CAP)",
@@ -88,12 +88,12 @@ PROTOCOL_LISTS = {
         "🧪 AKI Management",
         "🫘 Suy thận mạn tính (CKD)",
         "🩸 Thiếu Máu Trong CKD (KDIGO 2026)",
-        "📊 Quản Lý Huyết Áp Trong CKD (KDIGO 2021)",
+        "📊 Quản lý Huyết Áp Trong CKD (KDIGO 2021)",
         "💊 Tăng Huyết Áp Kháng Trị Trong CKD",
         "🔬 IgA Nephropathy (KDIGO 2021)",
         "🌙 Lupus Nephritis (KDIGO 2021)",
         "🔬 ANCA Vasculitis (KDIGO 2021)",
-        "❤️ Suy Tim Trong CKD (KDIGO 2025)",
+        "❤️ Suy tim Trong CKD (KDIGO 2025)",
         "🍭 Bệnh thận do đái tháo đường",
         "📈 Bệnh thận do tăng huyết áp",
         "🚻 Nhiễm trùng tiểu / Viêm bể thận",
@@ -102,7 +102,7 @@ PROTOCOL_LISTS = {
         "🔬 Viêm cầu thận mạn tính",
         "💧 Hội chứng thận hư",
         "🧪 Hội Chứng Gan Thận (Hepatorenal Syndrome)",
-        "🧪 Lọc Máu Cấp Cứu (Emergency Dialysis)"
+        "🧪 Lọc Máu Cấp cứu (Emergency Dialysis)"
     ],
     "Nhiễm khuẩn": [
         "🫁 CAP Management",
@@ -110,7 +110,7 @@ PROTOCOL_LISTS = {
         "🦠 C. diff Treatment",
         "🧠 Meningitis / Encephalitis",
         "🦠 Viêm nội tâm mạc (Endocarditis)",
-        "🦟 Sốt Xuất Huyết Dengue",
+        "🦟 Sốt Xuất huyết Dengue",
         "🦟 Sốt Mò (Scrub Typhus)",
         "🦟 Sốt Rét (Malaria)",
         "🪱 Nhiễm Ký sinh Trùng Giun Sán (Parasitic Worms)"
@@ -125,7 +125,7 @@ PROTOCOL_LISTS = {
     "Huyết học": [
         "🩸 Truyền máu (Transfusion)",
         "🩸 Đảo Ngược Chống đông (Anticoagulation Reversal)",
-        "🩸 Xuất Huyết Giảm Tiểu Cầu Miễn Dịch (ITP)",
+        "🩸 Xuất huyết Giảm Tiểu Cầu Miễn dịch (ITP)",
         "🩸 TTP/HUS (Thrombotic Thrombocytopenic Purpura)",
         "🩸 DIC (Disseminated Intravascular Coagulation)"
     ],
@@ -148,8 +148,8 @@ PROTOCOL_LISTS = {
         "🫀 Quản lý Xơ Gan (Cirrhosis Management)",
         "🫀 Bệnh Gan Nhiễm Mỡ Không Do Rượu (NAFLD/NASH)",
         "🫀 Táo Bón Mạn Tính (Chronic Constipation)",
-        "🫀 Tiêu Chảy Cấp (Acute Diarrhea)",
-        "🩸 Xuất Huyết Tiêu Hóa Dưới (Lower GI Bleeding)",
+        "🫀 Tiêu chảy Cấp (Acute Diarrhea)",
+        "🩸 Xuất huyết Tiêu hóa Dưới (Lower GI Bleeding)",
         "🫀 Thủng Dạ Dày Tá Tràng (Perforated Peptic Ulcer)",
         "🫀 Tắc Mật (Biliary Obstruction)",
         "🫀 Xơ Gan Mất Bù (Decompensated Cirrhosis)"
@@ -160,7 +160,7 @@ PROTOCOL_LISTS = {
         "🫁 ARDS Management",
         "🫁 Ventilator Weaning",
         "🩸 Stress Ulcer Prophylaxis",
-        "🧠 Quản Lý Áp Lực Nội Sọ (ICP Management)",
+        "🧠 Quản lý Áp Lực Nội Sọ (ICP Management)",
         "🧪 CRRT (Continuous Renal Replacement Therapy)"
     ],
     "Ung thư": [

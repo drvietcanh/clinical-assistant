@@ -330,7 +330,7 @@ def render():
         render_suggestions(
             calculator_id="winter_formula",
             calculator_name="Winter Formula",
-            category="Nội Tiết",
+            category="Nội tiết",
             show_related=True,
             show_category=True,
             limit=3
@@ -369,7 +369,7 @@ def render():
         # Causes based on anion gap
         if anion_gap is not None:
             st.markdown("---")
-            st.subheader("🔍 Nguyên nhân Toan Chuyển Hóa")
+            st.subheader("🔍 Nguyên nhân Toan Chuyển hóa")
             
             causes_info = get_metabolic_acidosis_causes(anion_gap)
             

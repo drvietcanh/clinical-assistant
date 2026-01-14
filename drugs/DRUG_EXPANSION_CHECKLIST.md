@@ -1,4 +1,4 @@
-# ✅ Checklist Bổ Sung Thuốc Mới
+# ✅ Checklist Bổ sung Thuốc Mới
 
 **Ngày tạo:** 2025-02-04  
 **Hiện trạng:** 74 thuốc  
@@ -94,7 +94,7 @@
 
 ### **GIAI ĐOẠN 2: 50 Thuốc (100 → 150)**
 
-#### **Nhóm 6: Kháng Sinh Bổ Sung** 🔥🔥
+#### **Nhóm 6: Kháng sinh Bổ sung** 🔥🔥
 
 **Mục tiêu:** 10 thuốc
 
@@ -114,7 +114,7 @@
 
 ---
 
-#### **Nhóm 7: Tim Mạch Bổ Sung** ⚡
+#### **Nhóm 7: Tim mạch Bổ sung** ⚡
 
 **Mục tiêu:** 5 thuốc
 
@@ -128,7 +128,7 @@
 
 ---
 
-#### **Nhóm 8: Thần Kinh & Tâm Thần Bổ Sung** ⚡
+#### **Nhóm 8: Thần kinh & Tâm Thần Bổ sung** ⚡
 
 **Mục tiêu:** 8 thuốc
 
@@ -145,7 +145,7 @@
 
 ---
 
-#### **Nhóm 9: Hô Hấp Bổ Sung** ⚡
+#### **Nhóm 9: Hô hấp Bổ sung** ⚡
 
 **Mục tiêu:** 5 thuốc
 
@@ -160,7 +160,7 @@
 
 ---
 
-#### **Nhóm 10: Tiêu Hóa Bổ Sung** ⚡
+#### **Nhóm 10: Tiêu hóa Bổ sung** ⚡
 
 **Mục tiêu:** 5 thuốc
 
@@ -174,7 +174,7 @@
 
 ---
 
-#### **Nhóm 11: Ung Thư Bổ Sung** ⚡
+#### **Nhóm 11: Ung thư Bổ sung** ⚡
 
 **Mục tiêu:** 5 thuốc
 
@@ -189,7 +189,7 @@
 
 ---
 
-#### **Nhóm 12: Nội Tiết & Khác** 📋
+#### **Nhóm 12: Nội tiết & Khác** 📋
 
 **Mục tiêu:** 12 thuốc
 

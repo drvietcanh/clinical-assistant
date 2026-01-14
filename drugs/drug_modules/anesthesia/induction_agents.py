@@ -5,6 +5,8 @@ Anesthesia Induction Agents
 INDUCTION_AGENTS = {
     "Propofol": {
         "group": "Anesthesia - Induction Agent (IV)",
+
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
         "vietnamese_name": "Propofol, Diprivan",
         "brand_names": {
             "common": ["Diprivan"],
@@ -90,6 +92,8 @@ INDUCTION_AGENTS = {
 
     "Ketamine": {
         "group": "Anesthesia - Dissociative Anesthetic",
+
+        "pregnancy": "C - Nguy cơ không thể loại trừ",
         "vietnamese_name": "Ketamine, Ketalar",
         "brand_names": {
             "common": ["Ketalar"],
@@ -173,6 +177,8 @@ INDUCTION_AGENTS = {
 
     "Etomidate": {
         "group": "Anesthesia - Induction Agent",
+
+        "pregnancy": "C - Nguy cơ không thể loại trừ",
         "vietnamese_name": "Etomidate, Amidate",
         "brand_names": {
             "common": ["Amidate"],

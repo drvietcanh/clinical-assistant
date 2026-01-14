@@ -17,7 +17,7 @@ Enhanced fields bao gồm **14 trường** (6 cơ bản + 8 bổ sung):
 5. **storage** (string) - Điều kiện bảo quản
 6. **black_box_warnings** (string or None) - Cảnh báo hộp đen
 
-### 8 Fields Bổ Sung (Tùy chọn)
+### 8 Fields Bổ sung (Tùy chọn)
 
 7. **drug_interactions** (dict) - Tương tác thuốc chi tiết
 8. **contraindications** (dict) - Chống chỉ định phân loại

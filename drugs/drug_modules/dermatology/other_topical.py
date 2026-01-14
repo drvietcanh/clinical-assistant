@@ -40,7 +40,7 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thiazide diuretics: tăng nguy cơ tăng calci máu",
                 "Calcium supplements: tăng nguy cơ tăng calci máu"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Calcipotriol là vitamin D3 analog tại chỗ. Gắn với vitamin D receptor (VDR), điều chỉnh sự biệt hóa và tăng sinh tế bào sừng. Ức chế tăng sinh tế bào sừng (giảm tốc độ tăng trưởng), tăng biệt hóa tế bào sừng (cải thiện chất lượng), và giảm viêm. Được dùng cho vảy nến (psoriasis) - mảng bám. Đặc điểm: tác dụng chậm (4-8 tuần), tối đa 100g/tuần để tránh tăng calci máu, có thể dùng kết hợp với corticosteroid tại chỗ.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm vảy nến)",
@@ -194,7 +194,7 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thiazide diuretics: tăng nguy cơ tăng calci máu",
                 "Calcium supplements: tăng nguy cơ tăng calci máu"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Calcitriol là vitamin D3 dạng hoạt động tại chỗ. Gắn với vitamin D receptor (VDR), điều chỉnh sự biệt hóa và tăng sinh tế bào sừng. Ức chế tăng sinh tế bào sừng (giảm tốc độ tăng trưởng), tăng biệt hóa tế bào sừng (cải thiện chất lượng), và giảm viêm. Được dùng cho vảy nến (psoriasis) - mảng bám. Đặc điểm: tác dụng chậm (4-8 tuần), nguy cơ tăng calci máu nếu dùng diện rộng, tương tự calcipotriol nhưng là calcitriol (dạng hoạt động).",
             "monitoring": [
                 "Đáp ứng điều trị (giảm vảy nến)",
@@ -352,7 +352,7 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Aspirin: tăng nguy cơ chảy máu",
                 "Warfarin: có thể tăng INR (hiếm với dạng tại chỗ)"
             ],
-            "pregnancy": "C - D trong 3 tháng cuối",
+        "pregnancy": "C - D trong 3 tháng cuối",
             "mechanism_of_action": "Diclofenac là NSAID (nonsteroidal anti-inflammatory drug), ức chế enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Prostaglandin là chất trung gian gây viêm, đau, và sốt. Ức chế COX → giảm prostaglandin → giảm viêm, giảm đau. Dạng gel tại chỗ hấp thu toàn thân tối thiểu, giảm nguy cơ tác dụng phụ toàn thân (đau dạ dày, tổn thương thận) so với NSAID đường uống. Được dùng cho đau khớp, đau cơ xương tại chỗ.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm đau, viêm)",
@@ -504,7 +504,7 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Ít tương tác thuốc (dạng tại chỗ)"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Ivermectin là antiparasitic, ức chế kênh chloride phụ thuộc glutamate (glutamate-gated chloride channels) trong tế bào thần kinh và cơ của ký sinh trùng. Gây tăng tính thấm màng tế bào, dẫn đến tê liệt và chết ký sinh trùng. Tác dụng với Demodex mites (có thể liên quan đến rosacea) và các ký sinh trùng khác. Dạng cream tại chỗ hấp thu toàn thân tối thiểu, giảm nguy cơ tác dụng phụ toàn thân. Được dùng chủ yếu cho rosacea (đỏ mặt, mụn mủ).",
             "monitoring": [
                 "Đáp ứng điều trị (giảm rosacea)",
@@ -639,7 +639,7 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Aspirin: tăng nguy cơ chảy máu",
                 "Warfarin: có thể tăng INR (hiếm với dạng tại chỗ)"
             ],
-            "pregnancy": "C - D trong 3 tháng cuối",
+        "pregnancy": "C - D trong 3 tháng cuối",
             "mechanism_of_action": "Ketoprofen là NSAID (nonsteroidal anti-inflammatory drug), ức chế enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Prostaglandin là chất trung gian gây viêm, đau, và sốt. Ức chế COX → giảm prostaglandin → giảm viêm, giảm đau. Dạng gel tại chỗ hấp thu toàn thân tối thiểu, giảm nguy cơ tác dụng phụ toàn thân (đau dạ dày, tổn thương thận) so với NSAID đường uống. Được dùng cho đau khớp, đau cơ xương tại chỗ.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm đau, viêm)",
@@ -796,7 +796,7 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (topical)"
             ],
-            "pregnancy": "B - An toàn khi dùng tại chỗ",
+        "pregnancy": "B - An toàn khi dùng tại chỗ",
             "mechanism_of_action": "Permethrin là pyrethroid (synthetic pyrethrin), ức chế kênh Na+ của ký sinh trùng, gây tăng kích thích thần kinh, co giật, và chết. Permethrin có ái lực cao với kênh Na+ của ký sinh trùng (Sarcoptes scabiei, Pediculus humanus), ít ảnh hưởng đến kênh Na+ của người. Permethrin cũng có tác dụng độc với ty thể của ký sinh trùng. ĐẶC ĐIỂM: (1) Pyrethroid antiparasitic, (2) Hiệu quả cao với ghẻ và chấy, (3) Dùng 1 lần, lặp lại sau 1 tuần nếu cần, (4) An toàn khi dùng tại chỗ, (5) Điều trị tất cả người tiếp xúc cùng lúc.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm ngứa, giảm tổn thương da)",
@@ -952,7 +952,7 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Corticosteroid tại chỗ: có thể dùng kết hợp (nhưng thường không cần)",
                 "Thuốc ức chế miễn dịch: tăng nguy cơ nhiễm trùng"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Pimecrolimus là calcineurin inhibitor tại chỗ. Ức chế calcineurin (enzyme cần thiết cho T-cell activation), dẫn đến: (1) Ức chế sản xuất cytokine (IL-2, IL-4, IL-5, TNF-α), (2) Ức chế T-cell activation và proliferation, (3) Giảm viêm và ngứa. Khác với corticosteroid tại chỗ, pimecrolimus không gây teo da và có thể dùng kéo dài. ĐẶC ĐIỂM: (1) Không gây teo da (ưu điểm so với corticosteroid), (2) Có thể dùng kéo dài, (3) An toàn cho vùng da nhạy cảm (mặt, cổ), (4) FDA warning về nguy cơ ung thư da (lymphoma, skin cancer) - nguy cơ tăng nhẹ, (5) Chỉ dùng cho viêm da dị ứng nhẹ đến trung bình (không dùng cho nặng).",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, ngứa)",
@@ -1132,7 +1132,7 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Warfarin: có thể tăng INR (nếu hấp thu toàn thân)",
                 "Aspirin: tăng nguy cơ ngộ độc salicylate"
             ],
-            "pregnancy": "C",
+        "pregnancy": "C",
             "mechanism_of_action": "Salicylic acid là keratolytic (làm bong tróc lớp sừng). Hòa tan chất kết dính giữa các tế bào sừng, làm bong tróc lớp sừng, giảm độ dày của lớp sừng. Được dùng cho mụn cóc (làm bong tróc), mụn trứng cá (làm thông thoáng lỗ chân lông), vảy nến (làm bong tróc vảy), gàu (làm bong tróc vảy). Đặc điểm: keratolytic, nồng độ khác nhau cho các chỉ định khác nhau (2-17%), nguy cơ ngộ độc salicylate nếu dùng diện rộng hoặc nồng độ cao.",
             "monitoring": [
                 "Đáp ứng điều trị (giảm mụn cóc, mụn trứng cá, vảy nến)",
@@ -1294,7 +1294,7 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Thuốc ức chế miễn dịch: tăng nguy cơ nhiễm trùng",
                 "CYP3A4 inhibitors (ketoconazole, erythromycin): tăng nồng độ tacrolimus (nếu hấp thu toàn thân)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Tacrolimus là calcineurin inhibitor tại chỗ. Ức chế calcineurin (enzyme cần thiết cho T-cell activation), dẫn đến: (1) Ức chế sản xuất cytokine (IL-2, IL-4, IL-5, TNF-α), (2) Ức chế T-cell activation và proliferation, (3) Giảm viêm và ngứa. Khác với corticosteroid tại chỗ, tacrolimus không gây teo da và có thể dùng kéo dài. Tacrolimus mạnh hơn pimecrolimus, phù hợp cho viêm da dị ứng trung bình đến nặng. ĐẶC ĐIỂM: (1) Không gây teo da (ưu điểm so với corticosteroid), (2) Có thể dùng kéo dài, (3) An toàn cho vùng da nhạy cảm (mặt, cổ), (4) Mạnh hơn pimecrolimus, (5) FDA warning về nguy cơ ung thư da (lymphoma, skin cancer) - nguy cơ tăng nhẹ, (6) Chỉ dùng cho viêm da dị ứng trung bình đến nặng (không dùng cho nhẹ).",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, ngứa)",

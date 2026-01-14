@@ -1,6 +1,6 @@
-# Hướng Dẫn Nhanh Bổ Sung 2 Field Còn Thiếu
+# Hướng dẫn Nhanh Bổ sung 2 Field Còn Thiếu
 
-## 🎯 Mục Tiêu
+## 🎯 Mục tiêu
 Bổ sung đầy đủ 2 field còn thiếu cho 108 thuốc còn lại.
 
 ## ⚡ Cách Làm Nhanh Nhất

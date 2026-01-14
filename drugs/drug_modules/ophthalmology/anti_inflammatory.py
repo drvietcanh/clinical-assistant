@@ -47,7 +47,7 @@ ANTI_INFLAMMATORY_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Dexamethasone là corticosteroid tổng hợp mạnh. Gắn với thụ thể glucocorticoid trong tế bào, ức chế quá trình viêm bằng cách: (1) Ức chế giải phóng các chất trung gian viêm (prostaglandin, leukotriene, cytokine), (2) Ức chế di chuyển và hoạt động của bạch cầu, (3) Ức chế sản xuất kháng thể, (4) Ổn định màng tế bào. Dẫn đến: giảm viêm, giảm đỏ, giảm sưng, giảm đau. ĐẶC ĐIỂM: (1) Corticosteroid mạnh, chống viêm hiệu quả, (2) Dùng thường xuyên trong giai đoạn đầu, sau đó giảm dần, (3) Nguy cơ tăng nhãn áp và đục thủy tinh thể nếu dùng kéo dài, (4) CHỐNG CHỈ ĐỊNH ở nhiễm trùng mắt do virus/nấm, (5) Ức chế miễn dịch, tăng nguy cơ nhiễm trùng nếu dùng kéo dài.",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - QUAN TRỌNG: theo dõi định kỳ, đặc biệt nếu dùng kéo dài",
@@ -244,7 +244,7 @@ ANTI_INFLAMMATORY_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Corticosteroid: tăng nguy cơ loét dạ dày",
                 "Lithium: tăng nồng độ lithium"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Diclofenac là NSAID (nonsteroidal anti-inflammatory drug). Ức chế enzyme cyclooxygenase (COX-1 và COX-2), ngăn chặn sự tổng hợp prostaglandin từ arachidonic acid. Prostaglandin là chất trung gian gây viêm, đau, và sốt. Giảm prostaglandin dẫn đến: (1) Giảm viêm (giảm đỏ, sưng), (2) Giảm đau, (3) Giảm phù hoàng điểm dạng nang (CME) sau phẫu thuật mắt. Diclofenac tương tự ketorolac nhưng có thể ít kích ứng mắt hơn. ĐẶC ĐIỂM: (1) NSAID tại chỗ, ức chế COX, (2) Dùng 4 lần/ngày, (3) Có thể hấp thu toàn thân và gây tác dụng phụ hệ thống (loét dạ dày, suy thận), (4) CHỐNG CHỈ ĐỊNH ở suy thận nặng, loét dạ dày hoạt động, (5) Kích ứng mắt phổ biến nhưng có thể ít hơn ketorolac, (6) Hiệu quả cho viêm và đau sau phẫu thuật mắt, CME.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, đau) - cải thiện sau 2-3 ngày",
@@ -472,7 +472,7 @@ ANTI_INFLAMMATORY_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Corticosteroid: tăng nguy cơ loét dạ dày",
                 "Lithium: tăng nồng độ lithium"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Ketorolac là NSAID (nonsteroidal anti-inflammatory drug). Ức chế enzyme cyclooxygenase (COX-1 và COX-2), ngăn chặn sự tổng hợp prostaglandin từ arachidonic acid. Prostaglandin là chất trung gian gây viêm, đau, và sốt. Giảm prostaglandin dẫn đến: (1) Giảm viêm (giảm đỏ, sưng), (2) Giảm đau, (3) Giảm phù hoàng điểm dạng nang (CME) sau phẫu thuật mắt. ĐẶC ĐIỂM: (1) NSAID tại chỗ, ức chế COX, (2) Dùng 4 lần/ngày, (3) Có thể hấp thu toàn thân và gây tác dụng phụ hệ thống (loét dạ dày, suy thận), (4) CHỐNG CHỈ ĐỊNH ở suy thận nặng, loét dạ dày hoạt động, (5) Kích ứng mắt phổ biến, (6) Hiệu quả cho viêm và đau sau phẫu thuật mắt, CME.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, đau) - cải thiện sau 2-3 ngày",
@@ -698,7 +698,7 @@ ANTI_INFLAMMATORY_DRUGS: Dict[str, Dict[str, Any]] = {
                 "Corticosteroid: tăng nguy cơ loét dạ dày",
                 "Lithium: tăng nồng độ lithium"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Nepafenac là NSAID prodrug. Chuyển hóa thành amfenac (active metabolite) trong mắt bởi hydrolase. Amfenac ức chế enzyme cyclooxygenase (COX-1 và COX-2), ngăn chặn sự tổng hợp prostaglandin từ arachidonic acid. Prostaglandin là chất trung gian gây viêm, đau, và sốt. Giảm prostaglandin dẫn đến: (1) Giảm viêm (giảm đỏ, sưng), (2) Giảm đau, (3) Giảm phù hoàng điểm dạng nang (CME) sau phẫu thuật mắt. Nepafenac là prodrug, có thể ít kích ứng mắt hơn ketorolac và diclofenac do chuyển hóa tại mắt. ĐẶC ĐIỂM: (1) NSAID prodrug, chuyển hóa thành amfenac trong mắt, (2) Dùng 3 lần/ngày, (3) Có thể ít kích ứng mắt hơn ketorolac và diclofenac, (4) Có thể hấp thu toàn thân và gây tác dụng phụ hệ thống (loét dạ dày, suy thận), (5) CHỐNG CHỈ ĐỊNH ở suy thận nặng, loét dạ dày hoạt động, (6) Hiệu quả cho viêm và đau sau phẫu thuật mắt, CME.",
             "monitoring": [
                 "Đáp ứng lâm sàng (giảm đỏ, sưng, đau) - cải thiện sau 2-3 ngày",
@@ -917,7 +917,7 @@ ANTI_INFLAMMATORY_DRUGS: Dict[str, Dict[str, Any]] = {
             "interactions": [
                 "Không có tương tác đáng kể với thuốc khác (ophthalmic)"
             ],
-            "pregnancy": "C - Thận trọng",
+        "pregnancy": "C - Thận trọng",
             "mechanism_of_action": "Prednisolone là corticosteroid tổng hợp mạnh. Gắn với thụ thể glucocorticoid trong tế bào, ức chế quá trình viêm bằng cách: (1) Ức chế giải phóng các chất trung gian viêm (prostaglandin, leukotriene, cytokine), (2) Ức chế di chuyển và hoạt động của bạch cầu, (3) Ức chế sản xuất kháng thể, (4) Ổn định màng tế bào. Dẫn đến: giảm viêm, giảm đỏ, giảm sưng, giảm đau. ĐẶC ĐIỂM: (1) Corticosteroid mạnh, chống viêm hiệu quả, (2) Dùng thường xuyên trong giai đoạn đầu, sau đó giảm dần, (3) Nguy cơ tăng nhãn áp và đục thủy tinh thể nếu dùng kéo dài, (4) CHỐNG CHỈ ĐỊNH ở nhiễm trùng mắt do virus/nấm, (5) Ức chế miễn dịch, tăng nguy cơ nhiễm trùng nếu dùng kéo dài.",
             "monitoring": [
                 "Nhãn áp (intraocular pressure - IOP) - QUAN TRỌNG: theo dõi định kỳ, đặc biệt nếu dùng kéo dài",

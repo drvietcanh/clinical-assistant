@@ -129,14 +129,20 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ triệu chứng."
         }
     },
-    "Esomeprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor', 'vietnamese_name':
-        'Esomeprazole, Nexium', 'administration': ['PO', 'IV'], 'indications':
+    "Esomeprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor',
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người. Có thể sử dụng trong thai kỳ",
+        ', 'vietnamese_name':
+        'Esomeprazole, Nexium', 'administration': ['PO', 'IV'],
+        'indications':
         ['Loét dạ dày tá tràng', 'GERD', 'Phòng ngừa loét do stress', 'Zollinger-Ellison syndrome'],
-        'contraindications': ['Dị ứng esomeprazole hoặc PPI'], 'dosage': {'adult_standard':
+        'contraindications': ['Dị ứng esomeprazole hoặc PPI'],
+        'dosage': {'adult_standard':
         '20-40mg x 1 lần/ngày', 'adult_gerd': '40mg x 1 lần/ngày', 'adult_ulcer':
         '40mg x 1 lần/ngày x 4-8 tuần', 'adult_iv': '20-40mg IV x 1-2 lần/ngày', 'notes':
-        'Uống 30-60 phút trước bữa ăn. Esomeprazole là S-enantiomer của omeprazole, hiệu quả hơn'}, 'side_effects': [
-        'Nhức đầu', 'Tiêu chảy', 'Đau bụng', 'Buồn nôn', 'Tương tự các PPI khác'], 'interactions': [
+        'Uống 30-60 phút trước bữa ăn. Esomeprazole là S-enantiomer của omeprazole, hiệu quả hơn'},
+        'side_effects': [
+        'Nhức đầu', 'Tiêu chảy', 'Đau bụng', 'Buồn nôn', 'Tương tự các PPI khác'],
+        'interactions': [
         'Warfarin: có thể tăng INR', 'Clopidogrel: có thể giảm hiệu quả (ức chế CYP2C19)',
         'Ketoconazole: giảm hấp thu (cách xa 2 giờ)'],
         'mechanism_of_action':
@@ -159,7 +165,8 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         '1-1.5 giờ (ngắn), nhưng tác dụng kéo dài 24h do ức chế không thuận nghịch proton pump',
         'onset': '1-3 ngày (tác dụng đầy đủ)', 'duration':
         '24 giờ (mặc dù half-life ngắn)', 'protein_binding': '97%', 'clearance':
-        'Gan (CYP2C19, CYP3A4) - ít phụ thuộc CYP2C19 hơn omeprazole'}, 'storage':
+        'Gan (CYP2C19, CYP3A4) - ít phụ thuộc CYP2C19 hơn omeprazole'},
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
         'black_box_warnings':
         'Có thể tăng nguy cơ gãy xương hông, cổ tay, cột sống khi dùng lâu dài (≥1 năm) và liều cao. Nguy cơ nhiễm C. difficile tăng. Giảm hấp thu vitamin B12 và magnesium khi dùng lâu dài',
@@ -179,10 +186,12 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         {'drug': 'Ketoconazole, Itraconazole, Posaconazole', 'mechanism':
         'PPI tăng pH dạ dày, giảm hấp thu azole antifungals (cần môi trường acid)',
         'effect': 'Giảm nồng độ azole, giảm hiệu quả điều trị', 'management':
-        'Cách thời gian ít nhất 2 giờ. Hoặc dùng dạng lỏng posaconazole.'}], 'minor': []},
+        'Cách thời gian ít nhất 2 giờ. Hoặc dùng dạng lỏng posaconazole.'}],
+        'minor': []},
         'contraindications': {'tuyệt_đối': [
         'Dị ứng esomeprazole hoặc PPI khác',
-        'Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối'], 'tương_đối': [
+        'Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối'],
+        'tương_đối': [
         'Suy gan nặng (Child-Pugh C) - thận trọng, có thể giảm liều',
         'Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng',
         'Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài',
@@ -202,11 +211,14 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'Esomeprazole chuyển hóa ở gan nhưng ít phụ thuộc CYP2C19 hơn omeprazole. Thận trọng ở suy gan nặng.'},
         'overdose_management': {'symptoms': [
         'PPI ít gây quá liều nghiêm trọng',
-        'Triệu chứng nhẹ: nhức đầu, buồn nôn, tiêu chảy, chóng mặt'], 'antidote':
+        'Triệu chứng nhẹ: nhức đầu, buồn nôn, tiêu chảy, chóng mặt'],
+        'antidote':
         'Không có antidote đặc hiệu', 'treatment': [
         'Hỗ trợ triệu chứng', 'Theo dõi dấu hiệu sinh tồn',
-        'Hầu hết trường hợp tự khỏi'], 'monitoring':
-        'Theo dõi dấu hiệu sinh tồn, triệu chứng nhẹ'}, 'reversal_agents': None,
+        'Hầu hết trường hợp tự khỏi'],
+        'monitoring':
+        'Theo dõi dấu hiệu sinh tồn, triệu chứng nhẹ'},
+        'reversal_agents': None,
         'administration_instructions': {'oral': {'with_food':
         'Uống 30-60 phút TRƯỚC bữa ăn (quan trọng - để PPI hoạt động khi proton pump được kích hoạt)',
         'timing':
@@ -216,22 +228,30 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'infusion_rate':
         'Truyền trong 10-30 phút', 'compatibility': ['NaCl 0.9%', 'Dextrose 5%'],
         'incompatibility': [
-        'Không pha với các thuốc khác trong cùng đường truyền'], 'notes':
+        'Không pha với các thuốc khác trong cùng đường truyền'],
+        'notes':
         'Chỉ dùng IV khi không uống được. Chuyển sang PO sớm nhất có thể.'}},
         'references': {'primary_sources': ['FDA Drug Label - Esomeprazole',
         'UpToDate - Proton pump inhibitors: Overview of use and adverse effects',
         'Micromedex - Esomeprazole',
-        "Goodman & Gilman's The Pharmacological Basis of Therapeutics"], 'last_updated':
+        "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
+        'last_updated':
         '2025-02-04', 'evidence_level': 'High - FDA approved, multiple RCTs'}},
     
-    "Lansoprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor', 'vietnamese_name':
-        'Lansoprazole, Prevacid', 'administration': ['PO'], 'indications':
+    "Lansoprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor',
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người. Có thể sử dụng trong thai kỳ",
+        ', 'vietnamese_name':
+        'Lansoprazole, Prevacid', 'administration': ['PO'],
+        'indications':
         ['Loét dạ dày tá tràng', 'GERD', 'Phòng ngừa loét do stress', 'Zollinger-Ellison syndrome'],
-        'contraindications': ['Dị ứng lansoprazole hoặc PPI'], 'dosage': {'adult_standard':
+        'contraindications': ['Dị ứng lansoprazole hoặc PPI'],
+        'dosage': {'adult_standard':
         '15-30mg x 1 lần/ngày', 'adult_gerd': '30mg x 1 lần/ngày', 'adult_ulcer':
         '30mg x 1 lần/ngày x 4-8 tuần', 'notes':
-        'Uống 30 phút trước bữa ăn. Có thể mở viên nang và trộn với nước táo nếu cần'}, 'side_effects': [
-        'Nhức đầu', 'Tiêu chảy', 'Đau bụng', 'Buồn nôn', 'Tương tự các PPI khác'], 'interactions': [
+        'Uống 30 phút trước bữa ăn. Có thể mở viên nang và trộn với nước táo nếu cần'},
+        'side_effects': [
+        'Nhức đầu', 'Tiêu chảy', 'Đau bụng', 'Buồn nôn', 'Tương tự các PPI khác'],
+        'interactions': [
         'Warfarin: có thể tăng INR', 'Theophylline: tăng nồng độ theophylline',
         'Ketoconazole: giảm hấp thu (cách xa 2 giờ)'],
         'mechanism_of_action':
@@ -253,7 +273,8 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         '1-2 giờ (ngắn), nhưng tác dụng kéo dài 24h do ức chế không thuận nghịch proton pump',
         'onset': '1-3 ngày (tác dụng đầy đủ)', 'duration':
         '24 giờ (mặc dù half-life ngắn)', 'protein_binding': '97%', 'clearance':
-        'Gan (CYP2C19, CYP3A4)'}, 'storage':
+        'Gan (CYP2C19, CYP3A4)'},
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
         'black_box_warnings':
         'Có thể tăng nguy cơ gãy xương hông, cổ tay, cột sống khi dùng lâu dài (≥1 năm) và liều cao. Nguy cơ nhiễm C. difficile tăng. Giảm hấp thu vitamin B12 và magnesium khi dùng lâu dài',
@@ -273,10 +294,12 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'Theophylline', 'mechanism':
         'Lansoprazole có thể ức chế chuyển hóa theophylline, tăng nồng độ',
         'effect': 'Tăng nồng độ theophylline, tăng độc tính', 'management':
-        'Theo dõi nồng độ theophylline và điều chỉnh liều nếu cần.'}], 'minor': []},
+        'Theo dõi nồng độ theophylline và điều chỉnh liều nếu cần.'}],
+        'minor': []},
         'contraindications': {'tuyệt_đối': [
         'Dị ứng lansoprazole hoặc PPI khác',
-        'Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối'], 'tương_đối': [
+        'Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối'],
+        'tương_đối': [
         'Suy gan nặng (Child-Pugh C) - thận trọng, có thể giảm liều',
         'Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng',
         'Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài',
@@ -295,51 +318,64 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'Lansoprazole chuyển hóa ở gan. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ. Thận trọng ở suy gan nặng.'},
         'overdose_management': {'symptoms': [
         'PPI ít gây quá liều nghiêm trọng',
-        'Triệu chứng nhẹ: nhức đầu, buồn nôn, tiêu chảy, chóng mặt'], 'antidote':
+        'Triệu chứng nhẹ: nhức đầu, buồn nôn, tiêu chảy, chóng mặt'],
+        'antidote':
         'Không có antidote đặc hiệu', 'treatment': [
         'Hỗ trợ triệu chứng', 'Theo dõi dấu hiệu sinh tồn',
-        'Hầu hết trường hợp tự khỏi'], 'monitoring':
-        'Theo dõi dấu hiệu sinh tồn, triệu chứng nhẹ'}, 'reversal_agents': None,
+        'Hầu hết trường hợp tự khỏi'],
+        'monitoring':
+        'Theo dõi dấu hiệu sinh tồn, triệu chứng nhẹ'},
+        'reversal_agents': None,
         'administration_instructions': {'oral': {'with_food':
         'Uống 30 phút TRƯỚC bữa ăn (quan trọng - để PPI hoạt động khi proton pump được kích hoạt)',
         'timing':
         'Uống vào buổi sáng trước bữa sáng. KHÔNG được nhai hoặc nghiền viên bao tan trong ruột - phải nuốt nguyên viên. Có thể mở viên nang và trộn với nước táo nếu bệnh nhân không nuốt được viên.'},
         'iv': {'reconstitution': 'Không có dạng IV', 'infusion_rate': 'N/A',
-        'compatibility': [], 'incompatibility': []}},
+        'compatibility': [],
+        'incompatibility': []}},
         'references': {'primary_sources': ['FDA Drug Label - Lansoprazole',
         'UpToDate - Proton pump inhibitors: Overview of use and adverse effects',
         'Micromedex - Lansoprazole',
-        "Goodman & Gilman's The Pharmacological Basis of Therapeutics"], 'last_updated':
+        "Goodman & Gilman's The Pharmacological Basis of Therapeutics"],
+        'last_updated':
         '2025-02-04', 'evidence_level': 'High - FDA approved, multiple RCTs'}},
-    "Pantoprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor', 'vietnamese_name':
-        'Pantoprazole, Pantoloc', 'administration': ['PO', 'IV'], 'indications':
+    "Pantoprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor',
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người. Có thể sử dụng trong thai kỳ",
+        ', 'vietnamese_name':
+        'Pantoprazole, Pantoloc', 'administration': ['PO', 'IV'],
+        'indications':
         ['Loét dạ dày tá tràng', 'GERD', 'Phòng ngừa loét do stress'],
-        'contraindications': ['Dị ứng'], 'dosage': {'adult_po':
+        'contraindications': ['Dị ứng'],
+        'dosage': {'adult_po':
         '40mg x 1-2 lần/ngày', 'adult_iv': '40mg x 1-2 lần/ngày', 'notes':
-        'Ít tương tác hơn omeprazole với clopidogrel'}, 'side_effects': [
-        'Nhức đầu', 'Tiêu chảy', 'Tương tự omeprazole'], 'interactions': [
-        'Ít tương tác hơn omeprazole'], 'mechanism_of_action':
+        'Ít tương tác hơn omeprazole với clopidogrel'},
+        'side_effects': [
+        'Nhức đầu', 'Tiêu chảy', 'Tương tự omeprazole'],
+        'interactions': [
+        'Ít tương tác hơn omeprazole'],
+        'mechanism_of_action':
         'Proton pump inhibitor (PPI). Ức chế H+/K+-ATPase (proton pump) ở tế bào thành dạ dày, giảm tiết acid dạ dày mạnh và kéo dài. Khác với H2 blockers, PPI ức chế bước cuối cùng của quá trình tiết acid, nên hiệu quả hơn. Pantoprazole ít tương tác với CYP450 hơn omeprazole.'
         , 'monitoring': ['Đáp ứng lâm sàng: giảm triệu chứng đau, ợ nóng',
         'Mg2+ máu (nếu dùng kéo dài >3 tháng) - PPI có thể gây hạ magie máu',
         'Vitamin B12 (nếu dùng kéo dài >2 năm) - PPI giảm hấp thu B12',
         'Dấu hiệu nhiễm trùng: PPI tăng nguy cơ viêm phổi, C. difficile colitis',
         'Loãng xương: PPI dùng kéo dài có thể tăng nguy cơ gãy xương (cần monitor nếu >1 năm)'
-        ], 'precautions': [
+        ],
+        'precautions': [
         'Uống 30-60 phút TRƯỚC bữa ăn (để PPI hoạt động khi proton pump được kích hoạt)'
-        ,
         'KHÔNG được nhai hoặc nghiền viên bao tan trong ruột (enteric-coated)',
         'Pantoprazole ưu điểm: ít tương tác với CYP450 hơn omeprazole, ít ảnh hưởng đến clopidogrel hơn'
         , 'Dùng ngắn hạn khi có thể - tránh dùng kéo dài không cần thiết',
         'Thận trọng ở bệnh nhân loãng xương (PPI dùng kéo dài có thể tăng nguy cơ gãy xương)'
-        ,
         'Thận trọng ở bệnh nhân suy thận (không cần chỉnh liều nhưng monitor)',
         'Tăng nguy cơ viêm phổi, C. difficile colitis (đặc biệt ở người già, suy giảm miễn dịch)'
-        ], 'pharmacokinetics': {'half_life':
+        ],
+        'pharmacokinetics': {'half_life':
         '1 giờ (ngắn), nhưng tác dụng kéo dài 24h do ức chế không thuận nghịch proton pump'
         , 'onset': '1-3 ngày (tác dụng đầy đủ)', 'duration':
         '24 giờ (mặc dù half-life ngắn)', 'protein_binding': '98%', 'clearance':
-        'Gan (CYP2C19, CYP3A4) - ít tương tác hơn omeprazole'}, 'storage':
+        'Gan (CYP2C19, CYP3A4) - ít tương tác hơn omeprazole'},
+        'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng',
         'black_box_warnings':
         'Có thể tăng nguy cơ gãy xương hông, cổ tay, cột sống khi dùng lâu dài (≥1 năm) và liều cao. Nguy cơ nhiễm C. difficile tăng. Giảm hấp thu vitamin B12 và magnesium khi dùng lâu dài'
@@ -364,23 +400,26 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'Vitamin B12 (cobalamin)', 'mechanism':
         'PPI giảm acid dạ dày, giảm tách B12 khỏi protein thức ăn', 'effect':
         'Giảm hấp thu B12 sau 2-3 năm dùng PPI', 'management':
-        'Bổ sung B12 định kỳ nếu dùng lâu dài (>2 năm).'}], 'minor': [{'drug':
+        'Bổ sung B12 định kỳ nếu dùng lâu dài (>2 năm).'}],
+        'minor': [{'drug':
         'Clopidogrel', 'mechanism':
         'Pantoprazole ít ức chế CYP2C19 hơn omeprazole', 'effect':
         'Ít ảnh hưởng đến clopidogrel hơn omeprazole, nhưng vẫn thận trọng',
         'management':
         'Pantoprazole là lựa chọn tốt hơn omeprazole khi cần dùng với clopidogrel. Vẫn nên tránh dùng cùng nếu có thể.'
-        }]},         'contraindications': ['Dị ứng'],
-        'contraindications_detail': {'tuyệt_đối': [
+        }]},
+        'contraindications': ['Dị ứng'],contraindications_detail': {'tuyệt_đối': [
         'Dị ứng pantoprazole hoặc PPI khác',
         'Dùng cùng atazanavir (HIV protease inhibitor) - CHỐNG CHỈ ĐỊNH tuyệt đối'
-        ], 'tương_đối': [
+        ],
+        'tương_đối': [
         'Suy gan nặng (Child-Pugh C) - thận trọng, có thể giảm liều',
         'Suy thận nặng (CrCl <30) - không cần chỉnh liều nhưng thận trọng',
         'Loãng xương - tăng nguy cơ gãy xương khi dùng lâu dài',
         'Nhiễm C. difficile - tăng nguy cơ',
         'Thiếu vitamin B12 - bổ sung nếu dùng lâu dài',
-        'Thiếu magnesium - bổ sung nếu dùng lâu dài']}, 'pregnancy_lactation':
+        'Thiếu magnesium - bổ sung nếu dùng lâu dài']},
+        'pregnancy_lactation':
         {'fda_category': 'B', 'pregnancy_details':
         'Pantoprazole là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Một số nghiên cứu quan sát không cho thấy tăng nguy cơ dị tật bẩm sinh. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. An toàn hơn omeprazole (category C) trong thai kỳ.'
         , 'lactation': {'safety': 'Compatible', 'details':
@@ -392,28 +431,35 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'Thận trọng ở suy gan nặng (Child-Pugh C). Có thể giảm liều. Pantoprazole chuyển hóa ở gan qua CYP2C19 và CYP3A4, nhưng ít phụ thuộc vào CYP2C19 hơn omeprazole.'
         , 'notes':
         'Pantoprazole ít tương tác với CYP450 hơn omeprazole, nên ít ảnh hưởng hơn ở suy gan. Tuy nhiên, vẫn thận trọng ở suy gan nặng.'
-        }, 'renal_adjustment': {'normal': 'Không cần chỉnh liều',
+        },
+        'renal_adjustment': {'normal': 'Không cần chỉnh liều',
         '30_60': 'Không cần chỉnh liều. Pantoprazole chủ yếu chuyển hóa qua gan.',
         'under_30': 'Không cần chỉnh liều. Pantoprazole chủ yếu chuyển hóa qua gan.',
         'dialysis': 'Không cần chỉnh liều. Pantoprazole không được lọc sạch qua thẩm phân máu.',
-        'notes': 'Pantoprazole chủ yếu chuyển hóa qua gan (CYP2C19, CYP3A4). Không cần điều chỉnh liều ở suy thận.'}, 'overdose_management': {'symptoms': [
+        'notes': 'Pantoprazole chủ yếu chuyển hóa qua gan (CYP2C19, CYP3A4). Không cần điều chỉnh liều ở suy thận.'},
+        'overdose_management': {'symptoms': [
         'PPI ít gây quá liều nghiêm trọng',
         'Triệu chứng nhẹ: nhức đầu, buồn nôn, tiêu chảy, chóng mặt'],
         'antidote': 'Không có antidote đặc hiệu', 'treatment': [
         'Hỗ trợ triệu chứng', 'Theo dõi dấu hiệu sinh tồn',
-        'Hầu hết trường hợp tự khỏi'], 'monitoring':
-        'Theo dõi dấu hiệu sinh tồn, triệu chứng nhẹ'}, 'reversal_agents': {'available': False, 'agents': [],
+        'Hầu hết trường hợp tự khỏi'],
+        'monitoring':
+        'Theo dõi dấu hiệu sinh tồn, triệu chứng nhẹ'},
+        'reversal_agents': {'available': False, 'agents': [],
         'notes': 'Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ triệu chứng.'},
         'administration_instructions': {'oral': {'with_food':
         'Uống 30-60 phút TRƯỚC bữa ăn (quan trọng - để PPI hoạt động khi proton pump được kích hoạt)'
         , 'timing':
         'Uống vào buổi sáng trước bữa sáng (hoặc trước bữa tối nếu dùng 2 lần/ngày). KHÔNG được nhai hoặc nghiền viên bao tan trong ruột - phải nuốt nguyên viên.'
-        }, 'iv': {'reconstitution':
+        },
+        'iv': {'reconstitution':
         'Pantoprazole IV: 40mg pha với 100ml NaCl 0.9% hoặc dextrose 5%',
         'infusion_rate':
         'Truyền trong 15 phút (IV bolus) hoặc 30 phút (infusion)',
-        'compatibility': ['NaCl 0.9%', 'Dextrose 5%'], 'incompatibility': [
-        'Không pha với các thuốc khác trong cùng đường truyền'], 'notes':
+        'compatibility': ['NaCl 0.9%', 'Dextrose 5%'],
+        'incompatibility': [
+        'Không pha với các thuốc khác trong cùng đường truyền'],
+        'notes':
         'Chỉ dùng IV khi không uống được. Chuyển sang PO sớm nhất có thể.'}},
         'pediatric_dosing': {
         'neonates': 'Không khuyến cáo cho trẻ <1 tuổi (dữ liệu hạn chế)',
@@ -421,18 +467,22 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
         'children': '1-16 tuổi: 0.7-1.4mg/kg/ngày chia 1-2 lần (tối đa 40mg/ngày). Chỉ dùng cho GERD nặng hoặc loét dạ dày. Uống 30-60 phút trước bữa ăn',
         'adolescents': '40mg x 1-2 lần/ngày. Liều người lớn. Uống 30-60 phút trước bữa ăn',
         'notes': 'Dùng cho GERD và loét dạ dày ở trẻ em. Khởi đầu với liều thấp, tăng dần. Uống 30-60 phút trước bữa ăn. Ưu điểm: ít tương tác với CYP450 hơn omeprazole. Theo dõi triệu chứng, vitamin B12, magnesium nếu dùng lâu dài'
-    }, 'geriatric_dosing': {
+    },
+        'geriatric_dosing': {
         'considerations': 'Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ. Tăng nguy cơ nhiễm C. difficile, gãy xương, thiếu B12 và magnesium khi dùng lâu dài',
         'dose_adjustment': 'Khởi đầu với liều thấp hơn (20-40mg x 1 lần/ngày). Tăng dần nếu cần. Dùng liều thấp nhất có hiệu quả, thời gian ngắn nhất',
         'monitoring': 'Theo dõi triệu chứng, vitamin B12, magnesium thường xuyên hơn nếu dùng lâu dài. Cảnh báo về nguy cơ nhiễm C. difficile, gãy xương'
-    }, 'brand_names': {
+    },
+        'brand_names': {
         'vietnam': ['Pantoloc', 'Pantoprazole Stada', 'Pantoprazole', 'Controloc'],
         'common': ['Pantoloc', 'Protonix', 'Pantoprazole']
-    }, 'cost_estimate': {
+    },
+        'cost_estimate': {
         'unit': 'VND',
         'range': '8,000 - 30,000 VND/viên (tùy hàm lượng và thương hiệu)',
         'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Pantoprazole generic thường rẻ hơn (8,000-20,000 VND/viên 40mg).'
-    }, 'references': {'primary_sources': ['FDA Drug Label - Pantoprazole',
+    },
+        'references': {'primary_sources': ['FDA Drug Label - Pantoprazole',
         'UpToDate - Proton pump inhibitors: Overview of use and adverse effects',
         'Micromedex - Pantoprazole',
         "Goodman & Gilman's The Pharmacological Basis of Therapeutics",

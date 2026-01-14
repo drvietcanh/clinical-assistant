@@ -147,7 +147,7 @@ def render_conservative():
     """Conservative management for CKD stages 1-4"""
     st.warning("## 💊 Điều trị Bảo Tồn (CKD G1-G4)")
     
-    st.markdown("### 1. Kiểm Soát Nguyên nhân")
+    st.markdown("### 1. Kiểm soát Nguyên nhân")
     st.success("""
     **Đái tháo đường:**
     - HbA1c <7% (hoặc <8% nếu nguy cơ hạ đường huyết)

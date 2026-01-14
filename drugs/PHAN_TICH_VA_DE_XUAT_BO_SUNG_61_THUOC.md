@@ -1,4 +1,4 @@
-# 📋 Phân tích Yêu Cầu & Đề Xuất Bổ Sung 61 Thuốc
+# 📋 Phân tích Yêu Cầu & Đề Xuất Bổ sung 61 Thuốc
 
 **Ngày:** 2025-02-05  
 **Kiến trúc sư:** Phân tích từ góc độ 30 năm kinh nghiệm  
@@ -10,7 +10,7 @@
 
 ### 1.1. Số Lượng Thuốc Hiện Tại
 
-| Nhóm Thuốc | Số Lượng | Tỷ Lệ | Ghi Chú |
+| Nhóm Thuốc | Số Lượng | Tỷ lệ | Ghi Chú |
 |------------|----------|-------|---------|
 | Cardiovascular | 30 | 12.6% | Đã khá đầy đủ |
 | Diabetes | 9 | 3.8% | Cần bổ sung |
@@ -667,7 +667,7 @@ drugs/drug_modules/cardiovascular/
 2. **Hướng dẫn sử dụng thuốc Bộ Y tế**
 3. **Các tài liệu lâm sàng tại Việt Nam**
 
-### 6.3. Nguồn Bổ Sung
+### 6.3. Nguồn Bổ sung
 
 1. **Micromedex** - Drug information
 2. **Lexicomp** - Drug information
