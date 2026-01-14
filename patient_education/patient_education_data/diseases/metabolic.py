@@ -1574,6 +1574,103 @@ METABOLIC_TOPICS = [
             printable=True
         ),
 
+        # ===== RỐI LOẠN MỠ MÁU (Dyslipidemia) – tờ rơi ngắn, thân thiện bệnh nhân =====
+        PatientEducationTopic(
+            id="dyslipidemia_basics_vn",
+            title="Understanding High Cholesterol",
+            title_vn="Rối loạn mỡ máu: Điều bệnh nhân cần biết",
+            category="Metabolic",
+            content="""
+# Rối loạn mỡ máu (Cholesterol cao) là gì?
+- Mỡ máu gồm: LDL (xấu), HDL (tốt), Triglycerid.
+- Khi LDL/Triglycerid cao hoặc HDL thấp → tăng nguy cơ xơ vữa, nhồi máu cơ tim, đột quỵ.
+
+## Triệu chứng
+- Thường **không có triệu chứng**. Phát hiện qua xét nghiệm máu.
+- Đôi khi có u mỡ vàng trên da/mi mắt.
+
+## Khi nào cần đi khám ngay?
+- Đau ngực, khó thở, yếu liệt/nói khó đột ngột → **115 / cấp cứu**.
+- Đau bụng nhiều, buồn nôn (Triglycerid rất cao có thể gây viêm tụy).
+
+## Điều trị: 2 trụ cột
+1) **Thuốc (nếu bác sĩ kê):**
+   - Statin (Atorvastatin/Rosuvastatin) là nền tảng.
+   - Không tự ngừng thuốc; uống đúng giờ (thường buổi tối).
+   - Báo bác sĩ nếu đau cơ nhiều, nước tiểu sậm màu.
+2) **Lối sống (bắt buộc dù có dùng thuốc):**
+   - Giảm mỡ động vật, nội tạng, đồ chiên/rán; hạn chế đồ ngọt, nước ngọt; hạn chế rượu bia (đặc biệt khi Triglycerid cao).
+   - Tăng rau, trái cây tươi, cá biển 2–3 lần/tuần; dùng dầu thực vật.
+   - Tập ≥ 150 phút/tuần (đi bộ nhanh/đạp xe/bơi).
+   - Giảm cân nếu thừa cân/béo phì (giảm 5–10% cân nặng giúp cải thiện mỡ máu).
+   - Bỏ thuốc lá.
+
+## Mục tiêu thường dùng (sẽ cá nhân hoá)
+- LDL < 100 mg/dL (hoặc < 70 mg/dL nếu nguy cơ rất cao).
+- Triglycerid < 150 mg/dL.
+- HDL: nam > 40 mg/dL, nữ > 50 mg/dL.
+
+## Lưu ý riêng cho Việt Nam
+- Hạn chế phủ tạng, lòng, mỡ động vật, món chiên/nướng nhiều mỡ; giảm rượu bia.
+- Đọc nhãn thực phẩm: tránh trans fat, hạn chế đồ chế biến sẵn (xúc xích, snack).
+
+## Tái khám & theo dõi
+- Xét nghiệm mỡ máu định kỳ 3–6 tháng (hoặc theo bác sĩ).
+- Nếu dùng Statin: báo bác sĩ khi có đau cơ nhiều, tiểu sậm.
+""",
+            related_disease="dyslipidemia",
+            related_drugs=["Atorvastatin", "Rosuvastatin"],
+            printable=True,
+        ),
+
+        # ===== BÉO PHÌ – tờ rơi ngắn, tập trung thay đổi lối sống =====
+        PatientEducationTopic(
+            id="obesity_basics_vn",
+            title="Understanding Obesity",
+            title_vn="Béo phì: Cách kiểm soát tại Việt Nam",
+            category="Metabolic",
+            content="""
+# Béo phì là gì?
+- Thừa mỡ cơ thể; BMI ≥ 30 kg/m² (người châu Á: ≥ 27,5 đã nguy cơ cao).
+- Làm tăng nguy cơ: tăng huyết áp, đái tháo đường, mỡ máu, bệnh tim mạch, ngưng thở khi ngủ, thoái hoá khớp.
+
+## Mục tiêu giảm cân an toàn
+- Giảm 5–10% cân nặng trong 3–6 tháng; 0.5–1 kg/tuần.
+- Kết hợp ăn uống + vận động + ngủ đủ + giảm stress.
+
+## Ăn uống thân thiện thói quen Việt Nam
+- Giảm tinh bột: cơm/bún/phở mì → giảm 1/4–1/3 khẩu phần; ưu tiên gạo lứt/yến mạch nếu có thể.
+- Tăng rau xanh (≥ 2 nắm tay mỗi bữa), trái cây nguyên quả (không thêm đường).
+- Protein nạc: cá, gà bỏ da, đậu phụ; hạn chế thịt đỏ/mỡ.
+- Hạn chế chiên/rán, nước ngọt, trà sữa, bia/rượu; tránh ăn khuya.
+- Chế biến: luộc, hấp, áp chảo ít dầu.
+
+## Vận động
+- ≥ 150 phút/tuần aerobic vừa phải (đi bộ nhanh, đạp xe, bơi).
+- Tập sức mạnh 2–3 lần/tuần (tạ nhẹ, dây kháng lực, squat, chống đẩy gối).
+- Tăng hoạt động hằng ngày: đi thang bộ, đi bộ sau ăn 10–15 phút.
+
+## Ngủ & stress
+- Ngủ 7–8 giờ/đêm; tránh thức khuya.
+- Quản lý stress: thở chậm, thiền, yoga; tránh ăn “xả stress”.
+
+## Khi nào cần gặp bác sĩ/dinh dưỡng
+- BMI ≥ 30 hoặc ≥ 27,5 kèm bệnh nền (tăng huyết áp, ĐTĐ, mỡ máu).
+- Có ngưng thở khi ngủ (ngáy to, ngưng thở).
+- Giảm cân thất bại với ăn–tập; cân nhắc thuốc/hỗ trợ chuyên khoa (theo bác sĩ).
+
+## Lưu ý thuốc/hỗ trợ (nếu được kê)
+- Tuân thủ hướng dẫn, theo dõi tác dụng phụ (buồn nôn, rối loạn tiêu hoá, hạ đường huyết nếu đang dùng thuốc ĐTĐ).
+- Không tự mua thuốc giảm cân trôi nổi.
+
+## Ghi chú khi in tờ rơi
+____ Bác sĩ có thể ghi mục tiêu cân nặng, khẩu phần và kế hoạch vận động cá nhân tại đây ____ 
+""",
+            related_disease="obesity",
+            related_drugs=[],
+            printable=True,
+        ),
+
         PatientEducationTopic(
             id="gestational_diabetes_basics",
             title="Understanding Gestational Diabetes",

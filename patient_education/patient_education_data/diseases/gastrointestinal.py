@@ -3801,4 +3801,51 @@ GASTROINTESTINAL_TOPICS = [
             printable=True
         ),
 
+        # ===== GAN NHIỄM MỠ KHÔNG DO RƯỢU (NAFLD) – tờ rơi ngắn cho bệnh nhân =====
+        PatientEducationTopic(
+            id="nafld_basics_vn",
+            title="Understanding Fatty Liver (NAFLD)",
+            title_vn="Gan nhiễm mỡ không do rượu: Điều bệnh nhân cần biết",
+            category="Gastrointestinal",
+            content="""
+# Gan nhiễm mỡ không do rượu (NAFLD) là gì?
+- Mỡ tích tụ quá nhiều trong gan (≥ 5% tế bào gan) ở người không uống rượu hoặc uống rất ít.
+- Thường gặp ở người thừa cân/béo phì, đái tháo đường típ 2, rối loạn mỡ máu.
+- Đa số nhẹ, nhưng một số có thể tiến triển viêm gan nhiễm mỡ (NASH), xơ gan.
+
+## Triệu chứng
+- Thường **không có triệu chứng**.
+- Đôi khi mệt, nặng tức hạ sườn phải nhẹ.
+- Phát hiện qua siêu âm hoặc xét nghiệm men gan.
+
+## Khi nào cần đi khám ngay?
+- Vàng da, vàng mắt; bụng to nhanh; phù chân; nôn ra máu/đi ngoài phân đen; mệt nhiều → **đi khám/cấp cứu**.
+
+## Điều trị: 3 trụ cột
+1) **Giảm cân** (quan trọng nhất): mục tiêu giảm 7–10% cân nặng.
+2) **Chế độ ăn lành mạnh cho gan:**
+   - Giảm tinh bột tinh chế, đồ ngọt, nước ngọt/trà sữa.
+   - Giảm mỡ động vật, nội tạng; hạn chế chiên/rán.
+   - Tăng rau, trái cây tươi, ngũ cốc nguyên hạt; cá 2–3 lần/tuần; dùng dầu thực vật.
+   - Hạn chế rượu bia (tốt nhất tránh).
+3) **Tập luyện**: ≥ 150 phút/tuần aerobic (đi bộ nhanh, đạp xe, bơi) + 2–3 buổi sức mạnh/tuần.
+
+## Thuốc
+- Chưa có thuốc đặc hiệu bắt buộc cho NAFLD nhẹ; bác sĩ có thể kê nếu có bệnh kèm (ĐTĐ, mỡ máu...).
+- Kiểm soát tốt đường huyết, mỡ máu, huyết áp giúp gan hồi phục.
+
+## Lưu ý riêng cho Việt Nam
+- Hạn chế thức uống nhiều đường (trà sữa, nước ngọt), bữa tối muộn, ăn vặt nhiều tinh bột.
+- Ưu tiên khẩu phần “đĩa 1/2 rau, 1/4 đạm nạc, 1/4 tinh bột”.
+- Theo dõi cân nặng, vòng bụng; mục tiêu giảm từ từ.
+
+## Theo dõi & tái khám
+- Kiểm tra men gan, siêu âm định kỳ (theo bác sĩ, thường 6–12 tháng).
+- Nếu men gan cao kéo dài hoặc có xơ hoá → theo dõi sát chuyên khoa.
+""",
+            related_disease="nafld",
+            related_drugs=[],
+            printable=True,
+        ),
+
 ]
