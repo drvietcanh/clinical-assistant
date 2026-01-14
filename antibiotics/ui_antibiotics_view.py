@@ -17,50 +17,36 @@ from .ui_helpers import (
 )
 from .mic_breakpoints import get_common_susceptibility
 from .resistance_patterns import get_antibiotic_resistance_summary
+from .components.badges import render_badge, BadgeType, BadgeSize
+from .components.typography import render_guideline_badge, render_indication_text
 
 
 def render_protocol_card(protocol: AntibioticProtocol, key_prefix: str = ""):
     """Render a single protocol card with regimens"""
     
-    # Color coding based on severity using helper
-    bg_color, border_color = SEVERITY_COLORS.get(protocol.severity, ("#f5f5f5", "#757575"))
+    # Get severity class for CSS
+    severity_class = f"severity-{protocol.severity.value.lower()}"
     
-    # Card header with improved design
+    # Card header with CSS classes
     st.markdown(f"""
-    <div class="protocol-card" style='
-        background: {bg_color};
-        border-left: 4px solid {border_color};
-        border-radius: 16px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-    '>
-        <h3 style='margin: 0 0 8px 0; color: #212121; font-size: 1.5em; font-weight: 600;'>{protocol.title}</h3>
-        <p style='margin: 0 0 12px 0; color: #666; font-size: 0.95em; line-height: 1.6;'>{protocol.description or ''}</p>
+    <div class="protocol-card {severity_class}">
+        <div class="card-header">
+            <h3 class="card-title">{protocol.title}</h3>
+        </div>
+        <div class="card-body">
+            <p class="indication-text">{protocol.description or ''}</p>
+        </div>
     </div>
     """, unsafe_allow_html=True)
     
-    # Guideline badge with improved design
+    # Guideline badge using component
     if protocol.guideline_source:
-        guideline_text = f"{protocol.guideline_source}"
-        if protocol.guideline_year:
-            guideline_text += f" ({protocol.guideline_year})"
-        if protocol.last_reviewed:
-            guideline_text += f" • Cập nhật: {protocol.last_reviewed}"
-        st.markdown(f"""
-        <div style='margin-bottom: 12px;'>
-            <span style='
-                background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-                color: #1976d2;
-                padding: 6px 14px;
-                border-radius: 12px;
-                font-size: 0.85em;
-                font-weight: 600;
-                box-shadow: 0 2px 4px rgba(25,118,210,0.2);
-            '>📋 {guideline_text}</span>
-        </div>
-        """, unsafe_allow_html=True)
+        guideline_html = render_guideline_badge(
+            protocol.guideline_source,
+            protocol.guideline_year,
+            protocol.last_reviewed
+        )
+        st.markdown(guideline_html, unsafe_allow_html=True)
     
     # Link to Critical Care for sepsis/severe infections
     if protocol.infection_site == InfectionSite.SEPSIS or protocol.severity == Severity.ICU:
@@ -90,60 +76,45 @@ def render_protocol_card(protocol: AntibioticProtocol, key_prefix: str = ""):
 def render_regimen_card(regimen, key_prefix: str = ""):
     """Render a single regimen card with improved design"""
     
-    # Badge colors with Vietnamese labels using helper
-    badge_color, badge_icon = REGIMEN_BADGE_COLORS.get(regimen.regimen_type, ("#757575", "💊"))
-    badge_text = f"{badge_icon} {regimen.regimen_type.get_vietnamese_label()}"
+    # Get badge type
+    badge_type_map = {
+        RegimenType.FIRST_LINE: BadgeType.FIRST_LINE,
+        RegimenType.ALTERNATIVE: BadgeType.ALTERNATIVE,
+        RegimenType.RESCUE: BadgeType.RESCUE,
+        RegimenType.STEP_DOWN: BadgeType.STEP_DOWN,
+    }
+    badge_type = badge_type_map.get(regimen.regimen_type, BadgeType.FIRST_LINE)
+    badge_text = regimen.regimen_type.get_vietnamese_label()
     
-    # Recommendation level badge with Vietnamese using helper
-    rec_badge = ""
+    # Render badge using component
+    badge_html = render_badge(badge_text, badge_type, BadgeSize.MEDIUM)
+    
+    # Recommendation level badge
+    rec_badge_html = ""
     if regimen.recommendation_level:
-        rec_color = RECOMMENDATION_COLORS.get(regimen.recommendation_level, "#757575")
+        rec_type_map = {
+            RecommendationLevel.STRONG: BadgeType.STRONG,
+            RecommendationLevel.WEAK: BadgeType.WEAK,
+            RecommendationLevel.CONDITIONAL: BadgeType.CONDITIONAL,
+        }
+        rec_type = rec_type_map.get(regimen.recommendation_level, BadgeType.STRONG)
         rec_text = regimen.recommendation_level.get_vietnamese_label()
-        rec_badge = f"""
-        <span style='
-            background: {rec_color};
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.75em;
-            margin-left: 8px;
-        '>{rec_text}</span>
-        """
+        rec_badge_html = render_badge(rec_text, rec_type, BadgeSize.SMALL)
     
-    # Enhanced card design with better shadows and spacing - Mobile responsive
+    # Render indication text using component
+    indication_html = render_indication_text(
+        regimen.indication,
+        COMMON_TERMS_VI.get('Indication', 'Chỉ định') + ":"
+    )
+    
+    # Enhanced card design with CSS classes
     st.markdown(f"""
-    <style>
-    .regimen-card-mobile {{
-        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-        border: 1px solid #e0e0e0;
-        border-radius: 16px;
-        padding: 20px;
-        margin-bottom: 16px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-    }}
-    
-    @media (max-width: 768px) {{
-        .regimen-card-mobile {{
-            padding: 16px !important;
-            margin-bottom: 12px !important;
-            border-radius: 12px !important;
-        }}
-    }}
-    </style>
-    <div class="regimen-card regimen-card-mobile">
-        <div style='margin-bottom: 12px;'>
-            <span style='
-                background: {badge_color};
-                color: white;
-                padding: 6px 14px;
-                border-radius: 12px;
-                font-size: 0.85em;
-                font-weight: 600;
-            '>{badge_text}</span>
-            {rec_badge}
+    <div class="regimen-card">
+        <div class="card-badges">
+            {badge_html}
+            {rec_badge_html}
         </div>
-        <p style='margin: 0 0 12px 0; color: #666; font-size: 0.95em; line-height: 1.6;'><strong>{COMMON_TERMS_VI.get('Indication', 'Chỉ định')}:</strong> {regimen.indication}</p>
+        {indication_html}
     </div>
     """, unsafe_allow_html=True)
     

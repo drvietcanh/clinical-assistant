@@ -167,52 +167,49 @@ def render_compact_antibiotic_card(ab_name, ab_data, key_prefix=""):
             "shadow": "0 2px 8px rgba(244, 67, 54, 0.3)"
         }
     }
+    # AWaRe badge with CSS classes (keep some inline for dynamic colors)
     aware_badge = ""
     if aware and aware in aware_colors:
         badge_info = aware_colors[aware]
-        aware_badge = f'''<span style="background: {badge_info["bg"]}; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75em; font-weight: 700; margin-left: 8px; display: inline-flex; align-items: center; gap: 5px; box-shadow: {badge_info["shadow"]}; letter-spacing: 0.3px;" title="WHO AWaRe Classification: {aware}">{badge_info["icon"]} {aware}</span>'''
+        aware_badge = f'''<span class="badge badge-medium" style="background: {badge_info["bg"]}; box-shadow: {badge_info["shadow"]};" title="WHO AWaRe Classification: {aware}">{badge_info["icon"]} {aware}</span>'''
     
-    # Calculator badge with enhanced styling
+    # Calculator badge with CSS classes
     calc_badge = ""
     if has_calc:
-        calc_badge = '<span style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75em; font-weight: 700; margin-left: 6px; display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 2px 8px rgba(156, 39, 176, 0.3); letter-spacing: 0.3px;" title="Có tính toán liều dùng tích hợp">🧮 Tính liều</span>'
+        calc_badge = '<span class="badge badge-medium" style="background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); box-shadow: 0 2px 8px rgba(156, 39, 176, 0.3);" title="Có tính toán liều dùng tích hợp">🧮 Tính liều</span>'
     
     # Check if favorite
     favorites = st.session_state.get('antibiotic_favorites', [])
     is_favorite = ab_name in favorites
     favorite_icon = "⭐" if is_favorite else "☆"
     
-    # Enhanced card with modern design: 16px border-radius, better shadows, 20px padding
+    # Enhanced card with CSS classes
     # Build HTML string carefully to avoid quote conflicts
-    vn_name_html = f"<div style='color: #666; font-size: 0.95em; margin-bottom: 8px; font-style: italic; font-weight: 400;'>{vn_name_escaped}</div>" if vn_name else ""
+    vn_name_html = f'<div class="vietnamese-name">{vn_name_escaped}</div>' if vn_name else ""
     indication_html = ""
     if indications:
         indication_text = html.escape(indications[0] if indications else '')
-        indication_html = f"<div style='color: #777; font-size: 0.85em; margin-top: 8px; line-height: 1.5; padding: 8px 12px; background: rgba(25,118,210,0.05); border-radius: 8px; border-left: 3px solid #1976D2;'><span style='color: #1976D2; font-weight: 600;'>💡 </span>{indication_text}</div>"
+        indication_html = f'<div class="indication-text" style="margin-top: 8px; padding: 8px 12px; background: rgba(25,118,210,0.05); border-radius: 8px; border-left: 3px solid #1976D2;"><span style="color: #1976D2; font-weight: 600;">💡 </span>{indication_text}</div>'
     
     # Escape key_prefix for use in HTML id attribute
     safe_key_prefix = html.escape(str(key_prefix).replace(" ", "_").replace("-", "_"))
     safe_ab_name_for_id = html.escape(str(ab_name).replace(" ", "_").replace("-", "_"))
     
-    # Build card HTML in parts to avoid quote conflicts
-    card_style = "background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%); border: 1.5px solid #e0e0e0; border-radius: 16px; padding: 20px 22px; margin: 12px 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05); cursor: pointer; position: relative; overflow: hidden;"
-    hover_on = "this.style.boxShadow='0 8px 24px rgba(25,118,210,0.15), 0 4px 8px rgba(0,0,0,0.1)'; this.style.transform='translateY(-3px)'; this.style.borderColor='#1976D2';"
-    hover_off = "this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05)'; this.style.transform='translateY(0)'; this.style.borderColor='#e0e0e0';"
-    
-    card_html = f'<div style="{card_style}" onmouseover="{hover_on}" onmouseout="{hover_off}">'
+    # Build card HTML with CSS classes
+    card_html = '<div class="protocol-card drug-card" style="cursor: pointer;">'
     card_html += '<div style="display: flex; justify-content: space-between; align-items: start; gap: 14px;">'
     card_html += '<div style="flex: 1; min-width: 0;">'
     card_html += '<div style="display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 10px; gap: 8px;">'
-    card_html += f'<strong style="color: #1976D2; font-size: 1.25em; margin-right: 6px; font-weight: 700; letter-spacing: -0.3px;">{ab_name_escaped}</strong>'
+    card_html += f'<strong class="drug-name" style="font-size: 1.25em; margin-right: 6px; letter-spacing: -0.3px;">{ab_name_escaped}</strong>'
     card_html += aware_badge
     card_html += calc_badge
-    card_html += f'<span style="color: #999; font-size: 1.1em; margin-left: auto; cursor: pointer; transition: transform 0.2s;" title="Yêu thích" id="fav_{safe_key_prefix}_{safe_ab_name_for_id}" onmouseover="this.style.transform=\'scale(1.2)\'" onmouseout="this.style.transform=\'scale(1)\'">{favorite_icon}</span>'
+    card_html += f'<span class="favorite-icon" style="color: #999; font-size: 1.1em; margin-left: auto; cursor: pointer;" title="Yêu thích" id="fav_{safe_key_prefix}_{safe_ab_name_for_id}">{favorite_icon}</span>'
     card_html += '</div>'
     card_html += vn_name_html
-    card_html += '<div style="color: #555; font-size: 0.9em; line-height: 1.6; margin-top: 4px;">'
-    card_html += f'<span style="font-weight: 600; color: #1976D2;">{admin_str_escaped}</span>'
+    card_html += '<div class="drug-info">'
+    card_html += f'<span class="drug-name">{admin_str_escaped}</span>'
     card_html += '<span style="color: #ddd; margin: 0 10px; font-weight: 300;">•</span>'
-    card_html += f'<span style="color: #666; font-weight: 500;">{group_escaped}</span>'
+    card_html += f'<span class="drug-group">{group_escaped}</span>'
     card_html += '</div>'
     card_html += indication_html
     card_html += '</div></div></div>'

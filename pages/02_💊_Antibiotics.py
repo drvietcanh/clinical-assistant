@@ -244,6 +244,11 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
+# Inject Antibiotics CSS styles
+st.markdown("""
+<link rel="stylesheet" href="static/antibiotics_styles.css">
+""", unsafe_allow_html=True)
+
 # Mobile styles and advanced features injection
 try:
     from antibiotics.mobile_ui import (

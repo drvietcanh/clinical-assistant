@@ -50,24 +50,14 @@ def render_database():
     
     ab_count = len(ANTIBIOTICS_DATABASE)
     
-    # Enhanced header with improved typography hierarchy and visual design
+    # Enhanced header with CSS classes
     st.markdown(f"""
-    <div style='
-        background: linear-gradient(135deg, #0EA5E9 0%, #0288D1 50%, #01579B 100%);
-        color: white;
-        padding: 30px 25px;
-        border-radius: 20px;
-        margin-bottom: 30px;
-        text-align: center;
-        box-shadow: 0 8px 24px rgba(2,136,209,0.25), 0 4px 8px rgba(0,0,0,0.1);
-        position: relative;
-        overflow: hidden;
-    '>
-        <div style='position: absolute; top: -50%; right: -10%; width: 300px; height: 300px; background: rgba(255,255,255,0.1); border-radius: 50%; filter: blur(60px);'></div>
+    <div class="hero-section database-hero">
+        <div class="hero-decoration"></div>
         <div style='position: relative; z-index: 1;'>
-            <h1 style='margin: 0; color: white; font-size: 2.5em; font-weight: 700; letter-spacing: -0.5px; text-shadow: 0 2px 8px rgba(0,0,0,0.2);'>🔍 Tra cứu & Dữ liệu kháng sinh</h1>
-            <p style='margin: 12px 0 0 0; color: rgba(255,255,255,0.95); font-size: 1.15em; font-weight: 400; line-height: 1.6;'>
-                Database <strong style='font-weight: 700; font-size: 1.1em;'>{ab_count}</strong> kháng sinh tiêm truyền thông dụng • Tích hợp tính liều tự động
+            <h1 class="hero-title">🔍 Tra cứu & Dữ liệu kháng sinh</h1>
+            <p class="hero-subtitle">
+                Database <strong>{ab_count}</strong> kháng sinh tiêm truyền thông dụng • Tích hợp tính liều tự động
             </p>
         </div>
     </div>
@@ -261,10 +251,10 @@ def render_database():
                     
                     with st.expander(f"**{idx}. {therapy['antibiotic']}** - {therapy.get('priority', '')}", expanded=(idx == 1)):
                         st.markdown(f"""
-                        <div style='padding: 12px; background: rgba(25,118,210,0.03); border-radius: 8px; margin-bottom: 10px;'>
+                        <div class="indication-text" style='padding: 12px; background: rgba(25,118,210,0.03); border-radius: 8px; margin-bottom: 10px;'>
                             <p style='margin: 5px 0;'><strong>💡 Lý do:</strong> {therapy.get('rationale', '')}</p>
-                            <p style='margin: 5px 0;'><strong>💉 Liều dùng:</strong> <span style='color: #1976D2; font-weight: 600;'>{therapy.get('dosing', '')}</span></p>
-                            <span style='background: {priority_color}; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; font-weight: 600;'>{therapy.get('priority', '')}</span>
+                            <p style='margin: 5px 0;'><strong>💉 Liều dùng:</strong> <span class="drug-name">{therapy.get('dosing', '')}</span></p>
+                            <span class="badge badge-medium" style='background: {priority_color};'>{therapy.get('priority', '')}</span>
                         </div>
                         """, unsafe_allow_html=True)
                         

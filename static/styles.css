@@ -34,6 +34,23 @@
     --card-shadow-md: 0 4px 16px rgba(0,0,0,0.12);
     --border-radius-card: 12px;
     --spacing-unit: 8px;
+    
+    /* Antibiotics Module Colors */
+    --badge-first-line: #4caf50;
+    --badge-alternative: #ff9800;
+    --badge-rescue: #f44336;
+    --badge-step-down: #2196f3;
+    --badge-strong: #4caf50;
+    --badge-weak: #ff9800;
+    --badge-conditional: #ffc107;
+    --severity-mild-bg: #e8f5e9;
+    --severity-mild-border: #4caf50;
+    --severity-moderate-bg: #fff3e0;
+    --severity-moderate-border: #ff9800;
+    --severity-severe-bg: #ffebee;
+    --severity-severe-border: #f44336;
+    --severity-icu-bg: #fce4ec;
+    --severity-icu-border: #e91e63;
 }
 
 /* Import Google Fonts - Inter for modern typography */
