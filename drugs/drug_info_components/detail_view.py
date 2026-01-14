@@ -1438,12 +1438,13 @@ def display_drug_info(drug_name, drug_data, show_header=True):
         
         st.markdown("---")
         
-        # Try to get formulary info
+        # Try to get formulary info from structured formulary module (different system)
+        # Use a different local name to avoid shadowing the module-level get_formulary_info
         try:
-            from drugs.formulary import get_formulary_info, get_formulary_status_badge
+            from drugs.formulary import get_formulary_info as _get_formulary_info, get_formulary_status_badge
             from drugs.formulary.sample_data import get_sample_formulary
             
-            formulary = get_formulary_info(drug_name) or get_sample_formulary(drug_name)
+            formulary = _get_formulary_info(drug_name) or get_sample_formulary(drug_name)
             
             if formulary:
                 st.markdown("#### 🏥 BHYT Coverage")

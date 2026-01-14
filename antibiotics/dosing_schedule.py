@@ -252,7 +252,9 @@ Bắt đầu: {start_time.strftime('%Y-%m-%d %H:%M')} | Thời gian: {duration_d
         
         with col2:
             from .export import copy_to_clipboard
-            copy_to_clipboard(schedule_text, "📋 Copy")
+            # Generate unique key using drug_name and start_time
+            copy_key = f"schedule_copy_{drug_name.replace(' ', '_')}_{start_time.strftime('%Y%m%d_%H%M%S')}"
+            copy_to_clipboard(schedule_text, "📋 Copy", key=copy_key)
         
         with col3:
             from .export import export_to_excel

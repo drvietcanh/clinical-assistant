@@ -422,7 +422,9 @@ So Sánh Kháng Sinh: {', '.join(content_data.get('drugs', []))}
         )
     
     with col2:
-        copy_to_clipboard(text_content, "📋 Copy")
+        # Generate unique key based on filename or title to avoid duplicate keys
+        unique_key = filename if filename else f"{content_type}_{hash(title) % 100000}"
+        copy_to_clipboard(text_content, "📋 Copy", key=unique_key)
     
     with col3:
         if content_type == 'comparison' and 'comparison_data' in content_data:

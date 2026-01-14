@@ -404,7 +404,9 @@ Thuốc:
                         regimen_text += f"\nLý do: {regimen.rationale}\n"
                     
                     from antibiotics.export import copy_to_clipboard
-                    copy_to_clipboard(regimen_text, "📋 Copy")
+                    # Generate unique key using key_prefix and regimen indication
+                    copy_key = f"{key_prefix}_copy_{regimen.indication.replace(' ', '_')}"
+                    copy_to_clipboard(regimen_text, "📋 Copy", key=copy_key)
             except ImportError:
                 pass
 

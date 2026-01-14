@@ -77,12 +77,12 @@ if "pe_selected_topic" not in st.session_state:
 
 col_search, col_space = st.columns([3, 1])
 with col_search:
-search_query = render_enhanced_search(
-    all_topics,
+    search_query = render_enhanced_search(
+        all_topics,
         placeholder="Nhập tên bệnh, thuốc, lối sống... (VD: Tăng huyết áp, Amoxicillin, chế độ ăn đái tháo đường)",
-    show_filters=True,
-    show_suggestions=True,
-        key="patient_edu_search",
+        show_filters=True,
+        show_suggestions=True,
+    key="patient_edu_search",
 )
 
 # Nếu có search → ưu tiên chế độ search
@@ -108,9 +108,9 @@ if st.session_state.pe_view == "search":
     # Lọc theo search (trên toàn bộ topics)
     topics = filter_topics_by_search(all_topics, search_query)
 
-if topics:
+    if topics:
         st.info(f"📊 Tìm thấy **{len(topics)}** tài liệu phù hợp.")
-    st.markdown("")
+        st.markdown("")
     
         # Lưới thẻ kết quả – ưu tiên scan nhanh
         render_topic_grid(
@@ -182,7 +182,7 @@ elif st.session_state.pe_view == "category":
                 )
                 render_related_topics(topic, all_topics)
                 render_patient_education_content(topic)
-else:
+    else:
         st.info("Hiện chưa có tài liệu cho chủ đề này.")
 
 elif st.session_state.pe_view == "detail":
@@ -244,7 +244,7 @@ else:
                     st.rerun()
 
     # B. Lưới chuyên khoa / chủ đề
-st.markdown("---")
+    st.markdown("---")
     st.markdown("### 📂 Duyệt theo Chuyên khoa / Chủ đề")
 
     categories = get_category_list()

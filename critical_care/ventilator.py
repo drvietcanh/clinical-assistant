@@ -196,7 +196,7 @@ def render_ibw_calculator():
             "Giới tính:",
             ["Nam", "Nữ"],
             horizontal=True,
-            key="ibw_sex"
+            key="cc_ibw_sex"
         )
     
     with col2:
@@ -207,10 +207,10 @@ def render_ibw_calculator():
             value=160,
             step=1,
             format="%d",
-            key="ibw_height"
+            key="cc_ibw_height"
         )
     
-    if st.button("Tính toán", type="primary", key="calc_ibw"):
+    if st.button("Tính toán", type="primary", key="cc_calc_ibw"):
         ibw = calculate_ibw(sex, height_cm)
         
         st.markdown("### 📊 Kết quả")
