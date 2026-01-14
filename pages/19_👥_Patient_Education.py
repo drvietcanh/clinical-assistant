@@ -123,7 +123,7 @@ if topics:
         # Card grid layout
         # Determine columns based on screen size (responsive)
         cols = 3  # Default for desktop
-        
+
         render_topic_grid(
             topics,
             columns=cols,
@@ -134,11 +134,11 @@ if topics:
         # Add expandable content below for detailed view
         st.markdown("---")
         st.markdown("### 📖 Xem chi tiết")
-        st.caption("Chọn tài liệu bên dưới để xem nội dung đầy đủ:")
+        st.caption("Chọn tài liệu bên dưới để xem nội dung đầy đủ. Tài liệu đầu tiên được mở sẵn để bạn đọc ngay:")
         
-        # Show topics in expanders for detailed view
-        for topic in topics:
-            with st.expander(f"**{topic.title_vn}** ({topic.category})", expanded=False):
+        # Show topics in expanders for detailed view (mở sẵn topic đầu tiên)
+        for idx, topic in enumerate(topics):
+            with st.expander(f"**{topic.title_vn}** ({topic.category})", expanded=(idx == 0)):
                 # Use enhanced content viewer
                 render_enhanced_content(
                     topic,
@@ -150,21 +150,12 @@ if topics:
                 # Related topics
                 render_related_topics(topic, all_topics)
                 
-                # Related resources
+                # Related resources (không hiển thị hướng dẫn in nữa)
                 render_patient_education_content(topic)
-                
-                # Print button
-                if topic.printable:
-                    st.markdown("---")
-                    render_info_box(
-                        "Bạn có thể in tài liệu này để phát cho bệnh nhân. Nhấn Ctrl+P hoặc Cmd+P để in.",
-                        type="info",
-                        icon="🖨️"
-                    )
     else:
-        # List view with expanders (original)
-        for topic in topics:
-            with st.expander(f"**{topic.title_vn}** ({topic.category})", expanded=False):
+        # List view with expanders (mở sẵn topic đầu tiên)
+        for idx, topic in enumerate(topics):
+            with st.expander(f"**{topic.title_vn}** ({topic.category})", expanded=(idx == 0)):
                 # Use enhanced content viewer
                 render_enhanced_content(
                     topic,
@@ -178,15 +169,6 @@ if topics:
                 
                 # Original content
                 render_patient_education_content(topic)
-                
-                # Print button
-                if topic.printable:
-                    st.markdown("---")
-                    render_info_box(
-                        "Bạn có thể in tài liệu này để phát cho bệnh nhân. Nhấn Ctrl+P hoặc Cmd+P để in.",
-                        type="info",
-                        icon="🖨️"
-                    )
 else:
     render_info_box(
         "Không tìm thấy tài liệu. Vui lòng thử lại với từ khóa khác hoặc chọn chủ đề khác.",

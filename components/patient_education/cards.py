@@ -37,7 +37,7 @@ def get_category_config(category: str) -> dict:
     })
 
 
-def extract_preview(content: str, max_length: int = 150) -> str:
+def extract_preview(content: str, max_length: int = 260) -> str:
     """Extract preview text from markdown content.
 
     - Loại bỏ tiêu đề markdown (kể cả khi có thụt lề).
@@ -62,7 +62,7 @@ def extract_preview(content: str, max_length: int = 150) -> str:
     # (phòng trường hợp nội dung chứa <div>, <span>, ... được nhập thủ công)
     text = re.sub(r'<[^>]+>', '', text)
 
-    # Get first non-empty paragraph
+    # Get first non-empty paragraph (bỏ các dòng tiêu đề ngắn lặp lại)
     paragraphs = [p.strip() for p in text.split('\n\n') if p.strip()]
     if paragraphs:
         preview = paragraphs[0]
@@ -114,17 +114,7 @@ def render_topic_card(
 ">{config['icon']} {html.escape(topic.category)}</span>
 """
     
-    if topic.printable:
-        badges_html += """
-<span style="
-    background: #E8F5E9;
-    color: #2E7D32;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-">🖨️ Có thể in</span>
-"""
+    # Bỏ badge \"Có thể in\" để giao diện gọn hơn
     
     # Card HTML (đưa style về một dòng để tránh markdown hiểu nhầm là code/HTML lỗi)
     card_height = "auto" if not compact else "200px"
@@ -143,7 +133,6 @@ def render_topic_card(
 
     <div style="margin-top: auto; display: flex; gap: 8px; padding-top: 12px; border-top: 1px solid #f0f0f0;">
         <span style="background: {config['color']}; color: white; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; display: inline-block;">📖 Đọc thêm</span>
-        {f'<span style="background: #F5F5F5; color: #616161; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem;">🖨️ In</span>' if topic.printable else ''}
     </div>
 </div>
 """
