@@ -272,4 +272,212 @@ DERMATOLOGY_DISEASES: List[Disease] = [
         related_protocols=[],
         icd10_codes=["B35.9", "B35.0", "B35.1", "B35.2", "B35.3", "B35.4"]
     ),
+
+    Disease(
+        id="urticaria",
+        name="Urticaria",
+        name_vn="Mề đay",
+        category="Dermatology",
+        definition="Mề đay là phản ứng da đặc trưng bởi các sẩn phù (wheals) ngứa, có thể cấp tính (< 6 tuần) hoặc mạn tính (≥ 6 tuần).",
+        causes=[
+            "Dị ứng: thức ăn (tôm, cua, đậu phộng), thuốc, côn trùng đốt",
+            "Nhiễm trùng: virus, vi khuẩn",
+            "Yếu tố vật lý: lạnh, nóng, ánh sáng, áp lực",
+            "Stress",
+            "Bệnh tự miễn",
+            "Vô căn (mạn tính)"
+        ],
+        symptoms=[
+            "Sẩn phù (wheals): nổi gờ, đỏ, ngứa",
+            "Ngứa dữ dội",
+            "Sẩn có thể hợp lại thành mảng lớn",
+            "Sẩn thường biến mất trong 24h, không để lại dấu vết",
+            "Phù mạch (angioedema): sưng môi, mí mắt, lưỡi",
+            "Cấp tính: < 6 tuần",
+            "Mạn tính: ≥ 6 tuần, tái phát"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: sẩn phù ngứa",
+                "Tiền sử dị ứng",
+                "Test dị ứng (nếu cấp tính)",
+                "Loại trừ: bệnh khác (vascultis, mastocytosis)"
+            ],
+            "tests": [
+                "Đánh giá lâm sàng",
+                "Test dị ứng (nếu nghi ngờ)",
+                "Công thức máu, IgE",
+                "Test tự miễn (nếu mạn tính)",
+                "Sinh thiết da (nếu không điển hình)"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Điều trị theo EAACI/GA²LEN/EDF guidelines. Mục tiêu: giảm ngứa, giảm sẩn, cải thiện chất lượng cuộc sống.",
+            "medications": [
+                "Antihistamine H1: Cetirizine, Loratadine, Fexofenadine (thuốc đầu tay)",
+                "Antihistamine H1 thế hệ 2 (không gây buồn ngủ): dùng liều cao nếu cần",
+                "Antihistamine H2: Ranitidine (kết hợp với H1)",
+                "Corticosteroid: Prednisone (nếu nặng, ngắn hạn)",
+                "Omalizumab (nếu mạn tính kháng trị)",
+                "Cyclosporine (nếu kháng trị)"
+            ],
+            "procedures": [
+                "Tránh yếu tố kích thích",
+                "Làm mát da (nếu ngứa)",
+                "Theo dõi phù mạch (có thể nguy hiểm)"
+            ]
+        },
+        prevention=[
+            "Tránh yếu tố kích thích",
+            "Tránh thức ăn dị ứng",
+            "Quản lý stress",
+            "Điều trị nhiễm trùng sớm"
+        ],
+        complications=[
+            "Phù mạch (nguy hiểm nếu ở đường thở)",
+            "Sốc phản vệ (nếu dị ứng nặng)",
+            "Ảnh hưởng chất lượng cuộc sống",
+            "Mất ngủ (do ngứa)"
+        ],
+        related_scores=["UAS7", "CU-Q2oL"],
+        related_drugs=["Cetirizine", "Loratadine", "Fexofenadine", "Prednisone", "Omalizumab"],
+        related_protocols=["Urticaria Management"],
+        icd10_codes=["L50.9", "L50.0", "L50.1", "L50.2"]
+    ),
+
+    Disease(
+        id="herpes_zoster",
+        name="Herpes Zoster",
+        name_vn="Zona thần kinh",
+        category="Dermatology",
+        definition="Zona thần kinh là bệnh do virus Varicella-Zoster (VZV) tái hoạt, gây phát ban đau đớn theo dây thần kinh, phổ biến ở người cao tuổi.",
+        causes=[
+            "Virus Varicella-Zoster (VZV) tái hoạt sau khi đã bị thủy đậu",
+            "Suy giảm miễn dịch: tuổi cao, stress, bệnh mạn tính, thuốc ức chế miễn dịch",
+            "Yếu tố nguy cơ: tuổi > 50, suy giảm miễn dịch, ung thư, HIV"
+        ],
+        symptoms=[
+            "Đau, ngứa, tê bì theo dây thần kinh (trước khi phát ban)",
+            "Phát ban: mụn nước thành chùm theo dây thần kinh",
+            "Thường một bên cơ thể",
+            "Vị trí thường gặp: ngực, lưng, mặt (dây thần kinh V)",
+            "Mụn nước vỡ, đóng vảy",
+            "Đau dữ dội",
+            "Sốt, mệt mỏi"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: phát ban theo dây thần kinh",
+                "Tiền sử thủy đậu",
+                "Xét nghiệm: PCR hoặc nuôi cấy virus (nếu cần)"
+            ],
+            "tests": [
+                "Đánh giá lâm sàng",
+                "PCR VZV (nếu không điển hình)",
+                "Nuôi cấy virus",
+                "Tzanck smear (tìm tế bào đa nhân khổng lồ)"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Điều trị kháng virus sớm (trong 72h) để giảm đau và ngăn đau thần kinh sau zona. Điều trị đau.",
+            "medications": [
+                "Antiviral: Acyclovir, Valacyclovir, Famciclovir (trong 72h đầu)",
+                "Giảm đau: Paracetamol, NSAID, Gabapentin, Pregabalin",
+                "Opioid (nếu đau nặng)",
+                "Corticosteroid: Prednisone (nếu nặng, giảm đau)",
+                "Thuốc bôi: Acyclovir cream, Calamine lotion"
+            ],
+            "procedures": [
+                "Giữ vết thương sạch",
+                "Tránh gãi",
+                "Theo dõi biến chứng"
+            ]
+        },
+        prevention=[
+            "Tiêm vắc xin zona (Shingrix) cho người ≥ 50 tuổi",
+            "Tiêm vắc xin thủy đậu (nếu chưa bị)",
+            "Tăng cường miễn dịch"
+        ],
+        complications=[
+            "Đau thần kinh sau zona (postherpetic neuralgia) - phổ biến, kéo dài",
+            "Nhiễm khuẩn da",
+            "Zona mắt (có thể mù)",
+            "Zona tai (Ramsay Hunt syndrome)",
+            "Viêm não, viêm màng não (hiếm)"
+        ],
+        related_scores=["Pain Scale"],
+        related_drugs=["Acyclovir", "Valacyclovir", "Famciclovir", "Gabapentin", "Pregabalin"],
+        related_protocols=["Herpes Zoster Management"],
+        icd10_codes=["B02.9", "B02.0", "B02.1", "B02.2"]
+    ),
+
+    Disease(
+        id="scabies",
+        name="Scabies",
+        name_vn="Ghẻ",
+        category="Dermatology",
+        definition="Ghẻ là bệnh da do ký sinh trùng Sarcoptes scabiei, gây ngứa dữ dội, lây lan qua tiếp xúc gần, phổ biến ở Việt Nam.",
+        causes=[
+            "Ký sinh trùng Sarcoptes scabiei var. hominis",
+            "Lây qua tiếp xúc da-da kéo dài",
+            "Lây qua quần áo, chăn gối (ít gặp)",
+            "Yếu tố nguy cơ: sống đông đúc, vệ sinh kém, suy giảm miễn dịch"
+        ],
+        symptoms=[
+            "Ngứa dữ dội, đặc biệt về đêm",
+            "Sẩn đỏ, mụn nước nhỏ",
+            "Đường hang (burrow): đường ngoằn ngoèo, dài vài mm",
+            "Vị trí: kẽ ngón tay, cổ tay, khuỷu tay, nách, bụng, bộ phận sinh dục",
+            "Trẻ em: có thể ở lòng bàn tay, bàn chân, mặt",
+            "Gãi nhiều gây nhiễm khuẩn thứ phát"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: ngứa về đêm, sẩn, đường hang",
+                "Tìm thấy ký sinh trùng hoặc trứng dưới kính hiển vi",
+                "Tiền sử tiếp xúc"
+            ],
+            "tests": [
+                "Cạo da tìm ký sinh trùng (skin scraping)",
+                "Kính hiển vi: tìm Sarcoptes scabiei, trứng, phân",
+                "Dermoscopy (nếu có)"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Điều trị đồng thời tất cả người tiếp xúc. Bôi thuốc toàn thân, giặt quần áo, chăn gối.",
+            "medications": [
+                "Permethrin 5% cream (thuốc đầu tay): bôi toàn thân, để 8-14h, rửa sạch",
+                "Ivermectin uống (nếu kháng Permethrin hoặc ghẻ vảy)",
+                "Benzyl benzoate 25% lotion",
+                "Sulfur 10% ointment",
+                "Điều trị ngứa: Antihistamine, Corticosteroid bôi",
+                "Kháng sinh (nếu nhiễm khuẩn thứ phát)"
+            ],
+            "procedures": [
+                "Bôi thuốc toàn thân (trừ mặt, đầu)",
+                "Giặt quần áo, chăn gối ở nhiệt độ cao",
+                "Điều trị đồng thời tất cả người trong gia đình",
+                "Tái khám sau 1-2 tuần"
+            ]
+        },
+        prevention=[
+            "Vệ sinh cá nhân",
+            "Tránh tiếp xúc với người bị ghẻ",
+            "Giặt quần áo, chăn gối thường xuyên",
+            "Điều trị đồng thời tất cả người tiếp xúc"
+        ],
+        complications=[
+            "Nhiễm khuẩn da thứ phát (impetigo)",
+            "Chàm hóa",
+            "Ghẻ vảy (crusted scabies) - ở người suy giảm miễn dịch",
+            "Ngứa kéo dài sau điều trị (do dị ứng)"
+        ],
+        related_scores=[],
+        related_drugs=["Permethrin", "Ivermectin", "Benzyl Benzoate", "Sulfur"],
+        related_protocols=["Scabies Management"],
+        icd10_codes=["B86"]
+    ),
 ]

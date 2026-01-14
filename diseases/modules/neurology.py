@@ -301,4 +301,218 @@ NEUROLOGY_DISEASES: List[Disease] = [
         related_protocols=["Parkinson's Disease Management"],
         icd10_codes=["G20"]
     ),
+
+    Disease(
+        id="bacterial_meningitis",
+        name="Bacterial Meningitis",
+        name_vn="Viêm màng não mủ",
+        category="Neurology",
+        definition="Viêm màng não mủ là nhiễm trùng màng não do vi khuẩn, là cấp cứu thần kinh, có thể gây tử vong hoặc di chứng nặng nếu không điều trị kịp thời.",
+        causes=[
+            "Vi khuẩn: Streptococcus pneumoniae (phổ biến nhất), Neisseria meningitidis, Haemophilus influenzae type b, Listeria monocytogenes",
+            "Theo tuổi: trẻ sơ sinh (Group B Streptococcus, E. coli), trẻ em (S. pneumoniae, N. meningitidis), người lớn (S. pneumoniae, N. meningitidis)",
+            "Yếu tố nguy cơ: suy giảm miễn dịch, chấn thương đầu, nhiễm trùng gần (viêm xoang, viêm tai)",
+            "Lây qua đường hô hấp (N. meningitidis)"
+        ],
+        symptoms=[
+            "Sốt cao",
+            "Đau đầu dữ dội",
+            "Cổ cứng (nuchal rigidity)",
+            "Sợ ánh sáng (photophobia)",
+            "Buồn nôn, nôn",
+            "Lú lẫn, rối loạn ý thức",
+            "Co giật",
+            "Phát ban (nếu N. meningitidis)",
+            "Trẻ em: sốt, bỏ ăn, li bì, thóp phồng"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: sốt, đau đầu, cổ cứng",
+                "Dịch não tủy: tăng bạch cầu, tăng protein, giảm glucose",
+                "Nhuộm Gram, cấy dịch não tủy",
+                "Phân biệt với viêm màng não virus"
+            ],
+            "tests": [
+                "Chọc dò tủy sống (LP) - khẩn cấp",
+                "Dịch não tủy: tế bào, protein, glucose, cấy",
+                "Nhuộm Gram",
+                "PCR (nếu có)",
+                "Cấy máu",
+                "CT não (trước LP nếu có dấu hiệu tăng áp lực nội sọ)"
+            ],
+            "imaging": [
+                "CT não (trước LP nếu nghi ngờ tăng áp lực nội sọ)",
+                "MRI não (nếu có biến chứng)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị khẩn cấp. Kháng sinh đường tĩnh mạch ngay, không chờ kết quả cấy. Điều trị hỗ trợ.",
+            "medications": [
+                "Kháng sinh đường tĩnh mạch ngay (trước LP nếu cần):",
+                "- Trẻ sơ sinh: Ampicillin + Cefotaxime",
+                "- Trẻ em: Ceftriaxone hoặc Cefotaxime",
+                "- Người lớn: Ceftriaxone + Vancomycin (nếu nghi ngờ kháng Penicillin)",
+                "- Nếu nghi Listeria: Ampicillin",
+                "Dexamethasone (trước hoặc cùng với kháng sinh đầu tiên) - giảm di chứng",
+                "Điều trị hỗ trợ: hạ sốt, chống co giật, kiểm soát áp lực nội sọ"
+            ],
+            "procedures": [
+                "Chọc dò tủy sống",
+                "ICU (nếu nặng)",
+                "Theo dõi áp lực nội sọ",
+                "Điều trị biến chứng"
+            ]
+        },
+        prevention=[
+            "Tiêm vắc xin: PCV (Pneumococcal), MenACWY (Meningococcal), Hib",
+            "Dự phòng kháng sinh cho người tiếp xúc (N. meningitidis): Rifampin, Ciprofloxacin",
+            "Điều trị nhiễm trùng gần (viêm xoang, viêm tai)"
+        ],
+        complications=[
+            "Tử vong (10-30% nếu không điều trị)",
+            "Di chứng thần kinh: điếc, mù, liệt, động kinh",
+            "Suy giảm nhận thức",
+            "Áp xe não",
+            "Viêm màng não mạn tính"
+        ],
+        related_scores=["Glasgow Coma Scale", "Meningitis Severity"],
+        related_drugs=["Ceftriaxone", "Cefotaxime", "Vancomycin", "Ampicillin", "Dexamethasone"],
+        related_protocols=["Bacterial Meningitis Management"],
+        icd10_codes=["G00.9", "G00.0", "G00.1", "G00.2"]
+    ),
+
+    Disease(
+        id="viral_meningitis",
+        name="Viral Meningitis",
+        name_vn="Viêm màng não virus",
+        category="Neurology",
+        definition="Viêm màng não virus là nhiễm trùng màng não do virus, thường nhẹ hơn viêm màng não mủ, tự khỏi trong vài tuần.",
+        causes=[
+            "Virus: Enterovirus (phổ biến nhất), HSV-2, VZV, Mumps, Arbovirus",
+            "Lây qua đường hô hấp, phân-miệng",
+            "Yếu tố nguy cơ: mùa hè-thu (Enterovirus), suy giảm miễn dịch"
+        ],
+        symptoms=[
+            "Sốt",
+            "Đau đầu",
+            "Cổ cứng (nhẹ hơn viêm màng não mủ)",
+            "Sợ ánh sáng",
+            "Buồn nôn, nôn",
+            "Mệt mỏi",
+            "Phát ban (nếu Enterovirus)",
+            "Thường không có rối loạn ý thức nặng"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: sốt, đau đầu, cổ cứng",
+                "Dịch não tủy: tăng bạch cầu lympho, protein bình thường hoặc tăng nhẹ, glucose bình thường",
+                "PCR virus",
+                "Phân biệt với viêm màng não mủ"
+            ],
+            "tests": [
+                "Chọc dò tủy sống",
+                "Dịch não tủy: tế bào (lympho), protein, glucose",
+                "PCR Enterovirus, HSV, VZV",
+                "Cấy virus",
+                "Công thức máu"
+            ],
+            "imaging": [
+                "CT/MRI não (nếu không điển hình)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị hỗ trợ. Hầu hết tự khỏi. Kháng virus nếu HSV hoặc VZV.",
+            "medications": [
+                "Acyclovir (nếu HSV hoặc VZV)",
+                "Hạ sốt: Paracetamol",
+                "Giảm đau",
+                "Điều trị hỗ trợ"
+            ],
+            "procedures": [
+                "Nghỉ ngơi",
+                "Bù dịch",
+                "Theo dõi (hầu hết tự khỏi)"
+            ]
+        },
+        prevention=[
+            "Vệ sinh: rửa tay",
+            "Tiêm vắc xin: MMR (Mumps), Varicella (VZV)",
+            "Tránh tiếp xúc với người bệnh"
+        ],
+        complications=[
+            "Thường tự khỏi không di chứng",
+            "Di chứng (hiếm): điếc, động kinh",
+            "Viêm não (nếu HSV)"
+        ],
+        related_scores=[],
+        related_drugs=["Acyclovir", "Paracetamol"],
+        related_protocols=["Viral Meningitis Management"],
+        icd10_codes=["A87.9", "A87.0", "A87.1"]
+    ),
+
+    Disease(
+        id="bells_palsy",
+        name="Bell's Palsy",
+        name_vn="Liệt mặt ngoại biên (Bell's Palsy)",
+        category="Neurology",
+        definition="Liệt mặt ngoại biên (Bell's Palsy) là liệt dây thần kinh mặt (CN VII) một bên, thường tự khỏi, nguyên nhân có thể do virus HSV-1.",
+        causes=[
+            "Nguyên nhân chưa rõ",
+            "Có thể do virus HSV-1 tái hoạt",
+            "Yếu tố nguy cơ: nhiễm trùng đường hô hấp trên, thai kỳ, đái tháo đường",
+            "Viêm, phù dây thần kinh mặt trong ống xương thái dương"
+        ],
+        symptoms=[
+            "Liệt mặt một bên đột ngột (trong vài giờ đến vài ngày)",
+            "Không nhắm được mắt",
+            "Không nhăn trán được",
+            "Miệng méo, chảy nước dãi",
+            "Mất vị giác (2/3 trước lưỡi)",
+            "Nhạy cảm tiếng động (hyperacusis)",
+            "Đau sau tai (có thể)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: liệt mặt một bên đột ngột",
+                "Loại trừ: đột quỵ, u não, bệnh Lyme, viêm tai giữa",
+                "Không có triệu chứng thần kinh khác"
+            ],
+            "tests": [
+                "Đánh giá lâm sàng",
+                "MRI não (nếu không điển hình, nghi ngờ đột quỵ hoặc u)",
+                "EMG (nếu cần đánh giá mức độ tổn thương)",
+                "Test HSV (nếu có)"
+            ],
+            "imaging": [
+                "MRI não (nếu không điển hình)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị sớm bằng Corticosteroid. Kháng virus nếu nghi ngờ HSV. Bảo vệ mắt.",
+            "medications": [
+                "Prednisone 60-80mg/ngày x 7 ngày, giảm dần (thuốc đầu tay)",
+                "Acyclovir hoặc Valacyclovir (nếu nghi ngờ HSV)",
+                "Nhỏ mắt, băng mắt (bảo vệ giác mạc)"
+            ],
+            "procedures": [
+                "Vật lý trị liệu: massage mặt, tập vận động",
+                "Bảo vệ mắt: nhỏ mắt, đeo kính, băng mắt khi ngủ",
+                "Theo dõi định kỳ"
+            ]
+        },
+        prevention=[
+            "Không có cách phòng ngừa",
+            "Điều trị sớm"
+        ],
+        complications=[
+            "Di chứng: liệt mặt không hồi phục hoàn toàn",
+            "Co thắt cơ mặt (synkinesis)",
+            "Khô mắt, loét giác mạc",
+            "Ảnh hưởng thẩm mỹ, tâm lý"
+        ],
+        related_scores=["House-Brackmann Scale", "Facial Nerve Function"],
+        related_drugs=["Prednisone", "Acyclovir", "Valacyclovir"],
+        related_protocols=["Bell's Palsy Management"],
+        icd10_codes=["G51.0"]
+    ),
 ]

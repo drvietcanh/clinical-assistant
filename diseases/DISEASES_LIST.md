@@ -1,13 +1,13 @@
 # Danh sách đầy đủ các bệnh trong hệ thống
 
-**Tổng số:** 72 bệnh  
-**Cập nhật:** 2025-01-30
+**Tổng số:** 120 bệnh  
+**Cập nhật:** 2026-01-14
 
 ---
 
 ## 📋 Danh sách theo chuyên khoa
 
-### 1. Cardiology (Tim mạch) - 9 bệnh
+### 1. Cardiology (Tim mạch) - 12 bệnh
 1. `heart_failure` - Suy tim
 2. `myocardial_infarction` - Nhồi máu cơ tim cấp
 3. `hypertension` - Tăng huyết áp
@@ -17,107 +17,164 @@
 7. `myocarditis` - Viêm cơ tim
 8. `pericarditis` - Viêm màng ngoài tim
 9. `dilated_cardiomyopathy` - Bệnh cơ tim giãn
+10. `dyslipidemia` - Rối loạn lipid máu
+11. `peripheral_artery_disease` - Bệnh động mạch ngoại biên
+12. `pulmonary_embolism` - Thuyên tắc phổi
 
-### 2. Infectious (Nhiễm khuẩn) - 6 bệnh
-10. `pneumonia` - Viêm phổi
-11. `sepsis` - Nhiễm khuẩn huyết / Sepsis
-12. `tuberculosis` - Lao phổi
-13. `dengue_fever` - Sốt xuất huyết Dengue
-14. `malaria` - Sốt rét
-15. `japanese_encephalitis` - Viêm não Nhật Bản
+### 2. Infectious (Nhiễm khuẩn) - 15 bệnh
+1. `pneumonia` - Viêm phổi
+2. `sepsis` - Nhiễm khuẩn huyết / Sepsis
+3. `tuberculosis` - Lao phổi
+4. `dengue_fever` - Sốt xuất huyết Dengue
+5. `malaria` - Sốt rét
+6. `japanese_encephalitis` - Viêm não Nhật Bản
+7. `influenza` - Cúm
+8. `covid_19` - COVID-19
+9. `acute_gastroenteritis` - Tiêu chảy cấp / Viêm dạ dày ruột cấp
+10. `typhoid_fever` - Thương hàn
+11. `helminth_infection` - Nhiễm giun đường ruột
+12. `hepatitis_a` - Viêm gan A cấp
+13. `hepatitis_c` - Viêm gan C
+14. `hepatitis_e` - Viêm gan E
+15. `chikungunya` - Sốt Chikungunya
 
-### 3. Gastroenterology (Tiêu hóa) - 5 bệnh
-16. `peptic_ulcer_disease` - Loét dạ dày tá tràng
-17. `gastroesophageal_reflux` - Trào ngược dạ dày thực quản (GERD)
-18. `hepatitis_b` - Viêm gan B
-19. `cirrhosis` - Xơ gan
-20. `irritable_bowel_syndrome` - Hội chứng ruột kích thích (IBS)
+### 3. Gastroenterology (Tiêu hóa) - 13 bệnh
+1. `peptic_ulcer_disease` - Loét dạ dày tá tràng
+2. `gastroesophageal_reflux` - Trào ngược dạ dày thực quản (GERD)
+3. `hepatitis_b` - Viêm gan B
+4. `cirrhosis` - Xơ gan
+5. `irritable_bowel_syndrome` - Hội chứng ruột kích thích (IBS)
+6. `gastritis` - Viêm dạ dày
+7. `acute_pancreatitis` - Viêm tụy cấp
+8. `ulcerative_colitis` - Viêm loét đại trực tràng chảy máu
+9. `hepatitis_d` - Viêm gan D
+10. `hepatitis_b_chronic` - Viêm gan B mạn tính
+11. `hepatitis_c_chronic` - Viêm gan C mạn tính
+12. `crohns_disease` - Bệnh Crohn
+13. `functional_dyspepsia` - Rối loạn tiêu hóa chức năng
 
-### 4. Neurology (Thần kinh) - 4 bệnh
-21. `stroke` - Đột quỵ thiếu máu cục bộ cấp
-22. `epilepsy` - Động kinh
-23. `migraine` - Đau nửa đầu (Migraine)
-24. `parkinson_disease` - Bệnh Parkinson
+### 4. Neurology (Thần kinh) - 7 bệnh
+1. `stroke` - Đột quỵ thiếu máu cục bộ cấp
+2. `epilepsy` - Động kinh
+3. `migraine` - Đau nửa đầu (Migraine)
+4. `parkinson_disease` - Bệnh Parkinson
+5. `bacterial_meningitis` - Viêm màng não mủ
+6. `viral_meningitis` - Viêm màng não virus
+7. `bells_palsy` - Liệt mặt ngoại biên (Bell's Palsy)
 
-### 5. ENT (Tai Mũi Họng) - 3 bệnh
-25. `acute_pharyngitis` - Viêm họng cấp
-26. `sinusitis` - Viêm xoang
-27. `otitis_media` - Viêm tai giữa
+### 5. ENT (Tai Mũi Họng) - 6 bệnh
+34. `acute_pharyngitis` - Viêm họng cấp
+35. `sinusitis` - Viêm xoang
+36. `otitis_media` - Viêm tai giữa
+37. `tonsillitis` - Viêm amidan
+38. `allergic_rhinitis` - Viêm mũi dị ứng
+39. `acute_laryngitis` - Viêm thanh quản cấp
 
-### 6. Orthopedics (Cơ xương khớp) - 3 bệnh
-28. `osteoarthritis` - Thoái hóa khớp
-29. `rheumatoid_arthritis` - Viêm khớp dạng thấp
-30. `osteoporosis` - Loãng xương
+### 6. Orthopedics (Cơ xương khớp) - 5 bệnh
+40. `osteoarthritis` - Thoái hóa khớp
+41. `rheumatoid_arthritis` - Viêm khớp dạng thấp
+42. `osteoporosis` - Loãng xương
+43. `fracture_bone` - Gãy xương
+44. `tendonitis` - Viêm gân
 
-### 7. Obstetrics/Gynecology (Sản phụ khoa) - 3 bệnh
-31. `pelvic_inflammatory_disease` - Viêm nhiễm phụ khoa
-32. `uterine_fibroids` - U xơ tử cung
-33. `polycystic_ovary_syndrome` - Hội chứng buồng trứng đa nang (PCOS)
+### 7. Obstetrics/Gynecology (Sản phụ khoa) - 5 bệnh
+45. `pelvic_inflammatory_disease` - Viêm nhiễm phụ khoa
+46. `uterine_fibroids` - U xơ tử cung
+47. `polycystic_ovary_syndrome` - Hội chứng buồng trứng đa nang (PCOS)
+48. `menstrual_disorders` - Rối loạn kinh nguyệt
+49. `menopause` - Mãn kinh
 
-### 8. Oncology (Ung bướu) - 3 bệnh
-34. `lung_cancer` - Ung thư phổi
-35. `hepatocellular_carcinoma` - Ung thư gan
-36. `breast_cancer` - Ung thư vú
+### 8. Oncology (Ung bướu) - 5 bệnh
+1. `lung_cancer` - Ung thư phổi
+2. `hepatocellular_carcinoma` - Ung thư gan
+3. `breast_cancer` - Ung thư vú
+4. `gastric_cancer` - Ung thư dạ dày
+5. `colorectal_cancer` - Ung thư đại trực tràng
 
 ### 9. Endocrinology (Nội tiết) - 3 bệnh
-37. `diabetes_type2` - Đái tháo đường type 2
-38. `hyperthyroidism` - Cường giáp
-39. `hypothyroidism` - Suy giáp
+53. `diabetes_type2` - Đái tháo đường type 2
+54. `hyperthyroidism` - Cường giáp
+55. `hypothyroidism` - Suy giáp
 
 ### 10. Emergency (Cấp cứu) - 2 bệnh
-40. `anaphylaxis` - Phản vệ
-41. `acute_poisoning` - Ngộ độc cấp
+56. `anaphylaxis` - Phản vệ
+57. `acute_poisoning` - Ngộ độc cấp
 
-### 11. Hematology (Huyết học) - 2 bệnh
-42. `iron_deficiency_anemia` - Thiếu máu thiếu sắt
-43. `thrombocytopenia` - Giảm tiểu cầu
+### 11. Hematology (Huyết học) - 5 bệnh
+1. `iron_deficiency_anemia` - Thiếu máu thiếu sắt
+2. `thrombocytopenia` - Giảm tiểu cầu
+3. `vitamin_b12_deficiency` - Thiếu vitamin B12
+4. `folate_deficiency` - Thiếu folate
+5. `hemolytic_anemia` - Thiếu máu tan máu
 
-### 12. Dermatology (Da liễu) - 2 bệnh
-44. `atopic_dermatitis` - Viêm da cơ địa
-45. `psoriasis` - Vẩy nến
+### 12. Dermatology (Da liễu) - 7 bệnh
+1. `atopic_dermatitis` - Viêm da cơ địa
+2. `psoriasis` - Vẩy nến
+3. `acne_vulgaris` - Mụn trứng cá
+4. `tinea` - Nấm da
+5. `urticaria` - Mề đay
+6. `herpes_zoster` - Zona thần kinh
+7. `scabies` - Ghẻ
 
-### 13. Psychiatry (Tâm thần) - 2 bệnh
-46. `major_depression` - Trầm cảm
-47. `anxiety_disorder` - Rối loạn lo âu
+### 13. Psychiatry (Tâm thần) - 3 bệnh
+1. `major_depression` - Trầm cảm
+2. `anxiety_disorder` - Rối loạn lo âu
+3. `chronic_insomnia` - Mất ngủ mạn tính
 
-### 14. Respiratory (Hô hấp) - 2 bệnh
-48. `copd` - Bệnh phổi tắc nghẽn mạn tính (COPD)
-49. `asthma` - Hen phế quản
+### 14. Respiratory (Hô hấp) - 3 bệnh
+66. `copd` - Bệnh phổi tắc nghẽn mạn tính (COPD)
+67. `asthma` - Hen phế quản
+68. `acute_bronchitis` - Viêm phế quản cấp
 
-### 15. Nephrology (Thận) - 2 bệnh
-50. `aki` - Tổn thương thận cấp (AKI)
-51. `chronic_kidney_disease` - Suy thận mạn tính (CKD)
+### 15. Nephrology (Thận) - 4 bệnh
+1. `aki` - Tổn thương thận cấp (AKI)
+2. `chronic_kidney_disease` - Suy thận mạn tính (CKD)
+3. `nephrotic_syndrome` - Hội chứng thận hư
+4. `nephritic_syndrome` - Hội chứng viêm cầu thận
 
-### 16. Urology (Tiết niệu) - 2 bệnh
-52. `urinary_tract_infection` - Nhiễm trùng đường tiết niệu
-53. `kidney_stones` - Sỏi thận
+### 16. Urology (Tiết niệu) - 5 bệnh
+1. `urinary_tract_infection` - Nhiễm trùng đường tiết niệu
+2. `kidney_stones` - Sỏi thận
+3. `benign_prostatic_hyperplasia` - Phì đại tuyến tiền liệt lành tính (BPH)
+4. `benign_prostatic_hyperplasia` - Phì đại tuyến tiền liệt lành tính (BPH) (duplicate - cần kiểm tra)
+5. `prostatitis` - Viêm tuyến tiền liệt
+6. `erectile_dysfunction` - Rối loạn cương dương
 
-### 17. Pediatrics (Nhi khoa) - 2 bệnh
-54. `malnutrition` - Suy dinh dưỡng
-55. `hand_foot_mouth_disease` - Bệnh tay chân miệng
+### 17. Pediatrics (Nhi khoa) - 7 bệnh
+1. `malnutrition` - Suy dinh dưỡng
+2. `hand_foot_mouth_disease` - Bệnh tay chân miệng
+3. `upper_respiratory_infection` - Nhiễm khuẩn hô hấp trên
+4. `bronchiolitis` - Viêm tiểu phế quản
+5. `pneumonia_child` - Viêm phổi cộng đồng ở trẻ em
+6. `diarrhea_child` - Tiêu chảy cấp ở trẻ em
+7. `measles` - Sởi
 
-### 18. Ophthalmology (Mắt) - 2 bệnh
-56. `cataract` - Đục thủy tinh thể
-57. `conjunctivitis` - Viêm kết mạc
+### 18. Ophthalmology (Mắt) - 3 bệnh
+78. `cataract` - Đục thủy tinh thể
+79. `conjunctivitis` - Viêm kết mạc
+80. `glaucoma` - Tăng nhãn áp
 
 ### 19. Allergy/Immunology (Dị ứng miễn dịch) - 2 bệnh
-58. `food_allergy` - Dị ứng thực phẩm
-59. `contact_dermatitis` - Viêm da tiếp xúc
+81. `food_allergy` - Dị ứng thực phẩm
+82. `contact_dermatitis` - Viêm da tiếp xúc
 
-### 20. Rheumatology (Khớp) - 1 bệnh
-60. `gout` - Bệnh gút
+### 20. Rheumatology (Khớp) - 4 bệnh
+1. `gout` - Bệnh gút
+2. `systemic_lupus_erythematosus` - Lupus ban đỏ hệ thống (SLE)
+3. `ankylosing_spondylitis` - Viêm cột sống dính khớp
+4. `psoriatic_arthritis` - Viêm khớp vẩy nến
 
 ### 21. Critical Care (Hồi sức) - 4 bệnh
-61. `ards` - Hội chứng suy hô hấp cấp (ARDS)
-62. `septic_shock` - Sốc nhiễm khuẩn
-63. `cardiogenic_shock` - Sốc tim
-64. `mods` - Hội chứng suy đa tạng (MODS)
+84. `ards` - Hội chứng suy hô hấp cấp (ARDS)
+85. `septic_shock` - Sốc nhiễm khuẩn
+86. `cardiogenic_shock` - Sốc tim
+87. `mods` - Hội chứng suy đa tạng (MODS)
 
 ---
 
 ## 📊 Thống kê
 
-- **Tổng số bệnh:** 72
+- **Tổng số bệnh:** 120
 - **Số chuyên khoa có dữ liệu:** 21/21 ✅
 - **Trạng thái:** Tất cả modules đã có dữ liệu!
 

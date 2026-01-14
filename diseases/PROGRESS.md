@@ -1,7 +1,7 @@
 # Disease Encyclopedia Module System - Progress Document
 
-**Ngày cập nhật:** 2025-01-30  
-**Tổng số bệnh:** 80  
+**Ngày cập nhật:** 2026-01-14  
+**Tổng số bệnh:** 120  
 **Số chuyên khoa có dữ liệu:** 21/21 ✅
 
 ---
@@ -363,9 +363,22 @@ from diseases.modules.new_specialty import NEW_SPECIALTY_DISEASES
 
 ---
 
-**Lần cập nhật cuối:** 2025-01-30  
-**Tổng số bệnh:** 72  
+**Lần cập nhật cuối:** 2026-01-14  
+**Tổng số bệnh:** 120  
 **Trạng thái:** ✅ Tất cả 21 chuyên khoa đã có dữ liệu! Hệ thống hoàn chỉnh, tiếp tục mở rộng
+
+### Bệnh mới thêm (đợt 2 - 30 bệnh):
+- ✅ Infectious: Hepatitis C chronic, Cholera, HIV/AIDS clinical, Rotavirus gastroenteritis child
+- ✅ Gastroenterology: Acute appendicitis, Acute cholecystitis, Gallstones, Non-alcoholic fatty liver
+- ✅ Hematology: Vitamin B12 deficiency anemia, Anemia of chronic disease, Thalassemia minor
+- ✅ Nephrology: Nephrotic syndrome, Post-strep glomerulonephritis
+- ✅ Urology: Acute prostatitis, Acute pyelonephritis
+- ✅ Rheumatology: SLE, Ankylosing spondylitis, Psoriatic arthritis
+- ✅ Dermatology: Urticaria, Herpes zoster, Scabies
+- ✅ Pediatrics: Pneumonia child, Diarrhea child, Measles
+- ✅ Neurology: Bacterial meningitis, Viral meningitis, Bell's palsy
+- ✅ Psychiatry: Chronic insomnia
+- ✅ Oncology: Gastric cancer, Colorectal cancer
 
 ### Bệnh mới thêm (lần cập nhật này):
 - ✅ Infectious: Influenza (Cúm)

@@ -149,4 +149,82 @@ PSYCHIATRY_DISEASES: List[Disease] = [
         related_protocols=[],
         icd10_codes=["F41.9", "F41.0", "F41.1"]
     ),
+
+    Disease(
+        id="chronic_insomnia",
+        name="Chronic Insomnia",
+        name_vn="Mất ngủ mạn tính",
+        category="Psychiatry",
+        definition="Mất ngủ mạn tính là rối loạn giấc ngủ đặc trưng bởi khó vào giấc, khó duy trì giấc ngủ, hoặc thức dậy sớm, kéo dài ≥ 3 tháng, ảnh hưởng đến chức năng ban ngày.",
+        causes=[
+            "Nguyên nhân tâm lý: stress, lo âu, trầm cảm",
+            "Nguyên nhân thực thể: đau mạn tính, bệnh mạn tính, hội chứng chân không yên",
+            "Thuốc: caffeine, rượu bia, thuốc kích thích, corticosteroid",
+            "Rối loạn nhịp sinh học: làm ca đêm, jet lag",
+            "Thói quen ngủ kém: dùng điện thoại trước khi ngủ, phòng ngủ không phù hợp",
+            "Vô căn"
+        ],
+        symptoms=[
+            "Khó vào giấc ngủ (≥ 30 phút)",
+            "Khó duy trì giấc ngủ (thức dậy nhiều lần)",
+            "Thức dậy sớm, không ngủ lại được",
+            "Giấc ngủ không phục hồi",
+            "Mệt mỏi ban ngày",
+            "Khó tập trung, giảm trí nhớ",
+            "Cáu gắt, lo âu",
+            "Ảnh hưởng công việc, cuộc sống"
+        ],
+        diagnosis={
+            "criteria": [
+                "DSM-5 hoặc ICSD-3 criteria",
+                "Khó ngủ ≥ 3 lần/tuần, ≥ 3 tháng",
+                "Ảnh hưởng chức năng ban ngày",
+                "Loại trừ: do chất, bệnh thực thể, rối loạn giấc ngủ khác"
+            ],
+            "tests": [
+                "Đánh giá lâm sàng",
+                "Nhật ký giấc ngủ (sleep diary)",
+                "Đánh giá tâm thần (PHQ-9, GAD-7)",
+                "Polysomnography (nếu nghi ngờ rối loạn giấc ngủ khác)",
+                "Actigraphy (nếu có)"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Điều trị đa yếu tố: liệu pháp hành vi nhận thức (CBT-I), thuốc, thay đổi lối sống. CBT-I là điều trị đầu tay.",
+            "medications": [
+                "CBT-I (Cognitive Behavioral Therapy for Insomnia) - điều trị đầu tay",
+                "Thuốc ngủ: Zolpidem, Zaleplon, Eszopiclone (ngắn hạn)",
+                "Melatonin (nếu rối loạn nhịp sinh học)",
+                "Antidepressant: Trazodone, Mirtazapine (nếu có trầm cảm)",
+                "Antihistamine: Diphenhydramine (không khuyến cáo dài hạn)",
+                "Tránh Benzodiazepine dài hạn (gây lệ thuộc)"
+            ],
+            "procedures": [
+                "Vệ sinh giấc ngủ: giờ ngủ đều đặn, phòng tối, yên tĩnh, mát mẻ",
+                "Kiểm soát kích thích: chỉ ngủ khi buồn ngủ",
+                "Hạn chế giấc ngủ: giảm thời gian trên giường",
+                "Thư giãn: thiền, yoga",
+                "Tránh caffeine, rượu bia, điện thoại trước khi ngủ"
+            ]
+        },
+        prevention=[
+            "Vệ sinh giấc ngủ",
+            "Quản lý stress",
+            "Tập thể dục (không gần giờ ngủ)",
+            "Tránh caffeine, rượu bia",
+            "Điều trị bệnh mạn tính"
+        ],
+        complications=[
+            "Trầm cảm, lo âu",
+            "Suy giảm nhận thức",
+            "Tai nạn (do mệt mỏi)",
+            "Ảnh hưởng công việc, cuộc sống",
+            "Lệ thuộc thuốc ngủ"
+        ],
+        related_scores=["ISI", "PSQI", "Epworth Sleepiness Scale"],
+        related_drugs=["Zolpidem", "Zaleplon", "Melatonin", "Trazodone", "Mirtazapine"],
+        related_protocols=["Insomnia Management"],
+        icd10_codes=["G47.0", "F51.0"]
+    ),
 ]

@@ -230,4 +230,125 @@ UROLOGY_DISEASES: List[Disease] = [
         related_protocols=["BPH Management"],
         icd10_codes=["N40.0", "N40.1"]
     ),
+
+    Disease(
+        id="acute_pyelonephritis",
+        name="Acute Pyelonephritis",
+        name_vn="Viêm bể thận - thận cấp",
+        category="Urology",
+        definition="Viêm bể thận cấp là nhiễm trùng cấp thận và đài bể thận, thường do vi khuẩn Gram âm, cần điều trị kháng sinh sớm để tránh biến chứng.",
+        causes=[
+            "E. coli (phổ biến nhất), Klebsiella, Proteus",
+            "Nguy cơ: nữ, tắc nghẽn niệu (sỏi), thai kỳ, đặt sonde, đái tháo đường"
+        ],
+        symptoms=[
+            "Sốt cao, rét run",
+            "Đau hông lưng, điểm niệu đạo-cột sống (+)",
+            "Tiểu buốt, tiểu rắt, có thể tiểu máu",
+            "Buồn nôn, nôn"
+        ],
+        diagnosis={
+            "criteria": [
+                "Sốt + đau hông lưng + hội chứng bàng quang",
+                "Nước tiểu: bạch cầu, nitrite, cấy >=10^5 CFU/ml"
+            ],
+            "tests": [
+                "Tổng phân tích nước tiểu, cấy nước tiểu",
+                "Công thức máu, CRP/Procalcitonin",
+                "Siêu âm thận (loại trừ tắc nghẽn, áp xe)"
+            ],
+            "imaging": [
+                "Siêu âm thận",
+                "CT không cản quang nếu nghi sỏi/tắc"
+            ]
+        },
+        treatment={
+            "general": "Kháng sinh sớm, đủ liều; nhập viện nếu nặng, có tắc nghẽn hoặc thai kỳ.",
+            "medications": [
+                "Ceftriaxone/Cefotaxime hoặc Fluoroquinolone (nếu không chống chỉ định)",
+                "Carbapenem nếu nghi đa kháng",
+                "Giảm đau, hạ sốt"
+            ],
+            "procedures": [
+                "Uống đủ nước",
+                "Dẫn lưu tắc nghẽn nếu có (sonde JJ, dẫn lưu qua da)",
+                "Theo dõi lâm sàng và cấy kiểm tra khi cần"
+            ]
+        },
+        prevention=[
+            "Điều trị sỏi, tắc nghẽn",
+            "Uống đủ nước",
+            "Vệ sinh, tránh nhịn tiểu"
+        ],
+        complications=[
+            "Áp xe thận/quanh thận",
+            "Nhiễm khuẩn huyết",
+            "Suy thận cấp"
+        ],
+        related_scores=["UTI Severity"],
+        related_drugs=["Ceftriaxone", "Ciprofloxacin", "Meropenem"],
+        related_protocols=["Pyelonephritis Management"],
+        icd10_codes=["N10"]
+    ),
+
+    Disease(
+        id="acute_prostatitis",
+        name="Acute Prostatitis",
+        name_vn="Viêm tuyến tiền liệt cấp",
+        category="Urology",
+        definition="Viêm tuyến tiền liệt cấp là nhiễm khuẩn cấp tính tuyến tiền liệt, gây đau tầng sinh môn, sốt, rối loạn tiểu tiện.",
+        causes=[
+            "E. coli, Enterobacteriaceae",
+            "Nguy cơ: đặt sonde, thủ thuật niệu, quan hệ hậu môn, phì đại TLT gây ứ đọng"
+        ],
+        symptoms=[
+            "Sốt, rét run",
+            "Đau tầng sinh môn, đau hạ vị",
+            "Tiểu buốt, tiểu khó, tiểu máu có thể",
+            "Có thể bí tiểu cấp"
+        ],
+        diagnosis={
+            "criteria": [
+                "Sốt + đau tầng sinh môn + rối loạn tiểu tiện",
+                "Khám trực tràng: tuyến tiền liệt sưng, nóng, đau (tránh xoa bóp mạnh)",
+                "Cấy nước tiểu (và máu nếu sốt cao)"
+            ],
+            "tests": [
+                "Cấy nước tiểu, kháng sinh đồ",
+                "Công thức máu, CRP",
+                "Cấy máu nếu sốt cao"
+            ],
+            "imaging": [
+                "Siêu âm qua trực tràng nếu nghi áp xe",
+                "Siêu âm bụng loại trừ bí tiểu"
+            ]
+        },
+        treatment={
+            "general": "Kháng sinh phổ rộng thấm tốt vào TLT, thời gian 2-4 tuần; dẫn lưu bàng quang nếu bí tiểu.",
+            "medications": [
+                "Fluoroquinolone (Ciprofloxacin/Levofloxacin) nếu nhạy",
+                "Hoặc Ceftriaxone, Piperacillin-tazobactam (nếu nặng)",
+                "Giảm đau, hạ sốt",
+                "Alpha-blocker (Tamsulosin) hỗ trợ tiểu tiện"
+            ],
+            "procedures": [
+                "Đặt sonde tiểu trên xương mu (suprapubic) nếu bí tiểu, tránh sonde niệu đạo",
+                "Dẫn lưu áp xe nếu có"
+            ]
+        },
+        prevention=[
+            "Vệ sinh trước thủ thuật niệu",
+            "Điều trị sớm UTI",
+            "Uống đủ nước"
+        ],
+        complications=[
+            "Áp xe tuyến tiền liệt",
+            "Nhiễm khuẩn huyết",
+            "Tiến triển thành viêm mạn"
+        ],
+        related_scores=[],
+        related_drugs=["Ciprofloxacin", "Levofloxacin", "Ceftriaxone", "Piperacillin-tazobactam", "Tamsulosin"],
+        related_protocols=["Acute Prostatitis"],
+        icd10_codes=["N41.0"]
+    ),
 ]

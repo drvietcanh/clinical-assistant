@@ -148,4 +148,128 @@ NEPHROLOGY_DISEASES: List[Disease] = [
         related_protocols=["Suy thận mạn tính (CKD)"],
         icd10_codes=["N18.9", "N18.1", "N18.2", "N18.3", "N18.4", "N18.5"]
     ),
+
+    Disease(
+        id="post_strep_glomerulonephritis",
+        name="Post-streptococcal Acute Glomerulonephritis",
+        name_vn="Viêm cầu thận cấp sau nhiễm liên cầu",
+        category="Nephrology",
+        definition="Viêm cầu thận cấp sau nhiễm liên cầu xảy ra sau viêm họng/da do liên cầu beta tan huyết nhóm A, thường ở trẻ em.",
+        causes=[
+            "Nhiễm Streptococcus nhóm A (họng, da) 1-3 tuần trước",
+            "Phản ứng miễn dịch gây lắng đọng phức hợp miễn dịch tại cầu thận"
+        ],
+        symptoms=[
+            "Phù (mi mắt, chân)",
+            "Tăng huyết áp",
+            "Tiểu ít, nước tiểu sậm, có máu",
+            "Đôi khi đau đầu, khó thở"
+        ],
+        diagnosis={
+            "criteria": [
+                "Tiền sử nhiễm liên cầu gần đây",
+                "Nước tiểu: hồng cầu, trụ hồng cầu, protein niệu",
+                "C3 giảm, ASO tăng",
+                "Creatinine tăng nhẹ"
+            ],
+            "tests": [
+                "Tổng phân tích nước tiểu",
+                "C3, C4, ASO",
+                "Creatinine, điện giải",
+                "Huyết áp, cân nặng theo dõi phù"
+            ],
+            "imaging": [
+                "Siêu âm thận (thường bình thường hoặc to nhẹ)"
+            ]
+        },
+        treatment={
+            "general": "Hỗ trợ là chính, đa số tự hồi phục; điều trị tăng huyết áp, phù, loại bỏ ổ nhiễm.",
+            "medications": [
+                "Lợi tiểu (Furosemide) nếu phù/nhiều nước",
+                "Hạ áp: ACEi/ARB thận trọng nếu cần",
+                "Kháng sinh nếu còn ổ nhiễm liên cầu"
+            ],
+            "procedures": [
+                "Hạn chế muối, nước nếu phù nhiều",
+                "Theo dõi huyết áp, nước tiểu",
+                "Lọc máu hiếm khi cần (nếu biến chứng nặng)"
+            ]
+        },
+        prevention=[
+            "Điều trị viêm họng/da do liên cầu sớm bằng kháng sinh",
+            "Vệ sinh cá nhân, tránh lây nhiễm"
+        ],
+        complications=[
+            "Tăng huyết áp cấp (encephalopathy hiếm)",
+            "Suy thận cấp (hiếm)",
+            "Tiến triển mạn (rất hiếm)"
+        ],
+        related_scores=["Blood Pressure", "Serum Creatinine"],
+        related_drugs=["Furosemide", "ACE Inhibitor"],
+        related_protocols=["Post-strep GN Management"],
+        icd10_codes=["N00.9"]
+    ),
+
+    Disease(
+        id="nephrotic_syndrome",
+        name="Nephrotic Syndrome",
+        name_vn="Hội chứng thận hư",
+        category="Nephrology",
+        definition="Hội chứng thận hư đặc trưng bởi protein niệu cao, giảm albumin máu, phù và tăng lipid máu; gặp ở cả trẻ em và người lớn.",
+        causes=[
+            "Nguyên phát: Minimal change, FSGS, Membranous",
+            "Thứ phát: đái tháo đường, lupus, nhiễm HBV/HCV, thuốc"
+        ],
+        symptoms=[
+            "Phù toàn thân (mi mắt, chi, cổ trướng)",
+            "Tiểu bọt do protein niệu",
+            "Tăng cân, mệt mỏi"
+        ],
+        diagnosis={
+            "criteria": [
+                "Protein niệu > 3.5 g/24h",
+                "Albumin máu < 30 g/L",
+                "Phù, tăng lipid máu",
+                "Cân nhắc sinh thiết thận để chẩn đoán thể bệnh"
+            ],
+            "tests": [
+                "Protein niệu 24h hoặc tỉ lệ protein/creatinin",
+                "Albumin, cholesterol, triglyceride",
+                "Chức năng thận, điện giải",
+                "Sinh thiết thận (nếu người lớn hoặc nghi ngờ thứ phát)"
+            ],
+            "imaging": [
+                "Siêu âm thận"
+            ]
+        },
+        treatment={
+            "general": "Giảm phù, bảo vệ thận, điều trị nguyên nhân/miễn dịch tùy thể.",
+            "medications": [
+                "Corticosteroid (minimal change, FSGS)",
+                "ACEi/ARB giảm protein niệu, hạ áp",
+                "Lợi tiểu (Furosemide ± Spironolactone)",
+                "Statin (nếu tăng lipid)",
+                "Kháng đông dự phòng chọn lọc (nếu albumin rất thấp)"
+            ],
+            "procedures": [
+                "Hạn chế muối, nước",
+                "Theo dõi cân nặng, huyết áp, nước tiểu",
+                "Điều trị nguyên nhân thứ phát (HBV/HCV, lupus, đái tháo đường)"
+            ]
+        },
+        prevention=[
+            "Kiểm soát bệnh nền (đái tháo đường, lupus)",
+            "Theo dõi tái phát sớm, tuân thủ thuốc"
+        ],
+        complications=[
+            "Huyết khối tĩnh mạch",
+            "Nhiễm trùng do mất Ig",
+            "Suy thận tiến triển",
+            "Phù phổi nếu quá tải dịch"
+        ],
+        related_scores=["Protein/Creatinine Ratio", "Serum Albumin"],
+        related_drugs=["Prednisone", "ACE Inhibitor", "ARB", "Furosemide", "Statin"],
+        related_protocols=["Nephrotic Syndrome"],
+        icd10_codes=["N04.9"]
+    ),
 ]

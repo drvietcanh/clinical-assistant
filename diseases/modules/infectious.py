@@ -510,6 +510,516 @@ INFECTIOUS_DISEASES: List[Disease] = [
         related_protocols=["Influenza Management"],
         icd10_codes=["J11.1", "J10.1"]
     ),
+
+    Disease(
+        id="covid_19",
+        name="COVID-19",
+        name_vn="COVID-19",
+        category="Infectious",
+        definition="COVID-19 là bệnh nhiễm virus SARS-CoV-2, gây tổn thương chủ yếu đường hô hấp nhưng có thể ảnh hưởng đa cơ quan.",
+        causes=[
+            "Virus SARS-CoV-2",
+            "Lây qua giọt bắn, khí dung, tiếp xúc gần",
+            "Yếu tố nguy cơ: tuổi cao, bệnh mạn tính (tim mạch, phổi, đái tháo đường), béo phì, suy giảm miễn dịch"
+        ],
+        symptoms=[
+            "Sốt, ho khan",
+            "Mệt mỏi, đau mỏi cơ",
+            "Mất mùi, mất vị",
+            "Khó thở, đau ngực",
+            "Đau họng, nghẹt mũi",
+            "Tiêu chảy, buồn nôn (ít gặp hơn)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng + yếu tố dịch tễ",
+                "Xét nghiệm PCR SARS-CoV-2 dương tính",
+                "Test nhanh kháng nguyên dương tính (độ nhạy thấp hơn)",
+                "Hình ảnh tổn thương phổi trên X-quang/CT (nếu có viêm phổi)"
+            ],
+            "tests": [
+                "RT-PCR SARS-CoV-2 (dịch mũi họng)",
+                "Test nhanh kháng nguyên",
+                "Công thức máu, CRP, D-dimer, Ferritin",
+                "Khí máu động mạch (nếu khó thở)"
+            ],
+            "imaging": [
+                "X-quang ngực",
+                "CT ngực (tổn thương kính mờ, tổn thương ngoại biên)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị theo mức độ: nhẹ điều trị ngoại trú, nặng cần nhập viện, hỗ trợ hô hấp và kháng virus/corticoid khi có chỉ định.",
+            "medications": [
+                "Thuốc kháng virus (tuỳ phác đồ quốc gia, ví dụ: Remdesivir)",
+                "Corticosteroid (Dexamethasone) nếu có suy hô hấp",
+                "Kháng đông (Heparin trọng lượng phân tử thấp) nếu nguy cơ huyết khối cao",
+                "Thuốc điều trị triệu chứng: hạ sốt, giảm ho"
+            ],
+            "procedures": [
+                "Oxy liệu pháp qua gọng mũi/mặt nạ",
+                "HFNC hoặc thở máy không/xâm lấn nếu suy hô hấp",
+                "Điều trị hồi sức tích cực nếu ARDS, sốc nhiễm khuẩn"
+            ]
+        },
+        prevention=[
+            "Tiêm vắc xin COVID-19 đầy đủ liều, nhắc lại theo khuyến cáo",
+            "Đeo khẩu trang nơi đông người, kín",
+            "Rửa tay thường xuyên",
+            "Giữ khoảng cách, thông khí tốt",
+            "Cách ly khi có triệu chứng hoặc test dương tính"
+        ],
+        complications=[
+            "Viêm phổi nặng, ARDS",
+            "Huyết khối tĩnh mạch/động mạch",
+            "Tổn thương tim, thận",
+            "Hội chứng hậu COVID kéo dài",
+            "Tử vong (đặc biệt ở nhóm nguy cơ cao)"
+        ],
+        related_scores=["NEWS2", "SpO2", "ROX Index"],
+        related_drugs=["Remdesivir", "Dexamethasone", "Enoxaparin", "Paracetamol"],
+        related_protocols=["COVID-19 Management"],
+        icd10_codes=["U07.1", "U07.2"]
+    ),
+
+    Disease(
+        id="acute_gastroenteritis",
+        name="Acute Gastroenteritis",
+        name_vn="Tiêu chảy cấp / Viêm dạ dày ruột cấp",
+        category="Infectious",
+        definition="Tiêu chảy cấp là tình trạng đi phân lỏng ≥ 3 lần/ngày, kéo dài < 14 ngày, thường do nhiễm virus, vi khuẩn hoặc ký sinh trùng.",
+        causes=[
+            "Virus: Rotavirus, Norovirus, Adenovirus",
+            "Vi khuẩn: E. coli, Salmonella, Shigella, Campylobacter, Vibrio cholerae",
+            "Ký sinh trùng: Giardia, Entamoeba histolytica",
+            "Ăn/uống thực phẩm, nước nhiễm bẩn"
+        ],
+        symptoms=[
+            "Tiêu chảy nhiều lần, phân lỏng hoặc nước",
+            "Buồn nôn, nôn",
+            "Đau bụng quặn",
+            "Có thể sốt",
+            "Dấu mất nước: khát, da khô, tiểu ít, chóng mặt"
+        ],
+        diagnosis={
+            "criteria": [
+                "Lâm sàng: tiêu chảy cấp, thời gian < 14 ngày",
+                "Đánh giá mức độ mất nước",
+                "Xét nghiệm phân khi nghi ngờ bệnh nặng, dịch tễ đặc biệt hoặc kéo dài"
+            ],
+            "tests": [
+                "Tổng phân tích phân, soi tươi",
+                "Cấy phân (nếu nghi vi khuẩn xâm nhập, dịch tễ)",
+                "Xét nghiệm Rotavirus ở trẻ em (nếu cần)",
+                "Điện giải đồ, ure/creatinin nếu mất nước nặng"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Nguyên tắc chính là bù nước và điện giải, chỉ dùng kháng sinh khi có chỉ định.",
+            "medications": [
+                "Oresol (ORS) uống từng ngụm nhỏ",
+                "Truyền dịch tĩnh mạch nếu mất nước nặng hoặc không uống được",
+                "Kháng sinh (Ciprofloxacin, Azithromycin, Ceftriaxone) nếu nghi ngờ vi khuẩn xâm nhập hoặc tả",
+                "Racecadotril, Loperamide (tránh ở trẻ nhỏ và tiêu chảy xâm nhập)",
+                "Kẽm (trẻ em)"
+            ],
+            "procedures": [
+                "Đánh giá và phân loại mức độ mất nước",
+                "Theo dõi lượng nước vào/ra",
+                "Cách ly, vệ sinh tay để tránh lây lan"
+            ]
+        },
+        prevention=[
+            "Vệ sinh ăn uống, ăn chín uống sôi",
+            "Rửa tay bằng xà phòng, đặc biệt sau khi đi vệ sinh và trước khi ăn",
+            "Tiêm vắc xin Rotavirus cho trẻ",
+            "Xử lý phân, rác thải đúng cách"
+        ],
+        complications=[
+            "Mất nước nặng, sốc giảm thể tích",
+            "Rối loạn điện giải",
+            "Suy thận cấp",
+            "Suy dinh dưỡng ở trẻ em"
+        ],
+        related_scores=["Dehydration Assessment"],
+        related_drugs=["ORS", "Ciprofloxacin", "Azithromycin", "Ceftriaxone"],
+        related_protocols=["Acute Diarrhea Management"],
+        icd10_codes=["A09", "A00.9"]
+    ),
+
+    Disease(
+        id="typhoid_fever",
+        name="Typhoid Fever",
+        name_vn="Thương hàn",
+        category="Infectious",
+        definition="Thương hàn là bệnh nhiễm khuẩn toàn thân do Salmonella typhi, lây qua đường tiêu hoá, vẫn còn gặp tại các nước đang phát triển.",
+        causes=[
+            "Vi khuẩn Salmonella enterica serotype Typhi",
+            "Lây qua thức ăn, nước uống nhiễm phân người bệnh hoặc người mang trùng",
+            "Vệ sinh môi trường và an toàn thực phẩm kém"
+        ],
+        symptoms=[
+            "Sốt cao kéo dài, thường tăng dần",
+            "Đau đầu, mệt mỏi",
+            "Đau bụng, tiêu chảy hoặc táo bón",
+            "Gan lách to",
+            "Ban dạng hồng ban trên bụng ngực (rose spots, không phải lúc nào cũng có)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Lâm sàng: sốt kéo dài, nhiễm khuẩn toàn thân",
+                "Cấy máu dương tính với Salmonella typhi (chuẩn vàng)",
+                "Cấy tuỷ xương (nhạy hơn, ít làm)",
+                "Huyết thanh Widal ít giá trị, chỉ hỗ trợ"
+            ],
+            "tests": [
+                "Cấy máu (trước kháng sinh)",
+                "Công thức máu (thường giảm bạch cầu tương đối)",
+                "Chức năng gan, thận",
+                "Siêu âm bụng (gan lách to, biến chứng)"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Điều trị kháng sinh sớm, đủ liều; chăm sóc hỗ trợ, theo dõi biến chứng.",
+            "medications": [
+                "Ceftriaxone hoặc Cefotaxime tiêm tĩnh mạch",
+                "Azithromycin đường uống (trường hợp nhẹ, ngoại trú)",
+                "Fluoroquinolone (Ciprofloxacin) ở vùng không kháng thuốc",
+                "Hạ sốt: Paracetamol"
+            ],
+            "procedures": [
+                "Nghỉ ngơi tại giường",
+                "Bù dịch, dinh dưỡng đầy đủ",
+                "Theo dõi thủng ruột, xuất huyết tiêu hóa"
+            ]
+        },
+        prevention=[
+            "Tiêm vắc xin thương hàn cho người nguy cơ, đi đến vùng dịch",
+            "Vệ sinh ăn uống, nước sạch",
+            "Vệ sinh tay, xử lý phân đúng cách",
+            "Quản lý người lành mang trùng"
+        ],
+        complications=[
+            "Thủng ruột, xuất huyết tiêu hóa",
+            "Viêm cơ tim, viêm phổi",
+            "Sốc nhiễm khuẩn",
+            "Tử vong nếu không điều trị"
+        ],
+        related_scores=[],
+        related_drugs=["Ceftriaxone", "Azithromycin", "Ciprofloxacin"],
+        related_protocols=["Typhoid Fever Management"],
+        icd10_codes=["A01.0"]
+    ),
+
+    Disease(
+        id="helminth_infection",
+        name="Intestinal Helminth Infection",
+        name_vn="Nhiễm giun đường ruột",
+        category="Infectious",
+        definition="Nhiễm giun đường ruột (giun đũa, giun móc, giun kim, giun tóc) rất phổ biến tại vùng nhiệt đới như Việt Nam, lây qua đường tiêu hoá.",
+        causes=[
+            "Giun đũa (Ascaris lumbricoides)",
+            "Giun móc/mỏ (Ancylostoma duodenale, Necator americanus)",
+            "Giun kim (Enterobius vermicularis)",
+            "Giun tóc (Trichuris trichiura)",
+            "Ăn uống, vệ sinh kém; trẻ hay chơi đất cát"
+        ],
+        symptoms=[
+            "Có thể không triệu chứng (nhiễm nhẹ)",
+            "Đau bụng, đầy hơi",
+            "Rối loạn tiêu hoá, tiêu chảy hoặc táo bón",
+            "Ngứa hậu môn (giun kim)",
+            "Thiếu máu thiếu sắt (giun móc)",
+            "Suy dinh dưỡng, chậm phát triển ở trẻ em"
+        ],
+        diagnosis={
+            "criteria": [
+                "Lâm sàng + yếu tố dịch tễ",
+                "Tìm trứng/giun trong phân (soi phân)",
+                "Test băng dính ở hậu môn (giun kim)"
+            ],
+            "tests": [
+                "Soi phân tìm trứng giun",
+                "Công thức máu (thiếu máu, tăng bạch cầu ái toan)",
+                "Đôi khi thấy giun khi nội soi hoặc chụp X-quang"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Tẩy giun bằng thuốc, lặp lại định kỳ; kết hợp cải thiện vệ sinh môi trường.",
+            "medications": [
+                "Albendazole liều duy nhất hoặc 3 ngày",
+                "Mebendazole",
+                "Pyrantel pamoate (một số trường hợp)",
+                "Bổ sung sắt nếu thiếu máu"
+            ],
+            "procedures": [
+                "Giáo dục vệ sinh: rửa tay, cắt móng tay",
+                "Xử lý phân hợp vệ sinh",
+                "Chương trình tẩy giun cộng đồng định kỳ"
+            ]
+        },
+        prevention=[
+            "Tẩy giun định kỳ 6–12 tháng/lần (trẻ em, người nguy cơ)",
+            "Rửa tay trước khi ăn và sau khi đi vệ sinh",
+            "Không đi chân đất ở vùng đất ẩm",
+            "Ăn chín uống sôi, rửa sạch rau sống"
+        ],
+        complications=[
+            "Tắc ruột do búi giun (hiếm nhưng nặng)",
+            "Thiếu máu mạn tính (giun móc)",
+            "Suy dinh dưỡng, chậm phát triển",
+            "Viêm đường mật, tụy do giun chui ống mật (giun đũa)"
+        ],
+        related_scores=[],
+        related_drugs=["Albendazole", "Mebendazole"],
+        related_protocols=["Deworming Program"],
+        icd10_codes=["B76.9", "B77.9", "B79"]
+    ),
+
+    Disease(
+        id="hepatitis_a",
+        name="Hepatitis A",
+        name_vn="Viêm gan A cấp",
+        category="Infectious",
+        definition="Viêm gan A là bệnh viêm gan cấp tính do virus HAV, lây qua đường tiêu hoá, thường tự khỏi nhưng có thể gây bùng phát tại cộng đồng.",
+        causes=[
+            "Virus Hepatitis A (HAV)",
+            "Ăn uống, nước uống nhiễm bẩn",
+            "Đi lại, sống trong vùng dịch tễ viêm gan A"
+        ],
+        symptoms=[
+            "Sốt nhẹ, mệt mỏi",
+            "Chán ăn, buồn nôn, nôn",
+            "Đau hạ sườn phải",
+            "Vàng da, vàng mắt",
+            "Nước tiểu sẫm màu, phân bạc màu"
+        ],
+        diagnosis={
+            "criteria": [
+                "Tăng men gan (ALT, AST)",
+                "IgM anti-HAV dương tính",
+                "Loại trừ các nguyên nhân viêm gan virus khác"
+            ],
+            "tests": [
+                "ALT, AST, Bilirubin, INR",
+                "IgM anti-HAV",
+                "Siêu âm gan (loại trừ nguyên nhân khác)"
+            ],
+            "imaging": [
+                "Siêu âm gan (thường bình thường hoặc gan to nhẹ)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị chủ yếu là nghỉ ngơi, dinh dưỡng, tránh thuốc độc gan, theo dõi suy gan cấp.",
+            "medications": [
+                "Nghỉ ngơi, bù dịch đầy đủ",
+                "Tránh rượu và thuốc độc gan",
+                "Điều trị triệu chứng: chống nôn, hạ sốt (Paracetamol liều thấp)"
+            ],
+            "procedures": [
+                "Theo dõi dấu hiệu suy gan cấp: INR tăng, lơ mơ, hôn mê",
+                "Nhập viện nếu nặng"
+            ]
+        },
+        prevention=[
+            "Tiêm vắc xin viêm gan A cho trẻ em và người nguy cơ",
+            "Vệ sinh ăn uống, nước sạch",
+            "Rửa tay sau khi đi vệ sinh và trước khi ăn"
+        ],
+        complications=[
+            "Viêm gan tối cấp (hiếm nhưng nặng)",
+            "Vàng da kéo dài",
+            "Hiếm khi chuyển mạn tính"
+        ],
+        related_scores=[],
+        related_drugs=["Paracetamol"],
+        related_protocols=["Acute Hepatitis Management"],
+        icd10_codes=["B15.9"]
+    ),
+
+    Disease(
+        id="cholera",
+        name="Cholera",
+        name_vn="Bệnh tả",
+        category="Infectious",
+        definition="Tả là nhiễm khuẩn cấp đường tiêu hóa do Vibrio cholerae, gây tiêu chảy nước ồ ạt, dễ bùng phát dịch ở vùng thiếu nước sạch.",
+        causes=[
+            "Vibrio cholerae O1/O139",
+            "Ăn uống nước/đá/rau sống nhiễm bẩn",
+            "Vệ sinh môi trường kém, mùa mưa lũ"
+        ],
+        symptoms=[
+            "Tiêu chảy nước như nước vo gạo, số lượng lớn",
+            "Nôn ói",
+            "Khát nhiều, co quắp do mất nước",
+            "Không sốt hoặc sốt nhẹ"
+        ],
+        diagnosis={
+            "criteria": [
+                "Tiêu chảy nước cấp ồ ạt, mất nước nhanh",
+                "Yếu tố dịch tễ: vùng có dịch tả",
+                "Cấy phân hoặc test nhanh phát hiện Vibrio cholerae"
+            ],
+            "tests": [
+                "Cấy phân (chuẩn vàng)",
+                "Test nhanh kháng nguyên tả",
+                "Điện giải đồ, ure/creatinin"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Bù dịch và điện giải là then chốt; kháng sinh rút ngắn thời gian thải khuẩn.",
+            "medications": [
+                "ORS uống nếu còn uống được",
+                "Truyền Ringer lactate/NaCl 0.9% nếu mất nước nặng",
+                "Kháng sinh: Doxycycline liều đơn, hoặc Azithromycin, Ciprofloxacin theo kháng thuốc địa phương",
+                "Kẽm cho trẻ em"
+            ],
+            "procedures": [
+                "Theo dõi sát dấu mất nước, mạch, huyết áp",
+                "Cách ly nguồn lây, xử lý phân an toàn"
+            ]
+        },
+        prevention=[
+            "Nước sạch, ăn chín uống sôi",
+            "Vệ sinh tay, xử lý phân đúng cách",
+            "Vắc xin tả uống cho vùng nguy cơ cao"
+        ],
+        complications=[
+            "Sốc giảm thể tích",
+            "Suy thận cấp",
+            "Rối loạn điện giải, toan chuyển hóa",
+            "Tử vong nếu mất nước nặng không bù kịp"
+        ],
+        related_scores=["Dehydration Assessment"],
+        related_drugs=["ORS", "Ringer Lactate", "Doxycycline", "Azithromycin"],
+        related_protocols=["Cholera Management"],
+        icd10_codes=["A00.9"]
+    ),
+
+    Disease(
+        id="hiv_aids_clinical",
+        name="HIV/AIDS (Clinical Stage)",
+        name_vn="Nhiễm HIV/AIDS giai đoạn lâm sàng",
+        category="Infectious",
+        definition="Nhiễm HIV tiến triển gây suy giảm miễn dịch, dễ nhiễm trùng cơ hội; AIDS khi có bệnh chỉ điểm hoặc CD4 rất thấp.",
+        causes=[
+            "Virus HIV-1/2",
+            "Lây qua đường máu, tình dục, mẹ-con",
+            "Yếu tố nguy cơ: tiêm chích ma túy, quan hệ không an toàn, truyền máu không sàng lọc"
+        ],
+        symptoms=[
+            "Giai đoạn sớm: không triệu chứng hoặc hội chứng giả cúm",
+            "Giai đoạn tiến triển: sụt cân, sốt kéo dài, tiêu chảy mạn",
+            "Nhiễm trùng cơ hội: lao, PCP, nấm, CMV",
+            "Hạch to, loét miệng, nấm miệng"
+        ],
+        diagnosis={
+            "criteria": [
+                "Xét nghiệm khẳng định HIV dương tính (kháng thể/kháng nguyên, PCR)",
+                "Đánh giá CD4, tải lượng virus",
+                "Chẩn đoán giai đoạn lâm sàng theo WHO/CDC"
+            ],
+            "tests": [
+                "HIV Ab/Ag, PCR tải lượng",
+                "CD4 count",
+                "Screen lao, viêm gan B/C, giang mai",
+                "Công thức máu, chức năng gan thận"
+            ],
+            "imaging": [
+                "X-quang ngực/CT nếu nghi lao, PCP"
+            ]
+        },
+        treatment={
+            "general": "Điều trị ARV sớm và suốt đời, dự phòng và điều trị nhiễm trùng cơ hội.",
+            "medications": [
+                "Phác đồ ARV chuẩn (TDF + 3TC + DTG hoặc tương đương)",
+                "Dự phòng PCP: Cotrimoxazole khi CD4 thấp",
+                "Điều trị lao đồng nhiễm theo phác đồ quốc gia",
+                "Điều trị nhiễm trùng cơ hội tùy tác nhân"
+            ],
+            "procedures": [
+                "Tư vấn tuân thủ ARV",
+                "Tiêm chủng phù hợp tình trạng miễn dịch",
+                "Theo dõi tải lượng virus, CD4 định kỳ"
+            ]
+        },
+        prevention=[
+            "Bao cao su, quan hệ an toàn",
+            "Không dùng chung kim tiêm",
+            "Điều trị dự phòng sau phơi nhiễm (PEP), trước phơi nhiễm (PrEP)",
+            "Sàng lọc máu, mẹ-bé dự phòng lây truyền"
+        ],
+        complications=[
+            "Nhiễm trùng cơ hội (PCP, toxoplasma, CMV, lao)",
+            "U lympho không Hodgkin, sarcoma Kaposi",
+            "Suy kiệt, tử vong nếu không điều trị"
+        ],
+        related_scores=["CD4 Count", "Viral Load"],
+        related_drugs=["Tenofovir", "Lamivudine", "Dolutegravir", "Cotrimoxazole"],
+        related_protocols=["HIV Management"],
+        icd10_codes=["B24"]
+    ),
+
+    Disease(
+        id="rotavirus_gastroenteritis_child",
+        name="Rotavirus Gastroenteritis (Child)",
+        name_vn="Tiêu chảy do Rotavirus (trẻ em)",
+        category="Infectious",
+        definition="Tiêu chảy cấp do Rotavirus là nguyên nhân hàng đầu gây tiêu chảy mất nước ở trẻ nhỏ, thường mùa đông xuân.",
+        causes=[
+            "Rotavirus nhóm A",
+            "Lây qua đường phân-miệng, thực phẩm/nước nhiễm bẩn, bề mặt đồ chơi"
+        ],
+        symptoms=[
+            "Nôn ói, tiêu chảy nước nhiều lần",
+            "Sốt nhẹ",
+            "Dấu mất nước: khát, mắt trũng, tiểu ít",
+            "Có thể kèm ho, sổ mũi nhẹ"
+        ],
+        diagnosis={
+            "criteria": [
+                "Trẻ <5 tuổi, tiêu chảy nước cấp + nôn",
+                "Test kháng nguyên Rotavirus trong phân (+) hỗ trợ"
+            ],
+            "tests": [
+                "Test nhanh kháng nguyên Rotavirus",
+                "Điện giải đồ, ure/creatinin nếu mất nước nặng"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Bù nước/điện giải là chính; không cần kháng sinh.",
+            "medications": [
+                "ORS uống từng ngụm nhỏ",
+                "Truyền dịch nếu mất nước trung bình-nặng",
+                "Kẽm bổ sung cho trẻ em",
+                "Hạ sốt: Paracetamol"
+            ],
+            "procedures": [
+                "Theo dõi phân loại mất nước",
+                "Dinh dưỡng đầy đủ, tiếp tục cho bú",
+                "Cách ly, vệ sinh tay để hạn chế lây lan"
+            ]
+        },
+        prevention=[
+            "Vắc xin Rotavirus cho trẻ nhỏ",
+            "Rửa tay, vệ sinh đồ chơi, ăn chín uống sôi",
+            "Xử lý phân an toàn"
+        ],
+        complications=[
+            "Mất nước nặng, sốc",
+            "Rối loạn điện giải",
+            "Suy thận cấp (hiếm, do mất nước nặng)"
+        ],
+        related_scores=["Dehydration Assessment"],
+        related_drugs=["ORS", "Zinc", "Paracetamol"],
+        related_protocols=["Acute Diarrhea Management"],
+        icd10_codes=["A08.0"]
+    ),
 ]
 
 

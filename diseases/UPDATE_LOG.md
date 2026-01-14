@@ -180,7 +180,67 @@ Mỗi bệnh có đầy đủ thông tin:
 
 ---
 
-**Cập nhật lần cuối:** 2025-01-30  
-**Tổng số bệnh:** 80  
+### Phiên 6: Bổ sung đợt 2 - Các bệnh phổ biến tại Việt Nam (120 bệnh)
+**Bổ sung 30 bệnh mới:**
+
+1. **Infectious (Nhiễm khuẩn):**
+   - ✅ Hepatitis C chronic (Viêm gan C mạn)
+   - ✅ Cholera (Bệnh tả)
+   - ✅ HIV/AIDS clinical (Nhiễm HIV/AIDS giai đoạn lâm sàng)
+   - ✅ Rotavirus gastroenteritis child (Tiêu chảy do Rotavirus trẻ em)
+
+2. **Gastroenterology (Tiêu hóa):**
+   - ✅ Hepatitis C chronic (Viêm gan C mạn)
+   - ✅ Acute appendicitis (Viêm ruột thừa cấp)
+   - ✅ Acute cholecystitis (Viêm túi mật cấp)
+   - ✅ Gallstones (Sỏi túi mật/đường mật)
+   - ✅ Non-alcoholic fatty liver (Gan nhiễm mỡ không do rượu)
+
+3. **Hematology (Huyết học):**
+   - ✅ Vitamin B12 deficiency anemia (Thiếu máu thiếu vitamin B12)
+   - ✅ Anemia of chronic disease (Thiếu máu bệnh mạn)
+   - ✅ Thalassemia minor (Thalassemia thể nhẹ)
+
+4. **Nephrology (Thận):**
+   - ✅ Nephrotic syndrome (Hội chứng thận hư)
+   - ✅ Post-strep glomerulonephritis (Viêm cầu thận cấp sau nhiễm liên cầu)
+
+5. **Urology (Tiết niệu):**
+   - ✅ Acute prostatitis (Viêm tuyến tiền liệt cấp)
+   - ✅ Acute pyelonephritis (Viêm bể thận - thận cấp)
+
+6. **Rheumatology (Khớp):**
+   - ✅ Systemic lupus erythematosus (Lupus ban đỏ hệ thống)
+   - ✅ Ankylosing spondylitis (Viêm cột sống dính khớp)
+   - ✅ Psoriatic arthritis (Viêm khớp vẩy nến)
+
+7. **Dermatology (Da liễu):**
+   - ✅ Urticaria (Mề đay)
+   - ✅ Herpes zoster (Zona thần kinh)
+   - ✅ Scabies (Ghẻ)
+
+8. **Pediatrics (Nhi khoa):**
+   - ✅ Pneumonia child (Viêm phổi cộng đồng ở trẻ em)
+   - ✅ Diarrhea child (Tiêu chảy cấp ở trẻ em)
+   - ✅ Measles (Sởi)
+
+9. **Neurology (Thần kinh):**
+   - ✅ Bacterial meningitis (Viêm màng não mủ)
+   - ✅ Viral meningitis (Viêm màng não virus)
+   - ✅ Bell's palsy (Liệt mặt ngoại biên)
+
+10. **Psychiatry (Tâm thần):**
+    - ✅ Chronic insomnia (Mất ngủ mạn tính)
+
+11. **Oncology (Ung bướu):**
+    - ✅ Gastric cancer (Ung thư dạ dày)
+    - ✅ Colorectal cancer (Ung thư đại trực tràng)
+
+**Kết quả:** Tổng số bệnh tăng từ 90 lên 120 bệnh.
+
+---
+
+**Cập nhật lần cuối:** 2026-01-14  
+**Tổng số bệnh:** 120  
 **Trạng thái:** ✅ Hoàn chỉnh, sẵn sàng sử dụng
 

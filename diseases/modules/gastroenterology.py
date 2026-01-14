@@ -597,4 +597,297 @@ GASTROENTEROLOGY_DISEASES: List[Disease] = [
         related_protocols=["IBD Management"],
         icd10_codes=["K51.9", "K51.0", "K51.5", "K51.8"]
     ),
+
+    Disease(
+        id="non_alcoholic_fatty_liver",
+        name="Non-alcoholic Fatty Liver Disease",
+        name_vn="Gan nhiễm mỡ không do rượu (NAFLD)",
+        category="Gastroenterology",
+        definition="NAFLD là tích tụ mỡ trong gan ở người uống rượu không đáng kể, rất phổ biến cùng béo phì/đái tháo đường tại Việt Nam.",
+        causes=[
+            "Kháng insulin, béo phì, đái tháo đường type 2",
+            "Rối loạn lipid máu",
+            "Chế độ ăn nhiều đường, mỡ; ít vận động"
+        ],
+        symptoms=[
+            "Thường không triệu chứng",
+            "Mệt nhẹ, nặng tức hạ sườn phải",
+            "Men gan tăng nhẹ"
+        ],
+        diagnosis={
+            "criteria": [
+                "Bằng chứng gan nhiễm mỡ trên siêu âm/CT/MRI",
+                "Loại trừ uống rượu nhiều và nguyên nhân gan khác"
+            ],
+            "tests": [
+                "AST, ALT, GGT",
+                "Siêu âm gan (gan sáng)",
+                "FibroScan đánh giá xơ hóa",
+                "Lipid máu, đường huyết, HbA1c"
+            ],
+            "imaging": [
+                "Siêu âm gan",
+                "FibroScan/MRI-PDFF (nếu có)"
+            ]
+        },
+        treatment={
+            "general": "Giảm cân 7-10%, điều chỉnh lối sống, kiểm soát chuyển hóa.",
+            "medications": [
+                "Không có thuốc đặc hiệu; xem xét Vitamin E hoặc Pioglitazone ở NASH được chọn",
+                "Kiểm soát đường huyết, lipid, huyết áp"
+            ],
+            "procedures": [
+                "Tập thể dục, ăn Địa Trung Hải/ít đường đơn",
+                "Theo dõi men gan và xơ hóa định kỳ"
+            ]
+        },
+        prevention=[
+            "Duy trì cân nặng hợp lý",
+            "Chế độ ăn lành mạnh, hạn chế đường, mỡ",
+            "Tập thể dục thường xuyên"
+        ],
+        complications=[
+            "Viêm gan thoái hóa mỡ (NASH)",
+            "Xơ gan, ung thư gan",
+            "Tăng nguy cơ tim mạch"
+        ],
+        related_scores=["Fibrosis Score", "FibroScan"],
+        related_drugs=["Vitamin E", "Pioglitazone"],
+        related_protocols=["NAFLD Management"],
+        icd10_codes=["K76.0"]
+    ),
+
+    Disease(
+        id="gallstones",
+        name="Gallstones",
+        name_vn="Sỏi túi mật/đường mật",
+        category="Gastroenterology",
+        definition="Sỏi mật là lắng đọng cholesterol hoặc sắc tố trong túi mật/đường mật, khá thường gặp, có thể gây cơn đau quặn mật hoặc biến chứng.",
+        causes=[
+            "Bão hòa cholesterol dịch mật",
+            "Ứ trệ túi mật",
+            "Yếu tố nguy cơ: nữ, tuổi, béo phì, giảm cân nhanh, thai kỳ"
+        ],
+        symptoms=[
+            "Không triệu chứng (tình cờ phát hiện)",
+            "Cơn đau quặn mật: đau HSP phải lan vai phải, sau ăn nhiều mỡ",
+            "Buồn nôn, nôn"
+        ],
+        diagnosis={
+            "criteria": [
+                "Siêu âm thấy sỏi, bóng lưng âm",
+                "Đau HSP kiểu mật"
+            ],
+            "tests": [
+                "Siêu âm bụng (chuẩn đầu tay)",
+                "Men gan, bilirubin (nếu nghi tắc mật)",
+                "Amylase/Lipase (nếu nghi viêm tụy do sỏi)"
+            ],
+            "imaging": [
+                "Siêu âm bụng",
+                "MRCP/CT (nếu nghi sỏi ống mật chủ)"
+            ]
+        },
+        treatment={
+            "general": "Sỏi không triệu chứng: theo dõi. Có triệu chứng: cắt túi mật nội soi.",
+            "medications": [
+                "Giảm đau: NSAID",
+                "Kháng sinh nếu viêm túi mật cấp",
+                "Ursodeoxycholic acid (ít hiệu quả, chỉ chọn lọc)"
+            ],
+            "procedures": [
+                "Cắt túi mật nội soi (chuẩn)",
+                "ERCP nếu sỏi ống mật chủ"
+            ]
+        },
+        prevention=[
+            "Kiểm soát cân nặng, tránh giảm cân quá nhanh",
+            "Chế độ ăn lành mạnh, hạn chế mỡ bão hòa"
+        ],
+        complications=[
+            "Viêm túi mật cấp",
+            "Viêm tụy cấp do sỏi",
+            "Viêm đường mật",
+            "Tắc mật"
+        ],
+        related_scores=[],
+        related_drugs=["NSAID", "Ursodeoxycholic Acid"],
+        related_protocols=["Biliary Colic Management"],
+        icd10_codes=["K80.2"]
+    ),
+
+    Disease(
+        id="acute_cholecystitis",
+        name="Acute Cholecystitis",
+        name_vn="Viêm túi mật cấp",
+        category="Gastroenterology",
+        definition="Viêm túi mật cấp thường do sỏi kẹt cổ túi mật gây viêm và nhiễm khuẩn, gây đau HSP phải, sốt.",
+        causes=[
+            "Sỏi kẹt cổ túi mật (phổ biến nhất)",
+            "Ít gặp: không do sỏi (bệnh nặng, ICU), polyp, u"
+        ],
+        symptoms=[
+            "Đau HSP phải, đau tăng sau ăn mỡ",
+            "Sốt, buồn nôn, nôn",
+            "Dấu Murphy(+)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Tam chứng: đau HSP phải, sốt, Murphy(+)",
+                "Siêu âm: thành túi mật dày, dịch quanh túi mật, sỏi kẹt",
+                "WBC tăng, CRP tăng"
+            ],
+            "tests": [
+                "Công thức máu, CRP",
+                "Men gan, bilirubin",
+                "Siêu âm bụng"
+            ],
+            "imaging": [
+                "Siêu âm bụng (ưu tiên)",
+                "CT bụng (nếu cần)"
+            ]
+        },
+        treatment={
+            "general": "Kháng sinh sớm, giảm đau, nhịn ăn; cắt túi mật nội soi sớm khi ổn định.",
+            "medications": [
+                "Kháng sinh phổ rộng: Ceftriaxone + Metronidazole, Piperacillin-tazobactam (tùy nặng)",
+                "Giảm đau: NSAID, Opioid nhẹ"
+            ],
+            "procedures": [
+                "Cắt túi mật nội soi (thường trong 72h)",
+                "Dẫn lưu túi mật qua da nếu không mổ được tạm thời"
+            ]
+        },
+        prevention=[
+            "Quản lý sỏi túi mật có triệu chứng",
+            "Kiểm soát cân nặng"
+        ],
+        complications=[
+            "Hoại tử, thủng túi mật",
+            "Áp xe quanh túi mật",
+            "Viêm phúc mạc",
+            "Nhiễm khuẩn huyết"
+        ],
+        related_scores=[],
+        related_drugs=["Ceftriaxone", "Metronidazole", "Piperacillin-tazobactam"],
+        related_protocols=["Acute Cholecystitis"],
+        icd10_codes=["K81.0"]
+    ),
+
+    Disease(
+        id="acute_appendicitis",
+        name="Acute Appendicitis",
+        name_vn="Viêm ruột thừa cấp",
+        category="Gastroenterology",
+        definition="Viêm ruột thừa cấp là cấp cứu ngoại khoa thường gặp do tắc lòng ruột thừa gây viêm, có nguy cơ vỡ gây viêm phúc mạc.",
+        causes=[
+            "Tắc lòng ruột thừa: sỏi phân, tăng sản lympho",
+            "Nhiễm trùng tại chỗ"
+        ],
+        symptoms=[
+            "Đau bụng quanh rốn sau đó khu trú HCP",
+            "Sốt nhẹ, buồn nôn, nôn",
+            "Chán ăn",
+            "Phản ứng thành bụng, điểm đau McBurney"
+        ],
+        diagnosis={
+            "criteria": [
+                "Lâm sàng: đau chuyển vị trí HCP, chán ăn, sốt nhẹ",
+                "Dấu Blumberg(+), Rovsing(+), psoas/obturator (+) đôi khi",
+                "CT bụng hoặc siêu âm hỗ trợ chẩn đoán"
+            ],
+            "tests": [
+                "Công thức máu (bạch cầu tăng)",
+                "CRP",
+                "Siêu âm bụng hoặc CT bụng"
+            ],
+            "imaging": [
+                "Siêu âm HCP",
+                "CT bụng (độ chính xác cao)"
+            ]
+        },
+        treatment={
+            "general": "Phẫu thuật cắt ruột thừa là chuẩn; kháng sinh trước mổ.",
+            "medications": [
+                "Kháng sinh dự phòng: Ceftriaxone + Metronidazole hoặc tương đương"
+            ],
+            "procedures": [
+                "Cắt ruột thừa nội soi hoặc mổ mở",
+                "Dẫn lưu ổ bụng nếu vỡ/áp xe"
+            ]
+        },
+        prevention=[
+            "Không có biện pháp đặc hiệu; khám sớm khi đau bụng nghi ngờ"
+        ],
+        complications=[
+            "Vỡ ruột thừa → viêm phúc mạc",
+            "Áp xe ổ bụng",
+            "Tắc ruột sau mổ (hiếm)"
+        ],
+        related_scores=["Alvarado Score"],
+        related_drugs=["Ceftriaxone", "Metronidazole"],
+        related_protocols=["Acute Appendicitis"],
+        icd10_codes=["K35.8"]
+    ),
+
+    Disease(
+        id="hepatitis_c_chronic",
+        name="Chronic Hepatitis C",
+        name_vn="Viêm gan C mạn",
+        category="Gastroenterology",
+        definition="Viêm gan C mạn do HCV có thể tiến triển thành xơ gan, ung thư gan; hiện có thuốc kháng virus DAAs hiệu quả cao.",
+        causes=[
+            "HCV (thường kiểu gen 1/6 ở Việt Nam)",
+            "Lây qua máu: tiêm chích ma túy, truyền máu không an toàn",
+            "Ít hơn: lây dọc mẹ-con, tình dục (nguy cơ thấp hơn HBV)"
+        ],
+        symptoms=[
+            "Thường không triệu chứng trong nhiều năm",
+            "Mệt mỏi, men gan tăng dao động",
+            "Giai đoạn muộn: vàng da, cổ trướng, xuất huyết tiêu hóa do giãn TM thực quản"
+        ],
+        diagnosis={
+            "criteria": [
+                "Anti-HCV dương tính và HCV RNA dương tính > 6 tháng",
+                "Đánh giá xơ hóa (FibroScan, APRI, FIB-4)",
+                "Kiểu gen HCV nếu cần"
+            ],
+            "tests": [
+                "HCV RNA định lượng",
+                "AST/ALT, chức năng gan",
+                "FibroScan hoặc chỉ số xơ hóa",
+                "HBsAg, HIV (đồng nhiễm)",
+                "Siêu âm gan định kỳ"
+            ],
+            "imaging": [
+                "Siêu âm gan",
+                "FibroScan"
+            ]
+        },
+        treatment={
+            "general": "Điều trị bằng DAAs 8–12 tuần, tỉ lệ khỏi >95%.",
+            "medications": [
+                "Sofosbuvir/Velpatasvir hoặc Glecaprevir/Pibrentasvir (tùy giai đoạn xơ gan, tương tác thuốc)",
+                "Theo dõi chức năng gan, tải lượng HCV RNA"
+            ],
+            "procedures": [
+                "Tư vấn tuân thủ, tránh rượu",
+                "Tầm soát ung thư gan định kỳ nếu xơ gan"
+            ]
+        },
+        prevention=[
+            "Dùng bơm kim tiêm an toàn",
+            "Sàng lọc máu",
+            "Quan hệ tình dục an toàn (nguy cơ thấp nhưng vẫn khuyến cáo)"
+        ],
+        complications=[
+            "Xơ gan, tăng áp cửa",
+            "Ung thư gan",
+            "Viêm gan tiến triển"
+        ],
+        related_scores=["APRI", "FIB-4", "Child-Pugh"],
+        related_drugs=["Sofosbuvir/Velpatasvir", "Glecaprevir/Pibrentasvir"],
+        related_protocols=["Hepatitis C Management"],
+        icd10_codes=["B18.2"]
+    ),
 ]

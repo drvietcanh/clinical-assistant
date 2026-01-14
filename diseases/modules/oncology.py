@@ -243,4 +243,175 @@ ONCOLOGY_DISEASES: List[Disease] = [
         related_protocols=["Breast Cancer Management"],
         icd10_codes=["C50.9", "C50.1", "C50.2"]
     ),
+
+    Disease(
+        id="gastric_cancer",
+        name="Gastric Cancer",
+        name_vn="Ung thư dạ dày",
+        category="Oncology",
+        definition="Ung thư dạ dày là khối u ác tính xuất phát từ niêm mạc dạ dày, phổ biến ở Việt Nam, thường được chẩn đoán muộn do triệu chứng không đặc hiệu.",
+        causes=[
+            "Helicobacter pylori (nguyên nhân chính)",
+            "Chế độ ăn: muối, thực phẩm hun khói, ít rau quả",
+            "Hút thuốc lá",
+            "Rượu bia",
+            "Tiền sử gia đình",
+            "Bệnh dạ dày mạn tính: viêm teo dạ dày, dị sản ruột",
+            "Polyp dạ dày",
+            "Béo phì"
+        ],
+        symptoms=[
+            "Giai đoạn sớm: thường không có triệu chứng",
+            "Đau bụng vùng thượng vị",
+            "Đầy bụng, khó tiêu",
+            "Buồn nôn, nôn",
+            "Chán ăn, sụt cân",
+            "Nuốt khó (nếu u ở tâm vị)",
+            "Nôn ra máu, đi ngoài phân đen",
+            "Thiếu máu",
+            "Giai đoạn muộn: khối u bụng, di căn"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: đau bụng, sụt cân, khó tiêu",
+                "Nội soi dạ dày: thấy khối u, sinh thiết",
+                "Chẩn đoán mô bệnh học: adenocarcinoma (90%), lymphoma, GIST",
+                "Đánh giá giai đoạn: CT, EUS, PET-CT"
+            ],
+            "tests": [
+                "Nội soi dạ dày + sinh thiết (chuẩn vàng)",
+                "Chẩn đoán mô bệnh học",
+                "Test H. pylori",
+                "CEA, CA 19-9 (marker)",
+                "Công thức máu (thiếu máu)"
+            ],
+            "imaging": [
+                "CT bụng-ngực (đánh giá giai đoạn)",
+                "EUS (Endoscopic Ultrasound) - đánh giá độ xâm lấn",
+                "PET-CT (nếu cần)",
+                "X-quang dạ dày (nếu không nội soi được)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị đa mô thức: phẫu thuật, hóa trị, xạ trị. Phẫu thuật là điều trị chính nếu có thể cắt bỏ được.",
+            "medications": [
+                "Hóa trị: FLOT (5-FU, Leucovorin, Oxaliplatin, Docetaxel), ECF/ECX (Epirubicin, Cisplatin, 5-FU/Capecitabine)",
+                "Trastuzumab (nếu HER2 dương tính)",
+                "Pembrolizumab (nếu MSI-H hoặc PD-L1 dương tính)",
+                "Điều trị triệu chứng: giảm đau, chống nôn"
+            ],
+            "procedures": [
+                "Phẫu thuật: cắt dạ dày một phần hoặc toàn bộ + nạo hạch",
+                "Nội soi cắt niêm mạc (EMR/ESD) - nếu ung thư sớm",
+                "Xạ trị (kết hợp với hóa trị)",
+                "Điều trị H. pylori (nếu dương tính)"
+            ]
+        },
+        prevention=[
+            "Điều trị H. pylori",
+            "Chế độ ăn: giảm muối, tăng rau quả",
+            "Bỏ thuốc lá, hạn chế rượu bia",
+            "Tầm soát (nếu có yếu tố nguy cơ)",
+            "Điều trị viêm dạ dày mạn tính"
+        ],
+        complications=[
+            "Di căn: gan, phổi, phúc mạc, xương",
+            "Tắc nghẽn dạ dày",
+            "Xuất huyết tiêu hóa",
+            "Thủng dạ dày",
+            "Suy kiệt",
+            "Tử vong"
+        ],
+        related_scores=["TNM Stage", "HER2", "MSI", "PD-L1"],
+        related_drugs=["5-FU", "Cisplatin", "Oxaliplatin", "Trastuzumab", "Pembrolizumab"],
+        related_protocols=["Gastric Cancer Management"],
+        icd10_codes=["C16.9", "C16.0", "C16.1", "C16.2"]
+    ),
+
+    Disease(
+        id="colorectal_cancer",
+        name="Colorectal Cancer",
+        name_vn="Ung thư đại trực tràng",
+        category="Oncology",
+        definition="Ung thư đại trực tràng là khối u ác tính xuất phát từ đại tràng hoặc trực tràng, phổ biến ở Việt Nam, có thể phòng ngừa bằng tầm soát và cắt polyp.",
+        causes=[
+            "Polyp đại tràng (adenoma) - tiền ung thư",
+            "Tiền sử gia đình: FAP, HNPCC (Lynch syndrome)",
+            "Bệnh viêm ruột mạn tính: UC, Crohn",
+            "Chế độ ăn: ít chất xơ, nhiều thịt đỏ, thịt chế biến",
+            "Hút thuốc lá",
+            "Rượu bia",
+            "Béo phì",
+            "Ít vận động",
+            "Tuổi cao (> 50)"
+        ],
+        symptoms=[
+            "Giai đoạn sớm: thường không có triệu chứng",
+            "Thay đổi thói quen đại tiện: táo bón, tiêu chảy",
+            "Máu trong phân (đỏ tươi hoặc đen)",
+            "Đau bụng",
+            "Sụt cân",
+            "Mệt mỏi, thiếu máu",
+            "Cảm giác đi ngoài không hết",
+            "Khối u bụng (nếu lớn)",
+            "Tắc ruột (nếu muộn)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: thay đổi thói quen đại tiện, máu trong phân",
+                "Nội soi đại tràng: thấy khối u, sinh thiết",
+                "Chẩn đoán mô bệnh học: adenocarcinoma",
+                "Đánh giá giai đoạn: CT, MRI (trực tràng), PET-CT"
+            ],
+            "tests": [
+                "Nội soi đại tràng + sinh thiết (chuẩn vàng)",
+                "Test máu ẩn trong phân (FOBT) - tầm soát",
+                "CEA (marker)",
+                "Chẩn đoán mô bệnh học",
+                "Test di truyền (nếu nghi ngờ Lynch syndrome)"
+            ],
+            "imaging": [
+                "CT bụng-ngực (đánh giá giai đoạn)",
+                "MRI vùng chậu (ung thư trực tràng)",
+                "PET-CT (nếu cần)",
+                "Siêu âm bụng"
+            ]
+        },
+        treatment={
+            "general": "Điều trị đa mô thức: phẫu thuật, hóa trị, xạ trị. Phẫu thuật là điều trị chính. Tầm soát và cắt polyp có thể phòng ngừa.",
+            "medications": [
+                "Hóa trị: FOLFOX (5-FU, Leucovorin, Oxaliplatin), FOLFIRI (5-FU, Leucovorin, Irinotecan), CAPOX (Capecitabine, Oxaliplatin)",
+                "Bevacizumab (kháng VEGF)",
+                "Cetuximab, Panitumumab (nếu KRAS wild-type)",
+                "Pembrolizumab (nếu MSI-H)",
+                "Điều trị triệu chứng"
+            ],
+            "procedures": [
+                "Phẫu thuật: cắt đại tràng/trực tràng + nạo hạch",
+                "Nội soi cắt polyp (nếu ung thư sớm)",
+                "Xạ trị (ung thư trực tràng, kết hợp với hóa trị)",
+                "Tầm soát định kỳ sau điều trị"
+            ]
+        },
+        prevention=[
+            "Tầm soát: nội soi đại tràng từ 50 tuổi (hoặc sớm hơn nếu có yếu tố nguy cơ)",
+            "Cắt polyp",
+            "Chế độ ăn: nhiều chất xơ, ít thịt đỏ",
+            "Tập thể dục",
+            "Bỏ thuốc lá, hạn chế rượu bia",
+            "Duy trì cân nặng hợp lý"
+        ],
+        complications=[
+            "Di căn: gan, phổi, phúc mạc",
+            "Tắc ruột",
+            "Xuất huyết tiêu hóa",
+            "Thủng đại tràng",
+            "Suy kiệt",
+            "Tử vong"
+        ],
+        related_scores=["TNM Stage", "KRAS", "MSI", "PD-L1"],
+        related_drugs=["5-FU", "Oxaliplatin", "Irinotecan", "Bevacizumab", "Cetuximab"],
+        related_protocols=["Colorectal Cancer Management"],
+        icd10_codes=["C18.9", "C19", "C20", "C21.8"]
+    ),
 ]

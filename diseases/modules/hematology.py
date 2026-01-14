@@ -148,4 +148,171 @@ HEMATOLOGY_DISEASES: List[Disease] = [
         related_protocols=[],
         icd10_codes=["D69.6", "D69.3", "D69.4"]
     ),
+
+    Disease(
+        id="vitamin_b12_deficiency_anemia",
+        name="Vitamin B12 Deficiency Anemia",
+        name_vn="Thiếu máu thiếu vitamin B12",
+        category="Hematology",
+        definition="Thiếu máu đại hồng cầu do thiếu vitamin B12, thường gặp ở người ăn chay tuyệt đối, kém hấp thu, hoặc sau cắt dạ dày.",
+        causes=[
+            "Giảm hấp thu: viêm dạ dày teo, thiếu yếu tố nội tại, cắt dạ dày",
+            "Chế độ ăn thiếu (ăn chay tuyệt đối lâu dài)",
+            "Tăng nhu cầu: mang thai",
+            "Thuốc: metformin, ức chế bơm proton kéo dài"
+        ],
+        symptoms=[
+            "Mệt mỏi, da xanh",
+            "Lưỡi đỏ, đau (viêm lưỡi)",
+            "Tê bì, dị cảm, mất thăng bằng (tổn thương thần kinh)",
+            "Thiếu máu đại hồng cầu"
+        ],
+        diagnosis={
+            "criteria": [
+                "Hb giảm, MCV tăng",
+                "Vitamin B12 huyết thanh thấp",
+                "Có thể Homocysteine, MMA tăng",
+                "Loại trừ thiếu folate"
+            ],
+            "tests": [
+                "CBC (MCV cao)",
+                "Vitamin B12, Folate",
+                "Homocysteine/MMA (nếu cần)",
+                "Kháng thể kháng yếu tố nội tại (nếu nghi thiếu máu ác tính)"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Bổ sung vitamin B12, điều chỉnh nguyên nhân kém hấp thu.",
+            "medications": [
+                "Vitamin B12 tiêm hoặc uống liều cao",
+                "Acid folic nếu thiếu phối hợp",
+                "Điều trị nguyên nhân dạ dày/ruột"
+            ],
+            "procedures": [
+                "Theo dõi Hb, MCV, thần kinh",
+                "Giáo dục dinh dưỡng"
+            ]
+        },
+        prevention=[
+            "Chế độ ăn đủ B12 (thịt, cá, sữa) hoặc bổ sung cho người ăn chay",
+            "Theo dõi ở người dùng metformin/PPI lâu dài"
+        ],
+        complications=[
+            "Tổn thương thần kinh không hồi phục nếu kéo dài",
+            "Thiếu máu nặng"
+        ],
+        related_scores=[],
+        related_drugs=["Vitamin B12", "Folic Acid"],
+        related_protocols=["Macrocytic Anemia"],
+        icd10_codes=["D51.9"]
+    ),
+
+    Disease(
+        id="anemia_of_chronic_disease",
+        name="Anemia of Chronic Disease",
+        name_vn="Thiếu máu bệnh mạn",
+        category="Hematology",
+        definition="Thiếu máu nhẹ-vừa do viêm mạn, bệnh mạn (thận, viêm khớp, ung thư), với sắt huyết thanh thấp nhưng ferritin bình thường/tăng.",
+        causes=[
+            "Bệnh viêm mạn: viêm khớp dạng thấp, lupus",
+            "Bệnh thận mạn",
+            "Ung thư, nhiễm trùng mạn",
+            "Cơ chế: tăng hepcidin, giảm sử dụng sắt"
+        ],
+        symptoms=[
+            "Mệt mỏi, da nhợt",
+            "Triệu chứng nhẹ, tương ứng Hb 8-11 g/dL"
+        ],
+        diagnosis={
+            "criteria": [
+                "Hb giảm nhẹ-vừa, MCV bình thường/giảm nhẹ",
+                "Sắt huyết thanh giảm, TIBC giảm hoặc bình thường, ferritin bình thường/tăng",
+                "Có bệnh nền mạn tính"
+            ],
+            "tests": [
+                "CBC, MCV",
+                "Sắt huyết thanh, TIBC, Ferritin",
+                "CRP, ESR (viêm)",
+                "Creatinine (nếu bệnh thận)"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Điều trị bệnh nền, không tự ý bổ sung sắt khi ferritin không thiếu.",
+            "medications": [
+                "Điều trị bệnh mạn (kháng viêm, kiểm soát bệnh)",
+                "Erythropoietin nếu bệnh thận và Hb thấp",
+                "Sắt IV chỉ nếu kèm thiếu sắt thật sự"
+            ],
+            "procedures": [
+                "Theo dõi Hb định kỳ",
+                "Điều chỉnh điều trị theo bệnh nền"
+            ]
+        },
+        prevention=[
+            "Kiểm soát tốt bệnh mạn",
+            "Tầm soát thiếu sắt thật sự nếu nghi ngờ"
+        ],
+        complications=[
+            "Giảm chất lượng sống",
+            "Phải truyền máu nếu Hb giảm sâu (hiếm)"
+        ],
+        related_scores=[],
+        related_drugs=["Erythropoietin"],
+        related_protocols=["Anemia of Chronic Disease"],
+        icd10_codes=["D63.8"]
+    ),
+
+    Disease(
+        id="thalassemia_minor",
+        name="Beta Thalassemia Minor",
+        name_vn="Thalassemia thể nhẹ (beta)",
+        category="Hematology",
+        definition="Thalassemia thể nhẹ là thể mang gen, thiếu máu nhẹ, MCV thấp, thường phát hiện tình cờ; cần tư vấn di truyền.",
+        causes=[
+            "Đột biến gen beta-globin dị hợp tử",
+            "Thường gặp ở vùng lưu hành thalassemia"
+        ],
+        symptoms=[
+            "Thường không triệu chứng",
+            "Thiếu máu nhẹ, MCV thấp",
+            "Có thể mệt nhẹ"
+        ],
+        diagnosis={
+            "criteria": [
+                "Thiếu máu nhược sắc hồng cầu nhỏ, MCV thấp",
+                "Điện di Hb: HbA2 tăng",
+                "Ferritin bình thường (loại trừ thiếu sắt)"
+            ],
+            "tests": [
+                "CBC, MCV, MCH",
+                "Ferritin",
+                "Điện di Hb",
+                "Tư vấn di truyền khi lập gia đình"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Không cần điều trị đặc hiệu; tránh bổ sung sắt nếu không thiếu.",
+            "medications": [
+                "Bổ sung acid folic (tùy tình huống)",
+                "Không dùng sắt nếu ferritin bình thường"
+            ],
+            "procedures": [
+                "Tư vấn di truyền tiền hôn nhân/sinh sản"
+            ]
+        },
+        prevention=[
+            "Sàng lọc mang gen tại vùng lưu hành",
+            "Tư vấn di truyền"
+        ],
+        complications=[
+            "Nguy cơ con mắc thalassemia thể nặng nếu cả hai bố mẹ mang gen"
+        ],
+        related_scores=[],
+        related_drugs=["Folic Acid"],
+        related_protocols=["Thalassemia Screening"],
+        icd10_codes=["D56.3"]
+    ),
 ]

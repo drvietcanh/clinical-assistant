@@ -277,4 +277,229 @@ PEDIATRICS_DISEASES: List[Disease] = [
         related_protocols=["Bronchiolitis Management"],
         icd10_codes=["J21.9", "J21.0", "J21.8"]
     ),
+
+    Disease(
+        id="pneumonia_child",
+        name="Community-Acquired Pneumonia in Children",
+        name_vn="Viêm phổi cộng đồng ở trẻ em",
+        category="Pediatrics",
+        definition="Viêm phổi cộng đồng ở trẻ em là nhiễm trùng phổi do vi khuẩn, virus hoặc các tác nhân khác, là nguyên nhân tử vong hàng đầu ở trẻ em dưới 5 tuổi tại Việt Nam.",
+        causes=[
+            "Vi khuẩn: Streptococcus pneumoniae (phổ biến nhất), Haemophilus influenzae, Staphylococcus aureus",
+            "Virus: RSV, Influenza, Adenovirus, Parainfluenza",
+            "Mycoplasma pneumoniae (trẻ lớn)",
+            "Chlamydia pneumoniae",
+            "Yếu tố nguy cơ: suy dinh dưỡng, thiếu vắc xin, suy giảm miễn dịch, ô nhiễm không khí"
+        ],
+        symptoms=[
+            "Sốt, ho",
+            "Khó thở, thở nhanh (tachypnea)",
+            "Rút lõm lồng ngực",
+            "Thở rên (grunting)",
+            "Tím tái (nếu nặng)",
+            "Bỏ bú, bỏ ăn",
+            "Mệt mỏi, li bì",
+            "Đau ngực (trẻ lớn)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: sốt, ho, khó thở",
+                "Thở nhanh theo tuổi: < 2 tháng: > 60 lần/phút, 2-12 tháng: > 50, 1-5 tuổi: > 40",
+                "Rút lõm lồng ngực",
+                "X-quang phổi: thâm nhiễm",
+                "Phân loại: nhẹ, trung bình, nặng"
+            ],
+            "tests": [
+                "X-quang phổi",
+                "Công thức máu, CRP, Procalcitonin",
+                "Cấy máu (nếu nặng)",
+                "Test nhanh virus (nếu nghi ngờ)",
+                "Khí máu (nếu suy hô hấp)"
+            ],
+            "imaging": [
+                "X-quang phổi (chuẩn vàng)",
+                "CT phổi (nếu không điển hình)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị theo WHO/PIDS guidelines. Phân loại mức độ nặng để quyết định điều trị ngoại trú hay nhập viện. Kháng sinh nếu nghi ngờ vi khuẩn.",
+            "medications": [
+                "Kháng sinh: Amoxicillin (nhẹ), Amoxicillin-Clavulanate hoặc Ceftriaxone (trung bình-nặng)",
+                "Macrolide: Azithromycin (nếu nghi ngờ Mycoplasma)",
+                "Vancomycin (nếu nghi ngờ MRSA)",
+                "Hạ sốt: Paracetamol",
+                "Oxygen (nếu SpO2 < 92%)",
+                "Điều trị hỗ trợ: bù dịch, dinh dưỡng"
+            ],
+            "procedures": [
+                "Điều trị ngoại trú (nếu nhẹ, không có dấu hiệu nguy hiểm)",
+                "Nhập viện (nếu nặng, suy hô hấp, bỏ ăn)",
+                "ICU (nếu suy hô hấp nặng)",
+                "Theo dõi sát: nhịp thở, SpO2, tình trạng tổng thể"
+            ]
+        },
+        prevention=[
+            "Tiêm vắc xin: PCV (Pneumococcal), Hib, Influenza",
+            "Nuôi con bằng sữa mẹ",
+            "Dinh dưỡng đầy đủ",
+            "Vệ sinh môi trường",
+            "Tránh tiếp xúc với người bệnh"
+        ],
+        complications=[
+            "Tràn dịch màng phổi",
+            "Áp xe phổi",
+            "Suy hô hấp",
+            "Nhiễm trùng huyết",
+            "Tử vong (nếu không điều trị)"
+        ],
+        related_scores=["IMCI Pneumonia Classification", "WHO Pneumonia Severity"],
+        related_drugs=["Amoxicillin", "Amoxicillin-Clavulanate", "Ceftriaxone", "Azithromycin"],
+        related_protocols=["Pediatric Pneumonia Management"],
+        icd10_codes=["J18.9", "J15.9", "J12.9"]
+    ),
+
+    Disease(
+        id="diarrhea_child",
+        name="Acute Diarrhea in Children",
+        name_vn="Tiêu chảy cấp ở trẻ em",
+        category="Pediatrics",
+        definition="Tiêu chảy cấp ở trẻ em là đi ngoài phân lỏng ≥ 3 lần/ngày, kéo dài < 14 ngày, là nguyên nhân tử vong hàng đầu ở trẻ em dưới 5 tuổi do mất nước.",
+        causes=[
+            "Virus: Rotavirus (phổ biến nhất), Norovirus, Adenovirus",
+            "Vi khuẩn: E. coli, Shigella, Salmonella, Campylobacter, Vibrio cholerae",
+            "Ký sinh trùng: Giardia, Cryptosporidium",
+            "Yếu tố nguy cơ: vệ sinh kém, nước uống không an toàn, suy dinh dưỡng, thiếu vắc xin"
+        ],
+        symptoms=[
+            "Đi ngoài phân lỏng, nhiều lần",
+            "Nôn",
+            "Sốt",
+            "Đau bụng",
+            "Mất nước: khát, khô miệng, giảm tiểu, mắt trũng, da nhăn",
+            "Mất nước nặng: li bì, không uống được, sốc"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: đi ngoài phân lỏng ≥ 3 lần/ngày",
+                "Đánh giá mất nước: nhẹ, trung bình, nặng",
+                "Phân loại theo WHO: không mất nước, mất nước, sốc"
+            ],
+            "tests": [
+                "Đánh giá lâm sàng mất nước",
+                "Soi phân (nếu nghi ngờ ký sinh trùng)",
+                "Cấy phân (nếu nghi ngờ vi khuẩn, nặng)",
+                "Điện giải (nếu mất nước nặng)",
+                "Test nhanh Rotavirus (nếu có)"
+            ],
+            "imaging": []
+        },
+        treatment={
+            "general": "Điều trị theo WHO guidelines. Nguyên tắc: bù nước và điện giải (ORS), tiếp tục cho ăn, kháng sinh chỉ khi cần.",
+            "medications": [
+                "ORS (Oral Rehydration Solution): bù nước đường uống",
+                "Zinc: giảm thời gian và mức độ tiêu chảy",
+                "Kháng sinh: chỉ khi có chỉ định (Shigella, Cholera, Giardia)",
+                "Probiotic: có thể hỗ trợ",
+                "Truyền dịch tĩnh mạch (nếu mất nước nặng, không uống được)"
+            ],
+            "procedures": [
+                "Điều trị ngoại trú (nếu không mất nước hoặc mất nước nhẹ)",
+                "Nhập viện (nếu mất nước trung bình-nặng, sốc)",
+                "Truyền dịch tĩnh mạch: Ringer Lactate hoặc Normal Saline",
+                "Theo dõi: lượng nước vào-ra, cân nặng, dấu hiệu mất nước"
+            ]
+        },
+        prevention=[
+            "Tiêm vắc xin Rotavirus",
+            "Nuôi con bằng sữa mẹ",
+            "Vệ sinh: rửa tay, nước sạch",
+            "Vệ sinh thực phẩm",
+            "Cải thiện dinh dưỡng"
+        ],
+        complications=[
+            "Mất nước nặng",
+            "Sốc",
+            "Rối loạn điện giải",
+            "Suy dinh dưỡng",
+            "Tử vong (nếu không điều trị)"
+        ],
+        related_scores=["WHO Dehydration Assessment", "IMCI Diarrhea Classification"],
+        related_drugs=["ORS", "Zinc", "Metronidazole", "Azithromycin"],
+        related_protocols=["Pediatric Diarrhea Management"],
+        icd10_codes=["A09", "K59.1", "A00.9"]
+    ),
+
+    Disease(
+        id="measles",
+        name="Measles",
+        name_vn="Sởi",
+        category="Pediatrics",
+        definition="Sởi là bệnh truyền nhiễm cấp tính do virus Measles, đặc trưng bởi sốt, phát ban, viêm kết mạc, có thể gây biến chứng nặng và tử vong ở trẻ em.",
+        causes=[
+            "Virus Measles (Morbillivirus)",
+            "Lây qua đường hô hấp: giọt bắn, không khí",
+            "Rất dễ lây (R0 ≈ 12-18)",
+            "Yếu tố nguy cơ: chưa tiêm vắc xin, suy dinh dưỡng, suy giảm miễn dịch"
+        ],
+        symptoms=[
+            "Giai đoạn ủ bệnh: 10-14 ngày",
+            "Giai đoạn tiền triệu: sốt cao, ho, sổ mũi, viêm kết mạc, đốm Koplik (trong miệng)",
+            "Phát ban: bắt đầu sau tai, lan xuống mặt, thân, tay chân",
+            "Ban dát sẩn, hợp lại thành mảng",
+            "Ban kéo dài 5-7 ngày, bong vảy",
+            "Sốt cao, mệt mỏi"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: sốt, phát ban, viêm kết mạc, ho",
+                "Đốm Koplik (đặc hiệu)",
+                "Tiền sử tiếp xúc",
+                "Xét nghiệm: IgM, PCR"
+            ],
+            "tests": [
+                "IgM Measles (dương tính sau 3 ngày phát ban)",
+                "PCR Measles",
+                "IgG (tăng 4 lần trong huyết thanh đôi)",
+                "Công thức máu: giảm bạch cầu"
+            ],
+            "imaging": [
+                "X-quang phổi (nếu có biến chứng viêm phổi)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị hỗ trợ. Không có thuốc kháng virus đặc hiệu. Phòng ngừa bằng vắc xin. Điều trị biến chứng.",
+            "medications": [
+                "Vitamin A: giảm tử vong và biến chứng (200,000 IU cho trẻ ≥ 12 tháng, 100,000 IU cho trẻ 6-12 tháng)",
+                "Hạ sốt: Paracetamol",
+                "Kháng sinh (nếu có bội nhiễm vi khuẩn)",
+                "Ribavirin (nếu suy giảm miễn dịch, nặng)",
+                "Điều trị biến chứng"
+            ],
+        "procedures": [
+                "Cách ly (quan trọng)",
+                "Nghỉ ngơi",
+                "Bù dịch",
+                "Điều trị biến chứng: viêm phổi, viêm não, viêm tai giữa"
+            ]
+        },
+        prevention=[
+            "Tiêm vắc xin MMR (Measles-Mumps-Rubella): 2 liều",
+            "Tiêm vắc xin cho trẻ 9-12 tháng",
+            "Tiêm nhắc lại lúc 18 tháng",
+            "Tiêm vắc xin cho người tiếp xúc (trong 72h)",
+            "Cách ly người bệnh"
+        ],
+        complications=[
+            "Viêm phổi (nguy hiểm nhất)",
+            "Viêm não (1/1000)",
+            "Viêm tai giữa",
+            "Tiêu chảy",
+            "Suy dinh dưỡng",
+            "Tử vong (1-3/1000 ở trẻ em khỏe mạnh)"
+        ],
+        related_scores=["Measles Severity"],
+        related_drugs=["Vitamin A", "Paracetamol", "Ribavirin"],
+        related_protocols=["Measles Management"],
+        icd10_codes=["B05.9", "B05.0", "B05.1", "B05.2"]
+    ),
 ]
