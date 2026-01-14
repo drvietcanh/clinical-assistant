@@ -153,7 +153,12 @@ def render_enhanced_content(
     
     with col3:
         # Share button (placeholder)
-        if st.button("🔗 Chia sẻ", use_container_width=True):
+        # Use a unique key per topic to avoid duplicate element ID errors when rendering in loops
+        if st.button(
+            "🔗 Chia sẻ",
+            key=f"share_topic_{topic.id}",
+            use_container_width=True,
+        ):
             st.info("Link chia sẻ: [URL sẽ được tạo]")
     
     st.markdown("---")
@@ -177,5 +182,10 @@ def render_enhanced_content(
         st.markdown("### 🖨️ In tài liệu")
         st.info("Nhấn **Ctrl+P** (Windows) hoặc **Cmd+P** (Mac) để in tài liệu này.")
         
-        if st.button("📄 Xem bản in", use_container_width=True):
+        # Use a unique key per topic for the print preview button as well
+        if st.button(
+            "📄 Xem bản in",
+            key=f"print_preview_{topic.id}",
+            use_container_width=True,
+        ):
             st.info("Mở Print Preview trong trình duyệt để xem bản in.")
