@@ -85,25 +85,17 @@ def render_reading_progress(current_section: int, total_sections: int):
     
     progress = (current_section / total_sections) * 100
     
-    st.markdown(f"""
-    <div style="
-        background: #f0f0f0;
-        border-radius: 10px;
-        height: 8px;
-        margin: 16px 0;
-        overflow: hidden;
-    ">
-        <div style="
-            background: linear-gradient(90deg, #2196F3, #21CBF3);
-            height: 100%;
-            width: {progress}%;
-            transition: width 0.3s ease;
-        "></div>
-    </div>
-    <div style="text-align: center; color: #616161; font-size: 0.85rem; margin-top: 4px;">
-        Đã đọc: {current_section}/{total_sections} phần ({int(progress)}%)
-    </div>
-    """, unsafe_allow_html=True)
+    html = f"""
+<div style="background: #f0f0f0; border-radius: 10px; height: 8px; margin: 16px 0; overflow: hidden;">
+  <div style="background: linear-gradient(90deg, #2196F3, #21CBF3); height: 100%; width: {progress}%; transition: width 0.3s ease;"></div>
+</div>
+<div style="text-align: center; color: #616161; font-size: 0.85rem; margin-top: 4px;">
+  Đã đọc: {current_section}/{total_sections} phần ({int(progress)}%)
+</div>
+"""
+    # Không để thụt lề đầu dòng, tránh markdown hiểu nhầm HTML là code block
+    html = textwrap.dedent(html).strip()
+    st.markdown(html, unsafe_allow_html=True)
 
 
 def render_enhanced_content(
@@ -141,16 +133,14 @@ def render_enhanced_content(
     
     col1, col2, col3 = st.columns([2, 1, 1])
     with col1:
-        st.markdown(f"""
-        <span style="
-            background: {config['bg']};
-            color: {config['color']};
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        ">{config['icon']} {topic.category}</span>
-        """, unsafe_allow_html=True)
+        badge_html = f"""
+<span style="background: {config['bg']}; color: {config['color']}; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+  {config['icon']} {topic.category}
+</span>
+"""
+        # Tránh code block do thụt lề
+        badge_html = textwrap.dedent(badge_html).strip()
+        st.markdown(badge_html, unsafe_allow_html=True)
     
     with col2:
         if topic.printable:

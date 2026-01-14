@@ -147,9 +147,14 @@ def render_topic_card(
     </div>
 </div>
 """
-    # Đảm bảo không còn thụt lề đầu dòng để Markdown không xem như code block
+    # Đảm bảo HTML không có thụt lề đầu dòng (markdown rất dễ hiểu nhầm thành code block)
+    # - dedent: bỏ thụt lề chung
+    # - lstrip mỗi dòng: loại bỏ các thụt lề còn lại trong các dòng con (<div>, <span>, ...)
     card_html = textwrap.dedent(card_html).strip()
+    card_html = "\n".join(line.lstrip() for line in card_html.splitlines())
+
     badges_html = textwrap.dedent(badges_html).strip()
+    badges_html = "\n".join(line.lstrip() for line in badges_html.splitlines())
     
     st.markdown(card_html, unsafe_allow_html=True)
 
@@ -198,25 +203,27 @@ def render_topic_grid(
     }.get(columns, "31%")
     
     # CSS for grid
-    st.markdown(f"""
-    <style>
-    .topic-grid {{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-bottom: 20px;
-    }}
-    .topic-card-wrapper {{
-        flex: 0 0 calc({col_width} - 20px);
-        min-width: 280px;
-    }}
-    @media (max-width: 768px) {{
-        .topic-card-wrapper {{
-            flex: 0 0 100%;
-        }}
-    }}
-    </style>
-    """, unsafe_allow_html=True)
+    css = f"""
+<style>
+.topic-grid {{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}}
+.topic-card-wrapper {{
+  flex: 0 0 calc({col_width} - 20px);
+  min-width: 280px;
+}}
+@media (max-width: 768px) {{
+  .topic-card-wrapper {{
+    flex: 0 0 100%;
+  }}
+}}
+</style>
+"""
+    css = textwrap.dedent(css).strip()
+    st.markdown(css, unsafe_allow_html=True)
     
     # Render cards
     for i, topic in enumerate(topics):
