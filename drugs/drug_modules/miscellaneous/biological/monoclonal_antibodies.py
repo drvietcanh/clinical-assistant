@@ -5206,6 +5206,151 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
             ]
         },
 
+        "Tralokinumab": {
+            "group": "Biological - Monoclonal Antibody (anti-IL-13)",
+            "vietnamese_name": "Tralokinumab, Adbry",
+            "administration": ["SC"],
+            "indications": [
+                "Viêm da dị ứng trung bình đến nặng (moderate-to-severe atopic dermatitis) ở người lớn"
+            ],
+            "contraindications": [
+                "Dị ứng tralokinumab hoặc bất kỳ thành phần nào"
+            ],
+            "dosage": {
+                "adult_initial": "600mg SC (2 lần tiêm 300mg), sau đó 300mg SC mỗi 2 tuần",
+                "adult_maintenance": "300mg SC mỗi 2 tuần",
+                "notes": "Tiêm dưới da. Có thể tự tiêm sau khi được hướng dẫn. FDA phê duyệt 12/27/2021."
+            },
+            "renal_adjustment": {
+                "normal": "Không đổi",
+                "30_60": "Không đổi",
+                "under_30": "Thận trọng, không cần điều chỉnh liều"
+            },
+            "side_effects": [
+                "Phản ứng tại chỗ tiêm (đau, đỏ, sưng) - phổ biến",
+                "Nhiễm trùng đường hô hấp trên",
+                "Nhiễm trùng mắt (conjunctivitis)",
+                "Đau đầu",
+                "Nhiễm trùng nặng - hiếm",
+                "Phản ứng dị ứng - hiếm"
+            ],
+            "interactions": [
+                "Không có tương tác dược động học quan trọng",
+                "Có thể làm giảm đáp ứng vaccine (sống)"
+            ],
+        "pregnancy": "B",
+            "mechanism_of_action": "Tralokinumab là kháng thể đơn dòng kháng IL-13 (interleukin-13, fully human monoclonal antibody). IL-13 là cytokine quan trọng trong quá trình viêm dị ứng và viêm da dị ứng. IL-13 được sản xuất bởi Th2 cells → kích hoạt các tế bào viêm → tăng sản xuất các cytokine khác và chemokines → gây viêm da và ngứa. Tralokinumab gắn với IL-13 → ngăn chặn IL-13 gắn với receptor → ức chế signaling → giảm viêm da và ngứa. Dẫn đến: cải thiện triệu chứng viêm da dị ứng. Tralokinumab được FDA phê duyệt 12/27/2021 để điều trị viêm da dị ứng trung bình đến nặng ở người lớn.",
+            "monitoring": [
+                "Phản ứng tại chỗ tiêm",
+                "Đáp ứng điều trị (giảm ngứa, giảm tổn thương da)",
+                "Dấu hiệu nhiễm trùng đường hô hấp trên",
+                "Dấu hiệu nhiễm trùng mắt (conjunctivitis)",
+                "Dấu hiệu phản ứng dị ứng"
+            ],
+            "precautions": [
+                "Không dùng vaccine sống trong và sau điều trị",
+                "Thận trọng ở bệnh nhân có nhiễm trùng đang hoạt động",
+                "Theo dõi dấu hiệu nhiễm trùng mắt (conjunctivitis)",
+                "Có thể tự tiêm sau khi được hướng dẫn"
+            ],
+            "pharmacokinetics": {
+                "half_life": "22 ngày (dao động 18-26 ngày)",
+                "onset": "Vài tuần",
+                "duration": "2 tuần",
+                "protein_binding": "Không rõ",
+                "metabolism": "Chuyển hóa qua hệ thống RES, tương tự các immunoglobulin khác",
+                "clearance": "Chuyển hóa qua RES, thải trừ qua thận một phần. Half-life dài."
+            },
+            "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Không để ở nhiệt độ phòng quá 14 ngày. Để nhiệt độ phòng 30 phút trước khi tiêm.",
+            "black_box_warnings": "Không có black box warning. Tuy nhiên, cần theo dõi nhiễm trùng và không dùng vaccine sống.",
+            "drug_interactions": {
+                "major": [],
+                "moderate": [
+                    {
+                        "drug": "Vaccines (sống)",
+                        "mechanism": "Tralokinumab làm thay đổi đáp ứng miễn dịch",
+                        "effect": "Giảm hiệu quả vaccine, tăng nguy cơ nhiễm trùng từ vaccine sống",
+                        "management": "Không dùng vaccine sống trong và sau điều trị tralokinumab. Hoãn vaccine sống ít nhất 3-6 tháng sau liều cuối."
+                    }
+                ],
+                "minor": []
+            },
+            "contraindications": {
+                "tuyệt_đối": [
+                    "Dị ứng tralokinumab hoặc bất kỳ thành phần nào"
+                ],
+                "tương_đối": [
+                    "Nhiễm trùng đang hoạt động - thận trọng",
+                    "Có thai (category B) - thận trọng"
+                ]
+            },
+            "pregnancy_lactation": {
+                "fda_category": "B",
+                "pregnancy_details": "Tralokinumab là FDA category B. Có thể dùng trong thai kỳ khi cần thiết. Một số nghiên cứu cho thấy an toàn trong thai kỳ, nhưng cần theo dõi chặt chẽ.",
+                "lactation": {
+                    "safety": "Compatible with caution",
+                    "details": "Tralokinumab bài tiết vào sữa mẹ ở nồng độ thấp. Có thể dùng khi cho con bú với theo dõi trẻ.",
+                    "recommendation": "Có thể dùng khi cho con bú với thận trọng. Theo dõi trẻ về dấu hiệu nhiễm trùng."
+                }
+            },
+            "hepatic_adjustment": {
+                "mild": "Không đổi",
+                "moderate": "Không đổi",
+                "severe": "Thận trọng, không cần điều chỉnh liều",
+                "notes": "Tralokinumab không chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan."
+            },
+            "overdose_management": {
+                "symptoms": [
+                    "Phản ứng dị ứng nặng",
+                    "Nhiễm trùng nặng"
+                ],
+                "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+                "treatment": [
+                    "Ngừng tralokinumab",
+                    "Điều trị phản ứng dị ứng: corticosteroid, antihistamine, epinephrine nếu cần",
+                    "Điều trị nhiễm trùng nếu có",
+                    "Theo dõi chặt chẽ trong ít nhất 24-48 giờ"
+                ],
+                "monitoring": "Dấu hiệu sinh tồn, dấu hiệu nhiễm trùng, dấu hiệu phản ứng dị ứng trong ít nhất 24-48 giờ."
+            },
+            "reversal_agents": {
+                "available": False,
+                "agents": []
+            },
+            "administration_instructions": {
+                "sc": {
+                    "reconstitution": "Dạng SC: 150mg/ml, tiêm dưới da",
+                    "injection_site": "Vùng đùi, bụng (tránh vùng quanh rốn 5cm), cánh tay",
+                    "notes": "Để nhiệt độ phòng 30 phút trước khi tiêm. Tiêm dưới da, không tiêm vào cơ hoặc mạch máu. Thay đổi vị trí tiêm mỗi lần. Có thể tự tiêm sau khi được hướng dẫn."
+                }
+            },
+            "references": {
+                "primary_sources": [
+                    "FDA Drug Label - Tralokinumab (Adbry)",
+                    "FDA Approval Date: 12/27/2021",
+                    "FDA-approved use: To treat moderate-to-severe atopic dermatitis",
+                    "UpToDate - Tralokinumab: Drug information",
+                    "Lexicomp - Tralokinumab monograph"
+                ],
+                "last_updated": "2025-02-18",
+                "evidence_level": "A - FDA-approved 12/27/2021"
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": ["Serious infections (rare)"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": ["Injection site reactions", "Signs of infection", "Eye infections (conjunctivitis)", "Clinical response"]
+            },
+            "guideline_tags": [
+                "AAD Guidelines - Atopic Dermatitis",
+                "FDA Drug Information - Tralokinumab (Adbry)"
+            ]
+        },
+
         "Tocilizumab": {
             "group": "Biological - Monoclonal Antibody (anti-IL-6R)",
             "vietnamese_name": "Tocilizumab, Actemra",
@@ -5992,6 +6137,194 @@ MONOCLONAL_ANTIBODIES_DRUGS: Dict[str, Dict[str, Any]] = {
             ],
             "last_updated": "2025-02-18"
         },
+
+        "Abatacept": {
+            "group": "Biological - Fusion Protein (CTLA-4 Ig)",
+            "vietnamese_name": "Abatacept, Orencia",
+            "administration": ["IV", "SC"],
+            "indications": [
+                "Viêm khớp dạng thấp (RA) – moderate đến severe sau thất bại DMARD khác",
+                "Viêm khớp vị thành niên (JIA) – polyarticular",
+                "Viêm khớp vảy nến (PsA)"
+            ],
+            "contraindications": [
+                "Dị ứng abatacept hoặc bất kỳ thành phần nào",
+                "Nhiễm trùng nặng chưa điều trị",
+                "Suy giảm miễn dịch nặng"
+            ],
+            "dosage": {
+                "adult_ra_iv": "Loading: 500-1000mg IV (theo cân nặng), sau đó 500-1000mg IV mỗi 2-4 tuần",
+                "adult_ra_sc": "125mg SC mỗi tuần (sau loading IV)",
+                "adult_psa_iv": "500-1000mg IV mỗi 2-4 tuần",
+                "adult_psa_sc": "125mg SC mỗi tuần",
+                "pediatric_jia_iv": "Weight-based IV: 10mg/kg (tối đa 1000mg) mỗi 2-4 tuần",
+                "pediatric_jia_sc": "Weight-based SC: 50mg (<25kg), 87.5mg (25-50kg), 125mg (>50kg) mỗi tuần",
+                "notes": "Truyền tĩnh mạch hoặc tiêm dưới da. Test lao trước khi dùng. Có thể dùng kết hợp với methotrexate."
+            },
+            "renal_adjustment": {
+                "normal": "Không đổi",
+                "30_60": "Không đổi",
+                "under_30": "Thận trọng, không cần điều chỉnh liều"
+            },
+            "side_effects": [
+                "Nhiễm trùng - phổ biến, có thể nghiêm trọng (nhiễm trùng cơ hội, lao)",
+                "Phản ứng truyền (infusion reaction) - khi dùng IV, phổ biến lần đầu",
+                "Phản ứng tại chỗ tiêm (đau, đỏ, sưng) - khi dùng SC",
+                "Nhức đầu",
+                "Buồn nôn",
+                "Tiêu chảy",
+                "Ho",
+                "Tăng nguy cơ ung thư (lymphoma, ung thư da) - hiếm",
+                "Tăng nguy cơ COPD exacerbation - ở bệnh nhân COPD"
+            ],
+            "interactions": [
+                "Không có tương tác dược động học quan trọng",
+                "Có thể làm giảm đáp ứng vaccine (sống)",
+                "Tăng nguy cơ nhiễm trùng khi dùng với các thuốc ức chế miễn dịch khác"
+            ],
+            "pregnancy": "C",
+            "mechanism_of_action": "Abatacept là fusion protein gồm CTLA-4 (cytotoxic T-lymphocyte-associated protein 4) gắn với Fc của IgG1. CTLA-4 là protein trên tế bào T, có vai trò điều hòa đáp ứng miễn dịch. Trong RA và các bệnh tự miễn, tế bào T được kích hoạt quá mức → tăng sản xuất cytokine gây viêm → gây viêm mạn tính → tổn thương mô. Abatacept gắn với CD80/CD86 (B7) trên tế bào trình diện kháng nguyên (APC) → ngăn chặn CD28 (trên tế bào T) gắn với B7 → ức chế tín hiệu kích hoạt tế bào T → giảm sản xuất cytokine gây viêm → giảm viêm. Dẫn đến: giảm triệu chứng và làm chậm tiến triển bệnh. Abatacept được dùng để điều trị RA, JIA, và PsA, đặc biệt hiệu quả khi không đáp ứng với Anti-TNF.",
+            "monitoring": [
+                "Nhiễm trùng - theo dõi dấu hiệu nhiễm trùng trong và sau điều trị",
+                "Lao (tuberculosis) - test PPD hoặc IGRA trước khi dùng, theo dõi trong điều trị",
+                "Dấu hiệu nhiễm trùng cơ hội (PCP, CMV, herpes, fungal)",
+                "Phản ứng truyền hoặc phản ứng tại chỗ tiêm",
+                "Dấu hiệu ung thư (hạch to, sụt cân, v.v.)",
+                "COPD exacerbation - ở bệnh nhân COPD"
+            ],
+            "precautions": [
+                "TEST LAO TRƯỚC KHI DÙNG (PPD hoặc IGRA) - lao có thể tái hoạt",
+                "Điều trị dự phòng lao nếu có tiền sử lao hoặc test dương tính",
+                "Theo dõi dấu hiệu nhiễm trùng chặt chẽ - tăng nguy cơ nhiễm trùng",
+                "Ngừng abatacept nếu có nhiễm trùng nặng",
+                "Không dùng vaccine sống trong và sau điều trị",
+                "Thận trọng ở bệnh nhân COPD - tăng nguy cơ COPD exacerbation",
+                "Premedication với corticosteroid, antihistamine để giảm phản ứng truyền (nếu cần)",
+                "Có thể dùng kết hợp với methotrexate"
+            ],
+            "pharmacokinetics": {
+                "half_life": "13-16 ngày (dao động rộng)",
+                "onset": "Vài tuần đến vài tháng",
+                "duration": "2-4 tuần (liều mỗi 2-4 tuần IV, mỗi tuần SC)",
+                "protein_binding": "Không rõ",
+                "metabolism": "Chuyển hóa qua hệ thống RES, tương tự các immunoglobulin khác",
+                "clearance": "Chuyển hóa qua RES, thải trừ qua thận một phần. Half-life dài."
+            },
+            "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng: bảo quản ở nhiệt độ phòng (15-30°C) hoặc tủ lạnh (2-8°C), dùng trong 24 giờ. Dạng SC: bảo quản trong tủ lạnh (2-8°C), để nhiệt độ phòng trước khi dùng.",
+            "black_box_warnings": "NHIỄM TRÙNG NẶNG - tăng nguy cơ nhiễm trùng nghiêm trọng, đặc biệt lao và nhiễm trùng cơ hội. Test lao trước khi dùng. Điều trị dự phòng lao nếu cần. Ngừng nếu có nhiễm trùng nặng. Phản ứng truyền nặng có thể gây tử vong. Tăng nguy cơ COPD exacerbation ở bệnh nhân COPD.",
+            "drug_interactions": {
+                "major": [
+                    {
+                        "drug": "Các thuốc ức chế miễn dịch khác (methotrexate, corticosteroid)",
+                        "mechanism": "Tác dụng cộng dồn ức chế miễn dịch",
+                        "effect": "Tăng nguy cơ nhiễm trùng, đặc biệt nhiễm trùng cơ hội",
+                        "management": "Thận trọng. Cần phòng ngừa nhiễm trùng chặt chẽ (PCP prophylaxis, v.v.)."
+                    },
+                    {
+                        "drug": "Vaccines (sống)",
+                        "mechanism": "Abatacept làm giảm đáp ứng miễn dịch",
+                        "effect": "Giảm hiệu quả vaccine, tăng nguy cơ nhiễm trùng từ vaccine sống",
+                        "management": "Không dùng vaccine sống trong và sau điều trị abatacept. Hoãn vaccine sống ít nhất 3-6 tháng sau liều cuối."
+                    }
+                ],
+                "moderate": [],
+                "minor": []
+            },
+            "contraindications": {
+                "tuyệt_đối": [
+                    "Dị ứng abatacept hoặc bất kỳ thành phần nào",
+                    "Nhiễm trùng nặng chưa điều trị"
+                ],
+                "tương_đối": [
+                    "Lao phổi - cần điều trị lao trước, thận trọng",
+                    "Tiền sử nhiễm trùng tái phát - tăng nguy cơ",
+                    "COPD - tăng nguy cơ COPD exacerbation",
+                    "Có thai (category C) - thận trọng"
+                ]
+            },
+            "pregnancy_lactation": {
+                "fda_category": "C",
+                "pregnancy_details": "Abatacept là FDA category C. Có thể dùng trong thai kỳ khi cần thiết (RA nặng). Một số nghiên cứu cho thấy có thể có nguy cơ, nhưng cần cân nhắc lợi ích/rủi ro. Cần theo dõi chặt chẽ.",
+                "lactation": {
+                    "safety": "Unknown",
+                    "details": "Chưa rõ bài tiết vào sữa mẹ. Thận trọng khi dùng khi cho con bú.",
+                    "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
+                }
+            },
+            "hepatic_adjustment": {
+                "mild": "Không đổi",
+                "moderate": "Không đổi",
+                "severe": "Thận trọng, không cần điều chỉnh liều",
+                "notes": "Abatacept không chuyển hóa ở gan. Không cần điều chỉnh liều ở suy gan. Tuy nhiên, cần theo dõi chức năng gan (có thể tăng men gan)."
+            },
+            "overdose_management": {
+                "symptoms": [
+                    "Tăng nguy cơ nhiễm trùng",
+                    "Phản ứng truyền nặng (nếu dùng IV)",
+                    "Ức chế miễn dịch nặng"
+                ],
+                "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+                "treatment": [
+                    "Ngừng abatacept",
+                    "Theo dõi dấu hiệu nhiễm trùng chặt chẽ",
+                    "Điều trị nhiễm trùng nếu có",
+                    "Điều trị phản ứng truyền nếu có (corticosteroid, antihistamine)"
+                ],
+                "monitoring": "Dấu hiệu nhiễm trùng, phản ứng truyền, dấu hiệu ức chế miễn dịch"
+            },
+            "reversal_agents": {
+                "available": False,
+                "agents": []
+            },
+            "administration_instructions": {
+                "iv": {
+                    "reconstitution": "Pha loãng trong 100ml NaCl 0.9%",
+                    "infusion_rate": "Truyền trong 30 phút",
+                    "premedication": "Có thể dùng corticosteroid, antihistamine để giảm phản ứng truyền",
+                    "notes": "Truyền tĩnh mạch trong 30 phút. Theo dõi phản ứng truyền trong và sau truyền."
+                },
+                "sc": {
+                    "injection_site": "Vùng đùi, bụng (tránh vùng quanh rốn 5cm), cánh tay",
+                    "notes": "Tiêm dưới da mỗi tuần. Thay đổi vị trí tiêm mỗi lần."
+                }
+            },
+            "references": {
+                "primary_sources": [
+                    "FDA Drug Label - Abatacept (Orencia)",
+                    "UpToDate - Abatacept: Drug information",
+                    "Lexicomp - Abatacept monograph",
+                    "ACR 2021 Rheumatoid Arthritis Guidelines"
+                ],
+                "last_updated": "2025-02-18",
+                "evidence_level": "A - FDA-approved, large RCTs showing benefit in RA"
+            },
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": False,
+                "icu_critical_care_only": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Black Box Warning - Signs of serious infections - CRITICAL (discontinue if serious infection occurs)",
+                    "Black Box Warning - TB screening before treatment - CRITICAL",
+                    "Infusion reactions (monitor during and after 30-minute IV infusion)",
+                    "Injection site reactions (when using SC formulation)",
+                    "COPD exacerbation (in patients with COPD)",
+                    "Do not use live vaccines during and after treatment"
+                ],
+                "look_alike_sound_alike": ["Abatacept", "Orencia"]
+            },
+            "guideline_tags": [
+                "FDA Black Box Warning - Serious Infections",
+                "FDA Black Box Warning - TB Reactivation",
+                "ACR Guidelines - Rheumatoid Arthritis",
+                "ISMP High Alert Medications"
+            ],
+            "last_updated": "2025-02-18"
+        }
 
 }
 

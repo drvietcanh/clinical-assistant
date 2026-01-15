@@ -612,6 +612,373 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
             'WHO Guidelines - Essential medicines for asthma'
         ]
         }
+    },
+    "Mometasone inhaled": {
+        "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+        "pregnancy": "C - Corticosteroid, thận trọng trong thai kỳ",
+        "vietnamese_name": "Mometasone, Asmanex, Nasonex",
+        "administration": ["Inhalation", "Nasal"],
+        "indications": [
+            "Hen phế quản (kiểm soát, phòng ngừa)",
+            "COPD (nếu có nhiều đợt cấp)",
+            "Viêm mũi dị ứng (dạng nasal)"
+        ],
+        "contraindications": [
+            "Nhiễm trùng đường hô hấp nặng chưa điều trị",
+            "Dị ứng mometasone hoặc các thành phần khác",
+            "Dùng với ritonavir (tăng mạnh nồng độ mometasone)"
+        ],
+        "dosage": {
+            "adult_inhalation_low": "200-400mcg x 1 lần/ngày (buổi tối)",
+            "adult_inhalation_medium": "400-800mcg x 1 lần/ngày (buổi tối)",
+            "adult_inhalation_high": "800-1200mcg x 1 lần/ngày (buổi tối)",
+            "adult_nasal": "100-200mcg (1-2 sprays) mỗi lỗ mũi x 1-2 lần/ngày",
+            "pediatric_inhalation": {
+                "4_11_years": "100-200mcg x 1 lần/ngày (buổi tối)",
+                "under_4_years": "Chưa được nghiên cứu đầy đủ, thận trọng",
+                "notes": "FDA-approved cho trẻ em ≥4 tuổi (dạng hít). Khởi đầu với liều thấp."
+            },
+            "pediatric_nasal": {
+                "2_11_years": "50-100mcg (1 spray) mỗi lỗ mũi x 1 lần/ngày",
+                "under_2_years": "Chưa được nghiên cứu đầy đủ, thận trọng",
+                "notes": "FDA-approved cho trẻ em ≥2 tuổi (dạng nasal)."
+            },
+            "notes": "Mometasone có ưu điểm: dùng 1 lần/ngày (dạng hít), tiện lợi hơn các ICS khác. Súc miệng sau khi dùng để tránh nấm miệng."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Nấm miệng (candidiasis) - phổ biến nếu không súc miệng",
+            "Khàn tiếng",
+            "Ho",
+            "Kích ứng họng",
+            "Nhức đầu (dạng nasal)",
+            "Chảy máu mũi (dạng nasal)",
+            "Tác dụng toàn thân (liều cao) - hiếm",
+            "Ức chế trục HPA (liều cao)"
+        ],
+        "interactions": [
+            "Ritonavir: tăng mạnh nồng độ mometasone (TRÁNH DÙNG)",
+            "Ketoconazole/Itraconazole: tăng nồng độ mometasone"
+        ],
+        "mechanism_of_action": "Mometasone là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Mometasone gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản/mũi, và tăng số lượng beta-2 receptors. Mometasone có tác dụng chủ yếu tại chỗ (phế quản/mũi), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. ĐẶC ĐIỂM: (1) Dùng 1 lần/ngày (dạng hít) - tiện lợi hơn các ICS khác, (2) Chuyển hóa nhanh ở gan (CYP3A4) nên tác dụng toàn thân tối thiểu, (3) Có cả dạng hít và dạng nasal, (4) Hiệu quả tương đương các ICS khác nhưng dùng 1 lần/ngày.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)",
+            "Nấm miệng (candidiasis) - kiểm tra lưỡi, miệng, đặc biệt nếu không súc miệng sau khi dùng",
+            "Khàn tiếng, ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến",
+            "Tác dụng toàn thân (chỉ ở liều cao): ức chế trục HPA, chậm phát triển ở trẻ em",
+            "Chức năng gan nếu có triệu chứng (hiếm)",
+            "Tương tác với ritonavir, ketoconazole, itraconazole (tăng nồng độ mometasone)"
+        ],
+        "precautions": [
+            "Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG",
+            "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, mometasone là thuốc duy trì",
+            "Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì",
+            "Dùng 1 lần/ngày (dạng hít) - tiện lợi hơn các ICS khác",
+            "TRÁNH DÙNG với ritonavir (tăng mạnh nồng độ mometasone, tăng nguy cơ ức chế HPA nghiêm trọng)",
+            "Thận trọng với ketoconazole, itraconazole (tăng nồng độ mometasone)",
+            "Theo dõi chậm phát triển ở trẻ em nếu dùng liều cao",
+            "Dùng đều đặn hàng ngày, không phải khi cần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "5 giờ (trong phổi), 4-6 giờ (toàn thân sau hấp thu)",
+            "onset": "Vài giờ đến vài ngày (tác dụng kháng viêm)",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "98-99%",
+            "metabolism": "Gan: chuyển hóa nhanh qua CYP3A4 (first-pass metabolism cao, ~95% bị chuyển hóa). Chuyển hóa nhanh nên tác dụng toàn thân tối thiểu.",
+            "clearance": "Gan: chuyển hóa nhanh qua CYP3A4. Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản/mũi)."
+        },
+        "storage": "Dạng hít (DPI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Dạng nasal: bảo quản ở nhiệt độ phòng, tránh ẩm.",
+        "black_box_warnings": "TRÁNH DÙNG với ritonavir (tăng mạnh nồng độ mometasone, tăng nguy cơ ức chế trục HPA nghiêm trọng, có thể gây hội chứng Cushing, suy thượng thận).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Ritonavir",
+                    "mechanism": "Ức chế CYP3A4, tăng mạnh nồng độ mometasone",
+                    "effect": "Tăng nguy cơ ức chế trục HPA nghiêm trọng, hội chứng Cushing, suy thượng thận",
+                    "management": "TRÁNH DÙNG với ritonavir. Nếu cần dùng, giảm liều mometasone đáng kể hoặc xem xét thuốc thay thế (budesonide). Theo dõi chặt chẽ."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Ketoconazole, Itraconazole, Posaconazole",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ mometasone",
+                    "effect": "Tăng nguy cơ tác dụng toàn thân, ức chế HPA",
+                    "management": "Thận trọng, theo dõi tác dụng toàn thân. Có thể cần giảm liều mometasone."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với mometasone hoặc các thành phần khác",
+                "Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)",
+                "Dùng với ritonavir - chống chỉ định tuyệt đối"
+            ],
+            "tương_đối": [
+                "Lao phổi - cần điều trị lao trước, thận trọng",
+                "Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước",
+                "Dùng với ketoconazole, itraconazole - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Mometasone là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Mometasone được sử dụng trong thai kỳ để điều trị hen và có vẻ an toàn. Hấp thu toàn thân ít từ dạng hít/nasal (do chuyển hóa nhanh ở gan), nên tác dụng toàn thân tối thiểu. Có thể được dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Mometasone bài tiết ít vào sữa mẹ do hấp thu toàn thân tối thiểu từ dạng hít/nasal. Nồng độ trong sữa mẹ rất thấp, không đáng kể. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú. Dạng hít/nasal được ưu tiên để giảm tác dụng toàn thân."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Thận trọng - mometasone chuyển hóa qua CYP3A4 ở gan, có thể tích lũy ở suy gan nặng",
+            "notes": "Mometasone chuyển hóa nhanh qua CYP3A4 ở gan. Ở suy gan nặng, có thể tích lũy và tăng tác dụng toàn thân. Theo dõi chặt chẽ tác dụng toàn thân. Có thể cần giảm liều."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế trục HPA (mệt mỏi, yếu, hạ huyết áp)",
+                "Hội chứng Cushing (tăng cân, mặt tròn, tăng huyết áp)",
+                "Tăng đường huyết",
+                "Nấm miệng nặng",
+                "Khàn tiếng nặng"
+            ],
+            "treatment": [
+                "Ngừng ngay mometasone hoặc giảm liều đáng kể",
+                "Theo dõi chức năng trục HPA (cortisol, ACTH)",
+                "Bổ sung corticosteroid nếu có suy thượng thận",
+                "Điều trị tăng đường huyết nếu cần",
+                "Theo dõi và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi: chức năng trục HPA (cortisol, ACTH), đường huyết, huyết áp, cân nặng, chiều cao (ở trẻ em). Theo dõi ít nhất vài tuần do tác dụng kéo dài."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là ngừng thuốc, giảm liều, và hỗ trợ. Có thể cần bổ sung corticosteroid nếu có suy thượng thận."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": None,
+            "inhalation": {
+                "technique": "Dạng hít (DPI): Hít sâu và giữ hơi thở 10 giây. Đợi 30-60 giây trước khi dùng liều thứ hai (nếu cần).",
+                "timing": "Dùng 1 lần/ngày (buổi tối), đều đặn hàng ngày, không phải khi cần.",
+                "after_use": "Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG.",
+                "notes": "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần. TRÁNH DÙNG với ritonavir."
+            },
+            "nasal": {
+                "technique": "Dạng nasal: Lắc kỹ trước khi dùng. Xịt vào mỗi lỗ mũi.",
+                "timing": "Dùng 1-2 lần/ngày, đều đặn hàng ngày.",
+                "notes": "Hiệu quả với viêm mũi dị ứng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Label: Asmanex (Mometasone inhaled)",
+                "FDA Label: Nasonex (Mometasone nasal)",
+                "UpToDate: Inhaled corticosteroids in asthma",
+                "GINA Guidelines 2024: Asthma Management",
+                "Micromedex: Mometasone"
+            ],
+            "evidence_level": "High - FDA approved, multiple RCTs, clinical guidelines"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [],
+            "look_alike_sound_alike": ["Mometasone", "Asmanex", "Nasonex"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - TRÁNH DÙNG với ritonavir",
+            "ISMP High Alert Medications",
+            "GINA Guidelines 2024 - Asthma Management",
+            "WHO Guidelines - Essential medicines for asthma"
+        ]
+    },
+    "Triamcinolone inhaled/nasal": {
+        "group": "Respiratory - Inhaled Corticosteroid (ICS)",
+        "pregnancy": "C - Corticosteroid, thận trọng trong thai kỳ",
+        "vietnamese_name": "Triamcinolone, Azmacort, Nasacort",
+        "administration": ["Inhalation", "Nasal"],
+        "indications": [
+            "Hen phế quản (kiểm soát, phòng ngừa)",
+            "Viêm mũi dị ứng (dạng nasal)"
+        ],
+        "contraindications": [
+            "Nhiễm trùng đường hô hấp nặng chưa điều trị",
+            "Dị ứng triamcinolone hoặc các thành phần khác"
+        ],
+        "dosage": {
+            "adult_inhalation": "300-600mcg x 3-4 lần/ngày hoặc 600-1200mcg x 2 lần/ngày",
+            "adult_nasal": "110-220mcg (1-2 sprays) mỗi lỗ mũi x 1-2 lần/ngày",
+            "pediatric_inhalation": {
+                "6_12_years": "300-600mcg x 3-4 lần/ngày",
+                "under_6_years": "Chưa được nghiên cứu đầy đủ, thận trọng",
+                "notes": "FDA-approved cho trẻ em ≥6 tuổi (dạng hít)."
+            },
+            "pediatric_nasal": {
+                "2_11_years": "110mcg (1 spray) mỗi lỗ mũi x 1 lần/ngày",
+                "under_2_years": "Chưa được nghiên cứu đầy đủ, thận trọng",
+                "notes": "FDA-approved cho trẻ em ≥2 tuổi (dạng nasal)."
+            },
+            "notes": "Súc miệng sau khi dùng để tránh nấm miệng. Dạng hít: dùng 3-4 lần/ngày hoặc 2 lần/ngày tùy liều."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Nấm miệng (candidiasis) - phổ biến nếu không súc miệng",
+            "Khàn tiếng",
+            "Ho",
+            "Kích ứng họng",
+            "Nhức đầu (dạng nasal)",
+            "Chảy máu mũi (dạng nasal)",
+            "Kích ứng mũi (dạng nasal)",
+            "Tác dụng toàn thân (liều cao) - hiếm",
+            "Ức chế trục HPA (liều cao)"
+        ],
+        "interactions": [
+            "Ít tương tác thuốc quan trọng",
+            "Ketoconazole/Itraconazole: có thể tăng nồng độ triamcinolone"
+        ],
+        "mechanism_of_action": "Triamcinolone là corticosteroid hít/nasal có tác dụng kháng viêm mạnh tại chỗ. Triamcinolone gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản/mũi, và tăng số lượng beta-2 receptors. Triamcinolone có tác dụng chủ yếu tại chỗ (phế quản/mũi), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Có cả dạng hít và dạng nasal. Hiệu quả tương đương các ICS khác.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)",
+            "Nấm miệng (candidiasis) - kiểm tra lưỡi, miệng, đặc biệt nếu không súc miệng sau khi dùng",
+            "Khàn tiếng, ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến",
+            "Tác dụng toàn thân (chỉ ở liều cao): ức chế trục HPA, chậm phát triển ở trẻ em",
+            "Chức năng gan nếu có triệu chứng (hiếm)"
+        ],
+        "precautions": [
+            "Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG",
+            "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, triamcinolone là thuốc duy trì",
+            "Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì",
+            "Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước",
+            "Theo dõi chậm phát triển ở trẻ em nếu dùng liều cao",
+            "Dùng đều đặn hàng ngày, không phải khi cần"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1.5-2 giờ (trong phổi), 2-3 giờ (toàn thân sau hấp thu)",
+            "onset": "Vài giờ đến vài ngày (tác dụng kháng viêm)",
+            "duration": "6-12 giờ (dùng 2-4 lần/ngày)",
+            "protein_binding": "68%",
+            "metabolism": "Gan: chuyển hóa qua CYP3A4 (first-pass metabolism cao). Chuyển hóa nhanh nên tác dụng toàn thân tối thiểu.",
+            "clearance": "Gan: chuyển hóa nhanh qua CYP3A4. Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản/mũi)."
+        },
+        "storage": "Dạng hít (MDI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Dạng nasal: bảo quản ở nhiệt độ phòng, tránh ẩm.",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Ketoconazole, Itraconazole",
+                    "mechanism": "Ức chế CYP3A4, có thể tăng nồng độ triamcinolone",
+                    "effect": "Tăng nguy cơ tác dụng toàn thân, ức chế HPA",
+                    "management": "Thận trọng, theo dõi tác dụng toàn thân. Có thể cần giảm liều triamcinolone."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với triamcinolone hoặc các thành phần khác",
+                "Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)"
+            ],
+            "tương_đối": [
+                "Lao phổi - cần điều trị lao trước, thận trọng",
+                "Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Triamcinolone là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Triamcinolone được sử dụng trong thai kỳ để điều trị hen và có vẻ an toàn. Hấp thu toàn thân ít từ dạng hít/nasal (do chuyển hóa nhanh ở gan), nên tác dụng toàn thân tối thiểu. Có thể được dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Triamcinolone bài tiết ít vào sữa mẹ do hấp thu toàn thân tối thiểu từ dạng hít/nasal. Nồng độ trong sữa mẹ rất thấp, không đáng kể. Không có báo cáo về tác dụng phụ ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng an toàn khi cho con bú. Dạng hít/nasal được ưu tiên để giảm tác dụng toàn thân."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Thận trọng - triamcinolone chuyển hóa qua CYP3A4 ở gan, có thể tích lũy ở suy gan nặng",
+            "notes": "Triamcinolone chuyển hóa nhanh qua CYP3A4 ở gan. Ở suy gan nặng, có thể tích lũy và tăng tác dụng toàn thân. Theo dõi chặt chẽ tác dụng toàn thân. Có thể cần giảm liều."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Ức chế trục HPA (mệt mỏi, yếu, hạ huyết áp)",
+                "Hội chứng Cushing (tăng cân, mặt tròn, tăng huyết áp)",
+                "Tăng đường huyết",
+                "Nấm miệng nặng",
+                "Khàn tiếng nặng"
+            ],
+            "treatment": [
+                "Ngừng ngay triamcinolone hoặc giảm liều đáng kể",
+                "Theo dõi chức năng trục HPA (cortisol, ACTH)",
+                "Bổ sung corticosteroid nếu có suy thượng thận",
+                "Điều trị tăng đường huyết nếu cần",
+                "Theo dõi và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi: chức năng trục HPA (cortisol, ACTH), đường huyết, huyết áp, cân nặng, chiều cao (ở trẻ em). Theo dõi ít nhất vài tuần do tác dụng kéo dài."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là ngừng thuốc, giảm liều, và hỗ trợ. Có thể cần bổ sung corticosteroid nếu có suy thượng thận."
+        },
+        "administration_instructions": {
+            "oral": None,
+            "iv": None,
+            "inhalation": {
+                "technique": "Dạng hít (MDI): Lắc kỹ trước khi dùng. Hít sâu và giữ hơi thở 10 giây. Đợi 30-60 giây trước khi dùng liều thứ hai (nếu cần).",
+                "timing": "Dùng 2-4 lần/ngày, đều đặn hàng ngày, không phải khi cần.",
+                "after_use": "Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG.",
+                "notes": "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần."
+            },
+            "nasal": {
+                "technique": "Dạng nasal: Lắc kỹ trước khi dùng. Xịt vào mỗi lỗ mũi.",
+                "timing": "Dùng 1-2 lần/ngày, đều đặn hàng ngày.",
+                "notes": "Hiệu quả với viêm mũi dị ứng."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Label: Azmacort (Triamcinolone inhaled)",
+                "FDA Label: Nasacort (Triamcinolone nasal)",
+                "UpToDate: Inhaled corticosteroids in asthma",
+                "GINA Guidelines 2024: Asthma Management",
+                "Micromedex: Triamcinolone"
+            ],
+            "evidence_level": "High - FDA approved, multiple RCTs, clinical guidelines"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": [],
+            "look_alike_sound_alike": ["Triamcinolone", "Azmacort", "Nasacort"]
+        },
+        "guideline_tags": [
+            "GINA Guidelines 2024 - Asthma Management",
+            "WHO Guidelines - Essential medicines for asthma"
+        ]
     }
 }
 

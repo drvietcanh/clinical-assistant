@@ -532,7 +532,202 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
             "evidence_level": "A"
         }
     },
-    
+    "Ketotifen oral/inhalation": {
+        "group": "Respiratory - Mast Cell Stabilizer / Antihistamine",
+        "vietnamese_name": "Ketotifen, Zaditen",
+        "administration": ["PO", "Inhalation"],
+        "indications": [
+            "Hen phế quản (phòng ngừa) - dạng uống/hít",
+            "Viêm mũi dị ứng - dạng uống",
+            "Viêm kết mạc dị ứng - dạng mắt (có trong ophthalmology module)"
+        ],
+        "contraindications": [
+            "Dị ứng ketotifen",
+            "Hen phế quản cấp tính (không dùng cho cắt cơn cấp)",
+            "Có thai (category C)"
+        ],
+        "dosage": {
+            "adult_oral": "1-2mg PO x 2 lần/ngày (sáng và tối)",
+            "adult_inhalation": "1-2mg (1-2 puffs) x 2-4 lần/ngày",
+            "pediatric_oral": {
+                "3_12_years": "0.5-1mg PO x 2 lần/ngày",
+                "under_3_years": "Chưa được nghiên cứu đầy đủ, thận trọng",
+                "notes": "FDA-approved cho trẻ em ≥3 tuổi (dạng uống)."
+            },
+            "pediatric_inhalation": {
+                "6_12_years": "1mg (1 puff) x 2-4 lần/ngày",
+                "under_6_years": "Chưa được nghiên cứu đầy đủ, thận trọng",
+                "notes": "FDA-approved cho trẻ em ≥6 tuổi (dạng hít)."
+            },
+            "notes": "Ketotifen là mast cell stabilizer và antihistamine. Tác dụng kép: ức chế giải phóng histamine từ mast cells và đối kháng thụ thể H1. Dùng để phòng ngừa, không dùng cho cắt cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần. Có thể gây buồn ngủ (đặc biệt dạng uống)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi",
+            "dialysis": "Không đổi",
+            "notes": "Ketotifen chuyển hóa ở gan, thải trừ một phần qua thận. Không cần điều chỉnh liều ở suy thận."
+        },
+        "side_effects": [
+            "Buồn ngủ - phổ biến (đặc biệt dạng uống)",
+            "Mệt mỏi",
+            "Chóng mặt",
+            "Khô miệng",
+            "Tăng cân (dạng uống)",
+            "Ho (dạng hít)",
+            "Kích ứng họng (dạng hít)",
+            "Nhức đầu",
+            "Buồn nôn"
+        ],
+        "interactions": [
+            "Rượu: tăng buồn ngủ",
+            "Thuốc an thần, thuốc ngủ: tăng buồn ngủ",
+            "Thuốc kháng cholinergic: tăng khô miệng",
+            "MAO inhibitors: thận trọng (có thể tăng tác dụng)"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Ketotifen là mast cell stabilizer và antihistamine. Tác dụng kép: (1) Mast cell stabilizer - ức chế giải phóng histamine và các chất trung gian gây viêm (leukotrienes, prostaglandins, tryptase) từ mast cells, ngăn chặn degranulation của mast cells khi tiếp xúc với chất gây dị ứng, (2) Antihistamine - đối kháng thụ thể H1, ngăn chặn tác dụng của histamine. Dẫn đến: giảm co thắt phế quản, giảm viêm, giảm triệu chứng hen và dị ứng. Tác dụng phòng ngừa hen, đặc biệt hen do dị ứng và hen do gắng sức. Không dùng cho cắt cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần. Có cả dạng uống và dạng hít. Dạng uống có thể gây buồn ngủ do tác dụng antihistamine.",
+        "monitoring": [
+            "Đáp ứng điều trị (giảm triệu chứng hen, giảm tần suất cơn cấp, giảm nhu cầu dùng SABA)",
+            "Buồn ngủ - tác dụng phụ phổ biến, đặc biệt dạng uống",
+            "Tần suất dùng SABA (nếu tăng → cần đánh giá lại điều trị)",
+            "Kỹ thuật hít (nếu dùng dạng hít)",
+            "Tăng cân (dạng uống)"
+        ],
+        "precautions": [
+            "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, ketotifen là thuốc phòng ngừa",
+            "Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì",
+            "Buồn ngủ - phổ biến, đặc biệt dạng uống. Thận trọng khi lái xe hoặc vận hành máy móc.",
+            "Tránh rượu và thuốc an thần - tăng buồn ngủ",
+            "Dùng đều đặn hàng ngày, không phải khi cần",
+            "Ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến (dạng hít), có thể giảm sau vài ngày",
+            "Súc miệng sau khi hít để giảm kích ứng",
+            "Có thể dùng cho trẻ em từ 3 tuổi trở lên (dạng uống) hoặc 6 tuổi trở lên (dạng hít)",
+            "Hiệu quả với hen do dị ứng và hen do gắng sức"
+        ],
+        "pharmacokinetics": {
+            "half_life": "21 giờ (dạng uống), 1-2 giờ (dạng hít)",
+            "onset": "Vài ngày đến vài tuần (tác dụng phòng ngừa)",
+            "duration": "12-24 giờ (dạng uống, dùng 2 lần/ngày), 6-12 giờ (dạng hít, dùng 2-4 lần/ngày)",
+            "protein_binding": "75%",
+            "clearance": "Gan: chuyển hóa qua CYP3A4, CYP2D6. Thận: bài tiết một phần. Hấp thu toàn thân ít từ dạng hít."
+        },
+        "storage": "Dạng uống: bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng hít (MDI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, không dùng cho cắt cơn cấp. Buồn ngủ có thể ảnh hưởng đến khả năng lái xe hoặc vận hành máy móc.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Rượu",
+                    "mechanism": "Tác dụng cộng dồn ức chế thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, giảm khả năng lái xe",
+                    "management": "Tránh rượu khi dùng ketotifen, đặc biệt dạng uống."
+                },
+                {
+                    "drug": "Thuốc an thần, thuốc ngủ (benzodiazepines, zolpidem, v.v.)",
+                    "mechanism": "Tác dụng cộng dồn ức chế thần kinh trung ương",
+                    "effect": "Tăng buồn ngủ, giảm khả năng lái xe",
+                    "management": "Thận trọng. Có thể cần giảm liều thuốc an thần hoặc tránh dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "MAO inhibitors",
+                    "mechanism": "Có thể tăng tác dụng antihistamine",
+                    "effect": "Tăng buồn ngủ, tăng tác dụng phụ",
+                    "management": "Thận trọng. Có thể cần giảm liều ketotifen."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng ketotifen",
+                "Hen phế quản cấp tính (không dùng cho cắt cơn cấp)"
+            ],
+            "tương_đối": [
+                "Có thai (category C) - thận trọng",
+                "Cho con bú - thận trọng",
+                "Trẻ em <3 tuổi (dạng uống) hoặc <6 tuổi (dạng hít) - chưa được nghiên cứu đầy đủ",
+                "Bệnh nhân cần tỉnh táo (lái xe, vận hành máy móc) - buồn ngủ có thể ảnh hưởng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Ketotifen là thuốc phân loại C. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Ketotifen có thể hấp thu toàn thân và qua nhau thai. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Ketotifen có thể hấp thu toàn thân và bài tiết vào sữa mẹ. Tuy nhiên, nồng độ trong sữa mẹ thấp và không có báo cáo về tác dụng phụ đáng kể ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú với thận trọng. Dùng liều thấp nhất hiệu quả."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Ketotifen chuyển hóa ở gan qua CYP3A4, CYP2D6. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ (đặc biệt buồn ngủ)."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Lú lẫn",
+                "Hạ huyết áp",
+                "Nhịp tim chậm",
+                "Co giật (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay ketotifen",
+                "Theo dõi dấu hiệu sinh tồn (huyết áp, nhịp tim, ý thức)",
+                "Hỗ trợ hô hấp nếu cần",
+                "Điều trị hạ huyết áp nếu cần (truyền dịch, vasopressor)",
+                "Điều trị co giật nếu có (benzodiazepine)",
+                "Theo dõi và điều trị triệu chứng"
+            ],
+            "monitoring": "Dấu hiệu sinh tồn (huyết áp, nhịp tim, ý thức), dấu hiệu ức chế thần kinh trung ương. Theo dõi ít nhất 24 giờ do half-life dài (21 giờ dạng uống)."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn",
+                "timing": "Dùng 2 lần/ngày (sáng và tối), đều đặn hàng ngày, không phải khi cần.",
+                "notes": "Buồn ngủ có thể ảnh hưởng đến khả năng lái xe. Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần."
+            },
+            "inhalation": {
+                "technique": "Dạng hít (MDI): Lắc kỹ trước khi dùng. Hít sâu và giữ hơi thở 10 giây. Đợi 30-60 giây trước khi dùng liều thứ hai (nếu cần).",
+                "timing": "Dùng 2-4 lần/ngày, đều đặn hàng ngày, không phải khi cần.",
+                "after_use": "Súc miệng và súc họng sau mỗi lần dùng để giảm kích ứng.",
+                "notes": "Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp. Tác dụng phát huy sau vài ngày đến vài tuần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Ketotifen (Zaditen)",
+                "UpToDate - Mast cell stabilizers in asthma",
+                "GINA Guidelines 2024: Asthma Management"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA approved, clinical trial data"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": []
+        },
+        "guideline_tags": [
+            "GINA Guidelines 2024 - Asthma Management",
+            "FDA Drug Information"
+        ]
+    }
 }
 
 __all__ = ['LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS']

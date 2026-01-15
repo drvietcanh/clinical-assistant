@@ -3596,4 +3596,363 @@ NSAIDS_DRUGS = {
                 "FDA Black Box Warning - Cardiovascular and GI risks",
             ]
     },
+    "Parecoxib": {
+        "group": "Analgesic - NSAID (COX-2 Selective, Injectable)",
+        "vietnamese_name": "Parecoxib, Dynastat",
+        "administration": ["IV", "IM"],
+        "indications": [
+            "Giảm đau sau phẫu thuật (postoperative pain)",
+            "Đau cấp tính (acute pain)"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng parecoxib hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Suy thận nặng (CrCl <30)",
+                "Suy gan nặng",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Bệnh tim mạch nặng"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-60) - thận trọng",
+                "Suy gan trung bình - thận trọng",
+                "Bệnh mạch vành, tiền sử nhồi máu cơ tim - tăng nguy cơ biến cố tim mạch"
+            ]
+        },
+        "dosage": {
+            "adult_postop": "40mg IV/IM, sau đó 20-40mg mỗi 6-12 giờ (tối đa 80mg/ngày)",
+            "adult_max": "80mg/ngày",
+            "adult_duration": "Tối đa 3 ngày",
+            "notes": "COX-2 selective, dạng tiêm. Dùng trong phẫu thuật để giảm đau sau mổ. Không dùng quá 3 ngày. Chuyển sang thuốc uống nếu cần điều trị lâu hơn."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều 50%",
+            "under_30": "CHỐNG CHỈ ĐỊNH (CrCl <30)"
+        },
+        "side_effects": [
+            "Tăng nguy cơ biến cố tim mạch (nhồi máu cơ tim, đột quỵ)",
+            "Tăng huyết áp",
+            "Phù",
+            "Suy thận",
+            "Chóng mặt",
+            "Đau đầu",
+            "Buồn nôn",
+            "Phản ứng tại chỗ tiêm (đau, đỏ, sưng)",
+            "Ít tác dụng phụ dạ dày hơn NSAID không chọn lọc"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Lithium: tăng nồng độ lithium",
+            "Methotrexate: tăng độc tính methotrexate"
+        ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": "Parecoxib là prodrug của valdecoxib (COX-2 selective inhibitor). Parecoxib được chuyển hóa nhanh thành valdecoxib trong cơ thể. Valdecoxib ức chế chọn lọc enzyme cyclooxygenase-2 (COX-2), giảm tổng hợp prostaglandin gây viêm và đau. Ít ức chế COX-1 (enzyme bảo vệ niêm mạc dạ dày) nên ít tác dụng phụ dạ dày hơn NSAID không chọn lọc. Tuy nhiên, vẫn có nguy cơ biến cố tim mạch (nhồi máu cơ tim, đột quỵ) tương tự các COX-2 selective khác. Dạng tiêm, dùng trong phẫu thuật để giảm đau sau mổ.",
+        "monitoring": [
+            "Dấu hiệu biến cố tim mạch (đau ngực, khó thở, yếu một bên)",
+            "Huyết áp (NSAID có thể tăng huyết áp)",
+            "Creatinine, BUN nếu dùng lâu dài hoặc bệnh nhân có nguy cơ",
+            "Dấu hiệu suy tim (giữ nước, phù)",
+            "INR nếu dùng với warfarin",
+            "Phản ứng tại chỗ tiêm"
+        ],
+        "precautions": [
+            "Tăng nguy cơ biến cố tim mạch - không dùng ở bệnh nhân có bệnh tim mạch nặng",
+            "Không dùng quá 3 ngày - chuyển sang thuốc uống nếu cần điều trị lâu hơn",
+            "Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp",
+            "Tránh dùng với ACE inhibitor/ARB (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Theo dõi INR nếu dùng với warfarin",
+            "Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể"
+        ],
+        "pharmacokinetics": {
+            "half_life": "8-11 giờ (valdecoxib sau chuyển hóa)",
+            "onset": "7-13 phút (nhanh)",
+            "duration": "6-12 giờ",
+            "protein_binding": "98%",
+            "metabolism": "Parecoxib được chuyển hóa nhanh thành valdecoxib (active metabolite) qua enzyme hydrolase. Valdecoxib chuyển hóa qua gan (CYP3A4, CYP2C9) thành các chất chuyển hóa hydroxyl hóa và glucuronide.",
+            "clearance": "Thận (thải trừ các chất chuyển hóa, <5% bài tiết dưới dạng không đổi)"
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh, tránh ánh sáng. Dung dịch pha loãng: bảo quản ở nhiệt độ phòng (15-30°C), dùng trong 24 giờ.",
+        "black_box_warnings": "Tăng nguy cơ biến cố tim mạch nghiêm trọng (nhồi máu cơ tim, đột quỵ) - có thể tử vong. Nguy cơ tăng ở bệnh nhân có bệnh tim mạch. Không dùng trong 3 tháng cuối thai kỳ. Không dùng quá 3 ngày.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX-2, tăng nguy cơ chảy máu",
+                    "effect": "Tăng nguy cơ chảy máu nặng, tăng INR",
+                    "management": "Tránh dùng đồng thời. Nếu phải dùng, theo dõi INR thường xuyên, giảm liều warfarin nếu cần"
+                },
+                {
+                    "drug": "ACE inhibitors, ARBs",
+                    "mechanism": "Giảm tổng hợp prostaglandin ở thận, giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN. Cân nhắc ngừng parecoxib nếu có dấu hiệu suy thận"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "Giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng độc tính",
+                    "management": "Theo dõi nồng độ lithium. Có thể cần giảm liều lithium."
+                }
+            ],
+            "minor": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ. Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa rõ bài tiết vào sữa mẹ. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, giảm liều 25-50%",
+            "severe": "CHỐNG CHỈ ĐỊNH (bệnh gan nặng)",
+            "notes": "Parecoxib chuyển hóa thành valdecoxib, sau đó chuyển hóa ở gan qua CYP3A4, CYP2C9. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Chóng mặt, nhức đầu",
+                "Lú lẫn, buồn ngủ",
+                "Hạ huyết áp",
+                "Suy thận cấp",
+                "Tăng nguy cơ biến cố tim mạch"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng parecoxib ngay",
+                "Theo dõi chức năng thận (creatinine, BUN), điện giải",
+                "Theo dõi huyết áp, nhịp tim",
+                "Truyền dịch nếu hạ huyết áp, suy thận",
+                "Theo dõi dấu hiệu biến cố tim mạch",
+                "Điều trị hỗ trợ triệu chứng"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, ý thức, creatinine, BUN, điện giải, dấu hiệu biến cố tim mạch. Theo dõi ít nhất 24 giờ do half-life dài (8-11 giờ)."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay."
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha loãng trong 2ml NaCl 0.9% hoặc nước cất",
+                "injection_rate": "Tiêm tĩnh mạch chậm (trong ít nhất 15 giây)",
+                "notes": "Tiêm tĩnh mạch chậm. Có thể tiêm bắp nếu cần. Không dùng quá 3 ngày."
+            },
+            "im": {
+                "injection_site": "Vùng cơ lớn (mông, đùi)",
+                "notes": "Tiêm bắp sâu. Có thể tiêm tĩnh mạch nếu cần. Không dùng quá 3 ngày."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Parecoxib (Dynastat)",
+                "UpToDate - Parecoxib: Drug information"
+            ],
+            "evidence_level": "High - FDA approved"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": True,
+            "organ_toxicity": ["GI", "renal", "cardiac"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["LFT", "RFT", "GI symptoms", "Blood pressure", "Cardiovascular symptoms"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Cardiovascular and GI risks",
+            "ISMP High Alert Medications - NSAIDs"
+        ]
+    },
+    "Valdecoxib": {
+        "group": "Analgesic - NSAID (COX-2 Selective)",
+        "vietnamese_name": "Valdecoxib, Bextra",
+        "administration": ["PO"],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp",
+            "Đau bụng kinh"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng valdecoxib hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Suy thận nặng",
+                "Suy gan nặng",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Bệnh tim mạch nặng"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan trung bình - thận trọng",
+                "Bệnh mạch vành, tiền sử nhồi máu cơ tim - tăng nguy cơ biến cố tim mạch"
+            ]
+        },
+        "dosage": {
+            "adult_pain": "10-20mg x 1-2 lần/ngày",
+            "adult_arthritis": "10mg x 1-2 lần/ngày",
+            "adult_max": "40mg/ngày",
+            "notes": "COX-2 selective, ít tác dụng phụ dạ dày hơn NSAID không chọn lọc. LƯU Ý: Đã ngưng dùng ở nhiều nơi (bao gồm Mỹ) do lo ngại về an toàn tim mạch và phản ứng da nghiêm trọng (Stevens-Johnson syndrome, toxic epidermal necrolysis)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều 25-50%",
+            "under_30": "Tránh dùng hoặc giảm liều mạnh. Theo dõi chức năng thận chặt chẽ"
+        },
+        "side_effects": [
+            "Tăng nguy cơ biến cố tim mạch (nhồi máu cơ tim, đột quỵ) - NGUY HIỂM",
+            "Phản ứng da nghiêm trọng (Stevens-Johnson syndrome, toxic epidermal necrolysis) - NGUY HIỂM, có thể tử vong",
+            "Tăng huyết áp",
+            "Phù",
+            "Suy thận",
+            "Chóng mặt",
+            "Đau đầu",
+            "Buồn nôn",
+            "Ít tác dụng phụ dạ dày hơn NSAID không chọn lọc"
+        ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Lithium: tăng nồng độ lithium",
+            "Methotrexate: tăng độc tính methotrexate"
+        ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": "Valdecoxib ức chế chọn lọc enzyme cyclooxygenase-2 (COX-2), giảm tổng hợp prostaglandin gây viêm và đau. Ít ức chế COX-1 (enzyme bảo vệ niêm mạc dạ dày) nên ít tác dụng phụ dạ dày hơn NSAID không chọn lọc. Tuy nhiên, có nguy cơ biến cố tim mạch (nhồi máu cơ tim, đột quỵ) và phản ứng da nghiêm trọng (Stevens-Johnson syndrome, toxic epidermal necrolysis) cao hơn các COX-2 selective khác. LƯU Ý: Đã ngưng dùng ở nhiều nơi (bao gồm Mỹ) do lo ngại về an toàn.",
+        "monitoring": [
+            "Dấu hiệu biến cố tim mạch (đau ngực, khó thở, yếu một bên) - QUAN TRỌNG",
+            "Phản ứng da nghiêm trọng (ban da, mụn nước, bong da) - QUAN TRỌNG, ngừng ngay nếu có",
+            "Huyết áp (NSAID có thể tăng huyết áp)",
+            "Creatinine, BUN nếu dùng lâu dài hoặc bệnh nhân có nguy cơ",
+            "Dấu hiệu suy tim (giữ nước, phù)",
+            "INR nếu dùng với warfarin"
+        ],
+        "precautions": [
+            "NGUY CƠ BIẾN CỐ TIM MẠCH NGHIÊM TRỌNG - không dùng ở bệnh nhân có bệnh tim mạch nặng",
+            "NGUY CƠ PHẢN ỨNG DA NGHIÊM TRỌNG - ngừng ngay nếu có ban da, mụn nước, bong da",
+            "ĐÃ NGƯNG DÙNG Ở NHIỀU NƠI - cân nhắc thuốc thay thế an toàn hơn",
+            "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày",
+            "Tránh dùng lâu dài ở bệnh nhân suy thận, suy tim, tăng huyết áp",
+            "Tránh dùng với ACE inhibitor/ARB (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Theo dõi INR nếu dùng với warfarin",
+            "Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể"
+        ],
+        "pharmacokinetics": {
+            "half_life": "8-11 giờ",
+            "onset": "30-60 phút",
+            "duration": "12-24 giờ",
+            "protein_binding": "98%",
+            "metabolism": "Gan (chuyển hóa qua CYP3A4, CYP2C9 thành các chất chuyển hóa hydroxyl hóa và glucuronide)",
+            "clearance": "Thận (thải trừ các chất chuyển hóa, <5% bài tiết dưới dạng không đổi)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": "Tăng nguy cơ biến cố tim mạch nghiêm trọng (nhồi máu cơ tim, đột quỵ) - có thể tử vong. Phản ứng da nghiêm trọng (Stevens-Johnson syndrome, toxic epidermal necrolysis) - có thể tử vong. Ngừng ngay nếu có phản ứng da. Không dùng trong 3 tháng cuối thai kỳ. LƯU Ý: Đã ngưng dùng ở nhiều nơi (bao gồm Mỹ) do lo ngại về an toàn.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX-2, tăng nguy cơ chảy máu",
+                    "effect": "Tăng nguy cơ chảy máu nặng, tăng INR",
+                    "management": "Tránh dùng đồng thời. Nếu phải dùng, theo dõi INR thường xuyên, giảm liều warfarin nếu cần"
+                },
+                {
+                    "drug": "ACE inhibitors, ARBs",
+                    "mechanism": "Giảm tổng hợp prostaglandin ở thận, giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN. Cân nhắc ngừng valdecoxib nếu có dấu hiệu suy thận"
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "Giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng độc tính",
+                    "management": "Theo dõi nồng độ lithium. Có thể cần giảm liều lithium."
+                }
+            ],
+            "minor": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ. Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa rõ bài tiết vào sữa mẹ. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, giảm liều 25-50%",
+            "severe": "CHỐNG CHỈ ĐỊNH (bệnh gan nặng)",
+            "notes": "Valdecoxib chuyển hóa ở gan qua CYP3A4, CYP2C9. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Chóng mặt, nhức đầu",
+                "Lú lẫn, buồn ngủ",
+                "Hạ huyết áp",
+                "Suy thận cấp",
+                "Tăng nguy cơ biến cố tim mạch",
+                "Phản ứng da nghiêm trọng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng valdecoxib ngay",
+                "Theo dõi chức năng thận (creatinine, BUN), điện giải",
+                "Theo dõi huyết áp, nhịp tim",
+                "Truyền dịch nếu hạ huyết áp, suy thận",
+                "Theo dõi dấu hiệu biến cố tim mạch",
+                "Điều trị phản ứng da nếu có (corticosteroid, hỗ trợ)",
+                "Điều trị hỗ trợ triệu chứng"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, ý thức, creatinine, BUN, điện giải, dấu hiệu biến cố tim mạch, phản ứng da. Theo dõi ít nhất 24 giờ do half-life dài (8-11 giờ)."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+            "notes": "Không có antidote đặc hiệu. Điều trị chủ yếu là hỗ trợ và điều trị triệu chứng. Ngừng thuốc ngay."
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày",
+                "timing": "Dùng 1-2 lần/ngày. Liều tối đa: 40mg/ngày.",
+                "notes": "LƯU Ý: Đã ngưng dùng ở nhiều nơi (bao gồm Mỹ) do lo ngại về an toàn tim mạch và phản ứng da nghiêm trọng. Cân nhắc thuốc thay thế an toàn hơn."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Valdecoxib (Bextra) - WITHDRAWN",
+                "UpToDate - Valdecoxib: Drug information"
+            ],
+            "evidence_level": "High - FDA approved (withdrawn in US due to safety concerns)"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": True,
+            "organ_toxicity": ["GI", "renal", "cardiac", "dermatologic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": True,
+            "requires_monitoring": ["LFT", "RFT", "GI symptoms", "Blood pressure", "Cardiovascular symptoms", "Skin reactions"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Cardiovascular and GI risks",
+            "FDA Black Box Warning - Serious skin reactions",
+            "WITHDRAWN in US due to safety concerns",
+            "ISMP High Alert Medications - NSAIDs"
+        ]
+    }
 }

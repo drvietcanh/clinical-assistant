@@ -615,6 +615,217 @@ JAK_INHIBITORS_DRUGS = {
             "ACG Guidelines - IBD"
         ]
     },
+    "Filgotinib": {
+        "group": "Rheumatology/Gastrointestinal - JAK Inhibitor (JAK1 Selective)",
+        "vietnamese_name": "Filgotinib, Jyseleca",
+        "administration": ["PO"],
+        "indications": [
+            "Viêm khớp dạng thấp (RA) – moderate đến severe sau thất bại DMARD khác",
+            "Viêm loét đại tràng (UC) – moderate đến severe"
+        ],
+        "contraindications": [
+            "Dị ứng với filgotinib hoặc bất kỳ thành phần nào",
+            "Nhiễm trùng nặng đang hoạt động (lao, nhiễm nấm xâm lấn, nhiễm trùng cơ hội)",
+            "Suy giảm miễn dịch nặng",
+            "Suy thận nặng (eGFR <15 ml/phút/1.73m²) hoặc đang lọc máu",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_ra": "200mg PO x 1 lần/ngày",
+            "adult_uc": "200mg PO x 1 lần/ngày",
+            "adult_renal_crcl_15_60": "100mg PO x 1 lần/ngày (giảm liều 50%)",
+            "adult_renal_crcl_under_15": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Uống với hoặc không có thức ın. Điều chỉnh liều theo chức năng thận. Filgotinib là JAK1 selective, ít tác dụng phụ hơn các JAK inhibitor không chọn lọc."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều (eGFR ≥60)",
+            "30_60": "Giảm liều 50% (100mg x 1 lần/ngày)",
+            "under_30": "CHỐNG CHỈ ĐỊNH (eGFR <15) hoặc tránh dùng",
+            "dialysis": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Filgotinib thải trừ chủ yếu qua thận. Cần giảm liều ở suy thận trung bình. CHỐNG CHỈ ĐỊNH ở suy thận nặng."
+        },
+        "side_effects": [
+            "Nhiễm trùng (đường hô hấp trên, herpes zoster) – phổ biến",
+            "Tăng lipid máu (LDL, HDL, triglycerides) – phổ biến",
+            "Tăng men gan (ALT, AST) – có thể nghiêm trọng",
+            "Giảm bạch cầu lympho, giảm hemoglobin",
+            "Huyết khối tĩnh mạch (DVT, PE) – hiếm nhưng nghiêm trọng",
+            "Nguy cơ ung thư (lymphoma, ung thư da không melanoma) – hiếm",
+            "Nhức đầu",
+            "Buồn nôn",
+            "Tiêu chảy"
+        ],
+        "interactions": [
+            "Các thuốc ức chế miễn dịch mạnh khác (biologic DMARD, azathioprine, cyclosporine): tăng nguy cơ nhiễm trùng",
+            "Vaccine sống: chống chỉ định trong khi dùng và một thời gian sau khi ngừng",
+            "Strong CYP3A4 inhibitors: có thể tăng nồng độ filgotinib",
+            "Strong CYP3A4 inducers: có thể giảm nồng độ filgotinib"
+        ],
+        "pregnancy": "C – nhìn chung tránh dùng; cân nhắc thay thế an toàn hơn",
+        "mechanism_of_action": (
+            "Filgotinib là chất ức chế chọn lọc Janus kinase 1 (JAK1 selective inhibitor). "
+            "JAK (Janus kinase) là một nhóm enzyme tyrosine kinase quan trọng trong quá trình truyền tín hiệu cytokine. "
+            "Các cytokine (như IL-6, IL-12, IL-23, IFN-γ) gắn với thụ thể trên tế bào → kích hoạt JAK → "
+            "phosphoryl hóa STAT (signal transducer and activator of transcription) → STAT di chuyển vào nhân → "
+            "kích hoạt biểu hiện gen → tăng viêm và đáp ứng miễn dịch. "
+            "Trong RA và UC, có sự kích hoạt quá mức của JAK-STAT pathway, dẫn đến viêm mạn tính. "
+            "Filgotinib ức chế chọn lọc JAK1 (không ức chế JAK2, JAK3) → ức chế JAK-STAT pathway → "
+            "giảm sản xuất các cytokine gây viêm → giảm viêm và triệu chứng bệnh. "
+            "ĐẶC ĐIỂM: (1) JAK1 selective - ít tác dụng phụ hơn các JAK inhibitor không chọn lọc (như tofacitinib), "
+            "(2) Ít gây giảm bạch cầu và thiếu máu hơn (do không ức chế JAK2), "
+            "(3) Hiệu quả tương đương các JAK inhibitor khác trong RA và UC, "
+            "(4) Dùng 1 lần/ngày, tiện lợi."
+        ),
+        "monitoring": [
+            "Số lượng bạch cầu trung tính (ANC) - theo dõi neutropenia",
+            "Số lượng bạch cầu lympho - theo dõi lymphopenia",
+            "Hemoglobin - theo dõi anemia",
+            "Cholesterol (LDL, HDL, triglycerides) - theo dõi tăng cholesterol",
+            "Chức năng gan (ALT, AST) - theo dõi tăng men gan",
+            "Chức năng thận (creatinine, eGFR) - điều chỉnh liều ở suy thận",
+            "Dấu hiệu nhiễm trùng (sốt, ho, khó thở, tiểu buốt, v.v.)",
+            "Dấu hiệu huyết khối (đau ngực, khó thở, đau chân, sưng chân)",
+            "Dấu hiệu ung thư (hạch to, sụt cân, v.v.)",
+            "Tuberculosis (TB) screening trước khi bắt đầu điều trị"
+        ],
+        "precautions": [
+            "NGUY CƠ NHIỄM TRÙNG - tăng nguy cơ nhiễm trùng do ức chế miễn dịch",
+            "Cần hoàn thành tất cả vaccine trước khi bắt đầu điều trị (ít nhất 4-6 tuần trước)",
+            "CHỐNG CHỈ ĐỊNH vaccine sống trong và sau điều trị (ít nhất 4-6 tuần sau liều cuối)",
+            "NGUY CƠ HUYẾT KHỐI - đặc biệt ở bệnh nhân có yếu tố nguy cơ (tuổi >50, hút thuốc, béo phì, tiền sử huyết khối)",
+            "NGUY CƠ UNG THƯ - tăng nguy cơ lymphoma và ung thư da không phải melanoma",
+            "NGUY CƠ LAO - cần screening TB trước khi bắt đầu điều trị",
+            "Ngừng filgotinib nếu có nhiễm trùng nặng",
+            "Thận trọng ở bệnh nhân có tiền sử nhiễm trùng tái phát",
+            "Theo dõi chức năng gan định kỳ - tăng men gan có thể nghiêm trọng",
+            "Điều chỉnh liều ở suy thận - giảm liều 50% ở eGFR 15-60, CHỐNG CHỈ ĐỊNH ở eGFR <15"
+        ],
+        "pharmacokinetics": {
+            "half_life": "~6-7 giờ",
+            "onset": "Vài tuần (tác dụng chậm)",
+            "duration": "Trung bình (do half-life trung bình)",
+            "protein_binding": "~54%",
+            "metabolism": "Gan (chuyển hóa qua CYP3A4 chủ yếu, một phần CYP2C8)",
+            "clearance": "Thận (thải trừ chủ yếu, ~70% dưới dạng không đổi), gan (chuyển hóa một phần). Cần điều chỉnh liều ở suy thận."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp.",
+        "black_box_warnings": "NHIỄM TRÙNG NẶNG - tăng nguy cơ nhiễm trùng nghiêm trọng, đặc biệt lao và nhiễm trùng cơ hội. Test lao trước khi dùng. Điều trị dự phòng lao nếu cần. Ngừng nếu có nhiễm trùng nặng. HUYẾT KHỐI - tăng nguy cơ huyết khối tĩnh mạch (DVT, PE), đặc biệt ở bệnh nhân có yếu tố nguy cơ. UNG THƯ - tăng nguy cơ lymphoma và ung thư da không phải melanoma. TĂNG MEN GAN - có thể nghiêm trọng. Theo dõi chức năng gan định kỳ.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Các thuốc ức chế miễn dịch mạnh khác (biologic DMARD, azathioprine, cyclosporine)",
+                    "mechanism": "Tác dụng cộng dồn ức chế miễn dịch",
+                    "effect": "Tăng nguy cơ nhiễm trùng, đặc biệt nhiễm trùng cơ hội",
+                    "management": "Thận trọng. Cần phòng ngừa nhiễm trùng chặt chẽ (PCP prophylaxis, v.v.)."
+                },
+                {
+                    "drug": "Vaccines (sống)",
+                    "mechanism": "Filgotinib làm giảm đáp ứng miễn dịch",
+                    "effect": "Giảm hiệu quả vaccine, tăng nguy cơ nhiễm trùng từ vaccine sống",
+                    "management": "CHỐNG CHỈ ĐỊNH vaccine sống trong và sau điều trị. Hoãn vaccine sống ít nhất 4-6 tuần sau liều cuối."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Strong CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir)",
+                    "mechanism": "Ức chế CYP3A4, giảm chuyển hóa filgotinib",
+                    "effect": "Tăng nồng độ filgotinib, tăng tác dụng phụ",
+                    "management": "Thận trọng. Có thể cần giảm liều filgotinib."
+                },
+                {
+                    "drug": "Strong CYP3A4 inducers (rifampin, carbamazepine, phenytoin)",
+                    "mechanism": "Cảm ứng CYP3A4, tăng chuyển hóa filgotinib",
+                    "effect": "Giảm nồng độ filgotinib, giảm hiệu quả",
+                    "management": "Thận trọng. Có thể cần tăng liều filgotinib."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng với filgotinib hoặc bất kỳ thành phần nào",
+                "Nhiễm trùng nặng đang hoạt động (lao, nhiễm nấm xâm lấn, nhiễm trùng cơ hội)",
+                "Suy giảm miễn dịch nặng",
+                "Suy thận nặng (eGFR <15 ml/phút/1.73m²) hoặc đang lọc máu",
+                "Suy gan nặng"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (eGFR 15-60) - giảm liều 50%",
+                "Suy gan trung bình - thận trọng",
+                "Tiền sử nhiễm trùng tái phát - tăng nguy cơ",
+                "Tiền sử huyết khối - tăng nguy cơ",
+                "Có thai (category C) - tránh dùng nếu có thể"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Filgotinib là FDA category C. Có thể dùng trong thai kỳ khi cần thiết (RA, UC nặng). Một số nghiên cứu cho thấy có thể có nguy cơ, nhưng cần cân nhắc lợi ích/rủi ro. Cần theo dõi chặt chẽ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa rõ bài tiết vào sữa mẹ. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho bú hoặc không dùng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "CHỐNG CHỈ ĐỊNH (bệnh gan nặng)",
+            "notes": "Filgotinib chuyển hóa ở gan qua CYP3A4. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tăng nguy cơ nhiễm trùng",
+                "Giảm bạch cầu trung tính/lympho nặng",
+                "Tăng men gan nặng",
+                "Tăng nguy cơ huyết khối"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Theo dõi dấu hiệu nhiễm trùng chặt chẽ",
+                "Điều trị nhiễm trùng nếu có",
+                "Theo dõi số lượng bạch cầu và hemoglobin",
+                "Theo dõi chức năng gan",
+                "Xử trí huyết khối nếu có (anticoagulation nếu cần)"
+            ],
+            "monitoring": "Dấu hiệu nhiễm trùng, số lượng bạch cầu, chức năng gan, dấu hiệu huyết khối"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể dùng với hoặc không có thức ăn",
+                "timing": "Uống 1 lần/ngày. Điều chỉnh liều theo chức năng thận (200mg nếu eGFR ≥60, 100mg nếu eGFR 15-60).",
+                "notes": "Uống với hoặc không có thức ăn. Điều chỉnh liều theo chức năng thận. Filgotinib là JAK1 selective, ít tác dụng phụ hơn các JAK inhibitor không chọn lọc."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Filgotinib (Jyseleca)",
+                "UpToDate - Filgotinib: Drug information",
+                "Lexicomp - Filgotinib monograph",
+                "ACR 2021 Rheumatoid Arthritis Guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved, large RCTs showing benefit in RA and UC"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["hepatic"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["CBC", "LFT", "Lipids", "TB screening", "Renal function"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Serious infections, thrombosis, malignancy, hepatotoxicity",
+            "ACR 2021 Rheumatoid Arthritis Guidelines",
+            "ACG Guidelines - IBD"
+        ]
+    }
 
 }
 
