@@ -21,10 +21,29 @@ ALPHA_GLUCOSIDASE_INHIBITORS_DRUGS = {
             "Suy thận nặng (CrCl <25)"
         ],
         "dosage": {
-            "adult_start": "25mg x 3 lần/ngày với bữa ăn",
-            "adult_usual": "50-100mg x 3 lần/ngày với bữa ăn",
+            "adult_start": "25mg PO x 3 lần/ngày với bữa ăn (ngay trước hoặc trong bữa ăn)",
+            "adult_usual": "50-100mg PO x 3 lần/ngày với bữa ăn. Thường 50mg x 3 lần/ngày, có thể tăng lên 100mg x 3 lần/ngày nếu cần.",
             "adult_max": "100mg x 3 lần/ngày (300mg/ngày)",
-            "notes": "Uống với bữa ăn (ngay trước hoặc trong bữa ăn). Bắt đầu với liều thấp để giảm tác dụng phụ tiêu hóa. Tác dụng chậm (2-4 tuần)."
+            "dm_t2": "Khởi đầu 25mg PO x 3 lần/ngày với bữa ăn (ngay trước hoặc trong bữa ăn) để giảm tác dụng phụ tiêu hóa. Tăng dần mỗi 2-4 tuần: 50mg x 3 lần/ngày, sau đó 100mg x 3 lần/ngày nếu cần và dung nạp tốt. Tối đa 100mg x 3 lần/ngày (300mg/ngày).",
+            "elderly": "Khởi đầu 25mg PO x 3 lần/ngày với bữa ăn, tăng dần chậm hơn. Người cao tuổi nhạy cảm hơn với tác dụng phụ tiêu hóa (đầy hơi, chướng bụng, tiêu chảy).",
+            "pregnancy": "Category B - An toàn trong thai kỳ. Có thể dùng nếu lợi ích > nguy cơ.",
+            "renal_adjustment_dosage": {
+                "normal": "50-100mg PO x 3 lần/ngày với bữa ăn (CrCl ≥60)",
+                "30_60": "Thận trọng, có thể cần giảm liều. 25-50mg PO x 3 lần/ngày với bữa ăn (CrCl 30-60). Theo dõi chức năng thận.",
+                "under_30": "CHỐNG CHỈ ĐỊNH - Không dùng nếu CrCl <25 (CrCl <30)",
+                "dialysis": "CHỐNG CHỈ ĐỊNH"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "50-100mg PO x 3 lần/ngày với bữa ăn. Thận trọng, theo dõi chức năng gan.",
+                "moderate": "Thận trọng, có thể cần giảm liều. 25-50mg PO x 3 lần/ngày với bữa ăn. Theo dõi chức năng gan chặt chẽ.",
+                "severe": "CHỐNG CHỈ ĐỊNH - Suy gan nặng. Không dùng ở suy gan nặng."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "3 lần/ngày (với mỗi bữa ăn chính)",
+            "with_food": "Uống với bữa ăn (ngay trước hoặc trong bữa ăn). QUAN TRỌNG: Phải uống với bữa ăn để có tác dụng.",
+            "timing": "Uống 3 lần/ngày: 25-100mg với bữa sáng, 25-100mg với bữa trưa, 25-100mg với bữa tối. Uống ngay trước hoặc trong bữa ăn (khi bắt đầu ăn). Uống cùng giờ mỗi ngày.",
+            "titration": "Tăng liều từ từ để giảm tác dụng phụ tiêu hóa: Tuần 1-2: 25mg x 3 lần/ngày. Tuần 3-4: 50mg x 3 lần/ngày (nếu dung nạp tốt). Tuần 5-6: 100mg x 3 lần/ngày (nếu cần và dung nạp tốt). Đánh giá hiệu quả sau mỗi 2-4 tuần. Tác dụng chậm (2-4 tuần) - cần kiên nhẫn.",
+            "notes": "Uống với bữa ăn (ngay trước hoặc trong bữa ăn) - QUAN TRỌNG. Bắt đầu với liều thấp (25mg x 3 lần/ngày) để giảm tác dụng phụ tiêu hóa (đầy hơi, chướng bụng, tiêu chảy - rất phổ biến 30-50%, thường giảm sau 2-4 tuần). Tác dụng chậm (2-4 tuần) - cần kiên nhẫn. CHỐNG CHỈ ĐỊNH ở bệnh viêm ruột, tắc ruột, suy gan nặng, suy thận nặng (CrCl <25). Hạ đường huyết khi dùng với insulin hoặc sulfonylurea - cần dùng glucose (KHÔNG dùng sucrose vì acarbose ức chế phân hủy sucrose)."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
@@ -198,10 +217,29 @@ ALPHA_GLUCOSIDASE_INHIBITORS_DRUGS = {
             "Suy thận nặng (CrCl <25)"
         ],
         "dosage": {
-            "adult_start": "25mg x 3 lần/ngày với bữa ăn",
-            "adult_usual": "50-100mg x 3 lần/ngày với bữa ăn",
+            "adult_start": "25mg PO x 3 lần/ngày với bữa ăn (ngay trước hoặc trong bữa ăn)",
+            "adult_usual": "50-100mg PO x 3 lần/ngày với bữa ăn. Thường 50mg x 3 lần/ngày, có thể tăng lên 100mg x 3 lần/ngày nếu cần.",
             "adult_max": "100mg x 3 lần/ngày (300mg/ngày)",
-            "notes": "Uống với bữa ăn (ngay trước hoặc trong bữa ăn). Bắt đầu với liều thấp để giảm tác dụng phụ tiêu hóa. Tác dụng chậm (2-4 tuần)."
+            "dm_t2": "Khởi đầu 25mg PO x 3 lần/ngày với bữa ăn (ngay trước hoặc trong bữa ăn) để giảm tác dụng phụ tiêu hóa. Tăng dần mỗi 2-4 tuần: 50mg x 3 lần/ngày, sau đó 100mg x 3 lần/ngày nếu cần và dung nạp tốt. Tối đa 100mg x 3 lần/ngày (300mg/ngày).",
+            "elderly": "Khởi đầu 25mg PO x 3 lần/ngày với bữa ăn, tăng dần chậm hơn. Người cao tuổi nhạy cảm hơn với tác dụng phụ tiêu hóa (đầy hơi, chướng bụng, tiêu chảy).",
+            "pregnancy": "Category B - An toàn trong thai kỳ. Có thể dùng nếu lợi ích > nguy cơ.",
+            "renal_adjustment_dosage": {
+                "normal": "50-100mg PO x 3 lần/ngày với bữa ăn (CrCl ≥60)",
+                "30_60": "Thận trọng, có thể cần giảm liều. 25-50mg PO x 3 lần/ngày với bữa ăn (CrCl 30-60). Theo dõi chức năng thận.",
+                "under_30": "CHỐNG CHỈ ĐỊNH - Không dùng nếu CrCl <25 (CrCl <30)",
+                "dialysis": "CHỐNG CHỈ ĐỊNH"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "50-100mg PO x 3 lần/ngày với bữa ăn. Thận trọng, theo dõi chức năng gan.",
+                "moderate": "Thận trọng, có thể cần giảm liều. 25-50mg PO x 3 lần/ngày với bữa ăn. Theo dõi chức năng gan chặt chẽ.",
+                "severe": "CHỐNG CHỈ ĐỊNH - Suy gan nặng. Không dùng ở suy gan nặng."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "3 lần/ngày (với mỗi bữa ăn chính)",
+            "with_food": "Uống với bữa ăn (ngay trước hoặc trong bữa ăn). QUAN TRỌNG: Phải uống với bữa ăn để có tác dụng.",
+            "timing": "Uống 3 lần/ngày: 25-100mg với bữa sáng, 25-100mg với bữa trưa, 25-100mg với bữa tối. Uống ngay trước hoặc trong bữa ăn (khi bắt đầu ăn). Uống cùng giờ mỗi ngày.",
+            "titration": "Tăng liều từ từ để giảm tác dụng phụ tiêu hóa: Tuần 1-2: 25mg x 3 lần/ngày. Tuần 3-4: 50mg x 3 lần/ngày (nếu dung nạp tốt). Tuần 5-6: 100mg x 3 lần/ngày (nếu cần và dung nạp tốt). Đánh giá hiệu quả sau mỗi 2-4 tuần. Tác dụng chậm (2-4 tuần) - cần kiên nhẫn.",
+            "notes": "Uống với bữa ăn (ngay trước hoặc trong bữa ăn) - QUAN TRỌNG. Bắt đầu với liều thấp (25mg x 3 lần/ngày) để giảm tác dụng phụ tiêu hóa (đầy hơi, chướng bụng, tiêu chảy - rất phổ biến 30-50%, thường giảm sau 2-4 tuần). Tác dụng chậm (2-4 tuần) - cần kiên nhẫn. CHỐNG CHỈ ĐỊNH ở bệnh viêm ruột, tắc ruột, suy gan nặng, suy thận nặng (CrCl <25). Hạ đường huyết khi dùng với insulin hoặc sulfonylurea - cần dùng glucose (KHÔNG dùng sucrose vì miglitol ức chế phân hủy sucrose). Miglitol hấp thu vào máu nhiều hơn acarbose (50-60% so với <2%)."
         },
         "renal_adjustment": {
             "normal": "Không đổi",

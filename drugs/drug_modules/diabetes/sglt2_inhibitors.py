@@ -30,23 +30,33 @@ SGLT2_INHIBITORS_DRUGS = {
             "Lọc máu"
     ],
         "dosage": {
-            "dm_t2": "Khởi đầu 10mg x 1 lần/sáng. Có thể tăng lên 25mg nếu cần.",
-            "heart_failure": "10mg x 1 lần/ngày (không phụ thuộc đái tháo đường).",
-            "ckd": "10mg x 1 lần/ngày (eGFR ≥20, không phụ thuộc đái tháo đường).",
-            "adult_start": "10mg x 1 lần/ngày",
-            "adult_usual": "10-25mg x 1 lần/ngày",
+            "adult_start": "10mg PO x 1 lần/ngày vào buổi sáng",
+            "adult_usual": "10-25mg PO x 1 lần/ngày vào buổi sáng. Thường 10mg/ngày, có thể tăng lên 25mg nếu cần.",
             "adult_max": "25mg/ngày",
-            "elderly": "Khởi đầu 10mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ (mất nước, hạ huyết áp).",
+            "dm_t2": "Khởi đầu 10mg PO x 1 lần/ngày vào buổi sáng. Có thể tăng lên 25mg sau ít nhất 2-4 tuần nếu cần và dung nạp tốt. Tối đa 25mg/ngày.",
+            "heart_failure": "10mg PO x 1 lần/ngày (không phụ thuộc đái tháo đường). Dựa trên EMPEROR-Reduced và EMPEROR-Preserved trials. Giảm tử vong tim mạch và nhập viện do suy tim ở cả HFrEF và HFpEF.",
+            "ckd": "10mg PO x 1 lần/ngày (eGFR ≥20, không phụ thuộc đái tháo đường). Dựa trên EMPA-KIDNEY trial. Làm chậm tiến triển bệnh thận mạn và giảm biến cố tim mạch. CHỐNG CHỈ ĐỊNH nếu eGFR <20.",
+            "elderly": "Khởi đầu 10mg PO x 1 lần/ngày vào buổi sáng, tăng dần chậm. Người cao tuổi nhạy cảm hơn với tác dụng phụ (mất nước, hạ huyết áp). Theo dõi huyết áp và thể tích dịch chặt chẽ.",
+            "pregnancy": "Không khuyến nghị trong thai kỳ. Insulin là lựa chọn ưu tiên trong thai kỳ.",
             "renal_adjustment_dosage": {
-                "normal": "10-25mg x 1 lần/ngày",
-                "30_60": "10mg x 1 lần/ngày (eGFR ≥30), có thể điều chỉnh liều",
-                "under_30": "10mg x 1 lần/ngày (eGFR ≥20), CHỐNG CHỈ ĐỊNH nếu eGFR <20",
+                "normal": "10-25mg PO x 1 lần/ngày (eGFR ≥60)",
+                "45_60": "10mg PO x 1 lần/ngày (eGFR 45-60). Có thể tăng lên 25mg nếu cần và dung nạp tốt.",
+                "30_45": "10mg PO x 1 lần/ngày (eGFR 30-45). Không tăng liều lên 25mg. Theo dõi chức năng thận thường xuyên.",
+                "20_30": "10mg PO x 1 lần/ngày (eGFR 20-30). CHỐNG CHỈ ĐỊNH nếu eGFR <20. Theo dõi chức năng thận rất chặt chẽ.",
+                "under_20": "CHỐNG CHỈ ĐỊNH (eGFR <20)",
                 "dialysis": "CHỐNG CHỈ ĐỊNH"
             },
-            "administration_route": "PO",
+            "hepatic_adjustment_dosage": {
+                "mild": "10-25mg PO x 1 lần/ngày. Không cần điều chỉnh liều đặc biệt.",
+                "moderate": "10-25mg PO x 1 lần/ngày. Không cần điều chỉnh liều đặc biệt. Theo dõi chức năng gan.",
+                "severe": "Thận trọng, có thể cần giảm liều. Khởi đầu 10mg/ngày, tăng dần chậm. Theo dõi chức năng gan chặt chẽ."
+            },
+            "administration_route": "PO (uống)",
             "frequency": "1 lần/ngày",
-            "with_food": "Có thể uống đói hoặc no",
-            "notes": """Uống buổi sáng, có thể uống đói hoặc no. Tác dụng giảm đường huyết nhẹ (HbA1c ~0.5-0.8%) nhưng lợi ích tim mạch và thận rất lớn. CHỐNG CHỈ ĐỊNH nếu eGFR <20."""
+            "with_food": "Có thể uống với hoặc không thức ăn. Uống bất kỳ lúc nào trong ngày, nhưng nên uống vào buổi sáng để tránh đi tiểu đêm.",
+            "timing": "Uống 1 lần/ngày vào buổi sáng. Uống cùng giờ mỗi ngày để dễ nhớ. Có thể uống đói hoặc no. Uống với nhiều nước để giảm nguy cơ nhiễm trùng đường tiết niệu.",
+            "titration": "Tăng liều từ từ: Tuần 1-4: 10mg/ngày. Tuần 5+: 25mg/ngày (nếu cần và dung nạp tốt). Đánh giá hiệu quả sau mỗi 2-4 tuần. Không tăng liều nếu eGFR <45.",
+            "notes": "Uống buổi sáng, có thể uống đói hoặc no. Tác dụng giảm đường huyết nhẹ (HbA1c ~0.5-0.8%) nhưng lợi ích tim mạch và thận rất lớn. CHỐNG CHỈ ĐỊNH nếu eGFR <20. Chỉ định mở rộng: Suy tim (HFrEF và HFpEF) và bệnh thận mạn (CKD) không phụ thuộc đái tháo đường. Ngừng thuốc khi bệnh nhân ốm nặng, nhịn ăn, phẫu thuật để tránh DKA."
         },
         "side_effects": [
             "Nhiễm nấm âm đạo (Phụ nữ - rất phổ biến ~10%)",
@@ -245,10 +255,32 @@ SGLT2_INHIBITORS_DRUGS = {
             "Bệnh thận mạn (CKD) - Chỉ định mới"
     ],
         "dosage": {
-            "dm_t2": "Khởi đầu 5mg x 1 lần/sáng. Có thể tăng lên 10mg nếu cần.",
-            "heart_failure": "10mg x 1 lần/ngày.",
-            "ckd": "10mg x 1 lần/ngày.",
-            "notes": "Uống buổi sáng. Tương tự Empagliflozin về cơ chế và tác dụng phụ.",
+            "adult_start": "5mg PO x 1 lần/ngày vào buổi sáng",
+            "adult_usual": "5-10mg PO x 1 lần/ngày vào buổi sáng. Thường 5mg/ngày, có thể tăng lên 10mg nếu cần.",
+            "adult_max": "10mg/ngày",
+            "dm_t2": "Khởi đầu 5mg PO x 1 lần/ngày vào buổi sáng. Có thể tăng lên 10mg sau ít nhất 2-4 tuần nếu cần và dung nạp tốt. Tối đa 10mg/ngày.",
+            "heart_failure": "10mg PO x 1 lần/ngày (không phụ thuộc đái tháo đường). Dựa trên DAPA-HF (HFrEF), DELIVER (HFpEF) trials. Giảm tử vong tim mạch và nhập viện do suy tim ở cả HFrEF, HFmrEF, và HFpEF.",
+            "ckd": "10mg PO x 1 lần/ngày (eGFR ≥25, không phụ thuộc đái tháo đường). Dựa trên DAPA-CKD trial. Làm chậm tiến triển bệnh thận mạn và giảm biến cố tim mạch. CHỐNG CHỈ ĐỊNH nếu eGFR <25.",
+            "elderly": "Khởi đầu 5mg PO x 1 lần/ngày vào buổi sáng, tăng dần chậm. Người cao tuổi nhạy cảm hơn với tác dụng phụ (mất nước, hạ huyết áp).",
+            "pregnancy": "Không khuyến nghị trong thai kỳ. Insulin là lựa chọn ưu tiên trong thai kỳ.",
+            "renal_adjustment_dosage": {
+                "normal": "5-10mg PO x 1 lần/ngày (eGFR ≥60)",
+                "45_60": "5mg PO x 1 lần/ngày (eGFR 45-60). Có thể tăng lên 10mg nếu cần và dung nạp tốt.",
+                "25_45": "5mg PO x 1 lần/ngày (eGFR 25-45). Không tăng liều lên 10mg. Theo dõi chức năng thận thường xuyên.",
+                "under_25": "CHỐNG CHỈ ĐỊNH (eGFR <25)",
+                "dialysis": "CHỐNG CHỈ ĐỊNH"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "5-10mg PO x 1 lần/ngày. Không cần điều chỉnh liều đặc biệt.",
+                "moderate": "5-10mg PO x 1 lần/ngày. Không cần điều chỉnh liều đặc biệt. Theo dõi chức năng gan.",
+                "severe": "Thận trọng, có thể cần giảm liều. Khởi đầu 5mg/ngày, tăng dần chậm. Theo dõi chức năng gan chặt chẽ."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn. Uống bất kỳ lúc nào trong ngày, nhưng nên uống vào buổi sáng để tránh đi tiểu đêm.",
+            "timing": "Uống 1 lần/ngày vào buổi sáng. Uống cùng giờ mỗi ngày để dễ nhớ. Có thể uống đói hoặc no. Uống với nhiều nước để giảm nguy cơ nhiễm trùng đường tiết niệu.",
+            "titration": "Tăng liều từ từ: Tuần 1-4: 5mg/ngày. Tuần 5+: 10mg/ngày (nếu cần và dung nạp tốt). Đánh giá hiệu quả sau mỗi 2-4 tuần. Không tăng liều nếu eGFR <45.",
+            "notes": "Uống buổi sáng. Tương tự Empagliflozin về cơ chế và tác dụng phụ. Chỉ định mở rộng: Suy tim (HFrEF, HFmrEF, HFpEF) và bệnh thận mạn (CKD) không phụ thuộc đái tháo đường. CHỐNG CHỈ ĐỊNH nếu eGFR <25. Ngừng thuốc khi bệnh nhân ốm nặng, nhịn ăn, phẫu thuật để tránh DKA."
         },
         "side_effects": [
             "Nhiễm nấm âm đạo (Phụ nữ)",
@@ -440,8 +472,32 @@ SGLT2_INHIBITORS_DRUGS = {
             "Giảm nguy cơ biến cố tim mạch ở bệnh nhân đái tháo đường type 2 có bệnh tim mạch"
     ],
         "dosage": {
-            "dm_t2": "Khởi đầu 100mg x 1 lần/sáng trước bữa ăn đầu tiên. Có thể tăng lên 300mg nếu eGFR ≥60.",
-            "notes": "Uống trước bữa ăn đầu tiên trong ngày. Không tăng liều nếu eGFR <60.",
+            "adult_start": "100mg PO x 1 lần/ngày trước bữa ăn đầu tiên",
+            "adult_usual": "100-300mg PO x 1 lần/ngày trước bữa ăn đầu tiên. Thường 100mg/ngày, có thể tăng lên 300mg nếu eGFR ≥60 và cần.",
+            "adult_max": "300mg/ngày (chỉ khi eGFR ≥60)",
+            "dm_t2": "Khởi đầu 100mg PO x 1 lần/ngày trước bữa ăn đầu tiên. Có thể tăng lên 300mg sau ít nhất 2-4 tuần nếu eGFR ≥60 và cần. Tối đa 300mg/ngày (chỉ khi eGFR ≥60). Không tăng liều nếu eGFR <60.",
+            "cardiovascular_benefit": "100mg PO x 1 lần/ngày (CANVAS trial) - giảm biến cố tim mạch lớn ở bệnh nhân đái tháo đường type 2 có bệnh tim mạch hoặc yếu tố nguy cơ tim mạch.",
+            "ckd_benefit": "100mg PO x 1 lần/ngày (CREDENCE trial) - làm chậm tiến triển bệnh thận mạn ở bệnh nhân đái tháo đường type 2 có bệnh thận mạn.",
+            "elderly": "Khởi đầu 100mg PO x 1 lần/ngày trước bữa ăn đầu tiên, tăng dần chậm. Người cao tuổi nhạy cảm hơn với tác dụng phụ (mất nước, hạ huyết áp). Không tăng liều lên 300mg nếu eGFR <60.",
+            "pregnancy": "Không khuyến nghị trong thai kỳ. Insulin là lựa chọn ưu tiên trong thai kỳ.",
+            "renal_adjustment_dosage": {
+                "normal": "100-300mg PO x 1 lần/ngày (eGFR ≥60). Có thể tăng lên 300mg nếu cần.",
+                "45_60": "100mg PO x 1 lần/ngày (eGFR 45-60). KHÔNG tăng liều lên 300mg. Theo dõi chức năng thận thường xuyên.",
+                "30_45": "100mg PO x 1 lần/ngày (eGFR 30-45). KHÔNG tăng liều lên 300mg. Theo dõi chức năng thận thường xuyên.",
+                "under_30": "CHỐNG CHỈ ĐỊNH (eGFR <30)",
+                "dialysis": "CHỐNG CHỈ ĐỊNH"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "100-300mg PO x 1 lần/ngày (nếu eGFR ≥60). Không cần điều chỉnh liều đặc biệt.",
+                "moderate": "100mg PO x 1 lần/ngày. Không cần điều chỉnh liều đặc biệt. Theo dõi chức năng gan.",
+                "severe": "Thận trọng, có thể cần giảm liều. Khởi đầu 100mg/ngày, không tăng liều. Theo dõi chức năng gan chặt chẽ."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "1 lần/ngày",
+            "with_food": "Uống trước bữa ăn đầu tiên trong ngày. Uống với nhiều nước để giảm nguy cơ nhiễm trùng đường tiết niệu.",
+            "timing": "Uống 1 lần/ngày trước bữa ăn đầu tiên trong ngày (thường buổi sáng). Uống cùng giờ mỗi ngày để dễ nhớ. Uống với nhiều nước.",
+            "titration": "Tăng liều từ từ: Tuần 1-4: 100mg/ngày. Tuần 5+: 300mg/ngày (chỉ nếu eGFR ≥60 và cần). Đánh giá hiệu quả sau mỗi 2-4 tuần. KHÔNG tăng liều nếu eGFR <60.",
+            "notes": "Uống trước bữa ăn đầu tiên trong ngày. Không tăng liều nếu eGFR <60. Lưu ý: Có cảnh báo FDA về nguy cơ gãy xương và cắt cụt chi dưới (hiếm, chủ yếu ở bệnh nhân có bệnh mạch máu ngoại vi). Ngừng thuốc nếu có loét chân, nhiễm trùng chân, đau chân. CHỐNG CHỈ ĐỊNH nếu eGFR <30. Ngừng thuốc khi bệnh nhân ốm nặng, nhịn ăn, phẫu thuật để tránh DKA."
         },
         "side_effects": [
             "Nhiễm nấm âm đạo",

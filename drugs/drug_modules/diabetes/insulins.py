@@ -22,30 +22,37 @@ INSULINS_DRUGS = {
             "Tăng đường huyết trong bệnh viện",
         ],
         "dosage": {
-            "type1_basal": "0.2-0.4 đơn vị/kg/ngày (NPH hoặc insulin dài)",
-            "type1_bolus": "0.5-1 đơn vị/kg/ngày chia trước bữa ăn",
-            "dm_t2": "Khởi đầu 0.1-0.2 đơn vị/kg/ngày, điều chỉnh theo đường huyết",
-            "dka_iv": "0.1 đơn vị/kg/giờ IV truyền liên tục",
-            "hospital_hyperglycemia": "0.05-0.1 đơn vị/kg/giờ",
-            "adult_start": "0.1-0.2 đơn vị/kg/ngày (đái tháo đường type 2)",
-            "adult_usual": "0.3-0.8 đơn vị/kg/ngày (tổng liều hàng ngày)",
-            "adult_max": "Điều chỉnh theo đường huyết, không có liều tối đa cố định",
-            "elderly": "Khởi đầu liều thấp hơn (0.1 đơn vị/kg/ngày), tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ đường huyết.",
+            "type1_basal": "0.2-0.4 đơn vị/kg/ngày (NPH hoặc insulin dài như glargine, detemir, degludec). Thường tiêm 1-2 lần/ngày. Ví dụ: 70kg → 14-28 đơn vị/ngày basal.",
+            "type1_bolus": "0.5-1 đơn vị/kg/ngày chia trước bữa ăn (rapid-acting hoặc short-acting). Thường 0.1-0.15 đơn vị/kg/bữa ăn. Ví dụ: 70kg → 35-70 đơn vị/ngày bolus, chia 3 bữa = 12-23 đơn vị/bữa.",
+            "type1_total": "0.5-1.2 đơn vị/kg/ngày (tổng liều basal + bolus). Thường 50% basal, 50% bolus, nhưng có thể điều chỉnh.",
+            "dm_t2": "Khởi đầu 0.1-0.2 đơn vị/kg/ngày (thường dùng insulin dài 1 lần/ngày). Tăng dần mỗi 2-3 ngày: 0.2-0.3, 0.3-0.4, 0.4-0.6 đơn vị/kg/ngày. Điều chỉnh theo đường huyết. Ví dụ: 70kg → khởi đầu 7-14 đơn vị/ngày.",
+            "dka_iv": "0.1 đơn vị/kg/giờ IV truyền liên tục (sau khi bù dịch và điện giải). Ví dụ: 70kg → 7 đơn vị/giờ. Mục tiêu: giảm đường huyết 50-75 mg/dL/giờ. Khi đường huyết <200 mg/dL, giảm tốc độ truyền xuống 0.05-0.1 đơn vị/kg/giờ và thêm dextrose vào dịch truyền. Chuyển sang SC khi DKA đã ổn định.",
+            "dka_initial_bolus": "0.1 đơn vị/kg IV bolus (tùy chọn, không bắt buộc) trước khi truyền liên tục. Ví dụ: 70kg → 7 đơn vị IV bolus.",
+            "hhnk_iv": "0.05-0.1 đơn vị/kg/giờ IV truyền liên tục (tương tự DKA nhưng liều thấp hơn). Ví dụ: 70kg → 3.5-7 đơn vị/giờ.",
+            "hospital_hyperglycemia": "0.05-0.1 đơn vị/kg/giờ IV truyền liên tục. Mục tiêu đường huyết: 140-180 mg/dL. Điều chỉnh tốc độ truyền theo đường huyết mỗi 1-2 giờ. Ví dụ: 70kg → 3.5-7 đơn vị/giờ.",
+            "hospital_hyperglycemia_sliding_scale": "SC: 0.05-0.15 đơn vị/kg mỗi 4-6 giờ tùy đường huyết. Thường dùng regular insulin hoặc rapid-acting insulin.",
+            "adult_start": "0.1-0.2 đơn vị/kg/ngày (đái tháo đường type 2, thường dùng insulin dài 1 lần/ngày). Ví dụ: 70kg → 7-14 đơn vị/ngày.",
+            "adult_usual": "0.3-0.8 đơn vị/kg/ngày (tổng liều hàng ngày). Type 1: 0.5-1.2 đơn vị/kg/ngày. Type 2: 0.3-0.8 đơn vị/kg/ngày. Ví dụ: 70kg → 21-56 đơn vị/ngày (type 2) hoặc 35-84 đơn vị/ngày (type 1).",
+            "adult_max": "Điều chỉnh theo đường huyết, không có liều tối đa cố định. Một số bệnh nhân kháng insulin có thể cần >1 đơn vị/kg/ngày.",
+            "elderly": "Khởi đầu liều thấp hơn (0.1 đơn vị/kg/ngày), tăng dần chậm (mỗi 3-5 ngày). Người cao tuổi nhạy cảm hơn với hạ đường huyết. Mục tiêu đường huyết có thể nới lỏng hơn (150-200 mg/dL) để tránh hạ đường huyết.",
+            "pregnancy": "Nhu cầu insulin tăng trong thai kỳ, đặc biệt tam cá nguyệt thứ 2 và 3. Có thể tăng 50-100% so với trước thai kỳ. Điều chỉnh liều thường xuyên. Mục tiêu đường huyết chặt chẽ hơn: trước ăn <95 mg/dL, sau ăn 1 giờ <140 mg/dL, sau ăn 2 giờ <120 mg/dL.",
             "renal_adjustment_dosage": {
-                "normal": "0.3-0.8 đơn vị/kg/ngày",
-                "30_60": "Có thể cần giảm liều do giảm chuyển hóa insulin",
-                "under_30": "Có thể cần giảm liều đáng kể do giảm chuyển hóa insulin",
-                "dialysis": "Có thể cần giảm liều đáng kể"
+                "normal": "0.3-0.8 đơn vị/kg/ngày (CrCl ≥60). Không cần điều chỉnh đặc biệt.",
+                "30_60": "Có thể cần giảm liều 20-30% do giảm chuyển hóa insulin. Theo dõi đường huyết chặt chẽ. Ví dụ: nếu liều bình thường 50 đơn vị/ngày → giảm xuống 35-40 đơn vị/ngày (CrCl 30-60)",
+                "under_30": "Có thể cần giảm liều 30-50% do giảm chuyển hóa insulin đáng kể. Theo dõi đường huyết rất chặt chẽ. Ví dụ: nếu liều bình thường 50 đơn vị/ngày → giảm xuống 25-35 đơn vị/ngày (CrCl <30)",
+                "dialysis": "Có thể cần giảm liều 30-50%. Insulin được lọc một phần qua dialysis. Điều chỉnh liều sau mỗi lần lọc máu. Theo dõi đường huyết chặt chẽ."
             },
             "hepatic_adjustment_dosage": {
-                "mild": "0.3-0.8 đơn vị/kg/ngày",
-                "moderate": "Có thể cần giảm liều do giảm chuyển hóa insulin",
-                "severe": "Có thể cần giảm liều đáng kể do giảm chuyển hóa insulin"
+                "mild": "0.3-0.8 đơn vị/kg/ngày. Không cần điều chỉnh đặc biệt. Theo dõi đường huyết.",
+                "moderate": "Có thể cần giảm liều 20-30% do giảm chuyển hóa glucose và insulin. Theo dõi đường huyết chặt chẽ. Suy gan có thể gây hạ đường huyết.",
+                "severe": "Có thể cần giảm liều 30-50% do giảm chuyển hóa đáng kể. Suy gan nặng có thể gây hạ đường huyết nghiêm trọng. Theo dõi đường huyết rất chặt chẽ."
             },
-            "administration_route": "SC, IV (cho DKA và tăng đường huyết trong bệnh viện)",
-            "frequency": "1-4 lần/ngày tùy loại insulin và phác đồ",
-            "with_food": "Bolus insulin: tiêm trước bữa ăn (15-30 phút trước với rapid-acting, ngay trước với short-acting)",
-            "notes": "Nhiều loại: rapid-acting, short-acting, intermediate, long-acting. Điều chỉnh theo đường huyết. Liều rất cá thể hóa."
+            "administration_route": "SC (tiêm dưới da) - thường dùng. IV (tĩnh mạch) - chỉ dùng cho DKA, HHNK, tăng đường huyết trong bệnh viện.",
+            "frequency": "1-4 lần/ngày tùy loại insulin và phác đồ. Basal: 1-2 lần/ngày. Bolus: 3-4 lần/ngày (trước mỗi bữa ăn).",
+            "with_food": "Bolus insulin: tiêm trước bữa ăn. Rapid-acting (lispro, aspart, glulisine): 15 phút trước ăn hoặc ngay trước ăn. Short-acting (regular): 30 phút trước ăn. Basal insulin: không phụ thuộc bữa ăn, tiêm cùng giờ mỗi ngày.",
+            "timing": "Basal insulin: Tiêm cùng giờ mỗi ngày (thường buổi tối hoặc buổi sáng). Long-acting (glargine, detemir, degludec): 1 lần/ngày. Intermediate (NPH): 1-2 lần/ngày. Bolus insulin: Tiêm trước mỗi bữa ăn (15-30 phút trước với rapid/short-acting).",
+            "titration": "Tăng liều từ từ: Mỗi 2-3 ngày tăng 2-4 đơn vị (hoặc 10-20% liều hiện tại) nếu đường huyết vẫn cao. Giảm liều nếu có hạ đường huyết. Đánh giá hiệu quả sau mỗi 3-7 ngày.",
+            "notes": "Nhiều loại: rapid-acting (lispro, aspart, glulisine), short-acting (regular), intermediate (NPH), long-acting (glargine, detemir), ultra-long (degludec). Điều chỉnh theo đường huyết. Liều rất cá thể hóa. Mục tiêu: đường huyết trước ăn 80-130 mg/dL, sau ăn <180 mg/dL, HbA1c <7%. LUÔN có glucagon và glucose sẵn để điều trị hạ đường huyết."
         },
         "side_effects": [
             "Hạ đường huyết (nguy hiểm)",

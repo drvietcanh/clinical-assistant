@@ -19,8 +19,41 @@ OTHER_ANTIDIABETICS_DRUGS = {
             "Có thai"
         ],
         "dosage": {
-            "adult_dm": "1.6-4.8mg/ngày, uống với thức ăn vào buổi sáng",
-            "notes": "Ít dùng cho đái tháo đường. Chủ yếu dùng cho Parkinson và prolactinoma."
+            "adult_start": "1.6mg PO x 1 lần/ngày với thức ăn vào buổi sáng",
+            "adult_usual": "1.6-4.8mg PO x 1 lần/ngày với thức ăn vào buổi sáng",
+            "adult_max": "4.8mg/ngày",
+            "dm_t2": "Khởi đầu 1.6mg PO x 1 lần/ngày với thức ăn vào buổi sáng. Tăng dần mỗi tuần 1.6mg đến 4.8mg/ngày nếu cần và dung nạp tốt. Ít dùng cho đái tháo đường do hiệu quả hạn chế và tác dụng phụ.",
+            "elderly": "Khởi đầu liều thấp hơn (0.8-1.6mg PO x 1 lần/ngày), tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ huyết áp tư thế và ngất.",
+            "pediatric_dosing": {
+                "neonates": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "infants": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "children": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "adolescents": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "notes": "Không có chỉ định cho đái tháo đường ở trẻ em. Dữ liệu về an toàn và hiệu quả ở trẻ em còn hạn chế."
+            },
+            "geriatric_dosing": {
+                "considerations": "Người cao tuổi có nguy cơ cao hạ huyết áp tư thế, ngất, và chóng mặt. Bệnh tim mạch phổ biến hơn.",
+                "dose_adjustment": "Khởi đầu liều thấp hơn (0.8-1.6mg PO x 1 lần/ngày). Tăng dần chậm hơn. Theo dõi chặt chẽ huyết áp và dấu hiệu ngất.",
+                "monitoring": "Theo dõi huyết áp (đặc biệt hạ huyết áp tư thế), dấu hiệu ngất, và chóng mặt. Giáo dục bệnh nhân về cách đứng dậy từ từ."
+            },
+            "renal_adjustment_dosage": {
+                "normal": "1.6-4.8mg PO x 1 lần/ngày với thức ăn vào buổi sáng (CrCl ≥60)",
+                "30_60": "Không cần điều chỉnh liều. Thận trọng.",
+                "under_30": "Thận trọng. Không cần điều chỉnh liều khởi đầu, nhưng theo dõi sát tác dụng phụ.",
+                "dialysis": "Thận trọng. Không cần điều chỉnh liều.",
+                "notes": "Bromocriptine thải trừ chủ yếu qua gan, không cần điều chỉnh liều ở suy thận. Tuy nhiên, thận trọng ở bệnh nhân suy thận nặng do các bệnh lý đi kèm."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+                "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan và tác dụng phụ.",
+                "severe": "Thận trọng, có thể cần giảm liều đáng kể. Theo dõi chức năng gan và tác dụng phụ chặt chẽ.",
+                "notes": "Bromocriptine chuyển hóa qua gan (CYP3A4). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ bromocriptine, tăng tác dụng phụ. Cần giảm liều và theo dõi chặt chẽ."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "1 lần/ngày",
+            "with_food": "PHẢI uống với thức ăn vào buổi sáng để giảm buồn nôn và tác dụng phụ tiêu hóa.",
+            "timing": "Uống 1 lần/ngày với thức ăn vào buổi sáng. Uống cùng giờ mỗi ngày. Bắt đầu với liều thấp và tăng dần.",
+            "notes": "Ít dùng cho đái tháo đường. Chủ yếu dùng cho Parkinson và prolactinoma. Hiệu quả giảm đường huyết hạn chế. Nguy cơ hạ huyết áp tư thế, ngất. Uống với thức ăn vào buổi sáng. Bắt đầu với liều thấp (1.6mg) và tăng dần."
         },
         "side_effects": [
             "Buồn nôn, nôn",
@@ -177,9 +210,42 @@ OTHER_ANTIDIABETICS_DRUGS = {
             "Bệnh viêm ruột"
         ],
         "dosage": {
-            "adult_dm": "3.75g/ngày (6 viên 625mg hoặc 3 viên 1.875g), chia 1-2 lần với bữa ăn",
-            "adult_cholesterol": "3.75g/ngày",
-            "notes": "Uống với thức ăn và nhiều nước. Hiệu quả giảm đường huyết nhẹ."
+            "adult_start": "3.75g PO/ngày (6 viên 625mg hoặc 3 viên 1.875g), chia 1-2 lần với bữa ăn",
+            "adult_usual": "3.75g PO/ngày, chia 1-2 lần với bữa ăn",
+            "adult_max": "3.75g/ngày",
+            "dm_t2": "3.75g PO/ngày (6 viên 625mg hoặc 3 viên 1.875g), chia 1-2 lần với bữa ăn. Hiệu quả giảm đường huyết nhẹ (giảm HbA1c ~0.5%). Chỉ định phụ cho đái tháo đường type 2.",
+            "cholesterol": "3.75g PO/ngày, chia 1-2 lần với bữa ăn (chỉ định chính cho tăng cholesterol máu).",
+            "elderly": "Không cần điều chỉnh liều đặc biệt. Người cao tuổi có thể nhạy cảm hơn với táo bón.",
+            "pediatric_dosing": {
+                "neonates": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "infants": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "children": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "adolescents": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "notes": "Không có chỉ định cho đái tháo đường ở trẻ em. Dữ liệu về an toàn và hiệu quả ở trẻ em còn hạn chế."
+            },
+            "geriatric_dosing": {
+                "considerations": "Người cao tuổi có nguy cơ cao táo bón. Chức năng tiêu hóa có thể giảm.",
+                "dose_adjustment": "Không cần điều chỉnh liều. Tăng chất xơ và uống nhiều nước để giảm táo bón.",
+                "monitoring": "Theo dõi dấu hiệu táo bón, đầy hơi, và khó nuốt. Theo dõi lipid (triglyceride) định kỳ."
+            },
+            "renal_adjustment_dosage": {
+                "normal": "3.75g PO/ngày, chia 1-2 lần với bữa ăn (CrCl ≥60)",
+                "30_60": "Không cần điều chỉnh liều. Colesevelam không hấp thu vào máu.",
+                "under_30": "Không cần điều chỉnh liều. Colesevelam không hấp thu vào máu.",
+                "dialysis": "Không cần điều chỉnh liều. Colesevelam không hấp thu vào máu.",
+                "notes": "Colesevelam không hấp thu vào máu, không thải trừ qua thận. Không cần điều chỉnh liều ở suy thận."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "Không cần điều chỉnh liều. Colesevelam không hấp thu vào máu.",
+                "moderate": "Không cần điều chỉnh liều. Colesevelam không hấp thu vào máu.",
+                "severe": "Không cần điều chỉnh liều. Colesevelam không hấp thu vào máu.",
+                "notes": "Colesevelam không hấp thu vào máu, không chuyển hóa qua gan. Không cần điều chỉnh liều ở suy gan."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "1-2 lần/ngày",
+            "with_food": "PHẢI uống với thức ăn và nhiều nước để giảm tác dụng phụ tiêu hóa và tăng hiệu quả.",
+            "timing": "Uống 1-2 lần/ngày với bữa ăn. Có thể uống 3.75g x 1 lần/ngày hoặc chia 1.875g x 2 lần/ngày. QUAN TRỌNG: Dùng cách xa các thuốc khác ít nhất 4 giờ để tránh giảm hấp thu.",
+            "notes": "Uống với thức ăn và nhiều nước. Hiệu quả giảm đường huyết nhẹ (giảm HbA1c ~0.5%). Chỉ định phụ cho đái tháo đường type 2. QUAN TRỌNG: Dùng cách xa các thuốc khác (warfarin, digoxin, levothyroxine, metformin, sulfonylurea) ít nhất 4 giờ để tránh giảm hấp thu. Nguy cơ táo bón - tăng chất xơ, uống nhiều nước. Nguy cơ tăng triglyceride - theo dõi lipid."
         },
         "side_effects": [
             "Táo bón",

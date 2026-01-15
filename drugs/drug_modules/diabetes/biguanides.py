@@ -23,22 +23,33 @@ BIGUANIDES_DRUGS = {
             'Dùng thuốc cản quang (tạm ngừng)'
         ],
         'dosage': {
-            'adult_start': '500mg x 2 lần/ngày với bữa ăn',
-            'adult_usual': '500-1000mg x 2-3 lần/ngày',
-            'adult_max': '1000mg x 2 lần/ngày (2000mg/ngày)',
-            'dm_t2': '500mg x 2 lần/ngày với bữa ăn, tăng dần đến 1000mg x 2 lần/ngày',
-            'extended_release': '500-2000mg x 1 lần/ngày với bữa ăn tối',
-            'elderly': 'Khởi đầu 500mg x 1 lần/ngày với bữa ăn, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.',
+            'adult_start': '500mg x 2 lần/ngày với bữa ăn (1000mg/ngày)',
+            'adult_usual': '500-1000mg x 2-3 lần/ngày (1000-3000mg/ngày)',
+            'adult_max': '1000mg x 2 lần/ngày (2000mg/ngày) - liều tối đa khuyến cáo',
+            'dm_t2': 'Khởi đầu: 500mg x 2 lần/ngày với bữa ăn. Tăng dần mỗi 1-2 tuần: 500mg x 3 lần/ngày, sau đó 850mg x 2 lần/ngày, cuối cùng 1000mg x 2 lần/ngày (2000mg/ngày). Tăng dần để giảm tác dụng phụ tiêu hóa.',
+            'pcos': '500mg x 2 lần/ngày với bữa ăn, tăng dần đến 1000mg x 2 lần/ngày. Thường dùng kết hợp với clomiphene hoặc letrozole.',
+            'diabetes_prevention': '850mg x 2 lần/ngày với bữa ăn (1700mg/ngày). Dựa trên Diabetes Prevention Program (DPP) study.',
+            'immediate_release': '500-1000mg x 2-3 lần/ngày với bữa ăn. Tối đa 2000mg/ngày.',
+            'extended_release': '500-2000mg x 1 lần/ngày với bữa ăn tối. Khởi đầu 500mg x 1 lần/ngày, tăng dần mỗi tuần đến liều tối đa 2000mg/ngày.',
+            'elderly': 'Khởi đầu 500mg x 1 lần/ngày với bữa ăn, tăng dần chậm hơn (mỗi 2-3 tuần). Người cao tuổi nhạy cảm hơn với tác dụng phụ tiêu hóa và có nguy cơ cao nhiễm toan lactic. Điều chỉnh theo CrCl.',
             'renal_adjustment_dosage': {
-                'normal': '500-1000mg x 2-3 lần/ngày',
-                '30_60': '500mg x 1-2 lần/ngày, thận trọng, giảm liều',
+                'normal': '500-1000mg x 2-3 lần/ngày (CrCl ≥60 hoặc eGFR ≥60)',
+                '45_60': '500mg x 1-2 lần/ngày, thận trọng, giảm liều. Theo dõi chức năng thận thường xuyên (CrCl 45-60 hoặc eGFR 45-60)',
+                '30_45': '500mg x 1 lần/ngày, thận trọng, giảm liều đáng kể. Theo dõi chức năng thận thường xuyên (CrCl 30-45 hoặc eGFR 30-45)',
                 'under_30': 'CHỐNG CHỈ ĐỊNH (CrCl <30 hoặc eGFR <30)',
                 'dialysis': 'CHỐNG CHỈ ĐỊNH'
             },
-            'administration_route': 'PO',
+            'hepatic_adjustment_dosage': {
+                'mild': '500-1000mg x 2-3 lần/ngày, thận trọng. Theo dõi chức năng gan và lactate.',
+                'moderate': '500mg x 1-2 lần/ngày, thận trọng, có thể cần giảm liều. Theo dõi chức năng gan và lactate thường xuyên.',
+                'severe': 'CHỐNG CHỈ ĐỊNH - Suy gan nặng làm tăng nguy cơ nhiễm toan lactic'
+            },
+            'administration_route': 'PO (uống)',
             'frequency': '2-3 lần/ngày (immediate-release), 1 lần/ngày (extended-release)',
-            'with_food': 'Nên uống với bữa ăn để giảm tác dụng phụ tiêu hóa',
-            'notes': 'Khởi đầu với liều thấp, tăng dần. Tạm ngừng khi dùng thuốc cản quang (48 giờ trước và sau). CHỐNG CHỈ ĐỊNH trong suy thận (CrCl <30).'
+            'with_food': 'Nên uống với bữa ăn để giảm tác dụng phụ tiêu hóa (buồn nôn, tiêu chảy). Có thể giảm tác dụng phụ đáng kể.',
+            'timing': 'Immediate-release: Uống với bữa sáng và bữa tối (hoặc 3 lần/ngày với bữa ăn). Extended-release: Uống với bữa ăn tối. Uống cùng giờ mỗi ngày để duy trì nồng độ ổn định.',
+            'titration': 'Tăng liều từ từ: Tuần 1-2: 500mg x 2 lần/ngày. Tuần 3-4: 500mg x 3 lần/ngày hoặc 850mg x 2 lần/ngày. Tuần 5-6: 1000mg x 2 lần/ngày (nếu dung nạp tốt). Tăng dần giúp giảm tác dụng phụ tiêu hóa.',
+            'notes': 'Khởi đầu với liều thấp, tăng dần để giảm tác dụng phụ tiêu hóa. Tạm ngừng khi dùng thuốc cản quang (48 giờ trước và sau). CHỐNG CHỈ ĐỊNH trong suy thận (CrCl <30 hoặc eGFR <30). Uống với bữa ăn. Theo dõi chức năng thận định kỳ (mỗi 3-6 tháng).'
         },
         'renal_adjustment': {
             'normal': 'Không đổi',

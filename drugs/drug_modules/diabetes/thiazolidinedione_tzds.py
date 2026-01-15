@@ -13,10 +13,31 @@ THIAZOLIDINEDIONE_TZDS_DRUGS = {
         'contraindications': [
         'Suy tim (NYHA class III-IV)', 'Bệnh gan nặng', 'Ung thư bàng quang',
         'Gãy xương (phụ nữ có nguy cơ)'],
-        'dosage': {'adult_start':
-        '15-30mg x 1 lần/ngày', 'adult_usual': '15-45mg x 1 lần/ngày',
-        'adult_max': '45mg/ngày', 'notes':
-        'Uống bất kỳ lúc nào. Tác dụng chậm (2-4 tuần). Gây giữ nước'},
+        'dosage': {
+            'adult_start': '15-30mg PO x 1 lần/ngày',
+            'adult_usual': '15-45mg PO x 1 lần/ngày. Thường 15-30mg/ngày, có thể tăng lên 45mg nếu cần.',
+            'adult_max': '45mg/ngày',
+            'dm_t2': 'Khởi đầu 15-30mg PO x 1 lần/ngày. Có thể tăng lên 45mg sau ít nhất 2-4 tuần nếu cần và dung nạp tốt. Tối đa 45mg/ngày. Tác dụng chậm (2-4 tuần) - cần kiên nhẫn.',
+            'elderly': 'Khởi đầu 15mg PO x 1 lần/ngày, tăng dần chậm hơn. Người cao tuổi nhạy cảm hơn với tác dụng phụ (giữ nước, phù, suy tim). Thận trọng đặc biệt với suy tim.',
+            'pregnancy': 'Category C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ.',
+            'renal_adjustment_dosage': {
+                'normal': '15-45mg PO x 1 lần/ngày (CrCl ≥60)',
+                '30_60': '15-45mg PO x 1 lần/ngày (CrCl 30-60). Không cần điều chỉnh liều đặc biệt, nhưng thận trọng với suy tim.',
+                'under_30': 'Thận trọng, có thể cần giảm liều. 15-30mg PO x 1 lần/ngày (CrCl <30). Theo dõi chức năng thận và dấu hiệu suy tim chặt chẽ.',
+                'dialysis': 'Thận trọng. Có thể dùng 15-30mg PO x 1 lần/ngày. Theo dõi chức năng thận và dấu hiệu suy tim chặt chẽ.'
+            },
+            'hepatic_adjustment_dosage': {
+                'mild': '15-45mg PO x 1 lần/ngày. Không cần điều chỉnh liều đặc biệt. Theo dõi chức năng gan.',
+                'moderate': 'Thận trọng, theo dõi chức năng gan chặt chẽ. 15-30mg PO x 1 lần/ngày. Ngừng nếu ALT >3x ULN.',
+                'severe': 'CHỐNG CHỈ ĐỊNH - Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ độc gan.'
+            },
+            'administration_route': 'PO (uống)',
+            'frequency': '1 lần/ngày',
+            'with_food': 'Có thể uống với hoặc không thức ăn. Uống bất kỳ lúc nào trong ngày.',
+            'timing': 'Uống 1 lần/ngày, bất kỳ lúc nào trong ngày (sáng, trưa, tối). Uống cùng giờ mỗi ngày để dễ nhớ. Không phụ thuộc bữa ăn.',
+            'titration': 'Tăng liều từ từ: Tuần 1-4: 15-30mg/ngày. Tuần 5-8: 30-45mg/ngày (nếu cần và dung nạp tốt). Đánh giá hiệu quả sau mỗi 2-4 tuần. Tác dụng chậm (2-4 tuần) - cần kiên nhẫn.',
+            'notes': 'Uống bất kỳ lúc nào, không cần thức ăn. Tác dụng chậm (2-4 tuần) - cần kiên nhẫn. Gây giữ nước, phù - tăng nguy cơ suy tim. CHỐNG CHỈ ĐỊNH ở suy tim (NYHA class III-IV). Ngừng ngay nếu có dấu hiệu suy tim. Tránh dùng với insulin nếu có thể (tăng nguy cơ suy tim, phù). Tăng nguy cơ gãy xương ở phụ nữ. Tăng nhẹ nguy cơ ung thư bàng quang.'
+        },
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
         'under_30': 'Thận trọng'},
         'side_effects': [
@@ -136,10 +157,29 @@ THIAZOLIDINEDIONE_TZDS_DRUGS = {
             "Gãy xương (phụ nữ có nguy cơ)"
         ],
         "dosage": {
-            "adult_start": "4mg x 1 lần/ngày hoặc 2mg x 2 lần/ngày",
-            "adult_usual": "4-8mg/ngày (chia 1-2 lần)",
+            "adult_start": "4mg PO x 1 lần/ngày hoặc 2mg PO x 2 lần/ngày",
+            "adult_usual": "4-8mg PO/ngày (chia 1-2 lần). Thường 4mg x 1 lần/ngày hoặc 2mg x 2 lần/ngày, có thể tăng lên 8mg/ngày nếu cần.",
             "adult_max": "8mg/ngày",
-            "notes": "Uống bất kỳ lúc nào. Tác dụng chậm (2-4 tuần). Gây giữ nước. Có thể tăng nguy cơ nhồi máu cơ tim."
+            "dm_t2": "Khởi đầu 4mg PO x 1 lần/ngày hoặc 2mg PO x 2 lần/ngày. Có thể tăng lên 8mg/ngày (4mg x 2 lần/ngày hoặc 8mg x 1 lần/ngày) sau ít nhất 2-4 tuần nếu cần và dung nạp tốt. Tối đa 8mg/ngày. Tác dụng chậm (2-4 tuần) - cần kiên nhẫn.",
+            "elderly": "Khởi đầu 2mg PO x 2 lần/ngày hoặc 4mg PO x 1 lần/ngày, tăng dần chậm hơn. Người cao tuổi nhạy cảm hơn với tác dụng phụ (giữ nước, phù, suy tim). Thận trọng đặc biệt với suy tim.",
+            "pregnancy": "Category C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ.",
+            "renal_adjustment_dosage": {
+                "normal": "4-8mg PO/ngày chia 1-2 lần (CrCl ≥60)",
+                "30_60": "4-8mg PO/ngày chia 1-2 lần (CrCl 30-60). Không cần điều chỉnh liều đặc biệt, nhưng thận trọng với suy tim.",
+                "under_30": "Thận trọng, có thể cần giảm liều. 2-4mg PO x 2 lần/ngày hoặc 4mg PO x 1 lần/ngày (CrCl <30). Theo dõi chức năng thận và dấu hiệu suy tim chặt chẽ.",
+                "dialysis": "Thận trọng. Có thể dùng 2-4mg PO x 2 lần/ngày hoặc 4mg PO x 1 lần/ngày. Theo dõi chức năng thận và dấu hiệu suy tim chặt chẽ."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "4-8mg PO/ngày chia 1-2 lần. Không cần điều chỉnh liều đặc biệt. Theo dõi chức năng gan.",
+                "moderate": "Thận trọng, theo dõi chức năng gan chặt chẽ. 2-4mg PO x 2 lần/ngày hoặc 4mg PO x 1 lần/ngày. Ngừng nếu ALT >3x ULN.",
+                "severe": "CHỐNG CHỈ ĐỊNH - Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ độc gan."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "1-2 lần/ngày (thường 1 lần/ngày với liều ≤4mg, chia 2 lần với liều >4mg)",
+            "with_food": "Có thể uống với hoặc không thức ăn. Uống bất kỳ lúc nào trong ngày.",
+            "timing": "Uống 1-2 lần/ngày. Với liều ≤4mg: 1 lần/ngày (sáng hoặc tối). Với liều >4mg: chia 2 lần/ngày (sáng và tối). Uống cùng giờ mỗi ngày để dễ nhớ. Không phụ thuộc bữa ăn.",
+            "titration": "Tăng liều từ từ: Tuần 1-4: 4mg/ngày (1 lần hoặc chia 2 lần). Tuần 5-8: 8mg/ngày (4mg x 2 lần/ngày hoặc 8mg x 1 lần/ngày) nếu cần và dung nạp tốt. Đánh giá hiệu quả sau mỗi 2-4 tuần. Tác dụng chậm (2-4 tuần) - cần kiên nhẫn.",
+            "notes": "Uống bất kỳ lúc nào, không cần thức ăn. Tác dụng chậm (2-4 tuần) - cần kiên nhẫn. Gây giữ nước, phù - tăng nguy cơ suy tim. CHỐNG CHỈ ĐỊNH ở suy tim (NYHA class III-IV). Ngừng ngay nếu có dấu hiệu suy tim. Có thể tăng nguy cơ nhồi máu cơ tim (controversial, đã bị hạn chế sử dụng ở một số nước). Tăng nguy cơ gãy xương ở phụ nữ."
         },
         "renal_adjustment": {
             "normal": "Không đổi",

@@ -47,9 +47,30 @@ GLP1_AGONISTS_DRUGS = {
             ]
         },
         "dosage": {
-            "dm_t2": """Khởi đầu 0.6mg SC x 1 lần/ngày x 1 tuần, sau đó tăng lên 1.2mg x 1 lần/ngày. Có thể tăng lên 1.8mg nếu cần.""",
-            "weight_loss": "Saxenda: Khởi đầu 0.6mg, tăng dần mỗi tuần đến 3mg x 1 lần/ngày.",
-            "notes": "Tiêm dưới da (bụng, đùi, cánh tay) mỗi ngày, cùng giờ. Tăng liều từ từ để giảm buồn nôn.",
+            "adult_start": "0.6mg SC x 1 lần/ngày x 1 tuần (Victoza - đái tháo đường type 2)",
+            "adult_usual": "1.2-1.8mg SC x 1 lần/ngày (Victoza - đái tháo đường type 2). Tối đa 1.8mg/ngày.",
+            "adult_max": "1.8mg/ngày (Victoza - đái tháo đường type 2) hoặc 3mg/ngày (Saxenda - giảm cân)",
+            "dm_t2": "Khởi đầu 0.6mg SC x 1 lần/ngày x 1 tuần, sau đó tăng lên 1.2mg x 1 lần/ngày. Có thể tăng lên 1.8mg nếu cần (sau ít nhất 1 tuần ở liều 1.2mg). Tối đa 1.8mg/ngày.",
+            "weight_loss": "Saxenda (chỉ định giảm cân): Khởi đầu 0.6mg SC x 1 lần/ngày x 1 tuần, tăng dần mỗi tuần: Tuần 2: 1.2mg/ngày, Tuần 3: 1.8mg/ngày, Tuần 4: 2.4mg/ngày, Tuần 5: 3mg/ngày. Tối đa 3mg/ngày.",
+            "cardiovascular_benefit": "1.8mg SC x 1 lần/ngày (Victoza) - dựa trên LEADER trial, giảm biến cố tim mạch lớn ở bệnh nhân đái tháo đường type 2 có bệnh tim mạch.",
+            "elderly": "Khởi đầu 0.6mg SC x 1 lần/ngày x 1 tuần, tăng dần chậm hơn (mỗi 2 tuần thay vì 1 tuần). Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn nôn, mất nước).",
+            "renal_adjustment_dosage": {
+                "normal": "1.2-1.8mg SC x 1 lần/ngày (CrCl ≥60)",
+                "30_60": "Có thể dùng nhưng thận trọng. Khởi đầu 0.6mg/ngày, tăng dần chậm. Theo dõi chức năng thận (CrCl 30-60)",
+                "under_30": "Thận trọng, có thể cần giảm liều. Khởi đầu 0.6mg/ngày, tăng dần rất chậm. Theo dõi chức năng thận chặt chẽ (CrCl <30)",
+                "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu. Cân nhắc lợi ích/nguy cơ."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "1.2-1.8mg SC x 1 lần/ngày. Không cần điều chỉnh liều đặc biệt.",
+                "moderate": "1.2-1.8mg SC x 1 lần/ngày. Không cần điều chỉnh liều đặc biệt. Theo dõi chức năng gan.",
+                "severe": "Thận trọng, có thể cần giảm liều. Khởi đầu 0.6mg/ngày, tăng dần chậm. Theo dõi chức năng gan chặt chẽ."
+            },
+            "administration_route": "SC (tiêm dưới da)",
+            "frequency": "1 lần/ngày",
+            "with_food": "Không phụ thuộc bữa ăn. Có thể tiêm bất kỳ lúc nào trong ngày, nhưng nên tiêm cùng giờ mỗi ngày.",
+            "timing": "Tiêm 1 lần/ngày vào cùng một giờ mỗi ngày. Có thể tiêm bất kỳ lúc nào trong ngày (sáng, trưa, tối), không phụ thuộc bữa ăn. Tiêm cùng giờ mỗi ngày để duy trì nồng độ ổn định.",
+            "titration": "Tăng liều từ từ để giảm buồn nôn: Tuần 1: 0.6mg/ngày. Tuần 2: 1.2mg/ngày (nếu dung nạp tốt). Tuần 3: 1.8mg/ngày (nếu cần và dung nạp tốt). Nếu buồn nôn nặng, giữ ở liều thấp hơn lâu hơn. Đánh giá hiệu quả sau mỗi 4-8 tuần.",
+            "notes": "Tiêm dưới da (bụng, đùi, cánh tay) mỗi ngày, cùng giờ. Tăng liều từ từ để giảm buồn nôn (rất phổ biến ~40%, giảm dần sau vài tuần). Victoza: tối đa 1.8mg/ngày cho đái tháo đường type 2. Saxenda: tối đa 3mg/ngày cho giảm cân. Lợi ích tim mạch: 1.8mg/ngày giảm biến cố tim mạch lớn (LEADER trial)."
         },
         "side_effects": [
             "Buồn nôn, nôn (Rất phổ biến ~40%, giảm dần sau vài tuần)",
@@ -215,10 +236,31 @@ GLP1_AGONISTS_DRUGS = {
             "Giảm nguy cơ biến cố tim mạch"
     ],
         "dosage": {
-            "dm_t2_injection": """Ozempic: Khởi đầu 0.25mg SC x 1 lần/tuần x 4 tuần, sau đó 0.5mg x 1 lần/tuần. Có thể tăng lên 1mg hoặc 2mg nếu cần.""",
-            "dm_t2_oral": "Rybelsus: Khởi đầu 3mg PO x 1 lần/sáng x 30 ngày, sau đó 7mg. Có thể tăng lên 14mg.",
-            "weight_loss": "Wegovy: Tăng dần từ 0.25mg đến 2.4mg x 1 lần/tuần.",
-            "notes": "Tiêm 1 lần/tuần (tiện lợi hơn Liraglutide). Rybelsus: Uống lúc đói, với ít nước, chờ 30 phút mới ăn.",
+            "adult_start": "0.25mg SC x 1 lần/tuần x 4 tuần (Ozempic - đái tháo đường type 2) hoặc 3mg PO x 1 lần/sáng x 30 ngày (Rybelsus - đái tháo đường type 2)",
+            "adult_usual": "0.5-2mg SC x 1 lần/tuần (Ozempic) hoặc 7-14mg PO x 1 lần/sáng (Rybelsus). Tối đa 2mg/tuần (Ozempic) hoặc 14mg/ngày (Rybelsus).",
+            "adult_max": "2mg/tuần (Ozempic - đái tháo đường type 2) hoặc 14mg/ngày (Rybelsus) hoặc 2.4mg/tuần (Wegovy - giảm cân)",
+            "dm_t2_injection": "Ozempic: Khởi đầu 0.25mg SC x 1 lần/tuần x 4 tuần, sau đó 0.5mg x 1 lần/tuần. Có thể tăng lên 1mg sau ít nhất 4 tuần ở liều 0.5mg, hoặc 2mg sau ít nhất 4 tuần ở liều 1mg nếu cần. Tối đa 2mg/tuần.",
+            "dm_t2_oral": "Rybelsus: Khởi đầu 3mg PO x 1 lần/sáng x 30 ngày (uống lúc đói, với ít nước, chờ 30 phút mới ăn), sau đó 7mg x 1 lần/sáng. Có thể tăng lên 14mg sau ít nhất 30 ngày ở liều 7mg nếu cần. Tối đa 14mg/ngày.",
+            "weight_loss": "Wegovy (chỉ định giảm cân): Tăng dần từ 0.25mg SC x 1 lần/tuần x 4 tuần, sau đó 0.5mg/tuần x 4 tuần, 1mg/tuần x 4 tuần, 1.7mg/tuần x 4 tuần, cuối cùng 2.4mg/tuần. Tối đa 2.4mg/tuần.",
+            "cardiovascular_benefit": "0.5-1mg SC x 1 lần/tuần (Ozempic) - dựa trên SUSTAIN-6 trial, giảm biến cố tim mạch lớn ở bệnh nhân đái tháo đường type 2 có bệnh tim mạch.",
+            "elderly": "Khởi đầu 0.25mg SC x 1 lần/tuần x 4 tuần (tiêm) hoặc 3mg PO x 1 lần/sáng x 30 ngày (uống), tăng dần chậm hơn. Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn nôn, mất nước).",
+            "renal_adjustment_dosage": {
+                "normal": "0.5-2mg SC x 1 lần/tuần (Ozempic) hoặc 7-14mg PO x 1 lần/sáng (Rybelsus) (CrCl ≥60)",
+                "30_60": "Có thể dùng nhưng thận trọng. Khởi đầu 0.25mg/tuần (tiêm) hoặc 3mg/ngày (uống), tăng dần chậm. Theo dõi chức năng thận (CrCl 30-60)",
+                "under_30": "Thận trọng, có thể cần giảm liều. Khởi đầu 0.25mg/tuần (tiêm) hoặc 3mg/ngày (uống), tăng dần rất chậm. Theo dõi chức năng thận chặt chẽ (CrCl <30)",
+                "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu. Cân nhắc lợi ích/nguy cơ."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.5-2mg SC x 1 lần/tuần (Ozempic) hoặc 7-14mg PO x 1 lần/sáng (Rybelsus). Không cần điều chỉnh liều đặc biệt.",
+                "moderate": "0.5-2mg SC x 1 lần/tuần (Ozempic) hoặc 7-14mg PO x 1 lần/sáng (Rybelsus). Không cần điều chỉnh liều đặc biệt. Theo dõi chức năng gan.",
+                "severe": "Thận trọng, có thể cần giảm liều. Khởi đầu 0.25mg/tuần (tiêm) hoặc 3mg/ngày (uống), tăng dần chậm. Theo dõi chức năng gan chặt chẽ."
+            },
+            "administration_route": "SC (tiêm dưới da) - Ozempic, Wegovy. PO (uống) - Rybelsus.",
+            "frequency": "1 lần/tuần (tiêm - Ozempic, Wegovy) hoặc 1 lần/ngày (uống - Rybelsus)",
+            "with_food": "Tiêm (Ozempic, Wegovy): Không phụ thuộc bữa ăn. Có thể tiêm bất kỳ lúc nào trong ngày, cùng ngày mỗi tuần. Uống (Rybelsus): Phải uống lúc đói, với ít nước (≤120ml), chờ 30 phút mới ăn hoặc uống thuốc khác.",
+            "timing": "Tiêm (Ozempic, Wegovy): Tiêm 1 lần/tuần vào cùng một ngày mỗi tuần, bất kỳ giờ nào trong ngày, không phụ thuộc bữa ăn. Uống (Rybelsus): Uống 1 lần/ngày vào buổi sáng, lúc đói, với ít nước (≤120ml), chờ 30 phút mới ăn hoặc uống thuốc khác.",
+            "titration": "Tiêm (Ozempic): Tuần 1-4: 0.25mg/tuần. Tuần 5-8: 0.5mg/tuần. Tuần 9-12: 1mg/tuần (nếu cần). Tuần 13+: 2mg/tuần (nếu cần). Uống (Rybelsus): Ngày 1-30: 3mg/ngày. Ngày 31-60: 7mg/ngày (nếu dung nạp tốt). Ngày 61+: 14mg/ngày (nếu cần và dung nạp tốt). Tăng dần để giảm buồn nôn.",
+            "notes": "Tiêm 1 lần/tuần (tiện lợi hơn Liraglutide - 1 lần/ngày). Rybelsus (dạng uống): Uống lúc đói, với ít nước (≤120ml), chờ 30 phút mới ăn hoặc uống thuốc khác (hấp thu kém nếu không tuân thủ). Giảm cân mạnh hơn Liraglutide (~5-10kg vs ~3-5kg). Lợi ích tim mạch: 0.5-1mg/tuần giảm biến cố tim mạch lớn (SUSTAIN-6 trial)."
         },
         "side_effects": [
             "Buồn nôn, nôn (Phổ biến nhưng ít hơn Liraglutide)",
@@ -391,8 +433,29 @@ GLP1_AGONISTS_DRUGS = {
             "Giảm nguy cơ biến cố tim mạch"
     ],
         "dosage": {
-            "dm_t2": "Khởi đầu 0.75mg SC x 1 lần/tuần. Có thể tăng lên 1.5mg, 3mg, hoặc 4.5mg nếu cần.",
-            "notes": "Tiêm 1 lần/tuần. Bút tiêm sẵn (pre-filled pen) - Tiện lợi.",
+            "adult_start": "0.75mg SC x 1 lần/tuần (Trulicity - đái tháo đường type 2)",
+            "adult_usual": "0.75-4.5mg SC x 1 lần/tuần. Thường 0.75-1.5mg/tuần. Có thể tăng lên 3mg hoặc 4.5mg nếu cần. Tối đa 4.5mg/tuần.",
+            "adult_max": "4.5mg/tuần (Trulicity - đái tháo đường type 2)",
+            "dm_t2": "Khởi đầu 0.75mg SC x 1 lần/tuần. Có thể tăng lên 1.5mg sau ít nhất 4 tuần nếu cần. Có thể tăng lên 3mg hoặc 4.5mg sau ít nhất 4 tuần ở liều trước đó nếu cần. Tối đa 4.5mg/tuần.",
+            "cardiovascular_benefit": "0.75-1.5mg SC x 1 lần/tuần (Trulicity) - dựa trên REWIND trial, giảm biến cố tim mạch lớn ở bệnh nhân đái tháo đường type 2 có bệnh tim mạch hoặc yếu tố nguy cơ tim mạch.",
+            "elderly": "Khởi đầu 0.75mg SC x 1 lần/tuần, tăng dần chậm hơn. Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn nôn, mất nước).",
+            "renal_adjustment_dosage": {
+                "normal": "0.75-4.5mg SC x 1 lần/tuần (CrCl ≥60)",
+                "30_60": "Có thể dùng nhưng thận trọng. Khởi đầu 0.75mg/tuần, tăng dần chậm. Theo dõi chức năng thận (CrCl 30-60)",
+                "under_30": "Thận trọng, có thể cần giảm liều. Khởi đầu 0.75mg/tuần, tăng dần rất chậm. Theo dõi chức năng thận chặt chẽ (CrCl <30)",
+                "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu. Cân nhắc lợi ích/nguy cơ."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.75-4.5mg SC x 1 lần/tuần. Không cần điều chỉnh liều đặc biệt.",
+                "moderate": "0.75-4.5mg SC x 1 lần/tuần. Không cần điều chỉnh liều đặc biệt. Theo dõi chức năng gan.",
+                "severe": "Thận trọng, có thể cần giảm liều. Khởi đầu 0.75mg/tuần, tăng dần chậm. Theo dõi chức năng gan chặt chẽ."
+            },
+            "administration_route": "SC (tiêm dưới da)",
+            "frequency": "1 lần/tuần",
+            "with_food": "Không phụ thuộc bữa ăn. Có thể tiêm bất kỳ lúc nào trong ngày, cùng ngày mỗi tuần.",
+            "timing": "Tiêm 1 lần/tuần vào cùng một ngày mỗi tuần, bất kỳ giờ nào trong ngày, không phụ thuộc bữa ăn. Bút tiêm sẵn (pre-filled pen) - Tiện lợi.",
+            "titration": "Tăng liều từ từ: Tuần 1-4: 0.75mg/tuần. Tuần 5-8: 1.5mg/tuần (nếu cần). Tuần 9-12: 3mg/tuần (nếu cần). Tuần 13+: 4.5mg/tuần (nếu cần). Tăng dần để giảm buồn nôn.",
+            "notes": "Tiêm 1 lần/tuần. Bút tiêm sẵn (pre-filled pen) - Tiện lợi. Lợi ích tim mạch lớn (REWIND trial) - giảm biến cố tim mạch lớn ở bệnh nhân đái tháo đường type 2 có bệnh tim mạch hoặc yếu tố nguy cơ tim mạch."
         },
         "side_effects": [
             "Buồn nôn, nôn",
@@ -545,9 +608,29 @@ GLP1_AGONISTS_DRUGS = {
             "Đái tháo đường type 2"
     ],
         "dosage": {
-            "dm_t2_byetta": """Byetta: Khởi đầu 5mcg SC x 2 lần/ngày (trước bữa sáng và tối), sau 1 tháng tăng lên 10mcg x 2 lần/ngày.""",
-            "dm_t2_bydureon": "Bydureon: 2mg SC x 1 lần/tuần.",
-            "notes": "Byetta: Tiêm 2 lần/ngày (ít tiện lợi hơn). Bydureon: 1 lần/tuần.",
+            "adult_start": "5mcg SC x 2 lần/ngày (Byetta) hoặc 2mg SC x 1 lần/tuần (Bydureon)",
+            "adult_usual": "5-10mcg SC x 2 lần/ngày (Byetta) hoặc 2mg SC x 1 lần/tuần (Bydureon). Tối đa 10mcg x 2 lần/ngày (Byetta) hoặc 2mg/tuần (Bydureon).",
+            "adult_max": "10mcg x 2 lần/ngày (Byetta) hoặc 2mg/tuần (Bydureon)",
+            "dm_t2_byetta": "Byetta: Khởi đầu 5mcg SC x 2 lần/ngày (trước bữa sáng và tối, trong vòng 60 phút trước bữa ăn), sau 1 tháng tăng lên 10mcg x 2 lần/ngày nếu dung nạp tốt. Tối đa 10mcg x 2 lần/ngày.",
+            "dm_t2_bydureon": "Bydureon: 2mg SC x 1 lần/tuần. Không cần tăng liều. Tiêm cùng ngày mỗi tuần, bất kỳ giờ nào trong ngày, không phụ thuộc bữa ăn.",
+            "elderly": "Khởi đầu 5mcg SC x 2 lần/ngày (Byetta) hoặc 2mg SC x 1 lần/tuần (Bydureon), tăng dần chậm hơn. Người cao tuổi nhạy cảm hơn với tác dụng phụ (buồn nôn, mất nước).",
+            "renal_adjustment_dosage": {
+                "normal": "5-10mcg SC x 2 lần/ngày (Byetta) hoặc 2mg SC x 1 lần/tuần (Bydureon) (CrCl ≥60)",
+                "30_60": "Có thể dùng nhưng thận trọng. Byetta: Khởi đầu 5mcg x 2 lần/ngày, tăng dần chậm. Bydureon: 2mg/tuần. Theo dõi chức năng thận (CrCl 30-60)",
+                "under_30": "Thận trọng, có thể cần giảm liều. Byetta: Khởi đầu 5mcg x 2 lần/ngày, tăng dần rất chậm. Bydureon: 2mg/tuần. Theo dõi chức năng thận chặt chẽ (CrCl <30)",
+                "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu. Cân nhắc lợi ích/nguy cơ."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "5-10mcg SC x 2 lần/ngày (Byetta) hoặc 2mg SC x 1 lần/tuần (Bydureon). Không cần điều chỉnh liều đặc biệt.",
+                "moderate": "5-10mcg SC x 2 lần/ngày (Byetta) hoặc 2mg SC x 1 lần/tuần (Bydureon). Không cần điều chỉnh liều đặc biệt. Theo dõi chức năng gan.",
+                "severe": "Thận trọng, có thể cần giảm liều. Khởi đầu 5mcg x 2 lần/ngày (Byetta) hoặc 2mg/tuần (Bydureon), tăng dần chậm. Theo dõi chức năng gan chặt chẽ."
+            },
+            "administration_route": "SC (tiêm dưới da)",
+            "frequency": "2 lần/ngày (Byetta) hoặc 1 lần/tuần (Bydureon)",
+            "with_food": "Byetta: Tiêm trong vòng 60 phút TRƯỚC bữa sáng và tối. Bydureon: Không phụ thuộc bữa ăn, có thể tiêm bất kỳ lúc nào trong ngày.",
+            "timing": "Byetta: Tiêm 2 lần/ngày trong vòng 60 phút TRƯỚC bữa sáng và tối (ít tiện lợi hơn các GLP-1 RA khác). Bydureon: Tiêm 1 lần/tuần vào cùng một ngày mỗi tuần, bất kỳ giờ nào trong ngày, không phụ thuộc bữa ăn (tiện lợi hơn Byetta).",
+            "titration": "Byetta: Tuần 1-4: 5mcg x 2 lần/ngày. Tuần 5+: 10mcg x 2 lần/ngày (nếu dung nạp tốt). Bydureon: 2mg/tuần, không cần tăng liều. Tăng dần để giảm buồn nôn.",
+            "notes": "Byetta: Tiêm 2 lần/ngày (ít tiện lợi hơn các GLP-1 RA khác). Bydureon: 1 lần/tuần (tiện lợi hơn Byetta). GLP-1 RA đầu tiên, ít được dùng hơn do Byetta phải tiêm 2 lần/ngày. Bydureon tiện lợi hơn với liều 1 lần/tuần."
         },
         "side_effects": [
             "Buồn nôn, nôn (Rất phổ biến)",

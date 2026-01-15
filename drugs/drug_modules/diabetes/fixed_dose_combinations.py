@@ -21,9 +21,43 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "Suy gan nặng.",
         ],
         "dosage": {
-            "adult_initial": "Metformin XR 1000mg/Dapagliflozin 5mg PO x 1 lần/ngày với bữa ăn tối.",
-            "adult_maintenance": "Metformin XR 1000mg/Dapagliflozin 10mg PO x 1 lần/ngày với bữa ăn tối.",
-            "notes": "Uống với bữa ăn. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận.",
+            "adult_start": "Metformin XR 1000mg/Dapagliflozin 5mg PO x 1 lần/ngày với bữa ăn tối (eGFR ≥60).",
+            "adult_usual": "Metformin XR 1000mg/Dapagliflozin 10mg PO x 1 lần/ngày với bữa ăn tối (eGFR ≥60).",
+            "adult_max": "Metformin XR 2000mg/Dapagliflozin 10mg PO x 1 lần/ngày với bữa ăn tối (eGFR ≥60).",
+            "dm_t2": "Khởi đầu: Metformin XR 1000mg/Dapagliflozin 5mg PO x 1 lần/ngày với bữa ăn tối. Tăng dần: Metformin XR 1000mg/Dapagliflozin 10mg PO x 1 lần/ngày. Có thể tăng metformin lên 2000mg nếu cần. Điều chỉnh theo đường huyết và chức năng thận.",
+            "heart_failure": "Metformin XR 1000mg/Dapagliflozin 10mg PO x 1 lần/ngày với bữa ăn tối (không phụ thuộc đái tháo đường, eGFR ≥25).",
+            "ckd": "Metformin XR 1000mg/Dapagliflozin 10mg PO x 1 lần/ngày với bữa ăn tối (eGFR ≥25, không phụ thuộc đái tháo đường).",
+            "elderly": "Khởi đầu liều thấp hơn: Metformin XR 500mg/Dapagliflozin 5mg PO x 1 lần/ngày với bữa ăn tối, tăng dần chậm. Người cao tuổi nhạy cảm hơn với tác dụng phụ (mất nước, hạ huyết áp, nhiễm trùng đường tiết niệu).",
+            "pediatric_dosing": {
+                "neonates": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "infants": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "children": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "adolescents": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "notes": "Không có chỉ định cho trẻ em. Dữ liệu về an toàn và hiệu quả ở trẻ em còn hạn chế."
+            },
+            "geriatric_dosing": {
+                "considerations": "Người cao tuổi có nguy cơ cao mất nước, hạ huyết áp, nhiễm trùng đường tiết niệu, và suy thận. Chức năng thận thường giảm theo tuổi.",
+                "dose_adjustment": "Khởi đầu liều thấp hơn: Metformin XR 500mg/Dapagliflozin 5mg PO x 1 lần/ngày. Tăng dần chậm. Theo dõi chặt chẽ chức năng thận, huyết áp, và dấu hiệu mất nước. Không dùng nếu eGFR <25.",
+                "monitoring": "Theo dõi chức năng thận (eGFR, creatinine), huyết áp, dấu hiệu mất nước, và dấu hiệu nhiễm trùng đường tiết niệu/nấm sinh dục thường xuyên hơn."
+            },
+            "renal_adjustment_dosage": {
+                "normal": "Metformin XR 1000-2000mg/Dapagliflozin 10mg PO x 1 lần/ngày với bữa ăn tối (eGFR ≥60).",
+                "30_60": "Giảm liều metformin (500-1000mg XR). Dapagliflozin 10mg PO x 1 lần/ngày nếu eGFR ≥25. Theo dõi chặt chẽ chức năng thận.",
+                "under_30": "CHỐNG CHỈ ĐỊNH nếu eGFR <25. Không dùng nếu eGFR <25 ml/min/1.73m².",
+                "dialysis": "CHỐNG CHỈ ĐỊNH",
+                "notes": "Metformin chống chỉ định ở suy thận nặng (CrCl <30 hoặc eGFR <30). Dapagliflozin chống chỉ định ở eGFR <25. Cần kiểm tra eGFR trước khi bắt đầu và định kỳ."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+                "moderate": "Thận trọng. Theo dõi chức năng gan chặt chẽ.",
+                "severe": "CHỐNG CHỈ ĐỊNH - Suy gan nặng. Metformin chống chỉ định ở suy gan nặng.",
+                "notes": "Metformin chống chỉ định ở suy gan nặng (nguy cơ nhiễm toan lactic). Dapagliflozin chuyển hóa một phần qua gan (UGT). Suy gan nặng làm tăng nguy cơ nhiễm toan lactic."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "1 lần/ngày (XR formulation)",
+            "with_food": "PHẢI uống với bữa ăn (bữa ăn tối) để giảm tác dụng phụ tiêu hóa của metformin.",
+            "timing": "Uống 1 lần/ngày với bữa ăn tối. Uống cùng giờ mỗi ngày để dễ nhớ.",
+            "notes": "Uống với bữa ăn tối. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận. CHỐNG CHỈ ĐỊNH nếu eGFR <25. Nguy cơ nhiễm trùng đường tiết niệu và đường sinh dục. Lợi ích tim mạch và thận."
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều.",
@@ -174,10 +208,44 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "Suy gan nặng.",
         ],
         "dosage": {
-            "adult_initial": "Metformin 500mg/Empagliflozin 5mg PO x 2 lần/ngày với bữa ăn.",
-            "adult_maintenance": "Metformin 1000mg/Empagliflozin 5mg hoặc Metformin 1000mg/Empagliflozin 12.5mg PO x 2 lần/ngày với bữa ăn.",
-            "adult_xr": "Metformin XR 1000mg/Empagliflozin 5mg hoặc Metformin XR 1000mg/Empagliflozin 12.5mg PO x 1 lần/ngày với bữa ăn tối.",
-            "notes": "Uống với bữa ăn. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận.",
+            "adult_start": "Metformin 500mg/Empagliflozin 5mg PO x 2 lần/ngày với bữa ăn (eGFR ≥60).",
+            "adult_usual": "Metformin 1000mg/Empagliflozin 5mg hoặc Metformin 1000mg/Empagliflozin 12.5mg PO x 2 lần/ngày với bữa ăn (eGFR ≥60).",
+            "adult_max": "Metformin 1000mg/Empagliflozin 12.5mg PO x 2 lần/ngày (eGFR ≥60).",
+            "adult_xr": "Metformin XR 1000mg/Empagliflozin 5mg hoặc Metformin XR 1000mg/Empagliflozin 12.5mg PO x 1 lần/ngày với bữa ăn tối (eGFR ≥60).",
+            "dm_t2": "Khởi đầu: Metformin 500mg/Empagliflozin 5mg PO x 2 lần/ngày với bữa ăn. Tăng dần: Metformin 1000mg/Empagliflozin 5mg PO x 2 lần/ngày, sau đó Metformin 1000mg/Empagliflozin 12.5mg PO x 2 lần/ngày nếu cần. Dạng XR: 1 lần/ngày với bữa ăn tối. Điều chỉnh theo đường huyết và chức năng thận.",
+            "heart_failure": "Metformin 1000mg/Empagliflozin 10mg PO x 2 lần/ngày với bữa ăn (không phụ thuộc đái tháo đường, eGFR ≥20).",
+            "ckd": "Metformin 1000mg/Empagliflozin 10mg PO x 2 lần/ngày với bữa ăn (eGFR ≥20, không phụ thuộc đái tháo đường).",
+            "elderly": "Khởi đầu liều thấp hơn: Metformin 500mg/Empagliflozin 5mg PO x 2 lần/ngày với bữa ăn, tăng dần chậm. Người cao tuổi nhạy cảm hơn với tác dụng phụ (mất nước, hạ huyết áp, nhiễm trùng đường tiết niệu).",
+            "pediatric_dosing": {
+                "neonates": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "infants": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "children": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "adolescents": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "notes": "Không có chỉ định cho trẻ em. Dữ liệu về an toàn và hiệu quả ở trẻ em còn hạn chế."
+            },
+            "geriatric_dosing": {
+                "considerations": "Người cao tuổi có nguy cơ cao mất nước, hạ huyết áp, nhiễm trùng đường tiết niệu, và suy thận. Chức năng thận thường giảm theo tuổi.",
+                "dose_adjustment": "Khởi đầu liều thấp hơn: Metformin 500mg/Empagliflozin 5mg PO x 2 lần/ngày. Tăng dần chậm. Theo dõi chặt chẽ chức năng thận, huyết áp, và dấu hiệu mất nước. Không dùng nếu eGFR <20.",
+                "monitoring": "Theo dõi chức năng thận (eGFR, creatinine), huyết áp, dấu hiệu mất nước, và dấu hiệu nhiễm trùng đường tiết niệu/nấm sinh dục thường xuyên hơn."
+            },
+            "renal_adjustment_dosage": {
+                "normal": "Metformin 1000mg/Empagliflozin 5-12.5mg PO x 2 lần/ngày với bữa ăn (eGFR ≥60).",
+                "30_60": "Giảm liều metformin (500-1000mg). Empagliflozin 10mg PO x 2 lần/ngày nếu eGFR ≥30. Theo dõi chặt chẽ chức năng thận.",
+                "under_30": "CHỐNG CHỈ ĐỊNH nếu eGFR <30. Không dùng nếu eGFR <30 ml/min/1.73m².",
+                "dialysis": "CHỐNG CHỈ ĐỊNH",
+                "notes": "Metformin chống chỉ định ở suy thận nặng (CrCl <30 hoặc eGFR <30). Empagliflozin chống chỉ định ở eGFR <20. Cần kiểm tra eGFR trước khi bắt đầu và định kỳ."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+                "moderate": "Thận trọng. Theo dõi chức năng gan chặt chẽ.",
+                "severe": "CHỐNG CHỈ ĐỊNH - Suy gan nặng. Metformin chống chỉ định ở suy gan nặng.",
+                "notes": "Metformin chống chỉ định ở suy gan nặng (nguy cơ nhiễm toan lactic). Empagliflozin chuyển hóa một phần qua gan (glucuronidation). Suy gan nặng làm tăng nguy cơ nhiễm toan lactic."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "2 lần/ngày (immediate-release) hoặc 1 lần/ngày (XR formulation)",
+            "with_food": "PHẢI uống với bữa ăn để giảm tác dụng phụ tiêu hóa của metformin.",
+            "timing": "Uống 2 lần/ngày với bữa sáng và bữa tối (hoặc 1 lần/ngày với bữa ăn tối nếu dùng XR). Uống cùng giờ mỗi ngày.",
+            "notes": "Uống với bữa ăn. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận. CHỐNG CHỈ ĐỊNH nếu eGFR <30. Nguy cơ nhiễm trùng đường tiết niệu và đường sinh dục. Lợi ích tim mạch và thận rất lớn (EMPA-REG OUTCOME)."
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều.",
@@ -354,9 +422,41 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "Suy gan nặng."
     ],
         "dosage": {
-            "adult_initial": "Metformin 500mg/Glibenclamide 2.5mg PO x 2 lần/ngày với bữa ăn.",
-            "adult_maintenance": "Metformin 500mg/Glibenclamide 5mg PO x 2 lần/ngày với bữa ăn.",
-            "notes": "Uống với bữa ăn. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận.",
+            "adult_start": "Metformin 500mg/Glibenclamide 2.5mg PO x 2 lần/ngày với bữa ăn (CrCl ≥60).",
+            "adult_usual": "Metformin 500mg/Glibenclamide 5mg PO x 2 lần/ngày với bữa ăn (CrCl ≥60).",
+            "adult_max": "Metformin 500mg/Glibenclamide 5mg PO x 2 lần/ngày (CrCl ≥60).",
+            "dm_t2": "Khởi đầu: Metformin 500mg/Glibenclamide 2.5mg PO x 2 lần/ngày với bữa ăn. Tăng dần: Metformin 500mg/Glibenclamide 5mg PO x 2 lần/ngày nếu cần. Điều chỉnh theo đường huyết và chức năng thận. Nguy cơ hạ đường huyết cao.",
+            "elderly": "Khởi đầu liều thấp hơn: Metformin 250mg/Glibenclamide 1.25mg PO x 2 lần/ngày với bữa ăn, tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ đường huyết.",
+            "pediatric_dosing": {
+                "neonates": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "infants": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "children": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "adolescents": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "notes": "Không có chỉ định cho trẻ em. Dữ liệu về an toàn và hiệu quả ở trẻ em còn hạn chế."
+            },
+            "geriatric_dosing": {
+                "considerations": "Người cao tuổi có nguy cơ hạ đường huyết cao hơn do suy thận, suy gan, bỏ bữa, tương tác thuốc. Hạ đường huyết có thể nghiêm trọng và kéo dài.",
+                "dose_adjustment": "Khởi đầu liều thấp hơn: Metformin 250mg/Glibenclamide 1.25mg PO x 2 lần/ngày. Tăng dần chậm hơn. Điều chỉnh liều theo chức năng thận, gan. Tránh dùng ở suy thận nặng (CrCl <30).",
+                "monitoring": "Theo dõi đường huyết chặt chẽ. Theo dõi dấu hiệu hạ đường huyết. Theo dõi chức năng thận, gan định kỳ. Cảnh báo bệnh nhân về dấu hiệu và cách xử trí hạ đường huyết."
+            },
+            "renal_adjustment_dosage": {
+                "normal": "Metformin 500mg/Glibenclamide 2.5-5mg PO x 2 lần/ngày với bữa ăn (CrCl ≥60).",
+                "30_60": "Giảm liều metformin (250-500mg). Glibenclamide: Khởi đầu 1.25mg PO x 2 lần/ngày, tăng dần thận trọng. Theo dõi sát đường huyết.",
+                "under_30": "CHỐNG CHỈ ĐỊNH - Không dùng nếu CrCl <30 (CrCl <30 hoặc eGFR <30).",
+                "dialysis": "CHỐNG CHỈ ĐỊNH",
+                "notes": "Metformin chống chỉ định ở suy thận nặng (CrCl <30). Glibenclamide chống chỉ định ở suy thận nặng (CrCl <30) - tăng nguy cơ hạ đường huyết nghiêm trọng."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "Thận trọng. Theo dõi chức năng gan.",
+                "moderate": "Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan và đường huyết chặt chẽ.",
+                "severe": "CHỐNG CHỈ ĐỊNH - Suy gan nặng. Metformin và glibenclamide đều chống chỉ định ở suy gan nặng.",
+                "notes": "Metformin chống chỉ định ở suy gan nặng (nguy cơ nhiễm toan lactic). Glibenclamide chuyển hóa ở gan, suy gan nặng làm tăng nguy cơ hạ đường huyết nghiêm trọng."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "2 lần/ngày",
+            "with_food": "PHẢI uống với bữa ăn để giảm tác dụng phụ tiêu hóa của metformin và tránh hạ đường huyết.",
+            "timing": "Uống 2 lần/ngày với bữa sáng và bữa tối. Uống cùng giờ mỗi ngày. Không bỏ bữa sau khi uống.",
+            "notes": "Uống với bữa ăn. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận. CHỐNG CHỈ ĐỊNH nếu CrCl <30. Nguy cơ hạ đường huyết cao (do glibenclamide) - theo dõi chặt chẽ. Nguy cơ nhiễm toan lactic (do metformin)."
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều.",
@@ -473,9 +573,41 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "Ung thư bàng quang."
     ],
         "dosage": {
-            "adult_initial": "Metformin 500mg/Pioglitazone 15mg PO x 2 lần/ngày với bữa ăn.",
-            "adult_maintenance": "Metformin 500mg/Pioglitazone 15mg hoặc Metformin 850mg/Pioglitazone 15mg PO x 2 lần/ngày với bữa ăn.",
-            "notes": "Uống với bữa ăn. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận.",
+            "adult_start": "Metformin 500mg/Pioglitazone 15mg PO x 2 lần/ngày với bữa ăn (CrCl ≥60).",
+            "adult_usual": "Metformin 500mg/Pioglitazone 15mg hoặc Metformin 850mg/Pioglitazone 15mg PO x 2 lần/ngày với bữa ăn (CrCl ≥60).",
+            "adult_max": "Metformin 850mg/Pioglitazone 15mg PO x 2 lần/ngày (CrCl ≥60).",
+            "dm_t2": "Khởi đầu: Metformin 500mg/Pioglitazone 15mg PO x 2 lần/ngày với bữa ăn. Tăng dần: Metformin 850mg/Pioglitazone 15mg PO x 2 lần/ngày nếu cần. Tác dụng chậm (2-4 tuần cho pioglitazone). Điều chỉnh theo đường huyết và chức năng thận.",
+            "elderly": "Khởi đầu liều thấp hơn: Metformin 250mg/Pioglitazone 15mg PO x 2 lần/ngày với bữa ăn, tăng dần chậm. Người cao tuổi nhạy cảm hơn với giữ nước, suy tim, và gãy xương.",
+            "pediatric_dosing": {
+                "neonates": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "infants": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "children": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "adolescents": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "notes": "Không có chỉ định cho trẻ em. Dữ liệu về an toàn và hiệu quả ở trẻ em còn hạn chế."
+            },
+            "geriatric_dosing": {
+                "considerations": "Người cao tuổi có nguy cơ cao giữ nước, suy tim, và gãy xương. Chức năng gan có thể giảm.",
+                "dose_adjustment": "Khởi đầu liều thấp hơn: Metformin 250mg/Pioglitazone 15mg PO x 2 lần/ngày. Theo dõi chặt chẽ dấu hiệu suy tim, phù, và chức năng gan. Cân nhắc liều thấp hơn.",
+                "monitoring": "Theo dõi chức năng gan (ALT, AST), dấu hiệu suy tim (khó thở, phù, tăng cân), và nguy cơ gãy xương. Giáo dục bệnh nhân về các dấu hiệu cần báo cáo."
+            },
+            "renal_adjustment_dosage": {
+                "normal": "Metformin 500-850mg/Pioglitazone 15mg PO x 2 lần/ngày với bữa ăn (CrCl ≥60).",
+                "30_60": "Giảm liều metformin (250-500mg). Pioglitazone không cần điều chỉnh liều. Thận trọng.",
+                "under_30": "CHỐNG CHỈ ĐỊNH - Không dùng nếu CrCl <30 (CrCl <30 hoặc eGFR <30).",
+                "dialysis": "CHỐNG CHỈ ĐỊNH",
+                "notes": "Metformin chống chỉ định ở suy thận nặng (CrCl <30). Pioglitazone không thải trừ qua thận đáng kể, không cần điều chỉnh liều ở suy thận. Tuy nhiên, thận trọng ở bệnh nhân suy thận nặng do các bệnh lý đi kèm."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+                "moderate": "Thận trọng, theo dõi chức năng gan chặt chẽ. Ngừng nếu ALT >3x ULN.",
+                "severe": "CHỐNG CHỈ ĐỊNH - Suy gan nặng. Metformin và pioglitazone đều chống chỉ định ở suy gan nặng.",
+                "notes": "Metformin chống chỉ định ở suy gan nặng (nguy cơ nhiễm toan lactic). Pioglitazone chuyển hóa ở gan qua CYP2C8 và CYP3A4. Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ độc gan. Ngừng nếu ALT >3x ULN."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "2 lần/ngày",
+            "with_food": "PHẢI uống với bữa ăn để giảm tác dụng phụ tiêu hóa của metformin.",
+            "timing": "Uống 2 lần/ngày với bữa sáng và bữa tối. Uống cùng giờ mỗi ngày.",
+            "notes": "Uống với bữa ăn. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận. CHỐNG CHỈ ĐỊNH nếu CrCl <30 hoặc suy tim (NYHA class III-IV). Nguy cơ giữ nước, phù, suy tim (do pioglitazone). Nguy cơ nhiễm toan lactic (do metformin). Nguy cơ gãy xương (đặc biệt ở phụ nữ)."
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều.",
@@ -590,10 +722,42 @@ DIABETES_FIXED_DOSE_COMBINATIONS = {
             "Suy gan nặng.",
         ],
         "dosage": {
-            "adult_initial": "Metformin 500mg/Sitagliptin 50mg PO x 2 lần/ngày với bữa ăn.",
-            "adult_maintenance": "Metformin 1000mg/Sitagliptin 50mg PO x 2 lần/ngày với bữa ăn.",
-            "adult_xr": "Metformin XR 1000mg/Sitagliptin 100mg PO x 1 lần/ngày với bữa ăn tối.",
-            "notes": "Uống với bữa ăn để giảm tác dụng phụ tiêu hóa. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận.",
+            "adult_start": "Metformin 500mg/Sitagliptin 50mg PO x 2 lần/ngày với bữa ăn (eGFR ≥60).",
+            "adult_usual": "Metformin 1000mg/Sitagliptin 50mg PO x 2 lần/ngày với bữa ăn (eGFR ≥60).",
+            "adult_max": "Metformin 1000mg/Sitagliptin 50mg PO x 2 lần/ngày (eGFR ≥60).",
+            "adult_xr": "Metformin XR 1000mg/Sitagliptin 100mg PO x 1 lần/ngày với bữa ăn tối (eGFR ≥60).",
+            "dm_t2": "Khởi đầu: Metformin 500mg/Sitagliptin 50mg PO x 2 lần/ngày với bữa ăn. Tăng dần: Metformin 1000mg/Sitagliptin 50mg PO x 2 lần/ngày nếu cần. Dạng XR: 1 lần/ngày với bữa ăn tối. Điều chỉnh theo đường huyết và chức năng thận. Ít gây hạ đường huyết.",
+            "elderly": "Khởi đầu liều thấp hơn: Metformin 250mg/Sitagliptin 50mg PO x 2 lần/ngày với bữa ăn, tăng dần chậm. Người cao tuổi nhạy cảm hơn với tác dụng phụ tiêu hóa. Điều chỉnh liều sitagliptin theo CrCl.",
+            "pediatric_dosing": {
+                "neonates": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "infants": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "children": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "adolescents": "Không khuyến cáo cho trẻ em (dữ liệu hạn chế).",
+                "notes": "Không có chỉ định cho trẻ em. Dữ liệu về an toàn và hiệu quả ở trẻ em còn hạn chế."
+            },
+            "geriatric_dosing": {
+                "considerations": "Người cao tuổi có thể nhạy cảm hơn với tác dụng phụ tiêu hóa (buồn nôn, nôn, tiêu chảy). Chức năng thận có thể giảm, cần điều chỉnh liều sitagliptin theo CrCl.",
+                "dose_adjustment": "Khởi đầu liều thấp hơn: Metformin 250mg/Sitagliptin 50mg PO x 2 lần/ngày. Tăng liều từ từ và theo dõi chặt chẽ tác dụng phụ. Điều chỉnh liều sitagliptin theo CrCl. Theo dõi chức năng thận.",
+                "monitoring": "Theo dõi chức năng thận (CrCl, eGFR), dấu hiệu tác dụng phụ tiêu hóa, và dấu hiệu viêm tụy cấp. Giáo dục bệnh nhân về cách xử trí buồn nôn."
+            },
+            "renal_adjustment_dosage": {
+                "normal": "Metformin 1000mg/Sitagliptin 50mg PO x 2 lần/ngày với bữa ăn (eGFR ≥60).",
+                "30_60": "Giảm liều metformin (500mg). Sitagliptin 50mg PO x 2 lần/ngày (eGFR 30-60). Theo dõi chặt chẽ chức năng thận.",
+                "under_30": "CHỐNG CHỈ ĐỊNH - Không dùng nếu eGFR <30 (eGFR <30).",
+                "dialysis": "CHỐNG CHỈ ĐỊNH",
+                "notes": "Metformin chống chỉ định ở suy thận nặng (CrCl <30 hoặc eGFR <30). Sitagliptin thải trừ chủ yếu qua thận, cần điều chỉnh liều ở suy thận: 50mg x 2 lần/ngày (eGFR 30-60), 25mg x 2 lần/ngày (eGFR <30). Tuy nhiên, phối hợp với metformin nên tránh ở eGFR <30."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "Không cần điều chỉnh liều. Theo dõi chức năng gan.",
+                "moderate": "Thận trọng. Theo dõi chức năng gan chặt chẽ.",
+                "severe": "CHỐNG CHỈ ĐỊNH - Suy gan nặng. Metformin chống chỉ định ở suy gan nặng.",
+                "notes": "Metformin không chuyển hóa qua gan nhưng chống chỉ định ở suy gan nặng (nguy cơ nhiễm toan lactic). Sitagliptin chuyển hóa một phần qua gan. Suy gan nặng làm tăng nguy cơ nhiễm toan lactic."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "2 lần/ngày (immediate-release) hoặc 1 lần/ngày (XR formulation)",
+            "with_food": "PHẢI uống với bữa ăn để giảm tác dụng phụ tiêu hóa của metformin.",
+            "timing": "Uống 2 lần/ngày với bữa sáng và bữa tối (hoặc 1 lần/ngày với bữa ăn tối nếu dùng XR). Uống cùng giờ mỗi ngày.",
+            "notes": "Uống với bữa ăn để giảm tác dụng phụ tiêu hóa. Điều chỉnh liều dựa trên đáp ứng đường huyết và chức năng thận. CHỐNG CHỈ ĐỊNH nếu eGFR <30. Nguy cơ nhiễm toan lactic (do metformin). Nguy cơ viêm tụy cấp (do sitagliptin) - hiếm nhưng nghiêm trọng. Ít gây hạ đường huyết."
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều.",

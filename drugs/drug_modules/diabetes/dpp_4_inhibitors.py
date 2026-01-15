@@ -18,24 +18,32 @@ DPP_4_INHIBITORS_DRUGS = {
             "Dị ứng alogliptin"
         ],
         "dosage": {
-            "adult_normal_renal": "25mg x 1 lần/ngày",
-            "adult_moderate_renal": "12.5mg x 1 lần/ngày (CrCl 30-60)",
-            "adult_severe_renal": "6.25mg x 1 lần/ngày (CrCl <30)",
-            "dm_t2": "25mg x 1 lần/ngày (CrCl >60), 12.5mg x 1 lần/ngày (CrCl 30-60), 6.25mg x 1 lần/ngày (CrCl <30)",
-            "adult_start": "25mg x 1 lần/ngày (CrCl >60)",
-            "adult_usual": "25mg x 1 lần/ngày (CrCl >60)",
-            "adult_max": "25mg/ngày",
-            "elderly": "Không cần điều chỉnh liều đặc biệt, nhưng điều chỉnh theo CrCl.",
+            "adult_start": "25mg PO x 1 lần/ngày (CrCl >60)",
+            "adult_usual": "25mg PO x 1 lần/ngày (CrCl >60), 12.5mg PO x 1 lần/ngày (CrCl 30-60), 6.25mg PO x 1 lần/ngày (CrCl <30)",
+            "adult_max": "25mg/ngày (chỉ khi CrCl >60)",
+            "adult_normal_renal": "25mg PO x 1 lần/ngày (CrCl >60)",
+            "adult_moderate_renal": "12.5mg PO x 1 lần/ngày (CrCl 30-60)",
+            "adult_severe_renal": "6.25mg PO x 1 lần/ngày (CrCl <30)",
+            "dm_t2": "25mg PO x 1 lần/ngày (CrCl >60), 12.5mg PO x 1 lần/ngày (CrCl 30-60), 6.25mg PO x 1 lần/ngày (CrCl <30). Điều chỉnh liều theo CrCl trước khi bắt đầu và định kỳ.",
+            "elderly": "Không cần điều chỉnh liều đặc biệt, nhưng điều chỉnh theo CrCl. Người cao tuổi thường có suy thận, cần kiểm tra CrCl trước khi bắt đầu.",
+            "pregnancy": "Category B - An toàn trong thai kỳ. Có thể dùng nếu lợi ích > nguy cơ.",
             "renal_adjustment_dosage": {
-                "normal": "25mg x 1 lần/ngày (CrCl >60)",
-                "30_60": "12.5mg x 1 lần/ngày (CrCl 30-60)",
-                "under_30": "6.25mg x 1 lần/ngày (CrCl <30)",
-                "dialysis": "6.25mg x 1 lần/ngày"
+                "normal": "25mg PO x 1 lần/ngày (CrCl >60)",
+                "30_60": "12.5mg PO x 1 lần/ngày (CrCl 30-60). Giảm liều 50%.",
+                "under_30": "6.25mg PO x 1 lần/ngày (CrCl <30). Giảm liều 75%.",
+                "dialysis": "6.25mg PO x 1 lần/ngày. Có thể dùng ở bệnh nhân lọc máu."
             },
-            "administration_route": "PO",
+            "hepatic_adjustment_dosage": {
+                "mild": "25mg PO x 1 lần/ngày (nếu CrCl >60). Không cần điều chỉnh liều đặc biệt.",
+                "moderate": "25mg PO x 1 lần/ngày (nếu CrCl >60). Không cần điều chỉnh liều đặc biệt. Theo dõi đáp ứng điều trị.",
+                "severe": "Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị và độc tính."
+            },
+            "administration_route": "PO (uống)",
             "frequency": "1 lần/ngày",
-            "with_food": "Có thể uống bất kỳ lúc nào, không cần thức ăn",
-            "notes": "Uống bất kỳ lúc nào. Cần điều chỉnh liều ở suy thận. Ít gây hạ đường huyết. Thải trừ chủ yếu qua thận."
+            "with_food": "Có thể uống với hoặc không thức ăn. Uống bất kỳ lúc nào trong ngày.",
+            "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày (sáng, trưa, tối). Uống cùng giờ mỗi ngày để dễ nhớ. Không phụ thuộc bữa ăn.",
+            "titration": "Không cần tăng liều. Liều cố định: 25mg/ngày (CrCl >60), 12.5mg/ngày (CrCl 30-60), 6.25mg/ngày (CrCl <30). Điều chỉnh liều khi CrCl thay đổi.",
+            "notes": "Uống bất kỳ lúc nào, không cần thức ăn. Cần điều chỉnh liều ở suy thận: CrCl >60 → 25mg/ngày, CrCl 30-60 → 12.5mg/ngày, CrCl <30 → 6.25mg/ngày. Kiểm tra CrCl trước khi bắt đầu và định kỳ. Ít gây hạ đường huyết khi dùng đơn độc (do cơ chế phụ thuộc glucose). Thải trừ chủ yếu qua thận (60-70% nguyên dạng)."
         },
         "renal_adjustment": {
             "normal": "25mg/ngày",
@@ -196,23 +204,31 @@ DPP_4_INHIBITORS_DRUGS = {
             "Dị ứng linagliptin"
         ],
         "dosage": {
-            "adult_standard": "5mg x 1 lần/ngày",
-            "adult_renal_impairment": "5mg x 1 lần/ngày (không cần điều chỉnh liều)",
-            "dm_t2": "5mg x 1 lần/ngày (không cần điều chỉnh liều ở suy thận)",
-            "adult_start": "5mg x 1 lần/ngày",
-            "adult_usual": "5mg x 1 lần/ngày",
+            "adult_start": "5mg PO x 1 lần/ngày",
+            "adult_usual": "5mg PO x 1 lần/ngày (không cần điều chỉnh liều ở suy thận)",
             "adult_max": "5mg/ngày",
-            "elderly": "Không cần điều chỉnh liều đặc biệt.",
+            "adult_standard": "5mg PO x 1 lần/ngày",
+            "adult_renal_impairment": "5mg PO x 1 lần/ngày (không cần điều chỉnh liều ở bất kỳ mức độ suy thận nào)",
+            "dm_t2": "5mg PO x 1 lần/ngày (không cần điều chỉnh liều ở suy thận). Ưu điểm: không cần điều chỉnh liều ở suy thận, phù hợp cho bệnh nhân suy thận.",
+            "elderly": "5mg PO x 1 lần/ngày. Không cần điều chỉnh liều đặc biệt. Phù hợp cho người cao tuổi có suy thận.",
+            "pregnancy": "Category B - An toàn trong thai kỳ. Có thể dùng nếu lợi ích > nguy cơ.",
             "renal_adjustment_dosage": {
-                "normal": "5mg x 1 lần/ngày",
-                "30_60": "5mg x 1 lần/ngày (không cần điều chỉnh)",
-                "under_30": "5mg x 1 lần/ngày (không cần điều chỉnh)",
-                "dialysis": "5mg x 1 lần/ngày (không cần điều chỉnh)"
+                "normal": "5mg PO x 1 lần/ngày (CrCl ≥60)",
+                "30_60": "5mg PO x 1 lần/ngày (CrCl 30-60). KHÔNG cần điều chỉnh liều (khác với các DPP-4 inhibitors khác).",
+                "under_30": "5mg PO x 1 lần/ngày (CrCl <30). KHÔNG cần điều chỉnh liều (khác với các DPP-4 inhibitors khác).",
+                "dialysis": "5mg PO x 1 lần/ngày. KHÔNG cần điều chỉnh liều. Có thể dùng ở bệnh nhân lọc máu."
             },
-            "administration_route": "PO",
+            "hepatic_adjustment_dosage": {
+                "mild": "5mg PO x 1 lần/ngày. Không cần điều chỉnh liều đặc biệt.",
+                "moderate": "5mg PO x 1 lần/ngày. Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị.",
+                "severe": "Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị và độc tính."
+            },
+            "administration_route": "PO (uống)",
             "frequency": "1 lần/ngày",
-            "with_food": "Có thể uống bất kỳ lúc nào, không cần thức ăn",
-            "notes": "Uống bất kỳ lúc nào. Không cần điều chỉnh liều ở suy thận (khác với các DPP-4 inhibitors khác). Ít gây hạ đường huyết. Thải trừ chủ yếu qua gan."
+            "with_food": "Có thể uống với hoặc không thức ăn. Uống bất kỳ lúc nào trong ngày.",
+            "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày (sáng, trưa, tối). Uống cùng giờ mỗi ngày để dễ nhớ. Không phụ thuộc bữa ăn.",
+            "titration": "Không cần tăng liều. Liều cố định: 5mg/ngày ở tất cả bệnh nhân, không phụ thuộc chức năng thận.",
+            "notes": "Uống bất kỳ lúc nào, không cần thức ăn. KHÔNG cần điều chỉnh liều ở suy thận (khác với các DPP-4 inhibitors khác - đây là ưu điểm lớn). Phù hợp cho bệnh nhân suy thận. Ít gây hạ đường huyết khi dùng đơn độc (do cơ chế phụ thuộc glucose). Thải trừ chủ yếu qua gan (không phụ thuộc thận)."
         },
         "renal_adjustment": {
             "normal": "5mg/ngày",
@@ -370,23 +386,32 @@ DPP_4_INHIBITORS_DRUGS = {
             "Dị ứng saxagliptin"
         ],
         "dosage": {
-            "adult_normal_renal": "5mg x 1 lần/ngày",
-            "adult_moderate_renal": "2.5mg x 1 lần/ngày (CrCl ≤50)",
-            "adult_severe_renal": "2.5mg x 1 lần/ngày (CrCl ≤50)",
-            "dm_t2": "5mg x 1 lần/ngày (CrCl >50), 2.5mg x 1 lần/ngày (CrCl ≤50)",
-            "adult_start": "5mg x 1 lần/ngày (CrCl >50)",
-            "adult_usual": "5mg x 1 lần/ngày (CrCl >50), 2.5mg x 1 lần/ngày (CrCl ≤50)",
-            "adult_max": "5mg/ngày",
-            "elderly": "Không cần điều chỉnh liều đặc biệt, nhưng điều chỉnh theo CrCl.",
+            "adult_start": "5mg PO x 1 lần/ngày (CrCl >50)",
+            "adult_usual": "5mg PO x 1 lần/ngày (CrCl >50), 2.5mg PO x 1 lần/ngày (CrCl ≤50)",
+            "adult_max": "5mg/ngày (chỉ khi CrCl >50)",
+            "adult_normal_renal": "5mg PO x 1 lần/ngày (CrCl >50)",
+            "adult_moderate_renal": "2.5mg PO x 1 lần/ngày (CrCl ≤50)",
+            "adult_severe_renal": "2.5mg PO x 1 lần/ngày (CrCl ≤50)",
+            "dm_t2": "5mg PO x 1 lần/ngày (CrCl >50), 2.5mg PO x 1 lần/ngày (CrCl ≤50). Điều chỉnh liều theo CrCl trước khi bắt đầu và định kỳ.",
+            "elderly": "Không cần điều chỉnh liều đặc biệt, nhưng điều chỉnh theo CrCl. Người cao tuổi thường có suy thận, cần kiểm tra CrCl trước khi bắt đầu.",
+            "pregnancy": "Category B - An toàn trong thai kỳ. Có thể dùng nếu lợi ích > nguy cơ.",
             "renal_adjustment_dosage": {
-                "normal": "5mg x 1 lần/ngày (CrCl >50)",
-                "30_60": "2.5mg x 1 lần/ngày (CrCl ≤50)",
-                "under_30": "2.5mg x 1 lần/ngày (CrCl ≤50)",
-                "dialysis": "2.5mg x 1 lần/ngày"
+                "normal": "5mg PO x 1 lần/ngày (CrCl >50)",
+                "30_50": "2.5mg PO x 1 lần/ngày (CrCl 30-50). Giảm liều 50%.",
+                "under_30": "2.5mg PO x 1 lần/ngày (CrCl <30). Giảm liều 50%.",
+                "dialysis": "2.5mg PO x 1 lần/ngày. Có thể dùng ở bệnh nhân lọc máu."
             },
-            "administration_route": "PO",
+            "hepatic_adjustment_dosage": {
+                "mild": "5mg PO x 1 lần/ngày (nếu CrCl >50). Không cần điều chỉnh liều đặc biệt.",
+                "moderate": "5mg PO x 1 lần/ngày (nếu CrCl >50). Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị.",
+                "severe": "Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị và độc tính."
+            },
+            "administration_route": "PO (uống)",
             "frequency": "1 lần/ngày",
-            "with_food": "Có thể uống bất kỳ lúc nào, không cần thức ăn",
+            "with_food": "Có thể uống với hoặc không thức ăn. Uống bất kỳ lúc nào trong ngày.",
+            "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày (sáng, trưa, tối). Uống cùng giờ mỗi ngày để dễ nhớ. Không phụ thuộc bữa ăn.",
+            "titration": "Không cần tăng liều. Liều cố định: 5mg/ngày (CrCl >50), 2.5mg/ngày (CrCl ≤50). Điều chỉnh liều khi CrCl thay đổi.",
+            "notes": "Uống bất kỳ lúc nào, không cần thức ăn. Cần điều chỉnh liều ở suy thận: CrCl >50 → 5mg/ngày, CrCl ≤50 → 2.5mg/ngày. Kiểm tra CrCl trước khi bắt đầu và định kỳ. Ít gây hạ đường huyết khi dùng đơn độc (do cơ chế phụ thuộc glucose). Thải trừ chủ yếu qua thận và gan."
             "notes": "Uống bất kỳ lúc nào. Cần điều chỉnh liều ở suy thận (CrCl ≤50). Ít gây hạ đường huyết. Thải trừ chủ yếu qua thận."
         },
         "renal_adjustment": {
@@ -549,10 +574,34 @@ DPP_4_INHIBITORS_DRUGS = {
         'Đái tháo đường type 2'],
         'contraindications': ['Đái tháo đường type 1',
         'Nhiễm toan ceton', 'Dị ứng sitagliptin', 'Suy thận nặng (CrCl <30)'],
-        'dosage': {'adult_normal_renal': '100mg x 1 lần/ngày',
-        'adult_moderate_renal': '50mg x 1 lần/ngày (CrCl 30-50)',
-        'adult_severe_renal': '25mg x 1 lần/ngày (CrCl <30)', 'notes':
-        'Uống bất kỳ lúc nào. Ít gây hạ đường huyết'},
+        'dosage': {
+            'adult_start': '100mg PO x 1 lần/ngày (CrCl ≥50)',
+            'adult_usual': '100mg PO x 1 lần/ngày (CrCl ≥50), 50mg PO x 1 lần/ngày (CrCl 30-50), 25mg PO x 1 lần/ngày (CrCl <30)',
+            'adult_max': '100mg/ngày (chỉ khi CrCl ≥50)',
+            'adult_normal_renal': '100mg PO x 1 lần/ngày (CrCl ≥50)',
+            'adult_moderate_renal': '50mg PO x 1 lần/ngày (CrCl 30-50)',
+            'adult_severe_renal': '25mg PO x 1 lần/ngày (CrCl <30)',
+            'dm_t2': '100mg PO x 1 lần/ngày (CrCl ≥50), 50mg PO x 1 lần/ngày (CrCl 30-50), 25mg PO x 1 lần/ngày (CrCl <30). Điều chỉnh liều theo CrCl trước khi bắt đầu và định kỳ.',
+            'elderly': 'Không cần điều chỉnh liều đặc biệt, nhưng điều chỉnh theo CrCl. Người cao tuổi thường có suy thận, cần kiểm tra CrCl trước khi bắt đầu.',
+            'pregnancy': 'Category B - An toàn trong thai kỳ. Có thể dùng nếu lợi ích > nguy cơ.',
+            'renal_adjustment_dosage': {
+                'normal': '100mg PO x 1 lần/ngày (CrCl ≥50)',
+                '30_50': '50mg PO x 1 lần/ngày (CrCl 30-50). Giảm liều 50%.',
+                'under_30': '25mg PO x 1 lần/ngày (CrCl <30). Giảm liều 75%.',
+                'dialysis': '25mg PO x 1 lần/ngày. Có thể dùng ở bệnh nhân lọc máu.'
+            },
+            'hepatic_adjustment_dosage': {
+                'mild': '100mg PO x 1 lần/ngày (nếu CrCl ≥50). Không cần điều chỉnh liều đặc biệt.',
+                'moderate': '100mg PO x 1 lần/ngày (nếu CrCl ≥50). Không cần điều chỉnh liều đặc biệt. Theo dõi đáp ứng điều trị.',
+                'severe': 'Thận trọng, có thể cần giảm liều. Theo dõi đáp ứng điều trị và độc tính.'
+            },
+            'administration_route': 'PO (uống)',
+            'frequency': '1 lần/ngày',
+            'with_food': 'Có thể uống với hoặc không thức ăn. Uống bất kỳ lúc nào trong ngày.',
+            'timing': 'Uống 1 lần/ngày, bất kỳ lúc nào trong ngày (sáng, trưa, tối). Uống cùng giờ mỗi ngày để dễ nhớ. Không phụ thuộc bữa ăn.',
+            'titration': 'Không cần tăng liều. Liều cố định: 100mg/ngày (CrCl ≥50), 50mg/ngày (CrCl 30-50), 25mg/ngày (CrCl <30). Điều chỉnh liều khi CrCl thay đổi.',
+            'notes': 'Uống bất kỳ lúc nào, không cần thức ăn. Cần điều chỉnh liều ở suy thận: CrCl ≥50 → 100mg/ngày, CrCl 30-50 → 50mg/ngày, CrCl <30 → 25mg/ngày. Kiểm tra CrCl trước khi bắt đầu và định kỳ. Ít gây hạ đường huyết khi dùng đơn độc (do cơ chế phụ thuộc glucose). Thải trừ chủ yếu qua thận.'
+        },
         'renal_adjustment': {
         'normal': '100mg/ngày', '30_60': '50mg/ngày (CrCl 30-50)', 'under_30':
         '25mg/ngày (CrCl <30)'},
@@ -702,9 +751,33 @@ DPP_4_INHIBITORS_DRUGS = {
         'Đái tháo đường type 2'],
         'contraindications': ['Đái tháo đường type 1',
         'Nhiễm toan ceton', 'Suy gan nặng'],
-        'dosage': {'adult_standard':
-        '50mg x 2 lần/ngày (sáng và tối)', 'adult_metformin_combination':
-        '50mg x 2 lần/ngày', 'notes': 'Uống với bữa ăn. Ít gây hạ đường huyết'},
+        'dosage': {
+            'adult_start': '50mg PO x 2 lần/ngày (sáng và tối) với bữa ăn',
+            'adult_usual': '50mg PO x 2 lần/ngày (sáng và tối) với bữa ăn. Tổng liều 100mg/ngày.',
+            'adult_max': '50mg x 2 lần/ngày (100mg/ngày)',
+            'adult_standard': '50mg PO x 2 lần/ngày (sáng và tối) với bữa ăn',
+            'adult_metformin_combination': '50mg PO x 2 lần/ngày (sáng và tối) với bữa ăn. Có thể dùng kết hợp với metformin.',
+            'dm_t2': '50mg PO x 2 lần/ngày (sáng và tối) với bữa ăn. Tổng liều 100mg/ngày. Uống với bữa ăn để tăng hấp thu.',
+            'elderly': '50mg PO x 2 lần/ngày (sáng và tối) với bữa ăn. Không cần điều chỉnh liều đặc biệt, nhưng thận trọng nếu suy thận nặng.',
+            'pregnancy': 'Category C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ.',
+            'renal_adjustment_dosage': {
+                'normal': '50mg PO x 2 lần/ngày với bữa ăn (CrCl ≥60)',
+                '30_60': '50mg PO x 2 lần/ngày với bữa ăn (CrCl 30-60). Không cần điều chỉnh liều.',
+                'under_30': 'Thận trọng, có thể cần giảm liều. 50mg PO x 2 lần/ngày với bữa ăn (CrCl <30). Theo dõi chức năng thận chặt chẽ.',
+                'dialysis': 'Thận trọng. Có thể dùng 50mg PO x 2 lần/ngày với bữa ăn. Theo dõi chức năng thận chặt chẽ.'
+            },
+            'hepatic_adjustment_dosage': {
+                'mild': '50mg PO x 2 lần/ngày với bữa ăn. Không cần điều chỉnh liều đặc biệt.',
+                'moderate': '50mg PO x 2 lần/ngày với bữa ăn. Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan.',
+                'severe': 'CHỐNG CHỈ ĐỊNH - Suy gan nặng. Không dùng ở suy gan nặng.'
+            },
+            'administration_route': 'PO (uống)',
+            'frequency': '2 lần/ngày (sáng và tối)',
+            'with_food': 'Uống với bữa ăn (sáng và tối) để tăng hấp thu. Không uống lúc đói.',
+            'timing': 'Uống 2 lần/ngày: 50mg với bữa sáng và 50mg với bữa tối. Uống cùng giờ mỗi ngày. Uống với bữa ăn để tăng hấp thu.',
+            'titration': 'Không cần tăng liều. Liều cố định: 50mg x 2 lần/ngày (100mg/ngày).',
+            'notes': 'Uống với bữa ăn (sáng và tối) để tăng hấp thu. Không uống lúc đói. Ít gây hạ đường huyết khi dùng đơn độc (do cơ chế phụ thuộc glucose). Thải trừ chủ yếu qua gan. CHỐNG CHỈ ĐỊNH ở suy gan nặng. Thận trọng nếu suy thận nặng (CrCl <30).'
+        },
         'renal_adjustment': {'normal': '50mg x 2 lần/ngày', '30_60':
         '50mg x 2 lần/ngày', 'under_30': 'Thận trọng'},
         'side_effects': [

@@ -30,8 +30,31 @@ SPECIFIC_INSULINS_DRUGS = {
             ]
         },
         "dosage": {
-            "adult_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn",
-            "notes": "Tiêm 15 phút TRƯỚC bữa ăn. Fiasp: có thể tiêm ngay trước ăn hoặc sau ăn 20 phút."
+            "adult_start": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn (bolus insulin)",
+            "adult_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn. Điều chỉnh theo carbohydrate (thường 1 đơn vị/10-15g carbohydrate) và đường huyết trước ăn.",
+            "adult_usual": "0.5-1 đơn vị/kg/ngày (tổng liều bolus, thường chia 3 bữa). Ví dụ: 70kg → 35-70 đơn vị/ngày bolus, chia 3 bữa = 12-23 đơn vị/bữa.",
+            "adult_max": "Điều chỉnh theo đường huyết, không có liều tối đa cố định. Một số bệnh nhân kháng insulin có thể cần >1 đơn vị/kg/ngày.",
+            "dm_t1": "0.5-1 đơn vị/kg/ngày chia trước bữa ăn (bolus insulin). Thường dùng kết hợp với basal insulin (glargine, detemir, degludec).",
+            "dm_t2": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn. Thường dùng khi không kiểm soát được đường huyết sau ăn bằng thuốc uống hoặc basal insulin.",
+            "elderly": "Khởi đầu liều thấp hơn (0.05-0.1 đơn vị/kg/bữa), tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ đường huyết.",
+            "pregnancy": "Nhu cầu insulin tăng trong thai kỳ, đặc biệt tam cá nguyệt thứ 2 và 3. Có thể tăng 50-100% so với trước thai kỳ. Điều chỉnh liều thường xuyên.",
+            "renal_adjustment_dosage": {
+                "normal": "0.1-0.15 đơn vị/kg/bữa (CrCl ≥60)",
+                "30_60": "Giảm liều 20-30% do giảm chuyển hóa insulin. Ví dụ: nếu liều bình thường 15 đơn vị/bữa → giảm xuống 10-12 đơn vị/bữa (CrCl 30-60)",
+                "under_30": "Giảm liều 30-50% do giảm chuyển hóa insulin đáng kể. Ví dụ: nếu liều bình thường 15 đơn vị/bữa → giảm xuống 7.5-10 đơn vị/bữa (CrCl <30)",
+                "dialysis": "Giảm liều 30-50%. Điều chỉnh liều sau mỗi lần lọc máu. Theo dõi đường huyết chặt chẽ."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.1-0.15 đơn vị/kg/bữa. Không cần điều chỉnh đặc biệt.",
+                "moderate": "Có thể cần giảm liều 20-30% do giảm chuyển hóa glucose. Suy gan có thể gây hạ đường huyết.",
+                "severe": "Có thể cần giảm liều 30-50%. Suy gan nặng có thể gây hạ đường huyết nghiêm trọng."
+            },
+            "administration_route": "SC (tiêm dưới da) - thường dùng. IV (tĩnh mạch) - chỉ dùng trong bệnh viện cho DKA, HHNK.",
+            "frequency": "3-4 lần/ngày (trước mỗi bữa ăn chính)",
+            "with_food": "Tiêm 15 phút TRƯỚC bữa ăn (Novolog). Fiasp: có thể tiêm ngay trước ăn hoặc sau ăn 20 phút. Điều chỉnh liều theo carbohydrate trong bữa ăn.",
+            "timing": "Tiêm 15 phút TRƯỚC bữa ăn (Novolog). Fiasp: có thể tiêm ngay trước ăn hoặc sau ăn 20 phút. Điều chỉnh liều theo đường huyết trước ăn và carbohydrate.",
+            "titration": "Tăng liều từ từ: Mỗi 2-3 ngày tăng 1-2 đơn vị/bữa nếu đường huyết sau ăn vẫn cao (>180 mg/dL). Giảm liều nếu có hạ đường huyết. Đánh giá hiệu quả sau mỗi 3-7 ngày.",
+            "notes": "Rapid-acting insulin, tác dụng nhanh (onset 15 phút). Tiêm 15 phút TRƯỚC bữa ăn (Novolog). Fiasp: có thể tiêm ngay trước ăn hoặc sau ăn 20 phút. Điều chỉnh liều theo carbohydrate (insulin-to-carbohydrate ratio) và đường huyết trước ăn (correction factor). LUÔN có glucagon và glucose sẵn để điều trị hạ đường huyết."
         },
         "side_effects": [
             "Hạ đường huyết",
@@ -194,8 +217,31 @@ SPECIFIC_INSULINS_DRUGS = {
             ]
         },
         "dosage": {
-            "adult_basal": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày",
-            "notes": "Tiêm 1 lần/ngày, bất kỳ giờ nào trong ngày (linh hoạt về thời gian). Tác dụng kéo dài >42 giờ → ít nguy cơ hạ đường huyết nhất."
+            "adult_start": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày (basal insulin)",
+            "adult_basal": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày. Ví dụ: 70kg → 14-28 đơn vị/ngày.",
+            "adult_usual": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày. Type 1: thường 0.2-0.4 đơn vị/kg/ngày. Type 2: thường 0.1-0.3 đơn vị/kg/ngày.",
+            "adult_max": "Điều chỉnh theo đường huyết, không có liều tối đa cố định.",
+            "dm_t1": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày (basal insulin). Thường dùng kết hợp với bolus insulin (rapid-acting) trước bữa ăn.",
+            "dm_t2": "0.1-0.3 đơn vị/kg/ngày x 1 lần/ngày (basal insulin). Khởi đầu 0.1-0.2 đơn vị/kg/ngày, tăng dần.",
+            "elderly": "Khởi đầu liều thấp hơn (0.1-0.2 đơn vị/kg/ngày), tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ đường huyết.",
+            "pregnancy": "Nhu cầu insulin tăng trong thai kỳ. Có thể tăng 50-100% so với trước thai kỳ. Điều chỉnh liều thường xuyên.",
+            "renal_adjustment_dosage": {
+                "normal": "0.2-0.4 đơn vị/kg/ngày (CrCl ≥60)",
+                "30_60": "Giảm liều 20-30% do giảm chuyển hóa insulin (CrCl 30-60)",
+                "under_30": "Giảm liều 30-50% do giảm chuyển hóa insulin đáng kể (CrCl <30)",
+                "dialysis": "Giảm liều 30-50%. Điều chỉnh liều sau mỗi lần lọc máu."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.2-0.4 đơn vị/kg/ngày. Không cần điều chỉnh đặc biệt.",
+                "moderate": "Có thể cần giảm liều 20-30% do giảm chuyển hóa glucose.",
+                "severe": "Có thể cần giảm liều 30-50%. Suy gan nặng có thể gây hạ đường huyết nghiêm trọng."
+            },
+            "administration_route": "SC (tiêm dưới da)",
+            "frequency": "1 lần/ngày",
+            "with_food": "Không phụ thuộc bữa ăn. Tiêm bất kỳ giờ nào trong ngày (linh hoạt về thời gian), nhưng nên tiêm cùng giờ mỗi ngày để duy trì nồng độ ổn định.",
+            "timing": "Tiêm 1 lần/ngày, bất kỳ giờ nào trong ngày (linh hoạt về thời gian). Có thể tiêm buổi sáng, buổi tối, hoặc bất kỳ giờ nào phù hợp. Nên tiêm cùng giờ mỗi ngày để duy trì nồng độ ổn định.",
+            "titration": "Tăng liều từ từ: Mỗi 3-5 ngày tăng 2-4 đơn vị nếu đường huyết trước ăn vẫn cao (>130 mg/dL). Giảm liều nếu có hạ đường huyết. Đánh giá hiệu quả sau mỗi 1-2 tuần.",
+            "notes": "Ultra-long-acting insulin, tác dụng kéo dài >42 giờ → ít nguy cơ hạ đường huyết nhất trong các insulin. KHÔNG có peak tác dụng (flat profile). Tiêm 1 lần/ngày, bất kỳ giờ nào trong ngày (linh hoạt về thời gian). Có thể bỏ lỡ liều và tiêm muộn hơn (trong vòng 8 giờ) mà không ảnh hưởng nhiều. LUÔN có glucagon và glucose sẵn để điều trị hạ đường huyết."
         },
         "side_effects": [
             "Hạ đường huyết (ít nhất trong các insulin)",
@@ -349,8 +395,31 @@ SPECIFIC_INSULINS_DRUGS = {
             ]
         },
         "dosage": {
-            "adult_basal": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần",
-            "notes": "Tiêm 1-2 lần/ngày. Có thể cần 2 lần/ngày ở một số bệnh nhân. KHÔNG có peak tác dụng."
+            "adult_start": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần (basal insulin)",
+            "adult_basal": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần. Thường 1 lần/ngày, nhưng có thể cần 2 lần/ngày ở một số bệnh nhân. Ví dụ: 70kg → 14-28 đơn vị/ngày.",
+            "adult_usual": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần. Type 1: thường 0.2-0.4 đơn vị/kg/ngày. Type 2: thường 0.1-0.3 đơn vị/kg/ngày.",
+            "adult_max": "Điều chỉnh theo đường huyết, không có liều tối đa cố định.",
+            "dm_t1": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần (basal insulin). Thường dùng kết hợp với bolus insulin (rapid-acting) trước bữa ăn.",
+            "dm_t2": "0.1-0.3 đơn vị/kg/ngày, chia 1-2 lần (basal insulin). Khởi đầu 0.1-0.2 đơn vị/kg/ngày, tăng dần.",
+            "elderly": "Khởi đầu liều thấp hơn (0.1-0.2 đơn vị/kg/ngày), tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ đường huyết.",
+            "pregnancy": "Nhu cầu insulin tăng trong thai kỳ. Có thể tăng 50-100% so với trước thai kỳ. Điều chỉnh liều thường xuyên.",
+            "renal_adjustment_dosage": {
+                "normal": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần (CrCl ≥60)",
+                "30_60": "Giảm liều 20-30% do giảm chuyển hóa insulin (CrCl 30-60)",
+                "under_30": "Giảm liều 30-50% do giảm chuyển hóa insulin đáng kể (CrCl <30)",
+                "dialysis": "Giảm liều 30-50%. Điều chỉnh liều sau mỗi lần lọc máu."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần. Không cần điều chỉnh đặc biệt.",
+                "moderate": "Có thể cần giảm liều 20-30% do giảm chuyển hóa glucose.",
+                "severe": "Có thể cần giảm liều 30-50%. Suy gan nặng có thể gây hạ đường huyết nghiêm trọng."
+            },
+            "administration_route": "SC (tiêm dưới da)",
+            "frequency": "1-2 lần/ngày (thường 1 lần/ngày, có thể cần 2 lần/ngày)",
+            "with_food": "Không phụ thuộc bữa ăn. Tiêm cùng giờ mỗi ngày (thường buổi tối hoặc buổi sáng).",
+            "timing": "Tiêm 1-2 lần/ngày. Thường 1 lần/ngày (buổi tối hoặc buổi sáng). Một số bệnh nhân có thể cần 2 lần/ngày (buổi sáng và buổi tối) để kiểm soát đường huyết tốt hơn. Tiêm cùng giờ mỗi ngày.",
+            "titration": "Tăng liều từ từ: Mỗi 3-5 ngày tăng 2-4 đơn vị nếu đường huyết trước ăn vẫn cao (>130 mg/dL). Giảm liều nếu có hạ đường huyết. Đánh giá hiệu quả sau mỗi 1-2 tuần.",
+            "notes": "Long-acting insulin, tác dụng kéo dài 18-24 giờ. KHÔNG có peak tác dụng (flat profile) → ít nguy cơ hạ đường huyết hơn NPH. Tiêm 1-2 lần/ngày. Có thể cần 2 lần/ngày ở một số bệnh nhân để kiểm soát đường huyết tốt hơn. LUÔN có glucagon và glucose sẵn để điều trị hạ đường huyết."
         },
         "side_effects": [
             "Hạ đường huyết (ít hơn NPH)",
@@ -505,9 +574,32 @@ SPECIFIC_INSULINS_DRUGS = {
             ]
         },
         "dosage": {
-            "adult_basal": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày",
-            "toujeo": "Toujeo (U-300): liều cao hơn 20-30% so với Lantus",
-            "notes": "Tiêm 1 lần/ngày, cùng giờ mỗi ngày (thường buổi tối). KHÔNG có peak tác dụng → ít nguy cơ hạ đường huyết hơn NPH."
+            "adult_start": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày (basal insulin)",
+            "adult_basal": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày. Ví dụ: 70kg → 14-28 đơn vị/ngày.",
+            "adult_usual": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày. Type 1: thường 0.2-0.4 đơn vị/kg/ngày. Type 2: thường 0.1-0.3 đơn vị/kg/ngày.",
+            "adult_max": "Điều chỉnh theo đường huyết, không có liều tối đa cố định.",
+            "toujeo": "Toujeo (U-300, nồng độ cao hơn): liều cao hơn 20-30% so với Lantus (U-100). Ví dụ: nếu Lantus 20 đơn vị/ngày → Toujeo 24-26 đơn vị/ngày. Tác dụng kéo dài hơn Lantus.",
+            "dm_t1": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày (basal insulin). Thường dùng kết hợp với bolus insulin (rapid-acting) trước bữa ăn.",
+            "dm_t2": "0.1-0.3 đơn vị/kg/ngày x 1 lần/ngày (basal insulin). Khởi đầu 0.1-0.2 đơn vị/kg/ngày, tăng dần.",
+            "elderly": "Khởi đầu liều thấp hơn (0.1-0.2 đơn vị/kg/ngày), tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ đường huyết.",
+            "pregnancy": "Nhu cầu insulin tăng trong thai kỳ. Có thể tăng 50-100% so với trước thai kỳ. Điều chỉnh liều thường xuyên.",
+            "renal_adjustment_dosage": {
+                "normal": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày (CrCl ≥60)",
+                "30_60": "Giảm liều 20-30% do giảm chuyển hóa insulin (CrCl 30-60)",
+                "under_30": "Giảm liều 30-50% do giảm chuyển hóa insulin đáng kể (CrCl <30)",
+                "dialysis": "Giảm liều 30-50%. Điều chỉnh liều sau mỗi lần lọc máu."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.2-0.4 đơn vị/kg/ngày x 1 lần/ngày. Không cần điều chỉnh đặc biệt.",
+                "moderate": "Có thể cần giảm liều 20-30% do giảm chuyển hóa glucose.",
+                "severe": "Có thể cần giảm liều 30-50%. Suy gan nặng có thể gây hạ đường huyết nghiêm trọng."
+            },
+            "administration_route": "SC (tiêm dưới da)",
+            "frequency": "1 lần/ngày",
+            "with_food": "Không phụ thuộc bữa ăn. Tiêm cùng giờ mỗi ngày (thường buổi tối).",
+            "timing": "Tiêm 1 lần/ngày, cùng giờ mỗi ngày (thường buổi tối). Có thể tiêm buổi sáng nếu phù hợp hơn. Tiêm cùng giờ mỗi ngày để duy trì nồng độ ổn định.",
+            "titration": "Tăng liều từ từ: Mỗi 3-5 ngày tăng 2-4 đơn vị nếu đường huyết trước ăn vẫn cao (>130 mg/dL). Giảm liều nếu có hạ đường huyết. Đánh giá hiệu quả sau mỗi 1-2 tuần.",
+            "notes": "Long-acting insulin, tác dụng kéo dài 18-24 giờ. KHÔNG có peak tác dụng (flat profile) → ít nguy cơ hạ đường huyết hơn NPH. Tiêm 1 lần/ngày, cùng giờ mỗi ngày (thường buổi tối). Toujeo (U-300): liều cao hơn 20-30% so với Lantus, tác dụng kéo dài hơn. KHÔNG được trộn với insulin khác trong cùng ống tiêm. LUÔN có glucagon và glucose sẵn để điều trị hạ đường huyết."
         },
         "side_effects": [
             "Hạ đường huyết (ít hơn NPH)",
@@ -664,8 +756,31 @@ SPECIFIC_INSULINS_DRUGS = {
             ]
         },
         "dosage": {
-            "adult_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn",
-            "notes": "Tiêm 15 phút TRƯỚC bữa ăn hoặc ngay sau khi bắt đầu ăn."
+            "adult_start": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn (bolus insulin)",
+            "adult_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn. Điều chỉnh theo carbohydrate (thường 1 đơn vị/10-15g carbohydrate) và đường huyết trước ăn.",
+            "adult_usual": "0.5-1 đơn vị/kg/ngày (tổng liều bolus, thường chia 3 bữa). Ví dụ: 70kg → 35-70 đơn vị/ngày bolus, chia 3 bữa = 12-23 đơn vị/bữa.",
+            "adult_max": "Điều chỉnh theo đường huyết, không có liều tối đa cố định.",
+            "dm_t1": "0.5-1 đơn vị/kg/ngày chia trước bữa ăn (bolus insulin). Thường dùng kết hợp với basal insulin.",
+            "dm_t2": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn. Thường dùng khi không kiểm soát được đường huyết sau ăn.",
+            "elderly": "Khởi đầu liều thấp hơn (0.05-0.1 đơn vị/kg/bữa), tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ đường huyết.",
+            "pregnancy": "Nhu cầu insulin tăng trong thai kỳ. Có thể tăng 50-100% so với trước thai kỳ. Điều chỉnh liều thường xuyên.",
+            "renal_adjustment_dosage": {
+                "normal": "0.1-0.15 đơn vị/kg/bữa (CrCl ≥60)",
+                "30_60": "Giảm liều 20-30% do giảm chuyển hóa insulin (CrCl 30-60)",
+                "under_30": "Giảm liều 30-50% do giảm chuyển hóa insulin đáng kể (CrCl <30)",
+                "dialysis": "Giảm liều 30-50%. Điều chỉnh liều sau mỗi lần lọc máu."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.1-0.15 đơn vị/kg/bữa. Không cần điều chỉnh đặc biệt.",
+                "moderate": "Có thể cần giảm liều 20-30% do giảm chuyển hóa glucose.",
+                "severe": "Có thể cần giảm liều 30-50%. Suy gan nặng có thể gây hạ đường huyết nghiêm trọng."
+            },
+            "administration_route": "SC (tiêm dưới da) - thường dùng. IV (tĩnh mạch) - chỉ dùng trong bệnh viện cho DKA, HHNK.",
+            "frequency": "3-4 lần/ngày (trước mỗi bữa ăn chính)",
+            "with_food": "Tiêm 15 phút TRƯỚC bữa ăn hoặc ngay sau khi bắt đầu ăn. Điều chỉnh liều theo carbohydrate trong bữa ăn.",
+            "timing": "Tiêm 15 phút TRƯỚC bữa ăn hoặc ngay sau khi bắt đầu ăn. Điều chỉnh liều theo đường huyết trước ăn và carbohydrate.",
+            "titration": "Tăng liều từ từ: Mỗi 2-3 ngày tăng 1-2 đơn vị/bữa nếu đường huyết sau ăn vẫn cao (>180 mg/dL). Giảm liều nếu có hạ đường huyết. Đánh giá hiệu quả sau mỗi 3-7 ngày.",
+            "notes": "Rapid-acting insulin, tác dụng nhanh (onset 15 phút). Tiêm 15 phút TRƯỚC bữa ăn hoặc ngay sau khi bắt đầu ăn. Điều chỉnh liều theo carbohydrate (insulin-to-carbohydrate ratio) và đường huyết trước ăn (correction factor). LUÔN có glucagon và glucose sẵn để điều trị hạ đường huyết."
         },
         "side_effects": [
             "Hạ đường huyết",
@@ -828,9 +943,32 @@ SPECIFIC_INSULINS_DRUGS = {
             ]
         },
         "dosage": {
-            "adult_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn (điều chỉnh theo carbohydrate và đường huyết)",
-            "adult_correction": "Điều chỉnh theo sliding scale hoặc insulin-to-carbohydrate ratio",
-            "notes": "Tiêm 15 phút TRƯỚC bữa ăn (hoặc ngay trước ăn). Tác dụng nhanh nhất trong các insulin."
+            "adult_start": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn (bolus insulin)",
+            "adult_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn. Điều chỉnh theo carbohydrate (thường 1 đơn vị/10-15g carbohydrate) và đường huyết trước ăn.",
+            "adult_correction": "Điều chỉnh theo sliding scale hoặc insulin-to-carbohydrate ratio. Correction factor: thường 1 đơn vị giảm đường huyết 30-50 mg/dL (tùy độ nhạy cảm insulin).",
+            "adult_usual": "0.5-1 đơn vị/kg/ngày (tổng liều bolus, thường chia 3 bữa). Ví dụ: 70kg → 35-70 đơn vị/ngày bolus, chia 3 bữa = 12-23 đơn vị/bữa.",
+            "adult_max": "Điều chỉnh theo đường huyết, không có liều tối đa cố định.",
+            "dm_t1": "0.5-1 đơn vị/kg/ngày chia trước bữa ăn (bolus insulin). Thường dùng kết hợp với basal insulin.",
+            "dm_t2": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn. Thường dùng khi không kiểm soát được đường huyết sau ăn.",
+            "elderly": "Khởi đầu liều thấp hơn (0.05-0.1 đơn vị/kg/bữa), tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ đường huyết.",
+            "pregnancy": "Nhu cầu insulin tăng trong thai kỳ. Có thể tăng 50-100% so với trước thai kỳ. Điều chỉnh liều thường xuyên.",
+            "renal_adjustment_dosage": {
+                "normal": "0.1-0.15 đơn vị/kg/bữa (CrCl ≥60)",
+                "30_60": "Giảm liều 20-30% do giảm chuyển hóa insulin (CrCl 30-60)",
+                "under_30": "Giảm liều 30-50% do giảm chuyển hóa insulin đáng kể (CrCl <30)",
+                "dialysis": "Giảm liều 30-50%. Điều chỉnh liều sau mỗi lần lọc máu."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.1-0.15 đơn vị/kg/bữa. Không cần điều chỉnh đặc biệt.",
+                "moderate": "Có thể cần giảm liều 20-30% do giảm chuyển hóa glucose.",
+                "severe": "Có thể cần giảm liều 30-50%. Suy gan nặng có thể gây hạ đường huyết nghiêm trọng."
+            },
+            "administration_route": "SC (tiêm dưới da) - thường dùng. IV (tĩnh mạch) - chỉ dùng trong bệnh viện cho DKA, HHNK.",
+            "frequency": "3-4 lần/ngày (trước mỗi bữa ăn chính)",
+            "with_food": "Tiêm 15 phút TRƯỚC bữa ăn (hoặc ngay trước ăn). Điều chỉnh liều theo carbohydrate trong bữa ăn.",
+            "timing": "Tiêm 15 phút TRƯỚC bữa ăn (hoặc ngay trước ăn). Tác dụng nhanh nhất trong các insulin. Điều chỉnh liều theo đường huyết trước ăn và carbohydrate.",
+            "titration": "Tăng liều từ từ: Mỗi 2-3 ngày tăng 1-2 đơn vị/bữa nếu đường huyết sau ăn vẫn cao (>180 mg/dL). Giảm liều nếu có hạ đường huyết. Đánh giá hiệu quả sau mỗi 3-7 ngày.",
+            "notes": "Rapid-acting insulin, tác dụng nhanh nhất trong các insulin (onset 15 phút). Tiêm 15 phút TRƯỚC bữa ăn (hoặc ngay trước ăn). Điều chỉnh liều theo carbohydrate (insulin-to-carbohydrate ratio) và đường huyết trước ăn (correction factor). LUÔN có glucagon và glucose sẵn để điều trị hạ đường huyết."
         },
         "side_effects": [
             "Hạ đường huyết (nguy hiểm)",
@@ -1002,8 +1140,31 @@ SPECIFIC_INSULINS_DRUGS = {
             ]
         },
         "dosage": {
-            "adult_basal": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần",
-            "notes": "Tiêm 1-2 lần/ngày. Có peak tác dụng (2-8 giờ sau tiêm) → nguy cơ hạ đường huyết giữa các bữa ăn."
+            "adult_start": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần (basal insulin)",
+            "adult_basal": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần. Thường 1-2 lần/ngày. Ví dụ: 70kg → 14-28 đơn vị/ngày.",
+            "adult_usual": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần. Type 1: thường 0.2-0.4 đơn vị/kg/ngày. Type 2: thường 0.1-0.3 đơn vị/kg/ngày.",
+            "adult_max": "Điều chỉnh theo đường huyết, không có liều tối đa cố định.",
+            "dm_t1": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần (basal insulin). Thường dùng kết hợp với bolus insulin (rapid-acting) trước bữa ăn.",
+            "dm_t2": "0.1-0.3 đơn vị/kg/ngày, chia 1-2 lần (basal insulin). Khởi đầu 0.1-0.2 đơn vị/kg/ngày, tăng dần.",
+            "elderly": "Khởi đầu liều thấp hơn (0.1-0.2 đơn vị/kg/ngày), tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ đường huyết, đặc biệt vào giờ peak.",
+            "pregnancy": "Nhu cầu insulin tăng trong thai kỳ. Có thể tăng 50-100% so với trước thai kỳ. Điều chỉnh liều thường xuyên. Cẩn thận với peak tác dụng.",
+            "renal_adjustment_dosage": {
+                "normal": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần (CrCl ≥60)",
+                "30_60": "Giảm liều 20-30% do giảm chuyển hóa insulin. Cẩn thận với peak tác dụng (CrCl 30-60)",
+                "under_30": "Giảm liều 30-50% do giảm chuyển hóa insulin đáng kể. Cẩn thận với peak tác dụng (CrCl <30)",
+                "dialysis": "Giảm liều 30-50%. Điều chỉnh liều sau mỗi lần lọc máu. Cẩn thận với peak tác dụng."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.2-0.4 đơn vị/kg/ngày, chia 1-2 lần. Không cần điều chỉnh đặc biệt.",
+                "moderate": "Có thể cần giảm liều 20-30% do giảm chuyển hóa glucose. Cẩn thận với peak tác dụng.",
+                "severe": "Có thể cần giảm liều 30-50%. Suy gan nặng có thể gây hạ đường huyết nghiêm trọng, đặc biệt vào giờ peak."
+            },
+            "administration_route": "SC (tiêm dưới da)",
+            "frequency": "1-2 lần/ngày (thường 1-2 lần/ngày)",
+            "with_food": "Không phụ thuộc bữa ăn. Tiêm cùng giờ mỗi ngày. Cẩn thận với peak tác dụng (2-8 giờ sau tiêm) → có thể cần ăn nhẹ vào giờ peak.",
+            "timing": "Tiêm 1-2 lần/ngày, cùng giờ mỗi ngày (thường buổi sáng và/hoặc buổi tối). Có peak tác dụng (2-8 giờ sau tiêm) → nguy cơ hạ đường huyết giữa các bữa ăn. Có thể cần ăn nhẹ vào giờ peak.",
+            "titration": "Tăng liều từ từ: Mỗi 3-5 ngày tăng 2-4 đơn vị nếu đường huyết trước ăn vẫn cao (>130 mg/dL). Giảm liều nếu có hạ đường huyết, đặc biệt vào giờ peak. Đánh giá hiệu quả sau mỗi 1-2 tuần.",
+            "notes": "Intermediate-acting insulin, tác dụng kéo dài 12-16 giờ. Có peak tác dụng (2-8 giờ sau tiêm) → nguy cơ hạ đường huyết giữa các bữa ăn cao hơn long-acting insulin không có peak. Tiêm 1-2 lần/ngày. Cẩn thận với hạ đường huyết vào giờ peak. Có thể cần ăn nhẹ vào giờ peak. LUÔN có glucagon và glucose sẵn để điều trị hạ đường huyết."
         },
         "side_effects": [
             "Hạ đường huyết (đặc biệt vào giờ peak)",
@@ -1160,9 +1321,34 @@ SPECIFIC_INSULINS_DRUGS = {
             ]
         },
         "dosage": {
-            "sc_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn",
-            "iv_dka": "0.1 đơn vị/kg/giờ IV truyền liên tục",
-            "notes": "Tiêm 30-60 phút TRƯỚC bữa ăn. Có thể dùng IV trong DKA hoặc tăng đường huyết nặng."
+            "adult_start": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn (SC bolus insulin)",
+            "sc_bolus": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn. Điều chỉnh theo carbohydrate và đường huyết trước ăn.",
+            "adult_usual": "0.5-1 đơn vị/kg/ngày (tổng liều bolus, thường chia 3 bữa). Ví dụ: 70kg → 35-70 đơn vị/ngày bolus, chia 3 bữa = 12-23 đơn vị/bữa.",
+            "adult_max": "Điều chỉnh theo đường huyết, không có liều tối đa cố định.",
+            "dm_t1": "0.5-1 đơn vị/kg/ngày chia trước bữa ăn (bolus insulin). Thường dùng kết hợp với basal insulin.",
+            "dm_t2": "0.1-0.15 đơn vị/kg trước mỗi bữa ăn. Thường dùng khi không kiểm soát được đường huyết sau ăn.",
+            "dka_iv": "0.1 đơn vị/kg/giờ IV truyền liên tục (sau khi bù dịch và điện giải). Ví dụ: 70kg → 7 đơn vị/giờ. Mục tiêu: giảm đường huyết 50-75 mg/dL/giờ. Khi đường huyết <200 mg/dL, giảm tốc độ truyền xuống 0.05-0.1 đơn vị/kg/giờ và thêm dextrose vào dịch truyền.",
+            "dka_initial_bolus": "0.1 đơn vị/kg IV bolus (tùy chọn, không bắt buộc) trước khi truyền liên tục. Ví dụ: 70kg → 7 đơn vị IV bolus.",
+            "hospital_hyperglycemia_iv": "0.05-0.1 đơn vị/kg/giờ IV truyền liên tục. Mục tiêu đường huyết: 140-180 mg/dL. Điều chỉnh tốc độ truyền theo đường huyết mỗi 1-2 giờ.",
+            "elderly": "Khởi đầu liều thấp hơn (0.05-0.1 đơn vị/kg/bữa), tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ đường huyết.",
+            "pregnancy": "Nhu cầu insulin tăng trong thai kỳ. Có thể tăng 50-100% so với trước thai kỳ. Điều chỉnh liều thường xuyên.",
+            "renal_adjustment_dosage": {
+                "normal": "0.1-0.15 đơn vị/kg/bữa (SC) hoặc 0.05-0.1 đơn vị/kg/giờ (IV) (CrCl ≥60)",
+                "30_60": "Giảm liều 20-30% do giảm chuyển hóa insulin (CrCl 30-60)",
+                "under_30": "Giảm liều 30-50% do giảm chuyển hóa insulin đáng kể (CrCl <30)",
+                "dialysis": "Giảm liều 30-50%. Điều chỉnh liều sau mỗi lần lọc máu."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.1-0.15 đơn vị/kg/bữa (SC) hoặc 0.05-0.1 đơn vị/kg/giờ (IV). Không cần điều chỉnh đặc biệt.",
+                "moderate": "Có thể cần giảm liều 20-30% do giảm chuyển hóa glucose.",
+                "severe": "Có thể cần giảm liều 30-50%. Suy gan nặng có thể gây hạ đường huyết nghiêm trọng."
+            },
+            "administration_route": "SC (tiêm dưới da) - thường dùng. IV (tĩnh mạch) - chỉ dùng trong bệnh viện cho DKA, HHNK, tăng đường huyết nặng.",
+            "frequency": "3-4 lần/ngày (SC, trước mỗi bữa ăn chính) hoặc truyền liên tục (IV)",
+            "with_food": "SC: Tiêm 30-60 phút TRƯỚC bữa ăn. Điều chỉnh liều theo carbohydrate trong bữa ăn. IV: Không phụ thuộc bữa ăn.",
+            "timing": "SC: Tiêm 30-60 phút TRƯỚC bữa ăn (sớm hơn rapid-acting insulin). IV: Truyền liên tục với tốc độ 0.05-0.1 đơn vị/kg/giờ, điều chỉnh theo đường huyết mỗi 1-2 giờ.",
+            "titration": "SC: Tăng liều từ từ: Mỗi 2-3 ngày tăng 1-2 đơn vị/bữa nếu đường huyết sau ăn vẫn cao (>180 mg/dL). IV: Điều chỉnh tốc độ truyền theo đường huyết mỗi 1-2 giờ.",
+            "notes": "Short-acting insulin, tác dụng chậm hơn rapid-acting (onset 30-60 phút). Tiêm 30-60 phút TRƯỚC bữa ăn (sớm hơn rapid-acting insulin). Có thể dùng IV trong DKA hoặc tăng đường huyết nặng trong bệnh viện (0.05-0.1 đơn vị/kg/giờ truyền liên tục). Điều chỉnh liều theo carbohydrate và đường huyết trước ăn. LUÔN có glucagon và glucose sẵn để điều trị hạ đường huyết."
         },
         "side_effects": [
             "Hạ đường huyết",

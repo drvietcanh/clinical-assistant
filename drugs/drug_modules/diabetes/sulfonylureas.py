@@ -12,10 +12,30 @@ SULFONYLUREAS_DRUGS = {
         'contraindications': [
         'Nhiễm toan ceton do đái tháo đường', 'Suy thận nặng', 'Suy gan nặng',
         'Có thai'],
-        'dosage': {'adult_start':
-        '2.5-5mg x 1 lần/ngày trước bữa sáng', 'adult_usual':
-        '5-15mg/ngày chia 1-2 lần', 'adult_max': '20mg/ngày', 'notes':
-        'Nguy cơ hạ đường huyết cao, đặc biệt ở người già, suy thận'},
+        'dosage': {
+            'adult_start': '2.5-5mg x 1 lần/ngày trước bữa sáng (hoặc với bữa ăn đầu tiên)',
+            'adult_usual': '5-15mg/ngày chia 1-2 lần. Thường 5-10mg x 1 lần/ngày hoặc 2.5-5mg x 2 lần/ngày',
+            'adult_max': '20mg/ngày (chia 2 lần nếu >15mg/ngày)',
+            'dm_t2': 'Khởi đầu: 2.5-5mg x 1 lần/ngày trước bữa sáng. Tăng dần mỗi 1-2 tuần: 5mg/ngày, 7.5mg/ngày, 10mg/ngày, 15mg/ngày. Tối đa 20mg/ngày. Chia 2 lần nếu >15mg/ngày (ví dụ: 10mg x 2 lần/ngày).',
+            'elderly': 'Khởi đầu 1.25-2.5mg x 1 lần/ngày trước bữa sáng, tăng dần chậm hơn. Người cao tuổi có nguy cơ hạ đường huyết cao hơn do suy thận phổ biến hơn và thời gian bán thải dài. Điều chỉnh theo CrCl.',
+            'renal_adjustment_dosage': {
+                'normal': '5-15mg/ngày chia 1-2 lần (CrCl ≥60)',
+                '30_60': 'Thận trọng, giảm liều 50%. Khởi đầu 1.25-2.5mg/ngày, tăng dần chậm. Theo dõi chức năng thận và đường huyết thường xuyên (CrCl 30-60)',
+                'under_30': 'TRÁNH DÙNG hoặc giảm liều đáng kể. Nguy cơ hạ đường huyết nghiêm trọng do tăng thời gian bán thải. Nếu bắt buộc: 1.25mg/ngày, theo dõi rất sát (CrCl <30)',
+                'dialysis': 'TRÁNH DÙNG - Nguy cơ hạ đường huyết nghiêm trọng'
+            },
+            'hepatic_adjustment_dosage': {
+                'mild': 'Thận trọng, giảm liều nhẹ. Khởi đầu 2.5mg/ngày, tăng dần chậm. Theo dõi chức năng gan và đường huyết.',
+                'moderate': 'Giảm liều 25-50%. Khởi đầu 1.25-2.5mg/ngày, tăng dần chậm. Theo dõi chức năng gan và đường huyết thường xuyên.',
+                'severe': 'CHỐNG CHỈ ĐỊNH - Suy gan nặng làm tăng nguy cơ hạ đường huyết nghiêm trọng do giảm chuyển hóa'
+            },
+            'administration_route': 'PO (uống)',
+            'frequency': '1-2 lần/ngày (thường 1 lần/ngày với liều ≤15mg, chia 2 lần với liều >15mg)',
+            'with_food': 'Uống với thức ăn hoặc trước bữa ăn (15-30 phút trước bữa ăn) để tránh hạ đường huyết. Không bỏ bữa sau khi uống.',
+            'timing': 'Uống 1 lần/ngày trước bữa sáng (hoặc với bữa ăn đầu tiên). Với liều cao (>15mg), có thể chia 2 lần: trước bữa sáng và trước bữa tối. Uống cùng giờ mỗi ngày.',
+            'titration': 'Tăng liều từ từ: Tuần 1-2: 2.5-5mg/ngày. Tuần 3-4: 5-7.5mg/ngày. Tuần 5-6: 10mg/ngày. Tuần 7-8: 15mg/ngày (nếu cần). Tối đa 20mg/ngày. Đánh giá hiệu quả sau mỗi 2-4 tuần.',
+            'notes': 'Nguy cơ hạ đường huyết cao, đặc biệt ở người già, suy thận, suy gan. Thời gian bán thải dài (10 giờ, tăng ở suy thận) → hạ đường huyết có thể kéo dài. Bắt đầu với liều thấp, tăng dần. Uống với bữa ăn. Không bỏ bữa. Theo dõi đường huyết chặt chẽ.'
+        },
         'side_effects': ['Hạ đường huyết (thường gặp, có thể nặng)', 'Tăng cân',
         'Ban da', 'Rối loạn tiêu hóa'],
         'interactions': [
@@ -202,10 +222,32 @@ SULFONYLUREAS_DRUGS = {
         'Đái tháo đường type 2'],
         'contraindications': [
         'Nhiễm toan ceton', 'Suy thận nặng'],
-        'dosage': {'adult_standard':
-        '80-320mg/ngày chia 1-2 lần', 'adult_modified_release':
-        '30-120mg x 1 lần/ngày', 'notes':
-        'Ít nguy cơ hạ đường huyết hơn glibenclamide'},
+        'dosage': {
+            'adult_start': '40-80mg x 1-2 lần/ngày với bữa ăn (standard release) hoặc 30mg x 1 lần/ngày với bữa sáng (modified release)',
+            'adult_usual': '80-320mg/ngày chia 1-2 lần (standard release) hoặc 30-120mg x 1 lần/ngày (modified release)',
+            'adult_max': '320mg/ngày (standard release) hoặc 120mg/ngày (modified release)',
+            'dm_t2': 'Standard release: Khởi đầu 40-80mg x 1-2 lần/ngày với bữa ăn, tăng dần đến 80-160mg x 2 lần/ngày (tối đa 320mg/ngày). Modified release: Khởi đầu 30mg x 1 lần/ngày với bữa sáng, tăng dần đến 60-120mg x 1 lần/ngày.',
+            'standard_release': '40-80mg x 1-2 lần/ngày với bữa ăn. Tăng dần đến 80-160mg x 2 lần/ngày. Tối đa 320mg/ngày.',
+            'modified_release': '30-120mg x 1 lần/ngày với bữa sáng. Khởi đầu 30mg/ngày, tăng dần mỗi 2-4 tuần đến 60mg, 90mg, 120mg/ngày nếu cần.',
+            'elderly': 'Khởi đầu 40mg/ngày (standard) hoặc 30mg/ngày (modified release), tăng dần chậm hơn. Người cao tuổi có nguy cơ hạ đường huyết cao hơn. Điều chỉnh theo CrCl.',
+            'renal_adjustment_dosage': {
+                'normal': '80-320mg/ngày chia 1-2 lần (standard) hoặc 30-120mg/ngày (modified release) (CrCl ≥60)',
+                '30_60': 'Thận trọng, giảm liều. Khởi đầu 40mg/ngày (standard) hoặc 30mg/ngày (modified), tăng dần chậm. Theo dõi chức năng thận và đường huyết thường xuyên (CrCl 30-60)',
+                'under_30': 'TRÁNH DÙNG hoặc giảm liều đáng kể. Nguy cơ hạ đường huyết nghiêm trọng. Nếu bắt buộc: 40mg/ngày (standard) hoặc 30mg/ngày (modified), theo dõi rất sát (CrCl <30)',
+                'dialysis': 'TRÁNH DÙNG - Nguy cơ hạ đường huyết nghiêm trọng'
+            },
+            'hepatic_adjustment_dosage': {
+                'mild': 'Thận trọng, giảm liều nhẹ. Khởi đầu 40mg/ngày (standard) hoặc 30mg/ngày (modified), tăng dần chậm. Theo dõi chức năng gan và đường huyết.',
+                'moderate': 'Giảm liều 25-50%. Khởi đầu 40mg/ngày (standard) hoặc 30mg/ngày (modified), tăng dần chậm. Theo dõi chức năng gan và đường huyết thường xuyên.',
+                'severe': 'CHỐNG CHỈ ĐỊNH - Suy gan nặng làm tăng nguy cơ hạ đường huyết nghiêm trọng'
+            },
+            'administration_route': 'PO (uống)',
+            'frequency': '1-2 lần/ngày (standard release), 1 lần/ngày (modified release)',
+            'with_food': 'Uống với thức ăn hoặc trước bữa ăn (15-30 phút trước bữa ăn) để tránh hạ đường huyết. Không bỏ bữa sau khi uống.',
+            'timing': 'Standard release: Uống 1-2 lần/ngày với bữa ăn (thường trước bữa sáng và/hoặc bữa tối). Modified release: Uống 1 lần/ngày với bữa sáng. Uống cùng giờ mỗi ngày.',
+            'titration': 'Standard release: Tuần 1-2: 40-80mg/ngày. Tuần 3-4: 80-160mg/ngày. Tuần 5-6: 160-240mg/ngày (nếu cần). Tối đa 320mg/ngày. Modified release: Tuần 1-2: 30mg/ngày. Tuần 3-4: 60mg/ngày. Tuần 5-6: 90-120mg/ngày (nếu cần).',
+            'notes': 'Ít nguy cơ hạ đường huyết hơn glibenclamide do thời gian bán thải ngắn hơn (10-12 giờ vs 10 giờ nhưng ít tích lũy hơn). Ưu điểm: thời gian bán thải ngắn hơn, ít hạ đường huyết hơn, đặc biệt ở người cao tuổi. Bắt đầu với liều thấp, tăng dần. Uống với bữa ăn. Không bỏ bữa. Theo dõi đường huyết chặt chẽ.'
+        },
         'side_effects': [
         'Hạ đường huyết', 'Tăng cân', 'Ban da'],
         'interactions': [
@@ -385,26 +427,28 @@ SULFONYLUREAS_DRUGS = {
             "Có thai"
         ],
         "dosage": {
-            "adult_start": "1-2mg x 1 lần/ngày với bữa sáng",
-            "adult_usual": "1-4mg x 1 lần/ngày",
-            "adult_max": "8mg/ngày (có thể chia 2 lần)",
-            "dm_t2": "1-2mg x 1 lần/ngày với bữa sáng, tăng dần đến 4-8mg/ngày",
-            "elderly": "Khởi đầu 1mg x 1 lần/ngày với bữa sáng, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ (hạ đường huyết).",
+            "adult_start": "1-2mg x 1 lần/ngày với bữa sáng (hoặc bữa ăn đầu tiên)",
+            "adult_usual": "1-4mg x 1 lần/ngày. Với liều >4mg, có thể chia 2 lần/ngày (2mg x 2 lần/ngày)",
+            "adult_max": "8mg/ngày (thường chia 2 lần: 4mg x 2 lần/ngày)",
+            "dm_t2": "Khởi đầu: 1-2mg x 1 lần/ngày với bữa sáng. Tăng dần mỗi 1-2 tuần: 2mg/ngày, 3mg/ngày, 4mg/ngày. Với liều >4mg, chia 2 lần/ngày (ví dụ: 4mg x 2 lần/ngày = 8mg/ngày). Tối đa 8mg/ngày.",
+            "elderly": "Khởi đầu 1mg x 1 lần/ngày với bữa sáng, tăng dần chậm hơn (mỗi 2-3 tuần). Người cao tuổi nhạy cảm hơn với tác dụng phụ (hạ đường huyết). Điều chỉnh theo CrCl và chức năng gan.",
             "renal_adjustment_dosage": {
-                "normal": "1-4mg x 1 lần/ngày",
-                "30_60": "Thận trọng, có thể cần giảm liều",
-                "under_30": "Thận trọng, giảm liều hoặc tránh dùng",
-                "dialysis": "Thận trọng, giảm liều hoặc tránh dùng"
+                "normal": "1-4mg x 1 lần/ngày (CrCl ≥60)",
+                "30_60": "Thận trọng, khởi đầu 1mg/ngày, tăng dần chậm. Theo dõi chức năng thận và đường huyết thường xuyên (CrCl 30-60)",
+                "under_30": "CHỐNG CHỈ ĐỊNH - Tăng nguy cơ hạ đường huyết nghiêm trọng (CrCl <30)",
+                "dialysis": "CHỐNG CHỈ ĐỊNH"
             },
             "hepatic_adjustment_dosage": {
-                "mild": "1-4mg x 1 lần/ngày",
-                "moderate": "Thận trọng, giảm liều",
-                "severe": "Thận trọng, giảm liều hoặc tránh dùng"
+                "mild": "Không cần điều chỉnh liều đặc biệt. Theo dõi men gan và đường huyết. Khởi đầu 1-2mg/ngày.",
+                "moderate": "Thận trọng, có thể cần giảm liều. Khởi đầu 1mg/ngày, tăng dần chậm. Theo dõi men gan và đường huyết thường xuyên.",
+                "severe": "CHỐNG CHỈ ĐỊNH - Suy gan nặng làm tăng nguy cơ hạ đường huyết nghiêm trọng do giảm chuyển hóa"
             },
-            "administration_route": "PO",
-            "frequency": "1-2 lần/ngày",
-            "with_food": "Nên uống với bữa sáng hoặc bữa ăn đầu tiên",
-            "notes": "Ít nguy cơ hạ đường huyết hơn glibenclamide. Uống với bữa sáng hoặc bữa ăn đầu tiên. Chuyển hóa qua gan (CYP2C9), cần điều chỉnh liều ở suy gan."
+            "administration_route": "PO (uống)",
+            "frequency": "1 lần/ngày (liều ≤4mg), 1-2 lần/ngày (liều >4mg, thường chia 2 lần)",
+            "with_food": "Nên uống với bữa sáng hoặc bữa ăn đầu tiên để tránh hạ đường huyết. Không bỏ bữa sau khi uống.",
+            "timing": "Uống 1 lần/ngày với bữa sáng (hoặc bữa ăn đầu tiên). Với liều >4mg, có thể chia 2 lần: trước bữa sáng và trước bữa tối. Uống cùng giờ mỗi ngày.",
+            "titration": "Tăng liều từ từ: Tuần 1-2: 1-2mg/ngày. Tuần 3-4: 2-3mg/ngày. Tuần 5-6: 3-4mg/ngày. Tuần 7-8: 4-6mg/ngày (nếu cần, chia 2 lần). Tối đa 8mg/ngày. Đánh giá hiệu quả sau mỗi 2-4 tuần.",
+            "notes": "Ít nguy cơ hạ đường huyết hơn glibenclamide do thời gian bán thải ngắn hơn (5-8 giờ vs 10 giờ). Ưu điểm: tác dụng nhanh, thời gian bán thải ngắn, ít hạ đường huyết hơn, đặc biệt ở người cao tuổi. Uống với bữa sáng hoặc bữa ăn đầu tiên. Chuyển hóa qua gan (CYP2C9), cần điều chỉnh liều ở suy gan. CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30)."
         },
         "renal_adjustment": {
             "normal": "Không đổi",

@@ -19,10 +19,29 @@ MEGLITINIDES_DRUGS = {
             "Có thai"
         ],
         "dosage": {
-            "adult_start": "60-120mg trước mỗi bữa ăn chính",
-            "adult_usual": "60-120mg trước mỗi bữa ăn chính",
+            "adult_start": "60-120mg PO trước mỗi bữa ăn chính (1-30 phút trước ăn)",
+            "adult_usual": "60-120mg PO trước mỗi bữa ăn chính. Thường 60-120mg/bữa, tùy đường huyết trước ăn và lượng carbohydrate.",
             "adult_max": "360mg/ngày (120mg x 3 bữa)",
-            "notes": "Uống 1-30 phút trước mỗi bữa ăn. Bỏ liều nếu bỏ bữa. Tác dụng nhanh nhất trong các meglitinides."
+            "dm_t2": "Khởi đầu 60mg PO trước mỗi bữa ăn chính (1-30 phút trước ăn). Có thể tăng lên 120mg/bữa nếu cần. Tối đa 120mg x 3 bữa = 360mg/ngày. Bỏ liều nếu bỏ bữa.",
+            "elderly": "Khởi đầu 60mg PO trước mỗi bữa ăn chính, tăng dần chậm. Người cao tuổi nhạy cảm hơn với tác dụng phụ (hạ đường huyết).",
+            "pregnancy": "Category C - Tránh dùng trong thai kỳ.",
+            "renal_adjustment_dosage": {
+                "normal": "60-120mg PO trước mỗi bữa ăn chính (CrCl ≥60)",
+                "30_60": "60-120mg PO trước mỗi bữa ăn chính (CrCl 30-60). Không cần điều chỉnh liều đặc biệt.",
+                "under_30": "60-120mg PO trước mỗi bữa ăn chính (CrCl <30). Không cần điều chỉnh liều đặc biệt.",
+                "dialysis": "60-120mg PO trước mỗi bữa ăn chính. Không cần điều chỉnh liều đặc biệt."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "60-120mg PO trước mỗi bữa ăn chính. Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan.",
+                "moderate": "Thận trọng, giảm liều. 60mg PO trước mỗi bữa ăn chính. Theo dõi chức năng gan chặt chẽ.",
+                "severe": "CHỐNG CHỈ ĐỊNH - Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ hạ đường huyết nghiêm trọng."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "3 lần/ngày (trước mỗi bữa ăn chính)",
+            "with_food": "Uống 1-30 phút TRƯỚC mỗi bữa ăn chính. KHÔNG uống nếu bỏ bữa.",
+            "timing": "Uống 1-30 phút TRƯỚC mỗi bữa ăn chính (sáng, trưa, tối). Tác dụng nhanh nhất trong các meglitinides (onset 1-30 phút). Bỏ liều nếu bỏ bữa để tránh hạ đường huyết.",
+            "titration": "Tăng liều từ từ: Tuần 1-2: 60mg/bữa. Tuần 3-4: 120mg/bữa (nếu cần). Đánh giá hiệu quả sau mỗi 1-2 tuần. Điều chỉnh liều theo đường huyết trước ăn và lượng carbohydrate.",
+            "notes": "Uống 1-30 phút TRƯỚC mỗi bữa ăn chính. Bỏ liều nếu bỏ bữa. Tác dụng nhanh nhất trong các meglitinides (onset 1-30 phút, thời gian bán thải 1.5 giờ). Nguy cơ hạ đường huyết thấp hơn sulfonylureas do thời gian bán thải ngắn. CHỐNG CHỈ ĐỊNH ở suy gan nặng."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
@@ -182,10 +201,29 @@ MEGLITINIDES_DRUGS = {
             "Có thai"
         ],
         "dosage": {
-            "adult_start": "0.5mg trước mỗi bữa ăn chính (tối đa 4mg/bữa)",
-            "adult_usual": "0.5-4mg trước mỗi bữa ăn chính",
+            "adult_start": "0.5mg PO trước mỗi bữa ăn chính (15-30 phút trước ăn)",
+            "adult_usual": "0.5-4mg PO trước mỗi bữa ăn chính. Thường 0.5-2mg/bữa, có thể tăng lên 4mg/bữa nếu cần.",
             "adult_max": "16mg/ngày (4mg x 4 bữa)",
-            "notes": "Uống 15-30 phút trước mỗi bữa ăn. Bỏ liều nếu bỏ bữa. Tác dụng nhanh, thời gian bán thải ngắn."
+            "dm_t2": "Khởi đầu 0.5mg PO trước mỗi bữa ăn chính (15-30 phút trước ăn). Có thể tăng lên 1mg, 2mg, hoặc 4mg/bữa nếu cần. Tối đa 4mg/bữa, tối đa 16mg/ngày (4 bữa). Bỏ liều nếu bỏ bữa.",
+            "elderly": "Khởi đầu 0.5mg PO trước mỗi bữa ăn chính, tăng dần chậm. Người cao tuổi nhạy cảm hơn với tác dụng phụ (hạ đường huyết).",
+            "pregnancy": "Category C - Tránh dùng trong thai kỳ.",
+            "renal_adjustment_dosage": {
+                "normal": "0.5-4mg PO trước mỗi bữa ăn chính (CrCl ≥60)",
+                "30_60": "0.5-4mg PO trước mỗi bữa ăn chính (CrCl 30-60). Không cần điều chỉnh liều đặc biệt.",
+                "under_30": "Khởi đầu 0.5mg PO trước mỗi bữa ăn chính, tăng dần chậm (CrCl <30). Theo dõi chức năng thận và đường huyết chặt chẽ.",
+                "dialysis": "Khởi đầu 0.5mg PO trước mỗi bữa ăn chính, tăng dần chậm. Theo dõi chức năng thận và đường huyết chặt chẽ."
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.5-4mg PO trước mỗi bữa ăn chính. Thận trọng, có thể cần giảm liều. Theo dõi chức năng gan.",
+                "moderate": "Thận trọng, giảm liều. 0.5-2mg PO trước mỗi bữa ăn chính. Theo dõi chức năng gan chặt chẽ.",
+                "severe": "CHỐNG CHỈ ĐỊNH - Suy gan nặng làm giảm chuyển hóa, tăng nguy cơ hạ đường huyết nghiêm trọng."
+            },
+            "administration_route": "PO (uống)",
+            "frequency": "3-4 lần/ngày (trước mỗi bữa ăn chính)",
+            "with_food": "Uống 15-30 phút TRƯỚC mỗi bữa ăn chính. KHÔNG uống nếu bỏ bữa.",
+            "timing": "Uống 15-30 phút TRƯỚC mỗi bữa ăn chính (sáng, trưa, tối, và có thể bữa phụ). Tác dụng nhanh (onset 15-30 phút), thời gian bán thải ngắn (1 giờ). Bỏ liều nếu bỏ bữa để tránh hạ đường huyết.",
+            "titration": "Tăng liều từ từ: Tuần 1-2: 0.5mg/bữa. Tuần 3-4: 1mg/bữa (nếu cần). Tuần 5-6: 2mg/bữa (nếu cần). Tuần 7+: 4mg/bữa (nếu cần, tối đa). Đánh giá hiệu quả sau mỗi 1-2 tuần. Điều chỉnh liều theo đường huyết trước ăn và lượng carbohydrate.",
+            "notes": "Uống 15-30 phút trước mỗi bữa ăn. Bỏ liều nếu bỏ bữa. Tác dụng nhanh (onset 15-30 phút), thời gian bán thải ngắn (1 giờ) → chỉ kích thích tiết insulin trong bữa ăn, giảm nguy cơ hạ đường huyết giữa các bữa ăn. Nguy cơ hạ đường huyết thấp hơn sulfonylureas. CHỐNG CHỈ ĐỊNH ở suy gan nặng. Tương tác với gemfibrozil (tránh dùng chung - tăng nồng độ repaglinide đáng kể)."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
