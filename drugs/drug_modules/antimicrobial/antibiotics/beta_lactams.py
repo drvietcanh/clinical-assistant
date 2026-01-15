@@ -1717,6 +1717,796 @@ BETA_LACTAM_ANTIBIOTICS = {
         "last_updated": "2025-02-18",
     },
 
+    "Enjaymo": {
+                "group": "FDA Approved 2022",
+                "vietnamese_name": "Sutimlimab, Enjaymo",
+                "administration": [
+                        "IV",
+                ],
+                "indications": [
+                        "To decrease the need for red blood cell transfusion due to hemolysis in cold agglutinin disease",
+                ],
+                "contraindications": [
+                        "Dị ứng sutimlimab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "6.5g IV mỗi tuần trong 2 tuần đầu, sau đó 6.5g IV mỗi 2 tuần",
+                        "adult_loading": "6.5g IV mỗi tuần trong 2 tuần đầu",
+                        "notes": "FDA phê duyệt 2022. To decrease the need for red blood cell transfusion due to hemolysis in cold agglutinin disease. Truyền tĩnh mạch (IV) trong 1-2 giờ. Có thể cần premedication để giảm phản ứng truyền.",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Phản ứng truyền (infusion-related reactions) - phổ biến (sốt, ớn lạnh, đau đầu, buồn nôn, mệt mỏi)",
+                        "Nhiễm trùng đường hô hấp trên - phổ biến",
+                        "Nhiễm trùng đường tiết niệu - phổ biến",
+                        "Đau khớp (arthralgia) - phổ biến",
+                        "Đau cơ (myalgia) - phổ biến",
+                        "Đau đầu - phổ biến",
+                        "Buồn nôn - phổ biến",
+                        "Mệt mỏi - phổ biến",
+                        "Nhiễm trùng nặng - có thể xảy ra",
+                        "Giảm bạch cầu - có thể xảy ra",
+                ],
+                "interactions": [
+                        "Vaccine sống giảm độc lực: sutimlimab ức chế bổ thể có thể ảnh hưởng đến đáp ứng vaccine, tránh dùng vaccine sống",
+                        "Thuốc ức chế miễn dịch khác: có thể tăng nguy cơ nhiễm trùng",
+                        "Thuốc ảnh hưởng đến hệ bổ thể: có thể tăng tác dụng ức chế bổ thể",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Sutimlimab là một monoclonal antibody (mAb) được FDA phê duyệt 2022 để điều trị cold agglutinin disease (CAD). Cơ chế: Sutimlimab là một kháng thể đơn dòng nhân hóa (humanized) nhắm mục tiêu C1s, một thành phần của hệ thống bổ thể cổ điển (classical complement pathway). Trong CAD, các kháng thể lạnh (cold agglutinins) gắn với hồng cầu ở nhiệt độ thấp, kích hoạt hệ thống bổ thể cổ điển thông qua C1, dẫn đến ly giải hồng cầu (hemolysis). Sutimlimab ức chế C1s, ngăn chặn sự kích hoạt hệ thống bổ thể cổ điển, do đó giảm hemolysis và giảm nhu cầu truyền hồng cầu. Sutimlimab không ảnh hưởng đến hệ thống bổ thể thay thế (alternative pathway) hoặc lectin pathway, giúp duy trì một phần chức năng miễn dịch. Thuốc được truyền tĩnh mạch (IV) và có thể cần premedication để giảm phản ứng truyền.",
+                "monitoring": [
+                        "Hemoglobin và hematocrit - trước điều trị và định kỳ trong điều trị để đánh giá đáp ứng",
+                        "Số lần truyền hồng cầu - mục tiêu giảm nhu cầu truyền",
+                        "Phản ứng truyền - theo dõi trong và sau truyền, đặc biệt lần đầu",
+                        "Dấu hiệu nhiễm trùng - sutimlimab ức chế bổ thể có thể tăng nguy cơ nhiễm trùng",
+                        "Công thức máu đầy đủ - theo dõi bạch cầu, tiểu cầu",
+                        "Chức năng gan - định kỳ",
+                        "Chức năng thận - định kỳ",
+                ],
+                "precautions": [
+                        "Dị ứng sutimlimab hoặc bất kỳ thành phần nào",
+                        "PHẢN ỨNG TRUYỀN - phổ biến, có thể cần premedication (antihistamine, corticosteroid, acetaminophen) để giảm phản ứng",
+                        "NGUY CƠ NHIỄM TRÙNG - sutimlimab ức chế bổ thể có thể tăng nguy cơ nhiễm trùng, đặc biệt nhiễm trùng nặng",
+                        "Tránh dùng vaccine sống giảm độc lực - có thể ảnh hưởng đến đáp ứng vaccine",
+                        "Thận trọng ở bệnh nhân suy gan nặng",
+                        "Thận trọng ở bệnh nhân suy thận nặng",
+                        "Theo dõi chặt chẽ trong và sau truyền, đặc biệt lần đầu",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Khoảng 27-32 ngày",
+                        "onset": "Vài tuần sau liều đầu tiên (giảm hemolysis)",
+                        "duration": "Kéo dài (truyền mỗi 2 tuần)",
+                        "protein_binding": "Không áp dụng (monoclonal antibody)",
+                        "metabolism": "Phân hủy bởi proteolytic enzymes, tương tự các immunoglobulin",
+                        "clearance": "Thải trừ qua hệ thống reticuloendothelial, tương tự các immunoglobulin"
+                },
+                "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh. Bảo vệ khỏi ánh sáng. Để nhiệt độ phòng trước khi truyền. Không lắc.",
+                "black_box_warnings": "Không có black box warning. Tuy nhiên, cần theo dõi chặt chẽ nguy cơ nhiễm trùng do ức chế bổ thể.",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng sutimlimab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [
+                                "Nhiễm trùng đang hoạt động - điều trị nhiễm trùng trước khi bắt đầu sutimlimab",
+                                "Suy gan nặng - thận trọng",
+                                "Suy thận nặng - thận trọng",
+                        ],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Sutimlimab là monoclonal antibody, có thể qua nhau thai. Chưa có dữ liệu đầy đủ về an toàn trong thai kỳ. Chỉ dùng khi lợi ích vượt trội nguy cơ.",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không. Monoclonal antibodies thường bài tiết vào sữa mẹ với lượng nhỏ.",
+                                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc tùy theo tình huống lâm sàng.",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Chưa có nghiên cứu cụ thể về điều chỉnh liều ở bệnh nhân suy gan. Thận trọng ở bệnh nhân suy gan nặng.",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Tăng nguy cơ phản ứng truyền",
+                                "Tăng nguy cơ nhiễm trùng do ức chế bổ thể quá mức",
+                                "Các triệu chứng tương tự tác dụng phụ nhưng nặng hơn",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Ngừng truyền ngay lập tức",
+                                "Điều trị hỗ trợ theo triệu chứng",
+                                "Theo dõi dấu hiệu nhiễm trùng",
+                                "Xử trí phản ứng truyền nếu có",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu nhiễm trùng, phản ứng truyền",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "iv": {
+                                "rate": "Truyền tĩnh mạch trong 1-2 giờ",
+                                "premedication": "Có thể cần premedication với antihistamine, corticosteroid, acetaminophen để giảm phản ứng truyền",
+                                "monitoring": "Theo dõi chặt chẽ trong và sau truyền, đặc biệt lần đầu",
+                                "notes": "Pha loãng trong dung dịch natri chloride 0.9% hoặc glucose 5%. Không trộn với các thuốc khác. Lọc qua bộ lọc 0.2 micron.",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Sutimlimab (Enjaymo)",
+                                "FDA Approval Date: 2022",
+                                "FDA-approved use: To decrease the need for red blood cell transfusion due to hemolysis in cold agglutinin disease",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2022",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Sutimlimab (Enjaymo)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Alhemo": {
+                "group": "FDA Approved 2024",
+                "vietnamese_name": "Concizumab, Alhemo",
+                "administration": [
+                        "SC",
+                ],
+                "indications": [
+                        "For routine prophylaxis to prevent bleeding episodes in hemophilia A and B",
+                ],
+                "contraindications": [
+                        "Dị ứng concizumab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "1mg/kg SC mỗi ngày",
+                        "adult_loading": "Bắt đầu với 1mg/kg SC mỗi ngày",
+                        "notes": "FDA phê duyệt 2024. For routine prophylaxis to prevent bleeding episodes in hemophilia A and B. Tiêm dưới da (SC) mỗi ngày. Có thể tự tiêm tại nhà sau khi được hướng dẫn.",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Phản ứng tại chỗ tiêm (injection site reactions) - phổ biến (đau, đỏ, sưng, ngứa)",
+                        "Đau đầu - phổ biến",
+                        "Mệt mỏi - phổ biến",
+                        "Buồn nôn - phổ biến",
+                        "Đau khớp (arthralgia) - phổ biến",
+                        "Sốt - có thể xảy ra",
+                        "Phản ứng dị ứng - hiếm nhưng có thể nghiêm trọng",
+                        "Huyết khối - hiếm nhưng có thể nghiêm trọng (do tăng đông máu)",
+                ],
+                "interactions": [
+                        "Thuốc chống đông: concizumab tăng đông máu, có thể tương tác với thuốc chống đông",
+                        "Thuốc ức chế yếu tố đông máu: có thể ảnh hưởng đến hiệu quả",
+                        "Thuốc ảnh hưởng đến hệ đông máu: cần theo dõi chặt chẽ",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Concizumab là một monoclonal antibody được FDA phê duyệt 2024 để dự phòng chảy máu ở bệnh nhân hemophilia A và B. Cơ chế: Concizumab là một kháng thể đơn dòng nhân hóa (humanized) nhắm mục tiêu TFPI (tissue factor pathway inhibitor), một protein ức chế đông máu nội tại. Trong hemophilia, thiếu yếu tố đông máu VIII (hemophilia A) hoặc IX (hemophilia B) dẫn đến rối loạn đông máu và tăng nguy cơ chảy máu. TFPI ức chế quá trình đông máu bằng cách ức chế phức hợp TF-FVIIa và FXa. Concizumab gắn với TFPI và ức chế hoạt động của nó, do đó tăng hoạt động của quá trình đông máu nội tại, bù đắp một phần cho sự thiếu hụt yếu tố VIII hoặc IX. Điều này giúp giảm nguy cơ chảy máu và giảm nhu cầu điều trị thay thế yếu tố đông máu. Concizumab được tiêm dưới da (SC) mỗi ngày, thuận tiện hơn so với truyền tĩnh mạch yếu tố đông máu thường xuyên.",
+                "monitoring": [
+                        "Số lần chảy máu - mục tiêu giảm số lần chảy máu",
+                        "Phản ứng tại chỗ tiêm - phổ biến, thường nhẹ",
+                        "Dấu hiệu huyết khối - hiếm nhưng nghiêm trọng, cần theo dõi",
+                        "Dấu hiệu phản ứng dị ứng - hiếm nhưng có thể nghiêm trọng",
+                        "Chức năng gan - định kỳ",
+                        "Chức năng thận - định kỳ",
+                        "Công thức máu đầy đủ - định kỳ",
+                ],
+                "precautions": [
+                        "Dị ứng concizumab hoặc bất kỳ thành phần nào",
+                        "NGUY CƠ HUYẾT KHỐI - concizumab tăng đông máu, có thể tăng nguy cơ huyết khối, đặc biệt ở bệnh nhân có yếu tố nguy cơ",
+                        "Phản ứng tại chỗ tiêm - phổ biến, thường nhẹ đến trung bình",
+                        "Phản ứng dị ứng - hiếm nhưng có thể nghiêm trọng, cần theo dõi",
+                        "Thận trọng ở bệnh nhân có tiền sử huyết khối",
+                        "Thận trọng ở bệnh nhân suy gan nặng",
+                        "Thận trọng ở bệnh nhân suy thận nặng",
+                        "Có thể tự tiêm tại nhà sau khi được hướng dẫn đầy đủ",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Khoảng 2-3 ngày",
+                        "onset": "Vài ngày đến vài tuần sau liều đầu tiên",
+                        "duration": "Kéo dài (tiêm mỗi ngày)",
+                        "protein_binding": "Không áp dụng (monoclonal antibody)",
+                        "metabolism": "Phân hủy bởi proteolytic enzymes, tương tự các immunoglobulin",
+                        "clearance": "Thải trừ qua hệ thống reticuloendothelial, tương tự các immunoglobulin"
+                },
+                "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh. Bảo vệ khỏi ánh sáng. Có thể để nhiệt độ phòng (không quá 25°C) tối đa 7 ngày. Không lắc.",
+                "black_box_warnings": "Không có black box warning. Tuy nhiên, cần theo dõi chặt chẽ nguy cơ huyết khối do tăng đông máu.",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng concizumab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [
+                                "Tiền sử huyết khối - thận trọng, cân nhắc nguy cơ/lợi ích",
+                                "Suy gan nặng - thận trọng",
+                                "Suy thận nặng - thận trọng",
+                        ],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Concizumab là monoclonal antibody, có thể qua nhau thai. Chưa có dữ liệu đầy đủ về an toàn trong thai kỳ. Chỉ dùng khi lợi ích vượt trội nguy cơ.",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không. Monoclonal antibodies thường bài tiết vào sữa mẹ với lượng nhỏ.",
+                                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc tùy theo tình huống lâm sàng.",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Chưa có nghiên cứu cụ thể về điều chỉnh liều ở bệnh nhân suy gan. Thận trọng ở bệnh nhân suy gan nặng.",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Tăng nguy cơ huyết khối do tăng đông máu quá mức",
+                                "Phản ứng tại chỗ tiêm nặng hơn",
+                                "Các triệu chứng tương tự tác dụng phụ nhưng nặng hơn",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Ngừng tiêm ngay lập tức",
+                                "Điều trị hỗ trợ theo triệu chứng",
+                                "Theo dõi dấu hiệu huyết khối",
+                                "Xử trí huyết khối nếu có",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu huyết khối, phản ứng dị ứng",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "sc": {
+                                "injection_site": "Vùng bụng, đùi, hoặc cánh tay",
+                                "rotation": "Luân phiên vị trí tiêm",
+                                "technique": "Tiêm dưới da, tránh tiêm vào cơ hoặc mạch máu",
+                                "notes": "Có thể tự tiêm tại nhà sau khi được hướng dẫn đầy đủ. Làm sạch vị trí tiêm trước khi tiêm. Theo dõi phản ứng tại chỗ tiêm.",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Concizumab (Alhemo)",
+                                "FDA Approval Date: 2024",
+                                "FDA-approved use: For routine prophylaxis to prevent bleeding episodes in hemophilia A and B",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2024",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Concizumab (Alhemo)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Exblifep": {
+                "group": "FDA Approved 2024",
+                "vietnamese_name": "Cefepime/enmetazobactam, Exblifep",
+                "administration": [
+                        "IV",
+                ],
+                "indications": [
+                        "To treat complicated urinary tract infections",
+                ],
+                "contraindications": [
+                        "Dị ứng cefepime, enmetazobactam, hoặc bất kỳ thành phần nào",
+                        "Dị ứng penicillin hoặc cephalosporin",
+                ],
+                "dosage": {
+                        "adult_standard": "2.5g (2g cefepime + 0.5g enmetazobactam) IV mỗi 8 giờ trong 7-14 ngày",
+                        "adult_loading": "2.5g IV, sau đó 2.5g IV mỗi 8 giờ",
+                        "notes": "FDA phê duyệt 2024. To treat complicated urinary tract infections (cUTI) bao gồm pyelonephritis. Truyền tĩnh mạch (IV) trong 2 giờ. Điều chỉnh liều ở bệnh nhân suy thận.",
+                },
+                "renal_adjustment": {
+                        "normal": "2.5g IV mỗi 8 giờ",
+                        "30_60": "2.5g IV mỗi 12 giờ",
+                        "under_30": "1.25g IV mỗi 12 giờ",
+                },
+                "side_effects": [
+                        "Tiêu chảy - phổ biến (có thể do Clostridioides difficile)",
+                        "Buồn nôn - phổ biến",
+                        "Đau đầu - phổ biến",
+                        "Phản ứng tại chỗ tiêm - phổ biến",
+                        "Tăng men gan (ALT, AST) - phổ biến",
+                        "Phát ban - có thể xảy ra",
+                        "Viêm đại tràng do C. difficile - có thể xảy ra, nghiêm trọng",
+                        "Phản ứng dị ứng - hiếm nhưng có thể nghiêm trọng (phản vệ)",
+                        "Co giật - hiếm nhưng có thể xảy ra (đặc biệt suy thận, liều cao)",
+                ],
+                "interactions": [
+                        "Probenecid: có thể tăng nồng độ cefepime (theo dõi)",
+                        "Thuốc lợi tiểu: có thể tăng độc tính thận",
+                        "Thuốc chống đông: có thể tăng nguy cơ chảy máu (theo dõi)",
+                        "Thuốc ức chế tủy xương: có thể tăng nguy cơ giảm bạch cầu",
+                ],
+                "pregnancy": "B",
+                "mechanism_of_action": "Exblifep là sự kết hợp của cefepime (cephalosporin thế hệ 4) và enmetazobactam (beta-lactamase inhibitor) được FDA phê duyệt 2024 để điều trị complicated urinary tract infections (cUTI). Cơ chế: (1) Cefepime: là một cephalosporin thế hệ 4 có phổ kháng khuẩn rộng, hoạt động bằng cách ức chế tổng hợp thành tế bào vi khuẩn. Cefepime gắn với penicillin-binding proteins (PBPs) trên thành tế bào vi khuẩn, ức chế enzyme transpeptidase và carboxypeptidase, dẫn đến sự suy yếu và vỡ thành tế bào. Cefepime có hoạt tính chống lại nhiều vi khuẩn Gram-dương và Gram-âm, bao gồm Enterobacteriaceae. (2) Enmetazobactam: là một beta-lactamase inhibitor mới, hoạt động bằng cách ức chế các beta-lactamase (enzyme phá hủy beta-lactam) do vi khuẩn sản xuất, đặc biệt là các beta-lactamase phổ rộng (ESBL) và AmpC beta-lactamase. Enmetazobactam bảo vệ cefepime khỏi bị phá hủy bởi beta-lactamase, cho phép cefepime hoạt động hiệu quả hơn chống lại các vi khuẩn kháng thuốc. Sự kết hợp này mở rộng phổ kháng khuẩn của cefepime, đặc biệt chống lại các vi khuẩn Enterobacteriaceae kháng beta-lactam.",
+                "monitoring": [
+                        "Đáp ứng điều trị: giảm triệu chứng nhiễm trùng, cải thiện xét nghiệm",
+                        "Dấu hiệu tiêu chảy - đặc biệt quan trọng do nguy cơ viêm đại tràng do C. difficile",
+                        "Chức năng thận - trước và trong điều trị, điều chỉnh liều nếu cần",
+                        "Chức năng gan (ALT, AST) - định kỳ",
+                        "Dấu hiệu phản ứng dị ứng - đặc biệt ở bệnh nhân dị ứng penicillin/cephalosporin",
+                        "Dấu hiệu co giật - đặc biệt ở bệnh nhân suy thận hoặc dùng liều cao",
+                        "Công thức máu đầy đủ - định kỳ",
+                ],
+                "precautions": [
+                        "Dị ứng cefepime, enmetazobactam, hoặc bất kỳ thành phần nào",
+                        "Dị ứng penicillin hoặc cephalosporin - tăng nguy cơ phản ứng dị ứng chéo",
+                        "VIÊM ĐẠI TRÀNG DO C. DIFFICILE - có thể xảy ra, nghiêm trọng, có thể xuất hiện sau khi ngừng thuốc",
+                        "CO GIẬT - hiếm nhưng có thể xảy ra, đặc biệt ở bệnh nhân suy thận, liều cao, hoặc có tiền sử co giật",
+                        "Suy thận - cần điều chỉnh liều, theo dõi chức năng thận",
+                        "Suy gan - thận trọng, theo dõi chức năng gan",
+                        "Tiêu chảy - ngừng thuốc nếu nghi ngờ viêm đại tràng do C. difficile",
+                        "Thận trọng ở bệnh nhân có tiền sử co giật",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cefepime: khoảng 2 giờ; Enmetazobactam: khoảng 1.5-2 giờ",
+                        "onset": "Nhanh (bắt đầu tác dụng kháng khuẩn ngay sau khi đạt nồng độ hiệu quả)",
+                        "duration": "8 giờ (truyền mỗi 8 giờ)",
+                        "protein_binding": "Cefepime: khoảng 20%; Enmetazobactam: khoảng 15-20%",
+                        "metabolism": "Cefepime: chủ yếu thải trừ không đổi qua thận; Enmetazobactam: chủ yếu thải trừ không đổi qua thận",
+                        "clearance": "Thải trừ chủ yếu qua thận (khoảng 85% không đổi trong nước tiểu)"
+                },
+                "storage": "Bảo quản trong tủ lạnh (2-8°C). Bột pha loãng có thể bảo quản ở nhiệt độ phòng (không quá 25°C) tối đa 4 giờ hoặc trong tủ lạnh tối đa 24 giờ. Bảo vệ khỏi ánh sáng.",
+                "black_box_warnings": "Không có black box warning. Tuy nhiên, cần cảnh báo về nguy cơ viêm đại tràng do C. difficile và co giật.",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [
+                                {
+                                        "drug": "Probenecid",
+                                        "mechanism": "Ức chế thải trừ qua thận",
+                                        "effect": "Tăng nồng độ cefepime",
+                                        "management": "Theo dõi tác dụng phụ, có thể cần giảm liều cefepime"
+                                }
+                        ],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng cefepime, enmetazobactam, hoặc bất kỳ thành phần nào",
+                                "Dị ứng penicillin hoặc cephalosporin (phản ứng dị ứng chéo)",
+                        ],
+                        "tương_đối": [
+                                "Suy thận nặng - cần điều chỉnh liều",
+                                "Suy gan nặng - thận trọng",
+                                "Tiền sử co giật - thận trọng, tăng nguy cơ co giật",
+                        ],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "B",
+                        "pregnancy_details": "Category B - không có bằng chứng về nguy cơ cho thai nhi. Cefepime và enmetazobactam đã được sử dụng trong thai kỳ mà không thấy tăng nguy cơ dị tật bẩm sinh. Tuy nhiên, chỉ dùng khi thực sự cần thiết.",
+                        "lactation": {
+                                "safety": "Caution",
+                                "details": "Cefepime và enmetazobactam bài tiết vào sữa mẹ với lượng nhỏ. Có thể ảnh hưởng đến hệ vi khuẩn đường ruột của trẻ sơ sinh.",
+                                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc tùy theo tình huống lâm sàng.",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng, theo dõi chức năng gan",
+                        "severe": "Thận trọng, dữ liệu hạn chế, có thể cần giảm liều",
+                        "notes": "Chưa có nghiên cứu cụ thể về điều chỉnh liều ở bệnh nhân suy gan. Thận trọng ở bệnh nhân suy gan nặng, theo dõi chức năng gan.",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Tăng nguy cơ co giật (đặc biệt suy thận)",
+                                "Tăng tác dụng phụ (tiêu chảy, buồn nôn, phản ứng dị ứng)",
+                                "Độc tính thận",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Ngừng thuốc ngay lập tức",
+                                "Điều trị hỗ trợ theo triệu chứng",
+                                "Xử trí co giật nếu có",
+                                "Lọc máu có thể giúp loại bỏ thuốc (nếu suy thận)",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu co giật, chức năng thận, phản ứng dị ứng",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "iv": {
+                                "rate": "Truyền tĩnh mạch trong 2 giờ",
+                                "dilution": "Pha loãng trong dung dịch natri chloride 0.9% hoặc glucose 5%",
+                                "compatibility": "Không trộn với các thuốc khác trong cùng một ống tiêm hoặc chai truyền",
+                                "notes": "Điều chỉnh liều ở bệnh nhân suy thận. Theo dõi chặt chẽ dấu hiệu phản ứng dị ứng, đặc biệt ở bệnh nhân dị ứng penicillin/cephalosporin.",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Cefepime (Exblifep)",
+                                "FDA Approval Date: 2024",
+                                "FDA-approved use: To treat complicated urinary tract infections",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2024",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Cefepime (Exblifep)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Orlynvah": {
+                "group": "FDA Approved 2024",
+                "vietnamese_name": "Sulopenem etzadroxil/probenecid, Orlynvah",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat uncomplicated urinary tract infections (uUTI)",
+                ],
+                "contraindications": [
+                        "Dị ứng sulopenem, probenecid, hoặc bất kỳ thành phần nào",
+                        "Dị ứng penicillin hoặc carbapenem",
+                ],
+                "dosage": {
+                        "adult_standard": "1 viên (sulopenem etzadroxil 500mg + probenecid 500mg) PO x 2 lần/ngày trong 5 ngày",
+                        "adult_loading": "Bắt đầu với 1 viên PO x 2 lần/ngày",
+                        "notes": "FDA phê duyệt 2024. To treat uncomplicated urinary tract infections (uUTI). Mỗi viên chứa sulopenem etzadroxil 500mg và probenecid 500mg. Uống với thức ăn để tăng hấp thu. Probenecid giúp tăng nồng độ sulopenem trong máu bằng cách ức chế thải trừ qua thận.",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng, có thể cần giảm liều",
+                        "under_30": "Thận trọng, dữ liệu hạn chế, có thể chống chỉ định",
+                },
+                "side_effects": [
+                        "Tiêu chảy - phổ biến (có thể do Clostridioides difficile)",
+                        "Buồn nôn - phổ biến",
+                        "Đau đầu - phổ biến",
+                        "Đau bụng - phổ biến",
+                        "Nôn - có thể xảy ra",
+                        "Phát ban - có thể xảy ra",
+                        "Viêm đại tràng do C. difficile - có thể xảy ra, nghiêm trọng",
+                        "Phản ứng dị ứng - hiếm nhưng có thể nghiêm trọng (phản vệ)",
+                        "Tăng acid uric máu - do probenecid (thường không có triệu chứng)",
+                ],
+                "interactions": [
+                        "Thuốc tăng acid uric máu: probenecid có thể tăng acid uric, tương tác với thuốc điều trị gout",
+                        "Thuốc chống đông: có thể tăng nguy cơ chảy máu (theo dõi)",
+                        "Thuốc lợi tiểu: có thể tăng độc tính thận",
+                        "Thuốc ức chế tủy xương: có thể tăng nguy cơ giảm bạch cầu",
+                        "Thuốc được thải trừ qua thận: probenecid có thể tăng nồng độ các thuốc này",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Orlynvah là sự kết hợp của sulopenem etzadroxil (prodrug của sulopenem) và probenecid được FDA phê duyệt 2024 để điều trị uncomplicated urinary tract infections (uUTI). Cơ chế: (1) Sulopenem: là một carbapenem (beta-lactam antibiotic) hoạt động bằng cách ức chế tổng hợp thành tế bào vi khuẩn. Sulopenem gắn với penicillin-binding proteins (PBPs) trên thành tế bào vi khuẩn, ức chế enzyme transpeptidase và carboxypeptidase, dẫn đến sự suy yếu và vỡ thành tế bào. Sulopenem có phổ kháng khuẩn rộng, hoạt động chống lại nhiều vi khuẩn Gram-dương và Gram-âm, bao gồm Enterobacteriaceae và một số vi khuẩn kháng thuốc. Sulopenem etzadroxil là prodrug của sulopenem, được hấp thu qua đường uống và chuyển hóa thành sulopenem hoạt động trong cơ thể. (2) Probenecid: là một thuốc ức chế thải trừ qua thận, hoạt động bằng cách ức chế transporter OAT1 và OAT3 ở ống thận, làm giảm thải trừ sulopenem qua thận. Điều này giúp tăng nồng độ sulopenem trong máu và mô, tăng hiệu quả kháng khuẩn. Sự kết hợp này cho phép sulopenem được dùng đường uống với hiệu quả tương đương dạng tiêm tĩnh mạch.",
+                "monitoring": [
+                        "Đáp ứng điều trị: giảm triệu chứng nhiễm trùng, cải thiện xét nghiệm",
+                        "Dấu hiệu tiêu chảy - đặc biệt quan trọng do nguy cơ viêm đại tràng do C. difficile",
+                        "Chức năng thận - trước và trong điều trị, điều chỉnh liều nếu cần",
+                        "Acid uric máu - probenecid có thể tăng acid uric (thường không có triệu chứng)",
+                        "Dấu hiệu phản ứng dị ứng - đặc biệt ở bệnh nhân dị ứng penicillin/carbapenem",
+                        "Chức năng gan - định kỳ",
+                        "Công thức máu đầy đủ - định kỳ",
+                ],
+                "precautions": [
+                        "Dị ứng sulopenem, probenecid, hoặc bất kỳ thành phần nào",
+                        "Dị ứng penicillin hoặc carbapenem - tăng nguy cơ phản ứng dị ứng chéo",
+                        "VIÊM ĐẠI TRÀNG DO C. DIFFICILE - có thể xảy ra, nghiêm trọng, có thể xuất hiện sau khi ngừng thuốc",
+                        "Suy thận - cần điều chỉnh liều hoặc có thể chống chỉ định ở suy thận nặng",
+                        "Suy gan - thận trọng, theo dõi chức năng gan",
+                        "Tiêu chảy - ngừng thuốc nếu nghi ngờ viêm đại tràng do C. difficile",
+                        "Tăng acid uric máu - probenecid có thể tăng acid uric, thận trọng ở bệnh nhân gout",
+                        "Uống với thức ăn để tăng hấp thu",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Sulopenem: khoảng 1-1.5 giờ; Probenecid: khoảng 6-12 giờ",
+                        "onset": "Nhanh (bắt đầu tác dụng kháng khuẩn sau khi hấp thu)",
+                        "duration": "12 giờ (uống mỗi 12 giờ)",
+                        "protein_binding": "Sulopenem: khoảng 20-30%; Probenecid: khoảng 85-95%",
+                        "metabolism": "Sulopenem etzadroxil: chuyển hóa thành sulopenem trong cơ thể; Sulopenem: chủ yếu thải trừ không đổi qua thận; Probenecid: chuyển hóa một phần trong gan",
+                        "clearance": "Sulopenem: thải trừ chủ yếu qua thận (bị ức chế bởi probenecid); Probenecid: thải trừ qua thận và gan"
+                },
+                "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Bảo quản trong bao bì gốc. Để xa tầm tay trẻ em.",
+                "black_box_warnings": "Không có black box warning. Tuy nhiên, cần cảnh báo về nguy cơ viêm đại tràng do C. difficile.",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [
+                                {
+                                        "drug": "Thuốc được thải trừ qua thận (methotrexate, acyclovir, etc.)",
+                                        "mechanism": "Probenecid ức chế thải trừ qua thận",
+                                        "effect": "Tăng nồng độ các thuốc này",
+                                        "management": "Theo dõi tác dụng phụ, có thể cần giảm liều các thuốc khác"
+                                }
+                        ],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng sulopenem, probenecid, hoặc bất kỳ thành phần nào",
+                                "Dị ứng penicillin hoặc carbapenem (phản ứng dị ứng chéo)",
+                        ],
+                        "tương_đối": [
+                                "Suy thận nặng - có thể chống chỉ định, cần đánh giá từng trường hợp",
+                                "Suy gan nặng - thận trọng",
+                                "Gout hoặc tăng acid uric máu - probenecid có thể tăng acid uric",
+                        ],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Sulopenem và probenecid đã được sử dụng trong thai kỳ nhưng chưa có dữ liệu đầy đủ về an toàn. Chỉ dùng khi lợi ích vượt trội nguy cơ.",
+                        "lactation": {
+                                "safety": "Caution",
+                                "details": "Sulopenem và probenecid bài tiết vào sữa mẹ với lượng nhỏ. Có thể ảnh hưởng đến hệ vi khuẩn đường ruột của trẻ sơ sinh.",
+                                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc tùy theo tình huống lâm sàng.",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng, theo dõi chức năng gan",
+                        "severe": "Thận trọng, dữ liệu hạn chế, có thể cần giảm liều",
+                        "notes": "Chưa có nghiên cứu cụ thể về điều chỉnh liều ở bệnh nhân suy gan. Thận trọng ở bệnh nhân suy gan nặng, theo dõi chức năng gan.",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Tăng tác dụng phụ (tiêu chảy, buồn nôn, nôn)",
+                                "Tăng nguy cơ viêm đại tràng do C. difficile",
+                                "Độc tính thận",
+                                "Tăng acid uric máu (do probenecid)",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Ngừng thuốc ngay lập tức",
+                                "Điều trị hỗ trợ theo triệu chứng",
+                                "Xử trí viêm đại tràng do C. difficile nếu có",
+                                "Lọc máu có thể giúp loại bỏ thuốc (nếu suy thận)",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu tiêu chảy, chức năng thận, acid uric máu, phản ứng dị ứng",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Uống với thức ăn để tăng hấp thu",
+                                "timing": "Uống mỗi 12 giờ (2 lần/ngày), cách đều nhau",
+                                "duration": "5 ngày",
+                                "notes": "Uống đủ nước trong khi điều trị. Không bẻ hoặc nghiền viên. Uống với thức ăn để tăng hấp thu và giảm tác dụng phụ đường tiêu hóa.",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Sulopenem (Orlynvah)",
+                                "FDA Approval Date: 2024",
+                                "FDA-approved use: To treat uncomplicated urinary tract infections (uUTI)",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2024",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Sulopenem (Orlynvah)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Blujepa": {
+                "group": "FDA Approved 2025",
+                "vietnamese_name": "Gepotidacin, Blujepa",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat uncomplicated urinary tract infections",
+                ],
+                "contraindications": [
+                        "Dị ứng gepotidacin hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "1500mg PO x 2 lần/ngày trong 5 ngày",
+                        "adult_loading": "Bắt đầu với 1500mg PO x 2 lần/ngày",
+                        "notes": "FDA phê duyệt 2025. To treat uncomplicated urinary tract infections (uUTI) do vi khuẩn nhạy cảm. Uống với thức ăn hoặc không cần thức ăn. Đây là kháng sinh mới thuộc nhóm triazaacenaphthylene, ức chế DNA gyrase và topoisomerase IV.",
+                },
+                "renal_adjustment": {
+                        "normal": "1500mg PO x 2 lần/ngày",
+                        "30_60": "1500mg PO x 2 lần/ngày (không cần chỉnh liều)",
+                        "under_30": "Thận trọng, dữ liệu hạn chế, có thể cần giảm liều",
+                },
+                "side_effects": [
+                        "Tiêu chảy - phổ biến (có thể do Clostridioides difficile)",
+                        "Buồn nôn - phổ biến",
+                        "Đau đầu - phổ biến",
+                        "Đau bụng - phổ biến",
+                        "Nôn - có thể xảy ra",
+                        "Phát ban - có thể xảy ra",
+                        "Viêm đại tràng do C. difficile - có thể xảy ra, nghiêm trọng",
+                        "Phản ứng dị ứng - hiếm nhưng có thể nghiêm trọng (phản vệ)",
+                        "Rối loạn vị giác - có thể xảy ra",
+                ],
+                "interactions": [
+                        "Thuốc chống acid (antacid): có thể giảm hấp thu gepotidacin (uống cách nhau ít nhất 2 giờ)",
+                        "Thuốc chứa cation (sắt, canxi, magie, kẽm): có thể giảm hấp thu gepotidacin (uống cách nhau ít nhất 2 giờ)",
+                        "Thuốc ức chế tủy xương: có thể tăng nguy cơ giảm bạch cầu",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Gepotidacin là một kháng sinh mới thuộc nhóm triazaacenaphthylene được FDA phê duyệt 2025 để điều trị uncomplicated urinary tract infections (uUTI). Cơ chế: Gepotidacin hoạt động bằng cách ức chế hai enzyme quan trọng trong quá trình sao chép DNA của vi khuẩn: DNA gyrase và topoisomerase IV. DNA gyrase (một loại topoisomerase type II) có chức năng tháo xoắn DNA trong quá trình sao chép và phiên mã. Topoisomerase IV có chức năng tách các nhiễm sắc thể con sau khi sao chép. Gepotidacin gắn với các enzyme này và ức chế hoạt động của chúng, dẫn đến sự tích tụ các vết nứt DNA và phá hủy DNA của vi khuẩn, cuối cùng gây chết vi khuẩn. Cơ chế kép (ức chế cả DNA gyrase và topoisomerase IV) giúp gepotidacin có hoạt tính mạnh và giảm nguy cơ kháng thuốc so với các kháng sinh chỉ ức chế một enzyme. Gepotidacin có phổ kháng khuẩn rộng, đặc biệt hiệu quả chống lại các vi khuẩn Gram-dương và một số vi khuẩn Gram-âm, bao gồm các chủng kháng thuốc như MRSA và các vi khuẩn kháng fluoroquinolone. Thuốc được dùng đường uống và tập trung cao trong nước tiểu, lý tưởng cho điều trị nhiễm trùng đường tiết niệu.",
+                "monitoring": [
+                        "Đáp ứng điều trị: giảm triệu chứng nhiễm trùng, cải thiện xét nghiệm",
+                        "Dấu hiệu tiêu chảy - đặc biệt quan trọng do nguy cơ viêm đại tràng do C. difficile",
+                        "Chức năng thận - trước và trong điều trị, điều chỉnh liều nếu cần",
+                        "Dấu hiệu phản ứng dị ứng - hiếm nhưng có thể nghiêm trọng",
+                        "Chức năng gan - định kỳ",
+                        "Công thức máu đầy đủ - định kỳ",
+                ],
+                "precautions": [
+                        "Dị ứng gepotidacin hoặc bất kỳ thành phần nào",
+                        "VIÊM ĐẠI TRÀNG DO C. DIFFICILE - có thể xảy ra, nghiêm trọng, có thể xuất hiện sau khi ngừng thuốc",
+                        "Suy thận nặng - thận trọng, dữ liệu hạn chế, có thể cần giảm liều",
+                        "Suy gan - thận trọng, theo dõi chức năng gan",
+                        "Tiêu chảy - ngừng thuốc nếu nghi ngờ viêm đại tràng do C. difficile",
+                        "Tránh dùng cùng với thuốc chống acid hoặc thuốc chứa cation (uống cách nhau ít nhất 2 giờ)",
+                        "Có thể uống với thức ăn hoặc không cần thức ăn",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Khoảng 4-6 giờ",
+                        "onset": "Nhanh (bắt đầu tác dụng kháng khuẩn sau khi hấp thu)",
+                        "duration": "12 giờ (uống mỗi 12 giờ)",
+                        "protein_binding": "Khoảng 30-40%",
+                        "metabolism": "Chuyển hóa một phần trong gan qua CYP450 enzymes",
+                        "clearance": "Thải trừ chủ yếu qua thận (khoảng 60-70% không đổi trong nước tiểu) và một phần qua gan"
+                },
+                "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Bảo quản trong bao bì gốc. Để xa tầm tay trẻ em.",
+                "black_box_warnings": "Không có black box warning. Tuy nhiên, cần cảnh báo về nguy cơ viêm đại tràng do C. difficile.",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [
+                                {
+                                        "drug": "Thuốc chống acid, thuốc chứa cation (sắt, canxi, magie, kẽm)",
+                                        "mechanism": "Giảm hấp thu gepotidacin do tạo phức hợp",
+                                        "effect": "Giảm nồng độ và hiệu quả của gepotidacin",
+                                        "management": "Uống cách nhau ít nhất 2 giờ"
+                                }
+                        ],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng gepotidacin hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [
+                                "Suy thận nặng - thận trọng, có thể cần giảm liều",
+                                "Suy gan nặng - thận trọng",
+                        ],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Gepotidacin chưa có dữ liệu đầy đủ về an toàn trong thai kỳ. Chỉ dùng khi lợi ích vượt trội nguy cơ.",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không. Có thể ảnh hưởng đến hệ vi khuẩn đường ruột của trẻ sơ sinh.",
+                                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc tùy theo tình huống lâm sàng.",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng, theo dõi chức năng gan",
+                        "severe": "Thận trọng, dữ liệu hạn chế, có thể cần giảm liều",
+                        "notes": "Chưa có nghiên cứu cụ thể về điều chỉnh liều ở bệnh nhân suy gan. Thận trọng ở bệnh nhân suy gan nặng, theo dõi chức năng gan.",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Tăng tác dụng phụ (tiêu chảy, buồn nôn, nôn)",
+                                "Tăng nguy cơ viêm đại tràng do C. difficile",
+                                "Độc tính thận",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Ngừng thuốc ngay lập tức",
+                                "Điều trị hỗ trợ theo triệu chứng",
+                                "Xử trí viêm đại tràng do C. difficile nếu có",
+                                "Lọc máu có thể giúp loại bỏ thuốc (nếu suy thận)",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu tiêu chảy, chức năng thận, phản ứng dị ứng",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Có thể uống với thức ăn hoặc không cần thức ăn",
+                                "timing": "Uống mỗi 12 giờ (2 lần/ngày), cách đều nhau",
+                                "duration": "5 ngày",
+                                "notes": "Uống đủ nước trong khi điều trị. Tránh dùng cùng với thuốc chống acid hoặc thuốc chứa cation (sắt, canxi, magie, kẽm) - uống cách nhau ít nhất 2 giờ. Không bẻ hoặc nghiền viên.",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Gepotidacin (Blujepa)",
+                                "FDA Approval Date: 2025",
+                                "FDA-approved use: To treat uncomplicated urinary tract infections",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2025",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Gepotidacin (Blujepa)",
+                ],
+                "last_updated": "2026-01-15",
+        },
 }
 
 __all__ = ['BETA_LACTAM_ANTIBIOTICS']

@@ -1130,6 +1130,474 @@ OTHER_ANTIBIOTICS = {
         ]
     },
     
+    "Defencath": {
+                "group": "FDA Approved 2023",
+                "vietnamese_name": "Taurolidine/heparin, Defencath",
+                "administration": [
+                        "IV",
+                ],
+                "indications": [
+                        "To reduce the incidence of catheter-related bloodstream infections in adults with kidney failure receiving chronic hemodialysis through a central venous catheter",
+                ],
+                "contraindications": [
+                        "Dị ứng taurolidine, heparin, hoặc bất kỳ thành phần nào",
+                        "Giảm tiểu cầu do heparin (HIT)",
+                ],
+                "dosage": {
+                        "adult_standard": "4.5% taurolidine/5000 U/mL heparin lock solution, instil vào catheter sau mỗi lần lọc máu",
+                        "adult_loading": "Instil vào catheter sau mỗi lần lọc máu",
+                        "notes": "FDA phê duyệt 2023. To reduce the incidence of catheter-related bloodstream infections in adults with kidney failure receiving chronic hemodialysis through a central venous catheter. Dùng như lock solution (dung dịch khóa catheter) để ngăn ngừa nhiễm trùng. Instil vào catheter sau mỗi lần lọc máu và để trong catheter giữa các lần lọc.",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Không cần chỉnh liều (dùng cho bệnh nhân lọc máu)",
+                        "under_30": "Không cần chỉnh liều (dùng cho bệnh nhân lọc máu)",
+                },
+                "side_effects": [
+                        "Chảy máu - có thể xảy ra (do heparin)",
+                        "Giảm tiểu cầu do heparin (HIT) - hiếm nhưng nghiêm trọng",
+                        "Phản ứng tại chỗ - có thể xảy ra",
+                        "Phản ứng dị ứng - hiếm nhưng có thể nghiêm trọng",
+                        "Tăng men gan - hiếm",
+                ],
+                "interactions": [
+                        "Thuốc chống đông: heparin trong Defencath có thể tăng nguy cơ chảy máu khi dùng với thuốc chống đông khác",
+                        "Thuốc ảnh hưởng đến tiểu cầu: có thể tăng nguy cơ chảy máu",
+                        "Thuốc chống kết tập tiểu cầu: có thể tăng nguy cơ chảy máu",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Defencath là sự kết hợp của taurolidine (4.5%) và heparin (5000 U/mL) được FDA phê duyệt 2023 để giảm tỷ lệ nhiễm trùng máu liên quan đến catheter ở bệnh nhân suy thận mạn tính đang lọc máu qua catheter tĩnh mạch trung tâm. Cơ chế: (1) Taurolidine: là một chất kháng khuẩn phổ rộng, hoạt động bằng cách tạo ra các chất trung gian có hoạt tính kháng khuẩn mạnh (methylol derivatives) khi tiếp xúc với vi khuẩn. Các chất này phá hủy thành tế bào vi khuẩn và ức chế sự phát triển của vi khuẩn, đặc biệt hiệu quả chống lại các vi khuẩn Gram-dương và Gram-âm, bao gồm cả các chủng kháng thuốc. Taurolidine cũng có tác dụng chống nấm và chống biofilm, giúp ngăn ngừa sự hình thành biofilm trên catheter. (2) Heparin: là một chất chống đông, hoạt động bằng cách tăng cường hoạt động của antithrombin III, ức chế các yếu tố đông máu và ngăn ngừa sự hình thành cục máu đông trong catheter. Sự kết hợp này giúp vừa ngăn ngừa nhiễm trùng (taurolidine) vừa ngăn ngừa tắc nghẽn catheter do cục máu đông (heparin). Defencath được dùng như lock solution, instil vào catheter sau mỗi lần lọc máu và để trong catheter giữa các lần lọc để duy trì tác dụng kháng khuẩn và chống đông.",
+                "monitoring": [
+                        "Tỷ lệ nhiễm trùng máu liên quan đến catheter - mục tiêu giảm tỷ lệ nhiễm trùng",
+                        "Dấu hiệu chảy máu - do heparin, đặc biệt khi dùng với thuốc chống đông khác",
+                        "Số lượng tiểu cầu - theo dõi dấu hiệu HIT (giảm tiểu cầu do heparin)",
+                        "Dấu hiệu HIT - hiếm nhưng nghiêm trọng, cần ngừng heparin ngay",
+                        "Chức năng gan - định kỳ",
+                        "Phản ứng tại chỗ - khi instil vào catheter",
+                ],
+                "precautions": [
+                        "Dị ứng taurolidine, heparin, hoặc bất kỳ thành phần nào",
+                        "NGUY CƠ CHẢY MÁU - heparin trong Defencath có thể tăng nguy cơ chảy máu, đặc biệt khi dùng với thuốc chống đông khác",
+                        "GIẢM TIỂU CẦU DO HEPARIN (HIT) - hiếm nhưng nghiêm trọng, cần ngừng heparin ngay nếu có dấu hiệu",
+                        "Thận trọng ở bệnh nhân có nguy cơ chảy máu cao",
+                        "Thận trọng khi dùng với thuốc chống đông hoặc thuốc chống kết tập tiểu cầu",
+                        "Chỉ dùng như lock solution trong catheter, không truyền vào máu",
+                        "Theo dõi chặt chẽ dấu hiệu chảy máu và HIT",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Taurolidine: ngắn (phân hủy nhanh tại chỗ); Heparin: khoảng 1-2 giờ",
+                        "onset": "Nhanh (tác dụng tại chỗ ngay sau khi instil)",
+                        "duration": "Kéo dài (duy trì trong catheter giữa các lần lọc máu)",
+                        "protein_binding": "Taurolidine: thấp; Heparin: gắn với antithrombin III",
+                        "metabolism": "Taurolidine: phân hủy tại chỗ thành các chất trung gian; Heparin: chuyển hóa một phần trong gan",
+                        "clearance": "Taurolidine: thải trừ qua thận; Heparin: thải trừ qua hệ thống reticuloendothelial và thận"
+                },
+                "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh đông lạnh. Bảo vệ khỏi ánh sáng. Không lắc. Sử dụng ngay sau khi mở.",
+                "black_box_warnings": "Không có black box warning. Tuy nhiên, cần cảnh báo về nguy cơ chảy máu do heparin và HIT.",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [
+                                {
+                                        "drug": "Thuốc chống đông (warfarin, apixaban, rivaroxaban, etc.)",
+                                        "mechanism": "Heparin trong Defencath tăng tác dụng chống đông",
+                                        "effect": "Tăng nguy cơ chảy máu",
+                                        "management": "Theo dõi chặt chẽ dấu hiệu chảy máu, có thể cần điều chỉnh liều thuốc chống đông"
+                                }
+                        ],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng taurolidine, heparin, hoặc bất kỳ thành phần nào",
+                                "Giảm tiểu cầu do heparin (HIT)",
+                        ],
+                        "tương_đối": [
+                                "Nguy cơ chảy máu cao - thận trọng",
+                                "Đang dùng thuốc chống đông - thận trọng, theo dõi chặt chẽ",
+                        ],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Taurolidine và heparin chưa có dữ liệu đầy đủ về an toàn trong thai kỳ. Heparin không qua nhau thai nhưng có thể gây chảy máu. Chỉ dùng khi lợi ích vượt trội nguy cơ.",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không. Heparin không bài tiết vào sữa mẹ do phân tử lớn.",
+                                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc tùy theo tình huống lâm sàng.",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Không đổi",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Chưa có nghiên cứu cụ thể về điều chỉnh liều ở bệnh nhân suy gan. Thận trọng ở bệnh nhân suy gan nặng.",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Tăng nguy cơ chảy máu (do heparin)",
+                                "Phản ứng dị ứng",
+                        ],
+                        "antidote": "Protamine sulfate có thể đảo ngược tác dụng của heparin",
+                        "treatment": [
+                                "Ngừng thuốc ngay lập tức",
+                                "Xử trí chảy máu nếu có",
+                                "Protamine sulfate nếu chảy máu nặng do heparin",
+                                "Điều trị hỗ trợ theo triệu chứng",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu chảy máu, số lượng tiểu cầu",
+                },
+                "reversal_agents": {
+                        "available": True,
+                        "agents": ["Protamine sulfate (cho heparin)"],
+                },
+                "administration_instructions": {
+                        "iv": {
+                                "method": "Instil vào catheter như lock solution",
+                                "timing": "Sau mỗi lần lọc máu",
+                                "volume": "Đủ để lấp đầy catheter",
+                                "notes": "Instil vào catheter sau mỗi lần lọc máu và để trong catheter giữa các lần lọc. Rút bỏ trước khi lọc máu tiếp theo. Chỉ dùng như lock solution, không truyền vào máu. Không trộn với các thuốc khác.",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Taurolidine (Defencath)",
+                                "FDA Approval Date: 2023",
+                                "FDA-approved use: To reduce the incidence of catheter-related bloodstream infections in adults with kidney failure receiving chronic hemodialysis through a central venous catheter",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2023",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Taurolidine (Defencath)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Xolremdi": {
+                "group": "FDA Approved 2024",
+                "vietnamese_name": "Mavorixafor, Xolremdi",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat WHIM syndrome (warts, hypogammaglobulinemia, infections and myelokathexis)",
+                ],
+                "contraindications": [
+                        "Dị ứng mavorixafor hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "400mg PO x 2 lần/ngày",
+                        "adult_loading": "Bắt đầu với 400mg PO x 2 lần/ngày",
+                        "notes": "FDA phê duyệt 2024. To treat WHIM syndrome (warts, hypogammaglobulinemia, infections and myelokathexis). Uống với thức ăn. Mavorixafor là chất đối kháng CXCR4, giúp cải thiện chức năng miễn dịch ở bệnh nhân WHIM syndrome.",
+                },
+                "renal_adjustment": {
+                        "normal": "400mg PO x 2 lần/ngày",
+                        "30_60": "400mg PO x 2 lần/ngày (không cần chỉnh liều)",
+                        "under_30": "Thận trọng, dữ liệu hạn chế, có thể cần giảm liều",
+                },
+                "side_effects": [
+                        "Tiêu chảy - phổ biến",
+                        "Buồn nôn - phổ biến",
+                        "Đau bụng - phổ biến",
+                        "Đau đầu - phổ biến",
+                        "Mệt mỏi - phổ biến",
+                        "Nôn - có thể xảy ra",
+                        "Chóng mặt - có thể xảy ra",
+                        "Phát ban - có thể xảy ra",
+                        "Tăng men gan (ALT, AST) - có thể xảy ra",
+                ],
+                "interactions": [
+                        "Thuốc ức chế CYP3A4: có thể tăng nồng độ mavorixafor (theo dõi)",
+                        "Thuốc cảm ứng CYP3A4: có thể giảm nồng độ mavorixafor (theo dõi)",
+                        "Thuốc ảnh hưởng đến hệ miễn dịch: có thể tương tác",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Mavorixafor là một chất đối kháng thụ thể CXCR4 được FDA phê duyệt 2024 để điều trị WHIM syndrome (warts, hypogammaglobulinemia, infections and myelokathexis). Cơ chế: WHIM syndrome là một rối loạn miễn dịch di truyền hiếm gặp do đột biến gen CXCR4, dẫn đến tăng hoạt động của thụ thể CXCR4. CXCR4 là một chemokine receptor quan trọng trong hệ miễn dịch, có vai trò trong sự di chuyển và trưởng thành của tế bào bạch cầu, đặc biệt là bạch cầu trung tính (neutrophils) và tế bào B. Trong WHIM syndrome, đột biến CXCR4 dẫn đến sự giữ lại bất thường của bạch cầu trung tính trong tủy xương (myelokathexis), giảm số lượng bạch cầu trung tính trong máu ngoại vi, và tăng nguy cơ nhiễm trùng. Mavorixafor hoạt động bằng cách đối kháng với thụ thể CXCR4, ức chế hoạt động quá mức của nó, do đó giúp giải phóng bạch cầu trung tính từ tủy xương vào máu ngoại vi. Điều này làm tăng số lượng bạch cầu trung tính trong máu, cải thiện chức năng miễn dịch, giảm tần suất nhiễm trùng, và cải thiện các triệu chứng khác của WHIM syndrome như mụn cóc (warts) và hypogammaglobulinemia. Mavorixafor được dùng đường uống và cần uống với thức ăn để tăng hấp thu.",
+                "monitoring": [
+                        "Số lượng bạch cầu trung tính - mục tiêu tăng số lượng bạch cầu trung tính trong máu",
+                        "Tần suất nhiễm trùng - mục tiêu giảm tần suất nhiễm trùng",
+                        "Chức năng gan (ALT, AST) - định kỳ",
+                        "Đáp ứng điều trị: cải thiện triệu chứng WHIM syndrome",
+                        "Chức năng thận - định kỳ",
+                        "Công thức máu đầy đủ - định kỳ",
+                ],
+                "precautions": [
+                        "Dị ứng mavorixafor hoặc bất kỳ thành phần nào",
+                        "Tăng men gan - có thể xảy ra, theo dõi chức năng gan định kỳ",
+                        "Suy gan - thận trọng, theo dõi chức năng gan",
+                        "Suy thận nặng - thận trọng, có thể cần giảm liều",
+                        "Uống với thức ăn để tăng hấp thu",
+                        "Thận trọng khi dùng với thuốc ức chế hoặc cảm ứng CYP3A4",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Khoảng 8-12 giờ",
+                        "onset": "Vài tuần đến vài tháng (tác dụng lâm sàng trên WHIM syndrome)",
+                        "duration": "12 giờ (uống mỗi 12 giờ)",
+                        "protein_binding": "Khoảng 95-98%",
+                        "metabolism": "Chuyển hóa chủ yếu trong gan qua CYP3A4",
+                        "clearance": "Thải trừ chủ yếu qua gan (khoảng 70%) và một phần qua thận"
+                },
+                "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Bảo quản trong bao bì gốc. Để xa tầm tay trẻ em.",
+                "black_box_warnings": "Không có black box warning.",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [
+                                {
+                                        "drug": "Thuốc ức chế CYP3A4 (ketoconazole, itraconazole, clarithromycin, etc.)",
+                                        "mechanism": "Ức chế CYP3A4, giảm chuyển hóa mavorixafor",
+                                        "effect": "Tăng nồng độ mavorixafor",
+                                        "management": "Theo dõi tác dụng phụ, có thể cần giảm liều mavorixafor"
+                                },
+                                {
+                                        "drug": "Thuốc cảm ứng CYP3A4 (rifampin, carbamazepine, phenytoin, etc.)",
+                                        "mechanism": "Cảm ứng CYP3A4, tăng chuyển hóa mavorixafor",
+                                        "effect": "Giảm nồng độ và hiệu quả của mavorixafor",
+                                        "management": "Theo dõi đáp ứng điều trị, có thể cần tăng liều mavorixafor"
+                                }
+                        ],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng mavorixafor hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [
+                                "Suy gan nặng - thận trọng",
+                                "Suy thận nặng - thận trọng, có thể cần giảm liều",
+                        ],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Mavorixafor chưa có dữ liệu đầy đủ về an toàn trong thai kỳ. Chỉ dùng khi lợi ích vượt trội nguy cơ.",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không. Có thể ảnh hưởng đến hệ miễn dịch của trẻ sơ sinh.",
+                                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc tùy theo tình huống lâm sàng.",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng, theo dõi chức năng gan",
+                        "severe": "Thận trọng, dữ liệu hạn chế, có thể cần giảm liều",
+                        "notes": "Mavorixafor chuyển hóa chủ yếu trong gan. Thận trọng ở bệnh nhân suy gan nặng, theo dõi chức năng gan và có thể cần giảm liều.",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Tăng tác dụng phụ (tiêu chảy, buồn nôn, đau đầu)",
+                                "Tăng men gan",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Ngừng thuốc ngay lập tức",
+                                "Điều trị hỗ trợ theo triệu chứng",
+                                "Theo dõi chức năng gan",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan, tác dụng phụ",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Uống với thức ăn để tăng hấp thu",
+                                "timing": "Uống mỗi 12 giờ (2 lần/ngày), cách đều nhau",
+                                "notes": "Uống đủ nước trong khi điều trị. Không bẻ hoặc nghiền viên. Uống với thức ăn để tăng hấp thu và giảm tác dụng phụ đường tiêu hóa.",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Mavorixafor (Xolremdi)",
+                                "FDA Approval Date: 2024",
+                                "FDA-approved use: To treat WHIM syndrome (warts, hypogammaglobulinemia, infections and myelokathexis)",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2024",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Mavorixafor (Xolremdi)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Nuzolvence": {
+                "group": "FDA Approved 2025",
+                "vietnamese_name": "Zoliflodacin, Nuzolvence",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat uncomplicated urogenital gonorrhea due to Neisseria gonorrhoeae",
+                ],
+                "contraindications": [
+                        "Dị ứng zoliflodacin hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "3g PO liều duy nhất",
+                        "adult_loading": "3g PO liều duy nhất",
+                        "notes": "FDA phê duyệt 2025. To treat uncomplicated urogenital gonorrhea due to Neisseria gonorrhoeae. Uống với thức ăn hoặc không cần thức ăn. Đây là kháng sinh mới thuộc nhóm spiropyrimidinetrione, ức chế DNA gyrase.",
+                },
+                "renal_adjustment": {
+                        "normal": "3g PO liều duy nhất",
+                        "30_60": "3g PO liều duy nhất (không cần chỉnh liều)",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Tiêu chảy - phổ biến",
+                        "Buồn nôn - phổ biến",
+                        "Đau bụng - phổ biến",
+                        "Đau đầu - phổ biến",
+                        "Nôn - có thể xảy ra",
+                        "Chóng mặt - có thể xảy ra",
+                        "Phát ban - có thể xảy ra",
+                        "Viêm đại tràng do C. difficile - có thể xảy ra, nghiêm trọng",
+                        "Phản ứng dị ứng - hiếm nhưng có thể nghiêm trọng (phản vệ)",
+                ],
+                "interactions": [
+                        "Thuốc chống acid (antacid): có thể giảm hấp thu zoliflodacin (uống cách nhau ít nhất 2 giờ)",
+                        "Thuốc chứa cation (sắt, canxi, magie, kẽm): có thể giảm hấp thu zoliflodacin (uống cách nhau ít nhất 2 giờ)",
+                        "Thuốc ức chế tủy xương: có thể tăng nguy cơ giảm bạch cầu",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Zoliflodacin là một kháng sinh mới thuộc nhóm spiropyrimidinetrione được FDA phê duyệt 2025 để điều trị uncomplicated urogenital gonorrhea do Neisseria gonorrhoeae. Cơ chế: Zoliflodacin hoạt động bằng cách ức chế DNA gyrase, một enzyme quan trọng trong quá trình sao chép DNA của vi khuẩn. DNA gyrase (một loại topoisomerase type II) có chức năng tháo xoắn DNA trong quá trình sao chép và phiên mã, giúp giải phóng stress xoắn và cho phép DNA polymerase tiếp tục quá trình sao chép. Zoliflodacin gắn với DNA gyrase và ức chế hoạt động của nó, dẫn đến sự tích tụ các vết nứt DNA và phá hủy DNA của vi khuẩn, cuối cùng gây chết vi khuẩn. Zoliflodacin có cơ chế tác dụng tương tự fluoroquinolones nhưng có cấu trúc hóa học khác (spiropyrimidinetrione), giúp hoạt động hiệu quả chống lại các chủng Neisseria gonorrhoeae kháng fluoroquinolone và các kháng sinh khác. Zoliflodacin có phổ kháng khuẩn hẹp, chủ yếu hoạt động chống lại Neisseria gonorrhoeae, và được dùng như liều duy nhất (single-dose therapy) để điều trị lậu không biến chứng. Thuốc được dùng đường uống và tập trung cao trong đường tiết niệu và sinh dục, lý tưởng cho điều trị lậu.",
+                "monitoring": [
+                        "Đáp ứng điều trị: giảm triệu chứng, xét nghiệm âm tính sau điều trị",
+                        "Dấu hiệu tiêu chảy - đặc biệt quan trọng do nguy cơ viêm đại tràng do C. difficile",
+                        "Dấu hiệu phản ứng dị ứng - hiếm nhưng có thể nghiêm trọng",
+                        "Chức năng thận - trước điều trị",
+                        "Chức năng gan - định kỳ",
+                        "Công thức máu đầy đủ - định kỳ",
+                ],
+                "precautions": [
+                        "Dị ứng zoliflodacin hoặc bất kỳ thành phần nào",
+                        "VIÊM ĐẠI TRÀNG DO C. DIFFICILE - có thể xảy ra, nghiêm trọng, có thể xuất hiện sau khi ngừng thuốc",
+                        "Suy thận nặng - thận trọng, dữ liệu hạn chế",
+                        "Suy gan - thận trọng, theo dõi chức năng gan",
+                        "Tiêu chảy - ngừng thuốc nếu nghi ngờ viêm đại tràng do C. difficile",
+                        "Tránh dùng cùng với thuốc chống acid hoặc thuốc chứa cation (uống cách nhau ít nhất 2 giờ)",
+                        "Có thể uống với thức ăn hoặc không cần thức ăn",
+                        "Chỉ điều trị lậu không biến chứng, không dùng cho lậu có biến chứng",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Khoảng 8-12 giờ",
+                        "onset": "Nhanh (bắt đầu tác dụng kháng khuẩn sau khi hấp thu)",
+                        "duration": "Kéo dài (liều duy nhất)",
+                        "protein_binding": "Khoảng 30-40%",
+                        "metabolism": "Chuyển hóa một phần trong gan qua CYP450 enzymes",
+                        "clearance": "Thải trừ chủ yếu qua thận (khoảng 60-70% không đổi trong nước tiểu) và một phần qua gan"
+                },
+                "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm, tránh ánh sáng. Bảo quản trong bao bì gốc. Để xa tầm tay trẻ em.",
+                "black_box_warnings": "Không có black box warning. Tuy nhiên, cần cảnh báo về nguy cơ viêm đại tràng do C. difficile.",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [
+                                {
+                                        "drug": "Thuốc chống acid, thuốc chứa cation (sắt, canxi, magie, kẽm)",
+                                        "mechanism": "Giảm hấp thu zoliflodacin do tạo phức hợp",
+                                        "effect": "Giảm nồng độ và hiệu quả của zoliflodacin",
+                                        "management": "Uống cách nhau ít nhất 2 giờ"
+                                }
+                        ],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng zoliflodacin hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [
+                                "Suy thận nặng - thận trọng, dữ liệu hạn chế",
+                                "Suy gan nặng - thận trọng",
+                        ],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Zoliflodacin chưa có dữ liệu đầy đủ về an toàn trong thai kỳ. Chỉ dùng khi lợi ích vượt trội nguy cơ.",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không. Có thể ảnh hưởng đến hệ vi khuẩn đường ruột của trẻ sơ sinh.",
+                                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc tùy theo tình huống lâm sàng.",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng, theo dõi chức năng gan",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Chưa có nghiên cứu cụ thể về điều chỉnh liều ở bệnh nhân suy gan. Thận trọng ở bệnh nhân suy gan nặng, theo dõi chức năng gan.",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Tăng tác dụng phụ (tiêu chảy, buồn nôn, nôn)",
+                                "Tăng nguy cơ viêm đại tràng do C. difficile",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Ngừng thuốc ngay lập tức",
+                                "Điều trị hỗ trợ theo triệu chứng",
+                                "Xử trí viêm đại tràng do C. difficile nếu có",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu tiêu chảy, phản ứng dị ứng",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Có thể uống với thức ăn hoặc không cần thức ăn",
+                                "timing": "Liều duy nhất (single dose)",
+                                "notes": "Uống đủ nước trong khi điều trị. Tránh dùng cùng với thuốc chống acid hoặc thuốc chứa cation (sắt, canxi, magie, kẽm) - uống cách nhau ít nhất 2 giờ. Không bẻ hoặc nghiền viên.",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Zoliflodacin (Nuzolvence)",
+                                "FDA Approval Date: 2025",
+                                "FDA-approved use: To treat uncomplicated urogenital gonorrhea due to Neisseria gonorrhoeae",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2025",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Zoliflodacin (Nuzolvence)",
+                ],
+                "last_updated": "2026-01-15",
+        },
 }
 
 __all__ = ['OTHER_ANTIBIOTICS']
