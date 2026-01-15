@@ -155,7 +155,6 @@ def render_data_simulator():
             value=st.session_state.get('simulator_running', False),
             key="simulator_running"
         )
-        st.session_state['simulator_running'] = is_running
     
     with col2:
         update_rate = st.selectbox(
