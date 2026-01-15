@@ -120,28 +120,36 @@ if "updates_toast_shown" not in st.session_state:
     st.session_state["updates_toast_shown"] = True
 
 # ========== LOAD CUSTOM CSS ==========
-css_file = Path(__file__).parent / "static" / "styles.css"
-if css_file.exists():
-    with open(css_file, "r", encoding="utf-8") as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+try:
+    css_file = Path(__file__).parent / "static" / "styles.css"
+    if css_file.exists():
+        with open(css_file, "r", encoding="utf-8") as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+except (OSError, IOError, UnicodeDecodeError) as e:
+    # Silently fail if CSS file cannot be read
+    pass
 
 # ========== PWA SUPPORT - OFFLINE MODE ==========
 # Inject manifest and service worker
-static_dir = Path(__file__).parent / "static"
-manifest_file = static_dir / "manifest.json"
-offline_js_file = static_dir / "offline.js"
+try:
+    static_dir = Path(__file__).parent / "static"
+    manifest_file = static_dir / "manifest.json"
+    offline_js_file = static_dir / "offline.js"
 
-if manifest_file.exists():
-    st.markdown(
-        """
-        <link rel="manifest" href="/static/manifest.json">
-        """,
-        unsafe_allow_html=True
-    )
+    if manifest_file.exists():
+        st.markdown(
+            """
+            <link rel="manifest" href="/static/manifest.json">
+            """,
+            unsafe_allow_html=True
+        )
 
-if offline_js_file.exists():
-    with open(offline_js_file, "r", encoding="utf-8") as f:
-        st.markdown(f"<script>{f.read()}</script>", unsafe_allow_html=True)
+    if offline_js_file.exists():
+        with open(offline_js_file, "r", encoding="utf-8") as f:
+            st.markdown(f"<script>{f.read()}</script>", unsafe_allow_html=True)
+except (OSError, IOError, UnicodeDecodeError) as e:
+    # Silently fail if static files cannot be read
+    pass
 
 # Apply dark mode
 if st.session_state.dark_mode:
