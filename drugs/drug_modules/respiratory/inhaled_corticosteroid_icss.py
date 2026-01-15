@@ -39,21 +39,21 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'mechanism_of_action':
         'Beclomethasone là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Beclomethasone gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản, và tăng số lượng beta-2 receptors. Beclomethasone có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Tuy nhiên, một phần nhỏ vẫn được hấp thu và có thể gây tác dụng toàn thân ở liều cao. Beclomethasone được chuyển hóa nhanh ở gan (first-pass metabolism cao) nên tác dụng toàn thân ít hơn so với corticosteroid uống. Beclomethasone là ICS đầu tiên được sử dụng rộng rãi.'
         , 'monitoring': [
-        'Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)'
+        'Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)',
         'Nấm miệng (candidiasis) - kiểm tra lưỡi, miệng, đặc biệt nếu không súc miệng sau khi dùng'
         , 'Khàn tiếng, ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến',
         'Tác dụng toàn thân (chỉ ở liều cao): ức chế trục HPA, chậm phát triển ở trẻ em, loãng xương, tăng huyết áp'
         , 'Chức năng gan nếu có triệu chứng (hiếm)',
         'Tương tác với ritonavir, ketoconazole, itraconazole (tăng nồng độ beclomethasone)'],
         'precautions': [
-        'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG'
-        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, beclomethasone là thuốc duy trì'
-        'Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì'
-        , 'Không ngừng đột ngột - giảm liều dần dần',
-        'Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>1600mcg/ngày)'
-        'Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước'
-        'Tránh dùng với ritonavir (tăng đáng kể nồng độ beclomethasone, tăng nguy cơ ức chế HPA)'
-        , 'Thận trọng với ketoconazole, itraconazole (tăng nồng độ beclomethasone)',
+        'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG',
+        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, beclomethasone là thuốc duy trì',
+        'Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì',
+        'Không ngừng đột ngột - giảm liều dần dần',
+        'Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>1600mcg/ngày)',
+        'Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
+        'Tránh dùng với ritonavir (tăng đáng kể nồng độ beclomethasone, tăng nguy cơ ức chế HPA)',
+        'Thận trọng với ketoconazole, itraconazole (tăng nồng độ beclomethasone)',
         'Theo dõi chậm phát triển ở trẻ em nếu dùng liều cao',
         'Dùng đều đặn hàng ngày, không phải khi cần'],
         'pharmacokinetics': {
@@ -202,7 +202,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'mechanism_of_action':
         'Budesonide là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Budesonide gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản, và tăng số lượng beta-2 receptors. Budesonide có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Tuy nhiên, một phần nhỏ vẫn được hấp thu và có thể gây tác dụng toàn thân ở liều cao. Budesonide được chuyển hóa nhanh ở gan (first-pass metabolism cao) nên tác dụng toàn thân ít hơn so với corticosteroid uống.'
         , 'monitoring': [
-        'Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)'
+        'Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)',
         'Nấm miệng (candidiasis) - kiểm tra lưỡi, miệng, đặc biệt nếu không súc miệng sau khi dùng'
         , 'Khàn tiếng, ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến',
         'Tác dụng toàn thân (chỉ ở liều cao): ức chế trục HPA, chậm phát triển ở trẻ em, loãng xương, tăng huyết áp'
@@ -210,12 +210,12 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Tương tác với ritonavir, ketoconazole, itraconazole (tăng nồng độ budesonide)'
         ],
         'precautions': [
-        'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG'
-        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, budesonide là thuốc duy trì'
-        'Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì'
-        , 'Không ngừng đột ngột - giảm liều dần dần',
-        'Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>1600mcg/ngày)'
-        'Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước'
+        'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG',
+        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, budesonide là thuốc duy trì',
+        'Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì',
+        'Không ngừng đột ngột - giảm liều dần dần',
+        'Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>1600mcg/ngày)',
+        'Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
         'Tránh dùng với ritonavir (tăng đáng kể nồng độ budesonide, tăng nguy cơ ức chế HPA)'
         , 'Thận trọng với ketoconazole, itraconazole (tăng nồng độ budesonide)',
         'Theo dõi chậm phát triển ở trẻ em nếu dùng liều cao',
@@ -356,19 +356,19 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'mechanism_of_action':
         'Ciclesonide là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Ciclesonide là prodrug, được chuyển thành des-ciclesonide (hoạt chất) bởi esterase trong phổi. Des-ciclesonide gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm, giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản. Ciclesonide có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Đặc điểm: là prodrug, được kích hoạt tại phổi, ít tác dụng toàn thân hơn các ICS khác.'
         , 'monitoring': [
-        'Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)'
+        'Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)',
         'Nấm miệng (candidiasis) - kiểm tra lưỡi, miệng, đặc biệt nếu không súc miệng sau khi dùng'
         , 'Khàn tiếng, ho, kích ứng họng - tác dụng phụ tại chỗ phổ biến',
         'Tác dụng toàn thân (chỉ ở liều cao): ức chế trục HPA, chậm phát triển ở trẻ em'
         , 'Chức năng gan nếu có triệu chứng (hiếm)',
         'Tương tác với ritonavir, ketoconazole, itraconazole (tăng nồng độ)'],
         'precautions': [
-        'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG'
-        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, ciclesonide là thuốc duy trì'
-        'Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì'
-        , 'Không ngừng đột ngột - giảm liều dần dần',
-        'Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>640mcg/ngày)'
-        'Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước'
+        'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG',
+        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, ciclesonide là thuốc duy trì',
+        'Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì',
+        'Không ngừng đột ngột - giảm liều dần dần',
+        'Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>640mcg/ngày)',
+        'Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
         'Tránh dùng với ritonavir (tăng đáng kể nồng độ ciclesonide, tăng nguy cơ ức chế HPA)'
         , 'Thận trọng với ketoconazole, itraconazole (tăng nồng độ ciclesonide)',
         'Dùng đều đặn hàng ngày, không phải khi cần'],
@@ -496,7 +496,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'mechanism_of_action':
         'Fluticasone là corticosteroid hít (inhaled corticosteroid, ICS) có tác dụng kháng viêm mạnh tại chỗ. Fluticasone gắn vào glucocorticoid receptor trong tế bào, sau đó di chuyển vào nhân và gắn vào glucocorticoid response elements (GRE) trên DNA, kích hoạt hoặc ức chế biểu hiện gen. Dẫn đến: ức chế tổng hợp các cytokine gây viêm (IL-1, IL-2, IL-4, IL-5, TNF-α), giảm phóng thích các chất trung gian gây viêm từ mast cells và eosinophils, giảm thâm nhập tế bào viêm, giảm phù nề niêm mạc phế quản, và tăng số lượng beta-2 receptors. Fluticasone có tác dụng chủ yếu tại chỗ (phế quản), ít hấp thu toàn thân nên ít tác dụng phụ toàn thân. Tuy nhiên, một phần nhỏ vẫn được hấp thu và có thể gây tác dụng toàn thân ở liều cao. Fluticasone được chuyển hóa nhanh ở gan (first-pass metabolism cao) nhưng thời gian bán thải dài hơn budesonide. Thường dùng kết hợp với LABA (long-acting beta-2 agonist) như salmeterol trong dạng fixed-dose combination.'
         , 'monitoring': [
-        'Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)'
+        'Đáp ứng điều trị (giảm triệu chứng hen, tần suất cơn cấp, nhu cầu dùng SABA)',
         'Nấm miệng (candidiasis) - kiểm tra lưỡi, miệng, đặc biệt nếu không súc miệng sau khi dùng'
         , 'Khàn tiếng, ho, kích ứng cổ họng - tác dụng phụ tại chỗ phổ biến',
         'Tác dụng toàn thân (chỉ ở liều cao): ức chế trục HPA, chậm phát triển ở trẻ em, loãng xương, tăng huyết áp'
@@ -504,13 +504,13 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Tương tác với ritonavir (tăng đáng kể nồng độ), ketoconazole (tăng nồng độ)'
         ],
         'precautions': [
-        'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG'
-        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, fluticasone là thuốc duy trì'
-        'Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì'
-        , 'Không ngừng đột ngột - giảm liều dần dần',
-        'Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>1000mcg/ngày)'
-        'Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước'
-        'TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ fluticasone, tăng nguy cơ ức chế HPA nghiêm trọng, có thể gây hội chứng Cushing)'
+        'Súc miệng và súc họng sau mỗi lần dùng để tránh nấm miệng (candidiasis) - QUAN TRỌNG',
+        'Không dùng cho cắt cơn cấp - cần SABA (salbutamol) cho cơn cấp, fluticasone là thuốc duy trì',
+        'Tác dụng phát huy sau vài ngày đến vài tuần - không mong đợi tác dụng tức thì',
+        'Không ngừng đột ngột - giảm liều dần dần',
+        'Tác dụng toàn thân hiếm với liều thường nhưng có thể xảy ra ở liều cao (>1000mcg/ngày)',
+        'Thận trọng với bệnh nhân lao phổi, nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
+        'TRÁNH DÙNG với ritonavir (tăng đáng kể nồng độ fluticasone, tăng nguy cơ ức chế HPA nghiêm trọng, có thể gây hội chứng Cushing)',
         'Thận trọng với ketoconazole, itraconazole (tăng nồng độ fluticasone)',
         'Theo dõi chậm phát triển ở trẻ em nếu dùng liều cao',
         'Thường dùng kết hợp với LABA (salmeterol) trong dạng fixed-dose combination (Seretide/Advair)'
@@ -612,6 +612,7 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
             'WHO Guidelines - Essential medicines for asthma'
         ]
         }
+    }
 }
 
 __all__ = ['INHALED_CORTICOSTEROID_ICSS_DRUGS']

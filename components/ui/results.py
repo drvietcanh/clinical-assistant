@@ -82,23 +82,42 @@ def render_result_box(
 
 
 def render_result_card(
-    title_or_value: str,
-    metrics_or_label: Union[List[Dict[str, str]], str],
+    title_or_value: Optional[str] = None,
+    metrics_or_label: Optional[Union[List[Dict[str, str]], str]] = None,
     color: str = "primary",
-    icon: Optional[str] = None
+    icon: Optional[str] = None,
+    # New keyword arguments for metric card style
+    title: Optional[str] = None,
+    value: Optional[str] = None,
+    unit: Optional[str] = None,
+    subtitle: Optional[str] = None
 ) -> None:
     """
     Render a result card with multiple metrics
     
-    Supports two calling patterns:
-    1. New style: render_result_card(title, metrics_list, color, icon)
-    2. Legacy style: render_result_card(value, label, color) - for simple single metric cards
+    Supports three calling patterns:
+    1. Metric card style: render_result_card(title="Title", value="Value", unit="Unit", color="color", subtitle="Subtitle")
+    2. New style: render_result_card(title, metrics_list, color, icon)
+    3. Legacy style: render_result_card(value, label, color) - for simple single metric cards
     
     Args:
         title_or_value: Card title (new style) or metric value (legacy style)
         metrics_or_label: List of dicts with 'label', 'value' (new style) or label string (legacy style)
         color: Card accent color
         icon: Optional title icon (new style only)
+        title: Card title (metric card style)
+        value: Metric value (metric card style)
+        unit: Unit for the value (metric card style)
+        subtitle: Subtitle/target text (metric card style)
+    
+    Example (Metric card style):
+        >>> render_result_card(
+        ...     title="Plateau",
+        ...     value="25.5",
+        ...     unit="cmH2O",
+        ...     color="success",
+        ...     subtitle="Target: ≤30"
+        ... )
     
     Example (New style):
         >>> render_result_card(
@@ -134,8 +153,43 @@ def render_result_card(
     
     accent_color = color_map.get(color, THEME['colors']['primary'])
     
-    # Detect calling pattern: if metrics_or_label is a string, it's legacy style
-    if isinstance(metrics_or_label, str):
+    # Check if metric card style is being used (has title and value keyword args)
+    if title is not None and value is not None:
+        # Metric card style: render_result_card(title="Title", value="Value", unit="Unit", color="color", subtitle="Subtitle")
+        card_title = html.escape(str(title))
+        card_value = html.escape(str(value))
+        card_unit = f" {html.escape(str(unit))}" if unit else ""
+        card_subtitle = f'<div style="font-size: 0.85rem; color: {THEME["colors"]["text_secondary"]}; margin-top: 0.5rem;">{html.escape(str(subtitle))}</div>' if subtitle else ""
+        
+        card_html = f"""
+        <div style="
+            background: {THEME['colors']['surface']};
+            border: 2px solid {accent_color};
+            border-radius: 12px;
+            margin: 1rem 0;
+            overflow: hidden;
+            box-shadow: {THEME['shadows']['md']};
+        ">
+            <div style="
+                background: linear-gradient(135deg, {accent_color}15 0%, {accent_color}05 100%);
+                padding: 1rem;
+                text-align: center;
+            ">
+                <div style="font-size: 0.9rem; color: {THEME['colors']['text_secondary']}; margin-bottom: 0.5rem;">
+                    {card_title}
+                </div>
+                <div style="font-size: 1.5rem; font-weight: bold; color: {accent_color};">
+                    {card_value}{card_unit}
+                </div>
+                {card_subtitle}
+            </div>
+        </div>
+        """
+        st.markdown(card_html, unsafe_allow_html=True)
+        return
+    
+    # Detect calling pattern: if metrics_or_label is a string and title_or_value is not None, it's legacy style
+    if metrics_or_label is not None and isinstance(metrics_or_label, str) and title_or_value is not None:
         # Legacy style: render_result_card(value, label, color)
         value = html.escape(str(title_or_value))
         label = html.escape(str(metrics_or_label))
@@ -168,25 +222,27 @@ def render_result_card(
         return
     
     # New style: render_result_card(title, metrics_list, color, icon)
-    title = html.escape(str(title_or_value))
-    metrics = metrics_or_label
-    icon_html = f"{icon} " if icon else ""
-    
-    # Build metrics HTML
-    metrics_html = ""
-    for metric in metrics:
-        if isinstance(metric, dict):
-            metric_icon = metric.get('icon', '')
-            metric_icon_html = f"{metric_icon} " if metric_icon else ""
-            metric_color = metric.get('color', THEME['colors']['text_primary'])
-            metric_label = html.escape(str(metric.get('label', '')))
-            metric_value = html.escape(str(metric.get('value', '')))
-            
-            metrics_html += f'<div style="padding: 0.75rem; border-bottom: 1px solid {THEME["colors"].get("border", "#e0e0e0")};"><div style="font-size: 0.85rem; color: {THEME["colors"]["text_secondary"]}; margin-bottom: 0.25rem;">{metric_icon_html}{metric_label}</div><div style="font-size: 1.1rem; font-weight: bold; color: {metric_color};">{metric_value}</div></div>'
-    
-    card_html = f'<div style="background: {THEME["colors"]["surface"]}; border: 2px solid {accent_color}; border-radius: 12px; margin: 1rem 0; overflow: hidden; box-shadow: {THEME["shadows"]["md"]};"><div style="background: linear-gradient(135deg, {accent_color}15 0%, {accent_color}05 100%); padding: 1rem; border-bottom: 2px solid {accent_color};"><strong style="font-size: 1.1rem; color: {THEME["colors"]["text_primary"]};">{icon_html}{title}</strong></div><div>{metrics_html}</div></div>'
-    
-    st.markdown(card_html, unsafe_allow_html=True)
+    if title_or_value is not None and metrics_or_label is not None:
+        title = html.escape(str(title_or_value))
+        metrics = metrics_or_label
+        icon_html = f"{icon} " if icon else ""
+        
+        # Build metrics HTML
+        metrics_html = ""
+        for metric in metrics:
+            if isinstance(metric, dict):
+                metric_icon = metric.get('icon', '')
+                metric_icon_html = f"{metric_icon} " if metric_icon else ""
+                metric_color = metric.get('color', THEME['colors']['text_primary'])
+                metric_label = html.escape(str(metric.get('label', '')))
+                metric_value = html.escape(str(metric.get('value', '')))
+                
+                metrics_html += f'<div style="padding: 0.75rem; border-bottom: 1px solid {THEME["colors"].get("border", "#e0e0e0")};"><div style="font-size: 0.85rem; color: {THEME["colors"]["text_secondary"]}; margin-bottom: 0.25rem;">{metric_icon_html}{metric_label}</div><div style="font-size: 1.1rem; font-weight: bold; color: {metric_color};">{metric_value}</div></div>'
+        
+        card_html = f'<div style="background: {THEME["colors"]["surface"]}; border: 2px solid {accent_color}; border-radius: 12px; margin: 1rem 0; overflow: hidden; box-shadow: {THEME["shadows"]["md"]};"><div style="background: linear-gradient(135deg, {accent_color}15 0%, {accent_color}05 100%); padding: 1rem; border-bottom: 2px solid {accent_color};"><strong style="font-size: 1.1rem; color: {THEME["colors"]["text_primary"]};">{icon_html}{title}</strong></div><div>{metrics_html}</div></div>'
+        
+        st.markdown(card_html, unsafe_allow_html=True)
+        return
 
 
 def render_metric_display(

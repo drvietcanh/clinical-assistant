@@ -60,15 +60,16 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         'Dấu hiệu khô miệng nặng (có thể ảnh hưởng sức khỏe răng miệng)'],
         'precautions': [
         'Rửa miệng sau khi dùng để giảm kích ứng và tránh thuốc vào mắt',
-        'Tránh để thuốc vào mắt (có thể gây tăng nhãn áp, đặc biệt ở bệnh nhân glaucoma)'
-        'Thận trọng ở bệnh nhân glaucoma góc đóng (chống chỉ định) hoặc tăng nhãn áp'
-        , 'Thận trọng ở bệnh nhân phì đại tuyến tiền liệt (có thể gây bí tiểu)',
-        'Kết hợp với beta-agonist (SABA) cho hiệu quả tốt hơn - hiệp đồng tác dụng'
-        , 'Dùng đều đặn cho COPD, dùng khi cần cho hen (kết hợp với SABA)',
+        'Tránh để thuốc vào mắt (có thể gây tăng nhãn áp, đặc biệt ở bệnh nhân glaucoma)',
+        'Thận trọng ở bệnh nhân glaucoma góc đóng (chống chỉ định) hoặc tăng nhãn áp',
+        'Thận trọng ở bệnh nhân phì đại tuyến tiền liệt (có thể gây bí tiểu)',
+        'Kết hợp với beta-agonist (SABA) cho hiệu quả tốt hơn - hiệp đồng tác dụng',
+        'Dùng đều đặn cho COPD, dùng khi cần cho hen (kết hợp với SABA)',
         'Dạng hít: sử dụng đúng kỹ thuật để đạt hiệu quả tối đa',
         'Dạng nebulizer: phù hợp cho bệnh nhân không thể dùng dạng hít',
         'An toàn hơn beta-agonist cho bệnh nhân tim mạch (không kích thích tim)'
-        ]        'pharmacokinetics': {
+        ],
+        'pharmacokinetics': {
             'half_life': '2 giờ (tại chỗ), không đáng kể (toàn thân)',
             'onset': '15-30 phút (chậm hơn SABA)',
             'duration': '4-6 giờ',
@@ -85,29 +86,20 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         , 'black_box_warnings':
         'Tránh để thuốc vào mắt - có thể gây tăng nhãn áp, đặc biệt nguy hiểm ở bệnh nhân glaucoma góc đóng. Rửa miệng sau khi dùng để tránh thuốc vào mắt.'
         , 'drug_interactions': {'major': [],
-        'moderate': [{'drug':
-        'Anticholinergic khác (Atropine, Scopolamine, Benztropine, Oxybutynin)',
-        'mechanism':
-        'Tăng tác dụng anticholinergic, tăng tác dụng phụ anticholinergic',
-        'effect':
-        'Tăng khô miệng, bí tiểu, táo bón, tăng nhãn áp, nhìn mờ, nhịp tim nhanh',
-        'management':
-        'Thận trọng khi dùng cùng. Theo dõi tác dụng phụ anticholinergic. Có thể cần giảm liều hoặc tránh dùng cùng.'
-        }],
-        'moderate': [{'drug': 'Beta-2 agonists (SABA, LABA)', 'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
-        'Tăng hiệu quả giãn phế quản (tác dụng tích cực)', 'management':
-        'Có thể dùng kết hợp để tăng hiệu quả. Không cần điều chỉnh liều.'}]},
-        'contraindications': {'tuyệt_đối': [
-        'Dị ứng với ipratropium, atropine hoặc các thành phần khác',
-        'Glaucoma góc đóng (chống chỉ định tuyệt đối)',
-        'Tăng nhãn áp nặng không kiểm soát'],
-        'tương_đối': [
-        'Glaucoma góc mở - thận trọng, theo dõi nhãn áp',
-        'Tăng nhãn áp nhẹ - thận trọng, tránh để thuốc vào mắt',
-        'Phì đại tuyến tiền liệt - có thể gây bí tiểu',
-        'Bí tiểu - có thể làm nặng', 'Táo bón nặng - có thể làm nặng',
-        'Nhược cơ - có thể làm nặng',
-        'Dùng với anticholinergic khác - tăng tác dụng phụ']},
+        'moderate': [
+            {'drug':
+            'Anticholinergic khác (Atropine, Scopolamine, Benztropine, Oxybutynin)',
+            'mechanism':
+            'Tăng tác dụng anticholinergic, tăng tác dụng phụ anticholinergic',
+            'effect':
+            'Tăng khô miệng, bí tiểu, táo bón, tăng nhãn áp, nhìn mờ, nhịp tim nhanh',
+            'management':
+            'Thận trọng khi dùng cùng. Theo dõi tác dụng phụ anticholinergic. Có thể cần giảm liều hoặc tránh dùng cùng.'
+            },
+            {'drug': 'Beta-2 agonists (SABA, LABA)', 'mechanism': 'Hiệp đồng tác dụng giãn phế quản', 'effect':
+            'Tăng hiệu quả giãn phế quản (tác dụng tích cực)', 'management':
+            'Có thể dùng kết hợp để tăng hiệu quả. Không cần điều chỉnh liều.'}
+        ]},
         'pregnancy_lactation': {'fda_category': 'B', 'pregnancy_details':
         'Ipratropium là thuốc phân loại B. Các nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Ipratropium được sử dụng rộng rãi trong thai kỳ để điều trị COPD và hen, và có vẻ an toàn. Hấp thu toàn thân rất ít từ dạng hít (do ion hóa), nên tác dụng toàn thân tối thiểu. Có thể được dùng khi lợi ích vượt quá nguy cơ.'
         , 'lactation': {'safety': 'Compatible', 'details':
@@ -178,5 +170,6 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         "evidence_level": "High - FDA approved, multiple RCTs, clinical guidelines"
         }
     }
+}
 
 __all__ = ['ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS']
