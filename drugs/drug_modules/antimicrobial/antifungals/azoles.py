@@ -1178,6 +1178,575 @@ AZOLES_DRUGS = {
         },
     },
     
+    "Vivjoa": {
+                "group": "FDA Approved 2022",
+                "vietnamese_name": "Oteseconazole, Vivjoa",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "Giảm tỷ lệ tái phát viêm âm đạo do nấm Candida tái phát (RVVC) ở phụ nữ có tiền sử RVVC và không còn khả năng sinh sản",
+                        "Điều trị dự phòng RVVC sau khi đã điều trị đợt cấp bằng thuốc kháng nấm azole",
+                ],
+                "contraindications": [
+                        "Dị ứng oteseconazole hoặc bất kỳ thành phần nào",
+                        "Phụ nữ có khả năng sinh sản (phải xác nhận không có khả năng sinh sản trước khi dùng)",
+                        "Có thai hoặc đang cho con bú",
+                ],
+                "dosage": {
+                        "adult_standard": "150mg PO x 2 lần/ngày (sáng và tối) x 14 ngày, sau đó 150mg PO x 1 lần/tuần x 11 tuần (tổng cộng 12 tuần điều trị)",
+                        "adult_loading": "150mg PO x 2 lần/ngày x 14 ngày (liều nạp)",
+                        "adult_maintenance": "150mg PO x 1 lần/tuần x 11 tuần (liều duy trì)",
+                        "notes": "Uống với thức ăn để tăng hấp thu. Chỉ dùng cho phụ nữ không còn khả năng sinh sản (postmenopausal, đã cắt tử cung/buồng trứng, hoặc xác nhận không có khả năng sinh sản). FDA phê duyệt 2022.",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Không cần chỉnh liều (CrCl ≥30)",
+                        "under_30": "Thận trọng, dữ liệu hạn chế ở bệnh nhân suy thận nặng (CrCl <30)",
+                        "hemodialysis": "Dữ liệu hạn chế, thận trọng",
+                },
+                "side_effects": [
+                        "Nhức đầu (thường gặp)",
+                        "Buồn nôn (thường gặp)",
+                        "Tiêu chảy (thường gặp)",
+                        "Đau bụng",
+                        "Đầy hơi",
+                        "Chóng mặt",
+                        "Mệt mỏi",
+                        "Tăng men gan (hiếm)",
+                        "Phát ban (hiếm)",
+                        "Rối loạn vị giác",
+                ],
+                "interactions": [
+                        "CYP3A4 substrates: Oteseconazole là chất ức chế CYP3A4 mạnh, có thể tăng nồng độ các thuốc chuyển hóa qua CYP3A4 (statins, warfarin, cyclosporine, tacrolimus, v.v.)",
+                        "CYP3A4 inducers (rifampin, carbamazepine, phenytoin): Có thể giảm nồng độ oteseconazole, giảm hiệu quả",
+                        "Thuốc tránh thai nội tiết: Có thể tăng nồng độ, tăng nguy cơ tác dụng phụ",
+                        "Warfarin: Tăng tác dụng chống đông, tăng INR",
+                        "Statin (atorvastatin, simvastatin): Tăng nguy cơ tiêu cơ vân",
+                ],
+                "pregnancy": "X - Chống chỉ định trong thai kỳ",
+                "mechanism_of_action": "Oteseconazole là thuốc kháng nấm azole thế hệ mới, ức chế enzyme lanosterol 14α-demethylase (CYP51) của nấm Candida. Enzyme này chuyển lanosterol thành ergosterol - thành phần quan trọng của màng tế bào nấm. Ức chế tổng hợp ergosterol → màng tế bào nấm không ổn định, rò rỉ, chết tế bào. Oteseconazole có ái lực cao với CYP51 của Candida, có thời gian bán thải rất dài (khoảng 138 ngày), cho phép dùng liều duy trì hàng tuần. Đặc điểm quan trọng: Oteseconazole có ái lực thấp với CYP51 của người, ít ảnh hưởng đến tổng hợp steroid ở người so với các azole khác. Tuy nhiên, oteseconazole là chất ức chế CYP3A4 mạnh, có nhiều tương tác thuốc. FDA phê duyệt 2022 để giảm tỷ lệ tái phát RVVC ở phụ nữ không còn khả năng sinh sản.",
+                "monitoring": [
+                        "Xác nhận bệnh nhân không còn khả năng sinh sản trước khi bắt đầu điều trị",
+                        "Theo dõi đáp ứng điều trị (giảm tần suất tái phát RVVC)",
+                        "Theo dõi tác dụng phụ (nhức đầu, buồn nôn, tiêu chảy)",
+                        "Chức năng gan (ALT, AST) nếu có triệu chứng hoặc dùng kéo dài",
+                        "INR nếu dùng với warfarin",
+                        "Creatine kinase (CK) nếu dùng với statin",
+                        "Theo dõi tương tác thuốc với các thuốc chuyển hóa qua CYP3A4",
+                ],
+                "precautions": [
+                        "CHỈ dùng cho phụ nữ không còn khả năng sinh sản (postmenopausal, đã cắt tử cung/buồng trứng, hoặc xác nhận không có khả năng sinh sản). CHỐNG CHỈ ĐỊNH ở phụ nữ có khả năng sinh sản do thời gian bán thải rất dài (138 ngày), có thể gây hại cho thai nhi nếu có thai sau khi ngừng thuốc.",
+                        "Uống với thức ăn để tăng hấp thu và giảm tác dụng phụ đường tiêu hóa",
+                        "Thận trọng với tương tác thuốc: Oteseconazole là chất ức chế CYP3A4 mạnh, có thể tăng nồng độ nhiều thuốc (statins, warfarin, cyclosporine, tacrolimus, v.v.)",
+                        "Theo dõi INR chặt chẽ nếu dùng với warfarin (tăng nguy cơ chảy máu)",
+                        "Theo dõi CK nếu dùng với statin (tăng nguy cơ tiêu cơ vân)",
+                        "Tránh dùng với các chất cảm ứng CYP3A4 mạnh (rifampin, carbamazepine, phenytoin) vì có thể giảm hiệu quả",
+                        "Thận trọng ở bệnh nhân suy gan, suy thận nặng (dữ liệu hạn chế)",
+                        "Theo dõi chức năng gan nếu có triệu chứng hoặc dùng kéo dài",
+                        "Dùng đủ thời gian (12 tuần) để đạt hiệu quả tối đa",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Khoảng 138 ngày (rất dài, cho phép dùng liều duy trì hàng tuần)",
+                        "onset": "Vài ngày đến vài tuần (tác dụng dự phòng tái phát)",
+                        "duration": "Rất dài do half-life rất dài (138 ngày), có thể duy trì nồng độ hiệu quả trong nhiều tháng sau khi ngừng thuốc",
+                        "protein_binding": ">99% (gắn kết cao với protein huyết tương)",
+                        "metabolism": "Chuyển hóa chủ yếu qua gan bởi CYP3A4 và CYP2C9, tạo ra các chất chuyển hóa không hoạt động",
+                        "clearance": "Chủ yếu qua gan (chuyển hóa), một phần nhỏ qua thận. Thời gian bán thải rất dài do gắn kết cao với protein và chuyển hóa chậm.",
+                },
+                "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm và ánh sáng trực tiếp. Bảo quản trong hộp gốc, đậy kín.",
+                "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở phụ nữ có khả năng sinh sản. Oteseconazole có thời gian bán thải rất dài (138 ngày), có thể gây hại cho thai nhi nếu có thai sau khi ngừng thuốc. Chỉ dùng cho phụ nữ không còn khả năng sinh sản (postmenopausal, đã cắt tử cung/buồng trứng, hoặc xác nhận không có khả năng sinh sản).",
+                "drug_interactions": {
+                        "major": [
+                                {
+                                        "drug": "Warfarin",
+                                        "mechanism": "Oteseconazole ức chế CYP3A4 và CYP2C9, làm giảm chuyển hóa warfarin, tăng nồng độ warfarin.",
+                                        "effect": "Tăng tác dụng chống đông, tăng INR, tăng nguy cơ chảy máu nghiêm trọng",
+                                        "management": "Theo dõi INR chặt chẽ khi bắt đầu, thay đổi liều, hoặc ngừng oteseconazole. Giảm liều warfarin 25-50% khi bắt đầu oteseconazole. Điều chỉnh liều warfarin theo INR."
+                                },
+                                {
+                                        "drug": "Statin (atorvastatin, simvastatin, lovastatin)",
+                                        "mechanism": "Oteseconazole ức chế CYP3A4, làm giảm chuyển hóa statin, tăng nồng độ statin.",
+                                        "effect": "Tăng nguy cơ tiêu cơ vân (rhabdomyolysis), đau cơ, suy thận cấp",
+                                        "management": "Tránh dùng với simvastatin, lovastatin. Giảm liều atorvastatin 50% hoặc dùng statin không chuyển hóa qua CYP3A4 (pravastatin, rosuvastatin). Theo dõi CK và triệu chứng đau cơ."
+                                },
+                                {
+                                        "drug": "Cyclosporine, Tacrolimus",
+                                        "mechanism": "Oteseconazole ức chế CYP3A4, làm giảm chuyển hóa cyclosporine và tacrolimus.",
+                                        "effect": "Tăng nồng độ cyclosporine/tacrolimus, tăng độc tính (độc thận, tăng huyết áp, độc thần kinh)",
+                                        "management": "Giảm liều cyclosporine/tacrolimus 25-50% khi bắt đầu oteseconazole. Theo dõi nồng độ cyclosporine/tacrolimus, chức năng thận. Điều chỉnh liều theo nồng độ."
+                                },
+                        ],
+                        "moderate": [
+                                {
+                                        "drug": "Rifampin, Carbamazepine, Phenytoin (CYP3A4 inducers)",
+                                        "mechanism": "Các thuốc cảm ứng CYP3A4 làm tăng chuyển hóa oteseconazole, giảm nồng độ oteseconazole.",
+                                        "effect": "Giảm nồng độ oteseconazole, giảm hiệu quả điều trị RVVC",
+                                        "management": "Tránh dùng đồng thời nếu có thể. Nếu phải dùng, theo dõi đáp ứng điều trị và cân nhắc tăng liều oteseconazole (dữ liệu hạn chế)."
+                                },
+                                {
+                                        "drug": "Thuốc tránh thai nội tiết",
+                                        "mechanism": "Oteseconazole ức chế CYP3A4, có thể tăng nồng độ estrogen và progestin.",
+                                        "effect": "Tăng nguy cơ tác dụng phụ của thuốc tránh thai (buồn nôn, đau đầu, huyết khối)",
+                                        "management": "Theo dõi tác dụng phụ. Lưu ý: Oteseconazole chỉ dùng cho phụ nữ không còn khả năng sinh sản, nên ít khi dùng với thuốc tránh thai."
+                                },
+                        ],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng oteseconazole hoặc bất kỳ thành phần nào",
+                                "Phụ nữ có khả năng sinh sản (phải xác nhận không có khả năng sinh sản trước khi dùng)",
+                                "Có thai hoặc đang cho con bú",
+                        ],
+                        "tương_đối": [
+                                "Suy gan nặng (dữ liệu hạn chế, thận trọng)",
+                                "Suy thận nặng (CrCl <30, dữ liệu hạn chế, thận trọng)",
+                                "Dùng đồng thời với các chất cảm ứng CYP3A4 mạnh (rifampin, carbamazepine, phenytoin) - có thể giảm hiệu quả",
+                        ],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "X",
+                        "pregnancy_details": "CHỐNG CHỈ ĐỊNH trong thai kỳ. Oteseconazole có thời gian bán thải rất dài (138 ngày), có thể gây hại cho thai nhi nếu có thai sau khi ngừng thuốc. Chỉ dùng cho phụ nữ không còn khả năng sinh sản. Nếu có thai trong khi dùng hoặc sau khi ngừng thuốc, cần thông báo ngay cho bác sĩ.",
+                        "lactation": {
+                                "safety": "Chống chỉ định",
+                                "details": "Chưa biết oteseconazole có bài tiết vào sữa mẹ hay không, nhưng do thời gian bán thải rất dài (138 ngày) và có thể gây hại cho trẻ sơ sinh, nên chống chỉ định khi cho con bú.",
+                                "recommendation": "Không dùng khi đang cho con bú. Nếu cần điều trị, nên ngừng cho con bú hoặc chọn phương pháp điều trị khác.",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không cần chỉnh liều",
+                        "moderate": "Thận trọng, theo dõi chặt chẽ (dữ liệu hạn chế)",
+                        "severe": "Thận trọng, dữ liệu hạn chế, cân nhắc giảm liều hoặc tránh dùng",
+                        "notes": "Oteseconazole chuyển hóa chủ yếu qua gan bởi CYP3A4 và CYP2C9. Ở bệnh nhân suy gan, có thể tăng nồng độ và tăng nguy cơ tác dụng phụ. Dữ liệu hạn chế ở bệnh nhân suy gan nặng.",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Buồn nôn, nôn",
+                                "Tiêu chảy",
+                                "Nhức đầu",
+                                "Chóng mặt",
+                                "Mệt mỏi",
+                                "Tăng men gan (nếu quá liều lớn)",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                                "Theo dõi dấu hiệu sinh tồn",
+                                "Theo dõi chức năng gan nếu có triệu chứng",
+                                "Rửa dạ dày nếu uống quá liều trong vòng 1-2 giờ",
+                                "Than hoạt tính có thể hữu ích nếu uống quá liều gần đây",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn, chức năng gan, triệu chứng lâm sàng. Do thời gian bán thải rất dài (138 ngày), cần theo dõi kéo dài.",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Uống với thức ăn để tăng hấp thu và giảm tác dụng phụ đường tiêu hóa",
+                                "timing": "Liều nạp: 150mg x 2 lần/ngày (sáng và tối) x 14 ngày. Liều duy trì: 150mg x 1 lần/tuần x 11 tuần. Uống cùng thời điểm mỗi ngày/tuần để duy trì nồng độ ổn định.",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Oteseconazole (Vivjoa)",
+                                "FDA Approval Date: April 26, 2022",
+                                "FDA-approved use: To reduce the incidence of recurrent vulvovaginal candidiasis (RVVC) in females with a history of RVVC who are not of reproductive potential",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2022",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [
+                                "Hepatotoxicity (hiếm, nhưng có thể xảy ra)",
+                        ],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": True,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                                "Liver function (if symptoms or prolonged use)",
+                                "Drug interactions (CYP3A4 substrates)",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Oteseconazole (Vivjoa)",
+                        "Recurrent Vulvovaginal Candidiasis",
+                        "Antifungal - Azole",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Bimzelx": {
+                "group": "FDA Approved 2023",
+                "vietnamese_name": "Bimekizumab, Bimzelx",
+                "administration": [
+                        "SC",
+                ],
+                "indications": [
+                        "Điều trị vảy nến mảng bám từ trung bình đến nặng ở người lớn là ứng viên cho liệu pháp toàn thân hoặc quang trị liệu",
+                        "Điều trị viêm khớp vảy nến (psoriatic arthritis) ở người lớn",
+                ],
+                "contraindications": [
+                        "Dị ứng bimekizumab hoặc bất kỳ thành phần nào",
+                        "Nhiễm trùng hoạt động nghiêm trọng",
+                ],
+                "dosage": {
+                        "adult_standard": "320mg SC (tiêm 2 lần, mỗi lần 160mg ở 2 vị trí khác nhau) x 1 lần/4 tuần sau liều nạp",
+                        "adult_loading": "320mg SC (tiêm 2 lần, mỗi lần 160mg) tại tuần 0, 4, 8, 12, 16",
+                        "adult_maintenance": "320mg SC x 1 lần/4 tuần (bắt đầu từ tuần 20)",
+                        "adult_alternative": "320mg SC x 1 lần/8 tuần có thể được xem xét ở một số bệnh nhân sau khi đạt đáp ứng",
+                        "notes": "Tiêm dưới da (SC) ở vùng đùi, bụng, hoặc cánh tay. Làm ấm đến nhiệt độ phòng trước khi tiêm. FDA phê duyệt 2023.",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Không cần chỉnh liều",
+                        "under_30": "Không cần chỉnh liều (monoclonal antibody, không thải qua thận)",
+                        "hemodialysis": "Không cần chỉnh liều",
+                },
+                "side_effects": [
+                        "Nhiễm trùng đường hô hấp trên (thường gặp)",
+                        "Nhiễm trùng nấm Candida (oral candidiasis, vulvovaginal candidiasis) - thường gặp do ức chế IL-17",
+                        "Phản ứng tại chỗ tiêm (đau, đỏ, sưng, ngứa)",
+                        "Nhức đầu",
+                        "Mệt mỏi",
+                        "Buồn nôn",
+                        "Tiêu chảy",
+                        "Tăng men gan (ALT, AST) - hiếm",
+                        "Giảm bạch cầu trung tính (neutropenia) - hiếm",
+                        "Nhiễm trùng nghiêm trọng (viêm phổi, nhiễm trùng da, nhiễm trùng huyết) - hiếm nhưng có thể xảy ra",
+                        "Phản ứng dị ứng (phát ban, nổi mề đay, phù mạch) - hiếm",
+                ],
+                "interactions": [
+                        "Vắc-xin sống: Bimekizumab ức chế miễn dịch, có thể làm giảm hiệu quả vắc-xin sống và tăng nguy cơ nhiễm trùng từ vắc-xin sống. Tránh dùng vắc-xin sống trong khi điều trị và ít nhất 16 tuần sau khi ngừng bimekizumab.",
+                        "Thuốc ức chế miễn dịch khác: Có thể tăng nguy cơ nhiễm trùng. Thận trọng khi dùng đồng thời.",
+                        "Cyclosporine, Methotrexate: Có thể dùng đồng thời nhưng cần theo dõi chặt chẽ tác dụng phụ và nhiễm trùng.",
+                ],
+                "pregnancy": "Không phân loại (chưa có dữ liệu đầy đủ)",
+                "mechanism_of_action": "Bimekizumab là kháng thể đơn dòng (monoclonal antibody) IgG1 humanized, ức chế đồng thời cả interleukin-17A (IL-17A) và interleukin-17F (IL-17F). IL-17A và IL-17F là các cytokine tiền viêm quan trọng trong bệnh sinh của vảy nến và viêm khớp vảy nến. Bằng cách ức chế cả hai cytokine này, bimekizumab làm giảm quá trình viêm, giảm tăng sinh tế bào sừng, và cải thiện các tổn thương da và khớp. Đặc điểm quan trọng: Bimekizumab là thuốc duy nhất ức chế đồng thời cả IL-17A và IL-17F, trong khi các thuốc khác (secukinumab, ixekizumab) chỉ ức chế IL-17A. FDA phê duyệt 2023 để điều trị vảy nến mảng bám từ trung bình đến nặng và viêm khớp vảy nến.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị (PASI score, BSA, PGA)",
+                        "Theo dõi dấu hiệu nhiễm trùng (sốt, ho, khó thở, đau họng, tiểu buốt, tiểu gắt)",
+                        "Nhiễm trùng nấm Candida (oral candidiasis, vulvovaginal candidiasis) - theo dõi triệu chứng và điều trị nếu cần",
+                        "Công thức máu (CBC) - theo dõi bạch cầu trung tính",
+                        "Chức năng gan (ALT, AST) - nếu có triệu chứng",
+                        "Phản ứng tại chỗ tiêm",
+                        "Phản ứng dị ứng (phát ban, nổi mề đay, phù mạch)",
+                        "Dấu hiệu viêm ruột (IBD) - bimekizumab có thể làm trầm trọng hoặc gây viêm ruột mới",
+                ],
+                "precautions": [
+                        "Nhiễm trùng: Bimekizumab ức chế miễn dịch, có thể tăng nguy cơ nhiễm trùng. Không bắt đầu điều trị ở bệnh nhân có nhiễm trùng hoạt động nghiêm trọng. Nếu phát triển nhiễm trùng nghiêm trọng trong khi điều trị, tạm ngừng bimekizumab cho đến khi nhiễm trùng được kiểm soát.",
+                        "Nhiễm trùng nấm Candida: Bimekizumab ức chế IL-17, làm tăng nguy cơ nhiễm trùng nấm Candida (oral, vulvovaginal). Theo dõi triệu chứng và điều trị nếu cần.",
+                        "Vắc-xin sống: Tránh dùng vắc-xin sống trong khi điều trị và ít nhất 16 tuần sau khi ngừng bimekizumab.",
+                        "Viêm ruột (IBD): Bimekizumab có thể làm trầm trọng hoặc gây viêm ruột mới (Crohn's disease, ulcerative colitis). Theo dõi triệu chứng (đau bụng, tiêu chảy, chảy máu trực tràng).",
+                        "Phản ứng tại chỗ tiêm: Có thể xảy ra đau, đỏ, sưng, ngứa tại chỗ tiêm. Thường nhẹ và tự khỏi.",
+                        "Phản ứng dị ứng: Hiếm nhưng có thể xảy ra phản ứng dị ứng nghiêm trọng. Ngừng điều trị nếu có phản ứng dị ứng.",
+                        "Thận trọng ở bệnh nhân suy giảm miễn dịch, có tiền sử nhiễm trùng tái phát, hoặc có bệnh lý viêm ruột.",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Khoảng 3-4 tuần (dài, cho phép dùng liều mỗi 4-8 tuần)",
+                        "onset": "2-4 tuần (bắt đầu thấy cải thiện)",
+                        "duration": "Dài do half-life dài, duy trì hiệu quả trong 4-8 tuần giữa các liều",
+                        "protein_binding": "Không áp dụng (monoclonal antibody)",
+                        "metabolism": "Chuyển hóa qua hệ thống proteolytic (giống các protein nội sinh), không qua CYP450. Chuyển hóa chủ yếu ở gan và các mô khác.",
+                        "clearance": "Chủ yếu qua hệ thống proteolytic và thải trừ qua thận (dạng đã chuyển hóa). Không thải trừ qua thận dạng nguyên dạng như các thuốc phân tử nhỏ.",
+                },
+                "storage": "Bảo quản trong tủ lạnh ở 2-8°C, tránh đông lạnh. Bảo quản trong hộp gốc để tránh ánh sáng. Có thể bảo quản ở nhiệt độ phòng (≤25°C) tối đa 30 ngày, nhưng không được quay lại tủ lạnh sau khi đã lấy ra. Làm ấm đến nhiệt độ phòng trước khi tiêm.",
+                "black_box_warnings": "Tăng nguy cơ nhiễm trùng nghiêm trọng. Bimekizumab ức chế miễn dịch, có thể tăng nguy cơ nhiễm trùng nghiêm trọng, bao gồm nhiễm trùng huyết, viêm phổi, và nhiễm trùng da. Không bắt đầu điều trị ở bệnh nhân có nhiễm trùng hoạt động nghiêm trọng. Nếu phát triển nhiễm trùng nghiêm trọng trong khi điều trị, tạm ngừng bimekizumab cho đến khi nhiễm trùng được kiểm soát.",
+                "drug_interactions": {
+                        "major": [
+                                {
+                                        "drug": "Vắc-xin sống (MMR, varicella, zoster, BCG, v.v.)",
+                                        "mechanism": "Bimekizumab ức chế miễn dịch, có thể làm giảm hiệu quả vắc-xin sống và tăng nguy cơ nhiễm trùng từ vắc-xin sống.",
+                                        "effect": "Giảm hiệu quả vắc-xin, tăng nguy cơ nhiễm trùng từ vắc-xin sống",
+                                        "management": "Tránh dùng vắc-xin sống trong khi điều trị và ít nhất 16 tuần sau khi ngừng bimekizumab. Có thể tiêm vắc-xin bất hoạt (inactivated vaccines) nhưng hiệu quả có thể giảm."
+                                },
+                        ],
+                        "moderate": [
+                                {
+                                        "drug": "Thuốc ức chế miễn dịch khác (cyclosporine, methotrexate, azathioprine, v.v.)",
+                                        "mechanism": "Có thể tăng nguy cơ nhiễm trùng do ức chế miễn dịch cộng hưởng.",
+                                        "effect": "Tăng nguy cơ nhiễm trùng nghiêm trọng",
+                                        "management": "Thận trọng khi dùng đồng thời. Theo dõi chặt chẽ dấu hiệu nhiễm trùng. Có thể dùng methotrexate đồng thời nhưng cần theo dõi chặt chẽ."
+                                },
+                        ],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng bimekizumab hoặc bất kỳ thành phần nào",
+                                "Nhiễm trùng hoạt động nghiêm trọng (viêm phổi, nhiễm trùng huyết, v.v.)",
+                        ],
+                        "tương_đối": [
+                                "Nhiễm trùng mạn tính hoặc tái phát",
+                                "Suy giảm miễn dịch",
+                                "Bệnh lý viêm ruột (Crohn's disease, ulcerative colitis) - có thể làm trầm trọng",
+                                "Tiền sử ung thư (dữ liệu hạn chế)",
+                        ],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "Không phân loại",
+                        "pregnancy_details": "Chưa có dữ liệu đầy đủ về việc sử dụng bimekizumab trong thai kỳ. Bimekizumab là IgG1, có thể qua nhau thai trong 3 tháng cuối thai kỳ. Dữ liệu từ các nghiên cứu trên động vật không cho thấy tác hại rõ ràng, nhưng dữ liệu trên người còn hạn chế. Cân nhắc lợi ích/nguy cơ. Nếu có thai trong khi điều trị, cần thông báo ngay cho bác sĩ.",
+                        "lactation": {
+                                "safety": "Chưa biết",
+                                "details": "Chưa biết bimekizumab có bài tiết vào sữa mẹ hay không. Bimekizumab là IgG1, có thể bài tiết vào sữa mẹ với lượng nhỏ. Tuy nhiên, do phân tử lớn, khả năng hấp thu qua đường tiêu hóa của trẻ sơ sinh là thấp.",
+                                "recommendation": "Thận trọng khi cho con bú. Cân nhắc lợi ích/nguy cơ. Nếu cần điều trị, có thể tiếp tục cho con bú nhưng theo dõi trẻ sơ sinh chặt chẽ.",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không cần chỉnh liều",
+                        "moderate": "Không cần chỉnh liều (monoclonal antibody, không chuyển hóa qua CYP450)",
+                        "severe": "Không cần chỉnh liều, nhưng thận trọng ở bệnh nhân suy gan nặng (dữ liệu hạn chế)",
+                        "notes": "Bimekizumab là monoclonal antibody, chuyển hóa qua hệ thống proteolytic, không qua CYP450. Không cần điều chỉnh liều theo chức năng gan. Tuy nhiên, ở bệnh nhân suy gan nặng, có thể ảnh hưởng đến chuyển hóa protein nói chung.",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Tăng nguy cơ nhiễm trùng",
+                                "Phản ứng tại chỗ tiêm (nếu tiêm quá nhiều)",
+                                "Phản ứng dị ứng (nếu quá mẫn)",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                                "Theo dõi dấu hiệu sinh tồn",
+                                "Theo dõi dấu hiệu nhiễm trùng chặt chẽ",
+                                "Điều trị nhiễm trùng nếu phát triển",
+                                "Xử trí phản ứng dị ứng nếu có",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn, dấu hiệu nhiễm trùng, phản ứng dị ứng. Do half-life dài (3-4 tuần), cần theo dõi kéo dài.",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "subcutaneous": {
+                                "injection_sites": "Vùng đùi, bụng, hoặc cánh trước cánh tay. Tránh vùng da bị tổn thương, sẹo, hoặc vảy nến.",
+                                "preparation": "Làm ấm đến nhiệt độ phòng (15-30 phút) trước khi tiêm. Không làm nóng bằng lò vi sóng hoặc nước nóng. Không lắc.",
+                                "technique": "Tiêm dưới da (90 độ góc). Mỗi liều 320mg được tiêm thành 2 lần, mỗi lần 160mg ở 2 vị trí khác nhau.",
+                                "timing": "Liều nạp: Tuần 0, 4, 8, 12, 16. Liều duy trì: Mỗi 4 tuần (bắt đầu từ tuần 20). Có thể giảm xuống mỗi 8 tuần ở một số bệnh nhân sau khi đạt đáp ứng.",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Bimekizumab (Bimzelx)",
+                                "FDA Approval Date: October 15, 2023",
+                                "FDA-approved use: To treat moderate to severe plaque psoriasis in adults who are candidates for systemic therapy or phototherapy",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2023",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [
+                                "Hepatotoxicity (hiếm, tăng men gan)",
+                        ],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": True,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                                "Infections (serious infections, candidiasis)",
+                                "Liver function (if symptoms)",
+                                "CBC (neutrophil count)",
+                                "Injection site reactions",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Bimekizumab (Bimzelx)",
+                        "Plaque Psoriasis",
+                        "Psoriatic Arthritis",
+                        "Monoclonal Antibody - IL-17 Inhibitor",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Rezzayo": {
+                "group": "FDA Approved 2023",
+                "vietnamese_name": "Rezafungin, Rezzayo",
+                "administration": [
+                        "IV",
+                ],
+                "indications": [
+                        "Điều trị candidemia (nhiễm nấm Candida trong máu)",
+                        "Điều trị nhiễm nấm Candida xâm lấn (invasive candidiasis)",
+                        "Điều trị nhiễm nấm Candida xâm lấn ở bệnh nhân suy giảm miễn dịch",
+                ],
+                "contraindications": [
+                        "Dị ứng rezafungin hoặc bất kỳ thành phần nào",
+                        "Dị ứng với các echinocandin khác (caspofungin, micafungin, anidulafungin)",
+                ],
+                "dosage": {
+                        "adult_standard": "400mg IV x 1 lần/ngày (liều nạp), sau đó 200mg IV x 1 lần/ngày (liều duy trì)",
+                        "adult_loading": "400mg IV x 1 lần (liều đầu tiên)",
+                        "adult_maintenance": "200mg IV x 1 lần/ngày (bắt đầu từ ngày thứ 2)",
+                        "adult_duration": "Điều trị tối thiểu 14 ngày sau khi cấy máu âm tính và triệu chứng lâm sàng cải thiện",
+                        "notes": "Truyền IV trong 60 phút. Không cần điều chỉnh liều theo chức năng thận hoặc gan. FDA phê duyệt 2023.",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Không cần chỉnh liều",
+                        "under_30": "Không cần chỉnh liều (echinocandin, không thải qua thận)",
+                        "hemodialysis": "Không cần chỉnh liều, không bị loại bỏ đáng kể qua lọc máu",
+                },
+                "side_effects": [
+                        "Phản ứng truyền (infusion reactions) - sốt, ớn lạnh, đỏ bừng, hạ huyết áp (thường gặp)",
+                        "Tăng men gan (ALT, AST) - thường gặp",
+                        "Giảm kali máu (hypokalemia) - thường gặp",
+                        "Buồn nôn, nôn - thường gặp",
+                        "Tiêu chảy - thường gặp",
+                        "Nhức đầu - thường gặp",
+                        "Phát ban - hiếm",
+                        "Giảm bạch cầu trung tính (neutropenia) - hiếm",
+                        "Phản ứng dị ứng (phản vệ) - hiếm nhưng có thể xảy ra",
+                ],
+                "interactions": [
+                        "Ít tương tác thuốc: Rezafungin không ức chế hoặc cảm ứng CYP450, nên ít tương tác với các thuốc chuyển hóa qua CYP450",
+                        "Cyclosporine: Có thể tăng nhẹ nồng độ cyclosporine, theo dõi nồng độ",
+                        "Tacrolimus: Có thể tăng nhẹ nồng độ tacrolimus, theo dõi nồng độ",
+                        "Warfarin: Không có tương tác đáng kể",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Rezafungin là echinocandin (lipopeptide) kháng nấm, ức chế enzyme β-(1,3)-D-glucan synthase của nấm Candida. Enzyme này tổng hợp β-(1,3)-D-glucan - thành phần quan trọng của thành tế bào nấm. Ức chế tổng hợp β-(1,3)-D-glucan → thành tế bào nấm yếu, không ổn định, rò rỉ → chết tế bào nấm. Phổ kháng nấm: Hiệu quả với Candida (bao gồm cả C. auris kháng azole), Aspergillus (fungistatic). Đặc điểm quan trọng: Rezafungin có thời gian bán thải dài hơn các echinocandin khác (caspofungin, micafungin, anidulafungin), cho phép dùng liều hàng ngày đơn giản. Không ức chế hoặc cảm ứng CYP450, nên ít tương tác thuốc hơn các azole. FDA phê duyệt 2023 để điều trị candidemia và nhiễm nấm Candida xâm lấn.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị (cấy máu, triệu chứng lâm sàng)",
+                        "Theo dõi phản ứng truyền (infusion reactions) - sốt, ớn lạnh, đỏ bừng, hạ huyết áp trong và sau khi truyền",
+                        "Chức năng gan (ALT, AST) - trước và trong điều trị",
+                        "Điện giải (kali) - theo dõi kali máu",
+                        "Công thức máu (CBC) - theo dõi bạch cầu trung tính",
+                        "Dấu hiệu nhiễm trùng (sốt, WBC, CRP)",
+                        "Cấy máu và cấy từ vị trí nhiễm trùng để đánh giá đáp ứng",
+                ],
+                "precautions": [
+                        "Phản ứng truyền: Có thể xảy ra phản ứng truyền (infusion reactions) - sốt, ớn lạnh, đỏ bừng, hạ huyết áp trong và sau khi truyền. Thường nhẹ và tự khỏi, nhưng cần theo dõi. Nếu phản ứng nghiêm trọng, có thể giảm tốc độ truyền hoặc tạm ngừng.",
+                        "Truyền IV trong 60 phút. Không truyền nhanh hơn để tránh phản ứng truyền.",
+                        "Không cần điều chỉnh liều theo chức năng thận hoặc gan (echinocandin, không chuyển hóa qua CYP450, không thải qua thận).",
+                        "Theo dõi chức năng gan (tăng men gan có thể xảy ra, thường nhẹ và tự khỏi).",
+                        "Theo dõi kali máu (có thể gây hạ kali máu).",
+                        "Ít tương tác thuốc: Rezafungin không ức chế hoặc cảm ứng CYP450, nên ít tương tác với các thuốc chuyển hóa qua CYP450. Tuy nhiên, vẫn cần theo dõi khi dùng với cyclosporine hoặc tacrolimus.",
+                        "Điều trị tối thiểu 14 ngày sau khi cấy máu âm tính và triệu chứng lâm sàng cải thiện.",
+                        "Thận trọng ở bệnh nhân suy gan nặng (dữ liệu hạn chế, nhưng không cần điều chỉnh liều).",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Khoảng 130-150 giờ (rất dài, dài hơn các echinocandin khác như caspofungin ~10-15 giờ, micafungin ~14-17 giờ, anidulafungin ~40-50 giờ)",
+                        "onset": "Tác dụng kháng nấm bắt đầu trong 24-48 giờ",
+                        "duration": "Dài do half-life rất dài, duy trì nồng độ hiệu quả trong nhiều ngày",
+                        "protein_binding": ">98% (gắn kết cao với protein huyết tương, chủ yếu albumin)",
+                        "metabolism": "Chuyển hóa chậm qua peptide hydrolysis và glutathione conjugation, không qua CYP450",
+                        "clearance": "Chủ yếu qua gan (chuyển hóa), một phần nhỏ qua thận (dạng đã chuyển hóa). Không thải trừ qua thận dạng nguyên dạng. Thời gian bán thải rất dài do gắn kết cao với protein và chuyển hóa chậm.",
+                },
+                "storage": "Bảo quản trong tủ lạnh ở 2-8°C, tránh đông lạnh. Bảo quản trong hộp gốc để tránh ánh sáng. Dung dịch đã pha: ổn định ở nhiệt độ phòng (20-25°C) trong 24 giờ, hoặc trong tủ lạnh (2-8°C) trong 7 ngày. Không đông lạnh dung dịch đã pha.",
+                "black_box_warnings": "Không có cảnh báo hộp đen đặc biệt. Tuy nhiên, cần thận trọng với phản ứng truyền (infusion reactions) và phản ứng dị ứng (phản vệ).",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [
+                                {
+                                        "drug": "Cyclosporine, Tacrolimus",
+                                        "mechanism": "Rezafungin có thể tăng nhẹ nồng độ cyclosporine và tacrolimus, mặc dù cơ chế chưa rõ ràng (không qua CYP450).",
+                                        "effect": "Tăng nhẹ nồng độ cyclosporine/tacrolimus, có thể tăng độc tính",
+                                        "management": "Theo dõi nồng độ cyclosporine/tacrolimus khi bắt đầu rezafungin. Điều chỉnh liều nếu cần."
+                                },
+                        ],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng rezafungin hoặc bất kỳ thành phần nào",
+                                "Dị ứng với các echinocandin khác (caspofungin, micafungin, anidulafungin) - có thể có phản ứng chéo",
+                        ],
+                        "tương_đối": [
+                                "Suy gan nặng (dữ liệu hạn chế, nhưng không cần điều chỉnh liều)",
+                                "Phản ứng truyền nghiêm trọng với echinocandin trước đó",
+                        ],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Chưa có dữ liệu đầy đủ về việc sử dụng rezafungin trong thai kỳ. Dữ liệu từ các nghiên cứu trên động vật không cho thấy tác hại rõ ràng, nhưng dữ liệu trên người còn hạn chế. Cân nhắc lợi ích/nguy cơ. Nếu có thai trong khi điều trị, cần thông báo ngay cho bác sĩ.",
+                        "lactation": {
+                                "safety": "Chưa biết",
+                                "details": "Chưa biết rezafungin có bài tiết vào sữa mẹ hay không. Rezafungin là peptide, có thể bài tiết vào sữa mẹ với lượng nhỏ. Tuy nhiên, do phân tử lớn, khả năng hấp thu qua đường tiêu hóa của trẻ sơ sinh là thấp.",
+                                "recommendation": "Thận trọng khi cho con bú. Cân nhắc lợi ích/nguy cơ. Nếu cần điều trị, có thể tiếp tục cho con bú nhưng theo dõi trẻ sơ sinh chặt chẽ.",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không cần chỉnh liều",
+                        "moderate": "Không cần chỉnh liều (dữ liệu hạn chế)",
+                        "severe": "Không cần chỉnh liều, nhưng thận trọng (dữ liệu hạn chế)",
+                        "notes": "Rezafungin chuyển hóa chủ yếu qua gan, nhưng không qua CYP450. Không cần điều chỉnh liều theo chức năng gan. Tuy nhiên, ở bệnh nhân suy gan nặng, có thể ảnh hưởng đến chuyển hóa protein nói chung. Dữ liệu hạn chế ở bệnh nhân suy gan nặng.",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Phản ứng truyền nghiêm trọng (sốt, ớn lạnh, đỏ bừng, hạ huyết áp)",
+                                "Tăng men gan",
+                                "Hạ kali máu",
+                                "Phản ứng dị ứng (phản vệ)",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Ngừng truyền ngay lập tức",
+                                "Điều trị hỗ trợ",
+                                "Theo dõi dấu hiệu sinh tồn",
+                                "Xử trí phản ứng dị ứng nếu có (epinephrine, antihistamine, corticosteroid)",
+                                "Điều chỉnh điện giải (kali) nếu cần",
+                                "Theo dõi chức năng gan",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn, phản ứng dị ứng, chức năng gan, điện giải. Do half-life rất dài (130-150 giờ), cần theo dõi kéo dài.",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "intravenous": {
+                                "preparation": "Pha trong NS hoặc D5W. Pha 400mg trong 250ml (liều nạp) hoặc 200mg trong 250ml (liều duy trì).",
+                                "infusion_rate": "Truyền IV trong 60 phút. Không truyền nhanh hơn để tránh phản ứng truyền.",
+                                "compatibility": "Không trộn với các thuốc khác. Truyền riêng biệt.",
+                                "timing": "Liều nạp: 400mg IV x 1 lần (ngày đầu tiên). Liều duy trì: 200mg IV x 1 lần/ngày (bắt đầu từ ngày thứ 2). Điều trị tối thiểu 14 ngày sau khi cấy máu âm tính và triệu chứng lâm sàng cải thiện.",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Rezafungin (Rezzayo)",
+                                "FDA Approval Date: March 22, 2023",
+                                "FDA-approved use: To treat candidemia and invasive candidiasis",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2023",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [
+                                "Hepatotoxicity (tăng men gan, thường nhẹ)",
+                        ],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": True,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                                "Infusion reactions",
+                                "Liver function",
+                                "Electrolytes (potassium)",
+                                "CBC (neutrophil count)",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Rezafungin (Rezzayo)",
+                        "Candidemia",
+                        "Invasive Candidiasis",
+                        "Echinocandin Antifungal",
+                ],
+                "last_updated": "2026-01-15",
+        },
 }
 
 __all__ = ['AZOLES_DRUGS']
