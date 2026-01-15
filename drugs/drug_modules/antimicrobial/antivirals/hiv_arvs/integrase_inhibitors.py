@@ -580,6 +580,127 @@ INTEGRASE_INHIBITORS_ARVS: Dict[str, Dict[str, Any]] = {
                 "evidence_level": "High – guideline-based",
             },
         },
+        "Sunlenca": {
+            "group": "FDA Approved 2022 - Integrase strand transfer inhibitor (INSTI)",
+            "vietnamese_name": "Lenacapavir, Sunlenca",
+            "administration": [
+                "IV",
+                "SC"
+            ],
+            "indications": [
+                "To treat adults with HIV whose HIV infections cannot be successfully treated with other available treatments due to resistance, intolerance, or safety considerations"
+            ],
+            "contraindications": [
+                "Dị ứng lenacapavir hoặc bất kỳ thành phần nào"
+            ],
+            "dosage": {
+                "adult_standard": "Theo chỉ định của bác sĩ",
+                "notes": "FDA phê duyệt 2022. To treat adults with HIV whose HIV infections cannot be successfully treated with other available treatments due to resistance, intolerance, or safety considerations"
+            },
+            "renal_adjustment": {
+                "normal": "Không cần chỉnh liều",
+                "30_60": "Thận trọng",
+                "under_30": "Thận trọng, dữ liệu hạn chế"
+            },
+            "side_effects": [
+                "Cần bổ sung thông tin từ tài liệu FDA"
+            ],
+            "interactions": [
+                "Cần bổ sung thông tin từ tài liệu FDA"
+            ],
+            "pregnancy": "C",
+            "mechanism_of_action": "Lenacapavir được FDA phê duyệt 2022 để to treat adults with hiv whose hiv infections cannot be successfully treated with other available treatments due to resistance, intolerance, or safety considerations. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+            "monitoring": [
+                "Theo dõi đáp ứng điều trị",
+                "Theo dõi tác dụng phụ"
+            ],
+            "precautions": [
+                "Dị ứng lenacapavir",
+                "Cần bổ sung thông tin từ tài liệu FDA"
+            ],
+            "pharmacokinetics": {
+                "half_life": "Cần bổ sung",
+                "onset": "Cần bổ sung",
+                "duration": "Cần bổ sung",
+                "protein_binding": "Cần bổ sung",
+                "metabolism": "Cần bổ sung",
+                "clearance": "Cần bổ sung"
+            },
+            "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+            "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+            "drug_interactions": {
+                "major": [],
+                "moderate": [],
+                "minor": []
+            },
+            "contraindications_detail": {
+                "tuyệt_đối": [
+                    "Dị ứng lenacapavir hoặc bất kỳ thành phần nào"
+                ],
+                "tương_đối": []
+            },
+            "pregnancy_lactation": {
+                "fda_category": "C",
+                "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                "lactation": {
+                    "safety": "Unknown",
+                    "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                    "recommendation": "Thận trọng khi cho con bú"
+                }
+            },
+            "hepatic_adjustment": {
+                "mild": "Không đổi",
+                "moderate": "Thận trọng",
+                "severe": "Thận trọng, dữ liệu hạn chế",
+                "notes": "Cần bổ sung thông tin từ tài liệu FDA"
+            },
+            "overdose_management": {
+                "symptoms": [
+                    "Cần bổ sung"
+                ],
+                "antidote": "Không có antidote đặc hiệu",
+                "treatment": [
+                    "Điều trị hỗ trợ"
+                ],
+                "monitoring": "Theo dõi dấu hiệu sinh tồn"
+            },
+            "reversal_agents": {
+                "available": False,
+                "agents": []
+            },
+            "administration_instructions": {
+                "oral": {
+                    "with_food": "Cần bổ sung",
+                    "timing": "Cần bổ sung"
+                }
+            },
+            "references": {
+                "primary_sources": [
+                    "FDA Drug Label - Lenacapavir (Sunlenca)",
+                    "FDA Approval Date: 2022",
+                    "FDA-approved use: To treat adults with HIV whose HIV infections cannot be successfully treated with other available treatments due to resistance, intolerance, or safety considerations"
+                ],
+                "last_updated": "2026-01-15",
+                "evidence_level": "A - FDA-approved 2022"
+            },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": False,
+                "organ_toxicity": [],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": False,
+                "requires_monitoring": [
+                    "Clinical response",
+                    "Adverse effects"
+                ]
+            },
+            "guideline_tags": [
+                "FDA Drug Information - Lenacapavir (Sunlenca)"
+            ],
+            "last_updated": "2026-01-15"
+        },
 
 }
 

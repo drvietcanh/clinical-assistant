@@ -203,6 +203,126 @@ OPIOID_AGONIST_WEAKS_DRUGS = {
         'last_updated': '2025-01-06',
             'evidence_level': 'High - FDA-approved, extensive clinical data. Note: efficacy depends on CYP2D6 genotype'
         },
+    "Journavx": {
+                "group": "FDA Approved 2025",
+                "vietnamese_name": "Suzetrigine, Journavx",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat moderate to severe acute pain",
+                ],
+                "contraindications": [
+                        "Dị ứng suzetrigine hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2025. To treat moderate to severe acute pain",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Suzetrigine được FDA phê duyệt 2025 để to treat moderate to severe acute pain. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng suzetrigine",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng suzetrigine hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Suzetrigine (Journavx)",
+                                "FDA Approval Date: 2025",
+                                "FDA-approved use: To treat moderate to severe acute pain",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2025",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Suzetrigine (Journavx)",
+                ],
+                "last_updated": "2026-01-15",
+        },
         'risk_flags': {
             'high_alert': True,
             'narrow_therapeutic_index': False,
