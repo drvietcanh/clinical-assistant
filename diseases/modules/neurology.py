@@ -63,11 +63,16 @@ NEUROLOGY_DISEASES: List[Disease] = [
             ]
         },
         prevention=[
-            "Kiểm soát huyết áp",
-            "Kiểm soát đái tháo đường",
-            "Chống đông (nếu rung nhĩ)",
-            "Statin",
-            "Bỏ thuốc lá"
+            "Kiểm soát huyết áp: mục tiêu <130/80 mmHg theo AHA/ASA 2024-2025",
+            "Kiểm soát đái tháo đường: HbA1c <7%, xem xét GLP-1 agonists cho phòng ngừa đột quỵ ở người có rủi ro chuyển hóa cao",
+            "Chống đông (nếu rung nhĩ): DOAC hoặc Warfarin theo CHA2DS2-VASc score",
+            "Statin: PCSK9 inhibitors để hạ LDL-C nếu cần",
+            "Chế độ ăn Địa Trung Hải: dầu olive, hạt có dầu, hạn chế carbs tinh chế",
+            "Hoạt động thể lực ≥150 phút/tuần",
+            "Ngủ đủ và chất lượng tốt",
+            "Bỏ thuốc lá",
+            "Đánh giá các yếu tố phi-y tế: tình trạng kinh tế xã hội, bất bình đẳng, tác động giới",
+            "Colchicine trong một số trường hợp phòng ngừa (đang nghiên cứu)"
         ],
         complications=[
             "Tái phát đột quỵ",

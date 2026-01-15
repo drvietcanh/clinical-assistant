@@ -567,16 +567,19 @@ GASTROENTEROLOGY_DISEASES: List[Disease] = [
             ]
         },
         treatment={
-            "general": "Mục tiêu: lui bệnh niêm mạc, kiểm soát triệu chứng, nâng cao chất lượng sống. Điều trị leo thang (Step-up) hoặc Top-down tùy mức độ.",
+            "general": "Điều trị theo AGA living guideline 2025. Mục tiêu: đạt endoscopic remission (MES 0 hoặc 1) để giảm nguy cơ mổ, nhập viện. Ưu tiên dùng advanced therapies ngay từ đầu thay vì step-up sau thất bại 5-ASA.",
             "medications": [
-                "5-ASA (Mesalamine, Sulfasalazine) - cho mức độ nhẹ-trung bình",
-                "Corticosteroid (Prednisolone, Hydrocortisone) - cho đợt cấp",
+                "5-ASA (Mesalamine, Sulfasalazine) - cho mức độ nhẹ, nhưng không bắt buộc phải thất bại trước khi dùng advanced therapy",
+                "Advanced therapies cho UC trung bình-nặng: Infliximab, Vedolizumab, Ozanimod, Etrasimod, Upadacitinib, Risankizumab, Guselkumab",
+                "Nếu đã thất bại với TNF antagonists: Tofacitinib, Upadacitinib, Ustekinumab được ưu tiên",
+                "Corticosteroid (Prednisolone, Hydrocortisone) - cho đợt cấp, không dùng dài hạn",
                 "Thuốc ức chế miễn dịch (Azathioprine, 6-MP) - duy trì",
-                "Thuốc sinh học (Infliximab, Adalimumab, Vedolizumab) - cho mức độ trung bình-nặng"
+                "Theo dõi: Calprotectin phân và CRP để đánh giá đáp ứng"
             ],
             "procedures": [
                 "Nội soi theo dõi ung thư (sau 8-10 năm mắc bệnh)",
-                "Phẫu thuật cắt đại tràng (nếu kháng trị, biến chứng thủng, ung thư)"
+                "Phẫu thuật cắt đại tràng (nếu kháng trị, biến chứng thủng, ung thư)",
+                "Loại bỏ serologic antibody testing chẩn đoán hoặc tiên lượng (hiệu quả thấp)"
             ]
         },
         prevention=[
@@ -889,5 +892,261 @@ GASTROENTEROLOGY_DISEASES: List[Disease] = [
         related_drugs=["Sofosbuvir/Velpatasvir", "Glecaprevir/Pibrentasvir"],
         related_protocols=["Hepatitis C Management"],
         icd10_codes=["B18.2"]
+    ),
+
+    Disease(
+        id="hepatic_encephalopathy",
+        name="Hepatic Encephalopathy",
+        name_vn="Bệnh não gan",
+        category="Gastroenterology",
+        definition="Bệnh não gan là rối loạn chức năng não có tính chất đảo ngược, liên quan đến suy gan cấp hoặc mạn tính. Bệnh đặc trưng bởi tích tụ ammonia và các độc tố khác trong máu, gây rối loạn nhận thức, thay đổi hành vi và có thể dẫn đến hôn mê.",
+        causes=[
+            "Suy gan cấp (ALF - Acute Liver Failure)",
+            "Suy gan cấp trên nền mạn (ACLF - Acute-on-Chronic Liver Failure)",
+            "Xơ gan mất bù",
+            "Tăng áp lực tĩnh mạch cửa",
+            "Tích tụ ammonia trong máu",
+            "Viêm hệ thống và các cytokine",
+            "Rối loạn chuyển hóa",
+            "Yếu tố kích hoạt: nhiễm khuẩn, xuất huyết tiêu hóa, rối loạn điện giải, táo bón, thuốc ức chế thần kinh trung ương"
+        ],
+        symptoms=[
+            "Giai đoạn nhẹ (Grade 1): rối loạn nhận thức nhẹ, thay đổi hành vi, rối loạn giấc ngủ",
+            "Giai đoạn trung bình (Grade 2): lú lẫn, mất định hướng, thay đổi tính cách, run vẫy (asterixis)",
+            "Giai đoạn nặng (Grade 3): buồn ngủ sâu, lú lẫn nặng, nhưng vẫn đáp ứng với kích thích",
+            "Giai đoạn rất nặng (Grade 4): hôn mê, không đáp ứng với kích thích",
+            "Bệnh não gan tối thiểu (MHE): không có triệu chứng rõ ràng, chỉ phát hiện qua test tâm lý thần kinh",
+            "Run vẫy (asterixis) - dấu hiệu đặc trưng",
+            "Hơi thở có mùi gan (fetor hepaticus)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: rối loạn nhận thức, thay đổi hành vi, run vẫy",
+                "Tiền sử bệnh gan: xơ gan, suy gan cấp hoặc mạn",
+                "Đánh giá theo West-Haven Criteria (Grade 0-4)",
+                "Loại trừ các nguyên nhân khác: đột quỵ, xuất huyết não, nhiễm trùng hệ thần kinh trung ương",
+                "Tìm yếu tố kích hoạt: nhiễm khuẩn, xuất huyết tiêu hóa, rối loạn điện giải"
+            ],
+            "tests": [
+                "Chức năng gan: AST, ALT, bilirubin, albumin, PT/INR",
+                "Ammonia máu (hỗ trợ chẩn đoán, không đặc hiệu)",
+                "Công thức máu (thiếu máu nếu có xuất huyết)",
+                "Điện giải đồ (hạ kali, hạ natri)",
+                "Xét nghiệm nhiễm khuẩn: cấy máu, cấy nước tiểu, dịch cổ trướng",
+                "Test tâm lý thần kinh: PHES (Psychometric Hepatic Encephalopathy Score), CFF (Critical Flicker Frequency) cho MHE",
+                "EEG (điện não đồ) - có thể thấy sóng chậm delta"
+            ],
+            "imaging": [
+                "CT/MRI sọ não (loại trừ xuất huyết não, đột quỵ)",
+                "Siêu âm gan với Doppler (đánh giá tăng áp lực tĩnh mạch cửa)",
+                "Nội soi dạ dày (tìm giãn tĩnh mạch thực quản, xuất huyết)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị theo AASLD/ACG guidelines 2025-2026. Mục tiêu: giảm ammonia máu, điều trị yếu tố kích hoạt, hỗ trợ chức năng gan, phòng ngừa biến chứng.",
+            "medications": [
+                "Lactulose: liều đầu 30-45ml mỗi 1-2 giờ đến khi có phân, sau đó duy trì 15-30ml 2-3 lần/ngày để đạt 2-3 lần phân mềm/ngày (thuốc lựa chọn hàng đầu)",
+                "Rifaximin 550mg x 2 lần/ngày (phối hợp với lactulose trong HE mạn tính hoặc tái phát)",
+                "Kháng sinh đường ruột: Neomycin (ít dùng hơn do độc tính)",
+                "Probiotics (bằng chứng hạn chế)",
+                "L-ornithine L-aspartate (LOLA) - hỗ trợ chuyển hóa ammonia",
+                "Điều trị yếu tố kích hoạt: kháng sinh nếu nhiễm khuẩn, cầm máu nếu xuất huyết tiêu hóa"
+            ],
+            "procedures": [
+                "Chăm sóc ICU nếu HE Grade 3-4: đặt nội khí quản để bảo vệ đường thở",
+                "Điều trị phù não nếu có: mannitol hoặc natri ưu trương (hypertonic saline)",
+                "Theo dõi áp lực nội sọ (ICP monitoring) trong ALF nặng (chỉ ở trung tâm có kinh nghiệm)",
+                "Hỗ trợ hồi thận liên tục (CRRT) trong ALF nặng có tăng ammonia",
+                "Điều trị xuất huyết tiêu hóa: nội soi cầm máu, thuốc co mạch",
+                "Ghép gan: cân nhắc sớm nếu ALF nặng, tiên lượng xấu theo King's College Criteria hoặc MELD score"
+            ]
+        },
+        prevention=[
+            "Điều trị tốt bệnh gan nền (xơ gan, viêm gan)",
+            "Dự phòng tái phát: lactulose hoặc rifaximin duy trì",
+            "Tránh yếu tố kích hoạt: điều trị nhiễm khuẩn sớm, phòng ngừa xuất huyết tiêu hóa",
+            "Tránh thuốc ức chế thần kinh trung ương không cần thiết",
+            "Điều chỉnh rối loạn điện giải",
+            "Tránh táo bón",
+            "Hạn chế protein trong chế độ ăn nếu cần (nhưng không quá nghiêm ngặt)"
+        ],
+        complications=[
+            "Phù não và tăng áp lực nội sọ (đặc biệt trong ALF)",
+            "Hôn mê sâu, không đáp ứng",
+            "Suy hô hấp (do hôn mê)",
+            "Nhiễm khuẩn bệnh viện",
+            "Tử vong (đặc biệt trong ALF không được ghép gan)",
+            "Tái phát HE nếu không điều trị duy trì"
+        ],
+        related_scores=["West-Haven Criteria", "MELD Score", "Child-Pugh Score", "King's College Criteria", "PHES", "CFF"],
+        related_drugs=["Lactulose", "Rifaximin", "Neomycin", "L-ornithine L-aspartate", "Mannitol"],
+        related_protocols=["Hepatic Encephalopathy Management", "Acute Liver Failure", "Cirrhosis Management"],
+        icd10_codes=["K72.90", "K72.91"]
+    ),
+
+    Disease(
+        id="crohns_disease",
+        name="Crohn's Disease",
+        name_vn="Bệnh Crohn",
+        category="Gastroenterology",
+        definition="Bệnh Crohn là bệnh viêm ruột mạn tính (IBD), gây viêm từng đoạn ở bất kỳ phần nào của đường tiêu hóa từ miệng đến hậu môn, đặc trưng bởi viêm xuyên thành và có thể gây hẹp, rò.",
+        causes=[
+            "Tự miễn (hệ miễn dịch tấn công ruột)",
+            "Di truyền",
+            "Môi trường (chế độ ăn, vi khuẩn đường ruột)",
+            "Yếu tố nguy cơ: tiền sử gia đình, tuổi trẻ (15-30), hút thuốc lá"
+        ],
+        symptoms=[
+            "Đau bụng (thường vùng hố chậu phải)",
+            "Tiêu chảy (có thể có máu, nhầy)",
+            "Sụt cân",
+            "Sốt",
+            "Mệt mỏi",
+            "Biểu hiện ngoài ruột: đau khớp, viêm mắt, ban da, loét miệng",
+            "Hẹp ruột: đau bụng, nôn, táo bón",
+            "Rò: rò ruột-ruột, ruột-da, ruột-bàng quang"
+        ],
+        diagnosis={
+            "criteria": [
+                "Lâm sàng: đau bụng, tiêu chảy mạn tính, sụt cân",
+                "Nội soi đại tràng/ruột non: viêm từng đoạn, loét dọc, dạng lát đá",
+                "Mô bệnh học: viêm xuyên thành, u hạt (granuloma)",
+                "Calprotectin phân >50-100 mg/g để phân biệt viêm",
+                "Siêu âm ruột (intestinal ultrasound) - không phóng xạ, thay thế MRI/CT",
+                "Loại trừ nhiễm trùng (cấy phân)"
+            ],
+            "tests": [
+                "Công thức máu (thiếu máu, tăng bạch cầu)",
+                "CRP, ESR (đánh giá mức độ viêm)",
+                "Calprotectin trong phân (chẩn đoán phân biệt với IBS)",
+                "Cấy phân (loại trừ nhiễm khuẩn, C.difficile)",
+                "Nội soi đại tràng với sinh thiết",
+                "Nội soi viên nang hoặc nội soi ruột non (nếu nghi ngờ)"
+            ],
+            "imaging": [
+                "Nội soi đại tràng (chuẩn vàng)",
+                "Siêu âm ruột (intestinal ultrasound) - không phóng xạ",
+                "MRI ruột non (MRE)",
+                "CT bụng (nếu cần, nhưng hạn chế do phóng xạ)",
+                "X-quang ruột non có thuốc cản quang"
+            ]
+        },
+        treatment={
+            "general": "Điều trị theo AGA 2025 và ACG 2025 guidelines. Ưu tiên dùng early high-efficacy therapy (advanced therapies) ngay từ đầu thay vì step-up. Mục tiêu: mucosal healing, giảm biến chứng, cải thiện chất lượng sống.",
+            "medications": [
+                "Advanced therapies cho Crohn trung bình-nặng: Infliximab, Adalimumab, Ustekinumab, Risankizumab, Mirikizumab, Guselkumab, Upadacitinib",
+                "Không bắt buộc phải thất bại thiopurine/methotrexate trước khi dùng advanced therapy",
+                "Mesalamine không được khuyến nghị cho Crohn nội mạc (hiệu quả hạn chế)",
+                "Corticosteroid (Prednisolone, Budesonide) - cho đợt cấp, không dùng dài hạn",
+                "Thuốc ức chế miễn dịch (Azathioprine, 6-MP, Methotrexate) - duy trì",
+                "IL-23 inhibitors (Ustekinumab, Risankizumab, Guselkumab) và JAK inhibitors (Upadacitinib, Tofacitinib) được sử dụng nhiều hơn",
+                "Theo dõi: Calprotectin phân, CRP, nội soi để đánh giá đáp ứng"
+            ],
+            "procedures": [
+                "Nội soi theo dõi (đánh giá mucosal healing)",
+                "Phẫu thuật: cắt đoạn ruột (nếu hẹp, rò không đáp ứng), strictureplasty",
+                "Điều trị rò: seton, fibrin glue, phẫu thuật",
+                "Theo dõi biến chứng: hẹp, rò, áp xe"
+            ]
+        },
+        prevention=[
+            "Tuân thủ điều trị duy trì",
+            "Bỏ thuốc lá (quan trọng)",
+            "Chế độ ăn phù hợp (tránh kích thích trong đợt cấp)",
+            "Tầm soát ung thư đại tràng (nếu có viêm đại tràng)",
+            "Quản lý stress"
+        ],
+        complications=[
+            "Hẹp ruột (stricture)",
+            "Rò (fistula): ruột-ruột, ruột-da, ruột-bàng quang, ruột-âm đạo",
+            "Áp xe",
+            "Thủng ruột",
+            "Xuất huyết tiêu hóa",
+            "Ung thư đại tràng (nếu có viêm đại tràng lâu ngày)",
+            "Suy dinh dưỡng"
+        ],
+        related_scores=["CDAI", "Harvey-Bradshaw Index", "SES-CD"],
+        related_drugs=["Infliximab", "Adalimumab", "Ustekinumab", "Risankizumab", "Guselkumab", "Upadacitinib", "Azathioprine", "Methotrexate", "Prednisolone"],
+        related_protocols=["IBD Management", "Crohn's Disease Management"],
+        icd10_codes=["K50.9", "K50.0", "K50.1", "K50.8"]
+    ),
+
+    Disease(
+        id="gastroparesis",
+        name="Gastroparesis",
+        name_vn="Liệt dạ dày",
+        category="Gastroenterology",
+        definition="Liệt dạ dày là tình trạng làm rỗng dạ dày chậm không do tắc nghẽn cơ học, đặc trưng bởi buồn nôn, nôn, đầy bụng sau ăn.",
+        causes=[
+            "Đái tháo đường (nguyên nhân phổ biến nhất)",
+            "Phẫu thuật dạ dày (vagotomy, fundoplication)",
+            "Thuốc: opioid, anticholinergic, GLP-1 agonists",
+            "Bệnh thần kinh: Parkinson, đa xơ cứng",
+            "Vô căn (idiopathic)",
+            "Bệnh mô liên kết: scleroderma"
+        ],
+        symptoms=[
+            "Buồn nôn, nôn (đặc biệt sau ăn)",
+            "Đầy bụng, cảm giác no sớm",
+            "Đau bụng vùng thượng vị",
+            "Ợ hơi, ợ chua",
+            "Sụt cân",
+            "Biến động đường huyết (nếu có đái tháo đường)"
+        ],
+        diagnosis={
+            "criteria": [
+                "Triệu chứng lâm sàng: buồn nôn, nôn, đầy bụng",
+                "Test làm rỗng dạ dày kéo dài 4 giờ (theo AGA 2025 - thay vì 2 giờ) - chuẩn vàng",
+                "Loại trừ tắc nghẽn cơ học (nội soi dạ dày)",
+                "Gastric Emptying Scintigraphy: làm rỗng chậm sau 4 giờ"
+            ],
+            "tests": [
+                "Gastric Emptying Scintigraphy (4 giờ) - chuẩn vàng",
+                "Nội soi dạ dày (loại trừ tắc nghẽn)",
+                "Breath test (13C-octanoate) - thay thế",
+                "Wireless motility capsule - nếu có",
+                "Đánh giá chức năng thần kinh (nếu nghi ngờ)"
+            ],
+            "imaging": [
+                "Gastric Emptying Scintigraphy",
+                "Nội soi dạ dày",
+                "CT bụng (nếu cần loại trừ nguyên nhân khác)"
+            ]
+        },
+        treatment={
+            "general": "Điều trị theo AGA 2025 guidelines với 12 khuyến nghị. Mục tiêu: cải thiện triệu chứng, làm rỗng dạ dày, phòng ngừa biến chứng.",
+            "medications": [
+                "Metoclopramide - thuốc đầu tay, nhưng giới hạn ≤12 tuần do nguy cơ rối loạn vận động",
+                "Erythromycin - lựa chọn phụ, tác dụng ngắn hạn",
+                "Domperidone - không được khuyến cáo ở vai trò tuyến đầu (theo AGA 2025)",
+                "Prucalopride - không được khuyến cáo ở vai trò tuyến đầu",
+                "Nortriptyline - không được khuyến cáo ở vai trò tuyến đầu",
+                "Điều trị nguyên nhân: kiểm soát đường huyết (nếu đái tháo đường), giảm opioid nếu có thể"
+            ],
+            "procedures": [
+                "Thay đổi chế độ ăn: bữa nhỏ, thức ăn mềm, tránh chất béo và chất xơ không hòa tan",
+                "G-POEM (Gastric Peroral Endoscopic Myotomy) - có thể xem xét ở bệnh nhân kháng trị",
+                "Đặt ống thông mũi-dạ dày (nếu nặng, suy dinh dưỡng)",
+                "Điều chỉnh thuốc: giảm opioid, GLP-1 agonists nếu có thể",
+                "Theo dõi triệu chứng và đáp ứng điều trị"
+            ]
+        },
+        prevention=[
+            "Kiểm soát tốt đái tháo đường",
+            "Tránh lạm dụng opioid",
+            "Điều trị sớm các bệnh thần kinh",
+            "Thay đổi chế độ ăn phù hợp"
+        ],
+        complications=[
+            "Suy dinh dưỡng",
+            "Mất nước",
+            "Bezoar (khối thức ăn)",
+            "Biến động đường huyết (nếu đái tháo đường)",
+            "Giảm chất lượng cuộc sống"
+        ],
+        related_scores=["Gastric Emptying Rate", "Gastroparesis Cardinal Symptom Index (GCSI)"],
+        related_drugs=["Metoclopramide", "Erythromycin", "Domperidone"],
+        related_protocols=["Gastroparesis Management"],
+        icd10_codes=["K31.84"]
     ),
 ]

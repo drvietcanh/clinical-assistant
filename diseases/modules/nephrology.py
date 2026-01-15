@@ -114,19 +114,22 @@ NEPHROLOGY_DISEASES: List[Disease] = [
             ]
         },
         treatment={
-            "general": "Điều trị theo KDIGO guidelines. Mục tiêu: làm chậm tiến triển, điều trị biến chứng, chuẩn bị lọc máu/ghép thận.",
+            "general": "Điều trị theo KDIGO 2025 guidelines. Mục tiêu: làm chậm tiến triển, điều trị biến chứng, chuẩn bị lọc máu/ghép thận. Ưu tiên thuốc có lợi ích thận và tim mạch.",
             "medications": [
-                "ACE inhibitor hoặc ARB (nếu có protein niệu)",
-                "Kiểm soát huyết áp (< 130/80 mmHg)",
-                "Kiểm soát đường huyết (nếu đái tháo đường)",
-                "Statin",
-                "Điều chỉnh rối loạn điện giải",
-                "Erythropoietin (nếu thiếu máu)"
+                "ACE inhibitor hoặc ARB (nếu có protein niệu hoặc albumin niệu) - mục tiêu UACR <30 mg/g",
+                "SGLT2 inhibitor (Dapagliflozin, Empagliflozin, Canagliflozin) - cho CKD với eGFR ≥20 ml/min/1.73m² và albumin niệu ≥200 mg/g, bất kể có đái tháo đường hay không",
+                "Finerenone (MRA) - cho CKD type 2 diabetes với albumin niệu ≥30 mg/g và eGFR ≥25 ml/min/1.73m²",
+                "Kiểm soát huyết áp (< 130/80 mmHg) - theo ACC/AHA 2025",
+                "Kiểm soát đường huyết (nếu đái tháo đường) - HbA1c <7%",
+                "Statin - cho tất cả CKD",
+                "Điều chỉnh rối loạn điện giải (phosphorus, PTH)",
+                "Erythropoietin (nếu thiếu máu và Hb <10 g/dL)"
             ],
             "procedures": [
-                "Lọc máu (nếu CKD giai đoạn 5)",
+                "Lọc máu (nếu CKD giai đoạn 5, eGFR <15 ml/min/1.73m² hoặc có chỉ định)",
                 "Ghép thận (nếu phù hợp)",
-                "Tạo cầu nối động-tĩnh mạch (AV fistula) - chuẩn bị lọc máu"
+                "Tạo cầu nối động-tĩnh mạch (AV fistula) - chuẩn bị lọc máu sớm",
+                "Theo dõi định kỳ: eGFR, UACR, huyết áp, đường huyết"
             ]
         },
         prevention=[
@@ -143,8 +146,8 @@ NEPHROLOGY_DISEASES: List[Disease] = [
             "Bệnh tim mạch",
             "Tử vong"
         ],
-        related_scores=["eGFR", "CKD Stage", "UACR"],
-        related_drugs=["ACE Inhibitor", "ARB", "Erythropoietin", "Furosemide"],
+        related_scores=["eGFR", "CKD Stage", "UACR", "KDIGO Risk Categories"],
+        related_drugs=["ACE Inhibitor", "ARB", "SGLT2 inhibitor", "Finerenone", "Erythropoietin", "Furosemide"],
         related_protocols=["Suy thận mạn tính (CKD)"],
         icd10_codes=["N18.9", "N18.1", "N18.2", "N18.3", "N18.4", "N18.5"]
     ),

@@ -46,19 +46,22 @@ ENDOCRINOLOGY_DISEASES: List[Disease] = [
             "imaging": []
         },
         treatment={
-            "general": "Điều trị đa yếu tố: kiểm soát đường huyết, huyết áp, lipid, phòng ngừa biến chứng.",
+            "general": "Điều trị theo ADA 2025 guidelines. Điều trị đa yếu tố: kiểm soát đường huyết (HbA1c <7%), huyết áp (<130/80 mmHg), lipid, phòng ngừa biến chứng. Ưu tiên thuốc có lợi ích tim mạch/thận.",
             "medications": [
-                "Metformin (thuốc đầu tay)",
-                "SGLT2 inhibitor (nếu có bệnh tim/thận)",
-                "GLP-1 agonist (nếu có bệnh tim)",
-                "DPP-4 inhibitor",
-                "Sulfonylurea",
-                "Insulin (nếu cần)"
+                "Metformin (thuốc đầu tay) - nếu không chống chỉ định",
+                "SGLT2 inhibitor (Dapagliflozin, Empagliflozin, Canagliflozin) - ưu tiên nếu có bệnh tim mạch, suy tim, CKD, hoặc nguy cơ tim mạch cao",
+                "GLP-1 receptor agonist (Semaglutide, Liraglutide, Dulaglutide, Tirzepatide) - ưu tiên nếu có bệnh tim mạch, nguy cơ tim mạch cao, hoặc cần giảm cân",
+                "Tirzepatide (GLP-1/GIP dual agonist) - hiệu quả cao cho kiểm soát đường huyết và giảm cân",
+                "DPP-4 inhibitor (Sitagliptin, Linagliptin) - nếu không có bệnh tim/thận",
+                "Sulfonylurea (Glimepiride, Gliclazide) - nếu không có lựa chọn khác",
+                "Insulin (nếu cần) - có thể kết hợp với GLP-1 agonist"
             ],
             "procedures": [
                 "Theo dõi đường huyết tại nhà",
-                "Khám mắt định kỳ",
-                "Khám bàn chân định kỳ"
+                "Khám mắt định kỳ (hàng năm)",
+                "Khám bàn chân định kỳ (hàng năm)",
+                "Theo dõi chức năng thận định kỳ",
+                "Đánh giá nguy cơ tim mạch"
             ]
         },
         prevention=[
@@ -75,8 +78,8 @@ ENDOCRINOLOGY_DISEASES: List[Disease] = [
             "Bệnh tim mạch",
             "Nhiễm toan ceton (hiếm ở type 2)"
         ],
-        related_scores=["HbA1c", "Fasting Glucose"],
-        related_drugs=["Metformin", "SGLT2 inhibitor", "GLP-1 agonist", "Insulin"],
+        related_scores=["HbA1c", "Fasting Glucose", "Time in Range", "CVD Risk"],
+        related_drugs=["Metformin", "SGLT2 inhibitor", "GLP-1 agonist", "Tirzepatide", "Semaglutide", "Dapagliflozin", "Empagliflozin", "Insulin"],
         related_protocols=[],
         icd10_codes=["E11.9", "E11.65", "E11.21", "E11.40"]
     ),

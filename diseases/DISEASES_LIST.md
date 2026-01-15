@@ -1,7 +1,7 @@
 # Danh sách đầy đủ các bệnh trong hệ thống
 
-**Tổng số:** 120 bệnh  
-**Cập nhật:** 2026-01-14
+**Tổng số:** 123 bệnh  
+**Cập nhật:** 2026-01-14 (Đã cập nhật theo guidelines 2025-2026)
 
 ---
 
@@ -38,7 +38,7 @@
 14. `hepatitis_e` - Viêm gan E
 15. `chikungunya` - Sốt Chikungunya
 
-### 3. Gastroenterology (Tiêu hóa) - 13 bệnh
+### 3. Gastroenterology (Tiêu hóa) - 15 bệnh
 1. `peptic_ulcer_disease` - Loét dạ dày tá tràng
 2. `gastroesophageal_reflux` - Trào ngược dạ dày thực quản (GERD)
 3. `hepatitis_b` - Viêm gan B
@@ -52,6 +52,8 @@
 11. `hepatitis_c_chronic` - Viêm gan C mạn tính
 12. `crohns_disease` - Bệnh Crohn
 13. `functional_dyspepsia` - Rối loạn tiêu hóa chức năng
+14. `hepatic_encephalopathy` - Bệnh não gan
+15. `gastroparesis` - Liệt dạ dày
 
 ### 4. Neurology (Thần kinh) - 7 bệnh
 1. `stroke` - Đột quỵ thiếu máu cục bộ cấp
@@ -121,10 +123,11 @@
 2. `anxiety_disorder` - Rối loạn lo âu
 3. `chronic_insomnia` - Mất ngủ mạn tính
 
-### 14. Respiratory (Hô hấp) - 3 bệnh
+### 14. Respiratory (Hô hấp) - 4 bệnh
 66. `copd` - Bệnh phổi tắc nghẽn mạn tính (COPD)
 67. `asthma` - Hen phế quản
 68. `acute_bronchitis` - Viêm phế quản cấp
+69. `idiopathic_pulmonary_fibrosis` - Xơ phổi vô căn (IPF)
 
 ### 15. Nephrology (Thận) - 4 bệnh
 1. `aki` - Tổn thương thận cấp (AKI)
@@ -174,7 +177,7 @@
 
 ## 📊 Thống kê
 
-- **Tổng số bệnh:** 120
+- **Tổng số bệnh:** 123
 - **Số chuyên khoa có dữ liệu:** 21/21 ✅
 - **Trạng thái:** Tất cả modules đã có dữ liệu!
 

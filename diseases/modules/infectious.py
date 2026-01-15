@@ -44,20 +44,28 @@ INFECTIOUS_DISEASES: List[Disease] = [
             ],
             "imaging": [
                 "X-quang ngực thẳng",
+                "Lung ultrasound (theo ATS 2025 - công cụ chẩn đoán hữu ích)",
                 "CT ngực (nếu cần thiết)"
             ]
         },
         treatment={
-            "general": "Điều trị theo nguyên nhân và mức độ nặng. Hầu hết bệnh nhân có thể điều trị ngoại trú.",
+            "general": "Điều trị theo ATS 2025 guidelines. Mục tiêu: kháng sinh sớm, điều trị cá nhân hóa, rút ngắn thời gian điều trị nếu bệnh nhân ổn định. Lung ultrasound được công nhận là công cụ chẩn đoán hữu ích.",
             "medications": [
-                "CAP (Viêm phổi cộng đồng): Amoxicillin, Azithromycin, Levofloxacin",
-                "HAP (Viêm phổi bệnh viện): Piperacillin-tazobactam, Ceftazidime, Meropenem",
+                "CAP (Viêm phổi cộng đồng):",
+                "  - Ngoại trú: Amoxicillin-clavulanate hoặc Amoxicillin + Macrolide (Azithromycin)",
+                "  - Nội trú không ICU: Beta-lactam + Macrolide hoặc Beta-lactam + Respiratory Fluoroquinolone",
+                "  - ICU: Beta-lactam + Macrolide hoặc Beta-lactam + Respiratory Fluoroquinolone",
+                "HAP (Viêm phổi bệnh viện): Piperacillin-tazobactam, Ceftazidime, Meropenem (theo kháng sinh đồ)",
+                "Rút ngắn thời gian điều trị: 5-7 ngày nếu bệnh nhân ổn định, không có biến chứng",
+                "Corticosteroid: chỉ dùng trong các trường hợp nặng nội trú, không dùng thường quy",
                 "Hỗ trợ: Hạ sốt (Paracetamol), Giảm ho, Oxy nếu cần"
             ],
             "procedures": [
+                "Lung ultrasound - công cụ chẩn đoán hữu ích trong môi trường chọn lọc",
                 "Oxy liệu pháp nếu SpO2 < 90%",
                 "Thở máy nếu suy hô hấp nặng",
-                "Dẫn lưu mủ nếu có áp xe phổi"
+                "Dẫn lưu mủ nếu có áp xe phổi",
+                "Theo dõi đáp ứng điều trị: giảm sốt, cải thiện triệu chứng trong 48-72 giờ"
             ]
         },
         prevention=[

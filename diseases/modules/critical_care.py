@@ -133,21 +133,24 @@ CRITICAL_CARE_DISEASES: List[Disease] = [
             ]
         },
         treatment={
-            "general": "Điều trị theo Surviving Sepsis Campaign guidelines. Mục tiêu: kháng sinh sớm, bù dịch, vasopressor, điều trị nguyên nhân.",
+            "general": "Điều trị theo Surviving Sepsis Campaign 2025 guidelines. Mục tiêu: kháng sinh sớm (1 giờ đầu), bù dịch, vasopressor, điều trị nguyên nhân, theo dõi lactate.",
             "medications": [
-                "Kháng sinh phổ rộng sớm (trong 1 giờ đầu)",
-                "Bù dịch: Crystalloid (30 ml/kg ban đầu)",
-                "Vasopressor: Norepinephrine (nếu hạ huyết áp kéo dài)",
-                "Corticosteroid: Hydrocortisone (nếu kháng vasopressor)",
-                "Điều trị nguyên nhân: dẫn lưu, phẫu thuật"
+                "Kháng sinh phổ rộng sớm (trong 1 giờ đầu sau nhận diện sepsis) - ưu tiên cao nhất",
+                "Bù dịch: Crystalloid (30 ml/kg ban đầu, điều chỉnh theo đáp ứng)",
+                "Vasopressor: Norepinephrine (thuốc đầu tay) - nếu hạ huyết áp kéo dài sau bù dịch",
+                "Vasopressin - có thể thêm nếu cần norepinephrine liều cao",
+                "Corticosteroid: Hydrocortisone (nếu kháng vasopressor hoặc có chỉ định khác)",
+                "Điều trị nguyên nhân: dẫn lưu, phẫu thuật (trong 12 giờ đầu nếu có thể)",
+                "Điều chỉnh kháng sinh theo kết quả cấy và procalcitonin"
             ],
             "procedures": [
-                "Kháng sinh sớm (1 giờ đầu)",
-                "Bù dịch tích cực",
-                "Vasopressor (nếu cần)",
-                "Thở máy (nếu suy hô hấp)",
-                "Lọc máu (nếu suy thận)",
-                "Dẫn lưu, phẫu thuật (nếu cần)"
+                "Kháng sinh sớm (1 giờ đầu) - ưu tiên cao nhất",
+                "Bù dịch tích cực (theo dõi đáp ứng)",
+                "Vasopressor (nếu cần) - norepinephrine qua đường tĩnh mạch trung tâm",
+                "Thở máy (nếu suy hô hấp) - chiến lược bảo vệ phổi",
+                "Lọc máu (nếu suy thận, AKI)",
+                "Dẫn lưu, phẫu thuật (nếu cần) - trong 12 giờ đầu",
+                "Theo dõi lactate - mục tiêu giảm lactate ≥20% trong 2 giờ đầu"
             ]
         },
         prevention=[

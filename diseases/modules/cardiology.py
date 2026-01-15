@@ -50,19 +50,21 @@ CARDIOLOGY_DISEASES: List[Disease] = [
             ]
         },
         treatment={
-            "general": "Điều trị theo nguyên nhân và mức độ. Mục tiêu: giảm triệu chứng, cải thiện chức năng tim, giảm tử vong.",
+            "general": "Điều trị theo ACC/AHA/HFSA 2025 guidelines. Phân loại: HFrEF (LVEF ≤40%), HFmrEF (41-49%), HFpEF (≥50%). HFrEF: 4 nhóm thuốc chính (ARNi, ACEi/ARB, beta blocker, MRA) + SGLT2 inhibitor bất kể có đái tháo đường hay không.",
             "medications": [
-                "ACE inhibitor hoặc ARB (nếu không dung nạp)",
-                "Beta-blocker (Metoprolol, Bisoprolol)",
-                "ARNI (Sacubitril/Valsartan) cho HFrEF",
-                "SGLT2 inhibitor (Dapagliflozin, Empagliflozin)",
+                "HFrEF: ARNI (Sacubitril/Valsartan) hoặc ACE inhibitor/ARB (nếu không dung nạp ARNI)",
+                "Beta-blocker (Metoprolol, Bisoprolol, Carvedilol) - đạt liều mục tiêu",
+                "MRA (Spironolactone, Eplerenone) - nếu EF ≤40%, NYHA II-IV",
+                "SGLT2 inhibitor (Dapagliflozin, Empagliflozin) - cho tất cả HFrEF bất kể có đái tháo đường hay không",
+                "HFpEF: SGLT2 inhibitor, MRA, ARNi trong một số trường hợp; GLP-1 agonists đang được nghiên cứu",
                 "Lợi tiểu (Furosemide) cho phù",
-                "Digoxin (nếu rung nhĩ)"
+                "Digoxin (nếu rung nhĩ, HFrEF)"
             ],
             "procedures": [
-                "Đặt ICD (nếu EF < 35%)",
-                "CRT (Cardiac Resynchronization Therapy)",
-                "Ghép tim (nếu nặng)"
+                "Đặt ICD (nếu EF < 35%, NYHA II-III, sống còn > 1 năm)",
+                "CRT (Cardiac Resynchronization Therapy) - nếu QRS ≥150ms, LBBB pattern",
+                "Ghép tim (nếu nặng, không đáp ứng điều trị)",
+                "Theo dõi định kỳ: BNP/NT-proBNP, siêu âm tim"
             ]
         },
         prevention=[
@@ -79,8 +81,8 @@ CARDIOLOGY_DISEASES: List[Disease] = [
             "Suy thận",
             "Tử vong"
         ],
-        related_scores=["NYHA Class", "BNP", "NT-proBNP"],
-        related_drugs=["ACE Inhibitor", "ARB", "Beta-blocker", "ARNI", "SGLT2 inhibitor", "Furosemide"],
+        related_scores=["NYHA Class", "BNP", "NT-proBNP", "LVEF", "6-minute walk test"],
+        related_drugs=["ACE Inhibitor", "ARB", "Beta-blocker", "ARNI", "SGLT2 inhibitor", "MRA", "Furosemide", "GLP-1 agonists"],
         related_protocols=["Suy tim Cấp", "Suy tim Mất Bù Cấp (ADHF)"],
         icd10_codes=["I50.9", "I50.1", "I50.2", "I50.3"]
     ),
@@ -124,19 +126,22 @@ CARDIOLOGY_DISEASES: List[Disease] = [
             ]
         },
         treatment={
-            "general": "Điều trị khẩn cấp: tái tưới máu sớm (PCI hoặc thrombolysis), thuốc chống đông, chống kết tập tiểu cầu.",
+            "general": "Điều trị theo ACC/AHA/ACEP/SCAI 2025 guidelines. Mục tiêu: tái tưới máu sớm, DAPT 12 tháng, giảm LDL-C xuống 55-69 mg/dL, ưu tiên đường vào qua động mạch quay.",
             "medications": [
-                "Aspirin 325mg (nhai)",
-                "Clopidogrel hoặc Ticagrelor",
-                "Atorvastatin 80mg",
-                "ACE inhibitor",
+                "Aspirin 325mg (nhai) ngay lập tức",
+                "DAPT: Clopidogrel hoặc Ticagrelor (ưu tiên) - kéo dài 12 tháng nếu nguy cơ chảy máu thấp",
+                "Atorvastatin 80mg (hoặc Rosuvastatin 40mg)",
+                "Nếu LDL-C ≥ 70 mg/dL sau statin tối đa: thêm ezetimibe, PCSK9 inhibitors (alirocumab, evolocumab), inclisiran hoặc bempedoic acid",
+                "ACE inhibitor hoặc ARB (nếu không chống chỉ định)",
                 "Beta-blocker (nếu không chống chỉ định)",
-                "Thrombolysis (nếu không có PCI)"
+                "Thrombolysis (nếu không có PCI trong 120 phút)"
             ],
             "procedures": [
-                "PCI (Percutaneous Coronary Intervention) - ưu tiên",
+                "PCI (Percutaneous Coronary Intervention) - ưu tiên đường vào qua động mạch quay (radial) để giảm biến chứng chảy máu",
+                "Intravascular imaging (IVUS/OCT) - Class I, Level A để hướng dẫn PCI",
                 "CABG (Coronary Artery Bypass Graft) - nếu phù hợp",
-                "Thrombolysis - nếu không có PCI"
+                "Thrombolysis - nếu không có PCI trong 120 phút",
+                "Tái thông mạch hoàn toàn (complete revascularization) cho bệnh nhân STEMI/NSTEMI"
             ]
         },
         prevention=[
@@ -153,9 +158,9 @@ CARDIOLOGY_DISEASES: List[Disease] = [
             "Huyết khối trong tim",
             "Tử vong"
         ],
-        related_scores=["TIMI Risk Score", "GRACE Score"],
-        related_drugs=["Aspirin", "Clopidogrel", "Ticagrelor", "Atorvastatin", "ACE Inhibitor"],
-        related_protocols=["STEMI (ST-Elevation Myocardial Infarction)", "NSTEMI", "ACS - Hội chứng vành cấp"],
+        related_scores=["TIMI Risk Score", "GRACE Score", "CRUSADE Score"],
+        related_drugs=["Aspirin", "Clopidogrel", "Ticagrelor", "Atorvastatin", "Rosuvastatin", "Ezetimibe", "PCSK9 inhibitors", "Bempedoic acid", "ACE Inhibitor"],
+        related_protocols=["STEMI (ST-Elevation Myocardial Infarction)", "NSTEMI", "ACS - Hội chứng vành cấp", "Acute Coronary Syndromes 2025"],
         icd10_codes=["I21.9", "I21.11", "I21.19", "I21.29"]
     ),
     
@@ -201,18 +206,21 @@ CARDIOLOGY_DISEASES: List[Disease] = [
             ]
         },
         treatment={
-            "general": "Điều trị theo JNC 8/ACC/AHA guidelines. Mục tiêu: < 130/80 mmHg (nếu có nguy cơ tim mạch cao) hoặc < 140/90 mmHg.",
+            "general": "Điều trị theo ACC/AHA 2025 guidelines. Mục tiêu: < 130/80 mmHg cho hầu hết người lớn, có thể < 120 mmHg nếu dung nạp. Đánh giá nguy cơ bằng PREVENT equations (thay thế Pooled Cohort Equation), bao gồm chỉ số bất lợi xã hội.",
             "medications": [
-                "ACE inhibitor hoặc ARB (ưu tiên nếu có đái tháo đường, bệnh thận)",
+                "Bắt đầu thuốc nếu sau 3-6 tháng thay đổi lối sống mà huyết áp vẫn ≥130/80 mmHg ở người có nguy cơ thấp",
+                "ACE inhibitor hoặc ARB (ưu tiên nếu có đái tháo đường, bệnh thận, albumin niệu)",
                 "Thiazide diuretic (Hydrochlorothiazide, Chlorthalidone)",
                 "Calcium channel blocker (Amlodipine)",
                 "Beta-blocker (nếu có chỉ định khác)",
-                "Kết hợp 2-3 thuốc nếu cần"
+                "Kết hợp sớm 2-3 thuốc nếu cần để đạt mục tiêu",
+                "Xem xét GLP-1 agonists ở người có rủi ro chuyển hóa cao"
             ],
             "procedures": [
-                "Thay đổi lối sống: giảm muối, giảm cân, tập thể dục",
+                "Thay đổi lối sống: giảm muối (< 5g/ngày), tăng kali từ chế độ ăn, giới hạn rượu, quản lý stress",
                 "Theo dõi huyết áp tại nhà",
-                "Điều trị nguyên nhân (nếu tăng huyết áp thứ phát)"
+                "Điều trị nguyên nhân (nếu tăng huyết áp thứ phát)",
+                "Đánh giá nguy cơ tim mạch 10 năm bằng PREVENT equations"
             ]
         },
         prevention=[
@@ -230,7 +238,7 @@ CARDIOLOGY_DISEASES: List[Disease] = [
             "Bệnh mạch máu ngoại vi",
             "Tăng huyết áp ác tính (hiếm)"
         ],
-        related_scores=["Blood Pressure", "Framingham Risk Score", "ASCVD Risk"],
+        related_scores=["Blood Pressure", "PREVENT Equations", "ASCVD Risk", "Framingham Risk Score"],
         related_drugs=["ACE Inhibitor", "ARB", "Amlodipine", "Hydrochlorothiazide", "Metoprolol"],
         related_protocols=["Hypertension Management"],
         icd10_codes=["I10", "I11.9", "I12.9", "I13.9"]
