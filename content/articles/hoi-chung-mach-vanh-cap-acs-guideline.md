@@ -2,7 +2,7 @@
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ tim mạch  
 > **Cập nhật:** Tháng 2/2025  
-> **Tài liệu tham khảo chính:** ESC Guidelines for ACS with ST-elevation (STEMI) 2017 + cập nhật, ESC Guidelines for NSTE-ACS 2020 [1,2], ACC/AHA ACS Guidelines & Updates [3]
+> **Tài liệu tham khảo chính:** ACC/AHA/ACEP/NAEMSP/SCAI ACS Guideline 2025 [1], ESC Guidelines for ACS with ST-elevation (STEMI) 2017 + cập nhật [2], ESC Guidelines for NSTE-ACS 2020 [3]
 
 ---
 
@@ -112,6 +112,9 @@ Hội chứng mạch vành cấp (acute coronary syndromes, **ACS**) bao gồm:
   - **Có thể thực hiện trong vòng 120 phút** kể từ lúc chẩn đoán STEMI (first medical contact) [1,3].
 - Nguyên tắc:
   - Đưa bệnh nhân đến **trung tâm can thiệp** càng sớm càng tốt (door-to-balloon \(\le 90 phút\) là mục tiêu chung).
+- **Cập nhật 2025** [1]:
+  - **Ưu tiên đường tiếp cận xuyên quay (radial access)** thay vì đường đùi (femoral) để giảm biến chứng chảy máu và tử vong (Class I).
+  - **Sử dụng hình ảnh nội mạch (intravascular imaging)** để hướng dẫn PCI - **Class I, mức bằng chứng A** (IVUS hoặc OCT khi có thể).
 
 ### Tiêu sợi huyết (thrombolysis)
 
@@ -159,16 +162,20 @@ Hội chứng mạch vành cấp (acute coronary syndromes, **ACS**) bao gồm:
 ### Kháng kết tập tiểu cầu
 
 - **Aspirin + P2Y12 inhibitor (DAPT)**:
-  - Thường **12 tháng** sau ACS/PCI, rồi đánh giá lại [1–3].
+  - **Tối thiểu 12 tháng** sau ACS/PCI nếu nguy cơ chảy máu thấp [1].
   - Thời gian có thể **rút ngắn (3–6 tháng)** nếu nguy cơ chảy máu rất cao, hoặc **kéo dài hơn 12 tháng** nếu nguy cơ huyết khối cao, chảy máu thấp.
+  - Quyết định dựa trên đánh giá cân bằng nguy cơ huyết khối vs chảy máu.
 
-### Statin liều cao
+### Statin liều cao và liệu pháp hạ lipid không statin
 
 - Bắt đầu **ngay trong giai đoạn cấp**, trừ khi chống chỉ định.
 - Mục tiêu LDL-C:
-  - Nhóm nguy cơ rất cao (sau ACS) cần LDL-C **\<55 mg/dL** và giảm ≥50% so với nền [1,2].
-- Nếu chưa đạt:
-  - Thêm **ezetimibe**, cân nhắc **PCSK9 inhibitor** tùy điều kiện.
+  - Nhóm nguy cơ rất cao (sau ACS) cần LDL-C **\<55 mg/dL** và giảm ≥50% so với nền [1–3].
+- **Cập nhật 2025**: Nếu LDL-C **55–69 mg/dL** sau statin tối đa, khuyến cáo thêm **liệu pháp không statin** [1]:
+  - **Ezetimibe** (ưu tiên đầu tiên)
+  - **PCSK9 inhibitors** (alirocumab, evolocumab)
+  - **Inclisiran** (siRNA)
+  - **Bempedoic acid** (nếu không dung nạp statin)
 
 ### Ức chế hệ RAA (ACEi/ARB/ARNI)
 
@@ -183,7 +190,8 @@ Hội chứng mạch vành cấp (acute coronary syndromes, **ACS**) bao gồm:
 ### Các biện pháp khác
 
 - **Kiểm soát HA**, **ĐTĐ**, **bỏ thuốc lá**, vận động, dinh dưỡng.
-- Tham gia **chương trình phục hồi chức năng tim** nếu có.
+- **Cập nhật 2025**: Khuyến cáo **gửi bệnh nhân đi phục hồi chức năng tim (cardiac rehabilitation) trước khi xuất viện** [1].
+- Tham gia **chương trình phục hồi chức năng tim** sau xuất viện để cải thiện kết cục lâu dài.
 
 ---
 
@@ -206,11 +214,20 @@ Hội chứng mạch vành cấp (acute coronary syndromes, **ACS**) bao gồm:
 
 ---
 
+## Thay đổi quan trọng trong Guideline 2025
+
+**So với các guideline trước (2020-2024):**
+
+1. **DAPT**: Nhấn mạnh tối thiểu 12 tháng nếu nguy cơ chảy máu thấp, với nhiều lựa chọn linh hoạt hơn dựa trên đánh giá nguy cơ.
+2. **Liệu pháp hạ lipid**: Mở rộng chỉ định non-statin khi LDL-C 55-69 mg/dL sau statin tối đa (trước đây thường chỉ khi LDL-C ≥70 mg/dL).
+3. **Kỹ thuật PCI**: Nâng cấp radial access và intravascular imaging lên Class I, Level A.
+4. **Phục hồi chức năng**: Khuyến cáo mạnh hơn về gửi bệnh nhân đi cardiac rehab trước xuất viện.
+
 ## Tài liệu tham khảo
 
-1. Ibanez B, et al. 2017 ESC Guidelines for the management of acute myocardial infarction in patients presenting with ST-segment elevation. *Eur Heart J*. 2018;39(2):119–177.  
-2. Collet JP, et al. 2020 ESC Guidelines for the management of acute coronary syndromes in patients presenting without persistent ST-segment elevation. *Eur Heart J*. 2021;42(14):1289–1367.  
-3. ACC/AHA Guidelines and Focused Updates on STEMI and NSTE-ACS (2014, 2015, and later focused updates).  
+1. ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. 2025.  
+2. Ibanez B, et al. 2017 ESC Guidelines for the management of acute myocardial infarction in patients presenting with ST-segment elevation. *Eur Heart J*. 2018;39(2):119–177.  
+3. Collet JP, et al. 2020 ESC Guidelines for the management of acute coronary syndromes in patients presenting without persistent ST-segment elevation. *Eur Heart J*. 2021;42(14):1289–1367.  
 
 ---
 

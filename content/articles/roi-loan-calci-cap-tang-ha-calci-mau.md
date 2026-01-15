@@ -1,7 +1,7 @@
 # Rối loạn calci cấp ở người lớn: tăng calci máu và hạ calci máu (protocol thực hành)
 
 > **Đối tượng:** Bác sĩ nội khoa, cấp cứu, hồi sức, ung bướu, thận nhân tạo  
-> **Cập nhật:** Tháng 12/2025  
+> **Cập nhật:** Tháng 2/2025  
 > **Tài liệu tham khảo chính:** Endocrine Society/khuyến cáo thực hành nội tiết–thận–ung bướu, UpToDate tổng hợp (thực hành tham khảo)
 
 ---

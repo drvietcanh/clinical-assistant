@@ -1,8 +1,8 @@
 # Viêm phổi bệnh viện (HAP) và viêm phổi liên quan thở máy (VAP): chẩn đoán, điều trị và de-escalation theo ATS/IDSA
 
 > **Đối tượng:** Bác sĩ ICU, hô hấp, nội khoa, kiểm soát nhiễm khuẩn  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** ATS/IDSA HAP/VAP Guidelines 2016 [1], IDSA Antimicrobial Stewardship 2016/updates [2]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** ATS/IDSA HAP/VAP Guidelines 2016 [1] (guideline mới nhất hiện có), IDSA Antimicrobial Stewardship 2016/updates [2], WHO AWaRe 2023 [3]
 
 ---
 

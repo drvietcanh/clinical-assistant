@@ -1,7 +1,7 @@
 # Viêm gan virus C mạn ở người lớn: chẩn đoán, chỉ định điều trị và phác đồ DAA theo guideline
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ tiêu hoá – gan mật  
-> **Cập nhật:** Tháng 12/2025  
+> **Cập nhật:** Tháng 2/2025  
 > **Tài liệu tham khảo chính:** EASL Recommendations on Treatment of Hepatitis C 2020 + updates [1], AASLD/IDSA HCV Guidance (liên tục cập nhật) [2], WHO Guidelines for HCV 2018 + updates [3]
 
 ---

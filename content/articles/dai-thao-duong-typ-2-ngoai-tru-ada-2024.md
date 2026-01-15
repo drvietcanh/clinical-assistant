@@ -1,8 +1,8 @@
 # Đái tháo đường typ 2 ở người lớn: chẩn đoán, mục tiêu và điều trị ngoại trú theo ADA/EASD 2024
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội tổng quát, bác sĩ nội tiết  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** ADA Standards of Care 2024 [1], ADA/EASD consensus 2022–2023 [2]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** ADA Standards of Care 2024-2025 [1], ADA/EASD consensus 2022–2023 [2]
 
 ---
 

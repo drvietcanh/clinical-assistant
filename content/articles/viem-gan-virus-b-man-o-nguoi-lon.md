@@ -1,8 +1,8 @@
 # Viêm gan virus B mạn ở người lớn: chẩn đoán, chỉ định điều trị và theo dõi theo guideline
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ tiêu hoá – gan mật  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** EASL 2017 Clinical Practice Guidelines on the management of hepatitis B virus infection [1], AASLD 2018 Hepatitis B Guidance [2], WHO HBV Guidelines 2015 + updates [3]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** EASL 2017 Clinical Practice Guidelines on the management of hepatitis B virus infection [1] (guideline mới nhất hiện có), AASLD 2018 Hepatitis B Guidance [2], WHO HBV Guidelines 2015 + updates [3]
 
 ---
 

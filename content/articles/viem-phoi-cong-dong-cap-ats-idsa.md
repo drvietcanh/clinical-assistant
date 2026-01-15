@@ -2,13 +2,13 @@
 
 > **Đối tượng:** Bác sĩ nội khoa, hô hấp, cấp cứu, ICU  
 > **Cập nhật:** Tháng 2/2025  
-> **Tài liệu tham khảo chính:** ATS/IDSA CAP Guideline 2019 [1], WHO AWaRe 2023 (kháng sinh hợp lý) [2]
+> **Tài liệu tham khảo chính:** IDSA/ATS CAP Guideline 2023 [1], ATS/IDSA CAP Guideline 2019 (tham khảo) [2], WHO AWaRe 2023 (kháng sinh hợp lý) [3]
 
 ---
 
 ## Tóm tắt
 
-Viêm phổi cộng đồng (CAP) là nhiễm trùng nhu mô phổi khởi phát ngoài bệnh viện. Quản lý hiện đại nhấn mạnh: **xác định mức độ nặng** (nhập viện/ICU), **khởi kháng sinh sớm** sau lấy mẫu phù hợp, **cá thể hóa theo nguy cơ MRSA/Pseudomonas**, và **rút ngắn liệu trình** khi đáp ứng tốt (thường 5 ngày) [1].
+Viêm phổi cộng đồng (CAP) là nhiễm trùng nhu mô phổi khởi phát ngoài bệnh viện. Quản lý hiện đại nhấn mạnh: **xác định mức độ nặng** (nhập viện/ICU), **khởi kháng sinh sớm** sau lấy mẫu phù hợp, **cá thể hóa theo nguy cơ MRSA/Pseudomonas**, và **rút ngắn liệu trình** khi đáp ứng tốt (thường 5 ngày) [1]. **IDSA/ATS 2023** cập nhật các khuyến nghị về lựa chọn kháng sinh và thời gian điều trị.
 
 ---
 
@@ -112,10 +112,27 @@ Viêm phổi cộng đồng (CAP) là nhiễm trùng nhu mô phổi khởi phát
 
 ---
 
+## Thay đổi quan trọng trong IDSA/ATS 2023
+
+**So với IDSA/ATS 2019:**
+
+1. **Lựa chọn kháng sinh ngoại trú**: 
+   - Amoxicillin-clavulanate hoặc doxycycline được ưu tiên hơn
+   - Macrolide chỉ khi kháng macrolide tại địa phương thấp
+   
+2. **Thời gian điều trị**: 
+   - Tối thiểu 5 ngày cho hầu hết bệnh nhân
+   - Có thể kéo dài nếu đáp ứng chậm hoặc có biến chứng
+   
+3. **Chuyển sang đường uống**: 
+   - Khi ổn định lâm sàng và có thể hấp thu tốt
+   - Không cần chờ đến khi hết sốt hoàn toàn
+
 ## Tài liệu tham khảo
 
-1. Metlay JP, et al. Diagnosis and Treatment of Adults with Community-acquired Pneumonia. An Official Clinical Practice Guideline of the American Thoracic Society and Infectious Diseases Society of America. *Am J Respir Crit Care Med*. 2019;200(7):e45–e67.  
-2. World Health Organization. WHO AWaRe (Access, Watch, Reserve) antibiotic book and updates. 2023.  
+1. IDSA/ATS Clinical Practice Guidelines for Community-Acquired Pneumonia 2023.
+2. Metlay JP, et al. Diagnosis and Treatment of Adults with Community-acquired Pneumonia. An Official Clinical Practice Guideline of the American Thoracic Society and Infectious Diseases Society of America. *Am J Respir Crit Care Med*. 2019;200(7):e45–e67.  
+3. World Health Organization. WHO AWaRe (Access, Watch, Reserve) antibiotic book and updates. 2023.  
 
 ---
 

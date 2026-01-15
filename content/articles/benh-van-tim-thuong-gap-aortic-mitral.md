@@ -1,8 +1,8 @@
 # Bệnh van tim thường gặp ở người lớn: hẹp/hở van động mạch chủ và van hai lá theo guideline ESC/Mỹ
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ tim mạch  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** ESC Guidelines for the management of valvular heart disease 2021 [1], ACC/AHA Valvular Heart Disease Guideline 2020 [2]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** ESC/EACTS Guidelines for the management of valvular heart disease 2025 [1], ESC Guidelines 2021 (tham khảo) [2], ACC/AHA Valvular Heart Disease Guideline 2020 [3]
 
 ---
 

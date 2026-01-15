@@ -4,7 +4,8 @@ specialty: "Thận / Hồi sức"
 keywords: ["AKI", "KDIGO", "RIFLE", "AKIN", "suy thận cấp", "lọc máu", "chỉnh liều thuốc"]
 last_reviewed: 2025-02
 guideline_version:
-  - KDIGO Clinical Practice Guideline for Acute Kidney Injury 2012 (updates)
+  - KDIGO Clinical Practice Guideline for Acute Kidney Injury 2024
+  - KDIGO Clinical Practice Guideline for Acute Kidney Injury 2012 (tham khảo)
   - KDIGO 2024 CKD (tham khảo)
 related_calculators: ["KDIGO AKI", "RIFLE", "AKIN", "eGFR (CKD-EPI)", "CrCl (Cockcroft-Gault)", "FENa"]
 related_protocols: ["(đề xuất) AKI management checklist", "(đề xuất) Drug dosing in AKI"]
@@ -18,7 +19,7 @@ summary:
 
 # Suy thận cấp (AKI): KDIGO, phân loại, xử trí, chỉnh liều thuốc
 
-## 1. Định nghĩa (KDIGO 2012)
+## 1. Định nghĩa (KDIGO 2012, cập nhật 2024)
 
 ### 1.1. Tiêu chuẩn chẩn đoán
 
@@ -214,9 +215,45 @@ summary:
 - Thuốc tim mạch: Digoxin, ACEi/ARB, lợi tiểu
 - Thuốc khác: Metformin, Allopurinol
 
-## 8. Tài liệu tham khảo
+## 8. Theo dõi sau AKI (KDIGO 2024)
 
-- KDIGO Clinical Practice Guideline for Acute Kidney Injury, 2012 (updates).
+### 8.1. Tầm quan trọng
+
+- **KDIGO 2024**: Nhấn mạnh theo dõi lâu dài sau AKI vì bệnh nhân có nguy cơ cao phát triển bệnh thận mạn tính (CKD) và tiến triển đến suy thận giai đoạn cuối.
+- AKI là yếu tố nguy cơ độc lập cho sự phát triển CKD.
+
+### 8.2. Khuyến nghị theo dõi
+
+**Sau khi xuất viện:**
+- Đo creatinine và eGFR sau 3 tháng để đánh giá phục hồi chức năng thận.
+- Nếu eGFR <60 mL/min/1.73m² hoặc có protein niệu → chẩn đoán CKD, theo dõi như bệnh nhân CKD.
+- Tái khám định kỳ: 6-12 tháng/lần tùy mức độ.
+
+**Các yếu tố nguy cơ cần theo dõi:**
+- AKI stage 3
+- AKI tái phát
+- Bệnh nhân có bệnh thận mạn từ trước
+- Đái tháo đường, tăng huyết áp
+
+### 8.3. Phòng ngừa CKD sau AKI
+
+- Kiểm soát huyết áp (mục tiêu <130/80 mmHg nếu có protein niệu).
+- Tránh nephrotoxin (NSAID, contrast không cần thiết).
+- Sử dụng ACEi/ARB nếu có chỉ định (sau khi chức năng thận ổn định).
+- Theo dõi và điều trị các bệnh đồng mắc (ĐTĐ, THA).
+
+## 9. Thay đổi quan trọng trong KDIGO 2024
+
+**So với KDIGO 2012:**
+
+1. **Theo dõi sau AKI**: Khuyến nghị mạnh hơn về theo dõi lâu dài để phát hiện sớm CKD.
+2. **Định nghĩa và phân loại**: Giữ nguyên tiêu chuẩn 2012 (vẫn còn giá trị).
+3. **RRT**: Tiêu chí chỉ định không thay đổi đáng kể, nhưng nhấn mạnh đánh giá cá thể hóa.
+
+## 10. Tài liệu tham khảo
+
+- KDIGO Clinical Practice Guideline for Acute Kidney Injury, 2024.
+- KDIGO Clinical Practice Guideline for Acute Kidney Injury, 2012 (tham khảo).
 - KDIGO 2024 CKD Guideline (tham khảo).
 - Lexicomp/UpToDate: Drug dosing in renal impairment.
 

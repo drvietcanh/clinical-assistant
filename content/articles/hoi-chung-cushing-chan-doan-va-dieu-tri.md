@@ -1,8 +1,8 @@
 # Hội chứng Cushing ở người lớn: sàng lọc, chẩn đoán xác định và định vị nguyên nhân (protocol thực hành)
 
 > **Đối tượng:** Bác sĩ nội khoa, nội tiết, thần kinh–ngoại thần kinh, ung bướu
-> **Cập nhật:** Tháng 12/2025
-> **Tài liệu tham khảo chính:** Endocrine Society Clinical Practice Guideline về Cushing syndrome (2008, cập nhật thực hành rộng rãi) [1], tổng quan thực hành nội tiết hiện đại
+> **Cập nhật:** Tháng 2/2025
+> **Tài liệu tham khảo chính:** Endocrine Society Clinical Practice Guideline về Cushing syndrome (2008, cập nhật thực hành rộng rãi) [1] (guideline mới nhất hiện có), tổng quan thực hành nội tiết hiện đại
 
 ---
 

@@ -1,8 +1,8 @@
 # Tim mạch ở bệnh nhân đái tháo đường typ 2: quản lý nguy cơ và các thuốc có lợi tim mạch
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ tim mạch, bác sĩ nội tiết  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** ESC/EASD Guidelines on diabetes, pre-diabetes and cardiovascular diseases 2019 + cập nhật [1], ADA Standards of Care (cardiovascular section) [2], ACC/AHA/ESC HF & lipid guidelines [3–5]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** ESC/EASD Guidelines on diabetes, pre-diabetes and cardiovascular diseases 2023 [1], ADA Standards of Care 2024-2025 (cardiovascular section) [2], ACC/AHA/ESC HF & lipid guidelines [3–5]
 
 ---
 

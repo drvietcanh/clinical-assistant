@@ -2,7 +2,7 @@
 
 > **Đối tượng:** Bác sĩ cấp cứu, nội thần kinh, hồi sức, nội khoa  
 > **Cập nhật:** Tháng 2/2025  
-> **Tài liệu tham khảo chính:** AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke 2021 + Updates [1,2], ESO Guidelines for Management of Ischaemic Stroke and Transient Ischaemic Attack 2021 [3], các khuyến cáo cập nhật về tiêu sợi huyết và lấy huyết khối cơ học [4,5]
+> **Tài liệu tham khảo chính:** AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke 2024 [1], AHA/ASA Guidelines 2021 (tham khảo) [2], ESO Guidelines for Management of Ischaemic Stroke and Transient Ischaemic Attack 2021 [3], các khuyến cáo cập nhật về tiêu sợi huyết và lấy huyết khối cơ học [4,5]
 
 ---
 
@@ -251,11 +251,26 @@ Trong pha cấp, **ưu tiên quyết định tái tưới máu**; phân loại n
 
 ---
 
+## Thay đổi quan trọng trong AHA/ASA 2024
+
+**So với AHA/ASA 2021:**
+
+1. **Tiêu sợi huyết (IV tPA)**:
+   - Cửa sổ điều trị: Trong 4.5 giờ (0.9 mg/kg), cân nhắc lên đến 9 giờ với hình ảnh học phù hợp
+   - Tenecteplase được chấp nhận như một lựa chọn thay thế cho alteplase
+
+2. **Lấy huyết khối cơ học (EVT)**:
+   - Cửa sổ: Trong 24 giờ cho tắc mạch lớn (large vessel occlusion)
+   - Mở rộng chỉ định cho nhiều nhóm bệnh nhân hơn
+
+3. **Quản lý huyết áp**:
+   - Cập nhật khuyến nghị về kiểm soát huyết áp trong giai đoạn cấp
+
 ## Tài liệu tham khảo
 
-1. Powers WJ, Rabinstein AA, Ackerson T, et al. Guidelines for the Early Management of Patients With Acute Ischemic Stroke: 2018 AHA/ASA Guideline. *Stroke*. 2018;49(3):e46‑e110.  
-2. Powers WJ, Rabinstein AA, Ackerson T, et al. 2019 Update to the 2018 Guidelines for the Early Management of Acute Ischemic Stroke. *Stroke*. 2019;50(12):e344‑e418.  
-3. European Stroke Organisation (ESO) Executive Committee and ESO Writing Committee. Guidelines for Management of Ischaemic Stroke and Transient Ischaemic Attack 2008 and subsequent updates. *Cerebrovasc Dis*. 2008;25(5):457‑507.  
+1. AHA/ASA Guidelines for the Early Management of Patients With Acute Ischemic Stroke 2024.
+2. Powers WJ, Rabinstein AA, Ackerson T, et al. Guidelines for the Early Management of Patients With Acute Ischemic Stroke: 2021 AHA/ASA Guideline. *Stroke*. 2021.
+3. European Stroke Organisation (ESO) Executive Committee and ESO Writing Committee. Guidelines for Management of Ischaemic Stroke and Transient Ischaemic Attack 2021.
 4. Turc G, Bhogal P, Fischer U, et al. European Stroke Organisation (ESO)–European Society for Minimally Invasive Neurological Therapy (ESMINT) guidelines on mechanical thrombectomy in acute ischemic stroke. *J Neurointerv Surg*. 2019.  
 5. Berge E, Whiteley W, Audebert H, et al. European Stroke Organisation (ESO) guidelines on intravenous thrombolysis for acute ischaemic stroke. *Eur Stroke J*. 2021;6(1):I‑LXII.  
 

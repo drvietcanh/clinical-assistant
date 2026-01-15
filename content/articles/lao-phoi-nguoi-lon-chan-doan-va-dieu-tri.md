@@ -1,8 +1,8 @@
 # Lao phổi ở người lớn: chẩn đoán, điều trị chuẩn và theo dõi độc tính thuốc theo WHO/ATS-CDC-IDSA
 
 > **Đối tượng:** Bác sĩ nội khoa, hô hấp, kiểm soát nhiễm khuẩn  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** WHO Consolidated Guidelines on Tuberculosis (cập nhật 2022–2024) [1], ATS/CDC/IDSA TB Guidelines 2016 [2]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** WHO Consolidated Guidelines on Tuberculosis (cập nhật 2022–2024) [1], ATS/CDC/IDSA TB Guidelines 2016 [2] (guideline mới nhất hiện có)
 
 ---
 

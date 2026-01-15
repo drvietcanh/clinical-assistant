@@ -1,8 +1,8 @@
 # Rối loạn tuyến giáp mạn ở người lớn: cường giáp và suy giáp nguyên phát (protocol thực hành)
 
 > **Đối tượng:** Bác sĩ nội khoa, nội tiết, bác sĩ gia đình  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** ATA 2016 về cường giáp [1], ATA 2014 về suy giáp [2], khuyến cáo thực hành nội tiết (tổng hợp)
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** ATA 2016 về cường giáp [1] (guideline mới nhất hiện có), ATA 2014 về suy giáp [2], khuyến cáo thực hành nội tiết (tổng hợp)
 
 ---
 

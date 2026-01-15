@@ -4,8 +4,9 @@ specialty: "Thần kinh / Cấp cứu"
 keywords: ["đột quỵ", "stroke", "tPA", "thrombolysis", "thrombectomy", "AHA/ASA", "NIHSS"]
 last_reviewed: 2025-01
 guideline_version:
-  - AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke 2019 (updates 2021)
-  - AHA/ASA Guidelines for Management of Spontaneous Intracerebral Hemorrhage 2022
+  - AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke 2024
+  - AHA/ASA Guidelines for Management of Spontaneous Intracerebral Hemorrhage 2024
+  - AHA/ASA Guidelines 2019-2022 (tham khảo)
 related_calculators: ["NIHSS", "ICH Score", "mRS", "GCS"]
 related_protocols: ["(đề xuất) Stroke code checklist", "(đề xuất) tPA administration protocol"]
 summary:

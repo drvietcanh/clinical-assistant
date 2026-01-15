@@ -1,8 +1,8 @@
 # Chống đông trong rung nhĩ không do van (NVAF): lựa chọn thuốc, chỉnh liều và chiến lược phối hợp kháng kết tập
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ tim mạch  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** ESC AF Guideline 2020 [1], ACC/AHA/ACCP/HRS AF Guideline 2023 [2], EHRA Practical Guide (NOAC) 2021 [3]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** ESC AF Guideline 2024 [1], ACC/AHA/ACCP/HRS AF Guideline 2023 [2], EHRA Practical Guide (NOAC) 2021 [3]
 
 ---
 

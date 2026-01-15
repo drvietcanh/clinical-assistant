@@ -5,7 +5,8 @@ keywords: ["suy tim cấp", "acute heart failure", "diuretic", "vasodilator", "i
 last_reviewed: 2025-01
 guideline_version:
   - ESC Heart Failure 2023 (acute & chronic)
-  - ACC/AHA/HFSA updates 2022–2024
+  - ACC/AHA/HFSA Heart Failure 2022-2023
+  - ESC HF 2021 (tham khảo)
 related_calculators: ["eGFR (CKD-EPI)", "CrCl (Cockcroft-Gault)", "MAP/CO (theo dõi lâm sàng)", "BNP/NT-proBNP interpret"]
 related_protocols: ["Acute Heart Failure protocol", "(đề xuất) Diuretic escalation checklist"]
 summary:

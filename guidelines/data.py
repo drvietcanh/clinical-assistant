@@ -759,6 +759,31 @@ GUIDELINES_DATABASE: List[Guideline] = [
         ]
     ),
     Guideline(
+        id="acc_aha_acs_2025",
+        title="2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes",
+        title_vn="Hướng dẫn 2025 ACC/AHA/ACEP/NAEMSP/SCAI về Quản lý Bệnh nhân Hội chứng Vành Cấp",
+        organization="ACC/AHA/ACEP/NAEMSP/SCAI",
+        year=2025,
+        category="Cardiology",
+        version="2025",
+        last_updated="2025-02-01",
+        url="https://newsroom.heart.org/news/acc-aha-issue-new-acute-coronary-syndromes-guideline",
+        related_protocol="ACS - Hội chứng vành cấp",
+        description="Latest ACS guidelines 2025 with updated DAPT, lipid management, and revascularization strategies",
+        key_recommendations=[
+            "DAPT (aspirin + P2Y12) ≥12 months if low bleeding risk",
+            "Radial access preferred over femoral for PCI (Class I)",
+            "Intravascular imaging Class I, Level A for PCI guidance",
+            "Non-statin therapy (ezetimibe, PCSK9 inhibitors, inclisiran) if LDL ≥70 mg/dL after max statin",
+            "Cardiac rehabilitation referral before discharge"
+        ],
+        is_high_impact=True,
+        related_tools=[
+            {"name": "CRUSADE Score", "url": "/Scores?calc=crusade"},
+            {"name": "GRACE Score", "url": "/Scores?calc=grace"}
+        ]
+    ),
+    Guideline(
         id="acc_aha_acs_2024",
         title="2024 ACC/AHA/SCAI Guideline for Coronary Artery Revascularization",
         title_vn="Hướng dẫn ACC/AHA/SCAI 2024 về Tái thông Động mạch Vành",

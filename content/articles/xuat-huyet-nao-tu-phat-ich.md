@@ -1,8 +1,8 @@
 # Xuất huyết não tự phát (Intracerebral Hemorrhage – ICH): chẩn đoán và xử trí theo guideline AHA/ASA, ESO
 
 > **Đối tượng:** Bác sĩ cấp cứu, nội thần kinh, hồi sức, nội khoa  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** AHA/ASA Guidelines for the Management of Spontaneous Intracerebral Hemorrhage [1,2], ESO guidelines on ICH [3], các khuyến cáo về kiểm soát huyết áp, đảo ngược kháng đông và chăm sóc hồi sức [4,5]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** AHA/ASA Guidelines for the Management of Spontaneous Intracerebral Hemorrhage 2024 [1], AHA/ASA Guidelines 2022 (tham khảo) [2], ESO guidelines on ICH [3], các khuyến cáo về kiểm soát huyết áp, đảo ngược kháng đông và chăm sóc hồi sức [4,5]
 
 ---
 

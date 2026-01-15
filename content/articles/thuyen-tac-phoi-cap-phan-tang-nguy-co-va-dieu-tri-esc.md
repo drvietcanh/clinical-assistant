@@ -1,8 +1,8 @@
 # Thuyên tắc phổi cấp (Pulmonary Embolism – PE): chẩn đoán, phân tầng nguy cơ và điều trị theo ESC
 
 > **Đối tượng:** Bác sĩ cấp cứu, hô hấp, tim mạch, ICU  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** ESC Pulmonary Embolism Guidelines 2019 + cập nhật/consensus liên quan đến 2024 [1], CHEST VTE Guidelines 2021 [2]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** ESC Pulmonary Embolism Guidelines 2024 [1], ESC Guidelines 2019 (tham khảo) [2], CHEST VTE Guidelines 2021 [3]
 
 ---
 

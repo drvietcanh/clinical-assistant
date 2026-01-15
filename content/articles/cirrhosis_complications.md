@@ -5,6 +5,7 @@ keywords: ["xơ gan", "xuất huyết tiêu hóa", "báng bụng", "HE", "MELD",
 last_reviewed: 2025-01
 guideline_version:
   - EASL Cirrhosis/Portal Hypertension guidance (cập nhật gần nhất)
+  - AASLD Cirrhosis guidance (cập nhật gần nhất)
   - ACG Cirrhosis/Variceal bleeding guidance
 related_calculators: ["Child-Pugh", "MELD/MELD-Na", "BMI", "eGFR"]
 related_protocols: ["XHTH tiêu hóa trên do vỡ giãn tĩnh mạch", "(đề xuất) HE/báng checklist"]

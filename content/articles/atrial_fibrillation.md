@@ -4,8 +4,9 @@ specialty: "Tim mạch / Rối loạn nhịp"
 keywords: ["rung nhĩ", "atrial fibrillation", "AF", "CHADS2-VASc", "HAS-BLED", "DOAC", "cardioversion"]
 last_reviewed: 2025-01
 guideline_version:
-  - ESC Atrial Fibrillation 2020 (updates 2022)
-  - ACC/AHA/HRS Atrial Fibrillation 2019 (updates 2024)
+  - ESC Atrial Fibrillation 2024
+  - ACC/AHA/ACCP/HRS Atrial Fibrillation 2023
+  - ESC AF 2020 (tham khảo)
 related_calculators: ["CHADS₂-VASc", "HAS-BLED", "QTc", "CrCl (Cockcroft-Gault)", "eGFR"]
 related_protocols: ["(đề xuất) AF management pathway", "(đề xuất) Anticoagulation decision tree"]
 summary:

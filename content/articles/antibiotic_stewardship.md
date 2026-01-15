@@ -4,9 +4,10 @@ specialty: "Nhiễm khuẩn / Dược lâm sàng"
 keywords: ["kháng sinh", "IDSA", "ATS", "ESCMID", "stewardship", "PK/PD", "TDM", "AUC/MIC", "fT>MIC", "vancomycin", "aminoglycoside"]
 last_reviewed: 2025-01
 guideline_version:
-  - IDSA/ATS Community-Acquired Pneumonia 2019
+  - IDSA/ATS Community-Acquired Pneumonia 2023
   - IDSA/ATS Hospital-Acquired Pneumonia 2016 (updates)
   - IDSA/SHEA Antimicrobial Stewardship 2016 (updates)
+  - WHO AWaRe 2023 (kháng sinh hợp lý)
   - ESCMID (European guidelines)
 related_calculators: ["CrCl (Cockcroft-Gault)", "eGFR", "Vancomycin TDM", "Aminoglycoside dosing"]
 related_protocols: ["Sepsis 1-Hour Bundle", "(đề xuất) Antibiotic stewardship checklist"]

@@ -1,8 +1,8 @@
 # Béo phì ở người lớn: đánh giá, phân tầng nguy cơ và điều trị (lối sống, thuốc, phẫu thuật chuyển hóa)
 
 > **Đối tượng:** Bác sĩ đa khoa, nội khoa, nội tiết, tim mạch
-> **Cập nhật:** Tháng 12/2025
-> **Tài liệu tham khảo chính:** ADA 2024 [1], AACE/ACE về béo phì [2], Endocrine Society về thuốc điều trị béo phì [3], ASMBS/IFSO về chỉ định phẫu thuật chuyển hóa [4]
+> **Cập nhật:** Tháng 2/2025
+> **Tài liệu tham khảo chính:** ADA Standards of Care 2024-2025 [1], AACE/ACE về béo phì [2], Endocrine Society về thuốc điều trị béo phì [3], ASMBS/IFSO về chỉ định phẫu thuật chuyển hóa [4]
 
 ---
 

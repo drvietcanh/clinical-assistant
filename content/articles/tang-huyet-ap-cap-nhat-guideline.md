@@ -1,8 +1,8 @@
 # Quản lý tăng huyết áp ở người lớn: cập nhật guideline châu Âu (ESC/ESH) và Mỹ (ACC/AHA)
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ tim mạch  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** ESC/ESH Hypertension Guidelines 2018 + cập nhật 2023 [1], ACC/AHA Hypertension Guideline 2017 [2], các tổng quan gần đây
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** ESC/ESH Hypertension Guidelines 2024 [1], ACC/AHA Hypertension Guideline 2025 (nếu có) [2], ESC/ESH 2018 + cập nhật 2023 (tham khảo) [3]
 
 ---
 

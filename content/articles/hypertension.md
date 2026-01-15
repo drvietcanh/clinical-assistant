@@ -4,8 +4,9 @@ specialty: "Tim mạch"
 keywords: ["tăng huyết áp", "ESC/ESH 2023", "ACC/AHA 2024", "ACEi", "ARB", "CCB", "thiazide-like", "spironolactone", "đích huyết áp"]
 last_reviewed: 2025-01
 guideline_version:
-  - ESC/ESH Hypertension 2023 (2024 updates)
-  - ACC/AHA Hypertension 2024
+  - ESC/ESH Hypertension 2024
+  - ACC/AHA Hypertension 2025 (nếu có)
+  - ESC/ESH Hypertension 2023 (tham khảo)
 related_calculators: ["eGFR (CKD-EPI)", "CrCl (Cockcroft-Gault)", "ASCVD 10-year", "SCORE2/SCORE2-OP", "BMI"]
 related_protocols: ["(đề xuất) HTN management quick steps"]
 summary:

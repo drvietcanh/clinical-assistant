@@ -1,8 +1,8 @@
 # Cấp cứu nội tiết thường gặp: DKA, HHS, bão giáp, hôn mê phù niêm, suy thượng thận cấp, hạ đường huyết nặng
 
 > **Đối tượng:** Bác sĩ nội tiết, nội khoa, hồi sức cấp cứu  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** ADA Standards of Care 2024 [1], Endocrine Society [2], ATA/ACE về cường giáp 2016 [3], quản lý suy thượng thận cấp 2016 [4]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** ADA Standards of Care 2024-2025 [1], Endocrine Society [2], ATA/ACE về cường giáp 2016 [3], quản lý suy thượng thận cấp 2016 [4]
 
 ---
 

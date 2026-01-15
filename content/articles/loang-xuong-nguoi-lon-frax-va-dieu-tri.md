@@ -1,8 +1,8 @@
 # Loãng xương ở người lớn: tầm soát, chẩn đoán, FRAX và điều trị (protocol thực hành)
 
 > **Đối tượng:** Bác sĩ nội khoa, nội tiết, cơ xương khớp, lão khoa, bác sĩ gia đình
-> **Cập nhật:** Tháng 12/2025
-> **Tài liệu tham khảo chính:** Endocrine Society (điều trị loãng xương sau mãn kinh) [1], NOF Clinician’s Guide (cập nhật) [2], AACE/ACE guidelines [3]
+> **Cập nhật:** Tháng 2/2025
+> **Tài liệu tham khảo chính:** Endocrine Society (điều trị loãng xương sau mãn kinh) [1], NOF Clinician's Guide (cập nhật) [2], AACE/ACE guidelines [3]
 
 ---
 

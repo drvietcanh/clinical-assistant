@@ -1,8 +1,8 @@
 # Bệnh mạch vành mạn (Chronic Coronary Syndrome): chẩn đoán, phân tầng nguy cơ và điều trị theo guideline châu Âu/Mỹ
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ tim mạch  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** ESC Chronic Coronary Syndromes Guidelines 2019 + cập nhật 2024 [1], ACC/AHA Guideline for Chronic Coronary Disease 2023 [2]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** ESC Chronic Coronary Syndromes Guidelines 2024 [1], ACC/AHA Guideline for Chronic Coronary Disease 2023 [2], ESC Guidelines 2019 (tham khảo) [3]
 
 ---
 

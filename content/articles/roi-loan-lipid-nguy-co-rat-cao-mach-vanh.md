@@ -1,8 +1,8 @@
 # Rối loạn lipid ở bệnh nhân nguy cơ rất cao / có bệnh mạch vành: mục tiêu LDL-C và chiến lược điều trị tăng cường
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ tim mạch  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** ESC/EAS Dyslipidaemia Guidelines 2019 + cập nhật 2023 [1], ACC/AHA Guideline on the Management of Blood Cholesterol 2018 + updates [2]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** ESC/EAS Dyslipidaemia Guidelines 2025 [1], ESC/EAS Guidelines 2019 + cập nhật 2023 (tham khảo) [2], ACC/AHA Guideline on the Management of Blood Cholesterol 2018 + updates [3]
 
 ---
 

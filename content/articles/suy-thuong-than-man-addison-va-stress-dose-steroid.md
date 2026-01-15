@@ -1,8 +1,8 @@
 # Suy thượng thận mạn ở người lớn (Addison/thứ phát) và “stress‑dose” glucocorticoid khi ốm/phẫu thuật
 
 > **Đối tượng:** Bác sĩ nội khoa, nội tiết, cấp cứu, gây mê hồi sức  
-> **Cập nhật:** Tháng 12/2025  
-> **Tài liệu tham khảo chính:** Endocrine Society guideline về suy thượng thận nguyên phát 2016 [1], hướng dẫn thực hành stress‑dose steroid (tổng hợp)
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** Endocrine Society guideline về suy thượng thận nguyên phát 2016 [1] (guideline mới nhất hiện có), hướng dẫn thực hành stress‑dose steroid (tổng hợp)
 
 ---
 

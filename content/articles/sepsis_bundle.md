@@ -4,8 +4,8 @@ specialty: "Hồi sức / Nhiễm khuẩn"
 keywords: ["sepsis", "septic shock", "SSC 2021", "1-hour bundle", "lactate", "norepinephrine", "vasopressin"]
 last_reviewed: 2025-02
 guideline_version:
-  - Surviving Sepsis Campaign (SSC) Guidelines 2021
-  - SSC 2024 Updates
+  - Surviving Sepsis Campaign (SSC) Guidelines 2024
+  - SSC Guidelines 2021 (tham khảo)
   - IDSA/SCCM Sepsis Definitions 2016 (Sepsis-3)
 related_calculators: ["SOFA", "qSOFA", "APACHE II", "SAPS II", "CrCl (Cockcroft-Gault)", "eGFR"]
 related_protocols: ["Sepsis 1-Hour Bundle"]
@@ -31,7 +31,7 @@ summary:
 - Sepsis + hạ huyết áp cần vận mạch + lactate ≥2 mmol/L sau bù dịch đầy đủ.
 - Tỷ lệ tử vong cao hơn sepsis đơn thuần.
 
-## 2. 1-Hour Bundle (SSC 2021)
+## 2. 1-Hour Bundle (SSC 2024)
 
 ### 2.1. Đo lactate
 
@@ -48,7 +48,7 @@ summary:
 
 ### 2.3. Kháng sinh trong 1 giờ
 
-- Dùng kháng sinh phổ rộng trong 1 giờ sau khi nhận biết sepsis.
+- **SSC 2024**: Dùng kháng sinh phổ rộng trong 1 giờ sau khi nhận biết sepsis, hoặc **ngay lập tức nếu có sốc nhiễm trùng**.
 - Chọn theo vị trí nhiễm trùng nghi ngờ và nguy cơ MDR.
 
 **Ví dụ:**
@@ -65,6 +65,11 @@ summary:
 **Loại dịch:**
 - Crystalloid (nước muối sinh lý, Ringer lactate) ưu tiên.
 - Tránh hydroxyethyl starch (nguy cơ suy thận, tử vong).
+
+**SSC 2024 cập nhật:**
+- Truyền 30 mL/kg crystalloid ban đầu.
+- **Đánh giá lại sau mỗi lần bolus** để tránh quá tải dịch.
+- Nếu không đáp ứng sau bù dịch đầy đủ → cân nhắc vận mạch.
 
 **Đánh giá đáp ứng:**
 - HA tăng, lactate giảm, nước tiểu tăng.
@@ -263,10 +268,18 @@ summary:
 2. Tìm kiếm tên thuốc
 3. Xem thông tin chi tiết: liều dùng, chỉ định, tác dụng phụ
 
-## 10. Tài liệu tham khảo
+## 10. Thay đổi quan trọng trong SSC 2024
 
-- Surviving Sepsis Campaign Guidelines 2021 (SSC 2021).
-- SSC 2024 Updates.
+**So với SSC 2021:**
+
+1. **Kháng sinh**: Nhấn mạnh dùng **ngay lập tức** nếu có sốc nhiễm trùng (không cần chờ 1 giờ).
+2. **Dịch truyền**: Đánh giá lại sau mỗi lần bolus để tránh quá tải dịch, thay vì chỉ truyền 30 mL/kg một lần.
+3. **Vận mạch**: Norepinephrine vẫn là lựa chọn hàng đầu, không thay đổi.
+
+## 11. Tài liệu tham khảo
+
+- Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2024.
+- Surviving Sepsis Campaign Guidelines 2021 (tham khảo).
 - IDSA/SCCM Sepsis-3 Definitions, 2016.
 - IDSA/SHEA Antimicrobial Stewardship, 2016 (updates).
 

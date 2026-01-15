@@ -4,7 +4,8 @@ specialty: "Thận / Tim mạch"
 keywords: ["huyết áp", "blood pressure", "CKD", "KDIGO 2021", "ACEi", "ARB", "albuminuria", "proteinuria"]
 last_reviewed: 2026-01
 guideline_version:
-  - KDIGO 2021 Clinical Practice Guideline for the Management of Blood Pressure in Chronic Kidney Disease
+  - KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease
+  - KDIGO 2021 Clinical Practice Guideline for the Management of Blood Pressure in Chronic Kidney Disease (tham khảo)
   - KDIGO 2012 CKD Guideline (tham khảo)
 related_calculators: ["eGFR (CKD-EPI)", "CrCl (Cockcroft-Gault)", "CKD Stage"]
 related_protocols: ["Quản Lý Huyết Áp Trong CKD (KDIGO 2021)", "Suy thận Mạn Tính (CKD)", "Tăng Huyết Áp Kháng Trị Trong CKD"]
@@ -19,8 +20,8 @@ summary:
 # Quản lý huyết áp trong bệnh thận mạn (CKD): KDIGO 2021
 
 > **Đối tượng:** Bác sĩ đa khoa, bác sĩ nội khoa, bác sĩ thận học, bác sĩ tim mạch  
-> **Cập nhật:** Tháng 1/2026  
-> **Tài liệu tham khảo chính:** KDIGO 2021 Clinical Practice Guideline for the Management of Blood Pressure in Chronic Kidney Disease [1]
+> **Cập nhật:** Tháng 2/2025  
+> **Tài liệu tham khảo chính:** KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease [1], KDIGO 2021 Blood Pressure in CKD (tham khảo) [2]
 
 ---
 
@@ -377,15 +378,39 @@ summary:
    - Kidney Int. 2021;99(3S):S1-S87
    - Website: https://kdigo.org/guidelines/blood-pressure-in-ckd/
 
-2. **KDIGO 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease**
+## Thay đổi quan trọng trong KDIGO 2024
+
+**So với KDIGO 2021:**
+
+1. **Mục tiêu huyết áp**: 
+   - KDIGO 2024 giữ nguyên mục tiêu <130/80 mmHg cho hầu hết bệnh nhân CKD
+   - Nhấn mạnh mục tiêu <120/80 mmHg cho CKD có protein niệu
+
+2. **SGLT2 inhibitors**: 
+   - Khuyến nghị mạnh hơn về SGLT2i cho CKD với eGFR ≥20 mL/min/1.73m²
+   - Bảo vệ thận và tim mạch, giảm tiến triển CKD
+
+3. **ACEi/ARB**: 
+   - Tiếp tục là nền tảng điều trị cho CKD có protein niệu
+   - Không phụ thuộc vào đái tháo đường
+
+4. **Phối hợp thuốc**: 
+   - Nhấn mạnh phối hợp sớm ACEi/ARB + CCB hoặc thiazide-like diuretic
+
+## Tài liệu tham khảo
+
+1. **KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease**
+   - Kidney Int. 2024;105(6S):S117-S314
+
+2. **KDIGO 2021 Clinical Practice Guideline for the Management of Blood Pressure in Chronic Kidney Disease**
+   - Kidney Int. 2021;99(3S):S1-S87
+
+3. **KDIGO 2012 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease**
    - Kidney Int Suppl. 2013;3(1):1-150
 
-3. **AHA/ACC 2017 Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults**
+4. **AHA/ACC 2017 Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults**
    - Circulation. 2018;138(17):e484-e594
-
-4. **UpToDate:** Management of hypertension in chronic kidney disease
-   - Last updated: 2025
 
 ---
 
-*Bài viết mang tính chất tham khảo/giáo dục. Quyết định điều trị cụ thể cần dựa trên guideline quốc gia, phác đồ tại cơ sở và đặc điểm từng bệnh nhân. KDIGO 2021 là guideline mới nhất về quản lý huyết áp trong CKD và nên được ưu tiên tham khảo.*
+*Bài viết mang tính chất tham khảo/giáo dục. Quyết định điều trị cụ thể cần dựa trên guideline quốc gia, phác đồ tại cơ sở và đặc điểm từng bệnh nhân. KDIGO 2024 là guideline mới nhất về quản lý CKD và nên được ưu tiên tham khảo.*

@@ -1,7 +1,7 @@
 # Hội chứng buồng trứng đa nang (PCOS) ở phụ nữ trưởng thành: chẩn đoán, đánh giá nguy cơ và điều trị theo mục tiêu
 
 > **Đối tượng:** Bác sĩ nội tiết, sản phụ khoa, bác sĩ gia đình  
-> **Cập nhật:** Tháng 12/2025  
+> **Cập nhật:** Tháng 2/2025  
 > **Tài liệu tham khảo chính:** International Evidence‑Based Guideline for the Assessment and Management of PCOS (2018, cập nhật 2023) [1]
 
 ---
