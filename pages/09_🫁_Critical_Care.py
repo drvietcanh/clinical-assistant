@@ -21,6 +21,14 @@ from critical_care import (
     render_rrt_calculator,
     render_scenarios_calculator,
     render_dirc_calculator,
+    render_patient_dashboard,
+    render_clinical_alerts,
+    render_emergency_protocols,
+    render_quick_reference,
+    render_hemodynamics,
+    render_fluid_balance,
+    render_drug_compatibility,
+    render_vietnamese_protocols,
     VENTILATOR_ADVANCED_AVAILABLE,
 )
 
@@ -83,15 +91,27 @@ with st.sidebar:
     # Tool options with consistent naming
     tool_options = [
         "🏠 Dashboard",
+        "🏠 Mobile Dashboard",
+        "🏥 Patient Dashboard",
+        "👥 Multi-Patient View",
+        "🎨 Dashboard Builder",
+        "🚨 Clinical Alerts",
         "📊 Scoring Systems",
+        "📊 Advanced Analytics",
         "🫁 Ventilator Management",
         "🫁 ARDS Protocols",
         "🦠 Sepsis Protocols",
         "💉 Shock Management",
         "🩺 RRT Calculator",
         "🎯 Clinical Scenarios",
+        "🚨 Emergency Protocols",
+        "📋 Quick Reference",
+        "🇻🇳 Vietnamese Protocols",
         "💧 Fluid Therapy",
+        "💧 Fluid Balance Tracking",
         "💉 Vasopressors",
+        "💉 Hemodynamic Monitoring",
+        "💉 Drug Compatibility",
         "💧 Enhanced Infusion Calculator",
         "💉 Multiple Infusions",
         "⚡ Electrolyte Calculator",
@@ -157,22 +177,39 @@ with st.sidebar:
 
 # ========== MAIN CONTENT ==========
 
-# Main tabs for organizing sub-modules
-main_tabs = st.tabs([
-    "🫁 Critical Care Tools",
-    "🫁 Ventilator",
-    "📋 Protocols",
-    "📋 Guidelines",
-    "📰 Medical News"
-])
+    # Main tabs for organizing sub-modules
+    main_tabs = st.tabs([
+        "🫁 Critical Care Tools",
+        "🫁 Ventilator",
+        "🫁 Ventilator Advanced",
+        "📋 Protocols",
+        "📋 Guidelines",
+        "📰 Medical News"
+    ])
 
 # Tab 1: Critical Care Tools (Dashboard, Scoring, etc.)
 with main_tabs[0]:
     # Route to appropriate calculator
-    if "Dashboard" in tool_type:
+    if "Dashboard" in tool_type and "Patient" not in tool_type:
         render_critical_care_dashboard()
+    elif "Patient Dashboard" in tool_type:
+        render_patient_dashboard()
+    elif "Clinical Alerts" in tool_type:
+        render_clinical_alerts()
     elif "Scoring" in tool_type:
         render_scoring_calculator()
+    elif "Emergency Protocols" in tool_type:
+        render_emergency_protocols()
+    elif "Quick Reference" in tool_type:
+        render_quick_reference()
+    elif "Fluid Balance" in tool_type:
+        render_fluid_balance()
+    elif "Hemodynamic" in tool_type:
+        render_hemodynamics()
+    elif "Drug Compatibility" in tool_type:
+        render_drug_compatibility()
+    elif "Vietnamese Protocols" in tool_type:
+        render_vietnamese_protocols()
     
     elif "Ventilator Management" in tool_type:
         st.header("🫁 Ventilator Management")
@@ -511,20 +548,66 @@ with main_tabs[1]:
     else:
         render_ventilator_calculator("tab1_")
 
-# Tab 3: Protocols
+# Tab 3: Ventilator Advanced
 with main_tabs[2]:
+    st.header("🫁 Ventilator Advanced Features")
+    st.caption("Các tính năng nâng cao cho máy thở")
+    
+    vent_advanced_tabs = st.tabs([
+        "🦠 Chế độ theo bệnh",
+        "🇻🇳 Máy thở Việt Nam",
+        "📊 Theo dõi Real-time"
+    ])
+    
+    with vent_advanced_tabs[0]:
+        try:
+            from ventilator.disease_specific_modes import render_disease_specific_ventilator
+            render_disease_specific_ventilator()
+        except ImportError as e:
+            st.error(f"Không thể tải Disease-Specific Modes: {str(e)}")
+    
+    with vent_advanced_tabs[1]:
+        try:
+            from ventilator.vietnam_ventilator_ui import render_vietnam_ventilator_selector
+            render_vietnam_ventilator_selector()
+        except ImportError as e:
+            st.error(f"Không thể tải Vietnam Ventilator UI: {str(e)}")
+    
+    with vent_advanced_tabs[2]:
+        try:
+            from ventilator.realtime_monitoring import render_realtime_monitoring
+            render_realtime_monitoring()
+        except ImportError as e:
+            st.error(f"Không thể tải Real-time Monitoring: {str(e)}")
+    
+    with vent_advanced_tabs[3]:
+        try:
+            from ventilator.waveforms import render_waveform_panel
+            render_waveform_panel()
+        except ImportError as e:
+            st.error(f"Không thể tải Waveforms: {str(e)}")
+    
+    with vent_advanced_tabs[4]:
+        try:
+            from ventilator.data_simulator import render_data_simulator
+            render_data_simulator()
+        except ImportError as e:
+            st.error(f"Không thể tải Data Simulator: {str(e)}")
+
+# Tab 4: Protocols
+with main_tabs[3]:
     st.info("📋 **Protocols** - Đang tích hợp. Vui lòng sử dụng sidebar để truy cập.")
     if st.button("Mở trang Protocols", use_container_width=True):
         st.switch_page("pages/04_📋_Protocols.py")
 
-# Tab 4: Guidelines
-with main_tabs[3]:
+# Tab 5: Guidelines
+with main_tabs[4]:
     st.info("📋 **Guidelines Tracker** - Đang tích hợp. Vui lòng sử dụng sidebar để truy cập.")
     if st.button("Mở Guidelines Tracker", use_container_width=True):
         st.switch_page("pages/15_📋_Guidelines_Tracker.py")
 
-# Tab 5: Medical News
-with main_tabs[4]:
+# Tab 6: Medical News
+with main_tabs[5]:
     st.info("📰 **Medical News** - Đang tích hợp. Vui lòng sử dụng sidebar để truy cập.")
     if st.button("Mở Medical News", use_container_width=True):
         st.switch_page("pages/10_📰_Medical_News.py")

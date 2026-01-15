@@ -22,6 +22,18 @@ from .rrt import (
 )
 from .scenarios import render_scenarios_calculator
 from .dirc import render_dirc_calculator, DIRCCalculator
+from .patient_dashboard import render_patient_dashboard
+from .clinical_alerts import render_clinical_alerts, render_alerts_summary
+from .emergency import render_emergency_protocols
+from .quick_reference import render_quick_reference
+from .hemodynamics import render_hemodynamics
+from .fluid_balance import render_fluid_balance
+from .drug_compatibility import render_drug_compatibility
+from .vietnamese_protocols import render_vietnamese_protocols
+from .dashboard_mobile import render_mobile_dashboard
+from .dashboard_builder import render_dashboard_builder
+from .multi_patient_view import render_multi_patient_view
+from .analytics import render_analytics_dashboard
 
 # Import comprehensive ventilator calculator from ventilator module
 try:
@@ -55,6 +67,19 @@ __all__ = [
     'render_scenarios_calculator',
     'render_dirc_calculator',
     'DIRCCalculator',
+    'render_patient_dashboard',
+    'render_clinical_alerts',
+    'render_alerts_summary',
+    'render_emergency_protocols',
+    'render_quick_reference',
+    'render_hemodynamics',
+    'render_fluid_balance',
+    'render_drug_compatibility',
+    'render_vietnamese_protocols',
+    'render_mobile_dashboard',
+    'render_dashboard_builder',
+    'render_multi_patient_view',
+    'render_analytics_dashboard',
     'VENTILATOR_ADVANCED_AVAILABLE',
 ]
 

@@ -61,6 +61,11 @@ from .export import (
     export_report_to_text,
     render_export_panel
 )
+from .disease_specific_modes import render_disease_specific_ventilator, get_disease_settings
+from .vietnam_ventilator_ui import render_vietnam_ventilator_selector
+from .realtime_monitoring import render_realtime_monitoring
+from .waveforms import render_waveform_panel, generate_pressure_waveform, generate_flow_waveform, generate_volume_waveform
+from .data_simulator import render_data_simulator, VentilatorDataSimulator
 
 __all__ = [
     'render_ardsnet',
@@ -108,5 +113,16 @@ __all__ = [
     'export_history_to_csv',
     'export_report_to_text',
     'render_export_panel',
+    # Disease-specific and Vietnam-specific
+    'render_disease_specific_ventilator',
+    'get_disease_settings',
+    'render_vietnam_ventilator_selector',
+    'render_realtime_monitoring',
+    'render_waveform_panel',
+    'generate_pressure_waveform',
+    'generate_flow_waveform',
+    'generate_volume_waveform',
+    'render_data_simulator',
+    'VentilatorDataSimulator',
 ]
 
