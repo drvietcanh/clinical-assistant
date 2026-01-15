@@ -11,12 +11,36 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         'indications': ['COPD (cắt cơn và phòng ngừa)',
         'Hen phế quản (kết hợp với SABA)', 'Co thắt phế quản',
         'Chảy nước mũi (dạng xịt mũi)'],
-        'contraindications': [
-        'Dị ứng atropine/ipratropium', 'Glaucoma góc đóng', 'Tăng nhãn áp'],
-        'dosage': {'adult_inhalation': '1-2 puffs (20-40mcg) mỗi 6-8 giờ',
-        'adult_nebulizer': '250-500mcg mỗi 6-8 giờ', 'adult_max':
-        '12 puffs/ngày hoặc 3 lần nebulizer/ngày', 'notes':
-        'Tác dụng sau 15-30 phút, kéo dài 4-6 giờ. An toàn hơn beta-agonist cho bệnh nhân tim mạch'
+        'contraindications': {
+            'tuyệt_đối': [
+                'Dị ứng với ipratropium, atropine hoặc các thành phần khác',
+                'Glaucoma góc đóng (chống chỉ định tuyệt đối)',
+                'Tăng nhãn áp nặng không kiểm soát'
+            ],
+            'tương_đối': [
+                'Glaucoma góc mở - thận trọng, theo dõi nhãn áp',
+                'Tăng nhãn áp nhẹ - thận trọng, tránh để thuốc vào mắt',
+                'Phì đại tuyến tiền liệt - có thể gây bí tiểu',
+                'Bí tiểu - có thể làm nặng',
+                'Táo bón nặng - có thể làm nặng',
+                'Nhược cơ - có thể làm nặng',
+                'Dùng với anticholinergic khác - tăng tác dụng phụ'
+            ]
+        },
+        'dosage': {
+            'adult_inhalation': '1-2 puffs (20-40mcg) mỗi 6-8 giờ khi cần',
+            'adult_nebulizer': '250-500mcg mỗi 6-8 giờ khi cần',
+            'adult_max': '12 puffs/ngày hoặc 3 lần nebulizer/ngày',
+            'pediatric': {
+                '5_11_years': '1-2 puffs (20-40mcg) mỗi 6-8 giờ khi cần',
+                'under_5_years': '250mcg nebulizer mỗi 6-8 giờ khi cần',
+                'notes': 'FDA-approved cho trẻ em ≥5 tuổi dạng hít. Dưới 5 tuổi có thể dùng nebulizer.'
+            },
+            'geriatric': {
+                'dosing': 'Liều tương tự người lớn (không cần điều chỉnh liều)',
+                'notes': 'Không cần điều chỉnh liều, nhưng thận trọng ở bệnh nhân phì đại tuyến tiền liệt và glaucoma'
+            },
+            'notes': 'Tác dụng sau 15-30 phút, kéo dài 4-6 giờ. An toàn hơn beta-agonist cho bệnh nhân tim mạch. Dùng khi cần (PRN) hoặc đều đặn cho COPD.'
         },
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
         'under_30': 'Không đổi'},
@@ -44,10 +68,18 @@ ANTICHOLINERGIC_SHORT_ACTINGS_DRUGS = {
         'Dạng hít: sử dụng đúng kỹ thuật để đạt hiệu quả tối đa',
         'Dạng nebulizer: phù hợp cho bệnh nhân không thể dùng dạng hít',
         'An toàn hơn beta-agonist cho bệnh nhân tim mạch (không kích thích tim)'
-        ], 'onset':
-        '15-30 phút (chậm hơn SABA)', 'duration': '4-6 giờ', 'protein_binding':
-        'Không đáng kể (ion hóa, không hấp thu hệ thống)', 'clearance':
-        'Chủ yếu tại chỗ (phế quản), không chuyển hóa đáng kể'},
+        ]        'pharmacokinetics': {
+            'half_life': '2 giờ (tại chỗ), không đáng kể (toàn thân)',
+            'onset': '15-30 phút (chậm hơn SABA)',
+            'duration': '4-6 giờ',
+            'bioavailability': 'Không đáng kể (ion hóa, không hấp thu hệ thống)',
+            'protein_binding': 'Không đáng kể (ion hóa, không hấp thu hệ thống)',
+            'volume_of_distribution': 'Không đáng kể (ion hóa)',
+            'metabolism': 'Không chuyển hóa đáng kể. Tác dụng chủ yếu tại chỗ (phế quản).',
+            'clearance': 'Chủ yếu tại chỗ (phế quản), không chuyển hóa đáng kể. Một phần nhỏ được nuốt vào và thải qua phân.',
+            'absorption': 'Hấp thu tối thiểu sau khi hít do ion hóa. Một phần nhỏ được nuốt vào nhưng không hấp thu đáng kể.',
+            'food_effect': 'Không ảnh hưởng đáng kể đến hấp thu dạng hít'
+        },
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. Kiểm tra hạn sử dụng định kỳ.'
         , 'black_box_warnings':

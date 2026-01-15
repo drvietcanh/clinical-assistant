@@ -34,8 +34,20 @@ ANTICOAGULANTS = {
             "adult_dvt_pe_treatment": "10mg x 2 lần/ngày x 7 ngày, sau đó 5mg x 2 lần/ngày",
             "adult_dvt_pe_prophylaxis": "2.5mg x 2 lần/ngày",
             "adult_surgery_prophylaxis": "2.5mg x 2 lần/ngày (bắt đầu 12-24 giờ sau phẫu thuật)",
+            "adult_start": "5mg x 2 lần/ngày (rung nhĩ), 10mg x 2 lần/ngày (điều trị DVT/PE)",
+            "adult_usual": "5mg x 2 lần/ngày (rung nhĩ), 5mg x 2 lần/ngày (duy trì DVT/PE)",
             "adult_max": "10mg/ngày",
-            "notes": """DOAC (Direct Oral Anticoagulant). Uống với hoặc không có thức ăn. Không cần theo dõi INR. Điều chỉnh liều theo tuổi, cân nặng, Cr.""",
+            "elderly": "Giảm liều xuống 2.5mg x 2 lần/ngày nếu tuổi ≥80 và có thêm yếu tố (cân nặng ≤60kg hoặc Cr ≥1.5mg/dL).",
+            "renal_adjustment_dosage": {
+                "normal": "5mg x 2 lần/ngày (rung nhĩ), 10mg x 2 lần/ngày x 7 ngày sau đó 5mg x 2 lần/ngày (DVT/PE)",
+                "30_60": "5mg x 2 lần/ngày, thận trọng",
+                "under_30": "2.5mg x 2 lần/ngày (CrCl 15-30), CHỐNG CHỈ ĐỊNH nếu CrCl <15",
+                "dialysis": "CHỐNG CHỈ ĐỊNH"
+            },
+            "administration_route": "PO",
+            "frequency": "2 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": """DOAC (Direct Oral Anticoagulant). Uống với hoặc không có thức ăn. Không cần theo dõi INR. Điều chỉnh liều theo tuổi, cân nặng, Cr. Thải trừ qua cả thận và gan."""
         },
         "side_effects": [
             "Chảy máu (nặng có thể tử vong)",
@@ -211,7 +223,20 @@ ANTICOAGULANTS = {
             "adult_cardioprotective": "75-100mg x 1 lần/ngày",
             "adult_pain": "325-650mg mỗi 4-6 giờ",
             "adult_arthritis": "325-650mg x 4 lần/ngày",
-            "notes": "Liều thấp (75-100mg) cho dự phòng tim mạch"
+            "adult_start": "75-100mg x 1 lần/ngày (dự phòng tim mạch), 325-650mg mỗi 4-6 giờ (giảm đau)",
+            "adult_usual": "75-100mg x 1 lần/ngày (dự phòng tim mạch), 325-650mg mỗi 4-6 giờ (giảm đau)",
+            "adult_max": "4000mg/ngày (giảm đau), 100mg/ngày (dự phòng tim mạch)",
+            "elderly": "Khởi đầu 75mg x 1 lần/ngày cho dự phòng tim mạch. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "75-100mg x 1 lần/ngày (dự phòng tim mạch)",
+                "30_60": "75mg x 1 lần/ngày, thận trọng",
+                "under_30": "75mg x 1 lần/ngày, thận trọng",
+                "dialysis": "75mg x 1 lần/ngày, thận trọng"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày (dự phòng tim mạch), mỗi 4-6 giờ (giảm đau)",
+            "with_food": "Nên uống với thức ăn để giảm kích ứng dạ dày",
+            "notes": "Liều thấp (75-100mg) cho dự phòng tim mạch. Liều cao (325-650mg) cho giảm đau, hạ sốt, chống viêm."
         },
         "side_effects": [
             "Chảy máu dạ dày",
@@ -432,7 +457,20 @@ ANTICOAGULANTS = {
         "dosage": {
             "adult_loading": "300-600mg x 1 lần",
             "adult_maintenance": "75mg x 1 lần/ngày",
-            "notes": "Dùng kèm aspirin sau ACS/stent (dual antiplatelet therapy)"
+            "adult_start": "300-600mg x 1 lần (liều nạp), sau đó 75mg x 1 lần/ngày",
+            "adult_usual": "75mg x 1 lần/ngày",
+            "adult_max": "75mg/ngày (duy trì)",
+            "elderly": "Không cần điều chỉnh liều đặc biệt. Có thể dùng liều nạp thấp hơn (300mg).",
+            "renal_adjustment_dosage": {
+                "normal": "300-600mg x 1 lần (nạp), sau đó 75mg x 1 lần/ngày",
+                "30_60": "Không cần điều chỉnh liều",
+                "under_30": "Không cần điều chỉnh liều",
+                "dialysis": "Không cần điều chỉnh liều"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Dùng kèm aspirin sau ACS/stent (dual antiplatelet therapy). Chuyển hóa qua gan (CYP2C19), có polymorphism."
         },
         "side_effects": [
             "Chảy máu",
@@ -656,7 +694,20 @@ ANTICOAGULANTS = {
             "adult_surgery_prophylaxis": "110mg x 1 lần/ngày (bắt đầu 1-4 giờ sau phẫu thuật)",
             "adult_crcl_15_30": "75mg x 2 lần/ngày",
             "adult_crcl_<15": "CHỐNG CHỈ ĐỊNH",
-            "notes": """DOAC (Direct Oral Anticoagulant), ức chế thrombin trực tiếp. Uống với thức ăn. Không cần theo dõi INR. Điều chỉnh liều theo CrCl. Có antidote đặc hiệu (idarucizumab).""",
+            "adult_start": "150mg x 2 lần/ngày (CrCl >30)",
+            "adult_usual": "150mg x 2 lần/ngày (CrCl >30), 75mg x 2 lần/ngày (CrCl 15-30)",
+            "adult_max": "300mg/ngày",
+            "elderly": "Không cần điều chỉnh liều đặc biệt, nhưng điều chỉnh theo CrCl.",
+            "renal_adjustment_dosage": {
+                "normal": "150mg x 2 lần/ngày (CrCl >30)",
+                "30_60": "150mg x 2 lần/ngày (CrCl >30)",
+                "under_30": "75mg x 2 lần/ngày (CrCl 15-30), CHỐNG CHỈ ĐỊNH nếu CrCl <15",
+                "dialysis": "CHỐNG CHỈ ĐỊNH"
+            },
+            "administration_route": "PO",
+            "frequency": "2 lần/ngày",
+            "with_food": "Nên uống với thức ăn",
+            "notes": """DOAC (Direct Oral Anticoagulant), ức chế thrombin trực tiếp. Uống với thức ăn. Không cần theo dõi INR. Điều chỉnh liều theo CrCl. Có antidote đặc hiệu (idarucizumab). Thải trừ chủ yếu qua thận."""
         },
         "renal_adjustment": {
             "normal": "Không đổi (CrCl >30: 150mg x 2 lần/ngày)",

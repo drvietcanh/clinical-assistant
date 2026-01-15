@@ -29,7 +29,25 @@ STATINS_DRUGS = {
             "hypercholesterolemia": "Khởi đầu 10-20mg PO x 1 lần/tối. Tối đa 80mg/ngày.",
             "high_intensity": "40-80mg/ngày (giảm LDL ≥50%).",
             "moderate_intensity": "10-20mg/ngày (giảm LDL 30-50%).",
-            "notes": "Uống buổi tối (cholesterol tổng hợp nhiều vào ban đêm). Atorvastatin có thể uống bất kỳ lúc nào.",
+            "adult_start": "10-20mg PO x 1 lần/ngày",
+            "adult_usual": "20-40mg PO x 1 lần/ngày",
+            "adult_max": "80mg/ngày",
+            "elderly": "Khởi đầu 10mg PO x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ (đau cơ).",
+            "renal_adjustment_dosage": {
+                "normal": "10-80mg PO x 1 lần/ngày",
+                "30_60": "Không cần điều chỉnh liều",
+                "under_30": "Thận trọng, có thể cần giảm liều",
+                "dialysis": "Không cần điều chỉnh liều"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "10-80mg PO x 1 lần/ngày",
+                "moderate": "Thận trọng, giảm liều",
+                "severe": "CHỐNG CHỈ ĐỊNH (bệnh gan hoạt động)"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Uống buổi tối (cholesterol tổng hợp nhiều vào ban đêm). Atorvastatin có thể uống bất kỳ lúc nào. Chuyển hóa qua gan (CYP3A4), CHỐNG CHỈ ĐỊNH trong bệnh gan hoạt động."
         },
         "side_effects": [
             "Đau cơ (Myalgia) - Phổ biến (~5%)",
@@ -236,7 +254,27 @@ STATINS_DRUGS = {
     ],
         "dosage": {
             "hypercholesterolemia": "Khởi đầu 10-20mg PO x 1 lần/tối. Tối đa 40mg/ngày (80mg không khuyến cáo do nguy cơ tan rã cơ).",
-            "notes": "PHẢI uống buổi tối. Tương tác thuốc nhiều hơn Atorvastatin.",
+            "high_intensity": "40mg/ngày (giảm LDL ≥50%).",
+            "moderate_intensity": "10-20mg/ngày (giảm LDL 30-50%).",
+            "adult_start": "10-20mg PO x 1 lần/ngày",
+            "adult_usual": "20-40mg PO x 1 lần/ngày",
+            "adult_max": "40mg/ngày (80mg không khuyến cáo)",
+            "elderly": "Khởi đầu 10mg PO x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "10-40mg PO x 1 lần/ngày",
+                "30_60": "Không cần điều chỉnh liều",
+                "under_30": "Thận trọng, có thể cần giảm liều",
+                "dialysis": "Không cần điều chỉnh liều"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "10-40mg PO x 1 lần/ngày",
+                "moderate": "Thận trọng, giảm liều",
+                "severe": "CHỐNG CHỈ ĐỊNH (bệnh gan hoạt động)"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "PHẢI uống buổi tối. Tương tác thuốc nhiều hơn Atorvastatin (CYP3A4). CHỐNG CHỈ ĐỊNH trong bệnh gan hoạt động."
         },
         "side_effects": [
             "Tương tự Atorvastatin",
@@ -372,8 +410,27 @@ STATINS_DRUGS = {
     ],
         "dosage": {
             "hypercholesterolemia": "Khởi đầu 5-10mg PO x 1 lần/ngày. Tối đa 40mg/ngày.",
-            "high_intensity": "20-40mg/ngày.",
-            "notes": "Statin mạnh nhất. Có thể uống bất kỳ lúc nào. Uống với hoặc không thức ăn.",
+            "high_intensity": "20-40mg/ngày (giảm LDL ≥50%).",
+            "moderate_intensity": "5-10mg/ngày (giảm LDL 30-50%).",
+            "adult_start": "5-10mg PO x 1 lần/ngày",
+            "adult_usual": "10-20mg PO x 1 lần/ngày",
+            "adult_max": "40mg/ngày",
+            "elderly": "Khởi đầu 5mg PO x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "5-40mg PO x 1 lần/ngày",
+                "30_60": "Không cần điều chỉnh liều",
+                "under_30": "Không cần điều chỉnh liều",
+                "dialysis": "Không cần điều chỉnh liều"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "5-40mg PO x 1 lần/ngày",
+                "moderate": "Thận trọng, giảm liều",
+                "severe": "CHỐNG CHỈ ĐỊNH (bệnh gan hoạt động)"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Statin mạnh nhất. Có thể uống bất kỳ lúc nào. Uống với hoặc không thức ăn. CHỐNG CHỈ ĐỊNH trong bệnh gan hoạt động."
         },
         "side_effects": [
             "Đau cơ (Myalgia) - Phổ biến",

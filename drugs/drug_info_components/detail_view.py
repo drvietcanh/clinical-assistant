@@ -36,8 +36,11 @@ def safe_render_html(text):
         return ""
     text_str = str(text)
     # Nếu có dấu hiệu HTML tag, strip toàn bộ tag đi
+    # Kiểm tra kỹ hơn để tránh false positive với các ký tự < > trong text
     if "<" in text_str and ">" in text_str:
-        text_str = re.sub(r"<[^>]+>", "", text_str)
+        # Chỉ strip nếu có vẻ như là HTML tag (có chữ cái sau <)
+        if re.search(r'<[a-zA-Z/]', text_str):
+            text_str = re.sub(r"<[^>]+>", "", text_str)
     # Escape để đảm bảo an toàn
     return html.escape(text_str.strip())
 

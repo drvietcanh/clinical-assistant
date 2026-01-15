@@ -2,8 +2,7 @@
 Active module - contains all diabetes drug data"""
 
 # Import all drug categories
-# Temporarily skip biguanides.py due to syntax errors
-# from .biguanides import BIGUANIDES_DRUGS
+from .biguanides import BIGUANIDES_DRUGS
 from .dpp_4_inhibitors import DPP_4_INHIBITORS_DRUGS
 from .insulins import INSULINS_DRUGS
 from .specific_insulins import SPECIFIC_INSULINS_DRUGS
@@ -19,7 +18,7 @@ from .other_antidiabetics import OTHER_ANTIDIABETICS_DRUGS
 
 # Merge all categories
 DIABETES_DRUGS = {
-    # **BIGUANIDES_DRUGS,  # Temporarily skipped
+    **BIGUANIDES_DRUGS,
     **DPP_4_INHIBITORS_DRUGS,
     **INSULINS_DRUGS,
     **SPECIFIC_INSULINS_DRUGS,

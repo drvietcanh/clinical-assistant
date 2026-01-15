@@ -263,6 +263,156 @@ ANTIDIARRHEALS_DRUGS = {
             "ACG 2017 GERD Guidelines",
             "FDA - Over-the-counter antacids",
         ]
+    },
+    
+    "Racecadotril": {
+        "group": "Gastrointestinal - Antidiarrheal (Enkephalinase Inhibitor)",
+        "vietnamese_name": "Racecadotril, Hidrasec, Tiorfan",
+        "brand_names": {
+            "common": ["Hidrasec", "Tiorfan"],
+            "vietnam": ["Racecadotril 100mg", "Hidrasec", "Tiorfan"]
+        },
+        "administration": ["PO"],
+        "indications": [
+            "Tiêu chảy cấp ở người lớn và trẻ em",
+            "Tiêu chảy do nhiễm khuẩn (kết hợp với kháng sinh)",
+            "Tiêu chảy do virus (rotavirus)"
+        ],
+        "contraindications": [
+            "Dị ứng racecadotril",
+            "Suy thận nặng (CrCl <30 ml/phút)",
+            "Suy gan nặng"
+        ],
+        "dosage": {
+            "adult_po": "100mg PO x 3 lần/ngày (cách 8 giờ) cho đến khi hết tiêu chảy, tối đa 7 ngày",
+            "pediatric_1_5_months": "1.5mg/kg PO x 3 lần/ngày",
+            "pediatric_3_months_3_years": "10mg PO x 3 lần/ngày",
+            "pediatric_3_6_years": "30mg PO x 3 lần/ngày",
+            "pediatric_6_9_years": "60mg PO x 3 lần/ngày",
+            "pediatric_over_9_years": "100mg PO x 3 lần/ngày",
+            "geriatric_dosing": "Không cần chỉnh liều, nhưng thận trọng ở người già",
+            "notes": "Uống trước bữa ăn. Không dùng quá 7 ngày. Hiệu quả tốt cho tiêu chảy cấp, đặc biệt ở trẻ em."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Tránh dùng hoặc giảm liều đáng kể",
+            "notes": "Racecadotril và chất chuyển hóa thải trừ qua thận. Suy thận làm giảm thải trừ."
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Buồn nôn",
+            "Phát ban (hiếm)",
+            "Tăng men gan (hiếm)"
+        ],
+        "interactions": [
+            "Ít tương tác thuốc đáng kể",
+            "Có thể dùng cùng kháng sinh để điều trị tiêu chảy nhiễm khuẩn"
+        ],
+        "pregnancy": "C - Dữ liệu hạn chế, chỉ dùng khi lợi ích > nguy cơ",
+        "mechanism_of_action": "Enkephalinase inhibitor. Ức chế enzyme enkephalinase ở niêm mạc ruột, làm tăng nồng độ enkephalin tại chỗ. Enkephalin kích thích thụ thể delta-opioid ở ruột, giảm tiết dịch ruột và tăng hấp thu nước/điện giải. Khác với loperamide (ức chế nhu động), racecadotril chỉ giảm tiết dịch mà không ảnh hưởng nhu động ruột, nên an toàn hơn và không che dấu triệu chứng tắc ruột.",
+        "monitoring": [
+            "Đáp ứng lâm sàng (giảm tần suất đi ngoài, cải thiện tính chất phân)",
+            "Dấu hiệu mất nước (đặc biệt ở trẻ em)",
+            "Chức năng thận (nếu dùng kéo dài hoặc suy thận)"
+        ],
+        "precautions": [
+            "Uống trước bữa ăn để tăng hiệu quả",
+            "Không dùng quá 7 ngày",
+            "Thận trọng ở suy thận - giảm liều",
+            "An toàn hơn loperamide vì không ảnh hưởng nhu động ruột",
+            "Có thể dùng cùng kháng sinh cho tiêu chảy nhiễm khuẩn"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ",
+            "onset": "1-2 giờ",
+            "duration": "6-8 giờ",
+            "protein_binding": "90%",
+            "metabolism": "Gan (chuyển hóa thành thiorphan - chất hoạt tính)",
+            "clearance": "Thận (thải trừ chất chuyển hóa)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng racecadotril",
+                "Suy thận nặng (CrCl <30 ml/phút)"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-60) - giảm liều",
+                "Suy gan nặng - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Dữ liệu hạn chế. Chỉ dùng khi lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Chưa rõ bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Thận trọng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Thận trọng",
+            "severe": "Tránh dùng",
+            "notes": "Racecadotril chuyển hóa ở gan. Suy gan nặng có thể làm giảm chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Nhức đầu, buồn nôn",
+                "Chóng mặt"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ triệu chứng",
+                "Theo dõi dấu hiệu sinh tồn"
+            ],
+            "monitoring": "Theo dõi triệu chứng, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống trước bữa ăn để tăng hiệu quả",
+                "timing": "Uống 3 lần/ngày (cách 8 giờ). Không dùng quá 7 ngày."
+            }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": []
+        },
+        "guideline_tags": [
+            "WHO Guidelines - Diarrhea treatment",
+            "ESPGHAN Guidelines - Acute diarrhea in children"
+        ],
+        "references": {
+            "primary_sources": [
+                "UpToDate - Racecadotril: Drug information",
+                "ESPGHAN Guidelines - Acute diarrhea",
+                "WHO Guidelines - Diarrhea treatment"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High - Multiple RCTs, guideline-recommended for acute diarrhea"
+        },
+        "cost_estimate": {
+            "generic": "Trung bình",
+            "brand": "Trung bình-cao",
+            "notes": "Có generic, giá hợp lý"
+        }
     }
 }
 

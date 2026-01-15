@@ -22,7 +22,19 @@ SELECTIVE_BETA_BLOCKERS = {
         "dosage": {
             "adult_htn": "200-400mg x 2 lần/ngày",
             "adult_angina": "200-400mg x 2 lần/ngày",
+            "adult_start": "200mg x 2 lần/ngày",
+            "adult_usual": "200-400mg x 2 lần/ngày",
             "adult_max": "1200mg/ngày",
+            "elderly": "Khởi đầu 100mg x 2 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "200-400mg x 2 lần/ngày",
+                "30_60": "100-200mg x 2 lần/ngày (giảm liều 50%)",
+                "under_30": "50-100mg x 2 lần/ngày (giảm liều 75%)",
+                "dialysis": "Bổ sung liều sau mỗi lần lọc máu"
+            },
+            "administration_route": "PO",
+            "frequency": "2 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
             "notes": "Selective beta-1 blocker. Có ISA (intrinsic sympathomimetic activity) - ít gây nhịp tim chậm hơn các beta-blocker khác. Thải qua thận, cần điều chỉnh liều ở suy thận."
         },
         "renal_adjustment": {
@@ -221,7 +233,20 @@ SELECTIVE_BETA_BLOCKERS = {
         "adult_htn": "25-100mg x 1 lần/ngày",
         "adult_angina": "50-100mg x 1 lần/ngày",
         "adult_post_mi": "50-100mg x 1 lần/ngày",
-        "notes": "Uống 1 lần/ngày. Chọn lọc beta-1"
+        "adult_start": "25-50mg x 1 lần/ngày",
+        "adult_usual": "50-100mg x 1 lần/ngày",
+        "adult_max": "100mg/ngày",
+        "elderly": "Khởi đầu 12.5-25mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+        "renal_adjustment_dosage": {
+            "normal": "25-100mg x 1 lần/ngày",
+            "30_60": "12.5-50mg x 1 lần/ngày (giảm liều 50%)",
+            "under_30": "12.5-25mg mỗi 2 ngày hoặc 12.5mg x 1 lần/ngày (giảm liều 75%)",
+            "dialysis": "Bổ sung liều sau mỗi lần lọc máu"
+        },
+        "administration_route": "PO",
+        "frequency": "1 lần/ngày",
+        "with_food": "Có thể uống với hoặc không thức ăn",
+        "notes": "Uống 1 lần/ngày. Chọn lọc beta-1. Thải chủ yếu qua thận (85-100% thải nguyên dạng), cần điều chỉnh liều ở suy thận."
     },
     "renal_adjustment": {
         "normal": "Không đổi",
@@ -472,7 +497,20 @@ SELECTIVE_BETA_BLOCKERS = {
             "adult_htn": "10-20mg x 1 lần/ngày",
             "adult_angina": "10-20mg x 1 lần/ngày",
             "adult_glaucoma": "1 giọt 0.25% hoặc 0.5% x 2 lần/ngày (mỗi mắt)",
-            "notes": "Selective beta-1 blocker. Half-life dài (14-22 giờ), dùng 1 lần/ngày. Có dạng uống và dạng nhỏ mắt (cho tăng nhãn áp). Dạng nhỏ mắt có thể hấp thu toàn thân và gây tác dụng phụ."
+            "adult_start": "10mg x 1 lần/ngày",
+            "adult_usual": "10-20mg x 1 lần/ngày",
+            "adult_max": "20mg/ngày",
+            "elderly": "Khởi đầu 5mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "10-20mg x 1 lần/ngày",
+                "30_60": "10mg x 1 lần/ngày, thận trọng",
+                "under_30": "10mg x 1 lần/ngày, thận trọng",
+                "dialysis": "Không có dữ liệu cụ thể"
+            },
+            "administration_route": "PO, Ophthalmic",
+            "frequency": "1 lần/ngày (PO), 2 lần/ngày (ophthalmic)",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Selective beta-1 blocker. Half-life dài (14-22 giờ), dùng 1 lần/ngày. Có dạng uống và dạng nhỏ mắt (cho tăng nhãn áp). Dạng nhỏ mắt có thể hấp thu toàn thân và gây tác dụng phụ. CHỐNG CHỈ ĐỊNH trong suy gan nặng."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
@@ -674,7 +712,20 @@ SELECTIVE_BETA_BLOCKERS = {
         "adult_htn": "2.5-10mg x 1 lần/ngày",
         "adult_heart_failure": "1.25mg x 1 lần/ngày, tăng dần đến 10mg x 1 lần/ngày",
         "adult_angina": "5-10mg x 1 lần/ngày",
-        "notes": "Uống 1 lần/ngày. Có bằng chứng giảm tỷ lệ tử vong trong suy tim"
+        "adult_start": "2.5mg x 1 lần/ngày (tăng huyết áp), 1.25mg x 1 lần/ngày (suy tim)",
+        "adult_usual": "5-10mg x 1 lần/ngày (tăng huyết áp), 5-10mg x 1 lần/ngày (suy tim)",
+        "adult_max": "10mg/ngày",
+        "elderly": "Khởi đầu 1.25mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+        "renal_adjustment_dosage": {
+            "normal": "2.5-10mg x 1 lần/ngày",
+            "30_60": "2.5-5mg x 1 lần/ngày, thận trọng",
+            "under_30": "1.25-2.5mg x 1 lần/ngày, thận trọng",
+            "dialysis": "Không có dữ liệu cụ thể"
+        },
+        "administration_route": "PO",
+        "frequency": "1 lần/ngày",
+        "with_food": "Có thể uống với hoặc không thức ăn",
+        "notes": "Uống 1 lần/ngày. Có bằng chứng giảm tỷ lệ tử vong trong suy tim. Thải qua cả thận (50%) và gan (50%)."
     },
     "renal_adjustment": {
         "normal": "Không đổi",
@@ -933,8 +984,21 @@ SELECTIVE_BETA_BLOCKERS = {
         "dosage": {
             "adult_po": "25-200mg x 2 lần/ngày (tartrate) hoặc 50-200mg x 1 lần/ngày (succinate)",
             "adult_iv": "2.5-5mg IV mỗi 5 phút x 3 lần (tối đa 15mg)",
-            "heart_failure": "12.5-25mg x 2 lần/ngày, tăng dần đến 200mg x 2 lần/ngày",
-            "notes": "Tartrate: ngắn tác dụng, Succinate: dài tác dụng"
+            "adult_heart_failure": "12.5-25mg x 2 lần/ngày, tăng dần đến 200mg x 2 lần/ngày",
+            "adult_start": "25mg x 2 lần/ngày (tartrate) hoặc 50mg x 1 lần/ngày (succinate)",
+            "adult_usual": "50-100mg x 2 lần/ngày (tartrate) hoặc 100-200mg x 1 lần/ngày (succinate)",
+            "adult_max": "200mg x 2 lần/ngày (tartrate) hoặc 200mg x 1 lần/ngày (succinate)",
+            "elderly": "Khởi đầu 12.5mg x 2 lần/ngày (tartrate) hoặc 25mg x 1 lần/ngày (succinate), tăng dần.",
+            "renal_adjustment_dosage": {
+                "normal": "25-200mg x 2 lần/ngày (tartrate) hoặc 50-200mg x 1 lần/ngày (succinate)",
+                "30_60": "Giảm liều nhẹ, thận trọng",
+                "under_30": "Giảm liều 50%, thận trọng",
+                "dialysis": "Không có dữ liệu cụ thể"
+            },
+            "administration_route": "PO, IV",
+            "frequency": "2 lần/ngày (tartrate), 1 lần/ngày (succinate), mỗi 5 phút x 3 lần (IV)",
+            "with_food": "Có thể uống với thức ăn để giảm tác dụng phụ",
+            "notes": "Tartrate: ngắn tác dụng (uống 2 lần/ngày), Succinate: dài tác dụng (uống 1 lần/ngày). Chuyển hóa qua gan (CYP2D6), cần điều chỉnh liều ở suy gan."
         },
         "side_effects": [
             "Mệt mỏi",
@@ -1174,8 +1238,20 @@ SELECTIVE_BETA_BLOCKERS = {
         "dosage": {
             "adult_htn": "5mg x 1 lần/ngày, tăng đến 10-20mg x 1 lần/ngày nếu cần",
             "adult_heart_failure": "1.25mg x 1 lần/ngày, tăng dần đến 10mg x 1 lần/ngày",
-            "adult_elderly": "Khởi đầu 2.5mg x 1 lần/ngày",
-            "notes": "Uống 1 lần/ngày. Có bằng chứng giảm tỷ lệ tử vong trong suy tim. Có tác dụng giãn mạch (NO-mediated)."
+            "adult_start": "5mg x 1 lần/ngày (tăng huyết áp), 1.25mg x 1 lần/ngày (suy tim)",
+            "adult_usual": "10-20mg x 1 lần/ngày (tăng huyết áp), 5-10mg x 1 lần/ngày (suy tim)",
+            "adult_max": "20mg/ngày",
+            "elderly": "Khởi đầu 2.5mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "5-20mg x 1 lần/ngày",
+                "30_60": "2.5-10mg x 1 lần/ngày, thận trọng",
+                "under_30": "2.5-10mg x 1 lần/ngày, thận trọng",
+                "dialysis": "Không có dữ liệu cụ thể"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Uống 1 lần/ngày. Có bằng chứng giảm tỷ lệ tử vong trong suy tim. Có tác dụng giãn mạch (NO-mediated). Chuyển hóa qua gan (CYP2D6), CHỐNG CHỈ ĐỊNH trong suy gan nặng."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
@@ -1225,7 +1301,7 @@ SELECTIVE_BETA_BLOCKERS = {
             "clearance": "Chủ yếu qua gan (metabolism), một phần qua thận"
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
-        "black_box_warnings": None,
+        "black_box_warnings": "KHÔNG NGỪNG ĐỘT NGỘT beta-blocker ở bệnh nhân bệnh mạch vành hoặc nguy cơ cao: có thể làm nặng đau thắt ngực, gây nhồi máu cơ tim hoặc loạn nhịp đe dọa tính mạng. Nếu cần ngừng nebivolol, phải GIẢM LIỀU TỪ TỪ trong ít nhất 1–2 tuần, đồng thời theo dõi chặt chẽ triệu chứng đau ngực, huyết áp và nhịp tim.",
         "drug_interactions": {
             "major": [
                 {
@@ -1336,19 +1412,26 @@ SELECTIVE_BETA_BLOCKERS = {
             "evidence_level": "High - Large RCT (SENIORS) showing mortality benefit in heart failure and extensive clinical experience"
         },
         "risk_flags": {
-            "high_alert": False,
-            "narrow_therapeutic_index": False,
-            "icu_critical_care_only": False,
-            "bleeding_risk": "Low",
-            "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"},
-            "requires_monitoring": ["Heart rate", "Blood pressure"]
+        "high_alert": False,
+        "narrow_therapeutic_index": False,
+        "icu_critical_care_only": False,
+        "bleeding_risk": "Low",
+        "organ_toxicity": {"cardiac": "Moderate (bradycardia, AV block)"},
+        "requires_monitoring": [
+            "Heart rate (bradycardia risk)",
+            "Blood pressure",
+            "ECG (AV block, đặc biệt khi phối hợp verapamil/diltiazem)",
+            "Dấu hiệu suy tim nặng lên (phù, khó thở, tăng cân)",
+            "Withdrawal syndrome (KHÔNG NGỪNG ĐỘT NGỘT beta-blocker - Black Box Warning)"
+        ]
         },
         "guideline_tags": [
-            "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
-            "ESC Guidelines - Heart Failure",
-            "SENIORS Study - Heart Failure in Elderly",
-            "ACC/AHA Guidelines - Hypertension",
-            "WHO Essential Medicines List"
+        "FDA Black Box Warning - Do Not Stop Abruptly (angina, MI risk)",
+        "ACC/AHA/HFSA Guidelines - Heart Failure with Reduced Ejection Fraction",
+        "ESC Guidelines - Heart Failure",
+        "SENIORS Study - Heart Failure in Elderly",
+        "ACC/AHA Guidelines - Hypertension",
+        "WHO Essential Medicines List"
         ],
         "last_updated": "2025-02-18",
     },
@@ -1372,11 +1455,24 @@ SELECTIVE_BETA_BLOCKERS = {
             "COPD nặng"
         ],
         "dosage": {
-            "adult_po_htn": "10-20mg x 2 lần/ngày, tối đa 60mg/ngày",
-            "adult_po_angina": "10-20mg x 2 lần/ngày",
-            "adult_po_post_mi": "10mg x 2 lần/ngày, tăng đến 20mg x 2 lần/ngày",
-            "adult_ophthalmic_glaucoma": "0.25% hoặc 0.5% x 1-2 giọt mỗi mắt x 2 lần/ngày",
-            "notes": "Có dạng uống và nhỏ mắt. Dạng nhỏ mắt có thể hấp thu toàn thân."
+            "adult_htn": "10-20mg x 2 lần/ngày, tối đa 60mg/ngày",
+            "adult_angina": "10-20mg x 2 lần/ngày",
+            "adult_post_mi": "10mg x 2 lần/ngày, tăng đến 20mg x 2 lần/ngày",
+            "adult_glaucoma": "0.25% hoặc 0.5% x 1-2 giọt mỗi mắt x 2 lần/ngày",
+            "adult_start": "10mg x 2 lần/ngày",
+            "adult_usual": "10-20mg x 2 lần/ngày",
+            "adult_max": "60mg/ngày",
+            "elderly": "Khởi đầu 5-10mg x 2 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "10-20mg x 2 lần/ngày",
+                "30_60": "10mg x 2 lần/ngày, thận trọng",
+                "under_30": "5-10mg x 2 lần/ngày (giảm liều 50%)",
+                "dialysis": "Không có dữ liệu cụ thể"
+            },
+            "administration_route": "PO, Ophthalmic",
+            "frequency": "2 lần/ngày (PO), 2 lần/ngày (ophthalmic)",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Có dạng uống và nhỏ mắt. Dạng nhỏ mắt có thể hấp thu toàn thân và gây tác dụng phụ. Chuyển hóa qua gan (CYP2D6), cần điều chỉnh liều ở suy gan."
         },
         "renal_adjustment": {
             "normal": "Không đổi",

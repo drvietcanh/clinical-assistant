@@ -6,6 +6,8 @@ Quick access to all critical care tools
 import streamlit as st
 from components.ui.results import render_result_box, render_result_card
 from components.ui.cards import render_clickable_dashboard_card
+from critical_care.patient_dashboard import render_patient_dashboard
+from critical_care.clinical_alerts import render_clinical_alerts, render_alerts_summary
 
 # Try to use enhanced version if available
 try:
@@ -22,12 +24,37 @@ def render_critical_care_dashboard():
     if USE_ENHANCED:
         return render_enhanced_critical_care_dashboard()
     
-    st.markdown("## 🏠 Critical Care Dashboard")
-    st.markdown("""
-    Trang tổng quan - Truy cập nhanh tất cả công cụ hồi sức
-    """)
+    # Main tabs for dashboard
+    main_tabs = st.tabs([
+        "🏠 Tổng quan",
+        "🏥 Bệnh nhân",
+        "🚨 Cảnh báo"
+    ])
     
-    st.markdown("---")
+    # Tab 1: Overview
+    with main_tabs[0]:
+        st.markdown("## 🏠 Critical Care Dashboard")
+        st.markdown("""
+        Trang tổng quan - Truy cập nhanh tất cả công cụ hồi sức
+        """)
+        
+        # Alerts summary
+        alerts_summary = render_alerts_summary()
+        if alerts_summary and alerts_summary.get('total', 0) > 0:
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.metric("🚨 Nghiêm trọng", alerts_summary.get('critical', 0), delta=None)
+            with col2:
+                st.metric("⚠️ Cảnh báo", alerts_summary.get('warning', 0), delta=None)
+            with col3:
+                st.metric("ℹ️ Thông tin", alerts_summary.get('info', 0), delta=None)
+            with col4:
+                st.metric("📊 Tổng cộng", alerts_summary.get('total', 0), delta=None)
+            
+            if alerts_summary.get('critical', 0) > 0:
+                st.error(f"⚠️ Có {alerts_summary.get('critical', 0)} cảnh báo nghiêm trọng. Vui lòng xem tab 'Cảnh báo'.")
+        
+        st.markdown("---")
     
     # Quick access cards - Now clickable!
     st.markdown("### ⚡ Truy cập nhanh")
@@ -205,4 +232,61 @@ def render_critical_care_dashboard():
     
     for tip in tips:
         st.markdown(f"- {tip}")
+    
+    # Tab 2: Patient Dashboard
+    with main_tabs[1]:
+        render_patient_dashboard()
+    
+    # Tab 3: Clinical Alerts
+    with main_tabs[2]:
+        render_clinical_alerts()
+        
+        # Workflow links section
+        st.markdown("---")
+        st.markdown("### 🔗 Liên kết workflow")
+        st.caption("Chuyển nhanh giữa các công cụ liên quan")
+        
+        workflow_groups = [
+            {
+                "title": "🫁 Hô hấp",
+                "tools": [
+                    ("🫁 Ventilator Management", "🫁 Ventilator Management"),
+                    ("🫁 ARDS Protocols", "🫁 ARDS Protocols"),
+                    ("💤 Sedation & Analgesia", "💤 Sedation & Analgesia"),
+                    ("📊 RASS Calculator", "📊 Scoring Systems")
+                ]
+            },
+            {
+                "title": "💧 Huyết động",
+                "tools": [
+                    ("💧 Fluid Therapy", "💧 Fluid Therapy"),
+                    ("💉 Vasopressors", "💉 Vasopressors"),
+                    ("💉 Shock Management", "💉 Shock Management"),
+                    ("🩺 RRT Calculator", "🩺 RRT Calculator")
+                ]
+            },
+            {
+                "title": "🦠 Nhiễm trùng",
+                "tools": [
+                    ("🦠 Sepsis Protocols", "🦠 Sepsis Protocols"),
+                    ("📊 SOFA Score", "📊 Scoring Systems"),
+                    ("🩸 Transfusion", "🩸 Transfusion")
+                ]
+            }
+        ]
+        
+        for group in workflow_groups:
+            st.markdown(f"#### {group['title']}")
+            cols = st.columns(len(group['tools']))
+            for idx, (label, tool_value) in enumerate(group['tools']):
+                with cols[idx]:
+                    if st.button(label, key=f"workflow_{group['title']}_{idx}", use_container_width=True):
+                        st.session_state['critical_care_tool_selection'] = tool_value
+                        if tool_value == "📊 Scoring Systems":
+                            if "RASS" in label:
+                                st.session_state['scoring_calc_to_open'] = 'rass'
+                            elif "SOFA" in label:
+                                st.session_state['scoring_calc_to_open'] = 'sofa'
+                        st.rerun()
+            st.markdown("---")
 

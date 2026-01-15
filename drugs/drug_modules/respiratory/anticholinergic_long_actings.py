@@ -9,11 +9,33 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'Inhalation (DPI)'],
         'indications': [
         'COPD (phòng ngừa, đơn trị hoặc kết hợp với formoterol)'],
-        'contraindications': ['Dị ứng atropine/aclidinium', 'Glaucoma góc đóng',
-        'Tăng nhãn áp', 'Phì đại tuyến tiền liệt nặng'],
+        'contraindications': {
+            'tuyệt_đối': [
+                'Dị ứng với aclidinium, atropine hoặc các thành phần khác',
+                'Glaucoma góc đóng (chống chỉ định tuyệt đối)',
+                'Tăng nhãn áp nặng không kiểm soát'
+            ],
+            'tương_đối': [
+                'Glaucoma góc mở - thận trọng, theo dõi nhãn áp',
+                'Tăng nhãn áp nhẹ - thận trọng, tránh để thuốc vào mắt',
+                'Phì đại tuyến tiền liệt nặng - có thể gây bí tiểu',
+                'Bí tiểu - có thể làm nặng',
+                'Táo bón nặng - có thể làm nặng',
+                'Suy thận trung bình (CrCl 30-60 ml/min) - thận trọng, theo dõi tác dụng phụ',
+                'Nhược cơ - có thể làm nặng',
+                'Dùng với anticholinergic khác - tăng tác dụng phụ'
+            ]
+        },
         'dosage': {
-        'adult_inhalation': '400mcg x 2 lần/ngày (sáng và tối)', 'notes':
-        'Tác dụng kéo dài 12 giờ. Dùng 2 lần/ngày (khác tiotropium dùng 1 lần/ngày)'
+            'adult_inhalation': '400mcg x 2 lần/ngày (sáng và tối)',
+            'pediatric': {
+                'notes': 'Chưa được nghiên cứu ở trẻ em. Không khuyến cáo sử dụng ở trẻ em.'
+            },
+            'geriatric': {
+                'dosing': 'Liều tương tự người lớn (không cần điều chỉnh liều)',
+                'notes': 'Không cần điều chỉnh liều, nhưng thận trọng ở bệnh nhân phì đại tuyến tiền liệt và glaucoma'
+            },
+            'notes': 'Tác dụng kéo dài 12 giờ. Dùng 2 lần/ngày (khác tiotropium dùng 1 lần/ngày). Dùng đều đặn hàng ngày, không phải khi cần.'
         },
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Thận trọng',
         'under_30': 'Thận trọng'},
@@ -41,9 +63,18 @@ ANTICHOLINERGIC_LONG_ACTINGS_DRUGS = {
         'An toàn hơn beta-agonist cho bệnh nhân tim mạch (không kích thích tim)',
         'Không dùng để cắt cơn (tác dụng chậm) - cần có SABA để cắt cơn',
         'Có thể dùng kết hợp với formoterol (LABA) trong fixed-dose combination'],
-        'pharmacokinetics': {'half_life': '5-8 giờ', 'onset': '15-30 phút',
-        'duration': '12 giờ (ngắn hơn tiotropium 24 giờ)', 'protein_binding': 'N/A',
-        'clearance': 'Thận (thải qua thận, ít tích lũy hơn tiotropium)'},
+        'pharmacokinetics': {
+            'half_life': '5-8 giờ (ngắn hơn tiotropium)',
+            'onset': '15-30 phút',
+            'duration': '12 giờ (ngắn hơn tiotropium 24 giờ)',
+            'bioavailability': 'Không đáng kể (ion hóa, không hấp thu hệ thống)',
+            'protein_binding': 'Không đáng kể (ion hóa)',
+            'volume_of_distribution': 'Không đáng kể (ion hóa)',
+            'metabolism': 'Không chuyển hóa đáng kể. Tác dụng chủ yếu tại chỗ (phế quản).',
+            'clearance': 'Thận (thải qua thận, ít tích lũy hơn tiotropium). Một phần nhỏ được nuốt vào và thải qua phân.',
+            'absorption': 'Hấp thu tối thiểu sau khi hít do ion hóa. Một phần nhỏ được nuốt vào nhưng không hấp thu đáng kể.',
+            'food_effect': 'Không ảnh hưởng đáng kể đến hấp thu dạng hít'
+        },
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. DPI: bảo quản trong bao bì gốc. Kiểm tra hạn sử dụng định kỳ.'
         , 'black_box_warnings':

@@ -270,8 +270,9 @@ NSAIDS_DRUGS = {
         'Tương tác với fluconazole (tăng nồng độ celecoxib)'],
         'pharmacokinetics': {
         'half_life': '11 giờ', 'onset': '30-60 phút', 'duration': '12-24 giờ',
-        'protein_binding': '97%', 'clearance':
-        'Gan (chuyển hóa qua CYP2C9), thận (thải trừ)'},
+        'protein_binding': '97%', 'metabolism':
+        'Gan (chuyển hóa qua CYP2C9 thành các chất chuyển hóa không hoạt động). Chuyển hóa chủ yếu qua CYP2C9, một phần qua CYP3A4. Tương tác với fluconazole (ức chế CYP2C9) làm tăng nồng độ celecoxib.',
+        'clearance': 'Thận (thải trừ các chất chuyển hóa, <3% bài tiết dưới dạng không đổi)'},
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm', 'black_box_warnings':
         'Tăng nguy cơ nhồi máu cơ tim và đột quỵ nghiêm trọng, có thể tử vong. Nguy cơ tăng khi dùng lâu dài hoặc liều cao. CHỐNG CHỈ ĐỊNH ở bệnh nhân có bệnh tim mạch nặng, tiền sử nhồi máu cơ tim, đột quỵ. Không dùng trong 3 tháng cuối thai kỳ.',
@@ -362,7 +363,28 @@ NSAIDS_DRUGS = {
             "ACR 2021 Osteoarthritis Guidelines",
             "FDA Black Box Warning - Cardiovascular and GI risks",
             "ISMP High Alert Medications - NSAIDs"
-        ]
+        ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <2 tuổi",
+            "infants": "Không khuyến cáo cho trẻ <2 tuổi",
+            "children_2_12": "Chưa được FDA phê duyệt cho trẻ em <18 tuổi. Không khuyến cáo sử dụng.",
+            "adolescents_12_18": "Chưa được FDA phê duyệt cho trẻ em <18 tuổi. Không khuyến cáo sử dụng.",
+            "notes": "Celecoxib chưa được FDA phê duyệt cho trẻ em dưới 18 tuổi. Không nên sử dụng ở trẻ em do thiếu dữ liệu an toàn và hiệu quả."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ, đặc biệt là biến cố tim mạch (nhồi máu cơ tim, đột quỵ), suy thận, và chảy máu dạ dày. Suy thận và suy tim phổ biến hơn ở người cao tuổi.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (100mg x 1 lần/ngày). Giảm liều nếu có suy thận (CrCl <60). Tránh dùng lâu dài. Đặc biệt thận trọng ở bệnh nhân có bệnh tim mạch.",
+            "monitoring": "Theo dõi dấu hiệu biến cố tim mạch sát hơn (đau ngực, khó thở, đột quỵ). Theo dõi chức năng thận (creatinine, BUN) thường xuyên. Theo dõi dấu hiệu chảy máu dạ dày. Theo dõi huyết áp."
+        },
+        "brand_names": {
+            "vietnam": ["Celebrex", "Celecoxib", "Celecoxib Stada", "Celecoxib Teva"],
+            "common": ["Celebrex", "Celecoxib"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "15,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Celecoxib generic thường rẻ hơn (15,000-30,000 VND/viên 200mg). Celebrex (brand) đắt hơn (30,000-50,000 VND/viên 200mg)."
+        }
     },
     "Diclofenac": {'group': 'Analgesic - NSAID',
         'vietnamese_name': 'Diclofenac, Voltaren',
@@ -413,8 +435,9 @@ NSAIDS_DRUGS = {
         'pharmacokinetics': {'half_life':
         '1-2 giờ (ngắn), nhưng tác dụng kéo dài do tích lũy trong dịch khớp',
         'onset': '30-60 phút (PO), 10-15 phút (IM)', 'duration': '8-12 giờ',
-        'protein_binding': '99.7%', 'clearance':
-        'Gan (chuyển hóa qua CYP2C9, CYP3A4), thận (thải trừ)'},
+        'protein_binding': '99.7%', 'metabolism':
+        'Gan (chuyển hóa qua CYP2C9 và CYP3A4 thành các chất chuyển hóa hydroxyl hóa và glucuronide). Chuyển hóa chủ yếu qua CYP2C9, một phần qua CYP3A4. Có nguy cơ tăng men gan cao hơn các NSAID khác do chuyển hóa qua gan.',
+        'clearance': 'Thận (thải trừ các chất chuyển hóa, <1% bài tiết dưới dạng không đổi)'},
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng bôi: bảo quản ở nhiệt độ phòng, không làm lạnh.'
         , 'black_box_warnings':
@@ -512,11 +535,32 @@ NSAIDS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': True,
             'requires_monitoring': ['Signs of GI bleeding', 'Renal function (CrCl, BUN)', 'Blood pressure']
-        }, 'guideline_tags': [
+        },         'guideline_tags': [
             'FDA Drug Safety Communication - NSAIDs and Cardiovascular Risk',
             'ACR Guidelines - NSAID Use in Arthritis',
             'FDA Black Box Warning - NSAIDs and Pregnancy (3rd trimester)'
-        ]},
+        ],
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo cho trẻ <6 tháng tuổi',
+            'infants_6m_2y': '0.5-2mg/kg PO x 2-3 lần/ngày (tối đa 150mg/ngày). Dùng cho sốt và đau.',
+            'children_2_12': '1-3mg/kg PO x 2-3 lần/ngày (tối đa 150mg/ngày). Dùng cho sốt, đau, viêm khớp.',
+            'adolescents_12_18': 'Liều người lớn: 50mg x 2-3 lần/ngày hoặc 75-100mg x 1 lần/ngày (extended release)',
+            'notes': 'Dùng cho sốt, đau, viêm khớp ở trẻ em. Uống với thức ăn để giảm kích ứng dạ dày. Theo dõi dấu hiệu chảy máu dạ dày, suy thận, tăng men gan. Dạng bôi tại chỗ: an toàn hơn cho trẻ em.'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ (chảy máu dạ dày, suy thận, tăng men gan). Suy thận, suy tim phổ biến hơn. Nguy cơ tăng men gan cao hơn.',
+            'dose_adjustment': 'Khởi đầu với liều thấp hơn (25-50mg x 2 lần/ngày). Giảm liều nếu có suy thận (CrCl <60). Tránh dùng lâu dài. Theo dõi chức năng gan chặt chẽ.',
+            'monitoring': 'Theo dõi dấu hiệu chảy máu dạ dày sát hơn. Theo dõi chức năng thận (creatinine, BUN) thường xuyên. Theo dõi chức năng gan (ALT, AST) - QUAN TRỌNG với diclofenac. Theo dõi huyết áp.'
+        },
+        'brand_names': {
+            'vietnam': ['Voltaren', 'Diclofenac', 'Diclofenac Stada', 'Diclofenac Teva', 'Diclofenac Mylan', 'Voltaren Emulgel (topical)'],
+            'common': ['Voltaren', 'Diclofenac', 'Cataflam', 'Voltaren Gel']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '3,000 - 25,000 VND/viên (tùy hàm lượng và thương hiệu). Dạng bôi: 50,000 - 150,000 VND/tuýp.',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Diclofenac generic thường rẻ hơn (3,000-8,000 VND/viên 50mg). Voltaren (brand) đắt hơn (10,000-25,000 VND/viên 50mg). Dạng bôi tại chỗ: 50,000-150,000 VND/tuýp.'
+        }},
     "Etoricoxib": {'group': 'Analgesic - NSAID (COX-2 Selective)',
         'vietnamese_name': 'Etoricoxib, Arcoxia', 'administration': ['PO'],
         'indications': ['Đau nhẹ đến trung bình', 'Viêm khớp', 'Đau bụng kinh',
@@ -560,8 +604,9 @@ NSAIDS_DRUGS = {
         'Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể'],
         'pharmacokinetics': {
         'half_life': '22 giờ (dài)', 'onset': '30-60 phút', 'duration':
-        '24 giờ (dài, dùng 1 lần/ngày)', 'protein_binding': '92%', 'clearance':
-        'Gan (chuyển hóa qua CYP3A4, CYP2C9, CYP2D6), thận (thải trừ)'},
+        '24 giờ (dài, dùng 1 lần/ngày)', 'protein_binding': '92%', 'metabolism':
+        'Gan (chuyển hóa qua CYP3A4, CYP2C9, CYP2D6 thành các chất chuyển hóa hydroxyl hóa và glucuronide). Chuyển hóa chủ yếu qua CYP3A4, một phần qua CYP2C9 và CYP2D6.',
+        'clearance': 'Thận (thải trừ các chất chuyển hóa, <1% bài tiết dưới dạng không đổi)'},
         'renal_adjustment': {
         'normal': 'Không đổi', '30_60': 'Thận trọng, giảm liều 25-50%', 'under_30':
         'Tránh dùng hoặc giảm liều mạnh. Theo dõi chức năng thận chặt chẽ'},
@@ -646,7 +691,27 @@ NSAIDS_DRUGS = {
             "ACR 2021 Osteoarthritis Guidelines",
             "FDA Black Box Warning - Cardiovascular and GI risks",
             "ISMP High Alert Medications - NSAIDs"
-        ]
+        ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <12 tuổi",
+            "infants": "Không khuyến cáo cho trẻ <12 tuổi",
+            "children_12_18": "Chưa được FDA phê duyệt cho trẻ em <18 tuổi. Không khuyến cáo sử dụng.",
+            "notes": "Etoricoxib chưa được FDA phê duyệt cho trẻ em dưới 18 tuổi. Không nên sử dụng ở trẻ em do thiếu dữ liệu an toàn và hiệu quả."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ, đặc biệt là biến cố tim mạch (nhồi máu cơ tim, đột quỵ), suy thận. Suy thận và suy tim phổ biến hơn ở người cao tuổi.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (60mg x 1 lần/ngày). Giảm liều nếu có suy thận (CrCl <60). Tránh dùng lâu dài. Đặc biệt thận trọng ở bệnh nhân có bệnh tim mạch.",
+            "monitoring": "Theo dõi dấu hiệu biến cố tim mạch sát hơn (đau ngực, khó thở, đột quỵ). Theo dõi chức năng thận (creatinine, BUN) thường xuyên. Theo dõi dấu hiệu chảy máu dạ dày. Theo dõi huyết áp."
+        },
+        "brand_names": {
+            "vietnam": ["Arcoxia", "Etoricoxib"],
+            "common": ["Arcoxia", "Etoricoxib"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "20,000 - 60,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Etoricoxib generic thường rẻ hơn (20,000-40,000 VND/viên 90mg). Arcoxia (brand) đắt hơn (40,000-60,000 VND/viên 90mg)."
+        }
     },
     "Ibuprofen": {'group': 'Analgesic - NSAID',
         'vietnamese_name': 'Ibuprofen, Brufen',
@@ -685,8 +750,9 @@ NSAIDS_DRUGS = {
         'Ngừng trước phẫu thuật 5-7 ngày (tăng nguy cơ chảy máu)',
         'Dùng liều thấp nhất hiệu quả, thời gian ngắn nhất có thể'],
         'pharmacokinetics': {'half_life': '2-4 giờ', 'onset': '30-60 phút',
-        'duration': '4-6 giờ', 'protein_binding': '99%', 'clearance':
-        'Gan (chuyển hóa qua CYP2C9, CYP2C8), thận (thải trừ)'},
+        'duration': '4-6 giờ', 'protein_binding': '99%', 'metabolism':
+        'Gan (chuyển hóa qua CYP2C9 và CYP2C8 thành các chất chuyển hóa hydroxyl hóa và carboxyl hóa). Chuyển hóa chủ yếu qua CYP2C9, một phần qua CYP2C8. Ibuprofen ít gây độc gan trực tiếp hơn một số NSAID khác.',
+        'clearance': 'Thận (thải trừ các chất chuyển hóa, <1% bài tiết dưới dạng không đổi)'},
         'renal_adjustment': {
         'normal': 'Không đổi', '30_60': 'Thận trọng, giảm liều 25-50%', 'under_30':
         'Tránh dùng hoặc giảm liều mạnh. Theo dõi chức năng thận chặt chẽ'},
@@ -887,7 +953,8 @@ NSAIDS_DRUGS = {
             "onset": "30-60 phút (PO)",
             "duration": "4-6 giờ",
             "protein_binding": "99%",
-            "clearance": "Gan (chuyển hóa), thận (thải trừ)",
+            "metabolism": "Gan (chuyển hóa qua glucuronidation và demethylation thành các chất chuyển hóa không hoạt động). Chuyển hóa chủ yếu qua glucuronidation.",
+            "clearance": "Thận (thải trừ các chất chuyển hóa, <20% bài tiết dưới dạng không đổi)",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
         "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm. Nguy cơ chảy máu dạ dày cao.""",
@@ -941,9 +1008,19 @@ NSAIDS_DRUGS = {
         },
         "administration_instructions": {
             "oral": {
-                "with_food": "Uống với thức ăn",
-                "timing": "25-50mg x 2-3 lần/ngày",
+                "with_food": "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày (quan trọng với indomethacin do nguy cơ cao)",
+                "timing": "25-50mg x 2-3 lần/ngày. Dùng với bữa ăn để giảm tác dụng phụ dạ dày và đau đầu.",
             },
+            "iv": {
+                "reconstitution": "Indomethacin IV: pha với NaCl 0.9% hoặc dextrose 5%",
+                "infusion_rate": "Truyền trong 20-30 phút",
+                "compatibility": ["NaCl 0.9%", "Dextrose 5%"],
+                "incompatibility": ["Không pha với các thuốc khác trong cùng đường truyền"],
+                "notes": "Chỉ dùng cho đóng ống động mạch ở trẻ sơ sinh. Liều: 0.1-0.2mg/kg IV x 3 lần, cách nhau 12-24 giờ."
+            },
+            "suppository": {
+                "notes": "Dạng suppository: 50-100mg x 1-2 lần/ngày. Giảm kích ứng dạ dày nhưng vẫn có tác dụng phụ hệ thống. Để trong tủ lạnh trước khi dùng."
+            }
         },
         "references": {
             "primary_sources": [
@@ -980,7 +1057,36 @@ NSAIDS_DRUGS = {
             "guideline_tags": [
                 "ACR 2021 Osteoarthritis Guidelines",
                 "FDA Black Box Warning - Cardiovascular and GI risks",
-            ]
+            ],
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ. Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. Tránh dùng trong 3 tháng cuối.",
+            "lactation": {
+                "safety": "Compatible with caution",
+                "details": "Indomethacin bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ <1% liều mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú với liều ngắn hạn, nhưng thận trọng. Theo dõi trẻ về dấu hiệu bất thường."
+            }
+        },
+        "pediatric_dosing": {
+            "neonates": "Chỉ dùng IV cho đóng ống động mạch: 0.1-0.2mg/kg IV x 3 lần, cách nhau 12-24 giờ",
+            "infants": "Không khuyến cáo cho trẻ <14 tuổi (ngoài chỉ định đóng ống động mạch)",
+            "children_14_18": "25mg x 2-3 lần/ngày (tối đa 150mg/ngày). Thận trọng, theo dõi chặt chẽ",
+            "notes": "Indomethacin có nhiều tác dụng phụ, đặc biệt đau đầu rất phổ biến. Chỉ dùng khi các NSAID khác không hiệu quả. Dạng suppository có thể giảm kích ứng dạ dày."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (chảy máu dạ dày, suy thận, đau đầu). Suy thận, suy tim phổ biến hơn. Đau đầu rất phổ biến với indomethacin.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (25mg x 2 lần/ngày). Giảm liều nếu có suy thận (CrCl <60). Tránh dùng lâu dài. Cân nhắc dùng dạng suppository để giảm kích ứng dạ dày.",
+            "monitoring": "Theo dõi dấu hiệu chảy máu dạ dày sát hơn. Theo dõi chức năng thận (creatinine, BUN) thường xuyên. Theo dõi dấu hiệu đau đầu - rất phổ biến, có thể cần giảm liều hoặc ngừng. Theo dõi huyết áp."
+        },
+        "brand_names": {
+            "vietnam": ["Indocin", "Indomethacin", "Indomethacin Stada"],
+            "common": ["Indocin", "Indomethacin"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "5,000 - 20,000 VND/viên (tùy hàm lượng và thương hiệu). Dạng suppository: 8,000 - 25,000 VND/viên.",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Indomethacin generic thường rẻ hơn (5,000-12,000 VND/viên 25mg). Indocin (brand) đắt hơn (12,000-20,000 VND/viên 25mg)."
+        }
     },
     "Ketoprofen":     {
         "group": "Analgesic - NSAID",
@@ -1054,7 +1160,8 @@ NSAIDS_DRUGS = {
             "onset": "30-60 phút (PO), 10-15 phút (IV/IM)",
             "duration": "6-8 giờ",
             "protein_binding": "99%",
-            "clearance": "Gan (chuyển hóa), thận (thải trừ)",
+            "metabolism": "Gan (chuyển hóa qua glucuronidation và hydroxylation thành các chất chuyển hóa không hoạt động). Chuyển hóa chủ yếu qua glucuronidation.",
+            "clearance": "Thận (thải trừ các chất chuyển hóa, <1% bài tiết dưới dạng không đổi)",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
         "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ.""",
@@ -1072,11 +1179,11 @@ NSAIDS_DRUGS = {
         },
         "pregnancy_lactation": {
             "fda_category": "C - D trong tam cá nguyệt 3",
-            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm.",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ. Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. Tránh dùng trong 3 tháng cuối.",
             "lactation": {
                 "safety": "Compatible",
-                "details": "Bài tiết vào sữa mẹ ở nồng độ thấp.",
-                "recommendation": "",
+                "details": "Ketoprofen bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong sữa mẹ <1% liều mẹ. An toàn cho trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú với liều ngắn hạn. Dạng bôi tại chỗ: ít ảnh hưởng hệ thống, an toàn hơn."
             },
         },
         "hepatic_adjustment": {
@@ -1107,9 +1214,22 @@ NSAIDS_DRUGS = {
         },
         "administration_instructions": {
             "oral": {
-                "with_food": "Uống với thức ăn",
-                "timing": "50-100mg x 2-3 lần/ngày",
+                "with_food": "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày",
+                "timing": "50-100mg x 2-3 lần/ngày. Dùng với bữa ăn để giảm tác dụng phụ dạ dày.",
             },
+            "iv": {
+                "reconstitution": "Ketoprofen IV: pha với NaCl 0.9% hoặc dextrose 5%",
+                "infusion_rate": "Truyền trong 15-30 phút",
+                "compatibility": ["NaCl 0.9%", "Dextrose 5%"],
+                "incompatibility": ["Không pha với các thuốc khác trong cùng đường truyền"],
+                "notes": "Chỉ dùng cho đau cấp tính. Liều: 50-100mg IV mỗi 6-8 giờ (tối đa 200mg/ngày)."
+            },
+            "im": {
+                "notes": "Tiêm bắp sâu. Liều: 50-100mg IM mỗi 6-8 giờ (tối đa 200mg/ngày). Có thể gây đau tại chỗ tiêm."
+            },
+            "topical": {
+                "notes": "Dạng bôi tại chỗ: Bôi 2-4g x 2-3 lần/ngày lên vùng đau. Ít tác dụng phụ hệ thống hơn dạng uống. Không bôi trên vùng da bị tổn thương hoặc niêm mạc. Tránh tiếp xúc ánh nắng (nhạy cảm với ánh sáng)."
+            }
         },
         "references": {
             "primary_sources": [
@@ -1146,7 +1266,28 @@ NSAIDS_DRUGS = {
             "guideline_tags": [
                 "ACR 2021 Osteoarthritis Guidelines",
                 "FDA Black Box Warning - Cardiovascular and GI risks",
-            ]
+            ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <6 tháng tuổi",
+            "infants": "Không khuyến cáo cho trẻ <6 tháng tuổi",
+            "children_6m_12y": "1-2mg/kg PO x 2-3 lần/ngày (tối đa 150mg/ngày). Dùng cho sốt, đau, viêm khớp.",
+            "adolescents_12_18": "50-100mg x 2-3 lần/ngày (tối đa 300mg/ngày). Liều người lớn",
+            "notes": "Dùng cho sốt, đau, viêm khớp ở trẻ em. Uống với thức ăn để giảm kích ứng dạ dày. Theo dõi dấu hiệu chảy máu dạ dày, suy thận. Dạng bôi tại chỗ: an toàn hơn cho trẻ em. Tránh tiếp xúc ánh nắng (nhạy cảm với ánh sáng)."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ (chảy máu dạ dày, suy thận). Suy thận, suy tim phổ biến hơn.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (50mg x 2 lần/ngày). Giảm liều nếu có suy thận (CrCl <60). Tránh dùng lâu dài. Cân nhắc dùng dạng bôi tại chỗ để giảm tác dụng phụ hệ thống.",
+            "monitoring": "Theo dõi dấu hiệu chảy máu dạ dày sát hơn. Theo dõi chức năng thận (creatinine, BUN) thường xuyên. Theo dõi huyết áp. Tránh tiếp xúc ánh nắng (nhạy cảm với ánh sáng)."
+        },
+        "brand_names": {
+            "vietnam": ["Profenid", "Ketoprofen", "Ketoprofen Stada", "Ketoprofen gel (topical)"],
+            "common": ["Profenid", "Ketoprofen", "Orudis", "Oruvail"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "4,000 - 20,000 VND/viên (tùy hàm lượng và thương hiệu). Dạng bôi: 60,000 - 150,000 VND/tuýp.",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Ketoprofen generic thường rẻ hơn (4,000-10,000 VND/viên 50mg). Profenid (brand) đắt hơn (10,000-20,000 VND/viên 50mg). Dạng bôi tại chỗ: 60,000-150,000 VND/tuýp."
+        }
     },
     "Ketorolac": {'group': 'Analgesic - NSAID',
         'vietnamese_name':
@@ -1197,8 +1338,9 @@ NSAIDS_DRUGS = {
         'IV/IM: chuyển sang PO sớm nhất có thể'],
         'pharmacokinetics': {
         'half_life': '2.5-8 giờ', 'onset': '10-30 phút (IV/IM), 30-60 phút (PO)',
-        'duration': '4-6 giờ', 'protein_binding': '99%', 'clearance':
-        'Gan (chuyển hóa qua CYP2C9, glucuronidation), thận (thải trừ)'},
+        'duration': '4-6 giờ', 'protein_binding': '99%', 'metabolism':
+        'Gan (chuyển hóa qua CYP2C9 và glucuronidation thành các chất chuyển hóa không hoạt động). Chuyển hóa chủ yếu qua CYP2C9, một phần qua glucuronidation.',
+        'clearance': 'Thận (thải trừ các chất chuyển hóa, <10% bài tiết dưới dạng không đổi)'},
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Dạng IV/IM: bảo quản ở nhiệt độ phòng, không đông lạnh.',
         'black_box_warnings':
@@ -1302,12 +1444,32 @@ NSAIDS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': True,
             'requires_monitoring': ['Renal function (CrCl, BUN) - CRITICAL (max 5 days use)', 'Signs of GI bleeding', 'Blood pressure', 'Signs of acute kidney injury']
-        }, 'guideline_tags': [
+        },         'guideline_tags': [
             'FDA Drug Safety Communication - NSAIDs and Renal Risk',
             'ISMP High Alert Medications - Ketorolac',
             'FDA Black Box Warning - Ketorolac and Renal/GI Toxicity',
             'ACR Guidelines - NSAID Use in Arthritis'
-        ]},
+        ],
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo cho trẻ <17 tuổi',
+            'infants': 'Không khuyến cáo cho trẻ <17 tuổi',
+            'children_17_18': 'Chưa được FDA phê duyệt cho trẻ em <17 tuổi. Không khuyến cáo sử dụng.',
+            'notes': 'Ketorolac chưa được FDA phê duyệt cho trẻ em dưới 17 tuổi. CHỈ dùng ngắn hạn (≤5 ngày) cho đau cấp tính ở người lớn. Nguy cơ chảy máu và suy thận cao.'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ, đặc biệt là chảy máu và suy thận cấp. Suy thận, suy tim phổ biến hơn. Nguy cơ chảy máu và suy thận cao hơn với ketorolac.',
+            'dose_adjustment': 'Khởi đầu với liều thấp hơn (15mg IV/IM mỗi 6 giờ hoặc 10mg PO mỗi 6 giờ). Giảm liều 50% nếu có suy thận (CrCl 30-60). CHỐNG CHỈ ĐỊNH ở CrCl <30. CHỈ dùng tối đa 5 ngày.',
+            'monitoring': 'Theo dõi dấu hiệu chảy máu sát hơn (dạ dày, niêm mạc, chảy máu nói chung) - CRITICAL. Theo dõi chức năng thận (creatinine, BUN) mỗi ngày nếu dùng >2 ngày - CRITICAL. Theo dõi huyết áp.'
+        },
+        'brand_names': {
+            'vietnam': ['Toradol', 'Ketorolac', 'Ketorolac Stada'],
+            'common': ['Toradol', 'Ketorolac', 'Acular (eye drops)']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '8,000 - 30,000 VND/viên PO (tùy hàm lượng và thương hiệu). Dạng IV/IM: 15,000 - 50,000 VND/ống.',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Ketorolac generic thường rẻ hơn (8,000-15,000 VND/viên 10mg PO). Toradol (brand) đắt hơn (15,000-30,000 VND/viên 10mg PO). Dạng IV/IM: 15,000-50,000 VND/ống.'
+        }},
     "Meloxicam": {'group': 'Analgesic - NSAID',
         'vietnamese_name': 'Meloxicam, Mobic',
         'administration': ['PO'],
@@ -1348,8 +1510,9 @@ NSAIDS_DRUGS = {
         'Thời gian bán thải dài → tích lũy ở bệnh nhân suy thận, suy gan'],
         'pharmacokinetics': {
         'half_life': '15-20 giờ (dài)', 'onset': '30-60 phút', 'duration': '24 giờ',
-        'protein_binding': '99%', 'clearance':
-        'Gan (chuyển hóa qua CYP2C9, CYP3A4), thận (thải trừ)'},
+        'protein_binding': '99%', 'metabolism':
+        'Gan (chuyển hóa qua CYP2C9 và CYP3A4 thành các chất chuyển hóa hydroxyl hóa và glucuronide). Chuyển hóa chủ yếu qua CYP2C9, một phần qua CYP3A4. Thời gian bán thải dài do tích lũy.',
+        'clearance': 'Thận (thải trừ các chất chuyển hóa, <0.5% bài tiết dưới dạng không đổi)'},
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm', 'black_box_warnings':
         'Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ, đặc biệt khi dùng lâu dài hoặc liều cao.',
@@ -1431,12 +1594,33 @@ NSAIDS_DRUGS = {
             'hepatotoxicity': False,
             'nephrotoxicity': True,
             'requires_monitoring': ['Signs of GI bleeding', 'Renal function (CrCl, BUN)', 'Blood pressure', 'Signs of cardiovascular events']
-        }, 'guideline_tags': [
+        },         'guideline_tags': [
             'FDA Drug Safety Communication - NSAIDs and Cardiovascular Risk',
             'FDA Drug Safety Communication - COX-2 Inhibitors and Cardiovascular Risk',
             'ACR Guidelines - NSAID Use in Arthritis',
             'FDA Black Box Warning - NSAIDs and Pregnancy (3rd trimester)'
-        ]},
+        ],
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo cho trẻ <2 tuổi',
+            'infants': 'Không khuyến cáo cho trẻ <2 tuổi',
+            'children_2_12': '0.125mg/kg PO x 1 lần/ngày (tối đa 7.5mg/ngày). Dùng cho viêm khớp dạng thấp thiếu niên.',
+            'adolescents_12_18': '7.5-15mg x 1 lần/ngày. Liều người lớn',
+            'notes': 'Dùng cho viêm khớp dạng thấp thiếu niên ở trẻ em ≥2 tuổi. Uống với thức ăn để giảm kích ứng dạ dày. Theo dõi dấu hiệu chảy máu dạ dày, suy thận. Thời gian bán thải dài → tích lũy ở trẻ em.'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ (chảy máu dạ dày, suy thận). Suy thận, suy tim phổ biến hơn. Thời gian bán thải dài → tích lũy ở người cao tuổi.',
+            'dose_adjustment': 'Khởi đầu với liều thấp hơn (7.5mg x 1 lần/ngày). Giảm liều nếu có suy thận (CrCl <60). Tránh dùng lâu dài. Thời gian bán thải dài → tích lũy.',
+            'monitoring': 'Theo dõi dấu hiệu chảy máu dạ dày sát hơn. Theo dõi chức năng thận (creatinine, BUN) thường xuyên do tích lũy. Theo dõi huyết áp.'
+        },
+        'brand_names': {
+            'vietnam': ['Mobic', 'Meloxicam', 'Meloxicam Stada', 'Meloxicam Teva'],
+            'common': ['Mobic', 'Meloxicam', 'Vivlodex']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '5,000 - 25,000 VND/viên (tùy hàm lượng và thương hiệu)',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Meloxicam generic thường rẻ hơn (5,000-12,000 VND/viên 7.5mg). Mobic (brand) đắt hơn (12,000-25,000 VND/viên 7.5mg).'
+        }},
     "Naproxen": {'group': 'Analgesic - NSAID',
         'vietnamese_name': 'Naproxen, Naprosyn',
         'administration': ['PO'],
@@ -1484,7 +1668,8 @@ NSAIDS_DRUGS = {
         'Thời gian bán thải dài → tích lũy ở bệnh nhân suy thận, suy gan'],
         'pharmacokinetics': {'half_life': '12-17 giờ (dài hơn ibuprofen)',
         'onset': '30-60 phút', 'duration': '8-12 giờ', 'protein_binding': '99%',
-        'clearance': 'Gan (chuyển hóa qua CYP2C9, CYP1A2), thận (thải trừ)'},
+        'metabolism': 'Gan (chuyển hóa qua CYP2C9 và CYP1A2 thành các chất chuyển hóa hydroxyl hóa và glucuronide). Chuyển hóa chủ yếu qua CYP2C9, một phần qua CYP1A2. Thời gian bán thải dài do tích lũy.',
+        'clearance': 'Thận (thải trừ các chất chuyển hóa, <5% bài tiết dưới dạng không đổi)'},
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp',
         'black_box_warnings':
@@ -1583,12 +1768,33 @@ NSAIDS_DRUGS = {
             'hepatotoxicity': True,
             'nephrotoxicity': True,
             'requires_monitoring': ['Signs of GI bleeding', 'Hepatic function (ALT, AST) - CRITICAL', 'Renal function (CrCl, BUN)', 'Blood pressure']
-        }, 'guideline_tags': [
+        },         'guideline_tags': [
             'FDA Drug Safety Communication - NSAIDs and Cardiovascular Risk',
             'FDA Drug Safety Communication - Diclofenac and Hepatotoxicity',
             'ACR Guidelines - NSAID Use in Arthritis',
             'FDA Black Box Warning - NSAIDs and Pregnancy (3rd trimester)'
-        ]},
+        ],
+        'pediatric_dosing': {
+            'neonates': 'Không khuyến cáo cho trẻ <2 tuổi',
+            'infants': 'Không khuyến cáo cho trẻ <2 tuổi',
+            'children_2_12': '5-7mg/kg PO x 2 lần/ngày (tối đa 1g/ngày). Dùng cho sốt, đau, viêm khớp dạng thấp thiếu niên.',
+            'adolescents_12_18': '250-500mg x 2 lần/ngày (tối đa 1.25-1.5g/ngày). Liều người lớn',
+            'notes': 'Dùng cho sốt, đau, viêm khớp dạng thấp thiếu niên ở trẻ em ≥2 tuổi. Uống với thức ăn để giảm kích ứng dạ dày. Theo dõi dấu hiệu chảy máu dạ dày, suy thận. Thời gian bán thải dài → tích lũy ở trẻ em. Tránh tiếp xúc ánh nắng (nhạy cảm với ánh sáng).'
+        },
+        'geriatric_dosing': {
+            'considerations': 'Người cao tuổi nhạy cảm hơn với tác dụng phụ (chảy máu dạ dày, suy thận). Suy thận, suy tim phổ biến hơn. Thời gian bán thải dài → tích lũy ở người cao tuổi.',
+            'dose_adjustment': 'Khởi đầu với liều thấp hơn (250mg x 2 lần/ngày). Giảm liều nếu có suy thận (CrCl <60). Tránh dùng lâu dài. Thời gian bán thải dài → tích lũy.',
+            'monitoring': 'Theo dõi dấu hiệu chảy máu dạ dày sát hơn. Theo dõi chức năng thận (creatinine, BUN) thường xuyên do tích lũy. Theo dõi chức năng gan (ALT, AST) - QUAN TRỌNG với naproxen. Theo dõi huyết áp. Tránh tiếp xúc ánh nắng (nhạy cảm với ánh sáng).'
+        },
+        'brand_names': {
+            'vietnam': ['Naprosyn', 'Naproxen', 'Naproxen Stada', 'Naproxen Teva', 'Aleve'],
+            'common': ['Naprosyn', 'Aleve', 'Naproxen', 'Anaprox']
+        },
+        'cost_estimate': {
+            'unit': 'VND',
+            'range': '4,000 - 20,000 VND/viên (tùy hàm lượng và thương hiệu)',
+            'note': 'Giá thay đổi theo thương hiệu và nhà thuốc. Naproxen generic thường rẻ hơn (4,000-10,000 VND/viên 250mg). Naprosyn (brand) đắt hơn (10,000-20,000 VND/viên 250mg).'
+        }},
     "Nimesulide":     {
         "group": "Analgesic - NSAID (COX-2 Preferential)",
         "vietnamese_name": "Nimesulide, Nise, Aulin",
@@ -1657,7 +1863,8 @@ NSAIDS_DRUGS = {
             "onset": "30-60 phút",
             "duration": "6-8 giờ",
             "protein_binding": "99%",
-            "clearance": "Gan (chuyển hóa), thận (thải trừ)",
+            "metabolism": "Gan (chuyển hóa qua CYP2C9 và CYP1A2 thành các chất chuyển hóa hydroxyl hóa và nitro-reduction). Chuyển hóa chủ yếu qua CYP2C9. NGUY CƠ ĐỘC GAN CAO do chuyển hóa qua gan.",
+            "clearance": "Thận (thải trừ các chất chuyển hóa, <1% bài tiết dưới dạng không đổi)",
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
         "black_box_warnings": """NGUY CƠ ĐỘC GAN CAO, có thể nặng. Theo dõi ALT/AST thường xuyên. Ngừng ngay nếu có dấu hiệu độc gan. Một số quốc gia đã rút khỏi thị trường do nguy cơ độc gan. Không dùng trong 3 tháng cuối thai kỳ.""",
@@ -1675,11 +1882,11 @@ NSAIDS_DRUGS = {
         },
         "pregnancy_lactation": {
             "fda_category": "C - D trong tam cá nguyệt 3",
-            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH.",
+            "pregnancy_details": "Tam cá nguyệt 1-2: Có thể dùng nếu lợi ích > nguy cơ, nhưng thận trọng do nguy cơ độc gan. Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH - có thể gây đóng ống động mạch sớm, thiểu ối, suy thận thai nhi. Tránh dùng trong 3 tháng cuối.",
             "lactation": {
                 "safety": "Caution",
-                "details": "",
-                "recommendation": "",
+                "details": "Nimesulide bài tiết vào sữa mẹ ở nồng độ thấp. Tuy nhiên, do nguy cơ độc gan cao, nên thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Theo dõi trẻ về dấu hiệu bất thường. Cân nhắc NSAID khác an toàn hơn."
             },
         },
         "hepatic_adjustment": {
@@ -1710,9 +1917,12 @@ NSAIDS_DRUGS = {
         },
         "administration_instructions": {
             "oral": {
-                "with_food": "Uống với thức ăn",
-                "timing": "100mg x 2 lần/ngày",
+                "with_food": "Uống với thức ăn hoặc sữa để giảm kích ứng dạ dày",
+                "timing": "100mg x 2 lần/ngày. Dùng với bữa ăn để giảm tác dụng phụ dạ dày. Liều tối đa: 200mg/ngày.",
             },
+            "iv": {"reconstitution": "Không có dạng IV", "infusion_rate": "N/A",
+            "compatibility": [],
+            "incompatibility": []}
         },
         "references": {
             "primary_sources": [
@@ -1731,6 +1941,1655 @@ NSAIDS_DRUGS = {
                 "hepatotoxicity": True,
                 "nephrotoxicity": True,
                 "requires_monitoring": ["LFT", "RFT", "GI symptoms"],
+            },
+            "guideline_tags": [
+                "ACR 2021 Osteoarthritis Guidelines",
+                "FDA Black Box Warning - Cardiovascular and GI risks",
+                "Hepatotoxicity Warning - Some countries have withdrawn from market"
+            ],
+        "pediatric_dosing": {
+            "neonates": "CHỐNG CHỈ ĐỊNH cho trẻ <12 tuổi",
+            "infants": "CHỐNG CHỈ ĐỊNH cho trẻ <12 tuổi",
+            "children_12_18": "100mg x 2 lần/ngày (tối đa 200mg/ngày). Liều người lớn. Thận trọng, theo dõi chức năng gan chặt chẽ.",
+            "notes": "CHỐNG CHỈ ĐỊNH ở trẻ em <12 tuổi. Chỉ dùng cho trẻ ≥12 tuổi với liều người lớn. Theo dõi chức năng gan chặt chẽ do nguy cơ độc gan cao."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng phụ, đặc biệt là độc gan. Suy thận, suy gan phổ biến hơn. NGUY CƠ ĐỘC GAN CAO.",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (100mg x 1 lần/ngày). Giảm liều nếu có suy thận (CrCl <60). CHỐNG CHỈ ĐỊNH ở suy gan. Theo dõi chức năng gan chặt chẽ.",
+            "monitoring": "Theo dõi chức năng gan (ALT, AST) thường xuyên - CRITICAL do nguy cơ độc gan cao. Theo dõi dấu hiệu chảy máu dạ dày. Theo dõi chức năng thận (creatinine, BUN) thường xuyên. Theo dõi huyết áp."
+        },
+        "brand_names": {
+            "vietnam": ["Nise", "Nimesulide", "Nimesulide Stada", "Aulin"],
+            "common": ["Nise", "Aulin", "Nimesulide", "Mesulid"]
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "5,000 - 25,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Nimesulide generic thường rẻ hơn (5,000-12,000 VND/viên 100mg). Nise (brand) đắt hơn (12,000-25,000 VND/viên 100mg). Lưu ý: Một số quốc gia đã rút khỏi thị trường do nguy cơ độc gan."
+        }
+    },
+    "Piroxicam":     {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Piroxicam, Feldene",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp dạng thấp",
+            "Viêm khớp xương khớp",
+            "Đau cơ xương",
+            "Gout cấp"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng piroxicam hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy thận nặng",
+                "Suy gan nặng"
+    ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan nhẹ - thận trọng",
+                "Người cao tuổi - tăng nguy cơ tác dụng phụ"
+    ],
+        },
+        "dosage": {
+            "adult_po": "20mg x 1 lần/ngày (tối đa 20mg/ngày)",
+            "notes": """NSAID tác dụng kéo dài, dùng 1 lần/ngày. T1/2 dài (30-50 giờ) nên tích lũy có thể xảy ra. Nguy cơ chảy máu dạ dày cao hơn một số NSAID khác.""",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng",
+        },
+        "side_effects": [
+            "Chảy máu dạ dày (nguy cơ cao)",
+            "Suy thận",
+            "Tăng huyết áp",
+            "Phù",
+            "Đau đầu",
+            "Chóng mặt",
+            "Ban da",
+            "Tích lũy do T1/2 dài"
+    ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Methotrexate: tăng độc tính methotrexate",
+            "Lithium: tăng nồng độ lithium",
+            "Diuretics: giảm hiệu quả lợi tiểu"
+    ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": """Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin, thromboxane, và prostacyclin. Piroxicam có thời gian bán hủy dài (30-50 giờ) nên dùng 1 lần/ngày, nhưng có nguy cơ tích lũy và tác dụng phụ kéo dài. Tác dụng kháng viêm và giảm đau.""",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày (phân đen, nôn ra máu, đau bụng) - nguy cơ cao",
+            "Creatinine, BUN (đặc biệt ở người cao tuổi và suy thận)",
+            "Huyết áp (NSAID có thể tăng huyết áp)",
+            "Dấu hiệu tích lũy do T1/2 dài"
+    ],
+        "precautions": [
+            "T1/2 dài (30-50 giờ) → nguy cơ tích lũy, đặc biệt ở người cao tuổi và suy thận",
+            "Nguy cơ chảy máu dạ dày cao hơn một số NSAID khác",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Thận trọng ở người cao tuổi (tăng nguy cơ tác dụng phụ)",
+            "Theo dõi chức năng thận thường xuyên"
+    ],
+        "pharmacokinetics": {
+            "half_life": "30-50 giờ (rất dài)",
+            "onset": "30-60 phút",
+            "duration": "24 giờ (do T1/2 dài)",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ. Nguy cơ chảy máu dạ dày cao. T1/2 dài → nguy cơ tích lũy.""",
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX, chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu nặng",
+                    "management": "Tránh dùng đồng thời hoặc theo dõi INR chặt chẽ.",
+                },
+                {
+                    "drug": "Methotrexate",
+                    "mechanism": "Giảm thải trừ methotrexate qua thận",
+                    "effect": "Tăng độc tính methotrexate",
+                    "management": "Tránh dùng đồng thời.",
+                }
+                ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin → giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả, tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN.",
+                },
+                {
+                    "drug": "Lithium",
+                    "mechanism": "Giảm thải trừ lithium",
+                    "effect": "Tăng nồng độ lithium",
+                    "management": "Theo dõi nồng độ lithium, điều chỉnh liều.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Tránh dùng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Đau bụng",
+                "Chảy máu dạ dày",
+                "Suy thận cấp",
+                "Co giật (hiếm)"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng piroxicam ngay",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Điều trị hỗ trợ",
+                "Theo dõi chức năng thận",
+                "Điều trị chảy máu dạ dày nếu có"
+    ],
+            "monitoring": "Creatinine, BUN, dấu hiệu chảy máu, điện giải",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn",
+                "timing": "20mg x 1 lần/ngày",
+            },
+            "iv": {"reconstitution": "Không có dạng IV", "infusion_rate": "N/A",
+            "compatibility": [],
+            "incompatibility": []}
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Piroxicam",
+                "UpToDate - Piroxicam: Drug information",
+                "MSD Manual - NSAIDs"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["GI", "renal", "cardiac"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["RFT", "GI symptoms", "BP"],
+            },
+            "guideline_tags": [
+                "ACR 2021 Osteoarthritis Guidelines",
+                "FDA Black Box Warning - Cardiovascular and GI risks",
+            ]
+    },
+    "Mefenamic acid":     {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Mefenamic acid, Ponstan",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Đau bụng kinh",
+            "Đau đầu",
+            "Đau răng",
+            "Đau cơ xương"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng mefenamic acid hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy thận nặng",
+                "Suy gan nặng",
+                "Viêm ruột (Crohn, viêm loét đại tràng)"
+    ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan nhẹ - thận trọng",
+                "Hen phế quản - thận trọng"
+    ],
+        },
+        "dosage": {
+            "adult_po": "500mg x 3 lần/ngày (tối đa 1500mg/ngày)",
+            "notes": """NSAID anthranilic acid derivative. Hiệu quả tốt cho đau bụng kinh. Không dùng quá 7 ngày liên tiếp. Nguy cơ chảy máu dạ dày và độc tính thần kinh trung ương.""",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng",
+        },
+        "side_effects": [
+            "Chảy máu dạ dày",
+            "Buồn nôn, nôn",
+            "Tiêu chảy",
+            "Đau đầu",
+            "Chóng mặt",
+            "Co giật (hiếm nhưng nghiêm trọng)",
+            "Suy thận",
+            "Ban da"
+    ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Methotrexate: tăng độc tính methotrexate",
+            "Probenecid: tăng nồng độ mefenamic acid"
+    ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": """Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Mefenamic acid là anthranilic acid derivative, có hiệu quả tốt trong điều trị đau bụng kinh. Có nguy cơ độc tính thần kinh trung ương (co giật) khi dùng liều cao hoặc kéo dài.""",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày",
+            "Dấu hiệu độc tính thần kinh trung ương (co giật, lú lẫn)",
+            "Creatinine, BUN",
+            "Triệu chứng tiêu hóa"
+    ],
+        "precautions": [
+            "KHÔNG dùng quá 7 ngày liên tiếp",
+            "Nguy cơ co giật khi dùng liều cao hoặc kéo dài",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Thận trọng ở bệnh nhân có tiền sử co giật",
+            "Ngừng ngay nếu có dấu hiệu độc tính thần kinh trung ương"
+    ],
+        "pharmacokinetics": {
+            "half_life": "2-4 giờ",
+            "onset": "30-60 phút",
+            "duration": "4-6 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ. Nguy cơ co giật khi dùng liều cao hoặc kéo dài. Không dùng quá 7 ngày liên tiếp. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ.""",
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX, chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu nặng",
+                    "management": "Tránh dùng đồng thời hoặc theo dõi INR chặt chẽ.",
+                }
+                ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin → giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả, tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN.",
+                },
+                {
+                    "drug": "Probenecid",
+                    "mechanism": "Giảm thải trừ mefenamic acid",
+                    "effect": "Tăng nồng độ mefenamic acid",
+                    "management": "Giảm liều mefenamic acid.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Tránh dùng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Đau bụng",
+                "Chảy máu dạ dày",
+                "Co giật",
+                "Lú lẫn",
+                "Suy thận cấp"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng mefenamic acid ngay",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Điều trị co giật nếu có",
+                "Điều trị hỗ trợ",
+                "Theo dõi chức năng thận"
+    ],
+            "monitoring": "Creatinine, BUN, dấu hiệu chảy máu, dấu hiệu thần kinh",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn",
+                "timing": "500mg x 3 lần/ngày",
+            },
+            "iv": {"reconstitution": "Không có dạng IV", "infusion_rate": "N/A",
+            "compatibility": [],
+            "incompatibility": []}
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Mefenamic acid",
+                "UpToDate - Mefenamic acid: Drug information",
+                "MSD Manual - NSAIDs"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["GI", "renal", "CNS"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["RFT", "GI symptoms", "CNS symptoms"],
+            },
+            "guideline_tags": [
+                "ACR 2021 Osteoarthritis Guidelines",
+                "FDA Black Box Warning - Cardiovascular and GI risks",
+            ]
+    },
+    "Aceclofenac":     {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Aceclofenac, Airtal",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp dạng thấp",
+            "Viêm khớp xương khớp",
+            "Đau cơ xương",
+            "Đau lưng"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng aceclofenac hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy thận nặng",
+                "Suy gan nặng"
+    ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan nhẹ - thận trọng",
+                "Bệnh tim mạch - thận trọng"
+    ],
+        },
+        "dosage": {
+            "adult_po": "100mg x 2 lần/ngày (tối đa 200mg/ngày)",
+            "notes": """NSAID acetic acid derivative, tương tự diclofenac. Ít tác dụng phụ dạ dày hơn diclofenac. Hiệu quả tốt trong viêm khớp.""",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng",
+        },
+        "side_effects": [
+            "Chảy máu dạ dày (ít hơn diclofenac)",
+            "Suy thận",
+            "Tăng huyết áp",
+            "Phù",
+            "Đau đầu",
+            "Chóng mặt",
+            "Ban da",
+            "Tăng men gan"
+    ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Methotrexate: tăng độc tính methotrexate",
+            "Lithium: tăng nồng độ lithium"
+    ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": """Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Aceclofenac là acetic acid derivative, tương tự diclofenac nhưng có ít tác dụng phụ dạ dày hơn. Chuyển hóa thành diclofenac và các chất chuyển hóa khác. Tác dụng kháng viêm và giảm đau.""",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày",
+            "Creatinine, BUN",
+            "Huyết áp",
+            "Chức năng gan (ALT, AST)"
+    ],
+        "precautions": [
+            "Ít tác dụng phụ dạ dày hơn diclofenac nhưng vẫn có nguy cơ",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Theo dõi chức năng gan và thận"
+    ],
+        "pharmacokinetics": {
+            "half_life": "4 giờ",
+            "onset": "30-60 phút",
+            "duration": "8-12 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa thành diclofenac), thận (thải trừ)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ.""",
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX, chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu nặng",
+                    "management": "Tránh dùng đồng thời hoặc theo dõi INR chặt chẽ.",
+                }
+                ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin → giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả, tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Tránh dùng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Đau bụng",
+                "Chảy máu dạ dày",
+                "Suy thận cấp"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng aceclofenac ngay",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Điều trị hỗ trợ",
+                "Theo dõi chức năng thận"
+    ],
+            "monitoring": "Creatinine, BUN, dấu hiệu chảy máu",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn",
+                "timing": "100mg x 2 lần/ngày",
+            },
+            "iv": {"reconstitution": "Không có dạng IV", "infusion_rate": "N/A",
+            "compatibility": [],
+            "incompatibility": []}
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Aceclofenac",
+                "UpToDate - Aceclofenac: Drug information",
+                "MSD Manual - NSAIDs"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["GI", "renal", "cardiac"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["RFT", "GI symptoms", "BP", "LFT"],
+            },
+            "guideline_tags": [
+                "ACR 2021 Osteoarthritis Guidelines",
+                "FDA Black Box Warning - Cardiovascular and GI risks",
+            ]
+    },
+    "Flurbiprofen":     {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Flurbiprofen, Ansaid",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp dạng thấp",
+            "Viêm khớp xương khớp",
+            "Đau cơ xương"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng flurbiprofen hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy thận nặng",
+                "Suy gan nặng"
+    ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan nhẹ - thận trọng"
+    ],
+        },
+        "dosage": {
+            "adult_po": "100mg x 2-3 lần/ngày (tối đa 300mg/ngày)",
+            "notes": """NSAID propionic acid derivative, tương tự ibuprofen. Hiệu quả tốt trong viêm khớp.""",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng",
+        },
+        "side_effects": [
+            "Chảy máu dạ dày",
+            "Suy thận",
+            "Tăng huyết áp",
+            "Phù",
+            "Đau đầu",
+            "Chóng mặt",
+            "Ban da"
+    ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Methotrexate: tăng độc tính methotrexate",
+            "Lithium: tăng nồng độ lithium"
+    ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": """Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Flurbiprofen là propionic acid derivative, tương tự ibuprofen. Tác dụng kháng viêm và giảm đau.""",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày",
+            "Creatinine, BUN",
+            "Huyết áp"
+    ],
+        "precautions": [
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Theo dõi chức năng thận"
+    ],
+        "pharmacokinetics": {
+            "half_life": "3-4 giờ",
+            "onset": "30-60 phút",
+            "duration": "6-8 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ.""",
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX, chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu nặng",
+                    "management": "Tránh dùng đồng thời hoặc theo dõi INR chặt chẽ.",
+                }
+                ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin → giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả, tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Tránh dùng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Đau bụng",
+                "Chảy máu dạ dày",
+                "Suy thận cấp"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng flurbiprofen ngay",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Điều trị hỗ trợ",
+                "Theo dõi chức năng thận"
+    ],
+            "monitoring": "Creatinine, BUN, dấu hiệu chảy máu",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn",
+                "timing": "100mg x 2-3 lần/ngày",
+            },
+            "iv": {"reconstitution": "Không có dạng IV", "infusion_rate": "N/A",
+            "compatibility": [],
+            "incompatibility": []}
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Flurbiprofen",
+                "UpToDate - Flurbiprofen: Drug information",
+                "MSD Manual - NSAIDs"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["GI", "renal", "cardiac"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["RFT", "GI symptoms", "BP"],
+            },
+            "guideline_tags": [
+                "ACR 2021 Osteoarthritis Guidelines",
+                "FDA Black Box Warning - Cardiovascular and GI risks",
+            ]
+    },
+    "Sulindac":     {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Sulindac, Clinoril",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp dạng thấp",
+            "Viêm khớp xương khớp",
+            "Đau cơ xương",
+            "Gout cấp"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng sulindac hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy thận nặng",
+                "Suy gan nặng"
+    ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan nhẹ - thận trọng"
+    ],
+        },
+        "dosage": {
+            "adult_po": "150-200mg x 2 lần/ngày (tối đa 400mg/ngày)",
+            "notes": """NSAID indole acetic acid derivative. Sulindac là prodrug, chuyển hóa thành sulfide hoạt tính. Ít ảnh hưởng đến chức năng thận hơn một số NSAID khác.""",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng",
+        },
+        "side_effects": [
+            "Chảy máu dạ dày",
+            "Suy thận (ít hơn một số NSAID khác)",
+            "Tăng huyết áp",
+            "Phù",
+            "Đau đầu",
+            "Chóng mặt",
+            "Ban da",
+            "Tăng men gan"
+    ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Methotrexate: tăng độc tính methotrexate",
+            "Cyclosporine: tăng độc tính thận"
+    ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": """Sulindac là prodrug, chuyển hóa thành sulfide hoạt tính. Sulfide ức chế enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Sulindac ít ảnh hưởng đến chức năng thận hơn một số NSAID khác do cơ chế chuyển hóa đặc biệt. Tác dụng kháng viêm và giảm đau.""",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày",
+            "Creatinine, BUN",
+            "Huyết áp",
+            "Chức năng gan"
+    ],
+        "precautions": [
+            "Ít ảnh hưởng đến thận hơn một số NSAID khác nhưng vẫn có nguy cơ",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Theo dõi chức năng thận và gan"
+    ],
+        "pharmacokinetics": {
+            "half_life": "7-8 giờ (sulfide hoạt tính)",
+            "onset": "30-60 phút",
+            "duration": "12 giờ",
+            "protein_binding": "93-98%",
+            "clearance": "Gan (chuyển hóa thành sulfide), thận (thải trừ)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ.""",
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX, chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu nặng",
+                    "management": "Tránh dùng đồng thời hoặc theo dõi INR chặt chẽ.",
+                }
+                ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin → giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả, tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN.",
+                },
+                {
+                    "drug": "Cyclosporine",
+                    "mechanism": "Tăng độc tính thận",
+                    "effect": "Tăng nguy cơ suy thận",
+                    "management": "Tránh dùng đồng thời hoặc theo dõi chức năng thận chặt chẽ.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Tránh dùng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Đau bụng",
+                "Chảy máu dạ dày",
+                "Suy thận cấp"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng sulindac ngay",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Điều trị hỗ trợ",
+                "Theo dõi chức năng thận"
+    ],
+            "monitoring": "Creatinine, BUN, dấu hiệu chảy máu",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn",
+                "timing": "150-200mg x 2 lần/ngày",
+            },
+            "iv": {"reconstitution": "Không có dạng IV", "infusion_rate": "N/A",
+            "compatibility": [],
+            "incompatibility": []}
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Sulindac",
+                "UpToDate - Sulindac: Drug information",
+                "MSD Manual - NSAIDs"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["GI", "renal", "cardiac"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["RFT", "GI symptoms", "BP", "LFT"],
+            },
+            "guideline_tags": [
+                "ACR 2021 Osteoarthritis Guidelines",
+                "FDA Black Box Warning - Cardiovascular and GI risks",
+            ]
+    },
+    "Nabumetone":     {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Nabumetone, Relafen",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp dạng thấp",
+            "Viêm khớp xương khớp",
+            "Đau cơ xương"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng nabumetone hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy thận nặng",
+                "Suy gan nặng"
+    ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan nhẹ - thận trọng"
+    ],
+        },
+        "dosage": {
+            "adult_po": "1000-2000mg/ngày (một liều hoặc chia liều: 500-1000mg x 2 lần/ngày)",
+            "notes": """NSAID naphthylalkanone derivative. Nabumetone là prodrug, chuyển hóa thành 6-MNA hoạt tính. Ít tác dụng phụ dạ dày hơn một số NSAID khác. Có thể dùng một liều hoặc chia liều.""",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng",
+        },
+        "side_effects": [
+            "Chảy máu dạ dày (ít hơn một số NSAID khác)",
+            "Suy thận",
+            "Tăng huyết áp",
+            "Phù",
+            "Đau đầu",
+            "Chóng mặt",
+            "Ban da"
+    ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Methotrexate: tăng độc tính methotrexate"
+    ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": """Nabumetone là prodrug, chuyển hóa thành 6-MNA (6-methoxy-2-naphthylacetic acid) hoạt tính. 6-MNA ức chế enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Nabumetone có ít tác dụng phụ dạ dày hơn một số NSAID khác do cơ chế chuyển hóa đặc biệt. Tác dụng kháng viêm và giảm đau.""",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày",
+            "Creatinine, BUN",
+            "Huyết áp"
+    ],
+        "precautions": [
+            "Ít tác dụng phụ dạ dày hơn một số NSAID khác nhưng vẫn có nguy cơ",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Theo dõi chức năng thận"
+    ],
+        "pharmacokinetics": {
+            "half_life": "22-30 giờ (6-MNA hoạt tính)",
+            "onset": "30-60 phút",
+            "duration": "24 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa thành 6-MNA), thận (thải trừ)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ.""",
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX, chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu nặng",
+                    "management": "Tránh dùng đồng thời hoặc theo dõi INR chặt chẽ.",
+                }
+                ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin → giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả, tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Tránh dùng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Đau bụng",
+                "Chảy máu dạ dày",
+                "Suy thận cấp"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng nabumetone ngay",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Điều trị hỗ trợ",
+                "Theo dõi chức năng thận"
+    ],
+            "monitoring": "Creatinine, BUN, dấu hiệu chảy máu",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn",
+                "timing": "1000-2000mg/ngày (một liều hoặc chia liều)",
+            },
+            "iv": {"reconstitution": "Không có dạng IV", "infusion_rate": "N/A",
+            "compatibility": [],
+            "incompatibility": []}
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Nabumetone",
+                "UpToDate - Nabumetone: Drug information",
+                "MSD Manual - NSAIDs"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["GI", "renal", "cardiac"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["RFT", "GI symptoms", "BP"],
+            },
+            "guideline_tags": [
+                "ACR 2021 Osteoarthritis Guidelines",
+                "FDA Black Box Warning - Cardiovascular and GI risks",
+            ]
+    },
+    "Oxaprozin":     {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Oxaprozin, Daypro",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp dạng thấp",
+            "Viêm khớp xương khớp",
+            "Đau cơ xương"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng oxaprozin hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy thận nặng",
+                "Suy gan nặng"
+    ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan nhẹ - thận trọng"
+    ],
+        },
+        "dosage": {
+            "adult_po": "1200mg x 1 lần/ngày (tối đa 1800mg/ngày)",
+            "notes": """NSAID propionic acid derivative. T1/2 dài nên dùng 1 lần/ngày. Hiệu quả tốt trong viêm khớp.""",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng",
+        },
+        "side_effects": [
+            "Chảy máu dạ dày",
+            "Suy thận",
+            "Tăng huyết áp",
+            "Phù",
+            "Đau đầu",
+            "Chóng mặt",
+            "Ban da"
+    ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Methotrexate: tăng độc tính methotrexate",
+            "Lithium: tăng nồng độ lithium"
+    ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": """Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Oxaprozin là propionic acid derivative, có thời gian bán hủy dài nên dùng 1 lần/ngày. Tác dụng kháng viêm và giảm đau.""",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày",
+            "Creatinine, BUN",
+            "Huyết áp"
+    ],
+        "precautions": [
+            "T1/2 dài → nguy cơ tích lũy ở người cao tuổi và suy thận",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Theo dõi chức năng thận"
+    ],
+        "pharmacokinetics": {
+            "half_life": "40-60 giờ (rất dài)",
+            "onset": "30-60 phút",
+            "duration": "24 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ. T1/2 dài → nguy cơ tích lũy.""",
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX, chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu nặng",
+                    "management": "Tránh dùng đồng thời hoặc theo dõi INR chặt chẽ.",
+                }
+                ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin → giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả, tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Tránh dùng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Đau bụng",
+                "Chảy máu dạ dày",
+                "Suy thận cấp"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng oxaprozin ngay",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Điều trị hỗ trợ",
+                "Theo dõi chức năng thận"
+    ],
+            "monitoring": "Creatinine, BUN, dấu hiệu chảy máu",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn",
+                "timing": "1200mg x 1 lần/ngày",
+            },
+            "iv": {"reconstitution": "Không có dạng IV", "infusion_rate": "N/A",
+            "compatibility": [],
+            "incompatibility": []}
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Oxaprozin",
+                "UpToDate - Oxaprozin: Drug information",
+                "MSD Manual - NSAIDs"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["GI", "renal", "cardiac"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["RFT", "GI symptoms", "BP"],
+            },
+            "guideline_tags": [
+                "ACR 2021 Osteoarthritis Guidelines",
+                "FDA Black Box Warning - Cardiovascular and GI risks",
+            ]
+    },
+    "Tolmetin":     {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Tolmetin, Tolectin",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp dạng thấp",
+            "Viêm khớp xương khớp",
+            "Đau cơ xương"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng tolmetin hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy thận nặng",
+                "Suy gan nặng"
+    ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan nhẹ - thận trọng"
+    ],
+        },
+        "dosage": {
+            "adult_po": "400mg x 3 lần/ngày (tối đa 1800mg/ngày)",
+            "notes": """NSAID acetic acid derivative. Hiệu quả tốt trong viêm khớp dạng thấp.""",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng",
+        },
+        "side_effects": [
+            "Chảy máu dạ dày",
+            "Suy thận",
+            "Tăng huyết áp",
+            "Phù",
+            "Đau đầu",
+            "Chóng mặt",
+            "Ban da"
+    ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Methotrexate: tăng độc tính methotrexate"
+    ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": """Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Tolmetin là acetic acid derivative. Tác dụng kháng viêm và giảm đau. Hiệu quả tốt trong viêm khớp dạng thấp.""",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày",
+            "Creatinine, BUN",
+            "Huyết áp"
+    ],
+        "precautions": [
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Theo dõi chức năng thận"
+    ],
+        "pharmacokinetics": {
+            "half_life": "1-2 giờ",
+            "onset": "30-60 phút",
+            "duration": "6-8 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ.""",
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX, chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu nặng",
+                    "management": "Tránh dùng đồng thời hoặc theo dõi INR chặt chẽ.",
+                }
+                ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin → giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả, tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Tránh dùng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Đau bụng",
+                "Chảy máu dạ dày",
+                "Suy thận cấp"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng tolmetin ngay",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Điều trị hỗ trợ",
+                "Theo dõi chức năng thận"
+    ],
+            "monitoring": "Creatinine, BUN, dấu hiệu chảy máu",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn",
+                "timing": "400mg x 3 lần/ngày",
+            },
+            "iv": {"reconstitution": "Không có dạng IV", "infusion_rate": "N/A",
+            "compatibility": [],
+            "incompatibility": []}
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Tolmetin",
+                "UpToDate - Tolmetin: Drug information",
+                "MSD Manual - NSAIDs"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["GI", "renal", "cardiac"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["RFT", "GI symptoms", "BP"],
+            },
+            "guideline_tags": [
+                "ACR 2021 Osteoarthritis Guidelines",
+                "FDA Black Box Warning - Cardiovascular and GI risks",
+            ]
+    },
+    "Dexketoprofen":     {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Dexketoprofen, Enantyum",
+        "administration": [
+            "PO"
+    ],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Đau cấp tính",
+            "Đau sau phẫu thuật",
+            "Đau bụng kinh",
+            "Đau răng"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng dexketoprofen hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy thận nặng",
+                "Suy gan nặng"
+    ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan nhẹ - thận trọng"
+    ],
+        },
+        "dosage": {
+            "adult_po": "12.5-25mg x 2-3 lần/ngày (tối đa 75mg/ngày)",
+            "notes": """Dexketoprofen là enantiomer hoạt tính của ketoprofen. Tác dụng nhanh, hiệu quả tốt cho đau cấp tính. Liều thấp hơn ketoprofen do hoạt tính cao hơn.""",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng",
+        },
+        "side_effects": [
+            "Chảy máu dạ dày",
+            "Suy thận",
+            "Tăng huyết áp",
+            "Phù",
+            "Đau đầu",
+            "Chóng mặt",
+            "Ban da"
+    ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Methotrexate: tăng độc tính methotrexate"
+    ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": """Dexketoprofen là enantiomer hoạt tính (S-enantiomer) của ketoprofen. Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Do chỉ chứa enantiomer hoạt tính nên liều thấp hơn ketoprofen nhưng hiệu quả tương đương. Tác dụng nhanh, hiệu quả tốt cho đau cấp tính. Tác dụng kháng viêm và giảm đau.""",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày",
+            "Creatinine, BUN",
+            "Huyết áp"
+    ],
+        "precautions": [
+            "Tác dụng nhanh, phù hợp cho đau cấp tính",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Theo dõi chức năng thận"
+    ],
+        "pharmacokinetics": {
+            "half_life": "1-2 giờ",
+            "onset": "15-30 phút (nhanh)",
+            "duration": "4-6 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ.""",
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX, chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu nặng",
+                    "management": "Tránh dùng đồng thời hoặc theo dõi INR chặt chẽ.",
+                }
+                ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin → giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả, tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Tránh dùng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Đau bụng",
+                "Chảy máu dạ dày",
+                "Suy thận cấp"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng dexketoprofen ngay",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Điều trị hỗ trợ",
+                "Theo dõi chức năng thận"
+    ],
+            "monitoring": "Creatinine, BUN, dấu hiệu chảy máu",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn",
+                "timing": "12.5-25mg x 2-3 lần/ngày",
+            },
+            "iv": {"reconstitution": "Không có dạng IV", "infusion_rate": "N/A",
+            "compatibility": [],
+            "incompatibility": []}
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Dexketoprofen",
+                "UpToDate - Dexketoprofen: Drug information",
+                "MSD Manual - NSAIDs"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["GI", "renal", "cardiac"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["RFT", "GI symptoms", "BP"],
+            },
+            "guideline_tags": [
+                "ACR 2021 Osteoarthritis Guidelines",
+                "FDA Black Box Warning - Cardiovascular and GI risks",
+            ]
+    },
+    "Tenoxicam":     {
+        "group": "Analgesic - NSAID",
+        "vietnamese_name": "Tenoxicam, Mobiflex",
+        "administration": [
+            "PO",
+            "IM"
+    ],
+        "indications": [
+            "Đau nhẹ đến trung bình",
+            "Viêm khớp dạng thấp",
+            "Viêm khớp xương khớp",
+            "Đau cơ xương",
+            "Gout cấp"
+    ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng tenoxicam hoặc NSAID/aspirin",
+                "Loét dạ dày tá tràng đang hoạt động",
+                "Tam cá nguyệt 3 thai kỳ (3 tháng cuối)",
+                "Suy thận nặng",
+                "Suy gan nặng"
+    ],
+            "tương_đối": [
+                "Suy thận trung bình - thận trọng",
+                "Suy gan nhẹ - thận trọng"
+    ],
+        },
+        "dosage": {
+            "adult_po": "20mg x 1 lần/ngày (tối đa 20mg/ngày)",
+            "adult_im": "20mg x 1 lần/ngày",
+            "notes": """NSAID oxicam derivative, tương tự piroxicam. T1/2 dài nên dùng 1 lần/ngày. Có dạng tiêm bắp.""",
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, giảm liều",
+            "under_30": "Tránh dùng",
+        },
+        "side_effects": [
+            "Chảy máu dạ dày",
+            "Suy thận",
+            "Tăng huyết áp",
+            "Phù",
+            "Đau đầu",
+            "Chóng mặt",
+            "Ban da"
+    ],
+        "interactions": [
+            "Warfarin: tăng nguy cơ chảy máu nặng",
+            "ACE inhibitor: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Methotrexate: tăng độc tính methotrexate"
+    ],
+        "pregnancy": "C - D trong 3 tháng cuối",
+        "mechanism_of_action": """Ức chế không chọn lọc enzyme cyclooxygenase (COX-1 và COX-2), giảm tổng hợp prostaglandin. Tenoxicam là oxicam derivative, tương tự piroxicam, có thời gian bán hủy dài nên dùng 1 lần/ngày. Có dạng tiêm bắp. Tác dụng kháng viêm và giảm đau.""",
+        "monitoring": [
+            "Dấu hiệu chảy máu dạ dày",
+            "Creatinine, BUN",
+            "Huyết áp"
+    ],
+        "precautions": [
+            "T1/2 dài → nguy cơ tích lũy",
+            "Uống với thức ăn để giảm kích ứng dạ dày",
+            "Không dùng trong 3 tháng cuối thai kỳ",
+            "Theo dõi chức năng thận"
+    ],
+        "pharmacokinetics": {
+            "half_life": "60-75 giờ (rất dài)",
+            "onset": "30-60 phút",
+            "duration": "24 giờ",
+            "protein_binding": "99%",
+            "clearance": "Gan (chuyển hóa), thận (thải trừ)",
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": """Không dùng trong 3 tháng cuối thai kỳ - có thể gây đóng ống động mạch sớm. NSAID có thể gây tăng nguy cơ nhồi máu cơ tim và đột quỵ. T1/2 rất dài → nguy cơ tích lũy.""",
+        "drug_interactions": {
+            "major": [
+    {
+                    "drug": "Warfarin, các thuốc chống đông khác",
+                    "mechanism": "Ức chế COX, chống kết tập tiểu cầu",
+                    "effect": "Tăng nguy cơ chảy máu nặng",
+                    "management": "Tránh dùng đồng thời hoặc theo dõi INR chặt chẽ.",
+                }
+                ],
+            "moderate": [
+                {
+                    "drug": "ACE inhibitor, ARB",
+                    "mechanism": "Giảm tổng hợp prostaglandin → giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả, tăng nguy cơ suy thận",
+                    "management": "Thận trọng. Theo dõi creatinine, BUN.",
+                }
+                ],
+            "minor": [],
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C - D trong tam cá nguyệt 3",
+            "pregnancy_details": "Tam cá nguyệt 3: CHỐNG CHỈ ĐỊNH.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Bài tiết vào sữa mẹ. Thận trọng khi cho con bú.",
+                "recommendation": "Cân nhắc ngừng cho con bú hoặc ngừng thuốc.",
+            },
+        },
+        "hepatic_adjustment": {
+            "mild": "Thận trọng",
+            "moderate": "Tránh dùng",
+            "severe": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Chuyển hóa qua gan. Suy gan làm giảm chuyển hóa, tăng nguy cơ tích lũy.",
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn nôn, nôn",
+                "Đau bụng",
+                "Chảy máu dạ dày",
+                "Suy thận cấp"
+    ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng tenoxicam ngay",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Điều trị hỗ trợ",
+                "Theo dõi chức năng thận"
+    ],
+            "monitoring": "Creatinine, BUN, dấu hiệu chảy máu",
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": [],
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn",
+                "timing": "20mg x 1 lần/ngày",
+            },
+            "iv": {"reconstitution": "Không có dạng IV", "infusion_rate": "N/A",
+            "compatibility": [],
+            "incompatibility": []}
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Tenoxicam",
+                "UpToDate - Tenoxicam: Drug information",
+                "MSD Manual - NSAIDs"
+    ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data",
+        },
+            "risk_flags": {
+                "high_alert": False,
+                "narrow_therapeutic_index": False,
+                "bleeding_risk": True,
+                "organ_toxicity": ["GI", "renal", "cardiac"],
+                "qt_prolongation": False,
+                "hepatotoxicity": False,
+                "nephrotoxicity": True,
+                "requires_monitoring": ["RFT", "GI symptoms", "BP"],
             },
             "guideline_tags": [
                 "ACR 2021 Osteoarthritis Guidelines",

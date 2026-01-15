@@ -595,6 +595,590 @@ OTHER_CV_DRUGS = {
             "AUA 2021 BPH Guidelines"
         ]
     },
+    
+    "Prazosin": {
+        "group": "Cardiovascular - Alpha-1 Blocker",
+        "vietnamese_name": "Prazosin, Minipress",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Phì đại tuyến tiền liệt lành tính (BPH)",
+            "Rối loạn tiểu tiện do BPH",
+            "Hội chứng Raynaud",
+            "PTSD (nightmares)"
+        ],
+        "contraindications": [
+            "Dị ứng prazosin hoặc bất kỳ thành phần nào",
+            "Hạ huyết áp nặng"
+        ],
+        "dosage": {
+            "adult_hypertension": "1mg PO x 2-3 lần/ngày, tăng dần đến 2-5mg x 2-3 lần/ngày (tối đa 20mg/ngày)",
+            "adult_bph": "1mg PO x 2 lần/ngày, tăng dần đến 2-5mg x 2 lần/ngày",
+            "adult_start": "1mg PO x 2-3 lần/ngày",
+            "adult_max": "20mg/ngày (hypertension), 10mg/ngày (BPH)",
+            "notes": "Khởi đầu với liều thấp (1mg) để tránh hạ huyết áp tư thế. Tăng dần mỗi 1-2 tuần. Liều đầu tiên uống buổi tối trước khi đi ngủ. Phải dùng 2-3 lần/ngày (half-life ngắn hơn doxazosin)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Hạ huyết áp tư thế (orthostatic hypotension) - phổ biến, đặc biệt liều đầu tiên",
+            "Chóng mặt, ngất",
+            "Nhức đầu",
+            "Mệt mỏi, buồn ngủ",
+            "Buồn nôn",
+            "Khô miệng",
+            "Rối loạn cương dương (hiếm)",
+            "Phù ngoại biên (hiếm)"
+        ],
+        "interactions": [
+            "Thuốc hạ huyết áp khác: tăng tác dụng hạ huyết áp",
+            "Sildenafil, Tadalafil, Vardenafil: tăng nguy cơ hạ huyết áp",
+            "Rượu: tăng tác dụng hạ huyết áp",
+            "Verapamil, Diltiazem: tăng nồng độ prazosin"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Prazosin là alpha-1 adrenergic receptor blocker chọn lọc. Ức chế alpha-1 receptors trên cơ trơn mạch máu và cơ trơn tuyến tiền liệt. Kết quả: (1) Giãn mạch ngoại biên → giảm huyết áp, (2) Giãn cơ trơn tuyến tiền liệt và cổ bàng quang → cải thiện triệu chứng BPH. Prazosin có half-life ngắn hơn doxazosin (2-3 giờ) nên phải dùng 2-3 lần/ngày. Tác dụng phụ: hạ huyết áp tư thế (phổ biến, đặc biệt liều đầu tiên - first-dose effect).",
+        "monitoring": [
+            "Huyết áp - hạ huyết áp tư thế phổ biến, đặc biệt liều đầu tiên",
+            "Triệu chứng BPH (tiểu khó, tiểu rắt, tiểu đêm) - đánh giá hiệu quả",
+            "Dấu hiệu hạ huyết áp tư thế (chóng mặt khi đứng dậy, ngất)",
+            "Chức năng thận (creatinine, eGFR) - không cần điều chỉnh liều"
+        ],
+        "precautions": [
+            "Hạ huyết áp tư thế - phổ biến, đặc biệt liều đầu tiên (first-dose effect), khởi đầu với liều thấp (1mg)",
+            "Liều đầu tiên uống buổi tối trước khi đi ngủ để giảm tác dụng phụ",
+            "Phải dùng 2-3 lần/ngày (half-life ngắn, khác với doxazosin 1 lần/ngày)",
+            "Tránh đứng dậy đột ngột - tăng nguy cơ ngất",
+            "Khởi đầu với liều thấp (1mg) và tăng dần mỗi 1-2 tuần",
+            "Thận trọng khi dùng với thuốc hạ huyết áp khác (tăng tác dụng)",
+            "Thận trọng khi dùng với sildenafil, tadalafil, vardenafil (tăng nguy cơ hạ huyết áp)",
+            "Tránh rượu - tăng tác dụng hạ huyết áp"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-3 giờ",
+            "onset": "1-2 giờ",
+            "duration": "6-8 giờ (phải dùng 2-3 lần/ngày)",
+            "protein_binding": "97%",
+            "clearance": "Gan (chuyển hóa), thận (bài tiết một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể gây hạ huyết áp tư thế nghiêm trọng, đặc biệt liều đầu tiên (first-dose effect). Khởi đầu với liều thấp (1mg) và uống buổi tối trước khi đi ngủ. Tránh đứng dậy đột ngột.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Sildenafil, Tadalafil, Vardenafil (PDE-5 inhibitors)",
+                    "mechanism": "Cả hai đều gây giãn mạch, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ hạ huyết áp nghiêm trọng, ngất",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều prazosin hoặc tránh dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc hạ huyết áp khác (ACE inhibitors, ARBs, Beta-blockers, Diuretics)",
+                    "mechanism": "Tác dụng cộng dồn hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức, hạ huyết áp tư thế",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều các thuốc hạ huyết áp khác."
+                },
+                {
+                    "drug": "Verapamil, Diltiazem (CCB non-dihydropyridine)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ prazosin",
+                    "effect": "Tăng tác dụng và tác dụng phụ của prazosin",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều prazosin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng prazosin hoặc bất kỳ thành phần nào",
+                "Hạ huyết áp nặng (systolic <90 mmHg)"
+            ],
+            "tương_đối": [
+                "Suy tim nặng - thận trọng, có thể làm nặng",
+                "Dùng với thuốc hạ huyết áp khác - tăng nguy cơ hạ huyết áp",
+                "Dùng với sildenafil, tadalafil, vardenafil - tăng nguy cơ hạ huyết áp"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Prazosin là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết prazosin có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều",
+            "notes": "Prazosin chuyển hóa ở gan. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng, ngất",
+                "Chóng mặt nặng",
+                "Nhịp tim nhanh phản ứng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng prazosin ngay",
+                "Đặt bệnh nhân nằm ngửa, nâng chân cao",
+                "Truyền dịch nếu cần (normal saline)",
+                "Nếu hạ huyết áp nặng: thuốc vận mạch (norepinephrine, phenylephrine)",
+                "Theo dõi huyết áp, nhịp tim liên tục"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu đáng kể.",
+                "timing": "Uống 2-3 lần/ngày. Liều đầu tiên uống BUỔI TỐI trước khi đi ngủ để giảm tác dụng phụ hạ huyết áp. Khởi đầu với liều thấp (1mg) và tăng dần mỗi 1-2 tuần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Prazosin (Minipress)",
+                "UpToDate - Prazosin: Drug Information",
+                "ACC/AHA Hypertension Guidelines 2024",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, clinical guidelines"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiovascular": "Moderate (first-dose hypotension)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC 2024 Hypertension Management Update",
+            "AUA 2021 BPH Guidelines"
+        ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế)",
+            "children": "≥12 tuổi: Liều người lớn. 1mg x 2-3 lần/ngày, tăng dần",
+            "adolescents": "1mg x 2-3 lần/ngày, tăng dần đến 2-5mg x 2-3 lần/ngày",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp ở trẻ ≥12 tuổi. Khởi đầu với liều thấp, tăng dần."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (1mg x 2 lần/ngày). Tăng dần chậm hơn.",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi hạ huyết áp tư thế."
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "15,000 - 40,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Prazosin generic thường rẻ hơn (15,000-25,000 VND/viên 1mg)."
+        },
+        "last_updated": "2025-02-18",
+    },
+    
+    "Terazosin": {
+        "group": "Cardiovascular - Alpha-1 Blocker",
+        "vietnamese_name": "Terazosin, Hytrin",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Phì đại tuyến tiền liệt lành tính (BPH)",
+            "Rối loạn tiểu tiện do BPH"
+        ],
+        "contraindications": [
+            "Dị ứng terazosin hoặc bất kỳ thành phần nào",
+            "Hạ huyết áp nặng"
+        ],
+        "dosage": {
+            "adult_hypertension": "1mg PO x 1 lần/ngày, tăng dần đến 2-5mg/ngày (tối đa 20mg/ngày)",
+            "adult_bph": "1mg PO x 1 lần/ngày, tăng dần đến 5-10mg/ngày (tối đa 10mg/ngày)",
+            "adult_start": "1mg PO x 1 lần/ngày",
+            "adult_max": "20mg/ngày (hypertension), 10mg/ngày (BPH)",
+            "notes": "Khởi đầu với liều thấp (1mg) để tránh hạ huyết áp tư thế. Tăng dần mỗi 1-2 tuần. Uống buổi tối để giảm tác dụng phụ hạ huyết áp. Có thể dùng 1 lần/ngày (half-life dài hơn prazosin)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi"
+        },
+        "side_effects": [
+            "Hạ huyết áp tư thế (orthostatic hypotension) - phổ biến, đặc biệt liều đầu tiên",
+            "Chóng mặt, ngất",
+            "Nhức đầu",
+            "Mệt mỏi",
+            "Buồn nôn",
+            "Rối loạn cương dương (hiếm)",
+            "Phù ngoại biên (hiếm)"
+        ],
+        "interactions": [
+            "Thuốc hạ huyết áp khác: tăng tác dụng hạ huyết áp",
+            "Sildenafil, Tadalafil, Vardenafil: tăng nguy cơ hạ huyết áp",
+            "Rượu: tăng tác dụng hạ huyết áp"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Terazosin là alpha-1 adrenergic receptor blocker chọn lọc. Ức chế alpha-1 receptors trên cơ trơn mạch máu và cơ trơn tuyến tiền liệt. Kết quả: (1) Giãn mạch ngoại biên → giảm huyết áp, (2) Giãn cơ trơn tuyến tiền liệt và cổ bàng quang → cải thiện triệu chứng BPH. Terazosin có half-life trung bình (12 giờ) nên có thể dùng 1 lần/ngày (giữa prazosin và doxazosin). Tác dụng phụ: hạ huyết áp tư thế (phổ biến, đặc biệt liều đầu tiên).",
+        "monitoring": [
+            "Huyết áp - hạ huyết áp tư thế phổ biến, đặc biệt liều đầu tiên",
+            "Triệu chứng BPH (tiểu khó, tiểu rắt, tiểu đêm) - đánh giá hiệu quả",
+            "Dấu hiệu hạ huyết áp tư thế (chóng mặt khi đứng dậy, ngất)",
+            "Chức năng thận (creatinine, eGFR) - không cần điều chỉnh liều"
+        ],
+        "precautions": [
+            "Hạ huyết áp tư thế - phổ biến, đặc biệt liều đầu tiên (first-dose effect), khởi đầu với liều thấp (1mg)",
+            "Uống buổi tối để giảm tác dụng phụ hạ huyết áp",
+            "Có thể dùng 1 lần/ngày (half-life trung bình, khác với prazosin phải dùng 2-3 lần/ngày)",
+            "Tránh đứng dậy đột ngột - tăng nguy cơ ngất",
+            "Khởi đầu với liều thấp (1mg) và tăng dần mỗi 1-2 tuần",
+            "Thận trọng khi dùng với thuốc hạ huyết áp khác (tăng tác dụng)",
+            "Thận trọng khi dùng với sildenafil, tadalafil, vardenafil (tăng nguy cơ hạ huyết áp)",
+            "Tránh rượu - tăng tác dụng hạ huyết áp"
+        ],
+        "pharmacokinetics": {
+            "half_life": "12 giờ",
+            "onset": "1-2 giờ",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "90-94%",
+            "clearance": "Gan (chuyển hóa), thận (bài tiết một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Có thể gây hạ huyết áp tư thế nghiêm trọng, đặc biệt liều đầu tiên (first-dose effect). Khởi đầu với liều thấp (1mg) và uống buổi tối. Tránh đứng dậy đột ngột.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Sildenafil, Tadalafil, Vardenafil (PDE-5 inhibitors)",
+                    "mechanism": "Cả hai đều gây giãn mạch, tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ hạ huyết áp nghiêm trọng, ngất",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều terazosin hoặc tránh dùng cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc hạ huyết áp khác (ACE inhibitors, ARBs, Beta-blockers, Diuretics)",
+                    "mechanism": "Tác dụng cộng dồn hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức, hạ huyết áp tư thế",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều các thuốc hạ huyết áp khác."
+                },
+                {
+                    "drug": "Rượu",
+                    "mechanism": "Rượu gây giãn mạch, tác dụng cộng dồn với terazosin",
+                    "effect": "Tăng tác dụng hạ huyết áp, tăng nguy cơ ngất",
+                    "management": "Tránh rượu khi dùng terazosin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng terazosin hoặc bất kỳ thành phần nào",
+                "Hạ huyết áp nặng (systolic <90 mmHg)"
+            ],
+            "tương_đối": [
+                "Suy tim nặng - thận trọng, có thể làm nặng",
+                "Dùng với thuốc hạ huyết áp khác - tăng nguy cơ hạ huyết áp",
+                "Dùng với sildenafil, tadalafil, vardenafil - tăng nguy cơ hạ huyết áp"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Terazosin là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết terazosin có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều",
+            "severe": "Thận trọng, giảm liều",
+            "notes": "Terazosin chuyển hóa ở gan. Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và tác dụng phụ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng, ngất",
+                "Chóng mặt nặng",
+                "Nhịp tim nhanh phản ứng"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng terazosin ngay",
+                "Đặt bệnh nhân nằm ngửa, nâng chân cao",
+                "Truyền dịch nếu cần (normal saline)",
+                "Nếu hạ huyết áp nặng: thuốc vận mạch (norepinephrine, phenylephrine)",
+                "Theo dõi huyết áp, nhịp tim liên tục"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu đáng kể.",
+                "timing": "Uống 1 lần/ngày, tốt nhất vào BUỔI TỐI để giảm tác dụng phụ hạ huyết áp. Khởi đầu với liều thấp (1mg) và tăng dần mỗi 1-2 tuần."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Terazosin (Hytrin)",
+                "UpToDate - Terazosin: Drug Information",
+                "ACC/AHA Hypertension Guidelines 2024",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, clinical guidelines"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiovascular": "Moderate (first-dose hypotension)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC 2024 Hypertension Management Update",
+            "AUA 2021 BPH Guidelines"
+        ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế)",
+            "children": "≥12 tuổi: Liều người lớn. 1mg x 1 lần/ngày, tăng dần",
+            "adolescents": "1mg x 1 lần/ngày, tăng dần đến 2-5mg/ngày",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp ở trẻ ≥12 tuổi. Khởi đầu với liều thấp, tăng dần."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (1mg x 1 lần/ngày). Tăng dần chậm hơn.",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi hạ huyết áp tư thế."
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "20,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Terazosin generic thường rẻ hơn (20,000-35,000 VND/viên 2mg)."
+        },
+        "last_updated": "2025-02-18",
+    },
+    
+    "Aliskiren": {
+        "group": "Cardiovascular - Direct Renin Inhibitor",
+        "vietnamese_name": "Aliskiren, Tekturna",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp"
+        ],
+        "contraindications": [
+            "Dị ứng aliskiren hoặc bất kỳ thành phần nào",
+            "Có thai",
+            "Suy thận nặng (CrCl <30 ml/min)",
+            "Dùng đồng thời với ACE inhibitor hoặc ARB ở bệnh nhân đái tháo đường"
+        ],
+        "dosage": {
+            "adult_htn": "150mg PO x 1 lần/ngày, tăng dần đến 300mg/ngày nếu cần",
+            "adult_start": "150mg PO x 1 lần/ngày",
+            "adult_usual": "150-300mg x 1 lần/ngày",
+            "adult_max": "300mg/ngày",
+            "notes": "Uống với thức ăn hoặc không. Không nên dùng với ACE inhibitor hoặc ARB ở bệnh nhân đái tháo đường (tăng nguy cơ suy thận, tăng kali máu, hạ huyết áp)."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, không khuyến cáo",
+            "under_30": "Chống chỉ định nếu CrCl <30 ml/min"
+        },
+        "side_effects": [
+            "Tiêu chảy (phổ biến)",
+            "Tăng kali máu",
+            "Hạ huyết áp",
+            "Ho (ít hơn ACE inhibitor)",
+            "Phù mạch (hiếm)",
+            "Suy thận cấp (khi dùng với ACE/ARB ở bệnh nhân đái tháo đường)",
+            "Chóng mặt",
+            "Đau đầu"
+        ],
+        "interactions": [
+            "ACE inhibitor, ARB: tăng nguy cơ suy thận, tăng kali máu, hạ huyết áp (đặc biệt ở bệnh nhân đái tháo đường) - chống chỉ định",
+            "Kali-sparing diuretics, kali bổ sung: tăng kali máu",
+            "Furosemide: giảm nồng độ aliskiren",
+            "Atorvastatin: tăng nồng độ aliskiren",
+            "Ketoconazole, Itraconazole: tăng nồng độ aliskiren"
+        ],
+        "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "mechanism_of_action": "Aliskiren là direct renin inhibitor, ức chế trực tiếp renin enzyme, ngăn chặn chuyển angiotensinogen thành angiotensin I. Kết quả: giảm sản xuất angiotensin I và angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp. Aliskiren là thuốc duy nhất trong nhóm direct renin inhibitor được FDA phê chuẩn cho tăng huyết áp. Ưu điểm: không gây ho như ACE inhibitor. Nhược điểm: không nên dùng với ACE inhibitor hoặc ARB ở bệnh nhân đái tháo đường (tăng nguy cơ suy thận, tăng kali máu, hạ huyết áp).",
+        "monitoring": [
+            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
+            "Kali máu định kỳ",
+            "Huyết áp",
+            "Tiêu chảy (tác dụng phụ phổ biến)",
+            "Dấu hiệu phù mạch (sưng mặt, lưỡi, họng - hiếm)",
+            "Chức năng thận - đặc biệt khi dùng với ACE/ARB"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH: Không dùng với ACE inhibitor hoặc ARB ở bệnh nhân đái tháo đường - tăng nguy cơ suy thận, tăng kali máu, hạ huyết áp",
+            "CHỐNG CHỈ ĐỊNH trong thai kỳ - có thể gây dị tật thai nhi",
+            "CHỐNG CHỈ ĐỊNH nếu CrCl <30 ml/min",
+            "Tiêu chảy - tác dụng phụ phổ biến, có thể tự hết sau vài tuần",
+            "Khởi đầu với liều thấp (150mg), tăng dần",
+            "Theo dõi sát creatinine và kali máu khi bắt đầu",
+            "Tránh dùng với kali-sparing diuretics và kali bổ sung",
+            "Uống với thức ăn hoặc không (không ảnh hưởng hấp thu đáng kể)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "24-40 giờ",
+            "onset": "1-2 giờ",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": "47-51%",
+            "clearance": "Chủ yếu qua phân (78%), một phần qua thận (22%). Chuyển hóa ít qua CYP3A4."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. CHỐNG CHỈ ĐỊNH dùng với ACE inhibitor hoặc ARB ở bệnh nhân đái tháo đường - tăng nguy cơ suy thận, tăng kali máu, hạ huyết áp.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "ACE inhibitors, ARBs (ở bệnh nhân đái tháo đường)",
+                    "mechanism": "Tác dụng hiệp đồng ức chế RAAS",
+                    "effect": "Tăng nguy cơ suy thận, tăng kali máu, hạ huyết áp nghiêm trọng",
+                    "management": "CHỐNG CHỈ ĐỊNH ở bệnh nhân đái tháo đường. Tránh dùng cùng."
+                },
+                {
+                    "drug": "Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene), Kali bổ sung",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Furosemide",
+                    "mechanism": "Furosemide giảm hấp thu aliskiren",
+                    "effect": "Giảm nồng độ và hiệu quả của aliskiren",
+                    "management": "Thận trọng. Có thể cần tăng liều aliskiren hoặc dùng cách xa furosemide."
+                },
+                {
+                    "drug": "Atorvastatin, Ketoconazole, Itraconazole",
+                    "mechanism": "Ức chế CYP3A4 hoặc P-glycoprotein, tăng nồng độ aliskiren",
+                    "effect": "Tăng nồng độ và tác dụng phụ của aliskiren",
+                    "management": "Thận trọng. Theo dõi huyết áp và tác dụng phụ. Có thể cần giảm liều aliskiren."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng aliskiren hoặc bất kỳ thành phần nào",
+                "Có thai",
+                "Suy thận nặng (CrCl <30 ml/min)",
+                "Dùng đồng thời với ACE inhibitor hoặc ARB ở bệnh nhân đái tháo đường"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-60) - thận trọng, không khuyến cáo",
+                "Tăng kali máu - điều chỉnh trước khi dùng",
+                "Dùng kali-sparing diuretics - tăng nguy cơ tăng kali máu",
+                "Dùng với furosemide - giảm hiệu quả aliskiren"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong thai kỳ. Có thể gây dị tật thai nhi (dị tật thận, xương sọ, phổi), thiểu ối, chậm phát triển thai nhi, và tử vong thai nhi. Nguy cơ cao nhất trong 3 tháng đầu và 3 tháng cuối. Ngừng ngay khi phát hiện có thai.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Aliskiren bài tiết vào sữa mẹ ở nồng độ thấp. Dữ liệu còn hạn chế.",
+                "recommendation": "Thận trọng khi cho con bú. Ưu tiên thuốc khác đã có dữ liệu nhiều hơn nếu có thể."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Aliskiren chuyển hóa ít qua gan (chủ yếu qua CYP3A4). Suy gan nặng có thể ảnh hưởng đến chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Tăng kali máu",
+                "Suy thận cấp",
+                "Chóng mặt, ngất"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Ngừng ngay aliskiren",
+                "Nằm đầu thấp, nâng chân",
+                "Truyền dịch nếu hạ huyết áp",
+                "Theo dõi huyết áp, nhịp tim, điện giải",
+                "Điều trị tăng kali máu nếu có: Calcium gluconate, insulin + glucose, sodium bicarbonate",
+                "Lọc máu nếu suy thận nặng"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, kali máu, chức năng thận trong ít nhất 12-24 giờ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1 lần/ngày. Uống đúng giờ mỗi ngày. Ưu điểm: không gây ho như ACE inhibitor."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "brand_names": {
+            "vietnam": ["Tekturna", "Aliskiren"],
+            "common": ["Tekturna", "Aliskiren"]
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "adolescents": "≥18 tuổi: Liều người lớn. 150-300mg x 1 lần/ngày",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp ở trẻ ≥18 tuổi. Khởi đầu với liều thấp, tăng dần."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (150mg x 1 lần/ngày). Tăng dần chậm hơn. Không dùng nếu CrCl <30 ml/min.",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi chức năng thận, kali máu thường xuyên."
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "40,000 - 100,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Aliskiren generic thường rẻ hơn (40,000-70,000 VND/viên 150mg)."
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Tekturna (aliskiren)",
+                "UpToDate - Aliskiren: Drug information",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "FDA Black Box Warning - Pregnancy and Diabetes"
+        ],
+        "last_updated": "2025-02-18",
+    },
     "Finerenone":     {
         "group": "Cardiovascular/Metabolic - Nonsteroidal MRA",
         "vietnamese_name": "Finerenone, Kerendia",

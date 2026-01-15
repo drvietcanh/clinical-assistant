@@ -388,7 +388,23 @@ SULFONYLUREAS_DRUGS = {
             "adult_start": "1-2mg x 1 lần/ngày với bữa sáng",
             "adult_usual": "1-4mg x 1 lần/ngày",
             "adult_max": "8mg/ngày (có thể chia 2 lần)",
-            "notes": "Ít nguy cơ hạ đường huyết hơn glibenclamide. Uống với bữa sáng hoặc bữa ăn đầu tiên."
+            "dm_t2": "1-2mg x 1 lần/ngày với bữa sáng, tăng dần đến 4-8mg/ngày",
+            "elderly": "Khởi đầu 1mg x 1 lần/ngày với bữa sáng, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ (hạ đường huyết).",
+            "renal_adjustment_dosage": {
+                "normal": "1-4mg x 1 lần/ngày",
+                "30_60": "Thận trọng, có thể cần giảm liều",
+                "under_30": "Thận trọng, giảm liều hoặc tránh dùng",
+                "dialysis": "Thận trọng, giảm liều hoặc tránh dùng"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "1-4mg x 1 lần/ngày",
+                "moderate": "Thận trọng, giảm liều",
+                "severe": "Thận trọng, giảm liều hoặc tránh dùng"
+            },
+            "administration_route": "PO",
+            "frequency": "1-2 lần/ngày",
+            "with_food": "Nên uống với bữa sáng hoặc bữa ăn đầu tiên",
+            "notes": "Ít nguy cơ hạ đường huyết hơn glibenclamide. Uống với bữa sáng hoặc bữa ăn đầu tiên. Chuyển hóa qua gan (CYP2C9), cần điều chỉnh liều ở suy gan."
         },
         "renal_adjustment": {
             "normal": "Không đổi",

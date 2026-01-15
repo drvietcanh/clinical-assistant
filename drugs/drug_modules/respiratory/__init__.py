@@ -12,6 +12,7 @@ from .methylxanthines import METHYLXANTHINES_DRUGS
 from .respiratory_biologics import RESPIRATORY_BIOLOGICS_DRUGS
 from .pde4_inhibitors import PDE4_INHIBITORS_DRUGS
 from .combination_inhalers import COMBINATION_INHALERS_DRUGS
+from .cough_expectorants_mucolytics import COUGH_EXPECTORANTS_MUCOLYTICS_DRUGS
 
 # Merge all categories
 RESPIRATORY_DRUGS = {
@@ -25,6 +26,7 @@ RESPIRATORY_DRUGS = {
     **RESPIRATORY_BIOLOGICS_DRUGS,
     **PDE4_INHIBITORS_DRUGS,
     **COMBINATION_INHALERS_DRUGS,
+    **COUGH_EXPECTORANTS_MUCOLYTICS_DRUGS,
 }
 
 __all__ = ['RESPIRATORY_DRUGS']

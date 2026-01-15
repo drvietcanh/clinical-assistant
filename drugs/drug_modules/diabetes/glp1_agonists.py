@@ -83,8 +83,14 @@ GLP1_AGONISTS_DRUGS = {
         "black_box_warnings": """Nguy cơ ung thư tuyến giáp tủy (MTC) ở động vật thí nghiệm. Chống chỉ định ở bệnh nhân có tiền sử MTC hoặc MEN 2.""",
         "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
         "pharmacokinetics": {
+            "half_life": "13 giờ",
+            "onset": "1-2 giờ",
+            "duration": "24 giờ",
+            "protein_binding": ">98%",
+            "metabolism": "Chuyển hóa giống protein (proteolytic degradation)",
+            "clearance": "Thận (6% nguyên dạng), chuyển hóa nội bào"
         },
-        "storage": "",
+        "storage": "Bảo quản ở nhiệt độ 2-8°C (tủ lạnh) trước khi mở. Sau khi mở, có thể bảo quản ở nhiệt độ phòng (15-30°C) hoặc tủ lạnh trong tối đa 30 ngày. Tránh đông lạnh. Tránh ánh sáng trực tiếp.",
         "drug_interactions": {
             "major": [],
             "moderate": [
@@ -111,32 +117,47 @@ GLP1_AGONISTS_DRUGS = {
             ]
         },
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
+            "fda_category": "C",
+            "pregnancy_details": "Có thể gây hại cho thai nhi. Nghiên cứu trên động vật cho thấy có thể gây hại cho thai nhi. Không có nghiên cứu đầy đủ trên người. Không khuyến nghị dùng trong thai kỳ. Insulin là lựa chọn ưu tiên trong thai kỳ.",
             "lactation": {
-                "safety": "",
-                "details": "",
-                "recommendation": "",
-            },
+                "safety": "Caution",
+                "details": "Liraglutide bài tiết vào sữa mẹ ở nồng độ thấp. Không có dữ liệu đầy đủ về an toàn cho trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc lợi ích/nguy cơ. Theo dõi trẻ bú mẹ nếu có dấu hiệu bất thường."
+            }
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": "",
-            "notes": "",
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Liraglutide chuyển hóa giống protein (proteolytic degradation), không phụ thuộc vào chức năng gan. Suy gan nhẹ đến trung bình không cần điều chỉnh liều. Suy gan nặng có thể làm giảm chuyển hóa, tăng nồng độ thuốc."
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều",
             "30_60": "Có thể dùng nhưng thận trọng. Theo dõi chức năng thận.",
             "under_30": "Thận trọng, có thể cần giảm liều. GLP-1 agonists thải trừ qua thận một phần.",
             "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu.",
-            "notes": "GLP-1 agonists thải trừ một phần qua thận. Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
+            "notes": "Liraglutide thải trừ một phần qua thận (6% nguyên dạng). Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
         },
         "overdose_management": {
-            "symptoms": [],
-            "antidote": "",
-            "treatment": [],
-            "monitoring": "",
+            "symptoms": [
+                "Buồn nôn, nôn nghiêm trọng",
+                "Tiêu chảy",
+                "Hạ đường huyết (nếu dùng với insulin hoặc sulfonylurea)",
+                "Đau bụng",
+                "Viêm tụy cấp (hiếm nhưng nghiêm trọng)",
+                "Mất nước do nôn nhiều"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: ngừng thuốc, điều chỉnh đường huyết, điều trị viêm tụy nếu có.",
+            "treatment": [
+                "Ngừng liraglutide ngay lập tức",
+                "Điều trị hạ đường huyết nếu có: Glucose PO hoặc IV (dextrose 50% 50ml IV)",
+                "Điều trị buồn nôn/nôn: Thuốc chống nôn (ondansetron, metoclopramide)",
+                "Bù dịch nếu mất nước: Normal saline IV",
+                "Điều trị viêm tụy cấp nếu có: Nhịn ăn, bù dịch, giảm đau, theo dõi sát",
+                "Theo dõi đường huyết, điện giải, chức năng thận, amylase/lipase nếu nghi ngờ viêm tụy",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Đường huyết, điện giải (Na, K, Cl), chức năng thận (creatinine, eGFR), amylase/lipase (nếu nghi ngờ viêm tụy), dấu hiệu mất nước, dấu hiệu viêm tụy (đau bụng dữ dội, buồn nôn, nôn)"
         },
         "reversal_agents": {
             "available": False,
@@ -144,11 +165,30 @@ GLP1_AGONISTS_DRUGS = {
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, điều chỉnh đường huyết nếu hạ đường huyết, điều trị viêm tụy nếu có."
         },
         "administration_instructions": {
+            "sc": {
+                "injection_sites": "Bụng, đùi, hoặc cánh tay. Luân chuyển vị trí tiêm để tránh kích ứng da.",
+                "timing": "Tiêm 1 lần/ngày vào cùng một giờ mỗi ngày. Có thể tiêm bất kỳ lúc nào trong ngày, không phụ thuộc bữa ăn.",
+                "technique": "Tiêm dưới da (subcutaneous). Không tiêm vào tĩnh mạch hoặc cơ. Không tiêm vào vùng da bị kích ứng, đỏ, hoặc cứng.",
+                "notes": "Khởi đầu với liều thấp (0.6mg) x 1 tuần để giảm buồn nôn, sau đó tăng dần. Bảo quản ở tủ lạnh (2-8°C) trước khi mở. Sau khi mở, có thể bảo quản ở nhiệt độ phòng hoặc tủ lạnh trong tối đa 30 ngày."
+            },
+            "oral": {
+                "reconstitution": "Không có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng tiêm dưới da (SC)"
+            }
         },
         "references": {
-            "primary_sources": [],
-            "last_updated": "",
-            "evidence_level": "",
+            "primary_sources": [
+                "FDA Drug Label - Victoza (liraglutide), Saxenda (liraglutide)",
+                "UpToDate - Liraglutide: Drug information",
+                "LEADER Study - New England Journal of Medicine (2016) - Liraglutide trong đái tháo đường type 2 và bệnh tim mạch",
+                "SCALE Study - New England Journal of Medicine (2015) - Liraglutide cho giảm cân",
+                "American Diabetes Association guidelines - GLP-1 receptor agonists"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - Multiple large RCTs (LEADER, SCALE) showing cardiovascular benefits and weight loss"
         },
     },
     "Semaglutide":     {
@@ -225,8 +265,14 @@ GLP1_AGONISTS_DRUGS = {
         "interactions": [],
         "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
         "pharmacokinetics": {
+            "half_life": "7 ngày (tiêm), 7 ngày (uống)",
+            "onset": "1-2 giờ (tiêm), 30 phút (uống)",
+            "duration": "7 ngày (tiêm 1 lần/tuần), 24 giờ (uống)",
+            "protein_binding": ">99%",
+            "metabolism": "Chuyển hóa giống protein (proteolytic degradation)",
+            "clearance": "Thận (3% nguyên dạng), chuyển hóa nội bào"
         },
-        "storage": "",
+        "storage": "Ozempic/Wegovy (tiêm): Bảo quản ở nhiệt độ 2-8°C (tủ lạnh) trước khi mở. Sau khi mở, có thể bảo quản ở nhiệt độ phòng (15-30°C) hoặc tủ lạnh trong tối đa 56 ngày. Tránh đông lạnh. Tránh ánh sáng trực tiếp. Rybelsus (uống): Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng.",
         "drug_interactions": {
             "major": [],
             "moderate": [
@@ -253,32 +299,47 @@ GLP1_AGONISTS_DRUGS = {
             ]
         },
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
+            "fda_category": "C",
+            "pregnancy_details": "Có thể gây hại cho thai nhi. Nghiên cứu trên động vật cho thấy có thể gây hại cho thai nhi. Không có nghiên cứu đầy đủ trên người. Không khuyến nghị dùng trong thai kỳ. Insulin là lựa chọn ưu tiên trong thai kỳ.",
             "lactation": {
-                "safety": "",
-                "details": "",
-                "recommendation": "",
-            },
+                "safety": "Caution",
+                "details": "Semaglutide bài tiết vào sữa mẹ ở nồng độ thấp. Không có dữ liệu đầy đủ về an toàn cho trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc lợi ích/nguy cơ. Theo dõi trẻ bú mẹ nếu có dấu hiệu bất thường."
+            }
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": "",
-            "notes": "",
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Semaglutide chuyển hóa giống protein (proteolytic degradation), không phụ thuộc vào chức năng gan. Suy gan nhẹ đến trung bình không cần điều chỉnh liều. Suy gan nặng có thể làm giảm chuyển hóa, tăng nồng độ thuốc."
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều",
             "30_60": "Có thể dùng nhưng thận trọng. Theo dõi chức năng thận.",
             "under_30": "Thận trọng, có thể cần giảm liều. GLP-1 agonists thải trừ qua thận một phần.",
             "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu.",
-            "notes": "GLP-1 agonists thải trừ một phần qua thận. Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
+            "notes": "Semaglutide thải trừ một phần qua thận (3% nguyên dạng). Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
         },
         "overdose_management": {
-            "symptoms": [],
-            "antidote": "",
-            "treatment": [],
-            "monitoring": "",
+            "symptoms": [
+                "Buồn nôn, nôn nghiêm trọng",
+                "Tiêu chảy",
+                "Hạ đường huyết (nếu dùng với insulin hoặc sulfonylurea)",
+                "Đau bụng",
+                "Viêm tụy cấp (hiếm nhưng nghiêm trọng)",
+                "Mất nước do nôn nhiều"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: ngừng thuốc, điều chỉnh đường huyết, điều trị viêm tụy nếu có.",
+            "treatment": [
+                "Ngừng semaglutide ngay lập tức",
+                "Điều trị hạ đường huyết nếu có: Glucose PO hoặc IV (dextrose 50% 50ml IV)",
+                "Điều trị buồn nôn/nôn: Thuốc chống nôn (ondansetron, metoclopramide)",
+                "Bù dịch nếu mất nước: Normal saline IV",
+                "Điều trị viêm tụy cấp nếu có: Nhịn ăn, bù dịch, giảm đau, theo dõi sát",
+                "Theo dõi đường huyết, điện giải, chức năng thận, amylase/lipase nếu nghi ngờ viêm tụy",
+                "Theo dõi ít nhất 24-48 giờ (do half-life dài: 7 ngày)"
+            ],
+            "monitoring": "Đường huyết, điện giải (Na, K, Cl), chức năng thận (creatinine, eGFR), amylase/lipase (nếu nghi ngờ viêm tụy), dấu hiệu mất nước, dấu hiệu viêm tụy (đau bụng dữ dội, buồn nôn, nôn)"
         },
         "reversal_agents": {
             "available": False,
@@ -286,11 +347,29 @@ GLP1_AGONISTS_DRUGS = {
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, điều chỉnh đường huyết nếu hạ đường huyết, điều trị viêm tụy nếu có."
         },
         "administration_instructions": {
+            "sc": {
+                "injection_sites": "Bụng, đùi, hoặc cánh tay. Luân chuyển vị trí tiêm để tránh kích ứng da.",
+                "timing": "Tiêm 1 lần/tuần vào cùng một ngày mỗi tuần. Có thể tiêm bất kỳ lúc nào trong ngày, không phụ thuộc bữa ăn.",
+                "technique": "Tiêm dưới da (subcutaneous). Không tiêm vào tĩnh mạch hoặc cơ. Không tiêm vào vùng da bị kích ứng, đỏ, hoặc cứng.",
+                "notes": "Khởi đầu với liều thấp (0.25mg) x 4 tuần để giảm buồn nôn, sau đó tăng dần. Bảo quản ở tủ lạnh (2-8°C) trước khi mở. Sau khi mở, có thể bảo quản ở nhiệt độ phòng hoặc tủ lạnh trong tối đa 56 ngày."
+            },
+            "oral": {
+                "with_food": "QUAN TRỌNG: Phải uống lúc đói, với ít nước (không quá 120ml), chờ 30 phút mới ăn hoặc uống thuốc khác.",
+                "timing": "Uống 1 lần/ngày vào buổi sáng, lúc đói. Uống với ít nước (không quá 120ml). Chờ 30 phút trước khi ăn, uống thuốc khác, hoặc uống nước khác.",
+                "notes": "Rybelsus: Phải uống lúc đói để hấp thu tốt. Uống với ít nước (không quá 120ml). Chờ 30 phút trước khi ăn hoặc uống thuốc khác. Không nghiền, không nhai viên nén. Nuốt nguyên viên với nước."
+            }
         },
         "references": {
-            "primary_sources": [],
-            "last_updated": "",
-            "evidence_level": "",
+            "primary_sources": [
+                "FDA Drug Label - Ozempic (semaglutide injection), Wegovy (semaglutide injection), Rybelsus (semaglutide oral)",
+                "UpToDate - Semaglutide: Drug information",
+                "SUSTAIN-6 Study - New England Journal of Medicine (2016) - Semaglutide trong đái tháo đường type 2 và bệnh tim mạch",
+                "STEP Studies - New England Journal of Medicine (2021) - Semaglutide cho giảm cân",
+                "SELECT Study - New England Journal of Medicine (2023) - Semaglutide trong giảm biến cố tim mạch",
+                "American Diabetes Association guidelines - GLP-1 receptor agonists"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - Multiple large RCTs (SUSTAIN-6, STEP, SELECT) showing cardiovascular benefits and weight loss"
         },
     },
     "Dulaglutide":     {
@@ -331,10 +410,23 @@ GLP1_AGONISTS_DRUGS = {
         "contraindications": [],
         "interactions": [],
         "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
-        "precautions": [],
+        "precautions": [
+            "Buồn nôn rất phổ biến - Tăng liều từ từ, uống thuốc chống nôn nếu cần",
+            "Nguy cơ viêm tụy - Ngừng thuốc nếu nghi ngờ viêm tụy",
+            "Nguy cơ ung thư tuyến giáp tủy (MTC) - Chống chỉ định nếu có tiền sử MTC hoặc MEN 2",
+            "Giảm liều insulin/sulfonylurea khi bắt đầu dùng",
+            "Lợi ích tim mạch lớn (REWIND trial)",
+            "Tiêm 1 lần/tuần - Tiện lợi với bút tiêm sẵn"
+        ],
         "pharmacokinetics": {
+            "half_life": "5 ngày",
+            "onset": "1-2 giờ",
+            "duration": "7 ngày (tiêm 1 lần/tuần)",
+            "protein_binding": ">99%",
+            "metabolism": "Chuyển hóa giống protein (proteolytic degradation)",
+            "clearance": "Thận (chủ yếu), chuyển hóa nội bào"
         },
-        "storage": "",
+        "storage": "Bảo quản ở nhiệt độ 2-8°C (tủ lạnh) trước khi mở. Sau khi mở, có thể bảo quản ở nhiệt độ phòng (15-30°C) hoặc tủ lạnh trong tối đa 14 ngày. Tránh đông lạnh. Tránh ánh sáng trực tiếp.",
         "drug_interactions": {
             "major": [],
             "moderate": [
@@ -361,32 +453,47 @@ GLP1_AGONISTS_DRUGS = {
             ]
         },
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
+            "fda_category": "C",
+            "pregnancy_details": "Có thể gây hại cho thai nhi. Nghiên cứu trên động vật cho thấy có thể gây hại cho thai nhi. Không có nghiên cứu đầy đủ trên người. Không khuyến nghị dùng trong thai kỳ. Insulin là lựa chọn ưu tiên trong thai kỳ.",
             "lactation": {
-                "safety": "",
-                "details": "",
-                "recommendation": "",
-            },
+                "safety": "Caution",
+                "details": "Dulaglutide bài tiết vào sữa mẹ ở nồng độ thấp. Không có dữ liệu đầy đủ về an toàn cho trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc lợi ích/nguy cơ. Theo dõi trẻ bú mẹ nếu có dấu hiệu bất thường."
+            }
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": "",
-            "notes": "",
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Dulaglutide chuyển hóa giống protein (proteolytic degradation), không phụ thuộc vào chức năng gan. Suy gan nhẹ đến trung bình không cần điều chỉnh liều. Suy gan nặng có thể làm giảm chuyển hóa, tăng nồng độ thuốc."
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều",
             "30_60": "Có thể dùng nhưng thận trọng. Theo dõi chức năng thận.",
             "under_30": "Thận trọng, có thể cần giảm liều. GLP-1 agonists thải trừ qua thận một phần.",
             "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu.",
-            "notes": "GLP-1 agonists thải trừ một phần qua thận. Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
+            "notes": "Dulaglutide thải trừ chủ yếu qua thận. Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
         },
         "overdose_management": {
-            "symptoms": [],
-            "antidote": "",
-            "treatment": [],
-            "monitoring": "",
+            "symptoms": [
+                "Buồn nôn, nôn nghiêm trọng",
+                "Tiêu chảy",
+                "Hạ đường huyết (nếu dùng với insulin hoặc sulfonylurea)",
+                "Đau bụng",
+                "Viêm tụy cấp (hiếm nhưng nghiêm trọng)",
+                "Mất nước do nôn nhiều"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: ngừng thuốc, điều chỉnh đường huyết, điều trị viêm tụy nếu có.",
+            "treatment": [
+                "Ngừng dulaglutide ngay lập tức",
+                "Điều trị hạ đường huyết nếu có: Glucose PO hoặc IV (dextrose 50% 50ml IV)",
+                "Điều trị buồn nôn/nôn: Thuốc chống nôn (ondansetron, metoclopramide)",
+                "Bù dịch nếu mất nước: Normal saline IV",
+                "Điều trị viêm tụy cấp nếu có: Nhịn ăn, bù dịch, giảm đau, theo dõi sát",
+                "Theo dõi đường huyết, điện giải, chức năng thận, amylase/lipase nếu nghi ngờ viêm tụy",
+                "Theo dõi ít nhất 24-48 giờ (do half-life dài: 5 ngày)"
+            ],
+            "monitoring": "Đường huyết, điện giải (Na, K, Cl), chức năng thận (creatinine, eGFR), amylase/lipase (nếu nghi ngờ viêm tụy), dấu hiệu mất nước, dấu hiệu viêm tụy (đau bụng dữ dội, buồn nôn, nôn)"
         },
         "reversal_agents": {
             "available": False,
@@ -394,11 +501,29 @@ GLP1_AGONISTS_DRUGS = {
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, điều chỉnh đường huyết nếu hạ đường huyết, điều trị viêm tụy nếu có."
         },
         "administration_instructions": {
+            "sc": {
+                "injection_sites": "Bụng, đùi, hoặc cánh tay. Luân chuyển vị trí tiêm để tránh kích ứng da.",
+                "timing": "Tiêm 1 lần/tuần vào cùng một ngày mỗi tuần. Có thể tiêm bất kỳ lúc nào trong ngày, không phụ thuộc bữa ăn.",
+                "technique": "Tiêm dưới da (subcutaneous) bằng bút tiêm sẵn (pre-filled pen). Không tiêm vào tĩnh mạch hoặc cơ. Không tiêm vào vùng da bị kích ứng, đỏ, hoặc cứng.",
+                "notes": "Khởi đầu với liều thấp (0.75mg) để giảm buồn nôn, sau đó tăng dần. Bảo quản ở tủ lạnh (2-8°C) trước khi mở. Sau khi mở, có thể bảo quản ở nhiệt độ phòng hoặc tủ lạnh trong tối đa 14 ngày."
+            },
+            "oral": {
+                "reconstitution": "Không có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng tiêm dưới da (SC)"
+            }
         },
         "references": {
-            "primary_sources": [],
-            "last_updated": "",
-            "evidence_level": "",
+            "primary_sources": [
+                "FDA Drug Label - Trulicity (dulaglutide)",
+                "UpToDate - Dulaglutide: Drug information",
+                "REWIND Study - The Lancet (2019) - Dulaglutide trong đái tháo đường type 2 và bệnh tim mạch",
+                "American Diabetes Association guidelines - GLP-1 receptor agonists"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - Large RCT (REWIND) showing cardiovascular benefits"
         },
     },
     "Exenatide":     {
@@ -459,10 +584,23 @@ GLP1_AGONISTS_DRUGS = {
         },
         "interactions": [],
         "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
-        "precautions": [],
+        "precautions": [
+            "Buồn nôn rất phổ biến - Tăng liều từ từ, uống thuốc chống nôn nếu cần",
+            "Nguy cơ viêm tụy - Ngừng thuốc nếu nghi ngờ viêm tụy",
+            "Nguy cơ ung thư tuyến giáp tủy (MTC) - Chống chỉ định nếu có tiền sử MTC hoặc MEN 2",
+            "Giảm liều insulin/sulfonylurea khi bắt đầu dùng",
+            "Byetta: Phải tiêm 2 lần/ngày (ít tiện lợi hơn các GLP-1 RA khác)",
+            "Bydureon: Tiêm 1 lần/tuần (tiện lợi hơn)"
+        ],
         "pharmacokinetics": {
+            "half_life": "2.4 giờ (Byetta), 7 ngày (Bydureon)",
+            "onset": "1-2 giờ",
+            "duration": "6-8 giờ (Byetta - tiêm 2 lần/ngày), 7 ngày (Bydureon - tiêm 1 lần/tuần)",
+            "protein_binding": "Không gắn protein đáng kể",
+            "metabolism": "Chuyển hóa giống protein (proteolytic degradation)",
+            "clearance": "Thận (chủ yếu), chuyển hóa nội bào"
         },
-        "storage": "",
+        "storage": "Byetta: Bảo quản ở nhiệt độ 2-8°C (tủ lạnh) trước khi mở. Sau khi mở, có thể bảo quản ở nhiệt độ phòng (15-30°C) hoặc tủ lạnh trong tối đa 30 ngày. Bydureon: Bảo quản ở nhiệt độ 2-8°C (tủ lạnh) trước khi mở. Sau khi mở, có thể bảo quản ở nhiệt độ phòng (15-30°C) hoặc tủ lạnh trong tối đa 4 tuần. Tránh đông lạnh. Tránh ánh sáng trực tiếp.",
         "black_box_warnings": None,
         "drug_interactions": {
             "major": [],
@@ -490,32 +628,47 @@ GLP1_AGONISTS_DRUGS = {
             ]
         },
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
+            "fda_category": "C",
+            "pregnancy_details": "Có thể gây hại cho thai nhi. Nghiên cứu trên động vật cho thấy có thể gây hại cho thai nhi. Không có nghiên cứu đầy đủ trên người. Không khuyến nghị dùng trong thai kỳ. Insulin là lựa chọn ưu tiên trong thai kỳ.",
             "lactation": {
-                "safety": "",
-                "details": "",
-                "recommendation": "",
-            },
+                "safety": "Caution",
+                "details": "Exenatide bài tiết vào sữa mẹ ở nồng độ thấp. Không có dữ liệu đầy đủ về an toàn cho trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc lợi ích/nguy cơ. Theo dõi trẻ bú mẹ nếu có dấu hiệu bất thường."
+            }
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": "",
-            "notes": "",
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Exenatide chuyển hóa giống protein (proteolytic degradation), không phụ thuộc vào chức năng gan. Suy gan nhẹ đến trung bình không cần điều chỉnh liều. Suy gan nặng có thể làm giảm chuyển hóa, tăng nồng độ thuốc."
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều",
             "30_60": "Có thể dùng nhưng thận trọng. Theo dõi chức năng thận.",
             "under_30": "Thận trọng, có thể cần giảm liều. GLP-1 agonists thải trừ qua thận một phần.",
             "dialysis": "Thận trọng. Không có dữ liệu đầy đủ về an toàn ở bệnh nhân lọc máu.",
-            "notes": "GLP-1 agonists thải trừ một phần qua thận. Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
+            "notes": "Exenatide thải trừ chủ yếu qua thận. Suy thận có thể làm tăng nồng độ thuốc. Cần theo dõi chức năng thận và điều chỉnh liều nếu cần."
         },
         "overdose_management": {
-            "symptoms": [],
-            "antidote": "",
-            "treatment": [],
-            "monitoring": "",
+            "symptoms": [
+                "Buồn nôn, nôn nghiêm trọng",
+                "Tiêu chảy",
+                "Hạ đường huyết (nếu dùng với insulin hoặc sulfonylurea)",
+                "Đau bụng",
+                "Viêm tụy cấp (hiếm nhưng nghiêm trọng)",
+                "Mất nước do nôn nhiều"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: ngừng thuốc, điều chỉnh đường huyết, điều trị viêm tụy nếu có.",
+            "treatment": [
+                "Ngừng exenatide ngay lập tức",
+                "Điều trị hạ đường huyết nếu có: Glucose PO hoặc IV (dextrose 50% 50ml IV)",
+                "Điều trị buồn nôn/nôn: Thuốc chống nôn (ondansetron, metoclopramide)",
+                "Bù dịch nếu mất nước: Normal saline IV",
+                "Điều trị viêm tụy cấp nếu có: Nhịn ăn, bù dịch, giảm đau, theo dõi sát",
+                "Theo dõi đường huyết, điện giải, chức năng thận, amylase/lipase nếu nghi ngờ viêm tụy",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Đường huyết, điện giải (Na, K, Cl), chức năng thận (creatinine, eGFR), amylase/lipase (nếu nghi ngờ viêm tụy), dấu hiệu mất nước, dấu hiệu viêm tụy (đau bụng dữ dội, buồn nôn, nôn)"
         },
         "reversal_agents": {
             "available": False,
@@ -523,11 +676,29 @@ GLP1_AGONISTS_DRUGS = {
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, điều chỉnh đường huyết nếu hạ đường huyết, điều trị viêm tụy nếu có."
         },
         "administration_instructions": {
+            "sc": {
+                "injection_sites": "Bụng, đùi, hoặc cánh tay. Luân chuyển vị trí tiêm để tránh kích ứng da.",
+                "timing": "Byetta: Tiêm 2 lần/ngày (trước bữa sáng và tối), cách nhau ít nhất 6 giờ. Bydureon: Tiêm 1 lần/tuần vào cùng một ngày mỗi tuần. Có thể tiêm bất kỳ lúc nào trong ngày, không phụ thuộc bữa ăn.",
+                "technique": "Tiêm dưới da (subcutaneous). Không tiêm vào tĩnh mạch hoặc cơ. Không tiêm vào vùng da bị kích ứng, đỏ, hoặc cứng.",
+                "notes": "Byetta: Khởi đầu với liều thấp (5mcg x 2 lần/ngày) x 1 tháng để giảm buồn nôn, sau đó tăng lên 10mcg x 2 lần/ngày. Bydureon: Tiêm 1 lần/tuần. Bảo quản ở tủ lạnh (2-8°C) trước khi mở."
+            },
+            "oral": {
+                "reconstitution": "Không có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng tiêm dưới da (SC)"
+            }
         },
         "references": {
-            "primary_sources": [],
-            "last_updated": "",
-            "evidence_level": "",
+            "primary_sources": [
+                "FDA Drug Label - Byetta (exenatide), Bydureon (exenatide extended-release)",
+                "UpToDate - Exenatide: Drug information",
+                "EXSCEL Study - New England Journal of Medicine (2017) - Exenatide trong đái tháo đường type 2 và bệnh tim mạch",
+                "American Diabetes Association guidelines - GLP-1 receptor agonists"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - Large RCT (EXSCEL) showing cardiovascular benefits"
         },
     },
 }

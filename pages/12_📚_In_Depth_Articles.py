@@ -1229,8 +1229,18 @@ def render_article_card(article: dict, index: int):
     # Streamlit expander cho nội dung đầy đủ - với class cho mobile optimization
     # Use sanitized keys (already created above for protocol button)
     expand_key = f"article_expand_{safe_article_id}_{safe_index}"
-    expanded = st.session_state.get(f"expand_article_{safe_article_id}", False)
-    expander_label = f"📖 Đọc toàn bộ: {html.escape(article_title)}"
+    # Ensure expanded is always a boolean
+    expanded_state_key = f"expand_article_{safe_article_id}"
+    expanded = st.session_state.get(expanded_state_key, False)
+    if not isinstance(expanded, bool):
+        expanded = False
+    # Ensure expander_label is not None or empty
+    expander_label = f"📖 Đọc toàn bộ: {html.escape(article_title)}" if article_title else "📖 Đọc toàn bộ"
+    # Ensure expand_key is valid (non-empty, alphanumeric/underscore only)
+    if not expand_key or not expand_key.strip():
+        expand_key = f"article_expand_{safe_article_id}_{safe_index}"
+    # Final validation: ensure expand_key is safe for Streamlit
+    expand_key = _sanitize_key(expand_key)
     with st.expander(expander_label, expanded=expanded, key=expand_key):
         st.markdown('<div class="article-expander-content">', unsafe_allow_html=True)
         if content:

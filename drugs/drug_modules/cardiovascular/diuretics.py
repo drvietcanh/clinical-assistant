@@ -27,8 +27,21 @@ DIURETICS = {
             "adult_po": "0.5-2mg x 1-2 lần/ngày",
             "adult_iv": "0.5-1mg IV (có thể lặp lại mỗi 2-3 giờ)",
             "adult_iv_continuous": "0.1-0.2mg/giờ truyền liên tục",
-            "heart_failure_acute": "0.5-1mg IV, có thể lặp lại",
-            "notes": "1mg bumetanide ≈ 40mg furosemide. Theo dõi cân bằng dịch, điện giải",
+            "adult_heart_failure": "0.5-1mg IV, có thể lặp lại (cấp tính)",
+            "adult_start": "0.5mg x 1-2 lần/ngày (PO), 0.5mg IV (cấp tính)",
+            "adult_usual": "1-2mg x 1-2 lần/ngày (PO)",
+            "adult_max": "10mg/ngày",
+            "elderly": "Khởi đầu 0.5mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "0.5-2mg x 1-2 lần/ngày",
+                "30_60": "Có thể cần liều cao hơn do giảm đáp ứng",
+                "under_30": "Có thể cần liều cao hơn do giảm đáp ứng",
+                "dialysis": "Có thể cần liều cao hơn"
+            },
+            "administration_route": "PO, IV",
+            "frequency": "1-2 lần/ngày (PO), bolus hoặc truyền liên tục (IV)",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "1mg bumetanide ≈ 40mg furosemide. Theo dõi cân bằng dịch, điện giải. Thải qua cả thận và gan."
         },
         "side_effects": [
             "Hạ kali máu",
@@ -169,7 +182,19 @@ DIURETICS = {
         "dosage": {
             "adult_htn": "12.5-25mg x 1 lần/ngày",
             "adult_edema": "25-100mg x 1 lần/ngày",
+            "adult_start": "12.5mg x 1 lần/ngày (tăng huyết áp), 25mg x 1 lần/ngày (phù)",
+            "adult_usual": "12.5-25mg x 1 lần/ngày (tăng huyết áp), 25-50mg x 1 lần/ngày (phù)",
             "adult_max": "100mg/ngày",
+            "elderly": "Khởi đầu 12.5mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "12.5-25mg x 1 lần/ngày",
+                "30_60": "12.5mg x 1 lần/ngày, thận trọng",
+                "under_30": "Không khuyến cáo (giảm hiệu quả)",
+                "dialysis": "Không khuyến cáo"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
             "notes": "Thiazide-like diuretic, tác dụng rất dài (48-72 giờ), uống 1 lần/ngày. Ưu tiên hơn HCTZ theo ESC/ESH 2023. Hiệu quả hạ huyết áp tốt hơn HCTZ."
         },
         "side_effects": [
@@ -362,10 +387,23 @@ DIURETICS = {
             "Dùng với CYP3A4 inhibitors mạnh"
         ],
         "dosage": {
+            "adult_heart_failure": "25mg x 1 lần/ngày, tăng đến 50mg x 1 lần/ngày sau 4 tuần",
             "adult_heart_failure_post_mi": "25mg x 1 lần/ngày, tăng đến 50mg x 1 lần/ngày sau 4 tuần",
-            "adult_heart_failure": "25mg x 1 lần/ngày, tăng đến 50mg x 1 lần/ngày",
             "adult_htn": "50mg x 1-2 lần/ngày",
-            "notes": "Khởi đầu với liều thấp. Theo dõi kali máu. Có bằng chứng giảm tỷ lệ tử vong sau nhồi máu cơ tim (EPHESUS study)"
+            "adult_start": "25mg x 1 lần/ngày (suy tim), 50mg x 1 lần/ngày (tăng huyết áp)",
+            "adult_usual": "25-50mg x 1 lần/ngày (suy tim), 50mg x 1-2 lần/ngày (tăng huyết áp)",
+            "adult_max": "100mg/ngày",
+            "elderly": "Khởi đầu 12.5-25mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "25-50mg x 1 lần/ngày",
+                "30_60": "25mg x 1 lần/ngày, thận trọng",
+                "under_30": "25mg x 1 lần/ngày, thận trọng (CrCl <30)",
+                "dialysis": "Không khuyến cáo"
+            },
+            "administration_route": "PO",
+            "frequency": "1-2 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Khởi đầu với liều thấp. Theo dõi kali máu. Có bằng chứng giảm tỷ lệ tử vong sau nhồi máu cơ tim (EPHESUS study). Kali-sparing diuretic, giữ kali."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
@@ -573,8 +611,21 @@ DIURETICS = {
             "adult_po": "20-80mg x 1-2 lần/ngày",
             "adult_iv": "20-80mg IV (có thể lặp lại)",
             "adult_iv_continuous": "5-40mg/giờ truyền liên tục",
-            "heart_failure_acute": "20-40mg IV, có thể lặp lại",
-            "notes": "Theo dõi cân bằng dịch, điện giải"
+            "adult_heart_failure": "20-40mg IV, có thể lặp lại (cấp tính)",
+            "adult_start": "20-40mg x 1-2 lần/ngày (PO), 20-40mg IV (cấp tính)",
+            "adult_usual": "40-80mg x 1-2 lần/ngày (PO)",
+            "adult_max": "600mg/ngày",
+            "elderly": "Khởi đầu 20mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "20-80mg x 1-2 lần/ngày",
+                "30_60": "Có thể cần liều cao hơn do giảm đáp ứng",
+                "under_30": "Có thể cần liều cao hơn do giảm đáp ứng",
+                "dialysis": "Có thể cần liều cao hơn"
+            },
+            "administration_route": "PO, IV, IM",
+            "frequency": "1-2 lần/ngày (PO), bolus hoặc truyền liên tục (IV)",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Theo dõi cân bằng dịch, điện giải. Thải qua cả thận và gan. Có thể cần liều cao hơn ở suy thận do giảm đáp ứng."
         },
         "side_effects": [
             "Hạ kali máu",
@@ -811,7 +862,7 @@ DIURETICS = {
               "NSAID: giảm hiệu quả"
           ],
         "pregnancy": "C",
-          "mechanism_of_action": "Thiazide diuretic. Ức chế Na+/Cl- cotransporter ở đoạn xa của ống thận (distal convoluted tubule), tăng bài tiết Na+, Cl-, và nước, gây lợi tiểu. Giảm thể tích máu và giảm huyết áp. Tăng bài tiết K+, Mg2+, nhưng giữ lại Ca2+ (khác với loop diuretics).",
+          "mechanism_of_action": "Hydrochlorothiazide (HCTZ) là thiazide diuretic, một trong những thuốc hạ huyết áp được sử dụng rộng rãi nhất. Cơ chế tác dụng: (1) Ức chế chọn lọc Na+/Cl- cotransporter (NCC) ở đoạn xa của ống thận (distal convoluted tubule - DCT). Ngăn cản tái hấp thu natri và clo từ nước tiểu, dẫn đến tăng bài tiết natri, clo, và nước qua thận, gây lợi tiểu. (2) Giảm thể tích máu: Tăng bài tiết natri và nước làm giảm thể tích máu ngoại bào, giảm tiền gánh tim, và giảm huyết áp. (3) Giảm sức cản mạch máu: Sau giai đoạn giảm thể tích máu ban đầu, HCTZ có tác dụng giảm sức cản mạch máu ngoại vi (giảm hậu gánh), góp phần hạ huyết áp lâu dài. (4) Tác dụng trên điện giải: Tăng bài tiết K+ và Mg2+ (gây hạ kali máu và hạ magie máu), nhưng giữ lại Ca2+ (khác với loop diuretics - có thể gây tăng canxi máu nhẹ). (5) Tác dụng phụ chuyển hóa: Có thể tăng đường huyết (do giảm tiết insulin và tăng kháng insulin), tăng acid uric (do giảm bài tiết uric acid), và tăng lipid máu nhẹ. HCTZ thải trừ qua thận (không chuyển hóa), kém hiệu quả ở suy thận nặng (eGFR <30).",
           "monitoring": [
               "Kali máu (mỗi 1-3 tháng, đặc biệt khi bắt đầu) - HCTZ gây hạ kali máu",
               "Natri máu - có thể gây hạ natri máu, đặc biệt ở người già",
@@ -1034,7 +1085,7 @@ DIURETICS = {
             "NSAID: giảm hiệu quả"
         ],
         "pregnancy": "B",
-        "mechanism_of_action": "Thiazide-like diuretic. Ức chế Na+/Cl- cotransporter ở đoạn xa của ống thận, tăng bài tiết Na+, Cl-, và nước. Có tác dụng giãn mạch trực tiếp (khác với thiazide truyền thống). Ít gây hạ kali máu hơn hydrochlorothiazide. Tác dụng dài, cho phép dùng 1 lần/ngày.",
+        "mechanism_of_action": "Indapamide là thiazide-like diuretic, có cấu trúc indoline và tác dụng tương tự nhưng khác với thiazide truyền thống. Cơ chế tác dụng: (1) Ức chế Na+/Cl- cotransporter (NCC) ở đoạn xa của ống thận (distal convoluted tubule), tương tự thiazide diuretics. Ngăn cản tái hấp thu natri và clo từ nước tiểu, dẫn đến tăng bài tiết natri, clo, và nước qua thận, gây lợi tiểu. (2) Tác dụng giãn mạch trực tiếp: Indapamide có tác dụng giãn mạch trực tiếp trên mạch máu ngoại vi (khác với thiazide truyền thống), giảm sức cản mạch máu hệ thống (SVR), góp phần hạ huyết áp. Cơ chế giãn mạch có thể liên quan đến ức chế kênh calci hoặc tác dụng trên hệ thần kinh tự chủ. (3) Ít gây hạ kali máu hơn hydrochlorothiazide: Do tác dụng giãn mạch trực tiếp và có thể do cơ chế tác dụng khác một phần, indapamide ít gây hạ kali máu hơn HCTZ ở liều tương đương. (4) Tác dụng dài: Half-life dài (14-18 giờ), cho phép dùng 1 lần/ngày, thuận tiện cho bệnh nhân. Indapamide thải trừ qua cả thận (70%) và gan (30%), khác với HCTZ chỉ thải qua thận.",
         "monitoring": [
             "Kali máu (mỗi 1-3 tháng) - ít gây hạ kali hơn thiazide",
             "Natri máu - có thể gây hạ natri máu",

@@ -154,10 +154,20 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         'Co thắt phế quản do gắng sức'],
         'contraindications': [
         'Dị ứng montelukast'],
-        'dosage': {'adult':
-        '10mg x 1 lần/ngày (buổi tối)', 'pediatric_6_14': '5mg x 1 lần/ngày',
-        'pediatric_2_5': '4mg x 1 lần/ngày', 'notes':
-        'Uống buổi tối, có thể uống với hoặc không thức ăn'},
+        'dosage': {
+            'adult': '10mg x 1 lần/ngày (buổi tối)',
+            'pediatric': {
+                '6_14_years': '5mg x 1 lần/ngày (buổi tối)',
+                '2_5_years': '4mg x 1 lần/ngày (buổi tối)',
+                'under_2_years': 'Chưa được nghiên cứu đầy đủ, không khuyến cáo',
+                'notes': 'FDA-approved cho trẻ em ≥2 tuổi. Dạng nhai hoặc bột cho trẻ em.'
+            },
+            'geriatric': {
+                'dosing': '10mg x 1 lần/ngày (không cần điều chỉnh liều)',
+                'notes': 'Không cần điều chỉnh liều, nhưng thận trọng ở bệnh nhân suy gan'
+            },
+            'notes': 'Uống buổi tối, có thể uống với hoặc không thức ăn. Dùng đều đặn hàng ngày, không phải khi cần.'
+        },
         'side_effects': [
         'Nhức đầu', 'Buồn nôn', 'Tiêu chảy', 'Rối loạn giấc ngủ',
         'Thay đổi tâm trạng (hiếm)', 'Phản ứng tâm thần (rất hiếm)'],
@@ -184,10 +194,17 @@ LEUKOTRIENE_RECEPTOR_ANTAGONISTS_DRUGS = {
         , 'An toàn trong thai kỳ (category B)',
         'Có thể dùng cho trẻ em từ 2 tuổi trở lên (liều điều chỉnh theo tuổi)',
         'Theo dõi chặt chẽ ở trẻ em và thanh thiếu niên về rối loạn tâm thần'],
-        'pharmacokinetics': {'half_life': '2.7-5.5 giờ', 'onset':
-        'Vài giờ đến vài ngày (tác dụng phòng ngừa)', 'duration':
-        '24 giờ (dùng 1 lần/ngày)', 'protein_binding': '>99%', 'clearance':
-        'Gan: chuyển hóa qua CYP2C8, CYP3A4, và CYP2C9 thành metabolites không hoạt động. Thận: bài tiết một phần nguyên dạng và metabolites. Tương tác với CYP inducers (phenobarbital, rifampin) có thể giảm nồng độ.'
+        'pharmacokinetics': {
+            'half_life': '2.7-5.5 giờ',
+            'onset': 'Vài giờ đến vài ngày (tác dụng phòng ngừa)',
+            'duration': '24 giờ (dùng 1 lần/ngày)',
+            'bioavailability': '~64% (uống)',
+            'protein_binding': '>99%',
+            'volume_of_distribution': '~10 L',
+            'metabolism': 'Gan: chuyển hóa qua CYP2C8 (chủ yếu), CYP3A4, và CYP2C9 thành metabolites không hoạt động. Tương tác với CYP inducers (phenobarbital, rifampin) có thể giảm nồng độ.',
+            'clearance': 'Gan: chuyển hóa qua CYP2C8, CYP3A4, CYP2C9. Thận: bài tiết một phần nguyên dạng và metabolites. Tổng clearance: ~45 mL/min/kg.',
+            'absorption': 'Hấp thu nhanh sau khi uống. Thời gian đạt nồng độ đỉnh (Tmax): 2-4 giờ.',
+            'food_effect': 'Không ảnh hưởng đáng kể đến hấp thu. Có thể uống với hoặc không thức ăn.'
         },
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén/capsule: bảo quản trong bao bì kín. Dạng nhai: bảo quản ở nhiệt độ phòng, tránh ẩm. Dạng bột: bảo quản ở nhiệt độ phòng, pha với nước, thức ăn mềm, hoặc sữa công thức trước khi dùng.'

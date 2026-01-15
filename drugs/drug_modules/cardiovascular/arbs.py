@@ -1129,21 +1129,284 @@ ARBS = {
             "notes": "",
         },
         "overdose_management": {
-            "symptoms": [],
-            "antidote": "",
-            "treatment": [],
-            "monitoring": "",
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Nhịp tim chậm",
+                "Suy thận cấp",
+                "Tăng kali máu",
+                "Phù mạch (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Điều trị hạ huyết áp: Truyền dịch (normal saline), nâng chân, nếu cần: dopamine, norepinephrine",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Theo dõi huyết áp, nhịp tim, chức năng thận, điện giải",
+                "Điều trị tăng kali máu nếu có: Calcium gluconate, insulin + glucose, sodium bicarbonate",
+                "Nếu có phù mạch: Epinephrine, corticosteroids, antihistamines",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, chức năng thận (creatinine, BUN), điện giải (kali), dấu hiệu phù mạch, ý thức"
         },
         "reversal_agents": {
             "available": False,
-            "agents": [],
-            "notes": "",
+            "agents": []
         },
         "administration_instructions": {
-            "preparation": "",
-            "administration": "",
-            "monitoring": [],
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1-2 lần/ngày tùy liều. Khởi đầu với liều thấp (400mg), tăng dần. Uống đúng giờ mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
         },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "adolescents": "≥18 tuổi: Liều người lớn. 400-600mg x 1-2 lần/ngày",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp ở trẻ ≥18 tuổi. Khởi đầu với liều thấp, tăng dần"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (400mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo CrCl và chức năng gan",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi chức năng thận, kali máu thường xuyên"
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "30,000 - 80,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Eprosartan generic thường rẻ hơn (30,000-50,000 VND/viên 400mg)."
+        },
+    },
+    
+    "Eprosartan": {
+        "group": "Cardiovascular - ARB (Angiotensin Receptor Blocker)",
+        "vietnamese_name": "Eprosartan, Teveten",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp"
+        ],
+        "contraindications": [
+            "Dị ứng ARB",
+            "Có thai",
+            "Hẹp động mạch thận 2 bên"
+        ],
+        "dosage": {
+            "adult_htn": "400-800mg x 1-2 lần/ngày",
+            "adult_start": "400mg x 1 lần/ngày",
+            "adult_usual": "600-800mg x 1-2 lần/ngày",
+            "adult_max": "800mg/ngày",
+            "elderly": "Khởi đầu 400mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "400-800mg x 1-2 lần/ngày",
+                "30_60": "400-600mg x 1 lần/ngày, thận trọng",
+                "under_30": "400mg x 1 lần/ngày, thận trọng",
+                "dialysis": "Không khuyến cáo"
+            },
+            "administration_route": "PO",
+            "frequency": "1-2 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Có thể dùng 1 hoặc 2 lần/ngày tùy liều. Liều cao hơn các ARB khác (400-800mg/ngày). Ít gây ho hơn ACE inhibitor."
+        },
+        "side_effects": [
+            "Ít tác dụng phụ hơn ACE inhibitor",
+            "Ho ít hơn ACE inhibitor",
+            "Tăng kali máu (ít hơn ACE)",
+            "Hạ huyết áp",
+            "Chóng mặt",
+            "Mệt mỏi",
+            "Rối loạn tiêu hóa",
+            "Phù mạch (hiếm hơn ACE inhibitor)"
+        ],
+        "interactions": [
+            "Kali bổ sung: tăng nguy cơ tăng kali máu",
+            "Spironolactone, Eplerenone: tăng kali máu",
+            "NSAID: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Lithium: tăng nồng độ lithium",
+            "Diuretics: tăng nguy cơ hạ huyết áp"
+        ],
+        "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "mechanism_of_action": "Eprosartan ức chế thụ thể angiotensin II type 1 (AT1), ngăn chặn tác dụng của angiotensin II (giãn mạch, giảm aldosterone). Không phải prodrug (tác dụng trực tiếp). Ít gây ho hơn ACE inhibitor vì không ảnh hưởng đến bradykinin. Đặc điểm: Liều dùng cao hơn các ARB khác (400-800mg/ngày), có thể dùng 1 hoặc 2 lần/ngày tùy liều.",
+        "monitoring": [
+            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
+            "Kali máu định kỳ (ít hơn ACE inhibitor)",
+            "Huyết áp",
+            "Ít phải theo dõi ho khan (không gây ho như ACE inhibitor)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều thấp (400mg), tăng dần",
+            "Ưu điểm: ít gây ho hơn ACE inhibitor",
+            "Liều cao hơn các ARB khác (400-800mg/ngày)",
+            "Có thể dùng 1 hoặc 2 lần/ngày tùy liều",
+            "Theo dõi sát creatinine khi bắt đầu",
+            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Ngừng ngay nếu có phù mạch (hiếm hơn ACE inhibitor nhưng vẫn có thể xảy ra)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "5-9 giờ",
+            "onset": "1-2 giờ",
+            "duration": "12-24 giờ",
+            "protein_binding": "98%",
+            "metabolism": "Chuyển hóa ít qua gan",
+            "clearance": "Chủ yếu qua gan (90%) và thận (10%)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac)",
+                    "mechanism": "Giảm tác dụng giãn mạch, giảm lưu lượng máu thận",
+                    "effect": "Giảm hiệu quả hạ huyết áp, tăng nguy cơ suy thận cấp",
+                    "management": "Thận trọng. Theo dõi chức năng thận, huyết áp. Tránh dùng lâu dài cùng."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ARB giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng nguy cơ độc tính",
+                    "management": "Theo dõi nồng độ lithium. Giảm liều lithium nếu cần."
+                },
+                {
+                    "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức",
+                    "management": "Thận trọng khi bắt đầu. Có thể cần giảm liều diuretic."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng eprosartan hoặc ARB",
+                "Có thai",
+                "Hẹp động mạch thận 2 bên",
+                "Phù mạch trước đây với ARB"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <10) - không dùng",
+                "Suy thận trung bình (CrCl 10-30) - giảm liều, theo dõi sát",
+                "Suy gan nặng - thận trọng (thải chủ yếu qua gan)",
+                "Tăng kali máu - điều chỉnh trước khi dùng",
+                "Hẹp động mạch thận 1 bên - thận trọng",
+                "Dùng kali-sparing diuretics - tăng nguy cơ tăng kali máu",
+                "Dùng NSAID - tăng nguy cơ suy thận"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong thai kỳ. Có thể gây dị tật thai nhi (dị tật thận, xương sọ, phổi), thiểu ối, chậm phát triển thai nhi, và tử vong thai nhi. Nguy cơ cao nhất trong 3 tháng đầu và 3 tháng cuối. Ngừng ngay khi phát hiện có thai.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Eprosartan bài tiết vào sữa mẹ ở nồng độ thấp. Dữ liệu còn hạn chế.",
+                "recommendation": "Thận trọng khi cho con bú. Ưu tiên ARB khác đã có dữ liệu nhiều hơn nếu có thể."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, có thể cần giảm liều (thải chủ yếu qua gan)",
+            "severe": "Giảm liều 50% hoặc tránh dùng (thải chủ yếu qua gan)",
+            "notes": "Eprosartan thải trừ chủ yếu qua gan (90%). Suy gan có thể làm tăng nồng độ thuốc và tác dụng phụ. Cần giảm liều ở suy gan nặng."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Thận trọng, có thể cần giảm liều",
+            "under_30": "Thận trọng, giảm liều",
+            "dialysis": "Không khuyến cáo",
+            "notes": "Eprosartan thải trừ một phần qua thận (10%), nhưng vẫn cần điều chỉnh liều ở suy thận nặng."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Nhịp tim chậm",
+                "Suy thận cấp",
+                "Tăng kali máu",
+                "Phù mạch (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ",
+            "treatment": [
+                "Điều trị hạ huyết áp: Truyền dịch (normal saline), nâng chân, nếu cần: dopamine, norepinephrine",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Theo dõi huyết áp, nhịp tim, chức năng thận, điện giải",
+                "Điều trị tăng kali máu nếu có: Calcium gluconate, insulin + glucose, sodium bicarbonate",
+                "Nếu có phù mạch: Epinephrine, corticosteroids, antihistamines",
+                "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                "Theo dõi ít nhất 12-24 giờ"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, chức năng thận (creatinine, BUN), điện giải (kali), dấu hiệu phù mạch, ý thức"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                "timing": "Uống 1-2 lần/ngày tùy liều. Khởi đầu với liều thấp (400mg), tăng dần. Uống đúng giờ mỗi ngày. Ưu điểm: ít gây ho hơn ACE inhibitor."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống"
+            }
+        },
+        "brand_names": {
+            "vietnam": ["Teveten", "Eprosartan"],
+            "common": ["Teveten", "Eprosartan"]
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "children": "Không khuyến cáo cho trẻ <18 tuổi (dữ liệu hạn chế)",
+            "adolescents": "≥18 tuổi: Liều người lớn. 400-600mg x 1-2 lần/ngày",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp ở trẻ ≥18 tuổi. Khởi đầu với liều thấp, tăng dần"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy thận và suy gan phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (400mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo CrCl và chức năng gan (thải chủ yếu qua gan)",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi chức năng thận, kali máu thường xuyên"
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "30,000 - 80,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Eprosartan generic thường rẻ hơn (30,000-50,000 VND/viên 400mg)."
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Teveten (eprosartan)",
+                "UpToDate - Eprosartan: Drug information",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved and extensive clinical experience"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease"
+        ],
+        "last_updated": "2025-02-18",
     },
 }
 

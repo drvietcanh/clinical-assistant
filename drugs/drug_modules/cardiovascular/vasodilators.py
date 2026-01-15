@@ -397,6 +397,212 @@ VASODILATORS = {
         ]
     },
     
+    "Minoxidil": {
+        "group": "Cardiovascular - Direct Vasodilator",
+        "vietnamese_name": "Minoxidil, Loniten",
+        "administration": ["PO", "Topical"],
+        "indications": [
+            "Tăng huyết áp nặng, kháng trị",
+            "Rụng tóc (dạng topical - chỉ định ngoài nhãn)",
+            "Tăng huyết áp kháng trị khi các thuốc khác không hiệu quả"
+        ],
+        "contraindications": [
+            "Dị ứng minoxidil",
+            "Pheochromocytoma",
+            "Suy tim nặng không được điều trị",
+            "Bệnh động mạch vành nặng không được điều trị"
+        ],
+        "dosage": {
+            "adult_po": "2.5-5mg PO x 1-2 lần/ngày, tăng dần đến 10-40mg/ngày (tối đa 100mg/ngày)",
+            "adult_start": "2.5-5mg PO x 1 lần/ngày",
+            "adult_max": "100mg/ngày",
+            "adult_topical": "1ml (5% solution) x 2 lần/ngày lên da đầu (chỉ định ngoài nhãn cho rụng tóc)",
+            "notes": "PHẢI dùng kết hợp với beta-blocker và diuretic để chống lại nhịp tim nhanh và giữ nước. Khởi đầu với liều thấp, tăng dần. Chỉ dùng cho tăng huyết áp nặng, kháng trị."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Thận trọng, có thể cần giảm liều"
+        },
+        "side_effects": [
+            "Giữ nước, phù ngoại biên (phổ biến, PHẢI dùng diuretic)",
+            "Nhịp tim nhanh phản ứng (phổ biến, PHẢI dùng beta-blocker)",
+            "Tăng cân",
+            "Hirsutism (mọc lông quá mức) - phổ biến, đặc biệt ở phụ nữ",
+            "Hạ huyết áp",
+            "Đau ngực (do nhịp tim nhanh)",
+            "Pericardial effusion (hiếm nhưng nghiêm trọng)",
+            "Tăng đường huyết (hiếm)"
+        ],
+        "interactions": [
+            "Thuốc hạ huyết áp khác: tăng tác dụng",
+            "Guanethidine: tăng tác dụng hạ huyết áp",
+            "NSAIDs: giảm hiệu quả minoxidil"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Minoxidil là direct-acting vasodilator mạnh, giãn trực tiếp cơ trơn động mạch (chủ yếu arterioles) bằng cách mở kênh K+ ATP-sensitive, dẫn đến hyperpolarization và giảm Ca2+ nội bào, thư giãn cơ trơn mạch máu. Minoxidil chủ yếu giãn động mạch (giảm hậu gánh), ít ảnh hưởng đến tĩnh mạch (không giảm tiền gánh). Kết quả: giảm huyết áp mạnh, giảm hậu gánh tim, tăng cung lượng tim. Minoxidil gây nhịp tim nhanh phản ứng mạnh (do hạ huyết áp kích thích baroreceptor reflex) và tăng renin-angiotensin-aldosterone system (RAAS) dẫn đến giữ nước và phù, nên PHẢI dùng kết hợp với beta-blocker (chống nhịp tim nhanh) và diuretic (chống giữ nước). Minoxidil chỉ dùng cho tăng huyết áp nặng, kháng trị khi các thuốc khác không hiệu quả. Tác dụng phụ: hirsutism (mọc lông quá mức) - phổ biến, đặc biệt ở phụ nữ.",
+        "monitoring": [
+            "Huyết áp - hạ huyết áp là tác dụng mong muốn nhưng cần tránh hạ quá mức",
+            "Nhịp tim - nhịp tim nhanh phản ứng phổ biến, PHẢI dùng beta-blocker",
+            "Cân nặng, phù ngoại biên - giữ nước phổ biến, PHẢI dùng diuretic",
+            "Dấu hiệu pericardial effusion: khó thở, đau ngực, tiếng tim mờ (hiếm nhưng nghiêm trọng)",
+            "Hirsutism (mọc lông quá mức) - phổ biến, đặc biệt ở phụ nữ",
+            "Chức năng thận - minoxidil có thể gây suy thận (hiếm)",
+            "Điện tâm đồ - theo dõi nhịp tim nhanh, thiếu máu cơ tim"
+        ],
+        "precautions": [
+            "PHẢI dùng kết hợp với beta-blocker - nhịp tim nhanh phản ứng mạnh",
+            "PHẢI dùng kết hợp với diuretic - giữ nước và phù phổ biến",
+            "Chỉ dùng cho tăng huyết áp nặng, kháng trị khi các thuốc khác không hiệu quả",
+            "Hirsutism (mọc lông quá mức) - phổ biến, đặc biệt ở phụ nữ, có thể không chấp nhận được",
+            "Pericardial effusion - hiếm nhưng nghiêm trọng, ngừng ngay nếu có triệu chứng",
+            "CHỐNG CHỈ ĐỊNH trong suy tim nặng không được điều trị - nhịp tim nhanh có thể làm nặng",
+            "CHỐNG CHỈ ĐỊNH trong bệnh động mạch vành nặng không được điều trị - nhịp tim nhanh có thể làm nặng thiếu máu cơ tim",
+            "Khởi đầu với liều thấp (2.5-5mg), tăng dần để tránh hạ huyết áp quá mức",
+            "NSAIDs có thể giảm hiệu quả - tránh dùng cùng nếu có thể",
+            "Uống với thức ăn hoặc không (không ảnh hưởng hấp thu đáng kể)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "3-4 giờ (minoxidil), 2-3 ngày (sulfate metabolite - hoạt chất)",
+            "onset": "30 phút - 1 giờ",
+            "duration": "12-24 giờ (do sulfate metabolite có half-life dài)",
+            "protein_binding": "Không đáng kể",
+            "clearance": "Gan: chuyển hóa thành minoxidil sulfate (hoạt chất) qua sulfotransferase. Thận: bài tiết minoxidil sulfate. Suy thận có thể tích lũy."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
+        "black_box_warnings": "PHẢI dùng kết hợp với beta-blocker và diuretic. Nhịp tim nhanh phản ứng và giữ nước có thể đe dọa tính mạng nếu không được điều trị. Pericardial effusion có thể xảy ra và nghiêm trọng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Guanethidine",
+                    "mechanism": "Guanethidine làm tăng nhạy cảm với minoxidil",
+                    "effect": "Tăng tác dụng hạ huyết áp nghiêm trọng",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. Có thể cần giảm liều minoxidil."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Thuốc hạ huyết áp khác (ACE inhibitors, ARBs, Beta-blockers, Diuretics)",
+                    "mechanism": "Tác dụng cộng dồn hạ huyết áp",
+                    "effect": "Tăng nguy cơ hạ huyết áp quá mức",
+                    "management": "Thận trọng. Theo dõi huyết áp chặt chẽ. PHẢI dùng beta-blocker và diuretic cùng với minoxidil."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, indomethacin)",
+                    "mechanism": "NSAIDs ức chế prostaglandin, làm giảm tác dụng giãn mạch của minoxidil",
+                    "effect": "Giảm hiệu quả hạ huyết áp của minoxidil",
+                    "management": "Tránh dùng cùng nếu có thể. Theo dõi huyết áp. Có thể cần tăng liều minoxidil."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng minoxidil",
+                "Pheochromocytoma",
+                "Suy tim nặng không được điều trị - nhịp tim nhanh có thể làm nặng",
+                "Bệnh động mạch vành nặng không được điều trị - nhịp tim nhanh có thể làm nặng thiếu máu cơ tim"
+            ],
+            "tương_đối": [
+                "Suy tim được điều trị - thận trọng, PHẢI dùng beta-blocker và diuretic",
+                "Bệnh động mạch vành được điều trị - thận trọng, PHẢI dùng beta-blocker",
+                "Suy thận nặng - thận trọng, có thể tích lũy",
+                "Có thai - category C, thận trọng",
+                "Phụ nữ - hirsutism phổ biến, có thể không chấp nhận được"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Minoxidil là category C. Không có nghiên cứu đầy đủ ở phụ nữ có thai. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Thận trọng, đặc biệt trong tam cá nguyệt thứ ba (có thể gây hạ huyết áp ở mẹ và thai nhi).",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Không biết minoxidil có bài tiết vào sữa mẹ hay không. Thận trọng khi dùng khi cho con bú.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều. Minoxidil chuyển hóa ở gan nhưng suy gan nhẹ không ảnh hưởng đáng kể.",
+            "moderate": "Thận trọng, có thể cần giảm liều. Chuyển hóa có thể giảm ở suy gan trung bình.",
+            "severe": "Thận trọng, giảm liều. Chuyển hóa giảm ở suy gan nặng, tăng nguy cơ tích lũy.",
+            "notes": "Minoxidil chuyển hóa ở gan thành minoxidil sulfate (hoạt chất) qua sulfotransferase. Suy gan có thể ảnh hưởng đến chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng, ngất",
+                "Nhịp tim nhanh",
+                "Phù ngoại biên nặng",
+                "Nhức đầu nặng",
+                "Chóng mặt, buồn nôn, nôn",
+                "Shock, tử vong"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ cho hạ huyết áp.",
+            "treatment": [
+                "Ngừng minoxidil ngay lập tức",
+                "Đặt bệnh nhân nằm ngửa, nâng chân cao",
+                "Truyền dịch nếu cần (normal saline) - thận trọng vì có thể làm nặng phù",
+                "Nếu hạ huyết áp nặng: thuốc vận mạch (norepinephrine, phenylephrine)",
+                "Điều trị nhịp tim nhanh: beta-blocker nếu chưa dùng",
+                "Điều trị phù: diuretic nếu chưa dùng",
+                "Theo dõi huyết áp, nhịp tim liên tục",
+                "Hỗ trợ hô hấp nếu cần"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, dấu hiệu sinh tồn, phù ngoại biên, dấu hiệu pericardial effusion"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Không ảnh hưởng hấp thu đáng kể.",
+                "timing": "Uống 1-2 lần/ngày tùy liều. Khởi đầu với liều thấp (2.5-5mg x 1 lần/ngày), tăng dần đến liều hiệu quả. PHẢI dùng cùng beta-blocker và diuretic."
+            },
+            "topical": {
+                "with_food": "N/A",
+                "timing": "1ml (5% solution) x 2 lần/ngày lên da đầu. Chỉ định ngoài nhãn cho rụng tóc. Không dùng cho tăng huyết áp."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Minoxidil (Loniten)",
+                "UpToDate - Minoxidil: Drug Information",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"cardiovascular": "High (tachycardia, pericardial effusion)", "metabolic": "Moderate (fluid retention)"}
+        },
+        "guideline_tags": [
+            "AHA/ACC 2017 Hypertension Guidelines",
+            "AHA/ACC 2024 Hypertension Management Update",
+            "FDA Black Box Warning - Beta-blocker and Diuretic Required"
+        ],
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <12 tuổi (dữ liệu hạn chế)",
+            "children": "≥12 tuổi: 0.2-1mg/kg/ngày chia 1-2 lần (tối đa 50mg/ngày). PHẢI dùng cùng beta-blocker và diuretic.",
+            "adolescents": "0.2-1mg/kg/ngày chia 1-2 lần, tối đa 50mg/ngày. Liều người lớn nếu ≥18 tuổi.",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp nặng, kháng trị ở trẻ ≥12 tuổi. PHẢI dùng cùng beta-blocker và diuretic."
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy tim và bệnh động mạch vành phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (2.5mg x 1 lần/ngày). Tăng dần chậm hơn. PHẢI dùng cùng beta-blocker và diuretic.",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi nhịp tim, phù ngoại biên, dấu hiệu pericardial effusion."
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "30,000 - 80,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Minoxidil generic thường rẻ hơn (30,000-50,000 VND/viên 5mg)."
+        },
+        "last_updated": "2025-02-18",
+    },
+    
     "Nesiritide":     {
         "group": "Cardiovascular - Natriuretic Peptide (Vasodilator)",
         "vietnamese_name": "Nesiritide, Natrecor",

@@ -32,7 +32,21 @@ SGLT2_INHIBITORS_DRUGS = {
         "dosage": {
             "dm_t2": "Khởi đầu 10mg x 1 lần/sáng. Có thể tăng lên 25mg nếu cần.",
             "heart_failure": "10mg x 1 lần/ngày (không phụ thuộc đái tháo đường).",
-            "notes": """Uống buổi sáng, có thể uống đói hoặc no. Tác dụng giảm đường huyết nhẹ (HbA1c ~0.5-0.8%) nhưng lợi ích tim mạch và thận rất lớn.""",
+            "ckd": "10mg x 1 lần/ngày (eGFR ≥20, không phụ thuộc đái tháo đường).",
+            "adult_start": "10mg x 1 lần/ngày",
+            "adult_usual": "10-25mg x 1 lần/ngày",
+            "adult_max": "25mg/ngày",
+            "elderly": "Khởi đầu 10mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ (mất nước, hạ huyết áp).",
+            "renal_adjustment_dosage": {
+                "normal": "10-25mg x 1 lần/ngày",
+                "30_60": "10mg x 1 lần/ngày (eGFR ≥30), có thể điều chỉnh liều",
+                "under_30": "10mg x 1 lần/ngày (eGFR ≥20), CHỐNG CHỈ ĐỊNH nếu eGFR <20",
+                "dialysis": "CHỐNG CHỈ ĐỊNH"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống đói hoặc no",
+            "notes": """Uống buổi sáng, có thể uống đói hoặc no. Tác dụng giảm đường huyết nhẹ (HbA1c ~0.5-0.8%) nhưng lợi ích tim mạch và thận rất lớn. CHỐNG CHỈ ĐỊNH nếu eGFR <20."""
         },
         "side_effects": [
             "Nhiễm nấm âm đạo (Phụ nữ - rất phổ biến ~10%)",
@@ -80,8 +94,14 @@ SGLT2_INHIBITORS_DRUGS = {
         },
         "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
         "pharmacokinetics": {
+            "half_life": "12.4 giờ",
+            "onset": "1 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "86%",
+            "metabolism": "Gan (UGT1A9, UGT2B7, UGT1A3)",
+            "clearance": "Thận (41.2% nguyên dạng), gan (chuyển hóa)"
         },
-        "storage": "",
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
         "drug_interactions": {
             "major": [
                 {
@@ -115,19 +135,19 @@ SGLT2_INHIBITORS_DRUGS = {
             ]
         },
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
+            "fda_category": "C",
+            "pregnancy_details": "Có thể gây hại cho thai nhi. Nghiên cứu trên động vật cho thấy có thể gây hại cho thai nhi. Không có nghiên cứu đầy đủ trên người. Không khuyến nghị dùng trong thai kỳ. Insulin là lựa chọn ưu tiên trong thai kỳ.",
             "lactation": {
-                "safety": "",
-                "details": "",
-                "recommendation": "",
-            },
+                "safety": "Caution",
+                "details": "Empagliflozin bài tiết vào sữa mẹ ở nồng độ thấp. Không có dữ liệu đầy đủ về an toàn cho trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc lợi ích/nguy cơ. Theo dõi trẻ bú mẹ nếu có dấu hiệu bất thường."
+            }
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": "",
-            "notes": "",
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Empagliflozin chuyển hóa qua gan (UGT1A9, UGT2B7, UGT1A3). Suy gan nhẹ đến trung bình không cần điều chỉnh liều. Suy gan nặng có thể làm giảm chuyển hóa, tăng nồng độ thuốc."
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều",
@@ -137,10 +157,25 @@ SGLT2_INHIBITORS_DRUGS = {
             "notes": "Empagliflozin chống chỉ định ở suy thận nặng (eGFR <20). Cần kiểm tra eGFR trước khi bắt đầu và định kỳ. Ngừng thuốc nếu eGFR giảm xuống dưới 20."
         },
         "overdose_management": {
-            "symptoms": [],
-            "antidote": "",
-            "treatment": [],
-            "monitoring": "",
+            "symptoms": [
+                "Hạ đường huyết (nếu dùng với insulin hoặc sulfonylurea)",
+                "Mất nước",
+                "Hạ huyết áp",
+                "Nhiễm toan ceton đái tháo đường (DKA) - đặc biệt euglycemic DKA",
+                "Nhiễm trùng đường tiết niệu",
+                "Nhiễm nấm âm đạo"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: bù dịch, điều chỉnh đường huyết, điều trị DKA nếu có.",
+            "treatment": [
+                "Ngừng empagliflozin ngay lập tức",
+                "Điều trị hạ đường huyết nếu có: Glucose PO hoặc IV (dextrose 50% 50ml IV)",
+                "Bù dịch nếu mất nước: Normal saline IV",
+                "Điều trị DKA nếu có: Insulin IV, bù dịch, bicarbonate nếu cần",
+                "Điều trị nhiễm trùng đường tiết niệu hoặc nhiễm nấm nếu có",
+                "Theo dõi đường huyết, điện giải, chức năng thận",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Đường huyết, điện giải (Na, K, Cl, HCO3), chức năng thận (creatinine, eGFR), huyết áp, dấu hiệu DKA (ketone máu/nước tiểu), dấu hiệu nhiễm trùng"
         },
         "reversal_agents": {
             "available": False,
@@ -148,11 +183,30 @@ SGLT2_INHIBITORS_DRUGS = {
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu mất nước, điều chỉnh đường huyết nếu hạ đường huyết, điều trị DKA nếu có."
         },
         "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống bất kỳ lúc nào trong ngày.",
+                "timing": "Uống 1 lần/ngày vào buổi sáng. Uống cùng giờ mỗi ngày để dễ nhớ. Có thể uống đói hoặc no.",
+                "notes": "Uống buổi sáng để tránh đi tiểu đêm. Uống với nhiều nước để giảm nguy cơ nhiễm trùng đường tiết niệu. Nếu quên liều, uống ngay khi nhớ ra, nhưng nếu gần đến liều tiếp theo thì bỏ qua liều đã quên và tiếp tục lịch trình bình thường."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống (PO)"
+            }
         },
         "references": {
-            "primary_sources": [],
-            "last_updated": "",
-            "evidence_level": "",
+            "primary_sources": [
+                "FDA Drug Label - Jardiance (empagliflozin)",
+                "UpToDate - Empagliflozin: Drug information",
+                "EMPA-REG OUTCOME Study - New England Journal of Medicine (2015) - Empagliflozin trong đái tháo đường type 2 và bệnh tim mạch",
+                "EMPEROR-Reduced Study - New England Journal of Medicine (2020) - Empagliflozin trong suy tim",
+                "EMPA-KIDNEY Study - New England Journal of Medicine (2023) - Empagliflozin trong bệnh thận mạn",
+                "American Diabetes Association guidelines - SGLT2 inhibitors"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - Multiple large RCTs (EMPA-REG OUTCOME, EMPEROR-Reduced, EMPA-KIDNEY) showing cardiovascular and renal benefits"
         },
             "risk_flags": {
                 "high_alert": False,
@@ -228,10 +282,23 @@ SGLT2_INHIBITORS_DRUGS = {
         "contraindications": [],
         "interactions": [],
         "pregnancy": "C - Nguy cơ không thể loại trừ. Không khuyến nghị trong thai kỳ",
-        "precautions": [],
+        "precautions": [
+            "Nguy cơ DKA (Diabetic Ketoacidosis) - Ngừng thuốc khi bệnh nhân ốm nặng, nhịn ăn, phẫu thuật",
+            "Nguy cơ nhiễm nấm âm đạo cao ở phụ nữ - Giáo dục vệ sinh",
+            "Nguy cơ hạ huyết áp - Thận trọng ở người cao tuổi, dùng lợi tiểu",
+            "Không dùng cho đái tháo đường type 1 (tăng nguy cơ DKA)",
+            "Giảm liều insulin/sulfonylurea khi bắt đầu dùng để tránh hạ đường huyết",
+            "Lợi ích tim mạch và thận lớn hơn tác dụng giảm đường huyết"
+        ],
         "pharmacokinetics": {
+            "half_life": "12.9 giờ",
+            "onset": "1 giờ",
+            "duration": "24 giờ",
+            "protein_binding": "91%",
+            "metabolism": "Gan (UGT1A9 chủ yếu)",
+            "clearance": "Thận (75% nguyên dạng), gan (chuyển hóa)"
         },
-        "storage": "",
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Viên nén: bảo quản trong bao bì kín.",
         "drug_interactions": {
             "major": [
                 {
@@ -265,19 +332,19 @@ SGLT2_INHIBITORS_DRUGS = {
             ]
         },
         "pregnancy_lactation": {
-            "fda_category": "",
-            "pregnancy_details": "",
+            "fda_category": "C",
+            "pregnancy_details": "Có thể gây hại cho thai nhi. Nghiên cứu trên động vật cho thấy có thể gây hại cho thai nhi. Không có nghiên cứu đầy đủ trên người. Không khuyến nghị dùng trong thai kỳ. Insulin là lựa chọn ưu tiên trong thai kỳ.",
             "lactation": {
-                "safety": "",
-                "details": "",
-                "recommendation": "",
-            },
+                "safety": "Caution",
+                "details": "Dapagliflozin bài tiết vào sữa mẹ ở nồng độ thấp. Không có dữ liệu đầy đủ về an toàn cho trẻ bú mẹ.",
+                "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc lợi ích/nguy cơ. Theo dõi trẻ bú mẹ nếu có dấu hiệu bất thường."
+            }
         },
         "hepatic_adjustment": {
-            "mild": "",
-            "moderate": "",
-            "severe": "",
-            "notes": "",
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Không cần điều chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Dapagliflozin chuyển hóa qua gan (UGT1A9). Suy gan nhẹ đến trung bình không cần điều chỉnh liều. Suy gan nặng có thể làm giảm chuyển hóa, tăng nồng độ thuốc."
         },
         "renal_adjustment": {
             "normal": "Không cần chỉnh liều",
@@ -287,10 +354,25 @@ SGLT2_INHIBITORS_DRUGS = {
             "notes": "Dapagliflozin chống chỉ định ở suy thận nặng (eGFR <25). Cần kiểm tra eGFR trước khi bắt đầu và định kỳ. Ngừng thuốc nếu eGFR giảm xuống dưới 25."
         },
         "overdose_management": {
-            "symptoms": [],
-            "antidote": "",
-            "treatment": [],
-            "monitoring": "",
+            "symptoms": [
+                "Hạ đường huyết (nếu dùng với insulin hoặc sulfonylurea)",
+                "Mất nước",
+                "Hạ huyết áp",
+                "Nhiễm toan ceton đái tháo đường (DKA) - đặc biệt euglycemic DKA",
+                "Nhiễm trùng đường tiết niệu",
+                "Nhiễm nấm âm đạo"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ: bù dịch, điều chỉnh đường huyết, điều trị DKA nếu có.",
+            "treatment": [
+                "Ngừng dapagliflozin ngay lập tức",
+                "Điều trị hạ đường huyết nếu có: Glucose PO hoặc IV (dextrose 50% 50ml IV)",
+                "Bù dịch nếu mất nước: Normal saline IV",
+                "Điều trị DKA nếu có: Insulin IV, bù dịch, bicarbonate nếu cần",
+                "Điều trị nhiễm trùng đường tiết niệu hoặc nhiễm nấm nếu có",
+                "Theo dõi đường huyết, điện giải, chức năng thận",
+                "Theo dõi ít nhất 24-48 giờ"
+            ],
+            "monitoring": "Đường huyết, điện giải (Na, K, Cl, HCO3), chức năng thận (creatinine, eGFR), huyết áp, dấu hiệu DKA (ketone máu/nước tiểu), dấu hiệu nhiễm trùng"
         },
         "reversal_agents": {
             "available": False,
@@ -298,11 +380,30 @@ SGLT2_INHIBITORS_DRUGS = {
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu mất nước, điều chỉnh đường huyết nếu hạ đường huyết, điều trị DKA nếu có."
         },
         "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Uống bất kỳ lúc nào trong ngày.",
+                "timing": "Uống 1 lần/ngày vào buổi sáng. Uống cùng giờ mỗi ngày để dễ nhớ. Có thể uống đói hoặc no.",
+                "notes": "Uống buổi sáng để tránh đi tiểu đêm. Uống với nhiều nước để giảm nguy cơ nhiễm trùng đường tiết niệu. Nếu quên liều, uống ngay khi nhớ ra, nhưng nếu gần đến liều tiếp theo thì bỏ qua liều đã quên và tiếp tục lịch trình bình thường."
+            },
+            "iv": {
+                "reconstitution": "Không có dạng IV",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Chỉ có dạng uống (PO)"
+            }
         },
         "references": {
-            "primary_sources": [],
-            "last_updated": "",
-            "evidence_level": "",
+            "primary_sources": [
+                "FDA Drug Label - Farxiga (dapagliflozin)",
+                "UpToDate - Dapagliflozin: Drug information",
+                "DAPA-HF Study - New England Journal of Medicine (2019) - Dapagliflozin trong suy tim",
+                "DAPA-CKD Study - New England Journal of Medicine (2020) - Dapagliflozin trong bệnh thận mạn",
+                "DECLARE-TIMI 58 Study - New England Journal of Medicine (2019) - Dapagliflozin trong đái tháo đường type 2 và bệnh tim mạch",
+                "American Diabetes Association guidelines - SGLT2 inhibitors"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - Multiple large RCTs (DAPA-HF, DAPA-CKD, DECLARE-TIMI 58) showing cardiovascular and renal benefits"
         },
             "risk_flags": {
                 "high_alert": False,

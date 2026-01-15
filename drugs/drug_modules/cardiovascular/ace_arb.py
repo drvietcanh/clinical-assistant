@@ -19,9 +19,22 @@ ACE_ARB_DRUGS = {
             "Bệnh thận đái tháo đường (Diabetic nephropathy)"
         ],
         "dosage": {
-            "hypertension": "Khởi đầu 10mg PO x 1 lần/ngày. Tối đa 40mg/ngày.",
-            "heart_failure": "Khởi đầu 2.5-5mg PO x 1 lần/ngày, tăng dần đến 20-40mg/ngày.",
-            "notes": "Uống buổi sáng. Không cần uống cùng thức ăn."
+            "adult_htn": "Khởi đầu 10mg PO x 1 lần/ngày. Tối đa 40mg/ngày.",
+            "adult_heart_failure": "Khởi đầu 2.5-5mg PO x 1 lần/ngày, tăng dần đến 20-40mg/ngày.",
+            "adult_start": "10mg PO x 1 lần/ngày (tăng huyết áp), 2.5-5mg PO x 1 lần/ngày (suy tim)",
+            "adult_usual": "10-40mg PO x 1 lần/ngày (tăng huyết áp), 20-40mg PO x 1 lần/ngày (suy tim)",
+            "adult_max": "40mg/ngày",
+            "elderly": "Khởi đầu 2.5-5mg PO x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "10mg PO x 1 lần/ngày, tăng dần đến 40mg/ngày",
+                "30_60": "5-10mg PO x 1 lần/ngày, thận trọng tăng dần",
+                "under_30": "2.5-5mg PO x 1 lần/ngày, thận trọng tăng dần",
+                "dialysis": "2.5-5mg PO x 1 lần/ngày sau mỗi lần lọc máu"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Không cần uống cùng thức ăn",
+            "notes": "Uống buổi sáng. Không cần uống cùng thức ăn. Thải trừ qua thận, cần điều chỉnh liều ở suy thận."
         },
         "side_effects": [
             "Ho khan (10-20%) - Tác dụng phụ đặc trưng của ACE-I",
@@ -90,7 +103,7 @@ ACE_ARB_DRUGS = {
             "agents": [],
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu hạ huyết áp, điều chỉnh điện giải."
         },
-        "mechanism_of_action": "Ức chế ACE (Angiotensin Converting Enzyme) → Giảm Angiotensin II → Giãn mạch, giảm huyết áp. Giảm Aldosterone → Giảm giữ nước/natri. Bảo vệ tim, thận.",
+        "mechanism_of_action": "Lisinopril là ACE inhibitor (Angiotensin Converting Enzyme inhibitor) không chứa nhóm sulfhydryl, có tác dụng kéo dài. Cơ chế tác dụng: (1) Ức chế ACE enzyme chuyển đổi Angiotensin I thành Angiotensin II - một peptide gây co mạch mạnh. Giảm Angiotensin II dẫn đến giãn mạch ngoại vi, giảm sức cản mạch máu hệ thống (SVR), và giảm huyết áp. (2) Giảm sản xuất Aldosterone từ tuyến thượng thận, dẫn đến tăng bài tiết natri và nước qua thận, giảm thể tích máu. (3) Giảm phân hủy Bradykinin (một peptide giãn mạch) do ACE cũng là enzyme phân hủy bradykinin. Tăng bradykinin góp phần giãn mạch nhưng cũng gây ho khan (tác dụng phụ đặc trưng của ACE-I). (4) Bảo vệ tim và thận: Giảm hậu gánh tim, giảm protein niệu, làm chậm tiến triển bệnh thận đái tháo đường. Lisinopril không chuyển hóa, thải trừ hoàn toàn qua thận dưới dạng nguyên chất.",
         "monitoring": [
             "Huyết áp",
             "Kali máu - Sau 1-2 tuần điều trị",
@@ -130,14 +143,37 @@ ACE_ARB_DRUGS = {
             "severe": "Thận trọng, giảm liều. Lisinopril chuyển hóa một phần qua gan."
         },
         "overdose_management": {
-            "symptoms": ["Hạ huyết áp nghiêm trọng", "Tăng Kali máu", "Suy thận cấp", "Chóng mặt", "Ngất"],
-            "treatment": "Ngừng thuốc ngay. Bù dịch IV nếu hạ huyết áp. Điều chỉnh Kali máu nếu tăng. Lọc máu nếu cần.",
-            "antidote": None
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng (có thể gây sốc)",
+                "Tăng Kali máu (hyperkalemia) - có thể gây rối loạn nhịp tim",
+                "Suy thận cấp (đặc biệt ở bệnh nhân hẹp động mạch thận)",
+                "Chóng mặt, ngất",
+                "Nhịp tim chậm (bradycardia) - phản ứng với hạ huyết áp",
+                "Rối loạn nhịp tim (do tăng kali máu)"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho ACE inhibitors",
+            "treatment": [
+                "Ngừng thuốc ngay lập tức",
+                "Điều trị hạ huyết áp: Nằm đầu thấp, bù dịch IV (normal saline hoặc lactated Ringer's), nếu cần: dopamine hoặc norepinephrine",
+                "Điều trị tăng kali máu: Nếu K+ > 5.5 mEq/L: Calcium gluconate/calcium chloride IV (bảo vệ tim), Insulin + glucose IV (chuyển kali vào tế bào), Sodium bicarbonate IV (nếu có nhiễm toan), Furosemide (nếu chức năng thận bình thường), Hemodialysis nếu tăng kali nặng không đáp ứng",
+                "Theo dõi chức năng thận: Creatinine, BUN, nước tiểu",
+                "Lọc máu (hemodialysis): Có thể cần thiết để loại bỏ lisinopril và điều chỉnh kali máu nếu quá liều nghiêm trọng"
+            ],
+            "monitoring": "Huyết áp liên tục, kali máu (mỗi 1-2 giờ), creatinine/BUN, ECG (theo dõi rối loạn nhịp do tăng kali), dấu hiệu sinh tồn, cân bằng dịch vào-ra"
         },
         "administration_instructions": {
-            "preparation": "Viên nén, uống nguyên viên với nước",
-            "administration": "Uống buổi sáng, có thể uống trước hoặc sau ăn. Không cần uống cùng thức ăn.",
-            "monitoring": ["Huyết áp sau 1-2 tuần", "Kali máu sau 1-2 tuần", "Creatinine sau 1-2 tuần"]
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng đáng kể bởi thức ăn.",
+                "timing": "Uống 1 lần/ngày vào buổi sáng, cùng giờ mỗi ngày để duy trì nồng độ ổn định. Không cần uống cùng thức ăn. Uống nguyên viên với nước, không nghiền hoặc nhai viên nén.",
+                "notes": "Uống đều đặn hàng ngày. Không ngừng đột ngột. Nếu quên liều, uống ngay khi nhớ ra, nhưng nếu gần đến liều tiếp theo thì bỏ qua liều đã quên và tiếp tục lịch trình bình thường."
+            },
+            "iv": {
+                "reconstitution": "Không áp dụng - Lisinopril chỉ có dạng uống",
+                "infusion_rate": "Không áp dụng",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Lisinopril không có dạng tiêm. Nếu cần ACE inhibitor dạng IV, dùng Enalaprilat."
+            }
         },
         "pharmacokinetics": {
             "half_life": "12 giờ",
@@ -148,9 +184,14 @@ ACE_ARB_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Giữ trong bao bì gốc.",
         "references": {
-            "primary": ["FDA Label - Lisinopril", "Micromedex - Lisinopril"],
-            "guidelines": ["AHA/ACC 2017 Hypertension Guidelines", "AHA/ACC/HFSA 2022 Heart Failure Guidelines", "KDIGO 2021 CKD Guidelines"],
-            "other": []
+            "primary_sources": [
+                "FDA Drug Label - Lisinopril (Prinivil, Zestril)",
+                "UpToDate - Lisinopril: Drug information",
+                "Micromedex - Lisinopril",
+                "Lexicomp - Lisinopril"
+            ],
+            "last_updated": "2025-01-20",
+            "evidence_level": "A - Dựa trên FDA labeling, UpToDate, và các guidelines chính thức (AHA/ACC, KDIGO)"
         },
     },
 
@@ -163,14 +204,40 @@ ACE_ARB_DRUGS = {
         },
         "administration": ["PO", "IV"],
         "indications": [
-            "Tương tự Lisinopril"
+            "Tăng huyết áp (Hypertension)",
+            "Suy tim (Heart Failure) - NYHA class II-IV",
+            "Sau nhồi máu cơ tim (Post-MI) - Giảm tử vong và suy tim",
+            "Bệnh thận đái tháo đường (Diabetic nephropathy) - Giảm protein niệu",
+            "Cơn tăng huyết áp cấp cứu (dạng IV - Enalaprilat)"
         ],
         "dosage": {
-            "hypertension": "Khởi đầu 5mg PO x 1-2 lần/ngày. Tối đa 40mg/ngày.",
-            "heart_failure": "Khởi đầu 2.5mg PO x 2 lần/ngày, tăng dần."
+            "adult_htn": "Khởi đầu 5mg PO x 1-2 lần/ngày. Tối đa 40mg/ngày.",
+            "adult_heart_failure": "Khởi đầu 2.5mg PO x 2 lần/ngày, tăng dần đến 10-20mg x 2 lần/ngày.",
+            "adult_start": "5mg PO x 1-2 lần/ngày (tăng huyết áp), 2.5mg PO x 2 lần/ngày (suy tim)",
+            "adult_usual": "10-20mg PO x 2 lần/ngày (tăng huyết áp), 10-20mg PO x 2 lần/ngày (suy tim)",
+            "adult_max": "40mg/ngày",
+            "adult_iv": "Enalaprilat 1.25mg IV mỗi 6 giờ cho cấp cứu tăng huyết áp",
+            "elderly": "Khởi đầu 2.5mg PO x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "5-10mg PO x 1-2 lần/ngày, tăng dần đến 40mg/ngày",
+                "30_60": "2.5-5mg PO x 1-2 lần/ngày, thận trọng tăng dần",
+                "under_30": "2.5mg PO x 1 lần/ngày, thận trọng tăng dần",
+                "dialysis": "2.5mg PO x 1 lần/ngày sau mỗi lần lọc máu"
+            },
+            "administration_route": "PO, IV (Enalaprilat)",
+            "frequency": "1-2 lần/ngày (PO), mỗi 6 giờ (IV)",
+            "with_food": "Không cần uống cùng thức ăn",
+            "notes": "Có dạng IV (Enalaprilat) cho cấp cứu tăng huyết áp. Thải trừ qua thận, cần điều chỉnh liều ở suy thận."
         },
         "side_effects": [
-            "Tương tự Lisinopril"
+            "Ho khan (10-20%) - Tác dụng phụ đặc trưng của ACE-I, do tăng bradykinin",
+            "Hạ huyết áp (đặc biệt liều đầu hoặc IV)",
+            "Tăng Kali máu (Hyperkalemia) - Đặc biệt khi dùng với thuốc giữ kali",
+            "Suy thận cấp (ở bệnh nhân hẹp động mạch thận 2 bên)",
+            "Phù mạch (Angioedema) - Hiếm nhưng nguy hiểm, có thể gây tắc nghẽn đường thở",
+            "Chóng mặt, mệt mỏi",
+            "Đau đầu",
+            "Rash (phát ban)"
         ],
         "contraindications": [
             "Có thai (Gây quái thai, tổn thương thai nhi)",
@@ -232,7 +299,7 @@ ACE_ARB_DRUGS = {
             "agents": [],
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu hạ huyết áp, điều chỉnh điện giải."
         },
-        "mechanism_of_action": "Tương tự Lisinopril. Có dạng IV (Enalaprilat) cho cấp cứu tăng huyết áp.",
+        "mechanism_of_action": "Enalapril là ACE inhibitor (Angiotensin Converting Enzyme inhibitor) dạng prodrug, được chuyển hóa trong gan thành Enalaprilat - chất hoạt tính. Cơ chế tác dụng tương tự Lisinopril: (1) Ức chế ACE enzyme chuyển đổi Angiotensin I thành Angiotensin II - một peptide gây co mạch mạnh. Giảm Angiotensin II dẫn đến giãn mạch ngoại vi, giảm sức cản mạch máu hệ thống (SVR), và giảm huyết áp. (2) Giảm sản xuất Aldosterone từ tuyến thượng thận, dẫn đến tăng bài tiết natri và nước qua thận, giảm thể tích máu. (3) Giảm phân hủy Bradykinin (một peptide giãn mạch) do ACE cũng là enzyme phân hủy bradykinin. Tăng bradykinin góp phần giãn mạch nhưng cũng gây ho khan (tác dụng phụ đặc trưng của ACE-I). (4) Bảo vệ tim và thận: Giảm hậu gánh tim, giảm protein niệu, làm chậm tiến triển bệnh thận đái tháo đường. ĐẶC ĐIỂM: Enalapril là prodrug (cần chuyển hóa thành Enalaprilat), có dạng IV (Enalaprilat) cho cấp cứu tăng huyết áp với tác dụng nhanh (15 phút). Thải trừ qua thận.",
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": False,
@@ -257,14 +324,37 @@ ACE_ARB_DRUGS = {
             "severe": "Thận trọng, giảm liều. Enalapril chuyển hóa qua gan thành enalaprilat."
         },
         "overdose_management": {
-            "symptoms": ["Hạ huyết áp nghiêm trọng", "Tăng Kali máu", "Suy thận cấp", "Chóng mặt", "Ngất"],
-            "treatment": "Ngừng thuốc ngay. Bù dịch IV nếu hạ huyết áp. Điều chỉnh Kali máu nếu tăng. Lọc máu nếu cần.",
-            "antidote": None
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng (có thể gây sốc) - đặc biệt với dạng IV",
+                "Tăng Kali máu (hyperkalemia) - có thể gây rối loạn nhịp tim",
+                "Suy thận cấp (đặc biệt ở bệnh nhân hẹp động mạch thận)",
+                "Chóng mặt, ngất",
+                "Nhịp tim chậm (bradycardia) - phản ứng với hạ huyết áp",
+                "Rối loạn nhịp tim (do tăng kali máu)"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho ACE inhibitors",
+            "treatment": [
+                "Ngừng thuốc ngay lập tức",
+                "Điều trị hạ huyết áp: Nằm đầu thấp, bù dịch IV (normal saline hoặc lactated Ringer's), nếu cần: dopamine hoặc norepinephrine",
+                "Điều trị tăng kali máu: Nếu K+ > 5.5 mEq/L: Calcium gluconate/calcium chloride IV (bảo vệ tim), Insulin + glucose IV (chuyển kali vào tế bào), Sodium bicarbonate IV (nếu có nhiễm toan), Furosemide (nếu chức năng thận bình thường), Hemodialysis nếu tăng kali nặng không đáp ứng",
+                "Theo dõi chức năng thận: Creatinine, BUN, nước tiểu",
+                "Lọc máu (hemodialysis): Có thể cần thiết để loại bỏ enalaprilat và điều chỉnh kali máu nếu quá liều nghiêm trọng"
+            ],
+            "monitoring": "Huyết áp liên tục (đặc biệt với dạng IV), kali máu (mỗi 1-2 giờ), creatinine/BUN, ECG (theo dõi rối loạn nhịp do tăng kali), dấu hiệu sinh tồn, cân bằng dịch vào-ra"
         },
         "administration_instructions": {
-            "preparation": "Viên nén PO hoặc dung dịch IV (Enalaprilat)",
-            "administration": "PO: Uống buổi sáng, có thể uống trước hoặc sau ăn. IV: Enalaprilat 1.25mg mỗi 6 giờ cho cấp cứu tăng huyết áp.",
-            "monitoring": ["Huyết áp sau 1-2 tuần", "Kali máu sau 1-2 tuần", "Creatinine sau 1-2 tuần"]
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng đáng kể bởi thức ăn.",
+                "timing": "Uống 1-2 lần/ngày (tùy liều), cùng giờ mỗi ngày để duy trì nồng độ ổn định. Không cần uống cùng thức ăn. Uống nguyên viên với nước, không nghiền hoặc nhai viên nén.",
+                "notes": "Uống đều đặn hàng ngày. Không ngừng đột ngột. Nếu quên liều, uống ngay khi nhớ ra, nhưng nếu gần đến liều tiếp theo thì bỏ qua liều đã quên và tiếp tục lịch trình bình thường."
+            },
+            "iv": {
+                "reconstitution": "Enalaprilat: Pha loãng trong 50ml D5W, normal saline, hoặc lactated Ringer's",
+                "infusion_rate": "1.25mg IV bolus trong 5 phút, hoặc truyền trong 50ml dịch trong 15-30 phút. Có thể lặp lại mỗi 6 giờ nếu cần.",
+                "compatibility": ["D5W", "Normal saline", "Lactated Ringer's"],
+                "incompatibility": [],
+                "notes": "Dạng IV (Enalaprilat) dùng cho cấp cứu tăng huyết áp. Tác dụng nhanh (15 phút). Theo dõi huyết áp chặt chẽ. Không dùng quá 48 giờ."
+            }
         },
         "pharmacokinetics": {
             "half_life": "11 giờ (Enalaprilat - chất chuyển hóa hoạt tính)",
@@ -275,9 +365,14 @@ ACE_ARB_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Giữ trong bao bì gốc.",
         "references": {
-            "primary": ["FDA Label - Enalapril", "Micromedex - Enalapril"],
-            "guidelines": ["AHA/ACC 2017 Hypertension Guidelines", "AHA/ACC/HFSA 2022 Heart Failure Guidelines", "KDIGO 2021 CKD Guidelines"],
-            "other": []
+            "primary_sources": [
+                "FDA Drug Label - Enalapril (Vasotec), Enalaprilat IV",
+                "UpToDate - Enalapril: Drug information",
+                "Micromedex - Enalapril",
+                "Lexicomp - Enalapril"
+            ],
+            "last_updated": "2025-01-20",
+            "evidence_level": "A - Dựa trên FDA labeling, UpToDate, và các guidelines chính thức (AHA/ACC, KDIGO)"
         },
         "precautions": [
             "Kiểm tra Kali, Creatinine sau 1-2 tuần điều trị",
@@ -311,8 +406,22 @@ ACE_ARB_DRUGS = {
             "Phòng ngừa đột quỵ (ở tăng huyết áp + phì đại thất trái)"
         ],
         "dosage": {
-            "hypertension": "Khởi đầu 50mg PO x 1 lần/ngày. Tối đa 100mg/ngày.",
-            "heart_failure": "Khởi đầu 25mg PO x 1 lần/ngày, tăng dần đến 50-100mg/ngày."
+            "adult_htn": "Khởi đầu 50mg PO x 1 lần/ngày. Tối đa 100mg/ngày.",
+            "adult_heart_failure": "Khởi đầu 25mg PO x 1 lần/ngày, tăng dần đến 50-100mg/ngày.",
+            "adult_start": "50mg PO x 1 lần/ngày (tăng huyết áp), 25mg PO x 1 lần/ngày (suy tim)",
+            "adult_usual": "50-100mg PO x 1 lần/ngày (tăng huyết áp), 50-100mg PO x 1 lần/ngày (suy tim)",
+            "adult_max": "100mg/ngày",
+            "elderly": "Khởi đầu 25mg PO x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "50mg PO x 1 lần/ngày, tăng dần đến 100mg/ngày",
+                "30_60": "25-50mg PO x 1 lần/ngày, thận trọng tăng dần",
+                "under_30": "25mg PO x 1 lần/ngày, thận trọng tăng dần",
+                "dialysis": "25mg PO x 1 lần/ngày sau mỗi lần lọc máu"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Không cần uống cùng thức ăn",
+            "notes": "KHÔNG gây ho khan (ưu điểm so với ACE-I). Thải trừ qua thận, cần điều chỉnh liều ở suy thận."
         },
         "side_effects": [
             "KHÔNG gây ho khan (khác ACE-I) - Ưu điểm lớn",
@@ -379,17 +488,21 @@ ACE_ARB_DRUGS = {
             "agents": [],
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu hạ huyết áp, điều chỉnh điện giải."
         },
-        "mechanism_of_action": "Chẹn thụ thể Angiotensin II (AT1) → Giãn mạch, giảm huyết áp. Tác dụng tương tự ACE-I nhưng KHÔNG gây ho khan. Thường dùng thay thế ACE-I khi không dung nạp ho.",
+        "mechanism_of_action": "Losartan là ARB (Angiotensin Receptor Blocker) đầu tiên được phê duyệt, chẹn chọn lọc thụ thể Angiotensin II type 1 (AT1 receptor). Cơ chế tác dụng: (1) Chẹn cạnh tranh với Angiotensin II tại AT1 receptor trên mạch máu, tim, thận, và tuyến thượng thận. Ngăn cản Angiotensin II gắn vào receptor, dẫn đến giãn mạch ngoại vi, giảm sức cản mạch máu hệ thống (SVR), và giảm huyết áp. (2) Giảm sản xuất Aldosterone từ tuyến thượng thận, dẫn đến tăng bài tiết natri và nước qua thận, giảm thể tích máu. (3) Giảm hậu gánh tim, giảm protein niệu, làm chậm tiến triển bệnh thận đái tháo đường. (4) Bảo vệ tim và thận tương tự ACE-I. ĐẶC ĐIỂM QUAN TRỌNG: Losartan KHÔNG ức chế ACE, do đó KHÔNG làm tăng bradykinin → KHÔNG gây ho khan (ưu điểm lớn so với ACE-I). Losartan là prodrug, được chuyển hóa trong gan (CYP2C9, CYP3A4) thành EXP-3174 - chất chuyển hóa hoạt tính có tác dụng mạnh hơn và thời gian bán hủy dài hơn (6-9 giờ). Thải trừ qua thận và phân.",
         "monitoring": [
-            "Huyết áp",
-            "Kali máu",
-            "Creatinine, eGFR"
+            "Huyết áp - Sau 1-2 tuần điều trị",
+            "Kali máu - Sau 1-2 tuần điều trị",
+            "Creatinine, eGFR - Sau 1-2 tuần điều trị",
+            "Dấu hiệu phù mạch (hiếm hơn ACE-I)"
         ],
         "precautions": [
-            "Tương tự ACE-I",
-            "KHÔNG gây ho khan - Ưu điểm lớn so với ACE-I",
-            "Dùng thay thế ACE-I khi không dung nạp ho",
-            "Tránh thai - Gây quái thai"
+            "Kiểm tra Kali, Creatinine sau 1-2 tuần điều trị",
+            "Tránh thai - Gây quái thai (ngừng ngay nếu mang thai)",
+            "KHÔNG gây ho khan - Ưu điểm lớn so với ACE-I, dùng thay thế khi không dung nạp ho",
+            "Nguy cơ phù mạch - Hiếm hơn ACE-I nhưng vẫn có thể xảy ra, ngừng thuốc ngay nếu sưng môi, lưỡi, khó thở",
+            "Thận trọng ở suy thận, tăng Kali máu",
+            "Tránh dùng NSAIDs",
+            "Losartan chuyển hóa qua gan thành chất hoạt tính, cần điều chỉnh liều ở suy gan"
         ],
         "black_box_warnings": "Gây quái thai. Chống chỉ định ở thai kỳ.",
         "risk_flags": {
@@ -416,14 +529,37 @@ ACE_ARB_DRUGS = {
             "severe": "Thận trọng, giảm liều. Losartan chuyển hóa qua gan thành chất chuyển hóa hoạt tính."
         },
         "overdose_management": {
-            "symptoms": ["Hạ huyết áp nghiêm trọng", "Tăng Kali máu", "Suy thận cấp", "Chóng mặt", "Ngất"],
-            "treatment": "Ngừng thuốc ngay. Bù dịch IV nếu hạ huyết áp. Điều chỉnh Kali máu nếu tăng. Lọc máu nếu cần.",
-            "antidote": None
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng (có thể gây sốc)",
+                "Tăng Kali máu (hyperkalemia) - có thể gây rối loạn nhịp tim",
+                "Suy thận cấp (đặc biệt ở bệnh nhân hẹp động mạch thận)",
+                "Chóng mặt, ngất",
+                "Nhịp tim chậm (bradycardia) - phản ứng với hạ huyết áp",
+                "Rối loạn nhịp tim (do tăng kali máu)"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho ARBs",
+            "treatment": [
+                "Ngừng thuốc ngay lập tức",
+                "Điều trị hạ huyết áp: Nằm đầu thấp, bù dịch IV (normal saline hoặc lactated Ringer's), nếu cần: dopamine hoặc norepinephrine",
+                "Điều trị tăng kali máu: Nếu K+ > 5.5 mEq/L: Calcium gluconate/calcium chloride IV (bảo vệ tim), Insulin + glucose IV (chuyển kali vào tế bào), Sodium bicarbonate IV (nếu có nhiễm toan), Furosemide (nếu chức năng thận bình thường), Hemodialysis nếu tăng kali nặng không đáp ứng",
+                "Theo dõi chức năng thận: Creatinine, BUN, nước tiểu",
+                "Lọc máu (hemodialysis): Có thể cần thiết để loại bỏ losartan và chất chuyển hóa hoạt tính (EXP-3174) nếu quá liều nghiêm trọng"
+            ],
+            "monitoring": "Huyết áp liên tục, kali máu (mỗi 1-2 giờ), creatinine/BUN, ECG (theo dõi rối loạn nhịp do tăng kali), dấu hiệu sinh tồn, cân bằng dịch vào-ra"
         },
         "administration_instructions": {
-            "preparation": "Viên nén, uống nguyên viên với nước",
-            "administration": "Uống buổi sáng, có thể uống trước hoặc sau ăn. Không cần uống cùng thức ăn.",
-            "monitoring": ["Huyết áp sau 1-2 tuần", "Kali máu sau 1-2 tuần", "Creatinine sau 1-2 tuần"]
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng đáng kể bởi thức ăn.",
+                "timing": "Uống 1 lần/ngày vào buổi sáng, cùng giờ mỗi ngày để duy trì nồng độ ổn định. Không cần uống cùng thức ăn. Uống nguyên viên với nước, không nghiền hoặc nhai viên nén.",
+                "notes": "Uống đều đặn hàng ngày. Không ngừng đột ngột. Nếu quên liều, uống ngay khi nhớ ra, nhưng nếu gần đến liều tiếp theo thì bỏ qua liều đã quên và tiếp tục lịch trình bình thường."
+            },
+            "iv": {
+                "reconstitution": "Không áp dụng - Losartan chỉ có dạng uống",
+                "infusion_rate": "Không áp dụng",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Losartan không có dạng tiêm."
+            }
         },
         "pharmacokinetics": {
             "half_life": "2 giờ (Losartan), 6-9 giờ (chất chuyển hóa hoạt tính)",
@@ -434,9 +570,14 @@ ACE_ARB_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Giữ trong bao bì gốc.",
         "references": {
-            "primary": ["FDA Label - Losartan", "Micromedex - Losartan"],
-            "guidelines": ["AHA/ACC 2017 Hypertension Guidelines", "AHA/ACC/HFSA 2022 Heart Failure Guidelines", "KDIGO 2021 CKD Guidelines"],
-            "other": []
+            "primary_sources": [
+                "FDA Drug Label - Losartan (Cozaar)",
+                "UpToDate - Losartan: Drug information",
+                "Micromedex - Losartan",
+                "Lexicomp - Losartan"
+            ],
+            "last_updated": "2025-01-20",
+            "evidence_level": "A - Dựa trên FDA labeling, UpToDate, và các guidelines chính thức (AHA/ACC, KDIGO)"
         },
     },
 
@@ -449,14 +590,38 @@ ACE_ARB_DRUGS = {
         },
         "administration": ["PO"],
         "indications": [
-            "Tương tự Losartan"
+            "Tăng huyết áp (Hypertension)",
+            "Suy tim (Heart Failure) - NYHA class II-IV",
+            "Sau nhồi máu cơ tim (Post-MI) - Giảm tử vong và suy tim",
+            "Bệnh thận đái tháo đường (Diabetic nephropathy) - Giảm protein niệu"
         ],
         "dosage": {
-            "hypertension": "Khởi đầu 80-160mg PO x 1 lần/ngày. Tối đa 320mg/ngày.",
-            "heart_failure": "Khởi đầu 40mg PO x 2 lần/ngày, tăng dần đến 160mg x 2 lần/ngày."
+            "adult_htn": "Khởi đầu 80-160mg PO x 1 lần/ngày. Tối đa 320mg/ngày.",
+            "adult_heart_failure": "Khởi đầu 40mg PO x 2 lần/ngày, tăng dần đến 160mg x 2 lần/ngày.",
+            "adult_start": "80-160mg PO x 1 lần/ngày (tăng huyết áp), 40mg PO x 2 lần/ngày (suy tim)",
+            "adult_usual": "160-320mg PO x 1 lần/ngày (tăng huyết áp), 80-160mg PO x 2 lần/ngày (suy tim)",
+            "adult_max": "320mg/ngày",
+            "elderly": "Khởi đầu 80mg PO x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "80-160mg PO x 1 lần/ngày, tăng dần đến 320mg/ngày",
+                "30_60": "80mg PO x 1 lần/ngày, thận trọng tăng dần",
+                "under_30": "80mg PO x 1 lần/ngày, thận trọng tăng dần",
+                "dialysis": "80mg PO x 1 lần/ngày sau mỗi lần lọc máu"
+            },
+            "administration_route": "PO",
+            "frequency": "1-2 lần/ngày",
+            "with_food": "Không cần uống cùng thức ăn",
+            "notes": "KHÔNG gây ho khan (ưu điểm so với ACE-I). Thải trừ qua thận, cần điều chỉnh liều ở suy thận."
         },
         "side_effects": [
-            "Tương tự Losartan"
+            "KHÔNG gây ho khan (khác ACE-I) - Ưu điểm lớn",
+            "Hạ huyết áp",
+            "Tăng Kali máu (Hyperkalemia) - Đặc biệt khi dùng với thuốc giữ kali",
+            "Suy thận cấp (ở bệnh nhân hẹp động mạch thận 2 bên)",
+            "Phù mạch (Angioedema) - Hiếm hơn ACE-I",
+            "Chóng mặt, mệt mỏi",
+            "Đau đầu",
+            "Rash (phát ban)"
         ],
         "contraindications": [
             "Có thai (Gây quái thai)",
@@ -508,7 +673,7 @@ ACE_ARB_DRUGS = {
             "agents": [],
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu hạ huyết áp, điều chỉnh điện giải."
         },
-        "mechanism_of_action": "Chẹn thụ thể Angiotensin II (AT1) → Giãn mạch, giảm huyết áp. Tác dụng tương tự Losartan nhưng có thời gian bán hủy dài hơn.",
+        "mechanism_of_action": "Valsartan là ARB (Angiotensin Receptor Blocker), chẹn chọn lọc thụ thể Angiotensin II type 1 (AT1 receptor). Cơ chế tác dụng tương tự Losartan: (1) Chẹn cạnh tranh với Angiotensin II tại AT1 receptor trên mạch máu, tim, thận, và tuyến thượng thận. Ngăn cản Angiotensin II gắn vào receptor, dẫn đến giãn mạch ngoại vi, giảm sức cản mạch máu hệ thống (SVR), và giảm huyết áp. (2) Giảm sản xuất Aldosterone từ tuyến thượng thận, dẫn đến tăng bài tiết natri và nước qua thận, giảm thể tích máu. (3) Giảm hậu gánh tim, giảm protein niệu, làm chậm tiến triển bệnh thận đái tháo đường. (4) Bảo vệ tim và thận tương tự ACE-I. ĐẶC ĐIỂM: Valsartan KHÔNG ức chế ACE, do đó KHÔNG làm tăng bradykinin → KHÔNG gây ho khan (ưu điểm lớn so với ACE-I). Valsartan có thời gian bán hủy dài hơn Losartan (6 giờ so với 2 giờ cho losartan, nhưng chất chuyển hóa hoạt tính của losartan có half-life 6-9 giờ). Chuyển hóa qua gan (CYP2C9), thải trừ qua thận và phân.",
         "monitoring": [
             "Huyết áp",
             "Kali máu - Sau 1-2 tuần điều trị",
@@ -545,14 +710,37 @@ ACE_ARB_DRUGS = {
             "severe": "Thận trọng, giảm liều. Valsartan chuyển hóa một phần qua gan."
         },
         "overdose_management": {
-            "symptoms": ["Hạ huyết áp nghiêm trọng", "Tăng Kali máu", "Suy thận cấp", "Chóng mặt", "Ngất"],
-            "treatment": "Ngừng thuốc ngay. Bù dịch IV nếu hạ huyết áp. Điều chỉnh Kali máu nếu tăng. Lọc máu nếu cần.",
-            "antidote": None
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng (có thể gây sốc)",
+                "Tăng Kali máu (hyperkalemia) - có thể gây rối loạn nhịp tim",
+                "Suy thận cấp (đặc biệt ở bệnh nhân hẹp động mạch thận)",
+                "Chóng mặt, ngất",
+                "Nhịp tim chậm (bradycardia) - phản ứng với hạ huyết áp",
+                "Rối loạn nhịp tim (do tăng kali máu)"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho ARBs",
+            "treatment": [
+                "Ngừng thuốc ngay lập tức",
+                "Điều trị hạ huyết áp: Nằm đầu thấp, bù dịch IV (normal saline hoặc lactated Ringer's), nếu cần: dopamine hoặc norepinephrine",
+                "Điều trị tăng kali máu: Nếu K+ > 5.5 mEq/L: Calcium gluconate/calcium chloride IV (bảo vệ tim), Insulin + glucose IV (chuyển kali vào tế bào), Sodium bicarbonate IV (nếu có nhiễm toan), Furosemide (nếu chức năng thận bình thường), Hemodialysis nếu tăng kali nặng không đáp ứng",
+                "Theo dõi chức năng thận: Creatinine, BUN, nước tiểu",
+                "Lọc máu (hemodialysis): Có thể cần thiết để loại bỏ valsartan nếu quá liều nghiêm trọng"
+            ],
+            "monitoring": "Huyết áp liên tục, kali máu (mỗi 1-2 giờ), creatinine/BUN, ECG (theo dõi rối loạn nhịp do tăng kali), dấu hiệu sinh tồn, cân bằng dịch vào-ra"
         },
         "administration_instructions": {
-            "preparation": "Viên nén, uống nguyên viên với nước",
-            "administration": "Uống buổi sáng, có thể uống trước hoặc sau ăn. Không cần uống cùng thức ăn.",
-            "monitoring": ["Huyết áp sau 1-2 tuần", "Kali máu sau 1-2 tuần", "Creatinine sau 1-2 tuần"]
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng đáng kể bởi thức ăn.",
+                "timing": "Uống 1-2 lần/ngày (tùy liều), cùng giờ mỗi ngày để duy trì nồng độ ổn định. Không cần uống cùng thức ăn. Uống nguyên viên với nước, không nghiền hoặc nhai viên nén.",
+                "notes": "Uống đều đặn hàng ngày. Không ngừng đột ngột. Nếu quên liều, uống ngay khi nhớ ra, nhưng nếu gần đến liều tiếp theo thì bỏ qua liều đã quên và tiếp tục lịch trình bình thường."
+            },
+            "iv": {
+                "reconstitution": "Không áp dụng - Valsartan chỉ có dạng uống",
+                "infusion_rate": "Không áp dụng",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Valsartan không có dạng tiêm."
+            }
         },
         "pharmacokinetics": {
             "half_life": "6 giờ",
@@ -563,9 +751,14 @@ ACE_ARB_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Giữ trong bao bì gốc.",
         "references": {
-            "primary": ["FDA Label - Valsartan", "Micromedex - Valsartan"],
-            "guidelines": ["AHA/ACC 2017 Hypertension Guidelines", "AHA/ACC/HFSA 2022 Heart Failure Guidelines", "KDIGO 2021 CKD Guidelines"],
-            "other": []
+            "primary_sources": [
+                "FDA Drug Label - Valsartan (Diovan)",
+                "UpToDate - Valsartan: Drug information",
+                "Micromedex - Valsartan",
+                "Lexicomp - Valsartan"
+            ],
+            "last_updated": "2025-01-20",
+            "evidence_level": "A - Dựa trên FDA labeling, UpToDate, và các guidelines chính thức (AHA/ACC, KDIGO)"
         },
     },
 
@@ -578,13 +771,36 @@ ACE_ARB_DRUGS = {
         },
         "administration": ["PO"],
         "indications": [
-            "Tương tự Losartan"
+            "Tăng huyết áp (Hypertension)",
+            "Giảm nguy cơ tim mạch ở bệnh nhân tăng huyết áp có nguy cơ cao",
+            "Bệnh thận đái tháo đường (Diabetic nephropathy) - Giảm protein niệu"
         ],
         "dosage": {
-            "hypertension": "Khởi đầu 40mg PO x 1 lần/ngày. Tối đa 80mg/ngày."
+            "adult_htn": "Khởi đầu 40mg PO x 1 lần/ngày. Tối đa 80mg/ngày.",
+            "adult_start": "40mg PO x 1 lần/ngày",
+            "adult_usual": "40-80mg PO x 1 lần/ngày",
+            "adult_max": "80mg/ngày",
+            "elderly": "Khởi đầu 20mg PO x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "40mg PO x 1 lần/ngày, tăng dần đến 80mg/ngày",
+                "30_60": "20-40mg PO x 1 lần/ngày, thận trọng tăng dần",
+                "under_30": "20mg PO x 1 lần/ngày, thận trọng tăng dần",
+                "dialysis": "20mg PO x 1 lần/ngày sau mỗi lần lọc máu"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Không cần uống cùng thức ăn",
+            "notes": "KHÔNG gây ho khan (ưu điểm so với ACE-I). Tác dụng kéo dài nhất trong nhóm ARB (half-life 24h). Thải trừ chủ yếu qua gan, một phần qua thận."
         },
         "side_effects": [
-            "Tương tự Losartan"
+            "KHÔNG gây ho khan (khác ACE-I) - Ưu điểm lớn",
+            "Hạ huyết áp",
+            "Tăng Kali máu (Hyperkalemia) - Đặc biệt khi dùng với thuốc giữ kali",
+            "Suy thận cấp (ở bệnh nhân hẹp động mạch thận 2 bên)",
+            "Phù mạch (Angioedema) - Hiếm hơn ACE-I",
+            "Chóng mặt, mệt mỏi",
+            "Đau đầu",
+            "Rash (phát ban)"
         ],
         "contraindications": [
             "Có thai (Gây quái thai)",
@@ -636,7 +852,7 @@ ACE_ARB_DRUGS = {
             "agents": [],
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ: ngừng thuốc, bù dịch nếu hạ huyết áp, điều chỉnh điện giải."
         },
-        "mechanism_of_action": "ARB tác dụng kéo dài nhất (half-life 24h). Có thêm tác dụng PPAR-gamma (tương tự Pioglitazone) - Cải thiện insulin resistance nhẹ.",
+        "mechanism_of_action": "Telmisartan là ARB (Angiotensin Receptor Blocker) có thời gian bán hủy dài nhất trong nhóm ARB (24 giờ). Cơ chế tác dụng: (1) Chẹn cạnh tranh với Angiotensin II tại AT1 receptor trên mạch máu, tim, thận, và tuyến thượng thận. Ngăn cản Angiotensin II gắn vào receptor, dẫn đến giãn mạch ngoại vi, giảm sức cản mạch máu hệ thống (SVR), và giảm huyết áp. (2) Giảm sản xuất Aldosterone từ tuyến thượng thận, dẫn đến tăng bài tiết natri và nước qua thận, giảm thể tích máu. (3) Giảm hậu gánh tim, giảm protein niệu, làm chậm tiến triển bệnh thận đái tháo đường. (4) Bảo vệ tim và thận tương tự ACE-I. ĐẶC ĐIỂM QUAN TRỌNG: Telmisartan KHÔNG ức chế ACE, do đó KHÔNG làm tăng bradykinin → KHÔNG gây ho khan (ưu điểm lớn so với ACE-I). Telmisartan có thời gian bán hủy dài nhất trong nhóm ARB (24 giờ), cho phép dùng 1 lần/ngày và duy trì tác dụng ổn định. Telmisartan có thêm tác dụng kích hoạt PPAR-gamma (Peroxisome Proliferator-Activated Receptor gamma) - tương tự thiazolidinediones như Pioglitazone, dẫn đến cải thiện nhẹ insulin resistance và glucose metabolism. Điều này có thể có lợi ở bệnh nhân đái tháo đường type 2. Thải trừ chủ yếu qua gan (glucuronidation), một phần qua thận.",
         "risk_flags": {
             "high_alert": True,
             "narrow_therapeutic_index": False,
@@ -660,14 +876,37 @@ ACE_ARB_DRUGS = {
             "severe": "Thận trọng, giảm liều. Telmisartan chuyển hóa qua gan."
         },
         "overdose_management": {
-            "symptoms": ["Hạ huyết áp nghiêm trọng", "Tăng Kali máu", "Suy thận cấp", "Chóng mặt", "Ngất"],
-            "treatment": "Ngừng thuốc ngay. Bù dịch IV nếu hạ huyết áp. Điều chỉnh Kali máu nếu tăng. Lọc máu nếu cần.",
-            "antidote": None
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng (có thể gây sốc)",
+                "Tăng Kali máu (hyperkalemia) - có thể gây rối loạn nhịp tim",
+                "Suy thận cấp (đặc biệt ở bệnh nhân hẹp động mạch thận)",
+                "Chóng mặt, ngất",
+                "Nhịp tim chậm (bradycardia) - phản ứng với hạ huyết áp",
+                "Rối loạn nhịp tim (do tăng kali máu)"
+            ],
+            "antidote": "Không có antidote đặc hiệu cho ARBs",
+            "treatment": [
+                "Ngừng thuốc ngay lập tức",
+                "Điều trị hạ huyết áp: Nằm đầu thấp, bù dịch IV (normal saline hoặc lactated Ringer's), nếu cần: dopamine hoặc norepinephrine",
+                "Điều trị tăng kali máu: Nếu K+ > 5.5 mEq/L: Calcium gluconate/calcium chloride IV (bảo vệ tim), Insulin + glucose IV (chuyển kali vào tế bào), Sodium bicarbonate IV (nếu có nhiễm toan), Furosemide (nếu chức năng thận bình thường), Hemodialysis nếu tăng kali nặng không đáp ứng",
+                "Theo dõi chức năng thận: Creatinine, BUN, nước tiểu",
+                "Lọc máu (hemodialysis): Có thể cần thiết để loại bỏ telmisartan nếu quá liều nghiêm trọng (telmisartan thải trừ chủ yếu qua gan, nhưng vẫn có thể cần lọc máu)"
+            ],
+            "monitoring": "Huyết áp liên tục, kali máu (mỗi 1-2 giờ), creatinine/BUN, ECG (theo dõi rối loạn nhịp do tăng kali), dấu hiệu sinh tồn, cân bằng dịch vào-ra"
         },
         "administration_instructions": {
-            "preparation": "Viên nén, uống nguyên viên với nước",
-            "administration": "Uống buổi sáng, có thể uống trước hoặc sau ăn. Không cần uống cùng thức ăn.",
-            "monitoring": ["Huyết áp sau 1-2 tuần", "Kali máu sau 1-2 tuần", "Creatinine sau 1-2 tuần"]
+            "oral": {
+                "with_food": "Có thể uống với hoặc không thức ăn. Hấp thu không bị ảnh hưởng đáng kể bởi thức ăn.",
+                "timing": "Uống 1 lần/ngày vào buổi sáng, cùng giờ mỗi ngày để duy trì nồng độ ổn định. Không cần uống cùng thức ăn. Uống nguyên viên với nước, không nghiền hoặc nhai viên nén.",
+                "notes": "Uống đều đặn hàng ngày. Không ngừng đột ngột. Nếu quên liều, uống ngay khi nhớ ra, nhưng nếu gần đến liều tiếp theo thì bỏ qua liều đã quên và tiếp tục lịch trình bình thường. Telmisartan có half-life dài (24h), nên có thể uống vào bất kỳ thời điểm nào trong ngày."
+            },
+            "iv": {
+                "reconstitution": "Không áp dụng - Telmisartan chỉ có dạng uống",
+                "infusion_rate": "Không áp dụng",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Telmisartan không có dạng tiêm."
+            }
         },
         "pharmacokinetics": {
             "half_life": "24 giờ (dài nhất trong nhóm ARB)",
@@ -678,9 +917,14 @@ ACE_ARB_DRUGS = {
         },
         "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm. Giữ trong bao bì gốc.",
         "references": {
-            "primary": ["FDA Label - Telmisartan", "Micromedex - Telmisartan"],
-            "guidelines": ["AHA/ACC 2017 Hypertension Guidelines", "AHA/ACC/HFSA 2022 Heart Failure Guidelines", "KDIGO 2021 CKD Guidelines"],
-            "other": []
+            "primary_sources": [
+                "FDA Drug Label - Telmisartan (Micardis)",
+                "UpToDate - Telmisartan: Drug information",
+                "Micromedex - Telmisartan",
+                "Lexicomp - Telmisartan"
+            ],
+            "last_updated": "2025-01-20",
+            "evidence_level": "A - Dựa trên FDA labeling, UpToDate, và các guidelines chính thức (AHA/ACC, KDIGO)"
         },
         "precautions": [
             "Kiểm tra Kali, Creatinine sau 1-2 tuần điều trị",

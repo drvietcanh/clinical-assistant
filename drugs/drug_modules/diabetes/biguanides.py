@@ -26,8 +26,19 @@ BIGUANIDES_DRUGS = {
             'adult_start': '500mg x 2 lần/ngày với bữa ăn',
             'adult_usual': '500-1000mg x 2-3 lần/ngày',
             'adult_max': '1000mg x 2 lần/ngày (2000mg/ngày)',
+            'dm_t2': '500mg x 2 lần/ngày với bữa ăn, tăng dần đến 1000mg x 2 lần/ngày',
             'extended_release': '500-2000mg x 1 lần/ngày với bữa ăn tối',
-            'notes': 'Khởi đầu với liều thấp, tăng dần. Tạm ngừng khi dùng thuốc cản quang'
+            'elderly': 'Khởi đầu 500mg x 1 lần/ngày với bữa ăn, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.',
+            'renal_adjustment_dosage': {
+                'normal': '500-1000mg x 2-3 lần/ngày',
+                '30_60': '500mg x 1-2 lần/ngày, thận trọng, giảm liều',
+                'under_30': 'CHỐNG CHỈ ĐỊNH (CrCl <30 hoặc eGFR <30)',
+                'dialysis': 'CHỐNG CHỈ ĐỊNH'
+            },
+            'administration_route': 'PO',
+            'frequency': '2-3 lần/ngày (immediate-release), 1 lần/ngày (extended-release)',
+            'with_food': 'Nên uống với bữa ăn để giảm tác dụng phụ tiêu hóa',
+            'notes': 'Khởi đầu với liều thấp, tăng dần. Tạm ngừng khi dùng thuốc cản quang (48 giờ trước và sau). CHỐNG CHỈ ĐỊNH trong suy thận (CrCl <30).'
         },
         'renal_adjustment': {
             'normal': 'Không đổi',

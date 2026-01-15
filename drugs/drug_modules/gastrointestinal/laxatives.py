@@ -613,6 +613,330 @@ LAXATIVES_DRUGS = {
                 "FDA - Laxative safety",
             ]
     },
+    
+    "Docusate": {
+        "group": "Gastrointestinal - Stool Softener (Surfactant Laxative)",
+        "vietnamese_name": "Docusate sodium, Docusate calcium, Colace, Docusol",
+        "brand_names": {
+            "common": ["Colace", "Docusol", "Surfak"],
+            "vietnam": ["Docusate 100mg", "Colace", "Docusol"]
+        },
+        "administration": ["PO"],
+        "indications": [
+            "Táo bón (làm mềm phân)",
+            "Táo bón do opioid (kết hợp với stimulant laxative)",
+            "Phòng ngừa táo bón sau phẫu thuật",
+            "Bệnh nhân cần tránh gắng sức khi đi ngoài (bệnh tim, trĩ, nứt hậu môn)"
+        ],
+        "contraindications": [
+            "Tắc ruột cơ học",
+            "Đau bụng cấp chưa rõ nguyên nhân",
+            "Dị ứng docusate"
+        ],
+        "dosage": {
+            "adult_po": "50-200mg PO x 1-3 lần/ngày",
+            "adult_typical": "100mg PO x 2 lần/ngày",
+            "pediatric_2_12_years": "50-150mg PO x 1-2 lần/ngày",
+            "pediatric_over_12_years": "50-200mg PO x 1-3 lần/ngày",
+            "geriatric_dosing": "Không cần chỉnh liều",
+            "notes": "Tác dụng sau 1-3 ngày. An toàn cho dùng lâu dài. Thường kết hợp với stimulant laxative (senna, bisacodyl) trong táo bón do opioid."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Không cần chỉnh liều",
+            "under_30": "Không cần chỉnh liều",
+            "notes": "Docusate ít hấp thu toàn thân, tác dụng chủ yếu tại chỗ ở ruột."
+        },
+        "side_effects": [
+            "Đau bụng nhẹ",
+            "Buồn nôn",
+            "Tiêu chảy (nếu dùng liều cao)",
+            "Phát ban (hiếm)"
+        ],
+        "interactions": [
+            "Có thể tăng hấp thu các thuốc tan trong dầu (vitamin D, A, E, K)",
+            "Mineral oil: không dùng cùng (tăng hấp thu mineral oil)"
+        ],
+        "pregnancy": "C - Thường được coi là an toàn trong thai kỳ",
+        "mechanism_of_action": "Stool softener (surfactant laxative). Docusate là chất hoạt động bề mặt (surfactant), làm giảm sức căng bề mặt của phân, cho phép nước và lipid thấm vào phân, làm mềm phân và dễ đi ngoài hơn. Không kích thích nhu động ruột, chỉ làm mềm phân. An toàn cho dùng lâu dài.",
+        "monitoring": [
+            "Tần suất và tính chất phân",
+            "Dấu hiệu tiêu chảy nếu dùng liều cao"
+        ],
+        "precautions": [
+            "Tác dụng chậm (1-3 ngày) - không mong đợi tác dụng ngay",
+            "An toàn cho dùng lâu dài",
+            "Thường kết hợp với stimulant laxative (senna, bisacodyl) trong táo bón do opioid",
+            "Không dùng cùng mineral oil"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không rõ (ít hấp thu)",
+            "onset": "1-3 ngày",
+            "duration": "Phụ thuộc tần suất dùng",
+            "protein_binding": "Không áp dụng",
+            "clearance": "Thải qua phân (không hấp thu đáng kể)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Mineral oil",
+                    "mechanism": "Docusate tăng hấp thu mineral oil",
+                    "effect": "Tăng nguy cơ độc tính mineral oil (viêm phổi lipid)",
+                    "management": "Không dùng cùng mineral oil."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Tắc ruột cơ học",
+                "Đau bụng cấp chưa rõ nguyên nhân"
+            ],
+            "tương_đối": [
+                "Tiêu chảy - có thể làm nặng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Thường được coi là an toàn trong thai kỳ. Ít hấp thu toàn thân.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Ít hấp thu nên rất ít vào sữa mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều",
+            "notes": "Tác dụng chủ yếu tại chỗ ở ruột, không phụ thuộc chuyển hóa gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy",
+                "Đau bụng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng thuốc",
+                "Bù dịch nếu tiêu chảy nhiều"
+            ],
+            "monitoring": "Theo dõi triệu chứng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không với thức ăn",
+                "timing": "Uống 1-3 lần/ngày. Tác dụng sau 1-3 ngày."
+            }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": []
+        },
+        "guideline_tags": [
+            "ACG 2013 Constipation Guidelines",
+            "FDA - Laxative safety"
+        ],
+        "references": {
+            "primary_sources": [
+                "UpToDate - Docusate: Drug information",
+                "ACG 2013 Constipation Guidelines",
+                "FDA Drug Information"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High - Guideline-recommended stool softener"
+        },
+        "cost_estimate": {
+            "generic": "Thấp",
+            "brand": "Thấp-trung bình",
+            "notes": "OTC medication, giá rẻ"
+        }
+    },
+    
+    "Magnesium hydroxide": {
+        "group": "Gastrointestinal - Osmotic Laxative (Antacid/Laxative)",
+        "vietnamese_name": "Magnesium hydroxide, Milk of Magnesia, Maalox",
+        "brand_names": {
+            "common": ["Milk of Magnesia", "Maalox", "Phillips"],
+            "vietnam": ["Magnesium hydroxide", "Milk of Magnesia"]
+        },
+        "administration": ["PO"],
+        "indications": [
+            "Táo bón cấp",
+            "Đau rát thượng vị, ợ chua (tác dụng antacid)",
+            "Chuẩn bị ruột trước phẫu thuật/nội soi (liều cao)"
+        ],
+        "contraindications": [
+            "Suy thận nặng (CrCl <30 ml/phút) - nguy cơ tăng magie máu",
+            "Tắc ruột cơ học",
+            "Viêm ruột cấp nặng",
+            "Bệnh tim nặng (nguy cơ rối loạn điện giải)"
+        ],
+        "dosage": {
+            "adult_constipation": "30-60ml hỗn dịch (2.4-4.8g) PO vào buổi tối hoặc chia 2 lần/ngày",
+            "adult_antacid": "5-15ml hỗn dịch PO sau bữa ăn và khi có triệu chứng",
+            "adult_bowel_prep": "240ml hỗn dịch PO (theo phác đồ chuẩn bị ruột)",
+            "pediatric_2_5_years": "5-15ml PO x 1-2 lần/ngày",
+            "pediatric_6_11_years": "15-30ml PO x 1-2 lần/ngày",
+            "pediatric_over_12_years": "30-60ml PO x 1-2 lần/ngày",
+            "geriatric_dosing": "Thận trọng ở người già, đặc biệt nếu có suy thận",
+            "notes": "Tác dụng sau 30 phút - 6 giờ. Không dùng kéo dài ở suy thận. Có thể dùng như antacid hoặc laxative tùy liều."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều, nhưng tránh dùng liều cao kéo dài",
+            "30_60": "Giảm liều, tránh dùng kéo dài",
+            "under_30": "CHỐNG CHỈ ĐỊNH - nguy cơ tăng magie máu nặng",
+            "dialysis": "CHỐNG CHỈ ĐỊNH",
+            "notes": "Magnesium hydroxide thải trừ qua thận. Suy thận làm giảm thải trừ, tăng nguy cơ tăng magie máu nặng (yếu cơ, loạn nhịp tim, suy hô hấp)."
+        },
+        "side_effects": [
+            "Tiêu chảy (phổ biến)",
+            "Đau quặn bụng",
+            "Tăng magie máu (ở suy thận - nguy hiểm)",
+            "Giảm phospho máu (nếu dùng kéo dài)",
+            "Buồn nôn"
+        ],
+        "interactions": [
+            "Thuốc khác: giảm hấp thu do tạo phức hoặc tăng nhu động ruột",
+            "Digoxin: giảm hấp thu digoxin",
+            "Quinolone, tetracycline: giảm hấp thu - cách 2 giờ",
+            "Bisphosphonates: giảm hấp thu - cách 2 giờ"
+        ],
+        "pregnancy": "B - Thường an toàn nếu dùng ngắn hạn",
+        "mechanism_of_action": "Osmotic laxative và antacid. Magnesium hydroxide phản ứng với acid dạ dày tạo magnesium chloride và nước (tác dụng antacid). Trong ruột, tạo magnesium chloride không hấp thu, tăng áp lực thẩm thấu trong lòng ruột, kéo nước vào lòng ruột, làm mềm phân và tăng nhu động. Tác dụng nhanh (30 phút - 6 giờ).",
+        "monitoring": [
+            "Tần suất và tính chất phân",
+            "Magie máu (nếu dùng kéo dài hoặc suy thận) - nguy cơ tăng magie máu",
+            "Dấu hiệu tăng magie máu: yếu cơ, buồn ngủ, loạn nhịp tim, suy hô hấp",
+            "Chức năng thận (creatinine, eGFR) - đặc biệt quan trọng"
+        ],
+        "precautions": [
+            "CHỐNG CHỈ ĐỊNH ở suy thận nặng - nguy cơ tăng magie máu nặng",
+            "Không dùng kéo dài ở suy thận trung bình",
+            "Uống cách xa các thuốc khác ít nhất 2 giờ (giảm hấp thu)",
+            "Tác dụng nhanh - không dùng trước khi ngủ",
+            "Có thể dùng như antacid (liều thấp) hoặc laxative (liều cao)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (tác dụng tại chỗ)",
+            "onset": "30 phút - 6 giờ",
+            "duration": "Vài giờ",
+            "protein_binding": "Không áp dụng",
+            "clearance": "Thận (thải trừ magie), một phần qua phân"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh đông lạnh. Lắc kỹ hỗn dịch trước khi dùng.",
+        "black_box_warnings": "CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30 ml/phút). Tăng magie máu có thể gây yếu cơ, loạn nhịp tim, suy hô hấp, có thể tử vong.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Digoxin, Quinolone, Tetracycline, Bisphosphonates",
+                    "mechanism": "Magnesium hydroxide giảm hấp thu các thuốc này",
+                    "effect": "Giảm nồng độ thuốc, giảm hiệu quả điều trị",
+                    "management": "Uống cách xa ít nhất 2 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Suy thận nặng (CrCl <30 ml/phút) - CHỐNG CHỈ ĐỊNH",
+                "Tắc ruột cơ học",
+                "Viêm ruột cấp nặng"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 30-60) - giảm liều, tránh dùng kéo dài",
+                "Bệnh tim nặng - nguy cơ rối loạn điện giải"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Thường an toàn nếu dùng ngắn hạn cho táo bón hoặc ợ chua trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Magnesium là thành phần sinh lý. Nguy cơ thấp nếu liều vừa phải.",
+                "recommendation": "Có thể dùng khi cho con bú, tránh lạm dụng."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Không cần chỉnh liều",
+            "notes": "Tác dụng chủ yếu tại chỗ ở ruột, không phụ thuộc chuyển hóa gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nhiều",
+                "Tăng magie máu: yếu cơ, buồn ngủ, loạn nhịp tim, suy hô hấp (ở suy thận)"
+            ],
+            "antidote": "Calcium gluconate hoặc calcium chloride IV (đối kháng magie)",
+            "treatment": [
+                "Ngừng thuốc",
+                "Bù dịch nếu tiêu chảy nhiều",
+                "Điều trị tăng magie máu: calcium gluconate 1-3g IV chậm",
+                "Lọc máu nếu tăng magie máu nặng ở suy thận"
+            ],
+            "monitoring": "Magie máu, ECG, dấu hiệu sinh tồn, chức năng thận"
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "agent": "Calcium gluconate hoặc calcium chloride IV",
+                    "dose": "1-3g IV chậm",
+                    "mechanism": "Đối kháng tác dụng của magie",
+                    "notes": "Điều trị tăng magie máu nặng"
+                }
+            ]
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không với thức ăn",
+                "timing": "Laxative: uống buổi tối hoặc chia 2 lần/ngày. Antacid: sau bữa ăn và khi có triệu chứng. Lắc kỹ hỗn dịch trước khi dùng."
+            }
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["renal"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Magnesium (if renal impairment)"]
+        },
+        "guideline_tags": [
+            "ACG 2013 Constipation Guidelines",
+            "FDA - Laxative safety"
+        ],
+        "references": {
+            "primary_sources": [
+                "UpToDate - Magnesium hydroxide: Drug information",
+                "ACG 2013 Constipation Guidelines",
+                "FDA Drug Information"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High - Guideline-recommended osmotic laxative"
+        },
+        "cost_estimate": {
+            "generic": "Thấp",
+            "brand": "Thấp",
+            "notes": "OTC medication, giá rất rẻ"
+        }
+    }
 }
 
 __all__ = ["LAXATIVES_DRUGS"]

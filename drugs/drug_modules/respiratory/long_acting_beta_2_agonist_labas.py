@@ -416,18 +416,47 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
             'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',
             'GOLD Guidelines 2024 - COPD Management'
         ]},
-    "Salmeterol": {'group': 'Respiratory - Long-acting Beta-2 Agonist (LABA)',
+    "Salmeterol": {
+        'group': 'Respiratory - Long-acting Beta-2 Agonist (LABA)',
         "pregnancy": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ",
-        'vietnamese_name': 'Salmeterol, Serevent', 'administration': [
-        'Inhalation'],
+        'vietnamese_name': 'Salmeterol, Serevent, Salmeterol Stada',
+        'administration': ['Inhalation'],
         'indications': [
-        'Hen phế quản (phòng ngừa, phải dùng với ICS)', 'COPD (phòng ngừa)',
-        'Co thắt phế quản ban đêm', 'Dự phòng co thắt do vận động'],
-        'contraindications': ['Dị ứng', 'Nhịp tim nhanh nặng',
-        'Hen phế quản cấp (không dùng đơn độc)'],
-        'dosage': {'adult_inhalation':
-        '50mcg x 2 lần/ngày (sáng và tối)', 'notes':
-        'PHẢI dùng kết hợp với ICS. Không dùng đơn độc cho hen. Tác dụng kéo dài 12 giờ'
+            'Hen phế quản (phòng ngừa, phải dùng với ICS)',
+            'COPD (phòng ngừa)',
+            'Co thắt phế quản ban đêm',
+            'Dự phòng co thắt do vận động (exercise-induced bronchospasm)'
+        ],
+        'contraindications': {
+            'tuyệt_đối': [
+                'Dị ứng với salmeterol hoặc các thành phần khác',
+                'Nhịp tim nhanh nặng không kiểm soát (>120 bpm)',
+                'Rối loạn nhịp tim nặng (rung nhĩ, rung thất không kiểm soát)',
+                'Hen phế quản cấp (không dùng đơn độc, không dùng để cắt cơn)'
+            ],
+            'tương_đối': [
+                'Bệnh tim mạch (suy tim, bệnh mạch vành) - thận trọng, theo dõi chặt chẽ',
+                'Tăng huyết áp không kiểm soát - có thể tăng huyết áp',
+                'Loạn nhịp tim nhẹ - có thể làm nặng',
+                'Đái tháo đường - có thể tăng đường huyết',
+                'Hạ kali máu - có thể làm nặng',
+                'Cường giáp - tăng nhạy cảm với catecholamine',
+                'Dùng với digoxin - tăng nguy cơ loạn nhịp',
+                'Dùng với theophylline - tăng tác dụng phụ'
+            ]
+        },
+        'dosage': {
+            'adult_inhalation': '50mcg x 2 lần/ngày (sáng và tối)',
+            'pediatric': {
+                '4_11_years': '50mcg x 2 lần/ngày (sáng và tối)',
+                'under_4_years': 'Chưa được nghiên cứu, không khuyến cáo',
+                'notes': 'FDA-approved cho trẻ em ≥4 tuổi. PHẢI dùng kết hợp với ICS cho hen.'
+            },
+            'geriatric': {
+                'dosing': '50mcg x 2 lần/ngày (không cần điều chỉnh liều)',
+                'notes': 'Không cần điều chỉnh liều, nhưng thận trọng ở bệnh nhân tim mạch'
+            },
+            'notes': 'PHẢI dùng kết hợp với ICS. Không dùng đơn độc cho hen. Tác dụng kéo dài 12 giờ. Dùng đều đặn 2 lần/ngày, không phải khi cần.'
         },
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
         'under_30': 'Không đổi'},
@@ -452,10 +481,18 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'Rửa miệng sau khi dùng dạng hít để giảm kích ứng và nấm miệng',
         'Nếu cần dùng SABA thường xuyên → cần đánh giá lại điều trị và tăng ICS',
         'Nếu không đáp ứng → cần đánh giá lại chẩn đoán và điều trị'],
-        'pharmacokinetics': {'half_life': '5.5 giờ (dài hơn salbutamol)',
-        'onset': '15-30 phút (chậm hơn SABA)', 'duration': '12 giờ (dài)',
-        'protein_binding': '96%', 'clearance':
-        'Gan (chuyển hóa qua CYP3A4), thận (thải trừ)'},
+        'pharmacokinetics': {
+            'half_life': '5.5 giờ (dài hơn salbutamol)',
+            'onset': '15-30 phút (chậm hơn SABA - không dùng để cắt cơn)',
+            'duration': '12 giờ (dài)',
+            'bioavailability': 'Không rõ (dạng hít tác dụng tại chỗ)',
+            'protein_binding': '96%',
+            'volume_of_distribution': '~2 L/kg',
+            'metabolism': 'Gan (chuyển hóa qua CYP3A4), chuyển hóa mạnh',
+            'clearance': 'Gan (chuyển hóa qua CYP3A4), thận (thải trừ). Tổng clearance: ~7.2 L/h/kg',
+            'absorption': 'Hấp thu nhanh sau khi hít. Thời gian đạt nồng độ đỉnh (Tmax): 5-15 phút',
+            'food_effect': 'Không ảnh hưởng đáng kể đến hấp thu dạng hít'
+        },
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh nhiệt độ cao, tránh ánh sáng trực tiếp. Không làm lạnh. Kiểm tra hạn sử dụng định kỳ.'
         , 'black_box_warnings':
@@ -491,20 +528,24 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'effect': 'Tăng nhịp tim, tăng huyết áp (nhẹ)', 'management':
         'Theo dõi nhịp tim và huyết áp. Không cần điều chỉnh liều thường quy.'}
         ]},
-        'contraindications': {'tuyệt_đối': [
-        'Dị ứng với salmeterol hoặc các thành phần khác',
-        'Nhịp tim nhanh nặng không kiểm soát (>120 bpm)',
-        'Rối loạn nhịp tim nặng (rung nhĩ, rung thất không kiểm soát)',
-        'Hen phế quản cấp (không dùng đơn độc, không dùng để cắt cơn)'],
-        'tương_đối': [
-        'Bệnh tim mạch (suy tim, bệnh mạch vành) - thận trọng, theo dõi chặt chẽ',
-        'Tăng huyết áp không kiểm soát - có thể tăng huyết áp',
-        'Loạn nhịp tim nhẹ - có thể làm nặng',
-        'Đái tháo đường - có thể tăng đường huyết',
-        'Hạ kali máu - có thể làm nặng',
-        'Cường giáp - tăng nhạy cảm với catecholamine',
-        'Dùng với digoxin - tăng nguy cơ loạn nhịp',
-        'Dùng với theophylline - tăng tác dụng phụ']},
+        'contraindications_detail': {
+            'tuyệt_đối': [
+                'Dị ứng với salmeterol hoặc các thành phần khác',
+                'Nhịp tim nhanh nặng không kiểm soát (>120 bpm)',
+                'Rối loạn nhịp tim nặng (rung nhĩ, rung thất không kiểm soát)',
+                'Hen phế quản cấp (không dùng đơn độc, không dùng để cắt cơn)'
+            ],
+            'tương_đối': [
+                'Bệnh tim mạch (suy tim, bệnh mạch vành) - thận trọng, theo dõi chặt chẽ',
+                'Tăng huyết áp không kiểm soát - có thể tăng huyết áp',
+                'Loạn nhịp tim nhẹ - có thể làm nặng',
+                'Đái tháo đường - có thể tăng đường huyết',
+                'Hạ kali máu - có thể làm nặng',
+                'Cường giáp - tăng nhạy cảm với catecholamine',
+                'Dùng với digoxin - tăng nguy cơ loạn nhịp',
+                'Dùng với theophylline - tăng tác dụng phụ'
+            ]
+        },
         'pregnancy_lactation': {
         'fda_category': 'C', 'pregnancy_details':
         'Salmeterol là thuốc phân loại C. Các nghiên cứu trên động vật cho thấy có thể có tác dụng phụ trên thai nhi, nhưng không có nghiên cứu đầy đủ trên người. Salmeterol được sử dụng trong thai kỳ để điều trị hen và có vẻ an toàn. Hen phế quản không kiểm soát có thể gây nguy hiểm cho cả mẹ và thai nhi (thiếu oxy, suy thai). Salmeterol có thể được dùng khi lợi ích vượt quá nguy cơ, nhưng PHẢI dùng kết hợp với ICS. Dạng hít được ưu tiên để giảm tác dụng toàn thân.'
@@ -583,17 +624,40 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
             'GINA Guidelines 2024 - Asthma Management - LABA must be combined with ICS',
             'AHA/ACC Guidelines - Cardiovascular monitoring with beta-2 agonists'
         ]},
-    "Vilanterol": {'group': 'Respiratory - Long-acting Beta-2 Agonist (LABA)',
+    "Vilanterol": {
+        'group': 'Respiratory - Long-acting Beta-2 Agonist (LABA)',
         "pregnancy": "C - Nguy cơ không thể loại trừ. Thận trọng trong thai kỳ",
-        'vietnamese_name': 'Vilanterol, Breo Ellipta', 'administration': [
-        'Inhalation'],
+        'vietnamese_name': 'Vilanterol, Breo Ellipta (kết hợp với fluticasone furoate)',
+        'administration': ['Inhalation'],
         'indications': [
-        'COPD (phòng ngừa)', 'Hen phế quản (phải dùng với ICS)'],
-        'contraindications': ['Dị ứng', 'Nhịp tim nhanh nặng',
-        'Hen phế quản cấp (không dùng đơn độc)'],
-        'dosage': {'adult_inhalation':
-        '25mcg x 1 lần/ngày', 'notes':
-        'Dùng 1 lần/ngày. Chỉ có dạng fixed-dose combination với fluticasone (Breo Ellipta). Tác dụng kéo dài 24 giờ'
+            'COPD (phòng ngừa) - đơn trị hoặc kết hợp với LAMA',
+            'Hen phế quản (phải dùng với ICS) - chỉ có dạng fixed-dose combination với fluticasone'
+        ],
+        'contraindications': {
+            'tuyệt_đối': [
+                'Dị ứng với vilanterol hoặc fluticasone furoate',
+                'Nhịp tim nhanh nặng không kiểm soát (>120 bpm)',
+                'Hen phế quản cấp (không dùng đơn độc)',
+                'Dùng với ritonavir - chống chỉ định tuyệt đối (tăng nguy cơ ức chế trục HPA, hội chứng Cushing)'
+            ],
+            'tương_đối': [
+                'Bệnh tim mạch - thận trọng, theo dõi chặt chẽ',
+                'Tăng huyết áp không kiểm soát - có thể tăng huyết áp',
+                'Lao phổi - cần điều trị lao trước khi dùng ICS',
+                'Nhiễm nấm, virus, ký sinh trùng hệ thống - thận trọng với ICS',
+                'Loãng xương - thận trọng với ICS dùng lâu dài'
+            ]
+        },
+        'dosage': {
+            'adult_inhalation': 'Vilanterol 25mcg + Fluticasone furoate 100mcg hoặc 200mcg x 1 lần/ngày (Breo Ellipta)',
+            'pediatric': {
+                'notes': 'Chưa được nghiên cứu ở trẻ em <18 tuổi. Không khuyến cáo sử dụng ở trẻ em.'
+            },
+            'geriatric': {
+                'dosing': 'Liều tương tự người lớn (không cần điều chỉnh liều)',
+                'notes': 'Không cần điều chỉnh liều, nhưng thận trọng ở bệnh nhân tim mạch và loãng xương'
+            },
+            'notes': 'Dùng 1 lần/ngày. Chỉ có dạng fixed-dose combination với fluticasone furoate (Breo Ellipta). Tác dụng kéo dài 24 giờ. Dùng đều đặn hàng ngày, không phải khi cần.'
         },
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
         'under_30': 'Không đổi'},
@@ -615,9 +679,17 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'Tránh dùng với beta-blocker (đối kháng tác dụng)',
         'Dùng đều đặn 1 lần/ngày'],
         'pharmacokinetics': {
-        'half_life': '11 giờ', 'onset': '5-15 phút', 'duration': '24 giờ',
-        'protein_binding': '94%', 'clearance':
-        'Gan (chuyển hóa qua CYP3A4), thận (thải trừ)'},
+            'half_life': '11 giờ (vilanterol), 17 giờ (fluticasone furoate)',
+            'onset': '5-15 phút (vilanterol)',
+            'duration': '24 giờ (vilanterol)',
+            'bioavailability': 'Không rõ (dạng hít tác dụng tại chỗ)',
+            'protein_binding': '94% (vilanterol), 99% (fluticasone furoate)',
+            'volume_of_distribution': 'Không rõ',
+            'metabolism': 'Gan - vilanterol chuyển hóa qua CYP3A4, fluticasone furoate chuyển hóa qua CYP3A4',
+            'clearance': 'Gan (chuyển hóa qua CYP3A4), thận (thải trừ). Cả hai đều chuyển hóa qua CYP3A4 nên có tương tác với ritonavir (ức chế CYP3A4).',
+            'absorption': 'Hấp thu nhanh sau khi hít',
+            'food_effect': 'Không ảnh hưởng đáng kể đến hấp thu dạng hít'
+        },
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp.'
         , 'black_box_warnings':
@@ -631,13 +703,23 @@ LONG_ACTING_BETA_2_AGONIST_LABAS_DRUGS = {
         'TRÁNH DÙNG với beta-blocker không chọn lọc.'}],
         'moderate': [],
         'minor': []},
-        'contraindications': {'tuyệt_đối': [
-        'Dị ứng với vilanterol hoặc fluticasone',
-        'Nhịp tim nhanh nặng không kiểm soát',
-        'Dùng với ritonavir - chống chỉ định tuyệt đối'],
-        'tương_đối': [
-        'Bệnh tim mạch - thận trọng', 'Tăng huyết áp không kiểm soát',
-        'Lao phổi - cần điều trị lao trước']},
+        'contraindications_detail': {
+            'tuyệt_đối': [
+                'Dị ứng với vilanterol hoặc fluticasone furoate',
+                'Nhịp tim nhanh nặng không kiểm soát (>120 bpm)',
+                'Dùng với ritonavir - chống chỉ định tuyệt đối (tăng nguy cơ ức chế trục HPA, hội chứng Cushing)',
+                'Hen phế quản cấp (không dùng đơn độc)'
+            ],
+            'tương_đối': [
+                'Bệnh tim mạch - thận trọng, theo dõi chặt chẽ',
+                'Tăng huyết áp không kiểm soát - có thể tăng huyết áp',
+                'Lao phổi - cần điều trị lao trước khi dùng ICS',
+                'Nhiễm nấm, virus, ký sinh trùng hệ thống - thận trọng với ICS',
+                'Loãng xương - thận trọng với ICS dùng lâu dài',
+                'Đái tháo đường - có thể tăng đường huyết (do vilanterol)',
+                'Cường giáp - tăng nhạy cảm với catecholamine'
+            ]
+        },
         'pregnancy_lactation': {
         'fda_category': 'C', 'pregnancy_details':
         'Vilanterol/fluticasone là thuốc phân loại C. Có thể dùng khi lợi ích vượt quá nguy cơ.'

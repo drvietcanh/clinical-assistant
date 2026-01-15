@@ -381,10 +381,15 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
         'Cân nhắc ngừng sau 4-8 tuần nếu không cần thiết (giảm nguy cơ tác dụng phụ)',
         'Một số sản phẩm đã bị thu hồi do NDMA (chất gây ung thư) - kiểm tra nguồn gốc sản phẩm',
         'Không dùng với các thuốc cần acid để hấp thu (ketoconazole, itraconazole, iron salts) - cách 2 giờ'
-        ], 'onset': '1-3 giờ',
-        'duration': '8-12 giờ', 'protein_binding': '15%', 'metabolism':
-        'Gan (chuyển hóa qua CYP450, một phần), thận (thải trừ)', 'clearance':
-        'Gan (chuyển hóa), thận (30-50% thải nguyên dạng)'},
+        ],
+        'pharmacokinetics': {
+            'half_life': '2-3 giờ',
+            'onset': '1-3 giờ',
+            'duration': '8-12 giờ',
+            'protein_binding': '15%',
+            'metabolism': 'Gan (chuyển hóa qua CYP450, một phần), thận (thải trừ)',
+            'clearance': 'Gan (chuyển hóa), thận (30-50% thải nguyên dạng)'
+        },
         'storage':
         'Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Kiểm tra nguồn gốc sản phẩm (một số sản phẩm đã bị thu hồi do NDMA).'
         , 'black_box_warnings':
@@ -438,8 +443,11 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
         'Hầu hết trường hợp tự khỏi'],
         'monitoring':
         'Theo dõi dấu hiệu sinh tồn, triệu chứng thần kinh'},
-        'reversal_agents':
-        None, 'administration_instructions': {'oral': {'with_food':
+        'reversal_agents': {
+            'available': False,
+            'agents': []
+        },
+        'administration_instructions': {'oral': {'with_food':
         'Uống với thức ăn hoặc trước bữa ăn (tăng hiệu quả)', 'timing':
         'Uống 2 lần/ngày (sáng và tối) hoặc 1 lần/ngày vào buổi tối. Có thể uống với hoặc không với thức ăn.'
         },
@@ -460,6 +468,170 @@ H2_RECEPTOR_ANTAGONISTS_DRUGS = {
         'last_updated': '2024-12-19', 'evidence_level':
         'High - FDA approved, multiple RCTs (Note: Many products recalled due to NDMA contamination)'
         }
+    },
+    
+    "Nizatidine": {
+        "group": "Gastrointestinal - H2 Receptor Antagonist",
+        "vietnamese_name": "Nizatidine, Axid",
+        "brand_names": {
+            "common": ["Axid"],
+            "vietnam": ["Nizatidine 150mg", "Axid"]
+        },
+        "administration": ["PO"],
+        "indications": [
+            "Loét dạ dày tá tràng",
+            "GERD",
+            "Phòng ngừa loét do stress"
+        ],
+        "contraindications": [
+            "Dị ứng nizatidine hoặc H2 blocker khác",
+            "Suy thận nặng (CrCl <20 ml/phút)"
+        ],
+        "dosage": {
+            "adult_po_ulcer": "150mg x 2 lần/ngày hoặc 300mg x 1 lần/ngày (buổi tối)",
+            "adult_po_gerd": "150mg x 2 lần/ngày",
+            "adult_po_maintenance": "150mg x 1 lần/ngày (buổi tối)",
+            "pediatric_dosing": "Không khuyến cáo cho trẻ em <12 tuổi",
+            "geriatric_dosing": "Thận trọng, có thể cần giảm liều ở người già",
+            "notes": "Tương tự ranitidine và famotidine về hiệu quả. Ít tương tác CYP450 hơn cimetidine và ranitidine. Chủ yếu thải trừ qua thận."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Giảm liều 50% (150mg x 1 lần/ngày)",
+            "under_30": "Giảm liều 75% (150mg x 1 lần cách ngày) hoặc tránh dùng",
+            "dialysis": "Giảm liều đáng kể hoặc tránh dùng",
+            "notes": "Nizatidine thải trừ chủ yếu qua thận (60-70% thải nguyên dạng). Suy thận làm giảm thải trừ, tăng nồng độ thuốc."
+        },
+        "side_effects": [
+            "Nhức đầu",
+            "Rối loạn tiêu hóa (buồn nôn, tiêu chảy)",
+            "Chóng mặt",
+            "Tăng men gan (hiếm)",
+            "Phát ban (hiếm)"
+        ],
+        "interactions": [
+            "Ít tương tác CYP450 hơn cimetidine và ranitidine",
+            "Ketoconazole, Itraconazole: giảm hấp thu (cần môi trường acid) - cách 2 giờ",
+            "Iron salts: giảm hấp thu - cách 2 giờ"
+        ],
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người",
+        "mechanism_of_action": "H2 receptor antagonist. Tương tự ranitidine và famotidine về hiệu quả và cơ chế tác dụng. Ưu điểm: ít tương tác CYP450 hơn cimetidine và ranitidine. Thải trừ chủ yếu qua thận (60-70% thải nguyên dạng).",
+        "monitoring": [
+            "Đáp ứng lâm sàng (giảm đau, triệu chứng GERD)",
+            "Chức năng thận (creatinine, eGFR) - đặc biệt quan trọng do thải trừ chủ yếu qua thận",
+            "Chức năng gan (transaminase) - hiếm tăng men gan"
+        ],
+        "precautions": [
+            "Uống với thức ăn hoặc trước bữa ăn",
+            "Thận trọng ở suy thận - giảm liều đáng kể",
+            "Ít tương tác CYP450 hơn các H2 blocker khác",
+            "Không dùng với các thuốc cần acid để hấp thu (ketoconazole, itraconazole, iron salts) - cách 2 giờ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "1-2 giờ (ngắn)",
+            "onset": "1-3 giờ",
+            "duration": "8-12 giờ",
+            "protein_binding": "35%",
+            "metabolism": "Gan (một phần), thận (thải trừ chủ yếu)",
+            "clearance": "Thận (60-70% thải nguyên dạng), gan (chuyển hóa một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": None,
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Ketoconazole, Itraconazole",
+                    "mechanism": "H2 blocker giảm acid dạ dày, giảm hấp thu azole antifungals",
+                    "effect": "Giảm nồng độ azole, giảm hiệu quả điều trị",
+                    "management": "Cách thời gian ít nhất 2 giờ."
+                },
+                {
+                    "drug": "Iron salts",
+                    "mechanism": "H2 blocker giảm acid dạ dày, giảm hấp thu sắt",
+                    "effect": "Giảm hấp thu sắt",
+                    "management": "Cách thời gian ít nhất 2 giờ."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng nizatidine hoặc H2 blocker khác",
+                "Suy thận nặng (CrCl <20 ml/phút) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Suy thận trung bình (CrCl 20-60) - giảm liều đáng kể",
+                "Suy gan nặng - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Nizatidine là FDA category B. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Nizatidine bài tiết vào sữa mẹ ở nồng độ thấp. An toàn khi cho con bú.",
+                "recommendation": "Có thể dùng khi cho con bú."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần chỉnh liều",
+            "moderate": "Không cần chỉnh liều",
+            "severe": "Thận trọng, có thể giảm liều",
+            "notes": "Nizatidine chuyển hóa một phần ở gan. Suy gan nặng có thể làm giảm chuyển hóa."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "H2 blocker ít gây quá liều nghiêm trọng",
+                "Triệu chứng nhẹ: nhức đầu, buồn nôn, chóng mặt"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Hỗ trợ triệu chứng",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Nếu uống trong vòng 1-2 giờ: có thể cân nhắc activated charcoal"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn hoặc trước bữa ăn",
+                "timing": "Uống 2 lần/ngày (sáng và tối) hoặc 1 lần/ngày vào buổi tối."
+            }
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": []
+        },
+        "guideline_tags": [
+            "ACG 2017 GERD Guidelines",
+            "FDA Drug Information"
+        ],
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Nizatidine",
+                "UpToDate - H2-receptor antagonists: Pharmacology and clinical use",
+                "Micromedex - Nizatidine"
+            ],
+            "last_updated": "2025-01-15",
+            "evidence_level": "High - FDA approved, multiple RCTs"
+        },
+        "cost_estimate": {
+            "generic": "Trung bình",
+            "brand": "Trung bình",
+            "notes": "Có generic, giá tương đương các H2 blocker khác"
+        }
+    }
 }
 
 __all__ = ['H2_RECEPTOR_ANTAGONISTS_DRUGS']

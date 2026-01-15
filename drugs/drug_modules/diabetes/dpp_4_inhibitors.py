@@ -21,7 +21,21 @@ DPP_4_INHIBITORS_DRUGS = {
             "adult_normal_renal": "25mg x 1 lần/ngày",
             "adult_moderate_renal": "12.5mg x 1 lần/ngày (CrCl 30-60)",
             "adult_severe_renal": "6.25mg x 1 lần/ngày (CrCl <30)",
-            "notes": "Uống bất kỳ lúc nào. Cần điều chỉnh liều ở suy thận. Ít gây hạ đường huyết."
+            "dm_t2": "25mg x 1 lần/ngày (CrCl >60), 12.5mg x 1 lần/ngày (CrCl 30-60), 6.25mg x 1 lần/ngày (CrCl <30)",
+            "adult_start": "25mg x 1 lần/ngày (CrCl >60)",
+            "adult_usual": "25mg x 1 lần/ngày (CrCl >60)",
+            "adult_max": "25mg/ngày",
+            "elderly": "Không cần điều chỉnh liều đặc biệt, nhưng điều chỉnh theo CrCl.",
+            "renal_adjustment_dosage": {
+                "normal": "25mg x 1 lần/ngày (CrCl >60)",
+                "30_60": "12.5mg x 1 lần/ngày (CrCl 30-60)",
+                "under_30": "6.25mg x 1 lần/ngày (CrCl <30)",
+                "dialysis": "6.25mg x 1 lần/ngày"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống bất kỳ lúc nào, không cần thức ăn",
+            "notes": "Uống bất kỳ lúc nào. Cần điều chỉnh liều ở suy thận. Ít gây hạ đường huyết. Thải trừ chủ yếu qua thận."
         },
         "renal_adjustment": {
             "normal": "25mg/ngày",
@@ -184,7 +198,21 @@ DPP_4_INHIBITORS_DRUGS = {
         "dosage": {
             "adult_standard": "5mg x 1 lần/ngày",
             "adult_renal_impairment": "5mg x 1 lần/ngày (không cần điều chỉnh liều)",
-            "notes": "Uống bất kỳ lúc nào. Không cần điều chỉnh liều ở suy thận (khác với các DPP-4 inhibitors khác). Ít gây hạ đường huyết."
+            "dm_t2": "5mg x 1 lần/ngày (không cần điều chỉnh liều ở suy thận)",
+            "adult_start": "5mg x 1 lần/ngày",
+            "adult_usual": "5mg x 1 lần/ngày",
+            "adult_max": "5mg/ngày",
+            "elderly": "Không cần điều chỉnh liều đặc biệt.",
+            "renal_adjustment_dosage": {
+                "normal": "5mg x 1 lần/ngày",
+                "30_60": "5mg x 1 lần/ngày (không cần điều chỉnh)",
+                "under_30": "5mg x 1 lần/ngày (không cần điều chỉnh)",
+                "dialysis": "5mg x 1 lần/ngày (không cần điều chỉnh)"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống bất kỳ lúc nào, không cần thức ăn",
+            "notes": "Uống bất kỳ lúc nào. Không cần điều chỉnh liều ở suy thận (khác với các DPP-4 inhibitors khác). Ít gây hạ đường huyết. Thải trừ chủ yếu qua gan."
         },
         "renal_adjustment": {
             "normal": "5mg/ngày",
@@ -345,7 +373,21 @@ DPP_4_INHIBITORS_DRUGS = {
             "adult_normal_renal": "5mg x 1 lần/ngày",
             "adult_moderate_renal": "2.5mg x 1 lần/ngày (CrCl ≤50)",
             "adult_severe_renal": "2.5mg x 1 lần/ngày (CrCl ≤50)",
-            "notes": "Uống bất kỳ lúc nào. Cần điều chỉnh liều ở suy thận. Ít gây hạ đường huyết."
+            "dm_t2": "5mg x 1 lần/ngày (CrCl >50), 2.5mg x 1 lần/ngày (CrCl ≤50)",
+            "adult_start": "5mg x 1 lần/ngày (CrCl >50)",
+            "adult_usual": "5mg x 1 lần/ngày (CrCl >50), 2.5mg x 1 lần/ngày (CrCl ≤50)",
+            "adult_max": "5mg/ngày",
+            "elderly": "Không cần điều chỉnh liều đặc biệt, nhưng điều chỉnh theo CrCl.",
+            "renal_adjustment_dosage": {
+                "normal": "5mg x 1 lần/ngày (CrCl >50)",
+                "30_60": "2.5mg x 1 lần/ngày (CrCl ≤50)",
+                "under_30": "2.5mg x 1 lần/ngày (CrCl ≤50)",
+                "dialysis": "2.5mg x 1 lần/ngày"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống bất kỳ lúc nào, không cần thức ăn",
+            "notes": "Uống bất kỳ lúc nào. Cần điều chỉnh liều ở suy thận (CrCl ≤50). Ít gây hạ đường huyết. Thải trừ chủ yếu qua thận."
         },
         "renal_adjustment": {
             "normal": "5mg/ngày",

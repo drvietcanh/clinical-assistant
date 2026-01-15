@@ -1,204 +1,207 @@
 {
-  "total_drugs": 722,
-  "analysis_date": "2026-01-13T20:46:30.677117",
+  "total_drugs": 761,
+  "analysis_date": "2026-01-14T23:36:02.296736",
   "field_statistics": {
     "group": {
-      "has_content": 714,
-      "missing": 8,
-      "empty": 7,
-      "has_content_pct": 98.89196675900277,
-      "missing_pct": 1.10803324099723,
-      "empty_pct": 0.9695290858725761
+      "has_content": 761,
+      "missing": 0,
+      "empty": 0,
+      "has_content_pct": 100.0,
+      "missing_pct": 0.0,
+      "empty_pct": 0.0
     },
     "vietnamese_name": {
-      "has_content": 714,
-      "missing": 8,
-      "empty": 7,
-      "has_content_pct": 98.89196675900277,
-      "missing_pct": 1.10803324099723,
-      "empty_pct": 0.9695290858725761
+      "has_content": 761,
+      "missing": 0,
+      "empty": 0,
+      "has_content_pct": 100.0,
+      "missing_pct": 0.0,
+      "empty_pct": 0.0
     },
     "administration": {
-      "has_content": 714,
-      "missing": 8,
-      "empty": 7,
-      "has_content_pct": 98.89196675900277,
-      "missing_pct": 1.10803324099723,
-      "empty_pct": 0.9695290858725761
+      "has_content": 761,
+      "missing": 0,
+      "empty": 0,
+      "has_content_pct": 100.0,
+      "missing_pct": 0.0,
+      "empty_pct": 0.0
     },
     "indications": {
-      "has_content": 714,
-      "missing": 8,
-      "empty": 7,
-      "has_content_pct": 98.89196675900277,
-      "missing_pct": 1.10803324099723,
-      "empty_pct": 0.9695290858725761
+      "has_content": 761,
+      "missing": 0,
+      "empty": 0,
+      "has_content_pct": 100.0,
+      "missing_pct": 0.0,
+      "empty_pct": 0.0
     },
     "dosage": {
-      "has_content": 713,
-      "missing": 9,
-      "empty": 7,
-      "has_content_pct": 98.75346260387812,
-      "missing_pct": 1.2465373961218837,
-      "empty_pct": 0.9695290858725761
+      "has_content": 760,
+      "missing": 1,
+      "empty": 0,
+      "has_content_pct": 99.86859395532196,
+      "missing_pct": 0.1314060446780552,
+      "empty_pct": 0.0
     },
     "side_effects": {
-      "has_content": 700,
-      "missing": 10,
-      "empty": 19,
-      "has_content_pct": 96.95290858725761,
-      "missing_pct": 1.3850415512465373,
-      "empty_pct": 2.631578947368421
+      "has_content": 747,
+      "missing": 1,
+      "empty": 13,
+      "has_content_pct": 98.16031537450722,
+      "missing_pct": 0.1314060446780552,
+      "empty_pct": 1.7082785808147174
     },
     "contraindications": {
-      "has_content": 670,
-      "missing": 19,
-      "empty": 40,
-      "has_content_pct": 92.797783933518,
-      "missing_pct": 2.631578947368421,
-      "empty_pct": 5.540166204986149
+      "has_content": 718,
+      "missing": 6,
+      "empty": 37,
+      "has_content_pct": 94.34954007884363,
+      "missing_pct": 0.7884362680683311,
+      "empty_pct": 4.862023653088042
     },
     "interactions": {
-      "has_content": 657,
-      "missing": 27,
-      "empty": 45,
-      "has_content_pct": 90.99722991689751,
-      "missing_pct": 3.739612188365651,
-      "empty_pct": 6.232686980609419
+      "has_content": 706,
+      "missing": 13,
+      "empty": 42,
+      "has_content_pct": 92.77266754270697,
+      "missing_pct": 1.7082785808147174,
+      "empty_pct": 5.519053876478318
     },
     "pregnancy": {
-      "has_content": 605,
-      "missing": 73,
-      "empty": 51,
-      "has_content_pct": 83.79501385041551,
-      "missing_pct": 10.110803324099724,
-      "empty_pct": 7.063711911357341
+      "has_content": 741,
+      "missing": 6,
+      "empty": 14,
+      "has_content_pct": 97.3718791064389,
+      "missing_pct": 0.7884362680683311,
+      "empty_pct": 1.8396846254927726
     },
     "mechanism_of_action": {
-      "has_content": 682,
-      "missing": 7,
-      "empty": 40,
-      "has_content_pct": 94.45983379501385,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 5.540166204986149
+      "has_content": 731,
+      "missing": 0,
+      "empty": 30,
+      "has_content_pct": 96.05781865965835,
+      "missing_pct": 0.0,
+      "empty_pct": 3.942181340341656
     },
     "monitoring": {
-      "has_content": 687,
-      "missing": 7,
-      "empty": 35,
-      "has_content_pct": 95.15235457063712,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 4.847645429362881
+      "has_content": 737,
+      "missing": 0,
+      "empty": 24,
+      "has_content_pct": 96.84625492772668,
+      "missing_pct": 0.0,
+      "empty_pct": 3.1537450722733245
     },
     "precautions": {
-      "has_content": 657,
-      "missing": 7,
-      "empty": 65,
-      "has_content_pct": 90.99722991689751,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 9.002770083102494
+      "has_content": 711,
+      "missing": 0,
+      "empty": 50,
+      "has_content_pct": 93.42969776609723,
+      "missing_pct": 0.0,
+      "empty_pct": 6.57030223390276
     },
     "pharmacokinetics": {
-      "has_content": 635,
-      "missing": 7,
-      "empty": 87,
-      "has_content_pct": 87.95013850415513,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 12.049861495844876
+      "has_content": 698,
+      "missing": 0,
+      "empty": 63,
+      "has_content_pct": 91.72141918528253,
+      "missing_pct": 0.0,
+      "empty_pct": 8.278580814717477
     },
     "storage": {
-      "has_content": 652,
-      "missing": 7,
-      "empty": 70,
-      "has_content_pct": 90.30470914127424,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 9.695290858725762
+      "has_content": 712,
+      "missing": 0,
+      "empty": 49,
+      "has_content_pct": 93.5611038107753,
+      "missing_pct": 0.0,
+      "empty_pct": 6.438896189224705
     },
     "black_box_warnings": {
-      "has_content": 560,
-      "missing": 7,
-      "empty": 162,
-      "has_content_pct": 77.5623268698061,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 22.437673130193904
+      "has_content": 607,
+      "missing": 0,
+      "empty": 154,
+      "has_content_pct": 79.7634691195795,
+      "missing_pct": 0.0,
+      "empty_pct": 20.2365308804205
     },
     "drug_interactions": {
-      "has_content": 565,
-      "missing": 7,
-      "empty": 157,
-      "has_content_pct": 78.25484764542936,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 21.74515235457064
+      "has_content": 613,
+      "missing": 0,
+      "empty": 148,
+      "has_content_pct": 80.55190538764782,
+      "missing_pct": 0.0,
+      "empty_pct": 19.44809461235217
     },
     "pregnancy_lactation": {
-      "has_content": 675,
-      "missing": 7,
-      "empty": 47,
-      "has_content_pct": 93.49030470914127,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 6.509695290858726
+      "has_content": 735,
+      "missing": 0,
+      "empty": 26,
+      "has_content_pct": 96.58344283837057,
+      "missing_pct": 0.0,
+      "empty_pct": 3.416557161629435
     },
     "hepatic_adjustment": {
-      "has_content": 625,
-      "missing": 7,
-      "empty": 97,
-      "has_content_pct": 86.56509695290858,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 13.434903047091412
+      "has_content": 689,
+      "missing": 0,
+      "empty": 72,
+      "has_content_pct": 90.53876478318003,
+      "missing_pct": 0.0,
+      "empty_pct": 9.461235216819974
     },
     "overdose_management": {
-      "has_content": 626,
-      "missing": 7,
-      "empty": 96,
-      "has_content_pct": 86.70360110803324,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 13.29639889196676
+      "has_content": 691,
+      "missing": 0,
+      "empty": 70,
+      "has_content_pct": 90.80157687253615,
+      "missing_pct": 0.0,
+      "empty_pct": 9.198423127463863
     },
     "reversal_agents": {
-      "has_content": 314,
-      "missing": 7,
-      "empty": 408,
-      "has_content_pct": 43.49030470914128,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 56.50969529085873
+      "has_content": 325,
+      "missing": 0,
+      "empty": 436,
+      "has_content_pct": 42.70696452036793,
+      "missing_pct": 0.0,
+      "empty_pct": 57.29303547963206
     },
     "administration_instructions": {
-      "has_content": 642,
-      "missing": 7,
-      "empty": 80,
-      "has_content_pct": 88.9196675900277,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 11.080332409972298
+      "has_content": 707,
+      "missing": 0,
+      "empty": 54,
+      "has_content_pct": 92.90407358738501,
+      "missing_pct": 0.0,
+      "empty_pct": 7.095926412614981
     },
     "references": {
-      "has_content": 638,
-      "missing": 42,
-      "empty": 49,
-      "has_content_pct": 88.36565096952909,
-      "missing_pct": 5.8171745152354575,
-      "empty_pct": 6.786703601108034
+      "has_content": 701,
+      "missing": 19,
+      "empty": 41,
+      "has_content_pct": 92.11563731931669,
+      "missing_pct": 2.4967148488830486,
+      "empty_pct": 5.387647831800263
     },
     "renal_adjustment": {
-      "has_content": 652,
-      "missing": 7,
-      "empty": 70,
-      "has_content_pct": 90.30470914127424,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 9.695290858725762
+      "has_content": 700,
+      "missing": 0,
+      "empty": 61,
+      "has_content_pct": 91.98423127463863,
+      "missing_pct": 0.0,
+      "empty_pct": 8.015768725361367
     },
     "contraindications_detail": {
-      "has_content": 447,
-      "missing": 7,
-      "empty": 275,
-      "has_content_pct": 61.911357340720215,
-      "missing_pct": 0.9695290858725761,
-      "empty_pct": 38.088642659279785
+      "has_content": 495,
+      "missing": 0,
+      "empty": 266,
+      "has_content_pct": 65.04599211563732,
+      "missing_pct": 0.0,
+      "empty_pct": 34.95400788436268
     }
   },
   "drugs_by_completeness": {
     "90": [
       "Clonidine",
       "Doxazosin",
+      "Prazosin",
+      "Terazosin",
+      "Aliskiren",
       "Finerenone",
       "Methyldopa",
       "Sacubitril-valsartan",
@@ -206,18 +209,23 @@
       "Vericiguat",
       "Hydralazine",
       "Isosorbide mononitrate",
+      "Minoxidil",
       "Nesiritide",
       "Nitroglycerin",
       "Benazepril",
       "Captopril",
+      "Fosinopril",
+      "Moexipril",
+      "Quinapril",
+      "Trandolapril",
       "Azilsartan medoxomil",
       "Olmesartan",
+      "Eprosartan",
       "Betaxolol",
       "Nebivolol",
       "Timolol",
       "Nadolol",
       "Rosuvastatin",
-      "Bempedoic acid",
       "Ezetimibe",
       "Adenosine",
       "Amiodarone",
@@ -231,6 +239,8 @@
       "Clevidipine",
       "Nicardipine",
       "Nisoldipine",
+      "Diltiazem",
+      "Verapamil",
       "Chlorthalidone",
       "Eplerenone",
       "Furosemide",
@@ -253,6 +263,27 @@
       "Amlodipine/Valsartan",
       "Lisinopril/Hydrochlorothiazide",
       "Losartan/Hydrochlorothiazide",
+      "Enalapril/Hydrochlorothiazide",
+      "Valsartan/Hydrochlorothiazide",
+      "Benazepril/Hydrochlorothiazide",
+      "Ramipril/Hydrochlorothiazide",
+      "Perindopril/Amlodipine",
+      "Telmisartan/Hydrochlorothiazide",
+      "Irbesartan/Hydrochlorothiazide",
+      "Candesartan/Hydrochlorothiazide",
+      "Olmesartan/Hydrochlorothiazide",
+      "Losartan/Amlodipine",
+      "Telmisartan/Amlodipine",
+      "Amlodipine/Indapamide",
+      "Perindopril/Indapamide",
+      "Benazepril/Amlodipine",
+      "Olmesartan/Amlodipine/Hydrochlorothiazide",
+      "Valsartan/Amlodipine/Hydrochlorothiazide",
+      "Perindopril/Amlodipine/Indapamide",
+      "Amlodipine/Atorvastatin",
+      "Simvastatin/Ezetimibe",
+      "Rosuvastatin/Ezetimibe",
+      "Bempedoic acid/Ezetimibe",
       "Ticlopidine",
       "High-intensity statin (đột quỵ/TIA)",
       "Enalaprilat",
@@ -262,55 +293,63 @@
       "Saxagliptin",
       "Sitagliptin",
       "Vildagliptin",
-      "Insulin",
-      "Gliclazide",
+      "Empagliflozin",
       "Pioglitazone",
       "Rosiglitazone",
       "Nateglinide",
       "Repaglinide",
       "Acarbose",
       "Miglitol",
+      "Semaglutide",
+      "Exenatide",
       "Metformin/Dapagliflozin",
       "Metformin/Empagliflozin",
       "Metformin/Sitagliptin",
       "Teplizumab",
-      "Bismuth subsalicylate",
       "Famotidine",
+      "Ranitidine",
+      "Nizatidine",
       "Misoprostol",
-      "Sucralfate",
-      "Pantoprazole",
+      "Esomeprazole",
+      "Lansoprazole",
       "Dexlansoprazole",
       "Ilaprazole",
-      "Domperidone",
-      "Ondansetron",
+      "Granisetron",
+      "Palonosetron",
       "Tofacitinib",
       "Upadacitinib",
       "Lactulose",
       "Polyethylene glycol 3350",
+      "Docusate",
       "Hyoscine butylbromide",
       "Mebeverine",
       "Simethicone",
+      "Alosetron",
+      "Lubiprostone",
+      "Linaclotide",
+      "Pancreatin",
+      "Pancrelipase",
+      "Prucalopride",
+      "Alginate",
       "Etoricoxib",
       "Indomethacin",
       "Ketoprofen",
       "Meloxicam",
       "Naproxen",
       "Nimesulide",
-      "Hydrocodone",
       "Tapentadol",
       "Morphine",
       "Oxycodone",
       "Remifentanil",
       "Sufentanil",
       "Alfentanil",
-      "Codeine",
       "Aspirin/Carisoprodol",
       "Paracetamol/Carisoprodol",
       "Paracetamol/Chlorzoxazone",
       "Paracetamol/Methocarbamol",
       "Paracetamol/Orphenadrine",
       "Cromolyn",
-      "Montelukast",
+      "Nedocromil",
       "Zafirlukast",
       "Formoterol",
       "Indacaterol",
@@ -338,16 +377,11 @@
       "Lacosamide",
       "Perampanel",
       "Primidone",
-      "Topiramate",
       "Zonisamide",
-      "Fluoxetine",
       "Gabapentin",
       "Aducanumab",
       "Donanemab",
-      "Donepezil",
       "Lecanemab",
-      "Memantine",
-      "Rivastigmine",
       "Baclofen",
       "Carisoprodol",
       "Cyclobenzaprine",
@@ -415,7 +449,6 @@
       "Tenecteplase",
       "Calcium",
       "Folic acid",
-      "Iron",
       "Vitamin B12",
       "Vitamin D",
       "Levocetirizine",
@@ -428,14 +461,11 @@
       "Meropenem",
       "Penicillin G",
       "Piperacillin-tazobactam",
-      "Amoxicillin-clavulanate",
       "Nafcillin",
       "Oxacillin",
       "Cefazolin",
       "Cefepime",
       "Ceftriaxone",
-      "Azithromycin",
-      "Clarithromycin",
       "Levofloxacin",
       "Plazomicin",
       "Daptomycin",
@@ -512,6 +542,7 @@
       "Rifapentine",
       "Streptomycin",
       "Fludrocortisone",
+      "Betamethasone",
       "Testosterone",
       "Ibandronate",
       "Risedronate",
@@ -522,7 +553,7 @@
       "Raloxifene",
       "Romosozumab",
       "Teriparatide",
-      "Flumazenil",
+      "Desmopressin",
       "Naloxone",
       "Naltrexone",
       "Epinephrine",
@@ -580,6 +611,7 @@
       "Calcium (elemental)",
       "Folic Acid",
       "Azathioprine",
+      "Mycophenolate",
       "Tacrolimus",
       "Etanercept",
       "Adalimumab",
@@ -613,15 +645,22 @@
       "Ustekinumab",
       "Vedolizumab",
       "Caplacizumab",
-      "Efgartigimod"
+      "Efgartigimod",
+      "Zoledronic Acid",
+      "Sirolimus",
+      "Everolimus"
     ],
     "100": [
       "Digoxin",
       "Ivabradine",
       "Labetalol",
       "Nitroprusside",
+      "Enalapril",
+      "Lisinopril",
       "Perindopril",
       "Ramipril",
+      "Losartan",
+      "Telmisartan",
       "Acebutolol",
       "Atenolol",
       "Bisoprolol",
@@ -629,6 +668,7 @@
       "Carvedilol",
       "Propranolol",
       "Atorvastatin",
+      "Bempedoic acid",
       "Disopyramide",
       "Dofetilide",
       "Ibutilide",
@@ -641,6 +681,11 @@
       "Fondaparinux",
       "Rivaroxaban",
       "Warfarin",
+      "Atenolol/Chlorthalidone",
+      "Metoprolol/Hydrochlorothiazide",
+      "Bisoprolol/Hydrochlorothiazide",
+      "Metoprolol/Amlodipine",
+      "Insulin",
       "Insulin Aspart",
       "Insulin Degludec",
       "Insulin Detemir",
@@ -650,14 +695,23 @@
       "Insulin NPH",
       "Insulin Regular",
       "Glibenclamide",
+      "Gliclazide",
       "Glimepiride",
+      "Liraglutide",
       "Aluminum hydroxide/Magnesium hydroxide",
       "Calcium carbonate",
+      "Bismuth subsalicylate",
       "Cimetidine",
+      "Sucralfate",
+      "Omeprazole",
+      "Pantoprazole",
       "Rabeprazole",
+      "Domperidone",
+      "Ondansetron",
       "Baricitinib",
       "Bisacodyl",
       "Senna (sennosides)",
+      "Magnesium hydroxide",
       "Trimebutine",
       "Mesalazine",
       "Celecoxib",
@@ -665,12 +719,15 @@
       "Ibuprofen",
       "Ketorolac",
       "Buprenorphine",
+      "Hydrocodone",
       "Fentanyl",
       "Hydromorphone",
       "Meperidine",
       "Methadone",
+      "Codeine",
       "Paracetamol",
       "Lasmiditan",
+      "Montelukast",
       "Salbutamol",
       "Aminophylline",
       "Theophylline",
@@ -679,8 +736,13 @@
       "Levetiracetam",
       "Phenobarbital",
       "Phenytoin",
+      "Topiramate",
       "Valproate",
+      "Fluoxetine",
       "Pregabalin",
+      "Donepezil",
+      "Memantine",
+      "Rivastigmine",
       "Clonazepam",
       "Diazepam",
       "Lorazepam",
@@ -691,12 +753,16 @@
       "Rimegepant",
       "Ubrogepant",
       "Heparin",
+      "Iron",
       "Midazolam (IV/ICU)",
       "Thiopental",
       "Cefiderocol",
       "Amoxicillin",
+      "Amoxicillin-clavulanate",
       "Ampicillin",
       "Ampicillin-sulbactam",
+      "Azithromycin",
+      "Clarithromycin",
       "Erythromycin",
       "Clindamycin",
       "Trimethoprim-sulfamethoxazole",
@@ -717,6 +783,7 @@
       "Ciprofloxacin",
       "Metronidazole",
       "Isoniazid",
+      "Flumazenil",
       "Milrinone",
       "Phenylephrine",
       "Avanafil",
@@ -735,85 +802,35 @@
       "Nepafenac eye drops",
       "Natalizumab"
     ],
-    "50": [
-      "Enalapril",
-      "Telmisartan",
-      "Valsartan",
-      "Pravastatin",
-      "Dapagliflozin",
-      "Canagliflozin",
-      "Dulaglutide",
-      "Exenatide",
-      "Ranitidine",
-      "Ipratropium",
-      "Etomidate",
-      "Ketamine",
-      "Propofol",
-      "Cisatracurium",
-      "Rocuronium",
-      "Succinylcholine",
-      "Sodium Chloride 0.9%",
-      "Ringer Lactate",
-      "Albumin (Human)",
-      "HES 130/0.4",
-      "Methotrexate",
-      "VAT (Tetanus Vaccine)",
-      "Verorab (Rabies Vaccine)",
-      "Influenza Vaccine",
-      "Hepatitis B Vaccine",
-      "SAT (Tetanus Antitoxin)",
-      "SAR (Rabies Antiserum)",
-      "Snake Antivenom (Luc Tre)",
-      "Pyridoxine (Vitamin B6)"
-    ],
-    "60": [
-      "Lisinopril",
-      "Losartan",
-      "Simvastatin",
-      "Empagliflozin",
-      "Semaglutide",
-      "Doxycycline",
-      "Minocycline",
-      "Tetracycline",
-      "Prednisone",
-      "Carboprost",
-      "Dinoprostone"
-    ],
     "70": [
       "Candesartan",
       "Irbesartan",
-      "Diltiazem",
-      "Verapamil",
+      "Simvastatin",
       "Bumetanide",
       "Torsemide",
-      "Liraglutide",
       "Metformin/Glibenclamide",
       "Metformin/Pioglitazone",
       "Levothyroxine",
-      "Methimazole",
       "Propylthiouracil",
-      "Desmopressin",
       "Vasopressin",
       "Methylergonovine",
-      "Cyclosporine",
-      "Sirolimus",
-      "Everolimus"
+      "Cyclosporine"
     ],
     "80": [
+      "Valsartan",
       "Lacidipine",
       "Aspirin",
       "Alirocumab",
       "Evolocumab",
       "Inclisiran",
       "Dipyridamole",
+      "Dapagliflozin",
+      "Dulaglutide",
       "Bromocriptine",
       "Colesevelam",
-      "Omeprazole",
-      "Esomeprazole",
-      "Lansoprazole",
+      "Racecadotril",
       "Tegoprazan",
       "Vonoprazan",
-      "Nedocromil",
       "Fluticasone/Salmeterol inhaler",
       "Fluticasone/Umeclidinium/Vilanterol inhaler",
       "Carbamazepine",
@@ -838,10 +855,10 @@
       "Nystatin",
       "Anidulafungin",
       "Tigecycline",
+      "Methimazole",
       "Hydrocortisone",
       "Methylprednisolone",
       "Prednisolone",
-      "Betamethasone",
       "Dexamethasone",
       "Dobutamine",
       "Dopamine",
@@ -884,55 +901,75 @@
       "Loratadine/Pseudoephedrine",
       "Vitamin C",
       "Vitamin E",
-      "Probenecid",
-      "Mycophenolate"
+      "Probenecid"
     ],
-    "0": [
-      "storage",
-      "black_box_warnings",
-      "references",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
+    "60": [
+      "Pravastatin",
+      "Canagliflozin",
+      "Doxycycline",
+      "Minocycline",
+      "Tetracycline",
+      "Prednisone",
+      "Carboprost",
+      "Dinoprostone"
     ],
     "40": [
       "Sulfasalazine",
       "Sumatriptan",
-      "Diphenhydramine",
       "Hydroxychloroquine",
       "Alendronate",
       "Tamoxifen",
       "Anastrozole",
+      "Imatinib",
+      "Lidocaine",
       "Vitamin D3 (Cholecalciferol)",
       "Allopurinol",
       "Colchicine",
       "Leflunomide",
-      "Snake Antivenom (Ho Dat)",
+      "Bupivacaine",
       "Acetylcysteine",
-      "Thiamine (Vitamin B1)",
-      "Vitamin C (Ascorbic Acid)"
+      "Cyanocobalamin (Vitamin B12)"
     ],
     "30": [
       "Rizatriptan",
+      "Zolmitriptan",
       "Cetirizine",
       "Loratadine",
       "Chlorpheniramine",
-      "Imatinib",
       "Erlotinib",
       "Atropine",
-      "Lidocaine",
       "Febuxostat",
-      "Bupivacaine",
       "Pralidoxime",
-      "Vitamin K1",
-      "Cyanocobalamin (Vitamin B12)",
-      "Zoledronic Acid"
+      "Vitamin K1"
+    ],
+    "50": [
+      "Ipratropium",
+      "Diphenhydramine",
+      "Etomidate",
+      "Ketamine",
+      "Propofol",
+      "Cisatracurium",
+      "Rocuronium",
+      "Succinylcholine",
+      "Sodium Chloride 0.9%",
+      "Ringer Lactate",
+      "Albumin (Human)",
+      "HES 130/0.4",
+      "Methotrexate",
+      "VAT (Tetanus Vaccine)",
+      "Verorab (Rabies Vaccine)",
+      "Influenza Vaccine",
+      "Hepatitis B Vaccine",
+      "SAT (Tetanus Antitoxin)",
+      "SAR (Rabies Antiserum)",
+      "Snake Antivenom (Luc Tre)",
+      "Snake Antivenom (Ho Dat)",
+      "Thiamine (Vitamin B1)",
+      "Pyridoxine (Vitamin B6)",
+      "Vitamin C (Ascorbic Acid)"
     ],
     "20": [
       "Budesonide inhaled",
-      "Zolmitriptan",
       "Desloratadine",
       "Fexofenadine",
       "Levobupivacaine",
@@ -941,136 +978,39 @@
   },
   "drugs_missing_fields": {
     "contraindications_detail": [
-      "Clonidine",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
+      "Clonidine"
     ],
     "reversal_agents": [
-      "Doxazosin",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
+      "Doxazosin"
     ],
     "black_box_warnings": [
-      "Nesiritide",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
+      "Nesiritide"
     ],
-    "pregnancy": [
-      "Enalapril",
-      "Lisinopril",
-      "Losartan",
-      "Telmisartan",
+    "drug_interactions": [
+      "Candesartan"
+    ],
+    "hepatic_adjustment": [
+      "Candesartan"
+    ],
+    "overdose_management": [
+      "Candesartan"
+    ],
+    "administration_instructions": [
+      "Candesartan"
+    ],
+    "contraindications": [
       "Valsartan",
-      "Metformin",
-      "Insulin",
-      "Gliclazide",
-      "Pioglitazone",
-      "Bismuth subsalicylate",
-      "Ranitidine",
-      "storage",
-      "black_box_warnings",
-      "references",
-      "Sucralfate",
-      "Omeprazole",
-      "Esomeprazole",
-      "Lansoprazole",
-      "Pantoprazole",
-      "Domperidone",
-      "Ondansetron",
-      "Hydrocodone",
-      "Codeine",
-      "Montelukast",
-      "Nedocromil",
-      "Formoterol",
-      "Olodaterol",
-      "Salmeterol",
-      "Vilanterol",
-      "Ipratropium",
-      "Umeclidinium",
-      "Beclomethasone inhaled",
-      "Budesonide inhaled",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions",
-      "Ciclesonide",
-      "Fluticasone inhaled",
-      "Carbamazepine",
-      "Topiramate",
-      "Fluoxetine",
-      "Donepezil",
-      "Memantine",
-      "Rivastigmine",
-      "Calcium",
-      "Diphenhydramine",
-      "Etomidate",
-      "Ketamine",
-      "Propofol",
-      "Cisatracurium",
-      "Rocuronium",
-      "Succinylcholine",
-      "Amoxicillin-clavulanate",
-      "Ceftriaxone",
-      "Azithromycin",
-      "Clarithromycin",
-      "Amoxicillin suspension",
-      "Levothyroxine",
-      "Methimazole",
       "Propylthiouracil",
       "Prednisone",
-      "Betamethasone",
-      "Dexamethasone",
-      "Tamoxifen",
-      "Anastrozole",
       "Imatinib",
       "Erlotinib",
-      "Lidocaine",
       "Cyclosporine",
-      "Mycophenolate",
       "Tacrolimus"
     ],
     "references": [
-      "Enalapril",
-      "Lisinopril",
-      "Losartan",
-      "Telmisartan",
-      "Valsartan",
-      "Diltiazem",
-      "Verapamil",
-      "Ranitidine",
-      "storage",
-      "black_box_warnings",
-      "references",
-      "Omeprazole",
+      "Simvastatin",
       "Ipratropium",
       "Budesonide inhaled",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions",
-      "Cetirizine",
-      "Desloratadine",
-      "Fexofenadine",
-      "Loratadine",
-      "Chlorpheniramine",
-      "Diphenhydramine",
       "Etomidate",
       "Ketamine",
       "Propofol",
@@ -1089,145 +1029,9 @@
       "Lidocaine",
       "Cyclosporine"
     ],
-    "monitoring": [
-      "Enalapril",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
-    ],
-    "precautions": [
-      "Enalapril",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
-    ],
-    "pharmacokinetics": [
-      "Enalapril",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
-    ],
-    "storage": [
-      "Enalapril",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
-    ],
-    "pregnancy_lactation": [
-      "Enalapril",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
-    ],
-    "hepatic_adjustment": [
-      "Enalapril",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
-    ],
-    "overdose_management": [
-      "Enalapril",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
-    ],
-    "administration_instructions": [
-      "Enalapril",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
-    ],
-    "drug_interactions": [
-      "Candesartan",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
-    ],
-    "contraindications": [
-      "Valsartan",
-      "storage",
-      "black_box_warnings",
-      "references",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions",
-      "Cetirizine",
-      "Desloratadine",
-      "Fexofenadine",
-      "Loratadine",
-      "Chlorpheniramine",
-      "Propylthiouracil",
-      "Prednisone",
-      "Imatinib",
-      "Erlotinib",
-      "Cyclosporine",
-      "Tacrolimus"
-    ],
-    "mechanism_of_action": [
-      "Valsartan",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
-    ],
     "interactions": [
       "Pravastatin",
-      "storage",
-      "black_box_warnings",
-      "references",
       "Budesonide inhaled",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions",
-      "Cetirizine",
-      "Desloratadine",
-      "Fexofenadine",
-      "Loratadine",
-      "Chlorpheniramine",
-      "Diphenhydramine",
       "Etomidate",
       "Ketamine",
       "Propofol",
@@ -1242,77 +1046,40 @@
       "Mycophenolate"
     ],
     "renal_adjustment": [
-      "Amlodipine",
-      "storage",
-      "black_box_warnings",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
+      "Amlodipine"
     ],
-    "group": [
-      "storage",
-      "black_box_warnings",
-      "references",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
+    "precautions": [
+      "Canagliflozin"
     ],
-    "vietnamese_name": [
-      "storage",
-      "black_box_warnings",
-      "references",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
+    "pharmacokinetics": [
+      "Canagliflozin"
     ],
-    "administration": [
-      "storage",
-      "black_box_warnings",
-      "references",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
+    "storage": [
+      "Canagliflozin"
     ],
-    "indications": [
-      "storage",
-      "black_box_warnings",
-      "references",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
+    "pregnancy_lactation": [
+      "Esomeprazole"
+    ],
+    "pregnancy": [
+      "Sulfasalazine",
+      "Carbamazepine",
+      "Calcium",
+      "Ceftriaxone",
+      "Prednisone",
+      "Dexamethasone",
+      "Cyclosporine"
+    ],
+    "mechanism_of_action": [
+      "Rizatriptan"
+    ],
+    "monitoring": [
+      "Rizatriptan"
     ],
     "dosage": [
-      "storage",
-      "black_box_warnings",
-      "references",
-      "Budesonide inhaled",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions"
+      "Budesonide inhaled"
     ],
     "side_effects": [
-      "storage",
-      "black_box_warnings",
-      "references",
-      "Budesonide inhaled",
-      "side_effects",
-      "interactions",
-      "mechanism_of_action",
-      "monitoring",
-      "precautions",
-      "Desloratadine"
+      "Budesonide inhaled"
     ]
   },
   "missing_patterns": [
@@ -1320,25 +1087,25 @@
       "pattern": [
         "reversal_agents"
       ],
-      "count": 164,
+      "count": 199,
       "drugs": [
         "Doxazosin",
+        "Prazosin",
+        "Terazosin",
+        "Aliskiren",
         "Finerenone",
         "Sotagliflozin",
         "Vericiguat",
         "Hydralazine",
         "Isosorbide mononitrate",
-        "Nitroglycerin",
-        "Benazepril",
-        "Captopril",
-        "Bempedoic acid"
+        "Minoxidil"
       ]
     },
     {
       "pattern": [
         "contraindications_detail"
       ],
-      "count": 72,
+      "count": 82,
       "drugs": [
         "Clonidine",
         "Methyldopa",
@@ -1357,7 +1124,7 @@
         "contraindications_detail",
         "reversal_agents"
       ],
-      "count": 72,
+      "count": 73,
       "drugs": [
         "Azilsartan medoxomil",
         "Spironolactone",
@@ -1375,18 +1142,37 @@
       "pattern": [
         "black_box_warnings"
       ],
-      "count": 24,
+      "count": 29,
       "drugs": [
         "Nebivolol",
+        "Ezetimibe",
         "Adenosine",
         "Hydrochlorothiazide",
         "Indapamide",
         "Sitagliptin",
-        "Vinpocetine",
-        "Vitamin B12",
-        "Vitamin D",
-        "Aztreonam",
-        "Fidaxomicin"
+        "Empagliflozin",
+        "Beclomethasone inhaled",
+        "Ciclesonide",
+        "Vinpocetine"
+      ]
+    },
+    {
+      "pattern": [
+        "drug_interactions",
+        "reversal_agents"
+      ],
+      "count": 19,
+      "drugs": [
+        "Amlodipine/Olmesartan",
+        "Amlodipine/Indapamide",
+        "Ticlopidine",
+        "Lubiprostone",
+        "Linaclotide",
+        "Eptinezumab",
+        "Erenumab",
+        "Fremanezumab",
+        "Galcanezumab",
+        "Andexanet alfa"
       ]
     },
     {
@@ -1412,39 +1198,39 @@
     },
     {
       "pattern": [
-        "drug_interactions",
+        "black_box_warnings",
         "reversal_agents"
       ],
-      "count": 16,
+      "count": 15,
       "drugs": [
-        "Amlodipine/Olmesartan",
-        "Ticlopidine",
-        "Eptinezumab",
-        "Erenumab",
-        "Fremanezumab",
-        "Galcanezumab",
-        "Andexanet alfa",
-        "Idarucizumab",
-        "Protamine",
-        "Ethambutol"
+        "Nesiritide",
+        "Clevidipine",
+        "Alogliptin",
+        "Linagliptin",
+        "Saxagliptin",
+        "Acarbose",
+        "Miglitol",
+        "Nizatidine",
+        "Docusate",
+        "Prucalopride"
       ]
     },
     {
       "pattern": [
-        "pregnancy"
+        "drug_interactions"
       ],
-      "count": 16,
+      "count": 13,
       "drugs": [
-        "Gliclazide",
-        "Bismuth subsalicylate",
-        "Sucralfate",
-        "Pantoprazole",
-        "Domperidone",
-        "Ondansetron",
-        "Montelukast",
-        "Topiramate",
-        "Fluoxetine",
-        "Donepezil"
+        "Diltiazem",
+        "Verapamil",
+        "Mebeverine",
+        "Simethicone",
+        "Cerebroprotein hydrolysate (khác)",
+        "Citicoline",
+        "Calcitonin",
+        "Dutasteride",
+        "Finasteride",
+        "Dexamethasone eye drops"
       ]
     },
     {
@@ -1465,43 +1251,6 @@
         "Miconazole topical",
         "Polymyxin B/Trimethoprim eye drops",
         "Azelastine/Fluticasone nasal spray"
-      ]
-    },
-    {
-      "pattern": [
-        "black_box_warnings",
-        "reversal_agents"
-      ],
-      "count": 12,
-      "drugs": [
-        "Nesiritide",
-        "Ezetimibe",
-        "Clevidipine",
-        "Alogliptin",
-        "Linagliptin",
-        "Saxagliptin",
-        "Acarbose",
-        "Miglitol",
-        "Acyclovir",
-        "Valacyclovir"
-      ]
-    },
-    {
-      "pattern": [
-        "drug_interactions"
-      ],
-      "count": 11,
-      "drugs": [
-        "Mebeverine",
-        "Simethicone",
-        "Cerebroprotein hydrolysate (khác)",
-        "Citicoline",
-        "Calcitonin",
-        "Dutasteride",
-        "Finasteride",
-        "Dexamethasone eye drops",
-        "Prednisolone eye drops",
-        "Clotrimazole (vaginal)"
       ]
     },
     {
@@ -1545,92 +1294,13 @@
     },
     {
       "pattern": [
-        "contraindications_detail",
-        "pregnancy"
-      ],
-      "count": 8,
-      "drugs": [
-        "Metformin",
-        "Pioglitazone",
-        "Formoterol",
-        "Olodaterol",
-        "Salmeterol",
-        "Vilanterol",
-        "Umeclidinium",
-        "Fluticasone inhaled"
-      ]
-    },
-    {
-      "pattern": [
-        "administration",
-        "administration",
-        "administration_instructions",
-        "administration_instructions",
-        "black_box_warnings",
-        "black_box_warnings",
-        "contraindications",
-        "contraindications",
-        "contraindications_detail",
-        "contraindications_detail",
-        "dosage",
-        "dosage",
-        "drug_interactions",
-        "drug_interactions",
-        "group",
-        "group",
-        "hepatic_adjustment",
-        "hepatic_adjustment",
-        "indications",
-        "indications",
-        "interactions",
-        "interactions",
-        "mechanism_of_action",
-        "mechanism_of_action",
-        "monitoring",
-        "monitoring",
-        "overdose_management",
-        "overdose_management",
-        "pharmacokinetics",
-        "pharmacokinetics",
-        "precautions",
-        "precautions",
-        "pregnancy",
-        "pregnancy",
-        "pregnancy_lactation",
-        "pregnancy_lactation",
-        "references",
-        "references",
-        "renal_adjustment",
-        "renal_adjustment",
-        "reversal_agents",
-        "reversal_agents",
-        "side_effects",
-        "side_effects",
-        "storage",
-        "storage",
-        "vietnamese_name",
-        "vietnamese_name"
-      ],
-      "count": 7,
-      "drugs": [
-        "storage",
-        "black_box_warnings",
-        "references",
-        "side_effects",
-        "interactions",
-        "mechanism_of_action",
-        "monitoring",
-        "precautions"
-      ]
-    },
-    {
-      "pattern": [
         "contraindications",
         "drug_interactions",
         "reversal_agents"
       ],
-      "count": 7,
+      "count": 8,
       "drugs": [
+        "Valsartan",
         "Amikacin",
         "Gentamicin",
         "Tobramycin",
@@ -1638,6 +1308,36 @@
         "Dobutamine",
         "Dopamine",
         "Norepinephrine"
+      ]
+    },
+    {
+      "pattern": [
+        "black_box_warnings",
+        "drug_interactions",
+        "reversal_agents"
+      ],
+      "count": 6,
+      "drugs": [
+        "Racecadotril",
+        "Nystatin",
+        "Anidulafungin",
+        "Azelaic acid topical",
+        "Gentamicin/Betamethasone/Clotrimazole topical",
+        "Miconazole/Hydrocortisone topical"
+      ]
+    },
+    {
+      "pattern": [
+        "black_box_warnings",
+        "drug_interactions"
+      ],
+      "count": 5,
+      "drugs": [
+        "Lactulose",
+        "Polyethylene glycol 3350",
+        "Nedocromil",
+        "Piracetam",
+        "Metronidazole (vaginal gel)"
       ]
     },
     {
@@ -1665,7 +1365,6 @@
         "overdose_management",
         "pharmacokinetics",
         "precautions",
-        "pregnancy",
         "pregnancy_lactation",
         "references",
         "storage"
@@ -1677,44 +1376,6 @@
         "Cisatracurium",
         "Rocuronium",
         "Succinylcholine"
-      ]
-    },
-    {
-      "pattern": [
-        "black_box_warnings",
-        "drug_interactions",
-        "reversal_agents"
-      ],
-      "count": 5,
-      "drugs": [
-        "Nystatin",
-        "Anidulafungin",
-        "Azelaic acid topical",
-        "Gentamicin/Betamethasone/Clotrimazole topical",
-        "Miconazole/Hydrocortisone topical"
-      ]
-    },
-    {
-      "pattern": [
-        "black_box_warnings",
-        "drug_interactions",
-        "hepatic_adjustment",
-        "interactions",
-        "mechanism_of_action",
-        "monitoring",
-        "overdose_management",
-        "pharmacokinetics",
-        "precautions",
-        "pregnancy",
-        "references"
-      ],
-      "count": 5,
-      "drugs": [
-        "Albumin (Human)",
-        "VAT (Tetanus Vaccine)",
-        "Verorab (Rabies Vaccine)",
-        "Influenza Vaccine",
-        "SAT (Tetanus Antitoxin)"
       ]
     },
     {
@@ -1732,14 +1393,65 @@
         "Bumetanide",
         "Torsemide"
       ]
+    },
+    {
+      "pattern": [
+        "black_box_warnings",
+        "drug_interactions",
+        "hepatic_adjustment",
+        "interactions",
+        "mechanism_of_action",
+        "monitoring",
+        "overdose_management",
+        "pharmacokinetics",
+        "precautions",
+        "references"
+      ],
+      "count": 4,
+      "drugs": [
+        "Albumin (Human)",
+        "Verorab (Rabies Vaccine)",
+        "Influenza Vaccine",
+        "SAT (Tetanus Antitoxin)"
+      ]
+    },
+    {
+      "pattern": [
+        "contraindications_detail",
+        "hepatic_adjustment",
+        "renal_adjustment",
+        "reversal_agents"
+      ],
+      "count": 3,
+      "drugs": [
+        "Alirocumab",
+        "Evolocumab",
+        "Inclisiran"
+      ]
+    },
+    {
+      "pattern": [
+        "administration_instructions",
+        "contraindications_detail",
+        "drug_interactions",
+        "hepatic_adjustment",
+        "overdose_management",
+        "reversal_agents"
+      ],
+      "count": 3,
+      "drugs": [
+        "Metformin/Glibenclamide",
+        "Metformin/Pioglitazone",
+        "Methylergonovine"
+      ]
     }
   ],
   "summary": {
-    "drugs_with_all_standard": 583,
-    "drugs_with_all_additional": 219,
-    "avg_completeness": 88.05401662049861,
-    "drugs_100_percent": 118,
-    "drugs_90_plus_percent": 535,
-    "drugs_under_50_percent": 43
+    "drugs_with_all_standard": 673,
+    "drugs_with_all_additional": 238,
+    "avg_completeness": 90.71397284275076,
+    "drugs_100_percent": 150,
+    "drugs_90_plus_percent": 602,
+    "drugs_under_50_percent": 30
   }
 }

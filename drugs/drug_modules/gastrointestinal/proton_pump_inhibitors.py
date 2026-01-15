@@ -127,6 +127,55 @@ PROTON_PUMP_INHIBITORS_DRUGS = {
             "available": False,
             "agents": [],
             "notes": "Không có antidote đặc hiệu. Điều trị quá liều chủ yếu là hỗ trợ triệu chứng."
+        },
+        "pregnancy": "B - Không có bằng chứng về nguy cơ ở người. Có thể sử dụng trong thai kỳ nếu lợi ích > nguy cơ. Omeprazole được sử dụng rộng rãi trong thai kỳ và không có bằng chứng về dị tật bẩm sinh.",
+        "pregnancy_lactation": {
+            "fda_category": "B",
+            "pregnancy_details": "Omeprazole là FDA category B. Nghiên cứu trên động vật không cho thấy nguy cơ cho thai nhi. Một số nghiên cứu trên người không cho thấy tăng nguy cơ dị tật bẩm sinh. Có thể dùng trong thai kỳ nếu lợi ích > nguy cơ. Omeprazole được sử dụng rộng rãi trong thai kỳ.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Omeprazole bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp. Không có báo cáo về tác dụng phụ nghiêm trọng ở trẻ bú mẹ.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Triệu chứng nhẹ: nhức đầu, buồn nôn, tiêu chảy, đau bụng",
+                "Liều rất cao có thể gây: chóng mặt, lú lẫn (hiếm)"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay omeprazole",
+                "Rửa dạ dày nếu uống trong vòng 1-2 giờ",
+                "Than hoạt tính",
+                "Điều trị hỗ trợ và điều trị triệu chứng",
+                "Theo dõi dấu hiệu sinh tồn"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, triệu chứng lâm sàng"
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống 30-60 phút trước bữa ăn sáng để tăng hiệu quả. Không nhai viên (enteric-coated).",
+                "timing": "Uống 1 lần/ngày vào buổi sáng, 30-60 phút trước bữa ăn. Có thể uống với nước lọc."
+            },
+            "iv": {
+                "reconstitution": "Omeprazole IV: Pha với 100ml NaCl 0.9% hoặc dextrose 5%",
+                "infusion_rate": "Truyền trong 20-30 phút",
+                "compatibility": ["NaCl 0.9%", "Dextrose 5%"],
+                "incompatibility": [],
+                "notes": "Chỉ dùng IV khi không uống được. Chuyển sang PO sớm nhất có thể."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Prilosec (omeprazole)",
+                "UpToDate - Omeprazole: Drug information",
+                "ACG Guidelines - Peptic Ulcer Disease",
+                "ACG Guidelines - GERD",
+                "Goodman & Gilman's The Pharmacological Basis of Therapeutics"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA approved, multiple RCTs and extensive clinical experience"
         }
     },
     "Esomeprazole": {'group': 'Gastrointestinal - Proton Pump Inhibitor',

@@ -1257,6 +1257,923 @@ ACE_INHIBITORS = {
         "last_updated": "2025-02-18",
     },
     
+    "Fosinopril": {
+        "group": "Cardiovascular - ACE Inhibitor",
+        "vietnamese_name": "Fosinopril, Monopril",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Suy tim",
+            "Bảo vệ thận trong đái tháo đường"
+        ],
+        "contraindications": [
+            "Dị ứng ACE inhibitor",
+            "Có thai",
+            "Hẹp động mạch thận 2 bên",
+            "Phù mạch trước đây với ACE inhibitor"
+        ],
+        "dosage": {
+            "adult_htn": "10-40mg x 1 lần/ngày",
+            "adult_heart_failure": "10mg x 1 lần/ngày, tăng dần đến 20-40mg x 1 lần/ngày",
+            "adult_start": "10mg x 1 lần/ngày",
+            "adult_usual": "10-40mg x 1 lần/ngày",
+            "adult_max": "40mg/ngày",
+            "elderly": "Khởi đầu 10mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "10-40mg x 1 lần/ngày",
+                "30_60": "10mg x 1 lần/ngày, thận trọng",
+                "under_30": "10mg x 1 lần/ngày, thận trọng",
+                "dialysis": "10mg x 1 lần/ngày sau mỗi lần lọc máu"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Đặc điểm: Thải trừ qua cả gan và thận (50-50%), do đó không cần điều chỉnh liều ở suy thận nhẹ đến trung bình như các ACE inhibitor khác. Ưu điểm lớn ở bệnh nhân suy thận."
+        },
+        "side_effects": [
+            "Ho khan (phổ biến)",
+            "Tăng kali máu",
+            "Hạ huyết áp",
+            "Phù mạch (hiếm nhưng nguy hiểm)",
+            "Suy thận cấp (hẹp ĐM thận)",
+            "Tăng creatinine nhẹ",
+            "Chóng mặt, mệt mỏi"
+        ],
+        "interactions": [
+            "Kali bổ sung: tăng nguy cơ tăng kali máu",
+            "Spironolactone, Eplerenone: tăng kali máu",
+            "NSAID: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Lithium: tăng nồng độ lithium",
+            "Diuretics: tăng nguy cơ hạ huyết áp"
+        ],
+        "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "mechanism_of_action": "Fosinopril là prodrug, được chuyển hóa thành fosinoprilat (hoạt chất) trong gan và ruột. Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp. ĐẶC ĐIỂM QUAN TRỌNG: Fosinopril thải trừ qua cả gan (50%) và thận (50%), khác với các ACE inhibitor khác chỉ thải qua thận. Do đó, không cần điều chỉnh liều ở suy thận nhẹ đến trung bình - đây là ưu điểm lớn của fosinopril ở bệnh nhân suy thận.",
+        "monitoring": [
+            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
+            "Kali máu định kỳ",
+            "Huyết áp",
+            "Ho khan (tác dụng phụ thường gặp)",
+            "Dấu hiệu phù mạch (sưng mặt, lưỡi, họng - cấp cứu)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều thấp (10mg), tăng dần",
+            "Ưu điểm: Không cần điều chỉnh liều ở suy thận nhẹ đến trung bình (thải qua cả gan và thận)",
+            "Theo dõi sát creatinine khi bắt đầu (có thể tăng nhẹ)",
+            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Ngừng ngay nếu có phù mạch (có thể nguy hiểm tính mạng)",
+            "Ho khan có thể kéo dài, thường tự hết khi ngừng thuốc",
+            "Thận trọng với kali bổ sung và kali-sparing diuretics"
+        ],
+        "pharmacokinetics": {
+            "half_life": "11.5-12 giờ (fosinoprilat)",
+            "onset": "1 giờ",
+            "duration": "24 giờ (cho phép dùng 1 lần/ngày)",
+            "protein_binding": "95-99%",
+            "clearance": "Thải trừ qua cả gan (50%) và thận (50%) - đặc điểm độc đáo"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac, etc.)",
+                    "mechanism": "NSAIDs ức chế prostaglandin, làm giảm lưu lượng máu thận, giảm hiệu quả ACE inhibitor",
+                    "effect": "Giảm hiệu quả hạ huyết áp của fosinopril, tăng nguy cơ suy thận cấp",
+                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ huyết áp, chức năng thận."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ACE inhibitors làm giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng độc tính",
+                    "management": "Theo dõi nồng độ lithium thường xuyên. Giảm liều lithium khi bắt đầu fosinopril."
+                },
+                {
+                    "drug": "Diuretics (thiazide, loop diuretics)",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
+                    "effect": "Hạ huyết áp quá mức",
+                    "management": "Giảm liều diuretic hoặc ngừng tạm thời khi bắt đầu fosinopril."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng fosinopril hoặc các ACE inhibitor khác",
+                "Có thai (tất cả các tam cá nguyệt) - gây dị tật thai nhi",
+                "Hẹp động mạch thận 2 bên hoặc hẹp động mạch thận ở thận đơn độc",
+                "Phù mạch trước đây với ACE inhibitor"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <10) - thận trọng",
+                "Suy gan nặng - thận trọng (thải một phần qua gan)",
+                "Tăng kali máu",
+                "Dùng với kali-sparing diuretics hoặc kali bổ sung"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong thai kỳ. Có thể gây dị tật thai nhi (dị tật thận, xương sọ, phổi), thiểu ối, chậm phát triển thai nhi, và tử vong thai nhi. Nguy cơ cao nhất trong 3 tháng đầu và 3 tháng cuối. Ngừng ngay khi phát hiện có thai.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Fosinoprilat bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều nhẹ",
+            "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+            "notes": "Fosinopril thải trừ một phần qua gan (50%). Suy gan có thể làm giảm chuyển hóa thành fosinoprilat và giảm thải trừ."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không cần điều chỉnh liều (ưu điểm - thải qua cả gan và thận)",
+            "under_30": "Không cần điều chỉnh liều (ưu điểm - thải qua cả gan và thận)",
+            "dialysis": "10mg x 1 lần/ngày sau mỗi lần lọc máu",
+            "notes": "ĐẶC ĐIỂM QUAN TRỌNG: Fosinopril thải trừ qua cả gan (50%) và thận (50%), khác với các ACE inhibitor khác chỉ thải qua thận. Do đó, không cần điều chỉnh liều ở suy thận nhẹ đến trung bình - đây là ưu điểm lớn của fosinopril."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Chóng mặt, ngất",
+                "Tăng kali máu",
+                "Suy thận cấp",
+                "Nhịp tim chậm"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay fosinopril",
+                "Nằm đầu thấp, nâng chân",
+                "Truyền dịch nếu hạ huyết áp",
+                "Theo dõi huyết áp, nhịp tim, điện giải",
+                "Điều trị tăng kali máu nếu có: Calcium gluconate, insulin + glucose, sodium bicarbonate",
+                "Lọc máu nếu suy thận nặng"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, kali máu, chức năng thận trong ít nhất 24 giờ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp.",
+                "timing": "Uống 1 lần/ngày (do half-life dài). Có thể uống buổi sáng hoặc tối. Uống đều đặn cùng một thời điểm mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "N/A - Chỉ có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Fosinopril chỉ có dạng uống. Nếu cần dạng IV, dùng enalaprilat."
+            }
+        },
+        "brand_names": {
+            "vietnam": ["Monopril", "Fosinopril"],
+            "common": ["Monopril", "Fosinopril"]
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "children": "6-17 tuổi: 5-10mg x 1 lần/ngày (tối đa 40mg/ngày). Chỉ dùng cho tăng huyết áp. Theo dõi huyết áp, chức năng thận, kali máu",
+            "adolescents": "10-20mg x 1 lần/ngày, tăng dần đến 20-40mg/ngày nếu cần. Liều người lớn",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp ở trẻ ≥6 tuổi. Khởi đầu với liều thấp, tăng dần. Ưu điểm: không cần điều chỉnh liều ở suy thận nhẹ đến trung bình"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (10mg x 1 lần/ngày). Tăng dần chậm hơn. Ưu điểm: không cần điều chỉnh liều ở suy thận nhẹ đến trung bình (thải qua cả gan và thận)",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi chức năng thận, kali máu thường xuyên"
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "20,000 - 50,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Fosinopril generic thường rẻ hơn (20,000-35,000 VND/viên 10mg)."
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Monopril (fosinopril)",
+                "UpToDate - Fosinopril: Drug information",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved and extensive clinical experience"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
+    },
+    
+    "Moexipril": {
+        "group": "Cardiovascular - ACE Inhibitor",
+        "vietnamese_name": "Moexipril, Univasc",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp"
+        ],
+        "contraindications": [
+            "Dị ứng ACE inhibitor",
+            "Có thai",
+            "Hẹp động mạch thận 2 bên",
+            "Phù mạch trước đây với ACE inhibitor"
+        ],
+        "dosage": {
+            "adult_htn": "7.5-30mg x 1 lần/ngày",
+            "adult_start": "7.5mg x 1 lần/ngày",
+            "adult_usual": "7.5-30mg x 1 lần/ngày",
+            "adult_max": "30mg/ngày",
+            "elderly": "Khởi đầu 3.75mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "7.5-30mg x 1 lần/ngày",
+                "30_60": "3.75-7.5mg x 1 lần/ngày, thận trọng",
+                "under_30": "3.75mg x 1 lần/ngày, thận trọng",
+                "dialysis": "Không khuyến cáo"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Uống trước bữa ăn (hấp thu tốt hơn khi dạ dày rỗng)",
+            "notes": "Uống trước bữa ăn để tăng hấp thu. Thải trừ qua thận, cần điều chỉnh liều ở suy thận."
+        },
+        "side_effects": [
+            "Ho khan (phổ biến)",
+            "Tăng kali máu",
+            "Hạ huyết áp",
+            "Phù mạch (hiếm nhưng nguy hiểm)",
+            "Suy thận cấp (hẹp ĐM thận)",
+            "Tăng creatinine nhẹ",
+            "Chóng mặt, mệt mỏi",
+            "Đau đầu"
+        ],
+        "interactions": [
+            "Kali bổ sung: tăng nguy cơ tăng kali máu",
+            "Spironolactone, Eplerenone: tăng kali máu",
+            "NSAID: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Lithium: tăng nồng độ lithium",
+            "Diuretics: tăng nguy cơ hạ huyết áp"
+        ],
+        "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "mechanism_of_action": "Moexipril là prodrug, được chuyển hóa thành moexiprilat (hoạt chất) trong gan. Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp. Moexipril có half-life ngắn hơn một số ACE inhibitor khác, nhưng vẫn cho phép dùng 1 lần/ngày.",
+        "monitoring": [
+            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
+            "Kali máu định kỳ",
+            "Huyết áp",
+            "Ho khan (tác dụng phụ thường gặp)",
+            "Dấu hiệu phù mạch (sưng mặt, lưỡi, họng - cấp cứu)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều thấp (7.5mg), tăng dần",
+            "Uống trước bữa ăn để tăng hấp thu",
+            "Theo dõi sát creatinine khi bắt đầu (có thể tăng nhẹ)",
+            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Ngừng ngay nếu có phù mạch (có thể nguy hiểm tính mạng)",
+            "Ho khan có thể kéo dài, thường tự hết khi ngừng thuốc",
+            "Thận trọng với kali bổ sung và kali-sparing diuretics"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2-9 giờ (moexiprilat)",
+            "onset": "1 giờ",
+            "duration": "24 giờ (cho phép dùng 1 lần/ngày)",
+            "protein_binding": "50%",
+            "clearance": "Thận (chủ yếu)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac, etc.)",
+                    "mechanism": "NSAIDs ức chế prostaglandin, làm giảm lưu lượng máu thận, giảm hiệu quả ACE inhibitor",
+                    "effect": "Giảm hiệu quả hạ huyết áp của moexipril, tăng nguy cơ suy thận cấp",
+                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ huyết áp, chức năng thận."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ACE inhibitors làm giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng độc tính",
+                    "management": "Theo dõi nồng độ lithium thường xuyên. Giảm liều lithium khi bắt đầu moexipril."
+                },
+                {
+                    "drug": "Diuretics (thiazide, loop diuretics)",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
+                    "effect": "Hạ huyết áp quá mức",
+                    "management": "Giảm liều diuretic hoặc ngừng tạm thời khi bắt đầu moexipril."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng moexipril hoặc các ACE inhibitor khác",
+                "Có thai (tất cả các tam cá nguyệt) - gây dị tật thai nhi",
+                "Hẹp động mạch thận 2 bên hoặc hẹp động mạch thận ở thận đơn độc",
+                "Phù mạch trước đây với ACE inhibitor"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - cần giảm liều",
+                "Suy gan - thận trọng",
+                "Tăng kali máu",
+                "Dùng với kali-sparing diuretics hoặc kali bổ sung"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong thai kỳ. Có thể gây dị tật thai nhi (dị tật thận, xương sọ, phổi), thiểu ối, chậm phát triển thai nhi, và tử vong thai nhi. Nguy cơ cao nhất trong 3 tháng đầu và 3 tháng cuối. Ngừng ngay khi phát hiện có thai.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Moexiprilat bài tiết vào sữa mẹ ở nồng độ thấp. Dữ liệu còn hạn chế.",
+                "recommendation": "Thận trọng khi cho con bú. Ưu tiên ACE khác đã có dữ liệu nhiều hơn."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều nhẹ",
+            "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+            "notes": "Moexipril là prodrug chuyển hóa thành moexiprilat trong gan. Suy gan có thể làm giảm chuyển hóa thành hoạt chất."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Giảm liều 75% hoặc tránh dùng",
+            "dialysis": "Không khuyến cáo",
+            "notes": "Moexipril thải trừ qua thận. Cần điều chỉnh liều ở suy thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Chóng mặt, ngất",
+                "Tăng kali máu",
+                "Suy thận cấp",
+                "Nhịp tim chậm"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay moexipril",
+                "Nằm đầu thấp, nâng chân",
+                "Truyền dịch nếu hạ huyết áp",
+                "Theo dõi huyết áp, nhịp tim, điện giải",
+                "Điều trị tăng kali máu nếu có: Calcium gluconate, insulin + glucose, sodium bicarbonate",
+                "Lọc máu nếu suy thận nặng"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, kali máu, chức năng thận trong ít nhất 12-24 giờ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống trước bữa ăn (hấp thu tốt hơn khi dạ dày rỗng). Dùng với thức ăn có thể giảm hấp thu.",
+                "timing": "Uống 1 lần/ngày, trước bữa ăn. Uống đều đặn cùng một thời điểm mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "N/A - Chỉ có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Moexipril chỉ có dạng uống. Nếu cần dạng IV, dùng enalaprilat."
+            }
+        },
+        "brand_names": {
+            "vietnam": ["Univasc", "Moexipril"],
+            "common": ["Univasc", "Moexipril"]
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "children": "6-17 tuổi: 3.75-7.5mg x 1 lần/ngày (tối đa 30mg/ngày). Chỉ dùng cho tăng huyết áp. Theo dõi huyết áp, chức năng thận, kali máu",
+            "adolescents": "7.5mg x 1 lần/ngày, tăng dần đến 15-30mg/ngày nếu cần. Liều người lớn",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp ở trẻ ≥6 tuổi. Khởi đầu với liều thấp, tăng dần. Uống trước bữa ăn"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (3.75mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo CrCl",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi chức năng thận, kali máu thường xuyên"
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "25,000 - 60,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Moexipril generic thường rẻ hơn (25,000-40,000 VND/viên 7.5mg)."
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Univasc (moexipril)",
+                "UpToDate - Moexipril: Drug information",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved and extensive clinical experience"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease"
+        ],
+        "last_updated": "2025-02-18",
+    },
+    
+    "Quinapril": {
+        "group": "Cardiovascular - ACE Inhibitor",
+        "vietnamese_name": "Quinapril, Accupril",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Suy tim",
+            "Bảo vệ thận trong đái tháo đường"
+        ],
+        "contraindications": [
+            "Dị ứng ACE inhibitor",
+            "Có thai",
+            "Hẹp động mạch thận 2 bên",
+            "Phù mạch trước đây với ACE inhibitor"
+        ],
+        "dosage": {
+            "adult_htn": "10-80mg x 1-2 lần/ngày",
+            "adult_heart_failure": "5mg x 2 lần/ngày, tăng dần đến 20-40mg x 2 lần/ngày",
+            "adult_start": "10mg x 1 lần/ngày (tăng huyết áp), 5mg x 2 lần/ngày (suy tim)",
+            "adult_usual": "20-80mg x 1-2 lần/ngày (tăng huyết áp), 20-40mg x 2 lần/ngày (suy tim)",
+            "adult_max": "80mg/ngày",
+            "elderly": "Khởi đầu 5-10mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "10-80mg x 1-2 lần/ngày",
+                "30_60": "5-10mg x 1 lần/ngày, thận trọng",
+                "under_30": "5mg x 1 lần/ngày, thận trọng",
+                "dialysis": "Không khuyến cáo"
+            },
+            "administration_route": "PO",
+            "frequency": "1-2 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Có thể dùng 1 hoặc 2 lần/ngày tùy liều. Thải trừ qua thận, cần điều chỉnh liều ở suy thận."
+        },
+        "side_effects": [
+            "Ho khan (phổ biến)",
+            "Tăng kali máu",
+            "Hạ huyết áp",
+            "Phù mạch (hiếm nhưng nguy hiểm)",
+            "Suy thận cấp (hẹp ĐM thận)",
+            "Tăng creatinine nhẹ",
+            "Chóng mặt, mệt mỏi",
+            "Đau đầu"
+        ],
+        "interactions": [
+            "Kali bổ sung: tăng nguy cơ tăng kali máu",
+            "Spironolactone, Eplerenone: tăng kali máu",
+            "NSAID: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Lithium: tăng nồng độ lithium",
+            "Diuretics: tăng nguy cơ hạ huyết áp",
+            "Aliskiren: tránh dùng cùng ở bệnh nhân đái tháo đường"
+        ],
+        "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "mechanism_of_action": "Quinapril là prodrug, được chuyển hóa thành quinaprilat (hoạt chất) trong gan. Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp. Quinapril có thể dùng 1 hoặc 2 lần/ngày tùy liều và đáp ứng của bệnh nhân.",
+        "monitoring": [
+            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
+            "Kali máu định kỳ",
+            "Huyết áp",
+            "Ho khan (tác dụng phụ thường gặp)",
+            "Dấu hiệu phù mạch (sưng mặt, lưỡi, họng - cấp cứu)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều thấp (10mg), tăng dần",
+            "Có thể dùng 1 hoặc 2 lần/ngày tùy liều",
+            "Theo dõi sát creatinine khi bắt đầu (có thể tăng nhẹ)",
+            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Ngừng ngay nếu có phù mạch (có thể nguy hiểm tính mạng)",
+            "Ho khan có thể kéo dài, thường tự hết khi ngừng thuốc",
+            "Thận trọng với kali bổ sung và kali-sparing diuretics",
+            "Tránh dùng cùng aliskiren ở bệnh nhân đái tháo đường"
+        ],
+        "pharmacokinetics": {
+            "half_life": "2 giờ (quinapril), 3 giờ (quinaprilat)",
+            "onset": "1 giờ",
+            "duration": "12-24 giờ",
+            "protein_binding": "97%",
+            "clearance": "Thận (chủ yếu)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac, etc.)",
+                    "mechanism": "NSAIDs ức chế prostaglandin, làm giảm lưu lượng máu thận, giảm hiệu quả ACE inhibitor",
+                    "effect": "Giảm hiệu quả hạ huyết áp của quinapril, tăng nguy cơ suy thận cấp",
+                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ huyết áp, chức năng thận."
+                },
+                {
+                    "drug": "Aliskiren",
+                    "mechanism": "Triple blockade RAAS (ACE + renin inhibitor)",
+                    "effect": "Tăng nguy cơ suy thận, tăng kali máu, hạ huyết áp quá mức",
+                    "management": "Tránh dùng cùng ở bệnh nhân đái tháo đường. Thận trọng ở các bệnh nhân khác."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ACE inhibitors làm giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng độc tính",
+                    "management": "Theo dõi nồng độ lithium thường xuyên. Giảm liều lithium khi bắt đầu quinapril."
+                },
+                {
+                    "drug": "Diuretics (thiazide, loop diuretics)",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
+                    "effect": "Hạ huyết áp quá mức",
+                    "management": "Giảm liều diuretic hoặc ngừng tạm thời khi bắt đầu quinapril."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng quinapril hoặc các ACE inhibitor khác",
+                "Có thai (tất cả các tam cá nguyệt) - gây dị tật thai nhi",
+                "Hẹp động mạch thận 2 bên hoặc hẹp động mạch thận ở thận đơn độc",
+                "Phù mạch trước đây với ACE inhibitor"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - cần giảm liều",
+                "Suy gan - thận trọng",
+                "Tăng kali máu",
+                "Dùng với kali-sparing diuretics hoặc kali bổ sung",
+                "Dùng cùng aliskiren ở bệnh nhân đái tháo đường"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong thai kỳ. Có thể gây dị tật thai nhi (dị tật thận, xương sọ, phổi), thiểu ối, chậm phát triển thai nhi, và tử vong thai nhi. Nguy cơ cao nhất trong 3 tháng đầu và 3 tháng cuối. Ngừng ngay khi phát hiện có thai.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Quinaprilat bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều nhẹ",
+            "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+            "notes": "Quinapril là prodrug chuyển hóa thành quinaprilat trong gan. Suy gan có thể làm giảm chuyển hóa thành hoạt chất."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Giảm liều 75% hoặc tránh dùng",
+            "dialysis": "Không khuyến cáo",
+            "notes": "Quinapril thải trừ qua thận. Cần điều chỉnh liều ở suy thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Chóng mặt, ngất",
+                "Tăng kali máu",
+                "Suy thận cấp",
+                "Nhịp tim chậm"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay quinapril",
+                "Nằm đầu thấp, nâng chân",
+                "Truyền dịch nếu hạ huyết áp",
+                "Theo dõi huyết áp, nhịp tim, điện giải",
+                "Điều trị tăng kali máu nếu có: Calcium gluconate, insulin + glucose, sodium bicarbonate",
+                "Lọc máu nếu suy thận nặng"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, kali máu, chức năng thận trong ít nhất 12-24 giờ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp.",
+                "timing": "Uống 1-2 lần/ngày tùy liều. Uống đều đặn cùng một thời điểm mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "N/A - Chỉ có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Quinapril chỉ có dạng uống. Nếu cần dạng IV, dùng enalaprilat."
+            }
+        },
+        "brand_names": {
+            "vietnam": ["Accupril", "Quinapril"],
+            "common": ["Accupril", "Quinapril"]
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "children": "6-17 tuổi: 5-10mg x 1-2 lần/ngày (tối đa 80mg/ngày). Chỉ dùng cho tăng huyết áp. Theo dõi huyết áp, chức năng thận, kali máu",
+            "adolescents": "10-20mg x 1-2 lần/ngày, tăng dần đến 40-80mg/ngày nếu cần. Liều người lớn",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp ở trẻ ≥6 tuổi. Khởi đầu với liều thấp, tăng dần. Có thể dùng 1 hoặc 2 lần/ngày"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (5mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo CrCl",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi chức năng thận, kali máu thường xuyên"
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "25,000 - 60,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Quinapril generic thường rẻ hơn (25,000-40,000 VND/viên 10mg)."
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Accupril (quinapril)",
+                "UpToDate - Quinapril: Drug information",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved and extensive clinical experience"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
+    },
+    
+    "Trandolapril": {
+        "group": "Cardiovascular - ACE Inhibitor",
+        "vietnamese_name": "Trandolapril, Mavik",
+        "administration": ["PO"],
+        "indications": [
+            "Tăng huyết áp",
+            "Suy tim",
+            "Sau nhồi máu cơ tim",
+            "Bảo vệ thận trong đái tháo đường"
+        ],
+        "contraindications": [
+            "Dị ứng ACE inhibitor",
+            "Có thai",
+            "Hẹp động mạch thận 2 bên",
+            "Phù mạch trước đây với ACE inhibitor"
+        ],
+        "dosage": {
+            "adult_htn": "1-4mg x 1 lần/ngày",
+            "adult_heart_failure": "1mg x 1 lần/ngày, tăng dần đến 4mg x 1 lần/ngày",
+            "adult_post_mi": "1mg x 1 lần/ngày, tăng đến 4mg x 1 lần/ngày",
+            "adult_start": "1-2mg x 1 lần/ngày",
+            "adult_usual": "2-4mg x 1 lần/ngày",
+            "adult_max": "4mg/ngày",
+            "elderly": "Khởi đầu 0.5-1mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "1-4mg x 1 lần/ngày",
+                "30_60": "0.5-1mg x 1 lần/ngày, thận trọng",
+                "under_30": "0.5mg x 1 lần/ngày, thận trọng",
+                "dialysis": "Không khuyến cáo"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Liều thấp hơn các ACE inhibitor khác (1-4mg/ngày). Thải trừ qua thận, cần điều chỉnh liều ở suy thận."
+        },
+        "side_effects": [
+            "Ho khan (phổ biến)",
+            "Tăng kali máu",
+            "Hạ huyết áp",
+            "Phù mạch (hiếm nhưng nguy hiểm)",
+            "Suy thận cấp (hẹp ĐM thận)",
+            "Tăng creatinine nhẹ",
+            "Chóng mặt, mệt mỏi",
+            "Đau đầu"
+        ],
+        "interactions": [
+            "Kali bổ sung: tăng nguy cơ tăng kali máu",
+            "Spironolactone, Eplerenone: tăng kali máu",
+            "NSAID: giảm hiệu quả, tăng nguy cơ suy thận",
+            "Lithium: tăng nồng độ lithium",
+            "Diuretics: tăng nguy cơ hạ huyết áp",
+            "Aliskiren: tránh dùng cùng ở bệnh nhân đái tháo đường"
+        ],
+        "pregnancy": "D - Chống chỉ định trong thai kỳ",
+        "mechanism_of_action": "Trandolapril là prodrug, được chuyển hóa thành trandolaprilat (hoạt chất) trong gan. Ức chế angiotensin converting enzyme (ACE), giảm chuyển angiotensin I thành angiotensin II, giảm aldosterone, gây giãn mạch và giảm huyết áp. Trandolapril có liều dùng thấp hơn các ACE inhibitor khác (1-4mg/ngày) nhưng hiệu quả tương đương. Có bằng chứng về bảo vệ tim mạch sau nhồi máu cơ tim (TRACE study).",
+        "monitoring": [
+            "Creatinine, BUN sau 1-2 tuần khi bắt đầu",
+            "Kali máu định kỳ",
+            "Huyết áp",
+            "Ho khan (tác dụng phụ thường gặp)",
+            "Dấu hiệu phù mạch (sưng mặt, lưỡi, họng - cấp cứu)"
+        ],
+        "precautions": [
+            "Khởi đầu với liều thấp (1mg), tăng dần",
+            "Liều thấp hơn các ACE inhibitor khác nhưng hiệu quả tương đương",
+            "Theo dõi sát creatinine khi bắt đầu (có thể tăng nhẹ)",
+            "Tránh dùng với NSAID (giảm hiệu quả, tăng nguy cơ suy thận)",
+            "Ngừng ngay nếu có phù mạch (có thể nguy hiểm tính mạng)",
+            "Ho khan có thể kéo dài, thường tự hết khi ngừng thuốc",
+            "Thận trọng với kali bổ sung và kali-sparing diuretics",
+            "Tránh dùng cùng aliskiren ở bệnh nhân đái tháo đường"
+        ],
+        "pharmacokinetics": {
+            "half_life": "10 giờ (trandolaprilat)",
+            "onset": "1 giờ",
+            "duration": "24 giờ (cho phép dùng 1 lần/ngày)",
+            "protein_binding": "80%",
+            "clearance": "Thận (chủ yếu)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng",
+        "black_box_warnings": "Chống chỉ định trong thai kỳ - có thể gây dị tật thai nhi và tử vong thai nhi. Phù mạch có thể đe dọa tính mạng.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Kali bổ sung, Kali-sparing diuretics (spironolactone, eplerenone, amiloride, triamterene)",
+                    "mechanism": "Tác dụng hiệp đồng tăng kali máu",
+                    "effect": "Tăng kali máu nghiêm trọng, có thể gây rối loạn nhịp tim",
+                    "management": "Thận trọng. Theo dõi kali máu thường xuyên. Tránh dùng cùng nếu có thể."
+                },
+                {
+                    "drug": "NSAIDs (ibuprofen, naproxen, diclofenac, etc.)",
+                    "mechanism": "NSAIDs ức chế prostaglandin, làm giảm lưu lượng máu thận, giảm hiệu quả ACE inhibitor",
+                    "effect": "Giảm hiệu quả hạ huyết áp của trandolapril, tăng nguy cơ suy thận cấp",
+                    "management": "Tránh dùng đồng thời nếu có thể. Nếu bắt buộc, theo dõi chặt chẽ huyết áp, chức năng thận."
+                },
+                {
+                    "drug": "Aliskiren",
+                    "mechanism": "Triple blockade RAAS (ACE + renin inhibitor)",
+                    "effect": "Tăng nguy cơ suy thận, tăng kali máu, hạ huyết áp quá mức",
+                    "management": "Tránh dùng cùng ở bệnh nhân đái tháo đường. Thận trọng ở các bệnh nhân khác."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "Lithium",
+                    "mechanism": "ACE inhibitors làm giảm thải trừ lithium qua thận",
+                    "effect": "Tăng nồng độ lithium, tăng độc tính",
+                    "management": "Theo dõi nồng độ lithium thường xuyên. Giảm liều lithium khi bắt đầu trandolapril."
+                },
+                {
+                    "drug": "Diuretics (thiazide, loop diuretics)",
+                    "mechanism": "Tác dụng hiệp đồng hạ huyết áp",
+                    "effect": "Hạ huyết áp quá mức",
+                    "management": "Giảm liều diuretic hoặc ngừng tạm thời khi bắt đầu trandolapril."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng trandolapril hoặc các ACE inhibitor khác",
+                "Có thai (tất cả các tam cá nguyệt) - gây dị tật thai nhi",
+                "Hẹp động mạch thận 2 bên hoặc hẹp động mạch thận ở thận đơn độc",
+                "Phù mạch trước đây với ACE inhibitor"
+            ],
+            "tương_đối": [
+                "Suy thận nặng (CrCl <30) - cần giảm liều",
+                "Suy gan - thận trọng",
+                "Tăng kali máu",
+                "Dùng với kali-sparing diuretics hoặc kali bổ sung",
+                "Dùng cùng aliskiren ở bệnh nhân đái tháo đường"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI trong thai kỳ. Có thể gây dị tật thai nhi (dị tật thận, xương sọ, phổi), thiểu ối, chậm phát triển thai nhi, và tử vong thai nhi. Nguy cơ cao nhất trong 3 tháng đầu và 3 tháng cuối. Ngừng ngay khi phát hiện có thai.",
+            "lactation": {
+                "safety": "Compatible",
+                "details": "Trandolaprilat bài tiết vào sữa mẹ ở nồng độ thấp. Nồng độ trong máu trẻ bú mẹ thường rất thấp.",
+                "recommendation": "Có thể dùng khi cho con bú. Theo dõi trẻ nếu có dấu hiệu bất thường."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không cần điều chỉnh liều",
+            "moderate": "Thận trọng, có thể cần giảm liều nhẹ",
+            "severe": "Thận trọng, giảm liều hoặc tránh dùng",
+            "notes": "Trandolapril là prodrug chuyển hóa thành trandolaprilat trong gan. Suy gan có thể làm giảm chuyển hóa thành hoạt chất."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Giảm liều 50%",
+            "under_30": "Giảm liều 75% hoặc tránh dùng",
+            "dialysis": "Không khuyến cáo",
+            "notes": "Trandolapril thải trừ qua thận. Cần điều chỉnh liều ở suy thận."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Hạ huyết áp nghiêm trọng",
+                "Chóng mặt, ngất",
+                "Tăng kali máu",
+                "Suy thận cấp",
+                "Nhịp tim chậm"
+            ],
+            "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+            "treatment": [
+                "Ngừng ngay trandolapril",
+                "Nằm đầu thấp, nâng chân",
+                "Truyền dịch nếu hạ huyết áp",
+                "Theo dõi huyết áp, nhịp tim, điện giải",
+                "Điều trị tăng kali máu nếu có: Calcium gluconate, insulin + glucose, sodium bicarbonate",
+                "Lọc máu nếu suy thận nặng"
+            ],
+            "monitoring": "Huyết áp, nhịp tim, kali máu, chức năng thận trong ít nhất 12-24 giờ"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn. Hấp thu tốt trong cả hai trường hợp.",
+                "timing": "Uống 1 lần/ngày (do half-life dài). Có thể uống buổi sáng hoặc tối. Uống đều đặn cùng một thời điểm mỗi ngày."
+            },
+            "iv": {
+                "reconstitution": "N/A - Chỉ có dạng uống",
+                "infusion_rate": "N/A",
+                "compatibility": [],
+                "incompatibility": [],
+                "notes": "Trandolapril chỉ có dạng uống. Nếu cần dạng IV, dùng enalaprilat."
+            }
+        },
+        "brand_names": {
+            "vietnam": ["Mavik", "Trandolapril"],
+            "common": ["Mavik", "Trandolapril"]
+        },
+        "pediatric_dosing": {
+            "neonates": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "infants": "Không khuyến cáo cho trẻ <6 tuổi (dữ liệu hạn chế)",
+            "children": "6-17 tuổi: 0.5-1mg x 1 lần/ngày (tối đa 4mg/ngày). Chỉ dùng cho tăng huyết áp. Theo dõi huyết áp, chức năng thận, kali máu",
+            "adolescents": "1mg x 1 lần/ngày, tăng dần đến 2-4mg/ngày nếu cần. Liều người lớn",
+            "notes": "Dữ liệu hạn chế ở trẻ em. Chỉ dùng cho tăng huyết áp ở trẻ ≥6 tuổi. Khởi đầu với liều thấp, tăng dần. Liều thấp hơn các ACE inhibitor khác nhưng hiệu quả tương đương"
+        },
+        "geriatric_dosing": {
+            "considerations": "Người cao tuổi nhạy cảm hơn với tác dụng hạ huyết áp. Suy thận phổ biến hơn",
+            "dose_adjustment": "Khởi đầu với liều thấp hơn (0.5-1mg x 1 lần/ngày). Tăng dần chậm hơn. Điều chỉnh theo CrCl",
+            "monitoring": "Theo dõi huyết áp sát hơn (nguy cơ hạ huyết áp quá mức). Theo dõi chức năng thận, kali máu thường xuyên"
+        },
+        "cost_estimate": {
+            "unit": "VND",
+            "range": "30,000 - 70,000 VND/viên (tùy hàm lượng và thương hiệu)",
+            "note": "Giá thay đổi theo thương hiệu và nhà thuốc. Trandolapril generic thường rẻ hơn (30,000-50,000 VND/viên 2mg)."
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Mavik (trandolapril)",
+                "UpToDate - Trandolapril: Drug information",
+                "TRACE Study - The Lancet",
+                "American Heart Association/American College of Cardiology guidelines"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - TRACE study (large RCT) and extensive clinical experience"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "icu_critical_care_only": False,
+            "bleeding_risk": "Low",
+            "organ_toxicity": {"metabolic": "Moderate (hyperkalemia)", "renal": "Moderate", "respiratory": "Moderate (cough)"}
+        },
+        "guideline_tags": [
+            "ACC/AHA Guidelines - Hypertension",
+            "TRACE Study - Post-Myocardial Infarction",
+            "KDIGO Guidelines - Chronic Kidney Disease",
+            "WHO Essential Medicines List"
+        ],
+        "last_updated": "2025-02-18",
+    },
+    
 }
 
 __all__ = ['ACE_INHIBITORS']

@@ -82,8 +82,8 @@ with col_search:
         placeholder="Nhập tên bệnh, thuốc, lối sống... (VD: Tăng huyết áp, Amoxicillin, chế độ ăn đái tháo đường)",
         show_filters=True,
         show_suggestions=True,
-    key="patient_edu_search",
-)
+        key="patient_edu_search",
+    )
 
 # Nếu có search → ưu tiên chế độ search
 if search_query and search_query.strip():
@@ -111,7 +111,7 @@ if st.session_state.pe_view == "search":
     if topics:
         st.info(f"📊 Tìm thấy **{len(topics)}** tài liệu phù hợp.")
         st.markdown("")
-    
+        
         # Lưới thẻ kết quả – ưu tiên scan nhanh
         render_topic_grid(
             topics,

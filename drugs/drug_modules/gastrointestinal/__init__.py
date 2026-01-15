@@ -17,6 +17,10 @@ from .ibd_5asa import IBD_5ASA_DRUGS
 from .laxatives import LAXATIVES_DRUGS
 from .antispasmodics import ANTISPASMODICS_DRUGS
 from .antiflatulents import ANTIFLATULENTS_DRUGS
+from .ibs_drugs import IBS_DRUGS
+from .digestive_enzymes import DIGESTIVE_ENZYMES_DRUGS
+from .other_gi_drugs import OTHER_GI_DRUGS
+from .fixed_dose_combinations import GASTROINTESTINAL_FIXED_DOSE_COMBINATIONS
 
 # Merge all categories
 GASTROINTESTINAL_DRUGS = {
@@ -35,6 +39,10 @@ GASTROINTESTINAL_DRUGS = {
     **ANTISPASMODICS_DRUGS,
     **ANTIFLATULENTS_DRUGS,
     **IBD_5ASA_DRUGS,
+    **IBS_DRUGS,
+    **DIGESTIVE_ENZYMES_DRUGS,
+    **OTHER_GI_DRUGS,
+    **GASTROINTESTINAL_FIXED_DOSE_COMBINATIONS,
 }
 
 __all__ = ["GASTROINTESTINAL_DRUGS"]

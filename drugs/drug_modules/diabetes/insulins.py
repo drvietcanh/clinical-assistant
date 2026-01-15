@@ -24,9 +24,28 @@ INSULINS_DRUGS = {
         "dosage": {
             "type1_basal": "0.2-0.4 đơn vị/kg/ngày (NPH hoặc insulin dài)",
             "type1_bolus": "0.5-1 đơn vị/kg/ngày chia trước bữa ăn",
+            "dm_t2": "Khởi đầu 0.1-0.2 đơn vị/kg/ngày, điều chỉnh theo đường huyết",
             "dka_iv": "0.1 đơn vị/kg/giờ IV truyền liên tục",
             "hospital_hyperglycemia": "0.05-0.1 đơn vị/kg/giờ",
-            "notes": "Nhiều loại: rapid-acting, short-acting, intermediate, long-acting. Điều chỉnh theo đường huyết",
+            "adult_start": "0.1-0.2 đơn vị/kg/ngày (đái tháo đường type 2)",
+            "adult_usual": "0.3-0.8 đơn vị/kg/ngày (tổng liều hàng ngày)",
+            "adult_max": "Điều chỉnh theo đường huyết, không có liều tối đa cố định",
+            "elderly": "Khởi đầu liều thấp hơn (0.1 đơn vị/kg/ngày), tăng dần chậm. Người cao tuổi nhạy cảm hơn với hạ đường huyết.",
+            "renal_adjustment_dosage": {
+                "normal": "0.3-0.8 đơn vị/kg/ngày",
+                "30_60": "Có thể cần giảm liều do giảm chuyển hóa insulin",
+                "under_30": "Có thể cần giảm liều đáng kể do giảm chuyển hóa insulin",
+                "dialysis": "Có thể cần giảm liều đáng kể"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "0.3-0.8 đơn vị/kg/ngày",
+                "moderate": "Có thể cần giảm liều do giảm chuyển hóa insulin",
+                "severe": "Có thể cần giảm liều đáng kể do giảm chuyển hóa insulin"
+            },
+            "administration_route": "SC, IV (cho DKA và tăng đường huyết trong bệnh viện)",
+            "frequency": "1-4 lần/ngày tùy loại insulin và phác đồ",
+            "with_food": "Bolus insulin: tiêm trước bữa ăn (15-30 phút trước với rapid-acting, ngay trước với short-acting)",
+            "notes": "Nhiều loại: rapid-acting, short-acting, intermediate, long-acting. Điều chỉnh theo đường huyết. Liều rất cá thể hóa."
         },
         "side_effects": [
             "Hạ đường huyết (nguy hiểm)",

@@ -23,7 +23,20 @@ NON_SELECTIVE_BETA_BLOCKERS = {
         "adult_heart_failure": "3.125mg x 2 lần/ngày, tăng dần mỗi 2 tuần đến 25mg x 2 lần/ngày",
         "adult_htn": "6.25-25mg x 2 lần/ngày",
         "adult_post_mi": "6.25-25mg x 2 lần/ngày",
-        "notes": "Có bằng chứng giảm tỷ lệ tử vong trong suy tim. Có tác dụng giãn mạch"
+        "adult_start": "3.125mg x 2 lần/ngày (suy tim), 6.25mg x 2 lần/ngày (tăng huyết áp)",
+        "adult_usual": "12.5-25mg x 2 lần/ngày (suy tim), 12.5-25mg x 2 lần/ngày (tăng huyết áp)",
+        "adult_max": "25mg x 2 lần/ngày",
+        "elderly": "Khởi đầu 3.125mg x 1 lần/ngày, tăng dần chậm. Người cao tuổi nhạy cảm hơn với tác dụng phụ, đặc biệt hạ huyết áp.",
+        "renal_adjustment_dosage": {
+            "normal": "6.25-25mg x 2 lần/ngày",
+            "30_60": "Thận trọng, có thể giảm liều",
+            "under_30": "Thận trọng, có thể giảm liều",
+            "dialysis": "Không có dữ liệu cụ thể"
+        },
+        "administration_route": "PO",
+        "frequency": "2 lần/ngày",
+        "with_food": "Nên uống với thức ăn để giảm nguy cơ hạ huyết áp",
+        "notes": "Có bằng chứng giảm tỷ lệ tử vong trong suy tim. Có tác dụng giãn mạch (alpha-blocking). CHỐNG CHỈ ĐỊNH trong suy gan nặng (thải chủ yếu qua gan)."
     },
     "renal_adjustment": {
         "normal": "Không đổi",
@@ -55,7 +68,7 @@ NON_SELECTIVE_BETA_BLOCKERS = {
           "ACC/AHA/HFSA HFrEF GDMT",
           "ESC HFrEF Class I"
       ],
-      "mechanism_of_action": "Non-selective beta-adrenergic receptor blocker (beta1 và beta2) kết hợp với alpha-1 adrenergic receptor blocker. Ức chế beta receptors làm giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp. Block alpha-1 receptors gây giãn mạch, giảm hậu gánh, cải thiện tuần hoàn. Có bằng chứng mạnh làm giảm tỷ lệ tử vong và nhập viện trong suy tim mạn tính (NYHA class II-IV).",
+      "mechanism_of_action": "Carvedilol là non-selective beta-adrenergic receptor blocker (ức chế cả beta1 và beta2 receptors) kết hợp với alpha-1 adrenergic receptor blocker. Cơ chế tác dụng: (1) Ức chế beta1 receptors ở tim: Giảm nhịp tim, giảm co bóp cơ tim, giảm nhu cầu oxy cơ tim, giảm huyết áp. (2) Ức chế beta2 receptors: Có thể gây co thắt phế quản (nguy cơ cao hơn selective beta-blockers), nhưng cũng giảm renin-angiotensin system. (3) Block alpha-1 receptors trên mạch máu: Gây giãn mạch ngoại vi, giảm sức cản mạch máu hệ thống (SVR), giảm hậu gánh tim. Điều này giúp cải thiện tuần hoàn và giảm công tim. (4) Tác dụng kết hợp (beta + alpha blockade): Giảm cả tiền gánh và hậu gánh, cải thiện chức năng tim trong suy tim. Có bằng chứng mạnh từ các nghiên cứu lớn (COPERNICUS, CAPRICORN) cho thấy carvedilol làm giảm tỷ lệ tử vong và nhập viện trong suy tim mạn tính (NYHA class II-IV) và sau nhồi máu cơ tim. Carvedilol chuyển hóa qua gan (CYP2D6, CYP2C9, CYP3A4), thải trừ qua phân và nước tiểu.",
       "monitoring": [
           "Nhịp tim và huyết áp (trước và sau khi bắt đầu, đặc biệt ở bệnh nhân suy tim - có thể gây hạ huyết áp)",
           "Dấu hiệu suy tim: khó thở, phù, tăng cân, giảm khả năng gắng sức",
@@ -272,7 +285,20 @@ NON_SELECTIVE_BETA_BLOCKERS = {
             "adult_htn": "40-80mg x 1 lần/ngày, tăng dần đến 320mg/ngày nếu cần",
             "adult_angina": "40-80mg x 1 lần/ngày, tăng dần đến 240mg/ngày nếu cần",
             "adult_migraine": "40-80mg x 1 lần/ngày",
-            "notes": "Non-selective, half-life dài (20-24 giờ), dùng 1 lần/ngày. Thải qua thận, cần điều chỉnh liều ở suy thận."
+            "adult_start": "40mg x 1 lần/ngày",
+            "adult_usual": "80-160mg x 1 lần/ngày",
+            "adult_max": "320mg/ngày",
+            "elderly": "Khởi đầu 20-40mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "40-80mg x 1 lần/ngày",
+                "30_60": "20-40mg x 1 lần/ngày hoặc tăng khoảng cách liều (giảm liều 50%)",
+                "under_30": "20mg x 1 lần/ngày hoặc tăng khoảng cách liều (giảm liều 75%)",
+                "dialysis": "Bổ sung liều sau mỗi lần lọc máu"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Non-selective, half-life dài (20-24 giờ), dùng 1 lần/ngày. Thải qua thận (không chuyển hóa), cần điều chỉnh liều ở suy thận."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
@@ -481,7 +507,20 @@ NON_SELECTIVE_BETA_BLOCKERS = {
             "adult_htn": "40-160mg x 2 lần/ngày",
             "adult_angina": "80-320mg x 2-3 lần/ngày",
             "adult_migraine": "20-40mg x 2-3 lần/ngày",
-            "notes": "Non-selective, ức chế cả beta1 và beta2"
+            "adult_start": "40mg x 2 lần/ngày (tăng huyết áp), 80mg x 2 lần/ngày (đau thắt ngực)",
+            "adult_usual": "80-160mg x 2 lần/ngày (tăng huyết áp), 160-240mg x 2-3 lần/ngày (đau thắt ngực)",
+            "adult_max": "320mg/ngày",
+            "elderly": "Khởi đầu 10-20mg x 2 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "40-160mg x 2 lần/ngày",
+                "30_60": "Giảm liều nhẹ, thận trọng",
+                "under_30": "Giảm liều 50%, thận trọng",
+                "dialysis": "Không có dữ liệu cụ thể"
+            },
+            "administration_route": "PO",
+            "frequency": "2-3 lần/ngày",
+            "with_food": "Uống với thức ăn để giảm tác dụng phụ và tăng hấp thu",
+            "notes": "Non-selective, ức chế cả beta1 và beta2. Chuyển hóa qua gan (CYP2D6, CYP1A2), cần điều chỉnh liều ở suy gan."
         },
         "side_effects": [
             "Mệt mỏi",
@@ -495,7 +534,7 @@ NON_SELECTIVE_BETA_BLOCKERS = {
               "Insulin: che dấu triệu chứng hạ đường huyết"
           ],
         "pregnancy": "C",
-          "mechanism_of_action": "Non-selective beta-adrenergic receptor blocker (beta1 và beta2). Ức chế tác dụng của catecholamines (epinephrine, norepinephrine), giảm nhịp tim, giảm co bóp cơ tim, giảm huyết áp, giảm nhu cầu oxy cơ tim. Ức chế renin-angiotensin system. Có tác dụng chống loạn nhịp (class II antiarrhythmic).",
+          "mechanism_of_action": "Propranolol là non-selective beta-adrenergic receptor blocker đầu tiên được phát triển, ức chế cả beta1 và beta2 receptors. Cơ chế tác dụng: (1) Ức chế beta1 receptors ở tim: Giảm nhịp tim, giảm co bóp cơ tim, giảm dẫn truyền nhĩ thất, giảm nhu cầu oxy cơ tim, giảm huyết áp. (2) Ức chế beta2 receptors: Giảm giãn mạch, giảm giãn phế quản (có thể gây co thắt phế quản - nguy cơ cao), giảm glycogenolysis ở gan và cơ, giảm renin-angiotensin system. (3) Tác dụng chống loạn nhịp (class II antiarrhythmic): Ức chế dẫn truyền nhĩ thất, giảm tự động tính nút xoang và nút nhĩ thất, làm chậm nhịp tim. (4) Tác dụng trên hệ thần kinh trung ương: Giảm lo âu, giảm run cơ (dùng trong run cơ bản và lo âu), giảm tần suất migraine (cơ chế chưa rõ hoàn toàn, có thể liên quan đến giảm co mạch não). ĐẶC ĐIỂM: Propranolol có extensive first-pass metabolism qua gan (CYP2D6, CYP1A2), bioavailability thấp và thay đổi giữa các cá nhân. Half-life ngắn (3-5 giờ) nhưng tác dụng kéo dài hơn do tác dụng trên receptor. Chuyển hóa qua gan, cần điều chỉnh liều ở suy gan.",
           "monitoring": [
               "Nhịp tim và huyết áp (trước và sau khi bắt đầu)",
               "Dấu hiệu suy tim (khó thở, phù, tăng cân)",
@@ -725,7 +764,20 @@ NON_SELECTIVE_BETA_BLOCKERS = {
             "adult_migraine": "10-20mg x 2 lần/ngày",
             "adult_post_mi": "10mg x 2 lần/ngày",
             "adult_glaucoma": "1 giọt 0.25% hoặc 0.5% x 2 lần/ngày (mỗi mắt)",
-            "notes": "Non-selective. Có dạng uống và dạng nhỏ mắt (cho tăng nhãn áp). Dạng nhỏ mắt có thể hấp thu toàn thân và gây tác dụng phụ."
+            "adult_start": "10mg x 2 lần/ngày",
+            "adult_usual": "10-20mg x 2 lần/ngày",
+            "adult_max": "60mg/ngày",
+            "elderly": "Khởi đầu 5-10mg x 2 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "10-20mg x 2 lần/ngày",
+                "30_60": "10mg x 2 lần/ngày, thận trọng",
+                "under_30": "5-10mg x 2 lần/ngày (giảm liều 50%), thận trọng",
+                "dialysis": "Không có dữ liệu cụ thể"
+            },
+            "administration_route": "PO, Ophthalmic",
+            "frequency": "2 lần/ngày (PO), 2 lần/ngày (ophthalmic)",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Non-selective. Có dạng uống và dạng nhỏ mắt (cho tăng nhãn áp). Dạng nhỏ mắt có thể hấp thu toàn thân và gây tác dụng phụ. CHỐNG CHỈ ĐỊNH trong suy gan nặng (chuyển hóa qua gan)."
         },
         "renal_adjustment": {
             "normal": "Không đổi",

@@ -19,7 +19,25 @@ DIHYDROPYRIDINE_CCB = {
         "dosage": {
             "adult_htn": "2.5-10mg x 1 lần/ngày",
             "adult_angina": "5-10mg x 1 lần/ngày",
-            "notes": "Tác dụng dài, uống 1 lần/ngày"
+            "adult_start": "2.5-5mg x 1 lần/ngày",
+            "adult_usual": "5-10mg x 1 lần/ngày",
+            "adult_max": "10mg/ngày",
+            "elderly": "Khởi đầu 2.5mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "2.5-10mg x 1 lần/ngày",
+                "30_60": "2.5-5mg x 1 lần/ngày, thận trọng",
+                "under_30": "2.5mg x 1 lần/ngày, thận trọng",
+                "dialysis": "Không cần điều chỉnh liều"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "2.5-10mg x 1 lần/ngày",
+                "moderate": "2.5-5mg x 1 lần/ngày, thận trọng",
+                "severe": "2.5mg x 1 lần/ngày, thận trọng"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Tác dụng dài (half-life 30-50 giờ), uống 1 lần/ngày. Chuyển hóa qua gan (CYP3A4), cần điều chỉnh liều ở suy gan."
         },
         "side_effects": [
             "Phù chân",
@@ -33,7 +51,7 @@ DIHYDROPYRIDINE_CCB = {
             "Grapefruit juice: tăng nồng độ"
         ],
         "pregnancy": "C",
-        "mechanism_of_action": "Ức chế dòng calci vào tế bào cơ trơn mạch máu, gây giãn mạch, giảm kháng lực mạch máu ngoại biên",
+        "mechanism_of_action": "Amlodipine là dihydropyridine calcium channel blocker (CCB) tác dụng kéo dài. Cơ chế tác dụng: (1) Ức chế chọn lọc kênh calci L-type voltage-gated trên màng tế bào cơ trơn mạch máu, ngăn cản dòng calci vào trong tế bào. Giảm nồng độ calci nội bào dẫn đến giảm co bóp cơ trơn mạch máu và giãn mạch. (2) Chủ yếu tác dụng trên mạch máu ngoại vi (arterioles), giảm sức cản mạch máu hệ thống (SVR), dẫn đến giảm huyết áp. (3) Giãn mạch vành, tăng tưới máu cơ tim, giảm nhu cầu oxy cơ tim (dùng trong đau thắt ngực). (4) Ít ảnh hưởng đến tim: Không ức chế co bóp cơ tim đáng kể, không làm chậm nhịp tim như non-dihydropyridine CCB (verapamil, diltiazem). ĐẶC ĐIỂM: Half-life rất dài (30-50 giờ) do gắn chặt vào receptor và chuyển hóa chậm, cho phép dùng 1 lần/ngày và duy trì tác dụng ổn định. Chuyển hóa qua gan (CYP3A4), cần điều chỉnh liều ở suy gan. Tác dụng phụ phổ biến: phù chân do giãn mạch tiền mao mạch nhiều hơn mao mạch.",
         "monitoring": [
             "Huyết áp mỗi lần khám",
             "Nhịp tim (có thể tăng nhẹ phản ứng)",
@@ -400,8 +418,25 @@ DIHYDROPYRIDINE_CCB = {
         "dosage": {
             "adult_htn": "5-10mg x 1 lần/ngày, tăng đến 20mg x 1 lần/ngày nếu cần",
             "adult_angina": "5-10mg x 1 lần/ngày",
-            "elderly": "Khởi đầu 2.5mg x 1 lần/ngày",
-            "notes": "Tác dụng dài, uống 1 lần/ngày. Extended-release formulation."
+            "adult_start": "5mg x 1 lần/ngày",
+            "adult_usual": "5-10mg x 1 lần/ngày",
+            "adult_max": "20mg/ngày",
+            "elderly": "Khởi đầu 2.5mg x 1 lần/ngày, tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "5-10mg x 1 lần/ngày",
+                "30_60": "5mg x 1 lần/ngày, thận trọng",
+                "under_30": "2.5-5mg x 1 lần/ngày, thận trọng",
+                "dialysis": "Không cần điều chỉnh liều"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "5-10mg x 1 lần/ngày",
+                "moderate": "5mg x 1 lần/ngày, thận trọng",
+                "severe": "2.5mg x 1 lần/ngày, thận trọng"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Tác dụng dài, uống 1 lần/ngày. Extended-release formulation. Chuyển hóa qua gan, cần điều chỉnh liều ở suy gan."
         },
         "renal_adjustment": {
             "normal": "Không đổi",
@@ -1151,10 +1186,29 @@ DIHYDROPYRIDINE_CCB = {
             "Hẹp van động mạch chủ nặng"
         ],
         "dosage": {
-            "adult_htn_immediate": "10-20mg x 3 lần/ngày",
+            "adult_htn": "30-90mg x 1 lần/ngày (extended-release XL/retard)",
+            "adult_htn_immediate": "10-20mg x 3 lần/ngày (KHÔNG khuyến cáo cho tăng huyết áp)",
             "adult_htn_extended": "30-90mg x 1 lần/ngày (XL/retard)",
             "adult_angina": "10-20mg x 3 lần/ngày",
-            "notes": "Tránh dùng immediate-release cho tăng huyết áp (nguy cơ hạ HA đột ngột). Ưu tiên extended-release"
+            "adult_start": "30mg x 1 lần/ngày (extended-release)",
+            "adult_usual": "30-60mg x 1 lần/ngày (extended-release)",
+            "adult_max": "90mg/ngày (extended-release)",
+            "elderly": "Khởi đầu 30mg x 1 lần/ngày (extended-release), tăng dần. Người cao tuổi nhạy cảm hơn với tác dụng phụ.",
+            "renal_adjustment_dosage": {
+                "normal": "30-90mg x 1 lần/ngày (extended-release)",
+                "30_60": "30mg x 1 lần/ngày, thận trọng",
+                "under_30": "30mg x 1 lần/ngày, thận trọng",
+                "dialysis": "Không cần điều chỉnh liều"
+            },
+            "hepatic_adjustment_dosage": {
+                "mild": "30-90mg x 1 lần/ngày",
+                "moderate": "30mg x 1 lần/ngày, thận trọng",
+                "severe": "30mg x 1 lần/ngày, thận trọng"
+            },
+            "administration_route": "PO",
+            "frequency": "1 lần/ngày (extended-release), 3 lần/ngày (immediate-release)",
+            "with_food": "Có thể uống với hoặc không thức ăn",
+            "notes": "Tránh dùng immediate-release cho tăng huyết áp (nguy cơ hạ HA đột ngột). Ưu tiên extended-release. Tránh grapefruit juice (ức chế CYP3A4)."
         },
         "renal_adjustment": {
             "normal": "Không đổi",

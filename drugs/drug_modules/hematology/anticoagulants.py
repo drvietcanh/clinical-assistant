@@ -8,6 +8,19 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
         "Apixaban": {
             "group": "Hematology - Anticoagulant (Direct Factor Xa Inhibitor, DOAC)",
             "vietnamese_name": "Apixaban, Eliquis",
+            "brand_names": {
+                "common": ["Eliquis"],
+                "vietnam": ["Eliquis", "Apixaban"]
+            },
+            "manufacturer": {
+                "primary": "Bristol-Myers Squibb and Pfizer",
+                "vietnam": [
+                    "Bristol-Myers Squibb",
+                    "Pfizer",
+                    "Các công ty dược phẩm Việt Nam (generic - nếu có)"
+                ],
+                "notes": "Bristol-Myers Squibb và Pfizer là nhà sản xuất gốc của Eliquis (apixaban)."
+            },
             "administration": ["PO"],
             "indications": [
                 "Phòng ngừa đột quỵ trong rung nhĩ không do van tim",
@@ -181,6 +194,18 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
         "Dabigatran": {
             "group": "Hematology - Anticoagulant (Direct Thrombin Inhibitor, DOAC)",
             "vietnamese_name": "Dabigatran, Pradaxa",
+            "brand_names": {
+                "common": ["Pradaxa"],
+                "vietnam": ["Pradaxa", "Dabigatran"]
+            },
+            "manufacturer": {
+                "primary": "Boehringer Ingelheim",
+                "vietnam": [
+                    "Boehringer Ingelheim",
+                    "Các công ty dược phẩm Việt Nam (generic - nếu có)"
+                ],
+                "notes": "Boehringer Ingelheim là nhà sản xuất gốc của Pradaxa (dabigatran)."
+            },
             "administration": ["PO"],
             "indications": [
                 "Phòng ngừa đột quỵ trong rung nhĩ không do van tim",
@@ -354,6 +379,18 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
         "Edoxaban": {
             "group": "Hematology - Anticoagulant (Direct Factor Xa Inhibitor, DOAC)",
             "vietnamese_name": "Edoxaban, Lixiana, Savaysa",
+            "brand_names": {
+                "common": ["Savaysa", "Lixiana"],
+                "vietnam": ["Savaysa", "Lixiana", "Edoxaban"]
+            },
+            "manufacturer": {
+                "primary": "Daiichi Sankyo",
+                "vietnam": [
+                    "Daiichi Sankyo",
+                    "Các công ty dược phẩm Việt Nam (generic - nếu có)"
+                ],
+                "notes": "Daiichi Sankyo là nhà sản xuất gốc của Savaysa/Lixiana (edoxaban)."
+            },
             "administration": ["PO"],
             "indications": [
                 "Phòng ngừa đột quỵ trong rung nhĩ không do van tim",
@@ -515,6 +552,19 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
         "Enoxaparin": {
             "group": "Hematology - Anticoagulant (Low Molecular Weight Heparin)",
             "vietnamese_name": "Enoxaparin, Lovenox, Clexane",
+            "brand_names": {
+                "common": ["Lovenox", "Clexane"],
+                "vietnam": ["Lovenox", "Clexane", "Enoxaparin"]
+            },
+            "manufacturer": {
+                "primary": "Sanofi (Lovenox), Sanofi-Aventis (Clexane)",
+                "vietnam": [
+                    "Sanofi",
+                    "Sanofi-Aventis",
+                    "Các công ty dược phẩm Việt Nam (generic)"
+                ],
+                "notes": "Sanofi là nhà sản xuất gốc của Lovenox/Clexane (enoxaparin). Có nhiều sản phẩm generic."
+            },
             "administration": ["SC", "IV"],
             "indications": [
                 "Phòng ngừa huyết khối tĩnh mạch sâu (DVT) sau phẫu thuật",
@@ -697,6 +747,18 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
         "Fondaparinux": {
             "group": "Hematology - Anticoagulant (Synthetic Factor Xa Inhibitor)",
             "vietnamese_name": "Fondaparinux, Arixtra",
+            "brand_names": {
+                "common": ["Arixtra"],
+                "vietnam": ["Arixtra", "Fondaparinux"]
+            },
+            "manufacturer": {
+                "primary": "GlaxoSmithKline (GSK)",
+                "vietnam": [
+                    "GlaxoSmithKline (GSK)",
+                    "Các công ty dược phẩm Việt Nam (generic - nếu có)"
+                ],
+                "notes": "GlaxoSmithKline (GSK) là nhà sản xuất gốc của Arixtra (fondaparinux)."
+            },
             "administration": ["SC"],
             "indications": [
                 "Phòng ngừa DVT sau phẫu thuật hông/gối",
@@ -873,6 +935,18 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
         "Heparin": {
             "group": "Hematology - Anticoagulant (Unfractionated Heparin)",
             "vietnamese_name": "Heparin, Unfractionated Heparin, UFH",
+            "brand_names": {
+                "common": ["Heparin Sodium", "Hep-Lock"],
+                "vietnam": ["Heparin", "Heparin Sodium", "Các sản phẩm generic"]
+            },
+            "manufacturer": {
+                "primary": "Multiple manufacturers (Baxter, Pfizer, Fresenius Kabi, etc.)",
+                "vietnam": [
+                    "Nhiều nhà sản xuất (Baxter, Pfizer, Fresenius Kabi, v.v.)",
+                    "Các công ty dược phẩm Việt Nam (generic)"
+                ],
+                "notes": "Heparin có nhiều nhà sản xuất do là thuốc generic. Các nhà sản xuất chính bao gồm Baxter, Pfizer, Fresenius Kabi."
+            },
             "administration": ["IV", "SC"],
             "indications": [
                 "Điều trị DVT/PE",
@@ -1063,6 +1137,19 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
         "Rivaroxaban": {
             "group": "Hematology - Anticoagulant (Direct Factor Xa Inhibitor, DOAC)",
             "vietnamese_name": "Rivaroxaban, Xarelto",
+            "brand_names": {
+                "common": ["Xarelto"],
+                "vietnam": ["Xarelto", "Rivaroxaban"]
+            },
+            "manufacturer": {
+                "primary": "Bayer and Janssen Pharmaceuticals",
+                "vietnam": [
+                    "Bayer",
+                    "Janssen Pharmaceuticals",
+                    "Các công ty dược phẩm Việt Nam (generic - nếu có)"
+                ],
+                "notes": "Bayer và Janssen Pharmaceuticals là nhà sản xuất gốc của Xarelto (rivaroxaban)."
+            },
             "administration": ["PO"],
             "indications": [
                 "Phòng ngừa đột quỵ trong rung nhĩ không do van tim",
@@ -1232,6 +1319,190 @@ ANTICOAGULANTS_DRUGS: Dict[str, Dict[str, Any]] = {
                 ],
                 "last_updated": "2025-02-05",
                 "evidence_level": "High (FDA-approved, large RCT - ROCKET-AF study)"
+            }
+        },
+
+        "Betrixaban": {
+            "group": "Hematology - Anticoagulant (Direct Factor Xa Inhibitor, DOAC)",
+            "vietnamese_name": "Betrixaban, Bevyxxa",
+            "brand_names": {
+                "common": ["Bevyxxa"],
+                "vietnam": ["Betrixaban", "Bevyxxa"]
+            },
+            "manufacturer": {
+                "primary": "Portola Pharmaceuticals (now acquired by Alexion Pharmaceuticals)",
+                "vietnam": ["Các công ty dược phẩm Việt Nam (generic - nếu có)"],
+                "notes": "Portola Pharmaceuticals là nhà sản xuất gốc của Bevyxxa. Công ty đã được Alexion Pharmaceuticals mua lại."
+            },
+            "administration": ["PO"],
+            "indications": [
+                "Phòng ngừa huyết khối tĩnh mạch sâu (DVT) và thuyên tắc phổi (PE) ở bệnh nhân nội trú có nguy cơ cao do bệnh cấp tính",
+                "Phòng ngừa DVT/PE ở bệnh nhân nhập viện vì bệnh cấp tính (thời gian điều trị 35-42 ngày)"
+            ],
+            "contraindications": [
+                "Chảy máu đang hoạt động",
+                "Suy thận nặng (CrCl <30)",
+                "Suy gan nặng (Child-Pugh C)",
+                "Có thai",
+                "Dị ứng betrixaban"
+            ],
+            "dosage": {
+                "adult_prophylaxis": "160mg x 1 lần vào ngày đầu, sau đó 80mg x 1 lần/ngày trong 35-42 ngày",
+                "renal_adjustment_crcl_30_50": "80mg x 1 lần vào ngày đầu, sau đó 40mg x 1 lần/ngày (nếu CrCl 30-50 ml/min)",
+                "renal_adjustment_crcl_under_30": "CHỐNG CHỈ ĐỊNH (CrCl <30 ml/min)",
+                "hepatic_adjustment_severe": "CHỐNG CHỈ ĐỊNH (suy gan nặng - Child-Pugh C)",
+                "notes": "Điều chỉnh liều theo chức năng thận. Không cần theo dõi INR/aPTT thường xuyên. Thời gian điều trị: 35-42 ngày."
+            },
+            "renal_adjustment": {
+                "normal": "160mg x 1 lần vào ngày đầu, sau đó 80mg x 1 lần/ngày",
+                "30_50": "80mg x 1 lần vào ngày đầu, sau đó 40mg x 1 lần/ngày",
+                "under_30": "CHỐNG CHỈ ĐỊNH - không dùng",
+                "dialysis": "CHỐNG CHỈ ĐỊNH",
+                "notes": "Betrixaban thải trừ chủ yếu qua thận. CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30 ml/min)."
+            },
+            "side_effects": [
+                "Chảy máu (phổ biến)",
+                "Buồn nôn",
+                "Đau đầu",
+                "Thiếu máu",
+                "Rối loạn tiêu hóa"
+            ],
+            "interactions": [
+                "P-gp inhibitors mạnh (ketoconazole, dronedarone): tăng nồng độ (tránh dùng hoặc giảm liều)",
+                "P-gp inducers (rifampin): giảm nồng độ",
+                "Aspirin/NSAID: tăng nguy cơ chảy máu"
+            ],
+            "pregnancy": "C - Tránh dùng",
+            "risk_flags": {
+                "high_alert": True,
+                "narrow_therapeutic_index": True,
+                "bleeding_risk": "High",
+                "icu_critical_care_only": False
+            },
+            "guideline_tags": [
+                "ACCP/Antithrombotic Therapy Guidelines",
+                "ISTH VTE prophylaxis guidelines"
+            ],
+            "mechanism_of_action": "Betrixaban là direct factor Xa inhibitor, ức chế trực tiếp yếu tố Xa mà không cần antithrombin III. Betrixaban gắn trực tiếp với Xa, ngăn chặn chuyển đổi prothrombin thành thrombin, ức chế hình thành cục máu đông. Thuốc là DOAC (direct oral anticoagulant), không cần theo dõi INR/aPTT thường xuyên như warfarin. Betrixaban được thải trừ chủ yếu qua thận, nên CHỐNG CHỈ ĐỊNH ở suy thận nặng (CrCl <30). Không có antidote đặc hiệu.",
+            "monitoring": [
+                "Dấu hiệu chảy máu (chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu)",
+                "Chức năng thận (CrCl) - mỗi 3-6 tháng (betrixaban thải trừ qua thận)",
+                "Không cần theo dõi INR/aPTT thường xuyên (khác warfarin)",
+                "Dấu hiệu rối loạn tiêu hóa"
+            ],
+            "precautions": [
+                "Điều chỉnh liều theo chức năng thận (CrCl) - mỗi 3-6 tháng",
+                "Suy thận nặng (CrCl <30) - CHỐNG CHỈ ĐỊNH",
+                "Suy gan nặng (Child-Pugh C) - CHỐNG CHỈ ĐỊNH",
+                "Không cần theo dõi INR/aPTT thường xuyên (khác warfarin)",
+                "Không có antidote đặc hiệu - điều trị hỗ trợ nếu chảy máu",
+                "Tránh dùng với P-gp inhibitors mạnh (ketoconazole, dronedarone) - tăng nồng độ",
+                "Ngừng 1-2 ngày trước phẫu thuật lớn (tùy chức năng thận)",
+                "Thời gian điều trị: 35-42 ngày",
+                "Thận trọng ở bệnh nhân có nguy cơ chảy máu cao"
+            ],
+            "pharmacokinetics": {
+                "half_life": "19-27 giờ (dài hơn các DOAC khác)",
+                "onset": "2-4 giờ",
+                "duration": "24-48 giờ",
+                "protein_binding": "60%",
+                "clearance": "Thận (chủ yếu - thải trừ nguyên dạng). Gan (một phần). CHỐNG CHỈ ĐỊNH ở suy thận nặng."
+            },
+            "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm",
+            "black_box_warnings": "Nguy cơ chảy máu nghiêm trọng, có thể gây tử vong. Suy thận nặng (CrCl <30) - CHỐNG CHỈ ĐỊNH. Suy gan nặng (Child-Pugh C) - CHỐNG CHỈ ĐỊNH. Không ngừng đột ngột.",
+            "drug_interactions": {
+                "major": [
+                    {
+                        "drug": "P-gp inhibitors mạnh (ketoconazole, dronedarone)",
+                        "mechanism": "Ức chế P-gp, tăng nồng độ betrixaban",
+                        "effect": "Tăng nồng độ betrixaban, tăng nguy cơ chảy máu",
+                        "management": "Tránh dùng cùng hoặc giảm liều betrixaban. Theo dõi dấu hiệu chảy máu."
+                    }
+                ],
+                "moderate": [
+                    {
+                        "drug": "Aspirin, NSAIDs",
+                        "mechanism": "Tác dụng hiệp đồng chống đông",
+                        "effect": "Tăng nguy cơ chảy máu",
+                        "management": "Thận trọng. Theo dõi dấu hiệu chảy máu."
+                    },
+                    {
+                        "drug": "P-gp inducers (rifampin)",
+                        "mechanism": "Cảm ứng P-gp, giảm nồng độ betrixaban",
+                        "effect": "Giảm nồng độ betrixaban, giảm hiệu quả",
+                        "management": "Thận trọng. Tránh dùng cùng nếu có thể."
+                    }
+                ],
+                "minor": []
+            },
+            "contraindications_detail": {
+                "tuyệt_đối": [
+                    "Chảy máu đang hoạt động",
+                    "Suy thận nặng (CrCl <30 ml/min) - CHỐNG CHỈ ĐỊNH",
+                    "Suy gan nặng (Child-Pugh C) - CHỐNG CHỈ ĐỊNH",
+                    "Dị ứng betrixaban"
+                ],
+                "tương_đối": [
+                    "Suy thận trung bình (CrCl 30-50 ml/min) - giảm liều (80mg/40mg)",
+                    "Nguy cơ chảy máu cao (loét dạ dày, xuất huyết gần đây) - thận trọng",
+                    "Phẫu thuật lớn - cần ngừng trước phẫu thuật",
+                    "Có thai - tránh dùng"
+                ]
+            },
+            "pregnancy_lactation": {
+                "fda_category": "C",
+                "pregnancy_details": "Tránh dùng trong thai kỳ. Betrixaban có thể gây chảy máu ở mẹ và thai nhi. Chỉ dùng nếu lợi ích > nguy cơ rõ ràng.",
+                "lactation": {
+                    "safety": "Caution",
+                    "details": "Betrixaban có thể bài tiết vào sữa mẹ. Không có dữ liệu đầy đủ về an toàn ở trẻ bú mẹ.",
+                    "recommendation": "Thận trọng khi dùng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc nếu có thể."
+                }
+            },
+            "hepatic_adjustment": {
+                "mild": "Không đổi",
+                "moderate": "Thận trọng",
+                "severe": "CHỐNG CHỈ ĐỊNH (Child-Pugh C)",
+                "notes": "Betrixaban chuyển hóa một phần qua gan. Không cần điều chỉnh liều ở suy gan nhẹ. Thận trọng ở suy gan trung bình. CHỐNG CHỈ ĐỊNH ở suy gan nặng (Child-Pugh C)."
+            },
+            "overdose_management": {
+                "symptoms": [
+                    "Chảy máu: chảy máu mũi, chảy máu nướu, phân đen, nôn ra máu, chảy máu nội sọ",
+                    "Chảy máu có thể nghiêm trọng và đe dọa tính mạng"
+                ],
+                "antidote": "Không có antidote đặc hiệu. Điều trị hỗ trợ.",
+                "treatment": [
+                    "Ngừng betrixaban ngay lập tức",
+                    "Nếu không có andexanet: PCC 4 yếu tố (≈50 IU/kg) + than hoạt sớm nếu mới uống",
+                    "Hỗ trợ hô hấp và tuần hoàn nếu cần",
+                    "Theo dõi dấu hiệu sống, công thức máu, dấu hiệu chảy máu",
+                    "Rửa dạ dày nếu uống trong vòng 2 giờ",
+                    "Than hoạt tính",
+                    "Điều trị chảy máu: truyền máu, tiểu cầu, huyết tương tươi đông lạnh nếu cần",
+                    "Theo dõi ít nhất 48 giờ (do half-life 19-27 giờ)"
+                ],
+                "monitoring": "Dấu hiệu sống, công thức máu (tiểu cầu, hemoglobin), dấu hiệu chảy máu"
+            },
+            "reversal_agents": {
+                "available": False,
+                "agents": [],
+                "notes": "Không có antidote đặc hiệu cho betrixaban. Cân nhắc PCC 4 yếu tố trong chảy máu đe dọa tính mạng."
+            },
+            "administration_instructions": {
+                "oral": {
+                    "with_food": "Có thể uống với hoặc không có thức ăn. Không ảnh hưởng đáng kể đến hấp thu.",
+                    "timing": "Uống 1 lần/ngày. Ngày đầu: 160mg x 1 lần. Từ ngày 2: 80mg x 1 lần/ngày (40mg nếu CrCl 30-50 ml/min). Thời gian điều trị: 35-42 ngày."
+                },
+                "iv": None
+            },
+            "references": {
+                "primary_sources": [
+                    "FDA Drug Label - Bevyxxa (betrixaban)",
+                    "APEX Study - New England Journal of Medicine",
+                    "UpToDate - Betrixaban: Drug information",
+                    "ACCP/Antithrombotic Therapy Guidelines"
+                ],
+                "last_updated": "2025-01-20",
+                "evidence_level": "High (FDA-approved, large RCT - APEX study)"
             }
         },
 

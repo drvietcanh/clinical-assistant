@@ -14,10 +14,19 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'contraindications': [
         'Nhiễm trùng đường hô hấp nặng chưa điều trị', 'Dị ứng'],
         'dosage': {
-        'adult_inhalation_low': '200-400mcg x 2 lần/ngày',
-        'adult_inhalation_medium': '400-800mcg x 2 lần/ngày',
-        'adult_inhalation_high': '800-1600mcg x 2 lần/ngày', 'notes':
-        'Súc miệng sau khi dùng để tránh nấm miệng. Không dùng cho cắt cơn cấp'
+            'adult_inhalation_low': '200-400mcg x 2 lần/ngày',
+            'adult_inhalation_medium': '400-800mcg x 2 lần/ngày',
+            'adult_inhalation_high': '800-1600mcg x 2 lần/ngày',
+            'pediatric': {
+                '6_11_years': '100-200mcg x 2 lần/ngày (khởi đầu liều thấp)',
+                'under_6_years': 'Chưa được nghiên cứu đầy đủ, thận trọng',
+                'notes': 'FDA-approved cho trẻ em ≥6 tuổi. Khởi đầu với liều thấp, tăng dần nếu cần.'
+            },
+            'geriatric': {
+                'dosing': 'Liều tương tự người lớn (không cần điều chỉnh liều)',
+                'notes': 'Không cần điều chỉnh liều, nhưng thận trọng ở liều cao do tăng nguy cơ tác dụng toàn thân'
+            },
+            'notes': 'Súc miệng sau khi dùng để tránh nấm miệng. Không dùng cho cắt cơn cấp. Dùng đều đặn 2 lần/ngày, không phải khi cần.'
         },
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
         'under_30': 'Không đổi'},
@@ -48,10 +57,17 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Theo dõi chậm phát triển ở trẻ em nếu dùng liều cao',
         'Dùng đều đặn hàng ngày, không phải khi cần'],
         'pharmacokinetics': {
-        'half_life': '15 giờ (trong phổi), 2-3 giờ (toàn thân sau hấp thu)',
-        'onset': 'Vài giờ đến vài ngày (tác dụng kháng viêm)', 'duration':
-        '12-24 giờ (dùng 2 lần/ngày)', 'protein_binding': '87%', 'clearance':
-        'Gan: chuyển hóa nhanh qua CYP3A4 (first-pass metabolism cao, ~85-90% bị chuyển hóa). Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản).'},
+            'half_life': '15 giờ (trong phổi), 2-3 giờ (toàn thân sau hấp thu)',
+            'onset': 'Vài giờ đến vài ngày (tác dụng kháng viêm) - không tác dụng tức thì',
+            'duration': '12-24 giờ (dùng 2 lần/ngày)',
+            'bioavailability': 'Không rõ (dạng hít tác dụng tại chỗ), ~20% (toàn thân sau hấp thu)',
+            'protein_binding': '87%',
+            'volume_of_distribution': '~20 L',
+            'metabolism': 'Gan: chuyển hóa nhanh qua CYP3A4 (first-pass metabolism cao, ~85-90% bị chuyển hóa thành beclomethasone-17-monopropionate - dạng hoạt tính). Chuyển hóa nhanh nên tác dụng toàn thân tối thiểu.',
+            'clearance': 'Gan: chuyển hóa nhanh qua CYP3A4. Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản).',
+            'absorption': 'Hấp thu nhanh sau khi hít. Một phần nhỏ được hấp thu toàn thân qua phổi và nuốt vào.',
+            'food_effect': 'Không ảnh hưởng đáng kể đến hấp thu dạng hít'
+        },
         'storage':
         'Dạng hít (MDI/DPI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Kiểm tra hạn sử dụng định kỳ.'
         , 'black_box_warnings': None, 'drug_interactions': {'major': [{'drug':
@@ -146,11 +162,34 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Budesonide, Pulmicort', 'administration': ['Inhalation', 'Nebulizer'],
         'indications': ['Hen phế quản (kiểm soát, phòng ngừa)',
         'COPD (nếu có nhiều đợt cấp)', 'Viêm phế quản co thắt'],
-        'contraindications': ['Nhiễm trùng đường hô hấp nặng chưa điều trị',
-        'Dị ứng'], 'adult_inhalation_medium': '400-800mcg x 2 lần/ngày',
-        'adult_inhalation_high': '800-1600mcg x 2 lần/ngày', 'adult_nebulizer':
-        '0.5-1mg x 2 lần/ngày', 'notes':
-        'Súc miệng sau khi dùng để tránh nấm miệng. Không dùng cho cắt cơn cấp'
+        'contraindications': {
+            'tuyệt_đối': [
+                'Dị ứng với budesonide hoặc các thành phần khác',
+                'Nhiễm trùng đường hô hấp nặng chưa điều trị (lao phổi, nấm)'
+            ],
+            'tương_đối': [
+                'Lao phổi - cần điều trị lao trước, thận trọng',
+                'Nhiễm trùng đường hô hấp - cần điều trị nhiễm trùng trước',
+                'Dùng với ritonavir - tránh dùng',
+                'Dùng với ketoconazole, itraconazole - thận trọng'
+            ]
+        },
+        'dosage': {
+            'adult_inhalation_low': '200-400mcg x 2 lần/ngày',
+            'adult_inhalation_medium': '400-800mcg x 2 lần/ngày',
+            'adult_inhalation_high': '800-1600mcg x 2 lần/ngày',
+            'adult_nebulizer': '0.5-1mg x 2 lần/ngày',
+            'pediatric': {
+                '6_11_years': '200-400mcg x 2 lần/ngày (khởi đầu liều thấp)',
+                '1_5_years': '0.25-0.5mg nebulizer x 2 lần/ngày',
+                'under_1_year': 'Chưa được nghiên cứu đầy đủ, thận trọng',
+                'notes': 'FDA-approved cho trẻ em ≥1 tuổi (nebulizer) và ≥6 tuổi (dạng hít). Có dạng nebulizer cho trẻ nhỏ.'
+            },
+            'geriatric': {
+                'dosing': 'Liều tương tự người lớn (không cần điều chỉnh liều)',
+                'notes': 'Không cần điều chỉnh liều, nhưng thận trọng ở liều cao do tăng nguy cơ tác dụng toàn thân'
+            },
+            'notes': 'Súc miệng sau khi dùng để tránh nấm miệng. Không dùng cho cắt cơn cấp. Dùng đều đặn 2 lần/ngày, không phải khi cần.'
         },
         'renal_adjustment': {'normal': 'Không đổi', '30_60': 'Không đổi',
         'under_30': 'Không đổi'},
@@ -183,10 +222,16 @@ INHALED_CORTICOSTEROID_ICSS_DRUGS = {
         'Có thể dùng cho trẻ em (có dạng nebulizer)',
         'Dùng đều đặn hàng ngày, không phải khi cần'],
         'pharmacokinetics': {
-        'half_life': '2-3 giờ (trong phổi), 4-6 giờ (toàn thân sau hấp thu)',
-        'onset': 'Vài giờ đến vài ngày (tác dụng kháng viêm)', 'duration':
-        '12-24 giờ (dùng 2 lần/ngày)', 'protein_binding': '88-90%', 'clearance':
-        'Gan: chuyển hóa nhanh qua CYP3A4 (first-pass metabolism cao, ~85-90% bị chuyển hóa). Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản).'
+            'half_life': '2-3 giờ (trong phổi), 4-6 giờ (toàn thân sau hấp thu)',
+            'onset': 'Vài giờ đến vài ngày (tác dụng kháng viêm) - không tác dụng tức thì',
+            'duration': '12-24 giờ (dùng 2 lần/ngày)',
+            'bioavailability': 'Không rõ (dạng hít tác dụng tại chỗ), ~39% (toàn thân sau hấp thu)',
+            'protein_binding': '88-90%',
+            'volume_of_distribution': '~3 L/kg',
+            'metabolism': 'Gan: chuyển hóa nhanh qua CYP3A4 (first-pass metabolism cao, ~85-90% bị chuyển hóa thành 6β-hydroxybudesonide và 16α-hydroxyprednisolone - các dạng không hoạt tính). Chuyển hóa nhanh nên tác dụng toàn thân tối thiểu.',
+            'clearance': 'Gan: chuyển hóa nhanh qua CYP3A4. Thận: bài tiết một phần metabolites. Hấp thu toàn thân ít do chuyển hóa nhanh ở gan. Phần lớn tác dụng tại chỗ (phế quản).',
+            'absorption': 'Hấp thu nhanh sau khi hít. Một phần nhỏ được hấp thu toàn thân qua phổi và nuốt vào.',
+            'food_effect': 'Không ảnh hưởng đáng kể đến hấp thu dạng hít'
         },
         'storage':
         'Dạng hít (MDI/DPI): bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng trực tiếp. Không đông lạnh. Nebulizer suspension: bảo quản ở nhiệt độ phòng, lắc kỹ trước khi dùng, dùng trong vòng 2 giờ sau khi mở gói. Bảo quản trong tủ lạnh nếu không dùng ngay (2-8°C), để nhiệt độ phòng trước khi dùng.'
