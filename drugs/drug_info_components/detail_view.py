@@ -44,6 +44,31 @@ def safe_render_html(text):
     # Escape để đảm bảo an toàn
     return html.escape(text_str.strip())
 
+# Helper function to safely render mechanism_of_action that may contain HTML
+def safe_render_mechanism_html(text):
+    """
+    Safely render mechanism_of_action that may contain HTML.
+    - If contains valid HTML tags, return as-is (will be sanitized by Streamlit)
+    - If plain text, return wrapped in styled <p> tag
+    """
+    if text is None:
+        return ""
+    
+    text_str = str(text).strip()
+    
+    # Check if text contains HTML tags (like <p>, <span>, <b>, etc.)
+    if re.search(r'<[a-zA-Z][^>]*>', text_str):
+        # Contains HTML - return as-is (Streamlit will sanitize dangerous content)
+        # Remove dangerous tags/attributes for extra safety
+        # Remove script tags and event handlers
+        text_str = re.sub(r'<script[^>]*>.*?</script>', '', text_str, flags=re.IGNORECASE | re.DOTALL)
+        text_str = re.sub(r'on\w+\s*=\s*["\'][^"\']*["\']', '', text_str, flags=re.IGNORECASE)
+        text_str = re.sub(r'<iframe[^>]*>.*?</iframe>', '', text_str, flags=re.IGNORECASE | re.DOTALL)
+        return text_str
+    else:
+        # Plain text - wrap in styled paragraph
+        return f"<p style='color: #0c4a6e; font-size: 1em; line-height: 1.8; margin: 0;'>{html.escape(text_str)}</p>"
+
 # Check if drug is antibiotic
 try:
     from antibiotics.antibiotics_data import ANTIBIOTICS_DATABASE
@@ -596,11 +621,14 @@ def display_drug_info(drug_name, drug_data, show_header=True):
             evidence_level = drug_data.get('evidence_levels', {}).get('mechanism_of_action', None) if isinstance(drug_data.get('evidence_levels'), dict) else None
             evidence_badge = _get_evidence_badge(evidence_level) if evidence_level else ''
             
+            # Render mechanism_of_action - may contain HTML or plain text
+            mechanism_html = safe_render_mechanism_html(drug_data['mechanism_of_action'])
+            
             st.markdown(
                 f"""
                 <div style='background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 10px; border-left: 4px solid #0EA5E9; margin: 15px 0;'>
                     {evidence_badge}
-                    <p style='color: #0c4a6e; font-size: 1em; line-height: 1.8; margin: 0;'>{safe_render_html(drug_data['mechanism_of_action'])}</p>
+                    {mechanism_html}
                 </div>
                 """,
                 unsafe_allow_html=True
