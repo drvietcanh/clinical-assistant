@@ -979,6 +979,274 @@ ADHD_ANXIOLYTICS_DRUGS = {
             "AACAP Guidelines - ADHD Medications"
         ]
     },
+
+    "Qelbree": {
+        "group": "FDA Approved 4/2/2021",
+        "vietnamese_name": "Viloxazine, Qelbree",
+        "administration": ["PO"],
+        "indications": [
+            "Rối loạn tăng động giảm chú ý (ADHD) ở trẻ em và thanh thiếu niên (6-17 tuổi)",
+            "Attention deficit hyperactivity disorder (ADHD)"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng viloxazine hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch - thận trọng",
+                "Tăng huyết áp - thận trọng",
+                "Suy gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng"
+            ]
+        },
+        "dosage": {
+            "pediatric_6_11": "100mg PO x 1 lần/ngày, có thể tăng lên 200mg/ngày",
+            "pediatric_12_17": "200mg PO x 1 lần/ngày, có thể tăng lên 400mg/ngày",
+            "adult": "200mg PO x 1 lần/ngày, có thể tăng lên 400mg/ngày",
+            "notes": "Uống với hoặc không có thức ăn. Viloxazine là non-stimulant ADHD medication. FDA phê duyệt 4/2/2021."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, không cần chỉnh liều",
+            "under_30": "Thận trọng, dữ liệu hạn chế"
+        },
+        "side_effects": [
+            "Buồn ngủ - phổ biến",
+            "Mệt mỏi - phổ biến",
+            "Giảm cảm giác thèm ăn - phổ biến",
+            "Buồn nôn - phổ biến",
+            "Đau đầu - phổ biến",
+            "Khó chịu (irritability) - phổ biến",
+            "Tăng huyết áp - không phổ biến",
+            "Nhịp tim nhanh - không phổ biến",
+            "Mất ngủ - không phổ biến"
+        ],
+        "interactions": [
+            "MAOIs: tăng nguy cơ hội chứng serotonin",
+            "Thuốc ức chế CYP2D6: có thể tăng nồng độ viloxazine",
+            "Thuốc cảm ứng CYP2D6: có thể giảm nồng độ viloxazine"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Viloxazine là non-stimulant medication cho ADHD. Viloxazine ức chế tái hấp thu norepinephrine (norepinephrine reuptake inhibitor - NRI), làm tăng nồng độ norepinephrine trong synapse. Norepinephrine là chất dẫn truyền thần kinh quan trọng trong điều hòa chú ý, tập trung, và kiểm soát xung động. Tăng nồng độ norepinephrine → cải thiện chức năng điều hành, chú ý, và kiểm soát xung động → giảm triệu chứng ADHD. ĐẶC ĐIỂM: (1) Non-stimulant ADHD medication (NRI), (2) Buồn ngủ, mệt mỏi - phổ biến, (3) Giảm cảm giác thèm ăn - phổ biến, (4) Uống với hoặc không có thức ăn, (5) Tương tác với MAOIs, (6) FDA phê duyệt 4/2/2021.",
+        "monitoring": [
+            "Đáp ứng điều trị: triệu chứng ADHD",
+            "Tác dụng phụ: buồn ngủ, mệt mỏi, giảm cảm giác thèm ăn",
+            "Huyết áp và nhịp tim - không phổ biến nhưng cần theo dõi",
+            "Cân nặng (giảm cảm giác thèm ăn có thể dẫn đến giảm cân)"
+        ],
+        "precautions": [
+            "Buồn ngủ, mệt mỏi - phổ biến. Thận trọng khi lái xe hoặc vận hành máy móc.",
+            "Giảm cảm giác thèm ăn - phổ biến. Theo dõi cân nặng, đặc biệt ở trẻ em.",
+            "Tăng huyết áp, nhịp tim nhanh - không phổ biến nhưng cần theo dõi",
+            "CHỐNG CHỈ ĐỊNH với MAOIs (tăng nguy cơ hội chứng serotonin)",
+            "Uống với hoặc không có thức ăn",
+            "Tương tác với CYP2D6 inhibitors/inducers"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 5-7 giờ",
+            "onset": "Vài ngày đến vài tuần (tác dụng lâm sàng)",
+            "duration": "Dài (dùng hàng ngày)",
+            "protein_binding": "~75%",
+            "metabolism": "Gan (CYP2D6 chủ yếu, CYP3A4 một phần)",
+            "clearance": "Gan (chủ yếu), thận (một phần)"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Bảo quản trong hộp kín gốc. Để xa tầm tay trẻ em.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, cần cảnh báo về: (1) CHỐNG CHỈ ĐỊNH với MAOIs, (2) Buồn ngủ, mệt mỏi - phổ biến, (3) Giảm cảm giác thèm ăn - phổ biến.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "MAOIs (Phenelzine, Tranylcypromine, Selegiline)",
+                    "mechanism": "Tác dụng cộng dồn trên norepinephrine và serotonin",
+                    "effect": "Tăng nguy cơ hội chứng serotonin, tăng huyết áp",
+                    "management": "CHỐNG CHỈ ĐỊNH. Không dùng viloxazine trong vòng 14 ngày sau khi ngừng MAOI."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP2D6 Inhibitors (Fluoxetine, Paroxetine, Bupropion)",
+                    "mechanism": "Ức chế CYP2D6, tăng nồng độ viloxazine",
+                    "effect": "Tăng nồng độ viloxazine, tăng nguy cơ tác dụng phụ",
+                    "management": "Thận trọng. Có thể cần giảm liều viloxazine."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng viloxazine hoặc bất kỳ thành phần nào",
+                "Đang dùng MAOIs hoặc trong vòng 14 ngày sau khi ngừng MAOI"
+            ],
+            "tương_đối": [
+                "Bệnh tim mạch - thận trọng, tăng nguy cơ tăng huyết áp, nhịp tim nhanh",
+                "Tăng huyết áp - thận trọng, có thể làm tăng huyết áp",
+                "Suy gan nặng - thận trọng, có thể tăng nồng độ",
+                "Suy thận nặng - thận trọng, dữ liệu hạn chế"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Viloxazine có thể gây hại cho thai nhi. Chỉ dùng khi lợi ích > nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa biết có bài tiết vào sữa mẹ hay không.",
+                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, không cần chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Viloxazine chuyển hóa qua gan (CYP2D6, CYP3A4). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chức năng gan và độc tính chặt chẽ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Mệt mỏi nặng",
+                "Tăng huyết áp nặng",
+                "Nhịp tim nhanh nặng",
+                "Hội chứng serotonin (nếu dùng với MAOIs)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay viloxazine",
+                "Nếu hội chứng serotonin: cyproheptadine, hỗ trợ hô hấp",
+                "Nếu tăng huyết áp nặng: điều trị tăng huyết áp",
+                "Hỗ trợ và điều trị triệu chứng",
+                "Theo dõi dấu hiệu sinh tồn"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, huyết áp, nhịp tim, dấu hiệu hội chứng serotonin cho đến khi hồi phục."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Có thể uống với hoặc không có thức ăn",
+                "timing": "Uống x 1 lần/ngày, tốt nhất vào buổi sáng để tránh mất ngủ. Uống đều đặn hàng ngày.",
+                "notes": "QUAN TRỌNG: (1) Uống x 1 lần/ngày, tốt nhất vào buổi sáng, (2) CHỐNG CHỈ ĐỊNH với MAOIs, (3) Theo dõi buồn ngủ, mệt mỏi, (4) Theo dõi cân nặng (giảm cảm giác thèm ăn), (5) Tương tác với CYP2D6 inhibitors/inducers."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Viloxazine (Qelbree)",
+                "FDA Approval Date: 4/2/2021",
+                "FDA-approved use: To treat attention deficit hyperactivity disorder",
+                "UpToDate - Viloxazine: Drug information",
+                "Lexicomp - Viloxazine monograph"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved 4/2/2021, dựa trên dữ liệu lâm sàng từ các thử nghiệm lâm sàng"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (ADHD symptoms)", "Sedation, fatigue - common", "Appetite, weight (decreased appetite - common)", "Blood pressure, heart rate (uncommon but monitor)"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information - Viloxazine (Qelbree)",
+            "AAP Guidelines - ADHD Treatment",
+            "UpToDate - ADHD Treatment"
+        ],
+        "last_updated": "2025-02-18"
+    },    "Azstarys": {
+        "group": "FDA Approved 3/2/2021",
+        "vietnamese_name": "Serdexmethylphenidate, Azstarys",
+        "administration": ['PO'],
+        "indications": ['To treat attention deficit hyperactivity disorder'],
+        "contraindications": ['Dị ứng serdexmethylphenidate hoặc bất kỳ thành phần nào'],
+        "dosage": {
+            "adult_standard": "Theo chỉ định của bác sĩ",
+            "notes": "FDA phê duyệt 3/2/2021. To treat attention deficit hyperactivity disorder",
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng",
+            "under_30": "Thận trọng, dữ liệu hạn chế",
+        },
+        "side_effects": ['Cần bổ sung thông tin từ tài liệu FDA'],
+        "interactions": ['Cần bổ sung thông tin từ tài liệu FDA'],
+        "pregnancy": "C",
+        "mechanism_of_action": "Serdexmethylphenidate được FDA phê duyệt 3/2/2021 để to treat attention deficit hyperactivity disorder. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+        "monitoring": ['Theo dõi đáp ứng điều trị', 'Theo dõi tác dụng phụ'],
+        "precautions": ['Dị ứng serdexmethylphenidate', 'Cần bổ sung thông tin từ tài liệu FDA'],
+        "pharmacokinetics": {
+            "half_life": "Cần bổ sung",
+            "onset": "Cần bổ sung",
+            "duration": "Cần bổ sung",
+            "protein_binding": "Cần bổ sung",
+            "metabolism": "Cần bổ sung",
+            "clearance": "Cần bổ sung",
+        },
+        "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+        "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": ['Dị ứng serdexmethylphenidate hoặc bất kỳ thành phần nào'],
+            "tương_đối": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                "recommendation": "Thận trọng khi cho con bú"
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng",
+            "severe": "Thận trọng, dữ liệu hạn chế",
+            "notes": "Cần bổ sung thông tin từ tài liệu FDA"
+        },
+        "overdose_management": {
+            "symptoms": ['Cần bổ sung'],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": ['Điều trị hỗ trợ'],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn"
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Cần bổ sung",
+                "timing": "Cần bổ sung"
+            }
+        },
+        "references": {
+            "primary_sources": ['FDA Drug Label - Serdexmethylphenidate (Azstarys)', 'FDA Approval Date: 3/2/2021', 'FDA-approved use: To treat attention deficit hyperactivity disorder'],
+            "last_updated": "2026-01-15",
+            "evidence_level": "A - FDA-approved 3/2/2021"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ['Clinical response', 'Adverse effects']
+        },
+        "guideline_tags": ['FDA Drug Information - Serdexmethylphenidate (Azstarys)'],
+        "last_updated": "2026-01-15"
+    },
+
+
+
+
     
 }
 

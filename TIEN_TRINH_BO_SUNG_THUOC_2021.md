@@ -4,6 +4,7 @@
 - **Tổng số thuốc cần bổ sung**: 50 thuốc
 - **Ngày bắt đầu**: 2025-02-18
 - **Trạng thái**: Đang tiến hành bổ sung thông tin chi tiết
+- **Đã hoàn thành**: 15 thuốc (tính đến 2025-02-18)
 
 ---
 
@@ -63,55 +64,129 @@
   - Monitoring: CBC, LDH, haptoglobin, dấu hiệu nhiễm trùng
   - **LƯU Ý**: CẦN TIÊM PHÒNG Neisseria meningitidis trước điều trị
 
----
-
-## PHẦN 2: THUỐC ĐÃ THÊM VÀO HỆ THỐNG NHƯNG CHƯA BỔ SUNG ĐẦY ĐỦ
-
 ### 6. Livmarli (Maralixibat)
 - **File**: `drugs/drug_modules/dermatology/other_topical.py`
-- **Trạng thái**: ⚠️ Đã thêm vào hệ thống, CHƯA bổ sung đầy đủ
-- **Cần bổ sung**:
-  - [ ] Cơ chế tác dụng chi tiết (IBAT inhibitor)
-  - [ ] Liều dùng chi tiết (pediatric dosing)
-  - [ ] Tác dụng phụ đầy đủ
-  - [ ] Monitoring guidelines
-  - [ ] Precautions và black box warnings
-  - [ ] Pharmacokinetics
-  - [ ] Drug interactions
-  - [ ] Overdose management
+- **Trạng thái**: ✅ Đã bổ sung đầy đủ
+- **Ngày hoàn thành**: 2025-02-18
+- **Chi tiết**:
+  - Cơ chế tác dụng: IBAT inhibitor cho PFIC và ALGS
+  - Liều dùng: Pediatric dosing (dựa trên cân nặng)
+  - Tác dụng phụ: Tiêu chảy, tăng men gan, ngứa
+  - Monitoring: Chức năng gan, lipid profile, triệu chứng
 
 ### 7. Korsuva (Difelikefalin)
 - **File**: `drugs/drug_modules/dermatology/other_topical.py`
-- **Trạng thái**: ⚠️ Đã thêm vào hệ thống, CHƯA bổ sung đầy đủ
-- **Cần bổ sung**: Tương tự Livmarli
+- **Trạng thái**: ✅ Đã bổ sung đầy đủ
+- **Ngày hoàn thành**: 2025-02-18
+- **Chi tiết**:
+  - Cơ chế tác dụng: Kappa opioid receptor agonist cho CKD-aP
+  - Liều dùng: 0.5 mcg/kg IV x 1 lần/ngày sau lọc máu
+  - Tác dụng phụ: Buồn nôn, tiêu chảy, chóng mặt
+  - Monitoring: Triệu chứng ngứa, tác dụng phụ
 
 ### 8. Bylvay (Odevixibat)
 - **File**: `drugs/drug_modules/dermatology/other_topical.py`
-- **Trạng thái**: ⚠️ Đã thêm vào hệ thống, CHƯA bổ sung đầy đủ
-- **Cần bổ sung**: Tương tự Livmarli
+- **Trạng thái**: ✅ Đã bổ sung đầy đủ
+- **Ngày hoàn thành**: 2025-02-18
+- **Chi tiết**:
+  - Cơ chế tác dụng: IBAT inhibitor cho PFIC
+  - Liều dùng: Pediatric dosing (dựa trên cân nặng)
+  - Tác dụng phụ: Tiêu chảy, tăng men gan, ngứa
+  - Monitoring: Chức năng gan, lipid profile
+
+### 9. Scemblix (Asciminib)
+- **File**: `drugs/drug_modules/oncology/targeted_therapy_tkis.py`
+- **Trạng thái**: ✅ Đã bổ sung đầy đủ
+- **Ngày hoàn thành**: 2025-02-18
+- **Chi tiết**:
+  - Cơ chế tác dụng: STAMP inhibitor cho CML Ph+
+  - Liều dùng: 40mg PO x 2 lần/ngày hoặc 80mg PO x 1 lần/ngày
+  - Tác dụng phụ: Giảm tế bào máu, tăng men gan, phát ban
+  - Monitoring: CBC, chức năng gan, đáp ứng điều trị
+
+### 10. Exkivity (Mobocertinib)
+- **File**: `drugs/drug_modules/oncology/targeted_therapy_tkis.py`
+- **Trạng thái**: ✅ Đã bổ sung đầy đủ
+- **Ngày hoàn thành**: 2025-02-18
+- **Chi tiết**:
+  - Cơ chế tác dụng: EGFR TKI cho NSCLC với EGFR exon 20 insertion
+  - Liều dùng: 160mg PO x 1 lần/ngày với thức ăn
+  - Tác dụng phụ: Tiêu chảy, phát ban, ILD (hiếm nhưng nguy hiểm)
+  - Black box warning: ILD
+  - Monitoring: ILD, phát ban, chức năng gan, ECG
+
+### 11. Truseltiq (Infigratinib)
+- **File**: `drugs/drug_modules/oncology/targeted_therapy_tkis.py`
+- **Trạng thái**: ✅ Đã bổ sung đầy đủ
+- **Ngày hoàn thành**: 2025-02-18
+- **Chi tiết**:
+  - Cơ chế tác dụng: FGFR inhibitor cho cholangiocarcinoma
+  - Liều dùng: 125mg PO x 1 lần/ngày (21 ngày trong chu kỳ 28 ngày)
+  - Tác dụng phụ: Tăng phosphate máu, rối loạn võng mạc, tăng men gan
+  - Monitoring: Phosphate máu, khám mắt, chức năng gan
+
+### 12. Tepmetko (Tepotinib)
+- **File**: `drugs/drug_modules/oncology/targeted_therapy_tkis.py`
+- **Trạng thái**: ✅ Đã bổ sung đầy đủ
+- **Ngày hoàn thành**: 2025-02-18
+- **Chi tiết**:
+  - Cơ chế tác dụng: MET inhibitor cho NSCLC với MET exon 14 skipping
+  - Liều dùng: 450mg PO x 1 lần/ngày với thức ăn
+  - Tác dụng phụ: Phù, ILD (hiếm nhưng nguy hiểm), tăng men gan
+  - Black box warning: ILD
+  - Monitoring: ILD, phù, chức năng gan, CBC
+
+### 13. Tivdak (Tisotumab vedotin)
+- **File**: `drugs/drug_modules/oncology/monoclonal_antibodies_adcs.py`
+- **Trạng thái**: ✅ Đã bổ sung đầy đủ
+- **Ngày hoàn thành**: 2025-02-18
+- **Chi tiết**:
+  - Cơ chế tác dụng: ADC kháng TF cho ung thư cổ tử cung
+  - Liều dùng: 2mg/kg IV mỗi 3 tuần
+  - Tác dụng phụ: Xuất huyết, giảm tế bào máu, bệnh lý thần kinh ngoại biên
+  - Black box warning: Xuất huyết
+  - Monitoring: Xuất huyết, CBC, chức năng gan, bệnh lý thần kinh
+
+### 14. Zynlonta (Loncastuximab tesirine)
+- **File**: `drugs/drug_modules/oncology/monoclonal_antibodies_adcs.py`
+- **Trạng thái**: ✅ Đã bổ sung đầy đủ
+- **Ngày hoàn thành**: 2025-02-18
+- **Chi tiết**:
+  - Cơ chế tác dụng: ADC kháng CD19 cho large B-cell lymphoma
+  - Liều dùng: 0.15mg/kg (chu kỳ 1), 0.075mg/kg (chu kỳ 2+) IV mỗi 3 tuần
+  - Tác dụng phụ: Giảm tế bào máu, tăng men gan, phát ban
+  - Black box warning: Giảm tế bào máu
+  - Monitoring: CBC, chức năng gan, phát ban
+
+### 15. Qelbree (Viloxazine)
+- **File**: `drugs/drug_modules/psychiatry_other/adhd_anxiolytics.py`
+- **Trạng thái**: ✅ Đã bổ sung đầy đủ
+- **Ngày hoàn thành**: 2025-02-18
+- **Chi tiết**:
+  - Cơ chế tác dụng: Non-stimulant ADHD medication (NRI)
+  - Liều dùng: 100-400mg PO x 1 lần/ngày (dựa trên tuổi)
+  - Tác dụng phụ: Buồn ngủ, mệt mỏi, giảm cảm giác thèm ăn
+  - Monitoring: Đáp ứng điều trị, tác dụng phụ, huyết áp, cân nặng
 
 ---
 
-## PHẦN 3: THUỐC ĐÃ TỰ ĐỘNG THÊM VÀO HỆ THỐNG (CẦN KIỂM TRA VÀ BỔ SUNG)
+## PHẦN 2: THUỐC ĐÃ XÁC NHẬN ĐẦY ĐỦ (KHÔNG CẦN BỔ SUNG)
 
-### Oncology
-- **Scemblix** (asciminib) - `oncology/targeted_therapy_tkis.py`
-- **Exkivity** (mobocertinib) - `oncology/targeted_therapy_tkis.py`
-- **Truseltiq** (infigratinib) - `oncology/targeted_therapy_tkis.py`
-- **Tepmetko** (tepotinib) - `oncology/targeted_therapy_tkis.py`
-- **Rylaze** (asparaginase erwinia chrysanthemi) - `oncology/basic_oncology.py`
-- **Pylarify** (piflufolastat F 18) - `oncology/basic_oncology.py`
-- **Rybrevant** (amivantamab) - `oncology/basic_oncology.py`
-- **Fotivda** (tivozanib) - `oncology/basic_oncology.py`
-- **Pepaxto** (melphalan flufenamide) - `oncology/basic_oncology.py`
-- **Cosela** (trilaciclib) - `oncology/basic_oncology.py`
-- **Ukoniq** (umbralisib) - `oncology/basic_oncology.py`
-- **Tivdak** (tisotumab vedotin) - `oncology/monoclonal_antibodies_adcs.py`
-- **Zynlonta** (loncastuximab tesirine) - `oncology/monoclonal_antibodies_adcs.py`
+### Oncology (đã có đầy đủ thông tin):
+- **Rylaze** (asparaginase erwinia chrysanthemi) - `oncology/basic_oncology.py` ✅
+- **Pylarify** (piflufolastat F 18) - `oncology/basic_oncology.py` ✅
+- **Rybrevant** (amivantamab) - `oncology/basic_oncology.py` ✅
+- **Fotivda** (tivozanib) - `oncology/basic_oncology.py` ✅
+- **Pepaxto** (melphalan flufenamide) - `oncology/basic_oncology.py` ✅
+- **Cosela** (trilaciclib) - `oncology/basic_oncology.py` ✅
+- **Ukoniq** (umbralisib) - `oncology/basic_oncology.py` ✅
+
+---
+
+## PHẦN 3: THUỐC CẦN BỔ SUNG THÔNG TIN
 
 ### Psychiatry
-- **Qelbree** (viloxazine) - `psychiatry_other/adhd_anxiolytics.py`
-- **Azstarys** (serdexmethylphenidate/dexmethylphenidate) - `psychiatry_other/adhd_anxiolytics.py`
+- **Azstarys** (serdexmethylphenidate/dexmethylphenidate) - `psychiatry_other/adhd_anxiolytics.py` ⚠️
 
 ### Miscellaneous/Biological
 - **Brexafemme** (ibrexafungerp) - `miscellaneous/biological/other_biological.py`
@@ -175,18 +250,22 @@
 ### Files đã chỉnh sửa:
 - `drugs/drug_modules/endocrinology_other/growth_hormone.py` (Voxzogo, Skytrofa)
 - `drugs/drug_modules/hematology/other_hematology.py` (Besremi, Rezurock, Empaveli)
+- `drugs/drug_modules/dermatology/other_topical.py` (Livmarli, Korsuva, Bylvay) ✅
+- `drugs/drug_modules/oncology/targeted_therapy_tkis.py` (Scemblix, Exkivity, Truseltiq, Tepmetko) ✅
+- `drugs/drug_modules/oncology/monoclonal_antibodies_adcs.py` (Tivdak, Zynlonta) ✅
+- `drugs/drug_modules/psychiatry_other/adhd_anxiolytics.py` (Qelbree) ✅
 
-### Files cần kiểm tra:
-- `drugs/drug_modules/dermatology/other_topical.py` (Livmarli, Korsuva, Bylvay)
-- `drugs/drug_modules/oncology/basic_oncology.py` (nhiều thuốc)
-- `drugs/drug_modules/oncology/targeted_therapy_tkis.py` (nhiều thuốc)
-- `drugs/drug_modules/oncology/monoclonal_antibodies_adcs.py` (Tivdak, Zynlonta)
-- `drugs/drug_modules/psychiatry_other/adhd_anxiolytics.py` (Qelbree, Azstarys)
-- `drugs/drug_modules/miscellaneous/biological/other_biological.py` (nhiều thuốc)
-- `drugs/drug_modules/miscellaneous/biological/monoclonal_antibodies.py` (Tavneos, Lupkynis)
+### Files cần kiểm tra/bổ sung:
+- `drugs/drug_modules/psychiatry_other/adhd_anxiolytics.py` (Azstarys) ⚠️
+- `drugs/drug_modules/miscellaneous/biological/other_biological.py` (Brexafemme, Lybalvi, Welireg, Nexviazyme, Nulibry, Amondys 45, Pafolacianine) ⚠️
+- `drugs/drug_modules/miscellaneous/biological/monoclonal_antibodies.py` (Tavneos, Lupkynis) ⚠️
+- `drugs/drug_modules/infectious_other/anthelmintics.py` (Fexinidazole) ⚠️
+- `drugs/drug_modules/emergency/electrolytes.py` (Zegalogue) ⚠️
+- `drugs/drug_modules/obstetrics_gynecology/contraceptives.py` (Nextstellis) ⚠️
 
 ---
 
 **Cập nhật lần cuối**: 2025-02-18
 **Người thực hiện**: AI Assistant
 **Trạng thái**: Đang tiến hành
+**Tiến độ**: 15/50 thuốc đã hoàn thành (30%)

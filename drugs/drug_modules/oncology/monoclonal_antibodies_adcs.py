@@ -1397,6 +1397,3001 @@ MONOCLONAL_ANTIBODIES_ADCS_DRUGS = {
         }
     },
 
+    "Tivdak": {
+        "group": "FDA Approved 9/20/2021",
+        "vietnamese_name": "Tisotumab vedotin, Tivdak",
+        "administration": ["IV"],
+        "indications": [
+            "Ung thư cổ tử cung tái phát hoặc di căn đã tiến triển sau hóa trị",
+            "Cervical cancer với disease progression on or after chemotherapy"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng tisotumab vedotin hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Xuất huyết nặng - thận trọng",
+                "Suy gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng",
+                "Có thai - CHỐNG CHỈ ĐỊNH (category D)"
+            ]
+        },
+        "dosage": {
+            "adult_standard": "2mg/kg IV mỗi 3 tuần",
+            "notes": "Truyền tĩnh mạch trong 30 phút. Tisotumab vedotin là ADC (antibody-drug conjugate) cho ung thư cổ tử cung. FDA phê duyệt 9/20/2021."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, không cần chỉnh liều",
+            "under_30": "Thận trọng, dữ liệu hạn chế"
+        },
+        "side_effects": [
+            "Xuất huyết - phổ biến, có thể nghiêm trọng",
+            "Giảm bạch cầu (neutropenia) - phổ biến",
+            "Giảm tiểu cầu (thrombocytopenia) - phổ biến",
+            "Giảm hồng cầu (anemia) - phổ biến",
+            "Mệt mỏi - phổ biến",
+            "Buồn nôn - phổ biến",
+            "Tiêu chảy - phổ biến",
+            "Tăng men gan (ALT, AST) - phổ biến",
+            "Phản ứng truyền (infusion-related reactions) - không phổ biến",
+            "Bệnh lý thần kinh ngoại biên (peripheral neuropathy) - phổ biến",
+            "Rụng tóc - phổ biến"
+        ],
+        "interactions": [
+            "Thuốc chống đông (warfarin, heparin): tăng nguy cơ xuất huyết",
+            "Thuốc ức chế CYP3A4: có thể tăng nồng độ monomethyl auristatin E (MMAE)"
+        ],
+        "pregnancy": "D",
+        "mechanism_of_action": "Tisotumab vedotin là antibody-drug conjugate (ADC) gồm: (1) Tisotumab - kháng thể đơn dòng kháng tissue factor (TF), (2) Vedotin - liên kết với monomethyl auristatin E (MMAE), một chất ức chế microtubule. Tissue factor (TF) được biểu hiện cao trên tế bào ung thư cổ tử cung. Tisotumab vedotin gắn với TF trên tế bào ung thư → nội hóa vào tế bào → giải phóng MMAE → MMAE ức chế microtubule → ngăn chặn phân chia tế bào → gây chết tế bào ung thư. ĐẶC ĐIỂM: (1) ADC kháng TF cho ung thư cổ tử cung, (2) XUẤT HUYẾT - phổ biến, có thể nghiêm trọng, (3) Giảm tế bào máu (neutropenia, thrombocytopenia, anemia) - phổ biến, (4) Bệnh lý thần kinh ngoại biên - phổ biến, (5) Truyền tĩnh mạch trong 30 phút, (6) FDA phê duyệt 9/20/2021.",
+        "monitoring": [
+            "XUẤT HUYẾT - phổ biến, có thể nghiêm trọng - theo dõi dấu hiệu chảy máu - QUAN TRỌNG",
+            "CBC: giảm bạch cầu, giảm tiểu cầu, giảm hồng cầu - phổ biến",
+            "Chức năng gan: ALT, AST (tăng men gan phổ biến)",
+            "Bệnh lý thần kinh ngoại biên - phổ biến, theo dõi triệu chứng",
+            "Phản ứng truyền - theo dõi trong và sau truyền",
+            "Đáp ứng điều trị: CT scan mỗi 6-9 tuần"
+        ],
+        "precautions": [
+            "XUẤT HUYẾT - phổ biến, có thể nghiêm trọng. Theo dõi dấu hiệu chảy máu. Ngừng tạm thời nếu xuất huyết nặng.",
+            "GIẢM TẾ BÀO MÁU - phổ biến. Theo dõi CBC định kỳ. Có thể cần hỗ trợ G-CSF, truyền máu.",
+            "BỆNH LÝ THẦN KINH NGOẠI BIÊN - phổ biến. Theo dõi triệu chứng. Có thể cần giảm liều hoặc ngừng tạm thời.",
+            "Tăng men gan - phổ biến. Theo dõi chức năng gan.",
+            "Phản ứng truyền - theo dõi trong và sau truyền",
+            "CHỐNG CHỈ ĐỊNH trong thai kỳ (category D)",
+            "Truyền tĩnh mạch trong 30 phút"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 4 ngày",
+            "onset": "Vài tuần (tác dụng lâm sàng)",
+            "duration": "3 tuần (chu kỳ)",
+            "protein_binding": "Không rõ",
+            "metabolism": "Chuyển hóa qua hệ thống RES, MMAE chuyển hóa qua CYP3A4",
+            "clearance": "Chuyển hóa qua RES, thải trừ qua thận một phần"
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh. Bảo vệ khỏi ánh sáng.",
+        "black_box_warnings": "XUẤT HUYẾT - có thể gây xuất huyết nghiêm trọng, có thể tử vong. Theo dõi dấu hiệu chảy máu. Ngừng tạm thời nếu xuất huyết nặng. CHỐNG CHỈ ĐỊNH trong thai kỳ (category D).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc chống đông (Warfarin, Heparin, DOACs)",
+                    "mechanism": "Tác dụng cộng dồn",
+                    "effect": "Tăng nguy cơ xuất huyết",
+                    "management": "Thận trọng. Theo dõi dấu hiệu chảy máu chặt chẽ. Có thể cần ngừng tạm thời thuốc chống đông."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 Inhibitors (Ketoconazole, Itraconazole, Ritonavir)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ MMAE",
+                    "effect": "Tăng nồng độ MMAE, tăng nguy cơ tác dụng phụ",
+                    "management": "Thận trọng. Có thể cần giảm liều tisotumab vedotin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng tisotumab vedotin hoặc bất kỳ thành phần nào",
+                "Có thai (category D) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Xuất huyết nặng đang hoạt động - tăng nguy cơ xuất huyết",
+                "Suy gan nặng - thận trọng, có thể tăng độc tính",
+                "Suy thận nặng - thận trọng, dữ liệu hạn chế"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH trong thai kỳ. Tisotumab vedotin là FDA category D - có nguy cơ cho thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ. Tránh thai hiệu quả trong và sau điều trị.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Tisotumab vedotin có thể bài tiết vào sữa mẹ. Không dùng khi cho con bú.",
+                "recommendation": "Không dùng khi cho con bú. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, không cần chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Tisotumab vedotin chuyển hóa qua hệ thống RES, MMAE chuyển hóa qua CYP3A4. Suy gan có thể làm tăng độc tính. Theo dõi chức năng gan và độc tính chặt chẽ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Xuất huyết nặng",
+                "Giảm tế bào máu nặng (neutropenia, thrombocytopenia, anemia)",
+                "Bệnh lý thần kinh ngoại biên nặng",
+                "Tăng men gan nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay tisotumab vedotin",
+                "Nếu xuất huyết nặng: truyền máu, huyết tương, điều trị hỗ trợ",
+                "Nếu giảm tế bào máu nặng: G-CSF, truyền máu, huyết tương",
+                "Theo dõi chức năng gan",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, xuất huyết, CBC, chức năng gan, bệnh lý thần kinh cho đến khi hồi phục."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha loãng theo hướng dẫn",
+                "infusion_rate": "Truyền tĩnh mạch trong 30 phút",
+                "premedication": "Có thể cần premedication (corticosteroid, antihistamine) để giảm phản ứng truyền",
+                "notes": "Truyền tĩnh mạch 2mg/kg trong 30 phút mỗi 3 tuần. Theo dõi phản ứng truyền trong và sau truyền. QUAN TRỌNG: (1) Theo dõi xuất huyết, (2) Theo dõi CBC, (3) Theo dõi bệnh lý thần kinh ngoại biên."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Tisotumab vedotin (Tivdak)",
+                "FDA Approval Date: 9/20/2021",
+                "FDA-approved use: To treat recurrent or metastatic cervical cancer with disease progression on or after chemotherapy",
+                "UpToDate - Tisotumab vedotin: Drug information",
+                "NCCN Guidelines - Cervical Cancer Treatment"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved 9/20/2021, dựa trên dữ liệu lâm sàng từ các thử nghiệm lâm sàng"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": True,
+            "organ_toxicity": ["Hematologic (neutropenia, thrombocytopenia, anemia) - common", "Hepatic (elevated liver enzymes) - common", "Neurologic (peripheral neuropathy) - common"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Bleeding signs - CRITICAL", "CBC (neutropenia, thrombocytopenia, anemia) - CRITICAL", "Peripheral neuropathy - CRITICAL", "Liver function (ALT, AST)", "Infusion reactions", "Treatment response (CT scan every 6-9 weeks)"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Tisotumab vedotin and Bleeding",
+            "NCCN Guidelines - Cervical Cancer Treatment",
+            "FDA Drug Information - Tisotumab vedotin (Tivdak)"
+        ],
+        "last_updated": "2025-02-18"
+    },
+
+    "Zynlonta": {
+        "group": "FDA Approved 4/23/2021",
+        "vietnamese_name": "Loncastuximab tesirine, Zynlonta",
+        "administration": ["IV"],
+        "indications": [
+            "U lympho tế bào B lớn tái phát hoặc kháng trị (relapsed or refractory large B-cell lymphoma)",
+            "Large B-cell lymphoma đã điều trị trước đó với ít nhất 2 phác đồ"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng loncastuximab tesirine hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Giảm tế bào máu nặng - thận trọng",
+                "Suy gan nặng - thận trọng",
+                "Suy thận nặng - thận trọng",
+                "Có thai - CHỐNG CHỈ ĐỊNH (category D)"
+            ]
+        },
+        "dosage": {
+            "adult_cycle1": "0.15mg/kg IV ngày 1, sau đó 0.075mg/kg IV ngày 8 và 15 (chu kỳ 21 ngày)",
+            "adult_cycle2plus": "0.075mg/kg IV ngày 1 và 8 (chu kỳ 21 ngày)",
+            "notes": "Truyền tĩnh mạch trong 30 phút. Loncastuximab tesirine là ADC (antibody-drug conjugate) cho large B-cell lymphoma. FDA phê duyệt 4/23/2021."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, không cần chỉnh liều",
+            "under_30": "Thận trọng, dữ liệu hạn chế"
+        },
+        "side_effects": [
+            "Giảm bạch cầu (neutropenia) - phổ biến, có thể nghiêm trọng",
+            "Giảm tiểu cầu (thrombocytopenia) - phổ biến, có thể nghiêm trọng",
+            "Giảm hồng cầu (anemia) - phổ biến",
+            "Tăng men gan (ALT, AST) - phổ biến",
+            "Phát ban (rash) - phổ biến",
+            "Mệt mỏi - phổ biến",
+            "Buồn nôn - phổ biến",
+            "Phản ứng truyền (infusion-related reactions) - không phổ biến",
+            "Bệnh lý thần kinh ngoại biên (peripheral neuropathy) - không phổ biến",
+            "Hội chứng giải phóng cytokine (CRS) - hiếm"
+        ],
+        "interactions": [
+            "Thuốc ức chế CYP3A4: có thể tăng nồng độ SG3199 (payload)"
+        ],
+        "pregnancy": "D",
+        "mechanism_of_action": "Loncastuximab tesirine là antibody-drug conjugate (ADC) gồm: (1) Loncastuximab - kháng thể đơn dòng kháng CD19, (2) Tesirine - liên kết với SG3199 (pyrrolobenzodiazepine dimer - PBD), một chất gây tổn thương DNA. CD19 được biểu hiện cao trên tế bào B, bao gồm tế bào u lympho tế bào B lớn. Loncastuximab tesirine gắn với CD19 trên tế bào u lympho → nội hóa vào tế bào → giải phóng SG3199 → SG3199 gây tổn thương DNA → ngăn chặn tổng hợp DNA và RNA → gây chết tế bào ung thư. ĐẶC ĐIỂM: (1) ADC kháng CD19 cho large B-cell lymphoma, (2) Giảm tế bào máu (neutropenia, thrombocytopenia, anemia) - phổ biến, có thể nghiêm trọng, (3) Tăng men gan - phổ biến, (4) Phát ban - phổ biến, (5) Truyền tĩnh mạch trong 30 phút, (6) FDA phê duyệt 4/23/2021.",
+        "monitoring": [
+            "CBC: giảm bạch cầu, giảm tiểu cầu, giảm hồng cầu - phổ biến, có thể nghiêm trọng - QUAN TRỌNG",
+            "Chức năng gan: ALT, AST (tăng men gan phổ biến)",
+            "Phát ban - phổ biến",
+            "Phản ứng truyền - theo dõi trong và sau truyền",
+            "Bệnh lý thần kinh ngoại biên - không phổ biến",
+            "Đáp ứng điều trị: CT scan mỗi 2-3 chu kỳ"
+        ],
+        "precautions": [
+            "GIẢM TẾ BÀO MÁU - phổ biến, có thể nghiêm trọng. Theo dõi CBC định kỳ. Có thể cần hỗ trợ G-CSF, truyền máu, huyết tương.",
+            "Tăng men gan - phổ biến. Theo dõi chức năng gan định kỳ.",
+            "Phát ban - phổ biến. Điều trị triệu chứng.",
+            "Phản ứng truyền - theo dõi trong và sau truyền",
+            "CHỐNG CHỈ ĐỊNH trong thai kỳ (category D)",
+            "Truyền tĩnh mạch trong 30 phút",
+            "Chu kỳ 21 ngày: chu kỳ 1 (0.15mg/kg ngày 1, 0.075mg/kg ngày 8,15), chu kỳ 2+ (0.075mg/kg ngày 1,8)"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 12-14 ngày",
+            "onset": "Vài tuần đến vài tháng (tác dụng lâm sàng)",
+            "duration": "21 ngày (chu kỳ)",
+            "protein_binding": "Không rõ",
+            "metabolism": "Chuyển hóa qua hệ thống RES, SG3199 chuyển hóa qua CYP3A4",
+            "clearance": "Chuyển hóa qua RES, thải trừ qua thận một phần"
+        },
+        "storage": "Bảo quản trong tủ lạnh (2-8°C), tránh đông lạnh. Bảo vệ khỏi ánh sáng.",
+        "black_box_warnings": "GIẢM TẾ BÀO MÁU - có thể gây giảm bạch cầu, giảm tiểu cầu nghiêm trọng. Theo dõi CBC định kỳ. Có thể cần hỗ trợ G-CSF, truyền máu. CHỐNG CHỈ ĐỊNH trong thai kỳ (category D).",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "CYP3A4 Inhibitors mạnh (Ketoconazole, Itraconazole, Ritonavir)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ SG3199",
+                    "effect": "Tăng nồng độ SG3199, tăng nguy cơ tác dụng phụ",
+                    "management": "Thận trọng. Có thể cần giảm liều loncastuximab tesirine."
+                }
+            ],
+            "moderate": [],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng loncastuximab tesirine hoặc bất kỳ thành phần nào",
+                "Có thai (category D) - CHỐNG CHỈ ĐỊNH"
+            ],
+            "tương_đối": [
+                "Giảm tế bào máu nặng đang hoạt động - tăng nguy cơ",
+                "Suy gan nặng - thận trọng, có thể tăng độc tính",
+                "Suy thận nặng - thận trọng, dữ liệu hạn chế"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "D",
+            "pregnancy_details": "CHỐNG CHỈ ĐỊNH trong thai kỳ. Loncastuximab tesirine là FDA category D - có nguy cơ cho thai nhi. Không dùng trong thai kỳ trừ khi lợi ích vượt trội nguy cơ. Tránh thai hiệu quả trong và sau điều trị.",
+            "lactation": {
+                "safety": "Incompatible",
+                "details": "Loncastuximab tesirine có thể bài tiết vào sữa mẹ. Không dùng khi cho con bú.",
+                "recommendation": "Không dùng khi cho con bú. Ngừng cho con bú hoặc ngừng thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, không cần chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Loncastuximab tesirine chuyển hóa qua hệ thống RES, SG3199 chuyển hóa qua CYP3A4. Suy gan có thể làm tăng độc tính. Theo dõi chức năng gan và độc tính chặt chẽ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Giảm tế bào máu nặng (neutropenia, thrombocytopenia, anemia)",
+                "Tăng men gan nặng",
+                "Phản ứng truyền nặng"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay loncastuximab tesirine",
+                "Nếu giảm tế bào máu nặng: G-CSF, truyền máu, huyết tương",
+                "Theo dõi chức năng gan",
+                "Điều trị phản ứng truyền nếu có",
+                "Hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, CBC, chức năng gan, phản ứng truyền cho đến khi hồi phục."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Pha loãng theo hướng dẫn",
+                "infusion_rate": "Truyền tĩnh mạch trong 30 phút",
+                "premedication": "Có thể cần premedication (corticosteroid, antihistamine) để giảm phản ứng truyền",
+                "notes": "Truyền tĩnh mạch trong 30 phút. Chu kỳ 21 ngày: chu kỳ 1 (0.15mg/kg ngày 1, 0.075mg/kg ngày 8,15), chu kỳ 2+ (0.075mg/kg ngày 1,8). Theo dõi phản ứng truyền trong và sau truyền. QUAN TRỌNG: (1) Theo dõi CBC, (2) Theo dõi chức năng gan, (3) Theo dõi phát ban."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Loncastuximab tesirine (Zynlonta)",
+                "FDA Approval Date: 4/23/2021",
+                "FDA-approved use: To treat certain types of relapsed or refractory large B-cell lymphoma",
+                "UpToDate - Loncastuximab tesirine: Drug information",
+                "NCCN Guidelines - Large B-cell Lymphoma Treatment"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved 4/23/2021, dựa trên dữ liệu lâm sàng từ các thử nghiệm lâm sàng"
+        },
+        "risk_flags": {
+            "high_alert": True,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hematologic (neutropenia, thrombocytopenia, anemia) - common, can be severe - CRITICAL", "Hepatic (elevated liver enzymes) - common"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["CBC (neutropenia, thrombocytopenia, anemia) - CRITICAL", "Liver function (ALT, AST) - CRITICAL", "Rash - common", "Infusion reactions", "Treatment response (CT scan every 2-3 cycles)"]
+        },
+        "guideline_tags": [
+            "FDA Black Box Warning - Loncastuximab tesirine and Hematologic Toxicity",
+            "NCCN Guidelines - Large B-cell Lymphoma Treatment",
+            "FDA Drug Information - Loncastuximab tesirine (Zynlonta)"
+        ],
+        "last_updated": "2025-02-18"
+    },
+
+
+
+
+
+    "Elahere": {
+                "group": "FDA Approved 2022",
+                "vietnamese_name": "Mirvetuximab, Elahere",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat patients with recurrent ovarian cancer that is resistant to platinum therapy",
+                ],
+                "contraindications": [
+                        "Dị ứng mirvetuximab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2022. To treat patients with recurrent ovarian cancer that is resistant to platinum therapy",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Mirvetuximab được FDA phê duyệt 2022 để to treat patients with recurrent ovarian cancer that is resistant to platinum therapy. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng mirvetuximab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng mirvetuximab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Mirvetuximab (Elahere)",
+                                "FDA Approval Date: 2022",
+                                "FDA-approved use: To treat patients with recurrent ovarian cancer that is resistant to platinum therapy",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2022",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Mirvetuximab (Elahere)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Imjudo": {
+                "group": "FDA Approved 2022",
+                "vietnamese_name": "Tremelimumab, Imjudo",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat unresectable hepatocellular carcinoma",
+                ],
+                "contraindications": [
+                        "Dị ứng tremelimumab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2022. To treat unresectable hepatocellular carcinoma",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Tremelimumab được FDA phê duyệt 2022 để to treat unresectable hepatocellular carcinoma. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng tremelimumab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng tremelimumab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Tremelimumab (Imjudo)",
+                                "FDA Approval Date: 2022",
+                                "FDA-approved use: To treat unresectable hepatocellular carcinoma",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2022",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Tremelimumab (Imjudo)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Lunsumio": {
+                "group": "FDA Approved 2022",
+                "vietnamese_name": "Mosunetuzumab, Lunsumio",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat adults with relapsed or refractory follicular lymphoma, a type of non-Hodgkin lymphoma",
+                ],
+                "contraindications": [
+                        "Dị ứng mosunetuzumab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2022. To treat adults with relapsed or refractory follicular lymphoma, a type of non-Hodgkin lymphoma",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Mosunetuzumab được FDA phê duyệt 2022 để to treat adults with relapsed or refractory follicular lymphoma, a type of non-hodgkin lymphoma. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng mosunetuzumab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng mosunetuzumab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Mosunetuzumab (Lunsumio)",
+                                "FDA Approval Date: 2022",
+                                "FDA-approved use: To treat adults with relapsed or refractory follicular lymphoma, a type of non-Hodgkin lymphoma",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2022",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Mosunetuzumab (Lunsumio)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Opdualag": {
+                "group": "FDA Approved 2022",
+                "vietnamese_name": "Nivolumab, Opdualag",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat unresectable or metastatic melanoma",
+                ],
+                "contraindications": [
+                        "Dị ứng nivolumab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2022. To treat unresectable or metastatic melanoma",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Nivolumab được FDA phê duyệt 2022 để to treat unresectable or metastatic melanoma. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng nivolumab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng nivolumab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Nivolumab (Opdualag)",
+                                "FDA Approval Date: 2022",
+                                "FDA-approved use: To treat unresectable or metastatic melanoma",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2022",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Nivolumab (Opdualag)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Tecvayli": {
+                "group": "FDA Approved 2022",
+                "vietnamese_name": "Teclistamab, Tecvayli",
+                "administration": [
+                        "IV",
+                        "SC",
+                ],
+                "indications": [
+                        "To treat relapsed or refractory multiple myeloma among adults who have received at least four specific lines of therapy",
+                ],
+                "contraindications": [
+                        "Dị ứng teclistamab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2022. To treat relapsed or refractory multiple myeloma among adults who have received at least four specific lines of therapy",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Teclistamab được FDA phê duyệt 2022 để to treat relapsed or refractory multiple myeloma among adults who have received at least four specific lines of therapy. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng teclistamab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng teclistamab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Teclistamab (Tecvayli)",
+                                "FDA Approval Date: 2022",
+                                "FDA-approved use: To treat relapsed or refractory multiple myeloma among adults who have received at least four specific lines of therapy",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2022",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Teclistamab (Tecvayli)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Columvi": {
+                "group": "FDA Approved 2023",
+                "vietnamese_name": "Glofitamab, Columvi",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat diffuse large B-cell lymphoma, not otherwise specified, or large B-cell lymphoma arising from follicular lymphoma after two or more lines of systemic therapy",
+                ],
+                "contraindications": [
+                        "Dị ứng glofitamab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2023. To treat diffuse large B-cell lymphoma, not otherwise specified, or large B-cell lymphoma arising from follicular lymphoma after two or more lines of systemic therapy",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Glofitamab được FDA phê duyệt 2023 để to treat diffuse large b-cell lymphoma, not otherwise specified, or large b-cell lymphoma arising from follicular lymphoma after two or more lines of systemic therapy. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng glofitamab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng glofitamab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Glofitamab (Columvi)",
+                                "FDA Approval Date: 2023",
+                                "FDA-approved use: To treat diffuse large B-cell lymphoma, not otherwise specified, or large B-cell lymphoma arising from follicular lymphoma after two or more lines of systemic therapy",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2023",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Glofitamab (Columvi)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Elrexfio": {
+                "group": "FDA Approved 2023",
+                "vietnamese_name": "Elranatamab, Elrexfio",
+                "administration": [
+                        "IV",
+                        "SC",
+                ],
+                "indications": [
+                        "To treat adults with relapsed or refractory multiple myeloma who have received at least four prior lines of therapy",
+                ],
+                "contraindications": [
+                        "Dị ứng elranatamab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2023. To treat adults with relapsed or refractory multiple myeloma who have received at least four prior lines of therapy",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Elranatamab được FDA phê duyệt 2023 để to treat adults with relapsed or refractory multiple myeloma who have received at least four prior lines of therapy. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng elranatamab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng elranatamab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Elranatamab (Elrexfio)",
+                                "FDA Approval Date: 2023",
+                                "FDA-approved use: To treat adults with relapsed or refractory multiple myeloma who have received at least four prior lines of therapy",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2023",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Elranatamab (Elrexfio)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Epkinly": {
+                "group": "FDA Approved 2023",
+                "vietnamese_name": "Epcoritamab, Epkinly",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat relapsed or refractory diffuse large B-cell lymphoma (not otherwise specified) and high-grade B-cell lymphoma after two or more lines of systemic therapy",
+                ],
+                "contraindications": [
+                        "Dị ứng epcoritamab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2023. To treat relapsed or refractory diffuse large B-cell lymphoma (not otherwise specified) and high-grade B-cell lymphoma after two or more lines of systemic therapy",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Epcoritamab được FDA phê duyệt 2023 để to treat relapsed or refractory diffuse large b-cell lymphoma (not otherwise specified) and high-grade b-cell lymphoma after two or more lines of systemic therapy. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng epcoritamab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng epcoritamab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Epcoritamab (Epkinly)",
+                                "FDA Approval Date: 2023",
+                                "FDA-approved use: To treat relapsed or refractory diffuse large B-cell lymphoma (not otherwise specified) and high-grade B-cell lymphoma after two or more lines of systemic therapy",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2023",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Epcoritamab (Epkinly)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Loqtorzi": {
+                "group": "FDA Approved 2023",
+                "vietnamese_name": "Toripalimab, Loqtorzi",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat recurrent or metastatic nasopharyngeal carcinoma when used together with or following other therapies",
+                ],
+                "contraindications": [
+                        "Dị ứng toripalimab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2023. To treat recurrent or metastatic nasopharyngeal carcinoma when used together with or following other therapies",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Toripalimab được FDA phê duyệt 2023 để to treat recurrent or metastatic nasopharyngeal carcinoma when used together with or following other therapies. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng toripalimab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng toripalimab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Toripalimab (Loqtorzi)",
+                                "FDA Approval Date: 2023",
+                                "FDA-approved use: To treat recurrent or metastatic nasopharyngeal carcinoma when used together with or following other therapies",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2023",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Toripalimab (Loqtorzi)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Talvey": {
+                "group": "FDA Approved 2023",
+                "vietnamese_name": "Talquetamab, Talvey",
+                "administration": [
+                        "IV",
+                        "SC",
+                ],
+                "indications": [
+                        "To treat adults with relapsed or refractory multiple myeloma who have received at least four prior therapies",
+                ],
+                "contraindications": [
+                        "Dị ứng talquetamab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2023. To treat adults with relapsed or refractory multiple myeloma who have received at least four prior therapies",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Talquetamab được FDA phê duyệt 2023 để to treat adults with relapsed or refractory multiple myeloma who have received at least four prior therapies. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng talquetamab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng talquetamab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Talquetamab (Talvey)",
+                                "FDA Approval Date: 2023",
+                                "FDA-approved use: To treat adults with relapsed or refractory multiple myeloma who have received at least four prior therapies",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2023",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Talquetamab (Talvey)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Zynyz": {
+                "group": "FDA Approved 2023",
+                "vietnamese_name": "Retifanlimab, Zynyz",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat metastatic or recurrent locally advanced Merkel cell carcinoma",
+                ],
+                "contraindications": [
+                        "Dị ứng retifanlimab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2023. To treat metastatic or recurrent locally advanced Merkel cell carcinoma",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Retifanlimab được FDA phê duyệt 2023 để to treat metastatic or recurrent locally advanced merkel cell carcinoma. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng retifanlimab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng retifanlimab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Retifanlimab (Zynyz)",
+                                "FDA Approval Date: 2023",
+                                "FDA-approved use: To treat metastatic or recurrent locally advanced Merkel cell carcinoma",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2023",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Retifanlimab (Zynyz)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Bizengri": {
+                "group": "FDA Approved 2024",
+                "vietnamese_name": "Zenocutuzumab, Bizengri",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat non-small cell lung cancer and pancreatic adenocarcinoma",
+                ],
+                "contraindications": [
+                        "Dị ứng zenocutuzumab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2024. To treat non-small cell lung cancer and pancreatic adenocarcinoma",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Zenocutuzumab được FDA phê duyệt 2024 để to treat non-small cell lung cancer and pancreatic adenocarcinoma. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng zenocutuzumab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng zenocutuzumab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Zenocutuzumab (Bizengri)",
+                                "FDA Approval Date: 2024",
+                                "FDA-approved use: To treat non-small cell lung cancer and pancreatic adenocarcinoma",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2024",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Zenocutuzumab (Bizengri)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Imdelltra": {
+                "group": "FDA Approved 2024",
+                "vietnamese_name": "Tarlatamab, Imdelltra",
+                "administration": [
+                        "IV",
+                        "SC",
+                ],
+                "indications": [
+                        "To treat extensive stage small cell lung cancer",
+                ],
+                "contraindications": [
+                        "Dị ứng tarlatamab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2024. To treat extensive stage small cell lung cancer",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Tarlatamab được FDA phê duyệt 2024 để to treat extensive stage small cell lung cancer. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng tarlatamab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng tarlatamab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Tarlatamab (Imdelltra)",
+                                "FDA Approval Date: 2024",
+                                "FDA-approved use: To treat extensive stage small cell lung cancer",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2024",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Tarlatamab (Imdelltra)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Tevimbra": {
+                "group": "FDA Approved 2024",
+                "vietnamese_name": "Tislelizumab, Tevimbra",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat unresectable or metastatic esophageal squamous cell carcinoma",
+                ],
+                "contraindications": [
+                        "Dị ứng tislelizumab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2024. To treat unresectable or metastatic esophageal squamous cell carcinoma",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Tislelizumab được FDA phê duyệt 2024 để to treat unresectable or metastatic esophageal squamous cell carcinoma. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng tislelizumab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng tislelizumab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Tislelizumab (Tevimbra)",
+                                "FDA Approval Date: 2024",
+                                "FDA-approved use: To treat unresectable or metastatic esophageal squamous cell carcinoma",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2024",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Tislelizumab (Tevimbra)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Unloxcyt": {
+                "group": "FDA Approved 2024",
+                "vietnamese_name": "Cosibelimab, Unloxcyt",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat cutaneous squamous cell carcinoma",
+                ],
+                "contraindications": [
+                        "Dị ứng cosibelimab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2024. To treat cutaneous squamous cell carcinoma",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Cosibelimab được FDA phê duyệt 2024 để to treat cutaneous squamous cell carcinoma. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng cosibelimab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng cosibelimab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Cosibelimab (Unloxcyt)",
+                                "FDA Approval Date: 2024",
+                                "FDA-approved use: To treat cutaneous squamous cell carcinoma",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2024",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Cosibelimab (Unloxcyt)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Vyloy": {
+                "group": "FDA Approved 2024",
+                "vietnamese_name": "Zolbetuximab, Vyloy",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat gastric or gastroesophageal junction adenocarcinoma",
+                ],
+                "contraindications": [
+                        "Dị ứng zolbetuximab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2024. To treat gastric or gastroesophageal junction adenocarcinoma",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Zolbetuximab được FDA phê duyệt 2024 để to treat gastric or gastroesophageal junction adenocarcinoma. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng zolbetuximab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng zolbetuximab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Zolbetuximab (Vyloy)",
+                                "FDA Approval Date: 2024",
+                                "FDA-approved use: To treat gastric or gastroesophageal junction adenocarcinoma",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2024",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Zolbetuximab (Vyloy)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Ziihera": {
+                "group": "FDA Approved 2024",
+                "vietnamese_name": "Zanidatamab, Ziihera",
+                "administration": [
+                        "IV",
+                        "SC",
+                ],
+                "indications": [
+                        "To treat unresectable or metastatic HER2-positive (IHC 3+) biliary tract cancer",
+                ],
+                "contraindications": [
+                        "Dị ứng zanidatamab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2024. To treat unresectable or metastatic HER2-positive (IHC 3+) biliary tract cancer",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Zanidatamab được FDA phê duyệt 2024 để to treat unresectable or metastatic her2-positive (ihc 3+) biliary tract cancer. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng zanidatamab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng zanidatamab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Zanidatamab (Ziihera)",
+                                "FDA Approval Date: 2024",
+                                "FDA-approved use: To treat unresectable or metastatic HER2-positive (IHC 3+) biliary tract cancer",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2024",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Zanidatamab (Ziihera)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Datroway": {
+                "group": "FDA Approved 2025",
+                "vietnamese_name": "Datopotamab, Datroway",
+                "administration": [
+                        "IV",
+                        "SC",
+                ],
+                "indications": [
+                        "To treat unresectable or metastatic, HR-positive, HER2-negative breast cancer who have received prior endocrine-based therapy and chemotherapy for unresectable or metastatic disease",
+                ],
+                "contraindications": [
+                        "Dị ứng datopotamab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2025. To treat unresectable or metastatic, HR-positive, HER2-negative breast cancer who have received prior endocrine-based therapy and chemotherapy for unresectable or metastatic disease",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Datopotamab được FDA phê duyệt 2025 để to treat unresectable or metastatic, hr-positive, her2-negative breast cancer who have received prior endocrine-based therapy and chemotherapy for unresectable or metastatic disease. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng datopotamab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng datopotamab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Datopotamab (Datroway)",
+                                "FDA Approval Date: 2025",
+                                "FDA-approved use: To treat unresectable or metastatic, HR-positive, HER2-negative breast cancer who have received prior endocrine-based therapy and chemotherapy for unresectable or metastatic disease",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2025",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Datopotamab (Datroway)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Emrelis": {
+                "group": "FDA Approved 2025",
+                "vietnamese_name": "Telisotuzumab, Emrelis",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat locally advanced or metastatic, non-squamous non-small cell lung cancer (NSCLC) with high c-Met protein overexpression after prior systemic therapy",
+                ],
+                "contraindications": [
+                        "Dị ứng telisotuzumab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2025. To treat locally advanced or metastatic, non-squamous non-small cell lung cancer (NSCLC) with high c-Met protein overexpression after prior systemic therapy",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Telisotuzumab được FDA phê duyệt 2025 để to treat locally advanced or metastatic, non-squamous non-small cell lung cancer (nsclc) with high c-met protein overexpression after prior systemic therapy. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng telisotuzumab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng telisotuzumab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Telisotuzumab (Emrelis)",
+                                "FDA Approval Date: 2025",
+                                "FDA-approved use: To treat locally advanced or metastatic, non-squamous non-small cell lung cancer (NSCLC) with high c-Met protein overexpression after prior systemic therapy",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2025",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Telisotuzumab (Emrelis)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "KeytrudaQlex": {
+                "group": "FDA Approved 2025",
+                "vietnamese_name": "Pembrolizumab, Keytruda Qlex",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat adult and pediatric (12 years and older) solid tumor indications approved for the intravenous formulation of pembrolizumab",
+                ],
+                "contraindications": [
+                        "Dị ứng pembrolizumab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2025. To treat adult and pediatric (12 years and older) solid tumor indications approved for the intravenous formulation of pembrolizumab",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Pembrolizumab được FDA phê duyệt 2025 để to treat adult and pediatric (12 years and older) solid tumor indications approved for the intravenous formulation of pembrolizumab. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng pembrolizumab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng pembrolizumab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Pembrolizumab (Keytruda Qlex)",
+                                "FDA Approval Date: 2025",
+                                "FDA-approved use: To treat adult and pediatric (12 years and older) solid tumor indications approved for the intravenous formulation of pembrolizumab",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2025",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Pembrolizumab (Keytruda Qlex)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "Lynozyfic": {
+                "group": "FDA Approved 2025",
+                "vietnamese_name": "Linvoseltamab, Lynozyfic",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "To treat relapsed or refractory multiple myeloma after at least four prior lines of therapy, including a proteasome inhibitor, an immunomodulatory agent, and an anti CD38 monoclonal antibody",
+                ],
+                "contraindications": [
+                        "Dị ứng linvoseltamab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2025. To treat relapsed or refractory multiple myeloma after at least four prior lines of therapy, including a proteasome inhibitor, an immunomodulatory agent, and an anti CD38 monoclonal antibody",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Linvoseltamab được FDA phê duyệt 2025 để to treat relapsed or refractory multiple myeloma after at least four prior lines of therapy, including a proteasome inhibitor, an immunomodulatory agent, and an anti cd38 monoclonal antibody. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng linvoseltamab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng linvoseltamab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Linvoseltamab (Lynozyfic)",
+                                "FDA Approval Date: 2025",
+                                "FDA-approved use: To treat relapsed or refractory multiple myeloma after at least four prior lines of therapy, including a proteasome inhibitor, an immunomodulatory agent, and an anti CD38 monoclonal antibody",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2025",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Linvoseltamab (Lynozyfic)",
+                ],
+                "last_updated": "2026-01-15",
+        },
+    "penpulimabkcqx": {
+                "group": "FDA Approved 2025",
+                "vietnamese_name": "Penpulimab, penpulimab-kcqx",
+                "administration": [
+                        "PO",
+                ],
+                "indications": [
+                        "In combination with either cisplatin or carboplatin and gemcitabine, to treat adults with recurrent or metastatic non-keratinizing nasopharyngeal carcinoma (NPC), or as a single agent while on or after platinum-based chemotherapy and at least one other prior line of therapy",
+                ],
+                "contraindications": [
+                        "Dị ứng penpulimab hoặc bất kỳ thành phần nào",
+                ],
+                "dosage": {
+                        "adult_standard": "Theo chỉ định của bác sĩ",
+                        "notes": "FDA phê duyệt 2025. In combination with either cisplatin or carboplatin and gemcitabine, to treat adults with recurrent or metastatic non-keratinizing nasopharyngeal carcinoma (NPC), or as a single agent while on or after platinum-based chemotherapy and at least one other prior line of therapy",
+                },
+                "renal_adjustment": {
+                        "normal": "Không cần chỉnh liều",
+                        "30_60": "Thận trọng",
+                        "under_30": "Thận trọng, dữ liệu hạn chế",
+                },
+                "side_effects": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "interactions": [
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pregnancy": "C",
+                "mechanism_of_action": "Penpulimab được FDA phê duyệt 2025 để in combination with either cisplatin or carboplatin and gemcitabine, to treat adults with recurrent or metastatic non-keratinizing nasopharyngeal carcinoma (npc), or as a single agent while on or after platinum-based chemotherapy and at least one other prior line of therapy. Cần bổ sung thông tin chi tiết về cơ chế tác dụng.",
+                "monitoring": [
+                        "Theo dõi đáp ứng điều trị",
+                        "Theo dõi tác dụng phụ",
+                ],
+                "precautions": [
+                        "Dị ứng penpulimab",
+                        "Cần bổ sung thông tin từ tài liệu FDA",
+                ],
+                "pharmacokinetics": {
+                        "half_life": "Cần bổ sung",
+                        "onset": "Cần bổ sung",
+                        "duration": "Cần bổ sung",
+                        "protein_binding": "Cần bổ sung",
+                        "metabolism": "Cần bổ sung",
+                        "clearance": "Cần bổ sung",
+                },
+                "storage": "Bảo quản theo hướng dẫn của nhà sản xuất",
+                "black_box_warnings": "Cần kiểm tra tài liệu FDA",
+                "drug_interactions": {
+                        "major": [],
+                        "moderate": [],
+                        "minor": [],
+                },
+                "contraindications_detail": {
+                        "tuyệt_đối": [
+                                "Dị ứng penpulimab hoặc bất kỳ thành phần nào",
+                        ],
+                        "tương_đối": [],
+                },
+                "pregnancy_lactation": {
+                        "fda_category": "C",
+                        "pregnancy_details": "Cần bổ sung thông tin từ tài liệu FDA",
+                        "lactation": {
+                                "safety": "Unknown",
+                                "details": "Chưa biết có bài tiết vào sữa mẹ hay không",
+                                "recommendation": "Thận trọng khi cho con bú",
+                        },
+                },
+                "hepatic_adjustment": {
+                        "mild": "Không đổi",
+                        "moderate": "Thận trọng",
+                        "severe": "Thận trọng, dữ liệu hạn chế",
+                        "notes": "Cần bổ sung thông tin từ tài liệu FDA",
+                },
+                "overdose_management": {
+                        "symptoms": [
+                                "Cần bổ sung",
+                        ],
+                        "antidote": "Không có antidote đặc hiệu",
+                        "treatment": [
+                                "Điều trị hỗ trợ",
+                        ],
+                        "monitoring": "Theo dõi dấu hiệu sinh tồn",
+                },
+                "reversal_agents": {
+                        "available": False,
+                        "agents": [],
+                },
+                "administration_instructions": {
+                        "oral": {
+                                "with_food": "Cần bổ sung",
+                                "timing": "Cần bổ sung",
+                        },
+                },
+                "references": {
+                        "primary_sources": [
+                                "FDA Drug Label - Penpulimab (penpulimab-kcqx)",
+                                "FDA Approval Date: 2025",
+                                "FDA-approved use: In combination with either cisplatin or carboplatin and gemcitabine, to treat adults with recurrent or metastatic non-keratinizing nasopharyngeal carcinoma (NPC), or as a single agent while on or after platinum-based chemotherapy and at least one other prior line of therapy",
+                        ],
+                        "last_updated": "2026-01-15",
+                        "evidence_level": "A - FDA-approved 2025",
+                },
+                "risk_flags": {
+                        "high_alert": False,
+                        "narrow_therapeutic_index": False,
+                        "bleeding_risk": False,
+                        "organ_toxicity": [],
+                        "qt_prolongation": False,
+                        "hepatotoxicity": False,
+                        "nephrotoxicity": False,
+                        "requires_monitoring": [
+                                "Clinical response",
+                                "Adverse effects",
+                        ],
+                },
+                "guideline_tags": [
+                        "FDA Drug Information - Penpulimab (penpulimab-kcqx)",
+                ],
+                "last_updated": "2026-01-15",
+        },
 }
 
 __all__ = ['MONOCLONAL_ANTIBODIES_ADCS_DRUGS']

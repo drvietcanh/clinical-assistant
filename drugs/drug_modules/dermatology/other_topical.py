@@ -1443,7 +1443,849 @@ OTHER_TOPICAL_DRUGS: Dict[str, Dict[str, Any]] = {
                 "evidence_level": "A - Dựa trên FDA drug labels, clinical guidelines, và dữ liệu lâm sàng từ nhiều nguồn"
             }
         },
-
+    "Capsaicin": {
+        "group": "Dermatology - Topical Analgesic (TRPV1 Agonist)",
+        "vietnamese_name": "Capsaicin, Zostrix, Capzasin",
+        "administration": ["Topical"],
+        "indications": [
+            "Đau thần kinh ngoại biên (postherpetic neuralgia, diabetic neuropathy)",
+            "Đau cơ xương khớp tại chỗ",
+            "Đau khớp (osteoarthritis, rheumatoid arthritis)",
+            "Đau cơ (fibromyalgia - off-label)"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng capsaicin hoặc ớt",
+                "Vùng da bị tổn thương, loét, hoặc viêm",
+                "Trẻ em <18 tuổi (cho một số chỉ định)"
+            ],
+            "tương_đối": [
+                "Da nhạy cảm - thận trọng",
+                "Phụ nữ có thai - thận trọng",
+                "Đang cho con bú - thận trọng"
+            ]
+        },
+        "dosage": {
+            "adult_topical": "Bôi mỏng 3-4 lần/ngày lên vùng da bị ảnh hưởng",
+            "adult_patch": "Patch 8%: dán 1 lần/ngày, giữ 30-60 phút (cho postherpetic neuralgia)",
+            "notes": "Capsaicin gây cảm giác nóng, rát ban đầu (có thể kéo dài vài tuần). Tác dụng giảm đau xuất hiện sau vài tuần sử dụng. Tránh tiếp xúc với mắt, niêm mạc."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy thận."
+        },
+        "side_effects": [
+            "Cảm giác nóng, rát tại chỗ (phổ biến, có thể kéo dài vài tuần)",
+            "Đỏ da, kích ứng da",
+            "Ngứa",
+            "Ho, hắt hơi (nếu hít phải)",
+            "Kích ứng mắt (nếu dính vào mắt)"
+        ],
+        "interactions": [
+            "Không có tương tác đáng kể khi dùng tại chỗ"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Capsaicin là chất chiết xuất từ ớt, kích thích thụ thể TRPV1 (Transient Receptor Potential Vanilloid 1) trên các sợi thần kinh cảm giác. Ban đầu gây cảm giác nóng, rát (do giải phóng substance P và các chất dẫn truyền đau khác). Sau khi sử dụng kéo dài, capsaicin làm cạn kiệt substance P và làm giảm độ nhạy cảm của các sợi thần kinh cảm giác, dẫn đến giảm đau thần kinh. Được dùng cho đau thần kinh ngoại biên (đau sau zona, đau thần kinh do tiểu đường) và đau cơ xương khớp tại chỗ.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm đau (sau vài tuần sử dụng)",
+            "Kích ứng da tại chỗ (đỏ, rát, ngứa)",
+            "Dấu hiệu dị ứng"
+        ],
+        "precautions": [
+            "Cảm giác nóng, rát ban đầu - phổ biến, có thể kéo dài vài tuần, thường tự khỏi",
+            "Tránh tiếp xúc với mắt, niêm mạc - gây kích ứng nặng",
+            "Rửa tay kỹ sau khi bôi",
+            "Tránh dùng trên vùng da bị tổn thương, loét, hoặc viêm",
+            "Tác dụng giảm đau xuất hiện sau vài tuần sử dụng - cần kiên nhẫn",
+            "Có thể gây ho, hắt hơi nếu hít phải - thận trọng khi bôi gần mũi, miệng"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Cảm giác nóng, rát: ngay lập tức; Tác dụng giảm đau: vài tuần",
+            "duration": "4-6 giờ (dùng 3-4 lần/ngày)",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Để xa tầm tay trẻ em.",
+        "black_box_warnings": "Tránh tiếp xúc với mắt, niêm mạc - gây kích ứng nặng. Cảm giác nóng, rát ban đầu là bình thường và thường tự khỏi sau vài tuần.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Có thể gây kích ứng nếu trẻ tiếp xúc với vùng da bôi thuốc.",
+                "recommendation": "Thận trọng khi cho con bú. Tránh để trẻ tiếp xúc với vùng da bôi thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng",
+                "Bỏng da (nếu dùng nồng độ cao hoặc diện rộng)",
+                "Kích ứng mắt nặng (nếu dính vào mắt)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Rửa sạch vùng da bằng xà phòng và nước",
+                "Nếu dính vào mắt: rửa mắt bằng nước sạch nhiều lần, đi khám bác sĩ",
+                "Chườm lạnh để giảm cảm giác nóng, rát",
+                "Điều trị hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi vùng da bị ảnh hưởng, dấu hiệu kích ứng mắt nếu dính vào mắt."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Rửa sạch và lau khô vùng da. Bôi mỏng lên vùng da bị ảnh hưởng, tránh vùng da lành. Rửa tay kỹ sau khi bôi. Tránh tiếp xúc với mắt, niêm mạc.",
+                "timing": "3-4 lần/ngày. Tác dụng giảm đau xuất hiện sau vài tuần sử dụng."
+            },
+            "patch": {
+                "technique": "Dán patch lên vùng da bị ảnh hưởng, giữ 30-60 phút. Rửa sạch vùng da sau khi tháo patch.",
+                "timing": "1 lần/ngày (cho postherpetic neuralgia)"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Capsaicin (Zostrix, Capzasin)",
+                "UpToDate - Topical analgesics: Drug information",
+                "AAN Guidelines - Neuropathic Pain Treatment"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "High - FDA-approved, extensive clinical data"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["skin"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Skin irritation", "Clinical response"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information",
+            "AAN Guidelines - Neuropathic Pain Treatment"
+        ]
+    },
+    "Menthol": {
+        "group": "Dermatology - Topical Analgesic (Cooling Agent)",
+        "vietnamese_name": "Menthol, Mentholatum",
+        "administration": ["Topical"],
+        "indications": [
+            "Đau cơ xương khớp tại chỗ",
+            "Đau khớp (osteoarthritis)",
+            "Đau cơ (muscle pain)",
+            "Ngứa da (itch relief)",
+            "Nghẹt mũi (nasal congestion - dạng xịt mũi)"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng menthol hoặc bạc hà",
+                "Vùng da bị tổn thương, loét, hoặc viêm nặng",
+                "Trẻ em <2 tuổi (cho một số chỉ định)"
+            ],
+            "tương_đối": [
+                "Da nhạy cảm - thận trọng",
+                "Phụ nữ có thai - thận trọng",
+                "Đang cho con bú - thận trọng"
+            ]
+        },
+        "dosage": {
+            "adult_topical": "Bôi mỏng 3-4 lần/ngày lên vùng da bị ảnh hưởng",
+            "adult_nasal": "Xịt mũi 2-3 lần/ngày (cho nghẹt mũi)",
+            "notes": "Menthol gây cảm giác mát lạnh, giảm đau tạm thời. Tác dụng ngắn (1-2 giờ). Tránh tiếp xúc với mắt, niêm mạc."
+        },
+        "renal_adjustment": {
+            "normal": "Không đổi",
+            "30_60": "Không đổi",
+            "under_30": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy thận."
+        },
+        "side_effects": [
+            "Kích ứng da tại chỗ (đỏ, rát) - hiếm",
+            "Cảm giác mát lạnh quá mức",
+            "Kích ứng mắt (nếu dính vào mắt)",
+            "Kích ứng mũi, họng (nếu dùng dạng xịt mũi)"
+        ],
+        "interactions": [
+            "Không có tương tác đáng kể khi dùng tại chỗ"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Menthol là chất chiết xuất từ bạc hà, kích thích thụ thể TRPM8 (Transient Receptor Potential Melastatin 8) trên các sợi thần kinh cảm giác. Gây cảm giác mát lạnh, làm giảm cảm giác đau và ngứa. Menthol cũng có tác dụng gây tê nhẹ tại chỗ. Được dùng cho đau cơ xương khớp tại chỗ, đau khớp, đau cơ, và ngứa da. Dạng xịt mũi: gây cảm giác mát lạnh, giảm nghẹt mũi tạm thời.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm đau, giảm ngứa",
+            "Kích ứng da tại chỗ (đỏ, rát)",
+            "Dấu hiệu dị ứng"
+        ],
+        "precautions": [
+            "Tránh tiếp xúc với mắt, niêm mạc - gây kích ứng",
+            "Rửa tay kỹ sau khi bôi",
+            "Tránh dùng trên vùng da bị tổn thương, loét, hoặc viêm nặng",
+            "Tác dụng ngắn (1-2 giờ) - có thể cần bôi lại nhiều lần",
+            "Cảm giác mát lạnh là bình thường - không phải tác dụng phụ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Không áp dụng (topical)",
+            "onset": "Ngay lập tức (cảm giác mát lạnh)",
+            "duration": "1-2 giờ",
+            "protein_binding": "Không áp dụng (topical)",
+            "clearance": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (15-30°C), tránh ẩm, tránh ánh sáng. Để xa tầm tay trẻ em.",
+        "black_box_warnings": "Tránh tiếp xúc với mắt, niêm mạc - gây kích ứng. Không dùng cho trẻ em <2 tuổi (cho một số chỉ định).",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [],
+            "minor": []
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Hấp thu toàn thân tối thiểu từ dạng tại chỗ.",
+            "lactation": {
+                "safety": "Caution",
+                "details": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Có thể gây kích ứng nếu trẻ tiếp xúc với vùng da bôi thuốc.",
+                "recommendation": "Thận trọng khi cho con bú. Tránh để trẻ tiếp xúc với vùng da bôi thuốc."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Không đổi",
+            "severe": "Không đổi",
+            "notes": "Hấp thu toàn thân tối thiểu từ dạng tại chỗ. Không cần điều chỉnh liều ở suy gan."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Kích ứng da nặng",
+                "Kích ứng mắt nặng (nếu dính vào mắt)",
+                "Kích ứng mũi, họng nặng (nếu dùng dạng xịt mũi quá nhiều)"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Rửa sạch vùng da bằng xà phòng và nước",
+                "Nếu dính vào mắt: rửa mắt bằng nước sạch nhiều lần, đi khám bác sĩ",
+                "Chườm lạnh để giảm kích ứng",
+                "Điều trị hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi vùng da bị ảnh hưởng, dấu hiệu kích ứng mắt nếu dính vào mắt."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "topical": {
+                "technique": "Rửa sạch và lau khô vùng da. Bôi mỏng lên vùng da bị ảnh hưởng, tránh vùng da lành. Rửa tay kỹ sau khi bôi. Tránh tiếp xúc với mắt, niêm mạc.",
+                "timing": "3-4 lần/ngày. Tác dụng ngắn (1-2 giờ)."
+            },
+            "nasal": {
+                "technique": "Xịt vào mỗi lỗ mũi, hít nhẹ. Tránh xịt quá nhiều.",
+                "timing": "2-3 lần/ngày (cho nghẹt mũi)"
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Menthol (Mentholatum)",
+                "UpToDate - Topical analgesics: Drug information"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "Moderate - FDA-approved, limited clinical data"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["skin"],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Skin irritation", "Clinical response"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information",
+            "UpToDate Drug Information"
+        ]
+    },
+    "Livmarli": {
+        "group": "FDA Approved 9/29/2021",
+        "vietnamese_name": "Maralixibat, Livmarli",
+        "administration": ["PO"],
+        "indications": [
+            "Ngứa do ứ mật (cholestatic pruritus) ở bệnh nhân hội chứng Alagille",
+            "Điều trị ngứa liên quan đến bệnh gan ứ mật ở trẻ em từ 3 tháng tuổi trở lên"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng maralixibat hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Tắc nghẽn đường mật hoàn toàn - thận trọng",
+                "Suy gan nặng - thận trọng",
+                "Rối loạn hấp thu mỡ nặng - thận trọng"
+            ]
+        },
+        "dosage": {
+            "pediatric_3mo_12mo": "380 mcg/kg PO x 1 lần/ngày, tăng dần lên 380 mcg/kg x 2 lần/ngày nếu dung nạp",
+            "pediatric_1yr_18yr": "380 mcg/kg PO x 1 lần/ngày, tăng dần lên 380 mcg/kg x 2 lần/ngày nếu dung nạp (tối đa 10.5mg x 2 lần/ngày)",
+            "adult": "10.5mg PO x 2 lần/ngày (dựa trên cân nặng)",
+            "notes": "Uống với thức ăn để giảm tác dụng phụ đường tiêu hóa. Bắt đầu với liều thấp, tăng dần theo đáp ứng và dung nạp. FDA phê duyệt 9/29/2021 cho bệnh nhân từ 3 tháng tuổi trở lên."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, không cần chỉnh liều",
+            "under_30": "Thận trọng, dữ liệu hạn chế"
+        },
+        "side_effects": [
+            "Tiêu chảy - rất phổ biến (có thể nặng)",
+            "Đau bụng - phổ biến",
+            "Nôn - phổ biến",
+            "Buồn nôn - phổ biến",
+            "Giảm cân - phổ biến",
+            "Mệt mỏi - phổ biến",
+            "Đau đầu - phổ biến",
+            "Tăng men gan (ALT, AST) - phổ biến",
+            "Giảm hấp thu vitamin tan trong dầu (A, D, E, K) - do giảm hấp thu mỡ",
+            "Phát ban - không phổ biến",
+            "Ngứa - không phổ biến"
+        ],
+        "interactions": [
+            "Cholestyramine, colestipol: giảm hấp thu maralixibat - dùng cách xa ít nhất 4 giờ",
+            "Vitamin tan trong dầu (A, D, E, K): giảm hấp thu - cần bổ sung",
+            "Thuốc hấp thu phụ thuộc mỡ: có thể giảm hấp thu"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Maralixibat là chất ức chế vận chuyển acid mật ở hồi tràng (IBAT - ileal bile acid transporter). Ức chế ASBT (apical sodium-dependent bile acid transporter) ở hồi tràng, ngăn chặn tái hấp thu acid mật từ ruột vào máu. Dẫn đến: (1) Giảm nồng độ acid mật trong huyết thanh, (2) Giảm ngứa do ứ mật (cholestatic pruritus), (3) Tăng thải trừ acid mật qua phân. Được dùng cho ngứa do ứ mật ở bệnh nhân hội chứng Alagille. ĐẶC ĐIỂM: (1) IBAT inhibitor, (2) Giảm ngứa do ứ mật hiệu quả, (3) Tác dụng phụ đường tiêu hóa phổ biến (tiêu chảy, đau bụng, nôn), (4) Có thể gây giảm hấp thu vitamin tan trong dầu, (5) FDA phê duyệt 9/29/2021 cho bệnh nhân từ 3 tháng tuổi trở lên.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm ngứa (đánh giá bằng thang điểm ngứa)",
+            "Tác dụng phụ đường tiêu hóa: tiêu chảy, đau bụng, nôn - QUAN TRỌNG",
+            "Cân nặng (đặc biệt ở trẻ em) - giảm cân phổ biến",
+            "Chức năng gan: ALT, AST, bilirubin (tăng men gan phổ biến)",
+            "Vitamin tan trong dầu: vitamin A, D, E, K (giảm hấp thu)",
+            "Dấu hiệu mất nước (nếu tiêu chảy nặng)",
+            "Dấu hiệu tắc nghẽn đường mật"
+        ],
+        "precautions": [
+            "TIÊU CHẢY - rất phổ biến, có thể nặng. Có thể cần giảm liều hoặc ngừng tạm thời nếu tiêu chảy nặng.",
+            "GIẢM HẤP THU VITAMIN TAN TRONG DẦU - cần bổ sung vitamin A, D, E, K định kỳ",
+            "GIẢM CÂN - phổ biến, đặc biệt ở trẻ em. Theo dõi cân nặng chặt chẽ.",
+            "Tăng men gan - phổ biến. Theo dõi chức năng gan định kỳ.",
+            "Uống với thức ăn để giảm tác dụng phụ đường tiêu hóa",
+            "Bắt đầu với liều thấp, tăng dần theo đáp ứng và dung nạp",
+            "Thận trọng ở bệnh nhân tắc nghẽn đường mật hoàn toàn",
+            "Thận trọng ở bệnh nhân suy gan nặng",
+            "Dùng cách xa cholestyramine, colestipol ít nhất 4 giờ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 10-15 giờ",
+            "onset": "Vài tuần (tác dụng giảm ngứa)",
+            "duration": "12 giờ (dùng 2 lần/ngày)",
+            "protein_binding": ">99%",
+            "metabolism": "Chuyển hóa tối thiểu, chủ yếu thải trừ nguyên dạng",
+            "clearance": "Thải trừ chủ yếu qua phân (không hấp thu), một phần qua nước tiểu"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Bảo quản trong hộp kín gốc. Để xa tầm tay trẻ em.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, cần cảnh báo về: (1) Tiêu chảy có thể nặng và cần điều trị, (2) Giảm hấp thu vitamin tan trong dầu cần bổ sung, (3) Giảm cân phổ biến, đặc biệt ở trẻ em.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Cholestyramine, Colestipol",
+                    "mechanism": "Giảm hấp thu maralixibat",
+                    "effect": "Giảm hiệu quả điều trị",
+                    "management": "Dùng cách xa ít nhất 4 giờ. Nếu có thể, tránh dùng cùng."
+                },
+                {
+                    "drug": "Vitamin tan trong dầu (A, D, E, K)",
+                    "mechanism": "Maralixibat giảm hấp thu mỡ, dẫn đến giảm hấp thu vitamin tan trong dầu",
+                    "effect": "Giảm nồng độ vitamin tan trong dầu, có thể gây thiếu hụt",
+                    "management": "Bổ sung vitamin tan trong dầu định kỳ. Theo dõi nồng độ vitamin."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Thuốc hấp thu phụ thuộc mỡ",
+                    "mechanism": "Maralixibat giảm hấp thu mỡ",
+                    "effect": "Có thể giảm hấp thu các thuốc hấp thu phụ thuộc mỡ",
+                    "management": "Thận trọng. Có thể cần điều chỉnh liều hoặc thời điểm dùng."
+                }
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng maralixibat hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Tắc nghẽn đường mật hoàn toàn - thận trọng, có thể không hiệu quả",
+                "Suy gan nặng - thận trọng, tăng nguy cơ tác dụng phụ",
+                "Rối loạn hấp thu mỡ nặng - thận trọng, có thể làm nặng thêm",
+                "Trẻ em <3 tháng tuổi - chưa có dữ liệu an toàn"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Maralixibat có thể ảnh hưởng đến hấp thu vitamin tan trong dầu, có thể ảnh hưởng đến sự phát triển thai nhi. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa biết maralixibat có bài tiết vào sữa mẹ hay không. Maralixibat hấp thu tối thiểu vào máu, nhưng không có dữ liệu về bài tiết vào sữa mẹ.",
+                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc. Nếu dùng, theo dõi trẻ sơ sinh về dấu hiệu tác dụng phụ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, không cần chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều hoặc tránh dùng",
+            "notes": "Maralixibat chuyển hóa tối thiểu. Tuy nhiên, ở bệnh nhân suy gan nặng, tăng nguy cơ tác dụng phụ và có thể không hiệu quả. Theo dõi chặt chẽ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nặng",
+                "Đau bụng nặng",
+                "Nôn nhiều",
+                "Mất nước",
+                "Rối loạn điện giải"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay maralixibat",
+                "Điều trị hỗ trợ: bù nước và điện giải (truyền dịch nếu cần)",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Theo dõi cân bằng nước và điện giải",
+                "Điều trị triệu chứng (giảm đau nếu cần)"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, cân bằng nước và điện giải, chức năng gan cho đến khi hồi phục."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để giảm tác dụng phụ đường tiêu hóa (tiêu chảy, đau bụng, nôn)",
+                "timing": "Uống 2 lần/ngày với bữa ăn. Bắt đầu với liều thấp (1 lần/ngày), tăng dần lên 2 lần/ngày nếu dung nạp.",
+                "notes": "QUAN TRỌNG: (1) Uống với thức ăn, (2) Bắt đầu với liều thấp, tăng dần, (3) Nếu tiêu chảy nặng, có thể cần giảm liều hoặc ngừng tạm thời, (4) Bổ sung vitamin tan trong dầu định kỳ, (5) Theo dõi cân nặng chặt chẽ, đặc biệt ở trẻ em."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Maralixibat (Livmarli)",
+                "FDA Approval Date: 9/29/2021",
+                "FDA-approved use: To treat cholestatic pruritus associated with Alagille syndrome",
+                "UpToDate - Maralixibat: Drug information",
+                "Lexicomp - Maralixibat monograph"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved 9/29/2021, dựa trên dữ liệu lâm sàng từ các thử nghiệm lâm sàng"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity (elevated liver enzymes) - common"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (reduction in pruritus)", "GI side effects (diarrhea, abdominal pain, vomiting) - CRITICAL", "Weight (especially in children) - CRITICAL", "Liver function (ALT, AST, bilirubin)", "Fat-soluble vitamins (A, D, E, K)", "Signs of dehydration", "Signs of bile duct obstruction"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information - Maralixibat (Livmarli)",
+            "UpToDate - Cholestatic Pruritus Treatment",
+            "AASLD Guidelines - Cholestatic Liver Disease"
+        ],
+        "last_updated": "2025-02-18"
+    },
+    "Korsuva": {
+        "group": "FDA Approved 8/23/2021",
+        "vietnamese_name": "Difelikefalin, Korsuva",
+        "administration": ["IV"],
+        "indications": [
+            "Ngứa trung bình đến nặng liên quan đến bệnh thận mạn tính (CKD) ở bệnh nhân đang lọc máu",
+            "Điều trị ngứa ở bệnh nhân CKD giai đoạn 4-5 đang lọc máu"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng difelikefalin hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Bệnh nhân không lọc máu - chưa được nghiên cứu",
+                "Suy gan nặng - thận trọng",
+                "Suy thận không lọc máu - thận trọng"
+            ]
+        },
+        "dosage": {
+            "adult_iv": "0.5 mcg/kg IV x 1 lần/ngày vào cuối mỗi buổi lọc máu",
+            "notes": "Truyền tĩnh mạch trong 30 giây vào cuối mỗi buổi lọc máu. Chỉ dùng cho bệnh nhân đang lọc máu. FDA phê duyệt 8/23/2021."
+        },
+        "renal_adjustment": {
+            "normal": "Không áp dụng (chỉ dùng cho bệnh nhân lọc máu)",
+            "30_60": "Không áp dụng (chỉ dùng cho bệnh nhân lọc máu)",
+            "under_30": "Không áp dụng (chỉ dùng cho bệnh nhân lọc máu)"
+        },
+        "side_effects": [
+            "Buồn nôn - phổ biến",
+            "Chóng mặt - phổ biến",
+            "Mệt mỏi - phổ biến",
+            "Ngủ gà - phổ biến",
+            "Đau đầu - phổ biến",
+            "Táo bón - phổ biến",
+            "Ngứa - không phổ biến (có thể tăng tạm thời)",
+            "Phản ứng tại chỗ tiêm - không phổ biến",
+            "Hạ huyết áp - không phổ biến",
+            "Tăng men gan - không phổ biến"
+        ],
+        "interactions": [
+            "Thuốc an thần, thuốc ngủ: tăng tác dụng an thần",
+            "Rượu: tăng tác dụng an thần",
+            "Thuốc ức chế CNS: tăng tác dụng ức chế CNS"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Difelikefalin là chất chủ vận thụ thể kappa-opioid (KOR - kappa-opioid receptor) chọn lọc. Kích thích thụ thể kappa-opioid ở hệ thần kinh trung ương và ngoại biên, dẫn đến: (1) Ức chế dẫn truyền tín hiệu ngứa, (2) Giảm cảm giác ngứa, (3) Tác dụng giảm đau nhẹ. Khác với mu-opioid agonists (như morphine), kappa-opioid agonists không gây nghiện và ít tác dụng phụ hơn. Được dùng cho ngứa trung bình đến nặng liên quan đến bệnh thận mạn tính ở bệnh nhân đang lọc máu. ĐẶC ĐIỂM: (1) Kappa-opioid receptor agonist, (2) Chỉ dùng cho bệnh nhân đang lọc máu, (3) Truyền IV vào cuối mỗi buổi lọc máu, (4) Tác dụng an thần phổ biến, (5) FDA phê duyệt 8/23/2021.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm ngứa (đánh giá bằng thang điểm ngứa)",
+            "Tác dụng an thần: buồn ngủ, mệt mỏi - QUAN TRỌNG",
+            "Chức năng gan: ALT, AST (tăng men gan không phổ biến)",
+            "Huyết áp (hạ huyết áp không phổ biến)",
+            "Dấu hiệu quá liều: buồn ngủ nặng, ức chế hô hấp (hiếm)"
+        ],
+        "precautions": [
+            "TÁC DỤNG AN THẦN - phổ biến. Thận trọng khi lái xe hoặc vận hành máy móc.",
+            "CHỈ DÙNG CHO BỆNH NHÂN ĐANG LỌC MÁU - chưa được nghiên cứu ở bệnh nhân không lọc máu",
+            "Truyền IV trong 30 giây vào cuối mỗi buổi lọc máu",
+            "Thận trọng với thuốc an thần, thuốc ngủ, rượu (tăng tác dụng an thần)",
+            "Thận trọng ở bệnh nhân suy gan nặng",
+            "Có thể gây buồn nôn, chóng mặt - phổ biến"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 37-43 giờ",
+            "onset": "Vài giờ đến vài ngày (tác dụng giảm ngứa)",
+            "duration": "24 giờ (dùng 1 lần/ngày sau lọc máu)",
+            "protein_binding": "Khoảng 91-93%",
+            "metabolism": "Chuyển hóa qua gan (CYP3A4, CYP2C8)",
+            "clearance": "Thải trừ chủ yếu qua gan, một phần qua thận. Được loại bỏ một phần qua lọc máu."
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh đông lạnh. Bảo quản trong hộp kín gốc. Để xa tầm tay trẻ em.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, cần cảnh báo về: (1) Tác dụng an thần phổ biến, cần thận trọng khi lái xe, (2) Chỉ dùng cho bệnh nhân đang lọc máu.",
+        "drug_interactions": {
+            "major": [
+                {
+                    "drug": "Thuốc an thần, thuốc ngủ, benzodiazepine",
+                    "mechanism": "Tăng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng tác dụng an thần, tăng nguy cơ buồn ngủ nặng",
+                    "management": "Thận trọng. Có thể cần giảm liều thuốc an thần. Theo dõi dấu hiệu an thần nặng."
+                },
+                {
+                    "drug": "Rượu",
+                    "mechanism": "Tăng ức chế hệ thần kinh trung ương",
+                    "effect": "Tăng tác dụng an thần",
+                    "management": "Tránh uống rượu khi dùng difelikefalin."
+                }
+            ],
+            "moderate": [
+                {
+                    "drug": "CYP3A4 inhibitors (ketoconazole, itraconazole, ritonavir)",
+                    "mechanism": "Ức chế CYP3A4, tăng nồng độ difelikefalin",
+                    "effect": "Tăng nồng độ difelikefalin, tăng nguy cơ tác dụng phụ",
+                    "management": "Thận trọng. Có thể cần giảm liều difelikefalin."
+                }
+            ],
+            "minor": []
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng difelikefalin hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Bệnh nhân không lọc máu - chưa được nghiên cứu, không khuyến cáo",
+                "Suy gan nặng - thận trọng, có thể tăng nồng độ",
+                "Suy thận không lọc máu - thận trọng, chưa được nghiên cứu",
+                "Tiền sử lạm dụng chất - thận trọng"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Difelikefalin có thể ảnh hưởng đến thai nhi. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa biết difelikefalin có bài tiết vào sữa mẹ hay không. Difelikefalin có thể bài tiết vào sữa mẹ dựa trên tính chất dược động học.",
+                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc. Nếu dùng, theo dõi trẻ sơ sinh về dấu hiệu an thần."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, không cần chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều",
+            "notes": "Difelikefalin chuyển hóa qua gan (CYP3A4, CYP2C8). Suy gan có thể làm giảm chuyển hóa, tăng nồng độ và độc tính. Theo dõi chặt chẽ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Buồn ngủ nặng",
+                "Ức chế hô hấp (hiếm)",
+                "Chóng mặt nặng",
+                "Buồn nôn nặng",
+                "Hạ huyết áp"
+            ],
+            "antidote": "Naloxone có thể đảo ngược một phần tác dụng (do tác động lên opioid receptors)",
+            "treatment": [
+                "Ngừng ngay difelikefalin",
+                "Nếu ức chế hô hấp: naloxone (có thể cần liều cao hơn so với mu-opioid)",
+                "Hỗ trợ hô hấp nếu cần",
+                "Hỗ trợ huyết động nếu hạ huyết áp",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Điều trị hỗ trợ và điều trị triệu chứng"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, mức độ ý thức, hô hấp, huyết áp cho đến khi hồi phục."
+        },
+        "reversal_agents": {
+            "available": True,
+            "agents": [
+                {
+                    "name": "Naloxone",
+                    "indication": "Đảo ngược tác dụng ức chế hô hấp (nếu có)",
+                    "dose": "0.4-2mg IV, có thể lặp lại mỗi 2-3 phút",
+                    "notes": "Naloxone có thể đảo ngược một phần tác dụng của difelikefalin do tác động lên opioid receptors, nhưng có thể cần liều cao hơn so với mu-opioid agonists."
+                }
+            ]
+        },
+        "administration_instructions": {
+            "iv": {
+                "reconstitution": "Dùng trực tiếp từ lọ, không cần pha loãng",
+                "infusion_rate": "Truyền tĩnh mạch trong 30 giây",
+                "timing": "Truyền vào cuối mỗi buổi lọc máu, 1 lần/ngày",
+                "compatibility": ["0.9% NaCl", "D5W"],
+                "incompatibility": [],
+                "notes": "QUAN TRỌNG: (1) Chỉ dùng cho bệnh nhân đang lọc máu, (2) Truyền IV trong 30 giây vào cuối mỗi buổi lọc máu, (3) Không truyền trước hoặc trong lọc máu, (4) Theo dõi tác dụng an thần sau truyền."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Difelikefalin (Korsuva)",
+                "FDA Approval Date: 8/23/2021",
+                "FDA-approved use: To treat moderate-to-severe pruritus associated with chronic kidney disease in certain populations",
+                "UpToDate - Difelikefalin: Drug information",
+                "Lexicomp - Difelikefalin monograph"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved 8/23/2021, dựa trên dữ liệu lâm sàng từ các thử nghiệm lâm sàng"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": [],
+            "qt_prolongation": False,
+            "hepatotoxicity": False,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (reduction in pruritus)", "Sedation (drowsiness, fatigue) - CRITICAL", "Liver function (ALT, AST)", "Blood pressure", "Signs of overdose: severe drowsiness, respiratory depression"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information - Difelikefalin (Korsuva)",
+            "UpToDate - CKD-Associated Pruritus Treatment",
+            "KDIGO Guidelines - CKD Management"
+        ],
+        "last_updated": "2025-02-18"
+    },
+    "Bylvay": {
+        "group": "FDA Approved 7/20/2021",
+        "vietnamese_name": "Odevixibat, Bylvay",
+        "administration": ["PO"],
+        "indications": [
+            "Ngứa do ứ mật (cholestatic pruritus) ở bệnh nhân bệnh gan ứ mật tiến triển ở gia đình (PFIC - Progressive Familial Intrahepatic Cholestasis)",
+            "Điều trị ngứa ở bệnh nhân PFIC từ 3 tháng tuổi trở lên"
+        ],
+        "contraindications": {
+            "tuyệt_đối": [
+                "Dị ứng odevixibat hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Tắc nghẽn đường mật hoàn toàn - thận trọng",
+                "Suy gan nặng - thận trọng",
+                "Rối loạn hấp thu mỡ nặng - thận trọng"
+            ]
+        },
+        "dosage": {
+            "pediatric_3mo_12mo": "40 mcg/kg PO x 1 lần/ngày, tăng dần lên 120 mcg/kg x 1 lần/ngày nếu dung nạp",
+            "pediatric_1yr_18yr": "40 mcg/kg PO x 1 lần/ngày, tăng dần lên 120 mcg/kg x 1 lần/ngày nếu dung nạp (tối đa 6mg x 1 lần/ngày)",
+            "adult": "6mg PO x 1 lần/ngày (dựa trên cân nặng)",
+            "notes": "Uống với thức ăn để giảm tác dụng phụ đường tiêu hóa. Bắt đầu với liều thấp (40 mcg/kg), tăng dần theo đáp ứng và dung nạp. FDA phê duyệt 7/20/2021 cho bệnh nhân từ 3 tháng tuổi trở lên."
+        },
+        "renal_adjustment": {
+            "normal": "Không cần chỉnh liều",
+            "30_60": "Thận trọng, không cần chỉnh liều",
+            "under_30": "Thận trọng, dữ liệu hạn chế"
+        },
+        "side_effects": [
+            "Tiêu chảy - rất phổ biến (có thể nặng)",
+            "Đau bụng - phổ biến",
+            "Nôn - phổ biến",
+            "Buồn nôn - phổ biến",
+            "Giảm cân - phổ biến",
+            "Mệt mỏi - phổ biến",
+            "Đau đầu - phổ biến",
+            "Tăng men gan (ALT, AST) - phổ biến",
+            "Giảm hấp thu vitamin tan trong dầu (A, D, E, K) - do giảm hấp thu mỡ",
+            "Phát ban - không phổ biến",
+            "Ngứa - không phổ biến"
+        ],
+        "interactions": [
+            "Cholestyramine, colestipol: giảm hấp thu odevixibat - dùng cách xa ít nhất 4 giờ",
+            "Vitamin tan trong dầu (A, D, E, K): giảm hấp thu - cần bổ sung",
+            "Thuốc hấp thu phụ thuộc mỡ: có thể giảm hấp thu"
+        ],
+        "pregnancy": "C",
+        "mechanism_of_action": "Odevixibat là chất ức chế vận chuyển acid mật ở hồi tràng (IBAT - ileal bile acid transporter). Ức chế ASBT (apical sodium-dependent bile acid transporter) ở hồi tràng, ngăn chặn tái hấp thu acid mật từ ruột vào máu. Dẫn đến: (1) Giảm nồng độ acid mật trong huyết thanh, (2) Giảm ngứa do ứ mật (cholestatic pruritus), (3) Tăng thải trừ acid mật qua phân. Được dùng cho ngứa do ứ mật ở bệnh nhân PFIC (Progressive Familial Intrahepatic Cholestasis). ĐẶC ĐIỂM: (1) IBAT inhibitor, tương tự maralixibat, (2) Giảm ngứa do ứ mật hiệu quả, (3) Tác dụng phụ đường tiêu hóa phổ biến (tiêu chảy, đau bụng, nôn), (4) Có thể gây giảm hấp thu vitamin tan trong dầu, (5) FDA phê duyệt 7/20/2021 cho bệnh nhân từ 3 tháng tuổi trở lên.",
+        "monitoring": [
+            "Đáp ứng điều trị: giảm ngứa (đánh giá bằng thang điểm ngứa)",
+            "Tác dụng phụ đường tiêu hóa: tiêu chảy, đau bụng, nôn - QUAN TRỌNG",
+            "Cân nặng (đặc biệt ở trẻ em) - giảm cân phổ biến",
+            "Chức năng gan: ALT, AST, bilirubin (tăng men gan phổ biến)",
+            "Vitamin tan trong dầu: vitamin A, D, E, K (giảm hấp thu)",
+            "Dấu hiệu mất nước (nếu tiêu chảy nặng)",
+            "Dấu hiệu tắc nghẽn đường mật"
+        ],
+        "precautions": [
+            "TIÊU CHẢY - rất phổ biến, có thể nặng. Có thể cần giảm liều hoặc ngừng tạm thời nếu tiêu chảy nặng.",
+            "GIẢM HẤP THU VITAMIN TAN TRONG DẦU - cần bổ sung vitamin A, D, E, K định kỳ",
+            "GIẢM CÂN - phổ biến, đặc biệt ở trẻ em. Theo dõi cân nặng chặt chẽ.",
+            "Tăng men gan - phổ biến. Theo dõi chức năng gan định kỳ.",
+            "Uống với thức ăn để giảm tác dụng phụ đường tiêu hóa",
+            "Bắt đầu với liều thấp (40 mcg/kg), tăng dần theo đáp ứng và dung nạp",
+            "Thận trọng ở bệnh nhân tắc nghẽn đường mật hoàn toàn",
+            "Thận trọng ở bệnh nhân suy gan nặng",
+            "Dùng cách xa cholestyramine, colestipol ít nhất 4 giờ"
+        ],
+        "pharmacokinetics": {
+            "half_life": "Khoảng 10-15 giờ",
+            "onset": "Vài tuần (tác dụng giảm ngứa)",
+            "duration": "24 giờ (dùng 1 lần/ngày)",
+            "protein_binding": ">99%",
+            "metabolism": "Chuyển hóa tối thiểu, chủ yếu thải trừ nguyên dạng",
+            "clearance": "Thải trừ chủ yếu qua phân (không hấp thu), một phần qua nước tiểu"
+        },
+        "storage": "Bảo quản ở nhiệt độ phòng (20-25°C), tránh ẩm. Bảo quản trong hộp kín gốc. Để xa tầm tay trẻ em.",
+        "black_box_warnings": "Không có black box warning. Tuy nhiên, cần cảnh báo về: (1) Tiêu chảy có thể nặng và cần điều trị, (2) Giảm hấp thu vitamin tan trong dầu cần bổ sung, (3) Giảm cân phổ biến, đặc biệt ở trẻ em.",
+        "drug_interactions": {
+            "major": [],
+            "moderate": [
+                {
+                    "drug": "Cholestyramine, Colestipol",
+                    "mechanism": "Giảm hấp thu odevixibat",
+                    "effect": "Giảm hiệu quả điều trị",
+                    "management": "Dùng cách xa ít nhất 4 giờ. Nếu có thể, tránh dùng cùng."
+                },
+                {
+                    "drug": "Vitamin tan trong dầu (A, D, E, K)",
+                    "mechanism": "Odevixibat giảm hấp thu mỡ, dẫn đến giảm hấp thu vitamin tan trong dầu",
+                    "effect": "Giảm nồng độ vitamin tan trong dầu, có thể gây thiếu hụt",
+                    "management": "Bổ sung vitamin tan trong dầu định kỳ. Theo dõi nồng độ vitamin."
+                }
+            ],
+            "minor": [
+                {
+                    "drug": "Thuốc hấp thu phụ thuộc mỡ",
+                    "mechanism": "Odevixibat giảm hấp thu mỡ",
+                    "effect": "Có thể giảm hấp thu các thuốc hấp thu phụ thuộc mỡ",
+                    "management": "Thận trọng. Có thể cần điều chỉnh liều hoặc thời điểm dùng."
+                }
+            ]
+        },
+        "contraindications_detail": {
+            "tuyệt_đối": [
+                "Dị ứng odevixibat hoặc bất kỳ thành phần nào"
+            ],
+            "tương_đối": [
+                "Tắc nghẽn đường mật hoàn toàn - thận trọng, có thể không hiệu quả",
+                "Suy gan nặng - thận trọng, tăng nguy cơ tác dụng phụ",
+                "Rối loạn hấp thu mỡ nặng - thận trọng, có thể làm nặng thêm",
+                "Trẻ em <3 tháng tuổi - chưa có dữ liệu an toàn"
+            ]
+        },
+        "pregnancy_lactation": {
+            "fda_category": "C",
+            "pregnancy_details": "Category C - có nguy cơ cho thai nhi. Không có nghiên cứu đầy đủ trên phụ nữ có thai. Odevixibat có thể ảnh hưởng đến hấp thu vitamin tan trong dầu, có thể ảnh hưởng đến sự phát triển thai nhi. Có thể dùng khi lợi ích vượt quá nguy cơ.",
+            "lactation": {
+                "safety": "Unknown",
+                "details": "Chưa biết odevixibat có bài tiết vào sữa mẹ hay không. Odevixibat hấp thu tối thiểu vào máu, nhưng không có dữ liệu về bài tiết vào sữa mẹ.",
+                "recommendation": "Thận trọng khi cho con bú. Cân nhắc ngừng cho con bú hoặc ngừng thuốc. Nếu dùng, theo dõi trẻ sơ sinh về dấu hiệu tác dụng phụ."
+            }
+        },
+        "hepatic_adjustment": {
+            "mild": "Không đổi",
+            "moderate": "Thận trọng, không cần chỉnh liều",
+            "severe": "Thận trọng, có thể cần giảm liều hoặc tránh dùng",
+            "notes": "Odevixibat chuyển hóa tối thiểu. Tuy nhiên, ở bệnh nhân suy gan nặng, tăng nguy cơ tác dụng phụ và có thể không hiệu quả. Theo dõi chặt chẽ."
+        },
+        "overdose_management": {
+            "symptoms": [
+                "Tiêu chảy nặng",
+                "Đau bụng nặng",
+                "Nôn nhiều",
+                "Mất nước",
+                "Rối loạn điện giải"
+            ],
+            "antidote": "Không có antidote đặc hiệu",
+            "treatment": [
+                "Ngừng ngay odevixibat",
+                "Điều trị hỗ trợ: bù nước và điện giải (truyền dịch nếu cần)",
+                "Theo dõi dấu hiệu sinh tồn",
+                "Theo dõi cân bằng nước và điện giải",
+                "Điều trị triệu chứng (giảm đau nếu cần)"
+            ],
+            "monitoring": "Theo dõi dấu hiệu sinh tồn, cân bằng nước và điện giải, chức năng gan cho đến khi hồi phục."
+        },
+        "reversal_agents": {
+            "available": False,
+            "agents": []
+        },
+        "administration_instructions": {
+            "oral": {
+                "with_food": "Uống với thức ăn để giảm tác dụng phụ đường tiêu hóa (tiêu chảy, đau bụng, nôn)",
+                "timing": "Uống 1 lần/ngày với bữa ăn. Bắt đầu với liều thấp (40 mcg/kg), tăng dần lên 120 mcg/kg nếu dung nạp.",
+                "notes": "QUAN TRỌNG: (1) Uống với thức ăn, (2) Bắt đầu với liều thấp, tăng dần, (3) Nếu tiêu chảy nặng, có thể cần giảm liều hoặc ngừng tạm thời, (4) Bổ sung vitamin tan trong dầu định kỳ, (5) Theo dõi cân nặng chặt chẽ, đặc biệt ở trẻ em."
+            }
+        },
+        "references": {
+            "primary_sources": [
+                "FDA Drug Label - Odevixibat (Bylvay)",
+                "FDA Approval Date: 7/20/2021",
+                "FDA-approved use: To treat pruritus in patients with PFIC",
+                "UpToDate - Odevixibat: Drug information",
+                "Lexicomp - Odevixibat monograph"
+            ],
+            "last_updated": "2025-02-18",
+            "evidence_level": "A - FDA-approved 7/20/2021, dựa trên dữ liệu lâm sàng từ các thử nghiệm lâm sàng"
+        },
+        "risk_flags": {
+            "high_alert": False,
+            "narrow_therapeutic_index": False,
+            "bleeding_risk": False,
+            "organ_toxicity": ["Hepatotoxicity (elevated liver enzymes) - common"],
+            "qt_prolongation": False,
+            "hepatotoxicity": True,
+            "nephrotoxicity": False,
+            "requires_monitoring": ["Clinical response (reduction in pruritus)", "GI side effects (diarrhea, abdominal pain, vomiting) - CRITICAL", "Weight (especially in children) - CRITICAL", "Liver function (ALT, AST, bilirubin)", "Fat-soluble vitamins (A, D, E, K)", "Signs of dehydration", "Signs of bile duct obstruction"]
+        },
+        "guideline_tags": [
+            "FDA Drug Information - Odevixibat (Bylvay)",
+            "UpToDate - Cholestatic Pruritus Treatment",
+            "AASLD Guidelines - Cholestatic Liver Disease"
+        ],
+        "last_updated": "2025-02-18"
+    },
 }
 
 __all__ = ['OTHER_TOPICAL_DRUGS']
