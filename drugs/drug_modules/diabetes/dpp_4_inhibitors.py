@@ -412,7 +412,6 @@ DPP_4_INHIBITORS_DRUGS = {
             "timing": "Uống 1 lần/ngày, bất kỳ lúc nào trong ngày (sáng, trưa, tối). Uống cùng giờ mỗi ngày để dễ nhớ. Không phụ thuộc bữa ăn.",
             "titration": "Không cần tăng liều. Liều cố định: 5mg/ngày (CrCl >50), 2.5mg/ngày (CrCl ≤50). Điều chỉnh liều khi CrCl thay đổi.",
             "notes": "Uống bất kỳ lúc nào, không cần thức ăn. Cần điều chỉnh liều ở suy thận: CrCl >50 → 5mg/ngày, CrCl ≤50 → 2.5mg/ngày. Kiểm tra CrCl trước khi bắt đầu và định kỳ. Ít gây hạ đường huyết khi dùng đơn độc (do cơ chế phụ thuộc glucose). Thải trừ chủ yếu qua thận và gan."
-            "notes": "Uống bất kỳ lúc nào. Cần điều chỉnh liều ở suy thận (CrCl ≤50). Ít gây hạ đường huyết. Thải trừ chủ yếu qua thận."
         },
         "renal_adjustment": {
             "normal": "5mg/ngày",
@@ -616,14 +615,14 @@ DPP_4_INHIBITORS_DRUGS = {
         'Sitagliptin là chất ức chế chọn lọc dipeptidyl peptidase-4 (DPP-4), enzyme chịu trách nhiệm phân hủy incretin hormones (GLP-1 và GIP). Bằng cách ức chế DPP-4, sitagliptin làm tăng nồng độ GLP-1 và GIP, các hormone được tiết ra từ ruột non sau khi ăn. GLP-1 và GIP kích thích tiết insulin từ tế bào beta tuyến tụy phụ thuộc vào glucose (chỉ tiết khi đường huyết cao), đồng thời ức chế tiết glucagon từ tế bào alpha tuyến tụy. Điều này dẫn đến giảm đường huyết sau ăn và giảm sản xuất glucose từ gan. Cơ chế này phụ thuộc vào glucose nên ít gây hạ đường huyết so với sulfonylurea. Sitagliptin cũng làm chậm làm rỗng dạ dày và có thể giảm cảm giác thèm ăn nhẹ.'
         , 'monitoring': [
         'Đường huyết (HbA1c, glucose máu) - đánh giá hiệu quả giảm đường huyết',
-        'Chức năng thận (creatinine, CrCl) - cần điều chỉnh liều: CrCl 30-50 → 50mg/ngày, CrCl <30 → 25mg/ngày'
+        'Chức năng thận (creatinine, CrCl) - cần điều chỉnh liều: CrCl 30-50 → 50mg/ngày, CrCl <30 → 25mg/ngày',
         'Triệu chứng viêm tụy cấp (đau bụng nặng, buồn nôn, nôn) - hiếm nhưng nguy hiểm'
         , 'Đau khớp nghiêm trọng - hiếm, cần ngừng thuốc nếu xảy ra',
         'Triệu chứng suy tim (khó thở, phù) - tăng nhẹ nguy cơ suy tim',
         'Dấu hiệu phản ứng dị ứng (phát ban, phù mạch) - hiếm',
         'Tác dụng phụ (nhức đầu, nhiễm trùng đường hô hấp trên)'],
         'precautions': ['Không dùng cho đái tháo đường type 1 (không hiệu quả)',
-        'Cần điều chỉnh liều ở suy thận: CrCl 30-50 → 50mg/ngày, CrCl <30 → 25mg/ngày'
+        'Cần điều chỉnh liều ở suy thận: CrCl 30-50 → 50mg/ngày, CrCl <30 → 25mg/ngày',
         'Nguy cơ viêm tụy cấp - hiếm nhưng nguy hiểm, ngừng ngay nếu có đau bụng nặng'
         , 'Nguy cơ đau khớp nghiêm trọng - hiếm, ngừng thuốc nếu xảy ra',
         'Tăng nhẹ nguy cơ suy tim - thận trọng ở bệnh nhân có tiền sử suy tim',

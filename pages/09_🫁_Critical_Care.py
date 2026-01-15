@@ -556,7 +556,9 @@ with main_tabs[2]:
     vent_advanced_tabs = st.tabs([
         "🦠 Chế độ theo bệnh",
         "🇻🇳 Máy thở Việt Nam",
-        "📊 Theo dõi Real-time"
+        "📊 Theo dõi Real-time",
+        "📈 Waveforms",
+        "🔬 Data Simulator"
     ])
     
     with vent_advanced_tabs[0]:
