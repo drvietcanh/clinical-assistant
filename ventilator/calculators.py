@@ -6,7 +6,7 @@ ARDSNet and initial ventilator settings
 import streamlit as st
 
 
-def render_ardsnet():
+def render_ardsnet(key_prefix=""):
     """ARDSNet Tidal Volume Calculator"""
     st.subheader("🫁 ARDSNet - Tidal Volume")
     st.caption("Lung-Protective Ventilation Strategy")
@@ -20,7 +20,7 @@ def render_ardsnet():
             "Giới tính",
             ["Nam", "Nữ"],
             horizontal=True,
-            key="ardsnet_sex"
+            key=f"{key_prefix}ardsnet_sex"
         )
         
         height = st.number_input(
@@ -30,7 +30,8 @@ def render_ardsnet():
             value=160,
             step=1,
             format="%d",
-            help="Chiều cao thực tế của bệnh nhân"
+            help="Chiều cao thực tế của bệnh nhân",
+            key=f"{key_prefix}ardsnet_height"
         )
         
         st.markdown("---")
@@ -43,10 +44,11 @@ def render_ardsnet():
             value=0,
             step=10,
             format="%d",
-            help="Để trống nếu chưa đặt máy thở"
+            help="Để trống nếu chưa đặt máy thở",
+            key=f"{key_prefix}ardsnet_current_vt"
         )
         
-        if st.button("🧮 Tính ARDSNet", type="primary", key="ardsnet_calc"):
+        if st.button("🧮 Tính ARDSNet", type="primary", key=f"{key_prefix}ardsnet_calc"):
             # Calculate PBW (Predicted Body Weight)
             if sex == "Nam":
                 pbw = 50 + 0.91 * (height - 152.4)
@@ -158,7 +160,7 @@ def render_ardsnet():
                 """)
 
 
-def render_initial_settings():
+def render_initial_settings(key_prefix=""):
     """Initial Ventilator Settings Calculator"""
     st.subheader("⚙️ Cài Đặt Ban Đầu Máy Thở")
     st.caption("Thông số Khởi Đầu Theo Bệnh Lý")
@@ -182,7 +184,7 @@ def render_initial_settings():
             "Giới tính",
             ["Nam", "Nữ"],
             horizontal=True,
-            key="initial_sex"
+            key=f"{key_prefix}initial_sex"
         )
         
         height = st.number_input(
@@ -193,7 +195,7 @@ def render_initial_settings():
             step=1,
             format="%d",
             help="Chiều cao thực tế của bệnh nhân",
-            key="initial_height"
+            key=f"{key_prefix}initial_height"
         )
         
         # Calculate PBW
@@ -217,7 +219,7 @@ def render_initial_settings():
                 "Neuromuscular",
                 "Post-Operative"
             ],
-            key="initial_condition"
+            key=f"{key_prefix}initial_condition"
         )
         
         # Additional context
@@ -228,12 +230,12 @@ def render_initial_settings():
             "Mức độ nghiêm trọng:",
             ["Nhẹ - Trung bình", "Nặng"],
             horizontal=True,
-            key="initial_severity"
+            key=f"{key_prefix}initial_severity"
         )
         
         has_hypoxemia = st.checkbox(
             "Có giảm oxy máu nặng (SpO2 <90% với O₂ cao)",
-            key="initial_hypoxemia"
+            key=f"{key_prefix}initial_hypoxemia"
         )
     
     with col2:
@@ -244,7 +246,7 @@ def render_initial_settings():
     st.markdown("---")
     
     # Calculate settings based on condition
-    if st.button("🧮 Tính Thông số Máy Thở", type="primary", key="initial_calc"):
+    if st.button("🧮 Tính Thông số Máy Thở", type="primary", key=f"{key_prefix}initial_calc"):
         
         # Initialize settings dictionary
         settings = {}

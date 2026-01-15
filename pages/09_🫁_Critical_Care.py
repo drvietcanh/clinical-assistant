@@ -247,7 +247,7 @@ with main_tabs[0]:
             st.caption("Phân tích tổng hợp với ABG integration, alerts, history, và trends")
             st.info("💡 **Sử dụng khi:** Cần đánh giá chi tiết, theo dõi dài hạn, có ABG results")
             if render_comprehensive_calculator:
-                render_comprehensive_calculator()
+                render_comprehensive_calculator("tab0_comp_")
             else:
                 st.error("Comprehensive calculator không khả dụng. Vui lòng kiểm tra module ventilator.")
         
@@ -265,13 +265,13 @@ with main_tabs[0]:
             
             with protocol_tabs[0]:
                 if render_ardsnet:
-                    render_ardsnet()
+                    render_ardsnet("tab0_")
                 else:
                     st.error("ARDSNet protocol không khả dụng.")
             
             with protocol_tabs[1]:
                 if render_initial_settings:
-                    render_initial_settings()
+                    render_initial_settings("tab0_")
                 else:
                     st.error("Initial settings không khả dụng.")
             
@@ -287,7 +287,7 @@ with main_tabs[0]:
             st.caption("Đánh giá sẵn sàng cai máy thở và extubation")
             st.info("💡 **Sử dụng khi:** Đánh giá khả năng cai máy thở, chuẩn bị extubation")
             if render_weaning_calculator_advanced:
-                render_weaning_calculator_advanced()
+                render_weaning_calculator_advanced("tab0_weaning_")
             else:
                 st.error("Advanced weaning calculator không khả dụng. Sử dụng basic calculator.")
                 render_weaning_calculator_basic("tab0_weaning_")
@@ -474,7 +474,7 @@ with main_tabs[1]:
         with vent_tabs[1]:
             st.markdown("### 🫁 Comprehensive Analysis")
             if render_comprehensive_calculator:
-                render_comprehensive_calculator()
+                render_comprehensive_calculator("tab1_comp_")
             else:
                 st.error("Comprehensive calculator không khả dụng.")
         
@@ -487,12 +487,12 @@ with main_tabs[1]:
             ])
             with protocol_tabs[0]:
                 if render_ardsnet:
-                    render_ardsnet()
+                    render_ardsnet("tab1_")
                 else:
                     st.error("ARDSNet protocol không khả dụng.")
             with protocol_tabs[1]:
                 if render_initial_settings:
-                    render_initial_settings()
+                    render_initial_settings("tab1_")
                 else:
                     st.error("Initial settings không khả dụng.")
             with protocol_tabs[2]:
@@ -504,7 +504,7 @@ with main_tabs[1]:
         with vent_tabs[3]:
             st.markdown("### 🔄 Weaning & Extubation")
             if render_weaning_calculator_advanced:
-                render_weaning_calculator_advanced()
+                render_weaning_calculator_advanced("tab1_weaning_")
             else:
                 st.error("Advanced weaning calculator không khả dụng.")
                 render_weaning_calculator_basic("tab1_weaning_")

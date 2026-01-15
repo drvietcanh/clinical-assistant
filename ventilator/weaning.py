@@ -202,7 +202,7 @@ def sbt_protocol():
     }
 
 
-def render_weaning_calculator():
+def render_weaning_calculator(key_prefix=""):
     """Weaning Calculator - Main function"""
     st.subheader("🫁 Cai Máy Thở - Weaning Protocol")
     st.caption("Đánh giá sẵn sàng cai máy thở và hướng dẫn SBT")
@@ -230,14 +230,14 @@ def render_weaning_calculator():
                 "RR (lần/phút)",
                 0, 60, 20, 1,
                 format="%d",
-                key="weaning_rsbi_rr",
+                key=f"{key_prefix}weaning_rsbi_rr",
                 help="Tần số thở"
             )
             vt_ml = st.number_input(
                 "Vt (mL)",
                 0, 1000, 0, 10,
                 format="%d",
-                key="weaning_rsbi_vt",
+                key=f"{key_prefix}weaning_rsbi_vt",
                 help="Thể tích khí lưu thông"
             )
         
@@ -293,36 +293,36 @@ def render_weaning_calculator():
         
         with col1:
             st.markdown("#### 💨 ABG")
-            abg_ph = st.number_input("pH", 6.8, 7.8, 7.40, 0.01, format="%.2f", key="weaning_abg_ph")
-            abg_pco2 = st.number_input("PaCO₂ (mmHg)", 10.0, 100.0, 40.0, 0.1, format="%.1f", key="weaning_abg_pco2")
-            abg_po2 = st.number_input("PaO₂ (mmHg)", 30.0, 600.0, 95.0, 1.0, format="%.0f", key="weaning_abg_po2")
-            abg_hco3 = st.number_input("HCO₃ (mEq/L)", 5.0, 50.0, 24.0, 0.1, format="%.1f", key="weaning_abg_hco3")
-            abg_fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 40.0, 1.0, format="%.0f", key="weaning_abg_fio2")
+            abg_ph = st.number_input("pH", 6.8, 7.8, 7.40, 0.01, format="%.2f", key=f"{key_prefix}weaning_abg_ph")
+            abg_pco2 = st.number_input("PaCO₂ (mmHg)", 10.0, 100.0, 40.0, 0.1, format="%.1f", key=f"{key_prefix}weaning_abg_pco2")
+            abg_po2 = st.number_input("PaO₂ (mmHg)", 30.0, 600.0, 95.0, 1.0, format="%.0f", key=f"{key_prefix}weaning_abg_po2")
+            abg_hco3 = st.number_input("HCO₃ (mEq/L)", 5.0, 50.0, 24.0, 0.1, format="%.1f", key=f"{key_prefix}weaning_abg_hco3")
+            abg_fio2 = st.number_input("FiO₂ (%)", 21.0, 100.0, 40.0, 1.0, format="%.0f", key=f"{key_prefix}weaning_abg_fio2")
         
         with col2:
             st.markdown("#### ⚙️ Máy Thở")
-            vent_peep = st.number_input("PEEP (cmH2O)", 0, 30, 5, 1, format="%d", key="weaning_vent_peep")
-            vent_fio2 = st.number_input("FiO₂ (%)", 21, 100, 40, 1, format="%d", key="weaning_vent_fio2")
+            vent_peep = st.number_input("PEEP (cmH2O)", 0, 30, 5, 1, format="%d", key=f"{key_prefix}weaning_vent_peep")
+            vent_fio2 = st.number_input("FiO₂ (%)", 21, 100, 40, 1, format="%d", key=f"{key_prefix}weaning_vent_fio2")
             
             st.markdown("#### 💓 Sinh Tồn")
-            vitals_hr = st.number_input("HR (bpm)", 0, 200, 80, 1, format="%d", key="weaning_vitals_hr")
-            vitals_bp_systolic = st.number_input("SBP (mmHg)", 0, 300, 120, 1, format="%d", key="weaning_vitals_sbp")
-            vitals_temp = st.number_input("Temp (°C)", 30.0, 42.0, 37.0, 0.1, format="%.1f", key="weaning_vitals_temp")
+            vitals_hr = st.number_input("HR (bpm)", 0, 200, 80, 1, format="%d", key=f"{key_prefix}weaning_vitals_hr")
+            vitals_bp_systolic = st.number_input("SBP (mmHg)", 0, 300, 120, 1, format="%d", key=f"{key_prefix}weaning_vitals_sbp")
+            vitals_temp = st.number_input("Temp (°C)", 30.0, 42.0, 37.0, 0.1, format="%.1f", key=f"{key_prefix}weaning_vitals_temp")
             
             st.markdown("#### 🧠 Thần kinh")
-            neuro_gcs = st.number_input("GCS", 3, 15, 15, 1, format="%d", key="weaning_neuro_gcs")
+            neuro_gcs = st.number_input("GCS", 3, 15, 15, 1, format="%d", key=f"{key_prefix}weaning_neuro_gcs")
         
         st.markdown("---")
         st.markdown("#### 📋 Yếu tố Khác")
         
         col1, col2, col3 = st.columns(3)
         with col1:
-            no_sepsis = st.checkbox("Không có nhiễm trùng huyết", key="weaning_no_sepsis")
-            no_acidosis = st.checkbox("Không có toan máu nặng", key="weaning_no_acidosis")
+            no_sepsis = st.checkbox("Không có nhiễm trùng huyết", key=f"{key_prefix}weaning_no_sepsis")
+            no_acidosis = st.checkbox("Không có toan máu nặng", key=f"{key_prefix}weaning_no_acidosis")
         with col2:
-            hemodynamically_stable = st.checkbox("Huyết động ổn định", key="weaning_hemo_stable")
+            hemodynamically_stable = st.checkbox("Huyết động ổn định", key=f"{key_prefix}weaning_hemo_stable")
         
-        if st.button("🧮 Đánh giá Sẵn Sàng", type="primary", use_container_width=True):
+        if st.button("🧮 Đánh giá Sẵn Sàng", type="primary", use_container_width=True, key=f"{key_prefix}weaning_assess_btn"):
             abg_data = {
                 "ph": abg_ph,
                 "pco2": abg_pco2,
