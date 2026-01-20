@@ -6,6 +6,7 @@ Reusable badge components with CSS classes instead of inline styles
 from typing import Optional
 from enum import Enum
 import streamlit as st
+from ..ui_helpers import escape_html_safe
 
 
 class BadgeType(str, Enum):
@@ -70,6 +71,9 @@ def render_badge(
     if icon is None and show_icon:
         icon = BADGE_ICONS.get(badge_type, "")
     
+    # Escape text to prevent HTML injection
+    escaped_text = escape_html_safe(text)
+    
     # Build CSS classes
     classes = [
         "badge",
@@ -80,7 +84,7 @@ def render_badge(
     
     # Build HTML
     icon_html = f'<span class="badge-icon">{icon}</span>' if icon and show_icon else ""
-    text_html = f'<span class="badge-text">{text}</span>'
+    text_html = f'<span class="badge-text">{escaped_text}</span>'
     
     html = f'''
     <span class="{class_str}">
@@ -125,11 +129,14 @@ def render_guideline_badge_html(source: str, year: Optional[int] = None, last_re
     Returns:
         HTML string
     """
-    guideline_text = source
+    # Escape source and last_reviewed to prevent HTML injection
+    escaped_source = escape_html_safe(source)
+    guideline_text = escaped_source
     if year:
         guideline_text += f" ({year})"
     if last_reviewed:
-        guideline_text += f" • Cập nhật: {last_reviewed}"
+        escaped_reviewed = escape_html_safe(str(last_reviewed))
+        guideline_text += f" • Cập nhật: {escaped_reviewed}"
     
     html = f'''
     <div style="margin-bottom: 12px;">

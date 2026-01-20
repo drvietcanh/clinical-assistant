@@ -29,6 +29,7 @@ from .ui_helpers import (
     slugify_for_key,
     make_protocol_key,
     make_drug_key,
+    escape_html_safe,
 )
 from .mic_breakpoints import get_common_susceptibility
 from .resistance_patterns import get_antibiotic_resistance_summary
@@ -70,14 +71,18 @@ def render_protocol_card(protocol: AntibioticProtocol, key_prefix: str = ""):
     # Get severity class for CSS
     severity_class = f"severity-{protocol.severity.value.lower()}"
     
+    # Escape HTML to prevent injection and rendering errors
+    escaped_title = escape_html_safe(protocol.title)
+    escaped_description = escape_html_safe(protocol.description or '')
+    
     # Card header with CSS classes
     st.markdown(f"""
     <div class="protocol-card {severity_class}">
         <div class="card-header">
-            <h3 class="card-title">{protocol.title}</h3>
+            <h3 class="card-title">{escaped_title}</h3>
         </div>
         <div class="card-body">
-            <p class="indication-text">{protocol.description or ''}</p>
+            <p class="indication-text">{escaped_description}</p>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -120,13 +125,17 @@ def render_protocol_card(protocol: AntibioticProtocol, key_prefix: str = ""):
     if protocol.notes:
         with st.expander(COMMON_TERMS_VI.get("Notes", "📝 Ghi chú"), expanded=False):
             for note in protocol.notes:
-                st.markdown(f"• {note}")
+                # Escape note to prevent HTML injection
+                escaped_note = escape_html_safe(note)
+                st.markdown(f"• {escaped_note}")
     
     # Risk factors
     if protocol.risk_factors:
         st.markdown(f"**⚠️ {COMMON_TERMS_VI.get('Risk Factors', 'Yếu tố nguy cơ')}:**")
         for risk in protocol.risk_factors:
-            st.markdown(f"- {risk}")
+            # Escape risk to prevent HTML injection
+            escaped_risk = escape_html_safe(risk)
+            st.markdown(f"- {escaped_risk}")
     
     st.markdown("---")
 
@@ -223,9 +232,12 @@ def render_regimen_card(regimen, key_prefix: str = ""):
         </style>
         """, unsafe_allow_html=True)
         
-        st.markdown(f"- {drug_text}")
+        # Escape drug text to prevent HTML injection
+        escaped_drug_text = escape_html_safe(drug_text)
+        st.markdown(f"- {escaped_drug_text}")
         if drug.notes:
-            st.caption(f"  ⚠️ {drug.notes}")
+            escaped_notes = escape_html_safe(drug.notes)
+            st.caption(f"  ⚠️ {escaped_notes}")
         
         # Actions - Mobile: Stack, Desktop: Side-by-side
         col_drug1, col_drug2 = st.columns([3, 1])
@@ -254,7 +266,9 @@ def render_regimen_card(regimen, key_prefix: str = ""):
     
     # Rationale
     if regimen.rationale:
-        st.markdown(f"**{COMMON_TERMS_VI.get('Rationale', 'Lý do')}:** {regimen.rationale}")
+        # Escape rationale to prevent HTML injection
+        escaped_rationale = escape_html_safe(regimen.rationale)
+        st.markdown(f"**{COMMON_TERMS_VI.get('Rationale', 'Lý do')}:** {escaped_rationale}")
     
     # MIC Breakpoints and Susceptibility (for first drug if available)
     if regimen.drugs:
@@ -271,7 +285,10 @@ def render_regimen_card(regimen, key_prefix: str = ""):
                             color = "#4caf50"  # Green for sensitive
                         else:
                             color = "#666"
-                        st.markdown(f"<span style='color: {color}; font-weight: 600;'>{org}:</span> {pattern}", unsafe_allow_html=True)
+                        # Escape org and pattern to prevent HTML injection
+                        escaped_org = escape_html_safe(org)
+                        escaped_pattern = escape_html_safe(pattern)
+                        st.markdown(f"<span style='color: {color}; font-weight: 600;'>{escaped_org}:</span> {escaped_pattern}", unsafe_allow_html=True)
                 if "notes" in suscept_data:
                     st.caption(f"💡 {suscept_data['notes']}")
         # Antibiogram quick view (hospital-based, Phase 1)
@@ -314,7 +331,9 @@ def render_regimen_card(regimen, key_prefix: str = ""):
     
     # Warnings
     if regimen.warnings:
-        st.warning(f"⚠️ {COMMON_TERMS_VI.get('Warnings', 'Cảnh báo')}: " + " | ".join(regimen.warnings))
+        # Escape warnings to prevent HTML injection
+        escaped_warnings = [escape_html_safe(w) for w in regimen.warnings]
+        st.warning(f"⚠️ {COMMON_TERMS_VI.get('Warnings', 'Cảnh báo')}: " + " | ".join(escaped_warnings))
     
     # Step-down options
     if regimen.step_down_options:
@@ -323,13 +342,18 @@ def render_regimen_card(regimen, key_prefix: str = ""):
                 step_text = f"{step_down.drug_name} {step_down.dose} {step_down.route} {step_down.frequency}"
                 if step_down.duration:
                     step_text += f" × {step_down.duration}"
-                st.markdown(f"- {step_text}")
+                # Escape step_text to prevent HTML injection
+                escaped_step_text = escape_html_safe(step_text)
+                st.markdown(f"- {escaped_step_text}")
     
     # Special populations
     if regimen.special_populations:
         with st.expander(COMMON_TERMS_VI.get("Special Populations", "👥 Đối tượng đặc biệt"), expanded=False):
             for pop, note in regimen.special_populations.items():
-                st.markdown(f"**{pop.title()}:** {note}")
+                # Escape pop and note to prevent HTML injection
+                escaped_pop = escape_html_safe(pop.title())
+                escaped_note = escape_html_safe(note)
+                st.markdown(f"**{escaped_pop}:** {escaped_note}")
     
     # Integration links and actions - Mobile: Stack, Desktop: 4 columns
     st.markdown("---")
@@ -854,17 +878,23 @@ def render_antibiotics_by_drug_class_view():
     
     # Render each drug class
     for drug_class in filtered_classes:
+        # Escape HTML to prevent injection and rendering errors
+        escaped_class_name_vi = escape_html_safe(drug_class.class_name_vi)
+        escaped_class_name = escape_html_safe(drug_class.class_name)
+        escaped_description = escape_html_safe(drug_class.description)
+        escaped_mechanism = escape_html_safe(drug_class.mechanism)
+        
         # Class header card
         st.markdown(f"""
         <div class="drug-class-card">
             <h2 style='margin: 0 0 8px 0; color: #1976D2; font-size: 1.8em; font-weight: 600;'>
-                💊 {drug_class.class_name_vi} ({drug_class.class_name})
+                💊 {escaped_class_name_vi} ({escaped_class_name})
             </h2>
             <p style='margin: 0 0 12px 0; color: #666; font-size: 1em; line-height: 1.6;'>
-                {drug_class.description}
+                {escaped_description}
             </p>
             <p style='margin: 0 0 16px 0; color: #555; font-size: 0.95em;'>
-                <strong>Cơ chế:</strong> {drug_class.mechanism}
+                <strong>Cơ chế:</strong> {escaped_mechanism}
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -902,10 +932,12 @@ def render_antibiotics_by_drug_class_view():
         st.markdown("### 📋 Thuốc trong nhóm")
         
         for drug in drug_class.drugs:
+            # Escape drug name to prevent HTML injection
+            escaped_drug_name = escape_html_safe(drug.name)
             st.markdown(f"""
             <div class="drug-item-card">
                 <h3 style='margin: 0 0 8px 0; color: #212121; font-size: 1.3em; font-weight: 600;'>
-                    {drug.name}
+                    {escaped_drug_name}
                 </h3>
             </div>
             """, unsafe_allow_html=True)
@@ -938,6 +970,8 @@ def render_antibiotics_by_drug_class_view():
                         "RESERVE": "#f44336"
                     }
                     aware_color = aware_colors.get(drug.aware_classification, "#757575")
+                    # Escape aware_classification to prevent HTML injection
+                    escaped_aware = escape_html_safe(drug.aware_classification)
                     st.markdown(f"""
                     <span style='
                         background: {aware_color};
@@ -946,7 +980,7 @@ def render_antibiotics_by_drug_class_view():
                         border-radius: 8px;
                         font-size: 0.85em;
                         font-weight: 600;
-                    '>AWaRe: {drug.aware_classification}</span>
+                    '>AWaRe: {escaped_aware}</span>
                     """, unsafe_allow_html=True)
             
             with col_drug2:

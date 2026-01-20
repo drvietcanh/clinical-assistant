@@ -5,6 +5,7 @@ Reusable typography components with CSS classes
 
 from typing import Optional
 import streamlit as st
+from ..ui_helpers import escape_html_safe
 
 
 def render_indication_text(text: str, strong_label: Optional[str] = None) -> str:
@@ -18,14 +19,18 @@ def render_indication_text(text: str, strong_label: Optional[str] = None) -> str
     Returns:
         HTML string
     """
+    # Escape HTML to prevent injection and rendering errors
+    escaped_text = escape_html_safe(text)
+    
     if strong_label:
+        escaped_label = escape_html_safe(strong_label)
         html = f'''
         <p class="indication-text">
-            <strong>{strong_label}</strong> {text}
+            <strong>{escaped_label}</strong> {escaped_text}
         </p>
         '''
     else:
-        html = f'<p class="indication-text">{text}</p>'
+        html = f'<p class="indication-text">{escaped_text}</p>'
     
     return html.strip()
 
@@ -42,11 +47,14 @@ def render_guideline_badge(source: str, year: Optional[int] = None, last_reviewe
     Returns:
         HTML string
     """
-    guideline_text = source
+    # Escape HTML to prevent injection and rendering errors
+    escaped_source = escape_html_safe(source)
+    guideline_text = escaped_source
     if year:
         guideline_text += f" ({year})"
     if last_reviewed:
-        guideline_text += f" • Cập nhật: {last_reviewed}"
+        escaped_reviewed = escape_html_safe(str(last_reviewed))
+        guideline_text += f" • Cập nhật: {escaped_reviewed}"
     
     html = f'''
     <div style="margin-bottom: 12px;">
@@ -70,7 +78,10 @@ def render_drug_info(drug_name: str, dose: str, route: str, group: Optional[str]
     Returns:
         HTML string
     """
-    admin_str = f"{dose} {route}"
+    # Escape HTML to prevent injection and rendering errors
+    escaped_dose = escape_html_safe(dose)
+    escaped_route = escape_html_safe(route)
+    admin_str = f"{escaped_dose} {escaped_route}"
     
     html = f'''
     <div class="drug-info">
@@ -78,9 +89,10 @@ def render_drug_info(drug_name: str, dose: str, route: str, group: Optional[str]
     '''
     
     if group:
+        escaped_group = escape_html_safe(group)
         html += f'''
         <span style="color: #ddd; margin: 0 10px; font-weight: 300;">•</span>
-        <span class="drug-group">{group}</span>
+        <span class="drug-group">{escaped_group}</span>
         '''
     
     html += '</div>'
@@ -98,7 +110,9 @@ def render_vietnamese_name(name: str) -> str:
     Returns:
         HTML string
     """
-    html = f'<div class="vietnamese-name">{name}</div>'
+    # Escape HTML to prevent injection and rendering errors
+    escaped_name = escape_html_safe(name)
+    html = f'<div class="vietnamese-name">{escaped_name}</div>'
     return html.strip()
 
 

@@ -5,6 +5,7 @@ Common UI components, colors, badges, key helpers and styling utilities
 
 from typing import Dict, Tuple
 import re
+import html
 
 from .protocols_schema import (
     Severity,
@@ -168,3 +169,18 @@ def render_empty_state(message: str, icon: str = "📋"):
         <p style='color: #999; font-size: 0.95em;'>Vui lòng thử điều chỉnh bộ lọc hoặc từ khóa tìm kiếm</p>
     </div>
     """, unsafe_allow_html=True)
+
+
+def escape_html_safe(text: str) -> str:
+    """
+    Escape HTML characters safely to prevent HTML injection and rendering errors.
+    
+    Args:
+        text: Text that may contain HTML special characters
+        
+    Returns:
+        Escaped HTML string safe for embedding in HTML templates
+    """
+    if not text:
+        return ""
+    return html.escape(str(text))
